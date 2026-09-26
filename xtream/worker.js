@@ -198,7 +198,11 @@ export default {
       const variants=epgKeyVariants(id,id);
       let matched=null,count=0;
       for(const k of variants){const p=epg.byId.get(k); if(p?.length){matched=k;count=p.length;break;}}
-      result.checks[id]={matched,count};
+      const nk=normalizeEpgName(id);
+      const nameIds=epg.nameToIds.get(nk)||[];
+      let nameMatched=null,nameCount=0;
+      for(const x of nameIds){const p=epg.byId.get(x); if(p?.length){nameMatched=x;nameCount=p.length;break;}}
+      result.checks[id]={matched,count,nameIds:nameIds.slice(0,5),nameMatched,nameCount};
     }
     return json(result);
    }
