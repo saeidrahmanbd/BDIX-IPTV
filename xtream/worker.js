@@ -10,6 +10,39 @@ const EPG_URLS = [
 const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v4";
 const EPG_CACHE_TTL = 900;
 
+// Cross-map playlist tvg-id variants to canonical EPG IDs used by public guides.
+const EPG_ID_MAP = {
+  "AakaashAath.in":["AakaashAath.in@SD"],
+  "AlankarTV.in":["AlankarTV.in@SD"],
+  "AamarBangla.in":["AmarBangla.in@SD","AmarBanglaTV.in@SD"],
+  "DDTripura.in":["DDTripura.in@SD"],
+  "KhushbooBangla.in":["KhushbooBangla.in@SD"],
+  "RupasiBangla.in":["RupasiBangla.in@SD"],
+  "ZBCinema.in":["ZeeBanglaCinema.in@SD","ZeeBanglaSonar.in@SD"],
+  "zeebanglacinema.in":["ZeeBanglaCinema.in@SD","ZeeBanglaSonar.in@SD"],
+  "StarJalsha.in":["StarJalsha.in@SD","StarJalsha.in@HD"],
+  "ZeeBangla.in":["ZeeBangla.in@SD","ZeeBangla.in@HD"],
+  "ColorsBangla.in":["ColorsBangla.in@SD","ColorsBangla.in@HD"],
+  "SonyAath.in":["SonyAath.in@SD"],
+  "DDAssam.in":["DDAssam.in@SD"],
+  "DDGoa.in":["DDGoa.in@SD"],
+  "DDHaryana.in":["DDHaryana.in@SD"],
+  "DDHimachalPradesh.in":["DDHimachalPradesh.in@SD"],
+  "DDJharkhand.in":["DDJharkhand.in@SD"],
+  "DDManipur.in":["DDManipur.in@SD"],
+  "DDMeghalaya.in":["DDMeghalaya.in@SD"],
+  "DDNagaland.in":["DDNagaland.in@SD"],
+  "MTV.in@SD":["MTV.in@SD"],
+  "KalaignarMurasu.in":["KalaignarMurasu.in"],
+  "Goldmines.in":["Goldmines.in@SD"],
+  "GoldminesAction.in":["GoldminesAction.in@SD"],
+  "GoldminesBollywood.in":["GoldminesBollywood.in@SD"],
+  "GoldminesMovies.in":["GoldminesMovies.in@SD"],
+  "MHOneMovies.in":["MHOneMovies.in@SD"],
+  "ETVMusic.in":["ETVMusic.in@SD"],
+  "SonySAB.in":["SonySAB.in@SD"]
+};
+
 function json(data, status = 200) {
   return new Response(JSON.stringify(data), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } });
 }
@@ -141,7 +174,7 @@ function parseXmltv(xml){
 }
 function epgKeyVariants(id,name){
   const v=new Set([id,name]);
-  for(const x of [id,name]){
+  for(const x of [id,name,...(EPG_ID_MAP[id]||[])]){
     if(!x) continue;
     v.add(x.replace(/@[^.]+$/,""));
     if(!/@/.test(x) && /\.(bd|in|uk|us|au|pk|ae|lk|np|bt)$/.test(x)) v.add(x+"@SD");
