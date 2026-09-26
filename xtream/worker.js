@@ -179,6 +179,18 @@ export default {
    if(!env.XTREAM_USERNAME||!env.XTREAM_PASSWORD) return json({error:"Xtream credentials are not configured."},500);
    const url=new URL(request.url), path=url.pathname;
    if(path==="/"||path==="/health") return json({ok:true,service:"BDIX-IPTV Xtream Gateway"});
+   if(path==="/epg-health"){
+    const epg=parseXmltv(await getEpg(env));
+    const checks=["StarJalsha.in","ZeeBangla.in","SonyAath.in"];
+    const result={source:EPG_URL,channel_count:epg.byId.size,name_map_count:epg.nameToIds.size,checks:{}};
+    for(const id of checks){
+      const variants=epgKeyVariants(id,id);
+      let matched=null,count=0;
+      for(const k of variants){const p=epg.byId.get(k); if(p?.length){matched=k;count=p.length;break;}}
+      result.checks[id]={matched,count};
+    }
+    return json(result);
+   }
    if(path==="/player_api.php"){
     if(!auth(url,env)) return json({user_info:{auth:0,status:"Invalid credentials"}},401);
     const action=url.searchParams.get("action")||"", data=parsePlaylist(await getPlaylist(env));
