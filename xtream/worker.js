@@ -73,24 +73,24 @@ function parseXmltv(xml){
   const byId=new Map(), nameToIds=new Map();
   const add=(key,p)=>{if(!key)return; if(!byId.has(key))byId.set(key,[]); byId.get(key).push(p);};
   const channels=[];
-  const cr=/<channel\\b([^>]*)>([\\s\\S]*?)<\\/channel>/g;
+  const cr=/<channel\b([^>]*)>([\s\S]*?)<\/channel>/g;
   let cm;
   while((cm=cr.exec(xml))){
     const a=parseAttrs(cm[1]), id=xmlUnescape(a.id||"");
-    const names=[...cm[2].matchAll(/<display-name(?:\\s[^>]*)?>([\\s\\S]*?)<\\/display-name>/gi)].map(x=>xmlUnescape(x[1].replace(/<[^>]+>/g,"").trim())).filter(Boolean);
+    const names=[...cm[2].matchAll(/<display-name(?:\s[^>]*)?>([\s\S]*?)<\/display-name>/gi)].map(x=>xmlUnescape(x[1].replace(/<[^>]+>/g,"").trim())).filter(Boolean);
     if(id) for(const n of names){
       const k=normalizeEpgName(n);
       if(k){if(!nameToIds.has(k))nameToIds.set(k,[]); nameToIds.get(k).push(id);}
     }
   }
-  const re=/<programme\\b([^>]*)>([\\s\\S]*?)<\\/programme>/g;
+  const re=/<programme\b([^>]*)>([\s\S]*?)<\/programme>/g;
   let m;
   while((m=re.exec(xml))){
     const a=parseAttrs(m[1]), channel=xmlUnescape(a.channel||"");
     if(!channel) continue;
     const body=m[2];
-    const tm=body.match(/<title(?:\\s[^>]*)?>([\\s\\S]*?)<\\/title>/i);
-    const dm=body.match(/<desc(?:\\s[^>]*)?>([\\s\\S]*?)<\\/desc>/i);
+    const tm=body.match(/<title(?:\s[^>]*)?>([\s\S]*?)<\/title>/i);
+    const dm=body.match(/<desc(?:\s[^>]*)?>([\s\S]*?)<\/desc>/i);
     const p={start:a.start||"",stop:a.stop||"",title:xmlUnescape(tm?tm[1].replace(/<[^>]+>/g,""):""),desc:xmlUnescape(dm?dm[1].replace(/<[^>]+>/g,""):"")};
     add(channel,p);
     const base=channel.replace(/@[^.]+$/,"");
