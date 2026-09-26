@@ -206,6 +206,25 @@ export default {
     }
     return json(result);
    }
+   if(path==="/epg-audit"){
+    const data=parsePlaylist(await getPlaylist(env)), epg=parseXmltv(await getEpg(env));
+    const rows=data.entries.map(e=>{
+      const programs=findEpgPrograms(epg,e);
+      return {name:e.name,tvg_id:e.tvgId,group:e.group,programme_count:programs.length,matched:programs.length>0};
+    });
+    const matched=rows.filter(x=>x.matched), missing=rows.filter(x=>!x.matched);
+    return json({
+      source:EPG_URL,
+      total:rows.length,
+      matched:matched.length,
+      missing:missing.length,
+      by_group:[...new Set(rows.map(x=>x.group))].map(g=>{
+        const a=rows.filter(x=>x.group===g);
+        return {group:g,total:a.length,matched:a.filter(x=>x.matched).length,missing:a.filter(x=>!x.matched).length};
+      }),
+      missing_channels:missing.slice(0,300)
+    });
+   }
    if(path==="/player_api.php"){
     if(!auth(url,env)) return json({user_info:{auth:0,status:"Invalid credentials"}},401);
     const action=url.searchParams.get("action")||"", data=parsePlaylist(await getPlaylist(env));
