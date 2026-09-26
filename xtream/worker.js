@@ -89,7 +89,40 @@ function xmlUnescape(s){
   return String(s??"").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&apos;/g,"'");
 }
 function normalizeEpgName(s){
-  return String(s??"").toLowerCase().replace(/&amp;/g,"&").replace(/[^a-z0-9]+/g,"");
+  return String(s??"").toLowerCase()
+    .replace(/&amp;/g,"&")
+    .replace(/\\b(hd|sd|uhd|fhd|tv|channel)\\b/g,"")
+    .replace(/[^a-z0-9]+/g,"");
+}
+function epgNameDistance(a,b){
+  const x=normalizeEpgName(a), y=normalizeEpgName(b);
+  if(!x || !y) return 999;
+  const prev=Array.from({length:y.length+1},(_,i)=>i);
+  for(let i=1;i<=x.length;i++){
+    let diag=prev[0]; prev[0]=i;
+    for(let j=1;j<=y.length;j++){
+      const old=prev[j], cost=x[i-1]===y[j-1]?0:1;
+      prev[j]=Math.min(prev[j]+1,prev[j-1]+1,diag+cost);
+      diag=old;
+    }
+  }
+  return prev[y.length];
+}
+function epgNameCandidates(epg,name){
+  const target=normalizeEpgName(name);
+  if(!target) return [];
+  const exact=epg.nameToIds.get(target)||[];
+  if(exact.length) return exact;
+  const out=[];
+  for(const [k,ids] of epg.nameToIds){
+    const d=epgNameDistance(target,k);
+    const maxLen=Math.max(target.length,k.length);
+    if((maxLen>=12 && d<=2) || (maxLen>=8 && d<=1)){
+      for(const id of ids) out.push({id,d});
+    }
+  }
+  out.sort((a,b)=>a.d-b.d);
+  return out.map(x=>x.id);
 }
 function parseXmltv(xml){
   const byId=new Map(), nameToIds=new Map();
@@ -134,8 +167,7 @@ function findEpgPrograms(epg,entry){
     const programs=epg.byId.get(key);
     if(programs?.length) return programs;
   }
-  const ids=epg.nameToIds.get(normalizeEpgName(entry.name))||[];
-  for(const id of ids){
+  for(const id of epgNameCandidates(epg,entry.name)){
     const programs=epg.byId.get(id);
     if(programs?.length) return programs;
   }
