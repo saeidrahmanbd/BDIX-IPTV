@@ -67,7 +67,7 @@ function epgKeyVariants(id,name){
   for(const x of [id,name]){
     if(!x) continue;
     v.add(x.replace(/@[^.]+$/,""));
-    if(!/@/.test(x) && /\\.(bd|in|uk|us|au|pk|ae|lk|np|bt)$/.test(x)) v.add(x+"@SD");
+    if(!/@/.test(x) && /\.(bd|in|uk|us|au|pk|ae|lk|np|bt)$/.test(x)) v.add(x+"@SD");
   }
   return [...v].filter(Boolean);
 }
@@ -78,7 +78,7 @@ function findEpgPrograms(epg,entry){
   return [];
 }
 function toTimestamp(s){
-  const m=/^(\\d{4})(\\d{2})(\\d{2})(\\d{2})(\\d{2})(\\d{2})/.exec(String(s||""));
+  const m=/^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/.exec(String(s||""));
   if(!m) return 0;
   return Math.floor(Date.UTC(+m[1],+m[2]-1,+m[3],+m[4],+m[5],+m[6])/1000);
 }
