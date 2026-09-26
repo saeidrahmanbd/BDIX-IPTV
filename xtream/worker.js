@@ -14,7 +14,6 @@ const EPG_CACHE_TTL = 900;
 const EPG_ID_MAP = {
   "AakaashAath.in":["AakaashAath.in@SD"],
   "AlankarTV.in":["AlankarTV.in@SD"],
-  "AamarBangla.in":["AmarBangla.in@SD","AmarBanglaTV.in@SD"],
   "DDTripura.in":["DDTripura.in@SD"],
   "KhushbooBangla.in":["KhushbooBangla.in@SD"],
   "RupasiBangla.in":["RupasiBangla.in@SD"],
