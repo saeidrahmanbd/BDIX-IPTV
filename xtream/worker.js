@@ -224,7 +224,7 @@ export default {
     });
     const matched=rows.filter(x=>x.matched), missing=rows.filter(x=>!x.matched);
     return json({
-      source:EPG_URL,
+      sources:EPG_URLS,
       total:rows.length,
       matched:matched.length,
       missing:missing.length,
