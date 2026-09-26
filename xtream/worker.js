@@ -66,23 +66,37 @@ async function getEpg(env){
 function xmlUnescape(s){
   return String(s??"").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&apos;/g,"'");
 }
+function normalizeEpgName(s){
+  return String(s??"").toLowerCase().replace(/&amp;/g,"&").replace(/[^a-z0-9]+/g,"");
+}
 function parseXmltv(xml){
-  const byId=new Map();
+  const byId=new Map(), nameToIds=new Map();
   const add=(key,p)=>{if(!key)return; if(!byId.has(key))byId.set(key,[]); byId.get(key).push(p);};
-  const re=/<programme\b([^>]*)>([\s\S]*?)<\/programme>/g;
+  const channels=[];
+  const cr=/<channel\\b([^>]*)>([\\s\\S]*?)<\\/channel>/g;
+  let cm;
+  while((cm=cr.exec(xml))){
+    const a=parseAttrs(cm[1]), id=xmlUnescape(a.id||"");
+    const names=[...cm[2].matchAll(/<display-name(?:\\s[^>]*)?>([\\s\\S]*?)<\\/display-name>/gi)].map(x=>xmlUnescape(x[1].replace(/<[^>]+>/g,"").trim())).filter(Boolean);
+    if(id) for(const n of names){
+      const k=normalizeEpgName(n);
+      if(k){if(!nameToIds.has(k))nameToIds.set(k,[]); nameToIds.get(k).push(id);}
+    }
+  }
+  const re=/<programme\\b([^>]*)>([\\s\\S]*?)<\\/programme>/g;
   let m;
   while((m=re.exec(xml))){
     const a=parseAttrs(m[1]), channel=xmlUnescape(a.channel||"");
     if(!channel) continue;
     const body=m[2];
-    const tm=body.match(/<title(?:\s[^>]*)?>([\s\S]*?)<\/title>/i);
-    const dm=body.match(/<desc(?:\s[^>]*)?>([\s\S]*?)<\/desc>/i);
+    const tm=body.match(/<title(?:\\s[^>]*)?>([\\s\\S]*?)<\\/title>/i);
+    const dm=body.match(/<desc(?:\\s[^>]*)?>([\\s\\S]*?)<\\/desc>/i);
     const p={start:a.start||"",stop:a.stop||"",title:xmlUnescape(tm?tm[1].replace(/<[^>]+>/g,""):""),desc:xmlUnescape(dm?dm[1].replace(/<[^>]+>/g,""):"")};
     add(channel,p);
     const base=channel.replace(/@[^.]+$/,"");
     if(base!==channel) add(base,p);
   }
-  return byId;
+  return {byId,nameToIds};
 }
 function epgKeyVariants(id,name){
   const v=new Set([id,name]);
@@ -95,7 +109,12 @@ function epgKeyVariants(id,name){
 }
 function findEpgPrograms(epg,entry){
   for(const key of epgKeyVariants(entry.tvgId,entry.name)){
-    const programs=epg.get(key);
+    const programs=epg.byId.get(key);
+    if(programs?.length) return programs;
+  }
+  const ids=epg.nameToIds.get(normalizeEpgName(entry.name))||[];
+  for(const id of ids){
+    const programs=epg.byId.get(id);
     if(programs?.length) return programs;
   }
   return [];
