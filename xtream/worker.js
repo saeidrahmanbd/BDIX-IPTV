@@ -2,8 +2,11 @@ const DEFAULT_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidsujon-rahma
 const CACHE_KEY = "https://bdix-iptv.internal/playlist";
 const CACHE_TTL = 60;
 
-const EPG_URL = "https://epg.pw/xmltv/epg_IN.xml";
-const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v2";
+const EPG_URLS = [
+  "https://epg.pw/xmltv/epg_IN.xml",
+  "https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml"
+];
+const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v3";
 const EPG_CACHE_TTL = 900;
 
 function json(data, status = 200) {
@@ -56,23 +59,30 @@ function userInfo(request,env){
 async function getEpg(env){
   const cache=caches.default, key=new Request(EPG_CACHE_KEY), cached=await cache.match(key);
   if(cached) return cached.text();
-  const r=await fetch(EPG_URL,{headers:{"user-agent":"BDIX-IPTV-Xtream-Gateway/1.0","accept":"application/gzip, application/xml, text/xml, */*"}});
-  if(!r.ok) throw new Error("EPG fetch failed: "+r.status);
-  let xml;
-  const bytes=await r.arrayBuffer();
-  const encoding=(r.headers.get("content-encoding")||"").toLowerCase();
-  try {
-    if(encoding.includes("gzip") || EPG_URL.endsWith(".gz")) {
-      xml=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip"))).text();
-    } else {
-      xml=new TextDecoder().decode(bytes);
-    }
-  } catch {
-    xml=new TextDecoder().decode(bytes);
+  const xmls=[];
+  for(const source of EPG_URLS){
+    try{
+      const r=await fetch(source,{headers:{"user-agent":"BDIX-IPTV-Xtream-Gateway/1.0","accept":"application/gzip, application/xml, text/xml, */*"}});
+      if(!r.ok) continue;
+      const bytes=await r.arrayBuffer();
+      const encoding=(r.headers.get("content-encoding")||"").toLowerCase();
+      let xml;
+      try{
+        if(encoding.includes("gzip") || source.endsWith(".gz")) {
+          xml=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip"))).text();
+        } else {
+          xml=new TextDecoder().decode(bytes);
+        }
+      }catch{
+        xml=new TextDecoder().decode(bytes);
+      }
+      if(xml.includes("<tv") && xml.includes("<programme")) xmls.push(xml);
+    }catch{}
   }
-  if(!xml.includes("<tv") || !xml.includes("<programme")) throw new Error("EPG XML is empty or invalid");
-  await cache.put(key,new Response(xml,{headers:{"content-type":"application/xml; charset=utf-8","cache-control":"public, max-age="+EPG_CACHE_TTL}}));
-  return xml;
+  if(!xmls.length) throw new Error("All EPG sources failed");
+  const merged=xmls.join("\n");
+  await cache.put(key,new Response(merged,{headers:{"content-type":"application/xml; charset=utf-8","cache-control":"public, max-age="+EPG_CACHE_TTL}}));
+  return merged;
 }
 function xmlUnescape(s){
   return String(s??"").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&apos;/g,"'");
@@ -193,7 +203,7 @@ export default {
    if(path==="/epg-health"){
     const epg=parseXmltv(await getEpg(env));
     const checks=[["StarJalsha.in","Star Jalsha"],["ZeeBangla.in","Zee Bangla"],["SonyAath.in","Sony AATH"]];
-    const result={source:EPG_URL,channel_count:epg.byId.size,name_map_count:epg.nameToIds.size,checks:{}};
+    const result={sources:EPG_URLS,channel_count:epg.byId.size,name_map_count:epg.nameToIds.size,checks:{}};
     for(const [id,name] of checks){
       const variants=epgKeyVariants(id,name);
       let matched=null,count=0;
