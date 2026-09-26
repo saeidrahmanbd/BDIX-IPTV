@@ -4,9 +4,10 @@ const CACHE_TTL = 60;
 
 const EPG_URLS = [
   "https://epg.pw/xmltv/epg_IN.xml",
-  "https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml"
+  "https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml",
+  "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz"
 ];
-const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v3";
+const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v4";
 const EPG_CACHE_TTL = 900;
 
 function json(data, status = 200) {
