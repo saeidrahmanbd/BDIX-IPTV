@@ -141,7 +141,7 @@ function epgXml(data,epg){
 function categories(data){return data.groups.map((name,i)=>({category_id:String(i+1),category_name:name,parent_id:0}));}
 function streams(data,cat){
   const src=cat?data.entries.filter(e=>e.categoryId===String(cat)):data.entries;
-  return src.map((e,i)=>({num:Number(e.channelNo)||i+1,name:e.name,stream_type:"live",stream_id:e.id,stream_icon:e.logo,epg_channel_id:e.tvgId,added:"0",category_id:e.categoryId,custom_sid:"",tv_archive:0,direct_source:e.url,tv_archive_duration:0}));
+  return src.map((e,i)=>({num:Number(e.channelNo)||i+1,name:e.name,stream_type:"live",stream_id:e.id,stream_icon:e.logo,epg_channel_id:(e.tvgId&&/\.in$/i.test(e.tvgId)?e.tvgId+"@SD":e.tvgId||e.name),added:"0",category_id:e.categoryId,custom_sid:"",tv_archive:0,direct_source:e.url,tv_archive_duration:0}));
 }
 function m3u(data,request,env){
   const u=new URL(request.url), ext=(u.searchParams.get("output")||"m3u8").toLowerCase()==="ts"?"ts":"m3u8", out=["#EXTM3U"];
