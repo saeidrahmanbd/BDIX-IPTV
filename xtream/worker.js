@@ -2,6 +2,10 @@ const DEFAULT_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidsujon-rahma
 const CACHE_KEY = "https://bdix-iptv.internal/playlist";
 const CACHE_TTL = 60;
 
+const EPG_URL = "https://raw.githubusercontent.com/Zaman-Topu/Ip-tv-Collection/main/epg.json";
+const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-json";
+const EPG_CACHE_TTL = 900;
+
 function json(data, status = 200) {
   return new Response(JSON.stringify(data), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } });
 }
@@ -48,6 +52,69 @@ function userInfo(request,env){
   const host=u.hostname;
   return {user_info:{username:env.XTREAM_USERNAME,password:env.XTREAM_PASSWORD,message:"BDIX-IPTV Xtream Gateway",auth:1,status:"Active",exp_date:null,is_trial:"0",active_cons:"0",created_at:String(Math.floor(Date.now()/1000)),max_connections:"2",allowed_output_formats:["ts","m3u8"]},server_info:{url:host,port:"443",https_port:"443",server_protocol:"https",rtmp_port:"",timezone:env.TIMEZONE||"Asia/Dhaka",timestamp_now:Math.floor(Date.now()/1000),time_now:new Date().toLocaleString("sv-SE",{timeZone:env.TIMEZONE||"Asia/Dhaka"})}};
 }
+
+async function getEpg(env){
+  const cache=caches.default, key=new Request(EPG_CACHE_KEY), cached=await cache.match(key);
+  if(cached) return cached.json();
+  const r=await fetch(EPG_URL,{headers:{"user-agent":"BDIX-IPTV-Xtream-Gateway/1.0"}});
+  if(!r.ok) throw new Error("EPG fetch failed: "+r.status);
+  const data=await r.json();
+  await cache.put(key,new Response(JSON.stringify(data),{headers:{"content-type":"application/json","cache-control":"public, max-age="+EPG_CACHE_TTL}}));
+  return data;
+}
+function epgKeyVariants(id,name){
+  const v=new Set([id,name]);
+  for(const x of [id,name]){
+    if(!x) continue;
+    v.add(x.replace(/@[^.]+$/,""));
+    if(!/@/.test(x) && /\\.(bd|in|uk|us|au|pk|ae|lk|np|bt)$/.test(x)) v.add(x+"@SD");
+  }
+  return [...v].filter(Boolean);
+}
+function findEpgPrograms(epg,entry){
+  for(const key of epgKeyVariants(entry.tvgId,entry.name)){
+    if(Array.isArray(epg[key]) && epg[key].length) return epg[key];
+  }
+  return [];
+}
+function toTimestamp(s){
+  const m=/^(\\d{4})(\\d{2})(\\d{2})(\\d{2})(\\d{2})(\\d{2})/.exec(String(s||""));
+  if(!m) return 0;
+  return Math.floor(Date.UTC(+m[1],+m[2]-1,+m[3],+m[4],+m[5],+m[6])/1000);
+}
+function epgListings(entry,programs){
+  return programs.map((p,i)=>({
+    id:String(stableId(entry.tvgId+"|"+p.start+"|"+p.stop+"|"+p.title+"|"+i)),
+    epg_id:entry.tvgId||entry.name,
+    title:p.title||"",
+    lang:"en",
+    start:String(p.start||""),
+    end:String(p.stop||""),
+    description:p.desc||"",
+    channel_id:entry.tvgId||entry.name,
+    start_timestamp:toTimestamp(p.start),
+    stop_timestamp:toTimestamp(p.stop),
+    now_playing:toTimestamp(p.start)<=Math.floor(Date.now()/1000) && toTimestamp(p.stop)>Math.floor(Date.now()/1000) ? 1 : 0,
+    has_archive:0
+  }));
+}
+function xmlEscape(s){
+  return String(s??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+function epgXml(data,epg){
+  const out=['<?xml version="1.0" encoding="UTF-8"?>','<tv generator-info-name="BDIX-IPTV Xtream Gateway">'];
+  for(const e of data.entries){
+    const id=e.tvgId||e.name;
+    out.push('<channel id="'+xmlEscape(id)+'"><display-name>'+xmlEscape(e.name)+'</display-name>'+(e.logo?'<icon src="'+xmlEscape(e.logo)+'"/>':'')+'</channel>');
+    for(const p of findEpgPrograms(epg,e)){
+      if(!p.start || !p.stop) continue;
+      out.push('<programme start="'+xmlEscape(p.start)+'" stop="'+xmlEscape(p.stop)+'" channel="'+xmlEscape(id)+'"><title>'+xmlEscape(p.title||"")+'</title>'+(p.desc?'<desc>'+xmlEscape(p.desc)+'</desc>':'')+'</programme>');
+    }
+  }
+  out.push('</tv>');
+  return out.join("");
+}
+
 function categories(data){return data.groups.map((name,i)=>({category_id:String(i+1),category_name:name,parent_id:0}));}
 function streams(data,cat){
   const src=cat?data.entries.filter(e=>e.categoryId===String(cat)):data.entries;
@@ -76,12 +143,27 @@ export default {
     if(!action||action==="get_account_info") return json(userInfo(request,env));
     if(action==="get_live_categories") return json(categories(data));
     if(action==="get_live_streams") return json(streams(data,url.searchParams.get("category_id")));
-    if(action==="get_short_epg"||action==="get_simple_data_table"||action==="get_all_epg") return json({epg_listings:[]});
+    if(action==="get_short_epg"||action==="get_simple_data_table"){
+      const streamId=Number(url.searchParams.get("stream_id")), entry=data.entries.find(e=>e.id===streamId);
+      if(!entry) return json({epg_listings:[]});
+      const epg=await getEpg(env), listings=epgListings(entry,findEpgPrograms(epg,entry));
+      const limit=Number(url.searchParams.get("limit"))||4;
+      return json({epg_listings:listings.slice(0,Math.max(1,Math.min(limit,100)))});
+    }
+    if(action==="get_all_epg") {
+      const epg=await getEpg(env), all=[];
+      for(const e of data.entries) all.push(...epgListings(e,findEpgPrograms(epg,e)));
+      return json({epg_listings:all});
+    }
     if(action==="get_vod_categories"||action==="get_series_categories"||action==="get_vod_streams"||action==="get_series") return json([]);
     return json({error:"Unsupported action"},400);
    }
    if(path==="/get.php"){if(!auth(url,env)) return new Response("Unauthorized",{status:401}); return m3u(parsePlaylist(await getPlaylist(env)),request,env);}
-   if(path==="/xmltv.php"){if(!auth(url,env)) return new Response("Unauthorized",{status:401}); return emptyEpg();}
+   if(path==="/xmltv.php"){
+    if(!auth(url,env)) return new Response("Unauthorized",{status:401});
+    const data=parsePlaylist(await getPlaylist(env)), epg=await getEpg(env);
+    return new Response(epgXml(data,epg),{headers:{"content-type":"application/xml; charset=utf-8","cache-control":"no-store"}});
+   }
    if(path.startsWith("/live/")){
     const parts=path.split("/").filter(Boolean); if(!pathAuth(parts,env)) return new Response("Unauthorized",{status:401});
     const id=Number((parts[3]||"").split(".")[0]); if(!Number.isInteger(id)) return new Response("Bad stream ID",{status:400});
