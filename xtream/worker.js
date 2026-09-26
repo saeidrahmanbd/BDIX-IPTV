@@ -2,7 +2,7 @@ const DEFAULT_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidsujon-rahma
 const CACHE_KEY = "https://bdix-iptv.internal/playlist";
 const CACHE_TTL = 60;
 
-const EPG_URL = "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz";
+const EPG_URL = "https://epg.pw/xmltv/epg_IN.xml";
 const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml";
 const EPG_CACHE_TTL = 900;
 
