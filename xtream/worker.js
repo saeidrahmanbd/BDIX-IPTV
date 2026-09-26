@@ -6,7 +6,7 @@ function json(data, status = 200) {
   return new Response(JSON.stringify(data), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } });
 }
 function parseAttrs(line) {
-  const attrs = {}; let m; const re = /([\\w-]+)="([^"]*)"/g;
+  const attrs = {}; let m; const re = /([\w-]+)="([^"]*)"/g;
   while ((m = re.exec(line))) attrs[m[1]] = m[2]; return attrs;
 }
 function stableId(value) {
