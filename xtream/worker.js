@@ -2,8 +2,8 @@ const DEFAULT_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidsujon-rahma
 const CACHE_KEY = "https://bdix-iptv.internal/playlist";
 const CACHE_TTL = 60;
 
-const EPG_URL = "https://raw.githubusercontent.com/Zaman-Topu/Ip-tv-Collection/main/epg.json";
-const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-json";
+const EPG_URL = "https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml";
+const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml";
 const EPG_CACHE_TTL = 900;
 
 function json(data, status = 200) {
@@ -55,12 +55,34 @@ function userInfo(request,env){
 
 async function getEpg(env){
   const cache=caches.default, key=new Request(EPG_CACHE_KEY), cached=await cache.match(key);
-  if(cached) return cached.json();
+  if(cached) return cached.text();
   const r=await fetch(EPG_URL,{headers:{"user-agent":"BDIX-IPTV-Xtream-Gateway/1.0"}});
   if(!r.ok) throw new Error("EPG fetch failed: "+r.status);
-  const data=await r.json();
-  await cache.put(key,new Response(JSON.stringify(data),{headers:{"content-type":"application/json","cache-control":"public, max-age="+EPG_CACHE_TTL}}));
-  return data;
+  const xml=await r.text();
+  if(!xml.includes("<tv") || !xml.includes("<programme")) throw new Error("EPG XML is empty or invalid");
+  await cache.put(key,new Response(xml,{headers:{"content-type":"application/xml; charset=utf-8","cache-control":"public, max-age="+EPG_CACHE_TTL}}));
+  return xml;
+}
+function xmlUnescape(s){
+  return String(s??"").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&apos;/g,"'");
+}
+function parseXmltv(xml){
+  const byId=new Map();
+  const add=(key,p)=>{if(!key)return; if(!byId.has(key))byId.set(key,[]); byId.get(key).push(p);};
+  const re=/<programme\b([^>]*)>([\s\S]*?)<\/programme>/g;
+  let m;
+  while((m=re.exec(xml))){
+    const a=parseAttrs(m[1]), channel=xmlUnescape(a.channel||"");
+    if(!channel) continue;
+    const body=m[2];
+    const tm=body.match(/<title(?:\s[^>]*)?>([\s\S]*?)<\/title>/i);
+    const dm=body.match(/<desc(?:\s[^>]*)?>([\s\S]*?)<\/desc>/i);
+    const p={start:a.start||"",stop:a.stop||"",title:xmlUnescape(tm?tm[1].replace(/<[^>]+>/g,""):""),desc:xmlUnescape(dm?dm[1].replace(/<[^>]+>/g,""):"")};
+    add(channel,p);
+    const base=channel.replace(/@[^.]+$/,"");
+    if(base!==channel) add(base,p);
+  }
+  return byId;
 }
 function epgKeyVariants(id,name){
   const v=new Set([id,name]);
@@ -73,7 +95,8 @@ function epgKeyVariants(id,name){
 }
 function findEpgPrograms(epg,entry){
   for(const key of epgKeyVariants(entry.tvgId,entry.name)){
-    if(Array.isArray(epg[key]) && epg[key].length) return epg[key];
+    const programs=epg.get(key);
+    if(programs?.length) return programs;
   }
   return [];
 }
@@ -146,12 +169,12 @@ export default {
     if(action==="get_short_epg"||action==="get_simple_data_table"){
       const streamId=Number(url.searchParams.get("stream_id")), entry=data.entries.find(e=>e.id===streamId);
       if(!entry) return json({epg_listings:[]});
-      const epg=await getEpg(env), listings=epgListings(entry,findEpgPrograms(epg,entry));
+      const epg=parseXmltv(await getEpg(env)), listings=epgListings(entry,findEpgPrograms(epg,entry));
       const limit=Number(url.searchParams.get("limit"))||4;
       return json({epg_listings:listings.slice(0,Math.max(1,Math.min(limit,100)))});
     }
     if(action==="get_all_epg") {
-      const epg=await getEpg(env), all=[];
+      const epg=parseXmltv(await getEpg(env)), all=[];
       for(const e of data.entries) all.push(...epgListings(e,findEpgPrograms(epg,e)));
       return json({epg_listings:all});
     }
@@ -161,7 +184,7 @@ export default {
    if(path==="/get.php"){if(!auth(url,env)) return new Response("Unauthorized",{status:401}); return m3u(parsePlaylist(await getPlaylist(env)),request,env);}
    if(path==="/xmltv.php"){
     if(!auth(url,env)) return new Response("Unauthorized",{status:401});
-    const data=parsePlaylist(await getPlaylist(env)), epg=await getEpg(env);
+    const data=parsePlaylist(await getPlaylist(env)), epg=parseXmltv(await getEpg(env));
     return new Response(epgXml(data,epg),{headers:{"content-type":"application/xml; charset=utf-8","cache-control":"no-store"}});
    }
    if(path.startsWith("/live/")){
