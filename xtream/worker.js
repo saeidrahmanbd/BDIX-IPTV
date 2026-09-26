@@ -94,58 +94,44 @@ function normalizeEpgName(s){
     .replace(/\\b(hd|sd|uhd|fhd|tv|channel)\\b/g,"")
     .replace(/[^a-z0-9]+/g,"");
 }
-function epgNameDistance(a,b){
-  const x=normalizeEpgName(a), y=normalizeEpgName(b);
-  if(!x || !y) return 999;
-  const prev=Array.from({length:y.length+1},(_,i)=>i);
-  for(let i=1;i<=x.length;i++){
-    let diag=prev[0]; prev[0]=i;
-    for(let j=1;j<=y.length;j++){
-      const old=prev[j], cost=x[i-1]===y[j-1]?0:1;
-      prev[j]=Math.min(prev[j]+1,prev[j-1]+1,diag+cost);
-      diag=old;
-    }
-  }
-  return prev[y.length];
-}
-function epgNameCandidates(epg,name){
-  const target=normalizeEpgName(name);
-  if(!target) return [];
-  const exact=epg.nameToIds.get(target)||[];
-  if(exact.length) return exact;
-  const out=[];
-  for(const [k,ids] of epg.nameToIds){
-    const d=epgNameDistance(target,k);
-    const maxLen=Math.max(target.length,k.length);
-    if((maxLen>=12 && d<=2) || (maxLen>=8 && d<=1)){
-      for(const id of ids) out.push({id,d});
-    }
-  }
-  out.sort((a,b)=>a.d-b.d);
-  return out.map(x=>x.id);
+function epgNameAliases(s){
+  const n=normalizeEpgName(s);
+  if(!n) return [];
+  const out=new Set([n]);
+  const aliases={
+    aakaashaath:"aakashaath",
+    aakashath:"aakashaath",
+    sonyaath:"sonyaath",
+    zeeebangla:"zeebangla",
+    zeebanglahd:"zeebangla",
+    starjalshahd:"starjalsha",
+    starjalsa:"starjalsha",
+    colorsbanglahd:"colorsbangla"
+  };
+  if(aliases[n]) out.add(aliases[n]);
+  return [...out];
 }
 function parseXmltv(xml){
   const byId=new Map(), nameToIds=new Map();
   const add=(key,p)=>{if(!key)return; if(!byId.has(key))byId.set(key,[]); byId.get(key).push(p);};
-  const channels=[];
-  const cr=/<channel\b([^>]*)>([\s\S]*?)<\/channel>/g;
+  const cr=/<channel\\b([^>]*)>([\\s\\S]*?)<\\/channel>/g;
   let cm;
   while((cm=cr.exec(xml))){
     const a=parseAttrs(cm[1]), id=xmlUnescape(a.id||"");
-    const names=[...cm[2].matchAll(/<display-name(?:\s[^>]*)?>([\s\S]*?)<\/display-name>/gi)].map(x=>xmlUnescape(x[1].replace(/<[^>]+>/g,"").trim())).filter(Boolean);
-    if(id) for(const n of names){
-      const k=normalizeEpgName(n);
-      if(k){if(!nameToIds.has(k))nameToIds.set(k,[]); nameToIds.get(k).push(id);}
+    const names=[...cm[2].matchAll(/<display-name(?:\\s[^>]*)?>([\\s\\S]*?)<\\/display-name>/gi)].map(x=>xmlUnescape(x[1].replace(/<[^>]+>/g,"").trim())).filter(Boolean);
+    if(id) for(const n of names) for(const k of epgNameAliases(n)){
+      if(!nameToIds.has(k))nameToIds.set(k,[]);
+      if(!nameToIds.get(k).includes(id)) nameToIds.get(k).push(id);
     }
   }
-  const re=/<programme\b([^>]*)>([\s\S]*?)<\/programme>/g;
+  const re=/<programme\\b([^>]*)>([\\s\\S]*?)<\\/programme>/g;
   let m;
   while((m=re.exec(xml))){
     const a=parseAttrs(m[1]), channel=xmlUnescape(a.channel||"");
     if(!channel) continue;
     const body=m[2];
-    const tm=body.match(/<title(?:\s[^>]*)?>([\s\S]*?)<\/title>/i);
-    const dm=body.match(/<desc(?:\s[^>]*)?>([\s\S]*?)<\/desc>/i);
+    const tm=body.match(/<title(?:\\s[^>]*)?>([\\s\\S]*?)<\\/title>/i);
+    const dm=body.match(/<desc(?:\\s[^>]*)?>([\\s\\S]*?)<\\/desc>/i);
     const p={start:a.start||"",stop:a.stop||"",title:xmlUnescape(tm?tm[1].replace(/<[^>]+>/g,""):""),desc:xmlUnescape(dm?dm[1].replace(/<[^>]+>/g,""):"")};
     add(channel,p);
     const base=channel.replace(/@[^.]+$/,"");
@@ -158,8 +144,9 @@ function epgKeyVariants(id,name){
   for(const x of [id,name]){
     if(!x) continue;
     v.add(x.replace(/@[^.]+$/,""));
-    if(!/@/.test(x) && /\.(bd|in|uk|us|au|pk|ae|lk|np|bt)$/.test(x)) v.add(x+"@SD");
+    if(!/@/.test(x) && /\\.(bd|in|uk|us|au|pk|ae|lk|np|bt)$/.test(x)) v.add(x+"@SD");
   }
+  for(const x of epgNameAliases(name)) v.add(x);
   return [...v].filter(Boolean);
 }
 function findEpgPrograms(epg,entry){
@@ -167,9 +154,12 @@ function findEpgPrograms(epg,entry){
     const programs=epg.byId.get(key);
     if(programs?.length) return programs;
   }
-  for(const id of epgNameCandidates(epg,entry.name)){
-    const programs=epg.byId.get(id);
-    if(programs?.length) return programs;
+  for(const alias of epgNameAliases(entry.name)){
+    const ids=epg.nameToIds.get(alias)||[];
+    for(const id of ids){
+      const programs=epg.byId.get(id);
+      if(programs?.length) return programs;
+    }
   }
   return [];
 }
