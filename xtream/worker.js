@@ -3,7 +3,7 @@ const CACHE_KEY = "https://bdix-iptv.internal/playlist";
 const CACHE_TTL = 60;
 
 const EPG_URL = "https://epg.pw/xmltv/epg_IN.xml";
-const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml";
+const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v2";
 const EPG_CACHE_TTL = 900;
 
 function json(data, status = 200) {
