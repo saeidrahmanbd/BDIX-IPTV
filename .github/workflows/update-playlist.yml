@@ -46,6 +46,7 @@ jobs:
           IPTV_UPDATE_MODE: backup_only
         run: python scripts/update_playlist.py
 
+      # Enforce category-level Backup exclusions after every source update.
       - name: Remove backups for locked categories
         env:
           LOCKED_BACKUP_CATEGORIES: "International|Documentary & Wildlife|Kids|Sports|Religious"
