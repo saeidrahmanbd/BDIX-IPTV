@@ -44,6 +44,13 @@ def clean_name(value):
     value = re.sub(r"\b(?:hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|360p)\b", " ", value, flags=re.I)
     return re.sub(r"[^a-z0-9]+", "", value.lower())
 
+def identity_root(cid):
+    return re.sub(r"\.[a-z]{2}$", "", cid.split("@", 1)[0])
+
+def country_code(cid):
+    match = re.search(r"\.([a-z]{2})$", cid.split("@", 1)[0])
+    return match.group(1).lower() if match else ""
+
 def parse(text):
     lines = text.replace("\r", "").splitlines()
     result = []
@@ -93,6 +100,7 @@ entries = parse(base)
 
 existing_ids, existing_names, existing_urls, backup_urls = set(), set(), set(), set()
 existing_id_countries = {}
+existing_root_countries = {}
 for info, url in entries:
     metadata = attrs(info)
     cid = metadata.get("tvg-id", "").strip().lower()
@@ -106,6 +114,7 @@ for info, url in entries:
         existing_ids.add(cid_base)
         if country:
             existing_id_countries.setdefault(cid_base, set()).add(country)
+            existing_root_countries.setdefault(identity_root(cid), set()).add(country)
     # Display names are retained only for reporting/debugging; they are not identity keys.
     existing_urls.add(url.lower())
     if metadata.get("group-title", "").strip() == BACKUP:
@@ -136,10 +145,14 @@ for source in SOURCES:
             bool(cid_base and cid_base in existing_id_countries and candidate_country)
             and candidate_country in existing_id_countries.get(cid_base, set())
         )
+        root_country_conflict = (
+            bool(candidate_country and identity_root(cid) in existing_root_countries)
+            and candidate_country not in existing_root_countries.get(identity_root(cid), set())
+        )
         country_conflict = (
             bool(cid_base and cid_base in existing_id_countries and candidate_country)
             and candidate_country not in existing_id_countries.get(cid_base, set())
-        )
+        ) or root_country_conflict
         # Channel identity is metadata-driven only. Never use a display-name match
         # to decide that an unrelated source is an alternate stream. Exact IDs are
         # preferred; base IDs may match only when their country identity is compatible.
