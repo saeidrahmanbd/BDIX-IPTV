@@ -15,7 +15,7 @@ from PIL import Image
 
 PLAYLIST = Path("IPTV Playlist.m3u")
 LOGOS = Path("logos")
-RAW_BASE = "https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/"
+RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 
 
 def attrs(line):
@@ -32,7 +32,7 @@ def safe_name(value):
 
 
 def local_logo(value):
-    return "logos/" in value or "raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV" in value
+    return "logos/" in value or "raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV" in value
 
 
 def download_png(url, target):
