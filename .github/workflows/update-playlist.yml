@@ -88,9 +88,10 @@ jobs:
               cid = a.get("tvg-id", "").strip().lower()
               channel_id = a.get("channel-id", "").strip().lower()
               is_backup = a.get("group-title", "").strip() == "Backup"
+              display_name = a.get("tvg-name", "") or (info.split(",", 1)[1].strip() if "," in info else "")
               is_locked_match = cid in locked_ids or channel_id in locked_ids
               if is_backup and is_locked_match:
-                  removed.append(name)
+                  removed.append(display_name)
               else:
                   out.extend([info, url])
               i += 2
