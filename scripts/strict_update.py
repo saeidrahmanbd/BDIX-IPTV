@@ -106,8 +106,7 @@ for info, url in entries:
         existing_ids.add(cid_base)
         if country:
             existing_id_countries.setdefault(cid_base, set()).add(country)
-    existing_names.add(clean_name(channel_name(info)))
-    existing_names.add(clean_name(metadata.get("tvg-name", "")))
+    # Display names are retained only for reporting/debugging; they are not identity keys.
     existing_urls.add(url.lower())
     if metadata.get("group-title", "").strip() == BACKUP:
         backup_urls.add(url.lower())
@@ -141,10 +140,17 @@ for source in SOURCES:
             bool(cid_base and cid_base in existing_id_countries and candidate_country)
             and candidate_country not in existing_id_countries.get(cid_base, set())
         )
+        # Channel identity is metadata-driven only. Never use a display-name match
+        # to decide that an unrelated source is an alternate stream. Exact IDs are
+        # preferred; base IDs may match only when their country identity is compatible.
         known = bool(
             (cid and cid in existing_ids)
-            or (cid_base and cid_base in existing_ids and (same_id_country or not candidate_country))
-            or (cname and cname in existing_names and not country_conflict)
+            or (
+                cid_base
+                and cid_base in existing_ids
+                and (same_id_country or not candidate_country)
+                and not country_conflict
+            )
         )
         if not known:
             new_channel_candidates += 1
@@ -185,7 +191,7 @@ REPORT.write_text("\n".join([
     "## Policy",
     "- Existing categories are locked.",
     "- New channel additions are disabled.",
-    "- Only alternate streams for channels already present are allowed.",
+    "- Only alternate streams whose playlist identity matches an existing channel ID are allowed.",
     '- Accepted alternate streams are placed in the existing "Backup" category.', "",
     f"Added backup streams: {len(added)}",
     f"New-channel candidates skipped: {new_channel_candidates}",
