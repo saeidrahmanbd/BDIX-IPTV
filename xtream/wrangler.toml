@@ -3,7 +3,7 @@ main = "worker.js"
 compatibility_date = "2026-09-26"
 
 [vars]
-PLAYLIST_URL = "https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/IPTV%20Playlist.m3u"
+PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV%20Playlist.m3u"
 TIMEZONE = "Asia/Dhaka"
 
 [secrets]
