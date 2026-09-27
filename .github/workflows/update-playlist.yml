@@ -63,39 +63,54 @@ jobs:
           def attrs(info):
               return dict(re.findall(r'([\w-]+)="([^"]*)"', info))
 
-          locked_ids = set()
-          for line in lines:
-              if not line.startswith("#EXTINF"):
-                  continue
-              a = attrs(line)
-              if a.get("group-title", "").strip() in locked:
-                  if a.get("tvg-id"):
-                      locked_ids.add(a["tvg-id"].strip().lower())
-                  if a.get("channel-id"):
-                      locked_ids.add(a["channel-id"].strip().lower())
-
-          out = []
-          removed = []
+          blocks = []
+          header = []
           i = 0
+          while i < len(lines) and not lines[i].startswith("#EXTINF"):
+              header.append(lines[i])
+              i += 1
+
           while i < len(lines):
               if not lines[i].startswith("#EXTINF"):
-                  out.append(lines[i])
+                  header.append(lines[i])
                   i += 1
                   continue
-              info = lines[i]
-              url = lines[i + 1] if i + 1 < len(lines) else ""
+              b = [lines[i]]
+              i += 1
+              while i < len(lines) and not lines[i].startswith("#EXTINF"):
+                  b.append(lines[i])
+                  if lines[i].strip().startswith(("http://", "https://")):
+                      i += 1
+                      break
+                  i += 1
+              blocks.append(b)
+
+          locked_ids = set()
+          for b in blocks:
+              info = b[0]
+              a = attrs(info)
+              if a.get("group-title", "").strip() in locked:
+                  for key in ("tvg-id", "channel-id"):
+                      if a.get(key):
+                          locked_ids.add(a[key].strip().lower())
+
+          kept = []
+          removed = []
+          for b in blocks:
+              info = b[0]
               a = attrs(info)
               cid = a.get("tvg-id", "").strip().lower()
               channel_id = a.get("channel-id", "").strip().lower()
               is_backup = a.get("group-title", "").strip() == "Backup"
               display_name = a.get("tvg-name", "") or (info.split(",", 1)[1].strip() if "," in info else "")
-              is_locked_match = cid in locked_ids or channel_id in locked_ids
-              if is_backup and is_locked_match:
+              if is_backup and (cid in locked_ids or channel_id in locked_ids):
                   removed.append(display_name)
               else:
-                  out.extend([info, url])
-              i += 2
+                  kept.append(b)
 
+          out = header[:]
+          for b in kept:
+              out.extend(b)
           playlist.write_text("\n".join(out).rstrip() + "\n", encoding="utf-8", newline="\n")
           print(f"Removed {len(removed)} locked-category backup entries.")
           for name in removed:
