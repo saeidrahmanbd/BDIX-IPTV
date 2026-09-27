@@ -312,6 +312,10 @@ export default {
     return json({error:"Unsupported action"},400);
    }
    if(path==="/get.php"){if(!auth(url,env)) return new Response("Unauthorized",{status:401}); return m3u(parsePlaylist(await getPlaylist(env)),request,env);}
+   if(path==="/xmltv-public.php"){
+    const data=parsePlaylist(await getPlaylist(env)), epg=parseXmltv(await getEpg(env));
+    return new Response(epgXml(data,epg),{headers:{"content-type":"application/xml; charset=utf-8","cache-control":"public, max-age=900"}});
+   }
    if(path==="/xmltv.php"){
     if(!auth(url,env)) return new Response("Unauthorized",{status:401});
     const data=parsePlaylist(await getPlaylist(env)), epg=parseXmltv(await getEpg(env));
