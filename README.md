@@ -58,6 +58,15 @@ Playlist maintenance includes:
 6. Maintaining local logo references
 7. Improving EPG coverage where reliable sources are available
 8. Removing obsolete or unsuitable entries
+9. Auditing channel identity by playlist metadata IDs rather than stream URLs
+10. Detecting duplicate IDs, metadata conflicts, name collisions, and logo integrity problems
+11. Protecting primary curated entries from automatic metadata or stream changes
+
+## 🔐 Identity & automatic updates
+
+The automatic updater is intentionally **backup-only**. It does not add new channels and does not use a display-name or stream URL to decide channel identity. Alternate streams must match an existing playlist channel ID. Ambiguous logo-name matches are left unchanged rather than guessed.
+
+A non-destructive playlist audit runs before automatic commits and checks duplicate identities, metadata conflicts, same-name/different-ID collisions, local logo integrity, and unexpected changes to protected primary entries. Live stream health is audited separately so a temporary stream failure cannot change channel identity or metadata.
 
 ## 🖼️ Logos & metadata
 
