@@ -225,7 +225,7 @@ for line in lines:
                     download_png(logo_item[1]["url"], target); downloaded += 1
                 output.append(force_local(line, replacement))
                 changed += 1; resolved_from_catalogue += 1
-                local_by_name[base_title] = replacement
+                local_by_name.setdefault(base_title, set()).add(replacement)
                 continue
             except Exception as exc:
                 failed += 1
