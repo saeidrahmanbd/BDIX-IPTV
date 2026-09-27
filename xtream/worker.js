@@ -9,6 +9,7 @@ const EPG_URLS = [
 ];
 const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v4";
 const EPG_CACHE_TTL = 900;
+// Direct M3U EPG endpoint deployment trigger.
 
 // Cross-map playlist tvg-id variants to canonical EPG IDs used by public guides.
 const EPG_ID_MAP = {
