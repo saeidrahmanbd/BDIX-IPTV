@@ -153,22 +153,29 @@ for info, url in entries:
 protected_changes = []
 try:
     old = subprocess.check_output(["git", "show", "HEAD:IPTV Playlist.m3u"], text=True, stderr=subprocess.DEVNULL)
-    old_entries = {identity(i):(i,u) for i,u in parse(old) if identity(i)}
-    new_entries = {identity(i):(i,u) for i,u in entries if identity(i)}
-    for cid, (old_info, old_url) in old_entries.items():
-        old_group = attrs(old_info).get("group-title", "")
-        if old_group in PRIMARY_EXCEPTIONS:
-            continue
-        current = new_entries.get(cid)
-        if current is None:
-            protected_changes.append((cid, display_name(old_info), "removed"))
-            continue
-        new_info, new_url = current
-        def stable(info):
-            a = attrs(info)
-            return {k:v for k,v in a.items() if k != "tvg-logo"}
-        if stable(old_info) != stable(new_info) or old_url != new_url:
-            protected_changes.append((cid, display_name(old_info), "metadata/stream changed"))
+    old_primary = Counter()
+    new_primary = Counter()
+
+    def stable(info, url):
+        a = attrs(info)
+        return (
+            (a.get("tvg-id") or a.get("channel-id") or "").strip().lower(),
+            a.get("group-title", "").strip(),
+            display_name(info).strip(),
+            url.strip(),
+        )
+
+    for info, url in parse(old):
+        if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS:
+            old_primary[stable(info, url)] += 1
+    for info, url in entries:
+        if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS:
+            new_primary[stable(info, url)] += 1
+
+    for key, count in old_primary.items():
+        if new_primary[key] < count:
+            cid, group, name, url = key
+            protected_changes.append((cid, name, "primary entry removed or changed"))
 except Exception:
     pass
 
