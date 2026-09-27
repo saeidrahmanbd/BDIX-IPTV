@@ -59,7 +59,6 @@ jobs:
           files=(
             "IPTV Playlist.m3u"
             "reports/auto-update.md"
-            "reports/missing-logo-fetch.md"
             "logos/"
           )
 
