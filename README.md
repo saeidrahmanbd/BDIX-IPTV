@@ -43,8 +43,6 @@ Examples of the project structure include:
 - Documentary
 - Religious
 - International
-- New Channels
-- New Backups
 
 Categories and entries are periodically reviewed as the playlist evolves.
 
