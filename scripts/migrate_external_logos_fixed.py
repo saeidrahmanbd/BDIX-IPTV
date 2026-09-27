@@ -8,7 +8,7 @@ try:
 except ImportError:
     cairosvg = None
 
-PLAYLIST = Path("IPTV Playlist.m3u")
+PLAYLIST = Path("IPTV-Playlist.m3u")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 CHANNELS_API = "https://iptv-org.github.io/api/channels.json"
