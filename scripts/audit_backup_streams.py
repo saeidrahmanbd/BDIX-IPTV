@@ -3,7 +3,7 @@
 import re, subprocess, time
 from pathlib import Path
 from urllib.parse import urlparse
-P=Path("IPTV Playlist.m3u")
+P=Path("IPTV-Playlist.m3u")
 lines=P.read_text(encoding="utf-8").replace("\r","").splitlines()
 header=[]; blocks=[]; i=0
 while i<len(lines) and not lines[i].startswith("#EXTINF"):
