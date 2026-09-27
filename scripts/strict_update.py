@@ -92,12 +92,20 @@ base = PLAYLIST.read_text(encoding="utf-8-sig").replace("\r", "")
 entries = parse(base)
 
 existing_ids, existing_names, existing_urls, backup_urls = set(), set(), set(), set()
+existing_id_countries = {}
 for info, url in entries:
     metadata = attrs(info)
     cid = metadata.get("tvg-id", "").strip().lower()
+    cid_base = cid.split("@", 1)[0]
+    country = metadata.get("tvg-country", "").strip().lower()
+    if not country:
+        match = re.search(r"\.([a-z]{2})(?:@|$)", cid_base)
+        country = match.group(1) if match else ""
     if cid:
         existing_ids.add(cid)
-        existing_ids.add(cid.split("@", 1)[0])
+        existing_ids.add(cid_base)
+        if country:
+            existing_id_countries.setdefault(cid_base, set()).add(country)
     existing_names.add(clean_name(channel_name(info)))
     existing_names.add(clean_name(metadata.get("tvg-name", "")))
     existing_urls.add(url.lower())
@@ -121,7 +129,23 @@ for source in SOURCES:
         cid = metadata.get("tvg-id", "").strip().lower()
         cid_base = cid.split("@", 1)[0]
         cname = clean_name(channel_name(info))
-        known = bool((cid and (cid in existing_ids or cid_base in existing_ids)) or (cname and cname in existing_names))
+        candidate_country = metadata.get("tvg-country", "").strip().lower()
+        if not candidate_country:
+            match = re.search(r"\.([a-z]{2})(?:@|$)", cid_base)
+            candidate_country = match.group(1) if match else ""
+        same_id_country = (
+            bool(cid_base and cid_base in existing_id_countries and candidate_country)
+            and candidate_country in existing_id_countries.get(cid_base, set())
+        )
+        country_conflict = (
+            bool(cid_base and cid_base in existing_id_countries and candidate_country)
+            and candidate_country not in existing_id_countries.get(cid_base, set())
+        )
+        known = bool(
+            (cid and cid in existing_ids)
+            or (cid_base and cid_base in existing_ids and (same_id_country or not candidate_country))
+            or (cname and cname in existing_names and not country_conflict)
+        )
         if not known:
             new_channel_candidates += 1
             continue
