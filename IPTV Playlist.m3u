@@ -1907,6 +1907,10 @@ http://stream.mcquack.net/327/index.m3u8
 https://tv.balkanweb.com/news24/livestream/playlist.m3u8
 #EXTINF:-1 tvg-name="NTV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png" tvg-id="NTV.mn" tvg-chno="10" tvg-country="MN" group-title="Backup",NTV
 https://cdn4.skygo.mn/live/disk1/NTVHD/HLSv3-FTA/NTVHD.m3u8
+#EXTINF:-1 tvg-id="NickJr.us@EastHD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr-united-states-east-hd-1080p.png" group-title="Backup",Nick Jr. (United States) East HD (1080p)
+https://sra72yz.s.gy/NICK_JR_HD.m3u8
+#EXTINF:-1 tvg-name="9 канал" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9.png" tvg-id="Channel9.il" tvg-chno="9" tvg-country="IL" group-title="Backup",9 канал Ⓨ
+https://www.youtube.com/@israel9tv/live
 #EXTINF:-1 tvg-id="ATNMusic.bd" tvg-name="ATN Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-music.png" tvg-chno="4" channel-id="ATNMusic.bd" group-title="Not Playing",ATN Music
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="ColorsBangla.in" tvg-name="Colors Bangla [Backup 2]" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png" tvg-chno="226" channel-id="ColorsBangla.in" group-title="Not Playing",Colors Bangla [Backup 2]
