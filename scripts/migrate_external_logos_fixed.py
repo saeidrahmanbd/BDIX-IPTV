@@ -37,7 +37,11 @@ FALLBACK_LOGOS = {
 }
 
 # Exact playlist ID -> explicit logo source. Add only verified mappings here.
-ID_LOGO_MAP = {}
+# These are intentionally keyed by playlist identity, never by stream URL or display name.
+ID_LOGO_MAP = {
+    "aamarbangla.in": "https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png",
+    "local.1d6cdda4509e": "https://jiotvimages.cdn.jio.com/dare_images/images/Amar_Digital_TV.png",
+}
 
 def exact_id(metadata):
     """Return the strongest playlist identity available; never infer it from a stream URL."""
