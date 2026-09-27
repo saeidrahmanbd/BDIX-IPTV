@@ -19,13 +19,13 @@ This report is generated automatically after playlist updating and logo migratio
 
 | Channel | Category | Logo URL |
 |---|---|---|
-| NatureTime UK (1080p) | Backup | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/naturetime-uk-1080p.png |
-| Nick Jr. (United States) East HD (1080p) | Backup | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/nick-jr-united-states-east-hd-1080p.png |
-| Zoom | Backup | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/zoom.png |
-| Zoom | Backup | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/zoom.png |
-| Zoom | Backup | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/zoom.png |
-| 9 канал | Backup | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/9.png |
-| Gandan TV | Backup | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/gandan-tv.png |
+| NatureTime UK (1080p) | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/naturetime-uk-1080p.png |
+| Nick Jr. (United States) East HD (1080p) | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr-united-states-east-hd-1080p.png |
+| Zoom | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom.png |
+| Zoom | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom.png |
+| Zoom | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom.png |
+| 9 канал | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9.png |
+| Gandan TV | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gandan-tv.png |
 
 ## Removed Channels
 
@@ -37,20 +37,20 @@ This report is generated automatically after playlist updating and logo migratio
 
 | Channel | Previous Logo | Current Logo |
 |---|---|---|
-| Bang Bang TV | — | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/bang-bang-tv.png |
-| Baraza Music TV | — | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/baraza-music-tv.png |
-| Documentary+ International | — | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/documentary-international.png |
-| Sparkle Movies | — | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/sparkle-movies.png |
-| Vevo Hip Hop & R&B | — | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/vevo-hip-hop-r-b.png |
-| LoL TV | — | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/lol-tv.png |
-| Movie Dome Family | — | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/movie-dome-family.png |
-| MyTime Movie Network BR | — | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/mytime-movie-network-br.png |
-| Mytime Movie | — | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/mytime-movie.png |
-| Action Hollywood Movies | — | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/action-hollywood-movies.png |
-| AMC Triller | — | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/amc-triller.png |
-| Rakuten Movies | — | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/rakuten-movies.png |
-| Sananda TV | — | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/sananda-tv.png |
-| Mysteries Xplored | — | https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/mysteries-xplored.png |
+| Bang Bang TV | — | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bang-bang-tv.png |
+| Baraza Music TV | — | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/baraza-music-tv.png |
+| Documentary+ International | — | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/documentary-international.png |
+| Sparkle Movies | — | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sparkle-movies.png |
+| Vevo Hip Hop & R&B | — | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vevo-hip-hop-r-b.png |
+| LoL TV | — | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lol-tv.png |
+| Movie Dome Family | — | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movie-dome-family.png |
+| MyTime Movie Network BR | — | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network-br.png |
+| Mytime Movie | — | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie.png |
+| Action Hollywood Movies | — | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/action-hollywood-movies.png |
+| AMC Triller | — | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amc-triller.png |
+| Rakuten Movies | — | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rakuten-movies.png |
+| Sananda TV | — | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sananda-tv.png |
+| Mysteries Xplored | — | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mysteries-xplored.png |
 
 ## Logo Exceptions
 
