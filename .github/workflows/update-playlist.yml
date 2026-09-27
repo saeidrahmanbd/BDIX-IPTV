@@ -13,6 +13,7 @@ on:
       - 'scripts/strict_update.py'
       - 'scripts/migrate_external_logos_fixed.py'
       - 'scripts/generate_detailed_report_fixed.py'
+      - 'scripts/audit_playlist.py'
       - '.github/workflows/update-playlist.yml'
 
 permissions:
@@ -114,16 +115,24 @@ jobs:
       - name: Resolve missing logos and convert to local PNG
         run: python scripts/migrate_external_logos_fixed.py
 
+      - name: Validate maintenance scripts
+        run: |
+          python -m py_compile scripts/update_playlist.py scripts/strict_update.py scripts/migrate_external_logos_fixed.py scripts/generate_detailed_report_fixed.py scripts/audit_playlist.py
+
       - name: Generate detailed update and logo report
         run: python scripts/generate_detailed_report_fixed.py
 
-      - name: Commit playlist, local logos, and report
+      - name: Audit playlist integrity and protected entries
+        run: python scripts/audit_playlist.py
+
+      - name: Commit playlist, local logos, and reports
         shell: bash
         run: |
           set -euo pipefail
           files=(
             "IPTV Playlist.m3u"
             "reports/auto-update.md"
+            "reports/playlist-audit.md"
             "logos/"
           )
 
