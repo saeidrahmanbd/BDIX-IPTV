@@ -1563,7 +1563,7 @@ http://stream.mcquack.net/116/index.m3u8
 http://198.58.104.90:8989/natgeo/index.m3u8
 #EXTINF:-1 channel-id="NationalGeographic.us@East" tvg-id="NationalGeographic.us@East" tvg-logo="https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/national-geographic.png" tvg-name="National Geographic (United States) (720p)" group-title="Backup",National Geographic (United States) (720p)
 http://212.5.144.156:8080/natgeo/index.m3u8
-#EXTINF:-1 channel-id="NatureTime.ca" tvg-id="NatureTime.ca" tvg-name="NatureTime" tvg-logo="https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/love-nature.png" tvg-country="CA" tvg-language="eng;por;spa;fra" nexus-score="100" group-title="Backup",NatureTime (1080p)
+#EXTINF:-1 channel-id="NatureTime.ca" tvg-id="NatureTime.ca" tvg-name="NatureTime" tvg-logo="https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/naturetime.png" tvg-country="CA" tvg-language="eng;por;spa;fra" nexus-score="100" group-title="Backup",NatureTime (1080p)
 https://amg00090-blueantllc-lovenature-au-samsungau-wggcn.amagi.tv/playlist/amg00090-blueantllc-lovenature-au-samsungau/playlist.m3u8
 #EXTINF:-1 channel-id="NatureTime.ca@UK" tvg-id="NatureTime.ca@UK" tvg-logo="https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/naturetime-uk-1080p.png" tvg-name="NatureTime UK (1080p)" group-title="Backup",NatureTime UK (1080p)
 https://amg01515-amg01515c43-samsung-gb-9038.playouts.now.amagi.tv/playlist.m3u8
@@ -1847,7 +1847,7 @@ https://channels.trace.plus/Traceprod/URBAN_INTER_hd/index.m3u8
 http://stream.mcquack.net/451/index.m3u8
 #EXTINF:-1 channel-id="Travelxp.in@HD" tvg-id="Travelxp.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/travelxp-hd-1080p-geo-blocked.png" tvg-name="Travelxp HD (1080p) [Geo-blocked]" group-title="Backup",Travelxp HD (1080p) [Geo-blocked]
 https://amg00416-amg00416c9-samsung-in-4882.playouts.now.amagi.tv/playlist/amg00416-travelxp-travelxphd-samsungin/playlist.m3u8
-#EXTINF:-1 channel-id="TVPlus.cl" tvg-id="TVPlus.cl" tvg-name="TV+" tvg-logo="https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/tv.png" tvg-country="CL" tvg-language="spa" nexus-score="100" group-title="Backup",TV+ (1080p)
+#EXTINF:-1 channel-id="TVPlus.cl" tvg-id="TVPlus.cl" tvg-name="TV+" tvg-logo="https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/tv-plus.png" tvg-country="CL" tvg-language="spa" nexus-score="100" group-title="Backup",TV+ (1080p)
 https://jireh-8-hls-video-us-isp.dps.live/hls-video/ey6283je82983je9823je8jowowiekldk9838274/tvmas/tvmas.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="UltimateTV.in" tvg-name="Ultimate TV [Backup 1]" tvg-logo="https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/ultimate-tv.png" tvg-chno="416" channel-id="UltimateTV.in" group-title="Backup",Ultimate TV [Backup 1]
 https://mumbai-edge.smartplaytv.in/utv/index.m3u8
