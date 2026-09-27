@@ -9,7 +9,7 @@ from pathlib import Path
 PLAYLIST = Path("IPTV Playlist.m3u")
 REPORT = Path("reports/auto-update.md")
 LOGOS = Path("logos")
-REPO_RAW = "https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/"
+REPO_RAW = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 
 
 def attrs(line):
@@ -85,7 +85,7 @@ def logo_status(metadata):
     if logo.startswith(REPO_RAW):
         filename = logo[len(REPO_RAW):].split("?", 1)[0]
         return "Local PNG" if filename.lower().endswith(".png") and (LOGOS / filename).is_file() else "Broken local reference"
-    if "raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV" in logo or "logos/" in logo:
+    if "raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV" in logo or "logos/" in logo:
         return "Repository reference"
     if logo.startswith(("http://", "https://")):
         return "External URL"
