@@ -1,33 +1,92 @@
-# 📺 Saeid Rahman IPTV Playlist
+# 📺 Saeid Rahman — BDIX IPTV Playlist
 
-A carefully curated, enriched, and automatically maintained BDIX IPTV playlist created by **Saeid Rahman**.
+A personally curated IPTV playlist focused on **Bangladeshi channels, Indian channels, and selected international content**, with an emphasis on clean organization, usable streams, accurate metadata, and reliable backup options.
 
-This project brings together publicly available IPTV stream URLs from multiple sources and transforms them into a cleaner, better organized, and more reliable playlist. Rather than simply collecting links, the playlist is continuously refined through channel-name normalization, intelligent categorization, logo integration, duplicate removal, metadata cleanup, and the addition of multiple backup streams whenever suitable alternatives are available.
+The playlist is continuously refined as channels and streams change.
 
-🤖 **Automated maintenance keeps the playlist evolving.** A scheduled GitHub Actions workflow regularly analyzes trusted source playlists, identifies additional streams for existing channels, resolves usable alternatives to wrapper or proxy links, normalizes backup families, corrects selected category inconsistencies, and updates the master playlist when meaningful improvements are found.
+## ✨ What this project focuses on
 
-The result is a growing IPTV collection designed to be **organized, resilient, easy to browse, and convenient to use** across compatible IPTV players.
+- 🇧🇩 Bangladesh channels organized in a dedicated category
+- 🇮🇳 Indian channels grouped by language
+- 🔁 Separate backup streams where useful alternatives are available
+- 🧹 Duplicate and unsuitable stream entries removed
+- 🖼️ Local channel logos with consistent metadata
+- 🏷️ Clean channel names and categories
+- 📡 Stream URLs reviewed and replaced when better alternatives are found
+- 🆕 New channels kept separate during review before being integrated
+- 🗓️ EPG compatibility and coverage improved as suitable sources become available
 
+## 📂 Playlist
 
-## ✨ Features
+### Main playlist
 
-- 📂 Carefully structured channel categories
-- 🔤 Clean and consistent channel naming
-- 🖼️ Channel logo and metadata integration
-- 🔁 Multiple backup streams for supported channels
-- 🤖 Automatic scheduled playlist maintenance
-- 🧠 Intelligent matching of alternate streams to existing channels
-- 🧹 Duplicate, malformed, and unsuitable source entries filtered
-- 🔗 Wrapper/proxy streams replaced with cleaner alternatives when available
-- 🛠️ Automatic primary/backup normalization
-- 📊 Automatic update reports and candidate tracking
-- 🌍 Bangladesh, Indian, International, Sports, Movies, Music, Kids, Documentary, Religious, News, Adult and other channels
+Use the latest version from the repository:
 
+**[IPTV Playlist.m3u](https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/IPTV%20Playlist.m3u)**
 
-### 📌 About the Playlist
+The playlist is intended for compatible IPTV players such as **XCIPTV** and other M3U-compatible applications.
 
-The purpose of this project is to maintain a convenient and organized IPTV playlist for personal use while making it available to others who may find it useful.
+## 🧭 Organization
 
-Stream availability may change over time because the streams are hosted by third-party providers. I do not host or retransmit any television channels or video content.
+The playlist is structured to make browsing easier rather than simply collecting as many streams as possible.
 
-You are welcome to use the playlist.
+Examples of the project structure include:
+
+- Bangladesh
+- Indian channels by language
+- Indian Backup
+- News
+- Sports
+- Movies
+- Music
+- Kids
+- Documentary
+- Religious
+- International
+- New Channels
+- New Backups
+
+Categories and entries are periodically reviewed as the playlist evolves.
+
+## 🔧 Maintenance
+
+Playlist maintenance includes:
+
+1. Checking stream availability
+2. Removing duplicate URLs
+3. Reviewing new channel candidates
+4. Separating backup streams from primary entries
+5. Fixing channel metadata
+6. Maintaining local logo references
+7. Improving EPG coverage where reliable sources are available
+8. Removing obsolete or unsuitable entries
+
+## 🖼️ Logos & metadata
+
+Channel logos are maintained inside the repository whenever possible instead of relying on external image hosts.
+
+This helps keep the playlist self-contained and reduces broken-logo problems caused by third-party image URLs.
+
+## 🗓️ EPG
+
+EPG coverage is an ongoing part of the project. Different EPG sources may cover different channel sets, so coverage is reviewed separately from the stream playlist.
+
+## ⚠️ Disclaimer
+
+This repository does **not host television channels or video content**.
+
+The playlist contains stream references collected from publicly available sources. Stream availability, channel names, logos, and programme information may change without notice.
+
+Users are responsible for ensuring that their use of any stream complies with applicable laws, regulations, and the terms of the relevant service providers.
+
+## 👤 About
+
+Created and maintained by **Saeid Rahman**.
+
+This is primarily a personal IPTV organization and playlist-maintenance project.
+
+---
+
+⭐ If you find the project useful, you can star the repository.
+
+**Repository:** https://github.com/saeidsujon-rahman/BDIX-IPTV
