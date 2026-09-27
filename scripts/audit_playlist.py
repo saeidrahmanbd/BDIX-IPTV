@@ -9,7 +9,7 @@ try:
 except ImportError:
     Image = None
 
-PLAYLIST = Path("IPTV Playlist.m3u")
+PLAYLIST = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/playlist-audit.md")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
@@ -152,7 +152,7 @@ for info, url in entries:
 
 protected_changes = []
 try:
-    old = subprocess.check_output(["git", "show", "HEAD:IPTV Playlist.m3u"], text=True, stderr=subprocess.DEVNULL)
+    old = subprocess.check_output(["git", "show", "HEAD:IPTV-Playlist.m3u"], text=True, stderr=subprocess.DEVNULL)
     old_primary = Counter()
     new_primary = Counter()
 
