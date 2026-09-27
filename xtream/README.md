@@ -1,6 +1,6 @@
 # BDIX-IPTV Xtream Gateway
 
-This directory contains a lightweight Xtream Codes-compatible API gateway for the master IPTV Playlist.m3u.
+This directory contains a lightweight Xtream Codes-compatible API gateway for the master IPTV-Playlist.m3u.
 
 The Worker reads the GitHub playlist, exposes Xtream-style API endpoints, and redirects live playback requests to the original stream URL. It does not re-host or transcode video.
 
