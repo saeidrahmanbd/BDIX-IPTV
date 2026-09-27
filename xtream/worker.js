@@ -1,4 +1,4 @@
-const DEFAULT_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/IPTV%20Playlist.m3u";
+const DEFAULT_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV%20Playlist.m3u";
 const CACHE_KEY = "https://bdix-iptv.internal/playlist";
 const CACHE_TTL = 60;
 
