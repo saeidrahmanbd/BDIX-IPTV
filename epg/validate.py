@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PLAYLIST = ROOT / 'IPTV Playlist.m3u'
+PLAYLIST = ROOT / 'IPTV-Playlist.m3u'
 
 
 def mappings():
