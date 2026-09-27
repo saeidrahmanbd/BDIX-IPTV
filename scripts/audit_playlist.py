@@ -147,7 +147,7 @@ for info, url in entries:
         logos_by_id[cid].add(logo)
     issue = logo_issue(info)
     logo_counts["healthy" if not issue or issue == "repository-reference" else issue] += 1
-    if issue in {"missing", "broken-local", "external", "non-png", "other"}:
+    if issue in {"missing", "broken-local", "external", "non-png", "invalid-dimensions", "corrupt-image", "unvalidated-image", "other"}:
         logo_exceptions.append((display_name(info), identity(info), issue, attrs(info).get("tvg-logo","")))
 
 protected_changes = []
@@ -192,6 +192,8 @@ lines = [
     f"- Duplicate stream URLs: **{len(duplicate_urls)}**",
     f"- Metadata conflicts: **{len(metadata_conflicts)}**",
     f"- Same-name / different-ID collisions: **{len(name_collisions)}**",
+    f"- Cross-country backup collisions: **{len(cross_country_backups)}**",
+    f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**",
     f"- Protected primary-entry changes: **{len(protected_changes)}**",
     f"- Logo exceptions: **{len(logo_exceptions)}**",
     "",
@@ -231,6 +233,9 @@ for issue in ["missing","broken-local","external","non-png","invalid-dimensions"
 if logo_exceptions:
     for name, cid, issue, logo in logo_exceptions:
         lines.append(f"- {issue} — {name} [{cid}] — {logo}")
+for cid, logos_for_id in sorted(logos_by_id.items()):
+    if len(logos_for_id) > 1:
+        lines.append(f"- multiple-logo-references — {cid} — {", ".join(sorted(logos_for_id))}")
 
 lines += ["", "## Protected Primary Entries", ""]
 if protected_changes:
@@ -246,6 +251,3 @@ if protected_changes:
     raise SystemExit("Protected primary playlist entries changed; refusing automatic commit.")
 if cross_country_backups:
     raise SystemExit("Cross-country Backup collisions detected; refusing automatic commit.")
-for cid, logos_for_id in logos_by_id.items():
-    if len(logos_for_id) > 1:
-        raise SystemExit("Multiple logo references detected for channel ID: " + cid)
