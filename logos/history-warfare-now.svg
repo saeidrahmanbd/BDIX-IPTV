@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+<defs>
+  <radialGradient id="g" cx="45%" cy="40%" r="65%"><stop offset="0" stop-color="#173f05"/><stop offset="1" stop-color="#020700"/></radialGradient>
+</defs>
+<circle cx="500" cy="500" r="490" fill="url(#g)"/>
+<g fill="#fff" font-family="Arial,Helvetica,sans-serif" font-weight="700" text-anchor="middle">
+  <text x="500" y="455" font-size="128" letter-spacing="8">HISTORY</text>
+  <text x="500" y="590" font-size="105" letter-spacing="3"><tspan fill="#7ff5e9">&amp;</tspan><tspan> WARFARE</tspan></text>
+</g>
+<g fill="#72efe6">
+ <path d="M610 665h18v70h-18z" transform="rotate(-90 619 700)"/>
+ <path d="M665 675l55 35-55 35z"/>
+</g>
+<text x="790" y="735" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="72" letter-spacing="2">NOW</text>
+</svg>
