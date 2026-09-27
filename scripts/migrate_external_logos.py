@@ -13,7 +13,7 @@ from pathlib import Path
 
 from PIL import Image
 
-PLAYLIST = Path("IPTV Playlist.m3u")
+PLAYLIST = Path("IPTV-Playlist.m3u")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 
