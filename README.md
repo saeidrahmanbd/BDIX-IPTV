@@ -22,7 +22,7 @@ The playlist is continuously refined as channels and streams change.
 
 Use the latest version from the repository:
 
-**[IPTV Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV%20Playlist.m3u)**
+**[IPTV-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)**
 
 The playlist is intended for compatible IPTV players such as **XCIPTV** and other M3U-compatible applications.
 
