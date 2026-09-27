@@ -36,6 +36,16 @@ FALLBACK_LOGOS = {
     "sonicbangla": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONIC/images/LOGO_HD/image.png",
 }
 
+# Exact playlist ID -> explicit logo source. Add only verified mappings here.
+ID_LOGO_MAP = {}
+
+def exact_id(metadata):
+    """Return the strongest playlist identity available; never infer it from a stream URL."""
+    return (metadata.get("tvg-id") or metadata.get("channel-id") or "").strip().lower()
+
+def explicit_logo_for_id(channel_id):
+    """Return only a verified exact-ID logo mapping."""
+    return ID_LOGO_MAP.get(channel_id)
 def attrs(line): return dict(ATTR_RE.findall(line))
 def clean_name(value):
     value = re.sub(r"\[[^]]*\]|\([^)]*\)", " ", value)
@@ -72,13 +82,17 @@ LOGOS.mkdir(parents=True, exist_ok=True)
 original = PLAYLIST.read_text(encoding="utf-8-sig").replace("\r", "")
 lines = original.splitlines()
 
+local_by_id = {}
 local_by_name = {}
 for line in lines:
     if not line.startswith("#EXTINF"): continue
     metadata = attrs(line)
     logo = metadata.get("tvg-logo", "").strip()
     if logo and is_local(logo) and logo.lower().endswith(".png"):
+        channel_id = exact_id(metadata)
         title = metadata.get("tvg-name") or line.rsplit(",", 1)[-1].strip()
+        if channel_id:
+            local_by_id.setdefault(channel_id, logo)
         local_by_name.setdefault(clean_name(title), logo)
 
 channels, logos = [], []
@@ -134,8 +148,36 @@ for line in lines:
             failed += 1
             print(f"Local logo conversion failed: {title}: {exc}")
 
-    existing_logo = local_by_name.get(base_title)
+    channel_id = exact_id(metadata)
+
+    # 1) Exact playlist ID match — safest.
+    existing_logo = local_by_id.get(channel_id) if channel_id else None
     if existing_logo:
+        output.append(force_local(line, existing_logo))
+        changed += 1; resolved_from_existing += 1
+        continue
+
+    # 2) Explicit verified ID mapping.
+    mapped_logo = explicit_logo_for_id(channel_id) if channel_id else None
+    if mapped_logo:
+        filename = f"{safe_name(title)}.png"
+        target = LOGOS / filename
+        replacement = RAW_BASE + filename
+        try:
+            if not target.exists():
+                download_png(mapped_logo, target); downloaded += 1
+            output.append(force_local(line, replacement))
+            changed += 1; resolved_from_fallback += 1
+            local_by_id[channel_id] = replacement
+            continue
+        except Exception as exc:
+            failed += 1
+            print(f"Explicit ID logo failed: {title} [{channel_id}]: {exc}")
+
+    # 3) Name matching is allowed only when it resolves to one unique local logo.
+    name_matches = {logo for key, logo in local_by_name.items() if key == base_title}
+    if len(name_matches) == 1:
+        existing_logo = next(iter(name_matches))
         output.append(force_local(line, existing_logo))
         changed += 1; resolved_from_existing += 1
         continue
