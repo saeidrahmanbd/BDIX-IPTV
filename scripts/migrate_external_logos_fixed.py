@@ -82,7 +82,7 @@ for item in logos:
     if cid not in logo_by_channel or score > logo_by_channel[cid][0]:
         logo_by_channel[cid] = (score, item)
 
-changed = downloaded = failed = resolved_from_existing = resolved_from_catalogue = 0
+changed = downloaded = failed = resolved_from_existing = resolved_from_catalogue = resolved_from_fallback = converted_local = 0
 unresolved = []
 output = []
 
@@ -96,6 +96,33 @@ for line in lines:
         output.append(line); continue
 
     base_title = clean_name(title)
+    if logo and is_local(logo) and not logo.lower().endswith(".png"):
+        filename = f"{safe_name(title)}.png"
+        target = LOGOS / filename
+        replacement = RAW_BASE + filename
+        try:
+            if not target.exists():
+                download_png(logo, target); downloaded += 1
+            output.append(force_local(line, replacement)); changed += 1; converted_local += 1
+            local_by_name[base_title] = replacement
+            continue
+        except Exception as exc:
+            failed += 1; print(f"Local logo conversion failed: {title}: {exc}")
+
+    fallback = FALLBACK_LOGOS.get(base_title)
+    if fallback:
+        filename = f"{safe_name(title)}.png"
+        target = LOGOS / filename
+        replacement = RAW_BASE + filename
+        try:
+            if not target.exists():
+                download_png(fallback, target); downloaded += 1
+            output.append(force_local(line, replacement)); changed += 1; resolved_from_fallback += 1
+            local_by_name[base_title] = replacement
+            continue
+        except Exception as exc:
+            failed += 1; print(f"Fallback logo failed: {title}: {exc}")
+
     existing_logo = local_by_name.get(base_title)
     if existing_logo:
         output.append(force_local(line, existing_logo)); changed += 1; resolved_from_existing += 1; continue
@@ -127,7 +154,9 @@ if new_text != original: PLAYLIST.write_text(new_text, encoding="utf-8", newline
 print(f"Logo references fixed: {changed}")
 print(f"New logos downloaded: {downloaded}")
 print(f"Resolved from existing local logos: {resolved_from_existing}")
+print(f"Resolved from explicit fallback sources: {resolved_from_fallback}")
 print(f"Resolved from IPTV-org catalogue: {resolved_from_catalogue}")
+print(f"Local non-PNG logos converted: {converted_local}")
 print(f"Logo downloads failed: {failed}")
 print(f"Still unresolved: {len(unresolved)}")
 for title in unresolved: print(f"UNRESOLVED: {title}")
