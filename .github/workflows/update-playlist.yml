@@ -55,11 +55,11 @@ jobs:
           from pathlib import Path
 
           playlist = Path("IPTV Playlist.m3u")
-          lines = playlist.read_text(encoding="utf-8-sig").replace("\\r", "").splitlines()
+          lines = playlist.read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
           locked = set(os.environ["LOCKED_BACKUP_CATEGORIES"].split("|"))
 
           def attrs(info):
-              return dict(re.findall(r'([\\w-]+)="([^"]*)"', info))
+              return dict(re.findall(r'([\w-]+)="([^"]*)"', info))
 
           def base_name(name):
               name = re.sub(r"\\s*\\[[^]]+\\]\\s*$", "", name).strip()
@@ -104,7 +104,7 @@ jobs:
                   out.extend([info, url])
               i += 2
 
-          playlist.write_text("\\n".join(out).rstrip() + "\\n", encoding="utf-8", newline="\\n")
+          playlist.write_text("\n".join(out).rstrip() + "\n", encoding="utf-8", newline="\n")
           print(f"Removed {len(removed)} locked-category backup entries.")
           for name in removed:
               print(f"  - {name}")
