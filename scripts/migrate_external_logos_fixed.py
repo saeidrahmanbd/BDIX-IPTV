@@ -27,10 +27,11 @@ FALLBACK_LOGOS = {
     "sparklemovies": "https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBAJ400042T1_20250107T025804SQUARE.png",
     "vevohiphoprb": "https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBD2300001C0_20250107T030829SQUARE.png",
     "documentaryinternational": "https://images-cdn1.welcomesoftware.com/assets/Documentaryplus-hero.jpg/Zz0yNjViNjNhZWEwNjIxMWVmOTAwY2NlYjBjYTI5N2FjYw%3D%3D?width=1200",
-    "historywarwarenow": "https://d326zal162nowe.cloudfront.net/Images/S3/HPPlus/History&Warfare_512x512.png",
+    "historywarwarenow": "https://www.tvchannellists.com/wiki/images/d/d9/History_%26_Warfare_Now_%28SamsungTV%2B%29.png",
     "mysteriesxplored": "https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBB5200028MM_20260120T230343SQUARE.png",
     "moviedomefamily": "https://www.senselan.ch/files/img/NexTV2/Sender/406.png",
     "sanandatv": "https://www.jagobd.com/wp-content/uploads/2024/10/sananda.jpg",
+    "sonicbangla": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONIC/images/LOGO_HD/image.png",
 }
 
 def attrs(line): return dict(ATTR_RE.findall(line))
