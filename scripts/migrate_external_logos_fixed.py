@@ -133,6 +133,24 @@ for line in lines:
     logo = metadata.get("tvg-logo", "").strip()
     title = metadata.get("tvg-name") or line.rsplit(",", 1)[-1].strip()
     base_title = clean_name(title)
+    channel_id = exact_id(metadata)
+    mapped_logo = explicit_logo_for_id(channel_id) if channel_id else None
+
+    # Explicit ID overrides are authoritative and run before any existing-logo shortcut.
+    if mapped_logo:
+        filename = f"{safe_name(title)}.png"
+        target = LOGOS / filename
+        replacement = RAW_BASE + filename
+        try:
+            if not target.exists():
+                download_png(mapped_logo, target); downloaded += 1
+            output.append(force_local(line, replacement))
+            changed += 1; resolved_from_fallback += 1
+            local_by_id[channel_id] = replacement
+            continue
+        except Exception as exc:
+            failed += 1
+            print(f"Explicit ID logo failed: {title} [{channel_id}]: {exc}")
 
     if logo and is_local(logo):
         if logo.lower().endswith(".png"):
@@ -152,8 +170,6 @@ for line in lines:
             failed += 1
             print(f"Local logo conversion failed: {title}: {exc}")
 
-    channel_id = exact_id(metadata)
-
     # 1) Exact playlist ID match — safest.
     existing_logo = local_by_id.get(channel_id) if channel_id else None
     if existing_logo:
@@ -161,24 +177,7 @@ for line in lines:
         changed += 1; resolved_from_existing += 1
         continue
 
-    # 2) Explicit verified ID mapping.
-    mapped_logo = explicit_logo_for_id(channel_id) if channel_id else None
-    if mapped_logo:
-        filename = f"{safe_name(title)}.png"
-        target = LOGOS / filename
-        replacement = RAW_BASE + filename
-        try:
-            if not target.exists():
-                download_png(mapped_logo, target); downloaded += 1
-            output.append(force_local(line, replacement))
-            changed += 1; resolved_from_fallback += 1
-            local_by_id[channel_id] = replacement
-            continue
-        except Exception as exc:
-            failed += 1
-            print(f"Explicit ID logo failed: {title} [{channel_id}]: {exc}")
-
-    # 3) Name matching is allowed only when it resolves to one unique local logo.
+    # 2) Name matching is allowed only when it resolves to one unique local logo.
     name_matches = local_by_name.get(base_title, set())
     if len(name_matches) == 1:
         existing_logo = next(iter(name_matches))
