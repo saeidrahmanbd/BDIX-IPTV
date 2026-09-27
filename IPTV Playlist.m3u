@@ -603,7 +603,7 @@ https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-drama-usa/ea2f5db904aff22
 https://ext.cdn.nashnet.tv/228.0.2.214/index.m3u8
 #EXTINF:-1 channel-id="MeiAhMovieChannel.hk" nexus-score="100" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mei-ah-movie-channel-1080p-427874b362.png" tvg-id="MeiAhMovieChannel.hk" tvg-name="Mei Ah Movie Channel" tvg-language="zho" tvg-country="HK" group-title="International",Mei Ah Movie Channel
 http://103.172.187.30:12000/stream/mytv/null-2/master.m3u8
-#EXTINF:-1 channel-id="MeiAhMovieChannel.hk" nexus-score="100" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mei-ah-movie-channel-b6a14207.png" tvg-id="MeiAhMovieChannel.hk" tvg-name="Mei Ah Movie Channel" tvg-language="zho" tvg-country="HK" group-title="International",Mei Ah Movie Channel
+#EXTINF:-1 channel-id="MeiAhMovieChannel.hk" nexus-score="100" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mei-ah-movie-channel-1080p-427874b362.png" tvg-id="MeiAhMovieChannel.hk" tvg-name="Mei Ah Movie Channel" tvg-language="zho" tvg-country="HK" group-title="International",Mei Ah Movie Channel
 http://103.172.187.30:12000/stream/mytv/null-10/master.m3u8
 #EXTINF:-1 channel-id="MovieSphere.us@AU" tvg-id="MovieSphere.us@AU" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/moviesphere-au-1080p-1b23bc91d7.png" tvg-name="MovieSphere AU (1080p)" group-title="International",MovieSphere AU (1080p)
 https://amg00353-lionsgatefilmsi-moviesphereaus-samsungau-7qzhf.amagi.tv/playlist/amg00353-lionsgatefilmsi-moviesphereaus-samsungau/playlist.m3u8
@@ -871,7 +871,7 @@ https://linear-899.frequency.stream/dist/cineverse/899/hls/master/playlist.m3u8
 https://d144py1prrd7ns.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-affg2ev32s0dq/smrfe.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sonic.png" channel-id="local.sonic-bangla" tvg-id="local.sonic-bangla" tvg-name="Sonic Bangla" group-title="Kids",Sonic Bangla
 http://bosstv.click:8080/live/18012689/77561563/92412.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sonic.png" tvg-id="SonyYay.in" tvg-name="Sony Yay" tvg-chno="788" channel-id="SonyYay.in" group-title="Kids",Sony Yay
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-yay.png" tvg-id="SonyYay.in" tvg-name="Sony Yay" tvg-chno="788" channel-id="SonyYay.in" group-title="Kids",Sony Yay
 https://drk6xq0vhn.gpcdn.net/live/sony_yay_abr/index.m3u8
 #EXTINF:-1 tvg-id="Strawberry Shortcake" tvg-name="Strawberry Shortcake" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/strawberry-shortcake.png" tvg-chno="791" channel-id="Strawberry Shortcake" group-title="Kids",Strawberry Shortcake
 https://d10c3fwb9yju0h.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-r5zgefp9c8p0b/master.m3u8
@@ -1735,11 +1735,11 @@ https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-cinema-2/index.m3u8
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD-video=2137600.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png" channel-id="ZeeBanglaSonar.in" tvg-id="ZeeBanglaSonar.in" tvg-name="Zee Bangla Sonar" group-title="Backup",Zee Bangla Sonar
 https://drk6xq0vhn.gpcdn.net/live/zee_bangla_cinema_abr/index.m3u8
-#EXTINF:-1 channel-id="local.zee-bangla-cinema" tvg-id="local.zee-bangla-cinema" tvg-name="Zee Bangla Sonar [Backup 1]" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-cinema-ceb39eea.png" tvg-chno="352" group-title="Backup",Zee Bangla Sonar [Backup 1]
+#EXTINF:-1 channel-id="local.zee-bangla-cinema" tvg-id="local.zee-bangla-cinema" tvg-name="Zee Bangla Sonar [Backup 1]" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png" tvg-chno="352" group-title="Backup",Zee Bangla Sonar [Backup 1]
 https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-cinema-1/index.m3u8
 #EXTINF:-1 tvg-id="ZeeBanglaSonar.in" tvg-name="Zee Bangla Sonar [Backup 1]" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png" tvg-chno="279" channel-id="ZeeBanglaSonar.in" group-title="Backup",Zee Bangla Sonar [Backup 1]
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8
-#EXTINF:-1 channel-id="local.zee-bangla-cinema" tvg-id="local.zee-bangla-cinema" tvg-name="Zee Bangla Sonar [Backup 2]" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-cinema-ceb39eea.png" tvg-chno="353" group-title="Backup",Zee Bangla Sonar [Backup 2]
+#EXTINF:-1 channel-id="local.zee-bangla-cinema" tvg-id="local.zee-bangla-cinema" tvg-name="Zee Bangla Sonar [Backup 2]" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png" tvg-chno="353" group-title="Backup",Zee Bangla Sonar [Backup 2]
 https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-cinema-3/index.m3u8
 #EXTINF:-1 tvg-id="zeebanglacinema.in" tvg-name="Zee Bangla Sonar [Backup 2]" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png" tvg-chno="280" channel-id="zeebanglacinema.in" group-title="Backup",Zee Bangla Sonar [Backup 2]
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/master2.m3u8
