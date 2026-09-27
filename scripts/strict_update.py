@@ -5,7 +5,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-PLAYLIST = Path("IPTV Playlist.m3u")
+PLAYLIST = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/auto-update.md")
 BACKUP = "Backup"
 
