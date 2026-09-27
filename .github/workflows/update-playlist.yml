@@ -56,7 +56,7 @@ jobs:
           import os, re
           from pathlib import Path
 
-          playlist = Path("IPTV Playlist.m3u")
+          playlist = Path("IPTV-Playlist.m3u")
           lines = playlist.read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
           locked = set(os.environ["LOCKED_BACKUP_CATEGORIES"].split("|"))
 
@@ -135,7 +135,7 @@ jobs:
         run: |
           set -euo pipefail
           files=(
-            "IPTV Playlist.m3u"
+            "IPTV-Playlist.m3u"
             "reports/auto-update.md"
             "reports/playlist-audit.md"
             "logos/"
