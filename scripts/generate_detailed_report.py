@@ -6,7 +6,7 @@ import subprocess
 from collections import Counter
 from pathlib import Path
 
-PLAYLIST = Path("IPTV Playlist.m3u")
+PLAYLIST = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/auto-update.md")
 LOGOS = Path("logos")
 REPO_RAW = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
