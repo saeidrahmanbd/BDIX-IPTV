@@ -64,9 +64,9 @@ Playlist maintenance includes:
 
 ## 🔐 Identity & automatic updates
 
-The automatic updater is intentionally **backup-only**. It does not add new channels and does not use a display-name or stream URL to decide channel identity. Alternate streams must match an existing playlist channel ID. Ambiguous logo-name matches are left unchanged rather than guessed.
+The automatic updater is intentionally **backup-only**. It does not add new channels and does not use a display-name or stream URL to decide channel identity. Alternate streams must match an existing playlist channel ID. A country-qualified identity that conflicts with an existing primary channel is rejected, so foreign `NTV`/`MTV`/similar feeds cannot be reintroduced as backups. Ambiguous logo-name matches are left unchanged rather than guessed.
 
-A non-destructive playlist audit runs before automatic commits and checks duplicate identities, metadata conflicts, same-name/different-ID collisions, local logo integrity, and unexpected changes to protected primary entries. Live stream health is audited separately so a temporary stream failure cannot change channel identity or metadata.
+A non-destructive playlist audit runs before automatic commits and checks duplicate identities, metadata conflicts, same-name/different-ID collisions, cross-country backup collisions, actual PNG readability/dimensions, logo variants, and unexpected changes to protected primary entries. Live stream health is audited separately so a temporary stream failure cannot change channel identity or metadata.
 
 ## 🖼️ Logos & metadata
 
