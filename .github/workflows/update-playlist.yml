@@ -121,11 +121,11 @@ jobs:
           lines = playlist.read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
 
           def attrs(info):
-              return dict(re.findall(r'([\\w-]+)="([^"]*)"', info))
+              return dict(re.findall(r'([\w-]+)="([^"]*)"', info))
 
           def split_id(value):
               base = (value or "").split("@", 1)[0]
-              match = re.match(r"^(.*)\\.([a-z]{2})$", base, re.I)
+              match = re.match(r"^(.*)\.([a-z]{2})$", base, re.I)
               return (match.group(1).lower(), match.group(2).lower()) if match else (base.lower(), "")
 
           primary_countries = {}
