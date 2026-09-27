@@ -41,6 +41,28 @@ FALLBACK_LOGOS = {
 ID_LOGO_MAP = {
     "aamarbangla.in": "https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png",
     "local.1d6cdda4509e": "https://jiotvimages.cdn.jio.com/dare_images/images/Amar_Digital_TV.png",
+    "colorsbangla.in": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png",
+    "local.bb3c3114fb20": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-hd.png",
+    "local.sun-bangla": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-bangla.png",
+    "sunbangla.in": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-bangla.png",
+    "local.matri-bhumi-tv": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/matri-bhumi-tv.png",
+    "matribhumiTV.bd": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/matri-bhumi-tv.png",
+    "zeebangla.in": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla.png",
+    "local.072484feec7e": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-hd.png",
+    "zeebanglasonar.in": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png",
+    "local.zee-bangla-cinema": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png",
+    "sonyentertainmenttelevision": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-entertainment-tv.png",
+    "sonyyay.in": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sonic.png",
+    "sonyyay.in@sd": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-yay.png",
+    "meiahmoviechannel.hk": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mei-ah-movie-channel-1080p-427874b362.png",
+    "meiahmoviechannel.hk@sd": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mei-ah-movie-channel-1080p-427874b362.png",
+    "cartoonnetwork.uk": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network.png",
+    "cartoonnetworkhdplus.in": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network-hd.png",
+    "mytimemovienetwork.br@sd": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network-br.png",
+    "mytimemovienetwork.br": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network-720p-cc34ff46f5.png",
+    "mytimemovienetworkeast.us": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network-1080p-79e6ec3226.png",
+    "rajdhanitv.bd": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rajdhani-tv.png",
+    "local.rajdhani-alt": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rajdhani-alt.png",
 }
 
 def exact_id(metadata):
