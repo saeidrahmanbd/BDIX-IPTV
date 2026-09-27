@@ -62,7 +62,7 @@ jobs:
               return dict(re.findall(r'([\w-]+)="([^"]*)"', info))
 
           def base_name(name):
-              name = re.sub(r"\\s*\\[[^]]+\\]\\s*$", "", name).strip()
+              name = re.sub(r"\s*\[[^]]+\]\s*$", "", name).strip()
               return name.lower()
 
           locked_ids = set()
