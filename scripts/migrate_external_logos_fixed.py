@@ -1,68 +1,133 @@
 #!/usr/bin/env python3
-"""Download external logos, convert them to PNG, and rewrite playlist references."""
-import hashlib
-import io
-import re
-import urllib.request
+"""Resolve missing/external channel logos and store them as local PNG files."""
+import io, json, re, urllib.request
 from pathlib import Path
 from PIL import Image
+try:
+    import cairosvg
+except ImportError:
+    cairosvg = None
 
 PLAYLIST = Path("IPTV Playlist.m3u")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/"
+CHANNELS_API = "https://iptv-org.github.io/api/channels.json"
+LOGOS_API = "https://iptv-org.github.io/api/logos.json"
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 
-
-def attrs(line):
-    return dict(ATTR_RE.findall(line))
-
-
-def safe_name(value):
-    return (re.sub(r"[^A-Za-z0-9]+", "-", value).strip("-").lower()[:90] or "channel")
-
-
-def is_local(value):
-    return value.startswith(RAW_BASE) or value.startswith("logos/") or "raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV" in value
-
-
-def download_png(url, target):
+def attrs(line): return dict(ATTR_RE.findall(line))
+def clean_name(value):
+    value = re.sub(r"\[[^]]*\]|\([^)]*\)", " ", value)
+    value = re.sub(r"\b(?:hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|360p)\b", " ", value, flags=re.I)
+    return re.sub(r"[^a-z0-9]+", "", value.lower())
+def safe_name(value): return (re.sub(r"[^A-Za-z0-9]+", "-", value).strip("-").lower()[:90] or "channel")
+def is_local(value): return value.startswith(RAW_BASE) or value.startswith("logos/") or "raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV" in value
+def fetch_bytes(url):
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(request, timeout=25) as response:
-        image = Image.open(io.BytesIO(response.read())).convert("RGBA")
-        image.save(target, format="PNG", optimize=True)
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return response.read(), response.headers.get("Content-Type", "")
+def download_png(url, target):
+    data, content_type = fetch_bytes(url)
+    try:
+        Image.open(io.BytesIO(data)).convert("RGBA").save(target, format="PNG", optimize=True)
+        return
+    except Exception:
+        if cairosvg is None: raise
+        if data.lstrip().startswith(b"<svg") or "svg" in content_type.lower() or url.lower().endswith(".svg"):
+            png = cairosvg.svg2png(bytestring=data, output_width=1000)
+            Image.open(io.BytesIO(png)).convert("RGBA").save(target, format="PNG", optimize=True)
+            return
+        raise
+def force_local(line, replacement):
+    if 'tvg-logo="' in line:
+        return re.sub(r'(tvg-logo=")[^"]*(")', r'\1' + replacement + r'\2', line, count=1)
+    comma = line.find(",")
+    return line if comma == -1 else line[:comma] + f' tvg-logo="{replacement}"' + line[comma:]
+def fetch_json(url):
+    data, _ = fetch_bytes(url)
+    return json.loads(data.decode("utf-8"))
 
 LOGOS.mkdir(parents=True, exist_ok=True)
 original = PLAYLIST.read_text(encoding="utf-8-sig").replace("\r", "")
-changed = 0
-failed = 0
-output = []
+lines = original.splitlines()
 
-for line in original.splitlines():
-    if not line.startswith("#EXTINF"):
-        output.append(line)
-        continue
+local_by_name = {}
+for line in lines:
+    if not line.startswith("#EXTINF"): continue
     metadata = attrs(line)
     logo = metadata.get("tvg-logo", "").strip()
-    if not logo or is_local(logo) or not logo.startswith(("http://", "https://")):
-        output.append(line)
-        continue
+    if logo and is_local(logo):
+        title = metadata.get("tvg-name") or line.rsplit(",", 1)[-1].strip()
+        local_by_name.setdefault(clean_name(title), logo)
+
+channels, logos = [], []
+try:
+    channels = fetch_json(CHANNELS_API)
+    logos = fetch_json(LOGOS_API)
+except Exception as exc:
+    print(f"Logo catalogue unavailable: {exc}")
+
+channel_by_id = {str(c.get("id","")).lower(): c for c in channels if c.get("id")}
+channel_by_name = {}
+for c in channels:
+    for n in [c.get("name","")] + list(c.get("alt_names") or []):
+        key = clean_name(str(n))
+        if key: channel_by_name.setdefault(key, c)
+
+logo_by_channel = {}
+for item in logos:
+    cid = str(item.get("channel","")).lower()
+    if not cid: continue
+    score = (1000 if item.get("in_use") else 0, 100 if str(item.get("format","")).upper() in {"PNG","SVG"} else 0, int(item.get("width") or 0) * int(item.get("height") or 0))
+    if cid not in logo_by_channel or score > logo_by_channel[cid][0]:
+        logo_by_channel[cid] = (score, item)
+
+changed = downloaded = failed = resolved_from_existing = resolved_from_catalogue = 0
+unresolved = []
+output = []
+
+for line in lines:
+    if not line.startswith("#EXTINF"):
+        output.append(line); continue
+    metadata = attrs(line)
+    logo = metadata.get("tvg-logo", "").strip()
     title = metadata.get("tvg-name") or line.rsplit(",", 1)[-1].strip()
-    filename = f"{safe_name(title)}-{hashlib.sha1(logo.encode()).hexdigest()[:8]}.png"
-    target = LOGOS / filename
-    replacement = RAW_BASE + filename
-    try:
-        if not target.exists():
-            download_png(logo, target)
-        line = re.sub(r'(tvg-logo=")([^"]*)(")', lambda m: m.group(1) + replacement + m.group(3), line, count=1)
-        changed += 1
-        print(f"Logo converted: {title} -> {filename}")
-    except Exception as exc:
-        failed += 1
-        print(f"Logo failed: {title}: {exc}")
-    output.append(line)
+    if logo and is_local(logo):
+        output.append(line); continue
+
+    base_title = clean_name(title)
+    existing_logo = local_by_name.get(base_title)
+    if existing_logo:
+        output.append(force_local(line, existing_logo)); changed += 1; resolved_from_existing += 1; continue
+
+    candidate = None
+    cid = metadata.get("tvg-id", "").strip().lower()
+    if cid: candidate = channel_by_id.get(cid) or channel_by_id.get(cid.split("@",1)[0])
+    if candidate is None: candidate = channel_by_name.get(base_title)
+
+    if candidate:
+        cid = str(candidate.get("id","")).lower()
+        logo_item = logo_by_channel.get(cid)
+        if logo_item and logo_item[1].get("url"):
+            filename = f"{safe_name(title)}.png"
+            target = LOGOS / filename
+            replacement = RAW_BASE + filename
+            try:
+                if not target.exists():
+                    download_png(logo_item[1]["url"], target); downloaded += 1
+                output.append(force_local(line, replacement)); changed += 1; resolved_from_catalogue += 1
+                local_by_name[base_title] = replacement
+                continue
+            except Exception as exc:
+                failed += 1; print(f"Logo failed: {title}: {exc}")
+    unresolved.append(title); output.append(line)
 
 new_text = "\n".join(output).rstrip() + "\n"
-if new_text != original:
-    PLAYLIST.write_text(new_text, encoding="utf-8", newline="\n")
-print(f"Local logo references updated: {changed}")
-print(f"Logo downloads/conversions failed: {failed}")
+if new_text != original: PLAYLIST.write_text(new_text, encoding="utf-8", newline="\n")
+print(f"Logo references fixed: {changed}")
+print(f"New logos downloaded: {downloaded}")
+print(f"Resolved from existing local logos: {resolved_from_existing}")
+print(f"Resolved from IPTV-org catalogue: {resolved_from_catalogue}")
+print(f"Logo downloads failed: {failed}")
+print(f"Still unresolved: {len(unresolved)}")
+for title in unresolved: print(f"UNRESOLVED: {title}")

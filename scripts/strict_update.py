@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
-"""Update only the unlocked New Channels group.
-
-Locked categories are preserved byte-for-byte at the entry level. Newly
-accepted imports are appended after all locked entries, so New Channels is
-always the final group in the generated playlist.
-"""
-
+"""Backup-only playlist updater. Existing channels/categories are locked."""
 import re
 import urllib.request
 from datetime import datetime, timezone
@@ -13,7 +7,7 @@ from pathlib import Path
 
 PLAYLIST = Path("IPTV Playlist.m3u")
 REPORT = Path("reports/auto-update.md")
-NEW = "New Channels"
+BACKUP = "Backup"
 
 SOURCES = [
     "https://iptv-org.github.io/iptv/countries/in.m3u",
@@ -37,48 +31,18 @@ SOURCES = [
     "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
 ]
 
-MOVIE = {
-    "movie", "movies", "cinema", "film", "films", "theater", "theatre", "drama"
-}
-MUSIC = {
-    "music", "musik", "hits", "melody", "pop", "rock", "karaoke",
-    "song", "songs", "mtv"
-}
-
-MARKET_TERMS = {
-    "india", "indian", "bollywood", "tollywood", "kollywood", "mollywood",
-    "sandalwood", "bengali", "bangla", "hindi", "tamil", "telugu",
-    "malayalam", "kannada", "marathi", "punjabi", "gujarati", "odia",
-    "assamese", "bhojpuri", "sun music", "gemini music", "udaya music",
-    "surya music", "china", "chinese", "mandarin", "cantonese", "korea",
-    "korean", "south korea", "thailand", "thai", "turkey", "turkish",
-    "indonesia", "indonesian", "hollywood", "american", "english"
-}
-
-COUNTRY_CODES = {"in", "cn", "kr", "th", "tr", "id", "us"}
-LANGUAGE_CODES = {
-    "hin", "ben", "tam", "tel", "mal", "kan", "mar", "pan", "guj", "ori",
-    "asm", "bho", "zho", "chi", "kor", "tha", "tur", "ind", "eng"
-}
-
-BLOCKED = {
-    "news", "radio", "podcast", "religion", "religious", "church", "gospel",
-    "christian", "hindu", "krishna", "temple", "buddhist", "sikh", "jewish",
-    "adult", "erotic", "xxx", "18+", "webcam", "test", "promo", "trailer", "vod"
-}
-
+BLOCKED = {"adult","erotic","xxx","18+","webcam","porn","religion","religious","church","gospel","christian","hindu","krishna","temple","buddhist","sikh","jewish","test","promo","trailer","vod","podcast","radio"}
 
 def attrs(info):
     return dict(re.findall(r'([\w-]+)="([^"]*)"', info))
 
-
-def name(info):
+def channel_name(info):
     return info.rsplit(",", 1)[-1].strip()
 
-
-def norm(value):
+def clean_name(value):
+    value = re.sub(r"\[[^]]*\]|\([^)]*\)", " ", value)
+    value = re.sub(r"\b(?:hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|360p)\b", " ", value, flags=re.I)
     return re.sub(r"[^a-z0-9]+", "", value.lower())
-
 
 def parse(text):
     lines = text.replace("\r", "").splitlines()
@@ -95,165 +59,115 @@ def parse(text):
         i += 1
     return result
 
+def acceptable(info):
+    text = " ".join([channel_name(info), *attrs(info).values()]).lower()
+    return not any(term in text for term in BLOCKED)
 
-def has_term(text, terms):
-    normalized = norm(text)
-    return any(term in text or term.replace(" ", "") in normalized for term in terms)
-
-
-def is_movie_or_music(info):
-    text = channel_text(info)
-    return has_term(text, MOVIE) or has_term(text, MUSIC)
-
-
-def is_permitted_market(info):
-    metadata = attrs(info)
-    country = metadata.get("tvg-country", "").strip().lower()
-    language = metadata.get("tvg-language", "").strip().lower()
-    text = channel_text(info)
-    return (
-        country in COUNTRY_CODES
-        or language in LANGUAGE_CODES
-        or has_term(text, MARKET_TERMS)
-    )
-
-
-def channel_text(info):
-    metadata = attrs(info)
-    return " ".join(
-        [
-            name(info),
-            metadata.get("tvg-id", ""),
-            metadata.get("tvg-name", ""),
-            metadata.get("tvg-country", ""),
-            metadata.get("tvg-language", ""),
-        ]
-    ).lower()
-
-
-def eligible(info):
-    metadata = attrs(info)
-    text = channel_text(info)
-    return (
-        bool(metadata.get("tvg-logo"))
-        and not any(term in text for term in BLOCKED)
-        and is_movie_or_music(info)
-        and is_permitted_market(info)
-    )
-
-
-def force_new_group(info):
+def force_backup(info):
     info = re.sub(r'\s+group-title="[^"]*"', "", info)
-    return info.replace(",", f' group-title="{NEW}",', 1)
-
+    return info.replace(",", f' group-title="{BACKUP}",', 1)
 
 def fetch(url):
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     return urllib.request.urlopen(request, timeout=35).read().decode("utf-8", "replace")
 
-
 def reachable(url):
     try:
-        request = urllib.request.Request(
-            url,
-            headers={"User-Agent": "Mozilla/5.0", "Range": "bytes=0-2047"},
-        )
-        response = urllib.request.urlopen(request, timeout=8)
-        return 200 <= getattr(response, "status", 200) < 400
+        request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Range": "bytes=0-8191"})
+        with urllib.request.urlopen(request, timeout=10) as response:
+            status = getattr(response, "status", 200)
+            if not 200 <= status < 400:
+                return False
+            data = response.read(8192)
+            if not data:
+                return False
+            text = data.decode("utf-8", "ignore").lstrip()
+            if ".m3u8" in url.lower() or "mpegurl" in str(response.headers.get("Content-Type", "")).lower():
+                return "#EXTM3U" in text or "#EXT-X-" in text
+            return True
     except Exception:
         return False
 
+base = PLAYLIST.read_text(encoding="utf-8-sig").replace("\r", "")
+entries = parse(base)
 
-base = PLAYLIST.read_text(encoding="utf-8-sig")
-locked = []
-retained = []
-removed = []
+existing_ids, existing_names, existing_urls, backup_urls = set(), set(), set(), set()
+for info, url in entries:
+    metadata = attrs(info)
+    cid = metadata.get("tvg-id", "").strip().lower()
+    if cid:
+        existing_ids.add(cid)
+        existing_ids.add(cid.split("@", 1)[0])
+    existing_names.add(clean_name(channel_name(info)))
+    existing_names.add(clean_name(metadata.get("tvg-name", "")))
+    existing_urls.add(url.lower())
+    if metadata.get("group-title", "").strip() == BACKUP:
+        backup_urls.add(url.lower())
 
-for info, url in parse(base):
-    if attrs(info).get("group-title", "").strip() == NEW:
-        if eligible(info):
-            retained.append((force_new_group(info), url))
-        else:
-            removed.append((name(info), url))
-    else:
-        locked.append((info, url))
-
-ids = {attrs(info).get("tvg-id", "").lower() for info, _ in locked}
-names = {norm(name(info)) for info, _ in locked}
-urls = {url.lower() for _, url in locked}
-seen = {
-    (attrs(info).get("tvg-id", "").lower() or norm(name(info)), url.lower())
-    for info, url in retained
-}
-
-added = []
-rejected = 0
-unreachable = 0
+added, rejected, unreachable, new_channel_candidates, source_errors = [], 0, 0, 0, 0
+seen_additions = set()
 
 for source in SOURCES:
     try:
         candidates = parse(fetch(source))
     except Exception:
+        source_errors += 1
         continue
-
     for info, url in candidates:
-        metadata = attrs(info)
-        channel_id = metadata.get("tvg-id", "").lower()
-        channel_name = norm(name(info))
-        key = (channel_id or channel_name, url.lower())
-
-        if (
-            url.lower() in urls
-            or (channel_id and channel_id in ids)
-            or channel_name in names
-            or key in seen
-        ):
-            continue
-
-        if not eligible(info):
+        if not acceptable(info):
             rejected += 1
             continue
-
+        metadata = attrs(info)
+        cid = metadata.get("tvg-id", "").strip().lower()
+        cid_base = cid.split("@", 1)[0]
+        cname = clean_name(channel_name(info))
+        known = bool((cid and (cid in existing_ids or cid_base in existing_ids)) or (cname and cname in existing_names))
+        if not known:
+            new_channel_candidates += 1
+            continue
+        if url.lower() in existing_urls or url.lower() in backup_urls:
+            continue
+        key = (cid_base or cname, url.lower())
+        if key in seen_additions:
+            continue
         if not reachable(url):
             unreachable += 1
             continue
+        added.append((force_backup(info), url))
+        seen_additions.add(key)
+        existing_urls.add(url.lower())
+        backup_urls.add(url.lower())
 
-        added.append((force_new_group(info), url))
-        seen.add(key)
-        urls.add(url.lower())
-        if channel_id:
-            ids.add(channel_id)
-        names.add(channel_name)
-
-header = "#EXTM3U\n" + "\n".join(
-    line for line in base.splitlines() if line.startswith("#PLAYLIST-")
-) + "\n"
-out = header
-for info, url in locked + retained + added:
-    out += f"{info}\n{url}\n"
-
-if out != base:
-    PLAYLIST.write_text(out, encoding="utf-8", newline="\n")
+if added:
+    lines = base.splitlines()
+    backup_positions = [i for i, line in enumerate(lines) if line.startswith("#EXTINF") and attrs(line).get("group-title", "").strip() == BACKUP]
+    if backup_positions:
+        j = backup_positions[-1] + 1
+        while j < len(lines) and not lines[j].startswith("#EXTINF"):
+            j += 1
+        block = []
+        for info, url in added:
+            block.extend([info, url])
+        lines[j:j] = block
+        PLAYLIST.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8", newline="\n")
+    else:
+        added = []
+        print("No Backup category exists; refusing to create a new category.")
 
 REPORT.parent.mkdir(exist_ok=True)
-REPORT.write_text(
-    "\n".join(
-        [
-            "# IPTV Auto Update",
-            "",
-            f"Generated: {datetime.now(timezone.utc).isoformat(timespec='seconds')}",
-            "",
-            f"Retained New Channels: {len(retained)}",
-            f"Removed New Channels: {len(removed)}",
-            f"Added qualifying channels: {len(added)}",
-            f"Rejected candidates: {rejected}",
-            f"Unreachable candidates: {unreachable}",
-            "",
-            "Permitted markets: Indian, Chinese, Korean, Thai, Turkish, Indonesian, and Hollywood.",
-            "Only movie/music candidates are accepted; locked categories are preserved; New Channels is last.",
-        ]
-    ),
-    encoding="utf-8",
-)
+REPORT.write_text("\n".join([
+    "# IPTV Auto Update", "",
+    f"Generated: {datetime.now(timezone.utc).isoformat(timespec='seconds')}", "",
+    "## Policy",
+    "- Existing categories are locked.",
+    "- New channel additions are disabled.",
+    "- Only alternate streams for channels already present are allowed.",
+    '- Accepted alternate streams are placed in the existing "Backup" category.', "",
+    f"Added backup streams: {len(added)}",
+    f"New-channel candidates skipped: {new_channel_candidates}",
+    f"Rejected candidates: {rejected}",
+    f"Unreachable candidates: {unreachable}",
+    f"Source errors: {source_errors}",
+]), encoding="utf-8")
 
-print(f"Retained {len(retained)}, removed {len(removed)}, added {len(added)}")
+print(f"Backup-only update: added={len(added)}, new_channel_candidates_skipped={new_channel_candidates}, rejected={rejected}, unreachable={unreachable}, source_errors={source_errors}")
