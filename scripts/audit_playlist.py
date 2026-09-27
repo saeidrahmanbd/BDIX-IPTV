@@ -235,7 +235,7 @@ if logo_exceptions:
         lines.append(f"- {issue} — {name} [{cid}] — {logo}")
 for cid, logos_for_id in sorted(logos_by_id.items()):
     if len(logos_for_id) > 1:
-        lines.append(f"- multiple-logo-references — {cid} — {", ".join(sorted(logos_for_id))}")
+        lines.append("- multiple-logo-references — " + cid + " — " + ", ".join(sorted(logos_for_id)))
 
 lines += ["", "## Protected Primary Entries", ""]
 if protected_changes:
