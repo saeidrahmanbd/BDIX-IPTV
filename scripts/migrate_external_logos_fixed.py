@@ -15,6 +15,24 @@ CHANNELS_API = "https://iptv-org.github.io/api/channels.json"
 LOGOS_API = "https://iptv-org.github.io/api/logos.json"
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 
+FALLBACK_LOGOS = {
+    "actionhollywoodmovies": "https://provider-static.plex.tv/epg/cms/production/c94e3220-9a45-42e9-8bdb-01fc43e0f27c/white_textAction_Hollywood_Movies_logo_dark_-_Angela_Chan.png",
+    "amctriller": "https://github.com/tv-logo/tv-logos/blob/main/misc/vod/amc-thrillers-vod.png?raw=true",
+    "bangbangtv": "https://alchetron.com/cdn/bang-bang-tv-channel-86505200-5377-43bb-ac56-4a72cc2c786-resize-750.jpg",
+    "barazamusictv": "https://i.imgur.com/djhtmFQ.png",
+    "loltv": "https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/lol-tv.png",
+    "mytimemovie": "https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork/8cb0d25f-b096-4e26-a957-6b271f7f0560.jpeg",
+    "mytimemovienetworkbr": "https://i.imgur.com/aiGQtzI.png",
+    "rakutenmovies": "https://s3.aynaott.com/storage/22af43810a37af9a151f1e0a23adde63",
+    "sparklemovies": "https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBAJ400042T1_20250107T025804SQUARE.png",
+    "vevohiphoprb": "https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBD2300001C0_20250107T030829SQUARE.png",
+    "documentaryinternational": "https://images-cdn1.welcomesoftware.com/assets/Documentaryplus-hero.jpg/Zz0yNjViNjNhZWEwNjIxMWVmOTAwY2NlYjBjYTI5N2FjYw%3D%3D?width=1200",
+    "historywarwarenow": "https://d326zal162nowe.cloudfront.net/Images/S3/HPPlus/History&Warfare_512x512.png",
+    "mysteriesxplored": "https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBB5200028MM_20260120T230343SQUARE.png",
+    "moviedomefamily": "https://www.senselan.ch/files/img/NexTV2/Sender/406.png",
+    "sanandatv": "https://www.jagobd.com/wp-content/uploads/2024/10/sananda.jpg",
+}
+
 def attrs(line): return dict(ATTR_RE.findall(line))
 def clean_name(value):
     value = re.sub(r"\[[^]]*\]|\([^)]*\)", " ", value)
@@ -33,7 +51,7 @@ def download_png(url, target):
         return
     except Exception:
         if cairosvg is None: raise
-        if data.lstrip().startswith(b"<svg") or "svg" in content_type.lower() or url.lower().endswith(".svg"):
+        if data.lstrip().startswith(b"<svg") or "svg" in content_type.lower() or url.lower().split("?")[0].endswith(".svg"):
             png = cairosvg.svg2png(bytestring=data, output_width=1000)
             Image.open(io.BytesIO(png)).convert("RGBA").save(target, format="PNG", optimize=True)
             return
@@ -56,7 +74,7 @@ for line in lines:
     if not line.startswith("#EXTINF"): continue
     metadata = attrs(line)
     logo = metadata.get("tvg-logo", "").strip()
-    if logo and is_local(logo):
+    if logo and is_local(logo) and logo.lower().endswith(".png"):
         title = metadata.get("tvg-name") or line.rsplit(",", 1)[-1].strip()
         local_by_name.setdefault(clean_name(title), logo)
 
@@ -89,25 +107,35 @@ output = []
 for line in lines:
     if not line.startswith("#EXTINF"):
         output.append(line); continue
+
     metadata = attrs(line)
     logo = metadata.get("tvg-logo", "").strip()
     title = metadata.get("tvg-name") or line.rsplit(",", 1)[-1].strip()
-    if logo and is_local(logo):
-        output.append(line); continue
-
     base_title = clean_name(title)
-    if logo and is_local(logo) and not logo.lower().endswith(".png"):
+
+    if logo and is_local(logo):
+        if logo.lower().endswith(".png"):
+            output.append(line)
+            continue
         filename = f"{safe_name(title)}.png"
         target = LOGOS / filename
         replacement = RAW_BASE + filename
         try:
             if not target.exists():
                 download_png(logo, target); downloaded += 1
-            output.append(force_local(line, replacement)); changed += 1; converted_local += 1
+            output.append(force_local(line, replacement))
+            changed += 1; converted_local += 1
             local_by_name[base_title] = replacement
             continue
         except Exception as exc:
-            failed += 1; print(f"Local logo conversion failed: {title}: {exc}")
+            failed += 1
+            print(f"Local logo conversion failed: {title}: {exc}")
+
+    existing_logo = local_by_name.get(base_title)
+    if existing_logo:
+        output.append(force_local(line, existing_logo))
+        changed += 1; resolved_from_existing += 1
+        continue
 
     fallback = FALLBACK_LOGOS.get(base_title)
     if fallback:
@@ -117,20 +145,20 @@ for line in lines:
         try:
             if not target.exists():
                 download_png(fallback, target); downloaded += 1
-            output.append(force_local(line, replacement)); changed += 1; resolved_from_fallback += 1
+            output.append(force_local(line, replacement))
+            changed += 1; resolved_from_fallback += 1
             local_by_name[base_title] = replacement
             continue
         except Exception as exc:
-            failed += 1; print(f"Fallback logo failed: {title}: {exc}")
-
-    existing_logo = local_by_name.get(base_title)
-    if existing_logo:
-        output.append(force_local(line, existing_logo)); changed += 1; resolved_from_existing += 1; continue
+            failed += 1
+            print(f"Fallback logo failed: {title}: {exc}")
 
     candidate = None
     cid = metadata.get("tvg-id", "").strip().lower()
-    if cid: candidate = channel_by_id.get(cid) or channel_by_id.get(cid.split("@",1)[0])
-    if candidate is None: candidate = channel_by_name.get(base_title)
+    if cid:
+        candidate = channel_by_id.get(cid) or channel_by_id.get(cid.split("@", 1)[0])
+    if candidate is None:
+        candidate = channel_by_name.get(base_title)
 
     if candidate:
         cid = str(candidate.get("id","")).lower()
@@ -142,15 +170,21 @@ for line in lines:
             try:
                 if not target.exists():
                     download_png(logo_item[1]["url"], target); downloaded += 1
-                output.append(force_local(line, replacement)); changed += 1; resolved_from_catalogue += 1
+                output.append(force_local(line, replacement))
+                changed += 1; resolved_from_catalogue += 1
                 local_by_name[base_title] = replacement
                 continue
             except Exception as exc:
-                failed += 1; print(f"Logo failed: {title}: {exc}")
-    unresolved.append(title); output.append(line)
+                failed += 1
+                print(f"Catalogue logo failed: {title}: {exc}")
+
+    unresolved.append(title)
+    output.append(line)
 
 new_text = "\n".join(output).rstrip() + "\n"
-if new_text != original: PLAYLIST.write_text(new_text, encoding="utf-8", newline="\n")
+if new_text != original:
+    PLAYLIST.write_text(new_text, encoding="utf-8", newline="\n")
+
 print(f"Logo references fixed: {changed}")
 print(f"New logos downloaded: {downloaded}")
 print(f"Resolved from existing local logos: {resolved_from_existing}")
