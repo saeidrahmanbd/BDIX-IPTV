@@ -569,7 +569,7 @@ http://38.75.136.137:98/gslb/dsdqpub/fyyy.m3u8?auth=testpub
 http://38.75.136.137:98/gslb/dsdqpub/fyjc.m3u8?auth=testpub
 #EXTINF:-1 nexus-score="100" tvg-logo="https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/cctv-the-first-theater-1080p-16513a0aad.png" tvg-id="CCTVTheFirstTheater.cn" tvg-name="CCTV-The First Theater" tvg-language="zho" tvg-country="CN" group-title="International",CCTV-The First Theater
 http://38.75.136.137:98/gslb/dsdqpub/dyjc.m3u8?auth=testpub
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/cinevault-westerns.png" tvg-name="Cinevault Westerns" group-title="International",Cinevault Westerns
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/cinevault-westerns.png" tvg-name="Cinevault Westerns" tvg-id="CinevaultWesterns.us" group-title="International",Cinevault Westerns
 https://gsn-cinevault-westerns-2-us.roku.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/circle.png" tvg-name="Circle" tvg-id="Circle.us" group-title="International",Circle
 https://circle-roku.amagi.tv/playlist.m3u8
@@ -715,7 +715,7 @@ https://mumt03.tangotv.in/Dsly5z3HFOODFOOD/index.m3u8
 https://d1nhni5l2n8hjt.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rzh07me7cf8x7/gf.m3u8
 #EXTINF:-1 tvg-id="History.us" tvg-name="History" tvg-logo="https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/history.png" tvg-chno="680" channel-id="History.us" group-title="Documentary & Wildlife",History
 http://202.70.146.135:8000/play/a065/index.m3u8
-#EXTINF:-1 tvg-name="History & Warfare Now" group-title="Documentary & Wildlife",History & Warfare Now
+#EXTINF:-1 tvg-name="History & Warfare Now" tvg-id="HistoryWarfareNow.us" group-title="Documentary & Wildlife",History & Warfare Now
 https://d1nzda2a2b3swt.cloudfront.net/History_Warfare_Now.m3u8
 #EXTINF:-1 tvg-id="HistoryHit.uk" tvg-name="History Hit" tvg-logo="https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/history-hit.png" tvg-chno="682" channel-id="HistoryHit.uk" group-title="Documentary & Wildlife",History Hit
 https://ldsaaaaaa-timeline-samsung-uk-azlgu.amagi.tv/ts-eu-w1-n2/playlist/ldsAAAAAA-timeline-samsung-uk/playlist.m3u8
