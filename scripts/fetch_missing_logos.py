@@ -3,7 +3,7 @@ import re, json, urllib.request, urllib.parse
 from pathlib import Path
 
 PLAYLIST=Path("IPTV Playlist.m3u"); LOGO_DIR=Path("logos")
-RAW_BASE="https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/"
+RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 CHANNELS="https://iptv-org.github.io/api/channels.json"
 LOGOS="https://iptv-org.github.io/api/logos.json"
 UA={"User-Agent":"Mozilla/5.0 LogoFetcher/2.0"}
