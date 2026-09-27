@@ -97,7 +97,7 @@ for line in lines:
         title = metadata.get("tvg-name") or line.rsplit(",", 1)[-1].strip()
         if channel_id:
             local_by_id.setdefault(channel_id, logo)
-        local_by_name.setdefault(clean_name(title), logo)
+        local_by_name.setdefault(clean_name(title), set()).add(logo)
 
 channels, logos = [], []
 try:
@@ -111,7 +111,7 @@ channel_by_name = {}
 for c in channels:
     for n in [c.get("name","")] + list(c.get("alt_names") or []):
         key = clean_name(str(n))
-        if key: channel_by_name.setdefault(key, c)
+        if key: channel_by_name.setdefault(key, []).append(c)
 
 logo_by_channel = {}
 for item in logos:
@@ -146,7 +146,7 @@ for line in lines:
                 download_png(logo, target); downloaded += 1
             output.append(force_local(line, replacement))
             changed += 1; converted_local += 1
-            local_by_name[base_title] = replacement
+            local_by_name.setdefault(base_title, set()).add(replacement)
             continue
         except Exception as exc:
             failed += 1
@@ -179,7 +179,7 @@ for line in lines:
             print(f"Explicit ID logo failed: {title} [{channel_id}]: {exc}")
 
     # 3) Name matching is allowed only when it resolves to one unique local logo.
-    name_matches = {logo for key, logo in local_by_name.items() if key == base_title}
+    name_matches = local_by_name.get(base_title, set())
     if len(name_matches) == 1:
         existing_logo = next(iter(name_matches))
         output.append(force_local(line, existing_logo))
@@ -196,7 +196,7 @@ for line in lines:
                 download_png(fallback, target); downloaded += 1
             output.append(force_local(line, replacement))
             changed += 1; resolved_from_fallback += 1
-            local_by_name[base_title] = replacement
+            local_by_name.setdefault(base_title, set()).add(replacement)
             continue
         except Exception as exc:
             failed += 1
@@ -207,7 +207,11 @@ for line in lines:
     if cid:
         candidate = channel_by_id.get(cid) or channel_by_id.get(cid.split("@", 1)[0])
     if candidate is None:
-        candidate = channel_by_name.get(base_title)
+        # Name fallback is safe only when the catalogue has exactly one identity
+        # for that cleaned name. Never silently choose the first ambiguous match.
+        candidates_by_name = channel_by_name.get(base_title, [])
+        unique_candidates = {str(c.get("id","")).lower(): c for c in candidates_by_name if c.get("id")}
+        candidate = next(iter(unique_candidates.values())) if len(unique_candidates) == 1 else None
 
     if candidate:
         cid = str(candidate.get("id","")).lower()
