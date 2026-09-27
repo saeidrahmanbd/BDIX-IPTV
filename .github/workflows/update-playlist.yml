@@ -68,7 +68,6 @@ jobs:
               return name.lower()
 
           locked_ids = set()
-          locked_names = set()
           for line in lines:
               if not line.startswith("#EXTINF"):
                   continue
@@ -78,9 +77,6 @@ jobs:
                       locked_ids.add(a["tvg-id"].strip().lower())
                   if a.get("channel-id"):
                       locked_ids.add(a["channel-id"].strip().lower())
-                  name = line.split(",", 1)[1].strip() if "," in line else ""
-                  if name:
-                      locked_names.add(base_name(name))
 
           out = []
           removed = []
@@ -93,13 +89,10 @@ jobs:
               info = lines[i]
               url = lines[i + 1] if i + 1 < len(lines) else ""
               a = attrs(info)
-              name = info.split(",", 1)[1].strip() if "," in info else ""
               cid = a.get("tvg-id", "").strip().lower()
               channel_id = a.get("channel-id", "").strip().lower()
               is_backup = a.get("group-title", "").strip() == "Backup"
-              is_locked_match = (
-                  cid in locked_ids or channel_id in locked_ids or base_name(name) in locked_names
-              )
+              is_locked_match = cid in locked_ids or channel_id in locked_ids
               if is_backup and is_locked_match:
                   removed.append(name)
               else:
