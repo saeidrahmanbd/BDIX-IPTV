@@ -10,7 +10,7 @@ except ImportError:
 
 PLAYLIST = Path("IPTV Playlist.m3u")
 LOGOS = Path("logos")
-RAW_BASE = "https://raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV/main/logos/"
+RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 CHANNELS_API = "https://iptv-org.github.io/api/channels.json"
 LOGOS_API = "https://iptv-org.github.io/api/logos.json"
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
@@ -39,7 +39,7 @@ def clean_name(value):
     value = re.sub(r"\b(?:hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|360p)\b", " ", value, flags=re.I)
     return re.sub(r"[^a-z0-9]+", "", value.lower())
 def safe_name(value): return (re.sub(r"[^A-Za-z0-9]+", "-", value).strip("-").lower()[:90] or "channel")
-def is_local(value): return value.startswith(RAW_BASE) or value.startswith("logos/") or "raw.githubusercontent.com/saeidsujon-rahman/BDIX-IPTV" in value
+def is_local(value): return value.startswith(RAW_BASE) or value.startswith("logos/") or "raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV" in value
 def fetch_bytes(url):
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(request, timeout=30) as response:
