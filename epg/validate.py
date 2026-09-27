@@ -76,7 +76,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('mode', choices=['mappings', 'policy', 'validate', 'publish'])
     parser.add_argument('--guide')
-    parser.add_argument('--repository', default='saeidsujon-rahman/BDIX-IPTV')
+    parser.add_argument('--repository', default='saeidrahmanbd/BDIX-IPTV')
     args = parser.parse_args()
     if args.mode == 'mappings':
         print('Mapped IDs:', ', '.join(sorted(mappings()[1])))
