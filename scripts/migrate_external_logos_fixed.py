@@ -16,6 +16,8 @@ LOGOS_API = "https://iptv-org.github.io/api/logos.json"
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 
 FALLBACK_LOGOS = {
+    "aamarbangla": "https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png",
+    "amarbangladigital": "https://jiotvimages.cdn.jio.com/dare_images/images/Amar_Digital_TV.png",
     "actionhollywoodmovies": "https://provider-static.plex.tv/epg/cms/production/c94e3220-9a45-42e9-8bdb-01fc43e0f27c/white_textAction_Hollywood_Movies_logo_dark_-_Angela_Chan.png",
     "amctriller": "https://github.com/tv-logo/tv-logos/blob/main/misc/vod/amc-thrillers-vod.png?raw=true",
     "bangbangtv": "https://alchetron.com/cdn/bang-bang-tv-channel-86505200-5377-43bb-ac56-4a72cc2c786-resize-750.jpg",
