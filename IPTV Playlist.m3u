@@ -111,9 +111,9 @@ https://5dd3981940faa.streamlock.net/thikanatv/thikanatv/playlist.m3u8
 https://mumt03.tangotv.in/Dsly5z3HAAKASHAATH/index.m3u8
 #EXTINF:-1 tvg-id="AlankarTV.in" tvg-name="Alankar TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/alankar-tv.png" tvg-chno="217" channel-id="AlankarTV.in" group-title="Indian Bangla",Alankar TV
 https://livetv.tarangplus.in/alankar-origin/live/playlist.m3u8
-#EXTINF:-1 tvg-id="AamarBangla.in" tvg-name="Amar Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla-digital.png" tvg-chno="218" channel-id="AamarBangla.in" group-title="Indian Bangla",Amar Bangla
+#EXTINF:-1 tvg-id="AamarBangla.in" tvg-name="Amar Bangla" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png" tvg-chno="218" channel-id="AamarBangla.in" group-title="Indian Bangla",Amar Bangla
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8
-#EXTINF:-1 channel-id="local.1d6cdda4509e" tvg-id="local.1d6cdda4509e" tvg-name="Amar Bangla Digital" tvg-chno="220" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla-digital.png" group-title="Indian Bangla",Amar Bangla Digital
+#EXTINF:-1 channel-id="local.1d6cdda4509e" tvg-id="local.1d6cdda4509e" tvg-name="Amar Bangla Digital" tvg-chno="220" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Amar_Digital_TV.png" group-title="Indian Bangla",Amar Bangla Digital
 http://115.187.41.216:8080/hls/amardigital/index.m3u8
 #EXTINF:-1 tvg-id="BanglaPlus.in" tvg-name="Bangla Plus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bangla-plus.png" tvg-chno="222" channel-id="BanglaPlus.in" group-title="Indian Bangla",Bangla Plus
 https://live-stream.utkalbongo.com/hls/livebanglatvstream.m3u8
@@ -1047,9 +1047,9 @@ http://107.167.16.138/dhamaal/index.m3u8?token=test
 http://tvsen5.aynascope.net/Wm9Lv2RjZGT6/index.m3u8
 #EXTINF:-1 channel-id="ADNTV.cl" tvg-id="ADNTV.cl" tvg-name="ADN TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/adn-tv.png" tvg-country="CL" tvg-language="spa" nexus-score="93" group-title="Backup",ADN TV (1080p)
 https://redirector.rudo.video/hls-video/931b584451fa6dd1313ee66efbfd5802e3f3bcea/adntv/adntv.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="AamarBangla.in" tvg-name="Amar Bangla [Backup 1]" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla-digital.png" tvg-chno="219" channel-id="AamarBangla.in" group-title="Backup",Amar Bangla [Backup 1]
+#EXTINF:-1 tvg-id="AamarBangla.in" tvg-name="Amar Bangla [Backup 1]" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png" tvg-chno="219" channel-id="AamarBangla.in" group-title="Backup",Amar Bangla [Backup 1]
 http://115.187.41.216:8080/hls/amarbangla/index.m3u8
-#EXTINF:-1 channel-id="local.1d6cdda4509e" tvg-id="local.1d6cdda4509e" tvg-name="Amar Bangla Digital [Backup 1]" tvg-chno="221" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla-digital.png" group-title="Backup",Amar Bangla Digital [Backup 1]
+#EXTINF:-1 channel-id="local.1d6cdda4509e" tvg-id="local.1d6cdda4509e" tvg-name="Amar Bangla Digital [Backup 1]" tvg-chno="221" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Amar_Digital_TV.png" group-title="Backup",Amar Bangla Digital [Backup 1]
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/amardigital.stream/playlist.m3u8
 #EXTINF:-1 channel-id="AMC.us" tvg-id="AMC.us" tvg-name="AMC" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amc-1080p-95485d9836.png" tvg-country="US" tvg-language="eng" nexus-score="99" group-title="Backup",AMC (1080p)
 http://41.205.93.154/AMC/index.m3u8
