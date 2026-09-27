@@ -46,6 +46,70 @@ jobs:
           IPTV_UPDATE_MODE: backup_only
         run: python scripts/update_playlist.py
 
+      - name: Remove backups for locked categories
+        env:
+          LOCKED_BACKUP_CATEGORIES: "International|Documentary & Wildlife|Kids|Sports|Religious"
+        run: |
+          python - <<'PY'
+          import os, re
+          from pathlib import Path
+
+          playlist = Path("IPTV Playlist.m3u")
+          lines = playlist.read_text(encoding="utf-8-sig").replace("\\r", "").splitlines()
+          locked = set(os.environ["LOCKED_BACKUP_CATEGORIES"].split("|"))
+
+          def attrs(info):
+              return dict(re.findall(r'([\\w-]+)="([^"]*)"', info))
+
+          def base_name(name):
+              name = re.sub(r"\\s*\\[[^]]+\\]\\s*$", "", name).strip()
+              return name.lower()
+
+          locked_ids = set()
+          locked_names = set()
+          for line in lines:
+              if not line.startswith("#EXTINF"):
+                  continue
+              a = attrs(line)
+              if a.get("group-title", "").strip() in locked:
+                  if a.get("tvg-id"):
+                      locked_ids.add(a["tvg-id"].strip().lower())
+                  if a.get("channel-id"):
+                      locked_ids.add(a["channel-id"].strip().lower())
+                  name = line.split(",", 1)[1].strip() if "," in line else ""
+                  if name:
+                      locked_names.add(base_name(name))
+
+          out = []
+          removed = []
+          i = 0
+          while i < len(lines):
+              if not lines[i].startswith("#EXTINF"):
+                  out.append(lines[i])
+                  i += 1
+                  continue
+              info = lines[i]
+              url = lines[i + 1] if i + 1 < len(lines) else ""
+              a = attrs(info)
+              name = info.split(",", 1)[1].strip() if "," in info else ""
+              cid = a.get("tvg-id", "").strip().lower()
+              channel_id = a.get("channel-id", "").strip().lower()
+              is_backup = a.get("group-title", "").strip() == "Backup"
+              is_locked_match = (
+                  cid in locked_ids or channel_id in locked_ids or base_name(name) in locked_names
+              )
+              if is_backup and is_locked_match:
+                  removed.append(name)
+              else:
+                  out.extend([info, url])
+              i += 2
+
+          playlist.write_text("\\n".join(out).rstrip() + "\\n", encoding="utf-8", newline="\\n")
+          print(f"Removed {len(removed)} locked-category backup entries.")
+          for name in removed:
+              print(f"  - {name}")
+          PY
+
       - name: Resolve missing logos and convert to local PNG
         run: python scripts/migrate_external_logos_fixed.py
 
