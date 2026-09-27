@@ -118,7 +118,7 @@ for line in lines:
         channel_id = exact_id(metadata)
         title = metadata.get("tvg-name") or line.rsplit(",", 1)[-1].strip()
         if channel_id:
-            local_by_id.setdefault(channel_id, logo)
+            local_by_id.setdefault(channel_id, set()).add(logo)
         local_by_name.setdefault(clean_name(title), set()).add(logo)
 
 channels, logos = [], []
@@ -168,7 +168,7 @@ for line in lines:
                 download_png(mapped_logo, target); downloaded += 1
             output.append(force_local(line, replacement))
             changed += 1; resolved_from_fallback += 1
-            local_by_id[channel_id] = replacement
+            local_by_id.setdefault(channel_id, set()).add(replacement)
             continue
         except Exception as exc:
             failed += 1
@@ -193,8 +193,9 @@ for line in lines:
             print(f"Local logo conversion failed: {title}: {exc}")
 
     # 1) Exact playlist ID match — safest.
-    existing_logo = local_by_id.get(channel_id) if channel_id else None
-    if existing_logo:
+    existing_logos = local_by_id.get(channel_id, set()) if channel_id else set()
+    if len(existing_logos) == 1:
+        existing_logo = next(iter(existing_logos))
         output.append(force_local(line, existing_logo))
         changed += 1; resolved_from_existing += 1
         continue
