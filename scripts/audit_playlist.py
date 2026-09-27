@@ -4,6 +4,10 @@ import re
 import subprocess
 from collections import defaultdict, Counter
 from pathlib import Path
+try:
+    from PIL import Image
+except ImportError:
+    Image = None
 
 PLAYLIST = Path("IPTV Playlist.m3u")
 REPORT = Path("reports/playlist-audit.md")
@@ -44,6 +48,13 @@ def display_name(info):
 def base_id(cid):
     return cid.split("@", 1)[0]
 
+def identity_root(cid):
+    return re.sub(r"\.[a-z]{2}$", "", base_id(cid))
+
+def country_code(cid):
+    m = re.search(r"\.([a-z]{2})$", base_id(cid))
+    return m.group(1).lower() if m else ""
+
 def logo_issue(info):
     logo = attrs(info).get("tvg-logo", "").strip()
     if not logo:
@@ -52,8 +63,19 @@ def logo_issue(info):
         fn = logo[len(RAW_BASE):].split("?", 1)[0]
         if not fn.lower().endswith(".png"):
             return "non-png"
-        if not (LOGOS / fn).is_file():
+        path = LOGOS / fn
+        if not path.is_file():
             return "broken-local"
+        if Image is None:
+            return "unvalidated-image"
+        try:
+            with Image.open(path) as im:
+                im.verify()
+            with Image.open(path) as im:
+                if im.width < 16 or im.height < 16:
+                    return "invalid-dimensions"
+        except Exception:
+            return "corrupt-image"
         return ""
     if "raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV" in logo or logo.startswith("logos/"):
         return "repository-reference"
@@ -94,9 +116,35 @@ for cid, items in sorted(by_id.items()):
 
 name_collisions = {k:v for k,v in by_name.items() if len({identity(x[0]) for x in v}) > 1}
 
+primary_by_root = defaultdict(list)
+for cid, items in by_id.items():
+    for info, url in items:
+        if attrs(info).get("group-title", "").strip() != "Backup":
+            primary_by_root[identity_root(cid)].append((cid, info, url))
+
+cross_country_backups = []
+for cid, items in by_id.items():
+    c = country_code(cid)
+    if not c:
+        continue
+    for info, url in items:
+        if attrs(info).get("group-title", "").strip() != "Backup":
+            continue
+        for primary_cid, primary_info, primary_url in primary_by_root.get(identity_root(cid), []):
+            pc = country_code(primary_cid)
+            if pc and c != pc:
+                cross_country_backups.append((cid, display_name(info), primary_cid, url))
+                break
+
+logos_by_id = defaultdict(set)
 logo_counts = Counter()
 logo_exceptions = []
+
 for info, url in entries:
+    cid = identity(info)
+    logo = attrs(info).get("tvg-logo", "").strip()
+    if cid and logo:
+        logos_by_id[cid].add(logo)
     issue = logo_issue(info)
     logo_counts["healthy" if not issue or issue == "repository-reference" else issue] += 1
     if issue in {"missing", "broken-local", "external", "non-png", "other"}:
@@ -156,6 +204,12 @@ for cid, names, groups, countries in metadata_conflicts:
 if not metadata_conflicts:
     lines.append("None.")
 
+lines += ["", "## Cross-Country Backup Collisions", ""]
+for cid, name, primary_cid, url in cross_country_backups:
+    lines.append("- " + name + " [" + cid + "] conflicts with primary " + primary_cid)
+if not cross_country_backups:
+    lines.append("None.")
+
 lines += ["", "## Same-Name / Different-ID Collisions", ""]
 for name, items in sorted(name_collisions.items()):
     ids = sorted({identity(x[0]) for x in items})
@@ -165,7 +219,7 @@ if not name_collisions:
 
 lines += ["", "## Logo Integrity", ""]
 lines.append(f"- Healthy/local references: **{logo_counts['healthy']}**")
-for issue in ["missing","broken-local","external","non-png","other"]:
+for issue in ["missing","broken-local","external","non-png","invalid-dimensions","corrupt-image","unvalidated-image","other"]:
     lines.append(f"- {issue}: **{logo_counts[issue]}**")
 if logo_exceptions:
     for name, cid, issue, logo in logo_exceptions:
@@ -183,3 +237,8 @@ print(f"Playlist audit: entries={len(entries)} duplicate_ids={len(duplicate_ids)
 
 if protected_changes:
     raise SystemExit("Protected primary playlist entries changed; refusing automatic commit.")
+if cross_country_backups:
+    raise SystemExit("Cross-country Backup collisions detected; refusing automatic commit.")
+for cid, logos_for_id in logos_by_id.items():
+    if len(logos_for_id) > 1:
+        raise SystemExit("Multiple logo references detected for channel ID: " + cid)
