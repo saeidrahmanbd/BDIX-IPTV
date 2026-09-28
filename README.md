@@ -95,6 +95,18 @@ This helps keep the playlist self-contained and reduces broken-logo problems cau
 
 EPG coverage is an ongoing part of the project. Different EPG sources may cover different channel sets, so coverage is reviewed separately from the stream playlist.
 
+## 📬 Contact & Support
+
+If you find a broken stream, incorrect channel information, missing logo, or have a suggestion, you can contact me through the following channels:
+
+- 🐞 **Report a technical issue:** [GitHub Issues](https://github.com/saeidrahmanbd/BDIX-IPTV/issues)
+- 💡 **Suggestions & improvements:** [GitHub Issues](https://github.com/saeidrahmanbd/BDIX-IPTV/issues)
+- 💬 **General project discussion:** [GitHub Discussions](https://github.com/saeidrahmanbd/BDIX-IPTV/discussions)
+- 📧 **Email:** [saeidrahman.mkt@gmail.com](mailto:saeidrahman.mkt@gmail.com)
+- 👤 **Maintainer:** [Saeid Rahman](https://github.com/saeidrahmanbd)
+
+For stream reports, please include the **channel name, playlist/stream URL, and a short description of the problem** when possible.
+
 ## ⚠️ Disclaimer
 
 This repository does **not host television channels or video content**.
