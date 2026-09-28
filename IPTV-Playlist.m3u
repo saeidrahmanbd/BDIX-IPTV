@@ -1869,3 +1869,16 @@ https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starpravah.smil/chunklist_b19
 #EXTINF:-1 tvg-id="ZeeTamil.in@HD" tvg-name="Zee Tamil HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tamil.png" tvg-chno="1027" channel-id="ZeeTamil.in@HD" tvg-language="tam" tvg-country="IN" group-title="New Channels",Zee Tamil HD
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:zeetamil1.smil/playlist.m3u8
 # logo-import-trigger-2026-09-28
+
+#EXTINF:-1 tvg-id="OrangeBanglaTV.in@SD" tvg-name="Orange Bangla TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/orange-bangla-tv.png" tvg-chno="1028" channel-id="OrangeBanglaTV.in@SD" tvg-language="ben" tvg-country="BD" group-title="New Channels",Orange Bangla TV
+https://cdn.pishow.tv/ott/live/1499/master.m3u8
+#EXTINF:-1 tvg-id="CaliforniaMusicChannel.us@HD" tvg-name="California Music Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/california-music-channel.png" tvg-chno="1029" channel-id="CaliforniaMusicChannel.us@HD" tvg-language="eng" tvg-country="US" group-title="New Channels",California Music Channel
+https://cmc-ono.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="InTravel.in@HD" tvg-name="InTravel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/intravel.png" tvg-chno="1030" channel-id="InTravel.in@HD" tvg-language="eng" tvg-country="IN" group-title="New Channels",InTravel
+https://amg00861-amg00861c10-rakuten-uk-3152.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="TravelXPEnglish.eu@HD" tvg-name="Travel XP English EU" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-xp-english-eu.png" tvg-chno="1031" channel-id="TravelXPEnglish.eu@HD" tvg-language="eng" tvg-country="EU" group-title="New Channels",Travel XP English EU
+https://travelxp-travelxp-1-eu.rakuten.wurl.tv/3000.m3u8
+#EXTINF:-1 tvg-id="FilamchiBhojpuri.in@SD" tvg-name="Filamchi Bhojpuri" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/filamchi-bhojpuri.png" tvg-chno="1032" channel-id="FilamchiBhojpuri.in@SD" tvg-language="bho;hin" tvg-country="IN" group-title="New Channels",Filamchi Bhojpuri
+https://epiconvh.akamaized.net/live/filamchi/master.m3u8
+#EXTINF:-1 tvg-id="Gangaur.in@SD" tvg-name="Gangaur" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gangaur.png" tvg-chno="1033" channel-id="Gangaur.in@SD" tvg-language="hin" tvg-country="IN" group-title="New Channels",Gangaur
+https://pbgangaur.wiseplayout.com/Gangaur/master.m3u8
