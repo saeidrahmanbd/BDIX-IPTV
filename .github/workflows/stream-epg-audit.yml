@@ -5,18 +5,23 @@ on:
   schedule:
     - cron: "17 2 * * *"
 
+concurrency:
+  group: stream-epg-audit
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - name: Run audit
         run: python3 scripts/stream_epg_audit.py
       - name: Upload audit report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: stream-epg-audit
