@@ -335,3 +335,32 @@ if primary_chno_collisions:
     raise SystemExit("Primary channel-number collisions detected; refusing automatic commit.")
 if suspicious_urls:
     raise SystemExit("Suspicious test credentials or malformed URL syntax detected; refusing automatic commit.")
+
+
+# Metadata hygiene hard checks
+backup_channel_numbers = [
+    (info, url) for info, url in entries
+    if attrs(info).get("group-title", "").strip() == "Backup"
+    and attrs(info).get("tvg-chno", "").strip()
+]
+missing_tvg_name = [
+    (info, url) for info, url in entries
+    if not attrs(info).get("tvg-name", "").strip()
+]
+missing_channel_id = [
+    (info, url) for info, url in entries
+    if not attrs(info).get("channel-id", "").strip()
+]
+stray_name_markers = [
+    (info, url) for info, url in entries
+    if re.search(r"[ⓎⓈᴴᴰ🇹🇷]", info, re.UNICODE)
+]
+
+if backup_channel_numbers:
+    raise SystemExit("Backup entries must not carry tvg-chno.")
+if missing_tvg_name:
+    raise SystemExit("All playlist entries must carry tvg-name.")
+if missing_channel_id:
+    raise SystemExit("All playlist entries must carry channel-id.")
+if stray_name_markers:
+    raise SystemExit("Stray Unicode channel-name markers detected.")
