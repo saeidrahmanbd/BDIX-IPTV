@@ -10,6 +10,7 @@ from urllib.request import Request, urlopen
 PLAYLIST=Path('IPTV-Playlist.m3u')
 REPORT=Path('reports/stream-health.md')
 STATE=Path('reports/stream-health-state.json')
+PRIORITY=Path('reports/stream-priority.json')
 TIMEOUT=8
 WORKERS=24
 FAILURE_THRESHOLD=3
@@ -78,6 +79,42 @@ def main():
     state={k:v for k,v in state.items() if k in unique}
     STATE.parent.mkdir(parents=True,exist_ok=True); STATE.write_text(json.dumps(state,ensure_ascii=False,indent=2,sort_keys=True)+'\n',encoding='utf-8')
     counts=Counter(e['status'] for e in results); counts['Not Playing']=len(not_playing)
+
+    # Build a logical primary/backup hierarchy without rewriting playlist order.
+    # A healthy stream is preferred; repeated failures are required before a
+    # stream can lose preference. Existing playlist order is the tie-breaker.
+    by_id={}
+    for e in results:
+        cid=e['id'].strip().lower() or e['name'].strip().lower()
+        by_id.setdefault(cid,[]).append(e)
+    priority={}
+    score={'Healthy':100,'Redirect/temporary':90,'HTTP error':20,'Invalid HLS':15,'Connection error':10,'Timeout':5}
+    for cid, group in by_id.items():
+        ranked=[]
+        for e in group:
+            st=state[e['url'].lower()]
+            streak=int(st.get('failure_streak',0))
+            base=score.get(e['status'],0)
+            # A transient failure does not immediately demote a stream.
+            if streak < FAILURE_THRESHOLD and e['status'] not in ('Healthy','Redirect/temporary'):
+                base=70
+            if streak >= FAILURE_THRESHOLD:
+                base=0
+            group_backup=e['group'].strip()=='Backup'
+            # Keep a healthy existing primary ahead of a backup unless it has
+            # actually accumulated repeated failures.
+            if not group_backup and base>0:
+                base += 5
+            ranked.append((base,e))
+        ranked.sort(key=lambda x:(-x[0], x[1]['name'].lower(), x[1]['url'].lower()))
+        rows=[]
+        for rank,(value,e) in enumerate(ranked,1):
+            role='Primary' if rank==1 else 'Backup '+str(rank-1)
+            rows.append({'role':role,'url':e['url'],'name':e['name'],'status':e['status'],'failure_streak':state[e['url'].lower()]['failure_streak'],'score':value})
+        priority[cid]=rows
+    PRIORITY.parent.mkdir(parents=True,exist_ok=True)
+    PRIORITY.write_text(json.dumps({'generated':now,'channels':priority},ensure_ascii=False,indent=2,sort_keys=True)+'\\n',encoding='utf-8')
+
     candidates=[e for e in results if state[e['url'].lower()]['failure_streak']>=FAILURE_THRESHOLD]
     lines=['# Stream Health','', 'Last checked: **'+now+'**','', 'Non-destructive availability check of the current playlist.','', '## Summary','',
            '- Unique stream URLs checked: **'+str(len(results))+'**', '- Healthy: **'+str(counts['Healthy'])+'**', '- Redirect/temporary: **'+str(counts['Redirect/temporary'])+'**',
@@ -85,6 +122,10 @@ def main():
            '- Connection error: **'+str(counts['Connection error'])+'**', '- Not Playing: **'+str(counts['Not Playing'])+'**', '- Repeated-failure candidates (>= '+str(FAILURE_THRESHOLD)+' runs): **'+str(len(candidates))+'**','',
            '## Policy','', '- A failed check never deletes a stream automatically.', '- A stream needs '+str(FAILURE_THRESHOLD)+' consecutive failed health runs before it is listed as an obsolete candidate.',
            '- A later successful check resets the failure streak to zero.', '- Valid redirects do not count as failures.', '- Not Playing entries are excluded from active failure scoring.','',
+           '## Primary / Backup Hierarchy','',
+           'The hierarchy below is logical maintenance metadata; the playlist itself is not reordered or rewritten.',
+           'Primary is the currently preferred stream. Backup 1, Backup 2, etc. are ordered alternatives based on health and repeated-failure history.','',
+           'See `reports/stream-priority.json` for the machine-readable hierarchy.','',
            '## Repeated-Failure Candidates','']
     if candidates:
         for e in sorted(candidates,key=lambda x:(-state[x['url'].lower()]['failure_streak'],x['name'].lower())):
