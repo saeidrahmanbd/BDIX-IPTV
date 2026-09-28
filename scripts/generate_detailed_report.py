@@ -30,9 +30,12 @@ def parse_entries(text):
         metadata = attrs(line)
         stream = ""
         for candidate in lines[index + 1:]:
-            if candidate.strip():
-                if candidate.startswith(("http://", "https://")):
-                    stream = candidate.strip()
+            if not candidate.strip():
+                continue
+            if candidate.startswith(("http://", "https://")):
+                stream = candidate.strip()
+                break
+            if candidate.startswith("#EXTINF"):
                 break
         entries.append((line, metadata, stream))
     return entries
