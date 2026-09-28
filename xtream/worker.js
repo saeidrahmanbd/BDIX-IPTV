@@ -4,8 +4,6 @@ const CACHE_TTL = 60;
 
 const EPG_URLS = [
   "https://epg.pw/xmltv/epg_IN.xml",
-  "https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml",
-  "https://iptv-org.github.io/epg/guides/in/tataplay.com.epg.xml",
   "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
   "https://iptv-epg.org/files/epg-in.xml"
 ];
