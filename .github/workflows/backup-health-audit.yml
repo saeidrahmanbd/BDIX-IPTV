@@ -1,6 +1,12 @@
 name: Backup Stream Health Audit
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'IPTV-Playlist.m3u'
+      - 'scripts/audit_backup_streams.py'
+      - '.github/workflows/backup-health-audit.yml'
   workflow_dispatch:
 
 permissions:
