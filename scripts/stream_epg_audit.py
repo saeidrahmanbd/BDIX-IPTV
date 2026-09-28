@@ -10,14 +10,19 @@ EPG_URLS=[
  "https://epg.pw/xmltv/epg_IN.xml",
  "https://iptv-epg.org/files/epg-in.xml",
 ]
-UA="BDIX-IPTV-Audit/1.1"
-TIMEOUT=8
-WORKERS=32
+UA="BDIX-IPTV-Audit/1.2"
+TIMEOUT=6
+WORKERS=48
+MAX_BYTES=65536
 
-def fetch(url, timeout=TIMEOUT):
-    req=urllib.request.Request(url,headers={"User-Agent":UA,"Accept":"*/*"})
+def fetch(url, timeout=TIMEOUT, max_bytes=MAX_BYTES, ranged=False):
+    headers={"User-Agent":UA,"Accept":"*/*","Accept-Encoding":"identity"}
+    if ranged: headers["Range"]=f"bytes=0-{max_bytes-1}"
+    req=urllib.request.Request(url,headers=headers)
     with urllib.request.urlopen(req,timeout=timeout) as r:
-        return r.status,dict(r.headers),r.read()
+        status=r.status
+        data=r.read(max_bytes)
+        return status,dict(r.headers),data
 
 def parse_playlist(text):
     rows=[]; cur=None
@@ -32,22 +37,19 @@ def attr(extinf,key):
     m=re.search(rf'{re.escape(key)}="([^"]*)"',extinf)
     return m.group(1) if m else ""
 
-def base_id(x): return x.split("@",1)[0] if x else ""
-
 def audit_stream(item):
     url,row=item
     try:
-        status,headers,body=fetch(url)
+        status,headers,body=fetch(url,ranged=True)
         if ".m3u8" in url.lower() or body.lstrip().startswith(b"#EXTM3U"):
             lines=body.decode("utf-8","replace").splitlines()
             children=[x.strip() for x in lines if x.strip() and not x.startswith("#")]
             if children:
                 child=urllib.parse.urljoin(url,children[0])
                 try:
-                    s2,_,b2=fetch(child)
+                    s2,_,b2=fetch(child,ranged=True)
                     state="OK" if 200<=s2<400 else "PARTIAL"
-                    detail=f"HTTP {status}; child HTTP {s2}; {len(body)}B/{len(b2)}B"
-                    return row,state,detail
+                    return row,state,f"HTTP {status}; child HTTP {s2}; {len(body)}B/{len(b2)}B"
                 except Exception as e:
                     return row,"PARTIAL",f"HTTP {status}; child failed: {type(e).__name__}"
         return row,("OK" if 200<=status<400 else "FAIL"),f"HTTP {status}; {len(body)}B; {headers.get('Content-Type','')}"
@@ -61,7 +63,7 @@ def parse_epg_ids(data):
 
 def main():
     out=Path("audit"); out.mkdir(exist_ok=True)
-    _,_,data=fetch(PLAYLIST_URL,30)
+    _,_,data=fetch(PLAYLIST_URL,30,2_000_000,False)
     rows=parse_playlist(data.decode("utf-8","replace"))
     unique={}
     for r in rows:
@@ -70,8 +72,8 @@ def main():
     results=[]
     print(f"Playlist entries: {len(rows)}; unique URLs: {len(items)}; workers: {WORKERS}")
     with ThreadPoolExecutor(max_workers=WORKERS) as pool:
-        futures=[pool.submit(audit_stream,item) for item in items]
-        for n,f in enumerate(as_completed(futures),1):
+        fs=[pool.submit(audit_stream,item) for item in items]
+        for n,f in enumerate(as_completed(fs),1):
             row,state,detail=f.result()
             print(f"[{n}/{len(items)}] {state} {attr(row['extinf'],'tvg-name')}")
             results.append([attr(row["extinf"],"tvg-id"),attr(row["extinf"],"tvg-name"),
@@ -83,12 +85,12 @@ def main():
     playlist_ids={attr(r["extinf"],"tvg-id") for r in rows if attr(r["extinf"],"tvg-id")}
     epg_lines=[]
     with ThreadPoolExecutor(max_workers=3) as pool:
-        fs={pool.submit(fetch,u,30):u for u in EPG_URLS}
+        fs={pool.submit(fetch,u,30,2_000_000,False):u for u in EPG_URLS}
         for f in as_completed(fs):
             u=fs[f]
             try:
                 _,_,b=f.result(); ids=parse_epg_ids(b)
-                matched={x for x in playlist_ids if x in ids or base_id(x) in ids}
+                matched={x for x in playlist_ids if x in ids or x.split("@",1)[0] in ids}
                 epg_lines.append(f"- {u}: {len(matched)}/{len(playlist_ids)} playlist IDs matched")
                 print(f"EPG OK: {u} ({len(ids)} IDs; {len(matched)} matched)")
             except Exception as e:
@@ -100,6 +102,7 @@ def main():
              f"- Stream OK: {ok}",f"- Stream PARTIAL: {partial}",f"- Stream FAIL: {fail}","",
              "## EPG coverage","",*sorted(epg_lines),"",
              "## Interpretation","",
+             "Each stream test reads only the first 64 KiB (HTTP Range when supported), avoiding accidental downloads of long-running media streams.",
              "OK: URL and, for HLS, first referenced child returned HTTP 2xx/3xx.",
              "PARTIAL: parent HLS playlist was reachable but first child failed.",
              "FAIL: request failed or returned non-success HTTP status.",
