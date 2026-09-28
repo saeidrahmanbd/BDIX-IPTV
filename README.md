@@ -103,6 +103,7 @@ If you find a broken stream, incorrect channel information, missing logo, or hav
 - 💡 **Suggestions & improvements:** [GitHub Issues](https://github.com/saeidrahmanbd/BDIX-IPTV/issues)
 - 💬 **General project discussion:** [GitHub Discussions](https://github.com/saeidrahmanbd/BDIX-IPTV/discussions)
 - 📧 **Email:** [saeidrahman.mkt@gmail.com](mailto:saeidrahman.mkt@gmail.com)
+- 📘 **Facebook:** [Saeid Rahman](https://www.facebook.com/saeid.rahman.sr)
 - 👤 **Maintainer:** [Saeid Rahman](https://github.com/saeidrahmanbd)
 
 For stream reports, please include the **channel name, playlist/stream URL, and a short description of the problem** when possible.
