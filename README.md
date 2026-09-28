@@ -31,6 +31,20 @@ Use the latest version from the repository:
 
 The playlist is intended for compatible IPTV players such as **XCIPTV** and other M3U-compatible applications.
 
+## 📅 EPG Coverage
+
+The repository now maintains a separate **EPG Coverage Report** instead of relying on blind source searching.
+
+- 📊 Counts current playlist channels, matched channels, exact-ID matches, alias/name matches, and missing channels
+- 🔎 Produces a focused **Missing Channels — Investigation Queue**
+- 🕒 Checks whether matched channels actually have future programme data
+- 🌐 Tests the configured EPG sources individually and records source failures
+- 🛡️ Does **not** modify the playlist or publish an EPG feed
+
+📄 **[View the latest EPG Coverage Report](reports/epg-coverage.md)**
+
+The report is refreshed automatically every 12 hours.
+
 ## 📡 Stream Health
 
 The playlist has a separate, non-destructive stream-health layer.
