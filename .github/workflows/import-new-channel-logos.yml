@@ -44,10 +44,20 @@ jobs:
           Image.open('/tmp/filamchi-bhojpuri.bin').convert('RGBA').save('logos/filamchi-bhojpuri.png')
           print('Downloaded', u)
           PY
-          curl -L --fail --retry 3 --max-time 30 -o /tmp/gangaur.webp 'https://prodcdn1.wavespb.com/shows/poster_url/1615915601Gangaur_TV____720x960.webp'
           python - <<'PY'
+          import re, requests
+          from urllib.parse import urljoin
           from PIL import Image
-          Image.open('/tmp/gangaur.webp').convert('RGBA').save('logos/gangaur.png')
+          page = requests.get('https://www.gangaurtv.com/', timeout=30).text
+          urls = re.findall(r'(?:src|href)=["\\\']([^"\\\']+)', page, re.I)
+          cand = [urljoin('https://www.gangaurtv.com/', u) for u in urls if 'gangaur' in u.lower() and re.search(r'\\.(?:png|jpe?g|webp)(?:[?#]|$)', u, re.I)]
+          if not cand:
+              raise SystemExit('No Gangaur image URL found')
+          u = cand[0]
+          data = requests.get(u, timeout=30).content
+          open('/tmp/gangaur.bin','wb').write(data)
+          Image.open('/tmp/gangaur.bin').convert('RGBA').save('logos/gangaur.png')
+          print('Downloaded', u)
           PY
 
           for f in logos/orange-bangla-tv.png logos/california-music-channel.png logos/intravel.png logos/travel-xp-english-eu.png logos/filamchi-bhojpuri.png logos/gangaur.png; do
