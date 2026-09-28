@@ -46,6 +46,8 @@ The playlist has a separate, non-destructive stream-health layer.
 
 The health workflow runs automatically every 6 hours and keeps a persistent failure streak per stream URL.
 
+The maintenance layer also maintains a **logical Primary → Backup 1 → Backup 2 → … hierarchy** for each channel using current health, repeated-failure history, and stable playlist order as a tie-breaker. This hierarchy is stored separately and does **not** reorder or delete playlist entries.
+
 ## 🖥️ Playlist Studio
 
 **Playlist Studio** is the companion Windows application for playing, browsing, and managing IPTV playlists.
