@@ -6,6 +6,10 @@ on:
       - '.github/workflows/import-new-channel-logos.yml'
       - 'IPTV-Playlist.m3u'
       - 'logos/**'
+  pull_request:
+    paths:
+      - 'LOGO_IMPORT_TRIGGER.md'
+      - '.github/workflows/import-new-channel-logos.yml'
 
 permissions:
   contents: write
