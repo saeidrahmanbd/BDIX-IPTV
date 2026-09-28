@@ -70,6 +70,17 @@ def acceptable(info):
     text = " ".join([channel_name(info), *attrs(info).values()]).lower()
     return not any(term in text for term in BLOCKED)
 
+def acceptable_url(url):
+    if not url.lower().startswith(("http://", "https://")):
+        return False
+    if re.search(r"[?&](token|auth)=(?:test|testpub)(?:&|$)", url, re.I):
+        return False
+    if re.search(r"https?://[^/@]+@[^/]+", url, re.I):
+        return False
+    if re.search(r"[?&]hdnts=$", url, re.I):
+        return False
+    return True
+
 def force_backup(info):
     info = re.sub(r'\s+group-title="[^"]*"', "", info)
     return info.replace(",", f' group-title="{BACKUP}",', 1)
@@ -130,7 +141,7 @@ for source in SOURCES:
         source_errors += 1
         continue
     for info, url in candidates:
-        if not acceptable(info):
+        if not acceptable(info) or not acceptable_url(url):
             rejected += 1
             continue
         metadata = attrs(info)
