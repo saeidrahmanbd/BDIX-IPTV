@@ -130,11 +130,20 @@ for cid, items in by_id.items():
     for info, url in items:
         if attrs(info).get("group-title", "").strip() != "Backup":
             continue
-        for primary_cid, primary_info, primary_url in primary_by_root.get(identity_root(cid), []):
-            pc = country_code(primary_cid)
-            if pc and c != pc:
-                cross_country_backups.append((cid, display_name(info), primary_cid, url))
-                break
+        primary_countries_for_root = {
+            country_code(primary_cid)
+            for primary_cid, primary_info, primary_url
+            in primary_by_root.get(identity_root(cid), [])
+            if country_code(primary_cid)
+        }
+        if primary_countries_for_root and c not in primary_countries_for_root:
+            primary_cid = next(
+                primary_cid
+                for primary_cid, primary_info, primary_url
+                in primary_by_root.get(identity_root(cid), [])
+                if country_code(primary_cid)
+            )
+            cross_country_backups.append((cid, display_name(info), primary_cid, url))
 
 logos_by_id = defaultdict(set)
 logo_counts = Counter()
