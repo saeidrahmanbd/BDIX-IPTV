@@ -72,21 +72,21 @@
     ],
     "4ever cinema (1080p)": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "4ever Cinema (1080p)",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://stream.mcquack.net/258/index.m3u8"
       }
     ],
     "4ever drama (1080p)": [
       {
-        "failure_streak": 3,
+        "failure_streak": 0,
         "name": "4ever Drama (1080p)",
         "role": "Primary",
-        "score": 0,
-        "status": "Invalid HLS",
+        "score": 105,
+        "status": "Healthy",
         "url": "http://stream.mcquack.net/260/index.m3u8"
       }
     ],
@@ -1066,7 +1066,7 @@
     ],
     "bein sports 1": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "beIN Sports 1",
         "role": "Primary",
         "score": 75,
@@ -1076,7 +1076,7 @@
     ],
     "bein sports 3": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "Bein Sports 3",
         "role": "Primary",
         "score": 75,
@@ -1086,7 +1086,7 @@
     ],
     "bein sports 6": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "beIN SPORTS 6",
         "role": "Primary",
         "score": 75,
@@ -1096,7 +1096,7 @@
     ],
     "bein sports 7": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "beIN SPORTS 7",
         "role": "Primary",
         "score": 75,
@@ -1352,20 +1352,20 @@
     ],
     "btv national": [
       {
-        "failure_streak": 2,
+        "failure_streak": 3,
         "name": "BTV National",
         "role": "Primary",
-        "score": 75,
+        "score": 0,
         "status": "HTTP error",
         "url": "https://btv.hridoytv-channel.workers.dev/btv.m3u8"
       }
     ],
     "btv news": [
       {
-        "failure_streak": 2,
+        "failure_streak": 3,
         "name": "BTV News",
         "role": "Primary",
-        "score": 75,
+        "score": 0,
         "status": "HTTP error",
         "url": "https://btv.hridoytv-channel.workers.dev/news.m3u8"
       }
@@ -1720,7 +1720,7 @@
     ],
     "colors bangla [backup 3]": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "Colors Bangla [Backup 3]",
         "role": "Primary",
         "score": 75,
@@ -2062,14 +2062,6 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/67cec794d8b14f9ba21f73924ac65797/index.m3u8"
-      },
-      {
-        "failure_streak": 0,
-        "name": "DD Bharati",
-        "role": "Backup 1",
-        "score": 105,
-        "status": "Healthy",
-        "url": "https://www.youtube.com/@ddbharati/live"
       }
     ],
     "dd bharati (576p)": [
@@ -2240,14 +2232,6 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/40492a64c1db4a1385ba1a397d357d3a/index.m3u8"
-      },
-      {
-        "failure_streak": 0,
-        "name": "DD National",
-        "role": "Backup 1",
-        "score": 105,
-        "status": "Healthy",
-        "url": "https://www.youtube.com/doordarshan/live"
       }
     ],
     "dd national hd (1080p)": [
@@ -2368,14 +2352,6 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/9b91e9007e754db39a8b32c6bfc5b24a/index.m3u8"
-      },
-      {
-        "failure_streak": 0,
-        "name": "DD Urdu",
-        "role": "Backup 1",
-        "score": 105,
-        "status": "Healthy",
-        "url": "https://www.youtube.com/@DDUrdu/live"
       }
     ],
     "dd urdu (576p)": [
@@ -2820,11 +2796,11 @@
     ],
     "ekhon tv [backup 2]": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Ekhon TV [Backup 2]",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "HTTP error",
         "url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/globaltv.stream/index.m3u8"
       }
     ],
@@ -3100,17 +3076,17 @@
     ],
     "etv cinema": [
       {
-        "failure_streak": 1,
+        "failure_streak": 0,
         "name": "ETV Cinema",
         "role": "Primary",
-        "score": 75,
-        "status": "Invalid HLS",
+        "score": 105,
+        "status": "Healthy",
         "url": "https://yupplivegcpusa.yuppcdn.net/100823/smil:etvcinema.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
       }
     ],
     "etv cinema hd": [
       {
-        "failure_streak": 3,
+        "failure_streak": 4,
         "name": "ETV Cinema HD",
         "role": "Primary",
         "score": 0,
@@ -3150,7 +3126,7 @@
     ],
     "etv plus hd": [
       {
-        "failure_streak": 3,
+        "failure_streak": 4,
         "name": "ETV Plus HD",
         "role": "Primary",
         "score": 0,
@@ -3160,7 +3136,7 @@
     ],
     "etv telugu hd": [
       {
-        "failure_streak": 3,
+        "failure_streak": 4,
         "name": "ETV Telugu HD",
         "role": "Primary",
         "score": 0,
@@ -3556,17 +3532,17 @@
     ],
     "green tv (720p)": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Green TV (720p)",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "HTTP error",
         "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8"
       }
     ],
     "gtv": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "GTV",
         "role": "Primary",
         "score": 75,
@@ -3576,7 +3552,7 @@
     ],
     "gtv (1080p)": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "GTV (1080p)",
         "role": "Primary",
         "score": 75,
@@ -3914,11 +3890,11 @@
     ],
     "islamic tv": [
       {
-        "failure_streak": 1,
+        "failure_streak": 0,
         "name": "Islamic TV",
         "role": "Primary",
-        "score": 75,
-        "status": "HTTP error",
+        "score": 105,
+        "status": "Healthy",
         "url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/islamictvbd.stream/index.m3u8"
       }
     ],
@@ -4474,11 +4450,11 @@
     ],
     "matri bhumi tv": [
       {
-        "failure_streak": 1,
+        "failure_streak": 0,
         "name": "Matri Bhumi TV",
         "role": "Primary",
-        "score": 75,
-        "status": "Connection error",
+        "score": 105,
+        "status": "Healthy",
         "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/matribhumitv.stream/playlist.m3u8"
       }
     ],
@@ -4664,11 +4640,11 @@
     ],
     "meltem tv": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Meltem TV",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8"
       }
     ],
@@ -5120,11 +5096,11 @@
     ],
     "my cinema europe": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "My Cinema Europe",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Connection error",
         "url": "https://op-group1-densxvisionhd-1.dens.tv/h/h18/index.m3u8"
       }
     ],
@@ -5146,7 +5122,7 @@
         "url": "https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8"
       },
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "My TV",
         "role": "Backup 2",
         "score": 75,
@@ -5382,16 +5358,6 @@
         "score": 95,
         "status": "Redirect/temporary",
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/news-24-hd-1/index.m3u8"
-      }
-    ],
-    "news24": [
-      {
-        "failure_streak": 0,
-        "name": "News24",
-        "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
-        "url": "https://www.youtube.com/@News24thinkfirst/live"
       }
     ],
     "nexus tv": [
@@ -6530,11 +6496,11 @@
     ],
     "rtv [backup 2]": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "RTV [Backup 2]",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "HTTP error",
         "url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/rtv-sg.stream/index.m3u8"
       }
     ],
@@ -6588,11 +6554,11 @@
     ],
     "sa tv [backup 1]": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "SA TV [Backup 1]",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "HTTP error",
         "url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/satvoff5666.stream/playlist.m3u8"
       }
     ],
@@ -6830,7 +6796,7 @@
     ],
     "sky sports action": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "Sky Sports Action",
         "role": "Primary",
         "score": 75,
@@ -6840,7 +6806,7 @@
     ],
     "sky sports cricket": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "Sky Sports Cricket",
         "role": "Primary",
         "score": 75,
@@ -6850,7 +6816,7 @@
     ],
     "sky sports football": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "Sky Sports Football",
         "role": "Primary",
         "score": 75,
@@ -6936,7 +6902,7 @@
     ],
     "sonic bangla": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "Sonic Bangla",
         "role": "Primary",
         "score": 75,
@@ -7092,11 +7058,11 @@
     ],
     "sony max (576p) [geo-blocked]": [
       {
-        "failure_streak": 3,
+        "failure_streak": 0,
         "name": "Sony Max (576p) [Geo-blocked]",
         "role": "Primary",
-        "score": 0,
-        "status": "HTTP error",
+        "score": 95,
+        "status": "Redirect/temporary",
         "url": "http://dksmedia.tv/play/live.php?mac=00:1A:79:B6:60:3D&stream=156013&extension=ts&play_token=slNi06NyY0"
       }
     ],
@@ -7190,10 +7156,10 @@
     ],
     "sony sab hd (1080p)": [
       {
-        "failure_streak": 2,
+        "failure_streak": 3,
         "name": "Sony SAB HD (1080p)",
         "role": "Primary",
-        "score": 75,
+        "score": 0,
         "status": "Invalid HLS",
         "url": "https://cloudplay-sonyliv.pages.dev/sabhd.m3u8"
       }
@@ -7368,11 +7334,11 @@
     ],
     "star jalsha (576p) [geo-blocked]": [
       {
-        "failure_streak": 3,
+        "failure_streak": 0,
         "name": "Star Jalsha (576p) [Geo-blocked]",
         "role": "Primary",
-        "score": 0,
-        "status": "HTTP error",
+        "score": 95,
+        "status": "Redirect/temporary",
         "url": "http://cdn98.com/play/live.php?mac=00:1A:79:99:54:11&stream=225805&extension=ts&play_token=o1cczsG9wV"
       }
     ],
@@ -7536,11 +7502,11 @@
     ],
     "star sports sl 1": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Star Sports SL 1",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "HTTP error",
         "url": "https://flussonic.defineatoz.com/starsportsselect1/tracks-v1/mono.m3u8"
       }
     ],
@@ -8881,5 +8847,5 @@
       }
     ]
   },
-  "generated": "2026-09-28T18:21:04+00:00"
-}
+  "generated": "2026-09-28T18:25:36+00:00"
+}\n
