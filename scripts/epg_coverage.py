@@ -30,7 +30,7 @@ def parse_source(url):
    if cid:
     counts[cid]+=1
     for stamp in (elem.attrib.get('start',''),elem.attrib.get('stop','')):
-     m=re.match(r'^(\\d{14})\\s*([+-]\\d{4})?',stamp)
+     m=re.match(r'^(\d{14})\s*([+-]\d{4})?',stamp)
      if not m: continue
      try:
       dt=datetime.strptime(m.group(1),'%Y%m%d%H%M%S'); off=m.group(2)
