@@ -86,6 +86,6 @@ def main():
  for r,q in sorted(found,key=lambda z:(z[0]['group'],z[0]['channel'])): lines.append(row(r,q,'EPG FOUND'))
  for r,q in sorted(no_rows,key=lambda z:(z[0]['group'],z[0]['channel'])): lines.append(row(r,q,'NO PROGRAMME DATA'))
  for r in sorted(no_source,key=lambda z:(z['group'],z['channel'])): lines.append(row(r,None,'NO GUIDE HIT'))
- REPORT.parent.mkdir(parents=True,exist_ok=True); REPORT.write_text('\\n'.join(lines)+'\\n',encoding='utf-8')
+ REPORT.parent.mkdir(parents=True,exist_ok=True); REPORT.write_text('\n'.join(lines)+'\n',encoding='utf-8')
  print('EPG programme coverage:',len(mapped),'mapped;',len(live),'live/future;',len(found),'rows-only;',len(no_rows),'no-data;',len(no_source),'no-guide-hit')
 if __name__=='__main__': main()
