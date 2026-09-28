@@ -4,10 +4,12 @@ import re, subprocess
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
+import json
 
 ROOT=Path(__file__).resolve().parents[1]
 PLAYLIST=ROOT/"IPTV-Playlist.m3u"
 REPORT=ROOT/"reports/changelog.md"
+STATE=ROOT/"reports/changelog-state.json"
 ROOT_CHANGELOG=ROOT/"CHANGELOG.md"
 ATTR_RE=re.compile(r'([\w-]+)="([^"]*)"')
 
@@ -32,10 +34,32 @@ def parse(text):
         i+=1
     return out
 
-def previous_playlist():
+def current_playlist_commit():
     try:
         return subprocess.check_output(
-            ["git","show","HEAD^:IPTV-Playlist.m3u"],cwd=ROOT,text=True,stderr=subprocess.DEVNULL
+            ["git","log","-1","--format=%H","--","IPTV-Playlist.m3u"],
+            cwd=ROOT,text=True,stderr=subprocess.DEVNULL
+        ).strip()
+    except Exception:
+        return ""
+
+def previous_playlist(current_commit):
+    try:
+        old_commit=""
+        if STATE.is_file():
+            old_commit=json.loads(STATE.read_text(encoding="utf-8")).get("playlist_commit","")
+        if not old_commit or old_commit==current_commit:
+            commits=subprocess.check_output(
+                ["git","log","--format=%H","--","IPTV-Playlist.m3u"],
+                cwd=ROOT,text=True,stderr=subprocess.DEVNULL
+            ).splitlines()
+            if len(commits)>1:
+                old_commit=commits[1]
+        if not old_commit or old_commit==current_commit:
+            return ""
+        return subprocess.check_output(
+            ["git","show",f"{old_commit}:IPTV-Playlist.m3u"],
+            cwd=ROOT,text=True,stderr=subprocess.DEVNULL
         )
     except Exception:
         return ""
@@ -94,7 +118,8 @@ def meaningful(prev,cur):
 
 def main():
     cur=PLAYLIST.read_text(encoding="utf-8-sig")
-    prev=previous_playlist()
+    current_commit=current_playlist_commit()
+    prev=previous_playlist(current_commit)
     s=meaningful(prev,cur)
     date=datetime.now(timezone.utc).strftime("%Y-%m-%d")
     lines=[f"# Changelog — {date}","",f"## {date}",""]
@@ -114,6 +139,7 @@ def main():
     lines += ["","_Generated automatically from the repository playlist diff._",""]
     REPORT.parent.mkdir(parents=True,exist_ok=True)
     REPORT.write_text("\n".join(lines),encoding="utf-8")
+    STATE.write_text(json.dumps({"playlist_commit":current_commit,"generated":datetime.now(timezone.utc).isoformat()},indent=2)+"\n",encoding="utf-8")
 
     # Keep a visitor-friendly root changelog while preserving older entries.
     existing=ROOT_CHANGELOG.read_text(encoding="utf-8") if ROOT_CHANGELOG.exists() else "# BDIX-IPTV Changelog\n\n"
