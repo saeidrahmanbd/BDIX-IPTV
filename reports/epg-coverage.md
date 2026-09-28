@@ -1,12 +1,12 @@
 # EPG Coverage Report
 
-Generated: **2026-09-28T09:34:27+00:00**
+Generated: **2026-09-28T14:22:40+00:00**
 
 This report checks mapped India EPG channels against actual downloaded XMLTV programme rows. LIVE EPG means at least one programme is current/future. EPG FOUND means rows exist but no current/future row was detected. NO PROGRAMME DATA means the mapped guide ID exists but produced no programme rows. NO GUIDE HIT means the mapped ID was absent from the downloaded guide.
 
 ## Coverage Summary
 
-- Active playlist channels: **838**
+- Active playlist channels: **836**
 - India-mapped channels: **167**
 - LIVE EPG (current/future programme): **129**
 - EPG FOUND (rows exist, no current/future row): **0**
@@ -17,8 +17,6 @@ This report checks mapped India EPG channels against actual downloaded XMLTV pro
 ## Source Status
 
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs, 529 IDs with current/future rows, 19725 total programme rows
-- **FAILED** — https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml — HTTP Error 404: Not Found
-- **FAILED** — https://iptv-org.github.io/epg/guides/in/tataplay.com.epg.xml — HTTP Error 404: Not Found
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs, 817 IDs with current/future rows, 113362 total programme rows
 - **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs, 415 IDs with current/future rows, 68524 total programme rows
 
