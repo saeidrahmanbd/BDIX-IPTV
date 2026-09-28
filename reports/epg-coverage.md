@@ -1,17 +1,17 @@
 # EPG Coverage Report
 
-Generated: **2026-09-28T05:41:52+00:00**
+Generated: **2026-09-28T06:23:06+00:00**
 
 This report audits the current playlist against the configured public EPG sources. It identifies the missing channels first; it does not publish or alter the EPG feed.
 
 ## Coverage Summary
 
-- Playlist channels: **868**
-- EPG matched: **263**
-- EPG missing: **605**
-- Exact ID matches: **120**
-- Alias/name matches: **143**
-- Matched with future programme data: **249**
+- Playlist channels: **876**
+- EPG matched: **267**
+- EPG missing: **609**
+- Exact ID matches: **121**
+- Alias/name matches: **146**
+- Matched with future programme data: **253**
 - Matched but no future programme detected: **14**
 
 ## Source Status
@@ -97,11 +97,11 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **DD Bangla [Backup 1]** — `DDBangla.in` — Backup
 - **DD Bangla [Backup]** — `DDBangla.in` — Backup
 - **DD Jharkhand** — `DDJharkhand.in` — Backup
-- **Deepto TV [Backup 2]** — `DeeptoTV.bd` — Backup
 - **Desh TV [Backup 1]** — `DeshTV.bd` — Backup
 - **Desh TV [Backup 2]** — `DeshTV.bd` — Backup
 - **Desh TV [Backup 3]** — `DeshTV.bd` — Backup
 - **Desh TV [Backup 4]** — `DeshTV.bd` — Backup
+- **Disney Channel India [Backup 1]** — `DisneyChannel.in` — Backup
 - **ducktv** — `ducktv.sk` — Backup
 - **ducktv (720p)** — `ducktv.sk@SD` — Backup
 - **ducktv HD** — `ducktv.sk@HD` — Backup
@@ -120,8 +120,8 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **EKUSHEY TV HD** — `EkusheyTV.bd` — Backup
 - **Enter TV** — `local.47c0bd81bc1f` — Backup
 - **Enter TV [Backup 2]** — `local.47c0bd81bc1f` — Backup
-- **Enter-Film** — `EnterFilm.ua` — Backup
 - **Epic Bharat** — `EpicBharat.in` — Backup
+- **Epic Music [Backup 1]** — `EpicMusic.in` — Backup
 - **Epic Music [Backup 2]** — `EpicMusic.in` — Backup
 - **G TV** — `GaziTV.bd` — Backup
 - **G TV [Backup 2]** — `GaziTV.bd` — Backup
@@ -135,7 +135,6 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **GREAT! movies (1080p)** — `GREATmovies.uk@UK` — Backup
 - **GREAT! romance** — `GREATromance.uk` — Backup
 - **GREAT! romance (1080p)** — `GREATromance.uk@UK` — Backup
-- **Green TV** — `GreenTV.bd` — Backup
 - **GTV** — `GTV.mn` — Backup
 - **Hindi Hits [Backup 1]** — `HindiHits.in` — Backup
 - **Hindi Movie Classic 24 [Backup 1]** — `local.a35fc6b70b2d` — Backup
@@ -174,6 +173,7 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **ME TV [Backup 2]** — `METV.bd` — Backup
 - **ME TV [Backup 3]** — `METV.bd` — Backup
 - **Mei Ah Movie Channel (1080p)** — `MeiAhMovieChannel.hk@SD` — Backup
+- **Mei Ah Movie Channel [Backup 1]** — `MeiAhMovieChannel.hk` — Backup
 - **Metro TV** — `MetroTV.hn` — Backup
 - **Metro TV (India) (1080p)** — `MetroTV.in@SD` — Backup
 - **Metro TV (Indonesia)** — `MetroTV.id@SD` — Backup
@@ -221,6 +221,7 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **Pardesi TV** — `PardesiTV.ca` — Backup
 - **PowerTurk TV** — `PowerTurkTV.tr` — Backup
 - **Probashi TV** — `local.884b4387db4b` — Backup
+- **Quran [Backup 1]** — `local.8987fb927686` — Backup
 - **R Plus Gold (720p)** — `RPlusGold.in@SD` — Backup
 - **Rajdhani TV [Backup 1]** — `RajdhaniTV.bd` — Backup
 - **Rakuten TV Action Movies** — `RakutenTVActionMovies.es` — Backup
@@ -274,6 +275,7 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **The Walking Dead Universe (720p)** — `TheWalkingDeadUniverse.us@SD` — Backup
 - **Tiny Pop (1080p)** — `TinyPop.uk@SD` — Backup
 - **Tom And Jerry (720p)** — `TomAndJerry.do@HD` — Backup
+- **Toon Goggles [Backup 1]** — `ToonGoggles.us` — Backup
 - **Trace UK** — `TraceUK.uk` — Backup
 - **Trace Urban** — `TraceUrban.fr` — Backup
 - **Trace Urban (1080p)** — `TraceUrban.fr@SD` — Backup
@@ -286,7 +288,6 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **XITE Hits Germany (1080p)** — `XITEHits.nl@Germany` — Backup
 - **YRF Music [Backup 2]** — `YRFMusic.in` — Backup
 - **ZB Cinema [Backup 1]** — `ZBCinema.in` — Backup
-- **Zee Action [Backup 2]** — `ZeeAction.in` — Backup
 - **Zee Bangla [Backup 1]** — `ZeeBangla.in` — Backup
 - **Zee Bangla [Backup 2]** — `ZeeBangla.in` — Backup
 - **Zee Bangla [Backup 3]** — `ZeeBangla.in` — Backup
@@ -301,7 +302,6 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **ATN News** — `local.atn-news` — Bangladesh
 - **Bangla TV** — `BanglaTV.bd` — Bangladesh
 - **Bangla Vision** — `BanglaVision.bd` — Bangladesh
-- **Bengali Beats** — `local.298c02a76a55` — Bangladesh
 - **Bijoy TV** — `BijoyTV.bd` — Bangladesh
 - **Boishakhi TV** — `BoishakhiTV.bd` — Bangladesh
 - **BTV Chattogram** — `BTVChattogram.bd` — Bangladesh
@@ -313,7 +313,6 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **Channel 24** — `Channel24.bd` — Bangladesh
 - **Channel 9** — `Channel9.bd` — Bangladesh
 - **Channel I** — `ChannelI.bd` — Bangladesh
-- **Channel S** — `local.channel-s` — Bangladesh
 - **DBC News** — `DBCNews.bd` — Bangladesh
 - **Deepto TV** — `DeeptoTV.bd` — Bangladesh
 - **Desh TV** — `DeshTV.bd` — Bangladesh
@@ -325,7 +324,6 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **G Series Drama** — `GSeriesDrama.bd` — Bangladesh
 - **G TV** — `GaziTV.bd` — Bangladesh
 - **Global TV** — `GlobalTV.bd` — Bangladesh
-- **Green TV** — `GreenTV.bd` — Bangladesh
 - **Independent TV** — `IndependentTV.bd` — Bangladesh
 - **Jago News 24** — `JagoNews24.bd` — Bangladesh
 - **Jamuna TV** — `JamunaTV.bd` — Bangladesh
@@ -386,6 +384,7 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **Stingray Naturescape** — `StingrayNaturescape.ca` — Documentary & Wildlife
 - **Stingray The Spa** — `StingrayTheSpa.ca` — Documentary & Wildlife
 - **Terra Mater WILD English** — `local.43be2e2ecc31` — Documentary & Wildlife
+- **Travelxp Bangla** — `local.be3de263fffd` — Documentary & Wildlife
 - **Travelxp English** — `local.ffdca013962a` — Documentary & Wildlife
 - **Unidentified** — `Unidentified.us` — Documentary & Wildlife
 - **Wild Flix Hindi** — `local.2ff5fac7d61c` — Documentary & Wildlife
@@ -443,9 +442,7 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **Gold Mines Movie** — `local.gold-mines-movie` — Indian Movies
 - **Goldmines Action** — `GoldminesAction.in` — Indian Movies
 - **Hindi Movie Classic 24** — `local.a35fc6b70b2d` — Indian Movies
-- **Hindi Movies** — `Hindi Movies` — Indian Movies
 - **Kairali Arabia** — `KairaliArabia.in` — Indian Movies
-- **Manoranjan Movies** — `ManoranjanMovies.in` — Indian Movies
 - **MBC Bollywood** — `MBCBollywood.ae` — Indian Movies
 - **MH One Movies** — `MHOneMovies.in` — Indian Movies
 - **MNTV (Tamil)** — `MarutamTV.in` — Indian Movies
@@ -486,10 +483,6 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **Bang Bang TV** — `BangBangTV` — International
 - **Baraza Music TV** — `BarazaMusicTV.gr` — International
 - **BBC Drama** — `BBCDrama.uk` — International
-- **CCTV-Nostalgia Theater** — `CCTVNostalgiaTheater.cn` — International
-- **CCTV-Storm Music** — `CCTVStormMusic.cn` — International
-- **CCTV-Storm Theater** — `CCTVStormTheater.cn` — International
-- **CCTV-The First Theater** — `CCTVTheFirstTheater.cn` — International
 - **Cinevault Westerns** — `CinevaultWesterns.us` — International
 - **Circle** — `Circle.us` — International
 - **CMC-USA Country Music Channel** — `CMCUSACountryMusicChannel.us@SD` — International
@@ -497,7 +490,6 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **EBS Musika** — `EBSMusika.us` — International
 - **EU Music** — `EUMusic.ua` — International
 - **FilmUA Live** — `FilmUALive.ua` — International
-- **HBO Hits** — `HBOHits.us` — International
 - **iFilm English** — `iFilmEnglish.ir` — International
 - **LoL TV** — `LoLTV.in` — International
 - **Made in Hollywood** — `MadeInHollywood.us@SD` — International
@@ -548,7 +540,6 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **Disney Jr.** — `local.4e794cea4ffe` — Kids
 - **Doraemon TV** — `local.doraemon-tv` — Kids
 - **Duck TV** — `local.4286518068f8` — Kids
-- **Duronto TV** — `DurontoTV.bd` — Kids
 - **Epic Kids Digital** — `local.40b69bfa0613` — Kids
 - **Jungle Book** — `TheJungleBook.in` — Kids
 - **Kartoon Channel!** — `KartoonChannel.us` — Kids
@@ -579,16 +570,32 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **WOW Kidz Hindi** — `WOWKidz.in@Hindi` — Kids
 - **WOW Kidz Tamil** — `local.5a0c6e1770c3` — Kids
 - **WOW Kidz Telugu** — `WOWKidz.in@Telugu` — Kids
-- **ZB Cartoon** — `ZBCartoon.in` — Kids
 - **ZooMoo** — `ZooMoo.sg` — Kids
+- **AMC** — `AMC.us` — Not Playing
+- **Astro Cricbuzz** — `AstroCricket.my` — Not Playing
 - **ATN Music** — `ATNMusic.bd` — Not Playing
+- **Bengali Beats** — `local.298c02a76a55` — Not Playing
+- **CCTV-Nostalgia Theater** — `CCTVNostalgiaTheater.cn` — Not Playing
+- **CCTV-Storm Music** — `CCTVStormMusic.cn` — Not Playing
+- **CCTV-Storm Theater** — `CCTVStormTheater.cn` — Not Playing
+- **CCTV-The First Theater** — `CCTVTheFirstTheater.cn` — Not Playing
+- **Channel S** — `local.channel-s` — Not Playing
 - **Colors Bangla [Backup 2]** — `ColorsBangla.in` — Not Playing
+- **Deepto TV [Backup 2]** — `DeeptoTV.bd` — Not Playing
 - **Disney Channel India** — `DisneyChannel.in` — Not Playing
+- **Duronto TV** — `DurontoTV.bd` — Not Playing
 - **Enter-Film** — `EnterFilm.ua` — Not Playing
 - **ESPN Deportes** — `ESPNDeportes.us` — Not Playing
+- **Green TV** — `GreenTV.bd` — Not Playing
+- **HBO Hits** — `HBOHits.us` — Not Playing
+- **Hindi Movies** — `Hindi Movies` — Not Playing
+- **Manoranjan Movies** — `ManoranjanMovies.in` — Not Playing
 - **National Geographic [Backup 1]** — `NationalGeographic.in` — Not Playing
 - **NBA TV** — `NBATV.us` — Not Playing
 - **Shanson TV** — `ShansonTV.ru` — Not Playing
+- **T Sports** — `TSports.bd` — Not Playing
+- **ZB Cartoon** — `ZBCartoon.in` — Not Playing
+- **Zee Action [Backup 2]** — `ZeeAction.in` — Not Playing
 - **Al Istiqama** — `AlistiqamaTV.om` — Religious
 - **Al Qamar** — `AlQamarTV.ae` — Religious
 - **Al Quran Al Kareem TV** — `AlQuranAlKareemTV.sa` — Religious
@@ -608,7 +615,6 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **Quran** — `local.8987fb927686` — Religious
 - **Quran TV** — `QuranTV.iq` — Religious
 - **A Sports** — `ASports.pk` — Sports
-- **Astro Cricbuzz** — `AstroCricket.my` — Sports
 - **beIN Sports 1** — `Bein Sport HD 1` — Sports
 - **Bein Sports 3** — `beINSports3.qa` — Sports
 - **beIN SPORTS 6** — `beINSports6.qa` — Sports
@@ -625,9 +631,7 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **Sky Sports Football** — `SkySportsFootball.ie` — Sports
 - **Star Sports SL 1** — `local.star-sports-sl-1` — Sports
 - **Star Sports SL 2** — `StarSportsSL2.lk` — Sports
-- **T Sports** — `TSports.bd` — Sports
 - **Ten Sports HD** — `TenSports.pk` — Sports
-- **Travelxp Bangla** — `local.be3de263fffd` — Sports
 - **UFC TV** — `UFCTV.us` — Sports
 - **Wipeout Xtra** — `WipeoutXtra.uk` — Sports
 
