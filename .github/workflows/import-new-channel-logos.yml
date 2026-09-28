@@ -30,7 +30,7 @@ jobs:
           curl -L --fail --retry 3 --max-time 30 -o logos/california-music-channel.png 'https://commons.wikimedia.org/wiki/Special:Redirect/file/California%20Music%20Channel%20Logo%20(cropped).png'
           curl -L --fail --retry 3 --max-time 30 -o logos/intravel.png 'https://jiotvimages.cdn.jio.com/dare_images/images/Intravel.png'
           curl -L --fail --retry 3 --max-time 30 -o logos/travel-xp-english-eu.png 'https://travelxptv.b-cdn.net/wp-content/uploads/2016/12/travelxp-crystal-logo.png'
-          curl -L --fail --retry 3 --max-time 30 -o logos/filamchi-bhojpuri.png 'https://static.wikia.nocookie.net/logopedia/images/5/58/Filamchi_Bhojpuri_new.png'
+          curl -L --fail --retry 3 --max-time 30 -o logos/filamchi-bhojpuri.png 'https://www.epicon.in/img/new_filamchi_logo.png'
           curl -L --fail --retry 3 --max-time 30 -o logos/gangaur.png 'https://jiotvimages.cdn.jio.com/dare_images/images/Gangaur.png'
 
           for f in logos/orange-bangla-tv.png logos/california-music-channel.png logos/intravel.png logos/travel-xp-english-eu.png logos/filamchi-bhojpuri.png logos/gangaur.png; do
