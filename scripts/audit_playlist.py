@@ -364,3 +364,30 @@ if missing_channel_id:
     raise SystemExit("All playlist entries must carry channel-id.")
 if stray_name_markers:
     raise SystemExit("Stray Unicode channel-name markers detected.")
+
+
+inconsistent_tvg_names = []
+for cid, items in by_id.items():
+    values = {attrs(info).get("tvg-name", "").strip() for info, _ in items}
+    if len(values) > 1:
+        inconsistent_tvg_names.append(cid)
+
+def metadata_base_name(name):
+    name = re.sub(r"[ⓎⓈᴴᴰ🇹🇷]", "", name, flags=re.UNICODE)
+    name = re.sub(r"\s*\[Backup\s*\d+\]", "", name, flags=re.I)
+    name = re.sub(r"\s*\[Geo-blocked\]", "", name, flags=re.I)
+    name = re.sub(r"\s*\(\d{3,4}[pi]\)", "", name, flags=re.I)
+    return re.sub(r"\s+", " ", name).strip().lower()
+
+name_tvg_mismatches = []
+for info, url in entries:
+    a = attrs(info)
+    tvg_name = a.get("tvg-name", "").strip()
+    display = info.rsplit(",", 1)[-1].strip()
+    if tvg_name and metadata_base_name(tvg_name) != metadata_base_name(display):
+        name_tvg_mismatches.append((display_name(info), tvg_name, display))
+
+if inconsistent_tvg_names:
+    raise SystemExit("Same tvg-id has inconsistent tvg-name values.")
+if name_tvg_mismatches:
+    raise SystemExit("Channel display name and tvg-name disagree after normalization.")
