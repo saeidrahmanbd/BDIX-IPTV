@@ -37,6 +37,12 @@ def url_of(b):
 
 def nonstandard(url):
     if not url: return ''
+    if re.search(r"[?&](token|auth)=(?:test|testpub)(?:&|$)", url, re.I):
+        return "test credential"
+    if re.search(r"https?://[^/@]+@[^/]+", url, re.I):
+        return "URL contains userinfo"
+    if re.search(r"[?&]hdnts=$", url, re.I):
+        return "empty hdnts parameter"
     try: p=urlsplit(url)
     except ValueError: return 'invalid URL syntax'
     if p.scheme.lower() not in {'http','https'}: return 'unsupported URL scheme'
