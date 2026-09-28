@@ -30,10 +30,19 @@ jobs:
           curl -L --fail --retry 3 --max-time 30 -o logos/california-music-channel.png 'https://commons.wikimedia.org/wiki/Special:Redirect/file/California%20Music%20Channel%20Logo%20(cropped).png'
           curl -L --fail --retry 3 --max-time 30 -o logos/intravel.png 'https://jiotvimages.cdn.jio.com/dare_images/images/Intravel.png'
           curl -L --fail --retry 3 --max-time 30 -o logos/travel-xp-english-eu.png 'https://travelxptv.b-cdn.net/wp-content/uploads/2016/12/travelxp-crystal-logo.png'
-          curl -L --fail --retry 3 --max-time 30 -o /tmp/filamchi-bhojpuri.webp 'http://www.tvlogo.org/india/filamchi-bhojpuri-in.png'
           python - <<'PY'
+          import re, requests
           from PIL import Image
-          Image.open('/tmp/filamchi-bhojpuri.webp').convert('RGBA').save('logos/filamchi-bhojpuri.png')
+          page = requests.get('https://archive.adgully.com/bhojpuri-channel-rankings-to-see-a-shake-up-as-filamchi-aims-for-top-3-103860.html', timeout=30).text
+          urls = re.findall(r'https?[^"\\\']+', page)
+          cand = [u.replace('\\/', '/') for u in urls if 'filamchi' in u.lower() and re.search(r'\\.(?:png|jpe?g|webp)(?:[?#]|$)', u, re.I)]
+          if not cand:
+              raise SystemExit('No Filamchi image URL found')
+          u = cand[0]
+          data = requests.get(u, timeout=30).content
+          open('/tmp/filamchi-bhojpuri.bin','wb').write(data)
+          Image.open('/tmp/filamchi-bhojpuri.bin').convert('RGBA').save('logos/filamchi-bhojpuri.png')
+          print('Downloaded', u)
           PY
           curl -L --fail --retry 3 --max-time 30 -o logos/gangaur.png 'https://jiotvimages.cdn.jio.com/dare_images/images/Gangaur.png'
 
