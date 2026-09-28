@@ -9,6 +9,7 @@ REPORT=Path('reports/epg-coverage.md')
 SOURCES=[
  'https://epg.pw/xmltv/epg_IN.xml',
  'https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml',
+ 'https://iptv-org.github.io/epg/guides/in/tataplay.com.epg.xml',
  'https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz',
  'https://iptv-epg.org/files/epg-in.xml',
 ]
@@ -27,6 +28,18 @@ ID_MAP={
  'KalaignarMurasu.in':['KalaignarMurasu.in'], 'Goldmines.in':['Goldmines.in@SD'],
  'GoldminesAction.in':['GoldminesAction.in@SD'], 'GoldminesBollywood.in':['GoldminesBollywood.in@SD'],
  'GoldminesMovies.in':['GoldminesMovies.in@SD'], 'MHOneMovies.in':['MHOneMovies.in@SD'],
+ 'local.bb3c3114fb20':['ColorsBangla.in@HD'],
+ 'local.285a6aa870f3':['JalshaMovies.in@HD'],
+ 'local.zee-24-ghanta':['Zee24Ghanta.in@SD'],
+ 'local.072484feec7':['ZeeBangla.in@HD'],
+ 'local.5f40adcebbde':['Colors.in@SD','Colors.in@HD'],
+ 'local.history-tv18':['HistoryTV18.in@SD','HistoryTV18.in@HD'],
+ 'CartoonNetwork.uk':['CartoonNetwork.in@SD'],
+ 'CartoonNetworkHDPlus.in':['CartoonNetwork.in@SD'],
+ 'DiscoveryKids.au':['DiscoveryKids.in@SD'],
+ 'local.enter-10-bangla':['Enterr10Bangla.in@SD'],
+ 'local.gold-mines-movie':['GoldminesMovies.in@SD'],
+ 'SonyEntertainmentTelevision':['SonyEntertainmentTelevision.in@SD','SonyEntertainmentTelevision.in@HD'],
  'ETVMusic.in':['ETVMusic.in@SD'], 'SonySAB.in':['SonySAB.in@SD'],
 }
 ATTR_RE=re.compile(r'([\w-]+)="([^"]*)"')
@@ -43,7 +56,7 @@ def norm(s):
  s=str(s).lower().replace('&amp;','&'); s=re.sub(r'\b(hd|sd|uhd|fhd|tv|channel)\b','',s); return re.sub(r'[^a-z0-9]+','',s)
 def aliases(s):
  n=norm(s); out={n}
- for a,b in {'aakaashaath':'aakashaath','aakashath':'aakashaath','sonyaath':'sonyaath','starjalsa':'starjalsha','colorsbanglahd':'colorsbangla'}.items():
+ for a,b in {'aakaashaath':'aakashaath','aakashath':'aakashaath','sonyaath':'sonyaath','starjalsa':'starjalsha','colorsbanglahd':'colorsbangla','enter10bangla':'enter10bangla','goldminesmovie':'goldminesmovies','sonyentertainmenttv':'sonyentertainmenttelevision'}.items():
   if n==a: out.add(b)
  return out
 def base_variants(cid):
