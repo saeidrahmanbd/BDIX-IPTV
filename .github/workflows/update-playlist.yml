@@ -174,6 +174,48 @@ jobs:
               print(f"  - {item}")
           PY
 
+      - name: Snapshot protected primary entries
+        run: |
+          python - <<'PY'
+          import json, re
+          from pathlib import Path
+
+          playlist = Path("IPTV-Playlist.m3u")
+          attr_re = re.compile(r'([\\w-]+)="([^"]*)"')
+          excluded = {"Backup", "Not Playing"}
+
+          def attrs(line):
+              return dict(attr_re.findall(line))
+
+          def parse(text):
+              lines = text.replace("\\r", "").splitlines()
+              out = []
+              for i, line in enumerate(lines):
+                  if not line.startswith("#EXTINF"):
+                      continue
+                  a = attrs(line)
+                  group = a.get("group-title", "").strip()
+                  if group in excluded:
+                      continue
+                  url = ""
+                  for candidate in lines[i + 1:]:
+                      if candidate.strip():
+                          if candidate.startswith(("http://", "https://")):
+                              url = candidate.strip()
+                          break
+                  if url:
+                      out.append((
+                          (a.get("tvg-id") or a.get("channel-id") or "").strip().lower(),
+                          group,
+                          (a.get("tvg-name") or line.rsplit(",", 1)[-1]).strip(),
+                          url,
+                      ))
+              return sorted(out)
+
+          Path("/tmp/primary-before.json").write_text(json.dumps(parse(playlist.read_text(encoding="utf-8-sig")), ensure_ascii=False), encoding="utf-8")
+          print("Protected primary entries:", len(json.loads(Path("/tmp/primary-before.json").read_text(encoding="utf-8"))))
+          PY
+
       - name: Resolve missing logos and convert to local PNG
         run: python scripts/migrate_external_logos_fixed.py
 
@@ -186,8 +228,8 @@ jobs:
           from pathlib import Path
 
           playlist = Path("IPTV-Playlist.m3u")
-          lines = playlist.read_text(encoding="utf-8-sig").replace("\\r", "").splitlines()
-          ATTR_RE = re.compile(r'([\\w-]+)="([^"]*)"')
+          lines = playlist.read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
+          ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 
           def attrs(info):
               return dict(ATTR_RE.findall(info))
@@ -259,6 +301,50 @@ jobs:
 
       - name: Generate detailed update and logo report
         run: python scripts/generate_detailed_report_fixed.py
+
+      - name: Verify protected primary entries before audit
+        run: |
+          python - <<'PY'
+          import json, re
+          from pathlib import Path
+
+          playlist = Path("IPTV-Playlist.m3u")
+          attr_re = re.compile(r'([\\w-]+)="([^"]*)"')
+          excluded = {"Backup", "Not Playing"}
+
+          def attrs(line):
+              return dict(attr_re.findall(line))
+
+          def parse(text):
+              lines = text.replace("\\r", "").splitlines()
+              out = []
+              for i, line in enumerate(lines):
+                  if not line.startswith("#EXTINF"):
+                      continue
+                  a = attrs(line)
+                  if a.get("group-title", "").strip() in excluded:
+                      continue
+                  url = ""
+                  for candidate in lines[i + 1:]:
+                      if candidate.strip():
+                          if candidate.startswith(("http://", "https://")):
+                              url = candidate.strip()
+                          break
+                  if url:
+                      out.append(((a.get("tvg-id") or a.get("channel-id") or "").strip().lower(), a.get("group-title", "").strip(), (a.get("tvg-name") or line.rsplit(",", 1)[-1]).strip(), url))
+              return sorted(out)
+
+          before = json.loads(Path("/tmp/primary-before.json").read_text(encoding="utf-8"))
+          after = parse(playlist.read_text(encoding="utf-8-sig"))
+          if before != after:
+              before_set = set(map(tuple, before))
+              after_set = set(after)
+              missing = sorted(before_set - after_set)
+              print(f"Protected primary entries changed: before={len(before)} after={len(after)} missing={len(missing)}")
+              for item in missing[:20]: print("  -", item[0], item[2], item[3])
+              raise SystemExit(1)
+          print(f"Protected primary entries unchanged: {len(after)}")
+          PY
 
       - name: Audit playlist integrity and protected entries
         run: python scripts/audit_playlist.py
