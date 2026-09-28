@@ -32,7 +32,7 @@ jobs:
           curl -L --fail --retry 3 --max-time 30 -o logos/travel-xp-english-eu.png 'https://i.imgur.com/huU8puw.png'
           curl -L --fail --retry 3 --max-time 30 -o logos/filamchi-bhojpuri.png 'https://www.tvlogo.org/india/filamchi-bhojpuri-in.png'
           curl -L --fail --retry 3 --max-time 30 -o /tmp/gangaur.jpg 'https://exchange4media.gumlet.io/news-photo/118775-GangaurLogo1.jpg'
-          convert /tmp/gangaur.jpg logos/gangaur.png
+          ffmpeg -y -loglevel error -i /tmp/gangaur.jpg -frames:v 1 logos/gangaur.png
 
           for f in logos/orange-bangla-tv.png logos/california-music-channel.png logos/intravel.png logos/travel-xp-english-eu.png logos/filamchi-bhojpuri.png logos/gangaur.png; do
             test -s "$f"
