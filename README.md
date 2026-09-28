@@ -1,6 +1,6 @@
 <!-- BDIX-IPTV Banner -->
 <p align="center">
-  <img src="Saeid%20Rahman.png" alt="BDIX-IPTV — Bangladesh & India IPTV Hub" width="100%">
+  <img src="assets/Saeid%20Rahman.png" alt="BDIX-IPTV — Bangladesh & India IPTV Hub" width="100%">
 </p>
 
 # 📺 Saeid Rahman — BDIX IPTV Playlist
@@ -39,7 +39,7 @@ The playlist is intended for compatible IPTV players such as **XCIPTV** and othe
 - 📋 **[View all releases](https://github.com/saeidrahmanbd/BDIX-IPTV/releases)**
 - 💻 Portable Windows application — no installation required
 
-![Playlist Studio 2.8.2 — IPTV playlist editor and player](Playlist-Studio-screenshot.png)
+![Playlist Studio 2.8.2 — IPTV playlist editor and player](assets/Playlist-Studio-screenshot.png)
 
 *Playlist Studio 2.8.2 — playlist management, channel organization, stream checking, and playback.*
 
