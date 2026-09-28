@@ -176,6 +176,82 @@ jobs:
       - name: Resolve missing logos and convert to local PNG
         run: python scripts/migrate_external_logos_fixed.py
 
+      # Keep one canonical logo per channel ID; Backup/Not Playing entries inherit it.
+      - name: Normalize channel logos
+        run: |
+          python - <<'PY'
+          import re
+          from collections import Counter, defaultdict
+          from pathlib import Path
+
+          playlist = Path("IPTV-Playlist.m3u")
+          lines = playlist.read_text(encoding="utf-8-sig").replace("\\r", "").splitlines()
+          ATTR_RE = re.compile(r'([\\w-]+)="([^"]*)"')
+
+          def attrs(info):
+              return dict(ATTR_RE.findall(info))
+
+          def set_attr(info, key, value):
+              return re.sub(rf'({re.escape(key)}=")[^"]*(")', lambda m: m.group(1) + value + m.group(2), info, count=1)
+
+          blocks = []
+          i = 0
+          while i < len(lines):
+              if not lines[i].startswith("#EXTINF"):
+                  i += 1
+                  continue
+              info_index = i
+              i += 1
+              while i < len(lines) and not lines[i].startswith("#EXTINF"):
+                  i += 1
+              blocks.append(info_index)
+
+          by_id = defaultdict(list)
+          for idx in blocks:
+              a = attrs(lines[idx])
+              cid = (a.get("tvg-id") or a.get("channel-id") or "").strip()
+              if cid:
+                  by_id[cid].append(idx)
+
+          changed = 0
+          changed_ids = set()
+          for cid, indexes in by_id.items():
+              canonical = ""
+              # Prefer the first logo on a primary entry.
+              for idx in indexes:
+                  a = attrs(lines[idx])
+                  group = a.get("group-title", "").strip()
+                  logo = a.get("tvg-logo", "").strip()
+                  if group not in {"Backup", "Not Playing"} and logo:
+                      canonical = logo
+                      break
+
+              # If no primary logo exists, use the most frequent existing logo.
+              if not canonical:
+                  counts = Counter()
+                  first_seen = {}
+                  for idx in indexes:
+                      logo = attrs(lines[idx]).get("tvg-logo", "").strip()
+                      if logo:
+                          counts[logo] += 1
+                          first_seen.setdefault(logo, idx)
+                  if counts:
+                      canonical = max(counts, key=lambda logo: (counts[logo], -first_seen[logo]))
+
+              if not canonical:
+                  continue
+
+              for idx in indexes:
+                  a = attrs(lines[idx])
+                  if a.get("tvg-logo", "").strip() != canonical:
+                      lines[idx] = set_attr(lines[idx], "tvg-logo", canonical)
+                      changed += 1
+                      changed_ids.add(cid)
+
+          playlist.write_text("\\n".join(lines).rstrip() + "\\n", encoding="utf-8", newline="\\n")
+          print(f"Normalized {changed} logo references across {len(changed_ids)} channel IDs.")
+          PY
+
       - name: Validate maintenance scripts
         run: |
           python -m py_compile scripts/update_playlist.py scripts/strict_update.py scripts/migrate_external_logos_fixed.py scripts/generate_detailed_report_fixed.py scripts/audit_playlist.py
