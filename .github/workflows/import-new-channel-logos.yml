@@ -128,4 +128,4 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add logos/orange-bangla-tv.png logos/california-music-channel.png logos/intravel.png logos/travel-xp-english-eu.png logos/filamchi-bhojpuri.png logos/gangaur.png IPTV-Playlist.m3u
           git diff --cached --quiet || git commit -m 'Add six verified new channels and local logos'
-          git push
+          git push origin HEAD:tmp/import-six-logos
