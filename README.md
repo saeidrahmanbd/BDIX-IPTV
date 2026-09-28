@@ -31,6 +31,14 @@ Use the latest version from the repository:
 
 The playlist is intended for compatible IPTV players such as **XCIPTV** and other M3U-compatible applications.
 
+## 🖥️ Playlist Studio
+
+**Playlist Studio** is the companion Windows application for playing, browsing, and managing IPTV playlists.
+
+- 📦 **[Download the latest Playlist Studio release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest)**
+- 📋 **[View all releases](https://github.com/saeidrahmanbd/BDIX-IPTV/releases)**
+- 💻 Portable Windows application — no installation required
+
 ## 🧭 Organization
 
 The playlist is structured to make browsing easier rather than simply collecting as many streams as possible.
