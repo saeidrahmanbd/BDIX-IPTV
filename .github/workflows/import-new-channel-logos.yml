@@ -29,7 +29,7 @@ jobs:
           curl -L --fail --retry 3 --max-time 30 -o logos/orange-bangla-tv.png 'https://static.wikia.nocookie.net/etv-gspn-bangla/images/e/e5/Orange_Bangla_logo_%282018%29.png'
           curl -L --fail --retry 3 --max-time 30 -o logos/california-music-channel.png 'https://commons.wikimedia.org/wiki/Special:Redirect/file/California%20Music%20Channel%20Logo%20(cropped).png'
           curl -L --fail --retry 3 --max-time 30 -o logos/intravel.png 'https://jiotvimages.cdn.jio.com/dare_images/images/Intravel.png'
-          curl -L --fail --retry 3 --max-time 30 -o logos/travel-xp-english-eu.png 'https://raw.githubusercontent.com/Tapiosinn/tv-logos/master/countries/india/travelxp-in.png'
+          curl -L --fail --retry 3 --max-time 30 -o logos/travel-xp-english-eu.png 'https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Travel%20XP.png'
           curl -L --fail --retry 3 --max-time 30 -o logos/filamchi-bhojpuri.png 'https://raw.githubusercontent.com/Tapiosinn/tv-logos/master/countries/india/filamchi-bhojpuri-in.png'
           curl -L --fail --retry 3 --max-time 30 -o logos/gangaur.png 'https://jiotvimages.cdn.jio.com/dare_images/images/Gangaur.png'
 
