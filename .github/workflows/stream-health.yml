@@ -38,7 +38,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          files=("reports/stream-health.md" "reports/stream-health-state.json")
+          files=("reports/stream-health.md" "reports/stream-health-state.json" "reports/stream-priority.json")
           if git diff --quiet -- "${files[@]}"; then echo "No stream-health changes."; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
