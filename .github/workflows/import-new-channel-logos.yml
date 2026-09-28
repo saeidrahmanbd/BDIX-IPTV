@@ -25,6 +25,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p logos
+          python -m pip install --disable-pip-version-check --quiet pillow
 
           curl -L --fail --retry 3 --max-time 30 -o logos/orange-bangla-tv.png 'https://static.wikia.nocookie.net/etv-gspn-bangla/images/e/e5/Orange_Bangla_logo_%282018%29.png'
           curl -L --fail --retry 3 --max-time 30 -o logos/california-music-channel.png 'https://commons.wikimedia.org/wiki/Special:Redirect/file/California%20Music%20Channel%20Logo%20(cropped).png'
@@ -32,7 +33,10 @@ jobs:
           curl -L --fail --retry 3 --max-time 30 -o logos/travel-xp-english-eu.png 'https://i.imgur.com/huU8puw.png'
           curl -L --fail --retry 3 --max-time 30 -o logos/filamchi-bhojpuri.png 'https://www.tvlogo.org/india/filamchi-bhojpuri-in.png'
           curl -L --fail --retry 3 --max-time 30 -o /tmp/gangaur.jpg 'https://exchange4media.gumlet.io/news-photo/118775-GangaurLogo1.jpg'
-          ffmpeg -y -loglevel error -i /tmp/gangaur.jpg -frames:v 1 logos/gangaur.png
+          python - <<'PY'
+          from PIL import Image
+          Image.open('/tmp/gangaur.jpg').convert('RGBA').save('logos/gangaur.png')
+          PY
 
           for f in logos/orange-bangla-tv.png logos/california-music-channel.png logos/intravel.png logos/travel-xp-english-eu.png logos/filamchi-bhojpuri.png logos/gangaur.png; do
             test -s "$f"
