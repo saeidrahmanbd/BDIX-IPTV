@@ -26,6 +26,7 @@ concurrency:
 
 jobs:
   update:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -248,7 +249,7 @@ jobs:
                       changed += 1
                       changed_ids.add(cid)
 
-          playlist.write_text("\\n".join(lines).rstrip() + "\\n", encoding="utf-8", newline="\\n")
+          playlist.write_text("\\n".join(lines).rstrip() + "\\n", encoding="utf-8", newline="\n")
           print(f"Normalized {changed} logo references across {len(changed_ids)} channel IDs.")
           PY
 
