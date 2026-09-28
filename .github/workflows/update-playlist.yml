@@ -181,14 +181,14 @@ jobs:
           from pathlib import Path
 
           playlist = Path("IPTV-Playlist.m3u")
-          attr_re = re.compile(r'([\\w-]+)="([^"]*)"')
+          attr_re = re.compile(r'([\w-]+)="([^"]*)"')
           excluded = {"Backup", "Not Playing"}
 
           def attrs(line):
               return dict(attr_re.findall(line))
 
           def parse(text):
-              lines = text.replace("\\r", "").splitlines()
+              lines = text.replace("\r", "").splitlines()
               out = []
               for i, line in enumerate(lines):
                   if not line.startswith("#EXTINF"):
@@ -309,14 +309,14 @@ jobs:
           from pathlib import Path
 
           playlist = Path("IPTV-Playlist.m3u")
-          attr_re = re.compile(r'([\\w-]+)="([^"]*)"')
+          attr_re = re.compile(r'([\w-]+)="([^"]*)"')
           excluded = {"Backup", "Not Playing"}
 
           def attrs(line):
               return dict(attr_re.findall(line))
 
           def parse(text):
-              lines = text.replace("\\r", "").splitlines()
+              lines = text.replace("\r", "").splitlines()
               out = []
               for i, line in enumerate(lines):
                   if not line.startswith("#EXTINF"):
