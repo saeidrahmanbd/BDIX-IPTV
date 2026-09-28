@@ -4,11 +4,11 @@ This report is generated automatically after playlist updating and logo migratio
 
 ## Summary
 
-- Playlist entries: **911**
-- Added channels: **2**
-- Removed channels: **8**
+- Playlist entries: **912**
+- Added channels: **0**
+- Removed channels: **0**
 - Logo URL changes: **0**
-- Logo status — local PNG: **911**
+- Logo status — local PNG: **912**
 - Logo status — repository reference: **0**
 - Logo status — external URL: **0**
 - Logo status — missing: **0**
@@ -19,21 +19,13 @@ This report is generated automatically after playlist updating and logo migratio
 
 | Channel | Category | Logo URL |
 |---|---|---|
-| Zee Cinema (576p) | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema.png |
-| Gandan TV | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/g-tv.png |
+| None | — | — |
 
 ## Removed Channels
 
 | Channel | Category | Logo URL |
 |---|---|---|
-| Channel S | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png |
-| Disney Jr. | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-jr.png |
-| Enter10 Bangla | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png |
-| Enter10 Bangla [Backup 1] | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png |
-| Enter10 Bangla [Backup 2] | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png |
-| Love Nature | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/love-nature.png |
-| History TV18 | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history.png |
-| Love Nature | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/love-nature.png |
+| None | — | — |
 
 ## Logo URL Changes
 
@@ -49,7 +41,7 @@ No missing, broken, or external logo references detected.
 
 | Category | Channels |
 |---|---:|
-| Backup | 397 |
+| Backup | 398 |
 | Bangladesh | 53 |
 | Documentary & Wildlife | 61 |
 | Indian Bangla | 35 |

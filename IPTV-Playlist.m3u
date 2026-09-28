@@ -1803,6 +1803,8 @@ https://tvsen6.aynaott.com/ZeeBangla/index.m3u8
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/NGCHD/default/NGCHD.m3u8
 #EXTINF:-1 tvg-name="Gandan TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/g-tv.png" tvg-id="GTV.mn" tvg-chno="23" tvg-country="MN" group-title="Backup",Gandan TV
 https://cdn4.skygo.mn/live/disk1/GTV/HLSv3-FTA/GTV.m3u8
+#EXTINF:-1 tvg-id="Enterr10Bangla.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr-10-bangla-720p-647a1940bb.png" group-title="Backup",Enterr 10 Bangla (576p)
+https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8
 #EXTINF:-1 tvg-id="ATNMusic.bd" tvg-name="ATN Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-music.png" tvg-chno="4" channel-id="ATNMusic.bd" group-title="Not Playing",ATN Music
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="ColorsBangla.in" tvg-name="Colors Bangla [Backup 2]" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-backup-2.png" tvg-chno="226" channel-id="ColorsBangla.in" group-title="Not Playing",Colors Bangla [Backup 2]

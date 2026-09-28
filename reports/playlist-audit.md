@@ -4,11 +4,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Summary
 
-- Playlist entries: **911**
-- Unique channel IDs: **627**
+- Playlist entries: **912**
+- Unique channel IDs: **628**
 - IDs with multiple streams: **155**
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **144**
+- Metadata conflicts: **8**
 - Same-name / different-ID collisions: **9**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **47**
@@ -614,150 +614,14 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Metadata Conflicts
 
-- **7smusic.in** — names: 7S Music; groups: Backup, Indian Music; countries: , IN
-- **8xm.pk** — names: 8XM, 8XM [Backup 1]; groups: Backup, Indian Music; countries: , PK
-- **9xjalwa.in** — names: 9X Jalwa, 9X Jalwa [Backup 1], 9X Jalwa [Backup 2]; groups: Backup, Indian Music; countries: 
-- **9xm.in** — names: 9XM, 9XM [Backup 1], 9XM [Backup 2], 9XM [Backup 3]; groups: Backup, Indian Music; countries: 
-- **aakaashaath.in** — names: Aakaash Aath; groups: Backup, Indian Bangla; countries: , IN
-- **aamarbangla.in** — names: Amar Bangla, Amar Bangla [Backup 1]; groups: Backup, Indian Bangla; countries: 
-- **anandatv.bd** — names: Ananda TV, Ananda TV [Backup 3], Ananda TV [Backup 4]; groups: Backup, Bangladesh; countries: 
-- **andtv.in** — names: &TV, &TV [Backup 1]; groups: Backup, Indian Entertainment; countries: 
-- **animalplanet.in** — names: Animal Planet, Animal Planet HD; groups: Documentary & Wildlife; countries: 
-- **asiantv.bd** — names: Asian TV, Asian TV [Backup 1], Asian TV [Backup 3]; groups: Backup, Bangladesh; countries: 
-- **asports.pk** — names: A Sports, A Sports HD; groups: Sports; countries: 
-- **atnbangla.bd** — names: ATN Bangla, ATN Bangla [Backup 1], ATN Bangla [Backup 2], ATN Bangla [Backup 3], ATN Bangla [Backup 4]; groups: Backup, Bangladesh; countries: , BD
-- **b4ukadak.in** — names: B4U Kadak, B4U Kadak [Backup 1]; groups: Backup, Indian Movies; countries: , IN
-- **b4umovies.in** — names: B4U Movies, B4U Movies [Backup 1], B4U Movies [Backup 2]; groups: Backup, Indian Movies; countries: , IN
-- **b4umusic.in** — names: B4U Music, B4U Music 2; groups: Indian Music; countries: , IN
-- **banglavision.bd** — names: Bangla Vision, BanglaVision [Backup 1], BanglaVision [Backup 2]; groups: Backup, Bangladesh; countries: 
-- **beinsportsxtraenespanol.us** — names: beIN SPORTS XTRA en Espanol, beIN Sports XTRA en Espanol; groups: Backup; countries: , US
-- **bhojpuricinema.in** — names: Bhojpuri Cinema, Bhojpuri Cinema [Backup 1]; groups: Backup, Indian Movies; countries: , IN
-- **bijoytv.bd** — names: Bijoy TV, Bijoy TV [Backup 2], Bijoy TV [Backup 4]; groups: Backup, Bangladesh; countries: 
-- **boishakhitv.bd** — names: Boishakhi TV, Boishakhi TV [Backup 2], Boishakhi TV [Backup 3], Boishakhi TV [Backup 4]; groups: Backup, Bangladesh; countries: 
-- **channel24.bd** — names: Channel 24, Channel 24 [Backup 1], Channel 24 [Backup 3], Channel 24 [Backup 4]; groups: Backup, Bangladesh; countries: 
-- **channel9.bd** — names: Channel 9, Channel 9 [Backup 1]; groups: Backup, Bangladesh; countries: 
-- **channeli.bd** — names: Channel I, Channel I [Backup 1], Channel I [Backup 2], Channel I [Backup 3], Channel I [Backup 4]; groups: Backup, Bangladesh; countries: 
-- **colorsbangla.in** — names: Colors Bangla, Colors Bangla [Backup 1], Colors Bangla [Backup 2], Colors Bangla [Backup 3]; groups: Backup, Indian Bangla, Not Playing; countries: 
-- **dangal2.in** — names: Dangal 2; groups: Backup, Indian Entertainment; countries: , IN
-- **dangaltv.in** — names: Dangal, Dangal TV, Dangal [Backup 1]; groups: Backup, Indian Entertainment; countries: , IN
-- **darshanatv.in** — names: Darshana TV; groups: Backup, Indian Entertainment; countries: , IN
-- **dbcnews.bd** — names: DBC News, DBC News [Backup 1], DBC News [Backup 2], DBC News [Backup 3], DBC News [Backup 4]; groups: Backup, Bangladesh; countries: 
-- **ddarunprabha.in** — names: DD Arun Prabha; groups: Backup, Indian Entertainment; countries: , IN
-- **ddbangla.in** — names: DD Bangla, DD Bangla [Backup 1], DD Bangla [Backup]; groups: Backup, Indian Bangla; countries: , IN
-- **ddbharati.in** — names: DD Bharati; groups: Backup, Indian Entertainment; countries: , IN
-- **ddchandana.in** — names: DD Chandana; groups: Backup, Indian Entertainment; countries: , IN
-- **ddjharkhand.in** — names: DD Jharkhand; groups: Backup, Indian Entertainment; countries: , IN
-- **ddkashir.in** — names: DD Kashir; groups: Backup, Indian Entertainment; countries: , IN
-- **ddnational.in** — names: DD National, DD National [Backup 1]; groups: Backup, Indian Entertainment; countries: , IN
-- **ddodia.in** — names: DD Odia; groups: Backup, Indian Entertainment; countries: , IN
-- **ddsaptagiri.in** — names: DD Saptagiri; groups: Backup, Indian Entertainment; countries: , IN
-- **ddurdu.in** — names: DD Urdu; groups: Backup, Indian Entertainment; countries: , IN
-- **deeptotv.bd** — names: Deepto TV, Deepto TV [Backup 2]; groups: Backup, Bangladesh; countries: 
-- **deshtv.bd** — names: Desh TV, Desh TV [Backup 1], Desh TV [Backup 2], Desh TV [Backup 3], Desh TV [Backup 4]; groups: Backup, Bangladesh; countries: 
-- **dhoommusic.in** — names: Dhoom Music, Dhoom Music Bangla; groups: Backup, Indian Bangla; countries: IN
-- **disneychannel.in** — names: Disney Channel India; groups: Kids, Not Playing; countries: 
-- **e24.in** — names: E24, E24 [Backup 1]; groups: Backup, Indian Music; countries: , IN
-- **ekattortv.bd** — names: Ekattor TV, Ekattor TV [Backup 1], Ekattor TV [Backup 3]; groups: Backup, Bangladesh; countries: Bangladesh
-- **ekhontv.bd** — names: Ekhon TV, Ekhon TV [Backup 1], Ekhon TV [Backup 2], Ekhon TV [Backup 4]; groups: Backup, Bangladesh; countries: 
-- **ekusheytv.bd** — names: EKUSHEY TV HD, Ekushey TV, Ekushey TV [Backup 1], Ekushey TV [Backup 3], Ekushey TV [Backup 4]; groups: Backup, Bangladesh; countries: 
-- **enterfilm.ua** — names: Enter-Film; groups: Backup, Not Playing; countries: UA
-- **epicbharat.in** — names: Epic Bharat; groups: Backup, Indian Entertainment; countries: , IN
-- **epicmusic.in** — names: Epic Music, Epic Music [Backup 2]; groups: Backup, Indian Music; countries: , IN
-- **faktmarathi.in** — names: Fakt Marathi; groups: Backup, Indian Entertainment; countries: , IN
-- **globaltv.bd** — names: Global TV, Global TV [Backup 1], Global TV [Backup 3]; groups: Backup, Bangladesh; countries: 
-- **goldmines.in** — names: Goldmines; groups: Backup, Indian Movies; countries: IN
-- **goldminesbollywood.in** — names: Gold Mines Bollywood, Goldmines Bollywood; groups: Backup, Indian Movies; countries: , IN
-- **greentv.bd** — names: Green TV; groups: Backup, Bangladesh; countries: , BD
-- **gtv.mn** — names: GTV, Gandan TV; groups: Backup; countries: MN
-- **hindihits.in** — names: Hindi Hits, Hindi Hits [Backup 1]; groups: Backup, Indian Music; countries: 
-- **humtv.pk** — names: HUM TV, HUM TV [Backup 1], HUM TV [Backup 2]; groups: Backup, Indian Entertainment; countries: 
-- **independenttv.bd** — names: Independent TV; groups: Backup, Bangladesh; countries: 
-- **insync.in** — names: Insync; groups: Backup, Indian Music; countries: , IN
-- **jagonews24.bd** — names: Jago News 24, Jago News 24 [Backup 1]; groups: Backup, Bangladesh; countries: 
-- **jamunatv.bd** — names: Jamuna TV, Jamuna TV [Backup 2], Jamuna TV [Backup 3], Jamuna TV [Backup 4]; groups: Backup, Bangladesh; countries: 
-- **kairalitv.in** — names: Kairali TV; groups: Backup, Indian Movies; countries: , IN
-- **kairaliwe.in** — names: Kairali We; groups: Backup, Indian Movies; countries: , IN
-- **kalaignarmurasu.in** — names: Kalaignar Murasu; groups: Backup, Indian Entertainment; countries: , IN
-- **kappatv.in** — names: Kappa TV; groups: Backup, Indian Music; countries: , IN
-- **khushboobangla.in** — names: Khushboo Bangla; groups: Backup, Indian Bangla; countries: IN
-- **local.072484feec7e** — names: Zee Bangla HD, Zee Bangla HD [Backup 1]; groups: Backup, Indian Bangla; countries: 
-- **local.1d6cdda4509e** — names: Amar Bangla Digital, Amar Bangla Digital [Backup 1]; groups: Backup, Indian Bangla; countries: 
-- **local.285a6aa870f3** — names: Jalsha Movies HD, Jalsha Movies HD [Backup 1], Jalsha Movies HD [Backup 2]; groups: Backup, Indian Bangla; countries: 
-- **local.29621c2210b1** — names: Channel 16, Channel 16 [Backup 1]; groups: Backup, Bangladesh; countries: 
-- **local.298c02a76a55** — names: Bengali Beats, Bengali Beats [Backup 1]; groups: Backup, Bangladesh; countries: 
-- **local.47c0bd81bc1f** — names: Enter TV, Enter TV [Backup 2]; groups: Backup, Bangladesh; countries: 
-- **local.a35fc6b70b2d** — names: Hindi Movie Classic 24, Hindi Movie Classic 24 [Backup 1]; groups: Backup, Indian Movies; countries: 
-- **local.atn-news** — names: ATN News, ATN News [Backup 1], ATN News [Backup 2], ATN News [Backup 3], ATN News [Backup 4]; groups: Backup, Bangladesh; countries: 
-- **local.bangla-tv** — names: Bangla Tv [Backup 3], Bangla Tv [Backup 4]; groups: Backup; countries: 
-- **local.channel-s** — names: Channel S, Channel S [Backup 1], Channel S [Backup 2], Channel S [Backup 3]; groups: Backup, Bangladesh; countries: 
-- **local.g-tv** — names: G TV, G TV [Backup 2]; groups: Backup; countries: 
-- **local.star-news** — names: Star News, Star News [Backup 1], Star News [Backup 2], Star News [Backup 4]; groups: Backup, Bangladesh; countries: 
-- **local.zee-24-ghanta** — names: Zee 24 Ghanta; groups: Backup, Indian Bangla; countries: 
-- **local.zee-bangla-cinema** — names: Zee Bangla Sonar, Zee Bangla Sonar [Backup 1], Zee Bangla Sonar [Backup 2]; groups: Backup; countries: 
-- **maasrangatv.bd** — names: Maasranga TV, Maasranga TV [Backup 2]; groups: Backup, Bangladesh; countries: 
-- **mahaamax.in** — names: Mahaa Max; groups: Backup, Indian Movies; countries: , IN
-- **manoranjanprime.in** — names: Manoranjan Prime; groups: Backup, Indian Entertainment; countries: , IN
-- **mazhavilmanorama.in** — names: Mazhavil Manorama, Mazhavil Manorama [Backup 1], Mazhavil Manorama [Backup 2], Mazhavil Manorama [Backup 3]; groups: Backup, Indian Entertainment; countries: 
-- **mbcbollywood.ae** — names: MBC Bollywood, MBC Bollywood [Backup 1]; groups: Backup, Indian Movies; countries: , AE
-- **metv.bd** — names: ME TV, ME TV [Backup 1], ME TV [Backup 2], ME TV [Backup 3]; groups: Backup, Bangladesh; countries: 
-- **mh1prime.in** — names: MH One Prime, Mh 1 Prime; groups: Backup, Indian Entertainment; countries: , IN
-- **mhonedilse.in** — names: MH One Dil Se; groups: Backup, Indian Entertainment; countries: , IN
-- **mksix.in** — names: MK Six; groups: Backup, Indian Entertainment; countries: , IN
-- **mohonatv.bd** — names: Mohona TV, Mohona TV [Backup 1], Mohona TV [Backup 2], Mohona Tv [Backup 1]; groups: Backup, Bangladesh; countries: 
-- **moviebangla.bd** — names: Movie Bangla, Movie Bangla [Backup 1], Movie Bangla [Backup 2], Movie Bangla [Backup 3]; groups: Backup, Bangladesh; countries: 
-- **musicindia.in** — names: Music India, Music India [Backup 1]; groups: Backup, Indian Music; countries: , IN
-- **mytv.bd** — names: My TV, My TV [Backup 1], My Tv; groups: Backup, Bangladesh; countries: 
-- **nationalgeographic.in** — names: National Geographic, National Geographic [Backup 1]; groups: Documentary & Wildlife, Not Playing; countries: , IN
-- **nbatv.us** — names: NBA TV; groups: Backup, Not Playing; countries: , US
-- **news24.bd** — names: News 24, News 24 [Backup 2], News 24 [Backup 3]; groups: Backup, Bangladesh; countries: 
-- **nexustv.bd** — names: Nexus TV; groups: Backup, Bangladesh; countries: 
-- **nhbollyflix.in** — names: NH BollyFlix; groups: Backup, Indian Movies; countries: , IN
-- **nhbollyraga.in** — names: NH BollyRaga; groups: Backup, Indian Music; countries: , IN
-- **ntv.bd** — names: NTV, NTV [Backup 1], NTV [Backup 3], NTV [Backup 4]; groups: Backup, Bangladesh; countries: 
-- **ntveurope.bd** — names: NTV Europe, NTV Europe [Backup 1]; groups: Backup, Bangladesh; countries: 
-- **pardesitv.ca** — names: Pardesi TV; groups: Backup, Indian Entertainment; countries: , CA
-- **pitaara.in** — names: Pitaara, Pitaara TV, Pitaara TV [Backup 1]; groups: Backup, Indian Movies; countries: , IN
-- **ptcmusic.in** — names: PTC Music, PTC Music [Backup 1]; groups: Backup, Indian Music; countries: 
-- **publicmusic.in** — names: Public Music; groups: Backup, Indian Music; countries: , IN
-- **rajdhanitv.bd** — names: Rajdhani TV, Rajdhani TV [Backup 1]; groups: Backup, Bangladesh; countries: 
-- **ramdhenu.in** — names: Ramdhenu; groups: Backup, Indian Music; countries: , IN
-- **rongeentv.in** — names: Rongeen TV, Rongeen TV [Backup 1], Rongeen TV [Backup 2]; groups: Backup, Indian Bangla; countries: IN
-- **rplusgold.in@sd** — names: R Plus Gold, R Plus Gold (720p); groups: Backup, Indian Bangla; countries: 
-- **rtv.bd** — names: RTV, RTV [Backup 1], RTV [Backup 2]; groups: Backup, Bangladesh; countries: 
-- **rupasibangla.in** — names: Rupasi Bangla, Ruposhi Bangla, Ruposhi Bangla [Backup 1]; groups: Backup, Indian Bangla; countries: , IN
-- **sanandatv.in** — names: Sananda, Sananda TV, Sananda [Backup 3]; groups: Backup, Indian Bangla; countries: 
-- **sanaplus.in** — names: Sana Plus; groups: Backup, Indian Music; countries: , IN
-- **sangeetbangla.in** — names: Sangeet Bangla, Sangeet Bangla [Backup]; groups: Backup, Indian Bangla; countries: , IN
-- **satv.bd** — names: SA TV, SA TV [Backup 1], SA TV [Backup 2], SA TV [Backup 4]; groups: Backup, Bangladesh; countries: 
-- **shansontv.ru** — names: Shanson TV; groups: Backup, Not Playing; countries: RU
-- **shemaroojosh.in** — names: Shemaroo Josh; groups: Backup, Indian Entertainment; countries: IN
-- **somoynewstv.bd** — names: Somoy TV, Somoy TV [Backup 4], Somoy Tv; groups: Backup, Bangladesh; countries: 
-- **sonyaath.in** — names: Sony AATH; groups: Backup, Indian Bangla; countries: 
-- **sonybbcearth.in** — names: Sony BBC Earth, Sony BBC Earth 2; groups: Documentary & Wildlife; countries: 
-- **sonyentertainmenttelevision** — names: Sony Entertainment TV, Sony Entertainment TV [Backup 1], Sony entertainment tv; groups: Backup, Indian Entertainment; countries: 
-- **sonymax.in** — names: Sony MAX HD, Sony Max, Sony Max [Backup 1]; groups: Backup, Indian Movies; countries: 
-- **sonymax2.in** — names: Sony Max 2; groups: Backup, Indian Movies; countries: , IN
-- **sonysab.in** — names: Sony SAB, Sony SAB 2; groups: Indian Entertainment; countries: 
-- **stargold2.in** — names: Star Gold 2; groups: Backup, Indian Movies; countries: 
-- **starjalsha.in** — names: Star Jalsha, Star Jalsha [Backup 1], Star Jalsha [Backup 2]; groups: Backup, Indian Bangla; countries: 
-- **starplus.in** — names: STAR PLUS, Star Plus, StarPlus; groups: Backup, Indian Entertainment; countries: , IN
-- **sunbangla.in** — names: SUN BANGLA, SUN BANGLA [Backup 1]; groups: Backup, Indian Bangla; countries: 
-- **themovieclub.in** — names: The Movie Club, The Movie Club 2; groups: Indian Movies; countries: , IN
-- **ultimatetv.in** — names: Ultimate TV, Ultimate TV [Backup 1]; groups: Backup, Indian Music; countries: 
-- **vanithatv.in** — names: Vanitha TV; groups: Backup, Indian Entertainment; countries: , IN
-- **vasanthtv.in** — names: Vasanth TV; groups: Backup, Indian Entertainment; countries: , IN
-- **vendhartv.in** — names: Vendhar TV; groups: Backup, Indian Entertainment; countries: , IN
-- **wowkidz.in** — names: WOW Kidz Hindi, WOW Kidz Telugu; groups: Kids; countries: 
-- **yrfmusic.in** — names: YRF Music, YRF Music [Backup 2], yrf Music; groups: Backup, Indian Music; countries: 
-- **zbcinema.in** — names: ZB Cinema, ZB Cinema [Backup 1]; groups: Backup, Indian Bangla; countries: 
-- **zeeaction.in** — names: Zee Action, Zee Action [Backup 2]; groups: Backup, Indian Movies; countries: 
-- **zeebangla.in** — names: Zee Bangla, Zee Bangla [Backup 1], Zee Bangla [Backup 2], Zee Bangla [Backup 3]; groups: Backup, Indian Bangla; countries: , IN
-- **zeebanglacinema.in** — names: Zee Bangla Sonar, Zee Bangla Sonar [Backup 2]; groups: Backup, Indian Bangla; countries: 
-- **zeebanglasonar.in** — names: Zee Bangla Sonar, Zee Bangla Sonar [Backup 1], Zee Bangla Sonar [Backup 4]; groups: Backup; countries: , IN
-- **zeebollywood.in** — names: ZEE BOLLYWOOD ᴴᴰ, Zee Bollywood, Zee Bollywood [Backup 2]; groups: Backup, Indian Movies; countries: 
-- **zeecinema.in** — names: Zee Cinema, Zee Cinema [Backup 1], Zee Cinema [Backup 2]; groups: Backup, Indian Movies; countries: , IN
-- **zeetv.in** — names: Zee TV; groups: Backup, Indian Entertainment; countries: 
-- **zoom.in** — names: Zoom, Zoom TV, Zoom TV [Backup 1], Zoom TV [Backup 2]; groups: Backup, Indian Music; countries: , IN
+- **animalplanet.in** — names: animal planet, animal planet hd; groups: Documentary & Wildlife; countries: 
+- **asports.pk** — names: a sports, a sports hd; groups: Sports; countries: 
+- **b4umusic.in** — names: b4u music, b4u music 2; groups: Indian Music; countries: , IN
+- **epicmusic.in** — names: epic music; groups: Indian Music; countries: , IN
+- **sonybbcearth.in** — names: sony bbc earth, sony bbc earth 2; groups: Documentary & Wildlife; countries: 
+- **sonysab.in** — names: sony sab, sony sab 2; groups: Indian Entertainment; countries: 
+- **themovieclub.in** — names: the movie club, the movie club 2; groups: Indian Movies; countries: , IN
+- **wowkidz.in** — names: wow kidz hindi, wow kidz telugu; groups: Kids; countries: 
 
 ## Cross-Country Backup Collisions
 
@@ -777,7 +641,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **911**
+- Healthy/local references: **912**
 - missing: **0**
 - broken-local: **0**
 - external: **0**
