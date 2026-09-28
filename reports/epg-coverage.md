@@ -1,17 +1,17 @@
 # EPG Coverage Report
 
-Generated: **2026-09-28T08:09:21+00:00**
+Generated: **2026-09-28T08:14:29+00:00**
 
 This report audits the current playlist against the configured public EPG sources. It identifies the missing channels first; it does not publish or alter the EPG feed.
 
 ## Coverage Summary
 
-- Playlist channels: **788**
-- EPG matched: **298**
+- Playlist channels: **772**
+- EPG matched: **282**
 - EPG missing: **490**
-- Exact ID matches: **118**
-- Alias/name matches: **180**
-- Matched with future programme data: **281**
+- Exact ID matches: **113**
+- Alias/name matches: **169**
+- Matched with future programme data: **265**
 - Matched but no future programme detected: **17**
 
 ## Source Status
@@ -19,7 +19,7 @@ This report audits the current playlist against the configured public EPG source
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs, 529 IDs with future programmes
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs, 817 IDs with future programmes
 - **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs, 415 IDs with future programmes
-- **FAILED** — https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml — HTTP Error 503: Service Unavailable
+- **FAILED** — https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml — HTTP Error 404: Not Found
 
 ## Missing Channels — Investigation Queue
 
