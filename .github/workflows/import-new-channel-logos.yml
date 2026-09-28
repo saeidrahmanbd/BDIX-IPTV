@@ -30,7 +30,7 @@ jobs:
           curl -L --fail --retry 3 --max-time 30 -o logos/california-music-channel.png 'https://commons.wikimedia.org/wiki/Special:Redirect/file/California%20Music%20Channel%20Logo%20(cropped).png'
           curl -L --fail --retry 3 --max-time 30 -o logos/intravel.png 'https://jiotvimages.cdn.jio.com/dare_images/images/Intravel.png'
           curl -L --fail --retry 3 --max-time 30 -o logos/travel-xp-english-eu.png 'https://travelxptv.b-cdn.net/wp-content/uploads/2016/12/travelxp-crystal-logo.png'
-          curl -L --fail --retry 3 --max-time 30 -o /tmp/filamchi-bhojpuri.webp 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5RbYSEB1S-yuAdXV4acFlJlWSuH_pi32hxslrAwkPOa0UpXG83FI7xAA&s=10'
+          curl -L --fail --retry 3 --max-time 30 -o /tmp/filamchi-bhojpuri.webp 'https://www.apnahdtv.com/images/filamchi-bhojpuri-in.png'
           python - <<'PY'
           from PIL import Image
           Image.open('/tmp/filamchi-bhojpuri.webp').convert('RGBA').save('logos/filamchi-bhojpuri.png')
