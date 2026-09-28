@@ -92,7 +92,7 @@
     ],
     "4ever music (1080p)": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "4ever Music (1080p)",
         "role": "Primary",
         "score": 75,
@@ -576,11 +576,11 @@
     ],
     "ary q tv": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "ARY Q TV",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Connection error",
         "url": "https://aryqtvm.aryzap.com/v1/0183ea2a0eec0b8ed5941a38bc76/0183ea2a4e470b8ed5aa4d793457/ARYQTVH264_1080p.m3u8"
       }
     ],
@@ -1066,41 +1066,41 @@
     ],
     "bein sports 1": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "beIN Sports 1",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6123/index.m3u8"
       }
     ],
     "bein sports 3": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Bein Sports 3",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6124/index.m3u8"
       }
     ],
     "bein sports 6": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "beIN SPORTS 6",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6127/index.m3u8"
       }
     ],
     "bein sports 7": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "beIN SPORTS 7",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6128/index.m3u8"
       }
     ],
@@ -1352,7 +1352,7 @@
     ],
     "btv national": [
       {
-        "failure_streak": 4,
+        "failure_streak": 5,
         "name": "BTV National",
         "role": "Primary",
         "score": 0,
@@ -1362,7 +1362,7 @@
     ],
     "btv news": [
       {
-        "failure_streak": 4,
+        "failure_streak": 5,
         "name": "BTV News",
         "role": "Primary",
         "score": 0,
@@ -1462,11 +1462,11 @@
     ],
     "channel 16 [backup 1]": [
       {
-        "failure_streak": 1,
+        "failure_streak": 0,
         "name": "Channel 16 [Backup 1]",
         "role": "Primary",
-        "score": 75,
-        "status": "HTTP error",
+        "score": 95,
+        "status": "Redirect/temporary",
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8"
       }
     ],
@@ -1680,11 +1680,11 @@
     ],
     "cmc-usa country music channel": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "CMC-USA Country Music Channel",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Timeout",
         "url": "https://hwlive.streamingmediahosting.com/14215-live/0_obd393sh/playlist.m3u8"
       }
     ],
@@ -1720,7 +1720,7 @@
     ],
     "colors bangla [backup 3]": [
       {
-        "failure_streak": 3,
+        "failure_streak": 4,
         "name": "Colors Bangla [Backup 3]",
         "role": "Primary",
         "score": 0,
@@ -2845,15 +2845,15 @@
         "role": "Backup 3",
         "score": 105,
         "status": "Healthy",
-        "url": "https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8"
+        "url": "https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8"
       },
       {
-        "failure_streak": 1,
+        "failure_streak": 0,
         "name": "Ekushey TV",
         "role": "Backup 4",
-        "score": 75,
-        "status": "Timeout",
-        "url": "https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8"
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8"
       }
     ],
     "ekushey tv [backup 1]": [
@@ -2916,11 +2916,11 @@
     ],
     "enter-film": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Enter-Film",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://stream.mcquack.net/322/index.m3u8"
       }
     ],
@@ -3076,7 +3076,7 @@
     ],
     "etv cinema": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "ETV Cinema",
         "role": "Primary",
         "score": 75,
@@ -3512,7 +3512,7 @@
     ],
     "gtv": [
       {
-        "failure_streak": 3,
+        "failure_streak": 4,
         "name": "GTV",
         "role": "Primary",
         "score": 0,
@@ -3522,7 +3522,7 @@
     ],
     "gtv (1080p)": [
       {
-        "failure_streak": 3,
+        "failure_streak": 4,
         "name": "GTV (1080p)",
         "role": "Primary",
         "score": 0,
@@ -3572,11 +3572,11 @@
     ],
     "hindi movies": [
       {
-        "failure_streak": 1,
+        "failure_streak": 0,
         "name": "Hindi Movies",
         "role": "Primary",
-        "score": 75,
-        "status": "HTTP error",
+        "score": 105,
+        "status": "Healthy",
         "url": "https://live20.bozztv.com/giatvplayout7/giatv-209612/tracks-v1a1/mono.ts.m3u8"
       }
     ],
@@ -4420,7 +4420,7 @@
     ],
     "matri bhumi tv": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "Matri Bhumi TV",
         "role": "Primary",
         "score": 75,
@@ -5066,10 +5066,10 @@
     ],
     "my cinema europe": [
       {
-        "failure_streak": 2,
+        "failure_streak": 3,
         "name": "My Cinema Europe",
         "role": "Primary",
-        "score": 75,
+        "score": 0,
         "status": "Connection error",
         "url": "https://op-group1-densxvisionhd-1.dens.tv/h/h18/index.m3u8"
       }
@@ -5092,7 +5092,7 @@
         "url": "https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8"
       },
       {
-        "failure_streak": 3,
+        "failure_streak": 4,
         "name": "My TV",
         "role": "Backup 2",
         "score": 0,
@@ -5548,11 +5548,11 @@
     ],
     "ntv europe [backup 1]": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "NTV Europe [Backup 1]",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "HTTP error",
         "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/ntvuk00332211.stream/live-orgin/ntvuk00332211.stream/chunks.m3u8"
       }
     ],
@@ -6756,31 +6756,31 @@
     ],
     "sky sports action": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Sky Sports Action",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9155/index.m3u"
       }
     ],
     "sky sports cricket": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Sky Sports Cricket",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9258/index.m3u8"
       }
     ],
     "sky sports football": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Sky Sports Football",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9289/index.m3u8"
       }
     ],
@@ -7018,7 +7018,7 @@
     ],
     "sony max (576p) [geo-blocked]": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "Sony Max (576p) [Geo-blocked]",
         "role": "Primary",
         "score": 75,
@@ -7066,11 +7066,11 @@
     ],
     "sony movies": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Sony Movies",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "https://a-cdn.klowdtv.com/live1/smc_720p/chunks.m3u8"
       }
     ],
@@ -8797,5 +8797,5 @@
       }
     ]
   },
-  "generated": "2026-09-28T18:27:44+00:00"
+  "generated": "2026-09-28T18:30:14+00:00"
 }\n
