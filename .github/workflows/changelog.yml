@@ -1,0 +1,54 @@
+name: Changelog
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'IPTV-Playlist.m3u'
+      - 'reports/auto-update.md'
+      - 'reports/playlist-audit.md'
+      - 'reports/stream-health.md'
+      - 'reports/epg-coverage.md'
+      - 'scripts/generate_changelog.py'
+      - '.github/workflows/changelog.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: iptv-changelog
+  cancel-in-progress: false
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate changelog
+        run: python scripts/generate_changelog.py
+      - name: Commit changelog
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- reports/changelog.md CHANGELOG.md)" ]; then
+            echo "No changelog changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/changelog.md CHANGELOG.md
+          git commit -m "Update automated changelog"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort; exit 1; }
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
