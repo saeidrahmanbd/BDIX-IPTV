@@ -295,8 +295,10 @@ jobs:
                       changed += 1
                       changed_ids.add(cid)
 
-          playlist.write_text("\\n".join(lines).rstrip() + "\\n", encoding="utf-8", newline="\n")
+          playlist.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8", newline="\n")
           print(f"Normalized {changed} logo references across {len(changed_ids)} channel IDs.")
+          if not any(line.startswith("#EXTINF") for line in lines):
+              raise SystemExit("Playlist normalization produced no #EXTINF entries; aborting.")
           PY
 
       - name: Validate maintenance scripts
