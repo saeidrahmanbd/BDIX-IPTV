@@ -15,6 +15,7 @@ on:
       - 'scripts/generate_detailed_report_fixed.py'
       - 'scripts/audit_playlist.py'
       - '.github/workflows/update-playlist.yml'
+      - 'IPTV-Playlist.m3u'
 
 permissions:
   contents: write
