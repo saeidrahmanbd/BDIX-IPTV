@@ -1,17 +1,17 @@
 # EPG Coverage Report
 
-Generated: **2026-09-28T07:48:57+00:00**
+Generated: **2026-09-28T08:09:21+00:00**
 
 This report audits the current playlist against the configured public EPG sources. It identifies the missing channels first; it does not publish or alter the EPG feed.
 
 ## Coverage Summary
 
-- Playlist channels: **782**
-- EPG matched: **296**
-- EPG missing: **486**
-- Exact ID matches: **116**
+- Playlist channels: **788**
+- EPG matched: **298**
+- EPG missing: **490**
+- Exact ID matches: **118**
 - Alias/name matches: **180**
-- Matched with future programme data: **279**
+- Matched with future programme data: **281**
 - Matched but no future programme detected: **17**
 
 ## Source Status
@@ -19,7 +19,7 @@ This report audits the current playlist against the configured public EPG source
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs, 529 IDs with future programmes
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs, 817 IDs with future programmes
 - **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs, 415 IDs with future programmes
-- **FAILED** — https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml — HTTP Error 404: Not Found
+- **FAILED** — https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml — HTTP Error 503: Service Unavailable
 
 ## Missing Channels — Investigation Queue
 
@@ -455,8 +455,12 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **WOW Kidz Tamil** — `local.5a0c6e1770c3` — Kids
 - **WOW Kidz Telugu** — `WOWKidz.in@Telugu` — Kids
 - **ZooMoo** — `ZooMoo.sg` — Kids
+- **California Music Channel** — `CaliforniaMusicChannel.us@HD` — New Channels
 - **ETV Beats** — `ETVBeats.in@HD` — New Channels
+- **InTravel** — `InTravel.in@HD` — New Channels
 - **Maha Movie** — `MahaMovie.in@SD` — New Channels
+- **Orange Bangla TV** — `OrangeBanglaTV.in@SD` — New Channels
+- **Travel XP English EU** — `TravelXPEnglish.eu@HD` — New Channels
 - **Astro Cricbuzz** — `AstroCricket.my` — Not Playing
 - **ATN Music** — `ATNMusic.bd` — Not Playing
 - **Bengali Beats** — `local.298c02a76a55` — Not Playing
