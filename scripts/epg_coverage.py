@@ -16,15 +16,21 @@ def playlist():
    if cur[2] not in ('Backup','Not Playing'): out.append(cur)
    cur=None
  return list(dict.fromkeys(out))
+def norm_name(s):
+ return re.sub(r'[^a-z0-9]+','',re.sub(r'\b(hd|sd|uhd|fhd|tv|channel)\b','',str(s).lower()))
+
 def parse_source(url):
  req=urllib.request.Request(url,headers={'User-Agent':'BDIX-IPTV-EPG-Coverage/2.0','Accept':'application/xml,text/xml,application/gzip,*/*'})
  with urllib.request.urlopen(req,timeout=60) as r: data=r.read()
  if url.endswith('.gz') or data[:2]==b'\x1f\x8b': data=gzip.decompress(data)
- ids=set(); future=set(); counts=defaultdict(int); now=datetime.now(timezone.utc)
+ ids=set(); future=set(); counts=defaultdict(int); names=defaultdict(set); now=datetime.now(timezone.utc)
  for _,elem in ET.iterparse(io.BytesIO(data),events=('end',)):
   if elem.tag=='channel':
    cid=elem.attrib.get('id','').strip()
-   if cid: ids.add(cid)
+   if cid:
+    ids.add(cid)
+    for dn in elem.findall('display-name'):
+     if dn.text: names[norm_name(dn.text)].add(cid)
   elif elem.tag=='programme':
    cid=elem.attrib.get('channel','').strip()
    if cid:
@@ -41,15 +47,18 @@ def parse_source(url):
       break
      except Exception: pass
    elem.clear()
- return ids,future,counts
+ return ids,future,counts,names
 def main():
  channels=playlist(); mapping=list(csv.DictReader(MAPPING.open(encoding='utf-8-sig'))) if MAPPING.exists() else []; mapped=[r for r in mapping if r.get('status')=='MAPPED']
  results={}; source_status=[]
  for src in SOURCES:
   try:
-   ids,future,counts=parse_source(src); source_status.append((src,'OK',len(ids),len(future),sum(counts.values()),''))
+   ids,future,counts,names=parse_source(src); source_status.append((src,'OK',len(ids),len(future),sum(counts.values()),''))
    for r in mapped:
-    candidates=[x.strip() for x in r.get('epg_id','').split('|') if x.strip()]; hits=[x for x in candidates if x in ids]; futures=[x for x in candidates if x in future]
+    candidates=[x.strip() for x in r.get('epg_id','').split('|') if x.strip()]; hits=[x for x in candidates if x in ids]
+    if not hits:
+     hits=sorted(names.get(norm_name(r.get('channel','')),set()))
+    futures=[x for x in hits if x in future]
     if hits:
      q=results.setdefault(r['tvg_id'],{'future':set(),'rows':0,'sources':set()}); q['future'].update(futures); q['rows']+=sum(counts.get(x,0) for x in hits); q['sources'].add(src)
   except Exception as e: source_status.append((src,'FAILED',0,0,0,str(e)[:180]))
