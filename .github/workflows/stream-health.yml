@@ -10,6 +10,7 @@ on:
       - main
     paths:
       - 'scripts/stream_health.py'
+      - 'IPTV-Playlist.m3u'
       - '.github/workflows/stream-health.yml'
 
 permissions:
