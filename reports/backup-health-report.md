@@ -1,12 +1,11 @@
 # Backup Health Audit
 
-Backups checked: **292**  
-Hard-dead removed: **4**
+Backups checked: **393**  
+Hard-dead removed: **3**
 
 A stream is auto-removed only after two failed ffprobe media probes and an HTTP 404/410 response. Timeouts, 403s, geo-blocks and temporary server errors are retained to avoid false removals.
 
 ## Removed
-- 9X Jalwa [Backup] — `https://tvsen6.aynaott.com/CiPT1VTG8bVekeAZiibd/index.m3u8`
-- Boishakhi TV — `https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/index.m3u8`
-- SA TV — `https://tvsen6.aynaott.com/rELXiuUXqbgzPb06Npom/index.m3u8`
-- Zee TV (720p) — `http://41.205.93.154/ZEE-TV/index.m3u8`
+- Madhimugam TV (576p) — `https://mumt01.tangotv.in/O5aw8Zn3MATHIMUGAMTV/index.m3u8`
+- ZB Cinema [Backup 1] — `https://iptvlive.ahmed-bd-org.workers.dev/zb-cinema-1/index.m3u8`
+- Zee 24 Ghanta — `https://tvsen6.aynaott.com/DpPnXP9r/index.m3u8`
