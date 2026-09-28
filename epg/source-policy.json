@@ -1,9 +1,0 @@
-{
-  "approved_for_automated_access": false,
-  "approved_for_public_redistribution": false,
-  "feed_mapping_verified": false,
-  "permission_evidence": "",
-  "sites": ["dishtv.in"],
-  "generator_commit": "335458005387e07417a98399eb423c78d62a3bd9",
-  "catalogue_source": "https://github.com/iptv-org/epg/blob/335458005387e07417a98399eb423c78d62a3bd9/sites/dishtv.in/dishtv.in.channels.xml"
-}
