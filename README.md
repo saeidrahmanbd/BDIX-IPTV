@@ -31,6 +31,21 @@ Use the latest version from the repository:
 
 The playlist is intended for compatible IPTV players such as **XCIPTV** and other M3U-compatible applications.
 
+## 📡 Stream Health
+
+The playlist has a separate, non-destructive stream-health layer.
+
+- 🟢 **Healthy / Redirect** — stream endpoint responds and HLS manifests pass validation
+- 🟠 **Timeout / HTTP error / Connection error** — reported for investigation
+- 🔴 **Invalid HLS** — endpoint responds but the HLS manifest is malformed or unusable
+- ⚪ **Not Playing** — intentionally excluded from active failure scoring
+- 🔁 **Repeated failures** — a stream is listed as an **obsolete candidate only after 3 consecutive health runs**
+- 🛡️ **No automatic deletion** — one failed check never removes a stream from the playlist
+
+📊 **[View the latest Stream Health Report](reports/stream-health.md)**
+
+The health workflow runs automatically every 6 hours and keeps a persistent failure streak per stream URL.
+
 ## 🖥️ Playlist Studio
 
 **Playlist Studio** is the companion Windows application for playing, browsing, and managing IPTV playlists.
