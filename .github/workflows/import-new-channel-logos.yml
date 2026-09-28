@@ -110,7 +110,7 @@ jobs:
                   if m and m.group(1) in target_ids:
                       cid=m.group(1)
                       logo=re.search(r'tvg-logo="([^"]+)"',line).group(1)
-                      chno=re.search(r'tvg-chno="(\\d+)"',line).group(1)
+                      chno=re.search(r'tvg-chno="(\d+)"',line).group(1)
                       if '/logos/' not in logo: raise SystemExit(f'external logo: {cid}')
                       seen[cid]=(chno,i)
           if set(seen)!=target_ids:
