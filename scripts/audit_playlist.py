@@ -107,6 +107,37 @@ for info, url in entries:
 duplicate_ids = {k:v for k,v in by_id.items() if len(v) > 1}
 duplicate_urls = {k:v for k,v in urls.items() if len(v) > 1}
 
+primary_entries = [
+    (info, url) for info, url in entries
+    if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS
+]
+primary_identity_groups = defaultdict(list)
+primary_channel_numbers = defaultdict(list)
+for info, url in primary_entries:
+    a = attrs(info)
+    cid = identity(info)
+    if cid:
+        primary_identity_groups[(cid, a.get("group-title", "").strip())].append((info, url))
+    chno = a.get("tvg-chno", "").strip()
+    if chno:
+        primary_channel_numbers[chno].append((info, url))
+
+primary_duplicate_ids = {
+    key: items for key, items in primary_identity_groups.items() if len(items) > 1
+}
+primary_chno_collisions = {
+    key: items for key, items in primary_channel_numbers.items() if len(items) > 1
+}
+
+suspicious_urls = []
+for info, url in entries:
+    if re.search(r"[?&](token|auth)=(?:test|testpub)(?:&|$)", url, re.I):
+        suspicious_urls.append((display_name(info), "test credential", url))
+    elif re.search(r"https?://[^/@]+@[^/]+", url, re.I):
+        suspicious_urls.append((display_name(info), "URL userinfo", url))
+    elif re.search(r"[?&]hdnts=$", url, re.I):
+        suspicious_urls.append((display_name(info), "empty hdnts", url))
+
 metadata_conflicts = []
 for cid, items in sorted(by_id.items()):
     non_backup = [x for x in items if attrs(x[0]).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS]
@@ -218,6 +249,9 @@ lines = [
     f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**",
     f"- Protected primary-entry changes: **{len(protected_changes)}**",
     f"- Logo exceptions: **{len(logo_exceptions)}**",
+    f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**",
+    f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**",
+    f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**",
     "",
     "## Duplicate IDs",
     "",
@@ -227,6 +261,28 @@ for cid, items in sorted(duplicate_ids.items()):
     for info, url in items:
         lines.append(f"- {display_name(info)} — {attrs(info).get('group-title','')} — {url}")
 if not duplicate_ids:
+    lines.append("None.")
+
+lines += ["", "## Duplicate Primary Identities", ""]
+if primary_duplicate_ids:
+    for (key, items) in sorted(primary_duplicate_ids.items()):
+        cid, group = key
+        lines.append(f"- **{cid}** in **{group}** — " + ", ".join(display_name(x[0]) for x in items))
+else:
+    lines.append("None.")
+
+lines += ["", "## Primary Channel-Number Collisions", ""]
+if primary_chno_collisions:
+    for chno, items in sorted(primary_chno_collisions.items()):
+        lines.append(f"- **{chno}** — " + ", ".join(display_name(x[0]) for x in items))
+else:
+    lines.append("None.")
+
+lines += ["", "## Suspicious URLs", ""]
+if suspicious_urls:
+    for name, reason, url in suspicious_urls:
+        lines.append(f"- **{name}** — {reason} — {url}")
+else:
     lines.append("None.")
 
 lines += ["", "## Metadata Conflicts", ""]
@@ -273,3 +329,9 @@ if protected_changes:
     raise SystemExit("Protected primary playlist entries changed; refusing automatic commit.")
 if cross_country_backups:
     raise SystemExit("Cross-country Backup collisions detected; refusing automatic commit.")
+if primary_duplicate_ids:
+    raise SystemExit("Duplicate primary identities detected; refusing automatic commit.")
+if primary_chno_collisions:
+    raise SystemExit("Primary channel-number collisions detected; refusing automatic commit.")
+if suspicious_urls:
+    raise SystemExit("Suspicious test credentials or malformed URL syntax detected; refusing automatic commit.")
