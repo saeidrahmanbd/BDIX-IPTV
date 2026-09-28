@@ -2,6 +2,11 @@ name: Stream + EPG Audit
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/stream_epg_audit.py"
+      - ".github/workflows/stream-epg-audit.yml"
   schedule:
     - cron: "17 2 * * *"
 
