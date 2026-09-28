@@ -39,7 +39,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet -- reports/dashboard.md assets/dashboard.svg; then
+          if [ -z "$(git status --porcelain -- reports/dashboard.md assets/dashboard.svg)" ]; then
             echo "Dashboard is already current."
             exit 0
           fi
