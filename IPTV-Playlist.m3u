@@ -13,6 +13,24 @@ https://tvsen6.aynaott.com/da6WMXAk/index.m3u8
 https://tvsen6.aynaott.com/39ee93nUbCCmm5LsyD4t/index.m3u8
 #EXTINF:-1 channel-id="BanglaVision.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/banglavision.png" tvg-id="BanglaVision.bd" tvg-name="Bangla Vision" tvg-chno="6" group-title="Bangladesh",Bangla Vision
 https://tvsen5.aynaott.com/banglavision/index.m3u8
+
+#EXTINF:-1 tvg-id="9XJhakaas.in" tvg-name="9X Jhakaas" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jhakaas.png" channel-id="9XJhakaas.in" group-title="Backup",9X Jhakaas [Backup 2]
+https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="9XTashan.in" tvg-name="9X Tashan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-tashan.png" channel-id="9XTashan.in" group-title="Backup",9X Tashan [Backup 2]
+https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="Dangal2.in" tvg-name="Dangal 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dangal-2.png" channel-id="Dangal2.in" group-title="Backup",Dangal 2 [Backup 3]
+https://streams.tangotv.in/DANGAL2/ORIGIN/index.m3u8
+#EXTINF:-1 tvg-id="SonyAath.in" tvg-name="Sony Aath" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-aath.png" channel-id="SonyAath.in" group-title="Backup",Sony Aath [Backup 3]
+https://cloudplay-sonyliv.pages.dev/aath.m3u8
+#EXTINF:-1 tvg-id="B4UMovies.in" tvg-name="B4U Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png" channel-id="B4UMovies.in" group-title="Backup",B4U Movies [Backup 3]
+https://amg00877-b4unew-amg00877c2-xiaomi-in-5489.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="B4UMusic.in" tvg-name="B4U Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png" channel-id="B4UMusic.in" group-title="Backup",B4U Music [Backup 3]
+https://cdn.pishow.tv/ott/live/415/master.m3u8
+#EXTINF:-1 tvg-id="MusicIndia.in" tvg-name="Music India" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/music-india.png" channel-id="MusicIndia.in" group-title="Backup",Music India [Backup 3]
+https://cdn.pishow.tv/ott/live/226/master.m3u8
+#EXTINF:-1 tvg-id="Pitaara.in" tvg-name="Pitaara TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pitaara-tv.png" channel-id="Pitaara.in" group-title="Backup",Pitaara TV [Backup 2]
+https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8
+
 #EXTINF:-1 tvg-id="local.298c02a76a55" tvg-name="Bengali Beats" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bengali-beats.png" channel-id="local.298c02a76a55" group-title="Not Playing",Bengali Beats
 https://live20.bozztv.com/giatvplayout7/giatv-209587/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 channel-id="BijoyTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bijoy-tv.png" tvg-id="BijoyTV.bd" tvg-name="Bijoy TV" tvg-chno="78" group-title="Bangladesh",Bijoy TV
