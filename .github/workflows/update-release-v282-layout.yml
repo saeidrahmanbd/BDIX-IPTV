@@ -1,0 +1,203 @@
+name: Update v2.8.2 Release Layout
+
+on:
+  push:
+    paths:
+      - ".github/workflows/update-release-v282-layout.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_BODY: |
+            # 📺 Playlist Studio v2.8.2
+            ## Playback Stability & Recovery
+            
+            ![Playlist Studio v2.8.2](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/assets/Playlist-Studio-screenshot.png)
+            
+            > **A more resilient playback architecture for Playlist Studio.**  
+            > v2.8.2 keeps the playlist editor isolated from native VLC playback failures, so a problematic stream is less likely to take down the main application.
+            
+            **Windows · Portable · No installation required**
+            
+            ---
+            
+            ## ✨ What changed
+            
+            | | Improvement | What it does |
+            |---|---|---|
+            | ▶️ | **Isolated Playback** | Runs VLC playback separately from the main playlist editor. |
+            | 🔄 | **Fresh Channel Sessions** | Starts a clean playback process when switching channels. |
+            | ⚡ | **Smarter Switching** | Consolidates rapid channel requests so the latest request is processed. |
+            | 🛡️ | **Bounded Recovery** | Terminates stalled playback processes after a controlled timeout. |
+            | 🔧 | **Playback Recovery** | Provides **Retry** or channel-selection options when playback stops or becomes unresponsive. |
+            | 🔊 | **Settings Preserved** | Keeps volume, mute and view settings across channel changes. |
+            
+            ---
+            
+            ## 🎯 The problem this release addresses
+            
+            During testing, Windows crash reports identified access violations involving VLC 3.0.23's HTTPS plugin, `libgnutls_plugin.dll`.
+            
+            In **Playlist Studio v2.8.1**, a native playback failure could close the entire playlist editor.
+            
+            ### v2.8.2 changes the architecture
+            
+            ```
+            Before — v2.8.1
+            
+            Playlist Studio
+                  │
+                  └── VLC Playback
+                         │
+                         └── Native failure
+                                ↓
+                          Editor can close
+            
+            
+            Now — v2.8.2
+            
+            Playlist Studio
+                  │
+                  └── Playback Process
+                         │
+                         └── Native failure
+                                ↓
+                          Playback is isolated
+                                │
+                                └── Editor remains available
+            ```
+            
+            The goal is **failure isolation**, not modification of VLC itself.
+            
+            ---
+            
+            ## 🛡️ Playback protection
+            
+            ### Main editor
+            **Playlist editing · Channel management · Playlist import · UI state**
+            
+            ⬇️ isolated from
+            
+            ### Playback process
+            **VLC · HTTPS/TLS · Decoder · Stream connection**
+            
+            If playback becomes unstable, Playlist Studio can recover or replace the playback process without requiring the main editor to restart.
+            
+            > **Important:** The bundled VLC version is unchanged. v2.8.2 does **not** claim to repair VLC or the underlying native library.
+            
+            ---
+            
+            ## ⚡ Switching behavior
+            
+            Rapid channel changes are handled more deliberately:
+            
+            **Channel A** → **Channel B** → **Channel C**
+            
+            Instead of allowing every request to create competing playback work, the application consolidates rapid requests and processes the latest channel.
+            
+            A new playback process also prevents the previous channel's TLS/decoder state from being unnecessarily reused.
+            
+            ---
+            
+            ## 🔧 When playback fails
+            
+            A failed stream can still be a failed stream.
+            
+            If the source itself is unavailable, Playlist Studio may require:
+            
+            - **Retry**
+            - selecting another stream URL
+            - switching to another channel
+            
+            Because each channel switch starts a new player process, a **brief startup delay** may occur.
+            
+            ---
+            
+            ## 🧪 Validation
+            
+            The v2.8.2 build was tested for:
+            
+            - [x] Native playback
+            - [x] 15 queued channel switches
+            - [x] Deliberate playback-process termination with editor survival
+            - [x] Playback recovery
+            - [x] Stop
+            - [x] Pause / resume
+            - [x] Asynchronous playlist drops
+            - [x] Repeated fullscreen resizing with volume controls
+            - [x] Packaged portable EXE startup
+            - [x] Playlist import
+            - [x] HTTP test-stream playback
+            
+            Fullscreen geometry, restoration behavior and control visibility were also verified separately.
+            
+            > One desktop-wide fullscreen hit-testing test was partially obscured by the Windows Date and Time panel.
+            
+            ---
+            
+            ## 🚀 Run Playlist Studio
+            
+            ### 1. Download
+            Open the **Assets** section below and download:
+            
+            **`Playlist.Studio.Portable.v2.8.2.exe`**
+            
+            ### 2. Run
+            Launch the EXE directly.
+            
+            ### 3. That's it
+            No installation is required.
+            
+            No separate VLC folder or VLC download is required.
+            
+            ---
+            
+            ## 📦 Release at a glance
+            
+            | Detail | Value |
+            |---|---|
+            | **Version** | **2.8.2** |
+            | **Release date** | September 13, 2026 |
+            | **Platform** | Windows |
+            | **Package** | Single-file portable EXE |
+            | **Playback architecture** | Separate playback process |
+            | **VLC version** | Unchanged from previous release |
+            | **Release type** | Playback stability & recovery |
+            
+            ---
+            
+            ## 📥 Download
+            
+            **Recommended:** Download the portable EXE from the **Assets** section below.
+            
+            [**⬇️ Download Playlist Studio v2.8.2**](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/download/v.2.8.2/Playlist.Studio.Portable.v2.8.2.exe)
+            
+            ---
+            
+            ### Playlist Studio v2.8.2
+            
+            **Playback failures should stay with playback — not with your playlist editor.**
+            
+            [← View all releases](https://github.com/saeidrahmanbd/BDIX-IPTV/releases) · [Repository](https://github.com/saeidrahmanbd/BDIX-IPTV)
+            
+        run: |
+          gh release edit v.2.8.2 \
+            --repo "${{ github.repository }}" \
+            --title "Playlist Studio v2.8.2 — Playback Stability & Recovery" \
+            --notes "$RELEASE_BODY"
+
+      - name: Remove temporary workflow
+        run: |
+          rm -f .github/workflows/update-release-v282-layout.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/workflows/update-release-v282-layout.yml
+          git commit -m "chore: remove temporary release updater" || exit 0
+          git push
