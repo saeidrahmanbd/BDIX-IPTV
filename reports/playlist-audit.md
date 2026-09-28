@@ -11,7 +11,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **46**
+- IDs with multiple logo references: **9**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **0**
 
@@ -630,52 +630,15 @@ None.
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
-- multiple-logo-references — 7smusic.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music-576p-afe002c8aa.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png
-- multiple-logo-references — aakaashaath.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aakaash-aath-720p-5d628a28dd.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aakaash-aath.png
 - multiple-logo-references — aamarbangla.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla-backup-1.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla.png
-- multiple-logo-references — b4ukadak.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-kadak-576p-f49a2a6e14.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-kadak.png
-- multiple-logo-references — b4umovies.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies-576p-fd61c20d7c.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png
 - multiple-logo-references — colorsbangla.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-backup-1.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-backup-2.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-backup-3.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png
-- multiple-logo-references — dangal2.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dangal-2-720p-18d63673a7.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dangal-2.png
-- multiple-logo-references — dangaltv.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dangal-tv.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dangal.png
-- multiple-logo-references — darshanatv.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/darshana-tv-360p-172e185e63.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/darshana-tv.png
-- multiple-logo-references — ddbangla.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-bangla-576p-ef9b5af330.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-bangla.png
-- multiple-logo-references — ddbharati.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-bharati-576p-0dd8dfb333.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-bharati.png
-- multiple-logo-references — ddjharkhand.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-jharkhand-576p-c8bfe17763.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-jharkhand.png
-- multiple-logo-references — ddodia.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-odia-480p-f8e5ade40a.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-odia.png
-- multiple-logo-references — ddurdu.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-urdu-576p-51b76262e4.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-urdu.png
-- multiple-logo-references — dhoommusic.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dhoom-music-576p-ba62bd030a.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dhoom-music-bangla.png
-- multiple-logo-references — goldmines.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines-576p-99e087b760.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines.png
-- multiple-logo-references — kairalitv.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kairali-tv-360p-cde9b280d2.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kairali-tv.png
-- multiple-logo-references — kairaliwe.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kairali-we-576p-e97ca4d762.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kairali-we.png
-- multiple-logo-references — kalaignarmurasu.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kalaignar-murasu-360p-41b67ab31f.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kalaignar-murasu.png
-- multiple-logo-references — khushboobangla.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/khushboo-bangla-576p-44856f0a5f.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/khushboo-bangla.png
 - multiple-logo-references — local.072484feec7e — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-hd-backup-1.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-hd.png
 - multiple-logo-references — local.1d6cdda4509e — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla-digital-backup-1.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla-digital.png
-- multiple-logo-references — mahaamax.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mahaa-max-360p-8c6216c2f0.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mahaa-max.png
-- multiple-logo-references — manoranjanprime.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/manoranjan-prime-576p-8c583ccf26.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/manoranjan-prime.png
-- multiple-logo-references — mksix.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mk-six-576p-9192c82581.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mk-six.png
-- multiple-logo-references — musicindia.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/music-india-576p-7f8b14fb44.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/music-india.png
-- multiple-logo-references — nhbollyflix.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nh-bollyflix-1080p-e41aefdc58.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nh-bollyflix.png
-- multiple-logo-references — nhbollyraga.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nh-bollyraga-1080p-b51bb627d6.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nh-bollyraga.png
-- multiple-logo-references — pitaara.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pitaara-720p-b8ea7f3162.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pitaara-tv.png
-- multiple-logo-references — publicmusic.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/public-music-576p-278a70b9ab.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/public-music.png
 - multiple-logo-references — rajdhanitv.bd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rajdhani-tv-backup-1.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rajdhani-tv.png
-- multiple-logo-references — ramdhenu.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ramdhenu-360p-5f64a8de13.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ramdhenu.png
-- multiple-logo-references — rdssocialtv.it — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rds-social-tv-1080p-58e6544dfa.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rds-social-tv.png
-- multiple-logo-references — rongeentv.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rongeen-tv-720p-92f5585c4c.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rongeen-tv.png
-- multiple-logo-references — rupasibangla.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rupasi-bangla-576p-e677fd1858.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ruposhi-bangla.png
-- multiple-logo-references — sangeetbangla.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sangeet-bangla-576p-695b56b52a.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sangeet-bangla.png
-- multiple-logo-references — shemaroojosh.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shemaroo-josh-360p-28e43c141a.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shemaroo-josh.png
 - multiple-logo-references — sonyentertainmenttelevision — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-entertainment-tv-backup-1.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-entertainment-tv.png
-- multiple-logo-references — starplus.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-plus.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/starplus-1080p-a57bfc74af.png
 - multiple-logo-references — sunbangla.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-bangla-backup-1.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-bangla.png
-- multiple-logo-references — vanithatv.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vanitha-tv-576p-1c40863c9e.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vanitha-tv.png
-- multiple-logo-references — vasanthtv.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vasanth-tv-576p-e81c762aab.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vasanth-tv.png
-- multiple-logo-references — vendhartv.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vendhar-tv-576p-a135b125f7.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vendhar-tv.png
 - multiple-logo-references — zeebangla.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-backup-1.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-backup-2.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-backup-3.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla.png
 - multiple-logo-references — zeebanglasonar.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar-backup-1.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar-backup-2.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar-backup-4.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png
-- multiple-logo-references — zoom.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom.png
 
 ## Protected Primary Entries
 
