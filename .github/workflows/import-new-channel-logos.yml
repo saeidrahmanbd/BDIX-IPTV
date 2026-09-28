@@ -1,0 +1,112 @@
+name: Import Verified New Channel Logos
+
+on:
+  push:
+    paths:
+      - '.github/workflows/import-new-channel-logos.yml'
+      - 'IPTV-Playlist.m3u'
+      - 'logos/**'
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download and validate logos
+        run: |
+          set -euo pipefail
+          mkdir -p logos
+
+          curl -L --fail --retry 3 --max-time 30 -o logos/orange-bangla-tv.png 'https://static.wikia.nocookie.net/etv-gspn-bangla/images/e/e5/Orange_Bangla_logo_%282018%29.png'
+          curl -L --fail --retry 3 --max-time 30 -o logos/california-music-channel.png 'https://commons.wikimedia.org/wiki/Special:Redirect/file/California%20Music%20Channel%20Logo%20(cropped).png'
+          curl -L --fail --retry 3 --max-time 30 -o logos/intravel.png 'https://jiotvimages.cdn.jio.com/dare_images/images/Intravel.png'
+          curl -L --fail --retry 3 --max-time 30 -o logos/travel-xp-english-eu.png 'https://raw.githubusercontent.com/Tapiosinn/tv-logos/master/countries/india/travelxp-in.png'
+          curl -L --fail --retry 3 --max-time 30 -o logos/filamchi-bhojpuri.png 'https://raw.githubusercontent.com/Tapiosinn/tv-logos/master/countries/india/filamchi-bhojpuri-in.png'
+          curl -L --fail --retry 3 --max-time 30 -o logos/gangaur.png 'https://jiotvimages.cdn.jio.com/dare_images/images/Gangaur.png'
+
+          for f in logos/orange-bangla-tv.png logos/california-music-channel.png logos/intravel.png logos/travel-xp-english-eu.png logos/filamchi-bhojpuri.png logos/gangaur.png; do
+            test -s "$f"
+            head -c 8 "$f" | od -An -t x1 | grep -qi '89 50 4e 47 0d 0a 1a 0a' || { echo "Invalid PNG: $f"; file "$f"; exit 1; }
+          done
+
+      - name: Add channels
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path("IPTV-Playlist.m3u")
+          text = p.read_text(encoding="utf-8")
+
+          entries = [
+          ('OrangeBanglaTV.in@SD','Orange Bangla TV','ben','BD','1028','orange-bangla-tv.png','https://cdn.pishow.tv/ott/live/1499/master.m3u8'),
+          ('CaliforniaMusicChannel.us@HD','California Music Channel','eng','US','1029','california-music-channel.png','https://cmc-ono.amagi.tv/playlist.m3u8'),
+          ('InTravel.in@HD','InTravel','eng','IN','1030','intravel.png','https://amg00861-amg00861c10-rakuten-uk-3152.playouts.now.amagi.tv/playlist.m3u8'),
+          ('TravelXPEnglish.eu@HD','Travel XP English EU','eng','EU','1031','travel-xp-english-eu.png','https://travelxp-travelxp-1-eu.rakuten.wurl.tv/3000.m3u8'),
+          ('FilamchiBhojpuri.in@SD','Filamchi Bhojpuri','bho;hin','IN','1032','filamchi-bhojpuri.png','https://epiconvh.akamaized.net/live/filamchi/master.m3u8'),
+          ('Gangaur.in@SD','Gangaur','hin','IN','1033','gangaur.png','https://pbgangaur.wiseplayout.com/Gangaur/master.m3u8'),
+          ]
+
+          existing_ids = set()
+          existing_urls = set()
+          for line in text.splitlines():
+              if line.startswith('#EXTINF:'):
+                  import re
+                  m=re.search(r'(?:tvg-id|channel-id)="([^"]+)"', line)
+                  if m: existing_ids.add(m.group(1))
+              elif line.startswith('http://') or line.startswith('https://'):
+                  existing_urls.add(line.strip())
+
+          out=[]
+          for cid,name,lang,country,chno,logo,url in entries:
+              if cid in existing_ids or url in existing_urls:
+                  continue
+              out.append(
+                  f'#EXTINF:-1 tvg-id="{cid}" tvg-name="{name}" '
+                  f'tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/{logo}" '
+                  f'tvg-chno="{chno}" channel-id="{cid}" tvg-language="{lang}" tvg-country="{country}" '
+                  f'group-title="New Channels",{name}\n{url}'
+              )
+
+          if out:
+              text=text.rstrip()+"\n\n"+"\n".join(out)+"\n"
+              p.write_text(text,encoding="utf-8")
+          PY
+
+      - name: Validate and commit
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          c=Path("IPTV-Playlist.m3u").read_text(encoding="utf-8")
+          ids=[]; nums=[]; urls=[]; missing=[]
+          for line in c.splitlines():
+              if line.startswith('#EXTINF:'):
+                  m=re.search(r'(?:tvg-id|channel-id)="([^"]+)"',line)
+                  if m: ids.append(m.group(1))
+                  m=re.search(r'tvg-chno="(\d+)"',line)
+                  if m: nums.append(m.group(1))
+                  m=re.search(r'tvg-logo="([^"]+)"',line)
+                  if m and '/logos/' not in m.group(1): raise SystemExit(f'external logo: {m.group(1)}')
+              elif line.startswith(('http://','https://')):
+                  urls.append(line.strip())
+          for x in ids:
+              if ids.count(x)>1: raise SystemExit(f'duplicate id: {x}')
+          for x in nums:
+              if nums.count(x)>1: raise SystemExit(f'duplicate chno: {x}')
+          for x in urls:
+              if urls.count(x)>1: raise SystemExit(f'duplicate URL: {x}')
+          print('Playlist validation passed')
+          PY
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add logos/orange-bangla-tv.png logos/california-music-channel.png logos/intravel.png logos/travel-xp-english-eu.png logos/filamchi-bhojpuri.png logos/gangaur.png IPTV-Playlist.m3u
+          git diff --cached --quiet || git commit -m 'Add six verified new channels and local logos'
+          git push
