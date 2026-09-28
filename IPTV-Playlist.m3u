@@ -1,6 +1,6 @@
 #EXTM3U url-tvg="https://bdix-iptv-xtream.saeidrahman.workers.dev/xmltv-public.php" x-tvg-url="https://bdix-iptv-xtream.saeidrahman.workers.dev/xmltv-public.php"
 #PLAYLIST-STUDIO-NAME:"SAEID RAHMAN IPTV"
-#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "Not Playing"]
+#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "Not Playing", "New Channels"]
 #EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="1" channel-id="AnandaTV.bd" group-title="Bangladesh",Ananda TV
 https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
 #EXTINF:-1 tvg-id="AsianTV.bd" tvg-name="Asian TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" tvg-chno="2" channel-id="AsianTV.bd" group-title="Bangladesh",Asian TV
@@ -1795,3 +1795,58 @@ https://cdn1.ayitistream.com/NBATV/index.m3u8
 http://str2.iptvhd.ru:8080/ShansonTV/index.m3u8
 #EXTINF:-1 tvg-id="SteelbirdMusic.in" tvg-name="Steelbird Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/steelbird-music.png" tvg-chno="412" channel-id="SteelbirdMusic.in" group-title="Not Playing",Steelbird Music
 https://cdn2.in/SteelbirdMusicTVhls/live.m3u8
+
+#EXTINF:-1 tvg-id="B4UBhojpuri.in@SD" tvg-name="B4U Bhojpuri" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-bhojpuri.png" tvg-chno="1001" channel-id="B4UBhojpuri.in@SD" tvg-language="hin;bho" tvg-country="IN" group-title="New Channels",B4U Bhojpuri
+https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8
+#EXTINF:-1 tvg-id="AnjanTV.in@SD" tvg-name="Anjan TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/anjan-tv-1080p-4cbe8bff61.png" tvg-chno="1002" channel-id="AnjanTV.in@SD" tvg-language="hin" tvg-country="IN" group-title="New Channels",Anjan TV
+https://anjan.vstream.online/anjanorg/ngrp:anjan_hdall/playlist.m3u8
+#EXTINF:-1 tvg-id="AsianetMovies.in@HD" tvg-name="Asianet Movies HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asianet-movies.png" tvg-chno="1003" channel-id="AsianetMovies.in@HD" tvg-language="mal" tvg-country="IN" group-title="New Channels",Asianet Movies HD
+https://da86m1sqpm3o0.cloudfront.net/28072023/smil:asianetmovies1.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="ColorsGujarati.in@SD" tvg-name="Colors Gujarati" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-gujarati-360p-c82f072793.png" tvg-chno="1004" channel-id="ColorsGujarati.in@SD" tvg-language="guj" tvg-country="IN" group-title="New Channels",Colors Gujarati
+https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ColorsGujarati.m3u8
+#EXTINF:-1 tvg-id="ColorsKannada.in@HD" tvg-name="Colors Kannada HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-kannada.png" tvg-chno="1005" channel-id="ColorsKannada.in@HD" tvg-language="kan" tvg-country="IN" group-title="New Channels",Colors Kannada HD
+https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorskannadahd1.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="ColorsMarathi.in@HD" tvg-name="Colors Marathi HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-marathi.png" tvg-chno="1006" channel-id="ColorsMarathi.in@HD" tvg-language="mar" tvg-country="IN" group-title="New Channels",Colors Marathi HD
+https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorsmarathihd.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="ColorsTamil.in@HD" tvg-name="Colors Tamil HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-tamil.png" tvg-chno="1007" channel-id="ColorsTamil.in@HD" tvg-language="tam" tvg-country="IN" group-title="New Channels",Colors Tamil HD
+https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorstamilhd11.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="DangalTV.in@SD" tvg-name="Dangal TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dangal-tv.png" tvg-chno="1008" channel-id="DangalTV.in@SD" tvg-language="hin" tvg-country="IN" group-title="New Channels",Dangal TV
+https://live-dangal.akamaized.net/liveabr/playlist.m3u8
+#EXTINF:-1 tvg-id="DDMadhyaPradesh.in@SD" tvg-name="DD Madhya Pradesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-madhya-pradesh.png" tvg-chno="1009" channel-id="DDMadhyaPradesh.in@SD" tvg-language="hin" tvg-country="IN" group-title="New Channels",DD Madhya Pradesh
+https://mumbai-edge.smartplaytv.in/ddmadhyapradesh/index.m3u8
+#EXTINF:-1 tvg-id="DDTamil.in@HD" tvg-name="DD Tamil HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-tamil.png" tvg-chno="1010" channel-id="DDTamil.in@HD" tvg-language="tam" tvg-country="IN" group-title="New Channels",DD Tamil HD
+https://d2lk5u59tns74c.cloudfront.net/out/v1/abf46b14847e45499f4a47f3a9afe93d/index.m3u8
+#EXTINF:-1 tvg-id="DhoomMusic.in@SD" tvg-name="Dhoom Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dhoom-music-576p-ba62bd030a.png" tvg-chno="1011" channel-id="DhoomMusic.in@SD" tvg-language="hin" tvg-country="IN" group-title="New Channels",Dhoom Music
+https://cdn.pishow.tv/ott/live/1456/master.m3u8
+#EXTINF:-1 tvg-id="ETVBeats.in@HD" tvg-name="ETV Beats" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-beats-1080p-aa1d38c3fd.png" tvg-chno="1012" channel-id="ETVBeats.in@HD" tvg-language="tel" tvg-country="IN" group-title="New Channels",ETV Beats
+https://jmp2.uk/stvp-IN4900002RV
+#EXTINF:-1 tvg-id="ETVCinema.in@HD" tvg-name="ETV Cinema HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-cinema.png" tvg-chno="1013" channel-id="ETVCinema.in@HD" tvg-language="tel" tvg-country="IN" group-title="New Channels",ETV Cinema HD
+https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_CINEMA_H264_cloud_in/index.m3u8
+#EXTINF:-1 tvg-id="ETVPlus.in@HD" tvg-name="ETV Plus HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-plus.png" tvg-chno="1014" channel-id="ETVPlus.in@HD" tvg-language="tel" tvg-country="IN" group-title="New Channels",ETV Plus HD
+https://d12ee3o8yfkkhd.cloudfront.net/c6a4b411295f47f48c908d2ac0605bad/index.m3u8
+#EXTINF:-1 tvg-id="ETVTelugu.in@HD" tvg-name="ETV Telugu HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-telugu.png" tvg-chno="1015" channel-id="ETVTelugu.in@HD" tvg-language="tel" tvg-country="IN" group-title="New Channels",ETV Telugu HD
+https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_HD_H264_cloud_in/index.m3u8
+#EXTINF:-1 tvg-id="MahaMovie.in@SD" tvg-name="Maha Movie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/maha-movie-576p-f2d5f48b5c.png" tvg-chno="1016" channel-id="MahaMovie.in@SD" tvg-language="hin" tvg-country="IN" group-title="New Channels",Maha Movie
+https://cdn.pishow.tv/ott/live/10007/master.m3u8
+#EXTINF:-1 tvg-id="MazhavilManorama.in@HD" tvg-name="Mazhavil Manorama HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mazhavil-manorama.png" tvg-chno="1017" channel-id="MazhavilManorama.in@HD" tvg-language="mal" tvg-country="IN" group-title="New Channels",Mazhavil Manorama HD
+https://mmtv-vglivessai.akamaized.net/v1/master/673630b269b766886555eebfddd4f27f3de3ab50/f8a0827f-030f-4a0d-b7e5-338996c09a5b/index.m3u8
+#EXTINF:-1 tvg-id="PTCPunjabi.in@HD" tvg-name="PTC Punjabi HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ptc-punjabi.png" tvg-chno="1018" channel-id="PTCPunjabi.in@HD" tvg-language="pan" tvg-country="IN" group-title="New Channels",PTC Punjabi HD
+https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/3e22a9c278db4e3eb779afd42e41b0a6/index.m3u8
+#EXTINF:-1 tvg-id="RajMusixTelugu.in@SD" tvg-name="Raj Musix Telugu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/raj-musix-telugu-720p-e8fd0fb178.png" tvg-chno="1019" channel-id="RajMusixTelugu.in@SD" tvg-language="tel" tvg-country="IN" group-title="New Channels",Raj Musix Telugu
+https://cdn.pishow.tv/ott/live/1213/master.m3u8
+#EXTINF:-1 tvg-id="SonyMarathi.in@SD" tvg-name="Sony Marathi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-marathi-1080p-b7d60749ce.png" tvg-chno="1020" channel-id="SonyMarathi.in@SD" tvg-language="mar" tvg-country="IN" group-title="New Channels",Sony Marathi
+https://cloudplay-sonyliv.pages.dev/marathi.m3u8
+#EXTINF:-1 tvg-id="SonyPal.in@SD" tvg-name="Sony Pal" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-pal-1080p-f991ee016e.png" tvg-chno="1021" channel-id="SonyPal.in@SD" tvg-language="hin" tvg-country="IN" group-title="New Channels",Sony Pal
+https://cloudplay-sonyliv.pages.dev/pal.m3u8
+#EXTINF:-1 tvg-id="SonyPix.in@HD" tvg-name="Sony Pix HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-pix-hd.png" tvg-chno="1022" channel-id="SonyPix.in@HD" tvg-language="eng;hin" tvg-country="IN" group-title="New Channels",Sony Pix HD
+https://cloudplay-sonyliv.pages.dev/pixhd.m3u8
+#EXTINF:-1 tvg-id="SonyWah.in@SD" tvg-name="Sony Wah" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-wah-1080p-f9b1aee1df.png" tvg-chno="1023" channel-id="SonyWah.in@SD" tvg-language="hin" tvg-country="IN" group-title="New Channels",Sony Wah
+https://cloudplay-sonyliv.pages.dev/wah.m3u8
+#EXTINF:-1 tvg-id="StarMaa.in@HD" tvg-name="Star Maa HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa.png" tvg-chno="1024" channel-id="StarMaa.in@HD" tvg-language="tel" tvg-country="IN" group-title="New Channels",Star Maa HD
+https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starmaa1.smil/chunklist_b2628000.m3u8
+#EXTINF:-1 tvg-id="StarMaaMovies.in@HD" tvg-name="Star Maa Movies HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa-movies.png" tvg-chno="1025" channel-id="StarMaaMovies.in@HD" tvg-language="tel" tvg-country="IN" group-title="New Channels",Star Maa Movies HD
+https://da86m1sqpm3o0.cloudfront.net/28072023/smil:maamovies.smil/chunklist_b2628000.m3u8
+#EXTINF:-1 tvg-id="StarPravah.in@HD" tvg-name="Star Pravah HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-pravah.png" tvg-chno="1026" channel-id="StarPravah.in@HD" tvg-language="mar" tvg-country="IN" group-title="New Channels",Star Pravah HD
+https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starpravah.smil/chunklist_b1928000.m3u8
+#EXTINF:-1 tvg-id="ZeeTamil.in@HD" tvg-name="Zee Tamil HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tamil.png" tvg-chno="1027" channel-id="ZeeTamil.in@HD" tvg-language="tam" tvg-country="IN" group-title="New Channels",Zee Tamil HD
+https://da86m1sqpm3o0.cloudfront.net/28072023/smil:zeetamil1.smil/playlist.m3u8
