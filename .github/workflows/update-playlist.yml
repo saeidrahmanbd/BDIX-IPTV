@@ -48,20 +48,40 @@ jobs:
         run: python scripts/update_playlist.py
 
       # Enforce category-level Backup exclusions after every source update.
-      - name: Remove backups for locked categories
+      - name: Clean unnecessary and cross-country Backup entries
         env:
           LOCKED_BACKUP_CATEGORIES: "International|Documentary & Wildlife|Kids|Sports|Religious"
         run: |
           python - <<'PY'
           import os, re
+          from collections import defaultdict
           from pathlib import Path
 
           playlist = Path("IPTV-Playlist.m3u")
           lines = playlist.read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
           locked = set(os.environ["LOCKED_BACKUP_CATEGORIES"].split("|"))
+          ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 
           def attrs(info):
-              return dict(re.findall(r'([\w-]+)="([^"]*)"', info))
+              return dict(ATTR_RE.findall(info))
+
+          def identity(info):
+              a = attrs(info)
+              return (a.get("tvg-id") or a.get("channel-id") or "").strip().lower()
+
+          def base_id(cid):
+              return cid.split("@", 1)[0]
+
+          def identity_root(cid):
+              return re.sub(r"\.[a-z]{2}$", "", base_id(cid))
+
+          def country_code(cid):
+              m = re.search(r"\.([a-z]{2})$", base_id(cid))
+              return m.group(1).lower() if m else ""
+
+          def display_name(info):
+              a = attrs(info)
+              return a.get("tvg-name") or (info.split(",", 1)[1].strip() if "," in info else "")
 
           blocks = []
           header = []
@@ -75,46 +95,69 @@ jobs:
                   header.append(lines[i])
                   i += 1
                   continue
-              b = [lines[i]]
+              block = [lines[i]]
               i += 1
               while i < len(lines) and not lines[i].startswith("#EXTINF"):
-                  b.append(lines[i])
+                  block.append(lines[i])
                   if lines[i].strip().startswith(("http://", "https://")):
                       i += 1
                       break
                   i += 1
-              blocks.append(b)
+              blocks.append(block)
 
           locked_ids = set()
-          for b in blocks:
-              info = b[0]
+          primary_countries = defaultdict(set)
+
+          for block in blocks:
+              info = block[0]
               a = attrs(info)
-              if a.get("group-title", "").strip() in locked:
-                  for key in ("tvg-id", "channel-id"):
-                      if a.get(key):
-                          locked_ids.add(a[key].strip().lower())
+              cid = identity(info)
+              group = a.get("group-title", "").strip()
+              if group in locked and cid:
+                  locked_ids.add(cid)
+              if group != "Backup" and cid:
+                  country = country_code(cid)
+                  if country:
+                      primary_countries[identity_root(cid)].add(country)
 
           kept = []
-          removed = []
-          for b in blocks:
-              info = b[0]
+          locked_removed = []
+          cross_country_removed = []
+
+          for block in blocks:
+              info = block[0]
               a = attrs(info)
-              cid = a.get("tvg-id", "").strip().lower()
-              channel_id = a.get("channel-id", "").strip().lower()
-              is_backup = a.get("group-title", "").strip() == "Backup"
-              display_name = a.get("tvg-name", "") or (info.split(",", 1)[1].strip() if "," in info else "")
-              if is_backup and (cid in locked_ids or channel_id in locked_ids):
-                  removed.append(display_name)
-              else:
-                  kept.append(b)
+              cid = identity(info)
+              group = a.get("group-title", "").strip()
+              if group != "Backup":
+                  kept.append(block)
+                  continue
+
+              name = display_name(info)
+              if cid in locked_ids:
+                  locked_removed.append(name)
+                  continue
+
+              backup_country = country_code(cid)
+              if backup_country:
+                  countries = primary_countries.get(identity_root(cid), set())
+                  if countries and backup_country not in countries:
+                      cross_country_removed.append(f"{name} [{cid}]")
+                      continue
+
+              kept.append(block)
 
           out = header[:]
-          for b in kept:
-              out.extend(b)
+          for block in kept:
+              out.extend(block)
           playlist.write_text("\n".join(out).rstrip() + "\n", encoding="utf-8", newline="\n")
-          print(f"Removed {len(removed)} locked-category backup entries.")
-          for name in removed:
+
+          print(f"Removed {len(locked_removed)} locked-category Backup entries.")
+          for name in locked_removed:
               print(f"  - {name}")
+          print(f"Removed {len(cross_country_removed)} cross-country Backup collisions.")
+          for item in cross_country_removed:
+              print(f"  - {item}")
           PY
 
       - name: Resolve missing logos and convert to local PNG
