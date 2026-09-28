@@ -74,6 +74,19 @@ The maintenance layer also maintains a **logical Primary → Backup 1 → Backup
 
 *Playlist Studio 2.8.2 — playlist management, channel organization, stream checking, and playback.*
 
+## 📥 Download Center
+
+A single place for the main project resources, so visitors do not need to search through the repository.
+
+- 📺 **[Main M3U Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)** — latest playlist
+- 🖥️ **[Playlist Studio](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest)** — latest portable Windows release
+- 🛜 **[Xtream Codes](xtream/README.md)** — Xtream Gateway and XCIPTV setup
+- 📄 **[EPG](reports/epg-coverage.md)** — current EPG coverage and missing-channel investigation
+- ⚙️ **[Sample Configuration](examples/sample-config.md)** — safe M3U/Xtream configuration templates
+- 📚 **[Documentation](docs/README.md)** — centralized project documentation and reports
+
+➡️ **[Open the full Download Center](DOWNLOADS.md)**
+
 ## 🧭 Organization
 
 The playlist is structured to make browsing easier rather than simply collecting as many streams as possible.
