@@ -1,3 +1,8 @@
+<!-- BDIX-IPTV Banner -->
+<p align="center">
+  <img src="Saeid%20Rahman.png" alt="BDIX-IPTV — Bangladesh & India IPTV Hub" width="100%">
+</p>
+
 # 📺 Saeid Rahman — BDIX IPTV Playlist
 
 A personally curated IPTV playlist focused on **Bangladeshi channels, Indian channels, and selected international content**, with an emphasis on clean organization, usable streams, accurate metadata, and reliable backup options.
