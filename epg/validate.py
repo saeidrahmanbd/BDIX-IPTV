@@ -64,12 +64,13 @@ def publish(path, repository):
     temp = target.with_suffix('.tmp')
     temp.write_bytes(gzip.compress(data, mtime=0))
     temp.replace(target)
+    # Do not rewrite the playlist header here. The live playlist already
+    # has a curated global EPG endpoint (url-tvg + x-tvg-url). Publishing a
+    # validated local guide must not silently replace that endpoint or add a
+    # UTF-8 BOM, which can break strict M3U consumers.
     text = PLAYLIST.read_text(encoding='utf-8-sig')
     lines = text.splitlines(keepends=True)
     assert lines and lines[0].startswith('#EXTM3U'), 'Missing M3U header'
-    header = re.sub(r'\s+(?:url-tvg|x-tvg-url)="[^"]*"', '', lines[0].strip())
-    lines[0] = header + f' url-tvg="https://raw.githubusercontent.com/{repository}/main/epg.xml.gz"\n'
-    PLAYLIST.write_text('\ufeff' + ''.join(lines), encoding='utf-8')
 
 
 if __name__ == '__main__':
