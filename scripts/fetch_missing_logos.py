@@ -2,7 +2,7 @@
 import re, json, urllib.request, urllib.parse
 from pathlib import Path
 
-PLAYLIST=Path("IPTV-Playlist.m3u"); LOGO_DIR=Path("logos")
+PLAYLIST=Path("IPTV-Playlist.m3u"); LOGO_DIR=Path("logos"); UNUSED_DIR=LOGO_DIR/"unused"
 RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 CHANNELS="https://iptv-org.github.io/api/channels.json"
 LOGOS="https://iptv-org.github.io/api/logos.json"
@@ -21,7 +21,57 @@ def get(url,timeout=25):
 def attrs(line): return dict(re.findall(r'(\S+?)="([^"]*)"',line))
 
 def clean_name(name):
-    return re.sub(r"\\s*\\[Backup[^]]*\\]\\s*", "", name, flags=re.I).strip()
+    return re.sub(r"\s*\[Backup[^]]*\]\s*", "", name, flags=re.I).strip()
+
+def logo_filename_from_url(logo):
+    if not logo:
+        return ""
+    if logo.startswith(RAW_BASE):
+        return urllib.parse.unquote(logo[len(RAW_BASE):].split("?",1)[0]).strip()
+    return Path(urllib.parse.urlparse(logo).path).name
+
+def unused_logo_candidates():
+    if not UNUSED_DIR.exists():
+        return []
+    return [p for p in UNUSED_DIR.iterdir()
+            if p.is_file() and p.suffix.lower() in {".png",".jpg",".jpeg",".webp",".svg",".gif",".avif"}]
+
+UNUSED_LOGOS = unused_logo_candidates()
+UNUSED_BY_NAME = {p.name.lower(): p for p in UNUSED_LOGOS}
+
+def find_unused_logo(name, oldlogo=""):
+    # 1) Exact filename match is safest: it preserves a previously known-good logo.
+    old_fn = logo_filename_from_url(oldlogo)
+    if old_fn:
+        p = UNUSED_BY_NAME.get(old_fn.lower())
+        if p:
+            return p
+
+    # 2) For a genuinely new channel with no usable old URL, allow a unique
+    #    slug/stem match. Prefer PNG when several files share the same stem.
+    target = slug(clean_name(name))
+    if not target:
+        return None
+    matches = [p for p in UNUSED_LOGOS if slug(p.stem) == target]
+    if not matches:
+        return None
+    matches.sort(key=lambda p: (p.suffix.lower() == ".png", p.name.lower()), reverse=True)
+    if len(matches) == 1 or (matches[0].suffix.lower() == ".png" and
+                             sum(slug(p.stem) == target for p in matches) > 1):
+        return matches[0]
+    return None
+
+def restore_unused_logo(name, oldlogo=""):
+    src = find_unused_logo(name, oldlogo)
+    if not src:
+        return None
+    dst = LOGO_DIR / src.name
+    # Never overwrite an active logo. If the exact file is already in root,
+    # treat that as the root match and leave the unused copy untouched.
+    if dst.exists():
+        return dst
+    src.replace(dst)
+    return dst
 
 text=PLAYLIST.read_text(encoding="utf-8-sig"); lines=text.splitlines(); entries=[]
 for i,line in enumerate(lines):
@@ -101,6 +151,25 @@ MANUAL = {
 added=[]; unresolved=[]
 for idx,name,tvgid,oldlogo in missing:
     clean=re.sub(r"\s*\[Backup[^]]*\]\s*","",name,flags=re.I).strip()
+
+    # Logo resolution order is intentional:
+    #   1. logos/ (already handled by the missing-logo detector)
+    #   2. logos/unused/ — restore a previously collected repository asset
+    #   3. iptv-org API / reviewed manual external sources
+    restored = restore_unused_logo(clean, oldlogo)
+    if restored:
+        fn=restored.name
+        local=RAW_BASE+urllib.parse.quote(fn)
+        line=lines[idx]
+        if 'tvg-logo="' in line:
+            line=re.sub(r'tvg-logo="[^"]*"',f'tvg-logo="{local}"',line)
+        else:
+            line=line.replace("#EXTINF:-1",f'#EXTINF:-1 tvg-logo="{local}"',1)
+        lines[idx]=line
+        added.append((name,fn,"restored from logos/unused"))
+        print("RESTORED:",name,"->",fn)
+        continue
+
     cid=None
     if tvgid and tvgid.lower() in channel_by_id: cid=channel_by_id[tvgid.lower()]["id"]
     if not cid:
@@ -122,14 +191,14 @@ for idx,name,tvgid,oldlogo in missing:
         line=lines[idx]
         if 'tvg-logo="' in line: line=re.sub(r'tvg-logo="[^"]*"',f'tvg-logo="{local}"',line)
         else: line=line.replace("#EXTINF:-1",f'#EXTINF:-1 tvg-logo="{local}"',1)
-        lines[idx]=line; added.append((name,fn,cid))
+        lines[idx]=line; added.append((name,fn,cid or "external"))
     except Exception as e:
         unresolved.append(name); print("FAILED:",name,e)
 
 PLAYLIST.write_text("\n".join(lines)+"\n",encoding="utf-8")
 Path("reports/logo-fetch-report.md").write_text(
     "# Missing Logo Fetch Report\n\n"
-    +f"Found missing: **{len(missing)}**  \nDownloaded: **{len(added)}**  \nUnresolved: **{len(unresolved)}**\n\n"
+    +f"Found missing: **{len(missing)}**  \nResolved/restored: **{len(added)}**  \nUnresolved: **{len(unresolved)}**\n\n"
     +"## Downloaded\n"+("\n".join(f"- {n} → \`logos/{f}\` ({cid})" for n,f,cid in added) or "- None")
     +"\n\n## Unresolved\n"+("\n".join(f"- {n}" for n in unresolved) or "- None")+"\n",
     encoding="utf-8")
