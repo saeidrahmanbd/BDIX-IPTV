@@ -13,6 +13,7 @@ on:
       - 'scripts/strict_update.py'
       - 'scripts/migrate_external_logos_fixed.py'
       - 'scripts/generate_detailed_report_fixed.py'
+      - 'scripts/generate_detailed_report.py'
       - 'scripts/audit_playlist.py'
       - '.github/workflows/update-playlist.yml'
       - 'IPTV-Playlist.m3u'
@@ -199,9 +200,12 @@ jobs:
                       continue
                   url = ""
                   for candidate in lines[i + 1:]:
-                      if candidate.strip():
-                          if candidate.startswith(("http://", "https://")):
-                              url = candidate.strip()
+                      if not candidate.strip():
+                          continue
+                      if candidate.startswith(("http://", "https://")):
+                          url = candidate.strip()
+                          break
+                      if candidate.startswith("#EXTINF"):
                           break
                   if url:
                       out.append((
@@ -326,9 +330,12 @@ jobs:
                       continue
                   url = ""
                   for candidate in lines[i + 1:]:
-                      if candidate.strip():
-                          if candidate.startswith(("http://", "https://")):
-                              url = candidate.strip()
+                      if not candidate.strip():
+                          continue
+                      if candidate.startswith(("http://", "https://")):
+                          url = candidate.strip()
+                          break
+                      if candidate.startswith("#EXTINF"):
                           break
                   if url:
                       out.append(((a.get("tvg-id") or a.get("channel-id") or "").strip().lower(), a.get("group-title", "").strip(), (a.get("tvg-name") or line.rsplit(",", 1)[-1]).strip(), url))
