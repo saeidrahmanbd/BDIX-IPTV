@@ -7,7 +7,7 @@ from urllib.parse import urlsplit
 PLAYLIST=Path("IPTV-Playlist.m3u")
 HEALTH=Path("reports/stream-health-state.json")
 REPORT=Path("reports/not-playing-quarantine.md")
-ATTR_RE=re.compile(r'([\\w-]+)="([^"]*)"')
+ATTR_RE=re.compile(r'([\w-]+)="([^"]*)"')
 BAD_STATUS={"Timeout","HTTP error","Invalid HLS"}
 BAD_EXT={".mpd",".mp3",".aac",".m4a",".ogg",".oga",".wav",".flac",".opus",".webm",".mp4",".mkv",".avi",".mov"}
 BAD_HOST={"youtube.com","www.youtube.com","m.youtube.com","youtu.be","www.youtu.be"}
