@@ -31,19 +31,8 @@ jobs:
           curl -L --fail --retry 3 --max-time 30 -o logos/intravel.png 'https://jiotvimages.cdn.jio.com/dare_images/images/Intravel.png'
           curl -L --fail --retry 3 --max-time 30 -o logos/travel-xp-english-eu.png 'https://i.imgur.com/huU8puw.png'
           curl -L --fail --retry 3 --max-time 30 -o logos/filamchi-bhojpuri.png 'https://www.tvlogo.org/india/filamchi-bhojpuri-in.png'
-          python - <<'PY'
-          import re, requests
-          from urllib.parse import urljoin
-          page = requests.get('https://www.gangaurtv.com/', timeout=30).text
-          urls = re.findall(r'(?:src|href)=["\\\']([^"\\\']+)', page, re.I)
-          cand = [urljoin('https://www.gangaurtv.com/', u) for u in urls if 'gangaur' in u.lower() and re.search(r'\\.(?:png|jpe?g|webp)(?:[?#]|$)', u, re.I)]
-          if not cand:
-              raise SystemExit('No Gangaur image URL found')
-          u = cand[0]
-          open('/tmp/gangaur.bin','wb').write(requests.get(u, timeout=30).content)
-          print('Downloaded', u)
-          PY
-          convert /tmp/gangaur.bin logos/gangaur.png
+          curl -L --fail --retry 3 --max-time 30 -o /tmp/gangaur.jpg 'https://exchange4media.gumlet.io/news-photo/118775-GangaurLogo1.jpg'
+          convert /tmp/gangaur.jpg logos/gangaur.png
 
           for f in logos/orange-bangla-tv.png logos/california-music-channel.png logos/intravel.png logos/travel-xp-english-eu.png logos/filamchi-bhojpuri.png logos/gangaur.png; do
             test -s "$f"
