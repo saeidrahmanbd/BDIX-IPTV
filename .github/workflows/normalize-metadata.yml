@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "scripts/normalize_metadata.py"
+      - "IPTV-Playlist.m3u"
   workflow_dispatch:
 
 permissions:
