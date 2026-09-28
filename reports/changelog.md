@@ -2,6 +2,6 @@
 
 ## 2026-09-28
 
-- 🆕 **911 new channel(s)**
+- 📡 **1 stream(s) replaced**
 
 _Generated automatically from the repository playlist diff._
