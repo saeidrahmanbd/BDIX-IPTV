@@ -1,0 +1,57 @@
+name: Stream Quarantine
+
+on:
+  workflow_run:
+    workflows: ["Stream Health"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: iptv-repository-writes
+  cancel-in-progress: false
+
+jobs:
+  quarantine:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Quarantine streams
+        run: python scripts/quarantine_streams.py
+      - name: Audit playlist
+        run: python scripts/audit_playlist.py
+      - name: Commit changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          files=(
+            "IPTV-Playlist.m3u"
+            "reports/not-playing-quarantine.md"
+            "reports/playlist-audit.md"
+          )
+          if [ -z "$(git status --porcelain -- "${files[@]}")" ]; then
+            echo "No quarantine changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "${files[@]}"
+          git commit -m "Quarantine non-standard and failed streams"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git rebase origin/main; then git rebase --abort; exit 1; fi
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
