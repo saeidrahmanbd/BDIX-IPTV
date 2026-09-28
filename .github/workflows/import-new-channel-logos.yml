@@ -30,18 +30,7 @@ jobs:
           curl -L --fail --retry 3 --max-time 30 -o logos/california-music-channel.png 'https://commons.wikimedia.org/wiki/Special:Redirect/file/California%20Music%20Channel%20Logo%20(cropped).png'
           curl -L --fail --retry 3 --max-time 30 -o logos/intravel.png 'https://jiotvimages.cdn.jio.com/dare_images/images/Intravel.png'
           curl -L --fail --retry 3 --max-time 30 -o logos/travel-xp-english-eu.png 'https://i.imgur.com/huU8puw.png'
-          python - <<'PY'
-          import re, requests
-          page = requests.get('https://archive.adgully.com/bhojpuri-channel-rankings-to-see-a-shake-up-as-filamchi-aims-for-top-3-103860.html', timeout=30).text
-          urls = re.findall(r'https?[^"\\\']+', page)
-          cand = [u.replace('\\/', '/') for u in urls if 'filamchi' in u.lower() and re.search(r'\\.(?:png|jpe?g|webp)(?:[?#]|$)', u, re.I)]
-          if not cand:
-              raise SystemExit('No Filamchi image URL found')
-          u = cand[0]
-          open('/tmp/filamchi-bhojpuri.bin','wb').write(requests.get(u, timeout=30).content)
-          print('Downloaded', u)
-          PY
-          convert /tmp/filamchi-bhojpuri.bin logos/filamchi-bhojpuri.png
+          curl -L --fail --retry 3 --max-time 30 -o logos/filamchi-bhojpuri.png 'https://www.tvlogo.org/india/filamchi-bhojpuri-in.png'
           python - <<'PY'
           import re, requests
           from urllib.parse import urljoin
