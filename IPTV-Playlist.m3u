@@ -279,7 +279,7 @@ https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2069c593-3c07-4d62-9d44-746be5c3a5d6/manifest.m3u8
 #EXTINF:-1 tvg-id="TheMovieClub.in@HD" tvg-name="The Movie Club HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-movie-club.png" tvg-chno="345" channel-id="TheMovieClub.in@HD" tvg-country="IN" tvg-language="hin" group-title="Indian Movies",The Movie Club
 https://sis-global.prod.samsungtv.plus/v1/tvpprd/sc-mp2ar4ca425xo.m3u8
-#EXTINF:-1 channel-id="TheMovieClub.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-movie-club.png" tvg-id="TheMovieClub.in" tvg-name="The Movie Club 2" tvg-chno="346" tvg-language="hin" tvg-country="IN" group-title="Indian Movies",The Movie Club 2
+#EXTINF:-1 channel-id="TheMovieClub.in@Plus2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-movie-club.png" tvg-id="TheMovieClub.in@Plus2" tvg-name="The Movie Club +2" tvg-chno="346" tvg-language="hin" tvg-country="IN" group-title="Indian Movies",The Movie Club 2
 https://d3gnyty2vddhsg.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ytipwjqub3kf8/TMC2_IN.m3u8?ads.ads_cdn=cf&ads.cdn=cf
 #EXTINF:-1 tvg-id="TollyTV.in" tvg-name="Tolly TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tolly-tv.png" tvg-chno="347" channel-id="TollyTV.in" group-title="Indian Movies",Tolly TV
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/13b5735d-52c3-4be0-853d-e0ec0127e708/manifest.m3u8
