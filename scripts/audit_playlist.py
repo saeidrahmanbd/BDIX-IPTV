@@ -55,6 +55,9 @@ def country_code(cid):
     m = re.search(r"\.([a-z]{2})$", base_id(cid))
     return m.group(1).lower() if m else ""
 
+def normalized_name(name):
+    return re.sub(r"\s*\[[^]]+\]\s*$", "", name).strip().lower()
+
 def logo_issue(info):
     logo = attrs(info).get("tvg-logo", "").strip()
     if not logo:
@@ -106,21 +109,24 @@ duplicate_urls = {k:v for k,v in urls.items() if len(v) > 1}
 
 metadata_conflicts = []
 for cid, items in sorted(by_id.items()):
-    if len(items) < 2:
+    non_backup = [x for x in items if attrs(x[0]).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS]
+    if len(non_backup) < 2:
         continue
-    names = {display_name(x[0]) for x in items}
-    groups = {attrs(x[0]).get("group-title", "") for x in items}
-    countries = {attrs(x[0]).get("tvg-country", "") for x in items}
+    names = {normalized_name(display_name(x[0])) for x in non_backup}
+    groups = {attrs(x[0]).get("group-title", "") for x in non_backup}
+    countries = {attrs(x[0]).get("tvg-country", "") for x in non_backup}
     if len(names) > 1 or len(groups) > 1 or len(countries) > 1:
         metadata_conflicts.append((cid, names, groups, countries))
 
 name_collisions = {k:v for k,v in by_name.items() if len({identity(x[0]) for x in v}) > 1}
 
 primary_by_root = defaultdict(list)
+primary_by_name = defaultdict(list)
 for cid, items in by_id.items():
     for info, url in items:
         if attrs(info).get("group-title", "").strip() != "Backup":
             primary_by_root[identity_root(cid)].append((cid, info, url))
+            primary_by_name[normalized_name(display_name(info))].append((cid, info, url))
 
 cross_country_backups = []
 for cid, items in by_id.items():
@@ -144,6 +150,13 @@ for cid, items in by_id.items():
                 if country_code(primary_cid)
             )
             cross_country_backups.append((cid, display_name(info), primary_cid, url))
+            continue
+        if not primary_countries_for_root:
+            same_name_primaries = primary_by_name.get(normalized_name(display_name(info)), [])
+            name_countries = {country_code(primary_cid) for primary_cid, primary_info, primary_url in same_name_primaries if country_code(primary_cid)}
+            if name_countries and c not in name_countries:
+                primary_cid = same_name_primaries[0][0]
+                cross_country_backups.append((cid, display_name(info), primary_cid, url))
 
 logos_by_id = defaultdict(set)
 logo_counts = Counter()
