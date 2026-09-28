@@ -1163,8 +1163,6 @@ https://cdn.pishow.tv/ott/live/37/master.m3u8
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/7ff57cc9046b4c188b51a0d506f36e7f/index_3.m3u8
 #EXTINF:-1 channel-id="DDBharati.in" tvg-id="DDBharati.in" tvg-name="DD Bharati" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-bharati.png" tvg-country="IN" tvg-language="hin" group-title="Backup",DD Bharati (576p)
 https://cdn.pishow.tv/ott/live/10/master.m3u8
-#EXTINF:-1 channel-id="DDBharati.in" tvg-name="DD Bharati" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-bharati.png" tvg-id="DDBharati.in" tvg-country="IN" group-title="Backup",DD Bharati
-https://www.youtube.com/@ddbharati/live
 #EXTINF:-1 channel-id="DDChandana.in" tvg-id="DDChandana.in" tvg-name="DD Chandana" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-chandana.png" tvg-country="IN" tvg-language="kan" group-title="Backup",DD Chandana (576p)
 https://cdn.pishow.tv/ott/live/28/master.m3u8
 #EXTINF:-1 channel-id="DDJharkhand.in" tvg-id="DDJharkhand.in" tvg-name="DD Jharkhand" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-jharkhand.png" tvg-country="IN" tvg-language="hin" group-title="Backup",DD Jharkhand (576p)
@@ -1173,8 +1171,6 @@ https://cdn.pishow.tv/ott/live/1617/master.m3u8
 https://cdn.pishow.tv/ott/live/16/master.m3u8
 #EXTINF:-1 channel-id="DDNational.in@HD" tvg-id="DDNational.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-national.png" tvg-name="DD National HD" group-title="Backup",DD National HD (1080p)
 https://mumbai-edge.smartplaytv.in/DDNational/index.m3u8
-#EXTINF:-1 channel-id="DDNational.in" tvg-name="DD National" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-national.png" tvg-id="DDNational.in" tvg-country="IN" group-title="Backup",DD National
-https://www.youtube.com/doordarshan/live
 #EXTINF:-1 channel-id="DDOdia.in" tvg-id="DDOdia.in" tvg-name="DD Odia" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-odia.png" tvg-country="IN" tvg-language="ori" group-title="Backup",DD Odia (480p)
 https://mumbai-edge.smartplaytv.in/ddodiya/index.m3u8
 #EXTINF:-1 channel-id="DDSaptagiri.in" tvg-id="DDSaptagiri.in" tvg-name="DD Saptagiri" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-saptagiri.png" tvg-country="IN" tvg-language="tel" group-title="Backup",DD Saptagiri (576p)
@@ -1183,8 +1179,6 @@ https://cdn.pishow.tv/ott/live/22/master.m3u8
 https://mumbai-edge.smartplaytv.in/DDSportsHD/index.m3u8
 #EXTINF:-1 channel-id="DDUrdu.in" tvg-id="DDUrdu.in" tvg-name="DD Urdu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-urdu.png" tvg-country="IN" tvg-language="urd;hin;eng" group-title="Backup",DD Urdu (576p)
 https://cdn.pishow.tv/ott/live/8/master.m3u8
-#EXTINF:-1 channel-id="DDUrdu.in" tvg-name="DD Urdu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-urdu.png" tvg-id="DDUrdu.in" tvg-country="IN" group-title="Backup",DD Urdu
-https://www.youtube.com/@DDUrdu/live
 #EXTINF:-1 tvg-id="DeeptoTV.bd" tvg-name="Deepto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deepto-tv.png" channel-id="DeeptoTV.bd" group-title="Not Playing",Deepto TV [Backup 2]
 https://byphdgllyk.gpcdn.net/hls/DeeptoTV/index.m3u8
 #EXTINF:-1 tvg-id="DeshTV.bd" tvg-name="Desh TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/desh-tv.png" channel-id="DeshTV.bd" group-title="Backup",Desh TV [Backup 1]
@@ -1433,8 +1427,6 @@ http://23.237.104.106:8080/USA_NBA/index.m3u8
 https://iptvlive.ahmed-bd-org.workers.dev/news-24-1/index.m3u8
 #EXTINF:-1 tvg-id="News24.bd" tvg-name="News 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/news-24.png" channel-id="News24.bd" group-title="Backup",News 24 [Backup 3]
 https://iptvlive.ahmed-bd-org.workers.dev/news-24-hd-1/index.m3u8
-#EXTINF:-1 channel-id="news24online.com" tvg-name="News24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/news-24.png" tvg-id="news24online.com" tvg-country="IN" group-title="Backup",News24
-https://www.youtube.com/@News24thinkfirst/live
 #EXTINF:-1 channel-id="NexusTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nexus-tv.png" tvg-id="NexusTV.bd" tvg-name="Nexus TV" group-title="Backup",Nexus TV
 https://stream.ottplus.live/live/nexus_tv_abr/index.m3u8
 #EXTINF:-1 channel-id="NHBollyFlix.in" tvg-id="NHBollyFlix.in" tvg-name="NH BollyFlix" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nh-bollyflix.png" tvg-country="IN" tvg-language="hin" group-title="Backup",NH BollyFlix (1080p)
