@@ -2,6 +2,6 @@
 
 ## 2026-09-28
 
-- 🧹 **8 duplicate stream occurrence(s) removed**
+- No meaningful playlist changes detected.
 
 _Generated automatically from the repository playlist diff._
