@@ -2,6 +2,6 @@
 
 ## 2026-09-28
 
-- 🆕 **903 new channel(s)**
+- No meaningful playlist changes detected.
 
 _Generated automatically from the repository playlist diff._
