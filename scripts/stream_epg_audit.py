@@ -6,23 +6,20 @@ from pathlib import Path
 
 PLAYLIST_URL="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u"
 EPG_URLS=[
- "https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml",
  "https://epg.pw/xmltv/epg_IN.xml",
  "https://iptv-epg.org/files/epg-in.xml",
 ]
-UA="BDIX-IPTV-Audit/1.2"
+UA="BDIX-IPTV-Audit/1.3"
 TIMEOUT=6
 WORKERS=48
-MAX_BYTES=65536
+MAX_STREAM_BYTES=65536
 
-def fetch(url, timeout=TIMEOUT, max_bytes=MAX_BYTES, ranged=False):
+def fetch(url, timeout=TIMEOUT, max_bytes=MAX_STREAM_BYTES, ranged=False):
     headers={"User-Agent":UA,"Accept":"*/*","Accept-Encoding":"identity"}
     if ranged: headers["Range"]=f"bytes=0-{max_bytes-1}"
     req=urllib.request.Request(url,headers=headers)
     with urllib.request.urlopen(req,timeout=timeout) as r:
-        status=r.status
-        data=r.read(max_bytes)
-        return status,dict(r.headers),data
+        return r.status,dict(r.headers),r.read(max_bytes)
 
 def parse_playlist(text):
     rows=[]; cur=None
@@ -47,9 +44,8 @@ def audit_stream(item):
             if children:
                 child=urllib.parse.urljoin(url,children[0])
                 try:
-                    s2,_,b2=fetch(child,ranged=True)
-                    state="OK" if 200<=s2<400 else "PARTIAL"
-                    return row,state,f"HTTP {status}; child HTTP {s2}; {len(body)}B/{len(b2)}B"
+                    s2,_,b2=fetch(child,ranged=False)
+                    return row,("OK" if 200<=s2<400 else "PARTIAL"),f"HTTP {status}; child HTTP {s2}; {len(body)}B/{len(b2)}B"
                 except Exception as e:
                     return row,"PARTIAL",f"HTTP {status}; child failed: {type(e).__name__}"
         return row,("OK" if 200<=status<400 else "FAIL"),f"HTTP {status}; {len(body)}B; {headers.get('Content-Type','')}"
@@ -60,6 +56,15 @@ def parse_epg_ids(data):
     if data[:2]==b"\x1f\x8b": data=gzip.decompress(data)
     root=ET.fromstring(data)
     return {c.attrib["id"] for c in root.findall(".//channel") if c.attrib.get("id")}
+
+def audit_epg(url):
+    try:
+        # EPG XML must be downloaded completely before parsing.
+        status,headers,data=fetch(url,timeout=45,max_bytes=100_000_000,ranged=False)
+        ids=parse_epg_ids(data)
+        return url,len(ids),ids,None
+    except Exception as e:
+        return url,0,set(),f"{type(e).__name__}: {e}"
 
 def main():
     out=Path("audit"); out.mkdir(exist_ok=True)
@@ -84,29 +89,25 @@ def main():
 
     playlist_ids={attr(r["extinf"],"tvg-id") for r in rows if attr(r["extinf"],"tvg-id")}
     epg_lines=[]
-    with ThreadPoolExecutor(max_workers=3) as pool:
-        fs={pool.submit(fetch,u,30,2_000_000,False):u for u in EPG_URLS}
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        fs=[pool.submit(audit_epg,u) for u in EPG_URLS]
         for f in as_completed(fs):
-            u=fs[f]
-            try:
-                _,_,b=f.result(); ids=parse_epg_ids(b)
+            u,count,ids,error=f.result()
+            if error:
+                epg_lines.append(f"- {u}: FAILED — {error}")
+                print(f"EPG FAIL: {u}: {error}")
+            else:
                 matched={x for x in playlist_ids if x in ids or x.split("@",1)[0] in ids}
-                epg_lines.append(f"- {u}: {len(matched)}/{len(playlist_ids)} playlist IDs matched")
-                print(f"EPG OK: {u} ({len(ids)} IDs; {len(matched)} matched)")
-            except Exception as e:
-                epg_lines.append(f"- {u}: FAILED — {type(e).__name__}: {e}")
-                print(f"EPG FAIL: {u}: {type(e).__name__}: {e}")
+                epg_lines.append(f"- {u}: {len(matched)}/{len(playlist_ids)} playlist IDs matched ({count} EPG IDs)")
+                print(f"EPG OK: {u} ({count} IDs; {len(matched)} matched)")
 
     ok=sum(x[4]=="OK" for x in results); partial=sum(x[4]=="PARTIAL" for x in results); fail=sum(x[4]=="FAIL" for x in results)
     summary=["# Stream + EPG audit","",f"- Playlist entries: {len(rows)}",f"- Unique stream URLs tested: {len(items)}",
              f"- Stream OK: {ok}",f"- Stream PARTIAL: {partial}",f"- Stream FAIL: {fail}","",
              "## EPG coverage","",*sorted(epg_lines),"",
              "## Interpretation","",
-             "Each stream test reads only the first 64 KiB (HTTP Range when supported), avoiding accidental downloads of long-running media streams.",
-             "OK: URL and, for HLS, first referenced child returned HTTP 2xx/3xx.",
-             "PARTIAL: parent HLS playlist was reachable but first child failed.",
-             "FAIL: request failed or returned non-success HTTP status.",
-             "This checks HTTP/HLS reachability; it does not guarantee continuous playback in every IPTV player."]
+             "Stream checks use a small ranged read and a bounded child read; this tests HTTP/HLS reachability, not continuous playback.",
+             "EPG files are downloaded completely before XML parsing, so coverage numbers are not based on truncated XML."]
     (out/"SUMMARY.md").write_text("\n".join(summary)+"\n",encoding="utf-8")
 
 if __name__=="__main__": main()
