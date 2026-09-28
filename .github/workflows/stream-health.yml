@@ -1,0 +1,53 @@
+name: Stream Health
+
+on:
+  schedule:
+    - cron: '15 */6 * * *'
+      timezone: 'Asia/Dhaka'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/stream_health.py'
+      - '.github/workflows/stream-health.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: iptv-stream-health
+  cancel-in-progress: false
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check stream health
+        run: python scripts/stream_health.py
+      - name: Commit health report and state
+        shell: bash
+        run: |
+          set -euo pipefail
+          files=("reports/stream-health.md" "reports/stream-health-state.json")
+          if git diff --quiet -- "${files[@]}"; then echo "No stream-health changes."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "${files[@]}"
+          git commit -m "Update stream health report"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git rebase origin/main; then git rebase --abort; exit 1; fi
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
