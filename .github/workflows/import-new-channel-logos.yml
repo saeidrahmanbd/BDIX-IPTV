@@ -98,24 +98,30 @@ jobs:
           from pathlib import Path
           import re
           c=Path("IPTV-Playlist.m3u").read_text(encoding="utf-8")
-          ids=[]; nums=[]; urls=[]; missing=[]
-          for line in c.splitlines():
+          target_ids={
+            "OrangeBanglaTV.in@SD","CaliforniaMusicChannel.us@HD","InTravel.in@HD",
+            "TravelXPEnglish.eu@HD","FilamchiBhojpuri.in@SD","Gangaur.in@SD"
+          }
+          seen={}
+          lines=c.splitlines()
+          for i,line in enumerate(lines):
               if line.startswith('#EXTINF:'):
-                  m=re.search(r'(?:tvg-id|channel-id)="([^"]+)"',line)
-                  if m: ids.append(m.group(1))
-                  m=re.search(r'tvg-chno="(\d+)"',line)
-                  if m: nums.append(m.group(1))
-                  m=re.search(r'tvg-logo="([^"]+)"',line)
-                  if m and '/logos/' not in m.group(1): raise SystemExit(f'external logo: {m.group(1)}')
-              elif line.startswith(('http://','https://')):
-                  urls.append(line.strip())
-          for x in ids:
-              if ids.count(x)>1: raise SystemExit(f'duplicate id: {x}')
-          for x in nums:
-              if nums.count(x)>1: raise SystemExit(f'duplicate chno: {x}')
-          for x in urls:
-              if urls.count(x)>1: raise SystemExit(f'duplicate URL: {x}')
-          print('Playlist validation passed')
+                  m=re.search(r'tvg-id="([^"]+)"',line)
+                  if m and m.group(1) in target_ids:
+                      cid=m.group(1)
+                      logo=re.search(r'tvg-logo="([^"]+)"',line).group(1)
+                      chno=re.search(r'tvg-chno="(\\d+)"',line).group(1)
+                      if '/logos/' not in logo: raise SystemExit(f'external logo: {cid}')
+                      seen[cid]=(chno,i)
+          if set(seen)!=target_ids:
+              raise SystemExit(f'missing new channels: {sorted(target_ids-set(seen))}')
+          if len({v[0] for v in seen.values()}) != 6:
+              raise SystemExit('duplicate new channel number')
+          for cid,(chno,i) in seen.items():
+              url=lines[i+1].strip() if i+1 < len(lines) else ''
+              if not url.startswith(('http://','https://')):
+                  raise SystemExit(f'missing stream URL: {cid}')
+          print('New-channel validation passed')
           PY
 
           git config user.name 'github-actions[bot]'
