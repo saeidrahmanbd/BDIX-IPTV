@@ -1,0 +1,640 @@
+# EPG Coverage Report
+
+Generated: **2026-09-28T05:41:52+00:00**
+
+This report audits the current playlist against the configured public EPG sources. It identifies the missing channels first; it does not publish or alter the EPG feed.
+
+## Coverage Summary
+
+- Playlist channels: **868**
+- EPG matched: **263**
+- EPG missing: **605**
+- Exact ID matches: **120**
+- Alias/name matches: **143**
+- Matched with future programme data: **249**
+- Matched but no future programme detected: **14**
+
+## Source Status
+
+- **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs, 529 IDs with future programmes
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs, 817 IDs with future programmes
+- **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs, 415 IDs with future programmes
+- **FAILED** — https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml — HTTP Error 404: Not Found
+
+## Missing Channels — Investigation Queue
+
+These are the channels that currently have no direct or safe alias match. Investigate these specifically instead of searching EPG sources blindly.
+
+- **&TV [Backup 1]** — `AndTV.in` — Backup
+- **&TV HD (1080p)** — `AndTV.in@HD` — Backup
+- **30A Music** — `30AMusic.us` — Backup
+- **30A Music (720p)** — `30AMusic.us@SD` — Backup
+- **4 Fun TV** — `4FunTV.pl` — Backup
+- **7S Music** — `7SMusic.in` — Backup
+- **8XM** — `8XM.pk` — Backup
+- **8XM [Backup 1]** — `8XM.pk` — Backup
+- **9X Jhakaas (1080p)** — `9XJhakaas.in@SD` — Backup
+- **ADN TV** — `ADNTV.cl` — Backup
+- **Amar Bangla [Backup 1]** — `AamarBangla.in` — Backup
+- **Amar Bangla Digital [Backup 1]** — `local.1d6cdda4509e` — Backup
+- **AMC** — `AMC.us` — Backup
+- **AMC (United States) (720p)** — `AMC.us@EastHD` — Backup
+- **Ananda TV** — `AnandaTV.bd` — Backup
+- **Ananda TV [Backup 3]** — `AnandaTV.bd` — Backup
+- **Ananda TV [Backup 4]** — `AnandaTV.bd` — Backup
+- **Asian TV [Backup 1]** — `AsianTV.bd` — Backup
+- **Asian TV [Backup 3]** — `AsianTV.bd` — Backup
+- **ATN Bangla [Backup 1]** — `ATNBangla.bd` — Backup
+- **ATN Bangla [Backup 2]** — `ATNBangla.bd` — Backup
+- **ATN Bangla [Backup 3]** — `ATNBangla.bd` — Backup
+- **ATN Bangla [Backup 4]** — `ATNBangla.bd` — Backup
+- **ATN BANGLA UK** — `ATNBanglaUK.uk` — Backup
+- **ATN Bangla UK** — `ATNBanglaUK.uk` — Backup
+- **ATN News [Backup 1]** — `local.atn-news` — Backup
+- **ATN News [Backup 2]** — `local.atn-news` — Backup
+- **ATN News [Backup 3]** — `local.atn-news` — Backup
+- **ATN News [Backup 4]** — `local.atn-news` — Backup
+- **Baby Shark TV (1080p)** — `BabySharkTV.us@SD` — Backup
+- **Balle Balle (576p)** — `BalleBalle.in@SD` — Backup
+- **Bangla Tv [Backup 3]** — `local.bangla-tv` — Backup
+- **Bangla Tv [Backup 4]** — `local.bangla-tv` — Backup
+- **BanglaVision [Backup 1]** — `BanglaVision.bd` — Backup
+- **BanglaVision [Backup 2]** — `BanglaVision.bd` — Backup
+- **beIN SPORTS XTRA (1080p)** — `beINSPORTSXTRA.us@SD` — Backup
+- **beIN Sports XTRA en Espanol** — `beINSPORTSXTRAenEspanol.us` — Backup
+- **beIN SPORTS XTRA en Espanol** — `beINSPORTSXTRAenEspanol.us` — Backup
+- **Bengali Beats [Backup 1]** — `local.298c02a76a55` — Backup
+- **Bijoy TV** — `BijoyTV.bd` — Backup
+- **Bijoy TV [Backup 2]** — `BijoyTV.bd` — Backup
+- **Bijoy TV [Backup 4]** — `BijoyTV.bd` — Backup
+- **BIZ Music** — `BIZMusic.uz` — Backup
+- **Boishakhi TV [Backup 2]** — `BoishakhiTV.bd` — Backup
+- **Boishakhi TV [Backup 3]** — `BoishakhiTV.bd` — Backup
+- **Boishakhi TV [Backup 4]** — `BoishakhiTV.bd` — Backup
+- **CGTN Documentary (1080p)** — `CGTNDocumentary.cn@SD` — Backup
+- **Channel 16 [Backup 1]** — `local.29621c2210b1` — Backup
+- **Channel 24** — `Channel24.bd` — Backup
+- **Channel 24 [Backup 1]** — `Channel24.bd` — Backup
+- **Channel 24 [Backup 3]** — `Channel24.bd` — Backup
+- **Channel 24 [Backup 4]** — `Channel24.bd` — Backup
+- **Channel 9 [Backup 1]** — `Channel9.bd` — Backup
+- **Channel I [Backup 1]** — `ChannelI.bd` — Backup
+- **Channel I [Backup 2]** — `ChannelI.bd` — Backup
+- **Channel I [Backup 3]** — `ChannelI.bd` — Backup
+- **Channel I [Backup 4]** — `ChannelI.bd` — Backup
+- **Channel S [Backup 1]** — `local.channel-s` — Backup
+- **Channel S [Backup 2]** — `local.channel-s` — Backup
+- **Channel S [Backup 3]** — `local.channel-s` — Backup
+- **Channel-16** — `Channel16.ru` — Backup
+- **Choppertown (720p)** — `Choppertown.us@SD` — Backup
+- **Colors Bangla [Backup 1]** — `ColorsBangla.in` — Backup
+- **Colors Bangla [Backup 3]** — `ColorsBangla.in` — Backup
+- **Dangal [Backup 1]** — `DangalTV.in` — Backup
+- **DBC News [Backup 1]** — `DBCNews.bd` — Backup
+- **DBC News [Backup 2]** — `DBCNews.bd` — Backup
+- **DBC News [Backup 3]** — `DBCNews.bd` — Backup
+- **DBC News [Backup 4]** — `DBCNews.bd` — Backup
+- **DD Bangla [Backup 1]** — `DDBangla.in` — Backup
+- **DD Bangla [Backup]** — `DDBangla.in` — Backup
+- **DD Jharkhand** — `DDJharkhand.in` — Backup
+- **Deepto TV [Backup 2]** — `DeeptoTV.bd` — Backup
+- **Desh TV [Backup 1]** — `DeshTV.bd` — Backup
+- **Desh TV [Backup 2]** — `DeshTV.bd` — Backup
+- **Desh TV [Backup 3]** — `DeshTV.bd` — Backup
+- **Desh TV [Backup 4]** — `DeshTV.bd` — Backup
+- **ducktv** — `ducktv.sk` — Backup
+- **ducktv (720p)** — `ducktv.sk@SD` — Backup
+- **ducktv HD** — `ducktv.sk@HD` — Backup
+- **E24 [Backup 1]** — `E24.in` — Backup
+- **Ekattor TV** — `EkattorTV.bd` — Backup
+- **Ekattor TV [Backup 1]** — `EkattorTV.bd` — Backup
+- **Ekattor TV [Backup 3]** — `EkattorTV.bd` — Backup
+- **Ekhon TV** — `EkhonTV.bd` — Backup
+- **Ekhon TV [Backup 1]** — `EkhonTV.bd` — Backup
+- **Ekhon TV [Backup 2]** — `EkhonTV.bd` — Backup
+- **Ekhon TV [Backup 4]** — `EkhonTV.bd` — Backup
+- **Ekushey TV** — `EkusheyTV.bd` — Backup
+- **Ekushey TV [Backup 1]** — `EkusheyTV.bd` — Backup
+- **Ekushey TV [Backup 3]** — `EkusheyTV.bd` — Backup
+- **Ekushey TV [Backup 4]** — `EkusheyTV.bd` — Backup
+- **EKUSHEY TV HD** — `EkusheyTV.bd` — Backup
+- **Enter TV** — `local.47c0bd81bc1f` — Backup
+- **Enter TV [Backup 2]** — `local.47c0bd81bc1f` — Backup
+- **Enter-Film** — `EnterFilm.ua` — Backup
+- **Epic Bharat** — `EpicBharat.in` — Backup
+- **Epic Music [Backup 2]** — `EpicMusic.in` — Backup
+- **G TV** — `GaziTV.bd` — Backup
+- **G TV [Backup 2]** — `GaziTV.bd` — Backup
+- **Gandan TV** — `GTV.mn` — Backup
+- **Get.factual (720p)** — `Getfactual.us@UK` — Backup
+- **Global TV** — `GlobalTV.bd` — Backup
+- **Global TV [Backup 1]** — `GlobalTV.bd` — Backup
+- **Global TV [Backup 3]** — `GlobalTV.bd` — Backup
+- **Gravitas Movies** — `GravitasMovies.us` — Backup
+- **GREAT! movies** — `GREATmovies.uk` — Backup
+- **GREAT! movies (1080p)** — `GREATmovies.uk@UK` — Backup
+- **GREAT! romance** — `GREATromance.uk` — Backup
+- **GREAT! romance (1080p)** — `GREATromance.uk@UK` — Backup
+- **Green TV** — `GreenTV.bd` — Backup
+- **GTV** — `GTV.mn` — Backup
+- **Hindi Hits [Backup 1]** — `HindiHits.in` — Backup
+- **Hindi Movie Classic 24 [Backup 1]** — `local.a35fc6b70b2d` — Backup
+- **History (United States) (720p)** — `History.us@East` — Backup
+- **History Hit (1080p)** — `HistoryHit.uk@SD` — Backup
+- **History TV18 HD (1080p) [Geo-blocked]** — `HistoryTV18.in@HD` — Backup
+- **HUM TV [Backup 1]** — `HumTV.pk` — Backup
+- **HUM TV [Backup 2]** — `HumTV.pk` — Backup
+- **IDMANTV 🇹🇷** — `local.idmantv` — Backup
+- **Independent TV** — `IndependentTV.bd` — Backup
+- **INWILD (1080p)** — `INWILD.nl@SD` — Backup
+- **Jago News 24 [Backup 1]** — `JagoNews24.bd` — Backup
+- **Jalsha Movies HD [Backup 1]** — `local.285a6aa870f3` — Backup
+- **Jalsha Movies HD [Backup 2]** — `local.285a6aa870f3` — Backup
+- **Jamuna TV** — `JamunaTV.bd` — Backup
+- **Jamuna TV [Backup 2]** — `JamunaTV.bd` — Backup
+- **Jamuna TV [Backup 3]** — `JamunaTV.bd` — Backup
+- **Jamuna TV [Backup 4]** — `JamunaTV.bd` — Backup
+- **Kalaignar Murasu** — `KalaignarMurasu.in` — Backup
+- **Kartoon Channel! (1080p)** — `KartoonChannel.us@SD` — Backup
+- **Lego Channel (1080p)** — `LegoChannel.us@SD` — Backup
+- **Love Nature (1080p)** — `LoveNature.ca@SD` — Backup
+- **Love Nature 4K (2160p) [Geo-blocked]** — `LoveNature.ca@4K` — Backup
+- **Love Nature HD (1080p)** — `LoveNature.ca@HD` — Backup
+- **Maasranga TV** — `MaasrangaTV.bd` — Backup
+- **Maasranga TV [Backup 2]** — `MaasrangaTV.bd` — Backup
+- **Madhimugam TV (576p)** — `MadhimugamTV.in@SD` — Backup
+- **Manoranjan Movies (576p)** — `ManoranjanMovies.in@SD` — Backup
+- **Manoranjan Prime** — `ManoranjanPrime.in` — Backup
+- **Matribhumi TV** — `MatribhumiTV.bd` — Backup
+- **Mazhavil Manorama [Backup 1]** — `MazhavilManorama.in` — Backup
+- **Mazhavil Manorama [Backup 2]** — `MazhavilManorama.in` — Backup
+- **Mazhavil Manorama [Backup 3]** — `MazhavilManorama.in` — Backup
+- **MBC Bollywood [Backup 1]** — `MBCBollywood.ae` — Backup
+- **ME TV [Backup 1]** — `METV.bd` — Backup
+- **ME TV [Backup 2]** — `METV.bd` — Backup
+- **ME TV [Backup 3]** — `METV.bd` — Backup
+- **Mei Ah Movie Channel (1080p)** — `MeiAhMovieChannel.hk@SD` — Backup
+- **Metro TV** — `MetroTV.hn` — Backup
+- **Metro TV (India) (1080p)** — `MetroTV.in@SD` — Backup
+- **Metro TV (Indonesia)** — `MetroTV.id@SD` — Backup
+- **Mh 1 Prime** — `Mh1Prime.in` — Backup
+- **MH One Dil Se** — `MHOneDilSe.in` — Backup
+- **MNTV** — `MNTV.mz` — Backup
+- **Mohona Tv [Backup 1]** — `MohonaTV.bd` — Backup
+- **Mohona TV [Backup 1]** — `MohonaTV.bd` — Backup
+- **Mohona TV [Backup 2]** — `MohonaTV.bd` — Backup
+- **Moonbug Kids (1080p)** — `MoonbugKids.uk@SD` — Backup
+- **Movie Bangla [Backup 1]** — `MovieBangla.bd` — Backup
+- **Movie Bangla [Backup 2]** — `MovieBangla.bd` — Backup
+- **Movie Bangla [Backup 3]** — `MovieBangla.bd` — Backup
+- **MovieSphere** — `MovieSphere.us` — Backup
+- **MovieSphere (1080p)** — `MovieSphere.us@US` — Backup
+- **MovieSphere CA** — `MovieSphere.us@CA` — Backup
+- **Mr Bean Animated (1080p)** — `MrBeanAnimated.uk@English` — Backup
+- **Music India [Backup 1]** — `MusicIndia.in` — Backup
+- **My TV** — `MyTV.bd` — Backup
+- **My Tv** — `MyTV.bd` — Backup
+- **My TV [Backup 1]** — `MyTV.bd` — Backup
+- **Mythbusters (1080p)** — `Mythbusters.us@UK` — Backup
+- **MyTime Movie Network** — `MyTimeMovieNetwork.br` — Backup
+- **Nagorik TV [Backup 1]** — `local.nagorik` — Backup
+- **NatureTime** — `NatureTime.ca` — Backup
+- **NatureTime UK (1080p)** — `NatureTime.ca@UK` — Backup
+- **NBA TV** — `NBATV.us` — Backup
+- **News 24 [Backup 2]** — `News24.bd` — Backup
+- **News 24 [Backup 3]** — `News24.bd` — Backup
+- **Nexus TV** — `NexusTV.bd` — Backup
+- **NH BollyFlix** — `NHBollyFlix.in` — Backup
+- **NH BollyRaga** — `NHBollyRaga.in` — Backup
+- **Nick Jr. (India) (576p)** — `NickJr.in@SD` — Backup
+- **NOW Rock** — `NOWRock.uk` — Backup
+- **NRB TV** — `NRBTV.ca` — Backup
+- **NRBTV** — `NRBTV.us` — Backup
+- **NTV [Backup 1]** — `NTV.bd` — Backup
+- **NTV [Backup 3]** — `NTV.bd` — Backup
+- **NTV [Backup 4]** — `NTV.bd` — Backup
+- **NTV Europe [Backup 1]** — `NTVEurope.bd` — Backup
+- **Ocko Expres** — `OckoExpres.cz` — Backup
+- **Outdoor Channel (1080p)** — `OutdoorChannel.us@SD` — Backup
+- **Outdoor Channel HD (720p)** — `OutdoorChannel.us@HD` — Backup
+- **OuterSphere (1080p)** — `OuterSphere.us@SD` — Backup
+- **Pardesi TV** — `PardesiTV.ca` — Backup
+- **PowerTurk TV** — `PowerTurkTV.tr` — Backup
+- **Probashi TV** — `local.884b4387db4b` — Backup
+- **R Plus Gold (720p)** — `RPlusGold.in@SD` — Backup
+- **Rajdhani TV [Backup 1]** — `RajdhaniTV.bd` — Backup
+- **Rakuten TV Action Movies** — `RakutenTVActionMovies.es` — Backup
+- **Rakuten TV Action Movies Finland (1080p)** — `RakutenTVActionMovies.es@Finland` — Backup
+- **Rakuten TV Comedy Movies** — `RakutenTVComedyMovies.es` — Backup
+- **Rakuten TV Comedy Movies Finland (1080p)** — `RakutenTVComedyMovies.es@Finland` — Backup
+- **Rakuten TV Drama Movies** — `RakutenTVDramaMovies.es` — Backup
+- **Rakuten TV Drama Movies Finland (1080p)** — `RakutenTVDramaMovies.es@Finland` — Backup
+- **Rakuten TV Family Movies** — `RakutenTVFamilyMovies.es` — Backup
+- **Rakuten TV Family Movies Finland (1080p)** — `RakutenTVFamilyMovies.es@Finland` — Backup
+- **Rakuten TV Top Movies** — `RakutenTVTopMovies.es` — Backup
+- **Rakuten TV Top Movies Finland (1080p)** — `RakutenTVTopMovies.es@Finland` — Backup
+- **RDS Social TV** — `RDSSocialTV.it` — Backup
+- **Real Wild (1080p)** — `RealWild.uk@SD` — Backup
+- **Retro Music TV** — `RetroMusicTV.cz` — Backup
+- **RT Documentary (1080p) [Geo-blocked]** — `RTDocumentary.ru@English` — Backup
+- **RTV [Backup 1]** — `RTV.bd` — Backup
+- **RTV [Backup 2]** — `RTV.bd` — Backup
+- **Ruposhi Bangla [Backup 1]** — `RupasiBangla.in` — Backup
+- **SA TV** — `SATV.bd` — Backup
+- **SA TV [Backup 1]** — `SATV.bd` — Backup
+- **SA TV [Backup 2]** — `SATV.bd` — Backup
+- **SA TV [Backup 4]** — `SATV.bd` — Backup
+- **Sana Plus** — `SanaPlus.in` — Backup
+- **Sananda** — `SanandaTV.in` — Backup
+- **Sananda [Backup 3]** — `SanandaTV.in` — Backup
+- **Sananda TV** — `SanandaTV.in` — Backup
+- **Shanson TV** — `ShansonTV.ru` — Backup
+- **Shemaroo Josh** — `ShemarooJosh.in` — Backup
+- **Smurf TV (480p)** — `SmurfTV.us@SD` — Backup
+- **Somoy TV** — `SomoyNewsTV.bd` — Backup
+- **Somoy Tv** — `SomoyNewsTV.bd` — Backup
+- **Somoy TV [Backup 4]** — `SomoyNewsTV.bd` — Backup
+- **Sony Aath (1080p)** — `SonyAath.in@SD` — Backup
+- **Sony Entertainment TV** — `SonyEntertainmentTelevision` — Backup
+- **Sony entertainment tv** — `SonyEntertainmentTelevision` — Backup
+- **Sony Entertainment TV [Backup 1]** — `SonyEntertainmentTelevision` — Backup
+- **Sony Max (576p) [Geo-blocked]** — `SonyMax.in@SD` — Backup
+- **Sony Max [Backup 1]** — `SonyMax.in` — Backup
+- **Sony SAB HD (1080p)** — `SonySAB.in@HD` — Backup
+- **Sony Yay! (1080p)** — `SonyYay.in@SD` — Backup
+- **Star Jalsha (576p) [Geo-blocked]** — `StarJalsha.in@SD` — Backup
+- **Star Jalsha [Backup 1]** — `StarJalsha.in` — Backup
+- **Star Jalsha [Backup 2]** — `StarJalsha.in` — Backup
+- **Star News [Backup 1]** — `local.star-news` — Backup
+- **Star News [Backup 2]** — `local.star-news` — Backup
+- **Star News [Backup 4]** — `local.star-news` — Backup
+- **SUN BANGLA [Backup 1]** — `SunBangla.in` — Backup
+- **Teletubbies (720p)** — `Teletubbies.uk@SD` — Backup
+- **The Walking Dead Universe** — `TheWalkingDeadUniverse.us` — Backup
+- **The Walking Dead Universe (720p)** — `TheWalkingDeadUniverse.us@SD` — Backup
+- **Tiny Pop (1080p)** — `TinyPop.uk@SD` — Backup
+- **Tom And Jerry (720p)** — `TomAndJerry.do@HD` — Backup
+- **Trace UK** — `TraceUK.uk` — Backup
+- **Trace Urban** — `TraceUrban.fr` — Backup
+- **Trace Urban (1080p)** — `TraceUrban.fr@SD` — Backup
+- **Trace Urban HD (1080p)** — `TraceUrban.fr@HD` — Backup
+- **Trace Urban International HD (1080p)** — `TraceUrban.fr@InternationalHD` — Backup
+- **Ultimate TV [Backup 1]** — `UltimateTV.in` — Backup
+- **Unidentified (1080p)** — `Unidentified.us@SD` — Backup
+- **WildEarth (1080p)** — `WildEarth.za@SD` — Backup
+- **XITE Hits** — `XITEHits.nl` — Backup
+- **XITE Hits Germany (1080p)** — `XITEHits.nl@Germany` — Backup
+- **YRF Music [Backup 2]** — `YRFMusic.in` — Backup
+- **ZB Cinema [Backup 1]** — `ZBCinema.in` — Backup
+- **Zee Action [Backup 2]** — `ZeeAction.in` — Backup
+- **Zee Bangla [Backup 1]** — `ZeeBangla.in` — Backup
+- **Zee Bangla [Backup 2]** — `ZeeBangla.in` — Backup
+- **Zee Bangla [Backup 3]** — `ZeeBangla.in` — Backup
+- **Zee Bangla HD [Backup 1]** — `local.072484feec7e` — Backup
+- **Zee Bangla Sonar** — `ZeeBanglaSonar.in` — Backup
+- **Zee Bangla Sonar [Backup 1]** — `ZeeBanglaSonar.in` — Backup
+- **Zee Bangla Sonar [Backup 2]** — `ZeeBanglaSonar.in` — Backup
+- **Zee Bangla Sonar [Backup 4]** — `ZeeBanglaSonar.in` — Backup
+- **Ananda TV** — `AnandaTV.bd` — Bangladesh
+- **Asian TV** — `AsianTV.bd` — Bangladesh
+- **ATN Bangla** — `ATNBangla.bd` — Bangladesh
+- **ATN News** — `local.atn-news` — Bangladesh
+- **Bangla TV** — `BanglaTV.bd` — Bangladesh
+- **Bangla Vision** — `BanglaVision.bd` — Bangladesh
+- **Bengali Beats** — `local.298c02a76a55` — Bangladesh
+- **Bijoy TV** — `BijoyTV.bd` — Bangladesh
+- **Boishakhi TV** — `BoishakhiTV.bd` — Bangladesh
+- **BTV Chattogram** — `BTVChattogram.bd` — Bangladesh
+- **BTV National** — `BTVNational.bd` — Bangladesh
+- **BTV News** — `local.0646349a4378` — Bangladesh
+- **CBN TV USA** — `local.cae839ff2cdb` — Bangladesh
+- **Channel 1** — `local.a9570e029843` — Bangladesh
+- **Channel 16** — `local.29621c2210b1` — Bangladesh
+- **Channel 24** — `Channel24.bd` — Bangladesh
+- **Channel 9** — `Channel9.bd` — Bangladesh
+- **Channel I** — `ChannelI.bd` — Bangladesh
+- **Channel S** — `local.channel-s` — Bangladesh
+- **DBC News** — `DBCNews.bd` — Bangladesh
+- **Deepto TV** — `DeeptoTV.bd` — Bangladesh
+- **Desh TV** — `DeshTV.bd` — Bangladesh
+- **Doyel TV** — `DoyelTV.ca@SD` — Bangladesh
+- **Ekattor TV** — `EkattorTV.bd` — Bangladesh
+- **Ekhon TV** — `EkhonTV.bd` — Bangladesh
+- **Ekushey TV** — `EkusheyTV.bd` — Bangladesh
+- **Enter TV** — `local.47c0bd81bc1f` — Bangladesh
+- **G Series Drama** — `GSeriesDrama.bd` — Bangladesh
+- **G TV** — `GaziTV.bd` — Bangladesh
+- **Global TV** — `GlobalTV.bd` — Bangladesh
+- **Green TV** — `GreenTV.bd` — Bangladesh
+- **Independent TV** — `IndependentTV.bd` — Bangladesh
+- **Jago News 24** — `JagoNews24.bd` — Bangladesh
+- **Jamuna TV** — `JamunaTV.bd` — Bangladesh
+- **Jonmobhumi TV** — `JonmoBhumiTV.au` — Bangladesh
+- **Maasranga TV** — `MaasrangaTV.bd` — Bangladesh
+- **ME TV** — `METV.bd` — Bangladesh
+- **Mohona TV** — `MohonaTV.bd` — Bangladesh
+- **Movie Bangla** — `MovieBangla.bd` — Bangladesh
+- **My TV** — `MyTV.bd` — Bangladesh
+- **Nagorik TV** — `NagorikTV.bd` — Bangladesh
+- **News 21 Bangla TV** — `local.news-21-bangla-tv` — Bangladesh
+- **Nexus TV** — `NexusTV.bd` — Bangladesh
+- **NTV Europe** — `NTVEurope.bd` — Bangladesh
+- **Rajdhani TV** — `RajdhaniTV.bd` — Bangladesh
+- **RTV** — `RTV.bd` — Bangladesh
+- **SA TV** — `SATV.bd` — Bangladesh
+- **Somoy TV** — `SomoyNewsTV.bd` — Bangladesh
+- **SRK** — `local.264717e2eb10` — Bangladesh
+- **Star News** — `local.star-news` — Bangladesh
+- **Thikana** — `ThikanaTV.us` — Bangladesh
+- **Adventure Earth** — `local.adventure-earth` — Documentary & Wildlife
+- **Amazing Discoveries TV** — `AmazingDiscoveriesTV.ca` — Documentary & Wildlife
+- **Autentic Adventure Earth** — `local.5ece5845b6dd` — Documentary & Wildlife
+- **Autentic History** — `AutenticHistory.de` — Documentary & Wildlife
+- **BBC Earth** — `BBCEarth.ca` — Documentary & Wildlife
+- **Bon Voyage** — `local.2ca58b9ec1cd` — Documentary & Wildlife
+- **CGTN Documentary** — `CGTNDocumentary.cn` — Documentary & Wildlife
+- **Choppertown** — `Choppertown.us` — Documentary & Wildlife
+- **Crime & Justice** — `local.9bbdcae2e024` — Documentary & Wildlife
+- **Crime Scene TV** — `local.cf04dcfd3018` — Documentary & Wildlife
+- **Discovery Pakistan** — `DiscoverPakistan.pk` — Documentary & Wildlife
+- **DocuBay TV** — `DocuBayTV.in` — Documentary & Wildlife
+- **Documentary+ 2** — `local.f79a842eb97d` — Documentary & Wildlife
+- **Documentary+ International** — `DocumentaryPlus` — Documentary & Wildlife
+- **Documentary+ USA** — `local.d09d7b778d8e` — Documentary & Wildlife
+- **Epic Crimes** — `EpicCrimes.in` — Documentary & Wildlife
+- **Get.factual** — `Getfactual.us` — Documentary & Wildlife
+- **History & Warfare Now** — `HistoryWarfareNow.us` — Documentary & Wildlife
+- **History Hit** — `HistoryHit.uk` — Documentary & Wildlife
+- **House of Crime** — `local.1ed74477f967` — Documentary & Wildlife
+- **INFAST** — `INFAST.nl` — Documentary & Wildlife
+- **Inside Crime** — `InsideCrime.us` — Documentary & Wildlife
+- **INWILD** — `INWILD.nl` — Documentary & Wildlife
+- **InWonder** — `InWonder.nl` — Documentary & Wildlife
+- **Knowledge Network** — `KnowledgeNetwork.ca` — Documentary & Wildlife
+- **Life+Style** — `local.849a937cdf1d` — Documentary & Wildlife
+- **Love Nature** — `local.4312048f3ba0` — Documentary & Wildlife
+- **Meltem TV** — `MeltemTV.tr` — Documentary & Wildlife
+- **Mysteries Xplored** — `USBB5200028MM` — Documentary & Wildlife
+- **Mystery TV** — `MysteryTV.us` — Documentary & Wildlife
+- **Mythbusters** — `Mythbusters.us` — Documentary & Wildlife
+- **Nature Time** — `local.nature-time` — Documentary & Wildlife
+- **Outdoor Channel** — `OutdoorChannel.us` — Documentary & Wildlife
+- **OuterSphere** — `OuterSphere.us` — Documentary & Wildlife
+- **Real Wild** — `RealWild.uk` — Documentary & Wildlife
+- **Robot Wars by Mech+** — `local.358fe4699222` — Documentary & Wildlife
+- **RT Documentary** — `RTDocumentary.ru` — Documentary & Wildlife
+- **Stingray Naturescape** — `StingrayNaturescape.ca` — Documentary & Wildlife
+- **Stingray The Spa** — `StingrayTheSpa.ca` — Documentary & Wildlife
+- **Terra Mater WILD English** — `local.43be2e2ecc31` — Documentary & Wildlife
+- **Travelxp English** — `local.ffdca013962a` — Documentary & Wildlife
+- **Unidentified** — `Unidentified.us` — Documentary & Wildlife
+- **Wild Flix Hindi** — `local.2ff5fac7d61c` — Documentary & Wildlife
+- **Wild Planet** — `local.10aec2f64472` — Documentary & Wildlife
+- **World War TV** — `local.5aea628e02ad` — Documentary & Wildlife
+- **XXTreme Jobs Hindi** — `local.005ec127787c` — Documentary & Wildlife
+- **Amar Bangla Digital** — `local.1d6cdda4509e` — Indian Bangla
+- **Bangla Plus** — `BanglaPlus.in` — Indian Bangla
+- **DD Tripura** — `DDTripura.in` — Indian Bangla
+- **Jhankar TV** — `JhankarTV.ca` — Indian Bangla
+- **Jtv Classic** — `local.13a774fd5195` — Indian Bangla
+- **Matri Bhumi TV** — `local.matri-bhumi-tv` — Indian Bangla
+- **R Plus Gold** — `RPlusGold.in@SD` — Indian Bangla
+- **Sananda** — `SanandaTV.in` — Indian Bangla
+- **SNB Cinema** — `local.2480c4fd00cb` — Indian Bangla
+- **ZB Cinema** — `ZBCinema.in` — Indian Bangla
+- **Zee Bangla Sonar** — `ZeeBanglaSonar.in` — Indian Bangla
+- **C Malayalam TV** — `CMalayalamTV.ca@SD` — Indian Entertainment
+- **DD Assam** — `DDAssam.in` — Indian Entertainment
+- **DD Goa** — `DDGoa.in` — Indian Entertainment
+- **DD Haryana** — `DDHaryana.in` — Indian Entertainment
+- **DD Himachal Pradesh** — `DDHimachalPradesh.in` — Indian Entertainment
+- **DD Jharkhand** — `DDJharkhand.in` — Indian Entertainment
+- **DD Manipur** — `DDManipur.in` — Indian Entertainment
+- **DD Meghalaya** — `DDMeghalaya.in` — Indian Entertainment
+- **DD Nagaland** — `DDNagaland.in` — Indian Entertainment
+- **Epic Bharat** — `EpicBharat.in` — Indian Entertainment
+- **Epic TV Digital** — `local.823c9581dfe9` — Indian Entertainment
+- **ETV Comedy** — `ETVComedy.in` — Indian Entertainment
+- **ETV Josh** — `ETVJosh.in` — Indian Entertainment
+- **Flowers US** — `local.3330199dc352` — Indian Entertainment
+- **Geo Kahani** — `GeoKahani.pk` — Indian Entertainment
+- **HUM TV** — `HumTV.pk` — Indian Entertainment
+- **Kalaignar Murasu** — `KalaignarMurasu.in` — Indian Entertainment
+- **Manoranjan Prime** — `ManoranjanPrime.in` — Indian Entertainment
+- **Mei Alai TV** — `MeiAlaiTV.in` — Indian Entertainment
+- **MH One Dil Se** — `MHOneDilSe.in` — Indian Entertainment
+- **MH One Prime** — `Mh1Prime.in` — Indian Entertainment
+- **NKR TV Kannada** — `NKRTVKannada.in` — Indian Entertainment
+- **Pardesi TV** — `PardesiTV.ca` — Indian Entertainment
+- **Q TV** — `QTV.in` — Indian Entertainment
+- **SADA TV** — `SADATV.in` — Indian Entertainment
+- **Sana TV** — `SanaTV.in` — Indian Entertainment
+- **Shemaroo Josh** — `ShemarooJosh.in` — Indian Entertainment
+- **Sony Entertainment TV** — `SonyEntertainmentTelevision` — Indian Entertainment
+- **Sony KAL** — `SonyKALHindi.us` — Indian Entertainment
+- **Studio Yuva** — `StudioYuva.in` — Indian Entertainment
+- **Subin TV** — `SubinTV.in` — Indian Entertainment
+- **Suriya TV** — `SuriyaTV.in` — Indian Entertainment
+- **Tamilan TV** — `TamilanTV.in` — Indian Entertainment
+- **Bollywood Film** — `BollywoodFilm.ro` — Indian Movies
+- **Colors Cineplex [UK]** — `local.318535d9c7c4` — Indian Movies
+- **Epic Bhojpuri** — `EpicBhojpuri.in` — Indian Movies
+- **Epic Bhojpuri Digital** — `local.7e276999a297` — Indian Movies
+- **Gold Mines Movie** — `local.gold-mines-movie` — Indian Movies
+- **Goldmines Action** — `GoldminesAction.in` — Indian Movies
+- **Hindi Movie Classic 24** — `local.a35fc6b70b2d` — Indian Movies
+- **Hindi Movies** — `Hindi Movies` — Indian Movies
+- **Kairali Arabia** — `KairaliArabia.in` — Indian Movies
+- **Manoranjan Movies** — `ManoranjanMovies.in` — Indian Movies
+- **MBC Bollywood** — `MBCBollywood.ae` — Indian Movies
+- **MH One Movies** — `MHOneMovies.in` — Indian Movies
+- **MNTV (Tamil)** — `MarutamTV.in` — Indian Movies
+- **NH BollyFlix** — `NHBollyFlix.in` — Indian Movies
+- **NH BollyGold** — `NHBollyGold.in` — Indian Movies
+- **NH Tamil Gold** — `NHTamilGold.in` — Indian Movies
+- **Punjabi Shorts** — `PunjabiShorts.in` — Indian Movies
+- **Roja Movies** — `RojaMovies.in` — Indian Movies
+- **Shubh Cinema TV** — `ShubhCinemaTV.in` — Indian Movies
+- **Sony Max 2 [US]** — `local.f84628a5cf6e` — Indian Movies
+- **South Movies** — `South Movies` — Indian Movies
+- **South Station** — `SouthStation.in` — Indian Movies
+- **Thalaa TV** — `ThalaaTV.in` — Indian Movies
+- **The Movie Club +2** — `TheMovieClub.in@Plus2` — Indian Movies
+- **The Movie Club HD** — `TheMovieClub.in@HD` — Indian Movies
+- **Tolly TV** — `TollyTV.in` — Indian Movies
+- **7S Music** — `7SMusic.in` — Indian Music
+- **7X Punjabi** — `7X Music` — Indian Music
+- **8XM** — `8XM.pk` — Indian Music
+- **Aaryaa TV** — `AaryaaTV.in` — Indian Music
+- **ARY Music** — `ARYMusic.pk` — Indian Music
+- **Deewana HD** — `DeewanaHD.in` — Indian Music
+- **Epic Music** — `EpicMusic.in` — Indian Music
+- **ETV Music** — `ETVMusic.in` — Indian Music
+- **Hindi Hits** — `HindiHits.in` — Indian Music
+- **Jalwa** — `local.bcc5ea317160` — Indian Music
+- **Joo Music** — `JooMusic.pk` — Indian Music
+- **NH BollyRaga** — `NHBollyRaga.in` — Indian Music
+- **Sana Plus** — `SanaPlus.in` — Indian Music
+- **Ultimate TV** — `UltimateTV.in` — Indian Music
+- **ZB Music** — `ZBMusic.in` — Indian Music
+- **24 Hour Free Movies** — `24HourFreeMovies.us` — International
+- **4ever Cinema** — `4everCinema.ua` — International
+- **4ever Drama** — `4everDrama.ua` — International
+- **4ever Music** — `4everMusic.ua` — International
+- **Action Hollywood Movies** — `plex.tv.Action.Hollywood.Movies.plex` — International
+- **AMC Triller** — `plex.tv.AMC.Thrillers.plex` — International
+- **Bang Bang TV** — `BangBangTV` — International
+- **Baraza Music TV** — `BarazaMusicTV.gr` — International
+- **BBC Drama** — `BBCDrama.uk` — International
+- **CCTV-Nostalgia Theater** — `CCTVNostalgiaTheater.cn` — International
+- **CCTV-Storm Music** — `CCTVStormMusic.cn` — International
+- **CCTV-Storm Theater** — `CCTVStormTheater.cn` — International
+- **CCTV-The First Theater** — `CCTVTheFirstTheater.cn` — International
+- **Cinevault Westerns** — `CinevaultWesterns.us` — International
+- **Circle** — `Circle.us` — International
+- **CMC-USA Country Music Channel** — `CMCUSACountryMusicChannel.us@SD` — International
+- **EBS Cinema** — `EBSCinema.us` — International
+- **EBS Musika** — `EBSMusika.us` — International
+- **EU Music** — `EUMusic.ua` — International
+- **FilmUA Live** — `FilmUALive.ua` — International
+- **HBO Hits** — `HBOHits.us` — International
+- **iFilm English** — `iFilmEnglish.ir` — International
+- **LoL TV** — `LoLTV.in` — International
+- **Made in Hollywood** — `MadeInHollywood.us@SD` — International
+- **MBC Drama USA** — `MBCDramaUSA.us` — International
+- **Megogo Music** — `MegogoMusic.ua` — International
+- **Mei Ah Movie Channel** — `MeiAhMovieChannel.hk` — International
+- **MovieSphere AU (1080p)** — `MovieSphere.us@AU` — International
+- **MovieSphere Gold** — `MovieSphereGold.us` — International
+- **MovieSphere UK (1080p)** — `MovieSphere.us@UK` — International
+- **MTV2** — `MTV2.us` — International
+- **Music Box Classic** — `MusicBoxClassic.cz` — International
+- **Music Box Dance** — `MusicBoxDance.cz` — International
+- **Music Box Sexy** — `MusicBoxSexy.cz` — International
+- **Music Channel** — `Boni-Records.com.us` — International
+- **My Cinema** — `MyCinema.us` — International
+- **My Cinema Europe** — `MyCinemaEurope.ch` — International
+- **Mytime Movie** — `MyTimeMovieNetwork.uk@SD` — International
+- **MyTime Movie Network BR** — `MyTimeMovieNetwork.br@SD` — International
+- **MyTime Movie Network East** — `MyTimeMovieNetworkEast.us` — International
+- **NASHE Music** — `NASHEMusic.ua` — International
+- **NOW Rock (1080p)** — `NOWRock.uk@SD` — International
+- **POP World TV** — `POPWorldTV.es` — International
+- **Rakuten Movies** — `RakutenMovies` — International
+- **Rakuten TV Action Movies UK (1080p)** — `RakutenTVActionMovies.es@UK` — International
+- **Rakuten TV Comedy Movies UK (1080p)** — `RakutenTVComedyMovies.es@UK` — International
+- **Rakuten TV Drama Movies UK (1080p)** — `RakutenTVDramaMovies.es@UK` — International
+- **Rakuten TV Family Movies UK (1080p)** — `RakutenTVFamilyMovies.es@UK` — International
+- **Sony Movies** — `SonyMovies.in` — International
+- **Sparkle Movies** — `GBAJ400042T1` — International
+- **Starz Cinema** — `StarzCinema.us` — International
+- **Stingray Rock Alternative** — `StingrayRockAlternative.ca` — International
+- **Stingray Today's Latin Pop** — `StingrayTodaysLatinPop.ca` — International
+- **The Film Detective** — `TheFilmDetective.us` — International
+- **Totalmusic** — `Totalmusic.uk` — International
+- **Totalmusic 80s** — `Totalmusic80s.uk` — International
+- **Totalmusic Concerts** — `TotalmusicConcerts.uk` — International
+- **Totalmusic Dance** — `TotalmusicDance.uk` — International
+- **Vevo Hip Hop & R&B** — `GBBD2300001C0` — International
+- **XITE** — `XITE.nl` — International
+- **XITE Hits UK (1080p)** — `XITEHits.nl@UK` — International
+- **ADN TV+** — `ADNTVPlus.fr` — Kids
+- **Afarin TV** — `AfarinTV.iq` — Kids
+- **Baby Shark TV** — `BabySharkTV.us` — Kids
+- **Bantul the Great** — `local.db1da46e0bcc` — Kids
+- **Dios Te Ve Kids** — `local.14b26c2992e1` — Kids
+- **Disney Channel Hungary** — `DisneyChannel.hu` — Kids
+- **Disney Channel India** — `DisneyChannel.in` — Kids
+- **Disney Jr.** — `local.4e794cea4ffe` — Kids
+- **Doraemon TV** — `local.doraemon-tv` — Kids
+- **Duck TV** — `local.4286518068f8` — Kids
+- **Duronto TV** — `DurontoTV.bd` — Kids
+- **Epic Kids Digital** — `local.40b69bfa0613` — Kids
+- **Jungle Book** — `TheJungleBook.in` — Kids
+- **Kartoon Channel!** — `KartoonChannel.us` — Kids
+- **KidDo MATIX** — `local.6443062a2ce5` — Kids
+- **Minimax** — `Minimax.hu` — Kids
+- **Moonbug Kids** — `MoonbugKids.uk` — Kids
+- **Motu Patlu** — `local.2b7c5a18304e` — Kids
+- **Movie Dome Family** — `MovieDomeFamily` — Kids
+- **Mr Bean Animated** — `MrBeanAnimated.uk` — Kids
+- **Nick Jr. (Czech Republic)** — `NickJr.cz@SD` — Kids
+- **Oggy and the cockroaches** — `Oggyandthecockroaches` — Kids
+- **POP** — `local.234e1ee9c354` — Kids
+- **Pop (1080p)** — `Pop.uk@SD` — Kids
+- **Powerkids Kartoon Channel** — `local.18292ea85199` — Kids
+- **RetroCrush** — `RetroCrush.us` — Kids
+- **Smurf TV** — `SmurfTV.us` — Kids
+- **Strawberry Shortcake** — `Strawberry Shortcake` — Kids
+- **SuperToons TV** — `local.f7701a4b0175` — Kids
+- **Teletubbies** — `Teletubbies.uk` — Kids
+- **The LEGO Channel** — `LegoChannel.us` — Kids
+- **Tiny Pop** — `TinyPop.uk` — Kids
+- **Tom and Jerry** — `TomAndJerry.do` — Kids
+- **Tooku** — `Tooku.ru` — Kids
+- **Toon Goggles** — `ToonGoggles.us` — Kids
+- **Toon Goggles Junior** — `local.04a7d04fc8c5` — Kids
+- **Toonami Aftermath East** — `local.220a92666955` — Kids
+- **TVCARiB Kids & Teens** — `local.23bd651bedd4` — Kids
+- **WOW Kidz Hindi** — `WOWKidz.in@Hindi` — Kids
+- **WOW Kidz Tamil** — `local.5a0c6e1770c3` — Kids
+- **WOW Kidz Telugu** — `WOWKidz.in@Telugu` — Kids
+- **ZB Cartoon** — `ZBCartoon.in` — Kids
+- **ZooMoo** — `ZooMoo.sg` — Kids
+- **ATN Music** — `ATNMusic.bd` — Not Playing
+- **Colors Bangla [Backup 2]** — `ColorsBangla.in` — Not Playing
+- **Disney Channel India** — `DisneyChannel.in` — Not Playing
+- **Enter-Film** — `EnterFilm.ua` — Not Playing
+- **ESPN Deportes** — `ESPNDeportes.us` — Not Playing
+- **National Geographic [Backup 1]** — `NationalGeographic.in` — Not Playing
+- **NBA TV** — `NBATV.us` — Not Playing
+- **Shanson TV** — `ShansonTV.ru` — Not Playing
+- **Al Istiqama** — `AlistiqamaTV.om` — Religious
+- **Al Qamar** — `AlQamarTV.ae` — Religious
+- **Al Quran Al Kareem TV** — `AlQuranAlKareemTV.sa` — Religious
+- **ARY Q TV** — `local.f2281c686246` — Religious
+- **Azan TV** — `AzanTV.ca` — Religious
+- **Deen TV** — `DeenTV.uk` — Religious
+- **Iqra Bangla** — `IqraBangla.uk` — Religious
+- **Iqraa TV** — `IqraaTV` — Religious
+- **Islamic TV** — `IslamicTV.bd` — Religious
+- **Madani TV** — `local.0d1963c96d4b` — Religious
+- **Makkah Live** — `local.makkah-live` — Religious
+- **Makkah TV** — `MakkahTV.sa` — Religious
+- **Medina Live** — `MedinaLive.bd` — Religious
+- **Peace TV Bangla** — `PeaceTVBangla.ae` — Religious
+- **Peace TV English** — `PeaceTVEnglish.ae` — Religious
+- **Peace TV Urdu** — `PeaceTVUrdu.ae` — Religious
+- **Quran** — `local.8987fb927686` — Religious
+- **Quran TV** — `QuranTV.iq` — Religious
+- **A Sports** — `ASports.pk` — Sports
+- **Astro Cricbuzz** — `AstroCricket.my` — Sports
+- **beIN Sports 1** — `Bein Sport HD 1` — Sports
+- **Bein Sports 3** — `beINSports3.qa` — Sports
+- **beIN SPORTS 6** — `beINSports6.qa` — Sports
+- **beIN SPORTS 7** — `beINSports7.qa` — Sports
+- **beIN SPORTS XTRA** — `beINSPORTSXTRA.us` — Sports
+- **ESPN** — `ESPN.us` — Sports
+- **FOX Cricket 501** — `foxsports501hd.au` — Sports
+- **FOX Sports** — `FoxSports.ar` — Sports
+- **Fox Sports 1** — `FoxSports1.us` — Sports
+- **Goal TV** — `GoalTV.in` — Sports
+- **NHL Network** — `NHLNetwork.us` — Sports
+- **Sky Sports Action** — `SkySportsNFL.uk` — Sports
+- **Sky Sports Cricket** — `SkySportsCricket.ie` — Sports
+- **Sky Sports Football** — `SkySportsFootball.ie` — Sports
+- **Star Sports SL 1** — `local.star-sports-sl-1` — Sports
+- **Star Sports SL 2** — `StarSportsSL2.lk` — Sports
+- **T Sports** — `TSports.bd` — Sports
+- **Ten Sports HD** — `TenSports.pk` — Sports
+- **Travelxp Bangla** — `local.be3de263fffd` — Sports
+- **UFC TV** — `UFCTV.us` — Sports
+- **Wipeout Xtra** — `WipeoutXtra.uk` — Sports
+
+## Match Rules
+
+- **Exact:** playlist ID/base/known feed variant is present in an EPG source.
+- **Alias:** verified ID mapping or normalized channel-name mapping found a guide channel.
+- **Missing:** neither direct ID nor safe alias mapping was found.
+- A match is not treated as fully healthy until future programme data is present.
+
