@@ -39,6 +39,14 @@ def report_stats(path):
     out={}
     for k in ["Healthy","Redirect/temporary","Timeout","HTTP error","Invalid HLS","Connection error","Not Playing","Repeated-failure candidates (>= 3 runs)","Unique stream URLs checked","EPG matched","EPG missing","Exact ID matches","Alias/name matches","Matched with future programme data"]:
         out[k]=num(s,k)
+    # Current EPG report format records coverage as:
+    # "Actual current/future coverage among mapped: 129/167 (77.2%)"
+    m=re.search(r'Actual current/future coverage among mapped:\s*\*\*(\d+)/(\d+)\s*\((\d+(?:\.\d+)?)%\)\*\*',s)
+    if m:
+        out["EPG live mapped"]=int(m.group(1))
+        out["EPG mapped"]=int(m.group(2))
+        out["EPG coverage pct"]=float(m.group(3))
+        out["EPG missing mapped"]=int(m.group(2))-int(m.group(1))
     return out
 def svg_text(x,y,text,size=15,bold=False):
     esc=html.escape(str(text))
@@ -74,8 +82,10 @@ def main():
     india=sum(v for k,v in groups.items() if k.startswith("Indian "))
     backup=groups.get("Backup",0)
     logos=100 if total and all(x[3].startswith("https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/") and x[3].lower().endswith(".png") for x in e) else 0
-    epg_matched=g.get("EPG matched",0); epg_missing=g.get("EPG missing",0)
-    epg_pct=round(100*epg_matched/channels) if channels else 0
+    epg_matched=g.get("EPG live mapped",g.get("EPG matched",0))
+    epg_mapped=g.get("EPG mapped",0)
+    epg_missing=g.get("EPG missing mapped",g.get("EPG missing",0))
+    epg_pct=round(g.get("EPG coverage pct",100*epg_matched/epg_mapped if epg_mapped else 0))
     OUT_MD.parent.mkdir(parents=True,exist_ok=True); OUT_SVG.parent.mkdir(parents=True,exist_ok=True)
     now=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     md=f"""# Live Project Dashboard
