@@ -107,6 +107,11 @@ jobs:
 
           locked_ids = set()
           primary_countries = defaultdict(set)
+          primary_names = defaultdict(set)
+
+          def base_name(name):
+              name = re.sub(r"\s*\[[^]]+\]\s*$", "", name).strip()
+              return name.lower()
 
           for block in blocks:
               info = block[0]
@@ -119,6 +124,9 @@ jobs:
                   country = country_code(cid)
                   if country:
                       primary_countries[identity_root(cid)].add(country)
+                  name = a.get("tvg-name", "") or (info.split(",", 1)[1].strip() if "," in info else "")
+                  if name:
+                      primary_names[base_name(name)].add(country)
 
           kept = []
           locked_removed = []
@@ -141,7 +149,11 @@ jobs:
               backup_country = country_code(cid)
               if backup_country:
                   countries = primary_countries.get(identity_root(cid), set())
+                  name_countries = primary_names.get(base_name(name), set())
                   if countries and backup_country not in countries:
+                      cross_country_removed.append(f"{name} [{cid}]")
+                      continue
+                  if not countries and name_countries and backup_country not in name_countries:
                       cross_country_removed.append(f"{name} [{cid}]")
                       continue
 
