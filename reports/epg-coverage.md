@@ -1,6 +1,6 @@
 # EPG Coverage Report
 
-Generated: **2026-09-28T06:23:44+00:00**
+Generated: **2026-09-28T06:26:04+00:00**
 
 This report audits the current playlist against the configured public EPG sources. It identifies the missing channels first; it does not publish or alter the EPG feed.
 
