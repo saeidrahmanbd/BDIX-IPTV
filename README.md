@@ -39,6 +39,10 @@ The playlist is intended for compatible IPTV players such as **XCIPTV** and othe
 - 📋 **[View all releases](https://github.com/saeidrahmanbd/BDIX-IPTV/releases)**
 - 💻 Portable Windows application — no installation required
 
+![Playlist Studio 2.8.2 — IPTV playlist editor and player](Playlist-Studio-screenshot.png)
+
+*Playlist Studio 2.8.2 — playlist management, channel organization, stream checking, and playback.*
+
 ## 🧭 Organization
 
 The playlist is structured to make browsing easier rather than simply collecting as many streams as possible.
