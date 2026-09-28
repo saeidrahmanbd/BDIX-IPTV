@@ -4,11 +4,11 @@ This report is generated automatically after playlist updating and logo migratio
 
 ## Summary
 
-- Playlist entries: **962**
-- Added channels: **45**
+- Playlist entries: **920**
+- Added channels: **5**
 - Removed channels: **0**
-- Logo URL changes: **0**
-- Logo status — local PNG: **962**
+- Logo URL changes: **15**
+- Logo status — local PNG: **920**
 - Logo status — repository reference: **0**
 - Logo status — external URL: **0**
 - Logo status — missing: **0**
@@ -19,51 +19,11 @@ This report is generated automatically after playlist updating and logo migratio
 
 | Channel | Category | Logo URL |
 |---|---|---|
-| NTV (Turkiye) | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png |
-| MTV (Germany) | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mtv.png |
-| MTV (United States) (1080p) | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mtv.png |
-| National Geographic (United States) (720p) | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png |
-| News24 (1080p) | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/news-24.png |
-| Nick Jr. (Italy) (720p) | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png |
-| Nick Jr. (United States) (720p) | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png |
-| Wipeout Xtra (1080p) | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wipeout-xtra-powered-by-banijay-efac5b76.png |
-| Anand TV (United Kingdom) (720p) [Not 24/7] | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/anand-tv.png |
-| BBC Earth | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-earth.png |
-| Channel 24 | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png |
-| Channel 9 | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-9.png |
-| Global TV | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/global-tv.png |
-| Global TV | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/global-tv.png |
-| History | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history.png |
-| MeTV | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/me-tv.png |
-| Minimax | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/minimax.png |
-| MyTime Movie Network | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network-1080p-79e6ec3226.png |
-| MyTime Movie Network | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network-1080p-79e6ec3226.png |
-| National Geographic | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png |
-| National Geographic | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png |
-| National Geographic | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png |
-| National Geographic | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png |
-| National Geographic | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png |
-| News 24 | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/news-24.png |
-| News 24 | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/news-24.png |
-| Nick Jr. | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png |
-| Nick Jr. | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png |
-| Nick Jr. | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png |
-| ntv | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png |
-| NTV | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png |
-| NTV | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png |
-| NTV | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png |
-| n-tv | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png |
-| NTV | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png |
-| NTV | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png |
-| NTV | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png |
-| RTV | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rtv.png |
-| RTV | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rtv.png |
-| Sony Movies | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-movies-563051ab.png |
-| Wipeout Xtra | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wipeout-xtra-powered-by-banijay-efac5b76.png |
-| Zoom | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom.png |
-| Zoom | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom.png |
-| News 24 | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/news-24.png |
-| NTV | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png |
+| Nick Jr. (India) (576p) | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png |
+| Love Nature | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/love-nature.png |
+| NOW Rock | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/now-rock-1080p-033d8aedc8.png |
+| Rakuten TV Comedy Movies | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rakuten-tv-comedy-movies.png |
+| Shanson TV | Backup | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shanson-tv-576p-3c01614e19.png |
 
 ## Removed Channels
 
@@ -75,7 +35,21 @@ This report is generated automatically after playlist updating and logo migratio
 
 | Channel | Previous Logo | Current Logo |
 |---|---|---|
-| None | — | — |
+| Amar Bangla [Backup 1] | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla.png | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla-backup-1.png |
+| Colors Bangla [Backup 2] | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-backup-2.png |
+| Zee Bangla HD [Backup 1] | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-hd.png | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-hd-backup-1.png |
+| Amar Bangla Digital [Backup 1] | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla-digital.png | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla-digital-backup-1.png |
+| Rajdhani TV [Backup 1] | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rajdhani-alt.png | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rajdhani-tv-backup-1.png |
+| Zee Bangla Sonar [Backup 2] | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar-backup-2.png |
+| Mei Ah Movie Channel | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mei-ah-movie-channel-1080p-427874b362.png | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mei-ah-movie-channel.png |
+| Mei Ah Movie Channel (1080p) | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mei-ah-movie-channel-1080p-427874b362.png | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mei-ah-movie-channel-1080p.png |
+| MyTime Movie Network | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network-720p-cc34ff46f5.png | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network.png |
+| MyTime Movie Network East | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network-1080p-79e6ec3226.png | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network-east.png |
+| Rajdhani TV [Backup 1] | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rajdhani-tv.png | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rajdhani-tv-backup-1.png |
+| Sony Entertainment TV [Backup 1] | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-entertainment-tv.png | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-entertainment-tv-backup-1.png |
+| Sony Yay! (1080p) | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-yay.png | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-yay-1080p.png |
+| SUN BANGLA [Backup 1] | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-bangla.png | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-bangla-backup-1.png |
+| Zee Bangla Sonar [Backup 4] | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png | https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar-backup-4.png |
 
 ## Logo Exceptions
 
@@ -85,7 +59,7 @@ No missing, broken, or external logo references detected.
 
 | Category | Channels |
 |---|---:|
-| Backup | 447 |
+| Backup | 405 |
 | Bangladesh | 53 |
 | Documentary & Wildlife | 61 |
 | Indian Bangla | 35 |
