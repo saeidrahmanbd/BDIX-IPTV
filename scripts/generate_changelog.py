@@ -66,7 +66,7 @@ def previous_playlist(current_commit):
 
 def meaningful(prev,cur):
     if not prev:
-        return {"added":len(cur),"removed":0,"backup_updated":0,"logos":0,"duplicates":0,"replaced":0,"new_names":[],"removed_names":[]}
+        return {"added":len(parse(cur)),"removed":0,"backup_updated":0,"logos":0,"duplicates":0,"replaced":0,"new_names":[],"removed_names":[]}
 
     old=parse(prev); new=parse(PLAYLIST.read_text(encoding="utf-8-sig"))
     old_urls={x["url"] for x in old}; new_urls={x["url"] for x in new}
