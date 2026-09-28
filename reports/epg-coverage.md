@@ -1,17 +1,17 @@
 # EPG Coverage Report
 
-Generated: **2026-09-28T06:23:06+00:00**
+Generated: **2026-09-28T06:23:44+00:00**
 
 This report audits the current playlist against the configured public EPG sources. It identifies the missing channels first; it does not publish or alter the EPG feed.
 
 ## Coverage Summary
 
-- Playlist channels: **876**
-- EPG matched: **267**
-- EPG missing: **609**
-- Exact ID matches: **121**
-- Alias/name matches: **146**
-- Matched with future programme data: **253**
+- Playlist channels: **863**
+- EPG matched: **262**
+- EPG missing: **601**
+- Exact ID matches: **118**
+- Alias/name matches: **144**
+- Matched with future programme data: **248**
 - Matched but no future programme detected: **14**
 
 ## Source Status
@@ -468,7 +468,6 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **Epic Music** — `EpicMusic.in` — Indian Music
 - **ETV Music** — `ETVMusic.in` — Indian Music
 - **Hindi Hits** — `HindiHits.in` — Indian Music
-- **Jalwa** — `local.bcc5ea317160` — Indian Music
 - **Joo Music** — `JooMusic.pk` — Indian Music
 - **NH BollyRaga** — `NHBollyRaga.in` — Indian Music
 - **Sana Plus** — `SanaPlus.in` — Indian Music
@@ -571,14 +570,9 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **WOW Kidz Tamil** — `local.5a0c6e1770c3` — Kids
 - **WOW Kidz Telugu** — `WOWKidz.in@Telugu` — Kids
 - **ZooMoo** — `ZooMoo.sg` — Kids
-- **AMC** — `AMC.us` — Not Playing
 - **Astro Cricbuzz** — `AstroCricket.my` — Not Playing
 - **ATN Music** — `ATNMusic.bd` — Not Playing
 - **Bengali Beats** — `local.298c02a76a55` — Not Playing
-- **CCTV-Nostalgia Theater** — `CCTVNostalgiaTheater.cn` — Not Playing
-- **CCTV-Storm Music** — `CCTVStormMusic.cn` — Not Playing
-- **CCTV-Storm Theater** — `CCTVStormTheater.cn` — Not Playing
-- **CCTV-The First Theater** — `CCTVTheFirstTheater.cn` — Not Playing
 - **Channel S** — `local.channel-s` — Not Playing
 - **Colors Bangla [Backup 2]** — `ColorsBangla.in` — Not Playing
 - **Deepto TV [Backup 2]** — `DeeptoTV.bd` — Not Playing
@@ -587,15 +581,13 @@ These are the channels that currently have no direct or safe alias match. Invest
 - **Enter-Film** — `EnterFilm.ua` — Not Playing
 - **ESPN Deportes** — `ESPNDeportes.us` — Not Playing
 - **Green TV** — `GreenTV.bd` — Not Playing
-- **HBO Hits** — `HBOHits.us` — Not Playing
 - **Hindi Movies** — `Hindi Movies` — Not Playing
-- **Manoranjan Movies** — `ManoranjanMovies.in` — Not Playing
+- **Jalwa** — `local.bcc5ea317160` — Not Playing
 - **National Geographic [Backup 1]** — `NationalGeographic.in` — Not Playing
 - **NBA TV** — `NBATV.us` — Not Playing
 - **Shanson TV** — `ShansonTV.ru` — Not Playing
 - **T Sports** — `TSports.bd` — Not Playing
 - **ZB Cartoon** — `ZBCartoon.in` — Not Playing
-- **Zee Action [Backup 2]** — `ZeeAction.in` — Not Playing
 - **Al Istiqama** — `AlistiqamaTV.om` — Religious
 - **Al Qamar** — `AlQamarTV.ae` — Religious
 - **Al Quran Al Kareem TV** — `AlQuranAlKareemTV.sa` — Religious
