@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'scripts/fetch_missing_logos.py'
+      - 'IPTV-Playlist.m3u'
 
 permissions:
   contents: write
