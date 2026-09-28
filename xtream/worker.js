@@ -5,6 +5,7 @@ const CACHE_TTL = 60;
 const EPG_URLS = [
   "https://epg.pw/xmltv/epg_IN.xml",
   "https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml",
+  "https://iptv-org.github.io/epg/guides/in/tataplay.com.epg.xml",
   "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
   "https://iptv-epg.org/files/epg-in.xml"
 ];
@@ -41,7 +42,19 @@ const EPG_ID_MAP = {
   "GoldminesMovies.in":["GoldminesMovies.in@SD"],
   "MHOneMovies.in":["MHOneMovies.in@SD"],
   "ETVMusic.in":["ETVMusic.in@SD"],
-  "SonySAB.in":["SonySAB.in@SD"]
+  "SonySAB.in":["SonySAB.in@SD"],
+  "local.bb3c3114fb20":["ColorsBangla.in@HD"],
+  "local.285a6aa870f3":["JalshaMovies.in@HD"],
+  "local.zee-24-ghanta":["Zee24Ghanta.in@SD"],
+  "local.072484feec7":["ZeeBangla.in@HD"],
+  "local.5f40adcebbde":["Colors.in@SD","Colors.in@HD"],
+  "local.history-tv18":["HistoryTV18.in@SD","HistoryTV18.in@HD"],
+  "CartoonNetwork.uk":["CartoonNetwork.in@SD"],
+  "CartoonNetworkHDPlus.in":["CartoonNetwork.in@SD"],
+  "DiscoveryKids.au":["DiscoveryKids.in@SD"],
+  "local.enter-10-bangla":["Enterr10Bangla.in@SD"],
+  "local.gold-mines-movie":["GoldminesMovies.in@SD"],
+  "SonyEntertainmentTelevision":["SonyEntertainmentTelevision.in@SD","SonyEntertainmentTelevision.in@HD"]
 };
 
 function json(data, status = 200) {
@@ -140,7 +153,10 @@ function epgNameAliases(s){
     zeebanglahd:"zeebangla",
     starjalshahd:"starjalsha",
     starjalsa:"starjalsha",
-    colorsbanglahd:"colorsbangla"
+    colorsbanglahd:"colorsbangla",
+    enter10bangla:"enter10bangla",
+    goldminesmovie:"goldminesmovies",
+    sonyentertainmenttv:"sonyentertainmenttelevision"
   };
   if(aliases[n]) out.add(aliases[n]);
   return [...out];
