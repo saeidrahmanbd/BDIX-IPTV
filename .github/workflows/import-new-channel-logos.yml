@@ -32,33 +32,29 @@ jobs:
           curl -L --fail --retry 3 --max-time 30 -o logos/travel-xp-english-eu.png 'https://i.imgur.com/huU8puw.png'
           python - <<'PY'
           import re, requests
-          from PIL import Image
           page = requests.get('https://archive.adgully.com/bhojpuri-channel-rankings-to-see-a-shake-up-as-filamchi-aims-for-top-3-103860.html', timeout=30).text
           urls = re.findall(r'https?[^"\\\']+', page)
           cand = [u.replace('\\/', '/') for u in urls if 'filamchi' in u.lower() and re.search(r'\\.(?:png|jpe?g|webp)(?:[?#]|$)', u, re.I)]
           if not cand:
               raise SystemExit('No Filamchi image URL found')
           u = cand[0]
-          data = requests.get(u, timeout=30).content
-          open('/tmp/filamchi-bhojpuri.bin','wb').write(data)
-          Image.open('/tmp/filamchi-bhojpuri.bin').convert('RGBA').save('logos/filamchi-bhojpuri.png')
+          open('/tmp/filamchi-bhojpuri.bin','wb').write(requests.get(u, timeout=30).content)
           print('Downloaded', u)
           PY
+          convert /tmp/filamchi-bhojpuri.bin logos/filamchi-bhojpuri.png
           python - <<'PY'
           import re, requests
           from urllib.parse import urljoin
-          from PIL import Image
           page = requests.get('https://www.gangaurtv.com/', timeout=30).text
           urls = re.findall(r'(?:src|href)=["\\\']([^"\\\']+)', page, re.I)
           cand = [urljoin('https://www.gangaurtv.com/', u) for u in urls if 'gangaur' in u.lower() and re.search(r'\\.(?:png|jpe?g|webp)(?:[?#]|$)', u, re.I)]
           if not cand:
               raise SystemExit('No Gangaur image URL found')
           u = cand[0]
-          data = requests.get(u, timeout=30).content
-          open('/tmp/gangaur.bin','wb').write(data)
-          Image.open('/tmp/gangaur.bin').convert('RGBA').save('logos/gangaur.png')
+          open('/tmp/gangaur.bin','wb').write(requests.get(u, timeout=30).content)
           print('Downloaded', u)
           PY
+          convert /tmp/gangaur.bin logos/gangaur.png
 
           for f in logos/orange-bangla-tv.png logos/california-music-channel.png logos/intravel.png logos/travel-xp-english-eu.png logos/filamchi-bhojpuri.png logos/gangaur.png; do
             test -s "$f"
