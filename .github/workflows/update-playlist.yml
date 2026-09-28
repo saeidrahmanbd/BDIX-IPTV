@@ -208,7 +208,42 @@ jobs:
 
           for attempt in 1 2 3; do
             git fetch origin main
-            git rebase origin/main
+
+            # Another scheduled/push run may have updated main while this run
+            # was generating the playlist. Rebase onto the latest main and
+            # resolve report-only conflicts automatically. Playlist/logo
+            # conflicts are never auto-resolved.
+            if ! git rebase origin/main; then
+              conflicted=$(git diff --name-only --diff-filter=U)
+              allowed_conflicts=$(printf '%s\\n' \
+                "reports/auto-update.md" \
+                "reports/playlist-audit.md")
+
+              unexpected_conflicts=$(printf '%s\\n' "$conflicted" | \
+                grep -Fxv -f <(printf '%s\\n' "$allowed_conflicts") || true)
+
+              if [ -n "$conflicted" ] && [ -z "$unexpected_conflicts" ]; then
+                echo "Report-only rebase conflict detected; resolving reports and continuing."
+                git checkout --theirs -- reports/auto-update.md reports/playlist-audit.md
+                git add reports/auto-update.md reports/playlist-audit.md
+                GIT_EDITOR=true git rebase --continue
+              else
+                echo "Rebase conflict involves playlist/logo or another unexpected file:"
+                printf '%s\\n' "$conflicted"
+                git rebase --abort
+                exit 1
+              fi
+            fi
+
+            # Rebuild reports after rebasing so they describe the final
+            # playlist state that will actually be pushed.
+            python scripts/generate_detailed_report_fixed.py
+            python scripts/audit_playlist.py
+            git add reports/auto-update.md reports/playlist-audit.md
+            if ! git diff --cached --quiet; then
+              git commit --amend --no-edit
+            fi
+
             if git push origin HEAD:main; then
               echo "Backup-only playlist and logo changes pushed successfully on attempt ${attempt}."
               exit 0
