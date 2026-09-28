@@ -27,7 +27,11 @@ jobs:
           mkdir -p logos
           python -m pip install --disable-pip-version-check --quiet pillow
 
-          curl -L --fail --retry 3 --max-time 30 -o logos/orange-bangla-tv.png 'https://static.wikia.nocookie.net/etv-gspn-bangla/images/e/e5/Orange_Bangla_logo_%282018%29.png'
+          curl -L --fail --retry 3 --max-time 30 -o /tmp/orange-bangla-tv.bin 'https://static.wikia.nocookie.net/etv-gspn-bangla/images/e/e5/Orange_Bangla_logo_%282018%29.png'
+          python - <<'PY'
+          from PIL import Image
+          Image.open('/tmp/orange-bangla-tv.bin').convert('RGBA').save('logos/orange-bangla-tv.png')
+          PY
           curl -L --fail --retry 3 --max-time 30 -o logos/california-music-channel.png 'https://commons.wikimedia.org/wiki/Special:Redirect/file/California%20Music%20Channel%20Logo%20(cropped).png'
           curl -L --fail --retry 3 --max-time 30 -o logos/intravel.png 'https://jiotvimages.cdn.jio.com/dare_images/images/Intravel.png'
           curl -L --fail --retry 3 --max-time 30 -o logos/travel-xp-english-eu.png 'https://i.imgur.com/huU8puw.png'
