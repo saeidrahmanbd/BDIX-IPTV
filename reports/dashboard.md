@@ -1,6 +1,6 @@
 # Live Project Dashboard
 
-_Last generated: **2026-09-28 18:20 UTC**_
+_Last generated: **2026-09-28 18:21 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -17,9 +17,9 @@ _Last generated: **2026-09-28 18:20 UTC**_
 
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
-- Same-name collisions: **0**
+- Same-name collisions: **46**
 - Cross-country Backup collisions: **0**
 - EPG missing: **38**
-- Repeated-failure stream candidates: **11**
+- Repeated-failure stream candidates: **6**
 
 This file is generated automatically. It is safe for the Wiki to display as a live dashboard source.
