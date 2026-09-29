@@ -3,6 +3,7 @@ name: Live Stream Availability Audit
 on:
   push:
     paths:
+      - 'IPTV-Playlist.m3u'
       - '.github/workflows/live-stream-audit.yml'
       - 'scripts/live_stream_audit.py'
   workflow_dispatch:
