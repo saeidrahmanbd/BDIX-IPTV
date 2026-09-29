@@ -12,7 +12,7 @@ const EPG_URLS = [
 ];
 const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v11";
 const EPG_CACHE_TTL = 900;
-// Direct M3U EPG endpoint deployment trigger. v10: IN1 + complementary IN4.
+// Direct M3U EPG endpoint deployment trigger. v11: robust XML/gzip source handling.
 
 // Cross-map playlist tvg-id variants to canonical EPG IDs used by public guides.
 const EPG_ID_MAP = {
@@ -122,20 +122,21 @@ async function getEpg(env){
       const r=await fetch(source,{headers:{"user-agent":"BDIX-IPTV-Xtream-Gateway/1.0","accept":"application/gzip, application/xml, text/xml, */*"}});
       if(!r.ok) continue;
       const bytes=await r.arrayBuffer();
-      const encoding=(r.headers.get("content-encoding")||"").toLowerCase();
+      const raw=new Uint8Array(bytes);
+      const looksLikeXml=raw.length>=5 && String.fromCharCode(...raw.slice(0,5)).includes("<");
       let xml;
-      if(encoding.includes("gzip")) {
-        xml=new TextDecoder().decode(bytes);
-      } else if(source.endsWith(".gz")) {
+      if(looksLikeXml) {
+        xml=new TextDecoder().decode(raw);
+      } else if(source.endsWith(".gz") || (r.headers.get("content-type")||"").toLowerCase().includes("gzip") || (r.headers.get("content-encoding")||"").toLowerCase().includes("gzip")) {
         try {
-          xml=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip"))).text();
+          xml=await new Response(new Blob([raw]).stream().pipeThrough(new DecompressionStream("gzip"))).text();
         } catch {
-          xml=new TextDecoder().decode(bytes);
+          continue;
         }
       } else {
-        xml=new TextDecoder().decode(bytes);
+        xml=new TextDecoder().decode(raw);
       }
-      if(xml.includes("<tv") && xml.includes("<programme")) xmls.push(xml);
+      if(/<tv(?:\\s|>)/i.test(xml) && /<programme(?:\\s|>)/i.test(xml)) xmls.push(xml);
     }catch{}
   }
   if(!xmls.length) throw new Error("All EPG sources failed");
