@@ -278,7 +278,7 @@ http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/967.ts
 https://drk6xq0vhn.gpcdn.net/live/zee_bollywood_abr/index.m3u8
 #EXTINF:-1 channel-id="ZeeCinema.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema.png" tvg-id="ZeeCinema.in@HD" tvg-name="Zee Cinema" group-title="Indian Movies" tvg-chno="351",Zee Cinema
 https://drk6xq0vhn.gpcdn.net/live/zee_cinema_hd_abr/index.m3u8
-#EXTINF:-1 tvg-id="7SMusic.in" tvg-name="7S Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" tvg-chno="363" channel-id="7SMusic.in" group-title="Indian Music",7S Music
+#EXTINF:-1 tvg-id="7SMusic.in@SD" tvg-name="7S Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" tvg-chno="363" channel-id="7SMusic.in@SD" group-title="Indian Music",7S Music
 https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8
 #EXTINF:-1 channel-id="7X Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7x-punjabi.png" tvg-id="7X Music" tvg-name="7X Punjabi" tvg-chno="365" group-title="Indian Music",7X Punjabi
 https://cdn2.in/7xPunjabihls/live.m3u8
@@ -348,7 +348,7 @@ https://mumt01.tangotv.in/O5aw8Zn3RAMDHENU/mpegts
 https://amg01412-xiaomiasia-sagamusic-xiaomi-h54ye.amagi.tv/playlist/amg01412-xiaomiasia-sagamusic-xiaomi/playlist.m3u8
 #EXTINF:-1 tvg-id="SagaMusicHaryanvi" tvg-name="Saga Music Haryanvi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saga-music-haryanvi.png" tvg-chno="410" channel-id="SagaMusicHaryanvi" group-title="Indian Music",Saga Music Haryanvi
 https://amg01412-xiaomiasia-sagamusicharyanvi-xiaomi-0v34j.amagi.tv/playlist/amg01412-xiaomiasia-sagamusicharyanvi-xiaomi/playlist.m3u8
-#EXTINF:-1 channel-id="SteelbirdMusic.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/steelbird-music.png" tvg-id="SteelbirdMusic.in" tvg-name="Steelbird Music" tvg-chno="412" group-title="Indian Music",Steelbird Music
+#EXTINF:-1 channel-id="SteelbirdMusic.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/steelbird-music.png" tvg-id="SteelbirdMusic.in@SD" tvg-name="Steelbird Music" tvg-chno="412" group-title="Indian Music",Steelbird Music
 https://cdn2.in/SteelbirdMusicTVhls/live.m3u8
 #EXTINF:-1 tvg-id="SunMusic.in@SD" tvg-name="Sun Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-music.png" tvg-chno="413" channel-id="SunMusic.in@SD" group-title="Indian Music",Sun Music
 https://hls.sunmusic.live/hls/stream.m3u8
@@ -472,11 +472,11 @@ https://streams.tangotv.in/MHONEDILSE/ORIGIN/index.m3u8
 https://streams.tangotv.in/MHONE/ORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="MKSix.in" tvg-name="MK Six" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mk-six.png" tvg-chno="487" channel-id="MKSix.in" group-title="Indian Entertainment",MK Six
 https://mumt06.tangotv.in/qYyB8fXVMKSIX/index.m3u8
-#EXTINF:-1 tvg-id="custom.nazara" tvg-name="Nazara" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nazara.png" tvg-chno="488" channel-id="custom.nazara" group-title="Indian Entertainment",Nazara
+#EXTINF:-1 tvg-id="Nazara.in@SD" tvg-name="Nazara" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nazara.png" tvg-chno="488" channel-id="Nazara.in@SD" group-title="Indian Entertainment",Nazara
 https://cc-p1izg43bk7sj5.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-p1izg43bk7sj5/DIYC/PMSL/IN10/Nazara_IN_B/Nazara_IN_B.m3u8
 #EXTINF:-1 tvg-id="NKRTVKannada.in" tvg-name="NKR TV Kannada" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nkr-tv-kannada.png" tvg-chno="489" channel-id="NKRTVKannada.in" group-title="Indian Entertainment",NKR TV Kannada
 https://stream.ottlive.co.in/nkrtv/index.m3u8
-#EXTINF:-1 channel-id="OnePaschima.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/one-paschima.png" tvg-id="OnePaschima.in" tvg-name="One Paschima" group-title="Indian Entertainment" tvg-chno="490",One Paschima
+#EXTINF:-1 channel-id="OnePaschima.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/one-paschima.png" tvg-id="OnePaschima.in@SD" tvg-name="One Paschima" group-title="Indian Entertainment" tvg-chno="490",One Paschima
 https://live.ekamraott.com/onepaschima/onepaschima/index.m3u8
 #EXTINF:-1 tvg-id="PardesiTV.ca" tvg-name="Pardesi TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pardesi-tv.png" tvg-chno="491" channel-id="PardesiTV.ca" group-title="Indian Entertainment",Pardesi TV
 http://stream.pardesitv.online/pardesi/tracks-v1a1/mono.m3u8
@@ -998,7 +998,7 @@ https://30a-tv.com/feeds/ceftech/30atvmusic.m3u8
 https://30a-tv.com/music.m3u8
 #EXTINF:-1 channel-id="4everDrama.ua" tvg-id="4everDrama.ua" tvg-name="4ever Drama" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4ever-drama-1080p-5925078a10.png" tvg-country="UA" tvg-language="ukr" group-title="Backup",4ever Drama (1080p) [Backup 1]
 http://stream.mcquack.net/260/index.m3u8
-#EXTINF:-1 channel-id="7SMusic.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" tvg-id="7SMusic.in" tvg-name="7S Music" tvg-language="tam" tvg-country="IN" group-title="Backup",7S Music
+#EXTINF:-1 channel-id="7SMusic.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" tvg-id="7SMusic.in@SD" tvg-name="7S Music" tvg-language="tam" tvg-country="IN" group-title="Backup",7S Music
 https://cdn.pishow.tv/ott/live/1257/master.m3u8
 #EXTINF:-1 channel-id="8XM.pk" tvg-id="8XM.pk" tvg-name="8XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png" tvg-country="PK" tvg-language="urd" group-title="Backup",8XM
 https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
