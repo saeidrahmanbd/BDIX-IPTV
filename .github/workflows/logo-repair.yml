@@ -1,0 +1,47 @@
+name: Logo Repair
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'IPTV-Playlist.m3u'
+      - 'scripts/migrate_external_logos_fixed.py'
+      - 'scripts/audit_playlist.py'
+      - '.github/workflows/logo-repair.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: logo-repair
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image dependencies
+        run: python -m pip install --disable-pip-version-check pillow cairosvg
+      - name: Repair external logos
+        run: python scripts/migrate_external_logos_fixed.py
+      - name: Audit playlist
+        run: python scripts/audit_playlist.py
+      - name: Commit repaired playlist and logos
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- IPTV-Playlist.m3u logos/ reports/playlist-audit.md; then
+            echo "No logo repair changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add IPTV-Playlist.m3u logos/ reports/playlist-audit.md
+          git commit -m "Repair external channel logos"
+          git push origin HEAD:main
