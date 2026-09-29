@@ -54,7 +54,7 @@ jobs:
           from pathlib import Path
           lines = Path("IPTV-Playlist.m3u").read_text(encoding="utf-8-sig").replace("\r","").splitlines()
           locked = set(os.environ["LOCKED_CATEGORIES"].split("|"))
-          attr_re = re.compile(r'([\\w-]+)="([^"]*)"')
+          attr_re = re.compile(r'([\w-]+)="([^"]*)"')
           rows = []
           for i, line in enumerate(lines):
               if not line.startswith("#EXTINF"):
@@ -70,7 +70,7 @@ jobs:
       - name: Update playlist — backup and new channels
         env:
           IPTV_UPDATE_MODE: backup_only
-          LOCKED_CATEGORIES: 'Bangladesh|Indian Bangla|Indian Movies|Indian Entertainment|Indian Movies|Indian Music|International|Documentary & Wildlife|Kids|Religious|Sports|Backup|Not Playing'
+          LOCKED_CATEGORIES: 'Bangladesh|Indian Bangla|Indian Movies|Indian Music|Indian Entertainment|International|Documentary & Wildlife|Kids|Religious|Sports|Backup|Not Playing'
         run: python scripts/update_playlist.py
 
       - name: Verify locked categories and New Channels placement
