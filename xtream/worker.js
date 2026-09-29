@@ -18,6 +18,7 @@ const EPG_ID_MAP = {
   "AakaashAath.in":["AakaashAath.in@SD","Aakash.Aath.in","AAKASH.AATH.in"],
   "AlankarTV.in":["AlankarTV.in@SD"],
   "DDTripura.in":["DDTripura.in@SD"],
+  "EpicBharat.in":["EpicBharat.in@SD","Epic.TV.in","EPIC.in","Epic.in"],
   "KhushbooBangla.in":["KhushbooBangla.in@SD"],
   "RupasiBangla.in":["RupasiBangla.in@SD","RUPASI.BANGLA.in"],
   "ZBCinema.in":["ZeeBanglaCinema.in@SD","ZeeBanglaSonar.in@SD","ZEE.BANGLA.CINEMA.in"],
