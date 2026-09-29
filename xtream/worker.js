@@ -3,17 +3,19 @@ const CACHE_KEY = "https://bdix-iptv.internal/playlist";
 const CACHE_TTL = 60;
 
 const EPG_URLS = [
-  // Keep the request path memory-safe. IN1 is the broad India guide;
-  // additional large guides are handled by the offline coverage workflow.
-  "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz"
+  // IN1 is the broad India guide. IN4 is a smaller complementary India guide
+  // with additional regional/channel IDs. Keep the live set to these two to
+  // avoid the memory pressure caused by the much larger ALL_SOURCES feed.
+  "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
+  "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz"
 ];
-const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v9";
+const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v10";
 const EPG_CACHE_TTL = 900;
-// Direct M3U EPG endpoint deployment trigger. v9: memory-safe India guide.
+// Direct M3U EPG endpoint deployment trigger. v10: IN1 + complementary IN4.
 
 // Cross-map playlist tvg-id variants to canonical EPG IDs used by public guides.
 const EPG_ID_MAP = {
-  "AakaashAath.in":["AakaashAath.in@SD","Aakash.Aath.in"],
+  "AakaashAath.in":["AakaashAath.in@SD","Aakash.Aath.in","AAKASH.AATH.in"],
   "AlankarTV.in":["AlankarTV.in@SD"],
   "DDTripura.in":["DDTripura.in@SD"],
   "KhushbooBangla.in":["KhushbooBangla.in@SD"],
@@ -26,13 +28,13 @@ const EPG_ID_MAP = {
   "GoldminesAction.in":["GoldminesAction.in@SD"],
   "GoldminesBollywood.in":["GoldminesBollywood.in@SD","Goldmines.Bollywood.in","Goldmines.Bollywood.Today.in2"],
   "GoldminesMovies.in":["GoldminesMovies.in@SD","Goldmines.Movies.in","Goldmines.Movies.Today.For.Dd.Free.Dish.Users.in2","Goldmines.Movie.Today.in2"],
-  "AnjanTV.in@SD":["AnjanTV.in@SD","Anjan.TV.in"],
+  "AnjanTV.in@SD":["AnjanTV.in@SD","Anjan.TV.in","ANJAN.TV.in"],
   "B4UBhojpuri.in@SD":["B4UBhojpuri.in@SD","B4U.Bhojpuri.in","B4u.Bhojpuri.in2"],
   "MHOneDilSe.in":["MHOneDilSe.in@SD","MH1.Dil.Se.in","Mh1.Dil.Se.Tv.Channel.Today.in2"],
   "MTV.in@SD":["MTV.in@SD","MTV.in"],
   "KalaignarMurasu.in":["KalaignarMurasu.in","MURASU.in"],
   "ShemarooJosh.in":["ShemarooJosh.in@SD","Shemaroo.Josh.Today.in2"],
-  "DisneyChannel.in":["DisneyChannel.in@HD","Disney.in"],
+  "DisneyChannel.in":["DisneyChannel.in@HD","Disney.in","DISNEY.CHANNEL.in"],
   "StarJalsha.in":["StarJalsha.in@SD","StarJalsha.in@HD"],
   "ZeeBangla.in":["ZeeBangla.in@SD","ZeeBangla.in@HD"],
   "ColorsBangla.in":["ColorsBangla.in@SD","ColorsBangla.in@HD"],
@@ -48,10 +50,10 @@ const EPG_ID_MAP = {
   "MHOneMovies.in":["MHOneMovies.in@SD"],
   "ETVMusic.in":["ETVMusic.in@SD"],
   "SonySAB.in":["SonySAB.in@SD"],
-  "local.bb3c3114fb20":["ColorsBangla.in@HD"],
-  "local.285a6aa870f3":["JalshaMovies.in@HD"],
+  "local.bb3c3114fb20":["ColorsBangla.in@HD","Colors.Bangla.HD.in","COLORS.BANGLA.HD.in"],
+  "local.285a6aa870f3":["JalshaMovies.in@HD","JalshaMovies.in@SD","Star.Jalsha.Movies.in","JALSHA.MOVIES.in","JALSHA.MOVIES.HD.in"],
   "local.zee-24-ghanta":["Zee24Ghanta.in@SD"],
-  "local.072484feec7":["ZeeBangla.in@HD"],
+  "local.072484feec7":["ZeeBangla.in@HD","Zee.Bangla.HD.in","ZEE.BANGLA.HD.in"],
   "local.5f40adcebbde":["Colors.in@SD","Colors.in@HD"],
   "local.history-tv18":["HistoryTV18.in@SD","HistoryTV18.in@HD"],
   "CartoonNetwork.uk":["CartoonNetwork.in@SD"],
@@ -59,7 +61,7 @@ const EPG_ID_MAP = {
   "DiscoveryKids.au":["DiscoveryKids.in@SD"],
   "local.enter-10-bangla":["Enterr10Bangla.in@SD"],
   "local.gold-mines-movie":["GoldminesMovies.in@SD"],
-  "SonyEntertainmentTelevision":["SonyEntertainmentTelevision.in@SD","SonyEntertainmentTelevision.in@HD"]
+  "SonyEntertainmentTelevision":["SonyEntertainmentTelevision.in@SD","SonyEntertainmentTelevision.in@HD","Sony.Entertainment.Television.in"]
 };
 
 function json(data, status = 200) {
