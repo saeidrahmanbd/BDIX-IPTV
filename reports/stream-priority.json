@@ -30,17 +30,17 @@
     ],
     "4evercinema.ua": [
       {
-        "failure_streak": 1,
+        "failure_streak": 0,
         "name": "4ever Cinema",
         "role": "Primary",
-        "score": 75,
-        "status": "Invalid HLS",
+        "score": 105,
+        "status": "Healthy",
         "url": "http://stream.mcquack.net/258/index.m3u8"
       }
     ],
     "4everdrama.ua": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "4ever Drama",
         "role": "Primary",
         "score": 70,
@@ -770,11 +770,11 @@
     ],
     "bangbangtv": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Bang Bang TV",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "HTTP error",
         "url": "https://streams.sofast.tv/ptnr-yupptv/title-BANG-BANG-TV-ENG_yupptv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/6a98fce2-bf4c-4bfb-91f4-c43851bb3801/manifest.m3u8"
       }
     ],
@@ -1294,11 +1294,11 @@
     ],
     "cmcusacountrymusicchannel.us@sd": [
       {
-        "failure_streak": 1,
+        "failure_streak": 0,
         "name": "CMC-USA Country Music Channel",
         "role": "Primary",
-        "score": 75,
-        "status": "Invalid HLS",
+        "score": 105,
+        "status": "Healthy",
         "url": "https://hwlive.streamingmediahosting.com/14215-live/0_obd393sh/playlist.m3u8"
       }
     ],
@@ -1392,11 +1392,11 @@
     ],
     "colorsrishteyamericas.in": [
       {
-        "failure_streak": 1,
+        "failure_streak": 0,
         "name": "Colors Rishtey",
         "role": "Primary",
-        "score": 70,
-        "status": "Invalid HLS",
+        "score": 100,
+        "status": "Healthy",
         "url": "https://manatv.akamaized.net/090823/smil:ristheyamerica.smil/playlist.m3u8"
       }
     ],
@@ -2027,17 +2027,17 @@
         "failure_streak": 0,
         "name": "Star News",
         "role": "Backup 2",
-        "score": 95,
-        "status": "Redirect/temporary",
-        "url": "https://iptvlive.ahmed-bd-org.workers.dev/star-news-1/index.m3u8"
-      },
-      {
-        "failure_streak": 0,
-        "name": "Star News",
-        "role": "Backup 3",
         "score": 90,
         "status": "Redirect/temporary",
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/star-news-2/index.m3u8"
+      },
+      {
+        "failure_streak": 1,
+        "name": "Star News",
+        "role": "Backup 3",
+        "score": 75,
+        "status": "HTTP error",
+        "url": "https://iptvlive.ahmed-bd-org.workers.dev/star-news-1/index.m3u8"
       }
     ],
     "custom.star.sports.sl.1": [
@@ -3010,11 +3010,11 @@
     ],
     "enterfilm.ua": [
       {
-        "failure_streak": 1,
+        "failure_streak": 0,
         "name": "Enter-Film",
         "role": "Primary",
-        "score": 70,
-        "status": "Invalid HLS",
+        "score": 100,
+        "status": "Healthy",
         "url": "http://stream.mcquack.net/322/index.m3u8"
       }
     ],
@@ -3132,7 +3132,7 @@
     ],
     "etvcinema.in": [
       {
-        "failure_streak": 3,
+        "failure_streak": 4,
         "name": "ETV Cinema",
         "role": "Primary",
         "score": 0,
@@ -3502,7 +3502,7 @@
     ],
     "greentv.bd": [
       {
-        "failure_streak": 3,
+        "failure_streak": 4,
         "name": "Green TV",
         "role": "Primary",
         "score": 0,
@@ -6280,7 +6280,7 @@
         "url": "https://drk6xq0vhn.gpcdn.net/live/max_hd_abr/index.m3u8"
       },
       {
-        "failure_streak": 3,
+        "failure_streak": 4,
         "name": "Sony Max",
         "role": "Backup 2",
         "score": 0,
@@ -7583,5 +7583,5 @@
       }
     ]
   },
-  "generated": "2026-09-29T18:06:57+00:00"
+  "generated": "2026-09-29T22:19:32+00:00"
 }\n
