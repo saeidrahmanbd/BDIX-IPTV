@@ -4,11 +4,11 @@ _Last generated: **2026-09-29 16:42 UTC**_
 
 | Metric | Current |
 |---|---:|
-| 📺 Streams | **1** |
-| 📡 Channels | **1** |
-| 🇧🇩 Bangladesh | **1** |
-| 🇮🇳 India | **0** |
-| 🔁 Backup Streams | **0** |
+| 📺 Streams | **851** |
+| 📡 Channels | **580** |
+| 🇧🇩 Bangladesh | **48** |
+| 🇮🇳 India | **218** |
+| 🔁 Backup Streams | **325** |
 | 🖼️ Logos | **100.0%** |
 | 📅 EPG Coverage | **61%** |
 | 🟢 Stream Health | **100%** |
