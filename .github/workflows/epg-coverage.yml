@@ -8,6 +8,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'IPTV-Playlist.m3u'
       - 'scripts/epg_coverage.py'
       - '.github/workflows/epg-coverage.yml'
       - 'IPTV-Playlist.m3u'
