@@ -2,6 +2,6 @@
 
 ## 2026-09-29
 
-- 🖼️ **17 logo reference(s) corrected**
+- No meaningful playlist changes detected.
 
 _Generated automatically from the repository playlist diff._
