@@ -37,23 +37,46 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+
           files=(
             "IPTV-Playlist.m3u"
             "reports/not-playing-quarantine.md"
             "reports/playlist-audit.md"
           )
-          if [ -z "$(git status --porcelain -- "${files[@]}")" ]; then
-            echo "No quarantine changes."
-            exit 0
-          fi
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "${files[@]}"
-          git commit -m "Quarantine non-standard and failed streams"
+
           for attempt in 1 2 3; do
+            echo "Quarantine commit attempt ${attempt}/3"
+
+            # Always start from the latest main. Repository-writing workflows
+            # are serialized, but main may have advanced since workflow_run
+            # was queued. Re-running quarantine against the latest playlist is
+            # safer than rebasing a stale generated commit onto it.
             git fetch origin main
-            if ! git rebase origin/main; then git rebase --abort; exit 1; fi
-            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard origin/main
+            git clean -fd
+
+            python scripts/quarantine_streams.py
+            python scripts/audit_playlist.py
+
+            if [ -z "$(git status --porcelain -- "${files[@]}")" ]; then
+              echo "No quarantine changes."
+              exit 0
+            fi
+
+            git add "${files[@]}"
+            git commit -m "Quarantine non-standard and failed streams"
+
+            if git push origin HEAD:main; then
+              echo "Quarantine changes pushed successfully."
+              exit 0
+            fi
+
+            echo "Push failed because main advanced; retrying from latest main."
             sleep 3
           done
+
+          echo "Unable to push quarantine changes after 3 attempts."
           exit 1
