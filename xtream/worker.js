@@ -8,8 +8,7 @@ const EPG_URLS = [
   // avoid the memory pressure caused by the much larger ALL_SOURCES feed.
   "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
   "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
-  "https://iptv-epg.org/files/epg-in.xml",
-  "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz"
+  "https://iptv-epg.org/files/epg-in.xml"
 ];
 const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v10";
 const EPG_CACHE_TTL = 900;
