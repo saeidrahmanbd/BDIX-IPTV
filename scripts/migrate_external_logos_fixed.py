@@ -34,9 +34,9 @@ FALLBACK_LOGOS = {
     "moviedomefamily": "https://www.senselan.ch/files/img/NexTV2/Sender/406.png",
     "sanandatv": "https://www.jagobd.com/wp-content/uploads/2024/10/sananda.jpg",
     "sonicbangla": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONIC/images/LOGO_HD/image.png",
-    "marqueesportsnetwork": "https://s3.aynaott.com/storage/66bdaa21aba96de6d32a3515715f7502",
-    "adithyatv": "http://103.176.90.118/picons/logos/logos/ADITHYA.png",
-    "zeesarthak": "http://103.176.90.118/picons/logos/logos/ZEE-SARTHAK.png",
+    "marqueesportsnetwork": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Marquee_Sports_Network_Logo.svg/512px-Marquee_Sports_Network_Logo.svg.png",
+    "adithyatv": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ADITHYA_TV/images/LOGO_HD/image.png",
+    "zeesarthak": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_SARTHAK/images/LOGO_HD/LOGO_HD_image.png",
 }
 
 # Exact playlist ID -> explicit logo source. Add only verified mappings here.
@@ -89,6 +89,9 @@ ID_LOGO_MAP = {
     "redbulltv.at@eumena": "https://images.pluto.tv/channels/5e7cb84a172a0f0007da69e4/colorLogoPNG.png",
     "talksport.uk@sd": "https://upload.wikimedia.org/wikipedia/en/9/9d/Talksport_logo.png",
     "wildtv.ca@sd": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Wild_TV_logo_2020.png/960px-Wild_TV_logo_2020.png",
+    "marqueesportsnetwork.us": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Marquee_Sports_Network_Logo.svg/512px-Marquee_Sports_Network_Logo.svg.png",
+    "adithyatv.in@sd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ADITHYA_TV/images/LOGO_HD/image.png",
+    "zeesarthak.in@sd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_SARTHAK/images/LOGO_HD/LOGO_HD_image.png",
     "ekamracinema.in@sd": "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ekamra_Cinema.png",
     "ekamramanoranjan.in@sd": "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ekamra_Manoranjan.png",
     "ekamramusiq.in@sd": "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ekamra_Music.png",
