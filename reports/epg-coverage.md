@@ -1,18 +1,18 @@
 # EPG Coverage Report
 
-Generated: **2026-09-29T13:24:58+00:00**
+Generated: **2026-09-29T13:26:19+00:00**
 
 This report audits every active Indian channel against four India XMLTV guides.
 A channel is counted as **LIVE/FUTURE EPG** only when a matched guide ID has at least one programme whose start/stop window is current or future.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **248**
-- LIVE/FUTURE EPG: **153**
+- Active Indian channels audited: **249**
+- LIVE/FUTURE EPG: **154**
 - EPG ROWS, ENDED: **0**
 - CHANNEL ID ONLY: **8**
 - NO GUIDE HIT: **87**
-- Current/future programme coverage: **153/248 (61.7%)**
+- Current/future programme coverage: **154/249 (61.8%)**
 
 ## Source Status
 
@@ -29,7 +29,7 @@ A channel is counted as **LIVE/FUTURE EPG** only when a matched guide ID has at 
 | Indian Entertainment | Nazara | local.4ff686856fe3 | NAZARA.in | CHANNEL ID ONLY | 0 |
 | Indian Entertainment | One Paschima | OnePaschima.in | One.Paschima.in | CHANNEL ID ONLY | 0 |
 | Indian Entertainment | Sony Entertainment TV | SonyEntertainmentTelevision | Sony.Entertainment.Television.in | CHANNEL ID ONLY | 0 |
-| Indian Movies | Gold Mines Movie | local.gold-mines-movie | Goldmines.Movies.in | CHANNEL ID ONLY | 0 |
+| Indian Movies | Gold Mines Movie | GoldminesMovies.in@SD | Goldmines.Movies.in | CHANNEL ID ONLY | 0 |
 | Indian Movies | Goldmines Bollywood | GoldminesBollywood.in | Goldmines.Bollywood.in | CHANNEL ID ONLY | 0 |
 | Indian Music | 7S Music | 7SMusic.in | 7S.MUSIC.in | CHANNEL ID ONLY | 0 |
 | Indian Music | Steelbird Music | SteelbirdMusic.in | Steelbird.Music.in | CHANNEL ID ONLY | 0 |
@@ -131,10 +131,11 @@ A channel is counted as **LIVE/FUTURE EPG** only when a matched guide ID has at 
 | Documentary & Wildlife | DocuBay TV | DocuBayTV.in | - | - | NO GUIDE HIT | 0 |
 | Documentary & Wildlife | Epic Crimes | EpicCrimes.in | - | - | NO GUIDE HIT | 0 |
 | Documentary & Wildlife | Food Food | FoodFood.in | Food.Food.in | FoodFood.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://iptv-epg.org/files/epg-in.xml | LIVE/FUTURE EPG | 72 |
+| Documentary & Wildlife | History TV18 | HistoryTV18.in@SD | History.TV18.HD.in | History.TV18.SD.in | HISTORY.TV18.HD.in | 543336 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 251 |
 | Documentary & Wildlife | InTravel | InTravel.in@HD | - | - | NO GUIDE HIT | 0 |
 | Documentary & Wildlife | Investigation Discovery | InvestigationDiscovery.in | Investigation.Discovery.in | InvestigationDiscovery.in | 543196 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 227 |
-| Documentary & Wildlife | Nat Geo Wild | NationalGeographicWild.in | Nat.Geo.Wild.HD.in | NAT.GEO.WILD.in | NAT.GEO.WILD.HD.in | 543356 | 543052 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 121 |
-| Documentary & Wildlife | National Geographic | NationalGeographic.in | National.Geographic.HD.in | NATIONAL.GEOGRAPHIC.in | 543108 | 543180 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 100 |
+| Documentary & Wildlife | Nat Geo Wild | NationalGeographicWild.in | Nat.Geo.Wild.HD.in | NAT.GEO.WILD.HD.in | NAT.GEO.WILD.in | 543356 | 543052 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 121 |
+| Documentary & Wildlife | National Geographic | NationalGeographic.in | National.Geographic.HD.in | NATIONAL.GEOGRAPHIC.in | 543180 | 543108 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 100 |
 | Documentary & Wildlife | Safari TV | SafariTV.in | Safari.TV..in | SAFARI.TV.in | SafariTV.in | 543117 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 577 |
 | Documentary & Wildlife | Sony BBC Earth | SonyBBCEarth.in | SONY.BBC.Earth.in | SONY.BBC.EARTH.in | 543416 | 543410 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 112 |
 | Documentary & Wildlife | Sony BBC Earth HD | SonyBBCEarth.in@HD | SONY.BBC.Earth.in | SONY.BBC.EARTH.in | 543416 | 543410 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 112 |
@@ -147,14 +148,14 @@ A channel is counted as **LIVE/FUTURE EPG** only when a matched guide ID has at 
 | Indian Bangla | BHI Channel | BHI Channel | BHI.Channel.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE/FUTURE EPG | 96 |
 | Indian Bangla | Bangla Plus | BanglaPlus.in | - | - | NO GUIDE HIT | 0 |
 | Indian Bangla | Bengali Beats | local.298c02a76a55 | - | - | NO GUIDE HIT | 0 |
-| Indian Bangla | Colors Bangla | ColorsBangla.in | Colors.Bangla.in | COLORS.BANGLA.in | COLORSBANGLA.in | 543370 | 543469 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 209 |
+| Indian Bangla | Colors Bangla | ColorsBangla.in | Colors.Bangla.in | COLORS.BANGLA.in | COLORSBANGLA.in | 543469 | 543370 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 209 |
 | Indian Bangla | Colors Bangla Cinema | ColorsBanglaCinema.in | Colors.Bangla.Cinema.in | COLORS.BANGLA.CINEMA.in | 543218 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 65 |
-| Indian Bangla | Colors Bangla HD | local.bb3c3114fb20 | Colors.Bangla.in | COLORS.BANGLA.in | COLORSBANGLA.in | 543370 | 543469 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 209 |
+| Indian Bangla | Colors Bangla HD | ColorsBangla.in@SD | Colors.Bangla.in | COLORS.BANGLA.in | COLORSBANGLA.in | 543469 | 543370 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 209 |
 | Indian Bangla | DD Bangla | DDBangla.in | DD.Bangla.in | 543434 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 212 |
 | Indian Bangla | DD Tripura | DDTripura.in | - | - | NO GUIDE HIT | 0 |
 | Indian Bangla | Dhoom Music Bangla | DhoomMusic.in | Dhoom.Music.Bangla.in | DHOOM.MUSIC.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE/FUTURE EPG | 138 |
-| Indian Bangla | Enter10 Bangla | local.enter-10-bangla | ENTER10.BANGLA.in | Enterr10Bangla.in | 543030 | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 113 |
-| Indian Bangla | Jalsha Movies HD | local.285a6aa870f3 | Star.Jalsha.Movies.in | JALSHA.MOVIES.in | JALSHA.MOVIES.HD.in | 543072 | 543369 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 41 |
+| Indian Bangla | Enter10 Bangla | Enterr10Bangla.in@SD | ENTER10.BANGLA.in | Enterr10Bangla.in | 543030 | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 113 |
+| Indian Bangla | Jalsha Movies HD | Star.Jalsha.Movies.in | Star.Jalsha.Movies.in | JALSHA.MOVIES.HD.in | JALSHA.MOVIES.in | 543369 | 543072 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 41 |
 | Indian Bangla | Jhankar TV | JhankarTV.ca | - | - | NO GUIDE HIT | 0 |
 | Indian Bangla | Jtv Classic | local.13a774fd5195 | - | - | NO GUIDE HIT | 0 |
 | Indian Bangla | Khushboo Bangla | KhushbooBangla.in | KhushbooBangla.in | https://iptv-epg.org/files/epg-in.xml | LIVE/FUTURE EPG | 72 |
@@ -171,9 +172,9 @@ A channel is counted as **LIVE/FUTURE EPG** only when a matched guide ID has at 
 | Indian Bangla | U Bangla | UBangla.in | U.Bangla.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE/FUTURE EPG | 181 |
 | Indian Bangla | ZB Cartoon | ZBCartoon.in | - | - | NO GUIDE HIT | 0 |
 | Indian Bangla | ZB Cinema | ZBCinema.in | Zee.Bangla.Cinema.in | ZEE.BANGLA.CINEMA.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE/FUTURE EPG | 13 |
-| Indian Bangla | Zee 24 Ghanta | local.zee-24-ghanta | Zee.24.Ghanta.in | Zee24Ghanta.in | 554174 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 604 |
-| Indian Bangla | Zee Bangla | ZeeBangla.in | Zee.Bangla.in | ZEE.BANGLA.in | ZEEBANGLA.in | 543504 | 404001 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 472 |
-| Indian Bangla | Zee Bangla HD | local.072484feec7e | Zee.Bangla.in | ZEE.BANGLA.in | ZEEBANGLA.in | 543504 | 404001 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 472 |
+| Indian Bangla | Zee 24 Ghanta | Zee24Ghanta.in@SD | Zee.24.Ghanta.in | Zee24Ghanta.in | 554174 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 604 |
+| Indian Bangla | Zee Bangla | ZeeBangla.in | Zee.Bangla.in | ZEE.BANGLA.in | ZEEBANGLA.in | 404001 | 543504 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 472 |
+| Indian Bangla | Zee Bangla HD | Zee.Bangla.in | Zee.Bangla.in | ZEE.BANGLA.in | ZEEBANGLA.in | 404001 | 543504 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 472 |
 | Indian Bangla | Zee Bangla Sonar | ZeeBanglaSonar.in | Zee.Bangla.Cinema.in | ZEE.BANGLA.CINEMA.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE/FUTURE EPG | 13 |
 | Indian Entertainment | &TV | AndTV.in | &TV.HD.in | and.TV.in | andtv.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml | LIVE/FUTURE EPG | 295 |
 | Indian Entertainment | Amrita TV | AmritaTV.in | Amrita.TV.in | AMRITA.in | AmritaTV.in | 543102 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 192 |
@@ -184,7 +185,7 @@ A channel is counted as **LIVE/FUTURE EPG** only when a matched guide ID has at 
 | Indian Entertainment | Colors Kannada | ColorsKannada.in | Colors.Kannada.SD.in | Colors.Kannada.HD.in | COLORS.KANNADA.in | COLORSKANNADA.in | 543329 | 543147 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 484 |
 | Indian Entertainment | Colors Marathi | ColorsMarathi.in | Colors.Marathi.HD.in | Colors.Marathi.SD.in | COLORS.MARATHI.in | COLORSMARATHI.in | 543065 | 543277 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 509 |
 | Indian Entertainment | Colors Super | ColorsSuper.in | Colors.Super.in | COLORS.SUPER.in | 543284 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 63 |
-| Indian Entertainment | Colors Tamil | ColorsTamil.in | Colors.Tamil.in | COLORSTAMIL.in | 543302 | 543334 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 170 |
+| Indian Entertainment | Colors Tamil | ColorsTamil.in | Colors.Tamil.in | COLORSTAMIL.in | 543334 | 543302 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 170 |
 | Indian Entertainment | DD Arun Prabha | DDArunPrabha.in | DD.Arunprabha.in | DD.ARUN.PRABHA.in | 543094 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 286 |
 | Indian Entertainment | DD Assam | DDAssam.in | - | - | NO GUIDE HIT | 0 |
 | Indian Entertainment | DD Bharati | DDBharati.in | DD.bharati.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE/FUTURE EPG | 168 |
@@ -228,7 +229,7 @@ A channel is counted as **LIVE/FUTURE EPG** only when a matched guide ID has at 
 | Indian Entertainment | MH One Prime | Mh1Prime.in | - | - | NO GUIDE HIT | 0 |
 | Indian Entertainment | MK Six | MKSix.in | MK.Six.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE/FUTURE EPG | 156 |
 | Indian Entertainment | Manoranjan Prime | ManoranjanPrime.in | - | - | NO GUIDE HIT | 0 |
-| Indian Entertainment | Mazhavil Manorama | MazhavilManorama.in | Mazhavil.Manorama.in | MAZHAVIL.MANORAMA.in | MAZHAVILMANORAMA.in | 543345 | 543130 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 248 |
+| Indian Entertainment | Mazhavil Manorama | MazhavilManorama.in | Mazhavil.Manorama.in | MAZHAVIL.MANORAMA.in | MAZHAVILMANORAMA.in | 543130 | 543345 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 248 |
 | Indian Entertainment | Mei Alai TV | MeiAlaiTV.in | - | - | NO GUIDE HIT | 0 |
 | Indian Entertainment | NKR TV Kannada | NKRTVKannada.in | - | - | NO GUIDE HIT | 0 |
 | Indian Entertainment | Nazara | local.4ff686856fe3 | NAZARA.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | CHANNEL ID ONLY | 0 |
@@ -246,7 +247,7 @@ A channel is counted as **LIVE/FUTURE EPG** only when a matched guide ID has at 
 | Indian Entertainment | Sony Entertainment TV | SonyEntertainmentTelevision | Sony.Entertainment.Television.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | CHANNEL ID ONLY | 0 |
 | Indian Entertainment | Sony KAL | SonyKALHindi.us | - | - | NO GUIDE HIT | 0 |
 | Indian Entertainment | Sony SAB HD | SonySAB.in@HD | Sony.SAB.in | SONY.SAB.in | SONYSAB.in | 543101 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 378 |
-| Indian Entertainment | Star Maa | StarMaa.in | STAR.MAA.in | STARMAA.in | 543246 | 543459 | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 250 |
+| Indian Entertainment | Star Maa | StarMaa.in | STAR.MAA.in | STARMAA.in | 543459 | 543246 | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 250 |
 | Indian Entertainment | Star Plus | StarPlus.in | Star.Plus.in | STAR.PLUS.in | STARPLUS.in | 543093 | 543164 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 246 |
 | Indian Entertainment | Star Pravah | StarPravah.in | Star.Pravah.in | STAR.PRAVAH.in | 543054 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 97 |
 | Indian Entertainment | Studio Yuva | StudioYuva.in | - | - | NO GUIDE HIT | 0 |
@@ -259,8 +260,8 @@ A channel is counted as **LIVE/FUTURE EPG** only when a matched guide ID has at 
 | Indian Entertainment | Vendhar TV | VendharTV.in | Vendhar.TV.in | VendharTV.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://iptv-epg.org/files/epg-in.xml | LIVE/FUTURE EPG | 200 |
 | Indian Entertainment | Vissa TV | VissaTV.in | Vissa.TV.in | VISSA.TV.in | VissaTV.in | 543439 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 401 |
 | Indian Entertainment | Zee Anmol | AnmolTV.in | Zee.Anmol.in | ZEE.ANMOL.in | 543429 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 78 |
-| Indian Entertainment | Zee Kannada | ZeeKannada.in | Zee.Kannada.in | ZEE.KANNADA.in | ZeeKannada.in | 543097 | 543064 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 298 |
-| Indian Entertainment | Zee TV | ZeeTV.in | Zee.TV.in | ZEE.TV.in | ZeeTV.in | 543086 | 543105 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 412 |
+| Indian Entertainment | Zee Kannada | ZeeKannada.in | Zee.Kannada.in | ZEE.KANNADA.in | ZeeKannada.in | 543064 | 543097 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 298 |
+| Indian Entertainment | Zee TV | ZeeTV.in | Zee.TV.in | ZEE.TV.in | ZeeTV.in | 543105 | 543086 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 412 |
 | Indian Entertainment | Zee Tamil | ZeeTamil.in | Zee.Tamil.in | ZEE.TAMIL.in | ZeeTamil.in | 543165 | 543143 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 383 |
 | Indian Movies | Asianet Movies | AsianetMovies.in | Asianet.Movies.HD.in | ASIANET.MOVIES.in | AsianetMovies.in | 543281 | 543022 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 82 |
 | Indian Movies | B4U Kadak | B4UKadak.in | B4U.Kadak.in | B4U.KADAK.in | B4UKadak.in | 543225 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 65 |
@@ -273,7 +274,7 @@ A channel is counted as **LIVE/FUTURE EPG** only when a matched guide ID has at 
 | Indian Movies | ETV Beats | ETVBeats.in@HD | - | - | NO GUIDE HIT | 0 |
 | Indian Movies | Epic Bhojpuri | EpicBhojpuri.in | - | - | NO GUIDE HIT | 0 |
 | Indian Movies | Epic Bhojpuri Digital | local.7e276999a297 | - | - | NO GUIDE HIT | 0 |
-| Indian Movies | Gold Mines Movie | local.gold-mines-movie | Goldmines.Movies.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | CHANNEL ID ONLY | 0 |
+| Indian Movies | Gold Mines Movie | GoldminesMovies.in@SD | Goldmines.Movies.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | CHANNEL ID ONLY | 0 |
 | Indian Movies | Goldmines | Goldmines.in | Goldmines.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://iptv-epg.org/files/epg-in.xml | LIVE/FUTURE EPG | 57 |
 | Indian Movies | Goldmines Action | GoldminesAction.in | - | - | NO GUIDE HIT | 0 |
 | Indian Movies | Goldmines Bollywood | GoldminesBollywood.in | Goldmines.Bollywood.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | CHANNEL ID ONLY | 0 |
@@ -295,19 +296,19 @@ A channel is counted as **LIVE/FUTURE EPG** only when a matched guide ID has at 
 | Indian Movies | Public Movies | PublicMovies.in | Public.Movies.in | PUBLIC.MOVIES.in | PublicMovies.in | 543203 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 109 |
 | Indian Movies | Punjabi Shorts | PunjabiShorts.in | - | - | NO GUIDE HIT | 0 |
 | Indian Movies | Raj Digital Plus | RajDigitalPlus.in | Raj.Digital.Plus.in | RAJ.DIGITAL.PLUS.in | RajDigitalPlus.in | 543042 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 180 |
-| Indian Movies | Raj TV | RajTV.in | Raj.TV.in | Raj.tv.in | RAJ.TV.in | RajTV.in | 543033 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 257 |
+| Indian Movies | Raj TV | RajTV.in | Raj.tv.in | Raj.TV.in | RAJ.TV.in | RajTV.in | 543033 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 257 |
 | Indian Movies | Roja Movies | RojaMovies.in | - | - | NO GUIDE HIT | 0 |
 | Indian Movies | Shemaroo Bollywood | ShemarooBollywood.us | Shemaroo.Bollywood.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE/FUTURE EPG | 43 |
 | Indian Movies | Shubh Cinema TV | ShubhCinemaTV.in | - | - | NO GUIDE HIT | 0 |
 | Indian Movies | Sony Max | SonyMax.in | Sony.Max.in | SONY.MAX.in | 543269 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 18 |
-| Indian Movies | Sony Max 2 | SonyMax2.in | Sony.MAX2.in | Sony.Max.2.in | SONY.MAX.2.in | 543114 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 55 |
+| Indian Movies | Sony Max 2 | SonyMax2.in | Sony.Max.2.in | Sony.MAX2.in | SONY.MAX.2.in | 543114 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 55 |
 | Indian Movies | Sony Max 2 [US] | local.f84628a5cf6e | - | - | NO GUIDE HIT | 0 |
 | Indian Movies | South Movies | South Movies | - | - | NO GUIDE HIT | 0 |
 | Indian Movies | South Station | SouthStation.in | - | - | NO GUIDE HIT | 0 |
 | Indian Movies | Star Gold | StarGold.in | Star.Gold.in | STAR.GOLD.in | 543292 | 543055 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 28 |
-| Indian Movies | Star Gold Select | StarGoldSelect.in | Star.Gold.Select.in | STAR.GOLD.SELECT.in | StarGoldSelect.in | 543216 | 543074 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 102 |
+| Indian Movies | Star Gold Select | StarGoldSelect.in | Star.Gold.Select.in | STAR.GOLD.SELECT.in | StarGoldSelect.in | 543074 | 543216 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 102 |
 | Indian Movies | Star Gold Thrills | StarGoldThrills.in@SD | Star.Gold.Thrills.in | STAR.GOLD.THRILLS.in | 543460 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 21 |
-| Indian Movies | Star Maa Movies | StarMaaMovies.in | Star.Maa.Movies.in | STAR.MAA.MOVIES.in | 543492 | 543235 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 33 |
+| Indian Movies | Star Maa Movies | StarMaaMovies.in | Star.Maa.Movies.in | STAR.MAA.MOVIES.in | 543235 | 543492 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 33 |
 | Indian Movies | Tabbar Hits | TabbarHits.in | Tabbar.Hits.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE/FUTURE EPG | 96 |
 | Indian Movies | Thalaa TV | ThalaaTV.in | - | - | NO GUIDE HIT | 0 |
 | Indian Movies | The Movie Club +2 | TheMovieClub.in@Plus2 | - | - | NO GUIDE HIT | 0 |
@@ -360,7 +361,7 @@ A channel is counted as **LIVE/FUTURE EPG** only when a matched guide ID has at 
 | Indian Music | Zoom TV | Zoom.in | ZOOM.in | Zoom.in | 543288 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 173 |
 | International | LoL TV | LoLTV.in | - | - | NO GUIDE HIT | 0 |
 | International | Songdew TV | SongdewTV.in | SongDew.TV.in | SONGDEW.in | 543261 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 292 |
-| International | Star Movies | StarMovies.in | Star.Movies.in | STAR.MOVIES.in | 543187 | 543176 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 27 |
+| International | Star Movies | StarMovies.in | Star.Movies.in | STAR.MOVIES.in | 543176 | 543187 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 27 |
 | International | Star Movies Select | StarMoviesSelect.in | Star.Movies.Select.HD.in | STAR.MOVIES.SELECT.in | 543313 | 543316 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 42 |
 | Kids | Cartoon Network HD+ | CartoonNetworkHDPlus.in | Cartoon.Network.in | CARTOON.NETWORK.in | CartoonNetwork.in | CartoonNetwork+.in | 543449 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 317 |
 | Kids | Disney Channel India | DisneyChannel.in | Disney.in | DISNEY.CHANNEL.in | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE/FUTURE EPG | 16 |
@@ -371,5 +372,5 @@ A channel is counted as **LIVE/FUTURE EPG** only when a matched guide ID has at 
 | Sports | DD Sports | DDSports.in | DD.Sports.in | DDSports.in | 543389 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 116 |
 | Sports | EURO SPORT HD | Eurosport.in | Eurosport.in | 543381 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 167 |
 | Sports | Goal TV | GoalTV.in | - | - | NO GUIDE HIT | 0 |
-| Sports | Sony Sports Ten 3 | SonySportsTen3.in | Sony.Sports.Ten.3.HD.in | SONY.SPORTS.TEN.3.in | SonySportsTEN3.in | 543295 | 543206 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 171 |
-| Sports | Star Sports 1 Hindi | StarSports1Hindi.in | STAR.SPORTS.1.HINDI.in | StarSports1Hindi.in | 543275 | 543058 | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 342 |
+| Sports | Sony Sports Ten 3 | SonySportsTen3.in | Sony.Sports.Ten.3.HD.in | SONY.SPORTS.TEN.3.in | SonySportsTEN3.in | 543206 | 543295 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 171 |
+| Sports | Star Sports 1 Hindi | StarSports1Hindi.in | STAR.SPORTS.1.HINDI.in | StarSports1Hindi.in | 543058 | 543275 | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz, https://iptv-epg.org/files/epg-in.xml, https://epg.pw/xmltv/epg_IN.xml | LIVE/FUTURE EPG | 342 |
