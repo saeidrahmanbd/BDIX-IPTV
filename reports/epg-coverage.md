@@ -1,6 +1,6 @@
 # EPG Coverage Report
 
-Generated: **2026-09-29T16:43:47+00:00**
+Generated: **2026-09-29T16:44:22+00:00**
 
 This report audits every active Indian channel against four India XMLTV guides.
 A channel is counted as **LIVE/FUTURE EPG** only when a matched guide ID has at least one programme whose start/stop window is current or future.
