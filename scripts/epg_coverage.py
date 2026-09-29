@@ -4,7 +4,7 @@ from collections import defaultdict
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 PLAYLIST=Path('IPTV-Playlist.m3u'); MAPPING=Path('reports/epg-india-channel-mapping.csv'); REPORT=Path('reports/epg-coverage.md')
-SOURCES=['https://epg.pw/xmltv/epg_IN.xml','https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz','https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz','https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz','https://iptv-epg.org/files/epg-in.xml']
+SOURCES=['https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz','https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz']
 ATTR_RE=re.compile(r'([\\w-]+)="([^"]*)"')
 def attrs(s): return dict(ATTR_RE.findall(s))
 def playlist():
@@ -49,43 +49,49 @@ def parse_source(url):
    elem.clear()
  return ids,future,counts,names
 def main():
- channels=playlist(); mapping=list(csv.DictReader(MAPPING.open(encoding='utf-8-sig'))) if MAPPING.exists() else []; mapped=[r for r in mapping if r.get('status')=='MAPPED']
- results={}; source_status=[]
+ channels=playlist(); mapping={}
+ if MAPPING.exists():
+  for r in csv.DictReader(MAPPING.open(encoding='utf-8-sig')):
+   if r.get('tvg_id') and r.get('status')=='MAPPED':
+    mapping.setdefault(r['tvg_id'],[]).extend(x.strip() for x in r.get('epg_id','').split('|') if x.strip())
+ source_data=[]; source_status=[]
  for src in SOURCES:
   try:
-   ids,future,counts,names=parse_source(src); source_status.append((src,'OK',len(ids),len(future),sum(counts.values()),''))
-   for r in mapped:
-    candidates=[x.strip() for x in r.get('epg_id','').split('|') if x.strip()]; hits=[x for x in candidates if x in ids]
-    if not hits:
-     hits=sorted(names.get(norm_name(r.get('channel','')),set()))
-    futures=[x for x in hits if x in future]
-    if hits:
-     q=results.setdefault(r['tvg_id'],{'future':set(),'rows':0,'sources':set()}); q['future'].update(futures); q['rows']+=sum(counts.get(x,0) for x in hits); q['sources'].add(src)
-  except Exception as e: source_status.append((src,'FAILED',0,0,0,str(e)[:180]))
- live=[]; found=[]; no_rows=[]; no_source=[]
- for r in mapped:
-  q=results.get(r['tvg_id'])
-  if not q: no_source.append(r)
-  elif q['future']: live.append((r,q))
-  elif q['rows']>0: found.append((r,q))
-  else: no_rows.append((r,q))
- lines=['# EPG Coverage Report','','Generated: **'+datetime.now(timezone.utc).isoformat(timespec='seconds')+'**','','This report checks mapped India EPG channels against actual downloaded XMLTV programme rows. LIVE EPG means at least one programme is current/future. EPG FOUND means rows exist but no current/future row was detected. NO PROGRAMME DATA means the mapped guide ID exists but produced no programme rows. NO GUIDE HIT means the mapped ID was absent from the downloaded guide.','','## Coverage Summary','',
- '- Active playlist channels: **'+str(len(channels))+'**',
- '- India-mapped channels: **'+str(len(mapped))+'**',
- '- LIVE EPG (current/future programme): **'+str(len(live))+'**',
- '- EPG FOUND (rows exist, no current/future row): **'+str(len(found))+'**',
- '- NO PROGRAMME DATA: **'+str(len(no_rows))+'**',
- '- NO GUIDE HIT: **'+str(len(no_source))+'**',
- '- Actual current/future coverage among mapped: **'+str(len(live))+'/'+str(len(mapped))+' ('+str(round(len(live)/len(mapped)*100,1) if mapped else 0)+'%)**','','## Source Status','']
+   parsed=parse_source(src); source_data.append(parsed)
+   ids,future,counts,names=parsed
+   source_status.append((src,'OK',len(ids),len(future),sum(counts.values()),''))
+  except Exception as e:
+   source_data.append((set(),set(),defaultdict(int),defaultdict(set)))
+   source_status.append((src,'FAILED',0,0,0,str(e)[:180]))
+ rows=[]
+ for ch in channels:
+  candidates=list(mapping.get(ch['tvg_id'],[]))+[ch['tvg_id'],re.sub(r'@[^.]+$','',ch['tvg_id'])]
+  candidates=list(dict.fromkeys(x for x in candidates if x))
+  normalized_candidates={norm_id(x) for x in candidates}
+  name_key=norm_name(ch['name']); hits=[]; hit_sources=set(); total_rows=0; has_future=False
+  for src,(ids,future,counts,names) in zip(SOURCES,source_data):
+   src_hits=[x for x in candidates if x in ids]
+   if not src_hits: src_hits=[x for x in ids if norm_id(x) in normalized_candidates]
+   if not src_hits: src_hits=list(names.get(name_key,set()))
+   if src_hits:
+    hit_sources.add(src)
+    for x in src_hits:
+     if x not in hits: hits.append(x)
+     total_rows+=counts.get(x,0)
+     if x in future: has_future=True
+  status='LIVE EPG' if has_future else ('EPG FOUND' if total_rows else ('NO PROGRAMME DATA' if hits else 'NO GUIDE HIT'))
+  rows.append({**ch,'epg_id':' | '.join(hits[:8]),'sources':sorted(hit_sources),'status':status,'programme_rows':total_rows})
+ live=[r for r in rows if r['status']=='LIVE EPG']; found=[r for r in rows if r['status']=='EPG FOUND']; no_rows=[r for r in rows if r['status']=='NO PROGRAMME DATA']; no_source=[r for r in rows if r['status']=='NO GUIDE HIT']
+ lines=['# EPG Coverage Report','','Generated: **'+datetime.now(timezone.utc).isoformat(timespec='seconds')+'**','','This report audits every active Indian channel in the playlist against the live IN1 + IN4 India XMLTV guides. Matching uses exact ID, normalized ID/punctuation variants, curated mapping aliases, and normalized display names.','','## Coverage Summary','','- Active Indian channels audited: **'+str(len(rows))+'**','- LIVE EPG (current/future programme): **'+str(len(live))+'**','- EPG FOUND (rows exist, no current/future row): **'+str(len(found))+'**','- NO PROGRAMME DATA: **'+str(len(no_rows))+'**','- NO GUIDE HIT: **'+str(len(no_source))+'**','- Current/future coverage: **'+str(len(live))+'/'+str(len(rows))+' ('+str(round(len(live)/len(rows)*100,1) if rows else 0)+'%)**','','## Source Status','']
  for x in source_status:
-  if x[1]=='OK': lines.append('- **OK** — '+x[0]+' — '+str(x[2])+' channel IDs, '+str(x[3])+' IDs with current/future rows, '+str(x[4])+' total programme rows')
-  else: lines.append('- **FAILED** — '+x[0]+' — '+x[5])
- lines += ['','## Channel-by-Channel Result','','| Group | Channel | Playlist ID | EPG ID | Source(s) | Status | Programme rows |','|---|---|---|---|---|---|---:|']
- def row(r,q,status): return '| '+r['group']+' | '+r['channel']+' | '+chr(96)+r['tvg_id']+chr(96)+' | '+chr(96)+r['epg_id']+chr(96)+' | '+(', '.join(sorted(q['sources'])) if q else '-')+' | '+status+' | '+str(q['rows'] if q else 0)+' |'
- for r,q in sorted(live,key=lambda z:(z[0]['group'],z[0]['channel'])): lines.append(row(r,q,'LIVE EPG'))
- for r,q in sorted(found,key=lambda z:(z[0]['group'],z[0]['channel'])): lines.append(row(r,q,'EPG FOUND'))
- for r,q in sorted(no_rows,key=lambda z:(z[0]['group'],z[0]['channel'])): lines.append(row(r,q,'NO PROGRAMME DATA'))
- for r in sorted(no_source,key=lambda z:(z['group'],z['channel'])): lines.append(row(r,None,'NO GUIDE HIT'))
+  lines.append('- **OK** — '+x[0]+' — '+str(x[2])+' channel IDs, '+str(x[3])+' IDs with current/future rows, '+str(x[4])+' total programme rows' if x[1]=='OK' else '- **FAILED** — '+x[0]+' — '+x[5])
+ lines += ['','## Missing / Incomplete Channels','','| Group | Channel | Playlist ID | EPG ID matched | Status | Programme rows |','|---|---|---|---|---|---:|']
+ for r in sorted(no_rows+no_source+found,key=lambda z:(z['status'],z['group'],z['name'])):
+  lines.append('| '+r['group']+' | '+r['name']+' | '+r['tvg_id']+' | '+r['epg_id']+' | '+r['status']+' | '+str(r['programme_rows'])+' |')
+ lines += ['','## Channel-by-Channel Result','','| Group | Channel | Playlist ID | EPG ID matched | Source(s) | Status | Programme rows |','|---|---|---|---|---|---|---:|']
+ for r in sorted(rows,key=lambda z:(z['group'],z['name'])):
+  lines.append('| '+r['group']+' | '+r['name']+' | '+r['tvg_id']+' | '+r['epg_id']+' | '+(', '.join(r['sources']) if r['sources'] else '-')+' | '+r['status']+' | '+str(r['programme_rows'])+' |')
  REPORT.parent.mkdir(parents=True,exist_ok=True); REPORT.write_text('\n'.join(lines)+'\n',encoding='utf-8')
- print('EPG programme coverage:',len(mapped),'mapped;',len(live),'live/future;',len(found),'rows-only;',len(no_rows),'no-data;',len(no_source),'no-guide-hit')
+ print('Indian EPG audit:',len(rows),'channels;',len(live),'live;',len(found),'rows-only;',len(no_rows),'no-data;',len(no_source),'no-guide-hit')
+
 if __name__=='__main__': main()
