@@ -81,7 +81,23 @@ def acceptable_url(url):
         return False
     return True
 
+def set_attr(info, key, value):
+    pattern = rf'({re.escape(key)}=")[^"]*(")'
+    if re.search(pattern, info):
+        return re.sub(pattern, rf'\\g<1>{value}\\g<2>', info, count=1)
+    comma = info.find(",")
+    prefix = info if comma < 0 else info[:comma]
+    suffix = "" if comma < 0 else info[comma:]
+    return prefix + f' {key}="{value}"' + suffix
+
 def force_backup(info):
+    metadata = attrs(info)
+    display = metadata.get("tvg-name", "").strip() or channel_name(info)
+    cid = metadata.get("tvg-id", "").strip() or metadata.get("channel-id", "").strip()
+    if not cid:
+        raise ValueError("Candidate stream has no tvg-id/channel-id; refusing to add it.")
+    info = set_attr(info, "tvg-name", display)
+    info = set_attr(info, "channel-id", cid)
     info = re.sub(r'\s+group-title="[^"]*"', "", info)
     return info.replace(",", f' group-title="{BACKUP}",', 1)
 
