@@ -448,7 +448,7 @@ https://cc-czbq30x55knit.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da6
 https://cc-wie8j8y69d2uy.akamaized.net/WWBI/Amagi/ETV_Comedy_IN/playlist.m3u8
 #EXTINF:-1 tvg-id="ETVJosh.in" tvg-name="ETV Josh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-josh.png" tvg-chno="470" channel-id="ETVJosh.in" group-title="Indian Entertainment",ETV Josh
 https://cc-uyh1ow5zouoio.akamaized.net/WWBI/Amagi/ETV_Josh_IN/playlist.m3u8
-#EXTINF:-1 tvg-id="ETVPlus.in@SD" tvg-name="ETV Plus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-plus.png" group-title="Indian Entertainment" tvg-chno="475" channel-id="ETVPlus.in@SD",ETV Plus
+#EXTINF:-1 tvg-id="ETVPlus.in@SD" tvg-name="ETV Plus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-plus.png" group-title="Not Playing" channel-id="ETVPlus.in@SD",ETV Plus
 https://yupplivegcpusa.yuppcdn.net/100823/smil:etvplus.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
 #EXTINF:-1 tvg-id="FaktMarathi.in@SD" tvg-name="Fakt Marathi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fakt-marathi.png" tvg-chno="471" channel-id="FaktMarathi.in@SD" group-title="Indian Entertainment",Fakt Marathi
 https://mumt07.tangotv.in/zHjX9OFlFAKTMARATHI/index.m3u8
