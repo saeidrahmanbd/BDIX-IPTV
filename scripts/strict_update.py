@@ -8,6 +8,8 @@ from pathlib import Path
 PLAYLIST = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/auto-update.md")
 BACKUP = "Backup"
+NEW_CHANNELS = "New Channels"
+LOCKED_CATEGORIES = {"Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "Not Playing"}
 
 SOURCES = [
     "https://iptv-org.github.io/iptv/countries/in.m3u",
@@ -90,7 +92,7 @@ def set_attr(info, key, value):
     suffix = "" if comma < 0 else info[comma:]
     return prefix + f' {key}="{value}"' + suffix
 
-def force_backup(info):
+def force_group(info, group):
     # Strip source-only visual markers before the entry reaches the master
     # playlist. They are not part of the channel identity and fail metadata
     # hygiene checks in downstream players/audits.
@@ -103,7 +105,7 @@ def force_backup(info):
     info = set_attr(info, "tvg-name", display)
     info = set_attr(info, "channel-id", cid)
     info = re.sub(r'\s+group-title="[^"]*"', "", info)
-    return info.replace(",", f' group-title="{BACKUP}",', 1)
+    return info.replace(",", f' group-title="{group}",', 1)
 
 def fetch(url):
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -151,7 +153,7 @@ for info, url in entries:
     if metadata.get("group-title", "").strip() == BACKUP:
         backup_urls.add(url.lower())
 
-added, rejected, unreachable, new_channel_candidates, source_errors = [], 0, 0, 0, 0
+added, new_channels, rejected, unreachable, new_channel_candidates, source_errors = [], [], 0, 0, 0, 0
 seen_additions = set()
 
 for source in SOURCES:
@@ -198,6 +200,16 @@ for source in SOURCES:
         )
         if not known:
             new_channel_candidates += 1
+            if url.lower() in existing_urls or not cid:
+                continue
+            key = (cid_base or cname, url.lower())
+            if key in seen_additions or not reachable(url):
+                if key not in seen_additions and not reachable(url):
+                    unreachable += 1
+                continue
+            new_channels.append((force_group(info, NEW_CHANNELS), url))
+            seen_additions.add(key)
+            existing_urls.add(url.lower())
             continue
         if url.lower() in existing_urls or url.lower() in backup_urls:
             continue
@@ -207,26 +219,33 @@ for source in SOURCES:
         if not reachable(url):
             unreachable += 1
             continue
-        added.append((force_backup(info), url))
+        added.append((force_group(info, BACKUP), url))
         seen_additions.add(key)
         existing_urls.add(url.lower())
         backup_urls.add(url.lower())
 
-if added:
+if added or new_channels:
     lines = base.splitlines()
-    backup_positions = [i for i, line in enumerate(lines) if line.startswith("#EXTINF") and attrs(line).get("group-title", "").strip() == BACKUP]
-    if backup_positions:
-        j = backup_positions[-1] + 1
-        while j < len(lines) and not lines[j].startswith("#EXTINF"):
-            j += 1
+    if added:
+        backup_positions = [i for i, line in enumerate(lines) if line.startswith("#EXTINF") and attrs(line).get("group-title", "").strip() == BACKUP]
+        if backup_positions:
+            j = backup_positions[-1] + 1
+            while j < len(lines) and not lines[j].startswith("#EXTINF"):
+                j += 1
+            block = []
+            for info, url in added:
+                block.extend([info, url])
+            lines[j:j] = block
+        else:
+            added = []
+            print("No Backup category exists; skipping backup additions.")
+    if new_channels:
         block = []
-        for info, url in added:
+        for info, url in new_channels:
             block.extend([info, url])
-        lines[j:j] = block
-        PLAYLIST.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8", newline="\n")
-    else:
-        added = []
-        print("No Backup category exists; refusing to create a new category.")
+        # Always append New Channels after every existing category.
+        lines.extend(block)
+    PLAYLIST.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8", newline="\n")
 
 REPORT.parent.mkdir(exist_ok=True)
 REPORT.write_text("\n".join([
@@ -234,14 +253,17 @@ REPORT.write_text("\n".join([
     f"Generated: {datetime.now(timezone.utc).isoformat(timespec='seconds')}", "",
     "## Policy",
     "- Existing categories are locked.",
-    "- New channel additions are disabled.",
+    "- The locked categories are never used for automatic new-channel additions.
+    - New channel candidates are automatically placed only in the "New Channels" category at the bottom.",
     "- Only alternate streams whose playlist identity matches an existing channel ID are allowed.",
-    '- Accepted alternate streams are placed in the existing "Backup" category.', "",
+    '- Accepted alternate streams are placed in the existing "Backup" category.
+- The locked categories are: Bangladesh, Indian Bangla, Indian Movies, Indian Music, Indian Entertainment, International, Documentary & Wildlife, Kids, Religious, Sports, Backup, Not Playing.', "",
     f"Added backup streams: {len(added)}",
-    f"New-channel candidates skipped: {new_channel_candidates}",
+    f"Added new channels: {len(new_channels)}",
+    f"New-channel candidates processed: {new_channel_candidates}",
     f"Rejected candidates: {rejected}",
     f"Unreachable candidates: {unreachable}",
     f"Source errors: {source_errors}",
 ]), encoding="utf-8")
 
-print(f"Backup-only update: added={len(added)}, new_channel_candidates_skipped={new_channel_candidates}, rejected={rejected}, unreachable={unreachable}, source_errors={source_errors}")
+print(f"Playlist update: backups_added={len(added)}, new_channels_added={len(new_channels)}, new_channel_candidates={new_channel_candidates}, rejected={rejected}, unreachable={unreachable}, source_errors={source_errors}")
