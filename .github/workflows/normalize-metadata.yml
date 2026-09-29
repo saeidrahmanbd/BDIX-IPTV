@@ -11,8 +11,9 @@ on:
 permissions:
   contents: write
 
+# Serialize playlist mutations with all other repository-writing IPTV workflows.
 concurrency:
-  group: playlist-metadata-normalization
+  group: iptv-repository-writes
   cancel-in-progress: false
 
 jobs:
@@ -54,5 +55,16 @@ jobs:
             echo "No metadata changes."
           else
             git commit -m "Normalize playlist channel metadata"
-            git push
+            for attempt in 1 2 3; do
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              sleep 3
+            done
+            exit 1
           fi
