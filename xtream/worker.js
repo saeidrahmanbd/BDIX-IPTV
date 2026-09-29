@@ -18,6 +18,22 @@ const EPG_CACHE_TTL = 900;
 
 // Cross-map playlist tvg-id variants to canonical EPG IDs used by public guides.
 const EPG_ID_MAP = {
+  "RupasiBangla.in":["RupasiBangla.in@SD","RUPASI.BANGLA.in"],
+  "AakaashAath.in":["AakaashAath.in@SD","Aakash.Aath.in"],
+  "ZBCinema.in":["ZeeBanglaCinema.in@SD","ZeeBanglaSonar.in@SD","ZEE.BANGLA.CINEMA.in"],
+  "AndTV.in":["AndTV.in@SD","&TV.HD.in"],
+  "OscarMoviesBhojpuri.in@SD":["OscarMoviesBhojpuri.in@SD","Oscar.Movies.Bhojpuri.in","Oscar.Movies.Bhojpuri.Tv.in2"],
+  "Goldmines.in":["Goldmines.in@SD","Goldmines.in"],
+  "GoldminesBollywood.in":["GoldminesBollywood.in@SD","Goldmines.Bollywood.in","Goldmines.Bollywood.Today.in2"],
+  "GoldminesMovies.in":["GoldminesMovies.in@SD","Goldmines.Movies.in","Goldmines.Movies.Today.For.Dd.Free.Dish.Users.in2","Goldmines.Movie.Today.in2"],
+  "AnjanTV.in@SD":["AnjanTV.in@SD","Anjan.TV.in"],
+  "B4UBhojpuri.in@SD":["B4UBhojpuri.in@SD","B4U.Bhojpuri.in","B4u.Bhojpuri.in2"],
+  "MHOneDilSe.in":["MHOneDilSe.in@SD","MH1.Dil.Se.in","Mh1.Dil.Se.Tv.Channel.Today.in2"],
+  "MTV.in@SD":["MTV.in@SD","MTV.in"],
+  "KalaignarMurasu.in":["KalaignarMurasu.in","MURASU.in"],
+  "ShemarooJosh.in":["ShemarooJosh.in@SD","Shemaroo.Josh.Today.in2"],
+  "DisneyChannel.in":["DisneyChannel.in@HD","Disney.in"],
+
   "AakaashAath.in":["AakaashAath.in@SD"],
   "AlankarTV.in":["AlankarTV.in@SD"],
   "DDTripura.in":["DDTripura.in@SD"],
