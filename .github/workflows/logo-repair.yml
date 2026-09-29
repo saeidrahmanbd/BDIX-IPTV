@@ -29,6 +29,23 @@ jobs:
           python-version: '3.12'
       - name: Install image dependencies
         run: python -m pip install --disable-pip-version-check pillow cairosvg
+      - name: Patch resilient logo sources
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/migrate_external_logos_fixed.py')
+          s = p.read_text(encoding='utf-8')
+          replacements = {
+              'https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Wild_TV_logo_2020.png/960px-Wild_TV_logo_2020.png': 'https://sales.wildtv.ca/hubfs/WildTV%20Media%20Centre%20Packages/WildTV-White-XXL.png?hsLang=en-ca&noresize=',
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Star_Channel_2020.svg/960px-Star_Channel_2020.svg.png': 'https://upload.wikimedia.org/wikipedia/commons/c/cd/Star_Channel_2023.svg',
+          }
+          for old, new in replacements.items():
+              if old not in s:
+                  raise SystemExit(f'Expected logo source not found: {old}')
+              s = s.replace(old, new)
+          p.write_text(s, encoding='utf-8')
+          print('Patched Wild TV and Star Channel to alternate verified sources.')
+          PY
       - name: Repair external logos
         run: python scripts/migrate_external_logos_fixed.py
       - name: Verify logo repair
