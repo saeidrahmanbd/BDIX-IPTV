@@ -14,6 +14,13 @@ on:
       - 'reports/epg-coverage.md'
       - 'scripts/generate_dashboard.py'
       - '.github/workflows/live-dashboard.yml'
+  workflow_run:
+    workflows:
+      - 'Playlist Update'
+      - 'Stream Health'
+      - 'EPG Coverage'
+      - 'Live Stream Availability Audit'
+    types: [completed]
 
 permissions:
   contents: write
