@@ -12,9 +12,9 @@ const EPG_URLS = [
   "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
   "https://iptv-epg.org/files/epg-in.xml"
 ];
-const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v7";
+const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v8";
 const EPG_CACHE_TTL = 900;
-// Direct M3U EPG endpoint deployment trigger. v7: multi-source India XMLTV.
+// Direct M3U EPG endpoint deployment trigger. v8: five-source India XMLTV + verified aliases.
 
 // Cross-map playlist tvg-id variants to canonical EPG IDs used by public guides.
 const EPG_ID_MAP = {
@@ -50,7 +50,6 @@ const EPG_ID_MAP = {
   "DDManipur.in":["DDManipur.in@SD"],
   "DDMeghalaya.in":["DDMeghalaya.in@SD"],
   "DDNagaland.in":["DDNagaland.in@SD"],
-  "GoldminesAction.in":["GoldminesAction.in@SD"],
   "MHOneMovies.in":["MHOneMovies.in@SD"],
   "ETVMusic.in":["ETVMusic.in@SD"],
   "SonySAB.in":["SonySAB.in@SD"],
