@@ -12,12 +12,9 @@ on:
       - 'IPTV-Playlist.m3u'
       - 'scripts/stream_health.py'
       - '.github/workflows/stream-health.yml'
-      - 'IPTV-Playlist.m3u'
-      - '.github/workflows/stream-health.yml'
 
 permissions:
   contents: write
-
 concurrency:
   group: iptv-stream-health
   cancel-in-progress: false
