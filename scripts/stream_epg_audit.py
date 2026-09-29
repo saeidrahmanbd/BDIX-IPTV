@@ -12,7 +12,7 @@ EPG_URLS=[
  "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
  "https://iptv-epg.org/files/epg-in.xml",
 ]
-UA="BDIX-IPTV-Audit/1.4"
+UA="BDIX-IPTV-Audit/1.5"
 TIMEOUT=6
 WORKERS=48
 MAX_STREAM_BYTES=65536
