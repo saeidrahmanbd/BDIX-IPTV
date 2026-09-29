@@ -1,6 +1,6 @@
 # Live Project Dashboard
 
-_Last generated: **2026-09-29 11:38 UTC**_
+_Last generated: **2026-09-29 11:54 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -11,7 +11,7 @@ _Last generated: **2026-09-29 11:38 UTC**_
 | 🔁 Backup Streams | **325** |
 | 🖼️ Logos | **0%** |
 | 📅 EPG Coverage | **0%** |
-| 🟢 Stream Health | **99%** |
+| 🟢 Stream Health | **97%** |
 
 ## Quality Controls
 
@@ -20,6 +20,6 @@ _Last generated: **2026-09-29 11:38 UTC**_
 - Same-name collisions: **31**
 - Cross-country Backup collisions: **0**
 - EPG missing: **0**
-- Repeated-failure stream candidates: **0**
+- Repeated-failure stream candidates: **1**
 
 This file is generated automatically. It is safe for the Wiki to display as a live dashboard source.
