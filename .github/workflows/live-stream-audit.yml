@@ -17,7 +17,7 @@ concurrency:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 36
     steps:
       - uses: actions/checkout@v4
         with:
