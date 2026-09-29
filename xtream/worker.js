@@ -8,6 +8,7 @@ const EPG_URLS = [
   // feeds from EPGShare01 (currently ~4 MB and ~1 MB compressed).
   "https://epg.pw/xmltv/epg_IN.xml",
   "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
+  "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
   "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
   "https://iptv-epg.org/files/epg-in.xml"
 ];
