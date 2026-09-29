@@ -1088,7 +1088,7 @@ https://drk6xq0vhn.gpcdn.net/live/b4u_music_abr/index.m3u8
 https://cdn.pishow.tv/ott/live/415/master.m3u8
 #EXTINF:-1 channel-id="BabySharkTV.us@SD" tvg-id="BabySharkTV.us@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/baby-shark-tv.png" tvg-name="Baby Shark TV" group-title="Backup",Baby Shark TV (1080p)
 https://newidco-babysharktv-1-us.roku.wurl.tv/playlist.m3u8
-#EXTINF:-1 channel-id="BalleBalle.in@SD" tvg-id="BalleBalle.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/balle-balle.png" tvg-name="Balle Balle" group-title="Not Playing",Balle Balle (576p)
+#EXTINF:-1 channel-id="BalleBalle.in@SD" tvg-id="BalleBalle.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/balle-balle.png" tvg-name="Balle Balle" group-title="Backup",Balle Balle (576p)
 https://streams.tangotv.in/BALLEBALLE/ORIGIN/index.m3u8
 #EXTINF:-1 channel-id="custom.bangla.tv" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bangla-tv.png" tvg-id="custom.bangla.tv" tvg-name="Bangla Tv" group-title="Backup",Bangla Tv
 http://116.204.149.16/banglatv/index.m3u8
@@ -1288,7 +1288,7 @@ https://d6dg3ebeih71x.cloudfront.net/Gravitas_Movies.m3u8
 https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/playlist/amg01753-narrativeentert-greatmovies-samsunguk/playlist.m3u8
 #EXTINF:-1 channel-id="GREATromance.uk" tvg-id="GREATromance.uk" tvg-name="GREAT! romance" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/great-romance-1080p-7315cca1df.png" tvg-country="UK" tvg-language="eng" group-title="Backup",GREAT! romance (1080p)
 https://amg01753-narrativeentert-greatchristmas-samsunguk-8atls.amagi.tv/playlist/amg01753-narrativeentert-greatchristmas-samsunguk/playlist.m3u8
-#EXTINF:-1 channel-id="GreenTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/green-tv.png" tvg-id="GreenTV.bd" tvg-name="Green TV" group-title="Not Playing",Green TV
+#EXTINF:-1 channel-id="GreenTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/green-tv.png" tvg-id="GreenTV.bd" tvg-name="Green TV" group-title="Backup",Green TV
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/greentv.stream/index.m3u8
 #EXTINF:-1 tvg-id="HindiHits.in" tvg-name="Hindi Hits" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hindi-hits.png" channel-id="HindiHits.in" group-title="Backup",Hindi Hits [Backup 1]
 https://iptvlive.ahmed-bd-org.workers.dev/hindi-hits-hd-1/index.m3u8
@@ -1548,7 +1548,7 @@ https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8
 http://premiumtvs.space/live/1Aoen7elp5/IgMJ60tmAa/8540.ts
 #EXTINF:-1 channel-id="Star.Jalsha.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" tvg-id="Star.Jalsha.in" tvg-name="Star Jalsha" group-title="Backup",Star Jalsha [Backup 5]
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
-#EXTINF:-1 tvg-id="StarJalsha.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" tvg-name="Star Jalsha (576p) [Geo-blocked]" channel-id="StarJalsha.in@SD" group-title="Not Playing",Star Jalsha (576p) [Geo-blocked]
+#EXTINF:-1 tvg-id="StarJalsha.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" tvg-name="Star Jalsha (576p) [Geo-blocked]" channel-id="StarJalsha.in@SD" group-title="Backup",Star Jalsha (576p) [Geo-blocked]
 http://cdn98.com/play/live.php?mac=00:1A:79:99:54:11&stream=225805&extension=ts&play_token=o1cczsG9wV
 #EXTINF:-1 channel-id="custom.star.news.2" tvg-id="custom.star.news.2" tvg-name="Star News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-news-722ad595.png" group-title="Backup",Star News [Backup 1]
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/playlist.m3u8
