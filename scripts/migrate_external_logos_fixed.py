@@ -92,6 +92,7 @@ ID_LOGO_MAP = {
     "marqueesportsnetwork.us": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Marquee_Sports_Network_Logo.svg/512px-Marquee_Sports_Network_Logo.svg.png",
     "adithyatv.in@sd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ADITHYA_TV/images/LOGO_HD/image.png",
     "zeesarthak.in@sd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_SARTHAK/images/LOGO_HD/LOGO_HD_image.png",
+    "zeebiskope.in@sd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_BISKOPE/images/LOGO_HD/LOGO_HD_image.png",
     "ekamracinema.in@sd": "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ekamra_Cinema.png",
     "ekamramanoranjan.in@sd": "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ekamra_Manoranjan.png",
     "ekamramusiq.in@sd": "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ekamra_Music.png",
