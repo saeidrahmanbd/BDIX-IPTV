@@ -9,7 +9,7 @@ PLAYLIST=Path('IPTV-Playlist.m3u')
 REPORT=Path('reports/live-stream-audit.md')
 TIMEOUT=10
 WORKERS=24
-ATTR_RE=re.compile(r'([\\w-]+)="([^"]*)"')
+ATTR_RE=re.compile(r'([\w-]+)="([^"]*)"')
 
 def attrs(s): return dict(ATTR_RE.findall(s))
 
