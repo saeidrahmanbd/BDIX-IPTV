@@ -175,6 +175,31 @@ jobs:
               print(f"  - {item}")
           PY
 
+      # Backup streams must never carry primary channel numbers.
+      # Keep this normalization inside the update workflow so the audit
+      # cannot fail merely because a newly imported backup inherited tvg-chno.
+      - name: Remove channel numbers from Backup entries
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+
+          playlist = Path("IPTV-Playlist.m3u")
+          lines = playlist.read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
+          attr_re = re.compile(r'\s+tvg-chno="[^"]*"')
+          changed = 0
+
+          for i, line in enumerate(lines):
+              if line.startswith("#EXTINF") and 'group-title="Backup"' in line:
+                  new_line = attr_re.sub("", line, count=1)
+                  if new_line != line:
+                      lines[i] = new_line
+                      changed += 1
+
+          playlist.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8", newline="\n")
+          print(f"Removed tvg-chno from {changed} Backup entries.")
+          PY
+
       - name: Snapshot protected primary entries
         run: |
           python - <<'PY'
