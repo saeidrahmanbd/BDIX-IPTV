@@ -140,7 +140,7 @@
         "url": "https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8"
       }
     ],
-    "9xjhakaas.in": [
+    "9xjhakaas.in@sd": [
       {
         "failure_streak": 0,
         "name": "9X Jhakaas",
@@ -150,7 +150,7 @@
         "url": "https://wiselp.wiseplayout.com/9X_Jhakaas/master.m3u8"
       }
     ],
-    "9xm.in": [
+    "9xm.in@sd": [
       {
         "failure_streak": 0,
         "name": "9XM",
@@ -184,7 +184,7 @@
         "url": "https://wiselp.wiseplayout.com/9XM/master.m3u8"
       }
     ],
-    "9xtashan.in": [
+    "9xtashan.in@sd": [
       {
         "failure_streak": 0,
         "name": "9X Tashan",
@@ -194,7 +194,7 @@
         "url": "https://wiselp.wiseplayout.com/9X_Tashan/master.m3u8"
       }
     ],
-    "aakaashaath.in": [
+    "aakaashaath.in@sd": [
       {
         "failure_streak": 0,
         "name": "Aakaash Aath",
@@ -270,7 +270,7 @@
         "url": "https://65f16f0fdfc51.streamlock.net/afarinTV/livestream/playlist.m3u8"
       }
     ],
-    "alankartv.in": [
+    "alankartv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Alankar TV",
@@ -340,7 +340,7 @@
         "url": "http://23.239.31.26:8989/amc/index.m3u8"
       }
     ],
-    "amritatv.in": [
+    "amritatv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Amrita TV",
@@ -384,7 +384,7 @@
         "url": "https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8?e=1784102574&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=ca7c19dec6024bf61b0aa2c509cf45df"
       }
     ],
-    "anandtv.in": [
+    "anandtv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Anand TV",
@@ -392,24 +392,6 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://live.legitpro.co.in/anandtv/index.m3u8"
-      }
-    ],
-    "andtv.in": [
-      {
-        "failure_streak": 0,
-        "name": "&TV",
-        "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
-        "url": "https://drk6xq0vhn.gpcdn.net/live/and_tv_hd_abr/index.m3u8"
-      },
-      {
-        "failure_streak": 0,
-        "name": "&TV",
-        "role": "Backup 1",
-        "score": 100,
-        "status": "Healthy",
-        "url": "https://stream.ottplus.live/live/and_tv_hd_abr/index.m3u8"
       }
     ],
     "andtv.in@hd": [
@@ -432,14 +414,22 @@
         "url": "https://3f56f997.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9BbmRUVl9ITFM/playlist.m3u8"
       }
     ],
-    "animalplanet.in": [
+    "andtv.in@sd": [
       {
         "failure_streak": 0,
-        "name": "Animal Planet",
+        "name": "&TV",
         "role": "Primary",
         "score": 105,
         "status": "Healthy",
-        "url": "https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8"
+        "url": "https://drk6xq0vhn.gpcdn.net/live/and_tv_hd_abr/index.m3u8"
+      },
+      {
+        "failure_streak": 0,
+        "name": "&TV",
+        "role": "Backup 1",
+        "score": 100,
+        "status": "Healthy",
+        "url": "https://stream.ottplus.live/live/and_tv_hd_abr/index.m3u8"
       }
     ],
     "animalplanet.in@hd": [
@@ -452,7 +442,17 @@
         "url": "https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd/index.m3u8"
       }
     ],
-    "anmoltv.in": [
+    "animalplanet.in@sd": [
+      {
+        "failure_streak": 0,
+        "name": "Animal Planet",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8"
+      }
+    ],
+    "anmoltv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Zee Anmol",
@@ -472,7 +472,7 @@
         "url": "http://rgkkw.live:80/live/1Aoen7elp5/IgMJ60tmAa/18309.ts"
       }
     ],
-    "asianetmovies.in": [
+    "asianetmovies.in@sd": [
       {
         "failure_streak": 0,
         "name": "Asianet Movies",
@@ -640,7 +640,7 @@
         "url": "https://dbcanada.sonarbanglatv.com/azantv/atv/index.m3u8"
       }
     ],
-    "b4ukadak.in": [
+    "b4ukadak.in@sd": [
       {
         "failure_streak": 0,
         "name": "B4U Kadak",
@@ -666,7 +666,7 @@
         "url": "https://streams.tangotv.in/B4UKADAK/ORIGIN/index.m3u8"
       }
     ],
-    "b4umovies.in": [
+    "b4umovies.in@india": [
       {
         "failure_streak": 0,
         "name": "B4U Movies",
@@ -700,7 +700,7 @@
         "url": "https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8"
       }
     ],
-    "b4umusic.in": [
+    "b4umusic.in@india": [
       {
         "failure_streak": 0,
         "name": "B4U Music",
@@ -715,17 +715,15 @@
         "role": "Backup 1",
         "score": 100,
         "status": "Healthy",
-        "url": "https://drk6xq0vhn.gpcdn.net/live/b4u_music_abr/index.m3u8"
-      }
-    ],
-    "b4umusic.in@india": [
+        "url": "https://cdn.pishow.tv/ott/live/415/master.m3u8"
+      },
       {
         "failure_streak": 0,
         "name": "B4U Music",
-        "role": "Primary",
+        "role": "Backup 2",
         "score": 100,
         "status": "Healthy",
-        "url": "https://cdn.pishow.tv/ott/live/415/master.m3u8"
+        "url": "https://drk6xq0vhn.gpcdn.net/live/b4u_music_abr/index.m3u8"
       }
     ],
     "babysharktv.us": [
@@ -758,7 +756,7 @@
         "url": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8"
       }
     ],
-    "balleballe.in": [
+    "balleballe.in@sd": [
       {
         "failure_streak": 0,
         "name": "Balle Balle",
@@ -766,14 +764,12 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://mcncdndigital.com/balleballetv/index.m3u8"
-      }
-    ],
-    "balleballe.in@sd": [
+      },
       {
-        "failure_streak": 2,
+        "failure_streak": 3,
         "name": "Balle Balle",
-        "role": "Primary",
-        "score": 70,
+        "role": "Backup 1",
+        "score": 0,
         "status": "HTTP error",
         "url": "https://streams.tangotv.in/BALLEBALLE/ORIGIN/index.m3u8"
       }
@@ -866,41 +862,41 @@
     ],
     "bein sport hd 1": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "beIN Sports 1",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6123/index.m3u8"
       }
     ],
     "beinsports3.qa": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Bein Sports 3",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6124/index.m3u8"
       }
     ],
     "beinsports6.qa": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "beIN SPORTS 6",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6127/index.m3u8"
       }
     ],
     "beinsports7.qa": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "beIN SPORTS 7",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6128/index.m3u8"
       }
     ],
@@ -960,7 +956,7 @@
         "url": "https://server.livelegitpro.in/bhichannel/bhichannel/index.m3u8"
       }
     ],
-    "bhojpuricinema.in": [
+    "bhojpuricinema.in@sd": [
       {
         "failure_streak": 0,
         "name": "Bhojpuri Cinema",
@@ -994,7 +990,7 @@
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/bhojpuri-cinema-1/index.m3u8"
       }
     ],
-    "bigmagic.in": [
+    "bigmagic.in@sd": [
       {
         "failure_streak": 0,
         "name": "Big Magic",
@@ -1114,12 +1110,22 @@
     ],
     "btvnational.bd": [
       {
-        "failure_streak": 3,
+        "failure_streak": 4,
         "name": "BTV National",
         "role": "Primary",
         "score": 0,
         "status": "HTTP error",
         "url": "https://btv.hridoytv-channel.workers.dev/btv.m3u8"
+      }
+    ],
+    "cartoonnetwork.in@sd": [
+      {
+        "failure_streak": 0,
+        "name": "Cartoon Network HD+",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://drk6xq0vhn.gpcdn.net/live/cn_hd_abr/index.m3u8"
       }
     ],
     "cartoonnetwork.uk": [
@@ -1130,16 +1136,6 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://drk6xq0vhn.gpcdn.net/live/cn_sd_abr/index.m3u8"
-      }
-    ],
-    "cartoonnetworkhdplus.in": [
-      {
-        "failure_streak": 0,
-        "name": "Cartoon Network HD+",
-        "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
-        "url": "https://drk6xq0vhn.gpcdn.net/live/cn_hd_abr/index.m3u8"
       }
     ],
     "cgtndocumentary.cn": [
@@ -1310,15 +1306,15 @@
     ],
     "cmcusacountrymusicchannel.us@sd": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "CMC-USA Country Music Channel",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "https://hwlive.streamingmediahosting.com/14215-live/0_obd393sh/playlist.m3u8"
       }
     ],
-    "colorsbangla.in": [
+    "colors.bangla.in": [
       {
         "failure_streak": 0,
         "name": "Colors Bangla",
@@ -1346,7 +1342,7 @@
         "url": "https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/2500.m3u8"
       }
     ],
-    "colorsbanglacinema.in": [
+    "colorsbanglacinema.in@sd": [
       {
         "failure_streak": 0,
         "name": "Colors Bangla Cinema",
@@ -1356,7 +1352,7 @@
         "url": "http://livetv.akr4m.com:8080/bdtv/restrem/3.m3u8"
       }
     ],
-    "colorscineplex.in": [
+    "colorscineplex.in@sd": [
       {
         "failure_streak": 0,
         "name": "Colors Cineplex",
@@ -1366,7 +1362,7 @@
         "url": "http://202.70.146.135:8000/play/a04n/index.m3u8"
       }
     ],
-    "colorscineplexbollywood.in": [
+    "colorscineplexbollywood.in@sd": [
       {
         "failure_streak": 0,
         "name": "Colors Cineplex Bollywood",
@@ -1386,7 +1382,7 @@
         "url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ColorsGujarati.m3u8"
       }
     ],
-    "colorskannada.in": [
+    "colorskannada.in@sd": [
       {
         "failure_streak": 0,
         "name": "Colors Kannada",
@@ -1396,7 +1392,7 @@
         "url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorskannadahd1.smil/playlist.m3u8"
       }
     ],
-    "colorsmarathi.in": [
+    "colorsmarathi.in@sd": [
       {
         "failure_streak": 0,
         "name": "Colors Marathi",
@@ -1426,7 +1422,7 @@
         "url": "https://d1rc86nwwc9fag.cloudfront.net/260723/smil:colorssuper1.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
       }
     ],
-    "colorstamil.in": [
+    "colorstamil.in@sd": [
       {
         "failure_streak": 0,
         "name": "Colors Tamil",
@@ -1446,7 +1442,7 @@
         "url": "https://streams2.sofast.tv/ptnr-yupptv/title-cricketgold/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/b2048bb8-1686-4432-aa50-647245383e0c/manifest.m3u8"
       }
     ],
-    "dangal2.in": [
+    "dangal2.in@sd": [
       {
         "failure_streak": 0,
         "name": "Dangal 2",
@@ -1472,7 +1468,7 @@
         "url": "https://streams.tangotv.in/DANGAL2/ORIGIN/index.m3u8"
       }
     ],
-    "dangaltv.in": [
+    "dangaltv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Dangal",
@@ -1498,7 +1494,7 @@
         "url": "https://streams.tangotv.in/DANGAL/ORIGIN/index.m3u8"
       }
     ],
-    "darshanatv.in": [
+    "darshanatv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Darshana TV",
@@ -1550,7 +1546,7 @@
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/dbc-news-hd-1/index.m3u8"
       }
     ],
-    "ddarunprabha.in": [
+    "ddarunprabha.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Arun Prabha",
@@ -1560,7 +1556,7 @@
         "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/308556d9fd1246adb479ef012a39bbfe/index.m3u8"
       }
     ],
-    "ddassam.in": [
+    "ddassam.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Assam",
@@ -1570,7 +1566,7 @@
         "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/d380bf5c167b4319a46cdd8204bc26b2/index.m3u8"
       }
     ],
-    "ddbangla.in": [
+    "ddbangla.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Bangla",
@@ -1604,7 +1600,7 @@
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/dd-bangla-1/index.m3u8"
       }
     ],
-    "ddbharati.in": [
+    "ddbharati.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Bharati",
@@ -1622,7 +1618,7 @@
         "url": "https://cdn.pishow.tv/ott/live/10/master.m3u8"
       }
     ],
-    "ddchandana.in": [
+    "ddchandana.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Chandana",
@@ -1640,7 +1636,7 @@
         "url": "https://cdn.pishow.tv/ott/live/28/master.m3u8"
       }
     ],
-    "ddgirnar.in": [
+    "ddgirnar.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Girnar",
@@ -1650,7 +1646,7 @@
         "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/558fdb9aebb54bb5bbbf0ced03686148/index.m3u8"
       }
     ],
-    "ddgoa.in": [
+    "ddgoa.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Goa",
@@ -1660,7 +1656,7 @@
         "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/e5b9db1cc184406bb97159da2f120f91/index.m3u8"
       }
     ],
-    "ddharyana.in": [
+    "ddharyana.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Haryana",
@@ -1670,7 +1666,7 @@
         "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/950fc69666474351bde0a32b9600c804/index.m3u8"
       }
     ],
-    "ddhimachalpradesh.in": [
+    "ddhimachalpradesh.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Himachal Pradesh",
@@ -1680,7 +1676,7 @@
         "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/afd2e335b0ba40eb9bdf1096118c6ede/index.m3u8"
       }
     ],
-    "ddjharkhand.in": [
+    "ddjharkhand.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Jharkhand",
@@ -1698,7 +1694,7 @@
         "url": "https://cdn.pishow.tv/ott/live/1617/master.m3u8"
       }
     ],
-    "ddkashir.in": [
+    "ddkashir.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Kashir",
@@ -1736,7 +1732,7 @@
         "url": "https://mumbai-edge.smartplaytv.in/ddmadhyapradesh/index.m3u8"
       }
     ],
-    "ddmalayalam.in": [
+    "ddmalayalam.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Malayalam",
@@ -1746,7 +1742,7 @@
         "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/c313674ffced4c9a90f1bba436df2b9b/index.m3u8"
       }
     ],
-    "ddmanipur.in": [
+    "ddmanipur.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Manipur",
@@ -1756,7 +1752,7 @@
         "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/8b75afc6576f450e8f554b6c877681d2/index.m3u8"
       }
     ],
-    "ddmeghalaya.in": [
+    "ddmeghalaya.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Meghalaya",
@@ -1766,7 +1762,7 @@
         "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/4f81bc8d13dd49b484da35988abb8729/index.m3u8"
       }
     ],
-    "ddnagaland.in": [
+    "ddnagaland.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Nagaland",
@@ -1774,16 +1770,6 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/29c92e0bef954a6d9b0908d1be29c1f0/index.m3u8"
-      }
-    ],
-    "ddnational.in": [
-      {
-        "failure_streak": 0,
-        "name": "DD National",
-        "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
-        "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/40492a64c1db4a1385ba1a397d357d3a/index.m3u8"
       }
     ],
     "ddnational.in@hd": [
@@ -1796,7 +1782,17 @@
         "url": "https://mumbai-edge.smartplaytv.in/DDNational/index.m3u8"
       }
     ],
-    "ddodia.in": [
+    "ddnational.in@sd": [
+      {
+        "failure_streak": 0,
+        "name": "DD National",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/40492a64c1db4a1385ba1a397d357d3a/index.m3u8"
+      }
+    ],
+    "ddodia.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Odia",
@@ -1814,7 +1810,7 @@
         "url": "https://mumbai-edge.smartplaytv.in/ddodiya/index.m3u8"
       }
     ],
-    "ddpunjabi.in": [
+    "ddpunjabi.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Punjabi",
@@ -1824,7 +1820,7 @@
         "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/da821c24a59d4e57960497aeaca8fb33/index.m3u8"
       }
     ],
-    "ddsahyadri.in": [
+    "ddsahyadri.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Sahyadri",
@@ -1834,7 +1830,7 @@
         "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/66dcc3ebe182447ba42837e746cf0c7c/index.m3u8"
       }
     ],
-    "ddsaptagiri.in": [
+    "ddsaptagiri.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Saptagiri",
@@ -1852,16 +1848,6 @@
         "url": "https://cdn.pishow.tv/ott/live/22/master.m3u8"
       }
     ],
-    "ddsports.in": [
-      {
-        "failure_streak": 0,
-        "name": "DD Sports",
-        "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
-        "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8"
-      }
-    ],
     "ddsports.in@hd": [
       {
         "failure_streak": 0,
@@ -1872,7 +1858,17 @@
         "url": "https://mumbai-edge.smartplaytv.in/DDSportsHD/index.m3u8"
       }
     ],
-    "ddtamil.in": [
+    "ddsports.in@sd": [
+      {
+        "failure_streak": 0,
+        "name": "DD Sports",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8"
+      }
+    ],
+    "ddtamil.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Tamil",
@@ -1882,7 +1878,7 @@
         "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/abf46b14847e45499f4a47f3a9afe93d/index.m3u8"
       }
     ],
-    "ddtripura.in": [
+    "ddtripura.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Tripura",
@@ -1892,7 +1888,7 @@
         "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/52b998e9510d41c29ad2ceca8ea3d849/index.m3u8"
       }
     ],
-    "ddurdu.in": [
+    "ddurdu.in@sd": [
       {
         "failure_streak": 0,
         "name": "DD Urdu",
@@ -1974,11 +1970,11 @@
         "url": "https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8?e=1784102570&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=78b23c868a34420397be9c985d04db9b"
       },
       {
-        "failure_streak": 2,
+        "failure_streak": 0,
         "name": "Desh TV",
         "role": "Backup 3",
-        "score": 70,
-        "status": "HTTP error",
+        "score": 90,
+        "status": "Redirect/temporary",
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/desh-tv-2/index.m3u8"
       }
     ],
@@ -1992,7 +1988,7 @@
         "url": "https://livestream.unlimitedcdn.com/agm-dc/desi-channel/index.m3u8"
       }
     ],
-    "dhoommusic.in": [
+    "dhoommusic.in@sd": [
       {
         "failure_streak": 0,
         "name": "Dhoom Music Bangla",
@@ -2020,7 +2016,7 @@
         "url": "https://s3.ideationtec.live/Discover_Pakistan/Discover_Pakistan.m3u8"
       }
     ],
-    "discoverychannel.in": [
+    "discoverychannel.in@sd": [
       {
         "failure_streak": 0,
         "name": "Discovery",
@@ -2050,7 +2046,7 @@
         "url": "http://88.212.15.19/live/disney_channel_hun/index.m3u8"
       }
     ],
-    "disneychannel.in": [
+    "disneychannel.in@hd": [
       {
         "failure_streak": 0,
         "name": "Disney Channel India",
@@ -2253,7 +2249,7 @@
         "role": "Backup 1",
         "score": 100,
         "status": "Healthy",
-        "url": "https://drk6xq0vhn.gpcdn.net/live/ekhon_tv_abr/index.m3u8"
+        "url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/globaltv.stream/index.m3u8"
       },
       {
         "failure_streak": 0,
@@ -2261,15 +2257,15 @@
         "role": "Backup 2",
         "score": 100,
         "status": "Healthy",
-        "url": "https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8?e=1784102563&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=b5e80a73380863be907284374bdb2bda"
+        "url": "https://drk6xq0vhn.gpcdn.net/live/ekhon_tv_abr/index.m3u8"
       },
       {
-        "failure_streak": 5,
+        "failure_streak": 0,
         "name": "Ekhon TV",
         "role": "Backup 3",
-        "score": 0,
-        "status": "HTTP error",
-        "url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/globaltv.stream/index.m3u8"
+        "score": 100,
+        "status": "Healthy",
+        "url": "https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8?e=1784102563&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=b5e80a73380863be907284374bdb2bda"
       }
     ],
     "ekusheytv.bd": [
@@ -2308,11 +2304,11 @@
     ],
     "enterfilm.ua": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Enter-Film",
         "role": "Primary",
-        "score": 100,
-        "status": "Healthy",
+        "score": 70,
+        "status": "Invalid HLS",
         "url": "http://stream.mcquack.net/322/index.m3u8"
       }
     ],
@@ -2344,7 +2340,7 @@
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/enter-10-bangla-1/index.m3u8"
       }
     ],
-    "epicbharat.in": [
+    "epicbharat.in@sd": [
       {
         "failure_streak": 0,
         "name": "Epic Bharat",
@@ -2362,7 +2358,7 @@
         "url": "https://epiconvh.akamaized.net/live/nazara/master.m3u8"
       }
     ],
-    "epicbhojpuri.in": [
+    "epicbhojpuri.in@sd": [
       {
         "failure_streak": 0,
         "name": "Epic Bhojpuri",
@@ -2382,7 +2378,7 @@
         "url": "https://cc-wsuyg2uxeak04.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-wsuyg2uxeak04/master.m3u8"
       }
     ],
-    "epicmusic.in": [
+    "epicmusic.in@sd": [
       {
         "failure_streak": 0,
         "name": "Epic Music",
@@ -2470,7 +2466,7 @@
     ],
     "etvplus.in@sd": [
       {
-        "failure_streak": 6,
+        "failure_streak": 7,
         "name": "ETV Plus",
         "role": "Primary",
         "score": 0,
@@ -2488,7 +2484,7 @@
         "url": "http://stream.mcquack.net/261/index.m3u8"
       }
     ],
-    "eurosport.in": [
+    "eurosport.in@sd": [
       {
         "failure_streak": 0,
         "name": "EURO SPORT HD",
@@ -2498,7 +2494,7 @@
         "url": "http://202.70.146.135:8000/play/a05s/index.m3u8"
       }
     ],
-    "faktmarathi.in": [
+    "faktmarathi.in@sd": [
       {
         "failure_streak": 0,
         "name": "Fakt Marathi",
@@ -2546,7 +2542,7 @@
         "url": "https://d3d85c7qkywguj.cloudfront.net/scheduler/scheduleMaster/263.m3u8"
       }
     ],
-    "foodfood.in": [
+    "foodfood.in@sd": [
       {
         "failure_streak": 0,
         "name": "Food Food",
@@ -2706,7 +2702,7 @@
         "url": "https://streams2.sofast.tv/sofastplayout/WiseM3U8_1/master.m3u8"
       }
     ],
-    "goldmines.in": [
+    "goldmines.in@sd": [
       {
         "failure_streak": 0,
         "name": "Goldmines",
@@ -2742,7 +2738,7 @@
         "url": "https://mumt03.tangotv.in/Dsly5z3HGOLDMINESACTION/index.m3u8"
       }
     ],
-    "goldminesbollywood.in": [
+    "goldminesbollywood.in@sd": [
       {
         "failure_streak": 0,
         "name": "Goldmines Bollywood",
@@ -2812,7 +2808,7 @@
     ],
     "greentv.bd": [
       {
-        "failure_streak": 5,
+        "failure_streak": 6,
         "name": "Green TV",
         "role": "Primary",
         "score": 0,
@@ -2820,11 +2816,11 @@
         "url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/greentv.stream/index.m3u8"
       },
       {
-        "failure_streak": 5,
+        "failure_streak": 6,
         "name": "Green TV",
         "role": "Backup 1",
         "score": 0,
-        "status": "HTTP error",
+        "status": "Timeout",
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/green-tv-2/index.m3u8"
       }
     ],
@@ -2926,7 +2922,7 @@
         "url": "https://d1nzda2a2b3swt.cloudfront.net/History_Warfare_Now.m3u8"
       }
     ],
-    "hmtv.in": [
+    "hmtv.in@sd": [
       {
         "failure_streak": 0,
         "name": "HMTV",
@@ -3038,7 +3034,7 @@
         "url": "https://amg00861-amg00861c10-rakuten-uk-3152.playouts.now.amagi.tv/playlist.m3u8"
       }
     ],
-    "investigationdiscovery.in": [
+    "investigationdiscovery.in@sd": [
       {
         "failure_streak": 0,
         "name": "Investigation Discovery",
@@ -3098,7 +3094,7 @@
         "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/iqrabanglatvoffice.stream/live-orgin/iqrabanglatvoffice.stream/chunks.m3u8"
       }
     ],
-    "isaiaruvi.in": [
+    "isaiaruvi.in@sd": [
       {
         "failure_streak": 0,
         "name": "Isai Aruvi",
@@ -3128,11 +3124,11 @@
         "url": "https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8"
       },
       {
-        "failure_streak": 1,
+        "failure_streak": 0,
         "name": "Jago News 24",
         "role": "Backup 1",
-        "score": 70,
-        "status": "HTTP error",
+        "score": 90,
+        "status": "Redirect/temporary",
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/jago-news-24-1/index.m3u8"
       }
     ],
@@ -3210,7 +3206,7 @@
         "url": "https://mumt03.tangotv.in/Dsly5z3HKAIRALIARABIA/index.m3u8"
       }
     ],
-    "kairalitv.in": [
+    "kairalitv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Kairali TV",
@@ -3228,7 +3224,7 @@
         "url": "https://streams.tangotv.in/KAIRALI/ORIGIN/index.m3u8"
       }
     ],
-    "kairaliwe.in": [
+    "kairaliwe.in@sd": [
       {
         "failure_streak": 0,
         "name": "Kairali We",
@@ -3264,7 +3260,7 @@
         "url": "https://segment.yuppcdn.net/050522/murasu/playlist.m3u8"
       }
     ],
-    "kalaignartv.in": [
+    "kalaignartv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Kalaignar TV",
@@ -3274,7 +3270,7 @@
         "url": "https://segment.yuppcdn.net/240122/kalaignartv/playlist.m3u8"
       }
     ],
-    "kappatv.in": [
+    "kappatv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Kappa TV",
@@ -3304,7 +3300,7 @@
         "url": "https://lightning-fnf-samsungaus.amagi.tv/playlist.m3u8"
       }
     ],
-    "khushboobangla.in": [
+    "khushboobangla.in@sd": [
       {
         "failure_streak": 0,
         "name": "Khushboo Bangla",
@@ -3374,7 +3370,7 @@
     ],
     "local.0646349a4378": [
       {
-        "failure_streak": 3,
+        "failure_streak": 4,
         "name": "BTV News",
         "role": "Primary",
         "score": 0,
@@ -3766,11 +3762,11 @@
     ],
     "local.86529dbe4f63": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Солнце",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Timeout",
         "url": "http://tv.mediacdn.ru/live/solntse/playlist.m3u8"
       }
     ],
@@ -4068,21 +4064,21 @@
     ],
     "local.makkah-live": [
       {
-        "failure_streak": 2,
+        "failure_streak": 0,
         "name": "Makkah Live",
         "role": "Primary",
-        "score": 75,
-        "status": "HTTP error",
+        "score": 105,
+        "status": "Healthy",
         "url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/makkah.stream/index.m3u8"
       }
     ],
     "local.nagorik": [
       {
-        "failure_streak": 2,
+        "failure_streak": 0,
         "name": "Nagorik TV",
         "role": "Primary",
-        "score": 70,
-        "status": "HTTP error",
+        "score": 100,
+        "status": "Healthy",
         "url": "https://box.bbaria.net/Nagorik_TV/tracks-v1a1/mono.m3u8"
       }
     ],
@@ -4137,17 +4133,17 @@
         "failure_streak": 0,
         "name": "Star News",
         "role": "Backup 2",
+        "score": 95,
+        "status": "Redirect/temporary",
+        "url": "https://iptvlive.ahmed-bd-org.workers.dev/star-news-1/index.m3u8"
+      },
+      {
+        "failure_streak": 0,
+        "name": "Star News",
+        "role": "Backup 3",
         "score": 90,
         "status": "Redirect/temporary",
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/star-news-2/index.m3u8"
-      },
-      {
-        "failure_streak": 2,
-        "name": "Star News",
-        "role": "Backup 3",
-        "score": 75,
-        "status": "HTTP error",
-        "url": "https://iptvlive.ahmed-bd-org.workers.dev/star-news-1/index.m3u8"
       }
     ],
     "local.star-sports-sl-1": [
@@ -4302,7 +4298,7 @@
         "url": "https://mumt04.tangotv.in/m18aqlK4MANORANJANMOVIES/index.m3u8"
       }
     ],
-    "manoranjanprime.in": [
+    "manoranjanprime.in@sd": [
       {
         "failure_streak": 0,
         "name": "Manoranjan Prime",
@@ -4350,7 +4346,7 @@
         "url": "http://live.playmax.live/matribhumi/index.m3u8"
       }
     ],
-    "mazhavilmanorama.in": [
+    "mazhavilmanorama.in@sd": [
       {
         "failure_streak": 0,
         "name": "Mazhavil Manorama",
@@ -4544,7 +4540,7 @@
         "url": "https://mumt04.tangotv.in/m18aqlK4MHONE/index.m3u8"
       }
     ],
-    "mhonedilse.in": [
+    "mhonedilse.in@sd": [
       {
         "failure_streak": 0,
         "name": "MH One Dil Se",
@@ -4699,22 +4695,22 @@
         "role": "Backup 1",
         "score": 100,
         "status": "Healthy",
-        "url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/moviebanglalink2.stream/tracks-v1a1/mono.m3u8"
-      },
-      {
-        "failure_streak": 0,
-        "name": "Movie Bangla",
-        "role": "Backup 2",
-        "score": 100,
-        "status": "Healthy",
         "url": "https://stream.ottplus.live/live/movie_bangla_abr/index.m3u8"
       },
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
+        "name": "Movie Bangla",
+        "role": "Backup 2",
+        "score": 70,
+        "status": "HTTP error",
+        "url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/moviebanglalink2.stream/tracks-v1a1/mono.m3u8"
+      },
+      {
+        "failure_streak": 1,
         "name": "Movie Bangla",
         "role": "Backup 3",
-        "score": 90,
-        "status": "Redirect/temporary",
+        "score": 70,
+        "status": "HTTP error",
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/movie-bangla-1/index.m3u8"
       }
     ],
@@ -4848,7 +4844,7 @@
         "url": "http://88.212.15.19/live/mb_sexy/index.m3u8"
       }
     ],
-    "musicindia.in": [
+    "musicindia.in@sd": [
       {
         "failure_streak": 0,
         "name": "Music India",
@@ -5000,7 +4996,7 @@
         "url": "https://cdn15.live-tv.cloud/ua_infinitas_tv/nashemus-abr/playlist.m3u8"
       }
     ],
-    "nationalgeographic.in": [
+    "nationalgeographic.in@sd": [
       {
         "failure_streak": 0,
         "name": "National Geographic",
@@ -5010,7 +5006,7 @@
         "url": "http://202.70.146.135:8000/play/a05o/index.m3u8"
       }
     ],
-    "nationalgeographicwild.in": [
+    "nationalgeographicwild.in@sd": [
       {
         "failure_streak": 0,
         "name": "Nat Geo Wild",
@@ -5244,11 +5240,11 @@
         "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/ntvuk00332211.stream/playlist.m3u8"
       },
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "NTV Europe",
         "role": "Backup 1",
-        "score": 100,
-        "status": "Healthy",
+        "score": 70,
+        "status": "HTTP error",
         "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/ntvuk00332211.stream/live-orgin/ntvuk00332211.stream/chunks.m3u8"
       }
     ],
@@ -5420,7 +5416,7 @@
         "url": "https://d11k1mnrgfposz.cloudfront.net/playlist.m3u8"
       }
     ],
-    "pitaara.in": [
+    "pitaara.in@sd": [
       {
         "failure_streak": 0,
         "name": "Pitaara TV",
@@ -5486,7 +5482,7 @@
         "url": "https://vglivessai.akamaized.net/sg/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/b8ada260-bb81-472b-b7c1-3a79213a84b8/e02a0ce5-6c42-4cca-bb53-e5cfecff74a9/0.m3u8"
       }
     ],
-    "pogo.in": [
+    "pogo.in@sd": [
       {
         "failure_streak": 0,
         "name": "Pogo",
@@ -5544,7 +5540,7 @@
         "url": "https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8"
       }
     ],
-    "ptcmusic.in": [
+    "ptcmusic.in@sd": [
       {
         "failure_streak": 0,
         "name": "PTC Music",
@@ -5562,7 +5558,7 @@
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/ptc-music-1/index.m3u8"
       }
     ],
-    "ptcpunjabi.in": [
+    "ptcpunjabi.in@sd": [
       {
         "failure_streak": 0,
         "name": "PTC Punjabi",
@@ -5570,19 +5566,17 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/3e22a9c278db4e3eb779afd42e41b0a6/index.m3u8"
-      }
-    ],
-    "ptcpunjabi.in@sd": [
+      },
       {
         "failure_streak": 0,
         "name": "PTC Punjabi",
-        "role": "Primary",
+        "role": "Backup 1",
         "score": 100,
         "status": "Healthy",
         "url": "https://streams.tangotv.in/PTCPUNJABI/ORIGIN/index.m3u8"
       }
     ],
-    "ptcpunjabigold.in": [
+    "ptcpunjabigold.in@sd": [
       {
         "failure_streak": 0,
         "name": "PTC Punjabi Gold",
@@ -5592,7 +5586,7 @@
         "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/6e14bac6d0384e129521a4d005188bfb/index.m3u8"
       }
     ],
-    "publicmovies.in": [
+    "publicmovies.in@sd": [
       {
         "failure_streak": 0,
         "name": "Public Movies",
@@ -5602,7 +5596,7 @@
         "url": "https://mumt04.tangotv.in/m18aqlK4PUBLICMOVIES/index.m3u8"
       }
     ],
-    "publicmusic.in": [
+    "publicmusic.in@sd": [
       {
         "failure_streak": 0,
         "name": "Public Music",
@@ -5640,7 +5634,7 @@
         "url": "https://vglivessai.akamaized.net/ptnr-yupptv/title-Punjabi_Shorts/in/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/27c3fd7a-b01f-4b00-ac03-557ac77acd47/index.m3u8"
       }
     ],
-    "puthuyugamtv.in": [
+    "puthuyugamtv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Puthuyugam TV",
@@ -5696,7 +5690,7 @@
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/rajdhani-tv-1/index.m3u8"
       }
     ],
-    "rajdigitalplus.in": [
+    "rajdigitalplus.in@sd": [
       {
         "failure_streak": 0,
         "name": "Raj Digital Plus",
@@ -5706,7 +5700,7 @@
         "url": "https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RajTV_Digital_plus/master_1.m3u8"
       }
     ],
-    "rajmusixkannada.in": [
+    "rajmusixkannada.in@sd": [
       {
         "failure_streak": 0,
         "name": "Raj Musix Kannada",
@@ -5716,7 +5710,7 @@
         "url": "https://mumt01.tangotv.in/O5aw8Zn3RAJMUSIXKANDA/index.m3u8"
       }
     ],
-    "rajmusixmalayalam.in": [
+    "rajmusixmalayalam.in@sd": [
       {
         "failure_streak": 0,
         "name": "Raj Musix Malayalam",
@@ -5726,7 +5720,7 @@
         "url": "https://cdn.pishow.tv/ott/live/1073/master.m3u8"
       }
     ],
-    "rajmusixtamil.in": [
+    "rajmusixtamil.in@sd": [
       {
         "failure_streak": 0,
         "name": "Raj Musix Tamil",
@@ -5746,7 +5740,7 @@
         "url": "https://cdn.pishow.tv/ott/live/1213/master.m3u8"
       }
     ],
-    "rajtv.in": [
+    "rajtv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Raj TV",
@@ -5806,7 +5800,7 @@
         "url": "https://e3207568b726401995c25670faaf32e4.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6203/master.m3u8"
       }
     ],
-    "ramdhenu.in": [
+    "ramdhenu.in@sd": [
       {
         "failure_streak": 0,
         "name": "Ramdhenu",
@@ -5892,7 +5886,7 @@
         "url": "https://stream.mediawork.cz/retrotv/smil:retrotv2.smil/playlist.m3u8"
       }
     ],
-    "rojamovies.in": [
+    "rojamovies.in@sd": [
       {
         "failure_streak": 0,
         "name": "Roja Movies",
@@ -5902,7 +5896,7 @@
         "url": "https://stream.rojatv.cloud/rojatv/rojatv/index.m3u8"
       }
     ],
-    "rongeentv.in": [
+    "rongeentv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Rongeen TV",
@@ -6008,7 +6002,7 @@
         "url": "https://tvsen5.aynaott.com/RtvHD/index.m3u8"
       }
     ],
-    "rupasibangla.in": [
+    "rupasibangla.in@sd": [
       {
         "failure_streak": 0,
         "name": "Ruposhi Bangla",
@@ -6044,7 +6038,7 @@
         "url": "http://cdn12.henico.net:8080/live/sadatv/index.m3u8"
       }
     ],
-    "safaritv.in": [
+    "safaritv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Safari TV",
@@ -6108,7 +6102,7 @@
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/sananda-tv-1/index.m3u8"
       }
     ],
-    "sanatv.in": [
+    "sanatv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Sana TV",
@@ -6118,7 +6112,7 @@
         "url": "https://vglivessai.akamaized.net/us/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/b6d9e864-ec16-410a-804d-ccf8f720bfaa/index.m3u8"
       }
     ],
-    "sangeetbangla.in": [
+    "sangeetbangla.in@sd": [
       {
         "failure_streak": 0,
         "name": "Sangeet Bangla",
@@ -6151,12 +6145,20 @@
         "role": "Backup 1",
         "score": 100,
         "status": "Healthy",
-        "url": "https://tvsen6.aynaott.com/rELXiuUXqbgzPb06Npom/index.m3u8"
+        "url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/satvoff5666.stream/playlist.m3u8"
       },
       {
         "failure_streak": 0,
         "name": "SA TV",
         "role": "Backup 2",
+        "score": 100,
+        "status": "Healthy",
+        "url": "https://tvsen6.aynaott.com/rELXiuUXqbgzPb06Npom/index.m3u8"
+      },
+      {
+        "failure_streak": 0,
+        "name": "SA TV",
+        "role": "Backup 3",
         "score": 95,
         "status": "Redirect/temporary",
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-1/index.m3u8"
@@ -6164,18 +6166,10 @@
       {
         "failure_streak": 0,
         "name": "SA TV",
-        "role": "Backup 3",
+        "role": "Backup 4",
         "score": 90,
         "status": "Redirect/temporary",
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-2/index.m3u8"
-      },
-      {
-        "failure_streak": 2,
-        "name": "SA TV",
-        "role": "Backup 4",
-        "score": 70,
-        "status": "HTTP error",
-        "url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/satvoff5666.stream/playlist.m3u8"
       }
     ],
     "shansontv.ru": [
@@ -6206,7 +6200,7 @@
         "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8"
       }
     ],
-    "shemaroojosh.in": [
+    "shemaroojosh.in@sd": [
       {
         "failure_streak": 0,
         "name": "Shemaroo Josh",
@@ -6234,7 +6228,7 @@
         "url": "https://d393sxaxig6bax.cloudfront.net/out/v1/589cf2cf44bf42bb941e817a2240d62e/index.m3u8"
       }
     ],
-    "sirikannada.in": [
+    "sirikannada.in@sd": [
       {
         "failure_streak": 0,
         "name": "Siri Kannada",
@@ -6256,31 +6250,31 @@
     ],
     "skysportscricket.ie": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Sky Sports Cricket",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9258/index.m3u8"
       }
     ],
     "skysportsfootball.ie": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Sky Sports Football",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9289/index.m3u8"
       }
     ],
     "skysportsnfl.uk": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Sky Sports Action",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9155/index.m3u"
       }
     ],
@@ -6338,7 +6332,7 @@
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/somoy-tv-2/index.m3u8"
       }
     ],
-    "songdewtv.in": [
+    "songdewtv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Songdew TV",
@@ -6348,7 +6342,7 @@
         "url": "https://yuppnimrestreammum.akamaized.net/181224/smil:songdewtv.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
       }
     ],
-    "sonyaath.in": [
+    "sony.aath.in": [
       {
         "failure_streak": 0,
         "name": "Sony AATH",
@@ -6366,16 +6360,6 @@
         "url": "https://live20.bozztv.com/giatvplayout7/giatv-209611/index.m3u8"
       }
     ],
-    "sonybbcearth.in": [
-      {
-        "failure_streak": 0,
-        "name": "Sony BBC Earth",
-        "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
-        "url": "https://amg00793-bbcstudios-amg00793c3-lg-us-2528.playouts.now.amagi.tv/playlist/amg00793-bbcstudios-bbcearta-lgus/playlist.m3u8"
-      }
-    ],
     "sonybbcearth.in@hd": [
       {
         "failure_streak": 0,
@@ -6386,7 +6370,17 @@
         "url": "https://stream.ottplus.live/live/bbc_earth_hd_abr/index.m3u8"
       }
     ],
-    "sonyentertainmenttelevision": [
+    "sonybbcearth.in@sd": [
+      {
+        "failure_streak": 0,
+        "name": "Sony BBC Earth",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://amg00793-bbcstudios-amg00793c3-lg-us-2528.playouts.now.amagi.tv/playlist/amg00793-bbcstudios-bbcearta-lgus/playlist.m3u8"
+      }
+    ],
+    "sonyentertainmenttelevision.in@sd": [
       {
         "failure_streak": 0,
         "name": "Sony Entertainment TV",
@@ -6422,7 +6416,7 @@
         "url": "https://wurlsonypicturestv.global.transmit.live/hls/68deeb1c0238cda82df543dd/v1/spt_sonykal_1/lg_us/latest/main/hls/playlist.m3u8"
       }
     ],
-    "sonymax.in": [
+    "sonymax.in@sd": [
       {
         "failure_streak": 0,
         "name": "Sony Max",
@@ -6440,7 +6434,7 @@
         "url": "https://drk6xq0vhn.gpcdn.net/live/max_hd_abr/index.m3u8"
       }
     ],
-    "sonymax2.in": [
+    "sonymax2.in@sd": [
       {
         "failure_streak": 0,
         "name": "Sony Max 2",
@@ -6530,63 +6524,7 @@
         "url": "https://cc-yw7ztecy8do3q.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/SS_IN.m3u8"
       }
     ],
-    "star.jalsha.movies.in": [
-      {
-        "failure_streak": 0,
-        "name": "Jalsha Movies HD",
-        "role": "Primary",
-        "score": 95,
-        "status": "Redirect/temporary",
-        "url": "http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8"
-      },
-      {
-        "failure_streak": 1,
-        "name": "Jalsha Movies HD",
-        "role": "Backup 1",
-        "score": 70,
-        "status": "HTTP error",
-        "url": "https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8"
-      },
-      {
-        "failure_streak": 1,
-        "name": "Jalsha Movies HD",
-        "role": "Backup 2",
-        "score": 70,
-        "status": "HTTP error",
-        "url": "https://iptvlive.ahmed-bd-org.workers.dev/jalsha-movies-hd-2/index.m3u8"
-      }
-    ],
-    "stargold.in": [
-      {
-        "failure_streak": 0,
-        "name": "Star Gold",
-        "role": "Primary",
-        "score": 95,
-        "status": "Redirect/temporary",
-        "url": "http://livetv.akr4m.com:8080/bdtv/restrem/45.m3u8"
-      }
-    ],
-    "stargoldselect.in": [
-      {
-        "failure_streak": 0,
-        "name": "Star Gold Select",
-        "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
-        "url": "http://202.70.146.135:8000/play/a068/index.m3u8"
-      }
-    ],
-    "stargoldthrills.in@sd": [
-      {
-        "failure_streak": 0,
-        "name": "Star Gold Thrills",
-        "role": "Primary",
-        "score": 95,
-        "status": "Redirect/temporary",
-        "url": "http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/773735.ts"
-      }
-    ],
-    "starjalsha.in": [
+    "star.jalsha.in": [
       {
         "failure_streak": 0,
         "name": "Star Jalsha",
@@ -6612,17 +6550,73 @@
         "url": "http://premiumtvs.space/live/1Aoen7elp5/IgMJ60tmAa/8540.ts"
       }
     ],
+    "star.jalsha.movies.in": [
+      {
+        "failure_streak": 0,
+        "name": "Jalsha Movies HD",
+        "role": "Primary",
+        "score": 100,
+        "status": "Healthy",
+        "url": "https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8"
+      },
+      {
+        "failure_streak": 0,
+        "name": "Jalsha Movies HD",
+        "role": "Backup 1",
+        "score": 95,
+        "status": "Redirect/temporary",
+        "url": "http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8"
+      },
+      {
+        "failure_streak": 0,
+        "name": "Jalsha Movies HD",
+        "role": "Backup 2",
+        "score": 90,
+        "status": "Redirect/temporary",
+        "url": "https://iptvlive.ahmed-bd-org.workers.dev/jalsha-movies-hd-2/index.m3u8"
+      }
+    ],
+    "stargold.in@hd": [
+      {
+        "failure_streak": 0,
+        "name": "Star Gold",
+        "role": "Primary",
+        "score": 95,
+        "status": "Redirect/temporary",
+        "url": "http://livetv.akr4m.com:8080/bdtv/restrem/45.m3u8"
+      }
+    ],
+    "stargoldselect.in@sd": [
+      {
+        "failure_streak": 0,
+        "name": "Star Gold Select",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "http://202.70.146.135:8000/play/a068/index.m3u8"
+      }
+    ],
+    "stargoldthrills.in@sd": [
+      {
+        "failure_streak": 0,
+        "name": "Star Gold Thrills",
+        "role": "Primary",
+        "score": 95,
+        "status": "Redirect/temporary",
+        "url": "http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/773735.ts"
+      }
+    ],
     "starjalsha.in@sd": [
       {
-        "failure_streak": 2,
+        "failure_streak": 3,
         "name": "Star Jalsha (576p) [Geo-blocked]",
         "role": "Primary",
-        "score": 70,
+        "score": 0,
         "status": "HTTP error",
         "url": "http://cdn98.com/play/live.php?mac=00:1A:79:99:54:11&stream=225805&extension=ts&play_token=o1cczsG9wV"
       }
     ],
-    "starmaa.in": [
+    "starmaa.in@sd": [
       {
         "failure_streak": 0,
         "name": "Star Maa",
@@ -6632,7 +6626,7 @@
         "url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starmaa1.smil/chunklist_b2628000.m3u8"
       }
     ],
-    "starmaamovies.in": [
+    "starmaamovies.in@sd": [
       {
         "failure_streak": 0,
         "name": "Star Maa Movies",
@@ -6642,7 +6636,7 @@
         "url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:maamovies.smil/chunklist_b2628000.m3u8"
       }
     ],
-    "starmovies.in": [
+    "starmovies.in@sd": [
       {
         "failure_streak": 0,
         "name": "Star Movies",
@@ -6652,7 +6646,7 @@
         "url": "http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/98842.ts"
       }
     ],
-    "starmoviesselect.in": [
+    "starmoviesselect.in@hd": [
       {
         "failure_streak": 0,
         "name": "Star Movies Select",
@@ -6662,7 +6656,7 @@
         "url": "http://202.70.146.135:8000/play/a06q/index.m3u8"
       }
     ],
-    "starplus.in": [
+    "starplus.in@sd": [
       {
         "failure_streak": 0,
         "name": "Star Plus",
@@ -6680,7 +6674,7 @@
         "url": "http://livetv.akr4m.com:8080/bdtv/restrem/62.m3u8"
       }
     ],
-    "starpravah.in": [
+    "starpravah.in@sd": [
       {
         "failure_streak": 0,
         "name": "Star Pravah",
@@ -6690,7 +6684,7 @@
         "url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starpravah.smil/chunklist_b1928000.m3u8"
       }
     ],
-    "starsports1hindi.in": [
+    "starsports1hindi.in@hd": [
       {
         "failure_streak": 0,
         "name": "Star Sports 1 Hindi",
@@ -6808,7 +6802,7 @@
         "url": "https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
       }
     ],
-    "subintv.in": [
+    "subintv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Subin TV",
@@ -6818,7 +6812,7 @@
         "url": "https://stream.galaxyott.live/live/subintv/index.m3u8"
       }
     ],
-    "sunbangla.in": [
+    "sunbangla.in@sd": [
       {
         "failure_streak": 0,
         "name": "SUN BANGLA",
@@ -6836,7 +6830,7 @@
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/sun-bangla-1/index.m3u8"
       }
     ],
-    "sunmusic.in": [
+    "sunmusic.in@sd": [
       {
         "failure_streak": 0,
         "name": "Sun Music",
@@ -6886,7 +6880,7 @@
         "url": "https://mumt04.tangotv.in/m18aqlK4TAMILANTELEVISION/index.m3u8"
       }
     ],
-    "tarangmusic.in": [
+    "tarangmusic.in@sd": [
       {
         "failure_streak": 0,
         "name": "Tarang Music",
@@ -7016,7 +7010,7 @@
         "url": "https://amg01753-narrativeentert-tinypop-samsunguk-hvvb7.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-tinypop-samsunguk/playlist.m3u8"
       }
     ],
-    "tlc.in": [
+    "tlc.in@hd": [
       {
         "failure_streak": 0,
         "name": "TLC",
@@ -7184,7 +7178,7 @@
         "url": "https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8"
       }
     ],
-    "travelxp.in": [
+    "travelxp.in@sd": [
       {
         "failure_streak": 0,
         "name": "Travelxp Hindi",
@@ -7234,7 +7228,7 @@
         "url": "https://linear-893.frequency.stream/mt/plex/893/hls/master/playlist_640x360.m3u8"
       }
     ],
-    "ultimatetv.in": [
+    "ultimatetv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Ultimate TV",
@@ -7282,7 +7276,7 @@
         "url": "https://dwqz6akge0ila.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-lw48tj5rg6t4f/v1/aenetworks_mysteriesxplored_1/samsungheadend_us/latest/main/hls/playlist.m3u8"
       }
     ],
-    "vanithatv.in": [
+    "vanithatv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Vanitha TV",
@@ -7300,7 +7294,7 @@
         "url": "https://cdn.pishow.tv/ott/live/393/master.m3u8"
       }
     ],
-    "vasanthtv.in": [
+    "vasanthtv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Vasanth TV",
@@ -7318,7 +7312,7 @@
         "url": "https://mumbai-edge.smartplaytv.in/VasanthTV/index.m3u8"
       }
     ],
-    "vendhartv.in": [
+    "vendhartv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Vendhar TV",
@@ -7336,7 +7330,7 @@
         "url": "https://cdn.pishow.tv/ott/live/1271/master.m3u8"
       }
     ],
-    "vissatv.in": [
+    "vissatv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Vissa TV",
@@ -7482,16 +7476,6 @@
         "url": "https://server.zillarbarta.com/zbcatun/video.m3u8"
       }
     ],
-    "zbcinema.in": [
-      {
-        "failure_streak": 0,
-        "name": "ZB Cinema",
-        "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
-        "url": "https://server.zillarbarta.com/ZBCINEMA/index.m3u8"
-      }
-    ],
     "zbmusic.in": [
       {
         "failure_streak": 0,
@@ -7505,16 +7489,48 @@
     "zee.bangla.in": [
       {
         "failure_streak": 0,
-        "name": "Zee Bangla HD",
+        "name": "Zee Bangla",
         "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://drk6xq0vhn.gpcdn.net/live/zee_bangla_720/index.m3u8"
+      },
+      {
+        "failure_streak": 0,
+        "name": "Zee Bangla HD",
+        "role": "Backup 1",
         "score": 105,
         "status": "Healthy",
         "url": "https://yupptvcatchupire.yuppcdn.net/preview/zeebangla/2500.m3u8"
       },
       {
         "failure_streak": 0,
+        "name": "Zee Bangla",
+        "role": "Backup 2",
+        "score": 100,
+        "status": "Healthy",
+        "url": "http://27.124.71.27/Zee_Bangla/tracks-v1a1/mono.m3u8"
+      },
+      {
+        "failure_streak": 0,
+        "name": "Zee Bangla",
+        "role": "Backup 3",
+        "score": 100,
+        "status": "Healthy",
+        "url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ZeeBanglaHD.m3u8"
+      },
+      {
+        "failure_streak": 0,
+        "name": "Zee Bangla",
+        "role": "Backup 4",
+        "score": 100,
+        "status": "Healthy",
+        "url": "https://tvsen6.aynaott.com/ZeeBangla/index.m3u8"
+      },
+      {
+        "failure_streak": 0,
         "name": "Zee Bangla HD",
-        "role": "Backup 1",
+        "role": "Backup 5",
         "score": 90,
         "status": "Redirect/temporary",
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-hd-2/index.m3u8"
@@ -7564,41 +7580,17 @@
         "url": "http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/967.ts"
       }
     ],
-    "zeebangla.in": [
+    "zeebanglacinema.in@sd": [
       {
         "failure_streak": 0,
-        "name": "Zee Bangla",
+        "name": "ZB Cinema",
         "role": "Primary",
         "score": 105,
         "status": "Healthy",
-        "url": "https://drk6xq0vhn.gpcdn.net/live/zee_bangla_720/index.m3u8"
-      },
-      {
-        "failure_streak": 0,
-        "name": "Zee Bangla",
-        "role": "Backup 1",
-        "score": 100,
-        "status": "Healthy",
-        "url": "http://27.124.71.27/Zee_Bangla/tracks-v1a1/mono.m3u8"
-      },
-      {
-        "failure_streak": 0,
-        "name": "Zee Bangla",
-        "role": "Backup 2",
-        "score": 100,
-        "status": "Healthy",
-        "url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ZeeBanglaHD.m3u8"
-      },
-      {
-        "failure_streak": 0,
-        "name": "Zee Bangla",
-        "role": "Backup 3",
-        "score": 100,
-        "status": "Healthy",
-        "url": "https://tvsen6.aynaott.com/ZeeBangla/index.m3u8"
+        "url": "https://server.zillarbarta.com/ZBCINEMA/index.m3u8"
       }
     ],
-    "zeebanglasonar.in": [
+    "zeebanglasonar.in@sd": [
       {
         "failure_streak": 0,
         "name": "Zee Bangla Sonar",
@@ -7625,24 +7617,22 @@
       },
       {
         "failure_streak": 0,
-        "name": "Zee Bangla Sonar",
+        "name": "Zee Bangla Sonar (576p)",
         "role": "Backup 3",
+        "score": 100,
+        "status": "Healthy",
+        "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8"
+      },
+      {
+        "failure_streak": 0,
+        "name": "Zee Bangla Sonar",
+        "role": "Backup 4",
         "score": 90,
         "status": "Redirect/temporary",
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-cinema-2/index.m3u8"
       }
     ],
-    "zeebanglasonar.in@sd": [
-      {
-        "failure_streak": 0,
-        "name": "Zee Bangla Sonar (576p)",
-        "role": "Primary",
-        "score": 100,
-        "status": "Healthy",
-        "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8"
-      }
-    ],
-    "zeebollywood.in": [
+    "zeebollywood.in@sd": [
       {
         "failure_streak": 0,
         "name": "Zee Bollywood",
@@ -7668,7 +7658,7 @@
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/zee-bollywood-1/index.m3u8"
       }
     ],
-    "zeecinema.in": [
+    "zeecinema.in@hd": [
       {
         "failure_streak": 0,
         "name": "Zee Cinema",
@@ -7704,7 +7694,7 @@
         "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/NGCHD/default/NGCHD.m3u8"
       }
     ],
-    "zeekannada.in": [
+    "zeekannada.in@sd": [
       {
         "failure_streak": 0,
         "name": "Zee Kannada",
@@ -7714,7 +7704,7 @@
         "url": "https://yuppnimresmum.akamaized.net/28072023/smil:zeekannadahd.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
       }
     ],
-    "zeetamil.in": [
+    "zeetamil.in@sd": [
       {
         "failure_streak": 0,
         "name": "Zee Tamil",
@@ -7724,7 +7714,7 @@
         "url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:zeetamil1.smil/playlist.m3u8"
       }
     ],
-    "zeetv.in": [
+    "zeetv.in@sd": [
       {
         "failure_streak": 0,
         "name": "Zee TV",
@@ -7742,7 +7732,7 @@
         "url": "https://stream.ottplus.live/live/zee_tv_hd_abr/index.m3u8"
       }
     ],
-    "zoom.in": [
+    "zoom.in@sd": [
       {
         "failure_streak": 0,
         "name": "Zoom TV",
@@ -7787,5 +7777,5 @@
       }
     ]
   },
-  "generated": "2026-09-29T13:26:26+00:00"
+  "generated": "2026-09-29T13:31:54+00:00"
 }\n
