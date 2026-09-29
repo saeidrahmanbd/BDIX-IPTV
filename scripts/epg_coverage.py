@@ -4,7 +4,7 @@ from collections import defaultdict
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 PLAYLIST=Path('IPTV-Playlist.m3u'); MAPPING=Path('reports/epg-india-channel-mapping.csv'); REPORT=Path('reports/epg-coverage.md')
-SOURCES=['https://epg.pw/xmltv/epg_IN.xml','https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz','https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz','https://iptv-epg.org/files/epg-in.xml']
+SOURCES=['https://epg.pw/xmltv/epg_IN.xml','https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz','https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz','https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz','https://iptv-epg.org/files/epg-in.xml']
 ATTR_RE=re.compile(r'([\\w-]+)="([^"]*)"')
 def attrs(s): return dict(ATTR_RE.findall(s))
 def playlist():
