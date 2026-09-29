@@ -43,6 +43,11 @@ jobs:
           assert all('tvg-chno="' not in x or 'group-title="Backup"' not in x for x in lines if x.startswith("#EXTINF:")), "Backup channel number found"
           assert all('tvg-name="' in x for x in lines if x.startswith("#EXTINF:")), "Missing tvg-name"
           assert all('channel-id="' in x for x in lines if x.startswith("#EXTINF:")), "Missing channel-id"
+          primary = [x for x in lines if x.startswith("#EXTINF:") and 'group-title="Backup"' not in x and 'group-title="Not Playing"' not in x]
+          assert all('tvg-chno="' in x for x in primary), "Active primary entry missing tvg-chno"
+          chnos = [dict(__import__('re').findall(r'([\\w-]+)="([^"]*)"', x)).get("tvg-chno") for x in primary]
+          chnos = [x for x in chnos if x]
+          assert len(chnos) == len(set(chnos)), "Duplicate primary tvg-chno found"
           assert all(not any(ch in x for ch in "ⓎⓈᴴᴰ🇹🇷") for x in lines if x.startswith("#EXTINF:")), "Stray Unicode marker found"
           PY
 
