@@ -61,7 +61,7 @@ def main():
     kept=[]; moved=[]
     for b in bs:
         a=attrs(b[0]); group=a.get('group-title','').strip(); url=url_of(b)
-        if group == 'Not Playing': kept.append(b); continue
+        if group in {'Not Playing','Backup'}: kept.append(b); continue
         reason=nonstandard(url)
         if not reason and url:
             entry=state.get(url.lower(),{})
