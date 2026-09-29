@@ -27,7 +27,7 @@ _Last generated: **2026-09-29 15:34 UTC**_
 | Source | Last generated / checked |
 |---|---|
 | Playlist audit | **not available** |
-| Stream health | **2026-09-29T15:31:54+00:00** |
+| Stream health | **2026-09-29T15:34:28+00:00** |
 | EPG coverage | **2026-09-29T15:32:53+00:00** |
 
 This dashboard is a generated repository snapshot. Stream Health and EPG figures come from their latest completed audit reports; it is not a browser-side live stream probe.
