@@ -9,7 +9,9 @@ on:
     branches:
       - main
     paths:
+      - 'IPTV-Playlist.m3u'
       - 'scripts/stream_health.py'
+      - '.github/workflows/stream-health.yml'
       - 'IPTV-Playlist.m3u'
       - '.github/workflows/stream-health.yml'
 
