@@ -1,12 +1,12 @@
 # EPG Coverage Report
 
-Generated: **2026-09-29T05:28:49+00:00**
+Generated: **2026-09-29T05:29:34+00:00**
 
 This report checks mapped India EPG channels against actual downloaded XMLTV programme rows. LIVE EPG means at least one programme is current/future. EPG FOUND means rows exist but no current/future row was detected. NO PROGRAMME DATA means the mapped guide ID exists but produced no programme rows. NO GUIDE HIT means the mapped ID was absent from the downloaded guide.
 
 ## Coverage Summary
 
-- Active playlist channels: **792**
+- Active playlist channels: **769**
 - India-mapped channels: **167**
 - LIVE EPG (current/future programme): **140**
 - EPG FOUND (rows exist, no current/future row): **0**
