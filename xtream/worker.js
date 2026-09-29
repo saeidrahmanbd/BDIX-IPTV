@@ -3,18 +3,13 @@ const CACHE_KEY = "https://bdix-iptv.internal/playlist";
 const CACHE_TTL = 60;
 
 const EPG_URLS = [
-  // Use multiple India guides so a channel missing from one provider can
-  // still receive EPG from another. IN1 and IN4 are the compact India
-  // feeds from EPGShare01 (currently ~4 MB and ~1 MB compressed).
-  "https://epg.pw/xmltv/epg_IN.xml",
-  "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
-  "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
-  "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
-  "https://iptv-epg.org/files/epg-in.xml"
+  // Keep the request path memory-safe. IN1 is the broad India guide;
+  // additional large guides are handled by the offline coverage workflow.
+  "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz"
 ];
-const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v8";
+const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v9";
 const EPG_CACHE_TTL = 900;
-// Direct M3U EPG endpoint deployment trigger. v8: five-source India XMLTV + verified aliases.
+// Direct M3U EPG endpoint deployment trigger. v9: memory-safe India guide.
 
 // Cross-map playlist tvg-id variants to canonical EPG IDs used by public guides.
 const EPG_ID_MAP = {
@@ -125,13 +120,15 @@ async function getEpg(env){
       const bytes=await r.arrayBuffer();
       const encoding=(r.headers.get("content-encoding")||"").toLowerCase();
       let xml;
-      try{
-        if(encoding.includes("gzip") || source.endsWith(".gz")) {
+      if(encoding.includes("gzip")) {
+        xml=new TextDecoder().decode(bytes);
+      } else if(source.endsWith(".gz")) {
+        try {
           xml=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip"))).text();
-        } else {
+        } catch {
           xml=new TextDecoder().decode(bytes);
         }
-      }catch{
+      } else {
         xml=new TextDecoder().decode(bytes);
       }
       if(xml.includes("<tv") && xml.includes("<programme")) xmls.push(xml);
