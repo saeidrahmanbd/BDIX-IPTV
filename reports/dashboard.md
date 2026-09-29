@@ -1,6 +1,6 @@
 # Live Project Dashboard
 
-_Last generated: **2026-09-29 14:52 UTC**_
+_Last generated: **2026-09-29 14:53 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -28,6 +28,6 @@ _Last generated: **2026-09-29 14:52 UTC**_
 |---|---|
 | Playlist audit | **not available** |
 | Stream health | **2026-09-29T14:51:58+00:00** |
-| EPG coverage | **2026-09-29T14:51:22+00:00** |
+| EPG coverage | **2026-09-29T14:52:38+00:00** |
 
 This dashboard is a generated repository snapshot. Stream Health and EPG figures come from their latest completed audit reports; it is not a browser-side live stream probe.
