@@ -1,4 +1,5 @@
 name: Playlist Update
+# External-logo and metadata repair is intentionally included in every update run.
 
 on:
   schedule:
