@@ -16,6 +16,7 @@ on:
 permissions:
   contents: write
 
+# Coverage verification pass after playlist updates.
 concurrency:
   group: epg-coverage
   cancel-in-progress: false
