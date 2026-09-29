@@ -95,7 +95,7 @@ def main():
         lines += [f'### {status}','']
         for r in group: lines.append(f"- **{r['name']}** — {r['group']} — {r['url']} — {r['detail']} — {r['latency_ms']} ms")
         lines.append('')
-    REPORT.parent.mkdir(parents=True,exist_ok=True); REPORT.write_text('\\n'.join(lines)+'\\n',encoding='utf-8')
+    REPORT.parent.mkdir(parents=True,exist_ok=True); REPORT.write_text('\n'.join(lines)+'\n',encoding='utf-8')
     print('LIVE AUDIT',json.dumps({'entries':len(entries),'unique_urls':len(results),'counts':counts},ensure_ascii=False))
 
 if __name__=='__main__': main()
