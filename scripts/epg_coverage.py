@@ -11,11 +11,15 @@ def playlist():
  lines=PLAYLIST.read_text(encoding='utf-8-sig').splitlines(); out=[]; cur=None
  for line in lines:
   if line.startswith('#EXTINF:'):
-   a=attrs(line); cur=(a.get('tvg-id','').strip(),a.get('tvg-name','').strip() or line.rsplit(',',1)[-1].strip(),a.get('group-title','').strip())
+   a=attrs(line)
+   cur={'tvg_id':a.get('tvg-id','').strip(),'name':a.get('tvg-name','').strip() or line.rsplit(',',1)[-1].strip(),'group':a.get('group-title','').strip(),'country':a.get('tvg-country','').strip().upper()}
   elif cur and line.strip() and not line.startswith('#'):
-   if cur[2] not in ('Backup','Not Playing'): out.append(cur)
+   if cur['group'] not in ('Backup','Not Playing'):
+    is_india=(cur['group'].startswith('Indian') or cur['country']=='IN' or re.search(r'\.in(?:@|$)',cur['tvg_id'],re.I))
+    if is_india: out.append(cur)
    cur=None
- return list(dict.fromkeys(out))
+ return list({(x['group'],x['tvg_id'],x['name']):x for x in out}.values())
+
 def norm_name(s):
  return re.sub(r'[^a-z0-9]+','',re.sub(r'\b(hd|sd|uhd|fhd|tv|channel)\b','',str(s).lower()))
 
