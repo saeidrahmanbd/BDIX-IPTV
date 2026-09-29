@@ -11,12 +11,9 @@ on:
       - 'IPTV-Playlist.m3u'
       - 'scripts/epg_coverage.py'
       - '.github/workflows/epg-coverage.yml'
-      - 'IPTV-Playlist.m3u'
-      - 'xtream/worker.js'
 
 permissions:
   contents: write
-
 # Coverage verification pass after playlist and EPG mapping updates.
 concurrency:
   group: epg-coverage
