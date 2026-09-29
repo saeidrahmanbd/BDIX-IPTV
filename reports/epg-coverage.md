@@ -1,22 +1,22 @@
 # EPG Coverage Report
 
-Generated: **2026-09-28T23:27:46+00:00**
+Generated: **2026-09-29T04:23:16+00:00**
 
 This report checks mapped India EPG channels against actual downloaded XMLTV programme rows. LIVE EPG means at least one programme is current/future. EPG FOUND means rows exist but no current/future row was detected. NO PROGRAMME DATA means the mapped guide ID exists but produced no programme rows. NO GUIDE HIT means the mapped ID was absent from the downloaded guide.
 
 ## Coverage Summary
 
-- Active playlist channels: **822**
+- Active playlist channels: **768**
 - India-mapped channels: **167**
-- LIVE EPG (current/future programme): **112**
-- EPG FOUND (rows exist, no current/future row): **17**
+- LIVE EPG (current/future programme): **129**
+- EPG FOUND (rows exist, no current/future row): **0**
 - NO PROGRAMME DATA: **8**
 - NO GUIDE HIT: **30**
-- Actual current/future coverage among mapped: **112/167 (67.1%)**
+- Actual current/future coverage among mapped: **129/167 (77.2%)**
 
 ## Source Status
 
-- **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs, 409 IDs with current/future rows, 19725 total programme rows
+- **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs, 529 IDs with current/future rows, 19727 total programme rows
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs, 817 IDs with current/future rows, 113362 total programme rows
 - **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs, 415 IDs with current/future rows, 66340 total programme rows
 
@@ -24,89 +24,102 @@ This report checks mapped India EPG channels against actual downloaded XMLTV pro
 
 | Group | Channel | Playlist ID | EPG ID | Source(s) | Status | Programme rows |
 |---|---|---|---|---|---|---:|
-| Documentary & Wildlife | Animal Planet | `AnimalPlanet.in` | `AnimalPlanet.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 27 |
-| Documentary & Wildlife | Animal Planet HD | `AnimalPlanet.in@HD` | `AnimalPlanet.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 27 |
-| Documentary & Wildlife | Discovery | `DiscoveryChannel.in` | `DiscoveryChannel.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 29 |
-| Documentary & Wildlife | History TV18 | `local.history-tv18` | `HistoryTV18.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 216 |
-| Documentary & Wildlife | Investigation Discovery | `InvestigationDiscovery.in` | `InvestigationDiscovery.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 28 |
+| Documentary & Wildlife | Animal Planet | `AnimalPlanet.in` | `AnimalPlanet.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 28 |
+| Documentary & Wildlife | Animal Planet HD | `AnimalPlanet.in@HD` | `AnimalPlanet.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 28 |
+| Documentary & Wildlife | Discovery | `DiscoveryChannel.in` | `DiscoveryChannel.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 27 |
+| Documentary & Wildlife | History TV18 | `local.history-tv18` | `HistoryTV18.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 213 |
+| Documentary & Wildlife | Investigation Discovery | `InvestigationDiscovery.in` | `InvestigationDiscovery.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 27 |
+| Documentary & Wildlife | Nat Geo Wild | `NationalGeographicWild.in` | `NationalGeographicWild.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 62 |
+| Documentary & Wildlife | National Geographic | `NationalGeographic.in` | `NationalGeographic.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 64 |
 | Documentary & Wildlife | Safari TV | `SafariTV.in` | `SafariTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 240 |
-| Documentary & Wildlife | Sony BBC Earth | `SonyBBCEarth.in` | `SonyBBCEarth.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 66 |
-| Documentary & Wildlife | Sony BBC Earth HD | `SonyBBCEarth.in@HD` | `SonyBBCEarth.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 66 |
-| Documentary & Wildlife | TLC | `TLC.in` | `TLC.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 170 |
+| Documentary & Wildlife | Sony BBC Earth | `SonyBBCEarth.in` | `SonyBBCEarth.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 74 |
+| Documentary & Wildlife | Sony BBC Earth HD | `SonyBBCEarth.in@HD` | `SonyBBCEarth.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 74 |
+| Documentary & Wildlife | TLC | `TLC.in` | `TLC.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 174 |
 | Documentary & Wildlife | Travelxp Hindi | `Travelxp.in` | `Travelxp.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 197 |
-| Indian Bangla | Colors Bangla | `ColorsBangla.in` | `ColorsBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 134 |
+| Indian Bangla | Alankar TV | `AlankarTV.in` | `AlankarTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 12 |
+| Indian Bangla | Colors Bangla | `ColorsBangla.in` | `ColorsBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 140 |
 | Indian Bangla | Colors Bangla Cinema | `ColorsBanglaCinema.in` | `ColorsBanglaCinema.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 54 |
-| Indian Bangla | Colors Bangla HD | `local.bb3c3114fb20` | `ColorsBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 134 |
-| Indian Bangla | DD Bangla | `DDBangla.in` | `DDBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 174 |
+| Indian Bangla | Colors Bangla HD | `local.bb3c3114fb20` | `ColorsBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 140 |
+| Indian Bangla | DD Bangla | `DDBangla.in` | `DDBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 176 |
 | Indian Bangla | Dhoom Music Bangla | `DhoomMusic.in` | `DhoomMusic.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 96 |
-| Indian Bangla | Enter10 Bangla | `local.enter-10-bangla` | `Enterr10Bangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 21 |
+| Indian Bangla | Enter10 Bangla | `local.enter-10-bangla` | `Enterr10Bangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 20 |
+| Indian Bangla | Jalsha Movies HD | `local.285a6aa870f3` | `JalshaMovies.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 19 |
 | Indian Bangla | Rongeen TV | `RongeenTV.in` | `RongeenTV.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 192 |
 | Indian Bangla | SUN BANGLA | `SunBangla.in` | `SunBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 17 |
-| Indian Bangla | Sangeet Bangla | `SangeetBangla.in` | `SangeetBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 115 |
+| Indian Bangla | Sangeet Bangla | `SangeetBangla.in` | `SangeetBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 118 |
 | Indian Bangla | Sony AATH | `SonyAath.in` | `SonyAath.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 100 |
-| Indian Bangla | Star Jalsha | `StarJalsha.in` | `StarJalsha.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 66 |
+| Indian Bangla | Star Jalsha | `StarJalsha.in` | `StarJalsha.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 70 |
 | Indian Bangla | Zee 24 Ghanta | `local.zee-24-ghanta` | `Zee24Ghanta.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 339 |
-| Indian Bangla | Zee Bangla | `ZeeBangla.in` | `ZeeBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 188 |
-| Indian Bangla | Zee Bangla HD | `local.072484feec7e` | `ZeeBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 188 |
-| Indian Entertainment | Amrita TV | `AmritaTV.in` | `AmritaTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 27 |
+| Indian Bangla | Zee Bangla | `ZeeBangla.in` | `ZeeBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 183 |
+| Indian Bangla | Zee Bangla HD | `local.072484feec7e` | `ZeeBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 183 |
+| Indian Entertainment | Amrita TV | `AmritaTV.in` | `AmritaTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 24 |
 | Indian Entertainment | Anand TV | `AnandTV.in` | `AnandTV.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 96 |
-| Indian Entertainment | Colors | `local.5f40adcebbde` | `Colors.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 291 |
-| Indian Entertainment | Colors Kannada | `ColorsKannada.in` | `ColorsKannada.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 210 |
+| Indian Entertainment | Big Magic | `BigMagic.in` | `BigMagic.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 11 |
+| Indian Entertainment | Colors | `local.5f40adcebbde` | `Colors.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 313 |
+| Indian Entertainment | Colors Kannada | `ColorsKannada.in` | `ColorsKannada.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 217 |
 | Indian Entertainment | Colors Marathi | `ColorsMarathi.in` | `ColorsMarathi.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 234 |
-| Indian Entertainment | Colors Tamil | `ColorsTamil.in` | `ColorsTamil.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 34 |
-| Indian Entertainment | DD Arun Prabha | `DDArunPrabha.in` | `DDArunPrabha.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 237 |
+| Indian Entertainment | Colors Tamil | `ColorsTamil.in` | `ColorsTamil.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 40 |
+| Indian Entertainment | DD Arun Prabha | `DDArunPrabha.in` | `DDArunPrabha.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 238 |
 | Indian Entertainment | DD Bharati | `DDBharati.in` | `DDBharati.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 170 |
-| Indian Entertainment | DD Chandana | `DDChandana.in` | `DDChandana.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 41 |
-| Indian Entertainment | DD Girnar | `DDGirnar.in` | `DDGirnar.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 262 |
-| Indian Entertainment | DD Kashir | `DDKashir.in` | `DDKashir.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 296 |
-| Indian Entertainment | DD Malayalam | `DDMalayalam.in` | `DDMalayalam.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 221 |
-| Indian Entertainment | DD National | `DDNational.in` | `DDNational.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 27 |
-| Indian Entertainment | DD Odia | `DDOdia.in` | `DDOdia.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 41 |
+| Indian Entertainment | DD Chandana | `DDChandana.in` | `DDChandana.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 38 |
+| Indian Entertainment | DD Girnar | `DDGirnar.in` | `DDGirnar.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 258 |
+| Indian Entertainment | DD Kashir | `DDKashir.in` | `DDKashir.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 287 |
+| Indian Entertainment | DD Malayalam | `DDMalayalam.in` | `DDMalayalam.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 228 |
+| Indian Entertainment | DD National | `DDNational.in` | `DDNational.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 29 |
+| Indian Entertainment | DD Odia | `DDOdia.in` | `DDOdia.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 58 |
 | Indian Entertainment | DD Punjabi | `DDPunjabi.in` | `DDPunjabi.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 248 |
-| Indian Entertainment | DD Sahyadri | `DDSahyadri.in` | `DDSahyadri.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 39 |
+| Indian Entertainment | DD Sahyadri | `DDSahyadri.in` | `DDSahyadri.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 44 |
 | Indian Entertainment | DD Saptagiri | `DDSaptagiri.in` | `DDSaptagiri.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 207 |
-| Indian Entertainment | DD Tamil | `DDTamil.in` | `DDTamil.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 51 |
-| Indian Entertainment | DD Urdu | `DDUrdu.in` | `DDUrdu.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 197 |
-| Indian Entertainment | Dangal | `DangalTV.in` | `DangalTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 27 |
-| Indian Entertainment | Dangal 2 | `Dangal2.in` | `Dangal2.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 13 |
-| Indian Entertainment | Darshana TV | `DarshanaTV.in` | `DarshanaTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 44 |
-| Indian Entertainment | Fakt Marathi | `FaktMarathi.in` | `FaktMarathi.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 105 |
+| Indian Entertainment | DD Tamil | `DDTamil.in` | `DDTamil.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 49 |
+| Indian Entertainment | DD Urdu | `DDUrdu.in` | `DDUrdu.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 187 |
+| Indian Entertainment | Dangal | `DangalTV.in` | `DangalTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 28 |
+| Indian Entertainment | Dangal 2 | `Dangal2.in` | `Dangal2.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 10 |
+| Indian Entertainment | Darshana TV | `DarshanaTV.in` | `DarshanaTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 40 |
+| Indian Entertainment | Fakt Marathi | `FaktMarathi.in` | `FaktMarathi.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 108 |
 | Indian Entertainment | Kalaignar TV | `KalaignarTV.in` | `KalaignarTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 128 |
-| Indian Entertainment | Mazhavil Manorama | `MazhavilManorama.in` | `MazhavilManorama.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 52 |
-| Indian Entertainment | PTC Punjabi | `PTCPunjabi.in` | `PTCPunjabi.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 92 |
+| Indian Entertainment | Mazhavil Manorama | `MazhavilManorama.in` | `MazhavilManorama.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 56 |
+| Indian Entertainment | PTC Punjabi | `PTCPunjabi.in` | `PTCPunjabi.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 93 |
 | Indian Entertainment | PTC Punjabi Gold | `PTCPunjabiGold.in` | `PTCPunjabiGold.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 113 |
 | Indian Entertainment | Puthuyugam TV | `PuthuyugamTV.in` | `PuthuyugamTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 248 |
 | Indian Entertainment | Siri Kannada | `SiriKannada.in` | `SiriKannada.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 112 |
-| Indian Entertainment | Sony SAB | `SonySAB.in` | `SonySAB.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 48 |
-| Indian Entertainment | Sony SAB HD | `SonySAB.in@HD` | `SonySAB.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 48 |
-| Indian Entertainment | Star Maa | `StarMaa.in` | `StarMaa.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 54 |
-| Indian Entertainment | Star Plus | `StarPlus.in` | `StarPlus.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 53 |
-| Indian Entertainment | Star Pravah | `StarPravah.in` | `StarPravah.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 47 |
+| Indian Entertainment | Sony SAB | `SonySAB.in` | `SonySAB.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 45 |
+| Indian Entertainment | Sony SAB HD | `SonySAB.in@HD` | `SonySAB.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 45 |
+| Indian Entertainment | Star Maa | `StarMaa.in` | `StarMaa.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 60 |
+| Indian Entertainment | Star Plus | `StarPlus.in` | `StarPlus.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 60 |
+| Indian Entertainment | Star Pravah | `StarPravah.in` | `StarPravah.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 48 |
 | Indian Entertainment | Vanitha TV | `VanithaTV.in` | `VanithaTV.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 154 |
-| Indian Entertainment | Vasanth TV | `VasanthTV.in` | `VasanthTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 163 |
+| Indian Entertainment | Vasanth TV | `VasanthTV.in` | `VasanthTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 164 |
 | Indian Entertainment | Vendhar TV | `VendharTV.in` | `VendharTV.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 127 |
 | Indian Entertainment | Vissa TV | `VissaTV.in` | `VissaTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 169 |
-| Indian Entertainment | Zee Anmol | `AnmolTV.in` | `AnmolTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 41 |
-| Indian Entertainment | Zee Kannada | `ZeeKannada.in` | `ZeeKannada.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 69 |
-| Indian Entertainment | Zee TV | `ZeeTV.in` | `ZeeTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 84 |
-| Indian Entertainment | Zee Tamil | `ZeeTamil.in` | `ZeeTamil.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 87 |
-| Indian Movies | B4U Kadak | `B4UKadak.in` | `B4UKadak.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 9 |
+| Indian Entertainment | Zee Anmol | `AnmolTV.in` | `AnmolTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 36 |
+| Indian Entertainment | Zee Kannada | `ZeeKannada.in` | `ZeeKannada.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 73 |
+| Indian Entertainment | Zee TV | `ZeeTV.in` | `ZeeTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 90 |
+| Indian Entertainment | Zee Tamil | `ZeeTamil.in` | `ZeeTamil.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 92 |
+| Indian Movies | Asianet Movies | `AsianetMovies.in` | `AsianetMovies.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 18 |
+| Indian Movies | B4U Kadak | `B4UKadak.in` | `B4UKadak.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 8 |
 | Indian Movies | B4U Movies | `B4UMovies.in` | `B4UMovies.in@India` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 9 |
 | Indian Movies | Bhojpuri Cinema | `BhojpuriCinema.in` | `BhojpuriCinema.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 9 |
+| Indian Movies | Colors Cineplex | `ColorsCineplex.in` | `ColorsCineplex.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 9 |
 | Indian Movies | Colors Cineplex Bollywood | `ColorsCineplexBollywood.in` | `ColorsCineplexBollywood.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 34 |
+| Indian Movies | Kairali TV | `KairaliTV.in` | `KairaliTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 13 |
 | Indian Movies | Kairali We | `KairaliWe.in` | `KairaliWe.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 52 |
-| Indian Movies | Pitaara TV | `Pitaara.in` | `Pitaara.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 59 |
+| Indian Movies | Pitaara TV | `Pitaara.in` | `Pitaara.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 60 |
 | Indian Movies | Public Movies | `PublicMovies.in` | `PublicMovies.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 47 |
 | Indian Movies | Raj Digital Plus | `RajDigitalPlus.in` | `RajDigitalPlus.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 76 |
-| Indian Movies | Raj TV | `RajTV.in` | `RajTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 107 |
+| Indian Movies | Raj TV | `RajTV.in` | `RajTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 105 |
 | Indian Movies | Sony Max | `SonyMax.in` | `SonyMax.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 46 |
 | Indian Movies | Sony Max 2 | `SonyMax2.in` | `SonyMax2.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 43 |
+| Indian Movies | Star Gold | `StarGold.in` | `StarGold.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 18 |
+| Indian Movies | Star Gold Select | `StarGoldSelect.in` | `StarGoldSelect.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 19 |
+| Indian Movies | Star Gold Thrills | `StarGoldThrills.in@SD` | `StarGoldThrills.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 11 |
+| Indian Movies | Star Maa Movies | `StarMaaMovies.in` | `StarMaaMovies.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 22 |
 | Indian Movies | Tabbar Hits | `TabbarHits.in` | `TabbarHits.in` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 96 |
-| Indian Movies | Zee Cinema | `ZeeCinema.in` | `ZeeCinema.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 18 |
+| Indian Movies | Zee Bollywood | `ZeeBollywood.in` | `ZeeBollywood.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 9 |
+| Indian Movies | Zee Cinema | `ZeeCinema.in` | `ZeeCinema.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 20 |
 | Indian Music | 9X Jhakaas | `9XJhakaas.in` | `9XJhakaas.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 240 |
 | Indian Music | 9X Tashan | `9XTashan.in` | `9XTashan.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 240 |
 | Indian Music | 9XM | `9XM.in` | `9XM.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 244 |
-| Indian Music | B4U Music | `B4UMusic.in` | `B4UMusic.in@India` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 122 |
+| Indian Music | B4U Music | `B4UMusic.in` | `B4UMusic.in@India` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 115 |
 | Indian Music | Balle Balle | `BalleBalle.in` | `BalleBalle.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 125 |
 | Indian Music | Isai Aruvi | `IsaiAruvi.in` | `IsaiAruvi.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 22 |
 | Indian Music | Kappa TV | `KappaTV.in` | `KappaTV.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 209 |
@@ -114,45 +127,32 @@ This report checks mapped India EPG channels against actual downloaded XMLTV pro
 | Indian Music | PTC Music | `PTCMusic.in` | `PTCMusic.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 118 |
 | Indian Music | Public Music | `PublicMusic.in` | `PublicMusic.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 115 |
 | Indian Music | Raj Musix Kannada | `RajMusixKannada.in` | `RajMusixKannada.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 18 |
-| Indian Music | Raj Musix Malayalam | `RajMusixMalayalam.in` | `RajMusixMalayalam.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 47 |
-| Indian Music | Raj Musix Tamil | `RajMusixTamil.in` | `RajMusixTamil.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 20 |
-| Indian Music | Ramdhenu | `Ramdhenu.in` | `Ramdhenu.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 221 |
-| Indian Music | Sun Music | `SunMusic.in` | `SunMusic.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 136 |
-| Indian Music | Tarang Music | `TarangMusic.in` | `TarangMusic.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 42 |
+| Indian Music | Raj Musix Malayalam | `RajMusixMalayalam.in` | `RajMusixMalayalam.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 41 |
+| Indian Music | Raj Musix Tamil | `RajMusixTamil.in` | `RajMusixTamil.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 18 |
+| Indian Music | Ramdhenu | `Ramdhenu.in` | `Ramdhenu.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 231 |
+| Indian Music | Sun Music | `SunMusic.in` | `SunMusic.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 132 |
+| Indian Music | Tarang Music | `TarangMusic.in` | `TarangMusic.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 45 |
 | Indian Music | Zoom TV | `Zoom.in` | `Zoom.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 71 |
-| International | Songdew TV | `SongdewTV.in` | `SongdewTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 193 |
-| International | Star Movies Select | `StarMoviesSelect.in` | `StarMoviesSelect.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 31 |
-| Kids | Cartoon Network HD+ | `CartoonNetworkHDPlus.in` | `CartoonNetwork.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 28 |
+| International | Songdew TV | `SongdewTV.in` | `SongdewTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 192 |
+| International | Star Movies | `StarMovies.in` | `StarMovies.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 18 |
+| International | Star Movies Select | `StarMoviesSelect.in` | `StarMoviesSelect.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 28 |
+| Kids | Cartoon Network HD+ | `CartoonNetworkHDPlus.in` | `CartoonNetwork.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 27 |
 | Kids | Nick Jr. | `NickJr.in` | `NickJr.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 47 |
-| New Channels | Colors Gujarati | `ColorsGujarati.in@SD` | `ColorsGujarati.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 41 |
+| Kids | Pogo | `Pogo.in` | `Pogo.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 36 |
+| Kids | Sony Yay | `SonyYay.in` | `SonyYay.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 98 |
+| New Channels | Colors Gujarati | `ColorsGujarati.in@SD` | `ColorsGujarati.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 43 |
 | New Channels | DD Madhya Pradesh | `DDMadhyaPradesh.in@SD` | `DDMadhyaPradesh.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 166 |
-| New Channels | ETV Cinema HD | `ETVCinema.in@HD` | `ETVCinema.in` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://iptv-epg.org/files/epg-in.xml | LIVE EPG | 74 |
+| New Channels | ETV Cinema HD | `ETVCinema.in@HD` | `ETVCinema.in` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://iptv-epg.org/files/epg-in.xml | LIVE EPG | 76 |
 | New Channels | ETV Plus HD | `ETVPlus.in@HD` | `ETVPlus.in` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://iptv-epg.org/files/epg-in.xml | LIVE EPG | 119 |
-| New Channels | ETV Telugu HD | `ETVTelugu.in@HD` | `ETVTelugu.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 29 |
-| New Channels | Raj Musix Telugu | `RajMusixTelugu.in@SD` | `RajMusixTelugu.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 43 |
-| New Channels | Sony Marathi | `SonyMarathi.in@SD` | `SonyMarathi.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 149 |
-| New Channels | Sony Pix HD | `SonyPix.in@HD` | `SonyPix.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 28 |
+| New Channels | ETV Telugu HD | `ETVTelugu.in@HD` | `ETVTelugu.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 33 |
+| New Channels | Raj Musix Telugu | `RajMusixTelugu.in@SD` | `RajMusixTelugu.in@SD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 42 |
+| New Channels | Sony Marathi | `SonyMarathi.in@SD` | `SonyMarathi.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 146 |
+| New Channels | Sony Pal | `SonyPal.in@SD` | `SonyPal.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 52 |
+| New Channels | Sony Pix HD | `SonyPix.in@HD` | `SonyPix.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 20 |
 | New Channels | Sony Wah | `SonyWah.in@SD` | `SonyWah.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 10 |
-| Sports | DD Sports | `DDSports.in` | `DDSports.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 26 |
-| Sports | EURO SPORT HD | `Eurosport.in` | `Eurosport.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 73 |
+| Sports | DD Sports | `DDSports.in` | `DDSports.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 15 |
+| Sports | EURO SPORT HD | `Eurosport.in` | `Eurosport.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 71 |
 | Sports | Star Sports 1 Hindi | `StarSports1Hindi.in` | `StarSports1Hindi.in@HD` | https://epg.pw/xmltv/epg_IN.xml | LIVE EPG | 118 |
-| Documentary & Wildlife | Nat Geo Wild | `NationalGeographicWild.in` | `NationalGeographicWild.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | EPG FOUND | 60 |
-| Documentary & Wildlife | National Geographic | `NationalGeographic.in` | `NationalGeographic.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | EPG FOUND | 64 |
-| Indian Bangla | Alankar TV | `AlankarTV.in` | `AlankarTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | EPG FOUND | 12 |
-| Indian Bangla | Jalsha Movies HD | `local.285a6aa870f3` | `JalshaMovies.in@SD` | https://epg.pw/xmltv/epg_IN.xml | EPG FOUND | 20 |
-| Indian Entertainment | Big Magic | `BigMagic.in` | `BigMagic.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | EPG FOUND | 10 |
-| Indian Movies | Asianet Movies | `AsianetMovies.in` | `AsianetMovies.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | EPG FOUND | 18 |
-| Indian Movies | Colors Cineplex | `ColorsCineplex.in` | `ColorsCineplex.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | EPG FOUND | 11 |
-| Indian Movies | Kairali TV | `KairaliTV.in` | `KairaliTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | EPG FOUND | 14 |
-| Indian Movies | Star Gold | `StarGold.in` | `StarGold.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | EPG FOUND | 20 |
-| Indian Movies | Star Gold Select | `StarGoldSelect.in` | `StarGoldSelect.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | EPG FOUND | 20 |
-| Indian Movies | Star Gold Thrills | `StarGoldThrills.in@SD` | `StarGoldThrills.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | EPG FOUND | 12 |
-| Indian Movies | Star Maa Movies | `StarMaaMovies.in` | `StarMaaMovies.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | EPG FOUND | 18 |
-| Indian Movies | Zee Bollywood | `ZeeBollywood.in` | `ZeeBollywood.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | EPG FOUND | 9 |
-| International | Star Movies | `StarMovies.in` | `StarMovies.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | EPG FOUND | 24 |
-| Kids | Pogo | `Pogo.in` | `Pogo.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | EPG FOUND | 45 |
-| Kids | Sony Yay | `SonyYay.in` | `SonyYay.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | EPG FOUND | 99 |
-| New Channels | Sony Pal | `SonyPal.in@SD` | `SonyPal.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | EPG FOUND | 55 |
 | Documentary & Wildlife | Food Food | `FoodFood.in` | `FoodFood.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | NO PROGRAMME DATA | 0 |
 | Indian Bangla | Ruposhi Bangla | `RupasiBangla.in` | `RupasiBangla.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | NO PROGRAMME DATA | 0 |
 | Indian Entertainment | &TV | `AndTV.in` | `AndTV.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | NO PROGRAMME DATA | 0 |
