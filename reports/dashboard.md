@@ -5,7 +5,7 @@ _Last generated: **2026-09-29 14:50 UTC**_
 | Metric | Current |
 |---|---:|
 | 📺 Streams | **851** |
-| 📡 Channels | **615** |
+| 📡 Channels | **614** |
 | 🇧🇩 Bangladesh | **48** |
 | 🇮🇳 India | **217** |
 | 🔁 Backup Streams | **326** |
