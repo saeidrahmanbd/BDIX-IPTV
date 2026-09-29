@@ -382,7 +382,14 @@ if stray_name_markers:
 
 inconsistent_tvg_names = []
 for cid, items in by_id.items():
-    values = {attrs(info).get("tvg-name", "").strip() for info, _ in items}
+    # Backup/Not Playing entries may legitimately carry display variants
+    # such as resolution or quarantine naming. Enforce tvg-name consistency
+    # only across active primary entries.
+    primary_items = [
+        (info, url) for info, url in items
+        if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS
+    ]
+    values = {attrs(info).get("tvg-name", "").strip() for info, _ in primary_items}
     if len(values) > 1:
         inconsistent_tvg_names.append(cid)
 
@@ -396,6 +403,11 @@ def metadata_base_name(name):
 name_tvg_mismatches = []
 for info, url in entries:
     a = attrs(info)
+    group = a.get("group-title", "").strip()
+    # Not Playing entries are quarantined/manual-review entries and may use
+    # a descriptive display alias. Do not reject them for that presentation.
+    if group == "Not Playing":
+        continue
     tvg_name = a.get("tvg-name", "").strip()
     display = info.rsplit(",", 1)[-1].strip()
     if tvg_name and metadata_base_name(tvg_name) != metadata_base_name(display):
