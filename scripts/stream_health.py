@@ -14,7 +14,7 @@ PRIORITY=Path('reports/stream-priority.json')
 TIMEOUT=8
 WORKERS=24
 FAILURE_THRESHOLD=3
-ATTR_RE=re.compile(r'([\\w-]+)="([^"]*)"')
+ATTR_RE=re.compile(r'([\w-]+)="([^"]*)"')
 
 def attrs(s): return dict(ATTR_RE.findall(s))
 
