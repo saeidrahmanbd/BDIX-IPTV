@@ -16,8 +16,6 @@ REPORT = Path("reports/epg-coverage.md")
 SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
-    "https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml",
-    "https://iptv-org.github.io/epg/guides/in/tataplay.com.epg.xml",
     "https://iptv-epg.org/files/epg-in.xml",
     "https://epg.pw/xmltv/epg_IN.xml",
 ]
