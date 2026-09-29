@@ -91,6 +91,10 @@ def set_attr(info, key, value):
     return prefix + f' {key}="{value}"' + suffix
 
 def force_backup(info):
+    # Strip source-only visual markers before the entry reaches the master
+    # playlist. They are not part of the channel identity and fail metadata
+    # hygiene checks in downstream players/audits.
+    info = re.sub(r"[ⓎⓈᴴᴰ🇹🇷]", "", info)
     metadata = attrs(info)
     display = metadata.get("tvg-name", "").strip() or channel_name(info)
     cid = metadata.get("tvg-id", "").strip() or metadata.get("channel-id", "").strip()
