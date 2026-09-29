@@ -1,6 +1,6 @@
 # Live Project Dashboard
 
-_Last generated: **2026-09-29 13:38 UTC**_
+_Last generated: **2026-09-29 13:39 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -11,7 +11,7 @@ _Last generated: **2026-09-29 13:38 UTC**_
 | 🔁 Backup Streams | **324** |
 | 🖼️ Logos | **95.6%** |
 | 📅 EPG Coverage | **61%** |
-| 🟢 Stream Health | **97%** |
+| 🟢 Stream Health | **98%** |
 
 ## Quality Controls
 
@@ -20,14 +20,14 @@ _Last generated: **2026-09-29 13:38 UTC**_
 - Same-name collisions: **31**
 - Cross-country Backup collisions: **0**
 - EPG missing: **97**
-- Repeated-failure stream candidates: **6**
+- Repeated-failure stream candidates: **12**
 
 ## Data Freshness
 
 | Source | Last generated / checked |
 |---|---|
 | Playlist audit | **not available** |
-| Stream health | **2026-09-29T13:33:20+00:00** |
-| EPG coverage | **2026-09-29T13:33:57+00:00** |
+| Stream health | **2026-09-29T13:38:43+00:00** |
+| EPG coverage | **2026-09-29T13:38:40+00:00** |
 
 This dashboard is a generated repository snapshot. Stream Health and EPG figures come from their latest completed audit reports; it is not a browser-side live stream probe.
