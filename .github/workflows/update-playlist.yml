@@ -45,10 +45,64 @@ jobs:
       - name: Install logo conversion dependencies
         run: python -m pip install --disable-pip-version-check pillow cairosvg
 
-      - name: Update playlist — backup only
+      - name: Snapshot locked categories before automatic update
+        env:
+          LOCKED_CATEGORIES: 'Bangladesh|Indian Bangla|Indian Movies|Indian Music|Indian Entertainment|International|Documentary & Wildlife|Kids|Religious|Sports|Backup|Not Playing'
+        run: |
+          python - <<'PY'
+          import json, os, re
+          from pathlib import Path
+          lines = Path("IPTV-Playlist.m3u").read_text(encoding="utf-8-sig").replace("\r","").splitlines()
+          locked = set(os.environ["LOCKED_CATEGORIES"].split("|"))
+          attr_re = re.compile(r'([\\w-]+)="([^"]*)"')
+          rows = []
+          for i, line in enumerate(lines):
+              if not line.startswith("#EXTINF"):
+                  continue
+              a = dict(attr_re.findall(line))
+              if a.get("group-title","").strip() in locked:
+                  url = next((x.strip() for x in lines[i+1:] if x.strip().startswith(("http://","https://"))), "")
+                  rows.append((a.get("group-title","").strip(), a.get("tvg-id",""), a.get("channel-id",""), a.get("tvg-name",""), url))
+          Path("/tmp/locked-categories-before.json").write_text(json.dumps(sorted(rows), ensure_ascii=False), encoding="utf-8")
+          print("Locked-category entries snapshotted:", len(rows))
+          PY
+
+      - name: Update playlist — backup and new channels
         env:
           IPTV_UPDATE_MODE: backup_only
+          LOCKED_CATEGORIES: 'Bangladesh|Indian Bangla|Indian Movies|Indian Entertainment|Indian Movies|Indian Music|International|Documentary & Wildlife|Kids|Religious|Sports|Backup|Not Playing'
         run: python scripts/update_playlist.py
+
+      - name: Verify locked categories and New Channels placement
+        env:
+          LOCKED_CATEGORIES: 'Bangladesh|Indian Bangla|Indian Movies|Indian Music|Indian Entertainment|International|Documentary & Wildlife|Kids|Religious|Sports|Backup|Not Playing'
+        run: |
+          python - <<'PY'
+          import json, os, re
+          from pathlib import Path
+          lines = Path("IPTV-Playlist.m3u").read_text(encoding="utf-8-sig").replace("\r","").splitlines()
+          locked = set(os.environ["LOCKED_CATEGORIES"].split("|"))
+          attr_re = re.compile(r'([\\w-]+)="([^"]*)"')
+          rows = []
+          groups = []
+          for i, line in enumerate(lines):
+              if not line.startswith("#EXTINF"):
+                  continue
+              a = dict(attr_re.findall(line))
+              group = a.get("group-title","").strip()
+              groups.append(group)
+              if group in locked:
+                  url = next((x.strip() for x in lines[i+1:] if x.strip().startswith(("http://","https://"))), "")
+                  rows.append((group, a.get("tvg-id",""), a.get("channel-id",""), a.get("tvg-name",""), url))
+          before = json.loads(Path("/tmp/locked-categories-before.json").read_text(encoding="utf-8"))
+          if sorted(rows) != sorted(before):
+              raise SystemExit("LOCKED CATEGORY VIOLATION: automatic update changed a locked category.")
+          new_positions = [i for i,g in enumerate(groups) if g == "New Channels"]
+          if new_positions and new_positions != list(range(new_positions[0], len(groups))):
+              raise SystemExit("NEW CHANNELS PLACEMENT VIOLATION: New Channels must be the final category.")
+          print("Locked categories unchanged:", len(rows))
+          print("New Channels is final:", bool(new_positions))
+          PY
 
       # Enforce category-level Backup exclusions after every source update.
       - name: Clean unnecessary and cross-country Backup entries
