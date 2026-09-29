@@ -28,6 +28,16 @@
         "url": "http://202.70.146.135:8000/play/a06c/index.m3u8"
       }
     ],
+    "&tv international (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "&TV International (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://3f56f997.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9BbmRUVl9ITFM/playlist.m3u8"
+      }
+    ],
     "24 hour free movies": [
       {
         "failure_streak": 0,
@@ -68,11 +78,11 @@
     ],
     "4ever drama (1080p)": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "4ever Drama (1080p)",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://stream.mcquack.net/260/index.m3u8"
       }
     ],
@@ -182,6 +192,16 @@
         "url": "https://wiselp.wiseplayout.com/9X_Jhakaas/master.m3u8"
       }
     ],
+    "9x jhakaas (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "9X Jhakaas (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8"
+      }
+    ],
     "9x tashan": [
       {
         "failure_streak": 0,
@@ -190,6 +210,16 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://wiselp.wiseplayout.com/9X_Tashan/master.m3u8"
+      }
+    ],
+    "9x tashan (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "9X Tashan (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8"
       }
     ],
     "9xm": [
@@ -1734,11 +1764,11 @@
     ],
     "colors rishtey": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Colors Rishtey",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "https://manatv.akamaized.net/090823/smil:ristheyamerica.smil/playlist.m3u8"
       }
     ],
@@ -1920,6 +1950,16 @@
         "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/308556d9fd1246adb479ef012a39bbfe/index.m3u8"
       }
     ],
+    "dd arun prabha (576p)": [
+      {
+        "failure_streak": 0,
+        "name": "DD Arun Prabha (576p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://cdn.pishow.tv/ott/live/32/master.m3u8"
+      }
+    ],
     "dd assam": [
       {
         "failure_streak": 0,
@@ -1976,6 +2016,14 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/67cec794d8b14f9ba21f73924ac65797/index.m3u8"
+      },
+      {
+        "failure_streak": 0,
+        "name": "DD Bharati",
+        "role": "Backup 1",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://www.youtube.com/@ddbharati/live"
       }
     ],
     "dd bharati (576p)": [
@@ -2098,6 +2146,16 @@
         "url": "https://mumbai-edge.smartplaytv.in/ddmadhyapradesh/index.m3u8"
       }
     ],
+    "dd madhya pradesh (576p)": [
+      {
+        "failure_streak": 0,
+        "name": "DD Madhya Pradesh (576p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://cdn.pishow.tv/ott/live/31/master.m3u8"
+      }
+    ],
     "dd malayalam": [
       {
         "failure_streak": 0,
@@ -2146,6 +2204,14 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/40492a64c1db4a1385ba1a397d357d3a/index.m3u8"
+      },
+      {
+        "failure_streak": 0,
+        "name": "DD National",
+        "role": "Backup 1",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://www.youtube.com/doordarshan/live"
       }
     ],
     "dd national hd (1080p)": [
@@ -2266,6 +2332,14 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/9b91e9007e754db39a8b32c6bfc5b24a/index.m3u8"
+      },
+      {
+        "failure_streak": 0,
+        "name": "DD Urdu",
+        "role": "Backup 1",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://www.youtube.com/@DDUrdu/live"
       }
     ],
     "dd urdu (576p)": [
@@ -2458,16 +2532,6 @@
         "url": "http://181.119.215.61:8000/play/a0g1/index.m3u8"
       }
     ],
-    "disney channel india [backup 1]": [
-      {
-        "failure_streak": 0,
-        "name": "Disney Channel India [Backup 1]",
-        "role": "Primary",
-        "score": 95,
-        "status": "Redirect/temporary",
-        "url": "http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/19741.ts"
-      }
-    ],
     "disney jr.": [
       {
         "failure_streak": 0,
@@ -2592,6 +2656,16 @@
         "score": 95,
         "status": "Redirect/temporary",
         "url": "http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/433.ts"
+      }
+    ],
+    "duronto tv (720p)": [
+      {
+        "failure_streak": 0,
+        "name": "Duronto TV (720p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8"
       }
     ],
     "e24": [
@@ -2822,11 +2896,11 @@
     ],
     "enter-film": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Enter-Film",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "http://stream.mcquack.net/322/index.m3u8"
       }
     ],
@@ -2982,10 +3056,10 @@
     ],
     "etv cinema": [
       {
-        "failure_streak": 2,
+        "failure_streak": 3,
         "name": "ETV Cinema",
         "role": "Primary",
-        "score": 75,
+        "score": 0,
         "status": "Invalid HLS",
         "url": "https://yupplivegcpusa.yuppcdn.net/100823/smil:etvcinema.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
       }
@@ -3244,11 +3318,11 @@
     ],
     "global tv [backup 3]": [
       {
-        "failure_streak": 2,
+        "failure_streak": 0,
         "name": "Global TV [Backup 3]",
         "role": "Primary",
-        "score": 75,
-        "status": "HTTP error",
+        "score": 105,
+        "status": "Healthy",
         "url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/Global-tv.stream/index.m3u8"
       }
     ],
@@ -3358,6 +3432,14 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/playlist/amg01753-narrativeentert-greatmovies-samsunguk/playlist.m3u8"
+      },
+      {
+        "failure_streak": 0,
+        "name": "GREAT! movies (1080p)",
+        "role": "Backup 1",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://amg01753-narrativeuk-amg01753c3-lg-gb-1833.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-greatmovies-lggb/playlist.m3u8"
       }
     ],
     "great! romance (1080p)": [
@@ -3368,6 +3450,14 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://amg01753-narrativeentert-greatchristmas-samsunguk-8atls.amagi.tv/playlist/amg01753-narrativeentert-greatchristmas-samsunguk/playlist.m3u8"
+      },
+      {
+        "failure_streak": 0,
+        "name": "GREAT! romance (1080p)",
+        "role": "Backup 1",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://amg01753-narrativeuk-amg01753c2-lg-gb-1832.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-greatchristmas-lggb/playlist.m3u8"
       }
     ],
     "green tv": [
@@ -3962,6 +4052,16 @@
         "url": "https://mumt03.tangotv.in/Dsly5z3HKAPPATV/index.m3u8"
       }
     ],
+    "kappa tv (576p)": [
+      {
+        "failure_streak": 0,
+        "name": "Kappa TV (576p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://cdn.pishow.tv/ott/live/1123/master.m3u8"
+      }
+    ],
     "kartoon channel!": [
       {
         "failure_streak": 0,
@@ -4060,16 +4160,6 @@
         "score": 105,
         "status": "Healthy",
         "url": "http://27.124.71.27/Love_Nature/index.m3u8"
-      }
-    ],
-    "love nature (1080p)": [
-      {
-        "failure_streak": 0,
-        "name": "Love Nature (1080p)",
-        "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
-        "url": "https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8"
       }
     ],
     "love nature 4k (2160p) [geo-blocked]": [
@@ -4182,6 +4272,16 @@
         "url": "https://cdn.pishow.tv/ott/live/1476/master.m3u8"
       }
     ],
+    "madhimugam tv (576p)": [
+      {
+        "failure_streak": 0,
+        "name": "Madhimugam TV (576p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://mumt01.tangotv.in/O5aw8Zn3MATHIMUGAMTV/index.m3u8"
+      }
+    ],
     "mahaa max": [
       {
         "failure_streak": 0,
@@ -4254,11 +4354,11 @@
     ],
     "matri bhumi tv": [
       {
-        "failure_streak": 2,
+        "failure_streak": 0,
         "name": "Matri Bhumi TV",
         "role": "Primary",
-        "score": 75,
-        "status": "Connection error",
+        "score": 105,
+        "status": "Healthy",
         "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/matribhumitv.stream/playlist.m3u8"
       }
     ],
@@ -4422,16 +4522,6 @@
         "url": "http://103.172.187.30:12000/stream/mytv/null-9/master.m3u8"
       }
     ],
-    "mei ah movie channel [backup 1]": [
-      {
-        "failure_streak": 0,
-        "name": "Mei Ah Movie Channel [Backup 1]",
-        "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
-        "url": "http://103.172.187.30:12000/stream/mytv/null-10/master.m3u8"
-      }
-    ],
     "mei alai tv": [
       {
         "failure_streak": 0,
@@ -4444,7 +4534,7 @@
     ],
     "meltem tv": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "Meltem TV",
         "role": "Primary",
         "score": 75,
@@ -4748,6 +4838,16 @@
         "url": "https://amg00353-lionsgatefilmsi-moviesphereaus-samsungau-7qzhf.amagi.tv/playlist/amg00353-lionsgatefilmsi-moviesphereaus-samsungau/playlist.m3u8"
       }
     ],
+    "moviesphere ca": [
+      {
+        "failure_streak": 0,
+        "name": "MovieSphere CA",
+        "role": "Primary",
+        "score": 95,
+        "status": "Redirect/temporary",
+        "url": "https://jmp2.uk/plu-64a3d96f060e830008af6745.m3u8"
+      }
+    ],
     "moviesphere gold": [
       {
         "failure_streak": 0,
@@ -4776,6 +4876,16 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://amg00627-amg00627c29-rakuten-it-3989.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanitcc-rakutenit/playlist.m3u8"
+      }
+    ],
+    "mr bean animated (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "Mr Bean Animated (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://amg00627-amg00627c23-samsung-au-4110.playouts.now.amagi.tv/playlist.m3u8"
       }
     ],
     "mtv (india)": [
@@ -4946,6 +5056,16 @@
         "url": "https://d1cgf0ptrv4t22.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-xvoparaodgcw9/Mythbusters_GB.m3u8"
       }
     ],
+    "mythbusters (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "Mythbusters (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://d2bog959vw5xq.cloudfront.net/playlist/amg00627-banijayfast-mythbusters-samsungau/playlist.m3u8"
+      }
+    ],
     "mytime movie": [
       {
         "failure_streak": 0,
@@ -5054,6 +5174,16 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://amg00090-blueantllc-lovenature-au-samsungau-wggcn.amagi.tv/playlist/amg00090-blueantllc-lovenature-au-samsungau/playlist.m3u8"
+      }
+    ],
+    "naturetime uk (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "NatureTime UK (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://amg01515-amg01515c43-samsung-gb-9038.playouts.now.amagi.tv/playlist.m3u8"
       }
     ],
     "nazara": [
@@ -5384,6 +5514,16 @@
         "url": "https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00718-outdoorchannela-outdoortvnz-samsungnz/playlist.m3u8"
       }
     ],
+    "outdoor channel (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "Outdoor Channel (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://amg00718-outdoorchannela-outdoortv-samsungau-uc7mp.amagi.tv/playlist/amg00718-outdoorchannela-outdoortv-samsungau/playlist.m3u8"
+      }
+    ],
     "outdoor channel hd (720p)": [
       {
         "failure_streak": 0,
@@ -5532,6 +5672,14 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://amg01753-narrativeentert-popkids-lggb-xyy5k.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-popkids-lggb/playlist.m3u8"
+      },
+      {
+        "failure_streak": 0,
+        "name": "Pop (1080p)",
+        "role": "Backup 1",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://rakutenaa-narrative-popkids-rakuten-uwrx0.amagi.tv/ts-eu-w1-n2/playlist/rakutenAA-narrative-popkids-rakuten/cb553d1e726c648b9dd43e6fd4ef41a8dd2406fc087a8d6933fb4b926bc10f41f8eda29ab30fb02b04940fa73f4e380d4d1a9a4ace0362d7b66aa9512a7d127f8adaf471d89c1617b2c11f5d7fe021414efc0e14d025522288a93c019738b3761d5cb95c3a1862cff90bfc7000c7800bda62218ba4dd7c387c0c5e820c5feda643a6fde90e43d038a4e21e1bc72560ddbc139d9773efd59202cd16e92aac50bfa1cabad21aadbcb032fd14dd370656367897944694cc53a4dfe80353f472204f1251f4a69da43f56e146474fc7fac5a9179979aa99378e646de16ae84e8023b578be1ba2e043a9a3bce04b454be2ae1f3575a4e1f9d9f9617ee437fda0a489212d9fbb4d2814cb20dc202a6e94adca40d2931095ec51efde68192bff9c448996b7979dd4e728892e90879ee03c465d5c16169062a19563cf2cd36c97c2122f5b5845aa9f27a0ecbb5b3e3836ecef5fd00024bdde9d8adc0b04d3651a489a06b33f54359b6436078f5cf89e2f53992a0b9c302fc450308945f4ac5e93cdbfb45663e584bf28906eeba635d6f314a06e396616aae2292d20261ec7eb64574513aa44e0c0f5f3631f09e885a594a6016f5661420a56d9888f719f9dff390d1fc521600a30431390078e39885904022b994b9ef85e25d44b7928b7f272595c35959ae58584d39a14ec25afa592382b286667b8250c256becbb8c52f84a22141d5b891d6145b21f000a80e7c8e18abf69cf915ba937700666c9f1034e1b2001097acac13a8f06b3ca48efca9a0498bdd4431ff856d300148defd869eee482c270029fae521515feb940e25603e225fd08d2ae1aaab15115232e545efd8d5bf14bbcd18ef8229e5ecb25672ab220ebc6a6d9b86752f4ae4b232336570271567a297ecbb0a4670f76a2ae26ed48f2ee5bbd541a243a4584c26a2887ec64239f3a7074a0aedfb4aecb1715cd61e67ccc7371c03d6907c0ee69b0f9d883fb837c6b10d5b7b249a99e9f88c8c2c25418610861c2930f0f0db24bf18814deb80e79fdb69ffcca6be51c8852ad8da527f033b2912e6cc4e09cfae848105a4a45c3c2f8f407deb21e370619b1f74f3bad84dda775fcebb23e2bfa5ac186264c8c1b507ec78dfc25e90a99c7180bc6a64a50e45513e0d6a7213fe905f301157cd3faa04d2dc8e22eb26cbadbce2e6dad293fc5667f408d5db4ae926a7cd3a4305552d93c218772b0e2886d75618b975f14125c1f340ed64b7d0dc51f498433bbc5c0924c01ab28a83e1eef608ae37e86912dccd2e5d08fc711448ed52e34d33ec6009a02c9fcaedd198572488b49b23b40a9f6fddde9fbe596e6f63f7839b766be2be957b8e78ab0540f2b5bff2e1a6b0bd53cc42a3f72b5e174c1866c49a7f8d626e2237564233511ec30b5bd12696402a8c75cbcfc4b43404d12c9e22f86329d642aa27656ba1368333e367360a5b6ec3aff08fd5690c65e29c0a4bc8307c68d1effbfa7d79b680fe373076f79bc96aeb0f16014fbb5a8b01449a2ca44b232541c0aa3fb837632e3e40502d987ac55989d42a639172b4ef3ad8f13ec5ea313cb7e7efb1af2de6c4c97c976583a812ca9df7c459949ff0a01e56684406dd91d6753563d867ac7580b602df17283f8fc1a4e748501c96a683cbbe3fe8da83f57220d440f54051271ce412dc5192c4bea132f9b368dc28fec6585ee428d299dfdb38d1521d8c5f0c5922e892fe19290d28ce7b0ae685d481cc8b3c606a42905c4fd69b10cf3fe3406ec17a28b7387405e60c7060763cb9661176182a37d8deb4fb16b8b1ebafa88e1cd6fc8dbb5022bbe5407f552c22990723e574fcd60ad882b27e3aee91ba46d4ef0e5a9bbc4fe41e5f3c126db4da0c79ab0a805aad763294685386e1b742329ec749c3f0e907ef142f95da37d23fb268f455e31e5a99e61f1e35b38447e03d75a92772652d22229293040d7c538a6de867c4771221a55e6da1bd1114dbb225451968722e9d6f7619553d59eb5f650295a7b34fd71385575d06b6f5d16bca7f5c7033bc63aca1e0ab39093e9790a218b9b58bb910461c1f1c626f73dd57de405a670124f089d5d571cbd176d3e631d7e739c4b27ef8ca396a52e2c6364b0cb38015abbf0a149bf386d7a45138130513026/17/1920x1080_5903040/index.m3u8"
       }
     ],
     "pop world tv": [
@@ -5804,11 +5952,11 @@
     ],
     "rajdhani tv": [
       {
-        "failure_streak": 2,
+        "failure_streak": 0,
         "name": "Rajdhani TV",
         "role": "Primary",
-        "score": 75,
-        "status": "HTTP error",
+        "score": 105,
+        "status": "Healthy",
         "url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8"
       }
     ],
@@ -5840,6 +5988,16 @@
         "url": "https://0145451975a64b35866170fd2e8fa486.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5987/master.m3u8"
       }
     ],
+    "rakuten tv action movies finland (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "Rakuten TV Action Movies Finland (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://bca5a421a70c46ad911efd0a4767c4bf.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6075/master.m3u8"
+      }
+    ],
     "rakuten tv action movies uk (1080p)": [
       {
         "failure_streak": 0,
@@ -5848,6 +6006,26 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://54045f0c40fd442c8b06df076aaf1e85.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6065/master.m3u8"
+      }
+    ],
+    "rakuten tv comedy movies (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "Rakuten TV Comedy Movies (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://b8bc6c4b9be64bd6aeb3b92aa8521ed4.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6184/master.m3u8"
+      }
+    ],
+    "rakuten tv comedy movies finland (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "Rakuten TV Comedy Movies Finland (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://a300af98e00746e2acf2346f43e47bd1.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6191/master.m3u8"
       }
     ],
     "rakuten tv comedy movies uk (1080p)": [
@@ -5860,6 +6038,26 @@
         "url": "https://9be783d652cd4b099cf63e1dc134c4a3.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6181/master.m3u8"
       }
     ],
+    "rakuten tv drama movies (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "Rakuten TV Drama Movies (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://968754c2483045c1a9a7f677caec35b6.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6096/master.m3u8"
+      }
+    ],
+    "rakuten tv drama movies finland (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "Rakuten TV Drama Movies Finland (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://d7e8ee3c924d4305a0c1840fe94c5d36.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6102/master.m3u8"
+      }
+    ],
     "rakuten tv drama movies uk (1080p)": [
       {
         "failure_streak": 0,
@@ -5868,6 +6066,26 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://fee09fd665814f51b939b6d106cf5f66.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6093/master.m3u8"
+      }
+    ],
+    "rakuten tv family movies (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "Rakuten TV Family Movies (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://3315fc3e7276420f895e19cf807dbee1.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6215/master.m3u8"
+      }
+    ],
+    "rakuten tv family movies finland (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "Rakuten TV Family Movies Finland (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://758ee983d61e400381dea6fa8154f4e0.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6227/master.m3u8"
       }
     ],
     "rakuten tv family movies uk (1080p)": [
@@ -5928,6 +6146,16 @@
         "score": 95,
         "status": "Redirect/temporary",
         "url": "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-realwild-tcl/playlist.m3u8"
+      }
+    ],
+    "real wild (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "Real Wild (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://lds-realwild-samsungau.amagi.tv/playlist.m3u8"
       }
     ],
     "retro music tv (1080p)": [
@@ -6134,11 +6362,11 @@
     ],
     "sa tv [backup 1]": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "SA TV [Backup 1]",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "HTTP error",
         "url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/satvoff5666.stream/playlist.m3u8"
       }
     ],
@@ -6204,7 +6432,7 @@
     ],
     "sana plus": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "Sana Plus",
         "role": "Primary",
         "score": 75,
@@ -6214,7 +6442,7 @@
     ],
     "sana plus (1080p)": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "Sana Plus (1080p)",
         "role": "Primary",
         "score": 75,
@@ -6508,6 +6736,16 @@
         "url": "https://stream.ottplus.live/live/sony_aath_abr/index.m3u8"
       }
     ],
+    "sony aath (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "Sony Aath (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://cloudplay-sonyliv.pages.dev/aath.m3u8"
+      }
+    ],
     "sony bbc earth": [
       {
         "failure_streak": 0,
@@ -6600,6 +6838,16 @@
         "url": "http://live.balajibroadband.com:3500/live/476.m3u8"
       }
     ],
+    "sony max (576p) [geo-blocked]": [
+      {
+        "failure_streak": 1,
+        "name": "Sony Max (576p) [Geo-blocked]",
+        "role": "Primary",
+        "score": 75,
+        "status": "HTTP error",
+        "url": "http://dksmedia.tv/play/live.php?mac=00:1A:79:B6:60:3D&stream=156013&extension=ts&play_token=slNi06NyY0"
+      }
+    ],
     "sony max 2": [
       {
         "failure_streak": 0,
@@ -6620,11 +6868,11 @@
     ],
     "sony max 2 [us]": [
       {
-        "failure_streak": 2,
+        "failure_streak": 0,
         "name": "Sony Max 2 [US]",
         "role": "Primary",
-        "score": 75,
-        "status": "Connection error",
+        "score": 95,
+        "status": "Redirect/temporary",
         "url": "http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/125795.ts"
       }
     ],
@@ -6640,11 +6888,11 @@
     ],
     "sony movies": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Sony Movies",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "Invalid HLS",
         "url": "https://a-cdn.klowdtv.com/live1/smc_720p/chunks.m3u8"
       }
     ],
@@ -6680,11 +6928,11 @@
     ],
     "sony ten 2": [
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Sony Ten 2",
         "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
+        "score": 75,
+        "status": "HTTP error",
         "url": "https://stream.ottplus.live/live/ten_2_hd_abr/live/ten_2_hd_720/index.m3u8"
       }
     ],
@@ -6706,6 +6954,16 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://drk6xq0vhn.gpcdn.net/live/sony_yay_abr/index.m3u8"
+      }
+    ],
+    "sony yay! (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "Sony Yay! (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://cloudplay-sonyliv.pages.dev/yay.m3u8"
       }
     ],
     "south movies": [
@@ -6793,15 +7051,15 @@
         "role": "Backup 1",
         "score": 95,
         "status": "Redirect/temporary",
-        "url": "http://cdn98.com/play/live.php?mac=00:1A:79:99:54:11&stream=225805&extension=ts&play_token=o1cczsG9wV"
+        "url": "http://premiumtvs.space/live/1Aoen7elp5/IgMJ60tmAa/8540.ts"
       },
       {
-        "failure_streak": 0,
+        "failure_streak": 1,
         "name": "Star Jalsha",
         "role": "Backup 2",
-        "score": 95,
-        "status": "Redirect/temporary",
-        "url": "http://premiumtvs.space/live/1Aoen7elp5/IgMJ60tmAa/8540.ts"
+        "score": 75,
+        "status": "HTTP error",
+        "url": "http://cdn98.com/play/live.php?mac=00:1A:79:99:54:11&stream=225805&extension=ts&play_token=o1cczsG9wV"
       }
     ],
     "star jalsha [backup 1]": [
@@ -6956,11 +7214,11 @@
     ],
     "star sports sl 1": [
       {
-        "failure_streak": 2,
+        "failure_streak": 0,
         "name": "Star Sports SL 1",
         "role": "Primary",
-        "score": 75,
-        "status": "HTTP error",
+        "score": 105,
+        "status": "Healthy",
         "url": "https://flussonic.defineatoz.com/starsportsselect1/tracks-v1/mono.m3u8"
       }
     ],
@@ -7052,6 +7310,16 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://mumt01.tangotv.in/O5aw8Zn3STUDIOYUVA/index.m3u8"
+      }
+    ],
+    "studio yuva (360p)": [
+      {
+        "failure_streak": 0,
+        "name": "Studio Yuva (360p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
       }
     ],
     "subin tv": [
@@ -7254,6 +7522,16 @@
         "url": "https://amc-twdfanexperience-1-us.xumo.wurl.tv/playlist.m3u8"
       }
     ],
+    "the walking dead universe (720p)": [
+      {
+        "failure_streak": 0,
+        "name": "The Walking Dead Universe (720p)",
+        "role": "Primary",
+        "score": 95,
+        "status": "Redirect/temporary",
+        "url": "https://jmp2.uk/plu-62fa8176b9884200074ef5ae.m3u8"
+      }
+    ],
     "thikana": [
       {
         "failure_streak": 0,
@@ -7272,6 +7550,16 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://amg01753-narrativeentert-tinypop-samsunguk-hvvb7.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-tinypop-samsunguk/playlist.m3u8"
+      }
+    ],
+    "tiny pop (1080p)": [
+      {
+        "failure_streak": 0,
+        "name": "Tiny Pop (1080p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://amg01753-narrativeuk-amg01753c1-lg-gb-1830.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-tinypop-lggb/playlist.m3u8"
       }
     ],
     "tlc": [
@@ -7332,16 +7620,6 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://d1eg24xrsfr6kv.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-b4b1bzxkt1uzo-prod/tg/tg/tg.m3u8"
-      }
-    ],
-    "toon goggles [backup 1]": [
-      {
-        "failure_streak": 0,
-        "name": "Toon Goggles [Backup 1]",
-        "role": "Primary",
-        "score": 105,
-        "status": "Healthy",
-        "url": "https://amg01329-otterainc-toongoggles-samsungau-ad-4c.amagi.tv/playlist/amg01329-otterainc-toongoggles-samsungau/playlist.m3u8"
       }
     ],
     "toon goggles junior": [
@@ -7472,7 +7750,7 @@
     ],
     "travelxp bangla": [
       {
-        "failure_streak": 1,
+        "failure_streak": 2,
         "name": "Travelxp Bangla",
         "role": "Primary",
         "score": 75,
@@ -7488,6 +7766,16 @@
         "score": 105,
         "status": "Healthy",
         "url": "https://travelxp-travelxp-1-eu.rakuten.wurl.tv/playlist.m3u8"
+      }
+    ],
+    "travelxp hd (1080p) [geo-blocked]": [
+      {
+        "failure_streak": 0,
+        "name": "Travelxp HD (1080p) [Geo-blocked]",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "https://amg00416-amg00416c9-samsung-in-4882.playouts.now.amagi.tv/playlist/amg00416-travelxp-travelxphd-samsungin/playlist.m3u8"
       }
     ],
     "travelxp hindi": [
@@ -8008,6 +8296,16 @@
         "url": "https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-cinema-2/index.m3u8"
       }
     ],
+    "zee bangla sonar (576p)": [
+      {
+        "failure_streak": 0,
+        "name": "Zee Bangla Sonar (576p)",
+        "role": "Primary",
+        "score": 105,
+        "status": "Healthy",
+        "url": "http://103.185.24.134:3001/ZEE-BANGLA-CINEMA/index.m3u8"
+      }
+    ],
     "zee bangla sonar [backup 1]": [
       {
         "failure_streak": 0,
@@ -8249,5 +8547,5 @@
       }
     ]
   },
-  "generated": "2026-09-29T05:29:43+00:00"
+  "generated": "2026-09-29T05:47:41+00:00"
 }\n
