@@ -26,7 +26,7 @@ Windows portable application for playlist editing and playback workflows.
 
 ## 🛜 Xtream Gateway
 
-### [Xtream Codes / XCIPTV Documentation](xtream/README.md)
+### [Xtream Codes / XCIPTV Documentation](../xtream/README.md)
 
 The optional gateway provides Xtream Codes-compatible API endpoints backed by the current GitHub playlist.
 
@@ -36,19 +36,15 @@ You will need your own deployed Worker URL and configured credentials.
 
 ## 📡 EPG
 
-### [EPG Documentation](epg/README.md)
+### [EPG Documentation](../epg/README.md)
 
 Information about the repository's EPG files, validation and source configuration.
-
-### [EPG Coverage Report](reports/epg-coverage.md)
-
-Current audit of playlist channels against the configured public EPG sources.
 
 ---
 
 ## ⚙️ Configuration
 
-### [Sample Configuration](examples/sample-config.md)
+### [Sample Configuration](../examples/sample-config.md)
 
 Safe examples for M3U, XCIPTV, Xtream Codes and EPG configuration.
 
@@ -56,14 +52,18 @@ Safe examples for M3U, XCIPTV, Xtream Codes and EPG configuration.
 
 ## 📚 Documentation
 
-### [Open Documentation Hub](docs/README.md)
+### [Open Documentation Hub](README.md)
 
 Central documentation index for the repository.
+
+### [Changelog](CHANGELOG.md)
+
+Recent playlist changes.
 
 ---
 
 ## 🔗 Repository
 
-[← Back to BDIX-IPTV](README.md)
+[← Back to BDIX-IPTV](../README.md)
 
 [📦 View all GitHub Releases](https://github.com/saeidrahmanbd/BDIX-IPTV/releases)

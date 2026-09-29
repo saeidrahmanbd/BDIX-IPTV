@@ -20,11 +20,12 @@ Everything visitors commonly need, in one place:
 - 📺 **[Main M3U Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)**
 - 🖥️ **[Playlist Studio](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest)** — latest Windows release
 - 🛜 **[Xtream Codes](xtream/README.md)** — Xtream Gateway / XCIPTV
-- 📄 **[EPG Coverage](reports/epg-coverage.md)** — EPG status and coverage
+- 📡 **[EPG Documentation](epg/README.md)** — EPG sources and configuration
 - ⚙️ **[Sample Configuration](examples/sample-config.md)**
 - 📚 **[Documentation](docs/README.md)**
+- 📝 **[Changelog](docs/CHANGELOG.md)**
 
-**[→ Open the full Download Center](DOWNLOADS.md)**
+**[→ Open the full Download Center](docs/DOWNLOADS.md)**
 
 ## 🖥️ Playlist Studio
 
@@ -37,18 +38,16 @@ A portable Windows companion for browsing, searching, checking, and managing IPT
 
 ## 📊 Project Status
 
-The project is continuously maintained with separate automated quality checks:
+The project is maintained as a curated playlist and supporting documentation:
 
 | Area | Status |
 |---|---|
 | 📺 Playlist | Curated & updated |
 | 🖼️ Logos | Local repository logos |
-| 📡 Stream Health | Automated checks |
-| 📄 EPG | Coverage monitored |
-| 🧹 Playlist Audit | Automated |
-| 📝 Changelog | Automated |
-
-**[→ Live Project Dashboard](reports/dashboard.md)**
+| 📡 Streams | Curated and reviewed |
+| 📄 EPG | Configuration maintained |
+| 🧹 Metadata | Curated |
+| 📝 Changelog | Maintained |
 
 ## 🗂️ Organization
 
@@ -68,19 +67,18 @@ The playlist prioritizes **clean channel identity, consistent metadata, local lo
 
 ## 🔧 Maintenance
 
-Automated maintenance covers:
+Maintenance focuses on:
 
-- Stream and backup updates
+- Stream and backup review
 - Duplicate URL detection
-- Channel identity and metadata audits
+- Channel identity and metadata consistency
 - Logo integrity and consistency
-- EPG coverage analysis
-- Stream health monitoring
-- Automated changelog generation
+- EPG configuration
+- Playlist organization
 
-Primary curated entries are protected from indiscriminate automatic changes.
+Primary curated entries are protected from indiscriminate changes.
 
-**[→ Stream Health Report](reports/stream-health.md) · [→ Playlist Audit](reports/playlist-audit.md) · [→ Changelog](CHANGELOG.md)**
+**[→ Changelog](docs/CHANGELOG.md) · [→ Documentation](docs/README.md)**
 
 ## 📬 Support
 

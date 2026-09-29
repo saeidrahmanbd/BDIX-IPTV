@@ -10,8 +10,9 @@ Welcome to the documentation hub for **BDIX-IPTV**.
 | 🖥️ [Playlist Studio](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest) | Latest Windows portable playlist editor |
 | 🛜 [Xtream Gateway](../xtream/README.md) | Xtream Codes-compatible gateway documentation |
 | 📡 [EPG Documentation](../epg/README.md) | EPG sources, validation and related files |
-| 📊 [EPG Coverage Report](../reports/epg-coverage.md) | Current channel-to-EPG coverage audit |
 | ⚙️ [Sample Configuration](../examples/sample-config.md) | Safe configuration examples |
+| 📥 [Download Center](DOWNLOADS.md) | Main download and access links |
+| 📝 [Changelog](CHANGELOG.md) | Recent playlist changes |
 
 ## 📺 Playlist
 
@@ -31,7 +32,7 @@ Read the [Xtream Gateway documentation](../xtream/README.md) for deployment, cre
 
 ## 📡 EPG
 
-EPG coverage is maintained separately from the main playlist. The [coverage report](../reports/epg-coverage.md) shows the current match status and channels requiring further investigation.
+EPG configuration is maintained separately from the main playlist. See the [EPG documentation](../epg/README.md) for the available sources and related files.
 
 ## 🖥️ Playlist Studio
 
@@ -42,9 +43,9 @@ EPG coverage is maintained separately from the main playlist. The [coverage repo
 ```text
 BDIX-IPTV/
 ├── IPTV-Playlist.m3u       # Main playlist
+├── docs/                   # Project documentation and changelog
 ├── epg/                    # EPG tools and configuration
 ├── examples/               # Configuration examples
-├── reports/                # Generated audit reports
 ├── xtream/                 # Xtream Gateway
 ├── logos/                  # Local PNG channel logos
 └── assets/                 # Project and application assets
@@ -54,4 +55,4 @@ BDIX-IPTV/
 
 The repository links to third-party stream sources. Availability, geo-restrictions and stream behavior can change independently of this repository.
 
-For the latest downloads, use the [Download Center](../DOWNLOADS.md).
+For the latest downloads, use the [Download Center](DOWNLOADS.md).
