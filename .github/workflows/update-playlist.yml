@@ -52,24 +52,60 @@ jobs:
           python - <<'PY'
           import json, os, re
           from pathlib import Path
-          lines = Path("IPTV-Playlist.m3u").read_text(encoding="utf-8-sig").replace("\r","").splitlines()
+
+          lines = Path("IPTV-Playlist.m3u").read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
           locked = set(os.environ["LOCKED_CATEGORIES"].split("|"))
           attr_re = re.compile(r'([\w-]+)="([^"]*)"')
-          rows = []
-          for i, line in enumerate(lines):
-              if not line.startswith("#EXTINF"):
-                  continue
-              a = dict(attr_re.findall(line))
-              if a.get("group-title","").strip() in locked:
-                  url = next((x.strip() for x in lines[i+1:] if x.strip().startswith(("http://","https://"))), "")
-                  rows.append((a.get("group-title","").strip(), a.get("tvg-id",""), a.get("channel-id",""), a.get("tvg-name",""), url))
-          Path("/tmp/locked-categories-before.json").write_text(json.dumps(sorted(rows), ensure_ascii=False), encoding="utf-8")
-          print("Locked-category entries snapshotted:", len(rows))
+
+          def attrs(line):
+              return dict(attr_re.findall(line))
+
+          def parse_blocks(lines):
+              blocks = []
+              i = 0
+              while i < len(lines):
+                  if not lines[i].startswith("#EXTINF"):
+                      i += 1
+                      continue
+                  info = lines[i]
+                  i += 1
+                  url = ""
+                  while i < len(lines) and not lines[i].startswith("#EXTINF"):
+                      candidate = lines[i].strip()
+                      if candidate.startswith(("http://", "https://")):
+                          url = candidate
+                          i += 1
+                          break
+                      i += 1
+                  blocks.append((info, url))
+              return blocks
+
+          protected_rows = []
+          known_ids = set()
+
+          for info, url in parse_blocks(lines):
+              a = attrs(info)
+              cid = (a.get("tvg-id") or a.get("channel-id") or "").strip().lower()
+              if cid:
+                  known_ids.add(cid.split("@", 1)[0])
+              group = a.get("group-title", "").strip()
+              if group in locked and group != "Backup":
+                  protected_rows.append((group, a.get("tvg-id", ""), a.get("channel-id", ""), a.get("tvg-name", ""), url))
+
+          payload = {
+              "protected_rows": sorted(protected_rows),
+              "known_ids": sorted(known_ids),
+          }
+          Path("/tmp/locked-categories-before.json").write_text(
+              json.dumps(payload, ensure_ascii=False), encoding="utf-8"
+          )
+          print("Protected locked-category entries snapshotted:", len(protected_rows))
+          print("Known channel IDs snapshotted for Backup validation:", len(known_ids))
           PY
 
       - name: Update playlist — backup and new channels
         env:
-          IPTV_UPDATE_MODE: backup_only
+          IPTV_UPDATE_MODE: backup_and_new_channels
           LOCKED_CATEGORIES: 'Bangladesh|Indian Bangla|Indian Movies|Indian Music|Indian Entertainment|International|Documentary & Wildlife|Kids|Religious|Sports|Backup|Not Playing'
         run: python scripts/update_playlist.py
 
@@ -80,27 +116,74 @@ jobs:
           python - <<'PY'
           import json, os, re
           from pathlib import Path
-          lines = Path("IPTV-Playlist.m3u").read_text(encoding="utf-8-sig").replace("\r","").splitlines()
+
+          lines = Path("IPTV-Playlist.m3u").read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
           locked = set(os.environ["LOCKED_CATEGORIES"].split("|"))
-          attr_re = re.compile(r'([\\w-]+)="([^"]*)"')
-          rows = []
+          attr_re = re.compile(r'([\w-]+)="([^"]*)"')
+
+          def attrs(line):
+              return dict(attr_re.findall(line))
+
+          def parse_blocks(lines):
+              blocks = []
+              i = 0
+              while i < len(lines):
+                  if not lines[i].startswith("#EXTINF"):
+                      i += 1
+                      continue
+                  info = lines[i]
+                  i += 1
+                  url = ""
+                  while i < len(lines) and not lines[i].startswith("#EXTINF"):
+                      candidate = lines[i].strip()
+                      if candidate.startswith(("http://", "https://")):
+                          url = candidate
+                          i += 1
+                          break
+                      i += 1
+                  blocks.append((info, url))
+              return blocks
+
+          blocks = parse_blocks(lines)
+          protected_rows = []
+          backup_ids = []
           groups = []
-          for i, line in enumerate(lines):
-              if not line.startswith("#EXTINF"):
-                  continue
-              a = dict(attr_re.findall(line))
-              group = a.get("group-title","").strip()
+
+          for info, url in blocks:
+              a = attrs(info)
+              group = a.get("group-title", "").strip()
               groups.append(group)
-              if group in locked:
-                  url = next((x.strip() for x in lines[i+1:] if x.strip().startswith(("http://","https://"))), "")
-                  rows.append((group, a.get("tvg-id",""), a.get("channel-id",""), a.get("tvg-name",""), url))
+
+              if group in locked and group != "Backup":
+                  protected_rows.append((group, a.get("tvg-id", ""), a.get("channel-id", ""), a.get("tvg-name", ""), url))
+
+              if group == "Backup":
+                  cid = (a.get("tvg-id") or a.get("channel-id") or "").strip().lower()
+                  backup_ids.append(cid.split("@", 1)[0] if cid else "")
+
           before = json.loads(Path("/tmp/locked-categories-before.json").read_text(encoding="utf-8"))
-          if sorted(rows) != sorted(before):
-              raise SystemExit("LOCKED CATEGORY VIOLATION: automatic update changed a locked category.")
-          new_positions = [i for i,g in enumerate(groups) if g == "New Channels"]
+          before_rows = before["protected_rows"]
+          known_ids = set(before["known_ids"])
+
+          if sorted(protected_rows) != sorted(before_rows):
+              raise SystemExit(
+                  "LOCKED CATEGORY VIOLATION: automatic update changed a locked category "
+                  "(Backup is validated separately to allow alternate URLs for known channels)."
+              )
+
+          unknown_backup_ids = sorted({cid for cid in backup_ids if not cid or cid not in known_ids})
+          if unknown_backup_ids:
+              raise SystemExit(
+                  "BACKUP CATEGORY VIOLATION: new channel IDs were inserted into Backup: "
+                  + ", ".join(unknown_backup_ids[:20])
+              )
+
+          new_positions = [i for i, group in enumerate(groups) if group == "New Channels"]
           if new_positions and new_positions != list(range(new_positions[0], len(groups))):
               raise SystemExit("NEW CHANNELS PLACEMENT VIOLATION: New Channels must be the final category.")
-          print("Locked categories unchanged:", len(rows))
+
+          print("Locked categories unchanged:", len(protected_rows))
+          print("Backup entries validated; new channel IDs in Backup:", len(unknown_backup_ids))
           print("New Channels is final:", bool(new_positions))
           PY
 
