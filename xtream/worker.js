@@ -3,14 +3,17 @@ const CACHE_KEY = "https://bdix-iptv.internal/playlist";
 const CACHE_TTL = 60;
 
 const EPG_URLS = [
-  // Keep the worker guide payload bounded. These two sources together
-  // provide broad India coverage without merging the very large EPGShare feed.
+  // Use multiple India guides so a channel missing from one provider can
+  // still receive EPG from another. IN1 and IN4 are the compact India
+  // feeds from EPGShare01 (currently ~4 MB and ~1 MB compressed).
   "https://epg.pw/xmltv/epg_IN.xml",
+  "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
+  "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
   "https://iptv-epg.org/files/epg-in.xml"
 ];
-const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v6";
+const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v7";
 const EPG_CACHE_TTL = 900;
-// Direct M3U EPG endpoint deployment trigger. v6: bounded XMLTV source set.
+// Direct M3U EPG endpoint deployment trigger. v7: multi-source India XMLTV.
 
 // Cross-map playlist tvg-id variants to canonical EPG IDs used by public guides.
 const EPG_ID_MAP = {
