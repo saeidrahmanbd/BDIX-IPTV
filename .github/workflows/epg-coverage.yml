@@ -39,17 +39,24 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if [ -z "$(git status --porcelain -- reports/epg-coverage.md)" ]; then echo 'No EPG coverage changes.'; exit 0; fi
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add reports/epg-coverage.md
-          git commit -m 'Update EPG coverage report'
           for attempt in 1 2 3; do
+            # Rebuild from the latest main so concurrent playlist/workflow
+            # commits cannot make the generated report conflict during rebase.
             git fetch origin main
-            git rebase origin/main || { git rebase --abort; exit 1; }
+            git reset --hard origin/main
+            python scripts/epg_coverage.py
+            if [ -z "$(git status --porcelain -- reports/epg-coverage.md)" ]; then
+              echo 'No EPG coverage changes.'
+              exit 0
+            fi
             git add reports/epg-coverage.md
-            git diff --cached --quiet || git commit --amend --no-edit
-            if git push origin HEAD:main; then exit 0; fi
+            git commit -m 'Update EPG coverage report'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            git reset --hard origin/main
             sleep 3
           done
           exit 1
