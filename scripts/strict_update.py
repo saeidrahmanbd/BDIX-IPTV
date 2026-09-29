@@ -84,7 +84,7 @@ def acceptable_url(url):
 def set_attr(info, key, value):
     pattern = rf'({re.escape(key)}=")[^"]*(")'
     if re.search(pattern, info):
-        return re.sub(pattern, rf'\\g<1>{value}\\g<2>', info, count=1)
+        return re.sub(pattern, rf'\g<1>{value}\g<2>', info, count=1)
     comma = info.find(",")
     prefix = info if comma < 0 else info[:comma]
     suffix = "" if comma < 0 else info[comma:]
