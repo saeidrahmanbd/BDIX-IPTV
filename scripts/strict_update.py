@@ -203,9 +203,10 @@ for source in SOURCES:
             if url.lower() in existing_urls or not cid:
                 continue
             key = (cid_base or cname, url.lower())
-            if key in seen_additions or not reachable(url):
-                if key not in seen_additions and not reachable(url):
-                    unreachable += 1
+            if key in seen_additions:
+                continue
+            if not reachable(url):
+                unreachable += 1
                 continue
             new_channels.append((force_group(info, NEW_CHANNELS), url))
             seen_additions.add(key)
@@ -264,6 +265,6 @@ REPORT.write_text("\n".join([
     f"Rejected candidates: {rejected}",
     f"Unreachable candidates: {unreachable}",
     f"Source errors: {source_errors}",
-]), encoding="utf-8"))
+]), encoding="utf-8")
 
 print(f"Playlist update: backups_added={len(added)}, new_channels_added={len(new_channels)}, new_channel_candidates={new_channel_candidates}, rejected={rejected}, unreachable={unreachable}, source_errors={source_errors}")
