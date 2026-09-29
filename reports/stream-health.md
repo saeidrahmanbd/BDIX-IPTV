@@ -1,20 +1,20 @@
 # Stream Health
 
-Last checked: **2026-09-29T11:55:10+00:00**
+Last checked: **2026-09-29T11:58:57+00:00**
 
 Non-destructive availability check of the current playlist.
 
 ## Summary
 
 - Unique stream URLs checked: **826**
-- Healthy: **715**
-- Redirect/temporary: **101**
+- Healthy: **708**
+- Redirect/temporary: **99**
 - Timeout: **2**
-- HTTP error: **5**
-- Invalid HLS: **2**
-- Connection error: **1**
+- HTTP error: **7**
+- Invalid HLS: **1**
+- Connection error: **9**
 - Not Playing: **25**
-- Repeated-failure candidates (>= 3 runs): **1**
+- Repeated-failure candidates (>= 3 runs): **4**
 
 ## Policy
 
@@ -33,31 +33,43 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 
 ## Repeated-Failure Candidates
 
-- **Star Jalsha (576p) [Geo-blocked]** — StarJalsha.in@SD — 3 consecutive failures — HTTP error — http://cdn98.com/play/live.php?mac=00:1A:79:99:54:11&stream=225805&extension=ts&play_token=o1cczsG9wV
+- **Star Jalsha (576p) [Geo-blocked]** — StarJalsha.in@SD — 4 consecutive failures — HTTP error — http://cdn98.com/play/live.php?mac=00:1A:79:99:54:11&stream=225805&extension=ts&play_token=o1cczsG9wV
+- **ETV Plus** — ETVPlus.in@SD — 3 consecutive failures — Invalid HLS — https://yupplivegcpusa.yuppcdn.net/100823/smil:etvplus.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
+- **Mei Ah Movie Channel** — MeiAhMovieChannel.hk — 3 consecutive failures — Connection error — http://103.172.187.30:12000/stream/mytv/null-2/master.m3u8
+- **Sony Max** — SonyMax.in — 3 consecutive failures — HTTP error — http://live.balajibroadband.com:3500/live/476.m3u8
 
 ## Detailed Results
 
 ### Timeout
 
-- **Green TV** (GreenTV.bd) — request exceeded timeout — failure streak: 1 — https://iptvlive.ahmed-bd-org.workers.dev/green-tv-2/index.m3u8
-- **Green TV** (GreenTV.bd) — request exceeded timeout — failure streak: 1 — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/greentv.stream/index.m3u8
+- **Green TV** (GreenTV.bd) — request exceeded timeout — failure streak: 2 — https://iptvlive.ahmed-bd-org.workers.dev/green-tv-2/index.m3u8
+- **Green TV** (GreenTV.bd) — request exceeded timeout — failure streak: 2 — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/greentv.stream/index.m3u8
 
 ### HTTP error
 
-- **Ananda TV** (AnandaTV.bd) — HTTP 500 — failure streak: 1 — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/anandatv.stream/index.m3u8
-- **Ekhon TV** (EkhonTV.bd) — HTTP 500 — failure streak: 1 — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/globaltv.stream/index.m3u8
-- **Green TV** (GreenTV.bd) — HTTP 404 — failure streak: 1 — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
-- **Sony Max** (SonyMax.in) — HTTP 500 — failure streak: 2 — http://live.balajibroadband.com:3500/live/476.m3u8
-- **Star Jalsha (576p) [Geo-blocked]** (StarJalsha.in@SD) — HTTP 458 — failure streak: 3 — http://cdn98.com/play/live.php?mac=00:1A:79:99:54:11&stream=225805&extension=ts&play_token=o1cczsG9wV
+- **Ekhon TV** (EkhonTV.bd) — HTTP 500 — failure streak: 2 — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/globaltv.stream/index.m3u8
+- **Green TV** (GreenTV.bd) — HTTP 404 — failure streak: 2 — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
+- **SA TV** (SATV.bd) — HTTP 500 — failure streak: 1 — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-1/index.m3u8
+- **Sony Max** (SonyMax.in) — HTTP 500 — failure streak: 3 — http://live.balajibroadband.com:3500/live/476.m3u8
+- **Sony Ten 2** (local.14595ff956ba) — HTTP 404 — failure streak: 1 — https://stream.ottplus.live/live/ten_2_hd_abr/live/ten_2_hd_720/index.m3u8
+- **Star Jalsha (576p) [Geo-blocked]** (StarJalsha.in@SD) — HTTP 458 — failure streak: 4 — http://cdn98.com/play/live.php?mac=00:1A:79:99:54:11&stream=225805&extension=ts&play_token=o1cczsG9wV
+- **Star News** (local.star-news) — HTTP 500 — failure streak: 1 — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/tracks-v1a1/mono.m3u8
 
 ### Invalid HLS
 
-- **ETV Plus** (ETVPlus.in@SD) — missing HLS markers — failure streak: 2 — https://yupplivegcpusa.yuppcdn.net/100823/smil:etvplus.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
-- **EU Music** (EUMusic.ua) — missing HLS markers — failure streak: 1 — http://stream.mcquack.net/261/index.m3u8
+- **ETV Plus** (ETVPlus.in@SD) — missing HLS markers — failure streak: 3 — https://yupplivegcpusa.yuppcdn.net/100823/smil:etvplus.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
 
 ### Connection error
 
-- **Mei Ah Movie Channel** (MeiAhMovieChannel.hk) — timed out — failure streak: 2 — http://103.172.187.30:12000/stream/mytv/null-2/master.m3u8
+- **beIN Sports 1** (Bein Sport HD 1) — [Errno -3] Temporary failure in name resolution — failure streak: 1 — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6123/index.m3u8
+- **Bein Sports 3** (beINSports3.qa) — [Errno -3] Temporary failure in name resolution — failure streak: 1 — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6124/index.m3u8
+- **beIN SPORTS 6** (beINSports6.qa) — [Errno -3] Temporary failure in name resolution — failure streak: 1 — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6127/index.m3u8
+- **beIN SPORTS 7** (beINSports7.qa) — [Errno -3] Temporary failure in name resolution — failure streak: 1 — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6128/index.m3u8
+- **Mei Ah Movie Channel** (MeiAhMovieChannel.hk) — timed out — failure streak: 3 — http://103.172.187.30:12000/stream/mytv/null-2/master.m3u8
+- **Sky Sports Action** (SkySportsNFL.uk) — [Errno -5] No address associated with hostname — failure streak: 1 — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9155/index.m3u
+- **Sky Sports Cricket** (SkySportsCricket.ie) — [Errno -5] No address associated with hostname — failure streak: 1 — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9258/index.m3u8
+- **Sky Sports Football** (SkySportsFootball.ie) — [Errno -5] No address associated with hostname — failure streak: 1 — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9289/index.m3u8
+- **Sony Max 2 [US]** (local.f84628a5cf6e) — [Errno 104] Connection reset by peer — failure streak: 1 — http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/125795.ts
 
 ### Redirect/temporary
 
@@ -105,9 +117,9 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 - **Jalsha Movies HD** (local.285a6aa870f3) — reachable — http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8
 - **Jalsha Movies HD** (local.285a6aa870f3) — reachable — https://iptvlive.ahmed-bd-org.workers.dev/jalsha-movies-hd-2/index.m3u8
 - **Jamuna TV** (JamunaTV.bd) — reachable — https://iptvlive.ahmed-bd-org.workers.dev/jamuna-tv-1/index.m3u8
-- **ME TV** (METV.bd) — reachable — https://iptvlive.ahmed-bd-org.workers.dev/me-tv-2/index.m3u8
 - **ME TV** (METV.bd) — reachable — https://iptvlive.ahmed-bd-org.workers.dev/me-tv-1/index.m3u8
 - **ME TV** (METV.bd) — reachable — https://iptvlive.ahmed-bd-org.workers.dev/me-tv-3/index.m3u8
+- **ME TV** (METV.bd) — reachable — https://iptvlive.ahmed-bd-org.workers.dev/me-tv-2/index.m3u8
 - **Mohona TV** (MohonaTV.bd) — reachable — http://premiumtvs.space/live/YqXTywueEV/damp2purchase/397.ts
 - **Movie Bangla** (MovieBangla.bd) — reachable — https://iptvlive.ahmed-bd-org.workers.dev/movie-bangla-1/index.m3u8
 - **MovieSphere Gold** (MovieSphereGold.us) — reachable — https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-ionmystery-tablo/playlist.m3u8
@@ -126,13 +138,11 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 - **RDS Social TV** (RDSSocialTV.it) — reachable — https://stream.rdstv.radio/out/v1/ec85f72b87f04555aa41d616d5be41dc/index.m3u8
 - **Real Wild** (RealWild.uk) — reachable — https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-realwild-tcl/playlist.m3u8
 - **Rongeen TV** (RongeenTV.in) — reachable — https://iptvlive.ahmed-bd-org.workers.dev/rongeen-tv-1/index.m3u8
-- **SA TV** (SATV.bd) — reachable — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-1/index.m3u8
 - **SA TV** (SATV.bd) — reachable — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-2/index.m3u8
 - **Sananda** (SanandaTV.in) — reachable — https://iptvlive.ahmed-bd-org.workers.dev/sananda-tv-1/index.m3u8
 - **Shemaroo Bollywood** (ShemarooBollywood.us) — reachable — https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8
 - **Somoy TV** (SomoyNewsTV.bd) — reachable — https://iptvlive.ahmed-bd-org.workers.dev/somoy-tv-2/index.m3u8
 - **Sonic Bangla** (local.sonic-bangla) — reachable — http://bosstv.click:8080/live/18012689/77561563/92412.ts
-- **Sony Max 2 [US]** (local.f84628a5cf6e) — reachable — http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/125795.ts
 - **Sony Sports Ten 3** (SonySportsTen3.in) — reachable — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98863.ts
 - **Star Gold** (StarGold.in) — reachable — http://livetv.akr4m.com:8080/bdtv/restrem/45.m3u8
 - **Star Gold Thrills** (StarGoldThrills.in@SD) — reachable — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/773735.ts
@@ -170,8 +180,8 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 - **&TV HD** (AndTV.in@HD) — reachable — http://202.70.146.135:8000/play/a06c/index.m3u8
 - **&TV International (1080p)** (AndTV.in@International) — reachable — https://3f56f997.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9BbmRUVl9ITFM/playlist.m3u8
 - **24 Hour Free Movies** (24HourFreeMovies.us) — reachable — https://d1j2u714xk898n.cloudfront.net/scheduler/scheduleMaster/145.m3u8
-- **30A Music** (30AMusic.us@SD) — reachable — https://30a-tv.com/music.m3u8
 - **30A Music** (30AMusic.us) — reachable — https://30a-tv.com/feeds/ceftech/30atvmusic.m3u8
+- **30A Music** (30AMusic.us@SD) — reachable — https://30a-tv.com/music.m3u8
 - **4ever Cinema** (4everCinema.ua) — reachable — http://stream.mcquack.net/258/index.m3u8
 - **4ever Drama** (4everDrama.ua) — reachable — http://stream.mcquack.net/260/index.m3u8
 - **4ever Music** (4everMusic.ua) — reachable — http://stream.mcquack.net/257/index.m3u8
@@ -212,19 +222,20 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 - **Anand TV** (AnandTV.in) — reachable — https://live.legitpro.co.in/anandtv/index.m3u8
 - **Ananda TV** (AnandaTV.bd) — reachable — https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
 - **Ananda TV** (AnandaTV.bd) — reachable — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/anandatv.stream/live-orgin/anandatv.stream/playlist.m3u8
+- **Ananda TV** (AnandaTV.bd) — reachable — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/anandatv.stream/index.m3u8
 - **Ananda TV** (AnandaTV.bd) — reachable — https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8?e=1784102574&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=ca7c19dec6024bf61b0aa2c509cf45df
 - **Animal Planet** (AnimalPlanet.in) — reachable — https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8
 - **Animal Planet HD** (AnimalPlanet.in@HD) — reachable — https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd/index.m3u8
 - **ARY Q TV** (local.f2281c686246) — reachable — https://aryqtvm.aryzap.com/v1/0183ea2a0eec0b8ed5941a38bc76/0183ea2a4e470b8ed5aa4d793457/ARYQTVH264_1080p.m3u8
 - **Asian TV** (AsianTV.bd) — reachable — https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/index.m3u8
-- **Asian TV** (AsianTV.bd) — reachable — https://stream.ottplus.live/live/asian_tv_abr/index.m3u8
 - **Asian TV** (AsianTV.bd) — reachable — https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/index.m3u8?e=1784102565&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=e4293f68c5bc8aa8e6ac3e088ca754f4
+- **Asian TV** (AsianTV.bd) — reachable — https://stream.ottplus.live/live/asian_tv_abr/index.m3u8
 - **Asianet Movies** (AsianetMovies.in) — reachable — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:asianetmovies1.smil/playlist.m3u8
 - **ATN Bangla** (ATNBangla.bd) — reachable — https://tvsen5.aynaott.com/atnbangla/index.m3u8
 - **ATN Bangla** (ATNBangla.bd) — reachable — https://tvsen5.aynaott.com/atnbangla/index.m3u8?e=1784102561&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=a4c195d9bcdfa5daa8df1dfd6b28455b
 - **ATN Bangla** (ATNBangla.bd) — reachable — https://tvsen5.aynaott.com/P3y2URgG7LDe/index.m3u8
-- **ATN BANGLA UK** (ATNBanglaUK.uk) — reachable — https://app.ncare.live/live-orgin/atnbanglauk-off.stream/playlist.m3u8
 - **ATN BANGLA UK** (ATNBanglaUK.uk) — reachable — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnbanglauk-off.stream/playlist.m3u8
+- **ATN BANGLA UK** (ATNBanglaUK.uk) — reachable — https://app.ncare.live/live-orgin/atnbanglauk-off.stream/playlist.m3u8
 - **ATN News** (local.atn-news) — reachable — https://tvsen6.aynaott.com/da6WMXAk/index.m3u8
 - **ATN News** (local.atn-news) — reachable — https://iptv-proxy.ahmed-bd-org.workers.dev/atn-news/index.m3u8
 - **Autentic Adventure Earth** (local.5ece5845b6dd) — reachable — https://a57e9c69976649b582a8d7604c00e69a.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AdventureEarth/playlist.m3u8
@@ -259,10 +270,6 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 - **Baraza Music TV** (BarazaMusicTV.gr) — reachable — https://eco.streams.ovh:8081/barazatv/index.m3u8
 - **BBC Drama** (BBCDrama.uk) — reachable — https://amg00793-amg00793c40-rakuten-es-5444.playouts.now.amagi.tv/playlist.m3u8
 - **BBC Earth** (BBCEarth.ca) — reachable — https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist.m3u8
-- **beIN Sports 1** (Bein Sport HD 1) — reachable — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6123/index.m3u8
-- **Bein Sports 3** (beINSports3.qa) — reachable — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6124/index.m3u8
-- **beIN SPORTS 6** (beINSports6.qa) — reachable — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6127/index.m3u8
-- **beIN SPORTS 7** (beINSports7.qa) — reachable — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6128/index.m3u8
 - **beIN SPORTS XTRA** (beINSPORTSXTRA.us) — reachable — https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8
 - **beIN SPORTS XTRA** (beINSPORTSXTRA.us@SD) — reachable — https://bein-xtra-bein.amagi.tv/playlist.m3u8
 - **beIN Sports XTRA en Espanol** (beINSPORTSXTRAenEspanol.us) — reachable — https://dc1644a9jazgj.cloudfront.net/beIN_Sports_Xtra_Espanol.m3u8
@@ -401,15 +408,15 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 - **EBS Musika** (EBSMusika.us) — reachable — https://rpn.bozztv.com/ebstv/ebsmusika/index.m3u8
 - **Ekamra Bharat Odia** (EkamraBharatOdia.in@SD) — reachable — https://live.ekamraott.com/bharat/bharat/index.m3u8
 - **Ekattor TV** (EkattorTV.bd) — reachable — https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8
-- **Ekattor TV** (EkattorTV.bd) — reachable — https://stream.ottplus.live/live/ekattor_tv_abr/index.m3u8
 - **Ekattor TV** (EkattorTV.bd) — reachable — https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8?e=1784102532&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=3b9afdda2bd5332e8f49ed7dfa321a06
+- **Ekattor TV** (EkattorTV.bd) — reachable — https://stream.ottplus.live/live/ekattor_tv_abr/index.m3u8
 - **Ekhon TV** (EkhonTV.bd) — reachable — https://stream.ottplus.live/live/ekhon_tv_abr/index.m3u8
 - **Ekhon TV** (EkhonTV.bd) — reachable — https://drk6xq0vhn.gpcdn.net/live/ekhon_tv_abr/index.m3u8
 - **Ekhon TV** (EkhonTV.bd) — reachable — https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8?e=1784102563&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=b5e80a73380863be907284374bdb2bda
 - **Ekushey TV** (EkusheyTV.bd) — reachable — https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8
 - **Ekushey TV** (EkusheyTV.bd) — reachable — https://tvsen5.aynaott.com/SyQuXz8sC3TB/index.m3u8
-- **Ekushey TV** (EkusheyTV.bd) — reachable — https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
 - **Ekushey TV** (EkusheyTV.bd) — reachable — https://ekusheyserver.com/etvlivesn.m3u8
+- **Ekushey TV** (EkusheyTV.bd) — reachable — https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
 - **Enter TV** (local.47c0bd81bc1f) — reachable — https://live1.entertv.com.bd/entertv/tracks-v1a1/mono.m3u8
 - **Enter TV** (local.47c0bd81bc1f) — reachable — https://live1.entertv.com.bd/entertv/index.fmp4.m3u8
 - **Enter-Film** (EnterFilm.ua) — reachable — http://stream.mcquack.net/322/index.m3u8
@@ -429,6 +436,7 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 - **ETV Comedy** (ETVComedy.in) — reachable — https://cc-wie8j8y69d2uy.akamaized.net/WWBI/Amagi/ETV_Comedy_IN/playlist.m3u8
 - **ETV Josh** (ETVJosh.in) — reachable — https://cc-uyh1ow5zouoio.akamaized.net/WWBI/Amagi/ETV_Josh_IN/playlist.m3u8
 - **ETV Music** (ETVMusic.in) — reachable — https://cc-szivnms4rlah6.akamaized.net/WWBI/Amagi/ETV_Music_IN/playlist.m3u8
+- **EU Music** (EUMusic.ua) — reachable — http://stream.mcquack.net/261/index.m3u8
 - **EURO SPORT HD** (Eurosport.in) — reachable — http://202.70.146.135:8000/play/a05s/index.m3u8
 - **Fakt Marathi** (FaktMarathi.in) — reachable — https://mumt07.tangotv.in/zHjX9OFlFAKTMARATHI/index.m3u8
 - **Fakt Marathi** (FaktMarathi.in) — reachable — https://cdn.pishow.tv/ott/live/10002/master.m3u8
@@ -447,8 +455,8 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 - **Get.factual** (Getfactual.us@UK) — reachable — https://d1nhni5l2n8hjt.cloudfront.net/gf.m3u8
 - **Global TV** (GlobalTV.bd) — reachable — http://116.204.149.16/globaltv/tracks-v1a1/mono.m3u8
 - **Global TV** (GlobalTV.bd) — reachable — http://116.204.149.16/globaltv/index.m3u8
-- **Global TV** (GlobalTV.bd) — reachable — https://stream.ottplus.live/live/global_tv_abr/index.m3u8
 - **Global TV** (GlobalTV.bd) — reachable — https://tvsen6.aynaott.com/y0q9eFAuquAtvTxRzUHq/index.m3u8
+- **Global TV** (GlobalTV.bd) — reachable — https://stream.ottplus.live/live/global_tv_abr/index.m3u8
 - **Goal TV** (GoalTV.in) — reachable — https://streams2.sofast.tv/sofastplayout/WiseM3U8_1/master.m3u8
 - **Gold Mines Movie** (local.gold-mines-movie) — reachable — https://streams.tangotv.in/GOLDMINEMOVIES/ORIGIN/index.m3u8
 - **Goldmines** (Goldmines.in) — reachable — https://streams.tangotv.in/GOLDMINES/ORIGIN/index.m3u8
@@ -473,8 +481,8 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 - **HMTV** (HMTV.in) — reachable — https://cdn.pishow.tv/ott/live/280/master.m3u8
 - **House of Crime** (local.1ed74477f967) — reachable — https://cc-y2z89muounal4.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-y2z89muounal4/IQJW/WBD/HouseOfCrime_IN/HouseOfCrime_IN.m3u8
 - **HUM TV** (HumTV.pk) — reachable — https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8
-- **HUM TV** (HumTV.pk) — reachable — https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8
 - **HUM TV** (HumTV.pk) — reachable — https://stream.ottplus.live/live/hum_tv_abr/index.m3u8
+- **HUM TV** (HumTV.pk) — reachable — https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8
 - **iFilm English** (iFilmEnglish.ir) — reachable — https://live.presstv.co.uk/hls/ifilmen.m3u8
 - **Independent TV** (IndependentTV.bd) — reachable — https://drk6xq0vhn.gpcdn.net/live/independent_tv_abr/live/independent_tv_720/chunks.m3u8
 - **INFAST** (INFAST.nl) — reachable — https://amg00861-terninternation-lifestyle-samsungau-kdlyy.amagi.tv/playlist/amg00861-terninternation-lifestyle-samsungau/playlist.m3u8
@@ -525,8 +533,8 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 - **Love Nature HD** (LoveNature.ca@HD) — reachable — https://mumbai-edge.smartplaytv.in/LoveNature/index.m3u8
 - **Maasranga TV** (MaasrangaTV.bd) — reachable — https://mtv.sunplex.live/MAASRANGA/index.m3u8
 - **Maasranga TV** (MaasrangaTV.bd) — reachable — http://tvsen5.aynascope.net/maasrangatv/index.m3u8
-- **Maasranga TV** (MaasrangaTV.bd) — reachable — https://tvsen6.aynaott.com/maasrangatv/index.m3u8
 - **Maasranga TV** (MaasrangaTV.bd) — reachable — https://tvsen5.aynaott.com/maasrangatv/index.m3u8
+- **Maasranga TV** (MaasrangaTV.bd) — reachable — https://tvsen6.aynaott.com/maasrangatv/index.m3u8
 - **Madani TV** (local.0d1963c96d4b) — reachable — https://tvsen3.aynaott.com/z24qLsqV/index.m3u8
 - **Made in Hollywood** (MadeInHollywood.us@SD) — reachable — https://connection3-ent-nz.samsung.wurl.tv/playlist.m3u8
 - **Madhimugam TV** (MadhimugamTV.in) — reachable — https://cdn.pishow.tv/ott/live/1476/master.m3u8
@@ -542,8 +550,8 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 - **Matribhumi TV** (MatribhumiTV.bd) — reachable — http://live.playmax.live/matribhumi/index.m3u8
 - **Mazhavil Manorama** (MazhavilManorama.in) — reachable — https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mazhavilmanorama_nim_https/050522/mazhavilmanorama/playlist.m3u8
 - **Mazhavil Manorama** (MazhavilManorama.in) — reachable — https://mmtv-vglivessai.akamaized.net/v1/master/673630b269b766886555eebfddd4f27f3de3ab50/f8a0827f-030f-4a0d-b7e5-338996c09a5b/index.m3u8
-- **Mazhavil Manorama** (MazhavilManorama.in) — reachable — https://mumt03.tangotv.in/Dsly5z3HMAZHAVILMANORAMAINT/index.m3u8
 - **Mazhavil Manorama** (MazhavilManorama.in) — reachable — https://mumt07.tangotv.in/zHjX9OFlMAZHAVILMANORAMAHD/index.m3u8
+- **Mazhavil Manorama** (MazhavilManorama.in) — reachable — https://mumt03.tangotv.in/Dsly5z3HMAZHAVILMANORAMAINT/index.m3u8
 - **MBC Bollywood** (MBCBollywood.ae) — reachable — https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-bollywood/546eb40d7dcf9a209255dd2496903764/index.m3u8
 - **MBC Bollywood** (MBCBollywood.ae) — reachable — http://93.184.10.248/MBCBollywood/index.m3u8
 - **MBC Drama USA** (MBCDramaUSA.us) — reachable — https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-drama-usa/ea2f5db904aff224b7066e59c7f585a2/index.m3u8
@@ -644,12 +652,12 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 - **PBS Kids** (PBSKids.us@SD) — reachable — https://livestream.pbskids.org/out/v1/14507d931bbe48a69287e4850e53443c/est.m3u8
 - **PGA Tour** (PGATour.us@SD) — reachable — https://d11k1mnrgfposz.cloudfront.net/playlist.m3u8
 - **Pitaara TV** (Pitaara.in) — reachable — https://d2lk5u59tns74c.cloudfront.net/out/v1/500a6b45f5ae41dda445d912b59eaa09/index.m3u8
-- **Pitaara TV** (Pitaara.in) — reachable — https://streams.tangotv.in/PITAARA/ORIGIN/index.m3u8
 - **Pitaara TV** (Pitaara.in) — reachable — https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8
+- **Pitaara TV** (Pitaara.in) — reachable — https://streams.tangotv.in/PITAARA/ORIGIN/index.m3u8
 - **Pocket Films** (PocketFilms.in) — reachable — https://vglivessai.akamaized.net/sg/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/b8ada260-bb81-472b-b7c1-3a79213a84b8/e02a0ce5-6c42-4cca-bb53-e5cfecff74a9/0.m3u8
 - **Pogo** (Pogo.in) — reachable — https://stream.ottplus.live/live/pogo_sd_abr/index.m3u8
-- **POP** (local.234e1ee9c354) — reachable — https://amg01753-narrativeentert-popkids-samsunguk-yjjil.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-popkids-samsunguk/playlist.m3u8
 - **Pop** (Pop.uk@SD) — reachable — https://amg01753-narrativeentert-popkids-lggb-xyy5k.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-popkids-lggb/playlist.m3u8
+- **POP** (local.234e1ee9c354) — reachable — https://amg01753-narrativeentert-popkids-samsunguk-yjjil.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-popkids-samsunguk/playlist.m3u8
 - **Pop** (Pop.uk) — reachable — https://rakutenaa-narrative-popkids-rakuten-uwrx0.amagi.tv/ts-eu-w1-n2/playlist/rakutenAA-narrative-popkids-rakuten/cb553d1e726c648b9dd43e6fd4ef41a8dd2406fc087a8d6933fb4b926bc10f41f8eda29ab30fb02b04940fa73f4e380d4d1a9a4ace0362d7b66aa9512a7d127f8adaf471d89c1617b2c11f5d7fe021414efc0e14d025522288a93c019738b3761d5cb95c3a1862cff90bfc7000c7800bda62218ba4dd7c387c0c5e820c5feda643a6fde90e43d038a4e21e1bc72560ddbc139d9773efd59202cd16e92aac50bfa1cabad21aadbcb032fd14dd370656367897944694cc53a4dfe80353f472204f1251f4a69da43f56e146474fc7fac5a9179979aa99378e646de16ae84e8023b578be1ba2e043a9a3bce04b454be2ae1f3575a4e1f9d9f9617ee437fda0a489212d9fbb4d2814cb20dc202a6e94adca40d2931095ec51efde68192bff9c448996b7979dd4e728892e90879ee03c465d5c16169062a19563cf2cd36c97c2122f5b5845aa9f27a0ecbb5b3e3836ecef5fd00024bdde9d8adc0b04d3651a489a06b33f54359b6436078f5cf89e2f53992a0b9c302fc450308945f4ac5e93cdbfb45663e584bf28906eeba635d6f314a06e396616aae2292d20261ec7eb64574513aa44e0c0f5f3631f09e885a594a6016f5661420a56d9888f719f9dff390d1fc521600a30431390078e39885904022b994b9ef85e25d44b7928b7f272595c35959ae58584d39a14ec25afa592382b286667b8250c256becbb8c52f84a22141d5b891d6145b21f000a80e7c8e18abf69cf915ba937700666c9f1034e1b2001097acac13a8f06b3ca48efca9a0498bdd4431ff856d300148defd869eee482c270029fae521515feb940e25603e225fd08d2ae1aaab15115232e545efd8d5bf14bbcd18ef8229e5ecb25672ab220ebc6a6d9b86752f4ae4b232336570271567a297ecbb0a4670f76a2ae26ed48f2ee5bbd541a243a4584c26a2887ec64239f3a7074a0aedfb4aecb1715cd61e67ccc7371c03d6907c0ee69b0f9d883fb837c6b10d5b7b249a99e9f88c8c2c25418610861c2930f0f0db24bf18814deb80e79fdb69ffcca6be51c8852ad8da527f033b2912e6cc4e09cfae848105a4a45c3c2f8f407deb21e370619b1f74f3bad84dda775fcebb23e2bfa5ac186264c8c1b507ec78dfc25e90a99c7180bc6a64a50e45513e0d6a7213fe905f301157cd3faa04d2dc8e22eb26cbadbce2e6dad293fc5667f408d5db4ae926a7cd3a4305552d93c218772b0e2886d75618b975f14125c1f340ed64b7d0dc51f498433bbc5c0924c01ab28a83e1eef608ae37e86912dccd2e5d08fc711448ed52e34d33ec6009a02c9fcaedd198572488b49b23b40a9f6fddde9fbe596e6f63f7839b766be2be957b8e78ab0540f2b5bff2e1a6b0bd53cc42a3f72b5e174c1866c49a7f8d626e2237564233511ec30b5bd12696402a8c75cbcfc4b43404d12c9e22f86329d642aa27656ba1368333e367360a5b6ec3aff08fd5690c65e29c0a4bc8307c68d1effbfa7d79b680fe373076f79bc96aeb0f16014fbb5a8b01449a2ca44b232541c0aa3fb837632e3e40502d987ac55989d42a639172b4ef3ad8f13ec5ea313cb7e7efb1af2de6c4c97c976583a812ca9df7c459949ff0a01e56684406dd91d6753563d867ac7580b602df17283f8fc1a4e748501c96a683cbbe3fe8da83f57220d440f54051271ce412dc5192c4bea132f9b368dc28fec6585ee428d299dfdb38d1521d8c5f0c5922e892fe19290d28ce7b0ae685d481cc8b3c606a42905c4fd69b10cf3fe3406ec17a28b7387405e60c7060763cb9661176182a37d8deb4fb16b8b1ebafa88e1cd6fc8dbb5022bbe5407f552c22990723e574fcd60ad882b27e3aee91ba46d4ef0e5a9bbc4fe41e5f3c126db4da0c79ab0a805aad763294685386e1b742329ec749c3f0e907ef142f95da37d23fb268f455e31e5a99e61f1e35b38447e03d75a92772652d22229293040d7c538a6de867c4771221a55e6da1bd1114dbb225451968722e9d6f7619553d59eb5f650295a7b34fd71385575d06b6f5d16bca7f5c7033bc63aca1e0ab39093e9790a218b9b58bb910461c1f1c626f73dd57de405a670124f089d5d571cbd176d3e631d7e739c4b27ef8ca396a52e2c6364b0cb38015abbf0a149bf386d7a45138130513026/17/1920x1080_5903040/index.m3u8
 - **POP World TV** (POPWorldTV.es) — reachable — https://janus.xpbroadcasting.com:8443/hls/popworld.m3u8
 - **Powerkids Kartoon Channel** (local.18292ea85199) — reachable — https://cc-j2qrmdlg5y7lg.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-j2qrmdlg5y7lg/powerkids.m3u8
@@ -725,9 +733,6 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 - **Shubh Cinema TV** (ShubhCinemaTV.in) — reachable — https://d393sxaxig6bax.cloudfront.net/out/v1/589cf2cf44bf42bb941e817a2240d62e/index.m3u8
 - **Siri Kannada** (SiriKannada.in) — reachable — https://mumt03.tangotv.in/Dsly5z3HSIRIKANNADA/index.m3u8
 - **Siri Kannada All Time** (SiriKannadaAllTime.in) — reachable — https://mumt07.tangotv.in/zHjX9OFlSIRIKANNADAALLTIME/index.m3u8
-- **Sky Sports Action** (SkySportsNFL.uk) — reachable — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9155/index.m3u
-- **Sky Sports Cricket** (SkySportsCricket.ie) — reachable — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9258/index.m3u8
-- **Sky Sports Football** (SkySportsFootball.ie) — reachable — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9289/index.m3u8
 - **Smurf TV** (SmurfTV.us) — reachable — https://d144py1prrd7ns.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-affg2ev32s0dq/smrfe.m3u8
 - **Smurf TV** (SmurfTV.us@SD) — reachable — https://stream.ads.ottera.tv/playlist.m3u8?network_id=4065
 - **SNB Cinema** (local.2480c4fd00cb) — reachable — http://103.182.83.246/hls/snbcinema.m3u8
@@ -740,8 +745,8 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 - **Sony BBC Earth** (SonyBBCEarth.in) — reachable — https://amg00793-bbcstudios-amg00793c3-lg-us-2528.playouts.now.amagi.tv/playlist/amg00793-bbcstudios-bbcearta-lgus/playlist.m3u8
 - **Sony BBC Earth HD** (SonyBBCEarth.in@HD) — reachable — https://stream.ottplus.live/live/bbc_earth_hd_abr/index.m3u8
 - **Sony Entertainment TV** (SonyEntertainmentTelevision) — reachable — https://drk6xq0vhn.gpcdn.net/live/sony_ent_sd_abr/index.m3u8
-- **Sony Entertainment TV** (SonyEntertainmentTelevision) — reachable — https://drk6xq0vhn.gpcdn.net/live/sony_ent_hd_abr/index.m3u8
 - **Sony Entertainment TV** (SonyEntertainmentTelevision) — reachable — http://38.96.178.205/SONYHD/index.m3u8
+- **Sony Entertainment TV** (SonyEntertainmentTelevision) — reachable — https://drk6xq0vhn.gpcdn.net/live/sony_ent_hd_abr/index.m3u8
 - **Sony KAL** (SonyKALHindi.us) — reachable — https://wurlsonypicturestv.global.transmit.live/hls/68deeb1c0238cda82df543dd/v1/spt_sonykal_1/lg_us/latest/main/hls/playlist.m3u8
 - **Sony Max** (SonyMax.in) — reachable — https://drk6xq0vhn.gpcdn.net/live/sony_max_sd_abr/index.m3u8
 - **Sony Max** (SonyMax.in) — reachable — https://drk6xq0vhn.gpcdn.net/live/max_hd_abr/index.m3u8
@@ -752,7 +757,6 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 - **Sony One Hits Comedie** (SonyOneHitsComedie.fr@HD) — reachable — https://7aa9671895264ec9a384dfed1b992171.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-818-FR-SONYONEHITSCOMDIE-LG_FR/playlist.m3u8
 - **Sony SAB HD** (SonySAB.in@HD) — reachable — https://drk6xq0vhn.gpcdn.net/live/sub_hd_abr/index.m3u8
 - **Sony Ten 1** (local.sony-ten-1) — reachable — https://drk6xq0vhn.gpcdn.net/live/ten_1_hd_720/index.m3u8
-- **Sony Ten 2** (local.14595ff956ba) — reachable — https://stream.ottplus.live/live/ten_2_hd_abr/live/ten_2_hd_720/index.m3u8
 - **Sony Ten 5** (local.9b7bf8b44a1d) — reachable — https://stream.ottplus.live/live/ten_5_hd_abr/live/ten_5_hd_720/index.m3u8
 - **South Movies** (South Movies) — reachable — https://live20.bozztv.com/giatvplayout7/giatv-209593/tracks-v1a1/mono.ts.m3u8
 - **South Station** (SouthStation.in) — reachable — https://cc-yw7ztecy8do3q.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/SS_IN.m3u8
@@ -765,7 +769,6 @@ See `reports/stream-priority.json` for the machine-readable hierarchy.
 - **Star Maa Movies** (StarMaaMovies.in) — reachable — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:maamovies.smil/chunklist_b2628000.m3u8
 - **Star Movies Select** (StarMoviesSelect.in) — reachable — http://202.70.146.135:8000/play/a06q/index.m3u8
 - **Star News** (local.star-news) — reachable — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/playlist.m3u8
-- **Star News** (local.star-news) — reachable — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/tracks-v1a1/mono.m3u8
 - **Star Plus** (StarPlus.in) — reachable — http://41.205.93.154/STAR-PLUS/index.m3u8
 - **Star Pravah** (StarPravah.in) — reachable — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starpravah.smil/chunklist_b1928000.m3u8
 - **Star Sports 1 Hindi** (StarSports1Hindi.in) — reachable — https://starsportshindiii.pages.dev/index.m3u8
