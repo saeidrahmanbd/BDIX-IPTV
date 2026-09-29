@@ -1,0 +1,50 @@
+name: Backup Stream Health Audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'IPTV-Playlist.m3u'
+      - 'scripts/audit_backup_streams.py'
+      - '.github/workflows/backup-health-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# All repository-writing workflows share one queue so they cannot race on main.
+concurrency:
+  group: iptv-repository-writes
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install FFmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Test Backup streams
+        run: python scripts/audit_backup_streams.py
+      - name: Commit confirmed dead removals
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "IPTV-Playlist.m3u" "reports/backup-health-report.md"
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          # Preserve generated changes while rebasing onto the latest main.
+          git stash push --include-untracked -m "backup-audit-generated"
+          git fetch origin main
+          git rebase origin/main
+          git stash pop
+          git add "IPTV-Playlist.m3u" "reports/backup-health-report.md"
+          git commit -m "Remove confirmed dead backup streams"
+          git push origin HEAD:main

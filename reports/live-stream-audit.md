@@ -1,0 +1,879 @@
+# Live Stream Availability Audit
+
+Last checked: **2026-09-29 09:00:57 UTC**
+
+- Playlist entries parsed: **843**
+- Unique stream URLs tested: **843**
+- Duplicate URLs in playlist: **0**
+
+## Summary
+
+- Healthy: **689**
+- Redirect/temporary: **101**
+- Timeout: **0**
+- HTTP error: **49**
+- Invalid HLS: **3**
+- Segment/variant error: **0**
+- Segment error: **0**
+- Connection error: **1**
+
+## Results by Status
+
+### HTTP error
+
+- **7S Music** — Indian Music — https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8 — HTTP 404 — 2672 ms
+- **Al Qamar** — Religious — https://streamer3.premio.link/alqamar/playlist.m3u8 — HTTP 404 — 1743 ms
+- **Amar Bangla** — Indian Bangla — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8 — HTTP 500 — 680 ms
+- **Ananda TV** — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/anandatv.stream/index.m3u8 — HTTP 500 — 701 ms
+- **B4U Music** — Backup — https://drk6xq0vhn.gpcdn.net/live/b4u_music_abr/index.m3u8 — HTTP 403 — 802 ms
+- **Bantul the Great** — Kids — https://live20.bozztv.com/giatvplayout7/giatv-209869/tracks-v1a1/mono.ts.m3u8 — HTTP 502 — 174 ms
+- **Baraza Music TV** — International — https://eco.streams.ovh:8081/barazatv/index.m3u8 — HTTP 404 — 2150 ms
+- **Boishakhi TV** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/boishakhi-tv-1/index.m3u8 — HTTP 404 — 1577 ms
+- **Boishakhi TV** — Backup — https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/index.m3u8?e=1784102570&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=04a0e9e55654c1f01a51941732d5fe10 — HTTP 404 — 2105 ms
+- **BTV Chattogram** — Bangladesh — https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/index.m3u8 — HTTP 404 — 2568 ms
+- **Cartoon Network** — Kids — https://drk6xq0vhn.gpcdn.net/live/cn_sd_abr/index.m3u8 — HTTP 403 — 919 ms
+- **Channel 16** — Bangladesh — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel16bd.stream/tracks-v1a1/mono.m3u8 — HTTP 404 — 730 ms
+- **Channel 16** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8 — HTTP 404 — 363 ms
+- **Channel S** — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8 — HTTP 500 — 430 ms
+- **Channel S** — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channels.stream/index.m3u8 — HTTP 500 — 1138 ms
+- **Channel S** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-s-1/index.m3u8 — HTTP 500 — 1029 ms
+- **Colors Super** — Indian Entertainment — https://d1rc86nwwc9fag.cloudfront.net/260723/smil:colorssuper1.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b — HTTP 416 — 539 ms
+- **Dangal 2** — Backup — https://mumt03.tangotv.in/Dsly5z3HDANGAL2/index.m3u8 — HTTP 404 — 2652 ms
+- **DD Arun Prabha** — Backup — https://cdn.pishow.tv/ott/live/32/master.m3u8 — HTTP 404 — 2115 ms
+- **Desh TV** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/desh-tv-2/index.m3u8 — HTTP 500 — 647 ms
+- **Enter TV** — Bangladesh — https://live1.entertv.com.bd/entertv/tracks-v1a1/mono.m3u8 — HTTP 404 — 1837 ms
+- **Gold Mines Movie** — Indian Movies — https://streams.tangotv.in/GOLDMINEMOVIES/ORIGIN/index.m3u8 — HTTP 404 — 3086 ms
+- **HUM TV** — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8 — HTTP 403 — 800 ms
+- **iFilm English** — International — https://live.presstv.co.uk/hls/ifilmen.m3u8 — HTTP 404 — 589 ms
+- **Independent TV** — Bangladesh — https://drk6xq0vhn.gpcdn.net/live/independent_tv_abr/live/independent_tv_720/chunks.m3u8 — HTTP 404 — 871 ms
+- **Kappa TV** — Backup — https://cdn.pishow.tv/ott/live/1123/master.m3u8 — HTTP 404 — 2105 ms
+- **Love Nature HD** — Backup — https://mumbai-edge.smartplaytv.in/LoveNature/index.m3u8 — HTTP 404 — 2915 ms
+- **Maasranga TV** — Backup — https://tvsen6.aynaott.com/maasrangatv/index.m3u8 — HTTP 404 — 2118 ms
+- **Mahaa Max** — Backup — https://mumbai-edge.smartplaytv.in/MahaMax/index.m3u8 — HTTP 404 — 2992 ms
+- **MTV (India)** — Indian Entertainment — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:mtvindia.smil/playlist.m3u8 — HTTP 404 — 335 ms
+- **My TV** — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mytv-up-off.stream/index.m3u8 — HTTP 500 — 286 ms
+- **Nexus TV** — Bangladesh — https://tvsen6.aynaott.com/Epm7WrFa/index.m3u8 — HTTP 404 — 2101 ms
+- **NRBTV** — Backup — https://uni6rtmp.tulix.tv/nrbnetwork/myStream.sdp/playlist.m3u8 — HTTP 404 — 920 ms
+- **Oscar Movies Bhojpuri** — Indian Entertainment — https://cdn.pishow.tv/ott/live/233/master.m3u8 — HTTP 404 — 2177 ms
+- **SA TV** — Backup — https://tvsen6.aynaott.com/rELXiuUXqbgzPb06Npom/index.m3u8 — HTTP 404 — 2098 ms
+- **SA TV** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-2/index.m3u8 — HTTP 404 — 2181 ms
+- **SA TV** — Not Playing — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/satvoff5666.stream/playlist.m3u8 — HTTP 500 — 281 ms
+- **Sananda** — Backup — https://live.sanandatelevision.in/sananda/tracks-v1a1/mono.m3u8 — HTTP 404 — 1242 ms
+- **SNB Cinema** — Indian Bangla — http://103.182.83.246/hls/snbcinema.m3u8 — HTTP 404 — 1081 ms
+- **Sonic Bangla** — Kids — http://bosstv.click:8080/live/18012689/77561563/92412.ts — HTTP 429 — 314 ms
+- **Sony Aath (1080p)** — Backup — https://cloudplay-sonyliv.pages.dev/aath.m3u8 — HTTP 403 — 314 ms
+- **Sony KAL** — Indian Entertainment — https://wurlsonypicturestv.global.transmit.live/hls/68deeb1c0238cda82df543dd/v1/spt_sonykal_1/lg_us/latest/main/hls/playlist.m3u8 — HTTP 416 — 674 ms
+- **Sony Max (576p) [Geo-blocked]** — Backup — http://dksmedia.tv/play/live.php?mac=00:1A:79:B6:60:3D&stream=156013&extension=ts&play_token=slNi06NyY0 — HTTP 429 — 710 ms
+- **Sony Yay** — Kids — https://drk6xq0vhn.gpcdn.net/live/sony_yay_abr/index.m3u8 — HTTP 404 — 841 ms
+- **Sony Yay! (1080p)** — Backup — https://cloudplay-sonyliv.pages.dev/yay.m3u8 — HTTP 403 — 305 ms
+- **Star News** — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/playlist.m3u8 — HTTP 500 — 554 ms
+- **Star Sports SL 1** — Sports — https://flussonic.defineatoz.com/starsportsselect1/tracks-v1/mono.m3u8 — HTTP 404 — 1546 ms
+- **Travelxp HD (1080p) [Geo-blocked]** — Backup — https://amg00416-amg00416c9-samsung-in-4882.playouts.now.amagi.tv/playlist/amg00416-travelxp-travelxphd-samsungin/playlist.m3u8 — HTTP 503 — 1813 ms
+- **Zee Bangla** — Backup — https://tvsen6.aynaott.com/ZeeBangla/index.m3u8 — HTTP 404 — 2130 ms
+
+### Invalid HLS
+
+- **Colors Rishtey** — Backup — https://manatv.akamaized.net/090823/smil:ristheyamerica.smil/playlist.m3u8 — HTTP 200 but no HLS markers — 254 ms
+- **ETV Cinema** — Backup — https://yupplivegcpusa.yuppcdn.net/100823/smil:etvcinema.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b — HTTP 200 but no HLS markers — 275 ms
+- **Meltem TV** — Backup — https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8 — HTTP 200 but no HLS markers — 979 ms
+
+### Connection error
+
+- **Matri Bhumi TV** — Indian Bangla — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/matribhumitv.stream/playlist.m3u8 — [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010) — 802 ms
+
+### Redirect/temporary
+
+- **8XM** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/8xm-1/index.m3u8 — manifest and playable child/segment reachable — 2338 ms
+- **Action Hollywood Movies** — International — https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8 — manifest and playable child/segment reachable — 1359 ms
+- **ADN TV** — Backup — https://redirector.rudo.video/hls-video/931b584451fa6dd1313ee66efbfd5802e3f3bcea/adntv/adntv.smil/playlist.m3u8 — manifest and playable child/segment reachable — 1995 ms
+- **ARY Music** — Indian Music — http://rgkkw.live:80/live/1Aoen7elp5/IgMJ60tmAa/18309.ts — HTTP resource reachable — 1721 ms
+- **Astro Cricbuzz** — Sports — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/2494.ts — HTTP resource reachable — 1242 ms
+- **ATN Bangla** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/atn-bangla-1/index.m3u8 — manifest and playable child/segment reachable — 2470 ms
+- **ATN News** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/atn-news-1/index.m3u8 — manifest and playable child/segment reachable — 2309 ms
+- **ATN News** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/atn-news-2/index.m3u8 — manifest and playable child/segment reachable — 2864 ms
+- **Bangla Tv** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/bangla-tv-2/index.m3u8 — manifest and playable child/segment reachable — 2904 ms
+- **Bangla Tv** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/bangla-tv-1/index.m3u8 — manifest and playable child/segment reachable — 3431 ms
+- **Bangla Vision** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/banglavision-1/index.m3u8 — manifest and playable child/segment reachable — 2851 ms
+- **Bengali Beats** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/bengali-beats-1/index.m3u8 — manifest and playable child/segment reachable — 419 ms
+- **Bhojpuri Cinema** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/bhojpuri-cinema-1/index.m3u8 — manifest and playable child/segment reachable — 1774 ms
+- **Big Magic** — Indian Entertainment — http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/355253.ts — HTTP resource reachable — 1197 ms
+- **Boishakhi TV** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/boishakhi-tv-2/index.m3u8 — manifest and playable child/segment reachable — 1491 ms
+- **Channel 24** — Backup — http://livetv.akr4m.com:8080/bdtv/restrem/14.m3u8 — manifest and playable child/segment reachable — 2287 ms
+- **Channel 24** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-24-hd-1/index.m3u8 — manifest and playable child/segment reachable — 3054 ms
+- **Channel 9** — Bangladesh — http://premiumtvs.space/live/YqXTywueEV/damp2purchase/434.ts — HTTP resource reachable — 1466 ms
+- **Channel 9** — Backup — http://livetv.akr4m.com:8080/bdtv/restrem/16.m3u8 — manifest and playable child/segment reachable — 2622 ms
+- **Channel I** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-i-hd-1/index.m3u8 — manifest and playable child/segment reachable — 2254 ms
+- **Channel I** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-i-1/index.m3u8 — manifest and playable child/segment reachable — 2889 ms
+- **Colors Bangla Cinema** — Indian Bangla — http://livetv.akr4m.com:8080/bdtv/restrem/3.m3u8 — manifest and playable child/segment reachable — 3223 ms
+- **DBC News** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/dbc-news-hd-1/index.m3u8 — manifest and playable child/segment reachable — 2228 ms
+- **DBC News** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/dbc-news-1/index.m3u8 — manifest and playable child/segment reachable — 3133 ms
+- **DD Bangla** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/dd-bangla-1/index.m3u8 — manifest and playable child/segment reachable — 500 ms
+- **ducktv** — Backup — https://jmp2.uk/stvp-ESBC4700001GR — manifest and playable child/segment reachable — 3131 ms
+- **Duronto TV** — Bangladesh — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/433.ts — HTTP resource reachable — 1856 ms
+- **Ekattor TV** — Backup — http://premiumtvs.space/live/YqXTywueEV/damp2purchase/428.ts — HTTP resource reachable — 1180 ms
+- **Enter TV** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-tv-1/index.m3u8 — manifest and playable child/segment reachable — 2615 ms
+- **Enter10 Bangla** — Indian Bangla — https://iptvlive.ahmed-bd-org.workers.dev/enter-10-bangla-1/index.m3u8 — manifest and playable child/segment reachable — 1073 ms
+- **Epic Music** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/epic-music-1/index.m3u8 — manifest and playable child/segment reachable — 3442 ms
+- **ETV Beats** — Indian Movies — https://jmp2.uk/stvp-IN4900002RV — manifest and playable child/segment reachable — 2942 ms
+- **FOX Cricket 501** — Sports — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/4748.ts — HTTP resource reachable — 1479 ms
+- **G TV** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/g-tv-1/index.m3u8 — manifest and playable child/segment reachable — 1087 ms
+- **Green TV** — Bangladesh — https://iptvlive.ahmed-bd-org.workers.dev/green-tv-2/index.m3u8 — manifest and playable child/segment reachable — 1501 ms
+- **Hindi Hits** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/hindi-hits-hd-1/index.m3u8 — manifest and playable child/segment reachable — 1205 ms
+- **Hindi Movie Classic 24** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/hindi-movie-classic-24-1/index.m3u8 — manifest and playable child/segment reachable — 2841 ms
+- **Independent TV** — Backup — http://premiumtvs.space/live/YqXTywueEV/damp2purchase/423.ts — HTTP resource reachable — 1046 ms
+- **Jago News 24** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/jago-news-24-1/index.m3u8 — manifest and playable child/segment reachable — 1207 ms
+- **Jalsha Movies HD** — Indian Bangla — http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8 — manifest and playable child/segment reachable — 2360 ms
+- **Jalsha Movies HD** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/jalsha-movies-hd-2/index.m3u8 — manifest and playable child/segment reachable — 3094 ms
+- **Jamuna TV** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/jamuna-tv-1/index.m3u8 — manifest and playable child/segment reachable — 2261 ms
+- **ME TV** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/me-tv-1/index.m3u8 — manifest and playable child/segment reachable — 2812 ms
+- **ME TV** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/me-tv-2/index.m3u8 — manifest and playable child/segment reachable — 2722 ms
+- **ME TV** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/me-tv-3/index.m3u8 — manifest and playable child/segment reachable — 2789 ms
+- **Mohona TV** — Backup — http://premiumtvs.space/live/YqXTywueEV/damp2purchase/397.ts — HTTP resource reachable — 1062 ms
+- **Movie Bangla** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/movie-bangla-1/index.m3u8 — manifest and playable child/segment reachable — 1070 ms
+- **MovieSphere CA** — Backup — https://jmp2.uk/plu-64a3d96f060e830008af6745.m3u8 — manifest and playable child/segment reachable — 1204 ms
+- **MovieSphere Gold** — International — https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-ionmystery-tablo/playlist.m3u8 — manifest and playable child/segment reachable — 921 ms
+- **Nagorik TV** — Bangladesh — http://livetv.akr4m.com:8080/bdtv/restrem/38.m3u8 — manifest and playable child/segment reachable — 2363 ms
+- **News 24** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/news-24-1/index.m3u8 — manifest and playable child/segment reachable — 2886 ms
+- **News 24** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/news-24-hd-1/index.m3u8 — manifest and playable child/segment reachable — 2874 ms
+- **NH BollyFlix** — Backup — https://jmp2.uk/stvp-IN46000140Q — manifest and playable child/segment reachable — 2079 ms
+- **NH BollyRaga** — Backup — https://jmp2.uk/stvp-IN460001373 — manifest and playable child/segment reachable — 2604 ms
+- **NTV** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/ntv-1/index.m3u8 — manifest and playable child/segment reachable — 2276 ms
+- **Outdoor Channel** — Documentary & Wildlife — https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00718-outdoorchannela-outdoortvnz-samsungnz/playlist.m3u8 — manifest and playable child/segment reachable — 1248 ms
+- **Peace TV Bangla** — Religious — https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8 — manifest and playable child/segment reachable — 2155 ms
+- **Peace TV English** — Religious — https://dzkyvlfyge.erbvr.com/PeaceTvEnglish/index.m3u8 — manifest and playable child/segment reachable — 2176 ms
+- **Peace TV Urdu** — Religious — https://dzkyvlfyge.erbvr.com/PeaceTvUrdu/index.m3u8 — manifest and playable child/segment reachable — 2275 ms
+- **PTC Music** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/ptc-music-1/index.m3u8 — manifest and playable child/segment reachable — 1301 ms
+- **Rajdhani TV** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/rajdhani-tv-1/index.m3u8 — manifest and playable child/segment reachable — 2345 ms
+- **RDS Social TV** — Backup — https://stream.rdstv.radio/out/v1/ec85f72b87f04555aa41d616d5be41dc/index.m3u8 — manifest and playable child/segment reachable — 870 ms
+- **Real Wild** — Documentary & Wildlife — https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-realwild-tcl/playlist.m3u8 — manifest and playable child/segment reachable — 1036 ms
+- **Rongeen TV** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/rongeen-tv-1/index.m3u8 — manifest and playable child/segment reachable — 2152 ms
+- **SA TV** — Bangladesh — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-1/index.m3u8 — manifest and playable child/segment reachable — 1495 ms
+- **Sananda** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/sananda-tv-1/index.m3u8 — manifest and playable child/segment reachable — 3642 ms
+- **Shemaroo Bollywood** — Indian Movies — https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8 — manifest and playable child/segment reachable — 1093 ms
+- **Somoy TV** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/somoy-tv-2/index.m3u8 — manifest and playable child/segment reachable — 2876 ms
+- **Sony Max** — Backup — http://live.balajibroadband.com:3500/live/476.m3u8 — manifest and playable child/segment reachable — 3881 ms
+- **Sony Max 2** — Backup — http://live.balajibroadband.com:3500/live/483.m3u8 — manifest and playable child/segment reachable — 3585 ms
+- **Sony Max 2 [US]** — Indian Movies — http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/125795.ts — HTTP resource reachable — 2094 ms
+- **Sony Sports Ten 3** — Sports — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98863.ts — HTTP resource reachable — 1392 ms
+- **Star Gold** — Indian Movies — http://livetv.akr4m.com:8080/bdtv/restrem/45.m3u8 — manifest and playable child/segment reachable — 2339 ms
+- **Star Gold Thrills** — Indian Movies — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/773735.ts — HTTP resource reachable — 1663 ms
+- **Star Jalsha** — Backup — http://premiumtvs.space/live/1Aoen7elp5/IgMJ60tmAa/8540.ts — HTTP resource reachable — 1356 ms
+- **Star Jalsha (576p) [Geo-blocked]** — Backup — http://cdn98.com/play/live.php?mac=00:1A:79:99:54:11&stream=225805&extension=ts&play_token=o1cczsG9wV — HTTP resource reachable — 931 ms
+- **Star Movies** — International — http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/98842.ts — HTTP resource reachable — 1234 ms
+- **Star News** — Bangladesh — https://iptvlive.ahmed-bd-org.workers.dev/star-news-1/index.m3u8 — manifest and playable child/segment reachable — 1107 ms
+- **Star News** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/star-news-2/index.m3u8 — manifest and playable child/segment reachable — 1355 ms
+- **Star Plus** — Indian Entertainment — http://livetv.akr4m.com:8080/bdtv/restrem/62.m3u8 — manifest and playable child/segment reachable — 2392 ms
+- **Star Sports SL 2** — Sports — http://rgkkw.live:80/live/1Aoen7elp5/IgMJ60tmAa/9401.ts — HTTP resource reachable — 1089 ms
+- **SUN BANGLA** — Indian Bangla — https://iptvlive.ahmed-bd-org.workers.dev/sun-bangla-1/index.m3u8 — manifest and playable child/segment reachable — 2249 ms
+- **Ten Sports HD** — Sports — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98.ts — HTTP resource reachable — 1478 ms
+- **The Movie Club HD** — Indian Movies — https://sis-global.prod.samsungtv.plus/v1/tvpprd/sc-mp2ar4ca425xo.m3u8 — manifest and playable child/segment reachable — 2632 ms
+- **The Walking Dead Universe (720p)** — Backup — https://jmp2.uk/plu-62fa8176b9884200074ef5ae.m3u8 — manifest and playable child/segment reachable — 1008 ms
+- **TLC** — Documentary & Wildlife — http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/36.ts — HTTP resource reachable — 1354 ms
+- **Totalmusic** — International — https://cdn.global.elektamedia.com/live/c7eds/Totalmusic/SA_LIVE_hls_enc/master.m3u8 — manifest and playable child/segment reachable — 508 ms
+- **Totalmusic 80s** — International — https://cdn.global.elektamedia.com/live/c7eds/Totalmusic_80s/SA_LIVE_hls_enc/master.m3u8 — manifest and playable child/segment reachable — 524 ms
+- **Totalmusic Concerts** — International — https://cdn.global.elektamedia.com/live/c7eds/Totalmusic_Concerts/SA_LIVE_hls_enc/master.m3u8 — manifest and playable child/segment reachable — 519 ms
+- **Totalmusic Dance** — International — https://cdn.global.elektamedia.com/live/c7eds/Totalmusic_Dance/SA_LIVE_hls_enc/master.m3u8 — manifest and playable child/segment reachable — 491 ms
+- **Travelxp Bangla** — Backup — http://premiumtvs.space/live/YqXTywueEV/damp2purchase/20622.ts — HTTP resource reachable — 1054 ms
+- **TV+** — Backup — https://jireh-8-hls-video-us-isp.dps.live/hls-video/ey6283je82983je9823je8jowowiekldk9838274/tvmas/tvmas.smil/playlist.m3u8 — manifest and playable child/segment reachable — 1257 ms
+- **YRF Music** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/yrf-music-1/index.m3u8 — manifest and playable child/segment reachable — 2485 ms
+- **YRF Music** — Backup — https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8 — manifest and playable child/segment reachable — 2594 ms
+- **Zee Action** — Indian Movies — http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/967.ts — HTTP resource reachable — 1340 ms
+- **Zee Anmol** — Indian Entertainment — http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/203.ts — HTTP resource reachable — 1179 ms
+- **Zee Bangla HD** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-hd-2/index.m3u8 — manifest and playable child/segment reachable — 386 ms
+- **Zee Bangla Sonar** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-cinema-2/index.m3u8 — manifest and playable child/segment reachable — 1438 ms
+- **Zee Bollywood** — Backup — https://iptvlive.ahmed-bd-org.workers.dev/zee-bollywood-1/index.m3u8 — manifest and playable child/segment reachable — 4513 ms
+- **Zoom TV** — Indian Music — https://pubads.g.doubleclick.net/ssai/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8 — manifest and playable child/segment reachable — 1278 ms
+- **Zoom TV** — Backup — https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8 — manifest and playable child/segment reachable — 891 ms
+
+### Healthy
+
+- **&TV** — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/and_tv_hd_abr/index.m3u8 — manifest and playable child/segment reachable — 2345 ms
+- **&TV** — Backup — https://stream.ottplus.live/live/and_tv_hd_abr/index.m3u8 — manifest and playable child/segment reachable — 4295 ms
+- **&TV HD** — Backup — http://202.70.146.135:8000/play/a06c/index.m3u8 — manifest and playable child/segment reachable — 1623 ms
+- **&TV International (1080p)** — Backup — https://3f56f997.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9BbmRUVl9ITFM/playlist.m3u8 — manifest and playable child/segment reachable — 581 ms
+- **24 Hour Free Movies** — International — https://d1j2u714xk898n.cloudfront.net/scheduler/scheduleMaster/145.m3u8 — manifest and playable child/segment reachable — 455 ms
+- **30A Music** — Backup — https://30a-tv.com/feeds/ceftech/30atvmusic.m3u8 — manifest and playable child/segment reachable — 2100 ms
+- **30A Music** — Backup — https://30a-tv.com/music.m3u8 — manifest and playable child/segment reachable — 2176 ms
+- **4ever Cinema** — International — http://stream.mcquack.net/258/index.m3u8 — manifest and playable child/segment reachable — 1030 ms
+- **4ever Drama** — Backup — http://stream.mcquack.net/260/index.m3u8 — manifest and playable child/segment reachable — 1684 ms
+- **4ever Music** — International — http://stream.mcquack.net/257/index.m3u8 — manifest and playable child/segment reachable — 1022 ms
+- **7S Music** — Backup — https://cdn.pishow.tv/ott/live/1257/master.m3u8 — manifest and playable child/segment reachable — 2827 ms
+- **7X Punjabi** — Indian Music — https://cdn2.in/7xPunjabihls/live.m3u8 — manifest and playable child/segment reachable — 2694 ms
+- **8XM** — Indian Music — https://vodzong.mjunoon.tv:8087/streamtest/8XM-131/playlist.m3u8 — manifest and playable child/segment reachable — 2456 ms
+- **8XM** — Backup — https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8 — manifest and playable child/segment reachable — 1693 ms
+- **9X Jalwa** — Indian Music — https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/70fca4d1-156e-4c03-baa4-9a4b602e33d5/0.m3u8 — manifest and playable child/segment reachable — 1272 ms
+- **9X Jalwa** — Backup — https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8 — manifest and playable child/segment reachable — 600 ms
+- **9X Jalwa** — Backup — https://mumt03.tangotv.in/Dsly5z3H9XJALWA/index.m3u8 — manifest and playable child/segment reachable — 3329 ms
+- **9X Jhakaas** — Indian Music — https://wiselp.wiseplayout.com/9X_Jhakaas/master.m3u8 — manifest and playable child/segment reachable — 780 ms
+- **9X Jhakaas (1080p)** — Backup — https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8 — manifest and playable child/segment reachable — 1999 ms
+- **9X Tashan** — Indian Music — https://wiselp.wiseplayout.com/9X_Tashan/master.m3u8 — manifest and playable child/segment reachable — 823 ms
+- **9X Tashan (1080p)** — Backup — https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8 — manifest and playable child/segment reachable — 2035 ms
+- **9XM** — Indian Music — https://cc-706183qeo55ez.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-706183qeo55ez/DIYC/PMSL/9X/9XMusic_IN/9XMusic_IN.m3u8 — manifest and playable child/segment reachable — 4155 ms
+- **9XM** — Backup — https://wiselp.wiseplayout.com/9XM/HD1080/HD1080.m3u8 — manifest and playable child/segment reachable — 394 ms
+- **9XM** — Backup — https://wiselp.wiseplayout.com/9XM/master.m3u8 — manifest and playable child/segment reachable — 607 ms
+- **9XM** — Backup — https://9xjio.wiseplayout.com/9XM/master.m3u8 — manifest and playable child/segment reachable — 2594 ms
+- **A Sports** — Sports — https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/tracks-v1a1/mono.ts.m3u8 — manifest and playable child/segment reachable — 2114 ms
+- **Aakaash Aath** — Indian Bangla — https://mumt03.tangotv.in/Dsly5z3HAAKASHAATH/index.m3u8 — manifest and playable child/segment reachable — 3627 ms
+- **Aakaash Aath** — Backup — http://tvsen5.aynascope.net/Wm9Lv2RjZGT6/index.m3u8 — manifest and playable child/segment reachable — 2207 ms
+- **Aaryaa TV** — Indian Music — https://stream.ottlive.co.in/aryatvtamil/index.m3u8 — manifest and playable child/segment reachable — 5912 ms
+- **ADN TV+** — Kids — https://d3b73b34o7cvkq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gz2sgqzp076kf/adn.m3u8 — manifest and playable child/segment reachable — 1340 ms
+- **Adventure Earth** — Documentary & Wildlife — https://autentic-adventure-earth-1-eu.rakuten.wurl.tv/playlist.m3u8 — manifest and playable child/segment reachable — 550 ms
+- **Afarin TV** — Kids — https://65f16f0fdfc51.streamlock.net/afarinTV/livestream/playlist.m3u8 — manifest and playable child/segment reachable — 2925 ms
+- **Al Istiqama** — Religious — https://jmc-live.ercdn.net/alistiqama/alistiqama.m3u8 — manifest and playable child/segment reachable — 2566 ms
+- **Al Quran Al Kareem TV** — Religious — https://cdn-globecast.akamaized.net/live/eds/saudi_quran/hls_roku/index.m3u8 — manifest and playable child/segment reachable — 659 ms
+- **Alankar TV** — Indian Bangla — https://livetv.tarangplus.in/alankar-origin/live/playlist.m3u8 — manifest and playable child/segment reachable — 1978 ms
+- **Amar Bangla** — Backup — http://115.187.41.216:8080/hls/amarbangla/index.m3u8 — manifest and playable child/segment reachable — 2790 ms
+- **Amar Bangla Digital** — Indian Bangla — http://115.187.41.216:8080/hls/amardigital/index.m3u8 — manifest and playable child/segment reachable — 2809 ms
+- **Amar Bangla Digital** — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/amardigital.stream/playlist.m3u8 — manifest and playable child/segment reachable — 1222 ms
+- **Amazing Discoveries TV** — Documentary & Wildlife — https://uni01rtmp.tulix.tv/amazingdtv/amazingdtv/playlist.m3u8 — manifest and playable child/segment reachable — 1214 ms
+- **AMC** — Backup — http://41.205.93.154/AMC/index.m3u8 — manifest and playable child/segment reachable — 2111 ms
+- **AMC (United States)** — Backup — http://23.239.31.26:8989/amc/index.m3u8 — manifest and playable child/segment reachable — 136 ms
+- **AMC Triller** — International — https://436f59579436473e8168284cac5d725f.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Plex_RushByAMC/playlist.m3u8 — manifest and playable child/segment reachable — 1145 ms
+- **Amrita TV** — Indian Entertainment — https://ddash74r36xqp.cloudfront.net/master.m3u8 — manifest and playable child/segment reachable — 1072 ms
+- **Anand TV** — Indian Entertainment — https://live.legitpro.co.in/anandtv/index.m3u8 — manifest and playable child/segment reachable — 3665 ms
+- **Ananda TV** — Bangladesh — https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8 — manifest and playable child/segment reachable — 3374 ms
+- **Ananda TV** — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/anandatv.stream/live-orgin/anandatv.stream/playlist.m3u8 — manifest and playable child/segment reachable — 1310 ms
+- **Ananda TV** — Backup — https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8?e=1784102574&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=ca7c19dec6024bf61b0aa2c509cf45df — manifest and playable child/segment reachable — 2812 ms
+- **Animal Planet** — Documentary & Wildlife — https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8 — manifest and playable child/segment reachable — 2349 ms
+- **Animal Planet HD** — Documentary & Wildlife — https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd/index.m3u8 — manifest and playable child/segment reachable — 2818 ms
+- **ARY Q TV** — Religious — https://aryqtvm.aryzap.com/v1/0183ea2a0eec0b8ed5941a38bc76/0183ea2a4e470b8ed5aa4d793457/ARYQTVH264_1080p.m3u8 — manifest and playable child/segment reachable — 1469 ms
+- **Asian TV** — Bangladesh — https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/index.m3u8 — manifest and playable child/segment reachable — 3237 ms
+- **Asian TV** — Backup — https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/index.m3u8?e=1784102565&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=e4293f68c5bc8aa8e6ac3e088ca754f4 — manifest and playable child/segment reachable — 2792 ms
+- **Asian TV** — Backup — https://stream.ottplus.live/live/asian_tv_abr/index.m3u8 — manifest and playable child/segment reachable — 2956 ms
+- **Asianet Movies** — Indian Movies — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:asianetmovies1.smil/playlist.m3u8 — manifest and playable child/segment reachable — 591 ms
+- **ATN Bangla** — Bangladesh — https://tvsen5.aynaott.com/atnbangla/index.m3u8 — manifest and playable child/segment reachable — 3294 ms
+- **ATN Bangla** — Backup — https://tvsen5.aynaott.com/P3y2URgG7LDe/index.m3u8 — manifest and playable child/segment reachable — 2819 ms
+- **ATN Bangla** — Backup — https://tvsen5.aynaott.com/atnbangla/index.m3u8?e=1784102561&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=a4c195d9bcdfa5daa8df1dfd6b28455b — manifest and playable child/segment reachable — 2872 ms
+- **ATN BANGLA UK** — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnbanglauk-off.stream/playlist.m3u8 — manifest and playable child/segment reachable — 499 ms
+- **ATN BANGLA UK** — Backup — https://app.ncare.live/live-orgin/atnbanglauk-off.stream/playlist.m3u8 — manifest and playable child/segment reachable — 1147 ms
+- **ATN News** — Bangladesh — https://tvsen6.aynaott.com/da6WMXAk/index.m3u8 — manifest and playable child/segment reachable — 3353 ms
+- **ATN News** — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/atn-news/index.m3u8 — manifest and playable child/segment reachable — 2165 ms
+- **Autentic Adventure Earth** — Documentary & Wildlife — https://a57e9c69976649b582a8d7604c00e69a.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AdventureEarth/playlist.m3u8 — manifest and playable child/segment reachable — 621 ms
+- **Autentic History** — Documentary & Wildlife — https://9e754fa707344ccca6d84955c8fcaf36.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AutenticHistory/playlist.m3u8 — manifest and playable child/segment reachable — 714 ms
+- **Azan TV** — Religious — https://dbcanada.sonarbanglatv.com/azantv/atv/index.m3u8 — manifest and playable child/segment reachable — 635 ms
+- **B4U Bhojpuri** — Indian Entertainment — https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8 — manifest and playable child/segment reachable — 969 ms
+- **B4U Kadak** — Indian Movies — https://amg00877-b4unew-amg00877c4-xiaomi-in-5473.playouts.now.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 516 ms
+- **B4U Kadak** — Backup — https://cdn.pishow.tv/ott/live/227/master.m3u8 — manifest and playable child/segment reachable — 2831 ms
+- **B4U Kadak** — Backup — https://streams.tangotv.in/B4UKADAK/ORIGIN/index.m3u8 — manifest and playable child/segment reachable — 3660 ms
+- **B4U Movies** — Indian Movies — https://amg00877-b4unew-amg00877c2-xiaomi-in-5489.playouts.now.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 585 ms
+- **B4U Movies** — Backup — https://drk6xq0vhn.gpcdn.net/live/b4u_movies_abr/index.m3u8 — manifest and playable child/segment reachable — 2346 ms
+- **B4U Movies** — Backup — https://cdn.pishow.tv/ott/live/419/master.m3u8 — manifest and playable child/segment reachable — 2838 ms
+- **B4U Movies** — Backup — https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8 — manifest and playable child/segment reachable — 3659 ms
+- **B4U Music** — Indian Music — https://streams.tangotv.in/B4UMUSIC/ORIGIN/index.m3u8 — manifest and playable child/segment reachable — 3563 ms
+- **B4U Music** — Backup — https://cdn.pishow.tv/ott/live/415/master.m3u8 — manifest and playable child/segment reachable — 2889 ms
+- **Baby Shark TV** — Kids — https://newidco-babysharktv-1-eu.rakuten.wurl.tv/playlist.m3u8 — manifest and playable child/segment reachable — 542 ms
+- **Baby Shark TV** — Backup — https://newidco-babysharktv-1-us.roku.wurl.tv/playlist.m3u8 — manifest and playable child/segment reachable — 445 ms
+- **Balle Balle** — Indian Music — https://mcncdndigital.com/balleballetv/index.m3u8 — manifest and playable child/segment reachable — 867 ms
+- **Balle Balle** — Backup — https://streams.tangotv.in/BALLEBALLE/ORIGIN/index.m3u8 — manifest and playable child/segment reachable — 3587 ms
+- **Bang Bang TV** — International — https://streams.sofast.tv/ptnr-yupptv/title-BANG-BANG-TV-ENG_yupptv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/6a98fce2-bf4c-4bfb-91f4-c43851bb3801/manifest.m3u8 — manifest and playable child/segment reachable — 2404 ms
+- **Bangla Plus** — Indian Bangla — https://live-stream.utkalbongo.com/hls/livebanglatvstream.m3u8 — manifest and playable child/segment reachable — 1849 ms
+- **Bangla TV** — Bangladesh — https://tvsen6.aynaott.com/39ee93nUbCCmm5LsyD4t/index.m3u8 — manifest and playable child/segment reachable — 3252 ms
+- **Bangla Tv** — Backup — http://116.204.149.16/banglatv/index.m3u8 — manifest and playable child/segment reachable — 2431 ms
+- **Bangla Vision** — Bangladesh — https://tvsen5.aynaott.com/banglavision/index.m3u8 — manifest and playable child/segment reachable — 3327 ms
+- **Bangla Vision** — Backup — https://tvsen5.aynaott.com/tgUzpPc9r6xw/index.m3u8 — manifest and playable child/segment reachable — 2786 ms
+- **BBC Drama** — International — https://amg00793-amg00793c40-rakuten-es-5444.playouts.now.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 933 ms
+- **BBC Earth** — Documentary & Wildlife — https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist.m3u8 — manifest and playable child/segment reachable — 468 ms
+- **beIN Sports 1** — Sports — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6123/index.m3u8 — manifest and playable child/segment reachable — 1525 ms
+- **Bein Sports 3** — Sports — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6124/index.m3u8 — manifest and playable child/segment reachable — 1514 ms
+- **beIN SPORTS 6** — Sports — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6127/index.m3u8 — manifest and playable child/segment reachable — 1436 ms
+- **beIN SPORTS 7** — Sports — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6128/index.m3u8 — manifest and playable child/segment reachable — 775 ms
+- **beIN SPORTS XTRA** — Sports — https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8 — manifest and playable child/segment reachable — 266 ms
+- **beIN SPORTS XTRA** — Backup — https://bein-xtra-bein.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 544 ms
+- **beIN Sports XTRA en Espanol** — Backup — https://dc1644a9jazgj.cloudfront.net/beIN_Sports_Xtra_Espanol.m3u8 — manifest and playable child/segment reachable — 488 ms
+- **beIN Sports XTRA en Espanol** — Backup — https://aegis-cloudfront-1.tubi.video/01f6c149-449b-4248-8bda-2278799205ec/playlist.m3u8 — manifest and playable child/segment reachable — 590 ms
+- **beIN Sports XTRA en Espanol** — Backup — https://bein-esp-xumo.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 455 ms
+- **Bengali Beats** — Indian Bangla — https://live20.bozztv.com/giatvplayout7/giatv-209587/tracks-v1a1/mono.ts.m3u8 — manifest and playable child/segment reachable — 451 ms
+- **BHI Channel** — Indian Bangla — https://server.livelegitpro.in/bhichannel/bhichannel/index.m3u8 — manifest and playable child/segment reachable — 10167 ms
+- **Bhojpuri Cinema** — Indian Movies — https://live-bhojpuri.akamaized.net/liveabr/playlist.m3u8 — manifest and playable child/segment reachable — 2765 ms
+- **Bhojpuri Cinema** — Backup — https://cdn.pishow.tv/ott/live/1033/master.m3u8 — manifest and playable child/segment reachable — 2871 ms
+- **Bhojpuri Cinema** — Backup — https://streams.tangotv.in/BHOJPURICINEMA/ORIGIN/index.m3u8 — manifest and playable child/segment reachable — 3643 ms
+- **Bijoy TV** — Bangladesh — https://tvsen6.aynaott.com/N8Xbo5vdwVU6sF43RsW0/index.m3u8 — manifest and playable child/segment reachable — 3342 ms
+- **Bijoy TV** — Backup — https://drk6xq0vhn.gpcdn.net/live/bijoy_tv_abr/index.m3u8 — manifest and playable child/segment reachable — 2319 ms
+- **Bijoy TV** — Backup — https://stream.ottplus.live/live/bijoy_tv_abr/live/bijoy_tv_720/chunks.m3u8 — manifest and playable child/segment reachable — 2904 ms
+- **Bijoy TV** — Backup — https://stream.ottplus.live/live/bijoy_tv_abr/index.m3u8 — manifest and playable child/segment reachable — 2945 ms
+- **BIZ Music** — Backup — https://fl.biztv.media/music_720_QAKpGmVUjaPApCNjpsgBxrdqNihAkl/index.m3u8 — manifest and playable child/segment reachable — 5019 ms
+- **Boishakhi TV** — Bangladesh — https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8 — manifest and playable child/segment reachable — 1665 ms
+- **Bollywood Film** — Indian Movies — https://tvextra-hls.b-cdn.net/bollywoodfilm/bollywoodfilm.m3u8 — manifest and playable child/segment reachable — 1777 ms
+- **Bon Voyage** — Documentary & Wildlife — https://d1si3n1st4nkgb.cloudfront.net/10502/89001004/hls/master.m3u8?ads.xumo_channelId=89001004&ads.xumo_streamId=89001004&ads.caid=Indigenius&ads.csid=samsungtvplus_in_bonvoyage_ssai&ads.sfid=&ads.afid=Indigenius&ads.xumo_platform=samsung&ads._fw_is_lat=%7BTARGETOPT%7D&ads._fw_us_privacy=1---&ads._fw_coppa=0&ads._fw_did=%7BPSID%7D&ads._fw_content_category=IAB1-7&ads._fw_content_genre=television&ads._fw_content_language=en&ads._fw_content_rating=tv-pg&ads._fw_deviceMake=samsung&ads._fw_gdpr=1&ads._fw_gdpr_consent=%7BTC_STRING%7D&ads._fw_h_x_country=IN&ads.appVersion=&ads.appName=%7BAPP_NAME%7D&ads.xumo_contentId=1101&ads.xumo_contentName=Indigenius&ads.xumo_providerId=1101&ads.xumo_providerName=Indigenius&ads.xumo_adsystem=mediatailor&ads.xumo_channelName=bonvoyage_in&ads.tpcl=MIDROLL&ads._fw_app_store_url=%7BAPP_DOMAIN%7D — manifest and playable child/segment reachable — 782 ms
+- **BTV National** — Bangladesh — https://btv.hridoytv-channel.workers.dev/btv.m3u8 — manifest and playable child/segment reachable — 5138 ms
+- **BTV News** — Bangladesh — https://btv.hridoytv-channel.workers.dev/news.m3u8 — manifest and playable child/segment reachable — 4440 ms
+- **C Malayalam TV** — Indian Entertainment — https://2-fss-2.streamhoster.com/pl_120/206508-3261972-1/playlist.m3u8 — manifest and playable child/segment reachable — 649 ms
+- **Cartoon Network HD+** — Kids — https://drk6xq0vhn.gpcdn.net/live/cn_hd_abr/index.m3u8 — manifest and playable child/segment reachable — 2437 ms
+- **CBN TV USA** — Bangladesh — https://live.cbntvusa.net/hls/cbntv/index.m3u8 — manifest and playable child/segment reachable — 858 ms
+- **CGTN Documentary** — Documentary & Wildlife — https://english-livebkali.cgtn.com/live/doccgtn_1.m3u8 — manifest and playable child/segment reachable — 413 ms
+- **CGTN Documentary** — Backup — https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8 — manifest and playable child/segment reachable — 359 ms
+- **Channel 1** — Bangladesh — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel1bd.stream/playlist.m3u8 — manifest and playable child/segment reachable — 1931 ms
+- **Channel 24** — Bangladesh — https://drk6xq0vhn.gpcdn.net/live/channel_24_abr/index.m3u8 — manifest and playable child/segment reachable — 2470 ms
+- **Channel 24** — Backup — https://stream.ottplus.live/live/channel_24_abr/index.m3u8 — manifest and playable child/segment reachable — 2948 ms
+- **Channel I** — Bangladesh — https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/index.m3u8 — manifest and playable child/segment reachable — 3336 ms
+- **Channel I** — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/channel-i/index.m3u8 — manifest and playable child/segment reachable — 2211 ms
+- **Channel S** — Bangladesh — https://app.ncare.live/live-orgin/channels.stream/live-orgin/channels.stream/chunks.m3u8 — manifest and playable child/segment reachable — 900 ms
+- **Channel-16** — Backup — http://serv25.vintera.tv:8081/test/k16/playlist.m3u8 — manifest and playable child/segment reachable — 3099 ms
+- **Choppertown** — Documentary & Wildlife — https://7d8dc76d676946ec8d372d4ed7b22333.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-11-CHOPPERTOWN-SPORTSTRIBAL/mt/sportstribaltv/11/hls/master/playlist.m3u8 — manifest and playable child/segment reachable — 740 ms
+- **Choppertown** — Backup — https://linear-11.frequency.stream/dist/glewedtv/11/hls/master/playlist.m3u8 — manifest and playable child/segment reachable — 278 ms
+- **Cinevault Westerns** — International — https://gsn-cinevault-westerns-2-us.roku.wurl.tv/playlist.m3u8 — manifest and playable child/segment reachable — 398 ms
+- **Circle** — International — https://circle-roku.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 774 ms
+- **CMC-USA Country Music Channel** — International — https://hwlive.streamingmediahosting.com/14215-live/0_obd393sh/playlist.m3u8 — manifest and playable child/segment reachable — 727 ms
+- **Colors Bangla** — Indian Bangla — https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/800.m3u8 — manifest and playable child/segment reachable — 369 ms
+- **Colors Bangla** — Backup — https://catchup.yuppcdn.net/amazonv2/36/preview/colorsbanglahd/master/chunklist.m3u8 — manifest and playable child/segment reachable — 576 ms
+- **Colors Bangla HD** — Indian Bangla — https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/2500.m3u8 — manifest and playable child/segment reachable — 368 ms
+- **Colors Cineplex** — Indian Movies — http://202.70.146.135:8000/play/a04n/index.m3u8 — manifest and playable child/segment reachable — 2364 ms
+- **Colors Cineplex [UK]** — Indian Movies — https://d1rc86nwwc9fag.cloudfront.net/260723/smil:rishteycineplexukdev.smil/chunklist_b1928000.m3u8 — manifest and playable child/segment reachable — 293 ms
+- **Colors Cineplex Bollywood** — Indian Movies — http://202.70.146.135:8000/play/a058/index.m3u8 — manifest and playable child/segment reachable — 2344 ms
+- **Colors Gujarati** — Indian Entertainment — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ColorsGujarati.m3u8 — manifest and playable child/segment reachable — 391 ms
+- **Colors Kannada** — Indian Entertainment — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorskannadahd1.smil/playlist.m3u8 — manifest and playable child/segment reachable — 451 ms
+- **Colors Marathi** — Indian Entertainment — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorsmarathihd.smil/playlist.m3u8 — manifest and playable child/segment reachable — 529 ms
+- **Colors Tamil** — Indian Entertainment — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorstamilhd11.smil/playlist.m3u8 — manifest and playable child/segment reachable — 455 ms
+- **Crime & Justice** — Documentary & Wildlife — https://d1vsdt3c2xcxl2.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-h309rib7av3rk/playlist.m3u8 — manifest and playable child/segment reachable — 1385 ms
+- **Crime Scene TV** — Documentary & Wildlife — https://d1si3n1st4nkgb.cloudfront.net/10502/89001003/hls/master.m3u8?ads.xumo_channelId=89001003&ads.xumo_streamId=89001003&ads.caid=Indigenius&ads.csid=samsungtvplus_in_indigeniuscrimescenetv_ssai&ads.sfid=&ads.afid=Indigenius&ads.xumo_platform=samsung&ads._fw_is_lat=%7BTARGETOPT%7D&ads._fw_us_privacy=1---&ads._fw_coppa=0&ads._fw_did=%7BPSID%7D&ads._fw_content_category=IAB1-7&ads._fw_content_genre=television&ads._fw_content_language=en&ads._fw_content_rating=tv-14&ads._fw_deviceMake=samsung&ads._fw_gdpr=1&ads._fw_gdpr_consent=%7BTC_STRING%7D&ads._fw_h_x_country=IN&ads.appVersion=&ads.appName=%7BAPP_NAME%7D&ads.xumo_contentId=1101&ads.xumo_contentName=Indigenius&ads.xumo_providerId=1101&ads.xumo_providerName=Indigenius&ads.xumo_adsystem=mediatailor&ads.xumo_channelName=indigeniuscrimescenetv_in&ads.tpcl=MIDROLL&ads._fw_app_store_url=%7BAPP_DOMAIN%7D — manifest and playable child/segment reachable — 549 ms
+- **Dangal** — Indian Entertainment — https://live-dangal.akamaized.net/liveabr/playlist.m3u8 — manifest and playable child/segment reachable — 1875 ms
+- **Dangal** — Backup — https://live-dangal.akamaized.net/liveabr/pub-iodang10p4al/live_720p/chunks.m3u8 — manifest and playable child/segment reachable — 1122 ms
+- **Dangal** — Backup — https://streams.tangotv.in/DANGAL/ORIGIN/index.m3u8 — manifest and playable child/segment reachable — 3738 ms
+- **Dangal 2** — Indian Entertainment — https://live-dangal2.akamaized.net/liveabr/playlist.m3u8 — manifest and playable child/segment reachable — 1479 ms
+- **Dangal 2** — Backup — https://streams.tangotv.in/DANGAL2/ORIGIN/index.m3u8 — manifest and playable child/segment reachable — 3611 ms
+- **Darshana TV** — Indian Entertainment — https://mumt04.tangotv.in/m18aqlK4DARSHANATV/index.m3u8 — manifest and playable child/segment reachable — 3357 ms
+- **Darshana TV** — Backup — https://yuppparoriglin.akamaized.net/181224/smil:darshanatv.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b — manifest and playable child/segment reachable — 1480 ms
+- **DBC News** — Bangladesh — https://tvsen6.aynaott.com/pF66Tkz0qFwP2aMMqHyt/index.m3u8 — manifest and playable child/segment reachable — 3297 ms
+- **DBC News** — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/dbc-news/index.m3u8 — manifest and playable child/segment reachable — 2179 ms
+- **DD Arun Prabha** — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/308556d9fd1246adb479ef012a39bbfe/index.m3u8 — manifest and playable child/segment reachable — 1131 ms
+- **DD Assam** — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/d380bf5c167b4319a46cdd8204bc26b2/index.m3u8 — manifest and playable child/segment reachable — 1069 ms
+- **DD Bangla** — Indian Bangla — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/7ff57cc9046b4c188b51a0d506f36e7f/index.m3u8 — manifest and playable child/segment reachable — 1028 ms
+- **DD Bangla** — Backup — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/7ff57cc9046b4c188b51a0d506f36e7f/index_3.m3u8 — manifest and playable child/segment reachable — 825 ms
+- **DD Bangla** — Backup — https://cdn.pishow.tv/ott/live/37/master.m3u8 — manifest and playable child/segment reachable — 2877 ms
+- **DD Bharati** — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/67cec794d8b14f9ba21f73924ac65797/index.m3u8 — manifest and playable child/segment reachable — 1460 ms
+- **DD Bharati** — Backup — https://cdn.pishow.tv/ott/live/10/master.m3u8 — manifest and playable child/segment reachable — 2830 ms
+- **DD Bharati** — Not Playing — https://www.youtube.com/@ddbharati/live — HTTP resource reachable — 180 ms
+- **DD Chandana** — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/0c980455d2fb4b69bcc6235745ee6039/index.m3u8 — manifest and playable child/segment reachable — 2382 ms
+- **DD Chandana** — Backup — https://cdn.pishow.tv/ott/live/28/master.m3u8 — manifest and playable child/segment reachable — 2826 ms
+- **DD Girnar** — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/558fdb9aebb54bb5bbbf0ced03686148/index.m3u8 — manifest and playable child/segment reachable — 1071 ms
+- **DD Goa** — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/e5b9db1cc184406bb97159da2f120f91/index.m3u8 — manifest and playable child/segment reachable — 1465 ms
+- **DD Haryana** — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/950fc69666474351bde0a32b9600c804/index.m3u8 — manifest and playable child/segment reachable — 1033 ms
+- **DD Himachal Pradesh** — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/afd2e335b0ba40eb9bdf1096118c6ede/index.m3u8 — manifest and playable child/segment reachable — 1552 ms
+- **DD Jharkhand** — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/e8c3741f8c154d3185831f4e31777fb2/index.m3u8 — manifest and playable child/segment reachable — 1068 ms
+- **DD Jharkhand** — Backup — https://cdn.pishow.tv/ott/live/1617/master.m3u8 — manifest and playable child/segment reachable — 2835 ms
+- **DD Kashir** — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/8a59a828e80c49d0958925950cec0204/index.m3u8 — manifest and playable child/segment reachable — 1091 ms
+- **DD Kashir** — Backup — https://cdn.pishow.tv/ott/live/16/master.m3u8 — manifest and playable child/segment reachable — 2819 ms
+- **DD Madhya Pradesh** — Indian Entertainment — https://mumbai-edge.smartplaytv.in/ddmadhyapradesh/index.m3u8 — manifest and playable child/segment reachable — 3792 ms
+- **DD Madhya Pradesh** — Backup — https://cdn.pishow.tv/ott/live/31/master.m3u8 — manifest and playable child/segment reachable — 2864 ms
+- **DD Malayalam** — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/c313674ffced4c9a90f1bba436df2b9b/index.m3u8 — manifest and playable child/segment reachable — 1140 ms
+- **DD Manipur** — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/8b75afc6576f450e8f554b6c877681d2/index.m3u8 — manifest and playable child/segment reachable — 1670 ms
+- **DD Meghalaya** — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/4f81bc8d13dd49b484da35988abb8729/index.m3u8 — manifest and playable child/segment reachable — 1032 ms
+- **DD Nagaland** — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/29c92e0bef954a6d9b0908d1be29c1f0/index.m3u8 — manifest and playable child/segment reachable — 1951 ms
+- **DD National** — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/40492a64c1db4a1385ba1a397d357d3a/index.m3u8 — manifest and playable child/segment reachable — 718 ms
+- **DD National** — Not Playing — https://www.youtube.com/doordarshan/live — HTTP resource reachable — 188 ms
+- **DD National HD** — Backup — https://mumbai-edge.smartplaytv.in/DDNational/index.m3u8 — manifest and playable child/segment reachable — 3785 ms
+- **DD Odia** — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/ef4ea632b77a480ebd77106968aa99a9/index.m3u8 — manifest and playable child/segment reachable — 1181 ms
+- **DD Odia** — Backup — https://mumbai-edge.smartplaytv.in/ddodiya/index.m3u8 — manifest and playable child/segment reachable — 3664 ms
+- **DD Punjabi** — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/da821c24a59d4e57960497aeaca8fb33/index.m3u8 — manifest and playable child/segment reachable — 1024 ms
+- **DD Sahyadri** — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/66dcc3ebe182447ba42837e746cf0c7c/index.m3u8 — manifest and playable child/segment reachable — 1617 ms
+- **DD Saptagiri** — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/26e915d6d12b4a06822c5e33c088ed56/index.m3u8 — manifest and playable child/segment reachable — 1068 ms
+- **DD Saptagiri** — Backup — https://cdn.pishow.tv/ott/live/22/master.m3u8 — manifest and playable child/segment reachable — 2844 ms
+- **DD Sports** — Sports — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8 — manifest and playable child/segment reachable — 1001 ms
+- **DD Sports** — Backup — https://mumbai-edge.smartplaytv.in/DDSportsHD/index.m3u8 — manifest and playable child/segment reachable — 3677 ms
+- **DD Tamil** — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/abf46b14847e45499f4a47f3a9afe93d/index.m3u8 — manifest and playable child/segment reachable — 1616 ms
+- **DD Tripura** — Indian Bangla — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/52b998e9510d41c29ad2ceca8ea3d849/index.m3u8 — manifest and playable child/segment reachable — 977 ms
+- **DD Urdu** — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/9b91e9007e754db39a8b32c6bfc5b24a/index.m3u8 — manifest and playable child/segment reachable — 1637 ms
+- **DD Urdu** — Backup — https://cdn.pishow.tv/ott/live/8/master.m3u8 — manifest and playable child/segment reachable — 2815 ms
+- **DD Urdu** — Not Playing — https://www.youtube.com/@DDUrdu/live — HTTP resource reachable — 180 ms
+- **Deen TV** — Religious — https://cd198.anystream.uk:9092/iqapp/d33ntv/playlist.m3u8 — manifest and playable child/segment reachable — 2259 ms
+- **Deepto TV** — Bangladesh — https://byphdgllyk.gpcdn.net/hls/deeptotv/0_1/index.m3u8 — manifest and playable child/segment reachable — 3170 ms
+- **Deepto TV** — Backup — https://byphdgllyk.gpcdn.net/hls/DeeptoTV/index.m3u8 — manifest and playable child/segment reachable — 3798 ms
+- **Deewana HD** — Indian Music — https://live20.bozztv.com/giatvplayout7/giatv-209592/index.m3u8 — manifest and playable child/segment reachable — 514 ms
+- **Desh TV** — Bangladesh — https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8 — manifest and playable child/segment reachable — 3292 ms
+- **Desh TV** — Backup — https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8?e=1784102570&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=78b23c868a34420397be9c985d04db9b — manifest and playable child/segment reachable — 2778 ms
+- **Desh TV** — Backup — https://stream.ottplus.live/live/desh_tv_abr/index.m3u8 — manifest and playable child/segment reachable — 2940 ms
+- **Desi Channel** — Indian Music — https://livestream.unlimitedcdn.com/agm-dc/desi-channel/index.m3u8 — manifest and playable child/segment reachable — 2193 ms
+- **Dhoom Music Bangla** — Indian Bangla — https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8 — manifest and playable child/segment reachable — 3536 ms
+- **Dhoom Music Bangla** — Backup — https://cdn.pishow.tv/ott/live/1456/master.m3u8 — manifest and playable child/segment reachable — 2863 ms
+- **Dios Te Ve Kids** — Kids — https://s.emisoras.tv:8081/diostevekids/index.m3u8 — manifest and playable child/segment reachable — 657 ms
+- **Discovery** — Documentary & Wildlife — http://202.70.146.135:8000/play/a05z/index.m3u8 — manifest and playable child/segment reachable — 1632 ms
+- **Discovery Kids** — Kids — https://stream.ottplus.live/live/discovery_kids_abr/index.m3u8 — manifest and playable child/segment reachable — 3001 ms
+- **Discovery Pakistan** — Documentary & Wildlife — https://s3.ideationtec.live/Discover_Pakistan/Discover_Pakistan.m3u8 — manifest and playable child/segment reachable — 2362 ms
+- **Disney Channel Hungary** — Kids — http://88.212.15.19/live/disney_channel_hun/index.m3u8 — manifest and playable child/segment reachable — 1121 ms
+- **Disney Channel India** — Kids — http://181.119.215.61:8000/play/a0g1/index.m3u8 — manifest and playable child/segment reachable — 843 ms
+- **Disney Jr.** — Kids — http://190.93.224.42/DISNEY-JR/index.m3u8 — manifest and playable child/segment reachable — 1318 ms
+- **DocuBay TV** — Documentary & Wildlife — https://cc-mgr91yrk4pehy.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-mgr91yrk4pehy/playlist.m3u8 — manifest and playable child/segment reachable — 3574 ms
+- **Documentary+ 2** — Documentary & Wildlife — https://a38d899367d24b1197db60dedfa80262.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-887-DOCUMENTARYINTERNATIONAL-FREELIVESPORTS/mt/freelivesports/887/hls/master/playlist.m3u8 — manifest and playable child/segment reachable — 704 ms
+- **Documentary+ International** — Documentary & Wildlife — https://1d153317c8db4250b3789601274e2402.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-887-DOCUMENTARYINTERNATIONAL-DOCUMENTARYPLUS/mt/documentaryplus/887/hls/master/playlist.m3u8 — manifest and playable child/segment reachable — 680 ms
+- **Documentary+ USA** — Documentary & Wildlife — https://ef79b15c8c7c46c7a9de9d33001dbd07.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-859-DOCUMENTARYPLUS-DOCUMENTARYPLUS/mt/documentaryplus/859/hls/master/playlist.m3u8 — manifest and playable child/segment reachable — 582 ms
+- **Doraemon TV** — Kids — https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8 — manifest and playable child/segment reachable — 331 ms
+- **Doyel TV** — Bangladesh — https://3d46w.doyeltv.com/memfs/aa3aa6f7-ec12-41a2-8183-a891e157bbf8.m3u8 — manifest and playable child/segment reachable — 888 ms
+- **Duck TV** — Kids — https://d6lk10bkdgfae.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-n0stmvwxmsf5c/playlist.m3u8 — manifest and playable child/segment reachable — 1390 ms
+- **ducktv** — Backup — https://mmm-dk.otteravision.com/DexaYJdJXkLqFxTK_DuckTVHDSAMS/DuckTVHDSAMS.stream/playlist.m3u8 — manifest and playable child/segment reachable — 732 ms
+- **ducktv** — Backup — https://d6lk10bkdgfae.cloudfront.net/playlist.m3u8 — manifest and playable child/segment reachable — 596 ms
+- **ducktv HD** — Backup — https://dash3.antik.sk/live/duck_tv/index.m3u8 — manifest and playable child/segment reachable — 1432 ms
+- **Duronto TV** — Backup — https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8 — manifest and playable child/segment reachable — 2764 ms
+- **E24** — Indian Music — https://amg13643-amg13643c2-amgplt0016.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg13643-amg13643c2-amgplt0016/playlist.m3u8 — manifest and playable child/segment reachable — 848 ms
+- **E24** — Backup — https://mumt04.tangotv.in/m18aqlK4E24/index.m3u8 — manifest and playable child/segment reachable — 3317 ms
+- **EBS Cinema** — International — https://rpn.bozztv.com/ebstv/ebscinema/index.m3u8 — manifest and playable child/segment reachable — 1051 ms
+- **EBS Musika** — International — https://rpn.bozztv.com/ebstv/ebsmusika/index.m3u8 — manifest and playable child/segment reachable — 1387 ms
+- **Ekattor TV** — Bangladesh — https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8 — manifest and playable child/segment reachable — 3208 ms
+- **Ekattor TV** — Backup — https://stream.ottplus.live/live/ekattor_tv_abr/index.m3u8 — manifest and playable child/segment reachable — 2964 ms
+- **Ekattor TV** — Backup — https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8?e=1784102532&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=3b9afdda2bd5332e8f49ed7dfa321a06 — manifest and playable child/segment reachable — 2798 ms
+- **Ekhon TV** — Bangladesh — https://stream.ottplus.live/live/ekhon_tv_abr/index.m3u8 — manifest and playable child/segment reachable — 2964 ms
+- **Ekhon TV** — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/globaltv.stream/index.m3u8 — manifest and playable child/segment reachable — 1257 ms
+- **Ekhon TV** — Backup — https://drk6xq0vhn.gpcdn.net/live/ekhon_tv_abr/index.m3u8 — manifest and playable child/segment reachable — 2429 ms
+- **Ekhon TV** — Backup — https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8?e=1784102563&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=b5e80a73380863be907284374bdb2bda — manifest and playable child/segment reachable — 2766 ms
+- **Ekushey TV** — Bangladesh — https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8 — manifest and playable child/segment reachable — 2878 ms
+- **Ekushey TV** — Backup — https://tvsen5.aynaott.com/SyQuXz8sC3TB/index.m3u8 — manifest and playable child/segment reachable — 2799 ms
+- **Ekushey TV** — Backup — https://ekusheyserver.com/etvlivesn.m3u8 — manifest and playable child/segment reachable — 3763 ms
+- **Ekushey TV** — Backup — https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8 — manifest and playable child/segment reachable — 4668 ms
+- **Enter TV** — Backup — https://live1.entertv.com.bd/entertv/index.fmp4.m3u8 — manifest and playable child/segment reachable — 3068 ms
+- **Enter-Film** — Backup — http://stream.mcquack.net/322/index.m3u8 — manifest and playable child/segment reachable — 1761 ms
+- **Enterr 10 Bangla** — Backup — https://live-bangla.akamaized.net/liveabr/playlist.m3u8 — manifest and playable child/segment reachable — 2059 ms
+- **Enterr 10 Bangla** — Backup — https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8 — manifest and playable child/segment reachable — 3293 ms
+- **Epic Bharat** — Indian Entertainment — https://mumt06.tangotv.in/qYyB8fXVEPICTV/index.m3u8 — manifest and playable child/segment reachable — 3366 ms
+- **Epic Bharat** — Backup — https://epiconvh.akamaized.net/live/nazara/master.m3u8 — manifest and playable child/segment reachable — 4559 ms
+- **Epic Bhojpuri** — Indian Movies — https://mumt01.tangotv.in/O5aw8Zn3EPICBHOJPURI/index.m3u8 — manifest and playable child/segment reachable — 3440 ms
+- **Epic Bhojpuri Digital** — Indian Movies — https://cc-8hy4a26pz2uos.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-8hy4a26pz2uos/playlist.m3u8 — manifest and playable child/segment reachable — 3532 ms
+- **Epic Crimes** — Documentary & Wildlife — https://cc-wsuyg2uxeak04.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-wsuyg2uxeak04/master.m3u8 — manifest and playable child/segment reachable — 3398 ms
+- **Epic Kids Digital** — Kids — https://cc-t8lqe1o99pszu.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-t8lqe1o99pszu/playlist.m3u8 — manifest and playable child/segment reachable — 2869 ms
+- **Epic Music** — Indian Music — https://mumt04.tangotv.in/m18aqlK4EPICMUSIC/index.m3u8 — manifest and playable child/segment reachable — 3377 ms
+- **Epic Music** — Backup — https://cc-3cyxq80qusspd.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/playlist.m3u8 — manifest and playable child/segment reachable — 3994 ms
+- **Epic TV Digital** — Indian Entertainment — https://cc-czbq30x55knit.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-czbq30x55knit/DIYC/PMSL/IN10/Epic_TV_IN_B/Epic_TV_IN_B.m3u8 — manifest and playable child/segment reachable — 4004 ms
+- **ESPN** — Sports — http://181.78.197.59:8000/play/a07z/index.m3u8 — manifest and playable child/segment reachable — 1141 ms
+- **ETV Comedy** — Indian Entertainment — https://cc-wie8j8y69d2uy.akamaized.net/WWBI/Amagi/ETV_Comedy_IN/playlist.m3u8 — manifest and playable child/segment reachable — 4027 ms
+- **ETV Josh** — Indian Entertainment — https://cc-uyh1ow5zouoio.akamaized.net/WWBI/Amagi/ETV_Josh_IN/playlist.m3u8 — manifest and playable child/segment reachable — 4059 ms
+- **ETV Music** — Indian Music — https://cc-szivnms4rlah6.akamaized.net/WWBI/Amagi/ETV_Music_IN/playlist.m3u8 — manifest and playable child/segment reachable — 3975 ms
+- **EU Music** — International — http://stream.mcquack.net/261/index.m3u8 — manifest and playable child/segment reachable — 1615 ms
+- **EURO SPORT HD** — Sports — http://202.70.146.135:8000/play/a05s/index.m3u8 — manifest and playable child/segment reachable — 2301 ms
+- **Fakt Marathi** — Indian Entertainment — https://mumt07.tangotv.in/zHjX9OFlFAKTMARATHI/index.m3u8 — manifest and playable child/segment reachable — 3437 ms
+- **Fakt Marathi** — Backup — https://cdn.pishow.tv/ott/live/10002/master.m3u8 — manifest and playable child/segment reachable — 2851 ms
+- **FilmUA Live** — International — https://dash2.antik.sk/live/test_film_life_atktv/playlist.m3u8 — manifest and playable child/segment reachable — 1586 ms
+- **Flowers US** — Indian Entertainment — https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/flowers_nim_https/050522/flowers/playlist.m3u8 — manifest and playable child/segment reachable — 1236 ms
+- **Food Food** — Documentary & Wildlife — https://mumt03.tangotv.in/Dsly5z3HFOODFOOD/index.m3u8 — manifest and playable child/segment reachable — 3333 ms
+- **FOX Sports** — Sports — http://45.5.118.152:8000/play/a08x/index.m3u8 — manifest and playable child/segment reachable — 713 ms
+- **Fox Sports 1** — Sports — http://85.237.89.160:9590/usa-s/FOX-SPORTS-1/index.m3u8 — manifest and playable child/segment reachable — 1204 ms
+- **G Series Drama** — Bangladesh — https://vods2.aynaott.com/gseriesDrama/index.m3u8 — manifest and playable child/segment reachable — 2948 ms
+- **G TV** — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/gazibdz.stream/live-orgin/gazibdz.stream/playlist.m3u8 — manifest and playable child/segment reachable — 1308 ms
+- **G TV** — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/gazibdz.stream/tracks-v1a1/mono.m3u8 — manifest and playable child/segment reachable — 984 ms
+- **Gangaur** — Indian Entertainment — https://pbgangaur.wiseplayout.com/Gangaur/master.m3u8 — manifest and playable child/segment reachable — 1573 ms
+- **Geo Kahani** — Indian Entertainment — https://s3.ideationtec.live/GEO_Entertainment/GEO_Entertainment.m3u8 — manifest and playable child/segment reachable — 2572 ms
+- **Get.factual** — Documentary & Wildlife — https://d1nhni5l2n8hjt.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rzh07me7cf8x7/gf.m3u8 — manifest and playable child/segment reachable — 1326 ms
+- **Get.factual** — Backup — https://d1nhni5l2n8hjt.cloudfront.net/gf.m3u8 — manifest and playable child/segment reachable — 626 ms
+- **Global TV** — Bangladesh — http://116.204.149.16/globaltv/tracks-v1a1/mono.m3u8 — manifest and playable child/segment reachable — 1837 ms
+- **Global TV** — Backup — http://116.204.149.16/globaltv/index.m3u8 — manifest and playable child/segment reachable — 2340 ms
+- **Global TV** — Backup — https://stream.ottplus.live/live/global_tv_abr/index.m3u8 — manifest and playable child/segment reachable — 2960 ms
+- **Global TV** — Backup — https://tvsen6.aynaott.com/y0q9eFAuquAtvTxRzUHq/index.m3u8 — manifest and playable child/segment reachable — 2780 ms
+- **Goal TV** — Sports — https://streams2.sofast.tv/sofastplayout/WiseM3U8_1/master.m3u8 — manifest and playable child/segment reachable — 721 ms
+- **Goldmines** — Indian Movies — https://streams.tangotv.in/GOLDMINES/ORIGIN/index.m3u8 — manifest and playable child/segment reachable — 3802 ms
+- **Goldmines** — Backup — https://cdn.pishow.tv/ott/live/1459/master.m3u8 — manifest and playable child/segment reachable — 2878 ms
+- **Goldmines** — Backup — https://mumt04.tangotv.in/m18aqlK4GOLDMINES/index.m3u8 — manifest and playable child/segment reachable — 3349 ms
+- **Goldmines Action** — Indian Movies — https://mumt03.tangotv.in/Dsly5z3HGOLDMINESACTION/index.m3u8 — manifest and playable child/segment reachable — 3403 ms
+- **Goldmines Bollywood** — Indian Movies — https://streams.tangotv.in/GOLDMINESBOLLYWOOD/ORIGIN/index.m3u8 — manifest and playable child/segment reachable — 3726 ms
+- **Goldmines Bollywood** — Backup — https://mumt03.tangotv.in/Dsly5z3HGOLDMINESBOLLYWOOD/index.m3u8 — manifest and playable child/segment reachable — 3315 ms
+- **Goldmines Movies** — Backup — https://cdn.pishow.tv/ott/live/1461/master.m3u8 — manifest and playable child/segment reachable — 2870 ms
+- **Gravitas Movies** — Backup — https://d6dg3ebeih71x.cloudfront.net/Gravitas_Movies.m3u8 — manifest and playable child/segment reachable — 555 ms
+- **GREAT! movies** — Backup — https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/playlist/amg01753-narrativeentert-greatmovies-samsunguk/playlist.m3u8 — manifest and playable child/segment reachable — 1472 ms
+- **GREAT! movies (1080p)** — Backup — https://amg01753-narrativeuk-amg01753c3-lg-gb-1833.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-greatmovies-lggb/playlist.m3u8 — manifest and playable child/segment reachable — 850 ms
+- **GREAT! romance** — Backup — https://amg01753-narrativeentert-greatchristmas-samsunguk-8atls.amagi.tv/playlist/amg01753-narrativeentert-greatchristmas-samsunguk/playlist.m3u8 — manifest and playable child/segment reachable — 1403 ms
+- **GREAT! romance (1080p)** — Backup — https://amg01753-narrativeuk-amg01753c2-lg-gb-1832.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-greatchristmas-lggb/playlist.m3u8 — manifest and playable child/segment reachable — 905 ms
+- **Green TV** — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8 — manifest and playable child/segment reachable — 1140 ms
+- **Green TV** — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/greentv.stream/index.m3u8 — manifest and playable child/segment reachable — 1249 ms
+- **Hindi Hits** — Indian Music — http://146.59.253.52:8080/hindihitshd/index.m3u8 — manifest and playable child/segment reachable — 1071 ms
+- **Hindi Movie Classic 24** — Indian Movies — https://vods2.aynaott.com/hindimovies/index.m3u8 — manifest and playable child/segment reachable — 3076 ms
+- **Hindi Movies** — Indian Movies — https://live20.bozztv.com/giatvplayout7/giatv-209612/tracks-v1a1/mono.ts.m3u8 — manifest and playable child/segment reachable — 445 ms
+- **History** — Documentary & Wildlife — http://202.70.146.135:8000/play/a065/index.m3u8 — manifest and playable child/segment reachable — 2333 ms
+- **History & Warfare Now** — Documentary & Wildlife — https://d1nzda2a2b3swt.cloudfront.net/History_Warfare_Now.m3u8 — manifest and playable child/segment reachable — 581 ms
+- **History (United States)** — Backup — http://212.5.144.156:8080/history/index.m3u8 — manifest and playable child/segment reachable — 1410 ms
+- **History Hit** — Documentary & Wildlife — https://ldsaaaaaa-timeline-samsung-uk-azlgu.amagi.tv/ts-eu-w1-n2/playlist/ldsAAAAAA-timeline-samsung-uk/playlist.m3u8 — manifest and playable child/segment reachable — 1150 ms
+- **History Hit** — Backup — https://lds-timeline-rakuten.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 505 ms
+- **History TV18** — Documentary & Wildlife — https://n18syndication.akamaized.net/bpk-tv/History_HD_NW18_MOB/output01/master.m3u8 — manifest and playable child/segment reachable — 3636 ms
+- **HMTV** — Indian Entertainment — https://cdn.pishow.tv/ott/live/280/master.m3u8 — manifest and playable child/segment reachable — 2849 ms
+- **House of Crime** — Documentary & Wildlife — https://cc-y2z89muounal4.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-y2z89muounal4/IQJW/WBD/HouseOfCrime_IN/HouseOfCrime_IN.m3u8 — manifest and playable child/segment reachable — 4174 ms
+- **HUM TV** — Backup — https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8 — manifest and playable child/segment reachable — 2310 ms
+- **HUM TV** — Backup — https://stream.ottplus.live/live/hum_tv_abr/index.m3u8 — manifest and playable child/segment reachable — 3504 ms
+- **INFAST** — Documentary & Wildlife — https://amg00861-terninternation-lifestyle-samsungau-kdlyy.amagi.tv/playlist/amg00861-terninternation-lifestyle-samsungau/playlist.m3u8 — manifest and playable child/segment reachable — 1262 ms
+- **Inside Crime** — Documentary & Wildlife — https://aenetworks-insidecrime-rakuten.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 1142 ms
+- **Insync** — Indian Music — https://mumt04.tangotv.in/m18aqlK4INSYNC/index.m3u8 — manifest and playable child/segment reachable — 3389 ms
+- **Insync** — Backup — https://d1msejlow1t3l4.cloudfront.net/fta/insync/playlist.m3u8 — manifest and playable child/segment reachable — 1010 ms
+- **InTravel** — Documentary & Wildlife — https://amg00861-amg00861c10-rakuten-uk-3152.playouts.now.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 414 ms
+- **Investigation Discovery** — Documentary & Wildlife — https://stream.ottplus.live/live/id_hd_abr/index.m3u8 — manifest and playable child/segment reachable — 4207 ms
+- **INWILD** — Documentary & Wildlife — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/ts-eu-w1-n2/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8 — manifest and playable child/segment reachable — 1234 ms
+- **INWILD** — Backup — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8 — manifest and playable child/segment reachable — 1137 ms
+- **InWonder** — Documentary & Wildlife — https://amg00861-terninternation-inwonder-samsungau-1k63k.amagi.tv/playlist/amg00861-terninternation-inwonder-samsungau/playlist.m3u8 — manifest and playable child/segment reachable — 1268 ms
+- **Iqra Bangla** — Religious — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/iqrabanglatvoffice.stream/live-orgin/iqrabanglatvoffice.stream/chunks.m3u8 — manifest and playable child/segment reachable — 957 ms
+- **Iqraa TV** — Religious — https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv1/playlist.m3u8 — manifest and playable child/segment reachable — 2109 ms
+- **Isai Aruvi** — Indian Music — https://segment.yuppcdn.net/140622/isaiaruvi/playlist.m3u8 — manifest and playable child/segment reachable — 909 ms
+- **Islamic TV** — Religious — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/islamictvbd.stream/index.m3u8 — manifest and playable child/segment reachable — 1438 ms
+- **Jago News 24** — Bangladesh — https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8 — manifest and playable child/segment reachable — 1323 ms
+- **Jalsha Movies HD** — Backup — https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8 — manifest and playable child/segment reachable — 3021 ms
+- **Jalwa** — Indian Music — https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/playlist.m3u8 — manifest and playable child/segment reachable — 2294 ms
+- **Jamuna TV** — Bangladesh — https://stream.ottplus.live/live/jamuna_tv_abr/index.m3u8 — manifest and playable child/segment reachable — 3688 ms
+- **Jamuna TV** — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/jamuna-tv/index.m3u8 — manifest and playable child/segment reachable — 2194 ms
+- **Jamuna TV** — Backup — https://tvsen6.aynaott.com/KGdZEdA7qQ43dmPkgk1j/index.m3u8 — manifest and playable child/segment reachable — 2791 ms
+- **Jhankar TV** — Indian Bangla — https://dbcanada.sonarbanglatv.com/jhankartv/jtv/index.m3u8 — manifest and playable child/segment reachable — 546 ms
+- **Jonmobhumi TV** — Bangladesh — https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/playlist.m3u8 — manifest and playable child/segment reachable — 2662 ms
+- **Joo Music** — Indian Music — https://livecdn.live247stream.com/joomusic/tv/playlist.m3u8 — manifest and playable child/segment reachable — 1667 ms
+- **Jtv Classic** — Indian Bangla — http://103.67.97.46/0.ts — HTTP resource reachable — 2314 ms
+- **Jungle Book** — Kids — https://cc-4bhi5osabejc9.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-4bhi5osabejc9/junglebook.m3u8 — manifest and playable child/segment reachable — 3389 ms
+- **Kairali Arabia** — Indian Movies — https://mumt03.tangotv.in/Dsly5z3HKAIRALIARABIA/index.m3u8 — manifest and playable child/segment reachable — 3376 ms
+- **Kairali TV** — Indian Movies — https://mumt01.tangotv.in/O5aw8Zn3KAIRALI/index.m3u8 — manifest and playable child/segment reachable — 3463 ms
+- **Kairali TV** — Backup — https://streams.tangotv.in/KAIRALI/ORIGIN/index.m3u8 — manifest and playable child/segment reachable — 3649 ms
+- **Kairali We** — Indian Movies — https://streams.tangotv.in/WETV/ORIGIN/index.m3u8 — manifest and playable child/segment reachable — 3716 ms
+- **Kairali We** — Backup — https://cdn.pishow.tv/ott/live/1530/master.m3u8 — manifest and playable child/segment reachable — 2836 ms
+- **Kalaignar Murasu** — Indian Entertainment — https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/murasu_nim_https/050522/murasu/playlist.m3u8 — manifest and playable child/segment reachable — 1022 ms
+- **Kalaignar Murasu** — Backup — https://segment.yuppcdn.net/050522/murasu/playlist.m3u8 — manifest and playable child/segment reachable — 535 ms
+- **Kalaignar TV** — Indian Entertainment — https://segment.yuppcdn.net/240122/kalaignartv/playlist.m3u8 — manifest and playable child/segment reachable — 625 ms
+- **Kappa TV** — Indian Music — https://mumt03.tangotv.in/Dsly5z3HKAPPATV/index.m3u8 — manifest and playable child/segment reachable — 3305 ms
+- **Kartoon Channel!** — Kids — https://d2z0ysa6dgxhlc.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ajxyy4yaic6nq/kchan.m3u8 — manifest and playable child/segment reachable — 724 ms
+- **Kartoon Channel!** — Backup — https://lightning-fnf-samsungaus.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 1618 ms
+- **Khushboo Bangla** — Indian Bangla — https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/index.m3u8 — manifest and playable child/segment reachable — 3462 ms
+- **Khushboo Bangla** — Backup — https://cdn.pishow.tv/ott/live/1473/master.m3u8 — manifest and playable child/segment reachable — 2826 ms
+- **KidDo MATIX** — Kids — https://cc-le0kohm4qt3mk.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-le0kohm4qt3mk/OTM/OTM_KiddoMatix-SCTE_SAMSUNG/playlist.m3u8 — manifest and playable child/segment reachable — 3482 ms
+- **Knowledge Network** — Documentary & Wildlife — https://d1wal6k3d7ssin.cloudfront.net/out/v1/ea91db0906c847a4931b46a9ec36e77b/index.m3u8 — manifest and playable child/segment reachable — 510 ms
+- **Lego Channel** — Backup — https://dltiqboxjw21d.cloudfront.net/index.m3u8 — manifest and playable child/segment reachable — 806 ms
+- **Life+Style** — Documentary & Wildlife — https://d1si3n1st4nkgb.cloudfront.net/10502/89001001/hls/master.m3u8?ads.xumo_channelId=89001001&ads.xumo_streamId=89001001&ads.caid=Indigenius&ads.csid=samsungtvplus_in_lifeplusstyle_ssai&ads.sfid=&ads.afid=Indigenius&ads.xumo_platform=samsung&ads._fw_is_lat=%7BTARGETOPT%7D&ads._fw_us_privacy=1---&ads._fw_coppa=0&ads._fw_did=%7BPSID%7D&ads._fw_content_category=IAB1-7&ads._fw_content_genre=television&ads._fw_content_language=en&ads._fw_content_rating=tv-pg&ads._fw_deviceMake=samsung&ads._fw_gdpr=1&ads._fw_gdpr_consent=%7BTC_STRING%7D&ads._fw_h_x_country=IN&ads.appVersion=&ads.appName=%7BAPP_NAME%7D&ads.xumo_contentId=1101&ads.xumo_contentName=Indigenius&ads.xumo_providerId=1101&ads.xumo_providerName=Indigenius&ads.xumo_adsystem=mediatailor&ads.xumo_channelName=lifeplusstyle_in&ads.tpcl=MIDROLL&ads._fw_app_store_url=%7BAPP_DOMAIN%7D — manifest and playable child/segment reachable — 499 ms
+- **LoL TV** — International — https://streams2.sofast.tv/ptnr-yupptv/title-LOL-TV-ENG_yupptv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/fc63d5fd-b50e-4d3e-abdf-697d9b6cbf70/manifest.m3u8 — manifest and playable child/segment reachable — 1311 ms
+- **Love Nature** — Documentary & Wildlife — http://27.124.71.27/Love_Nature/index.m3u8 — manifest and playable child/segment reachable — 2130 ms
+- **Love Nature (1080p)** — Backup — https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8 — manifest and playable child/segment reachable — 772 ms
+- **Love Nature 4K** — Backup — https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8 — manifest and playable child/segment reachable — 368 ms
+- **Maasranga TV** — Bangladesh — https://mtv.sunplex.live/MAASRANGA/index.m3u8 — manifest and playable child/segment reachable — 3898 ms
+- **Maasranga TV** — Backup — http://tvsen5.aynascope.net/maasrangatv/index.m3u8 — manifest and playable child/segment reachable — 2119 ms
+- **Maasranga TV** — Backup — https://tvsen5.aynaott.com/maasrangatv/index.m3u8 — manifest and playable child/segment reachable — 2828 ms
+- **Madani TV** — Religious — https://tvsen3.aynaott.com/z24qLsqV/index.m3u8 — manifest and playable child/segment reachable — 3883 ms
+- **Made in Hollywood** — International — https://connection3-ent-nz.samsung.wurl.tv/playlist.m3u8 — manifest and playable child/segment reachable — 427 ms
+- **Madhimugam TV** — Indian Movies — https://cdn.pishow.tv/ott/live/1476/master.m3u8 — manifest and playable child/segment reachable — 2888 ms
+- **Madhimugam TV (576p)** — Backup — https://mumt01.tangotv.in/O5aw8Zn3MATHIMUGAMTV/index.m3u8 — manifest and playable child/segment reachable — 3367 ms
+- **Mahaa Max** — Indian Movies — https://mumt03.tangotv.in/Dsly5z3HMAHAAMAX/index.m3u8 — manifest and playable child/segment reachable — 3389 ms
+- **Makkah Live** — Religious — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/makkah.stream/index.m3u8 — manifest and playable child/segment reachable — 1352 ms
+- **Makkah TV** — Religious — https://media2.streambrothers.com:1936/8122/8122/playlist.m3u8 — manifest and playable child/segment reachable — 3286 ms
+- **Manoranjan Movies** — Backup — https://mumt04.tangotv.in/m18aqlK4MANORANJANMOVIES/index.m3u8 — manifest and playable child/segment reachable — 3324 ms
+- **Manoranjan Prime** — Indian Entertainment — https://mumt06.tangotv.in/qYyB8fXVMANORANJANPRIME/index.m3u8 — manifest and playable child/segment reachable — 3373 ms
+- **Manoranjan Prime** — Backup — https://cdn.pishow.tv/ott/live/1474/master.m3u8 — manifest and playable child/segment reachable — 2818 ms
+- **Matribhumi TV** — Backup — http://live.playmax.live/matribhumi/index.m3u8 — manifest and playable child/segment reachable — 2739 ms
+- **Mazhavil Manorama** — Indian Entertainment — https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mazhavilmanorama_nim_https/050522/mazhavilmanorama/playlist.m3u8 — manifest and playable child/segment reachable — 1484 ms
+- **Mazhavil Manorama** — Backup — https://mumt03.tangotv.in/Dsly5z3HMAZHAVILMANORAMAINT/index.m3u8 — manifest and playable child/segment reachable — 3275 ms
+- **Mazhavil Manorama** — Backup — https://mumt07.tangotv.in/zHjX9OFlMAZHAVILMANORAMAHD/index.m3u8 — manifest and playable child/segment reachable — 3324 ms
+- **Mazhavil Manorama** — Backup — https://mmtv-vglivessai.akamaized.net/v1/master/673630b269b766886555eebfddd4f27f3de3ab50/f8a0827f-030f-4a0d-b7e5-338996c09a5b/index.m3u8 — manifest and playable child/segment reachable — 7270 ms
+- **MBC Bollywood** — Indian Movies — https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-bollywood/546eb40d7dcf9a209255dd2496903764/index.m3u8 — manifest and playable child/segment reachable — 1038 ms
+- **MBC Bollywood** — Backup — http://93.184.10.248/MBCBollywood/index.m3u8 — manifest and playable child/segment reachable — 1492 ms
+- **MBC Drama USA** — International — https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-drama-usa/ea2f5db904aff224b7066e59c7f585a2/index.m3u8 — manifest and playable child/segment reachable — 627 ms
+- **ME TV** — Bangladesh — https://iptvbd.live/metv1080/1080.m3u8 — manifest and playable child/segment reachable — 3230 ms
+- **Medina Live** — Religious — https://cdn-globecast.akamaized.net/live/eds/saudi_sunnah/hls_roku/index.m3u8 — manifest and playable child/segment reachable — 1829 ms
+- **Megogo Music** — International — https://ext.cdn.nashnet.tv/228.0.2.214/index.m3u8 — manifest and playable child/segment reachable — 2644 ms
+- **Mei Ah Movie Channel** — International — http://103.172.187.30:12000/stream/mytv/null-2/master.m3u8 — manifest and playable child/segment reachable — 1868 ms
+- **Mei Ah Movie Channel** — Backup — http://103.172.187.30:12000/stream/mytv/null-9/master.m3u8 — manifest and playable child/segment reachable — 1858 ms
+- **Mei Alai TV** — Indian Entertainment — https://meialai.iptelevishion.com/meialai/2/index.m3u8 — manifest and playable child/segment reachable — 3621 ms
+- **Metro TV** — Backup — https://s.emisoras.tv:8081/metrotv/index.m3u8 — manifest and playable child/segment reachable — 718 ms
+- **Metro TV (India)** — Backup — https://mercury.streambridge.link:8042/telugu/metrotv/index.m3u8 — manifest and playable child/segment reachable — 3767 ms
+- **Metro TV (Indonesia)** — Backup — https://edge.medcom.id/live-edge/smil:metro.smil/playlist.m3u8 — manifest and playable child/segment reachable — 4722 ms
+- **MH One Dil Se** — Indian Entertainment — https://streams.tangotv.in/MHONEDILSE/ORIGIN/index.m3u8 — manifest and playable child/segment reachable — 3576 ms
+- **MH One Dil Se** — Backup — https://mumt01.tangotv.in/O5aw8Zn3MHONEDILSE/index.m3u8 — manifest and playable child/segment reachable — 3298 ms
+- **MH One Movies** — Indian Movies — https://mumt03.tangotv.in/Dsly5z3HMHONEMOVIE/index.m3u8 — manifest and playable child/segment reachable — 3368 ms
+- **MH One Prime** — Indian Entertainment — https://streams.tangotv.in/MHONE/ORIGIN/index.m3u8 — manifest and playable child/segment reachable — 3640 ms
+- **MH One Prime** — Backup — https://mumt04.tangotv.in/m18aqlK4MHONE/index.m3u8 — manifest and playable child/segment reachable — 3332 ms
+- **Minimax** — Kids — http://88.212.15.19/live/test_minimax/playlist.m3u8 — manifest and playable child/segment reachable — 1076 ms
+- **MK Six** — Indian Entertainment — https://mumt06.tangotv.in/qYyB8fXVMKSIX/index.m3u8 — manifest and playable child/segment reachable — 3409 ms
+- **MK Six** — Backup — https://cdn.pishow.tv/ott/live/1253/master.m3u8 — manifest and playable child/segment reachable — 2855 ms
+- **MNTV** — Backup — https://www.khuwemultimedia.com/hls/mntv/mntv.m3u8 — manifest and playable child/segment reachable — 1390 ms
+- **MNTV (Tamil)** — Indian Movies — https://mntv.livebox.co.in/mntvhls/live.m3u8 — manifest and playable child/segment reachable — 3572 ms
+- **MNX** — Backup — http://59.103.38.46:8000/play/a052/index.m3u8 — manifest and playable child/segment reachable — 2367 ms
+- **Mohona TV** — Bangladesh — https://tvsen6.aynaott.com/AkyX5dunzju4cpo26dr7/index.m3u8 — manifest and playable child/segment reachable — 2791 ms
+- **Mohona TV** — Backup — https://tvsen6.aynaott.com/AkyX5dunzju4cpo26dr7/tracks-v1a1/mono.ts.m3u8 — manifest and playable child/segment reachable — 2077 ms
+- **Mohona TV** — Backup — https://stream.ottplus.live/live/mohona_tv_abr/index.m3u8 — manifest and playable child/segment reachable — 2957 ms
+- **Mon Bangla** — Indian Bangla — http://115.187.41.216:8080/hls/montvbangla/index.m3u8 — manifest and playable child/segment reachable — 2834 ms
+- **Moonbug Kids** — Kids — https://tvsen6.aynaott.com/MoonbugKids/index.m3u8?e=1784102587&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=bb483e4de44847e04d2d1fbbf8098cd7 — manifest and playable child/segment reachable — 3001 ms
+- **Moonbug Kids** — Backup — https://moonbug-rokuus.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 636 ms
+- **Motu Patlu** — Kids — https://live20.bozztv.com/giatvplayout7/giatv-209622/tracks-v1a1/mono.ts.m3u8 — manifest and playable child/segment reachable — 370 ms
+- **Movie Bangla** — Bangladesh — http://alvetv.com/moviebanglatv/8080/index.m3u8 — manifest and playable child/segment reachable — 1747 ms
+- **Movie Bangla** — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/moviebanglalink2.stream/tracks-v1a1/mono.m3u8 — manifest and playable child/segment reachable — 963 ms
+- **Movie Bangla** — Backup — https://stream.ottplus.live/live/movie_bangla_abr/index.m3u8 — manifest and playable child/segment reachable — 4725 ms
+- **Movie Dome Family** — Kids — https://amg00771-kochfilmsgerman-moviedomefamily-tcl-tpicw.amagi.tv/playlist/amg00771-kochfilmsgerman-moviedomefamily-tcl/playlist.m3u8 — manifest and playable child/segment reachable — 660 ms
+- **MovieSphere** — Backup — https://aegis-cloudfront-1.tubi.video/8b127a5b-3054-4f39-93a2-1c4aab9ef5ff/playlist.m3u8 — manifest and playable child/segment reachable — 384 ms
+- **MovieSphere** — Backup — https://amg00353-lionsgatestudio-moviesphere-xumo-zh5u0.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 324 ms
+- **MovieSphere AU** — International — https://amg00353-lionsgatefilmsi-moviesphereaus-samsungau-7qzhf.amagi.tv/playlist/amg00353-lionsgatefilmsi-moviesphereaus-samsungau/playlist.m3u8 — manifest and playable child/segment reachable — 1173 ms
+- **MovieSphere UK** — International — https://moviesphereuk-samsunguk.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 492 ms
+- **Mr Bean Animated** — Kids — https://amg00627-amg00627c29-rakuten-it-3989.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanitcc-rakutenit/playlist.m3u8 — manifest and playable child/segment reachable — 832 ms
+- **Mr Bean Animated (1080p)** — Backup — https://amg00627-amg00627c23-samsung-au-4110.playouts.now.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 528 ms
+- **MTV2** — International — http://198.58.104.90:8989/mtv2/index.m3u8 — manifest and playable child/segment reachable — 135 ms
+- **Music Box Classic** — International — http://88.212.15.19/live/mb_classic/index.m3u8 — manifest and playable child/segment reachable — 1103 ms
+- **Music Box Dance** — International — http://88.212.15.19/live/mb_dance/index.m3u8 — manifest and playable child/segment reachable — 1158 ms
+- **Music Box Sexy** — International — http://88.212.15.19/live/mb_sexy/index.m3u8 — manifest and playable child/segment reachable — 1075 ms
+- **Music Channel** — International — http://media.boni-records.com/index.m3u8 — manifest and playable child/segment reachable — 1824 ms
+- **Music India** — Indian Music — https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8 — manifest and playable child/segment reachable — 3587 ms
+- **Music India** — Backup — https://cdn.pishow.tv/ott/live/226/master.m3u8 — manifest and playable child/segment reachable — 2822 ms
+- **Music India** — Not Playing — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Musicindia2/default/main.mpd — HTTP resource reachable — 468 ms
+- **My Cinema** — International — https://mytime-tcl.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 584 ms
+- **My Cinema Europe** — International — https://op-group1-densxvisionhd-1.dens.tv/h/h18/index.m3u8 — manifest and playable child/segment reachable — 3502 ms
+- **My TV** — Bangladesh — https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8 — manifest and playable child/segment reachable — 2778 ms
+- **My TV** — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8 — manifest and playable child/segment reachable — 1308 ms
+- **Mysteries Xplored** — Documentary & Wildlife — https://dwqz6akge0ila.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-lw48tj5rg6t4f/v1/aenetworks_mysteriesxplored_1/samsungheadend_us/latest/main/hls/playlist.m3u8 — manifest and playable child/segment reachable — 871 ms
+- **Mystery TV** — Documentary & Wildlife — https://aenetworks-mysterytv-rakuten.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 1298 ms
+- **Mythbusters** — Documentary & Wildlife — https://d1cgf0ptrv4t22.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-xvoparaodgcw9/Mythbusters_GB.m3u8 — manifest and playable child/segment reachable — 1127 ms
+- **Mythbusters (1080p)** — Backup — https://d2bog959vw5xq.cloudfront.net/playlist/amg00627-banijayfast-mythbusters-samsungau/playlist.m3u8 — manifest and playable child/segment reachable — 764 ms
+- **Mytime Movie** — International — https://mytimeuk-rakuten-samsung.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 697 ms
+- **MyTime Movie Network** — Backup — https://appletree-mytime-samsungbrazil.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 507 ms
+- **MyTime Movie Network BR** — International — https://appletree-mytime-samsungbrazil.amagi.tv/playlist360p.m3u8 — manifest and playable child/segment reachable — 347 ms
+- **MyTime Movie Network East** — International — https://appletree-mytimeau-samsung.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 687 ms
+- **Nagorik TV** — Backup — https://box.bbaria.net/Nagorik_TV/tracks-v1a1/mono.m3u8 — manifest and playable child/segment reachable — 2942 ms
+- **NASHE Music** — International — https://cdn15.live-tv.cloud/ua_infinitas_tv/nashemus-abr/playlist.m3u8 — manifest and playable child/segment reachable — 2502 ms
+- **Nat Geo Wild** — Documentary & Wildlife — http://202.70.146.135:8000/play/a05j/index.m3u8 — manifest and playable child/segment reachable — 2434 ms
+- **National Geographic** — Documentary & Wildlife — http://202.70.146.135:8000/play/a05o/index.m3u8 — manifest and playable child/segment reachable — 2410 ms
+- **Nature Time** — Documentary & Wildlife — https://bamusa-naturetime-emea-eng-rakuten.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 742 ms
+- **NatureTime** — Backup — https://amg00090-blueantllc-lovenature-au-samsungau-wggcn.amagi.tv/playlist/amg00090-blueantllc-lovenature-au-samsungau/playlist.m3u8 — manifest and playable child/segment reachable — 1134 ms
+- **NatureTime UK (1080p)** — Backup — https://amg01515-amg01515c43-samsung-gb-9038.playouts.now.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 579 ms
+- **Nazara** — Indian Entertainment — https://cc-p1izg43bk7sj5.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-p1izg43bk7sj5/DIYC/PMSL/IN10/Nazara_IN_B/Nazara_IN_B.m3u8 — manifest and playable child/segment reachable — 4191 ms
+- **NBA TV** — Backup — http://23.237.104.106:8080/USA_NBA/index.m3u8 — manifest and playable child/segment reachable — 588 ms
+- **News 24** — Bangladesh — https://tvsen6.aynaott.com/cdgr3tw6WoG7JyRnLbi0/index.m3u8 — manifest and playable child/segment reachable — 2799 ms
+- **Nexus TV** — Backup — https://stream.ottplus.live/live/nexus_tv_abr/index.m3u8 — manifest and playable child/segment reachable — 3236 ms
+- **NH BollyFlix** — Indian Movies — https://cc-r5hupcym5oehh.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-r5hupcym5oehh/SBUM/RunnTV/BollyFlix_IN/BollyFlix_IN.m3u8 — manifest and playable child/segment reachable — 4086 ms
+- **NH BollyGold** — Indian Movies — https://0dc330e6408b4c3b9ac31fd37b121368.mediatailor.ap-south-1.amazonaws.com/v1/master/d367f9b863a7a04827f71ecab4cbeeb11f78a827/nh-bollygold-airtel/playlist.m3u8 — manifest and playable child/segment reachable — 2270 ms
+- **NH BollyRaga** — Indian Music — https://cc-up9j649x4thrj.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-up9j649x4thrj/SBUM/RunnTV/BollyRaga_IN/BollyRaga_IN.m3u8 — manifest and playable child/segment reachable — 3549 ms
+- **NH Tamil Gold** — Indian Movies — https://d3arbp6l7f096k.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gv6wgpbb4mgwk/playlist.m3u8?ads.ads_cdn=cf&ads.app_domain=APP_DOMAIN&ads.cdn=cf — manifest and playable child/segment reachable — 2903 ms
+- **NHL Network** — Sports — https://nhl-firetv.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 499 ms
+- **Nick Jr. (Czech Republic)** — Kids — http://88.212.15.19/live/test_nick_jr/playlist.m3u8 — manifest and playable child/segment reachable — 1121 ms
+- **NKR TV Kannada** — Indian Entertainment — https://stream.ottlive.co.in/nkrtv/index.m3u8 — manifest and playable child/segment reachable — 2189 ms
+- **NOW Rock** — International — https://lightning-now90s-samsungnz.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 1022 ms
+- **NRB TV** — Backup — https://app.ncare.live/live-orgin/nrb-eu.stream/playlist.m3u8 — manifest and playable child/segment reachable — 1149 ms
+- **NTV** — Bangladesh — https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8 — manifest and playable child/segment reachable — 2818 ms
+- **NTV** — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/ntv/index.m3u8 — manifest and playable child/segment reachable — 2171 ms
+- **NTV** — Backup — https://tvsen5.aynaott.com/JHPxHAWonztVucyc4GzF/index.m3u8?e=1784102559&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=d26add1c49d848c9199b708427134979 — manifest and playable child/segment reachable — 2780 ms
+- **NTV Europe** — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/ntvuk00332211.stream/playlist.m3u8 — manifest and playable child/segment reachable — 1285 ms
+- **NTV Europe** — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/ntvuk00332211.stream/live-orgin/ntvuk00332211.stream/chunks.m3u8 — manifest and playable child/segment reachable — 952 ms
+- **NTV+** — Backup — https://2-fss-1.streamhoster.com/pl_122/201748-1431018-1/chunklist.m3u8 — manifest and playable child/segment reachable — 360 ms
+- **Ocko Expres** — Backup — https://ocko-live.ssl.cdn.cra.cz/channels/ocko_expres/playlist.m3u8 — manifest and playable child/segment reachable — 2133 ms
+- **Oggy and the cockroaches** — Kids — https://live20.bozztv.com/giatvplayout7/giatv-210728/tracks-v1a1/mono.ts.m3u8 — manifest and playable child/segment reachable — 337 ms
+- **One Paschima** — Indian Entertainment — https://live.ekamraott.com/onepaschima/onepaschima/index.m3u8 — manifest and playable child/segment reachable — 4781 ms
+- **Only Music** — Indian Music — https://mumbai-edge.smartplaytv.in/OnlyMusic/index.m3u8 — manifest and playable child/segment reachable — 3781 ms
+- **Orange Bangla TV** — Indian Bangla — https://cdn.pishow.tv/ott/live/1499/master.m3u8 — manifest and playable child/segment reachable — 3045 ms
+- **Outdoor Channel (1080p)** — Backup — https://amg00718-outdoorchannela-outdoortv-samsungau-uc7mp.amagi.tv/playlist/amg00718-outdoorchannela-outdoortv-samsungau/playlist.m3u8 — manifest and playable child/segment reachable — 1021 ms
+- **Outdoor Channel HD** — Backup — http://23.237.104.106:8080/USA_OUTDOOR/index.m3u8 — manifest and playable child/segment reachable — 544 ms
+- **OuterSphere** — Documentary & Wildlife — https://d3o593mz1glx8d.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-1ca6ra6358f5t/OuterSphere_US.m3u8 — manifest and playable child/segment reachable — 481 ms
+- **OuterSphere** — Backup — https://d3o593mz1glx8d.cloudfront.net/OuterSphere_US.m3u8 — manifest and playable child/segment reachable — 444 ms
+- **Pardesi TV** — Indian Entertainment — http://stream.pardesitv.online/pardesi/tracks-v1a1/mono.m3u8 — manifest and playable child/segment reachable — 717 ms
+- **Pardesi TV** — Backup — http://stream.pardesitv.online/pardesi/index.m3u8 — manifest and playable child/segment reachable — 926 ms
+- **Pitaara TV** — Indian Movies — https://d2lk5u59tns74c.cloudfront.net/out/v1/500a6b45f5ae41dda445d912b59eaa09/index.m3u8 — manifest and playable child/segment reachable — 1306 ms
+- **Pitaara TV** — Backup — https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8 — manifest and playable child/segment reachable — 3423 ms
+- **Pitaara TV** — Backup — https://streams.tangotv.in/PITAARA/ORIGIN/index.m3u8 — manifest and playable child/segment reachable — 3667 ms
+- **Pocket Films** — Indian Movies — https://vglivessai.akamaized.net/sg/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/b8ada260-bb81-472b-b7c1-3a79213a84b8/e02a0ce5-6c42-4cca-bb53-e5cfecff74a9/0.m3u8 — manifest and playable child/segment reachable — 2702 ms
+- **Pogo** — Kids — https://stream.ottplus.live/live/pogo_sd_abr/index.m3u8 — manifest and playable child/segment reachable — 2966 ms
+- **POP** — Kids — https://amg01753-narrativeentert-popkids-samsunguk-yjjil.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-popkids-samsunguk/playlist.m3u8 — manifest and playable child/segment reachable — 1254 ms
+- **Pop** — Kids — https://amg01753-narrativeentert-popkids-lggb-xyy5k.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-popkids-lggb/playlist.m3u8 — manifest and playable child/segment reachable — 1402 ms
+- **Pop** — Backup — https://rakutenaa-narrative-popkids-rakuten-uwrx0.amagi.tv/ts-eu-w1-n2/playlist/rakutenAA-narrative-popkids-rakuten/cb553d1e726c648b9dd43e6fd4ef41a8dd2406fc087a8d6933fb4b926bc10f41f8eda29ab30fb02b04940fa73f4e380d4d1a9a4ace0362d7b66aa9512a7d127f8adaf471d89c1617b2c11f5d7fe021414efc0e14d025522288a93c019738b3761d5cb95c3a1862cff90bfc7000c7800bda62218ba4dd7c387c0c5e820c5feda643a6fde90e43d038a4e21e1bc72560ddbc139d9773efd59202cd16e92aac50bfa1cabad21aadbcb032fd14dd370656367897944694cc53a4dfe80353f472204f1251f4a69da43f56e146474fc7fac5a9179979aa99378e646de16ae84e8023b578be1ba2e043a9a3bce04b454be2ae1f3575a4e1f9d9f9617ee437fda0a489212d9fbb4d2814cb20dc202a6e94adca40d2931095ec51efde68192bff9c448996b7979dd4e728892e90879ee03c465d5c16169062a19563cf2cd36c97c2122f5b5845aa9f27a0ecbb5b3e3836ecef5fd00024bdde9d8adc0b04d3651a489a06b33f54359b6436078f5cf89e2f53992a0b9c302fc450308945f4ac5e93cdbfb45663e584bf28906eeba635d6f314a06e396616aae2292d20261ec7eb64574513aa44e0c0f5f3631f09e885a594a6016f5661420a56d9888f719f9dff390d1fc521600a30431390078e39885904022b994b9ef85e25d44b7928b7f272595c35959ae58584d39a14ec25afa592382b286667b8250c256becbb8c52f84a22141d5b891d6145b21f000a80e7c8e18abf69cf915ba937700666c9f1034e1b2001097acac13a8f06b3ca48efca9a0498bdd4431ff856d300148defd869eee482c270029fae521515feb940e25603e225fd08d2ae1aaab15115232e545efd8d5bf14bbcd18ef8229e5ecb25672ab220ebc6a6d9b86752f4ae4b232336570271567a297ecbb0a4670f76a2ae26ed48f2ee5bbd541a243a4584c26a2887ec64239f3a7074a0aedfb4aecb1715cd61e67ccc7371c03d6907c0ee69b0f9d883fb837c6b10d5b7b249a99e9f88c8c2c25418610861c2930f0f0db24bf18814deb80e79fdb69ffcca6be51c8852ad8da527f033b2912e6cc4e09cfae848105a4a45c3c2f8f407deb21e370619b1f74f3bad84dda775fcebb23e2bfa5ac186264c8c1b507ec78dfc25e90a99c7180bc6a64a50e45513e0d6a7213fe905f301157cd3faa04d2dc8e22eb26cbadbce2e6dad293fc5667f408d5db4ae926a7cd3a4305552d93c218772b0e2886d75618b975f14125c1f340ed64b7d0dc51f498433bbc5c0924c01ab28a83e1eef608ae37e86912dccd2e5d08fc711448ed52e34d33ec6009a02c9fcaedd198572488b49b23b40a9f6fddde9fbe596e6f63f7839b766be2be957b8e78ab0540f2b5bff2e1a6b0bd53cc42a3f72b5e174c1866c49a7f8d626e2237564233511ec30b5bd12696402a8c75cbcfc4b43404d12c9e22f86329d642aa27656ba1368333e367360a5b6ec3aff08fd5690c65e29c0a4bc8307c68d1effbfa7d79b680fe373076f79bc96aeb0f16014fbb5a8b01449a2ca44b232541c0aa3fb837632e3e40502d987ac55989d42a639172b4ef3ad8f13ec5ea313cb7e7efb1af2de6c4c97c976583a812ca9df7c459949ff0a01e56684406dd91d6753563d867ac7580b602df17283f8fc1a4e748501c96a683cbbe3fe8da83f57220d440f54051271ce412dc5192c4bea132f9b368dc28fec6585ee428d299dfdb38d1521d8c5f0c5922e892fe19290d28ce7b0ae685d481cc8b3c606a42905c4fd69b10cf3fe3406ec17a28b7387405e60c7060763cb9661176182a37d8deb4fb16b8b1ebafa88e1cd6fc8dbb5022bbe5407f552c22990723e574fcd60ad882b27e3aee91ba46d4ef0e5a9bbc4fe41e5f3c126db4da0c79ab0a805aad763294685386e1b742329ec749c3f0e907ef142f95da37d23fb268f455e31e5a99e61f1e35b38447e03d75a92772652d22229293040d7c538a6de867c4771221a55e6da1bd1114dbb225451968722e9d6f7619553d59eb5f650295a7b34fd71385575d06b6f5d16bca7f5c7033bc63aca1e0ab39093e9790a218b9b58bb910461c1f1c626f73dd57de405a670124f089d5d571cbd176d3e631d7e739c4b27ef8ca396a52e2c6364b0cb38015abbf0a149bf386d7a45138130513026/17/1920x1080_5903040/index.m3u8 — manifest and playable child/segment reachable — 1364 ms
+- **POP World TV** — International — https://janus.xpbroadcasting.com:8443/hls/popworld.m3u8 — manifest and playable child/segment reachable — 1952 ms
+- **Powerkids Kartoon Channel** — Kids — https://cc-j2qrmdlg5y7lg.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-j2qrmdlg5y7lg/powerkids.m3u8 — manifest and playable child/segment reachable — 3286 ms
+- **PowerTürk TV** — Backup — https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8 — manifest and playable child/segment reachable — 4465 ms
+- **PowerTürk TV** — Backup — https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8 — manifest and playable child/segment reachable — 4836 ms
+- **Probashi TV** — Backup — http://158.69.24.53:8080/probashi_tv/index.m3u8 — manifest and playable child/segment reachable — 421 ms
+- **PTC Music** — Indian Music — https://d2lk5u59tns74c.cloudfront.net/out/v1/f913cf893c594f73b114216e74a2efbc/index.m3u8 — manifest and playable child/segment reachable — 1059 ms
+- **PTC Punjabi** — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/3e22a9c278db4e3eb779afd42e41b0a6/index.m3u8 — manifest and playable child/segment reachable — 948 ms
+- **PTC Punjabi** — Backup — https://streams.tangotv.in/PTCPUNJABI/ORIGIN/index.m3u8 — manifest and playable child/segment reachable — 3743 ms
+- **PTC Punjabi Gold** — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/6e14bac6d0384e129521a4d005188bfb/index.m3u8 — manifest and playable child/segment reachable — 1056 ms
+- **Public Movies** — Indian Movies — https://mumt04.tangotv.in/m18aqlK4PUBLICMOVIES/index.m3u8 — manifest and playable child/segment reachable — 3396 ms
+- **Public Music** — Indian Music — https://mumt04.tangotv.in/m18aqlK4PUBLICMUSIC/index.m3u8 — manifest and playable child/segment reachable — 3376 ms
+- **Public Music** — Backup — https://cdn.pishow.tv/ott/live/441/master.m3u8 — manifest and playable child/segment reachable — 2887 ms
+- **Punjabi Hits** — Indian Music — https://stream.ottlive.co.in/punjabihits/index.m3u8 — manifest and playable child/segment reachable — 2589 ms
+- **Punjabi Shorts** — Indian Movies — https://vglivessai.akamaized.net/ptnr-yupptv/title-Punjabi_Shorts/in/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/27c3fd7a-b01f-4b00-ac03-557ac77acd47/index.m3u8 — manifest and playable child/segment reachable — 4139 ms
+- **Puthuyugam TV** — Indian Entertainment — https://mumt04.tangotv.in/m18aqlK4PUTHUYUGAMTV/index.m3u8 — manifest and playable child/segment reachable — 3327 ms
+- **Q TV** — Indian Entertainment — https://mumt05.tangotv.in/87NeALx2THEQ/index.m3u8 — manifest and playable child/segment reachable — 3491 ms
+- **Quran** — Religious — https://vodzong.mjunoon.tv:8087/streamtest/SaudiQuran-142/playlist.m3u8 — manifest and playable child/segment reachable — 2282 ms
+- **Quran TV** — Religious — https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/sharjahtvquranpublish/shqurantv_source/chunks.m3u8 — manifest and playable child/segment reachable — 1486 ms
+- **R Plus Gold** — Indian Bangla — https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/cf883da3-f9f5-4c70-b0ef-b3ac2e2ad1e3/index.m3u8 — manifest and playable child/segment reachable — 5414 ms
+- **R Plus Gold** — Backup — https://cdn.pishow.tv/ott/live/1231/master.m3u8 — manifest and playable child/segment reachable — 2867 ms
+- **Raj Digital Plus** — Indian Movies — https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RajTV_Digital_plus/master_1.m3u8 — manifest and playable child/segment reachable — 4402 ms
+- **Raj Musix Kannada** — Indian Music — https://mumt01.tangotv.in/O5aw8Zn3RAJMUSIXKANDA/index.m3u8 — manifest and playable child/segment reachable — 3376 ms
+- **Raj Musix Malayalam** — Indian Music — https://cdn.pishow.tv/ott/live/1073/master.m3u8 — manifest and playable child/segment reachable — 2832 ms
+- **Raj Musix Tamil** — Indian Music — https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/Raj_Musix/master_1.m3u8 — manifest and playable child/segment reachable — 8746 ms
+- **Raj Musix Telugu** — Indian Music — https://cdn.pishow.tv/ott/live/1213/master.m3u8 — manifest and playable child/segment reachable — 2963 ms
+- **Raj TV** — Indian Movies — https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RAJTV/master_1.m3u8 — manifest and playable child/segment reachable — 4971 ms
+- **Rajdhani TV** — Bangladesh — https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8 — manifest and playable child/segment reachable — 2688 ms
+- **Rajdhani TV** — Backup — https://drk6xq0vhn.gpcdn.net/live/rajdhani_tv/index.m3u8 — manifest and playable child/segment reachable — 2306 ms
+- **Rakuten Movies** — International — https://0145451975a64b35866170fd2e8fa486.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5987/master.m3u8 — manifest and playable child/segment reachable — 1048 ms
+- **Rakuten TV Action Movies Finland (1080p)** — Backup — https://bca5a421a70c46ad911efd0a4767c4bf.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6075/master.m3u8 — manifest and playable child/segment reachable — 1086 ms
+- **Rakuten TV Action Movies UK** — International — https://54045f0c40fd442c8b06df076aaf1e85.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6065/master.m3u8 — manifest and playable child/segment reachable — 1066 ms
+- **Rakuten TV Comedy Movies** — Backup — https://b8bc6c4b9be64bd6aeb3b92aa8521ed4.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6184/master.m3u8 — manifest and playable child/segment reachable — 1106 ms
+- **Rakuten TV Comedy Movies Finland (1080p)** — Backup — https://a300af98e00746e2acf2346f43e47bd1.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6191/master.m3u8 — manifest and playable child/segment reachable — 1341 ms
+- **Rakuten TV Comedy Movies UK** — International — https://9be783d652cd4b099cf63e1dc134c4a3.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6181/master.m3u8 — manifest and playable child/segment reachable — 985 ms
+- **Rakuten TV Drama Movies** — Backup — https://968754c2483045c1a9a7f677caec35b6.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6096/master.m3u8 — manifest and playable child/segment reachable — 1399 ms
+- **Rakuten TV Drama Movies Finland (1080p)** — Backup — https://d7e8ee3c924d4305a0c1840fe94c5d36.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6102/master.m3u8 — manifest and playable child/segment reachable — 1101 ms
+- **Rakuten TV Drama Movies UK** — International — https://fee09fd665814f51b939b6d106cf5f66.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6093/master.m3u8 — manifest and playable child/segment reachable — 1985 ms
+- **Rakuten TV Family Movies** — Backup — https://3315fc3e7276420f895e19cf807dbee1.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6215/master.m3u8 — manifest and playable child/segment reachable — 1464 ms
+- **Rakuten TV Family Movies Finland (1080p)** — Backup — https://758ee983d61e400381dea6fa8154f4e0.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6227/master.m3u8 — manifest and playable child/segment reachable — 1462 ms
+- **Rakuten TV Family Movies UK** — International — https://e3207568b726401995c25670faaf32e4.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6203/master.m3u8 — manifest and playable child/segment reachable — 1078 ms
+- **Ramdhenu** — Indian Music — https://mumt01.tangotv.in/O5aw8Zn3RAMDHENU/mpegts — HTTP resource reachable — 1526 ms
+- **Ramdhenu** — Backup — https://mumt01.tangotv.in/O5aw8Zn3RAMDHENU/index.m3u8 — manifest and playable child/segment reachable — 3296 ms
+- **RDS Social TV** — Backup — https://stream.rdstv.radio/index.m3u8 — manifest and playable child/segment reachable — 1219 ms
+- **Real Wild (1080p)** — Backup — https://lds-realwild-samsungau.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 659 ms
+- **Retro Music TV** — Backup — https://stream.mediawork.cz/retrotv/smil:retrotv2.smil/playlist.m3u8 — manifest and playable child/segment reachable — 2548 ms
+- **RetroCrush** — Kids — https://linear-899.frequency.stream/dist/cineverse/899/hls/master/playlist.m3u8 — manifest and playable child/segment reachable — 714 ms
+- **Robot Wars by Mech+** — Documentary & Wildlife — https://0a644b20819046a0935afa1cf6debf23.mediatailor.us-east-1.amazonaws.com/v1/master/0fb304b2320b25f067414d481a779b77db81760d/Samsung-gb_MechPlus/playlist.m3u8?ads.wurl_channel=1413&ads.wurl_name=MechPlus&ads.coppa=0&ads.psid=%7BPSID%7D&ads.targetopt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D — manifest and playable child/segment reachable — 714 ms
+- **Roja Movies** — Indian Movies — https://stream.rojatv.cloud/rojatv/rojatv/index.m3u8 — manifest and playable child/segment reachable — 3550 ms
+- **Rongeen TV** — Indian Bangla — https://server.thelegitpro.in/rongeentv/rongeentv/index.m3u8 — manifest and playable child/segment reachable — 2990 ms
+- **Rongeen TV** — Backup — https://server.thelegitpro.in/rongeentv/rongeentv/tracks-v1a1/mono.m3u8 — manifest and playable child/segment reachable — 2167 ms
+- **Rongeen TV** — Backup — https://mumbai-edge.smartplaytv.in/RongeenTV/index.m3u8 — manifest and playable child/segment reachable — 3650 ms
+- **RT Documentary** — Documentary & Wildlife — http://rt-esp.rttv.com/live/rtesp/playlist_800Kb.m3u8 — manifest and playable child/segment reachable — 2121 ms
+- **RT Documentary** — Backup — https://rt-rtd.rttv.com/dvr/rtdoc/playlist.m3u8 — manifest and playable child/segment reachable — 7798 ms
+- **RTV** — Bangladesh — http://tvsen5.aynascope.net/RtvHD/index.m3u8 — manifest and playable child/segment reachable — 2223 ms
+- **RTV** — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/rtv-sg.stream/index.m3u8 — manifest and playable child/segment reachable — 1402 ms
+- **RTV** — Backup — http://116.204.149.16/rtvhd/index.m3u8 — manifest and playable child/segment reachable — 2390 ms
+- **RTV** — Backup — https://tvsen5.aynaott.com/RtvHD/index.m3u8 — manifest and playable child/segment reachable — 2833 ms
+- **Ruposhi Bangla** — Indian Bangla — https://mumt05.tangotv.in/87NeALx2RUPASIBANGLA/index.m3u8 — manifest and playable child/segment reachable — 3420 ms
+- **Ruposhi Bangla** — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:rupashibangla.smil/playlist.m3u8 — manifest and playable child/segment reachable — 536 ms
+- **Ruposhi Bangla** — Backup — https://cdn.pishow.tv/ott/live/1039/master.m3u8 — manifest and playable child/segment reachable — 2859 ms
+- **SA TV** — Backup — http://116.204.149.16/satv/index.m3u8 — manifest and playable child/segment reachable — 2352 ms
+- **SADA TV** — Indian Entertainment — http://cdn12.henico.net:8080/live/sadatv/index.m3u8 — manifest and playable child/segment reachable — 427 ms
+- **Safari TV** — Documentary & Wildlife — https://mumt04.tangotv.in/m18aqlK4SAFARITV/index.m3u8 — manifest and playable child/segment reachable — 4364 ms
+- **Saga Music** — Indian Music — https://amg01412-xiaomiasia-sagamusic-xiaomi-h54ye.amagi.tv/playlist/amg01412-xiaomiasia-sagamusic-xiaomi/playlist.m3u8 — manifest and playable child/segment reachable — 2686 ms
+- **Saga Music Haryanvi** — Indian Music — https://amg01412-xiaomiasia-sagamusicharyanvi-xiaomi-0v34j.amagi.tv/playlist/amg01412-xiaomiasia-sagamusicharyanvi-xiaomi/playlist.m3u8 — manifest and playable child/segment reachable — 2633 ms
+- **Sana TV** — Indian Entertainment — https://vglivessai.akamaized.net/us/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/b6d9e864-ec16-410a-804d-ccf8f720bfaa/index.m3u8 — manifest and playable child/segment reachable — 3599 ms
+- **Sananda** — Indian Bangla — http://live-stream.amarbanglatv.in:8080/hls/sanandatv/index.m3u8 — manifest and playable child/segment reachable — 3928 ms
+- **Sananda** — Backup — https://live.sanandatelevision.in/sananda/index.m3u8 — manifest and playable child/segment reachable — 2527 ms
+- **Sangeet Bangla** — Indian Bangla — https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/index.m3u8 — manifest and playable child/segment reachable — 3397 ms
+- **Sangeet Bangla** — Backup — https://cdn.pishow.tv/ott/live/1143/master.m3u8 — manifest and playable child/segment reachable — 2869 ms
+- **Shanson TV** — Backup — https://streaming.thestream.cyou/live/7009.m3u8 — manifest and playable child/segment reachable — 2809 ms
+- **Shanson TV** — Backup — http://catchup.videoline.ru/shanson/index.m3u8 — manifest and playable child/segment reachable — 3314 ms
+- **Shemaroo Josh** — Indian Entertainment — https://airtelapp.shemaroo.com/shemarooChumbakTV/smil:shemarooChumbakTVadp.smil/playlist.m3u8 — manifest and playable child/segment reachable — 2574 ms
+- **Shemaroo Josh** — Backup — https://mumt04.tangotv.in/m18aqlK4SHEMAROOJOSH/index.m3u8 — manifest and playable child/segment reachable — 3318 ms
+- **Shubh Cinema TV** — Indian Movies — https://d393sxaxig6bax.cloudfront.net/out/v1/589cf2cf44bf42bb941e817a2240d62e/index.m3u8 — manifest and playable child/segment reachable — 2869 ms
+- **Siri Kannada** — Indian Entertainment — https://mumt03.tangotv.in/Dsly5z3HSIRIKANNADA/index.m3u8 — manifest and playable child/segment reachable — 3383 ms
+- **Siri Kannada All Time** — Indian Entertainment — https://mumt07.tangotv.in/zHjX9OFlSIRIKANNADAALLTIME/index.m3u8 — manifest and playable child/segment reachable — 3323 ms
+- **Sky Sports Action** — Sports — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9155/index.m3u — manifest and playable child/segment reachable — 1689 ms
+- **Sky Sports Cricket** — Sports — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9258/index.m3u8 — manifest and playable child/segment reachable — 1585 ms
+- **Sky Sports Football** — Sports — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9289/index.m3u8 — manifest and playable child/segment reachable — 1544 ms
+- **Smurf TV** — Kids — https://d144py1prrd7ns.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-affg2ev32s0dq/smrfe.m3u8 — manifest and playable child/segment reachable — 1056 ms
+- **Smurf TV** — Backup — https://stream.ads.ottera.tv/playlist.m3u8?network_id=4065 — manifest and playable child/segment reachable — 798 ms
+- **Somoy TV** — Bangladesh — https://tvsen5.aynaott.com/somoytv/tracks-v1a1/mono.m3u8 — manifest and playable child/segment reachable — 2161 ms
+- **Somoy TV** — Backup — https://tvsen5.aynascope.net/somoytv/mono.m3u8 — manifest and playable child/segment reachable — 2124 ms
+- **Somoy TV** — Backup — https://tvsen6.aynaott.com/4XcqdovJzbbC9WdJA9gk/index.m3u8 — manifest and playable child/segment reachable — 2776 ms
+- **Songdew TV** — International — https://yuppnimrestreammum.akamaized.net/181224/smil:songdewtv.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b — manifest and playable child/segment reachable — 2764 ms
+- **Sony AATH** — Indian Bangla — https://stream.ottplus.live/live/sony_aath_abr/index.m3u8 — manifest and playable child/segment reachable — 2911 ms
+- **Sony AATH** — Backup — https://live20.bozztv.com/giatvplayout7/giatv-209611/index.m3u8 — manifest and playable child/segment reachable — 458 ms
+- **Sony BBC Earth** — Documentary & Wildlife — https://amg00793-bbcstudios-amg00793c3-lg-us-2528.playouts.now.amagi.tv/playlist/amg00793-bbcstudios-bbcearta-lgus/playlist.m3u8 — manifest and playable child/segment reachable — 667 ms
+- **Sony BBC Earth HD** — Documentary & Wildlife — https://stream.ottplus.live/live/bbc_earth_hd_abr/index.m3u8 — manifest and playable child/segment reachable — 3450 ms
+- **Sony Entertainment TV** — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/sony_ent_sd_abr/index.m3u8 — manifest and playable child/segment reachable — 2357 ms
+- **Sony Entertainment TV** — Backup — http://38.96.178.205/SONYHD/index.m3u8 — manifest and playable child/segment reachable — 375 ms
+- **Sony Entertainment TV** — Backup — https://drk6xq0vhn.gpcdn.net/live/sony_ent_hd_abr/index.m3u8 — manifest and playable child/segment reachable — 2440 ms
+- **Sony Entertainment TV** — Backup — https://stream.ottplus.live/live/sony_ent_hd_abr/index.m3u8 — manifest and playable child/segment reachable — 6664 ms
+- **Sony Max** — Indian Movies — https://drk6xq0vhn.gpcdn.net/live/sony_max_sd_abr/index.m3u8 — manifest and playable child/segment reachable — 2341 ms
+- **Sony Max** — Backup — https://drk6xq0vhn.gpcdn.net/live/max_hd_abr/index.m3u8 — manifest and playable child/segment reachable — 2354 ms
+- **Sony Max 2** — Indian Movies — https://drk6xq0vhn.gpcdn.net/live/max_2_abr/index.m3u8 — manifest and playable child/segment reachable — 2592 ms
+- **Sony Movies** — Backup — https://a-cdn.klowdtv.com/live1/smc_720p/chunks.m3u8 — manifest and playable child/segment reachable — 328 ms
+- **Sony SAB HD** — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/sub_hd_abr/index.m3u8 — manifest and playable child/segment reachable — 2504 ms
+- **Sony Ten 1** — Sports — https://drk6xq0vhn.gpcdn.net/live/ten_1_hd_720/index.m3u8 — manifest and playable child/segment reachable — 1764 ms
+- **Sony Ten 2** — Backup — https://stream.ottplus.live/live/ten_2_hd_abr/live/ten_2_hd_720/index.m3u8 — manifest and playable child/segment reachable — 4997 ms
+- **Sony Ten 5** — Sports — https://stream.ottplus.live/live/ten_5_hd_abr/live/ten_5_hd_720/index.m3u8 — manifest and playable child/segment reachable — 2927 ms
+- **South Movies** — Indian Movies — https://live20.bozztv.com/giatvplayout7/giatv-209593/tracks-v1a1/mono.ts.m3u8 — manifest and playable child/segment reachable — 373 ms
+- **South Station** — Indian Movies — https://cc-yw7ztecy8do3q.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/SS_IN.m3u8 — manifest and playable child/segment reachable — 3781 ms
+- **Sparkle Movies** — International — https://61fc4f1a40a342daa23f92141853b7b4.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Samsung-gb_SparkleMovies/playlist.m3u8 — manifest and playable child/segment reachable — 670 ms
+- **SRK** — Bangladesh — https://srknowapp.ncare.live/srktvhlswodrm/srktv.stream/playlist.m3u8 — manifest and playable child/segment reachable — 3383 ms
+- **Star Gold Select** — Indian Movies — http://202.70.146.135:8000/play/a068/index.m3u8 — manifest and playable child/segment reachable — 2336 ms
+- **Star Jalsha** — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8 — manifest and playable child/segment reachable — 367 ms
+- **Star Jalsha** — Backup — https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8 — manifest and playable child/segment reachable — 1536 ms
+- **Star Maa** — Indian Entertainment — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starmaa1.smil/chunklist_b2628000.m3u8 — manifest and playable child/segment reachable — 202 ms
+- **Star Maa Movies** — Indian Movies — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:maamovies.smil/chunklist_b2628000.m3u8 — manifest and playable child/segment reachable — 208 ms
+- **Star Movies Select** — International — http://202.70.146.135:8000/play/a06q/index.m3u8 — manifest and playable child/segment reachable — 2318 ms
+- **Star News** — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/tracks-v1a1/mono.m3u8 — manifest and playable child/segment reachable — 981 ms
+- **Star Plus** — Backup — http://41.205.93.154/STAR-PLUS/index.m3u8 — manifest and playable child/segment reachable — 2146 ms
+- **Star Pravah** — Indian Entertainment — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starpravah.smil/chunklist_b1928000.m3u8 — manifest and playable child/segment reachable — 285 ms
+- **Star Sports 1 Hindi** — Sports — https://starsportshindiii.pages.dev/index.m3u8 — manifest and playable child/segment reachable — 497 ms
+- **Star Sports 2 HD** — Backup — http://tvsen5.aynascope.net/cXPB2LKkErN9/index.m3u8 — manifest and playable child/segment reachable — 2084 ms
+- **Starz Cinema** — International — http://23.237.104.106:8080/USA_STARZ_CINEMA/index.m3u8 — manifest and playable child/segment reachable — 431 ms
+- **Steelbird Music** — Indian Music — https://cdn2.in/SteelbirdMusicTVhls/live.m3u8 — manifest and playable child/segment reachable — 2730 ms
+- **Stingray Naturescape** — Documentary & Wildlife — https://lotus.stingray.com/manifest/naturescape-a003-montreal/samsungtvplus/master.m3u8 — manifest and playable child/segment reachable — 410 ms
+- **Stingray Rock Alternative** — International — https://lotus.stingray.com/manifest/ose-102ads-montreal/samsungtvplus/master.m3u8 — manifest and playable child/segment reachable — 483 ms
+- **Stingray The Spa** — Documentary & Wildlife — https://lotus.stingray.com/manifest/ose-122ads-montreal/samsungtvplus/master.m3u8 — manifest and playable child/segment reachable — 370 ms
+- **Stingray Today's Latin Pop** — International — https://lotus.stingray.com/manifest/ose-190ads-montreal/samsungtvplus/master.m3u8 — manifest and playable child/segment reachable — 457 ms
+- **Strawberry Shortcake** — Kids — https://d10c3fwb9yju0h.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-r5zgefp9c8p0b/master.m3u8 — manifest and playable child/segment reachable — 1260 ms
+- **Studio Yuva** — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3STUDIOYUVA/index.m3u8 — manifest and playable child/segment reachable — 3364 ms
+- **Studio Yuva** — Backup — https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b — manifest and playable child/segment reachable — 975 ms
+- **Subin TV** — Indian Entertainment — https://stream.galaxyott.live/live/subintv/index.m3u8 — manifest and playable child/segment reachable — 3144 ms
+- **SUN BANGLA** — Backup — http://27.124.71.27/Sun_Bangla/index.m3u8 — manifest and playable child/segment reachable — 2122 ms
+- **Sun Music** — Indian Music — https://hls.sunmusic.live/hls/stream.m3u8 — manifest and playable child/segment reachable — 1380 ms
+- **SuperToons TV** — Kids — https://d3bxvshzgfq6in.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-8a0c583l9gryw/feed/samsung/streams/SUPERTOONS_EN/master.m3u8?token=737aa2c3f17862a448f403cd2ac2b5ef1a0c413e1cf080a13a19cea99119221f&ads.device_did=%7BPSID%7D&ads.device_dnt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D&ads.ssai_vendor=SSSLIVE&ads.service_id=GBBD5100001HL — manifest and playable child/segment reachable — 2707 ms
+- **Suriya TV** — Indian Entertainment — https://stream.ottlive.co.in/suryatvtamil/index.m3u8 — manifest and playable child/segment reachable — 2187 ms
+- **Tabbar Hits** — Indian Movies — https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e11b0319-52e8-4190-ab03-3931cc68eac9/index.m3u8 — manifest and playable child/segment reachable — 3794 ms
+- **Tamilan TV** — Indian Entertainment — https://mumt04.tangotv.in/m18aqlK4TAMILANTELEVISION/index.m3u8 — manifest and playable child/segment reachable — 3336 ms
+- **Tarang Music** — Indian Music — https://livetv.tarangplus.in/tarangmusic-origin/live/playlist.m3u8 — manifest and playable child/segment reachable — 1581 ms
+- **Teletubbies** — Kids — https://dv8lsrd8fecw9.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-dkls74gdpo7r0/master.m3u8 — manifest and playable child/segment reachable — 1399 ms
+- **Teletubbies** — Backup — https://dv8lsrd8fecw9.cloudfront.net/master.m3u8 — manifest and playable child/segment reachable — 490 ms
+- **Terra Mater WILD English** — Documentary & Wildlife — https://amg01775-amg01775c1-amgplt0343.playout.now3.amagi.tv/playlist/amg01775-amg01775c1-amgplt0343/playlist.m3u8 — manifest and playable child/segment reachable — 985 ms
+- **Thalaa TV** — Indian Movies — https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2069c593-3c07-4d62-9d44-746be5c3a5d6/manifest.m3u8 — manifest and playable child/segment reachable — 1236 ms
+- **Thanthi One** — Indian Entertainment — https://mumt07.tangotv.in/zHjX9OFlTHANTHIONE/index.m3u8 — manifest and playable child/segment reachable — 3374 ms
+- **The Film Detective** — International — https://cinedigm-entertainment-corp-thefilmdetective-1-us.ono.wurl.tv/playlist.m3u8 — manifest and playable child/segment reachable — 675 ms
+- **The LEGO Channel** — Kids — https://dltiqboxjw21d.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-evri8jwgwmxus/index.m3u8 — manifest and playable child/segment reachable — 1111 ms
+- **The Movie Club +2** — Indian Movies — https://d3gnyty2vddhsg.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ytipwjqub3kf8/TMC2_IN.m3u8?ads.ads_cdn=cf&ads.cdn=cf — manifest and playable child/segment reachable — 2123 ms
+- **The Walking Dead Universe** — Backup — https://amc-twdfanexperience-1-us.xumo.wurl.tv/playlist.m3u8 — manifest and playable child/segment reachable — 552 ms
+- **Thikana** — Bangladesh — https://5dd3981940faa.streamlock.net/thikanatv/thikanatv/playlist.m3u8 — manifest and playable child/segment reachable — 4797 ms
+- **Tiny Pop** — Kids — https://amg01753-narrativeentert-tinypop-samsunguk-hvvb7.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-tinypop-samsunguk/playlist.m3u8 — manifest and playable child/segment reachable — 1186 ms
+- **Tiny Pop (1080p)** — Backup — https://amg01753-narrativeuk-amg01753c1-lg-gb-1830.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-tinypop-lggb/playlist.m3u8 — manifest and playable child/segment reachable — 707 ms
+- **Tolly TV** — Indian Movies — https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/13b5735d-52c3-4be0-853d-e0ec0127e708/manifest.m3u8 — manifest and playable child/segment reachable — 1797 ms
+- **Tom and Jerry** — Kids — https://live20.bozztv.com/giatvplayout7/giatv-208314/tracks-v1a1/mono.ts.m3u8 — manifest and playable child/segment reachable — 334 ms
+- **Tom And Jerry** — Backup — https://live20.bozztv.com/giatvplayout7/giatv-208314/playlist.m3u8 — manifest and playable child/segment reachable — 461 ms
+- **Tooku** — Kids — http://live-saha.cdnvideo.ru/saha/tooky/playlist.m3u8 — manifest and playable child/segment reachable — 3340 ms
+- **Toon Goggles** — Kids — https://d1eg24xrsfr6kv.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-b4b1bzxkt1uzo-prod/tg/tg/tg.m3u8 — manifest and playable child/segment reachable — 786 ms
+- **Toon Goggles Junior** — Kids — https://d3i6upqaqzosi1.cloudfront.net/tg/jr_us/tg_jr_us.m3u8 — manifest and playable child/segment reachable — 574 ms
+- **Toonami Aftermath East** — Kids — http://api.toonamiaftermath.com:3000/est/playlist.m3u8 — manifest and playable child/segment reachable — 673 ms
+- **ToonGoggles (720p)** — Backup — https://amg01329-otterainc-toongoggles-samsungau-ad-4c.amagi.tv/playlist/amg01329-otterainc-toongoggles-samsungau/playlist.m3u8 — manifest and playable child/segment reachable — 1084 ms
+- **Trace UK** — Backup — https://channels.trace.plus/Traceprod/UK_FAST_hd/index.m3u8 — manifest and playable child/segment reachable — 1803 ms
+- **Trace Urban** — Backup — https://amg01131-tracetv-amg01131c1-rakuten-us-1081.playouts.now.amagi.tv/playlist/amg01131-tracetvfast-traceurban-rakutenus/playlist.m3u8 — manifest and playable child/segment reachable — 845 ms
+- **Trace Urban** — Backup — https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 909 ms
+- **Trace Urban** — Backup — https://channels.trace.plus/Traceprod/URBAN_AFRIC_FR_hd/index.m3u8 — manifest and playable child/segment reachable — 2306 ms
+- **Trace Urban HD** — Backup — https://channels.trace.plus/Traceprod/URBAN_FR_hd/index.m3u8 — manifest and playable child/segment reachable — 859 ms
+- **Trace Urban International HD** — Backup — https://channels.trace.plus/Traceprod/URBAN_INTER_hd/index.m3u8 — manifest and playable child/segment reachable — 2702 ms
+- **Travel XP English EU** — Documentary & Wildlife — https://travelxp-travelxp-1-eu.rakuten.wurl.tv/3000.m3u8 — manifest and playable child/segment reachable — 525 ms
+- **Travelxp English** — Documentary & Wildlife — https://travelxp-travelxp-1-eu.rakuten.wurl.tv/playlist.m3u8 — manifest and playable child/segment reachable — 779 ms
+- **Travelxp Hindi** — Documentary & Wildlife — http://202.70.146.135:8000/play/a04o/index.m3u8 — manifest and playable child/segment reachable — 1558 ms
+- **TVCARiB Kids & Teens** — Kids — https://cdn.mycloudstream.io/hls/live/broadcast/nro19k2h/index.m3u8 — manifest and playable child/segment reachable — 1043 ms
+- **U Bangla** — Indian Bangla — https://stream.ottlive.co.in/ubangla/index.m3u8 — manifest and playable child/segment reachable — 4673 ms
+- **UFC TV** — Sports — https://linear-893.frequency.stream/mt/plex/893/hls/master/playlist_640x360.m3u8 — manifest and playable child/segment reachable — 429 ms
+- **Ultimate TV** — Indian Music — https://stream.ottlive.co.in/utvtamil/index.m3u8 — manifest and playable child/segment reachable — 5303 ms
+- **Ultimate TV** — Backup — https://mumbai-edge.smartplaytv.in/utv/index.m3u8 — manifest and playable child/segment reachable — 3747 ms
+- **Unidentified** — Documentary & Wildlife — https://d3ify425qsio2d.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/Unidentified-prod/playlist.m3u8 — manifest and playable child/segment reachable — 693 ms
+- **Unidentified** — Backup — https://d3ify425qsio2d.cloudfront.net/playlist.m3u8 — manifest and playable child/segment reachable — 629 ms
+- **Vanitha TV** — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3VANITHA/index.m3u8 — manifest and playable child/segment reachable — 3300 ms
+- **Vanitha TV** — Backup — https://cdn.pishow.tv/ott/live/393/master.m3u8 — manifest and playable child/segment reachable — 2847 ms
+- **Vasanth TV** — Indian Entertainment — https://mumt04.tangotv.in/m18aqlK4VASANTHTV/index.m3u8 — manifest and playable child/segment reachable — 3311 ms
+- **Vasanth TV** — Backup — https://mumbai-edge.smartplaytv.in/VasanthTV/index.m3u8 — manifest and playable child/segment reachable — 3511 ms
+- **Vendhar TV** — Indian Entertainment — https://mumt04.tangotv.in/m18aqlK4VENDHARTV/index.m3u8 — manifest and playable child/segment reachable — 3324 ms
+- **Vendhar TV** — Backup — https://cdn.pishow.tv/ott/live/1271/master.m3u8 — manifest and playable child/segment reachable — 2838 ms
+- **Vevo Hip Hop & R&B** — International — https://d7i20u8nlyf1b.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-lymqk2na77cwn/VevoHipHopRB_GB.m3u8 — manifest and playable child/segment reachable — 1083 ms
+- **Vissa TV** — Indian Entertainment — https://mumt07.tangotv.in/zHjX9OFlVISSATV/index.m3u8 — manifest and playable child/segment reachable — 3332 ms
+- **Wild Flix Hindi** — Documentary & Wildlife — https://cc-qgrxgp51645lw.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-qgrxgp51645lw/IQJW/WBD/WildFlix_IN/WildFlix_IN.m3u8 — manifest and playable child/segment reachable — 3413 ms
+- **Wild Planet** — Documentary & Wildlife — https://d1h8whhtg5u7om.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3u3ceovu5thv6/WildPlanet_GB.m3u8 — manifest and playable child/segment reachable — 1201 ms
+- **WildEarth** — Documentary & Wildlife — https://wildearth-plex.amagi.tv/masterR1080p.m3u8 — manifest and playable child/segment reachable — 400 ms
+- **WildEarth** — Backup — https://dqga3jatxofgx.cloudfront.net/WildEarth.m3u8 — manifest and playable child/segment reachable — 478 ms
+- **Wipeout Xtra** — Sports — https://d36nnn435goed2.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-skhf82opa3tf4/WipeoutXtraPoweredbyBanijay_GB.m3u8 — manifest and playable child/segment reachable — 989 ms
+- **World War TV** — Documentary & Wildlife — https://aenetworks-worldwartv-rakuten.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 1050 ms
+- **WOW Kidz Hindi** — Kids — https://yuppparoriglin.akamaized.net/181224/smil:wowkidzhindi.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b — manifest and playable child/segment reachable — 1361 ms
+- **WOW Kidz Tamil** — Kids — https://yuppparoriglin.akamaized.net/181224/smil:wowkidztam.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b — manifest and playable child/segment reachable — 1660 ms
+- **WOW Kidz Telugu** — Kids — https://yuppparoriglin.akamaized.net/181224/smil:wowkidztelgu.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b — manifest and playable child/segment reachable — 1141 ms
+- **XITE** — International — https://xite-rakuten.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 1345 ms
+- **XITE Hits** — Backup — https://d726x48n2pd5h.cloudfront.net/XITE_Hits.m3u8 — manifest and playable child/segment reachable — 448 ms
+- **XITE Hits Germany** — Backup — https://d726x48n2pd5h.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-skxr1pazhltvp/XITE_Hits.m3u8 — manifest and playable child/segment reachable — 401 ms
+- **XITE Hits UK** — International — https://amg01243-xitenetworksint-hitsuk-samsunguk-mvovq.amagi.tv/playlist/amg01243-xitenetworksint-hitsuk-samsunguk/playlist.m3u8 — manifest and playable child/segment reachable — 887 ms
+- **XXTreme Jobs Hindi** — Documentary & Wildlife — https://cc-zko1curyce7jh.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-zko1curyce7jh/IQJW/WBD/XXtremeJobs_IN/XXtremeJobs_IN.m3u8 — manifest and playable child/segment reachable — 3619 ms
+- **YRF Music** — Indian Music — https://amg01412-xiaomiasia-yrfmusic-xiaomi-1rmk2.amagi.tv/playlist/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8 — manifest and playable child/segment reachable — 2780 ms
+- **ZB Cartoon** — Indian Bangla — https://server.zillarbarta.com/zbcatun/video.m3u8 — manifest and playable child/segment reachable — 4233 ms
+- **ZB Cinema** — Indian Bangla — https://server.zillarbarta.com/ZBCINEMA/index.m3u8 — manifest and playable child/segment reachable — 4134 ms
+- **ZB Music** — Indian Music — https://server.zillarbarta.com/zbmusic/index.m3u8 — manifest and playable child/segment reachable — 4140 ms
+- **Zee 24 Ghanta** — Indian Bangla — https://d2dsoyvkr33m05.cloudfront.net/index_5.m3u8 — manifest and playable child/segment reachable — 467 ms
+- **Zee 24 Ghanta** — Backup — https://d2dsoyvkr33m05.cloudfront.net/index_1.m3u8 — manifest and playable child/segment reachable — 1977 ms
+- **Zee Action** — Backup — https://stream.ottplus.live/live/zee_action_abr/index.m3u8 — manifest and playable child/segment reachable — 5393 ms
+- **Zee Bangla** — Indian Bangla — https://drk6xq0vhn.gpcdn.net/live/zee_bangla_720/index.m3u8 — manifest and playable child/segment reachable — 2350 ms
+- **Zee Bangla** — Backup — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ZeeBanglaHD.m3u8 — manifest and playable child/segment reachable — 393 ms
+- **Zee Bangla** — Backup — http://27.124.71.27/Zee_Bangla/tracks-v1a1/mono.m3u8 — manifest and playable child/segment reachable — 1654 ms
+- **Zee Bangla HD** — Indian Bangla — https://yupptvcatchupire.yuppcdn.net/preview/zeebangla/2500.m3u8 — manifest and playable child/segment reachable — 338 ms
+- **Zee Bangla Sonar** — Indian Bangla — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/Zeebanglahd.m3u8 — manifest and playable child/segment reachable — 1622 ms
+- **Zee Bangla Sonar** — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD-video=2137600.m3u8 — manifest and playable child/segment reachable — 2029 ms
+- **Zee Bangla Sonar** — Backup — https://drk6xq0vhn.gpcdn.net/live/zee_bangla_cinema_abr/index.m3u8 — manifest and playable child/segment reachable — 2101 ms
+- **Zee Bangla Sonar** — Backup — http://103.185.24.134:3001/ZEE-BANGLA-CINEMA/index.m3u8 — manifest and playable child/segment reachable — 2277 ms
+- **Zee Bangla Sonar (576p)** — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8 — manifest and playable child/segment reachable — 1775 ms
+- **Zee Bollywood** — Indian Movies — https://drk6xq0vhn.gpcdn.net/live/zee_bollywood_abr/index.m3u8 — manifest and playable child/segment reachable — 2318 ms
+- **Zee Bollywood** — Backup — https://stream.ottplus.live/live/zee_bollywood_abr/index.m3u8 — manifest and playable child/segment reachable — 4348 ms
+- **Zee Cinema** — Indian Movies — https://drk6xq0vhn.gpcdn.net/live/zee_cinema_hd_abr/index.m3u8 — manifest and playable child/segment reachable — 2364 ms
+- **Zee Cinema** — Backup — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ZeeCinemaAPAC.m3u8 — manifest and playable child/segment reachable — 474 ms
+- **Zee Cinema** — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/NGCHD/default/NGCHD.m3u8 — manifest and playable child/segment reachable — 2614 ms
+- **Zee Cinema** — Backup — https://stream.ottplus.live/live/zee_cinema_hd_abr/index.m3u8 — manifest and playable child/segment reachable — 4815 ms
+- **Zee Kannada** — Indian Entertainment — https://yuppnimresmum.akamaized.net/28072023/smil:zeekannadahd.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b — manifest and playable child/segment reachable — 2833 ms
+- **Zee Tamil** — Indian Entertainment — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:zeetamil1.smil/playlist.m3u8 — manifest and playable child/segment reachable — 541 ms
+- **Zee TV** — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/zee_tv_hd_abr/index.m3u8 — manifest and playable child/segment reachable — 2089 ms
+- **Zee TV** — Backup — https://stream.ottplus.live/live/zee_tv_hd_abr/index.m3u8 — manifest and playable child/segment reachable — 5214 ms
+- **Zee TV HD** — Backup — https://d47ddb99.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1kZV9aZWVUVkhEVUtHZXJtYW55X0hMUw/playlist.m3u8 — manifest and playable child/segment reachable — 569 ms
+- **Zoom TV** — Backup — https://d2esfk1pb9cdob.cloudfront.net/master.m3u8 — manifest and playable child/segment reachable — 1513 ms
+- **Zoom TV** — Backup — https://mumbai-edge.smartplaytv.in/Zoom/index.m3u8 — manifest and playable child/segment reachable — 3741 ms
+- **ZooMoo** — Kids — https://zoomoo-samsungau.amagi.tv/playlist.m3u8 — manifest and playable child/segment reachable — 531 ms
+- **Дніпро TV** — Backup — http://vcdn1.produck.company:1935/out/dtv/playlist.m3u8 — manifest and playable child/segment reachable — 7604 ms
+- **Піксель TV** — Backup — https://cdn15.live-tv.cloud/ua_infinitas_tv/pixel-abr/playlist.m3u8 — manifest and playable child/segment reachable — 2479 ms
+- **Солнце** — Kids — http://tv.mediacdn.ru/live/solntse/playlist.m3u8 — manifest and playable child/segment reachable — 2276 ms
+
