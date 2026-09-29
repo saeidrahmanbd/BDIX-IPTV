@@ -39,15 +39,29 @@ def report_stats(path):
     out={}
     for k in ["Healthy","Redirect/temporary","Timeout","HTTP error","Invalid HLS","Connection error","Not Playing","Repeated-failure candidates (>= 3 runs)","Unique stream URLs checked","EPG matched","EPG missing","Exact ID matches","Alias/name matches","Matched with future programme data"]:
         out[k]=num(s,k)
-    # Current EPG report format records coverage as:
-    # "Actual current/future coverage among mapped: 129/167 (77.2%)"
-    m=re.search(r'Actual current/future coverage among mapped:\s*\*\*(\d+)/(\d+)\s*\((\d+(?:\.\d+)?)%\)\*\*',s)
+    m=re.search(r'Current/future programme coverage:\s*\*\*(\d+)/(\d+)\s*\((\d+(?:\.\d+)?)%\)\*\*',s,re.I)
     if m:
         out["EPG live mapped"]=int(m.group(1))
         out["EPG mapped"]=int(m.group(2))
         out["EPG coverage pct"]=float(m.group(3))
         out["EPG missing mapped"]=int(m.group(2))-int(m.group(1))
+    if "EPG live mapped" not in out:
+        m=re.search(r'Actual current/future coverage among mapped:\s*\*\*(\d+)/(\d+)\s*\((\d+(?:\.\d+)?)%\)\*\*',s,re.I)
+        if m:
+            out["EPG live mapped"]=int(m.group(1))
+            out["EPG mapped"]=int(m.group(2))
+            out["EPG coverage pct"]=float(m.group(3))
+            out["EPG missing mapped"]=int(m.group(2))-int(m.group(1))
     return out
+
+def report_timestamp(path):
+    if not path.exists(): return "not available"
+    s=path.read_text(encoding="utf-8")
+    for pattern in [r'(?:Last checked|Generated|Last generated):\s*\*\*([^*]+)\*\*',r'(?:Last checked|Generated):\s*([^\n]+)']:
+        m=re.search(pattern,s,re.I)
+        if m: return m.group(1).strip()
+    return "not available"
+
 def svg_text(x,y,text,size=15,bold=False):
     esc=html.escape(str(text))
     weight="700" if bold else "400"
@@ -71,7 +85,7 @@ def make_svg(total,channels,bangla,india,backup,logos,epg_match,epg_missing,heal
               svg_text(58,435,"Operational status",18,True),
               svg_text(58,468,f"EPG missing: {epg_missing}",15),
               svg_text(58,496,f"Stream health: {healthy}/{checked} reachable",15),
-              svg_text(58,524,f"Generated: {datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")}",13),
+              svg_text(58,524,f"Generated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}",13),
               '</svg>']
     return "".join(parts)
 def main():
@@ -81,7 +95,7 @@ def main():
     bangla=groups.get("Bangladesh",0)
     india=sum(v for k,v in groups.items() if k.startswith("Indian "))
     backup=groups.get("Backup",0)
-    logos=100 if total and all(x[3].startswith("https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/") and x[3].lower().endswith(".png") for x in e) else 0
+    logos=round(100*sum(1 for x in e if x[3].lower().startswith("https://raw.githubusercontent.com/saeidrahmanbd/bdix-iptv/") and "/logos/" in x[3].lower() and x[3].lower().endswith(".png"))/total,1) if total else 0
     epg_matched=g.get("EPG live mapped",g.get("EPG matched",0))
     epg_mapped=g.get("EPG mapped",0)
     epg_missing=g.get("EPG missing mapped",g.get("EPG missing",0))
@@ -112,7 +126,15 @@ _Last generated: **{now}**_
 - EPG missing: **{epg_missing}**
 - Repeated-failure stream candidates: **{h.get("Repeated-failure candidates (>= 3 runs)",0)}**
 
-This file is generated automatically. It is safe for the Wiki to display as a live dashboard source.
+## Data Freshness
+
+| Source | Last generated / checked |
+|---|---|
+| Playlist audit | **{report_timestamp(AUDIT)}** |
+| Stream health | **{report_timestamp(HEALTH)}** |
+| EPG coverage | **{report_timestamp(EPG)}** |
+
+This dashboard is a generated repository snapshot. Stream Health and EPG figures come from their latest completed audit reports; it is not a browser-side live stream probe.
 """
     OUT_MD.write_text(md,encoding="utf-8")
     OUT_SVG.write_text(make_svg(total,channels,bangla,india,backup,logos,epg_pct,epg_missing,h),encoding="utf-8")
