@@ -8,6 +8,7 @@ PLAYLIST_URL="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPT
 EPG_URLS=[
  "https://epg.pw/xmltv/epg_IN.xml",
  "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
+  "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
  "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
  "https://iptv-epg.org/files/epg-in.xml",
 ]
