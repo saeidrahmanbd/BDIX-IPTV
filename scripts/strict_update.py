@@ -253,17 +253,17 @@ REPORT.write_text("\n".join([
     f"Generated: {datetime.now(timezone.utc).isoformat(timespec='seconds')}", "",
     "## Policy",
     "- Existing categories are locked.",
-    "- The locked categories are never used for automatic new-channel additions.
-    - New channel candidates are automatically placed only in the "New Channels" category at the bottom.",
+    '- The locked categories are never used for automatic new-channel additions.',
+    '- New channel candidates are automatically placed only in the "New Channels" category at the bottom.',
     "- Only alternate streams whose playlist identity matches an existing channel ID are allowed.",
-    '- Accepted alternate streams are placed in the existing "Backup" category.
-- The locked categories are: Bangladesh, Indian Bangla, Indian Movies, Indian Music, Indian Entertainment, International, Documentary & Wildlife, Kids, Religious, Sports, Backup, Not Playing.', "",
+    '- Accepted alternate streams are placed in the existing "Backup" category.',
+    "- The locked categories are: Bangladesh, Indian Bangla, Indian Movies, Indian Music, Indian Entertainment, International, Documentary & Wildlife, Kids, Religious, Sports, Backup, Not Playing.", "",
     f"Added backup streams: {len(added)}",
     f"Added new channels: {len(new_channels)}",
     f"New-channel candidates processed: {new_channel_candidates}",
     f"Rejected candidates: {rejected}",
     f"Unreachable candidates: {unreachable}",
     f"Source errors: {source_errors}",
-]), encoding="utf-8")
+]), encoding="utf-8"))
 
 print(f"Playlist update: backups_added={len(added)}, new_channels_added={len(new_channels)}, new_channel_candidates={new_channel_candidates}, rejected={rejected}, unreachable={unreachable}, source_errors={source_errors}")
