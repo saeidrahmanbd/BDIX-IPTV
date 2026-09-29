@@ -1,16 +1,16 @@
 # Live Project Dashboard
 
-_Last generated: **2026-09-29 06:11 UTC**_
+_Last generated: **2026-09-29 06:49 UTC**_
 
 | Metric | Current |
 |---|---:|
-| 📺 Streams | **870** |
-| 📡 Channels | **605** |
+| 📺 Streams | **840** |
+| 📡 Channels | **604** |
 | 🇧🇩 Bangladesh | **52** |
-| 🇮🇳 India | **221** |
-| 🔁 Backup Streams | **368** |
+| 🇮🇳 India | **220** |
+| 🔁 Backup Streams | **351** |
 | 🖼️ Logos | **100%** |
-| 📅 EPG Coverage | **84%** |
+| 📅 EPG Coverage | **0%** |
 | 🟢 Stream Health | **99%** |
 
 ## Quality Controls
@@ -19,7 +19,7 @@ _Last generated: **2026-09-29 06:11 UTC**_
 - Metadata conflicts: **0**
 - Same-name collisions: **32**
 - Cross-country Backup collisions: **0**
-- EPG missing: **27**
+- EPG missing: **0**
 - Repeated-failure stream candidates: **1**
 
 This file is generated automatically. It is safe for the Wiki to display as a live dashboard source.
