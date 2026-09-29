@@ -208,12 +208,15 @@ try:
     old = subprocess.check_output(["git", "show", "HEAD:IPTV-Playlist.m3u"], text=True, stderr=subprocess.DEVNULL)
     old_primary = Counter()
     new_primary = Counter()
+    new_not_playing = Counter()
 
+    # A primary entry is protected against silent removal or URL/identity
+    # changes. Moving the exact same entry to Not Playing is intentional
+    # quarantine behavior and is not a destructive change.
     def stable(info, url):
         a = attrs(info)
         return (
             (a.get("tvg-id") or a.get("channel-id") or "").strip().lower(),
-            a.get("group-title", "").strip(),
             display_name(info).strip(),
             url.strip(),
         )
@@ -221,13 +224,18 @@ try:
     for info, url in parse(old):
         if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS:
             old_primary[stable(info, url)] += 1
+
     for info, url in entries:
-        if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS:
-            new_primary[stable(info, url)] += 1
+        group = attrs(info).get("group-title", "").strip()
+        key = stable(info, url)
+        if group not in PRIMARY_EXCEPTIONS:
+            new_primary[key] += 1
+        elif group == "Not Playing":
+            new_not_playing[key] += 1
 
     for key, count in old_primary.items():
-        if new_primary[key] < count:
-            cid, group, name, url = key
+        if new_primary[key] + new_not_playing[key] < count:
+            cid, name, url = key
             protected_changes.append((cid, name, "primary entry removed or changed"))
 except Exception:
     pass
