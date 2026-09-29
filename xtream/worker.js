@@ -206,10 +206,21 @@ function epgKeyVariants(id,name){
   for(const x of epgNameAliases(name)) v.add(x);
   return [...v].filter(Boolean);
 }
+function normalizeEpgId(s){
+  return String(s??"").toLowerCase().replace(/@(?:sd|hd|uhd|fhd)$/i,"").replace(/[^a-z0-9]+/g,"");
+}
 function findEpgPrograms(epg,entry){
-  for(const key of epgKeyVariants(entry.tvgId,entry.name)){
+  const variants=epgKeyVariants(entry.tvgId,entry.name);
+  for(const key of variants){
     const programs=epg.byId.get(key);
     if(programs?.length) return programs;
+  }
+  // EPGShare uses punctuation-heavy IDs such as Star.Jalsha.in and Zee.Bangla.in,
+  // while the playlist often uses StarJalsha.in and ZeeBangla.in. Match those
+  // equivalent IDs before falling back to display-name matching.
+  const normalizedVariants=new Set(variants.map(normalizeEpgId).filter(Boolean));
+  for(const [id,programs] of epg.byId){
+    if(programs?.length && normalizedVariants.has(normalizeEpgId(id))) return programs;
   }
   for(const alias of epgNameAliases(entry.name)){
     const ids=epg.nameToIds.get(alias)||[];
