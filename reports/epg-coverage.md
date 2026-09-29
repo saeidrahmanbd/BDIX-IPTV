@@ -1,6 +1,6 @@
 # EPG Coverage Report
 
-Generated: **2026-09-29T05:34:23+00:00**
+Generated: **2026-09-29T05:48:15+00:00**
 
 This report checks mapped India EPG channels against actual downloaded XMLTV programme rows. LIVE EPG means at least one programme is current/future. EPG FOUND means rows exist but no current/future row was detected. NO PROGRAMME DATA means the mapped guide ID exists but produced no programme rows. NO GUIDE HIT means the mapped ID was absent from the downloaded guide.
 
@@ -39,23 +39,23 @@ This report checks mapped India EPG channels against actual downloaded XMLTV pro
 | Documentary & Wildlife | TLC | `TLC.in` | `TLC.in@HD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 239 |
 | Documentary & Wildlife | Travelxp Hindi | `Travelxp.in` | `Travelxp.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 195 |
 | Indian Bangla | Alankar TV | `AlankarTV.in` | `AlankarTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 25 |
-| Indian Bangla | Colors Bangla | `ColorsBangla.in` | `ColorsBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 186 |
+| Indian Bangla | Colors Bangla | `ColorsBangla.in` | `Colors.Bangla.in` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 98 |
 | Indian Bangla | Colors Bangla Cinema | `ColorsBanglaCinema.in` | `ColorsBanglaCinema.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 65 |
 | Indian Bangla | Colors Bangla HD | `local.bb3c3114fb20` | `ColorsBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 186 |
 | Indian Bangla | DD Bangla | `DDBangla.in` | `DDBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 212 |
 | Indian Bangla | Dhoom Music Bangla | `DhoomMusic.in` | `DhoomMusic.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 96 |
 | Indian Bangla | Enter10 Bangla | `local.enter-10-bangla` | `Enterr10Bangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 41 |
-| Indian Bangla | Jalsha Movies HD | `local.285a6aa870f3` | `JalshaMovies.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 41 |
+| Indian Bangla | Jalsha Movies HD | `local.285a6aa870f3` | `Star.Jalsha.Movies.in` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 41 |
 | Indian Bangla | Rongeen TV | `RongeenTV.in` | `RongeenTV.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 192 |
 | Indian Bangla | Ruposhi Bangla | `RupasiBangla.in` | `RupasiBangla.in@SD | RUPASI.BANGLA.in` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 29 |
 | Indian Bangla | SUN BANGLA | `SunBangla.in` | `SunBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 35 |
 | Indian Bangla | Sangeet Bangla | `SangeetBangla.in` | `SangeetBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 145 |
-| Indian Bangla | Sony AATH | `SonyAath.in` | `SonyAath.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 118 |
-| Indian Bangla | Star Jalsha | `StarJalsha.in` | `StarJalsha.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 142 |
+| Indian Bangla | Sony AATH | `SonyAath.in` | `Sony.Aath.in` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 41 |
+| Indian Bangla | Star Jalsha | `StarJalsha.in` | `Star.Jalsha.in` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 142 |
 | Indian Bangla | ZB Cinema | `ZBCinema.in` | `ZeeBanglaCinema.in@SD | ZeeBanglaSonar.in@SD | ZEE.BANGLA.CINEMA.in` | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 13 |
 | Indian Bangla | Zee 24 Ghanta | `local.zee-24-ghanta` | `Zee24Ghanta.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 532 |
-| Indian Bangla | Zee Bangla | `ZeeBangla.in` | `ZeeBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 449 |
-| Indian Bangla | Zee Bangla HD | `local.072484feec7e` | `ZeeBangla.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 449 |
+| Indian Bangla | Zee Bangla | `ZeeBangla.in` | `Zee.Bangla.in` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 449 |
+| Indian Bangla | Zee Bangla HD | `local.072484feec7e` | `Zee.Bangla.in` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 449 |
 | Indian Entertainment | Amrita TV | `AmritaTV.in` | `AmritaTV.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 49 |
 | Indian Entertainment | Anand TV | `AnandTV.in` | `AnandTV.in@SD` | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | LIVE EPG | 96 |
 | Indian Entertainment | Big Magic | `BigMagic.in` | `BigMagic.in@SD` | https://epg.pw/xmltv/epg_IN.xml, https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz, https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | LIVE EPG | 23 |
