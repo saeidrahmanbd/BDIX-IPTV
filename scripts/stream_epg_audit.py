@@ -7,6 +7,8 @@ from pathlib import Path
 PLAYLIST_URL="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u"
 EPG_URLS=[
  "https://epg.pw/xmltv/epg_IN.xml",
+ "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
+ "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
  "https://iptv-epg.org/files/epg-in.xml",
 ]
 UA="BDIX-IPTV-Audit/1.3"
