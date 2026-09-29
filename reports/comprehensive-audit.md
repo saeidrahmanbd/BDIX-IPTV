@@ -8,7 +8,7 @@ Static playlist structure, metadata, duplicate streams/IDs, local logo integrity
 
 ## Current Playlist Snapshot
 
-- Playlist entries: **870**
+- Playlist entries: **840**
 - Bangladesh: **52**
 - Indian Bangla: **37**
 - Indian Movies: **54**
@@ -19,8 +19,8 @@ Static playlist structure, metadata, duplicate streams/IDs, local logo integrity
 - Kids: **48**
 - Religious: **18**
 - Sports: **27**
-- Backup: **368**
-- Not Playing: **17**
+- Backup: **351**
+- Not Playing: **5**
 
 ## Static Integrity
 
@@ -89,25 +89,39 @@ Xtream deployment remains triggered by `xtream/**` changes because playlist chan
 
 ## Improvements Applied During This Audit
 
-1. **Fixed broken EPG coverage script**
-   - The previous `norm_id()` implementation had a truncated Python string and caused workflow failure.
-   - Replaced it with a complete, validated implementation.
+1. **Failed streams moved to Backup**
+   - The 13 currently active entries from the latest HTTP-error/Invalid-HLS/repeated-failure set were moved into `Backup`.
+   - **SA TV [Backup 1]** was already in `Backup`, so it was not duplicated.
+   - The repeated-failure **ETV Cinema** is the same stream already counted among Invalid HLS; it was therefore not double-counted.
+   - Backup entries no longer receive automatic quarantine into `Not Playing`.
 
-2. **Changed EPG validation semantics**
-   - A channel is now counted as covered only when its matched guide has at least one current/future programme row.
-   - A guide containing only a channel ID is reported separately.
+2. **Backup pruning**
+   - Removed redundant backup streams using exact/base-URL deduplication and a maximum of **3 distinct backup streams per channel**.
+   - Preference was given to HTTPS, non-expiring URLs without query-string credentials, and distinct hosts.
+   - Backup count is now **351**, across **233** channel groups.
+   - Maximum backups for any channel is now **3**.
 
-3. **Expanded EPG source coverage**
-   - Added IN4 alongside IN1.
-   - Added iptv-epg.org and epg.pw as additional sources.
-   - Removed known unavailable iptv-org guide endpoints from the active coverage list.
+3. **EPG mapping**
+   - Added **16 safe canonical India EPG mappings** for channels previously in the no-guide set, including DD regional services, Epic Bharat/Bhojpuri, Manoranjan Prime, Sana TV, Shemaroo Josh, Subin TV, Roja Movies and Zee Bangla Sonar.
+   - Ambiguous mappings were deliberately rejected rather than assigning the wrong channel's EPG.
+   - The remaining no-guide channels are mostly channels for which the current India guide catalog has no safe canonical match or whose regional/foreign identity makes an India mapping unsafe.
+   - The live programme-row audit is still the authority for whether a mapped ID actually has current/future programmes.
 
-4. **Improved Xtream EPG aggregation**
-   - Added IN4 and iptv-epg.org to the Worker EPG source list.
+4. **EPG Worker**
+   - Removed a duplicate IN4 source entry.
+   - Added the same safe aliases to the Xtream Worker.
+   - The Worker deployment completed successfully.
 
-5. **Logo lifecycle**
-   - Missing logos are resolved in this order: active `logos/` → `logos/unused/` restore → external source.
-   - Playlist changes automatically trigger the logo workflow.
+5. **Playlist integrity after changes**
+   - Duplicate stream URLs: **0**
+   - Duplicate active IDs: **0**
+   - Duplicate active channel numbers: **0**
+   - Missing required metadata: **0**
+   - External logo references: **0**
+
+6. **Quarantine policy improvement**
+   - Updated `scripts/quarantine_streams.py` so streams already in `Backup` are never automatically moved to `Not Playing` solely because a later health check fails.
+   - This preserves the requested Primary → Backup → Not Playing separation.
 
 ## Remaining Items
 
