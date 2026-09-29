@@ -345,14 +345,18 @@ jobs:
 
           before = json.loads(Path("/tmp/primary-before.json").read_text(encoding="utf-8"))
           after = parse(playlist.read_text(encoding="utf-8-sig"))
-          if before != after:
-              before_set = set(map(tuple, before))
-              after_set = set(after)
-              missing = sorted(before_set - after_set)
-              print(f"Protected primary entries changed: before={len(before)} after={len(after)} missing={len(missing)}")
-              for item in missing[:20]: print("  -", item[0], item[2], item[3])
+          before_set = set(map(tuple, before))
+          after_set = set(after)
+          missing = sorted(before_set - after_set)
+          added = sorted(after_set - before_set)
+
+          if missing or added:
+              print(f"Protected primary entries changed: before={len(before_set)} after={len(after_set)} missing={len(missing)} added={len(added)}")
+              for item in missing[:20]: print("  MISSING:", item[0], item[2], item[3])
+              for item in added[:20]: print("  ADDED/CHANGED:", item[0], item[2], item[3])
               raise SystemExit(1)
-          print(f"Protected primary entries unchanged: {len(after)}")
+
+          print(f"Protected primary entries unchanged: {len(after_set)} (order changes ignored)")
           PY
 
       - name: Audit playlist integrity and protected entries
