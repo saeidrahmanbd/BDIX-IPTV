@@ -52,7 +52,13 @@ def identity_root(cid):
     return re.sub(r"\.[a-z]{2}$", "", base_id(cid))
 
 def country_code(cid):
-    m = re.search(r"\.([a-z]{2})$", base_id(cid))
+    base = base_id(cid)
+    # Custom identities such as custom.bangla.tv are internal IDs, not
+    # country-qualified channel IDs. Do not interpret their final label
+    # (e.g. ".tv") as an ISO country code.
+    if base.startswith("custom."):
+        return ""
+    m = re.search(r"\.([a-z]{2})$", base)
     return m.group(1).lower() if m else ""
 
 def normalized_name(name):
