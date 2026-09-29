@@ -45,3 +45,5 @@ jobs:
           git add IPTV-Playlist.m3u logos/ reports/playlist-audit.md
           git commit -m "Repair external channel logos"
           git push origin HEAD:main
+
+# Trigger logo repair after verified external-logo mappings.
