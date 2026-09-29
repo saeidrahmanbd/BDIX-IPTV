@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Backup-only playlist updater. Existing channels/categories are locked."""
+"""Locked-category playlist updater with Backup and New Channels discovery."""
 import re
 import urllib.request
 from datetime import datetime, timezone
@@ -104,6 +104,11 @@ def force_group(info, group):
         raise ValueError("Candidate stream has no tvg-id/channel-id; refusing to add it.")
     info = set_attr(info, "tvg-name", display)
     info = set_attr(info, "channel-id", cid)
+    # New Channels are discovery-only entries, so never inherit a primary
+    # channel number from the source. They will receive a number only after
+    # manual review/placement into a locked primary category.
+    if group == NEW_CHANNELS:
+        info = re.sub(r'\s+tvg-chno="[^"]*"', "", info)
     info = re.sub(r'\s+group-title="[^"]*"', "", info)
     return info.replace(",", f' group-title="{group}",', 1)
 
