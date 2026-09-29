@@ -1,13 +1,13 @@
 # Live Project Dashboard
 
-_Last generated: **2026-09-29 13:31 UTC**_
+_Last generated: **2026-09-29 13:32 UTC**_
 
 | Metric | Current |
 |---|---:|
 | 📺 Streams | **849** |
 | 📡 Channels | **628** |
 | 🇧🇩 Bangladesh | **51** |
-| 🇮🇳 India | **218** |
+| 🇮🇳 India | **217** |
 | 🔁 Backup Streams | **324** |
 | 🖼️ Logos | **95.6%** |
 | 📅 EPG Coverage | **62%** |
