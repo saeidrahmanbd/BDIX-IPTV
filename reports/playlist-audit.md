@@ -144,7 +144,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### ddbharati.in (3 streams)
 - DD Bharati — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/67cec794d8b14f9ba21f73924ac65797/index.m3u8
 - DD Bharati — Backup — https://cdn.pishow.tv/ott/live/10/master.m3u8
-- DD Bharati — Backup — https://www.youtube.com/@ddbharati/live
+- DD Bharati — Not Playing — https://www.youtube.com/@ddbharati/live
 ### ddchandana.in (2 streams)
 - DD Chandana — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/0c980455d2fb4b69bcc6235745ee6039/index.m3u8
 - DD Chandana — Backup — https://cdn.pishow.tv/ott/live/28/master.m3u8
@@ -156,7 +156,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - DD Kashir — Backup — https://cdn.pishow.tv/ott/live/16/master.m3u8
 ### ddnational.in (2 streams)
 - DD National — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/40492a64c1db4a1385ba1a397d357d3a/index.m3u8
-- DD National — Backup — https://www.youtube.com/doordarshan/live
+- DD National — Not Playing — https://www.youtube.com/doordarshan/live
 ### ddodia.in (2 streams)
 - DD Odia — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/ef4ea632b77a480ebd77106968aa99a9/index.m3u8
 - DD Odia — Backup — https://mumbai-edge.smartplaytv.in/ddodiya/index.m3u8
@@ -166,7 +166,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### ddurdu.in (3 streams)
 - DD Urdu — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/9b91e9007e754db39a8b32c6bfc5b24a/index.m3u8
 - DD Urdu — Backup — https://cdn.pishow.tv/ott/live/8/master.m3u8
-- DD Urdu — Backup — https://www.youtube.com/@DDUrdu/live
+- DD Urdu — Not Playing — https://www.youtube.com/@DDUrdu/live
 ### deeptotv.bd (2 streams)
 - Deepto TV — Bangladesh — https://byphdgllyk.gpcdn.net/hls/deeptotv/0_1/index.m3u8
 - Deepto TV — Backup — https://byphdgllyk.gpcdn.net/hls/DeeptoTV/index.m3u8
@@ -371,8 +371,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Movie Bangla — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/moviebanglalink2.stream/tracks-v1a1/mono.m3u8
 ### musicindia.in (3 streams)
 - Music India — Indian Music — https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8
-- Music India — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Musicindia2/default/main.mpd
 - Music India — Backup — https://cdn.pishow.tv/ott/live/226/master.m3u8
+- Music India — Not Playing — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Musicindia2/default/main.mpd
 ### mytv.bd (3 streams)
 - My TV — Bangladesh — https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8
 - My TV — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8
@@ -448,8 +448,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Sananda — Backup — https://live.sanandatelevision.in/sananda/tracks-v1a1/mono.m3u8
 - Sananda — Backup — https://iptvlive.ahmed-bd-org.workers.dev/sananda-tv-1/index.m3u8
 ### sanaplus.in (2 streams)
-- Sana Plus — Indian Music — https://mumbai-edge.smartplaytv.in/SanaPlusHD/index.m3u8
-- Sana Plus — Backup — https://galaxyott.live/hls/sanaplus.m3u8
+- Sana Plus — Not Playing — https://mumbai-edge.smartplaytv.in/SanaPlusHD/index.m3u8
+- Sana Plus — Not Playing — https://galaxyott.live/hls/sanaplus.m3u8
 ### sangeetbangla.in (2 streams)
 - Sangeet Bangla — Indian Bangla — https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/index.m3u8
 - Sangeet Bangla — Backup — https://cdn.pishow.tv/ott/live/1143/master.m3u8
@@ -457,9 +457,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - SA TV — Bangladesh — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-1/index.m3u8
 - SA TV — Backup — https://tvsen6.aynaott.com/rELXiuUXqbgzPb06Npom/index.m3u8
 - SA TV — Backup — http://116.204.149.16/satv/index.m3u8
-- SA TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/satvoff5666.stream/playlist.m3u8
 - SA TV — Backup — https://tvsen6.aynaott.com/rELXiuUXqbgzPb06Npom/index.m3u8?e=1784102564&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=ed25297bf867135d78cb6ad3e1c2b495
 - SA TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-2/index.m3u8
+- SA TV — Not Playing — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/satvoff5666.stream/playlist.m3u8
 ### shansontv.ru (2 streams)
 - Shanson TV — Backup — http://catchup.videoline.ru/shanson/index.m3u8
 - Shanson TV — Backup — https://streaming.thestream.cyou/live/7009.m3u8
