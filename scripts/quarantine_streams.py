@@ -8,7 +8,7 @@ PLAYLIST=Path("IPTV-Playlist.m3u")
 HEALTH=Path("reports/stream-health-state.json")
 REPORT=Path("reports/not-playing-quarantine.md")
 ATTR_RE=re.compile(r'([\w-]+)="([^"]*)"')
-BAD_STATUS={"Timeout","HTTP error","Invalid HLS"}
+FAILURE_THRESHOLD=3
 BAD_EXT={".mpd",".mp3",".aac",".m4a",".ogg",".oga",".wav",".flac",".opus",".webm",".mp4",".mkv",".avi",".mov"}
 BAD_HOST={"youtube.com","www.youtube.com","m.youtube.com","youtu.be","www.youtu.be"}
 
@@ -64,8 +64,14 @@ def main():
         if group in {'Not Playing','Backup'}: kept.append(b); continue
         reason=nonstandard(url)
         if not reason and url:
-            status=str(state.get(url.lower(),{}).get('status','')).strip()
-            if status in BAD_STATUS: reason=status
+            entry=state.get(url.lower(),{})
+            status=str(entry.get('status','')).strip()
+            streak=int(entry.get('failure_streak',0) or 0)
+            # A single GitHub-runner failure is not enough to quarantine a stream.
+            # Providers may reject/geo-filter the runner while the stream remains
+            # playable for real IPTV clients. Require consecutive failures.
+            if status in {'Timeout','HTTP error','Invalid HLS','Connection error','Segment/variant error','Segment error'} and streak >= FAILURE_THRESHOLD:
+                reason=f'{status} after {streak} consecutive health failures'
         if reason:
             b=list(b); b[0]=group_set(b[0],'Not Playing')
             moved.append((a.get('tvg-name') or b[0].rsplit(',',1)[-1].strip(),a.get('tvg-id') or a.get('channel-id') or '',group,reason,url,b))
@@ -76,7 +82,7 @@ def main():
     new='\n'.join(out).rstrip()+'\n'
     old=PLAYLIST.read_text(encoding='utf-8-sig').replace('\r','')
     if new!=old: PLAYLIST.write_text(new,encoding='utf-8',newline='\n')
-    lines=['# Not Playing Quarantine','','Automatically moved non-standard streams and streams whose latest health status is Timeout, HTTP error, or Invalid HLS.','','## Moved Streams','']
+    lines=['# Not Playing Quarantine','','Automatically moved non-standard streams and streams with at least 3 consecutive health-check failures.','','## Moved Streams','']
     lines += (['- **'+n+'** ['+cid+'] — '+g+' → Not Playing — '+r+' — '+u for n,cid,g,r,u,_ in moved] or ['None.'])
     REPORT.parent.mkdir(parents=True,exist_ok=True); REPORT.write_text('\n'.join(lines)+'\n',encoding='utf-8')
     print('Quarantine moved:',len(moved))
