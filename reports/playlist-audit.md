@@ -13,7 +13,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **2**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **37**
+- Logo exceptions: **0**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Suspicious URL credentials/syntax: **0**
@@ -560,52 +560,15 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **814**
+- Healthy/local references: **851**
 - missing: **0**
 - broken-local: **0**
-- external: **37**
+- external: **0**
 - non-png: **0**
 - invalid-dimensions: **0**
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
-- external — Ekamra Bharat Odia [ekamrabharatodia.in@sd] — https://jiotv.catchup.cdn.jio.com/dare_images/images/Ekamra_Bharat_Odia.png
-- external — AXN Black Czech Republic [axnblack.us@czechrepublic] — https://i.imgur.com/Peo1QiZ.png
-- external — AXN Black Poland [axnblack.us@poland] — https://i.imgur.com/Peo1QiZ.png
-- external — AXN CEE [axncee.es@hungary] — https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png
-- external — AXN Latin America [axnlatinamerica.us@centralamerica] — https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png
-- external — FilmBox [filmbox.nl@netherlands] — https://i.imgur.com/VyaslIY.png
-- external — MBC+ Drama [mbcplusdrama.sa@sd] — https://i.imgur.com/lxWdjXG.png
-- external — Movies Thriller [moviesthriller.sa@sd] — https://i.imgur.com/JWihdcl.png
-- external — Music Box Hits [musicboxhits.cz@sd] — https://musicboxhits.com/music_box_hits_logo.png
-- external — Sony One Favoris [sonyonefavoris.fr@hd] — https://i.imgur.com/RO4AM4b.png
-- external — Sony One Hits Action [sonyonehitsaction.fr@hd] — https://i.imgur.com/pXsZEsR.png
-- external — Sony One Hits Comedie [sonyonehitscomedie.fr@hd] — https://i.imgur.com/8sHuxxS.png
-- external — PBS Kids [pbskids.us@sd] — https://i.imgur.com/q4cUQKW.png
-- external — Bahrain Sports 2 [bahrainsports2.bh@sd] — https://i.imgur.com/ZkuZmIo.png
-- external — Cricket Gold [cricketgold.au@sd] — https://resources.cricket-australia.pulselive.com/cricket-australia/photo/2025/07/25/836eddae-4329-4542-ad17-dcd37e9d951a/Cricket-Gold-1920x1080_noBG.png
-- external — FITE 24/7 [fite247.us@sd] — https://i.imgur.com/ESV6qgH.png
-- external — Marquee Sports Network [marqueesportsnetwork.us] — https://s3.aynaott.com/storage/66bdaa21aba96de6d32a3515715f7502
-- external — PGA Tour [pgatour.us@sd] — https://i.imgur.com/J0TY9dG.png
-- external — Real Madrid TV English [realmadridtvenglish.es@sd] — https://i.imgur.com/5pMo7dL.png
-- external — Red Bull TV [redbulltv.at@eumena] — https://images.pluto.tv/channels/5e7cb84a172a0f0007da69e4/colorLogoPNG.png
-- external — talkSPORT [talksport.uk@sd] — https://upload.wikimedia.org/wikipedia/en/9/9d/Talksport_logo.png
-- external — Wild TV [wildtv.ca@sd] — https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Wild_TV_logo_2020.png/960px-Wild_TV_logo_2020.png
-- external — ADITHYA TV [adithyatv.in@sd] — http://103.176.90.118/picons/logos/logos/ADITHYA.png
-- external — Ekamra Cinema [ekamracinema.in@sd] — http://jiotv.catchup.cdn.jio.com/dare_images/images/Ekamra_Cinema.png
-- external — Ekamra Manoranjan [ekamramanoranjan.in@sd] — http://jiotv.catchup.cdn.jio.com/dare_images/images/Ekamra_Manoranjan.png
-- external — Ekamra Musiq [ekamramusiq.in@sd] — http://jiotv.catchup.cdn.jio.com/dare_images/images/Ekamra_Music.png
-- external — Ekamra Nilach akra [ekamranilachakra.in@sd] — http://jiotv.catchup.cdn.jio.com/dare_images/images/Ekamra_Nilach_akra.png
-- external — Jatra Ekamra [jatraekamra.in@sd] — http://jiotv.catchup.cdn.jio.com/dare_images/images/Jatra_Ekamra.png
-- external — Jaya Max [jayamax.in@sd] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_JAYA_MAX/images/LOGO_HD/image.png
-- external — Jaya TV [jayatv.in@hd] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_JAYA_TV/images/LOGO_HD/image.png
-- external — Movies Now HD [moviesnow.in@hd] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MOVIES_NOW/images/LOGO_HD/image.png
-- external — Sangeet Bhojpuri [sangeetbhojpuri.in@sd] — https://dtil.tmsimg.com/assets/s143757_ld_h15_aa.png?lock=720x540
-- external — Star Channel [starchannel.bg@sd] — https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Star_Channel_2020.svg/960px-Star_Channel_2020.svg.png
-- external — Star Suvarna HD [starsuvarna.in@hd] — http://smumcdnems03.cdnsrv.jio.com/mumsite.cdnsrv.jio.com/jiotv.catchup.cdn.jio.com/dare_images/images/Suvarna.png
-- external — Udaya Movies [udayamovies.in@sd] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_UDAYA_MOVIES/images/LOGO_HD/image.png
-- external — Zee Biskope [zeebiskope.in@sd] — https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_BISKOPE/images/LOGO_HD/LOGO_HD_image.png
-- external — ZEE SARTHAK [zeesarthak.in@sd] — http://103.176.90.118/picons/logos/logos/ZEE-SARTHAK.png
 - multiple-logo-references — enterr10bangla.in@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr-10-bangla-720p-647a1940bb.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png
 - multiple-logo-references — zee.bangla.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-hd.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla.png
 
