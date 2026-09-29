@@ -4,8 +4,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Summary
 
-- Playlist entries: **863**
-- Unique channel IDs: **604**
+- Playlist entries: **870**
+- Unique channel IDs: **605**
 - IDs with multiple streams: **136**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -222,9 +222,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - G TV — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/gazibdz.stream/live-orgin/gazibdz.stream/playlist.m3u8
 - G TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/gazibdz.stream/tracks-v1a1/mono.m3u8
 - G TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/g-tv-1/index.m3u8
-### globaltv.bd (5 streams)
+### globaltv.bd (6 streams)
 - Global TV — Bangladesh — http://116.204.149.16/globaltv/tracks-v1a1/mono.m3u8
 - Global TV — Backup — https://stream.ottplus.live/live/global_tv_abr/index.m3u8
+- Global TV — Backup — http://116.204.149.16/globaltv/index.m3u8
 - Global TV — Backup — https://tvsen6.aynaott.com/y0q9eFAuquAtvTxRzUHq/index.m3u8
 - Global TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/Global-tv.stream/playlist.m3u8
 - Global TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/Global-tv.stream/index.m3u8
@@ -305,8 +306,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - ATN News — Backup — https://iptvlive.ahmed-bd-org.workers.dev/atn-news-1/index.m3u8
 - ATN News — Backup — https://iptvlive.ahmed-bd-org.workers.dev/atn-news-2/index.m3u8
 - ATN News — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/atn-news/index.m3u8
-### local.bangla-tv (2 streams)
+### local.bangla-tv (3 streams)
 - Bangla Tv — Backup — https://iptvlive.ahmed-bd-org.workers.dev/bangla-tv-1/index.m3u8
+- Bangla Tv — Backup — http://116.204.149.16/banglatv/index.m3u8
 - Bangla Tv — Backup — https://iptvlive.ahmed-bd-org.workers.dev/bangla-tv-2/index.m3u8
 ### local.channel-s (4 streams)
 - Channel S — Bangladesh — https://app.ncare.live/live-orgin/channels.stream/live-orgin/channels.stream/chunks.m3u8
@@ -321,9 +323,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### local.zee-24-ghanta (2 streams)
 - Zee 24 Ghanta — Indian Bangla — https://d2dsoyvkr33m05.cloudfront.net/index_5.m3u8
 - Zee 24 Ghanta — Backup — https://d2dsoyvkr33m05.cloudfront.net/index_1.m3u8
-### maasrangatv.bd (6 streams)
+### maasrangatv.bd (7 streams)
 - Maasranga TV — Bangladesh — https://mtv.sunplex.live/MAASRANGA/index.m3u8
 - Maasranga TV — Backup — http://tvsen5.aynascope.net/maasrangatv/index.m3u8
+- Maasranga TV — Backup — http://116.204.149.16/maasranga/index.m3u8
 - Maasranga TV — Backup — https://tvsen5.aynaott.com/maasrangatv/index.m3u8
 - Maasranga TV — Backup — http://tvsen5.aynascope.net/maasrangatv/tracks-a1/mono.ts.m3u8
 - Maasranga TV — Backup — https://tvsen6.aynaott.com/maasrangatv/index.m3u8
@@ -430,9 +433,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### rplusgold.in@sd (2 streams)
 - R Plus Gold — Indian Bangla — https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/cf883da3-f9f5-4c70-b0ef-b3ac2e2ad1e3/index.m3u8
 - R Plus Gold — Backup — https://cdn.pishow.tv/ott/live/1231/master.m3u8
-### rtv.bd (3 streams)
+### rtv.bd (4 streams)
 - RTV — Bangladesh — http://tvsen5.aynascope.net/RtvHD/index.m3u8
 - RTV — Backup — https://tvsen5.aynaott.com/RtvHD/index.m3u8
+- RTV — Backup — http://116.204.149.16/rtvhd/index.m3u8
 - RTV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/rtv-sg.stream/index.m3u8
 ### rupasibangla.in (3 streams)
 - Ruposhi Bangla — Indian Bangla — https://mumt05.tangotv.in/87NeALx2RUPASIBANGLA/index.m3u8
@@ -449,9 +453,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### sangeetbangla.in (2 streams)
 - Sangeet Bangla — Indian Bangla — https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/index.m3u8
 - Sangeet Bangla — Backup — https://cdn.pishow.tv/ott/live/1143/master.m3u8
-### satv.bd (5 streams)
+### satv.bd (6 streams)
 - SA TV — Bangladesh — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-1/index.m3u8
 - SA TV — Backup — https://tvsen6.aynaott.com/rELXiuUXqbgzPb06Npom/index.m3u8
+- SA TV — Backup — http://116.204.149.16/satv/index.m3u8
 - SA TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/satvoff5666.stream/playlist.m3u8
 - SA TV — Backup — https://tvsen6.aynaott.com/rELXiuUXqbgzPb06Npom/index.m3u8?e=1784102564&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=ed25297bf867135d78cb6ad3e1c2b495
 - SA TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-2/index.m3u8
@@ -461,10 +466,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### shemaroojosh.in (2 streams)
 - Shemaroo Josh — Indian Entertainment — https://airtelapp.shemaroo.com/shemarooChumbakTV/smil:shemarooChumbakTVadp.smil/playlist.m3u8
 - Shemaroo Josh — Backup — https://mumt04.tangotv.in/m18aqlK4SHEMAROOJOSH/index.m3u8
-### somoynewstv.bd (4 streams)
+### somoynewstv.bd (5 streams)
 - Somoy TV — Bangladesh — https://tvsen5.aynaott.com/somoytv/tracks-v1a1/mono.m3u8
 - Somoy TV — Backup — https://tvsen6.aynaott.com/4XcqdovJzbbC9WdJA9gk/index.m3u8
 - Somoy TV — Backup — https://tvsen5.aynascope.net/somoytv/mono.m3u8
+- Somoy TV — Backup — http://116.204.149.16/somoytv/index.m3u8
 - Somoy TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/somoy-tv-2/index.m3u8
 ### sonyaath.in (2 streams)
 - Sony AATH — Indian Bangla — https://stream.ottplus.live/live/sony_aath_abr/index.m3u8
@@ -609,7 +615,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **863**
+- Healthy/local references: **870**
 - missing: **0**
 - broken-local: **0**
 - external: **0**

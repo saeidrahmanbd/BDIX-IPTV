@@ -4,11 +4,11 @@ This report is generated automatically after playlist updating and logo migratio
 
 ## Summary
 
-- Playlist entries: **863**
+- Playlist entries: **870**
 - Added channels: **0**
 - Removed channels: **0**
 - Logo URL changes: **0**
-- Logo status — local PNG: **863**
+- Logo status — local PNG: **870**
 - Logo status — repository reference: **0**
 - Logo status — external URL: **0**
 - Logo status — missing: **0**
@@ -41,7 +41,7 @@ No missing, broken, or external logo references detected.
 
 | Category | Channels |
 |---|---:|
-| Backup | 369 |
+| Backup | 376 |
 | Bangladesh | 52 |
 | Documentary & Wildlife | 64 |
 | Indian Bangla | 37 |
