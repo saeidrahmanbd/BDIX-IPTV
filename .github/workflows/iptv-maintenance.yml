@@ -60,9 +60,6 @@ jobs:
       - name: Run playlist audit
         run: python scripts/audit_playlist.py
 
-      - name: Generate project dashboard
-        run: python scripts/generate_dashboard.py
-
       - name: Record maintenance history
         shell: bash
         run: |
@@ -98,6 +95,9 @@ jobs:
           path.write_text(json.dumps(history[-180:], indent=2) + '\\n', encoding='utf-8')
           print('Recorded maintenance history:', record)
           PY
+
+      - name: Generate project dashboard
+        run: python scripts/generate_dashboard.py
 
       - name: Commit maintenance changes
         shell: bash
