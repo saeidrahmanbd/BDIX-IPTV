@@ -17,10 +17,23 @@ def attrs(line):
     return dict(x.split("=",1) for x in t[1:] if "=" in x)
 
 def norm(s):
-    s=" ".join(s.lower().split())
-    for l,r in (("(",")"),("[","]")):
-        if s.endswith(r) and l in s: s=s[:s.rfind(l)].strip()
+    # Normalize channel names independently of quality/country/formatting labels.
+    # Remove all parenthesized/bracketed metadata, not just the last suffix.
+    s=unicodedata.normalize("NFKC",s).lower()
+    s=s.replace("_"," ")
+    while True:
+        z=s
+        s=s.replace("("," ").replace(")"," ").replace("["," ").replace("]"," ")
+        # Remove common quality markers that may remain outside brackets.
+        s=" ".join(x for x in s.split() if x not in {
+            "uhd","fhd","hd","sd","4k","1080p","720p","576p","480p","360p","240p"
+        })
+        if s==z: break
     return "".join(c for c in s if c.isalnum() or unicodedata.category(c).startswith("L"))
+
+def base_id(s):
+    # IPTV-org often adds @SD/@HD/etc. to an identity already present locally.
+    return (s or "").strip().lower().split("@",1)[0]
 
 def parse(text):
     ls=text.replace("\r","").splitlines(); out=[]; i=0
@@ -59,7 +72,10 @@ def ext(a,n,g):
 
 def main():
     original=P.read_text(encoding="utf-8-sig"); entries=parse(original)
-    pairs={(norm(n),u) for a,n,u in entries}; names={norm(n) for a,n,u in entries}
+    pairs={(norm(n),u) for a,n,u in entries}
+    names={norm(n) for a,n,u in entries}
+    ids={base_id(a.get("tvg-id") or a.get("channel-id")) for a,n,u in entries
+         if base_id(a.get("tvg-id") or a.get("channel-id"))}
     cand=[]; rejected=0
     for country,src in S:
         try:
@@ -71,12 +87,23 @@ def main():
             if ok(country,a,n,u) and (norm(n),u) not in pairs: cand.append((country,a,n,u))
             elif not ok(country,a,n,u): rejected+=1
     cand.sort(key=lambda x:(x[0]!="Bangladesh",norm(x[2]),x[3]))
-    new=[]; backups=[]; planned=set(names); seen=set(pairs)
+    new=[]; backups=[]; planned_names=set(names); planned_ids=set(ids); seen=set(pairs)
     for c,a,n,u in cand:
         pair=(norm(n),u)
-        if pair in seen: continue
-        if norm(n) in planned: backups.append((c,a,n,u))
-        else: new.append((c,a,n,u)); planned.add(norm(n))
+        if pair in seen:
+            continue
+
+        cid=base_id(a.get("tvg-id") or a.get("channel-id"))
+        name_key=norm(n)
+
+        # If the channel identity already exists locally, a different stream
+        # is a backup candidate, never a "New Channel".
+        if name_key in planned_names or (cid and cid in planned_ids):
+            backups.append((c,a,n,u))
+        else:
+            new.append((c,a,n,u))
+            planned_names.add(name_key)
+            if cid: planned_ids.add(cid)
         seen.add(pair)
     new=new[:40]; backups=backups[:80]
     lines=original.replace("\r","").splitlines(); add=[]
