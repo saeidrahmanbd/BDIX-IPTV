@@ -88,7 +88,7 @@ ID_LOGO_MAP = {
     "realmadridtvenglish.es@sd": "https://i.imgur.com/5pMo7dL.png",
     "redbulltv.at@eumena": "https://images.pluto.tv/channels/5e7cb84a172a0f0007da69e4/colorLogoPNG.png",
     "talksport.uk@sd": "https://upload.wikimedia.org/wikipedia/en/9/9d/Talksport_logo.png",
-    "wildtv.ca@sd": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Wild_TV_logo_2020.png/960px-Wild_TV_logo_2020.png",
+    "wildtv.ca@sd": "https://sales.wildtv.ca/hubfs/WildTV%20Media%20Centre%20Packages/WildTV-White-XXL.png?hsLang=en-ca&noresize=",
     "marqueesportsnetwork.us": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Marquee_Sports_Network_Logo.svg/512px-Marquee_Sports_Network_Logo.svg.png",
     "adithyatv.in@sd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ADITHYA_TV/images/LOGO_HD/image.png",
     "zeesarthak.in@sd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_SARTHAK/images/LOGO_HD/LOGO_HD_image.png",
@@ -102,7 +102,7 @@ ID_LOGO_MAP = {
     "jayatv.in@hd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_JAYA_TV/images/LOGO_HD/image.png",
     "moviesnow.in@hd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MOVIES_NOW/images/LOGO_HD/image.png",
     "sangeetbhojpuri.in@sd": "https://dtil.tmsimg.com/assets/s143757_ld_h15_aa.png?lock=720x540",
-    "starchannel.bg@sd": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Star_Channel_2020.svg/960px-Star_Channel_2020.svg.png",
+    "starchannel.bg@sd": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Star_Channel_2023.svg",
     "starsuvarna.in@hd": "http://smumcdnems03.cdnsrv.jio.com/mumsite.cdnsrv.jio.com/jiotv.catchup.cdn.jio.com/dare_images/images/Suvarna.png",
     "udayamovies.in@sd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_UDAYA_MOVIES/images/LOGO_HD/image.png",
     "zeebiskope.in@sd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_BISKOPE/images/LOGO_HD/LOGO_HD_image.png",
@@ -219,8 +219,17 @@ for line in lines:
 
     if logo and is_local(logo):
         if logo.lower().endswith(".png"):
-            output.append(line)
-            continue
+            filename = logo[len(RAW_BASE):].split("?", 1)[0] if logo.startswith(RAW_BASE) else Path(logo).name
+            target = LOGOS / filename
+            if target.is_file():
+                try:
+                    with Image.open(target) as im:
+                        im.verify()
+                    output.append(line)
+                    continue
+                except Exception:
+                    pass
+            # Broken/missing local reference: fall through to ID/name/catalogue repair.
         filename = f"{safe_name(title)}.png"
         target = LOGOS / filename
         replacement = RAW_BASE + filename
