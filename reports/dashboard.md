@@ -1,6 +1,6 @@
 # Live Project Dashboard
 
-_Last generated: **2026-09-30 03:40 UTC**_
+_Last generated: **2026-09-30 03:44 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -17,7 +17,7 @@ _Last generated: **2026-09-30 03:40 UTC**_
 
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
-- Same-name collisions: **37**
+- Same-name collisions: **4**
 - Cross-country Backup collisions: **0**
 - EPG missing: **97**
 - Repeated-failure stream candidates: **2**
