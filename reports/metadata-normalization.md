@@ -1,6 +1,6 @@
 # Playlist Metadata Normalization
 
-- Entries processed: **877**
+- Entries processed: **866**
 - Deterministic IDs generated: **0**
 - channel-id/tvg-id identities synchronized: **0**
 - tvg-name values normalized: **0**

@@ -1,24 +1,24 @@
 # Project Dashboard
 
-_Last generated: **2026-09-30 09:19 UTC**_
+_Last generated: **2026-09-30 09:38 UTC**_
 
 | Metric | Current |
 |---|---:|
-| 📺 Streams | **877** |
-| 📡 Channels | **612** |
+| 📺 Streams | **866** |
+| 📡 Channels | **606** |
 | 🇧🇩 Bangladesh | **54** |
 | 🇮🇳 India | **234** |
 | 🔁 Backup Streams | **322** |
 | 🆕 New Channels | **12** |
-| 🆕 New Backup Streams | **21** |
+| 🆕 New Backup Streams | **10** |
 | 🖼️ Local Logos | **99.9%** |
 | 📅 EPG Coverage | **60%** |
-| ⚠️ Audit Issues | **25** |
+| ⚠️ Audit Issues | **13** |
 
 ## Quality Controls
-- Duplicate stream URLs: **11**
+- Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
-- Same-name / different-ID collisions: **13**
+- Same-name / different-ID collisions: **12**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Logo exceptions: **1**
@@ -28,7 +28,7 @@ _Last generated: **2026-09-30 09:19 UTC**_
 | Source | Last generated |
 |---|---|
 | Playlist audit | **not available** |
-| EPG coverage | **2026-09-30T09:19:14+00:00** |
+| EPG coverage | **2026-09-30T09:38:36+00:00** |
 
 ## Maintenance History
 - Recorded runs retained: **0**

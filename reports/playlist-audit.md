@@ -4,12 +4,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Summary
 
-- Playlist entries: **877**
-- Unique channel IDs: **612**
-- IDs with multiple streams: **160**
-- Duplicate stream URLs: **11**
+- Playlist entries: **866**
+- Unique channel IDs: **606**
+- IDs with multiple streams: **158**
+- Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
-- Same-name / different-ID collisions: **13**
+- Same-name / different-ID collisions: **12**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
@@ -236,10 +236,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Desh TV — Backup — https://stream.ottplus.live/live/desh_tv_abr/index.m3u8
 - Desh TV — Backup — https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8?e=1784102570&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=78b23c868a34420397be9c985d04db9b
 - Desh TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/desh-tv-2/index.m3u8
-### dhoommusic.in@sd (3 streams)
+### dhoommusic.in@sd (2 streams)
 - Dhoom Music Bangla — Indian Bangla — https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8
 - Dhoom Music Bangla — Backup — https://cdn.pishow.tv/ott/live/1456/master.m3u8
-- Dhoom Music Bangla — New Backup — https://cdn.pishow.tv/ott/live/1456/master.m3u8
 ### durontotv.bd (2 streams)
 - Duronto TV — Bangladesh — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/433.ts
 - Duronto TV — Backup — https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8
@@ -315,9 +314,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### inwild.nl (2 streams)
 - INWILD — Documentary & Wildlife — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/ts-eu-w1-n2/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
 - INWILD — Backup — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
-### isaiaruvi.in@sd (2 streams)
-- Isai Aruvi — Indian Music — https://segment.yuppcdn.net/140622/isaiaruvi/playlist.m3u8
-- Isai Aruvi — New Backup — https://segment.yuppcdn.net/140622/isaiaruvi/playlist.m3u8
 ### jagonews24.bd (2 streams)
 - Jago News 24 — Bangladesh — https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8
 - Jago News 24 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/jago-news-24-1/index.m3u8
@@ -425,14 +421,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### pardesitv.ca (2 streams)
 - Pardesi TV — Indian Entertainment — http://stream.pardesitv.online/pardesi/tracks-v1a1/mono.m3u8
 - Pardesi TV — Backup — http://stream.pardesitv.online/pardesi/index.m3u8
-### pepperstv.in@sd (2 streams)
-- Peppers TV — Indian Entertainment — https://cdn.pishow.tv/ott/live/1383/master.m3u8
-- Peppers TV — New Backup — https://cdn.pishow.tv/ott/live/1383/master.m3u8
-### pitaara.in@sd (4 streams)
+### pitaara.in@sd (3 streams)
 - Pitaara TV — Indian Movies — https://d2lk5u59tns74c.cloudfront.net/out/v1/500a6b45f5ae41dda445d912b59eaa09/index.m3u8
 - Pitaara TV — Backup — https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8
 - Pitaara TV — Backup — https://streams.tangotv.in/PITAARA/ORIGIN/index.m3u8
-- Pitaara TV — New Backup — https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8
 ### pop.uk (2 streams)
 - POP — Kids — https://amg01753-narrativeentert-popkids-samsunguk-yjjil.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-popkids-samsunguk/playlist.m3u8
 - POP — Backup — https://rakutenaa-narrative-popkids-rakuten-uwrx0.amagi.tv/ts-eu-w1-n2/playlist/rakutenAA-narrative-popkids-rakuten/cb553d1e726c648b9dd43e6fd4ef41a8dd2406fc087a8d6933fb4b926bc10f41f8eda29ab30fb02b04940fa73f4e380d4d1a9a4ace0362d7b66aa9512a7d127f8adaf471d89c1617b2c11f5d7fe021414efc0e14d025522288a93c019738b3761d5cb95c3a1862cff90bfc7000c7800bda62218ba4dd7c387c0c5e820c5feda643a6fde90e43d038a4e21e1bc72560ddbc139d9773efd59202cd16e92aac50bfa1cabad21aadbcb032fd14dd370656367897944694cc53a4dfe80353f472204f1251f4a69da43f56e146474fc7fac5a9179979aa99378e646de16ae84e8023b578be1ba2e043a9a3bce04b454be2ae1f3575a4e1f9d9f9617ee437fda0a489212d9fbb4d2814cb20dc202a6e94adca40d2931095ec51efde68192bff9c448996b7979dd4e728892e90879ee03c465d5c16169062a19563cf2cd36c97c2122f5b5845aa9f27a0ecbb5b3e3836ecef5fd00024bdde9d8adc0b04d3651a489a06b33f54359b6436078f5cf89e2f53992a0b9c302fc450308945f4ac5e93cdbfb45663e584bf28906eeba635d6f314a06e396616aae2292d20261ec7eb64574513aa44e0c0f5f3631f09e885a594a6016f5661420a56d9888f719f9dff390d1fc521600a30431390078e39885904022b994b9ef85e25d44b7928b7f272595c35959ae58584d39a14ec25afa592382b286667b8250c256becbb8c52f84a22141d5b891d6145b21f000a80e7c8e18abf69cf915ba937700666c9f1034e1b2001097acac13a8f06b3ca48efca9a0498bdd4431ff856d300148defd869eee482c270029fae521515feb940e25603e225fd08d2ae1aaab15115232e545efd8d5bf14bbcd18ef8229e5ecb25672ab220ebc6a6d9b86752f4ae4b232336570271567a297ecbb0a4670f76a2ae26ed48f2ee5bbd541a243a4584c26a2887ec64239f3a7074a0aedfb4aecb1715cd61e67ccc7371c03d6907c0ee69b0f9d883fb837c6b10d5b7b249a99e9f88c8c2c25418610861c2930f0f0db24bf18814deb80e79fdb69ffcca6be51c8852ad8da527f033b2912e6cc4e09cfae848105a4a45c3c2f8f407deb21e370619b1f74f3bad84dda775fcebb23e2bfa5ac186264c8c1b507ec78dfc25e90a99c7180bc6a64a50e45513e0d6a7213fe905f301157cd3faa04d2dc8e22eb26cbadbce2e6dad293fc5667f408d5db4ae926a7cd3a4305552d93c218772b0e2886d75618b975f14125c1f340ed64b7d0dc51f498433bbc5c0924c01ab28a83e1eef608ae37e86912dccd2e5d08fc711448ed52e34d33ec6009a02c9fcaedd198572488b49b23b40a9f6fddde9fbe596e6f63f7839b766be2be957b8e78ab0540f2b5bff2e1a6b0bd53cc42a3f72b5e174c1866c49a7f8d626e2237564233511ec30b5bd12696402a8c75cbcfc4b43404d12c9e22f86329d642aa27656ba1368333e367360a5b6ec3aff08fd5690c65e29c0a4bc8307c68d1effbfa7d79b680fe373076f79bc96aeb0f16014fbb5a8b01449a2ca44b232541c0aa3fb837632e3e40502d987ac55989d42a639172b4ef3ad8f13ec5ea313cb7e7efb1af2de6c4c97c976583a812ca9df7c459949ff0a01e56684406dd91d6753563d867ac7580b602df17283f8fc1a4e748501c96a683cbbe3fe8da83f57220d440f54051271ce412dc5192c4bea132f9b368dc28fec6585ee428d299dfdb38d1521d8c5f0c5922e892fe19290d28ce7b0ae685d481cc8b3c606a42905c4fd69b10cf3fe3406ec17a28b7387405e60c7060763cb9661176182a37d8deb4fb16b8b1ebafa88e1cd6fc8dbb5022bbe5407f552c22990723e574fcd60ad882b27e3aee91ba46d4ef0e5a9bbc4fe41e5f3c126db4da0c79ab0a805aad763294685386e1b742329ec749c3f0e907ef142f95da37d23fb268f455e31e5a99e61f1e35b38447e03d75a92772652d22229293040d7c538a6de867c4771221a55e6da1bd1114dbb225451968722e9d6f7619553d59eb5f650295a7b34fd71385575d06b6f5d16bca7f5c7033bc63aca1e0ab39093e9790a218b9b58bb910461c1f1c626f73dd57de405a670124f089d5d571cbd176d3e631d7e739c4b27ef8ca396a52e2c6364b0cb38015abbf0a149bf386d7a45138130513026/17/1920x1080_5903040/index.m3u8
@@ -599,12 +591,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### zeetv.in@sd (2 streams)
 - Zee TV — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/zee_tv_hd_abr/index.m3u8
 - Zee TV — Backup — https://stream.ottplus.live/live/zee_tv_hd_abr/index.m3u8
-### zoom.in@sd (5 streams)
+### zoom.in@sd (4 streams)
 - Zoom TV — Indian Music — https://pubads.g.doubleclick.net/ssai/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 - Zoom TV — Backup — https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 - Zoom TV — Backup — https://d2esfk1pb9cdob.cloudfront.net/master.m3u8
 - Zoom TV — Backup — https://mumbai-edge.smartplaytv.in/Zoom/index.m3u8
-- Zoom TV — New Backup — https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 
 ## Duplicate Primary Identities
 
@@ -632,7 +623,6 @@ None.
 - **atn bangla** → atnbangla.bd, atnbangla.bd@sd
 - **channel 16** → custom.channel.16, custom.channel.16.2
 - **dbc news** → dbcnews.bd, dbcnews.bd@sd
-- **deewana hd** → deewanahd.in, deewanahd.in@sd
 - **ekhon tv** → ekhontv.bd, ekhontv.bd@sd
 - **etv music** → etvmusic.in, etvmusic.in@sd
 - **green tv** → greentv.bd, greentv.bd@sd
@@ -644,7 +634,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **876**
+- Healthy/local references: **865**
 - missing: **1**
 - broken-local: **0**
 - external: **0**
