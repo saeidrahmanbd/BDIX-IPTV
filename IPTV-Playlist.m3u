@@ -1705,6 +1705,7 @@ https://live.yettelevision.com:5443/LiveApp/streams/yettv2.m3u8
 https://mumbai-edge.smartplaytv.in/ZeeCinemaluHD/index.m3u8
 #EXTINF:-1 tvg-id="custom.recovered.amagi.862" tvg-name="Amagi Stream 862" channel-id="custom.recovered.amagi.862" group-title="New Backup",Amagi Stream 862
 https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.ananda.tv" tvg-name="Ananda TV" channel-id="custom.recovered.ananda.tv" group-title="New Backup",Ananda TV
 http://103.99.249.139/anandatv/index.m3u8
 #EXTINF:-1 tvg-id="custom.recovered.dbc.news" tvg-name="DBC News" channel-id="custom.recovered.dbc.news" group-title="New Backup",DBC News
 http://tvn3.chowdhury-shaheb.com/dbc/index.m3u8
