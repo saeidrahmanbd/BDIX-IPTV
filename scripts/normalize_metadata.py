@@ -129,6 +129,28 @@ def main():
 
         row["meta"], row["name"] = meta, new_name
 
+    # Resolve duplicate active identities without discarding EPG compatibility.
+    seen_active = defaultdict(int)
+    for row in rows:
+        a = attrs(row["meta"])
+        group = a.get("group-title", "").strip()
+        if group in BACKUP_GROUPS:
+            continue
+        cid = a.get("tvg-id", "").strip()
+        if not cid:
+            continue
+        seen_active[cid] += 1
+        if seen_active[cid] == 1:
+            continue
+        name = row["name"]
+        suffix = "@HD" if re.search(r"\b(?:1080|2160|1440)\s*[pi]?\b", name, re.I) else "@SD" if re.search(r"\b(?:720|576|480|360)\s*[pi]?\b", name, re.I) else f"@ALT{seen_active[cid]-1}"
+        new_id = cid + suffix
+        while any(attrs(r["meta"]).get("tvg-id", "").strip() == new_id for r in rows):
+            suffix = f"@ALT{seen_active[cid]-1}"
+            new_id = cid + suffix
+        row["meta"] = replace_attr(row["meta"], "tvg-id", new_id)
+        row["meta"] = replace_attr(row["meta"], "channel-id", new_id)
+
     # Second pass: preserve existing primary numbers, then fill gaps and fix collisions.
     used = set()
     for row in rows:
