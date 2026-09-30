@@ -339,6 +339,38 @@ REPORT.parent.mkdir(parents=True, exist_ok=True)
 REPORT.write_text("\n".join(lines).rstrip()+"\n", encoding="utf-8")
 print(f"Playlist audit: entries={len(entries)} duplicate_ids={len(duplicate_ids)} duplicate_urls={len(duplicate_urls)} conflicts={len(metadata_conflicts)} name_collisions={len(name_collisions)} protected_changes={len(protected_changes)} logo_exceptions={len(logo_exceptions)}")
 
+# Change Guard
+def run_change_guard():
+    try:
+        old_text = subprocess.check_output(["git", "show", "HEAD:IPTV-Playlist.m3u"], text=True, stderr=subprocess.DEVNULL)
+    except Exception:
+        return
+    old_entries = parse(old_text)
+    key = lambda info,url: (
+        (attrs(info).get("tvg-id") or attrs(info).get("channel-id") or "").strip().lower(),
+        attrs(info).get("group-title","").strip(),
+        display_name(info).strip(),
+        url.strip(),
+    )
+    old_keys = {key(i,u) for i,u in old_entries}
+    new_keys = {key(i,u) for i,u in entries}
+    added, removed = new_keys-old_keys, old_keys-new_keys
+    total = max(len(old_keys), len(new_keys), 1)
+    max_changes = max(25, int(total * 0.08))
+    if len(added)+len(removed) > max_changes:
+        raise SystemExit(
+            f"Change Guard blocked maintenance: {len(added)} additions + "
+            f"{len(removed)} removals exceed the {max_changes}-entry safety limit."
+        )
+    old_primary = {key(i,u) for i,u in old_entries if attrs(i).get("group-title","").strip() not in PRIMARY_EXCEPTIONS}
+    new_primary = {key(i,u) for i,u in entries if attrs(i).get("group-title","").strip() not in PRIMARY_EXCEPTIONS}
+    removed_primary = old_primary-new_primary
+    if removed_primary:
+        raise SystemExit(f"Change Guard blocked maintenance: {len(removed_primary)} primary entries would be removed or rewritten.")
+
+run_change_guard()
+
+
 if protected_changes:
     raise SystemExit("Protected primary playlist entries changed; refusing automatic commit.")
 if cross_country_backups:
