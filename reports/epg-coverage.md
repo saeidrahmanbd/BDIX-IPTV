@@ -1,15 +1,15 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-09-30T07:18:27+00:00**
+Generated: **2026-09-30T08:58:56+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **220**
-- Channels with an EPG mapping: **140**
-- Current/future programme coverage: **131/220 (59.5%)**
-- No guide mapping found: **80**
+- Active Indian channels audited: **234**
+- Channels with an EPG mapping: **150**
+- Current/future programme coverage: **141/234 (60.3%)**
+- No guide mapping found: **84**
 
 ## Source Status
 
@@ -50,6 +50,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Entertainment | DD Meghalaya | DDMeghalaya.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | DD Nagaland | DDNagaland.in@SD | - | NO_GUIDE_HIT |
 | Indian Music | Deewana HD | DeewanaHD.in | - | NO_GUIDE_HIT |
+| Indian Movies | Dhool TV | DhoolTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | ETV Beats | ETVBeats.in@HD | - | NO_GUIDE_HIT |
 | Indian Entertainment | ETV Comedy | ETVComedy.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | ETV Josh | ETVJosh.in | - | NO_GUIDE_HIT |
@@ -61,6 +62,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Entertainment | Epic TV Digital | custom.epic.tv.digital | - | NO_GUIDE_HIT |
 | Indian Entertainment | Flowers US | custom.flowers.us | - | NO_GUIDE_HIT |
 | Indian Entertainment | Geo Kahani | GeoKahani.pk | - | NO_GUIDE_HIT |
+| Indian Movies | Goldmines 2 | Goldmines2.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Goldmines Action | GoldminesAction.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | HUM TV | HumTV.pk | - | NO_GUIDE_HIT |
 | Indian Music | Hindi Hits | HindiHits.in | - | NO_GUIDE_HIT |
@@ -71,6 +73,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Music | Joo Music | JooMusic.pk | - | NO_GUIDE_HIT |
 | Indian Bangla | Jtv Classic | custom.jtv.classic | - | NO_GUIDE_HIT |
 | Indian Movies | Kairali Arabia | KairaliArabia.in | - | NO_GUIDE_HIT |
+| Indian Movies | Kalika TV | KalikaTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | MBC Bollywood | MBCBollywood.ae | - | NO_GUIDE_HIT |
 | Indian Entertainment | MH One Dil Se | MHOneDilSe.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | MH One Movies | MHOneMovies.in | - | NO_GUIDE_HIT |
@@ -91,6 +94,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Movies | Roja Movies | RojaMovies.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | SADA TV | SADATV.in | - | NO_GUIDE_HIT |
 | Indian Bangla | SNB Cinema | custom.snb.cinema | - | NO_GUIDE_HIT |
+| Indian Movies | Sana Plus | SanaPlus.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Sana TV | SanaTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Bangla | Sananda | SanandaTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | Shemaroo Josh | ShemarooJosh.in@SD | - | NO_GUIDE_HIT |
