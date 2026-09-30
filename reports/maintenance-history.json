@@ -1,11 +1,11 @@
 [
   {
-    "timestamp_utc": "2026-09-30T04:25:51.764382+00:00",
-    "entries": 873,
-    "unique_channel_ids": 609,
-    "duplicate_ids": 158,
-    "duplicate_urls": 13,
-    "metadata_conflicts": 2,
+    "timestamp_utc": "2026-09-30T07:02:21.874489+00:00",
+    "entries": 892,
+    "unique_channel_ids": 620,
+    "duplicate_ids": 161,
+    "duplicate_urls": 19,
+    "metadata_conflicts": 0,
     "logo_exceptions": 1,
     "primary_number_collisions": 0,
     "protected_primary_changes": 0
