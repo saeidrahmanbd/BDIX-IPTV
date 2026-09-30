@@ -1,6 +1,6 @@
 # Project Dashboard
 
-_Last generated: **2026-09-30 09:38 UTC**_
+_Last generated: **2026-09-30 10:21 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -28,7 +28,7 @@ _Last generated: **2026-09-30 09:38 UTC**_
 | Source | Last generated |
 |---|---|
 | Playlist audit | **not available** |
-| EPG coverage | **2026-09-30T09:38:36+00:00** |
+| EPG coverage | **2026-09-30T10:21:13+00:00** |
 
 ## Maintenance History
 - Recorded runs retained: **0**
