@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import re, html
+import re, html, json
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -15,7 +15,7 @@ ATTR_RE=re.compile(r'([\w-]+)="([^"]*)"')
 def attrs(s): return dict(ATTR_RE.findall(s))
 
 def num(text,label):
-    m=re.search(r'- '+re.escape(label)+r': **(d+)**',text)
+    m=re.search(r'- '+re.escape(label)+r': \*\*(\d+)\*\*',text)
     return int(m.group(1)) if m else 0
 
 def parse_playlist():
@@ -47,7 +47,7 @@ def epg_stats():
                       ("Mapped","Channels with an EPG mapping"),
                       ("No mapping","No guide mapping found")]:
         out[key]=num(s,label)
-    m=re.search(r'Current/future programme coverage:\s***(d+)/(d+) ((d+(?:.d+)?)%)**',s,re.I)
+    m=re.search(r'Current/future programme coverage:\s*\*\*(\d+)/(\d+) \((\d+(?:\.\d+)?)%\)\*\*',s,re.I)
     if m:
         out["Live"]=int(m.group(1))
         out["LivePct"]=float(m.group(3))
@@ -56,7 +56,7 @@ def epg_stats():
 def report_timestamp(path):
     if not path.exists(): return "not available"
     s=path.read_text(encoding="utf-8")
-    m=re.search(r'(?:Generated|Last generated):\s***([^*]+)**',s,re.I)
+    m=re.search(r'(?:Generated|Last generated):\s*\*\*([^*]+)\*\*',s,re.I)
     return m.group(1).strip() if m else "not available"
 
 def svg_text(x,y,text,size=15,bold=False):
@@ -64,6 +64,14 @@ def svg_text(x,y,text,size=15,bold=False):
     weight="700" if bold else "400"
     return f'<text x="{x}" y="{y}" font-family="Arial,Helvetica,sans-serif" font-size="{size}px" font-weight="{weight}" fill="#1f2937">{esc}</text>'
 
+def history_stats():
+    path=ROOT/"reports/maintenance-history.json"
+    if not path.exists(): return []
+    try:
+        data=json.loads(path.read_text(encoding="utf-8"))
+        return data[-30:] if isinstance(data,list) else []
+    except Exception:
+        return []
 def make_svg(total,channels,bangla,india,backup,logos,epg_pct,epg_missing,issues):
     w,h=980,610
     parts=[
@@ -112,6 +120,13 @@ def main():
         "Cross-country backup collisions","Protected primary-entry changes","Logo exceptions",
         "Duplicate primary identities","Primary channel-number collisions"
     ])
+    history=history_stats()
+    history_line="No historical maintenance records yet."
+    if len(history)>=2:
+        prev,cur=history[-2],history[-1]
+        history_line=(f"Latest run vs previous: entries {prev.get('entries')} → {cur.get('entries')}; "
+                      f"logo exceptions {prev.get('logo_exceptions')} → {cur.get('logo_exceptions')}; "
+                      f"metadata conflicts {prev.get('metadata_conflicts')} → {cur.get('metadata_conflicts')}.")
     now=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     md=f"""# Project Dashboard
 
@@ -142,6 +157,12 @@ _Last generated: **{now}**_
 |---|---|
 | Playlist audit | **{report_timestamp(AUDIT)}** |
 | EPG coverage | **{report_timestamp(EPG)}** |
+
+## Maintenance History
+- Recorded runs retained: **{len(history)}**
+- {history_line}
+
+Historical records are retained in `reports/maintenance-history.json` (latest 180 runs).
 
 This dashboard intentionally does not perform or report stream-health probing.
 """
