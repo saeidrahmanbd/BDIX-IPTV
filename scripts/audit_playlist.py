@@ -180,18 +180,28 @@ for cid, items in by_id.items():
             if country_code(primary_cid)
         }
         if primary_countries_for_root and c not in primary_countries_for_root:
-            primary_cid = next(
-                primary_cid
+            candidates = [
+                (primary_cid, primary_info, primary_url)
                 for primary_cid, primary_info, primary_url
                 in primary_by_root.get(identity_root(cid), [])
                 if country_code(primary_cid)
-            )
+            ]
+            # Do not treat an exact same stream URL as a cross-country
+            # collision. The same source may legitimately be represented by
+            # country-qualified identities (for example, Channel S).
+            if any(primary_url.strip().lower() == url.strip().lower() for _, _, primary_url in candidates):
+                continue
+            primary_cid = candidates[0][0]
             cross_country_backups.append((cid, display_name(info), primary_cid, url))
             continue
         if not primary_countries_for_root:
             same_name_primaries = primary_by_name.get(normalized_name(display_name(info)), [])
             name_countries = {country_code(primary_cid) for primary_cid, primary_info, primary_url in same_name_primaries if country_code(primary_cid)}
             if name_countries and c not in name_countries:
+                # Same URL is not a cross-country collision; only flag a
+                # genuinely different backup stream.
+                if any(primary_url.strip().lower() == url.strip().lower() for _, _, primary_url in same_name_primaries):
+                    continue
                 primary_cid = same_name_primaries[0][0]
                 cross_country_backups.append((cid, display_name(info), primary_cid, url))
 
