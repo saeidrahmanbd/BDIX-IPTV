@@ -1704,34 +1704,34 @@ https://mumbai-edge.smartplaytv.in/ETVABHIRUCHI/index.m3u8
 http://149.71.34.166:8000/play/a00z/index.m3u8
 
 # ==================== NEW CHANNELS ====================
-#EXTINF:-1 tvg-name="SHOMOY TV HD" group-title="New Channels",SHOMOY TV HD
+#EXTINF:-1 tvg-name="Somoy TV" group-title="Backup",Somoy TV
 http://198.195.239.50:8095/somoyTv/index.m3u8
 
-#EXTINF:-1 tvg-name="BTV" group-title="New Channels",BTV
+#EXTINF:-1 tvg-name="BTV National" group-title="Backup",BTV National
 http://198.195.239.50:8095/btv/index.m3u8
 
-#EXTINF:-1 tvg-name="COLOR BANGLA HD" group-title="New Channels",COLOR BANGLA HD
+#EXTINF:-1 tvg-name="Colors Bangla" group-title="Backup",Colors Bangla
 http://198.195.239.50:8095/colorsBangla/index.m3u8
 
-#EXTINF:-1 tvg-name="COLOR BANGLA CHINEMA HD" group-title="New Channels",COLOR BANGLA CHINEMA HD
+#EXTINF:-1 tvg-name="Colors Bangla Cinema" group-title="Backup",Colors Bangla Cinema
 http://198.195.239.50:8095/colorsBanglaChinema/index.m3u8
 
-#EXTINF:-1 tvg-name="ZEE CHINEMA HD" group-title="New Channels",ZEE CHINEMA HD
+#EXTINF:-1 tvg-name="Zee Cinema" group-title="Backup",Zee Cinema
 http://103.151.61.12/Zee_Cinema_HD/video.m3u8
 
-#EXTINF:-1 tvg-name="COLOR HD" group-title="New Channels",COLOR HD
+#EXTINF:-1 tvg-name="Colors" group-title="New Channels",Colors
 http://198.195.239.50:8095/colors/index.m3u8
 
-#EXTINF:-1 tvg-name="COLOR CINEPLEX HD" group-title="New Channels",COLOR CINEPLEX HD
+#EXTINF:-1 tvg-name="Colors Cineplex" group-title="Backup",Colors Cineplex
 http://198.195.239.50:8095/colorsCineplex/index.m3u8
 
-#EXTINF:-1 tvg-name="9XM MUSIC" group-title="New Channels",9XM MUSIC
+#EXTINF:-1 tvg-name="9XM" group-title="Backup",9XM
 http://198.195.239.50:8095/9xm/index.m3u8
 
-#EXTINF:-1 tvg-name="TRAVEL XP" group-title="New Channels",TRAVEL XP
+#EXTINF:-1 tvg-name="Travelxp Hindi" group-title="Backup",Travelxp Hindi
 http://198.195.239.50:8095/travelXp/index.m3u8
 
-#EXTINF:-1 tvg-name="DURANTA" group-title="New Channels",DURANTA
+#EXTINF:-1 tvg-name="Duronto TV" group-title="Backup",Duronto TV
 http://198.195.239.50:8095/duranta/index.m3u8
 
 #EXTINF:-1 tvg-name="NICK" group-title="New Channels",NICK
@@ -1746,91 +1746,91 @@ http://198.195.239.50:8095/sonic/index.m3u8
 #EXTINF:-1 tvg-name="SONY-SPORTS.5HD" group-title="New Channels",SONY-SPORTS.5HD
 http://198.195.239.50:8095/SONY-SPORTS.5HD/index.m3u8
 
-#EXTINF:-1 tvg-name="BTV.HD" group-title="New Channels",BTV.HD
+#EXTINF:-1 tvg-name="BTV National" group-title="Backup",BTV National
 http://198.195.239.50:8095/BTV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="ETV.BANGLA.HD" group-title="New Channels",ETV.BANGLA.HD
+#EXTINF:-1 tvg-name="Colors Bangla" group-title="Backup",Colors Bangla
 http://198.195.239.50:8095/ETV.BANGLA.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="DEEPTOTV.HD" group-title="New Channels",DEEPTOTV.HD
+#EXTINF:-1 tvg-name="Deepto TV" group-title="Backup",Deepto TV
 http://198.195.239.50:8095/DEEPTOTV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="BOISAKHI.TV.HD" group-title="New Channels",BOISAKHI.TV.HD
+#EXTINF:-1 tvg-name="Boishakhi TV" group-title="Backup",Boishakhi TV
 http://198.195.239.50:8095/BOISAKHI.TV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="EAKHON.TV.HD" group-title="New Channels",EAKHON.TV.HD
+#EXTINF:-1 tvg-name="Ekhon TV" group-title="Backup",Ekhon TV
 http://198.195.239.50:8095/EAKHON.TV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="COLORS.HD" group-title="New Channels",COLORS.HD
+#EXTINF:-1 tvg-name="COLORS." group-title="New Channels",COLORS.
 http://198.195.239.50:8095/COLORS.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="ANT.PICTURS.HD" group-title="New Channels",ANT.PICTURS.HD
+#EXTINF:-1 tvg-name="ANT.Pictures." group-title="New Channels",ANT.Pictures.
 http://198.195.239.50:8095/ANT.PICTURS.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="CARTON.NETWORK.HD" group-title="New Channels",CARTON.NETWORK.HD
+#EXTINF:-1 tvg-name="Cartoon Network" group-title="Backup",Cartoon Network
 http://198.195.239.50:8095/CARTON.NETWORK.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="SONY.ENT.HD" group-title="New Channels",SONY.ENT.HD
+#EXTINF:-1 tvg-name="Sony Entertainment TV" group-title="Backup",Sony Entertainment TV
 http://198.195.239.50:8095/SONY.ENT.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="HISTORY.TV.18.HD" group-title="New Channels",HISTORY.TV.18.HD
+#EXTINF:-1 tvg-name="History TV18" group-title="Backup",History TV18
 http://198.195.239.50:8095/HISTORY.TV.18.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR.SPORTS.SEL.2.HD" group-title="New Channels",STAR.SPORTS.SEL.2.HD
+#EXTINF:-1 tvg-name="STAR.SPORTS.SEL.2." group-title="New Channels",STAR.SPORTS.SEL.2.
 http://198.195.239.50:8095/STAR.SPORTS.SEL.2.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="NATGEO.HD" group-title="New Channels",NATGEO.HD
+#EXTINF:-1 tvg-name="National Geographic" group-title="Backup",National Geographic
 http://198.195.239.50:8095/NATGEO.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR.MOVIES.SEL.HD" group-title="New Channels",STAR.MOVIES.SEL.HD
+#EXTINF:-1 tvg-name="Star Movies Select" group-title="Backup",Star Movies Select
 http://198.195.239.50:8095/STAR.MOVIES.SEL.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR.SPORTS-SEL1.HD" group-title="New Channels",STAR.SPORTS-SEL1.HD
+#EXTINF:-1 tvg-name="STAR.SPORTS-SEL1." group-title="New Channels",STAR.SPORTS-SEL1.
 http://198.195.239.50:8095/STAR.SPORTS-SEL1.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR.SPORTS2.HD" group-title="New Channels",STAR.SPORTS2.HD
+#EXTINF:-1 tvg-name="Star Sports 2 HD" group-title="Backup",Star Sports 2 HD
 http://198.195.239.50:8095/STAR.SPORTS2.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="SONY.SPORTS2.HD" group-title="New Channels",SONY.SPORTS2.HD
+#EXTINF:-1 tvg-name="Sony Ten 2" group-title="Backup",Sony Ten 2
 http://198.195.239.50:8095/SONY.SPORTS2.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="SONY.SPORTS.3" group-title="New Channels",SONY.SPORTS.3
+#EXTINF:-1 tvg-name="Sony Sports Ten 3" group-title="Backup",Sony Sports Ten 3
 http://198.195.239.50:8095/SONY.SPORTS.3/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR.SPORTS1.HD" group-title="New Channels",STAR.SPORTS1.HD
+#EXTINF:-1 tvg-name="STAR.SPORTS1." group-title="New Channels",STAR.SPORTS1.
 http://198.195.239.50:8095/STAR.SPORTS1.HD/index.m3u8
 
 #EXTINF:-1 tvg-name="STAR-SPORTS.3" group-title="New Channels",STAR-SPORTS.3
 http://198.195.239.50:8095/STAR-SPORTS.3/index.m3u8
 
-#EXTINF:-1 tvg-name="SONY.PIX.HD" group-title="New Channels",SONY.PIX.HD
+#EXTINF:-1 tvg-name="SONY.PIX." group-title="New Channels",SONY.PIX.
 http://198.195.239.50:8095/SONY.PIX.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="MNX.HD" group-title="New Channels",MNX.HD
+#EXTINF:-1 tvg-name="MNX." group-title="New Channels",MNX.
 http://198.195.239.50:8095/MNX.HD/index.m3u8
 
 #EXTINF:-1 tvg-name="ROMEDY.NOW" group-title="New Channels",ROMEDY.NOW
 http://198.195.239.50:8095/ROMEDY.NOW/index.m3u8
 
-#EXTINF:-1 tvg-name="MN.PLUS.HD" group-title="New Channels",MN.PLUS.HD
+#EXTINF:-1 tvg-name="MN.PLUS." group-title="New Channels",MN.PLUS.
 http://198.195.239.50:8095/MN.PLUS.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="MOVIES.NOW.HD" group-title="New Channels",MOVIES.NOW.HD
+#EXTINF:-1 tvg-name="MOVIES.NOW." group-title="New Channels",MOVIES.NOW.
 http://198.195.239.50:8095/MOVIES.NOW.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="EUROSPORTS.HD" group-title="New Channels",EUROSPORTS.HD
+#EXTINF:-1 tvg-name="EURO SPORT HD" group-title="Backup",EURO SPORT HD
 http://198.195.239.50:8095/EUROSPORTS.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="AND.PRIVE.HD" group-title="New Channels",AND.PRIVE.HD
+#EXTINF:-1 tvg-name="AND.PRIVE." group-title="New Channels",AND.PRIVE.
 http://198.195.239.50:8095/AND.PRIVE.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="ZOOM.MUSIC" group-title="New Channels",ZOOM.MUSIC
+#EXTINF:-1 tvg-name="Zoom TV" group-title="Backup",Zoom TV
 http://198.195.239.50:8095/ZOOM.MUSIC/index.m3u8
 
 #EXTINF:-1 tvg-name="ZEE.BANGLA.CINEMA" group-title="New Channels",ZEE.BANGLA.CINEMA
 http://198.195.239.50:8095/ZEE.BANGLA.CINEMA/index.m3u8
 
-#EXTINF:-1 tvg-name="SONY.AAT" group-title="New Channels",SONY.AAT
+#EXTINF:-1 tvg-name="Sony AATH" group-title="Backup",Sony AATH
 http://198.195.239.50:8095/SONY.AAT/index.m3u8
 
 #EXTINF:-1 tvg-name="SONIC" group-title="New Channels",SONIC
@@ -1851,70 +1851,70 @@ http://198.195.239.50:8095/NICK.JR/index.m3u8
 #EXTINF:-1 tvg-name="ZING.MUSIC" group-title="New Channels",ZING.MUSIC
 http://198.195.239.50:8095/ZING.MUSIC/index.m3u8
 
-#EXTINF:-1 tvg-name="GAZI.TV.HD" group-title="New Channels",GAZI.TV.HD
+#EXTINF:-1 tvg-name="G TV" group-title="Backup",G TV
 http://198.195.239.50:8095/GAZI.TV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="T-SPORTS-HD" group-title="New Channels",T-SPORTS-HD
+#EXTINF:-1 tvg-name="T-SPORTS-" group-title="New Channels",T-SPORTS-
 http://198.195.239.50:8095/T-SPORTS-HD/index.m3u8
 
-#EXTINF:-1 tvg-name="XPLOR.HD" group-title="New Channels",XPLOR.HD
+#EXTINF:-1 tvg-name="XPLOR." group-title="New Channels",XPLOR.
 http://198.195.239.50:8095/XPLOR.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="TRAVELXP.HD" group-title="New Channels",TRAVELXP.HD
+#EXTINF:-1 tvg-name="Travelxp Hindi" group-title="Backup",Travelxp Hindi
 http://198.195.239.50:8095/TRAVELXP.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="DURANTA.TV.HD" group-title="New Channels",DURANTA.TV.HD
+#EXTINF:-1 tvg-name="Duronto TV" group-title="Backup",Duronto TV
 http://198.195.239.50:8095/DURANTA.TV.HD/index.m3u8
 
 #EXTINF:-1 tvg-name="SONY.SPORTS.4" group-title="New Channels",SONY.SPORTS.4
 http://198.195.239.50:8095/SONY.SPORTS.4/index.m3u8
 
-#EXTINF:-1 tvg-name="SONY.SPORTS.1HD" group-title="New Channels",SONY.SPORTS.1HD
+#EXTINF:-1 tvg-name="Sony Ten 1" group-title="Backup",Sony Ten 1
 http://198.195.239.50:8095/SONY.SPORTS.1HD/index.m3u8
 
 #EXTINF:-1 tvg-name="SUPER.HUNGAMA" group-title="New Channels",SUPER.HUNGAMA
 http://198.195.239.50:8095/SUPER.HUNGAMA/index.m3u8
 
-#EXTINF:-1 tvg-name="MASRANGA.TV.HD" group-title="New Channels",MASRANGA.TV.HD
+#EXTINF:-1 tvg-name="Maasranga TV" group-title="Backup",Maasranga TV
 http://198.195.239.50:8095/MASRANGA.TV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="ALJAZEERA.HD" group-title="New Channels",ALJAZEERA.HD
+#EXTINF:-1 tvg-name="ALJAZEERA." group-title="New Channels",ALJAZEERA.
 http://198.195.239.50:8095/ALJAZEERA.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="FAST.SPORTS.HD" group-title="New Channels",FAST.SPORTS.HD
+#EXTINF:-1 tvg-name="FAST.SPORTS." group-title="New Channels",FAST.SPORTS.
 http://198.195.239.50:8095/FAST.SPORTS.HD/index.m3u8
 
 #EXTINF:-1 tvg-name="HUM.MASALA.TV" group-title="New Channels",HUM.MASALA.TV
 http://198.195.239.50:8095/HUM.MASALA.TV/index.m3u8
 
-#EXTINF:-1 tvg-name="GEO.NEWS.HD" group-title="New Channels",GEO.NEWS.HD
+#EXTINF:-1 tvg-name="GEO.NEWS." group-title="New Channels",GEO.NEWS.
 http://198.195.239.50:8095/GEO.NEWS.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="Lotus.TV.HD" group-title="New Channels",Lotus.TV.HD
+#EXTINF:-1 tvg-name="Lotus.TV." group-title="New Channels",Lotus.TV.
 http://198.195.239.50:8095/Lotus.TV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="PTV-SPORTS-HD" group-title="New Channels",PTV-SPORTS-HD
+#EXTINF:-1 tvg-name="PTV-SPORTS-" group-title="New Channels",PTV-SPORTS-
 http://198.195.239.50:8095/PTV-SPORTS-HD/index.m3u8
 
-#EXTINF:-1 tvg-name="AXN.HD" group-title="New Channels",AXN.HD
+#EXTINF:-1 tvg-name="AXN." group-title="New Channels",AXN.
 http://198.195.239.50:8095/AXN.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR.BHARAT.HD" group-title="New Channels",STAR.BHARAT.HD
+#EXTINF:-1 tvg-name="STAR.BHARAT." group-title="New Channels",STAR.BHARAT.
 http://198.195.239.50:8095/STAR.BHARAT.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="DW.NEWS.HD" group-title="New Channels",DW.NEWS.HD
+#EXTINF:-1 tvg-name="DW.NEWS." group-title="New Channels",DW.NEWS.
 http://198.195.239.50:8095/DW.NEWS.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="UNITE8.2.HD" group-title="New Channels",UNITE8.2.HD
+#EXTINF:-1 tvg-name="UNITE8.2." group-title="New Channels",UNITE8.2.
 http://198.195.239.50:8095/UNITE8.2.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="UNITE8.1.HD" group-title="New Channels",UNITE8.1.HD
+#EXTINF:-1 tvg-name="UNITE8.1." group-title="New Channels",UNITE8.1.
 http://198.195.239.50:8095/UNITE8.1.HD/index.m3u8
 
 #EXTINF:-1 tvg-name="STAR.SPORTS.4K" group-title="New Channels",STAR.SPORTS.4K
 http://198.195.239.50:8095/STAR.SPORTS.4K/index.m3u8
 
-#EXTINF:-1 tvg-name="9XM.MUSIC" group-title="New Channels",9XM.MUSIC
+#EXTINF:-1 tvg-name="9XM" group-title="Backup",9XM
 http://198.195.239.50:8095/9XM.MUSIC/index.m3u8
 
 #EXTINF:-1 tvg-name="BBC.NEWS" group-title="New Channels",BBC.NEWS
@@ -1924,170 +1924,170 @@ http://198.195.239.50:8095/BBC.NEWS/index.m3u8
 http://198.195.239.50:8095/MTV.INDIA/index.m3u8
 
 # ==================== NEW BACKUP ====================
-#EXTINF:-1 tvg-name="STAR JALSHA HD" group-title="New Backup",STAR JALSHA HD
+#EXTINF:-1 tvg-name="STAR JALSHA" group-title="Backup",STAR JALSHA
 http://198.195.239.50:8095/starJalsha/index.m3u8
 
-#EXTINF:-1 tvg-name="JALSHA MOVIES HD" group-title="New Backup",JALSHA MOVIES HD
+#EXTINF:-1 tvg-name="JALSHA MOVIES" group-title="Backup",JALSHA MOVIES
 http://198.195.239.50:8095/jalshaMovies/index.m3u8
 
-#EXTINF:-1 tvg-name="ZEE BANGLA HD" group-title="New Backup",ZEE BANGLA HD
+#EXTINF:-1 tvg-name="ZEE BANGLA" group-title="Backup",ZEE BANGLA
 http://198.195.239.50:8095/zeeBangla/index.m3u8
 
-#EXTINF:-1 tvg-name="SONY AATH" group-title="New Backup",SONY AATH
+#EXTINF:-1 tvg-name="SONY AATH" group-title="Backup",SONY AATH
 http://198.195.239.50:8095/sonyAath/index.m3u8
 
-#EXTINF:-1 tvg-name="SANGEET BANGLA" group-title="New Backup",SANGEET BANGLA
+#EXTINF:-1 tvg-name="SANGEET BANGLA" group-title="Backup",SANGEET BANGLA
 http://198.195.239.50:8095/sangeetBangla/index.m3u8
 
-#EXTINF:-1 tvg-name="ENTER 10 BANGLA" group-title="New Backup",ENTER 10 BANGLA
+#EXTINF:-1 tvg-name="ENTER 10 BANGLA" group-title="Backup",ENTER 10 BANGLA
 http://198.195.239.50:8095/enter10Bangla/index.m3u8
 
-#EXTINF:-1 tvg-name="SONY MAX HD" group-title="New Backup",SONY MAX HD
+#EXTINF:-1 tvg-name="SONY MAX" group-title="Backup",SONY MAX
 http://198.195.239.50:8095/sonyMax/index.m3u8
 
-#EXTINF:-1 tvg-name="SONY ENTERTAINMENT HD" group-title="New Backup",SONY ENTERTAINMENT HD
+#EXTINF:-1 tvg-name="SONY ENTERTAINMENT" group-title="Backup",SONY ENTERTAINMENT
 http://198.195.239.50:8095/sonyEntertainment/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR GOLD HD" group-title="New Backup",STAR GOLD HD
+#EXTINF:-1 tvg-name="STAR GOLD" group-title="Backup",STAR GOLD
 http://198.195.239.50:8095/STARGOLD/video.m3u8
 
-#EXTINF:-1 tvg-name="STAR PLUS HD" group-title="New Backup",STAR PLUS HD
+#EXTINF:-1 tvg-name="STAR PLUS" group-title="Backup",STAR PLUS
 http://198.195.239.50:8095/starPlus/video.m3u8
 
-#EXTINF:-1 tvg-name="STAR MOVIES HD" group-title="New Backup",STAR MOVIES HD
+#EXTINF:-1 tvg-name="STAR MOVIES" group-title="Backup",STAR MOVIES
 http://198.195.239.50:8095/STAR_PLUS/video.m3u8
 
-#EXTINF:-1 tvg-name="ZEE TV HD" group-title="New Backup",ZEE TV HD
+#EXTINF:-1 tvg-name="ZEE TV" group-title="Backup",ZEE TV
 http://198.195.239.50:8095/zeeTV/index.m3u8
 
-#EXTINF:-1 tvg-name="DISCOVERY HD" group-title="New Backup",DISCOVERY HD
+#EXTINF:-1 tvg-name="DISCOVERY" group-title="Backup",DISCOVERY
 http://198.195.239.50:8095/discovery/index.m3u8
 
-#EXTINF:-1 tvg-name="NATIONAL GEOGRAPHIC HD" group-title="New Backup",NATIONAL GEOGRAPHIC HD
+#EXTINF:-1 tvg-name="NATIONAL GEOGRAPHIC" group-title="Backup",NATIONAL GEOGRAPHIC
 http://198.195.239.50:8095/nationalGeographic/index.m3u8
 
-#EXTINF:-1 tvg-name="ANIMAL PLANET HD" group-title="New Backup",ANIMAL PLANET HD
+#EXTINF:-1 tvg-name="ANIMAL PLANET" group-title="Backup",ANIMAL PLANET
 http://198.195.239.50:8095/animalPlanet/index.m3u8
 
-#EXTINF:-1 tvg-name="CARTOON NETWORK HD" group-title="New Backup",CARTOON NETWORK HD
+#EXTINF:-1 tvg-name="CARTOON NETWORK" group-title="Backup",CARTOON NETWORK
 http://198.195.239.50:8095/cartoonNetwork/index.m3u8
 
-#EXTINF:-1 tvg-name="POGO" group-title="New Backup",POGO
+#EXTINF:-1 tvg-name="POGO" group-title="Backup",POGO
 http://198.195.239.50:8095/pogo/index.m3u8
 
-#EXTINF:-1 tvg-name="SONY YAY" group-title="New Backup",SONY YAY
+#EXTINF:-1 tvg-name="SONY YAY" group-title="Backup",SONY YAY
 http://198.195.239.50:8095/sonyYay/index.m3u8
 
-#EXTINF:-1 tvg-name="DISCOVERY KIDS HD" group-title="New Backup",DISCOVERY KIDS HD
+#EXTINF:-1 tvg-name="DISCOVERY KIDS" group-title="Backup",DISCOVERY KIDS
 http://198.195.239.50:8095/disnepKids/index.m3u8
 
-#EXTINF:-1 tvg-name="DBC.NEWS.HD" group-title="New Backup",DBC.NEWS.HD
+#EXTINF:-1 tvg-name="DBC.NEWS." group-title="Backup",DBC.NEWS.
 http://198.195.239.50:8095/DBC.NEWS.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="EKATTOR.TV.HD" group-title="New Backup",EKATTOR.TV.HD
+#EXTINF:-1 tvg-name="EKATTOR.TV." group-title="Backup",EKATTOR.TV.
 http://198.195.239.50:8095/EKATTOR.TV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="SONY.BBC.EARTH.HD" group-title="New Backup",SONY.BBC.EARTH.HD
+#EXTINF:-1 tvg-name="SONY.BBC.EARTH." group-title="Backup",SONY.BBC.EARTH.
 http://198.195.239.50:8095/SONY.BBC.EARTH.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="ZEE.TV.HD" group-title="New Backup",ZEE.TV.HD
+#EXTINF:-1 tvg-name="ZEE.TV." group-title="Backup",ZEE.TV.
 http://198.195.239.50:8095/ZEE.TV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="TLC.HD" group-title="New Backup",TLC.HD
+#EXTINF:-1 tvg-name="TLC." group-title="Backup",TLC.
 http://198.195.239.50:8095/TLC.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="COLORS.CINEPLEX.HD" group-title="New Backup",COLORS.CINEPLEX.HD
+#EXTINF:-1 tvg-name="COLORS.CINEPLEX." group-title="Backup",COLORS.CINEPLEX.
 http://198.195.239.50:8095/COLORS.CINEPLEX.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="COLORS.BANGLA.HD" group-title="New Backup",COLORS.BANGLA.HD
+#EXTINF:-1 tvg-name="COLORS.BANGLA." group-title="Backup",COLORS.BANGLA.
 http://198.195.239.50:8095/COLORS.BANGLA.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="ZEE.CINEMA.HD" group-title="New Backup",ZEE.CINEMA.HD
+#EXTINF:-1 tvg-name="ZEE.CINEMA." group-title="Backup",ZEE.CINEMA.
 http://198.195.239.50:8095/ZEE.CINEMA.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="ZEE.BANGLA.HD" group-title="New Backup",ZEE.BANGLA.HD
+#EXTINF:-1 tvg-name="ZEE.BANGLA." group-title="Backup",ZEE.BANGLA.
 http://198.195.239.50:8095/ZEE.BANGLA.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="SUN.BANGLA.HD" group-title="New Backup",SUN.BANGLA.HD
+#EXTINF:-1 tvg-name="SUN.BANGLA." group-title="Backup",SUN.BANGLA.
 http://198.195.239.50:8095/SUN.BANGLA.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="JALSHA.MOVIES.HD" group-title="New Backup",JALSHA.MOVIES.HD
+#EXTINF:-1 tvg-name="JALSHA.MOVIES." group-title="Backup",JALSHA.MOVIES.
 http://198.195.239.50:8095/JALSHA.MOVIES.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR.GOLD.HD" group-title="New Backup",STAR.GOLD.HD
+#EXTINF:-1 tvg-name="STAR.GOLD." group-title="Backup",STAR.GOLD.
 http://198.195.239.50:8095/STAR.GOLD.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="SONY.MAX.HD" group-title="New Backup",SONY.MAX.HD
+#EXTINF:-1 tvg-name="SONY.MAX." group-title="Backup",SONY.MAX.
 http://198.195.239.50:8095/SONY.MAX.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="DISCOVERY.HD" group-title="New Backup",DISCOVERY.HD
+#EXTINF:-1 tvg-name="DISCOVERY." group-title="Backup",DISCOVERY.
 http://198.195.239.50:8095/DISCOVERY.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="NATGEO.WILD.HD" group-title="New Backup",NATGEO.WILD.HD
+#EXTINF:-1 tvg-name="NATGEO.WILD." group-title="Backup",NATGEO.WILD.
 http://198.195.239.50:8095/NATGEO.WILD.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR.PLUS.HD" group-title="New Backup",STAR.PLUS.HD
+#EXTINF:-1 tvg-name="STAR.PLUS." group-title="Backup",STAR.PLUS.
 http://198.195.239.50:8095/STAR.PLUS.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="ANIMAL.PLANET.HD" group-title="New Backup",ANIMAL.PLANET.HD
+#EXTINF:-1 tvg-name="ANIMAL.PLANET." group-title="Backup",ANIMAL.PLANET.
 http://198.195.239.50:8095/ANIMAL.PLANET.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR.JALSHA.HD" group-title="New Backup",STAR.JALSHA.HD
+#EXTINF:-1 tvg-name="STAR.JALSHA." group-title="Backup",STAR.JALSHA.
 http://198.195.239.50:8095/STAR.JALSHA.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR.MOVIES.HD" group-title="New Backup",STAR.MOVIES.HD
+#EXTINF:-1 tvg-name="STAR.MOVIES." group-title="Backup",STAR.MOVIES.
 http://198.195.239.50:8095/STAR.MOVIES.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="COLORS.BANGLA.CINEMA" group-title="New Backup",COLORS.BANGLA.CINEMA
+#EXTINF:-1 tvg-name="COLORS.BANGLA.CINEMA" group-title="Backup",COLORS.BANGLA.CINEMA
 http://198.195.239.50:8095/COLORS.BANGLA.CINEMA/index.m3u8
 
-#EXTINF:-1 tvg-name="POGO" group-title="New Backup",POGO
+#EXTINF:-1 tvg-name="POGO" group-title="Backup",POGO
 http://198.195.239.50:8095/POGO/index.m3u8
 
-#EXTINF:-1 tvg-name="NAGORIK.TV.HD" group-title="New Backup",NAGORIK.TV.HD
+#EXTINF:-1 tvg-name="NAGORIK.TV." group-title="Backup",NAGORIK.TV.
 http://198.195.239.50:8095/NAGORIK.TV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="BBC.Earth.HD" group-title="New Backup",BBC.Earth.HD
+#EXTINF:-1 tvg-name="BBC.Earth." group-title="Backup",BBC.Earth.
 http://198.195.239.50:8095/BBC.Earth.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="JAMUNA.TV" group-title="New Backup",JAMUNA.TV
+#EXTINF:-1 tvg-name="JAMUNA.TV" group-title="Backup",JAMUNA.TV
 http://198.195.239.50:8095/JAMUNA.TV/index.m3u8
 
-#EXTINF:-1 tvg-name="INDEPENDENT.TV" group-title="New Backup",INDEPENDENT.TV
+#EXTINF:-1 tvg-name="INDEPENDENT.TV" group-title="Backup",INDEPENDENT.TV
 http://198.195.239.50:8095/INDEPENDENT.TV/index.m3u8
 
-#EXTINF:-1 tvg-name="SOMOY.TV.HD" group-title="New Backup",SOMOY.TV.HD
+#EXTINF:-1 tvg-name="SOMOY.TV." group-title="Backup",SOMOY.TV.
 http://198.195.239.50:8095/SOMOY.TV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="ATN.BANGLA.HD" group-title="New Backup",ATN.BANGLA.HD
+#EXTINF:-1 tvg-name="ATN.BANGLA." group-title="Backup",ATN.BANGLA.
 http://198.195.239.50:8095/ATN.BANGLA.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="CHANNEL.I.HD" group-title="New Backup",CHANNEL.I.HD
+#EXTINF:-1 tvg-name="CHANNEL.I." group-title="Backup",CHANNEL.I.
 http://198.195.239.50:8095/CHANNEL.I.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="CHANNEL.24.HD" group-title="New Backup",CHANNEL.24.HD
+#EXTINF:-1 tvg-name="CHANNEL.24." group-title="Backup",CHANNEL.24.
 http://198.195.239.50:8095/CHANNEL.24.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="MADANI.TV.HD" group-title="New Backup",MADANI.TV.HD
+#EXTINF:-1 tvg-name="MADANI.TV." group-title="Backup",MADANI.TV.
 http://198.195.239.50:8095/MADANI.TV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="ENTER10.BANGLA" group-title="New Backup",ENTER10.BANGLA
+#EXTINF:-1 tvg-name="ENTER10.BANGLA" group-title="Backup",ENTER10.BANGLA
 http://198.195.239.50:8095/ENTER10.BANGLA/index.m3u8
 
-#EXTINF:-1 tvg-name="PEACE.TV.BANGLA.HD" group-title="New Backup",PEACE.TV.BANGLA.HD
+#EXTINF:-1 tvg-name="PEACE.TV.BANGLA." group-title="Backup",PEACE.TV.BANGLA.
 http://198.195.239.50:8095/PEACE.TV.BANGLA.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="A.SPORTS.HD" group-title="New Backup",A.SPORTS.HD
+#EXTINF:-1 tvg-name="A.SPORTS." group-title="Backup",A.SPORTS.
 http://198.195.239.50:8095/A.SPORTS.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="SONY.YAY" group-title="New Backup",SONY.YAY
+#EXTINF:-1 tvg-name="SONY.YAY" group-title="Backup",SONY.YAY
 http://198.195.239.50:8095/SONY.YAY/index.m3u8
 
-#EXTINF:-1 tvg-name="ATN.NEWS.HD" group-title="New Backup",ATN.NEWS.HD
+#EXTINF:-1 tvg-name="ATN.NEWS." group-title="Backup",ATN.NEWS.
 http://198.195.239.50:8095/ATN.NEWS.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="NEWS.24" group-title="New Backup",NEWS.24
+#EXTINF:-1 tvg-name="NEWS.24" group-title="Backup",NEWS.24
 http://198.195.239.50:8095/NEWS.24/index.m3u8
 
-#EXTINF:-1 tvg-name="SANGEET.BANGLA" group-title="New Backup",SANGEET.BANGLA
+#EXTINF:-1 tvg-name="SANGEET.BANGLA" group-title="Backup",SANGEET.BANGLA
 http://198.195.239.50:8095/SANGEET.BANGLA/index.m3u8
