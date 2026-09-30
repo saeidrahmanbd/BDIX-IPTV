@@ -9,7 +9,7 @@ on:
     paths:
       - 'IPTV-Playlist.m3u'
       - 'scripts/normalize_metadata.py'
-      - 'scripts/discover_channels.py'
+      - 'scripts/discover_channels_v2.py'
       - 'scripts/migrate_external_logos_fixed.py'
       - 'scripts/epg_coverage.py'
       - 'scripts/sync_epg_worker_map.py'
