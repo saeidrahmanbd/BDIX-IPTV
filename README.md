@@ -27,14 +27,37 @@ Everything visitors commonly need, in one place:
 
 **[→ Open the full Download Center](docs/DOWNLOADS.md)**
 
-## 🖥️ Playlist Studio
+## 🖥️ Playlist Studio 3.0
 
-A portable Windows companion for browsing, searching, checking, and managing IPTV playlists.
+**Playlist Studio 3.0** is the Windows companion application for managing, editing, scanning, and playing IPTV playlists.
 
-- **[Download latest release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest)**
+### ✨ Highlights
+
+- M3U playlist editing and organization
+- Local M3U and M3U URL import
+- IPTV stream playback
+- Xtream Codes support
+- Stalker Portal / MAC support
+- Stream scanning and verification
+- EPG and channel-logo management
+- Channel metadata editing
+- Save / Save As
+- Fullscreen playback
+- Excel reporting
+- Portable single-file Windows executable
+
+### 🎨 Fluent Dark Interface
+
+Playlist Studio 3.0 uses a modern **Fluent Dark** interface designed to keep playlist management, playback, channel metadata, and stream testing in one practical workspace.
+
+![Playlist Studio 3.0 — Fluent Dark Interface](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/playlist-studio-3.0-portable-build/playlist-studio/Playlist%20Studio%203.0.png)
+
+### 📥 Download
+
+- **[Download Playlist Studio 3.0](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest)**
 - **[View all releases](https://github.com/saeidrahmanbd/BDIX-IPTV/releases)**
 
-![Playlist Studio 2.8.2 — IPTV playlist editor and player](assets/Playlist-Studio-screenshot.png)
+The Windows release is **portable**. Extract the ZIP and run Playlist-Studio-3.0-Fluent-Dark.exe. No Python or separate VLC installation is required.
 
 ## 📊 Project Status
 
