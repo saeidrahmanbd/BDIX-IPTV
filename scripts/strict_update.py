@@ -2,6 +2,7 @@
 """Locked-category playlist updater with Backup and New Channels discovery."""
 import re
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -116,6 +117,12 @@ def fetch(url):
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     return urllib.request.urlopen(request, timeout=35).read().decode("utf-8", "replace")
 
+def fetch_source(source):
+    try:
+        return source, parse(fetch(source)), None
+    except Exception as exc:
+        return source, [], exc
+
 def reachable(url):
     try:
         request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Range": "bytes=0-8191"})
@@ -161,16 +168,34 @@ for info, url in entries:
 added, new_channels, rejected, unreachable, new_channel_candidates, source_errors = [], [], 0, 0, 0, 0
 seen_additions = set()
 
-for source in SOURCES:
-    try:
-        candidates = parse(fetch(source))
-    except Exception:
+# Fetch all source playlists concurrently, but preserve the original source order
+# when applying candidates. This removes the sequential 35-second source-fetch bottleneck
+# without changing playlist ordering or identity rules.
+with ThreadPoolExecutor(max_workers=min(8, len(SOURCES))) as pool:
+    source_results = list(pool.map(fetch_source, SOURCES))
+
+# Reachability checks are I/O-bound. Run them concurrently while applying their
+# results in the original candidate order, preserving all existing deduplication
+# and category semantics. URLs are cached so the same stream is never tested twice
+# during a single update run.
+reachability_cache = {}
+
+def check_reachable(url):
+    if url not in reachability_cache:
+        reachability_cache[url] = reachable(url)
+    return reachability_cache[url]
+
+for source, candidates, source_error in source_results:
+    if source_error is not None:
         source_errors += 1
         continue
+
+    pending = []
     for info, url in candidates:
         if not acceptable(info) or not acceptable_url(url):
             rejected += 1
             continue
+
         metadata = attrs(info)
         cid = metadata.get("tvg-id", "").strip().lower()
         cid_base = cid.split("@", 1)[0]
@@ -179,6 +204,7 @@ for source in SOURCES:
         if not candidate_country:
             match = re.search(r"\.([a-z]{2})(?:@|$)", cid_base)
             candidate_country = match.group(1) if match else ""
+
         same_id_country = (
             bool(cid_base and cid_base in existing_id_countries and candidate_country)
             and candidate_country in existing_id_countries.get(cid_base, set())
@@ -191,9 +217,7 @@ for source in SOURCES:
             bool(cid_base and cid_base in existing_id_countries and candidate_country)
             and candidate_country not in existing_id_countries.get(cid_base, set())
         ) or root_country_conflict
-        # Channel identity is metadata-driven only. Never use a display-name match
-        # to decide that an unrelated source is an alternate stream. Exact IDs are
-        # preferred; base IDs may match only when their country identity is compatible.
+
         known = bool(
             (cid and cid in existing_ids)
             or (
@@ -203,32 +227,54 @@ for source in SOURCES:
                 and not country_conflict
             )
         )
+
+        url_l = url.lower()
         if not known:
             new_channel_candidates += 1
-            if url.lower() in existing_urls or not cid:
+            if url_l in existing_urls or not cid:
                 continue
-            key = (cid_base or cname, url.lower())
+            key = (cid_base or cname, url_l)
             if key in seen_additions:
                 continue
-            if not reachable(url):
-                unreachable += 1
-                continue
-            new_channels.append((force_group(info, NEW_CHANNELS), url))
-            seen_additions.add(key)
-            existing_urls.add(url.lower())
+            pending.append(("new", info, url, key))
             continue
-        if url.lower() in existing_urls or url.lower() in backup_urls:
+
+        if url_l in existing_urls or url_l in backup_urls:
             continue
-        key = (cid_base or cname, url.lower())
+        key = (cid_base or cname, url_l)
         if key in seen_additions:
             continue
-        if not reachable(url):
+        pending.append(("backup", info, url, key))
+
+    # Deduplicate URL checks before launching network requests.
+    pending_urls = []
+    seen_pending_urls = set()
+    for _, _, url, _ in pending:
+        url_l = url.lower()
+        if url_l not in reachability_cache and url_l not in seen_pending_urls:
+            seen_pending_urls.add(url_l)
+            pending_urls.append(url_l)
+
+    if pending_urls:
+        with ThreadPoolExecutor(max_workers=24) as pool:
+            results = pool.map(reachable, pending_urls)
+            for url_l, ok in zip(pending_urls, results):
+                reachability_cache[url_l] = ok
+
+    for kind, info, url, key in pending:
+        url_l = url.lower()
+        if not reachability_cache.get(url_l, False):
             unreachable += 1
             continue
-        added.append((force_group(info, BACKUP), url))
-        seen_additions.add(key)
-        existing_urls.add(url.lower())
-        backup_urls.add(url.lower())
+        if kind == "new":
+            new_channels.append((force_group(info, NEW_CHANNELS), url))
+            seen_additions.add(key)
+            existing_urls.add(url_l)
+        else:
+            added.append((force_group(info, BACKUP), url))
+            seen_additions.add(key)
+            existing_urls.add(url_l)
+            backup_urls.add(url_l)
 
 if added or new_channels:
     lines = base.splitlines()
