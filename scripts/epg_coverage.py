@@ -33,7 +33,7 @@ def parse_stamp(value):
         off = m.group(2)
         if off:
             mins = int(off[1:3]) * 60 + int(off[3:5])
-            dt = dt.replace(tzinfo=timezone(1 if off[0] == "+" else -1) * timedelta(minutes=mins))
+            dt = dt.replace(tzinfo=timezone(timedelta(minutes=(mins if off[0] == "+" else -mins))))
         else: dt = dt.replace(tzinfo=timezone.utc)
         return dt.astimezone(timezone.utc)
     except ValueError: return None
