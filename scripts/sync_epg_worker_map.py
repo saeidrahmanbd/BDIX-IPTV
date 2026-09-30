@@ -20,8 +20,8 @@ def main():
         for x in ids:
             if x not in mapping[key]: mapping[key].append(x)
     text=WORKER.read_text(encoding="utf-8")
-    pattern=re.compile(r'const EPG_ID_MAP = \{.*?\n\};',re.S)
-    replacement="const EPG_ID_MAP = " + json.dumps(dict(sorted(mapping.items())),ensure_ascii=False,separators=(",",":")) + ";"
+    pattern=re.compile(r'const EPG_ID_MAP\s*=\s*\{.*?\};',re.S)
+    replacement="const EPG_ID_MAP = " + json.dumps(dict(sorted(mapping.items())),ensure_ascii=False,separators=(",",":")) + ";\n"
     if not pattern.search(text): raise SystemExit("EPG_ID_MAP block not found")
     new=pattern.sub(replacement,text,count=1)
     if new!=text: WORKER.write_text(new,encoding="utf-8")
