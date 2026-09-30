@@ -1734,16 +1734,16 @@ http://198.195.239.50:8095/travelXp/index.m3u8
 #EXTINF:-1 tvg-name="Duronto TV" group-title="Backup",Duronto TV
 http://198.195.239.50:8095/duranta/index.m3u8
 
-#EXTINF:-1 tvg-name="NICK" group-title="New Channels",NICK
+#EXTINF:-1 tvg-name="Nick" group-title="New Channels",Nick
 http://198.195.239.50:8095/nick/index.m3u8
 
-#EXTINF:-1 tvg-name="NICK JR" group-title="New Channels",NICK JR
+#EXTINF:-1 tvg-name="Nick Jr." group-title="New Channels",Nick Jr.
 http://198.195.239.50:8095/nickJr/index.m3u8
 
-#EXTINF:-1 tvg-name="SONIC" group-title="New Channels",SONIC
+#EXTINF:-1 tvg-name="Sonic" group-title="New Channels",Sonic
 http://198.195.239.50:8095/sonic/index.m3u8
 
-#EXTINF:-1 tvg-name="SONY-SPORTS.5HD" group-title="New Channels",SONY-SPORTS.5HD
+#EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="New Channels",Sony Sports Ten 5
 http://198.195.239.50:8095/SONY-SPORTS.5HD/index.m3u8
 
 #EXTINF:-1 tvg-name="BTV National" group-title="Backup",BTV National
@@ -1761,10 +1761,10 @@ http://198.195.239.50:8095/BOISAKHI.TV.HD/index.m3u8
 #EXTINF:-1 tvg-name="Ekhon TV" group-title="Backup",Ekhon TV
 http://198.195.239.50:8095/EAKHON.TV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="COLORS." group-title="New Channels",COLORS.
+#EXTINF:-1 tvg-name="Colors" group-title="Backup",Colors
 http://198.195.239.50:8095/COLORS.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="ANT.Pictures." group-title="New Channels",ANT.Pictures.
+#EXTINF:-1 tvg-name="&pictures" group-title="New Channels",&pictures
 http://198.195.239.50:8095/ANT.PICTURS.HD/index.m3u8
 
 #EXTINF:-1 tvg-name="Cartoon Network" group-title="Backup",Cartoon Network
@@ -1776,7 +1776,7 @@ http://198.195.239.50:8095/SONY.ENT.HD/index.m3u8
 #EXTINF:-1 tvg-name="History TV18" group-title="Backup",History TV18
 http://198.195.239.50:8095/HISTORY.TV.18.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR.SPORTS.SEL.2." group-title="New Channels",STAR.SPORTS.SEL.2.
+#EXTINF:-1 tvg-name="Star Sports Select 2" group-title="New Channels",Star Sports Select 2
 http://198.195.239.50:8095/STAR.SPORTS.SEL.2.HD/index.m3u8
 
 #EXTINF:-1 tvg-name="National Geographic" group-title="Backup",National Geographic
@@ -1785,7 +1785,7 @@ http://198.195.239.50:8095/NATGEO.HD/index.m3u8
 #EXTINF:-1 tvg-name="Star Movies Select" group-title="Backup",Star Movies Select
 http://198.195.239.50:8095/STAR.MOVIES.SEL.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR.SPORTS-SEL1." group-title="New Channels",STAR.SPORTS-SEL1.
+#EXTINF:-1 tvg-name="Star Sports Select 1" group-title="New Channels",Star Sports Select 1
 http://198.195.239.50:8095/STAR.SPORTS-SEL1.HD/index.m3u8
 
 #EXTINF:-1 tvg-name="Star Sports 2 HD" group-title="Backup",Star Sports 2 HD
@@ -1797,67 +1797,67 @@ http://198.195.239.50:8095/SONY.SPORTS2.HD/index.m3u8
 #EXTINF:-1 tvg-name="Sony Sports Ten 3" group-title="Backup",Sony Sports Ten 3
 http://198.195.239.50:8095/SONY.SPORTS.3/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR.SPORTS1." group-title="New Channels",STAR.SPORTS1.
+#EXTINF:-1 tvg-name="Star Sports 1" group-title="New Channels",Star Sports 1
 http://198.195.239.50:8095/STAR.SPORTS1.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR-SPORTS.3" group-title="New Channels",STAR-SPORTS.3
+#EXTINF:-1 tvg-name="Star Sports 3" group-title="New Channels",Star Sports 3
 http://198.195.239.50:8095/STAR-SPORTS.3/index.m3u8
 
-#EXTINF:-1 tvg-name="SONY.PIX." group-title="New Channels",SONY.PIX.
+#EXTINF:-1 tvg-name="Sony PIX" group-title="New Channels",Sony PIX
 http://198.195.239.50:8095/SONY.PIX.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="MNX." group-title="New Channels",MNX.
+#EXTINF:-1 tvg-name="MNX" group-title="New Channels",MNX
 http://198.195.239.50:8095/MNX.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="ROMEDY.NOW" group-title="New Channels",ROMEDY.NOW
+#EXTINF:-1 tvg-name="Romedy Now" group-title="New Channels",Romedy Now
 http://198.195.239.50:8095/ROMEDY.NOW/index.m3u8
 
-#EXTINF:-1 tvg-name="MN.PLUS." group-title="New Channels",MN.PLUS.
+#EXTINF:-1 tvg-name="MN+" group-title="New Channels",MN+
 http://198.195.239.50:8095/MN.PLUS.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="MOVIES.NOW." group-title="New Channels",MOVIES.NOW.
+#EXTINF:-1 tvg-name="Movies Now" group-title="New Channels",Movies Now
 http://198.195.239.50:8095/MOVIES.NOW.HD/index.m3u8
 
 #EXTINF:-1 tvg-name="EURO SPORT HD" group-title="Backup",EURO SPORT HD
 http://198.195.239.50:8095/EUROSPORTS.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="AND.PRIVE." group-title="New Channels",AND.PRIVE.
+#EXTINF:-1 tvg-name="&Privé HD" group-title="New Channels",&Privé HD
 http://198.195.239.50:8095/AND.PRIVE.HD/index.m3u8
 
 #EXTINF:-1 tvg-name="Zoom TV" group-title="Backup",Zoom TV
 http://198.195.239.50:8095/ZOOM.MUSIC/index.m3u8
 
-#EXTINF:-1 tvg-name="ZEE.BANGLA.CINEMA" group-title="New Channels",ZEE.BANGLA.CINEMA
+#EXTINF:-1 tvg-name="Zee Bangla Cinema" group-title="New Channels",Zee Bangla Cinema
 http://198.195.239.50:8095/ZEE.BANGLA.CINEMA/index.m3u8
 
 #EXTINF:-1 tvg-name="Sony AATH" group-title="Backup",Sony AATH
 http://198.195.239.50:8095/SONY.AAT/index.m3u8
 
-#EXTINF:-1 tvg-name="SONIC" group-title="New Channels",SONIC
+#EXTINF:-1 tvg-name="Sonic" group-title="Backup",Sonic
 http://198.195.239.50:8095/SONIC/index.m3u8
 
-#EXTINF:-1 tvg-name="NICK" group-title="New Channels",NICK
+#EXTINF:-1 tvg-name="Nick" group-title="Backup",Nick
 http://198.195.239.50:8095/NICK/index.m3u8
 
-#EXTINF:-1 tvg-name="HUNGAMA" group-title="New Channels",HUNGAMA
+#EXTINF:-1 tvg-name="Hungama" group-title="New Channels",Hungama
 http://198.195.239.50:8095/HUNGAMA/index.m3u8
 
-#EXTINF:-1 tvg-name="ETV.BAL.BHARAT" group-title="New Channels",ETV.BAL.BHARAT
+#EXTINF:-1 tvg-name="ETV Bal Bharat" group-title="New Channels",ETV Bal Bharat
 http://198.195.239.50:8095/ETV.BAL.BHARAT/index.m3u8
 
-#EXTINF:-1 tvg-name="NICK.JR" group-title="New Channels",NICK.JR
+#EXTINF:-1 tvg-name="Nick Jr." group-title="Backup",Nick Jr.
 http://198.195.239.50:8095/NICK.JR/index.m3u8
 
-#EXTINF:-1 tvg-name="ZING.MUSIC" group-title="New Channels",ZING.MUSIC
+#EXTINF:-1 tvg-name="Zing" group-title="New Channels",Zing
 http://198.195.239.50:8095/ZING.MUSIC/index.m3u8
 
 #EXTINF:-1 tvg-name="G TV" group-title="Backup",G TV
 http://198.195.239.50:8095/GAZI.TV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="T-SPORTS-" group-title="New Channels",T-SPORTS-
+#EXTINF:-1 tvg-name="T Sports" group-title="New Channels",T Sports
 http://198.195.239.50:8095/T-SPORTS-HD/index.m3u8
 
-#EXTINF:-1 tvg-name="XPLOR." group-title="New Channels",XPLOR.
+#EXTINF:-1 tvg-name="Xplor" group-title="New Channels",Xplor
 http://198.195.239.50:8095/XPLOR.HD/index.m3u8
 
 #EXTINF:-1 tvg-name="Travelxp Hindi" group-title="Backup",Travelxp Hindi
@@ -1866,61 +1866,61 @@ http://198.195.239.50:8095/TRAVELXP.HD/index.m3u8
 #EXTINF:-1 tvg-name="Duronto TV" group-title="Backup",Duronto TV
 http://198.195.239.50:8095/DURANTA.TV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="SONY.SPORTS.4" group-title="New Channels",SONY.SPORTS.4
+#EXTINF:-1 tvg-name="Sony Sports Ten 4" group-title="New Channels",Sony Sports Ten 4
 http://198.195.239.50:8095/SONY.SPORTS.4/index.m3u8
 
 #EXTINF:-1 tvg-name="Sony Ten 1" group-title="Backup",Sony Ten 1
 http://198.195.239.50:8095/SONY.SPORTS.1HD/index.m3u8
 
-#EXTINF:-1 tvg-name="SUPER.HUNGAMA" group-title="New Channels",SUPER.HUNGAMA
+#EXTINF:-1 tvg-name="Super Hungama" group-title="New Channels",Super Hungama
 http://198.195.239.50:8095/SUPER.HUNGAMA/index.m3u8
 
 #EXTINF:-1 tvg-name="Maasranga TV" group-title="Backup",Maasranga TV
 http://198.195.239.50:8095/MASRANGA.TV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="ALJAZEERA." group-title="New Channels",ALJAZEERA.
+#EXTINF:-1 tvg-name="Al Jazeera" group-title="New Channels",Al Jazeera
 http://198.195.239.50:8095/ALJAZEERA.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="FAST.SPORTS." group-title="New Channels",FAST.SPORTS.
+#EXTINF:-1 tvg-name="Fast Sports" group-title="New Channels",Fast Sports
 http://198.195.239.50:8095/FAST.SPORTS.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="HUM.MASALA.TV" group-title="New Channels",HUM.MASALA.TV
+#EXTINF:-1 tvg-name="HUM Masala" group-title="New Channels",HUM Masala
 http://198.195.239.50:8095/HUM.MASALA.TV/index.m3u8
 
-#EXTINF:-1 tvg-name="GEO.NEWS." group-title="New Channels",GEO.NEWS.
+#EXTINF:-1 tvg-name="Geo News" group-title="New Channels",Geo News
 http://198.195.239.50:8095/GEO.NEWS.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="Lotus.TV." group-title="New Channels",Lotus.TV.
+#EXTINF:-1 tvg-name="Lotus TV" group-title="New Channels",Lotus TV
 http://198.195.239.50:8095/Lotus.TV.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="PTV-SPORTS-" group-title="New Channels",PTV-SPORTS-
+#EXTINF:-1 tvg-name="PTV Sports" group-title="New Channels",PTV Sports
 http://198.195.239.50:8095/PTV-SPORTS-HD/index.m3u8
 
-#EXTINF:-1 tvg-name="AXN." group-title="New Channels",AXN.
+#EXTINF:-1 tvg-name="AXN" group-title="New Channels",AXN
 http://198.195.239.50:8095/AXN.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR.BHARAT." group-title="New Channels",STAR.BHARAT.
+#EXTINF:-1 tvg-name="Star Bharat" group-title="New Channels",Star Bharat
 http://198.195.239.50:8095/STAR.BHARAT.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="DW.NEWS." group-title="New Channels",DW.NEWS.
+#EXTINF:-1 tvg-name="DW News" group-title="New Channels",DW News
 http://198.195.239.50:8095/DW.NEWS.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="UNITE8.2." group-title="New Channels",UNITE8.2.
+#EXTINF:-1 tvg-name="UNITE8.2" group-title="New Channels",UNITE8.2
 http://198.195.239.50:8095/UNITE8.2.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="UNITE8.1." group-title="New Channels",UNITE8.1.
+#EXTINF:-1 tvg-name="UNITE8.1" group-title="New Channels",UNITE8.1
 http://198.195.239.50:8095/UNITE8.1.HD/index.m3u8
 
-#EXTINF:-1 tvg-name="STAR.SPORTS.4K" group-title="New Channels",STAR.SPORTS.4K
+#EXTINF:-1 tvg-name="Star Sports 4K" group-title="New Channels",Star Sports 4K
 http://198.195.239.50:8095/STAR.SPORTS.4K/index.m3u8
 
 #EXTINF:-1 tvg-name="9XM" group-title="Backup",9XM
 http://198.195.239.50:8095/9XM.MUSIC/index.m3u8
 
-#EXTINF:-1 tvg-name="BBC.NEWS" group-title="New Channels",BBC.NEWS
+#EXTINF:-1 tvg-name="BBC News" group-title="New Channels",BBC News
 http://198.195.239.50:8095/BBC.NEWS/index.m3u8
 
-#EXTINF:-1 tvg-name="MTV.INDIA" group-title="New Channels",MTV.INDIA
+#EXTINF:-1 tvg-name="MTV India" group-title="New Channels",MTV India
 http://198.195.239.50:8095/MTV.INDIA/index.m3u8
 
 # ==================== NEW BACKUP ====================
