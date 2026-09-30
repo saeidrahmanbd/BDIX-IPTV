@@ -98,7 +98,7 @@ jobs:
 
       - name: Build single-file Windows executable
         shell: pwsh
-        working-directory: \${{ env.SOURCE_ROOT }}
+        working-directory: ${{ env.SOURCE_ROOT }}
         run: |
           if (Test-Path 'build') { Remove-Item 'build' -Recurse -Force }
           if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
@@ -124,7 +124,7 @@ jobs:
 
       - name: Package portable download
         shell: pwsh
-        working-directory: \${{ env.SOURCE_ROOT }}
+        working-directory: ${{ env.SOURCE_ROOT }}
         run: |
           if (Test-Path 'release') { Remove-Item 'release' -Recurse -Force }
           New-Item -ItemType Directory -Path 'release' | Out-Null
