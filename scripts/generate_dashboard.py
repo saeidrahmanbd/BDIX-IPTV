@@ -111,6 +111,8 @@ def main():
     bangla=groups.get("Bangladesh",0)
     india=sum(v for k,v in groups.items() if k.startswith("Indian "))
     backup=groups.get("Backup",0)
+    new_channels=groups.get("New Channels",0)
+    new_backups=groups.get("New Backup",0)
     local_logos=sum(1 for x in e if x[3].startswith("https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"))
     logos=round(100*local_logos/total,1) if total else 0
     epg_pct=round(g.get("LivePct",0))
@@ -138,7 +140,7 @@ _Last generated: **{now}**_
 | 📡 Channels | **{channels}** |
 | 🇧🇩 Bangladesh | **{bangla}** |
 | 🇮🇳 India | **{india}** |
-| 🔁 Backup Streams | **{backup}** |
+| 🔁 Backup Streams | **{backup}** |\n| 🆕 New Channels | **{new_channels}** |\n| 🆕 New Backup Streams | **{new_backups}** |
 | 🖼️ Local Logos | **{logos}%** |
 | 📅 EPG Coverage | **{epg_pct}%** |
 | ⚠️ Audit Issues | **{issues}** |
