@@ -353,7 +353,7 @@ def run_change_guard():
     new_keys = {key(i,u) for i,u in entries}
     added, removed = new_keys-old_keys, old_keys-new_keys
     total = max(len(old_keys), len(new_keys), 1)
-    max_changes = max(25, int(total * 0.08))
+    max_changes = 150  # discovery is capped at 40 new channels + 80 new backups per run
     if len(added)+len(removed) > max_changes:
         raise SystemExit(
             f"Change Guard blocked maintenance: {len(added)} additions + "
