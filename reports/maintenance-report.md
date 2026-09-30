@@ -1,17 +1,17 @@
 # IPTV Maintenance Report
 
-_Generated: **2026-09-30 09:15 UTC**_
+_Generated: **2026-09-30 09:19 UTC**_
 
 ## Run Summary
 
 | Item | Result |
 |---|---:|
 | 🆕 New channels discovered **this run** | **0** |
-| 🔁 New backups discovered **this run** | **6** |
+| 🔁 New backups discovered **this run** | **11** |
 | 🚫 Rejected candidates | **643** |
-| 📺 Current playlist streams | **900** |
+| 📺 Current playlist streams | **877** |
 | 📡 Current channel IDs | **612** |
-| 🔁 Current backup streams | **332** |
+| 🔁 Current backup streams | **322** |
 | 🖼️ Logo exceptions | **1** |
 | 📅 EPG coverage | **60%** |
 | ⚠️ Audit issues | **25** |
@@ -26,7 +26,7 @@ None.
 
 ## Metadata Repairs This Run
 
-- Entries processed: **900**
+- Entries processed: **877**
 - Deterministic IDs generated: **0**
 - channel-id/tvg-id identities synchronized: **0**
 - tvg-name values normalized: **0**
@@ -50,8 +50,8 @@ None.
 - Bangladesh: **54**
 - India: **234**
 - New Channels category: **12**
-- New Backup category: **34**
-- Backup category: **332**
+- New Backup category: **21**
+- Backup category: **322**
 
 ## Detailed Reports
 

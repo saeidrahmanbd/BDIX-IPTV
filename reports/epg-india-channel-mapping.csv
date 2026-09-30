@@ -470,6 +470,7 @@ Kids,ZooMoo,ZooMoo.sg,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matc
 Kids,Солнце,custom.solntse,&TV.HD.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED_ID_ONLY,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,9X Jhakaas,9XJhakaas.in@SD,9x.Jhakaas.in | 9X.JHAKAAS.in | 543161,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,9X Tashan,9XTashan.in@SD,9X.Tashan.in | 9X.TASHAN.in | 9XTashan.in | 543036,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+New Backup,Aamar Bangla,AamarBangla.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Ananda TV,AnandaTV.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,DBC News,DBCNews.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Deewana HD,DeewanaHD.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -477,11 +478,15 @@ New Backup,Dhoom Music Bangla,DhoomMusic.in@SD,Dhoom.Music.Bangla.in | DHOOM.MUS
 New Backup,ETV Cinema HD,ETVCinema.in@HD,ETV.Cinema.in | ETV.CINEMA.in | ETVCinema.in | 543267,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,ETV Music,ETVMusic.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Ekhon TV,EkhonTV.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Backup,Epic Music Digital,EpicMusic.in@Digital,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Gazi TV,GaziTV.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Green TV,GreenTV.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Isai Aruvi,IsaiAruvi.in@SD,ISAI.ARUVI.in | Isaiaruvi.in | 543163,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+New Backup,My TV (Bangladesh),MyTV.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Backup,NTV (Bangladesh),NTV.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Peppers TV,PeppersTV.in@SD,Peppers.TV.in | PeppersTV.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://iptv-epg.org/files/epg-in.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Pitaara TV,Pitaara.in@SD,Pitaara.in | 543026,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+New Backup,RTV (Bangladesh),RTV.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Sony Max 2,SonyMax2.in@SD,Sony.MAX2.in | Sony.Max.2.in | SONY.MAX.2.in | 543114,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Zoom TV,Zoom.in@SD,ZOOM.in | Zoom.in | 543288,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,ATN Music,ATNMusic.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
