@@ -73,10 +73,11 @@ def ext(a,n,g):
 def main():
     original=P.read_text(encoding="utf-8-sig"); entries=parse(original)
     pairs={(norm(n),u) for a,n,u in entries}
+    existing_urls={u.strip().lower() for a,n,u in entries if u.strip()}
     names={norm(n) for a,n,u in entries}
     ids={base_id(a.get("tvg-id") or a.get("channel-id")) for a,n,u in entries
          if base_id(a.get("tvg-id") or a.get("channel-id"))}
-    cand=[]; rejected=0
+    cand=[]; rejected=0; candidate_urls=set(existing_urls)
     for country,src in S:
         try:
             q=urllib.request.Request(src,headers={"User-Agent":"BDIX-IPTV-discovery/1.0"})
@@ -84,7 +85,8 @@ def main():
         except Exception as e:
             print("Source unavailable:",src,e); continue
         for a,n,u in parse(text):
-            if ok(country,a,n,u) and (norm(n),u) not in pairs: cand.append((country,a,n,u))
+            if ok(country,a,n,u) and (norm(n),u) not in pairs and u.strip().lower() not in candidate_urls:
+                cand.append((country,a,n,u)); candidate_urls.add(u.strip().lower())
             elif not ok(country,a,n,u): rejected+=1
     cand.sort(key=lambda x:(x[0]!="Bangladesh",norm(x[2]),x[3]))
     new=[]; backups=[]; planned_names=set(names); planned_ids=set(ids); seen=set(pairs)
