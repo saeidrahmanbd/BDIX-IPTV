@@ -386,6 +386,8 @@ run_change_guard()
 
 if protected_changes:
     raise SystemExit("Protected primary playlist entries changed; refusing automatic commit.")
+if duplicate_urls:
+    raise SystemExit(f"Duplicate stream URLs detected ({len(duplicate_urls)} unique URLs); refusing automatic commit.")
 if primary_duplicate_ids:
     raise SystemExit("Duplicate primary identities detected; refusing automatic commit.")
 if primary_chno_collisions:
