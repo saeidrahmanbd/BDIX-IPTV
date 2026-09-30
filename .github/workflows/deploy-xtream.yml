@@ -16,11 +16,13 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Deploy Worker
+        id: deploy
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: xtream
+          command: deploy --verbose
           secrets: |
             XTREAM_USERNAME
             XTREAM_PASSWORD
