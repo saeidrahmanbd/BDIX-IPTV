@@ -1,14 +1,14 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-09-30T07:04:07+00:00**
+Generated: **2026-09-30T07:18:27+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **224**
-- Channels with an EPG mapping: **144**
-- Current/future programme coverage: **135/224 (60.3%)**
+- Active Indian channels audited: **220**
+- Channels with an EPG mapping: **140**
+- Current/future programme coverage: **131/220 (59.5%)**
 - No guide mapping found: **80**
 
 ## Source Status

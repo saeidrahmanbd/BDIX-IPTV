@@ -803,207 +803,207 @@ https://wildearth-plex.amagi.tv/masterR1080p.m3u8
 https://aenetworks-worldwartv-rakuten.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.xxtreme.jobs.hindi" tvg-name="XXTreme Jobs Hindi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xxtreme-jobs-hindi.png" tvg-chno="902" channel-id="custom.xxtreme.jobs.hindi" group-title="Documentary & Wildlife",XXTreme Jobs Hindi
 https://cc-zko1curyce7jh.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-zko1curyce7jh/IQJW/WBD/XXtremeJobs_IN/XXtremeJobs_IN.m3u8
-#EXTINF:-1 tvg-id="ADNTVPlus.fr" tvg-name="ADN TV+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/adn-tv.png" tvg-chno="905" channel-id="ADNTVPlus.fr" group-title="Kids",ADN TV+
+#EXTINF:-1 tvg-id="ADNTVPlus.fr" tvg-name="ADN TV+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/adn-tv.png" tvg-chno="904" channel-id="ADNTVPlus.fr" group-title="Kids",ADN TV+
 https://d3b73b34o7cvkq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gz2sgqzp076kf/adn.m3u8
-#EXTINF:-1 tvg-id="AfarinTV.iq" tvg-name="Afarin TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/afarin-tv.png" tvg-chno="906" channel-id="AfarinTV.iq" group-title="Kids",Afarin TV
+#EXTINF:-1 tvg-id="AfarinTV.iq" tvg-name="Afarin TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/afarin-tv.png" tvg-chno="905" channel-id="AfarinTV.iq" group-title="Kids",Afarin TV
 https://65f16f0fdfc51.streamlock.net/afarinTV/livestream/playlist.m3u8
-#EXTINF:-1 tvg-id="BabySharkTV.us" tvg-name="Baby Shark TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/baby-shark-tv.png" tvg-chno="907" channel-id="BabySharkTV.us" group-title="Kids",Baby Shark TV
+#EXTINF:-1 tvg-id="BabySharkTV.us" tvg-name="Baby Shark TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/baby-shark-tv.png" tvg-chno="906" channel-id="BabySharkTV.us" group-title="Kids",Baby Shark TV
 https://newidco-babysharktv-1-eu.rakuten.wurl.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.bantul.the.great" tvg-name="Bantul the Great" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bantul-the-great-35f9777f.png" tvg-chno="908" channel-id="custom.bantul.the.great" group-title="Kids",Bantul the Great
+#EXTINF:-1 tvg-id="custom.bantul.the.great" tvg-name="Bantul the Great" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bantul-the-great-35f9777f.png" tvg-chno="907" channel-id="custom.bantul.the.great" group-title="Kids",Bantul the Great
 https://live20.bozztv.com/giatvplayout7/giatv-209869/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 channel-id="CartoonNetwork.uk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network.png" tvg-id="CartoonNetwork.uk" tvg-name="Cartoon Network" tvg-chno="909" group-title="Kids",Cartoon Network
+#EXTINF:-1 channel-id="CartoonNetwork.uk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network.png" tvg-id="CartoonNetwork.uk" tvg-name="Cartoon Network" tvg-chno="908" group-title="Kids",Cartoon Network
 https://drk6xq0vhn.gpcdn.net/live/cn_sd_abr/index.m3u8
-#EXTINF:-1 tvg-id="CartoonNetwork.in@SD" tvg-name="Cartoon Network HD+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network-hd.png" tvg-chno="910" channel-id="CartoonNetwork.in@SD" group-title="Kids",Cartoon Network HD+
+#EXTINF:-1 tvg-id="CartoonNetwork.in@SD" tvg-name="Cartoon Network HD+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network-hd.png" tvg-chno="909" channel-id="CartoonNetwork.in@SD" group-title="Kids",Cartoon Network HD+
 https://drk6xq0vhn.gpcdn.net/live/cn_hd_abr/index.m3u8
-#EXTINF:-1 tvg-id="custom.dios.te.ve.kids" tvg-name="Dios Te Ve Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dios-te-ve-kids.png" tvg-chno="915" channel-id="custom.dios.te.ve.kids" group-title="Kids",Dios Te Ve Kids
+#EXTINF:-1 tvg-id="custom.dios.te.ve.kids" tvg-name="Dios Te Ve Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dios-te-ve-kids.png" tvg-chno="910" channel-id="custom.dios.te.ve.kids" group-title="Kids",Dios Te Ve Kids
 https://s.emisoras.tv:8081/diostevekids/index.m3u8
-#EXTINF:-1 channel-id="DiscoveryKids.au" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-kids.png" tvg-id="DiscoveryKids.au" tvg-name="Discovery Kids" tvg-chno="917" group-title="Kids",Discovery Kids
+#EXTINF:-1 channel-id="DiscoveryKids.au" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-kids.png" tvg-id="DiscoveryKids.au" tvg-name="Discovery Kids" tvg-chno="911" group-title="Kids",Discovery Kids
 https://stream.ottplus.live/live/discovery_kids_abr/index.m3u8
-#EXTINF:-1 tvg-id="DisneyChannel.hu" tvg-name="Disney Channel Hungary" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-hungary.png" tvg-chno="919" channel-id="DisneyChannel.hu" group-title="Kids",Disney Channel Hungary
+#EXTINF:-1 tvg-id="DisneyChannel.hu" tvg-name="Disney Channel Hungary" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-hungary.png" tvg-chno="912" channel-id="DisneyChannel.hu" group-title="Kids",Disney Channel Hungary
 http://88.212.15.19/live/disney_channel_hun/index.m3u8
-#EXTINF:-1 channel-id="DisneyChannel.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-india.png" tvg-id="DisneyChannel.in@HD" tvg-name="Disney Channel India" tvg-chno="920" group-title="Kids",Disney Channel India
+#EXTINF:-1 channel-id="DisneyChannel.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-india.png" tvg-id="DisneyChannel.in@HD" tvg-name="Disney Channel India" tvg-chno="913" group-title="Kids",Disney Channel India
 http://181.119.215.61:8000/play/a0g1/index.m3u8
-#EXTINF:-1 tvg-id="custom.disney.jr" tvg-name="Disney Jr." tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-jr.png" tvg-chno="921" channel-id="custom.disney.jr" group-title="Kids",Disney Jr.
+#EXTINF:-1 tvg-id="custom.disney.jr" tvg-name="Disney Jr." tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-jr.png" tvg-chno="914" channel-id="custom.disney.jr" group-title="Kids",Disney Jr.
 http://190.93.224.42/DISNEY-JR/index.m3u8
-#EXTINF:-1 channel-id="custom.doraemon.tv" tvg-id="custom.doraemon.tv" tvg-name="Doraemon TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/doraemon-tv.png" tvg-chno="922" group-title="Kids",Doraemon TV
+#EXTINF:-1 channel-id="custom.doraemon.tv" tvg-id="custom.doraemon.tv" tvg-name="Doraemon TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/doraemon-tv.png" tvg-chno="915" group-title="Kids",Doraemon TV
 https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="custom.duck.tv" tvg-name="Duck TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/duck-tv.png" tvg-chno="923" channel-id="custom.duck.tv" group-title="Kids",Duck TV
+#EXTINF:-1 tvg-id="custom.duck.tv" tvg-name="Duck TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/duck-tv.png" tvg-chno="916" channel-id="custom.duck.tv" group-title="Kids",Duck TV
 https://d6lk10bkdgfae.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-n0stmvwxmsf5c/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.epic.kids.digital" tvg-name="Epic Kids Digital" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-kids-digital.png" tvg-chno="924" channel-id="custom.epic.kids.digital" group-title="Kids",Epic Kids Digital
+#EXTINF:-1 tvg-id="custom.epic.kids.digital" tvg-name="Epic Kids Digital" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-kids-digital.png" tvg-chno="917" channel-id="custom.epic.kids.digital" group-title="Kids",Epic Kids Digital
 https://cc-t8lqe1o99pszu.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-t8lqe1o99pszu/playlist.m3u8
-#EXTINF:-1 tvg-id="TheJungleBook.in" tvg-name="Jungle Book" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jungle-book.png" tvg-chno="925" channel-id="TheJungleBook.in" group-title="Kids",Jungle Book
+#EXTINF:-1 tvg-id="TheJungleBook.in" tvg-name="Jungle Book" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jungle-book.png" tvg-chno="918" channel-id="TheJungleBook.in" group-title="Kids",Jungle Book
 https://cc-4bhi5osabejc9.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-4bhi5osabejc9/junglebook.m3u8
-#EXTINF:-1 tvg-id="KartoonChannel.us" tvg-name="Kartoon Channel!" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kartoon-channel.png" tvg-chno="926" channel-id="KartoonChannel.us" group-title="Kids",Kartoon Channel!
+#EXTINF:-1 tvg-id="KartoonChannel.us" tvg-name="Kartoon Channel!" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kartoon-channel.png" tvg-chno="919" channel-id="KartoonChannel.us" group-title="Kids",Kartoon Channel!
 https://d2z0ysa6dgxhlc.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ajxyy4yaic6nq/kchan.m3u8
-#EXTINF:-1 tvg-id="custom.kiddo.matix" tvg-name="KidDo MATIX" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kiddo-matix.png" tvg-chno="927" channel-id="custom.kiddo.matix" group-title="Kids",KidDo MATIX
+#EXTINF:-1 tvg-id="custom.kiddo.matix" tvg-name="KidDo MATIX" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kiddo-matix.png" tvg-chno="920" channel-id="custom.kiddo.matix" group-title="Kids",KidDo MATIX
 https://cc-le0kohm4qt3mk.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-le0kohm4qt3mk/OTM/OTM_KiddoMatix-SCTE_SAMSUNG/playlist.m3u8
-#EXTINF:-1 tvg-id="Minimax.hu" tvg-name="Minimax" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/minimax.png" tvg-chno="928" channel-id="Minimax.hu" group-title="Kids",Minimax
+#EXTINF:-1 tvg-id="Minimax.hu" tvg-name="Minimax" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/minimax.png" tvg-chno="921" channel-id="Minimax.hu" group-title="Kids",Minimax
 http://88.212.15.19/live/test_minimax/playlist.m3u8
-#EXTINF:-1 tvg-id="MoonbugKids.uk" tvg-name="Moonbug Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/moonbug-kids.png" tvg-chno="929" channel-id="MoonbugKids.uk" group-title="Kids",Moonbug Kids
+#EXTINF:-1 tvg-id="MoonbugKids.uk" tvg-name="Moonbug Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/moonbug-kids.png" tvg-chno="922" channel-id="MoonbugKids.uk" group-title="Kids",Moonbug Kids
 https://tvsen6.aynaott.com/MoonbugKids/index.m3u8?e=1784102587&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=bb483e4de44847e04d2d1fbbf8098cd7
-#EXTINF:-1 tvg-id="custom.motu.patlu" tvg-name="Motu Patlu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/motu-patlu.png" tvg-chno="930" channel-id="custom.motu.patlu" group-title="Kids",Motu Patlu
+#EXTINF:-1 tvg-id="custom.motu.patlu" tvg-name="Motu Patlu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/motu-patlu.png" tvg-chno="923" channel-id="custom.motu.patlu" group-title="Kids",Motu Patlu
 https://live20.bozztv.com/giatvplayout7/giatv-209622/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 channel-id="MovieDomeFamily" tvg-name="Movie Dome Family" tvg-id="MovieDomeFamily" group-title="Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movie-dome-family.png" tvg-chno="931",Movie Dome Family
+#EXTINF:-1 channel-id="MovieDomeFamily" tvg-name="Movie Dome Family" tvg-id="MovieDomeFamily" group-title="Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movie-dome-family.png" tvg-chno="924",Movie Dome Family
 https://amg00771-kochfilmsgerman-moviedomefamily-tcl-tpicw.amagi.tv/playlist/amg00771-kochfilmsgerman-moviedomefamily-tcl/playlist.m3u8
-#EXTINF:-1 tvg-id="MrBeanAnimated.uk" tvg-name="Mr Bean Animated" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mr-bean-animated.png" tvg-chno="932" channel-id="MrBeanAnimated.uk" group-title="Kids",Mr Bean Animated
+#EXTINF:-1 tvg-id="MrBeanAnimated.uk" tvg-name="Mr Bean Animated" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mr-bean-animated.png" tvg-chno="925" channel-id="MrBeanAnimated.uk" group-title="Kids",Mr Bean Animated
 https://amg00627-amg00627c29-rakuten-it-3989.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanitcc-rakutenit/playlist.m3u8
-#EXTINF:-1 channel-id="NickJr.cz@SD" tvg-id="NickJr.cz@SD" tvg-name="Nick Jr. (Czech Republic)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="Kids" tvg-chno="933",Nick Jr. (Czech Republic)
+#EXTINF:-1 channel-id="NickJr.cz@SD" tvg-id="NickJr.cz@SD" tvg-name="Nick Jr. (Czech Republic)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="Kids" tvg-chno="926",Nick Jr. (Czech Republic)
 http://88.212.15.19/live/test_nick_jr/playlist.m3u8
-#EXTINF:-1 tvg-id="Oggyandthecockroaches" tvg-name="Oggy and the cockroaches" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/oggy-and-the-cockroaches.png" tvg-chno="934" channel-id="Oggyandthecockroaches" group-title="Kids",Oggy and the cockroaches
+#EXTINF:-1 tvg-id="Oggyandthecockroaches" tvg-name="Oggy and the cockroaches" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/oggy-and-the-cockroaches.png" tvg-chno="927" channel-id="Oggyandthecockroaches" group-title="Kids",Oggy and the cockroaches
 https://live20.bozztv.com/giatvplayout7/giatv-210728/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="PBSKids.us@SD" tvg-name="PBS Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pbs-kids.png" group-title="Kids" tvg-chno="935" channel-id="PBSKids.us@SD",PBS Kids
+#EXTINF:-1 tvg-id="PBSKids.us@SD" tvg-name="PBS Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pbs-kids.png" group-title="Kids" tvg-chno="928" channel-id="PBSKids.us@SD",PBS Kids
 https://livestream.pbskids.org/out/v1/14507d931bbe48a69287e4850e53443c/est.m3u8
-#EXTINF:-1 tvg-id="Pogo.in@SD" tvg-name="Pogo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pogo.png" tvg-chno="936" channel-id="Pogo.in@SD" group-title="Kids",Pogo
+#EXTINF:-1 tvg-id="Pogo.in@SD" tvg-name="Pogo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pogo.png" tvg-chno="929" channel-id="Pogo.in@SD" group-title="Kids",Pogo
 https://stream.ottplus.live/live/pogo_sd_abr/index.m3u8
-#EXTINF:-1 tvg-id="Pop.uk" tvg-name="POP" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pop.png" tvg-chno="937" channel-id="Pop.uk" group-title="Kids",POP
+#EXTINF:-1 tvg-id="Pop.uk" tvg-name="POP" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pop.png" tvg-chno="930" channel-id="Pop.uk" group-title="Kids",POP
 https://amg01753-narrativeentert-popkids-samsunguk-yjjil.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-popkids-samsunguk/playlist.m3u8
-#EXTINF:-1 channel-id="Pop.uk@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pop.png" tvg-id="Pop.uk@HD" tvg-name="POP" group-title="Kids" tvg-chno="938",POP (1080p)
+#EXTINF:-1 channel-id="Pop.uk@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pop.png" tvg-id="Pop.uk@HD" tvg-name="POP" group-title="Kids" tvg-chno="931",POP (1080p)
 https://amg01753-narrativeentert-popkids-lggb-xyy5k.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-popkids-lggb/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.powerkids.kartoon.channel" tvg-name="Powerkids Kartoon Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/powerkids-kartoon-channel.png" tvg-chno="939" channel-id="custom.powerkids.kartoon.channel" group-title="Kids",Powerkids Kartoon Channel
+#EXTINF:-1 tvg-id="custom.powerkids.kartoon.channel" tvg-name="Powerkids Kartoon Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/powerkids-kartoon-channel.png" tvg-chno="932" channel-id="custom.powerkids.kartoon.channel" group-title="Kids",Powerkids Kartoon Channel
 https://cc-j2qrmdlg5y7lg.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-j2qrmdlg5y7lg/powerkids.m3u8
-#EXTINF:-1 tvg-id="RetroCrush.us" tvg-name="RetroCrush" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/retrocrush.png" tvg-chno="940" channel-id="RetroCrush.us" group-title="Kids",RetroCrush
+#EXTINF:-1 tvg-id="RetroCrush.us" tvg-name="RetroCrush" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/retrocrush.png" tvg-chno="933" channel-id="RetroCrush.us" group-title="Kids",RetroCrush
 https://linear-899.frequency.stream/dist/cineverse/899/hls/master/playlist.m3u8
-#EXTINF:-1 tvg-id="SmurfTV.us" tvg-name="Smurf TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/smurf-tv.png" tvg-chno="941" channel-id="SmurfTV.us" group-title="Kids",Smurf TV
+#EXTINF:-1 tvg-id="SmurfTV.us" tvg-name="Smurf TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/smurf-tv.png" tvg-chno="934" channel-id="SmurfTV.us" group-title="Kids",Smurf TV
 https://d144py1prrd7ns.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-affg2ev32s0dq/smrfe.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sonic.png" channel-id="custom.sonic.bangla" tvg-id="custom.sonic.bangla" tvg-name="Sonic Bangla" group-title="Kids" tvg-chno="942",Sonic Bangla
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sonic.png" channel-id="custom.sonic.bangla" tvg-id="custom.sonic.bangla" tvg-name="Sonic Bangla" group-title="Kids" tvg-chno="935",Sonic Bangla
 http://bosstv.click:8080/live/18012689/77561563/92412.ts
-#EXTINF:-1 tvg-id="Strawberry Shortcake" tvg-name="Strawberry Shortcake" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/strawberry-shortcake.png" tvg-chno="943" channel-id="Strawberry Shortcake" group-title="Kids",Strawberry Shortcake
+#EXTINF:-1 tvg-id="Strawberry Shortcake" tvg-name="Strawberry Shortcake" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/strawberry-shortcake.png" tvg-chno="936" channel-id="Strawberry Shortcake" group-title="Kids",Strawberry Shortcake
 https://d10c3fwb9yju0h.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-r5zgefp9c8p0b/master.m3u8
-#EXTINF:-1 tvg-id="custom.supertoons.tv" tvg-name="SuperToons TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/supertoons-tv.png" tvg-chno="944" channel-id="custom.supertoons.tv" group-title="Kids",SuperToons TV
+#EXTINF:-1 tvg-id="custom.supertoons.tv" tvg-name="SuperToons TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/supertoons-tv.png" tvg-chno="937" channel-id="custom.supertoons.tv" group-title="Kids",SuperToons TV
 https://d3bxvshzgfq6in.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-8a0c583l9gryw/feed/samsung/streams/SUPERTOONS_EN/master.m3u8?token=737aa2c3f17862a448f403cd2ac2b5ef1a0c413e1cf080a13a19cea99119221f&ads.device_did=%7BPSID%7D&ads.device_dnt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D&ads.ssai_vendor=SSSLIVE&ads.service_id=GBBD5100001HL
-#EXTINF:-1 tvg-id="Teletubbies.uk" tvg-name="Teletubbies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/teletubbies.png" tvg-chno="945" channel-id="Teletubbies.uk" group-title="Kids",Teletubbies
+#EXTINF:-1 tvg-id="Teletubbies.uk" tvg-name="Teletubbies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/teletubbies.png" tvg-chno="938" channel-id="Teletubbies.uk" group-title="Kids",Teletubbies
 https://dv8lsrd8fecw9.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-dkls74gdpo7r0/master.m3u8
-#EXTINF:-1 tvg-id="LegoChannel.us" tvg-name="The LEGO Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-lego-channel.png" tvg-chno="946" channel-id="LegoChannel.us" group-title="Kids",The LEGO Channel
+#EXTINF:-1 tvg-id="LegoChannel.us" tvg-name="The LEGO Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-lego-channel.png" tvg-chno="939" channel-id="LegoChannel.us" group-title="Kids",The LEGO Channel
 https://dltiqboxjw21d.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-evri8jwgwmxus/index.m3u8
-#EXTINF:-1 tvg-id="TinyPop.uk" tvg-name="Tiny Pop" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tiny-pop.png" tvg-chno="947" channel-id="TinyPop.uk" group-title="Kids",Tiny Pop
+#EXTINF:-1 tvg-id="TinyPop.uk" tvg-name="Tiny Pop" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tiny-pop.png" tvg-chno="940" channel-id="TinyPop.uk" group-title="Kids",Tiny Pop
 https://amg01753-narrativeentert-tinypop-samsunguk-hvvb7.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-tinypop-samsunguk/playlist.m3u8
-#EXTINF:-1 tvg-id="TomAndJerry.do" tvg-name="Tom and Jerry" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tom-and-jerry.png" tvg-chno="948" channel-id="TomAndJerry.do" group-title="Kids",Tom and Jerry
+#EXTINF:-1 tvg-id="TomAndJerry.do" tvg-name="Tom and Jerry" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tom-and-jerry.png" tvg-chno="941" channel-id="TomAndJerry.do" group-title="Kids",Tom and Jerry
 https://live20.bozztv.com/giatvplayout7/giatv-208314/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="Tooku.ru" tvg-name="Tooku" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tooku.png" tvg-chno="949" channel-id="Tooku.ru" group-title="Kids",Tooku
+#EXTINF:-1 tvg-id="Tooku.ru" tvg-name="Tooku" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tooku.png" tvg-chno="942" channel-id="Tooku.ru" group-title="Kids",Tooku
 http://live-saha.cdnvideo.ru/saha/tooky/playlist.m3u8
-#EXTINF:-1 tvg-id="ToonGoggles.us" tvg-name="Toon Goggles" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/toon-goggles.png" tvg-chno="950" channel-id="ToonGoggles.us" group-title="Kids",Toon Goggles
+#EXTINF:-1 tvg-id="ToonGoggles.us" tvg-name="Toon Goggles" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/toon-goggles.png" tvg-chno="943" channel-id="ToonGoggles.us" group-title="Kids",Toon Goggles
 https://d1eg24xrsfr6kv.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-b4b1bzxkt1uzo-prod/tg/tg/tg.m3u8
-#EXTINF:-1 tvg-id="custom.toon.goggles.junior" tvg-name="Toon Goggles Junior" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/toon-goggles-junior.png" tvg-chno="951" channel-id="custom.toon.goggles.junior" group-title="Kids",Toon Goggles Junior
+#EXTINF:-1 tvg-id="custom.toon.goggles.junior" tvg-name="Toon Goggles Junior" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/toon-goggles-junior.png" tvg-chno="944" channel-id="custom.toon.goggles.junior" group-title="Kids",Toon Goggles Junior
 https://d3i6upqaqzosi1.cloudfront.net/tg/jr_us/tg_jr_us.m3u8
-#EXTINF:-1 tvg-id="custom.toonami.aftermath.east" tvg-name="Toonami Aftermath East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/toonami-aftermath-east.png" tvg-chno="952" channel-id="custom.toonami.aftermath.east" group-title="Kids",Toonami Aftermath East
+#EXTINF:-1 tvg-id="custom.toonami.aftermath.east" tvg-name="Toonami Aftermath East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/toonami-aftermath-east.png" tvg-chno="945" channel-id="custom.toonami.aftermath.east" group-title="Kids",Toonami Aftermath East
 http://api.toonamiaftermath.com:3000/est/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.tvcarib.kids.teens" tvg-name="TVCARiB Kids & Teens" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tvcarib-kids-teens.png" tvg-chno="953" channel-id="custom.tvcarib.kids.teens" group-title="Kids",TVCARiB Kids & Teens
+#EXTINF:-1 tvg-id="custom.tvcarib.kids.teens" tvg-name="TVCARiB Kids & Teens" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tvcarib-kids-teens.png" tvg-chno="946" channel-id="custom.tvcarib.kids.teens" group-title="Kids",TVCARiB Kids & Teens
 https://cdn.mycloudstream.io/hls/live/broadcast/nro19k2h/index.m3u8
-#EXTINF:-1 channel-id="WOWKidz.in@Hindi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz.png" tvg-id="WOWKidz.in@Hindi" tvg-name="WOW Kidz Hindi" tvg-chno="954" tvg-country="IN" tvg-language="hin" group-title="Kids",WOW Kidz Hindi
+#EXTINF:-1 channel-id="WOWKidz.in@Hindi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz.png" tvg-id="WOWKidz.in@Hindi" tvg-name="WOW Kidz Hindi" tvg-chno="947" tvg-country="IN" tvg-language="hin" group-title="Kids",WOW Kidz Hindi
 https://yuppparoriglin.akamaized.net/181224/smil:wowkidzhindi.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
-#EXTINF:-1 tvg-id="custom.wow.kidz.tamil" tvg-name="WOW Kidz Tamil" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz-tamil.png" tvg-chno="955" channel-id="custom.wow.kidz.tamil" group-title="Kids",WOW Kidz Tamil
+#EXTINF:-1 tvg-id="custom.wow.kidz.tamil" tvg-name="WOW Kidz Tamil" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz-tamil.png" tvg-chno="948" channel-id="custom.wow.kidz.tamil" group-title="Kids",WOW Kidz Tamil
 https://yuppparoriglin.akamaized.net/181224/smil:wowkidztam.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
-#EXTINF:-1 channel-id="WOWKidz.in@Telugu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz.png" tvg-id="WOWKidz.in@Telugu" tvg-name="WOW Kidz Telugu" tvg-chno="956" tvg-country="IN" tvg-language="tel" group-title="Kids",WOW Kidz Telugu
+#EXTINF:-1 channel-id="WOWKidz.in@Telugu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz.png" tvg-id="WOWKidz.in@Telugu" tvg-name="WOW Kidz Telugu" tvg-chno="949" tvg-country="IN" tvg-language="tel" group-title="Kids",WOW Kidz Telugu
 https://yuppparoriglin.akamaized.net/181224/smil:wowkidztelgu.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
-#EXTINF:-1 tvg-id="ZooMoo.sg" tvg-name="ZooMoo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoomoo.png" tvg-chno="957" channel-id="ZooMoo.sg" group-title="Kids",ZooMoo
+#EXTINF:-1 tvg-id="ZooMoo.sg" tvg-name="ZooMoo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoomoo.png" tvg-chno="950" channel-id="ZooMoo.sg" group-title="Kids",ZooMoo
 https://zoomoo-samsungau.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.solntse" tvg-name="Солнце" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/solnce.png" tvg-chno="958" channel-id="custom.solntse" group-title="Kids",Солнце
+#EXTINF:-1 tvg-id="custom.solntse" tvg-name="Солнце" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/solnce.png" tvg-chno="951" channel-id="custom.solntse" group-title="Kids",Солнце
 http://tv.mediacdn.ru/live/solntse/playlist.m3u8
-#EXTINF:-1 tvg-id="AlistiqamaTV.om" tvg-name="Al Istiqama" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/al-istiqama.png" tvg-chno="959" channel-id="AlistiqamaTV.om" group-title="Religious",Al Istiqama
+#EXTINF:-1 tvg-id="AlistiqamaTV.om" tvg-name="Al Istiqama" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/al-istiqama.png" tvg-chno="952" channel-id="AlistiqamaTV.om" group-title="Religious",Al Istiqama
 https://jmc-live.ercdn.net/alistiqama/alistiqama.m3u8
-#EXTINF:-1 tvg-id="AlQamarTV.ae" tvg-name="Al Qamar" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/al-qamar.png" tvg-chno="960" channel-id="AlQamarTV.ae" group-title="Religious",Al Qamar
+#EXTINF:-1 tvg-id="AlQamarTV.ae" tvg-name="Al Qamar" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/al-qamar.png" tvg-chno="953" channel-id="AlQamarTV.ae" group-title="Religious",Al Qamar
 https://streamer3.premio.link/alqamar/playlist.m3u8
-#EXTINF:-1 tvg-id="AlQuranAlKareemTV.sa" tvg-name="Al Quran Al Kareem TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/al-quran-al-kareem-tv.png" tvg-chno="961" channel-id="AlQuranAlKareemTV.sa" group-title="Religious",Al Quran Al Kareem TV
+#EXTINF:-1 tvg-id="AlQuranAlKareemTV.sa" tvg-name="Al Quran Al Kareem TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/al-quran-al-kareem-tv.png" tvg-chno="954" channel-id="AlQuranAlKareemTV.sa" group-title="Religious",Al Quran Al Kareem TV
 https://cdn-globecast.akamaized.net/live/eds/saudi_quran/hls_roku/index.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ary-q-tv.png" channel-id="custom.ary.q.tv" tvg-id="custom.ary.q.tv" tvg-name="ARY Q TV" tvg-chno="962" group-title="Religious",ARY Q TV
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ary-q-tv.png" channel-id="custom.ary.q.tv" tvg-id="custom.ary.q.tv" tvg-name="ARY Q TV" tvg-chno="955" group-title="Religious",ARY Q TV
 https://aryqtvm.aryzap.com/v1/0183ea2a0eec0b8ed5941a38bc76/0183ea2a4e470b8ed5aa4d793457/ARYQTVH264_1080p.m3u8
-#EXTINF:-1 tvg-id="AzanTV.ca" tvg-name="Azan TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/azan-tv-15e8ac79.png" tvg-chno="963" channel-id="AzanTV.ca" group-title="Religious",Azan TV
+#EXTINF:-1 tvg-id="AzanTV.ca" tvg-name="Azan TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/azan-tv-15e8ac79.png" tvg-chno="956" channel-id="AzanTV.ca" group-title="Religious",Azan TV
 https://dbcanada.sonarbanglatv.com/azantv/atv/index.m3u8
-#EXTINF:-1 channel-id="DeenTV.uk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deen-tv-576p.png" tvg-id="DeenTV.uk" tvg-name="Deen TV" tvg-chno="964" tvg-language="ben" tvg-country="UK" group-title="Religious",Deen TV
+#EXTINF:-1 channel-id="DeenTV.uk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deen-tv-576p.png" tvg-id="DeenTV.uk" tvg-name="Deen TV" tvg-chno="957" tvg-language="ben" tvg-country="UK" group-title="Religious",Deen TV
 https://cd198.anystream.uk:9092/iqapp/d33ntv/playlist.m3u8
-#EXTINF:-1 tvg-id="IqraBangla.uk" tvg-name="Iqra Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/iqra-bangla.png" tvg-chno="965" channel-id="IqraBangla.uk" group-title="Religious",Iqra Bangla
+#EXTINF:-1 tvg-id="IqraBangla.uk" tvg-name="Iqra Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/iqra-bangla.png" tvg-chno="958" channel-id="IqraBangla.uk" group-title="Religious",Iqra Bangla
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/iqrabanglatvoffice.stream/live-orgin/iqrabanglatvoffice.stream/chunks.m3u8
-#EXTINF:-1 tvg-id="IqraaTV" tvg-name="Iqraa TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/iqraa-tv.png" tvg-chno="966" channel-id="IqraaTV" group-title="Religious",Iqraa TV
+#EXTINF:-1 tvg-id="IqraaTV" tvg-name="Iqraa TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/iqraa-tv.png" tvg-chno="959" channel-id="IqraaTV" group-title="Religious",Iqraa TV
 https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv1/playlist.m3u8
-#EXTINF:-1 channel-id="IslamicTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/islamic-tv.png" tvg-id="IslamicTV.bd" tvg-name="Islamic TV" tvg-chno="967" group-title="Religious",Islamic TV
+#EXTINF:-1 channel-id="IslamicTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/islamic-tv.png" tvg-id="IslamicTV.bd" tvg-name="Islamic TV" tvg-chno="960" group-title="Religious",Islamic TV
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/islamictvbd.stream/index.m3u8
-#EXTINF:-1 tvg-id="custom.madani.tv" tvg-name="Madani TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/madani-tv.png" tvg-chno="968" channel-id="custom.madani.tv" group-title="Religious",Madani TV
+#EXTINF:-1 tvg-id="custom.madani.tv" tvg-name="Madani TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/madani-tv.png" tvg-chno="961" channel-id="custom.madani.tv" group-title="Religious",Madani TV
 https://tvsen3.aynaott.com/z24qLsqV/index.m3u8
-#EXTINF:-1 channel-id="custom.makkah.live" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/makkah-live.png" tvg-id="custom.makkah.live" tvg-name="Makkah Live" tvg-chno="969" group-title="Religious",Makkah Live
+#EXTINF:-1 channel-id="custom.makkah.live" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/makkah-live.png" tvg-id="custom.makkah.live" tvg-name="Makkah Live" tvg-chno="962" group-title="Religious",Makkah Live
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/makkah.stream/index.m3u8
-#EXTINF:-1 tvg-id="MakkahTV.sa" tvg-name="Makkah TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/makkah-tv.png" tvg-chno="970" channel-id="MakkahTV.sa" group-title="Religious",Makkah TV
+#EXTINF:-1 tvg-id="MakkahTV.sa" tvg-name="Makkah TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/makkah-tv.png" tvg-chno="963" channel-id="MakkahTV.sa" group-title="Religious",Makkah TV
 https://media2.streambrothers.com:1936/8122/8122/playlist.m3u8
-#EXTINF:-1 tvg-id="MedinaLive.bd" tvg-name="Medina Live" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/medina-live.png" tvg-chno="971" channel-id="MedinaLive.bd" group-title="Religious",Medina Live
+#EXTINF:-1 tvg-id="MedinaLive.bd" tvg-name="Medina Live" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/medina-live.png" tvg-chno="964" channel-id="MedinaLive.bd" group-title="Religious",Medina Live
 https://cdn-globecast.akamaized.net/live/eds/saudi_sunnah/hls_roku/index.m3u8
-#EXTINF:-1 tvg-id="PeaceTVBangla.ae" tvg-name="Peace TV Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/peace-tv-bangla.png" tvg-chno="972" channel-id="PeaceTVBangla.ae" group-title="Religious",Peace TV Bangla
+#EXTINF:-1 tvg-id="PeaceTVBangla.ae" tvg-name="Peace TV Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/peace-tv-bangla.png" tvg-chno="965" channel-id="PeaceTVBangla.ae" group-title="Religious",Peace TV Bangla
 https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8
-#EXTINF:-1 tvg-id="PeaceTVEnglish.ae" tvg-name="Peace TV English" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/peace-tv-english.png" tvg-chno="973" channel-id="PeaceTVEnglish.ae" group-title="Religious",Peace TV English
+#EXTINF:-1 tvg-id="PeaceTVEnglish.ae" tvg-name="Peace TV English" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/peace-tv-english.png" tvg-chno="966" channel-id="PeaceTVEnglish.ae" group-title="Religious",Peace TV English
 https://dzkyvlfyge.erbvr.com/PeaceTvEnglish/index.m3u8
-#EXTINF:-1 tvg-id="PeaceTVUrdu.ae" tvg-name="Peace TV Urdu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/peace-tv-urdu.png" tvg-chno="974" channel-id="PeaceTVUrdu.ae" group-title="Religious",Peace TV Urdu
+#EXTINF:-1 tvg-id="PeaceTVUrdu.ae" tvg-name="Peace TV Urdu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/peace-tv-urdu.png" tvg-chno="967" channel-id="PeaceTVUrdu.ae" group-title="Religious",Peace TV Urdu
 https://dzkyvlfyge.erbvr.com/PeaceTvUrdu/index.m3u8
-#EXTINF:-1 tvg-id="custom.quran" tvg-name="Quran" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran.png" tvg-chno="975" channel-id="custom.quran" group-title="Religious",Quran
+#EXTINF:-1 tvg-id="custom.quran" tvg-name="Quran" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran.png" tvg-chno="968" channel-id="custom.quran" group-title="Religious",Quran
 https://vodzong.mjunoon.tv:8087/streamtest/SaudiQuran-142/playlist.m3u8
-#EXTINF:-1 tvg-id="QuranTV.iq" tvg-name="Quran TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran.png" tvg-chno="976" channel-id="QuranTV.iq" group-title="Religious",Quran TV
+#EXTINF:-1 tvg-id="QuranTV.iq" tvg-name="Quran TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran.png" tvg-chno="969" channel-id="QuranTV.iq" group-title="Religious",Quran TV
 https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/sharjahtvquranpublish/shqurantv_source/chunks.m3u8
-#EXTINF:-1 channel-id="ASports.pk" tvg-id="ASports.pk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-sports-5485adff.png" tvg-name="A Sports" tvg-chno="977" tvg-country="PK" tvg-language="eng" group-title="Sports",A Sports
+#EXTINF:-1 channel-id="ASports.pk" tvg-id="ASports.pk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-sports-5485adff.png" tvg-name="A Sports" tvg-chno="970" tvg-country="PK" tvg-language="eng" group-title="Sports",A Sports
 https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 channel-id="AstroCricket.my" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/astro-cricbuzz-85394324.png" tvg-id="AstroCricket.my" tvg-name="Astro Cricbuzz" group-title="Sports" tvg-chno="978",Astro Cricbuzz
+#EXTINF:-1 channel-id="AstroCricket.my" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/astro-cricbuzz-85394324.png" tvg-id="AstroCricket.my" tvg-name="Astro Cricbuzz" group-title="Sports" tvg-chno="971",Astro Cricbuzz
 http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/2494.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bahrain-sports-2.png" tvg-id="BahrainSports2.bh@SD" tvg-name="Bahrain Sports 2" group-title="Sports" tvg-chno="979" channel-id="BahrainSports2.bh@SD",Bahrain Sports 2
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bahrain-sports-2.png" tvg-id="BahrainSports2.bh@SD" tvg-name="Bahrain Sports 2" group-title="Sports" tvg-chno="972" channel-id="BahrainSports2.bh@SD",Bahrain Sports 2
 https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8
-#EXTINF:-1 channel-id="Bein Sport HD 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-1.png" tvg-id="Bein Sport HD 1" tvg-name="beIN Sports 1" tvg-chno="980" group-title="Sports",beIN Sports 1
+#EXTINF:-1 channel-id="Bein Sport HD 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-1.png" tvg-id="Bein Sport HD 1" tvg-name="beIN Sports 1" tvg-chno="973" group-title="Sports",beIN Sports 1
 http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6123/index.m3u8
-#EXTINF:-1 tvg-id="beINSports3.qa" tvg-name="Bein Sports 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-3.png" tvg-chno="981" channel-id="beINSports3.qa" group-title="Sports",Bein Sports 3
+#EXTINF:-1 tvg-id="beINSports3.qa" tvg-name="Bein Sports 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-3.png" tvg-chno="974" channel-id="beINSports3.qa" group-title="Sports",Bein Sports 3
 http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6124/index.m3u8
-#EXTINF:-1 tvg-id="beINSports6.qa" tvg-name="beIN SPORTS 6" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-6.png" tvg-chno="982" channel-id="beINSports6.qa" group-title="Sports",beIN SPORTS 6
+#EXTINF:-1 tvg-id="beINSports6.qa" tvg-name="beIN SPORTS 6" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-6.png" tvg-chno="975" channel-id="beINSports6.qa" group-title="Sports",beIN SPORTS 6
 http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6127/index.m3u8
-#EXTINF:-1 tvg-id="beINSports7.qa" tvg-name="beIN SPORTS 7" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-7.png" tvg-chno="983" channel-id="beINSports7.qa" group-title="Sports",beIN SPORTS 7
+#EXTINF:-1 tvg-id="beINSports7.qa" tvg-name="beIN SPORTS 7" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-7.png" tvg-chno="976" channel-id="beINSports7.qa" group-title="Sports",beIN SPORTS 7
 http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6128/index.m3u8
-#EXTINF:-1 channel-id="beINSPORTSXTRA.us" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-xtra.png" tvg-name="beIN SPORTS XTRA" tvg-id="beINSPORTSXTRA.us" group-title="Sports" tvg-chno="984",beIN SPORTS XTRA
+#EXTINF:-1 channel-id="beINSPORTSXTRA.us" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-xtra.png" tvg-name="beIN SPORTS XTRA" tvg-id="beINSPORTSXTRA.us" group-title="Sports" tvg-chno="977",beIN SPORTS XTRA
 https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cricket-gold.png" tvg-id="CricketGold.au@SD" tvg-name="Cricket Gold" group-title="Sports" tvg-chno="985" channel-id="CricketGold.au@SD",Cricket Gold
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cricket-gold.png" tvg-id="CricketGold.au@SD" tvg-name="Cricket Gold" group-title="Sports" tvg-chno="978" channel-id="CricketGold.au@SD",Cricket Gold
 https://streams2.sofast.tv/ptnr-yupptv/title-cricketgold/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/b2048bb8-1686-4432-aa50-647245383e0c/manifest.m3u8
-#EXTINF:-1 channel-id="DDSports.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-sports-fb997548.png" tvg-id="DDSports.in@SD" tvg-name="DD Sports" tvg-chno="986" tvg-language="hin" tvg-country="IN" group-title="Sports",DD Sports
+#EXTINF:-1 channel-id="DDSports.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-sports-fb997548.png" tvg-id="DDSports.in@SD" tvg-name="DD Sports" tvg-chno="979" tvg-language="hin" tvg-country="IN" group-title="Sports",DD Sports
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8
-#EXTINF:-1 tvg-id="ESPN.us" tvg-name="ESPN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn.png" tvg-chno="987" channel-id="ESPN.us" group-title="Sports",ESPN
+#EXTINF:-1 tvg-id="ESPN.us" tvg-name="ESPN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn.png" tvg-chno="980" channel-id="ESPN.us" group-title="Sports",ESPN
 http://181.78.197.59:8000/play/a07z/index.m3u8
-#EXTINF:-1 tvg-id="Eurosport.in@SD" tvg-name="EURO SPORT HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/euro-sport-hd.png" tvg-chno="988" channel-id="Eurosport.in@SD" group-title="Sports",EURO SPORT HD
+#EXTINF:-1 tvg-id="Eurosport.in@SD" tvg-name="EURO SPORT HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/euro-sport-hd.png" tvg-chno="981" channel-id="Eurosport.in@SD" group-title="Sports",EURO SPORT HD
 http://202.70.146.135:8000/play/a05s/index.m3u8
-#EXTINF:-1 tvg-id="FITE247.us@SD" tvg-name="FITE 24/7" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fite-24-7.png" group-title="Sports" tvg-chno="989" channel-id="FITE247.us@SD",FITE 24/7
+#EXTINF:-1 tvg-id="FITE247.us@SD" tvg-name="FITE 24/7" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fite-24-7.png" group-title="Sports" tvg-chno="982" channel-id="FITE247.us@SD",FITE 24/7
 https://d3d85c7qkywguj.cloudfront.net/scheduler/scheduleMaster/263.m3u8
-#EXTINF:-1 channel-id="foxsports501hd.au" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fox-cricket-501-c0986ac1.png" tvg-id="foxsports501hd.au" tvg-name="FOX Cricket 501" tvg-chno="990" group-title="Sports",FOX Cricket 501
+#EXTINF:-1 channel-id="foxsports501hd.au" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fox-cricket-501-c0986ac1.png" tvg-id="foxsports501hd.au" tvg-name="FOX Cricket 501" tvg-chno="983" group-title="Sports",FOX Cricket 501
 http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/4748.ts
-#EXTINF:-1 tvg-id="FoxSports1.us" tvg-name="Fox Sports 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fox-sports-1.png" tvg-chno="991" channel-id="FoxSports1.us" group-title="Sports",Fox Sports 1
+#EXTINF:-1 tvg-id="FoxSports1.us" tvg-name="Fox Sports 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fox-sports-1.png" tvg-chno="984" channel-id="FoxSports1.us" group-title="Sports",Fox Sports 1
 http://85.237.89.160:9590/usa-s/FOX-SPORTS-1/index.m3u8
-#EXTINF:-1 channel-id="GoalTV.in" tvg-id="GoalTV.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goal-tv-237cfbed.png" tvg-name="Goal TV" tvg-chno="992" group-title="Sports",Goal TV
+#EXTINF:-1 channel-id="GoalTV.in" tvg-id="GoalTV.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goal-tv-237cfbed.png" tvg-name="Goal TV" tvg-chno="985" group-title="Sports",Goal TV
 https://streams2.sofast.tv/sofastplayout/WiseM3U8_1/master.m3u8
-#EXTINF:-1 tvg-name="Marquee Sports Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/marquee-sports-network.png" group-title="Sports" tvg-chno="993" channel-id="MarqueeSportsNetwork.us" tvg-id="MarqueeSportsNetwork.us",Marquee Sports Network
+#EXTINF:-1 tvg-name="Marquee Sports Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/marquee-sports-network.png" group-title="Sports" tvg-chno="986" channel-id="MarqueeSportsNetwork.us" tvg-id="MarqueeSportsNetwork.us",Marquee Sports Network
 https://tvsen6.aynaott.com/MarqueeSportsNetwork/index.m3u8?e=1779283796&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=a91e537a0eb1a24ed472a508e90fefcc
-#EXTINF:-1 channel-id="NHLNetwork.us" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nhl-network.png" tvg-name="NHL Network" tvg-id="NHLNetwork.us" group-title="Sports" tvg-chno="994",NHL Network
+#EXTINF:-1 channel-id="NHLNetwork.us" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nhl-network.png" tvg-name="NHL Network" tvg-id="NHLNetwork.us" group-title="Sports" tvg-chno="987",NHL Network
 https://nhl-firetv.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="PGATour.us@SD" tvg-name="PGA Tour" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pga-tour.png" group-title="Sports" tvg-chno="995" channel-id="PGATour.us@SD",PGA Tour
+#EXTINF:-1 tvg-id="PGATour.us@SD" tvg-name="PGA Tour" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pga-tour.png" group-title="Sports" tvg-chno="988" channel-id="PGATour.us@SD",PGA Tour
 https://d11k1mnrgfposz.cloudfront.net/playlist.m3u8
-#EXTINF:-1 tvg-id="RealMadridTVEnglish.es@SD" tvg-name="Real Madrid TV English" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/real-madrid-tv-english.png" group-title="Sports" tvg-chno="996" channel-id="RealMadridTVEnglish.es@SD",Real Madrid TV English
+#EXTINF:-1 tvg-id="RealMadridTVEnglish.es@SD" tvg-name="Real Madrid TV English" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/real-madrid-tv-english.png" group-title="Sports" tvg-chno="989" channel-id="RealMadridTVEnglish.es@SD",Real Madrid TV English
 http://88.212.15.19/live/real_madrid_tv/index.m3u8
-#EXTINF:-1 tvg-id="RedBullTV.at@EUMENA" tvg-name="Red Bull TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/red-bull-tv.png" group-title="Sports" tvg-chno="997" channel-id="RedBullTV.at@EUMENA",Red Bull TV
+#EXTINF:-1 tvg-id="RedBullTV.at@EUMENA" tvg-name="Red Bull TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/red-bull-tv.png" group-title="Sports" tvg-chno="990" channel-id="RedBullTV.at@EUMENA",Red Bull TV
 https://3ea22335.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWdiX1JlZEJ1bGxUVl9ITFM/playlist.m3u8
-#EXTINF:-1 tvg-id="SkySportsNFL.uk" tvg-name="Sky Sports Action" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-sports-action.png" tvg-chno="998" channel-id="SkySportsNFL.uk" group-title="Sports",Sky Sports Action
+#EXTINF:-1 tvg-id="SkySportsNFL.uk" tvg-name="Sky Sports Action" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-sports-action.png" tvg-chno="991" channel-id="SkySportsNFL.uk" group-title="Sports",Sky Sports Action
 http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9155/index.m3u
-#EXTINF:-1 tvg-id="SkySportsCricket.ie" tvg-name="Sky Sports Cricket" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-sports-cricket.png" tvg-chno="999" channel-id="SkySportsCricket.ie" group-title="Sports",Sky Sports Cricket
+#EXTINF:-1 tvg-id="SkySportsCricket.ie" tvg-name="Sky Sports Cricket" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-sports-cricket.png" tvg-chno="992" channel-id="SkySportsCricket.ie" group-title="Sports",Sky Sports Cricket
 http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9258/index.m3u8
-#EXTINF:-1 tvg-id="SkySportsFootball.ie" tvg-name="Sky Sports Football" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-sports-football.png" tvg-chno="1000" channel-id="SkySportsFootball.ie" group-title="Sports",Sky Sports Football
+#EXTINF:-1 tvg-id="SkySportsFootball.ie" tvg-name="Sky Sports Football" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-sports-football.png" tvg-chno="993" channel-id="SkySportsFootball.ie" group-title="Sports",Sky Sports Football
 http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9289/index.m3u8
-#EXTINF:-1 channel-id="SonySportsTen3.in" tvg-id="SonySportsTen3.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-3-8653ef22.png" tvg-name="Sony Sports Ten 3" tvg-chno="1001" group-title="Sports",Sony Sports Ten 3
+#EXTINF:-1 channel-id="SonySportsTen3.in" tvg-id="SonySportsTen3.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-3-8653ef22.png" tvg-name="Sony Sports Ten 3" tvg-chno="994" group-title="Sports",Sony Sports Ten 3
 http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98863.ts
-#EXTINF:-1 channel-id="custom.sony.ten.1" tvg-id="custom.sony.ten.1" tvg-name="Sony Ten 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-ten-1.png" tvg-chno="1002" group-title="Sports",Sony Ten 1
+#EXTINF:-1 channel-id="custom.sony.ten.1" tvg-id="custom.sony.ten.1" tvg-name="Sony Ten 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-ten-1.png" tvg-chno="995" group-title="Sports",Sony Ten 1
 https://drk6xq0vhn.gpcdn.net/live/ten_1_hd_720/index.m3u8
-#EXTINF:-1 tvg-id="custom.sony.ten.5" tvg-name="Sony Ten 5" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-ten-5.png" tvg-chno="1003" channel-id="custom.sony.ten.5" group-title="Sports",Sony Ten 5
+#EXTINF:-1 tvg-id="custom.sony.ten.5" tvg-name="Sony Ten 5" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-ten-5.png" tvg-chno="996" channel-id="custom.sony.ten.5" group-title="Sports",Sony Ten 5
 https://stream.ottplus.live/live/ten_5_hd_abr/live/ten_5_hd_720/index.m3u8
-#EXTINF:-1 tvg-id="StarSports1Hindi.in@HD" tvg-name="Star Sports 1 Hindi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-1-hindi.png" tvg-chno="1004" channel-id="StarSports1Hindi.in@HD" group-title="Sports",Star Sports 1 Hindi
+#EXTINF:-1 tvg-id="StarSports1Hindi.in@HD" tvg-name="Star Sports 1 Hindi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-1-hindi.png" tvg-chno="997" channel-id="StarSports1Hindi.in@HD" group-title="Sports",Star Sports 1 Hindi
 https://starsportshindiii.pages.dev/index.m3u8
-#EXTINF:-1 channel-id="custom.star.sports.sl.1" tvg-id="custom.star.sports.sl.1" tvg-name="Star Sports SL 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-sl-1.png" tvg-chno="1005" group-title="Sports",Star Sports SL 1
+#EXTINF:-1 channel-id="custom.star.sports.sl.1" tvg-id="custom.star.sports.sl.1" tvg-name="Star Sports SL 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-sl-1.png" tvg-chno="998" group-title="Sports",Star Sports SL 1
 https://flussonic.defineatoz.com/starsportsselect1/tracks-v1/mono.m3u8
-#EXTINF:-1 channel-id="StarSportsSL2.lk" tvg-id="StarSportsSL2.lk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-sl-2.png" tvg-name="Star Sports SL 2" tvg-chno="1006" group-title="Sports",Star Sports SL 2
+#EXTINF:-1 channel-id="StarSportsSL2.lk" tvg-id="StarSportsSL2.lk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-sl-2.png" tvg-name="Star Sports SL 2" tvg-chno="999" group-title="Sports",Star Sports SL 2
 http://rgkkw.live:80/live/1Aoen7elp5/IgMJ60tmAa/9401.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/talksport.png" tvg-id="talkSPORT.uk@SD" tvg-name="talkSPORT" group-title="Sports" tvg-chno="1007" channel-id="talkSPORT.uk@SD",talkSPORT
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/talksport.png" tvg-id="talkSPORT.uk@SD" tvg-name="talkSPORT" group-title="Sports" tvg-chno="1000" channel-id="talkSPORT.uk@SD",talkSPORT
 https://af7a8b4e.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfdGFsa1NQT1JUX0hMUw/playlist.m3u8
-#EXTINF:-1 channel-id="TenSports.pk" tvg-id="TenSports.pk" tvg-name="Ten Sports HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ten-sports-hd-d3126ed9.png" tvg-chno="1008" group-title="Sports",Ten Sports HD
+#EXTINF:-1 channel-id="TenSports.pk" tvg-id="TenSports.pk" tvg-name="Ten Sports HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ten-sports-hd-d3126ed9.png" tvg-chno="1001" group-title="Sports",Ten Sports HD
 http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ufc-tv.png" channel-id="UFCTV.us" tvg-id="UFCTV.us" tvg-name="UFC TV" tvg-chno="1009" group-title="Sports",UFC TV
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ufc-tv.png" channel-id="UFCTV.us" tvg-id="UFCTV.us" tvg-name="UFC TV" tvg-chno="1002" group-title="Sports",UFC TV
 https://linear-893.frequency.stream/mt/plex/893/hls/master/playlist_640x360.m3u8
-#EXTINF:-1 tvg-id="WildTV.ca@SD" tvg-name="Wild TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wild-tv.png" group-title="Sports" tvg-chno="1010" channel-id="WildTV.ca@SD",Wild TV
+#EXTINF:-1 tvg-id="WildTV.ca@SD" tvg-name="Wild TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wild-tv.png" group-title="Sports" tvg-chno="1003" channel-id="WildTV.ca@SD",Wild TV
 https://dfhsahpa45kk2.cloudfront.net/scheduler/scheduleMaster/476.m3u8
-#EXTINF:-1 channel-id="WipeoutXtra.uk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wipeout-xtra-powered-by-banijay-efac5b76.png" tvg-id="WipeoutXtra.uk" tvg-name="Wipeout Xtra" tvg-chno="1011" group-title="Sports",Wipeout Xtra
+#EXTINF:-1 channel-id="WipeoutXtra.uk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wipeout-xtra-powered-by-banijay-efac5b76.png" tvg-id="WipeoutXtra.uk" tvg-name="Wipeout Xtra" tvg-chno="1004" group-title="Sports",Wipeout Xtra
 https://d36nnn435goed2.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-skhf82opa3tf4/WipeoutXtraPoweredbyBanijay_GB.m3u8
 #EXTINF:-1 tvg-id="ATNMusic.bd@SD" tvg-name="ATN Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-music.png" channel-id="ATNMusic.bd@SD" group-title="New Channels",ATN Music (360p)
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
@@ -1035,6 +1035,28 @@ https://mumbai-edge.smartplaytv.in/ZeeCinemaluHD/index.m3u8
 https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
 #EXTINF:-1 tvg-id="RupashiBanglaTV.bd@SD" tvg-name="Rupashi Bangla TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rupashi-bangla-tv.png" channel-id="RupashiBanglaTV.bd@SD" group-title="New Channels",Rupashi Bangla TV (720p)
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="AamarBangla.in@SD" tvg-name="Aamar Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aamar-bangla.png" channel-id="AamarBangla.in@SD" group-title="New Backup",Aamar Bangla (720p)
+https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="MyTV.bd@SD" tvg-name="My TV (Bangladesh)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/my-tv.png" channel-id="MyTV.bd@SD" group-title="New Backup",My TV (Bangladesh)
+https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="NTV.bd@SD" tvg-name="NTV (Bangladesh)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png" channel-id="NTV.bd@SD" group-title="New Backup",NTV (Bangladesh) (720p)
+https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8
+#EXTINF:-1 tvg-id="RTV.bd@SD" tvg-name="RTV (Bangladesh)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rtv.png" channel-id="RTV.bd@SD" group-title="New Backup",RTV (Bangladesh) (720p)
+http://tvsen5.aynascope.net/RtvHD/index.m3u8
+#EXTINF:-1 tvg-id="DeewanaHD.in@SD" tvg-name="Deewana HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deewana-hd.png" channel-id="DeewanaHD.in@SD" group-title="New Backup",Deewana HD (540p)
+https://live20.bozztv.com/giatvplayout7/giatv-209592/index.m3u8
+#EXTINF:-1 tvg-id="DhoomMusic.in@SD" tvg-name="Dhoom Music Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dhoom-music-bangla.png" channel-id="DhoomMusic.in@SD" group-title="New Backup",Dhoom Music Bangla (720p)
+https://cdn.pishow.tv/ott/live/1456/master.m3u8
+#EXTINF:-1 tvg-id="EpicMusic.in@Digital" tvg-name="Epic Music Digital" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-music-digital.png" channel-id="EpicMusic.in@Digital" group-title="New Backup",Epic Music Digital (1080p)
+https://cc-3cyxq80qusspd.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/playlist.m3u8
+#EXTINF:-1 tvg-id="IsaiAruvi.in@SD" tvg-name="Isai Aruvi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/isai-aruvi.png" channel-id="IsaiAruvi.in@SD" group-title="New Backup",Isai Aruvi (396p)
+https://segment.yuppcdn.net/140622/isaiaruvi/playlist.m3u8
+#EXTINF:-1 tvg-id="PeppersTV.in@SD" tvg-name="Peppers TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/peppers-tv.png" channel-id="PeppersTV.in@SD" group-title="New Backup",Peppers TV (751p)
+https://cdn.pishow.tv/ott/live/1383/master.m3u8
+#EXTINF:-1 tvg-id="Pitaara.in@SD" tvg-name="Pitaara TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pitaara-tv.png" channel-id="Pitaara.in@SD" group-title="New Backup",Pitaara TV (720p)
+https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8
+#EXTINF:-1 tvg-id="Zoom.in@SD" tvg-name="Zoom TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png" channel-id="Zoom.in@SD" group-title="New Backup",Zoom TV (720p)
+https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 #EXTINF:-1 channel-id="Star.Jalsha.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" tvg-id="Star.Jalsha.in" tvg-name="Star Jalsha" group-title="Backup",Star Jalsha [Backup 5]
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
 #EXTINF:-1 tvg-id="VoktaTV.bd@SD" tvg-name="Vokta TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vokta-tv.png" channel-id="VoktaTV.bd@SD" group-title="New Channels",Vokta TV (720p)
