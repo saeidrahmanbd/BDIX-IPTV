@@ -238,9 +238,23 @@ try:
         elif group == "Not Playing":
             new_not_playing[key] += 1
 
+    # A metadata identity repair may intentionally change an existing primary
+    # tvg-id/channel-id when the exact stream URL is preserved under a derived
+    # identity (for example, resolving an old duplicate ID as @ALT1/@HD).
+    # Treat that as safe: the protected stream itself was not removed.
+    new_primary_by_url = defaultdict(list)
+    for (cid, url), count in new_primary.items():
+        new_primary_by_url[url].append((cid, count))
+
     for key, count in old_primary.items():
-        if new_primary[key] + new_not_playing[key] < count:
-            cid, url = key
+        cid, url = key
+        if new_primary[key] + new_not_playing[key] >= count:
+            continue
+        preserved = 0
+        for new_cid, new_count in new_primary_by_url.get(url, []):
+            if new_cid.startswith(cid + "@"):
+                preserved += new_count
+        if preserved < count:
             protected_changes.append((cid, url, "primary entry removed or changed"))
 except Exception:
     pass
@@ -359,11 +373,37 @@ def run_change_guard():
             f"Change Guard blocked maintenance: {len(added)} additions + "
             f"{len(removed)} removals exceed the {max_changes}-entry safety limit."
         )
-    old_primary = {key(i,u) for i,u in old_entries if attrs(i).get("group-title","").strip() not in PRIMARY_EXCEPTIONS}
-    new_primary = {key(i,u) for i,u in entries if attrs(i).get("group-title","").strip() not in PRIMARY_EXCEPTIONS}
-    removed_primary = old_primary-new_primary
+    old_primary = Counter(
+        key(i,u) for i,u in old_entries
+        if attrs(i).get("group-title","").strip() not in PRIMARY_EXCEPTIONS
+    )
+    new_primary = Counter(
+        key(i,u) for i,u in entries
+        if attrs(i).get("group-title","").strip() not in PRIMARY_EXCEPTIONS
+    )
+    new_primary_by_url = defaultdict(Counter)
+    for (cid, url), count in new_primary.items():
+        new_primary_by_url[url][cid] += count
+
+    removed_primary = []
+    for (old_cid, url), count in old_primary.items():
+        direct = new_primary[(old_cid, url)]
+        if direct >= count:
+            continue
+        # Allow only the specific identity-repair form produced by metadata
+        # normalization: the same primary stream URL retained under a derived
+        # ID such as old_id@ALT1 or old_id@HD.
+        preserved = sum(
+            n for new_cid, n in new_primary_by_url.get(url, {}).items()
+            if new_cid.startswith(old_cid + "@")
+        )
+        if direct + preserved < count:
+            removed_primary.extend([(old_cid, url)] * (count - direct - preserved))
     if removed_primary:
-        raise SystemExit(f"Change Guard blocked maintenance: {len(removed_primary)} primary entries would be removed or rewritten.")
+        raise SystemExit(
+            f"Change Guard blocked maintenance: {len(removed_primary)} primary entries "
+            "would be removed or rewritten."
+        )
 
 run_change_guard()
 
