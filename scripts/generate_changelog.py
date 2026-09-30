@@ -9,7 +9,7 @@ import json
 ROOT=Path(__file__).resolve().parents[1]
 PLAYLIST=ROOT/"IPTV-Playlist.m3u"
 STATE=ROOT/"reports/changelog-state.json"
-DOC_CHANGELOG=ROOT/"docs/CHANGELOG.md"
+DOC_CHANGELOG=ROOT/"assets/docs/CHANGELOG.md"
 ATTR_RE=re.compile(r'([\w-]+)="([^"]*)"')
 
 def attrs(s): return dict(ATTR_RE.findall(s))

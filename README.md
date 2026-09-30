@@ -21,11 +21,11 @@ Everything visitors commonly need, in one place:
 - 🖥️ **[Playlist Studio](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest)** — latest Windows release
 - 🛜 **[Xtream Codes](xtream/README.md)** — Xtream Gateway / XCIPTV
 - 📡 **[EPG Documentation](epg/README.md)** — EPG sources and configuration
-- ⚙️ **[Sample Configuration](examples/sample-config.md)**
-- 📚 **[Documentation](docs/README.md)**
-- 📝 **[Changelog](docs/CHANGELOG.md)**
+- ⚙️ **[Sample Configuration](assets/examples/sample-config.md)**
+- 📚 **[Documentation](assets/docs/README.md)**
+- 📝 **[Changelog](assets/docs/CHANGELOG.md)**
 
-**[→ Open the full Download Center](docs/DOWNLOADS.md)**
+**[→ Open the full Download Center](assets/docs/DOWNLOADS.md)**
 
 ## 🖥️ Playlist Studio 3.0
 
@@ -104,7 +104,7 @@ Primary curated entries are protected from indiscriminate changes.
 
 Automatic channel discovery is restricted to eligible live channels. New primary candidates go to **New Channels**; additional streams for existing/newly discovered channels go to **New Backup**. Indian news, sports, religious, kids, proxy/token/VOD/test/demo streams are excluded.
 
-**[→ Changelog](docs/CHANGELOG.md) · [→ Documentation](docs/README.md)**
+**[→ Changelog](assets/docs/CHANGELOG.md) · [→ Documentation](assets/docs/README.md)**
 
 ## 📬 Support
 
