@@ -156,6 +156,7 @@ https://server.thelegitpro.in/rongeentv/rongeentv/index.m3u8
 #EXTINF:-1 tvg-id="RupasiBangla.in@SD" tvg-name="Ruposhi Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ruposhi-bangla.png" tvg-chno="275" channel-id="RupasiBangla.in@SD" group-title="Indian Bangla",Ruposhi Bangla
 https://mumt05.tangotv.in/87NeALx2RUPASIBANGLA/index.m3u8
 #EXTINF:-1 tvg-id="SanandaTV.in" tvg-name="Sananda" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sananda-tv.png" tvg-chno="278" channel-id="SanandaTV.in" group-title="Indian Bangla",Sananda
+#EXTINF:-1 tvg-id="custom.recovered.ananda.tv" tvg-name="Ananda TV" channel-id="custom.recovered.ananda.tv" group-title="New Backup",Ananda TV
 http://live-stream.amarbanglatv.in:8080/hls/sanandatv/index.m3u8
 #EXTINF:-1 tvg-id="SangeetBangla.in@SD" tvg-name="Sangeet Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sangeet-bangla.png" tvg-chno="283" channel-id="SangeetBangla.in@SD" group-title="Indian Bangla",Sangeet Bangla
 https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/index.m3u8
@@ -1680,27 +1681,48 @@ http://vcdn1.produck.company:1935/out/dtv/playlist.m3u8
 #EXTINF:-1 channel-id="PixelTV.ua" tvg-name="Піксель TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pixel-tv.png" tvg-id="PixelTV.ua" tvg-country="UA" group-title="Backup",Піксель TV
 https://cdn15.live-tv.cloud/ua_infinitas_tv/pixel-abr/playlist.m3u8
 
+#EXTINF:-1 tvg-id="custom.recovered.atn.music" tvg-name="ATN Music" channel-id="custom.recovered.atn.music" group-title="New Backup",ATN Music
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.ntv" tvg-name="NTV" channel-id="custom.recovered.ntv" group-title="New Backup",NTV
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.ruposhi.bangla" tvg-name="Ruposhi Bangla" channel-id="custom.recovered.ruposhi.bangla" group-title="New Backup",Ruposhi Bangla
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.vokta.tv" tvg-name="Vokta TV" channel-id="custom.recovered.vokta.tv" group-title="New Backup",Vokta TV
 https://vokta.raytahost.com/live/voktatv/index.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.b4u.bhojpuri" tvg-name="B4U Bhojpuri" channel-id="custom.recovered.b4u.bhojpuri" group-title="New Backup",B4U Bhojpuri
 https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.pishow.10007" tvg-name="Pishow Stream 10007" channel-id="custom.recovered.pishow.10007" group-title="New Backup",Pishow Stream 10007
 https://cdn.pishow.tv/ott/live/10007/master.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.stingray.101" tvg-name="Stingray Stream 101" channel-id="custom.recovered.stingray.101" group-title="New Backup",Stingray Stream 101
 https://lotus.stingray.com/manifest/ose-101ads-montreal/samsungtvplus/master.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.stingray.137" tvg-name="Stingray Stream 137" channel-id="custom.recovered.stingray.137" group-title="New Backup",Stingray Stream 137
 https://lotus.stingray.com/manifest/ose-137ads-montreal/samsungtvplus/master.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.suriyan.tv" tvg-name="Suriyan TV" channel-id="custom.recovered.suriyan.tv" group-title="New Backup",Suriyan TV
 https://stream.sscloud7.com/live/suriyantv/index.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.yet.tv" tvg-name="YET TV" channel-id="custom.recovered.yet.tv" group-title="New Backup",YET TV
 https://live.yettelevision.com:5443/LiveApp/streams/yettv2.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.zee.cinemalu" tvg-name="Zee Cinemalu" channel-id="custom.recovered.zee.cinemalu" group-title="New Backup",Zee Cinemalu
 https://mumbai-edge.smartplaytv.in/ZeeCinemaluHD/index.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.amagi.862" tvg-name="Amagi Stream 862" channel-id="custom.recovered.amagi.862" group-title="New Backup",Amagi Stream 862
 https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
 http://103.99.249.139/anandatv/index.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.dbc.news" tvg-name="DBC News" channel-id="custom.recovered.dbc.news" group-title="New Backup",DBC News
 http://tvn3.chowdhury-shaheb.com/dbc/index.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.ekhon.tv" tvg-name="Ekhon TV" channel-id="custom.recovered.ekhon.tv" group-title="New Backup",Ekhon TV
 https://tplay.live/out/bangladesh/ekhontv.index.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.g.tv" tvg-name="G TV" channel-id="custom.recovered.g.tv" group-title="New Backup",G TV
 http://tvn1.chowdhury-shaheb.com/gazitv/index.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.green.tv" tvg-name="Green TV" channel-id="custom.recovered.green.tv" group-title="New Backup",Green TV
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.9x.jhakaas" tvg-name="9X Jhakaas" channel-id="custom.recovered.9x.jhakaas" group-title="New Backup",9X Jhakaas
 https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.9x.tashan" tvg-name="9X Tashan" channel-id="custom.recovered.9x.tashan" group-title="New Backup",9X Tashan
 https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.etv.cinema" tvg-name="ETV Cinema" channel-id="custom.recovered.etv.cinema" group-title="New Backup",ETV Cinema
 https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_CINEMA_H264_cloud_in/index.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.etv.abhiruchi" tvg-name="ETV Abhiruchi" channel-id="custom.recovered.etv.abhiruchi" group-title="New Backup",ETV Abhiruchi
 https://mumbai-edge.smartplaytv.in/ETVABHIRUCHI/index.m3u8
+#EXTINF:-1 tvg-id="custom.recovered.22" tvg-name="Unidentified Stream 22" channel-id="custom.recovered.22" group-title="New Backup",Unidentified Stream 22
 http://149.71.34.166:8000/play/a00z/index.m3u8
 
 # ==================== NEW CHANNELS ====================
