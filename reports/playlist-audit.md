@@ -4,7 +4,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Summary
 
-- Playlist entries: **882**
+- Playlist entries: **888**
 - Unique channel IDs: **612**
 - IDs with multiple streams: **161**
 - Duplicate stream URLs: **11**
@@ -231,18 +231,20 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### deeptotv.bd (2 streams)
 - Deepto TV — Bangladesh — https://byphdgllyk.gpcdn.net/hls/deeptotv/0_1/index.m3u8
 - Deepto TV — Backup — https://byphdgllyk.gpcdn.net/hls/DeeptoTV/index.m3u8
-### deewanahd.in@sd (2 streams)
+### deewanahd.in@sd (3 streams)
 - Deewana HD — Backup — https://live20.bozztv.com/giatvplayout7/giatv-209592/index.m3u8
+- Deewana HD — New Backup — https://live20.bozztv.com/giatvplayout7/giatv-209592/index.m3u8
 - Deewana HD — New Backup — https://live20.bozztv.com/giatvplayout7/giatv-209592/index.m3u8
 ### deshtv.bd (4 streams)
 - Desh TV — Bangladesh — https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8
 - Desh TV — Backup — https://stream.ottplus.live/live/desh_tv_abr/index.m3u8
 - Desh TV — Backup — https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8?e=1784102570&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=78b23c868a34420397be9c985d04db9b
 - Desh TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/desh-tv-2/index.m3u8
-### dhoommusic.in@sd (4 streams)
+### dhoommusic.in@sd (5 streams)
 - Dhoom Music Bangla — Indian Bangla — https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8
 - Dhoom Music Bangla — Backup — https://cdn.pishow.tv/ott/live/1456/master.m3u8
 - Dhoom Music Bangla — Backup — https://cdn.pishow.tv/ott/live/1456/master.m3u8
+- Dhoom Music Bangla — New Backup — https://cdn.pishow.tv/ott/live/1456/master.m3u8
 - Dhoom Music Bangla — New Backup — https://cdn.pishow.tv/ott/live/1456/master.m3u8
 ### durontotv.bd (2 streams)
 - Duronto TV — Bangladesh — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/433.ts
@@ -319,8 +321,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### inwild.nl (2 streams)
 - INWILD — Documentary & Wildlife — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/ts-eu-w1-n2/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
 - INWILD — Backup — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
-### isaiaruvi.in@sd (2 streams)
+### isaiaruvi.in@sd (3 streams)
 - Isai Aruvi — Indian Music — https://segment.yuppcdn.net/140622/isaiaruvi/playlist.m3u8
+- Isai Aruvi — New Backup — https://segment.yuppcdn.net/140622/isaiaruvi/playlist.m3u8
 - Isai Aruvi — New Backup — https://segment.yuppcdn.net/140622/isaiaruvi/playlist.m3u8
 ### jagonews24.bd (2 streams)
 - Jago News 24 — Bangladesh — https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8
@@ -429,15 +432,17 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### pardesitv.ca (2 streams)
 - Pardesi TV — Indian Entertainment — http://stream.pardesitv.online/pardesi/tracks-v1a1/mono.m3u8
 - Pardesi TV — Backup — http://stream.pardesitv.online/pardesi/index.m3u8
-### pepperstv.in@sd (3 streams)
+### pepperstv.in@sd (4 streams)
 - Peppers TV — Indian Entertainment — https://cdn.pishow.tv/ott/live/1383/master.m3u8
 - Peppers TV — Backup — https://cdn.pishow.tv/ott/live/1383/master.m3u8
 - Peppers TV — New Backup — https://cdn.pishow.tv/ott/live/1383/master.m3u8
-### pitaara.in@sd (5 streams)
+- Peppers TV — New Backup — https://cdn.pishow.tv/ott/live/1383/master.m3u8
+### pitaara.in@sd (6 streams)
 - Pitaara TV — Indian Movies — https://d2lk5u59tns74c.cloudfront.net/out/v1/500a6b45f5ae41dda445d912b59eaa09/index.m3u8
 - Pitaara TV — Backup — https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8
 - Pitaara TV — Backup — https://streams.tangotv.in/PITAARA/ORIGIN/index.m3u8
 - Pitaara TV — Backup — https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8
+- Pitaara TV — New Backup — https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8
 - Pitaara TV — New Backup — https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8
 ### pop.uk (2 streams)
 - POP — Kids — https://amg01753-narrativeentert-popkids-samsunguk-yjjil.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-popkids-samsunguk/playlist.m3u8
@@ -605,12 +610,13 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### zeetv.in@sd (2 streams)
 - Zee TV — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/zee_tv_hd_abr/index.m3u8
 - Zee TV — Backup — https://stream.ottplus.live/live/zee_tv_hd_abr/index.m3u8
-### zoom.in@sd (6 streams)
+### zoom.in@sd (7 streams)
 - Zoom TV — Indian Music — https://pubads.g.doubleclick.net/ssai/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 - Zoom TV — Backup — https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 - Zoom TV — Backup — https://d2esfk1pb9cdob.cloudfront.net/master.m3u8
 - Zoom TV — Backup — https://mumbai-edge.smartplaytv.in/Zoom/index.m3u8
 - Zoom TV — Backup — https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
+- Zoom TV — New Backup — https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 - Zoom TV — New Backup — https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 
 ## Duplicate Primary Identities
@@ -651,7 +657,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **881**
+- Healthy/local references: **887**
 - missing: **1**
 - broken-local: **0**
 - external: **0**
