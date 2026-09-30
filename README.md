@@ -50,7 +50,7 @@ Everything visitors commonly need, in one place:
 
 Playlist Studio 3.0 uses a modern **Fluent Dark** interface designed to keep playlist management, playback, channel metadata, and stream testing in one practical workspace.
 
-![Playlist Studio 3.0 — Fluent Dark Interface](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/playlist-studio-3.0-portable-build/playlist-studio/Playlist%20Studio%203.0.png)
+![Playlist Studio 3.0 — Fluent Dark Interface](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/playlist-studio-3.0-portable-build/Playlist%20Studio%203.0.png)
 
 ### 📥 Download
 
