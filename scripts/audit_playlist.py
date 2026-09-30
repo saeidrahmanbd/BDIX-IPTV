@@ -421,6 +421,9 @@ run_change_guard()
 if protected_changes:
     raise SystemExit("Protected primary playlist entries changed; refusing automatic commit.")
 if cross_country_backups:
+    print("Cross-country Backup collisions detected:")
+    for cid, name, primary_cid, url in cross_country_backups:
+        print(f"  - {name} [{cid}] vs primary [{primary_cid}] — {url}")
     raise SystemExit("Cross-country Backup collisions detected; refusing automatic commit.")
 if primary_duplicate_ids:
     raise SystemExit("Duplicate primary identities detected; refusing automatic commit.")
