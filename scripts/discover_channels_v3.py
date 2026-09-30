@@ -114,13 +114,19 @@ def main():
         z=ext(a,n,"New Backup")
         if z: add += [z,u]
     if add:
-        pos=next((i for i,l in enumerate(lines) if l.startswith("#EXTINF") and 'group-title="Backup"' in l),len(lines))
-        lines[pos:pos]=add
+        # New Channels and New Backup are intentionally appended to the
+        # physical end of the playlist, after all existing Backup entries.
+        while lines and not lines[-1].strip():
+            lines.pop()
+        if lines and add:
+            lines.append("")
+        lines.extend(add)
         for i,l in enumerate(lines):
             if l.startswith("#PLAYLIST-STUDIO-CATEGORIES:"):
                 cs=json.loads(l.split(":",1)[1])
                 for g in ("New Channels","New Backup"):
-                    if g not in cs: cs.insert(cs.index("Backup") if "Backup" in cs else len(cs),g)
+                    if g not in cs:
+                        cs.append(g)
                 lines[i]="#PLAYLIST-STUDIO-CATEGORIES:"+json.dumps(cs,ensure_ascii=False); break
         P.write_text("\n".join(lines)+"\n",encoding="utf-8")
     R.parent.mkdir(parents=True,exist_ok=True)
