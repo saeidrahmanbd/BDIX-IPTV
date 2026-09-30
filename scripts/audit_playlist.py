@@ -254,7 +254,7 @@ try:
         for new_cid, new_count in new_primary_by_url.get(url, []):
             if new_cid.startswith(cid + "@"):
                 preserved += new_count
-        if preserved < count:
+        if direct + preserved < count:
             protected_changes.append((cid, url, "primary entry removed or changed"))
 except Exception:
     pass
