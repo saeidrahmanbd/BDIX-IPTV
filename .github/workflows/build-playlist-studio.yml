@@ -1,0 +1,151 @@
+name: Build Playlist Studio 3.0 Portable
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - playlist-studio-3.0-portable-build
+    paths:
+      - 'Playlist-Studio-Fluent-Dark-v9.zip'
+      - '.github/workflows/build-playlist-studio.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout build branch
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: 'x64'
+
+      - name: Extract Playlist Studio source
+        shell: pwsh
+        run: |
+          if (-not (Test-Path 'Playlist-Studio-Fluent-Dark-v9.zip')) {
+            throw 'Playlist-Studio-Fluent-Dark-v9.zip was not found in the repository root.'
+          }
+          if (Test-Path 'buildkit') {
+            Remove-Item 'buildkit' -Recurse -Force
+          }
+          New-Item -ItemType Directory -Path 'buildkit' | Out-Null
+          Expand-Archive -LiteralPath 'Playlist-Studio-Fluent-Dark-v9.zip' -DestinationPath 'buildkit' -Force
+          $src = Get-ChildItem -Path 'buildkit' -Recurse -Filter 'playlist_studio.py' -File | Select-Object -First 1
+          if (-not $src) {
+            throw 'playlist_studio.py was not found inside the uploaded source ZIP.'
+          }
+          "SOURCE_ROOT=$($src.Directory.Parent.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Append
+          "Source root: $($src.Directory.Parent.FullName)"
+
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install Pillow openpyxl pyinstaller
+
+      - name: Validate Python source
+        shell: pwsh
+        run: |
+          python -m compileall -q "$env:SOURCE_ROOT\Source"
+          if ($LASTEXITCODE -ne 0) {
+            throw 'Python source compilation failed.'
+          }
+
+      - name: Download and verify VLC 3.0.23 x64
+        shell: pwsh
+        run: |
+          $url = 'https://download.videolan.org/pub/videolan/vlc/3.0.23/win64/vlc-3.0.23-win64.zip'
+          $expected = '992d19dbd0b8a7cde9167d2f7780b1ef6f92acc8a71acfa736101a21f35181e1'
+          $zip = Join-Path $env:RUNNER_TEMP 'vlc-3.0.23-win64.zip'
+          $tmp = Join-Path $env:RUNNER_TEMP 'vlc-extract'
+          $dest = Join-Path $env:SOURCE_ROOT 'VLC'
+
+          if (Test-Path $zip) { Remove-Item $zip -Force }
+          if (Test-Path $tmp) { Remove-Item $tmp -Recurse -Force }
+          if (Test-Path $dest) { Remove-Item $dest -Recurse -Force }
+
+          Invoke-WebRequest -UseBasicParsing -Uri $url -OutFile $zip
+
+          $actual = (Get-FileHash -Algorithm SHA256 $zip).Hash.ToLower()
+          if ($actual -ne $expected) {
+            throw "VLC SHA-256 mismatch. Expected $expected but got $actual"
+          }
+
+          Expand-Archive -LiteralPath $zip -DestinationPath $tmp -Force
+          $vlcRoot = Get-ChildItem -Path $tmp -Directory |
+            Where-Object { Test-Path (Join-Path $_.FullName 'libvlc.dll') } |
+            Select-Object -First 1
+
+          if (-not $vlcRoot) {
+            throw 'The VLC archive did not contain libvlc.dll.'
+          }
+
+          New-Item -ItemType Directory -Path $dest | Out-Null
+          Copy-Item -Path (Join-Path $vlcRoot.FullName '*') -Destination $dest -Recurse -Force
+
+          if (-not (Test-Path (Join-Path $dest 'libvlc.dll'))) {
+            throw 'Bundled VLC is missing libvlc.dll.'
+          }
+          if (-not (Test-Path (Join-Path $dest 'libvlccore.dll'))) {
+            throw 'Bundled VLC is missing libvlccore.dll.'
+          }
+
+      - name: Build single-file Windows executable
+        shell: pwsh
+        working-directory: \${{ env.SOURCE_ROOT }}
+        run: |
+          if (Test-Path 'build') { Remove-Item 'build' -Recurse -Force }
+          if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
+          Get-ChildItem -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
+
+          python -m PyInstaller --noconfirm --clean --onefile --windowed --name 'Playlist-Studio-3.0-Fluent-Dark' --add-data 'VLC;VLC' Source\playlist_studio.py
+
+          $exe = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-3.0-Fluent-Dark.exe'
+          if (-not (Test-Path $exe)) {
+            throw 'PyInstaller completed without producing the expected executable.'
+          }
+
+          $size = (Get-Item $exe).Length
+          if ($size -lt 50000000) {
+            throw "Executable is unexpectedly small: $size bytes"
+          }
+
+          $hash = (Get-FileHash -Algorithm SHA256 $exe).Hash.ToLower()
+          "EXE_SIZE=$size" | Out-File -FilePath $env:GITHUB_ENV -Append
+          "EXE_SHA256=$hash" | Out-File -FilePath $env:GITHUB_ENV -Append
+          "Built: $size bytes"
+          "SHA-256: $hash"
+
+      - name: Package portable download
+        shell: pwsh
+        working-directory: \${{ env.SOURCE_ROOT }}
+        run: |
+          if (Test-Path 'release') { Remove-Item 'release' -Recurse -Force }
+          New-Item -ItemType Directory -Path 'release' | Out-Null
+          Copy-Item 'dist\Playlist-Studio-3.0-Fluent-Dark.exe' 'release\'
+          @"
+          Playlist Studio 3.0 — Fluent Dark
+          Windows x64 portable single-file build.
+
+          The executable includes the required VLC runtime.
+          No installation is required.
+
+          SHA-256:
+          $env:EXE_SHA256
+          "@ | Set-Content -Path 'release\SHA256.txt' -Encoding UTF8
+
+          Compress-Archive -Path 'release\*' -DestinationPath (Join-Path $env:GITHUB_WORKSPACE 'Playlist-Studio-3.0-Fluent-Dark-Portable.zip') -Force
+
+      - name: Upload portable artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Playlist-Studio-3.0-Fluent-Dark-Portable
+          path: Playlist-Studio-3.0-Fluent-Dark-Portable.zip
+          if-no-files-found: error
+          retention-days: 30
