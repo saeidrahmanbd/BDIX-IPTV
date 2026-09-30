@@ -22,10 +22,18 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: xtream
-          command: deploy --verbose
+          command: deploy
           secrets: |
             XTREAM_USERNAME
             XTREAM_PASSWORD
         env:
           XTREAM_USERNAME: ${{ secrets.XTREAM_USERNAME }}
           XTREAM_PASSWORD: ${{ secrets.XTREAM_PASSWORD }}
+
+      - name: Report Wrangler result
+        if: always()
+        run: |
+          echo "=== Wrangler stdout ==="
+          echo '${{ steps.deploy.outputs.command-output }}'
+          echo "=== Wrangler stderr ==="
+          echo '${{ steps.deploy.outputs.command-stderr }}'
