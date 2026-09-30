@@ -165,58 +165,11 @@ for cid, items in by_id.items():
             primary_by_root[identity_root(cid)].append((cid, info, url))
             primary_by_name[normalized_name(display_name(info))].append((cid, info, url))
 
+# Backup validity is channel-based, not transmission-country-based.
+# A Bangladeshi channel remains the same channel regardless of where its
+# stream is transmitted or hosted. Country-qualified IDs are therefore not
+# used as a blocking criterion for backup streams.
 cross_country_backups = []
-for cid, items in by_id.items():
-    c = country_code(cid)
-    if not c:
-        continue
-    for info, url in items:
-        if attrs(info).get("group-title", "").strip() != "Backup":
-            continue
-        primary_countries_for_root = {
-            country_code(primary_cid)
-            for primary_cid, primary_info, primary_url
-            in primary_by_root.get(identity_root(cid), [])
-            if country_code(primary_cid)
-        }
-        if primary_countries_for_root and c not in primary_countries_for_root:
-            candidates = [
-                (primary_cid, primary_info, primary_url)
-                for primary_cid, primary_info, primary_url
-                in primary_by_root.get(identity_root(cid), [])
-                if country_code(primary_cid)
-            ]
-            # Do not treat an exact same stream URL as a cross-country
-            # collision. The same source may legitimately be represented by
-            # country-qualified identities (for example, Channel S).
-            if any(primary_url.strip().lower() == url.strip().lower() for _, _, primary_url in candidates):
-                continue
-            # IPTV-org may attach a country label to an otherwise identical
-            # channel name (for example, "Channel S (Bangladesh)") while the
-            # existing primary identity is country-qualified differently
-            # ("ChannelS.uk"). A matching base name is a valid alternate
-            # backup stream, not an identity collision.
-            backup_name = re.sub(r"\s*\([^)]*\)|\s*\[[^]]*\]", " ", display_name(info)).lower()
-            backup_name = re.sub(r"\s+", " ", backup_name).strip()
-            candidate_names = {
-                re.sub(r"\s+", " ", re.sub(r"\s*\([^)]*\)|\s*\[[^]]*\]", " ", display_name(primary_info)).lower()).strip()
-                for _, primary_info, _ in candidates
-            }
-            if backup_name in candidate_names:
-                continue
-            primary_cid = candidates[0][0]
-            cross_country_backups.append((cid, display_name(info), primary_cid, url))
-            continue
-        if not primary_countries_for_root:
-            same_name_primaries = primary_by_name.get(normalized_name(display_name(info)), [])
-            name_countries = {country_code(primary_cid) for primary_cid, primary_info, primary_url in same_name_primaries if country_code(primary_cid)}
-            if name_countries and c not in name_countries:
-                # Same URL is not a cross-country collision; only flag a
-                # genuinely different backup stream.
-                if any(primary_url.strip().lower() == url.strip().lower() for _, _, primary_url in same_name_primaries):
-                    continue
-                primary_cid = same_name_primaries[0][0]
-                cross_country_backups.append((cid, display_name(info), primary_cid, url))
 
 logos_by_id = defaultdict(set)
 logo_counts = Counter()
@@ -433,11 +386,6 @@ run_change_guard()
 
 if protected_changes:
     raise SystemExit("Protected primary playlist entries changed; refusing automatic commit.")
-if cross_country_backups:
-    print("Cross-country Backup collisions detected:")
-    for cid, name, primary_cid, url in cross_country_backups:
-        print(f"  - {name} [{cid}] vs primary [{primary_cid}] — {url}")
-    raise SystemExit("Cross-country Backup collisions detected; refusing automatic commit.")
 if primary_duplicate_ids:
     raise SystemExit("Duplicate primary identities detected; refusing automatic commit.")
 if primary_chno_collisions:
