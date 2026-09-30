@@ -10,6 +10,7 @@ AUDIT=ROOT/"reports/playlist-audit.md"
 EPG=ROOT/"reports/epg-coverage.md"
 OUT_MD=ROOT/"reports/dashboard.md"
 OUT_SVG=ROOT/"assets/dashboard.svg"
+OUT_MAINT=ROOT/"reports/maintenance-report.md"
 ATTR_RE=re.compile(r'([\w-]+)="([^"]*)"')
 
 def attrs(s): return dict(ATTR_RE.findall(s))
@@ -64,6 +65,90 @@ def svg_text(x,y,text,size=15,bold=False):
     weight="700" if bold else "400"
     return f'<text x="{x}" y="{y}" font-family="Arial,Helvetica,sans-serif" font-size="{size}px" font-weight="{weight}" fill="#1f2937">{esc}</text>'
 
+def discovery_stats():
+    path=ROOT/"reports/channel-discovery.md"
+    s=path.read_text(encoding="utf-8") if path.exists() else ""
+    return {"new_channels":num(s,"New channels"),"new_backups":num(s,"New backups"),"rejected":num(s,"Rejected")}
+
+def write_maintenance_report(d,a,g,groups,now):
+    dpath=ROOT/"reports/channel-discovery.md"
+    dtext=dpath.read_text(encoding="utf-8") if dpath.exists() else ""
+    mpath=ROOT/"reports/metadata-normalization.md"
+    mtext=mpath.read_text(encoding="utf-8") if mpath.exists() else ""
+    def items(text,heading):
+        m=re.search(r"## "+re.escape(heading)+r"\\n(.*?)(?=\\n## |\\Z)",text,re.S)
+        return [x[2:].strip() for x in m.group(1).splitlines() if x.startswith("- ")] if m else []
+    new_channels=items(dtext,"New Channels")
+    new_backups=items(dtext,"New Backups")
+    issue_keys=["Duplicate stream URLs","Metadata conflicts","Same-name / different-ID collisions",
+                "Cross-country backup collisions","Protected primary-entry changes","Logo exceptions",
+                "Duplicate primary identities","Primary channel-number collisions"]
+    issues=sum(a.get(k,0) for k in issue_keys)
+    md=f"""# IPTV Maintenance Report
+
+_Generated: **{now}**_
+
+## Run Summary
+
+| Item | Result |
+|---|---:|
+| 🆕 New channels discovered **this run** | **{d["new_channels"]}** |
+| 🔁 New backups discovered **this run** | **{d["new_backups"]}** |
+| 🚫 Rejected candidates | **{d["rejected"]}** |
+| 📺 Current playlist streams | **{a.get("Playlist entries",0)}** |
+| 📡 Current channel IDs | **{a.get("Unique channel IDs",0)}** |
+| 🔁 Current backup streams | **{groups.get("Backup",0)}** |
+| 🖼️ Logo exceptions | **{a.get("Logo exceptions",0)}** |
+| 📅 EPG coverage | **{round(g.get("LivePct",0))}%** |
+| ⚠️ Audit issues | **{issues}** |
+
+## New Channels This Run
+
+{chr(10).join("- "+x for x in new_channels) if new_channels else "None."}
+
+## New Backups This Run
+
+{chr(10).join("- "+x for x in new_backups) if new_backups else "None."}
+
+## Metadata Repairs This Run
+
+- Entries processed: **{num(mtext,"Entries processed")}**
+- Deterministic IDs generated: **{num(mtext,"Deterministic IDs generated")}**
+- channel-id/tvg-id identities synchronized: **{num(mtext,"channel-id/tvg-id identities synchronized")}**
+- tvg-name values normalized: **{num(mtext,"tvg-name values normalized")}**
+- Display names normalized: **{num(mtext,"Display names normalized")}**
+- Backup channel numbers removed: **{num(mtext,"Backup channel numbers removed")}**
+- Missing primary channel numbers added: **{num(mtext,"Missing primary channel numbers added")}**
+- Duplicate/invalid primary channel numbers repaired: **{num(mtext,"Duplicate/invalid primary channel numbers repaired")}**
+
+## Current Audit Status
+
+- Duplicate stream URLs: **{a.get("Duplicate stream URLs",0)}**
+- Metadata conflicts: **{a.get("Metadata conflicts",0)}**
+- Duplicate primary identities: **{a.get("Duplicate primary identities",0)}**
+- Primary channel-number collisions: **{a.get("Primary channel-number collisions",0)}**
+- Cross-country backup collisions: **{a.get("Cross-country backup collisions",0)}**
+- Logo exceptions: **{a.get("Logo exceptions",0)}**
+- EPG channels without mapping: **{g.get("No mapping",0)}**
+
+## Current Playlist Totals
+
+- Bangladesh: **{groups.get("Bangladesh",0)}**
+- India: **{sum(v for k,v in groups.items() if k.startswith("Indian "))}**
+- New Channels category: **{groups.get("New Channels",0)}**
+- New Backup category: **{groups.get("New Backup",0)}**
+- Backup category: **{groups.get("Backup",0)}**
+
+## Detailed Reports
+
+- `reports/channel-discovery.md` — discovery details.
+- `reports/playlist-audit.md` — full playlist audit.
+- `reports/epg-coverage.md` — EPG details.
+- `reports/dashboard.md` — current dashboard.
+- `reports/maintenance-history.json` — historical run data.
+"""
+    OUT_MAINT.write_text(md,encoding="utf-8")
+
 def history_stats():
     path=ROOT/"reports/maintenance-history.json"
     if not path.exists(): return []
@@ -105,6 +190,7 @@ def main():
     e=parse_playlist()
     a=audit_stats()
     g=epg_stats()
+    d=discovery_stats()
     groups=Counter(x[2] for x in e)
     total=len(e)
     channels=len(set(x[0] for x in e if x[0]))
@@ -122,6 +208,7 @@ def main():
         "Cross-country backup collisions","Protected primary-entry changes","Logo exceptions",
         "Duplicate primary identities","Primary channel-number collisions"
     ])
+    write_maintenance_report(d,a,g,groups,datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"))
     history=history_stats()
     history_line="No historical maintenance records yet."
     if len(history)>=2:
