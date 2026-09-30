@@ -16,7 +16,6 @@ on:
       - 'scripts/audit_playlist.py'
       - 'scripts/generate_dashboard.py'
       - 'reports/maintenance-history.json'
-      - 'scripts/audit_playlist.py'
       - '.github/workflows/iptv-maintenance.yml'
 
 permissions:
@@ -71,7 +70,7 @@ jobs:
           report = Path('reports/playlist-audit.md').read_text(encoding='utf-8')
           dashboard = Path('reports/dashboard.md').read_text(encoding='utf-8') if Path('reports/dashboard.md').exists() else ''
           def metric(text, label):
-              m = re.search(rf'- {re.escape(label)}: \\*\\*(\\d+)\\*\\*', text)
+              m = re.search(rf'- {re.escape(label)}: \*\*(\d+)\*\*', text)
               return int(m.group(1)) if m else None
           record = {
               'timestamp_utc': datetime.now(timezone.utc).isoformat(),
