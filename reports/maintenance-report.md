@@ -1,0 +1,62 @@
+# IPTV Maintenance Report
+
+_Generated: **2026-09-30 09:15 UTC**_
+
+## Run Summary
+
+| Item | Result |
+|---|---:|
+| 🆕 New channels discovered **this run** | **0** |
+| 🔁 New backups discovered **this run** | **6** |
+| 🚫 Rejected candidates | **643** |
+| 📺 Current playlist streams | **900** |
+| 📡 Current channel IDs | **612** |
+| 🔁 Current backup streams | **332** |
+| 🖼️ Logo exceptions | **1** |
+| 📅 EPG coverage | **60%** |
+| ⚠️ Audit issues | **25** |
+
+## New Channels This Run
+
+None.
+
+## New Backups This Run
+
+None.
+
+## Metadata Repairs This Run
+
+- Entries processed: **900**
+- Deterministic IDs generated: **0**
+- channel-id/tvg-id identities synchronized: **0**
+- tvg-name values normalized: **0**
+- Display names normalized: **0**
+- Backup channel numbers removed: **0**
+- Missing primary channel numbers added: **0**
+- Duplicate/invalid primary channel numbers repaired: **522**
+
+## Current Audit Status
+
+- Duplicate stream URLs: **11**
+- Metadata conflicts: **0**
+- Duplicate primary identities: **0**
+- Primary channel-number collisions: **0**
+- Cross-country backup collisions: **0**
+- Logo exceptions: **1**
+- EPG channels without mapping: **84**
+
+## Current Playlist Totals
+
+- Bangladesh: **54**
+- India: **234**
+- New Channels category: **12**
+- New Backup category: **34**
+- Backup category: **332**
+
+## Detailed Reports
+
+- `reports/channel-discovery.md` — discovery details.
+- `reports/playlist-audit.md` — full playlist audit.
+- `reports/epg-coverage.md` — EPG details.
+- `reports/dashboard.md` — current dashboard.
+- `reports/maintenance-history.json` — historical run data.
