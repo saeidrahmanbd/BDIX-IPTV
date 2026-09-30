@@ -67,14 +67,14 @@ The playlist prioritizes **clean channel identity, consistent metadata, local lo
 
 ## 🔧 Maintenance
 
-Maintenance focuses on:
+Automated maintenance focuses only on:
 
-- Stream and backup review
-- Duplicate URL detection
-- Channel identity and metadata consistency
-- Logo integrity and consistency
-- EPG configuration
-- Playlist organization
+- EPG mapping and coverage expansion
+- Channel name, ID, number, and metadata normalization
+- Logo audit, missing-logo recovery, local logo storage, and logo metadata repair
+- Playlist audit and project dashboard generation
+
+Stream health is intentionally **not automated**; stream availability is reviewed manually.
 
 Primary curated entries are protected from indiscriminate changes.
 
