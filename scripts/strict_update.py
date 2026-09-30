@@ -180,11 +180,6 @@ with ThreadPoolExecutor(max_workers=min(8, len(SOURCES))) as pool:
 # during a single update run.
 reachability_cache = {}
 
-def check_reachable(url):
-    if url not in reachability_cache:
-        reachability_cache[url] = reachable(url)
-    return reachability_cache[url]
-
 for source, candidates, source_error in source_results:
     if source_error is not None:
         source_errors += 1
@@ -263,6 +258,10 @@ for source, candidates, source_error in source_results:
 
     for kind, info, url, key in pending:
         url_l = url.lower()
+        # Re-check mutable deduplication state here because multiple candidates
+        # can be queued before the first successful candidate is applied.
+        if url_l in existing_urls or url_l in backup_urls or key in seen_additions:
+            continue
         if not reachability_cache.get(url_l, False):
             unreachable += 1
             continue
