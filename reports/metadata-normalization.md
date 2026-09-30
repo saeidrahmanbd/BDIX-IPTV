@@ -1,10 +1,10 @@
 # Playlist Metadata Normalization
 
-- Entries processed: **851**
-- Backup channel numbers removed: **0**
-- Missing tvg-name added: **0**
-- Missing channel-id added: **0**
+- Entries processed: **873**
+- Deterministic IDs generated: **0**
+- channel-id/tvg-id identities synchronized: **0**
 - tvg-name values normalized: **0**
 - Display names normalized: **0**
-- Stray Unicode markers removed: **0**
-- Local IDs retained for separate EPG mapping work: **97**
+- Backup channel numbers removed: **0**
+- Missing primary channel numbers added: **0**
+- Duplicate/invalid primary channel numbers repaired: **502**
