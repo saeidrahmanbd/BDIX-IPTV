@@ -2,8 +2,7 @@ name: IPTV Playlist Maintenance
 
 on:
   schedule:
-    - cron: '0 8 * * *'
-      timezone: 'Asia/Dhaka'
+    - cron: '0 2 * * *' # 08:00 Asia/Dhaka (UTC+6)
   workflow_dispatch:
   push:
     branches: [main]
