@@ -9,6 +9,7 @@ on:
     paths:
       - 'IPTV-Playlist.m3u'
       - 'scripts/normalize_metadata.py'
+      - 'scripts/discover_channels.py'
       - 'scripts/migrate_external_logos_fixed.py'
       - 'scripts/epg_coverage.py'
       - 'scripts/sync_epg_worker_map.py'
@@ -42,6 +43,9 @@ jobs:
 
       - name: Install logo dependencies
         run: python -m pip install --disable-pip-version-check pillow cairosvg
+
+      - name: Discover new channels and backup streams
+        run: python scripts/discover_channels.py
 
       - name: Normalize channel metadata and numbering
         run: python scripts/normalize_metadata.py
