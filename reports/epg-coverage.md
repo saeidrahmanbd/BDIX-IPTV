@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-09-30T10:21:13+00:00**
+Generated: **2026-09-30T11:20:15+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
@@ -31,7 +31,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Entertainment | Sony Entertainment TV | SonyEntertainmentTelevision.in@SD | Sony.Entertainment.Television.in | MAPPED_ID_ONLY |
 | Indian Music | Steelbird Music | SteelbirdMusic.in@SD | Steelbird.Music.in | MAPPED_ID_ONLY |
 | Indian Bangla | DD Tripura | DDTripura.in@SD | DDTripura.in@SD | MAPPED_NOT_CURRENTLY_FOUND |
-| Indian Music | 7X Punjabi | 7X Music | - | NO_GUIDE_HIT |
+| Indian Music | 7X Punjabi | custom.7x.punjabi | - | NO_GUIDE_HIT |
 | Indian Music | 8XM | 8XM.pk | - | NO_GUIDE_HIT |
 | Indian Music | ARY Music | ARYMusic.pk | - | NO_GUIDE_HIT |
 | Indian Music | Aaryaa TV | AaryaaTV.in | - | NO_GUIDE_HIT |
@@ -67,7 +67,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Entertainment | HUM TV | HumTV.pk | - | NO_GUIDE_HIT |
 | Indian Music | Hindi Hits | HindiHits.in | - | NO_GUIDE_HIT |
 | Indian Movies | Hindi Movie Classic 24 | custom.hindi.movie.classic.24 | - | NO_GUIDE_HIT |
-| Indian Movies | Hindi Movies | Hindi Movies | - | NO_GUIDE_HIT |
+| Indian Movies | Hindi Movies | custom.hindi.movies | - | NO_GUIDE_HIT |
 | Indian Music | Jalwa | custom.jalwa | - | NO_GUIDE_HIT |
 | Indian Bangla | Jhankar TV | JhankarTV.ca | - | NO_GUIDE_HIT |
 | Indian Music | Joo Music | JooMusic.pk | - | NO_GUIDE_HIT |
@@ -101,7 +101,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Movies | Shubh Cinema TV | ShubhCinemaTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | Sony KAL | SonyKALHindi.us | - | NO_GUIDE_HIT |
 | Indian Movies | Sony Max 2 [US] | custom.sony.max.2 | - | NO_GUIDE_HIT |
-| Indian Movies | South Movies | South Movies | - | NO_GUIDE_HIT |
+| Indian Movies | South Movies | custom.south.movies | - | NO_GUIDE_HIT |
 | Indian Movies | South Station | SouthStation.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | Studio Yuva | StudioYuva.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | Subin TV | SubinTV.in@SD | - | NO_GUIDE_HIT |

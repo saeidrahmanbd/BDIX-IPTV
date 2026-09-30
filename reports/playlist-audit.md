@@ -4,7 +4,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Summary
 
-- Playlist entries: **866**
+- Playlist entries: **861**
 - Unique channel IDs: **606**
 - IDs with multiple streams: **158**
 - Duplicate stream URLs: **0**
@@ -13,7 +13,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **1**
+- Logo exceptions: **0**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Suspicious URL credentials/syntax: **0**
@@ -54,22 +54,19 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### amc.us (2 streams)
 - AMC — Backup — http://41.205.93.154/AMC/index.m3u8
 - AMC — Backup — http://23.239.31.26:8989/amc/index.m3u8
-### anandatv.bd (4 streams)
+### anandatv.bd (3 streams)
 - Ananda TV — Bangladesh — https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
 - Ananda TV — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/anandatv.stream/live-orgin/anandatv.stream/playlist.m3u8
 - Ananda TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/anandatv.stream/index.m3u8
-- Ananda TV — Backup — https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8?e=1784102574&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=ca7c19dec6024bf61b0aa2c509cf45df
 ### andtv.in@sd (2 streams)
 - &TV — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/and_tv_hd_abr/index.m3u8
 - &TV — Backup — https://stream.ottplus.live/live/and_tv_hd_abr/index.m3u8
-### asiantv.bd (3 streams)
+### asiantv.bd (2 streams)
 - Asian TV — Bangladesh — https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/index.m3u8
 - Asian TV — Backup — https://stream.ottplus.live/live/asian_tv_abr/index.m3u8
-- Asian TV — Backup — https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/index.m3u8?e=1784102565&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=e4293f68c5bc8aa8e6ac3e088ca754f4
-### atnbangla.bd (4 streams)
+### atnbangla.bd (3 streams)
 - ATN Bangla — Bangladesh — https://tvsen5.aynaott.com/atnbangla/index.m3u8
 - ATN Bangla — Backup — https://tvsen5.aynaott.com/P3y2URgG7LDe/index.m3u8
-- ATN Bangla — Backup — https://tvsen5.aynaott.com/atnbangla/index.m3u8?e=1784102561&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=a4c195d9bcdfa5daa8df1dfd6b28455b
 - ATN Bangla — Backup — https://iptvlive.ahmed-bd-org.workers.dev/atn-bangla-1/index.m3u8
 ### atnbanglauk.uk (2 streams)
 - ATN BANGLA UK — Backup — https://app.ncare.live/live-orgin/atnbanglauk-off.stream/playlist.m3u8
@@ -231,10 +228,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### deeptotv.bd (2 streams)
 - Deepto TV — Bangladesh — https://byphdgllyk.gpcdn.net/hls/deeptotv/0_1/index.m3u8
 - Deepto TV — Backup — https://byphdgllyk.gpcdn.net/hls/DeeptoTV/index.m3u8
-### deshtv.bd (4 streams)
+### deshtv.bd (3 streams)
 - Desh TV — Bangladesh — https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8
 - Desh TV — Backup — https://stream.ottplus.live/live/desh_tv_abr/index.m3u8
-- Desh TV — Backup — https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8?e=1784102570&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=78b23c868a34420397be9c985d04db9b
 - Desh TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/desh-tv-2/index.m3u8
 ### dhoommusic.in@sd (2 streams)
 - Dhoom Music Bangla — Indian Bangla — https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8
@@ -245,11 +241,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### e24.in (2 streams)
 - E24 — Indian Music — https://amg13643-amg13643c2-amgplt0016.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg13643-amg13643c2-amgplt0016/playlist.m3u8
 - E24 — Backup — https://mumt04.tangotv.in/m18aqlK4E24/index.m3u8
-### ekattortv.bd (4 streams)
+### ekattortv.bd (3 streams)
 - Ekattor TV — Bangladesh — https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8
 - Ekattor TV — Backup — https://stream.ottplus.live/live/ekattor_tv_abr/index.m3u8
 - Ekattor TV — Backup — http://premiumtvs.space/live/YqXTywueEV/damp2purchase/428.ts
-- Ekattor TV — Backup — https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8?e=1784102532&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=3b9afdda2bd5332e8f49ed7dfa321a06
 ### ekhontv.bd (4 streams)
 - Ekhon TV — Bangladesh — https://stream.ottplus.live/live/ekhon_tv_abr/index.m3u8
 - Ekhon TV — Backup — https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8?e=1784102563&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=b5e80a73380863be907284374bdb2bda
@@ -634,8 +629,8 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **865**
-- missing: **1**
+- Healthy/local references: **861**
+- missing: **0**
 - broken-local: **0**
 - external: **0**
 - non-png: **0**
@@ -643,7 +638,6 @@ None.
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
-- missing — Goldmines 2 [goldmines2.in@sd] — 
 
 ## Protected Primary Entries
 

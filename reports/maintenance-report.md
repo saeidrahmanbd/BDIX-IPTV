@@ -1,20 +1,20 @@
 # IPTV Maintenance Report
 
-_Generated: **2026-09-30 10:21 UTC**_
+_Generated: **2026-09-30 11:20 UTC**_
 
 ## Run Summary
 
 | Item | Result |
 |---|---:|
-| 🆕 New channels discovered **this run** | **12** |
-| 🔁 New backups discovered **this run** | **10** |
+| 🆕 New channels discovered **this run** | **0** |
+| 🔁 New backups discovered **this run** | **0** |
 | 🚫 Rejected candidates | **643** |
-| 📺 Current playlist streams | **866** |
+| 📺 Current playlist streams | **861** |
 | 📡 Current channel IDs | **606** |
-| 🔁 Current backup streams | **322** |
-| 🖼️ Logo exceptions | **1** |
+| 🔁 Current backup streams | **317** |
+| 🖼️ Logo exceptions | **0** |
 | 📅 EPG coverage | **60%** |
-| ⚠️ Audit issues | **13** |
+| ⚠️ Audit issues | **12** |
 
 ## New Channels This Run
 
@@ -26,7 +26,7 @@ None.
 
 ## Metadata Repairs This Run
 
-- Entries processed: **866**
+- Entries processed: **861**
 - Deterministic IDs generated: **0**
 - channel-id/tvg-id identities synchronized: **0**
 - tvg-name values normalized: **0**
@@ -42,7 +42,7 @@ None.
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Cross-country backup collisions: **0**
-- Logo exceptions: **1**
+- Logo exceptions: **0**
 - EPG channels without mapping: **84**
 
 ## Current Playlist Totals
@@ -51,7 +51,7 @@ None.
 - India: **234**
 - New Channels category: **12**
 - New Backup category: **10**
-- Backup category: **322**
+- Backup category: **317**
 
 ## Detailed Reports
 

@@ -119,7 +119,7 @@ Indian Bangla,Aakaash Aath,AakaashAath.in@SD,AakaashAath.in,https://iptv-epg.org
 Indian Bangla,Alankar TV,AlankarTV.in@SD,Alankar.TV.in | ALANKAR.in | 543118,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Bangla,Amar Bangla,AamarBangla.in,Amar.Bangla.TV.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Bangla,Amar Bangla Digital,custom.amar.bangla.digital,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Indian Bangla,BHI Channel,BHI Channel,BHI.Channel.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Indian Bangla,BHI Channel,BHI.Channel.in,BHI.Channel.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Bangla,Bangla Plus,BanglaPlus.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Bangla,Bengali Beats,custom.bengali.beats,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Bangla,Colors Bangla,Colors.Bangla.in,Colors.Bangla.in | COLORS.BANGLA.in | COLORSBANGLA.in | 543370 | 543469,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -260,7 +260,7 @@ Indian Movies,Goldmines 2,Goldmines2.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verif
 Indian Movies,Goldmines Action,GoldminesAction.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Goldmines Bollywood,GoldminesBollywood.in@SD,Goldmines.Bollywood.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED_ID_ONLY,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Hindi Movie Classic 24,custom.hindi.movie.classic.24,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Indian Movies,Hindi Movies,Hindi Movies,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Indian Movies,Hindi Movies,custom.hindi.movies,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Kairali Arabia,KairaliArabia.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Kairali TV,KairaliTV.in@SD,Kairali.TV.in | KAIRALI.in | 543357,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Kairali We,KairaliWe.in@SD,Kairali.WE.TV.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -289,7 +289,7 @@ Indian Movies,Shubh Cinema TV,ShubhCinemaTV.in,,,NO_GUIDE_HIT,Auto-maintained; v
 Indian Movies,Sony Max,SonyMax.in@SD,Sony.Max.in | SONY.MAX.in | 543269,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Sony Max 2,SonyMax2.in@SD,Sony.MAX2.in | Sony.Max.2.in | SONY.MAX.2.in | 543114,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Sony Max 2 [US],custom.sony.max.2,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Indian Movies,South Movies,South Movies,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Indian Movies,South Movies,custom.south.movies,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,South Station,SouthStation.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Star Gold,StarGold.in@HD,Star.Gold.in | STAR.GOLD.in | 543292 | 543055,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Star Gold Select,StarGoldSelect.in@SD,Star.Gold.Select.in | STAR.GOLD.SELECT.in | StarGoldSelect.in | 543216 | 543074,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -304,7 +304,7 @@ Indian Movies,Zee Action,ZeeAction.in,ZEE.ACTION.in | 543243,https://epgshare01.
 Indian Movies,Zee Bollywood,ZeeBollywood.in@SD,Zee.Bollywood.in | ZEE.Bollywood.in | ZeeBollywood.in | 543294,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Zee Cinema,ZeeCinema.in@HD,Zee.Cinema.in | ZEE.CINEMA.in | ZeeCinema.in | 543084 | 543330,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Music,7S Music,7SMusic.in@SD,7S.MUSIC.in,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz,MAPPED_ID_ONLY,Auto-maintained; verify ambiguous/name matches manually.
-Indian Music,7X Punjabi,7X Music,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Indian Music,7X Punjabi,custom.7x.punjabi,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Music,8XM,8XM.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Music,9X Jalwa,9XJalwa.in,9X.Jalwa.in | 9XJalwa.in | 407811,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Music,9X Jhakaas,9XJhakaas.in@SD,9x.Jhakaas.in | 9X.JHAKAAS.in | 543161,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -328,7 +328,7 @@ Indian Music,Kappa TV,KappaTV.in@SD@ALT1,Kappa.TV.in,https://epgshare01.online/e
 Indian Music,Mh 1 Music,Mh1Music.in@SD,mh1.(Music).in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Music,Music India,MusicIndia.in@SD,Music.India.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Music,NH BollyRaga,NHBollyRaga.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Indian Music,Only Music,Only Music,Only.Music.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Indian Music,Only Music,Only.Music.in,Only.Music.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Music,PTC Chakde,PTCChakde.in@SD,PTC.Chak.De.in | PTC.CHAK.DE.in | PTCChakDe.in | 543198,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Music,PTC Music,PTCMusic.in@SD,PTC.Music.in | PTCMusic.in | 543071,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Music,Public Music,PublicMusic.in@SD,Public.Music.in | PUBLIC.MUSIC.in | PublicMusic.in | 543355,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -452,7 +452,7 @@ Kids,Powerkids Kartoon Channel,custom.powerkids.kartoon.channel,,,NO_GUIDE_HIT,A
 Kids,RetroCrush,RetroCrush.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Smurf TV,SmurfTV.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Sonic Bangla,custom.sonic.bangla,Sonic.Bangla.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-Kids,Strawberry Shortcake,Strawberry Shortcake,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Kids,Strawberry Shortcake,custom.strawberry.shortcake,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,SuperToons TV,custom.supertoons.tv,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,TVCARiB Kids & Teens,custom.tvcarib.kids.teens,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Teletubbies,Teletubbies.uk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -541,5 +541,5 @@ Sports,Wipeout Xtra,WipeoutXtra.uk,,,NO_GUIDE_HIT,Auto-maintained; verify ambigu
 Sports,beIN SPORTS 6,beINSports6.qa,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Sports,beIN SPORTS 7,beINSports7.qa,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Sports,beIN SPORTS XTRA,beINSPORTSXTRA.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Sports,beIN Sports 1,Bein Sport HD 1,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sports,beIN Sports 1,custom.bein.sports.1,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Sports,talkSPORT,talkSPORT.uk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.

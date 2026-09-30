@@ -1,12 +1,12 @@
 [
   {
-    "timestamp_utc": "2026-09-30T10:21:00.178834+00:00",
+    "timestamp_utc": "2026-09-30T11:20:03.309520+00:00",
     "entries": 866,
     "unique_channel_ids": 606,
     "duplicate_ids": 158,
     "duplicate_urls": 0,
     "metadata_conflicts": 0,
-    "logo_exceptions": 1,
+    "logo_exceptions": 0,
     "primary_number_collisions": 0,
     "protected_primary_changes": 0
   }
