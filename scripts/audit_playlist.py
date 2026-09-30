@@ -14,7 +14,7 @@ REPORT = Path("reports/playlist-audit.md")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
-PRIMARY_EXCEPTIONS = {"Backup", "Not Playing"}
+PRIMARY_EXCEPTIONS = {"Backup", "New Backup", "Not Playing"}
 
 def attrs(line):
     return dict(ATTR_RE.findall(line))
