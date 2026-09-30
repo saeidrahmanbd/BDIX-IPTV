@@ -8,7 +8,7 @@ from pathlib import Path
 PLAYLIST = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/metadata-normalization.md")
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
-BACKUP_GROUPS = {"Backup", "Not Playing", "New Channels"}
+BACKUP_GROUPS = {"Backup", "Not Playing", "New Channels", "New Backup"}
 OVERRIDES = {
     "MohonaTV.bd": "Mohona TV",
     "MyTV.bd": "My TV",
