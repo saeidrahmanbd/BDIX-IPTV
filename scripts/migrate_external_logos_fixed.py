@@ -160,6 +160,9 @@ for line in lines:
     if logo and is_local(logo) and logo.lower().endswith(".png"):
         channel_id = exact_id(metadata)
         title = metadata.get("tvg-name") or line.rsplit(",", 1)[-1].strip()
+        filename = logo[len(RAW_BASE):].split("?", 1)[0] if logo.startswith(RAW_BASE) else Path(logo).name
+        if not (LOGOS / filename).is_file():
+            continue
         if channel_id:
             local_by_id.setdefault(channel_id, set()).add(logo)
         local_by_name.setdefault(clean_name(title), set()).add(logo)
