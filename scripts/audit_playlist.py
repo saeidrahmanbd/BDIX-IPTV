@@ -223,7 +223,6 @@ try:
         a = attrs(info)
         return (
             (a.get("tvg-id") or a.get("channel-id") or "").strip().lower(),
-            display_name(info).strip(),
             url.strip(),
         )
 
@@ -241,8 +240,8 @@ try:
 
     for key, count in old_primary.items():
         if new_primary[key] + new_not_playing[key] < count:
-            cid, name, url = key
-            protected_changes.append((cid, name, "primary entry removed or changed"))
+            cid, url = key
+            protected_changes.append((cid, url, "primary entry removed or changed"))
 except Exception:
     pass
 
@@ -348,8 +347,6 @@ def run_change_guard():
     old_entries = parse(old_text)
     key = lambda info,url: (
         (attrs(info).get("tvg-id") or attrs(info).get("channel-id") or "").strip().lower(),
-        attrs(info).get("group-title","").strip(),
-        display_name(info).strip(),
         url.strip(),
     )
     old_keys = {key(i,u) for i,u in old_entries}
