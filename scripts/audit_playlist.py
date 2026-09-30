@@ -191,6 +191,19 @@ for cid, items in by_id.items():
             # country-qualified identities (for example, Channel S).
             if any(primary_url.strip().lower() == url.strip().lower() for _, _, primary_url in candidates):
                 continue
+            # IPTV-org may attach a country label to an otherwise identical
+            # channel name (for example, "Channel S (Bangladesh)") while the
+            # existing primary identity is country-qualified differently
+            # ("ChannelS.uk"). A matching base name is a valid alternate
+            # backup stream, not an identity collision.
+            backup_name = re.sub(r"\s*\([^)]*\)|\s*\[[^]]*\]", " ", display_name(info)).lower()
+            backup_name = re.sub(r"\s+", " ", backup_name).strip()
+            candidate_names = {
+                re.sub(r"\s+", " ", re.sub(r"\s*\([^)]*\)|\s*\[[^]]*\]", " ", display_name(primary_info)).lower()).strip()
+                for _, primary_info, _ in candidates
+            }
+            if backup_name in candidate_names:
+                continue
             primary_cid = candidates[0][0]
             cross_country_backups.append((cid, display_name(info), primary_cid, url))
             continue
