@@ -73,10 +73,13 @@ Automated maintenance focuses only on:
 - Channel name, ID, number, and metadata normalization
 - Logo audit, missing-logo recovery, local logo storage, and logo metadata repair
 - Playlist audit and project dashboard generation
+- Conservative discovery of eligible new Bangladesh/Indian channels and backup streams
 
 Stream health is intentionally **not automated**; stream availability is reviewed manually.
 
 Primary curated entries are protected from indiscriminate changes.
+
+Automatic channel discovery is restricted to eligible live channels. New primary candidates go to **New Channels**; additional streams for existing/newly discovered channels go to **New Backup**. Indian news, sports, religious, kids, proxy/token/VOD/test/demo streams are excluded.
 
 **[→ Changelog](docs/CHANGELOG.md) · [→ Documentation](docs/README.md)**
 
