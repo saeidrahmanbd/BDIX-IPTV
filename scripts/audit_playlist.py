@@ -332,6 +332,7 @@ if protected_changes:
 else:
     lines.append("No protected primary-entry changes detected.")
 
+lines.insert(1, "Generated: **" + __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat() + "**")
 REPORT.parent.mkdir(parents=True, exist_ok=True)
 REPORT.write_text("\n".join(lines).rstrip()+"\n", encoding="utf-8")
 print(f"Playlist audit: entries={len(entries)} duplicate_ids={len(duplicate_ids)} duplicate_urls={len(duplicate_urls)} conflicts={len(metadata_conflicts)} name_collisions={len(name_collisions)} protected_changes={len(protected_changes)} logo_exceptions={len(logo_exceptions)}")
