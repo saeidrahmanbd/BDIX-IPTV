@@ -1,6 +1,6 @@
 # Project Dashboard
 
-_Last generated: **2026-10-01 09:31 UTC**_
+_Last generated: **2026-10-01 09:33 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -47,14 +47,14 @@ _Last generated: **2026-10-01 09:31 UTC**_
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-01T09:31:50.183673+00:00** |
-| EPG coverage | **2026-10-01T09:31:49+00:00** |
+| Playlist audit | **2026-10-01T09:33:07.891961+00:00** |
+| EPG coverage | **2026-10-01T09:33:07+00:00** |
 | Stream health | **not available** |
 | Pre-publish gate | **not available** |
 
 ## Maintenance History
-- Records retained: **12**
+- Records retained: **13**
 - Latest entries change: **1025 → 1025**
-- Latest health failures: **— → None**
+- Latest health failures: **None → None**
 
 Historical records are retained in reports/maintenance-history.json.
