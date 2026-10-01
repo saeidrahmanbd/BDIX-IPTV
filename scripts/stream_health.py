@@ -37,7 +37,7 @@ def probe(item):
         ok=status < 400 and len(data)>0
         return {"ok":ok,"status":status,"latency_ms":latency,"bytes":len(data),"content_type":ctype,"error":""}
     except HTTPError as e:
-        return {"ok":False,"status":e.code,latency_ms":round((time.monotonic()-started)*1000),"bytes":0,"content_type":"","error":f"HTTP {e.code}"}
+        return {"ok":False,"status":e.code,"latency_ms":round((time.monotonic()-started)*1000),"bytes":0,"content_type":"","error":f"HTTP {e.code}"}
     except Exception as e:
         return {"ok":False,"status":0,"latency_ms":round((time.monotonic()-started)*1000),"bytes":0,"content_type":"","error":type(e).__name__}
 
