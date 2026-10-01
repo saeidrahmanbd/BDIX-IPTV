@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T11:22:32+00:00",
+  "generated": "2026-10-01T11:29:20+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -23,12 +23,11 @@
         "30amusic.us"
       ],
       "groups": [
-        "Backup",
         "International"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "4evercinema": {
       "names": [
@@ -229,12 +228,11 @@
         "adntvplus.fr"
       ],
       "groups": [
-        "Backup",
         "Kids"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "afarintv": {
       "names": [
@@ -342,12 +340,11 @@
         "amc.us"
       ],
       "groups": [
-        "Backup",
         "International"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "amritatv": {
       "names": [
@@ -535,12 +532,11 @@
         "asports.pk"
       ],
       "groups": [
-        "Backup",
         "Sports"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "astrocricket": {
       "names": [
@@ -744,12 +740,11 @@
         "babysharktv.us"
       ],
       "groups": [
-        "Backup",
         "Kids"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "bahrainsports2": {
       "names": [
@@ -945,12 +940,11 @@
         "beinsportsxtra.us"
       ],
       "groups": [
-        "Backup",
         "Sports"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "beinsportsxtraenespanol": {
       "names": [
@@ -1106,12 +1100,11 @@
         "cartoonnetwork.uk"
       ],
       "groups": [
-        "Backup",
         "Kids"
       ],
-      "streams": 4,
+      "streams": 2,
       "primary": 2,
-      "backup": 2
+      "backup": 0
     },
     "cgtndocumentary": {
       "names": [
@@ -1810,12 +1803,11 @@
         "custom.duck.tv"
       ],
       "groups": [
-        "Backup",
         "Kids"
       ],
-      "streams": 5,
+      "streams": 1,
       "primary": 1,
-      "backup": 4
+      "backup": 0
     },
     "custom.ekamra.cinema": {
       "names": [
@@ -2979,12 +2971,11 @@
         "ddsports.in@sd"
       ],
       "groups": [
-        "Backup",
         "Sports"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "ddtamil": {
       "names": [
@@ -3590,12 +3581,11 @@
         "eurosport.in@sd"
       ],
       "groups": [
-        "Backup",
         "Sports"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "expressnews": {
       "names": [
@@ -4487,12 +4477,11 @@
         "kartoonchannel.us"
       ],
       "groups": [
-        "Backup",
         "Kids"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "khushboobangla": {
       "names": [
@@ -4996,12 +4985,12 @@
         "mnx.in@sd"
       ],
       "groups": [
-        "Backup",
-        "International"
+        "International",
+        "New Backup"
       ],
-      "streams": 3,
+      "streams": 2,
       "primary": 1,
-      "backup": 2
+      "backup": 0
     },
     "mohonatv": {
       "names": [
@@ -5040,12 +5029,11 @@
         "moonbugkids.uk"
       ],
       "groups": [
-        "Backup",
         "Kids"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "moviebangla": {
       "names": [
@@ -5599,12 +5587,11 @@
         "nickjr.in@sd"
       ],
       "groups": [
-        "Backup",
         "Kids"
       ],
-      "streams": 3,
+      "streams": 2,
       "primary": 2,
-      "backup": 1
+      "backup": 0
     },
     "nkrtvkannada": {
       "names": [
@@ -5973,12 +5960,11 @@
         "pogo.in@sd"
       ],
       "groups": [
-        "Backup",
         "Kids"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "pop": {
       "names": [
@@ -5990,12 +5976,11 @@
         "pop.uk@hd"
       ],
       "groups": [
-        "Backup",
         "Kids"
       ],
-      "streams": 3,
+      "streams": 2,
       "primary": 2,
-      "backup": 1
+      "backup": 0
     },
     "popworldtv": {
       "names": [
@@ -6528,12 +6513,12 @@
         "romedynow.in@sd"
       ],
       "groups": [
-        "Backup",
-        "International"
+        "International",
+        "New Backup"
       ],
       "streams": 2,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "rongeentv": {
       "names": [
@@ -6944,12 +6929,11 @@
         "smurftv.us"
       ],
       "groups": [
-        "Backup",
         "Kids"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "somoynewstv": {
       "names": [
@@ -7179,12 +7163,11 @@
         "sonysportsten3.in"
       ],
       "groups": [
-        "Backup",
         "Sports"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "sonysportsten4": {
       "names": [
@@ -7222,12 +7205,11 @@
         "sonyyay.in@sd"
       ],
       "groups": [
-        "Backup",
         "Kids"
       ],
-      "streams": 3,
+      "streams": 1,
       "primary": 1,
-      "backup": 2
+      "backup": 0
     },
     "southstation": {
       "names": [
@@ -7398,12 +7380,12 @@
         "starmovies.in@sd"
       ],
       "groups": [
-        "Backup",
-        "International"
+        "International",
+        "New Backup"
       ],
-      "streams": 5,
+      "streams": 3,
       "primary": 1,
-      "backup": 4
+      "backup": 0
     },
     "starmoviesselect": {
       "names": [
@@ -7413,12 +7395,12 @@
         "starmoviesselect.in@hd"
       ],
       "groups": [
-        "Backup",
-        "International"
+        "International",
+        "New Backup"
       ],
-      "streams": 3,
+      "streams": 2,
       "primary": 1,
-      "backup": 2
+      "backup": 0
     },
     "starplus": {
       "names": [
@@ -7823,12 +7805,11 @@
         "teletubbies.uk"
       ],
       "groups": [
-        "Backup",
         "Kids"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "tensports": {
       "names": [
@@ -7995,12 +7976,11 @@
         "tomandjerry.do"
       ],
       "groups": [
-        "Backup",
         "Kids"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "tooku": {
       "names": [
@@ -8024,12 +8004,11 @@
         "toongoggles.us"
       ],
       "groups": [
-        "Backup",
         "Kids"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "totalmusic": {
       "names": [
@@ -8114,9 +8093,9 @@
         "Backup",
         "International"
       ],
-      "streams": 5,
+      "streams": 2,
       "primary": 1,
-      "backup": 4
+      "backup": 1
     },
     "travelxp": {
       "names": [

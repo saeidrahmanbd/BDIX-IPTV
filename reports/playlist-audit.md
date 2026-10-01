@@ -1,13 +1,13 @@
 # Playlist Audit
-Generated: **2026-10-01T11:22:32.621407+00:00**
+Generated: **2026-10-01T11:29:20.128987+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1025**
+- Playlist entries: **992**
 - Unique channel IDs: **637**
-- IDs with multiple streams: **202**
+- IDs with multiple streams: **180**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
@@ -23,9 +23,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate IDs
 
-### 30amusic.us (2 streams)
-- 30A Music — International — https://30a-tv.com/music.m3u8
-- 30A Music — Backup — https://30a-tv.com/feeds/ceftech/30atvmusic.m3u8
 ### 7smusic.in@sd (2 streams)
 - 7S Music — Indian Music — https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8
 - 7S Music — Backup — https://cdn.pishow.tv/ott/live/1257/master.m3u8
@@ -55,12 +52,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### aamarbangla.in (2 streams)
 - Amar Bangla — Indian Bangla — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8
 - Amar Bangla — Backup — http://115.187.41.216:8080/hls/amarbangla/index.m3u8
-### adntvplus.fr (2 streams)
-- ADN TV+ — Kids — https://d3b73b34o7cvkq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gz2sgqzp076kf/adn.m3u8
-- ADN TV+ — Backup — https://redirector.rudo.video/hls-video/931b584451fa6dd1313ee66efbfd5802e3f3bcea/adntv/adntv.smil/playlist.m3u8
-### amc.us (2 streams)
-- AMC — International — http://23.239.31.26:8989/amc/index.m3u8
-- AMC — Backup — http://41.205.93.154/AMC/index.m3u8
 ### anandatv.bd (5 streams)
 - Ananda TV — Bangladesh — https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
 - Ananda TV — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/anandatv.stream/live-orgin/anandatv.stream/playlist.m3u8
@@ -85,9 +76,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Asian TV — Bangladesh — https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/index.m3u8
 - Asian TV — Backup — https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/tracks-v1a1/mono.ts.m3u8
 - Asian TV — Backup — https://stream.ottplus.live/live/asian_tv_abr/index.m3u8
-### asports.pk (2 streams)
-- A Sports — Sports — https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/tracks-v1a1/mono.ts.m3u8
-- A Sports — Backup — http://198.195.239.50:8095/A.SPORTS.HD/index.m3u8
 ### atnbangla.bd (5 streams)
 - ATN Bangla — Bangladesh — http://198.195.239.50:8095/ATN.BANGLA.HD/index.m3u8
 - ATN Bangla — Backup — https://tvsen5.aynaott.com/atnbangla/index.m3u8
@@ -111,9 +99,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - B4U Music — Indian Movies — https://amg01408-amg01408c5-amgplt0747.playout.now3.amagi.tv/b4um001/playlist.m3u8
 - B4U Music — Backup — https://drk6xq0vhn.gpcdn.net/live/b4u_music_abr/index.m3u8
 - B4U Music — Backup — https://cdn.pishow.tv/ott/live/415/master.m3u8
-### babysharktv.us (2 streams)
-- Baby Shark TV — Kids — https://newidco-babysharktv-1-eu.rakuten.wurl.tv/playlist.m3u8
-- Baby Shark TV — Backup — https://newidco-babysharktv-1-us.roku.wurl.tv/playlist.m3u8
 ### balleballe.in@sd (2 streams)
 - Balle Balle — Indian Music — https://mcncdndigital.com/balleballetv/index.m3u8
 - Balle Balle — Backup — https://streams.tangotv.in/BALLEBALLE/ORIGIN/index.m3u8
@@ -130,9 +115,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### bbcearth.ca (2 streams)
 - BBC Earth — Documentary & Wildlife — https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist.m3u8
 - BBC Earth — Backup — http://198.195.239.50:8095/BBC.Earth.HD/index.m3u8
-### beinsportsxtra.us (2 streams)
-- beIN SPORTS XTRA — Sports — https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8
-- beIN SPORTS XTRA — Backup — https://bein-xtra-bein.amagi.tv/playlist.m3u8
 ### beinsportsxtraenespanol.us (3 streams)
 - beIN Sports XTRA en Espanol — Backup — https://dc1644a9jazgj.cloudfront.net/beIN_Sports_Xtra_Espanol.m3u8
 - beIN Sports XTRA en Espanol — Backup — https://aegis-cloudfront-1.tubi.video/01f6c149-449b-4248-8bda-2278799205ec/playlist.m3u8
@@ -157,10 +139,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - BTV National — Bangladesh — https://btv.hridoytv-channel.workers.dev/btv.m3u8
 - BTV National — Backup — http://198.195.239.50:8095/btv/index.m3u8
 - BTV National — Backup — http://198.195.239.50:8095/BTV.HD/index.m3u8
-### cartoonnetwork.uk (3 streams)
-- Cartoon Network — Kids — https://drk6xq0vhn.gpcdn.net/live/cn_sd_abr/index.m3u8
-- Cartoon Network — Backup — http://198.195.239.50:8095/CARTON.NETWORK.HD/index.m3u8
-- Cartoon Network — Backup — http://198.195.239.50:8095/cartoonNetwork/index.m3u8
 ### cgtndocumentary.cn (2 streams)
 - CGTN Documentary — Documentary & Wildlife — https://english-livebkali.cgtn.com/live/doccgtn_1.m3u8
 - CGTN Documentary — Backup — https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8
@@ -213,12 +191,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### custom.channel.16 (2 streams)
 - Channel 16 — Bangladesh — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel16bd.stream/tracks-v1a1/mono.m3u8
 - Channel 16 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8
-### custom.duck.tv (5 streams)
-- Duck TV — Kids — https://d6lk10bkdgfae.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-n0stmvwxmsf5c/playlist.m3u8
-- Duck TV — Backup — https://jmp2.uk/stvp-ESBC4700001GR
-- Duck TV — Backup — https://mmm-dk.otteravision.com/DexaYJdJXkLqFxTK_DuckTVHDSAMS/DuckTVHDSAMS.stream/playlist.m3u8
-- Duck TV — Backup — https://d6lk10bkdgfae.cloudfront.net/playlist.m3u8
-- Duck TV — Backup — https://dash3.antik.sk/live/duck_tv/index.m3u8
 ### custom.enter.tv (3 streams)
 - Enter TV — Bangladesh — https://live1.entertv.com.bd/entertv/tracks-v1a1/mono.m3u8
 - Enter TV — Backup — https://live1.entertv.com.bd/entertv/index.fmp4.m3u8
@@ -298,9 +270,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### ddsaptagiri.in@sd (2 streams)
 - DD Saptagiri — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/26e915d6d12b4a06822c5e33c088ed56/index.m3u8
 - DD Saptagiri — Backup — https://cdn.pishow.tv/ott/live/22/master.m3u8
-### ddsports.in@sd (2 streams)
-- DD Sports — Sports — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8
-- DD Sports — Backup — https://mumbai-edge.smartplaytv.in/DDSportsHD/index.m3u8
 ### ddurdu.in@sd (2 streams)
 - DD Urdu — Indian Entertainment — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/9b91e9007e754db39a8b32c6bfc5b24a/index.m3u8
 - DD Urdu — Backup — https://cdn.pishow.tv/ott/live/8/master.m3u8
@@ -362,9 +331,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### etvmusic.in (2 streams)
 - ETV Music — Indian Music — https://cc-szivnms4rlah6.akamaized.net/WWBI/Amagi/ETV_Music_IN/playlist.m3u8
 - ETV Music — New Backup — https://mumbai-edge.smartplaytv.in/ETVABHIRUCHI/index.m3u8
-### eurosport.in@sd (2 streams)
-- EURO SPORT HD — Sports — http://202.70.146.135:8000/play/a05s/index.m3u8
-- EURO SPORT HD — Backup — http://198.195.239.50:8095/EUROSPORTS.HD/index.m3u8
 ### faktmarathi.in@sd (2 streams)
 - Fakt Marathi — Indian Entertainment — https://mumt07.tangotv.in/zHjX9OFlFAKTMARATHI/index.m3u8
 - Fakt Marathi — Backup — https://cdn.pishow.tv/ott/live/10002/master.m3u8
@@ -435,9 +401,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### kalaignarmurasu.in (2 streams)
 - Kalaignar Murasu — Indian Entertainment — https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/murasu_nim_https/050522/murasu/playlist.m3u8
 - Kalaignar Murasu — Backup — https://segment.yuppcdn.net/050522/murasu/playlist.m3u8
-### kartoonchannel.us (2 streams)
-- Kartoon Channel! — Kids — https://d2z0ysa6dgxhlc.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ajxyy4yaic6nq/kchan.m3u8
-- Kartoon Channel! — Backup — https://lightning-fnf-samsungaus.amagi.tv/playlist.m3u8
 ### khushboobangla.in@sd (2 streams)
 - Khushboo Bangla — Indian Bangla — https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/index.m3u8
 - Khushboo Bangla — Backup — https://cdn.pishow.tv/ott/live/1473/master.m3u8
@@ -482,18 +445,14 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### mksix.in (2 streams)
 - MK Six — Indian Entertainment — https://mumt06.tangotv.in/qYyB8fXVMKSIX/index.m3u8
 - MK Six — Backup — https://cdn.pishow.tv/ott/live/1253/master.m3u8
-### mnx.in@sd (3 streams)
+### mnx.in@sd (2 streams)
 - MNX — International — http://198.195.239.50:8095/MNX.HD/index.m3u8
-- MNX — Backup — http://202.70.146.135:8000/play/a052/index.m3u8
-- MNX — Backup — http://59.103.38.46:8000/play/a052/index.m3u8
+- MNX — New Backup — http://59.103.38.46:8000/play/a052/index.m3u8
 ### mohonatv.bd (4 streams)
 - Mohona TV — Bangladesh — http://premiumtvs.space/live/YqXTywueEV/damp2purchase/397.ts
 - Mohona TV — Backup — https://tvsen6.aynaott.com/AkyX5dunzju4cpo26dr7/index.m3u8
 - Mohona TV — Backup — https://tvsen6.aynaott.com/AkyX5dunzju4cpo26dr7/tracks-v1a1/mono.ts.m3u8
 - Mohona TV — Backup — https://stream.ottplus.live/live/mohona_tv_abr/index.m3u8
-### moonbugkids.uk (2 streams)
-- Moonbug Kids — Kids — https://tvsen6.aynaott.com/MoonbugKids/index.m3u8?e=1784102587&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
-- Moonbug Kids — Backup — https://moonbug-rokuus.amagi.tv/playlist.m3u8
 ### moviebangla.bd (4 streams)
 - Movie Bangla — Bangladesh — http://alvetv.com/moviebanglatv/8080/index.m3u8
 - Movie Bangla — Backup — https://stream.ottplus.live/live/movie_bangla_abr/index.m3u8
@@ -541,9 +500,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### nhbollyraga.in (2 streams)
 - NH BollyRaga — Indian Music — https://cc-up9j649x4thrj.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-up9j649x4thrj/SBUM/RunnTV/BollyRaga_IN/BollyRaga_IN.m3u8
 - NH BollyRaga — Backup — https://jmp2.uk/stvp-IN460001373
-### nickjr.in@sd (2 streams)
-- Nick Jr. — Kids — http://198.195.239.50:8095/nickJr/index.m3u8
-- Nick Jr. — Backup — http://198.195.239.50:8095/NICK.JR/index.m3u8
 ### ntv.bd (6 streams)
 - NTV — Bangladesh — https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8
 - NTV — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8
@@ -570,12 +526,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Pitaara TV — Indian Movies — https://d2lk5u59tns74c.cloudfront.net/out/v1/500a6b45f5ae41dda445d912b59eaa09/index.m3u8
 - Pitaara TV — Backup — https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8
 - Pitaara TV — Backup — https://streams.tangotv.in/PITAARA/ORIGIN/index.m3u8
-### pogo.in@sd (2 streams)
-- Pogo — Kids — https://stream.ottplus.live/live/pogo_sd_abr/index.m3u8
-- Pogo — Backup — http://198.195.239.50:8095/pogo/index.m3u8
-### pop.uk (2 streams)
-- POP — Kids — https://amg01753-narrativeentert-popkids-samsunguk-yjjil.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-popkids-samsunguk/playlist.m3u8
-- POP — Backup — https://rakutenaa-narrative-popkids-rakuten-uwrx0.amagi.tv/ts-eu-w1-n2/playlist/rakutenAA-narrative-popkids-rakuten/cb553d1e726c648b9dd43e6fd4ef41a8dd2406fc087a8d6933fb4b926bc10f41f8eda29ab30fb02b04940fa73f4e380d4d1a9a4ace0362d7b66aa9512a7d127f8adaf471d89c1617b2c11f5d7fe021414efc0e14d025522288a93c019738b3761d5cb95c3a1862cff90bfc7000c7800bda62218ba4dd7c387c0c5e820c5feda643a6fde90e43d038a4e21e1bc72560ddbc139d9773efd59202cd16e92aac50bfa1cabad21aadbcb032fd14dd370656367897944694cc53a4dfe80353f472204f1251f4a69da43f56e146474fc7fac5a9179979aa99378e646de16ae84e8023b578be1ba2e043a9a3bce04b454be2ae1f3575a4e1f9d9f9617ee437fda0a489212d9fbb4d2814cb20dc202a6e94adca40d2931095ec51efde68192bff9c448996b7979dd4e728892e90879ee03c465d5c16169062a19563cf2cd36c97c2122f5b5845aa9f27a0ecbb5b3e3836ecef5fd00024bdde9d8adc0b04d3651a489a06b33f54359b6436078f5cf89e2f53992a0b9c302fc450308945f4ac5e93cdbfb45663e584bf28906eeba635d6f314a06e396616aae2292d20261ec7eb64574513aa44e0c0f5f3631f09e885a594a6016f5661420a56d9888f719f9dff390d1fc521600a30431390078e39885904022b994b9ef85e25d44b7928b7f272595c35959ae58584d39a14ec25afa592382b286667b8250c256becbb8c52f84a22141d5b891d6145b21f000a80e7c8e18abf69cf915ba937700666c9f1034e1b2001097acac13a8f06b3ca48efca9a0498bdd4431ff856d300148defd869eee482c270029fae521515feb940e25603e225fd08d2ae1aaab15115232e545efd8d5bf14bbcd18ef8229e5ecb25672ab220ebc6a6d9b86752f4ae4b232336570271567a297ecbb0a4670f76a2ae26ed48f2ee5bbd541a243a4584c26a2887ec64239f3a7074a0aedfb4aecb1715cd61e67ccc7371c03d6907c0ee69b0f9d883fb837c6b10d5b7b249a99e9f88c8c2c25418610861c2930f0f0db24bf18814deb80e79fdb69ffcca6be51c8852ad8da527f033b2912e6cc4e09cfae848105a4a45c3c2f8f407deb21e370619b1f74f3bad84dda775fcebb23e2bfa5ac186264c8c1b507ec78dfc25e90a99c7180bc6a64a50e45513e0d6a7213fe905f301157cd3faa04d2dc8e22eb26cbadbce2e6dad293fc5667f408d5db4ae926a7cd3a4305552d93c218772b0e2886d75618b975f14125c1f340ed64b7d0dc51f498433bbc5c0924c01ab28a83e1eef608ae37e86912dccd2e5d08fc711448ed52e34d33ec6009a02c9fcaedd198572488b49b23b40a9f6fddde9fbe596e6f63f7839b766be2be957b8e78ab0540f2b5bff2e1a6b0bd53cc42a3f72b5e174c1866c49a7f8d626e2237564233511ec30b5bd12696402a8c75cbcfc4b43404d12c9e22f86329d642aa27656ba1368333e367360a5b6ec3aff08fd5690c65e29c0a4bc8307c68d1effbfa7d79b680fe373076f79bc96aeb0f16014fbb5a8b01449a2ca44b232541c0aa3fb837632e3e40502d987ac55989d42a639172b4ef3ad8f13ec5ea313cb7e7efb1af2de6c4c97c976583a812ca9df7c459949ff0a01e56684406dd91d6753563d867ac7580b602df17283f8fc1a4e748501c96a683cbbe3fe8da83f57220d440f54051271ce412dc5192c4bea132f9b368dc28fec6585ee428d299dfdb38d1521d8c5f0c5922e892fe19290d28ce7b0ae685d481cc8b3c606a42905c4fd69b10cf3fe3406ec17a28b7387405e60c7060763cb9661176182a37d8deb4fb16b8b1ebafa88e1cd6fc8dbb5022bbe5407f552c22990723e574fcd60ad882b27e3aee91ba46d4ef0e5a9bbc4fe41e5f3c126db4da0c79ab0a805aad763294685386e1b742329ec749c3f0e907ef142f95da37d23fb268f455e31e5a99e61f1e35b38447e03d75a92772652d22229293040d7c538a6de867c4771221a55e6da1bd1114dbb225451968722e9d6f7619553d59eb5f650295a7b34fd71385575d06b6f5d16bca7f5c7033bc63aca1e0ab39093e9790a218b9b58bb910461c1f1c626f73dd57de405a670124f089d5d571cbd176d3e631d7e739c4b27ef8ca396a52e2c6364b0cb38015abbf0a149bf386d7a45138130513026/17/1920x1080_5903040/index.m3u8
 ### powerturktv.tr (2 streams)
 - PowerTürk TV — Backup — https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8
 - PowerTürk TV — Backup — https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8
@@ -600,7 +550,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - RDS Social TV — Backup — https://stream.rdstv.radio/out/v1/ec85f72b87f04555aa41d616d5be41dc/index.m3u8
 ### romedynow.in@sd (2 streams)
 - Romedy Now — International — http://198.195.239.50:8095/ROMEDY.NOW/index.m3u8
-- Romedy Now — Backup — http://51.75.127.199:3141/romedynow/index.m3u8
+- Romedy Now — New Backup — http://51.75.127.199:3141/romedynow/index.m3u8
 ### rongeentv.in@sd (4 streams)
 - Rongeen TV — Indian Bangla — https://server.thelegitpro.in/rongeentv/rongeentv/index.m3u8
 - Rongeen TV — Backup — https://server.thelegitpro.in/rongeentv/rongeentv/tracks-v1a1/mono.m3u8
@@ -642,9 +592,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### shemaroojosh.in@sd (2 streams)
 - Shemaroo Josh — Indian Entertainment — https://airtelapp.shemaroo.com/shemarooChumbakTV/smil:shemarooChumbakTVadp.smil/playlist.m3u8
 - Shemaroo Josh — Backup — https://mumt04.tangotv.in/m18aqlK4SHEMAROOJOSH/index.m3u8
-### smurftv.us (2 streams)
-- Smurf TV — Kids — https://d144py1prrd7ns.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-affg2ev32s0dq/smrfe.m3u8
-- Smurf TV — Backup — https://stream.ads.ottera.tv/playlist.m3u8?network_id=4065
 ### somoynewstv.bd (6 streams)
 - Somoy TV — Bangladesh — http://198.195.239.50:8095/somoyTv/index.m3u8
 - Somoy TV — Backup — https://tvsen5.aynaott.com/somoytv/tracks-v1a1/mono.m3u8
@@ -672,13 +619,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### sonymax2.in@sd (2 streams)
 - Sony Max 2 — Indian Movies — https://drk6xq0vhn.gpcdn.net/live/max_2_abr/index.m3u8
 - Sony Max 2 — New Backup — http://149.71.34.166:8000/play/a00z/index.m3u8
-### sonysportsten3.in (2 streams)
-- Sony Sports Ten 3 — Sports — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98863.ts
-- Sony Sports Ten 3 — Backup — http://198.195.239.50:8095/SONY.SPORTS.3/index.m3u8
-### sonyyay.in@sd (3 streams)
-- Sony Yay — Kids — https://drk6xq0vhn.gpcdn.net/live/sony_yay_abr/index.m3u8
-- Sony Yay — Backup — http://198.195.239.50:8095/sonyYay/index.m3u8
-- Sony Yay — Backup — http://198.195.239.50:8095/SONY.YAY/index.m3u8
 ### star.jalsha.in (9 streams)
 - Star Jalsha — Indian Bangla — https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8
 - Star Jalsha — Backup — https://flussonic.defineatoz.com/StarjalshaHD/tracks-v1a1/mono.m3u8
@@ -706,16 +646,13 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### starmaamovies.in@sd (2 streams)
 - Star Maa Movies — Indian Movies — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:maamovies.smil/chunklist_b2628000.m3u8
 - Star Maa Movies — New Backup — http://51.75.127.199:3141/starmaamovies/index.m3u8
-### starmovies.in@sd (5 streams)
+### starmovies.in@sd (3 streams)
 - Star Movies — International — http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/98842.ts
-- Star Movies — Backup — http://202.70.146.135:8000/play/a06r/index.m3u8
-- Star Movies — Backup — http://198.195.239.50:8095/STAR.MOVIES.HD/index.m3u8
-- Star Movies — Backup — http://51.75.127.199:3141/starmovies/index.m3u8
-- Star Movies — Backup — http://51.75.127.199:3141/starmovieshd/index.m3u8
-### starmoviesselect.in@hd (3 streams)
+- Star Movies — New Backup — http://51.75.127.199:3141/starmovies/index.m3u8
+- Star Movies — New Backup — http://51.75.127.199:3141/starmovieshd/index.m3u8
+### starmoviesselect.in@hd (2 streams)
 - Star Movies Select — International — http://202.70.146.135:8000/play/a06q/index.m3u8
-- Star Movies Select — Backup — http://198.195.239.50:8095/STAR.MOVIES.SEL.HD/index.m3u8
-- Star Movies Select — Backup — http://51.75.127.199:3141/starmoviesselecthd/index.m3u8
+- Star Movies Select — New Backup — http://51.75.127.199:3141/starmoviesselecthd/index.m3u8
 ### starplus.in@sd (3 streams)
 - Star Plus — Indian Entertainment — http://livetv.akr4m.com:8080/bdtv/restrem/62.m3u8
 - Star Plus — Backup — http://41.205.93.154/STAR-PLUS/index.m3u8
@@ -727,23 +664,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - SUN BANGLA — Indian Bangla — https://iptvlive.ahmed-bd-org.workers.dev/sun-bangla-1/index.m3u8
 - SUN BANGLA — Backup — http://27.124.71.27/Sun_Bangla/index.m3u8
 - SUN BANGLA — Backup — http://198.195.239.50:8095/SUN.BANGLA.HD/index.m3u8
-### teletubbies.uk (2 streams)
-- Teletubbies — Kids — https://dv8lsrd8fecw9.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-dkls74gdpo7r0/master.m3u8
-- Teletubbies — Backup — https://dv8lsrd8fecw9.cloudfront.net/master.m3u8
 ### tlc.in@hd (2 streams)
 - TLC — Documentary & Wildlife — http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/36.ts
 - TLC — Backup — http://198.195.239.50:8095/TLC.HD/index.m3u8
-### tomandjerry.do (2 streams)
-- Tom and Jerry — Kids — https://live20.bozztv.com/giatvplayout7/giatv-208314/tracks-v1a1/mono.ts.m3u8
-- Tom and Jerry — Backup — https://live20.bozztv.com/giatvplayout7/giatv-208314/playlist.m3u8
-### toongoggles.us (2 streams)
-- Toon Goggles — Kids — https://d1eg24xrsfr6kv.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-b4b1bzxkt1uzo-prod/tg/tg/tg.m3u8
-- Toon Goggles — Backup — https://amg01329-otterainc-toongoggles-samsungau-ad-4c.amagi.tv/playlist/amg01329-otterainc-toongoggles-samsungau/playlist.m3u8
-### traceurban.fr (4 streams)
-- Trace Urban — International — https://channels.trace.plus/Traceprod/URBAN_AFRIC_FR_hd/index.m3u8
-- Trace Urban — Backup — https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8
-- Trace Urban — Backup — https://amg01131-tracetv-amg01131c1-rakuten-us-1081.playouts.now.amagi.tv/playlist/amg01131-tracetvfast-traceurban-rakutenus/playlist.m3u8
-- Trace Urban — Backup — https://channels.trace.plus/Traceprod/URBAN_FR_hd/index.m3u8
 ### travelxp.in@sd (3 streams)
 - Travelxp Hindi — Documentary & Wildlife — http://202.70.146.135:8000/play/a04o/index.m3u8
 - Travelxp Hindi — Backup — http://198.195.239.50:8095/travelXp/index.m3u8
@@ -864,7 +787,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1025**
+- Healthy/local references: **992**
 - missing: **0**
 - broken-local: **0**
 - external: **0**
