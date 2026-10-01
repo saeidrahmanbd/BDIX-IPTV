@@ -4,19 +4,6 @@ on:
   schedule:
     - cron: '0 2 * * *' # 08:00 Asia/Dhaka (UTC+6)
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'IPTV-Playlist.m3u'
-      - 'scripts/normalize_metadata.py'
-      - 'scripts/discover_channels_v3.py'
-      - 'scripts/migrate_external_logos_fixed.py'
-      - 'scripts/epg_coverage.py'
-      - 'scripts/sync_epg_worker_map.py'
-      - 'scripts/audit_playlist.py'
-      - 'scripts/generate_dashboard.py'
-      - 'reports/maintenance-history.json'
-      - '.github/workflows/iptv-maintenance.yml'
 
 permissions:
   contents: write
@@ -24,6 +11,7 @@ permissions:
 concurrency:
   group: iptv-repository-writes
   cancel-in-progress: false
+  queue: max
 
 jobs:
   maintain:
@@ -43,6 +31,9 @@ jobs:
 
       - name: Install logo dependencies
         run: python -m pip install --disable-pip-version-check pillow cairosvg
+
+      - name: Repair existing metadata and backup identities
+        run: python scripts/normalize_metadata.py
 
       - name: Discover new channels and backup streams
         run: python scripts/discover_channels_v3.py
