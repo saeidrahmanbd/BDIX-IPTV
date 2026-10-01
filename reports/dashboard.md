@@ -5,7 +5,8 @@ _Last generated: **2026-10-01 09:37 UTC**_
 | Metric | Current |
 |---|---:|
 | Streams | **1025** |
-| Active Channels | **587** |
+| Active Channel Identities | **587** |
+| Active Primary Streams | **587** |
 | Bangladesh | **57** |
 | India | **259** |
 | Backup Streams | **413** |
