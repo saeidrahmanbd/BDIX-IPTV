@@ -1,122 +1,80 @@
 name: IPTV Playlist Maintenance
-
 on:
   push:
     branches: [main]
     paths:
-      - 'IPTV-Playlist.m3u'
-      - 'scripts/**'
-      - '.github/workflows/iptv-maintenance.yml'
+      - IPTV-Playlist.m3u
+      - scripts/**
+      - .github/workflows/iptv-maintenance.yml
   schedule:
-    - cron: '17 2 * * *' # 08:17 Asia/Dhaka (UTC+6)
+    - cron: '17 2 * * *'
   workflow_dispatch:
-
 permissions:
   contents: write
-
 concurrency:
   group: iptv-maintenance
   cancel-in-progress: false
   queue: single
-
 jobs:
   maintain:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
-
-      - name: Setup Python
-        uses: actions/setup-python@v7
-        with:
-          python-version: '3.12'
-
-      - name: Install logo dependencies
+      - uses: actions/checkout@v7
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v7
+        with: {python-version: '3.12'}
+      - name: Install dependencies
         run: python -m pip install --disable-pip-version-check pillow cairosvg
-
-      - name: Commit maintenance changes
+      - name: Run maintenance
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-
-          # Finalize from the latest remote main, not from the stale checkout.
-          # This avoids rebase conflicts in generated reports when a user edits
-          # the repository while maintenance is running.
           for attempt in 1 2 3; do
             git fetch origin main
             git reset --hard origin/main
             git clean -fd
-
             python scripts/normalize_metadata.py
             python scripts/discover_channels_v3.py
             python scripts/normalize_metadata.py
             python scripts/migrate_external_logos_fixed.py
             python scripts/epg_coverage.py
             python scripts/sync_epg_worker_map.py
-
-            # The audit is intentionally allowed to fail on structural blockers.
-            # Reports must still be generated so the dashboard never freezes at
-            # an older "0 blockers" snapshot.
             set +e
             python scripts/audit_playlist.py
             AUDIT_STATUS=$?
+            python scripts/build_identity_index.py
+            python scripts/stream_health.py
+            HEALTH_STATUS=$?
+            python scripts/pre_publish_gate.py
+            GATE_STATUS=$?
             set -e
-
             python - <<'PY'
-          import json
+          import json,re
           from pathlib import Path
-          from datetime import datetime, timezone
-          report = Path('reports/playlist-audit.md').read_text(encoding='utf-8')
-          import re
-          def metric(text, label):
-              m = re.search(rf'- {re.escape(label)}: \*\*(\d+)\*\*', text)
-              return int(m.group(1)) if m else None
-          record = {
-              'timestamp_utc': datetime.now(timezone.utc).isoformat(),
-              'entries': metric(report, 'Playlist entries'),
-              'unique_channel_ids': metric(report, 'Unique channel IDs'),
-              'duplicate_ids': metric(report, 'IDs with multiple streams'),
-              'duplicate_urls': metric(report, 'Duplicate stream URLs'),
-              'metadata_conflicts': metric(report, 'Metadata conflicts'),
-              'logo_exceptions': metric(report, 'Logo exceptions'),
-              'primary_number_collisions': metric(report, 'Primary channel-number collisions'),
-              'protected_primary_changes': metric(report, 'Protected primary-entry changes'),
-          }
-          path = Path('reports/maintenance-history.json')
-          try:
-              history = json.loads(path.read_text(encoding='utf-8')) if path.exists() else []
-              if not isinstance(history, list): history = []
-          except Exception:
-              history = []
-          history.append(record)
-          path.parent.mkdir(parents=True, exist_ok=True)
-          path.write_text(json.dumps(history[-180:], indent=2) + '\n', encoding='utf-8')
+          from datetime import datetime,timezone
+          p=Path('reports/playlist-audit.md').read_text(encoding='utf-8')
+          h=Path('reports/stream-health.md').read_text(encoding='utf-8') if Path('reports/stream-health.md').exists() else ''
+          def metric(s,label):
+              m=re.search(rf'- {re.escape(label)}: \*\*(\d+)\*\*',s); return int(m.group(1)) if m else None
+          rec={'timestamp_utc':datetime.now(timezone.utc).isoformat(),'entries':metric(p,'Playlist entries'),'unique_channel_ids':metric(p,'Unique channel IDs'),'duplicate_ids':metric(p,'IDs with multiple streams'),'duplicate_urls':metric(p,'Duplicate stream URLs'),'metadata_conflicts':metric(p,'Metadata conflicts'),'logo_exceptions':metric(p,'Logo exceptions'),'primary_number_collisions':metric(p,'Primary channel-number collisions'),'protected_primary_changes':metric(p,'Protected primary-entry changes'),'health_tested':metric(h,'Streams tested'),'health_failures':metric(h,'Failed this check'),'health_persistent':metric(h,'Persistent failures (3+ consecutive)')}
+          f=Path('reports/maintenance-history.json')
+          try: hist=json.loads(f.read_text(encoding='utf-8')) if f.exists() else []
+          except Exception: hist=[]
+          if not isinstance(hist,list): hist=[]
+          hist.append(rec); f.parent.mkdir(parents=True,exist_ok=True); f.write_text(json.dumps(hist[-180:],indent=2)+'\n',encoding='utf-8')
           PY
-
             python scripts/generate_dashboard.py
-
-            # If the audit found blockers, publish the fresh reports but do not
-            # publish unreviewed playlist mutations produced earlier in this run.
-            if [ "$AUDIT_STATUS" -ne 0 ]; then
+            if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
               git restore -- IPTV-Playlist.m3u logos/ xtream/worker.js || true
             fi
-
             git add IPTV-Playlist.m3u logos/ reports/ assets/dashboard.svg xtream/worker.js
-            if git diff --cached --quiet; then
-              echo 'No maintenance changes.'
-              exit 0
-            fi
+            if git diff --cached --quiet; then exit 0; fi
             git commit -m 'Run IPTV playlist maintenance'
-            if git push origin HEAD:main; then
-              exit 0
-            fi
+            if git push origin HEAD:main; then exit 0; fi
             sleep 3
           done
-          echo 'Maintenance could not publish after 3 attempts.'
           exit 1
