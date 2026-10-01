@@ -1,6 +1,12 @@
 name: IPTV Playlist Maintenance
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'IPTV-Playlist.m3u'
+      - 'scripts/**'
+      - '.github/workflows/iptv-maintenance.yml'
   schedule:
     - cron: '0 2 * * *' # 08:00 Asia/Dhaka (UTC+6)
   workflow_dispatch:
