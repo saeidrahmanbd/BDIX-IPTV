@@ -1241,9 +1241,9 @@ https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8
 https://drk6xq0vhn.gpcdn.net/live/b4u_movies_abr/index.m3u8
 #EXTINF:-1 channel-id="B4UMovies.in@India" tvg-id="B4UMovies.in@India" tvg-name="B4U Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png" tvg-country="IN" tvg-language="hin" group-title="Backup",B4U Movies
 https://cdn.pishow.tv/ott/live/419/master.m3u8
-#EXTINF:-1 channel-id="B4UMusic.in@India@ALT1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png" tvg-id="B4UMusic.in@India@ALT1" tvg-name="B4U Music" tvg-country="IN" tvg-language="hin" group-title="Backup",B4U Music
+#EXTINF:-1 channel-id="B4UMusic.in@India" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png" tvg-id="B4UMusic.in@India" tvg-name="B4U Music" tvg-country="IN" tvg-language="hin" group-title="Backup",B4U Music
 https://drk6xq0vhn.gpcdn.net/live/b4u_music_abr/index.m3u8
-#EXTINF:-1 channel-id="B4UMusic.in@India@ALT1" tvg-id="B4UMusic.in@India@ALT1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png" tvg-name="B4U Music" group-title="Backup",B4U Music
+#EXTINF:-1 channel-id="B4UMusic.in@India" tvg-id="B4UMusic.in@India" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png" tvg-name="B4U Music" group-title="Backup",B4U Music
 https://cdn.pishow.tv/ott/live/415/master.m3u8
 #EXTINF:-1 channel-id="BalleBalle.in@SD" tvg-id="BalleBalle.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/balle-balle.png" tvg-name="Balle Balle" group-title="Backup",Balle Balle
 https://streams.tangotv.in/BALLEBALLE/ORIGIN/index.m3u8
@@ -1757,9 +1757,9 @@ https://live20.bozztv.com/giatvplayout7/giatv-209611/index.m3u8
 http://198.195.239.50:8095/SONY.AAT/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-bbc-earth.png" channel-id="SonyBBCEarth.in@SD" tvg-id="SonyBBCEarth.in@SD" tvg-name="Sony BBC Earth" group-title="Backup",Sony BBC Earth
 http://198.195.239.50:8095/SONY.BBC.EARTH.HD/index.m3u8
-#EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@SD@ALT1" tvg-name="Sony Entertainment TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-entertainment-tv.png" channel-id="SonyEntertainmentTelevision.in@SD@ALT1" group-title="Backup",Sony Entertainment TV
+#EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@SD" tvg-name="Sony Entertainment TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-entertainment-tv.png" channel-id="SonyEntertainmentTelevision.in@SD" group-title="Backup",Sony Entertainment TV
 https://drk6xq0vhn.gpcdn.net/live/sony_ent_hd_abr/index.m3u8
-#EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@SD@ALT1" tvg-name="Sony Entertainment TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-entertainment-tv.png" channel-id="SonyEntertainmentTelevision.in@SD@ALT1" group-title="Backup",Sony Entertainment TV
+#EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@SD" tvg-name="Sony Entertainment TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-entertainment-tv.png" channel-id="SonyEntertainmentTelevision.in@SD" group-title="Backup",Sony Entertainment TV
 http://38.96.178.205/SONYHD/index.m3u8
 #EXTINF:-1 channel-id="SonyMax.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max.png" tvg-id="SonyMax.in@SD" tvg-name="Sony Max" group-title="Backup",Sony Max
 https://drk6xq0vhn.gpcdn.net/live/sony_max_sd_abr/index.m3u8
