@@ -983,7 +983,7 @@ https://amg00627-amg00627c29-rakuten-it-3989.playouts.now.amagi.tv/playlist/amg0
 http://198.195.239.50:8095/nick/index.m3u8
 #EXTINF:-1 tvg-chno="897" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png" channel-id="NickJr.in@SD" tvg-id="NickJr.in@SD" tvg-name="Nick Jr" group-title="Kids",Nick Jr
 http://198.195.239.50:8095/nickJr/index.m3u8
-#EXTINF:-1 tvg-chno="946" channel-id="NickJr.cz@SD" tvg-id="NickJr.cz@SD" tvg-name="Nick Jr (Czech Republic)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,Nick Jr. (Czech Republic),Nick Jr (Czech Republic),Nick Jr (Czech Republic)
+#EXTINF:-1 tvg-chno="946" channel-id="NickJr.cz@SD" tvg-id="NickJr.cz@SD" tvg-name="Nick Jr (Czech Republic)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,Nick Jr. (Czech Republic),Nick Jr (Czech Republic),Nick Jr (Czech Republic),Nick Jr (Czech Republic),Nick Jr (Czech Republic)
 http://88.212.15.19/live/test_nick_jr/playlist.m3u8
 #EXTINF:-1 tvg-id="Oggyandthecockroaches" tvg-name="Oggy and the cockroaches" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/oggy-and-the-cockroaches.png" tvg-chno="947" channel-id="Oggyandthecockroaches" group-title="Kids",Oggy and the cockroaches
 https://live20.bozztv.com/giatvplayout7/giatv-210728/tracks-v1a1/mono.ts.m3u8
