@@ -14,6 +14,15 @@ Non-destructive connectivity check. A successful HTTP response confirms reachabi
 - Primary tested: **587**
 - Backup tested: **413**
 
+## Failure Classification
+
+- Connection: **1**
+- HTTP 404 (not found): **12**
+- HTTP 458: **1**
+- HTTP 5xx (server): **3**
+- Network: **135**
+- Timeout: **3**
+
 ## Persistent Failures
 
 None.
