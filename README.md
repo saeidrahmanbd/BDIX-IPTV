@@ -139,6 +139,14 @@ This repository does not host television channels or video content. It contains 
 
 Users are responsible for complying with applicable laws, regulations, and service terms.
 
+## 📞 Contact
+
+For collaboration, feedback, IPTV playlist issues, or project-related inquiries:
+
+- 📧 **Email:** [saeidrahman.mkt@gmail.com](mailto:saeidrahman.mkt@gmail.com)
+- 👤 **GitHub:** [Saeid Rahman](https://github.com/saeidrahmanbd)
+- 📘 **Facebook:** [Saeid Rahman](https://www.facebook.com/saeidrahman.mkt)
+
 ---
 
 ⭐ If you find the project useful, consider starring the repository.
