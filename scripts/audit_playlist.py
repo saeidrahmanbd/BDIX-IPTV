@@ -381,6 +381,32 @@ def run_change_guard():
             "would be removed or rewritten."
         )
 
+    # Review queues are user-controlled. A stream placed in New Channels or
+    # New Backup must remain in that review group until the user explicitly
+    # promotes it. Never silently reclassify it into an active category or
+    # approved Backup during automated maintenance.
+    old_review = {}
+    new_review = {}
+    for info, url in old_entries:
+        group = attrs(info).get("group-title", "").strip()
+        if group in {"New Channels", "New Backup"} and url.strip():
+            old_review[url.strip().lower()] = group
+    for info, url in entries:
+        group = attrs(info).get("group-title", "").strip()
+        if group in {"New Channels", "New Backup"} and url.strip():
+            new_review[url.strip().lower()] = group
+    review_reclassified = [
+        (url, old_group, new_review.get(url, ""))
+        for url, old_group in old_review.items()
+        if new_review.get(url) != old_group
+    ]
+    if review_reclassified:
+        raise SystemExit(
+            f"Change Guard blocked maintenance: {len(review_reclassified)} "
+            "New Channels/New Backup entries were reclassified or removed from "
+            "their user-review queue."
+        )
+
 run_change_guard()
 
 
