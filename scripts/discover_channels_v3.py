@@ -76,7 +76,7 @@ def ok(country,a,n,u):
     # query keys commonly used for authentication, signatures, or expiry.
     for key, value in parse_qsl(p.query, keep_blank_values=True):
         qkey=unquote_plus(key).strip().lower()
-        if any(qkey == bad.rstrip("=") or qkey.startswith(bad.rstrip("=")) for bad in QBAD):
+        if any(qkey == bad.rstrip("=") for bad in QBAD):
             return False
     if any(x in p.netloc.lower() for x in HOSTBAD): return False
     return p.path.lower().endswith((".m3u8",".m3u",".ts")) and "vod" not in p.path.lower() and "catchup" not in p.path.lower()
