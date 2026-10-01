@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T11:58:19+00:00",
+  "generated": "2026-10-01T12:25:43+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -406,7 +406,7 @@
     },
     "andprivehd": {
       "names": [
-        "&Privé HD"
+        "&Privé"
       ],
       "ids": [
         "andprivehd.in"
@@ -452,8 +452,7 @@
     },
     "animalplanet": {
       "names": [
-        "Animal Planet",
-        "Animal Planet HD"
+        "Animal Planet"
       ],
       "ids": [
         "animalplanet.in@hd",
@@ -570,7 +569,7 @@
     },
     "atnbanglauk": {
       "names": [
-        "ATN BANGLA UK"
+        "ATN Bangla UK"
       ],
       "ids": [
         "atnbanglauk.uk"
@@ -671,8 +670,8 @@
     },
     "b4ubhojpuri": {
       "names": [
-        "B4U Bhojpuri (1080p)",
-        "B4U Bhojpuri Plus (1080p)"
+        "B4U Bhojpuri",
+        "B4U Bhojpuri Plus"
       ],
       "ids": [
         "b4ubhojpuri.in@plus",
@@ -1091,8 +1090,7 @@
     },
     "cartoonnetwork": {
       "names": [
-        "Cartoon Network",
-        "Cartoon Network HD+"
+        "Cartoon Network"
       ],
       "ids": [
         "cartoonnetwork.in@sd",
@@ -1736,7 +1734,7 @@
     },
     "custom.disney": {
       "names": [
-        "Disney Jr."
+        "Disney Jr"
       ],
       "ids": [
         "custom.disney.jr"
@@ -2358,7 +2356,7 @@
     },
     "custom.starsports2": {
       "names": [
-        "Star Sports 2 HD"
+        "Star Sports 2"
       ],
       "ids": [
         "custom.starsports2"
@@ -2484,7 +2482,7 @@
     },
     "custom.unite8.1": {
       "names": [
-        "UNITE8.1"
+        "UNITE8 1"
       ],
       "ids": [
         "custom.unite8.1"
@@ -3046,7 +3044,7 @@
     },
     "deewanahd": {
       "names": [
-        "Deewana HD"
+        "Deewana"
       ],
       "ids": [
         "deewanahd.in"
@@ -3496,8 +3494,7 @@
     },
     "etvcinema": {
       "names": [
-        "ETV Cinema",
-        "ETV Cinema HD (1080p)"
+        "ETV Cinema"
       ],
       "ids": [
         "etvcinema.in",
@@ -3570,7 +3567,7 @@
     },
     "eurosport": {
       "names": [
-        "EURO SPORT HD"
+        "EURO SPORT"
       ],
       "ids": [
         "eurosport.in@sd"
@@ -3584,7 +3581,7 @@
     },
     "expressnews": {
       "names": [
-        "Express News (576p)"
+        "Express News"
       ],
       "ids": [
         "expressnews.in@sd"
@@ -3712,7 +3709,7 @@
     "gazitv": {
       "names": [
         "G TV",
-        "Gazi TV (1080p)"
+        "Gazi TV"
       ],
       "ids": [
         "gazitv.bd",
@@ -3785,7 +3782,7 @@
     },
     "getfactual": {
       "names": [
-        "Get.factual"
+        "Get factual"
       ],
       "ids": [
         "getfactual.us"
@@ -4453,8 +4450,8 @@
         "Kappa TV (Music)"
       ],
       "ids": [
-        "kappatv.in@sd",
-        "kappatv.in@sd@alt1"
+        "kappatv.in@alt1",
+        "kappatv.in@sd"
       ],
       "groups": [
         "Indian Movies",
@@ -4525,7 +4522,7 @@
     },
     "local.072484feec7": {
       "names": [
-        "Zee Bangla HD"
+        "Zee Bangla"
       ],
       "ids": [
         "local.072484feec7"
@@ -4854,7 +4851,7 @@
     },
     "metrotv": {
       "names": [
-        "Metro TV",
+        "Metro TV (Honduras)",
         "Metro TV (India)",
         "Metro TV (Indonesia)"
       ],
@@ -5061,8 +5058,7 @@
     },
     "moviesnow": {
       "names": [
-        "Movies Now",
-        "Movies Now HD"
+        "Movies Now"
       ],
       "ids": [
         "moviesnow.in@hd",
@@ -5401,7 +5397,7 @@
     "nationalgeographicwild": {
       "names": [
         "Nat Geo Wild",
-        "National Geographic Wild (India) (576p)"
+        "National Geographic Wild (India)"
       ],
       "ids": [
         "nationalgeographicwild.in@sd"
@@ -5574,14 +5570,15 @@
     },
     "nickjr": {
       "names": [
-        "Nick Jr.",
-        "Nick Jr. (Czech Republic)"
+        "Nick Jr",
+        "Nick Jr (Czech Republic)"
       ],
       "ids": [
         "nickjr.cz@sd",
         "nickjr.in@sd"
       ],
       "groups": [
+        "",
         "Kids"
       ],
       "streams": 2,
@@ -5963,8 +5960,7 @@
     },
     "pop": {
       "names": [
-        "POP",
-        "POP HD"
+        "POP"
       ],
       "ids": [
         "pop.uk",
@@ -6547,7 +6543,7 @@
     },
     "rsbharat": {
       "names": [
-        "RS Bharat (576p)"
+        "RS Bharat"
       ],
       "ids": [
         "rsbharat.in@sd"
@@ -6591,7 +6587,7 @@
     },
     "rupashibanglatv": {
       "names": [
-        "Rupashi Bangla TV (720p)"
+        "Rupashi Bangla TV"
       ],
       "ids": [
         "rupashibanglatv.bd@sd"
@@ -6990,8 +6986,7 @@
     },
     "sonybbcearth": {
       "names": [
-        "Sony BBC Earth",
-        "Sony BBC Earth HD"
+        "Sony BBC Earth"
       ],
       "ids": [
         "sonybbcearth.in@hd",
@@ -7136,7 +7131,7 @@
     },
     "sonysab": {
       "names": [
-        "Sony SAB HD"
+        "Sony SAB"
       ],
       "ids": [
         "sonysab.in@hd"
@@ -7236,7 +7231,7 @@
     },
     "star.jalsha.movies": {
       "names": [
-        "Jalsha Movies HD"
+        "Jalsha Movies"
       ],
       "ids": [
         "star.jalsha.movies.in"
@@ -7280,7 +7275,7 @@
     },
     "stargold2": {
       "names": [
-        "Star Gold 2 (576p)"
+        "Star Gold 2"
       ],
       "ids": [
         "stargold2.in@sd"
@@ -7353,7 +7348,7 @@
     },
     "starmaamusic": {
       "names": [
-        "Star Maa Music (576p)"
+        "Star Maa Music"
       ],
       "ids": [
         "starmaamusic.in@sd"
@@ -7665,7 +7660,7 @@
     },
     "sunbangla": {
       "names": [
-        "SUN BANGLA"
+        "Sun Bangla"
       ],
       "ids": [
         "sunbangla.in@sd"
@@ -7708,7 +7703,7 @@
     },
     "suriyantv": {
       "names": [
-        "Suriyan TV (576p)"
+        "Suriyan TV"
       ],
       "ids": [
         "suriyantv.in@sd"
@@ -7806,7 +7801,7 @@
     },
     "tensports": {
       "names": [
-        "Ten Sports HD"
+        "Ten Sports"
       ],
       "ids": [
         "tensports.pk"
@@ -7876,8 +7871,8 @@
     },
     "themovieclub": {
       "names": [
-        "The Movie Club +2",
-        "The Movie Club HD"
+        "The Movie Club",
+        "The Movie Club +2"
       ],
       "ids": [
         "themovieclub.in@hd",
@@ -8076,7 +8071,7 @@
     "traceurban": {
       "names": [
         "Trace Urban",
-        "Trace Urban International HD"
+        "Trace Urban International"
       ],
       "ids": [
         "traceurban.fr",
@@ -8294,7 +8289,7 @@
     },
     "voktatv": {
       "names": [
-        "Vokta TV (720p)"
+        "Vokta TV"
       ],
       "ids": [
         "voktatv.bd@sd"
@@ -8308,7 +8303,7 @@
     },
     "wahpunjabi": {
       "names": [
-        "Wah Punjabi (576p)"
+        "Wah Punjabi"
       ],
       "ids": [
         "wahpunjabi.in@sd"
@@ -8414,7 +8409,7 @@
     },
     "yetmax": {
       "names": [
-        "YET Max (720p)"
+        "YET Max"
       ],
       "ids": [
         "yetmax.in@hd"
@@ -8575,7 +8570,7 @@
     },
     "zeecinemalu": {
       "names": [
-        "Zee Cinemalu HD"
+        "Zee Cinemalu"
       ],
       "ids": [
         "zeecinemalu.in@hd"
@@ -8603,7 +8598,7 @@
     },
     "zeesouthflix": {
       "names": [
-        "Zee South Flix (1080p)"
+        "Zee South Flix"
       ],
       "ids": [
         "zeesouthflix.in@hd"
@@ -8617,7 +8612,7 @@
     },
     "zeetalkies": {
       "names": [
-        "Zee Talkies HD"
+        "Zee Talkies"
       ],
       "ids": [
         "zeetalkies.in@hd"

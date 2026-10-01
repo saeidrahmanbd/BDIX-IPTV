@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-01T11:58:19.513204+00:00**
+Generated: **2026-10-01T12:25:42.933880+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -10,7 +10,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - IDs with multiple streams: **181**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
-- Same-name / different-ID collisions: **0**
+- Same-name / different-ID collisions: **2**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
@@ -83,8 +83,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - ATN Bangla — Backup — https://iptvlive.ahmed-bd-org.workers.dev/atn-bangla-1/index.m3u8
 - ATN Bangla — Backup — http://tvsen5.aynascope.net/atnbangla/index.m3u8
 ### atnbanglauk.uk (2 streams)
-- ATN BANGLA UK — Bangladesh — https://app.ncare.live/live-orgin/atnbanglauk-off.stream/playlist.m3u8
-- ATN BANGLA UK — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnbanglauk-off.stream/playlist.m3u8
+- ATN Bangla UK — Bangladesh — https://app.ncare.live/live-orgin/atnbanglauk-off.stream/playlist.m3u8
+- ATN Bangla UK — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnbanglauk-off.stream/playlist.m3u8
 ### b4ukadak.in@sd (4 streams)
 - B4U Kadak — Indian Movies — https://amg00877-b4unew-amg00877c4-xiaomi-in-5473.playouts.now.amagi.tv/playlist.m3u8
 - B4U Kadak — Backup — https://tvsen3.aynaott.com/X9E6bxg3/index.m3u8
@@ -224,8 +224,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Star News — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/tracks-v1a1/mono.m3u8
 - Star News — Backup — https://iptvlive.ahmed-bd-org.workers.dev/star-news-2/index.m3u8
 ### custom.starsports2 (2 streams)
-- Star Sports 2 HD — Backup — http://198.195.239.50:8095/STAR.SPORTS2.HD/index.m3u8
-- Star Sports 2 HD — Backup — http://tvsen5.aynascope.net/cXPB2LKkErN9/index.m3u8
+- Star Sports 2 — Backup — http://198.195.239.50:8095/STAR.SPORTS2.HD/index.m3u8
+- Star Sports 2 — Backup — http://tvsen5.aynascope.net/cXPB2LKkErN9/index.m3u8
 ### custom.zeebanglacinema (2 streams)
 - Zee Bangla Cinema — Backup — http://198.195.239.50:8095/ZEE.BANGLA.CINEMA/index.m3u8
 - Zee Bangla Cinema — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/master2.m3u8
@@ -346,8 +346,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - G TV — Backup — http://198.195.239.50:8095/GAZI.TV.HD/index.m3u8
 - G TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/g-tv-1/index.m3u8
 ### getfactual.us (2 streams)
-- Get.factual — Documentary & Wildlife — https://d1nhni5l2n8hjt.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rzh07me7cf8x7/gf.m3u8
-- Get.factual — Backup — https://d1nhni5l2n8hjt.cloudfront.net/gf.m3u8
+- Get factual — Documentary & Wildlife — https://d1nhni5l2n8hjt.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rzh07me7cf8x7/gf.m3u8
+- Get factual — Backup — https://d1nhni5l2n8hjt.cloudfront.net/gf.m3u8
 ### globaltv.bd (4 streams)
 - Global TV — Bangladesh — http://116.204.149.16/globaltv/tracks-v1a1/mono.m3u8
 - Global TV — Backup — https://stream.ottplus.live/live/global_tv_abr/index.m3u8
@@ -491,7 +491,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### nationalgeographicwild.in@sd (3 streams)
 - Nat Geo Wild — Documentary & Wildlife — http://202.70.146.135:8000/play/a05j/index.m3u8
 - Nat Geo Wild — Backup — http://198.195.239.50:8095/NATGEO.WILD.HD/index.m3u8
-- National Geographic Wild (India) (576p) — Backup — http://51.75.127.199:3141/natgeowild/index.m3u8
+- National Geographic Wild (India) — Backup — http://51.75.127.199:3141/natgeowild/index.m3u8
 ### news24.bd (4 streams)
 - News 24 — Bangladesh — https://tvsen6.aynaott.com/cdgr3tw6WoG7JyRnLbi0/index.m3u8
 - News 24 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/news-24-1/index.m3u8
@@ -637,11 +637,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Star Jalsha — Backup — http://198.195.239.50:8095/STAR.JALSHA.HD/index.m3u8
 - Star Jalsha — New Backup — http://51.75.127.199:3141/starjalsha/index.m3u8
 ### star.jalsha.movies.in (5 streams)
-- Jalsha Movies HD — Indian Bangla — http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8
-- Jalsha Movies HD — Backup — http://103.151.60.162:2122/play/a00x/index.m3u8
-- Jalsha Movies HD — Backup — http://198.195.239.50:8095/jalshaMovies/index.m3u8
-- Jalsha Movies HD — Backup — http://198.195.239.50:8095/JALSHA.MOVIES.HD/index.m3u8
-- Jalsha Movies HD — Backup — http://51.75.127.199:3141/jalshamovies/index.m3u8
+- Jalsha Movies — Indian Bangla — http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8
+- Jalsha Movies — Backup — http://103.151.60.162:2122/play/a00x/index.m3u8
+- Jalsha Movies — Backup — http://198.195.239.50:8095/jalshaMovies/index.m3u8
+- Jalsha Movies — Backup — http://198.195.239.50:8095/JALSHA.MOVIES.HD/index.m3u8
+- Jalsha Movies — Backup — http://51.75.127.199:3141/jalshamovies/index.m3u8
 ### stargold.in@hd (3 streams)
 - Star Gold — Indian Movies — http://livetv.akr4m.com:8080/bdtv/restrem/45.m3u8
 - Star Gold — Backup — http://198.195.239.50:8095/STAR.GOLD.HD/index.m3u8
@@ -668,9 +668,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Studio Yuva — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3STUDIOYUVA/index.m3u8
 - Studio Yuva — Backup — https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=[REDACTED]
 ### sunbangla.in@sd (3 streams)
-- SUN BANGLA — Indian Bangla — https://iptvlive.ahmed-bd-org.workers.dev/sun-bangla-1/index.m3u8
-- SUN BANGLA — Backup — http://27.124.71.27/Sun_Bangla/index.m3u8
-- SUN BANGLA — Backup — http://198.195.239.50:8095/SUN.BANGLA.HD/index.m3u8
+- Sun Bangla — Indian Bangla — https://iptvlive.ahmed-bd-org.workers.dev/sun-bangla-1/index.m3u8
+- Sun Bangla — Backup — http://27.124.71.27/Sun_Bangla/index.m3u8
+- Sun Bangla — Backup — http://198.195.239.50:8095/SUN.BANGLA.HD/index.m3u8
 ### tlc.in@hd (2 streams)
 - TLC — Documentary & Wildlife — http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/36.ts
 - TLC — Backup — http://198.195.239.50:8095/TLC.HD/index.m3u8
@@ -790,7 +790,8 @@ None.
 
 ## Same-Name / Different-ID Collisions
 
-None.
+- **star gold 2** → custom.stargold2, stargold2.in@sd
+- **zee bangla** → local.072484feec7, zeebangla.in@hd
 
 ## Logo Integrity
 
