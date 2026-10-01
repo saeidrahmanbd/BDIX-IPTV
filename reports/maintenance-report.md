@@ -1,20 +1,21 @@
 # IPTV Maintenance Report
 
-_Generated: **2026-10-01 06:15 UTC**_
+_Generated: **2026-10-01 06:17 UTC**_
 
 ## Run Summary
 
 | Item | Result |
 |---|---:|
-| 🆕 New channels discovered **this run** | **20** |
-| 🔁 New backups discovered **this run** | **30** |
+| 🆕 New channels discovered **this run** | **0** |
+| 🔁 New backups discovered **this run** | **0** |
 | 🚫 Rejected candidates | **713** |
 | 📺 Current playlist streams | **1033** |
 | 📡 Current channel IDs | **642** |
 | 🔁 Current backup streams | **420** |
 | 🖼️ Logo exceptions | **0** |
 | 📅 EPG coverage | **60%** |
-| ⚠️ Audit issues | **5** |
+| ⚠️ Audit blocking issues | **0** |
+| ℹ️ Identity warnings | **5** |
 
 ## New Channels This Run
 

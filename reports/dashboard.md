@@ -1,6 +1,6 @@
 # Project Dashboard
 
-_Last generated: **2026-10-01 06:15 UTC**_
+_Last generated: **2026-10-01 06:17 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -13,7 +13,7 @@ _Last generated: **2026-10-01 06:15 UTC**_
 | 🆕 New Backup Streams | **30** |
 | 🖼️ Local Logos | **100.0%** |
 | 📅 EPG Coverage | **60%** |
-| ⚠️ Audit Issues | **5** |
+| ⚠️ Audit Issues | **0** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -28,7 +28,7 @@ _Last generated: **2026-10-01 06:15 UTC**_
 | Source | Last generated |
 |---|---|
 | Playlist audit | **not available** |
-| EPG coverage | **2026-10-01T06:15:41+00:00** |
+| EPG coverage | **2026-10-01T06:17:54+00:00** |
 
 ## Maintenance History
 - Recorded runs retained: **0**
