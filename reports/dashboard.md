@@ -1,6 +1,6 @@
 # Project Dashboard
 
-_Last generated: **2026-10-01 06:19 UTC**_
+_Last generated: **2026-10-01 06:21 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -29,10 +29,10 @@ _Last generated: **2026-10-01 06:19 UTC**_
 | Source | Last generated |
 |---|---|
 | Playlist audit | **not available** |
-| EPG coverage | **2026-10-01T06:19:11+00:00** |
+| EPG coverage | **2026-10-01T06:21:27+00:00** |
 
 ## Maintenance History
-- Recorded runs retained: **0**
+- Recorded runs retained: **1**
 - No historical maintenance records yet.
 
 Historical records are retained in `reports/maintenance-history.json` (latest 180 runs).
