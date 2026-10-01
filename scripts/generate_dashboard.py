@@ -229,7 +229,7 @@ _Last generated: **{now}**_
 | 🔁 Backup Streams | **{backup}** |\n| 🆕 New Channels | **{new_channels}** |\n| 🆕 New Backup Streams | **{new_backups}** |
 | 🖼️ Local Logos | **{logos}%** |
 | 📅 EPG Coverage | **{epg_pct}%** |
-| ⚠️ Audit Issues | **{issues}** |
+| ⚠️ Audit Blocking Issues | **{issues}** |\n| ℹ️ Identity Warnings | **{warnings}** |
 
 ## Quality Controls
 - Duplicate stream URLs: **{a.get("Duplicate stream URLs",0)}**
