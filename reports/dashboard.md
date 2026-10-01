@@ -1,15 +1,15 @@
 # Project Dashboard
 
-_Last generated: **2026-10-01 11:23 UTC**_
+_Last generated: **2026-10-01 11:27 UTC**_
 
 | Metric | Current |
 |---|---:|
-| Streams | **1025** |
+| Streams | **987** |
 | Active Channel Identities | **582** |
 | Active Primary Streams | **583** |
 | Bangladesh | **55** |
 | India | **257** |
-| Backup Streams | **412** |
+| Backup Streams | **374** |
 | New Channels | **15** |
 | New Backup Streams | **15** |
 | Local Logos | **100.0%** |
@@ -21,7 +21,7 @@ _Last generated: **2026-10-01 11:23 UTC**_
 | Near-Duplicate URL Families | **0** |
 | Audit Blocking Issues | **1** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-01T11:23:24+00:00** |
+| Pre-Publish Gate Generated | **2026-10-01T11:27:00+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -52,8 +52,8 @@ _Last generated: **2026-10-01 11:23 UTC**_
 |---|---|
 | Playlist audit | **2026-10-01T11:22:32.621407+00:00** |
 | EPG coverage | **2026-10-01T11:22:32+00:00** |
-| Stream health | **2026-10-01T11:23:24+00:00** |
-| Pre-publish gate | **2026-10-01T11:23:24+00:00** |
+| Stream health | **2026-10-01T11:27:00+00:00** |
+| Pre-publish gate | **2026-10-01T11:27:00+00:00** |
 
 ## Maintenance History
 - Records retained: **18**
