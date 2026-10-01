@@ -99,6 +99,7 @@ def main():
     failure_classes=Counter(
         ("HTTP 401/403 (auth)" if r["status"] in {401,403} else
          "HTTP 404 (not found)" if r["status"]==404 else
+         "HTTP 4xx (other)" if 400 <= r["status"] < 500 else
          "HTTP 5xx (server)" if 500 <= r["status"] < 600 else
          r["error"] or "Other")
         for r in results if not r["ok"]
