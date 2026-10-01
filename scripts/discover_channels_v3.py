@@ -107,7 +107,19 @@ def main():
             planned_names.add(name_key)
             if cid: planned_ids.add(cid)
         seen.add(pair)
-    new=new[:40]; backups=backups[:80]
+    # Final URL de-duplication guard. Keep every existing stream untouched,
+    # and never allow a newly discovered URL to appear twice in the same run.
+    seen_urls=set(existing_urls)
+    unique_new=[]; unique_backups=[]
+    for item in new:
+        u=item[3].strip().lower()
+        if u not in seen_urls:
+            unique_new.append(item); seen_urls.add(u)
+    for item in backups:
+        u=item[3].strip().lower()
+        if u not in seen_urls:
+            unique_backups.append(item); seen_urls.add(u)
+    new=unique_new[:40]; backups=unique_backups[:80]
     lines=original.replace("\r","").splitlines(); add=[]
     for c,a,n,u in new:
         z=ext(a,n,"New Channels")
@@ -133,6 +145,6 @@ def main():
         P.write_text("\n".join(lines)+"\n",encoding="utf-8")
     R.parent.mkdir(parents=True,exist_ok=True)
     R.write_text("# Channel Discovery\n\n"+f"- New channels: **{len(new)}**\n- New backups: **{len(backups)}**\n- Rejected: **{rejected}**\n\n## New Channels\n\n"+"\n".join(f"- {n} ({c}) — {u}" for c,a,n,u in new)+"\n\n## New Backups\n\n"+"\n".join(f"- {n} ({c}) — {u}" for c,a,n,u in backups)+"\n",encoding="utf-8")
-    print(f"Discovery: {len(new)} new channels, {len(backups)} new backups, {rejected} rejected.")
+    print(f"Discovery: {len(new)} new channels, {len(backups)} new backups, {rejected} rejected; duplicate URLs blocked by final guard.")
 
 if __name__=="__main__": main()
