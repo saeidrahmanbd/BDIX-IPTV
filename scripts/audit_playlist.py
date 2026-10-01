@@ -165,7 +165,7 @@ for cid, items in sorted(by_id.items()):
     if len(names) > 1 or len(groups) > 1 or len(countries) > 1:
         metadata_conflicts.append((cid, names, groups, countries))
 
-name_collisions = {k:v for k,v in by_name.items() if len({identity(x[0]) for x in v}) > 1}
+name_collisions = {k:v for k,v in by_name.items() if len({identity_root(identity(x[0])) for x in v}) > 1}
 
 primary_by_root = defaultdict(list)
 primary_by_name = defaultdict(list)
