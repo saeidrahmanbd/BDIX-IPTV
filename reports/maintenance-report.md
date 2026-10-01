@@ -1,63 +1,41 @@
 # IPTV Maintenance Report
 
-_Generated: **2026-10-01 08:12 UTC**_
+Generated from the current main playlist audit: **2026-10-01 09:12 UTC**
 
-## Run Summary
+## Current Reconciliation
 
 | Item | Result |
 |---|---:|
-| 🆕 New channels discovered **this run** | **0** |
-| 🔁 New backups discovered **this run** | **0** |
-| 🚫 Rejected candidates | **711** |
-| 📺 Current playlist streams | **1033** |
-| 📡 Current channel IDs | **641** |
-| 🔁 Current backup streams | **420** |
-| 🖼️ Logo exceptions | **0** |
-| 📅 EPG coverage | **60%** |
-| ⚠️ Audit blocking issues | **0** |
-| ℹ️ Identity warnings | **5** |
+| Current playlist entries | **1,000** |
+| Active primary entries | **587** |
+| Backup entries | **413** |
+| Unique channel IDs | **624** |
+| Duplicate stream URLs | **0** |
+| Duplicate primary identities | **5** |
+| Missing primary channel numbers | **31** |
+| External/missing logos | **0** |
+| Signed/tokenized URLs | **15** |
+| Same-name / different-ID warnings | **6** |
 
-## New Channels This Run
+## Findings
 
-None.
+The previous generated dashboard was stale relative to the current playlist. The current playlist is 33 entries smaller than the previous reported 1,033-entry snapshot.
 
-## New Backups This Run
+The playlist is structurally incomplete because five active identity collisions remain and 31 active entries have no tvg-chno.
 
-None.
+No stream URL was removed by this audit.
 
-## Metadata Repairs This Run
+## EPG Reconciliation
 
-- Entries processed: **1033**
-- Deterministic IDs generated: **0**
-- channel-id/tvg-id identities synchronized: **0**
-- tvg-name values normalized: **0**
-- Display names normalized: **0**
-- Backup channel numbers removed: **0**
-- Missing primary channel numbers added: **0**
-- Duplicate/invalid primary channel numbers repaired: **0**
+The current playlist contains **259 Indian-category entries**, while the existing EPG report was generated against **244**. Its mapping/coverage figures therefore need a fresh EPG run.
 
-## Current Audit Status
+## Stream Health
 
-- Duplicate stream URLs: **0**
-- Metadata conflicts: **0**
-- Duplicate primary identities: **0**
-- Primary channel-number collisions: **0**
-- Cross-country backup collisions: **0**
-- Logo exceptions: **0**
-- EPG channels without mapping: **86**
+No reachability result is claimed here. The existing audit is metadata/structure-focused and does not perform live stream probing.
 
-## Current Playlist Totals
+## Recommended Next Maintenance Actions
 
-- Bangladesh: **54**
-- India: **244**
-- New Channels category: **20**
-- New Backup category: **30**
-- Backup category: **420**
-
-## Detailed Reports
-
-- `reports/channel-discovery.md` — discovery details.
-- `reports/playlist-audit.md` — full playlist audit.
-- `reports/epg-coverage.md` — EPG details.
-- `reports/dashboard.md` — current dashboard.
-- `reports/maintenance-history.json` — historical run data.
+1. Resolve the 5 duplicate primary identities with controlled alternate IDs where they are genuinely separate stream records.
+2. Assign unique tvg-chno values to the 31 missing primary entries.
+3. Regenerate EPG coverage against the current playlist.
+4. Add a separate health-check stage; do not automatically delete Backup entries from a single failed probe.
