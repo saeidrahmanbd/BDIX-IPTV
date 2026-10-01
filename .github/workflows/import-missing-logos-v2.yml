@@ -1,0 +1,58 @@
+name: Import missing logos v2
+on:
+  push:
+    paths:
+      - ".github/workflows/import-missing-logos-v2.yml"
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import logos
+        shell: bash
+        run: |
+          mkdir -p logos
+          fetch() {
+            n="$1"; u="$2"
+            curl -L --fail --retry 3 --connect-timeout 20 -A "Mozilla/5.0" "$u" -o "logos/$n" || echo "WARN $n"
+          }
+          fetch "and-pictures.png" "https://www.tvlogo.org/india/and-pictures-in.png"
+          fetch "and-xplor-hd.svg" "https://static.wikia.nocookie.net/logopedia/images/1/1f/%26xplor_HD_%282025%29.svg/revision/latest?cb=20250608131144"
+          fetch "and-prive-hd.png" "https://www.tvlogo.org/india/and-prive-hd-in.png"
+          fetch "zing.png" "https://www.tvlogo.org/india/zing-in.png"
+          fetch "star-bharat.png" "https://www.tvlogo.org/india/star-bharat-in.png"
+          fetch "etv-bal-bharat.png" "https://www.tvlogo.org/india/etv-bal-bharat-in.png"
+          fetch "hungama.png" "https://www.tvlogo.org/india/hungama-in.png"
+          fetch "nick.png" "https://www.tvlogo.org/india/nick-in.png"
+          fetch "super-hungama.png" "https://www.tvlogo.org/india/super-hungama-in.png"
+          fetch "sony-sports-ten-4.png" "https://www.tvlogo.org/india/sony-ten-4-in.png"
+          fetch "sony-sports-ten-5.png" "https://www.tvlogo.org/india/sony-ten-5-in.png"
+          fetch "star-sports-1.png" "https://www.tvlogo.org/india/star-sports-1-in.png"
+          fetch "star-sports-3.png" "https://www.tvlogo.org/india/star-sports-3-in.png"
+          fetch "star-sports-select-1.png" "https://www.tvlogo.org/india/star-sports-select-1-in.png"
+          fetch "star-sports-select-2.png" "https://www.tvlogo.org/india/star-sports-select-2-in.png"
+          fetch "zee-bangla-cinema.png" "https://www.tvlogo.org/india/zee-bangla-cinema-in.png"
+          fetch "zoom-music.png" "https://www.tvlogo.org/india/zoom-in.png"
+          fetch "axn.svg" "https://upload.wikimedia.org/wikipedia/commons/a/a0/AXN_logo.svg"
+          fetch "al-jazeera.png" "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Aljazeera_eng.svg/512px-Aljazeera_eng.svg.png"
+          fetch "dw-news.jpg" "https://deultimominuto.net/wp-content/uploads/2022/03/DW-LOGO.jpg"
+          fetch "bbc-news.png" "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png"
+          fetch "geo-news.png" "http://103.176.90.118/picons/logos/logos/geonews.png"
+          fetch "lotus-tv.png" "https://m3u-editor.com/storage/channel-logos/18176dc0-be36-11ed-9759-a96115e43b58/4824764/861295811.png"
+          fetch "mn-plus.jpeg" "https://d229kpbsb5jevy.cloudfront.net/timesplay/content/common/logos/channel/logos/leazcc.jpeg"
+          fetch "romedy-now.jpeg" "https://d229kpbsb5jevy.cloudfront.net/timesplay/content/common/logos/channel/logos/nchght.jpeg"
+          fetch "ptv-sports.png" "https://upload.wikimedia.org/wikipedia/en/e/e4/PTV_Sports.png"
+          fetch "stingray-music.svg" "https://upload.wikimedia.org/wikipedia/commons/7/79/Stingray_Music_logo.svg"
+          printf '%s
+' '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180"><rect width="600" height="180" rx="30" fill="#222"/><text x="300" y="112" text-anchor="middle" font-family="Arial" font-size="82" font-weight="700" fill="white">Pishow</text></svg>' > logos/pishow.svg
+          cp logos/raj-digital-plus.png logos/raj-music-telugu.png
+          cp logos/stingray-music.svg logos/stingray-stream-101.svg
+          cp logos/stingray-music.svg logos/stingray-stream-137.svg
+          cp logos/pishow.svg logos/pishow-stream-10007.svg
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add logos
+          git commit -m "Import missing channel logos" || exit 0
+          git push
