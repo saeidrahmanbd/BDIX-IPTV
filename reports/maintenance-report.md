@@ -1,6 +1,6 @@
 # IPTV Maintenance Report
 
-_Generated: **2026-10-01 07:46 UTC**_
+_Generated: **2026-10-01 08:11 UTC**_
 
 ## Run Summary
 
@@ -8,7 +8,7 @@ _Generated: **2026-10-01 07:46 UTC**_
 |---|---:|
 | 🆕 New channels discovered **this run** | **0** |
 | 🔁 New backups discovered **this run** | **0** |
-| 🚫 Rejected candidates | **713** |
+| 🚫 Rejected candidates | **711** |
 | 📺 Current playlist streams | **1033** |
 | 📡 Current channel IDs | **641** |
 | 🔁 Current backup streams | **420** |
