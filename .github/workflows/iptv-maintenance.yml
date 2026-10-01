@@ -104,27 +104,65 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add IPTV-Playlist.m3u logos/ reports/ assets/dashboard.svg xtream/worker.js
-          if git diff --cached --quiet; then
-            echo 'No maintenance changes.'
-            exit 0
-          fi
-          git commit -m 'Run IPTV playlist maintenance'
+
+          # Finalize from the latest remote main, not from the stale checkout.
+          # This avoids rebase conflicts in generated reports when a user edits
+          # the repository while maintenance is running.
           for attempt in 1 2 3; do
             git fetch origin main
-            if git rebase origin/main; then
-              python scripts/normalize_metadata.py
-              python scripts/migrate_external_logos_fixed.py
-              python scripts/epg_coverage.py
-              python scripts/sync_epg_worker_map.py
-              python scripts/audit_playlist.py
-              python scripts/generate_dashboard.py
-              git add IPTV-Playlist.m3u logos/ reports/ assets/dashboard.svg xtream/worker.js
-              git diff --cached --quiet || git commit --amend --no-edit
-              if git push origin HEAD:main; then exit 0; fi
-            else
-              git rebase --abort
+            git reset --hard origin/main
+            git clean -fd
+
+            python scripts/normalize_metadata.py
+            python scripts/discover_channels_v3.py
+            python scripts/normalize_metadata.py
+            python scripts/migrate_external_logos_fixed.py
+            python scripts/epg_coverage.py
+            python scripts/sync_epg_worker_map.py
+            python scripts/audit_playlist.py
+
+            python - <<'PY'
+          import json
+          from pathlib import Path
+          from datetime import datetime, timezone
+          report = Path('reports/playlist-audit.md').read_text(encoding='utf-8')
+          import re
+          def metric(text, label):
+              m = re.search(rf'- {re.escape(label)}: \*\*(\d+)\*\*', text)
+              return int(m.group(1)) if m else None
+          record = {
+              'timestamp_utc': datetime.now(timezone.utc).isoformat(),
+              'entries': metric(report, 'Playlist entries'),
+              'unique_channel_ids': metric(report, 'Unique channel IDs'),
+              'duplicate_ids': metric(report, 'IDs with multiple streams'),
+              'duplicate_urls': metric(report, 'Duplicate stream URLs'),
+              'metadata_conflicts': metric(report, 'Metadata conflicts'),
+              'logo_exceptions': metric(report, 'Logo exceptions'),
+              'primary_number_collisions': metric(report, 'Primary channel-number collisions'),
+              'protected_primary_changes': metric(report, 'Protected primary-entry changes'),
+          }
+          path = Path('reports/maintenance-history.json')
+          try:
+              history = json.loads(path.read_text(encoding='utf-8')) if path.exists() else []
+              if not isinstance(history, list): history = []
+          except Exception:
+              history = []
+          history.append(record)
+          path.parent.mkdir(parents=True, exist_ok=True)
+          path.write_text(json.dumps(history[-180:], indent=2) + '\n', encoding='utf-8')
+          PY
+
+            python scripts/generate_dashboard.py
+            git add IPTV-Playlist.m3u logos/ reports/ assets/dashboard.svg xtream/worker.js
+            if git diff --cached --quiet; then
+              echo 'No maintenance changes.'
+              exit 0
+            fi
+            git commit -m 'Run IPTV playlist maintenance'
+            if git push origin HEAD:main; then
+              exit 0
             fi
             sleep 3
           done
+          echo 'Maintenance could not publish after 3 attempts.'
           exit 1
