@@ -4,7 +4,8 @@ import concurrent.futures, json, re, time
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
+import socket, ssl
 from urllib.request import Request, urlopen
 from urllib.parse import urlsplit, urlunsplit, parse_qsl
 
@@ -46,8 +47,25 @@ def probe(item):
         return {"ok":ok,"status":status,"latency_ms":latency,"bytes":len(data),"content_type":ctype,"error":""}
     except HTTPError as e:
         return {"ok":False,"status":e.code,"latency_ms":round((time.monotonic()-started)*1000),"bytes":0,"content_type":"","error":f"HTTP {e.code}"}
+    except URLError as e:
+        reason=e.reason
+        if isinstance(reason, socket.gaierror):
+            kind="DNS"
+        elif isinstance(reason, ssl.SSLError):
+            kind="TLS"
+        elif isinstance(reason, (TimeoutError, socket.timeout)):
+            kind="Timeout"
+        elif isinstance(reason, (ConnectionError, ConnectionResetError, ConnectionRefusedError)):
+            kind="Connection"
+        else:
+            kind="Network"
+        return {"ok":False,"status":0,"latency_ms":round((time.monotonic()-started)*1000),"bytes":0,"content_type":"","error":kind}
+    except (TimeoutError, socket.timeout):
+        return {"ok":False,"status":0,"latency_ms":round((time.monotonic()-started)*1000),"bytes":0,"content_type":"","error":"Timeout"}
+    except ssl.SSLError:
+        return {"ok":False,"status":0,"latency_ms":round((time.monotonic()-started)*1000),"bytes":0,"content_type":"","error":"TLS"}
     except Exception as e:
-        return {"ok":False,"status":0,"latency_ms":round((time.monotonic()-started)*1000),"bytes":0,"content_type":"","error":type(e).__name__}
+        return {"ok":False,"status":0,"latency_ms":round((time.monotonic()-started)*1000),"bytes":0,"content_type":"","error":"Other"}
 
 def main():
     rows=parse()
@@ -78,6 +96,13 @@ def main():
     HISTORY.parent.mkdir(parents=True,exist_ok=True)
     HISTORY.write_text(json.dumps({r["url"]:previous[r["url"]] for r in results},indent=2)+"\n",encoding="utf-8")
     ok=sum(r["ok"] for r in results); fail=len(results)-ok
+    failure_classes=Counter(
+        ("HTTP 401/403 (auth)" if r["status"] in {401,403} else
+         "HTTP 404 (not found)" if r["status"]==404 else
+         "HTTP 5xx (server)" if 500 <= r["status"] < 600 else
+         r["error"] or "Other")
+        for r in results if not r["ok"]
+    )
     persistent=[r for r in results if r["consecutive_failures"]>=3]
     intermittent=[r for r in results if not r["ok"] and r["consecutive_failures"]<3]
     groups=Counter(r["group"] for r in results)
@@ -89,6 +114,8 @@ def main():
            "## Summary","",f"- Streams tested: **{len(results)}**",f"- Reachable: **{ok}**",f"- Failed this check: **{fail}**",
            f"- Persistent failures (3+ consecutive): **{len(persistent)}**",f"- Intermittent failures: **{len(intermittent)}**",
            f"- Primary tested: **{sum(1 for r in results if r['group'] != 'Backup')}**",f"- Backup tested: **{groups.get('Backup',0)}**","",
+           "## Failure Classification","",
+           *[f"- {k}: **{v}**" for k,v in sorted(failure_classes.items())],
            "## Persistent Failures",""]
     if persistent:
         lines += [f"- **{r['name']}** — {r['group']} — consecutive failures: **{r['consecutive_failures']}** — {r['error'] or r['status']}" for r in sorted(persistent,key=lambda x:(x["group"],x["name"]))]
