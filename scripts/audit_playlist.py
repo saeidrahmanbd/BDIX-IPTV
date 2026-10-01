@@ -70,9 +70,16 @@ def logo_issue(info):
         return "missing"
     if logo.startswith(RAW_BASE):
         fn = logo[len(RAW_BASE):].split("?", 1)[0]
-        if not fn.lower().endswith(".png"):
-            return "non-png"
         path = LOGOS / fn
+        if path.suffix.lower() == ".svg":
+            try:
+                if "<svg" not in path.read_text(encoding="utf-8", errors="ignore")[:10000].lower():
+                    return "corrupt-svg"
+            except Exception:
+                return "corrupt-svg"
+            return ""
+        if path.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp", ".avif"}:
+            return "unsupported-format"
         if not path.is_file():
             return "broken-local"
         if Image is None:
@@ -182,7 +189,7 @@ for info, url in entries:
         logos_by_id[cid].add(logo)
     issue = logo_issue(info)
     logo_counts["healthy" if not issue or issue == "repository-reference" else issue] += 1
-    if issue in {"missing", "broken-local", "external", "non-png", "invalid-dimensions", "corrupt-image", "unvalidated-image", "other"}:
+    if issue in {"missing", "broken-local", "external", "unsupported-format", "invalid-dimensions", "corrupt-image", "unvalidated-image", "other"}:
         logo_exceptions.append((display_name(info), identity(info), issue, attrs(info).get("tvg-logo","")))
 
 protected_changes = []
@@ -224,7 +231,8 @@ try:
 
     for key, count in old_primary.items():
         cid, url = key
-        if new_primary[key] + new_not_playing[key] >= count:
+        direct = new_primary[key]
+        if direct + new_not_playing[key] >= count:
             continue
         preserved = 0
         for new_cid, new_count in new_primary_by_url.get(url, []):
@@ -342,12 +350,18 @@ def run_change_guard():
     old_keys = {key(i,u) for i,u in old_entries}
     new_keys = {key(i,u) for i,u in entries}
     added, removed = new_keys-old_keys, old_keys-new_keys
-    total = max(len(old_keys), len(new_keys), 1)
-    max_changes = 150  # discovery is capped at 40 new channels + 80 new backups per run
-    if len(added)+len(removed) > max_changes:
+    review_urls = {u.strip().lower() for i,u in entries if attrs(i).get("group-title","").strip() in {"New Channels", "New Backup"} and u}
+    review_added = {k for k in added if k[1].strip().lower() in review_urls}
+    active_added = added - review_added
+    max_changes = 150
+    max_review_additions = 120
+    if len(review_added) > max_review_additions:
+        raise SystemExit(f"Change Guard blocked maintenance: {len(review_added)} review-queue additions exceed the {max_review_additions}-entry limit.")
+    if len(active_added)+len(removed) > max_changes:
         raise SystemExit(
-            f"Change Guard blocked maintenance: {len(added)} additions + "
-            f"{len(removed)} removals exceed the {max_changes}-entry safety limit."
+            f"Change Guard blocked maintenance: {len(active_added)} active additions + "
+            f"{len(removed)} removals exceed the {max_changes}-entry safety limit; "
+            f"{len(review_added)} review-queue additions are handled separately."
         )
     old_primary = Counter(
         key(i,u) for i,u in old_entries
@@ -436,6 +450,19 @@ missing_channel_id = [
     (info, url) for info, url in entries
     if not attrs(info).get("channel-id", "").strip()
 ]
+missing_tvg_id = [
+    (info, url) for info, url in entries
+    if not attrs(info).get("tvg-id", "").strip()
+]
+missing_logo = [
+    (info, url) for info, url in entries
+    if not attrs(info).get("tvg-logo", "").strip()
+]
+missing_primary_chno = [
+    (info, url) for info, url in entries
+    if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS
+    and not attrs(info).get("tvg-chno", "").strip()
+]
 stray_name_markers = [
     (info, url) for info, url in entries
     if re.search(r"[ⓎⓈᴴᴰ🇹🇷]", info, re.UNICODE)
@@ -447,6 +474,14 @@ if missing_tvg_name:
     raise SystemExit("All playlist entries must carry tvg-name.")
 if missing_channel_id:
     raise SystemExit("All playlist entries must carry channel-id.")
+if missing_tvg_id:
+    raise SystemExit("All playlist entries must carry tvg-id.")
+if missing_logo:
+    raise SystemExit("All playlist entries must carry tvg-logo.")
+if missing_primary_chno:
+    raise SystemExit("All active primary entries must carry tvg-chno.")
+if logo_exceptions:
+    raise SystemExit("Logo integrity failures detected.")
 if stray_name_markers:
     raise SystemExit("Stray Unicode channel-name markers detected.")
 
