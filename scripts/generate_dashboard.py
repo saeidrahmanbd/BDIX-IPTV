@@ -38,7 +38,7 @@ def audit_stats():
     labels=["Playlist entries","Unique channel IDs","Duplicate stream URLs","Metadata conflicts","Signed/tokenized stream URLs",
             "Same-name / different-ID collisions","Cross-country backup collisions",
             "IDs with multiple logo references","Protected primary-entry changes","Logo exceptions",
-            "Duplicate primary identities","Primary channel-number collisions"]
+            "Duplicate primary identities","Primary channel-number collisions","Primary entries missing channel numbers"]
     return {k:num(s,k) for k in labels}
 
 def epg_stats():
@@ -207,7 +207,7 @@ def main():
     epg_missing=g.get("No mapping",0)
     issues=sum(a.get(k,0) for k in [
         "Duplicate stream URLs","Metadata conflicts","Cross-country backup collisions","Protected primary-entry changes","Logo exceptions",
-        "Duplicate primary identities","Primary channel-number collisions"
+        "Duplicate primary identities","Primary channel-number collisions","Primary entries missing channel numbers"
     ])
     warnings=a.get("Same-name / different-ID collisions",0)
     write_maintenance_report(d,a,g,groups,datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"))
