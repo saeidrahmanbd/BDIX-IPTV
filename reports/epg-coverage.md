@@ -1,15 +1,15 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-01T09:12:16+00:00**
+Generated: **2026-10-01T09:15:50+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **258**
+- Active Indian channels audited: **259**
 - Channels with an EPG mapping: **171**
-- Current/future programme coverage: **158/258 (61.2%)**
-- No guide mapping found: **87**
+- Current/future programme coverage: **159/259 (61.4%)**
+- No guide mapping found: **88**
 
 ## Source Status
 
@@ -32,7 +32,6 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Movies | Goldmines Movies | GoldminesMovies.in | Goldmines.Movies.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Nazara | Nazara.in@SD | NAZARA.in | MAPPED_ID_ONLY |
 | Indian Entertainment | One Paschima | OnePaschima.in@SD | One.Paschima.in | MAPPED_ID_ONLY |
-| Indian Movies | Sony Entertainment TV | SonyEntertainmentTelevision.in@SD | Sony.Entertainment.Television.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Sony Entertainment TV | SonyEntertainmentTelevision.in@SD | Sony.Entertainment.Television.in | MAPPED_ID_ONLY |
 | Indian Bangla | DD Tripura | DDTripura.in@SD | DDTripura.in@SD | MAPPED_NOT_CURRENTLY_FOUND |
 | Indian Music | 7X Punjabi | custom.7x.punjabi | - | NO_GUIDE_HIT |
@@ -42,7 +41,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Bangla | Amar Bangla Digital | custom.amar.bangla.digital | - | NO_GUIDE_HIT |
 | Indian Movies | B4U Bhojpuri Plus (1080p) | B4UBhojpuri.in@Plus | - | NO_GUIDE_HIT |
 | Indian Bangla | Bangla Plus | BanglaPlus.in | - | NO_GUIDE_HIT |
-| Indian Bangla | Bengali Beats | custom.bengali.beats | - | NO_GUIDE_HIT |
+| Indian Bangla | Bengali Beats | custom.bengali.beats@ALT1 | - | NO_GUIDE_HIT |
 | Indian Movies | Bollywood Film | BollywoodFilm.ro | - | NO_GUIDE_HIT |
 | Indian Entertainment | C Malayalam TV | CMalayalamTV.ca@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Colors Cineplex [UK] | custom.colors.cineplex | - | NO_GUIDE_HIT |
@@ -106,6 +105,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Bangla | Sananda | SanandaTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | Shemaroo Josh | ShemarooJosh.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Shubh Cinema TV | ShubhCinemaTV.in | - | NO_GUIDE_HIT |
+| Indian Movies | Sony Entertainment TV | SonyEntertainmentTelevision.in@SD@ALT1 | - | NO_GUIDE_HIT |
 | Indian Entertainment | Sony KAL | SonyKALHindi.us | - | NO_GUIDE_HIT |
 | Indian Movies | Sony Max 2 [US] | custom.sony.max.2 | - | NO_GUIDE_HIT |
 | Indian Movies | South Movies | custom.south.movies | - | NO_GUIDE_HIT |

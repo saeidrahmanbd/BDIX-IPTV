@@ -1,21 +1,21 @@
 # Playlist Audit
-Generated: **2026-10-01T09:12:16.825666+00:00**
+Generated: **2026-10-01T09:15:50.989738+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
 - Playlist entries: **1025**
-- Unique channel IDs: **634**
-- IDs with multiple streams: **201**
+- Unique channel IDs: **637**
+- IDs with multiple streams: **202**
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **4**
-- Same-name / different-ID collisions: **4**
+- Metadata conflicts: **0**
+- Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **4**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **0**
-- Duplicate primary identities: **1**
+- Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Suspicious URL credentials/syntax: **0**
@@ -107,9 +107,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - B4U Movies — Backup — https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8
 - B4U Movies — Backup — https://drk6xq0vhn.gpcdn.net/live/b4u_movies_abr/index.m3u8
 - B4U Movies — Backup — https://cdn.pishow.tv/ott/live/419/master.m3u8
-### b4umusic.in@india (4 streams)
+### b4umusic.in@india@alt1 (3 streams)
 - B4U Music — Indian Movies — https://amg01408-amg01408c5-amgplt0747.playout.now3.amagi.tv/b4um001/playlist.m3u8
-- B4U Music — Indian Music — https://streams.tangotv.in/B4UMUSIC/ORIGIN/index.m3u8
 - B4U Music — Backup — https://drk6xq0vhn.gpcdn.net/live/b4u_music_abr/index.m3u8
 - B4U Music — Backup — https://cdn.pishow.tv/ott/live/415/master.m3u8
 ### babysharktv.us (2 streams)
@@ -195,14 +194,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Colors Bangla — Backup — https://catchup.yuppcdn.net/amazonv2/36/preview/colorsbanglahd/master/chunklist.m3u8
 - Colors Bangla — Backup — http://198.195.239.50:8095/COLORS.BANGLA.HD/index.m3u8
 - Colors Bangla — Backup — https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/2500.m3u8
-### colorsbanglacinema.in@sd (4 streams)
+### colorsbanglacinema.in@sd (3 streams)
 - Colors Bangla Cinema — Indian Bangla — http://livetv.akr4m.com:8080/bdtv/restrem/3.m3u8
-- Colors Bangla Cinema — Indian Movies — http://51.75.127.199:3141/colorsbanglacinema/index.m3u8
 - Colors Bangla Cinema — Backup — http://198.195.239.50:8095/colorsBanglaChinema/index.m3u8
 - Colors Bangla Cinema — Backup — http://198.195.239.50:8095/COLORS.BANGLA.CINEMA/index.m3u8
-### colorscineplex.in@sd (3 streams)
+### colorscineplex.in@sd (2 streams)
 - Colors Cineplex — Indian Movies — http://202.70.146.135:8000/play/a04n/index.m3u8
-- Colors Cineplex — Indian Movies — http://51.75.127.199:3141/colorscineplexhd/index.m3u8
 - Colors Cineplex — Backup — http://198.195.239.50:8095/COLORS.CINEPLEX.HD/index.m3u8
 ### custom.amar.bangla.digital (2 streams)
 - Amar Bangla Digital — Indian Bangla — http://115.187.41.216:8080/hls/amardigital/index.m3u8
@@ -213,9 +210,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - ATN News — Backup — https://iptvlive.ahmed-bd-org.workers.dev/atn-news-2/index.m3u8
 - ATN News — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/atn-news/index.m3u8
 - ATN News — Backup — http://198.195.239.50:8095/ATN.NEWS.HD/index.m3u8
-### custom.bengali.beats (2 streams)
-- Bengali Beats — Bangladesh — https://iptvlive.ahmed-bd-org.workers.dev/bengali-beats-1/index.m3u8
-- Bengali Beats — Indian Bangla — https://live20.bozztv.com/giatvplayout7/giatv-209587/tracks-v1a1/mono.ts.m3u8
 ### custom.channel.16 (2 streams)
 - Channel 16 — Bangladesh — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel16bd.stream/tracks-v1a1/mono.m3u8
 - Channel 16 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8
@@ -243,11 +237,17 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### custom.nature.time (2 streams)
 - Nature Time — Documentary & Wildlife — https://bamusa-naturetime-emea-eng-rakuten.amagi.tv/playlist.m3u8
 - Nature Time — Backup — https://amg00090-blueantllc-lovenature-au-samsungau-wggcn.amagi.tv/playlist/amg00090-blueantllc-lovenature-au-samsungau/playlist.m3u8
+### custom.sonyten2 (2 streams)
+- Sony Ten 2 — Backup — http://198.195.239.50:8095/SONY.SPORTS2.HD/index.m3u8
+- Sony Ten 2 — Backup — https://stream.ottplus.live/live/ten_2_hd_abr/live/ten_2_hd_720/index.m3u8
 ### custom.star.news (4 streams)
 - Star News — Bangladesh — https://iptvlive.ahmed-bd-org.workers.dev/star-news-1/index.m3u8
 - Star News — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/playlist.m3u8
 - Star News — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/tracks-v1a1/mono.m3u8
 - Star News — Backup — https://iptvlive.ahmed-bd-org.workers.dev/star-news-2/index.m3u8
+### custom.starsports2 (2 streams)
+- Star Sports 2 HD — Backup — http://198.195.239.50:8095/STAR.SPORTS2.HD/index.m3u8
+- Star Sports 2 HD — Backup — http://tvsen5.aynascope.net/cXPB2LKkErN9/index.m3u8
 ### custom.zeebanglacinema (2 streams)
 - Zee Bangla Cinema — Backup — http://198.195.239.50:8095/ZEE.BANGLA.CINEMA/index.m3u8
 - Zee Bangla Cinema — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/master2.m3u8
@@ -660,9 +660,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### sonybbcearth.in@sd (2 streams)
 - Sony BBC Earth — Documentary & Wildlife — https://amg00793-bbcstudios-amg00793c3-lg-us-2528.playouts.now.amagi.tv/playlist/amg00793-bbcstudios-bbcearta-lgus/playlist.m3u8
 - Sony BBC Earth — Backup — http://198.195.239.50:8095/SONY.BBC.EARTH.HD/index.m3u8
-### sonyentertainmenttelevision.in@sd (4 streams)
+### sonyentertainmenttelevision.in@sd@alt1 (3 streams)
 - Sony Entertainment TV — Indian Movies — http://198.195.239.50:8095/SONY.ENT.HD/index.m3u8
-- Sony Entertainment TV — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/sony_ent_sd_abr/index.m3u8
 - Sony Entertainment TV — Backup — https://drk6xq0vhn.gpcdn.net/live/sony_ent_hd_abr/index.m3u8
 - Sony Entertainment TV — Backup — http://38.96.178.205/SONYHD/index.m3u8
 ### sonymax.in@sd (4 streams)
@@ -819,7 +818,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-- **colorscineplex.in@sd** in **Indian Movies** — Colors Cineplex, Colors Cineplex
+None.
 
 ## Primary Channel-Number Collisions
 
@@ -853,10 +852,7 @@ None.
 
 ## Metadata Conflicts
 
-- **b4umusic.in@india** — names: b4u music; groups: Indian Movies, Indian Music; countries: , IN
-- **colorsbanglacinema.in@sd** — names: colors bangla cinema; groups: Indian Bangla, Indian Movies; countries: 
-- **custom.bengali.beats** — names: bengali beats; groups: Bangladesh, Indian Bangla; countries: 
-- **sonyentertainmenttelevision.in@sd** — names: sony entertainment tv; groups: Indian Entertainment, Indian Movies; countries: 
+None.
 
 ## Cross-Country Backup Collisions
 
@@ -864,10 +860,7 @@ None.
 
 ## Same-Name / Different-ID Collisions
 
-- **kappa tv** → kappatv.in@sd, kappatv.in@sd@alt1
-- **pop** → pop.uk, pop.uk@hd
-- **sony ten 2** → custom.sony.ten.2, custom.sonyten2
-- **star sports 2 hd** → custom.starsports2, starsports2.in@hd
+None.
 
 ## Logo Integrity
 
