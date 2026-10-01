@@ -202,11 +202,23 @@ def norm(s):
  s=re.sub(r"\[[^]]*\]|\([^)]*\)"," ",s)
  s=re.sub(r"\b(?:uhd|fhd|hd|sd|4k|1080p|720p|576p|480p|360p)\b"," ",s,flags=re.I)
  return re.sub(r"[^a-z0-9]+","",s.replace("&","and"))
-def clean(s): return re.sub(r"\s+"," ",re.sub(r"[._]+"," ",str(s or ""))).strip()
+def clean(s):
+ s=re.sub(r"\s+"," ",re.sub(r"[._]+"," ",str(s or ""))).strip()
+ s=re.sub(r"\s*\(\s*(?:\d{3,4}p|UHD|FHD|HD\+?|SD)\s*\)\s*$","",s,flags=re.I)
+ s=re.sub(r"\s+(?:\d{3,4}p|UHD|FHD|HD\+?|SD)\s*$","",s,flags=re.I)
+ return s.strip()
+CASE={"ATN BANGLA UK":"ATN Bangla UK","SUN BANGLA":"Sun Bangla"}
+def normalize_id(cid):
+ return re.sub(r"@SD(?=@ALT1$)","",str(cid or ""),flags=re.I)
 def set_attr(m,k,v):
  p=re.compile(rf'{re.escape(k)}="[^"]*"')
  return p.sub(f'{k}="{v}"',m,1) if p.search(m) else m.replace("#EXTINF:-1 ",f'#EXTINF:-1 {k}="{v}" ',1)
-lines=P.read_text(encoding="utf-8-sig").replace("\r","").splitlines(); rows=[]
+lines=P.read_text(encoding="utf-8-sig").replace("\r","").splitlines()
+lines=[l for l in lines if l.strip() and not l.startswith("#PLAYLIST-STUDIO-")]
+if lines and lines[0].startswith("#EXTM3U"):
+ mm=re.search(r'url-tvg="([^"]+)"',lines[0],re.I)
+ lines[0]=f'#EXTM3U url-tvg="{mm.group(1)}"' if mm else "#EXTM3U"
+rows=[]
 for i,l in enumerate(lines):
  if l.startswith("#EXTINF:"):
   a=attrs(l); _, display = split_extinf(l); rows.append({"i":i,"line":l,"a":a,"name":display.strip()})
@@ -233,22 +245,23 @@ stats={"numbers":0,"logos":0,"backups":0}
 for r in rows:
  a=r["a"]; g=a.get("group-title","").strip(); m,_ = split_extinf(r["line"]); display=r["name"]
  if g not in EXCLUDE:
-  name=a.get("tvg-name") or r["name"]; cid=a.get("tvg-id") or a.get("channel-id") or IDS.get(name) or "custom."+norm(name)
+  name=CASE.get(clean(a.get("tvg-name") or r["name"]),clean(a.get("tvg-name") or r["name"]))
+  cid=normalize_id(a.get("tvg-id") or a.get("channel-id") or IDS.get(name) or "custom."+norm(name))
   m=set_attr(m,"tvg-id",cid); m=set_attr(m,"channel-id",cid); m=set_attr(m,"tvg-name",name)
   if not a.get("tvg-logo") and LOGOS.get(name): m=set_attr(m,"tvg-logo",RAW+LOGOS[name]); stats["logos"]+=1
   if r["i"] in assign: m=set_attr(m,"tvg-chno",str(assign[r["i"]])); stats["numbers"]+=1
  else:
   key=norm(a.get("tvg-name") or r["name"]); pr=byname.get(key)
   if not pr and key=="jalshamovies": pr=byname.get(norm("Jalsha Movies HD"))
-  name=(pr["a"].get("tvg-name") or pr["name"]) if pr else clean(a.get("tvg-name") or r["name"])
+  name=CASE.get(clean((pr["a"].get("tvg-name") or pr["name"]) if pr else (a.get("tvg-name") or r["name"])),clean((pr["a"].get("tvg-name") or pr["name"]) if pr else (a.get("tvg-name") or r["name"])))
   if key=="natgeowild" and not pr: name="Nat Geo Wild"
   if key=="sonybbcearth" and not pr: name="Sony BBC Earth"
-  cid=(pr["a"].get("tvg-id") if pr else None) or IDS.get(name) or a.get("tvg-id") or "custom."+norm(name)
+  cid=normalize_id((pr["a"].get("tvg-id") if pr else None) or IDS.get(name) or a.get("tvg-id") or "custom."+norm(name))
   m=set_attr(m,"tvg-id",cid); m=set_attr(m,"channel-id",cid); m=set_attr(m,"tvg-name",name); display=name
   logo=(pr["a"].get("tvg-logo") if pr else None) or LOGOS.get(r["name"]) or LOGOS.get(name)
   if logo and not a.get("tvg-logo"): m=set_attr(m,"tvg-logo",logo if logo.startswith("http") else RAW+logo); stats["logos"]+=1
   m=re.sub(r'\s*tvg-chno="[^"]*"',"",m); stats["backups"]+=1
- lines[r["i"]]=f"{m},{display}"
+ lines[r["i"]]=f"{m},{name}"
 P.write_text("\n".join(lines)+"\n",encoding="utf-8")
 R.write_text("# Playlist Metadata Normalization\n\n"+f"- Entries processed: **{len(rows)}**\n- Primary channel numbers added: **{stats['numbers']}**\n- Logo references repaired: **{stats['logos']}**\n- Backup/review entries normalized: **{stats['backups']}**\n",encoding="utf-8")
 print(f"Normalization: entries={len(rows)} numbers={stats['numbers']} logos={stats['logos']} backup_entries={stats['backups']}")
