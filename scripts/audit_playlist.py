@@ -109,6 +109,30 @@ def logo_issue(info):
     return "other"
 
 entries = parse(PLAYLIST.read_text(encoding="utf-8-sig"))
+raw_lines = PLAYLIST.read_text(encoding="utf-8-sig").replace("\r","").splitlines()
+malformed_extinf = []
+for n, line in enumerate(raw_lines, 1):
+    if not line.startswith("#EXTINF:"):
+        continue
+    if line.count('"') % 2:
+        malformed_extinf.append((n, "unbalanced quotes"))
+        continue
+    in_quote = False
+    comma = None
+    for idx, ch in enumerate(line):
+        if ch == '"':
+            in_quote = not in_quote
+        elif ch == "," and not in_quote:
+            comma = idx
+            break
+    if comma is None or not line[comma+1:].strip():
+        malformed_extinf.append((n, "missing display name"))
+    j = n
+    while j < len(raw_lines) and not raw_lines[j].strip():
+        j += 1
+    if j >= len(raw_lines) or not raw_lines[j].strip().lower().startswith(("http://", "https://")):
+        malformed_extinf.append((n, "missing stream URL"))
+
 by_id = defaultdict(list)
 by_base = defaultdict(list)
 by_name = defaultdict(list)
@@ -281,6 +305,7 @@ lines = [
     f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**",
     f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**",
     f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**",
+    f"- Malformed EXTINF entries: **{len(malformed_extinf)}**",
     f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**",
     f"- Signed/tokenized stream URLs: **{len(signed_urls)}**",
     "",
@@ -306,6 +331,13 @@ lines += ["", "## Primary Channel-Number Collisions", ""]
 if primary_chno_collisions:
     for chno, items in sorted(primary_chno_collisions.items()):
         lines.append(f"- **{chno}** — " + ", ".join(display_name(x[0]) for x in items))
+else:
+    lines.append("None.")
+
+lines += ["", "## Malformed EXTINF Entries", ""]
+if malformed_extinf:
+    for line_no, reason in malformed_extinf:
+        lines.append(f"- line {line_no}: {reason}")
 else:
     lines.append("None.")
 
@@ -485,6 +517,8 @@ if primary_duplicate_ids:
     raise SystemExit("Duplicate primary identities detected; refusing automatic commit.")
 if primary_chno_collisions:
     raise SystemExit("Primary channel-number collisions detected; refusing automatic commit.")
+if malformed_extinf:
+    raise SystemExit("Malformed EXTINF entries detected; refusing automatic commit.")
 if suspicious_urls:
     raise SystemExit("Suspicious test credentials or malformed URL syntax detected; refusing automatic commit.")
 
