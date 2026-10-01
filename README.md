@@ -1,24 +1,109 @@
+<!-- BDIX-IPTV Banner -->
+<p align="center">
+  <img src="assets/Saeid%20Rahman.png" alt="BDIX-IPTV — Bangladesh & India IPTV Hub" width="100%">
+</p>
+
 # 📺 Saeid Rahman — BDIX IPTV Playlist
 
-A curated IPTV playlist focused on Bangladeshi, Indian and selected international channels, with local logos, backups, EPG mapping and automated quality controls.
+A curated IPTV playlist focused on **Bangladeshi channels, Indian channels, and selected international content** — organized for clean browsing, reliable streams, accurate metadata, and useful backups.
 
 ## 📂 Playlist
 
-[Open Main M3U Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)
+**[▶️ Open Main M3U Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)**
 
-## 📊 Automated quality system
+Compatible with **XCIPTV** and other M3U-compatible players.
 
-The repository now maintains:
+## 📥 Download Center
 
-- EPG identity mapping, source status and current/future programme coverage
-- Canonical channel identity indexing
-- Local logo integrity and recovery
-- Duplicate URL, metadata, identity and channel-number audits
-- Non-destructive stream health checks with persistent per-URL failure history
-- Maintenance history and a generated project dashboard
-- A pre-publish safety gate
+Everything visitors commonly need, in one place:
 
-## 🛡️ Protection rules
+- 📺 **[Main M3U Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)**
+- 🖥️ **[Playlist Studio](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest)** — latest Windows release
+- 🛜 **[Xtream Codes](xtream/README.md)** — Xtream Gateway / XCIPTV
+- 📄 **[EPG Coverage](reports/epg-coverage.md)** — EPG status and coverage
+- ⚙️ **[Sample Configuration](examples/sample-config.md)**
+- 📚 **[Documentation](docs/README.md)**
+
+**[→ Open the full Download Center](DOWNLOADS.md)**
+
+## 🖥️ Playlist Studio 3.0
+
+**Playlist Studio 3.0** is the Windows companion application for managing, editing, scanning, and playing IPTV playlists.
+
+### ✨ Highlights
+
+- M3U playlist editing and organization
+- Local M3U and M3U URL import
+- IPTV stream playback
+- Xtream Codes support
+- Stalker Portal / MAC support
+- Stream scanning and verification
+- EPG and channel-logo management
+- Channel metadata editing
+- Save / Save As
+- Fullscreen playback
+- Excel reporting
+- Portable single-file Windows executable
+
+### 🎨 Fluent Dark Interface
+
+Playlist Studio 3.0 uses a modern **Fluent Dark** interface designed to keep playlist management, playback, channel metadata, and stream testing in one practical workspace.
+
+![Playlist Studio 3.0 — Fluent Dark Interface](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/playlist-studio-3.0-portable-build/Playlist%20Studio%203.0.png)
+
+### 📥 Download
+
+- **[Download Playlist Studio 3.0](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest)**
+- **[View all releases](https://github.com/saeidrahmanbd/BDIX-IPTV/releases)**
+
+The Windows release is **portable**. Extract the ZIP and run Playlist-Studio-3.0-Fluent-Dark.exe. No Python or separate VLC installation is required.
+
+## 📊 Project Status
+
+The repository is maintained with automated quality checks:
+
+| Area | Status |
+|---|---|
+| 📺 Playlist | Curated & updated |
+| 🖼️ Logos | Local repository logos |
+| 📡 Stream Health | Automated checks |
+| 📄 EPG | Coverage monitored |
+| 🧹 Playlist Audit | Automated |
+| 📝 Changelog | Automated |
+
+**[→ Live Project Dashboard](reports/dashboard.md)**
+
+## 🗂️ Organization
+
+- 🇧🇩 Bangladesh
+- 🇮🇳 India — grouped by language/region
+- 🎬 Movies
+- 🎵 Music
+- 📰 News
+- ⚽ Sports
+- 🧒 Kids
+- 🌿 Documentary & Wildlife
+- ☪️ Religious
+- 🌍 Selected International
+- 🔁 Backup Streams
+
+The playlist prioritizes **clean channel identity, consistent metadata, local logos, and practical backup streams** over simply collecting more entries.
+
+## 🔧 Maintenance
+
+Automated maintenance covers:
+
+- Stream and backup updates
+- Duplicate URL detection
+- Channel identity and metadata audits
+- Logo integrity and consistency
+- EPG coverage analysis
+- Stream health monitoring
+- Automated changelog generation
+
+Primary curated entries are protected from indiscriminate automatic changes.
+
+## 🛡️ Protection Rules
 
 1. Duplicate stream URLs are never allowed.
 2. Existing primary streams are not silently removed.
@@ -28,6 +113,8 @@ The repository now maintains:
 6. Dashboard figures are generated from the current playlist and current reports.
 7. Every maintenance run records quality metrics.
 
+**[→ Stream Health Report](reports/stream-health.md) · [→ Playlist Audit](reports/playlist-audit.md) · [→ Changelog](CHANGELOG.md)**
+
 ## 📈 Reports
 
 - [Dashboard](reports/dashboard.md)
@@ -36,8 +123,24 @@ The repository now maintains:
 - [Maintenance report](reports/maintenance-report.md)
 - [EPG coverage](reports/epg-coverage.md)
 
+## 📬 Support
+
+Found a broken stream, incorrect information, missing logo, or another issue?
+
+- 🐞 **[Report an issue](https://github.com/saeidrahmanbd/BDIX-IPTV/issues)**
+- 💬 **[Join Discussions](https://github.com/saeidrahmanbd/BDIX-IPTV/discussions)**
+- 👤 **[Saeid Rahman](https://github.com/saeidrahmanbd)**
+
+For stream reports, include the **channel name, stream/playlist URL, and a short description** when possible.
+
 ## ⚠️ Disclaimer
 
-This repository contains references to publicly available streams. Availability and programme information may change. Users are responsible for complying with applicable laws, regulations and service terms.
+This repository does not host television channels or video content. It contains references to publicly available streams. Availability and programme information may change without notice.
 
-Repository: https://github.com/saeidrahmanbd/BDIX-IPTV
+Users are responsible for complying with applicable laws, regulations, and service terms.
+
+---
+
+⭐ If you find the project useful, consider starring the repository.
+
+**Repository:** https://github.com/saeidrahmanbd/BDIX-IPTV
