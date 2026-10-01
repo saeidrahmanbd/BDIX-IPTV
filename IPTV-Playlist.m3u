@@ -1453,7 +1453,7 @@ http://198.195.239.50:8095/EAKHON.TV.HD/index.m3u8
 https://drk6xq0vhn.gpcdn.net/live/ekhon_tv_abr/index.m3u8
 #EXTINF:-1 tvg-id="EkhonTV.bd" tvg-name="Ekhon TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekhon-tv.png" channel-id="EkhonTV.bd" group-title="Backup",Ekhon TV
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/globaltv.stream/index.m3u8
-#EXTINF:-1 channel-id="Colors.Bangla.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-hd.png" tvg-id="Colors.Bangla.in" tvg-name="Ekushey TV" group-title="Backup",Ekushey TV
+#EXTINF:-1 channel-id="ekusheytv.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-hd.png" tvg-id="ekusheytv.bd" tvg-name="Ekushey TV" group-title="Backup",Ekushey TV
 http://198.195.239.50:8095/ETV.BANGLA.HD/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv.png" channel-id="EkusheyTV.bd" tvg-id="EkusheyTV.bd" tvg-name="Ekushey TV" group-title="Backup",Ekushey TV
 https://ekusheyserver.com/etvlivesn.m3u8
@@ -1879,7 +1879,7 @@ http://41.205.93.154/STAR-PLUS/index.m3u8
 http://198.195.239.50:8095/STAR.PLUS.HD/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-2.png" channel-id="custom.starsports2" tvg-id="custom.starsports2" tvg-name="Star Sports 2 HD" group-title="Backup",Star Sports 2 HD
 http://198.195.239.50:8095/STAR.SPORTS2.HD/index.m3u8
-#EXTINF:-1 channel-id="StarSports2.in@HD" tvg-id="StarSports2.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-2.png" tvg-name="Star Sports 2 HD" group-title="Backup",Star Sports 2 HD
+#EXTINF:-1 channel-id="custom.starsports2" tvg-id="custom.starsports2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-2.png" tvg-name="Star Sports 2 HD" group-title="Backup",Star Sports 2 HD
 http://tvsen5.aynascope.net/cXPB2LKkErN9/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/stingray-stream-101.png" tvg-id="custom.recovered.stingray.101" tvg-name="Stingray Stream 101" channel-id="custom.recovered.stingray.101" group-title="Backup",Stingray Stream 101
 https://lotus.stingray.com/manifest/ose-101ads-montreal/samsungtvplus/master.m3u8
