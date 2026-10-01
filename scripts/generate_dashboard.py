@@ -24,6 +24,7 @@ def main():
     groups=Counter(x.get("group-title","") for x in e)
     active_groups={"Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","International","Documentary & Wildlife","Kids","Religious","Sports"}
     active=len({x.get("tvg-id") or x.get("channel-id") for x in e if x.get("group-title") in active_groups and (x.get("tvg-id") or x.get("channel-id"))})
+    primary_streams=sum(1 for x in e if x.get("group-title") in active_groups)
     local=sum(1 for x in e if x.get("tvg-logo","").startswith("https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/")); logos=round(local*100/len(e),1) if e else 0
     issues=sum(metric(a,k) for k in ["Duplicate stream URLs","Metadata conflicts","Cross-country backup collisions","Protected primary-entry changes","Logo exceptions","Duplicate primary identities","Primary channel-number collisions","Primary entries missing channel numbers"])
     hfail=metric(h,"Failed this check"); hpersist=metric(h,"Persistent failures (3+ consecutive)"); htested=metric(h,"Streams tested"); hnear=metric(h,"Near-duplicate URL families")
@@ -40,7 +41,8 @@ _Last generated: **{now}**_
 | Metric | Current |
 |---|---:|
 | Streams | **{len(e)}** |
-| Active Channels | **{active}** |
+| Active Channel Identities | **{active}** |
+| Active Primary Streams | **{primary_streams}** |
 | Bangladesh | **{groups.get("Bangladesh",0)}** |
 | India | **{sum(v for k,v in groups.items() if k.startswith("Indian "))}** |
 | Backup Streams | **{groups.get("Backup",0)}** |
@@ -97,7 +99,7 @@ Historical records are retained in reports/maintenance-history.json.
     OUT_MD.write_text(md,encoding="utf-8")
     def t(x,y,s,size=15,b=False): return f'<text x="{x}" y="{y}" font-family="Arial,Helvetica,sans-serif" font-size="{size}px" font-weight="{"700" if b else "400"}" fill="#1f2937">{html.escape(str(s))}</text>'
     parts=['<svg xmlns="http://www.w3.org/2000/svg" width="980" height="650" viewBox="0 0 980 650">','<rect width="980" height="650" rx="24" fill="#f8fafc"/>','<rect width="980" height="92" rx="24" fill="#111827"/>',t(42,45,"BDIX-IPTV • PROJECT DASHBOARD",25,True),t(42,70,"Playlist • EPG • Metadata • Logos • Stream Health • Safety Gate",13)]
-    cards=[("Streams",len(e)),("Active Channels",active),("Bangladesh",groups.get("Bangladesh",0)),("India",sum(v for k,v in groups.items() if k.startswith("Indian "))),("Backup Streams",groups.get("Backup",0)),("Local Logos",f"{logos}%"),("EPG Coverage",f"{round(livepct)}%"),("Health Failures",hfail)]
+    cards=[("Streams",len(e)),("Channel Identities",active),("Bangladesh",groups.get("Bangladesh",0)),("India",sum(v for k,v in groups.items() if k.startswith("Indian "))),("Backup Streams",groups.get("Backup",0)),("Local Logos",f"{logos}%"),("EPG Coverage",f"{round(livepct)}%"),("Health Failures",hfail)]
     for (lab,val),(x,y) in zip(cards,[(34,120),(268,120),(502,120),(736,120),(34,260),(268,260),(502,260),(736,260)]):
         parts += [f'<rect x="{x}" y="{y}" width="210" height="112" rx="18" fill="white" stroke="#e5e7eb"/>',t(x+18,y+34,lab,14),t(x+18,y+78,val,28,True)]
     parts += ['<rect x="34" y="400" width="912" height="190" rx="18" fill="white" stroke="#e5e7eb"/>',t(58,435,"Current quality status",18,True),t(58,470,f"Audit blocking issues: {issues}",15),t(58,498,f"Pre-publish gate: {gate_status}",15),t(58,526,f"Persistent health failures: {hpersist} • Near-duplicate URL families: {hnear}",15),t(58,554,f"Generated: {now}",13),'</svg>']
