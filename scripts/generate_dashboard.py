@@ -179,7 +179,7 @@ def make_svg(total,channels,bangla,india,backup,logos,epg_pct,epg_missing,issues
         '<rect x="34" y="400" width="912" height="170" rx="18" fill="white" stroke="#e5e7eb"/>',
         svg_text(58,435,"Current quality status",18,True),
         svg_text(58,468,f"EPG unmapped: {epg_missing}",15),
-        svg_text(58,496,f"Blocking issues: {issues} • identity warnings: {warnings}",15),
+        svg_text(58,496,f"Blocking issues: {issues}",15),
         svg_text(58,524,f"Generated: {generated}",13),
         '</svg>'
     ]
