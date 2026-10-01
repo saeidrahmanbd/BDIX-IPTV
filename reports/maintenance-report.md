@@ -1,12 +1,12 @@
 # IPTV Maintenance Report
 
-_Generated: **2026-10-01 11:23 UTC**_
+_Generated: **2026-10-01 11:27 UTC**_
 
 | Item | Result |
 |---|---:|
-| Current playlist streams | **1025** |
+| Current playlist streams | **987** |
 | Current channel IDs | **637** |
-| Backup streams | **412** |
+| Backup streams | **374** |
 | New Channels | **15** |
 | New Backup | **15** |
 | Logo exceptions | **0** |
