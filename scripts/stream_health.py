@@ -6,14 +6,22 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
+from urllib.parse import urlsplit, urlunsplit, parse_qsl
 
 PLAYLIST=Path("IPTV-Playlist.m3u")
 REPORT=Path("reports/stream-health.md")
 HISTORY=Path("reports/stream-health-history.json")
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
 GROUP_EXCLUDE={"New Channels","New Backup","Not Playing"}
+SENSITIVE_QUERY={"token","sig","signature","jwt","session","key","authorization","hdnts","expires","e"}
 
 def attrs(s): return dict(ATTR.findall(s))
+def canonical_url(url):
+    p=urlsplit(url); host=(p.hostname or "").lower(); port=p.port
+    netloc=host + (f":{port}" if port and not ((p.scheme.lower()=="http" and port==80) or (p.scheme.lower()=="https" and port==443)) else "")
+    pairs=[(k.lower(),v) for k,v in parse_qsl(p.query,keep_blank_values=True) if k.lower() not in SENSITIVE_QUERY]
+    query="&".join(f"{k}={v}" for k,v in sorted(pairs))
+    return urlunsplit((p.scheme.lower(),netloc,p.path.rstrip("/") or "/",query,""))
 def parse():
     lines=PLAYLIST.read_text(encoding="utf-8-sig").splitlines()
     rows=[]; cur=None
@@ -73,6 +81,9 @@ def main():
     persistent=[r for r in results if r["consecutive_failures"]>=3]
     intermittent=[r for r in results if not r["ok"] and r["consecutive_failures"]<3]
     groups=Counter(r["group"] for r in results)
+    families={}
+    for r in results: families.setdefault(canonical_url(r["url"]),set()).add(r["url"])
+    near_duplicates={k:v for k,v in families.items() if len(v)>1}
     lines=["# Stream Health Report","",f"Generated: **{now}**","",
            "Non-destructive connectivity check. A successful HTTP response confirms reachability of the stream endpoint, not guaranteed video/audio playback.","",
            "## Summary","",f"- Streams tested: **{len(results)}**",f"- Reachable: **{ok}**",f"- Failed this check: **{fail}**",
@@ -85,6 +96,11 @@ def main():
     lines += ["","## Failed This Check",""]
     if fail:
         lines += [f"- **{r['name']}** — {r['group']} — streak {r['consecutive_failures']} — {r['error'] or r['status']}" for r in sorted([x for x in results if not x["ok"]],key=lambda x:(x["group"],x["name"]))]
+    else: lines.append("None.")
+    lines += ["","## Near-Duplicate URL Families",""]
+    if near_duplicates:
+        for canonical,urls in sorted(near_duplicates.items()):
+            lines.append(f"- **{canonical}** — {len(urls)} URL variants; query/token differences are preserved and require review.")
     else: lines.append("None.")
     lines += ["","## Policy","","- Health failures never delete or reclassify streams automatically.",
               "- Backup streams remain protected even after repeated failures.",

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Final non-destructive publication gate for playlist changes."""
 import re,subprocess,sys
+from datetime import datetime,timezone
 from collections import Counter,defaultdict
 from pathlib import Path
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md")
@@ -36,12 +37,24 @@ def main():
     if chno_dupes: issues.append(f"duplicate primary channel numbers: {len(chno_dupes)}")
     if missing: issues.append(f"primary entries missing tvg-chno: {len(missing)}")
     status="PASS" if not issues else "BLOCK"
-    lines=["# Pre-Publish Safety Gate","",f"Status: **{status}**","",f"- Current entries: **{len(current)}**",
+    old_by_url={u.lower():(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in old}
+    cur_by_url_all={u.lower():(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in current}
+    added=[u for u in cur_by_url_all if u not in old_by_url]
+    removed_all=[u for u in old_by_url if u not in cur_by_url_all]
+    modified=[u for u in cur_by_url_all if u in old_by_url and cur_by_url_all[u]!=old_by_url[u]]
+    lines=["# Pre-Publish Safety Gate","",f"Generated: **{datetime.now(timezone.utc).isoformat(timespec="seconds")}**","",f"Status: **{status}**","",f"- Current entries: **{len(current)}**",
            f"- Duplicate stream URLs: **{len(dup_urls)}**",f"- Primary streams removed: **{len(removed)}**",
            f"- Review entries reclassified: **{len(reclassified)}**",f"- Duplicate primary channel numbers: **{len(chno_dupes)}**",
-           f"- Primary entries missing tvg-chno: **{len(missing)}**","","## Rules",
+           f"- Primary entries missing tvg-chno: **{len(missing)}**",f"- Entries added this run: **{len(added)}**",f"- Entries removed this run: **{len(removed_all)}**",f"- Entries modified this run: **{len(modified)}**","","## Change Summary",
            "1. Never publish duplicate stream URLs.","2. Never silently remove an existing primary stream.",
            "3. Never silently promote/reclassify review-queue entries.","4. Never publish duplicate or missing primary channel numbers."]
+    if added:
+        lines.append("Added: " + ", ".join(added[:20]) + (" ..." if len(added)>20 else ""))
+    else: lines.append("Added: none")
+    if removed_all:
+        lines.append("Removed: " + ", ".join(removed_all[:20]) + (" ..." if len(removed_all)>20 else ""))
+    else: lines.append("Removed: none")
+    lines.append("Modified metadata entries: " + str(len(modified)))
     lines += ["","## Blocking Reasons"]+["- "+x for x in issues] if issues else ["","No blocking conditions detected."]
     R.parent.mkdir(parents=True,exist_ok=True); R.write_text("\n".join(lines)+"\n",encoding="utf-8")
     print("Pre-publish gate:",status)

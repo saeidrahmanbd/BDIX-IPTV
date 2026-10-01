@@ -26,7 +26,7 @@ def main():
     active=len({x.get("tvg-id") or x.get("channel-id") for x in e if x.get("group-title") in active_groups and (x.get("tvg-id") or x.get("channel-id"))})
     local=sum(1 for x in e if x.get("tvg-logo","").startswith("https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/")); logos=round(local*100/len(e),1) if e else 0
     issues=sum(metric(a,k) for k in ["Duplicate stream URLs","Metadata conflicts","Cross-country backup collisions","Protected primary-entry changes","Logo exceptions","Duplicate primary identities","Primary channel-number collisions","Primary entries missing channel numbers"])
-    hfail=metric(h,"Failed this check"); hpersist=metric(h,"Persistent failures (3+ consecutive)"); htested=metric(h,"Streams tested")
+    hfail=metric(h,"Failed this check"); hpersist=metric(h,"Persistent failures (3+ consecutive)"); htested=metric(h,"Streams tested"); hnear=metric(h,"Near-duplicate URL families")
     india=metric(g,"Active Indian channels audited"); mapped=metric(g,"Channels with an EPG mapping"); missing=metric(g,"No guide mapping found")
     m=re.search(r'Current/future programme coverage:\s*\*\*(\d+)/(\d+) \(([\d.]+)%\)',g,re.I); live=int(m.group(1)) if m else 0; livepct=float(m.group(3)) if m else 0; mapct=round(mapped*100/india,1) if india else 0
     now=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
@@ -51,9 +51,9 @@ _Last generated: **{now}**_
 | EPG Mapping | **{mapct}%** |
 | Stream Health Tested | **{htested}** |
 | Stream Health Failures | **{hfail}** |
-| Persistent Failures | **{hpersist}** |
+| Persistent Failures | **{hpersist}** |\n| Near-Duplicate URL Families | **{hnear}** |
 | Audit Blocking Issues | **{issues}** |
-| Pre-Publish Gate | **{gate_status}** |
+| Pre-Publish Gate | **{gate_status}** |\n| Pre-Publish Gate Generated | **{timestamp(GATE)}** |
 
 ## Quality Controls
 - Duplicate stream URLs: **{metric(a,"Duplicate stream URLs")}**
@@ -100,7 +100,7 @@ Historical records are retained in reports/maintenance-history.json.
     cards=[("Streams",len(e)),("Active Channels",active),("Bangladesh",groups.get("Bangladesh",0)),("India",sum(v for k,v in groups.items() if k.startswith("Indian "))),("Backup Streams",groups.get("Backup",0)),("Local Logos",f"{logos}%"),("EPG Coverage",f"{round(livepct)}%"),("Health Failures",hfail)]
     for (lab,val),(x,y) in zip(cards,[(34,120),(268,120),(502,120),(736,120),(34,260),(268,260),(502,260),(736,260)]):
         parts += [f'<rect x="{x}" y="{y}" width="210" height="112" rx="18" fill="white" stroke="#e5e7eb"/>',t(x+18,y+34,lab,14),t(x+18,y+78,val,28,True)]
-    parts += ['<rect x="34" y="400" width="912" height="190" rx="18" fill="white" stroke="#e5e7eb"/>',t(58,435,"Current quality status",18,True),t(58,470,f"Audit blocking issues: {issues}",15),t(58,498,f"Pre-publish gate: {gate_status}",15),t(58,526,f"Persistent health failures: {hpersist}",15),t(58,554,f"Generated: {now}",13),'</svg>']
+    parts += ['<rect x="34" y="400" width="912" height="190" rx="18" fill="white" stroke="#e5e7eb"/>',t(58,435,"Current quality status",18,True),t(58,470,f"Audit blocking issues: {issues}",15),t(58,498,f"Pre-publish gate: {gate_status}",15),t(58,526,f"Persistent health failures: {hpersist} • Near-duplicate URL families: {hnear}",15),t(58,554,f"Generated: {now}",13),'</svg>']
     OUT_SVG.write_text("".join(parts),encoding="utf-8")
     OUT_MAINT.write_text(f"""# IPTV Maintenance Report
 
