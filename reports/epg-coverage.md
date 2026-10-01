@@ -1,15 +1,15 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-01T09:55:01+00:00**
+Generated: **2026-10-01T11:22:32+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **259**
-- Channels with an EPG mapping: **171**
-- Current/future programme coverage: **159/259 (61.4%)**
-- No guide mapping found: **88**
+- Active Indian channels audited: **256**
+- Channels with an EPG mapping: **170**
+- Current/future programme coverage: **158/256 (61.7%)**
+- No guide mapping found: **86**
 
 ## Source Status
 
@@ -60,9 +60,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Entertainment | ETV Josh | ETVJosh.in | - | NO_GUIDE_HIT |
 | Indian Music | ETV Music | ETVMusic.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | Epic Bharat | EpicBharat.in@SD | - | NO_GUIDE_HIT |
-| Indian Movies | Epic Bhojpuri | EpicBhojpuri.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Epic Bhojpuri Digital | custom.epic.bhojpuri.digital | - | NO_GUIDE_HIT |
-| Indian Music | Epic Music | EpicMusic.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Epic TV Digital | custom.epic.tv.digital | - | NO_GUIDE_HIT |
 | Indian Entertainment | Flowers US | custom.flowers.us | - | NO_GUIDE_HIT |
 | Indian Entertainment | Geo Kahani | GeoKahani.pk | - | NO_GUIDE_HIT |

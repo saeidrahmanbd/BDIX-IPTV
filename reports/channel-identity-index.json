@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T09:55:02+00:00",
+  "generated": "2026-10-01T11:22:32+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -286,10 +286,10 @@
         "alltimemovies.in@sd"
       ],
       "groups": [
-        "Indian Movies"
+        "New Channels"
       ],
       "streams": 1,
-      "primary": 1,
+      "primary": 0,
       "backup": 0
     },
     "alqamartv": {
@@ -506,11 +506,10 @@
         "asianetmovies.in@sd"
       ],
       "groups": [
-        "Indian Movies",
-        "New Backup"
+        "Indian Movies"
       ],
       "streams": 2,
-      "primary": 1,
+      "primary": 2,
       "backup": 0
     },
     "asiantv": {
@@ -2139,11 +2138,11 @@
         "custom.recovered.atn.music"
       ],
       "groups": [
-        "Backup"
+        "New Channels"
       ],
       "streams": 1,
       "primary": 0,
-      "backup": 1
+      "backup": 0
     },
     "custom.recovered.pishow.10007": {
       "names": [
@@ -3240,10 +3239,10 @@
         "doyeltv.ca@sd"
       ],
       "groups": [
-        "Bangladesh"
+        "New Channels"
       ],
       "streams": 1,
-      "primary": 1,
+      "primary": 0,
       "backup": 0
     },
     "durontotv": {
@@ -3432,10 +3431,10 @@
         "epicbhojpuri.in@sd"
       ],
       "groups": [
-        "Indian Movies"
+        "New Channels"
       ],
       "streams": 1,
-      "primary": 1,
+      "primary": 0,
       "backup": 0
     },
     "epiccrimes": {
@@ -3461,10 +3460,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Music"
+        "New Channels"
       ],
       "streams": 3,
-      "primary": 1,
+      "primary": 0,
       "backup": 2
     },
     "espn": {
@@ -6234,10 +6233,10 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "New Channels"
       ],
       "streams": 3,
-      "primary": 1,
+      "primary": 0,
       "backup": 2
     },
     "rajdigitalplus": {
