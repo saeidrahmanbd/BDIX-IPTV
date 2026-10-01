@@ -64,6 +64,15 @@ def country_code(cid):
 def normalized_name(name):
     return re.sub(r"\s*\[[^]]+\]\s*$", "", name).strip().lower()
 
+def redact_url(url):
+    """Redact credential-like query values in reports without changing the playlist."""
+    return re.sub(
+        r'([?&](?:token|sig|signature|jwt|session|key|authorization|hdnts)=[^&\s]+)',
+        lambda m: m.group(1).split("=", 1)[0] + "=[REDACTED]",
+        url,
+        flags=re.I,
+    )
+
 def logo_issue(info):
     logo = attrs(info).get("tvg-logo", "").strip()
     if not logo:
@@ -281,7 +290,7 @@ lines = [
 for cid, items in sorted(duplicate_ids.items()):
     lines.append(f"### {cid} ({len(items)} streams)")
     for info, url in items:
-        lines.append(f"- {display_name(info)} — {attrs(info).get('group-title','')} — {url}")
+        lines.append(f"- {display_name(info)} — {attrs(info).get('group-title','')} — {redact_url(url)}")
 if not duplicate_ids:
     lines.append("None.")
 
@@ -303,14 +312,14 @@ else:
 lines += ["", "## Suspicious URLs", ""]
 if suspicious_urls:
     for name, reason, url in suspicious_urls:
-        lines.append(f"- **{name}** — {reason} — {url}")
+        lines.append(f"- **{name}** — {reason} — {redact_url(url)}")
 else:
     lines.append("None.")
 
 lines += ["", "## Signed / Tokenized Stream URLs", ""]
 if signed_urls:
     for name, group, url in signed_urls:
-        lines.append(f"- **{name}** — {group or 'Uncategorized'} — {url}")
+        lines.append(f"- **{name}** — {group or 'Uncategorized'} — {redact_url(url)}")
 else:
     lines.append("None.")
 
