@@ -1,18 +1,19 @@
 # Project Dashboard
 
-_Last generated: **2026-10-01 06:23 UTC**_
+_Last generated: **2026-10-01 07:46 UTC**_
 
 | Metric | Current |
 |---|---:|
 | 📺 Streams | **1033** |
-| 📡 Channels | **642** |
+| 📡 Active Channels | **560** |
 | 🇧🇩 Bangladesh | **54** |
 | 🇮🇳 India | **244** |
 | 🔁 Backup Streams | **420** |
 | 🆕 New Channels | **20** |
 | 🆕 New Backup Streams | **30** |
 | 🖼️ Local Logos | **100.0%** |
-| 📅 EPG Coverage | **60%** |
+| 📅 EPG Programme Coverage | **60%** |
+| 🗺️ EPG Mapping | **64.8%** |
 | ⚠️ Audit Blocking Issues | **0** |
 | ℹ️ Identity Warnings | **5** |
 
@@ -24,15 +25,16 @@ _Last generated: **2026-10-01 06:23 UTC**_
 - Primary channel-number collisions: **0**
 - Logo exceptions: **0**
 - EPG channels without mapping: **86**
+- Signed/tokenized stream URLs: **15**
 
 ## Data Freshness
 | Source | Last generated |
 |---|---|
-| Playlist audit | **2026-10-01T06:23:51.503792+00:00** |
-| EPG coverage | **2026-10-01T06:23:51+00:00** |
+| Playlist audit | **2026-10-01T07:46:20.194617+00:00** |
+| EPG coverage | **2026-10-01T07:46:19+00:00** |
 
 ## Maintenance History
-- Recorded runs retained: **3**
+- Recorded runs retained: **4**
 - Latest run vs previous: entries 1033 → 1033; logo exceptions 0 → 0; metadata conflicts 0 → 0.
 
 Historical records are retained in `reports/maintenance-history.json` (latest 180 runs).

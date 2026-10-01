@@ -2066,5 +2066,5 @@ http://51.75.127.199:3141/starmovies/index.m3u8
 http://51.75.127.199:3141/starmovieshd/index.m3u8
 #EXTINF:-1 tvg-id="StarMoviesSelect.in@HD" tvg-name="Star Movies Select" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-movies-select-37627406.png" channel-id="StarMoviesSelect.in@HD" group-title="New Backup",Star Movies Select
 http://51.75.127.199:3141/starmoviesselecthd/index.m3u8
-#EXTINF:-1 tvg-id="AndxplorHD.in@HD" tvg-name="Xplor" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xplor.png" channel-id="AndxplorHD.in@HD" group-title="New Backup",Xplor
+#EXTINF:-1 tvg-id="AndxplorHD.in" tvg-name="Xplor" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xplor.png" channel-id="AndxplorHD.in" group-title="New Backup",Xplor
 http://51.75.127.199:3141/andxplorehd/index.m3u8
