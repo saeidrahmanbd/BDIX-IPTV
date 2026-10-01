@@ -28,8 +28,17 @@
 
 ## 2026-10-01
 
-- 🗑️ **1 channel(s) removed**
+- 🆕 **9 new channel(s) added to New Channels**
+- 🔁 **16 new backup stream(s) added to New Backup**
 
-### Removed channels
-- Steelbird Music
+### New channels
+- Express News (576p)
+- Rupashi Bangla TV (720p)
+- Vokta TV (720p)
+- RS Bharat (576p)
+- Star Maa Music (576p)
+- Suriyan TV (576p)
+- Wah Punjabi (576p)
+- YET Max (720p)
+- Zee South Flix (1080p)
 
