@@ -205,9 +205,9 @@ https://d1rc86nwwc9fag.cloudfront.net/260723/smil:rishteycineplexukdev.smil/chun
 http://202.70.146.135:8000/play/a058/index.m3u8
 #EXTINF:-1 tvg-chno="316" channel-id="DhoolTV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dhool-tv.png" tvg-id="DhoolTV.in@SD" tvg-name="Dhool TV" group-title="Indian Movies",Dhool TV
 https://d1msejlow1t3l4.cloudfront.net/fta/subhartitv/playlist.m3u8
-#EXTINF:-1 tvg-name="Ekamra Cinema" group-title="Indian Movies",Ekamra Cinema
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekamra-cinema.png" tvg-name="Ekamra Cinema" group-title="Indian Movies",Ekamra Cinema
 https://live.ekamraott.com/cynema/cynema/index.m3u8
-#EXTINF:-1 tvg-name="Ekamra Manoranjan" group-title="Indian Movies",Ekamra Manoranjan
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekamra-manoranjan.png" tvg-name="Ekamra Manoranjan" group-title="Indian Movies",Ekamra Manoranjan
 https://live.ekamraott.com/manoranjan/manoranjan/index.m3u8
 #EXTINF:-1 tvg-id="EpicBhojpuri.in@SD" tvg-name="Epic Bhojpuri" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-bhojpuri.png" tvg-chno="317" channel-id="EpicBhojpuri.in@SD" group-title="Indian Movies",Epic Bhojpuri
 https://mumt01.tangotv.in/O5aw8Zn3EPICBHOJPURI/index.m3u8
@@ -343,7 +343,7 @@ https://live20.bozztv.com/giatvplayout7/giatv-209592/index.m3u8
 https://livestream.unlimitedcdn.com/agm-dc/desi-channel/index.m3u8
 #EXTINF:-1 tvg-id="E24.in" tvg-name="E24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/e24.png" tvg-chno="429" channel-id="E24.in" group-title="Indian Music",E24
 https://amg13643-amg13643c2-amgplt0016.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg13643-amg13643c2-amgplt0016/playlist.m3u8
-#EXTINF:-1 tvg-name="Ekamra Musiq" group-title="Indian Music",Ekamra Musiq
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekamra-musiq.png" tvg-name="Ekamra Musiq" group-title="Indian Music",Ekamra Musiq
 https://live.ekamraott.com/musiq/musiq/index.m3u8
 #EXTINF:-1 tvg-id="EpicMusic.in@SD" tvg-name="Epic Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-music.png" tvg-chno="430" channel-id="EpicMusic.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Music",Epic Music
 https://mumt04.tangotv.in/m18aqlK4EPICMUSIC/index.m3u8
@@ -669,11 +669,11 @@ https://ext.cdn.nashnet.tv/228.0.2.214/index.m3u8
 http://103.172.187.30:12000/stream/mytv/null-2/master.m3u8
 #EXTINF:-1 tvg-name="MN+" group-title="International",MN+
 http://198.195.239.50:8095/MN.PLUS.HD/index.m3u8
-#EXTINF:-1 tvg-name="MNX" group-title="International",MNX
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mnx-576p-1964fe6da3.png" tvg-name="MNX" group-title="International",MNX
 http://198.195.239.50:8095/MNX.HD/index.m3u8
-#EXTINF:-1 tvg-name="Movies Now" group-title="International",Movies Now
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-now-hd.png" tvg-name="Movies Now" group-title="International",Movies Now
 http://198.195.239.50:8095/MOVIES.NOW.HD/index.m3u8
-#EXTINF:-1 tvg-name="Movies Now HD" group-title="International",Movies Now HD
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-now-hd.png" tvg-name="Movies Now HD" group-title="International",Movies Now HD
 http://202.70.146.135:8000/play/a057/index.m3u8
 #EXTINF:-1 tvg-id="MoviesThriller.sa@SD" tvg-name="Movies Thriller" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-thriller.png" group-title="International" tvg-chno="754" channel-id="MoviesThriller.sa@SD",Movies Thriller
 https://shd-amg-fast.edgenextcdn.net/tx012/playlist.m3u8
@@ -733,7 +733,7 @@ https://49d735318d6b4c30a24a7997ea594e1b.mediatailor.us-west-2.amazonaws.com/v1/
 https://5098a8b860504a3690fd2e7c0a18d68f.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-817-FR-SONYONEHITSACTION-LG_FR/playlist.m3u8
 #EXTINF:-1 tvg-id="SonyOneHitsComedie.fr@HD" tvg-name="Sony One Hits Comedie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-one-hits-comedie.png" group-title="International" tvg-chno="796" channel-id="SonyOneHitsComedie.fr@HD",Sony One Hits Comedie
 https://7aa9671895264ec9a384dfed1b992171.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-818-FR-SONYONEHITSCOMDIE-LG_FR/playlist.m3u8
-#EXTINF:-1 tvg-name="Sony PIX" group-title="International",Sony PIX
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-pix-hd.png" tvg-name="Sony PIX" group-title="International",Sony PIX
 http://198.195.239.50:8095/SONY.PIX.HD/index.m3u8
 #EXTINF:-1 channel-id="GBAJ400042T1" tvg-name="Sparkle Movies" tvg-id="GBAJ400042T1" group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sparkle-movies.png" tvg-chno="797",Sparkle Movies
 https://61fc4f1a40a342daa23f92141853b7b4.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Samsung-gb_SparkleMovies/playlist.m3u8
@@ -941,7 +941,7 @@ https://amg00771-kochfilmsgerman-moviedomefamily-tcl-tpicw.amagi.tv/playlist/amg
 https://amg00627-amg00627c29-rakuten-it-3989.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanitcc-rakutenit/playlist.m3u8
 #EXTINF:-1 tvg-name="Nick" group-title="Kids",Nick
 http://198.195.239.50:8095/nick/index.m3u8
-#EXTINF:-1 tvg-name="Nick Jr." group-title="Kids",Nick Jr.
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png" tvg-name="Nick Jr." group-title="Kids",Nick Jr.
 http://198.195.239.50:8095/nickJr/index.m3u8
 #EXTINF:-1 channel-id="NickJr.cz@SD" tvg-id="NickJr.cz@SD" tvg-name="Nick Jr. (Czech Republic)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="Kids" tvg-chno="946",Nick Jr. (Czech Republic)
 http://88.212.15.19/live/test_nick_jr/playlist.m3u8
@@ -961,7 +961,7 @@ https://cc-j2qrmdlg5y7lg.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da6
 https://linear-899.frequency.stream/dist/cineverse/899/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-id="SmurfTV.us" tvg-name="Smurf TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/smurf-tv.png" tvg-chno="954" channel-id="SmurfTV.us" group-title="Kids",Smurf TV
 https://d144py1prrd7ns.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-affg2ev32s0dq/smrfe.m3u8
-#EXTINF:-1 tvg-name="Sonic" group-title="Kids",Sonic
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sonic.png" tvg-name="Sonic" group-title="Kids",Sonic
 http://198.195.239.50:8095/sonic/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sonic.png" channel-id="custom.sonic.bangla" tvg-id="custom.sonic.bangla" tvg-name="Sonic Bangla" group-title="Kids" tvg-chno="955",Sonic Bangla
 http://bosstv.click:8080/live/18012689/77561563/92412.ts
@@ -1109,7 +1109,7 @@ http://198.195.239.50:8095/STAR.SPORTS.SEL.2.HD/index.m3u8
 https://flussonic.defineatoz.com/starsportsselect1/tracks-v1/mono.m3u8
 #EXTINF:-1 channel-id="StarSportsSL2.lk" tvg-id="StarSportsSL2.lk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-sl-2.png" tvg-name="Star Sports SL 2" tvg-chno="1039" group-title="Sports",Star Sports SL 2
 http://rgkkw.live:80/live/1Aoen7elp5/IgMJ60tmAa/9401.ts
-#EXTINF:-1 tvg-name="T Sports" group-title="Sports",T Sports
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/t-sports.png" tvg-name="T Sports" group-title="Sports",T Sports
 http://198.195.239.50:8095/T-SPORTS-HD/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/talksport.png" tvg-id="talkSPORT.uk@SD" tvg-name="talkSPORT" group-title="Sports" tvg-chno="1040" channel-id="talkSPORT.uk@SD",talkSPORT
 https://af7a8b4e.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfdGFsa1NQT1JUX0hMUw/playlist.m3u8
@@ -1593,7 +1593,7 @@ https://mumt04.tangotv.in/m18aqlK4MHONE/index.m3u8
 https://cdn.pishow.tv/ott/live/1253/master.m3u8
 #EXTINF:-1 channel-id="MarutamTV.in" tvg-id="MarutamTV.in" tvg-name="MNTV (Tamil)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mntv-tamil.png" tvg-country="MZ" tvg-language="por" group-title="Backup",MNTV (Tamil)
 https://www.khuwemultimedia.com/hls/mntv/mntv.m3u8
-#EXTINF:-1 tvg-name="MNX" group-title="Backup",MNX
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mnx-576p-1964fe6da3.png" tvg-name="MNX" group-title="Backup",MNX
 http://202.70.146.135:8000/play/a052/index.m3u8
 #EXTINF:-1 channel-id="MNX.in" tvg-id="MNX.in" tvg-name="MNX" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mnx-576p-1964fe6da3.png" tvg-country="IN" tvg-language="eng" group-title="Backup",MNX
 http://59.103.38.46:8000/play/a052/index.m3u8
@@ -1655,7 +1655,7 @@ https://jmp2.uk/stvp-IN46000140Q
 https://jmp2.uk/stvp-IN460001373
 #EXTINF:-1 tvg-name="Nick" group-title="Backup",Nick
 http://198.195.239.50:8095/NICK/index.m3u8
-#EXTINF:-1 tvg-name="Nick Jr." group-title="Backup",Nick Jr.
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png" tvg-name="Nick Jr." group-title="Backup",Nick Jr.
 http://198.195.239.50:8095/NICK.JR/index.m3u8
 #EXTINF:-1 tvg-id="NRBTV.ca" tvg-name="NRB TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nrb-tv.png" channel-id="NRBTV.ca" group-title="Backup",NRB TV
 https://app.ncare.live/live-orgin/nrb-eu.stream/playlist.m3u8
@@ -1773,7 +1773,7 @@ http://198.195.239.50:8095/somoyTv/index.m3u8
 https://iptvlive.ahmed-bd-org.workers.dev/somoy-tv-2/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/somoy-tv.png" channel-id="SomoyNewsTV.bd" tvg-id="SomoyNewsTV.bd" tvg-name="Somoy TV" group-title="Backup",Somoy TV
 http://198.195.239.50:8095/SOMOY.TV.HD/index.m3u8
-#EXTINF:-1 tvg-name="Sonic" group-title="Backup",Sonic
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sonic.png" tvg-name="Sonic" group-title="Backup",Sonic
 http://198.195.239.50:8095/SONIC/index.m3u8
 #EXTINF:-1 channel-id="Sony.Aath.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-aath.png" tvg-id="Sony.Aath.in" tvg-name="Sony AATH" group-title="Backup",Sony AATH
 https://live20.bozztv.com/giatvplayout7/giatv-209611/index.m3u8
