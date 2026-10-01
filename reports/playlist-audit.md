@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-01T12:28:16.138628+00:00**
+Generated: **2026-10-01T12:35:18.394082+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -18,6 +18,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
+- Malformed EXTINF entries: **0**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **15**
 
@@ -751,6 +752,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 None.
 
 ## Primary Channel-Number Collisions
+
+None.
+
+## Malformed EXTINF Entries
 
 None.
 

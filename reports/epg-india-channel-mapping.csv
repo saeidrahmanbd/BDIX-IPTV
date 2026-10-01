@@ -1,5 +1,4 @@
 group,channel,tvg_id,epg_id,source,status,note
-,Nick Jr (Czech Republic),NickJr.cz@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,ATN Bangla,ATNBangla.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,ATN Bangla UK,ATNBanglaUK.uk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,ATN News,custom.atn.news,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -486,6 +485,7 @@ Kids,Movie Dome Family,MovieDomeFamily,,,NO_GUIDE_HIT,Auto-maintained; verify am
 Kids,Mr Bean Animated,MrBeanAnimated.uk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Nick,Nickelodeon.in@SD,Nick.HD+.in | Nick.in | NICK.in | NICK.HD+.in | 543260 | 543090,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Nick Jr,NickJr.in@SD,Nick.Jr.in | NICK.JR.in | 543502,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Kids,Nick Jr (Czech Republic),NickJr.cz@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Oggy and the cockroaches,Oggyandthecockroaches,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,PBS Kids,PBSKids.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,POP,Pop.uk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
