@@ -59,7 +59,14 @@ jobs:
             python scripts/migrate_external_logos_fixed.py
             python scripts/epg_coverage.py
             python scripts/sync_epg_worker_map.py
+
+            # The audit is intentionally allowed to fail on structural blockers.
+            # Reports must still be generated so the dashboard never freezes at
+            # an older "0 blockers" snapshot.
+            set +e
             python scripts/audit_playlist.py
+            AUDIT_STATUS=$?
+            set -e
 
             python - <<'PY'
           import json
@@ -93,6 +100,13 @@ jobs:
           PY
 
             python scripts/generate_dashboard.py
+
+            # If the audit found blockers, publish the fresh reports but do not
+            # publish unreviewed playlist mutations produced earlier in this run.
+            if [ "$AUDIT_STATUS" -ne 0 ]; then
+              git restore -- IPTV-Playlist.m3u logos/ xtream/worker.js || true
+            fi
+
             git add IPTV-Playlist.m3u logos/ reports/ assets/dashboard.svg xtream/worker.js
             if git diff --cached --quiet; then
               echo 'No maintenance changes.'
