@@ -49,6 +49,7 @@ jobs:
             python scripts/build_identity_index.py
             python scripts/stream_health.py
             HEALTH_STATUS=$?
+            if [ ! -s reports/stream-health.md ]; then HEALTH_STATUS=2; fi
             python scripts/pre_publish_gate.py
             GATE_STATUS=$?
             set -e
@@ -68,7 +69,7 @@ jobs:
           hist.append(rec); f.parent.mkdir(parents=True,exist_ok=True); f.write_text(json.dumps(hist[-180:],indent=2)+'\n',encoding='utf-8')
           PY
             python scripts/generate_dashboard.py
-            if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
+            if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ] || [ "$HEALTH_STATUS" -ne 0 ]; then
               git restore -- IPTV-Playlist.m3u logos/ xtream/worker.js || true
             fi
             git add IPTV-Playlist.m3u logos/ reports/ assets/dashboard.svg xtream/worker.js
