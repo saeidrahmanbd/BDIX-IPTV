@@ -2,7 +2,7 @@
 from __future__ import annotations
 import json, shlex, unicodedata, urllib.request
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlparse, parse_qsl, unquote_plus
 
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/channel-discovery.md")
 S=[("Bangladesh","https://iptv-org.github.io/iptv/countries/bd.m3u"),("India","https://iptv-org.github.io/iptv/countries/in.m3u")]
@@ -15,6 +15,19 @@ def attrs(line):
     try: t=shlex.split(line,posix=True)
     except ValueError: return {}
     return dict(x.split("=",1) for x in t[1:] if "=" in x)
+
+def split_extinf(line):
+    """Split EXTINF metadata from display text without breaking quoted commas."""
+    in_quote = False
+    escaped = False
+    for i, ch in enumerate(line):
+        if ch == '"' and not escaped:
+            in_quote = not in_quote
+        elif ch == "," and not in_quote:
+            return line[:i], line[i + 1:]
+        escaped = (ch == "\\") and not escaped
+        if ch != "\\": escaped = False
+    return line, ""
 
 def norm(s):
     # Normalize channel names independently of quality/country/formatting labels.
@@ -42,7 +55,7 @@ def parse(text):
             j=i+1
             while j<len(ls) and not ls[j].strip(): j+=1
             if j<len(ls) and ls[j].startswith(("http://","https://")):
-                a=attrs(ls[i]); n=a.get("tvg-name") or ls[i].rsplit(",",1)[-1].strip()
+                a=attrs(ls[i]); _, display=split_extinf(ls[i]); n=a.get("tvg-name") or display.strip()
                 out.append((a,n.strip(),ls[j].strip())); i=j
         i+=1
     return out
@@ -58,8 +71,14 @@ def ok(country,a,n,u):
     if c&BLOCK or any(x in h for x in BAD): return False
     if country=="India" and ("news" in c or not c&INDIA): return False
     p=urlparse(u)
-    if p.scheme not in ("http","https") or not p.netloc or p.query or p.fragment: return False
-    if any(x in u.lower() for x in QBAD) or any(x in p.netloc.lower() for x in HOSTBAD): return False
+    if p.scheme not in ("http","https") or not p.netloc or p.fragment: return False
+    # Ordinary query parameters are valid for many live streams. Reject only
+    # query keys commonly used for authentication, signatures, or expiry.
+    for key, value in parse_qsl(p.query, keep_blank_values=True):
+        qkey=unquote_plus(key).strip().lower()
+        if any(qkey == bad.rstrip("=") or qkey.startswith(bad.rstrip("=")) for bad in QBAD):
+            return False
+    if any(x in p.netloc.lower() for x in HOSTBAD): return False
     return p.path.lower().endswith((".m3u8",".m3u",".ts")) and "vod" not in p.path.lower() and "catchup" not in p.path.lower()
 
 def ext(a,n,g):
