@@ -80,10 +80,9 @@ def write_maintenance_report(d,a,g,groups,now):
         return [x[2:].strip() for x in m.group(1).splitlines() if x.startswith("- ")] if m else []
     new_channels=items(dtext,"New Channels")
     new_backups=items(dtext,"New Backups")
-    issue_keys=["Duplicate stream URLs","Metadata conflicts","Same-name / different-ID collisions",
-                "Cross-country backup collisions","Protected primary-entry changes","Logo exceptions",
-                "Duplicate primary identities","Primary channel-number collisions"]
+    issue_keys=["Duplicate stream URLs","Metadata conflicts","Cross-country backup collisions","Protected primary-entry changes","Logo exceptions","Duplicate primary identities","Primary channel-number collisions"]
     issues=sum(a.get(k,0) for k in issue_keys)
+    warnings=a.get("Same-name / different-ID collisions",0)
     md=f"""# IPTV Maintenance Report
 
 _Generated: **{now}**_
@@ -100,7 +99,7 @@ _Generated: **{now}**_
 | 🔁 Current backup streams | **{groups.get("Backup",0)}** |
 | 🖼️ Logo exceptions | **{a.get("Logo exceptions",0)}** |
 | 📅 EPG coverage | **{round(g.get("LivePct",0))}%** |
-| ⚠️ Audit issues | **{issues}** |
+| ⚠️ Audit blocking issues | **{issues}** |\n| ℹ️ Identity warnings | **{warnings}** |
 
 ## New Channels This Run
 
@@ -167,7 +166,7 @@ def make_svg(total,channels,bangla,india,backup,logos,epg_pct,epg_missing,issues
         svg_text(42,70,"EPG • Metadata • Logos • Playlist Audit",13)
     ]
     cards=[("Streams",total),("Channels",channels),("Bangladesh",bangla),("India",india),
-           ("Backup Streams",backup),("Local Logos",f"{logos}%"),("EPG Coverage",f"{epg_pct}%"),("Audit Issues",issues)]
+           ("Backup Streams",backup),("Local Logos",f"{logos}%"),("EPG Coverage",f"{epg_pct}%"),("Blocking Issues",issues)]
     coords=[(34,120),(268,120),(502,120),(736,120),(34,260),(268,260),(502,260),(736,260)]
     for (label,val),(x,y) in zip(cards,coords):
         parts += [
@@ -180,7 +179,7 @@ def make_svg(total,channels,bangla,india,backup,logos,epg_pct,epg_missing,issues
         '<rect x="34" y="400" width="912" height="170" rx="18" fill="white" stroke="#e5e7eb"/>',
         svg_text(58,435,"Current quality status",18,True),
         svg_text(58,468,f"EPG unmapped: {epg_missing}",15),
-        svg_text(58,496,f"Metadata conflicts / audit issues: {issues}",15),
+        svg_text(58,496,f"Blocking issues: {issues} • identity warnings: {warnings}",15),
         svg_text(58,524,f"Generated: {generated}",13),
         '</svg>'
     ]
@@ -204,10 +203,10 @@ def main():
     epg_pct=round(g.get("LivePct",0))
     epg_missing=g.get("No mapping",0)
     issues=sum(a.get(k,0) for k in [
-        "Duplicate stream URLs","Metadata conflicts","Same-name / different-ID collisions",
-        "Cross-country backup collisions","Protected primary-entry changes","Logo exceptions",
+        "Duplicate stream URLs","Metadata conflicts","Cross-country backup collisions","Protected primary-entry changes","Logo exceptions",
         "Duplicate primary identities","Primary channel-number collisions"
     ])
+    warnings=a.get("Same-name / different-ID collisions",0)
     write_maintenance_report(d,a,g,groups,datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"))
     history=history_stats()
     history_line="No historical maintenance records yet."
