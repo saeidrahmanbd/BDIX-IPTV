@@ -215,6 +215,8 @@ def main():
         history_line=(f"Latest run vs previous: entries {prev.get('entries')} → {cur.get('entries')}; "
                       f"logo exceptions {prev.get('logo_exceptions')} → {cur.get('logo_exceptions')}; "
                       f"metadata conflicts {prev.get('metadata_conflicts')} → {cur.get('metadata_conflicts')}.")
+    elif len(history)==1:
+        history_line="First maintenance run recorded successfully."
     now=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     md=f"""# Project Dashboard
 
