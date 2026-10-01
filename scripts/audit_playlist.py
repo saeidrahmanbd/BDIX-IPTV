@@ -246,6 +246,12 @@ try:
 except Exception:
     pass
 
+missing_primary_chno = [
+    (info, url) for info, url in entries
+    if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS
+    and not attrs(info).get("tvg-chno", "").strip()
+]
+
 lines = [
     "# Playlist Audit",
     "",
