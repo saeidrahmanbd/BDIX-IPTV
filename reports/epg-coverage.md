@@ -1,15 +1,15 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-01T08:12:15+00:00**
+Generated: **2026-10-01T09:12:16+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **244**
-- Channels with an EPG mapping: **158**
-- Current/future programme coverage: **146/244 (59.8%)**
-- No guide mapping found: **86**
+- Active Indian channels audited: **258**
+- Channels with an EPG mapping: **171**
+- Current/future programme coverage: **158/258 (61.2%)**
+- No guide mapping found: **87**
 
 ## Source Status
 
@@ -29,16 +29,18 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Music | Ekamra Musiq | custom.ekamra.musiq | Ekamra.Musiq.in | MAPPED_ID_ONLY |
 | Indian Movies | Gold Mines Movie | GoldminesMovies.in@SD | Goldmines.Movies.in | MAPPED_ID_ONLY |
 | Indian Movies | Goldmines Bollywood | GoldminesBollywood.in@SD | Goldmines.Bollywood.in | MAPPED_ID_ONLY |
+| Indian Movies | Goldmines Movies | GoldminesMovies.in | Goldmines.Movies.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Nazara | Nazara.in@SD | NAZARA.in | MAPPED_ID_ONLY |
 | Indian Entertainment | One Paschima | OnePaschima.in@SD | One.Paschima.in | MAPPED_ID_ONLY |
+| Indian Movies | Sony Entertainment TV | SonyEntertainmentTelevision.in@SD | Sony.Entertainment.Television.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Sony Entertainment TV | SonyEntertainmentTelevision.in@SD | Sony.Entertainment.Television.in | MAPPED_ID_ONLY |
-| Indian Music | Steelbird Music | SteelbirdMusic.in@SD | Steelbird.Music.in | MAPPED_ID_ONLY |
 | Indian Bangla | DD Tripura | DDTripura.in@SD | DDTripura.in@SD | MAPPED_NOT_CURRENTLY_FOUND |
 | Indian Music | 7X Punjabi | custom.7x.punjabi | - | NO_GUIDE_HIT |
 | Indian Music | 8XM | 8XM.pk | - | NO_GUIDE_HIT |
 | Indian Music | ARY Music | ARYMusic.pk | - | NO_GUIDE_HIT |
 | Indian Music | Aaryaa TV | AaryaaTV.in | - | NO_GUIDE_HIT |
 | Indian Bangla | Amar Bangla Digital | custom.amar.bangla.digital | - | NO_GUIDE_HIT |
+| Indian Movies | B4U Bhojpuri Plus (1080p) | B4UBhojpuri.in@Plus | - | NO_GUIDE_HIT |
 | Indian Bangla | Bangla Plus | BanglaPlus.in | - | NO_GUIDE_HIT |
 | Indian Bangla | Bengali Beats | custom.bengali.beats | - | NO_GUIDE_HIT |
 | Indian Movies | Bollywood Film | BollywoodFilm.ro | - | NO_GUIDE_HIT |
