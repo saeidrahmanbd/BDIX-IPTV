@@ -1,21 +1,24 @@
 # Project Dashboard
 
-_Last generated: **2026-10-01 09:30 UTC**_
+_Last generated: **2026-10-01 09:31 UTC**_
 
 | Metric | Current |
 |---|---:|
-| 📺 Streams | **1025** |
-| 📡 Active Channels | **587** |
-| 🇧🇩 Bangladesh | **57** |
-| 🇮🇳 India | **259** |
-| 🔁 Backup Streams | **413** |
-| 🆕 New Channels | **9** |
-| 🆕 New Backup Streams | **16** |
-| 🖼️ Local Logos | **100.0%** |
-| 📅 EPG Programme Coverage | **61%** |
-| 🗺️ EPG Mapping | **66.0%** |
-| ⚠️ Audit Blocking Issues | **0** |
-| ℹ️ Identity Warnings | **0** |
+| Streams | **1025** |
+| Active Channels | **587** |
+| Bangladesh | **57** |
+| India | **259** |
+| Backup Streams | **413** |
+| New Channels | **9** |
+| New Backup Streams | **16** |
+| Local Logos | **100.0%** |
+| EPG Programme Coverage | **61.4%** |
+| EPG Mapping | **66.0%** |
+| Stream Health Tested | **0** |
+| Stream Health Failures | **0** |
+| Persistent Failures | **0** |
+| Audit Blocking Issues | **0** |
+| Pre-Publish Gate | **PASS** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -23,20 +26,35 @@ _Last generated: **2026-10-01 09:30 UTC**_
 - Same-name / different-ID collisions: **0**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
+- Primary entries missing channel numbers: **0**
 - Logo exceptions: **0**
-- EPG channels without mapping: **88**
-- Signed/tokenized stream URLs: **15**
+- Signed/tokenized URLs: **15**
 
-## Data Freshness
-| Source | Last generated |
+## Safety & Automation
+- Stream health is non-destructive and keeps per-URL failure history.
+- Backup streams are never automatically deleted because of health failures.
+- Review queues remain user-controlled.
+- Pre-publish gate status: **PASS**
+- Canonical channel identity index: reports/channel-identity-index.json
+
+## EPG
+- Indian channels audited: **259**
+- Mapped: **171 (66.0%)**
+- Current/future programme coverage: **159/259 (61.4%)**
+- No mapping: **88**
+- Publication remains subject to source-policy approval.
+
+## Freshness
+| Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-01T09:30:16.421105+00:00** |
-| EPG coverage | **2026-10-01T09:30:16+00:00** |
+| Playlist audit | **2026-10-01T09:31:50.183673+00:00** |
+| EPG coverage | **2026-10-01T09:31:49+00:00** |
+| Stream health | **not available** |
+| Pre-publish gate | **not available** |
 
 ## Maintenance History
-- Recorded runs retained: **11**
-- Latest run vs previous: entries 1025 → 1025; logo exceptions 0 → 0; metadata conflicts 0 → 0.
+- Records retained: **12**
+- Latest entries change: **1025 → 1025**
+- Latest health failures: **— → None**
 
-Historical records are retained in `reports/maintenance-history.json` (latest 180 runs).
-
-This dashboard intentionally does not perform or report stream-health probing.
+Historical records are retained in reports/maintenance-history.json.
