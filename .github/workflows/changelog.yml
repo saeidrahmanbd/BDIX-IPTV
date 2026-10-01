@@ -19,7 +19,7 @@ permissions:
 concurrency:
   group: iptv-repository-writes
   cancel-in-progress: false
-  queue: max
+  queue: single
 
 jobs:
   changelog:
