@@ -219,7 +219,7 @@ for r in missing:
  if r["name"]=="Sony Max": assign[r["i"]]=384
 stats={"numbers":0,"logos":0,"backups":0}
 for r in rows:
- a=r["a"]; g=a.get("group-title","").strip(); m=r["line"]; display=r["name"]
+ a=r["a"]; g=a.get("group-title","").strip(); m=r["line"].split(",",1)[0]; display=r["name"]
  if g not in EXCLUDE:
   name=a.get("tvg-name") or r["name"]; cid=a.get("tvg-id") or a.get("channel-id") or IDS.get(name) or "custom."+norm(name)
   m=set_attr(m,"tvg-id",cid); m=set_attr(m,"channel-id",cid); m=set_attr(m,"tvg-name",name)
