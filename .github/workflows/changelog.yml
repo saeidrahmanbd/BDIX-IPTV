@@ -17,8 +17,9 @@ permissions:
   contents: write
 
 concurrency:
-  group: iptv-changelog
+  group: iptv-repository-writes
   cancel-in-progress: false
+  queue: max
 
 jobs:
   changelog:
