@@ -1,15 +1,15 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-01T11:35:19+00:00**
+Generated: **2026-10-01T11:56:03+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **256**
-- Channels with an EPG mapping: **170**
-- Current/future programme coverage: **158/256 (61.7%)**
-- No guide mapping found: **86**
+- Active Indian channels audited: **251**
+- Channels with an EPG mapping: **167**
+- Current/future programme coverage: **155/251 (61.8%)**
+- No guide mapping found: **84**
 
 ## Source Status
 
@@ -41,7 +41,6 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Bangla | Amar Bangla Digital | custom.amar.bangla.digital | - | NO_GUIDE_HIT |
 | Indian Movies | B4U Bhojpuri Plus (1080p) | B4UBhojpuri.in@Plus | - | NO_GUIDE_HIT |
 | Indian Bangla | Bangla Plus | BanglaPlus.in | - | NO_GUIDE_HIT |
-| Indian Bangla | Bengali Beats | custom.bengali.beats@ALT1 | - | NO_GUIDE_HIT |
 | Indian Movies | Bollywood Film | BollywoodFilm.ro | - | NO_GUIDE_HIT |
 | Indian Entertainment | C Malayalam TV | CMalayalamTV.ca@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Colors Cineplex [UK] | custom.colors.cineplex | - | NO_GUIDE_HIT |
@@ -103,7 +102,6 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Bangla | Sananda | SanandaTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | Shemaroo Josh | ShemarooJosh.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Shubh Cinema TV | ShubhCinemaTV.in | - | NO_GUIDE_HIT |
-| Indian Movies | Sony Entertainment TV | SonyEntertainmentTelevision.in@SD@ALT1 | - | NO_GUIDE_HIT |
 | Indian Entertainment | Sony KAL | SonyKALHindi.us | - | NO_GUIDE_HIT |
 | Indian Movies | Sony Max 2 [US] | custom.sony.max.2 | - | NO_GUIDE_HIT |
 | Indian Movies | South Movies | custom.south.movies | - | NO_GUIDE_HIT |

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T11:35:20+00:00",
+  "generated": "2026-10-01T11:56:04+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -721,17 +721,15 @@
         "B4U Music"
       ],
       "ids": [
-        "b4umusic.in@india",
-        "b4umusic.in@india@alt1"
+        "b4umusic.in@india"
       ],
       "groups": [
         "Backup",
-        "Indian Movies",
         "Indian Music"
       ],
       "streams": 4,
-      "primary": 2,
-      "backup": 2
+      "primary": 1,
+      "backup": 3
     },
     "babysharktv": {
       "names": [
@@ -1273,33 +1271,30 @@
         "Colors Bangla Cinema"
       ],
       "ids": [
-        "colorsbanglacinema.in@sd",
-        "colorsbanglacinema.in@sd@alt1"
+        "colorsbanglacinema.in@sd"
       ],
       "groups": [
         "Backup",
-        "Indian Bangla",
-        "Indian Movies"
+        "Indian Bangla"
       ],
       "streams": 4,
-      "primary": 2,
-      "backup": 2
+      "primary": 1,
+      "backup": 3
     },
     "colorscineplex": {
       "names": [
         "Colors Cineplex"
       ],
       "ids": [
-        "colorscineplex.in@sd",
-        "colorscineplex.in@sd@alt1"
+        "colorscineplex.in@sd"
       ],
       "groups": [
         "Backup",
         "Indian Movies"
       ],
       "streams": 3,
-      "primary": 2,
-      "backup": 1
+      "primary": 1,
+      "backup": 2
     },
     "colorscineplexbollywood": {
       "names": [
@@ -1588,16 +1583,15 @@
         "Bengali Beats"
       ],
       "ids": [
-        "custom.bengali.beats",
-        "custom.bengali.beats@alt1"
+        "custom.bengali.beats"
       ],
       "groups": [
-        "Bangladesh",
-        "Indian Bangla"
+        "Backup",
+        "Bangladesh"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "custom.bon.voyage": {
       "names": [
@@ -7016,17 +7010,15 @@
         "Sony Entertainment TV"
       ],
       "ids": [
-        "sonyentertainmenttelevision.in@sd",
-        "sonyentertainmenttelevision.in@sd@alt1"
+        "sonyentertainmenttelevision.in@sd"
       ],
       "groups": [
         "Backup",
-        "Indian Entertainment",
-        "Indian Movies"
+        "Indian Entertainment"
       ],
       "streams": 4,
-      "primary": 2,
-      "backup": 2
+      "primary": 1,
+      "backup": 3
     },
     "sonykalhindi": {
       "names": [
