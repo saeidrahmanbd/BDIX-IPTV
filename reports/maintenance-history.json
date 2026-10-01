@@ -1,9 +1,9 @@
 [
   {
-    "timestamp_utc": "2026-09-30T11:20:03.309520+00:00",
-    "entries": 866,
-    "unique_channel_ids": 606,
-    "duplicate_ids": 158,
+    "timestamp_utc": "2026-10-01T06:15:29.634566+00:00",
+    "entries": 1033,
+    "unique_channel_ids": 642,
+    "duplicate_ids": 200,
     "duplicate_urls": 0,
     "metadata_conflicts": 0,
     "logo_exceptions": 0,

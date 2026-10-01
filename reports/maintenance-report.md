@@ -1,20 +1,20 @@
 # IPTV Maintenance Report
 
-_Generated: **2026-09-30 11:20 UTC**_
+_Generated: **2026-10-01 06:15 UTC**_
 
 ## Run Summary
 
 | Item | Result |
 |---|---:|
-| 🆕 New channels discovered **this run** | **0** |
-| 🔁 New backups discovered **this run** | **0** |
-| 🚫 Rejected candidates | **643** |
-| 📺 Current playlist streams | **861** |
-| 📡 Current channel IDs | **606** |
-| 🔁 Current backup streams | **317** |
+| 🆕 New channels discovered **this run** | **20** |
+| 🔁 New backups discovered **this run** | **30** |
+| 🚫 Rejected candidates | **713** |
+| 📺 Current playlist streams | **1033** |
+| 📡 Current channel IDs | **642** |
+| 🔁 Current backup streams | **420** |
 | 🖼️ Logo exceptions | **0** |
 | 📅 EPG coverage | **60%** |
-| ⚠️ Audit issues | **12** |
+| ⚠️ Audit issues | **5** |
 
 ## New Channels This Run
 
@@ -26,14 +26,14 @@ None.
 
 ## Metadata Repairs This Run
 
-- Entries processed: **861**
+- Entries processed: **1033**
 - Deterministic IDs generated: **0**
 - channel-id/tvg-id identities synchronized: **0**
 - tvg-name values normalized: **0**
 - Display names normalized: **0**
 - Backup channel numbers removed: **0**
 - Missing primary channel numbers added: **0**
-- Duplicate/invalid primary channel numbers repaired: **522**
+- Duplicate/invalid primary channel numbers repaired: **0**
 
 ## Current Audit Status
 
@@ -43,15 +43,15 @@ None.
 - Primary channel-number collisions: **0**
 - Cross-country backup collisions: **0**
 - Logo exceptions: **0**
-- EPG channels without mapping: **84**
+- EPG channels without mapping: **86**
 
 ## Current Playlist Totals
 
 - Bangladesh: **54**
-- India: **234**
-- New Channels category: **12**
-- New Backup category: **10**
-- Backup category: **317**
+- India: **244**
+- New Channels category: **20**
+- New Backup category: **30**
+- Backup category: **420**
 
 ## Detailed Reports
 

@@ -1,22 +1,22 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-09-30T11:20:15+00:00**
+Generated: **2026-10-01T06:15:41+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **234**
-- Channels with an EPG mapping: **150**
-- Current/future programme coverage: **141/234 (60.3%)**
-- No guide mapping found: **84**
+- Active Indian channels audited: **244**
+- Channels with an EPG mapping: **158**
+- Current/future programme coverage: **146/244 (59.8%)**
+- No guide mapping found: **86**
 
 ## Source Status
 
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 817 current/future IDs; 112667 programme rows
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 531 current/future IDs; 21138 programme rows
-- **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 68009 programme rows
-- **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19643 programme rows
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 817 current/future IDs; 112127 programme rows
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 531 current/future IDs; 21237 programme rows
+- **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 68151 programme rows
+- **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19767 programme rows
 
 ## Channels Requiring Attention
 
@@ -24,6 +24,9 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 |---|---|---|---|---|
 | Indian Music | 7S Music | 7SMusic.in@SD | 7S.MUSIC.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Ekamra Bharat Odia | EkamraBharatOdia.in@SD | Ekamra.Bharat.Odia.in | MAPPED_ID_ONLY |
+| Indian Movies | Ekamra Cinema | custom.ekamra.cinema | Ekamra.Cinema.in | MAPPED_ID_ONLY |
+| Indian Movies | Ekamra Manoranjan | custom.ekamra.manoranjan | Ekamra.Manoranjan.in | MAPPED_ID_ONLY |
+| Indian Music | Ekamra Musiq | custom.ekamra.musiq | Ekamra.Musiq.in | MAPPED_ID_ONLY |
 | Indian Movies | Gold Mines Movie | GoldminesMovies.in@SD | Goldmines.Movies.in | MAPPED_ID_ONLY |
 | Indian Movies | Goldmines Bollywood | GoldminesBollywood.in@SD | Goldmines.Bollywood.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Nazara | Nazara.in@SD | NAZARA.in | MAPPED_ID_ONLY |
@@ -64,6 +67,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Entertainment | Geo Kahani | GeoKahani.pk | - | NO_GUIDE_HIT |
 | Indian Movies | Goldmines 2 | Goldmines2.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Goldmines Action | GoldminesAction.in | - | NO_GUIDE_HIT |
+| Indian Entertainment | HUM Masala | HUMMasala.pk | - | NO_GUIDE_HIT |
 | Indian Entertainment | HUM TV | HumTV.pk | - | NO_GUIDE_HIT |
 | Indian Music | Hindi Hits | HindiHits.in | - | NO_GUIDE_HIT |
 | Indian Movies | Hindi Movie Classic 24 | custom.hindi.movie.classic.24 | - | NO_GUIDE_HIT |
@@ -79,6 +83,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Movies | MH One Movies | MHOneMovies.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | MH One Prime | Mh1Prime.in | - | NO_GUIDE_HIT |
 | Indian Movies | MNTV (Tamil) | MarutamTV.in | - | NO_GUIDE_HIT |
+| Indian Entertainment | MTV India | MTVIndia.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Manoranjan Prime | ManoranjanPrime.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Mei Alai TV | MeiAlaiTV.in | - | NO_GUIDE_HIT |
 | Indian Movies | NH BollyFlix | NHBollyFlix.in | - | NO_GUIDE_HIT |
