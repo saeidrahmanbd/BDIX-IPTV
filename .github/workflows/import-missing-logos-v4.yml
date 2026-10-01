@@ -1,0 +1,32 @@
+name: Import missing logos v4
+on:
+  push:
+    paths:
+      - ".github/workflows/import-missing-logos-v4.yml"
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Finalize logos
+        run: |
+          python - <<'PY'
+          import os, subprocess, requests, shutil
+          os.makedirs("logos", exist_ok=True)
+          src={
+          "axn.svg":"https://www.tvlogo.org/india/axn-in.png",
+          "al-jazeera.png":"https://s3.aynaott.com/storage/5d707a103f48d8f9f1634f1b70e2ecdf",
+          "lotus-tv.png":"https://www.tvlogo.org/india/lotus-tv-in.png",
+          }
+          for n,u in src.items():
+            try:
+              r=requests.get(u,headers={"User-Agent":"Mozilla/5.0"},timeout=30); r.raise_for_status(); open("logos/"+n,"wb").write(r.content); print("OK",n)
+            except Exception as e: print("WARN",n,e)
+          def svg(n,t):
+            open("logos/"+n,"w").write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180"><rect width="600" height="180" rx="30" fill="#222"/><text x="300" y="112" text-anchor="middle" font-family="Arial" font-size="76" font-weight="700" fill="white">{t}</text></svg>')
+          svg("lotus-tv.svg","LOTUS TV"); svg("stingray-music.svg","Stingray"); svg("stingray-stream-101.svg","Stingray"); svg("stingray-stream-137.svg","Stingray"); svg("pishow.svg","Pishow"); svg("pishow-stream-10007.svg","Pishow")
+          shutil.copyfile("logos/raj-digital-plus.png","logos/raj-music-telugu.png")
+          subprocess.run(["git","config","user.name","github-actions[bot]"],check=True); subprocess.run(["git","config","user.email","41898282+github-actions[bot]@users.noreply.github.com"],check=True); subprocess.run(["git","add","logos"],check=True); subprocess.run(["git","commit","-m","Import remaining channel logos"],check=False); subprocess.run(["git","push"],check=True)
+          PY
