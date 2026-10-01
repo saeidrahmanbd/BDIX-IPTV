@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-01T11:29:20.128987+00:00**
+Generated: **2026-10-01T11:35:20.331908+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -15,7 +15,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - IDs with multiple logo references: **3**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **0**
-- Duplicate primary identities: **1**
+- Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Suspicious URL credentials/syntax: **0**
@@ -71,7 +71,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Animal Planet — Backup — http://198.195.239.50:8095/ANIMAL.PLANET.HD/index.m3u8
 ### asianetmovies.in@sd (2 streams)
 - Asianet Movies — Indian Movies — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:asianetmovies1.smil/playlist.m3u8
-- Asianet Movies — Indian Movies — http://51.75.127.199:3141/asianetmovies/index.m3u8
+- Asianet Movies — Backup — http://51.75.127.199:3141/asianetmovies/index.m3u8
 ### asiantv.bd (3 streams)
 - Asian TV — Bangladesh — https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/index.m3u8
 - Asian TV — Backup — https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/tracks-v1a1/mono.ts.m3u8
@@ -741,7 +741,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-- **asianetmovies.in@sd** in **Indian Movies** — Asianet Movies, Asianet Movies
+None.
 
 ## Primary Channel-Number Collisions
 

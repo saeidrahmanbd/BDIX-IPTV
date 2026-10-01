@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T11:29:20+00:00",
+  "generated": "2026-10-01T11:35:20+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -503,11 +503,12 @@
         "asianetmovies.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Movies"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "asiantv": {
       "names": [

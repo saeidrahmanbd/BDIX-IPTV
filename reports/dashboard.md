@@ -1,33 +1,33 @@
 # Project Dashboard
 
-_Last generated: **2026-10-01 11:30 UTC**_
+_Last generated: **2026-10-01 11:36 UTC**_
 
 | Metric | Current |
 |---|---:|
 | Streams | **992** |
 | Active Channel Identities | **582** |
-| Active Primary Streams | **583** |
+| Active Primary Streams | **582** |
 | Bangladesh | **55** |
-| India | **257** |
-| Backup Streams | **374** |
+| India | **256** |
+| Backup Streams | **375** |
 | New Channels | **15** |
 | New Backup Streams | **20** |
 | Local Logos | **100.0%** |
 | EPG Programme Coverage | **61.7%** |
 | EPG Mapping | **66.4%** |
 | Stream Health Tested | **957** |
-| Stream Health Failures | **114** |
-| Persistent Failures | **110** |
+| Stream Health Failures | **117** |
+| Persistent Failures | **112** |
 | Near-Duplicate URL Families | **0** |
-| Audit Blocking Issues | **1** |
+| Audit Blocking Issues | **0** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-01T11:30:05+00:00** |
+| Pre-Publish Gate Generated | **2026-10-01T11:36:05+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
-- Duplicate primary identities: **1**
+- Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Logo exceptions: **0**
@@ -50,14 +50,14 @@ _Last generated: **2026-10-01 11:30 UTC**_
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-01T11:29:20.128987+00:00** |
-| EPG coverage | **2026-10-01T11:29:19+00:00** |
-| Stream health | **2026-10-01T11:30:05+00:00** |
-| Pre-publish gate | **2026-10-01T11:30:05+00:00** |
+| Playlist audit | **2026-10-01T11:35:20.331908+00:00** |
+| EPG coverage | **2026-10-01T11:35:19+00:00** |
+| Stream health | **2026-10-01T11:36:05+00:00** |
+| Pre-publish gate | **2026-10-01T11:36:05+00:00** |
 
 ## Maintenance History
-- Records retained: **19**
-- Latest entries change: **1025 → 992**
-- Latest health failures: **128 → 114**
+- Records retained: **20**
+- Latest entries change: **992 → 992**
+- Latest health failures: **114 → 117**
 
 Historical records are retained in reports/maintenance-history.json.
