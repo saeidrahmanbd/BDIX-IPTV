@@ -1,0 +1,54 @@
+name: Import missing logos v5
+on:
+  push:
+    paths:
+      - ".github/workflows/import-missing-logos-v5.yml"
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import and commit logos
+        run: |
+          python - <<'PY'
+          import os,requests,subprocess,shutil
+          os.makedirs("logos",exist_ok=True)
+          S={
+          "and-pictures.png":"https://www.tvlogo.org/india/and-pictures-in.png",
+          "and-xplor-hd.svg":"https://static.wikia.nocookie.net/logopedia/images/1/1f/%26xplor_HD_%282025%29.svg/revision/latest?cb=20250608131144",
+          "and-prive-hd.png":"https://www.tvlogo.org/india/and-prive-hd-in.png",
+          "zing.png":"https://www.tvlogo.org/india/zing-in.png",
+          "star-bharat.png":"https://www.tvlogo.org/india/star-bharat-in.png",
+          "etv-bal-bharat.png":"https://www.tvlogo.org/india/etv-bal-bharat-in.png",
+          "hungama.png":"https://www.tvlogo.org/india/hungama-in.png",
+          "nick.png":"https://www.tvlogo.org/india/nick-in.png",
+          "super-hungama.png":"https://www.tvlogo.org/india/super-hungama-in.png",
+          "sony-sports-ten-4.png":"https://www.tvlogo.org/india/sony-ten-4-in.png",
+          "sony-sports-ten-5.png":"https://www.tvlogo.org/india/sony-ten-5-in.png",
+          "star-sports-1.png":"https://www.tvlogo.org/india/star-sports-1-in.png",
+          "star-sports-3.png":"https://www.tvlogo.org/india/star-sports-3-in.png",
+          "star-sports-select-1.png":"https://www.tvlogo.org/india/star-sports-select-1-in.png",
+          "star-sports-select-2.png":"https://www.tvlogo.org/india/star-sports-select-2-in.png",
+          "zee-bangla-cinema.png":"https://www.tvlogo.org/india/zee-bangla-cinema-in.png",
+          "zoom-music.png":"https://www.tvlogo.org/india/zoom-in.png",
+          "al-jazeera.png":"https://s3.aynaott.com/storage/5d707a103f48d8f9f1634f1b70e2ecdf",
+          "dw-news.jpg":"https://deultimominuto.net/wp-content/uploads/2022/03/DW-LOGO.jpg",
+          "bbc-news.png":"https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png",
+          "geo-news.png":"http://103.176.90.118/picons/logos/logos/geonews.png",
+          "mn-plus.jpeg":"https://d229kpbsb5jevy.cloudfront.net/timesplay/content/common/logos/channel/logos/leazcc.jpeg",
+          "romedy-now.jpeg":"https://d229kpbsb5jevy.cloudfront.net/timesplay/content/common/logos/channel/logos/nchght.jpeg",
+          "ptv-sports.png":"https://upload.wikimedia.org/wikipedia/en/e/e4/PTV_Sports.png"}
+          for n,u in S.items():
+            try:
+              r=requests.get(u,headers={"User-Agent":"Mozilla/5.0"},timeout=30);r.raise_for_status();open("logos/"+n,"wb").write(r.content)
+            except Exception as e: print("WARN",n,e)
+          def svg(n,t): open("logos/"+n,"w").write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180"><rect width="600" height="180" rx="30" fill="#222"/><text x="300" y="112" text-anchor="middle" font-family="Arial" font-size="76" font-weight="700" fill="white">{t}</text></svg>')
+          svg("axn.svg","AXN");svg("lotus-tv.svg","LOTUS TV");svg("stingray-music.svg","Stingray");svg("stingray-stream-101.svg","Stingray");svg("stingray-stream-137.svg","Stingray");svg("pishow.svg","Pishow");svg("pishow-stream-10007.svg","Pishow")
+          shutil.copyfile("logos/raj-digital-plus.png","logos/raj-music-telugu.png")
+          subprocess.run(["git","config","user.name","github-actions[bot]"],check=True);subprocess.run(["git","config","user.email","41898282+github-actions[bot]@users.noreply.github.com"],check=True);subprocess.run(["git","add","logos"],check=True);subprocess.run(["git","commit","-m","Import missing channel logos"],check=False)
+          for _ in range(5):
+            subprocess.run(["git","pull","--rebase","origin","main"],check=False)
+            if subprocess.run(["git","push","origin","HEAD:main"],check=False).returncode==0: break
+          PY
