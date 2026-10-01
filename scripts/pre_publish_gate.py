@@ -26,7 +26,8 @@ def main():
     removed=[(a.get("tvg-name",""),u) for a,u in old_primary if not cur_by_url.get(u.lower())]
     old_review={u.lower():a.get("group-title","").strip() for _,a,u in old if a.get("group-title","").strip() in {"New Channels","New Backup"}}
     cur_review={u.lower():a.get("group-title","").strip() for _,a,u in current if a.get("group-title","").strip() in {"New Channels","New Backup"}}
-    reclassified=[u for u,g in old_review.items() if u not in cur_review and any(x.lower()==u for _,_,x in current)]
+    reclassified=[u for u,g in old_review.items() if u in cur_review and cur_review[u] != g]
+    review_removed=[u for u,g in old_review.items() if u not in cur_review and not any(x.lower()==u for _,_,x in current)]
     primary_chno=Counter(a.get("tvg-chno","").strip() for a,u in cur_primary if a.get("tvg-chno","").strip())
     chno_dupes=[n for n,c in primary_chno.items() if c>1]
     missing=[a.get("tvg-name","") for a,u in cur_primary if not a.get("tvg-chno","").strip()]
@@ -34,6 +35,7 @@ def main():
     if dup_urls: issues.append(f"duplicate stream URLs: {len(dup_urls)}")
     if removed: issues.append(f"primary streams removed: {len(removed)}")
     if reclassified: issues.append(f"review entries reclassified: {len(reclassified)}")
+    if review_removed: issues.append(f"review entries deleted: {len(review_removed)}")
     if chno_dupes: issues.append(f"duplicate primary channel numbers: {len(chno_dupes)}")
     if missing: issues.append(f"primary entries missing tvg-chno: {len(missing)}")
     status="PASS" if not issues else "BLOCK"
@@ -44,10 +46,11 @@ def main():
     modified=[u for u in cur_by_url_all if u in old_by_url and cur_by_url_all[u]!=old_by_url[u]]
     lines=["# Pre-Publish Safety Gate","",f"Generated: **{datetime.now(timezone.utc).isoformat(timespec="seconds")}**","",f"Status: **{status}**","",f"- Current entries: **{len(current)}**",
            f"- Duplicate stream URLs: **{len(dup_urls)}**",f"- Primary streams removed: **{len(removed)}**",
-           f"- Review entries reclassified: **{len(reclassified)}**",f"- Duplicate primary channel numbers: **{len(chno_dupes)}**",
+           f"- Review entries reclassified: **{len(reclassified)}**",f"- Review entries deleted: **{len(review_removed)}**",f"- Duplicate primary channel numbers: **{len(chno_dupes)}**",
            f"- Primary entries missing tvg-chno: **{len(missing)}**",f"- Entries added this run: **{len(added)}**",f"- Entries removed this run: **{len(removed_all)}**",f"- Entries modified this run: **{len(modified)}**","","## Change Summary",
            "1. Never publish duplicate stream URLs.","2. Never silently remove an existing primary stream.",
-           "3. Never silently promote/reclassify review-queue entries.","4. Never publish duplicate or missing primary channel numbers."]
+           "3. Never silently promote/reclassify review-queue entries.",
+           "4. Never silently delete New Channels or New Backup review entries.","5. Never publish duplicate or missing primary channel numbers."]
     if added:
         lines.append("Added: " + ", ".join(added[:20]) + (" ..." if len(added)>20 else ""))
     else: lines.append("Added: none")
