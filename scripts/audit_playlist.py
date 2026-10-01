@@ -265,6 +265,7 @@ lines = [
     f"- Logo exceptions: **{len(logo_exceptions)}**",
     f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**",
     f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**",
+    f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**",
     f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**",
     f"- Signed/tokenized stream URLs: **{len(signed_urls)}**",
     "",
@@ -478,6 +479,11 @@ backup_channel_numbers = [
     (info, url) for info, url in entries
     if attrs(info).get("group-title", "").strip() == "Backup"
     and attrs(info).get("tvg-chno", "").strip()
+]
+missing_primary_chno = [
+    (info, url) for info, url in entries
+    if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS
+    and not attrs(info).get("tvg-chno", "").strip()
 ]
 missing_tvg_name = [
     (info, url) for info, url in entries
