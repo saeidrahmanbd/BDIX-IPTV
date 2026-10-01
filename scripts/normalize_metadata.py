@@ -234,7 +234,7 @@ for r in rows:
   cid=(pr["a"].get("tvg-id") if pr else None) or IDS.get(name) or a.get("tvg-id") or "custom."+norm(name)
   m=set_attr(m,"tvg-id",cid); m=set_attr(m,"channel-id",cid); m=set_attr(m,"tvg-name",name); display=name
   logo=(pr["a"].get("tvg-logo") if pr else None) or LOGOS.get(r["name"]) or LOGOS.get(name)
-  if logo and not a.get("tvg-logo"): set_attr(m,"tvg-logo",logo if logo.startswith("http") else RAW+logo); stats["logos"]+=1
+  if logo and not a.get("tvg-logo"): m=set_attr(m,"tvg-logo",logo if logo.startswith("http") else RAW+logo); stats["logos"]+=1
   m=re.sub(r'\s*tvg-chno="[^"]*"',"",m); stats["backups"]+=1
  lines[r["i"]]=f"{m},{display}"
 P.write_text("\n".join(lines)+"\n",encoding="utf-8")
