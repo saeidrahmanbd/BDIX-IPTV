@@ -1689,79 +1689,79 @@ https://live.ekamraott.com/cynema/cynema/index.m3u8
 https://live.ekamraott.com/manoranjan/manoranjan/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekamra-musiq.png" tvg-name="Ekamra Musiq" group-title="New Channels",Ekamra Musiq
 https://live.ekamraott.com/musiq/musiq/index.m3u8
-#EXTINF:-1 tvg-name="Raj Music Telugu" group-title="New Channels",Raj Music Telugu
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/raj-music-telugu.png" tvg-name="Raj Music Telugu" group-title="New Channels",Raj Music Telugu
 https://mumt07.tangotv.in/zHjX9OFlRAJMUSIXTELUGU/index.m3u8
-#EXTINF:-1 tvg-name="&pictures" group-title="New Channels",&pictures
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-pictures.png" tvg-name="&pictures" group-title="New Channels",&pictures
 http://198.195.239.50:8095/ANT.PICTURS.HD/index.m3u8
-#EXTINF:-1 tvg-name="Xplor" group-title="New Channels",Xplor
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-xplor-hd.svg" tvg-name="Xplor" group-title="New Channels",Xplor
 http://198.195.239.50:8095/XPLOR.HD/index.m3u8
-#EXTINF:-1 tvg-name="Zing" group-title="New Channels",Zing
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zing.png" tvg-name="Zing" group-title="New Channels",Zing
 http://198.195.239.50:8095/ZING.MUSIC/index.m3u8
-#EXTINF:-1 tvg-name="HUM Masala" group-title="New Channels",HUM Masala
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-masala.svg" tvg-name="HUM Masala" group-title="New Channels",HUM Masala
 http://198.195.239.50:8095/HUM.MASALA.TV/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mtv.png" tvg-name="MTV India" group-title="New Channels",MTV India
 http://198.195.239.50:8095/MTV.INDIA/index.m3u8
-#EXTINF:-1 tvg-name="Star Bharat" group-title="New Channels",Star Bharat
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-bharat.png" tvg-name="Star Bharat" group-title="New Channels",Star Bharat
 http://198.195.239.50:8095/STAR.BHARAT.HD/index.m3u8
-#EXTINF:-1 tvg-name="&Privé HD" group-title="New Channels",&Privé HD
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-prive-hd.png" tvg-name="&Privé HD" group-title="New Channels",&Privé HD
 http://198.195.239.50:8095/AND.PRIVE.HD/index.m3u8
-#EXTINF:-1 tvg-name="Al Jazeera" group-title="New Channels",Al Jazeera
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/al-jazeera.png" tvg-name="Al Jazeera" group-title="New Channels",Al Jazeera
 http://198.195.239.50:8095/ALJAZEERA.HD/index.m3u8
-#EXTINF:-1 tvg-name="AXN" group-title="New Channels",AXN
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/axn.svg" tvg-name="AXN" group-title="New Channels",AXN
 http://198.195.239.50:8095/AXN.HD/index.m3u8
-#EXTINF:-1 tvg-name="BBC News" group-title="New Channels",BBC News
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-news.png" tvg-name="BBC News" group-title="New Channels",BBC News
 http://198.195.239.50:8095/BBC.NEWS/index.m3u8
-#EXTINF:-1 tvg-name="DW News" group-title="New Channels",DW News
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dw-news.jpg" tvg-name="DW News" group-title="New Channels",DW News
 http://198.195.239.50:8095/DW.NEWS.HD/index.m3u8
-#EXTINF:-1 tvg-name="Geo News" group-title="New Channels",Geo News
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/geo-news.png" tvg-name="Geo News" group-title="New Channels",Geo News
 http://198.195.239.50:8095/GEO.NEWS.HD/index.m3u8
-#EXTINF:-1 tvg-name="Lotus TV" group-title="New Channels",Lotus TV
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lotus-tv.svg" tvg-name="Lotus TV" group-title="New Channels",Lotus TV
 http://198.195.239.50:8095/Lotus.TV.HD/index.m3u8
-#EXTINF:-1 tvg-name="MN+" group-title="New Channels",MN+
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mn-plus.jpeg" tvg-name="MN+" group-title="New Channels",MN+
 http://198.195.239.50:8095/MN.PLUS.HD/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mnx-576p-1964fe6da3.png" tvg-name="MNX" group-title="New Channels",MNX
 http://198.195.239.50:8095/MNX.HD/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-now-hd.png" tvg-name="Movies Now" group-title="New Channels",Movies Now
 http://198.195.239.50:8095/MOVIES.NOW.HD/index.m3u8
-#EXTINF:-1 tvg-name="Romedy Now" group-title="New Channels",Romedy Now
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/romedy-now.jpeg" tvg-name="Romedy Now" group-title="New Channels",Romedy Now
 http://198.195.239.50:8095/ROMEDY.NOW/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-pix-hd.png" tvg-name="Sony PIX" group-title="New Channels",Sony PIX
 http://198.195.239.50:8095/SONY.PIX.HD/index.m3u8
-#EXTINF:-1 tvg-name="ETV Bal Bharat" group-title="New Channels",ETV Bal Bharat
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-bal-bharat.png" tvg-name="ETV Bal Bharat" group-title="New Channels",ETV Bal Bharat
 http://198.195.239.50:8095/ETV.BAL.BHARAT/index.m3u8
-#EXTINF:-1 tvg-name="Hungama" group-title="New Channels",Hungama
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hungama.png" tvg-name="Hungama" group-title="New Channels",Hungama
 http://198.195.239.50:8095/HUNGAMA/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png" tvg-name="Nick Jr." group-title="New Channels",Nick Jr.
 http://198.195.239.50:8095/nickJr/index.m3u8
-#EXTINF:-1 tvg-name="Super Hungama" group-title="New Channels",Super Hungama
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/super-hungama.png" tvg-name="Super Hungama" group-title="New Channels",Super Hungama
 http://198.195.239.50:8095/SUPER.HUNGAMA/index.m3u8
-#EXTINF:-1 tvg-name="PTV Sports" group-title="New Channels",PTV Sports
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ptv-sports.png" tvg-name="PTV Sports" group-title="New Channels",PTV Sports
 http://198.195.239.50:8095/PTV-SPORTS-HD/index.m3u8
-#EXTINF:-1 tvg-name="Sony Sports Ten 4" group-title="New Channels",Sony Sports Ten 4
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-4.png" tvg-name="Sony Sports Ten 4" group-title="New Channels",Sony Sports Ten 4
 http://198.195.239.50:8095/SONY.SPORTS.4/index.m3u8
-#EXTINF:-1 tvg-name="Sony Sports Ten 5" group-title="New Channels",Sony Sports Ten 5
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-5.png" tvg-name="Sony Sports Ten 5" group-title="New Channels",Sony Sports Ten 5
 http://198.195.239.50:8095/SONY-SPORTS.5HD/index.m3u8
-#EXTINF:-1 tvg-name="Star Sports 1" group-title="New Channels",Star Sports 1
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-1.png" tvg-name="Star Sports 1" group-title="New Channels",Star Sports 1
 http://198.195.239.50:8095/STAR.SPORTS1.HD/index.m3u8
-#EXTINF:-1 tvg-name="Star Sports 3" group-title="New Channels",Star Sports 3
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-3.png" tvg-name="Star Sports 3" group-title="New Channels",Star Sports 3
 http://198.195.239.50:8095/STAR-SPORTS.3/index.m3u8
-#EXTINF:-1 tvg-name="Star Sports Select 1" group-title="New Channels",Star Sports Select 1
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-select-1.png" tvg-name="Star Sports Select 1" group-title="New Channels",Star Sports Select 1
 http://198.195.239.50:8095/STAR.SPORTS-SEL1.HD/index.m3u8
-#EXTINF:-1 tvg-name="Star Sports Select 2" group-title="New Channels",Star Sports Select 2
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-select-2.png" tvg-name="Star Sports Select 2" group-title="New Channels",Star Sports Select 2
 http://198.195.239.50:8095/STAR.SPORTS.SEL.2.HD/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/t-sports.png" tvg-name="T Sports" group-title="New Channels",T Sports
 http://198.195.239.50:8095/T-SPORTS-HD/index.m3u8
-#EXTINF:-1 tvg-name="UNITE8.1" group-title="New Channels",UNITE8.1
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unite8-1.svg" tvg-name="UNITE8.1" group-title="New Channels",UNITE8.1
 http://198.195.239.50:8095/UNITE8.1.HD/index.m3u8
-#EXTINF:-1 tvg-name="Zee Bangla Cinema" group-title="New Channels",Zee Bangla Cinema
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-cinema.png" tvg-name="Zee Bangla Cinema" group-title="New Channels",Zee Bangla Cinema
 http://198.195.239.50:8095/ZEE.BANGLA.CINEMA/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors.png" tvg-name="Colors" group-title="New Channels",Colors
 http://198.195.239.50:8095/colors/index.m3u8
-#EXTINF:-1 tvg-name="Fast Sports" group-title="New Channels",Fast Sports
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fast-sports.svg" tvg-name="Fast Sports" group-title="New Channels",Fast Sports
 http://198.195.239.50:8095/FAST.SPORTS.HD/index.m3u8
-#EXTINF:-1 tvg-name="UNITE8.2" group-title="New Channels",UNITE8.2
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unite8-2.svg" tvg-name="UNITE8.2" group-title="New Channels",UNITE8.2
 http://198.195.239.50:8095/UNITE8.2.HD/index.m3u8
-#EXTINF:-1 tvg-name="Star Sports 4K" group-title="New Channels",Star Sports 4K
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-4k.svg" tvg-name="Star Sports 4K" group-title="New Channels",Star Sports 4K
 http://198.195.239.50:8095/STAR.SPORTS.4K/index.m3u8
 
 # ==================== NEW BACKUP ====================
@@ -1795,7 +1795,7 @@ https://da86m1sqpm3o0.cloudfront.net/28072023/smil:mtvindia.smil/playlist.m3u8
 https://box.bbaria.net/Nagorik_TV/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png" tvg-id="NTV.bd" tvg-name="NTV" channel-id="NTV.bd" group-title="New Backup",NTV
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.recovered.pishow.10007" tvg-name="Pishow Stream 10007" channel-id="custom.recovered.pishow.10007" group-title="New Backup",Pishow Stream 10007
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pishow-stream-10007.svg" tvg-id="custom.recovered.pishow.10007" tvg-name="Pishow Stream 10007" channel-id="custom.recovered.pishow.10007" group-title="New Backup",Pishow Stream 10007
 https://cdn.pishow.tv/ott/live/10007/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-2.png" tvg-name="Star Gold 2" group-title="New Backup",Star Gold 2
 http://202.70.146.135:8000/play/a04q/index.m3u8
@@ -1805,23 +1805,23 @@ https://flussonic.defineatoz.com/StarjalshaHD/tracks-v1a1/mono.m3u8
 http://103.151.60.162:2122/play/a00w/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-movies-2087bb49.png" channel-id="StarMovies.in@SD" tvg-id="StarMovies.in@SD" tvg-name="Star Movies" group-title="New Backup",Star Movies
 http://202.70.146.135:8000/play/a06r/index.m3u8
-#EXTINF:-1 tvg-id="custom.recovered.stingray.101" tvg-name="Stingray Stream 101" channel-id="custom.recovered.stingray.101" group-title="New Backup",Stingray Stream 101
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/stingray-stream-101.svg" tvg-id="custom.recovered.stingray.101" tvg-name="Stingray Stream 101" channel-id="custom.recovered.stingray.101" group-title="New Backup",Stingray Stream 101
 https://lotus.stingray.com/manifest/ose-101ads-montreal/samsungtvplus/master.m3u8
-#EXTINF:-1 tvg-id="custom.recovered.stingray.137" tvg-name="Stingray Stream 137" channel-id="custom.recovered.stingray.137" group-title="New Backup",Stingray Stream 137
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/stingray-stream-137.svg" tvg-id="custom.recovered.stingray.137" tvg-name="Stingray Stream 137" channel-id="custom.recovered.stingray.137" group-title="New Backup",Stingray Stream 137
 https://lotus.stingray.com/manifest/ose-137ads-montreal/samsungtvplus/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla.png" channel-id="ZeeBangla.in@HD" tvg-id="ZeeBangla.in@HD" tvg-name="Zee Bangla" group-title="New Backup",Zee Bangla
 http://103.151.60.162:2122/play/a011/index.m3u8
-#EXTINF:-1 tvg-name="Zee Bangla Cinema" group-title="New Backup",Zee Bangla Cinema
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-cinema.png" tvg-name="Zee Bangla Cinema" group-title="New Backup",Zee Bangla Cinema
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/master2.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema.png" channel-id="ZeeCinema.in@HD" tvg-id="ZeeCinema.in@HD" tvg-name="Zee Cinema" group-title="New Backup",Zee Cinema
 http://103.151.60.162:2122/play/a024/index.m3u8
-#EXTINF:-1 tvg-name="Zoom Music" group-title="New Backup",Zoom Music
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-music.png" tvg-name="Zoom Music" group-title="New Backup",Zoom Music
 https://d2esfk1pb9cdob.cloudfront.net/chunklist_1.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.png" tvg-name="Zee TV" group-title="New Backup",Zee TV
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeetvhd/default/index.mpd
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-bangla.png" tvg-name="Sun Bangla" group-title="New Backup",Sun Bangla
 https://livestream7.sunnxt.com/bf76ee92dd01473bb2eb57d137294484/SunBanglaB_IN_index.mpd
-#EXTINF:-1 tvg-name="Nick" group-title="New Backup",Nick
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick.png" tvg-name="Nick" group-title="New Backup",Nick
 http://198.195.239.50:8095/NICK/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sonic.png" tvg-name="Sonic" group-title="New Backup",Sonic
 http://198.195.239.50:8095/SONIC/index.m3u8
@@ -1979,25 +1979,25 @@ http://198.195.239.50:8095/ZEE.CINEMA.HD/index.m3u8
 http://198.195.239.50:8095/ZEE.TV.HD/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png" channel-id="Zoom.in@SD" tvg-id="Zoom.in@SD" tvg-name="Zoom TV" group-title="New Backup",Zoom TV
 http://198.195.239.50:8095/ZOOM.MUSIC/index.m3u8
-#EXTINF:-1 tvg-name="Zee Cinema" group-title="New Backup",Zee Cinema
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema.png" tvg-name="Zee Cinema" group-title="New Backup",Zee Cinema
 http://103.151.61.12/Zee_Cinema_HD/video.m3u8
-#EXTINF:-1 tvg-name="Colors Cineplex" group-title="New Backup",Colors Cineplex
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-cineplex.png" tvg-name="Colors Cineplex" group-title="New Backup",Colors Cineplex
 http://198.195.239.50:8095/colorsCineplex/index.m3u8
-#EXTINF:-1 tvg-name="9XM" group-title="New Backup",9XM
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9xm.png" tvg-name="9XM" group-title="New Backup",9XM
 http://198.195.239.50:8095/9xm/index.m3u8
-#EXTINF:-1 tvg-name="Sony Ten 1" group-title="New Backup",Sony Ten 1
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-ten-1.png" tvg-name="Sony Ten 1" group-title="New Backup",Sony Ten 1
 http://198.195.239.50:8095/SONY.SPORTS.1HD/index.m3u8
-#EXTINF:-1 tvg-name="SONY MAX" group-title="New Backup",SONY MAX
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max.png" tvg-name="SONY MAX" group-title="New Backup",SONY MAX
 http://198.195.239.50:8095/sonyMax/index.m3u8
-#EXTINF:-1 tvg-name="SONY ENTERTAINMENT" group-title="New Backup",SONY ENTERTAINMENT
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-entertainment-tv.png" tvg-name="SONY ENTERTAINMENT" group-title="New Backup",SONY ENTERTAINMENT
 http://198.195.239.50:8095/sonyEntertainment/index.m3u8
-#EXTINF:-1 tvg-name="STAR GOLD" group-title="New Backup",STAR GOLD
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold.png" tvg-name="STAR GOLD" group-title="New Backup",STAR GOLD
 http://198.195.239.50:8095/STARGOLD/video.m3u8
-#EXTINF:-1 tvg-name="STAR PLUS" group-title="New Backup",STAR PLUS
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-plus.png" tvg-name="STAR PLUS" group-title="New Backup",STAR PLUS
 http://198.195.239.50:8095/starPlus/video.m3u8
-#EXTINF:-1 tvg-name="STAR MOVIES" group-title="New Backup",STAR MOVIES
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-movies-2087bb49.png" tvg-name="STAR MOVIES" group-title="New Backup",STAR MOVIES
 http://198.195.239.50:8095/STAR_PLUS/video.m3u8
-#EXTINF:-1 tvg-name="ZEE TV" group-title="New Backup",ZEE TV
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.png" tvg-name="ZEE TV" group-title="New Backup",ZEE TV
 http://198.195.239.50:8095/zeeTV/index.m3u8
-#EXTINF:-1 tvg-name="DISCOVERY KIDS" group-title="New Backup",DISCOVERY KIDS
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-kids.png" tvg-name="DISCOVERY KIDS" group-title="New Backup",DISCOVERY KIDS
 http://198.195.239.50:8095/disnepKids/index.m3u8
