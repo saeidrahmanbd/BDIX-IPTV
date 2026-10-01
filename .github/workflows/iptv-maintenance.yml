@@ -8,14 +8,14 @@ on:
       - 'scripts/**'
       - '.github/workflows/iptv-maintenance.yml'
   schedule:
-    - cron: '0 2 * * *' # 08:00 Asia/Dhaka (UTC+6)
+    - cron: '17 2 * * *' # 08:17 Asia/Dhaka (UTC+6)
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: iptv-repository-writes
+  group: iptv-maintenance
   cancel-in-progress: false
   queue: single
 
@@ -26,12 +26,12 @@ jobs:
     timeout-minutes: 25
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: '3.12'
 

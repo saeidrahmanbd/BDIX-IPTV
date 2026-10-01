@@ -143,7 +143,10 @@ primary_chno_collisions = {
 }
 
 suspicious_urls = []
+signed_urls = []
 for info, url in entries:
+    if re.search(r"[?&](?:token|sig|signature|jwt|session|key|authorization)=[^&]+", url, re.I) or re.search(r"[?&]hdnts=[^&]+", url, re.I):
+        signed_urls.append((display_name(info), attrs(info).get("group-title", "").strip(), url))
     if re.search(r"[?&](token|auth)=(?:test|testpub)(?:&|$)", url, re.I):
         suspicious_urls.append((display_name(info), "test credential", url))
     elif re.search(r"https?://[^/@]+@[^/]+", url, re.I):
@@ -263,6 +266,7 @@ lines = [
     f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**",
     f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**",
     f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**",
+    f"- Signed/tokenized stream URLs: **{len(signed_urls)}**",
     "",
     "## Duplicate IDs",
     "",
@@ -293,6 +297,38 @@ lines += ["", "## Suspicious URLs", ""]
 if suspicious_urls:
     for name, reason, url in suspicious_urls:
         lines.append(f"- **{name}** — {reason} — {url}")
+else:
+    lines.append("None.")
+
+lines += ["", "## Signed / Tokenized Stream URLs", ""]
+if signed_urls:
+    for name, group, url in signed_urls:
+        lines.append(f"- **{name}** — {group or 'Uncategorized'} — {url}")
+else:
+    lines.append("None.")
+
+lines += ["", "## Review Queue Name Consistency", ""]
+review_name_mismatches = []
+primary_by_norm_name = {}
+for info, url in primary_entries:
+    group = attrs(info).get("group-title", "").strip()
+    if group in {"New Channels", "New Backup"}:
+        continue
+    pname = attrs(info).get("tvg-name", "").strip()
+    key = re.sub(r"s+", " ", re.sub(r"s*[[^]]+]s*$", "", pname)).strip().lower()
+    primary_by_norm_name.setdefault(key, pname)
+for info, url in entries:
+    group = attrs(info).get("group-title", "").strip()
+    if group not in {"New Channels", "New Backup"}:
+        continue
+    name = attrs(info).get("tvg-name", "").strip()
+    key = re.sub(r"s+", " ", re.sub(r"s*[[^]]+]s*$", "", name)).strip().lower()
+    canonical = primary_by_norm_name.get(key)
+    if canonical and canonical != name:
+        review_name_mismatches.append((display_name(info), canonical, group))
+if review_name_mismatches:
+    for name, canonical, group in review_name_mismatches:
+        lines.append(f"- **{name}** ({group}) → canonical primary name: **{canonical}**")
 else:
     lines.append("None.")
 

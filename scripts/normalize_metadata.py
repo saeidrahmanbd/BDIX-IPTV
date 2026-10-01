@@ -185,6 +185,18 @@ LOGOS={
 }
 ATTR=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 def attrs(s): return dict(ATTR.findall(s))
+def split_extinf(line):
+    """Split EXTINF metadata from display text without breaking commas in quoted attributes."""
+    in_quote = False
+    escaped = False
+    for i, ch in enumerate(line):
+        if ch == '"' and not escaped:
+            in_quote = not in_quote
+        elif ch == "," and not in_quote:
+            return line[:i], line[i + 1:]
+        escaped = (ch == "\\") and not escaped
+        if ch != "\\": escaped = False
+    return line, ""
 def norm(s):
  s=str(s or "").lower()
  s=re.sub(r"\[[^]]*\]|\([^)]*\)"," ",s)
@@ -197,7 +209,7 @@ def set_attr(m,k,v):
 lines=P.read_text(encoding="utf-8-sig").replace("\r","").splitlines(); rows=[]
 for i,l in enumerate(lines):
  if l.startswith("#EXTINF:"):
-  a=attrs(l); rows.append({"i":i,"line":l,"a":a,"name":l.split(",",1)[1] if "," in l else ""})
+  a=attrs(l); _, display = split_extinf(l); rows.append({"i":i,"line":l,"a":a,"name":display.strip()})
 primary=[r for r in rows if r["a"].get("group-title","").strip() not in EXCLUDE]
 byname={}
 for r in primary: byname.setdefault(norm(r["a"].get("tvg-name") or r["name"]),r)

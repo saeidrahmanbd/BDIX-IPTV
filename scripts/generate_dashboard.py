@@ -35,7 +35,7 @@ def parse_playlist():
 
 def audit_stats():
     s=AUDIT.read_text(encoding="utf-8") if AUDIT.exists() else ""
-    labels=["Playlist entries","Unique channel IDs","Duplicate stream URLs","Metadata conflicts",
+    labels=["Playlist entries","Unique channel IDs","Duplicate stream URLs","Metadata conflicts","Signed/tokenized stream URLs",
             "Same-name / different-ID collisions","Cross-country backup collisions",
             "IDs with multiple logo references","Protected primary-entry changes","Logo exceptions",
             "Duplicate primary identities","Primary channel-number collisions"]
@@ -43,7 +43,7 @@ def audit_stats():
 
 def epg_stats():
     s=EPG.read_text(encoding="utf-8") if EPG.exists() else ""
-    out={"Indian channels":0,"Mapped":0,"Live":0,"No mapping":0,"LivePct":0}
+    out={"Indian channels":0,"Mapped":0,"Live":0,"No mapping":0,"LivePct":0,"MappedPct":0}
     for key,label in [("Indian channels","Active Indian channels audited"),
                       ("Mapped","Channels with an EPG mapping"),
                       ("No mapping","No guide mapping found")]:
@@ -52,6 +52,8 @@ def epg_stats():
     if m:
         out["Live"]=int(m.group(1))
         out["LivePct"]=float(m.group(3))
+    if out["Indian channels"]:
+        out["MappedPct"]=round(100*out["Mapped"]/out["Indian channels"],1)
     return out
 
 def report_timestamp(path):
@@ -165,7 +167,7 @@ def make_svg(total,channels,bangla,india,backup,logos,epg_pct,epg_missing,issues
         svg_text(42,45,"BDIX-IPTV • PROJECT DASHBOARD",25,True),
         svg_text(42,70,"EPG • Metadata • Logos • Playlist Audit",13)
     ]
-    cards=[("Streams",total),("Channels",channels),("Bangladesh",bangla),("India",india),
+    cards=[("Streams",total),("Active Channels",channels),("Bangladesh",bangla),("India",india),
            ("Backup Streams",backup),("Local Logos",f"{logos}%"),("EPG Coverage",f"{epg_pct}%"),("Blocking Issues",issues)]
     coords=[(34,120),(268,120),(502,120),(736,120),(34,260),(268,260),(502,260),(736,260)]
     for (label,val),(x,y) in zip(cards,coords):
@@ -192,7 +194,8 @@ def main():
     d=discovery_stats()
     groups=Counter(x[2] for x in e)
     total=len(e)
-    channels=len(set(x[0] for x in e if x[0]))
+    active_groups={"Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","International","Documentary & Wildlife","Kids","Religious","Sports"}
+    channels=len(set(x[0] for x in e if x[0] and x[2] in active_groups))
     bangla=groups.get("Bangladesh",0)
     india=sum(v for k,v in groups.items() if k.startswith("Indian "))
     backup=groups.get("Backup",0)
@@ -225,12 +228,13 @@ _Last generated: **{now}**_
 | Metric | Current |
 |---|---:|
 | 📺 Streams | **{total}** |
-| 📡 Channels | **{channels}** |
+| 📡 Active Channels | **{channels}** |
 | 🇧🇩 Bangladesh | **{bangla}** |
 | 🇮🇳 India | **{india}** |
 | 🔁 Backup Streams | **{backup}** |\n| 🆕 New Channels | **{new_channels}** |\n| 🆕 New Backup Streams | **{new_backups}** |
 | 🖼️ Local Logos | **{logos}%** |
-| 📅 EPG Coverage | **{epg_pct}%** |
+| 📅 EPG Programme Coverage | **{epg_pct}%** |
+| 🗺️ EPG Mapping | **{g.get("MappedPct",0)}%** |
 | ⚠️ Audit Blocking Issues | **{issues}** |\n| ℹ️ Identity Warnings | **{warnings}** |
 
 ## Quality Controls
@@ -241,6 +245,7 @@ _Last generated: **{now}**_
 - Primary channel-number collisions: **{a.get("Primary channel-number collisions",0)}**
 - Logo exceptions: **{a.get("Logo exceptions",0)}**
 - EPG channels without mapping: **{epg_missing}**
+- Signed/tokenized stream URLs: **{a.get("Signed/tokenized stream URLs",0)}**
 
 ## Data Freshness
 | Source | Last generated |
