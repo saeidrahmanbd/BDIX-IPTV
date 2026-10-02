@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T12:36:40+00:00",
+  "generated": "2026-10-02T04:39:24+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -1288,9 +1288,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Movies"
+        "Indian Movies",
+        "New Backup"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
       "backup": 2
     },
@@ -2339,20 +2340,6 @@
       "streams": 1,
       "primary": 1,
       "backup": 0
-    },
-    "custom.stargold2": {
-      "names": [
-        "Star Gold 2"
-      ],
-      "ids": [
-        "custom.stargold2"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
     },
     "custom.starsports2": {
       "names": [
@@ -4518,20 +4505,6 @@
       ],
       "streams": 2,
       "primary": 2,
-      "backup": 0
-    },
-    "local.072484feec7": {
-      "names": [
-        "Zee Bangla"
-      ],
-      "ids": [
-        "local.072484feec7"
-      ],
-      "groups": [
-        "Indian Bangla"
-      ],
-      "streams": 1,
-      "primary": 1,
       "backup": 0
     },
     "loltv": {
@@ -7280,11 +7253,12 @@
         "stargold2.in@sd"
       ],
       "groups": [
+        "Backup",
         "New Backup"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 0,
-      "backup": 0
+      "backup": 1
     },
     "stargoldselect": {
       "names": [
@@ -8504,9 +8478,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 9,
+      "streams": 10,
       "primary": 1,
-      "backup": 8
+      "backup": 9
     },
     "zeebanglacinema": {
       "names": [

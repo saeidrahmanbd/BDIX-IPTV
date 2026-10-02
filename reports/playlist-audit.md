@@ -1,16 +1,16 @@
 # Playlist Audit
-Generated: **2026-10-01T12:36:40.086601+00:00**
+Generated: **2026-10-02T04:39:23.996814+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **992**
-- Unique channel IDs: **632**
-- IDs with multiple streams: **181**
+- Playlist entries: **993**
+- Unique channel IDs: **630**
+- IDs with multiple streams: **182**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
-- Same-name / different-ID collisions: **2**
+- Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
@@ -179,10 +179,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Colors Bangla Cinema — Backup — http://51.75.127.199:3141/colorsbanglacinema/index.m3u8
 - Colors Bangla Cinema — Backup — http://198.195.239.50:8095/colorsBanglaChinema/index.m3u8
 - Colors Bangla Cinema — Backup — http://198.195.239.50:8095/COLORS.BANGLA.CINEMA/index.m3u8
-### colorscineplex.in@sd (3 streams)
+### colorscineplex.in@sd (4 streams)
 - Colors Cineplex — Indian Movies — http://202.70.146.135:8000/play/a04n/index.m3u8
 - Colors Cineplex — Backup — http://51.75.127.199:3141/colorscineplexhd/index.m3u8
 - Colors Cineplex — Backup — http://198.195.239.50:8095/COLORS.CINEPLEX.HD/index.m3u8
+- Colors Cineplex — New Backup — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/gb/YuppTV/ColorsCineplexUK.m3u8
 ### custom.amar.bangla.digital (2 streams)
 - Amar Bangla Digital — Indian Bangla — http://115.187.41.216:8080/hls/amardigital/index.m3u8
 - Amar Bangla Digital — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/amardigital.stream/playlist.m3u8
@@ -647,6 +648,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Star Gold — Indian Movies — http://livetv.akr4m.com:8080/bdtv/restrem/45.m3u8
 - Star Gold — Backup — http://198.195.239.50:8095/STAR.GOLD.HD/index.m3u8
 - Star Gold — Backup — http://51.75.127.199:3141/stargold/index.m3u8
+### stargold2.in@sd (2 streams)
+- Star Gold 2 — Backup — http://202.70.146.135:8000/play/a04q/index.m3u8
+- Star Gold 2 — New Backup — http://51.75.127.199:3141/stargold2/index.m3u8
 ### stargoldselect.in@sd (3 streams)
 - Star Gold Select — Indian Movies — http://202.70.146.135:8000/play/a068/index.m3u8
 - Star Gold Select — Backup — http://51.75.127.199:3141/stargoldselecthd/index.m3u8
@@ -708,8 +712,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### zeeaction.in (2 streams)
 - Zee Action — Indian Movies — http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/967.ts
 - Zee Action — Backup — https://stream.ottplus.live/live/zee_action_abr/index.m3u8
-### zeebangla.in@hd (9 streams)
+### zeebangla.in@hd (10 streams)
 - Zee Bangla — Indian Bangla — https://drk6xq0vhn.gpcdn.net/live/zee_bangla_720/index.m3u8
+- Zee Bangla — Backup — https://yupptvcatchupire.yuppcdn.net/preview/zeebangla/2500.m3u8
 - Zee Bangla — Backup — http://103.151.60.162:2122/play/a011/index.m3u8
 - Zee Bangla — Backup — http://198.195.239.50:8095/zeeBangla/index.m3u8
 - Zee Bangla — Backup — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ZeeBanglaHD.m3u8
@@ -795,12 +800,11 @@ None.
 
 ## Same-Name / Different-ID Collisions
 
-- **star gold 2** → custom.stargold2, stargold2.in@sd
-- **zee bangla** → local.072484feec7, zeebangla.in@hd
+None.
 
 ## Logo Integrity
 
-- Healthy/local references: **992**
+- Healthy/local references: **993**
 - missing: **0**
 - broken-local: **0**
 - external: **0**

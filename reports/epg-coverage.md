@@ -1,22 +1,22 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-01T12:36:39+00:00**
+Generated: **2026-10-02T04:39:23+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **251**
-- Channels with an EPG mapping: **166**
-- Current/future programme coverage: **154/251 (61.4%)**
+- Active Indian channels audited: **250**
+- Channels with an EPG mapping: **165**
+- Current/future programme coverage: **153/250 (61.2%)**
 - No guide mapping found: **85**
 
 ## Source Status
 
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 817 current/future IDs; 112127 programme rows
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 531 current/future IDs; 21237 programme rows
-- **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 68151 programme rows
-- **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19767 programme rows
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 531 current/future IDs; 20964 programme rows
+- **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 65923 programme rows
+- **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19584 programme rows
 
 ## Channels Requiring Attention
 
