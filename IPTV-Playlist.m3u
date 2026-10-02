@@ -1,4 +1,4 @@
-#EXTM3U url-tvg="https://bdix-iptv-xtream.saeidrahman.workers.dev/xmltv-public.php"
+#EXTM3U
 #EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="1" channel-id="AnandaTV.bd" group-title="Bangladesh",Ananda TV
 https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
 #EXTINF:-1 tvg-id="AsianTV.bd" tvg-name="Asian TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" tvg-chno="2" channel-id="AsianTV.bd" group-title="Bangladesh",Asian TV
@@ -531,8 +531,6 @@ https://s3.ideationtec.live/GEO_Entertainment/GEO_Entertainment.m3u8
 https://cdn.pishow.tv/ott/live/280/master.m3u8
 #EXTINF:-1 tvg-chno="526" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-masala.png" channel-id="HUMMasala.pk" tvg-id="HUMMasala.pk" tvg-name="HUM Masala" group-title="Indian Entertainment",HUM Masala
 http://198.195.239.50:8095/HUM.MASALA.TV/index.m3u8
-#EXTINF:-1 tvg-id="HumTV.pk" tvg-name="HUM TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-tv.png" tvg-chno="528" channel-id="HumTV.pk" group-title="Indian Entertainment",HUM TV
-https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8
 #EXTINF:-1 tvg-id="KalaignarMurasu.in" tvg-name="Kalaignar Murasu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kalaignar-murasu.png" tvg-chno="529" channel-id="KalaignarMurasu.in" group-title="Indian Entertainment",Kalaignar Murasu
 https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/murasu_nim_https/050522/murasu/playlist.m3u8
 #EXTINF:-1 channel-id="KalaignarTV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kalaignar-tv-82de1b8f.png" tvg-id="KalaignarTV.in@SD" tvg-name="Kalaignar TV" tvg-chno="531" tvg-language="tam" tvg-country="IN" group-title="Indian Entertainment",Kalaignar TV
@@ -623,6 +621,90 @@ https://yuppnimresmum.akamaized.net/28072023/smil:zeekannadahd.smil/playlist.m3u
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:zeetamil1.smil/playlist.m3u8
 #EXTINF:-1 channel-id="ZeeTV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.png" tvg-id="ZeeTV.in@SD" tvg-name="Zee TV" tvg-chno="707" group-title="Indian Entertainment",Zee TV
 https://drk6xq0vhn.gpcdn.net/live/zee_tv_hd_abr/index.m3u8
+#EXTGRP:Pakistani
+#EXTINF:-1 tvg-id="HumTV.pk" tvg-name="HUM TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-tv.png" tvg-chno="528" channel-id="HumTV.pk" group-title="Pakistani",HUM TV
+https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8
+#EXTINF:-1 tvg-id="HumTV.pk" tvg-name="HUM TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-tv.png" channel-id="HumTV.pk" group-title="Pakistani",HUM TV
+https://stream.ottplus.live/live/hum_tv_abr/index.m3u8
+#EXTINF:-1 tvg-id="HumTV.pk" tvg-name="HUM TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-tv.png" channel-id="HumTV.pk" group-title="Pakistani",HUM TV
+https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8
+#EXTINF:-1 tvg-id="APlusTV.pk@SD" group-title="Pakistani",A-Plus TV (576p)
+http://115.42.65.142:9981/stream/channelid/113328724
+#EXTINF:-1 tvg-id="APlusTV.pk@SD" group-title="Pakistani",A-Plus TV
+http://103.86.135.164:9981/stream/channelid/1522598263?profile=pass&ticket=8F210F02E7EF3471D45EFD9B293E0E07CE3532BF
+#EXTINF:-1 tvg-id="AajEntertainment.pk@SD" group-title="Pakistani",Aaj Entertainment (1080p)
+https://ml-pull-dvc-myco.io:2096/AAJ_ENTERTAINMENT/index.m3u8
+#EXTINF:-1 tvg-id="ApnaChannel.pk@SD" group-title="Pakistani",Apna Channel (576p)
+http://115.42.65.142:9981/stream/channelid/1273966657
+#EXTINF:-1 tvg-id="ARYMusik.pk@SD" group-title="Pakistani",ARY Musik (1080p)
+#EXTVLCOPT:http-referrer=https://live.arydigital.tv/
+https://arymusik.aryzap.com/3fd38b2c62d0c3bbd74aedabb533c03a/6459fa78/v1/01847ac7a4930b8ed5aa6ed04aba/01847ac8f5f70b8ed5aa6ed04abd/main.m3u8
+#EXTINF:-1 tvg-id="ATV.pk@SD" group-title="Pakistani",ATV (1080p)
+http://115.42.65.142:9981/stream/channelid/299762256
+#EXTINF:-1 tvg-id="aurLifeHD.pk@SD" group-title="Pakistani",aurLife HD (614p)
+http://124.109.47.101/hls/stream1.m3u8
+#EXTINF:-1 tvg-id="AVTKhyber.pk@SD" group-title="Pakistani",AVT Khyber (1080p)
+http://115.42.65.142:9981/stream/channelid/1380586642
+#EXTINF:-1 tvg-id="BSFilm.pk@SD" group-title="Pakistani",BS Film (576p)
+https://lbgo.bozztv.com/ssh101/ssh101/bsfilm/playlist.m3u8
+#EXTINF:-1 tvg-id="BSFilm.pk@SD" group-title="Pakistani",BS Film (576p)
+https://live20.bozztv.com/akamaissh101/ssh101/bsfilm/playlist.m3u8
+#EXTINF:-1 tvg-id="BSTV.pk@SD" group-title="Pakistani",BSTV (576p)
+https://lbgo.bozztv.com/ssh101/ssh101/bstv/playlist.m3u8
+#EXTINF:-1 tvg-id="DiscoverPakistan.pk@SD" group-title="Pakistani",Discover Pakistan (1080p)
+https://livecdn.live247stream.com/discoverpakistan/web/playlist.m3u8
+#EXTINF:-1 tvg-id="DiscoverPakistan.pk@SD" group-title="Pakistani",Discover Pakistan
+http://103.86.135.164:9981/stream/channelid/2073419458?profile=pass&ticket=461AC76A96B0E3DC1FCFBFCF318709B61B2D3F5B
+#EXTINF:-1 tvg-id="DiscoverPakistan.pk@SD" group-title="Pakistani",Discover Pakistan
+http://103.86.135.164:9981/stream/channelid/2089283490?profile=pass&ticket=BB7D99860884A453E7DEA789EDFB5114621FEDED
+#EXTINF:-1 tvg-id="ExpressEntertainment.pk@SD" group-title="Pakistani",Express Entertainment (1080p)
+https://ml-pull-dvc-myco.io:2096/EXPRESS_ENTERTAINMENT/index.m3u8
+#EXTINF:-1 tvg-id="Filmax.pk@SD" group-title="Pakistani",Filmax (576p)
+https://s3.ideationtec.live/Filmax/Filmax.m3u8
+#EXTINF:-1 tvg-id="Filmazia.pk@SD" group-title="Pakistani",Filmazia (576p)
+http://103.250.28.74:8000/play/a02k/index.m3u8
+#EXTINF:-1 tvg-id="HarPalGeo.pk@SD" group-title="Pakistani",HarPal Geo (360p)
+https://jk3lz82elw79-hls-live.5centscdn.com/harPalGeo/955ad3298db330b5ee880c2c9e6f23a0.sdp/playlist.m3u8
+#EXTINF:-1 tvg-id="JalwaTV.pk@SD" group-title="Pakistani",Jalwa TV
+http://119.156.228.231:9983/stream/channelid/1893273325?profile=pass&ticket=B3DB50D5930411D593B973B8404789C46D3559B8
+#EXTINF:-1 tvg-id="Kay2HD.pk@SD" group-title="Pakistani",Kay2 HD (1080p)
+http://103.250.28.74:8000/play/a027/index.m3u8
+#EXTINF:-1 tvg-id="LTNFamily.pk@SD" group-title="Pakistani",LTN Family (576p)
+http://103.250.28.74:8000/play/a02j/index.m3u8
+#EXTINF:-1 tvg-id="MasalaTV.pk@SD" group-title="Pakistani",Masala TV (576p)
+http://103.250.28.74:8000/play/a02x/index.m3u8
+#EXTINF:-1 tvg-id="MehranTV.pk@SD" group-title="Pakistani",Mehran TV (576p)
+http://103.250.28.74:8000/play/a00m/index.m3u8
+#EXTINF:-1 tvg-id="Pashto1.pk@SD" group-title="Pakistani",Pashto 1 (1080p)
+http://103.250.28.74:8000/play/a00t/index.m3u8
+#EXTINF:-1 tvg-id="PlayEntertainment.pk@SD" group-title="Pakistani",Play Entertainment (576p)
+http://103.250.28.74:8000/play/a050/index.m3u8
+#EXTINF:-1 tvg-id="Rohi.pk@SD" group-title="Pakistani",Rohi (576p)
+http://103.250.28.74:8000/play/a00d/index.m3u8
+#EXTINF:-1 tvg-id="SABTV.pk@SD" group-title="Pakistani",SAB TV (1080p)
+https://ml-pull-dvc-myco.io:2096/SAB_ENTERTAINMENT/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="SilverScreen.pk@SD" group-title="Pakistani",Silver Screen (576p)
+http://103.250.28.74:8000/play/a044/index.m3u8
+#EXTINF:-1 tvg-id="SindhTV.pk@SD" group-title="Pakistani",Sindh TV (1080p)
+http://103.250.28.74:8000/play/a00u/index.m3u8
+#EXTINF:-1 tvg-id="VenusHD.pk@SD" group-title="Pakistani",Venus HD (1080p)
+http://103.250.28.74:8000/play/a04x/index.m3u8
+#EXTINF:-1 tvg-id="WasebTV.pk@SD" group-title="Pakistani",Waseb TV (576p)
+http://103.250.28.74:8000/play/a04k/index.m3u8
+#EXTINF:-1 tvg-id="JalwaTV.pk@SD" group-title="Pakistani",Jalwa TV
+https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/live/135M/chunks.m3u8
+#EXTINF:-1 tvg-id="BolEntertainment.pk@HD" group-title="Pakistani",Bol Entertainment HD
+https://vodzong.mjunoon.tv:8087/streamtest/Channel5-159-4/playlist.m3u8
+#EXTINF:-1 tvg-id="APlusTV.pk@SD" group-title="Pakistani",A-Plus TV
+https://cdn4.mjunoon.tv:8087/streamtest/118M/chunks.m3u8
+#EXTINF:-1 tvg-id="MasalaTV.pk@SD" group-title="Pakistani",Masala TV
+https://cdn4.mjunoon.tv:8087/streamtest/81M/chunks.m3u8
+#EXTINF:-1 tvg-id="HumTV.pk@SD" group-title="Pakistani",Hum TV SD
+https://cdn4.mjunoon.tv:8087/streamtest/82M/chunks.m3u8
+#EXTINF:-1 tvg-id="FalakTV.pk@SD" group-title="Pakistani",Falak TV
+https://falak.rst.ae/index.m3u8
+#EXTINF:-1 tvg-id="8XM.pk@HD" group-title="Pakistani",8XM HD
+https://cdn4.mjunoon.tv:8087/streamtest/131M/chunks.m3u8
 #EXTINF:-1 tvg-chno="705" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-prive-hd.png" channel-id="AndpriveHD.in" tvg-id="AndpriveHD.in" tvg-name="&Privé" group-title="International",&Privé
 http://198.195.239.50:8095/AND.PRIVE.HD/index.m3u8
 #EXTINF:-1 channel-id="24HourFreeMovies.us" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/24-hour-free-movies-720p-2a4fdea7cd.png" tvg-id="24HourFreeMovies.us" tvg-name="24 Hour Free Movies" tvg-language="eng" tvg-country="US" group-title="International" tvg-chno="708",24 Hour Free Movies
@@ -1485,10 +1567,6 @@ http://212.5.144.156:8080/history/index.m3u8
 https://lds-timeline-rakuten.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history.png" channel-id="HistoryTV18.in@SD" tvg-id="HistoryTV18.in@SD" tvg-name="History TV18" group-title="Backup",History TV18
 http://198.195.239.50:8095/HISTORY.TV.18.HD/index.m3u8
-#EXTINF:-1 tvg-id="HumTV.pk" tvg-name="HUM TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-tv.png" channel-id="HumTV.pk" group-title="Backup",HUM TV
-https://stream.ottplus.live/live/hum_tv_abr/index.m3u8
-#EXTINF:-1 tvg-id="HumTV.pk" tvg-name="HUM TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-tv.png" channel-id="HumTV.pk" group-title="Backup",HUM TV
-https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8
 #EXTINF:-1 channel-id="IndependentTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/independent-tv.png" tvg-id="IndependentTV.bd" tvg-name="Independent TV" group-title="Backup",Independent TV
 https://drk6xq0vhn.gpcdn.net/live/independent_tv_abr/live/independent_tv_720/chunks.m3u8
 #EXTINF:-1 tvg-id="IndependentTV.bd" tvg-name="Independent TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/independent-tv.png" channel-id="IndependentTV.bd" group-title="Backup",Independent TV
