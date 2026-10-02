@@ -2,7 +2,7 @@ name: Changelog
 
 on:
   workflow_run:
-    workflows: ["IPTV Playlist Maintenance"]
+    workflows: ["IPTV Playlist Update"]
     types: [completed]
     branches: [main]
   workflow_dispatch:
