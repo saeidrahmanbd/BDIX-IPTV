@@ -694,19 +694,19 @@ https://cdn4.mjunoon.tv:8087/streamtest/82M/chunks.m3u8
 https://falak.rst.ae/index.m3u8
 #EXTINF:-1 tvg-id="8XM.pk@HD" group-title="Pakistani",8XM HD
 https://cdn4.mjunoon.tv:8087/streamtest/131M/chunks.m3u8
-#EXTINF:-1 tvg-id="8XM.pk" tvg-name="8XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png" tvg-chno="412" channel-id="8XM.pk" group-title="Indian Music",8XM
+#EXTINF:-1 tvg-id="8XM.pk" tvg-name="8XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png" tvg-chno="412" channel-id="8XM.pk" group-title="Pakistani",8XM
 https://vodzong.mjunoon.tv:8087/streamtest/8XM-131/playlist.m3u8
-#EXTINF:-1 channel-id="ARYMusic.pk" tvg-id="ARYMusic.pk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ary-music-ce70dce4.png" tvg-name="ARY Music" tvg-chno="423" group-title="Indian Music",ARY Music
+#EXTINF:-1 channel-id="ARYMusic.pk" tvg-id="ARYMusic.pk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ary-music-ce70dce4.png" tvg-name="ARY Music" tvg-chno="423" group-title="Pakistani",ARY Music
 http://rgkkw.live:80/live/1Aoen7elp5/IgMJ60tmAa/18309.ts
-#EXTINF:-1 tvg-id="JooMusic.pk" tvg-name="Joo Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/joo-music.png" tvg-chno="438" channel-id="JooMusic.pk" group-title="Indian Music",Joo Music
+#EXTINF:-1 tvg-id="JooMusic.pk" tvg-name="Joo Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/joo-music.png" tvg-chno="438" channel-id="JooMusic.pk" group-title="Pakistani",Joo Music
 https://livecdn.live247stream.com/joomusic/tv/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/geo-kahani.png" tvg-id="GeoKahani.pk" tvg-name="Geo Kahani" tvg-chno="525" channel-id="GeoKahani.pk" group-title="Indian Entertainment",Geo Kahani
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/geo-kahani.png" tvg-id="GeoKahani.pk" tvg-name="Geo Kahani" tvg-chno="525" channel-id="GeoKahani.pk" group-title="Pakistani",Geo Kahani
 https://s3.ideationtec.live/GEO_Entertainment/GEO_Entertainment.m3u8
-#EXTINF:-1 tvg-chno="526" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-masala.png" channel-id="HUMMasala.pk" tvg-id="HUMMasala.pk" tvg-name="HUM Masala" group-title="Indian Entertainment",HUM Masala
+#EXTINF:-1 tvg-chno="526" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-masala.png" channel-id="HUMMasala.pk" tvg-id="HUMMasala.pk" tvg-name="HUM Masala" group-title="Pakistani",HUM Masala
 http://198.195.239.50:8095/HUM.MASALA.TV/index.m3u8
-#EXTINF:-1 channel-id="8XM.pk" tvg-id="8XM.pk" tvg-name="8XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png" tvg-country="PK" tvg-language="urd" group-title="Backup",8XM
+#EXTINF:-1 channel-id="8XM.pk" tvg-id="8XM.pk" tvg-name="8XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png" tvg-country="PK" tvg-language="urd" group-title="Pakistani",8XM
 https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
-#EXTINF:-1 tvg-id="8XM.pk" tvg-name="8XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png" channel-id="8XM.pk" group-title="Backup",8XM
+#EXTINF:-1 tvg-id="8XM.pk" tvg-name="8XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png" channel-id="8XM.pk" group-title="Pakistani",8XM
 https://iptvlive.ahmed-bd-org.workers.dev/8xm-1/index.m3u8
 #EXTINF:-1 tvg-chno="705" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-prive-hd.png" channel-id="AndpriveHD.in" tvg-id="AndpriveHD.in" tvg-name="&Privé" group-title="International",&Privé
 http://198.195.239.50:8095/AND.PRIVE.HD/index.m3u8
