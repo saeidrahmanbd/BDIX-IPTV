@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+<defs>
+ <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1a8"/><stop offset=".35" stop-color="#d99a16"/><stop offset=".7" stop-color="#ffd95a"/><stop offset="1" stop-color="#a96800"/></linearGradient>
+ <linearGradient id="s" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fff"/><stop offset=".5" stop-color="#c9c9c9"/><stop offset="1" stop-color="#fff"/></linearGradient>
+ <linearGradient id="r" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ff3b22"/><stop offset="1" stop-color="#780000"/></linearGradient>
+ <filter id="shadow"><feGaussianBlur stdDeviation="12"/></filter>
+</defs>
+<rect width="1000" height="1000" rx="70" fill="#050505"/>
+<path d="M180 170 L820 500 L180 830 Z" fill="url(#r)" opacity=".9"/>
+<path d="M110 520 Q500 150 890 520" fill="none" stroke="#f3b21b" stroke-width="45"/>
+<path d="M110 520 Q500 150 890 520" fill="none" stroke="#171717" stroke-width="20" stroke-dasharray="35 28"/>
+<path d="M100 650 Q500 930 900 650" fill="none" stroke="#f3b21b" stroke-width="45"/>
+<path d="M100 650 Q500 930 900 650" fill="none" stroke="#171717" stroke-width="20" stroke-dasharray="35 28"/>
+<text x="500" y="500" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="190" font-weight="900" fill="url(#g)" stroke="#8a4d00" stroke-width="5">SOUTH</text>
+<text x="500" y="690" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="150" font-weight="900" fill="url(#s)" stroke="#222" stroke-width="7">MOVIES</text>
+<circle cx="195" cy="420" r="76" fill="url(#g)" stroke="#7a4a00" stroke-width="8"/>
+<circle cx="195" cy="420" r="22" fill="#171717"/>
+<g fill="#171717">
+<circle cx="195" cy="374" r="19"/><circle cx="235" cy="402" r="19"/><circle cx="220" cy="448" r="19"/><circle cx="170" cy="448" r="19"/><circle cx="155" cy="402" r="19"/>
+</g>
+</svg>
