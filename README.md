@@ -71,7 +71,7 @@ The repository is maintained with automated quality checks:
 | 🧹 Playlist Audit | Automated |
 | 📝 Changelog | Automated |
 
-**[→ Live Project Dashboard](reports/dashboard.md)**
+**[→ Live Update Report](reports/Update%20Report.md)**
 
 ## 🗂️ Organization
 
@@ -117,7 +117,7 @@ Primary curated entries are protected from indiscriminate automatic changes.
 
 ## 📈 Reports
 
-- [Dashboard](reports/dashboard.md)
+- [Update Report](reports/Update%20Report.md)
 - [Playlist audit](reports/playlist-audit.md)
 - [Stream health](reports/stream-health.md)
 - [Maintenance report](reports/maintenance-report.md)
