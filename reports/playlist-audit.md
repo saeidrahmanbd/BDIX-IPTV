@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-02T13:30:20.695534+00:00**
+Generated: **2026-10-02T13:47:51.601150+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -785,7 +785,7 @@ None.
 
 ## Malformed EXTINF Entries
 
-- line 628: missing stream URL
+- line 630: missing stream URL
 
 ## Suspicious URLs
 
