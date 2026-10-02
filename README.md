@@ -117,11 +117,12 @@ Primary curated entries are protected from indiscriminate automatic changes.
 
 ## 📈 Reports
 
-- [Update Report](reports/Update%20Report.md)
 - [Playlist audit](reports/playlist-audit.md)
 - [Stream health](reports/stream-health.md)
 - [Maintenance report](reports/maintenance-report.md)
 - [EPG coverage](reports/epg-coverage.md)
+- [Update Report](reports/Update%20Report.md)
+
 
 ## 📬 Support
 
