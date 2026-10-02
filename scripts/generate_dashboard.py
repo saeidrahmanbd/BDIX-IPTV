@@ -5,7 +5,7 @@ from datetime import datetime,timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 PLAYLIST=ROOT/"IPTV-Playlist.m3u"; AUDIT=ROOT/"reports/playlist-audit.md"; EPG=ROOT/"reports/epg-coverage.md"; HEALTH=ROOT/"reports/stream-health.md"; GATE=ROOT/"reports/pre-publish-gate.md"
-OUT_MD=ROOT/"reports/dashboard.md"; OUT_SVG=ROOT/"assets/dashboard.svg"; OUT_MAINT=ROOT/"reports/maintenance-report.md"; HISTORY=ROOT/"reports/maintenance-history.json"
+OUT_MD=ROOT/"reports/Update Report.md"; OUT_SVG=ROOT/"assets/dashboard.svg"; OUT_MAINT=ROOT/"reports/maintenance-report.md"; HISTORY=ROOT/"reports/maintenance-history.json"
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
 def metric(text,label):
     m=re.search(r'- '+re.escape(label)+r': \*\*(\d+)\*\*',text); return int(m.group(1)) if m else 0
@@ -34,7 +34,7 @@ def main():
     try: hist=json.loads(HISTORY.read_text(encoding="utf-8")); hist=hist[-30:] if isinstance(hist,list) else []
     except Exception: hist=[]
     prev=hist[-2] if len(hist)>=2 else {}; cur=hist[-1] if hist else {}
-    md=f"""# Project Dashboard
+    md=f"""# Update Report
 
 _Last generated: **{now}**_
 
