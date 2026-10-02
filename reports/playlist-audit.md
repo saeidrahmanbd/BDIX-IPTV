@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-02T14:07:44.738490+00:00**
+Generated: **2026-10-02T14:10:18.097725+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -9,13 +9,13 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Unique channel IDs: **661**
 - IDs with multiple streams: **187**
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **1**
+- Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **0**
-- Duplicate primary identities: **7**
+- Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **1**
@@ -27,10 +27,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### 7smusic.in@sd (2 streams)
 - 7S Music — Indian Music — https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8
 - 7S Music — Backup — https://cdn.pishow.tv/ott/live/1257/master.m3u8
-### 8xm.pk (3 streams)
-- 8XM — Pakistani — https://vodzong.mjunoon.tv:8087/streamtest/8XM-131/playlist.m3u8
-- 8XM — Pakistani — https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
-- 8XM — Pakistani — https://iptvlive.ahmed-bd-org.workers.dev/8xm-1/index.m3u8
+### 8xm.pk@hd (3 streams)
+- 8XM — Pakistani — https://cdn4.mjunoon.tv:8087/streamtest/131M/chunks.m3u8
+- 8XM — Backup — https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
+- 8XM — Backup — https://iptvlive.ahmed-bd-org.workers.dev/8xm-1/index.m3u8
 ### 9xjalwa.in (3 streams)
 - 9X Jalwa — Indian Music — https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/70fca4d1-156e-4c03-baa4-9a4b602e33d5/0.m3u8
 - 9X Jalwa — Backup — https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8
@@ -72,8 +72,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Animal Planet — Backup — http://198.195.239.50:8095/ANIMAL.PLANET.HD/index.m3u8
 ### aplustv.pk@sd (3 streams)
 - A-Plus TV — Pakistani — http://115.42.65.142:9981/stream/channelid/113328724
-- A-Plus TV — Pakistani — http://103.86.135.164:9981/stream/channelid/1522598263?profile=pass&ticket=8F210F02E7EF3471D45EFD9B293E0E07CE3532BF
-- A-Plus TV — Pakistani — https://cdn4.mjunoon.tv:8087/streamtest/118M/chunks.m3u8
+- A-Plus TV — Backup — http://103.86.135.164:9981/stream/channelid/1522598263?profile=pass&ticket=8F210F02E7EF3471D45EFD9B293E0E07CE3532BF
+- A-Plus TV — Backup — https://cdn4.mjunoon.tv:8087/streamtest/118M/chunks.m3u8
 ### asianetmovies.in@sd (2 streams)
 - Asianet Movies — Indian Movies — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:asianetmovies1.smil/playlist.m3u8
 - Asianet Movies — Backup — http://51.75.127.199:3141/asianetmovies/index.m3u8
@@ -143,7 +143,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Boishakhi TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/boishakhi-tv-2/index.m3u8
 ### bsfilm.pk@sd (2 streams)
 - BS Film — Pakistani — https://lbgo.bozztv.com/ssh101/ssh101/bsfilm/playlist.m3u8
-- BS Film — Pakistani — https://live20.bozztv.com/akamaissh101/ssh101/bsfilm/playlist.m3u8
+- BS Film — Backup — https://live20.bozztv.com/akamaissh101/ssh101/bsfilm/playlist.m3u8
 ### btvnational.bd (3 streams)
 - BTV National — Bangladesh — https://btv.hridoytv-channel.workers.dev/btv.m3u8
 - BTV National — Backup — http://198.195.239.50:8095/btv/index.m3u8
@@ -301,8 +301,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Dhoom Music Bangla — Backup — https://cdn.pishow.tv/ott/live/1456/master.m3u8
 ### discoverpakistan.pk@sd (3 streams)
 - Discover Pakistan — Pakistani — https://livecdn.live247stream.com/discoverpakistan/web/playlist.m3u8
-- Discover Pakistan — Pakistani — http://103.86.135.164:9981/stream/channelid/2073419458?profile=pass&ticket=461AC76A96B0E3DC1FCFBFCF318709B61B2D3F5B
-- Discover Pakistan — Pakistani — http://103.86.135.164:9981/stream/channelid/2089283490?profile=pass&ticket=BB7D99860884A453E7DEA789EDFB5114621FEDED
+- Discover Pakistan — Backup — http://103.86.135.164:9981/stream/channelid/2073419458?profile=pass&ticket=461AC76A96B0E3DC1FCFBFCF318709B61B2D3F5B
+- Discover Pakistan — Backup — http://103.86.135.164:9981/stream/channelid/2089283490?profile=pass&ticket=BB7D99860884A453E7DEA789EDFB5114621FEDED
 ### discoverychannel.in@sd (3 streams)
 - Discovery — Documentary & Wildlife — http://202.70.146.135:8000/play/a05z/index.m3u8
 - Discovery — Backup — http://198.195.239.50:8095/discovery/index.m3u8
@@ -390,8 +390,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - History TV18 — Backup — http://198.195.239.50:8095/HISTORY.TV.18.HD/index.m3u8
 ### humtv.pk (3 streams)
 - HUM TV — Pakistani — https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8
-- HUM TV — Pakistani — https://stream.ottplus.live/live/hum_tv_abr/index.m3u8
-- HUM TV — Pakistani — https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8
+- HUM TV — Backup — https://stream.ottplus.live/live/hum_tv_abr/index.m3u8
+- HUM TV — Backup — https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8
 ### independenttv.bd (3 streams)
 - Independent TV — Bangladesh — http://198.195.239.50:8095/INDEPENDENT.TV/index.m3u8
 - Independent TV — Backup — https://drk6xq0vhn.gpcdn.net/live/independent_tv_abr/live/independent_tv_720/chunks.m3u8
@@ -407,7 +407,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Jago News 24 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/jago-news-24-1/index.m3u8
 ### jalwatv.pk@sd (2 streams)
 - Jalwa TV — Pakistani — http://119.156.228.231:9983/stream/channelid/1893273325?profile=pass&ticket=B3DB50D5930411D593B973B8404789C46D3559B8
-- Jalwa TV — Pakistani — https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/live/135M/chunks.m3u8
+- Jalwa TV — Backup — https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/live/135M/chunks.m3u8
 ### jamunatv.bd (5 streams)
 - Jamuna TV — Bangladesh — http://198.195.239.50:8095/JAMUNA.TV/index.m3u8
 - Jamuna TV — Backup — https://stream.ottplus.live/live/jamuna_tv_abr/index.m3u8
@@ -447,7 +447,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - MNTV (Tamil) — Backup — https://www.khuwemultimedia.com/hls/mntv/mntv.m3u8
 ### masalatv.pk@sd (2 streams)
 - Masala TV — Pakistani — http://103.250.28.74:8000/play/a02x/index.m3u8
-- Masala TV — Pakistani — https://cdn4.mjunoon.tv:8087/streamtest/81M/chunks.m3u8
+- Masala TV — Backup — https://cdn4.mjunoon.tv:8087/streamtest/81M/chunks.m3u8
 ### mazhavilmanorama.in@sd (4 streams)
 - Mazhavil Manorama — Indian Entertainment — https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mazhavilmanorama_nim_https/050522/mazhavilmanorama/playlist.m3u8
 - Mazhavil Manorama — Backup — https://mumt07.tangotv.in/zHjX9OFlMAZHAVILMANORAMAHD/index.m3u8
@@ -771,13 +771,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-- **8xm.pk** in **Pakistani** — 8XM, 8XM, 8XM
-- **aplustv.pk@sd** in **Pakistani** — A-Plus TV, A-Plus TV, A-Plus TV
-- **bsfilm.pk@sd** in **Pakistani** — BS Film, BS Film
-- **discoverpakistan.pk@sd** in **Pakistani** — Discover Pakistan, Discover Pakistan, Discover Pakistan
-- **humtv.pk** in **Pakistani** — HUM TV, HUM TV, HUM TV
-- **jalwatv.pk@sd** in **Pakistani** — Jalwa TV, Jalwa TV
-- **masalatv.pk@sd** in **Pakistani** — Masala TV, Masala TV
+None.
 
 ## Primary Channel-Number Collisions
 
@@ -815,7 +809,7 @@ None.
 
 ## Metadata Conflicts
 
-- **8xm.pk** — names: 8xm; groups: Pakistani; countries: , PK
+None.
 
 ## Cross-Country Backup Collisions
 

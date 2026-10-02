@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T14:07:44+00:00",
+  "generated": "2026-10-02T14:10:18+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -109,11 +109,12 @@
         "8xm.pk@hd"
       ],
       "groups": [
+        "Backup",
         "Pakistani"
       ],
       "streams": 4,
-      "primary": 4,
-      "backup": 0
+      "primary": 2,
+      "backup": 2
     },
     "9xjalwa": {
       "names": [
@@ -502,11 +503,12 @@
         "aplustv.pk@sd"
       ],
       "groups": [
+        "Backup",
         "Pakistani"
       ],
       "streams": 3,
-      "primary": 3,
-      "backup": 0
+      "primary": 1,
+      "backup": 2
     },
     "apnachannel": {
       "names": [
@@ -1179,11 +1181,12 @@
         "bsfilm.pk@sd"
       ],
       "groups": [
+        "Backup",
         "Pakistani"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "bstv": {
       "names": [
@@ -3265,11 +3268,12 @@
         "discoverpakistan.pk@sd"
       ],
       "groups": [
+        "Backup",
         "Pakistani"
       ],
       "streams": 4,
-      "primary": 4,
-      "backup": 0
+      "primary": 2,
+      "backup": 2
     },
     "discoverychannel": {
       "names": [
@@ -4280,11 +4284,12 @@
         "humtv.pk@sd"
       ],
       "groups": [
+        "Backup",
         "Pakistani"
       ],
       "streams": 4,
-      "primary": 4,
-      "backup": 0
+      "primary": 2,
+      "backup": 2
     },
     "hungama": {
       "names": [
@@ -4508,11 +4513,12 @@
         "jalwatv.pk@sd"
       ],
       "groups": [
+        "Backup",
         "Pakistani"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "jamunatv": {
       "names": [
@@ -4943,11 +4949,12 @@
         "masalatv.pk@sd"
       ],
       "groups": [
+        "Backup",
         "Pakistani"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "mastiii": {
       "names": [
