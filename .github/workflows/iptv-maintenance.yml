@@ -1,4 +1,4 @@
-name: IPTV Playlist Maintenance
+name: IPTV Playlist Update
 on:
   push:
     branches: [main]
