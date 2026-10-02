@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T08:31:00+00:00",
+  "generated": "2026-10-02T13:24:55+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -105,15 +105,15 @@
         "8XM"
       ],
       "ids": [
-        "8xm.pk"
+        "8xm.pk",
+        "8xm.pk@hd"
       ],
       "groups": [
-        "Backup",
-        "Indian Music"
+        "Pakistani"
       ],
-      "streams": 3,
-      "primary": 1,
-      "backup": 2
+      "streams": 4,
+      "primary": 4,
+      "backup": 0
     },
     "9xjalwa": {
       "names": [
@@ -173,6 +173,20 @@
         "New Backup"
       ],
       "streams": 2,
+      "primary": 1,
+      "backup": 0
+    },
+    "aajentertainment": {
+      "names": [
+        "Aaj Entertainment"
+      ],
+      "ids": [
+        "aajentertainment.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
       "primary": 1,
       "backup": 0
     },
@@ -480,6 +494,34 @@
       "primary": 1,
       "backup": 0
     },
+    "aplustv": {
+      "names": [
+        "A-Plus TV"
+      ],
+      "ids": [
+        "aplustv.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 3,
+      "primary": 3,
+      "backup": 0
+    },
+    "apnachannel": {
+      "names": [
+        "Apna Channel"
+      ],
+      "ids": [
+        "apnachannel.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "arymusic": {
       "names": [
         "ARY Music"
@@ -488,7 +530,21 @@
         "arymusic.pk"
       ],
       "groups": [
-        "Indian Music"
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "arymusik": {
+      "names": [
+        "ARY Musik"
+      ],
+      "ids": [
+        "arymusik.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
       ],
       "streams": 1,
       "primary": 1,
@@ -582,6 +638,34 @@
       "primary": 1,
       "backup": 1
     },
+    "atv": {
+      "names": [
+        "ATV"
+      ],
+      "ids": [
+        "atv.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "aurlifehd": {
+      "names": [
+        "aurLife"
+      ],
+      "ids": [
+        "aurlifehd.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "autentichistory": {
       "names": [
         "Autentic History"
@@ -591,6 +675,20 @@
       ],
       "groups": [
         "Documentary & Wildlife"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "avtkhyber": {
+      "names": [
+        "AVT Khyber"
+      ],
+      "ids": [
+        "avtkhyber.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
       ],
       "streams": 1,
       "primary": 1,
@@ -1031,6 +1129,20 @@
       "primary": 1,
       "backup": 5
     },
+    "bolentertainment": {
+      "names": [
+        "Bol Entertainment"
+      ],
+      "ids": [
+        "bolentertainment.pk@hd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "bollywoodfilm": {
       "names": [
         "Bollywood Film"
@@ -1054,6 +1166,34 @@
       ],
       "groups": [
         "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "bsfilm": {
+      "names": [
+        "BS Film"
+      ],
+      "ids": [
+        "bsfilm.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 2,
+      "primary": 2,
+      "backup": 0
+    },
+    "bstv": {
+      "names": [
+        "BSTV"
+      ],
+      "ids": [
+        "bstv.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
       ],
       "streams": 1,
       "primary": 1,
@@ -3117,16 +3257,18 @@
     },
     "discoverpakistan": {
       "names": [
+        "Discover Pakistan",
         "Discovery Pakistan"
       ],
       "ids": [
-        "discoverpakistan.pk"
+        "discoverpakistan.pk",
+        "discoverpakistan.pk@sd"
       ],
       "groups": [
-        "Documentary & Wildlife"
+        "Pakistani"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 4,
+      "primary": 4,
       "backup": 0
     },
     "discoverychannel": {
@@ -3566,6 +3708,20 @@
       "primary": 1,
       "backup": 0
     },
+    "expressentertainment": {
+      "names": [
+        "Express Entertainment"
+      ],
+      "ids": [
+        "expressentertainment.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "expressnews": {
       "names": [
         "Express News"
@@ -3594,6 +3750,48 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "falaktv": {
+      "names": [
+        "Falak TV"
+      ],
+      "ids": [
+        "falaktv.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "filmax": {
+      "names": [
+        "Filmax"
+      ],
+      "ids": [
+        "filmax.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "filmazia": {
+      "names": [
+        "Filmazia"
+      ],
+      "ids": [
+        "filmazia.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "filmbox": {
       "names": [
@@ -3747,7 +3945,7 @@
         "geokahani.pk"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Pakistani"
       ],
       "streams": 1,
       "primary": 1,
@@ -3956,6 +4154,20 @@
       "primary": 1,
       "backup": 0
     },
+    "harpalgeo": {
+      "names": [
+        "HarPal Geo"
+      ],
+      "ids": [
+        "harpalgeo.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "hindihits": {
       "names": [
         "Hindi Hits"
@@ -4052,7 +4264,7 @@
         "hummasala.pk"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Pakistani"
       ],
       "streams": 1,
       "primary": 1,
@@ -4060,18 +4272,19 @@
     },
     "humtv": {
       "names": [
-        "HUM TV"
+        "HUM TV",
+        "Hum TV"
       ],
       "ids": [
-        "humtv.pk"
+        "humtv.pk",
+        "humtv.pk@sd"
       ],
       "groups": [
-        "Backup",
-        "Indian Entertainment"
+        "Pakistani"
       ],
-      "streams": 3,
-      "primary": 1,
-      "backup": 2
+      "streams": 4,
+      "primary": 4,
+      "backup": 0
     },
     "hungama": {
       "names": [
@@ -4287,6 +4500,20 @@
       "primary": 1,
       "backup": 1
     },
+    "jalwatv": {
+      "names": [
+        "Jalwa TV"
+      ],
+      "ids": [
+        "jalwatv.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 2,
+      "primary": 2,
+      "backup": 0
+    },
     "jamunatv": {
       "names": [
         "Jamuna TV"
@@ -4338,7 +4565,7 @@
         "joomusic.pk"
       ],
       "groups": [
-        "Indian Music"
+        "Pakistani"
       ],
       "streams": 1,
       "primary": 1,
@@ -4462,6 +4689,20 @@
       "primary": 1,
       "backup": 0
     },
+    "kay2hd": {
+      "names": [
+        "Kay2"
+      ],
+      "ids": [
+        "kay2hd.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "khushboobangla": {
       "names": [
         "Khushboo Bangla"
@@ -4530,6 +4771,20 @@
       ],
       "groups": [
         "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "ltnfamily": {
+      "names": [
+        "LTN Family"
+      ],
+      "ids": [
+        "ltnfamily.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
       ],
       "streams": 1,
       "primary": 1,
@@ -4680,6 +4935,20 @@
       "primary": 1,
       "backup": 1
     },
+    "masalatv": {
+      "names": [
+        "Masala TV"
+      ],
+      "ids": [
+        "masalatv.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 2,
+      "primary": 2,
+      "backup": 0
+    },
     "mastiii": {
       "names": [
         "Mastiii"
@@ -4789,6 +5058,20 @@
       ],
       "groups": [
         "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "mehrantv": {
+      "names": [
+        "Mehran TV"
+      ],
+      "ids": [
+        "mehrantv.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
       ],
       "streams": 1,
       "primary": 1,
@@ -5760,6 +6043,20 @@
       "primary": 1,
       "backup": 1
     },
+    "pashto1": {
+      "names": [
+        "Pashto 1"
+      ],
+      "ids": [
+        "pashto1.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "pbskids": {
       "names": [
         "PBS Kids"
@@ -5869,6 +6166,20 @@
       ],
       "groups": [
         "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "playentertainment": {
+      "names": [
+        "Play Entertainment"
+      ],
+      "ids": [
+        "playentertainment.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
       ],
       "streams": 1,
       "primary": 1,
@@ -6454,6 +6765,20 @@
       "primary": 0,
       "backup": 1
     },
+    "rohi": {
+      "names": [
+        "Rohi"
+      ],
+      "ids": [
+        "rohi.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "rojamovies": {
       "names": [
         "Roja Movies"
@@ -6585,6 +6910,20 @@
       "streams": 3,
       "primary": 1,
       "backup": 2
+    },
+    "sabtv": {
+      "names": [
+        "SAB TV"
+      ],
+      "ids": [
+        "sabtv.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "sadatv": {
       "names": [
@@ -6809,6 +7148,34 @@
       ],
       "groups": [
         "Indian Movies"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "silverscreen": {
+      "names": [
+        "Silver Screen"
+      ],
+      "ids": [
+        "silverscreen.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "sindhtv": {
+      "names": [
+        "Sindh TV"
+      ],
+      "ids": [
+        "sindhtv.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
       ],
       "streams": 1,
       "primary": 1,
@@ -8232,6 +8599,20 @@
       "primary": 1,
       "backup": 1
     },
+    "venushd": {
+      "names": [
+        "Venus"
+      ],
+      "ids": [
+        "venushd.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "vijaysuper": {
       "names": [
         "Vijay Super"
@@ -8286,6 +8667,20 @@
       ],
       "streams": 1,
       "primary": 0,
+      "backup": 0
+    },
+    "wasebtv": {
+      "names": [
+        "Waseb TV"
+      ],
+      "ids": [
+        "wasebtv.pk@sd"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
       "backup": 0
     },
     "wildearth": {

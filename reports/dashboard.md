@@ -1,33 +1,33 @@
 # Project Dashboard
 
-_Last generated: **2026-10-02 08:31 UTC**_
+_Last generated: **2026-10-02 13:25 UTC**_
 
 | Metric | Current |
 |---|---:|
-| Streams | **993** |
-| Active Channel Identities | **576** |
-| Active Primary Streams | **576** |
+| Streams | **1031** |
+| Active Channel Identities | **569** |
+| Active Primary Streams | **569** |
 | Bangladesh | **55** |
-| India | **250** |
-| Backup Streams | **381** |
+| India | **244** |
+| Backup Streams | **377** |
 | New Channels | **15** |
 | New Backup Streams | **21** |
 | Local Logos | **100.0%** |
-| EPG Programme Coverage | **61.2%** |
-| EPG Mapping | **66.0%** |
-| Stream Health Tested | **957** |
-| Stream Health Failures | **115** |
+| EPG Programme Coverage | **62.7%** |
+| EPG Mapping | **67.6%** |
+| Stream Health Tested | **995** |
+| Stream Health Failures | **154** |
 | Persistent Failures | **104** |
 | Near-Duplicate URL Families | **0** |
-| Audit Blocking Issues | **0** |
+| Audit Blocking Issues | **8** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-02T08:31:45+00:00** |
+| Pre-Publish Gate Generated | **2026-10-02T13:25:47+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **0**
+- Metadata conflicts: **1**
 - Same-name / different-ID collisions: **0**
-- Duplicate primary identities: **0**
+- Duplicate primary identities: **7**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Logo exceptions: **0**
@@ -41,23 +41,23 @@ _Last generated: **2026-10-02 08:31 UTC**_
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## EPG
-- Indian channels audited: **250**
-- Mapped: **165 (66.0%)**
-- Current/future programme coverage: **153/250 (61.2%)**
-- No mapping: **85**
+- Indian channels audited: **244**
+- Mapped: **165 (67.6%)**
+- Current/future programme coverage: **153/244 (62.7%)**
+- No mapping: **79**
 - Publication remains subject to source-policy approval.
 
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-02T08:31:00.405864+00:00** |
-| EPG coverage | **2026-10-02T08:31:00+00:00** |
-| Stream health | **2026-10-02T08:31:45+00:00** |
-| Pre-publish gate | **2026-10-02T08:31:45+00:00** |
+| Playlist audit | **2026-10-02T13:24:55.248236+00:00** |
+| EPG coverage | **2026-10-02T13:24:54+00:00** |
+| Stream health | **2026-10-02T13:25:47+00:00** |
+| Pre-publish gate | **2026-10-02T13:25:47+00:00** |
 
 ## Maintenance History
-- Records retained: **28**
-- Latest entries change: **993 → 993**
-- Latest health failures: **120 → 115**
+- Records retained: **29**
+- Latest entries change: **993 → 1031**
+- Latest health failures: **115 → 154**
 
 Historical records are retained in reports/maintenance-history.json.

@@ -1,15 +1,15 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-02T08:31:00+00:00**
+Generated: **2026-10-02T13:24:54+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **250**
+- Active Indian channels audited: **244**
 - Channels with an EPG mapping: **165**
-- Current/future programme coverage: **153/250 (61.2%)**
-- No guide mapping found: **85**
+- Current/future programme coverage: **153/244 (62.7%)**
+- No guide mapping found: **79**
 
 ## Source Status
 
@@ -35,8 +35,6 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Entertainment | Sony Entertainment TV | SonyEntertainmentTelevision.in@SD | Sony.Entertainment.Television.in | MAPPED_ID_ONLY |
 | Indian Bangla | DD Tripura | DDTripura.in@SD | DDTripura.in@SD | MAPPED_NOT_CURRENTLY_FOUND |
 | Indian Music | 7X Punjabi | custom.7x.punjabi | - | NO_GUIDE_HIT |
-| Indian Music | 8XM | 8XM.pk | - | NO_GUIDE_HIT |
-| Indian Music | ARY Music | ARYMusic.pk | - | NO_GUIDE_HIT |
 | Indian Music | Aaryaa TV | AaryaaTV.in | - | NO_GUIDE_HIT |
 | Indian Bangla | Amar Bangla Digital | custom.amar.bangla.digital | - | NO_GUIDE_HIT |
 | Indian Movies | B4U Bhojpuri Plus | B4UBhojpuri.in@Plus | - | NO_GUIDE_HIT |
@@ -62,17 +60,13 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Movies | Epic Bhojpuri Digital | custom.epic.bhojpuri.digital | - | NO_GUIDE_HIT |
 | Indian Entertainment | Epic TV Digital | custom.epic.tv.digital | - | NO_GUIDE_HIT |
 | Indian Entertainment | Flowers US | custom.flowers.us | - | NO_GUIDE_HIT |
-| Indian Entertainment | Geo Kahani | GeoKahani.pk | - | NO_GUIDE_HIT |
 | Indian Movies | Goldmines 2 | Goldmines2.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Goldmines Action | GoldminesAction.in | - | NO_GUIDE_HIT |
-| Indian Entertainment | HUM Masala | HUMMasala.pk | - | NO_GUIDE_HIT |
-| Indian Entertainment | HUM TV | HumTV.pk | - | NO_GUIDE_HIT |
 | Indian Music | Hindi Hits | HindiHits.in | - | NO_GUIDE_HIT |
 | Indian Movies | Hindi Movie Classic 24 | custom.hindi.movie.classic.24 | - | NO_GUIDE_HIT |
 | Indian Movies | Hindi Movies | custom.hindi.movies | - | NO_GUIDE_HIT |
 | Indian Music | Jalwa | custom.jalwa | - | NO_GUIDE_HIT |
 | Indian Bangla | Jhankar TV | JhankarTV.ca | - | NO_GUIDE_HIT |
-| Indian Music | Joo Music | JooMusic.pk | - | NO_GUIDE_HIT |
 | Indian Bangla | Jtv Classic | custom.jtv.classic | - | NO_GUIDE_HIT |
 | Indian Movies | Kairali Arabia | KairaliArabia.in | - | NO_GUIDE_HIT |
 | Indian Movies | Kalika TV | KalikaTV.in@SD | - | NO_GUIDE_HIT |
