@@ -348,6 +348,8 @@ https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8
 http://51.75.127.199:3141/7xmusic/index.m3u8
 #EXTINF:-1 tvg-id="custom.7x.punjabi" tvg-name="7X Punjabi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7x-punjabi.png" tvg-chno="410" channel-id="custom.7x.punjabi" group-title="Indian Music",7X Punjabi
 https://cdn2.in/7xPunjabihls/live.m3u8
+#EXTINF:-1 tvg-language="hin" tvg-country="IN" tvg-id="9XJalwa.in" tvg-name="9X Jalwa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalwa.png" tvg-chno="436" channel-id="9XJalwa.in" group-title="Indian Music",9X Jalwa
+https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/playlist.m3u8
 #EXTINF:-1 tvg-language="hin" tvg-country="IN" tvg-id="9XJalwa.in" tvg-name="9X Jalwa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jalwa.png" tvg-chno="413" channel-id="9XJalwa.in" group-title="Indian Music",9X Jalwa
 https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/70fca4d1-156e-4c03-baa4-9a4b602e33d5/0.m3u8
 #EXTINF:-1 tvg-id="9XJhakaas.in@SD" tvg-name="9X Jhakaas" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jhakaas.png" tvg-chno="414" channel-id="9XJhakaas.in@SD" group-title="Indian Music",9X Jhakaas
@@ -382,8 +384,6 @@ http://146.59.253.52:8080/hindihitshd/index.m3u8
 https://mumt04.tangotv.in/m18aqlK4INSYNC/index.m3u8
 #EXTINF:-1 tvg-id="IsaiAruvi.in@SD" tvg-name="Isai Aruvi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/isai-aruvi.png" tvg-chno="435" channel-id="IsaiAruvi.in@SD" group-title="Indian Music",Isai Aruvi
 https://segment.yuppcdn.net/140622/isaiaruvi/playlist.m3u8
-#EXTINF:-1 tvg-language="hin" tvg-country="IN" tvg-id="9XJalwa.in" tvg-name="9X Jalwa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalwa.png" tvg-chno="436" channel-id="9XJalwa.in" group-title="Indian Music",9X Jalwa
-https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/playlist.m3u8
 #EXTINF:-1 tvg-id="KalikaTV.in@SD" tvg-name="Kalika TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kalika-tv.png" tvg-chno="338" channel-id="KalikaTV.in@SD" group-title="Indian Music",Kalika TV
 http://server.applelive.in/kalikatv/kalikatv.m3u8
 #EXTINF:-1 tvg-id="KappaTV.in@ALT1" tvg-name="Kappa TV (Music)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kappa-tv.png" tvg-chno="439" channel-id="KappaTV.in@ALT1" group-title="Indian Music",Kappa TV (Music)
