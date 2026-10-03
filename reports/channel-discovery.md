@@ -1,12 +1,26 @@
 # Channel Discovery
 
-- New channels: **0**
+- New channels: **15**
 - New backups: **18**
 - Rejected: **715**
 
 ## New Channels
 
-
+- ATN Music (360p) (Bangladesh) — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
+- Express News (576p) (Bangladesh) — http://51.75.127.199:3141/expressnews/index.m3u8
+- Rupashi Bangla TV (720p) (Bangladesh) — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8
+- Vokta TV (720p) (Bangladesh) — https://vokta.raytahost.com/live/voktatv/index.m3u8
+- Colors Cineplex Bollywood (576p) (India) — http://202.70.146.135:8000/play/a058/index.m3u8
+- Maha Movie (576p) (India) — https://cdn.pishow.tv/ott/live/10007/master.m3u8
+- RS Bharat (576p) (India) — http://51.75.127.199:3141/rsbharat/index.m3u8
+- Star Gold 2 (576p) (India) — http://51.75.127.199:3141/stargold2/index.m3u8
+- Star Maa Music (576p) (India) — http://51.75.127.199:3141/starmaamusic/index.m3u8
+- Suriyan TV (576p) (India) — https://stream.sscloud7.com/live/suriyantv/index.m3u8
+- Wah Punjabi (576p) (India) — http://51.75.127.199:3141/wahpunjabi/index.m3u8
+- YET Max (720p) (India) — https://live.yettelevision.com:5443/LiveApp/streams/yettv2.m3u8
+- YRF Music (1080p) (India) — https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
+- ZB Music (720p) (India) — https://server.zillarbarta.com/zbmusic/index.m3u8
+- Zee South Flix (1080p) (India) — https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
 
 ## New Backups
 
