@@ -14,6 +14,7 @@ OUTPUT = Path("epg.xml")
 SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_US1.xml.gz",
     "https://iptv-epg.org/files/epg-in.xml",
     "https://epg.pw/xmltv/epg_IN.xml",
     "https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml",
