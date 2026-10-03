@@ -185,7 +185,7 @@ http://103.182.83.246/hls/snbcinema.m3u8
 http://198.195.239.50:8095/sonyAath/index.m3u8
 #EXTINF:-1 channel-id="Star.Jalsha.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" tvg-id="Star.Jalsha.in" tvg-name="Star Jalsha" tvg-chno="289" group-title="Indian Bangla",Star Jalsha
 https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8
-#EXTINF:-1 channel-id="Star.Jalsha.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" tvg-id="Star.Jalsha.in" tvg-name="Star Jalsha HD" group-title="Indian Bangla",Star Jalsha HD
+#EXTINF:-1 channel-id="Star.Jalsha.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" tvg-id="Star.Jalsha.in" tvg-name="Star Jalsha" group-title="Backup",Star Jalsha HD
 http://198.195.239.50:8095/starJalsha/index.m3u8
 #EXTINF:-1 channel-id="SunBangla.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-bangla.png" tvg-id="SunBangla.in@SD" tvg-name="Sun Bangla" tvg-chno="290" group-title="Indian Bangla",Sun Bangla
 http://27.124.71.27/Sun_Bangla/index.m3u8
@@ -1201,7 +1201,7 @@ https://dfhsahpa45kk2.cloudfront.net/scheduler/scheduleMaster/476.m3u8
 https://d36nnn435goed2.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-skhf82opa3tf4/WipeoutXtraPoweredbyBanijay_GB.m3u8
 #EXTINF:-1 channel-id="AndTV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv.png" tvg-id="AndTV.in@SD" tvg-name="&TV" group-title="Backup",&TV
 https://stream.ottplus.live/live/and_tv_hd_abr/index.m3u8
-#EXTINF:-1 channel-id="AndTV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-international-1080p.png" tvg-id="AndTV.in@SD" tvg-name="&TV" group-title="Backup",&TV
+#EXTINF:-1 channel-id="AndTV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv.png" tvg-id="AndTV.in@SD" tvg-name="&TV" group-title="Backup",&TV
 https://3f56f997.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9BbmRUVl9ITFM/playlist.m3u8
 #EXTINF:-1 channel-id="7SMusic.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" tvg-id="7SMusic.in@SD" tvg-name="7S Music" tvg-language="tam" tvg-country="IN" group-title="Backup",7S Music
 https://cdn.pishow.tv/ott/live/1257/master.m3u8
@@ -1435,7 +1435,7 @@ http://198.195.239.50:8095/DEEPTOTV.HD/index.m3u8
 https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8
 #EXTINF:-1 channel-id="DhoomMusic.in@SD" tvg-id="DhoomMusic.in@SD" tvg-name="Dhoom Music Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dhoom-music-bangla.png" tvg-country="IN" tvg-language="ben" group-title="Backup",Dhoom Music Bangla
 https://cdn.pishow.tv/ott/live/1456/master.m3u8
-#EXTINF:-1 channel-id="DiscoverPakistan.pk@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-pakistan-b91039be.png" tvg-id="DiscoverPakistan.pk@SD" tvg-name="Discover Pakistan" group-title="Backup",Discover Pakistan
+#EXTINF:-1 channel-id="DiscoverPakistan.pk@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discover-pakistan.png" tvg-id="DiscoverPakistan.pk@SD" tvg-name="Discover Pakistan" group-title="Backup",Discover Pakistan
 https://s3.ideationtec.live/Discover_Pakistan/Discover_Pakistan.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png" channel-id="DiscoveryChannel.in@SD" tvg-id="DiscoveryChannel.in@SD" tvg-name="Discovery" group-title="Backup",Discovery
 http://198.195.239.50:8095/discovery/index.m3u8
@@ -1519,7 +1519,7 @@ https://mumt04.tangotv.in/m18aqlK4GOLDMINES/index.m3u8
 https://cdn.pishow.tv/ott/live/1459/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines-bollywood.png" channel-id="GoldminesBollywood.in@SD" tvg-id="GoldminesBollywood.in@SD" tvg-name="Goldmines Bollywood" group-title="Backup",Goldmines Bollywood
 https://mumt03.tangotv.in/Dsly5z3HGOLDMINESBOLLYWOOD/index.m3u8
-#EXTINF:-1 channel-id="GoldminesMovies.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines-movies-576p-4a7688df18.png" tvg-id="GoldminesMovies.in@SD" tvg-name="Goldmines Movies" tvg-language="hin" tvg-country="IN" group-title="Backup",Goldmines Movies
+#EXTINF:-1 channel-id="GoldminesMovies.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines-movies.png" tvg-id="GoldminesMovies.in@SD" tvg-name="Goldmines Movies" tvg-language="hin" tvg-country="IN" group-title="Backup",Goldmines Movies
 https://cdn.pishow.tv/ott/live/1461/master.m3u8
 #EXTINF:-1 channel-id="GreenTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/green-tv.png" tvg-id="GreenTV.bd" tvg-name="Green TV" group-title="Backup",Green TV
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/greentv.stream/index.m3u8
@@ -1819,11 +1819,11 @@ http://198.195.239.50:8095/STAR.PLUS.HD/index.m3u8
 https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-bangla.png" channel-id="SunBangla.in@SD" tvg-id="SunBangla.in@SD" tvg-name="Sun Bangla" group-title="Backup",Sun Bangla
 http://198.195.239.50:8095/SUN.BANGLA.HD/index.m3u8
-#EXTINF:-1 tvg-id="LegoChannel.us@SD" tvg-name="The LEGO Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-lego-channel.png" channel-id="LegoChannel.us@SD" group-title="Backup",The LEGO Channel
+#EXTINF:-1 tvg-id="LegoChannel.us@SD" tvg-name="The LEGO Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lego-channel-1080p.png" channel-id="LegoChannel.us@SD" group-title="Backup",The LEGO Channel
 https://dltiqboxjw21d.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-evri8jwgwmxus/index.m3u8
 #EXTINF:-1 tvg-id="ThikanaTV.us" tvg-name="Thikana" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/thikana.png" channel-id="ThikanaTV.us" group-title="Backup",Thikana
 https://5dd3981940faa.streamlock.net:443/thikanatv/thikanatv/playlist.m3u8
-#EXTINF:-1 channel-id="custom.travelxp.english" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-xp-english-eu.png" tvg-id="custom.travelxp.english" tvg-name="Travelxp English" tvg-language="eng" tvg-country="EU" group-title="Backup",Travelxp English
+#EXTINF:-1 channel-id="custom.travelxp.english" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travelxp-english.png" tvg-id="custom.travelxp.english" tvg-name="Travelxp English" tvg-language="eng" tvg-country="EU" group-title="Backup",Travelxp English
 https://travelxp-travelxp-1-eu.rakuten.wurl.tv/3000.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-xp.png" channel-id="Travelxp.in@SD" tvg-id="Travelxp.in@SD" tvg-name="Travelxp Hindi" group-title="Backup",Travelxp Hindi
 http://198.195.239.50:8095/TRAVELXP.HD/index.m3u8
@@ -1865,9 +1865,9 @@ http://198.195.239.50:8095/ZEE.BANGLA.HD/index.m3u8
 http://51.75.127.199:3141/zeebanglahd/index.m3u8
 #EXTINF:-1 channel-id="ZeeBangla.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla.png" tvg-id="ZeeBangla.in@HD" tvg-name="Zee Bangla" group-title="Backup",Zee Bangla
 http://flowutc.com/live/MAGTF8AV71/bUiJLEJKG5/78981.ts
-#EXTINF:-1 channel-id="ZeeBanglaSonar.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-cinema.png" tvg-id="ZeeBanglaSonar.in@SD" tvg-name="Zee Bangla Sonar" group-title="Backup",Zee Bangla Sonar
+#EXTINF:-1 channel-id="ZeeBanglaSonar.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png" tvg-id="ZeeBanglaSonar.in@SD" tvg-name="Zee Bangla Sonar" group-title="Backup",Zee Bangla Sonar
 http://198.195.239.50:8095/ZEE.BANGLA.CINEMA/index.m3u8
-#EXTINF:-1 channel-id="ZeeBanglaSonar.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-cinema.png" tvg-id="ZeeBanglaSonar.in@SD" tvg-name="Zee Bangla Sonar" group-title="Backup",Zee Bangla Sonar
+#EXTINF:-1 channel-id="ZeeBanglaSonar.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png" tvg-id="ZeeBanglaSonar.in@SD" tvg-name="Zee Bangla Sonar" group-title="Backup",Zee Bangla Sonar
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/master2.m3u8
 #EXTINF:-1 channel-id="ZeeBanglaSonar.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png" tvg-id="ZeeBanglaSonar.in@SD" tvg-name="Zee Bangla Sonar" group-title="Backup",Zee Bangla Sonar
 https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-cinema-2/index.m3u8
@@ -1889,11 +1889,11 @@ https://stream.ottplus.live/live/zee_tv_hd_abr/index.m3u8
 https://d47ddb99.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1kZV9aZWVUVkhEVUtHZXJtYW55X0hMUw/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.png" channel-id="ZeeTV.in@SD" tvg-id="ZeeTV.in@SD" tvg-name="Zee TV" group-title="Backup",Zee TV
 http://198.195.239.50:8095/ZEE.TV.HD/index.m3u8
-#EXTINF:-1 channel-id="custom.zoommusic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png" tvg-id="custom.zoommusic" tvg-name="Zoom Music" group-title="Backup",Zoom Music
+#EXTINF:-1 channel-id="custom.zoommusic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-music.png" tvg-id="custom.zoommusic" tvg-name="Zoom Music" group-title="Backup",Zoom Music
 http://198.195.239.50:8095/ZOOM.MUSIC/index.m3u8
-#EXTINF:-1 channel-id="custom.zoommusic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png" tvg-id="custom.zoommusic" tvg-name="Zoom Music" group-title="Backup",Zoom Music
+#EXTINF:-1 channel-id="custom.zoommusic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-music.png" tvg-id="custom.zoommusic" tvg-name="Zoom Music" group-title="Backup",Zoom Music
 https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
-#EXTINF:-1 channel-id="custom.zoommusic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png" tvg-id="custom.zoommusic" tvg-name="Zoom Music" group-title="Backup",Zoom Music
+#EXTINF:-1 channel-id="custom.zoommusic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-music.png" tvg-id="custom.zoommusic" tvg-name="Zoom Music" group-title="Backup",Zoom Music
 https://d2esfk1pb9cdob.cloudfront.net/master.m3u8
-#EXTINF:-1 channel-id="custom.zoommusic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png" tvg-id="custom.zoommusic" tvg-name="Zoom Music" group-title="Backup",Zoom Music
+#EXTINF:-1 channel-id="custom.zoommusic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-music.png" tvg-id="custom.zoommusic" tvg-name="Zoom Music" group-title="Backup",Zoom Music
 https://pubads.g.doubleclick.net/ssai/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
