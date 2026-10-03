@@ -36,9 +36,5 @@
 
 ## 2026-10-03
 
-- 🗑️ **1 channel(s) removed**
-- 🖼️ **2 logo reference(s) corrected**
-
-### Removed channels
-- Піксель TV
+- No meaningful playlist changes detected.
 
