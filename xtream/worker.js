@@ -2,6 +2,7 @@ const DEFAULT_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BD
 const CACHE_KEY = "https://bdix-iptv.internal/playlist";
 const CACHE_TTL = 60;
 
+const EPG_PUBLIC_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg.xml";
 const EPG_URLS = [
   // IN1 is the broad India guide. IN4 is a smaller complementary India guide
   // with additional regional/channel IDs. Keep the live set to these two to
@@ -11,7 +12,7 @@ const EPG_URLS = [
   "https://iptv-epg.org/files/epg-in.xml",
   "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz"
 ];
-const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v10";
+const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v11";
 const EPG_CACHE_TTL = 900;
 // Direct M3U EPG endpoint deployment trigger. v10: IN1 + complementary IN4.
 
@@ -134,26 +135,42 @@ function userInfo(request,env){
 async function getEpg(env){
   const cache=caches.default, key=new Request(EPG_CACHE_KEY), cached=await cache.match(key);
   if(cached) return cached.text();
+
+  // Prefer the repository's validated, playlist-aligned XMLTV publication.
+  // This is the same epg.xml that the maintenance workflow validates before publish.
+  try{
+    const r=await fetch(EPG_PUBLIC_URL,{headers:{"user-agent":"BDIX-IPTV-Xtream-Gateway/1.0","accept":"application/xml,text/xml,*/*"}});
+    if(r.ok){
+      const xml=await r.text();
+      if(xml.includes("<tv") && xml.includes("<programme ")){
+        await cache.put(key,new Response(xml,{headers:{"content-type":"application/xml; charset=utf-8","cache-control":"public, max-age="+EPG_CACHE_TTL}}));
+        return xml;
+      }
+    }
+  }catch{}
+
+  // Fallback to the public source feeds if the generated publication is unavailable.
   const xmls=[];
   for(const source of EPG_URLS){
     try{
       const r=await fetch(source,{headers:{"user-agent":"BDIX-IPTV-Xtream-Gateway/1.0","accept":"application/gzip, application/xml, text/xml, */*"}});
       if(!r.ok) continue;
       const bytes=await r.arrayBuffer();
-      const encoding=(r.headers.get("content-encoding")||"").toLowerCase();
       let xml;
-      if(encoding.includes("gzip")) {
+      const contentEncoding=(r.headers.get("content-encoding")||"").toLowerCase();
+      const isGzip=bytes.byteLength>=2 && new Uint8Array(bytes)[0]===0x1f && new Uint8Array(bytes)[1]===0x8b;
+      if(contentEncoding.includes("gzip") && !isGzip){
         xml=new TextDecoder().decode(bytes);
-      } else if(source.endsWith(".gz")) {
-        try {
+      }else if(isGzip || source.endsWith(".gz")){
+        try{
           xml=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip"))).text();
-        } catch {
-          xml=new TextDecoder().decode(bytes);
+        }catch{
+          continue;
         }
-      } else {
+      }else{
         xml=new TextDecoder().decode(bytes);
       }
-      if(xml.includes("<tv") && xml.includes("<programme")) xmls.push(xml);
+      if(xml.includes("<tv") && xml.includes("<programme ")) xmls.push(xml);
     }catch{}
   }
   if(!xmls.length) throw new Error("All EPG sources failed");
@@ -161,6 +178,7 @@ async function getEpg(env){
   await cache.put(key,new Response(merged,{headers:{"content-type":"application/xml; charset=utf-8","cache-control":"public, max-age="+EPG_CACHE_TTL}}));
   return merged;
 }
+
 function xmlUnescape(s){
   return String(s??"").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&apos;/g,"'");
 }
