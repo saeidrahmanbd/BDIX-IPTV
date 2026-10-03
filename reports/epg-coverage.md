@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-03T10:48:14+00:00**
+Generated: **2026-10-03T10:50:32+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
@@ -8,7 +8,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 
 - Active Indian channels audited: **247**
 - Channels with an EPG mapping: **200**
-- Current/future programme coverage: **189/247 (76.5%)**
+- Current/future programme coverage: **190/247 (76.9%)**
 - No guide mapping found: **47**
 
 ## Source Status
@@ -34,7 +34,6 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Movies | ETV Beats | ETVBeats.in@HD | 3559 | MAPPED_ENDED |
 | Indian Movies | Ekamra Cinema | custom.ekamra.cinema | Ekamra.Cinema.in | MAPPED_ID_ONLY |
 | Indian Music | Ekamra Musiq | custom.ekamra.musiq | Ekamra.Musiq.in | MAPPED_ID_ONLY |
-| Indian Movies | Gold Mines Movie | GoldminesMovies.in@SD | Goldmines.Movies.in | MAPPED_ID_ONLY |
 | Indian Movies | Manoranjan Movies | ManoranjanMovies.in@SD | ManoranjanMovies.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Manoranjan Prime | ManoranjanPrime.in@SD | 10000000075992492 | MAPPED_ID_ONLY |
 | Indian Entertainment | Nazara | Nazara.in@SD | NAZARA.in | MAPPED_ID_ONLY |

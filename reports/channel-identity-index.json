@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T10:48:34+00:00",
+  "generated": "2026-10-03T10:50:51+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -172,20 +172,6 @@
       "streams": 1,
       "primary": 1,
       "backup": 0
-    },
-    "aajentertainment": {
-      "names": [
-        "Aaj Entertainment"
-      ],
-      "ids": [
-        "aajentertainment.pk@sd"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
     },
     "aakaashaath": {
       "names": [
@@ -3356,11 +3342,9 @@
     },
     "enterr10bangla": {
       "names": [
-        "Enter10 Bangla",
         "Enterr10 Bangla"
       ],
       "ids": [
-        "enterr10bangla.in",
         "enterr10bangla.in@sd"
       ],
       "groups": [
@@ -3540,20 +3524,6 @@
       "streams": 1,
       "primary": 1,
       "backup": 0
-    },
-    "expressentertainment": {
-      "names": [
-        "Express Entertainment"
-      ],
-      "ids": [
-        "expressentertainment.pk@sd"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
     },
     "faktmarathi": {
       "names": [
@@ -3871,7 +3841,6 @@
     },
     "goldminesmovies": {
       "names": [
-        "Gold Mines Movie",
         "Goldmines Movies"
       ],
       "ids": [
@@ -4507,8 +4476,7 @@
     },
     "legochannel": {
       "names": [
-        "Lego Channel",
-        "The LEGO Channel"
+        "Lego Channel"
       ],
       "ids": [
         "legochannel.us@sd"
@@ -4548,20 +4516,6 @@
       "streams": 1,
       "primary": 1,
       "backup": 0
-    },
-    "ltnfamily": {
-      "names": [
-        "LTN Family"
-      ],
-      "ids": [
-        "ltnfamily.pk@sd"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
     },
     "maasrangatv": {
       "names": [
@@ -5421,8 +5375,7 @@
     },
     "nationalgeographicwild": {
       "names": [
-        "Nat Geo Wild",
-        "National Geographic Wild (India)"
+        "Nat Geo Wild"
       ],
       "ids": [
         "nationalgeographicwild.in@sd"

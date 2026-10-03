@@ -1,12 +1,12 @@
 # Playlist Audit
-Generated: **2026-10-03T10:48:34.241069+00:00**
+Generated: **2026-10-03T10:50:50.978786+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **947**
-- Unique channel IDs: **601**
+- Playlist entries: **944**
+- Unique channel IDs: **597**
 - IDs with multiple streams: **173**
 - Duplicate stream URLs: **1**
 - Metadata conflicts: **0**
@@ -322,13 +322,14 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Ekushey TV — Backup — https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
 - Ekushey TV — Backup — https://tvsen5.aynaott.com/SyQuXz8sC3TB/index.m3u8
 - Ekushey TV — Backup — https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8
-### enterr10bangla.in@sd (6 streams)
-- Enter10 Bangla — Indian Bangla — http://198.195.239.50:8095/enter10Bangla/index.m3u8
-- Enter10 Bangla — Backup — http://198.195.239.50:8095/ENTER10.BANGLA/index.m3u8
-- Enter10 Bangla — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-10-bangla-1/index.m3u8
-- Enter10 Bangla — Backup — https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
-- Enter10 Bangla — Backup — https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8
+### enterr10bangla.in@sd (7 streams)
+- Enterr10 Bangla — Indian Bangla — http://198.195.239.50:8095/enter10Bangla/index.m3u8
+- Enterr10 Bangla — Backup — http://198.195.239.50:8095/ENTER10.BANGLA/index.m3u8
+- Enterr10 Bangla — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-10-bangla-1/index.m3u8
+- Enterr10 Bangla — Backup — https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
+- Enterr10 Bangla — Backup — https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8
 - Enterr10 Bangla — Backup — https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8
+- Enterr10 Bangla — Backup — https://live-bangla.akamaized.net/liveabr/playlist.m3u8
 ### epicbharat.in@sd (2 streams)
 - Epic Bharat — Indian Entertainment — https://mumt06.tangotv.in/qYyB8fXVEPICTV/index.m3u8
 - Epic Bharat — Backup — https://epiconvh.akamaized.net/live/nazara/master.m3u8
@@ -361,7 +362,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Goldmines Bollywood — Indian Movies — https://streams.tangotv.in/GOLDMINESBOLLYWOOD/ORIGIN/index.m3u8
 - Goldmines Bollywood — Backup — https://mumt03.tangotv.in/Dsly5z3HGOLDMINESBOLLYWOOD/index.m3u8
 ### goldminesmovies.in@sd (2 streams)
-- Gold Mines Movie — Indian Movies — https://streams.tangotv.in/GOLDMINEMOVIES/ORIGIN/index.m3u8
+- Goldmines Movies — Indian Movies — https://streams.tangotv.in/GOLDMINEMOVIES/ORIGIN/index.m3u8
 - Goldmines Movies — Backup — https://cdn.pishow.tv/ott/live/1461/master.m3u8
 ### greentv.bd (3 streams)
 - Green TV — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
@@ -417,7 +418,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Khushboo Bangla — Backup — https://cdn.pishow.tv/ott/live/1473/master.m3u8
 ### legochannel.us@sd (2 streams)
 - Lego Channel — Kids — https://dltiqboxjw21d.cloudfront.net/index.m3u8
-- The LEGO Channel — Backup — https://dltiqboxjw21d.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-evri8jwgwmxus/index.m3u8
+- Lego Channel — Backup — https://dltiqboxjw21d.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-evri8jwgwmxus/index.m3u8
 ### maasrangatv.bd (6 streams)
 - Maasranga TV — Bangladesh — https://mtv.sunplex.live/MAASRANGA/index.m3u8
 - Maasranga TV — Backup — http://198.195.239.50:8095/MASRANGA.TV.HD/index.m3u8
@@ -495,7 +496,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - National Geographic — Backup — http://51.75.127.199:3141/natgeohd/index.m3u8
 ### nationalgeographicwild.in@sd (2 streams)
 - Nat Geo Wild — Documentary & Wildlife — http://198.195.239.50:8095/NATGEO.WILD.HD/index.m3u8
-- National Geographic Wild (India) — Backup — http://51.75.127.199:3141/natgeowild/index.m3u8
+- Nat Geo Wild — Backup — http://51.75.127.199:3141/natgeowild/index.m3u8
 ### news24.bd (4 streams)
 - News 24 — Bangladesh — https://tvsen6.aynaott.com/cdgr3tw6WoG7JyRnLbi0/index.m3u8
 - News 24 — Backup — http://198.195.239.50:8095/NEWS.24/index.m3u8
@@ -769,7 +770,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **947**
+- Healthy/local references: **944**
 - missing: **0**
 - broken-local: **0**
 - external: **0**
