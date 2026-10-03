@@ -2105,3 +2105,14 @@ https://cdn-2.pishow.tv/live/1459/master.m3u8
 https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8
 #EXTINF:-1 tvg-id="SangeetBangla.in@SD" tvg-name="Sangeet Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sangeet-bangla.png" tvg-chno="283" channel-id="SangeetBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="New Backup",Sangeet Bangla
 https://tvsen6.aynaott.com/hT5jHczt/index.m3u8
+# --- Added from 18_INDIA(1).m3u: 2026-10-03 ---
+#EXTINF:-1 tvg-id="ColorsBangla.in@HD" tvg-name="Colors Bangla HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-hd.png" channel-id="ColorsBangla.in@HD" tvg-country="IN" tvg-language="ben" group-title="New Backup",Colors Bangla HD
+http://103.165.93.31:8095/colorsBangla/index.m3u8
+#EXTINF:-1 tvg-id="Enterr10Bangla.in@SD" tvg-name="Enterr 10 Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png" channel-id="Enterr10Bangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="New Backup",Enterr 10 Bangla
+https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="Sony.Aath.in" tvg-name="Sony AATH" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-aath.png" channel-id="Sony.Aath.in" tvg-country="IN" tvg-language="ben" group-title="New Backup",Sony AATH
+https://cloudplay-sonyliv.pages.dev/aath.m3u8
+#EXTINF:-1 tvg-id="PolimerTV.in@SD" tvg-name="Polimer TV" tvg-logo="https://dtil.tmsimg.com/assets/s143665_ld_h15_aa.png?lock=720x540" channel-id="PolimerTV.in@SD" tvg-country="IN" tvg-language="tam" group-title="New Backup",Polimer TV
+https://cdn.pishow.tv/ott/live/1241/master.m3u8
+#EXTINF:-1 tvg-id="ShemarooTV.in@SD" tvg-name="Shemaroo TV" tvg-logo="https://airtelapp.shemaroo.com/shemarootv/smil:shemarootvadp.smil/playlist.m3u8" channel-id="ShemarooTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="New Backup",Shemaroo TV
+https://airtelapp.shemaroo.com/shemarootv/smil:shemarootvadp.smil/playlist.m3u8
