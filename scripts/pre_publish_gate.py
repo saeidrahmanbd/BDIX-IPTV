@@ -32,6 +32,13 @@ def main():
     reclassified=review_reclassified + review_promoted
     primary_chno=Counter(a.get("tvg-chno","").strip() for a,u in cur_primary if a.get("tvg-chno","").strip())
     chno_dupes=[n for n,c in primary_chno.items() if c>1]
+    primary_identity=defaultdict(list)
+    for a,u in cur_primary:
+        cid=(a.get("tvg-id") or a.get("channel-id") or "").strip().lower()
+        group=a.get("group-title","").strip()
+        if cid:
+            primary_identity[(cid,group)].append((a.get("tvg-name",""),u))
+    duplicate_primary=[k for k,v in primary_identity.items() if len(v)>1]
     missing=[a.get("tvg-name","") for a,u in cur_primary if not a.get("tvg-chno","").strip()]
     issues=[]
     if dup_urls: issues.append(f"duplicate stream URLs: {len(dup_urls)}")
@@ -39,6 +46,7 @@ def main():
     if reclassified: issues.append(f"review entries reclassified: {len(reclassified)}")
     if review_removed: issues.append(f"review entries deleted: {len(review_removed)}")
     if chno_dupes: issues.append(f"duplicate primary channel numbers: {len(chno_dupes)}")
+    if duplicate_primary: issues.append(f"duplicate primary identities: {len(duplicate_primary)}")
     if missing: issues.append(f"primary entries missing tvg-chno: {len(missing)}")
     status="PASS" if not issues else "BLOCK"
     old_by_url={u.lower():(a.get("tvg-name",""),a.get("group-title","")) for _,a,u in old}
