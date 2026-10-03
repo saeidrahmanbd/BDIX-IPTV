@@ -1,18 +1,18 @@
 # Playlist Audit
-Generated: **2026-10-03T05:59:35.482256+00:00**
+Generated: **2026-10-03T06:17:25.734444+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1047**
-- Unique channel IDs: **649**
-- IDs with multiple streams: **193**
+- Playlist entries: **1038**
+- Unique channel IDs: **643**
+- IDs with multiple streams: **191**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **4**
+- IDs with multiple logo references: **5**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **0**
 - Duplicate primary identities: **1**
@@ -129,10 +129,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### bbcearth.ca (2 streams)
 - BBC Earth — Documentary & Wildlife — https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist.m3u8
 - BBC Earth — Backup — http://198.195.239.50:8095/BBC.Earth.HD/index.m3u8
-### beinsportsxtraenespanol.us (3 streams)
-- beIN Sports XTRA en Espanol — Backup — https://dc1644a9jazgj.cloudfront.net/beIN_Sports_Xtra_Espanol.m3u8
-- beIN Sports XTRA en Espanol — Backup — https://aegis-cloudfront-1.tubi.video/01f6c149-449b-4248-8bda-2278799205ec/playlist.m3u8
-- beIN Sports XTRA en Espanol — Backup — https://bein-esp-xumo.amagi.tv/playlist.m3u8
 ### bhojpuricinema.in@sd (3 streams)
 - Bhojpuri Cinema — Indian Movies — https://live-bhojpuri.akamaized.net/liveabr/playlist.m3u8
 - Bhojpuri Cinema — Backup — https://iptvlive.ahmed-bd-org.workers.dev/bhojpuri-cinema-1/index.m3u8
@@ -248,6 +244,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### custom.travelxp.english (2 streams)
 - Travelxp English — Documentary & Wildlife — https://travelxp-travelxp-1-eu.rakuten.wurl.tv/playlist.m3u8
 - Travelxp English — Backup — https://travelxp-travelxp-1-eu.rakuten.wurl.tv/3000.m3u8
+### custom.zoommusic (5 streams)
+- Zoom Music — Indian Music — https://d2esfk1pb9cdob.cloudfront.net/chunklist_1.m3u8
+- Zoom Music — Backup — http://198.195.239.50:8095/ZOOM.MUSIC/index.m3u8
+- Zoom Music — Backup — https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
+- Zoom Music — Backup — https://d2esfk1pb9cdob.cloudfront.net/master.m3u8
+- Zoom Music — Backup — https://pubads.g.doubleclick.net/ssai/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 ### dangal2.in@sd (3 streams)
 - Dangal 2 — Indian Entertainment — https://live-dangal2.akamaized.net/liveabr/playlist.m3u8
 - Dangal 2 — Backup — https://streams.tangotv.in/DANGAL2/ORIGIN/index.m3u8
@@ -346,11 +348,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Ekushey TV — Backup — https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
 - Ekushey TV — Backup — https://tvsen5.aynaott.com/SyQuXz8sC3TB/index.m3u8
 ### enterr10bangla.in@sd (6 streams)
-- Enter10 Bangla — Indian Bangla — https://iptvlive.ahmed-bd-org.workers.dev/enter-10-bangla-1/index.m3u8
-- Enter10 Bangla — Backup — http://198.195.239.50:8095/enter10Bangla/index.m3u8
+- Enter10 Bangla — Indian Bangla — http://198.195.239.50:8095/enter10Bangla/index.m3u8
 - Enter10 Bangla — Backup — https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
-- Enter10 Bangla — Backup — https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8
 - Enter10 Bangla — Backup — http://198.195.239.50:8095/ENTER10.BANGLA/index.m3u8
+- Enter10 Bangla — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-10-bangla-1/index.m3u8
+- Enter10 Bangla — Backup — https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8
 - Enterr10 Bangla — Backup — https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8
 ### epicbharat.in@sd (2 streams)
 - Epic Bharat — Indian Entertainment — https://mumt06.tangotv.in/qYyB8fXVEPICTV/index.m3u8
@@ -509,7 +511,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Movie Bangla — Backup — https://iptvlive.ahmed-bd-org.workers.dev/movie-bangla-1/index.m3u8
 - Movie Bangla — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/moviebanglalink2.stream/tracks-v1a1/mono.m3u8
 ### moviesphere.us (2 streams)
-- MovieSphere — Backup — https://aegis-cloudfront-1.tubi.video/8b127a5b-3054-4f39-93a2-1c4aab9ef5ff/playlist.m3u8
+- MovieSphere — International — https://aegis-cloudfront-1.tubi.video/8b127a5b-3054-4f39-93a2-1c4aab9ef5ff/playlist.m3u8
 - MovieSphere — Backup — https://amg00353-lionsgatestudio-moviesphere-xumo-zh5u0.amagi.tv/playlist.m3u8
 ### mtvindia.in@sd (2 streams)
 - MTV India — Indian Entertainment — http://198.195.239.50:8095/MTV.INDIA/index.m3u8
@@ -598,9 +600,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### ramdhenu.in@sd (2 streams)
 - Ramdhenu — Indian Music — https://mumt01.tangotv.in/O5aw8Zn3RAMDHENU/mpegts
 - Ramdhenu — Backup — https://mumt01.tangotv.in/O5aw8Zn3RAMDHENU/index.m3u8
-### rdssocialtv.it (2 streams)
-- RDS Social TV — Backup — https://stream.rdstv.radio/index.m3u8
-- RDS Social TV — Backup — https://stream.rdstv.radio/out/v1/ec85f72b87f04555aa41d616d5be41dc/index.m3u8
 ### romedynow.in@sd (2 streams)
 - Romedy Now — International — http://198.195.239.50:8095/ROMEDY.NOW/index.m3u8
 - Romedy Now — Backup — http://51.75.127.199:3141/romedynow/index.m3u8
@@ -642,7 +641,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - SA TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/satvoff5666.stream/playlist.m3u8
 - SA TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-2/index.m3u8
 ### shansontv.ru (2 streams)
-- Shanson TV — Backup — http://catchup.videoline.ru/shanson/index.m3u8
+- Shanson TV — International — http://catchup.videoline.ru/shanson/index.m3u8
 - Shanson TV — Backup — https://streaming.thestream.cyou/live/7009.m3u8
 ### shemaroojosh.in@sd (2 streams)
 - Shemaroo Josh — Indian Entertainment — https://airtelapp.shemaroo.com/shemarooChumbakTV/smil:shemarooChumbakTVadp.smil/playlist.m3u8
@@ -802,12 +801,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Zee TV — Backup — https://stream.ottplus.live/live/zee_tv_hd_abr/index.m3u8
 - Zee TV — Backup — https://d47ddb99.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1kZV9aZWVUVkhEVUtHZXJtYW55X0hMUw/playlist.m3u8
 - Zee TV — Backup — http://198.195.239.50:8095/ZEE.TV.HD/index.m3u8
-### zoom.in@sd (5 streams)
-- Zoom TV — Backup — http://198.195.239.50:8095/ZOOM.MUSIC/index.m3u8
-- Zoom TV — Backup — https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
-- Zoom TV — Backup — https://d2esfk1pb9cdob.cloudfront.net/master.m3u8
-- Zoom TV — Backup — https://mumbai-edge.smartplaytv.in/Zoom/index.m3u8
-- Zoom TV — Backup — https://pubads.g.doubleclick.net/ssai/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 
 ## Duplicate Primary Identities
 
@@ -819,7 +812,7 @@ None.
 
 ## Malformed EXTINF Entries
 
-- line 1910: missing stream URL
+- line 1892: missing stream URL
 
 ## Suspicious URLs
 
@@ -861,7 +854,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1047**
+- Healthy/local references: **1038**
 - missing: **0**
 - broken-local: **0**
 - external: **0**
@@ -873,6 +866,7 @@ None.
 - multiple-logo-references — andtv.in@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-international-1080p.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv.png
 - multiple-logo-references — colors.bangla.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-hd.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png
 - multiple-logo-references — custom.travelxp.english — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-xp-english-eu.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travelxp-english.png
+- multiple-logo-references — custom.zoommusic — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-music.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png
 - multiple-logo-references — zeebanglasonar.in@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-cinema.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png
 
 ## Protected Primary Entries

@@ -1,21 +1,21 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-03T05:59:35+00:00**
+Generated: **2026-10-03T06:17:25+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **242**
+- Active Indian channels audited: **243**
 - Channels with an EPG mapping: **160**
-- Current/future programme coverage: **148/242 (61.2%)**
-- No guide mapping found: **82**
+- Current/future programme coverage: **148/243 (60.9%)**
+- No guide mapping found: **83**
 
 ## Source Status
 
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 817 current/future IDs; 112675 programme rows
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 531 current/future IDs; 20737 programme rows
-- **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 66097 programme rows
+- **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 69000 programme rows
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19385 programme rows
 
 ## Channels Requiring Attention
@@ -81,6 +81,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Movies | Manoranjan Movies | ManoranjanMovies.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Manoranjan Prime | ManoranjanPrime.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Mei Alai TV | MeiAlaiTV.in | - | NO_GUIDE_HIT |
+| Indian Entertainment | Metro TV (India) | MetroTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Music | Music Mastii | MusicMastii.in | - | NO_GUIDE_HIT |
 | Indian Movies | NH BollyFlix | NHBollyFlix.in | - | NO_GUIDE_HIT |
 | Indian Movies | NH BollyGold | NHBollyGold.in | - | NO_GUIDE_HIT |

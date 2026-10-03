@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T05:59:35+00:00",
+  "generated": "2026-10-03T06:17:25+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -51,11 +51,11 @@
         "4everdrama.ua"
       ],
       "groups": [
-        "Backup"
+        "International"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "4evermusic": {
       "names": [
@@ -1052,11 +1052,11 @@
         "beinsportsxtraenespanol.us"
       ],
       "groups": [
-        "Backup"
+        "Sports"
       ],
-      "streams": 3,
-      "primary": 0,
-      "backup": 3
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "bhi.channel": {
       "names": [
@@ -2295,11 +2295,11 @@
         "custom.recovered.stingray.101"
       ],
       "groups": [
-        "Backup"
+        "International"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "custom.recovered.stingray.137": {
       "names": [
@@ -2309,11 +2309,11 @@
         "custom.recovered.stingray.137"
       ],
       "groups": [
-        "Backup"
+        "International"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "custom.robot.wars.by.mech": {
       "names": [
@@ -2691,11 +2691,12 @@
         "custom.zoommusic"
       ],
       "groups": [
+        "Backup",
         "Indian Music"
       ],
-      "streams": 1,
+      "streams": 5,
       "primary": 1,
-      "backup": 0
+      "backup": 4
     },
     "dangal2": {
       "names": [
@@ -4073,11 +4074,11 @@
         "gravitasmovies.us"
       ],
       "groups": [
-        "Backup"
+        "International"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "greatmovies": {
       "names": [
@@ -4101,11 +4102,11 @@
         "greatromance.uk"
       ],
       "groups": [
-        "Backup"
+        "International"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "greentv": {
       "names": [
@@ -5093,20 +5094,19 @@
     "metrotv": {
       "names": [
         "Metro TV (Honduras)",
-        "Metro TV (India)",
-        "Metro TV (Indonesia)"
+        "Metro TV (India)"
       ],
       "ids": [
         "metrotv.hn",
-        "metrotv.id@sd",
         "metrotv.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Indian Entertainment",
+        "International"
       ],
-      "streams": 3,
-      "primary": 0,
-      "backup": 3
+      "streams": 2,
+      "primary": 2,
+      "backup": 0
     },
     "metv": {
       "names": [
@@ -5341,8 +5341,8 @@
         "International"
       ],
       "streams": 4,
-      "primary": 2,
-      "backup": 2
+      "primary": 3,
+      "backup": 1
     },
     "moviespheregold": {
       "names": [
@@ -5568,12 +5568,11 @@
         "mytimemovienetwork.uk@sd"
       ],
       "groups": [
-        "Backup",
         "International"
       ],
       "streams": 3,
-      "primary": 2,
-      "backup": 1
+      "primary": 3,
+      "backup": 0
     },
     "mytimemovienetworkeast": {
       "names": [
@@ -5679,20 +5678,6 @@
       "streams": 1,
       "primary": 1,
       "backup": 0
-    },
-    "nbatv": {
-      "names": [
-        "NBA TV"
-      ],
-      "ids": [
-        "nbatv.us"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
     },
     "news21banglatv": {
       "names": [
@@ -5909,20 +5894,6 @@
       ],
       "streams": 2,
       "primary": 1,
-      "backup": 1
-    },
-    "ockoexpres": {
-      "names": [
-        "Ocko Expres"
-      ],
-      "ids": [
-        "ockoexpres.cz"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
       "backup": 1
     },
     "oggyandthecockroaches": {
@@ -6692,20 +6663,6 @@
       "primary": 1,
       "backup": 1
     },
-    "rdssocialtv": {
-      "names": [
-        "RDS Social TV"
-      ],
-      "ids": [
-        "rdssocialtv.it"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 2,
-      "primary": 0,
-      "backup": 2
-    },
     "realmadridtvenglish": {
       "names": [
         "Real Madrid TV English"
@@ -6770,11 +6727,11 @@
         "retromusictv.cz"
       ],
       "groups": [
-        "Backup"
+        "International"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "rohi": {
       "names": [
@@ -7102,11 +7059,12 @@
         "shansontv.ru"
       ],
       "groups": [
-        "Backup"
+        "Backup",
+        "International"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 2
+      "primary": 1,
+      "backup": 1
     },
     "shemaroobollywood": {
       "names": [
@@ -8249,11 +8207,11 @@
         "thewalkingdeaduniverse.us"
       ],
       "groups": [
-        "Backup"
+        "International"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "thikanatv": {
       "names": [
@@ -8762,21 +8720,18 @@
     "xitehits": {
       "names": [
         "XITE Hits",
-        "XITE Hits Germany",
         "XITE Hits UK"
       ],
       "ids": [
         "xitehits.nl",
-        "xitehits.nl@germany",
         "xitehits.nl@uk"
       ],
       "groups": [
-        "Backup",
         "International"
       ],
-      "streams": 3,
+      "streams": 2,
       "primary": 2,
-      "backup": 1
+      "backup": 0
     },
     "yetmax": {
       "names": [
@@ -9039,20 +8994,6 @@
       "streams": 1,
       "primary": 1,
       "backup": 0
-    },
-    "zoom": {
-      "names": [
-        "Zoom TV"
-      ],
-      "ids": [
-        "zoom.in@sd"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 5,
-      "primary": 0,
-      "backup": 5
     },
     "zoomoo": {
       "names": [
