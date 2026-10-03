@@ -1,20 +1,20 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-03T04:04:04+00:00**
+Generated: **2026-10-03T05:37:42+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **244**
-- Channels with an EPG mapping: **165**
-- Current/future programme coverage: **153/244 (62.7%)**
-- No guide mapping found: **79**
+- Active Indian channels audited: **237**
+- Channels with an EPG mapping: **157**
+- Current/future programme coverage: **145/237 (61.2%)**
+- No guide mapping found: **80**
 
 ## Source Status
 
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 817 current/future IDs; 112048 programme rows
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 531 current/future IDs; 20771 programme rows
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 817 current/future IDs; 112675 programme rows
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 531 current/future IDs; 20737 programme rows
 - **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 66097 programme rows
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19385 programme rows
 
@@ -34,7 +34,6 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Entertainment | One Paschima | OnePaschima.in@SD | One.Paschima.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Sony Entertainment TV | SonyEntertainmentTelevision.in@SD | Sony.Entertainment.Television.in | MAPPED_ID_ONLY |
 | Indian Bangla | DD Tripura | DDTripura.in@SD | DDTripura.in@SD | MAPPED_NOT_CURRENTLY_FOUND |
-| Indian Music | 7X Punjabi | custom.7x.punjabi | - | NO_GUIDE_HIT |
 | Indian Music | Aaryaa TV | AaryaaTV.in | - | NO_GUIDE_HIT |
 | Indian Bangla | Amar Bangla Digital | custom.amar.bangla.digital | - | NO_GUIDE_HIT |
 | Indian Movies | B4U Bhojpuri Plus | B4UBhojpuri.in@Plus | - | NO_GUIDE_HIT |
@@ -57,7 +56,9 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Entertainment | ETV Josh | ETVJosh.in | - | NO_GUIDE_HIT |
 | Indian Music | ETV Music | ETVMusic.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | Epic Bharat | EpicBharat.in@SD | - | NO_GUIDE_HIT |
+| Indian Entertainment | Epic Bhojpuri | EpicBhojpuri.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Epic Bhojpuri Digital | custom.epic.bhojpuri.digital | - | NO_GUIDE_HIT |
+| Indian Music | Epic Music | EpicMusic.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Epic TV Digital | custom.epic.tv.digital | - | NO_GUIDE_HIT |
 | Indian Entertainment | Flowers US | custom.flowers.us | - | NO_GUIDE_HIT |
 | Indian Movies | Goldmines 2 | Goldmines2.in@SD | - | NO_GUIDE_HIT |
@@ -79,6 +80,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Entertainment | MTV India | MTVIndia.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Manoranjan Prime | ManoranjanPrime.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Mei Alai TV | MeiAlaiTV.in | - | NO_GUIDE_HIT |
+| Indian Music | Music Mastii | MusicMastii.in | - | NO_GUIDE_HIT |
 | Indian Movies | NH BollyFlix | NHBollyFlix.in | - | NO_GUIDE_HIT |
 | Indian Movies | NH BollyGold | NHBollyGold.in | - | NO_GUIDE_HIT |
 | Indian Music | NH BollyRaga | NHBollyRaga.in | - | NO_GUIDE_HIT |
@@ -111,5 +113,4 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Movies | Tolly TV | TollyTV.in | - | NO_GUIDE_HIT |
 | Indian Music | Ultimate TV | UltimateTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Bangla | ZB Cartoon | ZBCartoon.in | - | NO_GUIDE_HIT |
-| Indian Music | ZB Music | ZBMusic.in | - | NO_GUIDE_HIT |
 | Indian Bangla | Zee Bangla Sonar | ZeeBanglaSonar.in@SD | - | NO_GUIDE_HIT |
