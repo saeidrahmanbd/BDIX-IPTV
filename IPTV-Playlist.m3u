@@ -2100,3 +2100,8 @@ https://cdn-2.pishow.tv/live/227/master.m3u8
 https://cdn-2.pishow.tv/live/1461/master.m3u8
 #EXTINF:-1 tvg-id="Goldmines.in@SD" tvg-name="Goldmines" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines.png" tvg-chno="323" channel-id="Goldmines.in@SD" tvg-language="hin" tvg-country="IN" group-title="New Backup",Goldmines
 https://cdn-2.pishow.tv/live/1459/master.m3u8
+# --- Added from 5-file audit: 2026-10-03 ---
+#EXTINF:-1 tvg-id="Sony.Aath.in" tvg-name="Sony AATH" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-aath.png" tvg-chno="230" channel-id="Sony.Aath.in" tvg-country="IN" tvg-language="ben" group-title="New Backup",Sony AATH
+https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8
+#EXTINF:-1 tvg-id="SangeetBangla.in@SD" tvg-name="Sangeet Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sangeet-bangla.png" tvg-chno="283" channel-id="SangeetBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="New Backup",Sangeet Bangla
+https://tvsen6.aynaott.com/hT5jHczt/index.m3u8
