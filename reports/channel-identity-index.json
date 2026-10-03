@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T06:56:34+00:00",
+  "generated": "2026-10-03T07:09:53+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -399,9 +399,10 @@
       "groups": [
         "Backup",
         "Bangladesh",
+        "New Backup",
         "Not Playing"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
       "backup": 4
     },
@@ -1314,9 +1315,10 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "New Backup"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
       "backup": 1
     },
@@ -2802,9 +2804,10 @@
       "groups": [
         "Backup",
         "Bangladesh",
+        "New Backup",
         "Not Playing"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
       "backup": 4
     },
@@ -5294,7 +5297,7 @@
         "Bangladesh",
         "New Backup"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
       "backup": 3
     },
@@ -5335,9 +5338,10 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "New Backup"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
       "backup": 3
     },
@@ -5658,7 +5662,7 @@
         "Bangladesh",
         "New Backup"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
       "backup": 2
     },
@@ -5934,9 +5938,10 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "New Backup"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
       "backup": 5
     },
