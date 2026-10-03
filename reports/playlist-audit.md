@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-03T11:35:11.585576+00:00**
+Generated: **2026-10-03T11:39:56.153095+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -14,9 +14,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **0**
-- Duplicate primary identities: **0**
-- Primary channel-number collisions: **0**
+- Logo exceptions: **1**
+- Duplicate primary identities: **3**
+- Primary channel-number collisions: **1**
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
 - Suspicious URL credentials/syntax: **0**
@@ -171,10 +171,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Colors Bangla — Backup — https://catchup.yuppcdn.net/amazonv2/36/preview/colorsbanglahd/master/chunklist.m3u8
 - Colors Bangla — Backup — https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/2500.m3u8
 ### colorsbanglacinema.in@sd (4 streams)
-- Colors Bangla Cinema — Indian Bangla — http://livetv.akr4m.com:8080/bdtv/restrem/3.m3u8
-- Colors Bangla Cinema — Backup — http://198.195.239.50:8095/COLORS.BANGLA.CINEMA/index.m3u8
-- Colors Bangla Cinema — Backup — http://198.195.239.50:8095/colorsBanglaChinema/index.m3u8
-- Colors Bangla Cinema — Backup — http://51.75.127.199:3141/colorsbanglacinema/index.m3u8
+- Colors Bangla Cinema — Indian Movies — http://livetv.akr4m.com:8080/bdtv/restrem/3.m3u8
+- Colors Bangla Cinema — Indian Movies — http://198.195.239.50:8095/COLORS.BANGLA.CINEMA/index.m3u8
+- Colors Bangla Cinema — Indian Movies — http://198.195.239.50:8095/colorsBanglaChinema/index.m3u8
+- Colors Bangla Cinema — Indian Movies — http://51.75.127.199:3141/colorsbanglacinema/index.m3u8
 ### colorscineplex.in@sd (3 streams)
 - Colors Cineplex — Indian Movies — http://198.195.239.50:8095/COLORS.CINEPLEX.HD/index.m3u8
 - Colors Cineplex — Backup — http://202.70.146.135:8000/play/a04n/index.m3u8
@@ -633,10 +633,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Star Jalsha — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
 - Star Jalsha — Backup — https://flussonic.defineatoz.com/StarjalshaHD/tracks-v1a1/mono.m3u8
 ### star.jalsha.movies.in (4 streams)
-- Jalsha Movies — Indian Bangla — http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8
-- Jalsha Movies — Backup — http://103.151.60.162:2122/play/a00x/index.m3u8
-- Jalsha Movies — Backup — http://198.195.239.50:8095/JALSHA.MOVIES.HD/index.m3u8
-- Jalsha Movies — Backup — http://198.195.239.50:8095/jalshaMovies/index.m3u8
+- Jalsha Movies — Indian Movies — http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8
+- Jalsha Movies — Indian Movies — http://103.151.60.162:2122/play/a00x/index.m3u8
+- Jalsha Movies — Indian Movies — http://198.195.239.50:8095/JALSHA.MOVIES.HD/index.m3u8
+- Jalsha Movies — Indian Movies — http://198.195.239.50:8095/jalshaMovies/index.m3u8
 ### stargold.in@hd (3 streams)
 - Star Gold — Indian Movies — http://livetv.akr4m.com:8080/bdtv/restrem/45.m3u8
 - Star Gold — Backup — http://198.195.239.50:8095/STAR.GOLD.HD/index.m3u8
@@ -662,7 +662,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Travelxp Hindi — Backup — http://198.195.239.50:8095/TRAVELXP.HD/index.m3u8
 ### ultimatetv.in@sd (2 streams)
 - Ultimate TV — Indian Music — https://stream.ottlive.co.in/utvtamil/index.m3u8
-- Ultimate TV — Backup — https://mumbai-edge.smartplaytv.in/utv/index.m3u8
+- Ultimate TV — Indian Music — https://mumbai-edge.smartplaytv.in/utv/index.m3u8
 ### unidentified.us (2 streams)
 - Unidentified — Documentary & Wildlife — https://d3ify425qsio2d.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/Unidentified-prod/playlist.m3u8
 - Unidentified — Backup — https://d3ify425qsio2d.cloudfront.net/playlist.m3u8
@@ -715,11 +715,13 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-None.
+- **colorsbanglacinema.in@sd** in **Indian Movies** — Colors Bangla Cinema, Colors Bangla Cinema, Colors Bangla Cinema, Colors Bangla Cinema
+- **star.jalsha.movies.in** in **Indian Movies** — Jalsha Movies, Jalsha Movies, Jalsha Movies, Jalsha Movies
+- **ultimatetv.in@sd** in **Indian Music** — Ultimate TV, Ultimate TV
 
 ## Primary Channel-Number Collisions
 
-None.
+- **0** — Hindi Movies, South Movies
 
 ## Malformed EXTINF Entries
 
@@ -764,15 +766,16 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **941**
+- Healthy/local references: **940**
 - missing: **0**
-- broken-local: **0**
+- broken-local: **1**
 - external: **0**
 - non-png: **0**
 - invalid-dimensions: **0**
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
+- broken-local — Hindi Movies [custom.hindi.movies] — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hindi-movies.png
 
 ## Protected Primary Entries
 

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T11:35:11+00:00",
+  "generated": "2026-10-03T11:39:56+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -211,7 +211,7 @@
         "aaryaatv.in"
       ],
       "groups": [
-        "Indian Music"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -1291,12 +1291,11 @@
         "colorsbanglacinema.in@sd"
       ],
       "groups": [
-        "Backup",
-        "Indian Bangla"
+        "Indian Movies"
       ],
       "streams": 4,
-      "primary": 1,
-      "backup": 3
+      "primary": 4,
+      "backup": 0
     },
     "colorscineplex": {
       "names": [
@@ -2013,7 +2012,7 @@
         "custom.ja.tv"
       ],
       "groups": [
-        "Indian Bangla"
+        "Bangladesh"
       ],
       "streams": 1,
       "primary": 1,
@@ -2226,7 +2225,7 @@
         "custom.snb.cinema"
       ],
       "groups": [
-        "Indian Bangla"
+        "Indian Movies"
       ],
       "streams": 1,
       "primary": 1,
@@ -3086,7 +3085,7 @@
         "dhooltv.in@sd"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Music"
       ],
       "streams": 1,
       "primary": 1,
@@ -4335,7 +4334,7 @@
         "kairaliarabia.in"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -4408,7 +4407,7 @@
         "kalikatv.in@sd"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Music"
       ],
       "streams": 1,
       "primary": 1,
@@ -6252,7 +6251,7 @@
         "rajtv.in@sd"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -7124,12 +7123,11 @@
         "star.jalsha.movies.in"
       ],
       "groups": [
-        "Backup",
-        "Indian Bangla"
+        "Indian Movies"
       ],
       "streams": 4,
-      "primary": 1,
-      "backup": 3
+      "primary": 4,
+      "backup": 0
     },
     "starbharat": {
       "names": [
@@ -7988,12 +7986,11 @@
         "ultimatetv.in@sd"
       ],
       "groups": [
-        "Backup",
         "Indian Music"
       ],
       "streams": 2,
-      "primary": 1,
-      "backup": 1
+      "primary": 2,
+      "backup": 0
     },
     "unidentified": {
       "names": [
