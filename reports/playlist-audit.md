@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-03T11:52:24.670436+00:00**
+Generated: **2026-10-03T11:57:56.309871+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -9,7 +9,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Unique channel IDs: **596**
 - IDs with multiple streams: **172**
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **1**
+- Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **1**
@@ -33,8 +33,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - 8XM — Backup — https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
 - 8XM — Backup — https://iptvlive.ahmed-bd-org.workers.dev/8xm-1/index.m3u8
 ### 9xjalwa.in (4 streams)
+- 9X Jalwa — Indian Music — https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/playlist.m3u8
 - 9X Jalwa — Indian Music — https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/70fca4d1-156e-4c03-baa4-9a4b602e33d5/0.m3u8
-- Jalwa — Indian Music — https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/playlist.m3u8
 - 9X Jalwa — Backup — https://mumt03.tangotv.in/Dsly5z3H9XJALWA/index.m3u8
 - 9X Jalwa — Backup — https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8
 ### 9xm.in@sd (4 streams)
@@ -716,7 +716,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-- **9xjalwa.in** in **Indian Music** — 9X Jalwa, Jalwa
+- **9xjalwa.in** in **Indian Music** — 9X Jalwa, 9X Jalwa
 - **colorsbanglacinema.in@sd** in **Indian Bangla** — Colors Bangla Cinema, Colors Bangla Cinema, Colors Bangla Cinema, Colors Bangla Cinema
 - **star.jalsha.movies.in** in **Indian Bangla** — Jalsha Movies, Jalsha Movies, Jalsha Movies, Jalsha Movies
 - **ultimatetv.in@sd** in **Indian Music** — Ultimate TV, Ultimate TV
@@ -756,7 +756,7 @@ None.
 
 ## Metadata Conflicts
 
-- **9xjalwa.in** — names: 9x jalwa, jalwa; groups: Indian Music; countries: IN
+None.
 
 ## Cross-Country Backup Collisions
 

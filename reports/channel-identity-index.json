@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T11:52:24+00:00",
+  "generated": "2026-10-03T11:57:56+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -117,8 +117,7 @@
     },
     "9xjalwa": {
       "names": [
-        "9X Jalwa",
-        "Jalwa"
+        "9X Jalwa"
       ],
       "ids": [
         "9xjalwa.in"

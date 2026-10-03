@@ -1,15 +1,15 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-03T11:52:07+00:00**
+Generated: **2026-10-03T11:57:38+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **247**
-- Channels with an EPG mapping: **201**
-- Current/future programme coverage: **191/247 (77.3%)**
-- No guide mapping found: **46**
+- Active Indian channels audited: **246**
+- Channels with an EPG mapping: **202**
+- Current/future programme coverage: **192/246 (78.0%)**
+- No guide mapping found: **44**
 
 ## Source Status
 
@@ -62,7 +62,6 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Bangla | Jtv Classic | custom.jtv.classic | - | NO_GUIDE_HIT |
 | Indian Entertainment | Kairali Arabia | KairaliArabia.in | - | NO_GUIDE_HIT |
 | Indian Music | Kalika TV | KalikaTV.in@SD | - | NO_GUIDE_HIT |
-| Indian Music | Kappa TV (Music) | KappaTV.in@ALT1 | - | NO_GUIDE_HIT |
 | Indian Movies | MBC Bollywood | MBCBollywood.ae | - | NO_GUIDE_HIT |
 | Indian Movies | MH One Movies | MHOneMovies.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | MH One Prime | Mh1Prime.in | - | NO_GUIDE_HIT |
@@ -83,7 +82,6 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Movies | Sony Max 2 [US] | custom.sony.max.2 | - | NO_GUIDE_HIT |
 | Indian Movies | South Movies | custom.south.movies | - | NO_GUIDE_HIT |
 | Indian Movies | South Station | SouthStation.in | - | NO_GUIDE_HIT |
-| Indian Entertainment | Tamilan TV | TamilanTV.in | - | NO_GUIDE_HIT |
 | Indian Movies | The Movie Club | TheMovieClub.in@HD | - | NO_GUIDE_HIT |
 | Indian Movies | The Movie Club +2 | TheMovieClub.in@Plus2 | - | NO_GUIDE_HIT |
 | Indian Music | Zoom Music | custom.zoommusic | - | NO_GUIDE_HIT |
