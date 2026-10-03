@@ -619,14 +619,14 @@ https://lbgo.bozztv.com/ssh101/ssh101/bsfilm/playlist.m3u8
 https://lbgo.bozztv.com/ssh101/ssh101/bstv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discover-pakistan.png" tvg-id="DiscoverPakistan.pk@SD" group-title="Pakistani",Discover Pakistan
 https://livecdn.live247stream.com/discoverpakistan/web/playlist.m3u8
-#EXTINF:-1 tvg-id="DiscoverPakistan.pk" tvg-name="Discovery Pakistan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-pakistan-b91039be.png" tvg-chno="859" channel-id="DiscoverPakistan.pk" group-title="Pakistani",Discovery Pakistan
-https://s3.ideationtec.live/Discover_Pakistan/Discover_Pakistan.m3u8
 #EXTINF:-1 tvg-id="FalakTV.pk@SD" group-title="Pakistani" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/falak-tv.png",Falak TV
 https://falak.rst.ae/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/filmax.png" tvg-id="Filmax.pk@SD" group-title="Pakistani",Filmax
 https://s3.ideationtec.live/Filmax/Filmax.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/geo-kahani.png" tvg-id="GeoKahani.pk" tvg-name="Geo Kahani" tvg-chno="525" channel-id="GeoKahani.pk" group-title="Pakistani",Geo Kahani
 https://s3.ideationtec.live/GEO_Entertainment/GEO_Entertainment.m3u8
+#EXTINF:-1 tvg-chno="737" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/geo-news.png" channel-id="GeoNews.pk" tvg-id="GeoNews.pk" tvg-name="Geo News" group-title="Pakistani",Geo News
+http://198.195.239.50:8095/GEO.NEWS.HD/index.m3u8
 #EXTINF:-1 channel-id="HUMMasala.pk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-masala.png" tvg-id="HUMMasala.pk" tvg-name="Hum Masala" tvg-chno="526" group-title="Pakistani",Hum Masala
 http://198.195.239.50:8095/HUM.MASALA.TV/index.m3u8
 #EXTINF:-1 channel-id="HumTV.pk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-tv.png" tvg-id="HumTV.pk" tvg-name="Hum TV" tvg-chno="528" group-title="Pakistani",Hum TV
@@ -695,8 +695,6 @@ http://stream.mcquack.net/261/index.m3u8
 http://46.149.191.219:9100/play/a015
 #EXTINF:-1 channel-id="FilmUALive.ua" tvg-id="FilmUALive.ua" tvg-name="FilmUA Live" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/filmua-live-b70299cedc.png" tvg-country="UA" tvg-language="ukr" group-title="International" tvg-chno="738",FilmUA Live
 https://dash2.antik.sk/live/test_film_life_atktv/playlist.m3u8
-#EXTINF:-1 tvg-chno="737" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/geo-news.png" channel-id="GeoNews.pk" tvg-id="GeoNews.pk" tvg-name="Geo News" group-title="International",Geo News
-http://198.195.239.50:8095/GEO.NEWS.HD/index.m3u8
 #EXTINF:-1 channel-id="GravitasMovies.us" tvg-id="GravitasMovies.us" tvg-name="Gravitas Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gravitas-movies-1080p-0311d486e7.png" tvg-country="US" tvg-language="eng" group-title="International",Gravitas Movies
 https://d6dg3ebeih71x.cloudfront.net/Gravitas_Movies.m3u8
 #EXTINF:-1 channel-id="GREATmovies.uk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/great-movies-1080p-9cc0399e3e.png" tvg-chno="723" tvg-id="GREATmovies.uk" tvg-name="GREAT! movies" tvg-language="eng" tvg-country="UK" group-title="International",GREAT! movies
@@ -1185,6 +1183,8 @@ http://198.195.239.50:8095/UNITE8.1.HD/index.m3u8
 https://dfhsahpa45kk2.cloudfront.net/scheduler/scheduleMaster/476.m3u8
 #EXTINF:-1 channel-id="WipeoutXtra.uk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wipeout-xtra-powered-by-banijay-efac5b76.png" tvg-id="WipeoutXtra.uk" tvg-name="Wipeout Xtra" tvg-chno="1044" group-title="Sports",Wipeout Xtra
 https://d36nnn435goed2.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-skhf82opa3tf4/WipeoutXtraPoweredbyBanijay_GB.m3u8
+#EXTINF:-1 channel-id="DiscoverPakistan.pk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-pakistan-b91039be.png" tvg-id="DiscoverPakistan.pk" tvg-name="Discover Pakistan" tvg-chno="859" group-title="Backup",Discover Pakistan
+https://s3.ideationtec.live/Discover_Pakistan/Discover_Pakistan.m3u8
 #EXTINF:-1 channel-id="AndTV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv.png" tvg-id="AndTV.in@SD" tvg-name="&TV" group-title="Backup",&TV
 https://stream.ottplus.live/live/and_tv_hd_abr/index.m3u8
 #EXTINF:-1 channel-id="AndTV.in@International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-international-1080p.png" tvg-id="AndTV.in@International" tvg-name="&TV" group-title="Backup",&TV
