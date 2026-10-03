@@ -1,4 +1,66 @@
 # Playlist Audit
+Generated: **2026-10-03 (post-comprehensive audit)**
+
+## Current Playlist Snapshot
+
+- Playlist entries: **946**
+- Primary entries: **596**
+- Backup entries: **350**
+- Duplicate stream URLs: **0**
+- Duplicate primary tvg-id: **0**
+- Same-name / different-ID primary collisions: **0**
+- Primary channel-number collisions: **0**
+- Primary entries missing tvg-id: **0**
+- Primary entries missing tvg-name: **0**
+- Primary entries missing tvg-logo: **0**
+- Primary entries missing channel-id: **0**
+- Primary entries missing tvg-chno: **0**
+- External logo references: **0**
+- Malformed/orphan stream structure: **0**
+- New Channels / New Backup queue entries currently present: **0**
+
+## Fixes Applied
+
+- Repaired all missing primary channel numbers and kept them unique.
+- Repaired all missing channel-id values.
+- Repaired all missing tvg-name values.
+- Converted all four remaining external logo references to repository-local logos.
+- Preserved the existing local Songdew logo reference under logos/unused.
+- Resolved two genuine primary identity collisions:
+  - The LEGO Channel -> moved to Backup and aligned to LegoChannel.us@SD.
+  - Goldmines Movies -> moved to Backup and aligned to GoldminesMovies.in@SD.
+- Replaced six primary proxy/worker stream sources with clean existing backup sources where a clean alternative was already available.
+- Removed only six redundant backup records whose exact URLs became the primary stream URLs. No unique backup stream was removed.
+- Re-checked the final playlist after every write.
+
+## Remaining Manual-Review Source Issues
+
+The playlist still contains 9 primary URLs that match known proxy/token/questionable-source patterns and have no clean existing replacement in the playlist:
+
+- BTV News
+- Star Gold Thrills
+- Moonbug Kids
+- SuperToons TV
+- Astro Cricbuzz
+- FOX Cricket 501
+- Marquee Sports Network
+- Sony Sports Ten 3
+- Ten Sports
+
+There are also 54 backup URLs matching the same source-pattern check. These were not mass-deleted because backup streams are intentionally retained for manual testing.
+
+## EPG
+
+The playlist now has complete core metadata on all primary entries, but EPG correctness is a separate mapping problem. The repository EPG report records public-source mappings and coverage; the EPG pilot documentation states that the published guide is not currently active. Therefore this audit does not claim live programme coverage for every channel.
+
+## Integrity Rule
+
+- Duplicate URLs: **0**
+- Primary identity collisions: **0**
+- Missing primary core metadata: **0**
+
+
+# Playlist Audit
 Generated: **2026-10-03T07:25:42.305890+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
