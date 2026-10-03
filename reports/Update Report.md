@@ -1,33 +1,33 @@
 # Update Report
 
-_Last generated: **2026-10-03 16:41 UTC**_
+_Last generated: **2026-10-03 16:54 UTC**_
 
 | Metric | Current |
 |---|---:|
 | Streams | **941** |
 | Active Channel Identities | **580** |
-| Active Primary Streams | **588** |
+| Active Primary Streams | **580** |
 | Bangladesh | **63** |
-| India | **254** |
-| Backup Streams | **337** |
+| India | **246** |
+| Backup Streams | **345** |
 | New Channels | **0** |
 | New Backup Streams | **0** |
 | Local Logos | **100.0%** |
 | EPG Programme Coverage | **78.0%** |
 | EPG Mapping | **82.1%** |
 | Stream Health Tested | **941** |
-| Stream Health Failures | **119** |
+| Stream Health Failures | **140** |
 | Persistent Failures | **108** |
 | Near-Duplicate URL Families | **0** |
-| Audit Blocking Issues | **6** |
+| Audit Blocking Issues | **2** |
 | Pre-Publish Gate | **BLOCK** |
-| Pre-Publish Gate Generated | **2026-10-03T16:41:20+00:00** |
+| Pre-Publish Gate Generated | **2026-10-03T16:54:14+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
-- Duplicate primary identities: **4**
+- Duplicate primary identities: **0**
 - Primary channel-number collisions: **1**
 - Primary entries missing channel numbers: **0**
 - Logo exceptions: **1**
@@ -50,14 +50,14 @@ _Last generated: **2026-10-03 16:41 UTC**_
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-03T16:40:36.460940+00:00** |
-| EPG coverage | **2026-10-03T16:40:20+00:00** |
-| Stream health | **2026-10-03T16:41:20+00:00** |
-| Pre-publish gate | **2026-10-03T16:41:20+00:00** |
+| Playlist audit | **2026-10-03T16:53:25.206711+00:00** |
+| EPG coverage | **2026-10-03T16:53:09+00:00** |
+| Stream health | **2026-10-03T16:54:14+00:00** |
+| Pre-publish gate | **2026-10-03T16:54:14+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
 - Latest entries change: **941 → 941**
-- Latest health failures: **128 → 119**
+- Latest health failures: **119 → 140**
 
 Historical records are retained in reports/maintenance-history.json.

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T16:40:36+00:00",
+  "generated": "2026-10-03T16:53:25+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -127,8 +127,8 @@
         "Indian Music"
       ],
       "streams": 4,
-      "primary": 2,
-      "backup": 2
+      "primary": 1,
+      "backup": 3
     },
     "9xjhakaas": {
       "names": [
@@ -1334,11 +1334,12 @@
         "colorsbanglacinema.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Bangla"
       ],
       "streams": 4,
-      "primary": 4,
-      "backup": 0
+      "primary": 1,
+      "backup": 3
     },
     "colorscineplex": {
       "names": [
@@ -7108,11 +7109,12 @@
         "star.jalsha.movies.in"
       ],
       "groups": [
+        "Backup",
         "Indian Bangla"
       ],
       "streams": 4,
-      "primary": 4,
-      "backup": 0
+      "primary": 1,
+      "backup": 3
     },
     "starbharat": {
       "names": [
@@ -7971,11 +7973,12 @@
         "ultimatetv.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Music"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "unidentified": {
       "names": [

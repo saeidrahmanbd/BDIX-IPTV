@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-03T16:40:36.460940+00:00**
+Generated: **2026-10-03T16:53:25.206711+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -15,7 +15,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - IDs with multiple logo references: **1**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **1**
-- Duplicate primary identities: **4**
+- Duplicate primary identities: **0**
 - Primary channel-number collisions: **1**
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
@@ -34,7 +34,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - 8XM — Backup — https://iptvlive.ahmed-bd-org.workers.dev/8xm-1/index.m3u8
 ### 9xjalwa.in (4 streams)
 - 9X Jalwa — Indian Music — https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/playlist.m3u8
-- 9X Jalwa — Indian Music — https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/70fca4d1-156e-4c03-baa4-9a4b602e33d5/0.m3u8
+- 9X Jalwa — Backup — https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/70fca4d1-156e-4c03-baa4-9a4b602e33d5/0.m3u8
 - 9X Jalwa — Backup — https://mumt03.tangotv.in/Dsly5z3H9XJALWA/index.m3u8
 - 9X Jalwa — Backup — https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8
 ### 9xm.in@sd (4 streams)
@@ -179,9 +179,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Colors Bangla — Backup — https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/2500.m3u8
 ### colorsbanglacinema.in@sd (4 streams)
 - Colors Bangla Cinema — Indian Bangla — http://livetv.akr4m.com:8080/bdtv/restrem/3.m3u8
-- Colors Bangla Cinema — Indian Bangla — http://198.195.239.50:8095/COLORS.BANGLA.CINEMA/index.m3u8
-- Colors Bangla Cinema — Indian Bangla — http://198.195.239.50:8095/colorsBanglaChinema/index.m3u8
-- Colors Bangla Cinema — Indian Bangla — http://51.75.127.199:3141/colorsbanglacinema/index.m3u8
+- Colors Bangla Cinema — Backup — http://198.195.239.50:8095/COLORS.BANGLA.CINEMA/index.m3u8
+- Colors Bangla Cinema — Backup — http://198.195.239.50:8095/colorsBanglaChinema/index.m3u8
+- Colors Bangla Cinema — Backup — http://51.75.127.199:3141/colorsbanglacinema/index.m3u8
 ### colorscineplex.in@sd (3 streams)
 - Colors Cineplex — Indian Movies — http://198.195.239.50:8095/COLORS.CINEPLEX.HD/index.m3u8
 - Colors Cineplex — Backup — http://202.70.146.135:8000/play/a04n/index.m3u8
@@ -635,9 +635,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Star Jalsha — Backup — https://flussonic.defineatoz.com/StarjalshaHD/tracks-v1a1/mono.m3u8
 ### star.jalsha.movies.in (4 streams)
 - Jalsha Movies — Indian Bangla — http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8
-- Jalsha Movies — Indian Bangla — http://103.151.60.162:2122/play/a00x/index.m3u8
-- Jalsha Movies — Indian Bangla — http://198.195.239.50:8095/JALSHA.MOVIES.HD/index.m3u8
-- Jalsha Movies — Indian Bangla — http://198.195.239.50:8095/jalshaMovies/index.m3u8
+- Jalsha Movies — Backup — http://103.151.60.162:2122/play/a00x/index.m3u8
+- Jalsha Movies — Backup — http://198.195.239.50:8095/JALSHA.MOVIES.HD/index.m3u8
+- Jalsha Movies — Backup — http://198.195.239.50:8095/jalshaMovies/index.m3u8
 ### stargold.in@hd (3 streams)
 - Star Gold — Indian Movies — http://livetv.akr4m.com:8080/bdtv/restrem/45.m3u8
 - Star Gold — Backup — http://198.195.239.50:8095/STAR.GOLD.HD/index.m3u8
@@ -663,7 +663,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Travelxp Hindi — Backup — http://198.195.239.50:8095/TRAVELXP.HD/index.m3u8
 ### ultimatetv.in@sd (2 streams)
 - Ultimate TV — Indian Music — https://stream.ottlive.co.in/utvtamil/index.m3u8
-- Ultimate TV — Indian Music — https://mumbai-edge.smartplaytv.in/utv/index.m3u8
+- Ultimate TV — Backup — https://mumbai-edge.smartplaytv.in/utv/index.m3u8
 ### unidentified.us (2 streams)
 - Unidentified — Documentary & Wildlife — https://d3ify425qsio2d.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/Unidentified-prod/playlist.m3u8
 - Unidentified — Backup — https://d3ify425qsio2d.cloudfront.net/playlist.m3u8
@@ -716,10 +716,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-- **9xjalwa.in** in **Indian Music** — 9X Jalwa, 9X Jalwa
-- **colorsbanglacinema.in@sd** in **Indian Bangla** — Colors Bangla Cinema, Colors Bangla Cinema, Colors Bangla Cinema, Colors Bangla Cinema
-- **star.jalsha.movies.in** in **Indian Bangla** — Jalsha Movies, Jalsha Movies, Jalsha Movies, Jalsha Movies
-- **ultimatetv.in@sd** in **Indian Music** — Ultimate TV, Ultimate TV
+None.
 
 ## Primary Channel-Number Collisions
 

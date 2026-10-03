@@ -1,6 +1,6 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-10-03T16:41:20+00:00**
+Generated: **2026-10-03T16:54:14+00:00**
 
 Status: **BLOCK**
 
@@ -27,4 +27,3 @@ Modified metadata entries: 0
 
 ## Blocking Reasons
 - duplicate primary channel numbers: 1
-- duplicate primary identities: 4
