@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T03:35:15+00:00",
+  "generated": "2026-10-03T04:04:05+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -1406,7 +1406,7 @@
         "Indian Bangla",
         "New Backup"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
       "backup": 4
     },
@@ -3523,9 +3523,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla"
+        "Indian Bangla",
+        "New Backup"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
       "backup": 5
     },
@@ -6284,6 +6285,20 @@
       "primary": 1,
       "backup": 0
     },
+    "polimertv": {
+      "names": [
+        "Polimer TV"
+      ],
+      "ids": [
+        "polimertv.in@sd"
+      ],
+      "groups": [
+        "New Backup"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "pop": {
       "names": [
         "POP"
@@ -7169,6 +7184,20 @@
       "primary": 1,
       "backup": 1
     },
+    "shemarootv": {
+      "names": [
+        "Shemaroo TV"
+      ],
+      "ids": [
+        "shemarootv.in@sd"
+      ],
+      "groups": [
+        "New Backup"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "shubhcinematv": {
       "names": [
         "Shubh Cinema TV"
@@ -7364,7 +7393,7 @@
         "Indian Bangla",
         "New Backup"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
       "backup": 3
     },

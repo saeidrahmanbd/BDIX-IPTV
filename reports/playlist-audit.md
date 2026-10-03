@@ -1,18 +1,18 @@
 # Playlist Audit
-Generated: **2026-10-03T03:35:15.697500+00:00**
+Generated: **2026-10-03T04:04:05.021467+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1050**
-- Unique channel IDs: **663**
+- Playlist entries: **1055**
+- Unique channel IDs: **665**
 - IDs with multiple streams: **191**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **0**
+- IDs with multiple logo references: **1**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **0**
 - Duplicate primary identities: **0**
@@ -180,13 +180,14 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### choppertown.us (2 streams)
 - Choppertown — Documentary & Wildlife — https://7d8dc76d676946ec8d372d4ed7b22333.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-11-CHOPPERTOWN-SPORTSTRIBAL/mt/sportstribaltv/11/hls/master/playlist.m3u8
 - Choppertown — Backup — https://linear-11.frequency.stream/dist/glewedtv/11/hls/master/playlist.m3u8
-### colors.bangla.in (6 streams)
+### colors.bangla.in (7 streams)
 - Colors Bangla — Indian Bangla — https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/800.m3u8
 - Colors Bangla — Backup — http://198.195.239.50:8095/colorsBangla/index.m3u8
 - Colors Bangla — Backup — https://catchup.yuppcdn.net/amazonv2/36/preview/colorsbanglahd/master/chunklist.m3u8
 - Colors Bangla — Backup — http://198.195.239.50:8095/COLORS.BANGLA.HD/index.m3u8
 - Colors Bangla — Backup — https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/2500.m3u8
 - Colors Bangla — New Backup — http://flowutc.com/live/MAGTF8AV71/bUiJLEJKG5/76179.ts
+- Colors Bangla — New Backup — http://103.165.93.31:8095/colorsBangla/index.m3u8
 ### colorsbanglacinema.in@sd (4 streams)
 - Colors Bangla Cinema — Indian Bangla — http://livetv.akr4m.com:8080/bdtv/restrem/3.m3u8
 - Colors Bangla Cinema — Backup — http://51.75.127.199:3141/colorsbanglacinema/index.m3u8
@@ -341,12 +342,13 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Ekushey TV — Backup — https://ekusheyserver.com/etvlivesn.m3u8
 - Ekushey TV — Backup — https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
 - Ekushey TV — Backup — https://tvsen5.aynaott.com/SyQuXz8sC3TB/index.m3u8
-### enterr10bangla.in@sd (5 streams)
+### enterr10bangla.in@sd (6 streams)
 - Enter10 Bangla — Indian Bangla — https://iptvlive.ahmed-bd-org.workers.dev/enter-10-bangla-1/index.m3u8
 - Enter10 Bangla — Backup — http://198.195.239.50:8095/enter10Bangla/index.m3u8
 - Enter10 Bangla — Backup — https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
 - Enter10 Bangla — Backup — https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8
 - Enter10 Bangla — Backup — http://198.195.239.50:8095/ENTER10.BANGLA/index.m3u8
+- Enterr 10 Bangla — New Backup — https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8
 ### epicbharat.in@sd (2 streams)
 - Epic Bharat — Indian Entertainment — https://mumt06.tangotv.in/qYyB8fXVEPICTV/index.m3u8
 - Epic Bharat — Backup — https://epiconvh.akamaized.net/live/nazara/master.m3u8
@@ -642,12 +644,13 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Somoy TV — Backup — https://tvsen5.aynascope.net/somoytv/mono.m3u8
 - Somoy TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/somoy-tv-2/index.m3u8
 - Somoy TV — Backup — http://198.195.239.50:8095/SOMOY.TV.HD/index.m3u8
-### sony.aath.in (5 streams)
+### sony.aath.in (6 streams)
 - Sony AATH — Indian Bangla — http://198.195.239.50:8095/sonyAath/index.m3u8
 - Sony AATH — Backup — https://stream.ottplus.live/live/sony_aath_abr/index.m3u8
 - Sony AATH — Backup — https://live20.bozztv.com/giatvplayout7/giatv-209611/index.m3u8
 - Sony AATH — Backup — http://198.195.239.50:8095/SONY.AAT/index.m3u8
 - Sony AATH — New Backup — https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8
+- Sony AATH — New Backup — https://cloudplay-sonyliv.pages.dev/aath.m3u8
 ### sonybbcearth.in@sd (2 streams)
 - Sony BBC Earth — Documentary & Wildlife — https://amg00793-bbcstudios-amg00793c3-lg-us-2528.playouts.now.amagi.tv/playlist/amg00793-bbcstudios-bbcearta-lgus/playlist.m3u8
 - Sony BBC Earth — Backup — http://198.195.239.50:8095/SONY.BBC.EARTH.HD/index.m3u8
@@ -846,7 +849,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1050**
+- Healthy/local references: **1055**
 - missing: **0**
 - broken-local: **0**
 - external: **0**
@@ -855,6 +858,7 @@ None.
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
+- multiple-logo-references — colors.bangla.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-hd.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png
 
 ## Protected Primary Entries
 
