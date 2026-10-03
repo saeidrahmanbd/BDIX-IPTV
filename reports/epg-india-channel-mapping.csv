@@ -39,9 +39,11 @@ Bangladesh,Jamuna TV,JamunaTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguou
 Bangladesh,Jonmobhumi TV,JonmoBhumiTV.au,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,ME TV,METV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Maasranga TV,MaasrangaTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Bangladesh,Matribhumi TV,MatribhumiTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Mohona TV,MohonaTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Movie Bangla,MovieBangla.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,My TV,MyTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Bangladesh,NRB TV,NRBTV.ca,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,NTV,NTV.bd,NTV.in | 543153,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,NTV Europe,NTVEurope.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Nagorik TV,NagorikTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -67,6 +69,7 @@ Documentary & Wildlife,CGTN Documentary,CGTNDocumentary.cn,,,NO_GUIDE_HIT,Auto-m
 Documentary & Wildlife,Choppertown,Choppertown.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Crime & Justice,custom.crime.justice,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Crime Scene TV,custom.crime.scene.tv,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Documentary & Wildlife,Discovery,DiscoveryChannel.in@SD,Discovery.in | DISCOVERY.CHANNEL.in | 543256,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,DocuBay TV,DocuBayTV.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Documentary+ 2,custom.documentary.2,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Documentary+ International,DocumentaryPlus,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -74,6 +77,7 @@ Documentary & Wildlife,Documentary+ USA,custom.documentary.usa,,,NO_GUIDE_HIT,Au
 Documentary & Wildlife,Epic Crimes,EpicCrimes.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Food Food,FoodFood.in@SD,Food.Food.in | FoodFood.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://iptv-epg.org/files/epg-in.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Get factual,Getfactual.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Documentary & Wildlife,History,History.us,HISTORY.CHANNEL.in | 543138,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,History & Warfare Now,HistoryWarfareNow.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,History Hit,HistoryHit.uk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,History TV18,HistoryTV18.in@SD,History.TV18.SD.in | History.TV18.HD.in | HISTORY.TV18.HD.in | 543336,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -90,6 +94,8 @@ Documentary & Wildlife,Love Nature,custom.love.nature,,,NO_GUIDE_HIT,Auto-mainta
 Documentary & Wildlife,Mysteries Xplored,USBB5200028MM,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Mystery TV,MysteryTV.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Mythbusters,Mythbusters.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Documentary & Wildlife,Nat Geo Wild,NationalGeographicWild.in@SD,Nat.Geo.Wild.HD.in | NAT.GEO.WILD.in | NAT.GEO.WILD.HD.in | 543356 | 543052,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Documentary & Wildlife,National Geographic,NationalGeographic.in@SD,National.Geographic.HD.in | NATIONAL.GEOGRAPHIC.in | 543180 | 543108,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Nature Time,custom.nature.time,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Outdoor Channel,OutdoorChannel.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,OuterSphere,OuterSphere.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -100,8 +106,10 @@ Documentary & Wildlife,Safari TV,SafariTV.in@SD,Safari.TV..in | SAFARI.TV.in | S
 Documentary & Wildlife,Sony BBC Earth,SonyBBCEarth.in@SD,SONY.BBC.Earth.in | SONY.BBC.EARTH.in | 543410 | 543416,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Stingray Naturescape,StingrayNaturescape.ca,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Stingray The Spa,StingrayTheSpa.ca,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Documentary & Wildlife,TLC,TLC.in@HD,TLC.HD.in | TLC.in | 543386 | 543128,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Terra Mater WILD English,custom.terra.mater.wild.english,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Travelxp English,custom.travelxp.english,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Documentary & Wildlife,Travelxp Hindi,Travelxp.in@SD,Travelxp.HD.Hindi.in | Travelxp.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://iptv-epg.org/files/epg-in.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Unidentified,Unidentified.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Wild Flix Hindi,custom.wild.flix.hindi,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Wild Planet,custom.wild.planet,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -202,6 +210,7 @@ Indian Entertainment,PTC Punjabi,PTCPunjabi.in@SD,PTC.Punjabi.in | PTC.PUNJABI.i
 Indian Entertainment,PTC Punjabi Gold,PTCPunjabiGold.in@SD,PTC.Punjabi.Gold..in | PTC.Punjabi.Gold.in | PTC.PUNJABI.GOLD.in | PTCPunjabiGold.in | 543031,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Entertainment,Pardesi TV,PardesiTV.ca,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Entertainment,Peppers TV,PeppersTV.in@SD,Peppers.TV.in | PeppersTV.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://iptv-epg.org/files/epg-in.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Indian Entertainment,Polimer TV,PolimerTV.in@SD,Polimer.TV.in | POLIMER.in | PolimerTV.in | 543431,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Entertainment,Puthuyugam TV,PuthuyugamTV.in@SD,Puthu.Yugam.in | PUTHU.YUGAM.in | 543133,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Entertainment,Q TV,QTV.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Entertainment,SADA TV,SADATV.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -244,6 +253,7 @@ Indian Movies,Colors Gujarati Cinema,ColorsGujaratiCinema.in@SD,Colors.Gujarati.
 Indian Movies,Colors Kannada Cinema,ColorsKannadaCinema.in@SD,Colors.Kannada.Cinema.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Dhool TV,DhoolTV.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,ETV Beats,ETVBeats.in@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Indian Movies,ETV Cinema,ETVCinema.in,ETV.Cinema.in | ETV.CINEMA.in | ETVCinema.in | 543267,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Ekamra Cinema,custom.ekamra.cinema,Ekamra.Cinema.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED_ID_ONLY,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Ekamra Manoranjan,custom.ekamra.manoranjan,Ekamra.Manoranjan.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED_ID_ONLY,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Epic Bhojpuri Digital,custom.epic.bhojpuri.digital,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -265,6 +275,7 @@ Indian Movies,MH One Movies,MHOneMovies.in,,,NO_GUIDE_HIT,Auto-maintained; verif
 Indian Movies,MNTV (Tamil),MarutamTV.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Madhimugam TV,MadhimugamTV.in,Madhimugam.TV.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Mahaa Max,MahaaMax.in,Mahaa.Max.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Indian Movies,Manoranjan Movies,ManoranjanMovies.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Mastiii,Mastiii.in@SD,Mastiii.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,NH BollyFlix,NHBollyFlix.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,NH BollyGold,NHBollyGold.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -279,6 +290,7 @@ Indian Movies,Raj TV,RajTV.in@SD,Raj.tv.in | Raj.TV.in | RAJ.TV.in | RajTV.in | 
 Indian Movies,Roja Movies,RojaMovies.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Sana Plus,SanaPlus.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Shemaroo Bollywood,ShemarooBollywood.us,Shemaroo.Bollywood.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Indian Movies,Shemaroo TV,ShemarooTV.in@SD,Shemaroo.TV.in | ShemarooTV.in | 543214,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Shubh Cinema TV,ShubhCinemaTV.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Sidharth Gold,SidharthGold.in@SD,Sidharth.GOLD.in | Sidharth.Gold.in | SidharthGOLD.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://iptv-epg.org/files/epg-in.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Sony Max,SonyMax.in@SD,Sony.Max.in | SONY.MAX.in | 543269,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -299,6 +311,7 @@ Indian Movies,The Movie Club +2,TheMovieClub.in@Plus2,,,NO_GUIDE_HIT,Auto-mainta
 Indian Movies,Tolly TV,TollyTV.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Vijay Super,VijaySuper.in@SD,VIJAY.SUPER.in | 543204 | 543438,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Xplor,AndxplorHD.in,&Xplor.HD.in | and.xplorHD.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Indian Movies,Zee Action,ZeeAction.in,ZEE.ACTION.in | 543243,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Zee Bollywood,ZeeBollywood.in@SD,Zee.Bollywood.in | ZEE.Bollywood.in | ZeeBollywood.in | 543294,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Zee Cinema,ZeeCinema.in@HD,Zee.Cinema.in | ZEE.CINEMA.in | ZeeCinema.in | 543084 | 543330,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Zee Cinemalu,ZeeCinemalu.in@HD,Zee.Cinemalu.HD.in | ZEE.CINEMALU.in | ZeeCinemalu.in | 543172 | 543358,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -344,7 +357,7 @@ Indian Music,Sun Music,SunMusic.in@SD,Sun.Music.HD.in | SUN.MUSIC.in | 543232 | 
 Indian Music,Tarang Music,TarangMusic.in@SD,TARANG.MUSIC.in | 543280,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Music,Ultimate TV,UltimateTV.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Music,Zing,Zing.in@SD,ZING.in | Zing.in | 543208,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-Indian Music,Zoom TV,Zoom.in@SD,ZOOM.in | Zoom.in | 543288,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Indian Music,Zoom Music,custom.zoommusic,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,&Privé,AndpriveHD.in,And.Prive.HD.in | and.PRIVE.HD.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz,MAPPED_ID_ONLY,Auto-maintained; verify ambiguous/name matches manually.
 International,24 Hour Free Movies,24HourFreeMovies.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,30A Music,30AMusic.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -370,6 +383,7 @@ International,DW News,DWNews.de,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous
 International,EBS Cinema,EBSCinema.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,EBS Musika,EBSMusika.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,EU Music,EUMusic.ua,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+International,Enter-Film,EnterFilm.ua,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,FilmBox,FilmBox.nl@Netherlands,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,FilmUA Live,FilmUALive.ua,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,GREAT! movies,GREATmovies.uk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -402,6 +416,7 @@ International,Mytime Movie,MyTimeMovieNetwork.uk@SD,,,NO_GUIDE_HIT,Auto-maintain
 International,NASHE Music,NASHEMusic.ua,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,NOW Rock,NOWRock.uk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,POP World TV,POPWorldTV.es,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+International,PowerTürk TV,PowerTurkTV.tr,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,Qello Concerts by Stingray,QelloConcertsbyStingray.ca@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,Rakuten Movies,RakutenMovies,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,Rakuten TV Action Movies UK,RakutenTVActionMovies.es@UK,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -487,17 +502,20 @@ Kids,WOW Kidz Telugu,WOWKidz.in@Telugu,,,NO_GUIDE_HIT,Auto-maintained; verify am
 Kids,ZooMoo,ZooMoo.sg,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Солнце,custom.solntse,&TV.HD.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED_ID_ONLY,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,8XM,8XM.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Pakistani,A-Plus TV,APlusTV.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,BS Film,BSFilm.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,BSTV,BSTV.pk@SD,BSTV.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,Bol Entertainment,BolEntertainment.pk@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,Discover Pakistan,DiscoverPakistan.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Pakistani,Discovery Pakistan,DiscoverPakistan.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,Falak TV,FalakTV.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,Filmax,Filmax.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,Geo Kahani,GeoKahani.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Pakistani,HUM Masala,HUMMasala.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Pakistani,HUM TV,HumTV.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Pakistani,Hum Masala,HUMMasala.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Pakistani,Hum TV,HumTV.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,Jalwa TV,JalwaTV.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,Joo Music,JooMusic.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Pakistani,Masala TV,MasalaTV.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Religious,ARY Q TV,custom.ary.q.tv,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Religious,Al Istiqama,AlistiqamaTV.om,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Religious,Al Qamar,AlQamarTV.ae,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -511,6 +529,7 @@ Religious,Madani TV,custom.madani.tv,,,NO_GUIDE_HIT,Auto-maintained; verify ambi
 Religious,Makkah Live,custom.makkah.live,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Religious,Makkah TV,MakkahTV.sa,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Religious,Medina Live,MedinaLive.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Religious,Peace TV Bangla,PeaceTVBangla.ae,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Religious,Quran,custom.quran,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Religious,Quran TV,QuranTV.iq,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Sports,A Sports,ASports.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -537,9 +556,11 @@ Sports,Sony Sports Ten 3,SonySportsTen3.in,Sony.Sports.Ten.3.HD.in | SONY.SPORTS
 Sports,Sony Sports Ten 4,SonySportsTen4.in,Sony.Sports.Ten.4.HD.in | SonySportsTEN4.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://iptv-epg.org/files/epg-in.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Sports,Sony Sports Ten 5,SonySportsTen5.in,Sony.Sports.Ten.5.in | SONY.SPORTS.TEN.5.in | SONYSPORTSTEN5.in | 543505 | 543047,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Sports,Sony Ten 1,custom.sony.ten.1,Sony.Ten.1.in | Sony.Ten.1.HD.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Sports,Sony Ten 2,custom.sonyten2,Sony.Ten.2.HD.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Sports,Sony Ten 5,custom.sony.ten.5,Sony.Ten.5.HD.in | Sony.Ten.5.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Sports,Star Sports 1,StarSports1.in@HD,Star.Sports.1.in | STAR.SPORTS.1.in | StarSports1.in | 543006 | 543489,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Sports,Star Sports 1 Hindi,StarSports1Hindi.in@HD,STAR.SPORTS.1.HINDI.in | StarSports1Hindi.in | 543275 | 543058,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Sports,Star Sports 2,custom.starsports2,Star.Sports.2.HD.in | STAR.SPORTS.2.in | STAR.SPORTS.2.HD.in | 543210 | 543498,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Sports,Star Sports 3,StarSports3.in@SD,STAR.SPORTS.3.in | StarSports3.in | 543366,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Sports,Star Sports SL 1,custom.star.sports.sl.1,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Sports,Star Sports Select 1,StarSportsSelect1.in@SD,Star.Sports.Select.1.in | StarSportsSelect1.in | 543120 | 543263,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.

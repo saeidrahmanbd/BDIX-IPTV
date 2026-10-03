@@ -1,15 +1,15 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-03T05:40:36+00:00**
+Generated: **2026-10-03T05:59:35+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **237**
-- Channels with an EPG mapping: **157**
-- Current/future programme coverage: **145/237 (61.2%)**
-- No guide mapping found: **80**
+- Active Indian channels audited: **242**
+- Channels with an EPG mapping: **160**
+- Current/future programme coverage: **148/242 (61.2%)**
+- No guide mapping found: **82**
 
 ## Source Status
 
@@ -78,6 +78,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Entertainment | MH One Prime | Mh1Prime.in | - | NO_GUIDE_HIT |
 | Indian Movies | MNTV (Tamil) | MarutamTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | MTV India | MTVIndia.in@SD | - | NO_GUIDE_HIT |
+| Indian Movies | Manoranjan Movies | ManoranjanMovies.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Manoranjan Prime | ManoranjanPrime.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Mei Alai TV | MeiAlaiTV.in | - | NO_GUIDE_HIT |
 | Indian Music | Music Mastii | MusicMastii.in | - | NO_GUIDE_HIT |
@@ -114,3 +115,4 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Music | Ultimate TV | UltimateTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Bangla | ZB Cartoon | ZBCartoon.in | - | NO_GUIDE_HIT |
 | Indian Bangla | Zee Bangla Sonar | ZeeBanglaSonar.in@SD | - | NO_GUIDE_HIT |
+| Indian Music | Zoom Music | custom.zoommusic | - | NO_GUIDE_HIT |

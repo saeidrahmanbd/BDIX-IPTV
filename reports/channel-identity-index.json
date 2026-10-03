@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T05:40:36+00:00",
+  "generated": "2026-10-03T05:59:35+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -435,11 +435,9 @@
     },
     "andtv": {
       "names": [
-        "&TV",
-        "&TV International"
+        "&TV"
       ],
       "ids": [
-        "andtv.in@international",
         "andtv.in@sd"
       ],
       "groups": [
@@ -478,8 +476,8 @@
         "Documentary & Wildlife"
       ],
       "streams": 4,
-      "primary": 1,
-      "backup": 3
+      "primary": 2,
+      "backup": 2
     },
     "anmoltv": {
       "names": [
@@ -503,12 +501,12 @@
         "aplustv.pk@sd"
       ],
       "groups": [
-        "Backup",
-        "Not Playing"
+        "Not Playing",
+        "Pakistani"
       ],
       "streams": 3,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "apnachannel": {
       "names": [
@@ -2283,11 +2281,11 @@
         "custom.recovered.pishow.10007"
       ],
       "groups": [
-        "Backup"
+        "Not Playing"
       ],
       "streams": 1,
       "primary": 0,
-      "backup": 1
+      "backup": 0
     },
     "custom.recovered.stingray.101": {
       "names": [
@@ -2423,11 +2421,12 @@
         "custom.sonyten2"
       ],
       "groups": [
-        "Backup"
+        "Backup",
+        "Sports"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 2
+      "primary": 1,
+      "backup": 1
     },
     "custom.south.movies": {
       "names": [
@@ -2494,12 +2493,12 @@
         "custom.starsports2"
       ],
       "groups": [
-        "Backup",
-        "Not Playing"
+        "Not Playing",
+        "Sports"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "custom.strawberry.shortcake": {
       "names": [
@@ -2684,20 +2683,6 @@
       "primary": 1,
       "backup": 0
     },
-    "custom.zeebanglacinema": {
-      "names": [
-        "Zee Bangla Cinema"
-      ],
-      "ids": [
-        "custom.zeebanglacinema"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 2,
-      "primary": 0,
-      "backup": 2
-    },
     "custom.zoommusic": {
       "names": [
         "Zoom Music"
@@ -2706,11 +2691,11 @@
         "custom.zoommusic"
       ],
       "groups": [
-        "Backup"
+        "Indian Music"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "dangal2": {
       "names": [
@@ -3258,13 +3243,12 @@
         "discoverpakistan.pk@sd"
       ],
       "groups": [
-        "Backup",
         "Not Playing",
         "Pakistani"
       ],
       "streams": 4,
-      "primary": 1,
-      "backup": 1
+      "primary": 2,
+      "backup": 0
     },
     "discoverychannel": {
       "names": [
@@ -3275,11 +3259,12 @@
       ],
       "groups": [
         "Backup",
+        "Documentary & Wildlife",
         "Not Playing"
       ],
       "streams": 3,
-      "primary": 0,
-      "backup": 2
+      "primary": 1,
+      "backup": 1
     },
     "discoverykids": {
       "names": [
@@ -3494,16 +3479,16 @@
         "enterfilm.ua"
       ],
       "groups": [
-        "Backup"
+        "International"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "enterr10bangla": {
       "names": [
         "Enter10 Bangla",
-        "Enterr 10 Bangla"
+        "Enterr10 Bangla"
       ],
       "ids": [
         "enterr10bangla.in",
@@ -3622,16 +3607,15 @@
         "ETV Cinema"
       ],
       "ids": [
-        "etvcinema.in",
-        "etvcinema.in@hd"
+        "etvcinema.in"
       ],
       "groups": [
-        "Backup",
+        "Indian Movies",
         "Not Playing"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "etvcomedy": {
       "names": [
@@ -4189,12 +4173,12 @@
         "history.us"
       ],
       "groups": [
-        "Backup",
+        "Documentary & Wildlife",
         "Not Playing"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "historyhit": {
       "names": [
@@ -4256,7 +4240,7 @@
     },
     "hummasala": {
       "names": [
-        "HUM Masala"
+        "Hum Masala"
       ],
       "ids": [
         "hummasala.pk"
@@ -4270,7 +4254,7 @@
     },
     "humtv": {
       "names": [
-        "HUM TV"
+        "Hum TV"
       ],
       "ids": [
         "humtv.pk"
@@ -4885,11 +4869,11 @@
         "manoranjanmovies.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Indian Movies"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "manoranjanprime": {
       "names": [
@@ -4943,12 +4927,12 @@
         "masalatv.pk@sd"
       ],
       "groups": [
-        "Backup",
-        "Not Playing"
+        "Not Playing",
+        "Pakistani"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "mastiii": {
       "names": [
@@ -4972,11 +4956,11 @@
         "matribhumitv.bd"
       ],
       "groups": [
-        "Backup"
+        "Bangladesh"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "mazhavilmanorama": {
       "names": [
@@ -5658,11 +5642,12 @@
       ],
       "groups": [
         "Backup",
+        "Documentary & Wildlife",
         "Not Playing"
       ],
       "streams": 5,
-      "primary": 0,
-      "backup": 4
+      "primary": 1,
+      "backup": 3
     },
     "nationalgeographicwild": {
       "names": [
@@ -5674,11 +5659,12 @@
       ],
       "groups": [
         "Backup",
+        "Documentary & Wildlife",
         "Not Playing"
       ],
       "streams": 3,
-      "primary": 0,
-      "backup": 2
+      "primary": 1,
+      "backup": 1
     },
     "nazara": {
       "names": [
@@ -5882,19 +5868,18 @@
     },
     "nrbtv": {
       "names": [
-        "NRB TV",
-        "NRBTV"
+        "NRB TV"
       ],
       "ids": [
-        "nrbtv.ca",
-        "nrbtv.us"
+        "nrbtv.ca"
       ],
       "groups": [
-        "Backup"
+        "Backup",
+        "Bangladesh"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 2
+      "primary": 1,
+      "backup": 1
     },
     "ntv": {
       "names": [
@@ -6091,12 +6076,12 @@
         "peacetvbangla.ae"
       ],
       "groups": [
-        "Backup",
-        "Not Playing"
+        "Not Playing",
+        "Religious"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "peacetvenglish": {
       "names": [
@@ -6261,11 +6246,11 @@
         "polimertv.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Indian Entertainment"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "pop": {
       "names": [
@@ -6303,11 +6288,12 @@
         "powerturktv.tr"
       ],
       "groups": [
-        "Backup"
+        "Backup",
+        "International"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 2
+      "primary": 1,
+      "backup": 1
     },
     "probashitvnews": {
       "names": [
@@ -7159,11 +7145,11 @@
         "shemarootv.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Indian Movies"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "shubhcinematv": {
       "names": [
@@ -8305,12 +8291,12 @@
         "tlc.in@hd"
       ],
       "groups": [
-        "Backup",
+        "Documentary & Wildlife",
         "Not Playing"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "tollytv": {
       "names": [
@@ -8464,11 +8450,12 @@
       ],
       "groups": [
         "Backup",
+        "Documentary & Wildlife",
         "Not Playing"
       ],
       "streams": 3,
-      "primary": 0,
-      "backup": 2
+      "primary": 1,
+      "backup": 1
     },
     "tsports": {
       "names": [
@@ -8870,12 +8857,12 @@
         "zeeaction.in"
       ],
       "groups": [
-        "Backup",
+        "Indian Movies",
         "Not Playing"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "zeebangla": {
       "names": [
@@ -8918,9 +8905,9 @@
         "Indian Bangla",
         "Not Playing"
       ],
-      "streams": 5,
+      "streams": 7,
       "primary": 1,
-      "backup": 3
+      "backup": 5
     },
     "zeebollywood": {
       "names": [
@@ -9061,12 +9048,11 @@
         "zoom.in@sd"
       ],
       "groups": [
-        "Backup",
-        "Indian Music"
+        "Backup"
       ],
       "streams": 5,
-      "primary": 1,
-      "backup": 4
+      "primary": 0,
+      "backup": 5
     },
     "zoomoo": {
       "names": [
