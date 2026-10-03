@@ -38,7 +38,9 @@ jobs:
             git reset --hard origin/main
             git clean -fd
             python scripts/normalize_metadata.py
-            python scripts/discover_channels_v3.py
+            # TEMPORARILY DISABLED: automatic New Channels/New Backup discovery is paused.
+            # Re-enable this line when the review queues should accept new candidates again.
+            # python scripts/discover_channels_v3.py
             python scripts/normalize_metadata.py
             python scripts/migrate_external_logos_fixed.py
             python scripts/epg_coverage.py
