@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-03T12:01:02.903134+00:00**
+Generated: **2026-10-03T16:40:36.460940+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -427,7 +427,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Madhimugam TV — Indian Entertainment — https://cdn.pishow.tv/ott/live/1476/master.m3u8
 - Madhimugam TV — Backup — https://mumt01.tangotv.in/O5aw8Zn3MATHIMUGAMTV/index.m3u8
 ### mahaamax.in (2 streams)
-- Mahaa Max — Indian Movies — https://mumt03.tangotv.in/Dsly5z3HMAHAAMAX/index.m3u8
+- Mahaa Max — Indian Entertainment — https://mumt03.tangotv.in/Dsly5z3HMAHAAMAX/index.m3u8
 - Mahaa Max — Backup — https://mumbai-edge.smartplaytv.in/MahaMax/index.m3u8
 ### manoranjanprime.in@sd (2 streams)
 - Manoranjan Prime — Indian Entertainment — https://mumt06.tangotv.in/qYyB8fXVMANORANJANPRIME/index.m3u8
@@ -455,7 +455,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - MH One Prime — Indian Entertainment — https://streams.tangotv.in/MHONE/ORIGIN/index.m3u8
 - MH One Prime — Backup — https://mumt04.tangotv.in/m18aqlK4MHONE/index.m3u8
 ### mhonedilse.in@sd (2 streams)
-- MH One Dil Se — Indian Entertainment — https://streams.tangotv.in/MHONEDILSE/ORIGIN/index.m3u8
+- MH One Dil Se — Indian Movies — https://streams.tangotv.in/MHONEDILSE/ORIGIN/index.m3u8
 - MH One Dil Se — Backup — https://mumt01.tangotv.in/O5aw8Zn3MHONEDILSE/index.m3u8
 ### mksix.in (2 streams)
 - MK Six — Indian Entertainment — https://mumt06.tangotv.in/qYyB8fXVMKSIX/index.m3u8

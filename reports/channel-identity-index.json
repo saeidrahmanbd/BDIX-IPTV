@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T12:01:02+00:00",
+  "generated": "2026-10-03T16:40:36+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -253,7 +253,7 @@
         "alankartv.in@sd"
       ],
       "groups": [
-        "Indian Bangla"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -1870,7 +1870,7 @@
         "custom.ekamra.manoranjan"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -3028,7 +3028,7 @@
         "desichannel.in"
       ],
       "groups": [
-        "Indian Music"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -4380,7 +4380,6 @@
         "kappatv.in@sd"
       ],
       "groups": [
-        "Indian Movies",
         "Indian Music"
       ],
       "streams": 2,
@@ -4526,7 +4525,7 @@
       ],
       "groups": [
         "Backup",
-        "Indian Movies"
+        "Indian Entertainment"
       ],
       "streams": 2,
       "primary": 1,
@@ -4845,7 +4844,7 @@
       ],
       "groups": [
         "Backup",
-        "Indian Entertainment"
+        "Indian Movies"
       ],
       "streams": 2,
       "primary": 1,
@@ -5811,7 +5810,7 @@
         "pocketfilms.in"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -6039,7 +6038,7 @@
         "punjabishorts.in"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -6524,7 +6523,7 @@
         "sanaplus.in@sd"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Music"
       ],
       "streams": 1,
       "primary": 1,
@@ -7563,7 +7562,7 @@
         "tabbarhits.in"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Music"
       ],
       "streams": 1,
       "primary": 1,
@@ -8074,7 +8073,7 @@
         "vijaysuper.in@sd"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
