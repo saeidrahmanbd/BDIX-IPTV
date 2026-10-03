@@ -1,15 +1,15 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-03T09:37:12+00:00**
+Generated: **2026-10-03T09:43:21+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
 - Active Indian channels audited: **247**
-- Channels with an EPG mapping: **196**
+- Channels with an EPG mapping: **197**
 - Current/future programme coverage: **185/247 (74.9%)**
-- No guide mapping found: **51**
+- No guide mapping found: **50**
 
 ## Source Status
 
@@ -23,21 +23,23 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1479 channel IDs; 1455 current/future IDs; 94488 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 283 channel IDs; 283 current/future IDs; 13782 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 112 channel IDs; 99 current/future IDs; 23690 programme rows
+- **OK** — https://free-epg.de/api/epg/in.xml.gz — 2288 channel IDs; 0 current/future IDs; 173232 programme rows
 
 ## Channels Requiring Attention
 
 | Group | Channel | Playlist ID | EPG ID | Status |
 |---|---|---|---|---|
+| Indian Movies | Gold Mines Movie | GoldminesMovies.in@SD | Goldmines.Movies.in | Goldmines Movies.in | Goldmines-Movies.in | MAPPED_ENDED |
+| Indian Entertainment | Nazara | Nazara.in@SD | NAZARA.in | MAPPED_ENDED |
+| Indian Entertainment | Sony Entertainment TV | SonyEntertainmentTelevision.in@SD | Sony.Entertainment.Television.in | SonyEntertainmentTelevision.in | Sony Entertainment Television.in | Sony-Entertainment-Television.in | MAPPED_ENDED |
 | Indian Entertainment | Ekamra Bharat Odia | EkamraBharatOdia.in@SD | Ekamra.Bharat.Odia.in | ts1196 | MAPPED_ID_ONLY |
 | Indian Movies | Ekamra Cinema | custom.ekamra.cinema | Ekamra.Cinema.in | MAPPED_ID_ONLY |
-| Indian Movies | Ekamra Manoranjan | custom.ekamra.manoranjan | Ekamra.Manoranjan.in | ts1207 | MAPPED_ID_ONLY |
+| Indian Movies | Ekamra Manoranjan | custom.ekamra.manoranjan | Ekamra.Manoranjan.in | ts1207 | Ekamra Manoranjan.in | Ekamra-Manoranjan.in | MAPPED_ID_ONLY |
 | Indian Music | Ekamra Musiq | custom.ekamra.musiq | Ekamra.Musiq.in | MAPPED_ID_ONLY |
-| Indian Movies | Gold Mines Movie | GoldminesMovies.in@SD | Goldmines.Movies.in | MAPPED_ID_ONLY |
+| Indian Entertainment | MH One Dil Se | MHOneDilSe.in@SD | MH One Dil Se.in | MH-One-Dil-Se.in | MAPPED_ID_ONLY |
 | Indian Movies | Manoranjan Movies | ManoranjanMovies.in@SD | ManoranjanMovies.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Manoranjan Prime | ManoranjanPrime.in@SD | 10000000075992492 | MAPPED_ID_ONLY |
-| Indian Entertainment | Nazara | Nazara.in@SD | NAZARA.in | MAPPED_ID_ONLY |
 | Indian Entertainment | One Paschima | OnePaschima.in@SD | One.Paschima.in | MAPPED_ID_ONLY |
-| Indian Entertainment | Sony Entertainment TV | SonyEntertainmentTelevision.in@SD | Sony.Entertainment.Television.in | SonyEntertainmentTelevision.in | MAPPED_ID_ONLY |
 | Indian Music | Steelbird Music | SteelbirdMusic.in@SD | Steelbird.Music.in | MAPPED_ID_ONLY |
 | Indian Music | 7X Punjabi | custom.7x.punjabi | - | NO_GUIDE_HIT |
 | Indian Bangla | Amar Bangla Digital | custom.amar.bangla.digital | - | NO_GUIDE_HIT |
@@ -65,7 +67,6 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Movies | Kalika TV | KalikaTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Music | Kappa TV (Music) | KappaTV.in@ALT1 | - | NO_GUIDE_HIT |
 | Indian Movies | MBC Bollywood | MBCBollywood.ae | - | NO_GUIDE_HIT |
-| Indian Entertainment | MH One Dil Se | MHOneDilSe.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | MH One Movies | MHOneMovies.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | MH One Prime | Mh1Prime.in | - | NO_GUIDE_HIT |
 | Indian Movies | MNTV (Tamil) | MarutamTV.in | - | NO_GUIDE_HIT |
