@@ -1,82 +1,20 @@
 # Playlist Audit
-Generated: **2026-10-03 (post-comprehensive audit)**
-
-## Current Playlist Snapshot
-
-- Playlist entries: **946**
-- Primary entries: **596**
-- Backup entries: **350**
-- Duplicate stream URLs: **0**
-- Duplicate primary tvg-id: **0**
-- Same-name / different-ID primary collisions: **0**
-- Primary channel-number collisions: **0**
-- Primary entries missing tvg-id: **0**
-- Primary entries missing tvg-name: **0**
-- Primary entries missing tvg-logo: **0**
-- Primary entries missing channel-id: **0**
-- Primary entries missing tvg-chno: **0**
-- External logo references: **0**
-- Malformed/orphan stream structure: **0**
-- New Channels / New Backup queue entries currently present: **0**
-
-## Fixes Applied
-
-- Repaired all missing primary channel numbers and kept them unique.
-- Repaired all missing channel-id values.
-- Repaired all missing tvg-name values.
-- Converted all four remaining external logo references to repository-local logos.
-- Preserved the existing local Songdew logo reference under logos/unused.
-- Resolved two genuine primary identity collisions:
-  - The LEGO Channel -> moved to Backup and aligned to LegoChannel.us@SD.
-  - Goldmines Movies -> moved to Backup and aligned to GoldminesMovies.in@SD.
-- Replaced six primary proxy/worker stream sources with clean existing backup sources where a clean alternative was already available.
-- Removed only six redundant backup records whose exact URLs became the primary stream URLs. No unique backup stream was removed.
-- Re-checked the final playlist after every write.
-
-## Remaining Manual-Review Source Issues
-
-The playlist still contains 9 primary URLs that match known proxy/token/questionable-source patterns and have no clean existing replacement in the playlist:
-
-- BTV News
-- Star Gold Thrills
-- Moonbug Kids
-- SuperToons TV
-- Astro Cricbuzz
-- FOX Cricket 501
-- Marquee Sports Network
-- Sony Sports Ten 3
-- Ten Sports
-
-There are also 54 backup URLs matching the same source-pattern check. These were not mass-deleted because backup streams are intentionally retained for manual testing.
-
-## EPG
-
-The playlist now has complete core metadata on all primary entries, but EPG correctness is a separate mapping problem. The repository EPG report records public-source mappings and coverage; the EPG pilot documentation states that the published guide is not currently active. Therefore this audit does not claim live programme coverage for every channel.
-
-## Integrity Rule
-
-- Duplicate URLs: **0**
-- Primary identity collisions: **0**
-- Missing primary core metadata: **0**
-
-
-# Playlist Audit
-Generated: **2026-10-03T07:25:42.305890+00:00**
+Generated: **2026-10-03T07:31:12.505914+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **986**
-- Unique channel IDs: **620**
+- Playlist entries: **980**
+- Unique channel IDs: **618**
 - IDs with multiple streams: **180**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **5**
+- IDs with multiple logo references: **7**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **3**
+- Logo exceptions: **0**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
@@ -205,9 +143,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### bsfilm.pk@sd (2 streams)
 - BS Film — Pakistani — https://lbgo.bozztv.com/ssh101/ssh101/bsfilm/playlist.m3u8
 - BS Film — Backup — https://live20.bozztv.com/akamaissh101/ssh101/bsfilm/playlist.m3u8
-### btvnational.bd (3 streams)
-- BTV National — Bangladesh — https://btv.hridoytv-channel.workers.dev/btv.m3u8
-- BTV National — Backup — http://198.195.239.50:8095/btv/index.m3u8
+### btvnational.bd (2 streams)
+- BTV National — Bangladesh — http://198.195.239.50:8095/btv/index.m3u8
 - BTV National — Backup — http://198.195.239.50:8095/BTV.HD/index.m3u8
 ### cgtndocumentary.cn (2 streams)
 - CGTN Documentary — Documentary & Wildlife — https://english-livebkali.cgtn.com/live/doccgtn_1.m3u8
@@ -262,9 +199,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - ATN News — Backup — https://iptvlive.ahmed-bd-org.workers.dev/atn-news-2/index.m3u8
 - ATN News — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/atn-news/index.m3u8
 - ATN News — Backup — http://198.195.239.50:8095/ATN.NEWS.HD/index.m3u8
-### custom.bengali.beats (2 streams)
-- Bengali Beats — Bangladesh — https://iptvlive.ahmed-bd-org.workers.dev/bengali-beats-1/index.m3u8
-- Bengali Beats — Backup — https://live20.bozztv.com/giatvplayout7/giatv-209587/tracks-v1a1/mono.ts.m3u8
 ### custom.channel.1 (3 streams)
 - Channel 1 — Bangladesh — https://stream.ottplus.live/live/channel_1_hd_abr/index.m3u8
 - Channel 1 — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel1bd.stream/playlist.m3u8
@@ -293,9 +227,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### custom.sonyten2 (2 streams)
 - Sony Ten 2 — Sports — http://198.195.239.50:8095/SONY.SPORTS2.HD/index.m3u8
 - Sony Ten 2 — Backup — https://stream.ottplus.live/live/ten_2_hd_abr/live/ten_2_hd_720/index.m3u8
-### custom.star.news (4 streams)
-- Star News — Bangladesh — https://iptvlive.ahmed-bd-org.workers.dev/star-news-1/index.m3u8
-- Star News — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/playlist.m3u8
+### custom.star.news (3 streams)
+- Star News — Bangladesh — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/playlist.m3u8
 - Star News — Backup — https://iptvlive.ahmed-bd-org.workers.dev/star-news-2/index.m3u8
 - Star News — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/tracks-v1a1/mono.m3u8
 ### custom.travelxp.english (2 streams)
@@ -362,9 +295,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Deepto TV — Bangladesh — https://byphdgllyk.gpcdn.net/hls/deeptotv/0_1/index.m3u8
 - Deepto TV — Backup — https://byphdgllyk.gpcdn.net/hls/deeptotv/index.m3u8
 - Deepto TV — Backup — http://198.195.239.50:8095/DEEPTOTV.HD/index.m3u8
-### deshtv.bd (3 streams)
-- Desh TV — Bangladesh — https://iptvlive.ahmed-bd-org.workers.dev/desh-tv-2/index.m3u8
-- Desh TV — Backup — https://stream.ottplus.live/live/desh_tv_abr/index.m3u8
+### deshtv.bd (2 streams)
+- Desh TV — Bangladesh — https://stream.ottplus.live/live/desh_tv_abr/index.m3u8
 - Desh TV — Backup — https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8
 ### dhoommusic.in@sd (2 streams)
 - Dhoom Music Bangla — Indian Bangla — https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8
@@ -446,6 +378,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### goldminesbollywood.in@sd (2 streams)
 - Goldmines Bollywood — Indian Movies — https://streams.tangotv.in/GOLDMINESBOLLYWOOD/ORIGIN/index.m3u8
 - Goldmines Bollywood — Backup — https://mumt03.tangotv.in/Dsly5z3HGOLDMINESBOLLYWOOD/index.m3u8
+### goldminesmovies.in@sd (2 streams)
+- Gold Mines Movie — Indian Movies — https://streams.tangotv.in/GOLDMINEMOVIES/ORIGIN/index.m3u8
+- Goldmines Movies — Backup — https://cdn.pishow.tv/ott/live/1461/master.m3u8
 ### greentv.bd (3 streams)
 - Green TV — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
 - Green TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/greentv.stream/index.m3u8
@@ -498,6 +433,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### khushboobangla.in@sd (2 streams)
 - Khushboo Bangla — Indian Bangla — https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/index.m3u8
 - Khushboo Bangla — Backup — https://cdn.pishow.tv/ott/live/1473/master.m3u8
+### legochannel.us@sd (2 streams)
+- Lego Channel — Kids — https://dltiqboxjw21d.cloudfront.net/index.m3u8
+- The LEGO Channel — Backup — https://dltiqboxjw21d.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-evri8jwgwmxus/index.m3u8
 ### maasrangatv.bd (6 streams)
 - Maasranga TV — Bangladesh — https://mtv.sunplex.live/MAASRANGA/index.m3u8
 - Maasranga TV — Backup — http://tvsen5.aynascope.net/maasrangatv/index.m3u8
@@ -747,9 +685,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### studioyuva.in (2 streams)
 - Studio Yuva — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3STUDIOYUVA/index.m3u8
 - Studio Yuva — Backup — https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=[REDACTED]
-### sunbangla.in@sd (3 streams)
-- Sun Bangla — Indian Bangla — https://iptvlive.ahmed-bd-org.workers.dev/sun-bangla-1/index.m3u8
-- Sun Bangla — Backup — http://27.124.71.27/Sun_Bangla/index.m3u8
+### sunbangla.in@sd (2 streams)
+- Sun Bangla — Indian Bangla — http://27.124.71.27/Sun_Bangla/index.m3u8
 - Sun Bangla — Backup — http://198.195.239.50:8095/SUN.BANGLA.HD/index.m3u8
 ### thikanatv.us (2 streams)
 - Thikana — Bangladesh — https://5dd3981940faa.streamlock.net/thikanatv/thikanatv/playlist.m3u8
@@ -798,9 +735,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Zee Bangla Sonar — Backup — https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-cinema-2/index.m3u8
 - Zee Bangla Sonar — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD-video=2137600.m3u8
 - Zee Bangla Sonar — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8
-### zeebollywood.in@sd (2 streams)
-- Zee Bollywood — Indian Movies — https://iptvlive.ahmed-bd-org.workers.dev/zee-bollywood-1/index.m3u8
-- Zee Bollywood — Backup — https://stream.ottplus.live/live/zee_bollywood_abr/index.m3u8
 ### zeecinema.in@hd (5 streams)
 - Zee Cinema — Indian Movies — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ZeeCinemaAPAC.m3u8
 - Zee Cinema — Backup — https://stream.ottplus.live/live/zee_cinema_hd_abr/index.m3u8
@@ -865,22 +799,21 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **983**
+- Healthy/local references: **980**
 - missing: **0**
 - broken-local: **0**
-- external: **3**
+- external: **0**
 - non-png: **0**
 - invalid-dimensions: **0**
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
-- external — Desh Bangla TV [custom.desh.bangla.tv] — http://data.jaagobd.com/media/channel_logos/Desh_Bangla_Tv.png
-- external — Deshe Bideshe [custom.deshe.bideshe] — https://pbs.twimg.com/profile_images/739539785304281088/zMwNO936_400x400.jpg
-- external — Probashi TV [probashitv.ca@sd] — https://i.imgur.com/79g2kMA.png
 - multiple-logo-references — andtv.in@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-international-1080p.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv.png
 - multiple-logo-references — custom.travelxp.english — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-xp-english-eu.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travelxp-english.png
 - multiple-logo-references — custom.zoommusic — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-music.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png
 - multiple-logo-references — discoverpakistan.pk@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discover-pakistan.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-pakistan-b91039be.png
+- multiple-logo-references — goldminesmovies.in@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines-movies-576p-4a7688df18.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines-movies.png
+- multiple-logo-references — legochannel.us@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lego-channel-1080p.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-lego-channel.png
 - multiple-logo-references — zeebanglasonar.in@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-cinema.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png
 
 ## Protected Primary Entries

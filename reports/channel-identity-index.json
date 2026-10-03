@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T07:25:42+00:00",
+  "generated": "2026-10-03T07:31:12+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -1140,9 +1140,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 3,
+      "streams": 2,
       "primary": 1,
-      "backup": 2
+      "backup": 1
     },
     "cartoonnetwork": {
       "names": [
@@ -1640,12 +1640,11 @@
         "custom.bengali.beats"
       ],
       "groups": [
-        "Backup",
         "Bangladesh"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "custom.bon.voyage": {
       "names": [
@@ -2394,9 +2393,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 4,
+      "streams": 3,
       "primary": 1,
-      "backup": 3
+      "backup": 2
     },
     "custom.star.sports.sl.1": {
       "names": [
@@ -3099,9 +3098,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 3,
+      "streams": 2,
       "primary": 1,
-      "backup": 2
+      "backup": 1
     },
     "desichannel": {
       "names": [
@@ -3934,15 +3933,15 @@
         "Goldmines Movies"
       ],
       "ids": [
-        "goldminesmovies.in",
         "goldminesmovies.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Movies"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "gravitasmovies": {
       "names": [
@@ -4570,15 +4569,15 @@
         "The LEGO Channel"
       ],
       "ids": [
-        "legochannel.us",
         "legochannel.us@sd"
       ],
       "groups": [
+        "Backup",
         "Kids"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "loltv": {
       "names": [
@@ -7707,9 +7706,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 3,
+      "streams": 2,
       "primary": 1,
-      "backup": 2
+      "backup": 1
     },
     "sunmusic": {
       "names": [
@@ -8548,12 +8547,11 @@
         "zeebollywood.in@sd"
       ],
       "groups": [
-        "Backup",
         "Indian Movies"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "zeecinema": {
       "names": [
