@@ -91,8 +91,11 @@ jobs:
             STAGED_EPG_BYTES="$(git cat-file -s :epg.xml)"
             echo "Staged EPG bytes: ${STAGED_EPG_BYTES}"
             test "${STAGED_EPG_BYTES}" -gt 0
-            git show :epg.xml | grep -q '<programme '
-            echo "Staged EPG sha256: $(git show :epg.xml | sha256sum | awk '{print $1}')"
+            # Avoid SIGPIPE under pipefail: materialize the staged blob once,
+            # then validate/hash the file without piping git output into grep.
+            git cat-file blob :epg.xml > /tmp/bdix-epg-staged.xml
+            grep -q '<programme ' /tmp/bdix-epg-staged.xml
+            echo "Staged EPG sha256: $(sha256sum /tmp/bdix-epg-staged.xml | awk '{print $1}')"
             if git diff --cached --quiet; then exit 0; fi
             git commit -m 'Run IPTV playlist maintenance'
             if git push origin HEAD:main; then exit 0; fi
