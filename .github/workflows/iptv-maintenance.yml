@@ -17,7 +17,7 @@ concurrency:
   queue: single
 jobs:
   maintain:
-    if: github.actor != 'github-actions[bot]'
+    if: !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance'))
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
