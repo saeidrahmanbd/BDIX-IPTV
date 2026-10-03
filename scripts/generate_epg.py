@@ -32,7 +32,7 @@ def playlist_channels():
         if line.startswith("#EXTINF:"):
             attrs = {}
             import re
-            for m in re.finditer(r'([\\w-]+)="([^"]*)"', line):
+            for m in re.finditer(r'([\w-]+)="([^"]*)"', line):
                 attrs[m.group(1)] = m.group(2)
             group = attrs.get("group-title", "")
             tvg_id = attrs.get("tvg-id", "").strip()
