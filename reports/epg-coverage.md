@@ -1,14 +1,14 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-03T11:39:39+00:00**
+Generated: **2026-10-03T11:48:21+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **246**
-- Channels with an EPG mapping: **200**
-- Current/future programme coverage: **190/246 (77.2%)**
+- Active Indian channels audited: **247**
+- Channels with an EPG mapping: **201**
+- Current/future programme coverage: **191/247 (77.3%)**
 - No guide mapping found: **46**
 
 ## Source Status
@@ -57,7 +57,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Music | Hindi Hits | HindiHits.in | - | NO_GUIDE_HIT |
 | Indian Movies | Hindi Movie Classic 24 | custom.hindi.movie.classic.24 | - | NO_GUIDE_HIT |
 | Indian Movies | Hindi Movies | custom.hindi.movies | - | NO_GUIDE_HIT |
-| Indian Music | Jalwa | custom.jalwa | - | NO_GUIDE_HIT |
+| Indian Bangla | JA TV | custom.ja.tv | - | NO_GUIDE_HIT |
 | Indian Bangla | Jhankar TV | JhankarTV.ca | - | NO_GUIDE_HIT |
 | Indian Bangla | Jtv Classic | custom.jtv.classic | - | NO_GUIDE_HIT |
 | Indian Entertainment | Kairali Arabia | KairaliArabia.in | - | NO_GUIDE_HIT |
@@ -76,7 +76,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Entertainment | Pardesi TV | PardesiTV.ca | - | NO_GUIDE_HIT |
 | Indian Entertainment | Q TV | QTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | SADA TV | SADATV.in | - | NO_GUIDE_HIT |
-| Indian Movies | SNB Cinema | custom.snb.cinema | - | NO_GUIDE_HIT |
+| Indian Bangla | SNB Cinema | custom.snb.cinema | - | NO_GUIDE_HIT |
 | Indian Bangla | Sananda | SanandaTV.in | - | NO_GUIDE_HIT |
 | Indian Movies | Shubh Cinema TV | ShubhCinemaTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | Sony KAL | SonyKALHindi.us | - | NO_GUIDE_HIT |

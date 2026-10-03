@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T11:39:56+00:00",
+  "generated": "2026-10-03T11:48:35+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -117,7 +117,8 @@
     },
     "9xjalwa": {
       "names": [
-        "9X Jalwa"
+        "9X Jalwa",
+        "Jalwa"
       ],
       "ids": [
         "9xjalwa.in"
@@ -126,8 +127,8 @@
         "Backup",
         "Indian Music"
       ],
-      "streams": 3,
-      "primary": 1,
+      "streams": 4,
+      "primary": 2,
       "backup": 2
     },
     "9xjhakaas": {
@@ -268,6 +269,20 @@
       ],
       "groups": [
         "Religious"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "aljazeera": {
+      "names": [
+        "Al Jazeera"
+      ],
+      "ids": [
+        "aljazeera.qa@english"
+      ],
+      "groups": [
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -560,6 +575,21 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "atnnews": {
+      "names": [
+        "ATN News"
+      ],
+      "ids": [
+        "atnnews.bd"
+      ],
+      "groups": [
+        "Backup",
+        "Bangladesh"
+      ],
+      "streams": 5,
+      "primary": 1,
+      "backup": 4
     },
     "aurlife": {
       "names": [
@@ -1268,6 +1298,20 @@
       "primary": 1,
       "backup": 0
     },
+    "colors": {
+      "names": [
+        "Colors"
+      ],
+      "ids": [
+        "colors.in"
+      ],
+      "groups": [
+        "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "colors.bangla": {
       "names": [
         "Colors Bangla"
@@ -1291,7 +1335,7 @@
         "colorsbanglacinema.in@sd"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Bangla"
       ],
       "streams": 4,
       "primary": 4,
@@ -1480,20 +1524,6 @@
       "primary": 1,
       "backup": 0
     },
-    "custom.aljazeera.english": {
-      "names": [
-        "Al Jazeera"
-      ],
-      "ids": [
-        "custom.aljazeera.english"
-      ],
-      "groups": [
-        "International"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "custom.amar.bangla.digital": {
       "names": [
         "Amar Bangla Digital"
@@ -1522,21 +1552,6 @@
       "streams": 1,
       "primary": 1,
       "backup": 0
-    },
-    "custom.atn.news": {
-      "names": [
-        "ATN News"
-      ],
-      "ids": [
-        "custom.atn.news"
-      ],
-      "groups": [
-        "Backup",
-        "Bangladesh"
-      ],
-      "streams": 5,
-      "primary": 1,
-      "backup": 4
     },
     "custom.autentic.adventure.earth": {
       "names": [
@@ -1665,20 +1680,6 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
-    },
-    "custom.colors": {
-      "names": [
-        "Colors"
-      ],
-      "ids": [
-        "custom.colors"
-      ],
-      "groups": [
-        "Indian Entertainment"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
     },
     "custom.colors.cineplex": {
       "names": [
@@ -2012,21 +2013,7 @@
         "custom.ja.tv"
       ],
       "groups": [
-        "Bangladesh"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "custom.jalwa": {
-      "names": [
-        "Jalwa"
-      ],
-      "ids": [
-        "custom.jalwa"
-      ],
-      "groups": [
-        "Indian Music"
+        "Indian Bangla"
       ],
       "streams": 1,
       "primary": 1,
@@ -2225,7 +2212,7 @@
         "custom.snb.cinema"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Bangla"
       ],
       "streams": 1,
       "primary": 1,
@@ -2273,20 +2260,6 @@
       "primary": 1,
       "backup": 0
     },
-    "custom.sony.ten.1": {
-      "names": [
-        "Sony Ten 1"
-      ],
-      "ids": [
-        "custom.sony.ten.1"
-      ],
-      "groups": [
-        "Sports"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "custom.sony.ten.5": {
       "names": [
         "Sony Ten 5"
@@ -2300,21 +2273,6 @@
       "streams": 1,
       "primary": 1,
       "backup": 0
-    },
-    "custom.sonyten2": {
-      "names": [
-        "Sony Ten 2"
-      ],
-      "ids": [
-        "custom.sonyten2"
-      ],
-      "groups": [
-        "Backup",
-        "Sports"
-      ],
-      "streams": 2,
-      "primary": 1,
-      "backup": 1
     },
     "custom.south.movies": {
       "names": [
@@ -7030,6 +6988,35 @@
       "primary": 1,
       "backup": 0
     },
+    "sonysportsten1": {
+      "names": [
+        "Sony Ten 1"
+      ],
+      "ids": [
+        "sonysportsten1.in"
+      ],
+      "groups": [
+        "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "sonysportsten2": {
+      "names": [
+        "Sony Ten 2"
+      ],
+      "ids": [
+        "sonysportsten2.in"
+      ],
+      "groups": [
+        "Backup",
+        "Sports"
+      ],
+      "streams": 2,
+      "primary": 1,
+      "backup": 1
+    },
     "sonysportsten3": {
       "names": [
         "Sony Sports Ten 3"
@@ -7123,7 +7110,7 @@
         "star.jalsha.movies.in"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Bangla"
       ],
       "streams": 4,
       "primary": 4,

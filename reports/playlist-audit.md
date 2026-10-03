@@ -1,21 +1,21 @@
 # Playlist Audit
-Generated: **2026-10-03T11:39:56.153095+00:00**
+Generated: **2026-10-03T11:48:35.150436+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
 - Playlist entries: **941**
-- Unique channel IDs: **597**
+- Unique channel IDs: **596**
 - IDs with multiple streams: **172**
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **0**
+- Metadata conflicts: **1**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **0**
+- IDs with multiple logo references: **1**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **1**
-- Duplicate primary identities: **3**
+- Duplicate primary identities: **4**
 - Primary channel-number collisions: **1**
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
@@ -32,8 +32,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - 8XM — Backup — https://cdn4.mjunoon.tv:8087/streamtest/131M/chunks.m3u8
 - 8XM — Backup — https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
 - 8XM — Backup — https://iptvlive.ahmed-bd-org.workers.dev/8xm-1/index.m3u8
-### 9xjalwa.in (3 streams)
+### 9xjalwa.in (4 streams)
 - 9X Jalwa — Indian Music — https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/70fca4d1-156e-4c03-baa4-9a4b602e33d5/0.m3u8
+- Jalwa — Indian Music — https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/playlist.m3u8
 - 9X Jalwa — Backup — https://mumt03.tangotv.in/Dsly5z3H9XJALWA/index.m3u8
 - 9X Jalwa — Backup — https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8
 ### 9xm.in@sd (4 streams)
@@ -81,6 +82,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### atnbanglauk.uk (2 streams)
 - ATN Bangla UK — Bangladesh — https://app.ncare.live/live-orgin/atnbanglauk-off.stream/playlist.m3u8
 - ATN Bangla UK — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnbanglauk-off.stream/playlist.m3u8
+### atnnews.bd (5 streams)
+- ATN News — Bangladesh — https://tvsen6.aynaott.com/da6WMXAk/index.m3u8
+- ATN News — Backup — http://198.195.239.50:8095/ATN.NEWS.HD/index.m3u8
+- ATN News — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/atn-news/index.m3u8
+- ATN News — Backup — https://iptvlive.ahmed-bd-org.workers.dev/atn-news-1/index.m3u8
+- ATN News — Backup — https://iptvlive.ahmed-bd-org.workers.dev/atn-news-2/index.m3u8
 ### aurlife.pk (2 streams)
 - aur LIFE — Pakistani — https://s3.ideationtec.live/Aur_Life/Aur_Life.m3u8
 - aur LIFE — Backup — http://124.109.47.101/hls/stream1.m3u8
@@ -171,10 +178,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Colors Bangla — Backup — https://catchup.yuppcdn.net/amazonv2/36/preview/colorsbanglahd/master/chunklist.m3u8
 - Colors Bangla — Backup — https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/2500.m3u8
 ### colorsbanglacinema.in@sd (4 streams)
-- Colors Bangla Cinema — Indian Movies — http://livetv.akr4m.com:8080/bdtv/restrem/3.m3u8
-- Colors Bangla Cinema — Indian Movies — http://198.195.239.50:8095/COLORS.BANGLA.CINEMA/index.m3u8
-- Colors Bangla Cinema — Indian Movies — http://198.195.239.50:8095/colorsBanglaChinema/index.m3u8
-- Colors Bangla Cinema — Indian Movies — http://51.75.127.199:3141/colorsbanglacinema/index.m3u8
+- Colors Bangla Cinema — Indian Bangla — http://livetv.akr4m.com:8080/bdtv/restrem/3.m3u8
+- Colors Bangla Cinema — Indian Bangla — http://198.195.239.50:8095/COLORS.BANGLA.CINEMA/index.m3u8
+- Colors Bangla Cinema — Indian Bangla — http://198.195.239.50:8095/colorsBanglaChinema/index.m3u8
+- Colors Bangla Cinema — Indian Bangla — http://51.75.127.199:3141/colorsbanglacinema/index.m3u8
 ### colorscineplex.in@sd (3 streams)
 - Colors Cineplex — Indian Movies — http://198.195.239.50:8095/COLORS.CINEPLEX.HD/index.m3u8
 - Colors Cineplex — Backup — http://202.70.146.135:8000/play/a04n/index.m3u8
@@ -182,12 +189,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### custom.amar.bangla.digital (2 streams)
 - Amar Bangla Digital — Indian Bangla — http://115.187.41.216:8080/hls/amardigital/index.m3u8
 - Amar Bangla Digital — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/amardigital.stream/playlist.m3u8
-### custom.atn.news (5 streams)
-- ATN News — Bangladesh — https://tvsen6.aynaott.com/da6WMXAk/index.m3u8
-- ATN News — Backup — http://198.195.239.50:8095/ATN.NEWS.HD/index.m3u8
-- ATN News — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/atn-news/index.m3u8
-- ATN News — Backup — https://iptvlive.ahmed-bd-org.workers.dev/atn-news-1/index.m3u8
-- ATN News — Backup — https://iptvlive.ahmed-bd-org.workers.dev/atn-news-2/index.m3u8
 ### custom.channel.1 (3 streams)
 - Channel 1 — Bangladesh — https://stream.ottplus.live/live/channel_1_hd_abr/index.m3u8
 - Channel 1 — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel1bd.stream/playlist.m3u8
@@ -213,9 +214,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### custom.nature.time (2 streams)
 - Nature Time — Documentary & Wildlife — https://bamusa-naturetime-emea-eng-rakuten.amagi.tv/playlist.m3u8
 - Nature Time — Backup — https://amg00090-blueantllc-lovenature-au-samsungau-wggcn.amagi.tv/playlist/amg00090-blueantllc-lovenature-au-samsungau/playlist.m3u8
-### custom.sonyten2 (2 streams)
-- Sony Ten 2 — Sports — http://198.195.239.50:8095/SONY.SPORTS2.HD/index.m3u8
-- Sony Ten 2 — Backup — https://stream.ottplus.live/live/ten_2_hd_abr/live/ten_2_hd_720/index.m3u8
 ### custom.star.news (3 streams)
 - Star News — Bangladesh — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/playlist.m3u8
 - Star News — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/tracks-v1a1/mono.m3u8
@@ -625,6 +623,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Sony Max — Indian Movies — https://drk6xq0vhn.gpcdn.net/live/max_hd_abr/index.m3u8
 - Sony Max — Backup — http://198.195.239.50:8095/SONY.MAX.HD/index.m3u8
 - Sony Max — Backup — https://drk6xq0vhn.gpcdn.net/live/sony_max_sd_abr/index.m3u8
+### sonysportsten2.in (2 streams)
+- Sony Ten 2 — Sports — http://198.195.239.50:8095/SONY.SPORTS2.HD/index.m3u8
+- Sony Ten 2 — Backup — https://stream.ottplus.live/live/ten_2_hd_abr/live/ten_2_hd_720/index.m3u8
 ### star.jalsha.in (6 streams)
 - Star Jalsha — Indian Bangla — https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8
 - Star Jalsha — Backup — http://103.151.60.162:2122/play/a00w/index.m3u8
@@ -633,10 +634,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Star Jalsha — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
 - Star Jalsha — Backup — https://flussonic.defineatoz.com/StarjalshaHD/tracks-v1a1/mono.m3u8
 ### star.jalsha.movies.in (4 streams)
-- Jalsha Movies — Indian Movies — http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8
-- Jalsha Movies — Indian Movies — http://103.151.60.162:2122/play/a00x/index.m3u8
-- Jalsha Movies — Indian Movies — http://198.195.239.50:8095/JALSHA.MOVIES.HD/index.m3u8
-- Jalsha Movies — Indian Movies — http://198.195.239.50:8095/jalshaMovies/index.m3u8
+- Jalsha Movies — Indian Bangla — http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8
+- Jalsha Movies — Indian Bangla — http://103.151.60.162:2122/play/a00x/index.m3u8
+- Jalsha Movies — Indian Bangla — http://198.195.239.50:8095/JALSHA.MOVIES.HD/index.m3u8
+- Jalsha Movies — Indian Bangla — http://198.195.239.50:8095/jalshaMovies/index.m3u8
 ### stargold.in@hd (3 streams)
 - Star Gold — Indian Movies — http://livetv.akr4m.com:8080/bdtv/restrem/45.m3u8
 - Star Gold — Backup — http://198.195.239.50:8095/STAR.GOLD.HD/index.m3u8
@@ -715,8 +716,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-- **colorsbanglacinema.in@sd** in **Indian Movies** — Colors Bangla Cinema, Colors Bangla Cinema, Colors Bangla Cinema, Colors Bangla Cinema
-- **star.jalsha.movies.in** in **Indian Movies** — Jalsha Movies, Jalsha Movies, Jalsha Movies, Jalsha Movies
+- **9xjalwa.in** in **Indian Music** — 9X Jalwa, Jalwa
+- **colorsbanglacinema.in@sd** in **Indian Bangla** — Colors Bangla Cinema, Colors Bangla Cinema, Colors Bangla Cinema, Colors Bangla Cinema
+- **star.jalsha.movies.in** in **Indian Bangla** — Jalsha Movies, Jalsha Movies, Jalsha Movies, Jalsha Movies
 - **ultimatetv.in@sd** in **Indian Music** — Ultimate TV, Ultimate TV
 
 ## Primary Channel-Number Collisions
@@ -754,7 +756,7 @@ None.
 
 ## Metadata Conflicts
 
-None.
+- **9xjalwa.in** — names: 9x jalwa, jalwa; groups: Indian Music; countries: IN
 
 ## Cross-Country Backup Collisions
 
@@ -776,6 +778,7 @@ None.
 - unvalidated-image: **0**
 - other: **0**
 - broken-local — Hindi Movies [custom.hindi.movies] — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hindi-movies.png
+- multiple-logo-references — 9xjalwa.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jalwa.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalwa.png
 
 ## Protected Primary Entries
 
