@@ -1,18 +1,18 @@
 # Playlist Audit
-Generated: **2026-10-03T06:36:02.897182+00:00**
+Generated: **2026-10-03T06:41:50.906389+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
 - Playlist entries: **1037**
-- Unique channel IDs: **641**
+- Unique channel IDs: **640**
 - IDs with multiple streams: **192**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **5**
+- IDs with multiple logo references: **6**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **0**
 - Duplicate primary identities: **1**
@@ -314,8 +314,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### dhoommusic.in@sd (2 streams)
 - Dhoom Music Bangla — Indian Bangla — https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8
 - Dhoom Music Bangla — Backup — https://cdn.pishow.tv/ott/live/1456/master.m3u8
-### discoverpakistan.pk@sd (3 streams)
+### discoverpakistan.pk@sd (4 streams)
 - Discover Pakistan — Pakistani — https://livecdn.live247stream.com/discoverpakistan/web/playlist.m3u8
+- Discover Pakistan — Backup — https://s3.ideationtec.live/Discover_Pakistan/Discover_Pakistan.m3u8
 - Discover Pakistan — Not Playing — http://103.86.135.164:9981/stream/channelid/2073419458?profile=pass&ticket=461AC76A96B0E3DC1FCFBFCF318709B61B2D3F5B
 - Discover Pakistan — Not Playing — http://103.86.135.164:9981/stream/channelid/2089283490?profile=pass&ticket=BB7D99860884A453E7DEA789EDFB5114621FEDED
 ### discoverychannel.in@sd (3 streams)
@@ -870,6 +871,7 @@ None.
 - multiple-logo-references — colors.bangla.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-hd.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png
 - multiple-logo-references — custom.travelxp.english — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-xp-english-eu.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travelxp-english.png
 - multiple-logo-references — custom.zoommusic — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-music.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png
+- multiple-logo-references — discoverpakistan.pk@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discover-pakistan.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-pakistan-b91039be.png
 - multiple-logo-references — zeebanglasonar.in@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-cinema.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png
 
 ## Protected Primary Entries

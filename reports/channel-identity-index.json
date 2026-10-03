@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T06:36:02+00:00",
+  "generated": "2026-10-03T06:41:50+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -3237,20 +3237,19 @@
     },
     "discoverpakistan": {
       "names": [
-        "Discover Pakistan",
-        "Discovery Pakistan"
+        "Discover Pakistan"
       ],
       "ids": [
-        "discoverpakistan.pk",
         "discoverpakistan.pk@sd"
       ],
       "groups": [
+        "Backup",
         "Not Playing",
         "Pakistani"
       ],
       "streams": 4,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "discoverychannel": {
       "names": [
@@ -3927,7 +3926,7 @@
         "geonews.pk"
       ],
       "groups": [
-        "International"
+        "Pakistani"
       ],
       "streams": 1,
       "primary": 1,
