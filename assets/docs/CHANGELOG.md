@@ -36,5 +36,9 @@
 
 ## 2026-10-03
 
-- No meaningful playlist changes detected.
+- 🗑️ **2 channel(s) removed**
+
+### Removed channels
+- BTV News
+- Hindi Movie Classic 24
 
