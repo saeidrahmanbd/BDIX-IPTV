@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-10-03 10:01 UTC**_
+_Last generated: **2026-10-03 10:10 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -16,12 +16,12 @@ _Last generated: **2026-10-03 10:01 UTC**_
 | EPG Programme Coverage | **75.7%** |
 | EPG Mapping | **80.6%** |
 | Stream Health Tested | **947** |
-| Stream Health Failures | **116** |
-| Persistent Failures | **110** |
+| Stream Health Failures | **118** |
+| Persistent Failures | **112** |
 | Near-Duplicate URL Families | **0** |
 | Audit Blocking Issues | **0** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-03T10:01:06+00:00** |
+| Pre-Publish Gate Generated | **2026-10-03T10:10:02+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -50,14 +50,14 @@ _Last generated: **2026-10-03 10:01 UTC**_
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-03T10:00:22.875791+00:00** |
-| EPG coverage | **2026-10-03T10:00:09+00:00** |
-| Stream health | **2026-10-03T10:01:06+00:00** |
-| Pre-publish gate | **2026-10-03T10:01:06+00:00** |
+| Playlist audit | **2026-10-03T10:09:16.992874+00:00** |
+| EPG coverage | **2026-10-03T10:09:06+00:00** |
+| Stream health | **2026-10-03T10:10:02+00:00** |
+| Pre-publish gate | **2026-10-03T10:10:02+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
 - Latest entries change: **947 → 947**
-- Latest health failures: **125 → 116**
+- Latest health failures: **116 → 118**
 
 Historical records are retained in reports/maintenance-history.json.
