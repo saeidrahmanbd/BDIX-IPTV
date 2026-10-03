@@ -1,15 +1,15 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-03T17:06:14+00:00**
+Generated: **2026-10-03T17:09:39+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
 - Active Indian channels audited: **246**
-- Channels with an EPG mapping: **202**
+- Channels with an EPG mapping: **203**
 - Current/future programme coverage: **192/246 (78.0%)**
-- No guide mapping found: **44**
+- No guide mapping found: **43**
 
 ## Source Status
 
@@ -34,6 +34,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Music | ETV Beats | ETVBeats.in@HD | 3559 | MAPPED_ENDED |
 | Indian Movies | Ekamra Cinema | custom.ekamra.cinema | Ekamra.Cinema.in | MAPPED_ID_ONLY |
 | Indian Music | Ekamra Musiq | custom.ekamra.musiq | Ekamra.Musiq.in | MAPPED_ID_ONLY |
+| Indian Entertainment | Manoranjan Grand | ManoranjanGrand.in@SD | Manoranjan.Grand.in | ManoranjanGrand.in | MAPPED_ID_ONLY |
 | Indian Movies | Manoranjan Movies | ManoranjanMovies.in@SD | ManoranjanMovies.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Manoranjan Prime | ManoranjanPrime.in@SD | 10000000075992492 | MAPPED_ID_ONLY |
 | Indian Entertainment | Nazara | Nazara.in@SD | NAZARA.in | MAPPED_ID_ONLY |
@@ -57,7 +58,6 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Music | Hindi Hits | HindiHits.in | - | NO_GUIDE_HIT |
 | Indian Movies | Hindi Movie Classic 24 | custom.hindi.movie.classic.24 | - | NO_GUIDE_HIT |
 | Indian Movies | Hindi Movies | custom.hindi.movies | - | NO_GUIDE_HIT |
-| Indian Bangla | JA TV | custom.ja.tv | - | NO_GUIDE_HIT |
 | Indian Bangla | Jhankar TV | JhankarTV.ca | - | NO_GUIDE_HIT |
 | Indian Bangla | Jtv Classic | custom.jtv.classic | - | NO_GUIDE_HIT |
 | Indian Entertainment | Kairali Arabia | KairaliArabia.in | - | NO_GUIDE_HIT |
@@ -65,7 +65,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Movies | MBC Bollywood | MBCBollywood.ae | - | NO_GUIDE_HIT |
 | Indian Movies | MH One Movies | MHOneMovies.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | MH One Prime | Mh1Prime.in | - | NO_GUIDE_HIT |
-| Indian Movies | MNTV (Tamil) | MarutamTV.in | - | NO_GUIDE_HIT |
+| Indian Entertainment | MNTV (Tamil) | MarutamTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | Mei Alai TV | MeiAlaiTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | Metro TV (India) | MetroTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Music | Music Mastii | MusicMastii.in | - | NO_GUIDE_HIT |

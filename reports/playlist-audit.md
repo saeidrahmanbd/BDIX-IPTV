@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-03T17:06:32.181811+00:00**
+Generated: **2026-10-03T17:09:53.048783+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -16,7 +16,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Protected primary-entry changes: **0**
 - Logo exceptions: **1**
 - Duplicate primary identities: **0**
-- Primary channel-number collisions: **1**
+- Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
 - Suspicious URL credentials/syntax: **0**
@@ -433,7 +433,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Manoranjan Prime — Indian Entertainment — https://mumt06.tangotv.in/qYyB8fXVMANORANJANPRIME/index.m3u8
 - Manoranjan Prime — Backup — https://cdn.pishow.tv/ott/live/1474/master.m3u8
 ### marutamtv.in (2 streams)
-- MNTV (Tamil) — Indian Movies — https://mntv.livebox.co.in/mntvhls/live.m3u8
+- MNTV (Tamil) — Indian Entertainment — https://mntv.livebox.co.in/mntvhls/live.m3u8
 - MNTV (Tamil) — Backup — https://www.khuwemultimedia.com/hls/mntv/mntv.m3u8
 ### matribhumitv.bd (2 streams)
 - Matribhumi TV — Bangladesh — http://live.playmax.live/matribhumi/index.m3u8
@@ -720,7 +720,7 @@ None.
 
 ## Primary Channel-Number Collisions
 
-- **0** — Hindi Movies, South Movies
+None.
 
 ## Malformed EXTINF Entries
 
