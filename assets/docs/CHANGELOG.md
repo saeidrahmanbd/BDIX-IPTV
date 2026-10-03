@@ -36,15 +36,5 @@
 
 ## 2026-10-03
 
-- 🗑️ **8 channel(s) removed**
-
-### Removed channels
-- Movies Now
-- The Film Detective
-- Sony BBC Earth
-- Cartoon Network
-- Nick Jr (Czech Republic)
-- POP
-- TVCARiB Kids & Teens
-- EURO SPORT
+- No meaningful playlist changes detected.
 
