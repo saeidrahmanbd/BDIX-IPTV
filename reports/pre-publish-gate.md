@@ -1,8 +1,8 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-10-03T11:29:10+00:00**
+Generated: **2026-10-03T11:36:03+00:00**
 
-Status: **BLOCK**
+Status: **PASS**
 
 - Current entries: **941**
 - Duplicate stream URLs: **0**
@@ -25,5 +25,4 @@ Added: none
 Removed: none
 Modified metadata entries: 0
 
-## Blocking Reasons
-- duplicate primary identities: 2
+No blocking conditions detected.

@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-03T11:28:25.025902+00:00**
+Generated: **2026-10-03T11:35:11.585576+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -9,13 +9,13 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Unique channel IDs: **597**
 - IDs with multiple streams: **172**
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **2**
+- Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **0**
-- Duplicate primary identities: **2**
+- Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
@@ -405,7 +405,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Jonmobhumi TV — Backup — https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/tracks-v1a1/mono.m3u8
 ### kairalitv.in@sd (2 streams)
 - Kairali TV — Indian Entertainment — https://streams.tangotv.in/KAIRALI/ORIGIN/index.m3u8
-- Kairali TV — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3KAIRALI/index.m3u8
+- Kairali TV — Backup — https://mumt01.tangotv.in/O5aw8Zn3KAIRALI/index.m3u8
 ### kairaliwe.in@sd (2 streams)
 - Kairali We — Indian Movies — https://streams.tangotv.in/WETV/ORIGIN/index.m3u8
 - Kairali We — Backup — https://cdn.pishow.tv/ott/live/1530/master.m3u8
@@ -427,7 +427,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Maasranga TV — Backup — https://tvsen6.aynaott.com/maasrangatv/index.m3u8
 ### madhimugamtv.in (2 streams)
 - Madhimugam TV — Indian Entertainment — https://cdn.pishow.tv/ott/live/1476/master.m3u8
-- Madhimugam TV — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3MATHIMUGAMTV/index.m3u8
+- Madhimugam TV — Backup — https://mumt01.tangotv.in/O5aw8Zn3MATHIMUGAMTV/index.m3u8
 ### mahaamax.in (2 streams)
 - Mahaa Max — Indian Movies — https://mumt03.tangotv.in/Dsly5z3HMAHAAMAX/index.m3u8
 - Mahaa Max — Backup — https://mumbai-edge.smartplaytv.in/MahaMax/index.m3u8
@@ -715,8 +715,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-- **kairalitv.in@sd** in **Indian Entertainment** — Kairali TV, Kairali TV
-- **madhimugamtv.in** in **Indian Entertainment** — Madhimugam TV, Madhimugam TV
+None.
 
 ## Primary Channel-Number Collisions
 
@@ -753,8 +752,7 @@ None.
 
 ## Metadata Conflicts
 
-- **kairalitv.in@sd** — names: kairali tv; groups: Indian Entertainment; countries: , IN
-- **madhimugamtv.in** — names: madhimugam tv; groups: Indian Entertainment; countries: , IN
+None.
 
 ## Cross-Country Backup Collisions
 

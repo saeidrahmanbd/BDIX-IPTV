@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T11:28:25+00:00",
+  "generated": "2026-10-03T11:35:11+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -4349,11 +4349,12 @@
         "kairalitv.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Entertainment"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "kairaliwe": {
       "names": [
@@ -4553,11 +4554,12 @@
         "madhimugamtv.in"
       ],
       "groups": [
+        "Backup",
         "Indian Entertainment"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "mahaamax": {
       "names": [
