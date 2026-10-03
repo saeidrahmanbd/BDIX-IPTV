@@ -25,8 +25,7 @@ def main():
     cur_by_url=defaultdict(list)
     for a,u in cur_primary: cur_by_url[u.lower()].append(a)
     removed=[(a.get("tvg-name",""),u) for a,u in old_primary if not cur_by_url.get(u.lower())]
-    allowed_removed=[x for x in removed if ALLOWED_PRIMARY_REMOVAL_RE.search(x[1])]
-    blocked_removed=[x for x in removed if not ALLOWED_PRIMARY_REMOVAL_RE.search(x[1])]
+    blocked_removed=removed
     old_review={u.lower():a.get("group-title","").strip() for _,a,u in old if a.get("group-title","").strip() in {"New Channels","New Backup"}}
     cur_review={u.lower():a.get("group-title","").strip() for _,a,u in current if a.get("group-title","").strip() in {"New Channels","New Backup"}}
     review_reclassified=[u for u,g in old_review.items() if u in cur_review and cur_review[u] != g]
@@ -58,7 +57,7 @@ def main():
     removed_all=[u for u in old_by_url if u not in cur_by_url_all]
     modified=[u for u in cur_by_url_all if u in old_by_url and cur_by_url_all[u]!=old_by_url[u]]
     lines=["# Pre-Publish Safety Gate","",f"Generated: **{datetime.now(timezone.utc).isoformat(timespec="seconds")}**","",f"Status: **{status}**","",f"- Current entries: **{len(current)}**",
-           f"- Duplicate stream URLs: **{len(dup_urls)}**",f"- Primary streams removed: **{len(removed)}**",f"- Approved prohibited-source primary removals: **{len(allowed_removed)}**",
+           f"- Duplicate stream URLs: **{len(dup_urls)}**",f"- Primary streams removed: **{len(removed)}**",
            f"- Review entries reclassified: **{len(reclassified)}**",f"- Review entries deleted: **{len(review_removed)}**",f"- Duplicate primary channel numbers: **{len(chno_dupes)}**",
            f"- Primary entries missing tvg-chno: **{len(missing)}**",f"- Entries added this run: **{len(added)}**",f"- Entries removed this run: **{len(removed_all)}**",f"- Entries modified this run: **{len(modified)}**","","## Change Summary",
            "1. Never publish duplicate stream URLs.","2. Never silently remove an existing primary stream.",
