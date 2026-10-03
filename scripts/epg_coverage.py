@@ -15,6 +15,8 @@ EPG_ALIASES = {
     "DDHimachalPradesh.in@SD": ["ts1217", "1217", "LIVETV_LIVETVCHANNEL_DD_SHIMLA"],
     "MTVIndia.in@SD": ["jtv248", "248"],
     "MusicMastii.in": ["jtv584", "584", "IN4#MASTII.in"],
+    "KappaTV.in@ALT1": ["jtv786", "786", "377"],
+    "TamilanTV.in": ["jtv2958", "2958"],
     "SonyKALHindi.us": ["US1#Sony.KAL.us"],
 }
 
