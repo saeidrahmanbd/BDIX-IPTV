@@ -1,21 +1,20 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-03T10:10:58+00:00**
+Generated: **2026-10-03T10:15:54+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
 - Active Indian channels audited: **247**
-- Channels with an EPG mapping: **199**
-- Current/future programme coverage: **187/247 (75.7%)**
-- No guide mapping found: **48**
+- Channels with an EPG mapping: **200**
+- Current/future programme coverage: **189/247 (76.5%)**
+- No guide mapping found: **47**
 
 ## Source Status
 
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 817 current/future IDs; 112675 programme rows
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 531 current/future IDs; 20737 programme rows
-- **FAILED** — https://epgshare01.online/epgshare01/epg_ripper_US1.xml.gz — 0 channel IDs; 0 current/future IDs; 0 programme rows; HTTP Error 404: Not Found
 - **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 69000 programme rows
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19385 programme rows
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml — 394 channel IDs; 0 current/future IDs; 660 programme rows
@@ -24,14 +23,16 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1479 channel IDs; 1455 current/future IDs; 94488 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 283 channel IDs; 283 current/future IDs; 13782 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 112 channel IDs; 99 current/future IDs; 23690 programme rows
+- **OK** — https://avkb.short.gy/epg.xml.gz — 2273 channel IDs; 1049 current/future IDs; 71437 programme rows
+- **OK** — https://avkb.short.gy/jioepg.xml.gz — 1307 channel IDs; 310 current/future IDs; 43038 programme rows
+- **OK** — https://avkb.short.gy/tsepg.xml.gz — 717 channel IDs; 688 current/future IDs; 62556 programme rows
 
 ## Channels Requiring Attention
 
 | Group | Channel | Playlist ID | EPG ID | Status |
 |---|---|---|---|---|
-| Indian Entertainment | Ekamra Bharat Odia | EkamraBharatOdia.in@SD | Ekamra.Bharat.Odia.in | ts1196 | MAPPED_ID_ONLY |
+| Indian Movies | ETV Beats | ETVBeats.in@HD | 3559 | MAPPED_ENDED |
 | Indian Movies | Ekamra Cinema | custom.ekamra.cinema | Ekamra.Cinema.in | MAPPED_ID_ONLY |
-| Indian Movies | Ekamra Manoranjan | custom.ekamra.manoranjan | Ekamra.Manoranjan.in | ts1207 | MAPPED_ID_ONLY |
 | Indian Music | Ekamra Musiq | custom.ekamra.musiq | Ekamra.Musiq.in | MAPPED_ID_ONLY |
 | Indian Movies | Gold Mines Movie | GoldminesMovies.in@SD | Goldmines.Movies.in | MAPPED_ID_ONLY |
 | Indian Movies | Manoranjan Movies | ManoranjanMovies.in@SD | ManoranjanMovies.in | MAPPED_ID_ONLY |
@@ -49,7 +50,6 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Entertainment | C Malayalam TV | CMalayalamTV.ca@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Colors Cineplex [UK] | custom.colors.cineplex | - | NO_GUIDE_HIT |
 | Indian Music | Deewana | DeewanaHD.in | - | NO_GUIDE_HIT |
-| Indian Movies | ETV Beats | ETVBeats.in@HD | - | NO_GUIDE_HIT |
 | Indian Movies | Epic Bhojpuri Digital | custom.epic.bhojpuri.digital | - | NO_GUIDE_HIT |
 | Indian Entertainment | Epic TV Digital | custom.epic.tv.digital | - | NO_GUIDE_HIT |
 | Indian Entertainment | Flowers US | custom.flowers.us | - | NO_GUIDE_HIT |
