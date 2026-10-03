@@ -2,6 +2,7 @@
 """Normalize IPTV metadata safely; preserve every stream and review queue."""
 from pathlib import Path
 import re
+import json
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/metadata-normalization.md")
 RAW="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 EXCLUDE={"Backup","New Backup","New Channels","Not Playing"}
