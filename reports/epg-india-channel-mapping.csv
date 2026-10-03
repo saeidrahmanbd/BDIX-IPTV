@@ -512,17 +512,21 @@ Kids,WOW Kidz Tamil,custom.wow.kidz.tamil,,,NO_GUIDE_HIT,Auto-maintained; verify
 Kids,WOW Kidz Telugu,WOWKidz.in@Telugu,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,ZooMoo,ZooMoo.sg,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Солнце,custom.solntse,&TV.HD.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED_ID_ONLY,Auto-maintained; verify ambiguous/name matches manually.
+New Backup,Aaj Entertainment,AajEntertainment.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Boishakhi TV,BoishakhiTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Channel 1,custom.channel.1,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Channel 16,custom.channel.16,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Backup,Colors Bangla,Colors.Bangla.in,Colors.Bangla.in | COLORS.BANGLA.in | COLORSBANGLA.in | 543370 | 543469,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Colors Bangla Cinema,ColorsBanglaCinema.in@SD,Colors.Bangla.Cinema.in | COLORS.BANGLA.CINEMA.in | 543218,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Deepto TV,DeeptoTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Ekattor TV,EkattorTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Backup,Express Entertainment,ExpressEntertainment.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,G TV,GaziTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Global TV,GlobalTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Green TV,GreenTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Independent TV,IndependentTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Jalsha Movies,Star.Jalsha.Movies.in,Star.Jalsha.Movies.in | JALSHA.MOVIES.HD.in | JALSHA.MOVIES.in | 543072 | 543369,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+New Backup,LTN Family,LTNFamily.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Matribhumi TV,MatribhumiTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Mohona TV,MohonaTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,My TV,MyTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -530,10 +534,15 @@ New Backup,Peace TV Bangla,PeaceTVBangla.ae,,,NO_GUIDE_HIT,Auto-maintained; veri
 New Backup,Somoy TV,SomoyNewsTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Sony AATH,Sony.Aath.in,Sony.Aath.in | SONY.AATH.in | SONYAATH.in | 543401,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Star Jalsha,Star.Jalsha.in,Star.Jalsha.in | STAR.JALSHA.in | STARJALSHA.in | 543407 | 542998,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+New Backup,Sun Bangla,SunBangla.in@SD,Sun.Bangla.in | SUN.BANGLA.in | SUNBANGLA.in | 543322,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+New Backup,Thikana,ThikanaTV.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Zee Bangla,ZeeBangla.in@HD,Zee.Bangla.in | ZEE.BANGLA.in | ZEEBANGLA.in | 543504 | 404001,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+New Backup,Zee Bangla Sonar,ZeeBanglaSonar.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,JA TV,custom.ja.tv,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Saudi Sunnah,AlSunnahAlNabawiyahTV.sa,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,Steelbird Music,SteelbirdMusic.in@SD,Steelbird.Music.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED_ID_ONLY,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Time Television,TimeTelevision.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,aur LIFE,aurLIFE.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,8XM,8XM.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,A-Plus TV,APlusTV.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,BS Film,BSFilm.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.

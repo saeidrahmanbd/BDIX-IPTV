@@ -1,13 +1,13 @@
 # Playlist Audit
-Generated: **2026-10-03T06:52:26.411849+00:00**
+Generated: **2026-10-03T06:54:16.785023+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1059**
-- Unique channel IDs: **643**
-- IDs with multiple streams: **193**
+- Playlist entries: **1069**
+- Unique channel IDs: **645**
+- IDs with multiple streams: **197**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
@@ -48,6 +48,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### 9xtashan.in@sd (2 streams)
 - 9X Tashan — Indian Music — https://wiselp.wiseplayout.com/9X_Tashan/master.m3u8
 - 9X Tashan — Not Playing — https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8
+### aajentertainment.pk@sd (2 streams)
+- Aaj Entertainment — Not Playing — https://ml-pull-dvc-myco.io:2096/AAJ_ENTERTAINMENT/index.m3u8
+- Aaj Entertainment — New Backup — https://s2.ideationtec.live/AAJ_Entertainment/AAJ_Entertainment.m3u8
 ### aakaashaath.in@sd (2 streams)
 - Aakaash Aath — Indian Bangla — https://mumt03.tangotv.in/Dsly5z3HAAKASHAATH/index.m3u8
 - Aakaash Aath — Backup — http://tvsen5.aynascope.net/Wm9Lv2RjZGT6/index.m3u8
@@ -180,7 +183,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### choppertown.us (2 streams)
 - Choppertown — Documentary & Wildlife — https://7d8dc76d676946ec8d372d4ed7b22333.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-11-CHOPPERTOWN-SPORTSTRIBAL/mt/sportstribaltv/11/hls/master/playlist.m3u8
 - Choppertown — Backup — https://linear-11.frequency.stream/dist/glewedtv/11/hls/master/playlist.m3u8
-### colors.bangla.in (7 streams)
+### colors.bangla.in (8 streams)
 - Colors Bangla — Indian Bangla — https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/800.m3u8
 - Colors Bangla — Backup — http://198.195.239.50:8095/colorsBangla/index.m3u8
 - Colors Bangla — Backup — https://catchup.yuppcdn.net/amazonv2/36/preview/colorsbanglahd/master/chunklist.m3u8
@@ -188,6 +191,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Colors Bangla — Backup — https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/2500.m3u8
 - Colors Bangla — Backup — http://flowutc.com/live/MAGTF8AV71/bUiJLEJKG5/76179.ts
 - Colors Bangla — Not Playing — http://103.165.93.31:8095/colorsBangla/index.m3u8
+- Colors Bangla — New Backup — http://103.151.61.12/COLORS_BANHLA/tracks-v1a1/mono.m3u8
 ### colorsbanglacinema.in@sd (5 streams)
 - Colors Bangla Cinema — Indian Bangla — http://livetv.akr4m.com:8080/bdtv/restrem/3.m3u8
 - Colors Bangla Cinema — Backup — http://51.75.127.199:3141/colorsbanglacinema/index.m3u8
@@ -377,6 +381,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### etvmusic.in (2 streams)
 - ETV Music — Indian Music — https://cc-szivnms4rlah6.akamaized.net/WWBI/Amagi/ETV_Music_IN/playlist.m3u8
 - ETV Music — Not Playing — https://mumbai-edge.smartplaytv.in/ETVABHIRUCHI/index.m3u8
+### expressentertainment.pk@sd (2 streams)
+- Express Entertainment — Not Playing — https://ml-pull-dvc-myco.io:2096/EXPRESS_ENTERTAINMENT/index.m3u8
+- Express Entertainment — New Backup — https://s3.ideationtec.live/Express_Entertainment/Express_Entertainment.m3u8
 ### faktmarathi.in@sd (2 streams)
 - Fakt Marathi — Indian Entertainment — https://mumt07.tangotv.in/zHjX9OFlFAKTMARATHI/index.m3u8
 - Fakt Marathi — Backup — https://cdn.pishow.tv/ott/live/10002/master.m3u8
@@ -467,6 +474,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### khushboobangla.in@sd (2 streams)
 - Khushboo Bangla — Indian Bangla — https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/index.m3u8
 - Khushboo Bangla — Backup — https://cdn.pishow.tv/ott/live/1473/master.m3u8
+### ltnfamily.pk@sd (2 streams)
+- LTN Family — Not Playing — http://103.250.28.74:8000/play/a02j/index.m3u8
+- LTN Family — New Backup — https://s3.ideationtec.live/LTN_Family_HD/LTN_Family_HD.m3u8
 ### maasrangatv.bd (6 streams)
 - Maasranga TV — Bangladesh — https://mtv.sunplex.live/MAASRANGA/index.m3u8
 - Maasranga TV — Backup — http://tvsen5.aynascope.net/maasrangatv/index.m3u8
@@ -749,10 +759,14 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### studioyuva.in (2 streams)
 - Studio Yuva — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3STUDIOYUVA/index.m3u8
 - Studio Yuva — Backup — https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=[REDACTED]
-### sunbangla.in@sd (3 streams)
+### sunbangla.in@sd (4 streams)
 - Sun Bangla — Indian Bangla — https://iptvlive.ahmed-bd-org.workers.dev/sun-bangla-1/index.m3u8
 - Sun Bangla — Backup — http://27.124.71.27/Sun_Bangla/index.m3u8
 - Sun Bangla — Backup — http://198.195.239.50:8095/SUN.BANGLA.HD/index.m3u8
+- Sun Bangla — New Backup — http://103.159.180.34:5001/live/1669.m3u8
+### thikanatv.us (2 streams)
+- Thikana — Bangladesh — https://5dd3981940faa.streamlock.net/thikanatv/thikanatv/playlist.m3u8
+- Thikana — New Backup — https://5dd3981940faa.streamlock.net:443/thikanatv/thikanatv/playlist.m3u8
 ### tlc.in@hd (2 streams)
 - TLC — Documentary & Wildlife — http://198.195.239.50:8095/TLC.HD/index.m3u8
 - TLC — Not Playing — http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/36.ts
@@ -789,7 +803,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### zeeaction.in (2 streams)
 - Zee Action — Indian Movies — https://stream.ottplus.live/live/zee_action_abr/index.m3u8
 - Zee Action — Not Playing — http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/967.ts
-### zeebangla.in@hd (12 streams)
+### zeebangla.in@hd (13 streams)
 - Zee Bangla — Indian Bangla — http://198.195.239.50:8095/zeeBangla/index.m3u8
 - Zee Bangla — Backup — https://drk6xq0vhn.gpcdn.net/live/zee_bangla_720/index.m3u8
 - Zee Bangla — Backup — https://yupptvcatchupire.yuppcdn.net/preview/zeebangla/2500.m3u8
@@ -802,7 +816,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Zee Bangla — Backup — http://51.75.127.199:3141/zeebanglahd/index.m3u8
 - Zee Bangla — Backup — http://flowutc.com/live/MAGTF8AV71/bUiJLEJKG5/78981.ts
 - Zee Bangla — New Backup — http://103.159.180.34:5001/live/625.m3u8
-### zeebanglasonar.in@sd (7 streams)
+- Zee Bangla — New Backup — https://stream.ottplus.bd/live/zee_bangla_abr/index.m3u8
+### zeebanglasonar.in@sd (8 streams)
 - Zee Bangla Sonar — Indian Bangla — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/Zeebanglahd.m3u8
 - Zee Bangla Sonar — Backup — http://198.195.239.50:8095/ZEE.BANGLA.CINEMA/index.m3u8
 - Zee Bangla Sonar — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/master2.m3u8
@@ -810,6 +825,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Zee Bangla Sonar — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD-video=2137600.m3u8
 - Zee Bangla Sonar — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8
 - Zee Bangla Sonar — Not Playing — https://drk6xq0vhn.gpcdn.net/live/zee_bangla_cinema_abr/index.m3u8
+- Zee Bangla Sonar — New Backup — http://103.159.180.34:5001/live/3476.m3u8
 ### zeebollywood.in@sd (3 streams)
 - Zee Bollywood — Indian Movies — https://iptvlive.ahmed-bd-org.workers.dev/zee-bollywood-1/index.m3u8
 - Zee Bollywood — Backup — https://stream.ottplus.live/live/zee_bollywood_abr/index.m3u8
@@ -879,7 +895,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1059**
+- Healthy/local references: **1069**
 - missing: **0**
 - broken-local: **0**
 - external: **0**
