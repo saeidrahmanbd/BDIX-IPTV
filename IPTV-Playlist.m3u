@@ -2064,3 +2064,39 @@ http://51.75.127.199:3141/starmovieshd/index.m3u8
 http://51.75.127.199:3141/starmoviesselecthd/index.m3u8
 #EXTINF:-1 tvg-id="ColorsCineplex.in@SD" tvg-name="Colors Cineplex" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-cineplex.png" channel-id="ColorsCineplex.in@SD" group-title="New Backup",Colors Cineplex
 https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/gb/YuppTV/ColorsCineplexUK.m3u8
+# ===== New Channels =====
+#EXTINF:-1 tvg-id="GoldminesMovies2.in" tvg-name="Goldmines Movies 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines-movies.png" group-title="New Channels",Goldmines Movies 2
+https://cdn-2.pishow.tv/live/1460/master.m3u8
+#EXTINF:-1 tvg-id="MusicMastii.in" tvg-name="Music Mastii" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mastiii.png" group-title="New Channels",Music Mastii
+https://live20.bozztv.com/giatvplayout7/giatv-209592/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="AndPicturesHD.in" tvg-name="And Pictures HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-pictures.png" group-title="New Channels",And Pictures HD
+https://stream.ottplus.bd/live/and_picture_hd_abr/live/and_picture_hd_720/index.m3u8
+# ===== New Backup =====
+#EXTINF:-1 tvg-chno="28" channel-id="IndependentTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/independent-tv.png" tvg-id="IndependentTV.bd" tvg-name="Independent TV" group-title="New Backup",Independent TV
+https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/independent-8-org.stream/tracks-v1a1/mono.m3u8
+#EXTINF:-1 channel-id="GaziTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/g-tv.png" tvg-id="GaziTV.bd" tvg-name="G TV" tvg-chno="41" group-title="New Backup",G TV
+https://app.ncare.live/live-orgin/gazibdz.stream/live-orgin/gazibdz.stream/chunks.m3u8
+#EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="1" channel-id="AnandaTV.bd" group-title="New Backup",Ananda TV
+https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-chno="13" channel-id="DurontoTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/duronto-tv.png" tvg-id="DurontoTV.bd" tvg-name="Duronto TV" group-title="New Backup",Duronto TV
+http://198.195.239.50:8095/duranta/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="JonmoBhumiTV.au" tvg-name="Jonmobhumi TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jonmobhumi-tv.png" tvg-chno="51" channel-id="JonmoBhumiTV.au" tvg-language="ben" tvg-country="AU" group-title="New Backup",Jonmobhumi TV
+https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/tracks-v1a1/mono.m3u8
+#EXTINF:-1 channel-id="StarPlus.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-plus.png" tvg-id="StarPlus.in@SD" tvg-name="Star Plus" tvg-chno="685" group-title="New Backup",Star Plus
+http://202.70.146.135:8000/play/a009/index.m3u8
+#EXTINF:-1 channel-id="SonySAB.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sab.png" tvg-id="SonySAB.in@HD" tvg-name="Sony SAB" tvg-chno="682" tvg-country="IN" tvg-language="hin" group-title="New Backup",Sony SAB
+https://stream.ottplus.bd/live/sub_hd_abr/index.m3u8
+#EXTINF:-1 channel-id="ZeeBangla.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla.png" tvg-id="ZeeBangla.in@HD" tvg-name="Zee Bangla" tvg-chno="298" group-title="New Backup",Zee Bangla
+http://flowutc.com/live/MAGTF8AV71/bUiJLEJKG5/78981.ts
+#EXTINF:-1 tvg-id="Colors.Bangla.in" tvg-name="Colors Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png" tvg-chno="247" channel-id="Colors.Bangla.in" group-title="New Backup",Colors Bangla
+http://flowutc.com/live/MAGTF8AV71/bUiJLEJKG5/76179.ts
+#EXTINF:-1 tvg-id="SangeetBangla.in@SD" tvg-name="Sangeet Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sangeet-bangla.png" tvg-chno="283" channel-id="SangeetBangla.in@SD" group-title="New Backup",Sangeet Bangla
+https://cdn-4.pishow.tv/live/1143/master.m3u8
+#EXTINF:-1 tvg-chno="384" channel-id="SonyMax.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max.png" tvg-id="SonyMax.in@SD" tvg-name="Sony Max" group-title="New Backup",Sony Max
+https://stream.ottplus.bd/live/sony_max_sd_abr/live/sony_max_sd_720/chunks.m3u8
+#EXTINF:-1 tvg-id="B4UKadak.in@SD" tvg-name="B4U Kadak" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-kadak.png" tvg-chno="308" channel-id="B4UKadak.in@SD" group-title="New Backup",B4U Kadak
+https://cdn-2.pishow.tv/live/227/master.m3u8
+#EXTINF:-1 channel-id="GoldminesMovies.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines-movies-576p-4a7688df18.png" tvg-chno="337" tvg-id="GoldminesMovies.in" tvg-name="Goldmines Movies" tvg-language="hin" tvg-country="IN" group-title="New Backup",Goldmines Movies
+https://cdn-2.pishow.tv/live/1461/master.m3u8
+#EXTINF:-1 tvg-id="Goldmines.in@SD" tvg-name="Goldmines" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines.png" tvg-chno="323" channel-id="Goldmines.in@SD" tvg-language="hin" tvg-country="IN" group-title="New Backup",Goldmines
+https://cdn-2.pishow.tv/live/1459/master.m3u8
