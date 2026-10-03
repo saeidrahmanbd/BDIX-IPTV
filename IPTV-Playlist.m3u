@@ -18,7 +18,7 @@ http://116.204.149.16/banglatv/index.m3u8
 #EXTINF:-1 channel-id="BanglaVision.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/banglavision.png" tvg-id="BanglaVision.bd" tvg-name="Bangla Vision" tvg-chno="6" group-title="Bangladesh",Bangla Vision
 https://tvsen5.aynaott.com/banglavision/index.m3u8
 #EXTINF:-1 channel-id="custom.bengali.beats" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bengali-beats.png" tvg-chno="8" tvg-id="custom.bengali.beats" tvg-name="Bengali Beats" group-title="Bangladesh",Bengali Beats
-https://iptvlive.ahmed-bd-org.workers.dev/bengali-beats-1/index.m3u8
+https://live20.bozztv.com/giatvplayout7/giatv-209587/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 channel-id="BijoyTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bijoy-tv.png" tvg-id="BijoyTV.bd" tvg-name="Bijoy TV" tvg-chno="9" group-title="Bangladesh",Bijoy TV
 https://tvsen6.aynaott.com/N8Xbo5vdwVU6sF43RsW0/index.m3u8
 #EXTINF:-1 tvg-chno="10" channel-id="BoishakhiTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/boishakhi-tv.png" tvg-id="BoishakhiTV.bd" tvg-name="Boishakhi TV" group-title="Bangladesh",Boishakhi TV
@@ -26,7 +26,7 @@ http://198.195.239.50:8095/BOISAKHI.TV.HD/index.m3u8
 #EXTINF:-1 tvg-id="BTVChattogram.bd" tvg-name="BTV Chattogram" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-chattogram.png" tvg-chno="14" channel-id="BTVChattogram.bd" group-title="Bangladesh",BTV Chattogram
 https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/index.m3u8
 #EXTINF:-1 channel-id="BTVNational.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-national-2db28e10.png" tvg-id="BTVNational.bd" tvg-name="BTV National" tvg-chno="16" group-title="Bangladesh",BTV National
-https://btv.hridoytv-channel.workers.dev/btv.m3u8
+http://198.195.239.50:8095/btv/index.m3u8
 #EXTINF:-1 channel-id="custom.btv.news" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-news.png" tvg-id="custom.btv.news" tvg-name="BTV News" tvg-chno="17" group-title="Bangladesh",BTV News
 https://btv.hridoytv-channel.workers.dev/news.m3u8
 #EXTINF:-1 tvg-id="custom.cbn.tv.usa" tvg-name="CBN TV USA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cbn-tv-usa.png" tvg-chno="18" channel-id="custom.cbn.tv.usa" group-title="Bangladesh",CBN TV USA
@@ -50,7 +50,7 @@ https://byphdgllyk.gpcdn.net/hls/deeptotv/0_1/index.m3u8
 #EXTINF:-1 tvg-id="custom.desh.bangla.tv" tvg-name="Desh Bangla TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/desh-bangla-tv.svg" tvg-chno="1065" channel-id="custom.desh.bangla.tv" group-title="Bangladesh",Desh Bangla TV
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/deshbanglatv.stream/playlist.m3u8
 #EXTINF:-1 tvg-chno="12" channel-id="DeshTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/desh-tv.png" tvg-id="DeshTV.bd" tvg-name="Desh TV" group-title="Bangladesh",Desh TV
-https://iptvlive.ahmed-bd-org.workers.dev/desh-tv-2/index.m3u8
+https://stream.ottplus.live/live/desh_tv_abr/index.m3u8
 #EXTINF:-1 tvg-id="custom.deshe.bideshe" tvg-name="Deshe Bideshe" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deshe-bideshe.svg" tvg-chno="1058" channel-id="custom.deshe.bideshe" group-title="Bangladesh",Deshe Bideshe
 https://dbcanada.sonarbanglatv.com/deshebideshe/dbtv/index.m3u8
 #EXTINF:-1 tvg-chno="31" channel-id="DeshiTV.ca@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deshi-tv.png" tvg-id="DeshiTV.ca@SD" tvg-name="Deshi TV" group-title="Bangladesh",Deshi TV
@@ -124,7 +124,7 @@ http://198.195.239.50:8095/somoyTv/index.m3u8
 #EXTINF:-1 tvg-id="custom.srk" tvg-name="SRK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/srk.png" tvg-chno="222" channel-id="custom.srk" group-title="Bangladesh",SRK
 https://srknowapp.ncare.live/srktvhlswodrm/srktv.stream/playlist.m3u8
 #EXTINF:-1 channel-id="custom.star.news" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-news-722ad595.png" tvg-id="custom.star.news" tvg-name="Star News" tvg-chno="223" group-title="Bangladesh",Star News
-https://iptvlive.ahmed-bd-org.workers.dev/star-news-1/index.m3u8
+http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/starnewsbd.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="ThikanaTV.us" tvg-name="Thikana" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/thikana.png" tvg-chno="224" channel-id="ThikanaTV.us" group-title="Bangladesh",Thikana
 https://5dd3981940faa.streamlock.net/thikanatv/thikanatv/playlist.m3u8
 #EXTINF:-1 tvg-id="TimeTelevision.us" tvg-name="Time Television" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/time-television.svg" tvg-chno="1054" channel-id="TimeTelevision.us" tvg-country="US" group-title="Bangladesh",Time Television
@@ -186,7 +186,7 @@ http://198.195.239.50:8095/sonyAath/index.m3u8
 #EXTINF:-1 channel-id="Star.Jalsha.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" tvg-id="Star.Jalsha.in" tvg-name="Star Jalsha" tvg-chno="289" group-title="Indian Bangla",Star Jalsha
 https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8
 #EXTINF:-1 channel-id="SunBangla.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-bangla.png" tvg-id="SunBangla.in@SD" tvg-name="Sun Bangla" tvg-chno="290" group-title="Indian Bangla",Sun Bangla
-https://iptvlive.ahmed-bd-org.workers.dev/sun-bangla-1/index.m3u8
+http://27.124.71.27/Sun_Bangla/index.m3u8
 #EXTINF:-1 tvg-id="UBangla.in" tvg-name="U Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/u-bangla.png" tvg-chno="293" channel-id="UBangla.in" group-title="Indian Bangla",U Bangla
 https://stream.ottlive.co.in/ubangla/index.m3u8
 #EXTINF:-1 channel-id="ZBCartoon.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zb-cartoon.png" tvg-id="ZBCartoon.in" tvg-name="ZB Cartoon" group-title="Indian Bangla" tvg-chno="294",ZB Cartoon
@@ -344,7 +344,7 @@ http://198.195.239.50:8095/XPLOR.HD/index.m3u8
 #EXTINF:-1 channel-id="ZeeAction.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-action.png" tvg-id="ZeeAction.in" tvg-name="Zee Action" tvg-chno="56" group-title="Indian Movies",Zee Action
 https://stream.ottplus.live/live/zee_action_abr/index.m3u8
 #EXTINF:-1 channel-id="ZeeBollywood.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bollywood.png" tvg-id="ZeeBollywood.in@SD" tvg-name="Zee Bollywood" tvg-chno="57" group-title="Indian Movies",Zee Bollywood
-https://iptvlive.ahmed-bd-org.workers.dev/zee-bollywood-1/index.m3u8
+https://stream.ottplus.live/live/zee_bollywood_abr/index.m3u8
 #EXTINF:-1 channel-id="ZeeCinema.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema.png" tvg-id="ZeeCinema.in@HD" tvg-name="Zee Cinema" tvg-language="hin" tvg-country="IN" tvg-chno="58" group-title="Indian Movies",Zee Cinema
 https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ZeeCinemaAPAC.m3u8
 #EXTINF:-1 channel-id="ZeeCinemalu.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinemalu-hd-1080p.png" tvg-chno="355" tvg-id="ZeeCinemalu.in@HD" tvg-name="Zee Cinemalu" group-title="Indian Movies",Zee Cinemalu
