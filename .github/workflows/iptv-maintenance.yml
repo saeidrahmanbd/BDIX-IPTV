@@ -37,6 +37,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             git clean -fd
+            cp epg.xml /tmp/bdix-epg-previous.xml 2>/dev/null || true
             python scripts/normalize_metadata.py
             # TEMPORARILY DISABLED: automatic New Channels/New Backup discovery is paused.
             # Re-enable this line when the review queues should accept new candidates again.
@@ -45,6 +46,7 @@ jobs:
             python scripts/migrate_external_logos_fixed.py
             python scripts/epg_coverage.py
             python scripts/generate_epg.py
+            python scripts/epg_publish_gate.py
             test -s epg.xml
             grep -q '<programme ' epg.xml
             cp epg.xml /tmp/bdix-epg-generated.xml
