@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T08:21:22+00:00",
+  "generated": "2026-10-03T08:29:40+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -298,10 +298,10 @@
         "alltimemovies.in@sd"
       ],
       "groups": [
-        "New Channels"
+        "Indian Movies"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "alqamartv": {

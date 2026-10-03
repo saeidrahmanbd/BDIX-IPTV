@@ -197,7 +197,7 @@ http://198.195.239.50:8095/zeeBangla/index.m3u8
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/Zeebanglahd.m3u8
 #EXTINF:-1 tvg-chno="305" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-pictures.png" channel-id="AndPictures.in@SD" tvg-id="AndPictures.in@SD" tvg-name="&pictures" group-title="Indian Movies",&pictures
 http://198.195.239.50:8095/ANT.PICTURS.HD/index.m3u8
-#EXTINF:-1 tvg-id="AllTimeMovies.in@SD" tvg-name="All Time Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/all-time-movies.png" channel-id="AllTimeMovies.in@SD" group-title="Indian Movies",All Time Movies
+#EXTINF:-1 tvg-chno="175" tvg-id="AllTimeMovies.in@SD" tvg-name="All Time Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/all-time-movies.png" channel-id="AllTimeMovies.in@SD" group-title="Indian Movies",All Time Movies
 https://tvsen6.aynaott.com/a2cKGQtB/index.m3u8
 #EXTINF:-1 channel-id="AsianetMovies.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asianet-movies.png" tvg-id="AsianetMovies.in@SD" tvg-name="Asianet Movies" tvg-chno="46" group-title="Indian Movies",Asianet Movies
 http://51.75.127.199:3141/asianetmovies/index.m3u8
@@ -1925,3 +1925,39 @@ https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/pl
 https://server.zillarbarta.com/zbmusic/index.m3u8
 #EXTINF:-1 tvg-id="ZeeSouthFlix.in@HD" tvg-name="Zee South Flix" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-south-flix.png" channel-id="ZeeSouthFlix.in@HD" group-title="New Channels",Zee South Flix
 https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
+#EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" channel-id="AnandaTV.bd" group-title="New Backup",Ananda TV
+http://103.99.249.139/anandatv/index.m3u8
+#EXTINF:-1 tvg-id="DBCNews.bd" tvg-name="DBC News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dbc-news.png" channel-id="DBCNews.bd" group-title="New Backup",DBC News
+http://tvn3.chowdhury-shaheb.com/dbc/index.m3u8
+#EXTINF:-1 tvg-id="EkhonTV.bd" tvg-name="Ekhon TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekhon-tv.png" channel-id="EkhonTV.bd" group-title="New Backup",Ekhon TV
+https://tplay.live/out/bangladesh/ekhontv.index.m3u8
+#EXTINF:-1 tvg-id="GaziTV.bd@SD" tvg-name="Gazi TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gazi-tv.png" channel-id="GaziTV.bd@SD" group-title="New Backup",Gazi TV
+http://tvn1.chowdhury-shaheb.com/gazitv/index.m3u8
+#EXTINF:-1 tvg-id="Star.Jalsha.Movies.in" tvg-name="Jalsha Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalsha-movies-hd.png" channel-id="Star.Jalsha.Movies.in" group-title="New Backup",Jalsha Movies
+http://51.75.127.199:3141/jalshamovies/index.m3u8
+#EXTINF:-1 tvg-id="Star.Jalsha.in" tvg-name="Star Jalsha" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" channel-id="Star.Jalsha.in" group-title="New Backup",Star Jalsha
+http://51.75.127.199:3141/starjalsha/index.m3u8
+#EXTINF:-1 tvg-id="9XJhakaas.in@SD" tvg-name="9X Jhakaas" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jhakaas.png" channel-id="9XJhakaas.in@SD" group-title="New Backup",9X Jhakaas
+https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="9XM.in@SD" tvg-name="9XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9xm.png" channel-id="9XM.in@SD" group-title="New Backup",9XM
+https://9xjio.wiseplayout.com/9XM/master.m3u8
+#EXTINF:-1 tvg-id="9XTashan.in@SD" tvg-name="9X Tashan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-tashan.png" channel-id="9XTashan.in@SD" group-title="New Backup",9X Tashan
+https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="B4UBhojpuri.in@SD" tvg-name="B4U Bhojpuri" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-bhojpuri.png" channel-id="B4UBhojpuri.in@SD" group-title="New Backup",B4U Bhojpuri
+https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8
+#EXTINF:-1 tvg-id="ColorsCineplex.in@SD" tvg-name="Colors Cineplex" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-cineplex.png" channel-id="ColorsCineplex.in@SD" group-title="New Backup",Colors Cineplex
+http://51.75.127.199:3141/colorscineplexhd/index.m3u8
+#EXTINF:-1 tvg-id="ETVCinema.in" tvg-name="ETV Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-cinema-360p-14e6148301.png" channel-id="ETVCinema.in" group-title="New Backup",ETV Cinema
+https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_CINEMA_H264_cloud_in/index.m3u8
+#EXTINF:-1 tvg-id="ETVMusic.in" tvg-name="ETV Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-music.png" channel-id="ETVMusic.in" group-title="New Backup",ETV Music
+https://mumbai-edge.smartplaytv.in/ETVABHIRUCHI/index.m3u8
+#EXTINF:-1 tvg-id="MNX.in@SD" tvg-name="MNX" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mnx-576p-1964fe6da3.png" channel-id="MNX.in@SD" group-title="New Backup",MNX
+http://59.103.38.46:8000/play/a052/index.m3u8
+#EXTINF:-1 tvg-id="SonyMax2.in@SD" tvg-name="Sony Max 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max-2.png" channel-id="SonyMax2.in@SD" group-title="New Backup",Sony Max 2
+http://149.71.34.166:8000/play/a00z/index.m3u8
+#EXTINF:-1 tvg-id="StarGoldSelect.in@SD" tvg-name="Star Gold Select" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-select.png" channel-id="StarGoldSelect.in@SD" group-title="New Backup",Star Gold Select
+http://51.75.127.199:3141/stargoldselect/index.m3u8
+#EXTINF:-1 tvg-id="StarMaaMovies.in@SD" tvg-name="Star Maa Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa-movies.png" channel-id="StarMaaMovies.in@SD" group-title="New Backup",Star Maa Movies
+http://51.75.127.199:3141/starmaamovies/index.m3u8
+#EXTINF:-1 tvg-id="AndTV.in@SD" tvg-name="&TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv.png" channel-id="AndTV.in@SD" group-title="New Backup",&TV
+http://202.70.146.135:8000/play/a06c/index.m3u8
