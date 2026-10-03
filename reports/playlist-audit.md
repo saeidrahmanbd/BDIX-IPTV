@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-03T08:49:02.187276+00:00**
+Generated: **2026-10-03T09:07:03.051730+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -15,7 +15,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - IDs with multiple logo references: **7**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **0**
-- Duplicate primary identities: **0**
+- Duplicate primary identities: **1**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
@@ -628,9 +628,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Sony Max — Backup — http://198.195.239.50:8095/SONY.MAX.HD/index.m3u8
 ### star.jalsha.in (6 streams)
 - Star Jalsha — Indian Bangla — https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8
-- Star Jalsha — Backup — https://flussonic.defineatoz.com/StarjalshaHD/tracks-v1a1/mono.m3u8
+- Star Jalsha — Indian Bangla — http://198.195.239.50:8095/starJalsha/index.m3u8
 - Star Jalsha — Backup — http://103.151.60.162:2122/play/a00w/index.m3u8
-- Star Jalsha — Backup — http://198.195.239.50:8095/starJalsha/index.m3u8
+- Star Jalsha — Backup — https://flussonic.defineatoz.com/StarjalshaHD/tracks-v1a1/mono.m3u8
 - Star Jalsha — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
 - Star Jalsha — Backup — http://198.195.239.50:8095/STAR.JALSHA.HD/index.m3u8
 ### star.jalsha.movies.in (4 streams)
@@ -719,7 +719,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-None.
+- **star.jalsha.in** in **Indian Bangla** — Star Jalsha, Star Jalsha
 
 ## Primary Channel-Number Collisions
 
