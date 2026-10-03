@@ -36,5 +36,16 @@
 
 ## 2026-10-03
 
-- 🔁 **7 new backup stream(s) added to New Backup**
+- 🆕 **9 new channel(s) added to New Channels**
+
+### New channels
+- Deshe Bideshe
+- TBN 24
+- NK TV Bangla
+- Citizen TV
+- EP TV
+- Ayna TV
+- Music Bangla
+- Desh Bangla TV
+- Probashi TV
 
