@@ -214,10 +214,21 @@ def set_attr(m,k,v):
  p=re.compile(rf'{re.escape(k)}="[^"]*"')
  return p.sub(f'{k}="{v}"',m,1) if p.search(m) else m.replace("#EXTINF:-1 ",f'#EXTINF:-1 {k}="{v}" ',1)
 lines=P.read_text(encoding="utf-8-sig").replace("\r","").splitlines()
-lines=[l for l in lines if l.strip() and not l.startswith("#PLAYLIST-STUDIO-")]
+# Preserve the Playlist Studio category registry.  It is part of the playlist
+# contract and must survive every maintenance normalization pass, including
+# categories that are currently empty (New Channels, New Backup, Not Playing).
+CATEGORY_REGISTRY=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","New Channels","New Backup","Not Playing"]
+category_line="#PLAYLIST-STUDIO-CATEGORIES:"+json.dumps(CATEGORY_REGISTRY,ensure_ascii=False,separators=(",",":"))
+# Remove only blank lines and other legacy Studio directives; the canonical
+# category registry is restored immediately below.
+lines=[l for l in lines if l.strip() and not (l.startswith("#PLAYLIST-STUDIO-") and not l.startswith("#PLAYLIST-STUDIO-CATEGORIES:"))]
+lines=[l for l in lines if not l.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
 if lines and lines[0].startswith("#EXTM3U"):
  mm=re.search(r'url-tvg="([^"]+)"',lines[0],re.I)
  lines[0]=f'#EXTM3U url-tvg="{mm.group(1)}"' if mm else "#EXTM3U"
+ lines.insert(1,category_line)
+else:
+ lines.insert(0,category_line)
 rows=[]
 for i,l in enumerate(lines):
  if l.startswith("#EXTINF:"):
