@@ -6,7 +6,7 @@ from collections import Counter,defaultdict
 from pathlib import Path
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md")
 ATTR=re.compile(r'([\w-]+)="([^"]*)"'); EXCLUDE={"Backup","New Backup","New Channels","Not Playing"}
-ALLOWED_PRIMARY_REMOVAL_RE=re.compile(r"(workers\\.dev|iptv-proxy|/vods?/|vods\\.|/vod/)",re.I)
+ALLOWED_PRIMARY_REMOVAL_RE=re.compile(r"(workers\.dev|iptv-proxy|/vods?/|vods\.|/vod/)",re.I)
 def attrs(s): return dict(ATTR.findall(s))
 def parse(text):
     lines=text.replace("\r","").splitlines(); out=[]; cur=None
