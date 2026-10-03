@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T07:09:53+00:00",
+  "generated": "2026-10-03T07:13:50+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -782,6 +782,20 @@
       "primary": 1,
       "backup": 0
     },
+    "aynatv": {
+      "names": [
+        "Ayna TV"
+      ],
+      "ids": [
+        "aynatv.bd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "azantv": {
       "names": [
         "Azan TV"
@@ -1395,6 +1409,20 @@
       "primary": 1,
       "backup": 0
     },
+    "citizentv": {
+      "names": [
+        "Citizen TV"
+      ],
+      "ids": [
+        "citizentv.bd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "cmalayalamtv": {
       "names": [
         "C Malayalam TV"
@@ -1899,6 +1927,34 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.desh.bangla": {
+      "names": [
+        "Desh Bangla TV"
+      ],
+      "ids": [
+        "custom.desh.bangla.tv"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
+    "custom.deshe.bideshe": {
+      "names": [
+        "Deshe Bideshe"
+      ],
+      "ids": [
+        "custom.deshe.bideshe"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "custom.dios.te.ve.kids": {
       "names": [
         "Dios Te Ve Kids"
@@ -2265,6 +2321,20 @@
       ],
       "streams": 1,
       "primary": 1,
+      "backup": 0
+    },
+    "custom.music.bangla": {
+      "names": [
+        "Music Bangla"
+      ],
+      "ids": [
+        "custom.music.bangla"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
       "backup": 0
     },
     "custom.nature.time": {
@@ -3613,6 +3683,20 @@
       "streams": 3,
       "primary": 1,
       "backup": 2
+    },
+    "eptv": {
+      "names": [
+        "EP TV"
+      ],
+      "ids": [
+        "eptv.bd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
     },
     "espn": {
       "names": [
@@ -5900,6 +5984,20 @@
       "primary": 1,
       "backup": 0
     },
+    "nktvbangla": {
+      "names": [
+        "NK TV Bangla"
+      ],
+      "ids": [
+        "nktvbangla.bd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "nowrock": {
       "names": [
         "NOW Rock"
@@ -6316,6 +6414,20 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "probashitv": {
+      "names": [
+        "Probashi TV"
+      ],
+      "ids": [
+        "probashitv.ca@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
     },
     "probashitvnews": {
       "names": [
@@ -8181,6 +8293,20 @@
       ],
       "streams": 1,
       "primary": 1,
+      "backup": 0
+    },
+    "tbn24": {
+      "names": [
+        "TBN 24"
+      ],
+      "ids": [
+        "tbn24.us"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
       "backup": 0
     },
     "teletubbies": {

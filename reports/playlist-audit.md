@@ -1,12 +1,12 @@
 # Playlist Audit
-Generated: **2026-10-03T07:09:53.657723+00:00**
+Generated: **2026-10-03T07:13:50.271354+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1076**
-- Unique channel IDs: **645**
+- Playlist entries: **1085**
+- Unique channel IDs: **654**
 - IDs with multiple streams: **197**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -14,7 +14,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **6**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **0**
+- Logo exceptions: **5**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
@@ -902,15 +902,20 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1076**
+- Healthy/local references: **1080**
 - missing: **0**
 - broken-local: **0**
-- external: **0**
+- external: **5**
 - non-png: **0**
 - invalid-dimensions: **0**
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
+- external — Deshe Bideshe [custom.deshe.bideshe] — https://pbs.twimg.com/profile_images/739539785304281088/zMwNO936_400x400.jpg
+- external — EP TV [eptv.bd] — http://data.jaagobd.com/media/channel_logos/EPTV-Logo-400x400.png
+- external — Music Bangla [custom.music.bangla] — https://static.wikia.nocookie.net/logopedia/images/7/75/Music_Bangla_new.jpeg
+- external — Desh Bangla TV [custom.desh.bangla.tv] — http://data.jaagobd.com/media/channel_logos/Desh_Bangla_Tv.png
+- external — Probashi TV [probashitv.ca@sd] — https://i.imgur.com/79g2kMA.png
 - multiple-logo-references — andtv.in@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-international-1080p.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv.png
 - multiple-logo-references — colors.bangla.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-hd.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png
 - multiple-logo-references — custom.travelxp.english — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-xp-english-eu.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travelxp-english.png

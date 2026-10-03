@@ -543,9 +543,18 @@ New Backup,Sun Bangla,SunBangla.in@SD,Sun.Bangla.in | SUN.BANGLA.in | SUNBANGLA.
 New Backup,Thikana,ThikanaTV.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Zee Bangla,ZeeBangla.in@HD,Zee.Bangla.in | ZEE.BANGLA.in | ZEEBANGLA.in | 543504 | 404001,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Backup,Zee Bangla Sonar,ZeeBanglaSonar.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,Ayna TV,AynaTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,Citizen TV,CitizenTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,Desh Bangla TV,custom.desh.bangla.tv,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,Deshe Bideshe,custom.deshe.bideshe,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,EP TV,EPTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,JA TV,custom.ja.tv,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,Music Bangla,custom.music.bangla,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,NK TV Bangla,NKTVBangla.bd,NK.TV.Bangla.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,Probashi TV,ProbashiTV.ca@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Saudi Sunnah,AlSunnahAlNabawiyahTV.sa,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Steelbird Music,SteelbirdMusic.in@SD,Steelbird.Music.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED_ID_ONLY,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,TBN 24,TBN24.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Time Television,TimeTelevision.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,aur LIFE,aurLIFE.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,8XM,8XM.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
