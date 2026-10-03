@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-10-03 10:19 UTC**_
+_Last generated: **2026-10-03 10:49 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -16,15 +16,15 @@ _Last generated: **2026-10-03 10:19 UTC**_
 | EPG Programme Coverage | **76.5%** |
 | EPG Mapping | **81.0%** |
 | Stream Health Tested | **947** |
-| Stream Health Failures | **116** |
+| Stream Health Failures | **122** |
 | Persistent Failures | **111** |
 | Near-Duplicate URL Families | **0** |
-| Audit Blocking Issues | **0** |
-| Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-03T10:19:12+00:00** |
+| Audit Blocking Issues | **1** |
+| Pre-Publish Gate | **BLOCK** |
+| Pre-Publish Gate Generated | **2026-10-03T10:49:20+00:00** |
 
 ## Quality Controls
-- Duplicate stream URLs: **0**
+- Duplicate stream URLs: **1**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Duplicate primary identities: **0**
@@ -37,7 +37,7 @@ _Last generated: **2026-10-03 10:19 UTC**_
 - Stream health is non-destructive and keeps per-URL failure history.
 - Backup streams are never automatically deleted because of health failures.
 - Review queues remain user-controlled.
-- Pre-publish gate status: **PASS**
+- Pre-publish gate status: **BLOCK**
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## EPG
@@ -50,14 +50,14 @@ _Last generated: **2026-10-03 10:19 UTC**_
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-03T10:18:27.594811+00:00** |
-| EPG coverage | **2026-10-03T10:18:07+00:00** |
-| Stream health | **2026-10-03T10:19:12+00:00** |
-| Pre-publish gate | **2026-10-03T10:19:12+00:00** |
+| Playlist audit | **2026-10-03T10:48:34.241069+00:00** |
+| EPG coverage | **2026-10-03T10:48:14+00:00** |
+| Stream health | **2026-10-03T10:49:20+00:00** |
+| Pre-publish gate | **2026-10-03T10:49:20+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
 - Latest entries change: **947 → 947**
-- Latest health failures: **117 → 116**
+- Latest health failures: **116 → 122**
 
 Historical records are retained in reports/maintenance-history.json.

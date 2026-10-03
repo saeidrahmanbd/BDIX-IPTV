@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-03T10:18:27.594811+00:00**
+Generated: **2026-10-03T10:48:34.241069+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -8,7 +8,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Playlist entries: **947**
 - Unique channel IDs: **601**
 - IDs with multiple streams: **173**
-- Duplicate stream URLs: **0**
+- Duplicate stream URLs: **1**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
@@ -478,7 +478,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### musicindia.in@sd (3 streams)
 - Music India — Indian Music — https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8
 - Music India — Backup — https://cdn.pishow.tv/ott/live/226/master.m3u8
-- Music India — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Musicindia2/default/main.mpd
+- Music India — Backup — https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8
 ### mytv.bd (4 streams)
 - My TV — Bangladesh — https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8
 - My TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mytv-up-off.stream/index.m3u8

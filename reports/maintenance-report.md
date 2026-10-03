@@ -1,6 +1,6 @@
 # IPTV Maintenance Report
 
-_Generated: **2026-10-03 10:19 UTC**_
+_Generated: **2026-10-03 10:49 UTC**_
 
 | Item | Result |
 |---|---:|
@@ -12,10 +12,10 @@ _Generated: **2026-10-03 10:19 UTC**_
 | Logo exceptions | **0** |
 | EPG mapping | **81.0%** |
 | EPG programme coverage | **76.5%** |
-| Health failures | **116** |
+| Health failures | **122** |
 | Persistent health failures | **111** |
-| Audit blockers | **0** |
-| Pre-publish gate | **PASS** |
+| Audit blockers | **1** |
+| Pre-publish gate | **BLOCK** |
 
 ## Protection
 - Duplicate stream URLs are blocking.
