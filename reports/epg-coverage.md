@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-03T09:34:03+00:00**
+Generated: **2026-10-03T09:37:12+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
