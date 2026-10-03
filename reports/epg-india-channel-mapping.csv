@@ -519,39 +519,6 @@ Kids,WOW Kidz Tamil,custom.wow.kidz.tamil,,,NO_GUIDE_HIT,Auto-maintained; verify
 Kids,WOW Kidz Telugu,WOWKidz.in@Telugu,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,ZooMoo,ZooMoo.sg,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Солнце,custom.solntse,&TV.HD.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED_ID_ONLY,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,&TV,AndTV.in@SD,&TV.HD.in | and.TV.in | andtv.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,9X Jhakaas,9XJhakaas.in@SD,9x.Jhakaas.in | 9X.JHAKAAS.in | 543161,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,9X Tashan,9XTashan.in@SD,9X.Tashan.in | 9X.TASHAN.in | 9XTashan.in | 543036,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,9XM,9XM.in@SD,9XM.in | 543367,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,Ananda TV,AnandaTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,B4U Bhojpuri,B4UBhojpuri.in@SD,B4U.Bhojpuri.in | B4UBhojpuri.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://iptv-epg.org/files/epg-in.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,Colors Cineplex,ColorsCineplex.in@SD,Colors.Cineplex.in | COLORS.CINEPLEX.in | 543298,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,DBC News,DBCNews.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,ETV Cinema,ETVCinema.in,ETV.Cinema.in | ETV.CINEMA.in | ETVCinema.in | 543267,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,ETV Music,ETVMusic.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,Ekhon TV,EkhonTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,Gazi TV,GaziTV.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,Jalsha Movies,Star.Jalsha.Movies.in,Star.Jalsha.Movies.in | JALSHA.MOVIES.HD.in | JALSHA.MOVIES.in | 543072 | 543369,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,MNX,MNX.in@SD,MNX.in | 543194,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,Sony Max 2,SonyMax2.in@SD,Sony.MAX2.in | Sony.Max.2.in | SONY.MAX.2.in | 543114,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,Star Gold Select,StarGoldSelect.in@SD,Star.Gold.Select.in | STAR.GOLD.SELECT.in | StarGoldSelect.in | 543216 | 543074,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,Star Jalsha,Star.Jalsha.in,Star.Jalsha.in | STAR.JALSHA.in | STARJALSHA.in | 543407 | 542998,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Backup,Star Maa Movies,StarMaaMovies.in@SD,Star.Maa.Movies.in | STAR.MAA.MOVIES.in | 543492 | 543235,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,ATN Music,ATNMusic.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,Colors Cineplex Bollywood,ColorsCineplexBollywood.in@SD,Colors.Cineplex.Bollywood.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,Express News,ExpressNews.in@SD,Express.News.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,Maha Movie,MahaMovie.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,RS Bharat,RSBharat.in@SD,RS.Bharat.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED_ID_ONLY,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,Rupashi Bangla TV,RupashiBanglaTV.bd@SD,Rupashi.Bangla.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,Star Gold 2,StarGold2.in@SD,Star.Gold.2.in | 543348,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,Star Maa Music,StarMaaMusic.in@SD,STAR.MAA.MUSIC.in | 543192,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,Suriyan TV,SuriyanTV.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,Vokta TV,VoktaTV.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,Wah Punjabi,WahPunjabi.in@SD,Wah.Punjabi.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,YET Max,YETMax.in@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,YRF Music,YRFMusic.in@SD,YRF.Music.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,ZB Music,ZBMusic.in@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,Zee South Flix,ZeeSouthFlix.in@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,8XM,8XM.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,A-Plus TV,APlusTV.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,BS Film,BSFilm.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
