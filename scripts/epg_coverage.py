@@ -15,6 +15,7 @@ EPG_ALIASES = {
     "DDHimachalPradesh.in@SD": ["ts1217", "1217", "LIVETV_LIVETVCHANNEL_DD_SHIMLA"],
     "MTVIndia.in@SD": ["jtv248", "248"],
     "MusicMastii.in": ["jtv584", "584", "IN4#MASTII.in"],
+    "SonyKALHindi.us": ["US1#Sony.KAL.us"],
 }
 
 REPORT = Path("reports/epg-coverage.md")
@@ -22,6 +23,7 @@ REPORT = Path("reports/epg-coverage.md")
 SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_US1.xml.gz",
     "https://iptv-epg.org/files/epg-in.xml",
     "https://epg.pw/xmltv/epg_IN.xml",
     "https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml",
