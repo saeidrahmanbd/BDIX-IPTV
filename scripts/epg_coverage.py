@@ -8,6 +8,15 @@ from pathlib import Path
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 MAPPING = Path("reports/epg-india-channel-mapping.csv")
+
+# Verified provider/source aliases for playlist identities that use custom IDs.
+# These are intentionally narrow; no fuzzy aliasing is used here.
+EPG_ALIASES = {
+    "DDHimachalPradesh.in@SD": ["ts1217", "1217", "LIVETV_LIVETVCHANNEL_DD_SHIMLA"],
+    "MTVIndia.in@SD": ["jtv248", "248"],
+    "MusicMastii.in": ["jtv584", "584", "IN4#MASTII.in"],
+}
+
 REPORT = Path("reports/epg-coverage.md")
 
 SOURCES = [
@@ -21,8 +30,6 @@ SOURCES = [
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml",
-    # Standardized India guide; mappings remain exact-ID/name based to avoid false matches.
-    "https://iptv-org.github.io/epg/guides/in.xml.gz",
 ]
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
@@ -112,6 +119,7 @@ def main():
         prev=previous.get(ch["tvg_id"],{})
         candidates += [x.strip() for x in (prev.get("epg_id","").split("|") if prev.get("epg_id") else []) if x.strip()]
         candidates += [ch["tvg_id"], re.sub(r"@(?:sd|hd|uhd|fhd)$","",ch["tvg_id"],flags=re.I)]
+        candidates += EPG_ALIASES.get(ch["tvg_id"], [])
         candidates=list(dict.fromkeys(x for x in candidates if x))
         normalized={norm_id(x) for x in candidates}; name_key=norm_name(ch["name"])
         hits=[]; hit_sources=[]; total=0; live=False
