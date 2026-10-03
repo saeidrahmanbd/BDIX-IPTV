@@ -1,12 +1,12 @@
 # Playlist Audit
-Generated: **2026-10-03T06:17:25.734444+00:00**
+Generated: **2026-10-03T06:25:54.353724+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1038**
-- Unique channel IDs: **643**
+- Playlist entries: **1036**
+- Unique channel IDs: **641**
 - IDs with multiple streams: **191**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -812,7 +812,7 @@ None.
 
 ## Malformed EXTINF Entries
 
-- line 1892: missing stream URL
+- line 1888: missing stream URL
 
 ## Suspicious URLs
 
@@ -854,7 +854,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1038**
+- Healthy/local references: **1036**
 - missing: **0**
 - broken-local: **0**
 - external: **0**

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T06:17:25+00:00",
+  "generated": "2026-10-03T06:25:54+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -6125,20 +6125,6 @@
       "primary": 1,
       "backup": 2
     },
-    "pixeltv": {
-      "names": [
-        "Піксель TV"
-      ],
-      "ids": [
-        "pixeltv.ua"
-      ],
-      "groups": [
-        "International"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "playentertainment": {
       "names": [
         "Play Entertainment"
@@ -8376,28 +8362,25 @@
         "traceuk.uk"
       ],
       "groups": [
-        "Backup"
+        "International"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "traceurban": {
       "names": [
-        "Trace Urban",
-        "Trace Urban International"
+        "Trace Urban"
       ],
       "ids": [
-        "traceurban.fr",
-        "traceurban.fr@internationalhd"
+        "traceurban.fr"
       ],
       "groups": [
-        "Backup",
         "International"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "travelxp": {
       "names": [
