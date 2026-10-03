@@ -156,7 +156,7 @@ http://198.195.239.50:8095/enter10Bangla/index.m3u8
 https://dish.porosh.com.bd/hls/jtvnews.m3u8
 #EXTINF:-1 tvg-id="Star.Jalsha.Movies.in" tvg-name="Jalsha Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalsha-movies-hd.png" tvg-chno="259" channel-id="Star.Jalsha.Movies.in" group-title="Indian Bangla",Jalsha Movies
 http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8
-#EXTINF:-1 tvg-id="JhankarTV.ca" tvg-name="Jhankar TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jhankar-tv.png" tvg-chno="260" channel-id="JhankarTV.ca" group-title="Indian Bangla",Jhankar TV
+#EXTINF:-1 tvg-id="JhankarTV.ca" tvg-name="Jhankar TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jhankar-tv.png" tvg-chno="260" channel-id="JhankarTV.ca" group-title="International",Jhankar TV
 https://dbcanada.sonarbanglatv.com/jhankartv/jtv/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jtv-classic.png" channel-id="custom.jtv.classic" tvg-id="custom.jtv.classic" tvg-name="Jtv Classic" tvg-chno="267" group-title="Indian Bangla",Jtv Classic
 http://103.67.97.46/0.ts
@@ -164,13 +164,13 @@ http://103.67.97.46/0.ts
 https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/index.m3u8
 #EXTINF:-1 tvg-id="MONTVBangla.in" tvg-name="Mon Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mon-bangla-4a53249503.png" tvg-chno="269" channel-id="MONTVBangla.in" group-title="Indian Bangla",Mon Bangla
 http://115.187.41.216:8080/hls/montvbangla/index.m3u8
-#EXTINF:-1 tvg-id="NKTVBangla.bd" tvg-name="NK TV Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nk-tv-bangla.png" tvg-chno="1060" channel-id="NKTVBangla.bd" group-title="Indian Bangla",NK TV Bangla
+#EXTINF:-1 tvg-id="NKTVBangla.bd" tvg-name="NK TV Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nk-tv-bangla.png" tvg-chno="1060" channel-id="NKTVBangla.bd" group-title="Bangladesh",NK TV Bangla
 https://nktv.smartstream.video/smartstream-us/nkbangla/nkbangla/playlist.m3u8
-#EXTINF:-1 channel-id="OrangeBanglaTV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/orange-bangla-tv.png" tvg-id="OrangeBanglaTV.in@SD" tvg-name="Orange Bangla TV" tvg-chno="270" tvg-language="ben" tvg-country="BD" group-title="Indian Bangla",Orange Bangla TV
+#EXTINF:-1 channel-id="OrangeBanglaTV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/orange-bangla-tv.png" tvg-id="OrangeBanglaTV.in@SD" tvg-name="Orange Bangla TV" tvg-chno="270" tvg-language="ben" tvg-country="BD" group-title="Bangladesh",Orange Bangla TV
 https://cdn.pishow.tv/ott/live/1499/master.m3u8
 #EXTINF:-1 channel-id="RPlusGold.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus-gold.png" tvg-name="R Plus Gold" tvg-id="RPlusGold.in@SD" group-title="Indian Bangla" tvg-chno="273",R Plus Gold
 https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/cf883da3-f9f5-4c70-b0ef-b3ac2e2ad1e3/index.m3u8
-#EXTINF:-1 tvg-id="RongeenTV.in@SD" tvg-name="Rongeen TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rongeen-tv.png" tvg-chno="274" channel-id="RongeenTV.in@SD" tvg-language="hin" tvg-country="IN" group-title="Indian Bangla",Rongeen TV
+#EXTINF:-1 tvg-id="RongeenTV.in@SD" tvg-name="Rongeen TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rongeen-tv.png" tvg-chno="274" channel-id="RongeenTV.in@SD" tvg-language="hin" tvg-country="IN" group-title="Indian Entertainment",Rongeen TV
 https://server.thelegitpro.in/rongeentv/rongeentv/index.m3u8
 #EXTINF:-1 tvg-id="RupasiBangla.in@SD" tvg-name="Ruposhi Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ruposhi-bangla.png" tvg-chno="275" channel-id="RupasiBangla.in@SD" group-title="Indian Bangla",Ruposhi Bangla
 https://mumt05.tangotv.in/87NeALx2RUPASIBANGLA/index.m3u8
