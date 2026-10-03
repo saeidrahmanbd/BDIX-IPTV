@@ -1,27 +1,27 @@
 # Update Report
 
-_Last generated: **2026-10-03 09:20 UTC**_
+_Last generated: **2026-10-03 09:23 UTC**_
 
 | Metric | Current |
 |---|---:|
-| Streams | **947** |
-| Active Channel Identities | **581** |
-| Active Primary Streams | **581** |
-| Bangladesh | **63** |
-| India | **247** |
-| Backup Streams | **350** |
+| Streams | **897** |
+| Active Channel Identities | **579** |
+| Active Primary Streams | **579** |
+| Bangladesh | **62** |
+| India | **246** |
+| Backup Streams | **302** |
 | New Channels | **0** |
 | New Backup Streams | **0** |
 | Local Logos | **100.0%** |
-| EPG Programme Coverage | **60.7%** |
-| EPG Mapping | **65.6%** |
-| Stream Health Tested | **947** |
-| Stream Health Failures | **121** |
-| Persistent Failures | **109** |
+| EPG Programme Coverage | **67.1%** |
+| EPG Mapping | **73.6%** |
+| Stream Health Tested | **897** |
+| Stream Health Failures | **133** |
+| Persistent Failures | **117** |
 | Near-Duplicate URL Families | **0** |
 | Audit Blocking Issues | **0** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-03T09:20:15+00:00** |
+| Pre-Publish Gate Generated | **2026-10-03T09:23:48+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -41,23 +41,23 @@ _Last generated: **2026-10-03 09:20 UTC**_
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## EPG
-- Indian channels audited: **247**
-- Mapped: **162 (65.6%)**
-- Current/future programme coverage: **150/247 (60.7%)**
-- No mapping: **85**
+- Indian channels audited: **246**
+- Mapped: **181 (73.6%)**
+- Current/future programme coverage: **165/246 (67.1%)**
+- No mapping: **65**
 - Publication remains subject to source-policy approval.
 
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-03T09:19:28.426140+00:00** |
-| EPG coverage | **2026-10-03T09:19:22+00:00** |
-| Stream health | **2026-10-03T09:20:15+00:00** |
-| Pre-publish gate | **2026-10-03T09:20:15+00:00** |
+| Playlist audit | **2026-10-03T09:22:59.562793+00:00** |
+| EPG coverage | **2026-10-03T09:22:50+00:00** |
+| Stream health | **2026-10-03T09:23:48+00:00** |
+| Pre-publish gate | **2026-10-03T09:23:48+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
-- Latest entries change: **947 → 947**
-- Latest health failures: **136 → 121**
+- Latest entries change: **947 → 897**
+- Latest health failures: **121 → 133**
 
 Historical records are retained in reports/maintenance-history.json.
