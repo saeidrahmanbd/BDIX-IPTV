@@ -1,0 +1,337 @@
+# Deep Stream Audit — Failed Endpoints
+
+Generated from the latest 947-stream health run and channel-level stream history.
+
+- Failed endpoints: **116**
+- Working alternate exists: **61**
+- HTTP 404/410: **6**
+- HTTP 401/403: **2**
+- HTTP 5xx: **2**
+- Timeout/inconclusive: **45**
+
+No playlist entries were removed or reclassified by this audit.
+
+## Key finding
+
+Many failures are concentrated on `198.195.239.50:8095`. Other URLs for the same channels are succeeding, so these are endpoint/infrastructure failures rather than evidence that the channels themselves are dead.
+
+## Hard 404/410
+
+- **Jhankar TV** — undefined — streak 31 — 404
+  - https://dbcanada.sonarbanglatv.com/jhankartv/jtv/index.m3u8
+- **All Time Movies** — undefined — streak 16 — 404
+  - https://tvsen6.aynaott.com/a2cKGQtB/index.m3u8
+- **Star Gold** — undefined — streak 27 — 404
+  - http://livetv.akr4m.com:8080/bdtv/restrem/45.m3u8
+  - Working alternate: http://51.75.127.199:3141/stargold/index.m3u8
+- **Star Pravah** — undefined — streak 1 — 404
+  - https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starpravah.smil/chunklist_b1928000.m3u8
+- **B4U Kadak** — undefined — streak 6 — 404
+  - https://tvsen3.aynaott.com/X9E6bxg3/index.m3u8
+  - Working alternate: https://amg00877-b4unew-amg00877c4-xiaomi-in-5473.playouts.now.amagi.tv/playlist.m3u8 | https://cdn.pishow.tv/ott/live/227/master.m3u8 | https://streams.tangotv.in/B4UKADAK/ORIGIN/index.m3u8
+- **Jalsha Movies** — undefined — streak 1 — 404
+  - http://103.151.60.162:2122/play/a00x/index.m3u8
+  - Working alternate: http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8
+
+## Protected 401/403
+
+- **Colors Cineplex** — undefined — streak 50 — 403
+  - http://202.70.146.135:8000/play/a04n/index.m3u8
+  - Working alternate: https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/gb/YuppTV/ColorsCineplexUK.m3u8
+- **Star Gold Select** — undefined — streak 50 — 403
+  - http://202.70.146.135:8000/play/a068/index.m3u8
+  - Working alternate: http://51.75.127.199:3141/stargoldselecthd/index.m3u8
+
+## Server 5xx
+
+- **Desh Bangla TV** — undefined — streak 1 — 500
+  - https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/deshbanglatv.stream/playlist.m3u8
+- **Green TV** — undefined — streak 1 — 500
+  - https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
+  - Working alternate: http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/greentv.stream/index.m3u8 | https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/playlist.m3u8
+
+## Failed URL with working alternate
+
+- **ATN Bangla** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/ATN.BANGLA.HD/index.m3u8
+  - Working alternate: http://tvsen5.aynascope.net/atnbangla/index.m3u8 | https://iptvlive.ahmed-bd-org.workers.dev/atn-bangla-1/index.m3u8 | https://tvsen5.aynaott.com/atnbangla/index.m3u8
+- **Boishakhi TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/BOISAKHI.TV.HD/index.m3u8
+  - Working alternate: https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8 | https://iptvlive.ahmed-bd-org.workers.dev/boishakhi-tv-1/index.m3u8 | https://iptvlive.ahmed-bd-org.workers.dev/boishakhi-tv-2/index.m3u8
+- **Channel 24** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/CHANNEL.24.HD/index.m3u8
+  - Working alternate: http://livetv.akr4m.com:8080/bdtv/restrem/14.m3u8 | https://drk6xq0vhn.gpcdn.net/live/channel_24_abr/index.m3u8 | https://iptvlive.ahmed-bd-org.workers.dev/channel-24-hd-1/index.m3u8
+- **DBC News** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/DBC.NEWS.HD/index.m3u8
+  - Working alternate: https://iptv-proxy.ahmed-bd-org.workers.dev/dbc-news/index.m3u8 | https://iptvlive.ahmed-bd-org.workers.dev/dbc-news-1/index.m3u8 | https://iptvlive.ahmed-bd-org.workers.dev/dbc-news-hd-1/index.m3u8
+- **Duronto TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/duranta/index.m3u8
+  - Working alternate: http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/433.ts | https://box.bbaria.net/DurontoTV/tracks-v1a1/mono.m3u8 | https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8
+- **Ekhon TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/EAKHON.TV.HD/index.m3u8
+  - Working alternate: http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/globaltv.stream/index.m3u8 | https://drk6xq0vhn.gpcdn.net/live/ekhon_tv_abr/index.m3u8 | https://stream.ottplus.live/live/ekhon_tv_abr/index.m3u8
+- **Ekushey TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/ETV.BANGLA.HD/index.m3u8
+  - Working alternate: https://ekusheyserver.com/etvlivesn.m3u8 | https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8 | https://tvsen5.aynaott.com/SyQuXz8sC3TB/index.m3u8
+- **Independent TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/INDEPENDENT.TV/index.m3u8
+  - Working alternate: https://drk6xq0vhn.gpcdn.net/live/independent_tv_abr/index.m3u8 | https://drk6xq0vhn.gpcdn.net/live/independent_tv_abr/live/independent_tv_720/chunks.m3u8
+- **Jamuna TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/JAMUNA.TV/index.m3u8
+  - Working alternate: https://iptv-proxy.ahmed-bd-org.workers.dev/jamuna-tv/index.m3u8 | https://iptvlive.ahmed-bd-org.workers.dev/jamuna-tv-1/index.m3u8 | https://stream.ottplus.live/live/jamuna_tv_abr/index.m3u8
+- **Nagorik TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/NAGORIK.TV.HD/index.m3u8
+  - Working alternate: http://livetv.akr4m.com:8080/bdtv/restrem/38.m3u8 | https://box.bbaria.net/Nagorik_TV/tracks-v1a1/mono.m3u8
+- **Somoy TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/somoyTv/index.m3u8
+  - Working alternate: https://drk6xq0vhn.gpcdn.net/live/somoy_tv_abr/index.m3u8 | https://iptvlive.ahmed-bd-org.workers.dev/somoy-tv-2/index.m3u8 | https://tvsen5.aynaott.com/somoytv/tracks-v1a1/mono.m3u8
+- **Enter10 Bangla** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/enter10Bangla/index.m3u8
+  - Working alternate: https://iptvlive.ahmed-bd-org.workers.dev/enter-10-bangla-1/index.m3u8 | https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8 | https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8
+- **Sony AATH** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/sonyAath/index.m3u8
+  - Working alternate: https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8 | https://live20.bozztv.com/giatvplayout7/giatv-209611/index.m3u8 | https://stream.ottplus.live/live/sony_aath_abr/index.m3u8
+- **Zee Bangla** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/zeeBangla/index.m3u8
+  - Working alternate: http://103.151.60.162:2122/play/a011/index.m3u8 | http://27.124.71.27/Zee_Bangla/tracks-v1a1/mono.m3u8 | http://51.75.127.199:3141/zeebanglahd/index.m3u8
+- **Colors Cineplex** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/COLORS.CINEPLEX.HD/index.m3u8
+  - Working alternate: https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/gb/YuppTV/ColorsCineplexUK.m3u8
+- **Xplor** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/XPLOR.HD/index.m3u8
+  - Working alternate: http://51.75.127.199:3141/andxplorehd/index.m3u8
+- **Romedy Now** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/ROMEDY.NOW/index.m3u8
+  - Working alternate: http://51.75.127.199:3141/romedynow/index.m3u8
+- **Animal Planet** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/animalPlanet/index.m3u8
+  - Working alternate: https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd/index.m3u8 | https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8
+- **Nat Geo Wild** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/NATGEO.WILD.HD/index.m3u8
+  - Working alternate: http://51.75.127.199:3141/natgeowild/index.m3u8
+- **National Geographic** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/NATGEO.HD/index.m3u8
+  - Working alternate: http://51.75.127.199:3141/natgeo/index.m3u8 | http://51.75.127.199:3141/natgeohd/index.m3u8
+- **Sony Ten 2** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/SONY.SPORTS2.HD/index.m3u8
+  - Working alternate: https://stream.ottplus.live/live/ten_2_hd_abr/live/ten_2_hd_720/index.m3u8
+- **9XM** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/9XM.MUSIC/index.m3u8
+  - Working alternate: https://cc-706183qeo55ez.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-706183qeo55ez/DIYC/PMSL/9X/9XMusic_IN/9XMusic_IN.m3u8 | https://wiselp.wiseplayout.com/9XM/HD1080/HD1080.m3u8 | https://wiselp.wiseplayout.com/9XM/master.m3u8
+- **Animal Planet** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/ANIMAL.PLANET.HD/index.m3u8
+  - Working alternate: https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd/index.m3u8 | https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8
+- **ATN News** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/ATN.NEWS.HD/index.m3u8
+  - Working alternate: https://tvsen6.aynaott.com/da6WMXAk/index.m3u8 | https://iptv-proxy.ahmed-bd-org.workers.dev/atn-news/index.m3u8 | https://iptvlive.ahmed-bd-org.workers.dev/atn-news-1/index.m3u8
+- **BBC Earth** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/BBC.Earth.HD/index.m3u8
+  - Working alternate: https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist.m3u8
+- **Channel I** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/CHANNEL.I.HD/index.m3u8
+  - Working alternate: https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/index.m3u8 | https://iptv-proxy.ahmed-bd-org.workers.dev/channel-i/index.m3u8 | https://iptvlive.ahmed-bd-org.workers.dev/channel-i-1/index.m3u8
+- **Colors Bangla** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/COLORS.BANGLA.HD/index.m3u8
+  - Working alternate: https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/800.m3u8 | http://flowutc.com/live/MAGTF8AV71/bUiJLEJKG5/76179.ts | https://catchup.yuppcdn.net/amazonv2/36/preview/colorsbanglahd/master/chunklist.m3u8
+- **Colors Bangla** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/colorsBangla/index.m3u8
+  - Working alternate: https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/800.m3u8 | http://flowutc.com/live/MAGTF8AV71/bUiJLEJKG5/76179.ts | https://catchup.yuppcdn.net/amazonv2/36/preview/colorsbanglahd/master/chunklist.m3u8
+- **Colors Bangla Cinema** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/COLORS.BANGLA.CINEMA/index.m3u8
+  - Working alternate: http://livetv.akr4m.com:8080/bdtv/restrem/3.m3u8 | http://51.75.127.199:3141/colorsbanglacinema/index.m3u8
+- **Colors Bangla Cinema** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/colorsBanglaChinema/index.m3u8
+  - Working alternate: http://livetv.akr4m.com:8080/bdtv/restrem/3.m3u8 | http://51.75.127.199:3141/colorsbanglacinema/index.m3u8
+- **Deepto TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/DEEPTOTV.HD/index.m3u8
+  - Working alternate: https://byphdgllyk.gpcdn.net/hls/deeptotv/0_1/index.m3u8 | https://byphdgllyk.gpcdn.net/hls/deeptotv/index.m3u8
+- **Duronto TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/DURANTA.TV.HD/index.m3u8
+  - Working alternate: http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/433.ts | https://box.bbaria.net/DurontoTV/tracks-v1a1/mono.m3u8 | https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8
+- **Duronto TV** — undefined — streak 47 — timeout
+  - http://198.195.239.50:8095/duranta/tracks-v1a1/mono.m3u8
+  - Working alternate: http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/433.ts | https://box.bbaria.net/DurontoTV/tracks-v1a1/mono.m3u8 | https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8
+- **Ekattor TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/EKATTOR.TV.HD/index.m3u8
+  - Working alternate: https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8 | https://stream.ottplus.live/live/ekattor_tv_abr/index.m3u8
+- **Enter10 Bangla** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/ENTER10.BANGLA/index.m3u8
+  - Working alternate: https://iptvlive.ahmed-bd-org.workers.dev/enter-10-bangla-1/index.m3u8 | https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8 | https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8
+- **G TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/GAZI.TV.HD/index.m3u8
+  - Working alternate: https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/gazibdz.stream/live-orgin/gazibdz.stream/playlist.m3u8 | http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/gazibdz.stream/tracks-v1a1/mono.m3u8 | https://app.ncare.live/live-orgin/gazibdz.stream/live-orgin/gazibdz.stream/chunks.m3u8
+- **History TV18** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/HISTORY.TV.18.HD/index.m3u8
+  - Working alternate: https://n18syndication.akamaized.net/bpk-tv/History_HD_NW18_MOB/output01/master.m3u8
+- **Jalsha Movies** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/JALSHA.MOVIES.HD/index.m3u8
+  - Working alternate: http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8
+- **Jalsha Movies** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/jalshaMovies/index.m3u8
+  - Working alternate: http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8
+- **Maasranga TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/MASRANGA.TV.HD/index.m3u8
+  - Working alternate: https://mtv.sunplex.live/MAASRANGA/index.m3u8 | http://tvsen5.aynascope.net/maasrangatv/index.m3u8 | http://tvsen5.aynascope.net/maasrangatv/tracks-a1/mono.ts.m3u8
+- **Madani TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/MADANI.TV.HD/index.m3u8
+  - Working alternate: https://tvsen3.aynaott.com/z24qLsqV/index.m3u8
+- **Mohona TV** — undefined — streak 58 — timeout
+  - http://premiumtvs.space/live/YqXTywueEV/damp2purchase/397.ts
+  - Working alternate: https://tvsen6.aynaott.com/AkyX5dunzju4cpo26dr7/tracks-v1a1/mono.ts.m3u8 | https://stream.ottplus.live/live/mohona_tv_abr/index.m3u8 | https://tvsen6.aynaott.com/AkyX5dunzju4cpo26dr7/index.m3u8
+- **National Geographic** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/nationalGeographic/index.m3u8
+  - Working alternate: http://51.75.127.199:3141/natgeo/index.m3u8 | http://51.75.127.199:3141/natgeohd/index.m3u8
+- **News 24** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/NEWS.24/index.m3u8
+  - Working alternate: https://tvsen6.aynaott.com/cdgr3tw6WoG7JyRnLbi0/index.m3u8 | https://iptvlive.ahmed-bd-org.workers.dev/news-24-1/index.m3u8 | https://iptvlive.ahmed-bd-org.workers.dev/news-24-hd-1/index.m3u8
+- **Sangeet Bangla** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/SANGEET.BANGLA/index.m3u8
+  - Working alternate: https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/index.m3u8 | https://cdn.pishow.tv/ott/live/1143/master.m3u8 | https://tvsen6.aynaott.com/hT5jHczt/index.m3u8
+- **Sangeet Bangla** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/sangeetBangla/index.m3u8
+  - Working alternate: https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/index.m3u8 | https://cdn.pishow.tv/ott/live/1143/master.m3u8 | https://tvsen6.aynaott.com/hT5jHczt/index.m3u8
+- **Somoy TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/SOMOY.TV.HD/index.m3u8
+  - Working alternate: https://drk6xq0vhn.gpcdn.net/live/somoy_tv_abr/index.m3u8 | https://iptvlive.ahmed-bd-org.workers.dev/somoy-tv-2/index.m3u8 | https://tvsen5.aynaott.com/somoytv/tracks-v1a1/mono.m3u8
+- **Sony AATH** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/SONY.AAT/index.m3u8
+  - Working alternate: https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8 | https://live20.bozztv.com/giatvplayout7/giatv-209611/index.m3u8 | https://stream.ottplus.live/live/sony_aath_abr/index.m3u8
+- **Sony BBC Earth** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/SONY.BBC.EARTH.HD/index.m3u8
+  - Working alternate: https://amg00793-bbcstudios-amg00793c3-lg-us-2528.playouts.now.amagi.tv/playlist/amg00793-bbcstudios-bbcearta-lgus/playlist.m3u8
+- **Sony Entertainment TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/SONY.ENT.HD/index.m3u8
+  - Working alternate: https://drk6xq0vhn.gpcdn.net/live/sony_ent_sd_abr/index.m3u8 | http://38.96.178.205/SONYHD/index.m3u8 | https://drk6xq0vhn.gpcdn.net/live/sony_ent_hd_abr/index.m3u8
+- **Sony Max** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/SONY.MAX.HD/index.m3u8
+  - Working alternate: https://drk6xq0vhn.gpcdn.net/live/max_hd_abr/index.m3u8 | https://drk6xq0vhn.gpcdn.net/live/sony_max_sd_abr/index.m3u8
+- **Star Gold** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/STAR.GOLD.HD/index.m3u8
+  - Working alternate: http://51.75.127.199:3141/stargold/index.m3u8
+- **Star Jalsha** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/STAR.JALSHA.HD/index.m3u8
+  - Working alternate: https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8 | http://103.151.60.162:2122/play/a00w/index.m3u8 | https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
+- **Star Jalsha** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/starJalsha/index.m3u8
+  - Working alternate: https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8 | http://103.151.60.162:2122/play/a00w/index.m3u8 | https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
+- **Star Plus** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/STAR.PLUS.HD/index.m3u8
+  - Working alternate: http://livetv.akr4m.com:8080/bdtv/restrem/62.m3u8 | http://41.205.93.154/STAR-PLUS/index.m3u8
+- **Sun Bangla** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/SUN.BANGLA.HD/index.m3u8
+  - Working alternate: http://27.124.71.27/Sun_Bangla/index.m3u8
+- **Zee Bangla** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/ZEE.BANGLA.HD/index.m3u8
+  - Working alternate: http://103.151.60.162:2122/play/a011/index.m3u8 | http://27.124.71.27/Zee_Bangla/tracks-v1a1/mono.m3u8 | http://51.75.127.199:3141/zeebanglahd/index.m3u8
+- **Zee Bangla Sonar** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/ZEE.BANGLA.CINEMA/index.m3u8
+  - Working alternate: https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/Zeebanglahd.m3u8 | https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD-video=2137600.m3u8 | https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8
+- **Zee Cinema** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/ZEE.CINEMA.HD/index.m3u8
+  - Working alternate: https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ZeeCinemaAPAC.m3u8 | http://103.151.60.162:2122/play/a024/index.m3u8 | https://d1g8wgjurz8via.cloudfront.net/bpk-tv/NGCHD/default/NGCHD.m3u8
+- **Zee TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/ZEE.TV.HD/index.m3u8
+  - Working alternate: https://drk6xq0vhn.gpcdn.net/live/zee_tv_hd_abr/index.m3u8 | https://d47ddb99.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1kZV9aZWVUVkhEVUtHZXJtYW55X0hMUw/playlist.m3u8 | https://stream.ottplus.live/live/zee_tv_hd_abr/index.m3u8
+- **Zoom Music** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/ZOOM.MUSIC/index.m3u8
+  - Working alternate: https://d2esfk1pb9cdob.cloudfront.net/chunklist_1.m3u8 | https://d2esfk1pb9cdob.cloudfront.net/master.m3u8 | https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
+
+## Timeout / inconclusive
+
+- **BTV National** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/btv/index.m3u8
+- **Channel 9** — undefined — streak 1 — timeout
+  - http://livetv.akr4m.com:8080/bdtv/restrem/16.m3u8
+- **Channel 16** — undefined — streak 16 — timeout
+  - http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel16bd.stream/tracks-v1a1/mono.m3u8
+- **&pictures** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/ANT.PICTURS.HD/index.m3u8
+- **Zing** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/ZING.MUSIC/index.m3u8
+- **Colors** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/COLORS.HD/index.m3u8
+- **MTV India** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/MTV.INDIA/index.m3u8
+- **Star Bharat** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/STAR.BHARAT.HD/index.m3u8
+- **Geo News** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/GEO.NEWS.HD/index.m3u8
+- **Hum Masala** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/HUM.MASALA.TV/index.m3u8
+- **&Privé** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/AND.PRIVE.HD/index.m3u8
+- **Al Jazeera** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/ALJAZEERA.HD/index.m3u8
+- **AXN** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/AXN.HD/index.m3u8
+- **BBC News** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/BBC.NEWS/index.m3u8
+- **DW News** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/DW.NEWS.HD/index.m3u8
+- **Lotus TV** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/Lotus.TV.HD/index.m3u8
+- **MN+** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/MN.PLUS.HD/index.m3u8
+- **MNX** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/MNX.HD/index.m3u8
+- **Movies Now** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/MOVIES.NOW.HD/index.m3u8
+- **Sony PIX** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/SONY.PIX.HD/index.m3u8
+- **Discovery** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/DISCOVERY.HD/index.m3u8
+- **TLC** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/TLC.HD/index.m3u8
+- **Travelxp Hindi** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/travelXp/index.m3u8
+- **ETV Bal Bharat** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/ETV.BAL.BHARAT/index.m3u8
+- **Hungama** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/HUNGAMA/index.m3u8
+- **Nick** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/nick/index.m3u8
+- **Nick Jr** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/nickJr/index.m3u8
+- **Sonic** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/sonic/index.m3u8
+- **Super Hungama** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/SUPER.HUNGAMA/index.m3u8
+- **Peace TV Bangla** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/PEACE.TV.BANGLA.HD/index.m3u8
+- **PTV Sports** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/PTV-SPORTS-HD/index.m3u8
+- **Sony Sports Ten 4** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/SONY.SPORTS.4/index.m3u8
+- **Sony Sports Ten 5** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/SONY-SPORTS.5HD/index.m3u8
+- **Star Sports 1** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/STAR.SPORTS1.HD/index.m3u8
+- **Star Sports 2** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/STAR.SPORTS2.HD/index.m3u8
+- **Star Sports 3** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/STAR-SPORTS.3/index.m3u8
+- **Star Sports Select 1** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/STAR.SPORTS-SEL1.HD/index.m3u8
+- **Star Sports Select 2** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/STAR.SPORTS.SEL.2.HD/index.m3u8
+- **T Sports** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/T-SPORTS-HD/index.m3u8
+- **UNITE8 1** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/UNITE8.1.HD/index.m3u8
+- **BTV National** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/BTV.HD/index.m3u8
+- **Channel 9** — undefined — streak 58 — timeout
+  - http://premiumtvs.space/live/YqXTywueEV/damp2purchase/434.ts
+- **Channel 16** — undefined — streak 12 — timeout
+  - https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8
+- **Discovery** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/discovery/index.m3u8
+- **Travelxp Hindi** — undefined — streak 73 — timeout
+  - http://198.195.239.50:8095/TRAVELXP.HD/index.m3u8
+
+## Handling recommendation
+
+- Do not delete timeout-only streams automatically.
+- Do not treat 401/403 as proof of death.
+- Replace/remove 404 endpoints only after considering whether the same channel has a working alternate.
+- Three channel-level review candidates have no successful alternate recorded here: **All Time Movies, Jhankar TV, and Star Pravah**.
