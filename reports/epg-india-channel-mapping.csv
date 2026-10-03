@@ -516,7 +516,7 @@ Kids,WOW Kidz Hindi,WOWKidz.in@Hindi,,,NO_GUIDE_HIT,Auto-maintained; verify ambi
 Kids,WOW Kidz Tamil,custom.wow.kidz.tamil,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,WOW Kidz Telugu,WOWKidz.in@Telugu,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,ZooMoo,ZooMoo.sg,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Kids,Солнце,custom.solntse,&TV.HD.in | AndTV.in | 10000000028050000 | ts578 | ts40,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Kids,Солнце,custom.solntse,&TV.HD.in | and.TV.in | andtv.in | AndTV.in | 10000000028050000 | ts578 | ts40,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml | https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,8XM,8XM.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,A-Plus TV,APlusTV.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,BS Film,BSFilm.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
