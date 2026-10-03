@@ -6,6 +6,7 @@ Bangladesh,Ananda TV,AnandaTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguou
 Bangladesh,Asian TV,AsianTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,BTV Chattogram,BTVChattogram.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,BTV National,BTVNational.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Bangladesh,BTV News,custom.btv.news,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Bangla TV,BanglaTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Bangla Vision,BanglaVision.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Bengali Beats,custom.bengali.beats,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -269,6 +270,7 @@ Indian Movies,Goldmines,Goldmines.in@SD,Goldmines.in | ts823,https://epgshare01.
 Indian Movies,Goldmines 2,Goldmines2.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Goldmines Action,GoldminesAction.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Goldmines Bollywood,GoldminesBollywood.in@SD,Goldmines.Bollywood.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED_ID_ONLY,Auto-maintained; verify ambiguous/name matches manually.
+Indian Movies,Hindi Movie Classic 24,custom.hindi.movie.classic.24,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Hindi Movies,custom.hindi.movies,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Kairali Arabia,KairaliArabia.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Kairali TV,KairaliTV.in@SD,Kairali.TV.in | KAIRALI.in | 543357 | ts25,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://epg.pw/xmltv/epg_IN.xml | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.

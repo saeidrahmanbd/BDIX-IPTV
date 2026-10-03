@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T09:25:32+00:00",
+  "generated": "2026-10-03T09:28:08+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -111,9 +111,9 @@
         "Backup",
         "Pakistani"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
-      "backup": 2
+      "backup": 3
     },
     "9xjalwa": {
       "names": [
@@ -556,9 +556,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
-      "backup": 3
+      "backup": 4
     },
     "atnbanglauk": {
       "names": [
@@ -817,9 +817,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 3,
+      "streams": 5,
       "primary": 1,
-      "backup": 2
+      "backup": 4
     },
     "banglavision": {
       "names": [
@@ -832,9 +832,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "barazamusictv": {
       "names": [
@@ -988,9 +988,9 @@
         "Backup",
         "Indian Movies"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "bijoytv": {
       "names": [
@@ -1018,9 +1018,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 5,
+      "streams": 7,
       "primary": 1,
-      "backup": 4
+      "backup": 6
     },
     "bolentertainment": {
       "names": [
@@ -1162,9 +1162,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
-      "backup": 3
+      "backup": 4
     },
     "channel9": {
       "names": [
@@ -1192,9 +1192,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 2,
+      "streams": 5,
       "primary": 1,
-      "backup": 1
+      "backup": 4
     },
     "channels": {
       "names": [
@@ -1207,9 +1207,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
-      "backup": 3
+      "backup": 4
     },
     "choppertown": {
       "names": [
@@ -1549,9 +1549,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 2,
+      "streams": 5,
       "primary": 1,
-      "backup": 1
+      "backup": 4
     },
     "custom.autentic.adventure.earth": {
       "names": [
@@ -1623,6 +1623,20 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.btv.news": {
+      "names": [
+        "BTV News"
+      ],
+      "ids": [
+        "custom.btv.news"
+      ],
+      "groups": [
+        "Bangladesh"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.cbn.tv.usa": {
       "names": [
         "CBN TV USA"
@@ -1660,11 +1674,12 @@
         "custom.channel.16"
       ],
       "groups": [
+        "Backup",
         "Bangladesh"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "custom.colors": {
       "names": [
@@ -1887,9 +1902,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "custom.epic.bhojpuri.digital": {
       "names": [
@@ -1946,6 +1961,21 @@
       "streams": 1,
       "primary": 1,
       "backup": 0
+    },
+    "custom.hindi.movie.classic.24": {
+      "names": [
+        "Hindi Movie Classic 24"
+      ],
+      "ids": [
+        "custom.hindi.movie.classic.24"
+      ],
+      "groups": [
+        "Backup",
+        "Indian Movies"
+      ],
+      "streams": 2,
+      "primary": 1,
+      "backup": 1
     },
     "custom.hindi.movies": {
       "names": [
@@ -2326,9 +2356,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "custom.star.sports.sl.1": {
       "names": [
@@ -2598,9 +2628,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 3,
+      "streams": 6,
       "primary": 1,
-      "backup": 2
+      "backup": 5
     },
     "ddarunprabha": {
       "names": [
@@ -2641,9 +2671,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
-      "backup": 2
+      "backup": 3
     },
     "ddbharati": {
       "names": [
@@ -3337,9 +3367,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
-      "backup": 5
+      "backup": 6
     },
     "epicbharat": {
       "names": [
@@ -3395,9 +3425,9 @@
         "Backup",
         "Indian Music"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "espn": {
       "names": [
@@ -3677,9 +3707,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
-      "backup": 3
+      "backup": 4
     },
     "gbaj400042t1": {
       "names": [
@@ -3934,11 +3964,12 @@
         "hindihits.in"
       ],
       "groups": [
+        "Backup",
         "Indian Music"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "history": {
       "names": [
@@ -4248,11 +4279,12 @@
         "jagonews24.bd"
       ],
       "groups": [
+        "Backup",
         "Bangladesh"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "jalwatv": {
       "names": [
@@ -4279,9 +4311,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 3,
+      "streams": 5,
       "primary": 1,
-      "backup": 2
+      "backup": 4
     },
     "jhankartv": {
       "names": [
@@ -4858,11 +4890,12 @@
         "metv.bd"
       ],
       "groups": [
+        "Backup",
         "Bangladesh"
       ],
-      "streams": 1,
+      "streams": 4,
       "primary": 1,
-      "backup": 0
+      "backup": 3
     },
     "mh1music": {
       "names": [
@@ -5019,9 +5052,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
-      "backup": 2
+      "backup": 3
     },
     "moviedomefamily": {
       "names": [
@@ -5441,9 +5474,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 2,
+      "streams": 4,
       "primary": 1,
-      "backup": 1
+      "backup": 3
     },
     "nexustv": {
       "names": [
@@ -5628,9 +5661,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 4,
+      "streams": 6,
       "primary": 1,
-      "backup": 3
+      "backup": 5
     },
     "ntveurope": {
       "names": [
@@ -5996,11 +6029,12 @@
         "ptcmusic.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Music"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "ptcpunjabi": {
       "names": [
@@ -6169,9 +6203,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "rajdigitalplus": {
       "names": [
@@ -6466,9 +6500,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
-      "backup": 2
+      "backup": 3
     },
     "rplusgold": {
       "names": [
@@ -6569,9 +6603,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "sanaplus": {
       "names": [
@@ -6655,9 +6689,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 3,
+      "streams": 5,
       "primary": 1,
-      "backup": 2
+      "backup": 4
     },
     "shansontv": {
       "names": [
@@ -6840,9 +6874,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
-      "backup": 5
+      "backup": 6
     },
     "songdewtv": {
       "names": [
@@ -8268,9 +8302,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 10,
+      "streams": 11,
       "primary": 1,
-      "backup": 9
+      "backup": 10
     },
     "zeebanglasonar": {
       "names": [
@@ -8283,9 +8317,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
-      "backup": 4
+      "backup": 5
     },
     "zeebollywood": {
       "names": [
