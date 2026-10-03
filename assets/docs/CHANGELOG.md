@@ -36,11 +36,5 @@
 
 ## 2026-10-03
 
-- 🆕 **3 new channel(s) added to New Channels**
-- 🔁 **14 new backup stream(s) added to New Backup**
-
-### New channels
-- Goldmines Movies 2
-- Music Mastii
-- And Pictures HD
+- 🔁 **2 new backup stream(s) added to New Backup**
 
