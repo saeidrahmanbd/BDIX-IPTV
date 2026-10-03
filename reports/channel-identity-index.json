@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T11:11:48+00:00",
+  "generated": "2026-10-03T11:17:08+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -5208,9 +5208,9 @@
         "Backup",
         "Indian Music"
       ],
-      "streams": 3,
+      "streams": 2,
       "primary": 1,
-      "backup": 2
+      "backup": 1
     },
     "musicmastii": {
       "names": [

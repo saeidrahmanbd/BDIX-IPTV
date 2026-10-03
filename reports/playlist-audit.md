@@ -1,14 +1,14 @@
 # Playlist Audit
-Generated: **2026-10-03T11:11:48.870666+00:00**
+Generated: **2026-10-03T11:17:08.128503+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **944**
+- Playlist entries: **943**
 - Unique channel IDs: **597**
 - IDs with multiple streams: **173**
-- Duplicate stream URLs: **1**
+- Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
@@ -476,10 +476,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### moviesphere.us (2 streams)
 - MovieSphere — International — https://aegis-cloudfront-1.tubi.video/8b127a5b-3054-4f39-93a2-1c4aab9ef5ff/playlist.m3u8
 - MovieSphere — Backup — https://amg00353-lionsgatestudio-moviesphere-xumo-zh5u0.amagi.tv/playlist.m3u8
-### musicindia.in@sd (3 streams)
+### musicindia.in@sd (2 streams)
 - Music India — Indian Music — https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8
 - Music India — Backup — https://cdn.pishow.tv/ott/live/226/master.m3u8
-- Music India — Backup — https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8
 ### mytv.bd (4 streams)
 - My TV — Bangladesh — https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8
 - My TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mytv-up-off.stream/index.m3u8
@@ -770,7 +769,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **944**
+- Healthy/local references: **943**
 - missing: **0**
 - broken-local: **0**
 - external: **0**
