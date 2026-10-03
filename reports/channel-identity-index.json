@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T11:20:13+00:00",
+  "generated": "2026-10-03T11:26:24+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -1004,9 +1004,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 7,
+      "streams": 6,
       "primary": 1,
-      "backup": 6
+      "backup": 5
     },
     "bolentertainment": {
       "names": [
@@ -1027,7 +1027,7 @@
         "Bollywood Film"
       ],
       "ids": [
-        "bollywoodfilm.ro"
+        "bollywoodfilm.in"
       ],
       "groups": [
         "Indian Movies"
@@ -1816,6 +1816,20 @@
       ],
       "groups": [
         "Kids"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.drama24": {
+      "names": [
+        "Drama 24"
+      ],
+      "ids": [
+        "custom.drama24.bd"
+      ],
+      "groups": [
+        "Bangladesh"
       ],
       "streams": 1,
       "primary": 1,
@@ -3449,7 +3463,7 @@
         "etvbeats.in@hd"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Music"
       ],
       "streams": 1,
       "primary": 1,
@@ -3911,20 +3925,6 @@
       "primary": 1,
       "backup": 2
     },
-    "gseriesdrama": {
-      "names": [
-        "G Series Drama"
-      ],
-      "ids": [
-        "gseriesdrama.bd"
-      ],
-      "groups": [
-        "Bangladesh"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "hindihits": {
       "names": [
         "Hindi Hits"
@@ -4349,12 +4349,11 @@
         "kairalitv.in@sd"
       ],
       "groups": [
-        "Backup",
-        "Indian Movies"
+        "Indian Entertainment"
       ],
       "streams": 2,
-      "primary": 1,
-      "backup": 1
+      "primary": 2,
+      "backup": 0
     },
     "kairaliwe": {
       "names": [
@@ -4554,12 +4553,11 @@
         "madhimugamtv.in"
       ],
       "groups": [
-        "Backup",
-        "Indian Movies"
+        "Indian Entertainment"
       ],
       "streams": 2,
-      "primary": 1,
-      "backup": 1
+      "primary": 2,
+      "backup": 0
     },
     "mahaamax": {
       "names": [
@@ -4684,7 +4682,7 @@
         "mastiii.in@sd"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Music"
       ],
       "streams": 1,
       "primary": 1,
@@ -6698,7 +6696,7 @@
         "shemarootv.in@sd"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -7735,12 +7733,11 @@
         "thikanatv.us"
       ],
       "groups": [
-        "Backup",
         "Bangladesh"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "timetelevision": {
       "names": [

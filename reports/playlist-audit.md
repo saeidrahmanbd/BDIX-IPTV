@@ -1,26 +1,26 @@
 # Playlist Audit
-Generated: **2026-10-03T11:20:13.900081+00:00**
+Generated: **2026-10-03T11:26:24.894434+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **943**
+- Playlist entries: **941**
 - Unique channel IDs: **597**
-- IDs with multiple streams: **173**
+- IDs with multiple streams: **172**
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **0**
+- Metadata conflicts: **2**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **0**
-- Duplicate primary identities: **0**
+- Duplicate primary identities: **2**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
 - Suspicious URL credentials/syntax: **0**
-- Signed/tokenized stream URLs: **15**
+- Signed/tokenized stream URLs: **14**
 
 ## Duplicate IDs
 
@@ -123,13 +123,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Bijoy TV — Backup — https://drk6xq0vhn.gpcdn.net/live/bijoy_tv_abr/index.m3u8
 - Bijoy TV — Backup — https://stream.ottplus.live/live/bijoy_tv_abr/index.m3u8
 - Bijoy TV — Backup — https://stream.ottplus.live/live/bijoy_tv_abr/live/bijoy_tv_720/chunks.m3u8
-### boishakhitv.bd (7 streams)
+### boishakhitv.bd (6 streams)
 - Boishakhi TV — Bangladesh — http://198.195.239.50:8095/BOISAKHI.TV.HD/index.m3u8
 - Boishakhi TV — Backup — https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8
 - Boishakhi TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/boishakhi-tv-1/index.m3u8
 - Boishakhi TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/boishakhi-tv-2/index.m3u8
 - Boishakhi TV — Backup — https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/index.m3u8
-- Boishakhi TV — Backup — https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/index.m3u8?e=1784102570&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
 - Boishakhi TV — Backup — https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/tracks-v1a1/mono.ts.m3u8
 ### bsfilm.pk@sd (2 streams)
 - BS Film — Pakistani — https://lbgo.bozztv.com/ssh101/ssh101/bsfilm/playlist.m3u8
@@ -405,8 +404,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Jonmobhumi TV — Bangladesh — https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/playlist.m3u8
 - Jonmobhumi TV — Backup — https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/tracks-v1a1/mono.m3u8
 ### kairalitv.in@sd (2 streams)
-- Kairali TV — Indian Movies — https://streams.tangotv.in/KAIRALI/ORIGIN/index.m3u8
-- Kairali TV — Backup — https://mumt01.tangotv.in/O5aw8Zn3KAIRALI/index.m3u8
+- Kairali TV — Indian Entertainment — https://streams.tangotv.in/KAIRALI/ORIGIN/index.m3u8
+- Kairali TV — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3KAIRALI/index.m3u8
 ### kairaliwe.in@sd (2 streams)
 - Kairali We — Indian Movies — https://streams.tangotv.in/WETV/ORIGIN/index.m3u8
 - Kairali We — Backup — https://cdn.pishow.tv/ott/live/1530/master.m3u8
@@ -427,8 +426,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Maasranga TV — Backup — https://tvsen5.aynaott.com/maasrangatv/index.m3u8
 - Maasranga TV — Backup — https://tvsen6.aynaott.com/maasrangatv/index.m3u8
 ### madhimugamtv.in (2 streams)
-- Madhimugam TV — Indian Movies — https://cdn.pishow.tv/ott/live/1476/master.m3u8
-- Madhimugam TV — Backup — https://mumt01.tangotv.in/O5aw8Zn3MATHIMUGAMTV/index.m3u8
+- Madhimugam TV — Indian Entertainment — https://cdn.pishow.tv/ott/live/1476/master.m3u8
+- Madhimugam TV — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3MATHIMUGAMTV/index.m3u8
 ### mahaamax.in (2 streams)
 - Mahaa Max — Indian Movies — https://mumt03.tangotv.in/Dsly5z3HMAHAAMAX/index.m3u8
 - Mahaa Max — Backup — https://mumbai-edge.smartplaytv.in/MahaMax/index.m3u8
@@ -658,9 +657,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### sunbangla.in@sd (2 streams)
 - Sun Bangla — Indian Bangla — http://27.124.71.27/Sun_Bangla/index.m3u8
 - Sun Bangla — Backup — http://198.195.239.50:8095/SUN.BANGLA.HD/index.m3u8
-### thikanatv.us (2 streams)
-- Thikana — Bangladesh — https://5dd3981940faa.streamlock.net/thikanatv/thikanatv/playlist.m3u8
-- Thikana — Backup — https://5dd3981940faa.streamlock.net:443/thikanatv/thikanatv/playlist.m3u8
 ### travelxp.in@sd (2 streams)
 - Travelxp Hindi — Documentary & Wildlife — http://198.195.239.50:8095/travelXp/index.m3u8
 - Travelxp Hindi — Backup — http://198.195.239.50:8095/TRAVELXP.HD/index.m3u8
@@ -719,7 +715,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-None.
+- **kairalitv.in@sd** in **Indian Entertainment** — Kairali TV, Kairali TV
+- **madhimugamtv.in** in **Indian Entertainment** — Madhimugam TV, Madhimugam TV
 
 ## Primary Channel-Number Collisions
 
@@ -745,7 +742,6 @@ None.
 - **WOW Kidz Tamil** — Kids — https://yuppparoriglin.akamaized.net/181224/smil:wowkidztam.smil/playlist.m3u8?hdnts=[REDACTED]
 - **WOW Kidz Telugu** — Kids — https://yuppparoriglin.akamaized.net/181224/smil:wowkidztelgu.smil/playlist.m3u8?hdnts=[REDACTED]
 - **Marquee Sports Network** — Sports — https://tvsen6.aynaott.com/MarqueeSportsNetwork/index.m3u8?e=1779283796&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=[REDACTED]
-- **Boishakhi TV** — Backup — https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/index.m3u8?e=1784102570&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
 - **Darshana TV** — Backup — https://yuppparoriglin.akamaized.net/181224/smil:darshanatv.smil/playlist.m3u8?hdnts=[REDACTED]
 - **Ekhon TV** — Backup — https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8?e=1784102563&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
 - **NTV** — Backup — https://tvsen5.aynaott.com/JHPxHAWonztVucyc4GzF/index.m3u8?e=1784102559&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
@@ -757,7 +753,8 @@ None.
 
 ## Metadata Conflicts
 
-None.
+- **kairalitv.in@sd** — names: kairali tv; groups: Indian Entertainment; countries: , IN
+- **madhimugamtv.in** — names: madhimugam tv; groups: Indian Entertainment; countries: , IN
 
 ## Cross-Country Backup Collisions
 
@@ -769,7 +766,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **943**
+- Healthy/local references: **941**
 - missing: **0**
 - broken-local: **0**
 - external: **0**

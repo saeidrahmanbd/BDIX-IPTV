@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-03T11:20:00+00:00**
+Generated: **2026-10-03T11:26:08+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
@@ -31,7 +31,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 
 | Group | Channel | Playlist ID | EPG ID | Status |
 |---|---|---|---|---|
-| Indian Movies | ETV Beats | ETVBeats.in@HD | 3559 | MAPPED_ENDED |
+| Indian Music | ETV Beats | ETVBeats.in@HD | 3559 | MAPPED_ENDED |
 | Indian Movies | Ekamra Cinema | custom.ekamra.cinema | Ekamra.Cinema.in | MAPPED_ID_ONLY |
 | Indian Music | Ekamra Musiq | custom.ekamra.musiq | Ekamra.Musiq.in | MAPPED_ID_ONLY |
 | Indian Movies | Manoranjan Movies | ManoranjanMovies.in@SD | ManoranjanMovies.in | MAPPED_ID_ONLY |
@@ -45,7 +45,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Bangla | Amar Bangla Digital | custom.amar.bangla.digital | - | NO_GUIDE_HIT |
 | Indian Movies | B4U Bhojpuri Plus | B4UBhojpuri.in@Plus | - | NO_GUIDE_HIT |
 | Indian Bangla | Bangla Plus | BanglaPlus.in | - | NO_GUIDE_HIT |
-| Indian Movies | Bollywood Film | BollywoodFilm.ro | - | NO_GUIDE_HIT |
+| Indian Movies | Bollywood Film | BollywoodFilm.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | C Malayalam TV | CMalayalamTV.ca@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Colors Cineplex [UK] | custom.colors.cineplex | - | NO_GUIDE_HIT |
 | Indian Music | Deewana | DeewanaHD.in | - | NO_GUIDE_HIT |
