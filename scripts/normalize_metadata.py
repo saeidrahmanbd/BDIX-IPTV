@@ -262,6 +262,26 @@ for r in rows:
   if logo and not a.get("tvg-logo"): m=set_attr(m,"tvg-logo",logo if logo.startswith("http") else RAW+logo); stats["logos"]+=1
   m=re.sub(r'\s*tvg-chno="[^"]*"',"",m); stats["backups"]+=1
  lines[r["i"]]=f"{m},{name}"
+
+# Keep the stable playlist section order: Backup is the final normal category,
+# immediately before the manual-review New Channels queue.
+preamble=[]
+records=[]
+cur=None
+for line in lines:
+ if line.startswith("#EXTINF:"):
+  if cur is not None: records.append(cur)
+  cur=[line]
+ elif cur is not None:
+  cur.append(line)
+ else:
+  preamble.append(line)
+if cur is not None: records.append(cur)
+backup_records=[r for r in records if re.search(r'group-title="Backup"', r[0])]
+other_records=[r for r in records if not re.search(r'group-title="Backup"', r[0])]
+new_channels_idx=next((i for i,r in enumerate(other_records) if re.search(r'group-title="New Channels"', r[0])), len(other_records))
+records=other_records[:new_channels_idx]+backup_records+other_records[new_channels_idx:]
+lines=preamble+[line for rec in records for line in rec]
 P.write_text("\n".join(lines)+"\n",encoding="utf-8")
 R.write_text("# Playlist Metadata Normalization\n\n"+f"- Entries processed: **{len(rows)}**\n- Primary channel numbers added: **{stats['numbers']}**\n- Logo references repaired: **{stats['logos']}**\n- Backup/review entries normalized: **{stats['backups']}**\n",encoding="utf-8")
 print(f"Normalization: entries={len(rows)} numbers={stats['numbers']} logos={stats['logos']} backup_entries={stats['backups']}")
