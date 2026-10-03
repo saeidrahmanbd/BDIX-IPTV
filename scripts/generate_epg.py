@@ -9,9 +9,13 @@ PLAYLIST = Path("IPTV-Playlist.m3u")
 MAPPING = Path("reports/epg-india-channel-mapping.csv")
 OUTPUT = Path("epg.xml")
 
+# Approved public XMLTV feeds. EPGShare supplies the strongest India coverage;
+# IPTV-EPG and EPG.PW add additional IDs/programmes that are not present there.
 SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
+    "https://iptv-epg.org/files/epg-in.xml",
+    "https://epg.pw/xmltv/epg_IN.xml",
 ]
 
 def fetch(url):
@@ -50,9 +54,9 @@ def load_mapping():
             target = row.get("tvg_id", "").strip()
             if not target:
                 continue
-            # Only use mappings that actually came from EPGShare.
-            if "epgshare01.online" not in row.get("source", ""):
-                continue
+            # Accept mappings from every approved source listed in SOURCES.
+            # The playlist tvg-id remains canonical; provider IDs are translated
+            # into that ID in the generated XMLTV guide.
             for source_id in row.get("epg_id", "").split("|"):
                 source_id = source_id.strip()
                 if source_id:
