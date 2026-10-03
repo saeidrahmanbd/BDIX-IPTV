@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T09:07:03+00:00",
+  "generated": "2026-10-03T09:17:53+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -7160,8 +7160,8 @@
         "Indian Bangla"
       ],
       "streams": 6,
-      "primary": 2,
-      "backup": 4
+      "primary": 1,
+      "backup": 5
     },
     "star.jalsha.movies": {
       "names": [

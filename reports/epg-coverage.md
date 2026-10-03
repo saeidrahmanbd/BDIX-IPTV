@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-03T09:06:56+00:00**
+Generated: **2026-10-03T09:17:47+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
@@ -17,6 +17,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 531 current/future IDs; 20737 programme rows
 - **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 69000 programme rows
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19385 programme rows
+- **FAILED** — https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml — 0 channel IDs; 0 current/future IDs; 0 programme rows; HTTP Error 404: Not Found
 
 ## Channels Requiring Attention
 
