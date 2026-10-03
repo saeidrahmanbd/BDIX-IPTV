@@ -71,7 +71,7 @@ jobs:
           PY
             python scripts/generate_dashboard.py
             if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ] || [ "$HEALTH_STATUS" -ne 0 ]; then
-              git restore -- IPTV-Playlist.m3u logos/ xtream/worker.js epg.xml || true
+              git restore -- IPTV-Playlist.m3u logos/ xtream/worker.js || true
             fi
             git add IPTV-Playlist.m3u epg.xml logos/ reports/ assets/dashboard.svg xtream/worker.js
             if git diff --cached --quiet; then exit 0; fi
