@@ -36,16 +36,5 @@
 
 ## 2026-10-03
 
-- 🆕 **9 new channel(s) added to New Channels**
-
-### New channels
-- Deshe Bideshe
-- TBN 24
-- NK TV Bangla
-- Citizen TV
-- EP TV
-- Ayna TV
-- Music Bangla
-- Desh Bangla TV
-- Probashi TV
+- No meaningful playlist changes detected.
 
