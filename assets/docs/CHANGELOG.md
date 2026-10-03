@@ -36,5 +36,15 @@
 
 ## 2026-10-03
 
-- 🔁 **5 new backup stream(s) added to New Backup**
+- 🗑️ **8 channel(s) removed**
+
+### Removed channels
+- Movies Now
+- The Film Detective
+- Sony BBC Earth
+- Cartoon Network
+- Nick Jr (Czech Republic)
+- POP
+- TVCARiB Kids & Teens
+- EURO SPORT
 
