@@ -1,15 +1,15 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-03T09:48:17+00:00**
+Generated: **2026-10-03T09:56:56+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
 - Active Indian channels audited: **247**
-- Channels with an EPG mapping: **197**
-- Current/future programme coverage: **185/247 (74.9%)**
-- No guide mapping found: **50**
+- Channels with an EPG mapping: **199**
+- Current/future programme coverage: **187/247 (75.7%)**
+- No guide mapping found: **48**
 
 ## Source Status
 
@@ -23,7 +23,6 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1479 channel IDs; 1455 current/future IDs; 94488 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 283 channel IDs; 283 current/future IDs; 13782 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 112 channel IDs; 99 current/future IDs; 23690 programme rows
-- **FAILED** — https://iptv-org.github.io/epg/guides/in.xml.gz — 0 channel IDs; 0 current/future IDs; 0 programme rows; HTTP Error 404: Not Found
 
 ## Channels Requiring Attention
 
@@ -48,7 +47,6 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Movies | Bollywood Film | BollywoodFilm.ro | - | NO_GUIDE_HIT |
 | Indian Entertainment | C Malayalam TV | CMalayalamTV.ca@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Colors Cineplex [UK] | custom.colors.cineplex | - | NO_GUIDE_HIT |
-| Indian Entertainment | DD Himachal Pradesh | DDHimachalPradesh.in@SD | - | NO_GUIDE_HIT |
 | Indian Music | Deewana | DeewanaHD.in | - | NO_GUIDE_HIT |
 | Indian Movies | ETV Beats | ETVBeats.in@HD | - | NO_GUIDE_HIT |
 | Indian Movies | Epic Bhojpuri Digital | custom.epic.bhojpuri.digital | - | NO_GUIDE_HIT |
@@ -70,7 +68,6 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Movies | MH One Movies | MHOneMovies.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | MH One Prime | Mh1Prime.in | - | NO_GUIDE_HIT |
 | Indian Movies | MNTV (Tamil) | MarutamTV.in | - | NO_GUIDE_HIT |
-| Indian Entertainment | MTV India | MTVIndia.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Mei Alai TV | MeiAlaiTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | Metro TV (India) | MetroTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Music | Music Mastii | MusicMastii.in | - | NO_GUIDE_HIT |
