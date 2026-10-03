@@ -22,8 +22,6 @@ SOURCES = [
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml",
-    # Standardized India guide; mappings remain exact-ID/name based to avoid false matches.
-    "https://iptv-org.github.io/epg/guides/in.xml.gz",
 ]
 
 def fetch(url):
