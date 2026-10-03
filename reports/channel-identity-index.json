@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T03:23:07+00:00",
+  "generated": "2026-10-03T03:35:15+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -7079,7 +7079,7 @@
         "Indian Bangla",
         "New Backup"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
       "backup": 3
     },
@@ -7361,9 +7361,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla"
+        "Indian Bangla",
+        "New Backup"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
       "backup": 3
     },

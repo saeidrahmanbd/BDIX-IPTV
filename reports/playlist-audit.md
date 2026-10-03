@@ -1,11 +1,11 @@
 # Playlist Audit
-Generated: **2026-10-03T03:23:07.749492+00:00**
+Generated: **2026-10-03T03:35:15.697500+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1048**
+- Playlist entries: **1050**
 - Unique channel IDs: **663**
 - IDs with multiple streams: **191**
 - Duplicate stream URLs: **0**
@@ -616,12 +616,13 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Sananda — Indian Bangla — https://live.sanandatelevision.in/sananda/index.m3u8
 - Sananda — Backup — https://live.sanandatelevision.in/sananda/tracks-v1a1/mono.m3u8
 - Sananda — Backup — https://iptvlive.ahmed-bd-org.workers.dev/sananda-tv-1/index.m3u8
-### sangeetbangla.in@sd (5 streams)
+### sangeetbangla.in@sd (6 streams)
 - Sangeet Bangla — Indian Bangla — https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/index.m3u8
 - Sangeet Bangla — Backup — http://198.195.239.50:8095/sangeetBangla/index.m3u8
 - Sangeet Bangla — Backup — https://cdn.pishow.tv/ott/live/1143/master.m3u8
 - Sangeet Bangla — Backup — http://198.195.239.50:8095/SANGEET.BANGLA/index.m3u8
 - Sangeet Bangla — New Backup — https://cdn-4.pishow.tv/live/1143/master.m3u8
+- Sangeet Bangla — New Backup — https://tvsen6.aynaott.com/hT5jHczt/index.m3u8
 ### satv.bd (5 streams)
 - SA TV — Bangladesh — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-1/index.m3u8
 - SA TV — Backup — https://tvsen6.aynaott.com/rELXiuUXqbgzPb06Npom/index.m3u8
@@ -641,11 +642,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Somoy TV — Backup — https://tvsen5.aynascope.net/somoytv/mono.m3u8
 - Somoy TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/somoy-tv-2/index.m3u8
 - Somoy TV — Backup — http://198.195.239.50:8095/SOMOY.TV.HD/index.m3u8
-### sony.aath.in (4 streams)
+### sony.aath.in (5 streams)
 - Sony AATH — Indian Bangla — http://198.195.239.50:8095/sonyAath/index.m3u8
 - Sony AATH — Backup — https://stream.ottplus.live/live/sony_aath_abr/index.m3u8
 - Sony AATH — Backup — https://live20.bozztv.com/giatvplayout7/giatv-209611/index.m3u8
 - Sony AATH — Backup — http://198.195.239.50:8095/SONY.AAT/index.m3u8
+- Sony AATH — New Backup — https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8
 ### sonybbcearth.in@sd (2 streams)
 - Sony BBC Earth — Documentary & Wildlife — https://amg00793-bbcstudios-amg00793c3-lg-us-2528.playouts.now.amagi.tv/playlist/amg00793-bbcstudios-bbcearta-lgus/playlist.m3u8
 - Sony BBC Earth — Backup — http://198.195.239.50:8095/SONY.BBC.EARTH.HD/index.m3u8
@@ -844,7 +846,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1048**
+- Healthy/local references: **1050**
 - missing: **0**
 - broken-local: **0**
 - external: **0**
