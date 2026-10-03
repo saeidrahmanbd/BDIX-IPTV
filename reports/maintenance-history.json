@@ -469,5 +469,19 @@
     "health_tested": 995,
     "health_failures": 152,
     "health_persistent": 150
+  },
+  {
+    "timestamp_utc": "2026-10-03T03:24:01.176180+00:00",
+    "entries": 1048,
+    "unique_channel_ids": 663,
+    "duplicate_ids": 191,
+    "duplicate_urls": 0,
+    "metadata_conflicts": 0,
+    "logo_exceptions": 0,
+    "primary_number_collisions": 0,
+    "protected_primary_changes": 0,
+    "health_tested": 995,
+    "health_failures": 179,
+    "health_persistent": 148
   }
 ]

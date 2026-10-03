@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T14:12:59+00:00",
+  "generated": "2026-10-03T03:23:07+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -387,7 +387,7 @@
         "Bangladesh",
         "New Backup"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
       "backup": 3
     },
@@ -413,9 +413,10 @@
         "andpictures.in@sd"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Movies",
+        "New Channels"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },
@@ -794,9 +795,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Movies"
+        "Indian Movies",
+        "New Backup"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
       "backup": 3
     },
@@ -1401,9 +1403,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla"
+        "Indian Bangla",
+        "New Backup"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
       "backup": 4
     },
@@ -3371,9 +3374,10 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "New Backup"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
       "backup": 4
     },
@@ -3909,7 +3913,7 @@
         "Bangladesh",
         "New Backup"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
       "backup": 3
     },
@@ -4022,9 +4026,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Movies"
+        "Indian Movies",
+        "New Backup"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
       "backup": 2
     },
@@ -4081,10 +4086,25 @@
         "goldminesmovies.in@sd"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Movies",
+        "New Backup"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 2,
+      "backup": 0
+    },
+    "goldminesmovies2": {
+      "names": [
+        "Goldmines Movies 2"
+      ],
+      "ids": [
+        "goldminesmovies2.in"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
       "backup": 0
     },
     "gravitasmovies": {
@@ -4328,9 +4348,10 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "New Backup"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
       "backup": 2
     },
@@ -4557,9 +4578,10 @@
         "jonmobhumitv.au"
       ],
       "groups": [
-        "Bangladesh"
+        "Bangladesh",
+        "New Backup"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },
@@ -5508,6 +5530,20 @@
       "streams": 3,
       "primary": 1,
       "backup": 2
+    },
+    "musicmastii": {
+      "names": [
+        "Music Mastii"
+      ],
+      "ids": [
+        "musicmastii.in"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
     },
     "mycinema": {
       "names": [
@@ -7040,9 +7076,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla"
+        "Indian Bangla",
+        "New Backup"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
       "backup": 3
     },
@@ -7384,9 +7421,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Movies"
+        "Indian Movies",
+        "New Backup"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
       "backup": 3
     },
@@ -7483,9 +7521,10 @@
         "sonysab.in@hd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Indian Entertainment",
+        "New Backup"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },
@@ -7746,9 +7785,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Entertainment"
+        "Indian Entertainment",
+        "New Backup"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
       "backup": 2
     },
@@ -8878,9 +8918,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla"
+        "Indian Bangla",
+        "New Backup"
       ],
-      "streams": 10,
+      "streams": 11,
       "primary": 1,
       "backup": 9
     },
