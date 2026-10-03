@@ -36,5 +36,5 @@
 
 ## 2026-10-03
 
-- 🔁 **2 new backup stream(s) added to New Backup**
+- 🔁 **5 new backup stream(s) added to New Backup**
 
