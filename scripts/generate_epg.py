@@ -16,6 +16,7 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
     "https://iptv-epg.org/files/epg-in.xml",
     "https://epg.pw/xmltv/epg_IN.xml",
+    "https://iptv-org.github.io/epg/guides/in/dishtv.in.epg.xml",
 ]
 
 def fetch(url):
