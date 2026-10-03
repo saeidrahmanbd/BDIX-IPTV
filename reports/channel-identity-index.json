@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T06:27:03+00:00",
+  "generated": "2026-10-03T06:36:02+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -1785,11 +1785,12 @@
         "custom.channel.1"
       ],
       "groups": [
+        "Backup",
         "Bangladesh"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "custom.channel.16": {
       "names": [

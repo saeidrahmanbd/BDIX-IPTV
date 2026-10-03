@@ -1,13 +1,13 @@
 # Playlist Audit
-Generated: **2026-10-03T06:27:03.164123+00:00**
+Generated: **2026-10-03T06:36:02.897182+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1036**
+- Playlist entries: **1037**
 - Unique channel IDs: **641**
-- IDs with multiple streams: **191**
+- IDs with multiple streams: **192**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
@@ -209,6 +209,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### custom.bengali.beats (2 streams)
 - Bengali Beats — Bangladesh — https://iptvlive.ahmed-bd-org.workers.dev/bengali-beats-1/index.m3u8
 - Bengali Beats — Backup — https://live20.bozztv.com/giatvplayout7/giatv-209587/tracks-v1a1/mono.ts.m3u8
+### custom.channel.1 (2 streams)
+- Channel 1 — Bangladesh — https://stream.ottplus.live/live/channel_1_hd_abr/index.m3u8
+- Channel 1 — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel1bd.stream/playlist.m3u8
 ### custom.channel.16 (2 streams)
 - Channel 16 — Bangladesh — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel16bd.stream/tracks-v1a1/mono.m3u8
 - Channel 16 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8
@@ -635,11 +638,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Sangeet Bangla — Backup — https://tvsen6.aynaott.com/hT5jHczt/index.m3u8
 - Sangeet Bangla — Not Playing — https://cdn-4.pishow.tv/live/1143/master.m3u8
 ### satv.bd (5 streams)
-- SA TV — Bangladesh — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-1/index.m3u8
+- SA TV — Bangladesh — http://116.204.149.16/satv/index.m3u8
 - SA TV — Backup — https://tvsen6.aynaott.com/rELXiuUXqbgzPb06Npom/index.m3u8
-- SA TV — Backup — http://116.204.149.16/satv/index.m3u8
 - SA TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/satvoff5666.stream/playlist.m3u8
 - SA TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-2/index.m3u8
+- SA TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-1/index.m3u8
 ### shansontv.ru (2 streams)
 - Shanson TV — International — http://catchup.videoline.ru/shanson/index.m3u8
 - Shanson TV — Backup — https://streaming.thestream.cyou/live/7009.m3u8
@@ -812,7 +815,7 @@ None.
 
 ## Malformed EXTINF Entries
 
-- line 1888: missing stream URL
+- line 1890: missing stream URL
 
 ## Suspicious URLs
 
@@ -854,7 +857,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1036**
+- Healthy/local references: **1037**
 - missing: **0**
 - broken-local: **0**
 - external: **0**
