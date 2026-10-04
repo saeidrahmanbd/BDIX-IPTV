@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T04:41:04+00:00",
+  "generated": "2026-10-04T05:18:52+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -456,9 +456,10 @@
       ],
       "groups": [
         "Backup",
-        "Documentary & Wildlife"
+        "Documentary & Wildlife",
+        "New Channels"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
       "backup": 3
     },
@@ -735,9 +736,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Music"
+        "Indian Music",
+        "New Backup"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
       "backup": 3
     },
@@ -1764,6 +1766,34 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.discovery.science": {
+      "names": [
+        "Discovery Science"
+      ],
+      "ids": [
+        "custom.discovery.science"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
+    "custom.discovery.turbo": {
+      "names": [
+        "Discovery Turbo"
+      ],
+      "ids": [
+        "custom.discovery.turbo"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "custom.disney": {
       "names": [
         "Disney Jr"
@@ -2132,6 +2162,20 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.music.bangla": {
+      "names": [
+        "Music Bangla"
+      ],
+      "ids": [
+        "custom.music.bangla"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "custom.nature.time": {
       "names": [
         "Nature Time"
@@ -2400,6 +2444,20 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.tnt.music": {
+      "names": [
+        "TNT Music"
+      ],
+      "ids": [
+        "custom.tnt.music"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "custom.toon.goggles.junior": {
       "names": [
         "Toon Goggles Junior"
@@ -2525,6 +2583,34 @@
       ],
       "streams": 1,
       "primary": 1,
+      "backup": 0
+    },
+    "custom.yrf.music": {
+      "names": [
+        "YRF Music"
+      ],
+      "ids": [
+        "custom.yrf.music"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
+    "custom.zee.bangla.cinema": {
+      "names": [
+        "Zee Bangla Cinema"
+      ],
+      "ids": [
+        "custom.zee.bangla.cinema"
+      ],
+      "groups": [
+        "New Backup"
+      ],
+      "streams": 1,
+      "primary": 0,
       "backup": 0
     },
     "custom.zoommusic": {
@@ -6563,9 +6649,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla"
+        "Indian Bangla",
+        "New Backup"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
       "backup": 4
     },
@@ -6864,9 +6951,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Entertainment"
+        "Indian Entertainment",
+        "New Backup"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
       "backup": 5
     },
@@ -6991,9 +7079,10 @@
         "sonysab.in@hd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Indian Entertainment",
+        "New Backup"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },
@@ -8363,9 +8452,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Entertainment"
+        "Indian Entertainment",
+        "New Backup"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
       "backup": 3
     },
