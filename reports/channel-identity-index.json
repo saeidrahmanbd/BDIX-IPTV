@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T15:47:26+00:00",
+  "generated": "2026-10-04T15:52:47+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -1492,7 +1492,7 @@
     },
     "custom.ajj.entertainment": {
       "names": [
-        "AJJ ENTERTAINMENT"
+        "AJJ Entertainment"
       ],
       "ids": [
         "custom.ajj.entertainment"
@@ -2086,7 +2086,7 @@
     },
     "custom.hummasala": {
       "names": [
-        "HUM MASALA"
+        "Hum Masala"
       ],
       "ids": [
         "custom.hummasala"
@@ -2328,7 +2328,7 @@
     },
     "custom.sabentertainment": {
       "names": [
-        "SAB ENTERTAINMENT"
+        "SAB Entertainment"
       ],
       "ids": [
         "custom.sabentertainment"
@@ -2483,7 +2483,7 @@
     },
     "custom.starbangla": {
       "names": [
-        "STAR BANGLA"
+        "Star Bangla"
       ],
       "ids": [
         "custom.starbangla"
@@ -2539,7 +2539,7 @@
     },
     "custom.taratv": {
       "names": [
-        "TARA TV"
+        "Tara TV"
       ],
       "ids": [
         "custom.taratv"
@@ -2610,7 +2610,7 @@
     },
     "custom.unite8.1": {
       "names": [
-        "UNITE8 1"
+        "Unite8 1"
       ],
       "ids": [
         "custom.unite8.1"
@@ -4377,7 +4377,7 @@
     },
     "infast": {
       "names": [
-        "INFAST"
+        "InFast"
       ],
       "ids": [
         "infast.nl"
@@ -4448,7 +4448,7 @@
     },
     "inwild": {
       "names": [
-        "INWILD"
+        "InWild"
       ],
       "ids": [
         "inwild.nl"
@@ -5739,10 +5739,9 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh",
-        "Not Playing"
+        "Bangladesh"
       ],
-      "streams": 4,
+      "streams": 3,
       "primary": 1,
       "backup": 2
     },

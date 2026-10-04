@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-04T15:47:06+00:00**
+Generated: **2026-10-04T15:52:30+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
@@ -18,7 +18,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 - **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 68994 programme rows
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19291 programme rows
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml — 394 channel IDs; 0 current/future IDs; 660 programme rows
-- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 15 current/future IDs; 62556 programme rows
+- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 14 current/future IDs; 62556 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 765 channel IDs; 765 current/future IDs; 83105 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1479 channel IDs; 1455 current/future IDs; 94938 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 283 channel IDs; 283 current/future IDs; 13810 programme rows
@@ -75,13 +75,13 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Entertainment | Q TV | QTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | SADA TV | SADATV.in | - | NO_GUIDE_HIT |
 | Indian Bangla | SNB Cinema | custom.snb.cinema | - | NO_GUIDE_HIT |
-| Indian Bangla | STAR BANGLA | custom.starbangla | - | NO_GUIDE_HIT |
 | Indian Bangla | Sananda | SanandaTV.in | - | NO_GUIDE_HIT |
 | Indian Movies | Shubh Cinema TV | ShubhCinemaTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | Sony KAL | SonyKALHindi.us | - | NO_GUIDE_HIT |
 | Indian Movies | Sony Max 2 [US] | custom.sony.max.2 | - | NO_GUIDE_HIT |
 | Indian Movies | South Movies | custom.south.movies | - | NO_GUIDE_HIT |
 | Indian Movies | South Station | SouthStation.in | - | NO_GUIDE_HIT |
+| Indian Bangla | Star Bangla | custom.starbangla | - | NO_GUIDE_HIT |
 | Indian Movies | Starnet | Starnet.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | The Movie Club | TheMovieClub.in@HD | - | NO_GUIDE_HIT |
 | Indian Movies | The Movie Club +2 | TheMovieClub.in@Plus2 | - | NO_GUIDE_HIT |

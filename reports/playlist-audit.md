@@ -1,11 +1,11 @@
 # Playlist Audit
-Generated: **2026-10-04T15:48:14.126950+00:00**
+Generated: **2026-10-04T15:53:35.531399+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1028**
+- Playlist entries: **1027**
 - Unique channel IDs: **647**
 - IDs with multiple streams: **192**
 - Duplicate stream URLs: **0**
@@ -178,28 +178,28 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Colors Bangla — Backup — https://catchup.yuppcdn.net/amazonv2/36/preview/colorsbanglahd/master/chunklist.m3u8
 - Colors Bangla — Backup — https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/2500.m3u8
 - Colors Bangla — Backup — http://flowutc.com/live/MAGTF8AV71/bUiJLEJKG5/76179.ts
-- Colors Bangla — Backup — http://103.172.29.30:9991/stream/channelid/1759751142#fb:M3U_World_4K
+- Colors Bangla — Backup — http://103.172.29.30:9991/stream/channelid/1759751142
 ### colorsbanglacinema.in@sd (5 streams)
 - Colors Bangla Cinema — Indian Bangla — http://livetv.akr4m.com:8080/bdtv/restrem/3.m3u8
 - Colors Bangla Cinema — Backup — http://198.195.239.50:8095/COLORS.BANGLA.CINEMA/index.m3u8
 - Colors Bangla Cinema — Backup — http://198.195.239.50:8095/colorsBanglaChinema/index.m3u8
 - Colors Bangla Cinema — Backup — http://51.75.127.199:3141/colorsbanglacinema/index.m3u8
-- Colors Bangla Cinema — Backup — http://103.172.29.30:9991/stream/channelid/14180834#fb:M3U_World_4K
+- Colors Bangla Cinema — Backup — http://103.172.29.30:9991/stream/channelid/14180834
 ### colorscineplex.in@sd (3 streams)
 - Colors Cineplex — Indian Movies — http://198.195.239.50:8095/COLORS.CINEPLEX.HD/index.m3u8
 - Colors Cineplex — Backup — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/gb/YuppTV/ColorsCineplexUK.m3u8
 - Colors Cineplex — Not Playing — http://202.70.146.135:8000/play/a04n/index.m3u8
 ### colorsrishteyamericas.in (2 streams)
 - Colors Rishtey — Indian Entertainment — https://manatv.akamaized.net/090823/smil:ristheyamerica.smil/playlist.m3u8
-- Colors Rishtey — Backup — http://103.172.29.30:9991/stream/channelid/1367268710#fb:M3U_World_4K
+- Colors Rishtey — Backup — http://103.172.29.30:9991/stream/channelid/1367268710
 ### custom.amar.bangla.digital (2 streams)
 - Amar Bangla Digital — Indian Bangla — http://115.187.41.216:8080/hls/amardigital/index.m3u8
 - Amar Bangla Digital — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/amardigital.stream/playlist.m3u8
 ### custom.ary.q.tv (2 streams)
 - ARY Q TV — Religious — https://aryqtvm.aryzap.com/v1/0183ea2a0eec0b8ed5941a38bc76/0183ea2a4e470b8ed5aa4d793457/ARYQTVH264_1080p.m3u8
-- ARY Q TV — Backup — https://aryqtvm.aryzap.com/v1/0183ea2a0eec0b8ed5941a38bc76/0183ea2a4e470b8ed5aa4d793457/ARYQTVH264_720p.m3u8#fb:M3U_World_4K
+- ARY QTV — Backup — https://aryqtvm.aryzap.com/v1/0183ea2a0eec0b8ed5941a38bc76/0183ea2a4e470b8ed5aa4d793457/ARYQTVH264_720p.m3u8
 ### custom.bolentertainment (2 streams)
-- Bol Entertainment — Pakistani — https://s2.ideationtec.live/BOL_Entertainment_HD/BOL_Entertainment_HD.m3u8#fb:M3U_World_4K
+- Bol Entertainment — Pakistani — https://s2.ideationtec.live/BOL_Entertainment_HD/BOL_Entertainment_HD.m3u8
 - Bol Entertainment — Not Playing — http://playlive.goonj.pk/bolentweb_480p/index.m3u8
 ### custom.channel.1 (3 streams)
 - Channel 1 — Bangladesh — https://stream.ottplus.live/live/channel_1_hd_abr/index.m3u8
@@ -377,7 +377,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Goldmines Movies — Backup — https://cdn.pishow.tv/ott/live/1461/master.m3u8
 ### greatmovies.uk (2 streams)
 - GREAT! movies — International — https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/playlist/amg01753-narrativeentert-greatmovies-samsunguk/playlist.m3u8
-- GREAT! movies — Backup — https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-greatmovies-samsunguk/playlist.m3u8#fb:M3U_World_4K
+- Great Movies — Backup — https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-greatmovies-samsunguk/playlist.m3u8
 ### greentv.bd (3 streams)
 - Green TV — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
 - Green TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/greentv.stream/index.m3u8
@@ -391,7 +391,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### historytv18.in@sd (5 streams)
 - History TV18 — Documentary & Wildlife — https://n18syndication.akamaized.net/bpk-tv/History_HD_NW18_MOB/output01/master.m3u8
 - History TV18 — Backup — http://198.195.239.50:8095/HISTORY.TV.18.HD/index.m3u8
-- History TV18 — Backup — https://n18syndication.akamaized.net/bpk-tv/History_TV18_Hindi_NW18_MOB/output01/master.m3u8#fb:M3U_World_4K
+- History TV18 HD — Backup — https://n18syndication.akamaized.net/bpk-tv/History_TV18_Hindi_NW18_MOB/output01/master.m3u8
 - History TV18 — Not Playing — https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
 - History TV18 — Not Playing — https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/ts-ap-s1-n1/playlist/amg01448-samsungindia-historychannelhindi-samsungin/playlist.m3u8
 ### humtv.pk (4 streams)
@@ -407,11 +407,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Insync — Indian Music — https://mumt04.tangotv.in/m18aqlK4INSYNC/index.m3u8
 - Insync — Backup — https://d1msejlow1t3l4.cloudfront.net/fta/insync/playlist.m3u8
 ### inwild.nl (5 streams)
-- INWILD — Documentary & Wildlife — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/ts-eu-w1-n2/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
-- INWILD — Backup — https://amg00861-terninternation-inwild-samsungau-3qrga.amagi.tv/playlist/amg00861-terninternation-inwild-samsungau/playlist.m3u8
-- INWILD — Backup — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
-- INWILD — Backup — https://amg00861-amg00861c7-stirr-us-8227.playouts.now.amagi.tv/playlist.m3u8
-- INWILD — Not Playing — https://amg00861-amg00861c7-firetv-us-4725.playouts.now.amagi.tv/playlist.m3u8
+- InWild — Documentary & Wildlife — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/ts-eu-w1-n2/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
+- InWild — Backup — https://amg00861-terninternation-inwild-samsungau-3qrga.amagi.tv/playlist/amg00861-terninternation-inwild-samsungau/playlist.m3u8
+- InWild — Backup — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
+- InWild — Backup — https://amg00861-amg00861c7-stirr-us-8227.playouts.now.amagi.tv/playlist.m3u8
+- InWild — Not Playing — https://amg00861-amg00861c7-firetv-us-4725.playouts.now.amagi.tv/playlist.m3u8
 ### jagonews24.bd (2 streams)
 - Jago News 24 — Bangladesh — https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8
 - Jago News 24 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/jago-news-24-1/index.m3u8
@@ -512,11 +512,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Music India — Indian Music — https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8
 - Music India — Backup — https://cdn.pishow.tv/ott/live/226/master.m3u8
 - Music India — Backup — http://198.195.239.50:8095/MUSIC.INDIA/index.m3u8
-### mytv.bd (4 streams)
+### mytv.bd (3 streams)
 - My TV — Bangladesh — https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8
 - My TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mytv-up-off.stream/index.m3u8
 - My TV — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8
-- My TV — Not Playing — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mytv-up-off.stream/index.m3u8
 ### nagoriktv.bd (3 streams)
 - Nagorik TV — Bangladesh — http://198.195.239.50:8095/NAGORIK.TV.HD/index.m3u8
 - Nagorik TV — Backup — http://livetv.akr4m.com:8080/bdtv/restrem/38.m3u8
@@ -571,7 +570,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Pitaara TV — Backup — https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8
 ### plex.tv.action.hollywood.movies.plex (2 streams)
 - Action Hollywood Movies — International — https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8
-- Action Hollywood Movies — Backup — https://amg01076-lightningintern-actionhollywood-samsungnz-82rry.amagi.tv/playlist/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8#fb:M3U_World_4K
+- Action Hollywood Movies — Backup — https://amg01076-lightningintern-actionhollywood-samsungnz-82rry.amagi.tv/playlist/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8
 ### pogo.in@sd (2 streams)
 - Pogo — Kids — https://stream.ottplus.live/live/pogo_sd_abr/index.m3u8
 - Pogo — Backup — http://198.195.239.50:8095/pogo/index.m3u8
@@ -645,7 +644,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Shanson TV — Backup — https://streaming.thestream.cyou/live/7009.m3u8
 ### shemaroobollywood.us (2 streams)
 - Shemaroo Bollywood — Indian Movies — https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8
-- Shemaroo Bollywood — Backup — https://amg00864-shemarooenterta-shemabollywood-ono-nlwbw.amagi.tv/playlist/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8#fb:M3U_World_4K
+- Shemaroo Bollywood — Backup — https://amg00864-shemarooenterta-shemabollywood-ono-nlwbw.amagi.tv/playlist/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8
 ### shemaroojosh.in@sd (2 streams)
 - Shemaroo Josh — Indian Movies — https://airtelapp.shemaroo.com/shemarooChumbakTV/smil:shemarooChumbakTVadp.smil/playlist.m3u8
 - Shemaroo Josh — Not Playing — https://mumt04.tangotv.in/m18aqlK4SHEMAROOJOSH/index.m3u8
@@ -698,7 +697,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Star Jalsha — Backup — https://flussonic.defineatoz.com/StarjalshaHD/tracks-v1a1/mono.m3u8
 - Star Jalsha — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
 - Star Jalsha — Backup — http://198.195.239.50:8095/starJalsha/index.m3u8
-- Star Jalsha — Backup — http://103.151.60.162:2122/play/a00w/index.m3u8#fb:M3U_World_4K
+- Star Jalsha — Backup — http://103.151.60.162:2122/play/a00w/index.m3u8
 ### star.jalsha.movies.in (4 streams)
 - Jalsha Movies — Indian Bangla — http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8
 - Jalsha Movies — Backup — http://103.151.60.162:2122/play/a00x/index.m3u8
@@ -777,7 +776,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Zee Bangla Sonar — Backup — https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-cinema-2/index.m3u8
 ### zeebollywood.in@sd (2 streams)
 - Zee Bollywood — Indian Movies — https://stream.ottplus.live/live/zee_bollywood_abr/index.m3u8
-- Zee Bollywood — Backup — https://drk6xq0vhn.gpcdn.net/live/zee_bollywood_abr/index.m3u8#fb:M3U_World_4K
+- Zee Bollywood ᴴᴰ — Backup — https://drk6xq0vhn.gpcdn.net/live/zee_bollywood_abr/index.m3u8
 ### zeecinema.in@hd (5 streams)
 - Zee Cinema — Indian Movies — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ZeeCinemaAPAC.m3u8
 - Zee Cinema — Backup — http://103.151.60.162:2122/play/a024/index.m3u8
@@ -837,7 +836,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1020**
+- Healthy/local references: **1019**
 - missing: **8**
 - broken-local: **0**
 - external: **0**
@@ -847,12 +846,12 @@ None.
 - unvalidated-image: **0**
 - other: **0**
 - missing — Kolkata TV [custom.kolkatatv] — 
-- missing — STAR BANGLA [custom.starbangla] — 
-- missing — TARA TV [custom.taratv] — 
+- missing — Star Bangla [custom.starbangla] — 
+- missing — Tara TV [custom.taratv] — 
 - missing — A Plus [custom.aplus] — 
-- missing — AJJ ENTERTAINMENT HD [custom.ajj.entertainment] — 
+- missing — AJJ Entertainment HD [custom.ajj.entertainment] — 
 - missing — Express Entertainment [custom.expressentertainment] — 
-- missing — SAB ENTERTAINMENT [custom.sabentertainment] — 
+- missing — SAB Entertainment [custom.sabentertainment] — 
 
 ## Protected Primary Entries
 
