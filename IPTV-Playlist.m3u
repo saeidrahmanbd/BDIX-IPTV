@@ -223,7 +223,7 @@ https://mumt03.tangotv.in/Dsly5z3HGOLDMINESACTION/index.m3u8
 https://streams.tangotv.in/GOLDMINESBOLLYWOOD/ORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="GoldminesMovies.in@SD" tvg-name="Goldmines Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines-movies.png" tvg-chno="322" channel-id="GoldminesMovies.in@SD" group-title="Indian Movies",Goldmines Movies
 https://streams.tangotv.in/GOLDMINEMOVIES/ORIGIN/index.m3u8
-#EXTINF:-1 tvg-id="custom.hindi.movies" tvg-name="Hindi Movies" tvg-chno="405" channel-id="custom.hindi.movies" group-title="Indian Movies",Hindi Movies
+#EXTINF:-1 tvg-id="custom.hindi.movies" tvg-name="Hindi Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hindi-movies.svg" tvg-chno="405" channel-id="custom.hindi.movies" group-title="Indian Movies",Hindi Movies
 https://live20.bozztv.com/giatvplayout7/giatv-209612/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="KairaliWe.in@SD" tvg-name="Kairali We" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kairali-we.png" tvg-chno="336" channel-id="KairaliWe.in@SD" group-title="Indian Movies",Kairali We
 https://streams.tangotv.in/WETV/ORIGIN/index.m3u8
