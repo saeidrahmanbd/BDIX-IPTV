@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T07:10:49+00:00",
+  "generated": "2026-10-04T07:55:07+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -501,9 +501,10 @@
         "asports.pk"
       ],
       "groups": [
+        "New Backup",
         "Sports"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },
@@ -1126,9 +1127,10 @@
         "cartoonnetwork.uk"
       ],
       "groups": [
-        "Kids"
+        "Kids",
+        "New Backup"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },
@@ -1947,6 +1949,34 @@
       "primary": 0,
       "backup": 0
     },
+    "custom.eurosport": {
+      "names": [
+        "Eurosport"
+      ],
+      "ids": [
+        "custom.eurosport"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
+    "custom.fast.sports": {
+      "names": [
+        "Fast Sports"
+      ],
+      "ids": [
+        "custom.fast.sports"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "custom.flowers": {
       "names": [
         "Flowers US"
@@ -1967,6 +1997,20 @@
       ],
       "ids": [
         "custom.fon.music"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
+    "custom.golf.sports": {
+      "names": [
+        "Golf Sports"
+      ],
+      "ids": [
+        "custom.golf.sports"
       ],
       "groups": [
         "New Channels"
@@ -2330,6 +2374,20 @@
       "primary": 1,
       "backup": 2
     },
+    "custom.star.sports.4k": {
+      "names": [
+        "Star Sports 4K"
+      ],
+      "ids": [
+        "custom.star.sports.4k"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "custom.star.sports.sl.1": {
       "names": [
         "Star Sports SL 1"
@@ -2455,6 +2513,20 @@
       ],
       "streams": 1,
       "primary": 1,
+      "backup": 0
+    },
+    "custom.unite8.2": {
+      "names": [
+        "UNITE8 2"
+      ],
+      "ids": [
+        "custom.unite8.2"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
       "backup": 0
     },
     "custom.wild.flix.hindi": {
@@ -5517,9 +5589,10 @@
         "nickelodeon.in@sd"
       ],
       "groups": [
-        "Kids"
+        "Kids",
+        "New Backup"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },
@@ -5531,9 +5604,10 @@
         "nickjr.in@sd"
       ],
       "groups": [
-        "Kids"
+        "Kids",
+        "New Backup"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },
@@ -5861,9 +5935,10 @@
         "pogo.in@sd"
       ],
       "groups": [
-        "Kids"
+        "Kids",
+        "New Backup"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },
@@ -6834,9 +6909,10 @@
         "sonic.in@sd"
       ],
       "groups": [
-        "Kids"
+        "Kids",
+        "New Backup"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },
@@ -7016,15 +7092,17 @@
     },
     "sonysportsten1": {
       "names": [
+        "Sony Sports Ten 1",
         "Sony Ten 1"
       ],
       "ids": [
         "sonysportsten1.in"
       ],
       "groups": [
+        "New Channels",
         "Sports"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },
@@ -7051,9 +7129,10 @@
         "sonysportsten3.in"
       ],
       "groups": [
+        "New Backup",
         "Sports"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },
@@ -7093,9 +7172,10 @@
         "sonyyay.in@sd"
       ],
       "groups": [
-        "Kids"
+        "Kids",
+        "New Backup"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },
@@ -7239,9 +7319,10 @@
       ],
       "groups": [
         "Backup",
-        "International"
+        "International",
+        "New Backup"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
       "backup": 1
     },
@@ -7253,9 +7334,10 @@
         "starmoviesselect.in@hd"
       ],
       "groups": [
-        "International"
+        "International",
+        "New Backup"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },

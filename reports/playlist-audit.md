@@ -1,18 +1,18 @@
 # Playlist Audit
-Generated: **2026-10-04T07:10:49.416458+00:00**
+Generated: **2026-10-04T07:55:07.731644+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **948**
-- Unique channel IDs: **596**
-- IDs with multiple streams: **172**
-- Duplicate stream URLs: **0**
+- Playlist entries: **964**
+- Unique channel IDs: **601**
+- IDs with multiple streams: **182**
+- Duplicate stream URLs: **2**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **1**
+- IDs with multiple logo references: **2**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **0**
 - Duplicate primary identities: **1**
@@ -66,6 +66,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Asian TV — Bangladesh — https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/index.m3u8
 - Asian TV — Backup — https://stream.ottplus.live/live/asian_tv_abr/index.m3u8
 - Asian TV — Not Playing — https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/tracks-v1a1/mono.ts.m3u8
+### asports.pk (2 streams)
+- A Sports — Sports — https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/tracks-v1a1/mono.ts.m3u8
+- A Sports — New Backup — http://198.195.239.50:8095/A.SPORTS.HD/index.m3u8
 ### atnbangla.bd (6 streams)
 - ATN Bangla — Bangladesh — http://198.195.239.50:8095/ATN.BANGLA.HD/index.m3u8
 - ATN Bangla — Backup — http://tvsen5.aynascope.net/atnbangla/index.m3u8
@@ -138,6 +141,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### btvnational.bd (2 streams)
 - BTV National — Bangladesh — http://198.195.239.50:8095/btv/index.m3u8
 - BTV National — Backup — http://198.195.239.50:8095/BTV.HD/index.m3u8
+### cartoonnetwork.uk (2 streams)
+- Cartoon Network — Kids — https://drk6xq0vhn.gpcdn.net/live/cn_sd_abr/index.m3u8
+- Cartoon Network — New Backup — http://198.195.239.50:8095/cartoonNetwork/index.m3u8
 ### cgtndocumentary.cn (2 streams)
 - CGTN Documentary — Documentary & Wildlife — https://english-livebkali.cgtn.com/live/doccgtn_1.m3u8
 - CGTN Documentary — Backup — https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8
@@ -505,6 +511,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### nhbollyraga.in (2 streams)
 - NH BollyRaga — Indian Music — https://cc-up9j649x4thrj.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-up9j649x4thrj/SBUM/RunnTV/BollyRaga_IN/BollyRaga_IN.m3u8
 - NH BollyRaga — Backup — https://jmp2.uk/stvp-IN460001373
+### nickelodeon.in@sd (2 streams)
+- Nick — Kids — http://198.195.239.50:8095/nick/index.m3u8
+- Nick — New Backup — http://198.195.239.50:8095/NICK/index.m3u8
+### nickjr.in@sd (2 streams)
+- Nick Jr — Kids — http://198.195.239.50:8095/nickJr/index.m3u8
+- Nick Jr — New Backup — http://198.195.239.50:8095/NICK.JR/index.m3u8
 ### nrbtv.ca (2 streams)
 - NRB TV — Bangladesh — https://app.ncare.live/live-orgin/nrb-eu.stream/playlist.m3u8
 - NRB TV — Backup — https://uni6rtmp.tulix.tv/nrbnetwork/myStream.sdp/playlist.m3u8
@@ -531,6 +543,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Pitaara TV — Indian Movies — https://d2lk5u59tns74c.cloudfront.net/out/v1/500a6b45f5ae41dda445d912b59eaa09/index.m3u8
 - Pitaara TV — Backup — https://streams.tangotv.in/PITAARA/ORIGIN/index.m3u8
 - Pitaara TV — Backup — https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8
+### pogo.in@sd (2 streams)
+- Pogo — Kids — https://stream.ottplus.live/live/pogo_sd_abr/index.m3u8
+- Pogo — New Backup — http://198.195.239.50:8095/pogo/index.m3u8
 ### powerturktv.tr (2 streams)
 - PowerTürk TV — International — https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8
 - PowerTürk TV — Backup — https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8
@@ -607,6 +622,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Somoy TV — Backup — https://tvsen5.aynaott.com/somoytv/tracks-v1a1/mono.m3u8
 - Somoy TV — Backup — https://tvsen5.aynascope.net/somoytv/mono.m3u8
 - Somoy TV — Backup — https://tvsen6.aynaott.com/4XcqdovJzbbC9WdJA9gk/index.m3u8
+### sonic.in@sd (2 streams)
+- Sonic — Kids — http://198.195.239.50:8095/sonic/index.m3u8
+- Sonic — New Backup — http://198.195.239.50:8095/SONIC/index.m3u8
 ### sony.aath.in (4 streams)
 - Sony AATH — Indian Bangla — http://198.195.239.50:8095/sonyAath/index.m3u8
 - Sony AATH — Backup — http://198.195.239.50:8095/SONY.AAT/index.m3u8
@@ -630,9 +648,18 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### sonysab.in@hd (2 streams)
 - Sony SAB — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/sub_hd_abr/index.m3u8
 - Sony SAB — New Backup — https://bldcmprod-cdn.toffeelive.com/cdn/live/sonysab_hd/playlist.m3u8
+### sonysportsten1.in (2 streams)
+- Sony Ten 1 — Sports — https://drk6xq0vhn.gpcdn.net/live/ten_1_hd_720/index.m3u8
+- Sony Sports Ten 1 — New Channels — http://198.195.239.50:8095/SONY.SPORTS.1HD/index.m3u8
 ### sonysportsten2.in (2 streams)
 - Sony Ten 2 — Sports — http://198.195.239.50:8095/SONY.SPORTS2.HD/index.m3u8
 - Sony Ten 2 — Backup — https://stream.ottplus.live/live/ten_2_hd_abr/live/ten_2_hd_720/index.m3u8
+### sonysportsten3.in (2 streams)
+- Sony Sports Ten 3 — Sports — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98863.ts
+- Sony Sports Ten 3 — New Backup — http://198.195.239.50:8095/SONY.SPORTS.3/index.m3u8
+### sonyyay.in@sd (2 streams)
+- Sony Yay — Kids — https://drk6xq0vhn.gpcdn.net/live/sony_yay_abr/index.m3u8
+- Sony Yay — New Backup — http://198.195.239.50:8095/sonyYay/index.m3u8
 ### star.jalsha.in (5 streams)
 - Star Jalsha — Indian Bangla — https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8
 - Star Jalsha — Indian Bangla — http://198.195.239.50:8095/starJalsha/index.m3u8
@@ -651,9 +678,13 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### stargoldselect.in@sd (2 streams)
 - Star Gold Select — Indian Movies — http://51.75.127.199:3141/stargoldselecthd/index.m3u8
 - Star Gold Select — Not Playing — http://202.70.146.135:8000/play/a068/index.m3u8
-### starmovies.in@sd (2 streams)
+### starmovies.in@sd (3 streams)
 - Star Movies — International — http://51.75.127.199:3141/starmovies/index.m3u8
 - Star Movies — Backup — http://51.75.127.199:3141/starmovieshd/index.m3u8
+- Star Movies — New Backup — http://198.195.239.50:8095/STAR.MOVIES.HD/index.m3u8
+### starmoviesselect.in@hd (2 streams)
+- Star Movies Select — International — http://51.75.127.199:3141/starmoviesselecthd/index.m3u8
+- Star Movies Select — New Backup — http://198.195.239.50:8095/STAR.MOVIES.SEL.HD/index.m3u8
 ### starplus.in@sd (3 streams)
 - Star Plus — Indian Entertainment — http://livetv.akr4m.com:8080/bdtv/restrem/62.m3u8
 - Star Plus — Backup — http://198.195.239.50:8095/STAR.PLUS.HD/index.m3u8
@@ -769,7 +800,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **948**
+- Healthy/local references: **964**
 - missing: **0**
 - broken-local: **0**
 - external: **0**
@@ -779,6 +810,7 @@ None.
 - unvalidated-image: **0**
 - other: **0**
 - multiple-logo-references — probashitv.ca@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/probashi-tv-news.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/probashi-tv.png
+- multiple-logo-references — sonysportsten1.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-1.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-ten-1.png
 
 ## Protected Primary Entries
 
