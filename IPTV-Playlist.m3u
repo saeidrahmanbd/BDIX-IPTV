@@ -33,7 +33,7 @@ https://stream.ottplus.live/live/channel_1_hd_abr/index.m3u8
 http://livetv.akr4m.com:8080/bdtv/restrem/16.m3u8
 #EXTINF:-1 tvg-id="custom.channel.16" tvg-name="Channel 16" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-16.png" channel-id="custom.channel.16" group-title="Bangladesh",Channel 16
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel16bd.stream/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="custom.channel.16" tvg-name="Channel 16" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-16.png" channel-id="custom.channel.16" group-title="Bangladesh",Channel 16
+#EXTINF:-1 tvg-id="custom.channel.16" tvg-name="Channel 16" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-16.png" channel-id="custom.channel.16" group-title="Backup",Channel 16
 https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8
 #EXTINF:-1 tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png" tvg-chno="22" channel-id="Channel24.bd" group-title="Bangladesh",Channel 24
 http://198.195.239.50:8095/CHANNEL.24.HD/index.m3u8
