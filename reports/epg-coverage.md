@@ -1,14 +1,14 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-04T15:11:06+00:00**
+Generated: **2026-10-04T15:23:48+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **269**
-- Channels with an EPG mapping: **225**
-- Current/future programme coverage: **212/269 (78.8%)**
+- Active Indian channels audited: **268**
+- Channels with an EPG mapping: **224**
+- Current/future programme coverage: **211/268 (78.7%)**
 - No guide mapping found: **44**
 
 ## Source Status
@@ -18,7 +18,7 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 - **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 68994 programme rows
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19291 programme rows
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml — 394 channel IDs; 0 current/future IDs; 660 programme rows
-- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 20 current/future IDs; 62556 programme rows
+- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 19 current/future IDs; 62556 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 765 channel IDs; 758 current/future IDs; 80035 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1479 channel IDs; 1455 current/future IDs; 94938 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 283 channel IDs; 283 current/future IDs; 13810 programme rows

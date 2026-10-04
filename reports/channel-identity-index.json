@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T15:11:25+00:00",
+  "generated": "2026-10-04T15:24:07+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -1000,20 +1000,6 @@
       "primary": 1,
       "backup": 5
     },
-    "bolentertainment": {
-      "names": [
-        "Bol Entertainment"
-      ],
-      "ids": [
-        "bolentertainment.pk@hd"
-      ],
-      "groups": [
-        "Not Playing"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 0
-    },
     "bollywoodfilm": {
       "names": [
         "Bollywood Film"
@@ -1505,12 +1491,12 @@
       "primary": 1,
       "backup": 0
     },
-    "custom.ajjentertainment": {
+    "custom.ajj.entertainment": {
       "names": [
         "AJJ ENTERTAINMENT"
       ],
       "ids": [
-        "custom.ajjentertainment"
+        "custom.ajj.entertainment"
       ],
       "groups": [
         "Pakistani"
@@ -1627,9 +1613,10 @@
         "custom.bolentertainment"
       ],
       "groups": [
-        "Backup"
+        "Backup",
+        "Not Playing"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 0,
       "backup": 1
     },
@@ -2348,20 +2335,6 @@
       ],
       "groups": [
         "Pakistani"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "custom.shemaroobollywood": {
-      "names": [
-        "Shemaroo Bollywood"
-      ],
-      "ids": [
-        "custom.shemaroobollywood"
-      ],
-      "groups": [
-        "Indian Movies"
       ],
       "streams": 1,
       "primary": 1,
@@ -7272,11 +7245,12 @@
         "shemaroobollywood.us"
       ],
       "groups": [
+        "Backup",
         "Indian Movies"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "shemaroojosh": {
       "names": [
