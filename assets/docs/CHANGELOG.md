@@ -40,5 +40,10 @@
 
 ## 2026-10-04
 
-- 🖼️ **3 logo reference(s) corrected**
+- 🗑️ **3 channel(s) removed**
+
+### Removed channels
+- Isaac TV
+- PMI TV
+- Praise TV
 
