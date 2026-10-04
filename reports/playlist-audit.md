@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-04T05:40:13.883400+00:00**
+Generated: **2026-10-04T05:44:14.334310+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -14,7 +14,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **2**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **4**
+- Logo exceptions: **3**
 - Duplicate primary identities: **1**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
@@ -767,8 +767,8 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **942**
-- missing: **1**
+- Healthy/local references: **943**
+- missing: **0**
 - broken-local: **0**
 - external: **3**
 - non-png: **0**
@@ -776,7 +776,6 @@ None.
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
-- missing — Hindi Movies [custom.hindi.movies] — 
 - external — Discovery Science [custom.discovery.science] — https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/AS6s-JQBv9knK3AHDTZb/posters/eab8fd0f-9351-464c-b45e-332f38b49f4b.webp
 - external — Discovery Turbo [custom.discovery.turbo] — https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/Ay6s-JQBv9knK3AHJTY1/posters/e8f65578-e82d-4e4a-a1ff-073becc5bd71.webp
 - external — Music Bangla [custom.music.bangla] — https://www.lyngsat.com/logo/tv/mm/music-bangla-tv.png
