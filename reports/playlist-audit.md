@@ -1,22 +1,22 @@
 # Playlist Audit
-Generated: **2026-10-04T05:25:11.010116+00:00**
+Generated: **2026-10-04T05:35:00.919393+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **959**
+- Playlist entries: **956**
 - Unique channel IDs: **601**
-- IDs with multiple streams: **177**
-- Duplicate stream URLs: **3**
+- IDs with multiple streams: **175**
+- Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **3**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **5**
+- Logo exceptions: **4**
 - Duplicate primary identities: **1**
-- Primary channel-number collisions: **0**
+- Primary channel-number collisions: **1**
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
 - Suspicious URL credentials/syntax: **0**
@@ -45,9 +45,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Aakaash Aath — Indian Bangla — https://mumt03.tangotv.in/Dsly5z3HAAKASHAATH/index.m3u8
 - Aakaash Aath — Backup — http://tvsen5.aynascope.net/Wm9Lv2RjZGT6/index.m3u8
 - Aakaash Aath — Backup — https://tvsen5.aynaott.com/Wm9Lv2RjZGT6/index.m3u8
-### aamarbangla.in (2 streams)
-- Amar Bangla — Indian Bangla — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8
-- Amar Bangla — Backup — http://115.187.41.216:8080/hls/amarbangla/index.m3u8
 ### anandatv.bd (5 streams)
 - Ananda TV — Bangladesh — https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
 - Ananda TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/anandatv.stream/index.m3u8
@@ -143,9 +140,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### bsfilm.pk@sd (2 streams)
 - BS Film — Pakistani — https://lbgo.bozztv.com/ssh101/ssh101/bsfilm/playlist.m3u8
 - BS Film — Backup — https://live20.bozztv.com/akamaissh101/ssh101/bsfilm/playlist.m3u8
-### btvchattogram.bd (2 streams)
-- BTV Chattogram — Bangladesh — https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/index.m3u8
-- BTV Chattogram — Backup — https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/index.m3u8
 ### btvnational.bd (2 streams)
 - BTV National — Bangladesh — http://198.195.239.50:8095/btv/index.m3u8
 - BTV National — Backup — http://198.195.239.50:8095/BTV.HD/index.m3u8
@@ -325,7 +319,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Ekushey TV — Backup — https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
 - Ekushey TV — Not Playing — https://tvsen5.aynaott.com/SyQuXz8sC3TB/index.m3u8
 - Ekushey TV — Not Playing — https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8
-### enterr10bangla.in@sd (9 streams)
+### enterr10bangla.in@sd (8 streams)
 - Enterr10 Bangla — Indian Bangla — http://198.195.239.50:8095/enter10Bangla/index.m3u8
 - Enterr10 Bangla — Backup — http://198.195.239.50:8095/ENTER10.BANGLA/index.m3u8
 - Enterr10 Bangla — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-10-bangla-1/index.m3u8
@@ -333,7 +327,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Enterr10 Bangla — Backup — https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8
 - Enterr10 Bangla — Backup — https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8
 - Enterr10 Bangla — Backup — https://live-bangla.akamaized.net/liveabr/playlist.m3u8
-- Enterr10 Bangla — Backup — https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
 - Enterr10 Bangla — Backup — https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_240p/chunks.m3u8
 ### epicbharat.in@sd (2 streams)
 - Epic Bharat — Indian Entertainment — https://mumt06.tangotv.in/qYyB8fXVEPICTV/index.m3u8
@@ -743,7 +736,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Primary Channel-Number Collisions
 
-None.
+- **305** — &pictures, Star Jalsha
 
 ## Malformed EXTINF Entries
 
@@ -788,20 +781,19 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **954**
-- missing: **4**
-- broken-local: **1**
-- external: **0**
+- Healthy/local references: **952**
+- missing: **1**
+- broken-local: **0**
+- external: **3**
 - non-png: **0**
 - invalid-dimensions: **0**
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
-- missing — Jalsha Bangla BD [custom.jalsha.bangla.bd] — 
-- broken-local — Hindi Movies [custom.hindi.movies] — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hindi-movies.png
-- missing — Discovery Science [custom.discovery.science] — 
-- missing — Discovery Turbo [custom.discovery.turbo] — 
-- missing — Music Bangla [custom.music.bangla] — 
+- missing — Hindi Movies [custom.hindi.movies] — 
+- external — Discovery Science [custom.discovery.science] — https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/AS6s-JQBv9knK3AHDTZb/posters/eab8fd0f-9351-464c-b45e-332f38b49f4b.webp
+- external — Discovery Turbo [custom.discovery.turbo] — https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/Ay6s-JQBv9knK3AHJTY1/posters/e8f65578-e82d-4e4a-a1ff-073becc5bd71.webp
+- external — Music Bangla [custom.music.bangla] — https://www.lyngsat.com/logo/tv/mm/music-bangla-tv.png
 - multiple-logo-references — 9xjalwa.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jalwa.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalwa.png
 - multiple-logo-references — jalwatv.pk@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalwa-tv.png
 - multiple-logo-references — probashitv.ca@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/probashi-tv-news.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/probashi-tv.png

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T05:25:11+00:00",
+  "generated": "2026-10-04T05:35:00+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -201,9 +201,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 3,
+      "streams": 2,
       "primary": 1,
-      "backup": 2
+      "backup": 1
     },
     "aaryaatv": {
       "names": [
@@ -1112,12 +1112,11 @@
         "btvchattogram.bd"
       ],
       "groups": [
-        "Backup",
         "Bangladesh"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "btvnational": {
       "names": [
@@ -1991,6 +1990,20 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.fon.music": {
+      "names": [
+        "FON Music"
+      ],
+      "ids": [
+        "custom.fon.music"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "custom.hindi.movie.classic.24": {
       "names": [
         "Hindi Movie Classic 24"
@@ -2442,20 +2455,6 @@
       ],
       "streams": 1,
       "primary": 1,
-      "backup": 0
-    },
-    "custom.tnt.music": {
-      "names": [
-        "TNT Music"
-      ],
-      "ids": [
-        "custom.tnt.music"
-      ],
-      "groups": [
-        "New Channels"
-      ],
-      "streams": 1,
-      "primary": 0,
       "backup": 0
     },
     "custom.toon.goggles.junior": {
@@ -3424,9 +3423,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 9,
+      "streams": 8,
       "primary": 1,
-      "backup": 8
+      "backup": 7
     },
     "epicbharat": {
       "names": [
