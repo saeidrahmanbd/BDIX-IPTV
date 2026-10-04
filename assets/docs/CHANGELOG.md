@@ -40,5 +40,14 @@
 
 ## 2026-10-04
 
-- 🖼️ **10 logo reference(s) corrected**
+- 🗑️ **5 channel(s) removed**
+- 🖼️ **8 logo reference(s) corrected**
+- 📡 **6 stream(s) replaced**
+
+### Removed channels
+- Drama 24
+- Hindi Movie Classic 24
+- 8XM
+- Jalwa TV
+- Quran
 
