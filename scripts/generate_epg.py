@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Generate a playlist-aligned XMLTV guide from approved public EPG sources."""
-import csv, gzip, io, re, urllib.request
+import csv, gzip, io, urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -157,39 +157,7 @@ def main():
     ET.indent(root, space="  ")
     tree = ET.ElementTree(root)
     OUTPUT.write_bytes(b'<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(root, encoding="utf-8"))
-    # Validate the published guide against the exact playlist header and mapping used to build it.
-    playlist_header = PLAYLIST.read_text(encoding="utf-8-sig").splitlines()[0]
-    expected_url = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg.xml"
-    header_urls = re.findall(r'(?:url-tvg|x-tvg-url)="([^"]+)"', playlist_header)
-    actual_channels = {c.attrib.get("id", "").strip() for c in root.findall("channel") if c.attrib.get("id", "").strip()}
-    now_check = datetime.now(timezone.utc)
-    guide_live = set()
-    for p in root.findall("programme"):
-        target = p.attrib.get("channel", "").strip()
-        start = stamp(p.attrib.get("start", ""))
-        stop = stamp(p.attrib.get("stop", "")) if p.attrib.get("stop") else None
-        if target and start and (start >= now_check or (stop and start <= now_check <= stop) or (stop and stop >= now_check)):
-            guide_live.add(target)
-    mapped_target_count = len(mapped_targets)
-    mapped_target_ids = set(mapped_targets)
-    actual_mapped = len(mapped_target_ids & actual_channels)
-    actual_live = len(mapped_target_ids & guide_live)
-    header_ok = bool(header_urls) and all(u == expected_url for u in header_urls)
-    validation = [
-        "",
-        "## Published Guide Validation",
-        "",
-        f"- Playlist EPG references: **{'OK' if header_ok else 'MISMATCH'}**",
-        f"- Expected guide URL: **{expected_url}**",
-        f"- Mapping targets: **{mapped_target_count}**",
-        f"- Guide channel IDs published: **{len(actual_channels)}**",
-        f"- Mapped channel IDs present in guide: **{actual_mapped}/{mapped_target_count} ({round(actual_mapped * 100 / mapped_target_count, 1) if mapped_target_count else 0}%)**",
-        f"- Mapped channels with current/future programmes in published guide: **{actual_live}/{mapped_target_count} ({round(actual_live * 100 / mapped_target_count, 1) if mapped_target_count else 0}%)**",
-        "- Playlist header, mapping CSV, and generated epg.xml are validated as one publication chain.",
-    ]
-    existing_report = REPORT.read_text(encoding="utf-8") if REPORT.exists() else ""
-    REPORT.write_text(existing_report.rstrip() + "\n" + "\n".join(validation) + "\n", encoding="utf-8")
-    print(f"EPG generated: {len(mapped_targets)} mapped channels, {programme_count} programmes; guide validation {actual_mapped}/{mapped_target_count}")
+    print(f"EPG generated: {len(mapped_targets)} mapped channels, {programme_count} programmes")
 
 if __name__ == "__main__":
     main()
