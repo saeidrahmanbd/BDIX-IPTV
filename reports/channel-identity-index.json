@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T05:49:07+00:00",
+  "generated": "2026-10-04T05:55:02+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -2548,7 +2548,7 @@
         "custom.zee.bangla.cinema"
       ],
       "groups": [
-        "New Backup"
+        "New Channels"
       ],
       "streams": 1,
       "primary": 0,
