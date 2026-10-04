@@ -167,7 +167,7 @@ http://103.182.83.246/hls/snbcinema.m3u8
 http://198.195.239.50:8095/sonyAath/index.m3u8
 #EXTINF:-1 tvg-id="Star.Jalsha.in" tvg-name="Star Jalsha" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" tvg-chno="289" channel-id="Star.Jalsha.in" group-title="Indian Bangla",Star Jalsha
 https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8
-#EXTINF:-1 tvg-id="Star.Jalsha.in" tvg-name="Star Jalsha HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" tvg-chno="306" channel-id="Star.Jalsha.in" group-title="Indian Bangla",Star Jalsha HD
+#EXTINF:-1 tvg-id="Star.Jalsha.in" tvg-name="Star Jalsha HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" tvg-chno="306" channel-id="Star.Jalsha.in" group-title="Backup",Star Jalsha HD
 http://198.195.239.50:8095/starJalsha/index.m3u8
 #EXTINF:-1 tvg-id="SunBangla.in@SD" tvg-name="Sun Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-bangla.png" tvg-chno="290" channel-id="SunBangla.in@SD" group-title="Indian Bangla",Sun Bangla
 http://27.124.71.27/Sun_Bangla/index.m3u8
@@ -2023,25 +2023,21 @@ http://198.195.239.50:8095/STAR.MOVIES.SEL.HD/index.m3u8
 http://198.195.239.50:8095/SONY.SPORTS.3/index.m3u8
 #EXTINF:-1 tvg-id="StarMovies.in@SD" tvg-name="Star Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-movies-2087bb49.png" channel-id="StarMovies.in@SD" group-title="New Backup",Star Movies
 http://198.195.239.50:8095/STAR.MOVIES.HD/index.m3u8
-#EXTINF:-1 tvg-id="Sonic.in@SD" tvg-name="Sonic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sonic.png" channel-id="Sonic.in@SD" group-title="New Backup",Sonic
-http://198.195.239.50:8095/SONIC/index.m3u8
-#EXTINF:-1 tvg-id="Nickelodeon.in@SD" tvg-name="Nick" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick.png" channel-id="Nickelodeon.in@SD" group-title="New Backup",Nick
-http://198.195.239.50:8095/NICK/index.m3u8
 #EXTINF:-1 tvg-id="NickJr.in@SD" tvg-name="Nick Jr" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png" channel-id="NickJr.in@SD" group-title="New Backup",Nick Jr
 http://198.195.239.50:8095/NICK.JR/index.m3u8
 #EXTINF:-1 tvg-id="ASports.pk" tvg-name="A Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-sports-5485adff.png" channel-id="ASports.pk" group-title="New Backup",A Sports
 http://198.195.239.50:8095/A.SPORTS.HD/index.m3u8
-#EXTINF:-1 tvg-id="HistoryTV18.in@SD" , tvg-name="History TV18" , tvg-logo="" , tvg-language="eng" , channel-id="HistoryTV18.in@SD" , tvg-country="IN" , group-title="New Backup",History TV18
+#EXTINF:-1 tvg-id="HistoryTV18.in@SD" tvg-name="History TV18" tvg-logo="" tvg-language="eng" tvg-country="IN" channel-id="HistoryTV18.in@SD" group-title="New Backup",History TV18
 https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
-#EXTINF:-1 tvg-id="HistoryTV18.in@SD" , tvg-name="History TV18" , tvg-logo="" , tvg-language="eng" , channel-id="HistoryTV18.in@SD" , tvg-country="IN" , group-title="New Backup",History TV18
+#EXTINF:-1 tvg-id="HistoryTV18.in@SD" tvg-name="History TV18" tvg-logo="" tvg-language="eng" tvg-country="IN" channel-id="HistoryTV18.in@SD" group-title="New Backup",History TV18
 https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/ts-ap-s1-n1/playlist/amg01448-samsungindia-historychannelhindi-samsungin/playlist.m3u8
-#EXTINF:-1 tvg-id="famelack.FlqGAqnBqpvJeH" , tvg-name="INWILD" , tvg-logo="" , tvg-language="eng" , channel-id="famelack.FlqGAqnBqpvJeH" , tvg-country="IN" , group-title="New Backup",INWILD
+#EXTINF:-1 tvg-id="famelack.FlqGAqnBqpvJeH" tvg-name="INWILD" tvg-logo="" tvg-language="eng" tvg-country="IN" channel-id="famelack.FlqGAqnBqpvJeH" group-title="New Backup",INWILD
 https://amg00861-amg00861c7-firetv-us-4725.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="famelack.FlqGAqnBqpvJeH" , tvg-name="INWILD" , tvg-logo="" , tvg-language="eng" , channel-id="famelack.FlqGAqnBqpvJeH" , tvg-country="IN" , group-title="New Backup",INWILD
+#EXTINF:-1 tvg-id="famelack.FlqGAqnBqpvJeH" tvg-name="INWILD" tvg-logo="" tvg-language="eng" tvg-country="IN" channel-id="famelack.FlqGAqnBqpvJeH" group-title="New Backup",INWILD
 https://amg00861-amg00861c7-stirr-us-8227.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="famelack.FlqGAqnBqpvJeH" , tvg-name="INWILD" , tvg-logo="" , tvg-language="eng" , channel-id="famelack.FlqGAqnBqpvJeH" , tvg-country="IN" , group-title="New Backup",INWILD
+#EXTINF:-1 tvg-id="famelack.FlqGAqnBqpvJeH" tvg-name="INWILD" tvg-logo="" tvg-language="eng" tvg-country="IN" channel-id="famelack.FlqGAqnBqpvJeH" group-title="New Backup",INWILD
 https://amg00861-terninternation-inwild-samsungau-3qrga.amagi.tv/playlist/amg00861-terninternation-inwild-samsungau/playlist.m3u8
-#EXTINF:-1 tvg-id="StarSportsSelect2.in@HD" , tvg-name="Star Sports Select 2" , tvg-logo="" , tvg-language="eng" , channel-id="StarSportsSelect2.in@HD" , tvg-country="IN" , group-title="New Backup",Star Sports Select 2
+#EXTINF:-1 tvg-id="StarSportsSelect2.in@HD" tvg-name="Star Sports Select 2" tvg-logo="" tvg-language="eng" tvg-country="IN" channel-id="StarSportsSelect2.in@HD" group-title="New Backup",Star Sports Select 2
 https://tvsen7.aynascope.net/ssport2hd/index.m3u8
 #EXTINF:-1 tvg-id="GodStandsTV.pk@Urdu" tvg-name="God Stands TV Urdu" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="GodStandsTV.pk@Urdu" group-title="New Backup",God Stands TV Urdu
 https://online.godstands.tv:5443/WebRTCApp/streams/UrduStreaming.m3u8
