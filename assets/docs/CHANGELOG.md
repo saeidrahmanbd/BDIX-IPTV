@@ -40,8 +40,11 @@
 
 ## 2026-10-04
 
-- 🗑️ **1 channel(s) removed**
+- 🗑️ **4 channel(s) removed**
 
 ### Removed channels
-- 30A Music
+- Gangaur
+- HMTV
+- Metro TV (India)
+- Pasand TV
 
