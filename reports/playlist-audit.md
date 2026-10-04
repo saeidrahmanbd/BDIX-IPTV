@@ -1,11 +1,11 @@
 # Playlist Audit
-Generated: **2026-10-04T05:58:37.711844+00:00**
+Generated: **2026-10-04T07:10:49.416458+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **946**
+- Playlist entries: **948**
 - Unique channel IDs: **596**
 - IDs with multiple streams: **172**
 - Duplicate stream URLs: **0**
@@ -195,11 +195,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Enter TV — Bangladesh — https://live1.entertv.com.bd/entertv/tracks-v1a1/mono.m3u8
 - Enter TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-tv-1/index.m3u8
 - Enter TV — Backup — https://live1.entertv.com.bd/entertv/index.fmp4.m3u8
-### custom.love.nature (4 streams)
+### custom.love.nature (5 streams)
 - Love Nature — Documentary & Wildlife — http://27.124.71.27/Love_Nature/index.m3u8
 - Love Nature — Backup — https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8
 - Love Nature — Backup — https://mumbai-edge.smartplaytv.in/LoveNature/index.m3u8
 - Love Nature — Backup — https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
+- Love Nature — New Backup — http://198.195.239.50:8095/LOVE.NATURE/index.m3u8
 ### custom.madani.tv (2 streams)
 - Madani TV — Religious — https://tvsen3.aynaott.com/z24qLsqV/index.m3u8
 - Madani TV — Backup — http://198.195.239.50:8095/MADANI.TV.HD/index.m3u8
@@ -469,9 +470,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### moviesphere.us (2 streams)
 - MovieSphere — International — https://aegis-cloudfront-1.tubi.video/8b127a5b-3054-4f39-93a2-1c4aab9ef5ff/playlist.m3u8
 - MovieSphere — Backup — https://amg00353-lionsgatestudio-moviesphere-xumo-zh5u0.amagi.tv/playlist.m3u8
-### musicindia.in@sd (2 streams)
+### musicindia.in@sd (3 streams)
 - Music India — Indian Music — https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8
 - Music India — Backup — https://cdn.pishow.tv/ott/live/226/master.m3u8
+- Music India — New Backup — http://198.195.239.50:8095/MUSIC.INDIA/index.m3u8
 ### mytv.bd (4 streams)
 - My TV — Bangladesh — https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8
 - My TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mytv-up-off.stream/index.m3u8
@@ -767,7 +769,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **946**
+- Healthy/local references: **948**
 - missing: **0**
 - broken-local: **0**
 - external: **0**

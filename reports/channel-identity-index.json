@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T05:58:37+00:00",
+  "generated": "2026-10-04T07:10:49+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -2082,9 +2082,10 @@
       ],
       "groups": [
         "Backup",
-        "Documentary & Wildlife"
+        "Documentary & Wildlife",
+        "New Backup"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
       "backup": 3
     },
@@ -5193,9 +5194,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Music"
+        "Indian Music",
+        "New Backup"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
       "backup": 1
     },

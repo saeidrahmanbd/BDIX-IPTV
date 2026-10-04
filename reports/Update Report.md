@@ -1,27 +1,27 @@
 # Update Report
 
-_Last generated: **2026-10-04 05:59 UTC**_
+_Last generated: **2026-10-04 07:11 UTC**_
 
 | Metric | Current |
 |---|---:|
-| Streams | **946** |
+| Streams | **948** |
 | Active Channel Identities | **566** |
 | Active Primary Streams | **567** |
 | Bangladesh | **58** |
 | India | **239** |
 | Backup Streams | **298** |
 | New Channels | **7** |
-| New Backup Streams | **5** |
+| New Backup Streams | **7** |
 | Local Logos | **100.0%** |
 | EPG Programme Coverage | **79.0%** |
 | EPG Mapping | **83.2%** |
 | Stream Health Tested | **879** |
-| Stream Health Failures | **114** |
+| Stream Health Failures | **118** |
 | Persistent Failures | **107** |
 | Near-Duplicate URL Families | **0** |
 | Audit Blocking Issues | **1** |
 | Pre-Publish Gate | **BLOCK** |
-| Pre-Publish Gate Generated | **2026-10-04T05:59:19+00:00** |
+| Pre-Publish Gate Generated | **2026-10-04T07:11:33+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -50,14 +50,14 @@ _Last generated: **2026-10-04 05:59 UTC**_
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-04T05:58:37.711844+00:00** |
-| EPG coverage | **2026-10-04T05:58:21+00:00** |
-| Stream health | **2026-10-04T05:59:19+00:00** |
-| Pre-publish gate | **2026-10-04T05:59:19+00:00** |
+| Playlist audit | **2026-10-04T07:10:49.416458+00:00** |
+| EPG coverage | **2026-10-04T07:10:34+00:00** |
+| Stream health | **2026-10-04T07:11:33+00:00** |
+| Pre-publish gate | **2026-10-04T07:11:33+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
-- Latest entries change: **946 → 946**
-- Latest health failures: **119 → 114**
+- Latest entries change: **946 → 948**
+- Latest health failures: **114 → 118**
 
 Historical records are retained in reports/maintenance-history.json.
