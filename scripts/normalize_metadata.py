@@ -218,7 +218,7 @@ lines=P.read_text(encoding="utf-8-sig").replace("\r","").splitlines()
 # Preserve the Playlist Studio category registry.  It is part of the playlist
 # contract and must survive every maintenance normalization pass, including
 # categories that are currently empty (New Channels, New Backup, Not Playing).
-CATEGORY_REGISTRY=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","New Channels","New Backup","Not Playing"]
+CATEGORY_REGISTRY=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","Not Playing"]
 category_line="#PLAYLIST-STUDIO-CATEGORIES:"+json.dumps(CATEGORY_REGISTRY,ensure_ascii=False,separators=(",",":"))
 # Remove only blank lines and other legacy Studio directives; the canonical
 # category registry is restored immediately below.
