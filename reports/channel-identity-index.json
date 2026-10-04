@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T16:17:13+00:00",
+  "generated": "2026-10-04T16:40:00+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -352,11 +352,12 @@
         "anandatv.bd"
       ],
       "groups": [
-        "Backup"
+        "Backup",
+        "Bangladesh"
       ],
       "streams": 4,
-      "primary": 0,
-      "backup": 4
+      "primary": 1,
+      "backup": 3
     },
     "anandtv": {
       "names": [
@@ -497,11 +498,10 @@
         "asiantv.bd"
       ],
       "groups": [
-        "Backup",
-        "Bangladesh"
+        "Backup"
       ],
-      "streams": 3,
-      "primary": 1,
+      "streams": 2,
+      "primary": 0,
       "backup": 2
     },
     "asports": {
@@ -2079,20 +2079,6 @@
       ],
       "groups": [
         "Documentary & Wildlife"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "custom.hummasala": {
-      "names": [
-        "Hum Masala"
-      ],
-      "ids": [
-        "custom.hummasala"
-      ],
-      "groups": [
-        "Pakistani"
       ],
       "streams": 1,
       "primary": 1,
@@ -4311,11 +4297,12 @@
         "hummasala.pk"
       ],
       "groups": [
+        "Backup",
         "Pakistani"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "humtv": {
       "names": [

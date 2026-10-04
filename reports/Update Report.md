@@ -1,10 +1,10 @@
 # Update Report
 
-_Last generated: **2026-10-04 16:17 UTC**_
+_Last generated: **2026-10-04 16:40 UTC**_
 
 | Metric | Current |
 |---|---:|
-| Streams | **1027** |
+| Streams | **1026** |
 | Active Channel Identities | **591** |
 | Active Primary Streams | **591** |
 | Bangladesh | **57** |
@@ -15,18 +15,18 @@ _Last generated: **2026-10-04 16:17 UTC**_
 | Local Logos | **99.5%** |
 | EPG Programme Coverage | **78.7%** |
 | EPG Mapping | **83.6%** |
-| Stream Health Tested | **974** |
-| Stream Health Failures | **118** |
-| Persistent Failures | **114** |
+| Stream Health Tested | **973** |
+| Stream Health Failures | **119** |
+| Persistent Failures | **113** |
 | Near-Duplicate URL Families | **0** |
 | Audit Blocking Issues | **4** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-04T16:17:59+00:00** |
+| Pre-Publish Gate Generated | **2026-10-04T16:40:48+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
-- Same-name / different-ID collisions: **1**
+- Same-name / different-ID collisions: **0**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
@@ -50,14 +50,14 @@ _Last generated: **2026-10-04 16:17 UTC**_
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-04T16:17:13.015450+00:00** |
-| EPG coverage | **2026-10-04T16:16:58+00:00** |
-| Stream health | **2026-10-04T16:17:59+00:00** |
-| Pre-publish gate | **2026-10-04T16:17:59+00:00** |
+| Playlist audit | **2026-10-04T16:40:00.059784+00:00** |
+| EPG coverage | **2026-10-04T16:39:36+00:00** |
+| Stream health | **2026-10-04T16:40:48+00:00** |
+| Pre-publish gate | **2026-10-04T16:40:48+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
-- Latest entries change: **1027 → 1027**
-- Latest health failures: **118 → 118**
+- Latest entries change: **1027 → 1026**
+- Latest health failures: **118 → 119**
 
 Historical records are retained in reports/maintenance-history.json.
