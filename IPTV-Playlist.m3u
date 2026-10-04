@@ -144,7 +144,7 @@ http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8
 http://103.67.97.46/0.ts
 #EXTINF:-1 tvg-id="KhushbooBangla.in@SD" tvg-name="Khushboo Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/khushboo-bangla.png" tvg-chno="268" channel-id="KhushbooBangla.in@SD" tvg-language="ben" tvg-country="IN" group-title="Indian Bangla",Khushboo Bangla
 https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/index.m3u8
-#EXTINF:-1 tvg-name="Kolkata TV" group-title="Indian Bangla" tvg-id="custom.kolkatatv" channel-id="custom.kolkatatv" tvg-chno="1073",Kolkata TV
+#EXTINF:-1 tvg-name="Kolkata TV" group-title="Indian Bangla" tvg-id="custom.kolkatatv" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kolkata-tv.svg" channel-id="custom.kolkatatv" tvg-chno="1073",Kolkata TV
 https://cdn.ottlive.co.in/kolkatatv/index.m3u8
 #EXTINF:-1 tvg-id="MONTVBangla.in" tvg-name="Mon Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mon-bangla-4a53249503.png" tvg-chno="269" channel-id="MONTVBangla.in" group-title="Indian Bangla",Mon Bangla
 http://115.187.41.216:8080/hls/montvbangla/index.m3u8
@@ -168,13 +168,13 @@ https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/index.m3u8
 http://103.182.83.246/hls/snbcinema.m3u8
 #EXTINF:-1 tvg-id="Sony.Aath.in" tvg-name="Sony AATH" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-aath.png" tvg-chno="230" channel-id="Sony.Aath.in" group-title="Indian Bangla",Sony AATH
 http://198.195.239.50:8095/sonyAath/index.m3u8
-#EXTINF:-1 tvg-name="Star Bangla" group-title="Indian Bangla" tvg-id="custom.starbangla" channel-id="custom.starbangla" tvg-chno="1074",Star Bangla
+#EXTINF:-1 tvg-name="Star Bangla" group-title="Indian Bangla" tvg-id="custom.starbangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-bangla.svg" channel-id="custom.starbangla" tvg-chno="1074",Star Bangla
 http://103.151.60.162:2122/play/a0f5/index.m3u8
 #EXTINF:-1 tvg-id="Star.Jalsha.in" tvg-name="Star Jalsha" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" tvg-chno="289" channel-id="Star.Jalsha.in" group-title="Indian Bangla",Star Jalsha
 https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8
 #EXTINF:-1 tvg-id="SunBangla.in@SD" tvg-name="Sun Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-bangla.png" tvg-chno="290" channel-id="SunBangla.in@SD" group-title="Indian Bangla",Sun Bangla
 http://27.124.71.27/Sun_Bangla/index.m3u8
-#EXTINF:-1 tvg-name="Tara TV" group-title="Indian Bangla" tvg-id="custom.taratv" channel-id="custom.taratv" tvg-chno="1075",Tara TV
+#EXTINF:-1 tvg-name="Tara TV" group-title="Indian Bangla" tvg-id="custom.taratv" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tara-tv.svg" channel-id="custom.taratv" tvg-chno="1075",Tara TV
 https://legitpro.co.in/taratv/taratv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="UBangla.in" tvg-name="U Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/u-bangla.png" tvg-chno="293" channel-id="UBangla.in" group-title="Indian Bangla",U Bangla
 https://stream.ottlive.co.in/ubangla/index.m3u8
@@ -654,9 +654,9 @@ https://da86m1sqpm3o0.cloudfront.net/28072023/smil:zeetamil1.smil/playlist.m3u8
 https://drk6xq0vhn.gpcdn.net/live/zee_tv_hd_abr/index.m3u8
 #EXTINF:-1 tvg-chno="717" channel-id="8XM.pk@SD" tvg-id="8XM.pk@SD" tvg-name="8XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png" tvg-country="PK" group-title="Pakistani",8XM
 https://cdn4.mjunoon.tv:8087/streamtest/131M/chunks.m3u8
-#EXTINF:-1 tvg-name="A Plus" group-title="Pakistani" tvg-id="custom.aplus" channel-id="custom.aplus" tvg-chno="1079",A Plus
+#EXTINF:-1 tvg-name="A Plus" group-title="Pakistani" tvg-id="custom.aplus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.svg" channel-id="custom.aplus" tvg-chno="1079",A Plus
 https://s3.ideationtec.live/A_Plus/A_Plus.m3u8
-#EXTINF:-1 tvg-name="AJJ Entertainment HD" group-title="Pakistani" tvg-id="custom.ajj.entertainment" channel-id="custom.ajj.entertainment" tvg-chno="1080",AJJ Entertainment HD
+#EXTINF:-1 tvg-name="AJJ Entertainment HD" group-title="Pakistani" tvg-id="custom.ajj.entertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ajj-entertainment.svg" channel-id="custom.ajj.entertainment" tvg-chno="1080",AJJ Entertainment HD
 https://s2.ideationtec.live/AAJ_Entertainment/AAJ_Entertainment.m3u8
 #EXTINF:-1 tvg-id="aurLIFE.pk" tvg-name="aur LIFE" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aurlife.png" tvg-chno="1057" channel-id="aurLIFE.pk" tvg-country="PK" group-title="Pakistani",aur LIFE
 https://s3.ideationtec.live/Aur_Life/Aur_Life.m3u8
@@ -668,7 +668,7 @@ https://lbgo.bozztv.com/ssh101/ssh101/bsfilm/playlist.m3u8
 https://lbgo.bozztv.com/ssh101/ssh101/bstv/playlist.m3u8
 #EXTINF:-1 tvg-id="DiscoverPakistan.pk@SD" tvg-name="Discover Pakistan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discover-pakistan.png" tvg-chno="69" channel-id="DiscoverPakistan.pk@SD" group-title="Pakistani",Discover Pakistan
 https://livecdn.live247stream.com/discoverpakistan/web/playlist.m3u8
-#EXTINF:-1 tvg-name="Express Entertainment" group-title="Pakistani" tvg-id="custom.expressentertainment" channel-id="custom.expressentertainment" tvg-chno="1081",Express Entertainment
+#EXTINF:-1 tvg-name="Express Entertainment" group-title="Pakistani" tvg-id="custom.expressentertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/express-entertainment.svg" channel-id="custom.expressentertainment" tvg-chno="1081",Express Entertainment
 https://s3.ideationtec.live/Express_Entertainment/Express_Entertainment.m3u8
 #EXTINF:-1 tvg-id="FalakTV.pk@SD" tvg-name="Falak TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/falak-tv.png" tvg-chno="70" channel-id="FalakTV.pk@SD" group-title="Pakistani",Falak TV
 https://falak.rst.ae/index.m3u8
@@ -704,7 +704,7 @@ http://stream.pardesitv.online/pardesi/index.m3u8
 https://cdn.live247stream.com/pmi/tv/playlist.m3u8
 #EXTINF:-1 tvg-chno="516" tvg-id="PraiseTV.pk@SD" tvg-name="Praise TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/praise-tv.png" tvg-country="PK" channel-id="PraiseTV.pk@SD" group-title="Pakistani",Praise TV
 https://livecdn.live247stream.com/praise/tv/playlist.m3u8
-#EXTINF:-1 tvg-name="SAB Entertainment" group-title="Pakistani" tvg-id="custom.sabentertainment" channel-id="custom.sabentertainment" tvg-chno="1083",SAB Entertainment
+#EXTINF:-1 tvg-name="SAB Entertainment" group-title="Pakistani" tvg-id="custom.sabentertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sab-entertainment.svg" channel-id="custom.sabentertainment" tvg-chno="1083",SAB Entertainment
 https://s1.ideationtec.live/SAB_Entertainment/SAB_Entertainment.m3u8
 #EXTINF:-1 tvg-id="AndpriveHD.in" tvg-name="&Privé" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-prive-hd.png" tvg-chno="705" channel-id="AndpriveHD.in" group-title="International",&Privé
 http://198.195.239.50:8095/AND.PRIVE.HD/index.m3u8
