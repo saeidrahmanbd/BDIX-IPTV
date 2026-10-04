@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-04T15:28:57.471010+00:00**
+Generated: **2026-10-04T15:33:09.160723+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -16,10 +16,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Protected primary-entry changes: **0**
 - Logo exceptions: **7**
 - Not Playing logo exceptions: **1**
-- Duplicate primary identities: **0**
+- Duplicate primary identities: **1**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **0**
-- Malformed EXTINF entries: **1**
+- Primary entries missing channel numbers: **5**
+- Malformed EXTINF entries: **2**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 
@@ -200,15 +200,15 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - ARY Q TV — Religious — https://aryqtvm.aryzap.com/v1/0183ea2a0eec0b8ed5941a38bc76/0183ea2a4e470b8ed5aa4d793457/ARYQTVH264_1080p.m3u8
 - ARY Q TV — Backup — https://aryqtvm.aryzap.com/v1/0183ea2a0eec0b8ed5941a38bc76/0183ea2a4e470b8ed5aa4d793457/ARYQTVH264_720p.m3u8#fb:M3U_World_4K
 ### custom.bolentertainment (2 streams)
-- Bol Entertainment — Backup — https://s2.ideationtec.live/BOL_Entertainment_HD/BOL_Entertainment_HD.m3u8#fb:M3U_World_4K
+- Bol Entertainment — Pakistani — https://s2.ideationtec.live/BOL_Entertainment_HD/BOL_Entertainment_HD.m3u8#fb:M3U_World_4K
 - Bol Entertainment — Not Playing — http://playlive.goonj.pk/bolentweb_480p/index.m3u8
 ### custom.channel.1 (3 streams)
 - Channel 1 — Bangladesh — https://stream.ottplus.live/live/channel_1_hd_abr/index.m3u8
 - Channel 1 — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel1bd.stream/playlist.m3u8
 - Channel 1 — Backup — https://drk6xq0vhn.gpcdn.net/live/channel_1_hd_abr/index.m3u8
 ### custom.channel.16 (2 streams)
-- Channel 16 — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel16bd.stream/tracks-v1a1/mono.m3u8
-- Channel 16 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8
+- Channel 16 — Bangladesh — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel16bd.stream/tracks-v1a1/mono.m3u8
+- Channel 16 — Bangladesh — https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8
 ### custom.enter.tv (3 streams)
 - Enter TV — Bangladesh — https://live1.entertv.com.bd/entertv/tracks-v1a1/mono.m3u8
 - Enter TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-tv-1/index.m3u8
@@ -664,7 +664,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Sony AATH — Backup — https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8
 - Sony AATH — Backup — https://stream.ottplus.live/live/sony_aath_abr/index.m3u8
 ### sonybbcearth.in@sd (2 streams)
-- Sony BBC Earth — Backup — http://198.195.239.50:8095/SONY.BBC.EARTH.HD/index.m3u8
+- Sony BBC Earth — Documentary & Wildlife — http://198.195.239.50:8095/SONY.BBC.EARTH.HD/index.m3u8
 - Sony BBC Earth — Not Playing — https://amg00793-bbcstudios-amg00793c3-lg-us-2528.playouts.now.amagi.tv/playlist/amg00793-bbcstudios-bbcearta-lgus/playlist.m3u8
 ### sonyentertainmenttelevision.in@sd (7 streams)
 - Sony Entertainment TV — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/sony_ent_sd_abr/index.m3u8
@@ -794,7 +794,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-None.
+- **custom.channel.16** in **Bangladesh** — Channel 16, Channel 16
 
 ## Primary Channel-Number Collisions
 
@@ -803,6 +803,7 @@ None.
 ## Malformed EXTINF Entries
 
 - line 4: missing stream URL
+- line 5: missing stream URL
 
 ## Suspicious URLs
 

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T15:28:04+00:00",
+  "generated": "2026-10-04T15:32:14+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -352,11 +352,10 @@
         "anandatv.bd"
       ],
       "groups": [
-        "Backup",
-        "Bangladesh"
+        "Backup"
       ],
-      "streams": 5,
-      "primary": 1,
+      "streams": 4,
+      "primary": 0,
       "backup": 4
     },
     "anandtv": {
@@ -1613,12 +1612,12 @@
         "custom.bolentertainment"
       ],
       "groups": [
-        "Backup",
-        "Not Playing"
+        "Not Playing",
+        "Pakistani"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "custom.bon.voyage": {
       "names": [
@@ -1685,11 +1684,11 @@
         "custom.channel.16"
       ],
       "groups": [
-        "Backup"
+        "Bangladesh"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 2
+      "primary": 2,
+      "backup": 0
     },
     "custom.colors.cineplex": {
       "names": [
@@ -6201,11 +6200,11 @@
         "pardesitv.ca"
       ],
       "groups": [
-        "Backup"
+        "Pakistani"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "pbskids": {
       "names": [
@@ -7487,12 +7486,12 @@
         "sonybbcearth.in@sd"
       ],
       "groups": [
-        "Backup",
+        "Documentary & Wildlife",
         "Not Playing"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "sonyentertainmenttelevision": {
       "names": [

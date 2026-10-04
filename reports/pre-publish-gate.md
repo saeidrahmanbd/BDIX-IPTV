@@ -1,17 +1,17 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-10-04T15:28:57+00:00**
+Generated: **2026-10-04T15:33:09+00:00**
 
-Status: **PASS**
+Status: **BLOCK**
 
-- Current entries: **1029**
+- Current entries: **1028**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams quarantined: **0**
 - Review entries reclassified: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
-- Primary entries missing tvg-chno: **0**
+- Primary entries missing tvg-chno: **5**
 - Entries added this run: **0**
 - Entries removed this run: **0**
 - Entries modified this run: **0**
@@ -27,4 +27,6 @@ Removed: none
 Modified metadata entries: 0
 Quarantined primary streams: none
 
-No blocking conditions detected.
+## Blocking Reasons
+- duplicate primary identities: 1
+- primary entries missing tvg-chno: 5
