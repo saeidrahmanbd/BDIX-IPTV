@@ -40,6 +40,5 @@
 
 ## 2026-10-04
 
-- 🔄 **10 backup stream(s) updated**
-- 📡 **19 stream(s) replaced**
+- No meaningful playlist changes detected.
 
