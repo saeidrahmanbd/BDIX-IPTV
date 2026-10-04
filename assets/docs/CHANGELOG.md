@@ -40,5 +40,12 @@
 
 ## 2026-10-04
 
-- No meaningful playlist changes detected.
+- 🗑️ **4 channel(s) removed**
+- 🖼️ **1 logo reference(s) corrected**
+
+### Removed channels
+- AXN Latin America
+- Disney Channel Hungary
+- Movie Dome Family
+- beIN Sports XTRA en Espanol
 
