@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T05:35:00+00:00",
+  "generated": "2026-10-04T05:40:13+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -100,21 +100,6 @@
       "primary": 1,
       "backup": 0
     },
-    "8xm": {
-      "names": [
-        "8XM"
-      ],
-      "ids": [
-        "8xm.pk"
-      ],
-      "groups": [
-        "Backup",
-        "Pakistani"
-      ],
-      "streams": 3,
-      "primary": 1,
-      "backup": 2
-    },
     "9xjalwa": {
       "names": [
         "9X Jalwa"
@@ -126,9 +111,9 @@
         "Backup",
         "Indian Music"
       ],
-      "streams": 4,
+      "streams": 3,
       "primary": 1,
-      "backup": 3
+      "backup": 2
     },
     "9xjhakaas": {
       "names": [
@@ -1645,7 +1630,7 @@
         "custom.cbn.tv.usa"
       ],
       "groups": [
-        "Bangladesh"
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -1849,20 +1834,6 @@
       "primary": 1,
       "backup": 0
     },
-    "custom.drama24": {
-      "names": [
-        "Drama 24"
-      ],
-      "ids": [
-        "custom.drama24.bd"
-      ],
-      "groups": [
-        "Bangladesh"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "custom.duck": {
       "names": [
         "Duck TV"
@@ -2003,21 +1974,6 @@
       "streams": 1,
       "primary": 0,
       "backup": 0
-    },
-    "custom.hindi.movie.classic.24": {
-      "names": [
-        "Hindi Movie Classic 24"
-      ],
-      "ids": [
-        "custom.hindi.movie.classic.24"
-      ],
-      "groups": [
-        "Backup",
-        "Indian Movies"
-      ],
-      "streams": 2,
-      "primary": 1,
-      "backup": 1
     },
     "custom.hindi.movies": {
       "names": [
@@ -2213,20 +2169,6 @@
       ],
       "groups": [
         "Kids"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "custom.quran": {
-      "names": [
-        "Quran"
-      ],
-      "ids": [
-        "custom.quran"
-      ],
-      "groups": [
-        "Religious"
       ],
       "streams": 1,
       "primary": 1,
@@ -4309,21 +4251,6 @@
       "groups": [
         "Backup",
         "Bangladesh"
-      ],
-      "streams": 2,
-      "primary": 1,
-      "backup": 1
-    },
-    "jalwatv": {
-      "names": [
-        "Jalwa TV"
-      ],
-      "ids": [
-        "jalwatv.pk@sd"
-      ],
-      "groups": [
-        "Backup",
-        "Pakistani"
       ],
       "streams": 2,
       "primary": 1,

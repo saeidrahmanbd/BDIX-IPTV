@@ -12,7 +12,6 @@ Bangladesh,Bangla Vision,BanglaVision.bd,,,NO_GUIDE_HIT,Auto-maintained; verify 
 Bangladesh,Bengali Beats,custom.bengali.beats,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Bijoy TV,BijoyTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Boishakhi TV,BoishakhiTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Bangladesh,CBN TV USA,custom.cbn.tv.usa,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel 1,custom.channel.1,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel 16,custom.channel.16,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel 24,Channel24.bd,LIVETV_LIVETVCHANNEL_TV_24 | 4261,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -25,7 +24,6 @@ Bangladesh,Desh TV,DeshTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/na
 Bangladesh,Deshe Bideshe,custom.deshe.bideshe,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Deshi TV,DeshiTV.ca@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Doyel TV,DoyelTV.ca@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Bangladesh,Drama 24,custom.drama24.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Duronto TV,DurontoTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Ekattor TV,EkattorTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Ekhon TV,EkhonTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -269,7 +267,6 @@ Indian Movies,Goldmines 2,Goldmines2.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verif
 Indian Movies,Goldmines Action,GoldminesAction.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Goldmines Bollywood,GoldminesBollywood.in@SD,Goldmines.Bollywood.in | LIVETV_LIVETVCHANNEL_GOLDMINES_BOLLYWOOD,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Goldmines Movies,GoldminesMovies.in@SD,Goldmines.Movies.in | ts1499,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/tsepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-Indian Movies,Hindi Movie Classic 24,custom.hindi.movie.classic.24,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Hindi Movies,custom.hindi.movies,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Kairali We,KairaliWe.in@SD,Kairali.WE.TV.in | LIVETV_LIVETVCHANNEL_KAIRALI_WE | jtv731 | 731,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/jioepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,MBC Bollywood,MBCBollywood.ae,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -374,6 +371,7 @@ International,BBC Drama,BBCDrama.uk,,,NO_GUIDE_HIT,Auto-maintained; verify ambig
 International,BBC News,BBCNews.uk,ts188 | LIVETV_LIVETVCHANNEL_BBC_NEWS,https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/tsepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 International,Bang Bang TV,BangBangTV,6590,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 International,Baraza Music TV,BarazaMusicTV.gr,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+International,CBN TV USA,custom.cbn.tv.usa,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,CMC-USA Country Music Channel,CMCUSACountryMusicChannel.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,Cinevault Westerns,CinevaultWesterns.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,Circle,Circle.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -519,7 +517,6 @@ New Channels,Discovery Turbo,custom.discovery.turbo,Discovery.Turbo.in | Discove
 New Channels,FON Music,custom.fon.music,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Music Bangla,custom.music.bangla,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,YRF Music,custom.yrf.music,YRF.Music.in | jtv2753 | 2753,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/jioepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-Pakistani,8XM,8XM.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,A-Plus TV,APlusTV.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,BS Film,BSFilm.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,BSTV,BSTV.pk@SD,BSTV.in | jtv2765 | 2765,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/jioepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -531,7 +528,6 @@ Pakistani,Geo Kahani,GeoKahani.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguo
 Pakistani,Geo News,GeoNews.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,Hum Masala,HUMMasala.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,Hum TV,HumTV.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Pakistani,Jalwa TV,JalwaTV.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,Joo Music,JooMusic.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,Masala TV,MasalaTV.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,aur LIFE,aurLIFE.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -549,7 +545,6 @@ Religious,Makkah Live,custom.makkah.live,,,NO_GUIDE_HIT,Auto-maintained; verify 
 Religious,Makkah TV,MakkahTV.sa,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Religious,Medina Live,MedinaLive.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Religious,Peace TV Bangla,PeaceTVBangla.ae,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Religious,Quran,custom.quran,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Religious,Quran TV,QuranTV.iq,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Sports,A Sports,ASports.pk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Sports,Astro Cricbuzz,AstroCricket.my,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.

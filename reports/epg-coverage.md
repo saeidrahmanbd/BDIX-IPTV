@@ -1,15 +1,15 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-04T05:34:45+00:00**
+Generated: **2026-10-04T05:39:57+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **239**
+- Active Indian channels audited: **238**
 - Channels with an EPG mapping: **198**
-- Current/future programme coverage: **188/239 (78.7%)**
-- No guide mapping found: **41**
+- Current/future programme coverage: **188/238 (79.0%)**
+- No guide mapping found: **40**
 
 ## Source Status
 
@@ -54,7 +54,6 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Movies | Goldmines 2 | Goldmines2.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Goldmines Action | GoldminesAction.in | - | NO_GUIDE_HIT |
 | Indian Music | Hindi Hits | HindiHits.in | - | NO_GUIDE_HIT |
-| Indian Movies | Hindi Movie Classic 24 | custom.hindi.movie.classic.24 | - | NO_GUIDE_HIT |
 | Indian Movies | Hindi Movies | custom.hindi.movies | - | NO_GUIDE_HIT |
 | Indian Bangla | Jtv Classic | custom.jtv.classic | - | NO_GUIDE_HIT |
 | Indian Entertainment | Kairali Arabia | KairaliArabia.in | - | NO_GUIDE_HIT |

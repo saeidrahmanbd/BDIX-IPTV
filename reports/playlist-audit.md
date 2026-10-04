@@ -1,41 +1,36 @@
 # Playlist Audit
-Generated: **2026-10-04T05:35:00.919393+00:00**
+Generated: **2026-10-04T05:40:13.883400+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **956**
-- Unique channel IDs: **601**
-- IDs with multiple streams: **175**
+- Playlist entries: **946**
+- Unique channel IDs: **596**
+- IDs with multiple streams: **172**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **3**
+- IDs with multiple logo references: **2**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **4**
 - Duplicate primary identities: **1**
-- Primary channel-number collisions: **1**
+- Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
 - Suspicious URL credentials/syntax: **0**
-- Signed/tokenized stream URLs: **14**
+- Signed/tokenized stream URLs: **11**
 
 ## Duplicate IDs
 
 ### 7smusic.in@sd (2 streams)
 - 7S Music — Indian Music — https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8
 - 7S Music — Backup — https://cdn.pishow.tv/ott/live/1257/master.m3u8
-### 8xm.pk (3 streams)
-- 8XM — Pakistani — https://vodzong.mjunoon.tv:8087/streamtest/8XM-131/playlist.m3u8
-- 8XM — Backup — https://cdn4.mjunoon.tv:8087/streamtest/131M/chunks.m3u8
-- 8XM — Backup — https://iptvlive.ahmed-bd-org.workers.dev/8xm-1/index.m3u8
-### 9xjalwa.in (4 streams)
-- 9X Jalwa — Indian Music — https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/playlist.m3u8
+### 9xjalwa.in (3 streams)
+- 9X Jalwa — Indian Music — https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8
 - 9X Jalwa — Backup — https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/70fca4d1-156e-4c03-baa4-9a4b602e33d5/0.m3u8
 - 9X Jalwa — Backup — https://mumt03.tangotv.in/Dsly5z3H9XJALWA/index.m3u8
-- 9X Jalwa — Backup — https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8
 ### 9xm.in@sd (4 streams)
 - 9XM — Indian Music — https://cc-706183qeo55ez.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-706183qeo55ez/DIYC/PMSL/9X/9XMusic_IN/9XMusic_IN.m3u8
 - 9XM — Backup — http://198.195.239.50:8095/9XM.MUSIC/index.m3u8
@@ -200,9 +195,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Enter TV — Bangladesh — https://live1.entertv.com.bd/entertv/tracks-v1a1/mono.m3u8
 - Enter TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-tv-1/index.m3u8
 - Enter TV — Backup — https://live1.entertv.com.bd/entertv/index.fmp4.m3u8
-### custom.hindi.movie.classic.24 (2 streams)
-- Hindi Movie Classic 24 — Indian Movies — https://vods2.aynaott.com/hindimovies/index.m3u8
-- Hindi Movie Classic 24 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/hindi-movie-classic-24-1/index.m3u8
 ### custom.love.nature (4 streams)
 - Love Nature — Documentary & Wildlife — http://27.124.71.27/Love_Nature/index.m3u8
 - Love Nature — Backup — https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8
@@ -393,9 +385,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### jagonews24.bd (2 streams)
 - Jago News 24 — Bangladesh — https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8
 - Jago News 24 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/jago-news-24-1/index.m3u8
-### jalwatv.pk@sd (2 streams)
-- Jalwa TV — Pakistani — https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/live/135M/chunks.m3u8
-- Jalwa TV — Backup — https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
 ### jamunatv.bd (5 streams)
 - Jamuna TV — Bangladesh — http://198.195.239.50:8095/JAMUNA.TV/index.m3u8
 - Jamuna TV — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/jamuna-tv/index.m3u8
@@ -736,7 +725,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Primary Channel-Number Collisions
 
-- **305** — &pictures, Star Jalsha
+None.
 
 ## Malformed EXTINF Entries
 
@@ -752,12 +741,9 @@ None.
 - **Colors Super** — Indian Entertainment — https://d1rc86nwwc9fag.cloudfront.net/260723/smil:colorssuper1.smil/playlist.m3u8?hdnts=[REDACTED]
 - **Zee Kannada** — Indian Entertainment — https://yuppnimresmum.akamaized.net/28072023/smil:zeekannadahd.smil/playlist.m3u8?hdnts=[REDACTED]
 - **Songdew TV** — International — https://yuppnimrestreammum.akamaized.net/181224/smil:songdewtv.smil/playlist.m3u8?hdnts=[REDACTED]
-- **Moonbug Kids** — Kids — https://tvsen6.aynaott.com/MoonbugKids/index.m3u8?e=1784102587&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
-- **SuperToons TV** — Kids — https://d3bxvshzgfq6in.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-8a0c583l9gryw/feed/samsung/streams/SUPERTOONS_EN/master.m3u8?token=[REDACTED]&ads.device_did=%7BPSID%7D&ads.device_dnt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D&ads.ssai_vendor=SSSLIVE&ads.service_id=GBBD5100001HL
 - **WOW Kidz Hindi** — Kids — https://yuppparoriglin.akamaized.net/181224/smil:wowkidzhindi.smil/playlist.m3u8?hdnts=[REDACTED]
 - **WOW Kidz Tamil** — Kids — https://yuppparoriglin.akamaized.net/181224/smil:wowkidztam.smil/playlist.m3u8?hdnts=[REDACTED]
 - **WOW Kidz Telugu** — Kids — https://yuppparoriglin.akamaized.net/181224/smil:wowkidztelgu.smil/playlist.m3u8?hdnts=[REDACTED]
-- **Marquee Sports Network** — Sports — https://tvsen6.aynaott.com/MarqueeSportsNetwork/index.m3u8?e=1779283796&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=[REDACTED]
 - **Darshana TV** — Backup — https://yuppparoriglin.akamaized.net/181224/smil:darshanatv.smil/playlist.m3u8?hdnts=[REDACTED]
 - **Studio Yuva** — Backup — https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=[REDACTED]
 - **Ekhon TV** — Not Playing — https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8?e=1784102563&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
@@ -781,7 +767,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **952**
+- Healthy/local references: **942**
 - missing: **1**
 - broken-local: **0**
 - external: **3**
@@ -795,7 +781,6 @@ None.
 - external — Discovery Turbo [custom.discovery.turbo] — https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/Ay6s-JQBv9knK3AHJTY1/posters/e8f65578-e82d-4e4a-a1ff-073becc5bd71.webp
 - external — Music Bangla [custom.music.bangla] — https://www.lyngsat.com/logo/tv/mm/music-bangla-tv.png
 - multiple-logo-references — 9xjalwa.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jalwa.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalwa.png
-- multiple-logo-references — jalwatv.pk@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalwa-tv.png
 - multiple-logo-references — probashitv.ca@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/probashi-tv-news.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/probashi-tv.png
 
 ## Protected Primary Entries
