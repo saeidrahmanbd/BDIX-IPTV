@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Generate a playlist-aligned XMLTV guide from approved public EPG sources."""
-import csv, gzip, io, urllib.request
+import csv, gzip, io, re, urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
