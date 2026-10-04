@@ -38,3 +38,10 @@
 
 - No meaningful playlist changes detected.
 
+## 2026-10-04
+
+- 🗑️ **1 channel(s) removed**
+
+### Removed channels
+- Amazing Discoveries TV
+
