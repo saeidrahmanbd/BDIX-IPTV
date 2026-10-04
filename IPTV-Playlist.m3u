@@ -1784,6 +1784,184 @@ http://198.195.239.50:8095/UNITE8.2.HD/index.m3u8
 #EXTINF:-1 tvg-id="custom.star.sports.4k" tvg-name="Star Sports 4K" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-4k.svg" tvg-chno="1077" channel-id="custom.star.sports.4k" group-title="New Channels",Star Sports 4K
 http://198.195.239.50:8095/STAR.SPORTS.4K/index.m3u8
 #EXTINF:-1 tvg-id="custom.golf.sports" tvg-name="Golf Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/golf-sports.svg" tvg-chno="1078" channel-id="custom.golf.sports" group-title="New Channels",Golf Sports
+#EXTINF:-1 tvg-id="AndyHaryana.in@SD" , tvg-name="Andy Haryana" , tvg-logo="" , tvg-language="hin" , channel-id="AndyHaryana.in@SD" , tvg-country="IN" , group-title="New Channels",Andy Haryana
+https://mumt03.tangotv.in/Dsly5z3HANDYHARYANA/index.m3u8
+#EXTINF:-1 tvg-id="AnjanTV.in@SD" , tvg-name="Anjan TV" , tvg-logo="" , tvg-language="hin" , channel-id="AnjanTV.in@SD" , tvg-country="IN" , group-title="New Channels",Anjan TV
+https://cdn.pishow.tv/ott/live/993/master.m3u8
+#EXTINF:-1 tvg-id="famelack.aCieJJd93x0RRz" , tvg-name="ANN Entertainment" , tvg-logo="" , tvg-language="urd" , channel-id="famelack.aCieJJd93x0RRz" , tvg-country="IN" , group-title="New Channels",ANN Entertainment
+https://5dd3981940faa.streamlock.net/annmusic/annmusic/playlist.m3u8
+#EXTINF:-1 tvg-id="ApnaPunjabTV.ca@SD" , tvg-name="Apna Punjab TV" , tvg-logo="" , tvg-language="hin" , channel-id="ApnaPunjabTV.ca@SD" , tvg-country="IN" , group-title="New Channels",Apna Punjab TV
+https://plus.gigabitcdn.net/live-stream/apna-punjab-H3sE/playlist.m3u8
+#EXTINF:-1 tvg-id="AryanTVNational.in@SD" , tvg-name="Aryan TV National" , tvg-logo="" , tvg-language="hin" , channel-id="AryanTVNational.in@SD" , tvg-country="IN" , group-title="New Channels",Aryan TV National
+https://mumt04.tangotv.in/m18aqlK4ARYANTVNATIONAL/index.m3u8
+#EXTINF:-1 tvg-id="AyushTV.in@SD" , tvg-name="Ayush TV" , tvg-logo="" , tvg-language="kan" , channel-id="AyushTV.in@SD" , tvg-country="IN" , group-title="New Channels",Ayush TV
+https://mumt07.tangotv.in/zHjX9OFlAYUSHTV/index.m3u8
+#EXTINF:-1 tvg-id="BVG.in@SD" , tvg-name="BVG" , tvg-logo="" , tvg-language="hin" , channel-id="BVG.in@SD" , tvg-country="IN" , group-title="New Channels",BVG
+https://mumt05.tangotv.in/87NeALx2BVG/index.m3u8
+#EXTINF:-1 tvg-id="CalvaryTV.in@SD" , tvg-name="Calvary TV" , tvg-logo="" , tvg-language="tel" , channel-id="CalvaryTV.in@SD" , tvg-country="IN" , group-title="New Channels",Calvary TV
+https://cdn.pishow.tv/ott/live/963/master.m3u8
+#EXTINF:-1 tvg-id="CCV.in@SD" , tvg-name="CCV" , tvg-logo="" , tvg-language="mal" , channel-id="CCV.in@SD" , tvg-country="IN" , group-title="New Channels",CCV
+https://5a1178b42cc03.streamlock.net/8212/8212/playlist.m3u8
+#EXTINF:-1 tvg-id="famelack.ioAW5Hy7e9f7fU" , tvg-name="Chithiram" , tvg-logo="" , tvg-language="tam" , channel-id="famelack.ioAW5Hy7e9f7fU" , tvg-country="IN" , group-title="New Channels",Chithiram
+https://cdn.pishow.tv/ott/live/1243/master.m3u8
+#EXTINF:-1 tvg-id="CNBCAwaaz.in@SD" , tvg-name="CNBC Awaaz" , tvg-logo="" , tvg-language="hin" , channel-id="CNBCAwaaz.in@SD" , tvg-country="IN" , group-title="New Channels",CNBC Awaaz
+https://n18syndication.akamaized.net/bpk-tv/CNBC_Awaaz_NW18_MOB/output01/master.m3u8
+#EXTINF:-1 tvg-id="CNBCBajar.in@SD" , tvg-name="CNBC Bajar" , tvg-logo="" , tvg-language="guj" , channel-id="CNBCBajar.in@SD" , tvg-country="IN" , group-title="New Channels",CNBC Bajar
+https://n18syndication.akamaized.net/bpk-tv/CNBC_Bazaar_NW18_MOB/output01/master.m3u8
+#EXTINF:-1 tvg-id="CNBCTV18.in@SD" , tvg-name="CNBC TV18" , tvg-logo="" , tvg-language="eng" , channel-id="CNBCTV18.in@SD" , tvg-country="IN" , group-title="New Channels",CNBC TV18
+https://n18syndication.akamaized.net/bpk-tv/CNBC_TV18_NW18_MOB/output01/index.m3u8
+#EXTINF:-1 tvg-id="CNBCTV18PrimeHD.in@SD" , tvg-name="CNBC TV18 Prime HD" , tvg-logo="" , tvg-language="eng" , channel-id="CNBCTV18PrimeHD.in@SD" , tvg-country="IN" , group-title="New Channels",CNBC TV18 Prime HD
+https://n18syndication.akamaized.net/bpk-tv/CNBC_Tv18_Prime_HD_NW18_MOB/output01/index.m3u8
+#EXTINF:-1 tvg-id="CVRHealth.in@SD" , tvg-name="CVR Health" , tvg-logo="" , tvg-language="tel" , channel-id="CVRHealth.in@SD" , tvg-country="IN" , group-title="New Channels",CVR Health
+https://cdn.pishow.tv/ott/live/395/master.m3u8
+#EXTINF:-1 tvg-id="DDBihar.in@SD" , tvg-name="DD Bihar" , tvg-logo="" , tvg-language="hin" , channel-id="DDBihar.in@SD" , tvg-country="IN" , group-title="New Channels",DD Bihar
+https://cdn.pishow.tv/ott/live/35/master.m3u8
+#EXTINF:-1 tvg-id="famelack.MOeR2cRRTFidYj" , tvg-name="DD Chhattisgarh" , tvg-logo="" , tvg-language="hin" , channel-id="famelack.MOeR2cRRTFidYj" , tvg-country="IN" , group-title="New Channels",DD Chhattisgarh
+https://cdn.pishow.tv/ott/live/15/master.m3u8
+#EXTINF:-1 tvg-id="DDIndia.in@SD" , tvg-name="DD India" , tvg-logo="" , tvg-language="eng" , channel-id="DDIndia.in@SD" , tvg-country="IN" , group-title="New Channels",DD India
+https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/ceda14583477426aa162a65392d8ea07/index.m3u8
+#EXTINF:-1 tvg-id="DDKisan.in@SD" , tvg-name="DD Kisan" , tvg-logo="" , tvg-language="hin" , channel-id="DDKisan.in@SD" , tvg-country="IN" , group-title="New Channels",DD Kisan
+https://cdn.pishow.tv/ott/live/223/master.m3u8
+#EXTINF:-1 tvg-id="DDRajasthan.in@SD" , tvg-name="DD Rajasthan" , tvg-logo="" , tvg-language="hin" , channel-id="DDRajasthan.in@SD" , tvg-country="IN" , group-title="New Channels",DD Rajasthan
+https://cdn.pishow.tv/ott/live/34/master.m3u8
+#EXTINF:-1 tvg-id="famelack.Vma78Sz4exxJIg" , tvg-name="DD Uttar Pradesh" , tvg-logo="" , tvg-language="hin" , channel-id="famelack.Vma78Sz4exxJIg" , tvg-country="IN" , group-title="New Channels",DD Uttar Pradesh
+https://cdn.pishow.tv/ott/live/36/master.m3u8
+#EXTINF:-1 tvg-id="famelack.taQrpUS98Q9cUj" , tvg-name="DD Uttarakhand" , tvg-logo="" , tvg-language="hin" , channel-id="famelack.taQrpUS98Q9cUj" , tvg-country="IN" , group-title="New Channels",DD Uttarakhand
+https://cdn.pishow.tv/ott/live/17/master.m3u8
+#EXTINF:-1 tvg-id="famelack.mEbS8uqzoCHKUd" , tvg-name="DD Yadagiri" , tvg-logo="" , tvg-language="tel" , channel-id="famelack.mEbS8uqzoCHKUd" , tvg-country="IN" , group-title="New Channels",DD Yadagiri
+https://cdn.pishow.tv/ott/live/21/master.m3u8
+#EXTINF:-1 tvg-id="DishaTV.in@SD" , tvg-name="Disha TV" , tvg-logo="" , tvg-language="hin" , channel-id="DishaTV.in@SD" , tvg-country="IN" , group-title="New Channels",Disha TV
+https://d1msejlow1t3l4.cloudfront.net/fta/dishatv/playlist.m3u8
+#EXTINF:-1 tvg-id="Fast1.in@SD" , tvg-name="Fast1" , tvg-logo="" , tvg-language="pan" , channel-id="Fast1.in@SD" , tvg-country="IN" , group-title="New Channels",Fast1
+https://cdn.pishow.tv/ott/live/10008/master.m3u8
+#EXTINF:-1 tvg-id="famelack.RqX1XF8M3nG5pL" , tvg-name="FloRacing 24/7" , tvg-logo="" , channel-id="famelack.RqX1XF8M3nG5pL" , tvg-country="IN" , group-title="New Channels",FloRacing 24/7
+https://amg02278-amg02278c1-distrotv-us-7534.playouts.now.amagi.tv/playlist/amg02278-flosports-floracing24x7-distrotvus/playlist.m3u8
+#EXTINF:-1 tvg-id="FriendsTV.in@SD" , tvg-name="Friends TV" , tvg-logo="" , tvg-language="ben" , channel-id="FriendsTV.in@SD" , tvg-country="IN" , group-title="New Channels",Friends TV
+https://server.playontv.in/friendstv/index.m3u8
+#EXTINF:-1 tvg-id="GTCPunjabi.in@SD" , tvg-name="GTC Punjabi" , tvg-logo="" , tvg-language="pan" , channel-id="GTCPunjabi.in@SD" , tvg-country="IN" , group-title="New Channels",GTC Punjabi
+https://cdn.ottlive.co.in/gtcpunjabi/index.m3u8
+#EXTINF:-1 tvg-id="Gyandarshan.in@HD" , tvg-name="Gyandarshan" , tvg-logo="" , tvg-language="hin" , channel-id="Gyandarshan.in@HD" , tvg-country="IN" , group-title="New Channels",Gyandarshan
+https://cdn.pishow.tv/ott/live/14/master.m3u8
+#EXTINF:-1 tvg-id="HiDost.in@SD" , tvg-name="Hi Dost!" , tvg-logo="" , tvg-language="eng" , channel-id="HiDost.in@SD" , tvg-country="IN" , group-title="New Channels",Hi Dost!
+https://cdn.pishow.tv/ott/live/224/master.m3u8
+#EXTINF:-1 tvg-id="HSTV.in@SD" , tvg-name="HSTV" , tvg-logo="" , tvg-language="eng" , channel-id="HSTV.in@SD" , tvg-country="IN" , group-title="New Channels",HSTV
+https://live.castmaxcloud.com/live/hstv.m3u8
+#EXTINF:-1 tvg-id="JaihindTV.in@SD" , tvg-name="Jaihind TV" , tvg-logo="" , tvg-language="mal" , channel-id="JaihindTV.in@SD" , tvg-country="IN" , group-title="New Channels",Jaihind TV
+https://mumt03.tangotv.in/Dsly5z3HJAIHIND/index.m3u8
+#EXTINF:-1 tvg-id="JanTV.in@SD" , tvg-name="Jan TV" , tvg-logo="" , tvg-language="hin" , channel-id="JanTV.in@SD" , tvg-country="IN" , group-title="New Channels",Jan TV
+https://cdn.pishow.tv/ott/live/10004/master.m3u8
+#EXTINF:-1 tvg-id="JeevanTV.in@SD" , tvg-name="Jeevan TV" , tvg-logo="" , tvg-language="mal" , channel-id="JeevanTV.in@SD" , tvg-country="IN" , group-title="New Channels",Jeevan TV
+https://cdn.pishow.tv/ott/live/1467/master.m3u8
+#EXTINF:-1 tvg-id="Jonack.in@SD" , tvg-name="Jonack" , tvg-logo="" , tvg-language="asm" , channel-id="Jonack.in@SD" , tvg-country="IN" , group-title="New Channels",Jonack
+https://cdn.pishow.tv/ott/live/10006/master.m3u8
+#EXTINF:-1 tvg-id="KaumudyTV.in@SD" , tvg-name="Kaumudy TV" , tvg-logo="" , tvg-language="hin" , channel-id="KaumudyTV.in@SD" , tvg-country="IN" , group-title="New Channels",Kaumudy TV
+https://cdn.pishow.tv/ott/live/1237/master.m3u8
+#EXTINF:-1 tvg-id="KCLTV.in@SD" , tvg-name="KCL TV" , tvg-logo="" , tvg-language="mal" , channel-id="KCLTV.in@SD" , tvg-country="IN" , group-title="New Channels",KCL TV
+https://kcltv.livebox.co.in/kclhls/live.m3u8
+#EXTINF:-1 tvg-id="KeralaVision.in@SD" , tvg-name="Kerala Vision" , tvg-logo="" , tvg-language="mal" , channel-id="KeralaVision.in@SD" , tvg-country="IN" , group-title="New Channels",Kerala Vision
+https://cdn.pishow.tv/ott/live/243/master.m3u8
+#EXTINF:-1 tvg-id="KiteVicters.in@SD" , tvg-name="Kite Victers" , tvg-logo="" , tvg-language="mal" , channel-id="KiteVicters.in@SD" , tvg-country="IN" , group-title="New Channels",Kite Victers
+https://932y4x26ljv8-hls-live.5centscdn.com/victers/tv.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="KTVBangla.in@SD" , tvg-name="KTV Bangla" , tvg-logo="" , tvg-language="ben" , channel-id="KTVBangla.in@SD" , tvg-country="IN" , group-title="New Channels",KTV Bangla
+https://server.livelegitpro.in:9899/tribetv/tribetv/index.m3u8
+#EXTINF:-1 tvg-id="famelack.tWWWWJwjjkFKBL" , tvg-name="Maha Movie" , tvg-logo="" , tvg-language="hin" , channel-id="famelack.tWWWWJwjjkFKBL" , tvg-country="IN" , group-title="New Channels",Maha Movie
+https://cdn.pishow.tv/ott/live/10007/master.m3u8
+#EXTINF:-1 tvg-id="MahaPunjabi.in@SD" , tvg-name="Maha Punjabi" , tvg-logo="" , tvg-language="pan" , channel-id="MahaPunjabi.in@SD" , tvg-country="IN" , group-title="New Channels",Maha Punjabi
+https://cdn.pishow.tv/ott/live/1521/master.m3u8
+#EXTINF:-1 tvg-id="MakkalTV.in@SD" , tvg-name="Makkal TV" , tvg-logo="" , tvg-language="tam" , channel-id="MakkalTV.in@SD" , tvg-country="IN" , group-title="New Channels",Makkal TV
+https://5k8q87azdy4v-hls-live.wmncdn.net/MAKKAL/271ddf829afeece44d8732757fba1a66.sdp/playlist.m3u8
+#EXTINF:-1 tvg-id="Mango.in@SD" , tvg-name="Mango" , tvg-logo="" , tvg-language="hin" , channel-id="Mango.in@SD" , tvg-country="IN" , group-title="New Channels",Mango
+https://stmv6.voxtvhd.com.br/cinehindi/cinehindi/playlist.m3u8
+#EXTINF:-1 tvg-id="ManoranjanTV.in@SD" , tvg-name="Manoranjan TV" , tvg-logo="" , tvg-language="hin" , channel-id="ManoranjanTV.in@SD" , tvg-country="IN" , group-title="New Channels",Manoranjan TV
+https://cdn.pishow.tv/ott/live/1013/master.m3u8
+#EXTINF:-1 tvg-id="MBCTV.in@SD" , tvg-name="MBC TV" , tvg-logo="" , tvg-language="ori" , channel-id="MBCTV.in@SD" , tvg-country="IN" , group-title="New Channels",MBC TV
+https://cdn.pishow.tv/ott/live/1017/master.m3u8
+#EXTINF:-1 tvg-id="NandighoshaTV.in@SD" , tvg-name="Nandighosha TV" , tvg-logo="" , tvg-language="ori" , channel-id="NandighoshaTV.in@SD" , tvg-country="IN" , group-title="New Channels",Nandighosha TV
+https://mumt05.tangotv.in/87NeALx2NANDIGHOSHATV/index.m3u8
+#EXTINF:-1 tvg-id="NDTVGoodTimes.in@SD" , tvg-name="NDTV Good Times" , tvg-logo="" , tvg-language="eng" , channel-id="NDTVGoodTimes.in@SD" , tvg-country="IN" , group-title="New Channels",NDTV Good Times
+https://amg01448-samsungin-ndtvgoodtimes-samsungin-ad-gp.amagi.tv/playlist/amg01448-samsungin-ndtvgoodtimes-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="NDTVProfit.in@SD" , tvg-name="NDTV Profit" , tvg-logo="" , tvg-language="eng" , channel-id="NDTVProfit.in@SD" , tvg-country="IN" , group-title="New Channels",NDTV Profit
+https://ndtvprofit.akamaized.net/hls/live/2107404/ndtvprofit/master_1.m3u8
+#EXTINF:-1 tvg-id="Nepal1.in@SD" , tvg-name="Nepal 1" , tvg-logo="" , tvg-language="nep" , channel-id="Nepal1.in@SD" , tvg-country="IN" , group-title="New Channels",Nepal 1
+https://cdn.pishow.tv/ott/live/1490/master.m3u8
+#EXTINF:-1 tvg-id="Network10.in@SD" , tvg-name="Network 10" , tvg-logo="" , tvg-language="hin" , channel-id="Network10.in@SD" , tvg-country="IN" , group-title="New Channels",Network 10
+https://mumbai-edge.smartplaytv.in/Network10/index.m3u8
+#EXTINF:-1 tvg-id="News11.in@SD" , tvg-name="News 11" , tvg-logo="" , tvg-language="hin" , channel-id="News11.in@SD" , tvg-country="IN" , group-title="New Channels",News 11
+https://live1.ottlive.co.in/news11/news11/index.m3u8
+#EXTINF:-1 tvg-id="NTCTV.in@SD" , tvg-name="NTC TV" , tvg-logo="" , tvg-language="tam" , channel-id="NTCTV.in@SD" , tvg-country="IN" , group-title="New Channels",NTC TV
+https://galaxyott.live/hls/ntv.m3u8
+#EXTINF:-1 tvg-id="OdishaTV.in@SD" , tvg-name="Odisha TV" , tvg-logo="" , tvg-language="ori" , channel-id="OdishaTV.in@SD" , tvg-country="IN" , group-title="New Channels",Odisha TV
+https://livetv.tarangplus.in/otv-origin/live/playlist.m3u8
+#EXTINF:-1 tvg-id="OliTV.in@SD" , tvg-name="Oli TV" , tvg-logo="" , tvg-language="tam" , channel-id="OliTV.in@SD" , tvg-country="IN" , group-title="New Channels",Oli TV
+https://live.olidigital.in/olitv/olitv/index.m3u8
+#EXTINF:-1 tvg-id="PasandTV.in@SD" , tvg-name="Pasand TV" , tvg-logo="" , tvg-language="bho" , channel-id="PasandTV.in@SD" , tvg-country="IN" , group-title="New Channels",Pasand TV
+https://d1msejlow1t3l4.cloudfront.net/fta/pasand/playlist.m3u8
+#EXTINF:-1 tvg-id="PearTV.in@SD" , tvg-name="Pear TV" , tvg-logo="" , tvg-language="asm" , channel-id="PearTV.in@SD" , tvg-country="IN" , group-title="New Channels",Pear TV
+https://mumt01.tangotv.in/O5aw8Zn3PEARTV/index.m3u8
+#EXTINF:-1 tvg-id="PrarthanaBhawanTV.in@SD" , tvg-name="Prarthana Bhawan TV" , tvg-logo="" , tvg-language="hin" , channel-id="PrarthanaBhawanTV.in@SD" , tvg-country="IN" , group-title="New Channels",Prarthana Bhawan TV
+https://mumt03.tangotv.in/Dsly5z3HPRATHANABHAWAN/index.m3u8
+#EXTINF:-1 tvg-id="PrarthanaTV.in@SD" , tvg-name="Prarthana TV" , tvg-logo="" , tvg-language="ori" , channel-id="PrarthanaTV.in@SD" , tvg-country="IN" , group-title="New Channels",Prarthana TV
+https://livetv.tarangplus.in/prarthana-origin/live/playlist.m3u8
+#EXTINF:-1 tvg-id="PravasiChannel.in@SD" , tvg-name="Pravasi Channel" , tvg-logo="" , tvg-language="mal" , channel-id="PravasiChannel.in@SD" , tvg-country="IN" , group-title="New Channels",Pravasi Channel
+https://m6gdavepdn93-hls-live.5centscdn.com/pravasi/d0dbe915091d400bd8ee7f27f0791303.sdp/playlist.m3u8
+#EXTINF:-1 tvg-id="PulariTV.in@SD" , tvg-name="Pulari TV" , tvg-logo="" , tvg-language="mal" , channel-id="PulariTV.in@SD" , tvg-country="IN" , group-title="New Channels",Pulari TV
+https://mumbai-edge.smartplaytv.in/PulariTV/index.m3u8
+#EXTINF:-1 tvg-id="RPlus.in@SD" , tvg-name="R Plus" , tvg-logo="" , tvg-language="ben" , channel-id="RPlus.in@SD" , tvg-country="IN" , group-title="New Channels",R Plus
+https://thelegitpro.in/pntv/rplusnews24x7/index.m3u8
+#EXTINF:-1 tvg-id="RaftaarMedia.in@SD" , tvg-name="Raftaar Media" , tvg-logo="" , tvg-language="hin" , channel-id="RaftaarMedia.in@SD" , tvg-country="IN" , group-title="New Channels",Raftaar Media
+https://6n3yorwpy9ok-hls-live.5centscdn.com/raftaarmedia/243bd1ce0387f18005abfc43b001646a.sdp/playlist.m3u8
+#EXTINF:-1 tvg-id="Rang.in@SD" , tvg-name="Rang" , tvg-logo="" , tvg-language="asm" , channel-id="Rang.in@SD" , tvg-country="IN" , group-title="New Channels",Rang
+https://cdn.pishow.tv/ott/live/10017/master.m3u8
+#EXTINF:-1 tvg-id="Rengoni.in@SD" , tvg-name="Rengoni" , tvg-logo="" , tvg-language="asm" , channel-id="Rengoni.in@SD" , tvg-country="IN" , group-title="New Channels",Rengoni
+https://d1msejlow1t3l4.cloudfront.net/fta/rengonitv/playlist.m3u8
+#EXTINF:-1 tvg-id="famelack.i84zwDiCe1wQ5a" , tvg-name="Saam TV" , tvg-logo="" , tvg-language="hin" , channel-id="famelack.i84zwDiCe1wQ5a" , tvg-country="IN" , group-title="New Channels",Saam TV
+https://cdn.pishow.tv/ott/live/437/master.m3u8
+#EXTINF:-1 tvg-id="SaiTV.in@SD" , tvg-name="Sai TV" , tvg-logo="" , tvg-language="tam" , channel-id="SaiTV.in@SD" , tvg-country="IN" , group-title="New Channels",Sai TV
+https://mumbai-edge.smartplaytv.in/SaiTV/index.m3u8
+#EXTINF:-1 tvg-id="SansadTV1.in@SD" , tvg-name="Sansad TV 1" , tvg-logo="" , tvg-language="eng" , channel-id="SansadTV1.in@SD" , tvg-country="IN" , group-title="New Channels",Sansad TV 1
+https://d2lk5u59tns74c.cloudfront.net/out/v1/fff8f20221d5456e8922e689d71dedc3/index.m3u8
+#EXTINF:-1 tvg-id="SansadTV2.in@HD" , tvg-name="Sansad TV 2" , tvg-logo="" , tvg-language="eng" , channel-id="SansadTV2.in@HD" , tvg-country="IN" , group-title="New Channels",Sansad TV 2
+https://d2lk5u59tns74c.cloudfront.net/out/v1/e4182054dce340da9e0ff38b6b3658a4/index.m3u8
+#EXTINF:-1 tvg-id="SantvaniChannel.in@SD" , tvg-name="Santvani Channel" , tvg-logo="" , tvg-language="hin" , channel-id="SantvaniChannel.in@SD" , tvg-country="IN" , group-title="New Channels",Santvani Channel
+https://cdn.pishow.tv/ott/live/475/master.m3u8
+#EXTINF:-1 tvg-id="SharnamTV.in@SD" , tvg-name="Sharnam TV" , tvg-logo="" , tvg-language="hin" , channel-id="SharnamTV.in@SD" , tvg-country="IN" , group-title="New Channels",Sharnam TV
+https://mumt06.tangotv.in/qYyB8fXVSHARNAMTV/index.m3u8
+#EXTINF:-1 tvg-id="ShekinahTV.in@SD" , tvg-name="Shekinah TV" , tvg-logo="" , tvg-language="mal" , channel-id="ShekinahTV.in@SD" , tvg-country="IN" , group-title="New Channels",Shekinah TV
+https://cdn.pishow.tv/ott/live/447/master.m3u8
+#EXTINF:-1 tvg-id="ShemarooMarathiBana.in@SD" , tvg-name="Shemaroo Marathi Bana" , tvg-logo="" , tvg-language="mar" , channel-id="ShemarooMarathiBana.in@SD" , tvg-country="IN" , group-title="New Channels",Shemaroo Marathi Bana
+https://airtelapp.shemaroo.com/marathibana/smil:marathibanaadp.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="ShemarooUmang.in@SD" , tvg-name="Shemaroo Umang" , tvg-logo="" , tvg-language="hin" , channel-id="ShemarooUmang.in@SD" , tvg-country="IN" , group-title="New Channels",Shemaroo Umang
+https://mumt04.tangotv.in/m18aqlK4SHEMAROOUMANG/index.m3u8
+#EXTINF:-1 tvg-id="ShubhTV.in@SD" , tvg-name="Shubh TV" , tvg-logo="" , tvg-language="hin" , channel-id="ShubhTV.in@SD" , tvg-country="IN" , group-title="New Channels",Shubh TV
+https://d2g1vdc6ozl2o8.cloudfront.net/out/v1/0a0dc7d7911b4fddbb4dfc963fdd4b9e/index.m3u8
+#EXTINF:-1 tvg-id="SirippoliTV.in@SD" , tvg-name="Sirippoli TV" , tvg-logo="" , tvg-language="tam" , channel-id="SirippoliTV.in@SD" , tvg-country="IN" , group-title="New Channels",Sirippoli TV
+https://segment.yuppcdn.net/240122/siripoli/playlist.m3u8
+#EXTINF:-1 tvg-id="Spondon.in@SD" , tvg-name="Spondon" , tvg-logo="" , tvg-language="asm" , channel-id="Spondon.in@SD" , tvg-country="IN" , group-title="New Channels",Spondon
+https://nktv.smartstream.video/smartstream-us/spondon/spondon/playlist.m3u8
+#EXTINF:-1 tvg-id="Starnet.in@SD" , tvg-name="Starnet" , tvg-logo="" , tvg-language="mal" , channel-id="Starnet.in@SD" , tvg-country="IN" , group-title="New Channels",Starnet
+https://5a1178b42cc03.streamlock.net/8220/8220/playlist.m3u8
+#EXTINF:-1 tvg-id="SuriyanTV.in@SD" , tvg-name="Suriyan TV" , tvg-logo="" , tvg-language="tam" , channel-id="SuriyanTV.in@SD" , tvg-country="IN" , group-title="New Channels",Suriyan TV
+https://hlslive.olidigital.in/suriyantv/suriyantv/index.m3u8
+#EXTINF:-1 tvg-id="TaazaTV.in@SD" , tvg-name="Taaza TV" , tvg-logo="" , tvg-language="hin" , channel-id="TaazaTV.in@SD" , tvg-country="IN" , group-title="New Channels",Taaza TV
+https://live.we2live.in/taazatv/live/playlist.m3u8
+#EXTINF:-1 tvg-id="TeluguOne.in@HD" , tvg-name="Telugu One" , tvg-logo="" , tvg-language="tel" , channel-id="TeluguOne.in@HD" , tvg-country="IN" , group-title="New Channels",Telugu One
+https://teluguone-yupptv.vgcdn.net/v1/019be9e3f04d1ea55784338b5c3e89/019be9e4474415fc60e93459e1e808/teluguone_2500k.m3u8
+#EXTINF:-1 tvg-id="TotalTVHaryana.in@SD" , tvg-name="Total TV Haryana" , tvg-logo="" , tvg-language="hin" , channel-id="TotalTVHaryana.in@SD" , tvg-country="IN" , group-title="New Channels",Total TV Haryana
+https://cdn.pishow.tv/ott/live/1522/master.m3u8
+#EXTINF:-1 tvg-id="famelack.jjavcyew951qZX" , tvg-name="TV BRICS English" , tvg-logo="" , tvg-language="eng" , channel-id="famelack.jjavcyew951qZX" , tvg-country="IN" , group-title="New Channels",TV BRICS English
+https://engbrics.mediacdn.ru/cdn/brics/english/playlist.m3u8
+#EXTINF:-1 tvg-id="UTVPalakkad.in@SD" , tvg-name="UTV Palakkad" , tvg-logo="" , tvg-language="mal" , channel-id="UTVPalakkad.in@SD" , tvg-country="IN" , group-title="New Channels",UTV Palakkad
+https://em4qj6nedyvg-hls-live.wmncdn.net/utv/ab2de115318ae40bdd434e193a2f2e7f.sdp/playlist.m3u8
+#EXTINF:-1 tvg-id="famelack.dB4Xrylwq58w1o" , tvg-name="VCV" , tvg-logo="" , tvg-language="mal" , channel-id="famelack.dB4Xrylwq58w1o" , tvg-country="IN" , group-title="New Channels",VCV
+https://5a1178b42cc03.streamlock.net/8210/8210/playlist.m3u8
+#EXTINF:-1 tvg-id="VTU.in@SD" , tvg-name="VTU" , tvg-logo="" , tvg-language="hin" , channel-id="VTU.in@SD" , tvg-country="IN" , group-title="New Channels",VTU
+https://lbgo.bozztv.com/ssh101/ssh101/afghantheatretv/playlist.m3u8
+#EXTINF:-1 tvg-id="famelack.vvLSrEdftAhFqe" , tvg-name="Vyas Channel" , tvg-logo="" , tvg-language="eng" , channel-id="famelack.vvLSrEdftAhFqe" , tvg-country="IN" , group-title="New Channels",Vyas Channel
+https://playhls.media.nic.in/hls/live/vyas/vyas.m3u8
+#EXTINF:-1 tvg-id="ZBMusic.in@HD" , tvg-name="ZB Music" , tvg-logo="" , tvg-language="ben" , channel-id="ZBMusic.in@HD" , tvg-country="IN" , group-title="New Channels",ZB Music
+https://server.zillarbarta.com/zbmusic/index.m3u8
+#EXTINF:-1 tvg-id="ZodiakTV.in@SD" , tvg-name="Zodiak TV" , tvg-logo="" , tvg-language="ben" , channel-id="ZodiakTV.in@SD" , tvg-country="IN" , group-title="New Channels",Zodiak TV
+https://ranacable.duckdns.org/ZodiakTv/index.m3u8
 http://198.195.239.50:8095/GOLF.SPORTS/index.m3u8
 #EXTINF:-1 tvg-id="B4UMusic.in@India" tvg-name="B4U Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png" channel-id="B4UMusic.in@India" group-title="New Backup",B4U Music
 https://bldcmprod-cdn.toffeelive.com/cdn/live/b4u_music/playlist.m3u8
@@ -1818,6 +1996,18 @@ http://198.195.239.50:8095/NICK/index.m3u8
 #EXTINF:-1 tvg-id="NickJr.in@SD" tvg-name="Nick Jr" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png" channel-id="NickJr.in@SD" group-title="New Backup",Nick Jr
 http://198.195.239.50:8095/NICK.JR/index.m3u8
 #EXTINF:-1 tvg-id="ASports.pk" tvg-name="A Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-sports-5485adff.png" channel-id="ASports.pk" group-title="New Backup",A Sports
+#EXTINF:-1 tvg-id="HistoryTV18.in@SD" , tvg-name="History TV18" , tvg-logo="" , tvg-language="eng" , channel-id="HistoryTV18.in@SD" , tvg-country="IN" , group-title="New Backup",History TV18
+https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="HistoryTV18.in@SD" , tvg-name="History TV18" , tvg-logo="" , tvg-language="eng" , channel-id="HistoryTV18.in@SD" , tvg-country="IN" , group-title="New Backup",History TV18
+https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/ts-ap-s1-n1/playlist/amg01448-samsungindia-historychannelhindi-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="famelack.FlqGAqnBqpvJeH" , tvg-name="INWILD" , tvg-logo="" , tvg-language="eng" , channel-id="famelack.FlqGAqnBqpvJeH" , tvg-country="IN" , group-title="New Backup",INWILD
+https://amg00861-amg00861c7-firetv-us-4725.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="famelack.FlqGAqnBqpvJeH" , tvg-name="INWILD" , tvg-logo="" , tvg-language="eng" , channel-id="famelack.FlqGAqnBqpvJeH" , tvg-country="IN" , group-title="New Backup",INWILD
+https://amg00861-amg00861c7-stirr-us-8227.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="famelack.FlqGAqnBqpvJeH" , tvg-name="INWILD" , tvg-logo="" , tvg-language="eng" , channel-id="famelack.FlqGAqnBqpvJeH" , tvg-country="IN" , group-title="New Backup",INWILD
+https://amg00861-terninternation-inwild-samsungau-3qrga.amagi.tv/playlist/amg00861-terninternation-inwild-samsungau/playlist.m3u8
+#EXTINF:-1 tvg-id="StarSportsSelect2.in@HD" , tvg-name="Star Sports Select 2" , tvg-logo="" , tvg-language="eng" , channel-id="StarSportsSelect2.in@HD" , tvg-country="IN" , group-title="New Backup",Star Sports Select 2
+https://tvsen7.aynascope.net/ssport2hd/index.m3u8
 http://198.195.239.50:8095/A.SPORTS.HD/index.m3u8
 #EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" channel-id="AnandaTV.bd" group-title="Not Playing",Ananda TV
 https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/tracks-v1a1/mono.ts.m3u8
