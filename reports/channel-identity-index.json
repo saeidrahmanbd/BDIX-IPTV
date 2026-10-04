@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T09:50:00+00:00",
+  "generated": "2026-10-04T09:55:36+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -4315,6 +4315,34 @@
       ],
       "streams": 1,
       "primary": 1,
+      "backup": 0
+    },
+    "godstandskidsclubtv": {
+      "names": [
+        "God Stands Kids Club TV Urdu"
+      ],
+      "ids": [
+        "godstandskidsclubtv.pk@urdu"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
+    "godstandstv": {
+      "names": [
+        "God Stands TV Urdu"
+      ],
+      "ids": [
+        "godstandstv.pk@urdu"
+      ],
+      "groups": [
+        "New Backup"
+      ],
+      "streams": 1,
+      "primary": 0,
       "backup": 0
     },
     "goldmines": {
