@@ -1769,6 +1769,39 @@ https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 https://pubads.g.doubleclick.net/ssai/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 #EXTINF:-1 channel-id="ZeeBangla.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla.png" tvg-id="ZeeBangla.in@HD" tvg-name="Zee Bangla" group-title="Backup",Zee Bangla
 http://flowutc.com/live/MAGTF8AV71/bUiJLEJKG5/78981.ts
+#EXTINF:-1 tvg-id="custom.sangsad" tvg-name="Sangsad HD" channel-id="custom.sangsad" group-title="New Channels",Sangsad HD
+http://103.141.70.136:8080/auth/x2_R2GqN2DNYuA_q2Lbch3oDK5wKQ8-0yIGLFCRqntQXSKapwW9Kwwz-jv5e_JTck6fSLIAd8F0LbvLC_yFklVWxvPLItIJ1MJbvEYTbh-URY9dzUmBR1YxwlHdBDXzvoKe2hGk1-yChDY21KsEjVPYc4LCtRpsH85NWQVF08apiiFE5Ktsu29XVII5r86eYlShORd8oHl7sfWw5Q7peOpKp7WLSbEWTzShuxtacgFINqXTzSjOQ5zzbjO1ARSiq8_Ld6IwEUqOvOk-5rGi98SWhic3sUl5x7ekbjGEB4M5w2RWVj4EIJKNjv8LdUeu0bp0Cqz7fEbNkFW5r7K9M2BvNEOgGUvwZIyyLTqGordiAQXRrbfu8h1cmelf8AZe6dMLHnTUkxJMpmdqSBgp-TUmuOAkCtPxvaWVwOFn8-NZYEjp37xphvSJJAsXrrdqeoHnsfhSrdxlASrYESFWwnbfKJkuVCjwWvz4hmBCBose6w_sb1_oZb85jc2tcy4ZD-R0VYDlCME4qJz-CL8yJY2mXqlPToBmDAF5HUZgXuWHS0MHpgjqS5tC96wWl1EmoSj74o3xhHGTajp42c3H2ZRHdM9_II-Qiy5O6OLa-WAQ
+#EXTINF:-1 tvg-id="AamarBangla.in@SD" tvg-name="Aamar Bangla" channel-id="AamarBangla.in@SD" group-title="New Channels",Aamar Bangla
+http://115.187.41.216:8080/hls/amarbangla/index.m3u8
+#EXTINF:-1 tvg-id="custom.jalsha.bangla.bd" tvg-name="Jalsha Bangla BD" channel-id="custom.jalsha.bangla.bd" group-title="New Channels",Jalsha Bangla BD
+https://dish.porosh.com.bd/hls/jalshabangla.m3u8
+#EXTINF:-1 tvg-id="custom.upohar.bangla" tvg-name="Upohar Bangla" channel-id="custom.upohar.bangla" group-title="New Channels",Upohar Bangla
+https://ranacable.duckdns.org/UpoharBangla/tracks-v1a1/index.m3u8
+#EXTINF:-1 tvg-id="ATNBangla.bd" tvg-name="ATN Bangla" channel-id="ATNBangla.bd" group-title="New Backup",ATN Bangla
+https://tvsen5.aynaott.com/P3y2URgG7LDe/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="News24.bd" tvg-name="News 24" channel-id="News24.bd" group-title="New Backup",News 24
+https://tvsen5.aynaott.com/News24/index.m3u8
+#EXTINF:-1 tvg-id="aakaashaath.in@sd" tvg-name="Aakaash Aath" channel-id="aakaashaath.in@sd" group-title="New Backup",Aakaash Aath
+https://tvsen5.aynaott.com/Wm9Lv2RjZGT6/index.m3u8
+#EXTINF:-1 tvg-id="BTVNational.bd" tvg-name="BTV National" channel-id="BTVNational.bd" group-title="New Backup",BTV National
+http://103.141.70.136:8080/auth/juaElsFzRAN_qe6Cv4SIQyXpdlrLaWuUJnCGXbsPA4Se4NQpaP31_VfytMZGAQHB-R5M1cR_FkWYsORI_CigxFrLYjFDqEBqkxorO0z2j2tqtXBwnNY7fH8AnU4btNu--Ga4LhZxSehYgOkfZtg02Hcr0o9aZGYlbG1Sbk4OsJCpfoJq-yOP1_HB306IRxfNeKOYKnRRnGA_Sqv3alxRwjEhDMe5Si4nCiB6WNASBNbztCU67Gp5lTyTp78Ih-r87lhlmPmNFWXTA7ecRr9RpuBNqStjaFoxrqmKl_jytkmWx1lSI3ntx8Lbr6RcHe_uwq59EzaeYDl-06lKxour_xh06meeeSHe37xLJwUETf29x_2HQ7axEgkcjwIjQ8SKvluNLmATMJ8Z66nRFAMbHC0MbFIe9qzTkz0ZQSrIMvneoT0hNSnXNGNj2KqGApTpKhrlMOa9oo2T6ujALs9oWePArlwDL7lIf9AARfhg_-zajFdVC6ucJydMQULPW7PqEylxd4Uk9n_nrvZer4jIfXbkhsFQkAT_NELKnTGjcLmYTphmdaUt9i94GQrqm0zVLuwfufl_VYZ65xsQYSC1rdB3AL74I
+#EXTINF:-1 tvg-id="BTVChattogram.bd" tvg-name="BTV Chattogram" channel-id="BTVChattogram.bd" group-title="New Backup",BTV Chattogram
+https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/index.m3u8
+#EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@SD" tvg-name="Sony Entertainment TV" channel-id="SonyEntertainmentTelevision.in@SD" group-title="New Backup",Sony Entertainment TV
+https://stream.ottplus.live/live/sony_ent_sd_abr/index.m3u8
+#EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@SD" tvg-name="Sony Entertainment TV" channel-id="SonyEntertainmentTelevision.in@SD" group-title="New Backup",Sony Entertainment TV
+https://stream.ottplus.live/live/sony_ent_hd_abr/index.m3u8
+#EXTINF:-1 tvg-id="Enterr10Bangla.in@SD" tvg-name="Enterr10 Bangla" channel-id="Enterr10Bangla.in@SD" group-title="New Backup",Enterr10 Bangla
+https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
+#EXTINF:-1 tvg-id="Enterr10Bangla.in@SD" tvg-name="Enterr10 Bangla" channel-id="Enterr10Bangla.in@SD" group-title="New Backup",Enterr10 Bangla
+https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_240p/chunks.m3u8
+#EXTINF:-1 tvg-id="ColorsCineplex.in@SD" tvg-name="Colors Cineplex" channel-id="ColorsCineplex.in@SD" group-title="New Backup",Colors Cineplex
+http://live.balajibroadband.com:3500/render.m3u8?auth=6Lm2wYVrwMDVvJh0A4rH1trEn0QGdnikyuM1RhcW7DghU8wMY4JME5UIWOdzILuYX4Pv_5pvm29UCQthHL6wasj8anotMoNE6Bn0C6kzqUuoL3ZNYr-domeIioUcOZKmTlLiyvXa6HulrLL1mu64dW-iufJ7S80QF_sT-Kfowjh8WMUa3Hb80T3SLigFSNOOczKbiwdzg1P9tT21fVDMXtQ6-VYr75a30mUH7aRC56F7LCtmM0itMkw7Ktb6ehwMYm6cm4M5GvN2d_LKSbjWXCGSxY3nF8eTFZ0VR7iquPAcCpXkrHi5q1ngxHb1dwQ2rGsdTbu6IukEmpnhBgEG1FVu0p9Or3NCDdNPVrxgJvo3Y84alHwidVixsFKFV_oVe5SuSg==&channel_key_id=1763
+#EXTINF:-1 tvg-id="ColorsCineplexSuperhits.in@SD" tvg-name="Colors Cineplex Superhits" channel-id="ColorsCineplexSuperhits.in@SD" group-title="New Backup",Colors Cineplex Superhits
+http://live.balajibroadband.com:3500/render.m3u8?auth=uHFFaaQTrcUDDoIgTLShvczbyOzTerohKit-L-gxAeLRPEVZfYED_3b3VTwRf4R_FtAeiIukkFYSN_C5g50oB9y8-Ume7T4_f-KZWXVx5mcZwrcuZzhqX3EKA1kwtQd0O_VqU7HouxMzp5t5UMvVfTxAyW9T5RZqs_BoZFtuCouoq_ercwxPJmeqJJ9WwZkRPMgmugXT1iabD4HHVdCHRiruC7yVw2aRzePWI8dNFkMJbFynY4xRAmCB2r6xpUZxhUje4U8SuSJEp0eADsGFb394pBtJySzkKlz1drrO3nH1YvNPNw1Ky2IyMyc0IwoO8oSKAYBIJ7WFpylEBIQpaAYgUES4D2L-XkToMtzUgbI101qVgQ35wBQIo5cKy6KGw4s=&channel_key_id=1450
+#EXTINF:-1 tvg-id="custom.zoommusic" tvg-name="Zoom Music" channel-id="custom.zoommusic" group-title="New Backup",Zoom Music
+https://dai.google.com/linear/hls/pb/event/JCAm25qkRXiKcK1AJMlvKQ/stream/9bc514aa-acb4-4fa0-aa8c-c4b58d6f4b5b:TPE2/master.m3u8
+
 #EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" channel-id="AnandaTV.bd" group-title="Not Playing",Ananda TV
 https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="AsianTV.bd" tvg-name="Asian TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" channel-id="AsianTV.bd" group-title="Not Playing",Asian TV
