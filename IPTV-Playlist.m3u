@@ -1187,7 +1187,7 @@ http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98863.ts
 http://198.195.239.50:8095/SONY.SPORTS.4/index.m3u8
 #EXTINF:-1 tvg-id="SonySportsTen5.in" tvg-name="Sony Sports Ten 5" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-5.png" tvg-chno="1046" channel-id="SonySportsTen5.in" group-title="Sports",Sony Sports Ten 5
 http://198.195.239.50:8095/SONY-SPORTS.5HD/index.m3u8
-#EXTINF:-1 tvg-language="eng" tvg-country="IN" tvg-id="SonySportsTen1.in" tvg-name="Sony Ten 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-ten-1.png" tvg-chno="1035" channel-id="SonySportsTen1.in" group-title="Sports",Sony Ten 1
+#EXTINF:-1 tvg-language="eng" tvg-country="IN" tvg-id="SonySportsTen1.in" tvg-name="Sony Ten 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-1.png" tvg-chno="1035" channel-id="SonySportsTen1.in" group-title="Sports",Sony Ten 1
 https://drk6xq0vhn.gpcdn.net/live/ten_1_hd_720/index.m3u8
 #EXTINF:-1 tvg-language="eng" tvg-country="IN" tvg-id="SonySportsTen2.in" tvg-name="Sony Ten 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-ten-2.png" tvg-chno="102" channel-id="SonySportsTen2.in" group-title="Sports",Sony Ten 2
 http://198.195.239.50:8095/SONY.SPORTS2.HD/index.m3u8
@@ -1971,9 +1971,9 @@ http://198.195.239.50:8095/FAST.SPORTS.HD/index.m3u8
 https://amg02278-amg02278c1-distrotv-us-7534.playouts.now.amagi.tv/playlist/amg02278-flosports-floracing24x7-distrotvus/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.golf.sports" tvg-name="Golf Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/golf-sports.svg" tvg-chno="1078" channel-id="custom.golf.sports" group-title="Not Playing",Golf Sports
 http://198.195.239.50:8095/GOLF.SPORTS/index.m3u8
-#EXTINF:-1 tvg-id="HistoryTV18.in@SD" tvg-name="History TV18" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history-tv18.png" tvg-language="eng" tvg-country="IN" channel-id="HistoryTV18.in@SD" group-title="Not Playing",History TV18
+#EXTINF:-1 tvg-id="HistoryTV18.in@SD" tvg-name="History TV18" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history-tv18.svg" tvg-language="eng" tvg-country="IN" channel-id="HistoryTV18.in@SD" group-title="Not Playing",History TV18
 https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
-#EXTINF:-1 tvg-id="HistoryTV18.in@SD" tvg-name="History TV18" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history-tv18.png" tvg-language="eng" tvg-country="IN" channel-id="HistoryTV18.in@SD" group-title="Not Playing",History TV18
+#EXTINF:-1 tvg-id="HistoryTV18.in@SD" tvg-name="History TV18" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history-tv18.svg" tvg-language="eng" tvg-country="IN" channel-id="HistoryTV18.in@SD" group-title="Not Playing",History TV18
 https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/ts-ap-s1-n1/playlist/amg01448-samsungindia-historychannelhindi-samsungin/playlist.m3u8
 #EXTINF:-1 tvg-id="HSTV.in@SD" tvg-name="HSTV" tvg-logo="" tvg-language="eng" channel-id="HSTV.in@SD" tvg-country="IN" group-title="Not Playing",HSTV
 https://live.castmaxcloud.com/live/hstv.m3u8
