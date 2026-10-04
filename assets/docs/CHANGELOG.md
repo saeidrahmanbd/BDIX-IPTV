@@ -40,11 +40,5 @@
 
 ## 2026-10-04
 
-- 🗑️ **4 channel(s) removed**
-
-### Removed channels
-- Gangaur
-- HMTV
-- Metro TV (India)
-- Pasand TV
+- No meaningful playlist changes detected.
 
