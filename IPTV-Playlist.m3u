@@ -682,8 +682,6 @@ https://livecdn.live247stream.com/grace/tv/playlist.m3u8
 http://198.195.239.50:8095/HUM.MASALA.TV/index.m3u8
 #EXTINF:-1 tvg-id="HumTV.pk" tvg-name="Hum TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-tv.png" tvg-chno="528" channel-id="HumTV.pk" group-title="Pakistani",Hum TV
 https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8
-#EXTINF:-1 tvg-chno="503" tvg-id="IsaacTV.pk@SD" tvg-name="Isaac TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/isaac-tv.png" tvg-country="PK" channel-id="IsaacTV.pk@SD" group-title="Pakistani",Isaac TV
-https://livecdn.live247stream.com/isaac/tv/playlist.m3u8
 #EXTINF:-1 tvg-chno="504" channel-id="JalwaTV.pk@SD" tvg-id="JalwaTV.pk@SD" tvg-name="Jalwa TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalwa-tv.png" tvg-country="PK" group-title="Pakistani",Jalwa TV
 https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
 #EXTINF:-1 tvg-chno="505" tvg-id="JeremiahTV.pk@SD" tvg-name="Jeremiah TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jeremiah-tv.png" tvg-country="PK" channel-id="JeremiahTV.pk@SD" group-title="Pakistani",Jeremiah TV
@@ -698,10 +696,6 @@ https://streamer12.vdn.dstreamone.net/kingtv/kingtv/playlist.m3u8
 https://cdn4.mjunoon.tv:8087/streamtest/107M/chunks.m3u8
 #EXTINF:-1 tvg-chno="520" tvg-id="PardesiTV.ca" tvg-name="Pardesi TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pardesi-tv.png" channel-id="PardesiTV.ca" tvg-language="eng" tvg-country="CA" group-title="Pakistani",Pardesi TV
 http://stream.pardesitv.online/pardesi/index.m3u8
-#EXTINF:-1 tvg-chno="511" tvg-id="PMITV.pk@SD" tvg-name="PMI TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pmi-tv.png" tvg-country="PK" channel-id="PMITV.pk@SD" group-title="Pakistani",PMI TV
-https://cdn.live247stream.com/pmi/tv/playlist.m3u8
-#EXTINF:-1 tvg-chno="516" tvg-id="PraiseTV.pk@SD" tvg-name="Praise TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/praise-tv.png" tvg-country="PK" channel-id="PraiseTV.pk@SD" group-title="Pakistani",Praise TV
-https://livecdn.live247stream.com/praise/tv/playlist.m3u8
 #EXTINF:-1 tvg-name="SAB Entertainment" group-title="Pakistani" tvg-id="custom.sabentertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sab-tv.png" channel-id="custom.sabentertainment" tvg-chno="1083",SAB Entertainment
 https://s1.ideationtec.live/SAB_Entertainment/SAB_Entertainment.m3u8
 #EXTINF:-1 tvg-id="AndpriveHD.in" tvg-name="&Privé" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-prive-hd.png" tvg-chno="705" channel-id="AndpriveHD.in" group-title="International",&Privé
@@ -1738,8 +1732,6 @@ https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413
 http://198.195.239.50:8095/pogo/index.m3u8
 #EXTINF:-1 tvg-id="PowerTurkTV.tr" tvg-name="PowerTürk TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/powerturk-tv-1080p-7651888d90.png" channel-id="PowerTurkTV.tr" tvg-language="tur" tvg-country="TR" group-title="Backup",PowerTürk TV
 https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="PraiseTV.pk@SD" tvg-name="Praise TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/praise-tv.png" tvg-country="PK" channel-id="PraiseTV.pk@SD" group-title="Backup",Praise TV
-https://pixelsmedia.live/livepraisetv/index.m3u8
 #EXTINF:-1 channel-id="ProbashiTV.ca@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/probashi-tv.png" tvg-id="ProbashiTV.ca@SD" tvg-name="Probashi TV" group-title="Backup",Probashi TV
 http://158.69.24.53:8080/probashi_tv/index.m3u8
 #EXTINF:-1 tvg-id="PTCMusic.in@SD" tvg-name="PTC Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ptc-music.png" channel-id="PTCMusic.in@SD" group-title="Backup",PTC Music
