@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T13:21:56+00:00",
+  "generated": "2026-10-04T13:31:31+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -1205,6 +1205,20 @@
       "primary": 1,
       "backup": 3
     },
+    "chithiram": {
+      "names": [
+        "Chithiram"
+      ],
+      "ids": [
+        "chithiram.in@sd"
+      ],
+      "groups": [
+        "Not Playing"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "choppertown": {
       "names": [
         "Choppertown"
@@ -1947,6 +1961,20 @@
       ],
       "ids": [
         "custom.fast.sports"
+      ],
+      "groups": [
+        "Not Playing"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
+    "custom.floracing.24.7": {
+      "names": [
+        "FloRacing 24/7"
+      ],
+      "ids": [
+        "custom.floracing.24.7"
       ],
       "groups": [
         "Not Playing"
@@ -2752,6 +2780,20 @@
       "primary": 1,
       "backup": 1
     },
+    "ddchhattisgarh": {
+      "names": [
+        "DD Chhattisgarh"
+      ],
+      "ids": [
+        "ddchhattisgarh.in@sd"
+      ],
+      "groups": [
+        "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "ddgirnar": {
       "names": [
         "DD Girnar"
@@ -3080,6 +3122,48 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "dduttarakhand": {
+      "names": [
+        "DD Uttarakhand"
+      ],
+      "ids": [
+        "dduttarakhand.in@sd"
+      ],
+      "groups": [
+        "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "dduttarpradesh": {
+      "names": [
+        "DD Uttar Pradesh"
+      ],
+      "ids": [
+        "dduttarpradesh.in@sd"
+      ],
+      "groups": [
+        "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "ddyadagiri": {
+      "names": [
+        "DD Yadagiri"
+      ],
+      "ids": [
+        "ddyadagiri.in@sd"
+      ],
+      "groups": [
+        "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "deentv": {
       "names": [
@@ -3651,104 +3735,6 @@
       ],
       "groups": [
         "Pakistani"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "famelack.db4xrylwq58w1o": {
-      "names": [
-        "VCV"
-      ],
-      "ids": [
-        "famelack.db4xrylwq58w1o"
-      ],
-      "groups": [
-        "Indian Music"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "famelack.ioaw5hy7e9f7fu": {
-      "names": [
-        "Chithiram"
-      ],
-      "ids": [
-        "famelack.ioaw5hy7e9f7fu"
-      ],
-      "groups": [
-        "Not Playing"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 0
-    },
-    "famelack.mebs8uqzochkud": {
-      "names": [
-        "DD Yadagiri"
-      ],
-      "ids": [
-        "famelack.mebs8uqzochkud"
-      ],
-      "groups": [
-        "Indian Entertainment"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "famelack.moer2crrtfidyj": {
-      "names": [
-        "DD Chhattisgarh"
-      ],
-      "ids": [
-        "famelack.moer2crrtfidyj"
-      ],
-      "groups": [
-        "Indian Entertainment"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "famelack.rqx1xf8m3ng5pl": {
-      "names": [
-        "FloRacing 24/7"
-      ],
-      "ids": [
-        "famelack.rqx1xf8m3ng5pl"
-      ],
-      "groups": [
-        "Not Playing"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 0
-    },
-    "famelack.taqrpus98q9cuj": {
-      "names": [
-        "DD Uttarakhand"
-      ],
-      "ids": [
-        "famelack.taqrpus98q9cuj"
-      ],
-      "groups": [
-        "Indian Entertainment"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "famelack.vma78sz4exxjig": {
-      "names": [
-        "DD Uttar Pradesh"
-      ],
-      "ids": [
-        "famelack.vma78sz4exxjig"
-      ],
-      "groups": [
-        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -8734,6 +8720,20 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "vcv": {
+      "names": [
+        "VCV"
+      ],
+      "ids": [
+        "vcv.in@sd"
+      ],
+      "groups": [
+        "Indian Music"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "vendhartv": {
       "names": [

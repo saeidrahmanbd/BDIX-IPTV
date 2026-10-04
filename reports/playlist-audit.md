@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-04T13:21:56.766090+00:00**
+Generated: **2026-10-04T13:31:31.465960+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -21,7 +21,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
 - Suspicious URL credentials/syntax: **0**
-- Signed/tokenized stream URLs: **11**
+- Signed/tokenized stream URLs: **9**
 
 ## Duplicate IDs
 
@@ -315,7 +315,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Ekhon TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/globaltv.stream/index.m3u8
 - Ekhon TV — Backup — https://drk6xq0vhn.gpcdn.net/live/ekhon_tv_abr/index.m3u8
 - Ekhon TV — Backup — https://stream.ottplus.live/live/ekhon_tv_abr/index.m3u8
-- Ekhon TV — Backup — https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8?e=1784102563&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
+- Ekhon TV — Backup — https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8?e=1784102563
 ### ekusheytv.bd (5 streams)
 - Ekushey TV — Bangladesh — http://198.195.239.50:8095/ETV.BANGLA.HD/index.m3u8
 - Ekushey TV — Backup — https://ekusheyserver.com/etvlivesn.m3u8
@@ -541,7 +541,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - NTV — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8
 - NTV — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/ntv/index.m3u8
 - NTV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/ntv-1/index.m3u8
-- NTV — Backup — https://tvsen5.aynaott.com/JHPxHAWonztVucyc4GzF/index.m3u8?e=1784102559&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
+- NTV — Backup — https://tvsen5.aynaott.com/JHPxHAWonztVucyc4GzF/index.m3u8?e=1784102559
 ### ntveurope.bd (2 streams)
 - NTV Europe — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/ntvuk00332211.stream/playlist.m3u8
 - NTV Europe — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/ntvuk00332211.stream/live-orgin/ntvuk00332211.stream/chunks.m3u8
@@ -796,8 +796,6 @@ None.
 - **WOW Kidz Tamil** — Kids — https://yuppparoriglin.akamaized.net/181224/smil:wowkidztam.smil/playlist.m3u8?hdnts=[REDACTED]
 - **WOW Kidz Telugu** — Kids — https://yuppparoriglin.akamaized.net/181224/smil:wowkidztelgu.smil/playlist.m3u8?hdnts=[REDACTED]
 - **Darshana TV** — Backup — https://yuppparoriglin.akamaized.net/181224/smil:darshanatv.smil/playlist.m3u8?hdnts=[REDACTED]
-- **Ekhon TV** — Backup — https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8?e=1784102563&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
-- **NTV** — Backup — https://tvsen5.aynaott.com/JHPxHAWonztVucyc4GzF/index.m3u8?e=1784102559&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=[REDACTED]
 - **Studio Yuva** — Backup — https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=[REDACTED]
 
 ## Review Queue Name Consistency
