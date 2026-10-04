@@ -1996,6 +1996,7 @@ http://198.195.239.50:8095/NICK/index.m3u8
 #EXTINF:-1 tvg-id="NickJr.in@SD" tvg-name="Nick Jr" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png" channel-id="NickJr.in@SD" group-title="New Backup",Nick Jr
 http://198.195.239.50:8095/NICK.JR/index.m3u8
 #EXTINF:-1 tvg-id="ASports.pk" tvg-name="A Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-sports-5485adff.png" channel-id="ASports.pk" group-title="New Backup",A Sports
+http://198.195.239.50:8095/A.SPORTS.HD/index.m3u8
 #EXTINF:-1 tvg-id="HistoryTV18.in@SD" , tvg-name="History TV18" , tvg-logo="" , tvg-language="eng" , channel-id="HistoryTV18.in@SD" , tvg-country="IN" , group-title="New Backup",History TV18
 https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
 #EXTINF:-1 tvg-id="HistoryTV18.in@SD" , tvg-name="History TV18" , tvg-logo="" , tvg-language="eng" , channel-id="HistoryTV18.in@SD" , tvg-country="IN" , group-title="New Backup",History TV18
