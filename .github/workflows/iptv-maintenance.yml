@@ -69,6 +69,8 @@ jobs:
               echo "EPG publish gate passed; accepting newly generated guide."
             fi
             cp epg.xml /tmp/bdix-epg-publish.xml
+            # Refresh EPG coverage against the final guide retained by the publish gate.
+            python scripts/epg_coverage.py
             python scripts/sync_epg_worker_map.py
             set +e
             python scripts/audit_playlist.py
