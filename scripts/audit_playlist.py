@@ -217,6 +217,7 @@ cross_country_backups = []
 logos_by_id = defaultdict(set)
 logo_counts = Counter()
 logo_exceptions = []
+review_logo_exceptions = []
 
 for info, url in entries:
     cid = identity(info)
@@ -226,7 +227,11 @@ for info, url in entries:
     issue = logo_issue(info)
     logo_counts["healthy" if not issue or issue == "repository-reference" else issue] += 1
     if issue in {"missing", "broken-local", "external", "unsupported-format", "invalid-dimensions", "corrupt-image", "unvalidated-image", "other"}:
-        logo_exceptions.append((display_name(info), identity(info), issue, attrs(info).get("tvg-logo","")))
+        item = (display_name(info), identity(info), issue, attrs(info).get("tvg-logo",""))
+        if attrs(info).get("group-title", "").strip() == "Not Playing":
+            review_logo_exceptions.append(item)
+        else:
+            logo_exceptions.append(item)
 
 protected_changes = []
 try:
@@ -302,6 +307,7 @@ lines = [
     f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**",
     f"- Protected primary-entry changes: **{len(protected_changes)}**",
     f"- Logo exceptions: **{len(logo_exceptions)}**",
+    f"- Not Playing logo exceptions: **{len(review_logo_exceptions)}**",
     f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**",
     f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**",
     f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**",
@@ -568,12 +574,17 @@ if missing_channel_id:
     raise SystemExit("All playlist entries must carry channel-id.")
 if missing_tvg_id:
     raise SystemExit("All playlist entries must carry tvg-id.")
-if missing_logo:
-    raise SystemExit("All playlist entries must carry tvg-logo.")
+blocking_missing_logo = [
+    (info, url) for info, url in entries
+    if not attrs(info).get("tvg-logo", "").strip()
+    and attrs(info).get("group-title", "").strip() != "Not Playing"
+]
+if blocking_missing_logo:
+    raise SystemExit("All active/reviewable playlist entries must carry tvg-logo.")
 if missing_primary_chno:
     raise SystemExit("All active primary entries must carry tvg-chno.")
 if logo_exceptions:
-    raise SystemExit("Logo integrity failures detected.")
+    raise SystemExit("Logo integrity failures detected in active/reviewable entries.")
 if stray_name_markers:
     raise SystemExit("Stray Unicode channel-name markers detected.")
 

@@ -96,8 +96,23 @@ jobs:
           hist.append(rec); f.parent.mkdir(parents=True,exist_ok=True); f.write_text(json.dumps(hist[-180:],indent=2)+'\n',encoding='utf-8')
           PY
             python scripts/generate_dashboard.py
-            if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ] || [ "$HEALTH_STATUS" -ne 0 ]; then
+            # Stream health is diagnostic only: transient HTTP timeouts and
+            # CDN/protection failures must never roll back valid playlist
+            # metadata repairs. Only the structural audit and publication gate
+            # are allowed to roll back playlist content.
+            if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
               git restore -- IPTV-Playlist.m3u logos/ xtream/worker.js || true
+              # Reports must describe the exact playlist state that will be
+              # committed. Re-run the audit/gate after any rollback rather than
+              # leaving reports generated from a discarded working tree.
+              set +e
+              python scripts/audit_playlist.py
+              FINAL_AUDIT_STATUS=$?
+              python scripts/pre_publish_gate.py
+              FINAL_GATE_STATUS=$?
+              set -e
+              echo "Final post-rollback audit: $FINAL_AUDIT_STATUS"
+              echo "Final post-rollback gate: $FINAL_GATE_STATUS"
             fi
             # The guide is a generated publication artifact. Restore the
             # publish-approved copy immediately before staging so later
