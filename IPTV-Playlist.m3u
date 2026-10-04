@@ -131,8 +131,8 @@ http://115.187.41.216:8080/hls/amardigital/index.m3u8
 https://live-stream.utkalbongo.com/hls/livebanglatvstream.m3u8
 #EXTINF:-1 tvg-id="BHI.Channel.in" tvg-name="BHI Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bhi-channel.png" tvg-chno="246" channel-id="BHI.Channel.in" group-title="Indian Bangla",BHI Channel
 https://server.livelegitpro.in/bhichannel/bhichannel/index.m3u8
-#EXTINF:-1 tvg-id="Colors.Bangla.in" tvg-name="Colors Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png" tvg-chno="247" channel-id="Colors.Bangla.in" group-title="Indian Bangla",Colors Bangla
-https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/800.m3u8
+#EXTINF:-1 channel-id="Colors.Bangla.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png" tvg-id="Colors.Bangla.in" tvg-name="Colors Bangla" group-title="Indian Bangla",Colors Bangla
+http://198.195.239.50:8095/COLORS.BANGLA.HD/index.m3u8
 #EXTINF:-1 tvg-id="ColorsBanglaCinema.in@SD" tvg-name="Colors Bangla Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-cinema.png" tvg-chno="248" channel-id="ColorsBanglaCinema.in@SD" group-title="Indian Bangla",Colors Bangla Cinema
 http://livetv.akr4m.com:8080/bdtv/restrem/3.m3u8
 #EXTINF:-1 tvg-id="DDBangla.in@SD" tvg-name="DD Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-bangla.png" tvg-chno="251" channel-id="DDBangla.in@SD" tvg-language="ben" tvg-country="IN" group-title="Indian Bangla",DD Bangla
@@ -1181,8 +1181,6 @@ https://stream.ottplus.live/live/and_tv_hd_abr/index.m3u8
 https://cdn.pishow.tv/ott/live/1257/master.m3u8
 #EXTINF:-1 tvg-id="8XM.pk" tvg-name="8XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png" channel-id="8XM.pk" group-title="Backup",8XM
 https://cdn4.mjunoon.tv:8087/streamtest/131M/chunks.m3u8
-#EXTINF:-1 tvg-id="8XM.pk" tvg-name="8XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png" channel-id="8XM.pk" tvg-language="urd" tvg-country="PK" group-title="Backup",8XM
-https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
 #EXTINF:-1 tvg-id="8XM.pk" tvg-name="8XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png" channel-id="8XM.pk" tvg-country="PK" group-title="Backup",8XM
 https://iptvlive.ahmed-bd-org.workers.dev/8xm-1/index.m3u8
 #EXTINF:-1 tvg-language="hin" tvg-country="IN" tvg-id="9XJalwa.in" tvg-name="9X Jalwa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jalwa.png" channel-id="9XJalwa.in" group-title="Backup",9X Jalwa
@@ -1313,8 +1311,8 @@ https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxI
 https://iptvlive.ahmed-bd-org.workers.dev/channel-s-1/index.m3u8
 #EXTINF:-1 tvg-id="Choppertown.us" tvg-name="Choppertown" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/choppertown.png" channel-id="Choppertown.us" group-title="Backup",Choppertown
 https://linear-11.frequency.stream/dist/glewedtv/11/hls/master/playlist.m3u8
-#EXTINF:-1 tvg-id="Colors.Bangla.in" tvg-name="Colors Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png" channel-id="Colors.Bangla.in" group-title="Backup",Colors Bangla
-http://198.195.239.50:8095/COLORS.BANGLA.HD/index.m3u8
+#EXTINF:-1 channel-id="Colors.Bangla.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png" tvg-id="Colors.Bangla.in" tvg-name="Colors Bangla" tvg-chno="247" group-title="Backup",Colors Bangla
+https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/800.m3u8
 #EXTINF:-1 tvg-id="Colors.Bangla.in" tvg-name="Colors Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png" channel-id="Colors.Bangla.in" group-title="Backup",Colors Bangla
 http://198.195.239.50:8095/colorsBangla/index.m3u8
 #EXTINF:-1 tvg-id="Colors.Bangla.in" tvg-name="Colors Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png" channel-id="Colors.Bangla.in" group-title="Backup",Colors Bangla
@@ -1485,6 +1483,8 @@ http://103.151.60.162:2122/play/a00x/index.m3u8
 http://198.195.239.50:8095/JALSHA.MOVIES.HD/index.m3u8
 #EXTINF:-1 tvg-id="Star.Jalsha.Movies.in" tvg-name="Jalsha Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalsha-movies-hd.png" channel-id="Star.Jalsha.Movies.in" group-title="Backup",Jalsha Movies
 http://198.195.239.50:8095/jalshaMovies/index.m3u8
+#EXTINF:-1 channel-id="8XM.pk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png" tvg-id="8XM.pk" tvg-name="Jalwa TV" tvg-language="urd" tvg-country="PK" group-title="Backup",Jalwa TV
+https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
 #EXTINF:-1 tvg-id="JamunaTV.bd" tvg-name="Jamuna TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jamuna-tv.png" channel-id="JamunaTV.bd" group-title="Backup",Jamuna TV
 https://iptv-proxy.ahmed-bd-org.workers.dev/jamuna-tv/index.m3u8
 #EXTINF:-1 tvg-id="JamunaTV.bd" tvg-name="Jamuna TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jamuna-tv.png" channel-id="JamunaTV.bd" group-title="Backup",Jamuna TV
@@ -1694,8 +1694,6 @@ http://198.195.239.50:8095/STAR.GOLD.HD/index.m3u8
 #EXTINF:-1 tvg-id="StarGold.in@HD" tvg-name="Star Gold" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold.png" channel-id="StarGold.in@HD" group-title="Backup",Star Gold
 http://51.75.127.199:3141/stargold/index.m3u8
 #EXTINF:-1 tvg-id="Star.Jalsha.in" tvg-name="Star Jalsha" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" channel-id="Star.Jalsha.in" group-title="Backup",Star Jalsha
-http://103.151.60.162:2122/play/a00w/index.m3u8
-#EXTINF:-1 tvg-id="Star.Jalsha.in" tvg-name="Star Jalsha" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" channel-id="Star.Jalsha.in" group-title="Backup",Star Jalsha
 http://198.195.239.50:8095/STAR.JALSHA.HD/index.m3u8
 #EXTINF:-1 tvg-id="Star.Jalsha.in" tvg-name="Star Jalsha" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" channel-id="Star.Jalsha.in" group-title="Backup",Star Jalsha
 https://flussonic.defineatoz.com/StarjalshaHD/tracks-v1a1/mono.m3u8
@@ -1787,24 +1785,6 @@ https://d2esfk1pb9cdob.cloudfront.net/master.m3u8
 https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 #EXTINF:-1 tvg-id="custom.zoommusic" tvg-name="Zoom Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-music.png" channel-id="custom.zoommusic" group-title="Backup",Zoom Music
 https://pubads.g.doubleclick.net/ssai/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
-#EXTINF:-1 tvg-id="ZBCinema.in@HD" tvg-name="ZB Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zb-cinema.png" channel-id="ZBCinema.in@HD" group-title="New Channels",ZB Cinema
-https://server.zillarbarta.com/ZBCINEMA/index.m3u8
-#EXTINF:-1 tvg-id="WildEarth.int" tvg-name="Wild Earth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wild-earth.png" channel-id="WildEarth.int" group-title="New Channels",Wild Earth
-https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01290-wildearth-oando/playlist.m3u8
-#EXTINF:-1 tvg-id="DiscoveryTurbo.in@HD" tvg-name="Discovery Turbo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-turbo.png" channel-id="DiscoveryTurbo.in@HD" group-title="New Channels",Discovery Turbo
-http://202.70.146.135:8000/play/a050/index.m3u8
-#EXTINF:-1 tvg-id="ColorsBanglaCinema.in@SD" tvg-name="Colors Bangla Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-cinema.png" channel-id="ColorsBanglaCinema.in@SD" group-title="New Backup",Colors Bangla Cinema
-http://103.172.29.30:9991/stream/channelid/14180834
-#EXTINF:-1 tvg-id="Colors.Bangla.in" tvg-name="Colors Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png" channel-id="Colors.Bangla.in" group-title="New Backup",Colors Bangla
-http://103.141.70.136:8080//bdtv/restrem/34.m3u8
-#EXTINF:-1 tvg-id="Colors.Bangla.in" tvg-name="Colors Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png" channel-id="Colors.Bangla.in" group-title="New Backup",Colors Bangla
-http://103.172.29.30:9991/stream/channelid/1759751142
-#EXTINF:-1 tvg-id="UpoharBangla.in@SD" tvg-name="Upohar Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/upohar-bangla.png" channel-id="UpoharBangla.in@SD" group-title="New Backup",Upohar Bangla
-https://ranacable.duckdns.org/UpoharBangla/tracks-v1a1/index.m3u8
-#EXTINF:-1 tvg-id="custom.zing.music" tvg-name="Zing!" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zing.png" channel-id="custom.zing.music" group-title="New Backup",Zing!
-http://107.167.16.138/zing/index.m3u8
-#EXTINF:-1 tvg-id="TaraTV.in@SD" tvg-name="TARA TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tara-tv.png" channel-id="TaraTV.in@SD" group-title="New Backup",TARA TV
-https://legitpro.co.in/taratv/taratv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" channel-id="AnandaTV.bd" group-title="Not Playing",Ananda TV
 https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="AsianTV.bd" tvg-name="Asian TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" channel-id="AsianTV.bd" group-title="Not Playing",Asian TV
