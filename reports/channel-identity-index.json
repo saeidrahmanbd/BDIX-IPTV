@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T17:13:39+00:00",
+  "generated": "2026-10-04T17:42:25+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -498,11 +498,12 @@
         "asiantv.bd"
       ],
       "groups": [
-        "Backup"
+        "Backup",
+        "Bangladesh"
       ],
       "streams": 2,
-      "primary": 0,
-      "backup": 2
+      "primary": 1,
+      "backup": 1
     },
     "asports": {
       "names": [
@@ -4275,20 +4276,6 @@
       "primary": 1,
       "backup": 0
     },
-    "hstv": {
-      "names": [
-        "HSTV"
-      ],
-      "ids": [
-        "hstv.in@sd"
-      ],
-      "groups": [
-        "Not Playing"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 0
-    },
     "hummasala": {
       "names": [
         "Hum Masala"
@@ -4486,20 +4473,6 @@
       ],
       "groups": [
         "Religious"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "isaactv": {
-      "names": [
-        "Isaac TV"
-      ],
-      "ids": [
-        "isaactv.pk@sd"
-      ],
-      "groups": [
-        "Pakistani"
       ],
       "streams": 1,
       "primary": 1,
@@ -6321,20 +6294,6 @@
       "primary": 1,
       "backup": 0
     },
-    "pmitv": {
-      "names": [
-        "PMI TV"
-      ],
-      "ids": [
-        "pmitv.pk@sd"
-      ],
-      "groups": [
-        "Pakistani"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "pocketfilms": {
       "names": [
         "Pocket Films"
@@ -6416,21 +6375,6 @@
       "groups": [
         "Backup",
         "International"
-      ],
-      "streams": 2,
-      "primary": 1,
-      "backup": 1
-    },
-    "praisetv": {
-      "names": [
-        "Praise TV"
-      ],
-      "ids": [
-        "praisetv.pk@sd"
-      ],
-      "groups": [
-        "Backup",
-        "Pakistani"
       ],
       "streams": 2,
       "primary": 1,

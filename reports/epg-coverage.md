@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-04T17:13:24+00:00**
+Generated: **2026-10-04T17:42:23+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
@@ -89,3 +89,11 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Music | UTV Palakkad | UTVPalakkad.in@SD | - | NO_GUIDE_HIT |
 | Indian Music | VCV | VCV.in@SD | - | NO_GUIDE_HIT |
 | Indian Music | Zoom Music | custom.zoommusic | - | NO_GUIDE_HIT |
+
+## Published Guide Validation
+
+- Playlist EPG references: **OK**
+- Guide channel IDs published: **344**
+- Mapped playlist IDs present in guide: **288/295 (97.6%)**
+- Mapped playlist IDs with current/future programmes: **274/295 (92.9%)**
+- This validation is against the guide currently present in the working tree/publish candidate.
