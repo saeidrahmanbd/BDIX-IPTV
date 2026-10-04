@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff2a8"/><stop offset=".28" stop-color="#ffd24a"/>
+      <stop offset=".58" stop-color="#d89400"/><stop offset="1" stop-color="#fff0a0"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff3b30"/><stop offset=".55" stop-color="#c40000"/><stop offset="1" stop-color="#650000"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#c9cdd2"/><stop offset="1" stop-color="#71757a"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-opacity=".45"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <circle cx="500" cy="350" r="245" fill="url(#gold)" stroke="#6d3d00" stroke-width="18"/>
+    <circle cx="500" cy="350" r="205" fill="#171717" stroke="#f2b51d" stroke-width="10"/>
+    <g fill="#0a0a0a" stroke="#8f5a00" stroke-width="7">
+      <circle cx="500" cy="205" r="66"/><circle cx="625" cy="280" r="66"/>
+      <circle cx="580" cy="425" r="66"/><circle cx="420" cy="425" r="66"/>
+      <circle cx="375" cy="280" r="66"/>
+    </g>
+    <circle cx="500" cy="350" r="48" fill="#171717" stroke="#f2b51d" stroke-width="9"/>
+    <path d="M160 405 C60 470 95 610 255 635 L755 635 C905 610 940 470 840 405 L785 455 C835 500 800 555 735 555 L265 555 C195 555 165 500 215 455 Z" fill="url(#red)" stroke="#f2b51d" stroke-width="12"/>
+    <path d="M690 270 L900 385 L690 500 Z" fill="url(#red)" stroke="url(#gold)" stroke-width="18" stroke-linejoin="round"/>
+    <rect x="110" y="570" width="780" height="300" rx="55" fill="#111" stroke="url(#gold)" stroke-width="16"/>
+    <rect x="130" y="590" width="740" height="115" rx="25" fill="url(#red)" stroke="#7d4200" stroke-width="5"/>
+    <rect x="130" y="710" width="740" height="135" rx="25" fill="#101010" stroke="#8d5600" stroke-width="5"/>
+    <text x="500" y="680" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="104" font-weight="900" letter-spacing="10" fill="url(#gold)" stroke="#3c2100" stroke-width="5">HINDI</text>
+    <text x="500" y="815" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="105" font-weight="900" letter-spacing="5" fill="url(#silver)" stroke="#171717" stroke-width="5">MOVIES</text>
+  </g>
+</svg>
