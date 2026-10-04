@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T04:31:14+00:00",
+  "generated": "2026-10-04T04:41:04+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -111,9 +111,9 @@
         "Backup",
         "Pakistani"
       ],
-      "streams": 4,
+      "streams": 3,
       "primary": 1,
-      "backup": 3
+      "backup": 2
     },
     "9xjalwa": {
       "names": [
@@ -1318,10 +1318,9 @@
       "groups": [
         "Backup",
         "Indian Bangla",
-        "New Backup",
         "Not Playing"
       ],
-      "streams": 8,
+      "streams": 6,
       "primary": 1,
       "backup": 4
     },
@@ -1334,10 +1333,9 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla",
-        "New Backup"
+        "Indian Bangla"
       ],
-      "streams": 5,
+      "streams": 4,
       "primary": 1,
       "backup": 3
     },
@@ -3124,20 +3122,6 @@
       "primary": 1,
       "backup": 0
     },
-    "discoveryturbo": {
-      "names": [
-        "Discovery Turbo"
-      ],
-      "ids": [
-        "discoveryturbo.in@hd"
-      ],
-      "groups": [
-        "New Channels"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 0
-    },
     "disneychannel": {
       "names": [
         "Disney Channel Hungary",
@@ -4253,11 +4237,12 @@
         "jalwatv.pk@sd"
       ],
       "groups": [
+        "Backup",
         "Pakistani"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "jamunatv": {
       "names": [
@@ -7123,9 +7108,9 @@
         "Indian Bangla",
         "Not Playing"
       ],
-      "streams": 6,
+      "streams": 5,
       "primary": 2,
-      "backup": 3
+      "backup": 2
     },
     "star.jalsha.movies": {
       "names": [
@@ -7638,20 +7623,6 @@
       "primary": 1,
       "backup": 0
     },
-    "taratv": {
-      "names": [
-        "TARA TV"
-      ],
-      "ids": [
-        "taratv.in@sd"
-      ],
-      "groups": [
-        "New Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 0
-    },
     "teletubbies": {
       "names": [
         "Teletubbies"
@@ -8035,20 +8006,6 @@
       "primary": 1,
       "backup": 1
     },
-    "upoharbangla": {
-      "names": [
-        "Upohar Bangla"
-      ],
-      "ids": [
-        "upoharbangla.in@sd"
-      ],
-      "groups": [
-        "New Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 0
-    },
     "usbb5200028mm": {
       "names": [
         "Mysteries Xplored"
@@ -8159,10 +8116,9 @@
       ],
       "groups": [
         "Backup",
-        "Documentary & Wildlife",
-        "New Channels"
+        "Documentary & Wildlife"
       ],
-      "streams": 3,
+      "streams": 2,
       "primary": 1,
       "backup": 1
     },
@@ -8252,20 +8208,6 @@
       ],
       "streams": 1,
       "primary": 1,
-      "backup": 0
-    },
-    "zbcinema": {
-      "names": [
-        "ZB Cinema"
-      ],
-      "ids": [
-        "zbcinema.in@hd"
-      ],
-      "groups": [
-        "New Channels"
-      ],
-      "streams": 1,
-      "primary": 0,
       "backup": 0
     },
     "zee24ghanta": {
@@ -8435,10 +8377,9 @@
         "zing.in@sd"
       ],
       "groups": [
-        "Indian Music",
-        "New Backup"
+        "Indian Music"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
       "backup": 0
     },
