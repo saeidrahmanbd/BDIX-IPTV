@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T09:55:36+00:00",
+  "generated": "2026-10-04T09:59:28+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -98,6 +98,21 @@
       ],
       "streams": 1,
       "primary": 1,
+      "backup": 0
+    },
+    "8xm": {
+      "names": [
+        "8XM"
+      ],
+      "ids": [
+        "8xm.pk@sd"
+      ],
+      "groups": [
+        "New Backup",
+        "New Channels"
+      ],
+      "streams": 2,
+      "primary": 0,
       "backup": 0
     },
     "9xjalwa": {
@@ -4418,6 +4433,20 @@
       "primary": 1,
       "backup": 1
     },
+    "gracenetwork": {
+      "names": [
+        "Grace Network"
+      ],
+      "ids": [
+        "gracenetwork.pk@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "gravitasmovies": {
       "names": [
         "Gravitas Movies"
@@ -4820,6 +4849,20 @@
       "primary": 1,
       "backup": 0
     },
+    "isaactv": {
+      "names": [
+        "Isaac TV"
+      ],
+      "ids": [
+        "isaactv.pk@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "isaiaruvi": {
       "names": [
         "Isai Aruvi"
@@ -4877,6 +4920,20 @@
       "primary": 1,
       "backup": 0
     },
+    "jalwatv": {
+      "names": [
+        "Jalwa TV"
+      ],
+      "ids": [
+        "jalwatv.pk@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "jamunatv": {
       "names": [
         "Jamuna TV"
@@ -4919,6 +4976,21 @@
       ],
       "streams": 1,
       "primary": 1,
+      "backup": 0
+    },
+    "jeremiahtv": {
+      "names": [
+        "Jeremiah TV"
+      ],
+      "ids": [
+        "jeremiahtv.pk@sd"
+      ],
+      "groups": [
+        "New Backup",
+        "New Channels"
+      ],
+      "streams": 2,
+      "primary": 0,
       "backup": 0
     },
     "jhankartv": {
@@ -4975,6 +5047,20 @@
       ],
       "streams": 1,
       "primary": 1,
+      "backup": 0
+    },
+    "joshuatv": {
+      "names": [
+        "Joshua TV"
+      ],
+      "ids": [
+        "joshuatv.pk@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
       "backup": 0
     },
     "kairaliarabia": {
@@ -5150,6 +5236,20 @@
       "primary": 1,
       "backup": 1
     },
+    "kingtv": {
+      "names": [
+        "King TV"
+      ],
+      "ids": [
+        "kingtv.pk@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "kitevicters": {
       "names": [
         "Kite Victers"
@@ -5250,6 +5350,34 @@
       "streams": 6,
       "primary": 1,
       "backup": 1
+    },
+    "madanichannelenglish": {
+      "names": [
+        "Madani Channel English"
+      ],
+      "ids": [
+        "madanichannelenglish.pk@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
+    "madanichannelurdu": {
+      "names": [
+        "Madani Channel Urdu"
+      ],
+      "ids": [
+        "madanichannelurdu.pk@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
     },
     "madeinhollywood": {
       "names": [
@@ -5901,6 +6029,21 @@
       ],
       "streams": 1,
       "primary": 1,
+      "backup": 0
+    },
+    "msports": {
+      "names": [
+        "M Sports"
+      ],
+      "ids": [
+        "msports.pk@sd"
+      ],
+      "groups": [
+        "New Backup",
+        "New Channels"
+      ],
+      "streams": 3,
+      "primary": 0,
       "backup": 0
     },
     "mtv2": {
@@ -6655,6 +6798,20 @@
       "primary": 1,
       "backup": 1
     },
+    "paighantv": {
+      "names": [
+        "Paighan TV"
+      ],
+      "ids": [
+        "paighantv.pk@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "pardesitv": {
       "names": [
         "Pardesi TV"
@@ -6769,6 +6926,20 @@
       "primary": 1,
       "backup": 2
     },
+    "pksports": {
+      "names": [
+        "PK Sports"
+      ],
+      "ids": [
+        "pksports.pk@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "plex.tv.action.hollywood.movies.plex": {
       "names": [
         "Action Hollywood Movies"
@@ -6795,6 +6966,20 @@
       ],
       "streams": 1,
       "primary": 1,
+      "backup": 0
+    },
+    "pmitv": {
+      "names": [
+        "PMI TV"
+      ],
+      "ids": [
+        "pmitv.pk@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
       "backup": 0
     },
     "pocketfilms": {
@@ -6882,6 +7067,21 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "praisetv": {
+      "names": [
+        "Praise TV"
+      ],
+      "ids": [
+        "praisetv.pk@sd"
+      ],
+      "groups": [
+        "New Backup",
+        "New Channels"
+      ],
+      "streams": 2,
+      "primary": 0,
+      "backup": 0
     },
     "prarthanabhawantv": {
       "names": [
@@ -7608,6 +7808,20 @@
       ],
       "streams": 1,
       "primary": 1,
+      "backup": 0
+    },
+    "samaatv": {
+      "names": [
+        "Samaa TV"
+      ],
+      "ids": [
+        "samaatv.pk@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
       "backup": 0
     },
     "sanandatv": {
@@ -9731,6 +9945,20 @@
       "streams": 5,
       "primary": 1,
       "backup": 3
+    },
+    "zindagitv": {
+      "names": [
+        "Zindagi TV"
+      ],
+      "ids": [
+        "zindagitv.pk@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
     },
     "zing": {
       "names": [

@@ -1,13 +1,13 @@
 # Playlist Audit
-Generated: **2026-10-04T09:55:36.674375+00:00**
+Generated: **2026-10-04T09:59:28.582503+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1061**
-- Unique channel IDs: **692**
-- IDs with multiple streams: **183**
+- Playlist entries: **1082**
+- Unique channel IDs: **708**
+- IDs with multiple streams: **187**
 - Duplicate stream URLs: **2**
 - Metadata conflicts: **3**
 - Same-name / different-ID collisions: **0**
@@ -27,6 +27,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### 7smusic.in@sd (2 streams)
 - 7S Music — Indian Music — https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8
 - 7S Music — Backup — https://cdn.pishow.tv/ott/live/1257/master.m3u8
+### 8xm.pk@sd (2 streams)
+- 8XM — New Channels — https://cdn4.mjunoon.tv:8087/streamtest/131M/chunks.m3u8
+- 8XM — New Backup — https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
 ### 9xjalwa.in (3 streams)
 - 9X Jalwa — Indian Music — https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8
 - 9X Jalwa — Backup — https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/70fca4d1-156e-4c03-baa4-9a4b602e33d5/0.m3u8
@@ -403,6 +406,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Jamuna TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/jamuna-tv-1/index.m3u8
 - Jamuna TV — Backup — https://stream.ottplus.live/live/jamuna_tv_abr/index.m3u8
 - Jamuna TV — Not Playing — https://tvsen6.aynaott.com/KGdZEdA7qQ43dmPkgk1j/index.m3u8
+### jeremiahtv.pk@sd (2 streams)
+- Jeremiah TV — New Channels — https://x.streamablecloud.com/stream/hls/jeremiahtv/index.m3u8
+- Jeremiah TV — New Backup — https://x.streamablecloud.com/stream/hls/jeremiahtv/1_2/index.m3u8
 ### jonmobhumitv.au (2 streams)
 - Jonmobhumi TV — Not Playing — https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/playlist.m3u8
 - Jonmobhumi TV — Not Playing — https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/tracks-v1a1/mono.m3u8
@@ -481,6 +487,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### moviesphere.us (2 streams)
 - MovieSphere — International — https://aegis-cloudfront-1.tubi.video/8b127a5b-3054-4f39-93a2-1c4aab9ef5ff/playlist.m3u8
 - MovieSphere — Backup — https://amg00353-lionsgatestudio-moviesphere-xumo-zh5u0.amagi.tv/playlist.m3u8
+### msports.pk@sd (3 streams)
+- M Sports — New Channels — https://cdn.rabta.stream/M-Sports/index.m3u8
+- M Sports — New Backup — https://cdn.rabta.stream/M-Sports/tracks-v1a1/mono.m3u8
+- M Sports — New Backup — https://cdn.rabta.stream/M-Sports/tracks-v1a1/mono.ts.m3u8
 ### musicindia.in@sd (3 streams)
 - Music India — Indian Music — https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8
 - Music India — Backup — https://cdn.pishow.tv/ott/live/226/master.m3u8
@@ -554,6 +564,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### powerturktv.tr (2 streams)
 - PowerTürk TV — International — https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8
 - PowerTürk TV — Backup — https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8
+### praisetv.pk@sd (2 streams)
+- Praise TV — New Channels — https://livecdn.live247stream.com/praise/tv/playlist.m3u8
+- Praise TV — New Backup — https://pixelsmedia.live/livepraisetv/index.m3u8
 ### probashitv.ca@sd (2 streams)
 - Probashi TV — Bangladesh — http://158.69.24.53:8080/probashi_tv/tracks-v1a1/mono.m3u8
 - Probashi TV — Backup — http://158.69.24.53:8080/probashi_tv/index.m3u8
@@ -812,7 +825,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1058**
+- Healthy/local references: **1079**
 - missing: **3**
 - broken-local: **0**
 - external: **0**
