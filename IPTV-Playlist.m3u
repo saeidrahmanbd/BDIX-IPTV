@@ -659,7 +659,7 @@ https://s3.ideationtec.live/A_Plus/A_Plus.m3u8
 https://s2.ideationtec.live/AAJ_Entertainment/AAJ_Entertainment.m3u8
 #EXTINF:-1 tvg-id="aurLIFE.pk" tvg-name="aur LIFE" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aurlife.png" tvg-chno="1057" channel-id="aurLIFE.pk" tvg-country="PK" group-title="Pakistani",aur LIFE
 https://s3.ideationtec.live/Aur_Life/Aur_Life.m3u8
-#EXTINF:-1 tvg-chno="562" tvg-name="Bol Entertainment" group-title="Pakistani" tvg-id="custom.bolentertainment" channel-id="custom.bolentertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bol-entertainment.png"Bol Entertainment,Bol Entertainment
+#EXTINF:-1 tvg-chno="562" tvg-name="Bol Entertainment" group-title="Pakistani" tvg-id="custom.bolentertainment" channel-id="custom.bolentertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bol-entertainment.png",Bol Entertainment
 https://s2.ideationtec.live/BOL_Entertainment_HD/BOL_Entertainment_HD.m3u8
 #EXTINF:-1 tvg-id="BSFilm.pk@SD" tvg-name="BS Film" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bs-film.png" tvg-chno="67" channel-id="BSFilm.pk@SD" group-title="Pakistani",BS Film
 https://lbgo.bozztv.com/ssh101/ssh101/bsfilm/playlist.m3u8
