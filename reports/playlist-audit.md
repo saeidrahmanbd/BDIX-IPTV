@@ -1,21 +1,21 @@
 # Playlist Audit
-Generated: **2026-10-04T12:17:09.523084+00:00**
+Generated: **2026-10-04T12:24:40.180143+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
 - Playlist entries: **1016**
-- Unique channel IDs: **643**
+- Unique channel IDs: **644**
 - IDs with multiple streams: **186**
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **1**
+- Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **3**
+- IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **1**
-- Duplicate primary identities: **4**
+- Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
@@ -27,10 +27,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### 7smusic.in@sd (2 streams)
 - 7S Music — Indian Music — https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8
 - 7S Music — Backup — https://cdn.pishow.tv/ott/live/1257/master.m3u8
-### 8xm.pk@sd (3 streams)
-- 8XM — Pakistani — https://cdn4.mjunoon.tv:8087/streamtest/131M/chunks.m3u8
-- Jalwa TV — Pakistani — https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
-- Jalwa TV — Backup — https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/live/135M/chunks.m3u8
 ### 9xjalwa.in (3 streams)
 - 9X Jalwa — Indian Music — https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8
 - 9X Jalwa — Backup — https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/70fca4d1-156e-4c03-baa4-9a4b602e33d5/0.m3u8
@@ -147,7 +143,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - BTV National — Backup — http://198.195.239.50:8095/BTV.HD/index.m3u8
 ### cartoonnetwork.uk (2 streams)
 - Cartoon Network — Kids — https://drk6xq0vhn.gpcdn.net/live/cn_sd_abr/index.m3u8
-- Cartoon Network — Kids — http://198.195.239.50:8095/cartoonNetwork/index.m3u8
+- Cartoon Network — Backup — http://198.195.239.50:8095/cartoonNetwork/index.m3u8
 ### cgtndocumentary.cn (2 streams)
 - CGTN Documentary — Documentary & Wildlife — https://english-livebkali.cgtn.com/live/doccgtn_1.m3u8
 - CGTN Documentary — Backup — https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8
@@ -207,7 +203,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Enter TV — Backup — https://live1.entertv.com.bd/entertv/index.fmp4.m3u8
 ### custom.love.nature (5 streams)
 - Love Nature — Documentary & Wildlife — http://27.124.71.27/Love_Nature/index.m3u8
-- Love Nature — Documentary & Wildlife — http://198.195.239.50:8095/LOVE.NATURE/index.m3u8
+- Love Nature — Backup — http://198.195.239.50:8095/LOVE.NATURE/index.m3u8
 - Love Nature — Backup — https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8
 - Love Nature — Backup — https://mumbai-edge.smartplaytv.in/LoveNature/index.m3u8
 - Love Nature — Backup — https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
@@ -404,6 +400,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### jagonews24.bd (2 streams)
 - Jago News 24 — Bangladesh — https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8
 - Jago News 24 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/jago-news-24-1/index.m3u8
+### jalwatv.pk@sd (2 streams)
+- Jalwa TV — Pakistani — https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
+- Jalwa TV — Backup — https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/live/135M/chunks.m3u8
 ### jamunatv.bd (5 streams)
 - Jamuna TV — Bangladesh — http://198.195.239.50:8095/JAMUNA.TV/index.m3u8
 - Jamuna TV — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/jamuna-tv/index.m3u8
@@ -412,7 +411,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Jamuna TV — Backup — https://tvsen6.aynaott.com/KGdZEdA7qQ43dmPkgk1j/index.m3u8
 ### jeremiahtv.pk@sd (2 streams)
 - Jeremiah TV — Pakistani — https://x.streamablecloud.com/stream/hls/jeremiahtv/1_2/index.m3u8
-- Jeremiah TV — Pakistani — https://x.streamablecloud.com/stream/hls/jeremiahtv/index.m3u8
+- Jeremiah TV — Backup — https://x.streamablecloud.com/stream/hls/jeremiahtv/index.m3u8
 ### jonmobhumitv.au (2 streams)
 - Jonmobhumi TV — Not Playing — https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/playlist.m3u8
 - Jonmobhumi TV — Not Playing — https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/tracks-v1a1/mono.m3u8
@@ -772,10 +771,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-- **8xm.pk@sd** in **Pakistani** — 8XM, Jalwa TV
-- **cartoonnetwork.uk** in **Kids** — Cartoon Network, Cartoon Network
-- **custom.love.nature** in **Documentary & Wildlife** — Love Nature, Love Nature
-- **jeremiahtv.pk@sd** in **Pakistani** — Jeremiah TV, Jeremiah TV
+None.
 
 ## Primary Channel-Number Collisions
 
@@ -809,7 +805,7 @@ None.
 
 ## Metadata Conflicts
 
-- **8xm.pk@sd** — names: 8xm, jalwa tv; groups: Pakistani; countries: PK
+None.
 
 ## Cross-Country Backup Collisions
 
@@ -831,9 +827,6 @@ None.
 - unvalidated-image: **0**
 - other: **0**
 - missing — HSTV [hstv.in@sd] — 
-- multiple-logo-references — 8xm.pk@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalwa-tv.png
-- multiple-logo-references — probashitv.ca@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/probashi-tv-news.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/probashi-tv.png
-- multiple-logo-references — sonysportsten1.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-1.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-ten-1.png
 
 ## Protected Primary Entries
 

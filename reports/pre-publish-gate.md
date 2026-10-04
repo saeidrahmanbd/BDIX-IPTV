@@ -1,12 +1,13 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-10-04T12:17:56+00:00**
+Generated: **2026-10-04T12:25:24+00:00**
 
-Status: **BLOCK**
+Status: **PASS**
 
 - Current entries: **1016**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
+- Primary streams quarantined: **0**
 - Review entries reclassified: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
@@ -24,6 +25,6 @@ Status: **BLOCK**
 Added: none
 Removed: none
 Modified metadata entries: 3
+Quarantined primary streams: none
 
-## Blocking Reasons
-- duplicate primary identities: 4
+No blocking conditions detected.

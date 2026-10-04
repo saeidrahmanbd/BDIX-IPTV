@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T12:17:09+00:00",
+  "generated": "2026-10-04T12:24:40+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -102,19 +102,17 @@
     },
     "8xm": {
       "names": [
-        "8XM",
-        "Jalwa TV"
+        "8XM"
       ],
       "ids": [
         "8xm.pk@sd"
       ],
       "groups": [
-        "Backup",
         "Pakistani"
       ],
-      "streams": 3,
-      "primary": 2,
-      "backup": 1
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "9xjalwa": {
       "names": [
@@ -1124,11 +1122,12 @@
         "cartoonnetwork.uk"
       ],
       "groups": [
+        "Backup",
         "Kids"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "cgtndocumentary": {
       "names": [
@@ -2108,8 +2107,8 @@
         "Documentary & Wildlife"
       ],
       "streams": 5,
-      "primary": 2,
-      "backup": 3
+      "primary": 1,
+      "backup": 4
     },
     "custom.madani": {
       "names": [
@@ -4500,6 +4499,21 @@
       "primary": 1,
       "backup": 1
     },
+    "jalwatv": {
+      "names": [
+        "Jalwa TV"
+      ],
+      "ids": [
+        "jalwatv.pk@sd"
+      ],
+      "groups": [
+        "Backup",
+        "Pakistani"
+      ],
+      "streams": 2,
+      "primary": 1,
+      "backup": 1
+    },
     "jamunatv": {
       "names": [
         "Jamuna TV"
@@ -4537,11 +4551,12 @@
         "jeremiahtv.pk@sd"
       ],
       "groups": [
+        "Backup",
         "Pakistani"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "jhankartv": {
       "names": [
