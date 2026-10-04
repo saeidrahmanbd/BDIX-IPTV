@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg.xml"
-#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","New Channels","New Backup","Not Playing"]
+#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","Not Playing"]
 #EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="1" channel-id="AnandaTV.bd" group-title="Bangladesh",Ananda TV
 https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
 #EXTINF:-1 tvg-id="AsianTV.bd" tvg-name="Asian TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" tvg-chno="2" channel-id="AsianTV.bd" group-title="Bangladesh",Asian TV
@@ -396,7 +396,7 @@ https://livetv.tarangplus.in/tarangmusic-origin/live/playlist.m3u8
 https://stream.ottlive.co.in/utvtamil/index.m3u8
 #EXTINF:-1 tvg-chno="465" tvg-id="UTVPalakkad.in@SD" tvg-name="UTV Palakkad" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/utv-palakkad.png" tvg-language="mal" channel-id="UTVPalakkad.in@SD" tvg-country="IN" group-title="Indian Music",UTV Palakkad
 https://em4qj6nedyvg-hls-live.wmncdn.net/utv/ab2de115318ae40bdd434e193a2f2e7f.sdp/playlist.m3u8
-#EXTINF:-1 tvg-chno="466" tvg-id="famelack.dB4Xrylwq58w1o" tvg-name="VCV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vcv.png" tvg-language="mal" channel-id="famelack.dB4Xrylwq58w1o" tvg-country="IN" group-title="Indian Music",VCV
+#EXTINF:-1 tvg-chno="466" tvg-id="VCV.in@SD" tvg-name="VCV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vcv.png" tvg-language="mal" channel-id="VCV.in@SD" tvg-country="IN" group-title="Indian Music",VCV
 https://5a1178b42cc03.streamlock.net/8210/8210/playlist.m3u8
 #EXTINF:-1 tvg-id="Zing.in@SD" tvg-name="Zing" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zing.png" tvg-chno="460" channel-id="Zing.in@SD" group-title="Indian Music",Zing
 http://198.195.239.50:8095/ZING.MUSIC/index.m3u8
@@ -444,7 +444,7 @@ https://d2lk5u59tns74c.cloudfront.net/out/v1/d380bf5c167b4319a46cdd8204bc26b2/in
 https://d2lk5u59tns74c.cloudfront.net/out/v1/67cec794d8b14f9ba21f73924ac65797/index.m3u8
 #EXTINF:-1 tvg-id="DDChandana.in@SD" tvg-name="DD Chandana" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-chandana.png" tvg-chno="488" channel-id="DDChandana.in@SD" group-title="Indian Entertainment",DD Chandana
 https://d2lk5u59tns74c.cloudfront.net/out/v1/0c980455d2fb4b69bcc6235745ee6039/index.m3u8
-#EXTINF:-1 tvg-chno="484" tvg-id="famelack.MOeR2cRRTFidYj" tvg-name="DD Chhattisgarh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-chhattisgarh.png" tvg-language="hin" channel-id="famelack.MOeR2cRRTFidYj" tvg-country="IN" group-title="Indian Entertainment",DD Chhattisgarh
+#EXTINF:-1 tvg-chno="484" tvg-id="DDChhattisgarh.in@SD" tvg-name="DD Chhattisgarh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-chhattisgarh.png" tvg-language="hin" channel-id="DDChhattisgarh.in@SD" tvg-country="IN" group-title="Indian Entertainment",DD Chhattisgarh
 https://cdn.pishow.tv/ott/live/15/master.m3u8
 #EXTINF:-1 tvg-id="DDGirnar.in@SD" tvg-name="DD Girnar" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-girnar.png" tvg-chno="489" channel-id="DDGirnar.in@SD" group-title="Indian Entertainment",DD Girnar
 https://d2lk5u59tns74c.cloudfront.net/out/v1/558fdb9aebb54bb5bbbf0ced03686148/index.m3u8
@@ -488,11 +488,11 @@ https://d2lk5u59tns74c.cloudfront.net/out/v1/26e915d6d12b4a06822c5e33c088ed56/in
 https://d2lk5u59tns74c.cloudfront.net/out/v1/abf46b14847e45499f4a47f3a9afe93d/index.m3u8
 #EXTINF:-1 tvg-id="DDUrdu.in@SD" tvg-name="DD Urdu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-urdu.png" tvg-chno="513" channel-id="DDUrdu.in@SD" group-title="Indian Entertainment",DD Urdu
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/9b91e9007e754db39a8b32c6bfc5b24a/index.m3u8
-#EXTINF:-1 tvg-chno="467" tvg-id="famelack.Vma78Sz4exxJIg" tvg-name="DD Uttar Pradesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-uttar-pradesh.png" tvg-language="hin" channel-id="famelack.Vma78Sz4exxJIg" tvg-country="IN" group-title="Indian Entertainment",DD Uttar Pradesh
+#EXTINF:-1 tvg-chno="467" tvg-id="DDUttarPradesh.in@SD" tvg-name="DD Uttar Pradesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-uttar-pradesh.png" tvg-language="hin" channel-id="DDUttarPradesh.in@SD" tvg-country="IN" group-title="Indian Entertainment",DD Uttar Pradesh
 https://cdn.pishow.tv/ott/live/36/master.m3u8
-#EXTINF:-1 tvg-chno="482" tvg-id="famelack.taQrpUS98Q9cUj" tvg-name="DD Uttarakhand" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-uttarakhand.png" tvg-language="hin" channel-id="famelack.taQrpUS98Q9cUj" tvg-country="IN" group-title="Indian Entertainment",DD Uttarakhand
+#EXTINF:-1 tvg-chno="482" tvg-id="DDUttarakhand.in@SD" tvg-name="DD Uttarakhand" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-uttarakhand.png" tvg-language="hin" channel-id="DDUttarakhand.in@SD" tvg-country="IN" group-title="Indian Entertainment",DD Uttarakhand
 https://cdn.pishow.tv/ott/live/17/master.m3u8
-#EXTINF:-1 tvg-chno="457" tvg-id="famelack.mEbS8uqzoCHKUd" tvg-name="DD Yadagiri" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-yadagiri.png" tvg-language="tel" channel-id="famelack.mEbS8uqzoCHKUd" tvg-country="IN" group-title="Indian Entertainment",DD Yadagiri
+#EXTINF:-1 tvg-chno="457" tvg-id="DDYadagiri.in@SD" tvg-name="DD Yadagiri" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-yadagiri.png" tvg-language="tel" channel-id="DDYadagiri.in@SD" tvg-country="IN" group-title="Indian Entertainment",DD Yadagiri
 https://cdn.pishow.tv/ott/live/21/master.m3u8
 #EXTINF:-1 tvg-id="DesiChannel.in" tvg-name="Desi Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/desi-channel.png" tvg-chno="428" channel-id="DesiChannel.in" group-title="Indian Entertainment",Desi Channel
 https://livestream.unlimitedcdn.com/agm-dc/desi-channel/index.m3u8
