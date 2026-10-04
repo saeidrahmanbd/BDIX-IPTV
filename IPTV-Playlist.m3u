@@ -1173,8 +1173,6 @@ https://cdn.pishow.tv/ott/live/1257/master.m3u8
 https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/70fca4d1-156e-4c03-baa4-9a4b602e33d5/0.m3u8
 #EXTINF:-1 tvg-language="hin" tvg-country="IN" tvg-id="9XJalwa.in" tvg-name="9X Jalwa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jalwa.png" channel-id="9XJalwa.in" group-title="Backup",9X Jalwa
 https://mumt03.tangotv.in/Dsly5z3H9XJALWA/index.m3u8
-#EXTINF:-1 tvg-language="hin" tvg-country="IN" tvg-id="9XJalwa.in" tvg-name="9X Jalwa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jalwa.png" channel-id="9XJalwa.in" group-title="Backup",9X Jalwa
-https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8
 #EXTINF:-1 tvg-id="9XM.in@SD" tvg-name="9XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9xm.png" channel-id="9XM.in@SD" group-title="Backup",9XM
 http://198.195.239.50:8095/9XM.MUSIC/index.m3u8
 #EXTINF:-1 tvg-id="9XM.in@SD" tvg-name="9XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9xm.png" channel-id="9XM.in@SD" group-title="Backup",9XM
@@ -1183,9 +1181,9 @@ https://wiselp.wiseplayout.com/9XM/HD1080/HD1080.m3u8
 https://wiselp.wiseplayout.com/9XM/master.m3u8
 #EXTINF:-1 tvg-id="AakaashAath.in@SD" tvg-name="Aakaash Aath" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aakaash-aath.png" channel-id="AakaashAath.in@SD" tvg-language="ben" tvg-country="IN" group-title="Backup",Aakaash Aath
 http://tvsen5.aynascope.net/Wm9Lv2RjZGT6/index.m3u8
-#EXTINF:-1 tvg-id="aakaashaath.in@sd" tvg-name="Aakaash Aath" channel-id="aakaashaath.in@sd" group-title="Backup",Aakaash Aath
+#EXTINF:-1 tvg-id="aakaashaath.in@sd" tvg-name="Aakaash Aath" channel-id="aakaashaath.in@sd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aakaash-aath.png" group-title="Backup",Aakaash Aath
 https://tvsen5.aynaott.com/Wm9Lv2RjZGT6/index.m3u8
-#EXTINF:-1 tvg-id="AamarBangla.in@SD" tvg-name="Aamar Bangla" channel-id="AamarBangla.in@SD" group-title="Backup",Aamar Bangla
+#EXTINF:-1 tvg-id="AamarBangla.in@SD" tvg-name="Aamar Bangla" channel-id="AamarBangla.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla.png" group-title="Backup",Aamar Bangla
 http://115.187.41.216:8080/hls/amarbangla/index.m3u8
 #EXTINF:-1 tvg-id="custom.amar.bangla.digital" tvg-name="Amar Bangla Digital" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla-digital.png" channel-id="custom.amar.bangla.digital" group-title="Backup",Amar Bangla Digital
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/amardigital.stream/playlist.m3u8
@@ -1211,7 +1209,7 @@ https://iptvlive.ahmed-bd-org.workers.dev/atn-bangla-1/index.m3u8
 https://tvsen5.aynaott.com/atnbangla/index.m3u8
 #EXTINF:-1 tvg-id="ATNBangla.bd" tvg-name="ATN Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png" channel-id="ATNBangla.bd" group-title="Backup",ATN Bangla
 https://tvsen5.aynaott.com/P3y2URgG7LDe/index.m3u8
-#EXTINF:-1 tvg-id="ATNBangla.bd" tvg-name="ATN Bangla" channel-id="ATNBangla.bd" group-title="Backup",ATN Bangla
+#EXTINF:-1 tvg-id="ATNBangla.bd" tvg-name="ATN Bangla" channel-id="ATNBangla.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png" group-title="Backup",ATN Bangla
 https://tvsen5.aynaott.com/P3y2URgG7LDe/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="ATNBanglaUK.uk" tvg-name="ATN Bangla UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png" channel-id="ATNBanglaUK.uk" tvg-language="ben" tvg-country="UK" group-title="Backup",ATN Bangla UK
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnbanglauk-off.stream/playlist.m3u8
@@ -1397,7 +1395,7 @@ https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8
 https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8
 #EXTINF:-1 tvg-id="Enterr10Bangla.in@SD" tvg-name="Enterr10 Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png" channel-id="Enterr10Bangla.in@SD" tvg-language="ben" tvg-country="IN" group-title="Backup",Enterr10 Bangla
 https://live-bangla.akamaized.net/liveabr/playlist.m3u8
-#EXTINF:-1 tvg-id="Enterr10Bangla.in@SD" tvg-name="Enterr10 Bangla" channel-id="Enterr10Bangla.in@SD" group-title="Backup",Enterr10 Bangla
+#EXTINF:-1 tvg-id="Enterr10Bangla.in@SD" tvg-name="Enterr10 Bangla" channel-id="Enterr10Bangla.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png" group-title="Backup",Enterr10 Bangla
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_240p/chunks.m3u8
 #EXTINF:-1 tvg-id="EpicBharat.in@SD" tvg-name="Epic Bharat" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-bharat.png" channel-id="EpicBharat.in@SD" tvg-language="hin" tvg-country="IN" group-title="Backup",Epic Bharat
 https://epiconvh.akamaized.net/live/nazara/master.m3u8
@@ -1655,9 +1653,9 @@ http://198.195.239.50:8095/SONY.ENT.HD/index.m3u8
 http://38.96.178.205/SONYHD/index.m3u8
 #EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@SD" tvg-name="Sony Entertainment TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-entertainment-tv.png" channel-id="SonyEntertainmentTelevision.in@SD" group-title="Backup",Sony Entertainment TV
 https://drk6xq0vhn.gpcdn.net/live/sony_ent_hd_abr/index.m3u8
-#EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@SD" tvg-name="Sony Entertainment TV" channel-id="SonyEntertainmentTelevision.in@SD" group-title="Backup",Sony Entertainment TV
+#EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@SD" tvg-name="Sony Entertainment TV" channel-id="SonyEntertainmentTelevision.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-entertainment-tv.png" group-title="Backup",Sony Entertainment TV
 https://stream.ottplus.live/live/sony_ent_sd_abr/index.m3u8
-#EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@SD" tvg-name="Sony Entertainment TV" channel-id="SonyEntertainmentTelevision.in@SD" group-title="Backup",Sony Entertainment TV
+#EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@SD" tvg-name="Sony Entertainment TV" channel-id="SonyEntertainmentTelevision.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-entertainment-tv.png" group-title="Backup",Sony Entertainment TV
 https://stream.ottplus.live/live/sony_ent_hd_abr/index.m3u8
 #EXTINF:-1 tvg-id="SonyMax.in@SD" tvg-name="Sony Max" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max.png" channel-id="SonyMax.in@SD" group-title="Backup",Sony Max
 http://198.195.239.50:8095/SONY.MAX.HD/index.m3u8
@@ -1769,7 +1767,7 @@ https://bldcmprod-cdn.toffeelive.com/cdn/live/discovery_science/playlist.m3u8
 https://bldcmprod-cdn.toffeelive.com/cdn/live/discovery_turbo/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.music.bangla" tvg-name="Music Bangla" tvg-chno="1070" channel-id="custom.music.bangla" tvg-logo="https://www.lyngsat.com/logo/tv/mm/music-bangla-tv.png" group-title="New Channels",Music Bangla
 http://live.matribhumitv.com/music-bangla/index.m3u8
-#EXTINF:-1 tvg-id="custom.fon.music" tvg-name="FON Music" tvg-chno="1071" channel-id="custom.fon.music" group-title="New Channels",FON Music
+#EXTINF:-1 tvg-id="custom.fon.music" tvg-name="FON Music" tvg-chno="1071" tvg-logo="https://commons.wikimedia.org/wiki/Special:Redirect/file/FON_MUSIC_Logo_2026.webp" channel-id="custom.fon.music" group-title="New Channels",FON Music
 https://tntm.mediacdn.ru/cdn/tntmusic/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.yrf.music" tvg-name="YRF Music" tvg-chno="1072" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/YRF_Music.png" channel-id="custom.yrf.music" group-title="New Channels",YRF Music
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
