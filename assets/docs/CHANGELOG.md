@@ -40,6 +40,8 @@
 
 ## 2026-10-04
 
-- 🔄 **2 backup stream(s) updated**
-- 📡 **2 stream(s) replaced**
+- 🗑️ **1 channel(s) removed**
+
+### Removed channels
+- 30A Music
 
