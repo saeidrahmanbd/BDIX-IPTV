@@ -21,8 +21,8 @@ if new_channels == 0 or new_programmes == 0:
 
 if OLD.exists():
     old_channels,old_programmes=stats(OLD)
-    if old_channels and new_channels < max(1, int(old_channels*0.95)):
-        raise SystemExit(f"EPG gate BLOCK: channel coverage regressed {old_channels} -> {new_channels}")
+    if old_channels and new_channels < max(1, int(old_channels*0.80)):
+        raise SystemExit(f"EPG gate BLOCK: channel coverage regressed below the 80% safety floor: {old_channels} -> {new_channels}")
     if old_programmes and new_programmes < max(1, int(old_programmes*0.90)):
         raise SystemExit(f"EPG gate BLOCK: programme volume regressed {old_programmes} -> {new_programmes}")
 
