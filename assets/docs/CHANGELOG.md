@@ -40,5 +40,11 @@
 
 ## 2026-10-04
 
-- No meaningful playlist changes detected.
+- 🆕 **3 new channel(s) added to New Channels**
+- 🔁 **6 new backup stream(s) added to New Backup**
+
+### New channels
+- ZB Cinema
+- Wild Earth
+- Discovery Turbo
 
