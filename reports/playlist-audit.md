@@ -1,21 +1,21 @@
 # Playlist Audit
-Generated: **2026-10-04T10:05:17.606109+00:00**
+Generated: **2026-10-04T10:11:59.739283+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1082**
+- Playlist entries: **1080**
 - Unique channel IDs: **708**
-- IDs with multiple streams: **187**
-- Duplicate stream URLs: **2**
-- Metadata conflicts: **3**
+- IDs with multiple streams: **185**
+- Duplicate stream URLs: **0**
+- Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **2**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **3**
-- Duplicate primary identities: **3**
+- Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
@@ -377,8 +377,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### historytv18.in@sd (4 streams)
 - History TV18 — Documentary & Wildlife — https://n18syndication.akamaized.net/bpk-tv/History_HD_NW18_MOB/output01/master.m3u8
 - History TV18 — Backup — http://198.195.239.50:8095/HISTORY.TV.18.HD/index.m3u8
-- History TV18 —  — https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
-- History TV18 —  — https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/ts-ap-s1-n1/playlist/amg01448-samsungindia-historychannelhindi-samsungin/playlist.m3u8
+- History TV18 — New Backup — https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
+- History TV18 — New Backup — https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/ts-ap-s1-n1/playlist/amg01448-samsungindia-historychannelhindi-samsungin/playlist.m3u8
 ### humtv.pk (4 streams)
 - Hum TV — Pakistani — https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8
 - Hum TV — Backup — https://cdn4.mjunoon.tv:8087/streamtest/82M/chunks.m3u8
@@ -394,9 +394,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### inwild.nl (5 streams)
 - INWILD — Documentary & Wildlife — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/ts-eu-w1-n2/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
 - INWILD — Backup — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
-- INWILD —  — https://amg00861-amg00861c7-firetv-us-4725.playouts.now.amagi.tv/playlist.m3u8
-- INWILD —  — https://amg00861-amg00861c7-stirr-us-8227.playouts.now.amagi.tv/playlist.m3u8
-- INWILD —  — https://amg00861-terninternation-inwild-samsungau-3qrga.amagi.tv/playlist/amg00861-terninternation-inwild-samsungau/playlist.m3u8
+- INWILD — New Backup — https://amg00861-amg00861c7-firetv-us-4725.playouts.now.amagi.tv/playlist.m3u8
+- INWILD — New Backup — https://amg00861-amg00861c7-stirr-us-8227.playouts.now.amagi.tv/playlist.m3u8
+- INWILD — New Backup — https://amg00861-terninternation-inwild-samsungau-3qrga.amagi.tv/playlist/amg00861-terninternation-inwild-samsungau/playlist.m3u8
 ### jagonews24.bd (2 streams)
 - Jago News 24 — Bangladesh — https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8
 - Jago News 24 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/jago-news-24-1/index.m3u8
@@ -526,9 +526,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### nhbollyraga.in (2 streams)
 - NH BollyRaga — Indian Music — https://cc-up9j649x4thrj.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-up9j649x4thrj/SBUM/RunnTV/BollyRaga_IN/BollyRaga_IN.m3u8
 - NH BollyRaga — Backup — https://jmp2.uk/stvp-IN460001373
-### nickelodeon.in@sd (2 streams)
-- Nick — Kids — http://198.195.239.50:8095/nick/index.m3u8
-- Nick — New Backup — http://198.195.239.50:8095/NICK/index.m3u8
 ### nickjr.in@sd (2 streams)
 - Nick Jr — Kids — http://198.195.239.50:8095/nickJr/index.m3u8
 - Nick Jr — New Backup — http://198.195.239.50:8095/NICK.JR/index.m3u8
@@ -640,9 +637,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Somoy TV — Backup — https://tvsen5.aynaott.com/somoytv/tracks-v1a1/mono.m3u8
 - Somoy TV — Backup — https://tvsen5.aynascope.net/somoytv/mono.m3u8
 - Somoy TV — Backup — https://tvsen6.aynaott.com/4XcqdovJzbbC9WdJA9gk/index.m3u8
-### sonic.in@sd (2 streams)
-- Sonic — Kids — http://198.195.239.50:8095/sonic/index.m3u8
-- Sonic — New Backup — http://198.195.239.50:8095/SONIC/index.m3u8
 ### sony.aath.in (4 streams)
 - Sony AATH — Indian Bangla — http://198.195.239.50:8095/sonyAath/index.m3u8
 - Sony AATH — Backup — http://198.195.239.50:8095/SONY.AAT/index.m3u8
@@ -680,7 +674,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Sony Yay — New Backup — http://198.195.239.50:8095/sonyYay/index.m3u8
 ### star.jalsha.in (5 streams)
 - Star Jalsha — Indian Bangla — https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8
-- Star Jalsha — Indian Bangla — http://198.195.239.50:8095/starJalsha/index.m3u8
+- Star Jalsha — Backup — http://198.195.239.50:8095/starJalsha/index.m3u8
 - Star Jalsha — Backup — http://198.195.239.50:8095/STAR.JALSHA.HD/index.m3u8
 - Star Jalsha — Backup — https://flussonic.defineatoz.com/StarjalshaHD/tracks-v1a1/mono.m3u8
 - Star Jalsha — Not Playing — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
@@ -709,7 +703,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Star Plus — Backup — http://41.205.93.154/STAR-PLUS/index.m3u8
 ### starsportsselect2.in@sd (2 streams)
 - Star Sports Select 2 — Sports — http://198.195.239.50:8095/STAR.SPORTS.SEL.2.HD/index.m3u8
-- Star Sports Select 2 —  — https://tvsen7.aynascope.net/ssport2hd/index.m3u8
+- Star Sports Select 2 — New Backup — https://tvsen7.aynascope.net/ssport2hd/index.m3u8
 ### studioyuva.in (2 streams)
 - Studio Yuva — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3STUDIOYUVA/index.m3u8
 - Studio Yuva — Backup — https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=[REDACTED]
@@ -775,9 +769,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-- **historytv18.in@sd** in **** — History TV18, History TV18
-- **inwild.nl** in **** — INWILD, INWILD, INWILD
-- **star.jalsha.in** in **Indian Bangla** — Star Jalsha, Star Jalsha
+None.
 
 ## Primary Channel-Number Collisions
 
@@ -811,9 +803,7 @@ None.
 
 ## Metadata Conflicts
 
-- **historytv18.in@sd** — names: history tv18; groups: , Documentary & Wildlife; countries: 
-- **inwild.nl** — names: inwild; groups: , Documentary & Wildlife; countries: 
-- **starsportsselect2.in@sd** — names: star sports select 2; groups: , Sports; countries: 
+None.
 
 ## Cross-Country Backup Collisions
 
@@ -825,7 +815,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1079**
+- Healthy/local references: **1077**
 - missing: **3**
 - broken-local: **0**
 - external: **0**

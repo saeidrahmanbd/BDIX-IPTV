@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T10:05:17+00:00",
+  "generated": "2026-10-04T10:11:59+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -4598,12 +4598,12 @@
         "historytv18.in@sd"
       ],
       "groups": [
-        "",
         "Backup",
-        "Documentary & Wildlife"
+        "Documentary & Wildlife",
+        "New Backup"
       ],
       "streams": 4,
-      "primary": 3,
+      "primary": 1,
       "backup": 1
     },
     "historywarfarenow": {
@@ -4799,12 +4799,12 @@
         "inwild.nl"
       ],
       "groups": [
-        "",
         "Backup",
-        "Documentary & Wildlife"
+        "Documentary & Wildlife",
+        "New Backup"
       ],
       "streams": 5,
-      "primary": 4,
+      "primary": 1,
       "backup": 1
     },
     "inwonder": {
@@ -6546,10 +6546,9 @@
         "nickelodeon.in@sd"
       ],
       "groups": [
-        "Kids",
-        "New Backup"
+        "Kids"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
       "backup": 0
     },
@@ -8259,10 +8258,9 @@
         "sonic.in@sd"
       ],
       "groups": [
-        "Kids",
-        "New Backup"
+        "Kids"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
       "backup": 0
     },
@@ -8570,8 +8568,8 @@
         "Not Playing"
       ],
       "streams": 5,
-      "primary": 2,
-      "backup": 2
+      "primary": 1,
+      "backup": 3
     },
     "star.jalsha.movies": {
       "names": [
@@ -8812,11 +8810,11 @@
         "starsportsselect2.in@sd"
       ],
       "groups": [
-        "",
+        "New Backup",
         "Sports"
       ],
       "streams": 2,
-      "primary": 2,
+      "primary": 1,
       "backup": 0
     },
     "starsuvarnaplus": {
