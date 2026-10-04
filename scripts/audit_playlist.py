@@ -15,6 +15,7 @@ LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 PRIMARY_EXCEPTIONS = {"Backup", "New Backup", "New Channels", "Not Playing"}
+CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "Not Playing", "New Channels", "New Backup"]
 
 def attrs(line):
     return dict(ATTR_RE.findall(line))
@@ -127,6 +128,10 @@ for n, line in enumerate(raw_lines, 1):
             break
     if comma is None or not line[comma+1:].strip():
         malformed_extinf.append((n, "missing display name"))
+    elif line[:comma].rstrip().endswith('"') is False:
+        # A valid EXTINF attribute list must end at the closing quote immediately
+        # before the display-name comma. Stray text here breaks strict M3U parsers.
+        malformed_extinf.append((n, "stray text between last attribute and display-name comma"))
     j = n
     while j < len(raw_lines) and not raw_lines[j].strip():
         j += 1
@@ -290,6 +295,32 @@ missing_primary_chno = [
     and not attrs(info).get("tvg-chno", "").strip()
 ]
 
+# Category blocks must follow the canonical order and each block must be A-Z.
+category_transitions = []
+last_group = None
+for info, url in entries:
+    group = attrs(info).get("group-title", "").strip()
+    if group != last_group:
+        category_transitions.append(group)
+        last_group = group
+category_order_issues = []
+last_index = -1
+for group in category_transitions:
+    if group not in CATEGORY_ORDER:
+        category_order_issues.append((group, "unknown category"))
+        continue
+    index = CATEGORY_ORDER.index(group)
+    if index < last_index:
+        category_order_issues.append((group, "out of canonical block order"))
+    last_index = max(last_index, index)
+
+alphabetical_order_issues = []
+for group in category_transitions:
+    names = [display_name(info).strip() for info, url in entries if attrs(info).get("group-title", "").strip() == group]
+    for prev, cur in zip(names, names[1:]):
+        if cur.casefold() < prev.casefold():
+            alphabetical_order_issues.append((group, prev, cur))
+
 lines = [
     "# Playlist Audit",
     "",
@@ -312,6 +343,8 @@ lines = [
     f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**",
     f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**",
     f"- Malformed EXTINF entries: **{len(malformed_extinf)}**",
+    f"- Category block-order issues: **{len(category_order_issues)}**",
+    f"- Alphabetical ordering issues: **{len(alphabetical_order_issues)}**",
     f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**",
     f"- Signed/tokenized stream URLs: **{len(signed_urls)}**",
     "",
@@ -346,6 +379,18 @@ if malformed_extinf:
         lines.append(f"- line {line_no}: {reason}")
 else:
     lines.append("None.")
+
+lines += ["", "## Ordering", ""]
+if category_order_issues:
+    for group, reason in category_order_issues:
+        lines.append(f"- category block **{group}** — {reason}")
+else:
+    lines.append("Category block order: OK.")
+if alphabetical_order_issues:
+    for group, prev, cur in alphabetical_order_issues:
+        lines.append(f"- **{group}** — **{cur}** appears after **{prev}**")
+else:
+    lines.append("Alphabetical order: OK.")
 
 lines += ["", "## Suspicious URLs", ""]
 if suspicious_urls:
@@ -525,6 +570,8 @@ if primary_chno_collisions:
     raise SystemExit("Primary channel-number collisions detected; refusing automatic commit.")
 if malformed_extinf:
     raise SystemExit("Malformed EXTINF entries detected; refusing automatic commit.")
+if category_order_issues or alphabetical_order_issues:
+    raise SystemExit("Playlist ordering defects detected; refusing automatic commit.")
 if suspicious_urls:
     raise SystemExit("Suspicious test credentials or malformed URL syntax detected; refusing automatic commit.")
 
