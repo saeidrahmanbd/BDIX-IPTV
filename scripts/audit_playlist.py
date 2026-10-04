@@ -78,9 +78,10 @@ def logo_issue(info):
     logo = attrs(info).get("tvg-logo", "").strip()
     if not logo:
         return "missing"
-    if logo.startswith(RAW_BASE):
-        fn = logo[len(RAW_BASE):].split("?", 1)[0]
-        path = LOGOS / fn
+
+    def check_local(path):
+        if not path.is_file():
+            return "broken-local"
         if path.suffix.lower() == ".svg":
             try:
                 if "<svg" not in path.read_text(encoding="utf-8", errors="ignore")[:10000].lower():
@@ -90,8 +91,6 @@ def logo_issue(info):
             return ""
         if path.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp", ".avif"}:
             return "unsupported-format"
-        if not path.is_file():
-            return "broken-local"
         if Image is None:
             return "unvalidated-image"
         try:
@@ -103,7 +102,13 @@ def logo_issue(info):
         except Exception:
             return "corrupt-image"
         return ""
-    if "raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV" in logo or logo.startswith("logos/"):
+
+    if logo.startswith(RAW_BASE):
+        fn = logo[len(RAW_BASE):].split("?", 1)[0].lstrip("/")
+        return check_local(LOGOS / fn)
+    if logo.startswith("logos/"):
+        return check_local(Path(logo))
+    if "raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV" in logo:
         return "repository-reference"
     if logo.startswith(("http://", "https://")):
         return "external"
@@ -112,12 +117,14 @@ def logo_issue(info):
 entries = parse(PLAYLIST.read_text(encoding="utf-8-sig"))
 raw_lines = PLAYLIST.read_text(encoding="utf-8-sig").replace("\r","").splitlines()
 malformed_extinf = []
-for n, line in enumerate(raw_lines, 1):
-    if not line.startswith("#EXTINF:"):
-        continue
+
+def validate_extinf(line_no, line):
+    errors = []
+    if not re.match(r"^#EXTINF:-?\d+(?:\.\d+)?(?:\s|,|$)", line):
+        errors.append("invalid EXTINF duration/prefix")
     if line.count('"') % 2:
-        malformed_extinf.append((n, "unbalanced quotes"))
-        continue
+        errors.append("unbalanced quotes")
+        return errors
     in_quote = False
     comma = None
     for idx, ch in enumerate(line):
@@ -126,17 +133,56 @@ for n, line in enumerate(raw_lines, 1):
         elif ch == "," and not in_quote:
             comma = idx
             break
-    if comma is None or not line[comma+1:].strip():
-        malformed_extinf.append((n, "missing display name"))
-    elif line[:comma].rstrip().endswith('"') is False:
-        # A valid EXTINF attribute list must end at the closing quote immediately
-        # before the display-name comma. Stray text here breaks strict M3U parsers.
-        malformed_extinf.append((n, "stray text between last attribute and display-name comma"))
-    j = n
+    if comma is None:
+        errors.append("missing display-name comma")
+        return errors
+    if not line[comma+1:].strip():
+        errors.append("missing display name")
+    prefix = line[len("#EXTINF:"):comma]
+    duration_match = re.match(r"-?\d+(?:\.\d+)?", prefix)
+    attrs_part = prefix[duration_match.end():] if duration_match else prefix
+    seen_keys = set()
+    pos = 0
+    attr_re = re.compile(r"([A-Za-z0-9_-]+)=")
+    while pos < len(attrs_part):
+        while pos < len(attrs_part) and attrs_part[pos].isspace():
+            pos += 1
+        if pos >= len(attrs_part):
+            break
+        m = attr_re.match(attrs_part, pos)
+        if not m:
+            errors.append("malformed attribute syntax")
+            break
+        key = m.group(1)
+        if key in seen_keys:
+            errors.append(f"duplicate attribute: {key}")
+        seen_keys.add(key)
+        pos = m.end()
+        if pos >= len(attrs_part) or attrs_part[pos] != '"':
+            errors.append(f"unquoted attribute value: {key}")
+            break
+        pos += 1
+        end = pos
+        while end < len(attrs_part) and attrs_part[end] != '"':
+            end += 1
+        if end >= len(attrs_part):
+            errors.append(f"unterminated attribute value: {key}")
+            break
+        pos = end + 1
+        if pos < len(attrs_part) and not attrs_part[pos].isspace():
+            errors.append(f"missing whitespace between attributes near {key}")
+            break
+    j = line_no
     while j < len(raw_lines) and not raw_lines[j].strip():
         j += 1
     if j >= len(raw_lines) or not raw_lines[j].strip().lower().startswith(("http://", "https://")):
-        malformed_extinf.append((n, "missing stream URL"))
+        errors.append("missing stream URL")
+    return errors
+
+for n, line in enumerate(raw_lines, 1):
+    if line.startswith("#EXTINF:"):
+        for reason in validate_extinf(n, line):
+            malformed_extinf.append((n, reason))
 
 by_id = defaultdict(list)
 by_base = defaultdict(list)
@@ -338,6 +384,7 @@ lines = [
     f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**",
     f"- Protected primary-entry changes: **{len(protected_changes)}**",
     f"- Logo exceptions: **{len(logo_exceptions)}**",
+    f"- Logo references checked: **{sum(logo_counts.values())}**",
     f"- Not Playing logo exceptions: **{len(review_logo_exceptions)}**",
     f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**",
     f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**",
