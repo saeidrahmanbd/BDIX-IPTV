@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T03:56:47+00:00",
+  "generated": "2026-10-04T04:14:22+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -182,12 +182,11 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla",
-        "New Backup"
+        "Indian Bangla"
       ],
       "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "aamarbangla": {
       "names": [
@@ -200,12 +199,11 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla",
-        "New Channels"
+        "Indian Bangla"
       ],
       "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "aaryaatv": {
       "names": [
@@ -546,12 +544,11 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh",
-        "New Backup"
+        "Bangladesh"
       ],
       "streams": 6,
       "primary": 1,
-      "backup": 4
+      "backup": 5
     },
     "atnbanglauk": {
       "names": [
@@ -1113,12 +1110,12 @@
         "btvchattogram.bd"
       ],
       "groups": [
-        "Bangladesh",
-        "New Backup"
+        "Backup",
+        "Bangladesh"
       ],
       "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "btvnational": {
       "names": [
@@ -1129,10 +1126,9 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh",
-        "New Backup"
+        "Bangladesh"
       ],
-      "streams": 3,
+      "streams": 2,
       "primary": 1,
       "backup": 1
     },
@@ -1353,10 +1349,9 @@
       "groups": [
         "Backup",
         "Indian Movies",
-        "New Backup",
         "Not Playing"
       ],
-      "streams": 4,
+      "streams": 3,
       "primary": 1,
       "backup": 1
     },
@@ -1368,10 +1363,9 @@
         "colorscineplexsuperhits.in@sd"
       ],
       "groups": [
-        "Indian Movies",
-        "New Backup"
+        "Indian Movies"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
       "backup": 0
     },
@@ -2032,10 +2026,10 @@
         "custom.jalsha.bangla.bd"
       ],
       "groups": [
-        "New Channels"
+        "Bangladesh"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "custom.jtv.classic": {
@@ -2221,20 +2215,6 @@
       ],
       "streams": 1,
       "primary": 1,
-      "backup": 0
-    },
-    "custom.sangsad": {
-      "names": [
-        "Sangsad"
-      ],
-      "ids": [
-        "custom.sangsad"
-      ],
-      "groups": [
-        "New Channels"
-      ],
-      "streams": 1,
-      "primary": 0,
       "backup": 0
     },
     "custom.snb.cinema": {
@@ -2477,20 +2457,6 @@
       "primary": 1,
       "backup": 0
     },
-    "custom.upohar.bangla": {
-      "names": [
-        "Upohar Bangla"
-      ],
-      "ids": [
-        "custom.upohar.bangla"
-      ],
-      "groups": [
-        "New Channels"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 0
-    },
     "custom.wild.flix.hindi": {
       "names": [
         "Wild Flix Hindi"
@@ -2570,10 +2536,9 @@
       ],
       "groups": [
         "Backup",
-        "Indian Music",
-        "New Backup"
+        "Indian Music"
       ],
-      "streams": 6,
+      "streams": 5,
       "primary": 1,
       "backup": 4
     },
@@ -3371,12 +3336,11 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla",
-        "New Backup"
+        "Indian Bangla"
       ],
       "streams": 9,
       "primary": 1,
-      "backup": 6
+      "backup": 8
     },
     "epicbharat": {
       "names": [
@@ -5437,10 +5401,9 @@
       "groups": [
         "Backup",
         "Bangladesh",
-        "New Backup",
         "Not Playing"
       ],
-      "streams": 5,
+      "streams": 4,
       "primary": 1,
       "backup": 1
     },
@@ -6900,12 +6863,11 @@
       ],
       "groups": [
         "Backup",
-        "Indian Entertainment",
-        "New Backup"
+        "Indian Entertainment"
       ],
       "streams": 6,
       "primary": 1,
-      "backup": 3
+      "backup": 5
     },
     "sonykalhindi": {
       "names": [
