@@ -25,8 +25,8 @@ def main():
     active_groups={"Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","International","Documentary & Wildlife","Kids","Religious","Sports"}
     active=len({x.get("tvg-id") or x.get("channel-id") for x in e if x.get("group-title") in active_groups and (x.get("tvg-id") or x.get("channel-id"))})
     primary_streams=sum(1 for x in e if x.get("group-title") in active_groups)
-    local=sum(1 for x in e if x.get("tvg-logo","").startswith("https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/")); logos=round(local*100/len(e),1) if e else 0
-    issues=sum(metric(a,k) for k in ["Duplicate stream URLs","Metadata conflicts","Cross-country backup collisions","Protected primary-entry changes","Logo exceptions","Duplicate primary identities","Primary channel-number collisions","Primary entries missing channel numbers"])
+    local=metric(a,"Healthy/local references"); logos=round(local*100/len(e),1) if e else 0
+    issues=sum(metric(a,k) for k in ["Duplicate stream URLs","Metadata conflicts","Cross-country backup collisions","Protected primary-entry changes","Logo exceptions","Not Playing logo exceptions","Duplicate primary identities","Primary channel-number collisions","Primary entries missing channel numbers","Malformed EXTINF entries","Category block-order issues","Alphabetical ordering issues"])
     hfail=metric(h,"Failed this check"); hpersist=metric(h,"Persistent failures (3+ consecutive)"); htested=metric(h,"Streams tested"); hnear=metric(h,"Near-duplicate URL families")
     india=metric(g,"Active Indian channels audited"); mapped=metric(g,"Channels with an EPG mapping"); missing=metric(g,"No guide mapping found")
     m=re.search(r'Current/future programme coverage:\s*\*\*(\d+)/(\d+) \(([\d.]+)%\)',g,re.I); live=int(m.group(1)) if m else 0; livepct=float(m.group(3)) if m else 0; mapct=round(mapped*100/india,1) if india else 0
@@ -65,6 +65,10 @@ _Last generated: **{now}**_
 - Primary channel-number collisions: **{metric(a,"Primary channel-number collisions")}**
 - Primary entries missing channel numbers: **{metric(a,"Primary entries missing channel numbers")}**
 - Logo exceptions: **{metric(a,"Logo exceptions")}**
+- Not Playing logo exceptions: **{metric(a,"Not Playing logo exceptions")}**
+- Malformed EXTINF entries: **{metric(a,"Malformed EXTINF entries")}**
+- Category block-order issues: **{metric(a,"Category block-order issues")}**
+- Alphabetical ordering issues: **{metric(a,"Alphabetical ordering issues")}**
 - Signed/tokenized URLs: **{metric(a,"Signed/tokenized stream URLs")}**
 
 ## Safety & Automation
