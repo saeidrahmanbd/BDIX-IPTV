@@ -1,10 +1,10 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-10-04T13:32:16+00:00**
+Generated: **2026-10-04T14:27:24+00:00**
 
 Status: **PASS**
 
-- Current entries: **1016**
+- Current entries: **1015**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams quarantined: **0**
