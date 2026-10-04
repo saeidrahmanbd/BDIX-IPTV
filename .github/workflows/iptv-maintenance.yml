@@ -46,10 +46,30 @@ jobs:
             python scripts/migrate_external_logos_fixed.py
             python scripts/epg_coverage.py
             python scripts/generate_epg.py
-            python scripts/epg_publish_gate.py
             test -s epg.xml
             grep -q '<programme ' epg.xml
             cp epg.xml /tmp/bdix-epg-generated.xml
+
+            # EPG source coverage can temporarily fluctuate. A regression must
+            # never block the rest of playlist maintenance, but a degraded guide
+            # must also never replace the last known-good published guide.
+            set +e
+            python scripts/epg_publish_gate.py
+            EPG_GATE_STATUS=$?
+            set -e
+            if [ "$EPG_GATE_STATUS" -ne 0 ]; then
+              echo "::warning::EPG publish gate blocked this generated guide; retaining the previous known-good epg.xml."
+              if [ -s /tmp/bdix-epg-previous.xml ] && grep -q '<programme ' /tmp/bdix-epg-previous.xml; then
+                cp /tmp/bdix-epg-previous.xml epg.xml
+                echo "Retained previous EPG because the new guide regressed."
+              else
+                echo "::error::No valid previous EPG is available after a publish-gate failure."
+                exit 1
+              fi
+            else
+              echo "EPG publish gate passed; accepting newly generated guide."
+            fi
+            cp epg.xml /tmp/bdix-epg-publish.xml
             python scripts/sync_epg_worker_map.py
             set +e
             python scripts/audit_playlist.py
@@ -80,10 +100,10 @@ jobs:
             if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ] || [ "$HEALTH_STATUS" -ne 0 ]; then
               git restore -- IPTV-Playlist.m3u logos/ xtream/worker.js || true
             fi
-            # The guide is a generated publication artifact. Restore the validated
-            # copy immediately before staging so later maintenance tools cannot
-            # accidentally publish an empty/stale epg.xml.
-            cp /tmp/bdix-epg-generated.xml epg.xml
+            # The guide is a generated publication artifact. Restore the
+            # publish-approved copy immediately before staging so later
+            # maintenance tools cannot accidentally publish an empty/stale EPG.
+            cp /tmp/bdix-epg-publish.xml epg.xml
             test -s epg.xml
             grep -q '<programme ' epg.xml
             echo "Validated EPG working-tree bytes: $(wc -c < epg.xml)"
