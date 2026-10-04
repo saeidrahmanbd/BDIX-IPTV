@@ -1,11 +1,11 @@
 # Playlist Audit
-Generated: **2026-10-04T15:40:50.810302+00:00**
+Generated: **2026-10-04T15:48:14.126950+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1029**
+- Playlist entries: **1028**
 - Unique channel IDs: **647**
 - IDs with multiple streams: **192**
 - Duplicate stream URLs: **0**
@@ -19,7 +19,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **4**
-- Malformed EXTINF entries: **2**
+- Malformed EXTINF entries: **1**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 
@@ -63,8 +63,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### asianetmovies.in@sd (2 streams)
 - Asianet Movies — Indian Movies — http://51.75.127.199:3141/asianetmovies/index.m3u8
 - Asianet Movies — Not Playing — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:asianetmovies1.smil/playlist.m3u8
-### asiantv.bd (3 streams)
-- Asian TV — Bangladesh — https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/index.m3u8
+### asiantv.bd (2 streams)
 - Asian TV — Backup — https://stream.ottplus.live/live/asian_tv_abr/index.m3u8
 - Asian TV — Backup — https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/tracks-v1a1/mono.ts.m3u8
 ### asports.pk (2 streams)
@@ -803,7 +802,6 @@ None.
 ## Malformed EXTINF Entries
 
 - line 4: missing stream URL
-- line 5: missing stream URL
 
 ## Suspicious URLs
 
@@ -839,7 +837,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1021**
+- Healthy/local references: **1020**
 - missing: **8**
 - broken-local: **0**
 - external: **0**
