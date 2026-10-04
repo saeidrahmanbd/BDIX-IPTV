@@ -40,5 +40,13 @@
 
 ## 2026-10-04
 
-- 🔁 **2 new backup stream(s) added to New Backup**
+- 🆕 **5 new channel(s) added to New Channels**
+- 🔁 **10 new backup stream(s) added to New Backup**
+
+### New channels
+- Fast Sports
+- Eurosport
+- UNITE8 2
+- Star Sports 4K
+- Golf Sports
 
