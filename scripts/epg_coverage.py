@@ -181,6 +181,38 @@ def main():
     for r in sorted([x for x in india if x["status"]!="MAPPED"],key=lambda z:(z["status"],z["channel"])):
         lines.append(f'| {r["group"]} | {r["channel"]} | {r["tvg_id"]} | {r["epg_id"] or "-"} | {r["status"]} |')
     REPORT.parent.mkdir(parents=True,exist_ok=True)
+    # Validate the actual published guide, not only source-level mapping.
+    guide_path = Path("epg.xml")
+    if guide_path.exists() and guide_path.stat().st_size > 0:
+        try:
+            guide_root = ET.parse(guide_path).getroot()
+            guide_channels = {c.attrib.get("id", "").strip() for c in guide_root.findall("channel") if c.attrib.get("id", "").strip()}
+            mapped_targets = {r["tvg_id"] for r in rows if r["epg_id"]}
+            guide_live = set()
+            now_guide = datetime.now(timezone.utc)
+            for prog in guide_root.findall("programme"):
+                cid = prog.attrib.get("channel", "").strip()
+                start = parse_stamp(prog.attrib.get("start", ""))
+                stop = parse_stamp(prog.attrib.get("stop", "")) if prog.attrib.get("stop") else None
+                if cid and start and (start >= now_guide or (stop and start <= now_guide <= stop) or (stop and stop >= now_guide)):
+                    guide_live.add(cid)
+            header = PLAYLIST.read_text(encoding="utf-8-sig").splitlines()[0]
+            expected = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg.xml"
+            refs = re.findall(r'(?:url-tvg|x-tvg-url)="([^"]+)"', header)
+            present = len(mapped_targets & guide_channels)
+            live_present = len(mapped_targets & guide_live)
+            lines += [
+                "",
+                "## Published Guide Validation",
+                "",
+                f"- Playlist EPG references: **{'OK' if refs and all(u == expected for u in refs) else 'MISMATCH'}**",
+                f"- Guide channel IDs published: **{len(guide_channels)}**",
+                f"- Mapped playlist IDs present in guide: **{present}/{len(mapped_targets)} ({round(present*100/len(mapped_targets),1) if mapped_targets else 0}%)**",
+                f"- Mapped playlist IDs with current/future programmes: **{live_present}/{len(mapped_targets)} ({round(live_present*100/len(mapped_targets),1) if mapped_targets else 0}%)**",
+                "- This validation is against the guide currently present in the working tree/publish candidate.",
+            ]
+        except Exception as exc:
+            lines += ["", "## Published Guide Validation", "", f"- Validation: **ERROR** — {str(exc)[:220]}"]
     REPORT.write_text("\n".join(lines)+"\n",encoding="utf-8")
     print(f"EPG maintenance: India={len(india)} mapped={len(mapped)} live/future={len(live)} no-hit={len(no_hit)}")
 
