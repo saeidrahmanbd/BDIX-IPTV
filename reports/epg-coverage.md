@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-04T12:28:24+00:00**
+Generated: **2026-10-04T13:21:39+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
@@ -18,14 +18,14 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 - **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 68994 programme rows
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19291 programme rows
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml — 394 channel IDs; 0 current/future IDs; 660 programme rows
-- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 614 current/future IDs; 62556 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 765 channel IDs; 760 current/future IDs; 80035 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1479 channel IDs; 1455 current/future IDs; 94726 programme rows
+- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 141 current/future IDs; 62556 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 765 channel IDs; 759 current/future IDs; 80035 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1479 channel IDs; 1455 current/future IDs; 94938 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 283 channel IDs; 283 current/future IDs; 13810 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 112 channel IDs; 99 current/future IDs; 23670 programme rows
 - **OK** — https://avkb.short.gy/epg.xml.gz — 1933 channel IDs; 541 current/future IDs; 60655 programme rows
-- **OK** — https://avkb.short.gy/jioepg.xml.gz — 1306 channel IDs; 54 current/future IDs; 42910 programme rows
-- **OK** — https://avkb.short.gy/tsepg.xml.gz — 717 channel IDs; 717 current/future IDs; 72200 programme rows
+- **OK** — https://avkb.short.gy/jioepg.xml.gz — 1306 channel IDs; 0 current/future IDs; 42910 programme rows
+- **OK** — https://avkb.short.gy/tsepg.xml.gz — 717 channel IDs; 697 current/future IDs; 72200 programme rows
 
 ## Channels Requiring Attention
 

@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-04T12:28:42.743352+00:00**
+Generated: **2026-10-04T13:21:56.766090+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -14,7 +14,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **1**
+- Logo exceptions: **0**
+- Not Playing logo exceptions: **1**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
@@ -826,7 +827,6 @@ None.
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
-- missing — HSTV [hstv.in@sd] — 
 
 ## Protected Primary Entries
 
