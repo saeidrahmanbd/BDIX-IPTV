@@ -1,15 +1,15 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-04T10:22:48+00:00**
+Generated: **2026-10-04T12:09:55+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **238**
-- Channels with an EPG mapping: **198**
-- Current/future programme coverage: **188/238 (79.0%)**
-- No guide mapping found: **40**
+- Active Indian channels audited: **267**
+- Channels with an EPG mapping: **222**
+- Current/future programme coverage: **209/267 (78.3%)**
+- No guide mapping found: **45**
 
 ## Source Status
 
@@ -37,9 +37,12 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Entertainment | Manoranjan Grand | ManoranjanGrand.in@SD | Manoranjan.Grand.in | ManoranjanGrand.in | MAPPED_ID_ONLY |
 | Indian Movies | Manoranjan Movies | ManoranjanMovies.in@SD | ManoranjanMovies.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Manoranjan Prime | ManoranjanPrime.in@SD | 10000000075992492 | MAPPED_ID_ONLY |
+| Indian Entertainment | Odisha TV | OdishaTV.in@SD | OdishaTV.in | MAPPED_ID_ONLY |
 | Indian Entertainment | One Paschima | OnePaschima.in@SD | One.Paschima.in | MAPPED_ID_ONLY |
+| Indian Entertainment | Prarthana TV | PrarthanaTV.in@SD | Prarthana.TV.in | PrarthanaTV.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Sony Entertainment TV | SonyEntertainmentTelevision.in@SD | Sony.Entertainment.Television.in | SonyEntertainmentTelevision.in | MAPPED_ID_ONLY |
 | Indian Music | Steelbird Music | SteelbirdMusic.in@SD | Steelbird.Music.in | MAPPED_ID_ONLY |
+| Indian Entertainment | Suriyan TV | SuriyanTV.in@SD | ts1384 | MAPPED_ID_ONLY |
 | Indian Movies | MH One Dil Se | MHOneDilSe.in@SD | MH One Dil Se.in | MH-One-Dil-Se.in | MAPPED_NOT_CURRENTLY_FOUND |
 | Indian Music | 7X Punjabi | custom.7x.punjabi | - | NO_GUIDE_HIT |
 | Indian Bangla | Amar Bangla Digital | custom.amar.bangla.digital | - | NO_GUIDE_HIT |
@@ -62,13 +65,15 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Movies | MH One Movies | MHOneMovies.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | MH One Prime | Mh1Prime.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | MNTV (Tamil) | MarutamTV.in | - | NO_GUIDE_HIT |
+| Indian Movies | Mango | Mango.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Mei Alai TV | MeiAlaiTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | Metro TV (India) | MetroTV.in@SD | - | NO_GUIDE_HIT |
-| Indian Music | Music Mastii | MusicMastii.in | - | NO_GUIDE_HIT |
 | Indian Movies | NH Tamil Gold | NHTamilGold.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | NKR TV Kannada | NKRTVKannada.in | - | NO_GUIDE_HIT |
+| Indian Entertainment | Oli TV | OliTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Bangla | Orange Bangla TV | OrangeBanglaTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Pardesi TV | PardesiTV.ca | - | NO_GUIDE_HIT |
+| Indian Entertainment | Pulari TV | PulariTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Q TV | QTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | SADA TV | SADATV.in | - | NO_GUIDE_HIT |
 | Indian Bangla | SNB Cinema | custom.snb.cinema | - | NO_GUIDE_HIT |
@@ -78,6 +83,9 @@ The automation maps playlist identities to available public XMLTV IDs, preserves
 | Indian Movies | Sony Max 2 [US] | custom.sony.max.2 | - | NO_GUIDE_HIT |
 | Indian Movies | South Movies | custom.south.movies | - | NO_GUIDE_HIT |
 | Indian Movies | South Station | SouthStation.in | - | NO_GUIDE_HIT |
+| Indian Movies | Starnet | Starnet.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | The Movie Club | TheMovieClub.in@HD | - | NO_GUIDE_HIT |
 | Indian Movies | The Movie Club +2 | TheMovieClub.in@Plus2 | - | NO_GUIDE_HIT |
+| Indian Music | UTV Palakkad | UTVPalakkad.in@SD | - | NO_GUIDE_HIT |
+| Indian Music | VCV | famelack.dB4Xrylwq58w1o | - | NO_GUIDE_HIT |
 | Indian Music | Zoom Music | custom.zoommusic | - | NO_GUIDE_HIT |
