@@ -1,235 +1,239 @@
 # Stream Health Report
 
-Generated: **2026-10-04T04:15:05+00:00**
+Generated: **2026-10-04T04:31:58+00:00**
 
 Non-destructive connectivity check. A successful HTTP response confirms reachability of the stream endpoint, not guaranteed video/audio playback.
 
 ## Summary
 
 - Streams tested: **893**
-- Reachable: **789**
-- Failed this check: **104**
-- Persistent failures (3+ consecutive): **102**
-- Intermittent failures: **2**
+- Reachable: **785**
+- Failed this check: **108**
+- Persistent failures (3+ consecutive): **101**
+- Intermittent failures: **7**
 - Primary tested: **586**
 - Backup tested: **307**
 
 ## Failure Classification
 
+- HTTP 401/403 (auth): **2**
 - HTTP 404 (not found): **1**
-- HTTP 5xx (server): **1**
-- Timeout: **102**
+- HTTP 5xx (server): **4**
+- Timeout: **101**
 ## Persistent Failures
 
-- **9XM** — Backup — consecutive failures: **97** — Timeout
-- **ATN News** — Backup — consecutive failures: **97** — Timeout
-- **Animal Planet** — Backup — consecutive failures: **97** — Timeout
-- **BBC Earth** — Backup — consecutive failures: **97** — Timeout
-- **BTV National** — Backup — consecutive failures: **97** — Timeout
-- **Channel I** — Backup — consecutive failures: **97** — Timeout
-- **Colors Bangla** — Backup — consecutive failures: **97** — Timeout
-- **Colors Bangla** — Backup — consecutive failures: **97** — Timeout
-- **Colors Bangla Cinema** — Backup — consecutive failures: **97** — Timeout
-- **Colors Bangla Cinema** — Backup — consecutive failures: **97** — Timeout
-- **Deepto TV** — Backup — consecutive failures: **97** — Timeout
-- **Discovery** — Backup — consecutive failures: **97** — Timeout
-- **Duronto TV** — Backup — consecutive failures: **97** — Timeout
-- **Duronto TV** — Backup — consecutive failures: **71** — Timeout
-- **Ekattor TV** — Backup — consecutive failures: **97** — Timeout
-- **Enterr10 Bangla** — Backup — consecutive failures: **97** — Timeout
-- **G TV** — Backup — consecutive failures: **97** — Timeout
-- **History TV18** — Backup — consecutive failures: **97** — Timeout
-- **Jalsha Movies** — Backup — consecutive failures: **97** — Timeout
-- **Jalsha Movies** — Backup — consecutive failures: **97** — Timeout
-- **Maasranga TV** — Backup — consecutive failures: **97** — Timeout
-- **Madani TV** — Backup — consecutive failures: **97** — Timeout
-- **National Geographic** — Backup — consecutive failures: **97** — Timeout
-- **News 24** — Backup — consecutive failures: **97** — Timeout
-- **Sangeet Bangla** — Backup — consecutive failures: **97** — Timeout
-- **Sangeet Bangla** — Backup — consecutive failures: **97** — Timeout
-- **Sangeet Bangla** — Backup — consecutive failures: **3** — HTTP 404
-- **Somoy TV** — Backup — consecutive failures: **97** — Timeout
-- **Sony AATH** — Backup — consecutive failures: **97** — Timeout
-- **Sony BBC Earth** — Backup — consecutive failures: **97** — Timeout
-- **Sony Entertainment TV** — Backup — consecutive failures: **97** — Timeout
-- **Sony Max** — Backup — consecutive failures: **97** — Timeout
-- **Star Gold** — Backup — consecutive failures: **97** — Timeout
-- **Star Jalsha** — Backup — consecutive failures: **97** — Timeout
-- **Star Plus** — Backup — consecutive failures: **97** — Timeout
-- **Sun Bangla** — Backup — consecutive failures: **97** — Timeout
-- **Travelxp Hindi** — Backup — consecutive failures: **97** — Timeout
-- **Zee Bangla** — Backup — consecutive failures: **97** — Timeout
-- **Zee Bangla Sonar** — Backup — consecutive failures: **97** — Timeout
-- **Zee Cinema** — Backup — consecutive failures: **97** — Timeout
-- **Zee TV** — Backup — consecutive failures: **97** — Timeout
-- **Zoom Music** — Backup — consecutive failures: **97** — Timeout
-- **ATN Bangla** — Bangladesh — consecutive failures: **97** — Timeout
-- **BTV National** — Bangladesh — consecutive failures: **97** — Timeout
-- **Boishakhi TV** — Bangladesh — consecutive failures: **97** — Timeout
-- **Channel 24** — Bangladesh — consecutive failures: **97** — Timeout
-- **DBC News** — Bangladesh — consecutive failures: **97** — Timeout
-- **Duronto TV** — Bangladesh — consecutive failures: **97** — Timeout
-- **Ekhon TV** — Bangladesh — consecutive failures: **97** — Timeout
-- **Ekushey TV** — Bangladesh — consecutive failures: **97** — Timeout
-- **Independent TV** — Bangladesh — consecutive failures: **97** — Timeout
-- **Jamuna TV** — Bangladesh — consecutive failures: **97** — Timeout
-- **Nagorik TV** — Bangladesh — consecutive failures: **97** — Timeout
-- **Somoy TV** — Bangladesh — consecutive failures: **97** — Timeout
-- **Animal Planet** — Documentary & Wildlife — consecutive failures: **97** — Timeout
-- **Discovery** — Documentary & Wildlife — consecutive failures: **97** — Timeout
-- **Nat Geo Wild** — Documentary & Wildlife — consecutive failures: **97** — Timeout
-- **National Geographic** — Documentary & Wildlife — consecutive failures: **97** — Timeout
-- **TLC** — Documentary & Wildlife — consecutive failures: **97** — Timeout
-- **Travelxp Hindi** — Documentary & Wildlife — consecutive failures: **97** — Timeout
-- **Enterr10 Bangla** — Indian Bangla — consecutive failures: **97** — Timeout
-- **Sony AATH** — Indian Bangla — consecutive failures: **97** — Timeout
-- **Star Jalsha** — Indian Bangla — consecutive failures: **97** — Timeout
-- **Zee Bangla** — Indian Bangla — consecutive failures: **97** — Timeout
-- **Colors** — Indian Entertainment — consecutive failures: **97** — Timeout
-- **MTV India** — Indian Entertainment — consecutive failures: **97** — Timeout
-- **Star Bharat** — Indian Entertainment — consecutive failures: **97** — Timeout
-- **&pictures** — Indian Movies — consecutive failures: **97** — Timeout
-- **Colors Cineplex** — Indian Movies — consecutive failures: **97** — Timeout
-- **Xplor** — Indian Movies — consecutive failures: **97** — Timeout
-- **Zing** — Indian Music — consecutive failures: **97** — Timeout
-- **&Privé** — International — consecutive failures: **97** — Timeout
-- **AXN** — International — consecutive failures: **97** — Timeout
-- **Al Jazeera** — International — consecutive failures: **97** — Timeout
-- **BBC News** — International — consecutive failures: **97** — Timeout
-- **DW News** — International — consecutive failures: **97** — Timeout
-- **Lotus TV** — International — consecutive failures: **97** — Timeout
-- **MN+** — International — consecutive failures: **97** — Timeout
-- **MNX** — International — consecutive failures: **97** — Timeout
-- **Movies Now** — International — consecutive failures: **97** — Timeout
-- **Romedy Now** — International — consecutive failures: **97** — Timeout
-- **Sony PIX** — International — consecutive failures: **97** — Timeout
-- **ETV Bal Bharat** — Kids — consecutive failures: **97** — Timeout
-- **Hungama** — Kids — consecutive failures: **97** — Timeout
-- **Nick** — Kids — consecutive failures: **97** — Timeout
-- **Nick Jr** — Kids — consecutive failures: **97** — Timeout
-- **Sonic** — Kids — consecutive failures: **97** — Timeout
-- **Super Hungama** — Kids — consecutive failures: **97** — Timeout
-- **Geo News** — Pakistani — consecutive failures: **97** — Timeout
-- **Hum Masala** — Pakistani — consecutive failures: **97** — Timeout
-- **Peace TV Bangla** — Religious — consecutive failures: **97** — Timeout
-- **PTV Sports** — Sports — consecutive failures: **97** — Timeout
-- **Sony Sports Ten 4** — Sports — consecutive failures: **97** — Timeout
-- **Sony Sports Ten 5** — Sports — consecutive failures: **97** — Timeout
-- **Sony Ten 2** — Sports — consecutive failures: **97** — Timeout
-- **Star Sports 1** — Sports — consecutive failures: **97** — Timeout
-- **Star Sports 2** — Sports — consecutive failures: **97** — Timeout
-- **Star Sports 3** — Sports — consecutive failures: **97** — Timeout
-- **Star Sports Select 1** — Sports — consecutive failures: **97** — Timeout
-- **Star Sports Select 2** — Sports — consecutive failures: **97** — Timeout
-- **T Sports** — Sports — consecutive failures: **97** — Timeout
-- **UNITE8 1** — Sports — consecutive failures: **97** — Timeout
+- **9XM** — Backup — consecutive failures: **98** — Timeout
+- **ATN News** — Backup — consecutive failures: **98** — Timeout
+- **Animal Planet** — Backup — consecutive failures: **98** — Timeout
+- **BBC Earth** — Backup — consecutive failures: **98** — Timeout
+- **BTV National** — Backup — consecutive failures: **98** — Timeout
+- **Channel I** — Backup — consecutive failures: **98** — Timeout
+- **Colors Bangla** — Backup — consecutive failures: **98** — Timeout
+- **Colors Bangla** — Backup — consecutive failures: **98** — Timeout
+- **Colors Bangla Cinema** — Backup — consecutive failures: **98** — Timeout
+- **Colors Bangla Cinema** — Backup — consecutive failures: **98** — Timeout
+- **Deepto TV** — Backup — consecutive failures: **98** — Timeout
+- **Discovery** — Backup — consecutive failures: **98** — Timeout
+- **Duronto TV** — Backup — consecutive failures: **98** — Timeout
+- **Duronto TV** — Backup — consecutive failures: **72** — Timeout
+- **Ekattor TV** — Backup — consecutive failures: **98** — Timeout
+- **Enterr10 Bangla** — Backup — consecutive failures: **98** — Timeout
+- **G TV** — Backup — consecutive failures: **98** — Timeout
+- **History TV18** — Backup — consecutive failures: **98** — Timeout
+- **Jalsha Movies** — Backup — consecutive failures: **98** — Timeout
+- **Jalsha Movies** — Backup — consecutive failures: **98** — Timeout
+- **Maasranga TV** — Backup — consecutive failures: **98** — Timeout
+- **Madani TV** — Backup — consecutive failures: **98** — Timeout
+- **National Geographic** — Backup — consecutive failures: **98** — Timeout
+- **News 24** — Backup — consecutive failures: **98** — Timeout
+- **Sangeet Bangla** — Backup — consecutive failures: **98** — Timeout
+- **Sangeet Bangla** — Backup — consecutive failures: **98** — Timeout
+- **Somoy TV** — Backup — consecutive failures: **98** — Timeout
+- **Sony AATH** — Backup — consecutive failures: **98** — Timeout
+- **Sony BBC Earth** — Backup — consecutive failures: **98** — Timeout
+- **Sony Entertainment TV** — Backup — consecutive failures: **98** — Timeout
+- **Sony Max** — Backup — consecutive failures: **98** — Timeout
+- **Star Gold** — Backup — consecutive failures: **98** — Timeout
+- **Star Jalsha** — Backup — consecutive failures: **98** — Timeout
+- **Star Plus** — Backup — consecutive failures: **98** — Timeout
+- **Sun Bangla** — Backup — consecutive failures: **98** — Timeout
+- **Travelxp Hindi** — Backup — consecutive failures: **98** — Timeout
+- **Zee Bangla** — Backup — consecutive failures: **98** — Timeout
+- **Zee Bangla Sonar** — Backup — consecutive failures: **98** — Timeout
+- **Zee Cinema** — Backup — consecutive failures: **98** — Timeout
+- **Zee TV** — Backup — consecutive failures: **98** — Timeout
+- **Zoom Music** — Backup — consecutive failures: **98** — Timeout
+- **ATN Bangla** — Bangladesh — consecutive failures: **98** — Timeout
+- **BTV National** — Bangladesh — consecutive failures: **98** — Timeout
+- **Boishakhi TV** — Bangladesh — consecutive failures: **98** — Timeout
+- **Channel 24** — Bangladesh — consecutive failures: **98** — Timeout
+- **DBC News** — Bangladesh — consecutive failures: **98** — Timeout
+- **Duronto TV** — Bangladesh — consecutive failures: **98** — Timeout
+- **Ekhon TV** — Bangladesh — consecutive failures: **98** — Timeout
+- **Ekushey TV** — Bangladesh — consecutive failures: **98** — Timeout
+- **Independent TV** — Bangladesh — consecutive failures: **98** — Timeout
+- **Jamuna TV** — Bangladesh — consecutive failures: **98** — Timeout
+- **Nagorik TV** — Bangladesh — consecutive failures: **98** — Timeout
+- **Somoy TV** — Bangladesh — consecutive failures: **98** — Timeout
+- **Animal Planet** — Documentary & Wildlife — consecutive failures: **98** — Timeout
+- **Discovery** — Documentary & Wildlife — consecutive failures: **98** — Timeout
+- **Nat Geo Wild** — Documentary & Wildlife — consecutive failures: **98** — Timeout
+- **National Geographic** — Documentary & Wildlife — consecutive failures: **98** — Timeout
+- **TLC** — Documentary & Wildlife — consecutive failures: **98** — Timeout
+- **Travelxp Hindi** — Documentary & Wildlife — consecutive failures: **98** — Timeout
+- **Enterr10 Bangla** — Indian Bangla — consecutive failures: **98** — Timeout
+- **Sony AATH** — Indian Bangla — consecutive failures: **98** — Timeout
+- **Star Jalsha** — Indian Bangla — consecutive failures: **98** — Timeout
+- **Zee Bangla** — Indian Bangla — consecutive failures: **98** — Timeout
+- **Colors** — Indian Entertainment — consecutive failures: **98** — Timeout
+- **MTV India** — Indian Entertainment — consecutive failures: **98** — Timeout
+- **Star Bharat** — Indian Entertainment — consecutive failures: **98** — Timeout
+- **&pictures** — Indian Movies — consecutive failures: **98** — Timeout
+- **Colors Cineplex** — Indian Movies — consecutive failures: **98** — Timeout
+- **Xplor** — Indian Movies — consecutive failures: **98** — Timeout
+- **Zing** — Indian Music — consecutive failures: **98** — Timeout
+- **&Privé** — International — consecutive failures: **98** — Timeout
+- **AXN** — International — consecutive failures: **98** — Timeout
+- **Al Jazeera** — International — consecutive failures: **98** — Timeout
+- **BBC News** — International — consecutive failures: **98** — Timeout
+- **DW News** — International — consecutive failures: **98** — Timeout
+- **Lotus TV** — International — consecutive failures: **98** — Timeout
+- **MN+** — International — consecutive failures: **98** — Timeout
+- **MNX** — International — consecutive failures: **98** — Timeout
+- **Movies Now** — International — consecutive failures: **98** — Timeout
+- **Romedy Now** — International — consecutive failures: **98** — Timeout
+- **Sony PIX** — International — consecutive failures: **98** — Timeout
+- **ETV Bal Bharat** — Kids — consecutive failures: **98** — Timeout
+- **Hungama** — Kids — consecutive failures: **98** — Timeout
+- **Nick** — Kids — consecutive failures: **98** — Timeout
+- **Nick Jr** — Kids — consecutive failures: **98** — Timeout
+- **Sonic** — Kids — consecutive failures: **98** — Timeout
+- **Super Hungama** — Kids — consecutive failures: **98** — Timeout
+- **Geo News** — Pakistani — consecutive failures: **98** — Timeout
+- **Hum Masala** — Pakistani — consecutive failures: **98** — Timeout
+- **Peace TV Bangla** — Religious — consecutive failures: **98** — Timeout
+- **PTV Sports** — Sports — consecutive failures: **98** — Timeout
+- **Sony Sports Ten 4** — Sports — consecutive failures: **98** — Timeout
+- **Sony Sports Ten 5** — Sports — consecutive failures: **98** — Timeout
+- **Sony Ten 2** — Sports — consecutive failures: **98** — Timeout
+- **Star Sports 1** — Sports — consecutive failures: **98** — Timeout
+- **Star Sports 2** — Sports — consecutive failures: **98** — Timeout
+- **Star Sports 3** — Sports — consecutive failures: **98** — Timeout
+- **Star Sports Select 1** — Sports — consecutive failures: **98** — Timeout
+- **Star Sports Select 2** — Sports — consecutive failures: **98** — Timeout
+- **T Sports** — Sports — consecutive failures: **98** — Timeout
+- **UNITE8 1** — Sports — consecutive failures: **98** — Timeout
 
 ## Failed This Check
 
-- **9XM** — Backup — streak 97 — Timeout
-- **ATN News** — Backup — streak 97 — Timeout
-- **Animal Planet** — Backup — streak 97 — Timeout
-- **BBC Earth** — Backup — streak 97 — Timeout
-- **BTV National** — Backup — streak 97 — Timeout
-- **Channel I** — Backup — streak 97 — Timeout
-- **Colors Bangla** — Backup — streak 97 — Timeout
-- **Colors Bangla** — Backup — streak 97 — Timeout
-- **Colors Bangla Cinema** — Backup — streak 97 — Timeout
-- **Colors Bangla Cinema** — Backup — streak 97 — Timeout
-- **Deepto TV** — Backup — streak 97 — Timeout
-- **Discovery** — Backup — streak 97 — Timeout
-- **Duronto TV** — Backup — streak 97 — Timeout
-- **Duronto TV** — Backup — streak 71 — Timeout
-- **Ekattor TV** — Backup — streak 97 — Timeout
-- **Enterr10 Bangla** — Backup — streak 97 — Timeout
-- **G TV** — Backup — streak 97 — Timeout
-- **History TV18** — Backup — streak 97 — Timeout
-- **Jalsha Movies** — Backup — streak 97 — Timeout
-- **Jalsha Movies** — Backup — streak 97 — Timeout
-- **Maasranga TV** — Backup — streak 97 — Timeout
-- **Madani TV** — Backup — streak 97 — Timeout
-- **National Geographic** — Backup — streak 97 — Timeout
-- **News 24** — Backup — streak 97 — Timeout
-- **Sangeet Bangla** — Backup — streak 97 — Timeout
-- **Sangeet Bangla** — Backup — streak 97 — Timeout
-- **Sangeet Bangla** — Backup — streak 3 — HTTP 404
-- **Somoy TV** — Backup — streak 97 — Timeout
-- **Sony AATH** — Backup — streak 97 — Timeout
-- **Sony BBC Earth** — Backup — streak 97 — Timeout
-- **Sony Entertainment TV** — Backup — streak 97 — Timeout
-- **Sony Max** — Backup — streak 97 — Timeout
-- **Star Gold** — Backup — streak 97 — Timeout
-- **Star Jalsha** — Backup — streak 97 — Timeout
-- **Star News** — Backup — streak 1 — HTTP 500
-- **Star Plus** — Backup — streak 97 — Timeout
-- **Sun Bangla** — Backup — streak 97 — Timeout
-- **Travelxp Hindi** — Backup — streak 97 — Timeout
-- **Zee Bangla** — Backup — streak 97 — Timeout
-- **Zee Bangla** — Backup — streak 1 — Timeout
-- **Zee Bangla Sonar** — Backup — streak 97 — Timeout
-- **Zee Cinema** — Backup — streak 97 — Timeout
-- **Zee TV** — Backup — streak 97 — Timeout
-- **Zoom Music** — Backup — streak 97 — Timeout
-- **ATN Bangla** — Bangladesh — streak 97 — Timeout
-- **BTV National** — Bangladesh — streak 97 — Timeout
-- **Boishakhi TV** — Bangladesh — streak 97 — Timeout
-- **Channel 24** — Bangladesh — streak 97 — Timeout
-- **DBC News** — Bangladesh — streak 97 — Timeout
-- **Duronto TV** — Bangladesh — streak 97 — Timeout
-- **Ekhon TV** — Bangladesh — streak 97 — Timeout
-- **Ekushey TV** — Bangladesh — streak 97 — Timeout
-- **Independent TV** — Bangladesh — streak 97 — Timeout
-- **Jamuna TV** — Bangladesh — streak 97 — Timeout
-- **Nagorik TV** — Bangladesh — streak 97 — Timeout
-- **Somoy TV** — Bangladesh — streak 97 — Timeout
-- **Animal Planet** — Documentary & Wildlife — streak 97 — Timeout
-- **Discovery** — Documentary & Wildlife — streak 97 — Timeout
-- **Nat Geo Wild** — Documentary & Wildlife — streak 97 — Timeout
-- **National Geographic** — Documentary & Wildlife — streak 97 — Timeout
-- **TLC** — Documentary & Wildlife — streak 97 — Timeout
-- **Travelxp Hindi** — Documentary & Wildlife — streak 97 — Timeout
-- **Enterr10 Bangla** — Indian Bangla — streak 97 — Timeout
-- **Sony AATH** — Indian Bangla — streak 97 — Timeout
-- **Star Jalsha** — Indian Bangla — streak 97 — Timeout
-- **Zee Bangla** — Indian Bangla — streak 97 — Timeout
-- **Colors** — Indian Entertainment — streak 97 — Timeout
-- **MTV India** — Indian Entertainment — streak 97 — Timeout
-- **Star Bharat** — Indian Entertainment — streak 97 — Timeout
-- **&pictures** — Indian Movies — streak 97 — Timeout
-- **Colors Cineplex** — Indian Movies — streak 97 — Timeout
-- **Xplor** — Indian Movies — streak 97 — Timeout
-- **Zing** — Indian Music — streak 97 — Timeout
-- **&Privé** — International — streak 97 — Timeout
-- **AXN** — International — streak 97 — Timeout
-- **Al Jazeera** — International — streak 97 — Timeout
-- **BBC News** — International — streak 97 — Timeout
-- **DW News** — International — streak 97 — Timeout
-- **Lotus TV** — International — streak 97 — Timeout
-- **MN+** — International — streak 97 — Timeout
-- **MNX** — International — streak 97 — Timeout
-- **Movies Now** — International — streak 97 — Timeout
-- **Romedy Now** — International — streak 97 — Timeout
-- **Sony PIX** — International — streak 97 — Timeout
-- **ETV Bal Bharat** — Kids — streak 97 — Timeout
-- **Hungama** — Kids — streak 97 — Timeout
-- **Nick** — Kids — streak 97 — Timeout
-- **Nick Jr** — Kids — streak 97 — Timeout
-- **Sonic** — Kids — streak 97 — Timeout
-- **Super Hungama** — Kids — streak 97 — Timeout
-- **Geo News** — Pakistani — streak 97 — Timeout
-- **Hum Masala** — Pakistani — streak 97 — Timeout
-- **Peace TV Bangla** — Religious — streak 97 — Timeout
-- **PTV Sports** — Sports — streak 97 — Timeout
-- **Sony Sports Ten 4** — Sports — streak 97 — Timeout
-- **Sony Sports Ten 5** — Sports — streak 97 — Timeout
-- **Sony Ten 2** — Sports — streak 97 — Timeout
-- **Star Sports 1** — Sports — streak 97 — Timeout
-- **Star Sports 2** — Sports — streak 97 — Timeout
-- **Star Sports 3** — Sports — streak 97 — Timeout
-- **Star Sports Select 1** — Sports — streak 97 — Timeout
-- **Star Sports Select 2** — Sports — streak 97 — Timeout
-- **T Sports** — Sports — streak 97 — Timeout
-- **UNITE8 1** — Sports — streak 97 — Timeout
+- **9XM** — Backup — streak 98 — Timeout
+- **ATN News** — Backup — streak 98 — Timeout
+- **Amar Bangla Digital** — Backup — streak 1 — HTTP 500
+- **Animal Planet** — Backup — streak 98 — Timeout
+- **BBC Earth** — Backup — streak 98 — Timeout
+- **BTV National** — Backup — streak 98 — Timeout
+- **Channel 16** — Backup — streak 1 — HTTP 500
+- **Channel I** — Backup — streak 98 — Timeout
+- **Channel S** — Backup — streak 1 — HTTP 500
+- **Colors Bangla** — Backup — streak 98 — Timeout
+- **Colors Bangla** — Backup — streak 98 — Timeout
+- **Colors Bangla Cinema** — Backup — streak 98 — Timeout
+- **Colors Bangla Cinema** — Backup — streak 98 — Timeout
+- **Deepto TV** — Backup — streak 98 — Timeout
+- **Discovery** — Backup — streak 98 — Timeout
+- **Duronto TV** — Backup — streak 98 — Timeout
+- **Duronto TV** — Backup — streak 72 — Timeout
+- **Ekattor TV** — Backup — streak 98 — Timeout
+- **Enterr10 Bangla** — Backup — streak 98 — Timeout
+- **G TV** — Backup — streak 98 — Timeout
+- **History TV18** — Backup — streak 98 — Timeout
+- **Jalsha Movies** — Backup — streak 98 — Timeout
+- **Jalsha Movies** — Backup — streak 98 — Timeout
+- **Maasranga TV** — Backup — streak 98 — Timeout
+- **Madani TV** — Backup — streak 98 — Timeout
+- **National Geographic** — Backup — streak 98 — Timeout
+- **News 24** — Backup — streak 98 — Timeout
+- **Sangeet Bangla** — Backup — streak 98 — Timeout
+- **Sangeet Bangla** — Backup — streak 98 — Timeout
+- **Somoy TV** — Backup — streak 98 — Timeout
+- **Sony AATH** — Backup — streak 98 — Timeout
+- **Sony BBC Earth** — Backup — streak 98 — Timeout
+- **Sony Entertainment TV** — Backup — streak 98 — Timeout
+- **Sony Max** — Backup — streak 98 — Timeout
+- **Star Gold** — Backup — streak 98 — Timeout
+- **Star Jalsha** — Backup — streak 98 — Timeout
+- **Star Plus** — Backup — streak 98 — Timeout
+- **Sun Bangla** — Backup — streak 98 — Timeout
+- **Travelxp Hindi** — Backup — streak 98 — Timeout
+- **Zee Bangla** — Backup — streak 98 — Timeout
+- **Zee Bangla** — Backup — streak 2 — HTTP 401
+- **Zee Bangla Sonar** — Backup — streak 98 — Timeout
+- **Zee Cinema** — Backup — streak 98 — Timeout
+- **Zee TV** — Backup — streak 98 — Timeout
+- **Zoom Music** — Backup — streak 98 — Timeout
+- **ATN Bangla** — Bangladesh — streak 98 — Timeout
+- **BTV National** — Bangladesh — streak 98 — Timeout
+- **Boishakhi TV** — Bangladesh — streak 98 — Timeout
+- **Channel 24** — Bangladesh — streak 98 — Timeout
+- **DBC News** — Bangladesh — streak 98 — Timeout
+- **Duronto TV** — Bangladesh — streak 98 — Timeout
+- **Ekhon TV** — Bangladesh — streak 98 — Timeout
+- **Ekushey TV** — Bangladesh — streak 98 — Timeout
+- **Independent TV** — Bangladesh — streak 98 — Timeout
+- **Jamuna TV** — Bangladesh — streak 98 — Timeout
+- **Nagorik TV** — Bangladesh — streak 98 — Timeout
+- **Somoy TV** — Bangladesh — streak 98 — Timeout
+- **Animal Planet** — Documentary & Wildlife — streak 98 — Timeout
+- **Discovery** — Documentary & Wildlife — streak 98 — Timeout
+- **History** — Documentary & Wildlife — streak 1 — HTTP 403
+- **Nat Geo Wild** — Documentary & Wildlife — streak 98 — Timeout
+- **National Geographic** — Documentary & Wildlife — streak 98 — Timeout
+- **TLC** — Documentary & Wildlife — streak 98 — Timeout
+- **Travelxp Hindi** — Documentary & Wildlife — streak 98 — Timeout
+- **Enterr10 Bangla** — Indian Bangla — streak 98 — Timeout
+- **Sony AATH** — Indian Bangla — streak 98 — Timeout
+- **Star Jalsha** — Indian Bangla — streak 98 — Timeout
+- **Zee Bangla** — Indian Bangla — streak 98 — Timeout
+- **Colors** — Indian Entertainment — streak 98 — Timeout
+- **MTV India** — Indian Entertainment — streak 98 — Timeout
+- **Star Bharat** — Indian Entertainment — streak 98 — Timeout
+- **&pictures** — Indian Movies — streak 98 — Timeout
+- **All Time Movies** — Indian Movies — streak 1 — HTTP 404
+- **Colors Cineplex** — Indian Movies — streak 98 — Timeout
+- **Xplor** — Indian Movies — streak 98 — Timeout
+- **Zing** — Indian Music — streak 98 — Timeout
+- **&Privé** — International — streak 98 — Timeout
+- **AXN** — International — streak 98 — Timeout
+- **Al Jazeera** — International — streak 98 — Timeout
+- **BBC News** — International — streak 98 — Timeout
+- **DW News** — International — streak 98 — Timeout
+- **Lotus TV** — International — streak 98 — Timeout
+- **MN+** — International — streak 98 — Timeout
+- **MNX** — International — streak 98 — Timeout
+- **Movies Now** — International — streak 98 — Timeout
+- **Romedy Now** — International — streak 98 — Timeout
+- **Sony PIX** — International — streak 98 — Timeout
+- **ETV Bal Bharat** — Kids — streak 98 — Timeout
+- **Hungama** — Kids — streak 98 — Timeout
+- **Nick** — Kids — streak 98 — Timeout
+- **Nick Jr** — Kids — streak 98 — Timeout
+- **Sonic** — Kids — streak 98 — Timeout
+- **Super Hungama** — Kids — streak 98 — Timeout
+- **Geo News** — Pakistani — streak 98 — Timeout
+- **Hum Masala** — Pakistani — streak 98 — Timeout
+- **Peace TV Bangla** — Religious — streak 98 — Timeout
+- **Astro Cricbuzz** — Sports — streak 1 — HTTP 502
+- **PTV Sports** — Sports — streak 98 — Timeout
+- **Sony Sports Ten 4** — Sports — streak 98 — Timeout
+- **Sony Sports Ten 5** — Sports — streak 98 — Timeout
+- **Sony Ten 2** — Sports — streak 98 — Timeout
+- **Star Sports 1** — Sports — streak 98 — Timeout
+- **Star Sports 2** — Sports — streak 98 — Timeout
+- **Star Sports 3** — Sports — streak 98 — Timeout
+- **Star Sports Select 1** — Sports — streak 98 — Timeout
+- **Star Sports Select 2** — Sports — streak 98 — Timeout
+- **T Sports** — Sports — streak 98 — Timeout
+- **UNITE8 1** — Sports — streak 98 — Timeout
 
 ## Near-Duplicate URL Families
 
