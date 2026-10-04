@@ -1965,6 +1965,38 @@ https://server.zillarbarta.com/zbmusic/index.m3u8
 https://ranacable.duckdns.org/ZodiakTv/index.m3u8
 #EXTINF:-1 tvg-id="GodStandsKidsClubTV.pk@Urdu" tvg-name="God Stands Kids Club TV Urdu" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="GodStandsKidsClubTV.pk@Urdu" group-title="New Channels",God Stands Kids Club TV Urdu
 https://online.godstands.tv:5443/WebRTCApp/streams/KidsUrdu.m3u8
+#EXTINF:-1 tvg-id="8XM.pk@SD" tvg-name="8XM" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="8XM.pk@SD" group-title="New Channels",8XM
+https://cdn4.mjunoon.tv:8087/streamtest/131M/chunks.m3u8
+#EXTINF:-1 tvg-id="GraceNetwork.pk@SD" tvg-name="Grace Network" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="GraceNetwork.pk@SD" group-title="New Channels",Grace Network
+https://livecdn.live247stream.com/grace/tv/playlist.m3u8
+#EXTINF:-1 tvg-id="IsaacTV.pk@SD" tvg-name="Isaac TV" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="IsaacTV.pk@SD" group-title="New Channels",Isaac TV
+https://livecdn.live247stream.com/isaac/tv/playlist.m3u8
+#EXTINF:-1 tvg-id="JalwaTV.pk@SD" tvg-name="Jalwa TV" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="JalwaTV.pk@SD" group-title="New Channels",Jalwa TV
+https://vodzong.mjunoon.tv:8087/streamtest/JalwaTV-135/live/135M/chunks.m3u8
+#EXTINF:-1 tvg-id="JeremiahTV.pk@SD" tvg-name="Jeremiah TV" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="JeremiahTV.pk@SD" group-title="New Channels",Jeremiah TV
+https://x.streamablecloud.com/stream/hls/jeremiahtv/index.m3u8
+#EXTINF:-1 tvg-id="JoshuaTV.pk@SD" tvg-name="Joshua TV" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="JoshuaTV.pk@SD" group-title="New Channels",Joshua TV
+https://livecdn.live247stream.com/joshua/tv/playlist.m3u8
+#EXTINF:-1 tvg-id="KingTV.pk@SD" tvg-name="King TV" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="KingTV.pk@SD" group-title="New Channels",King TV
+https://streamer12.vdn.dstreamone.net/kingtv/kingtv/playlist.m3u8
+#EXTINF:-1 tvg-id="MSports.pk@SD" tvg-name="M Sports" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="MSports.pk@SD" group-title="New Channels",M Sports
+https://cdn.rabta.stream/M-Sports/index.m3u8
+#EXTINF:-1 tvg-id="MadaniChannelEnglish.pk@SD" tvg-name="Madani Channel English" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="MadaniChannelEnglish.pk@SD" group-title="New Channels",Madani Channel English
+https://streaming.madanichannel.tv/static/streaming-playlists/hls/c6a600b0-82cb-454a-8953-2bb2bb372edc/master.m3u8
+#EXTINF:-1 tvg-id="MadaniChannelUrdu.pk@SD" tvg-name="Madani Channel Urdu" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="MadaniChannelUrdu.pk@SD" group-title="New Channels",Madani Channel Urdu
+https://streaming.madanichannel.tv/static/streaming-playlists/hls/b9790f10-cb0d-4e30-82bf-84a756234e58/master.m3u8
+#EXTINF:-1 tvg-id="PaighanTV.pk@SD" tvg-name="Paighan TV" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="PaighanTV.pk@SD" group-title="New Channels",Paighan TV
+https://cdn4.mjunoon.tv:8087/streamtest/107M/chunks.m3u8
+#EXTINF:-1 tvg-id="PKSports.pk@SD" tvg-name="PK Sports" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="PKSports.pk@SD" group-title="New Channels",PK Sports
+https://lbgo.bozztv.com/ssh101/ssh101/pksportshd/playlist.m3u8
+#EXTINF:-1 tvg-id="PMITV.pk@SD" tvg-name="PMI TV" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="PMITV.pk@SD" group-title="New Channels",PMI TV
+https://cdn.live247stream.com/pmi/tv/playlist.m3u8
+#EXTINF:-1 tvg-id="PraiseTV.pk@SD" tvg-name="Praise TV" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="PraiseTV.pk@SD" group-title="New Channels",Praise TV
+https://livecdn.live247stream.com/praise/tv/playlist.m3u8
+#EXTINF:-1 tvg-id="SamaaTV.pk@SD" tvg-name="Samaa TV" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="SamaaTV.pk@SD" group-title="New Channels",Samaa TV
+https://vodzong.mjunoon.tv:8087/streamtest/SAMAA-173/playlist.m3u8
+#EXTINF:-1 tvg-id="ZindagiTV.pk@SD" tvg-name="Zindagi TV" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="ZindagiTV.pk@SD" group-title="New Channels",Zindagi TV
+https://5ad386ff92705.streamlock.net/live_transcoder/ngrp:zindagitv.stream_all/chunklist.m3u8
 #EXTINF:-1 tvg-id="B4UMusic.in@India" tvg-name="B4U Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png" channel-id="B4UMusic.in@India" group-title="New Backup",B4U Music
 https://bldcmprod-cdn.toffeelive.com/cdn/live/b4u_music/playlist.m3u8
 #EXTINF:-1 tvg-id="SangeetBangla.in@SD" tvg-name="Sangeet Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sangeet-bangla.png" channel-id="SangeetBangla.in@SD" group-title="New Backup",Sangeet Bangla
@@ -2013,6 +2045,16 @@ https://amg00861-terninternation-inwild-samsungau-3qrga.amagi.tv/playlist/amg008
 https://tvsen7.aynascope.net/ssport2hd/index.m3u8
 #EXTINF:-1 tvg-id="GodStandsTV.pk@Urdu" tvg-name="God Stands TV Urdu" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="GodStandsTV.pk@Urdu" group-title="New Backup",God Stands TV Urdu
 https://online.godstands.tv:5443/WebRTCApp/streams/UrduStreaming.m3u8
+#EXTINF:-1 tvg-id="8XM.pk@SD" tvg-name="8XM" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="8XM.pk@SD" group-title="New Backup",8XM
+https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
+#EXTINF:-1 tvg-id="JeremiahTV.pk@SD" tvg-name="Jeremiah TV" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="JeremiahTV.pk@SD" group-title="New Backup",Jeremiah TV
+https://x.streamablecloud.com/stream/hls/jeremiahtv/1_2/index.m3u8
+#EXTINF:-1 tvg-id="MSports.pk@SD" tvg-name="M Sports" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="MSports.pk@SD" group-title="New Backup",M Sports
+https://cdn.rabta.stream/M-Sports/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="MSports.pk@SD" tvg-name="M Sports" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="MSports.pk@SD" group-title="New Backup",M Sports
+https://cdn.rabta.stream/M-Sports/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="PraiseTV.pk@SD" tvg-name="Praise TV" tvg-logo="" tvg-language="urd" tvg-country="PK" channel-id="PraiseTV.pk@SD" group-title="New Backup",Praise TV
+https://pixelsmedia.live/livepraisetv/index.m3u8
 #EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" channel-id="AnandaTV.bd" group-title="Not Playing",Ananda TV
 https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="AsianTV.bd" tvg-name="Asian TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" channel-id="AsianTV.bd" group-title="Not Playing",Asian TV
