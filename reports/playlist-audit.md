@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-04T15:09:41.506609+00:00**
+Generated: **2026-10-04T15:12:12.595997+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -627,7 +627,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Shanson TV — International — http://catchup.videoline.ru/shanson/index.m3u8
 - Shanson TV — Backup — https://streaming.thestream.cyou/live/7009.m3u8
 ### shemaroojosh.in@sd (2 streams)
-- Shemaroo Josh — Indian Entertainment — https://airtelapp.shemaroo.com/shemarooChumbakTV/smil:shemarooChumbakTVadp.smil/playlist.m3u8
+- Shemaroo Josh — Indian Movies — https://airtelapp.shemaroo.com/shemarooChumbakTV/smil:shemarooChumbakTVadp.smil/playlist.m3u8
 - Shemaroo Josh — Not Playing — https://mumt04.tangotv.in/m18aqlK4SHEMAROOJOSH/index.m3u8
 ### somoynewstv.bd (7 streams)
 - Somoy TV — Bangladesh — http://198.195.239.50:8095/somoyTv/index.m3u8

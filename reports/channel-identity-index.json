@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T15:08:54+00:00",
+  "generated": "2026-10-04T15:11:25+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -6384,7 +6384,7 @@
         "pocketfilms.in"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Indian Movies"
       ],
       "streams": 1,
       "primary": 1,
@@ -7286,7 +7286,7 @@
         "shemaroojosh.in@sd"
       ],
       "groups": [
-        "Indian Entertainment",
+        "Indian Movies",
         "Not Playing"
       ],
       "streams": 2,
@@ -7301,7 +7301,7 @@
         "shemaroomarathibana.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Indian Movies"
       ],
       "streams": 1,
       "primary": 1,
