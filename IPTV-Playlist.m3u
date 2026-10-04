@@ -2,7 +2,6 @@
 #PLAYLIST-STUDIO-NAME:"IPTV-Playlist.m3u"
 #PLAYLIST-STUDIO-CATEGORIES:["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "Not Playing", "New Channels", "New Backup"]
 #EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="1" channel-id="AnandaTV.bd" group-title="Bangladesh",Ananda TV
-#EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="1" channel-id="AnandaTV.bd" group-title="Bangladesh",Ananda TV
 #EXTINF:-1 tvg-id="AsianTV.bd" tvg-name="Asian TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" tvg-chno="2" channel-id="AsianTV.bd" group-title="Bangladesh",Asian TV
 https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/index.m3u8
 #EXTINF:-1 tvg-id="ATNBangla.bd" tvg-name="ATN Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png" tvg-chno="3" channel-id="ATNBangla.bd" group-title="Bangladesh",ATN Bangla
