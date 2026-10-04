@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T17:16:45+00:00",
+  "generated": "2026-10-04T03:47:51+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -329,20 +329,6 @@
       "primary": 1,
       "backup": 0
     },
-    "amazingdiscoveriestv": {
-      "names": [
-        "Amazing Discoveries TV"
-      ],
-      "ids": [
-        "amazingdiscoveriestv.ca"
-      ],
-      "groups": [
-        "Documentary & Wildlife"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "amc": {
       "names": [
         "AMC"
@@ -380,11 +366,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 5,
       "primary": 1,
-      "backup": 4
+      "backup": 3
     },
     "anandtv": {
       "names": [
@@ -495,12 +482,12 @@
         "asianetmovies.in@sd"
       ],
       "groups": [
-        "Backup",
-        "Indian Movies"
+        "Indian Movies",
+        "Not Playing"
       ],
       "streams": 2,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "asiantv": {
       "names": [
@@ -511,11 +498,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 3,
       "primary": 1,
-      "backup": 2
+      "backup": 1
     },
     "asports": {
       "names": [
@@ -584,11 +572,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 5,
       "primary": 1,
-      "backup": 4
+      "backup": 3
     },
     "aurlife": {
       "names": [
@@ -830,11 +819,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 5,
       "primary": 1,
-      "backup": 4
+      "backup": 1
     },
     "banglavision": {
       "names": [
@@ -844,12 +834,12 @@
         "banglavision.bd"
       ],
       "groups": [
-        "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 3,
       "primary": 1,
-      "backup": 2
+      "backup": 0
     },
     "barazamusictv": {
       "names": [
@@ -1016,11 +1006,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 4,
       "primary": 1,
-      "backup": 3
+      "backup": 2
     },
     "boishakhitv": {
       "names": [
@@ -1031,11 +1022,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 6,
       "primary": 1,
-      "backup": 5
+      "backup": 3
     },
     "bolentertainment": {
       "names": [
@@ -1189,12 +1181,12 @@
         "channel9.bd"
       ],
       "groups": [
-        "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 2,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "channeli": {
       "names": [
@@ -1205,11 +1197,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 5,
       "primary": 1,
-      "backup": 4
+      "backup": 3
     },
     "channels": {
       "names": [
@@ -1220,11 +1213,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 5,
       "primary": 1,
-      "backup": 4
+      "backup": 3
     },
     "choppertown": {
       "names": [
@@ -1320,11 +1314,12 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla"
+        "Indian Bangla",
+        "Not Playing"
       ],
       "streams": 6,
       "primary": 1,
-      "backup": 5
+      "backup": 4
     },
     "colorsbanglacinema": {
       "names": [
@@ -1350,11 +1345,12 @@
       ],
       "groups": [
         "Backup",
-        "Indian Movies"
+        "Indian Movies",
+        "Not Playing"
       ],
       "streams": 3,
       "primary": 1,
-      "backup": 2
+      "backup": 1
     },
     "colorscineplexsuperhits": {
       "names": [
@@ -1731,10 +1727,10 @@
         "custom.desh.bangla.tv"
       ],
       "groups": [
-        "Bangladesh"
+        "Not Playing"
       ],
       "streams": 1,
-      "primary": 1,
+      "primary": 0,
       "backup": 0
     },
     "custom.deshe.bideshe": {
@@ -1942,10 +1938,10 @@
         "custom.epic.tv.digital"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Not Playing"
       ],
       "streams": 1,
-      "primary": 1,
+      "primary": 0,
       "backup": 0
     },
     "custom.flowers": {
@@ -2013,10 +2009,10 @@
         "custom.ja.tv"
       ],
       "groups": [
-        "Bangladesh"
+        "Not Playing"
       ],
       "streams": 1,
-      "primary": 1,
+      "primary": 0,
       "backup": 0
     },
     "custom.jtv.classic": {
@@ -2296,10 +2292,10 @@
         "custom.srk"
       ],
       "groups": [
-        "Bangladesh"
+        "Not Playing"
       ],
       "streams": 1,
-      "primary": 1,
+      "primary": 0,
       "backup": 0
     },
     "custom.star.news": {
@@ -2583,11 +2579,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 6,
       "primary": 1,
-      "backup": 5
+      "backup": 2
     },
     "ddarunprabha": {
       "names": [
@@ -3014,12 +3011,12 @@
         "deshtv.bd"
       ],
       "groups": [
-        "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 2,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "desichannel": {
       "names": [
@@ -3057,12 +3054,12 @@
         "dhoommusic.in@sd"
       ],
       "groups": [
-        "Backup",
-        "Indian Bangla"
+        "Indian Bangla",
+        "Not Playing"
       ],
       "streams": 2,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "discoverpakistan": {
       "names": [
@@ -3276,11 +3273,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 5,
       "primary": 1,
-      "backup": 4
+      "backup": 3
     },
     "ekusheytv": {
       "names": [
@@ -3291,11 +3289,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 5,
       "primary": 1,
-      "backup": 4
+      "backup": 2
     },
     "enterfilm": {
       "names": [
@@ -3732,11 +3731,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 4,
       "primary": 1,
-      "backup": 3
+      "backup": 2
     },
     "goaltv": {
       "names": [
@@ -4235,11 +4235,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 5,
       "primary": 1,
-      "backup": 4
+      "backup": 3
     },
     "jhankartv": {
       "names": [
@@ -4249,10 +4250,10 @@
         "jhankartv.ca"
       ],
       "groups": [
-        "Indian Bangla"
+        "Not Playing"
       ],
       "streams": 1,
-      "primary": 1,
+      "primary": 0,
       "backup": 0
     },
     "jonmobhumitv": {
@@ -4263,12 +4264,11 @@
         "jonmobhumitv.au"
       ],
       "groups": [
-        "Backup",
-        "Bangladesh"
+        "Not Playing"
       ],
       "streams": 2,
-      "primary": 1,
-      "backup": 1
+      "primary": 0,
+      "backup": 0
     },
     "joomusic": {
       "names": [
@@ -4373,18 +4373,17 @@
     },
     "kappatv": {
       "names": [
-        "Kappa TV (Movies)",
         "Kappa TV (Music)"
       ],
       "ids": [
-        "kappatv.in@alt1",
-        "kappatv.in@sd"
+        "kappatv.in@alt1"
       ],
       "groups": [
-        "Indian Music"
+        "Indian Music",
+        "Not Playing"
       ],
       "streams": 2,
-      "primary": 2,
+      "primary": 1,
       "backup": 0
     },
     "kartoonchannel": {
@@ -4482,11 +4481,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 6,
       "primary": 1,
-      "backup": 5
+      "backup": 1
     },
     "madeinhollywood": {
       "names": [
@@ -4582,12 +4582,12 @@
         "manoranjanprime.in@sd"
       ],
       "groups": [
-        "Backup",
-        "Indian Entertainment"
+        "Indian Entertainment",
+        "Not Playing"
       ],
       "streams": 2,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "marqueesportsnetwork": {
       "names": [
@@ -4654,12 +4654,12 @@
         "matribhumitv.bd"
       ],
       "groups": [
-        "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 2,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "mazhavilmanorama": {
       "names": [
@@ -4917,11 +4917,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 4,
       "primary": 1,
-      "backup": 3
+      "backup": 1
     },
     "montvbangla": {
       "names": [
@@ -5279,11 +5280,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 4,
       "primary": 1,
-      "backup": 3
+      "backup": 2
     },
     "nagoriktv": {
       "names": [
@@ -5352,15 +5354,15 @@
         "nazara.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Not Playing"
       ],
       "streams": 1,
-      "primary": 1,
+      "primary": 0,
       "backup": 0
     },
     "news21banglatv": {
       "names": [
-        "News 21 Bangla TV"
+        "News 21"
       ],
       "ids": [
         "news21banglatv.bd@sd"
@@ -5381,11 +5383,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 4,
       "primary": 1,
-      "backup": 3
+      "backup": 1
     },
     "nexustv": {
       "names": [
@@ -5395,12 +5398,12 @@
         "nexustv.bd"
       ],
       "groups": [
-        "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 2,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "nhbollyflix": {
       "names": [
@@ -5568,11 +5571,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 6,
       "primary": 1,
-      "backup": 5
+      "backup": 4
     },
     "ntveurope": {
       "names": [
@@ -5896,25 +5900,12 @@
         "probashitv.ca@sd"
       ],
       "groups": [
+        "Backup",
         "Bangladesh"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
-    },
-    "probashitvnews": {
-      "names": [
-        "Probashi TV News"
-      ],
-      "ids": [
-        "probashitvnews.ca@sd"
-      ],
-      "groups": [
-        "Bangladesh"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "ptcchakde": {
       "names": [
@@ -6452,11 +6443,12 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "Not Playing"
       ],
       "streams": 4,
       "primary": 1,
-      "backup": 3
+      "backup": 2
     },
     "rupasibangla": {
       "names": [
@@ -6639,12 +6631,12 @@
         "shemaroojosh.in@sd"
       ],
       "groups": [
-        "Backup",
-        "Indian Entertainment"
+        "Indian Entertainment",
+        "Not Playing"
       ],
       "streams": 2,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "shemarootv": {
       "names": [
@@ -6826,9 +6818,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 5,
+      "streams": 4,
       "primary": 1,
-      "backup": 4
+      "backup": 3
     },
     "sonybbcearth": {
       "names": [
@@ -7095,11 +7087,12 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla"
+        "Indian Bangla",
+        "Not Playing"
       ],
       "streams": 6,
-      "primary": 1,
-      "backup": 5
+      "primary": 2,
+      "backup": 3
     },
     "star.jalsha.movies": {
       "names": [
@@ -7153,12 +7146,12 @@
         "stargoldselect.in@sd"
       ],
       "groups": [
-        "Backup",
-        "Indian Movies"
+        "Indian Movies",
+        "Not Playing"
       ],
       "streams": 2,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "stargoldthrills": {
       "names": [
@@ -7196,10 +7189,10 @@
         "starmaamovies.in@sd"
       ],
       "groups": [
-        "Indian Movies"
+        "Not Playing"
       ],
       "streams": 1,
-      "primary": 1,
+      "primary": 0,
       "backup": 0
     },
     "starmovies": {
@@ -7254,10 +7247,10 @@
         "starpravah.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Not Playing"
       ],
       "streams": 1,
-      "primary": 1,
+      "primary": 0,
       "backup": 0
     },
     "starsports1": {
@@ -8193,7 +8186,7 @@
         "zbcartoon.in"
       ],
       "groups": [
-        "Indian Bangla"
+        "Kids"
       ],
       "streams": 1,
       "primary": 1,
