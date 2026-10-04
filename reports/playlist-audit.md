@@ -1,20 +1,20 @@
 # Playlist Audit
-Generated: **2026-10-04T16:40:48.441108+00:00**
+Generated: **2026-10-04T16:55:10.210084+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
 - Playlist entries: **1026**
-- Unique channel IDs: **647**
-- IDs with multiple streams: **192**
+- Unique channel IDs: **646**
+- IDs with multiple streams: **193**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
-- Same-name / different-ID collisions: **1**
+- Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **7**
+- Logo exceptions: **0**
 - Not Playing logo exceptions: **1**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
@@ -196,7 +196,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Amar Bangla Digital — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/amardigital.stream/playlist.m3u8
 ### custom.ary.q.tv (2 streams)
 - ARY Q TV — Religious — https://aryqtvm.aryzap.com/v1/0183ea2a0eec0b8ed5941a38bc76/0183ea2a4e470b8ed5aa4d793457/ARYQTVH264_1080p.m3u8
-- ARY QTV — Backup — https://aryqtvm.aryzap.com/v1/0183ea2a0eec0b8ed5941a38bc76/0183ea2a4e470b8ed5aa4d793457/ARYQTVH264_720p.m3u8
+- ARY Q TV — Backup — https://aryqtvm.aryzap.com/v1/0183ea2a0eec0b8ed5941a38bc76/0183ea2a4e470b8ed5aa4d793457/ARYQTVH264_720p.m3u8
 ### custom.bolentertainment (2 streams)
 - Bol Entertainment — Pakistani — https://s2.ideationtec.live/BOL_Entertainment_HD/BOL_Entertainment_HD.m3u8
 - Bol Entertainment — Not Playing — http://playlive.goonj.pk/bolentweb_480p/index.m3u8
@@ -376,7 +376,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Goldmines Movies — Backup — https://cdn.pishow.tv/ott/live/1461/master.m3u8
 ### greatmovies.uk (2 streams)
 - GREAT! movies — International — https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/playlist/amg01753-narrativeentert-greatmovies-samsunguk/playlist.m3u8
-- Great Movies — Backup — https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-greatmovies-samsunguk/playlist.m3u8
+- GREAT! movies — Backup — https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-greatmovies-samsunguk/playlist.m3u8
 ### greentv.bd (3 streams)
 - Green TV — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
 - Green TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/greentv.stream/index.m3u8
@@ -392,7 +392,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - History TV18 — Not Playing — https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
 - History TV18 — Not Playing — https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/ts-ap-s1-n1/playlist/amg01448-samsungindia-historychannelhindi-samsungin/playlist.m3u8
 - History TV18 — Backup — http://198.195.239.50:8095/HISTORY.TV.18.HD/index.m3u8
-- History TV18 HD — Backup — https://n18syndication.akamaized.net/bpk-tv/History_TV18_Hindi_NW18_MOB/output01/master.m3u8
+- History TV18 — Backup — https://n18syndication.akamaized.net/bpk-tv/History_TV18_Hindi_NW18_MOB/output01/master.m3u8
+### hummasala.pk (2 streams)
+- Hum Masala — Pakistani — http://198.195.239.50:8095/HUM.MASALA.TV/index.m3u8
+- Hum Masala — Backup — http://38.101.217.46/HumMasala/index.m3u8
 ### humtv.pk (4 streams)
 - Hum TV — Pakistani — https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8
 - Hum TV — Backup — https://cdn4.mjunoon.tv:8087/streamtest/82M/chunks.m3u8
@@ -775,7 +778,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Zee Bangla Sonar — Backup — https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-cinema-2/index.m3u8
 ### zeebollywood.in@sd (2 streams)
 - Zee Bollywood — Indian Movies — https://stream.ottplus.live/live/zee_bollywood_abr/index.m3u8
-- Zee Bollywood ᴴᴰ — Backup — https://drk6xq0vhn.gpcdn.net/live/zee_bollywood_abr/index.m3u8
+- Zee Bollywood — Backup — https://drk6xq0vhn.gpcdn.net/live/zee_bollywood_abr/index.m3u8
 ### zeecinema.in@hd (5 streams)
 - Zee Cinema — Indian Movies — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ZeeCinemaAPAC.m3u8
 - Zee Cinema — Backup — http://103.151.60.162:2122/play/a024/index.m3u8
@@ -831,12 +834,12 @@ None.
 
 ## Same-Name / Different-ID Collisions
 
-- **hum masala** → custom.hummasala, hummasala.pk
+None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1018**
-- missing: **8**
+- Healthy/local references: **1025**
+- missing: **1**
 - broken-local: **0**
 - external: **0**
 - non-png: **0**
@@ -844,13 +847,6 @@ None.
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
-- missing — Kolkata TV [custom.kolkatatv] — 
-- missing — Star Bangla [custom.starbangla] — 
-- missing — Tara TV [custom.taratv] — 
-- missing — A Plus [custom.aplus] — 
-- missing — AJJ Entertainment HD [custom.ajj.entertainment] — 
-- missing — Express Entertainment [custom.expressentertainment] — 
-- missing — SAB Entertainment [custom.sabentertainment] — 
 
 ## Protected Primary Entries
 
