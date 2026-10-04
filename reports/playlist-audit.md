@@ -1,24 +1,24 @@
 # Playlist Audit
-Generated: **2026-10-04T14:26:30.446503+00:00**
+Generated: **2026-10-04T15:09:41.506609+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1015**
-- Unique channel IDs: **643**
-- IDs with multiple streams: **186**
+- Playlist entries: **1029**
+- Unique channel IDs: **639**
+- IDs with multiple streams: **185**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
-- Same-name / different-ID collisions: **0**
+- Same-name / different-ID collisions: **8**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **0**
+- Logo exceptions: **19**
 - Not Playing logo exceptions: **1**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **0**
+- Primary entries missing channel numbers: **15**
 - Malformed EXTINF entries: **0**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
@@ -56,10 +56,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Xplor — Backup — http://51.75.127.199:3141/andxplorehd/index.m3u8
 ### animalplanet.in@sd (5 streams)
 - Animal Planet — Documentary & Wildlife — http://198.195.239.50:8095/animalPlanet/index.m3u8
-- Animal Planet — Not Playing — https://bldcmprod-cdn.toffeelive.com/cdn/live/animal_planet_hd/playlist.m3u8
 - Animal Planet — Backup — http://198.195.239.50:8095/ANIMAL.PLANET.HD/index.m3u8
 - Animal Planet — Backup — https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd/index.m3u8
 - Animal Planet — Backup — https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8
+- Animal Planet — Not Playing — https://bldcmprod-cdn.toffeelive.com/cdn/live/animal_planet_hd/playlist.m3u8
 ### asianetmovies.in@sd (2 streams)
 - Asianet Movies — Indian Movies — http://51.75.127.199:3141/asianetmovies/index.m3u8
 - Asianet Movies — Not Playing — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:asianetmovies1.smil/playlist.m3u8
@@ -91,19 +91,19 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - aur LIFE — Backup — http://124.109.47.101/hls/stream1.m3u8
 ### b4ukadak.in@sd (4 streams)
 - B4U Kadak — Indian Movies — https://amg00877-b4unew-amg00877c4-xiaomi-in-5473.playouts.now.amagi.tv/playlist.m3u8
-- B4U Kadak — Not Playing — https://tvsen3.aynaott.com/X9E6bxg3/index.m3u8
 - B4U Kadak — Backup — https://cdn.pishow.tv/ott/live/227/master.m3u8
 - B4U Kadak — Backup — https://streams.tangotv.in/B4UKADAK/ORIGIN/index.m3u8
+- B4U Kadak — Not Playing — https://tvsen3.aynaott.com/X9E6bxg3/index.m3u8
 ### b4umovies.in@india (3 streams)
 - B4U Movies — Indian Movies — https://amg00877-b4unew-amg00877c2-xiaomi-in-5489.playouts.now.amagi.tv/playlist.m3u8
 - B4U Movies — Backup — https://cdn.pishow.tv/ott/live/419/master.m3u8
 - B4U Movies — Backup — https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8
 ### b4umusic.in@india (5 streams)
 - B4U Music — Indian Music — https://streams.tangotv.in/B4UMUSIC/ORIGIN/index.m3u8
-- B4U Music — Not Playing — https://bldcmprod-cdn.toffeelive.com/cdn/live/b4u_music/playlist.m3u8
 - B4U Music — Backup — https://amg01408-amg01408c5-amgplt0747.playout.now3.amagi.tv/b4um001/playlist.m3u8
 - B4U Music — Backup — https://cdn.pishow.tv/ott/live/415/master.m3u8
 - B4U Music — Backup — https://drk6xq0vhn.gpcdn.net/live/b4u_music_abr/index.m3u8
+- B4U Music — Not Playing — https://bldcmprod-cdn.toffeelive.com/cdn/live/b4u_music/playlist.m3u8
 ### balleballe.in@sd (2 streams)
 - Balle Balle — Indian Music — https://mcncdndigital.com/balleballetv/index.m3u8
 - Balle Balle — Backup — https://streams.tangotv.in/BALLEBALLE/ORIGIN/index.m3u8
@@ -165,10 +165,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Channel I — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-i-1/index.m3u8
 ### channels.uk (5 streams)
 - Channel S — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8
-- Channel S — Not Playing — https://app.ncare.live/live-orgin/channels.stream/chunks.m3u8
 - Channel S — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channels.stream/index.m3u8
 - Channel S — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8
 - Channel S — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-s-1/index.m3u8
+- Channel S — Not Playing — https://app.ncare.live/live-orgin/channels.stream/chunks.m3u8
 ### choppertown.us (2 streams)
 - Choppertown — Documentary & Wildlife — https://7d8dc76d676946ec8d372d4ed7b22333.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-11-CHOPPERTOWN-SPORTSTRIBAL/mt/sportstribaltv/11/hls/master/playlist.m3u8
 - Choppertown — Backup — https://linear-11.frequency.stream/dist/glewedtv/11/hls/master/playlist.m3u8
@@ -186,8 +186,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Colors Bangla Cinema — Backup — http://51.75.127.199:3141/colorsbanglacinema/index.m3u8
 ### colorscineplex.in@sd (3 streams)
 - Colors Cineplex — Indian Movies — http://198.195.239.50:8095/COLORS.CINEPLEX.HD/index.m3u8
-- Colors Cineplex — Not Playing — http://202.70.146.135:8000/play/a04n/index.m3u8
 - Colors Cineplex — Backup — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/gb/YuppTV/ColorsCineplexUK.m3u8
+- Colors Cineplex — Not Playing — http://202.70.146.135:8000/play/a04n/index.m3u8
 ### custom.amar.bangla.digital (2 streams)
 - Amar Bangla Digital — Indian Bangla — http://115.187.41.216:8080/hls/amardigital/index.m3u8
 - Amar Bangla Digital — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/amardigital.stream/playlist.m3u8
@@ -204,10 +204,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Enter TV — Backup — https://live1.entertv.com.bd/entertv/index.fmp4.m3u8
 ### custom.love.nature (5 streams)
 - Love Nature — Documentary & Wildlife — http://27.124.71.27/Love_Nature/index.m3u8
-- Love Nature — Not Playing — http://198.195.239.50:8095/LOVE.NATURE/index.m3u8
 - Love Nature — Backup — https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8
 - Love Nature — Backup — https://mumbai-edge.smartplaytv.in/LoveNature/index.m3u8
 - Love Nature — Backup — https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
+- Love Nature — Not Playing — http://198.195.239.50:8095/LOVE.NATURE/index.m3u8
 ### custom.madani.tv (2 streams)
 - Madani TV — Religious — https://tvsen3.aynaott.com/z24qLsqV/index.m3u8
 - Madani TV — Backup — http://198.195.239.50:8095/MADANI.TV.HD/index.m3u8
@@ -223,10 +223,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Travelxp English — Backup — https://travelxp-travelxp-1-eu.rakuten.wurl.tv/3000.m3u8
 ### custom.zoommusic (5 streams)
 - Zoom Music — Indian Music — https://d2esfk1pb9cdob.cloudfront.net/chunklist_1.m3u8
-- Zoom Music — Not Playing — https://pubads.g.doubleclick.net/ssai/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 - Zoom Music — Backup — http://198.195.239.50:8095/ZOOM.MUSIC/index.m3u8
 - Zoom Music — Backup — https://d2esfk1pb9cdob.cloudfront.net/master.m3u8
 - Zoom Music — Backup — https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
+- Zoom Music — Not Playing — https://pubads.g.doubleclick.net/ssai/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 ### dangal2.in@sd (3 streams)
 - Dangal 2 — Indian Entertainment — https://live-dangal2.akamaized.net/liveabr/playlist.m3u8
 - Dangal 2 — Backup — https://mumt03.tangotv.in/Dsly5z3HDANGAL2/index.m3u8
@@ -377,9 +377,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - History Hit — Backup — https://lds-timeline-rakuten.amagi.tv/playlist.m3u8
 ### historytv18.in@sd (4 streams)
 - History TV18 — Documentary & Wildlife — https://n18syndication.akamaized.net/bpk-tv/History_HD_NW18_MOB/output01/master.m3u8
+- History TV18 — Backup — http://198.195.239.50:8095/HISTORY.TV.18.HD/index.m3u8
 - History TV18 — Not Playing — https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
 - History TV18 — Not Playing — https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/ts-ap-s1-n1/playlist/amg01448-samsungindia-historychannelhindi-samsungin/playlist.m3u8
-- History TV18 — Backup — http://198.195.239.50:8095/HISTORY.TV.18.HD/index.m3u8
 ### humtv.pk (4 streams)
 - Hum TV — Pakistani — https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8
 - Hum TV — Backup — https://cdn4.mjunoon.tv:8087/streamtest/82M/chunks.m3u8
@@ -394,10 +394,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Insync — Backup — https://d1msejlow1t3l4.cloudfront.net/fta/insync/playlist.m3u8
 ### inwild.nl (5 streams)
 - INWILD — Documentary & Wildlife — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/ts-eu-w1-n2/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
-- INWILD — Not Playing — https://amg00861-amg00861c7-firetv-us-4725.playouts.now.amagi.tv/playlist.m3u8
 - INWILD — Backup — https://amg00861-terninternation-inwild-samsungau-3qrga.amagi.tv/playlist/amg00861-terninternation-inwild-samsungau/playlist.m3u8
 - INWILD — Backup — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
 - INWILD — Backup — https://amg00861-amg00861c7-stirr-us-8227.playouts.now.amagi.tv/playlist.m3u8
+- INWILD — Not Playing — https://amg00861-amg00861c7-firetv-us-4725.playouts.now.amagi.tv/playlist.m3u8
 ### jagonews24.bd (2 streams)
 - Jago News 24 — Bangladesh — https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8
 - Jago News 24 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/jago-news-24-1/index.m3u8
@@ -480,9 +480,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - MK Six — Backup — https://cdn.pishow.tv/ott/live/1253/master.m3u8
 ### mohonatv.bd (4 streams)
 - Mohona TV — Bangladesh — https://tvsen6.aynaott.com/AkyX5dunzju4cpo26dr7/tracks-v1a1/mono.ts.m3u8
-- Mohona TV — Not Playing — http://premiumtvs.space/live/YqXTywueEV/damp2purchase/397.ts
 - Mohona TV — Backup — https://stream.ottplus.live/live/mohona_tv_abr/index.m3u8
 - Mohona TV — Backup — https://tvsen6.aynaott.com/AkyX5dunzju4cpo26dr7/index.m3u8
+- Mohona TV — Not Playing — http://premiumtvs.space/live/YqXTywueEV/damp2purchase/397.ts
 ### moviebangla.bd (4 streams)
 - Movie Bangla — Bangladesh — http://alvetv.com/moviebanglatv/8080/index.m3u8
 - Movie Bangla — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/moviebanglalink2.stream/tracks-v1a1/mono.m3u8
@@ -500,9 +500,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Music India — Backup — http://198.195.239.50:8095/MUSIC.INDIA/index.m3u8
 ### mytv.bd (4 streams)
 - My TV — Bangladesh — https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8
-- My TV — Not Playing — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mytv-up-off.stream/index.m3u8
 - My TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mytv-up-off.stream/index.m3u8
 - My TV — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8
+- My TV — Not Playing — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mytv-up-off.stream/index.m3u8
 ### nagoriktv.bd (3 streams)
 - Nagorik TV — Bangladesh — http://198.195.239.50:8095/NAGORIK.TV.HD/index.m3u8
 - Nagorik TV — Backup — http://livetv.akr4m.com:8080/bdtv/restrem/38.m3u8
@@ -551,9 +551,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### outersphere.us (2 streams)
 - OuterSphere — Documentary & Wildlife — https://d3o593mz1glx8d.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-1ca6ra6358f5t/OuterSphere_US.m3u8
 - OuterSphere — Backup — https://d3o593mz1glx8d.cloudfront.net/OuterSphere_US.m3u8
-### pardesitv.ca (2 streams)
-- Pardesi TV — Indian Entertainment — http://stream.pardesitv.online/pardesi/tracks-v1a1/mono.m3u8
-- Pardesi TV — Backup — http://stream.pardesitv.online/pardesi/index.m3u8
 ### pitaara.in@sd (3 streams)
 - Pitaara TV — Indian Movies — https://d2lk5u59tns74c.cloudfront.net/out/v1/500a6b45f5ae41dda445d912b59eaa09/index.m3u8
 - Pitaara TV — Backup — https://streams.tangotv.in/PITAARA/ORIGIN/index.m3u8
@@ -615,11 +612,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Sananda — Backup — https://live.sanandatelevision.in/sananda/tracks-v1a1/mono.m3u8
 ### sangeetbangla.in@sd (6 streams)
 - Sangeet Bangla — Indian Bangla — https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/index.m3u8
-- Sangeet Bangla — Not Playing — https://cdn-4.pishow.tv/live/1143/master.m3u8
 - Sangeet Bangla — Backup — http://198.195.239.50:8095/sangeetBangla/index.m3u8
 - Sangeet Bangla — Backup — https://cdn.pishow.tv/ott/live/1143/master.m3u8
 - Sangeet Bangla — Backup — https://tvsen6.aynaott.com/hT5jHczt/index.m3u8
 - Sangeet Bangla — Backup — http://198.195.239.50:8095/SANGEET.BANGLA/index.m3u8
+- Sangeet Bangla — Not Playing — https://cdn-4.pishow.tv/live/1143/master.m3u8
 ### satv.bd (5 streams)
 - SA TV — Bangladesh — http://116.204.149.16/satv/index.m3u8
 - SA TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/satvoff5666.stream/playlist.m3u8
@@ -646,16 +643,16 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Sony AATH — Backup — https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8
 - Sony AATH — Backup — https://stream.ottplus.live/live/sony_aath_abr/index.m3u8
 ### sonybbcearth.in@sd (2 streams)
-- Sony BBC Earth — Not Playing — https://amg00793-bbcstudios-amg00793c3-lg-us-2528.playouts.now.amagi.tv/playlist/amg00793-bbcstudios-bbcearta-lgus/playlist.m3u8
 - Sony BBC Earth — Backup — http://198.195.239.50:8095/SONY.BBC.EARTH.HD/index.m3u8
+- Sony BBC Earth — Not Playing — https://amg00793-bbcstudios-amg00793c3-lg-us-2528.playouts.now.amagi.tv/playlist/amg00793-bbcstudios-bbcearta-lgus/playlist.m3u8
 ### sonyentertainmenttelevision.in@sd (7 streams)
 - Sony Entertainment TV — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/sony_ent_sd_abr/index.m3u8
-- Sony Entertainment TV — Not Playing — https://bldcmprod-cdn.toffeelive.com/cdn/live/sonyentertainmnt_hd/playlist.m3u8
 - Sony Entertainment TV — Backup — http://198.195.239.50:8095/SONY.ENT.HD/index.m3u8
 - Sony Entertainment TV — Backup — http://38.96.178.205/SONYHD/index.m3u8
 - Sony Entertainment TV — Backup — https://drk6xq0vhn.gpcdn.net/live/sony_ent_hd_abr/index.m3u8
 - Sony Entertainment TV — Backup — https://stream.ottplus.live/live/sony_ent_sd_abr/index.m3u8
 - Sony Entertainment TV — Backup — https://stream.ottplus.live/live/sony_ent_hd_abr/index.m3u8
+- Sony Entertainment TV — Not Playing — https://bldcmprod-cdn.toffeelive.com/cdn/live/sonyentertainmnt_hd/playlist.m3u8
 ### sonymax.in@sd (3 streams)
 - Sony Max — Indian Movies — https://drk6xq0vhn.gpcdn.net/live/max_hd_abr/index.m3u8
 - Sony Max — Backup — http://198.195.239.50:8095/SONY.MAX.HD/index.m3u8
@@ -765,10 +762,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Zee Cinema — Backup — https://stream.ottplus.live/live/zee_cinema_hd_abr/index.m3u8
 ### zeetv.in@sd (5 streams)
 - Zee TV — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/zee_tv_hd_abr/index.m3u8
-- Zee TV — Not Playing — https://bldcmprod-cdn.toffeelive.com/cdn/live/zee_tv_hd/playlist.m3u8
 - Zee TV — Backup — http://198.195.239.50:8095/ZEE.TV.HD/index.m3u8
 - Zee TV — Backup — https://d47ddb99.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1kZV9aZWVUVkhEVUtHZXJtYW55X0hMUw/playlist.m3u8
 - Zee TV — Backup — https://stream.ottplus.live/live/zee_tv_hd_abr/index.m3u8
+- Zee TV — Not Playing — https://bldcmprod-cdn.toffeelive.com/cdn/live/zee_tv_hd/playlist.m3u8
 
 ## Duplicate Primary Identities
 
@@ -812,12 +809,19 @@ None.
 
 ## Same-Name / Different-ID Collisions
 
-None.
+- **action hollywood movies** → , plex.tv.action.hollywood.movies.plex
+- **bol entertainment** → , bolentertainment.pk@hd
+- **colors bangla** → , colors.bangla.in
+- **colors bangla cinema** → , colorsbanglacinema.in@sd
+- **colors rishtey** → , colorsrishteyamericas.in
+- **hum masala** → , hummasala.pk
+- **shemaroo bollywood** → , shemaroobollywood.us
+- **star jalsha** → , star.jalsha.in
 
 ## Logo Integrity
 
-- Healthy/local references: **1014**
-- missing: **1**
+- Healthy/local references: **1009**
+- missing: **20**
 - broken-local: **0**
 - external: **0**
 - non-png: **0**
@@ -825,6 +829,25 @@ None.
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
+- missing — Kolkata TV [] — 
+- missing — STAR BANGLA [] — 
+- missing — TARA TV [] — 
+- missing — Shemaroo Bollywood [] — 
+- missing — A Plus [] — 
+- missing — AJJ ENTERTAINMENT HD [] — 
+- missing — Express Entertainment [] — 
+- missing — HUM MASALA [] — 
+- missing — SAB ENTERTAINMENT [] — 
+- missing — Action Hollywood Movies [] — 
+- missing — ARY QTV [] — 
+- missing — Bol Entertainment [] — 
+- missing — COLORS BANGLA [] — 
+- missing — Colors Bangla Cinema [] — 
+- missing — COLORS RISHTEY [] — 
+- missing — Great Movies [] — 
+- missing — History TV18 HD [] — 
+- missing — Star Jalsha [] — 
+- missing — ZEE BOLLYWOOD ᴴᴰ [] — 
 
 ## Protected Primary Entries
 

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T14:26:30+00:00",
+  "generated": "2026-10-04T15:08:54+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -1301,9 +1301,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
-      "backup": 5
+      "backup": 6
     },
     "colorsbanglacinema": {
       "names": [
@@ -1316,9 +1316,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
-      "backup": 3
+      "backup": 4
     },
     "colorscineplex": {
       "names": [
@@ -1428,11 +1428,12 @@
         "colorsrishteyamericas.in"
       ],
       "groups": [
+        "Backup",
         "Indian Entertainment"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "colorssuper": {
       "names": [
@@ -1504,6 +1505,20 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.ajjentertainment": {
+      "names": [
+        "AJJ ENTERTAINMENT"
+      ],
+      "ids": [
+        "custom.ajjentertainment"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.amar.bangla.digital": {
       "names": [
         "Amar Bangla Digital"
@@ -1519,6 +1534,20 @@
       "primary": 1,
       "backup": 1
     },
+    "custom.aplus": {
+      "names": [
+        "A Plus"
+      ],
+      "ids": [
+        "custom.aplus"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.ary.q": {
       "names": [
         "ARY Q TV"
@@ -1527,11 +1556,12 @@
         "custom.ary.q.tv"
       ],
       "groups": [
+        "Backup",
         "Religious"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "custom.autentic.adventure.earth": {
       "names": [
@@ -1588,6 +1618,20 @@
       "streams": 1,
       "primary": 1,
       "backup": 0
+    },
+    "custom.bolentertainment": {
+      "names": [
+        "Bol Entertainment"
+      ],
+      "ids": [
+        "custom.bolentertainment"
+      ],
+      "groups": [
+        "Backup"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 1
     },
     "custom.bon.voyage": {
       "names": [
@@ -1941,6 +1985,20 @@
       "primary": 0,
       "backup": 0
     },
+    "custom.expressentertainment": {
+      "names": [
+        "Express Entertainment"
+      ],
+      "ids": [
+        "custom.expressentertainment"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.fast.sports": {
       "names": [
         "Fast Sports"
@@ -2039,6 +2097,20 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.hummasala": {
+      "names": [
+        "HUM MASALA"
+      ],
+      "ids": [
+        "custom.hummasala"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.ja": {
       "names": [
         "JA TV"
@@ -2090,6 +2162,20 @@
       ],
       "groups": [
         "Kids"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.kolkatatv": {
+      "names": [
+        "Kolkata TV"
+      ],
+      "ids": [
+        "custom.kolkatatv"
+      ],
+      "groups": [
+        "Indian Bangla"
       ],
       "streams": 1,
       "primary": 1,
@@ -2253,6 +2339,34 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.sabentertainment": {
+      "names": [
+        "SAB ENTERTAINMENT"
+      ],
+      "ids": [
+        "custom.sabentertainment"
+      ],
+      "groups": [
+        "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.shemaroobollywood": {
+      "names": [
+        "Shemaroo Bollywood"
+      ],
+      "ids": [
+        "custom.shemaroobollywood"
+      ],
+      "groups": [
+        "Indian Movies"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.snb.cinema": {
       "names": [
         "SNB Cinema"
@@ -2394,6 +2508,20 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.starbangla": {
+      "names": [
+        "STAR BANGLA"
+      ],
+      "ids": [
+        "custom.starbangla"
+      ],
+      "groups": [
+        "Indian Bangla"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "custom.starsports2": {
       "names": [
         "Star Sports 2"
@@ -2434,6 +2562,20 @@
       ],
       "streams": 1,
       "primary": 0,
+      "backup": 0
+    },
+    "custom.taratv": {
+      "names": [
+        "TARA TV"
+      ],
+      "ids": [
+        "custom.taratv"
+      ],
+      "groups": [
+        "Indian Bangla"
+      ],
+      "streams": 1,
+      "primary": 1,
       "backup": 0
     },
     "custom.terra.mater.wild.english": {
@@ -3826,20 +3968,6 @@
       "primary": 1,
       "backup": 0
     },
-    "gangaur": {
-      "names": [
-        "Gangaur"
-      ],
-      "ids": [
-        "gangaur.in@sd"
-      ],
-      "groups": [
-        "Indian Entertainment"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "gazitv": {
       "names": [
         "G TV"
@@ -4064,11 +4192,12 @@
         "greatmovies.uk"
       ],
       "groups": [
+        "Backup",
         "International"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "greatromance": {
       "names": [
@@ -4169,9 +4298,9 @@
         "Documentary & Wildlife",
         "Not Playing"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "historywarfarenow": {
       "names": [
@@ -4182,20 +4311,6 @@
       ],
       "groups": [
         "Documentary & Wildlife"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "hmtv": {
-      "names": [
-        "HMTV"
-      ],
-      "ids": [
-        "hmtv.in@sd"
-      ],
-      "groups": [
-        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -5164,19 +5279,16 @@
     },
     "metrotv": {
       "names": [
-        "Metro TV (Honduras)",
-        "Metro TV (India)"
+        "Metro TV (Honduras)"
       ],
       "ids": [
-        "metrotv.hn",
-        "metrotv.in@sd"
+        "metrotv.hn"
       ],
       "groups": [
-        "Indian Entertainment",
         "International"
       ],
-      "streams": 2,
-      "primary": 2,
+      "streams": 1,
+      "primary": 1,
       "backup": 0
     },
     "metv": {
@@ -6116,26 +6228,11 @@
         "pardesitv.ca"
       ],
       "groups": [
-        "Backup",
-        "Indian Entertainment"
-      ],
-      "streams": 2,
-      "primary": 1,
-      "backup": 1
-    },
-    "pasandtv": {
-      "names": [
-        "Pasand TV"
-      ],
-      "ids": [
-        "pasandtv.in@sd"
-      ],
-      "groups": [
-        "Indian Entertainment"
+        "Backup"
       ],
       "streams": 1,
-      "primary": 1,
-      "backup": 0
+      "primary": 0,
+      "backup": 1
     },
     "pbskids": {
       "names": [
@@ -6244,11 +6341,12 @@
         "plex.tv.action.hollywood.movies.plex"
       ],
       "groups": [
+        "Backup",
         "International"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "plex.tv.amc.thrillers.plex": {
       "names": [
@@ -7694,9 +7792,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
-      "backup": 4
+      "backup": 5
     },
     "star.jalsha.movies": {
       "names": [
@@ -8949,11 +9047,12 @@
         "zeebollywood.in@sd"
       ],
       "groups": [
+        "Backup",
         "Indian Movies"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
-      "backup": 0
+      "backup": 1
     },
     "zeecinema": {
       "names": [
