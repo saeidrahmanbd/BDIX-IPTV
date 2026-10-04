@@ -171,8 +171,9 @@ def main():
         if target and start and (start >= now_check or (stop and start <= now_check <= stop) or (stop and stop >= now_check)):
             guide_live.add(target)
     mapped_target_count = len(mapped_targets)
-    actual_mapped = len(mapped_targets & actual_channels)
-    actual_live = len(mapped_targets & guide_live)
+    mapped_target_ids = set(mapped_targets)
+    actual_mapped = len(mapped_target_ids & actual_channels)
+    actual_live = len(mapped_target_ids & guide_live)
     header_ok = bool(header_urls) and all(u == expected_url for u in header_urls)
     validation = [
         "",
