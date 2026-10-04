@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T03:47:51+00:00",
+  "generated": "2026-10-04T03:56:47+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -182,24 +182,28 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla"
+        "Indian Bangla",
+        "New Backup"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
       "backup": 1
     },
     "aamarbangla": {
       "names": [
+        "Aamar Bangla",
         "Amar Bangla"
       ],
       "ids": [
-        "aamarbangla.in"
+        "aamarbangla.in",
+        "aamarbangla.in@sd"
       ],
       "groups": [
         "Backup",
-        "Indian Bangla"
+        "Indian Bangla",
+        "New Channels"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
       "backup": 1
     },
@@ -542,9 +546,10 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "New Backup"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
       "backup": 4
     },
@@ -1108,9 +1113,10 @@
         "btvchattogram.bd"
       ],
       "groups": [
-        "Bangladesh"
+        "Bangladesh",
+        "New Backup"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },
@@ -1123,9 +1129,10 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "New Backup"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
       "backup": 1
     },
@@ -1346,9 +1353,10 @@
       "groups": [
         "Backup",
         "Indian Movies",
+        "New Backup",
         "Not Playing"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
       "backup": 1
     },
@@ -1360,9 +1368,10 @@
         "colorscineplexsuperhits.in@sd"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Movies",
+        "New Backup"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },
@@ -2015,6 +2024,20 @@
       "primary": 0,
       "backup": 0
     },
+    "custom.jalsha.bangla": {
+      "names": [
+        "Jalsha Bangla BD"
+      ],
+      "ids": [
+        "custom.jalsha.bangla.bd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "custom.jtv.classic": {
       "names": [
         "Jtv Classic"
@@ -2198,6 +2221,20 @@
       ],
       "streams": 1,
       "primary": 1,
+      "backup": 0
+    },
+    "custom.sangsad": {
+      "names": [
+        "Sangsad"
+      ],
+      "ids": [
+        "custom.sangsad"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
       "backup": 0
     },
     "custom.snb.cinema": {
@@ -2440,6 +2477,20 @@
       "primary": 1,
       "backup": 0
     },
+    "custom.upohar.bangla": {
+      "names": [
+        "Upohar Bangla"
+      ],
+      "ids": [
+        "custom.upohar.bangla"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "custom.wild.flix.hindi": {
       "names": [
         "Wild Flix Hindi"
@@ -2519,9 +2570,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Music"
+        "Indian Music",
+        "New Backup"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
       "backup": 4
     },
@@ -3319,9 +3371,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Bangla"
+        "Indian Bangla",
+        "New Backup"
       ],
-      "streams": 7,
+      "streams": 9,
       "primary": 1,
       "backup": 6
     },
@@ -5384,9 +5437,10 @@
       "groups": [
         "Backup",
         "Bangladesh",
+        "New Backup",
         "Not Playing"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
       "backup": 1
     },
@@ -6846,9 +6900,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Entertainment"
+        "Indian Entertainment",
+        "New Backup"
       ],
-      "streams": 4,
+      "streams": 6,
       "primary": 1,
       "backup": 3
     },
