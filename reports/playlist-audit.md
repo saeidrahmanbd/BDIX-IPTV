@@ -1,21 +1,21 @@
 # Playlist Audit
-Generated: **2026-10-04T08:27:34.374397+00:00**
+Generated: **2026-10-04T09:50:00.271315+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **964**
-- Unique channel IDs: **601**
-- IDs with multiple streams: **182**
+- Playlist entries: **1059**
+- Unique channel IDs: **690**
+- IDs with multiple streams: **183**
 - Duplicate stream URLs: **2**
-- Metadata conflicts: **0**
+- Metadata conflicts: **3**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **2**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **0**
-- Duplicate primary identities: **1**
+- Logo exceptions: **3**
+- Duplicate primary identities: **3**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
@@ -371,9 +371,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### historyhit.uk (2 streams)
 - History Hit — Documentary & Wildlife — https://ldsaaaaaa-timeline-samsung-uk-azlgu.amagi.tv/ts-eu-w1-n2/playlist/ldsAAAAAA-timeline-samsung-uk/playlist.m3u8
 - History Hit — Backup — https://lds-timeline-rakuten.amagi.tv/playlist.m3u8
-### historytv18.in@sd (2 streams)
+### historytv18.in@sd (4 streams)
 - History TV18 — Documentary & Wildlife — https://n18syndication.akamaized.net/bpk-tv/History_HD_NW18_MOB/output01/master.m3u8
 - History TV18 — Backup — http://198.195.239.50:8095/HISTORY.TV.18.HD/index.m3u8
+- History TV18 —  — https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
+- History TV18 —  — https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/ts-ap-s1-n1/playlist/amg01448-samsungindia-historychannelhindi-samsungin/playlist.m3u8
 ### humtv.pk (4 streams)
 - Hum TV — Pakistani — https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8
 - Hum TV — Backup — https://cdn4.mjunoon.tv:8087/streamtest/82M/chunks.m3u8
@@ -386,9 +388,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### insync.in (2 streams)
 - Insync — Indian Music — https://mumt04.tangotv.in/m18aqlK4INSYNC/index.m3u8
 - Insync — Backup — https://d1msejlow1t3l4.cloudfront.net/fta/insync/playlist.m3u8
-### inwild.nl (2 streams)
+### inwild.nl (5 streams)
 - INWILD — Documentary & Wildlife — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/ts-eu-w1-n2/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
 - INWILD — Backup — https://amg00861-terninternation-inwild-samsunguk-w5wic.amagi.tv/playlist/amg00861-terninternation-inwild-samsunguk/playlist.m3u8
+- INWILD —  — https://amg00861-amg00861c7-firetv-us-4725.playouts.now.amagi.tv/playlist.m3u8
+- INWILD —  — https://amg00861-amg00861c7-stirr-us-8227.playouts.now.amagi.tv/playlist.m3u8
+- INWILD —  — https://amg00861-terninternation-inwild-samsungau-3qrga.amagi.tv/playlist/amg00861-terninternation-inwild-samsungau/playlist.m3u8
 ### jagonews24.bd (2 streams)
 - Jago News 24 — Bangladesh — https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8
 - Jago News 24 — Backup — https://iptvlive.ahmed-bd-org.workers.dev/jago-news-24-1/index.m3u8
@@ -689,6 +694,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Star Plus — Indian Entertainment — http://livetv.akr4m.com:8080/bdtv/restrem/62.m3u8
 - Star Plus — Backup — http://198.195.239.50:8095/STAR.PLUS.HD/index.m3u8
 - Star Plus — Backup — http://41.205.93.154/STAR-PLUS/index.m3u8
+### starsportsselect2.in@sd (2 streams)
+- Star Sports Select 2 — Sports — http://198.195.239.50:8095/STAR.SPORTS.SEL.2.HD/index.m3u8
+- Star Sports Select 2 —  — https://tvsen7.aynascope.net/ssport2hd/index.m3u8
 ### studioyuva.in (2 streams)
 - Studio Yuva — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3STUDIOYUVA/index.m3u8
 - Studio Yuva — Backup — https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=[REDACTED]
@@ -754,6 +762,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
+- **historytv18.in@sd** in **** — History TV18, History TV18
+- **inwild.nl** in **** — INWILD, INWILD, INWILD
 - **star.jalsha.in** in **Indian Bangla** — Star Jalsha, Star Jalsha
 
 ## Primary Channel-Number Collisions
@@ -788,7 +798,9 @@ None.
 
 ## Metadata Conflicts
 
-None.
+- **historytv18.in@sd** — names: history tv18; groups: , Documentary & Wildlife; countries: 
+- **inwild.nl** — names: inwild; groups: , Documentary & Wildlife; countries: 
+- **starsportsselect2.in@sd** — names: star sports select 2; groups: , Sports; countries: 
 
 ## Cross-Country Backup Collisions
 
@@ -800,8 +812,8 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **964**
-- missing: **0**
+- Healthy/local references: **1056**
+- missing: **3**
 - broken-local: **0**
 - external: **0**
 - non-png: **0**
@@ -809,6 +821,9 @@ None.
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
+- missing — ANN Entertainment [famelack.aciejjd93x0rrz] — 
+- missing — HSTV [hstv.in@sd] — 
+- missing — Vyas Channel [famelack.vvlsredftahfqe] — 
 - multiple-logo-references — probashitv.ca@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/probashi-tv-news.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/probashi-tv.png
 - multiple-logo-references — sonysportsten1.in — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-1.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-ten-1.png
 
