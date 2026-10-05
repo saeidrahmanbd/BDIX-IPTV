@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-05T09:22:16+00:00**
+Generated: **2026-10-05T11:59:44+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
@@ -20,7 +20,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19860 programme rows
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml — 394 channel IDs; 0 current/future IDs; 660 programme rows
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 695 current/future IDs; 72200 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 765 channel IDs; 763 current/future IDs; 82738 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 765 channel IDs; 762 current/future IDs; 82738 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1479 channel IDs; 1455 current/future IDs; 95611 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 282 channel IDs; 282 current/future IDs; 13510 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 112 channel IDs; 98 current/future IDs; 23708 programme rows
@@ -95,7 +95,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 ## Published Guide Validation
 
 - Playlist EPG references: **OK**
-- Guide channel IDs published: **344**
-- Mapped playlist IDs present in guide: **288/299 (96.3%)**
-- Mapped playlist IDs with current/future programmes: **269/299 (90.0%)**
+- Guide channel IDs published: **299**
+- Mapped playlist IDs present in guide: **299/299 (100.0%)**
+- Mapped playlist IDs with current/future programmes: **285/299 (95.3%)**
 - This validation is against the guide currently present in the working tree/publish candidate.
