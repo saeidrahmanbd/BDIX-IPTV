@@ -20,6 +20,12 @@ EPG_ALIASES = {
     "SonyKALHindi.us": ["US1#Sony.KAL.us"],
 }
 
+# Hard locks for mappings that have been manually verified against the live channel.
+# Locked identities must not be broadened again by the automatic coverage mapper.
+EPG_LOCKS = {
+    "ColorsCineplex.in@SD": ["543298"],
+}
+
 REPORT = Path("reports/epg-coverage.md")
 
 SOURCES = [
@@ -123,10 +129,14 @@ def main():
     for ch in channels:
         candidates=[]
         prev=previous.get(ch["tvg_id"],{})
-        candidates += [x.strip() for x in (prev.get("epg_id","").split("|") if prev.get("epg_id") else []) if x.strip()]
-        candidates += [ch["tvg_id"], re.sub(r"@(?:sd|hd|uhd|fhd)$","",ch["tvg_id"],flags=re.I)]
-        candidates += EPG_ALIASES.get(ch["tvg_id"], [])
-        candidates=list(dict.fromkeys(x for x in candidates if x))
+        locked_ids=EPG_LOCKS.get(ch["tvg_id"])
+        if locked_ids:
+            candidates=list(dict.fromkeys(x.strip() for x in locked_ids if x.strip()))
+        else:
+            candidates += [x.strip() for x in (prev.get("epg_id","").split("|") if prev.get("epg_id") else []) if x.strip()]
+            candidates += [ch["tvg_id"], re.sub(r"@(?:sd|hd|uhd|fhd)$","",ch["tvg_id"],flags=re.I)]
+            candidates += EPG_ALIASES.get(ch["tvg_id"], [])
+            candidates=list(dict.fromkeys(x for x in candidates if x))
         normalized={norm_id(x) for x in candidates}; name_key=norm_name(ch["name"])
         hits=[]; hit_sources=[]; total=0; live=False
         for src,data in zip(SOURCES,source_data):
