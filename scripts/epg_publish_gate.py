@@ -2,6 +2,7 @@
 """Prevent publication of a materially degraded EPG while allowing a clean guide
 to replace a larger but internally conflicting legacy guide."""
 import sys
+from datetime import datetime, timezone
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -29,19 +30,41 @@ def parse(path):
             programmes.append((channel, start, stop, title))
     return channels, programmes
 
+def parse_xmltv_time(value):
+    """Parse XMLTV timestamps consistently, including explicit timezone offsets."""
+    value = (value or "").strip()
+    if not value:
+        return None
+    try:
+        if len(value) >= 19:
+            base = value[:14]
+            suffix = value[14:].strip()
+            if suffix:
+                return datetime.strptime(
+                    f"{base} {suffix}", "%Y%m%d%H%M%S %z"
+                ).astimezone(timezone.utc)
+            return datetime.strptime(base, "%Y%m%d%H%M%S").replace(tzinfo=timezone.utc)
+    except ValueError:
+        return None
+    return None
+
 def overlap_count(programmes):
     by_channel = {}
     for p in programmes:
-        by_channel.setdefault(p[0], []).append(p)
+        start_dt = parse_xmltv_time(p[1])
+        stop_dt = parse_xmltv_time(p[2])
+        if start_dt is None or stop_dt is None or stop_dt <= start_dt:
+            continue
+        by_channel.setdefault(p[0], []).append((start_dt, stop_dt))
     overlaps = 0
     for rows in by_channel.values():
-        rows.sort(key=lambda p: (p[1], p[2]))
-        previous_stop = ""
-        for _, start, stop, _ in rows:
-            if previous_stop and start < previous_stop:
+        rows.sort(key=lambda p: (p[0], p[1]))
+        previous_stop = None
+        for start_dt, stop_dt in rows:
+            if previous_stop is not None and start_dt < previous_stop:
                 overlaps += 1
-            if stop > previous_stop:
-                previous_stop = stop
+            if previous_stop is None or stop_dt > previous_stop:
+                previous_stop = stop_dt
     return overlaps
 
 def quality(path):
