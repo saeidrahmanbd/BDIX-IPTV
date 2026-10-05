@@ -80,10 +80,14 @@ def load_mapping():
             target = row.get("tvg_id", "").strip()
             if not target:
                 continue
-            for source_id in row.get("epg_id", "").split("|"):
-                source_id = source_id.strip()
-                if source_id:
-                    reverse[source_id] = target
+            ids = [x.strip() for x in row.get("epg_id", "").split("|") if x.strip()]
+            # Indian Bangla channels use one primary EPG provider only.
+            # Combining schedules from multiple providers can attach another
+            # provider's programme to the correct live channel.
+            if row.get("group", "").strip() == "Indian Bangla":
+                ids = ids[:1]
+            for source_id in ids:
+                reverse[source_id] = target
     return reverse
 
 def stamp(value):
