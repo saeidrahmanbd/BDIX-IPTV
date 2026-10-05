@@ -5,6 +5,7 @@ on:
     paths:
       - IPTV-Playlist.m3u
       - scripts/**
+      - reports/epg-india-channel-mapping.csv
       - .github/workflows/iptv-maintenance.yml
   schedule:
     - cron: '17 2 * * *'
