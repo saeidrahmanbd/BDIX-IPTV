@@ -36872,32 +36872,6 @@ Goddess Tulja Bhavani, an avatar of Parvati, protects devotees and performs mira
     <icon src="https://iptv-epg.org/images/_lknHKzuUcXepTSqMf8Cf5yVIFWuUhC9LIDmWOulBEagfSMxUjGkOEzR3K8VQG9FHvCmlRsfo0D3DzPMfUFNIuUUoLoRPMtBL7yLaHQE3kNFoVmQft2jrLbCbz7gHQ" />
     <title lang="en">Aai Tuljabhavani</title>
   </programme>
-  <programme channel="ColorsRishteyAmericas.in" start="20261005142500 +0530" stop="20261005145000 +0530">
-    <title lang="en">Laagi Tujhse Lagan</title>
-    <desc lang="en">This is TV Show - Crime Category.</desc>
-    <credits>
-      <actor>Mahhi Vij</actor>
-      <actor>Mishal Raheja</actor>
-      <actor>Shabbir Ahluwalia</actor>
-      <actor>Kali Prasad Mukherjee</actor>
-      <actor>Chinmayee Surve</actor>
-      <actor>Jay Thakkar</actor>
-      <actor>Swati Chitnis</actor>
-      <actor>Vinay Rohrra</actor>
-      <actor>Aashka Goradia</actor>
-      <actor>Jaineeraj Rajpurohit</actor>
-      <director>Mitesh Chitalia</director>
-      <director>Mayank Gupta</director>
-      <director>Ramesh Pandey</director>
-      <producer>Paresh Rawal</producer>
-      <producer>Swaroop Sampat</producer>
-      <producer>Hemal Thakkar</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Crime</category>
-    <icon src="https://dtil.tmsimg.com/assets/p7988713_b_h9_ac.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E372</episode-num>
-  </programme>
   <programme channel="ColorsRishteyAmericas.in" start="20261005145000 +0530" stop="20261005151500 +0530">
     <title lang="en">Laagi Tujhse Lagan</title>
     <desc lang="en">This is TV Show - Crime Category.</desc>
@@ -86991,22 +86965,6 @@ Bringing the best in television.</desc>
     <desc lang="en">Ed Stafford is alone in Borneo's thick jungles with no tools, no food, and no backup. Just raw survival instincts against dense forest, wild creatures, and unrelenting rain.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DISCOVERY_CHANNEL_173569_08OCT064800_08OCT073800/images/LANDSCAPE_169_HD/DISCOVERY_MaroonedWithEdStafford_173569.jpg" />
   </programme>
-  <programme channel="DiscoveryKids.au" start="20261005142700 +0530" stop="20261005145100 +0530">
-    <title lang="en">Titoo</title>
-    <desc lang="en">The school takes Tittoo and the class to Agra on an excursion to view the Taj Mahal. Elsewhere, people are protesting to close a factory that is causing harm to the monument.</desc>
-    <credits>
-      <actor>Harsh Joshi</actor>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26974798_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="DiscoveryKids.au" start="20261005145100 +0530" stop="20261005150300 +0530">
     <title lang="en">Titoo</title>
     <desc lang="en">Titoo and Golu decide to inhale lightweight gas to float around the city. But during their adventure they spot some robbers heisting a bank and decide to stop them.</desc>
@@ -111151,21 +111109,17 @@ Mahashark and Sacchi-Machhi usurp the Lion Totem's magic to subjugate Mutthu's s
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/b1c09a0ae4255811fa3fbd954558c4fa.jpg" />
     <premiere />
   </programme>
-  <programme channel="InvestigationDiscovery.in@SD" start="20261005083000 +0000" stop="20261005092000 +0000">
-    <title lang="zh">Shattered</title>
-    <desc>In 2006, residents in Indianapolis called 911 to report gunfire coming from a house. Police find a total of seven bodies in a terrible mass shooting.</desc>
-    <date>20261005</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="InvestigationDiscovery.in@SD" start="20261005092000 +0000" stop="20261005101000 +0000">
-    <title lang="zh">Betrayed</title>
-    <desc>A retired prison officer thinks he's lived through the riskiest years of his life, but handling his second wife and her jealous ex-husband proves far more deadly.</desc>
-    <date>20261005</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme channel="InvestigationDiscovery.in@SD" start="20261005143700 +0530" stop="20261005153300 +0530">
+    <title lang="en">Disappeared</title>
+    <desc lang="en">Former basketball star Rico Harris mysteriously vanishes while driving to Seattle. Investigators start a journey that becomes more baffling as time passes.</desc>
+    <credits>
+      <actor>Christopher Crutchfield Walker</actor>
+      <producer>Diana Sperrazza</producer>
+    </credits>
+    <category lang="en">Documentary</category>
+    <category lang="en">Others</category>
+    <icon src="https://dtil.tmsimg.com/assets/p12705912_b_h9_ag.jpg?lock=880x660" />
+    <episode-num system="onscreen">S7 E7</episode-num>
   </programme>
   <programme channel="InvestigationDiscovery.in@SD" start="20261005101000 +0000" stop="20261005103500 +0000">
     <title lang="zh">Who the (Bleep) Did I Marry?</title>
@@ -128406,38 +128360,13 @@ A host of interesting characters encounter several frustrating and comical situa
     <episode-num system="onscreen">E4</episode-num>
     <premiere />
   </programme>
-  <programme channel="MoviesNow.in@SD" start="20261005124900 +0530" stop="20261005145100 +0530">
-    <title lang="en">Transformers: Rise of the Beasts</title>
-    <desc lang="en">As a nefarious force imperils Earth, an unlikely alliance forms between Optimus Prime's Autobots and the mighty Maximals, aided by two humans to safeguard mankind's future.</desc>
-    <credits>
-      <actor>Anthony Ramos</actor>
-      <actor>Dominique Fishback</actor>
-      <actor>Peter Cullen</actor>
-      <actor>Michelle Yeoh</actor>
-      <actor>Peter Dinklage</actor>
-      <actor>Ron Perlman</actor>
-      <actor>Pete Davidson</actor>
-      <actor>Colman Domingo</actor>
-      <actor>Dean Scott Vazquez</actor>
-      <actor>Luna Lauren Velez</actor>
-      <actor>Cristo Fernández</actor>
-      <actor>John DiMaggio</actor>
-      <actor>Michaela Jaé Rodriguez</actor>
-      <actor>Tobe Nwigwe</actor>
-      <actor>Liza Koshy</actor>
-      <actor>David Sobolov</actor>
-      <actor>Tongai Arnold Chirisa</actor>
-      <director>Steven Caple Jr.</director>
-      <producer>Lorenzo di Bonaventura</producer>
-      <producer>Tom DeSanto</producer>
-      <producer>Don Murphy</producer>
-      <producer>Michael Bay</producer>
-      <producer>Mark Vahradian</producer>
-      <producer>Duncan Henderson</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Action</category>
-    <icon src="https://dtil.tmsimg.com/assets/p20201199_v_h9_aw.jpg?lock=880x660" />
+  <programme channel="MoviesNow.in@SD" start="20261005080400 +0000" stop="20261005094400 +0000">
+    <title lang="zh">Man of Tai Chi</title>
+    <desc>Tiger Chen, a young martial artist, has unparalleled Tai Chi skills which lands him in a highly lucrative underworld fight club.</desc>
+    <date>20261005</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
   <programme channel="MoviesNow.in@SD" start="20261005094400 +0000" stop="20261005105300 +0000">
     <title lang="zh">Piranha 3DD</title>
@@ -153190,20 +153119,6 @@ Simmba, an honest and courageous police officer, teams up with his fearless coll
     <icon src="https://iptv-epg.org/images/TdknPzqNuhh6RQZcz1DU3LWDsTX-zSiKzqmPMKUA302TkutgslUVn1hTVlek_bv6dDDEyRe3c6NCIW6BP-ggaE9naeEUGd9vtSJOZKFoacon4IkcVekX--KI4j2yuQ" />
     <title lang="en">Kathirupen Kadhaliye</title>
   </programme>
-  <programme channel="Pop.uk" start="20261005091600 +0000" stop="20261005092000 +0000">
-    <title lang="en">Shasha And Milo: Shorts</title>
-    <desc lang="en">Bong Bong chases an elusive bone across town.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261005144600/list/ZEEPOPShashaAndMiloShorts20567386add9f8e8c90421ca3b66be35a0c2c31.jpg" />
-  </programme>
-  <programme channel="Pop.uk" start="20261005092000 +0000" stop="20261005092400 +0000">
-    <title lang="en">Shasha And Milo: Shorts</title>
-    <desc lang="en">Bong Bong chases an elusive bone across town.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261005145000/list/ZEEPOPShashaAndMiloShorts2056738ea077834784c47cb8bfd9285179dbc01.jpg" />
-  </programme>
   <programme channel="Pop.uk" start="20261005092400 +0000" stop="20261005093000 +0000">
     <title lang="en">Shasha And Milo: Shorts</title>
     <desc lang="en">Bong Bong chases an elusive bone across town.</desc>
@@ -158378,21 +158293,13 @@ Simmba, an honest and courageous police officer, teams up with his fearless coll
   <programme channel="PunjabiShorts.in" start="20261008053000 +0530" stop="20261008063000 +0530">
     <title lang="en">backbenchers</title>
   </programme>
-  <programme channel="PuthuyugamTV.in@SD" start="20261005090000 +0000" stop="20261005092000 +0000">
-    <title lang="zh">Alayangal Arpudhangal</title>
-    <desc>The host explores various temples and sheds light on the rituals and ceremonies performed by the devotees and religious leaders.</desc>
-    <date>20261005</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="PuthuyugamTV.in@SD" start="20261005092000 +0000" stop="20261005093000 +0000">
-    <title lang="zh">Anushathin Anugraham</title>
-    <desc>The host sheds light on why the Anuradha Nakshatra is important in Hinduism and how people benefit by performing auspicious events during the occasion.</desc>
-    <date>20261005</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261005143000 +0530" stop="20261005150000 +0530" channel="PuthuyugamTV.in@SD">
+    <title lang="ta-IN">மூவி</title>
+    <sub-title lang="ta-IN">Bringing the best in television</sub-title>
+    <desc lang="ta-IN">திரைப்படங்களில் சிறந்தவை.</desc>
+    <category lang="ta-IN">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/8b420b6e3cac44832b4063d9e5252b19.jpg" />
+    <premiere />
   </programme>
   <programme start="20261005150000 +0530" stop="20261005153000 +0530" channel="PuthuyugamTV.in@SD">
     <title lang="ta-IN">மூவி</title>
@@ -171727,30 +171634,24 @@ Simmba, an honest and courageous police officer, teams up with his fearless coll
     <icon src="https://iptv-epg.org/images/zz9M-oWnrkT8KG3xARFiZm29gqmqcG00ArpiU_tix135ktzHQUkMhOD_8VRJLmO8HL-IZ9Y8Du5ynmoaVwkk1dzL9kA0Re1VgDy8ijLmy3RZQmPMJOj5kCTgurJWiA" />
     <title lang="en">Puwoti Tora</title>
   </programme>
-  <programme start="20261005135600 +0530" stop="20261005145300 +0530" channel="RedBullTV.at@EUMENA" catchup-id="2610052779028">
-    <title>Cycling Around the World</title>
-    <desc>From Bali to Scotland, joining Danny MacAskill, Rebecca Rusch, Tom Oehler, Daniel Wedemeijer and more on a two-wheeled adventure around the globe as they explore the world on bikes.</desc>
-    <category>Sports non-event</category>
-    <date>20261004</date>
-    <icon src="https://jiotv.catchup.cdn.jio.com/dare_images/shows/2026-10-05/2610052779028.jpg" />
-    <sub-title>In the ride of a lifetime, Payson McElveen makes cycling history as the first person to complete a human-powered journey across the rugged interior of Iceland, covering 257 miles in just one day.</sub-title>
+  <programme start="20261005143400 +0530" stop="20261005150700 +0530" channel="RedBullTV.at@EUMENA">
+    <title lang="en-GB">Beyond the ROX</title>
+    <sub-title lang="en-GB">The pressure has peaked for Jake Dearden as he qualifies for the final, new competitors challenge the veterans, and the growth of the women's field proves expert coaching can change the game</sub-title>
+    <desc lang="en-GB">The best HYROX athletes uncover what it takes to rise to the top.</desc>
+    <category lang="en-GB">181</category>
+    <category lang="en-GB">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/4cd02a0d09840691a63d9c63a360aa79.jpg" />
+    <episode-num system="onscreen">E3</episode-num>
+    <premiere />
   </programme>
-  <programme start="20261005145300 +0530" stop="20261005152300 +0530" channel="RedBullTV.at@EUMENA" catchup-id="2610052779029">
-    <title>Red Bull Hardline</title>
-    <desc>The world's best and bravest downhill mountain bike riders are put through their paces by a course designed by Dan Atherton.</desc>
-    <category>Series</category>
-    <date>20261004</date>
-    <icon src="https://jiotv.catchup.cdn.jio.com/dare_images/shows/2026-10-05/2610052779029.jpg" />
-    <sub-title>Red Bull Hardline Tasmania sets the stage for another unforgettable chapter in the event's history.</sub-title>
-  </programme>
-  <programme start="20261005152300 +0530" stop="20261005160500 +0530" channel="RedBullTV.at@EUMENA" catchup-id="2610052779030">
-    <title>WRC: More Than Machine</title>
-    <desc>Series following members of the M-Sport WRC team about the trials and tribulations of competing in Rally driving at the highest level.</desc>
-    <category>Sports non-event</category>
-    <date>20261004</date>
-    <icon src="https://jiotv.catchup.cdn.jio.com/dare_images/shows/2026-10-05/2610052779030.jpg" />
-    <episode-num system="xmltv_ns">0.3</episode-num>
-    <sub-title>Carrying the weight of expectation of one of the most historic rally teams, Malcolm and the M-Sport crew are determined to make a mid-year impact in Portugal and Sardinia.</sub-title>
+  <programme start="20261005150700 +0530" stop="20261005160600 +0530" channel="RedBullTV.at@EUMENA">
+    <title lang="en-GB">Red Bull Rampage</title>
+    <sub-title lang="en-GB">Watch the 18 male mountain bike athletes compete in this invitation-only freeride event. After creating their own lines in the red-rock landscape of Utah, see them showcase their skill and creativity</sub-title>
+    <desc lang="en-GB">An invitation-only freeride mountain bike competition held near Zion National Park in Virgin, Utah.</desc>
+    <category lang="en-GB">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/6c08bf723a4e785e2a3dcb7f8e192a67.jpg" />
+    <episode-num system="onscreen">E2</episode-num>
+    <premiere />
   </programme>
   <programme start="20261005160600 +0530" stop="20261005165000 +0530" channel="RedBullTV.at@EUMENA">
     <title lang="en-GB">Poetic Silence - Discovering Indonesian Waves</title>
@@ -187195,15 +187096,6 @@ When differences between the Kaurava and the Pandava clans lead them to the thre
     <title lang="en">Movie</title>
     <desc lang="en">The movie name is yet to be announced by the channel.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SIRIPPOLI_971465_08OCT060000_08OCT070000/images/LANDSCAPE_169_HD/SIRIPPOLI_Movie_971465.jpg" />
-  </programme>
-  <programme start="20261005144500 +0530" stop="20261005145000 +0530" channel="SongdewTV.in@SD">
-    <title lang="hi-IN">Track Tales</title>
-    <desc lang="hi-IN">Features the untold stories of music making by awesome musicians.</desc>
-    <category lang="hi-IN">Music</category>
-    <category lang="hi-IN">Reality &amp; Game Shows</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg" />
-    <episode-num system="onscreen">E14</episode-num>
-    <premiere />
   </programme>
   <programme start="20261005145000 +0530" stop="20261005145500 +0530" channel="SongdewTV.in@SD">
     <title lang="hi-IN">Songdew Fresh</title>
@@ -215210,204 +215102,57 @@ Real-time match updates and highlights keep fans informed, providing instant acc
     <desc lang="en">The movie name is yet to be announced by the channel.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_WAH_341453_08OCT060000_08OCT090000/images/LANDSCAPE_169_HD/SonyWAH_Movie_341453.jpg" />
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261005130000 +0530" stop="20261005145100 +0530">
-    <title lang="en">Shinchan In Very Very Tasty Tasty</title>
-    <desc lang="en">This is Film - Comedy Category.</desc>
-    <credits>
-      <actor>Akiko Yajima</actor>
-      <actor>Miki Narahashi</actor>
-      <actor>Keiji Fujiwara</actor>
-      <actor>Satomi Koorogi</actor>
-      <actor>Mari Mashiba</actor>
-      <actor>Tamao Hayashi</actor>
-      <actor>Teiyu Ichiryusai</actor>
-      <actor>Chie Satou</actor>
-      <actor>Rika Yano</actor>
-      <actor>Hiroshi Kamiya</actor>
-      <actor>Yuichi Nakamura</actor>
-      <actor>Saori Hayami</actor>
-      <actor>Tessho Genda</actor>
-      <actor>Etsuko Kozakura</actor>
-      <actor>Mahito Funaki</actor>
-      <actor>Rokurô Naya</actor>
-      <actor>Sakiko Tamagawa</actor>
-      <actor>Daisuke Sakaguchi</actor>
-      <actor>Makiko Omoto</actor>
-      <actor>Daiki Nakamura</actor>
-      <actor>Tôru Ohkawa</actor>
-      <actor>Hôchû Ôtsuka</actor>
-      <actor>Yoshino Takamori</actor>
-      <actor>Kentaro Tone</actor>
-      <actor>Takeharu Onishi</actor>
-      <actor>Ryota Asari</actor>
-      <actor>Hideaki Tezuka</actor>
-      <actor>Masayo Kurata</actor>
-      <actor>Megumi Matsumoto</actor>
-      <actor>Croket</actor>
-      <actor>Naomi Watanabe</actor>
-      <actor>Tatsuya Kawagoe</actor>
-      <actor>Shinpachi Tsuji</actor>
-      <actor>Kazuya Ichijo</actor>
-      <director>Shinobu Sasaki</director>
-      <director>Masakazu Hashimoto</director>
-      <producer>Yasushi Wada</producer>
-      <producer>Noboru Sugiyama</producer>
-      <producer>Rika Tsuruzaki</producer>
-      <producer>Kokushi Miura</producer>
-      <producer>Yuki Yoshida</producer>
-      <producer>Tomoharu Matsuhisa</producer>
-      <producer>Kensuke Suzuki</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Comedy</category>
-    <icon src="https://dtil.tmsimg.com/assets/p18843075_b_h9_aa.jpg?lock=880x660" />
+  <programme start="20261005144800 +0530" stop="20261005145500 +0530" channel="SonyYay.in@SD" catchup-id="99914804">
+    <title>Shin Chan</title>
+    <desc>Shin-chan and his friends enter a competition for which they make a portable shrine. S01E69.</desc>
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261005145100 +0530" stop="20261005145900 +0530">
-    <title lang="en">Shin Chan</title>
-    <desc lang="en">A five-year-old boy, has many misadventures due to his peculiar antics, while his parents and tutors try to discipline him.</desc>
-    <credits>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-      <director>Mitsuru Hongo</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h9_ae.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E866</episode-num>
+  <programme start="20261005145500 +0530" stop="20261005150200 +0530" channel="SonyYay.in@SD" catchup-id="99954909">
+    <title>Shin Chan</title>
+    <desc>In order to make repairs on the broken pipe, Hiroshi climbs onto the roof. S01E70.</desc>
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261005145900 +0530" stop="20261005150700 +0530">
-    <title lang="en">Shin Chan</title>
-    <desc lang="en">A five-year-old boy, has many misadventures due to his peculiar antics, while his parents and tutors try to discipline him.</desc>
-    <credits>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-      <director>Mitsuru Hongo</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h9_ae.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E867</episode-num>
+  <programme start="20261005150200 +0530" stop="20261005150900 +0530" channel="SonyYay.in@SD" catchup-id="99914818">
+    <title>Shin Chan</title>
+    <desc>One day Shin-chan carries a chick to his kindergarten and leaves it in the poultry farm. S01E71.</desc>
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261005150700 +0530" stop="20261005151500 +0530">
-    <title lang="en">Shin Chan</title>
-    <desc lang="en">A five-year-old boy, has many misadventures due to his peculiar antics, while his parents and tutors try to discipline him.</desc>
-    <credits>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-      <director>Mitsuru Hongo</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h9_ae.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E868</episode-num>
+  <programme channel="SonyYay.in@SD" start="20261005094300 +0000" stop="20261005095100 +0000">
+    <title lang="zh">Shin Chan</title>
+    <desc>When the progressively worsening weather forces Misae and Shin-chan to remain indoors, they wait until Hiroshi returns from work and then fall asleep together.</desc>
+    <date>20261005</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261005151500 +0530" stop="20261005152300 +0530">
-    <title lang="en">Shin Chan</title>
-    <desc lang="en">Shin-chan, a mischievous five-year-old, constantly disrupts the lives of those around him with his childish antics, generating humorous chaos and exasperation.</desc>
-    <credits>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-      <director>Mitsuru Hongo</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h9_ae.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E869</episode-num>
+  <programme channel="SonyYay.in@SD" start="20261005095100 +0000" stop="20261005095900 +0000">
+    <title lang="zh">Shin Chan</title>
+    <desc>Shin-chan brushes his teeth with new toothpaste and eats unhealthy snacks right after. As a result, Misae is left infuriated and she berates him.</desc>
+    <date>20261005</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261005152300 +0530" stop="20261005153100 +0530">
-    <title lang="en">Shin Chan</title>
-    <desc lang="en">A five-year-old boy, has many misadventures due to his peculiar antics, while his parents and tutors try to discipline him.</desc>
-    <credits>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-      <director>Mitsuru Hongo</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h9_ae.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E854</episode-num>
+  <programme channel="SonyYay.in@SD" start="20261005095900 +0000" stop="20261005100700 +0000">
+    <title lang="zh">Shin Chan</title>
+    <desc>Misae prepares a meal to eat but as she tries to do so, Shin-chan causes a nuisance by playing with the food and annoys her.</desc>
+    <date>20261005</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261005153100 +0530" stop="20261005153900 +0530">
-    <title lang="en">Shin Chan</title>
-    <desc lang="en">A five-year-old boy, has many misadventures due to his peculiar antics, while his parents and tutors try to discipline him.</desc>
-    <credits>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-      <director>Mitsuru Hongo</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h9_ae.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E872</episode-num>
+  <programme channel="SonyYay.in@SD" start="20261005100700 +0000" stop="20261005101300 +0000">
+    <title lang="zh">Shin Chan</title>
+    <desc>Misae and Shin-chan visit a renowned restaurant and try an acclaimed curry prepared by a famous chef. However, they find it distasteful and leave the establishment.</desc>
+    <date>20261005</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261005153900 +0530" stop="20261005155800 +0530">
-    <title lang="en">Shin Chan</title>
-    <desc lang="en">A five-year-old boy, has many misadventures due to his peculiar antics, while his parents and tutors try to discipline him.</desc>
-    <credits>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-      <director>Mitsuru Hongo</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h9_ae.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E871</episode-num>
+  <programme channel="SonyYay.in@SD" start="20261005101300 +0000" stop="20261005102100 +0000">
+    <title lang="zh">Shin Chan</title>
+    <desc>When Misae suffers from a backache, she visits a doctor for a diagnosis and Shin-chan accompanies her. However, Shin-chan annoys the doctor.</desc>
+    <date>20261005</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
   <programme channel="SonyYay.in@SD" start="20261005155800 +0530" stop="20261005160600 +0530">
     <title lang="en">Shin Chan</title>
@@ -245099,25 +244844,11 @@ Monica reveals a secret to her first date that could shatter their connection.</
     <desc lang="en">A revered spiritual scholar addresses a gathering of devotees, sharing insightful discourses on faith, values, and the transformative role of spirituality in leading a meaningful life.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_TARANG_MUSIC_2110392_08OCT063000_08OCT070000/images/LANDSCAPE_169/1784716663000_TarangMusic_Samarrpan_2110392.jpg" />
   </programme>
-  <programme start="20261005144000 +0530" stop="20261005145200 +0530" channel="TeluguOne.in@HD">
-    <title>Disco Shanti Latest Interview</title>
-    <desc>Disco Shanti Latest Interview</desc>
-    <category>Interview</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/983dee4db1cf8c7f2f42f4a5ced6dc52.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261005145200 +0530" stop="20261005150300 +0530" channel="TeluguOne.in@HD">
-    <title>Disco Shanti Latest Interview</title>
-    <desc>Disco Shanti Latest Interview</desc>
-    <category>Interview</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/983dee4db1cf8c7f2f42f4a5ced6dc52.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
+  <programme start="20261005143000 +0530" stop="20261005150000 +0530" channel="TeluguOne.in@HD">
+    <title>Program@14:30</title>
+    <sub-title>Telugu One | TELUGU</sub-title>
+    <language>TELUGU</language>
+    <icon src="http://static.aka.yupp.yuppcdn.net/yupptv/roku/images/skyworth/v5/Telugu-One_roku.jpg" />
   </programme>
   <programme start="20261005150300 +0530" stop="20261005151500 +0530" channel="TeluguOne.in@HD">
     <title>Disco Shanti Latest Interview</title>
@@ -247152,14 +246883,6 @@ Monica reveals a secret to her first date that could shatter their connection.</
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme start="20261005143900 +0530" stop="20261005145100 +0530" channel="ThalaaTV.in">
-    <title>Raja Rani</title>
-    <sub-title>THALAA TV | TAMIL</sub-title>
-    <desc>Rani pretends to be rich to win actor Raja?s love, but Babu tries to ruin their relationship.</desc>
-    <category>Romance</category>
-    <language>TAMIL</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/THALAA%20TV/POSTER/Raja%20Rani.png" />
   </programme>
   <programme start="20261005145100 +0530" stop="20261005150400 +0530" channel="ThalaaTV.in">
     <title>Raja Rani</title>
@@ -249649,13 +249372,6 @@ Monica reveals a secret to her first date that could shatter their connection.</
   <programme channel="TheJungleBook.in" start="20261008054900 +0530" stop="20261008060200 +0530">
     <title lang="en">The Hita's Dream</title>
     <desc lang="en">Mowgli, Bagheera, Trikki, Appu, Hita and Darzee are having fun</desc>
-  </programme>
-  <programme channel="TinyPop.uk" start="20261005090800 +0000" stop="20261005092200 +0000">
-    <title lang="en">Hello Kitty: Super Style!</title>
-    <desc lang="en">Hello Kitty swings back again in Hello Kitty Superstyle!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261005143800/list/TinyPOPHelloKittySuperStyle2102381325f76869fc040c1ade3ccdf179522b9.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261005092200 +0000" stop="20261005093500 +0000">
     <title lang="en">Hello Kitty: Super Style!</title>
@@ -254241,14 +253957,6 @@ Monica reveals a secret to her first date that could shatter their connection.</
     <category>Kids</category>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261011233400/list/TinyPOPTheCatintheHatKnowsaLotAboutThat2087465956bce32585b4857902289f1872181d0.jpg" />
-  </programme>
-  <programme start="20261005144200 +0530" stop="20261005145400 +0530" channel="TollyTV.in">
-    <title>Mouna Ragam</title>
-    <sub-title>TOLLY TV | TELUGU</sub-title>
-    <desc>Divya mourns her lover but is forced to marry Chandrakumar; asks for a divorce as a wedding gift.</desc>
-    <category>Movies</category>
-    <language>TELUGU</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/TOLLY%20TV/IMAGES/Mouna%20Ragam.png" />
   </programme>
   <programme start="20261005145400 +0530" stop="20261005150600 +0530" channel="TollyTV.in">
     <title>Mouna Ragam</title>
@@ -269324,43 +269032,21 @@ Daniel and Paddy discover some of the finest venues in Kyushu where they can sav
     <language>Hindi</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-001790000-20261011232400/list/ZeeBollywoodKohram130430225d41fe528a545c4ac2b67245630c850.jpg" />
   </programme>
-  <programme start="20261005070000 +0000" stop="20261005092400 +0000" channel="ZeeCinema.in@HD">
-    <category lang="en">Film</category>
-    <category lang="en">Thriller</category>
-    <credits>
-      <director>Narthan</director>
-      <actor>Rahul Bose</actor>
-      <actor>Rukmini Vasanth</actor>
-      <actor>Shivarajkumar</actor>
-      <actor>Devaraj</actor>
-      <actor>Madhu Guruswamy</actor>
-      <actor>Babu Hirannaiah</actor>
-      <actor>Shabeer Kallarakkal</actor>
-      <actor>Vasishta N. Simha</actor>
-      <actor>Chaya Singh</actor>
-      <producer>Geetha Shivarajkumar</producer>
-    </credits>
-    <desc lang="en">Bhairathi Ranagal ends up in jail after going against the law. However, when he is released, he strives to fight for the people of his village.</desc>
-    <icon src="https://iptv-epg.org/images/hCLBfu_26sZ_xjryvKGYalwbEpAa0IiK-xSmyl6BomjGIEBJqjyI-1d5ruNLt882xnkoUEAUpOzkwOVB9k2sc14MLwaRD44sz5XwhkWO31T1MdHEsARW5srLGdyV" />
-    <title lang="en">Bhairathi Ranagal</title>
+  <programme channel="ZeeCinema.in@HD" start="20261005090000 +0000" stop="20261005093700 +0000">
+    <title lang="zh">The Faith Show</title>
+    <desc>Romildo Ribeiro Soares, a Brazilian televangelist, stresses the importance of faith in the Almighty and urges devotees to walk the path of righteousness.</desc>
+    <date>20261005</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
-  <programme start="20261005092400 +0000" stop="20261005115600 +0000" channel="ZeeCinema.in@HD">
-    <category lang="en">Film</category>
-    <category lang="en">Drama</category>
-    <credits>
-      <director>David Dhawan</director>
-      <actor>Govinda</actor>
-      <actor>Karishma Kapoor</actor>
-      <actor>Tabu</actor>
-      <actor>Satish Kaushik</actor>
-      <actor>Kader Khan</actor>
-      <actor>Satish Shah</actor>
-      <actor>Shakti Kapoor</actor>
-      <producer>Mansoor Ahmed Siddiqui</producer>
-    </credits>
-    <desc lang="en">After Shyamsunder presumes that his first wife Pooja died in a flood, he marries Divya. When he learns that Pooja is alive, he has to juggle between his wives, keeping both his marriages a secret.</desc>
-    <icon src="https://iptv-epg.org/images/ivY_76u9Z-BIxbBNj59cMVIJWwWNhhVFx6RrOyJ2UauwY1QLOA-NsQUTueMNAtsEc3q5FNvXmjL1WhZce4D_ZmTpOFn4jLXfS0v20DTbBHl3GpawCNdOj3pjAao" />
-    <title lang="en">Saajan Chale Sasural</title>
+  <programme channel="ZeeCinema.in@HD" start="20261005093700 +0000" stop="20261005113700 +0000">
+    <title lang="zh">Hello Charlie</title>
+    <desc>Charlie, a young man, is tasked with transporting a gorilla to Diu, unaware that it is a fraudster in a costume. Chaos erupts after Charlie encounters a real gorilla on their journey.</desc>
+    <date>20261005</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
   <programme channel="ZeeCinema.in@HD" start="20261005172600 +0530" stop="20261005195500 +0530">
     <title lang="en">Saamy 2</title>
@@ -283653,26 +283339,6 @@ Stories of the paranormal unfold through accounts of individuals who claim to ha
     <language>Hindi</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017300000-20261011230000/list/ZingFearFiles10243802f1d42c8cfaa4f708e8c68d995dcee76.jpg" />
   </programme>
-  <programme start="20261005144500 +0530" stop="20261005145000 +0530" channel="custom.duck.tv">
-    <title>Risto Gusto</title>
-    <desc>Basil, Yam and Oregano demonstrate their culinary skills as they prepare a wide variety of healthy dishes in their restaurant, Risto Gusto.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/683bc58f89d7a90db8c3a97f335559bc.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261005145000 +0530" stop="20261005145300 +0530" channel="custom.duck.tv">
-    <title>Monica and Rudy 2</title>
-    <desc>Monica and her yellow pet bird Rudy delve into the world of rhythms and enjoy learning new things and seeing new sights.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/434191cab5dc9877d73989d0fe13c32f.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261005145300 +0530" stop="20261005145700 +0530" channel="custom.duck.tv">
     <title>Finn and Fianna</title>
     <desc>Finn and Fianna are two baby elves who explore the environment using their cognitive and perceptual senses in order to learn about its unique attributes.</desc>
@@ -291555,13 +291221,6 @@ Stories of the paranormal unfold through accounts of individuals who claim to ha
   <programme start="20261005223000 +0530" stop="20261006000000 +0530" channel="custom.ekamra.manoranjan" catchup-id="99838786">
     <title>Ekamra Lahari</title>
     <desc>A compilation of the timeless old classic Odia hits is played to entertain the audience.</desc>
-  </programme>
-  <programme start="20261005135900 +0530" stop="20261005145400 +0530" channel="custom.kolkatatv">
-    <title lang="bn-IN">HDL + Sangbad Saradin</title>
-    <desc lang="bn-IN">The host presents the latest news updates from various fronts and provides a detailed report on matters concerning the state and the nation.</desc>
-    <category lang="bn-IN">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/ecc08410b981dce387d6c24279d03219.jpg" />
-    <premiere />
   </programme>
   <programme start="20261005145400 +0530" stop="20261005145900 +0530" channel="custom.kolkatatv">
     <title lang="bn-IN">5 Minute E 25</title>
