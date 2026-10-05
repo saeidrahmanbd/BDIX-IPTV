@@ -1,12 +1,12 @@
 # Playlist Audit
-Generated: **2026-10-05T03:54:22.116405+00:00**
+Generated: **2026-10-05T04:02:44.170645+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
 - Playlist entries: **978**
-- Unique channel IDs: **619**
+- Unique channel IDs: **623**
 - IDs with multiple streams: **180**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -14,12 +14,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **5**
+- Logo exceptions: **0**
 - Logo references checked: **978**
 - Not Playing logo exceptions: **0**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **7**
+- Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Alphabetical ordering issues: **1**
@@ -794,8 +794,8 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **973**
-- missing: **5**
+- Healthy/local references: **978**
+- missing: **0**
 - broken-local: **0**
 - external: **0**
 - non-png: **0**
@@ -803,11 +803,6 @@ None.
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
-- missing — JTV Bangla [] — 
-- missing — Colors Cineplex Bollywood [] — 
-- missing — Sony PAL [] — 
-- missing — Sony WAH [] — 
-- missing — Colors Cineplex Superhits [] — 
 
 ## Protected Primary Entries
 

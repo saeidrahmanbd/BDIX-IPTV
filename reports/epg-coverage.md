@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-05T03:53:32+00:00**
+Generated: **2026-10-05T04:01:54+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
@@ -59,7 +59,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Movies | Goldmines Action | GoldminesAction.in | - | NO_GUIDE_HIT |
 | Indian Music | Hindi Hits | HindiHits.in | - | NO_GUIDE_HIT |
 | Indian Movies | Hindi Movies | custom.hindi.movies | - | NO_GUIDE_HIT |
-| Indian Bangla | JTV Bangla | custom.jtvbangla | - | NO_GUIDE_HIT |
+| Indian Bangla | JTV Bangla | JTVBangla.in@SD | - | NO_GUIDE_HIT |
 | Indian Bangla | Jhankar TV | JhankarTV.ca | - | NO_GUIDE_HIT |
 | Indian Bangla | Jtv Classic | custom.jtv.classic | - | NO_GUIDE_HIT |
 | Indian Entertainment | Kairali Arabia | KairaliArabia.in | - | NO_GUIDE_HIT |
@@ -97,5 +97,5 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 - Playlist EPG references: **OK**
 - Guide channel IDs published: **344**
 - Mapped playlist IDs present in guide: **288/299 (96.3%)**
-- Mapped playlist IDs with current/future programmes: **272/299 (91.0%)**
+- Mapped playlist IDs with current/future programmes: **271/299 (90.6%)**
 - This validation is against the guide currently present in the working tree/publish candidate.

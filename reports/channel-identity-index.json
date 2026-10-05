@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-05T03:53:35+00:00",
+  "generated": "2026-10-05T04:01:57+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -1287,6 +1287,20 @@
       "primary": 1,
       "backup": 1
     },
+    "colorscineplexbollywood": {
+      "names": [
+        "Colors Cineplex Bollywood"
+      ],
+      "ids": [
+        "colorscineplexbollywood.in@sd"
+      ],
+      "groups": [
+        "Indian Movies"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "colorscineplexsuperhits": {
       "names": [
         "Colors Cineplex Superhits"
@@ -1671,20 +1685,6 @@
       "primary": 1,
       "backup": 0
     },
-    "custom.colorscineplexbollywood": {
-      "names": [
-        "Colors Cineplex Bollywood"
-      ],
-      "ids": [
-        "custom.colorscineplexbollywood"
-      ],
-      "groups": [
-        "Indian Movies"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "custom.crime.justice": {
       "names": [
         "Crime & Justice"
@@ -1980,20 +1980,6 @@
       "primary": 1,
       "backup": 0
     },
-    "custom.jtvbangla": {
-      "names": [
-        "JTV Bangla"
-      ],
-      "ids": [
-        "custom.jtvbangla"
-      ],
-      "groups": [
-        "Indian Bangla"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "custom.kiddo.matix": {
       "names": [
         "KidDo MATIX"
@@ -2243,34 +2229,6 @@
       ],
       "groups": [
         "Sports"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "custom.sonypal": {
-      "names": [
-        "Sony PAL"
-      ],
-      "ids": [
-        "custom.sonypal"
-      ],
-      "groups": [
-        "Indian Entertainment"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "custom.sonywah": {
-      "names": [
-        "Sony WAH"
-      ],
-      "ids": [
-        "custom.sonywah"
-      ],
-      "groups": [
-        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -4437,6 +4395,20 @@
       ],
       "groups": [
         "Pakistani"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "jtvbangla": {
+      "names": [
+        "JTV Bangla"
+      ],
+      "ids": [
+        "jtvbangla.in@sd"
+      ],
+      "groups": [
+        "Indian Bangla"
       ],
       "streams": 1,
       "primary": 1,
@@ -7282,6 +7254,20 @@
       "primary": 1,
       "backup": 0
     },
+    "sonypal": {
+      "names": [
+        "Sony PAL"
+      ],
+      "ids": [
+        "sonypal.in@sd"
+      ],
+      "groups": [
+        "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "sonypix": {
       "names": [
         "Sony PIX"
@@ -7377,6 +7363,20 @@
       ],
       "groups": [
         "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "sonywah": {
+      "names": [
+        "Sony WAH"
+      ],
+      "ids": [
+        "sonywah.in@sd"
+      ],
+      "groups": [
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
