@@ -114,42 +114,130 @@ def main():
     now = datetime.now(timezone.utc)
     lower = now - timedelta(hours=6)
     upper = now + timedelta(days=7)
-    seen = set()
-    programme_count = 0
 
-    for src in SOURCES:
+    # IMPORTANT: never merge competing schedules from multiple providers for
+    # the same playlist channel.  A channel can have several provider IDs,
+    # but only one provider schedule should be authoritative at a time.
+    #
+    # SOURCES is ordered from strongest/preferred to weakest fallback.  For
+    # each playlist tvg-id we select the first source that supplies at least
+    # one usable current/future programme.  Only that source's programmes
+    # are copied for the channel.  This prevents cases such as &pictures
+    # receiving Shoorveer from one provider and Mr. & Mrs. Khiladi from
+    # another provider under the same XMLTV channel ID.
+
+    selected_source = {}
+    programmes_by_target = {}
+    source_stats = {}
+
+    for source_index, src in enumerate(SOURCES):
         try:
             data = fetch(src)
+            source_stats[src] = "OK"
             for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):
                 if elem.tag != "programme":
                     continue
+
                 source_id = elem.attrib.get("channel", "").strip()
                 target = reverse.get(source_id)
                 if not target or target not in mapped_targets:
                     elem.clear()
                     continue
-                start = stamp(elem.attrib.get("start", ""))
-                stop = stamp(elem.attrib.get("stop", "")) if elem.attrib.get("stop") else None
-                if not start or start > upper or (stop and stop < lower):
+
+                # Once a stronger source has been selected for this channel,
+                # lower-priority sources must never contribute programmes.
+                if target in selected_source:
                     elem.clear()
                     continue
 
-                title = elem.findtext("title") or ""
-                key = (target, elem.attrib.get("start", ""), elem.attrib.get("stop", ""), title.strip())
-                if key in seen:
+                start_dt = stamp(elem.attrib.get("start", ""))
+                stop_dt = stamp(elem.attrib.get("stop", "")) if elem.attrib.get("stop") else None
+                if not start_dt or start_dt > upper or (stop_dt and stop_dt < lower):
                     elem.clear()
                     continue
-                seen.add(key)
+
+                # Keep a private copy of the programme because iterparse
+                # reuses/clears the source element.
+                attrs = dict(elem.attrib)
+                attrs["channel"] = target
+                children = [ET.fromstring(ET.tostring(child, encoding="utf-8")) for child in list(elem)]
+                title = (elem.findtext("title") or "").strip()
+
+                # The first usable programme from a source makes that source
+                # authoritative for this target channel.
+                selected_source[target] = (source_index, src, source_id)
+                programmes_by_target.setdefault(target, [])
+                key = (attrs.get("start", ""), attrs.get("stop", ""), title)
+                if key not in {(x[0].get("start", ""), x[0].get("stop", ""), x[1]) for x in programmes_by_target[target]}:
+                    programmes_by_target[target].append((attrs, title, children))
+
+                elem.clear()
+
+            # A source may be authoritative for some channels and not others.
+            # Continue through all sources only to find channels still without
+            # a usable schedule.
+        except Exception as exc:
+            source_stats[src] = f"FAILED: {exc}"
+
+    # The streaming logic above selects a source at the first usable programme.
+    # Re-read each selected source once so that we can copy its complete
+    # current/future schedule for the channel, rather than only that first
+    # programme.
+    final_programmes = {target: [] for target in selected_source}
+    seen = set()
+
+    selected_by_source = {}
+    for target, (idx, src, source_id) in selected_source.items():
+        selected_by_source.setdefault(src, []).append((target, source_id))
+
+    for src, targets in selected_by_source.items():
+        try:
+            data = fetch(src)
+            wanted_ids = {source_id: target for target, source_id in targets}
+            for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):
+                if elem.tag != "programme":
+                    continue
+                source_id = elem.attrib.get("channel", "").strip()
+                target = wanted_ids.get(source_id)
+                if not target:
+                    elem.clear()
+                    continue
+
+                start_dt = stamp(elem.attrib.get("start", ""))
+                stop_dt = stamp(elem.attrib.get("stop", "")) if elem.attrib.get("stop") else None
+                if not start_dt or start_dt > upper or (stop_dt and stop_dt < lower):
+                    elem.clear()
+                    continue
 
                 attrs = dict(elem.attrib)
                 attrs["channel"] = target
-                p = ET.SubElement(root, "programme", attrs)
+                title = (elem.findtext("title") or "").strip()
+                key = (target, attrs.get("start", ""), attrs.get("stop", ""), title)
+                if key in seen:
+                    elem.clear()
+                    continue
+
+                seen.add(key)
+                p = ET.Element("programme", attrs)
                 for child in list(elem):
-                    p.append(child)
-                programme_count += 1
+                    p.append(ET.fromstring(ET.tostring(child, encoding="utf-8")))
+                final_programmes[target].append(p)
                 elem.clear()
         except Exception as exc:
-            print(f"EPG source failed: {src}: {exc}")
+            print(f"EPG source failed during selected-source read: {src}: {exc}")
+
+    programme_count = 0
+    for target in sorted(mapped_targets):
+        if target not in final_programmes:
+            continue
+        for p in final_programmes[target]:
+            root.append(p)
+            programme_count += 1
+
+    print(f"EPG source selection: {len(selected_source)} channels assigned a single authoritative source")
+    for target in sorted(selected_source):
+        idx, src, source_id = selected_source[target]
+        print(f"  {target} <- {source_id} via priority {idx}: {src}")
 
     if programme_count == 0:
         raise SystemExit("No current/future programmes were generated; refusing to publish empty guide")
