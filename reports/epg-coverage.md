@@ -1,32 +1,32 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-04T17:42:23+00:00**
+Generated: **2026-10-05T03:53:32+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **268**
-- Channels with an EPG mapping: **224**
-- Current/future programme coverage: **211/268 (78.7%)**
-- No guide mapping found: **44**
+- Active Indian channels audited: **274**
+- Channels with an EPG mapping: **228**
+- Current/future programme coverage: **215/274 (78.5%)**
+- No guide mapping found: **46**
 
 ## Source Status
 
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 817 current/future IDs; 114117 programme rows
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 531 current/future IDs; 21230 programme rows
-- **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 68994 programme rows
-- **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19291 programme rows
+- **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 66763 programme rows
+- **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19860 programme rows
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml — 394 channel IDs; 0 current/future IDs; 660 programme rows
-- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 10 current/future IDs; 62556 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 765 channel IDs; 765 current/future IDs; 83105 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1479 channel IDs; 1455 current/future IDs; 94938 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 283 channel IDs; 283 current/future IDs; 13810 programme rows
+- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 695 current/future IDs; 72200 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 765 channel IDs; 765 current/future IDs; 82738 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1479 channel IDs; 1455 current/future IDs; 95569 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 283 channel IDs; 283 current/future IDs; 8624 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 112 channel IDs; 99 current/future IDs; 23617 programme rows
-- **OK** — https://avkb.short.gy/epg.xml.gz — 1933 channel IDs; 541 current/future IDs; 60655 programme rows
-- **OK** — https://avkb.short.gy/jioepg.xml.gz — 1306 channel IDs; 0 current/future IDs; 42910 programme rows
-- **OK** — https://avkb.short.gy/tsepg.xml.gz — 717 channel IDs; 695 current/future IDs; 72200 programme rows
+- **OK** — https://avkb.short.gy/epg.xml.gz — 2273 channel IDs; 1032 current/future IDs; 71809 programme rows
+- **OK** — https://avkb.short.gy/jioepg.xml.gz — 1306 channel IDs; 191 current/future IDs; 42744 programme rows
+- **OK** — https://avkb.short.gy/tsepg.xml.gz — 717 channel IDs; 716 current/future IDs; 73082 programme rows
 
 ## Channels Requiring Attention
 
@@ -59,6 +59,8 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Movies | Goldmines Action | GoldminesAction.in | - | NO_GUIDE_HIT |
 | Indian Music | Hindi Hits | HindiHits.in | - | NO_GUIDE_HIT |
 | Indian Movies | Hindi Movies | custom.hindi.movies | - | NO_GUIDE_HIT |
+| Indian Bangla | JTV Bangla | custom.jtvbangla | - | NO_GUIDE_HIT |
+| Indian Bangla | Jhankar TV | JhankarTV.ca | - | NO_GUIDE_HIT |
 | Indian Bangla | Jtv Classic | custom.jtv.classic | - | NO_GUIDE_HIT |
 | Indian Entertainment | Kairali Arabia | KairaliArabia.in | - | NO_GUIDE_HIT |
 | Indian Music | Kalika TV | KalikaTV.in@SD | - | NO_GUIDE_HIT |
@@ -94,6 +96,6 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 
 - Playlist EPG references: **OK**
 - Guide channel IDs published: **344**
-- Mapped playlist IDs present in guide: **288/295 (97.6%)**
-- Mapped playlist IDs with current/future programmes: **274/295 (92.9%)**
+- Mapped playlist IDs present in guide: **288/299 (96.3%)**
+- Mapped playlist IDs with current/future programmes: **272/299 (91.0%)**
 - This validation is against the guide currently present in the working tree/publish candidate.
