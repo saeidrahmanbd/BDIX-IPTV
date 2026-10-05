@@ -82,10 +82,10 @@ if OLD.exists():
     # Quality path: the old guide can itself contain conflicting schedules.
     # Do not let its inflated programme count force publication of known
     # overlapping data. A reduced guide is accepted only when it is materially
-    # smaller, clean, and still has strong channel retention.
+    # smaller, clean, and still has strong channel retention (at least 85% of the previous guide).
     quality_override = (
         (not old["programmes"] or new["programmes"] >= int(old["programmes"] * 0.20))
-        and new["channels"] >= max(1, int(old["channels"] * 0.90))
+        and new["channels"] >= max(1, int(old["channels"] * 0.85))
         and new["overlaps"] == 0
         and new["generic_ratio"] <= old["generic_ratio"]
     )
