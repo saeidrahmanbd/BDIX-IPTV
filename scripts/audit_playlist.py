@@ -361,10 +361,16 @@ for group in category_transitions:
     last_index = max(last_index, index)
 
 alphabetical_order_issues = []
+import unicodedata
+
+def natural_sort_key(value):
+    value = unicodedata.normalize("NFKD", value).casefold().strip()
+    return [int(part) if part.isdigit() else part for part in re.split(r"(\\d+)", value)]
+
 for group in category_transitions:
     names = [display_name(info).strip() for info, url in entries if attrs(info).get("group-title", "").strip() == group]
     for prev, cur in zip(names, names[1:]):
-        if cur.casefold() < prev.casefold():
+        if natural_sort_key(cur) < natural_sort_key(prev):
             alphabetical_order_issues.append((group, prev, cur))
 
 lines = [
