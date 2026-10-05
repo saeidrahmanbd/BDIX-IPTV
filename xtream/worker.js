@@ -295,9 +295,17 @@ function findEpgPrograms(epg,entry){
   return [];
 }
 function toTimestamp(s){
-  const m=/^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/.exec(String(s||""));
+  // XMLTV timestamps may carry an explicit timezone offset, e.g.
+  // "20261005124600 +0530". Parse that offset instead of treating the
+  // clock fields as UTC; Xtream now_playing/start_timestamp otherwise drift
+  // by the timezone amount and can highlight an old programme as current.
+  const m=/^(\\d{4})(\\d{2})(\\d{2})(\\d{2})(\\d{2})(\\d{2})(?:\\s*([+-])(\\d{2})(\\d{2}))?/.exec(String(s||"").trim());
   if(!m) return 0;
-  return Math.floor(Date.UTC(+m[1],+m[2]-1,+m[3],+m[4],+m[5],+m[6])/1000);
+  const base=Date.UTC(+m[1],+m[2]-1,+m[3],+m[4],+m[5],+m[6]);
+  if(!m[7]) return Math.floor(base/1000);
+  const offsetMinutes=(+m[8]*60)+(+m[9]);
+  const offsetMs=offsetMinutes*60*1000*(m[7]==="+"?1:-1);
+  return Math.floor((base-offsetMs)/1000);
 }
 function epgListings(entry,programs){
   return programs.map((p,i)=>({
