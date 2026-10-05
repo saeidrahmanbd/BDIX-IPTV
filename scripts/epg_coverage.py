@@ -152,7 +152,12 @@ def main():
                     live = live or cid in future
 
         old_epg=prev.get("epg_id","").strip()
-        epg_id=" | ".join(hits[:8]) or old_epg
+        # Indian Bangla channels must retain one primary provider ID.
+        # Multiple provider schedules are a major source of false EPG matches.
+        if ch["group"] == "Indian Bangla":
+            epg_id=(hits[0] if hits else old_epg)
+        else:
+            epg_id=" | ".join(hits[:8]) or old_epg
         if live: status="MAPPED"
         elif hits: status="MAPPED_ID_ONLY" if total==0 else "MAPPED_ENDED"
         elif old_epg: status="MAPPED_NOT_CURRENTLY_FOUND"
