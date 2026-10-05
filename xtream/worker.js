@@ -12,7 +12,7 @@ const EPG_URLS = [
   "https://iptv-epg.org/files/epg-in.xml",
   "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz"
 ];
-const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v11";
+const EPG_CACHE_KEY = "https://bdix-iptv.internal/epg-xml-v12";
 const EPG_CACHE_TTL = 900;
 // Direct M3U EPG endpoint deployment trigger. v10: IN1 + complementary IN4.
 
@@ -299,7 +299,7 @@ function toTimestamp(s){
   // "20261005124600 +0530". Parse that offset instead of treating the
   // clock fields as UTC; Xtream now_playing/start_timestamp otherwise drift
   // by the timezone amount and can highlight an old programme as current.
-  const m=/^(\\d{4})(\\d{2})(\\d{2})(\\d{2})(\\d{2})(\\d{2})(?:\\s*([+-])(\\d{2})(\\d{2}))?/.exec(String(s||"").trim());
+  const m=/^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})(?:\s*([+-])(\d{2})(\d{2}))?/.exec(String(s||"").trim());
   if(!m) return 0;
   const base=Date.UTC(+m[1],+m[2]-1,+m[3],+m[4],+m[5],+m[6]);
   if(!m[7]) return Math.floor(base/1000);
