@@ -30,14 +30,11 @@ SOURCES = [
     "https://avkb.short.gy/tsepg.xml.gz",
 ]
 
-# Per-channel broadcast-delay corrections, in hours. These are applied to the
-# published XMLTV timestamps after source conflict cleanup.
-# Colors Cineplex was live on "Dumdaar Khiladi" at 18:11 Bangladesh time on
-# 2026-10-05 while the source guide still placed that programme at 16:08,
-# indicating a verified +2h stream/EPG alignment offset.
-CHANNEL_TIME_OFFSETS = {
-    "ColorsCineplex.in@SD": timedelta(hours=2),
-}
+# No per-channel broadcast-delay correction is applied here.
+# Colors Cineplex's source schedule was already aligned with the live stream;
+# the previous +2h correction was incorrect and has been removed.
+
+CHANNEL_TIME_OFFSETS = {}
 
 GENERIC_TITLES = {
     "movie", "program", "programme", "entertainment", "live", "live tv",
