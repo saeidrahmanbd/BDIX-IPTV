@@ -30,6 +30,15 @@ SOURCES = [
     "https://avkb.short.gy/tsepg.xml.gz",
 ]
 
+# Per-channel broadcast-delay corrections, in hours. These are applied to the
+# published XMLTV timestamps after source conflict cleanup.
+# Colors Cineplex was live on "Dumdaar Khiladi" at 18:11 Bangladesh time on
+# 2026-10-05 while the source guide still placed that programme at 16:08,
+# indicating a verified +2h stream/EPG alignment offset.
+CHANNEL_TIME_OFFSETS = {
+    "ColorsCineplex.in@SD": timedelta(hours=2),
+}
+
 GENERIC_TITLES = {
     "movie", "program", "programme", "entertainment", "live", "live tv",
     "tba", "to be announced", "unknown", "schedule", "telecast", "show",
@@ -108,6 +117,27 @@ def title_score(title):
 
 def clone_children(elem):
     return [ET.fromstring(ET.tostring(child, encoding="utf-8")) for child in list(elem)]
+
+def shift_xmltv_timestamp(value, delta):
+    """Shift an XMLTV timestamp while preserving its original timezone format."""
+    raw = (value or "").strip()
+    if not raw or not delta:
+        return raw
+    try:
+        base = raw[:14]
+        suffix = raw[14:].strip()
+        dt = datetime.strptime(base, "%Y%m%d%H%M%S")
+        if suffix and re.fullmatch(r"[+-]\d{4}", suffix):
+            sign = 1 if suffix[0] == "+" else -1
+            hh = int(suffix[1:3])
+            mm = int(suffix[3:5])
+            tz = timezone(sign * timedelta(hours=hh, minutes=mm))
+            dt = dt.replace(tzinfo=tz) + delta
+            return dt.strftime("%Y%m%d%H%M%S") + " " + suffix
+        dt = dt + delta
+        return dt.strftime("%Y%m%d%H%M%S") + ((" " + suffix) if suffix else "")
+    except Exception:
+        return raw
 
 def interval_weight(record):
     """Weight programmes primarily by count, then by title/source quality.
@@ -296,8 +326,14 @@ def main():
         removed_count += len(records) - len(cleaned)
         generic_counts += sum(1 for r in cleaned if title_score(r["title"]) == 0)
 
+        channel_offset = CHANNEL_TIME_OFFSETS.get(target, timedelta(0))
         for r in cleaned:
-            p = ET.Element("programme", r["attrs"])
+            attrs = dict(r["attrs"])
+            if channel_offset:
+                attrs["start"] = shift_xmltv_timestamp(attrs.get("start", ""), channel_offset)
+                if attrs.get("stop"):
+                    attrs["stop"] = shift_xmltv_timestamp(attrs.get("stop", ""), channel_offset)
+            p = ET.Element("programme", attrs)
             for child in r["children"]:
                 p.append(ET.fromstring(ET.tostring(child, encoding="utf-8")))
             root.append(p)
