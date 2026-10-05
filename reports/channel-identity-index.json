@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-05T04:01:57+00:00",
+  "generated": "2026-10-05T04:10:50+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -1124,9 +1124,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
-      "backup": 4
+      "backup": 5
     },
     "channels": {
       "names": [
@@ -3964,9 +3964,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
-      "backup": 2
+      "backup": 3
     },
     "hidost": {
       "names": [
@@ -5522,9 +5522,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
-      "backup": 3
+      "backup": 4
     },
     "nexustv": {
       "names": [
@@ -5710,9 +5710,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
-      "backup": 5
+      "backup": 6
     },
     "ntveurope": {
       "names": [
