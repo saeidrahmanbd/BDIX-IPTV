@@ -30,11 +30,11 @@ SOURCES = [
     "https://avkb.short.gy/tsepg.xml.gz",
 ]
 
-# No per-channel broadcast-delay correction is applied here.
-# Colors Cineplex's source schedule was already aligned with the live stream;
-# the previous +2h correction was incorrect and has been removed.
-
-CHANNEL_TIME_OFFSETS = {}
+# Per-channel broadcast-delay corrections, in hours.
+# Colors Cineplex's upstream guide is 2 hours behind the live stream.
+CHANNEL_TIME_OFFSETS = {
+    "ColorsCineplex.in@SD": timedelta(hours=2),
+}
 
 GENERIC_TITLES = {
     "movie", "program", "programme", "entertainment", "live", "live tv",
