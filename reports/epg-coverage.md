@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-05T04:10:48+00:00**
+Generated: **2026-10-05T04:35:36+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
@@ -20,7 +20,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19860 programme rows
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml — 394 channel IDs; 0 current/future IDs; 660 programme rows
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 695 current/future IDs; 72200 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 765 channel IDs; 765 current/future IDs; 82738 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 765 channel IDs; 764 current/future IDs; 82738 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1479 channel IDs; 1455 current/future IDs; 95569 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 283 channel IDs; 283 current/future IDs; 8624 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 112 channel IDs; 99 current/future IDs; 23617 programme rows
@@ -88,8 +88,8 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Movies | Starnet | Starnet.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | The Movie Club | TheMovieClub.in@HD | - | NO_GUIDE_HIT |
 | Indian Movies | The Movie Club +2 | TheMovieClub.in@Plus2 | - | NO_GUIDE_HIT |
-| Indian Music | UTV Palakkad | UTVPalakkad.in@SD | - | NO_GUIDE_HIT |
-| Indian Music | VCV | VCV.in@SD | - | NO_GUIDE_HIT |
+| Indian Entertainment | UTV Palakkad | UTVPalakkad.in@SD | - | NO_GUIDE_HIT |
+| Indian Entertainment | VCV | VCV.in@SD | - | NO_GUIDE_HIT |
 | Indian Music | Zoom Music | custom.zoommusic | - | NO_GUIDE_HIT |
 
 ## Published Guide Validation
@@ -97,5 +97,5 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 - Playlist EPG references: **OK**
 - Guide channel IDs published: **344**
 - Mapped playlist IDs present in guide: **288/299 (96.3%)**
-- Mapped playlist IDs with current/future programmes: **271/299 (90.6%)**
+- Mapped playlist IDs with current/future programmes: **270/299 (90.3%)**
 - This validation is against the guide currently present in the working tree/publish candidate.

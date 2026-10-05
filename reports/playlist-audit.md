@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-05T04:11:44.818414+00:00**
+Generated: **2026-10-05T04:36:26.538686+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -22,7 +22,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
-- Alphabetical ordering issues: **1**
+- Alphabetical ordering issues: **2**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 
@@ -763,6 +763,7 @@ None.
 
 Category block order: OK.
 - **Bangladesh** — **Channel 16** appears after **Channel 9**
+- **International** — **24 Hour Free Movies** appears after **4ever Music**
 
 ## Suspicious URLs
 
