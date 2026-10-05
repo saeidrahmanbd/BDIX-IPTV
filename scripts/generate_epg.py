@@ -109,62 +109,60 @@ def title_score(title):
 def clone_children(elem):
     return [ET.fromstring(ET.tostring(child, encoding="utf-8")) for child in list(elem)]
 
-def schedule_quality(records, source_index):
-    if not records:
-        return -1.0
-    ordered = sorted(records, key=lambda r: (r["start_dt"], r["stop_dt"] or r["start_dt"]))
-    named = sum(1 for r in ordered if title_score(r["title"]) > 0)
-    named_ratio = named / len(ordered)
+def interval_weight(record):
+    """Weight programmes primarily by count, then by title/source quality.
 
-    total_span = max(
-        1.0,
-        (max((r["stop_dt"] or r["start_dt"]) for r in ordered) - min(r["start_dt"] for r in ordered)).total_seconds(),
-    )
-    overlap_seconds = 0.0
-    previous_stop = None
-    for r in ordered:
-        stop = r["stop_dt"] or r["start_dt"]
-        if previous_stop and r["start_dt"] < previous_stop:
-            overlap_seconds += (min(stop, previous_stop) - r["start_dt"]).total_seconds()
-        if previous_stop is None or stop > previous_stop:
-            previous_stop = stop
-    overlap_ratio = min(1.0, overlap_seconds / total_span)
-    coverage_days = min(7.0, total_span / 86400.0)
-    count_factor = min(1.0, len(ordered) / 40.0)
-    priority_bonus = max(0.0, (len(SOURCES) - source_index) / len(SOURCES)) * 5.0
-
-    return (
-        named_ratio * 45.0
-        + (1.0 - overlap_ratio) * 30.0
-        + min(1.0, coverage_days / 7.0) * 10.0
-        + count_factor * 10.0
-        + priority_bonus
-    )
-
-def interval_weight(record, source_index):
+    The old generator selected one provider for an entire channel. That
+    discarded large amounts of valid non-overlapping programming. Here all
+    mapped providers contribute candidates; interval scheduling removes only
+    conflicts. A high base weight makes programme count the dominant objective,
+    while modest bonuses prefer named titles and higher-priority sources when
+    two candidates compete for the same time.
+    """
     start = record["start_dt"]
     stop = record["stop_dt"]
     duration = (stop - start).total_seconds() if stop else 0
     hours = duration / 3600.0 if duration > 0 else 0
-    quality = title_score(record["title"])
-    weight = 40.0 + quality * 40.0
+
+    weight = 100.0
+
+    # Prefer real programme names over placeholders such as "Movie".
+    if title_score(record["title"]) > 0:
+        weight += 8.0
+
+    # Earlier approved sources win close quality ties, but source priority
+    # must never outweigh retaining an additional non-overlapping programme.
+    source_index = record["source_index"]
+    weight += max(0.0, (len(SOURCES) - source_index) / len(SOURCES)) * 3.0
+
+    # Small sanity bonus only; duration is deliberately not allowed to
+    # dominate programme count.
     if 0.25 <= hours <= 8:
-        weight += 10.0
+        weight += 1.0
     elif hours > 12:
-        weight -= min(20.0, (hours - 12) * 1.5)
-    weight += max(0.0, (len(SOURCES) - source_index) / len(SOURCES)) * 2.0
+        weight -= min(5.0, (hours - 12) * 0.25)
+
     return max(1.0, weight)
 
-def clean_schedule(records, source_index):
-    """Remove exact duplicates and overlapping programmes using weighted intervals."""
+
+def clean_schedule(records):
+    """Deduplicate exact records and remove only true time conflicts."""
     unique = {}
     for r in records:
         if not r["stop_dt"] or r["stop_dt"] <= r["start_dt"]:
             continue
+
+        # Same channel/start/stop/title from several providers is one
+        # programme. Keep the best titled/highest-priority representation.
         key = (r["start_dt"], r["stop_dt"], normalized_title(r["title"]))
         old = unique.get(key)
-        if old is None or title_score(r["title"]) > title_score(old["title"]):
+        if old is None:
             unique[key] = r
+        else:
+            old_quality = (title_score(old["title"]), -old["source_index"])
+            new_quality = (title_score(r["title"]), -r["source_index"])
+            if new_quality > old_quality:
+                unique[key] = r
 
     items = sorted(
         unique.values(),
@@ -173,6 +171,9 @@ def clean_schedule(records, source_index):
     if not items:
         return []
 
+    # Weighted interval scheduling across ALL source candidates. This keeps
+    # non-overlapping programmes from different providers instead of throwing
+    # them away merely because another provider was selected for the channel.
     stops = [r["stop_dt"] for r in items]
     prev = [bisect.bisect_right(stops, r["start_dt"]) - 1 for r in items]
 
@@ -183,9 +184,11 @@ def clean_schedule(records, source_index):
     for i, r in enumerate(items, start=1):
         skip_score = dp_score[i - 1]
         skip_count = dp_count[i - 1]
+
         j = prev[i - 1] + 1
-        take_score = dp_score[j] + interval_weight(r, source_index)
+        take_score = dp_score[j] + interval_weight(r)
         take_count = dp_count[j] + 1
+
         if (take_score > skip_score + 1e-9) or (
             abs(take_score - skip_score) <= 1e-9 and take_count > skip_count
         ):
@@ -204,6 +207,7 @@ def clean_schedule(records, source_index):
             i = prev[i - 1] + 1
         else:
             i -= 1
+
     chosen.reverse()
     return chosen
 
@@ -266,19 +270,12 @@ def main():
         except Exception as exc:
             source_stats[src] = f"FAILED: {exc}"
 
-    # Choose one authoritative provider schedule per playlist channel.
-    # Quality dominates source priority: named titles and low overlap matter
-    # more than simply being earlier in SOURCES.
-    selected = {}
-    for target in sorted(mapped_targets):
-        options = []
-        for (candidate_target, source_index, source_id), records in candidates.items():
-            if candidate_target != target:
-                continue
-            options.append((schedule_quality(records, source_index), source_index, source_id, records))
-        if options:
-            options.sort(key=lambda x: (-x[0], x[1], x[2]))
-            selected[target] = options[0]
+    # Keep every mapped provider as a candidate. Do NOT choose one provider
+    # for an entire channel: that was the reason the previous candidate guide
+    # collapsed from ~77k programmes to ~21k and failed the publish gate.
+    by_target = {}
+    for (target, source_index, source_id), records in candidates.items():
+        by_target.setdefault(target, []).extend(records)
 
     root = ET.Element("tv", {
         "generator-info-name": "BDIX-IPTV EPG",
@@ -289,30 +286,34 @@ def main():
         ET.SubElement(ch, "display-name").text = channels[target]
 
     final_count = 0
-    overlap_removed = 0
+    raw_count = 0
+    removed_count = 0
     generic_counts = 0
-    for target in sorted(selected):
-        score, source_index, source_id, records = selected[target]
-        cleaned = clean_schedule(records, source_index)
-        overlap_removed += len(records) - len(cleaned)
+    for target in sorted(mapped_targets):
+        records = by_target.get(target, [])
+        cleaned = clean_schedule(records)
+        raw_count += len(records)
+        removed_count += len(records) - len(cleaned)
         generic_counts += sum(1 for r in cleaned if title_score(r["title"]) == 0)
+
         for r in cleaned:
             p = ET.Element("programme", r["attrs"])
             for child in r["children"]:
                 p.append(ET.fromstring(ET.tostring(child, encoding="utf-8")))
             root.append(p)
             final_count += 1
+
         print(
-            f"  {target} <- {source_id} via priority {source_index} "
-            f"(quality {score:.1f}, raw {len(records)}, clean {len(cleaned)})"
+            f"  {target}: candidates {len(records)}, clean {len(cleaned)}, "
+            f"removed {len(records) - len(cleaned)}"
         )
 
     if final_count == 0:
         raise SystemExit("No current/future programmes were generated; refusing to publish empty guide")
 
-    print(f"EPG source selection: {len(selected)} channels assigned the best available provider schedule")
-    print(f"EPG cleanup: removed {overlap_removed} duplicate/overlapping programmes")
-    print(f"EPG cleanup: retained {generic_counts} generic-title programmes where no better title was available")
+    print(f"EPG candidate pool: {raw_count} mapped programmes before cleanup")
+    print(f"EPG cleanup: removed {removed_count} exact-duplicate/overlapping programmes")
+    print(f"EPG cleanup: retained {generic_counts} generic-title programmes where no named alternative won")
     print(f"EPG generated: {len(mapped_targets)} mapped channels, {final_count} programmes")
 
     ET.indent(root, space="  ")
