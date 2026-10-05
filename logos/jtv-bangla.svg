@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+<rect width="800" height="450" rx="48" fill="#14141c"/>
+<rect x="70" y="70" width="660" height="300" rx="50" fill="#2d2d3c" stroke="#fff" stroke-width="18"/>
+<text x="400" y="245" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="125" font-weight="700" fill="#fff">JTV</text>
+<text x="400" y="415" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" letter-spacing="8" fill="#fff">BANGLA</text>
+</svg>
