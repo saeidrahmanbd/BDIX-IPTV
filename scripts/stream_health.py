@@ -13,7 +13,7 @@ PLAYLIST=Path("IPTV-Playlist.m3u")
 REPORT=Path("reports/stream-health.md")
 HISTORY=Path("reports/stream-health-history.json")
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
-GROUP_EXCLUDE={"New Channels","New Backup","Not Playing"}
+GROUP_EXCLUDE={"New","New Channels","New Backup","Not Playing"}
 SENSITIVE_QUERY={"token","sig","signature","jwt","session","key","authorization","hdnts","expires","e"}
 
 def attrs(s): return dict(ATTR.findall(s))
@@ -132,7 +132,7 @@ def main():
     else: lines.append("None.")
     lines += ["","## Policy","","- Health failures never delete or reclassify streams automatically.",
               "- Backup streams remain protected even after repeated failures.",
-              "- New Channels and New Backup are excluded from automated health promotion decisions.",
+              "- New review entries are excluded from automated health promotion decisions.",
               "- Persistent failures are a review queue for Not Playing; they are not automatic deletion candidates."]
     REPORT.parent.mkdir(parents=True,exist_ok=True); REPORT.write_text("\n".join(lines)+"\n",encoding="utf-8")
     print(f"Stream health: tested={len(results)} ok={ok} failed={fail} persistent={len(persistent)}")
