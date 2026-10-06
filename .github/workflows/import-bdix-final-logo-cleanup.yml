@@ -1,0 +1,77 @@
+name: One-time BDIX final logo cleanup
+on:
+  push:
+    paths:
+      - .github/workflows/import-bdix-final-logo-cleanup.yml
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check pillow cairosvg
+      - name: Import final exact logos
+        run: |
+          python - <<'PY'
+          import io,re,ssl,urllib.request
+          from pathlib import Path
+          from PIL import Image
+          import cairosvg
+          P=Path("BDIX-Playlist.m3u"); L=Path("logos"); L.mkdir(exist_ok=True)
+          RAW="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
+          C=ssl._create_unverified_context()
+          S={
+           "ISHAARA TV":"https://graph.facebook.com/IsharaTV/picture?width=800&height=800",
+           "CBS NEWS":"https://www.cbsnews.com/favicon.ico",
+           "CNN INTERNATIONLA":"https://cdn.cnn.com/cnn/.element/img/3.0/global/misc/cnn-logo.png",
+           "IND: ZEE BUSINESS":"https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/india/zee-business-in.png",
+           "IND: ZEE NEWS":"https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/india/zee-news-in.png",
+           "NDTV":"https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/india/ndtv-24x7-in.png",
+           "SyFy":"https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/syfy-us.png",
+           "US: FOX NEWS":"https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-news-us.png",
+           "US: SKY NEWS":"https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-news-uk.png",
+           "DISCOVERY BANGLA":RAW+"discovery.png",
+           "NASA TV":"https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg",
+           "VIASAT NATURE":"https://i.imgur.com/8BPZ18l.png",
+           "IN: SONY SPORTS TEN 2 HD":"https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen2_HD_Logo_CLR.png",
+           "PK: GEO SUPER":"https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/pakistan/geo-super-pk.png",
+          }
+          # Adventure 4K is intentionally excluded: no exact trustworthy source was found.
+          def slug(s): return re.sub(r"[^a-z0-9]+","-",s.lower()).strip("-")
+          def get(u):
+            q=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0"})
+            with urllib.request.urlopen(q,timeout=15,context=C) as r:return r.read(),r.headers.get("Content-Type","")
+          lines=P.read_text(encoding="utf-8-sig").replace("\r","").splitlines()
+          done=[]; fail=[]
+          for name,url in S.items():
+            try:
+              d,ct=get(url)
+              try: im=Image.open(io.BytesIO(d)).convert("RGBA")
+              except Exception: im=Image.open(io.BytesIO(cairosvg.svg2png(bytestring=d,output_width=1000))).convert("RGBA")
+              fn=slug(name)+".png"; im.save(L/fn,"PNG",optimize=True); ref=RAW+fn
+              for i,line in enumerate(lines):
+                if line.startswith("#EXTINF") and name.lower() in line.lower():
+                  comma=line.find(",")
+                  if comma>0:
+                    if 'tvg-logo="' in line: line=re.sub(r'(tvg-logo=")[^"]*(")',r'\1'+ref+r'\2',line,1)
+                    else: line=line[:comma]+' tvg-logo="'+ref+'"'+line[comma:]
+                    lines[i]=line; done.append(name); break
+            except Exception as e: fail.append(name+" ["+str(e)+"]")
+          P.write_text("\n".join(lines).rstrip()+"\n",encoding="utf-8")
+          print("Imported",len(done),"final logos")
+          print("Failed",len(fail))
+          for x in fail: print(" -",x)
+          PY
+      - name: Commit and remove one-time workflow
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          rm -f .github/workflows/import-bdix-final-logo-cleanup.yml .github/workflows/import-bdix-logo-catalogue.yml .github/workflows/import-bdix-missing-logos-v2.yml .github/workflows/import-bdix-missing-logos.yml
+          git add BDIX-Playlist.m3u logos/ .github/workflows/
+          git commit -m "Finish BDIX missing logo cleanup"
+          git push origin HEAD:main
