@@ -32,7 +32,7 @@ Cloudflare recommends Worker Secrets for sensitive values. Do not put the Xtream
 
 ## Categories
 
-The gateway preserves the playlist category structure, including Bangladesh, Indian Bangla, Indian Movies, Indian Music, Indian Entertainment, International, Documentary & Wildlife, Kids, Religious, Sports, Backup and New.
+The gateway preserves the playlist category structure, including Bangladesh, Indian Bangla, Indian Movies, Indian Music, Indian Entertainment, International, Documentary & Wildlife, Kids, Religious, Sports, Backup, New Channels and New Backup.
 
 ## EPG
 
