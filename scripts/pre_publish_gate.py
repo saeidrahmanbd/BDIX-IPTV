@@ -5,7 +5,7 @@ from datetime import datetime,timezone
 from collections import Counter,defaultdict
 from pathlib import Path
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md")
-ATTR=re.compile(r'([\w-]+)="([^"]*)"'); EXCLUDE={"Backup","New","New Backup","New Channels","Not Playing"}
+ATTR=re.compile(r'([\w-]+)="([^"]*)"'); EXCLUDE={"Backup","New Channels","New Backup","New","Not Playing"}
 def attrs(s): return dict(ATTR.findall(s))
 def parse(text):
     lines=text.replace("\r","").splitlines(); out=[]; cur=None
@@ -35,7 +35,7 @@ def main():
         elif not groups:
             removed.append((a.get("tvg-name",""),u))
     blocked_removed=removed
-    old_review={u.lower():a.get("group-title","").strip() for _,a,u in old if a.get("group-title","").strip() in {"New"}}
+    old_review={u.lower():a.get("group-title","").strip() for _,a,u in old if a.get("group-title","").strip() in {"New Channels","New Backup","New"}}
     cur_review={u.lower():a.get("group-title","").strip() for _,a,u in current if a.get("group-title","").strip() in {"New","New Channels","New Backup"}}
     review_reclassified=[u for u,g in old_review.items() if u in cur_review and cur_review[u] != g]
     review_promoted=[u for u,g in old_review.items() if u not in cur_review and any(x.lower()==u for _,_,x in current)]
