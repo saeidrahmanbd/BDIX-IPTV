@@ -53,5 +53,5 @@
 
 ## 2026-10-06
 
-- 🔁 **1 new backup candidate(s) added to New**
+- No meaningful playlist changes detected.
 
