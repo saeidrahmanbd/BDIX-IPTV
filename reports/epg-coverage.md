@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-06T06:23:50+00:00**
+Generated: **2026-10-06T06:29:34+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
@@ -23,7 +23,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 766 channel IDs; 763 current/future IDs; 84539 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1479 channel IDs; 1452 current/future IDs; 95956 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 282 channel IDs; 282 current/future IDs; 15285 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 112 channel IDs; 99 current/future IDs; 23477 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 112 channel IDs; 99 current/future IDs; 23959 programme rows
 - **OK** — https://avkb.short.gy/epg.xml.gz — 2273 channel IDs; 2162 current/future IDs; 72169 programme rows
 - **OK** — https://avkb.short.gy/jioepg.xml.gz — 1303 channel IDs; 1303 current/future IDs; 43304 programme rows
 - **OK** — https://avkb.short.gy/tsepg.xml.gz — 717 channel IDs; 716 current/future IDs; 69972 programme rows
