@@ -13,7 +13,7 @@ PLAYLIST=Path("IPTV-Playlist.m3u")
 REPORT=Path("reports/stream-health.md")
 HISTORY=Path("reports/stream-health-history.json")
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
-GROUP_EXCLUDE={"New","New Channels","New Backup","Not Playing"}
+GROUP_EXCLUDE={"New Channels","New Backup","New","Not Playing"}
 SENSITIVE_QUERY={"token","sig","signature","jwt","session","key","authorization","hdnts","expires","e"}
 
 def attrs(s): return dict(ATTR.findall(s))
