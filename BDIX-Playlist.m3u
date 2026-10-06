@@ -185,7 +185,7 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_7wPmPTsXVGwUN6yfW44Og
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9MYzfW9yl3vvthpUGactZg
 #EXTINF:-1 xui-id="518" tvg-id="Zoom.in" tvg-name="ZOOM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png" tvg-chno="407" channel-id="Zoom.in" group-title="Indian Music",ZOOM
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8MYGUZe1FR5QcCRXHOvR4s
-#EXTINF:-1 xui-id="161665" tvg-id="AndTV.in@SD" tvg-name="&TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ndtv.png" tvg-chno="468" channel-id="AndTV.in@SD" group-title="Indian Entertainment",&TV
+#EXTINF:-1 xui-id="161665" tvg-id="AndTV.in@SD" tvg-name="&TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ndtv.png" tvg-chno="468" channel-id="AndTV.in@SD" group-title="Indian Entertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ndtv.png",&TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h3OWFwPFM8a_zHaNPVE17TI
 #EXTINF:-1 xui-id="18597" tvg-id="custom.bdix.canadaone" tvg-name="CANADA ONE" tvg-chno="503" channel-id="custom.bdix.canadaone" group-title="Indian Entertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canada-one.png",CANADA ONE
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hzcAZuSnjGHbiTAq77NAE40
