@@ -53,5 +53,9 @@
 
 ## 2026-10-06
 
-- No meaningful playlist changes detected.
+- 🆕 **1 new channel candidate(s) added to New Channels**
+- 🔁 **7 new backup candidate(s) added to New Backup**
+
+### New channels
+- Sony 8
 
