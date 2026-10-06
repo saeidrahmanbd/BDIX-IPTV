@@ -1,6 +1,6 @@
 #EXTM3U url-tvg="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg.xml" x-tvg-url="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg.xml"
 #PLAYLIST-STUDIO-NAME:"BDIX-Playlist"
-#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Not Playing"]
+#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports"]
 #EXTINF:-1 xui-id="393" tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="1" channel-id="AnandaTV.bd" group-title="Bangladesh",Ananda TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h--ZmKHl8pVTZucnNBlNFCY
 #EXTINF:-1 xui-id="180657" tvg-id="custom.bdix.anondo" tvg-name="Anondo TV" tvg-chno="39" channel-id="custom.bdix.anondo" group-title="Bangladesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/anondo-tv.png",Anondo TV
