@@ -1,6 +1,6 @@
 # BDIX-IPTV Xtream Gateway
 
-This directory contains a lightweight Xtream Codes-compatible API gateway for the master IPTV-Playlist.m3u.
+This directory contains a lightweight Xtream Codes-compatible API gateway for the master IPTV playlists.
 
 The Worker reads the GitHub playlist, exposes Xtream-style API endpoints, and redirects live playback requests to the original stream URL. It does not re-host or transcode video.
 
@@ -45,3 +45,17 @@ The Worker reads the current GitHub playlist with a short cache. No separate pla
 ## Limitation
 
 Playback uses HTTP 302 redirects to the original stream URLs instead of proxying video through the Worker. Sources that require special Referer/User-Agent headers may need a dedicated proxy later.
+
+## BDIX-Playlist Xtream endpoint
+
+The same Worker also exposes the separate **BDIX-Playlist.m3u** through the `/bdix` base path, using the same Xtream credentials.
+
+For XCIPTV, use the deployed Worker URL with **`/bdix`** appended as the Server URL.
+
+Supported BDIX endpoints:
+- `/bdix/player_api.php?username=USER&password=PASS`
+- `/bdix/get.php?username=USER&password=PASS&type=m3u_plus&output=m3u8`
+- `/bdix/xmltv.php?username=USER&password=PASS`
+- `/bdix/xmltv-public.php`
+
+The original IPTV-Playlist Xtream endpoint remains unchanged at the Worker root.
