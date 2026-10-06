@@ -1,17 +1,17 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-10-06T06:02:03+00:00**
+Generated: **2026-10-06T06:09:50+00:00**
 
-Status: **BLOCK**
+Status: **PASS**
 
 - Current entries: **995**
-- Duplicate stream URLs: **1**
+- Duplicate stream URLs: **0**
 - Primary streams removed: **0**
-- Primary streams quarantined: **1**
+- Primary streams quarantined: **0**
 - Review entries reclassified: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
-- Primary entries missing tvg-chno: **13**
+- Primary entries missing tvg-chno: **0**
 - Entries added this run: **0**
 - Entries removed this run: **0**
 - Entries modified this run: **0**
@@ -20,13 +20,11 @@ Status: **BLOCK**
 1. Never publish duplicate stream URLs.
 2. Never silently remove an existing primary stream.
 3. Never silently promote/reclassify review-queue entries.
-4. Never silently delete New Channels or New Backup review entries.
+4. Never silently delete New review entries.
 5. Never publish duplicate or missing primary channel numbers.
 Added: none
 Removed: none
 Modified metadata entries: 0
-Quarantined primary streams: Bangla Vision -> Backup
+Quarantined primary streams: none
 
-## Blocking Reasons
-- duplicate stream URLs: 1
-- primary entries missing tvg-chno: 13
+No blocking conditions detected.

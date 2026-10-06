@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-06T06:02:02.991501+00:00**
+Generated: **2026-10-06T06:09:50.210167+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -8,8 +8,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Playlist entries: **995**
 - Unique channel IDs: **628**
 - IDs with multiple streams: **181**
-- Duplicate stream URLs: **1**
-- Metadata conflicts: **8**
+- Duplicate stream URLs: **0**
+- Metadata conflicts: **0**
 - Same-name / different-ID collisions: **1**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
@@ -19,9 +19,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Not Playing logo exceptions: **0**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **13**
+- Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **1**
+- Category block-order issues: **0**
 - Alphabetical ordering issues: **2**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
@@ -117,7 +117,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Bangla Vision — Bangladesh — https://tvsen5.aynaott.com/banglavision/index.m3u8
 - Bangla Vision — Backup — https://iptvlive.ahmed-bd-org.workers.dev/banglavision-1/index.m3u8
 - Bangla Vision — Backup — https://tvsen5.aynaott.com/tgUzpPc9r6xw/index.m3u8
-- Bangla Vision — New — https://tvsen5.aynaott.com/tgUzpPc9r6xw/index.m3u8
+- Bangla Vision — New — https://tvsen5.aynaott.com/tgUzpPc9r6xw/tracks-v1a1/mono.ts.m3u8
 ### bbcearth.ca (2 streams)
 - BBC Earth — Documentary & Wildlife — https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist.m3u8
 - BBC Earth — Backup — http://198.195.239.50:8095/BBC.Earth.HD/index.m3u8
@@ -771,7 +771,7 @@ None.
 
 ## Ordering
 
-- category block **New** — unknown category
+Category block order: OK.
 - **Bangladesh** — **Channel 16** appears after **Channel 9**
 - **International** — **24 Hour Free Movies** appears after **4ever Music**
 
@@ -797,14 +797,7 @@ None.
 
 ## Metadata Conflicts
 
-- **9xm.in@sd** — names: 9xm; groups: Indian Music, New; countries: 
-- **anandatv.bd** — names: ananda tv; groups: Bangladesh, New; countries: 
-- **andpictures.in@sd** — names: &pictures; groups: Indian Movies, New; countries: 
-- **banglavision.bd** — names: bangla vision; groups: Bangladesh, New; countries: 
-- **ekusheytv.bd** — names: ekushey tv; groups: Bangladesh, New; countries: 
-- **rtv.bd** — names: rtv; groups: Bangladesh, New; countries: 
-- **sonyentertainmenttelevision.in@sd** — names: sony entertainment tv; groups: Indian Entertainment, New; countries: 
-- **starmovies.in@sd** — names: star movies; groups: International, New; countries: 
+None.
 
 ## Cross-Country Backup Collisions
 
