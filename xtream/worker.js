@@ -137,10 +137,11 @@ function parsePlaylist(text) {
     entries.push({ id:stableId(tvgId+"|"+name+"|"+group+"|"+url), name, tvgId, tvgName, logo, group, channelNo:a["tvg-chno"]||"", url });
     i++;
   }
-  const groups=[]; for(const g of categoryNames) if(!groups.includes(g)) groups.push(g);
-  for(const e of entries) if(!groups.includes(e.group)) groups.push(e.group);
-  const categoryId=new Map(groups.map((g,i)=>[g,String(i+1)]));
-  for(const e of entries) e.categoryId=categoryId.get(e.group)||"0";
+  const groups=[];
+  for(const g of categoryNames){ const clean=normalizeGroup(g); if(clean && !groups.some(x=>groupKey(x)===groupKey(clean))) groups.push(clean); }
+  for(const e of entries){ const match=groups.find(g=>groupKey(g)===groupKey(e.group)); if(match) e.group=match; else if(e.group) groups.push(e.group); }
+  const categoryId=new Map(groups.map((g,i)=>[groupKey(g),String(i+1)]));
+  for(const e of entries) e.categoryId=categoryId.get(groupKey(e.group))||"0";
   return {entries,groups};
 }
 async function getPlaylist(playlistEnv){
