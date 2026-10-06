@@ -5,7 +5,7 @@ from datetime import datetime,timezone
 from collections import Counter,defaultdict
 from pathlib import Path
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md")
-ATTR=re.compile(r'([\w-]+)="([^"]*)"'); EXCLUDE={"Backup","New Backup","New Channels","Not Playing"}
+ATTR=re.compile(r'([\w-]+)="([^"]*)"'); EXCLUDE={"Backup","New","New Backup","New Channels","Not Playing"}
 def attrs(s): return dict(ATTR.findall(s))
 def parse(text):
     lines=text.replace("\r","").splitlines(); out=[]; cur=None
@@ -35,7 +35,7 @@ def main():
         elif not groups:
             removed.append((a.get("tvg-name",""),u))
     blocked_removed=removed
-    old_review={u.lower():a.get("group-title","").strip() for _,a,u in old if a.get("group-title","").strip() in {"New Channels","New Backup"}}
+    old_review={u.lower():a.get("group-title","").strip() for _,a,u in old if a.get("group-title","").strip() in {"New"}}
     cur_review={u.lower():a.get("group-title","").strip() for _,a,u in current if a.get("group-title","").strip() in {"New Channels","New Backup"}}
     review_reclassified=[u for u,g in old_review.items() if u in cur_review and cur_review[u] != g]
     review_promoted=[u for u,g in old_review.items() if u not in cur_review and any(x.lower()==u for _,_,x in current)]
@@ -71,7 +71,7 @@ def main():
            f"- Primary entries missing tvg-chno: **{len(missing)}**",f"- Entries added this run: **{len(added)}**",f"- Entries removed this run: **{len(removed_all)}**",f"- Entries modified this run: **{len(modified)}**","","## Change Summary",
            "1. Never publish duplicate stream URLs.","2. Never silently remove an existing primary stream.",
            "3. Never silently promote/reclassify review-queue entries.",
-           "4. Never silently delete New Channels or New Backup review entries.","5. Never publish duplicate or missing primary channel numbers."]
+           "4. Never silently delete New review entries.","5. Never publish duplicate or missing primary channel numbers."]
     if added:
         lines.append("Added: " + ", ".join(added[:20]) + (" ..." if len(added)>20 else ""))
     else: lines.append("Added: none")
