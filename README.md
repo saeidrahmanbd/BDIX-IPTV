@@ -109,6 +109,8 @@ Primary curated entries are protected from indiscriminate automatic changes.
 2. Existing primary streams are not silently removed.
 3. Backup streams are never deleted because a health check fails.
 4. New Channels and New Backup are separate user-controlled review queues for manual checking and sorting.
+5. Deleting a candidate from New Channels or New Backup records a persistent discovery rejection, so the same candidate does not return on the next run.
+6. To deliberately allow a rejected candidate again, remove its entry from `reports/discovery-state.json` and commit the change.
 5. Health failures become review candidates, not automatic deletion decisions.
 6. Dashboard figures are generated from the current playlist and current reports.
 7. Every maintenance run records quality metrics.
