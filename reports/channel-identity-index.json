@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-06T11:20:42+00:00",
+  "generated": "2026-10-06T11:25:14+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -7715,7 +7715,7 @@
         "New Backup",
         "Not Playing"
       ],
-      "streams": 7,
+      "streams": 8,
       "primary": 0,
       "backup": 4
     },

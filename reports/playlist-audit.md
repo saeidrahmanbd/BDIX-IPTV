@@ -1,11 +1,11 @@
 # Playlist Audit
-Generated: **2026-10-06T11:21:35.575973+00:00**
+Generated: **2026-10-06T11:26:02.987003+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1013**
+- Playlist entries: **1014**
 - Unique channel IDs: **631**
 - IDs with multiple streams: **182**
 - Duplicate stream URLs: **0**
@@ -15,14 +15,14 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - IDs with multiple logo references: **1**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **4**
-- Logo references checked: **1013**
+- Logo references checked: **1014**
 - Not Playing logo exceptions: **1**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **3**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **11**
-- Alphabetical ordering issues: **9**
+- Alphabetical ordering issues: **16**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 
@@ -654,11 +654,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Sony AATH — Backup — http://198.195.239.50:8095/SONY.AAT/index.m3u8
 - Sony AATH — Backup — https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8
 - Sony AATH — Backup — https://stream.ottplus.live/live/sony_aath_abr/index.m3u8
-### sonyentertainmenttelevision.in@sd (6 streams)
+### sonyentertainmenttelevision.in@sd (7 streams)
 - Sony Entertainment TV — Backup — http://198.195.239.50:8095/SONY.ENT.HD/index.m3u8
 - Sony Entertainment TV — Backup — http://38.96.178.205/SONYHD/index.m3u8
 - Sony Entertainment TV — Backup — https://drk6xq0vhn.gpcdn.net/live/sony_ent_hd_abr/index.m3u8
 - Sony Entertainment TV — Backup — https://stream.ottplus.live/live/sony_ent_sd_abr/index.m3u8
+- Sony Entertainment TV — New Backup — https://stream.ottplus.live/live/sony_ent_hd_abr/index.m3u8
 - Sony Entertainment TV — Not Playing — https://drk6xq0vhn.gpcdn.net/live/sony_ent_sd_abr/index.m3u8
 - Sony Entertainment TV — Not Playing — http://202.70.146.135:8000/play/a005/index.m3u8
 ### sonymax.in@sd (3 streams)
@@ -801,11 +802,18 @@ None.
 - category block **New Backup** — out of canonical block order
 - **New Channels** — **Sony 8** appears after **Swantham**
 - **New Backup** — **Amrita TV** appears after **Asian TV**
-- **New Backup** — **Aakaash Aath** appears after **WildEarth**
+- **New Backup** — **Sony Entertainment TV** appears after **WildEarth**
+- **New Backup** — **Aakaash Aath** appears after **Sony Entertainment TV**
 - **New Backup** — **Zee Bangla Cinema** appears after **Zee Cinema**
 - **New Backup** — **Jalsha Movies** appears after **Zee Bangla Cinema**
 - **New Backup** — **Amrita TV** appears after **Asian TV**
-- **New Backup** — **Aakaash Aath** appears after **WildEarth**
+- **New Backup** — **Sony Entertainment TV** appears after **WildEarth**
+- **New Backup** — **Aakaash Aath** appears after **Sony Entertainment TV**
+- **New Backup** — **Zee Bangla Cinema** appears after **Zee Cinema**
+- **New Backup** — **Jalsha Movies** appears after **Zee Bangla Cinema**
+- **New Backup** — **Amrita TV** appears after **Asian TV**
+- **New Backup** — **Sony Entertainment TV** appears after **WildEarth**
+- **New Backup** — **Aakaash Aath** appears after **Sony Entertainment TV**
 - **New Backup** — **Zee Bangla Cinema** appears after **Zee Cinema**
 - **New Backup** — **Jalsha Movies** appears after **Zee Bangla Cinema**
 
@@ -845,7 +853,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1008**
+- Healthy/local references: **1009**
 - missing: **5**
 - broken-local: **0**
 - external: **0**
