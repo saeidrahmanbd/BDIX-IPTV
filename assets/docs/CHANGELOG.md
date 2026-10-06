@@ -53,5 +53,10 @@
 
 ## 2026-10-06
 
-- No meaningful playlist changes detected.
+- 🗑️ **2 channel(s) removed**
+- 🖼️ **1 logo reference(s) corrected**
+
+### Removed channels
+- NK TV Bangla
+- R Plus
 
