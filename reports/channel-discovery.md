@@ -19,7 +19,6 @@
 - Captain (576p) (India) — https://mumbai-edge.smartplaytv.in/captain/index.m3u8
 - Colors Infinity HD (1080p) (India) — http://51.75.127.199:3141/colorsinfinityhd/index.m3u8
 - Epic Parivar (576p) (India) — http://103.151.60.162:2122/play/a01p/index.m3u8?hls
-- Epic TV Digital (1080p) (India) — https://cc-czbq30x55knit.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-czbq30x55knit/DIYC/PMSL/IN10/Epic_TV_IN_B/Epic_TV_IN_B.m3u8
 - ETV Plus HD (1080p) (India) — https://d12ee3o8yfkkhd.cloudfront.net/c6a4b411295f47f48c908d2ac0605bad/index.m3u8
 - ETV Telugu HD (1080p) (India) — https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_HD_H264_cloud_in/index.m3u8
 - Friends TV (1080p) (India) — https://server.playontv.in/friendstv/index.m3u8
@@ -48,6 +47,7 @@
 - Sun TV HD (1080p) (India) — http://103.151.60.162:2122/play/a02a/index.m3u8?hls
 - Tarang TV (720p) (India) — https://livetv.tarangplus.in/tarangtv-origin/live/playlist.m3u8
 - Wah Punjabi (576p) (India) — http://51.75.127.199:3141/wahpunjabi/index.m3u8
+- YET Max (720p) (India) — https://live.yettelevision.com:5443/LiveApp/streams/yettv2.m3u8
 
 ## New Backups
 

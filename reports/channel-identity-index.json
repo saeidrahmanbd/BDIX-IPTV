@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-06T08:59:40+00:00",
+  "generated": "2026-10-06T11:06:07+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -345,9 +345,10 @@
         "amritatv.in@sd"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Indian Entertainment",
+        "New Backup"
       ],
-      "streams": 1,
+      "streams": 2,
       "primary": 1,
       "backup": 0
     },
@@ -534,9 +535,10 @@
       ],
       "groups": [
         "Bangladesh",
+        "New Backup",
         "Not Playing"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
       "backup": 0
     },
@@ -771,9 +773,10 @@
       ],
       "groups": [
         "Backup",
-        "Indian Music"
+        "Indian Music",
+        "New Backup"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
       "backup": 3
     },
@@ -2204,9 +2207,10 @@
       ],
       "groups": [
         "Backup",
-        "Documentary & Wildlife"
+        "Documentary & Wildlife",
+        "New Backup"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
       "backup": 3
     },
@@ -2571,9 +2575,10 @@
       ],
       "groups": [
         "Backup",
-        "Documentary & Wildlife"
+        "Documentary & Wildlife",
+        "New Backup"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
       "backup": 1
     },
@@ -3234,9 +3239,10 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "New Backup"
       ],
-      "streams": 3,
+      "streams": 4,
       "primary": 1,
       "backup": 2
     },
@@ -3555,9 +3561,10 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "New Backup"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
       "backup": 5
     },
@@ -3667,10 +3674,10 @@
     },
     "epictv": {
       "names": [
-        "Epic TV Digital (1080p)"
+        "Epic TV Digital"
       ],
       "ids": [
-        "epictv.in@digital"
+        "epictv.in@sd"
       ],
       "groups": [
         "New Channels"
@@ -4997,9 +5004,10 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "New Backup"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
       "backup": 5
     },
@@ -6157,9 +6165,10 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "New Backup"
       ],
-      "streams": 7,
+      "streams": 8,
       "primary": 1,
       "backup": 6
     },
@@ -7098,6 +7107,20 @@
       ],
       "streams": 1,
       "primary": 1,
+      "backup": 0
+    },
+    "rojatv": {
+      "names": [
+        "Roja TV"
+      ],
+      "ids": [
+        "rojatv.in"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
       "backup": 0
     },
     "romedynow": {
@@ -8614,6 +8637,20 @@
       "primary": 1,
       "backup": 0
     },
+    "swantham": {
+      "names": [
+        "Swantham"
+      ],
+      "ids": [
+        "swantham.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "tabbarhits": {
       "names": [
         "Tabbar Hits"
@@ -9247,9 +9284,10 @@
       ],
       "groups": [
         "Backup",
-        "Documentary & Wildlife"
+        "Documentary & Wildlife",
+        "New Backup"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
       "backup": 1
     },
@@ -9325,6 +9363,20 @@
       ],
       "streams": 2,
       "primary": 2,
+      "backup": 0
+    },
+    "yetmax": {
+      "names": [
+        "YET Max (720p)"
+      ],
+      "ids": [
+        "yetmax.in@hd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 0,
       "backup": 0
     },
     "yrfmusic": {
