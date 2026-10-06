@@ -46,8 +46,8 @@ _Last generated: **{now}**_
 | Bangladesh | **{groups.get("Bangladesh",0)}** |
 | India | **{sum(v for k,v in groups.items() if k.startswith("Indian "))}** |
 | Backup Streams | **{groups.get("Backup",0)}** |
-| New Review Queue | **{groups.get("New",0)}** |
-| New Backup Streams | **0** |
+| New Channels | **{groups.get("New Channels",0)}** |
+| New Backup Streams | **{groups.get("New Backup",0)}** |
 | Local Logos | **{logos}%** |
 | EPG Programme Coverage | **{livepct}%** |
 | EPG Mapping | **{mapct}%** |
@@ -118,7 +118,7 @@ _Generated: **{now}**_
 | Current channel IDs | **{metric(a,"Unique channel IDs")}** |
 | Backup streams | **{groups.get("Backup",0)}** |
 | New Channels | **{groups.get("New",0)}** |
-| New Review Queue | **{groups.get("New",0)}** |
+| New Queue (legacy) | **{groups.get("New",0)}** |
 | Logo exceptions | **{metric(a,"Logo exceptions")}** |
 | EPG mapping | **{mapct}%** |
 | EPG programme coverage | **{livepct}%** |
@@ -131,7 +131,7 @@ _Generated: **{now}**_
 - Duplicate stream URLs are blocking.
 - Primary streams are protected from silent removal.
 - Backup streams are never deleted because of health failures.
-- New remains the user-controlled review queue.
+- New Channels and New Backup remain separate user-controlled review queues.
 - Dashboard and reports are generated from the current playlist.
 """,encoding="utf-8")
 if __name__=="__main__": main()
