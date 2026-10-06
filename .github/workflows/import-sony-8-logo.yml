@@ -1,0 +1,71 @@
+name: Import Sony 8 logo
+
+on:
+  push:
+    paths:
+      - ".github/workflows/import-sony-8-logo.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  import-logo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download Sony 8 logo
+        run: |
+          set -e
+          curl -L --fail --retry 3 --retry-delay 2 \
+            "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_8/images/LOGO_HD/image.png" \
+            -o logos/sony-8.png
+          file logos/sony-8.png
+          test -s logos/sony-8.png
+
+      - name: Attach logo to Sony 8
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path("IPTV-Playlist.m3u")
+          s = p.read_text(encoding="utf-8")
+          old = '#EXTINF:-1 tvg-id="Sony8.in@SD" tvg-name="Sony 8" tvg-language="ben" tvg-country="IN" channel-id="Sony8.in@SD" group-title="New Channels",Sony 8'
+          new = '#EXTINF:-1 tvg-id="Sony8.in@SD" tvg-name="Sony 8" tvg-language="ben" tvg-country="IN" channel-id="Sony8.in@SD" group-title="New Channels" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-8.png",Sony 8'
+          if old not in s:
+              raise SystemExit("Sony 8 EXTINF target not found; refusing to modify playlist")
+          s = s.replace(old, new, 1)
+          p.write_text(s, encoding="utf-8")
+          PY
+
+      - name: Validate category structure
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path("IPTV-Playlist.m3u")
+          s = p.read_text(encoding="utf-8")
+          required = '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "New Channels", "New Backup", "Not Playing"]'
+          if required not in s:
+              raise SystemExit("Playlist category block changed unexpectedly")
+          if s.count('tvg-id="Sony8.in@SD"') < 1:
+              raise SystemExit("Sony 8 entry missing")
+          print("Category block preserved; Sony 8 entry present.")
+          PY
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add logos/sony-8.png IPTV-Playlist.m3u
+          git diff --cached --quiet && { echo "No changes"; exit 0; }
+          git commit -m "Import Sony 8 logo"
+          git push
+
+      - name: Remove temporary workflow
+        if: always()
+        run: |
+          git rm -f .github/workflows/import-sony-8-logo.yml || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Remove temporary Sony 8 logo workflow" || true
+          git push || true
