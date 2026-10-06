@@ -275,8 +275,9 @@ for r in rows:
   m=re.sub(r'\s*tvg-chno="[^"]*"',"",m); stats["backups"]+=1
  lines[r["i"]]=f"{m},{name}"
 
-# Keep the stable playlist section order: Backup is the final normal category,
-# immediately before the manual-review New Channels queue.
+# Keep the stable playlist section order required by the playlist contract:
+# normal categories first, then Backup, then the user-controlled New review queue,
+# then Not Playing.
 preamble=[]
 records=[]
 cur=None
@@ -289,10 +290,13 @@ for line in lines:
  else:
   preamble.append(line)
 if cur is not None: records.append(cur)
-backup_records=[r for r in records if re.search(r'group-title="Backup"', r[0])]
-other_records=[r for r in records if not re.search(r'group-title="Backup"', r[0])]
-new_channels_idx=next((i for i,r in enumerate(other_records) if re.search(r'group-title="New Channels"', r[0])), len(other_records))
-records=other_records[:new_channels_idx]+backup_records+other_records[new_channels_idx:]
+def group_of(rec):
+ return re.search(r'group-title="([^"]+)"', rec[0]).group(1) if re.search(r'group-title="([^"]+)"', rec[0]) else ""
+review_groups={"New","New Channels","New Backup","Not Playing"}
+backup_records=[r for r in records if group_of(r)=="Backup"]
+review_records=[r for r in records if group_of(r) in review_groups]
+normal_records=[r for r in records if group_of(r) not in {"Backup"} and group_of(r) not in review_groups]
+records=normal_records+backup_records+review_records
 lines=preamble+[line for rec in records for line in rec]
 P.write_text("\n".join(lines)+"\n",encoding="utf-8")
 R.write_text("# Playlist Metadata Normalization\n\n"+f"- Entries processed: **{len(rows)}**\n- Primary channel numbers added: **{stats['numbers']}**\n- Logo references repaired: **{stats['logos']}**\n- Backup/review entries normalized: **{stats['backups']}**\n",encoding="utf-8")
