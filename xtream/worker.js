@@ -1,7 +1,7 @@
 // Deployment pipeline: code and required secrets are deployed as one version.
 const DEFAULT_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u";
 const DEFAULT_BDIX_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u";
-const CACHE_KEY = "https://bdix-iptv.internal/playlist";
+const CACHE_KEY = "https://bdix-iptv.internal/playlist-v2-category-normalized";
 const CACHE_TTL = 60;
 
 const EPG_PUBLIC_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg.xml";
@@ -121,6 +121,8 @@ function stableId(value) {
   let h = 0x811c9dc5; for (let i=0;i<value.length;i++) { h ^= value.charCodeAt(i); h = Math.imul(h,0x01000193); }
   return (h >>> 0) & 0x7fffffff;
 }
+function normalizeGroup(value){return String(value??"").normalize("NFKC").replace(/[\u00A0\u2000-\u200B\u202F\u205F\u3000]/g," ").replace(/\s+/g," ").trim();}
+function groupKey(value){return normalizeGroup(value).toLocaleLowerCase();}
 function parsePlaylist(text) {
   const lines=text.split(/\r?\n/); let categoryNames=[];
   const header=lines.find(x=>x.startsWith("#PLAYLIST-STUDIO-CATEGORIES:"));
@@ -131,7 +133,7 @@ function parsePlaylist(text) {
     const ext=lines[i], comma=ext.lastIndexOf(","); if(comma<0 || i+1>=lines.length) continue;
     const a=parseAttrs(ext), name=ext.slice(comma+1).trim(), url=lines[i+1].trim();
     if(!name || !url || url.startsWith("#")) continue;
-    const group=a["group-title"] || "Uncategorized", tvgId=a["tvg-id"] || "", tvgName=a["tvg-name"] || name, logo=a["tvg-logo"] || "";
+    const rawGroup=normalizeGroup(a["group-title"] || "Uncategorized"); const group=rawGroup || "Uncategorized"; const tvgId=a["tvg-id"] || "", tvgName=a["tvg-name"] || name, logo=a["tvg-logo"] || "";
     entries.push({ id:stableId(tvgId+"|"+name+"|"+group+"|"+url), name, tvgId, tvgName, logo, group, channelNo:a["tvg-chno"]||"", url });
     i++;
   }
@@ -342,7 +344,7 @@ function epgXml(data,epg){
   return out.join("");
 }
 
-function categories(data){return data.groups.map((name,i)=>({category_id:String(i+1),category_name:name,parent_id:0}));}
+function categories(data){const seen=new Set(),out=[];for(const name of data.groups){const clean=normalizeGroup(name),key=groupKey(clean);if(!key||seen.has(key))continue;seen.add(key);out.push({category_id:String(out.length+1),category_name:clean,parent_id:0});}return out;}
 function streams(data,cat){
   const src=cat?data.entries.filter(e=>e.categoryId===String(cat)):data.entries;
   return src.map((e,i)=>({num:Number(e.channelNo)||i+1,name:e.name,stream_type:"live",stream_id:e.id,stream_icon:e.logo,epg_channel_id:(e.tvgId||e.name),added:"0",category_id:e.categoryId,custom_sid:"",tv_archive:0,direct_source:e.url,tv_archive_duration:0}));
