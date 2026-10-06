@@ -67,7 +67,7 @@ def playlist_channels():
             group = attrs.get("group-title", "")
             tvg_id = attrs.get("tvg-id", "").strip()
             name = attrs.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip()
-            if tvg_id and group not in ("Backup", "Not Playing"):
+            if tvg_id and group not in ("Backup", "New", "New Channels", "New Backup", "Not Playing"):
                 out[tvg_id] = name
     return out
 
