@@ -40,9 +40,9 @@ jobs:
             git clean -fd
             cp epg.xml /tmp/bdix-epg-previous.xml 2>/dev/null || true
             python scripts/normalize_metadata.py
-            # TEMPORARILY DISABLED: automatic New Channels/New Backup discovery is paused.
-            # Re-enable this line when the review queues should accept new candidates again.
-            # python scripts/discover_channels_v3.py
+            # Automatic candidate discovery is enabled. Discovered new channels and backup candidates
+            # are placed in the protected New review queue for manual verification.
+            python scripts/discover_channels_v3.py
             python scripts/migrate_external_logos_fixed.py
             python scripts/epg_coverage.py
             python scripts/generate_epg.py
