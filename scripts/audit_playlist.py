@@ -14,8 +14,8 @@ REPORT = Path("reports/playlist-audit.md")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
-PRIMARY_EXCEPTIONS = {"Backup", "New", "New Backup", "New Channels", "Not Playing"}
-CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "New", "Not Playing"]
+PRIMARY_EXCEPTIONS = {"Backup", "New Channels", "New Backup", "New", "Not Playing"}
+CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "New Channels", "New Backup", "New", "Not Playing"]
 
 def attrs(line):
     return dict(ATTR_RE.findall(line))
@@ -464,7 +464,7 @@ review_name_mismatches = []
 primary_by_norm_name = {}
 for info, url in primary_entries:
     group = attrs(info).get("group-title", "").strip()
-    if group in {"New"}:
+    if group in {"New Channels","New Backup","New"}:
         continue
     pname = attrs(info).get("tvg-name", "").strip()
     key = re.sub(r"s+", " ", re.sub(r"s*[[^]]+]s*$", "", pname)).strip().lower()
