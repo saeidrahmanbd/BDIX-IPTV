@@ -353,7 +353,7 @@ function streams(data,cat){
 function m3u(data,request,env){
   const u=new URL(request.url), base=u.pathname==="/bdix"||u.pathname.startsWith("/bdix/")?"/bdix":"", ext=(u.searchParams.get("output")||"m3u8").toLowerCase()==="ts"?"ts":"m3u8", epgUrl=u.origin+base+"/xmltv-public.php", out=[`#EXTM3U url-tvg="${epgUrl}" x-tvg-url="${epgUrl}"`];
   for(const e of data.entries){
-    const attrs=[`tvg-id="${e.tvgId}"`,`tvg-name="${e.tvgName}"`,`tvg-logo="${e.logo}"`,`group-title="${e.group}"`];
+    const attrs=[`tvg-id="${e.tvgId}"`,`tvg-name="${e.tvgName}"`,`tvg-logo="${e.logo}"`,`channel-id="${e.tvgId||e.name}#${e.id}"`,`group-title="${e.group}"`];
     if(e.channelNo) attrs.push(`tvg-chno="${e.channelNo}"`);
     out.push("#EXTINF:-1 "+attrs.join(" ")+","+e.name);
     out.push(u.origin+base+"/live/"+env.XTREAM_USERNAME+"/"+env.XTREAM_PASSWORD+"/"+e.id+"."+ext);
