@@ -15,6 +15,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      - name: Prepare Xtream secrets file
+        env:
+          XTREAM_USERNAME: ${{ secrets.XTREAM_USERNAME }}
+          XTREAM_PASSWORD: ${{ secrets.XTREAM_PASSWORD }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          path = Path(os.environ["RUNNER_TEMP"]) / "xtream-secrets.json"
+          path.write_text(
+              json.dumps({
+                  "XTREAM_USERNAME": os.environ["XTREAM_USERNAME"],
+                  "XTREAM_PASSWORD": os.environ["XTREAM_PASSWORD"],
+              }),
+              encoding="utf-8",
+          )
+          print(f"Prepared secrets file: {path}")
+          PY
+
       - name: Deploy Worker
         id: deploy
         uses: cloudflare/wrangler-action@v4
@@ -22,13 +43,11 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: xtream
-          command: deploy
-          secrets: |
-            XTREAM_USERNAME
-            XTREAM_PASSWORD
-        env:
-          XTREAM_USERNAME: ${{ secrets.XTREAM_USERNAME }}
-          XTREAM_PASSWORD: ${{ secrets.XTREAM_PASSWORD }}
+          command: deploy --secrets-file "${{ runner.temp }}/xtream-secrets.json"
+
+      - name: Remove temporary secrets file
+        if: always()
+        run: rm -f "${{ runner.temp }}/xtream-secrets.json"
 
       - name: Report Wrangler result
         if: always()
