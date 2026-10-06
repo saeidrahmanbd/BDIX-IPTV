@@ -88,8 +88,8 @@ def meaningful(prev,cur):
     added=[x for x in new if x["url"] not in old_urls]
     removed=[x for x in old if x["url"] not in new_urls]
 
-    new_channels=[x for x in added if x["group"]=="New" and x["id"].lower() not in {y["id"].lower() for y in old}]
-    removed_channels=[x for x in removed if x["group"] not in {"Backup","New","New Backup","New Channels","Not Playing"} and x["id"].lower() not in {y["id"].lower() for y in new}]
+    new_channels=[x for x in added if x["group"]=="New Channels" and x["id"].lower() not in {y["id"].lower() for y in old}]
+    removed_channels=[x for x in removed if x["group"] not in {"Backup","New Channels","New Backup","New","Not Playing"} and x["id"].lower() not in {y["id"].lower() for y in new}]
 
     backup_updated=0
     for x in added:
@@ -110,7 +110,7 @@ def meaningful(prev,cur):
     duplicate_old=len(old_urls)-len(old)
     duplicate_new=len(new_urls)-len(new)
 
-    review_backups=[x for x in added if x["group"]=="New"]
+    review_backups=[x for x in added if x["group"]=="New Backup"]
     return {
         "added":len(new_channels),
         "review_backups":len(review_backups),
@@ -137,8 +137,8 @@ def main():
         s=meaningful(prev,cur)
     date=datetime.now(timezone.utc).strftime("%Y-%m-%d")
     lines=[f"# Changelog — {date}","",f"## {date}",""]
-    if s["added"]: lines.append(f"- 🆕 **{s['added']} new review candidate(s) added to New**")
-    if s.get("review_backups"): lines.append(f"- 🔁 **{s['review_backups']} new backup candidate(s) added to New**")
+    if s["added"]: lines.append(f"- 🆕 **{s['added']} new channel candidate(s) added to New Channels**")
+    if s.get("review_backups"): lines.append(f"- 🔁 **{s['review_backups']} new backup candidate(s) added to New Backup**")
     if s["removed"]: lines.append(f"- 🗑️ **{s['removed']} channel(s) removed**")
     if s["backup_updated"]: lines.append(f"- 🔄 **{s['backup_updated']} backup stream(s) updated**")
     if s["logos"]: lines.append(f"- 🖼️ **{s['logos']} logo reference(s) corrected**")
