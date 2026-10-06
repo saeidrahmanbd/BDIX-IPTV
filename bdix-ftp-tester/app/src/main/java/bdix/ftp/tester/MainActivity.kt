@@ -43,6 +43,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -153,7 +154,7 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun App(vm: MainViewModel = viewModel()) {
-    var showInfo by mutableStateOf(false)
+    var showInfo by remember { mutableStateOf(false) }
     val visible = vm.servers.filter {
         (vm.category == "All" || it.category == vm.category) &&
             (vm.status == "All" ||
