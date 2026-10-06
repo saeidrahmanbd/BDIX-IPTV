@@ -1,0 +1,63 @@
+name: Import Sony 8 Logo
+
+on:
+  push:
+    paths:
+      - ".github/workflows/import-sony8-logo.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download Sony 8 logo
+        run: |
+          mkdir -p logos
+          curl -L --fail --retry 3 -o logos/sony-8.png "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_8/images/LOGO_HD/image.png"
+          file logos/sony-8.png
+          test -s logos/sony-8.png
+
+      - name: Add local logo reference without changing playlist structure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path("IPTV-Playlist.m3u")
+          s = p.read_text(encoding="utf-8")
+
+          logo = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-8.png"
+          lines = s.splitlines(keepends=True)
+          changed = False
+
+          for i, line in enumerate(lines):
+              if line.startswith("#EXTINF:") and 'tvg-id="Sony8.in@SD"' in line and 'tvg-name="Sony 8"' in line:
+                  if "tvg-logo=" not in line:
+                      lines[i] = line.replace(' group-title=', f' tvg-logo="{logo}" group-title=', 1)
+                      changed = True
+
+          if not changed:
+              raise SystemExit("Sony 8 EXTINF entry was not found without a logo; refusing to alter playlist.")
+
+          p.write_text("".join(lines), encoding="utf-8")
+          PY
+
+      - name: Commit logo import
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add logos/sony-8.png IPTV-Playlist.m3u
+          git diff --cached --quiet && { echo "No changes"; exit 0; }
+          git commit -m "Import Sony 8 logo"
+          git push
+
+      - name: Remove temporary workflow
+        run: |
+          git rm .github/workflows/import-sony8-logo.yml
+          git commit -m "Remove temporary Sony 8 logo workflow"
+          git push
