@@ -1,28 +1,28 @@
 # Playlist Audit
-Generated: **2026-10-06T11:10:15.502175+00:00**
+Generated: **2026-10-06T11:18:44.218095+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1005**
-- Unique channel IDs: **629**
+- Playlist entries: **1013**
+- Unique channel IDs: **631**
 - IDs with multiple streams: **182**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
-- Same-name / different-ID collisions: **2**
+- Same-name / different-ID collisions: **3**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **1**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **3**
-- Logo references checked: **1005**
+- Logo exceptions: **4**
+- Logo references checked: **1013**
 - Not Playing logo exceptions: **1**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **3**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **10**
-- Alphabetical ordering issues: **1**
+- Category block-order issues: **11**
+- Alphabetical ordering issues: **9**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 
@@ -41,10 +41,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - 9XM — Backup — https://wiselp.wiseplayout.com/9XM/HD1080/HD1080.m3u8
 - 9XM — Backup — https://wiselp.wiseplayout.com/9XM/master.m3u8
 - 9XM — Not Playing — https://9xjio.wiseplayout.com/9XM/HD720/HD720.m3u8
-### aakaashaath.in@sd (3 streams)
+### aakaashaath.in@sd (4 streams)
 - Aakaash Aath — Indian Bangla — https://mumt03.tangotv.in/Dsly5z3HAAKASHAATH/index.m3u8
 - Aakaash Aath — Backup — http://tvsen5.aynascope.net/Wm9Lv2RjZGT6/index.m3u8
 - Aakaash Aath — Backup — https://tvsen5.aynaott.com/Wm9Lv2RjZGT6/index.m3u8
+- Aakaash Aath — New Backup — https://tvsen5.aynaott.com/Wm9Lv2RjZGT6/tracks-v1a1/mono.ts.m3u8
 ### amritatv.in@sd (2 streams)
 - Amrita TV — New Backup — https://ddash74r36xqp.cloudfront.net/master_2000.m3u8
 - Amrita TV — Indian Entertainment — https://ddash74r36xqp.cloudfront.net/master.m3u8
@@ -99,10 +100,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - B4U Kadak — Indian Movies — https://amg00877-b4unew-amg00877c4-xiaomi-in-5473.playouts.now.amagi.tv/playlist.m3u8
 - B4U Kadak — Backup — https://cdn.pishow.tv/ott/live/227/master.m3u8
 - B4U Kadak — Backup — https://streams.tangotv.in/B4UKADAK/ORIGIN/index.m3u8
-### b4umovies.in@india (3 streams)
+### b4umovies.in@india (4 streams)
 - B4U Movies — Indian Movies — https://amg00877-b4unew-amg00877c2-xiaomi-in-5489.playouts.now.amagi.tv/playlist.m3u8
 - B4U Movies — Backup — https://cdn.pishow.tv/ott/live/419/master.m3u8
 - B4U Movies — Backup — https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8
+- B4U Movies — New Backup — https://drk6xq0vhn.gpcdn.net/live/b4u_movies_abr/index.m3u8
 ### b4umusic.in@india (5 streams)
 - B4U Music — New Backup — http://tjszdhm3.tvclub.xyz/iptv/69AWBEYGGS5VZ6/6570/index.m3u8
 - B4U Music — Indian Music — https://streams.tangotv.in/B4UMUSIC/ORIGIN/index.m3u8
@@ -600,9 +602,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Rongeen TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/rongeen-tv-1/index.m3u8
 - Rongeen TV — Backup — https://mumbai-edge.smartplaytv.in/RongeenTV/index.m3u8
 - Rongeen TV — Backup — https://server.thelegitpro.in/rongeentv/rongeentv/tracks-v1a1/mono.m3u8
-### rplusgold.in@sd (2 streams)
+### rplusgold.in@sd (3 streams)
 - R Plus Gold — Indian Bangla — https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/cf883da3-f9f5-4c70-b0ef-b3ac2e2ad1e3/index.m3u8
 - R Plus Gold — Backup — https://cdn.pishow.tv/ott/live/1231/master.m3u8
+- R Plus Gold — New Backup — https://thelegitpro.in/pntv/rplusnews24x7/tracks-v1a1/mono.m3u8
 ### rtdocumentary.ru (2 streams)
 - RT Documentary — Documentary & Wildlife — http://rt-esp.rttv.com/live/rtesp/playlist_800Kb.m3u8
 - RT Documentary — Backup — https://rt-rtd.rttv.com/dvr/rtdoc/playlist.m3u8
@@ -746,22 +749,25 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Zee Bangla — Backup — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ZeeBanglaHD.m3u8
 - Zee Bangla — Backup — https://tvsen6.aynaott.com/ZeeBangla/index.m3u8
 - Zee Bangla — Backup — https://yupptvcatchupire.yuppcdn.net/preview/zeebangla/2500.m3u8
-### zeebanglasonar.in@sd (6 streams)
+### zeebanglasonar.in@sd (8 streams)
 - Zee Bangla Sonar — Indian Bangla — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/Zeebanglahd.m3u8
 - Zee Bangla Sonar — Backup — http://198.195.239.50:8095/ZEE.BANGLA.CINEMA/index.m3u8
 - Zee Bangla Sonar — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD-video=2137600.m3u8
 - Zee Bangla Sonar — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8
 - Zee Bangla Sonar — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/master2.m3u8
 - Zee Bangla Sonar — Backup — https://iptvlive.ahmed-bd-org.workers.dev/zee-bangla-cinema-2/index.m3u8
+- Zee Bangla Cinema — New Backup — https://drk6xq0vhn.gpcdn.net/live/zee_bangla_cinema_abr/index.m3u8
+- Zee Bangla Cinema — New Backup — https://stream.ottplus.live/live/zee_bangla_cinema_abr/live/zee_bangla_cinema_720/chunks.m3u8
 ### zeebollywood.in@sd (2 streams)
 - Zee Bollywood — Indian Movies — https://stream.ottplus.live/live/zee_bollywood_abr/index.m3u8
 - Zee Bollywood — Backup — https://drk6xq0vhn.gpcdn.net/live/zee_bollywood_abr/index.m3u8
-### zeecinema.in@hd (5 streams)
+### zeecinema.in@hd (6 streams)
 - Zee Cinema — Indian Movies — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ZeeCinemaAPAC.m3u8
 - Zee Cinema — Backup — http://103.151.60.162:2122/play/a024/index.m3u8
 - Zee Cinema — Backup — http://198.195.239.50:8095/ZEE.CINEMA.HD/index.m3u8
 - Zee Cinema — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/NGCHD/default/NGCHD.m3u8
 - Zee Cinema — Backup — https://stream.ottplus.live/live/zee_cinema_hd_abr/index.m3u8
+- Zee Cinema — New Backup — https://drk6xq0vhn.gpcdn.net/live/zee_cinema_hd_abr/index.m3u8
 ### zeetv.in@sd (4 streams)
 - Zee TV — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/zee_tv_hd_abr/index.m3u8
 - Zee TV — Backup — http://198.195.239.50:8095/ZEE.TV.HD/index.m3u8
@@ -792,7 +798,16 @@ None.
 - category block **Religious** — out of canonical block order
 - category block **Sports** — out of canonical block order
 - category block **Backup** — out of canonical block order
+- category block **New Backup** — out of canonical block order
+- **New Channels** — **Sony 8** appears after **Swantham**
 - **New Backup** — **Amrita TV** appears after **Asian TV**
+- **New Backup** — **Aakaash Aath** appears after **WildEarth**
+- **New Backup** — **Zee Bangla Cinema** appears after **Zee Cinema**
+- **New Backup** — **Jalsha Movies** appears after **Zee Bangla Cinema**
+- **New Backup** — **Amrita TV** appears after **Asian TV**
+- **New Backup** — **Aakaash Aath** appears after **WildEarth**
+- **New Backup** — **Zee Bangla Cinema** appears after **Zee Cinema**
+- **New Backup** — **Jalsha Movies** appears after **Zee Bangla Cinema**
 
 ## Suspicious URLs
 
@@ -825,12 +840,13 @@ None.
 ## Same-Name / Different-ID Collisions
 
 - **colors cineplex superhits** → , colorscineplexsuperhits.in@sd
+- **jalsha movies** → jalshamovies.in@sd, star.jalsha.movies.in
 - **sananda** → sanandatv.in, sunbangla.in@sd
 
 ## Logo Integrity
 
-- Healthy/local references: **1001**
-- missing: **4**
+- Healthy/local references: **1008**
+- missing: **5**
 - broken-local: **0**
 - external: **0**
 - non-png: **0**
@@ -841,6 +857,7 @@ None.
 - missing — Epic TV Digital [epictv.in@sd] — 
 - missing — Roja TV [rojatv.in] — 
 - missing — Swantham [swantham.in@sd] — 
+- missing — Sony 8 [sony8.in@sd] — 
 - multiple-logo-references — sunbangla.in@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sananda-tv.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-bangla.png
 
 ## Protected Primary Entries
