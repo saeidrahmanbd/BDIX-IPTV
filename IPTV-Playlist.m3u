@@ -175,6 +175,32 @@ https://d2dsoyvkr33m05.cloudfront.net/index_5.m3u8
 http://198.195.239.50:8095/zeeBangla/index.m3u8
 #EXTINF:-1 tvg-id="ZeeBanglaSonar.in@SD" tvg-name="Zee Bangla Sonar" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png" tvg-chno="304" channel-id="ZeeBanglaSonar.in@SD" group-title="Indian Bangla",Zee Bangla Sonar
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/Zeebanglahd.m3u8
+#EXTINF:-1 tvg-id="EpicTV.in@SD" tvg-name="Epic TV Digital" tvg-language="hin" tvg-country="IN" channel-id="EpicTV.in@SD" group-title="New Channels",Epic TV Digital
+https://cc-czbq30x55knit.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-czbq30x55knit/DIYC/PMSL/IN10/Epic_TV_IN_B/Epic_TV_IN_B.m3u8
+#EXTINF:-1 tvg-id="RojaTV.in" tvg-name="Roja TV" tvg-language="tam" tvg-country="IN" channel-id="RojaTV.in" group-title="New Channels",Roja TV
+https://live.rojatv.cloud/rojatv/rojatv/index.m3u8
+#EXTINF:-1 tvg-id="DDNational.in@HD" tvg-name="DD National HD" tvg-language="hin" tvg-country="IN" channel-id="DDNational.in@HD" group-title="New Channels",DD National HD
+https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/40492a64c1db4a1385ba1a397d357d3a/index.m3u8
+#EXTINF:-1 channel-id="AsianTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" tvg-id="AsianTV.bd" tvg-name="Asian TV" group-title="New Backup",Asian TV
+https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/index.m3u8
+#EXTINF:-1 tvg-id="AmritaTV.in@SD" tvg-name="Amrita TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amrita-tv.png" channel-id="AmritaTV.in@SD" group-title="New Backup",Amrita TV
+https://ddash74r36xqp.cloudfront.net/master_2000.m3u8
+#EXTINF:-1 tvg-id="B4UMusic.in@India" tvg-name="B4U Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png" channel-id="B4UMusic.in@India" tvg-language="hin" tvg-country="IN" group-title="New Backup",B4U Music
+http://tjszdhm3.tvclub.xyz/iptv/69AWBEYGGS5VZ6/6570/index.m3u8
+#EXTINF:-1 tvg-id="DeeptoTV.bd" tvg-name="Deepto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deepto-tv.png" channel-id="DeeptoTV.bd" group-title="New Backup",Deepto TV
+http://byphdgllyk.gpcdn.net/hls/deeptotv/0_1/index.m3u8
+#EXTINF:-1 tvg-id="EkusheyTV.bd" tvg-name="Ekushey TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv.png" channel-id="EkusheyTV.bd" group-title="New Backup",Ekushey TV
+http://ekusheyserver.com/etvlivesn.m3u8
+#EXTINF:-1 tvg-id="custom.love.nature" tvg-name="Love Nature" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/love-nature.png" channel-id="custom.love.nature" group-title="New Backup",Love Nature
+https://cdn1.logichost.in/ajmantv/live/playlist.m3u8
+#EXTINF:-1 tvg-id="MaasrangaTV.bd" tvg-name="Maasranga TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/maasranga-tv.png" channel-id="MaasrangaTV.bd" group-title="New Backup",Maasranga TV
+http://116.204.149.16/maasranga/index.m3u8
+#EXTINF:-1 tvg-id="NTV.bd" tvg-name="NTV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png" channel-id="NTV.bd" group-title="New Backup",NTV
+https://stream.logichost.in/NTV/live/chunklist_w1420234415.m3u8
+#EXTINF:-1 tvg-id="custom.travelxp.english" tvg-name="Travelxp English" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travelxp-english.png" channel-id="custom.travelxp.english" tvg-language="eng" tvg-country="EU" group-title="New Backup",Travelxp English
+https://27c980761ff9437d929e64647afe183a.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RakutenTV-eu_TravelXP/playlist.m3u8
+#EXTINF:-1 tvg-id="WildEarth.za" tvg-name="WildEarth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wildearth.png" channel-id="WildEarth.za" group-title="New Backup",WildEarth
+https://wildearth-plex.amagi.tv/master.m3u8
 #EXTINF:-1 tvg-id="AndPictures.in@SD" tvg-name="&pictures" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-pictures.png" tvg-chno="305" channel-id="AndPictures.in@SD" group-title="Indian Movies",&pictures
 http://198.195.239.50:8095/ANT.PICTURS.HD/index.m3u8
 #EXTINF:-1 tvg-id="AsianetMovies.in@SD" tvg-name="Asianet Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asianet-movies.png" tvg-chno="46" channel-id="AsianetMovies.in@SD" group-title="Indian Movies",Asianet Movies
