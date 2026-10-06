@@ -2005,7 +2005,7 @@ https://iptvlive.ahmed-bd-org.workers.dev/jago-news-24-1/index.m3u8
 https://dbcanada.sonarbanglatv.com/jhankartv/jtv/index.m3u8
 #EXTINF:-1 tvg-id="NationalGeographic.in@SD" tvg-name="National Geographic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png" channel-id="NationalGeographic.in@SD" group-title="Not Playing",National Geographic
 http://51.75.127.199:3141/natgeo/index.m3u8
-#EXTINF:-1 tvg-id="SagaMusic.in" tvg-name="Saga Music" channel-id="SagaMusic.in" group-title="Not Playing" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saga-music.png",Saga Music
+#EXTINF:-1 tvg-id="SagaMusic.in" tvg-name="Saga Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saga-music.png" channel-id="SagaMusic.in" group-title="Not Playing" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saga-music.png",Saga Music
 https://amg01412-xiaomiasia-sagamusic-xiaomi-h54ye.amagi.tv/playlist/amg01412-xiaomiasia-sagamusic-xiaomi/playlist.m3u8
 #EXTINF:-1 tvg-id="SangeetBangla.in@SD" tvg-name="Sangeet Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sangeet-bangla.png" channel-id="SangeetBangla.in@SD" tvg-language="ben" tvg-country="IN" group-title="Not Playing",Sangeet Bangla
 https://tvsen6.aynaott.com/hT5jHczt/index.m3u8
