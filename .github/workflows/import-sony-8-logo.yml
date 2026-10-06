@@ -18,6 +18,7 @@ jobs:
       - name: Download Sony 8 logo
         run: |
           set -e
+          mkdir -p logos
           curl -L --fail --retry 3 --retry-delay 2 \
             "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_8/images/LOGO_HD/image.png" \
             -o logos/sony-8.png
@@ -34,23 +35,29 @@ jobs:
           new = '#EXTINF:-1 tvg-id="Sony8.in@SD" tvg-name="Sony 8" tvg-language="ben" tvg-country="IN" channel-id="Sony8.in@SD" group-title="New Channels" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-8.png",Sony 8'
           if old not in s:
               raise SystemExit("Sony 8 EXTINF target not found; refusing to modify playlist")
-          s = s.replace(old, new, 1)
-          p.write_text(s, encoding="utf-8")
+          p.write_text(s.replace(old, new, 1), encoding="utf-8")
           PY
 
-      - name: Validate category structure
+      - name: Validate category block
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          p = Path("IPTV-Playlist.m3u")
-          s = p.read_text(encoding="utf-8")
+          import re
+          s = Path("IPTV-Playlist.m3u").read_text(encoding="utf-8")
           required = '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "New Channels", "New Backup", "Not Playing"]'
           if required not in s:
-              raise SystemExit("Playlist category block changed unexpectedly")
+              raise SystemExit("Playlist category declaration changed")
+          cats = re.findall(r'group-title="([^"]+)"', s)
+          seen = []
+          for c in cats:
+              if not seen or seen[-1] != c:
+                  seen.append(c)
+          expected = ["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","New Channels","New Backup","Not Playing"]
+          if seen != expected:
+              raise SystemExit(f"Category block order changed: {seen}")
           if s.count('tvg-id="Sony8.in@SD"') < 1:
               raise SystemExit("Sony 8 entry missing")
           print("Category block preserved; Sony 8 entry present.")
-          PY
 
       - name: Commit changes
         run: |
