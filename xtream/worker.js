@@ -1,4 +1,5 @@
 const DEFAULT_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u";
+const DEFAULT_BDIX_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u";
 const CACHE_KEY = "https://bdix-iptv.internal/playlist";
 const CACHE_TTL = 60;
 
@@ -139,8 +140,8 @@ function parsePlaylist(text) {
   for(const e of entries) e.categoryId=categoryId.get(e.group)||"0";
   return {entries,groups};
 }
-async function getPlaylist(env){
-  const cache=caches.default, key=new Request(CACHE_KEY), cached=await cache.match(key); if(cached) return cached.text();
+async function getPlaylist(playlistEnv){
+  const cache=caches.default, key=new Request(CACHE_KEY + "|" + (env.PLAYLIST_URL||DEFAULT_PLAYLIST_URL)), cached=await cache.match(key); if(cached) return cached.text();
   const r=await fetch(env.PLAYLIST_URL||DEFAULT_PLAYLIST_URL,{headers:{"user-agent":"BDIX-IPTV-Xtream-Gateway/1.0"}});
   if(!r.ok) throw new Error("Playlist fetch failed: "+r.status);
   const text=await r.text();
@@ -346,12 +347,12 @@ function streams(data,cat){
   return src.map((e,i)=>({num:Number(e.channelNo)||i+1,name:e.name,stream_type:"live",stream_id:e.id,stream_icon:e.logo,epg_channel_id:(e.tvgId||e.name),added:"0",category_id:e.categoryId,custom_sid:"",tv_archive:0,direct_source:e.url,tv_archive_duration:0}));
 }
 function m3u(data,request,env){
-  const u=new URL(request.url), ext=(u.searchParams.get("output")||"m3u8").toLowerCase()==="ts"?"ts":"m3u8", epgUrl=u.origin+"/xmltv-public.php", out=[`#EXTM3U url-tvg="${epgUrl}" x-tvg-url="${epgUrl}"`];
+  const u=new URL(request.url), base=u.pathname==="/bdix"||u.pathname.startsWith("/bdix/")?"/bdix":"", ext=(u.searchParams.get("output")||"m3u8").toLowerCase()==="ts"?"ts":"m3u8", epgUrl=u.origin+base+"/xmltv-public.php", out=[`#EXTM3U url-tvg="${epgUrl}" x-tvg-url="${epgUrl}"`];
   for(const e of data.entries){
     const attrs=[`tvg-id="${e.tvgId}"`,`tvg-name="${e.tvgName}"`,`tvg-logo="${e.logo}"`,`group-title="${e.group}"`];
     if(e.channelNo) attrs.push(`tvg-chno="${e.channelNo}"`);
     out.push("#EXTINF:-1 "+attrs.join(" ")+","+e.name);
-    out.push(u.origin+"/live/"+env.XTREAM_USERNAME+"/"+env.XTREAM_PASSWORD+"/"+e.id+"."+ext);
+    out.push(u.origin+base+"/live/"+env.XTREAM_USERNAME+"/"+env.XTREAM_PASSWORD+"/"+e.id+"."+ext);
   }
   return new Response(out.join("\n")+"\\n",{headers:{"content-type":"audio/x-mpegurl; charset=utf-8","cache-control":"no-store"}});
 }
@@ -360,7 +361,8 @@ export default {
  async fetch(request,env){
   try{
    if(!env.XTREAM_USERNAME||!env.XTREAM_PASSWORD) return json({error:"Xtream credentials are not configured."},500);
-   const url=new URL(request.url), path=url.pathname;
+   const url=new URL(request.url), rawPath=url.pathname, isBdix=rawPath==="/bdix"||rawPath.startsWith("/bdix/"), path=isBdix?(rawPath.slice(5)||"/"):rawPath;
+   const playlistEnv=isBdix?{...env,PLAYLIST_URL:env.BDIX_PLAYLIST_URL||DEFAULT_BDIX_PLAYLIST_URL}:env;
    if(path==="/"||path==="/health") return json({ok:true,service:"BDIX-IPTV Xtream Gateway"});
    if(path==="/epg-health"){
     const epg=parseXmltv(await getEpg(env));
@@ -379,7 +381,7 @@ export default {
     return json(result);
    }
    if(path==="/epg-audit"){
-    const data=parsePlaylist(await getPlaylist(env)), epg=parseXmltv(await getEpg(env));
+    const data=parsePlaylist(await getPlaylist(playlistEnv)), epg=parseXmltv(await getEpg(env));
     const rows=data.entries.map(e=>{
       const programs=findEpgPrograms(epg,e);
       return {name:e.name,tvg_id:e.tvgId,group:e.group,programme_count:programs.length,matched:programs.length>0};
@@ -399,7 +401,7 @@ export default {
    }
    if(path==="/player_api.php"){
     if(!auth(url,env)) return json({user_info:{auth:0,status:"Invalid credentials"}},401);
-    const action=url.searchParams.get("action")||"", data=parsePlaylist(await getPlaylist(env));
+    const action=url.searchParams.get("action")||"", data=parsePlaylist(await getPlaylist(playlistEnv));
     if(!action||action==="get_account_info") return json(userInfo(request,env));
     if(action==="get_live_categories") return json(categories(data));
     if(action==="get_live_streams") return json(streams(data,url.searchParams.get("category_id")));
@@ -418,20 +420,20 @@ export default {
     if(action==="get_vod_categories"||action==="get_series_categories"||action==="get_vod_streams"||action==="get_series") return json([]);
     return json({error:"Unsupported action"},400);
    }
-   if(path==="/get.php"){if(!auth(url,env)) return new Response("Unauthorized",{status:401}); return m3u(parsePlaylist(await getPlaylist(env)),request,env);}
+   if(path==="/get.php"){if(!auth(url,env)) return new Response("Unauthorized",{status:401}); return m3u(parsePlaylist(await getPlaylist(playlistEnv)),request,env);}
    if(path==="/xmltv-public.php"){
-    const data=parsePlaylist(await getPlaylist(env)), epg=parseXmltv(await getEpg(env));
+    const data=parsePlaylist(await getPlaylist(playlistEnv)), epg=parseXmltv(await getEpg(env));
     return new Response(epgXml(data,epg),{headers:{"content-type":"application/xml; charset=utf-8","cache-control":"public, max-age=900"}});
    }
    if(path==="/xmltv.php"){
     if(!auth(url,env)) return new Response("Unauthorized",{status:401});
-    const data=parsePlaylist(await getPlaylist(env)), epg=parseXmltv(await getEpg(env));
+    const data=parsePlaylist(await getPlaylist(playlistEnv)), epg=parseXmltv(await getEpg(env));
     return new Response(epgXml(data,epg),{headers:{"content-type":"application/xml; charset=utf-8","cache-control":"no-store"}});
    }
    if(path.startsWith("/live/")){
     const parts=path.split("/").filter(Boolean); if(!pathAuth(parts,env)) return new Response("Unauthorized",{status:401});
     const id=Number((parts[3]||"").split(".")[0]); if(!Number.isInteger(id)) return new Response("Bad stream ID",{status:400});
-    const data=parsePlaylist(await getPlaylist(env)), stream=data.entries.find(e=>e.id===id);
+    const data=parsePlaylist(await getPlaylist(playlistEnv)), stream=data.entries.find(e=>e.id===id);
     if(!stream) return new Response("Stream not found",{status:404});
     return Response.redirect(stream.url,302);
    }
