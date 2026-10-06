@@ -36,7 +36,7 @@ def main():
             removed.append((a.get("tvg-name",""),u))
     blocked_removed=removed
     old_review={u.lower():a.get("group-title","").strip() for _,a,u in old if a.get("group-title","").strip() in {"New"}}
-    cur_review={u.lower():a.get("group-title","").strip() for _,a,u in current if a.get("group-title","").strip() in {"New Channels","New Backup"}}
+    cur_review={u.lower():a.get("group-title","").strip() for _,a,u in current if a.get("group-title","").strip() in {"New","New Channels","New Backup"}}
     review_reclassified=[u for u,g in old_review.items() if u in cur_review and cur_review[u] != g]
     review_promoted=[u for u,g in old_review.items() if u not in cur_review and any(x.lower()==u for _,_,x in current)]
     review_removed=[u for u,g in old_review.items() if u not in cur_review and not any(x.lower()==u for _,_,x in current)]
