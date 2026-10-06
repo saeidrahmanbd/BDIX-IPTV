@@ -1,27 +1,27 @@
 # Playlist Audit
-Generated: **2026-10-06T04:38:09.791943+00:00**
+Generated: **2026-10-06T05:53:11.751455+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **982**
-- Unique channel IDs: **623**
-- IDs with multiple streams: **180**
-- Duplicate stream URLs: **0**
-- Metadata conflicts: **0**
+- Playlist entries: **995**
+- Unique channel IDs: **628**
+- IDs with multiple streams: **181**
+- Duplicate stream URLs: **1**
+- Metadata conflicts: **8**
 - Same-name / different-ID collisions: **1**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **0**
-- Logo references checked: **982**
+- Logo exceptions: **1**
+- Logo references checked: **995**
 - Not Playing logo exceptions: **0**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **0**
+- Primary entries missing channel numbers: **13**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **0**
+- Category block-order issues: **1**
 - Alphabetical ordering issues: **2**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
@@ -35,20 +35,25 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - 9X Jalwa — Indian Music — https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8
 - 9X Jalwa — Backup — https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/70fca4d1-156e-4c03-baa4-9a4b602e33d5/0.m3u8
 - 9X Jalwa — Backup — https://mumt03.tangotv.in/Dsly5z3H9XJALWA/index.m3u8
-### 9xm.in@sd (4 streams)
+### 9xm.in@sd (5 streams)
 - 9XM — Indian Music — https://cc-706183qeo55ez.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-706183qeo55ez/DIYC/PMSL/9X/9XMusic_IN/9XMusic_IN.m3u8
 - 9XM — Backup — http://198.195.239.50:8095/9XM.MUSIC/index.m3u8
 - 9XM — Backup — https://wiselp.wiseplayout.com/9XM/HD1080/HD1080.m3u8
 - 9XM — Backup — https://wiselp.wiseplayout.com/9XM/master.m3u8
+- 9XM — New — https://9xjio.wiseplayout.com/9XM/HD720/HD720.m3u8
 ### aakaashaath.in@sd (3 streams)
 - Aakaash Aath — Indian Bangla — https://mumt03.tangotv.in/Dsly5z3HAAKASHAATH/index.m3u8
 - Aakaash Aath — Backup — http://tvsen5.aynascope.net/Wm9Lv2RjZGT6/index.m3u8
 - Aakaash Aath — Backup — https://tvsen5.aynaott.com/Wm9Lv2RjZGT6/index.m3u8
-### anandatv.bd (4 streams)
+### anandatv.bd (5 streams)
 - Ananda TV — Bangladesh — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/anandatv.stream/index.m3u8
 - Ananda TV — Backup — http://live-stream.amarbanglatv.in:8080/hls/sanandatv/index.m3u8
 - Ananda TV — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/anandatv.stream/live-orgin/anandatv.stream/playlist.m3u8
 - Ananda TV — Backup — https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/tracks-v1a1/mono.ts.m3u8
+- Ananda TV — New — https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
+### andpictures.in@sd (2 streams)
+- &pictures — Indian Movies — http://198.195.239.50:8095/ANT.PICTURS.HD/index.m3u8
+- &pictures — New — http://202.70.146.135:8000/play/a06b/index.m3u8
 ### andtv.in@sd (3 streams)
 - &TV — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/and_tv_hd_abr/index.m3u8
 - &TV — Backup — https://3f56f997.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9BbmRUVl9ITFM/playlist.m3u8
@@ -108,10 +113,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Bangla TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/bangla-tv-2/index.m3u8
 - Bangla TV — Backup — https://tvsen6.aynaott.com/39ee93nUbCCmm5LsyD4t/index.m3u8
 - Bangla TV — Backup — https://tvsen6.aynaott.com/39ee93nUbCCmm5LsyD4t/tracks-v1a1/mono.ts.m3u8
-### banglavision.bd (3 streams)
+### banglavision.bd (4 streams)
 - Bangla Vision — Bangladesh — https://tvsen5.aynaott.com/banglavision/index.m3u8
 - Bangla Vision — Backup — https://iptvlive.ahmed-bd-org.workers.dev/banglavision-1/index.m3u8
 - Bangla Vision — Backup — https://tvsen5.aynaott.com/tgUzpPc9r6xw/index.m3u8
+- Bangla Vision — New — https://tvsen5.aynaott.com/tgUzpPc9r6xw/index.m3u8
 ### bbcearth.ca (2 streams)
 - BBC Earth — Documentary & Wildlife — https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist.m3u8
 - BBC Earth — Backup — http://198.195.239.50:8095/BBC.Earth.HD/index.m3u8
@@ -311,12 +317,13 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Ekhon TV — Backup — https://drk6xq0vhn.gpcdn.net/live/ekhon_tv_abr/index.m3u8
 - Ekhon TV — Backup — https://stream.ottplus.live/live/ekhon_tv_abr/index.m3u8
 - Ekhon TV — Backup — https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8?e=1784102563
-### ekusheytv.bd (5 streams)
+### ekusheytv.bd (6 streams)
 - Ekushey TV — Bangladesh — http://198.195.239.50:8095/ETV.BANGLA.HD/index.m3u8
 - Ekushey TV — Backup — https://ekusheyserver.com/etvlivesn.m3u8
 - Ekushey TV — Backup — https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
 - Ekushey TV — Backup — https://tvsen5.aynaott.com/SyQuXz8sC3TB/index.m3u8
 - Ekushey TV — Backup — https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8
+- Ekushey TV — New — http://210.4.72.204/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
 ### enterr10bangla.in@sd (8 streams)
 - Enterr10 Bangla — Indian Bangla — http://198.195.239.50:8095/enter10Bangla/index.m3u8
 - Enterr10 Bangla — Backup — http://198.195.239.50:8095/ENTER10.BANGLA/index.m3u8
@@ -588,11 +595,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### rtdocumentary.ru (2 streams)
 - RT Documentary — Documentary & Wildlife — http://rt-esp.rttv.com/live/rtesp/playlist_800Kb.m3u8
 - RT Documentary — Backup — https://rt-rtd.rttv.com/dvr/rtdoc/playlist.m3u8
-### rtv.bd (4 streams)
+### rtv.bd (5 streams)
 - RTV — Bangladesh — http://tvsen5.aynascope.net/RtvHD/index.m3u8
 - RTV — Backup — http://116.204.149.16/rtvhd/index.m3u8
 - RTV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/rtv-sg.stream/index.m3u8
 - RTV — Backup — https://tvsen5.aynaott.com/RtvHD/index.m3u8
+- RTV — New — https://tvsen5.aynaott.com/ba47dHpDk3Se/index.m3u8
 ### rupasibangla.in@sd (3 streams)
 - Ruposhi Bangla — Indian Bangla — https://mumt05.tangotv.in/87NeALx2RUPASIBANGLA/index.m3u8
 - Ruposhi Bangla — Backup — https://cdn.pishow.tv/ott/live/1039/master.m3u8
@@ -632,13 +640,14 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Sony AATH — Backup — http://198.195.239.50:8095/SONY.AAT/index.m3u8
 - Sony AATH — Backup — https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8
 - Sony AATH — Backup — https://stream.ottplus.live/live/sony_aath_abr/index.m3u8
-### sonyentertainmenttelevision.in@sd (6 streams)
+### sonyentertainmenttelevision.in@sd (7 streams)
 - Sony Entertainment TV — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/sony_ent_sd_abr/index.m3u8
 - Sony Entertainment TV — Backup — http://198.195.239.50:8095/SONY.ENT.HD/index.m3u8
 - Sony Entertainment TV — Backup — http://38.96.178.205/SONYHD/index.m3u8
 - Sony Entertainment TV — Backup — https://drk6xq0vhn.gpcdn.net/live/sony_ent_hd_abr/index.m3u8
 - Sony Entertainment TV — Backup — https://stream.ottplus.live/live/sony_ent_hd_abr/index.m3u8
 - Sony Entertainment TV — Backup — https://stream.ottplus.live/live/sony_ent_sd_abr/index.m3u8
+- Sony Entertainment TV — New — http://202.70.146.135:8000/play/a005/index.m3u8
 ### sonymax.in@sd (3 streams)
 - Sony Max — Indian Movies — https://drk6xq0vhn.gpcdn.net/live/max_hd_abr/index.m3u8
 - Sony Max — Backup — http://198.195.239.50:8095/SONY.MAX.HD/index.m3u8
@@ -668,10 +677,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Star Gold — Indian Movies — http://livetv.akr4m.com:8080/bdtv/restrem/45.m3u8
 - Star Gold — Backup — http://198.195.239.50:8095/STAR.GOLD.HD/index.m3u8
 - Star Gold — Backup — http://51.75.127.199:3141/stargold/index.m3u8
-### starmovies.in@sd (3 streams)
+### starmovies.in@sd (4 streams)
 - Star Movies — International — http://51.75.127.199:3141/starmovies/index.m3u8
 - Star Movies — Backup — http://198.195.239.50:8095/STAR.MOVIES.HD/index.m3u8
 - Star Movies — Backup — http://51.75.127.199:3141/starmovieshd/index.m3u8
+- Star Movies — New — http://202.70.146.135:8000/play/a06r/index.m3u8
 ### starmoviesselect.in@hd (2 streams)
 - Star Movies Select — International — http://51.75.127.199:3141/starmoviesselecthd/index.m3u8
 - Star Movies Select — Backup — http://198.195.239.50:8095/STAR.MOVIES.SEL.HD/index.m3u8
@@ -761,7 +771,7 @@ None.
 
 ## Ordering
 
-Category block order: OK.
+- category block **New** — unknown category
 - **Bangladesh** — **Channel 16** appears after **Channel 9**
 - **International** — **24 Hour Free Movies** appears after **4ever Music**
 
@@ -787,7 +797,14 @@ None.
 
 ## Metadata Conflicts
 
-None.
+- **9xm.in@sd** — names: 9xm; groups: Indian Music, New; countries: 
+- **anandatv.bd** — names: ananda tv; groups: Bangladesh, New; countries: 
+- **andpictures.in@sd** — names: &pictures; groups: Indian Movies, New; countries: 
+- **banglavision.bd** — names: bangla vision; groups: Bangladesh, New; countries: 
+- **ekusheytv.bd** — names: ekushey tv; groups: Bangladesh, New; countries: 
+- **rtv.bd** — names: rtv; groups: Bangladesh, New; countries: 
+- **sonyentertainmenttelevision.in@sd** — names: sony entertainment tv; groups: Indian Entertainment, New; countries: 
+- **starmovies.in@sd** — names: star movies; groups: International, New; countries: 
 
 ## Cross-Country Backup Collisions
 
@@ -799,8 +816,8 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **982**
-- missing: **0**
+- Healthy/local references: **994**
+- missing: **1**
 - broken-local: **0**
 - external: **0**
 - non-png: **0**
@@ -808,6 +825,7 @@ None.
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
+- missing — Saga Music [sagamusic.in] — 
 
 ## Protected Primary Entries
 

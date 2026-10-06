@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-06T04:37:21+00:00",
+  "generated": "2026-10-06T05:52:17+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -138,10 +138,11 @@
       ],
       "groups": [
         "Backup",
-        "Indian Music"
+        "Indian Music",
+        "New"
       ],
-      "streams": 4,
-      "primary": 1,
+      "streams": 5,
+      "primary": 2,
       "backup": 3
     },
     "9xtashan": {
@@ -339,10 +340,11 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "New"
       ],
-      "streams": 4,
-      "primary": 1,
+      "streams": 5,
+      "primary": 2,
       "backup": 3
     },
     "anandtv": {
@@ -367,10 +369,11 @@
         "andpictures.in@sd"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Movies",
+        "New"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "andprivehd": {
@@ -533,6 +536,20 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "atnmusic": {
+      "names": [
+        "ATN Music"
+      ],
+      "ids": [
+        "atnmusic.bd"
+      ],
+      "groups": [
+        "New"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "atnnews": {
       "names": [
@@ -790,10 +807,11 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "New"
       ],
-      "streams": 3,
-      "primary": 1,
+      "streams": 4,
+      "primary": 2,
       "backup": 2
     },
     "barazamusictv": {
@@ -3376,10 +3394,11 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "New"
       ],
-      "streams": 5,
-      "primary": 1,
+      "streams": 6,
+      "primary": 2,
       "backup": 4
     },
     "enterfilm": {
@@ -6720,10 +6739,11 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh"
+        "Bangladesh",
+        "New"
       ],
-      "streams": 4,
-      "primary": 1,
+      "streams": 5,
+      "primary": 2,
       "backup": 3
     },
     "rupasibangla": {
@@ -6764,6 +6784,20 @@
       ],
       "groups": [
         "Documentary & Wildlife"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "sagamusic": {
+      "names": [
+        "Saga Music"
+      ],
+      "ids": [
+        "sagamusic.in"
+      ],
+      "groups": [
+        "New"
       ],
       "streams": 1,
       "primary": 1,
@@ -7149,10 +7183,11 @@
       ],
       "groups": [
         "Backup",
-        "Indian Entertainment"
+        "Indian Entertainment",
+        "New"
       ],
-      "streams": 6,
-      "primary": 1,
+      "streams": 7,
+      "primary": 2,
       "backup": 5
     },
     "sonykalhindi": {
@@ -7484,6 +7519,20 @@
       "primary": 1,
       "backup": 2
     },
+    "stargold2": {
+      "names": [
+        "Star Gold 2"
+      ],
+      "ids": [
+        "stargold2.in@hd"
+      ],
+      "groups": [
+        "New"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "stargoldselect": {
       "names": [
         "Star Gold Select"
@@ -7549,10 +7598,11 @@
       ],
       "groups": [
         "Backup",
-        "International"
+        "International",
+        "New"
       ],
-      "streams": 3,
-      "primary": 1,
+      "streams": 4,
+      "primary": 2,
       "backup": 2
     },
     "starmoviesselect": {
@@ -7598,6 +7648,20 @@
       "streams": 3,
       "primary": 1,
       "backup": 2
+    },
+    "starpravah": {
+      "names": [
+        "Star Pravah"
+      ],
+      "ids": [
+        "starpravah.in@hd"
+      ],
+      "groups": [
+        "New"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "starsports1": {
       "names": [
@@ -8579,6 +8643,20 @@
       ],
       "streams": 2,
       "primary": 2,
+      "backup": 0
+    },
+    "yrfmusic": {
+      "names": [
+        "YRF Music"
+      ],
+      "ids": [
+        "yrfmusic.in"
+      ],
+      "groups": [
+        "New"
+      ],
+      "streams": 1,
+      "primary": 1,
       "backup": 0
     },
     "zbcartoon": {

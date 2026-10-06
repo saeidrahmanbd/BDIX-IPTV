@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-06T04:37:20+00:00**
+Generated: **2026-10-06T05:52:16+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
@@ -14,13 +14,13 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 
 ## Source Status
 
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 816 current/future IDs; 114117 programme rows
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 531 current/future IDs; 21249 programme rows
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 816 current/future IDs; 114266 programme rows
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 530 current/future IDs; 21306 programme rows
 - **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 66455 programme rows
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19900 programme rows
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml — 394 channel IDs; 0 current/future IDs; 660 programme rows
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 716 current/future IDs; 73082 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 766 channel IDs; 765 current/future IDs; 84539 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 766 channel IDs; 764 current/future IDs; 84539 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1479 channel IDs; 1452 current/future IDs; 95956 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 282 channel IDs; 282 current/future IDs; 15285 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 112 channel IDs; 99 current/future IDs; 23477 programme rows
@@ -94,7 +94,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 ## Published Guide Validation
 
 - Playlist EPG references: **OK**
-- Guide channel IDs published: **299**
-- Mapped playlist IDs present in guide: **299/299 (100.0%)**
-- Mapped playlist IDs with current/future programmes: **280/299 (93.6%)**
+- Guide channel IDs published: **303**
+- Mapped playlist IDs present in guide: **303/303 (100.0%)**
+- Mapped playlist IDs with current/future programmes: **284/303 (93.7%)**
 - This validation is against the guide currently present in the working tree/publish candidate.
