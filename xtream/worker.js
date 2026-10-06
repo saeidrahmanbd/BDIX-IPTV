@@ -141,8 +141,8 @@ function parsePlaylist(text) {
   return {entries,groups};
 }
 async function getPlaylist(playlistEnv){
-  const cache=caches.default, key=new Request(CACHE_KEY + "|" + (env.PLAYLIST_URL||DEFAULT_PLAYLIST_URL)), cached=await cache.match(key); if(cached) return cached.text();
-  const r=await fetch(env.PLAYLIST_URL||DEFAULT_PLAYLIST_URL,{headers:{"user-agent":"BDIX-IPTV-Xtream-Gateway/1.0"}});
+  const cache=caches.default, key=new Request(CACHE_KEY + "|" + (playlistEnv.PLAYLIST_URL||DEFAULT_PLAYLIST_URL)), cached=await cache.match(key); if(cached) return cached.text();
+  const r=await fetch(playlistEnv.PLAYLIST_URL||DEFAULT_PLAYLIST_URL,{headers:{"user-agent":"BDIX-IPTV-Xtream-Gateway/1.0"}});
   if(!r.ok) throw new Error("Playlist fetch failed: "+r.status);
   const text=await r.text();
   await cache.put(key,new Response(text,{headers:{"content-type":"text/plain","cache-control":"public, max-age="+CACHE_TTL}}));
