@@ -1931,7 +1931,7 @@ https://pubads.g.doubleclick.net/ssai/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 https://cc-czbq30x55knit.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-czbq30x55knit/DIYC/PMSL/IN10/Epic_TV_IN_B/Epic_TV_IN_B.m3u8
 #EXTINF:-1 tvg-id="RojaTV.in" tvg-name="Roja TV" tvg-language="tam" tvg-country="IN" channel-id="RojaTV.in" group-title="New Channels" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/roja-tv.png",Roja TV
 https://live.rojatv.cloud/rojatv/rojatv/index.m3u8
-#EXTINF:-1 tvg-id="Sony8.in@SD" tvg-name="Sony 8" tvg-language="ben" tvg-country="IN" channel-id="Sony8.in@SD" group-title="New Channels",Sony 8
+#EXTINF:-1 tvg-id="Sony8.in@SD" tvg-name="Sony 8" tvg-language="ben" tvg-country="IN" channel-id="Sony8.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-8.png" group-title="New Channels",Sony 8
 http://103.114.11.37:8081/Sony-8/index.m3u8
 #EXTINF:-1 tvg-id="Swantham.in@SD" tvg-name="Swantham" tvg-language="mal" tvg-country="IN" channel-id="Swantham.in@SD" group-title="New Channels" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/swantham.png",Swantham
 http://cloud.logichost.in:1935/SWANTHAM/live/index.m3u8
