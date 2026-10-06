@@ -53,5 +53,11 @@
 
 ## 2026-10-06
 
-- No meaningful playlist changes detected.
+- 🆕 **3 new channel candidate(s) added to New Channels**
+- 🔁 **10 new backup candidate(s) added to New Backup**
+
+### New channels
+- Epic TV Digital
+- Roja TV
+- Swantham
 
