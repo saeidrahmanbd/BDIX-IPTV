@@ -1,27 +1,27 @@
 # Update Report
 
-_Last generated: **2026-10-06 06:30 UTC**_
+_Last generated: **2026-10-06 07:33 UTC**_
 
 | Metric | Current |
 |---|---:|
-| Streams | **1085** |
-| Active Channel Identities | **598** |
-| Active Primary Streams | **598** |
-| Bangladesh | **58** |
-| India | **274** |
-| Backup Streams | **360** |
-| New Channels | **45** |
-| New Backup Streams | **58** |
+| Streams | **1082** |
+| Active Channel Identities | **587** |
+| Active Primary Streams | **587** |
+| Bangladesh | **55** |
+| India | **267** |
+| Backup Streams | **352** |
+| New Channels | **40** |
+| New Backup Streams | **50** |
 | Local Logos | **99.9%** |
-| EPG Programme Coverage | **78.8%** |
-| EPG Mapping | **83.2%** |
-| Stream Health Tested | **982** |
-| Stream Health Failures | **135** |
-| Persistent Failures | **130** |
+| EPG Programme Coverage | **79.4%** |
+| EPG Mapping | **83.5%** |
+| Stream Health Tested | **963** |
+| Stream Health Failures | **117** |
+| Persistent Failures | **110** |
 | Near-Duplicate URL Families | **0** |
-| Audit Blocking Issues | **28** |
+| Audit Blocking Issues | **13** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-06T06:30:26+00:00** |
+| Pre-Publish Gate Generated | **2026-10-06T07:33:45+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -30,11 +30,11 @@ _Last generated: **2026-10-06 06:30 UTC**_
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
-- Logo exceptions: **1**
-- Not Playing logo exceptions: **0**
+- Logo exceptions: **0**
+- Not Playing logo exceptions: **1**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **1**
-- Alphabetical ordering issues: **26**
+- Category block-order issues: **2**
+- Alphabetical ordering issues: **10**
 - Signed/tokenized URLs: **9**
 
 ## Safety & Automation
@@ -45,23 +45,23 @@ _Last generated: **2026-10-06 06:30 UTC**_
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## EPG
-- Indian channels audited: **274**
-- Mapped: **228 (83.2%)**
-- Current/future programme coverage: **216/274 (78.8%)**
-- No mapping: **46**
+- Indian channels audited: **267**
+- Mapped: **223 (83.5%)**
+- Current/future programme coverage: **212/267 (79.4%)**
+- No mapping: **44**
 - Publication remains subject to source-policy approval.
 
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-06T06:29:36.794543+00:00** |
-| EPG coverage | **2026-10-06T06:29:34+00:00** |
-| Stream health | **2026-10-06T06:30:26+00:00** |
-| Pre-publish gate | **2026-10-06T06:30:26+00:00** |
+| Playlist audit | **2026-10-06T07:32:56.100711+00:00** |
+| EPG coverage | **2026-10-06T07:32:55+00:00** |
+| Stream health | **2026-10-06T07:33:45+00:00** |
+| Pre-publish gate | **2026-10-06T07:33:45+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
-- Latest entries change: **1085 → 1085**
-- Latest health failures: **136 → 135**
+- Latest entries change: **1085 → 1082**
+- Latest health failures: **135 → 117**
 
 Historical records are retained in reports/maintenance-history.json.

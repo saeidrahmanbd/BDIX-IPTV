@@ -1,16 +1,16 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-06T06:29:34+00:00**
+Generated: **2026-10-06T07:32:55+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **274**
-- Channels with an EPG mapping: **228**
-- Current/future programme coverage: **216/274 (78.8%)**
-- No guide mapping found: **46**
+- Active Indian channels audited: **267**
+- Channels with an EPG mapping: **223**
+- Current/future programme coverage: **212/267 (79.4%)**
+- No guide mapping found: **44**
 
 ## Source Status
 
@@ -21,7 +21,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml — 394 channel IDs; 0 current/future IDs; 660 programme rows
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 716 current/future IDs; 73082 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 766 channel IDs; 763 current/future IDs; 84539 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1479 channel IDs; 1452 current/future IDs; 95956 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1479 channel IDs; 1452 current/future IDs; 95912 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 282 channel IDs; 282 current/future IDs; 15285 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 112 channel IDs; 99 current/future IDs; 23959 programme rows
 - **OK** — https://avkb.short.gy/epg.xml.gz — 2273 channel IDs; 2162 current/future IDs; 72169 programme rows
@@ -40,7 +40,6 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Entertainment | Odisha TV | OdishaTV.in@SD | OdishaTV.in | MAPPED_ID_ONLY |
 | Indian Entertainment | One Paschima | OnePaschima.in@SD | One.Paschima.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Prarthana TV | PrarthanaTV.in@SD | Prarthana.TV.in | PrarthanaTV.in | MAPPED_ID_ONLY |
-| Indian Entertainment | Sony Entertainment TV | SonyEntertainmentTelevision.in@SD | Sony.Entertainment.Television.in | SonyEntertainmentTelevision.in | MAPPED_ID_ONLY |
 | Indian Music | Steelbird Music | SteelbirdMusic.in@SD | Steelbird.Music.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Suriyan TV | SuriyanTV.in@SD | ts1384 | MAPPED_ID_ONLY |
 | Indian Movies | MH One Dil Se | MHOneDilSe.in@SD | MH One Dil Se.in | MH-One-Dil-Se.in | MAPPED_NOT_CURRENTLY_FOUND |
@@ -59,7 +58,6 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Music | Hindi Hits | HindiHits.in | - | NO_GUIDE_HIT |
 | Indian Movies | Hindi Movies | custom.hindi.movies | - | NO_GUIDE_HIT |
 | Indian Bangla | JTV Bangla | JTVBangla.in@SD | - | NO_GUIDE_HIT |
-| Indian Bangla | Jhankar TV | JhankarTV.ca | - | NO_GUIDE_HIT |
 | Indian Bangla | Jtv Classic | custom.jtv.classic | - | NO_GUIDE_HIT |
 | Indian Entertainment | Kairali Arabia | KairaliArabia.in | - | NO_GUIDE_HIT |
 | Indian Music | Kalika TV | KalikaTV.in@SD | - | NO_GUIDE_HIT |
@@ -84,7 +82,6 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Movies | South Movies | custom.south.movies | - | NO_GUIDE_HIT |
 | Indian Movies | South Station | SouthStation.in | - | NO_GUIDE_HIT |
 | Indian Bangla | Star Bangla | custom.starbangla | - | NO_GUIDE_HIT |
-| Indian Movies | Starnet | Starnet.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | The Movie Club | TheMovieClub.in@HD | - | NO_GUIDE_HIT |
 | Indian Movies | The Movie Club +2 | TheMovieClub.in@Plus2 | - | NO_GUIDE_HIT |
 | Indian Entertainment | UTV Palakkad | UTVPalakkad.in@SD | - | NO_GUIDE_HIT |
@@ -94,7 +91,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 ## Published Guide Validation
 
 - Playlist EPG references: **OK**
-- Guide channel IDs published: **299**
-- Mapped playlist IDs present in guide: **299/299 (100.0%)**
-- Mapped playlist IDs with current/future programmes: **280/299 (93.6%)**
+- Guide channel IDs published: **293**
+- Mapped playlist IDs present in guide: **293/293 (100.0%)**
+- Mapped playlist IDs with current/future programmes: **276/293 (94.2%)**
 - This validation is against the guide currently present in the working tree/publish candidate.
