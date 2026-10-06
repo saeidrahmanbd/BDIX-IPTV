@@ -5,7 +5,7 @@ import re
 import json
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/metadata-normalization.md")
 RAW="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
-EXCLUDE={"Backup","New Backup","New Channels","Not Playing"}
+EXCLUDE={"Backup","New","New Backup","New Channels","Not Playing"}
 IDS={
   "Desh TV": "DeshTV.bd",
   "&pictures": "AndPictures.in@SD",
@@ -218,7 +218,7 @@ lines=P.read_text(encoding="utf-8-sig").replace("\r","").splitlines()
 # Preserve the Playlist Studio category registry.  It is part of the playlist
 # contract and must survive every maintenance normalization pass, including
 # categories that are currently empty (New Channels, New Backup, Not Playing).
-CATEGORY_REGISTRY=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","Not Playing"]
+CATEGORY_REGISTRY=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","New","Not Playing"]
 category_line="#PLAYLIST-STUDIO-CATEGORIES:"+json.dumps(CATEGORY_REGISTRY,ensure_ascii=False,separators=(",",":"))
 # Remove only blank lines and other legacy Studio directives; the canonical
 # category registry is restored immediately below.
