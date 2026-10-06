@@ -1,7 +1,7 @@
 // Deployment pipeline: code and required secrets are deployed as one version.
 const DEFAULT_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u";
 const DEFAULT_BDIX_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u";
-const CACHE_KEY = "https://bdix-iptv.internal/playlist-v2-category-normalized";
+const CACHE_KEY = "https://bdix-iptv.internal/playlist-v3-no-backup";
 const CACHE_TTL = 60;
 
 const EPG_PUBLIC_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg.xml";
@@ -133,13 +133,13 @@ function parsePlaylist(text) {
     const ext=lines[i], comma=ext.lastIndexOf(","); if(comma<0 || i+1>=lines.length) continue;
     const a=parseAttrs(ext), name=ext.slice(comma+1).trim(), url=lines[i+1].trim();
     if(!name || !url || url.startsWith("#")) continue;
-    const rawGroup=normalizeGroup(a["group-title"] || "Uncategorized"); const group=rawGroup || "Uncategorized"; const tvgId=a["tvg-id"] || "", tvgName=a["tvg-name"] || name, logo=a["tvg-logo"] || "";
+    const rawGroup=normalizeGroup(a["group-title"] || "Uncategorized"); const group=rawGroup || "Uncategorized"; if(["backup","not playing"].includes(groupKey(group))) continue; const tvgId=a["tvg-id"] || "", tvgName=a["tvg-name"] || name, logo=a["tvg-logo"] || "";
     entries.push({ id:stableId(tvgId+"|"+name+"|"+group+"|"+url), name, tvgId, tvgName, logo, group, channelNo:a["tvg-chno"]||"", url });
     i++;
   }
   const groups=[];
-  for(const g of categoryNames){ const clean=normalizeGroup(g); if(clean && !groups.some(x=>groupKey(x)===groupKey(clean))) groups.push(clean); }
-  for(const e of entries){ const match=groups.find(g=>groupKey(g)===groupKey(e.group)); if(match) e.group=match; else if(e.group) groups.push(e.group); }
+  for(const g of categoryNames){ const clean=normalizeGroup(g); if(clean && !["backup","not playing"].includes(groupKey(clean)) && !groups.some(x=>groupKey(x)===groupKey(clean))) groups.push(clean); }
+  for(const e of entries){ const match=groups.find(g=>groupKey(g)===groupKey(e.group)); if(match) e.group=match; else if(e.group && !["backup","not playing"].includes(groupKey(e.group))) groups.push(e.group); }
   const categoryId=new Map(groups.map((g,i)=>[groupKey(g),String(i+1)]));
   for(const e of entries) e.categoryId=categoryId.get(groupKey(e.group))||"0";
   return {entries,groups};
