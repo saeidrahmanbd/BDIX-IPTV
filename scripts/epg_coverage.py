@@ -74,7 +74,7 @@ def parse_playlist():
             cur={"tvg_id":a.get("tvg-id","").strip(),"name":a.get("tvg-name","").strip() or line.rsplit(",",1)[-1].strip(),
                  "group":a.get("group-title","").strip(),"country":a.get("tvg-country","").strip().upper()}
         elif cur and line.strip().startswith(("http://","https://")):
-            if cur["group"] not in ("Backup","New","New Channels","New Backup","Not Playing"):
+            if cur["group"] not in ("Backup","New Channels","New Backup","New","Not Playing"):
                 out.append(cur)
             cur=None
     seen=set(); result=[]
