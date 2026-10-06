@@ -1,3 +1,4 @@
+// Deployment pipeline: code and required secrets are deployed as one version.
 const DEFAULT_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u";
 const DEFAULT_BDIX_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u";
 const CACHE_KEY = "https://bdix-iptv.internal/playlist";
