@@ -1,0 +1,36 @@
+name: One-time IPTV Saga Music logo
+on:
+  push:
+    paths:
+      - .github/workflows/import-iptv-saga-logo.yml
+permissions:
+  contents: write
+jobs:
+  logo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check pillow
+      - run: |
+          python - <<'PY'
+          import io,ssl,urllib.request
+          from PIL import Image
+          from pathlib import Path
+          u="https://xstreamcp-assets-msp.streamready.in/assets/DISTROTV/LIVECHANNEL/66698979bac4421ebc5336d5/images/logo_20240322_183949_68.png"
+          req=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0"})
+          with urllib.request.urlopen(req,timeout=20,context=ssl._create_unverified_context()) as r:d=r.read()
+          im=Image.open(io.BytesIO(d)).convert("RGBA")
+          im.save("logos/saga-music.png","PNG",optimize=True)
+          p=Path("IPTV-Playlist.m3u"); s=p.read_text()
+          s=s.replace('tvg-name="Saga Music" channel-id="SagaMusic.in"', 'tvg-name="Saga Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saga-music.png" channel-id="SagaMusic.in"')
+          p.write_text(s)
+          PY
+      - run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          rm -f .github/workflows/import-iptv-saga-logo.yml
+          git add IPTV-Playlist.m3u logos/saga-music.png .github/workflows/
+          git commit -m "Add Saga Music logo to IPTV playlist"
+          git push origin HEAD:main
