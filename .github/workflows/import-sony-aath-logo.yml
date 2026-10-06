@@ -18,7 +18,7 @@ jobs:
         run: |
           set -e
           curl -L --fail --retry 3 --max-time 30 \
-            "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sony_Aath_new.png" \
+            "https://sonypicturesnetworks.com/images/logos/SONY%20AATH.png" \
             -o logos/sony-aath.png
           file logos/sony-aath.png
           test -s logos/sony-aath.png
