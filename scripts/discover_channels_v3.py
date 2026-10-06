@@ -6,7 +6,7 @@ from urllib.parse import urlparse, parse_qsl, unquote_plus
 
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/channel-discovery.md")
 S=[("Bangladesh","https://iptv-org.github.io/iptv/countries/bd.m3u"),("India","https://iptv-org.github.io/iptv/countries/in.m3u")]
-BLOCK={"sports","religious","kids"}; INDIA={"music","movies","movie"}
+BLOCK={"sports","religious","kids"}; INDIA={"music","movies","movie","entertainment"}
 BAD=("vod","catchup","catch-up","test","demo","proxy","proxied","cors","webcam","radio","podcast","event","ppv","24/7","timeshift")
 HOSTBAD=("proxy","proxied","cors","localhost","workers.dev","worker.dev","pages.dev")
 QBAD=("token=","auth=","authorization=","hdnts=","sig=","signature=","expires=","session=","jwt=","key=")
@@ -141,10 +141,10 @@ def main():
     new=unique_new[:40]; backups=unique_backups[:80]
     lines=original.replace("\r","").splitlines(); add=[]
     for c,a,n,u in new:
-        z=ext(a,n,"New Channels")
+        z=ext(a,n,"New")
         if z: add += [z,u]
     for c,a,n,u in backups:
-        z=ext(a,n,"New Backup")
+        z=ext(a,n,"New")
         if z: add += [z,u]
     if add:
         # New Channels and New Backup are intentionally appended to the
@@ -157,7 +157,7 @@ def main():
         for i,l in enumerate(lines):
             if l.startswith("#PLAYLIST-STUDIO-CATEGORIES:"):
                 cs=json.loads(l.split(":",1)[1])
-                for g in ("New Channels","New Backup"):
+                for g in ("New",):
                     if g not in cs:
                         cs.append(g)
                 lines[i]="#PLAYLIST-STUDIO-CATEGORIES:"+json.dumps(cs,ensure_ascii=False); break
