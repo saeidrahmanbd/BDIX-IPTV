@@ -471,7 +471,7 @@ for info, url in primary_entries:
     primary_by_norm_name.setdefault(key, pname)
 for info, url in entries:
     group = attrs(info).get("group-title", "").strip()
-    if group not in {"New Channels", "New Backup"}:
+    if group not in {"New", "New Channels", "New Backup"}:
         continue
     name = attrs(info).get("tvg-name", "").strip()
     key = re.sub(r"s+", " ", re.sub(r"s*[[^]]+]s*$", "", name)).strip().lower()
@@ -539,7 +539,7 @@ def run_change_guard():
     old_keys = {key(i,u) for i,u in old_entries}
     new_keys = {key(i,u) for i,u in entries}
     added, removed = new_keys-old_keys, old_keys-new_keys
-    review_urls = {u.strip().lower() for i,u in entries if attrs(i).get("group-title","").strip() in {"New Channels", "New Backup"} and u}
+    review_urls = {u.strip().lower() for i,u in entries if attrs(i).get("group-title","").strip() in {"New", "New Channels", "New Backup"} and u}
     review_added = {k for k in added if k[1].strip().lower() in review_urls}
     active_added = added - review_added
     max_changes = 150
