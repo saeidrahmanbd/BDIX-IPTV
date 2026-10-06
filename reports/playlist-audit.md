@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-06T06:09:50.210167+00:00**
+Generated: **2026-10-06T06:18:54.619757+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -40,7 +40,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - 9XM — Backup — http://198.195.239.50:8095/9XM.MUSIC/index.m3u8
 - 9XM — Backup — https://wiselp.wiseplayout.com/9XM/HD1080/HD1080.m3u8
 - 9XM — Backup — https://wiselp.wiseplayout.com/9XM/master.m3u8
-- 9XM — New — https://9xjio.wiseplayout.com/9XM/HD720/HD720.m3u8
+- 9XM — New Backup — https://9xjio.wiseplayout.com/9XM/HD720/HD720.m3u8
 ### aakaashaath.in@sd (3 streams)
 - Aakaash Aath — Indian Bangla — https://mumt03.tangotv.in/Dsly5z3HAAKASHAATH/index.m3u8
 - Aakaash Aath — Backup — http://tvsen5.aynascope.net/Wm9Lv2RjZGT6/index.m3u8
@@ -50,10 +50,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Ananda TV — Backup — http://live-stream.amarbanglatv.in:8080/hls/sanandatv/index.m3u8
 - Ananda TV — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/anandatv.stream/live-orgin/anandatv.stream/playlist.m3u8
 - Ananda TV — Backup — https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/tracks-v1a1/mono.ts.m3u8
-- Ananda TV — New — https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
+- Ananda TV — New Backup — https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8
 ### andpictures.in@sd (2 streams)
 - &pictures — Indian Movies — http://198.195.239.50:8095/ANT.PICTURS.HD/index.m3u8
-- &pictures — New — http://202.70.146.135:8000/play/a06b/index.m3u8
+- &pictures — New Backup — http://202.70.146.135:8000/play/a06b/index.m3u8
 ### andtv.in@sd (3 streams)
 - &TV — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/and_tv_hd_abr/index.m3u8
 - &TV — Backup — https://3f56f997.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9BbmRUVl9ITFM/playlist.m3u8
@@ -117,7 +117,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Bangla Vision — Bangladesh — https://tvsen5.aynaott.com/banglavision/index.m3u8
 - Bangla Vision — Backup — https://iptvlive.ahmed-bd-org.workers.dev/banglavision-1/index.m3u8
 - Bangla Vision — Backup — https://tvsen5.aynaott.com/tgUzpPc9r6xw/index.m3u8
-- Bangla Vision — New — https://tvsen5.aynaott.com/tgUzpPc9r6xw/tracks-v1a1/mono.ts.m3u8
+- Bangla Vision — New Backup — https://tvsen5.aynaott.com/tgUzpPc9r6xw/tracks-v1a1/mono.ts.m3u8
 ### bbcearth.ca (2 streams)
 - BBC Earth — Documentary & Wildlife — https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist.m3u8
 - BBC Earth — Backup — http://198.195.239.50:8095/BBC.Earth.HD/index.m3u8
@@ -323,7 +323,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Ekushey TV — Backup — https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
 - Ekushey TV — Backup — https://tvsen5.aynaott.com/SyQuXz8sC3TB/index.m3u8
 - Ekushey TV — Backup — https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8
-- Ekushey TV — New — http://210.4.72.204/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
+- Ekushey TV — New Backup — http://210.4.72.204/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
 ### enterr10bangla.in@sd (8 streams)
 - Enterr10 Bangla — Indian Bangla — http://198.195.239.50:8095/enter10Bangla/index.m3u8
 - Enterr10 Bangla — Backup — http://198.195.239.50:8095/ENTER10.BANGLA/index.m3u8
@@ -600,7 +600,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - RTV — Backup — http://116.204.149.16/rtvhd/index.m3u8
 - RTV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/rtv-sg.stream/index.m3u8
 - RTV — Backup — https://tvsen5.aynaott.com/RtvHD/index.m3u8
-- RTV — New — https://tvsen5.aynaott.com/ba47dHpDk3Se/index.m3u8
+- RTV — New Backup — https://tvsen5.aynaott.com/ba47dHpDk3Se/index.m3u8
 ### rupasibangla.in@sd (3 streams)
 - Ruposhi Bangla — Indian Bangla — https://mumt05.tangotv.in/87NeALx2RUPASIBANGLA/index.m3u8
 - Ruposhi Bangla — Backup — https://cdn.pishow.tv/ott/live/1039/master.m3u8
@@ -647,7 +647,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Sony Entertainment TV — Backup — https://drk6xq0vhn.gpcdn.net/live/sony_ent_hd_abr/index.m3u8
 - Sony Entertainment TV — Backup — https://stream.ottplus.live/live/sony_ent_hd_abr/index.m3u8
 - Sony Entertainment TV — Backup — https://stream.ottplus.live/live/sony_ent_sd_abr/index.m3u8
-- Sony Entertainment TV — New — http://202.70.146.135:8000/play/a005/index.m3u8
+- Sony Entertainment TV — New Backup — http://202.70.146.135:8000/play/a005/index.m3u8
 ### sonymax.in@sd (3 streams)
 - Sony Max — Indian Movies — https://drk6xq0vhn.gpcdn.net/live/max_hd_abr/index.m3u8
 - Sony Max — Backup — http://198.195.239.50:8095/SONY.MAX.HD/index.m3u8
@@ -681,7 +681,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Star Movies — International — http://51.75.127.199:3141/starmovies/index.m3u8
 - Star Movies — Backup — http://198.195.239.50:8095/STAR.MOVIES.HD/index.m3u8
 - Star Movies — Backup — http://51.75.127.199:3141/starmovieshd/index.m3u8
-- Star Movies — New — http://202.70.146.135:8000/play/a06r/index.m3u8
+- Star Movies — New Backup — http://202.70.146.135:8000/play/a06r/index.m3u8
 ### starmoviesselect.in@hd (2 streams)
 - Star Movies Select — International — http://51.75.127.199:3141/starmoviesselecthd/index.m3u8
 - Star Movies Select — Backup — http://198.195.239.50:8095/STAR.MOVIES.SEL.HD/index.m3u8

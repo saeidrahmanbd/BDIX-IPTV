@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-06T06:08:59+00:00**
+Generated: **2026-10-06T06:18:03+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
@@ -16,7 +16,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 816 current/future IDs; 114266 programme rows
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 530 current/future IDs; 21306 programme rows
-- **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 66455 programme rows
+- **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 68021 programme rows
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 529 current/future IDs; 19900 programme rows
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml — 394 channel IDs; 0 current/future IDs; 660 programme rows
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 716 current/future IDs; 73082 programme rows

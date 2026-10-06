@@ -2,7 +2,9 @@
 
 - New channels: **40**
 - New backups: **50**
-- Rejected: **602**
+- Rejected/suppressed: **602**
+- Remembered rejected new-channel identities: **0**
+- Remembered rejected backup URLs: **0**
 
 ## New Channels
 
