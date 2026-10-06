@@ -40,8 +40,9 @@ jobs:
             git clean -fd
             cp epg.xml /tmp/bdix-epg-previous.xml 2>/dev/null || true
             python scripts/normalize_metadata.py
-            # Automatic candidate discovery is enabled. Discovered new channels and backup candidates
-            # are placed in the protected New review queue for manual verification.
+            # Automatic candidate discovery is enabled. New channels go to New Channels,
+            # backup candidates go to New Backup, and user-deleted review entries are remembered
+            # in reports/discovery-state.json so they do not recur on later runs.
             python scripts/discover_channels_v3.py
             python scripts/migrate_external_logos_fixed.py
             python scripts/epg_coverage.py
