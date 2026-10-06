@@ -17218,61 +17218,39 @@ Territory means plentiful food, shelter, attraction to mates and safety to raise
     <icon src="https://iptv-epg.org/images/KKFt18z3vNc0QpXkmCsUoYA-Voe5JQzDVFabvdggwSzDIWbVKk1vwiLfb1twMuK1ML17XrOHcz0gm2LRpIBrwiicqsj26gtFO3pIZ-OXFkP4DIeSA0z0Wk1qF6Q" />
     <title lang="en">Movie</title>
   </programme>
-  <programme start="20261006020100 +0530" stop="20261006052800 +0530" channel="B4UKadak.in@SD" catchup-id="2610061295004">
-    <title>Sultanat</title>
-    <desc>Sultan, a brave warrior, tries to win the affections of Yasmin, a beautiful woman. However, his life turns upside down when his father is killed by a general, whom he swears revenge against.</desc>
-    <category>Feature Film</category>
-    <date>20261006</date>
-    <icon src="https://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/7bc5db9112f80de4aa56657ef8d66556.jpg" />
+  <programme start="20261005200200 +0000" stop="20261006003000 +0000" channel="B4UKadak.in@SD">
+    <category lang="en">Film</category>
+    <category lang="en">Romance</category>
     <credits>
-      <actor>Dharmendra (General Khalid)</actor>
-      <actor>Sunny Deol (Sultan Pirzada)</actor>
-      <actor>Sridevi (Princess Yasmeen)</actor>
-      <actor>Juhi Chawla (Zarina)</actor>
-      <actor>Karan Kapoor (Samir Shah)</actor>
-      <actor>Amrish Puri (Razoulli Al Jabbar)</actor>
-      <actor>Tom Alter (Shah)</actor>
-      <actor>Shakti Kapoor (Shakir Shah)</actor>
+      <director>S.K. Subash</director>
+      <actor>Govinda</actor>
+      <actor>Aruna Irani</actor>
+      <actor>Rajkiran</actor>
+      <actor>Johnny Lever</actor>
+      <actor>Mandakini</actor>
+      <actor>Anjana Mumtaz</actor>
+      <actor>Asha Sharma</actor>
+      <actor>Mayur Verma</actor>
+      <actor>Cat Stevens</actor>
+      <producer>Jairam Gulabani</producer>
     </credits>
-    <sub-title>Sultan, a brave warrior, tries to win the affections of Yasmin, a beautiful woman. However, his life turns upside down when his father is killed by a general, whom he swears revenge against.</sub-title>
+    <desc lang="en">With dreams of becoming a great dancer, Govinda, an ordinary man, is given the opportunity to compete against Rocky, a celebrated dancer, in a twist of fate.</desc>
+    <icon src="https://iptv-epg.org/images/Te5oQBz8v9IVgE1yCVtz7OxqwB98RlA00Ng3cX_5SpkHD1Ty-v37gFFpU1NKNO6yPKjDH3zU3nkdFulVuf5BU375a0KV3nXbT6JT_pE1fYA6ZD50neUyunDGtqtP" />
+    <title lang="en">Naach Govinda Naach</title>
   </programme>
-  <programme start="20261006052800 +0530" stop="20261006084600 +0530" channel="B4UKadak.in@SD" catchup-id="2610061295005">
-    <title>Hiraasat</title>
-    <desc>An honest policeman who lives with his wife and a brother who is a student, gets implicated and arrested in a case of drug-trafficking.</desc>
-    <category>Feature Film</category>
-    <date>20261006</date>
-    <icon src="https://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/10d83d2eb09f2602e0a4a4070604e4c9.jpg" />
-    <credits>
-      <director>Surendra Mohan</director>
-      <actor>Shatrughan Sinha (ACP Ashok Saxena)</actor>
-      <actor>Hema Malini (Shobha Saxena)</actor>
-      <actor>Mithun Chakraborty (Rajesh Saxena 'Raju')</actor>
-      <actor>Anita Raj (Renu)</actor>
-      <actor>Prem Chopra (Dhanraj 'Pat' Patwardhan)</actor>
-      <actor>Shakti Kapoor (Sippy)</actor>
-      <actor>Dalip Tahil (Shyam)</actor>
-      <actor>Sujit Kumar</actor>
-    </credits>
-    <sub-title>An honest policeman who lives with his wife and a brother who is a student, gets implicated and arrested in a case of drug-trafficking.</sub-title>
+  <programme start="20261006003000 +0000" stop="20261006033000 +0000" channel="B4UKadak.in@SD">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
   </programme>
-  <programme start="20261006084600 +0530" stop="20261006124000 +0530" channel="B4UKadak.in@SD" catchup-id="2610061295006">
-    <title>Barsaat Ki Ek Raat</title>
-    <desc>A man rescues a woman, who is blind, from a criminal. However, troubles arise for the couple when the criminal returns for revenge.</desc>
-    <category>Feature Film</category>
-    <date>20261006</date>
-    <icon src="https://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/1e115be08c18fe493b49c7c52c5d2adf.jpg" />
-    <credits>
-      <actor>Amitabh Bachchan</actor>
-      <actor>Rakhee Gulzar</actor>
-      <actor>Amjad Khan</actor>
-      <actor>Abhi Bhattacharya</actor>
-      <actor>Utpal Dutt</actor>
-      <actor>Prema Narayan</actor>
-      <actor>Asit Sen</actor>
-      <actor>Sujit Kumar</actor>
-      <actor>Nimu Bhowmik</actor>
-    </credits>
-    <sub-title>A man rescues a woman, who is blind, from a criminal. However, troubles arise for the couple when the criminal returns for revenge.</sub-title>
+  <programme channel="B4UKadak.in@SD" start="20261006090000 +0530" stop="20261006120000 +0530">
+    <title lang="en">Movie</title>
+    <desc lang="en">Bringing the best in television.</desc>
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <icon src="https://dtil.tmsimg.com/assets/p809737_b_h9_af.jpg?lock=880x660" />
   </programme>
   <programme start="20261006124000 +0530" stop="20261006160200 +0530" channel="B4UKadak.in@SD" catchup-id="2610061295007">
     <title>Mr. Natwarlal</title>
@@ -33034,97 +33012,143 @@ A false birthday celebration is plotted by Suryakanth and Chandrakanth to oversh
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/41c3e6b61090feb4b6fa7e01d343b2c0.jpg" />
     <premiere />
   </programme>
-  <programme start="20261006045000 +0530" stop="20261006052500 +0530" channel="ColorsMarathi.in@SD" catchup-id="99883449">
-    <title>Mi Jinkun Ghein Saara</title>
-    <desc>Chhavi defends the Rajguru family against their new daughter-in-law, Shambhavi. S01 E199.</desc>
+  <programme start="20261006052000 +0530" stop="20261006055500 +0530" channel="ColorsMarathi.in@SD">
+    <title lang="mr-IN">मी जिंकून घेईन सारं</title>
+    <sub-title lang="mr-IN">Somesh deceives Kiara to turn her against Aniket and Chhavi. Later, Santosh reveals that Mr Jahagirdar forced him to take the blame to clear his debt</sub-title>
+    <desc lang="mr-IN">आपले दत्तक कुटुंब, राजगुरूंच्या रक्षणासाठी वाहून घेतलेली छवी नवीन सून शाम्भवीच्या गुप्त हेतूंपासून घराचे रक्षण करते.</desc>
+    <credits>
+      <actor>Janhvi Tambat,Amruta Phadke,Sanchit Chaudhari,Amit Rekhi,Pooja Moily</actor>
+    </credits>
+    <category lang="mr-IN">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/ea8f50186aa24ef44bc17a63fea730ab.jpg" />
+    <episode-num system="onscreen">E199</episode-num>
+    <premiere />
   </programme>
-  <programme channel="ColorsMarathi.in@SD" start="20261006000000 +0000" stop="20261006003500 +0000">
-    <title lang="zh">Mi Jinkun Ghein Saara</title>
-    <desc>Chhavi dedicates herself to protecting her adoptive family, the Rajgurus. Upon the arrival of a new daughter-in-law, Shambhavi, Chhavi prepares to defend the household against her hidden motives.</desc>
-    <date>20261006</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261006055500 +0530" stop="20261006063000 +0530" channel="ColorsMarathi.in@SD">
+    <title lang="mr-IN">मोहिनी - प्रेमाची फिल्मी कहाणी</title>
+    <sub-title lang="mr-IN">Aspiring television professional Mohini encounters Bollywood actor RK. Following an initially hostile introduction, the pair navigate a complex relationship involving romance and betrayal</sub-title>
+    <desc lang="mr-IN">व्यावसायिक बनू इच्छिणारी मोहिनी, अभिनेता आरकेला भेटते आणि शत्रुत्वातून त्यांच्यात प्रेम व विश्वासघाताचे नाते निर्माण होते.</desc>
+    <credits>
+      <director>Shailesh Dere,Mukul Abhyankar,Charudatta Bhagwat,Aditya Parulekar</director>
+      <actor>Sameer Paranjape (RK),Anagha Thakur (Mohini)</actor>
+    </credits>
+    <category lang="mr-IN">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/baa7d547ede1de0166e699ec129ca8ba.jpg" />
+    <episode-num system="onscreen">E195</episode-num>
+    <premiere />
   </programme>
-  <programme channel="ColorsMarathi.in@SD" start="20261006003500 +0000" stop="20261006011000 +0000">
-    <title lang="zh">Mohini - Premachi Filmy Kahaani</title>
-    <desc>Aspiring television professional Mohini encounters Bollywood actor RK. Following an initially hostile introduction, the pair navigate a complex relationship involving romance and betrayal.</desc>
-    <date>20261006</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261006063000 +0530" stop="20261006071000 +0530" channel="ColorsMarathi.in@SD">
+    <title lang="mr-IN">जय जय स्वामी समर्थ</title>
+    <sub-title lang="mr-IN">Ranjit gets a warning from Swami that he will be destroyed during Navratri. Later, he reveals that he has written about Ranjit's downfall</sub-title>
+    <desc lang="mr-IN">महाराष्ट्रातील अक्कलकोट येथे आलेले स्वामी समर्थ आपल्या भक्तांना आपल्या शिकवणींतून धार्मिक मार्गासाठी मार्गदर्शन करतात।.</desc>
+    <credits>
+      <director>Umesh Namjoshi</director>
+      <actor>Akshay Mudwadkar (Swami Samarth),Vijaya Babar (Chanda),Kritina Vartak (Saraja),Pooja Raibagi (Kalindi),Atul Sanas (Chanda's father),Akshata Sawant (Yesubai),Nitya Pawar (Krishnappa),Satish Salagare (Pant Ramacharya)</actor>
+    </credits>
+    <category lang="mr-IN">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/4255947fc83ceefb9db94ecf3aa0e4a0.jpg" />
+    <episode-num system="onscreen">E1972</episode-num>
+    <premiere />
   </programme>
-  <programme channel="ColorsMarathi.in@SD" start="20261006011000 +0000" stop="20261006015000 +0000">
-    <title lang="zh">Jai Jai Swami Samarth</title>
-    <desc>A revered religious leader appears in Akkalkot, Maharashtra, and through his teachings guides his devotees towards the path of righteousness.</desc>
-    <date>20261006</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261006071000 +0530" stop="20261006075000 +0530" channel="ColorsMarathi.in@SD">
+    <title lang="mr-IN">आई तुळजाभवानी</title>
+    <sub-title lang="mr-IN">Asurika deceives Vanchika by claiming that the Chintamani stone can heal Mahishasur. Later, she reveals to Shukracharya her scheme to test Vanchika's loyalty</sub-title>
+    <desc lang="mr-IN">आई तुळजा भवानी मानवतेचे रक्षण करण्यासाठी आणि शांतता राखण्यासाठी वाईट शक्तींना पराभूत करण्याचा प्रयत्न करते.</desc>
+    <credits>
+      <actor>Vishwanath Kulkarni (Nabhaji),Pooja Kale (Aai Tuljabhavani),Vijayalaxmi Kumbhar (Jagdamba)</actor>
+    </credits>
+    <category lang="mr-IN">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/40576da2d38a2290ae4faf5fdde9c1c7.jpg" />
+    <episode-num system="onscreen">E705</episode-num>
+    <premiere />
   </programme>
-  <programme channel="ColorsMarathi.in@SD" start="20261006015000 +0000" stop="20261006023000 +0000">
-    <title lang="zh">Aai Tuljabhavani</title>
-    <desc>Aai Tulija Bhavani strives to overcome multiple challenges and defeat the evil powers, in order to protect humanity and maintain peace.</desc>
-    <date>20261006</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261006075000 +0530" stop="20261006082500 +0530" channel="ColorsMarathi.in@SD">
+    <title lang="mr-IN">मी जिंकून घेईन सारं</title>
+    <sub-title lang="mr-IN">Somesh deceives Kiara to turn her against Aniket and Chhavi. Later, Santosh reveals that Mr Jahagirdar forced him to take the blame to clear his debt</sub-title>
+    <desc lang="mr-IN">आपले दत्तक कुटुंब, राजगुरूंच्या रक्षणासाठी वाहून घेतलेली छवी नवीन सून शाम्भवीच्या गुप्त हेतूंपासून घराचे रक्षण करते.</desc>
+    <credits>
+      <actor>Janhvi Tambat,Amruta Phadke,Sanchit Chaudhari,Amit Rekhi,Pooja Moily</actor>
+    </credits>
+    <category lang="mr-IN">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/ea8f50186aa24ef44bc17a63fea730ab.jpg" />
+    <episode-num system="onscreen">E199</episode-num>
+    <premiere />
   </programme>
-  <programme channel="ColorsMarathi.in@SD" start="20261006023000 +0000" stop="20261006030500 +0000">
-    <title lang="zh">Mi Jinkun Ghein Saara</title>
-    <desc>Chhavi dedicates herself to protecting her adoptive family, the Rajgurus. Upon the arrival of a new daughter-in-law, Shambhavi, Chhavi prepares to defend the household against her hidden motives.</desc>
-    <date>20261006</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261006082500 +0530" stop="20261006090000 +0530" channel="ColorsMarathi.in@SD">
+    <title lang="mr-IN">मोहिनी - प्रेमाची फिल्मी कहाणी</title>
+    <sub-title lang="mr-IN">Aspiring television professional Mohini encounters Bollywood actor RK. Following an initially hostile introduction, the pair navigate a complex relationship involving romance and betrayal</sub-title>
+    <desc lang="mr-IN">व्यावसायिक बनू इच्छिणारी मोहिनी, अभिनेता आरकेला भेटते आणि शत्रुत्वातून त्यांच्यात प्रेम व विश्वासघाताचे नाते निर्माण होते.</desc>
+    <credits>
+      <director>Shailesh Dere,Mukul Abhyankar,Charudatta Bhagwat,Aditya Parulekar</director>
+      <actor>Sameer Paranjape (RK),Anagha Thakur (Mohini)</actor>
+    </credits>
+    <category lang="mr-IN">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/baa7d547ede1de0166e699ec129ca8ba.jpg" />
+    <episode-num system="onscreen">E195</episode-num>
+    <premiere />
   </programme>
-  <programme channel="ColorsMarathi.in@SD" start="20261006030500 +0000" stop="20261006034000 +0000">
-    <title lang="zh">Mohini - Premachi Filmy Kahaani</title>
-    <desc>Aspiring television professional Mohini encounters Bollywood actor RK. Following an initially hostile introduction, the pair navigate a complex relationship involving romance and betrayal.</desc>
-    <date>20261006</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261006090000 +0530" stop="20261006094000 +0530" channel="ColorsMarathi.in@SD">
+    <title lang="mr-IN">जय जय स्वामी समर्थ</title>
+    <sub-title lang="mr-IN">Ranjit gets a warning from Swami that he will be destroyed during Navratri. Later, he reveals that he has written about Ranjit's downfall</sub-title>
+    <desc lang="mr-IN">महाराष्ट्रातील अक्कलकोट येथे आलेले स्वामी समर्थ आपल्या भक्तांना आपल्या शिकवणींतून धार्मिक मार्गासाठी मार्गदर्शन करतात।.</desc>
+    <credits>
+      <director>Umesh Namjoshi</director>
+      <actor>Akshay Mudwadkar (Swami Samarth),Vijaya Babar (Chanda),Kritina Vartak (Saraja),Pooja Raibagi (Kalindi),Atul Sanas (Chanda's father),Akshata Sawant (Yesubai),Nitya Pawar (Krishnappa),Satish Salagare (Pant Ramacharya)</actor>
+    </credits>
+    <category lang="mr-IN">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/4255947fc83ceefb9db94ecf3aa0e4a0.jpg" />
+    <episode-num system="onscreen">E1972</episode-num>
+    <premiere />
   </programme>
-  <programme channel="ColorsMarathi.in@SD" start="20261006034000 +0000" stop="20261006042000 +0000">
-    <title lang="zh">Jai Jai Swami Samarth</title>
-    <desc>A revered religious leader appears in Akkalkot, Maharashtra, and through his teachings guides his devotees towards the path of righteousness.</desc>
-    <date>20261006</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261006094000 +0530" stop="20261006102000 +0530" channel="ColorsMarathi.in@SD">
+    <title lang="mr-IN">आई तुळजाभवानी</title>
+    <sub-title lang="mr-IN">Asurika deceives Vanchika by claiming that the Chintamani stone can heal Mahishasur. Later, she reveals to Shukracharya her scheme to test Vanchika's loyalty</sub-title>
+    <desc lang="mr-IN">आई तुळजा भवानी मानवतेचे रक्षण करण्यासाठी आणि शांतता राखण्यासाठी वाईट शक्तींना पराभूत करण्याचा प्रयत्न करते.</desc>
+    <credits>
+      <actor>Vishwanath Kulkarni (Nabhaji),Pooja Kale (Aai Tuljabhavani),Vijayalaxmi Kumbhar (Jagdamba)</actor>
+    </credits>
+    <category lang="mr-IN">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/40576da2d38a2290ae4faf5fdde9c1c7.jpg" />
+    <episode-num system="onscreen">E705</episode-num>
+    <premiere />
   </programme>
-  <programme channel="ColorsMarathi.in@SD" start="20261006042000 +0000" stop="20261006050000 +0000">
-    <title lang="zh">Aai Tuljabhavani</title>
-    <desc>Aai Tulija Bhavani strives to overcome multiple challenges and defeat the evil powers, in order to protect humanity and maintain peace.</desc>
-    <date>20261006</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261006102000 +0530" stop="20261006105500 +0530" channel="ColorsMarathi.in@SD">
+    <title lang="mr-IN">मी जिंकून घेईन सारं</title>
+    <sub-title lang="mr-IN">Somesh deceives Kiara to turn her against Aniket and Chhavi. Later, Santosh reveals that Mr Jahagirdar forced him to take the blame to clear his debt</sub-title>
+    <desc lang="mr-IN">आपले दत्तक कुटुंब, राजगुरूंच्या रक्षणासाठी वाहून घेतलेली छवी नवीन सून शाम्भवीच्या गुप्त हेतूंपासून घराचे रक्षण करते.</desc>
+    <credits>
+      <actor>Janhvi Tambat,Amruta Phadke,Sanchit Chaudhari,Amit Rekhi,Pooja Moily</actor>
+    </credits>
+    <category lang="mr-IN">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/ea8f50186aa24ef44bc17a63fea730ab.jpg" />
+    <episode-num system="onscreen">E199</episode-num>
+    <premiere />
   </programme>
-  <programme channel="ColorsMarathi.in@SD" start="20261006050000 +0000" stop="20261006053000 +0000">
-    <title lang="zh">Abeer Gulal</title>
-    <desc>Agastya asks Shree about being upset over abruptly leaving at night. Following that, he tells Dhanaji about making the incorrect decision.</desc>
-    <date>20261006</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261006105500 +0530" stop="20261006113000 +0530" channel="ColorsMarathi.in@SD">
+    <title lang="mr-IN">मोहिनी - प्रेमाची फिल्मी कहाणी</title>
+    <sub-title lang="mr-IN">Aspiring television professional Mohini encounters Bollywood actor RK. Following an initially hostile introduction, the pair navigate a complex relationship involving romance and betrayal</sub-title>
+    <desc lang="mr-IN">व्यावसायिक बनू इच्छिणारी मोहिनी, अभिनेता आरकेला भेटते आणि शत्रुत्वातून त्यांच्यात प्रेम व विश्वासघाताचे नाते निर्माण होते.</desc>
+    <credits>
+      <director>Shailesh Dere,Mukul Abhyankar,Charudatta Bhagwat,Aditya Parulekar</director>
+      <actor>Sameer Paranjape (RK),Anagha Thakur (Mohini)</actor>
+    </credits>
+    <category lang="mr-IN">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/baa7d547ede1de0166e699ec129ca8ba.jpg" />
+    <episode-num system="onscreen">E195</episode-num>
+    <premiere />
   </programme>
-  <programme channel="ColorsMarathi.in@SD" start="20261006053000 +0000" stop="20261006060500 +0000">
-    <title lang="zh">Mi Jinkun Ghein Saara</title>
-    <desc>Chhavi dedicates herself to protecting her adoptive family, the Rajgurus. Upon the arrival of a new daughter-in-law, Shambhavi, Chhavi prepares to defend the household against her hidden motives.</desc>
-    <date>20261006</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="ColorsMarathi.in@SD" start="20261006060500 +0000" stop="20261006064000 +0000">
-    <title lang="zh">Mohini - Premachi Filmy Kahaani</title>
-    <desc>Aspiring television professional Mohini encounters Bollywood actor RK. Following an initially hostile introduction, the pair navigate a complex relationship involving romance and betrayal.</desc>
-    <date>20261006</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261006113000 +0530" stop="20261006121000 +0530" channel="ColorsMarathi.in@SD">
+    <title lang="mr-IN">जय जय स्वामी समर्थ</title>
+    <sub-title lang="mr-IN">Ranjit gets a warning from Swami that he will be destroyed during Navratri. Later, he reveals that he has written about Ranjit's downfall</sub-title>
+    <desc lang="mr-IN">महाराष्ट्रातील अक्कलकोट येथे आलेले स्वामी समर्थ आपल्या भक्तांना आपल्या शिकवणींतून धार्मिक मार्गासाठी मार्गदर्शन करतात।.</desc>
+    <credits>
+      <director>Umesh Namjoshi</director>
+      <actor>Akshay Mudwadkar (Swami Samarth),Vijaya Babar (Chanda),Kritina Vartak (Saraja),Pooja Raibagi (Kalindi),Atul Sanas (Chanda's father),Akshata Sawant (Yesubai),Nitya Pawar (Krishnappa),Satish Salagare (Pant Ramacharya)</actor>
+    </credits>
+    <category lang="mr-IN">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/4255947fc83ceefb9db94ecf3aa0e4a0.jpg" />
+    <episode-num system="onscreen">E1972</episode-num>
+    <premiere />
   </programme>
   <programme start="20261006121000 +0530" stop="20261006125000 +0530" channel="ColorsMarathi.in@SD">
     <title lang="mr-IN">आई तुळजाभवानी</title>
@@ -35473,12 +35497,9 @@ Goddess Tulja Bhavani, an avatar of Parvati, protects devotees and performs mira
     <icon src="https://iptv-epg.org/images/_lknHKzuUcXepTSqMf8Cf5yVIFWuUhC9LIDmWOulBEagfSMxUjGkOEzR3K8VQG9FHvCmlRsfo0D3DzPMfUFNIuUUoLoRPMtBL7yLaHQE3kNFoVmQft2jrLbCbz7gHQ" />
     <title lang="en">Aai Tuljabhavani</title>
   </programme>
-  <programme start="20261006050300 +0530" stop="20261006052300 +0530" channel="ColorsRishteyAmericas.in">
-    <title>Shiv-Shakti Tap..Tyaag..Tandav</title>
-    <desc>Lord Shiva and his wife Goddess Parvati navigate through the trials and tribulations of their divine union, selflessly performing their duties for humanity.</desc>
-    <category>Fantasy</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b639645758247f3308a3435f06a5bec2.jpg?width=700" />
+  <programme start="20261005234000 +0000" stop="20261006000000 +0000" channel="ColorsRishteyAmericas.in">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
     <credits>
       <director>Muzammil Desai</director>
       <director>J.P. Sharma</director>
@@ -35487,60 +35508,28 @@ Goddess Tulja Bhavani, an avatar of Parvati, protects devotees and performs mira
       <director>Kiran Gorde</director>
       <director>Raghav Chandra Shekhara Shukla</director>
       <director>Alam Khan Pathan</director>
-      <actor>Ram Yashvardhan (Lord Shiva/Sadashiva/Nilakantha/Virabhadra/Rudra/Bhairava/Nataraja/Ardhanarishvara/Tripurantaka/Jalandhara/Babulnath)</actor>
-      <actor>Subha Rajput (Parvati</actor>
-      <actor>Adishakti/ Sati/ Bhadrakali/ Shailaputri/ Brahmacharini/ Chandraghanta/ Kushmanda/ Skandamata/ Katyayani/ Siddhidatri/ Mahamaya)</actor>
-      <actor>Tarun Khanna (Indra)</actor>
-      <actor>Srikant Dwivedi (Vishnu / Kurma / Vamana)</actor>
-      <actor>Sheetal Tiwari (Lakshmi)</actor>
-      <actor>Akanksha Rawat (Diti)</actor>
-      <actor>Manan Mehta (Mohasur)</actor>
-      <actor>Sandeep Aurora (Svarbhanu / Rahu / Ketu)</actor>
-      <actor>Puneet Vashisht (Narada)</actor>
-      <actor>Ketan Karande (Nandi)</actor>
+      <actor>Ram Yashvardhan</actor>
+      <actor>Subha Rajput</actor>
+      <actor>Tarun Khanna</actor>
+      <actor>Srikant Dwivedi</actor>
+      <actor>Sheetal Tiwari</actor>
+      <actor>Akanksha Rawat</actor>
+      <actor>Manan Mehta</actor>
+      <actor>Sandeep Aurora</actor>
+      <actor>Puneet Vashisht</actor>
+      <actor>Ketan Karande</actor>
+      <producer>Siddharth Kumar Tewary</producer>
+      <producer>Gayatri Gil Tewary</producer>
     </credits>
-    <episode-num system="onscreen">125</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
+    <desc lang="en">S1 E127
+Lord Shiva and his wife Goddess Parvati navigate through the trials and tribulations of their divine union, selflessly performing their duties for humanity.</desc>
+    <episode-num>S1 E127</episode-num>
+    <icon src="https://iptv-epg.org/images/iWhj99qSlqfM02fUfnS9WYMCXxHac-_rJiqyPREcUB-U0lfKzH5cMkacEt-ze2IlpO_LpA4sque7zOF8gZo9h2deCXSRfAZv2zZt91XxepvsGcJ1D0BmNyGBmyulJA" />
+    <title lang="en">Shiv-Shakti Tap..Tyaag..Tandav</title>
   </programme>
-  <programme start="20261006052300 +0530" stop="20261006053500 +0530" channel="ColorsRishteyAmericas.in">
-    <title>Shiv-Shakti Tap..Tyaag..Tandav</title>
-    <desc>Lord Shiva and his wife Goddess Parvati navigate through the trials and tribulations of their divine union, selflessly performing their duties for humanity.</desc>
-    <category>Fantasy</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b639645758247f3308a3435f06a5bec2.jpg?width=700" />
-    <credits>
-      <director>Muzammil Desai</director>
-      <director>J.P. Sharma</director>
-      <director>Kamal Monga</director>
-      <director>Sharad Pandeyy</director>
-      <director>Kiran Gorde</director>
-      <director>Raghav Chandra Shekhara Shukla</director>
-      <director>Alam Khan Pathan</director>
-      <actor>Ram Yashvardhan (Lord Shiva/Sadashiva/Nilakantha/Virabhadra/Rudra/Bhairava/Nataraja/Ardhanarishvara/Tripurantaka/Jalandhara/Babulnath)</actor>
-      <actor>Subha Rajput (Parvati</actor>
-      <actor>Adishakti/ Sati/ Bhadrakali/ Shailaputri/ Brahmacharini/ Chandraghanta/ Kushmanda/ Skandamata/ Katyayani/ Siddhidatri/ Mahamaya)</actor>
-      <actor>Tarun Khanna (Indra)</actor>
-      <actor>Srikant Dwivedi (Vishnu / Kurma / Vamana)</actor>
-      <actor>Sheetal Tiwari (Lakshmi)</actor>
-      <actor>Akanksha Rawat (Diti)</actor>
-      <actor>Manan Mehta (Mohasur)</actor>
-      <actor>Sandeep Aurora (Svarbhanu / Rahu / Ketu)</actor>
-      <actor>Puneet Vashisht (Narada)</actor>
-      <actor>Ketan Karande (Nandi)</actor>
-    </credits>
-    <episode-num system="onscreen">126</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261006053500 +0530" stop="20261006060000 +0530" channel="ColorsRishteyAmericas.in">
-    <title>Shri Tirupati Balaji</title>
-    <desc>Narada learns from Brahma that Vishnu must descend as Venkateshwara to destroy Kali Yuga's evil, while an old woman weeps and prays. Thus, Bhrigu and Narada swiftly arrange a grand yajna to assist her.</desc>
-    <category>Religious</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/c7c1ab8efccee40b8558ba2f89fbb4d5.jpg?width=700" />
+  <programme start="20261006000000 +0000" stop="20261006003000 +0000" channel="ColorsRishteyAmericas.in">
+    <category lang="en">TV Show</category>
+    <category lang="en">Religious</category>
     <credits>
       <director>Gautam Anil Nagrath</director>
       <director>Harish Narwariya</director>
@@ -35551,10 +35540,11 @@ Goddess Tulja Bhavani, an avatar of Parvati, protects devotees and performs mira
       <actor>Veer Gurjar</actor>
       <actor>Swarupu</actor>
     </credits>
-    <episode-num system="onscreen">44</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
+    <desc lang="en">S1 E44
+Narada learns from Brahma that Vishnu must descend as Venkateshwara to destroy an evil.</desc>
+    <episode-num>S1 E44</episode-num>
+    <icon src="https://iptv-epg.org/images/Rb2rZ11FEmF-PckDUYDea0TZbUGtCReZpaZdGxIcZ6JXuXrpXiAR74YEgyOCKuXGfeu4CCsyze-iXKFH2z8rc4xaniZAxpd2T1OqLb4wDChlOs5xWd95BOiznM2X8-a4ofqZRxTcHIRIulGLYw9A1eWqNYgkwerdZHQOV09fFHt4ibKvGrLukghEI5msAHeqfafwgw" />
+    <title lang="en">Shri Tirupati Balaji</title>
   </programme>
   <programme channel="ColorsRishteyAmericas.in" start="20261006010000 +0000" stop="20261006012800 +0000">
     <title lang="zh">Kahiin To Hoga</title>
@@ -62765,13 +62755,12 @@ Embark on a musical journey through eight Indian states and learn about local ba
     <icon src="https://iptv-epg.org/images/Rb2rZ11FEmF-PckDUYDea0TZbUGtCReZpaZdGxIcZ6JXuXrpXiAR74YEgyOCKuXGfeu4CCsyze-iXKFH2z8rc4xaniZAxpd2T1OqLb4wDChlOs5xWd95BOiznM2X8-a4ofqZRxTcHIRIulGLYw9A1eWqNYgkwerdZHQOV09fFHt4ibKvGrLukghEI5msAHeqfafwgw" />
     <title lang="en">Rangoli</title>
   </programme>
-  <programme start="20261006050000 +0530" stop="20261006052900 +0530" channel="DDOdia.in@SD" catchup-id="99881926">
-    <title>Bajrabahu</title>
-    <desc>Bringing the best in television.</desc>
-  </programme>
-  <programme start="20261006052900 +0530" stop="20261006053000 +0530" channel="DDOdia.in@SD" catchup-id="99881942">
-    <title>Graphical News Headlines</title>
-    <desc>The host sheds light on the latest news, updates and developments from around the globe.</desc>
+  <programme start="20261005233000 +0000" stop="20261006000000 +0000" channel="DDOdia.in@SD">
+    <category lang="en">TV Show</category>
+    <category lang="en">Agriculture/Rural</category>
+    <desc lang="en">The host sheds light on important updates surrounding agriculture from across the nation whilst providing key inputs that can be of help to farmers.</desc>
+    <icon src="https://iptv-epg.org/images/V3Je6lPwbxrz4ViMllX-7RvMaVm_svrNA5cmU44TMJ6E_Gv70chLEwtNdpqHGXf-x02jAPO_CPqtOj6-mqBu2Cn_EdRPhSt3-BhG3xs3sKExwxWEEYTj9iPXhXTm9A" />
+    <title lang="en">Krishi Darshan</title>
   </programme>
   <programme start="20261006000000 +0000" stop="20261006003000 +0000" channel="DDOdia.in@SD">
     <category lang="en">TV Show</category>
@@ -64845,13 +64834,6 @@ Embark on a musical journey through eight Indian states and learn about local ba
     <desc lang="en">Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/ZJAnWrsSUFqLD_ZfE7S7Z-J5kl51RxWJ0ajJgvM6PgVmni_OQ1TGM-jvwWp4fuf_yF6FDWJ9ZgiFE0oJPpB6td6ICDj-KSUX6lF6Iif9hcOe44_d5c-FqEeKEum63g" />
     <title lang="en">Tosha Nohila Mora Chita</title>
-  </programme>
-  <programme start="20261006040000 +0530" stop="20261006052300 +0530" channel="DDPunjabi.in@SD">
-    <title lang="pa-IN">Aasa Di Vaar</title>
-    <desc lang="pa-IN">A comprehensive collection of stanzas composed by the founder of Sikhism, Guru Nanak Ji, played during the early morning service.</desc>
-    <category lang="pa-IN">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/cfaa023e9a30df54bea383214efe2f61.jpg" />
-    <premiere />
   </programme>
   <programme start="20261006052300 +0530" stop="20261006054500 +0530" channel="DDPunjabi.in@SD">
     <title lang="pa-IN">Shabad Kirtan</title>
@@ -104803,46 +104785,41 @@ Mahashark and Sacchi-Machhi usurp the Lion Totem's magic to subjugate Mutthu's s
     <desc lang="en">Shin-chan, a mischievous five-year-old, constantly disrupts the lives of those around him with his childish antics, generating humorous chaos and exasperation.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_HUNGAMA_1489_09OCT080000_09OCT120000/images/LANDSCAPE_169_HD/HungamaTV_Shinchan_1489.jpg" />
   </programme>
-  <programme start="20261006042000 +0530" stop="20261006052400 +0530" channel="INWILD.nl">
-    <title>Python Hunters</title>
-    <desc>With invasive species invading Florida, it is up to animal control officers to deal with and get rid of the invading animals. Green iguanas, Nile monitors, rock pythons and Burmese pythons are among the most common species entering the Sunshine State. An elite squad of hunters, known as the Python Hunters, is fighting back. The Python Hunters are tasked with protecting the local environment by getting the invasive species under control. It's an important conservation mission and, if it fails, one of America's most-important ecosystems may never be able to recover.</desc>
-    <category>Documentary</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b1f2f5a2c7117072d7906c738f8c08cf.jpg?width=700" />
+  <programme start="20261006050100 +0530" stop="20261006053000 +0530" channel="INWILD.nl" catchup-id="2610063389016">
+    <title>Animal Atlas</title>
+    <desc>This educational series takes viewers on a journey around the world to meet all kinds of animals, from the familiar to the not-so-familiar. "Animal Atlas" teaches viewers about the animals' lives, histories and adaptations that allow them to survive in their environment. Whether it's visiting monkeys or heading underwater for a look at mammals that live in the ocean, "Animal Atlas" brings animals from around the globe into viewers' homes for an up-close look at how the animals live.</desc>
+    <category>Series</category>
+    <date>20261006</date>
+    <icon src="https://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/cdb788c0987edec674778f1084336df0.jpg" />
+    <episode-num system="xmltv_ns">0.17</episode-num>
     <credits>
-      <actor>Greg Graziani</actor>
-      <actor>Shawn Heflick</actor>
-      <actor>Michael Cole</actor>
+      <actor>Eric Schwartz</actor>
     </credits>
-    <episode-num system="onscreen">9</episode-num>
-    <rating>
-      <value>TVG</value>
-    </rating>
+    <sub-title>A family of eight chimpanzees lives in an almost-like-the-wild habitat in a zoo.</sub-title>
   </programme>
-  <programme start="20261006052400 +0530" stop="20261006055400 +0530" channel="INWILD.nl">
-    <title>Modern Migrations</title>
-    <desc>With helicopter blades turning precision flying and excellent planning, viewers are taken on an adrenaline-packed ride transporting wild animals including buffalo giraffe and warthog to new habitats.</desc>
-    <category>Documentary</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/e1f545df2528dfec13b752317ece52a0.jpg?width=700" />
-    <episode-num system="onscreen">9</episode-num>
-    <rating>
-      <value>TVG</value>
-    </rating>
-  </programme>
-  <programme start="20261006055400 +0530" stop="20261006062900 +0530" channel="INWILD.nl">
-    <title>Shamwari</title>
-    <desc>Following a group who live and work in South Africa's Shamwari Game Reserve.</desc>
-    <category>Documentary</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/620782b3596ce0a0d380958cfeb06201.jpg?width=700" />
+  <programme start="20261006053000 +0530" stop="20261006060000 +0530" channel="INWILD.nl" catchup-id="2610063389017">
+    <title>Animal Atlas</title>
+    <desc>This educational series takes viewers on a journey around the world to meet all kinds of animals, from the familiar to the not-so-familiar. "Animal Atlas" teaches viewers about the animals' lives, histories and adaptations that allow them to survive in their environment. Whether it's visiting monkeys or heading underwater for a look at mammals that live in the ocean, "Animal Atlas" brings animals from around the globe into viewers' homes for an up-close look at how the animals live.</desc>
+    <category>Series</category>
+    <date>20261006</date>
+    <icon src="https://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/cdb788c0987edec674778f1084336df0.jpg" />
+    <episode-num system="xmltv_ns">0.18</episode-num>
     <credits>
-      <actor>Lyndal Davies</actor>
+      <actor>Eric Schwartz</actor>
     </credits>
-    <episode-num system="onscreen">10</episode-num>
-    <rating>
-      <value>TVG</value>
-    </rating>
+    <sub-title>Birds, insects and mammals with wings; what makes flight possible, and necessary, in the animal world.</sub-title>
+  </programme>
+  <programme start="20261006060000 +0530" stop="20261006062800 +0530" channel="INWILD.nl" catchup-id="2610063389018">
+    <title>Animal Atlas</title>
+    <desc>This educational series takes viewers on a journey around the world to meet all kinds of animals, from the familiar to the not-so-familiar. "Animal Atlas" teaches viewers about the animals' lives, histories and adaptations that allow them to survive in their environment. Whether it's visiting monkeys or heading underwater for a look at mammals that live in the ocean, "Animal Atlas" brings animals from around the globe into viewers' homes for an up-close look at how the animals live.</desc>
+    <category>Series</category>
+    <date>20261006</date>
+    <icon src="https://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/cdb788c0987edec674778f1084336df0.jpg" />
+    <episode-num system="xmltv_ns">0.19</episode-num>
+    <credits>
+      <actor>Eric Schwartz</actor>
+    </credits>
+    <sub-title>Some animals have more than the usual five senses.</sub-title>
   </programme>
   <programme start="20261006062900 +0530" stop="20261006070400 +0530" channel="INWILD.nl">
     <title>Shamwari</title>
@@ -105223,21 +105200,6 @@ Mahashark and Sacchi-Machhi usurp the Lion Totem's magic to subjugate Mutthu's s
     </credits>
     <rating>
       <value>TVG</value>
-    </rating>
-  </programme>
-  <programme start="20261006045400 +0530" stop="20261006052200 +0530" channel="InTravel.in@HD">
-    <title>Traveling With Denella Ri'Chard</title>
-    <desc>Denella goes on a journey to amazing destinations, on-location and remotely, to find out what vacationing will be like now and in the future.</desc>
-    <category>Travel</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/fbde9a572836e17c0a345e2f630b1fb4.jpg?width=700" />
-    <credits>
-      <director>Fredrick Custard</director>
-      <actor>Denella Ri'chard</actor>
-    </credits>
-    <episode-num system="onscreen">406</episode-num>
-    <rating>
-      <value>TVPG</value>
     </rating>
   </programme>
   <programme start="20261006052200 +0530" stop="20261006055200 +0530" channel="InTravel.in@HD">
@@ -106538,13 +106500,22 @@ Mahashark and Sacchi-Machhi usurp the Lion Totem's magic to subjugate Mutthu's s
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/b1c09a0ae4255811fa3fbd954558c4fa.jpg" />
     <premiere />
   </programme>
-  <programme start="20261006042700 +0530" stop="20261006052300 +0530" channel="InvestigationDiscovery.in@SD" catchup-id="99889117">
-    <title>Alien Encounters: Fact or Fiction</title>
-    <desc>A musician captures a strange object flying over a motorway in California. S01 E04.</desc>
-  </programme>
-  <programme start="20261006052300 +0530" stop="20261006055100 +0530" channel="InvestigationDiscovery.in@SD" catchup-id="99889111">
-    <title>Who the (Bleep) Did I Marry?</title>
-    <desc>Andie Nash is devastated when the man she has been dating, Simon Reid, vanishes.</desc>
+  <programme start="20261005233000 +0000" stop="20261006003000 +0000" channel="InvestigationDiscovery.in@SD">
+    <category lang="en">Documentary</category>
+    <category lang="en">Others</category>
+    <credits>
+      <actor>James M. Reilly</actor>
+      <actor>T.J. Craig</actor>
+      <actor>Robert Levey II</actor>
+      <actor>Kathy-Ann Hart</actor>
+      <actor>Brian Vadim</actor>
+      <producer>Jaime Hanaway</producer>
+    </credits>
+    <desc lang="en">S2 E5
+Dennis Ryan grows up believing his father's violent teachings will prepare him to save the lives of everyone in their farmhouse, then the teenager discovers the horrible truth.</desc>
+    <episode-num>S2 E5</episode-num>
+    <icon src="https://iptv-epg.org/images/Oi9n_UVwv8cpAT0JlfvFs_i1a_5GUW8fC4ganh6fdJhz7eebsid7U2q_Za8T-HG-n7glaNuYl4OkWElwF8DqN_iYQYmFaRgfffC14tF1KFinHR_S7hbeu1b5oqMt" />
+    <title lang="en">Evil Lives Here</title>
   </programme>
   <programme start="20261006003000 +0000" stop="20261006012000 +0000" channel="InvestigationDiscovery.in@SD">
     <category lang="en">Documentary</category>
@@ -147631,13 +147602,6 @@ Simmba, an honest and courageous police officer, teams up with his fearless coll
     <icon src="https://iptv-epg.org/images/TdknPzqNuhh6RQZcz1DU3LWDsTX-zSiKzqmPMKUA302TkutgslUVn1hTVlek_bv6dDDEyRe3c6NCIW6BP-ggaE9naeEUGd9vtSJOZKFoacon4IkcVekX--KI4j2yuQ" />
     <title lang="en">Kathirupen Kadhaliye</title>
   </programme>
-  <programme channel="Pop.uk" start="20261005232900 +0000" stop="20261005235500 +0000">
-    <title lang="en">Dragon Ball Super</title>
-    <desc lang="en">Goku and Beerus have a duel on King Kai's planet.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261006045900/list/ZEEPOPDragonBallSuper205673061771af7f94c4443bda82eb9f50df006.jpg" />
-  </programme>
   <programme channel="Pop.uk" start="20261005235500 +0000" stop="20261006001900 +0000">
     <title lang="en">Dragon Ball Super</title>
     <desc lang="en">Goku and Beerus have a duel on King Kai's planet.</desc>
@@ -165720,16 +165684,6 @@ Simmba, an honest and courageous police officer, teams up with his fearless coll
     <icon src="https://iptv-epg.org/images/zz9M-oWnrkT8KG3xARFiZm29gqmqcG00ArpiU_tix135ktzHQUkMhOD_8VRJLmO8HL-IZ9Y8Du5ynmoaVwkk1dzL9kA0Re1VgDy8ijLmy3RZQmPMJOj5kCTgurJWiA" />
     <title lang="en">Puwoti Tora</title>
   </programme>
-  <programme start="20261006045500 +0530" stop="20261006052600 +0530" channel="RedBullTV.at@EUMENA">
-    <title lang="en-GB">Premier Padel Highlights</title>
-    <sub-title lang="en-GB">Relive the action from Egypt as padel pros tackled the NEWGIZA Premier Padel P2 tournament</sub-title>
-    <desc lang="en-GB">Highlights, replays and more of Premier Padel Tennis tournaments from around the world.</desc>
-    <category lang="en-GB">180</category>
-    <category lang="en-GB">181</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/0b566e4c07e61a2fa9ceceec3686d9f4.jpg" />
-    <episode-num system="onscreen">E55</episode-num>
-    <premiere />
-  </programme>
   <programme start="20261006052600 +0530" stop="20261006054600 +0530" channel="RedBullTV.at@EUMENA">
     <title lang="en-GB">Skate Tales</title>
     <sub-title lang="en-GB">Madars meets Japan's underground skate star Kento Yoshioka, also known as Japanese Super Rat</sub-title>
@@ -181953,15 +181907,6 @@ When differences between the Kaurava and the Pandava clans lead them to the thre
     <desc lang="en">Start your day with Good Morning Sirippoli's back-to-back comedy clippings. Smile now!</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SIRIPPOLI_1482128_09OCT080000_09OCT090000/images/LANDSCAPE_169_HD/SIRIPPOLI_GoodMorningSirippoli_1482128.jpg" />
   </programme>
-  <programme start="20261006052000 +0530" stop="20261006052500 +0530" channel="SongdewTV.in@SD">
-    <title lang="hi-IN">Unplugged</title>
-    <desc lang="hi-IN">Featuring best of acoustic music.</desc>
-    <category lang="hi-IN">Music</category>
-    <category lang="hi-IN">Reality &amp; Game Shows</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg" />
-    <episode-num system="onscreen">E15</episode-num>
-    <premiere />
-  </programme>
   <programme start="20261006052500 +0530" stop="20261006053000 +0530" channel="SongdewTV.in@SD">
     <title lang="hi-IN">Songdew Fresh</title>
     <desc lang="hi-IN">Latest Music.</desc>
@@ -186801,147 +186746,26 @@ When differences between the Kaurava and the Pandava clans lead them to the thre
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/f31bbe589d5ef1338381fb7acd157018.jpg" />
     <premiere />
   </programme>
-  <programme start="20261006042900 +0530" stop="20261006052600 +0530" channel="SonyPal.in@SD" catchup-id="99896229">
-    <title>Jai Shree Ganesh - Vighnaharta Ki Divya Kathayein</title>
-    <desc>Bringing the best in television. S01 E02.</desc>
+  <programme start="20261005233000 +0000" stop="20261006000000 +0000" channel="SonyPal.in@SD">
+    <category lang="en">TV Show</category>
+    <category lang="en">Consumer</category>
+    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
+    <icon src="https://iptv-epg.org/images/I2OHFDpekeHnwK3F8J_VOXpK5GYXUOeLqkkYIWUOuGk0hbuB903hD3cEP79Pib7t8Cp8lK6wQWc6MHMpPRi2Y_qPh134Q431xz9FM7I1SfEm3CvaLbwRHAOquQ" />
+    <title lang="en">Teleshopping</title>
   </programme>
-  <programme start="20261006052700 +0530" stop="20261006054600 +0530" channel="SonyPal.in@SD" catchup-id="261006474029">
-    <title>Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc>The residents of a housing society help each other find solutions when they face common real-life challenges and get involved in sticky situations.</desc>
-    <category>Series</category>
-    <date>20261006</date>
-    <icon src="https://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/8a759b3cf8e2f4422873ff506e50c552.jpg" />
-    <episode-num system="xmltv_ns">0.1587</episode-num>
-    <credits>
-      <director>Dharmesh Mehta</director>
-      <director>Harshad Joshi</director>
-      <actor>Dilip Joshi (Jethalal Champaklal Gada)</actor>
-      <actor>Nitish Bhaluni (Tipendra 'Tapu' Jethalal Gada)</actor>
-      <actor>Amit Bhatt (Champaklal Jayantilal Gada)</actor>
-      <actor>Sachin Shroff (Taarak Mehta)</actor>
-      <actor>Sunayana Fozdar (Anjali Taarak Mehta)</actor>
-      <actor>Tanuj Mahashabde (Krishnan Iyer)</actor>
-      <actor>Munmun Dutta (Babita Iyer)</actor>
-      <actor>Mandar Chandwadkar (Aatmaram Tukaram Bhide)</actor>
-      <actor>Sonalika Joshi (Madhavi 'Madhu' Aatmaram Bhide)</actor>
-      <actor>Palak Sindhwani (Sonalika 'Sonu' Aatmaram Bhide)</actor>
-      <actor>Nirmal Soni (Dr Hansraj Baldevraj Hathi)</actor>
-      <actor>Ambika Ranjankar (Komal 'Komu' Hansraj Hathi)</actor>
-      <actor>Kush Shah (Gulabkumar 'Goli' Hathi)</actor>
-      <actor>Balwinder Singh Suri (Roshan Singh Harjeet Singh Sodhi)</actor>
-      <actor>Monaz Mevawalla (Roshan Daruwala Kaur Sodhi)</actor>
-      <actor>Samay Shah (Gurcharan 'Gogi' Singh Roshan Singh Sodhi)</actor>
-      <actor>Azhar Shaikh (Pankaj 'Pinku' Diwan Sahay)</actor>
-      <actor>Shyam Pathak (Patrakar Popatlal Pandey)</actor>
-      <actor>Navina Wadekar (Bawri Dhondulal Kanpuria)</actor>
-      <actor>Sharad Sankla (Abdul Nawab Miyaa)</actor>
-      <actor>Tanmay Vekaria (Bagheshwar 'Bagha' Daddu Undhaiwala)</actor>
-      <actor>Daya Shankar Pandey (Inspector Chalu Pandey)</actor>
-      <actor>Jennifer Mistry Bansiwal (Mrs Roshan Sodhi)</actor>
-      <actor>Ghanshyam Nayak (Natwarlal 'Natu Kaka' Prabhashankar Undhaiwala)</actor>
-      <actor>Kavi Kumar Azad (Dr Hansraj Hathi)</actor>
-      <actor>Nidhi Bhanushali (Sonalika 'Sonu' Bhide)</actor>
-      <actor>Jheel Mehta (Sonalika 'Sonu' Bhide)</actor>
-      <actor>Bhavya Gandhi (Tipendra 'Tapu' Jethalal Gada)</actor>
-      <actor>Monika Bhadoriya (Bawri)</actor>
-      <actor>Gurcharan Singh (Roshan Singh Harjeet Singh Sodhi)</actor>
-      <actor>Disha Vakani (Dayaben Gada)</actor>
-      <actor>Shailesh Lodha (Taarak Mehta)</actor>
-      <actor>Neha Mehta (Anjali Taarak Mehta)</actor>
-    </credits>
-    <sub-title>Bhide's uncle gives him one lakh rupees. He is clueless as he doesn't know where to spend it. He asks the people from his society for advice.</sub-title>
+  <programme start="20261006000000 +0000" stop="20261006003000 +0000" channel="SonyPal.in@SD">
+    <category lang="en">TV Show</category>
+    <category lang="en">Consumer</category>
+    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
+    <icon src="https://iptv-epg.org/images/I2OHFDpekeHnwK3F8J_VOXpK5GYXUOeLqkkYIWUOuGk0hbuB903hD3cEP79Pib7t8Cp8lK6wQWc6MHMpPRi2Y_qPh134Q431xz9FM7I1SfEm3CvaLbwRHAOquQ" />
+    <title lang="en">Teleshopping</title>
   </programme>
-  <programme start="20261006054600 +0530" stop="20261006061000 +0530" channel="SonyPal.in@SD" catchup-id="261006474030">
-    <title>Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc>The residents of a housing society help each other find solutions when they face common real-life challenges and get involved in sticky situations.</desc>
-    <category>Series</category>
-    <date>20261006</date>
-    <icon src="https://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/8a759b3cf8e2f4422873ff506e50c552.jpg" />
-    <episode-num system="xmltv_ns">0.1588</episode-num>
-    <credits>
-      <director>Dharmesh Mehta</director>
-      <director>Harshad Joshi</director>
-      <actor>Dilip Joshi (Jethalal Champaklal Gada)</actor>
-      <actor>Nitish Bhaluni (Tipendra 'Tapu' Jethalal Gada)</actor>
-      <actor>Amit Bhatt (Champaklal Jayantilal Gada)</actor>
-      <actor>Sachin Shroff (Taarak Mehta)</actor>
-      <actor>Sunayana Fozdar (Anjali Taarak Mehta)</actor>
-      <actor>Tanuj Mahashabde (Krishnan Iyer)</actor>
-      <actor>Munmun Dutta (Babita Iyer)</actor>
-      <actor>Mandar Chandwadkar (Aatmaram Tukaram Bhide)</actor>
-      <actor>Sonalika Joshi (Madhavi 'Madhu' Aatmaram Bhide)</actor>
-      <actor>Palak Sindhwani (Sonalika 'Sonu' Aatmaram Bhide)</actor>
-      <actor>Nirmal Soni (Dr Hansraj Baldevraj Hathi)</actor>
-      <actor>Ambika Ranjankar (Komal 'Komu' Hansraj Hathi)</actor>
-      <actor>Kush Shah (Gulabkumar 'Goli' Hathi)</actor>
-      <actor>Balwinder Singh Suri (Roshan Singh Harjeet Singh Sodhi)</actor>
-      <actor>Monaz Mevawalla (Roshan Daruwala Kaur Sodhi)</actor>
-      <actor>Samay Shah (Gurcharan 'Gogi' Singh Roshan Singh Sodhi)</actor>
-      <actor>Azhar Shaikh (Pankaj 'Pinku' Diwan Sahay)</actor>
-      <actor>Shyam Pathak (Patrakar Popatlal Pandey)</actor>
-      <actor>Navina Wadekar (Bawri Dhondulal Kanpuria)</actor>
-      <actor>Sharad Sankla (Abdul Nawab Miyaa)</actor>
-      <actor>Tanmay Vekaria (Bagheshwar 'Bagha' Daddu Undhaiwala)</actor>
-      <actor>Daya Shankar Pandey (Inspector Chalu Pandey)</actor>
-      <actor>Jennifer Mistry Bansiwal (Mrs Roshan Sodhi)</actor>
-      <actor>Ghanshyam Nayak (Natwarlal 'Natu Kaka' Prabhashankar Undhaiwala)</actor>
-      <actor>Kavi Kumar Azad (Dr Hansraj Hathi)</actor>
-      <actor>Nidhi Bhanushali (Sonalika 'Sonu' Bhide)</actor>
-      <actor>Jheel Mehta (Sonalika 'Sonu' Bhide)</actor>
-      <actor>Bhavya Gandhi (Tipendra 'Tapu' Jethalal Gada)</actor>
-      <actor>Monika Bhadoriya (Bawri)</actor>
-      <actor>Gurcharan Singh (Roshan Singh Harjeet Singh Sodhi)</actor>
-      <actor>Disha Vakani (Dayaben Gada)</actor>
-      <actor>Shailesh Lodha (Taarak Mehta)</actor>
-      <actor>Neha Mehta (Anjali Taarak Mehta)</actor>
-    </credits>
-    <sub-title>Bhide's uncle gives him one lakh rupees. He is clueless as he doesn't know where to spend it. He asks the people from his society for advice.</sub-title>
-  </programme>
-  <programme start="20261006061000 +0530" stop="20261006062800 +0530" channel="SonyPal.in@SD" catchup-id="261006474031">
-    <title>Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc>The residents of a housing society help each other find solutions when they face common real-life challenges and get involved in sticky situations.</desc>
-    <category>Series</category>
-    <date>20261006</date>
-    <icon src="https://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/8a759b3cf8e2f4422873ff506e50c552.jpg" />
-    <episode-num system="xmltv_ns">0.1589</episode-num>
-    <credits>
-      <director>Dharmesh Mehta</director>
-      <director>Harshad Joshi</director>
-      <actor>Dilip Joshi (Jethalal Champaklal Gada)</actor>
-      <actor>Nitish Bhaluni (Tipendra 'Tapu' Jethalal Gada)</actor>
-      <actor>Amit Bhatt (Champaklal Jayantilal Gada)</actor>
-      <actor>Sachin Shroff (Taarak Mehta)</actor>
-      <actor>Sunayana Fozdar (Anjali Taarak Mehta)</actor>
-      <actor>Tanuj Mahashabde (Krishnan Iyer)</actor>
-      <actor>Munmun Dutta (Babita Iyer)</actor>
-      <actor>Mandar Chandwadkar (Aatmaram Tukaram Bhide)</actor>
-      <actor>Sonalika Joshi (Madhavi 'Madhu' Aatmaram Bhide)</actor>
-      <actor>Palak Sindhwani (Sonalika 'Sonu' Aatmaram Bhide)</actor>
-      <actor>Nirmal Soni (Dr Hansraj Baldevraj Hathi)</actor>
-      <actor>Ambika Ranjankar (Komal 'Komu' Hansraj Hathi)</actor>
-      <actor>Kush Shah (Gulabkumar 'Goli' Hathi)</actor>
-      <actor>Balwinder Singh Suri (Roshan Singh Harjeet Singh Sodhi)</actor>
-      <actor>Monaz Mevawalla (Roshan Daruwala Kaur Sodhi)</actor>
-      <actor>Samay Shah (Gurcharan 'Gogi' Singh Roshan Singh Sodhi)</actor>
-      <actor>Azhar Shaikh (Pankaj 'Pinku' Diwan Sahay)</actor>
-      <actor>Shyam Pathak (Patrakar Popatlal Pandey)</actor>
-      <actor>Navina Wadekar (Bawri Dhondulal Kanpuria)</actor>
-      <actor>Sharad Sankla (Abdul Nawab Miyaa)</actor>
-      <actor>Tanmay Vekaria (Bagheshwar 'Bagha' Daddu Undhaiwala)</actor>
-      <actor>Daya Shankar Pandey (Inspector Chalu Pandey)</actor>
-      <actor>Jennifer Mistry Bansiwal (Mrs Roshan Sodhi)</actor>
-      <actor>Ghanshyam Nayak (Natwarlal 'Natu Kaka' Prabhashankar Undhaiwala)</actor>
-      <actor>Kavi Kumar Azad (Dr Hansraj Hathi)</actor>
-      <actor>Nidhi Bhanushali (Sonalika 'Sonu' Bhide)</actor>
-      <actor>Jheel Mehta (Sonalika 'Sonu' Bhide)</actor>
-      <actor>Bhavya Gandhi (Tipendra 'Tapu' Jethalal Gada)</actor>
-      <actor>Monika Bhadoriya (Bawri)</actor>
-      <actor>Gurcharan Singh (Roshan Singh Harjeet Singh Sodhi)</actor>
-      <actor>Disha Vakani (Dayaben Gada)</actor>
-      <actor>Shailesh Lodha (Taarak Mehta)</actor>
-      <actor>Neha Mehta (Anjali Taarak Mehta)</actor>
-    </credits>
-    <sub-title>As a prank, Jethalal pretends to be a thug when he calls Bhide. Later, he advises Bhide about where to invest his money.</sub-title>
+  <programme start="20261006003000 +0000" stop="20261006010000 +0000" channel="SonyPal.in@SD">
+    <category lang="en">TV Show</category>
+    <category lang="en">Consumer</category>
+    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
+    <icon src="https://iptv-epg.org/images/I2OHFDpekeHnwK3F8J_VOXpK5GYXUOeLqkkYIWUOuGk0hbuB903hD3cEP79Pib7t8Cp8lK6wQWc6MHMpPRi2Y_qPh134Q431xz9FM7I1SfEm3CvaLbwRHAOquQ" />
+    <title lang="en">Teleshopping</title>
   </programme>
   <programme start="20261006010000 +0000" stop="20261006013000 +0000" channel="SonyPal.in@SD">
     <category lang="en">TV Show</category>
@@ -206996,23 +206820,6 @@ Real-time match updates and highlights keep fans informed, providing instant acc
     <title lang="en">Movie</title>
     <desc lang="en">The movie name is yet to be announced by the channel.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_WAH_341453_09OCT060000_09OCT090000/images/LANDSCAPE_169_HD/SonyWAH_Movie_341453.jpg" />
-  </programme>
-  <programme start="20261006051200 +0530" stop="20261006052400 +0530" channel="SonyYay.in@SD">
-    <title>Honey Bunny Ka Jholmaal</title>
-    <desc>Honey and Bunny, two cats who are twin brothers, go on exciting adventures while protecting each other from enemies at every turn.</desc>
-    <category>Animated</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/85e9a35e29826d8d159c96fb7b68a32c.jpg?width=700" />
-    <credits>
-      <director>Vijay Roche</director>
-      <actor>Mubeen Saudagar</actor>
-      <actor>Meena Nahata</actor>
-      <actor>Dolly Lopes</actor>
-    </credits>
-    <episode-num system="onscreen">187</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
   </programme>
   <programme start="20261006052400 +0530" stop="20261006053500 +0530" channel="SonyYay.in@SD">
     <title>Honey Bunny Ka Jholmaal</title>
@@ -231387,16 +231194,6 @@ A look back at the incredible fights from ONE Championship's history, encompassi
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261006042900 +0530" stop="20261006052900 +0530" channel="StingrayNaturescape.ca">
-    <title>Crashing Waves: Hawaii</title>
-    <desc>The energizing sound of waves crashing on the shores of Hawaii's Red Sand Beach.</desc>
-    <category>Special</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/3e4070f2eb58e464aa38549ea921df45.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261006052900 +0530" stop="20261006062900 +0530" channel="StingrayNaturescape.ca">
     <title>The Soothing Sun</title>
     <desc>Rejoice and relax in the splendor of the glorious Sun for a full hour, with this new video by David Huting.</desc>
@@ -237923,16 +237720,6 @@ Monica reveals a secret to her first date that could shatter their connection.</
     <desc lang="en">Enjoy a nonstop compilation of popular songs composed by renowned artists and musicians, played back to back to captivate listeners with an entertaining and memorable musical experience.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_TARANG_MUSIC_1602471_09OCT080000_09OCT083000/images/LANDSCAPE_169/1784397366000_TarangMusic_MusicNonstop_1602471.jpg" />
   </programme>
-  <programme start="20261006051100 +0530" stop="20261006052200 +0530" channel="TeluguOne.in@HD">
-    <title>Shri Venkateswara Suprabhatam</title>
-    <desc>In veneration of Lord Venkateswara, devotees and priests listen to devotional songs and perform religious customs in order to seek his blessings.</desc>
-    <category>Religious</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/8372ebaa73194b6d81ca139bc2a8446f.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261006052200 +0530" stop="20261006053300 +0530" channel="TeluguOne.in@HD">
     <title>Shri Venkateswara Suprabhatam</title>
     <desc>In veneration of Lord Venkateswara, devotees and priests listen to devotional songs and perform religious customs in order to seek his blessings.</desc>
@@ -239624,14 +239411,6 @@ Monica reveals a secret to her first date that could shatter their connection.</
     <category>Entertainment</category>
     <language>TELUGU</language>
     <icon src="https://d229kpbsb5jevy.cloudfront.net/yupptvnew/content/common/channel/logos/kqzbje.png" />
-  </programme>
-  <programme start="20261006051600 +0530" stop="20261006052700 +0530" channel="ThalaaTV.in">
-    <title>Nalaya Thiruppu</title>
-    <sub-title>THALAA TV | TAMIL</sub-title>
-    <desc>Naalaiya Theerpu is a Tamil action-drama marking Vijay?s debut, directed by S. A. Chandrasekhar.</desc>
-    <category>Action</category>
-    <language>TAMIL</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/THALAA%20TV/POSTER/Nalaya%20Thiruppu.png" />
   </programme>
   <programme start="20261006052700 +0530" stop="20261006053900 +0530" channel="ThalaaTV.in">
     <title>Raja Rani</title>
@@ -242807,13 +242586,6 @@ Monica reveals a secret to her first date that could shatter their connection.</
     <title lang="en">The Elephant's Secret</title>
     <desc lang="en">Mowgli and Bagheera come across a female buffalo that has a very sick son</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6ac45d48207077de3156844a/images/LANDSCAPE_169/9288_d8f72e45-31e3-482b-9eb0-974a32ffa87a.png" />
-  </programme>
-  <programme channel="TinyPop.uk" start="20261005234200 +0000" stop="20261005235600 +0000">
-    <title lang="en">Gigantosaurus</title>
-    <desc lang="en">Follow the adventures of Tiny, Mazu, Bill and Rocky!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261006051200/list/TinyPOPGigantosaurus2102380816bc42b4ca748929182d89cda4655b3.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261005235600 +0000" stop="20261006000900 +0000">
     <title lang="en">Gigantosaurus</title>
@@ -246951,14 +246723,6 @@ Monica reveals a secret to her first date that could shatter their connection.</
     <category>Kids</category>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261011233400/list/TinyPOPTheCatintheHatKnowsaLotAboutThat2087465956bce32585b4857902289f1872181d0.jpg" />
-  </programme>
-  <programme start="20261006051100 +0530" stop="20261006052400 +0530" channel="TollyTV.in">
-    <title>Kodukulu</title>
-    <sub-title>TOLLY TV | TELUGU</sub-title>
-    <desc>Raghuramaiah?s happy life shatters when his brother-in-law Papa Rao returns from jail.</desc>
-    <category>Movies</category>
-    <language>TELUGU</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/TOLLY%20TV/IMAGES/Kodukulu.png" />
   </programme>
   <programme start="20261006052400 +0530" stop="20261006053600 +0530" channel="TollyTV.in">
     <title>Kodukulu</title>
@@ -275357,26 +275121,6 @@ Stories of the paranormal unfold through accounts of individuals who claim to ha
     <category>Entertainment</category>
     <language>Hindi</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017300000-20261011230000/list/ZingFearFiles10243802f1d42c8cfaa4f708e8c68d995dcee76.jpg" />
-  </programme>
-  <programme start="20261006052000 +0530" stop="20261006052500 +0530" channel="custom.duck.tv">
-    <title>Dotty, the Kitty</title>
-    <desc>Dotty the kitten tries to complete pictures by connecting the dots on the outline of various objects selected by the pencil.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/1cee4e050e2141fcaf193faed3e2b6a3.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261006052500 +0530" stop="20261006052800 +0530" channel="custom.duck.tv">
-    <title>Colorwheel</title>
-    <desc>Exploring the magical realm of colours with a pair of animal friends and the colour wheel.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/d6a672576f5987a30684de8f7f3dd2b1.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
   </programme>
   <programme start="20261006052800 +0530" stop="20261006053100 +0530" channel="custom.duck.tv">
     <title>Dotty, the Kitty</title>
