@@ -1,7 +1,7 @@
 // Deployment pipeline: code and required secrets are deployed as one version.
 const DEFAULT_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u";
 const DEFAULT_BDIX_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u";
-const CACHE_KEY = "https://bdix-iptv.internal/playlist-v4-with-backup-routing";
+const CACHE_KEY = "https://bdix-iptv.internal/playlist-v5-backup-stream-filter";
 const CACHE_TTL = 60;
 
 const EPG_PUBLIC_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg.xml";
@@ -346,8 +346,30 @@ function epgXml(data,epg){
 
 function categories(data){const seen=new Set(),out=[];for(const name of data.groups){const clean=normalizeGroup(name),key=groupKey(clean);if(!key||seen.has(key))continue;seen.add(key);out.push({category_id:String(out.length+1),category_name:clean,parent_id:0});}return out;}
 function streams(data,cat){
-  const src=cat?data.entries.filter(e=>e.categoryId===String(cat)):data.entries;
-  return src.map((e,i)=>({num:Number(e.channelNo)||i+1,name:e.name,stream_type:"live",stream_id:e.id,stream_icon:e.logo,epg_channel_id:(e.tvgId||e.name),added:"0",category_id:e.categoryId,custom_sid:"",tv_archive:0,direct_source:e.url,tv_archive_duration:0}));
+  let src=data.entries;
+  if(cat){
+    const requested=String(cat);
+    const requestedIndex=Number(requested);
+    const requestedGroup=(Number.isInteger(requestedIndex)&&requestedIndex>0)?data.groups[requestedIndex-1]:"";
+    src=data.entries.filter(e =>
+      e.categoryId===requested ||
+      (requestedGroup && groupKey(e.group)===groupKey(requestedGroup))
+    );
+  }
+  return src.map((e,i)=>({
+    num:Number(e.channelNo)||i+1,
+    name:e.name,
+    stream_type:"live",
+    stream_id:e.id,
+    stream_icon:e.logo,
+    epg_channel_id:(e.tvgId||e.name),
+    added:"0",
+    category_id:e.categoryId,
+    custom_sid:"",
+    tv_archive:0,
+    direct_source:e.url,
+    tv_archive_duration:0
+  }));
 }
 function m3u(data,request,env){
   const u=new URL(request.url), base=u.pathname==="/bdix"||u.pathname.startsWith("/bdix/")?"/bdix":"", ext=(u.searchParams.get("output")||"m3u8").toLowerCase()==="ts"?"ts":"m3u8", epgUrl=u.origin+base+"/xmltv-public.php", out=[`#EXTM3U url-tvg="${epgUrl}" x-tvg-url="${epgUrl}"`];
