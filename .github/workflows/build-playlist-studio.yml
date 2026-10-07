@@ -1,5 +1,5 @@
 name: Build Playlist Studio 5.0 Portable
-# BDIX-IPTV feature build v4.0
+# BDIX-IPTV feature build v5.0.1
 
 on:
   workflow_dispatch:
@@ -94,10 +94,12 @@ jobs:
       - name: Apply Playlist Studio feature and branding patch
         shell: pwsh
         run: |
-          python "$env:GITHUB_WORKSPACE\build\feature_patch.py" "$env:SOURCE_ROOT\Source"
-          python "$env:GITHUB_WORKSPACE\build\make_brand_assets.py" "$env:SOURCE_ROOT"
+          python "$env:GITHUB_WORKSPACE\build\feature_patch_v5.py" "$env:SOURCE_ROOT\Source"
+          python "$env:GITHUB_WORKSPACE\build\make_brand_assets_v5.py" "$env:SOURCE_ROOT"
+          Copy-Item -LiteralPath (Join-Path $env:SOURCE_ROOT 'bdix_preview.png') -Destination (Join-Path $env:SOURCE_ROOT 'Source\bdix_preview.png') -Force
           if (-not (Test-Path (Join-Path $env:SOURCE_ROOT 'bdix_preview.png'))) { throw 'BDIX-IPTV preview asset was not generated.' }
           if (-not (Test-Path (Join-Path $env:SOURCE_ROOT 'studio.ico'))) { throw 'BDIX-IPTV application icon was not generated.' }
+          if (-not (Test-Path (Join-Path $env:SOURCE_ROOT 'Source\bdix_preview.png'))) { throw 'BDIX-IPTV preview image was not copied into the Python source.' }
 
       - name: Validate Python source
         shell: pwsh
@@ -161,7 +163,7 @@ jobs:
           if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
           Get-ChildItem -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
 
-          python -m PyInstaller --noconfirm --clean --onefile --windowed --name 'Playlist-Studio-5.0-Portable' --add-data 'VLC;VLC' Source\playlist_studio.py
+          python -m PyInstaller --noconfirm --clean --onefile --windowed --name 'Playlist-Studio-5.0-Portable' --add-data 'VLC;VLC' --add-data 'Source\bdix_preview.png;.' Source\playlist_studio.py
 
           $exe = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0-Portable.exe'
           if (-not (Test-Path $exe)) {
@@ -199,7 +201,7 @@ jobs:
 
           Compress-Archive -Path 'release\*' -DestinationPath (Join-Path $env:GITHUB_WORKSPACE 'Playlist-Studio-5.0-Portable.zip') -Force
 
-      - name: Create or update v5.0.0 GitHub Release
+      - name: Create or update v5.0.1 GitHub Release
         shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
@@ -208,11 +210,11 @@ jobs:
           $repo='${{ github.repository }}'
           gh release view $tag --repo $repo > $null 2>&1
           if ($LASTEXITCODE -ne 0) {
-            gh release create $tag --repo $repo --target $env:GITHUB_SHA --title "Playlist Studio v5.0" --notes "Playlist Studio 5.0 — BDIX-IPTV Fluent Dark portable Windows x64 build."
-            if ($LASTEXITCODE -ne 0) { throw 'Unable to create Playlist Studio v5.0 release.' }
+            gh release create $tag --repo $repo --target $env:GITHUB_SHA --title "Playlist Studio 5.0" --notes "Playlist Studio 5.0.1 — BDIX-IPTV Fluent Dark portable Windows x64 build with UI fixes."
+            if ($LASTEXITCODE -ne 0) { throw 'Unable to create Playlist Studio v5.0.1 release.' }
           }
           gh release upload $tag 'Playlist-Studio-5.0-Portable.zip' --repo $repo --clobber
-          if ($LASTEXITCODE -ne 0) { throw 'Unable to upload Playlist Studio v5.0 portable ZIP.' }
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to upload Playlist Studio v5.0.1 portable ZIP.' }
       - name: Upload portable artifact
         uses: actions/upload-artifact@v4
         with:
