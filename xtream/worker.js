@@ -1,7 +1,7 @@
 // Deployment pipeline: code and required secrets are deployed as one version.
 const DEFAULT_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u";
 const DEFAULT_BDIX_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u";
-const CACHE_KEY = "https://bdix-iptv.internal/playlist-v3-no-backup";
+const CACHE_KEY = "https://bdix-iptv.internal/playlist-v4-with-backup-routing";
 const CACHE_TTL = 60;
 
 const EPG_PUBLIC_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg.xml";
@@ -122,7 +122,7 @@ function stableId(value) {
 }
 function normalizeGroup(value){return String(value??"").normalize("NFKC").replace(/[\u00A0\u2000-\u200B\u202F\u205F\u3000]/g," ").replace(/\s+/g," ").trim();}
 function groupKey(value){return normalizeGroup(value).toLocaleLowerCase();}
-function parsePlaylist(text) {
+function parsePlaylist(text, includeBackup = false) {
   const lines=text.split(/\r?\n/); let categoryNames=[];
   const header=lines.find(x=>x.startsWith("#PLAYLIST-STUDIO-CATEGORIES:"));
   if(header) { try { categoryNames=JSON.parse(header.slice(header.indexOf(":")+1)); } catch {} }
@@ -132,13 +132,13 @@ function parsePlaylist(text) {
     const ext=lines[i], comma=ext.lastIndexOf(","); if(comma<0 || i+1>=lines.length) continue;
     const a=parseAttrs(ext), name=ext.slice(comma+1).trim(), url=lines[i+1].trim();
     if(!name || !url || url.startsWith("#")) continue;
-    const rawGroup=normalizeGroup(a["group-title"] || "Uncategorized"); const group=rawGroup || "Uncategorized"; if(["backup","new channels","new backup","not playing","test"].includes(groupKey(group))) continue; const tvgId=a["tvg-id"] || "", tvgName=a["tvg-name"] || name, logo=a["tvg-logo"] || "";
+    const rawGroup=normalizeGroup(a["group-title"] || "Uncategorized"); const group=rawGroup || "Uncategorized"; if([...(includeBackup ? [] : ["backup"]), "new channels", "new backup", "not playing", "test"].includes(groupKey(group))) continue; const tvgId=a["tvg-id"] || "", tvgName=a["tvg-name"] || name, logo=a["tvg-logo"] || "";
     entries.push({ id:stableId(tvgId+"|"+name+"|"+group+"|"+url), name, tvgId, tvgName, logo, group, channelNo:a["tvg-chno"]||"", url });
     i++;
   }
   const groups=[];
-  for(const g of categoryNames){ const clean=normalizeGroup(g); if(clean && !["backup","new channels","new backup","not playing","test"].includes(groupKey(clean)) && !groups.some(x=>groupKey(x)===groupKey(clean))) groups.push(clean); }
-  for(const e of entries){ const match=groups.find(g=>groupKey(g)===groupKey(e.group)); if(match) e.group=match; else if(e.group && !["backup","new channels","new backup","not playing","test"].includes(groupKey(e.group))) groups.push(e.group); }
+  for(const g of categoryNames){ const clean=normalizeGroup(g); if(clean && ![...(includeBackup ? [] : ["backup"]), "new channels", "new backup", "not playing","test"].includes(groupKey(clean)) && !groups.some(x=>groupKey(x)===groupKey(clean))) groups.push(clean); }
+  for(const e of entries){ const match=groups.find(g=>groupKey(g)===groupKey(e.group)); if(match) e.group=match; else if(e.group && ![...(includeBackup ? [] : ["backup"]), "new channels", "new backup", "not playing","test"].includes(groupKey(e.group))) groups.push(e.group); }
   const categoryId=new Map(groups.map((g,i)=>[groupKey(g),String(i+1)]));
   for(const e of entries) e.categoryId=categoryId.get(groupKey(e.group))||"0";
   return {entries,groups};
@@ -384,7 +384,7 @@ export default {
     return json(result);
    }
    if(path==="/epg-audit"){
-    const data=parsePlaylist(await getPlaylist(playlistEnv)), epg=parseXmltv(await getEpg(env));
+    const data=parsePlaylist(await getPlaylist(playlistEnv), !isBdix), epg=parseXmltv(await getEpg(env));
     const rows=data.entries.map(e=>{
       const programs=findEpgPrograms(epg,e);
       return {name:e.name,tvg_id:e.tvgId,group:e.group,programme_count:programs.length,matched:programs.length>0};
@@ -404,7 +404,7 @@ export default {
    }
    if(path==="/player_api.php"){
     if(!auth(url,env)) return json({user_info:{auth:0,status:"Invalid credentials"}},401);
-    const action=url.searchParams.get("action")||"", data=parsePlaylist(await getPlaylist(playlistEnv));
+    const action=url.searchParams.get("action")||"", data=parsePlaylist(await getPlaylist(playlistEnv), !isBdix);
     if(!action||action==="get_account_info") return json(userInfo(request,env));
     if(action==="get_live_categories") return json(categories(data));
     if(action==="get_live_streams") return json(streams(data,url.searchParams.get("category_id")));
@@ -423,20 +423,20 @@ export default {
     if(action==="get_vod_categories"||action==="get_series_categories"||action==="get_vod_streams"||action==="get_series") return json([]);
     return json({error:"Unsupported action"},400);
    }
-   if(path==="/get.php"){if(!auth(url,env)) return new Response("Unauthorized",{status:401}); return m3u(parsePlaylist(await getPlaylist(playlistEnv)),request,env);}
+   if(path==="/get.php"){if(!auth(url,env)) return new Response("Unauthorized",{status:401}); return m3u(parsePlaylist(await getPlaylist(playlistEnv), !isBdix),request,env);}
    if(path==="/xmltv-public.php"){
-    const data=parsePlaylist(await getPlaylist(playlistEnv)), epg=parseXmltv(await getEpg(env));
+    const data=parsePlaylist(await getPlaylist(playlistEnv), !isBdix), epg=parseXmltv(await getEpg(env));
     return new Response(epgXml(data,epg),{headers:{"content-type":"application/xml; charset=utf-8","cache-control":"public, max-age=900"}});
    }
    if(path==="/xmltv.php"){
     if(!auth(url,env)) return new Response("Unauthorized",{status:401});
-    const data=parsePlaylist(await getPlaylist(playlistEnv)), epg=parseXmltv(await getEpg(env));
+    const data=parsePlaylist(await getPlaylist(playlistEnv), !isBdix), epg=parseXmltv(await getEpg(env));
     return new Response(epgXml(data,epg),{headers:{"content-type":"application/xml; charset=utf-8","cache-control":"no-store"}});
    }
    if(path.startsWith("/live/")){
     const parts=path.split("/").filter(Boolean); if(!pathAuth(parts,env)) return new Response("Unauthorized",{status:401});
     const id=Number((parts[3]||"").split(".")[0]); if(!Number.isInteger(id)) return new Response("Bad stream ID",{status:400});
-    const data=parsePlaylist(await getPlaylist(playlistEnv)), stream=data.entries.find(e=>e.id===id);
+    const data=parsePlaylist(await getPlaylist(playlistEnv), !isBdix), stream=data.entries.find(e=>e.id===id);
     if(!stream) return new Response("Stream not found",{status:404});
     return Response.redirect(stream.url,302);
    }
