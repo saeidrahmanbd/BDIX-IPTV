@@ -47,6 +47,26 @@ jobs:
           "SOURCE_ROOT=$($src.Directory.Parent.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Append
           "Source root: $($src.Directory.Parent.FullName)"
 
+      - name: Inspect extracted Playlist Studio source
+        shell: pwsh
+        run: |
+          $files = @(
+            (Join-Path $env:SOURCE_ROOT 'Source\playlist_studio.py'),
+            (Join-Path $env:SOURCE_ROOT 'Source\studio_extras.py'),
+            (Join-Path $env:SOURCE_ROOT 'Source\hybrid_ui.py')
+          )
+          foreach ($file in $files) {
+            Write-Host "===== SOURCE: $file ====="
+            if (-not (Test-Path $file)) { Write-Host "MISSING"; continue }
+            $i=0
+            Get-Content -LiteralPath $file | ForEach-Object {
+              $i++
+              if ($_ -match 'Treeview|Playlist Studio|PLAYLIST STUDIO|placeholder|select_group|Import|Append|Replace|Stream URL|preview|video|group_heading|self\.groups|ttk\.Panedwindow') {
+                Write-Host ("{0}: {1}" -f $i,$_)
+              }
+            }
+          }
+
       - name: Patch Xtream base-path handling
         shell: pwsh
         run: |
