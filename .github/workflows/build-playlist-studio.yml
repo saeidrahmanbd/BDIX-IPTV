@@ -1,5 +1,5 @@
 name: Build Playlist Studio 5.0 Portable
-# BDIX-IPTV feature build v5.0.2
+# BDIX-IPTV feature build v5.0.3
 
 on:
   workflow_dispatch:
@@ -114,6 +114,40 @@ jobs:
             throw 'Python source compilation failed.'
           }
 
+      - name: Runtime startup smoke test
+        shell: pwsh
+        working-directory: ${{ env.SOURCE_ROOT }}
+        run: |
+          if (Test-Path 'diagnostic') { Remove-Item 'diagnostic' -Recurse -Force }
+          if (Test-Path 'build') { Remove-Item 'build' -Recurse -Force }
+          if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
+          Get-ChildItem -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
+          python -m PyInstaller --noconfirm --clean --onedir --console --name 'Playlist-Studio-5.0-Diagnostic' Source\playlist_studio.py
+          $exe = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0-Diagnostic\Playlist-Studio-5.0-Diagnostic.exe'
+          if (-not (Test-Path $exe)) { throw 'Diagnostic executable was not produced.' }
+          $stdout = Join-Path $env:RUNNER_TEMP 'playlist-studio.stdout.log'
+          $stderr = Join-Path $env:RUNNER_TEMP 'playlist-studio.stderr.log'
+          Remove-Item $stdout,$stderr -Force -ErrorAction SilentlyContinue
+          $proc = Start-Process -FilePath $exe -WorkingDirectory (Split-Path $exe) -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr
+          Start-Sleep -Seconds 12
+          if ($proc.HasExited) {
+            $out = if (Test-Path $stdout) { Get-Content $stdout -Raw } else { '' }
+            $err = if (Test-Path $stderr) { Get-Content $stderr -Raw } else { '' }
+            Write-Host '--- Diagnostic STDOUT ---'
+            Write-Host $out
+            Write-Host '--- Diagnostic STDERR ---'
+            Write-Host $err
+            throw "Playlist Studio exited during the startup smoke test with code $($proc.ExitCode)."
+          }
+          $handle = (Get-Process -Id $proc.Id).MainWindowHandle
+          if ($handle -eq 0) {
+            Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+            throw 'Playlist Studio process stayed alive but did not create a main window.'
+          }
+          Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+          Write-Host 'Playlist Studio diagnostic startup smoke test: PASS'
+          Write-Host "Main window handle: $handle"
+
       - name: Verify Xtream path behavior
         shell: pwsh
         working-directory: ${{ env.SOURCE_ROOT }}
@@ -211,11 +245,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          $tag='v5.0.2'
+          $tag='v5.0.3'
           $repo='${{ github.repository }}'
           gh release view $tag --repo $repo > $null 2>&1
           if ($LASTEXITCODE -ne 0) {
-            gh release create $tag --repo $repo --target $env:GITHUB_SHA --title "Playlist Studio 5.0" --notes "Playlist Studio 5.0.2 — BDIX-IPTV Fluent Dark portable Windows x64 build with verified UI fixes."
+            gh release create $tag --repo $repo --target $env:GITHUB_SHA --title "Playlist Studio 5.0" --notes "Playlist Studio 5.0.3 — BDIX-IPTV Fluent Dark portable Windows x64 build with startup smoke-test validation and verified UI fixes."
             if ($LASTEXITCODE -ne 0) { throw 'Unable to create Playlist Studio v5.0.2 release.' }
           }
           gh release upload $tag 'Playlist-Studio-5.0-Portable.zip' --repo $repo --clobber
