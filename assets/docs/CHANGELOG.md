@@ -55,3 +55,10 @@
 
 - 🖼️ **5 logo reference(s) corrected**
 
+## 2026-10-07
+
+- 🗑️ **1 channel(s) removed**
+
+### Removed channels
+- Oggy and the cockroaches
+
