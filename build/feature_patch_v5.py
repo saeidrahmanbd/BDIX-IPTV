@@ -92,3 +92,5 @@ s=s.replace("def stop(self):self.commands.put(('stop',None));self.note.configure
 p.write_text(s,encoding='utf-8')
 
 print('v5.0 feature patch completed')
+
+# Playlist Studio 5.0 GitHub portable build trigger.
