@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - playlist-studio-3.0-portable-build
+      - playlist-studio-5.0-portable
     paths:
       - 'Playlist-Studio-Fluent-Dark-v9.zip'
       - '.github/workflows/build-playlist-studio.yml'
