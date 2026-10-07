@@ -275,7 +275,7 @@ https://media.hmair.xyz/api/play/HUM%20Sitaray.m3u8
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h4W1wae9lpkbSM2n2zReGf0
 #EXTINF:-1 xui-id="599" tvg-id="custom.bdix.ndtv24x7" tvg-name="NDTV 24x7" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ndtv-24x7.png" tvg-chno="725" channel-id="custom.bdix.ndtv24x7" group-title="International",NDTV 24x7
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hzeU3DHzU6FJTOW1a754ZgE
-#EXTINF:-1 tvg-id="hmair.russiatoday" tvg-logo="https://assets-prod.services.toffeelive.com/CNT2_p8BJbFjLQIBSUG/posters/1e937055-a014-4274-bb69-b1b56d18c434.png" tvg-name="Russia Today" channel-id="hmair.russiatoday" tvg-chno="1119" group-title="International",Russia Today [Jannat]
+#EXTINF:-1 tvg-id="hmair.russiatoday" tvg-logo="https://assets-prod.services.toffeelive.com/CNT2_p8BalKyvLQIBSUG/posters/1e937055-a014-4274-bb69-b1b56d18c434.png" tvg-name="Russia Today" channel-id="hmair.russiatoday" tvg-chno="1119" group-title="International",Russia Today [Jannat]
 https://media.hmair.xyz/api/play/Russia%20Today.m3u8
 #EXTINF:-1 xui-id="188205" tvg-id="SonyPix.in" tvg-name="Sony PIX" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-pix-hd.png" tvg-chno="795" channel-id="SonyPix.in" group-title="International",Sony PIX
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h13GNm0OD-Z12CFzS1Q8WBM
