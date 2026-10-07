@@ -204,11 +204,15 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view v4.0.0 --repo ${{ github.repository }} > $null 2>&1
+          $tag='v4.0.0'
+          $repo='${{ github.repository }}'
+          gh release view $tag --repo $repo > $null 2>&1
           if ($LASTEXITCODE -ne 0) {
-            gh release create v4.0.0 --repo ${{ github.repository }} --title "Playlist Studio v4.0" --notes "Playlist Studio 4.0 — BDIX-IPTV Fluent Dark portable Windows x64 build."
+            gh release create $tag --repo $repo --target $env:GITHUB_SHA --title "Playlist Studio v4.0" --notes "Playlist Studio 4.0 — BDIX-IPTV Fluent Dark portable Windows x64 build."
+            if ($LASTEXITCODE -ne 0) { throw 'Unable to create Playlist Studio v4.0 release.' }
           }
-          gh release upload v4.0.0 'Playlist-Studio-4.0-Portable.zip' --repo ${{ github.repository }} --clobber
+          gh release upload $tag 'Playlist-Studio-4.0-Portable.zip' --repo $repo --clobber
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to upload Playlist Studio v4.0 portable ZIP.' }
       - name: Upload portable artifact
         uses: actions/upload-artifact@v4
         with:
