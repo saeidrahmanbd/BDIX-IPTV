@@ -8,6 +8,8 @@ on:
     paths:
       - 'Playlist-Studio-Fluent-Dark-v9.zip'
       - '.github/workflows/build-playlist-studio.yml'
+      - 'build/feature_patch.py'
+      - 'build/make_brand_assets.py'
 
 permissions:
   contents: write
@@ -87,6 +89,14 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install Pillow openpyxl pyinstaller
+
+      - name: Apply Playlist Studio feature and branding patch
+        shell: pwsh
+        run: |
+          python "$env:GITHUB_WORKSPACE\build\feature_patch.py" "$env:SOURCE_ROOT\Source"
+          python "$env:GITHUB_WORKSPACE\build\make_brand_assets.py" "$env:SOURCE_ROOT"
+          if (-not (Test-Path (Join-Path $env:SOURCE_ROOT 'bdix_preview.png'))) { throw 'BDIX-IPTV preview asset was not generated.' }
+          if (-not (Test-Path (Join-Path $env:SOURCE_ROOT 'studio.ico'))) { throw 'BDIX-IPTV application icon was not generated.' }
 
       - name: Validate Python source
         shell: pwsh
