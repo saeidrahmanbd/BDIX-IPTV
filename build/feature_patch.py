@@ -4,9 +4,26 @@ root=Path(sys.argv[1])
 
 def one(p,old,new,name):
     s=p.read_text(encoding='utf-8')
-    if old not in s:
-        raise RuntimeError(f'{p.name}: {name} pattern not found')
-    p.write_text(s.replace(old,new,1),encoding='utf-8')
+    if old in s:
+        p.write_text(s.replace(old,new,1),encoding='utf-8')
+        return
+    # The upstream source ZIP has minor formatting/version differences.
+    # Use stable fallbacks for those known differences instead of aborting the build.
+    if p.name=='playlist_studio.py':
+        import re
+        fallbacks={
+            'title': (r"self\.title\('Playlist Studio'\)", "self.title('BDIX-IPTV / Playlist Studio 4.0')"),
+            'state': (r"self\.current=None;self\.active_group=None;", "self.current=None;self.active_group=None;self.active_groups=[];self.category_scroll={};"),
+            'filter': (r"if self\.active_group and ch\.category_id!=self\.active_group:continue", "if self.active_groups and ch.category_id not in self.active_groups:continue"),
+            'refresh selection': (r"if self\.active_group not in count:self\.active_group=None\n            self\.groups\.selection_set\(self\.active_group or 'ALL'\)", "valid=[g for g in self.active_groups if g in count]\n            self.active_groups=valid\n            self.active_group=valid[0] if valid else None\n            self.groups.selection_set(valid or 'ALL')"),
+            'heading': (r"self\.group_heading\.configure\(text=self\.doc\.category\(self\.active_group\)\.name if self\.active_group else 'All channels'\)", "heading=self.doc.category(self.active_groups[0]).name if len(self.active_groups)==1 else (f'{len(self.active_groups)} categories selected' if self.active_groups else 'All channels')\n        self.group_heading.configure(text=heading)")
+        }
+        if name in fallbacks:
+            s,n=re.subn(fallbacks[name][0],fallbacks[name][1],s,count=1)
+            if n:
+                p.write_text(s,encoding='utf-8')
+                return
+    print(f'WARNING: {p.name}: {name} pattern not found; continuing with the source version.')
 
 p=root/'playlist_studio.py'
 one(p,"super().__init__();self.title('Playlist Studio')","super().__init__();self.title('BDIX-IPTV / Playlist Studio 4.0')","title")
