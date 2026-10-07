@@ -114,12 +114,12 @@ jobs:
           $env:PYTHONPATH = (Join-Path $env:SOURCE_ROOT 'Source')
           python -c "from bdix_integration import XtreamConfig, normalize_server, xtream_m3u_url; assert normalize_server('https://worker.example/bdix/') == 'https://worker.example/bdix'; assert normalize_server('https://worker.example/') == 'https://worker.example'; print(xtream_m3u_url(XtreamConfig(server='https://worker.example/bdix', username='u', password='p'))); print('Xtream path test: PASS')"
           if ($LASTEXITCODE -ne 0) { throw 'Xtream path behavior test failed.' }
-      - name: Download and verify VLC 4.0.23 x64
+      - name: Download and verify VLC 3.0.23 x64
         shell: pwsh
         run: |
-          $url = 'https://download.videolan.org/pub/videolan/vlc/4.0.23/win64/vlc-4.0.23-win64.zip'
+          $url = 'https://download.videolan.org/pub/videolan/vlc/3.0.23/win64/vlc-3.0.23-win64.zip'
           $expected = '992d19dbd0b8a7cde9167d2f7780b1ef6f92acc8a71acfa736101a21f35181e1'
-          $zip = Join-Path $env:RUNNER_TEMP 'vlc-4.0.23-win64.zip'
+          $zip = Join-Path $env:RUNNER_TEMP 'vlc-3.0.23-win64.zip'
           $tmp = Join-Path $env:RUNNER_TEMP 'vlc-extract'
           $dest = Join-Path $env:SOURCE_ROOT 'VLC'
 
