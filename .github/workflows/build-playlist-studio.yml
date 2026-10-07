@@ -1,11 +1,11 @@
-name: Build Playlist Studio 3.0 Portable
+name: Build Playlist Studio 4.0 Portable
 # BDIX-IPTV feature build
 
 on:
   workflow_dispatch:
   push:
     branches:
-      - playlist-studio-3.0-portable-build
+      - playlist-studio-4.0-portable-build
     paths:
       - 'Playlist-Studio-Fluent-Dark-v9.zip'
       - '.github/workflows/build-playlist-studio.yml'
@@ -114,12 +114,12 @@ jobs:
           $env:PYTHONPATH = (Join-Path $env:SOURCE_ROOT 'Source')
           python -c "from bdix_integration import XtreamConfig, normalize_server, xtream_m3u_url; assert normalize_server('https://worker.example/bdix/') == 'https://worker.example/bdix'; assert normalize_server('https://worker.example/') == 'https://worker.example'; print(xtream_m3u_url(XtreamConfig(server='https://worker.example/bdix', username='u', password='p'))); print('Xtream path test: PASS')"
           if ($LASTEXITCODE -ne 0) { throw 'Xtream path behavior test failed.' }
-      - name: Download and verify VLC 3.0.23 x64
+      - name: Download and verify VLC 4.0.23 x64
         shell: pwsh
         run: |
-          $url = 'https://download.videolan.org/pub/videolan/vlc/3.0.23/win64/vlc-3.0.23-win64.zip'
+          $url = 'https://download.videolan.org/pub/videolan/vlc/4.0.23/win64/vlc-4.0.23-win64.zip'
           $expected = '992d19dbd0b8a7cde9167d2f7780b1ef6f92acc8a71acfa736101a21f35181e1'
-          $zip = Join-Path $env:RUNNER_TEMP 'vlc-3.0.23-win64.zip'
+          $zip = Join-Path $env:RUNNER_TEMP 'vlc-4.0.23-win64.zip'
           $tmp = Join-Path $env:RUNNER_TEMP 'vlc-extract'
           $dest = Join-Path $env:SOURCE_ROOT 'VLC'
 
@@ -161,9 +161,9 @@ jobs:
           if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
           Get-ChildItem -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
 
-          python -m PyInstaller --noconfirm --clean --onefile --windowed --name 'Playlist-Studio-3.0-Fluent-Dark' --add-data 'VLC;VLC' Source\playlist_studio.py
+          python -m PyInstaller --noconfirm --clean --onefile --windowed --name 'Playlist-Studio-4.0-Fluent-Dark' --add-data 'VLC;VLC' Source\playlist_studio.py
 
-          $exe = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-3.0-Fluent-Dark.exe'
+          $exe = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-4.0-Fluent-Dark.exe'
           if (-not (Test-Path $exe)) {
             throw 'PyInstaller completed without producing the expected executable.'
           }
@@ -185,9 +185,9 @@ jobs:
         run: |
           if (Test-Path 'release') { Remove-Item 'release' -Recurse -Force }
           New-Item -ItemType Directory -Path 'release' | Out-Null
-          Copy-Item 'dist\Playlist-Studio-3.0-Fluent-Dark.exe' 'release\'
+          Copy-Item 'dist\Playlist-Studio-4.0-Fluent-Dark.exe' 'release\'
           @"
-          Playlist Studio 3.0 — Fluent Dark
+          Playlist Studio 4.0 — Fluent Dark
           Windows x64 portable single-file build.
 
           The executable includes the required VLC runtime.
@@ -197,18 +197,18 @@ jobs:
           $env:EXE_SHA256
           "@ | Set-Content -Path 'release\SHA256.txt' -Encoding UTF8
 
-          Compress-Archive -Path 'release\*' -DestinationPath (Join-Path $env:GITHUB_WORKSPACE 'Playlist-Studio-3.0-Portable.zip') -Force
+          Compress-Archive -Path 'release\*' -DestinationPath (Join-Path $env:GITHUB_WORKSPACE 'Playlist-Studio-4.0-Portable.zip') -Force
 
-      - name: Update v3.0.0 GitHub Release
+      - name: Update v4.0.0 GitHub Release
         shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release upload v3.0.0 'Playlist-Studio-3.0-Portable.zip' --repo ${{ github.repository }} --clobber
+          gh release upload v4.0.0 'Playlist-Studio-4.0-Portable.zip' --repo ${{ github.repository }} --clobber
       - name: Upload portable artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Playlist-Studio-3.0-Portable
-          path: Playlist-Studio-3.0-Portable.zip
+          name: Playlist-Studio-4.0-Portable
+          path: Playlist-Studio-4.0-Portable.zip
           if-no-files-found: error
           retention-days: 30
