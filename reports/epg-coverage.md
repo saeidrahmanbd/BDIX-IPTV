@@ -1,16 +1,16 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-07T08:39:38+00:00**
+Generated: **2026-10-07T10:51:39+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **273**
-- Channels with an EPG mapping: **226**
-- Current/future programme coverage: **214/273 (78.4%)**
-- No guide mapping found: **47**
+- Active Indian channels audited: **276**
+- Channels with an EPG mapping: **227**
+- Current/future programme coverage: **215/276 (77.9%)**
+- No guide mapping found: **49**
 
 ## Source Status
 
@@ -44,6 +44,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Music | Steelbird Music | SteelbirdMusic.in@SD | Steelbird.Music.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Suriyan TV | SuriyanTV.in@SD | ts1384 | MAPPED_ID_ONLY |
 | Indian Movies | MH One Dil Se | MHOneDilSe.in@SD | MH One Dil Se.in | MH-One-Dil-Se.in | MAPPED_NOT_CURRENTLY_FOUND |
+| Indian Movies | &pictures 2 | new.and.pictures.hd | - | NO_GUIDE_HIT |
 | Indian Music | 7X Punjabi | custom.7x.punjabi | - | NO_GUIDE_HIT |
 | Indian Bangla | Amar Bangla Digital | custom.amar.bangla.digital | - | NO_GUIDE_HIT |
 | Indian Movies | B4U Bhojpuri Plus | B4UBhojpuri.in@Plus | - | NO_GUIDE_HIT |
@@ -57,6 +58,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Movies | Goldmines 2 | Goldmines2.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Goldmines Action | GoldminesAction.in | - | NO_GUIDE_HIT |
 | Indian Music | Hindi Hits | HindiHits.in | - | NO_GUIDE_HIT |
+| Indian Movies | Hindi Movie Classic 24 | new.hindi.movie.classic.24 | - | NO_GUIDE_HIT |
 | Indian Movies | Hindi Movies | custom.hindi.movies | - | NO_GUIDE_HIT |
 | Indian Bangla | JTV Bangla | JTVBangla.in@SD | - | NO_GUIDE_HIT |
 | Indian Bangla | Jhankar TV | JhankarTV.ca | - | NO_GUIDE_HIT |
@@ -95,7 +97,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 ## Published Guide Validation
 
 - Playlist EPG references: **OK**
-- Guide channel IDs published: **295**
-- Mapped playlist IDs present in guide: **295/295 (100.0%)**
-- Mapped playlist IDs with current/future programmes: **277/295 (93.9%)**
+- Guide channel IDs published: **297**
+- Mapped playlist IDs present in guide: **297/297 (100.0%)**
+- Mapped playlist IDs with current/future programmes: **279/297 (93.9%)**
 - This validation is against the guide currently present in the working tree/publish candidate.
