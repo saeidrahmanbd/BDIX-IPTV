@@ -67,6 +67,17 @@ jobs:
             }
           }
 
+      - name: Dump UI source ranges
+        shell: pwsh
+        run: |
+          foreach ($file in @('Source\playlist_studio.py','Source\studio_extras.py','Source\hybrid_ui.py')) {
+            $path=Join-Path $env:SOURCE_ROOT $file
+            Write-Host "===== $file ====="
+            $lines=Get-Content -LiteralPath $path
+            if ($file -like '*playlist_studio.py') {$a=95;$b=215} elseif ($file -like '*studio_extras.py') {$a=60;$b=175} else {$a=105;$b=180}
+            for($i=$a;$i -le $b -and $i -le $lines.Count;$i++){Write-Host ("{0}: {1}" -f $i,$lines[$i-1])}
+          }
+          throw 'DEBUG ONLY — stop before build.'
       - name: Patch Xtream base-path handling
         shell: pwsh
         run: |
