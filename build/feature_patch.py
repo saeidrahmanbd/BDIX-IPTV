@@ -9,7 +9,7 @@ def one(p,old,new,name):
     p.write_text(s.replace(old,new,1),encoding='utf-8')
 
 p=root/'playlist_studio.py'
-one(p,"super().__init__();self.title('Playlist Studio')","super().__init__();self.title('BDIX-IPTV / Playlist Studio 3.0')","title")
+one(p,"super().__init__();self.title('Playlist Studio')","super().__init__();self.title('BDIX-IPTV / Playlist Studio 4.0')","title")
 one(p,"self.current=None;self.active_group=None;self.form_dirty=False;","self.current=None;self.active_group=None;self.active_groups=[];self.category_scroll={};self.form_dirty=False;","state")
 one(p,"if self.active_group and ch.category_id!=self.active_group:continue","if self.active_groups and ch.category_id not in self.active_groups:continue","filter")
 one(p,"if self.active_group not in count:self.active_group=None\n            self.groups.selection_set(self.active_group or 'ALL')","valid=[g for g in self.active_groups if g in count]\n            self.active_groups=valid\n            self.active_group=valid[0] if valid else None\n            self.groups.selection_set(valid or 'ALL')","refresh selection")
@@ -78,8 +78,8 @@ p=root/'hybrid_ui.py'
 for old,new in [
 ("selectmode='browse'","selectmode='extended'"),
 ("tk.Label(brand,text='Playlist Studio'","tk.Label(brand,text='BDIX-IPTV'"),
-("text='HYBRID STUDIO 3.0'","text='PLAYLIST STUDIO 3.0'"),
-("text='Hybrid Studio'","text='BDIX-IPTV / Playlist Studio 3.0'"),
+("text='HYBRID STUDIO 4.0'","text='PLAYLIST STUDIO 4.0'"),
+("text='Hybrid Studio'","text='BDIX-IPTV / Playlist Studio 4.0'"),
 ("displaycolumns=('name','group','health','url')","displaycolumns=('name','group','health','url','epg','format')"),
 ("details=ttk.Frame(app.panes,padding=12,width=430,style='Card.TFrame');app.panes.add(details,weight=1)","details=ttk.Frame(app.panes,padding=12,width=500,style='Card.TFrame');app.panes.add(details,weight=2)")
 ]:
@@ -92,7 +92,7 @@ one(p,old,new,'column sizing')
 p=root/'studio_extras.py'
 one(p,"from pathlib import Path","from pathlib import Path\ntry:\n    from PIL import Image,ImageTk\nexcept ImportError:\n    Image=ImageTk=None","PIL")
 one(p,"height=280 if compact else 320","height=360 if compact else 400","preview height")
-one(p,"self.placeholder=tk.Label(self.video,text='▶\nPLAYLIST STUDIO',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23));self.placeholder.place(relx=.5,rely=.5,anchor='center')","self.preview_source=None;self.preview_image=None\n        preview_path=Path(getattr(sys,'_MEIPASS',Path(__file__).parent))/'bdix_preview.png'\n        self.preview_source=Image.open(preview_path).convert('RGB') if Image is not None and preview_path.exists() else None\n        self.placeholder=tk.Label(self.video,text='BDIX-IPTV\nPLAYLIST STUDIO 3.0',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23));self.placeholder.place(relx=.5,rely=.5,anchor='center');self.show_preview()","preview")
+one(p,"self.placeholder=tk.Label(self.video,text='▶\nPLAYLIST STUDIO',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23));self.placeholder.place(relx=.5,rely=.5,anchor='center')","self.preview_source=None;self.preview_image=None\n        preview_path=Path(getattr(sys,'_MEIPASS',Path(__file__).parent))/'bdix_preview.png'\n        self.preview_source=Image.open(preview_path).convert('RGB') if Image is not None and preview_path.exists() else None\n        self.placeholder=tk.Label(self.video,text='BDIX-IPTV\nPLAYLIST STUDIO 4.0',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23));self.placeholder.place(relx=.5,rely=.5,anchor='center');self.show_preview()","preview")
 one(p,"self.video.bind('<Configure>',lambda e:self.update_view())","self.video.bind('<Configure>',lambda e:(self.update_preview(),self.update_view()))","preview resize")
 marker="    def start_worker(self):"
 methods="""    def update_preview(self):
