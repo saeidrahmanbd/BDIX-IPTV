@@ -55,17 +55,17 @@ jobs:
           $text = Get-Content -LiteralPath $target -Raw
           $pattern = '(?ms)^def normalize_server\(server\):\r?\n.*?^def xtream_login\(cfg:XtreamConfig\):'
           $replacement = @"
-def normalize_server(server):
-    server=server.strip()
-    if not server: raise PlaylistError('Xtream server URL is required.')
-    p=urllib.parse.urlsplit(server if '://' in server else 'http://' + server)
-    if p.scheme not in ('http','https') or not p.hostname: raise PlaylistError('Enter a valid Xtream server URL.')
-    if p.query or p.fragment: raise PlaylistError('Xtream server URL must not contain a query string or fragment.')
-    path=(p.path or '').rstrip('/')
-    return f'{p.scheme}://{p.netloc}{path}'
+          def normalize_server(server):
+              server=server.strip()
+              if not server: raise PlaylistError('Xtream server URL is required.')
+              p=urllib.parse.urlsplit(server if '://' in server else 'http://' + server)
+              if p.scheme not in ('http','https') or not p.hostname: raise PlaylistError('Enter a valid Xtream server URL.')
+              if p.query or p.fragment: raise PlaylistError('Xtream server URL must not contain a query string or fragment.')
+              path=(p.path or '').rstrip('/')
+              return f'{p.scheme}://{p.netloc}{path}'
 
-def xtream_login(cfg:XtreamConfig):
-"@
+          def xtream_login(cfg:XtreamConfig):
+          "@
 
           $patched = [regex]::Replace($text, $pattern, $replacement, 1)
           if ($patched -eq $text) {
