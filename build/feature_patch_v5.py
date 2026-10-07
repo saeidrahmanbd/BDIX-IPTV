@@ -164,10 +164,10 @@ print("Playlist Studio 5.0.3 UI patch applied successfully.")
 
 # Defer optional startup integrations until Tk has entered its event loop.
 p,s=read('playlist_studio.py')
-cm=re.search(r'(?ms)^class Studio\\b.*?(?=^class \\w+|\\Z)',s)
+cm=re.search(r'(?ms)^class Studio\b.*?(?=^class \\w+|\\Z)',s)
 if not cm: raise RuntimeError('Studio class not found for startup deferral')
 cls=cm.group(0)
-im=re.search(r'(?ms)^    def __init__\\(self\\):.*?(?=^    def \\w+\\()',cls)
+im=re.search(r'(?ms)^    def __init__\(self\):.*?(?=^    def \w+\()',cls)
 if not im: raise RuntimeError('Studio __init__ not found for startup deferral')
 init=im.group(0)
 if 'self.row_logos=RowLogos(self)' not in init: raise RuntimeError('RowLogos startup call not found')
