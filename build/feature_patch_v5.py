@@ -167,6 +167,10 @@ p,s=read('playlist_studio.py')
 cm=re.search(r'(?ms)^class Studio\b.*?(?=^class \w+|\Z)',s)
 if not cm: raise RuntimeError('Studio class not found for startup deferral')
 cls=cm.group(0)
+if 'self.row_logos=RowLogos(self)' in cls:
+    cls=cls.replace('self.row_logos=RowLogos(self)','self.row_logos=None;self.after(0,lambda:setattr(self,"row_logos",RowLogos(self)))',1)
+if 'self.file_drops=FileDrops(self)' in cls:
+    cls=cls.replace('self.file_drops=FileDrops(self)','self.file_drops=None;self.after(0,lambda:setattr(self,"file_drops",FileDrops(self)))',1)
 im=re.search(r'(?ms)^    def __init__\(self\):.*?(?=^    def \w+\()',cls)
 if not im: raise RuntimeError('Studio __init__ not found for startup deferral')
 init=im.group(0)
