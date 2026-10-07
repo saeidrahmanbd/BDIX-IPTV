@@ -10,7 +10,7 @@ on:
       - '.github/workflows/build-playlist-studio.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build-windows:
@@ -181,6 +181,12 @@ jobs:
 
           Compress-Archive -Path 'release\*' -DestinationPath (Join-Path $env:GITHUB_WORKSPACE 'Playlist-Studio-3.0-Fluent-Dark-Portable.zip') -Force
 
+      - name: Update v3.0.0 GitHub Release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload v3.0.0 'Playlist-Studio-3.0-Fluent-Dark-Portable.zip' --repo ${{ github.repository }} --clobber
       - name: Upload portable artifact
         uses: actions/upload-artifact@v4
         with:
