@@ -12,6 +12,7 @@ def patch(path, transforms):
     print("patched",path)
 
 patch("playlist_studio.py",[
+("window_title","super().__init__();self.title('Playlist Studio')","super().__init__();self.title('BDIX-IPTV / Playlist Studio 3.0')"),
 ("state",
 "self.doc=Playlist();self.history=History();self.path=None;self.saved=self.doc.fingerprint();self.current=None;self.active_group=None;self.form_dirty=False;",
 "self.doc=Playlist();self.history=History();self.path=None;self.saved=self.doc.fingerprint();self.current=None;self.active_group=None;self.active_groups=[];self.category_scroll={};self.form_dirty=False;"),
