@@ -1,5 +1,5 @@
 name: Build Playlist Studio 4.0 Portable
-# BDIX-IPTV feature build
+# BDIX-IPTV feature build v4.0
 
 on:
   workflow_dispatch:
