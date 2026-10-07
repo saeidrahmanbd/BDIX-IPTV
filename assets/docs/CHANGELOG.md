@@ -57,8 +57,5 @@
 
 ## 2026-10-07
 
-- 🗑️ **1 channel(s) removed**
-
-### Removed channels
-- Oggy and the cockroaches
+- No meaningful playlist changes detected.
 
