@@ -41,21 +41,20 @@ p=root/'playlist_studio.py'; s=p.read_text(encoding='utf-8')
 s=s.replace("self.saved=self.doc.fingerprint();self.current=None;self.active_group=None;self.form_dirty=False;",
             "self.saved=self.doc.fingerprint();self.current=None;self.active_group=None;self.active_groups=[];self.category_scroll={};self.form_dirty=False;",1)
 
-# Explicitly force Ctrl/Shift multi-selection on the category Treeview.
-lines=s.splitlines()
-for i,line in enumerate(lines):
-    if 'self.groups' in line and 'Treeview' in line:
-        if 'selectmode=' in line:
-            line=re.sub(r"selectmode\s*=\s*['\"][^'\"]+['\"]","selectmode='extended'",line)
+# Explicitly force Ctrl/Shift multi-selection on the category widget.
+# The source's Treeview constructor is formatted differently across source revisions,
+# so configure it immediately before the first category selection operation instead
+# of depending on one exact constructor line.
+if "self.groups.configure(selectmode='extended')" not in s:
+    marker="            self.groups.selection_set(valid or 'ALL');"
+    if marker in s:
+        s=s.replace(marker,"            self.groups.configure(selectmode='extended');\n"+marker,1)
+    else:
+        marker2="            self.groups.selection_set(self.active_group or 'ALL');"
+        if marker2 in s:
+            s=s.replace(marker2,"            self.groups.configure(selectmode='extended');\n"+marker2,1)
         else:
-            pos=line.rfind(')')
-            if pos<0: raise RuntimeError('playlist_studio.py: category Treeview line has no closing parenthesis')
-            line=line[:pos]+",selectmode='extended'"+line[pos:]
-        lines[i]=line
-        break
-else:
-    raise RuntimeError('playlist_studio.py: category Treeview creation not found')
-s='\n'.join(lines)+'\n'
+            raise RuntimeError('playlist_studio.py: category selection operation not found')
 
 s=s.replace("if self.active_group not in count:self.active_group=None\n            self.groups.selection_set(self.active_group or 'ALL');",
             "valid=[g for g in self.active_groups if g in count] if self.active_groups else ([] if self.active_group is None else [self.active_group] if self.active_group in count else [])\n            self.active_groups=valid;self.active_group=valid[0] if valid else None\n            self.groups.selection_set(valid or 'ALL');",1)
