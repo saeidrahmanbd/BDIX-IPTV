@@ -66,7 +66,7 @@ jobs:
           python -c "from bdix_integration import normalize_server; assert normalize_server('https://worker.example/bdix/')=='https://worker.example/bdix'; assert normalize_server('https://worker.example/')=='https://worker.example'; print('Xtream /bdix path test: PASS')"
       - name: Build single-click portable EXE
         shell: pwsh
-        working-directory: \${{ env.SOURCE_ROOT }}
+        working-directory: ${{ env.SOURCE_ROOT }}
         run: |
           if(Test-Path build){Remove-Item build -Recurse -Force}
           if(Test-Path dist){Remove-Item dist -Recurse -Force}
@@ -81,7 +81,7 @@ jobs:
           "EXE_SIZE=$size" | Out-File $env:GITHUB_ENV -Append
       - name: Package portable ZIP
         shell: pwsh
-        working-directory: \${{ env.SOURCE_ROOT }}
+        working-directory: ${{ env.SOURCE_ROOT }}
         run: |
           if(Test-Path release){Remove-Item release -Recurse -Force}
           New-Item -ItemType Directory release | Out-Null
@@ -99,10 +99,10 @@ Size: $env:EXE_SIZE bytes
       - name: Publish v5.0.0 release
         shell: pwsh
         env:
-          GH_TOKEN: \${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           $tag='v5.0.0'
-          $repo='\${{ github.repository }}'
+          $repo='${{ github.repository }}'
           gh release view $tag --repo $repo > $null 2>&1
           if($LASTEXITCODE -ne 0){
             gh release create $tag --repo $repo --target $env:GITHUB_SHA --title 'Playlist Studio 5.0' --notes 'Playlist Studio 5.0 — single-click portable Windows x64 executable.'
@@ -115,6 +115,6 @@ Size: $env:EXE_SIZE bytes
         with:
           name: Playlist-Studio-5.0-Portable-Windows-x64
           path: |
-            \${{ env.SOURCE_ROOT }}/dist/Playlist-Studio-5.0-Portable.exe
+            ${{ env.SOURCE_ROOT }}/dist/Playlist-Studio-5.0-Portable.exe
             Playlist-Studio-5.0-Portable-Windows-x64.zip
           if-no-files-found: error
