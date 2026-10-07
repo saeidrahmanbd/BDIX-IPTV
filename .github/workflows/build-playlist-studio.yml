@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - playlist-studio-4.0-portable-build
+      - playlist-studio-3.0-portable-build
     paths:
       - 'Playlist-Studio-Fluent-Dark-v9.zip'
       - '.github/workflows/build-playlist-studio.yml'
@@ -199,11 +199,15 @@ jobs:
 
           Compress-Archive -Path 'release\*' -DestinationPath (Join-Path $env:GITHUB_WORKSPACE 'Playlist-Studio-4.0-Portable.zip') -Force
 
-      - name: Update v4.0.0 GitHub Release
+      - name: Create or update v4.0.0 GitHub Release
         shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          gh release view v4.0.0 --repo ${{ github.repository }} > $null 2>&1
+          if ($LASTEXITCODE -ne 0) {
+            gh release create v4.0.0 --repo ${{ github.repository }} --title "Playlist Studio v4.0" --notes "Playlist Studio 4.0 — BDIX-IPTV Fluent Dark portable Windows x64 build."
+          }
           gh release upload v4.0.0 'Playlist-Studio-4.0-Portable.zip' --repo ${{ github.repository }} --clobber
       - name: Upload portable artifact
         uses: actions/upload-artifact@v4
