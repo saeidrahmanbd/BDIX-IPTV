@@ -160,4 +160,4 @@ for p in root.rglob('*.py'):
     break
 if not found: raise RuntimeError("ChoiceDialog class not found")
 
-print("Playlist Studio 5.0.2 UI patch applied successfully.")
+print("Playlist Studio 5.0.3 UI patch applied successfully.")
