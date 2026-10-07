@@ -1,28 +1,6 @@
 {
   "version": 1,
-  "review_candidates": [
-    {
-      "group": "New Channels",
-      "name": "Epic TV Digital",
-      "norm_name": "epictvdigital",
-      "base_id": "epictv.in",
-      "url": "https://cc-czbq30x55knit.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-czbq30x55knit/DIYC/PMSL/IN10/Epic_TV_IN_B/Epic_TV_IN_B.m3u8"
-    },
-    {
-      "group": "New Channels",
-      "name": "Roja TV",
-      "norm_name": "rojatv",
-      "base_id": "rojatv.in",
-      "url": "https://live.rojatv.cloud/rojatv/rojatv/index.m3u8"
-    },
-    {
-      "group": "New Channels",
-      "name": "Swantham",
-      "norm_name": "swantham",
-      "base_id": "swantham.in",
-      "url": "http://cloud.logichost.in:1935/SWANTHAM/live/index.m3u8"
-    }
-  ],
+  "review_candidates": [],
   "rejected_new_channels": [],
   "rejected_new_backups": []
 }
