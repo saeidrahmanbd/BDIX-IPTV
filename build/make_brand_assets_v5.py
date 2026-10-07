@@ -1,21 +1,91 @@
 from pathlib import Path
-import base64, io, sys
-from PIL import Image
+import sys
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 out=Path(sys.argv[1]); out.mkdir(parents=True,exist_ok=True)
+W,H=960,540
 
-# Exact BDIX-IPTV creative supplied for the Playlist Studio idle preview.
-DATA="""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"""
+# BDIX-IPTV idle-preview artwork inspired by the supplied BDIX-IPTV creative:
+# dark blue studio scene, strong BDIX-IPTV branding, Bangladesh/India identity,
+# and a TV-style category grid. It is generated locally so the portable EXE
+# does not need an internet connection just to show its idle screen.
+img=Image.new('RGB',(W,H),(4,13,27))
+d=ImageDraw.Draw(img)
 
-raw=base64.b64decode(DATA)
-Image.open(io.BytesIO(raw)).convert("RGB").save(out/"bdix_preview.png","PNG")
+# Background glow / studio gradient.
+for y in range(H):
+    t=y/(H-1)
+    c=(4+int(4*t), 18+int(13*t), 38+int(28*t))
+    d.line((0,y,W,y),fill=c)
+glow=Image.new('RGBA',(W,H),(0,0,0,0))
+gd=ImageDraw.Draw(glow)
+for r,a in [(330,18),(250,24),(180,30)]:
+    gd.ellipse((650-r,250-r,650+r,250+r),fill=(0,170,255,a))
+glow=glow.filter(ImageFilter.GaussianBlur(45))
+img=Image.alpha_composite(img.convert('RGBA'),glow).convert('RGB')
+d=ImageDraw.Draw(img)
 
-# Derive the application icon from the TV/play mark in the supplied creative.
-im=Image.open(io.BytesIO(raw)).convert("RGBA")
-w,h=im.size
-crop=im.crop((int(w*.44),int(h*.08),int(w*.63),int(h*.40)))
-crop.thumbnail((256,256),Image.Resampling.LANCZOS)
-canvas=Image.new("RGBA",(256,256),(5,20,35,255))
-canvas.alpha_composite(crop,((256-crop.width)//2,(256-crop.height)//2))
-canvas.save(out/"studio.ico",format="ICO",sizes=[(256,256),(128,128),(64,64),(48,48),(32,32),(16,16)])
-print("Supplied BDIX-IPTV creative and icon generated.")
+try:
+    bold=ImageFont.truetype('C:/Windows/Fonts/segoeuib.ttf',52)
+    sub=ImageFont.truetype('C:/Windows/Fonts/segoeuib.ttf',24)
+    small=ImageFont.truetype('C:/Windows/Fonts/segoeui.ttf',17)
+except Exception:
+    bold=sub=small=ImageFont.load_default()
+
+# Brand mark.
+d.ellipse((34,28,92,86),fill=(7,21,34),outline=(54,229,213),width=4)
+d.polygon([(55,44),(78,57),(55,70)],fill=(54,229,213))
+d.text((108,32),'saeidrahmanbd',font=sub,fill=(245,248,252))
+
+d.text((38,112),'BDIX-IPTV',font=bold,fill=(244,248,255))
+d.text((40,170),'Bangladesh & India IPTV Hub',font=sub,fill=(240,244,250))
+d.text((40,208),'Curated Live TV  •  HD Channels  •  Organized Playlists',font=small,fill=(182,218,244))
+d.text((40,234),'Channel Logos  •  Backup Streams  •  EPG Support',font=small,fill=(182,218,244))
+
+# Bangladesh / India identity blocks.
+d.rounded_rectangle((40,285,315,345),radius=14,fill=(7,31,43),outline=(30,190,160),width=2)
+d.text((58,304),'BANGLADESH',font=small,fill=(75,238,190))
+d.rounded_rectangle((40,356,315,416),radius=14,fill=(7,31,43),outline=(48,151,235),width=2)
+d.text((58,375),'INDIA  •  HINDI  •  BENGALI',font=small,fill=(100,196,255))
+
+# TV frame.
+tv=(430,72,925,405)
+d.rounded_rectangle(tv,radius=24,fill=(2,6,12),outline=(67,90,118),width=3)
+d.rounded_rectangle((450,92,905,365),radius=12,fill=(8,18,31))
+d.text((470,106),'BDIX-IPTV',font=sub,fill=(54,229,213))
+
+# Category cards.
+cards=[('Bangladesh',(11,112,91)),('India (Hindi)',(35,128,185)),
+       ('India (Bengali)',(211,72,150)),('New Channels',(135,76,220)),
+       ('Backup Streams',(89,174,118)),('EPG',(224,154,55))]
+x0,y0=468,151
+cw,ch=132,84
+for i,(label,accent) in enumerate(cards):
+    row,col=divmod(i,3)
+    x=x0+col*144; y=y0+row*96
+    d.rounded_rectangle((x,y,x+cw,y+ch),radius=12,fill=(17,32,49),outline=accent,width=2)
+    d.ellipse((x+12,y+14,x+42,y+44),fill=accent)
+    d.text((x+50,y+25),label,font=small,fill=(242,246,252))
+
+# TV stand.
+d.polygon([(585,405),(775,405),(815,458),(545,458)],fill=(18,25,33))
+d.rectangle((525,458,835,470),fill=(12,17,23))
+
+# Footer feature strip.
+features=['Organized Categories','Clean Metadata','Local Logos','Backup Streams','EPG Support','Regular Updates']
+x=40
+for i,label in enumerate(features):
+    d.rounded_rectangle((x,485,x+135,520),radius=9,fill=(8,24,37),outline=(45,88,120),width=1)
+    d.text((x+10,495),label,font=small,fill=(222,232,241))
+    x+=150
+
+img.save(out/'bdix_preview.png','PNG',optimize=True)
+
+# Application icon.
+icon=Image.new('RGBA',(256,256),(5,20,35,255))
+di=ImageDraw.Draw(icon)
+di.rounded_rectangle((20,20,236,236),radius=42,fill=(7,20,28,255),outline=(54,229,213,255),width=8)
+di.ellipse((55,55,201,201),outline=(54,229,213,255),width=7)
+di.polygon([(105,82),(175,128),(105,174)],fill=(54,229,213,255))
+icon.save(out/'studio.ico',format='ICO',sizes=[(256,256),(128,128),(64,64),(48,48),(32,32),(16,16)])
+print('BDIX-IPTV v5 idle preview and icon generated.')
