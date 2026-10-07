@@ -170,11 +170,8 @@ cls=cm.group(0)
 im=re.search(r'(?ms)^    def __init__\(self\):.*?(?=^    def \w+\()',cls)
 if not im: raise RuntimeError('Studio __init__ not found for startup deferral')
 init=im.group(0)
-if 'self.row_logos=RowLogos(self)' not in init: raise RuntimeError('RowLogos startup call not found')
-if 'self.file_drops=FileDrops(self)' not in init: raise RuntimeError('FileDrops startup call not found')
 if 'self.refresh()' not in init: raise RuntimeError('refresh startup call not found')
-init=init.replace('self.row_logos=RowLogos(self)','self.row_logos=None;self.after(0,lambda:setattr(self,"row_logos",RowLogos(self)))',1)
-init=init.replace('self.file_drops=FileDrops(self)','self.file_drops=None;self.after(0,lambda:setattr(self,"file_drops",FileDrops(self)))',1)
+init=init.replace('self.refresh()','self.after(0,self.refresh)',1)
 init=init.replace('self.refresh()','self.after(0,self.refresh)',1)
 cls=cls[:im.start()]+init+cls[im.end():]
 s=s[:cm.start()]+cls+s[cm.end():]
