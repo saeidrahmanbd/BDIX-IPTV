@@ -3,11 +3,11 @@
 #PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Hindi","International","Documentary & Wildlife","Kids","Religious","Sports","Test"]
 #EXTINF:-1 xui-id="393" tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="1" channel-id="AnandaTV.bd" group-title="Bangladesh",Ananda TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h--ZmKHl8pVTZucnNBlNFCY
-#EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="1" channel-id="AnandaTV.bd" group-title="Bangladesh",Ananda TV [HMAIR]
+#EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="1" channel-id="AnandaTV.bd" group-title="Bangladesh",Ananda TV [Jannat]
 https://media.hmair.xyz/api/play/Ananda%20TV.m3u8
 #EXTINF:-1 xui-id="387" tvg-id="AsianTV.bd" tvg-name="Asian TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" tvg-chno="60" channel-id="AsianTV.bd" group-title="Bangladesh",Asian TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9gb33zpTZ8LfvVLW6vykp0
-#EXTINF:-1 tvg-id="AsianTV.bd" tvg-name="Asian TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" tvg-chno="60" channel-id="AsianTV.bd" group-title="Bangladesh",Asian TV [HMAIR]
+#EXTINF:-1 tvg-id="AsianTV.bd" tvg-name="Asian TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" tvg-chno="60" channel-id="AsianTV.bd" group-title="Bangladesh",Asian TV [Jannat]
 https://media.hmair.xyz/api/play/Asian%20TV.m3u8
 #EXTINF:-1 xui-id="24589" tvg-id="ATNBangla.bd" tvg-name="ATN Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png" tvg-chno="3" channel-id="ATNBangla.bd" group-title="Bangladesh",ATN Bangla
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h1spCurRZDlTQ-MPQ-dgLCg
@@ -17,7 +17,7 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hz6ieuqL16nwquVinlnp02s
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h1khZb2_UmCi9t6FvNahobQ
 #EXTINF:-1 xui-id="397" tvg-id="BijoyTV.bd" tvg-name="Bijoy TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bijoy-tv.png" tvg-chno="9" channel-id="BijoyTV.bd" group-title="Bangladesh",Bijoy TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h7O7-UEfvYwHZvlpnnVYj9I
-#EXTINF:-1 tvg-id="BijoyTV.bd" tvg-name="Bijoy TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bijoy-tv.png" tvg-chno="9" channel-id="BijoyTV.bd" group-title="Bangladesh",Bijoy TV [HMAIR]
+#EXTINF:-1 tvg-id="BijoyTV.bd" tvg-name="Bijoy TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bijoy-tv.png" tvg-chno="9" channel-id="BijoyTV.bd" group-title="Bangladesh",Bijoy TV [Jannat]
 https://media.hmair.xyz/api/play/Bijoy%20TV.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/boishakhi-tv.png" xui-id="384" tvg-id="custom.bdix.boishakhai" tvg-name="BOISHAKHAI TV HD" tvg-chno="66" channel-id="custom.bdix.boishakhai" group-title="Bangladesh",BOISHAKHAI TV HD
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h2g6_rWfuFxgvWC65mBZfaM
@@ -35,11 +35,11 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h1qqs5oS5S6n_LTBHjGVQGE
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hz7XyihAYmQKXwDmgiEPYRY
 #EXTINF:-1 xui-id="363" tvg-id="ChannelI.bd" tvg-name="Channel I" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-i.png" tvg-chno="24" channel-id="ChannelI.bd" group-title="Bangladesh",Channel I
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9llgrLKyIYwnVGkGOOW3dM
-#EXTINF:-1 tvg-id="ChannelI.bd" tvg-name="Channel I" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-i.png" tvg-chno="24" channel-id="ChannelI.bd" group-title="Bangladesh",Channel i [HMAIR]
+#EXTINF:-1 tvg-id="ChannelI.bd" tvg-name="Channel I" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-i.png" tvg-chno="24" channel-id="ChannelI.bd" group-title="Bangladesh",Channel i [Jannat]
 https://media.hmair.xyz/api/play/Channel%20i.m3u8
 #EXTINF:-1 xui-id="93526" tvg-id="ChannelS.uk" tvg-name="Channel S" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png" tvg-chno="73" channel-id="ChannelS.uk" group-title="Bangladesh",Channel S
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h48sWHQVW8piyRyVgWaPvQU
-#EXTINF:-1 tvg-id="ChannelS.uk" tvg-name="Channel S" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png" tvg-chno="73" channel-id="ChannelS.uk" group-title="Bangladesh",Channel S [HMAIR]
+#EXTINF:-1 tvg-id="ChannelS.uk" tvg-name="Channel S" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png" tvg-chno="73" channel-id="ChannelS.uk" group-title="Bangladesh",Channel S [Jannat]
 https://media.hmair.xyz/api/play/Channel%20S.m3u8
 #EXTINF:-1 xui-id="16883" tvg-id="DBCNews.bd" tvg-name="DBC News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dbc-news.png" channel-id="DBCNews.bd.alt1" group-title="Bangladesh",DBC News
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5jN8Wx3P7x7urmzEr9aaR0
@@ -47,17 +47,17 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5jN8Wx3P7x7urmzEr9aaR0
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h18EhdjdDwTLHbmw8rkFp7Y
 #EXTINF:-1 xui-id="4712" tvg-id="DeshTV.bd" tvg-name="Desh TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/desh-tv.png" channel-id="DeshTV.bd.alt1" group-title="Bangladesh",Desh TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h7BDcaBwSVaziegk9GKZ8DM
-#EXTINF:-1 tvg-id="DeshTV.bd" tvg-name="Desh TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/desh-tv.png" channel-id="DeshTV.bd.alt1" group-title="Bangladesh",Desh TV [HMAIR]
+#EXTINF:-1 tvg-id="DeshTV.bd" tvg-name="Desh TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/desh-tv.png" channel-id="DeshTV.bd.alt1" group-title="Bangladesh",Desh TV [Jannat]
 https://media.hmair.xyz/api/play/Desh%20TV.m3u8
 #EXTINF:-1 xui-id="395" tvg-id="DurontoTV.bd" tvg-name="Duronto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/duronto-tv.png" tvg-chno="13" channel-id="DurontoTV.bd" group-title="Bangladesh",Duronto TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h23M1OlrCmj-1twv1Nj65lg
 #EXTINF:-1 xui-id="364" tvg-id="EkattorTV.bd" tvg-name="Ekattor TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekattor-tv.png" channel-id="EkattorTV.bd.alt1" group-title="Bangladesh",Ekattor TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h6baLFdX295CP4kKvCLOKZ4
-#EXTINF:-1 tvg-id="EkattorTV.bd" tvg-name="Ekattor TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekattor-tv.png" channel-id="EkattorTV.bd.alt1" group-title="Bangladesh",Ekattor TV [HMAIR]
+#EXTINF:-1 tvg-id="EkattorTV.bd" tvg-name="Ekattor TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekattor-tv.png" channel-id="EkattorTV.bd.alt1" group-title="Bangladesh",Ekattor TV [Jannat]
 https://media.hmair.xyz/api/play/Ekattor%20TV.m3u8
 #EXTINF:-1 xui-id="386" tvg-id="EkhonTV.bd" tvg-name="Ekhon TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekhon-tv.png" channel-id="EkhonTV.bd.alt1" group-title="Bangladesh",Ekhon TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h1_qTaqzheoC6hrsY82ihjY
-#EXTINF:-1 tvg-id="EkhonTV.bd" tvg-name="Ekhon TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekhon-tv.png" channel-id="EkhonTV.bd.alt1" group-title="Bangladesh",Ekhon TV [HMAIR]
+#EXTINF:-1 tvg-id="EkhonTV.bd" tvg-name="Ekhon TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekhon-tv.png" channel-id="EkhonTV.bd.alt1" group-title="Bangladesh",Ekhon TV [Jannat]
 https://media.hmair.xyz/api/play/Ekhon%20TV.m3u8
 #EXTINF:-1 xui-id="378" tvg-id="EkusheyTV.bd" tvg-name="Ekushey TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv.png" tvg-chno="20" channel-id="EkusheyTV.bd" group-title="Bangladesh",Ekushey TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5Hyp97ySKJF386PlteTyAc
@@ -65,15 +65,15 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5Hyp97ySKJF386PlteTyAc
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hyIswkYQkYxpxLpUA6jJDz8
 #EXTINF:-1 xui-id="385" tvg-id="GlobalTV.bd" tvg-name="Global TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/global-tv.png" tvg-chno="44" channel-id="GlobalTV.bd" group-title="Bangladesh",Global TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hw1-M418p_34LWkHW71hNLY
-#EXTINF:-1 tvg-id="GlobalTV.bd" tvg-name="Global TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/global-tv.png" tvg-chno="44" channel-id="GlobalTV.bd" group-title="Bangladesh",Global TV [HMAIR]
+#EXTINF:-1 tvg-id="GlobalTV.bd" tvg-name="Global TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/global-tv.png" tvg-chno="44" channel-id="GlobalTV.bd" group-title="Bangladesh",Global TV [Jannat]
 https://media.hmair.xyz/api/play/Global%20TV.m3u8
 #EXTINF:-1 xui-id="105506" tvg-id="IndependentTV.bd" tvg-name="Independent TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/independent-tv.png" tvg-chno="28" channel-id="IndependentTV.bd" group-title="Bangladesh",Independent TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h0KAaUN3Ii1ZSSkAoaxENO4
-#EXTINF:-1 tvg-id="IndependentTV.bd" tvg-name="Independent TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/independent-tv.png" tvg-chno="28" channel-id="IndependentTV.bd" group-title="Bangladesh",Independent TV [HMAIR]
+#EXTINF:-1 tvg-id="IndependentTV.bd" tvg-name="Independent TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/independent-tv.png" tvg-chno="28" channel-id="IndependentTV.bd" group-title="Bangladesh",Independent TV [Jannat]
 https://media.hmair.xyz/api/play/Independent%20TV.m3u8
 #EXTINF:-1 xui-id="69473" tvg-id="JamunaTV.bd" tvg-name="Jamuna TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jamuna-tv.png" channel-id="JamunaTV.bd.alt1" group-title="Bangladesh",Jamuna TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8aZm7WFpjb5ykTDAgHKjaI
-#EXTINF:-1 tvg-id="JamunaTV.bd" tvg-name="Jamuna TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jamuna-tv.png" channel-id="JamunaTV.bd.alt1" group-title="Bangladesh",Jamuna TV [HMAIR]
+#EXTINF:-1 tvg-id="JamunaTV.bd" tvg-name="Jamuna TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jamuna-tv.png" channel-id="JamunaTV.bd.alt1" group-title="Bangladesh",Jamuna TV [Jannat]
 https://media.hmair.xyz/api/play/Jamuna%20TV.m3u8
 #EXTINF:-1 xui-id="376" tvg-id="MaasrangaTV.bd" tvg-name="Maasranga TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/maasranga-tv.png" channel-id="MaasrangaTV.bd.alt1" group-title="Bangladesh",Maasranga TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h81oqiCzgM7rvfNcdECO_1k
@@ -89,15 +89,15 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5Wd2pRZlMuRmE8wxVWqkwk
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h4LCkKVp8ORiekktQSlc2kw
 #EXTINF:-1 xui-id="388" tvg-id="NexusTV.bd" tvg-name="Nexus TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nexus-tv.png" tvg-chno="161" channel-id="NexusTV.bd" group-title="Bangladesh",Nexus TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h51cl1aB9jCjab_0xr3n19o
-#EXTINF:-1 tvg-id="NexusTV.bd" tvg-name="Nexus TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nexus-tv.png" tvg-chno="161" channel-id="NexusTV.bd" group-title="Bangladesh",Nexus TV [HMAIR]
+#EXTINF:-1 tvg-id="NexusTV.bd" tvg-name="Nexus TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nexus-tv.png" tvg-chno="161" channel-id="NexusTV.bd" group-title="Bangladesh",Nexus TV [Jannat]
 https://media.hmair.xyz/api/play/Nexus%20TV.m3u8
 #EXTINF:-1 xui-id="369" tvg-id="NTV.bd" tvg-name="NTV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png" tvg-chno="184" channel-id="NTV.bd" group-title="Bangladesh",NTV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h604aic1Yo0bg3OZ59hg7OM
-#EXTINF:-1 tvg-id="NTV.bd" tvg-name="NTV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png" tvg-chno="184" channel-id="NTV.bd" group-title="Bangladesh",NTV [HMAIR]
+#EXTINF:-1 tvg-id="NTV.bd" tvg-name="NTV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png" tvg-chno="184" channel-id="NTV.bd" group-title="Bangladesh",NTV [Jannat]
 https://media.hmair.xyz/api/play/NTV.m3u8
 #EXTINF:-1 xui-id="180667" tvg-id="RajdhaniTV.bd" tvg-name="Rajdhani TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rajdhani-tv.png" tvg-chno="40" channel-id="RajdhaniTV.bd" group-title="Bangladesh",Rajdhani TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h4lp8ogxihUq3UNmtbCXNyE
-#EXTINF:-1 tvg-id="RajdhaniTV.bd" tvg-name="Rajdhani TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rajdhani-tv.png" tvg-chno="40" channel-id="RajdhaniTV.bd" group-title="Bangladesh",Rajdhani TV [HMAIR]
+#EXTINF:-1 tvg-id="RajdhaniTV.bd" tvg-name="Rajdhani TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rajdhani-tv.png" tvg-chno="40" channel-id="RajdhaniTV.bd" group-title="Bangladesh",Rajdhani TV [Jannat]
 https://media.hmair.xyz/api/play/Rajdhani%20TV.m3u8
 #EXTINF:-1 xui-id="370" tvg-id="RTV.bd" tvg-name="RTV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rtv.png" tvg-chno="217" channel-id="RTV.bd" group-title="Bangladesh",RTV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h1TKP2kx7lYCllLnpQsgNg8
@@ -105,17 +105,17 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h1TKP2kx7lYCllLnpQsgNg8
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h4N9d6ueEfggSXKfcYhz-Fg
 #EXTINF:-1 xui-id="365" tvg-id="SomoyNewsTV.bd" tvg-name="Somoy TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/somoy-tv.png" tvg-chno="33" channel-id="SomoyNewsTV.bd" group-title="Bangladesh",Somoy TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hzPjeg9u-ke5av5bSIG7PZg
-#EXTINF:-1 tvg-id="SomoyNewsTV.bd" tvg-name="Somoy TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/somoy-tv.png" tvg-chno="33" channel-id="SomoyNewsTV.bd" group-title="Bangladesh",Somoy TV [HMAIR]
+#EXTINF:-1 tvg-id="SomoyNewsTV.bd" tvg-name="Somoy TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/somoy-tv.png" tvg-chno="33" channel-id="SomoyNewsTV.bd" group-title="Bangladesh",Somoy TV [Jannat]
 https://media.hmair.xyz/api/play/Somoy%20TV.m3u8
 #EXTINF:-1 xui-id="175336" tvg-id="custom.star.news" tvg-name="Star News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-news-722ad595.png" tvg-chno="223" channel-id="custom.star.news" group-title="Bangladesh",Star News
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hycgULfkUpcYoqlSOXrYCBk
-#EXTINF:-1 tvg-id="hmair.banglatv" tvg-name="Bangla TV" channel-id="hmair.banglatv" group-title="Bangladesh",Bangla TV [HMAIR]
+#EXTINF:-1 tvg-id="hmair.banglatv" tvg-name="Bangla TV" channel-id="hmair.banglatv" group-title="Bangladesh",Bangla TV [Jannat]
 https://media.hmair.xyz/api/play/Bangla%20TV.m3u8
-#EXTINF:-1 tvg-id="hmair.movietoffee" tvg-name="Movietoffee" channel-id="hmair.movietoffee" group-title="Bangladesh",Movietoffee [HMAIR]
+#EXTINF:-1 tvg-id="hmair.movietoffee" tvg-name="Movietoffee" channel-id="hmair.movietoffee" group-title="Bangladesh",Movietoffee [Jannat]
 https://media.hmair.xyz/api/play/Movietoffee.m3u8
-#EXTINF:-1 tvg-id="hmair.toffeemovies" tvg-name="Toffee Movies" channel-id="hmair.toffeemovies" group-title="Bangladesh",Toffee Movies [HMAIR]
+#EXTINF:-1 tvg-id="hmair.toffeemovies" tvg-name="Toffee Movies" channel-id="hmair.toffeemovies" group-title="Bangladesh",Toffee Movies [Jannat]
 https://media.hmair.xyz/api/play/Toffee%20Movies.m3u8
-#EXTINF:-1 tvg-id="hmair.toffeetv" tvg-name="Toffee TV" channel-id="hmair.toffeetv" group-title="Bangladesh",Toffee TV [HMAIR]
+#EXTINF:-1 tvg-id="hmair.toffeetv" tvg-name="Toffee TV" channel-id="hmair.toffeetv" group-title="Bangladesh",Toffee TV [Jannat]
 https://media.hmair.xyz/api/play/Toffee%20TV.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aakaash-aath.png" xui-id="2881" tvg-id="custom.bdix.aakashaath" tvg-name="AAKASH AATH" tvg-chno="201" channel-id="custom.bdix.aakashaath" group-title="Indian Bangla",AAKASH AATH
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5DGYvfk7gqj2nKoZt0U8DE
@@ -143,7 +143,7 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hx9O6PFoRXu4LQXNBGMFUyU
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_7wPmPTsXVGwUN6yfW44Og
 #EXTINF:-1 xui-id="161685" tvg-id="Sony.Aath.in" tvg-name="Sony AATH" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-aath.png" tvg-chno="230" channel-id="Sony.Aath.in" group-title="Indian Bangla",Sony AATH
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h2xUVU7TLP0ioAK33XDhXFo
-#EXTINF:-1 tvg-id="Sony.Aath.in" tvg-name="Sony AATH" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-aath.png" tvg-chno="230" channel-id="Sony.Aath.in" group-title="Indian Bangla",Sony Aath [HMAIR]
+#EXTINF:-1 tvg-id="Sony.Aath.in" tvg-name="Sony AATH" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-aath.png" tvg-chno="230" channel-id="Sony.Aath.in" group-title="Indian Bangla",Sony Aath [Jannat]
 https://media.hmair.xyz/api/play/Sony%20Aath.m3u8
 #EXTINF:-1 xui-id="449" tvg-id="Star.Jalsha.in" tvg-name="Star Jalsha" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" tvg-chno="289" channel-id="Star.Jalsha.in" group-title="Indian Bangla",Star Jalsha
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hyxuVtZ5OIMIFVHTYjs39O4
@@ -151,11 +151,11 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hyxuVtZ5OIMIFVHTYjs39O4
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h2N77Az6srrAbchmTBEB0ro
 #EXTINF:-1 xui-id="451" tvg-id="ZeeBangla.in@HD" tvg-name="Zee Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla.png" channel-id="ZeeBangla.in@HD.alt1" group-title="Indian Bangla",Zee Bangla
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9R_fUL8Uhe9SKJPLkwIHIg
-#EXTINF:-1 tvg-id="ZeeBangla.in@HD" tvg-name="Zee Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla.png" channel-id="ZeeBangla.in@HD.alt1" group-title="Indian Bangla",Zee Bangla [HMAIR]
+#EXTINF:-1 tvg-id="ZeeBangla.in@HD" tvg-name="Zee Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla.png" channel-id="ZeeBangla.in@HD.alt1" group-title="Indian Bangla",Zee Bangla [Jannat]
 https://media.hmair.xyz/api/play/Zee%20Bangla.m3u8
 #EXTINF:-1 xui-id="18982" tvg-id="ZeeBanglaSonar.in@SD" tvg-name="Zee Bangla Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png" tvg-chno="306" channel-id="ZeeBanglaSonar.in@SD" group-title="Indian Bangla",Zee Bangla Cinema
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hwXRgwvKvQTn4Nol11F44jU
-#EXTINF:-1 tvg-id="ZeeBanglaSonar.in@SD" tvg-name="Zee Bangla Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png" tvg-chno="306" channel-id="ZeeBanglaSonar.in@SD" group-title="Indian Bangla",Zee Bangla Cinema [HMAIR]
+#EXTINF:-1 tvg-id="ZeeBanglaSonar.in@SD" tvg-name="Zee Bangla Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png" tvg-chno="306" channel-id="ZeeBanglaSonar.in@SD" group-title="Indian Bangla",Zee Bangla Cinema [Jannat]
 https://media.hmair.xyz/api/play/Zee%20Bangla%20Cinema.m3u8
 #EXTINF:-1 xui-id="161665" tvg-id="AndTV.in@SD" tvg-name="&TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ndtv.png" tvg-chno="468" channel-id="AndTV.in@SD" group-title="Hindi",&TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h3OWFwPFM8a_zHaNPVE17TI
@@ -167,7 +167,7 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5CxnMlH9VkWz8Cms-FPM5A
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h4YTUJ64ZGaykjIzJygd9mg
 #EXTINF:-1 xui-id="161681" tvg-id="B4UMusic.in@India" tvg-name="B4U Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png" tvg-chno="400" channel-id="B4UMusic.in@India" group-title="Hindi",B4U Music
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9nLa0farr-MQt0k2XYDnDM
-#EXTINF:-1 tvg-id="B4UMusic.in@India" tvg-name="B4U Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png" tvg-chno="400" channel-id="B4UMusic.in@India" group-title="Hindi",B4U Music [HMAIR]
+#EXTINF:-1 tvg-id="B4UMusic.in@India" tvg-name="B4U Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png" tvg-chno="400" channel-id="B4UMusic.in@India" group-title="Hindi",B4U Music [Jannat]
 https://media.hmair.xyz/api/play/B4U%20Music.m3u8
 #EXTINF:-1 xui-id="2319" tvg-id="BhojpuriCinema.in@SD" tvg-name="Bhojpuri Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bhojpuri-cinema.png" tvg-chno="310" channel-id="BhojpuriCinema.in@SD" group-title="Hindi",Bhojpuri Cinema
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h76cxQ4yUHWthrG33yi5Fzw
@@ -191,7 +191,7 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_PYm_-onoMUFiKJd-0F1R4
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hz5xYY86NTkMiYayfpcZpVA
 #EXTINF:-1 xui-id="18826" tvg-id="SonyMax.in@SD" tvg-name="Sony Max" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max.png" tvg-chno="384" channel-id="SonyMax.in@SD" group-title="Hindi",Sony Max
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h0yDhuPjajDECpj9_HmBbtk
-#EXTINF:-1 tvg-id="SonyMax.in@SD" tvg-name="Sony Max" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max.png" tvg-chno="384" channel-id="SonyMax.in@SD" group-title="Hindi",Sony MAX [HMAIR]
+#EXTINF:-1 tvg-id="SonyMax.in@SD" tvg-name="Sony Max" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max.png" tvg-chno="384" channel-id="SonyMax.in@SD" group-title="Hindi",Sony MAX [Jannat]
 https://media.hmair.xyz/api/play/Sony%20MAX.m3u8
 #EXTINF:-1 xui-id="141830" tvg-id="SonySAB.in@HD" tvg-name="Sony SAB" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sab.png" tvg-chno="682" channel-id="SonySAB.in@HD" group-title="Hindi",Sony SAB
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h4Q1vWDLG9pcFaMpqe3_YaA
@@ -213,41 +213,41 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_vN9qdjnhMZ7-2Sa_s0KD4
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5mqlKV14xDuPAinM8qJFnI
 #EXTINF:-1 xui-id="520" tvg-id="Zing.in@SD" tvg-name="Zing" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zing.png" tvg-chno="460" channel-id="Zing.in@SD" group-title="Hindi",Zing
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9MYzfW9yl3vvthpUGactZg
-#EXTINF:-1 tvg-id="Zing.in@SD" tvg-name="Zing" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zing.png" tvg-chno="460" channel-id="Zing.in@SD" group-title="Indian Bangla",Zing [HMAIR]
+#EXTINF:-1 tvg-id="Zing.in@SD" tvg-name="Zing" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zing.png" tvg-chno="460" channel-id="Zing.in@SD" group-title="Indian Bangla",Zing [Jannat]
 https://media.hmair.xyz/api/play/Zing.m3u8
 #EXTINF:-1 xui-id="518" tvg-id="Zoom.in" tvg-name="ZOOM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png" tvg-chno="407" channel-id="Zoom.in" group-title="Hindi",ZOOM
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8MYGUZe1FR5QcCRXHOvR4s
-#EXTINF:-1 tvg-id="hmair.pictureshd" tvg-name="& Pictures HD" channel-id="hmair.pictureshd" group-title="Hindi",& Pictures HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.pictureshd" tvg-name="& Pictures HD" channel-id="hmair.pictureshd" group-title="Hindi",& Pictures HD [Jannat]
 https://media.hmair.xyz/api/play/%26%20Pictures%20HD.m3u8
-#EXTINF:-1 tvg-id="hmair.tvhd" tvg-name="&TV HD" channel-id="hmair.tvhd" group-title="Hindi",&TV HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.tvhd" tvg-name="&TV HD" channel-id="hmair.tvhd" group-title="Hindi",&TV HD [Jannat]
 https://media.hmair.xyz/api/play/%26TV%20HD.m3u8
-#EXTINF:-1 tvg-id="hmair.b4umoviesapac" tvg-name="B4U Movies APAC" channel-id="hmair.b4umoviesapac" group-title="Hindi",B4U Movies APAC [HMAIR]
+#EXTINF:-1 tvg-id="hmair.b4umoviesapac" tvg-name="B4U Movies APAC" channel-id="hmair.b4umoviesapac" group-title="Hindi",B4U Movies APAC [Jannat]
 https://media.hmair.xyz/api/play/B4U%20Movies%20APAC.m3u8
-#EXTINF:-1 tvg-id="hmair.cgtn" tvg-name="CGTN" channel-id="hmair.cgtn" group-title="Hindi",CGTN [HMAIR]
+#EXTINF:-1 tvg-id="hmair.cgtn" tvg-name="CGTN" channel-id="hmair.cgtn" group-title="Hindi",CGTN [Jannat]
 https://media.hmair.xyz/api/play/CGTN.m3u8
-#EXTINF:-1 tvg-id="hmair.sonyentertainmenttelevision" tvg-name="Sony Entertainment Television" channel-id="hmair.sonyentertainmenttelevision" group-title="Hindi",Sony Entertainment Television [HMAIR]
+#EXTINF:-1 tvg-id="hmair.sonyentertainmenttelevision" tvg-name="Sony Entertainment Television" channel-id="hmair.sonyentertainmenttelevision" group-title="Hindi",Sony Entertainment Television [Jannat]
 https://media.hmair.xyz/api/play/Sony%20Entertainment%20Television.m3u8
-#EXTINF:-1 tvg-id="hmair.sonyentertainmenttelevisionhd" tvg-name="Sony Entertainment Television HD" channel-id="hmair.sonyentertainmenttelevisionhd" group-title="Hindi",Sony Entertainment Television HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.sonyentertainmenttelevisionhd" tvg-name="Sony Entertainment Television HD" channel-id="hmair.sonyentertainmenttelevisionhd" group-title="Hindi",Sony Entertainment Television HD [Jannat]
 https://media.hmair.xyz/api/play/Sony%20Entertainment%20Television%20HD.m3u8
-#EXTINF:-1 tvg-id="hmair.sonymax2" tvg-name="Sony MAX 2" channel-id="hmair.sonymax2" group-title="Hindi",Sony MAX 2 [HMAIR]
+#EXTINF:-1 tvg-id="hmair.sonymax2" tvg-name="Sony MAX 2" channel-id="hmair.sonymax2" group-title="Hindi",Sony MAX 2 [Jannat]
 https://media.hmair.xyz/api/play/Sony%20MAX%202.m3u8
-#EXTINF:-1 tvg-id="hmair.sonymaxhd" tvg-name="Sony MAX HD" channel-id="hmair.sonymaxhd" group-title="Hindi",Sony MAX HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.sonymaxhd" tvg-name="Sony MAX HD" channel-id="hmair.sonymaxhd" group-title="Hindi",Sony MAX HD [Jannat]
 https://media.hmair.xyz/api/play/Sony%20MAX%20HD.m3u8
-#EXTINF:-1 tvg-id="hmair.sonypixhd" tvg-name="Sony PIX HD" channel-id="hmair.sonypixhd" group-title="Hindi",Sony PIX HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.sonypixhd" tvg-name="Sony PIX HD" channel-id="hmair.sonypixhd" group-title="Hindi",Sony PIX HD [Jannat]
 https://media.hmair.xyz/api/play/Sony%20PIX%20HD.m3u8
-#EXTINF:-1 tvg-id="hmair.sonysabhd" tvg-name="Sony SAB HD" channel-id="hmair.sonysabhd" group-title="Hindi",Sony SAB HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.sonysabhd" tvg-name="Sony SAB HD" channel-id="hmair.sonysabhd" group-title="Hindi",Sony SAB HD [Jannat]
 https://media.hmair.xyz/api/play/Sony%20SAB%20HD.m3u8
-#EXTINF:-1 tvg-id="hmair.zeeaction" tvg-name="Zee Action" channel-id="hmair.zeeaction" group-title="Hindi",Zee Action [HMAIR]
+#EXTINF:-1 tvg-id="hmair.zeeaction" tvg-name="Zee Action" channel-id="hmair.zeeaction" group-title="Hindi",Zee Action [Jannat]
 https://media.hmair.xyz/api/play/Zee%20Action.m3u8
-#EXTINF:-1 tvg-id="hmair.zeeanmol" tvg-name="Zee Anmol" channel-id="hmair.zeeanmol" group-title="Hindi",Zee Anmol [HMAIR]
+#EXTINF:-1 tvg-id="hmair.zeeanmol" tvg-name="Zee Anmol" channel-id="hmair.zeeanmol" group-title="Hindi",Zee Anmol [Jannat]
 https://media.hmair.xyz/api/play/Zee%20Anmol.m3u8
-#EXTINF:-1 tvg-id="hmair.zeebollywood" tvg-name="Zee Bollywood" channel-id="hmair.zeebollywood" group-title="Hindi",Zee Bollywood [HMAIR]
+#EXTINF:-1 tvg-id="hmair.zeebollywood" tvg-name="Zee Bollywood" channel-id="hmair.zeebollywood" group-title="Hindi",Zee Bollywood [Jannat]
 https://media.hmair.xyz/api/play/Zee%20Bollywood.m3u8
-#EXTINF:-1 tvg-id="hmair.zeecafe" tvg-name="Zee Cafe" channel-id="hmair.zeecafe" group-title="Hindi",Zee Cafe [HMAIR]
+#EXTINF:-1 tvg-id="hmair.zeecafe" tvg-name="Zee Cafe" channel-id="hmair.zeecafe" group-title="Hindi",Zee Cafe [Jannat]
 https://media.hmair.xyz/api/play/Zee%20Cafe.m3u8
-#EXTINF:-1 tvg-id="hmair.zeecinemahd" tvg-name="Zee Cinema HD" channel-id="hmair.zeecinemahd" group-title="Hindi",Zee Cinema HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.zeecinemahd" tvg-name="Zee Cinema HD" channel-id="hmair.zeecinemahd" group-title="Hindi",Zee Cinema HD [Jannat]
 https://media.hmair.xyz/api/play/Zee%20Cinema%20HD.m3u8
-#EXTINF:-1 tvg-id="hmair.zeetvhd" tvg-name="Zee TV HD" channel-id="hmair.zeetvhd" group-title="Hindi",Zee TV HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.zeetvhd" tvg-name="Zee TV HD" channel-id="hmair.zeetvhd" group-title="Hindi",Zee TV HD [Jannat]
 https://media.hmair.xyz/api/play/Zee%20TV%20HD.m3u8
 #EXTINF:-1 xui-id="954" tvg-id="AlJazeera.qa@English" tvg-name="Al Jazeera" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/al-jazeera.png" tvg-chno="714" channel-id="AlJazeera.qa@English" group-title="International",Al Jazeera
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h0Fl0HH0yjhLGehK-DJOHYQ
@@ -269,37 +269,37 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h2P7KTis24YpbThIup8TRyg
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hzun2IK-xgiodTUg3sGIkKs
 #EXTINF:-1 xui-id="517" tvg-id="TraceUrban.fr" tvg-name="Trace Urban" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trace-urban-1080p-52524ff192.png" tvg-chno="733" channel-id="TraceUrban.fr" group-title="International",Trace Urban
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hy08ZM-HIJ-6QN92LUqZue4
-#EXTINF:-1 tvg-id="hmair.channelnewsasia" tvg-name="Channel News Asia" channel-id="hmair.channelnewsasia" group-title="International",Channel News Asia [HMAIR]
+#EXTINF:-1 tvg-id="hmair.channelnewsasia" tvg-name="Channel News Asia" channel-id="hmair.channelnewsasia" group-title="International",Channel News Asia [Jannat]
 https://media.hmair.xyz/api/play/Channel%20News%20Asia.m3u8
-#EXTINF:-1 tvg-id="hmair.cnn" tvg-name="CNN" channel-id="hmair.cnn" group-title="International",CNN [HMAIR]
+#EXTINF:-1 tvg-id="hmair.cnn" tvg-name="CNN" channel-id="hmair.cnn" group-title="International",CNN [Jannat]
 https://media.hmair.xyz/api/play/CNN.m3u8
-#EXTINF:-1 tvg-id="hmair.dw" tvg-name="DW" channel-id="hmair.dw" group-title="International",DW [HMAIR]
+#EXTINF:-1 tvg-id="hmair.dw" tvg-name="DW" channel-id="hmair.dw" group-title="International",DW [Jannat]
 https://media.hmair.xyz/api/play/DW.m3u8
-#EXTINF:-1 tvg-id="hmair.france24" tvg-name="France 24" channel-id="hmair.france24" group-title="International",France 24 [HMAIR]
+#EXTINF:-1 tvg-id="hmair.france24" tvg-name="France 24" channel-id="hmair.france24" group-title="International",France 24 [Jannat]
 https://media.hmair.xyz/api/play/France%2024.m3u8
-#EXTINF:-1 tvg-id="hmair.hum" tvg-name="HUM" channel-id="hmair.hum" group-title="International",HUM [HMAIR]
+#EXTINF:-1 tvg-id="hmair.hum" tvg-name="HUM" channel-id="hmair.hum" group-title="International",HUM [Jannat]
 https://media.hmair.xyz/api/play/HUM.m3u8
-#EXTINF:-1 tvg-id="hmair.hummasala" tvg-name="HUM Masala" channel-id="hmair.hummasala" group-title="International",HUM Masala [HMAIR]
+#EXTINF:-1 tvg-id="hmair.hummasala" tvg-name="HUM Masala" channel-id="hmair.hummasala" group-title="International",HUM Masala [Jannat]
 https://media.hmair.xyz/api/play/HUM%20Masala.m3u8
-#EXTINF:-1 tvg-id="hmair.humsitaray" tvg-name="HUM Sitaray" channel-id="hmair.humsitaray" group-title="International",HUM Sitaray [HMAIR]
+#EXTINF:-1 tvg-id="hmair.humsitaray" tvg-name="HUM Sitaray" channel-id="hmair.humsitaray" group-title="International",HUM Sitaray [Jannat]
 https://media.hmair.xyz/api/play/HUM%20Sitaray.m3u8
-#EXTINF:-1 tvg-id="hmair.russiatoday" tvg-name="Russia Today" channel-id="hmair.russiatoday" group-title="International",Russia Today [HMAIR]
+#EXTINF:-1 tvg-id="hmair.russiatoday" tvg-name="Russia Today" channel-id="hmair.russiatoday" group-title="International",Russia Today [Jannat]
 https://media.hmair.xyz/api/play/Russia%20Today.m3u8
-#EXTINF:-1 tvg-id="hmair.trtworld" tvg-name="TRT World" channel-id="hmair.trtworld" group-title="International",TRT World [HMAIR]
+#EXTINF:-1 tvg-id="hmair.trtworld" tvg-name="TRT World" channel-id="hmair.trtworld" group-title="International",TRT World [Jannat]
 https://media.hmair.xyz/api/play/TRT%20World.m3u8
 #EXTINF:-1 xui-id="161686" tvg-id="AnimalPlanet.in@SD" tvg-name="Animal Planet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png" tvg-chno="93" channel-id="AnimalPlanet.in@SD" group-title="Documentary & Wildlife",Animal Planet
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h81SRmKF440w516-hwztSxU
-#EXTINF:-1 tvg-id="AnimalPlanet.in@SD" tvg-name="Animal Planet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png" tvg-chno="93" channel-id="AnimalPlanet.in@SD" group-title="Documentary & Wildlife",Animal Planet [HMAIR]
+#EXTINF:-1 tvg-id="AnimalPlanet.in@SD" tvg-name="Animal Planet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png" tvg-chno="93" channel-id="AnimalPlanet.in@SD" group-title="Documentary & Wildlife",Animal Planet [Jannat]
 https://media.hmair.xyz/api/play/Animal%20Planet.m3u8
 #EXTINF:-1 xui-id="576" tvg-id="DiscoveryChannel.in@SD" tvg-name="Discovery" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png" tvg-chno="94" channel-id="DiscoveryChannel.in@SD" group-title="Documentary & Wildlife",Discovery
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hxMs67iMlv66NO8oTNi8lQc
-#EXTINF:-1 tvg-id="DiscoveryChannel.in@SD" tvg-name="Discovery" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png" tvg-chno="94" channel-id="DiscoveryChannel.in@SD" group-title="Documentary & Wildlife",Discovery [HMAIR]
+#EXTINF:-1 tvg-id="DiscoveryChannel.in@SD" tvg-name="Discovery" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png" tvg-chno="94" channel-id="DiscoveryChannel.in@SD" group-title="Documentary & Wildlife",Discovery [Jannat]
 https://media.hmair.xyz/api/play/Discovery.m3u8
 #EXTINF:-1 xui-id="145383" tvg-id="custom.bdix.discoverybangla" tvg-name="DISCOVERY BANGLA" tvg-chno="767" channel-id="custom.bdix.discoverybangla" group-title="Documentary & Wildlife" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-bangla.png",DISCOVERY BANGLA
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h55R3V66zdEe5IT1wskSUbY
 #EXTINF:-1 xui-id="579" tvg-id="Discovery Science.in" tvg-name="DISCOVERY SCIENCE" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-science.png" tvg-chno="769" channel-id="Discovery Science.in" group-title="Documentary & Wildlife",DISCOVERY SCIENCE
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hwZrelAleTZyiEQQwQjERpA
-#EXTINF:-1 tvg-id="Discovery Science.in" tvg-name="DISCOVERY SCIENCE" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-science.png" tvg-chno="769" channel-id="Discovery Science.in" group-title="Documentary & Wildlife",Discovery Science [HMAIR]
+#EXTINF:-1 tvg-id="Discovery Science.in" tvg-name="DISCOVERY SCIENCE" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-science.png" tvg-chno="769" channel-id="Discovery Science.in" group-title="Documentary & Wildlife",Discovery Science [Jannat]
 https://media.hmair.xyz/api/play/Discovery%20Science.m3u8
 #EXTINF:-1 xui-id="18069" tvg-id="InvestigationDiscovery.in@SD" tvg-name="Investigation Discovery" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/investigation-discovery.png" tvg-chno="875" channel-id="InvestigationDiscovery.in@SD" group-title="Documentary & Wildlife",Investigation Discovery
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h97ktYc0NXs5OZfmuIMV27U
@@ -309,27 +309,27 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9QWYs3csqbwMBgT4G-Yz9s
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8wAfgcfcQ7FGSf-LR4MZF8
 #EXTINF:-1 xui-id="593" tvg-id="TLC.in@HD" tvg-name="TLC" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tlc.png" tvg-chno="98" channel-id="TLC.in@HD" group-title="Documentary & Wildlife",TLC
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h-b6GEqO-rwf3EcaAKXZXAw
-#EXTINF:-1 tvg-id="TLC.in@HD" tvg-name="TLC" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tlc.png" tvg-chno="98" channel-id="TLC.in@HD" group-title="Documentary & Wildlife",TLC [HMAIR]
+#EXTINF:-1 tvg-id="TLC.in@HD" tvg-name="TLC" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tlc.png" tvg-chno="98" channel-id="TLC.in@HD" group-title="Documentary & Wildlife",TLC [Jannat]
 https://media.hmair.xyz/api/play/TLC.m3u8
 #EXTINF:-1 xui-id="588" tvg-id="custom.bdix.travelxp" tvg-name="TRAVEL XP HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-xp.png" tvg-chno="785" channel-id="custom.bdix.travelxp" group-title="Documentary & Wildlife",TRAVEL XP HD
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h0tVFpbXcwZ9FZ_8b3j62Ek
 #EXTINF:-1 xui-id="589" tvg-id="WildEarth.za" tvg-name="WildEarth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wildearth.png" tvg-chno="787" channel-id="WildEarth.za" group-title="Documentary & Wildlife",WildEarth
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9Zd4xALlv8VrX-0MomDBVQ
-#EXTINF:-1 tvg-id="hmair.animalplanethd" tvg-name="Animal Planet HD" channel-id="hmair.animalplanethd" group-title="Documentary & Wildlife",Animal Planet HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.animalplanethd" tvg-name="Animal Planet HD" channel-id="hmair.animalplanethd" group-title="Documentary & Wildlife",Animal Planet HD [Jannat]
 https://media.hmair.xyz/api/play/Animal%20Planet%20HD.m3u8
-#EXTINF:-1 tvg-id="hmair.discoveryhd" tvg-name="Discovery HD" channel-id="hmair.discoveryhd" group-title="Documentary & Wildlife",Discovery HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.discoveryhd" tvg-name="Discovery HD" channel-id="hmair.discoveryhd" group-title="Documentary & Wildlife",Discovery HD [Jannat]
 https://media.hmair.xyz/api/play/Discovery%20HD.m3u8
-#EXTINF:-1 tvg-id="hmair.discoveryturbo" tvg-name="Discovery Turbo" channel-id="hmair.discoveryturbo" group-title="Documentary & Wildlife",Discovery Turbo [HMAIR]
+#EXTINF:-1 tvg-id="hmair.discoveryturbo" tvg-name="Discovery Turbo" channel-id="hmair.discoveryturbo" group-title="Documentary & Wildlife",Discovery Turbo [Jannat]
 https://media.hmair.xyz/api/play/Discovery%20Turbo.m3u8
-#EXTINF:-1 tvg-id="hmair.investigationdiscoveryhd" tvg-name="Investigation Discovery HD" channel-id="hmair.investigationdiscoveryhd" group-title="Documentary & Wildlife",Investigation Discovery HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.investigationdiscoveryhd" tvg-name="Investigation Discovery HD" channel-id="hmair.investigationdiscoveryhd" group-title="Documentary & Wildlife",Investigation Discovery HD [Jannat]
 https://media.hmair.xyz/api/play/Investigation%20Discovery%20HD.m3u8
-#EXTINF:-1 tvg-id="hmair.sonybbcearthhd" tvg-name="Sony BBC Earth HD" channel-id="hmair.sonybbcearthhd" group-title="Documentary & Wildlife",Sony BBC Earth HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.sonybbcearthhd" tvg-name="Sony BBC Earth HD" channel-id="hmair.sonybbcearthhd" group-title="Documentary & Wildlife",Sony BBC Earth HD [Jannat]
 https://media.hmair.xyz/api/play/Sony%20BBC%20Earth%20HD.m3u8
-#EXTINF:-1 tvg-id="hmair.tlchd" tvg-name="TLC HD" channel-id="hmair.tlchd" group-title="Documentary & Wildlife",TLC HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.tlchd" tvg-name="TLC HD" channel-id="hmair.tlchd" group-title="Documentary & Wildlife",TLC HD [Jannat]
 https://media.hmair.xyz/api/play/TLC%20HD.m3u8
 #EXTINF:-1 xui-id="956" channel-id="CartoonNetwork.uk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network.png" tvg-id="CartoonNetwork.uk" tvg-name="Cartoon Network" tvg-chno="927" group-title="Kids",Cartoon Network
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5pT0VbhMoGSXq6CXo1wJac
-#EXTINF:-1 channel-id="CartoonNetwork.uk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network.png" tvg-id="CartoonNetwork.uk" tvg-name="Cartoon Network" tvg-chno="927" group-title="Kids",Cartoon Network [HMAIR]
+#EXTINF:-1 channel-id="CartoonNetwork.uk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network.png" tvg-id="CartoonNetwork.uk" tvg-name="Cartoon Network" tvg-chno="927" group-title="Kids",Cartoon Network [Jannat]
 https://media.hmair.xyz/api/play/Cartoon%20Network.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-jr.png" xui-id="671" tvg-id="Disney Junior.in" tvg-name="DISNEY JUNIOR" tvg-chno="801" channel-id="Disney Junior.in" group-title="Kids",DISNEY JUNIOR
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hzQr1GDXRIEYG_ejdeShuFU
@@ -339,13 +339,13 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8mW-NsTzyKt5adBiEMhkzw
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h7mKDW05Zl9RrOXIffrM3Pc
 #EXTINF:-1 xui-id="135044" tvg-id="ZooMoo.sg" tvg-name="ZooMoo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoomoo.png" tvg-chno="970" channel-id="ZooMoo.sg" group-title="Kids",ZooMoo
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hytkFqVyOS_EkSsPDq9sDq4
-#EXTINF:-1 tvg-id="hmair.cartoonnetworkhd" tvg-name="Cartoon Network HD +" channel-id="hmair.cartoonnetworkhd" group-title="Kids",Cartoon Network HD + [HMAIR]
+#EXTINF:-1 tvg-id="hmair.cartoonnetworkhd" tvg-name="Cartoon Network HD +" channel-id="hmair.cartoonnetworkhd" group-title="Kids",Cartoon Network HD + [Jannat]
 https://media.hmair.xyz/api/play/Cartoon%20Network%20HD%20%2B.m3u8
-#EXTINF:-1 tvg-id="hmair.discoverykids" tvg-name="Discovery Kids" channel-id="hmair.discoverykids" group-title="Kids",Discovery Kids [HMAIR]
+#EXTINF:-1 tvg-id="hmair.discoverykids" tvg-name="Discovery Kids" channel-id="hmair.discoverykids" group-title="Kids",Discovery Kids [Jannat]
 https://media.hmair.xyz/api/play/Discovery%20Kids.m3u8
-#EXTINF:-1 tvg-id="hmair.pogo" tvg-name="POGO" channel-id="hmair.pogo" group-title="Kids",POGO [HMAIR]
+#EXTINF:-1 tvg-id="hmair.pogo" tvg-name="POGO" channel-id="hmair.pogo" group-title="Kids",POGO [Jannat]
 https://media.hmair.xyz/api/play/POGO.m3u8
-#EXTINF:-1 tvg-id="hmair.sonyyay" tvg-name="Sony YAY" channel-id="hmair.sonyyay" group-title="Kids",Sony YAY [HMAIR]
+#EXTINF:-1 tvg-id="hmair.sonyyay" tvg-name="Sony YAY" channel-id="hmair.sonyyay" group-title="Kids",Sony YAY [Jannat]
 https://media.hmair.xyz/api/play/Sony%20YAY.m3u8
 #EXTINF:-1 xui-id="620" channel-id="custom.bdix.madanibangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/madani-tv.png" tvg-id="custom.bdix.madanibangla" tvg-name="MADANI TV BANGLA" tvg-chno="909" group-title="Religious",MADANI TV BANGLA
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h0wqnMHHBPvHGJhgtORo8x4
@@ -355,11 +355,11 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h0EbZhJyPxgSIRv5Bty-zHM
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9Q2_bokiVuN2G5pnzIbRWU
 #EXTINF:-1 xui-id="143712" tvg-id="QuranTV.iq" tvg-name="Quran TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-tv.png" tvg-chno="989" channel-id="QuranTV.iq" group-title="Religious",Quran TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9WWNogV-lEyk1odd1vFOYI
-#EXTINF:-1 tvg-id="hmair.islamictv" tvg-name="Islamic TV" channel-id="hmair.islamictv" group-title="Religious",Islamic TV [HMAIR]
+#EXTINF:-1 tvg-id="hmair.islamictv" tvg-name="Islamic TV" channel-id="hmair.islamictv" group-title="Religious",Islamic TV [Jannat]
 https://media.hmair.xyz/api/play/Islamic%20TV.m3u8
-#EXTINF:-1 tvg-id="hmair.saudiquran" tvg-name="Saudi Quran" channel-id="hmair.saudiquran" group-title="Religious",Saudi Quran [HMAIR]
+#EXTINF:-1 tvg-id="hmair.saudiquran" tvg-name="Saudi Quran" channel-id="hmair.saudiquran" group-title="Religious",Saudi Quran [Jannat]
 https://media.hmair.xyz/api/play/Saudi%20Quran.m3u8
-#EXTINF:-1 tvg-id="hmair.saudisunnah" tvg-name="Saudi Sunnah" channel-id="hmair.saudisunnah" group-title="Religious",Saudi Sunnah [HMAIR]
+#EXTINF:-1 tvg-id="hmair.saudisunnah" tvg-name="Saudi Sunnah" channel-id="hmair.saudisunnah" group-title="Religious",Saudi Sunnah [Jannat]
 https://media.hmair.xyz/api/play/Saudi%20Sunnah.m3u8
 #EXTINF:-1 xui-id="3826" tvg-id="DDSports.in@SD" tvg-name="DD Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-sports-fb997548.png" tvg-chno="999" channel-id="DDSports.in@SD" group-title="Sports",DD Sports
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_UZjwt4ii540pP_yKK-8j8
@@ -395,27 +395,27 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h3gLsr4pXr53C_Ha9NkcB1w
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5YpvjhOm0Mx3nSSzAbC0e8
 #EXTINF:-1 xui-id="435" tvg-id="DUPWCHD" tvg-name="US: WILLOW SPORTS HD" tvg-chno="987" channel-id="DUPWCHD" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/us-willow-sports-hd.png",US: WILLOW SPORTS HD
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h7G6zFWjtRP7-p-r4gz_RJw
-#EXTINF:-1 tvg-id="hmair.bfllive1" tvg-name="BFL | Live 1" channel-id="hmair.bfllive1" group-title="Sports",BFL | Live 1 [HMAIR]
+#EXTINF:-1 tvg-id="hmair.bfllive1" tvg-name="BFL | Live 1" channel-id="hmair.bfllive1" group-title="Sports",BFL | Live 1 [Jannat]
 https://media.hmair.xyz/api/play/BFL%20%7C%20Live%201.m3u8
-#EXTINF:-1 tvg-id="hmair.eplchannel1" tvg-name="EPL channel 1" channel-id="hmair.eplchannel1" group-title="Sports",EPL channel 1 [HMAIR]
+#EXTINF:-1 tvg-id="hmair.eplchannel1" tvg-name="EPL channel 1" channel-id="hmair.eplchannel1" group-title="Sports",EPL channel 1 [Jannat]
 https://media.hmair.xyz/api/play/EPL%20channel%201.m3u8
-#EXTINF:-1 tvg-id="hmair.eurosporthd" tvg-name="Eurosport HD" channel-id="hmair.eurosporthd" group-title="Sports",Eurosport HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.eurosporthd" tvg-name="Eurosport HD" channel-id="hmair.eurosporthd" group-title="Sports",Eurosport HD [Jannat]
 https://media.hmair.xyz/api/play/Eurosport%20HD.m3u8
-#EXTINF:-1 tvg-id="hmair.fclive1" tvg-name="FC | Live 1" channel-id="hmair.fclive1" group-title="Sports",FC | Live 1 [HMAIR]
+#EXTINF:-1 tvg-id="hmair.fclive1" tvg-name="FC | Live 1" channel-id="hmair.fclive1" group-title="Sports",FC | Live 1 [Jannat]
 https://media.hmair.xyz/api/play/FC%20%7C%20Live%201.m3u8
-#EXTINF:-1 tvg-id="hmair.iplvip" tvg-name="IPL VIP" channel-id="hmair.iplvip" group-title="Sports",IPL VIP [HMAIR]
+#EXTINF:-1 tvg-id="hmair.iplvip" tvg-name="IPL VIP" channel-id="hmair.iplvip" group-title="Sports",IPL VIP [Jannat]
 https://media.hmair.xyz/api/play/IPL%20VIP.m3u8
-#EXTINF:-1 tvg-id="hmair.pslvip" tvg-name="PSL VIP" channel-id="hmair.pslvip" group-title="Sports",PSL VIP [HMAIR]
+#EXTINF:-1 tvg-id="hmair.pslvip" tvg-name="PSL VIP" channel-id="hmair.pslvip" group-title="Sports",PSL VIP [Jannat]
 https://media.hmair.xyz/api/play/PSL%20VIP.m3u8
-#EXTINF:-1 tvg-id="hmair.sonytencricket" tvg-name="Sony Ten Cricket" channel-id="hmair.sonytencricket" group-title="Sports",Sony Ten Cricket [HMAIR]
+#EXTINF:-1 tvg-id="hmair.sonytencricket" tvg-name="Sony Ten Cricket" channel-id="hmair.sonytencricket" group-title="Sports",Sony Ten Cricket [Jannat]
 https://media.hmair.xyz/api/play/Sony%20Ten%20Cricket.m3u8
-#EXTINF:-1 tvg-id="hmair.sonytensports1hd" tvg-name="Sony Ten Sports 1 HD" channel-id="hmair.sonytensports1hd" group-title="Sports",Sony Ten Sports 1 HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.sonytensports1hd" tvg-name="Sony Ten Sports 1 HD" channel-id="hmair.sonytensports1hd" group-title="Sports",Sony Ten Sports 1 HD [Jannat]
 https://media.hmair.xyz/api/play/Sony%20Ten%20Sports%201%20HD.m3u8
-#EXTINF:-1 tvg-id="hmair.sonytensports2hd" tvg-name="Sony Ten Sports 2 HD" channel-id="hmair.sonytensports2hd" group-title="Sports",Sony Ten Sports 2 HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.sonytensports2hd" tvg-name="Sony Ten Sports 2 HD" channel-id="hmair.sonytensports2hd" group-title="Sports",Sony Ten Sports 2 HD [Jannat]
 https://media.hmair.xyz/api/play/Sony%20Ten%20Sports%202%20HD.m3u8
-#EXTINF:-1 tvg-id="hmair.sonytensports5hd" tvg-name="Sony Ten Sports 5 HD" channel-id="hmair.sonytensports5hd" group-title="Sports",Sony Ten Sports 5 HD [HMAIR]
+#EXTINF:-1 tvg-id="hmair.sonytensports5hd" tvg-name="Sony Ten Sports 5 HD" channel-id="hmair.sonytensports5hd" group-title="Sports",Sony Ten Sports 5 HD [Jannat]
 https://media.hmair.xyz/api/play/Sony%20Ten%20Sports%205%20HD.m3u8
-#EXTINF:-1 tvg-id="hmair.toffeesportsvip" tvg-name="TOFFEE Sports VIP" channel-id="hmair.toffeesportsvip" group-title="Sports",TOFFEE Sports VIP [HMAIR]
+#EXTINF:-1 tvg-id="hmair.toffeesportsvip" tvg-name="TOFFEE Sports VIP" channel-id="hmair.toffeesportsvip" group-title="Sports",TOFFEE Sports VIP [Jannat]
 https://media.hmair.xyz/api/play/TOFFEE%20Sports%20VIP.m3u8
 #EXTINF:-1 xui-id="673" tvg-id="AamarBangla.in" tvg-name="Amar Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla.png" tvg-chno="233" channel-id="AamarBangla.in" group-title="Test",Amar Bangla
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h1-fG2jsbal_AS-BukgtRf4
