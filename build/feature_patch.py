@@ -24,7 +24,7 @@ p=root/'playlist_studio.py'; s=p.read_text(encoding='utf-8')
 # Enable native Ctrl-click multi-selection in the category tree.
 def enable_extended_tree(text):
     return re.sub(r"(?m)^(\s*self\.groups\s*=\s*ttk\.Treeview\([^\n]*?)(\))$",
-                  lambda m: m.group(1) if "selectmode=" in m.group(1) else m.group(1)[:-1] + ",selectmode='extended'" + m.group(2),
+                  lambda m: m.group(1) if "selectmode=" in m.group(1) else m.group(1) + ",selectmode='extended'" + m.group(2),
                   text, count=1)
 s=enable_extended_tree(s)
 s=s.replace("self.saved=self.doc.fingerprint();self.current=None;self.active_group=None;self.form_dirty=False;",
