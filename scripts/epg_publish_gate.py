@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 OLD = Path("/tmp/bdix-epg-previous.xml")
-NEW = Path("epg.xml")
+NEW = Path("epg/epg.xml")
 
 GENERIC = {
     "movie", "program", "programme", "entertainment", "live", "live tv",
