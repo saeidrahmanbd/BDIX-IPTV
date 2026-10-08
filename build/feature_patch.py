@@ -118,4 +118,21 @@ s=s.replace("def stop(self):self.commands.put(('stop',None));self.note.configure
             "def stop(self):self.commands.put(('stop',None));self.note.configure(text='Stopped.');self.paused=False;self.placeholder.place(relx=.5,rely=.5,anchor='center')",1)
 p.write_text(s,encoding='utf-8')
 
+# --- Force exact Playlist Studio 5.0 UI version labels across supplied source ---
+for _py in root.rglob('*.py'):
+    _src=_py.read_text(encoding='utf-8')
+    _src=re.sub(r'(?i)(Playlist\\s+Studio\\s*)(?:2\\.8\\.2|3\\.0|4\\.0)', r'Playlist Studio 5.0', _src)
+    _src=re.sub(r'(?i)(PLAYLIST\\s+STUDIO\\s*)(?:2\\.8\\.2|3\\.0|4\\.0)', r'PLAYLIST STUDIO 5.0', _src)
+    _src=re.sub(r'(?i)(text\\s*=\\s*[\\\'"])3\\.0([\\\'"])', r'\\g<1>5.0\\g<2>', _src)
+    _src=re.sub(r'(?i)(version\\s*=\\s*[\\\'"])(?:2\\.8\\.2|3\\.0|4\\.0)([\\\'"])', r'\\g<1>5.0\\g<2>', _src)
+    _py.write_text(_src,encoding='utf-8')
+
+# Ensure the supplied creative is the only idle-preview fallback.
+p=root/'studio_extras.py'
+_src=p.read_text(encoding='utf-8')
+_src=_src.replace("Path(__file__).resolve().parent.parent/'bdix_preview.png'","Path(__file__).resolve().with_name('bdix_preview.png')")
+_src=_src.replace("Path(__file__).resolve().parent.parent / 'bdix_preview.png'","Path(__file__).resolve().with_name('bdix_preview.png')")
+p.write_text(_src,encoding='utf-8')
+
 print('v5.0 feature patch completed')
+
