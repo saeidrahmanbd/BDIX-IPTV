@@ -17,6 +17,13 @@ The repository contains the curated M3U playlist, EPG resources, channel logos, 
 - [EPG Coverage](../reports/epg-coverage.md)
 - [Update Report](../reports/Update%20Report.md)
 
+### Project Documentation
+
+- [Download Center](DOWNLOADS.md)
+- [Changelog](CHANGELOG.md)
+- [Playlist Studio 5.0](PLAYLIST-STUDIO.md)
+- [Wiki Reference](WIKI.md)
+
 ### Releases
 
 For the latest Playlist Studio release and downloadable files, visit the **[GitHub Releases](https://github.com/saeidrahmanbd/BDIX-IPTV/releases)** page.
