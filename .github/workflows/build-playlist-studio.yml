@@ -135,7 +135,7 @@ jobs:
           if ($ui -notmatch "Stream URL',430,180") { throw 'Stream URL column sizing was not applied.' }
           if ($ui -notmatch "width=500,style='Card.TFrame'") { throw 'Inspector sizing was not applied.' }
           if ($ui -notmatch 'BDIX-IPTV.*Playlist Studio 5\.0') { throw 'BDIX-IPTV 5.0 branding was not applied.' }
-Write-Host 'Patched-source structural checks: PASS'
+          Write-Host 'Patched-source structural checks: PASS'
 
       - name: Validate Python source
         shell: pwsh
@@ -265,8 +265,8 @@ Write-Host 'Patched-source structural checks: PASS'
           if (Test-Path 'build') { Remove-Item 'build' -Recurse -Force }
           if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
           Get-ChildItem -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
-          if (-not (Test-Path (Join-Path $env:SOURCE_ROOT 'studio.ico'))) { throw 'Generated BDIX-IPTV application icon is missing before PyInstaller.
-           if (-not (Test-Path (Join-Path $env:GITHUB_WORKSPACE 'build\vlc_runtime_hook.py'))) { throw 'VLC runtime hook is missing before PyInstaller.' }' }
+          if (-not (Test-Path (Join-Path $env:SOURCE_ROOT 'studio.ico'))) { throw 'Generated BDIX-IPTV application icon is missing before PyInstaller.' }
+          if (-not (Test-Path (Join-Path $env:GITHUB_WORKSPACE 'build\vlc_runtime_hook.py'))) { throw 'VLC runtime hook is missing before PyInstaller.' }
           python -m PyInstaller --noconfirm --clean --onedir --windowed --name 'Playlist-Studio-5.0' --icon 'studio.ico' --runtime-hook "$env:GITHUB_WORKSPACE\build\vlc_runtime_hook.py" --add-data 'VLC;VLC' --add-data 'Source\bdix_preview.png;.' Source\playlist_studio.py
           if ($LASTEXITCODE -ne 0) { throw 'PyInstaller setup payload build failed.' }
           $exe = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0\Playlist-Studio-5.0.exe'
