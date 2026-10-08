@@ -245,10 +245,3 @@ jobs:
           }
           gh release upload $tag "$env:GITHUB_WORKSPACE\installer-output\BDIX-IPTV-Playlist-Studio-4.0-Setup.exe" --repo $repo --clobber
           if ($LASTEXITCODE -ne 0) { throw 'Unable to upload Playlist Studio 4.0 installer.' }
-      - name: Upload portable artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: Playlist-Studio-4.0-Portable
-          path: Playlist-Studio-4.0-Portable.zip
-          if-no-files-found: error
-          retention-days: 30
