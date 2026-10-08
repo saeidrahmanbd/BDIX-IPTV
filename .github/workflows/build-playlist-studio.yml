@@ -187,7 +187,7 @@ jobs:
           #define MyAppName "Playlist Studio 5.0"
           #define MyAppVersion "5.0.0"
           #define MyAppPublisher "BDIX-IPTV"
-          #define MyAppExeName "Playlist-Studio-5.0-Fluent-Dark.exe"
+          #define MyAppExeName "Playlist-Studio-5.0.exe"
           [Setup]
           AppId={{B1D1X-IPTV-PS4-2026}}
           AppName={#MyAppName}
