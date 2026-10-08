@@ -95,7 +95,7 @@ jobs:
       - name: Validate build scripts
         shell: pwsh
         run: |
-          python -m py_compile "$env:GITHUB_WORKSPACE\build\feature_patch_v5.py" "$env:GITHUB_WORKSPACE\build\make_brand_assets_v5.py"
+          python -m py_compile "$env:GITHUB_WORKSPACE\build\feature_patch_v5.py" "$env:GITHUB_WORKSPACE\build\make_brand_assets_v5.py" "$env:GITHUB_WORKSPACE\build\vlc_runtime_hook.py"
           if ($LASTEXITCODE -ne 0) { throw 'Build script compilation failed.' }
 
       - name: Apply Playlist Studio feature and branding patch
@@ -118,14 +118,15 @@ jobs:
           $main = Get-Content -LiteralPath (Join-Path $env:SOURCE_ROOT 'Source\playlist_studio.py') -Raw
           $extras = Get-Content -LiteralPath (Join-Path $env:SOURCE_ROOT 'Source\studio_extras.py') -Raw
           $ui = Get-Content -LiteralPath (Join-Path $env:SOURCE_ROOT 'Source\hybrid_ui.py') -Raw
-          $candidateCount = [regex]::Matches($main, '(?m)^_ps5_vlc_candidates=\(').Count
-          $rootCount = [regex]::Matches($main, '(?m)^_ps5_vlc_root=next\(').Count
-          if ($candidateCount -ne 1 -or $rootCount -ne 1) {
-            throw "VLC bootstrap must contain exactly one candidate tuple and one root assignment. Found candidates=$candidateCount root=$rootCount"
+          $hookPath = Join-Path $env:GITHUB_WORKSPACE 'build\vlc_runtime_hook.py'
+          if (-not (Test-Path -LiteralPath $hookPath)) { throw 'VLC PyInstaller runtime hook is missing.' }
+          $hook = Get-Content -LiteralPath $hookPath -Raw
+          foreach ($required in @('PYTHON_VLC_LIB_PATH','PYTHON_VLC_MODULE_PATH','VLC_PLUGIN_PATH','add_dll_directory','_MEIPASS')) {
+            if ($hook -notmatch [regex]::Escape($required)) { throw "VLC runtime hook is missing required feature: $required" }
           }
-          if ($main -notmatch '_ps5_vlc_candidates') { throw 'VLC bootstrap was not injected.' }
-          if ($main -notmatch '_ps5_Path\(__file__\)\.resolve\(\)\.parent\.parent.*/VLC') { throw 'Source-root VLC fallback was not injected.' }
-          if ($main -notmatch 'VLC_PLUGIN_PATH') { throw 'VLC plugin path bootstrap was not injected.' }
+          if ($main -match '_ps5_vlc_candidates|_ps5_vlc_root|VLC_PLUGIN_PATH') {
+            throw 'Legacy source-level VLC bootstrap code is still present.'
+          }
           if ($main -match '_finish_startup') { throw 'Unverified startup deferral code is present.' }
           if ($main -notmatch "active_groups=\[\]") { throw 'Multi-category state was not injected.' }
           if ($extras -notmatch 'bdix_preview\.png') { throw 'BDIX-IPTV preview integration was not injected.' }
@@ -134,8 +135,7 @@ jobs:
           if ($ui -notmatch "Stream URL',430,180") { throw 'Stream URL column sizing was not applied.' }
           if ($ui -notmatch "width=500,style='Card.TFrame'") { throw 'Inspector sizing was not applied.' }
           if ($ui -notmatch 'BDIX-IPTV.*Playlist Studio 5\.0') { throw 'BDIX-IPTV 5.0 branding was not applied.' }
-          if ($main -match '_finish_startup') { throw 'Startup deferral must not be present.' }
-          Write-Host 'Patched-source structural checks: PASS'
+Write-Host 'Patched-source structural checks: PASS'
 
       - name: Validate Python source
         shell: pwsh
@@ -249,6 +249,14 @@ jobs:
           if (-not (Test-Path (Join-Path $dest 'plugins'))) {
             throw 'Bundled VLC is missing its plugins directory.'
           }
+          $env:PYTHON_VLC_LIB_PATH = Join-Path $dest 'libvlc.dll'
+          $env:PYTHON_VLC_MODULE_PATH = Join-Path $dest 'plugins'
+          $env:VLC_PLUGIN_PATH = Join-Path $dest 'plugins'
+          $env:PATH = $dest + [IO.Path]::PathSeparator + $env:PATH
+          $env:PYTHONPATH = (Join-Path $env:SOURCE_ROOT 'Source') + [IO.Path]::PathSeparator + ($env:PYTHONPATH ?? '')
+          python -c "import vlc; print('python-vlc native load: PASS')"
+          if ($LASTEXITCODE -ne 0) { throw 'python-vlc could not load the verified bundled VLC runtime.' }
+          Write-Host 'VLC 3.0.23 and python-vlc native loading verified.'
 
       - name: Build and test PyInstaller setup payload
         shell: pwsh
@@ -257,8 +265,9 @@ jobs:
           if (Test-Path 'build') { Remove-Item 'build' -Recurse -Force }
           if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
           Get-ChildItem -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
-          if (-not (Test-Path (Join-Path $env:SOURCE_ROOT 'studio.ico'))) { throw 'Generated BDIX-IPTV application icon is missing before PyInstaller.' }
-          python -m PyInstaller --noconfirm --clean --onedir --windowed --name 'Playlist-Studio-5.0' --icon 'studio.ico' --add-data 'VLC;VLC' --add-data 'Source\bdix_preview.png;.' Source\playlist_studio.py
+          if (-not (Test-Path (Join-Path $env:SOURCE_ROOT 'studio.ico'))) { throw 'Generated BDIX-IPTV application icon is missing before PyInstaller.
+           if (-not (Test-Path (Join-Path $env:GITHUB_WORKSPACE 'build\vlc_runtime_hook.py'))) { throw 'VLC runtime hook is missing before PyInstaller.' }' }
+          python -m PyInstaller --noconfirm --clean --onedir --windowed --name 'Playlist-Studio-5.0' --icon 'studio.ico' --runtime-hook "$env:GITHUB_WORKSPACE\build\vlc_runtime_hook.py" --add-data 'VLC;VLC' --add-data 'Source\bdix_preview.png;.' Source\playlist_studio.py
           if ($LASTEXITCODE -ne 0) { throw 'PyInstaller setup payload build failed.' }
           $exe = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0\Playlist-Studio-5.0.exe'
           if (-not (Test-Path $exe)) { throw 'PyInstaller setup payload executable was not produced.' }
