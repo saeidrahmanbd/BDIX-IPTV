@@ -1,27 +1,27 @@
 # Update Report
 
-_Last generated: **2026-10-07 10:52 UTC**_
+_Last generated: **2026-10-08 03:40 UTC**_
 
 | Metric | Current |
 |---|---:|
-| Streams | **1142** |
+| Streams | **1143** |
 | Active Channel Identities | **593** |
 | Active Primary Streams | **594** |
 | Bangladesh | **57** |
 | India | **276** |
 | Backup Streams | **400** |
 | New Channels | **40** |
-| New Backup Streams | **49** |
+| New Backup Streams | **50** |
 | Local Logos | **99.9%** |
-| EPG Programme Coverage | **77.9%** |
+| EPG Programme Coverage | **79.0%** |
 | EPG Mapping | **82.2%** |
 | Stream Health Tested | **1011** |
-| Stream Health Failures | **114** |
+| Stream Health Failures | **150** |
 | Persistent Failures | **112** |
 | Near-Duplicate URL Families | **0** |
 | Audit Blocking Issues | **15** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-07T10:52:30+00:00** |
+| Pre-Publish Gate Generated | **2026-10-08T03:40:04+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -47,21 +47,21 @@ _Last generated: **2026-10-07 10:52 UTC**_
 ## EPG
 - Indian channels audited: **276**
 - Mapped: **227 (82.2%)**
-- Current/future programme coverage: **215/276 (77.9%)**
+- Current/future programme coverage: **218/276 (79.0%)**
 - No mapping: **49**
 - Publication remains subject to source-policy approval.
 
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-07T10:51:41.070260+00:00** |
-| EPG coverage | **2026-10-07T10:51:39+00:00** |
-| Stream health | **2026-10-07T10:52:30+00:00** |
-| Pre-publish gate | **2026-10-07T10:52:30+00:00** |
+| Playlist audit | **2026-10-08T03:39:13.854409+00:00** |
+| EPG coverage | **2026-10-08T03:39:12+00:00** |
+| Stream health | **2026-10-08T03:40:04+00:00** |
+| Pre-publish gate | **2026-10-08T03:40:04+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
-- Latest entries change: **1101 → 1142**
-- Latest health failures: **120 → 114**
+- Latest entries change: **1142 → 1143**
+- Latest health failures: **114 → 150**
 
 Historical records are retained in reports/maintenance-history.json.

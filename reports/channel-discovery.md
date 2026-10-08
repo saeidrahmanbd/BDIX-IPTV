@@ -1,8 +1,8 @@
 # Channel Discovery
 
 - New channels: **40**
-- New backups: **49**
-- Rejected/suppressed: **603**
+- New backups: **50**
+- Rejected/suppressed: **601**
 - Remembered rejected new-channel identities: **0**
 - Remembered rejected backup URLs: **0**
 
@@ -63,6 +63,7 @@
 - 9XM (1080p) (India) — https://9xjio.wiseplayout.com/9XM/master.m3u8
 - 9X Tashan (1080p) (India) — https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8
 - Anjan TV (720p) (India) — https://anjan.vstream.online/anjanorg/ngrp:anjan_hdall/playlist.m3u8
+- Asianet HD (1080p) (India) — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starasianet.smil/chunklist_b1928000.m3u8
 - Asianet Movies HD (720p) (India) — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:asianetmovies1.smil/playlist.m3u8
 - B4U Bhojpuri (1080p) (India) — https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8
 - Colors (576p) (India) — http://51.75.127.199:3141/colorssd/index.m3u8
