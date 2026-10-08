@@ -179,7 +179,7 @@ jobs:
         working-directory: ${{ env.SOURCE_ROOT }}
         run: |
           $iss = Join-Path $env:RUNNER_TEMP 'Playlist-Studio-5.0.iss'
-          $source = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0-Fluent-Dark'
+          $source = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0'
           $output = Join-Path $env:GITHUB_WORKSPACE 'installer-output'
           if (Test-Path $output) { Remove-Item $output -Recurse -Force }
           New-Item -ItemType Directory -Path $output | Out-Null
@@ -243,5 +243,5 @@ jobs:
             gh release create $tag --repo $repo --target $env:GITHUB_SHA --title 'Playlist Studio v5.0' --notes 'BDIX-IPTV Playlist Studio 5.0 — standard Windows installer.'
             if ($LASTEXITCODE -ne 0) { throw 'Unable to create Playlist Studio v5.0 release.' }
           }
-          gh release upload $tag "$env:GITHUB_WORKSPACE\installer-output\BDIX-IPTV-Playlist-Studio-5.0-Setup.exe" --repo $repo --clobber
+          gh release upload $tag "$env:GITHUB_WORKSPACE\installer-output\Playlist-Studio-5.0-Setup.exe" --repo $repo --clobber
           if ($LASTEXITCODE -ne 0) { throw 'Unable to upload Playlist Studio 5.0 installer.' }
