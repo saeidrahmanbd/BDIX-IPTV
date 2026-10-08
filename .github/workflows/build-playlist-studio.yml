@@ -114,6 +114,34 @@ jobs:
             throw 'Python source compilation failed.'
           }
 
+      - name: Raw Python startup smoke test
+        shell: pwsh
+        working-directory: ${{ env.SOURCE_ROOT }}
+        run: |
+          $stdout = Join-Path $env:RUNNER_TEMP 'playlist-studio-raw.stdout.log'
+          $stderr = Join-Path $env:RUNNER_TEMP 'playlist-studio-raw.stderr.log'
+          Remove-Item $stdout,$stderr -Force -ErrorAction SilentlyContinue
+          $proc = Start-Process -FilePath 'python.exe' -ArgumentList 'Source\playlist_studio.py' -WorkingDirectory $env:SOURCE_ROOT -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr
+          Start-Sleep -Seconds 12
+          if ($proc.HasExited) {
+            $out = if (Test-Path $stdout) { Get-Content $stdout -Raw } else { '' }
+            $err = if (Test-Path $stderr) { Get-Content $stderr -Raw } else { '' }
+            Write-Host '--- Raw Python STDOUT ---'
+            Write-Host $out
+            Write-Host '--- Raw Python STDERR ---'
+            Write-Host $err
+            throw "Raw Python source exited during startup with code $($proc.ExitCode)."
+          }
+          $p = Get-Process -Id $proc.Id
+          $handle = $p.MainWindowHandle
+          if ($handle -eq 0) {
+            Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+            throw 'Raw Python source stayed alive but did not create a main window.'
+          }
+          Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+          Write-Host 'Raw Python startup smoke test: PASS'
+          Write-Host "Main window handle: $handle"
+
       - name: Runtime startup smoke test
         shell: pwsh
         working-directory: ${{ env.SOURCE_ROOT }}
