@@ -11,6 +11,7 @@ on:
       - '.github/workflows/build-playlist-studio.yml'
       - 'build/feature_patch.py'
       - 'build/make_brand_assets.py'
+      - 'build/theme_manager.py'
 
 permissions:
   contents: write
@@ -105,6 +106,37 @@ jobs:
           if (-not (Test-Path $preview)) { throw 'BDIX-IPTV preview asset was not generated.' }
           if (-not (Test-Path $icon)) { throw 'BDIX-IPTV application icon was not generated.' }
           python -c "from PIL import Image; Image.open(r'$preview').load(); Image.open(r'$icon').load(); print('Brand assets: PASS')"
+
+      - name: Verify Playlist Studio 5.0 integration
+        shell: pwsh
+        run: |
+          $source = Join-Path $env:SOURCE_ROOT 'Source'
+          $studio = Join-Path $source 'playlist_studio.py'
+          $theme = Join-Path $source 'theme_manager.py'
+          if (-not (Test-Path $studio)) { throw 'playlist_studio.py is missing after patch.' }
+          if (-not (Test-Path $theme)) { throw 'theme_manager.py was not packaged into the source tree.' }
+          $ts = Get-Content $theme -Raw
+          $ss = Get-Content $studio -Raw
+          foreach ($name in @('Dark','Blue','Green','Purple','Light','Classic')) {
+            if ($ts -notmatch ('"' + [regex]::Escape($name) + '"\\s*:')) { throw "Theme definition missing: $name" }
+          }
+          if ($ss -notmatch 'from theme_manager import install_theme_support') { throw 'Theme manager import is missing from playlist_studio.py.' }
+          if (($ss -split 'install_theme_support\\(').Count -lt 2) { throw 'Theme manager startup installation call is missing.' }
+          if ($ss -notmatch 'Playlist Studio 5\\.0') { throw 'Playlist Studio 5.0 branding was not found in the application source.' }
+          if ($ss -match '(?i)Playlist Studio (2\\.8\\.2|3\\.0|4\\.0)') { throw 'Legacy Playlist Studio version branding remains in playlist_studio.py.' }
+          $extras = Join-Path $source 'studio_extras.py'
+          if (Test-Path $extras) {
+            $es = Get-Content $extras -Raw
+            if ($es -notmatch 'bdix_preview\\.png') { throw 'BDIX-IPTV preview asset is not referenced by studio_extras.py.' }
+            if ($es -notmatch 'PLAYLIST STUDIO 5\\.0') { throw '5.0 idle preview branding is missing from studio_extras.py.' }
+          }
+          $hybrid = Join-Path $source 'hybrid_ui.py'
+          if (Test-Path $hybrid) {
+            $hs = Get-Content $hybrid -Raw
+            if ($hs -notmatch "selectmode='extended'") { throw 'Multi-category selection mode is missing.' }
+            if ($hs -notmatch "displaycolumns=\('name','group','health','url','epg','format'\)") { throw 'EPG/Format columns are not exposed.' }
+          }
+          Write-Host 'Playlist Studio 5.0 integration verification: PASS'
 
       - name: Validate Python source
         shell: pwsh
@@ -249,5 +281,6 @@ jobs:
           }
           gh release edit $tag --repo $repo --title 'Playlist Studio v5.0'
           if ($LASTEXITCODE -ne 0) { throw 'Unable to update Playlist Studio v5.0 release title.' }
+          gh release delete-asset $tag 'BDIX-IPTV-Playlist-Studio-5.0-Setup.exe' --repo $repo --yes > $null 2>&1
           gh release upload $tag "$env:GITHUB_WORKSPACE\installer-output\Playlist-Studio-5.0-Setup.exe" --repo $repo --clobber
           if ($LASTEXITCODE -ne 0) { throw 'Unable to upload Playlist Studio 5.0 installer.' }
