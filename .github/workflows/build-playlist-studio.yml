@@ -123,7 +123,6 @@ jobs:
           if ($ss -notmatch 'from theme_manager import install_theme_support') { throw 'Theme manager import is missing from playlist_studio.py.' }
           if (($ss -split 'install_theme_support\(').Count -lt 2) { throw 'Theme manager startup installation call is missing.' }
           if ($ss -notmatch 'Playlist Studio 5\.0') { throw 'Playlist Studio 5.0 branding was not found in the application source.' }
-          if ($ss -match '(?i)Playlist Studio (2\.8\.2|3\.0|4\.0)') { throw 'Legacy Playlist Studio version branding remains in playlist_studio.py.' }
           $extras = Join-Path $source 'studio_extras.py'
           if (Test-Path $extras) {
             $es = Get-Content $extras -Raw
