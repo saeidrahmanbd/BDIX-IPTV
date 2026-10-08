@@ -1,28 +1,28 @@
 # Playlist Audit
-Generated: **2026-10-08T07:49:49.302596+00:00**
+Generated: **2026-10-08T07:57:55.545960+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
 - Playlist entries: **1053**
-- Unique channel IDs: **672**
+- Unique channel IDs: **674**
 - IDs with multiple streams: **182**
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **1**
-- Same-name / different-ID collisions: **37**
+- Metadata conflicts: **0**
+- Same-name / different-ID collisions: **35**
 - Cross-country backup collisions: **0**
-- IDs with multiple logo references: **1**
+- IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **32**
+- Logo exceptions: **0**
 - Logo references checked: **1053**
-- Not Playing logo exceptions: **9**
+- Not Playing logo exceptions: **1**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **16**
+- Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
-- Alphabetical ordering issues: **1**
+- Alphabetical ordering issues: **105**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 
@@ -214,11 +214,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Enter TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-tv-1/index.m3u8
 - Enter TV — Backup — https://live1.entertv.com.bd/entertv/index.fmp4.m3u8
 ### custom.love.nature (5 streams)
+- Love Nature — Backup — http://27.124.71.27/Love_Nature/index.m3u8
 - Love Nature — Backup — https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8
 - Love Nature — Backup — https://mumbai-edge.smartplaytv.in/LoveNature/index.m3u8
 - Love Nature — Backup — https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
 - Love Nature — Backup — https://cdn1.logichost.in/ajmantv/live/playlist.m3u8
-- Love Nature — Backup — http://27.124.71.27/Love_Nature/index.m3u8
 ### custom.madani.tv (2 streams)
 - Madani TV — Religious — https://tvsen3.aynaott.com/z24qLsqV/index.m3u8
 - Madani TV — Backup — http://198.195.239.50:8095/MADANI.TV.HD/index.m3u8
@@ -543,15 +543,13 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### nrbtv.ca (2 streams)
 - NRB TV — Bangladesh — https://app.ncare.live/live-orgin/nrb-eu.stream/playlist.m3u8
 - NRB TV — Backup — https://uni6rtmp.tulix.tv/nrbnetwork/myStream.sdp/playlist.m3u8
-### ntv.bd (8 streams)
+### ntv.bd (6 streams)
 - NTV — Bangladesh — https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8
-- NTV (Malyalam) — Indian Movies — https://stream.logichost.in/NTV/live/chunklist_w1420234415.m3u8
 - NTV — Backup — https://2-fss-1.streamhoster.com/pl_122/201748-1431018-1/chunklist.m3u8
 - NTV — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/ntv/index.m3u8
 - NTV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/ntv-1/index.m3u8
 - NTV — Backup — https://tvsen5.aynaott.com/JHPxHAWonztVucyc4GzF/index.m3u8?e=1784102559
 - NTV — Backup — https://tvsen5.aynaott.com/xV4jEKf3D9zc/tracks-v1a1/mono.ts.m3u8
-- Nan TV — Not Playing — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8
 ### ntveurope.bd (2 streams)
 - NTV Europe — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/ntvuk00332211.stream/playlist.m3u8
 - NTV Europe — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/ntvuk00332211.stream/live-orgin/ntvuk00332211.stream/chunks.m3u8
@@ -618,8 +616,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Ruposhi Bangla — Indian Bangla — https://mumt05.tangotv.in/87NeALx2RUPASIBANGLA/index.m3u8
 - Ruposhi Bangla — Backup — https://cdn.pishow.tv/ott/live/1039/master.m3u8
 - Ruposhi Bangla — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:rupashibangla.smil/playlist.m3u8
-### sanandatv.in (3 streams)
+### sanandatv.in (4 streams)
 - Sananda — Indian Bangla — https://live.sanandatelevision.in/sananda/index.m3u8
+- Sananda — Backup — http://27.124.71.27/Sun_Bangla/index.m3u8
 - Sananda — Backup — https://iptvlive.ahmed-bd-org.workers.dev/sananda-tv-1/index.m3u8
 - Sananda — Backup — https://live.sanandatelevision.in/sananda/tracks-v1a1/mono.m3u8
 ### sangeetbangla.in@sd (5 streams)
@@ -708,9 +707,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### studioyuva.in (2 streams)
 - Studio Yuva — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3STUDIOYUVA/index.m3u8
 - Studio Yuva — Backup — https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=[REDACTED]
-### sunbangla.in@sd (2 streams)
-- Sananda — Backup — http://27.124.71.27/Sun_Bangla/index.m3u8
-- Sun Bangla — Backup — http://198.195.239.50:8095/SUN.BANGLA.HD/index.m3u8
 ### travelxp.in@sd (2 streams)
 - Travelxp Hindi — Documentary & Wildlife — http://198.195.239.50:8095/travelXp/index.m3u8
 - Travelxp Hindi — Backup — http://198.195.239.50:8095/TRAVELXP.HD/index.m3u8
@@ -749,10 +745,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Zee Bangla — Backup — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ZeeBanglaHD.m3u8
 - Zee Bangla — Backup — https://tvsen6.aynaott.com/ZeeBangla/index.m3u8
 - Zee Bangla — Backup — https://yupptvcatchupire.yuppcdn.net/preview/zeebangla/2500.m3u8
-### zeebanglasonar.in@sd (8 streams)
-- Zee Bangla Sonar — Indian Bangla — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/Zeebanglahd.m3u8
+### zeebanglacinema.in@sd (3 streams)
 - Zee Bangla Cinema — Backup — https://drk6xq0vhn.gpcdn.net/live/zee_bangla_cinema_abr/index.m3u8
 - Zee Bangla Cinema — Backup — https://stream.ottplus.live/live/zee_bangla_cinema_abr/live/zee_bangla_cinema_720/chunks.m3u8
+- Zee Bangla Cinema — Backup — https://media.hmair.xyz/api/play/Zee%20Bangla%20Cinema.m3u8
+### zeebanglasonar.in@sd (6 streams)
+- Zee Bangla Sonar — Indian Bangla — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/Zeebanglahd.m3u8
 - Zee Bangla Sonar — Backup — http://198.195.239.50:8095/ZEE.BANGLA.CINEMA/index.m3u8
 - Zee Bangla Sonar — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD-video=2137600.m3u8
 - Zee Bangla Sonar — Backup — https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8
@@ -789,7 +787,111 @@ None.
 ## Ordering
 
 Category block order: OK.
-- **Not Playing** — **UFC TV** appears after **Vijay Super**
+- **Bangladesh** — **ATN Bangla UK** appears after **Bangla Vision**
+- **Bangladesh** — **BTV Chattogram** appears after **Duronto TV**
+- **Bangladesh** — **BTV National** appears after **Ekhon TV**
+- **Bangladesh** — **Channel 16** appears after **Ekushey TV**
+- **Bangladesh** — **Doyel TV** appears after **Jamuna TV**
+- **Bangladesh** — **Deshi TV** appears after **Doyel TV**
+- **Bangladesh** — **Matribhumi TV** appears after **Somoy TV**
+- **Bangladesh** — **Ekattor TV** appears after **Matribhumi TV**
+- **Bangladesh** — **Enter TV** appears after **NRB TV**
+- **Bangladesh** — **G TV** appears after **Rajdhani TV**
+- **Bangladesh** — **Global TV** appears after **SA TV**
+- **Bangladesh** — **Jalsha Bangla BD** appears after **Time Television**
+- **Bangladesh** — **Green TV** appears after **SRK**
+- **Indian Bangla** — **Aakaash Aath** appears after **Zee Bangla**
+- **Indian Bangla** — **Amar Bangla** appears after **Sony AATH**
+- **Indian Bangla** — **Kolkata TV** appears after **Zee Bangla Sonar**
+- **Indian Bangla** — **JTV Bangla** appears after **Tara TV**
+- **Indian Bangla** — **Jhankar TV** appears after **JTV Bangla**
+- **Indian Movies** — **Epic Bhojpuri** appears after **Zee Cinema**
+- **Indian Movies** — **&pictures** appears after **Mango**
+- **Indian Movies** — **B4U Bhojpuri Plus** appears after **Bollywood Film**
+- **Indian Movies** — **Goldmines** appears after **Goldmines Movies**
+- **Indian Movies** — **Colors Cineplex Superhits** appears after **Goldmines Bollywood**
+- **Indian Movies** — **MBC Bollywood** appears after **Sidharth Gold**
+- **Indian Movies** — **Oscar Movies Bhojpuri** appears after **Zee Talkies**
+- **Indian Movies** — **Pitaara TV** appears after **Shemaroo Marathi Bana**
+- **Indian Movies** — **The Movie Club** appears after **The Movie Club +2**
+- **Indian Movies** — **Tolly TV** appears after **Xplor**
+- **Indian Movies** — **Hindi Movies** appears after **Tolly TV**
+- **Indian Movies** — **MH One Dil Se** appears after **South Movies**
+- **Indian Movies** — **Star Maa Movies** appears after **Studio One +**
+- **Indian Movies** — **Colors Cineplex Bollywood** appears after **Star Maa Movies**
+- **Indian Movies** — **&pictures 2** appears after **Colors Cineplex Bollywood**
+- **Indian Music** — **Dhool TV** appears after **Zoom Music**
+- **Indian Music** — **7S Music** appears after **Thalaa TV**
+- **Indian Music** — **7X Music** appears after **7X Punjabi**
+- **Indian Music** — **9X Jalwa** appears after **Isai Aruvi**
+- **Indian Music** — **Music India** appears after **Raj Music Telugu**
+- **Indian Music** — **Spondon** appears after **Zing**
+- **Indian Music** — **Steelbird Music** appears after **Ultimate TV**
+- **Indian Music** — **Saga Music** appears after **Steelbird Music**
+- **Indian Entertainment** — **Polimer TV** appears after **Shemaroo TV**
+- **Indian Entertainment** — **Alankar TV** appears after **Prarthana TV**
+- **Indian Entertainment** — **Madhimugam TV** appears after **Sirippoli TV**
+- **Indian Entertainment** — **Aaryaa TV** appears after **Rengoni**
+- **Indian Entertainment** — **Desi Channel** appears after **Jonack**
+- **Indian Entertainment** — **DD Yadagiri** appears after **Kite Victers**
+- **Indian Entertainment** — **DD Uttar Pradesh** appears after **VCV**
+- **Indian Entertainment** — **&TV** appears after **DD Uttar Pradesh**
+- **Indian Entertainment** — **Colors** appears after **Colors Kannada**
+- **Indian Entertainment** — **Colors Rishtey** appears after **Dangal 2**
+- **Indian Entertainment** — **Darshana TV** appears after **DD Uttarakhand**
+- **Indian Entertainment** — **DD Arun Prabha** appears after **DD Chhattisgarh**
+- **Indian Entertainment** — **DD India** appears after **DD National**
+- **Indian Entertainment** — **Hi Dost!** appears after **Pulari TV**
+- **Indian Entertainment** — **Fakt Marathi** appears after **Hi Dost!**
+- **Indian Entertainment** — **Odisha TV** appears after **Oli TV**
+- **Indian Entertainment** — **NKR TV Kannada** appears after **Odisha TV**
+- **Indian Entertainment** — **Pear TV** appears after **Peppers TV**
+- **Indian Entertainment** — **Star Bharat** appears after **Star Plus**
+- **Indian Entertainment** — **Suriyan TV** appears after **Vaanavil TV**
+- **Indian Entertainment** — **Telugu One** appears after **Vasanth TV**
+- **Indian Entertainment** — **Manoranjan Grand** appears after **Zee TV**
+- **Indian Entertainment** — **DD Bihar** appears after **Manoranjan Grand**
+- **Indian Entertainment** — **Chithiram** appears after **MTV India**
+- **Indian Entertainment** — **Roja TV** appears after **Sony WAH**
+- **Pakistani** — **Jalwa TV** appears after **Paighan TV**
+- **Pakistani** — **Hum Masala** appears after **Pardesi TV**
+- **Pakistani** — **Grace Network** appears after **Hum TV**
+- **Pakistani** — **8XM** appears after **Grace Network**
+- **International** — **4ever Drama** appears after **CBN TV USA**
+- **International** — **&Privé** appears after **Trace UK**
+- **International** — **Al Jazeera** appears after **AXN Black Czech Republic**
+- **International** — **AXN** appears after **AXN CEE**
+- **International** — **AMC** appears after **Baraza Music TV**
+- **International** — **BBC Drama** appears after **Sony Movies**
+- **International** — **DW News** appears after **EBS Cinema**
+- **International** — **EU Music** appears after **Trace Urban**
+- **International** — **FilmUA Live** appears after **XITE Hits**
+- **International** — **Mei Ah Movie Channel** appears after **Movies Now**
+- **International** — **Rakuten TV Drama Movies UK** appears after **Romedy Now**
+- **International** — **Sony One Hits Comedie** appears after **Sony PIX**
+- **International** — **FON Music** appears after **Солнце**
+- **International** — **BBC News** appears after **FON Music**
+- **Documentary & Wildlife** — **Adventure Earth** appears after **Travelxp Hindi**
+- **Kids** — **Sony Yay** appears after **ZB Cartoon**
+- **Kids** — **Lego Channel** appears after **Sony Yay**
+- **Kids** — **Nick** appears after **Nick Jr**
+- **Kids** — **Hungama** appears after **Nick**
+- **Kids** — **ETV Bal Bharat** appears after **Hungama**
+- **Kids** — **ADN TV+** appears after **ETV Bal Bharat**
+- **Kids** — **Sonic** appears after **ZooMoo**
+- **Religious** — **Al Istiqama** appears after **Peace TV Bangla**
+- **Religious** — **Channel S** appears after **Quran TV**
+- **Sports** — **A Sports** appears after **Star Sports 2**
+- **Sports** — **Goal TV** appears after **PTV Sports**
+- **Sports** — **Sony Sports Ten 4** appears after **Wipeout Xtra**
+- **Backup** — **&TV** appears after **Love Nature**
+- **Not Playing** — **Geo Kahani** appears after **Vijay Super**
+- **Not Playing** — **Bol Entertainment** appears after **Geo Kahani**
+- **Not Playing** — **Azan TV** appears after **Bol Entertainment**
+- **Not Playing** — **aur LIFE** appears after **UFC TV**
+- **Not Playing** — **A Plus** appears after **aur LIFE**
+- **Not Playing** — **Madani Channel Urdu** appears after **SAB Entertainment**
+- **Not Playing** — **&pictures** appears after **Madani Channel Urdu**
 
 ## Suspicious URLs
 
@@ -813,7 +915,7 @@ None.
 
 ## Metadata Conflicts
 
-- **ntv.bd** — names: ntv, ntv (malyalam); groups: Bangladesh, Indian Movies; countries: 
+None.
 
 ## Cross-Country Backup Collisions
 
@@ -841,7 +943,6 @@ None.
 - **jalsha movies** → jalshamovies.in@sd, star.jalsha.movies.in
 - **maasranga tv** → maasrangatv.bd, new.maasranga.tv
 - **manoranjan tv** → manoranjantv.in@sd, new.manoranjan.tv
-- **sananda** → sanandatv.in, sunbangla.in@sd
 - **shemaroo tv** → new.shemaroo.tv, shemarootv.in@sd
 - **sony aath** → new.sony.aath, sony.aath.in
 - **sony entertainment tv** → new.sony.entertainment.tv, new.sony.entertainment.tv.hd, sonyentertainmenttelevision.in@sd
@@ -854,55 +955,21 @@ None.
 - **star movies select** → new.star.movies.select, starmoviesselect.in@hd
 - **zee action** → new.zee.action, zeeaction.in
 - **zee bangla** → new.zee.bangla, zeebangla.in@hd
-- **zee bangla cinema** → new.zee.bangla.cinema, zeebanglasonar.in@sd
 - **zee bollywood** → new.zee.bollywood, zeebollywood.in@sd
 - **zee cinema** → new.zee.cinema, zeecinema.in@hd
 - **zee tv** → new.zee.tv.hd, zeetv.in@sd
 
 ## Logo Integrity
 
-- Healthy/local references: **1012**
-- missing: **41**
+- Healthy/local references: **1052**
+- missing: **0**
 - broken-local: **0**
-- external: **0**
+- external: **1**
 - non-png: **0**
 - invalid-dimensions: **0**
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
-- missing — Hindi Movie Classic 24 [new.hindi.movie.classic.24] — 
-- missing — Zee Anmol [new.zee.anmol] — 
-- missing — HUM Sitaray [new.hum.sitaray] — 
-- missing — Zee Cafe [new.zee.cafe] — 
-- missing — &TV [new.and.tv.hd] — 
-- missing — 8XM [new.8xm] — 
-- missing — 9X Jalwa [new.9x.jalwa] — 
-- missing — B4U Kadak [new.b4u.kadak] — 
-- missing — B4U Movies [new.b4u.movies] — 
-- missing — B4U Music [new.b4u.music] — 
-- missing — Bangla TV [new.bangla.tv] — 
-- missing — Colors Bangla [new.colors.bangla] — 
-- missing — Colors Bangla Cinema [new.colors.bangla.cinema] — 
-- missing — Dangal [new.dangal] — 
-- missing — HUM Masala [new.hum.masala] — 
-- missing — HUM TV [new.hum] — 
-- missing — Maasranga TV [new.maasranga.tv] — 
-- missing — Manoranjan TV [new.manoranjan.tv] — 
-- missing — Sony AATH [new.sony.aath] — 
-- missing — Sony Entertainment TV [new.sony.entertainment.tv] — 
-- missing — Sony Entertainment TV [new.sony.entertainment.tv.hd] — 
-- missing — Sony MAX [new.sony.max] — 
-- missing — Sony MAX [new.sony.max.hd] — 
-- missing — Sony MAX 2 [new.sony.max.2] — 
-- missing — Sony PIX [new.sony.pix.hd] — 
-- missing — Sony SAB [new.sony.sab] — 
-- missing — Zee Action [new.zee.action] — 
-- missing — Zee Bangla [new.zee.bangla] — 
-- missing — Zee Bangla Cinema [new.zee.bangla.cinema] — 
-- missing — Zee Bollywood [new.zee.bollywood] — 
-- missing — Zee Cinema [new.zee.cinema] — 
-- missing — Zee TV [new.zee.tv.hd] — 
-- multiple-logo-references — sunbangla.in@sd — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sananda-tv.png, https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-bangla.png
 
 ## Protected Primary Entries
 

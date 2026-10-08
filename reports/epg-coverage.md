@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-08T07:48:56+00:00**
+Generated: **2026-10-08T07:56:57+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
@@ -8,9 +8,9 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 ## Coverage Summary
 
 - Active Indian channels audited: **276**
-- Channels with an EPG mapping: **227**
-- Current/future programme coverage: **218/276 (79.0%)**
-- No guide mapping found: **49**
+- Channels with an EPG mapping: **226**
+- Current/future programme coverage: **217/276 (78.6%)**
+- No guide mapping found: **50**
 
 ## Source Status
 
@@ -70,6 +70,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Entertainment | Mei Alai TV | MeiAlaiTV.in | - | NO_GUIDE_HIT |
 | Indian Movies | NH Tamil Gold | NHTamilGold.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | NKR TV Kannada | NKRTVKannada.in | - | NO_GUIDE_HIT |
+| Indian Movies | NTV (Malyalam) | custom.ntv.malayalam | - | NO_GUIDE_HIT |
 | Indian Entertainment | Oli TV | OliTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Bangla | Orange Bangla TV | OrangeBanglaTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Pulari TV | PulariTV.in@SD | - | NO_GUIDE_HIT |

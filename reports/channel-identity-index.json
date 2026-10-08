@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-08T07:48:58+00:00",
+  "generated": "2026-10-08T07:56:59+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -2264,6 +2264,20 @@
       ],
       "groups": [
         "Documentary & Wildlife"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "custom.ntv.malayalam": {
+      "names": [
+        "NTV (Malyalam)"
+      ],
+      "ids": [
+        "custom.ntv.malayalam"
+      ],
+      "groups": [
+        "Indian Movies"
       ],
       "streams": 1,
       "primary": 1,
@@ -5893,6 +5907,20 @@
       "primary": 0,
       "backup": 0
     },
+    "nantv": {
+      "names": [
+        "Nan TV"
+      ],
+      "ids": [
+        "nantv.bd"
+      ],
+      "groups": [
+        "Not Playing"
+      ],
+      "streams": 1,
+      "primary": 0,
+      "backup": 0
+    },
     "nashemusic": {
       "names": [
         "NASHE Music"
@@ -6038,20 +6066,6 @@
       "streams": 1,
       "primary": 1,
       "backup": 0
-    },
-    "new.zee.bangla.cinema": {
-      "names": [
-        "Zee Bangla Cinema"
-      ],
-      "ids": [
-        "new.zee.bangla.cinema"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
     },
     "new.zee.cafe": {
       "names": [
@@ -6271,21 +6285,17 @@
     },
     "ntv": {
       "names": [
-        "NTV",
-        "NTV (Malyalam)",
-        "Nan TV"
+        "NTV"
       ],
       "ids": [
         "ntv.bd"
       ],
       "groups": [
         "Backup",
-        "Bangladesh",
-        "Indian Movies",
-        "Not Playing"
+        "Bangladesh"
       ],
-      "streams": 8,
-      "primary": 2,
+      "streams": 6,
+      "primary": 1,
       "backup": 5
     },
     "ntveurope": {
@@ -9594,9 +9604,22 @@
       "primary": 1,
       "backup": 11
     },
+    "zeebanglacinema": {
+      "names": [
+        "Zee Bangla Cinema"
+      ],
+      "ids": [
+        "zeebanglacinema.in@sd"
+      ],
+      "groups": [
+        "Backup"
+      ],
+      "streams": 3,
+      "primary": 0,
+      "backup": 3
+    },
     "zeebanglasonar": {
       "names": [
-        "Zee Bangla Cinema",
         "Zee Bangla Sonar"
       ],
       "ids": [
@@ -9606,9 +9629,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 8,
+      "streams": 6,
       "primary": 1,
-      "backup": 7
+      "backup": 5
     },
     "zeebollywood": {
       "names": [
