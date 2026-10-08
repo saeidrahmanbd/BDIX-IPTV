@@ -3,7 +3,7 @@
 Generated: **2026-10-08T08:57:27+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
-The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
+The published XMLTV guide is **epg/epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
 
 ## Coverage Summary
 
