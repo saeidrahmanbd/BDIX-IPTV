@@ -89,20 +89,26 @@ if "from pathlib import Path" not in s:
     s="from pathlib import Path\n"+s
 
 # The supplied source has changed its placeholder formatting across build-kit revisions.
-# Patch the first actual placeholder assignment instead of depending on one exact string.
-new_placeholder="""preview_path=Path(__file__).resolve().parent.parent/'bdix_preview.png'
-        self._preview_image=tk.PhotoImage(file=str(preview_path)) if preview_path.exists() else None
-        self.placeholder=tk.Label(self.video,image=self._preview_image,bg='#03060c') if self._preview_image else tk.Label(self.video,text='BDIX-IPTV\\nPLAYLIST STUDIO 5.0',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23))
-        self.placeholder.place(relx=.5,rely=.5,anchor='center')"""
-placeholder_pattern=r"(?m)^(\s*)self\.placeholder\s*=.*(?:\n\s*self\.placeholder\.place\([^\n]*\))?"
-s,n=re.subn(placeholder_pattern,lambda m:m.group(1)+new_placeholder.replace("\n","\n"+m.group(1)),s,count=1)
-if n!=1:
-    # Some revisions use a different variable name but still create a label in the video pane.
-    fallback=r"(?m)^(\s*)[A-Za-z_][A-Za-z0-9_]*\s*=\s*tk\.Label\(self\.video,.*$"
-    s,n=re.subn(fallback,lambda m:m.group(1)+new_placeholder.replace("\n","\n"+m.group(1)),s,count=1)
-if n!=1:
+# Replace the first real idle-preview label line with a consistently indented block.
+const_placeholder=(
+"preview_path=Path(__file__).resolve().parent.parent/'bdix_preview.png'\\n"
+"self._preview_image=tk.PhotoImage(file=str(preview_path)) if preview_path.exists() else None\\n"
+"self.placeholder=tk.Label(self.video,image=self._preview_image,bg='#03060c') if self._preview_image else tk.Label(self.video,text='BDIX-IPTV\\\\nPLAYLIST STUDIO 5.0',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23))\\n"
+"self.placeholder.place(relx=.5,rely=.5,anchor='center')"
+)
+lines=s.splitlines()
+idx=next((i for i,line in enumerate(lines) if "self.placeholder" in line and "tk.Label(self.video" in line),-1)
+if idx<0:
     raise RuntimeError("No idle preview widget assignment found in studio_extras.py")
+indent=lines[idx][:len(lines[idx])-len(lines[idx].lstrip())]
+block=[indent+x for x in const_placeholder.splitlines()]
+end=idx+1
+while end<len(lines) and "self.placeholder.place(" in lines[end]:
+    end+=1
+lines[idx:end]=block
+s="\\n".join(lines)+"\\n"
 p.write_text(s,encoding='utf-8')
+
 
 p.write_text(s,encoding='utf-8')
 p=root/'studio_extras.py'; s=p.read_text(encoding='utf-8')
