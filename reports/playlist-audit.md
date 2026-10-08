@@ -1,16 +1,16 @@
 # Playlist Audit
-Generated: **2026-10-08T11:15:36.583066+00:00**
+Generated: **2026-10-08T11:21:04.812484+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
 - Playlist entries: **1053**
-- Unique channel IDs: **674**
+- Unique channel IDs: **673**
 - IDs with multiple streams: **182**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
-- Same-name / different-ID collisions: **35**
+- Same-name / different-ID collisions: **34**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
@@ -22,7 +22,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
-- Alphabetical ordering issues: **105**
+- Alphabetical ordering issues: **5**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 
@@ -680,11 +680,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Star Jalsha — Backup — http://198.195.239.50:8095/starJalsha/index.m3u8
 - Star Jalsha — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
 - Star Jalsha — Backup — https://flussonic.defineatoz.com/StarjalshaHD/tracks-v1a1/mono.m3u8
-### star.jalsha.movies.in (4 streams)
+### star.jalsha.movies.in (5 streams)
 - Jalsha Movies — Indian Bangla — http://livetv.akr4m.com:8080/bdtv/restrem/27.m3u8
 - Jalsha Movies — Backup — http://103.151.60.162:2122/play/a00x/index.m3u8
 - Jalsha Movies — Backup — http://198.195.239.50:8095/JALSHA.MOVIES.HD/index.m3u8
 - Jalsha Movies — Backup — http://198.195.239.50:8095/jalshaMovies/index.m3u8
+- Jalsha Movies — Backup — https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8
 ### stargold.in@hd (3 streams)
 - Star Gold — Indian Movies — http://livetv.akr4m.com:8080/bdtv/restrem/45.m3u8
 - Star Gold — Backup — http://198.195.239.50:8095/STAR.GOLD.HD/index.m3u8
@@ -787,111 +788,11 @@ None.
 ## Ordering
 
 Category block order: OK.
-- **Bangladesh** — **ATN Bangla UK** appears after **Bangla Vision**
-- **Bangladesh** — **BTV Chattogram** appears after **Duronto TV**
-- **Bangladesh** — **BTV National** appears after **Ekhon TV**
-- **Bangladesh** — **Channel 16** appears after **Ekushey TV**
-- **Bangladesh** — **Doyel TV** appears after **Jamuna TV**
-- **Bangladesh** — **Deshi TV** appears after **Doyel TV**
-- **Bangladesh** — **Matribhumi TV** appears after **Somoy TV**
-- **Bangladesh** — **Ekattor TV** appears after **Matribhumi TV**
-- **Bangladesh** — **Enter TV** appears after **NRB TV**
-- **Bangladesh** — **G TV** appears after **Rajdhani TV**
-- **Bangladesh** — **Global TV** appears after **SA TV**
-- **Bangladesh** — **Jalsha Bangla BD** appears after **Time Television**
-- **Bangladesh** — **Green TV** appears after **SRK**
-- **Indian Bangla** — **Aakaash Aath** appears after **Zee Bangla**
-- **Indian Bangla** — **Amar Bangla** appears after **Sony AATH**
-- **Indian Bangla** — **Kolkata TV** appears after **Zee Bangla Sonar**
-- **Indian Bangla** — **JTV Bangla** appears after **Tara TV**
-- **Indian Bangla** — **Jhankar TV** appears after **JTV Bangla**
-- **Indian Movies** — **Epic Bhojpuri** appears after **Zee Cinema**
-- **Indian Movies** — **&pictures** appears after **Mango**
-- **Indian Movies** — **B4U Bhojpuri Plus** appears after **Bollywood Film**
-- **Indian Movies** — **Goldmines** appears after **Goldmines Movies**
-- **Indian Movies** — **Colors Cineplex Superhits** appears after **Goldmines Bollywood**
-- **Indian Movies** — **MBC Bollywood** appears after **Sidharth Gold**
-- **Indian Movies** — **Oscar Movies Bhojpuri** appears after **Zee Talkies**
-- **Indian Movies** — **Pitaara TV** appears after **Shemaroo Marathi Bana**
-- **Indian Movies** — **The Movie Club** appears after **The Movie Club +2**
-- **Indian Movies** — **Tolly TV** appears after **Xplor**
-- **Indian Movies** — **Hindi Movies** appears after **Tolly TV**
-- **Indian Movies** — **MH One Dil Se** appears after **South Movies**
-- **Indian Movies** — **Star Maa Movies** appears after **Studio One +**
-- **Indian Movies** — **Colors Cineplex Bollywood** appears after **Star Maa Movies**
-- **Indian Movies** — **&pictures 2** appears after **Colors Cineplex Bollywood**
-- **Indian Music** — **Dhool TV** appears after **Zoom Music**
-- **Indian Music** — **7S Music** appears after **Thalaa TV**
-- **Indian Music** — **7X Music** appears after **7X Punjabi**
-- **Indian Music** — **9X Jalwa** appears after **Isai Aruvi**
-- **Indian Music** — **Music India** appears after **Raj Music Telugu**
-- **Indian Music** — **Spondon** appears after **Zing**
-- **Indian Music** — **Steelbird Music** appears after **Ultimate TV**
-- **Indian Music** — **Saga Music** appears after **Steelbird Music**
-- **Indian Entertainment** — **Polimer TV** appears after **Shemaroo TV**
-- **Indian Entertainment** — **Alankar TV** appears after **Prarthana TV**
-- **Indian Entertainment** — **Madhimugam TV** appears after **Sirippoli TV**
-- **Indian Entertainment** — **Aaryaa TV** appears after **Rengoni**
-- **Indian Entertainment** — **Desi Channel** appears after **Jonack**
-- **Indian Entertainment** — **DD Yadagiri** appears after **Kite Victers**
-- **Indian Entertainment** — **DD Uttar Pradesh** appears after **VCV**
-- **Indian Entertainment** — **&TV** appears after **DD Uttar Pradesh**
-- **Indian Entertainment** — **Colors** appears after **Colors Kannada**
-- **Indian Entertainment** — **Colors Rishtey** appears after **Dangal 2**
-- **Indian Entertainment** — **Darshana TV** appears after **DD Uttarakhand**
-- **Indian Entertainment** — **DD Arun Prabha** appears after **DD Chhattisgarh**
-- **Indian Entertainment** — **DD India** appears after **DD National**
-- **Indian Entertainment** — **Hi Dost!** appears after **Pulari TV**
-- **Indian Entertainment** — **Fakt Marathi** appears after **Hi Dost!**
-- **Indian Entertainment** — **Odisha TV** appears after **Oli TV**
-- **Indian Entertainment** — **NKR TV Kannada** appears after **Odisha TV**
-- **Indian Entertainment** — **Pear TV** appears after **Peppers TV**
-- **Indian Entertainment** — **Star Bharat** appears after **Star Plus**
-- **Indian Entertainment** — **Suriyan TV** appears after **Vaanavil TV**
-- **Indian Entertainment** — **Telugu One** appears after **Vasanth TV**
-- **Indian Entertainment** — **Manoranjan Grand** appears after **Zee TV**
-- **Indian Entertainment** — **DD Bihar** appears after **Manoranjan Grand**
-- **Indian Entertainment** — **Chithiram** appears after **MTV India**
-- **Indian Entertainment** — **Roja TV** appears after **Sony WAH**
-- **Pakistani** — **Jalwa TV** appears after **Paighan TV**
-- **Pakistani** — **Hum Masala** appears after **Pardesi TV**
-- **Pakistani** — **Grace Network** appears after **Hum TV**
-- **Pakistani** — **8XM** appears after **Grace Network**
-- **International** — **4ever Drama** appears after **CBN TV USA**
-- **International** — **&Privé** appears after **Trace UK**
-- **International** — **Al Jazeera** appears after **AXN Black Czech Republic**
-- **International** — **AXN** appears after **AXN CEE**
-- **International** — **AMC** appears after **Baraza Music TV**
-- **International** — **BBC Drama** appears after **Sony Movies**
-- **International** — **DW News** appears after **EBS Cinema**
-- **International** — **EU Music** appears after **Trace Urban**
-- **International** — **FilmUA Live** appears after **XITE Hits**
-- **International** — **Mei Ah Movie Channel** appears after **Movies Now**
-- **International** — **Rakuten TV Drama Movies UK** appears after **Romedy Now**
-- **International** — **Sony One Hits Comedie** appears after **Sony PIX**
-- **International** — **FON Music** appears after **Солнце**
-- **International** — **BBC News** appears after **FON Music**
-- **Documentary & Wildlife** — **Adventure Earth** appears after **Travelxp Hindi**
-- **Kids** — **Sony Yay** appears after **ZB Cartoon**
-- **Kids** — **Lego Channel** appears after **Sony Yay**
-- **Kids** — **Nick** appears after **Nick Jr**
-- **Kids** — **Hungama** appears after **Nick**
-- **Kids** — **ETV Bal Bharat** appears after **Hungama**
-- **Kids** — **ADN TV+** appears after **ETV Bal Bharat**
-- **Kids** — **Sonic** appears after **ZooMoo**
-- **Religious** — **Al Istiqama** appears after **Peace TV Bangla**
-- **Religious** — **Channel S** appears after **Quran TV**
-- **Sports** — **A Sports** appears after **Star Sports 2**
-- **Sports** — **Goal TV** appears after **PTV Sports**
-- **Sports** — **Sony Sports Ten 4** appears after **Wipeout Xtra**
-- **Backup** — **&TV** appears after **Love Nature**
-- **Not Playing** — **Geo Kahani** appears after **Vijay Super**
-- **Not Playing** — **Bol Entertainment** appears after **Geo Kahani**
-- **Not Playing** — **Azan TV** appears after **Bol Entertainment**
-- **Not Playing** — **aur LIFE** appears after **UFC TV**
-- **Not Playing** — **A Plus** appears after **aur LIFE**
-- **Not Playing** — **Madani Channel Urdu** appears after **SAB Entertainment**
-- **Not Playing** — **&pictures** appears after **Madani Channel Urdu**
+- **Bangladesh** — **Channel 16** appears after **Channel 9**
+- **International** — **24 Hour Free Movies** appears after **4ever Music**
+- **International** — **&Privé** appears after **24 Hour Free Movies**
+- **Backup** — **&TV** appears after **9XM**
+- **Not Playing** — **&pictures** appears after **9XM**
 
 ## Suspicious URLs
 
@@ -940,7 +841,6 @@ None.
 - **goldmines bollywood** → goldminesbollywood.in@sd, new.goldmines.bollywood
 - **hum masala** → hummasala.pk, new.hum.masala
 - **hum tv** → humtv.pk, new.hum
-- **jalsha movies** → jalshamovies.in@sd, star.jalsha.movies.in
 - **maasranga tv** → maasrangatv.bd, new.maasranga.tv
 - **manoranjan tv** → manoranjantv.in@sd, new.manoranjan.tv
 - **shemaroo tv** → new.shemaroo.tv, shemarootv.in@sd
