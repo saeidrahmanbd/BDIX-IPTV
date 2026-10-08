@@ -96,8 +96,11 @@ jobs:
         run: |
           python "$env:GITHUB_WORKSPACE\build\feature_patch.py" "$env:SOURCE_ROOT\Source"
           python "$env:GITHUB_WORKSPACE\build\make_brand_assets.py" "$env:SOURCE_ROOT"
-          if (-not (Test-Path (Join-Path $env:SOURCE_ROOT 'bdix_preview.png'))) { throw 'BDIX-IPTV preview asset was not generated.' }
-          if (-not (Test-Path (Join-Path $env:SOURCE_ROOT 'studio.ico'))) { throw 'BDIX-IPTV application icon was not generated.' }
+          $preview = Join-Path $env:SOURCE_ROOT 'bdix_preview.png'
+          $icon = Join-Path $env:SOURCE_ROOT 'studio.ico'
+          if (-not (Test-Path $preview)) { throw 'BDIX-IPTV preview asset was not generated.' }
+          if (-not (Test-Path $icon)) { throw 'BDIX-IPTV application icon was not generated.' }
+          python -c "from PIL import Image; Image.open(r'$preview').load(); Image.open(r'$icon').load(); print('Brand assets: PASS')"
 
       - name: Validate Python source
         shell: pwsh
@@ -161,7 +164,7 @@ jobs:
           if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
           Get-ChildItem -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
 
-          python -m PyInstaller --noconfirm --clean --onefile --windowed --name 'Playlist-Studio-4.0-Fluent-Dark' --add-data 'VLC;VLC' Source\playlist_studio.py
+          python -m PyInstaller --noconfirm --clean --onefile --windowed --name 'Playlist-Studio-4.0-Fluent-Dark' --icon 'studio.ico' --add-data 'VLC;VLC' Source\playlist_studio.py
 
           $exe = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-4.0-Fluent-Dark.exe'
           if (-not (Test-Path $exe)) {
