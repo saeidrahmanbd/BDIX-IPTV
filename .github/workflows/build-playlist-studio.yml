@@ -157,6 +157,11 @@ jobs:
           $response = [WindowHealth]::SendMessageTimeout($handle, 0x0000, [IntPtr]::Zero, [IntPtr]::Zero, 0x0002, 3000, [ref]$result)
           if ($response -eq [IntPtr]::Zero) {
             $title = $p.MainWindowTitle
+            $trace = Join-Path $env:TEMP 'PlaylistStudio-stacktrace.log'
+            if (Test-Path $trace) {
+              Write-Host '--- PlaylistStudio startup stack trace ---'
+              Get-Content $trace -Raw | Write-Host
+            }
             Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
             throw "Playlist Studio created a window but it is NOT RESPONDING. Title: $title"
           }
