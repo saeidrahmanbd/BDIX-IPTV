@@ -146,7 +146,12 @@ shutil.copyfile(tm_src, tm_dst)
 p = root / "playlist_studio.py"
 s = p.read_text(encoding="utf-8")
 if "from theme_manager import install_theme_support" not in s:
-    s = "from theme_manager import install_theme_support\n" + s
+    fm = list(re.finditer(r"(?m)^from __future__ import .*?$", s))
+    if fm:
+        pos = fm[-1].end()
+        s = s[:pos] + "\nfrom theme_manager import install_theme_support" + s[pos:]
+    else:
+        s = "from theme_manager import install_theme_support\n" + s
 
 # Install immediately before the application's final mainloop call.
 mainloops = list(re.finditer(r"(?m)^(\s*)([A-Za-z_]\w*)\.mainloop\(\)\s*$", s))
