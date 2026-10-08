@@ -16,6 +16,6 @@ Programme-data access and redistribution rights have NOT been established. The g
 4. Run Actions → Generate EPG → Run workflow.
 5. Only a valid guide with future programmes for all mapped channels will be published. Successful publication adds the actual guide URL to the playlist header. The existing updater has been changed to preserve that header.
 
-The guide will then be available at https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg.xml.gz. That URL is a future output location, not a working feed today.
+The guide will then be available at https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml.gz. That URL is a future output location, not a working feed today.
 
 The workflow is scheduled for 03:00 UTC (09:00 Bangladesh time), but stays inactive without `EPG_ENABLED`. Empty, stale, partial or malformed guides fail validation instead of replacing an existing guide. No empty guide is supplied with this setup.
