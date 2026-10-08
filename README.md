@@ -22,7 +22,7 @@ Compatible with **XCIPTV** and other M3U-compatible players.
 - 📄 **[EPG Coverage](reports/epg-coverage.md)** — EPG status and coverage
 - 📚 **[Documentation](docs/README.md)**
 
-**[→ Open the full Download Center](DOWNLOADS.md)**
+**[→ Open the full Download Center](docs/DOWNLOADS.md)**
 
 ## 🖥️ Playlist Studio v5.0
 
