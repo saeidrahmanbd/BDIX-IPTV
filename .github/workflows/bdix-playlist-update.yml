@@ -1,0 +1,54 @@
+name: BDIX Playlist Update
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - BDIX-Playlist.m3u
+      - scripts/bdix_playlist_update.py
+      - logos/**
+      - .github/workflows/bdix-playlist-update.yml
+  schedule:
+    - cron: '47 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bdix-playlist-update
+  cancel-in-progress: false
+  queue: single
+
+jobs:
+  maintain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Run BDIX Playlist Update
+        run: python3 scripts/bdix_playlist_update.py
+
+      - name: Commit BDIX maintenance results
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add BDIX-Playlist.m3u reports/bdix-playlist-audit.md reports/bdix-stream-health.md reports/bdix-maintenance-history.json
+          if git diff --cached --quiet; then
+            echo "No BDIX maintenance changes."
+            exit 0
+          fi
+          git commit -m 'Run BDIX playlist maintenance'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort; exit 1; }
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
