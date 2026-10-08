@@ -200,4 +200,3 @@ helper="""    def _finish_startup(self):
 
 """
 cls=cls[:pos]+helper+cls[pos:]
-s=s[:i]+section;
