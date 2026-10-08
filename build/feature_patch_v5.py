@@ -209,7 +209,7 @@ helper="""    def _finish_startup(self):
             self.bind_keys()
             # Optional native integrations are disabled during startup.
             # They were causing a Windows access-violation in the diagnostic EXE.
-            self.row_logos=None
+            self.row_logos=RowLogos(self)
             self.file_drops=None
             self.refresh()
         except Exception as exc:
