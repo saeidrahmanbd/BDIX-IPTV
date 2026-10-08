@@ -11946,10 +11946,11 @@ Beyond the headlines to the heart of the news of the day. Al Jazeera gets the In
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/c3a231a17b16f8c079577a546419dc22.jpg" />
     <premiere />
   </programme>
-  <programme channel="AndPictures.in@SD" start="20261008010000 +0530" stop="20261008031400 +0530">
-    <title lang="en">Don 2</title>
-    <desc lang="en">Trouble awaits Don as the European drug cartel bosses plan his downfall. However, new allies and former foes promise to aid him in the challenging times.</desc>
+  <programme start="20261007192900 +0000" stop="20261007220800 +0000" channel="AndPictures.in@SD">
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
     <credits>
+      <director>Farhan Akhtar</director>
       <actor>Shah Rukh Khan</actor>
       <actor>Priyanka Chopra Jonas</actor>
       <actor>Boman Irani</actor>
@@ -11959,94 +11960,29 @@ Beyond the headlines to the heart of the news of the day. Al Jazeera gets the In
       <actor>Kunal Kapoor</actor>
       <actor>Wolfgang Stegemann</actor>
       <actor>Senta Dorothea Kirschner</actor>
-      <director>Farhan Akhtar</director>
       <producer>Farhan Akhtar</producer>
       <producer>Gauri Khan</producer>
       <producer>Ritesh Sidhwani</producer>
     </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Action</category>
-    <icon src="https://dtil.tmsimg.com/assets/p8934938_v_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="AndPictures.in@SD" start="20261008031400 +0530" stop="20261008040300 +0530">
-    <title lang="en">Pyasi Maina</title>
-    <desc lang="en">A tale of longing and betrayal, where a woman's thirst for love leads her into a web of desire, deception and heartbreak.</desc>
-    <credits>
-      <actor>Uma Maheshwari</actor>
-      <actor>Sajani</actor>
-      <director>Prakash</director>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Thriller</category>
-    <icon src="https://dtil.tmsimg.com/assets/p20819932_b_h9_ac.jpg?lock=880x660" />
-  </programme>
-  <programme channel="AndPictures.in@SD" start="20261008040300 +0530" stop="20261008060000 +0530">
-    <title lang="en">F.A.L.T.U</title>
-    <desc lang="en">Four desperate friends, who secure poor grades in their examinations, concoct a fake university when they fail to secure college admissions and face dismal futures.</desc>
-    <credits>
-      <actor>Riteish Deshmukh</actor>
-      <actor>Jacky Bhagnani</actor>
-      <actor>Puja Gupta</actor>
-      <actor>Akbar Khan</actor>
-      <actor>Darshan Jariwala</actor>
-      <actor>Vijay Kashyap</actor>
-      <actor>Mahesh Thakur</actor>
-      <actor>Rameshwari</actor>
-      <actor>Chandan Roy Sanyal</actor>
-      <actor>Angad Bedi</actor>
-      <director>Remo</director>
-      <producer>Vashu Bhagnani</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Comedy</category>
-    <icon src="https://dtil.tmsimg.com/assets/p8638664_v_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="AndPictures.in@SD" start="20261008060000 +0530" stop="20261008062100 +0530">
-    <title lang="en">Don 2</title>
     <desc lang="en">Trouble awaits Don as the European drug cartel bosses plan his downfall. However, new allies and former foes promise to aid him in the challenging times.</desc>
-    <credits>
-      <actor>Shah Rukh Khan</actor>
-      <actor>Priyanka Chopra Jonas</actor>
-      <actor>Boman Irani</actor>
-      <actor>Lara Dutta</actor>
-      <actor>Om Puri</actor>
-      <actor>Florian Lukas</actor>
-      <actor>Kunal Kapoor</actor>
-      <actor>Wolfgang Stegemann</actor>
-      <actor>Senta Dorothea Kirschner</actor>
-      <director>Farhan Akhtar</director>
-      <producer>Farhan Akhtar</producer>
-      <producer>Gauri Khan</producer>
-      <producer>Ritesh Sidhwani</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Action</category>
-    <icon src="https://dtil.tmsimg.com/assets/p8934938_v_h9_aa.jpg?lock=880x660" />
+    <icon src="https://iptv-epg.org/images/X93bf56Q0DYNfvN1uWx0RQxzro98o4eCE-oaBCL0QqgARz_WjOjrX1CJ7pqDXxdhn4pnulOJjG4sFO8Wp-okfLsBxDaQl-X8MfjA0rfsPDSxp_onJhzg5E4ldy-e" />
+    <title lang="en">Don 2</title>
   </programme>
-  <programme channel="AndPictures.in@SD" start="20261008062100 +0530" stop="20261008092600 +0530">
-    <title lang="en">Jersey</title>
-    <desc lang="en">A former cricketer in his late 30s returns to the sport to fulfil his son's dream of owning a cricket jersey, battling personal and professional challenges.</desc>
-    <credits>
-      <actor>Shahid Kapoor</actor>
-      <actor>Mrunal Thakur</actor>
-      <actor>Pankaj Kapur</actor>
-      <actor>Rudrashish Majumder</actor>
-      <actor>Palak Singh</actor>
-      <actor>Sharik Khan</actor>
-      <actor>Shanu Kumar</actor>
-      <actor>Prit Kamani</actor>
-      <actor>Ronit Kamra</actor>
-      <actor>Geetika Mehandru</actor>
-      <actor>Shishir Sharma</actor>
-      <director>Gowtam Tinnanuri</director>
-      <producer>Dil Raju</producer>
-      <producer>S Naga Vamsi</producer>
-      <producer>Aman Gill</producer>
-      <producer>Allu Aravind</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p21223178_v_h9_ad.jpg?lock=880x660" />
+  <programme start="20261008035600 +0530" stop="20261008043000 +0530" channel="AndPictures.in@SD" catchup-id="99963282">
+    <title>The Bhootnii</title>
+    <desc>After a heartbreak, Shantanu unknowingly invites a ghost into his life.</desc>
+  </programme>
+  <programme start="20261008043000 +0530" stop="20261008061800 +0530" channel="AndPictures.in@SD" catchup-id="99963290">
+    <title>F.A.L.T.U</title>
+    <desc>Four friends, who fail to secure college admissions, concoct a fake university.</desc>
+  </programme>
+  <programme start="20261008061800 +0530" stop="20261008083000 +0530" channel="AndPictures.in@SD" catchup-id="99963287">
+    <title>De De Pyaar De 2</title>
+    <desc>A London-based NRI investor decides to meet his girlfriend's family.</desc>
+  </programme>
+  <programme start="20261008083000 +0530" stop="20261008090300 +0530" channel="AndPictures.in@SD" catchup-id="99963289">
+    <title>F.A.L.T.U</title>
+    <desc>Four friends, who fail to secure college admissions, concoct a fake university.</desc>
   </programme>
   <programme channel="AndPictures.in@SD" start="20261008092600 +0530" stop="20261008100000 +0530">
     <title lang="en">The Bhootnii</title>
@@ -13190,59 +13126,81 @@ Beyond the headlines to the heart of the news of the day. Al Jazeera gets the In
     <icon src="https://iptv-epg.org/images/AculzVZadiLid95lepV4UfmAmWGyMIAH4BPnYL7UKfCoOeawa2gsEzTRMRlIsKEv20N08xB4mwC7P_CRdcsZukiQ3saiv0TZCXdSenrsrNKQQYVFP9BRYZUugEtsfw" />
     <title lang="en">Chennai vs China</title>
   </programme>
-  <programme channel="AndxplorHD.in" start="20261008014300 +0530" stop="20261008030900 +0530">
+  <programme start="20261008025900 +0530" stop="20261008051000 +0530" channel="AndxplorHD.in">
+    <title>Samrat &amp; Co</title>
+    <desc>A young, beautiful and rich girl approaches a private investigator and hires him to solve a strange case that happened at her house.</desc>
+    <category>Mystery</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/e61ef8b4c1d7a97592015a2ce32d823d.jpg?width=700" />
+    <credits>
+      <director>Kaushik Ghatak</director>
+      <actor>Rajeev Khandelwal</actor>
+      <actor>Madalsa Sharma</actor>
+      <actor>Girish Karnad</actor>
+      <actor>Priyanshu Chatterjee</actor>
+      <actor>Shreya Narayan</actor>
+      <actor>Indraneil Sengupta</actor>
+      <actor>Barkha Bisht</actor>
+      <actor>Ravi Jhankal</actor>
+    </credits>
+    <rating>
+      <value>U/A-12</value>
+    </rating>
+  </programme>
+  <programme start="20261008051000 +0530" stop="20261008065200 +0530" channel="AndxplorHD.in">
+    <title>Kadvi Hawa</title>
+    <desc>A blind old man, worried about the survival and well-being of his son, decides to strike a deal with a debt collector to prevent his child from falling into a debt trap.</desc>
+    <category>Drama</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/9b9d0c6da6155ed2d37d2d5b8b4f1055.jpg?width=700" />
+    <credits>
+      <actor>Sanjay Mishra (Hedu)</actor>
+      <actor>Ranvir Shorey (Gunu Babu)</actor>
+      <actor>Tillotama Shome (Parvati)</actor>
+      <actor>Bhupesh Singh (Mukund)</actor>
+      <actor>Ekta Sawant (Kuhu)</actor>
+      <actor>Tanya Sejwal (Pihu)</actor>
+      <actor>Praveen Kondaparthi (Prakash)</actor>
+      <actor>Shrikant Verma (Teacher)</actor>
+    </credits>
+    <rating>
+      <value>U</value>
+    </rating>
+  </programme>
+  <programme channel="AndxplorHD.in" start="20261008065200 +0530" stop="20261008083600 +0530">
     <title lang="en">Aatma - Feel It Around You</title>
     <desc lang="en">After Losing The Custody Of His Daughter Nia To His Wife, Maya, Abhay Dies In A Car Accident. However, His Spirit Continues To Haunt Their Happy And Peaceful Life.</desc>
-    <category lang="en">Film</category>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_502,h_282,c_scale,f_webp,q_auto:eco/resources//list/AndxplorHDAatmaFeelItAroundYou2126590d084c58b96b948cd820e9ccb8f26d851.jpg" />
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SYMANDXPLOR_HD_2126590_08OCT065200_08OCT083600/images/LANDSCAPE_169/1787068134000_AndxplorHD_Aatma-FeelItAroundYou_2126590.jpg" />
   </programme>
-  <programme channel="AndxplorHD.in" start="20261008030900 +0530" stop="20261008061000 +0530">
+  <programme channel="AndxplorHD.in" start="20261008083600 +0530" stop="20261008113300 +0530">
     <title lang="en">Players</title>
     <desc lang="en">Two Professional Robbers, An Illusionist, An Expert Make-Up Artist, A Gadget Expert And A Hacker Come Together To Steal The Romanian Gold While It Is In Transit.</desc>
-    <category lang="en">Film</category>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_502,h_282,c_scale,f_webp,q_auto:eco/resources//list/AndxplorHDPlayers212041189deff1b33a84fc3a73e0e481b9daa0d.jpg" />
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SYMANDXPLOR_HD_2120411_08OCT083600_08OCT113300/images/LANDSCAPE_169/1786101053000_AndxplorHD_Players_2120411.jpg" />
   </programme>
-  <programme channel="AndxplorHD.in" start="20261008061000 +0530" stop="20261008080400 +0530">
+  <programme channel="AndxplorHD.in" start="20261008113300 +0530" stop="20261008133400 +0530">
     <title lang="en">Kuch Luv Jaisa</title>
     <desc lang="en">Neglected by her husband on her birthday, Madhu decides to make the most of the day and unexpectedly encounters an escaped criminal who claims to be a detective, leading to an adventurous journey.</desc>
-    <category lang="en">Film</category>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_502,h_282,c_scale,f_webp,q_auto:eco/resources//list/moviee81a613a288b478dbabb74467beddf6a.jpg" />
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SYMANDXPLOR_HD_2149092_08OCT113300_08OCT133400/images/LANDSCAPE_169/1791391177000_AndxplorHD_KuchLuvJaisa_2149092.jpg" />
   </programme>
-  <programme channel="AndxplorHD.in" start="20261008080400 +0530" stop="20261008102700 +0530">
+  <programme channel="AndxplorHD.in" start="20261008133400 +0530" stop="20261008160000 +0530">
     <title lang="en">Code Name: Tiranga</title>
     <desc lang="en">An undercover agent seeks revenge for the 2001 terrorist attacks on Indian soil, but her dangerous mission eventually leads her to a point of no return.</desc>
-    <category lang="en">Film</category>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_502,h_282,c_scale,f_webp,q_auto:eco/resources//list/movie16dafb481d30405580a2a3ae4fa4dfa4.jpg" />
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SYMANDXPLOR_HD_2149085_08OCT133400_08OCT160000/images/LANDSCAPE_169/1756684870000_PICTURESHD_CodeNameTiranga_1468481.jpg" />
   </programme>
-  <programme channel="AndxplorHD.in" start="20261008102700 +0530" stop="20261008124500 +0530">
+  <programme channel="AndxplorHD.in" start="20261008160000 +0530" stop="20261008181800 +0530">
     <title lang="en">Mission Majnu</title>
     <desc lang="en">In the 1970s, an undercover Indian spy takes on a deadly mission to expose a covert nuclear weapons program in the heart of Pakistan.</desc>
-    <category lang="en">Film</category>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_502,h_282,c_scale,f_webp,q_auto:eco/resources//list/AndxplorHDMissionMajnu1509843ec278aa200224eee8f501b20dacb8446.jpg" />
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SYMANDXPLOR_HD_1509843_08OCT160000_08OCT181800/images/LANDSCAPE_169_HD/AndxplorHD_MissionMajnu_1509843.jpg" />
   </programme>
-  <programme channel="AndxplorHD.in" start="20261008124500 +0530" stop="20261008153000 +0530">
+  <programme channel="AndxplorHD.in" start="20261008181800 +0530" stop="20261008205900 +0530">
     <title lang="en">Mukkabaaz</title>
     <desc lang="en">Shravan Singh dreams of boxing glory but clashes with his rival's niece's love. Now, ambition and romance collide inside and outside the ring with dangerous consequences.</desc>
-    <category lang="en">Film</category>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_502,h_282,c_scale,f_webp,q_auto:eco/resources//list/AndxplorHDMukkabaaz805733cc55e7a014c74fbea8272b5c561bef60.jpg" />
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SYMANDXPLOR_HD_805733_08OCT181800_08OCT205900/images/LANDSCAPE_169_HD/AndxplorHD_Mukkabaaz_805733.jpg" />
   </programme>
-  <programme channel="AndxplorHD.in" start="20261008153000 +0530" stop="20261008173400 +0530">
-    <title lang="en">Thank You for Coming</title>
-    <desc lang="en">Opting for a stable fiance over genuine romance, a food blogger experiences sexual satisfaction for the first time at her engagement party. However, she must find out who her mysterious lover is.</desc>
-    <category lang="en">Film</category>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_502,h_282,c_scale,f_webp,q_auto:eco/resources//list/AndxplorHDThankYouforComing2109866c1875f0beaf441efb73b250b8ac1ffd0.jpg" />
-  </programme>
-  <programme channel="AndxplorHD.in" start="20261008173400 +0530" stop="20261008203600 +0530">
-    <title lang="en">Happy Phirr Bhag Jayegi</title>
-    <desc lang="en">Harpreet in Shanghai with husband, faces kidnapping attempt; wrong abduction.</desc>
-    <category lang="en">Film</category>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_502,h_282,c_scale,f_webp,q_auto:eco/resources//list/AndxplorHDHappyPhirrBhagJayegi8057117db9b5ea0dab447c852fbea39bfbd2b9.jpg" />
-  </programme>
-  <programme channel="AndxplorHD.in" start="20261008203600 +0530" stop="20261008220100 +0530">
-    <title lang="en">Tigers : Can A Salesman Be A Hero</title>
-    <desc lang="en">Pakistani salesman Ayan discovers that the baby formula he sells is linked to the deaths of infants. He leaves his successful career and begins a dangerous fight to expose the company's practices.</desc>
-    <category lang="en">Film</category>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_502,h_282,c_scale,f_webp,q_auto:eco/resources//list/movie8a4ca82146a84e868fdd5e887c64ea51.jpg" />
+  <programme channel="AndxplorHD.in" start="20261008205900 +0530" stop="20261008231600 +0530">
+    <title lang="en">Veere Di Wedding</title>
+    <desc lang="en">Kalindi's friends visit her after learning of her upcoming wedding. They travel to Thailand and embark on a journey of self-discovery.</desc>
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SYMANDXPLOR_HD_805761_08OCT205900_08OCT231600/images/LANDSCAPE_169_HD/AndxplorHD_VeereDiWedding_805761.jpg" />
   </programme>
   <programme start="20261008231600 +0530" stop="20261008235959 +0530" channel="AndxplorHD.in">
     <title>Happy Phirr Bhag Jayegi</title>
@@ -66945,13 +66903,12 @@ Embark on a musical journey through eight Indian states and learn about local ba
     <icon src="https://iptv-epg.org/images/ZJAnWrsSUFqLD_ZfE7S7Z-J5kl51RxWJ0ajJgvM6PgVmni_OQ1TGM-jvwWp4fuf_yF6FDWJ9ZgiFE0oJPpB6td6ICDj-KSUX6lF6Iif9hcOe44_d5c-FqEeKEum63g" />
     <title lang="en">Tosha Nohila Mora Chita</title>
   </programme>
-  <programme start="20261008030000 +0530" stop="20261008031000 +0530" channel="DDPunjabi.in@SD" catchup-id="99968221">
-    <title>Sachi Bani</title>
-    <desc>A compilation of devotional songs dedicated to Sikh gurus by various artists.</desc>
-  </programme>
-  <programme start="20261008031000 +0530" stop="20261008033000 +0530" channel="DDPunjabi.in@SD" catchup-id="99968220">
-    <title>Patriotic Songs</title>
-    <desc>A comprehensive compilation of various patriotic songs played back to back.</desc>
+  <programme start="20261008030000 +0530" stop="20261008040000 +0530" channel="DDPunjabi.in@SD">
+    <title lang="pa-IN">Kavishree/Dhadiwarran</title>
+    <desc lang="pa-IN">A compilation of hymns, verses and devotional songs, sung by Sikh devotees in praise of God to invoke His blessings, is presented.</desc>
+    <category lang="pa-IN">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/266c7e0da775ae9127cbbb8b3b7feb82.jpg" />
+    <premiere />
   </programme>
   <programme start="20261008040000 +0530" stop="20261008053000 +0530" channel="DDPunjabi.in@SD">
     <title lang="pa-IN">Aasa Di Vaar</title>
@@ -87508,18 +87465,6 @@ Embark on a musical journey through eight Indian states and learn about local ba
     <desc lang="en">Ed Stafford is alone in Borneo's thick jungles with no tools, no food, and no backup. Just raw survival instincts against dense forest, wild creatures, and unrelenting rain.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DISCOVERY_CHANNEL_173569_11OCT073500_11OCT082300/images/LANDSCAPE_169_HD/DISCOVERY_MaroonedWithEdStafford_173569.jpg" />
   </programme>
-  <programme channel="DiscoveryKids.au" start="20261008030000 +0530" stop="20261008031200 +0530">
-    <title lang="en">Smaashhing Simmba</title>
-    <desc lang="en">High-tech Hunter manages to hypnotise Pillu Kaka into stealing for him. But soon his plan starts to backfire on him when he loses control of Pillu Kaka.</desc>
-    <credits>
-      <actor>Abhishek Dutta</actor>
-      <producer>Rohit Shetty</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p23765022_b_h9_ab.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E18</episode-num>
-  </programme>
   <programme channel="DiscoveryKids.au" start="20261008031200 +0530" stop="20261008032000 +0530">
     <title lang="en">Baby Little Singham</title>
     <desc lang="en">Infant Little Singham enthrals everyone with his antics and mischiefs while he embarks on adventures and fights villains.</desc>
@@ -101564,22 +101509,6 @@ During the Holi celebrations, Shera is challenged to a spirited watercolour comp
     <title>Jatra</title>
     <desc>Talented theatre artists perform plays that reflect on many social and cultural issues.</desc>
   </programme>
-  <programme channel="Enterr10Bangla.in@SD" start="20261008022900 +0530" stop="20261008031100 +0530">
-    <title lang="en">Crime Alert</title>
-    <desc lang="en">The host presents a collection of true stories involving ordinary citizens who committed horrific crimes for the sake of love, revenge and various other motivating factors.</desc>
-    <credits>
-      <actor>Girish Jain</actor>
-      <actor>Amit Pachori</actor>
-      <actor>Sudha Chandran</actor>
-      <director>Anil Rawat</director>
-      <producer>Anirban Bhattacharyya</producer>
-      <producer>Sudha Chandran</producer>
-      <producer>Suhaib Ilyasi</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Crime</category>
-    <icon src="https://dtil.tmsimg.com/assets/p25787165_b_h9_ac.jpg?lock=880x660" />
-  </programme>
   <programme channel="Enterr10Bangla.in@SD" start="20261008031100 +0530" stop="20261008040000 +0530">
     <title lang="en">Crime Alert</title>
     <desc lang="en">The host presents a collection of true stories involving ordinary citizens who committed horrific crimes for the sake of love, revenge and various other motivating factors.</desc>
@@ -111045,22 +110974,6 @@ During the Holi celebrations, Shera is challenged to a spirited watercolour comp
       <actor>Paul Gilman</actor>
     </credits>
     <episode-num system="onscreen">4</episode-num>
-    <rating>
-      <value>TVG</value>
-    </rating>
-  </programme>
-  <programme start="20261008020800 +0530" stop="20261008031100 +0530" channel="InTravel.in@HD">
-    <title>Chasing Monsters: El Nino</title>
-    <desc>The lives of big wave surfers as they pursue the storms of the 2016 El Niño season in search of the biggest waves.</desc>
-    <category>Reality</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/c53d4900617d709b998d19b9c7b500b9.jpg?width=700" />
-    <credits>
-      <director>Rocky Romano</director>
-      <director>PJ Lungren</director>
-      <director>Carlos Vargas</director>
-    </credits>
-    <episode-num system="onscreen">9</episode-num>
     <rating>
       <value>TVG</value>
     </rating>
@@ -149322,17 +149235,6 @@ Shalini lives in America but desires to relocate to India. Meanwhile, a girl fro
     <category lang="hi-IN">177</category>
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/f31bbe589d5ef1338381fb7acd157018.jpg" />
     <premiere />
-  </programme>
-  <programme channel="Pogo.in@SD" start="20261008030000 +0530" stop="20261008031200 +0530">
-    <title lang="en">Smaashhing Simmba</title>
-    <desc lang="en">Simmba, an honest and courageous police officer, teams up with his fearless colleagues in his mission to confront and defeat the evil forces of society.</desc>
-    <credits>
-      <actor>Abhishek Dutta</actor>
-      <producer>Rohit Shetty</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p23765022_b_h9_ab.jpg?lock=880x660" />
   </programme>
   <programme channel="Pogo.in@SD" start="20261008031200 +0530" stop="20261008032400 +0530">
     <title lang="en">Smaashhing Simmba</title>
@@ -213951,20 +213853,6 @@ Sports experts take a look at some of the classic cricket matches ever played in
     <desc lang="en">The movie name is yet to be announced by the channel.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_WAH_341453_11OCT060000_11OCT090000/images/LANDSCAPE_169_HD/SonyWAH_Movie_341453.jpg" />
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261008030000 +0530" stop="20261008031200 +0530">
-    <title lang="en">Honey Bunny Ka Jholmaal</title>
-    <desc lang="en">Honey, Bunny and the gang observe supernatural incidents during their vacation. Therefore, they cooperatively tackle this mysterious adversity.</desc>
-    <credits>
-      <actor>Mubeen Saudagar</actor>
-      <actor>Meena Nahata</actor>
-      <actor>Dolly Lopes</actor>
-      <director>Vijay Roche</director>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p24103923_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E166</episode-num>
-  </programme>
   <programme channel="SonyYay.in@SD" start="20261008031200 +0530" stop="20261008032300 +0530">
     <title lang="en">Honey Bunny Ka Jholmaal</title>
     <desc lang="en">Honey and Bunny, two cats who are twin brothers, go on exciting adventures while protecting each other from enemies at every turn.</desc>
@@ -240290,22 +240178,6 @@ A look back at the incredible fights from ONE Championship's history, encompassi
     <desc lang="en">A parking spot strains the relationship between two neighbours of different generations and worldviews. They become locked in an escalating battle to claim the space for themselves.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_STAR_SUVARNA_PLUS_1688496_11OCT060000_11OCT090000/images/LANDSCAPE_169_HD/SuvarnaPlus_Parking_1688496.jpg" />
   </programme>
-  <programme start="20261008022900 +0530" stop="20261008031400 +0530" channel="StingrayDJAZZ.ca@SD">
-    <title>Live in Belgium: Paul Desmond, Dave Brubeck &amp; Joe Morello</title>
-    <desc>A filmed concert from one prestigious jazz quartet: Paul Desmond, alto sax; Joe Morello, drums; Eugene Wright, bass; and Dave Brubeck, piano, an award-winning jazz supergroup.</desc>
-    <category>Special</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/565e327b33cc68c3431b160b2337486b.jpg?width=700" />
-    <credits>
-      <actor>Paul Desmond</actor>
-      <actor>Joe Morello</actor>
-      <actor>Eugene Wright</actor>
-      <actor>Dave Brubeck</actor>
-    </credits>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261008031400 +0530" stop="20261008051600 +0530" channel="StingrayDJAZZ.ca@SD">
     <title>North Sea Jazz</title>
     <desc>In 1987, prominent guitarist George Benson brought his band to kick off day three of the North Sea Jazz Festival in The Hague; joining him to play songs from their joint album Collaborations was acoustic guitarist Earl Klugh.</desc>
@@ -248472,13 +248344,6 @@ Cortney drops a bomb on Tim; Colt takes his shot with Mei; Jen brings the heat.<
     <desc lang="en">TM Morning Melody presents a refreshing collection of soothing devotional, romantic, and popular Odia songs, creating the perfect musical start to the day with melodious entertainment.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_TARANG_MUSIC_1208278_11OCT073000_11OCT080000/images/LANDSCAPE_169/1784397986000_TarangMusic_TmMorningMelody_1208278.jpg" />
   </programme>
-  <programme start="20261008030100 +0530" stop="20261008031300 +0530" channel="TeluguOne.in@HD" catchup-id="2610083594049">
-    <title>Swara Jhari Class 4</title>
-    <desc>Swara Jhari Class 4</desc>
-    <category>Series</category>
-    <date>20261007</date>
-    <icon src="https://jiotv.catchup.cdn.jio.com/dare_images/shows/2026-10-08/2610083594049.jpg" />
-  </programme>
   <programme start="20261008031300 +0530" stop="20261008032500 +0530" channel="TeluguOne.in@HD" catchup-id="2610083594050">
     <title>Swara Jhari Class 4</title>
     <desc>Swara Jhari Class 4</desc>
@@ -251330,14 +251195,6 @@ Cortney drops a bomb on Tim; Colt takes his shot with Mei; Jen brings the heat.<
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261008030000 +0530" stop="20261008031200 +0530" channel="ThalaaTV.in">
-    <title>Raja Rani</title>
-    <sub-title>THALAA TV | TAMIL</sub-title>
-    <desc>Rani pretends to be rich to win actor Raja?s love, but Babu tries to ruin their relationship.</desc>
-    <category>Romance</category>
-    <language>TAMIL</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/THALAA%20TV/POSTER/Raja%20Rani.png" />
-  </programme>
   <programme start="20261008031200 +0530" stop="20261008032500 +0530" channel="ThalaaTV.in">
     <title>Raja Rani</title>
     <sub-title>THALAA TV | TAMIL</sub-title>
@@ -253840,13 +253697,6 @@ Cortney drops a bomb on Tim; Colt takes his shot with Mei; Jen brings the heat.<
     <title lang="en">The Human After</title>
     <desc lang="en">Jealousy rears its head when Mowgli finds a mirror</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6ac6e422d79970462e15a037/images/LANDSCAPE_169/9286_ea77e024-3d3e-4c84-9c3b-53bd35340a15.png" />
-  </programme>
-  <programme channel="TinyPop.uk" start="20261007212800 +0000" stop="20261007213800 +0000">
-    <title lang="en">Masha And The Bear</title>
-    <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261008025800/list/TinyPOPMashaAndTheBear205699629d45bad83054198b08d0d38657c9da8.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261007213800 +0000" stop="20261007214800 +0000">
     <title lang="en">Masha And The Bear Shorties</title>
@@ -285467,26 +285317,6 @@ Stories of the paranormal unfold through accounts of individuals who claim to ha
     <episode-num>S2 E85</episode-num>
     <icon src="https://iptv-epg.org/images/hJoy5rTFHYZnOBUDk9HPEFVMygise6nQPrd1sS8S3jynv6go0zG0nRpDtL-WEtYJM5M54Q9PkKq64xgRxc5c3X8W1iJIDmY2WI3Y0uVZp-46eWkLc7DAzOrIQjdQGw" />
     <title lang="en">Fear Files</title>
-  </programme>
-  <programme start="20261008030700 +0530" stop="20261008031000 +0530" channel="custom.duck.tv">
-    <title>Dotty, the Kitty</title>
-    <desc>Dotty the kitten tries to complete pictures by connecting the dots on the outline of various objects selected by the pencil.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/1cee4e050e2141fcaf193faed3e2b6a3.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261008031000 +0530" stop="20261008031200 +0530" channel="custom.duck.tv">
-    <title>Mimo and Bobo</title>
-    <desc>When Mimo, the panda bear, and Bobo, the monkey, enter preschool, they learn useful lessons about friendship as well as moral values.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f7100646ff9cce813dad74448f69f4d6.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
   </programme>
   <programme start="20261008031200 +0530" stop="20261008031600 +0530" channel="custom.duck.tv">
     <title>Enlightment Corner</title>
