@@ -19,6 +19,23 @@ for rel in ('playlist_studio.py','studio_extras.py','hybrid_ui.py'):
     s=s.replace('PLAYLIST STUDIO  /  3.0','BDIX-IPTV  /  PLAYLIST STUDIO 5.0')
     write(p,s)
 
+# PyInstaller/VLC bootstrap: make the bundled native VLC runtime discoverable before python-vlc is imported.
+p,s=read('playlist_studio.py')
+if '_ps5_vlc_root' not in s:
+    bootstrap="""import os as _ps5_os
+import sys as _ps5_sys
+from pathlib import Path as _ps5_Path
+_ps5_vlc_root=_ps5_Path(getattr(_ps5_sys,'_MEIPASS',_ps5_Path(__file__).resolve().parent))/'VLC'
+if _ps5_vlc_root.is_dir():
+    try:
+        _ps5_os.add_dll_directory(str(_ps5_vlc_root))
+    except Exception:
+        pass
+    _ps5_os.environ['VLC_PLUGIN_PATH']=str(_ps5_vlc_root/'plugins')
+"""
+    s=bootstrap+s
+write(p,s)
+
 # Main application state: multiple categories + remembered table scroll.
 p,s=read('playlist_studio.py')
 if "self.active_groups=[];self.category_scroll={}" not in s:
