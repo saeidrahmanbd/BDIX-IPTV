@@ -4,7 +4,7 @@ const DEFAULT_BDIX_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahman
 const CACHE_KEY = "https://bdix-iptv.internal/playlist-v5-backup-stream-filter";
 const CACHE_TTL = 60;
 
-const EPG_PUBLIC_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg.xml";
+const EPG_PUBLIC_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml";
 const EPG_URLS = [
   // IN1 is the broad India guide. IN4 is a smaller complementary India guide
   // with additional regional/channel IDs. Keep the live set to these two to
