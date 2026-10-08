@@ -177,7 +177,7 @@ try:
 except Exception:
     pass
 """
-    s=s.replace(probe,probe+"\\n"+trace,1)
+    s=s.replace(probe,probe+chr(10)+trace,1)
     write(p,s)
 
 # Defer the entire heavy Studio startup until Tk has entered its event loop.
