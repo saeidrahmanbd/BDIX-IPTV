@@ -156,7 +156,7 @@ jobs:
             throw 'Bundled VLC is missing libvlccore.dll.'
           }
 
-      - name: Build single-file Windows executable
+      - name: Build standard Windows application
         shell: pwsh
         working-directory: ${{ env.SOURCE_ROOT }}
         run: |
@@ -164,43 +164,72 @@ jobs:
           if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
           Get-ChildItem -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
 
-          python -m PyInstaller --noconfirm --clean --onefile --windowed --name 'Playlist-Studio-4.0-Fluent-Dark' --icon 'studio.ico' --add-data 'VLC;VLC' Source\playlist_studio.py
+          python -m PyInstaller --noconfirm --clean --onedir --windowed --name 'Playlist-Studio-4.0-Fluent-Dark' --icon 'studio.ico' --add-data 'VLC;VLC' Source\playlist_studio.py
 
-          $exe = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-4.0-Fluent-Dark.exe'
-          if (-not (Test-Path $exe)) {
-            throw 'PyInstaller completed without producing the expected executable.'
-          }
-
-          $size = (Get-Item $exe).Length
-          if ($size -lt 50000000) {
-            throw "Executable is unexpectedly small: $size bytes"
-          }
-
+          $app = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-4.0-Fluent-Dark'
+          $exe = Join-Path $app 'Playlist-Studio-4.0-Fluent-Dark.exe'
+          if (-not (Test-Path $exe)) { throw 'PyInstaller did not produce the standard application.' }
+          $size = (Get-ChildItem $app -Recurse -File | Measure-Object Length -Sum).Sum
+          if ($size -lt 10000000) { throw "Application output is unexpectedly small: $size bytes" }
           $hash = (Get-FileHash -Algorithm SHA256 $exe).Hash.ToLower()
-          "EXE_SIZE=$size" | Out-File -FilePath $env:GITHUB_ENV -Append
           "EXE_SHA256=$hash" | Out-File -FilePath $env:GITHUB_ENV -Append
-          "Built: $size bytes"
-          "SHA-256: $hash"
 
-      - name: Package portable download
+      - name: Build Windows installer
         shell: pwsh
         working-directory: ${{ env.SOURCE_ROOT }}
         run: |
-          if (Test-Path 'release') { Remove-Item 'release' -Recurse -Force }
-          New-Item -ItemType Directory -Path 'release' | Out-Null
-          Copy-Item 'dist\Playlist-Studio-4.0-Fluent-Dark.exe' 'release\'
-          @"
-          Playlist Studio 4.0 — Fluent Dark
-          Windows x64 portable single-file build.
+          $iss = Join-Path $env:RUNNER_TEMP 'Playlist-Studio-4.0.iss'
+          $source = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-4.0-Fluent-Dark'
+          $output = Join-Path $env:GITHUB_WORKSPACE 'installer-output'
+          if (Test-Path $output) { Remove-Item $output -Recurse -Force }
+          New-Item -ItemType Directory -Path $output | Out-Null
+          @'
+          #define MyAppName "BDIX-IPTV Playlist Studio"
+          #define MyAppVersion "4.0.0"
+          #define MyAppPublisher "BDIX-IPTV"
+          #define MyAppExeName "Playlist-Studio-4.0-Fluent-Dark.exe"
+          [Setup]
+          AppId={{B1D1X-IPTV-PS4-2026}}
+          AppName={#MyAppName}
+          AppVersion={#MyAppVersion}
+          AppPublisher={#MyAppPublisher}
+          DefaultDirName={autopf}\BDIX-IPTV\Playlist Studio
+          DefaultGroupName=BDIX-IPTV\Playlist Studio
+          OutputDir=__OUTPUT__
+          OutputBaseFilename=BDIX-IPTV-Playlist-Studio-4.0-Setup
+          SetupIconFile=__ICON__
+          Compression=lzma2
+          SolidCompression=yes
+          ArchitecturesInstallIn64BitMode=x64
+          PrivilegesRequired=admin
+          UninstallDisplayIcon={app}\{#MyAppExeName}
+          [Files]
+          Source: "__SOURCE__\*"; DestDir: "{app}"; Flags: recursesubdirs ignoreversion
+          [Icons]
+          Name: "{group}\BDIX-IPTV Playlist Studio"; Filename: "{app}\{#MyAppExeName}"
+          Name: "{commondesktop}\BDIX-IPTV Playlist Studio"; Filename: "{app}\{#MyAppExeName}"
+          [Run]
+          Filename: "{app}\{#MyAppExeName}"; Description: "Launch BDIX-IPTV Playlist Studio"; Flags: nowait postinstall skipifsilent
+          '@ | Set-Content -Path $iss -Encoding UTF8
+          $text = Get-Content $iss -Raw
+          $text = $text.Replace('__OUTPUT__',$output).Replace('__ICON__',(Join-Path $env:SOURCE_ROOT 'studio.ico')).Replace('__SOURCE__',$source)
+          Set-Content $iss $text -Encoding UTF8
+          $iscc = Join-Path ${env:ProgramFiles(x86)} 'Inno Setup 6\ISCC.exe'
+          if (-not (Test-Path $iscc)) { throw 'Inno Setup compiler is not available on the GitHub runner.' }
+          & $iscc $iss
+          if ($LASTEXITCODE -ne 0) { throw 'Inno Setup compilation failed.' }
+          $setup = Join-Path $output 'BDIX-IPTV-Playlist-Studio-4.0-Setup.exe'
+          if (-not (Test-Path $setup)) { throw 'Installer was not produced.' }
+          $setupHash = (Get-FileHash -Algorithm SHA256 $setup).Hash.ToLower()
+          "BDIX-IPTV Playlist Studio 4.0`nStandard Windows installer.`nSHA-256:`n$setupHash" | Set-Content (Join-Path $output 'SHA256.txt') -Encoding UTF8
 
-          The executable includes the required VLC runtime.
-          No installation is required.
-
-          SHA-256:
-          $env:EXE_SHA256
-          "@ | Set-Content -Path 'release\SHA256.txt' -Encoding UTF8
-
-          Compress-Archive -Path 'release\*' -DestinationPath (Join-Path $env:GITHUB_WORKSPACE 'Playlist-Studio-4.0-Portable.zip') -Force
+      - name: Upload Windows installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: BDIX-IPTV-Playlist-Studio-4.0-Setup
+          path: ${{ github.workspace }}\installer-output\*
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Create or update v4.0.0 GitHub Release
         shell: pwsh
@@ -211,11 +240,11 @@ jobs:
           $repo='${{ github.repository }}'
           gh release view $tag --repo $repo > $null 2>&1
           if ($LASTEXITCODE -ne 0) {
-            gh release create $tag --repo $repo --target $env:GITHUB_SHA --title "Playlist Studio v4.0" --notes "Playlist Studio 4.0 — BDIX-IPTV Fluent Dark portable Windows x64 build."
+            gh release create $tag --repo $repo --target $env:GITHUB_SHA --title 'Playlist Studio v4.0' --notes 'BDIX-IPTV Playlist Studio 4.0 — standard Windows installer.'
             if ($LASTEXITCODE -ne 0) { throw 'Unable to create Playlist Studio v4.0 release.' }
           }
-          gh release upload $tag 'Playlist-Studio-4.0-Portable.zip' --repo $repo --clobber
-          if ($LASTEXITCODE -ne 0) { throw 'Unable to upload Playlist Studio v4.0 portable ZIP.' }
+          gh release upload $tag "$env:GITHUB_WORKSPACE\installer-output\BDIX-IPTV-Playlist-Studio-4.0-Setup.exe" --repo $repo --clobber
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to upload Playlist Studio 4.0 installer.' }
       - name: Upload portable artifact
         uses: actions/upload-artifact@v4
         with:
