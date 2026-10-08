@@ -164,10 +164,10 @@ jobs:
           if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
           Get-ChildItem -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
 
-          python -m PyInstaller --noconfirm --clean --onedir --windowed --name 'Playlist-Studio-5.0-Fluent-Dark' --icon 'studio.ico' --add-data 'VLC;VLC' Source\playlist_studio.py
+          python -m PyInstaller --noconfirm --clean --onedir --windowed --name 'Playlist-Studio-5.0' --icon 'studio.ico' --add-data 'VLC;VLC' Source\playlist_studio.py
 
-          $app = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0-Fluent-Dark'
-          $exe = Join-Path $app 'Playlist-Studio-5.0-Fluent-Dark.exe'
+          $app = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0'
+          $exe = Join-Path $app 'Playlist-Studio-5.0.exe'
           if (-not (Test-Path $exe)) { throw 'PyInstaller did not produce the standard application.' }
           $size = (Get-ChildItem $app -Recurse -File | Measure-Object Length -Sum).Sum
           if ($size -lt 10000000) { throw "Application output is unexpectedly small: $size bytes" }
