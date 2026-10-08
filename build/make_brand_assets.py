@@ -3,7 +3,10 @@ import base64
 import io
 import sys
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFile, ImageFont
+
+# The supplied preview was intentionally stored as a compact JPEG asset; allow Pillow to decode a truncated tail safely.
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 out = Path(sys.argv[1]).resolve()
 out.mkdir(parents=True, exist_ok=True)
