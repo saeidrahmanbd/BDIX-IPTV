@@ -90,24 +90,24 @@ if "from pathlib import Path" not in s:
 
 # The supplied source has changed its placeholder formatting across build-kit revisions.
 # Replace the first real idle-preview label line with a consistently indented block.
-const_placeholder=(
-"preview_path=Path(__file__).resolve().parent.parent/'bdix_preview.png'\\n"
-"self._preview_image=tk.PhotoImage(file=str(preview_path)) if preview_path.exists() else None\\n"
-"self.placeholder=tk.Label(self.video,image=self._preview_image,bg='#03060c') if self._preview_image else tk.Label(self.video,text='BDIX-IPTV\\\\nPLAYLIST STUDIO 5.0',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23))\\n"
-"self.placeholder.place(relx=.5,rely=.5,anchor='center')"
-)
 lines=s.splitlines()
 idx=next((i for i,line in enumerate(lines) if "self.placeholder" in line and "tk.Label(self.video" in line),-1)
 if idx<0:
     raise RuntimeError("No idle preview widget assignment found in studio_extras.py")
 indent=lines[idx][:len(lines[idx])-len(lines[idx].lstrip())]
-block=[indent+x for x in const_placeholder.splitlines()]
+block=[
+    indent+"preview_path=Path(__file__).resolve().parent.parent/'bdix_preview.png'",
+    indent+"self._preview_image=tk.PhotoImage(file=str(preview_path)) if preview_path.exists() else None",
+    indent+"self.placeholder=tk.Label(self.video,image=self._preview_image,bg='#03060c') if self._preview_image else tk.Label(self.video,text='BDIX-IPTV\\nPLAYLIST STUDIO 5.0',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23))",
+    indent+"self.placeholder.place(relx=.5,rely=.5,anchor='center')",
+]
 end=idx+1
 while end<len(lines) and "self.placeholder.place(" in lines[end]:
     end+=1
 lines[idx:end]=block
 s="\\n".join(lines)+"\\n"
 p.write_text(s,encoding='utf-8')
+
 
 
 p.write_text(s,encoding='utf-8')
