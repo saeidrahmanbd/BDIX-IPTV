@@ -1,5 +1,5 @@
 name: Build Playlist Studio 5.0 Portable
-# BDIX-IPTV feature build v5.0.3 - known-good startup patch restored
+# BDIX-IPTV feature build v5.0.3 - isolate deferred startup
 
 on:
   workflow_dispatch:
