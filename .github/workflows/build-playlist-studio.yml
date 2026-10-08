@@ -142,40 +142,6 @@ jobs:
           Write-Host 'Raw Python startup smoke test: PASS'
           Write-Host "Main window handle: $handle"
 
-      - name: Build and test Nuitka standalone
-        shell: pwsh
-        working-directory: ${{ env.SOURCE_ROOT }}
-        run: |
-          if (Test-Path 'build-nuitka') { Remove-Item 'build-nuitka' -Recurse -Force }
-          if (Test-Path 'dist-nuitka') { Remove-Item 'dist-nuitka' -Recurse -Force }
-          python -m nuitka --mode=standalone --enable-plugin=tk-inter --windows-console-mode=force --windows-icon-from-ico=studio.ico --include-data-dir=VLC=VLC --include-data-file=Source\bdix_preview.png=bdix_preview.png --output-dir=dist-nuitka --output-filename=Playlist-Studio-5.0.exe Source\playlist_studio.py
-          if ($LASTEXITCODE -ne 0) { throw 'Nuitka standalone build failed.' }
-          $exe = Get-ChildItem -Path 'dist-nuitka' -Recurse -Filter 'Playlist-Studio-5.0.exe' -File | Select-Object -First 1
-          if (-not $exe) { throw 'Nuitka did not produce Playlist-Studio-5.0.exe.' }
-          $stdout = Join-Path $env:RUNNER_TEMP 'playlist-studio-nuitka.stdout.log'
-          $stderr = Join-Path $env:RUNNER_TEMP 'playlist-studio-nuitka.stderr.log'
-          Remove-Item $stdout,$stderr -Force -ErrorAction SilentlyContinue
-          $proc = Start-Process -FilePath $exe.FullName -WorkingDirectory $exe.DirectoryName -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr
-          Start-Sleep -Seconds 12
-          if ($proc.HasExited) {
-            $out = if (Test-Path $stdout) { Get-Content $stdout -Raw } else { '' }
-            $err = if (Test-Path $stderr) { Get-Content $stderr -Raw } else { '' }
-            Write-Host '--- Nuitka STDOUT ---'
-            Write-Host $out
-            Write-Host '--- Nuitka STDERR ---'
-            Write-Host $err
-            throw "Nuitka application exited during startup with code $($proc.ExitCode)."
-          }
-          $p = Get-Process -Id $proc.Id
-          $handle = $p.MainWindowHandle
-          if ($handle -eq 0) {
-            Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
-            throw 'Nuitka application stayed alive but did not create a main window.'
-          }
-          Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
-          Write-Host 'Nuitka standalone startup smoke test: PASS'
-          Write-Host "Main window handle: $handle"
-
       - name: Verify Xtream path behavior
         shell: pwsh
         working-directory: ${{ env.SOURCE_ROOT }}
@@ -221,6 +187,40 @@ jobs:
           if (-not (Test-Path (Join-Path $dest 'libvlccore.dll'))) {
             throw 'Bundled VLC is missing libvlccore.dll.'
           }
+
+      - name: Build and test Nuitka standalone
+        shell: pwsh
+        working-directory: ${{ env.SOURCE_ROOT }}
+        run: |
+          if (Test-Path 'build-nuitka') { Remove-Item 'build-nuitka' -Recurse -Force }
+          if (Test-Path 'dist-nuitka') { Remove-Item 'dist-nuitka' -Recurse -Force }
+          python -m nuitka --mode=standalone --enable-plugin=tk-inter --windows-console-mode=force --windows-icon-from-ico=studio.ico --include-data-dir=VLC=VLC --include-data-file=Source\bdix_preview.png=bdix_preview.png --output-dir=dist-nuitka --output-filename=Playlist-Studio-5.0.exe Source\playlist_studio.py
+          if ($LASTEXITCODE -ne 0) { throw 'Nuitka standalone build failed.' }
+          $exe = Get-ChildItem -Path 'dist-nuitka' -Recurse -Filter 'Playlist-Studio-5.0.exe' -File | Select-Object -First 1
+          if (-not $exe) { throw 'Nuitka did not produce Playlist-Studio-5.0.exe.' }
+          $stdout = Join-Path $env:RUNNER_TEMP 'playlist-studio-nuitka.stdout.log'
+          $stderr = Join-Path $env:RUNNER_TEMP 'playlist-studio-nuitka.stderr.log'
+          Remove-Item $stdout,$stderr -Force -ErrorAction SilentlyContinue
+          $proc = Start-Process -FilePath $exe.FullName -WorkingDirectory $exe.DirectoryName -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr
+          Start-Sleep -Seconds 12
+          if ($proc.HasExited) {
+            $out = if (Test-Path $stdout) { Get-Content $stdout -Raw } else { '' }
+            $err = if (Test-Path $stderr) { Get-Content $stderr -Raw } else { '' }
+            Write-Host '--- Nuitka STDOUT ---'
+            Write-Host $out
+            Write-Host '--- Nuitka STDERR ---'
+            Write-Host $err
+            throw "Nuitka application exited during startup with code $($proc.ExitCode)."
+          }
+          $p = Get-Process -Id $proc.Id
+          $handle = $p.MainWindowHandle
+          if ($handle -eq 0) {
+            Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+            throw 'Nuitka application stayed alive but did not create a main window.'
+          }
+          Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+          Write-Host 'Nuitka standalone startup smoke test: PASS'
+          Write-Host "Main window handle: $handle"
 
       - name: Build Nuitka Windows installer
         shell: pwsh
