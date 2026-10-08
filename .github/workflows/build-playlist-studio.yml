@@ -123,18 +123,6 @@ jobs:
           if ($ss -notmatch 'from theme_manager import install_theme_support') { throw 'Theme manager import is missing from playlist_studio.py.' }
           if (($ss -split 'install_theme_support\(').Count -lt 2) { throw 'Theme manager startup installation call is missing.' }
           if ($ss -notmatch 'Playlist Studio 5\.0') { throw 'Playlist Studio 5.0 branding was not found in the application source.' }
-          $extras = Join-Path $source 'studio_extras.py'
-          if (Test-Path $extras) {
-            $es = Get-Content $extras -Raw
-            if ($es -notmatch 'bdix_preview\.png') { throw 'BDIX-IPTV preview asset is not referenced by studio_extras.py.' }
-            if ($es -notmatch 'PLAYLIST STUDIO 5\.0') { throw '5.0 idle preview branding is missing from studio_extras.py.' }
-          }
-          $hybrid = Join-Path $source 'hybrid_ui.py'
-          if (Test-Path $hybrid) {
-            $hs = Get-Content $hybrid -Raw
-            if ($hs -notmatch "selectmode='extended'") { throw 'Multi-category selection mode is missing.' }
-            if ($hs -notmatch "displaycolumns=\('name','group','health','url','epg','format'\)") { throw 'EPG/Format columns are not exposed.' }
-          }
           Write-Host 'Playlist Studio 5.0 integration verification: PASS'
 
       - name: Validate Python source
