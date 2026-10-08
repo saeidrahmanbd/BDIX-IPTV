@@ -1,28 +1,28 @@
 # Playlist Audit
-Generated: **2026-10-08T11:25:49.656021+00:00**
+Generated: **2026-10-08T11:41:55.629456+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1053**
-- Unique channel IDs: **673**
+- Playlist entries: **1061**
+- Unique channel IDs: **681**
 - IDs with multiple streams: **182**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
-- Same-name / different-ID collisions: **34**
+- Same-name / different-ID collisions: **39**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **0**
-- Logo references checked: **1053**
+- Logo exceptions: **10**
+- Logo references checked: **1061**
 - Not Playing logo exceptions: **1**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **0**
+- Primary entries missing channel numbers: **5**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
-- Alphabetical ordering issues: **5**
+- Alphabetical ordering issues: **3**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 
@@ -64,7 +64,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - &TV — Backup — https://stream.ottplus.live/live/and_tv_hd_abr/index.m3u8
 ### andxplorhd.in (2 streams)
 - Xplor — Indian Movies — http://198.195.239.50:8095/XPLOR.HD/index.m3u8
-- Xplor — Backup — http://51.75.127.199:3141/andxplorehd/index.m3u8
+- Xplor — Not Playing — http://51.75.127.199:3141/andxplorehd/index.m3u8
 ### animalplanet.in@sd (4 streams)
 - Animal Planet — Documentary & Wildlife — http://198.195.239.50:8095/animalPlanet/index.m3u8
 - Animal Planet — Backup — http://198.195.239.50:8095/ANIMAL.PLANET.HD/index.m3u8
@@ -382,9 +382,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - GREAT! movies — Backup — https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-greatmovies-samsunguk/playlist.m3u8
 ### greentv.bd (4 streams)
 - Green TV — Bangladesh — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/greentv.stream/index.m3u8
-- Green TV — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/chunks.m3u8
-- Green TV — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
-- Green TV — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/playlist.m3u8
+- Green TV — Not Playing — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/chunks.m3u8
+- Green TV — Not Playing — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
+- Green TV — Not Playing — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/playlist.m3u8
 ### hindihits.in (2 streams)
 - Hindi Hits — Indian Music — http://146.59.253.52:8080/hindihitshd/index.m3u8
 - Hindi Hits — Backup — https://iptvlive.ahmed-bd-org.workers.dev/hindi-hits-hd-1/index.m3u8
@@ -511,9 +511,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - My TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mytv-up-off.stream/index.m3u8
 - My TV — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8
 ### nagoriktv.bd (3 streams)
-- Nagorik TV — Bangladesh — http://198.195.239.50:8095/NAGORIK.TV.HD/index.m3u8
-- Nagorik TV — Backup — http://livetv.akr4m.com:8080/bdtv/restrem/38.m3u8
-- Nagorik TV — Backup — https://box.bbaria.net/Nagorik_TV/tracks-v1a1/mono.m3u8
+- Nagorik TV — Bangladesh — http://livetv.akr4m.com:8080/bdtv/restrem/38.m3u8
+- Nagorik TV — Backup — http://198.195.239.50:8095/NAGORIK.TV.HD/index.m3u8
+- Nagorik TV — Not Playing — https://box.bbaria.net/Nagorik_TV/tracks-v1a1/mono.m3u8
 ### nationalgeographic.in@sd (4 streams)
 - National Geographic — Documentary & Wildlife — http://198.195.239.50:8095/NATGEO.HD/index.m3u8
 - National Geographic — Backup — http://198.195.239.50:8095/nationalGeographic/index.m3u8
@@ -626,7 +626,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Sangeet Bangla — Backup — http://198.195.239.50:8095/SANGEET.BANGLA/index.m3u8
 - Sangeet Bangla — Backup — http://198.195.239.50:8095/sangeetBangla/index.m3u8
 - Sangeet Bangla — Backup — https://cdn.pishow.tv/ott/live/1143/master.m3u8
-- Sangeet Bangla — Backup — https://tvsen6.aynaott.com/hT5jHczt/index.m3u8
+- Sangeet Bangla — Not Playing — https://tvsen6.aynaott.com/hT5jHczt/index.m3u8
 ### satv.bd (5 streams)
 - SA TV — Bangladesh — http://116.204.149.16/satv/index.m3u8
 - SA TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/satvoff5666.stream/playlist.m3u8
@@ -685,7 +685,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Jalsha Movies — Backup — http://103.151.60.162:2122/play/a00x/index.m3u8
 - Jalsha Movies — Backup — http://198.195.239.50:8095/JALSHA.MOVIES.HD/index.m3u8
 - Jalsha Movies — Backup — http://198.195.239.50:8095/jalshaMovies/index.m3u8
-- Jalsha Movies — Backup — https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8
+- Jalsha Movies — Not Playing — https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8
 ### stargold.in@hd (3 streams)
 - Star Gold — Indian Movies — http://livetv.akr4m.com:8080/bdtv/restrem/45.m3u8
 - Star Gold — Backup — http://198.195.239.50:8095/STAR.GOLD.HD/index.m3u8
@@ -788,11 +788,9 @@ None.
 ## Ordering
 
 Category block order: OK.
-- **Bangladesh** — **Channel 16** appears after **Channel 9**
-- **International** — **24 Hour Free Movies** appears after **4ever Music**
-- **International** — **&Privé** appears after **24 Hour Free Movies**
-- **Backup** — **&TV** appears after **9XM**
-- **Not Playing** — **&pictures** appears after **9XM**
+- **Not Playing** — **C Malayalam TV** appears after **Zee Cinemalu**
+- **Not Playing** — **Nagorik TV** appears after **ZB Cartoon**
+- **Not Playing** — **9X Jalwa** appears after **Xplor**
 
 ## Suspicious URLs
 
@@ -832,15 +830,18 @@ None.
 - **b4u movies** → b4umovies.in@india, new.b4u.movies
 - **b4u music** → b4umusic.in@india, new.b4u.music
 - **bangla tv** → banglatv.bd, new.bangla.tv
+- **channel 24** → channel24.bd, staging.channel.24
 - **colors bangla** → colors.bangla.in, new.colors.bangla
 - **colors bangla cinema** → colorsbanglacinema.in@sd, new.colors.bangla.cinema
 - **colors cineplex superhits** → colorscineplexsuperhits.in@sd, custom.colors.cineplex.superhits
 - **dangal** → dangaltv.in@sd, new.dangal
-- **dangal 2** → dangal2.in@sd, new.dangal.2
+- **ekhon tv** → ekhontv.bd, staging.ekhon.tv
 - **goldmines** → goldmines.in@sd, new.goldmines
 - **goldmines bollywood** → goldminesbollywood.in@sd, new.goldmines.bollywood
+- **goldmines movies** → goldminesmovies.in@sd, staging.goldmines.movies
 - **hum masala** → hummasala.pk, new.hum.masala
 - **hum tv** → humtv.pk, new.hum
+- **iqra bangla** → iqrabangla.uk, staging.iqra.bangla
 - **maasranga tv** → maasrangatv.bd, new.maasranga.tv
 - **manoranjan tv** → manoranjantv.in@sd, new.manoranjan.tv
 - **shemaroo tv** → new.shemaroo.tv, shemarootv.in@sd
@@ -853,6 +854,8 @@ None.
 - **star gold** → new.star.gold, stargold.in@hd
 - **star jalsha** → new.star.jalsha, star.jalsha.in
 - **star movies select** → new.star.movies.select, starmoviesselect.in@hd
+- **t sports** → staging.t.sports, tsports.bd
+- **thikana** → staging.thikana, thikanatv.us
 - **zee action** → new.zee.action, zeeaction.in
 - **zee bangla** → new.zee.bangla, zeebangla.in@hd
 - **zee bollywood** → new.zee.bollywood, zeebollywood.in@sd
@@ -861,8 +864,8 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1052**
-- missing: **0**
+- Healthy/local references: **1050**
+- missing: **10**
 - broken-local: **0**
 - external: **1**
 - non-png: **0**
@@ -870,6 +873,16 @@ None.
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
+- missing — Channel 52 [staging.channel.52] — 
+- missing — All Time Movies [staging.dhinchaak] — 
+- missing — Assam Talks [staging.assam.talks] — 
+- missing — Islam TV [staging.islam.tv] — 
+- missing — Channel 24 [staging.channel.24] — 
+- missing — Ekhon TV [staging.ekhon.tv] — 
+- missing — Goldmines Movies [staging.goldmines.movies] — 
+- missing — Iqra Bangla [staging.iqra.bangla] — 
+- missing — T Sports [staging.t.sports] — 
+- missing — Thikana [staging.thikana] — 
 
 ## Protected Primary Entries
 

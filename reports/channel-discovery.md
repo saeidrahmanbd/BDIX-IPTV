@@ -11,12 +11,12 @@
 - Express News (576p) (Bangladesh) — http://51.75.127.199:3141/expressnews/index.m3u8
 - Rupashi Bangla TV (720p) (Bangladesh) — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8
 - Vokta TV (720p) (Bangladesh) — https://vokta.raytahost.com/live/voktatv/index.m3u8
-- All Time Movies (576p) (India) — https://tvsen6.aynaott.com/a2cKGQtB/index.m3u8
 - Apna Punjab TV (720p) (India) — https://plus.gigabitcdn.net/live-stream/apna-punjab-H3sE/playlist.m3u8
 - Asianet (576p) (India) — http://51.75.127.199:3141/asianet/index.m3u8
 - Bflix Movies (576p) (India) — http://103.151.60.162:2122/play/a01e/index.m3u8?hls
 - Big Magic (576p) (India) — http://51.75.127.199:3141/bigmagic/index.m3u8
 - Captain (576p) (India) — https://mumbai-edge.smartplaytv.in/captain/index.m3u8
+- Colors Gujarati Cinema (576p) (India) — http://51.75.127.199:3141/colorsgujaraticinema/index.m3u8
 - Colors Infinity HD (1080p) (India) — http://51.75.127.199:3141/colorsinfinityhd/index.m3u8
 - Epic Parivar (576p) (India) — http://103.151.60.162:2122/play/a01p/index.m3u8?hls
 - ETV Plus HD (1080p) (India) — https://d12ee3o8yfkkhd.cloudfront.net/c6a4b411295f47f48c908d2ac0605bad/index.m3u8
