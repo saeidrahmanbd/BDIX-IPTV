@@ -30,6 +30,7 @@ _ps5_vlc_candidates=(
     _ps5_bundle_root/'VLC',
     _ps5_bundle_root/'_internal'/'VLC',
     _ps5_Path(__file__).resolve().parent/'VLC',
+    _ps5_Path(__file__).resolve().parent.parent/'VLC',
 )
 _ps5_vlc_root=next((p for p in _ps5_vlc_candidates if p.is_dir()),None)
 if _ps5_vlc_root is not None:

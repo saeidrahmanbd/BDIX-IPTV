@@ -1,5 +1,5 @@
 name: Build Playlist Studio 5.0 Portable
-# BDIX-IPTV feature build v5.0.3 - isolate deferred startup
+# BDIX-IPTV feature build v5.0.3 - consolidated Windows build and runtime validation
 
 on:
   workflow_dispatch:
@@ -117,10 +117,19 @@ jobs:
         run: |
           $main = Get-Content -LiteralPath (Join-Path $env:SOURCE_ROOT 'Source\playlist_studio.py') -Raw
           $extras = Get-Content -LiteralPath (Join-Path $env:SOURCE_ROOT 'Source\studio_extras.py') -Raw
+          if (($main -split '_ps5_vlc_candidates').Count -ne 2) { throw 'Unexpected duplicate VLC bootstrap markers.' }
           if ($main -notmatch '_ps5_vlc_candidates') { throw 'VLC bootstrap was not injected.' }
+          if ($main -notmatch '_ps5_Path\(__file__\)\.resolve\(\)\.parent\.parent.*/VLC') { throw 'Source-root VLC fallback was not injected.' }
           if ($main -notmatch 'VLC_PLUGIN_PATH') { throw 'VLC plugin path bootstrap was not injected.' }
           if ($main -match '_finish_startup') { throw 'Unverified startup deferral code is present.' }
+          if ($main -notmatch "active_groups=\[\]") { throw 'Multi-category state was not injected.' }
           if ($extras -notmatch 'bdix_preview\.png') { throw 'BDIX-IPTV preview integration was not injected.' }
+          if ($extras -notmatch 'ImageTk\.PhotoImage') { throw 'BDIX-IPTV preview image rendering was not injected.' }
+          if ($main -notmatch "selectmode='extended'") { throw 'Ctrl+Mouse category selection was not enabled.' }
+          if ($main -notmatch "Stream URL',430,180") { throw 'Stream URL column sizing was not applied.' }
+          if ($main -notmatch "width=500,style='Card.TFrame'") { throw 'Inspector sizing was not applied.' }
+          if ($main -notmatch 'BDIX-IPTV.*Playlist Studio 5\.0') { throw 'BDIX-IPTV 5.0 branding was not applied.' }
+          if ($main -match '_finish_startup') { throw 'Startup deferral must not be present.' }
           Write-Host 'Patched-source structural checks: PASS'
 
       - name: Validate Python source
@@ -139,6 +148,11 @@ jobs:
           # Retry it; the packaged PyInstaller smoke test is checked separately.
           $maxAttempts = 3
           $passed = $false
+          $rawVlcRoot = Join-Path $env:SOURCE_ROOT 'VLC'
+          if (Test-Path $rawVlcRoot) {
+            $env:VLC_PLUGIN_PATH = Join-Path $rawVlcRoot 'plugins'
+            $env:PATH = $rawVlcRoot + [IO.Path]::PathSeparator + $env:PATH
+          }
           for ($attempt = 1; $attempt -le $maxAttempts; $attempt++) {
             $stdout = Join-Path $env:RUNNER_TEMP "playlist-studio-raw-$attempt.stdout.log"
             $stderr = Join-Path $env:RUNNER_TEMP "playlist-studio-raw-$attempt.stderr.log"
@@ -218,6 +232,9 @@ jobs:
           if (-not (Test-Path (Join-Path $dest 'libvlccore.dll'))) {
             throw 'Bundled VLC is missing libvlccore.dll.'
           }
+          if (-not (Test-Path (Join-Path $dest 'plugins'))) {
+            throw 'Bundled VLC is missing its plugins directory.'
+          }
 
       - name: Build and test PyInstaller setup payload
         shell: pwsh
@@ -226,7 +243,8 @@ jobs:
           if (Test-Path 'build') { Remove-Item 'build' -Recurse -Force }
           if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
           Get-ChildItem -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
-          python -m PyInstaller --noconfirm --clean --onedir --windowed --name 'Playlist-Studio-5.0' --add-data 'VLC;VLC' --add-data 'Source\bdix_preview.png;.' Source\playlist_studio.py
+          if (-not (Test-Path (Join-Path $env:SOURCE_ROOT 'studio.ico'))) { throw 'Generated BDIX-IPTV application icon is missing before PyInstaller.' }
+          python -m PyInstaller --noconfirm --clean --onedir --windowed --name 'Playlist-Studio-5.0' --icon 'studio.ico' --add-data 'VLC;VLC' --add-data 'Source\bdix_preview.png;.' Source\playlist_studio.py
           if ($LASTEXITCODE -ne 0) { throw 'PyInstaller setup payload build failed.' }
           $exe = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0\Playlist-Studio-5.0.exe'
           if (-not (Test-Path $exe)) { throw 'PyInstaller setup payload executable was not produced.' }
@@ -331,8 +349,9 @@ jobs:
             if ($LASTEXITCODE -ne 0) { throw 'Unable to create Playlist Studio v5.0.3 release.' }
           }
           gh release upload $tag 'Playlist-Studio-5.0-Setup.exe' --repo $repo --clobber
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to upload Playlist Studio v5.0.3 installer EXE.' }
           gh release upload $tag 'Playlist-Studio-5.0-Setup.zip' --repo $repo --clobber
-          if ($LASTEXITCODE -ne 0) { throw 'Unable to upload Playlist Studio v5.0.3 setup files.' }
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to upload Playlist Studio v5.0.3 setup ZIP.' }
 
       - name: Upload setup artifact
         uses: actions/upload-artifact@v4
