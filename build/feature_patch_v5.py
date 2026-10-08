@@ -38,9 +38,8 @@ if _ps5_vlc_root is not None:
     except Exception:
         pass
     _ps5_os.environ['VLC_PLUGIN_PATH']=str(_ps5_vlc_root/'plugins')
-    # Keep the VLC directory on PATH as a compatibility fallback for native dependencies.
     _ps5_os.environ['PATH']=str(_ps5_vlc_root)+_ps5_os.pathsep+_ps5_os.environ.get('PATH','')
-    # Python requires future imports to remain at the beginning of the module.
+    """
     future_matches=list(re.finditer(r'(?m)^from __future__ import .*?(?:\r?\n|$)',s))
     if future_matches:
         pos=future_matches[-1].end()
