@@ -118,7 +118,7 @@ jobs:
           $ts = Get-Content $theme -Raw
           $ss = Get-Content $studio -Raw
           foreach ($name in @('Dark','Blue','Green','Purple','Light','Classic')) {
-            if ($ts -notmatch ('"' + [regex]::Escape($name) + '"\\s*:')) { throw "Theme definition missing: $name" }
+            if ($ts -notmatch ('"' + [regex]::Escape($name) + '"\s*:')) { throw "Theme definition missing: $name" }
           }
           if ($ss -notmatch 'from theme_manager import install_theme_support') { throw 'Theme manager import is missing from playlist_studio.py.' }
           if (($ss -split 'install_theme_support\(').Count -lt 2) { throw 'Theme manager startup installation call is missing.' }
