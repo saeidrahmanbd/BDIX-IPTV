@@ -90,7 +90,7 @@ jobs:
       - name: Install build dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install Pillow openpyxl nuitka
+          python -m pip install Pillow openpyxl pyinstaller
 
       - name: Apply Playlist Studio feature and branding patch
         shell: pwsh
@@ -141,6 +141,42 @@ jobs:
           Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
           Write-Host 'Raw Python startup smoke test: PASS'
           Write-Host "Main window handle: $handle"
+
+      - name: Build and test PyInstaller setup payload
+        shell: pwsh
+        working-directory: ${{ env.SOURCE_ROOT }}
+        run: |
+          if (Test-Path 'build') { Remove-Item 'build' -Recurse -Force }
+          if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
+          Get-ChildItem -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
+          python -m PyInstaller --noconfirm --clean --onedir --windowed --name 'Playlist-Studio-5.0' --add-data 'VLC;VLC' --add-data 'Source\bdix_preview.png;.' Source\playlist_studio.py
+          if ($LASTEXITCODE -ne 0) { throw 'PyInstaller setup payload build failed.' }
+          $exe = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0\Playlist-Studio-5.0.exe'
+          if (-not (Test-Path $exe)) { throw 'PyInstaller setup payload executable was not produced.' }
+          $proc = Start-Process -FilePath $exe -WorkingDirectory (Split-Path $exe) -PassThru
+          Start-Sleep -Seconds 15
+          if ($proc.HasExited) { throw "Setup payload exited during startup with code $($proc.ExitCode)." }
+          $p = Get-Process -Id $proc.Id
+          $handle = $p.MainWindowHandle
+          if ($handle -eq 0) { Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue; throw 'Setup payload created no main window.' }
+          Add-Type @'
+          using System;
+          using System.Runtime.InteropServices;
+          public static class WindowHealth {
+            [DllImport("user32.dll", SetLastError=true)]
+            public static extern IntPtr SendMessageTimeout(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam, uint fuFlags, uint uTimeout, out IntPtr lpdwResult);
+          }
+          '@
+          $result=[IntPtr]::Zero
+          $response=[WindowHealth]::SendMessageTimeout($handle,0x0000,[IntPtr]::Zero,[IntPtr]::Zero,0x0002,3000,[ref]$result)
+          if ($response -eq [IntPtr]::Zero) {
+            $trace=Join-Path $env:TEMP 'PlaylistStudio-stacktrace.log'
+            if(Test-Path $trace){Write-Host '--- startup stack trace ---';Get-Content $trace -Raw|Write-Host}
+            Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+            throw "PyInstaller setup payload window is NOT RESPONDING. Title: $($p.MainWindowTitle)"
+          }
+          Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+          Write-Host 'PyInstaller setup payload startup test: PASS (responsive)'
 
       - name: Verify Xtream path behavior
         shell: pwsh
@@ -222,23 +258,45 @@ jobs:
           Write-Host 'Nuitka standalone startup smoke test: PASS'
           Write-Host "Main window handle: $handle"
 
-      - name: Build Nuitka Windows installer
+      - name: Build Windows setup installer
         shell: pwsh
         working-directory: ${{ env.SOURCE_ROOT }}
         run: |
-          if (Test-Path 'dist-nuitka-installer') { Remove-Item 'dist-nuitka-installer' -Recurse -Force }
-          python -m nuitka --mode=standalone --windows-create-installer --windows-console-mode=disable --windows-icon-from-ico=studio.ico --include-data-dir=VLC=VLC --include-data-file=Source\bdix_preview.png=bdix_preview.png --output-dir=dist-nuitka-installer --output-filename=Playlist-Studio-5.0.exe Source\playlist_studio.py
-          if ($LASTEXITCODE -ne 0) { throw 'Nuitka installer build failed.' }
-          $setup = Get-ChildItem -Path 'dist-nuitka-installer' -Recurse -Filter '*-setup.exe' -File | Select-Object -First 1
-          if (-not $setup) { throw 'Nuitka did not produce a setup executable.' }
-          $size = $setup.Length
-          if ($size -lt 10000000) { throw "Setup executable is unexpectedly small: $size bytes" }
-          $hash = (Get-FileHash -Algorithm SHA256 $setup.FullName).Hash.ToLower()
-          Copy-Item $setup.FullName (Join-Path $env:GITHUB_WORKSPACE 'Playlist-Studio-5.0-Setup.exe') -Force
-          "SETUP_SIZE=$size" | Out-File -FilePath $env:GITHUB_ENV -Append
-          "SETUP_SHA256=$hash" | Out-File -FilePath $env:GITHUB_ENV -Append
-          "Setup: $size bytes"
-          "SHA-256: $hash"
+          $iss = Join-Path $env:SOURCE_ROOT 'Playlist-Studio-5.0.iss'
+          @"
+          [Setup]
+          AppName=Playlist Studio 5.0
+          AppVersion=5.0.3
+          AppPublisher=BDIX-IPTV
+          DefaultDirName={autopf}\Playlist Studio 5.0
+          DefaultGroupName=Playlist Studio 5.0
+          OutputDir=$env:GITHUB_WORKSPACE
+          OutputBaseFilename=Playlist-Studio-5.0-Setup
+          Compression=lzma2
+          SolidCompression=yes
+          ArchitecturesInstallIn64BitMode=x64compatible
+          SetupIconFile=$env:SOURCE_ROOT\studio.ico
+          UninstallDisplayIcon={app}\Playlist-Studio-5.0.exe
+          [Files]
+          Source: "$env:SOURCE_ROOT\dist\Playlist-Studio-5.0\*"; DestDir: "{app}"; Flags: recursesubdirs createallsubdirs ignoreversion
+          [Icons]
+          Name: "{group}\Playlist Studio 5.0"; Filename: "{app}\Playlist-Studio-5.0.exe"
+          Name: "{commondesktop}\Playlist Studio 5.0"; Filename: "{app}\Playlist-Studio-5.0.exe"
+          [Run]
+          Filename: "{app}\Playlist-Studio-5.0.exe"; Description: "Launch Playlist Studio 5.0"; Flags: nowait postinstall skipifsilent
+          "@ | Set-Content -Path $iss -Encoding UTF8
+          $iscc='C:\Program Files (x86)\Inno Setup 6\ISCC.exe'
+          if(-not (Test-Path $iscc)){throw 'Inno Setup 6 was not found on the Windows runner.'}
+          & $iscc $iss
+          if($LASTEXITCODE -ne 0){throw 'Inno Setup compilation failed.'}
+          $setup=Join-Path $env:GITHUB_WORKSPACE 'Playlist-Studio-5.0-Setup.exe'
+          if(-not(Test-Path $setup)){throw 'Setup executable was not produced.'}
+          $size=(Get-Item $setup).Length
+          $hash=(Get-FileHash -Algorithm SHA256 $setup).Hash.ToLower()
+          "SETUP_SIZE=$size"|Out-File $env:GITHUB_ENV -Append
+          "SETUP_SHA256=$hash"|Out-File $env:GITHUB_ENV -Append
+          Write-Host "Setup: $size bytes"
+          Write-Host "SHA-256: $hash"
 
       - name: Package setup download
         shell: pwsh
