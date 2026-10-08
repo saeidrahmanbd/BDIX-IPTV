@@ -1,4 +1,4 @@
-name: Deploy BDIX-IPTV Xtream Gateway
+name: Deploy Xtream Gateway
 
 on:
   push:
