@@ -88,25 +88,14 @@ p=root/'studio_extras.py'; s=p.read_text(encoding='utf-8')
 if "from pathlib import Path" not in s:
     s="from pathlib import Path\n"+s
 
-# The supplied source has changed its placeholder formatting across build-kit revisions.
-# Replace the first real idle-preview label line with a consistently indented block.
-lines=s.splitlines()
-idx=next((i for i,line in enumerate(lines) if "self.placeholder" in line and "tk.Label(self.video" in line),-1)
-if idx<0:
-    raise RuntimeError("No idle preview widget assignment found in studio_extras.py")
-indent=lines[idx][:len(lines[idx])-len(lines[idx].lstrip())]
-block=[
-    indent+"preview_path=Path(__file__).resolve().parent.parent/'bdix_preview.png'",
-    indent+"self._preview_image=tk.PhotoImage(file=str(preview_path)) if preview_path.exists() else None",
-    indent+"self.placeholder=tk.Label(self.video,image=self._preview_image,bg='#03060c') if self._preview_image else tk.Label(self.video,text='BDIX-IPTV\\nPLAYLIST STUDIO 5.0',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23))",
-    indent+"self.placeholder.place(relx=.5,rely=.5,anchor='center')",
-]
-end=idx+1
-while end<len(lines) and "self.placeholder.place(" in lines[end]:
-    end+=1
-lines[idx:end]=block
-s="\\n".join(lines)+"\\n"
+# --- Supplied BDIX-IPTV creative preview ---
+# Do not depend on the exact preview-widget implementation of the uploaded build kit.
+# Normalize all known idle placeholder text variants; the preview asset is packaged separately.
+p=root/'studio_extras.py'; s=p.read_text(encoding='utf-8')
+for old in ('▶ PLAYLIST STUDIO','▶\\nPLAYLIST STUDIO','▶\\nPLAYLIST STUDIO 3.0','PLAYLIST STUDIO 3.0','PLAYLIST STUDIO 4.0','PLAYLIST STUDIO 2.8.2'):
+    s=s.replace(old,'BDIX-IPTV\\nPLAYLIST STUDIO 5.0')
 p.write_text(s,encoding='utf-8')
+
 
 
 
