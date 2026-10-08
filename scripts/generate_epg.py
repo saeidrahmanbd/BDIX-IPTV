@@ -12,7 +12,7 @@ from pathlib import Path
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 MAPPING = Path("reports/epg-india-channel-mapping.csv")
-OUTPUT = Path("epg.xml")
+OUTPUT = Path("epg/epg.xml")
 
 SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
