@@ -90,7 +90,7 @@ jobs:
       - name: Install build dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install Pillow openpyxl pyinstaller
+          python -m pip install Pillow openpyxl pyinstaller nuitka
 
       - name: Apply Playlist Studio feature and branding patch
         shell: pwsh
