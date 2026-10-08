@@ -12,11 +12,15 @@ def repl(path, old, new, label, count=1):
 
 # --- Core window/version branding ---
 repl('playlist_studio.py',"self.title('Playlist Studio')","self.title('BDIX-IPTV / Playlist Studio 5.0')",'window title')
+# Normalize any legacy 3.0/4.0 labels that are part of the supplied source UI.
+p=root/'playlist_studio.py'; s=p.read_text(encoding='utf-8')
+s=s.replace('Playlist Studio 3.0','BDIX-IPTV / Playlist Studio 5.0').replace('Playlist Studio 4.0','BDIX-IPTV / Playlist Studio 5.0')
+p.write_text(s,encoding='utf-8')
 repl('playlist_studio.py',"ttk.Label(body,text='Xtream Codes login'","ttk.Label(body,text='Xtream Codes login'",'Xtream anchor',1)
 # Update About/version strings without touching functionality.
 p=root/'studio_extras.py'; s=p.read_text(encoding='utf-8')
 s=s.replace('PLAYLIST STUDIO  /  2.8.2','BDIX-IPTV  /  PLAYLIST STUDIO 5.0')
-s=s.replace('Scan centre · Playlist Studio','Scan centre · BDIX-IPTV / Playlist Studio 5.0')
+s=s.replace('Scan centre · Playlist Studio','Scan centre · BDIX-IPTV / Playlist Studio 5.0').replace('Playlist Studio 3.0','BDIX-IPTV / Playlist Studio 5.0').replace('Playlist Studio 4.0','BDIX-IPTV / Playlist Studio 5.0')
 p.write_text(s,encoding='utf-8')
 
 # --- Multi-category selection + per-view scroll memory ---
