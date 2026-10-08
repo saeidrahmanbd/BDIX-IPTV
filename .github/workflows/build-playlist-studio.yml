@@ -1,5 +1,5 @@
 name: Build Playlist Studio 5.0 Portable
-# BDIX-IPTV feature build v5.0.3 - native startup crash isolated
+# BDIX-IPTV feature build v5.0.3 - startup native integrations isolated
 
 on:
   workflow_dispatch:
