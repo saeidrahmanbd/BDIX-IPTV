@@ -134,3 +134,44 @@ p.write_text(_src,encoding='utf-8')
 
 print('v5.0 feature patch completed')
 
+
+# --- Install runtime theme selector into the extracted build ---
+import os, shutil
+tm_src = Path(os.environ.get("GITHUB_WORKSPACE", root.parent.parent)) / "build" / "theme_manager.py"
+tm_dst = root / "theme_manager.py"
+if not tm_src.exists():
+    raise RuntimeError("build/theme_manager.py was not found")
+shutil.copyfile(tm_src, tm_dst)
+
+p = root / "playlist_studio.py"
+s = p.read_text(encoding="utf-8")
+if "from theme_manager import install_theme_support" not in s:
+    s = "from theme_manager import install_theme_support\n" + s
+
+# Install immediately before the application's final mainloop call.
+mainloops = list(re.finditer(r"(?m)^(\\s*)([A-Za-z_]\\w*)\\.mainloop\\(\\)\\s*$", s))
+if mainloops:
+    m = mainloops[-1]
+    indent, var = m.group(1), m.group(2)
+    call = f"{indent}install_theme_support({var})\\n{indent}{var}.mainloop()"
+    s = s[:m.start()] + call + s[m.end():]
+elif "install_theme_support(" not in s:
+    # Fallback for sources that start the loop through a named root object.
+    cls = re.search(r"(?m)^class\\s+([A-Za-z_]\\w*)\\s*\\([^)]*(?:Tk|CTk)[^)]*\\):", s)
+    if cls:
+        name = cls.group(1)
+        init = re.search(rf"(?ms)^    def __init__\\([^\\n]*\\):.*?(?=^    def |\\Z)", s[cls.end():])
+        if init:
+            block = init.group(0)
+            if "install_theme_support(" not in block:
+                lines = block.splitlines(True)
+                for i, line in enumerate(lines):
+                    if i > 0 and line.strip() and not line.lstrip().startswith("#"):
+                        lines.insert(i, "        install_theme_support(self)\\n")
+                        break
+                block = "".join(lines)
+                s = s[:cls.end()] + s[cls.end():].replace(init.group(0), block, 1)
+    if "install_theme_support(" not in s:
+        raise RuntimeError("Could not locate Playlist Studio application startup for theme installation.")
+p.write_text(s, encoding="utf-8")
+print("Theme system installed: Dark, Blue, Green, Purple, Light, Classic")
