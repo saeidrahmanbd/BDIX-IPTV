@@ -184,7 +184,7 @@ jobs:
           if (Test-Path $output) { Remove-Item $output -Recurse -Force }
           New-Item -ItemType Directory -Path $output | Out-Null
           @'
-          #define MyAppName "BDIX-IPTV Playlist Studio"
+          #define MyAppName "Playlist Studio 5.0"
           #define MyAppVersion "5.0.0"
           #define MyAppPublisher "BDIX-IPTV"
           #define MyAppExeName "Playlist-Studio-5.0-Fluent-Dark.exe"
@@ -194,9 +194,9 @@ jobs:
           AppVersion={#MyAppVersion}
           AppPublisher={#MyAppPublisher}
           DefaultDirName={autopf}\BDIX-IPTV\Playlist Studio
-          DefaultGroupName=BDIX-IPTV\Playlist Studio
+          DefaultGroupName=Playlist Studio 5.0
           OutputDir=__OUTPUT__
-          OutputBaseFilename=BDIX-IPTV-Playlist-Studio-5.0-Setup
+          OutputBaseFilename=Playlist-Studio-5.0-Setup
           SetupIconFile=__ICON__
           Compression=lzma2
           SolidCompression=yes
@@ -206,10 +206,10 @@ jobs:
           [Files]
           Source: "__SOURCE__\*"; DestDir: "{app}"; Flags: recursesubdirs ignoreversion
           [Icons]
-          Name: "{group}\BDIX-IPTV Playlist Studio"; Filename: "{app}\{#MyAppExeName}"
-          Name: "{commondesktop}\BDIX-IPTV Playlist Studio"; Filename: "{app}\{#MyAppExeName}"
+          Name: "{group}\Playlist Studio 5.0"; Filename: "{app}\{#MyAppExeName}"
+          Name: "{commondesktop}\Playlist Studio 5.0"; Filename: "{app}\{#MyAppExeName}"
           [Run]
-          Filename: "{app}\{#MyAppExeName}"; Description: "Launch BDIX-IPTV Playlist Studio"; Flags: nowait postinstall skipifsilent
+          Filename: "{app}\{#MyAppExeName}"; Description: "Launch Playlist Studio 5.0"; Flags: nowait postinstall skipifsilent
           '@ | Set-Content -Path $iss -Encoding UTF8
           $text = Get-Content $iss -Raw
           $text = $text.Replace('__OUTPUT__',$output).Replace('__ICON__',(Join-Path $env:SOURCE_ROOT 'studio.ico')).Replace('__SOURCE__',$source)
@@ -218,15 +218,15 @@ jobs:
           if (-not (Test-Path $iscc)) { throw 'Inno Setup compiler is not available on the GitHub runner.' }
           & $iscc $iss
           if ($LASTEXITCODE -ne 0) { throw 'Inno Setup compilation failed.' }
-          $setup = Join-Path $output 'BDIX-IPTV-Playlist-Studio-5.0-Setup.exe'
+          $setup = Join-Path $output 'Playlist-Studio-5.0-Setup.exe'
           if (-not (Test-Path $setup)) { throw 'Installer was not produced.' }
           $setupHash = (Get-FileHash -Algorithm SHA256 $setup).Hash.ToLower()
-          "BDIX-IPTV Playlist Studio 5.0`nStandard Windows installer.`nSHA-256:`n$setupHash" | Set-Content (Join-Path $output 'SHA256.txt') -Encoding UTF8
+          "Playlist Studio 5.0`nStandard Windows installer.`nSHA-256:`n$setupHash" | Set-Content (Join-Path $output 'SHA256.txt') -Encoding UTF8
 
       - name: Upload Windows installer
         uses: actions/upload-artifact@v4
         with:
-          name: BDIX-IPTV-Playlist-Studio-5.0-Setup
+          name: Playlist-Studio-5.0-Setup
           path: ${{ github.workspace }}\installer-output\*
           if-no-files-found: error
           retention-days: 30
