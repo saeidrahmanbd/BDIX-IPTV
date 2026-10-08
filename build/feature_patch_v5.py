@@ -203,23 +203,6 @@ cls=cls[:im.start()]+init+cls[im.end():]
 pos=cls.find('    def ',im.start()+len(init))
 if pos<0: raise RuntimeError('Studio method boundary not found')
 helper="""    def _finish_startup(self):
-        try:
-            self.setup_style()
-            self.build()
-            self.bind_keys()
-            # Optional native integrations are disabled during startup.
-            # They were causing a Windows access-violation in the diagnostic EXE.
-            self.row_logos=None
-            self.file_drops=None
-            self.refresh()
-        except Exception as exc:
-            try:
-                import os,traceback
-                with open(os.path.join(os.environ.get('TEMP','.'),'PlaylistStudio-startup.log'),'a',encoding='utf-8') as fh:
-                    fh.write('STARTUP ERROR: '+repr(exc)+'\\n'+traceback.format_exc()+'\\n')
-            except Exception:
-                pass
-            raise
-
+        return
 """
 cls=cls[:pos]+helper+cls[pos:]
