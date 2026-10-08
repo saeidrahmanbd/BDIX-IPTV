@@ -139,13 +139,29 @@ jobs:
             Write-Host $err
             throw "Playlist Studio exited during the startup smoke test with code $($proc.ExitCode)."
           }
-          $handle = (Get-Process -Id $proc.Id).MainWindowHandle
+          $p = Get-Process -Id $proc.Id
+          $handle = $p.MainWindowHandle
           if ($handle -eq 0) {
             Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
             throw 'Playlist Studio process stayed alive but did not create a main window.'
           }
+          Add-Type @'
+using System;
+using System.Runtime.InteropServices;
+public static class WindowHealth {
+  [DllImport("user32.dll", SetLastError=true)]
+  public static extern IntPtr SendMessageTimeout(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam, uint fuFlags, uint uTimeout, out IntPtr lpdwResult);
+}
+'@
+          $result = [IntPtr]::Zero
+          $response = [WindowHealth]::SendMessageTimeout($handle, 0x0000, [IntPtr]::Zero, [IntPtr]::Zero, 0x0002, 3000, [ref]$result)
+          if ($response -eq [IntPtr]::Zero) {
+            $title = $p.MainWindowTitle
+            Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+            throw "Playlist Studio created a window but it is NOT RESPONDING. Title: $title"
+          }
           Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
-          Write-Host 'Playlist Studio diagnostic startup smoke test: PASS'
+          Write-Host 'Playlist Studio diagnostic startup smoke test: PASS (responsive)'
           Write-Host "Main window handle: $handle"
 
       - name: Verify Xtream path behavior
