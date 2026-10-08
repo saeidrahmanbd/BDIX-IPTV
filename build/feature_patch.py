@@ -70,7 +70,7 @@ s=s.replace("if not self.active_group or not self.resolve_form():return\n       
 s=s.replace("self.bind('<Return>',lambda e:self.accept());self.bind('<Escape>',lambda e:self.destroy());self.grab_set();self.combo.focus_set();parent.wait_window(self)",
             "self.bind('<Return>',lambda e:self.accept());self.bind('<Escape>',lambda e:self.destroy());self.grab_set();self.update_idletasks();parent.update_idletasks();w,h=self.winfo_width(),self.winfo_height();px,py=parent.winfo_rootx(),parent.winfo_rooty();pw,ph=parent.winfo_width(),parent.winfo_height();self.geometry(f'{w}x{h}+{px+(pw-w)//2}+{py+(ph-h)//2}');self.combo.focus_set();parent.wait_window(self)",1)
 # Make Xtream import visibly preserve/use the full path.
-            "c=XtreamConfig(**{k:v.get().strip() for k,v in fields.items()});base,data=xtream_login(c);self.xtream_cfg=c;status.set(f"Authenticated: {data.get('user_info',{}).get('status','unknown')} — {base}")",1)
+
 p.write_text(s,encoding='utf-8')
 
 # --- Table sizing / visible EPG + Format columns / larger inspector ---
