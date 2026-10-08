@@ -11,16 +11,22 @@ def repl(path, old, new, label, count=1):
     p.write_text(s,encoding='utf-8')
 
 # --- Core window/version branding ---
-repl('playlist_studio.py',"self.title('Playlist Studio')","self.title('BDIX-IPTV / Playlist Studio 4.0')",'window title')
+repl('playlist_studio.py',"self.title('Playlist Studio')","self.title('BDIX-IPTV / Playlist Studio 5.0')",'window title')
 repl('playlist_studio.py',"ttk.Label(body,text='Xtream Codes login'","ttk.Label(body,text='Xtream Codes login'",'Xtream anchor',1)
 # Update About/version strings without touching functionality.
 p=root/'studio_extras.py'; s=p.read_text(encoding='utf-8')
-s=s.replace('PLAYLIST STUDIO  /  2.8.2','BDIX-IPTV  /  PLAYLIST STUDIO 4.0')
-s=s.replace('Scan centre · Playlist Studio','Scan centre · BDIX-IPTV / Playlist Studio 4.0')
+s=s.replace('PLAYLIST STUDIO  /  2.8.2','BDIX-IPTV  /  PLAYLIST STUDIO 5.0')
+s=s.replace('Scan centre · Playlist Studio','Scan centre · BDIX-IPTV / Playlist Studio 5.0')
 p.write_text(s,encoding='utf-8')
 
 # --- Multi-category selection + per-view scroll memory ---
 p=root/'playlist_studio.py'; s=p.read_text(encoding='utf-8')
+# Enable native Ctrl-click multi-selection in the category tree.
+def enable_extended_tree(text):
+    return re.sub(r"(?m)^(\s*self\.groups\s*=\s*ttk\.Treeview\([^\n]*?)(\))$",
+                  lambda m: m.group(1) if "selectmode=" in m.group(1) else m.group(1)[:-1] + ",selectmode='extended'" + m.group(2),
+                  text, count=1)
+s=enable_extended_tree(s)
 s=s.replace("self.saved=self.doc.fingerprint();self.current=None;self.active_group=None;self.form_dirty=False;",
             "self.saved=self.doc.fingerprint();self.current=None;self.active_group=None;self.active_groups=[];self.category_scroll={};self.form_dirty=False;",1)
 s=s.replace("if self.active_group not in count:self.active_group=None\n            self.groups.selection_set(self.active_group or 'ALL');",
@@ -74,11 +80,29 @@ s=s.replace("details=ttk.Frame(app.panes,padding=12,width=430,style='Card.TFrame
             "details=ttk.Frame(app.panes,padding=12,width=500,style='Card.TFrame');app.panes.add(details,weight=2)")
 p.write_text(s,encoding='utf-8')
 
-# --- Larger preview + BDIX placeholder/preview ---
+# --- Supplied BDIX-IPTV creative preview ---
+p=root/'studio_extras.py'; s=p.read_text(encoding='utf-8')
+if "from pathlib import Path" not in s:
+    s="from pathlib import Path\n"+s
+old_placeholder="self.placeholder=tk.Label(self.video,text='BDIX-IPTV\\nPLAYLIST STUDIO 5.0',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23));self.placeholder.place(relx=.5,rely=.5,anchor='center')"
+new_placeholder="""preview_path=Path(__file__).resolve().parent.parent/'bdix_preview.png'
+        self._preview_image=tk.PhotoImage(file=str(preview_path)) if preview_path.exists() else None
+        self.placeholder=tk.Label(self.video,image=self._preview_image,bg='#03060c') if self._preview_image else tk.Label(self.video,text='BDIX-IPTV\\nPLAYLIST STUDIO 5.0',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23))
+        self.placeholder.place(relx=.5,rely=.5,anchor='center')"""
+if old_placeholder in s:
+    s=s.replace(old_placeholder,new_placeholder,1)
+else:
+    # Handle the original unpatched placeholder as well.
+    old2="self.placeholder=tk.Label(self.video,text='▶\\nPLAYLIST STUDIO',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23));self.placeholder.place(relx=.5,rely=.5,anchor='center')"
+    if old2 in s:
+        s=s.replace(old2,new_placeholder,1)
+    else:
+        raise RuntimeError("Idle preview placeholder was not found")
+p.write_text(s,encoding='utf-8')
 p=root/'studio_extras.py'; s=p.read_text(encoding='utf-8')
 s=s.replace("height=280 if compact else 320","height=360 if compact else 400",1)
 s=s.replace("self.placeholder=tk.Label(self.video,text='▶\nPLAYLIST STUDIO',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23));self.placeholder.place(relx=.5,rely=.5,anchor='center')",
-            "self.placeholder=tk.Label(self.video,text='BDIX-IPTV\nPLAYLIST STUDIO 4.0',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23));self.placeholder.place(relx=.5,rely=.5,anchor='center')",1)
+            "self.placeholder=tk.Label(self.video,text='BDIX-IPTV\nPLAYLIST STUDIO 5.0',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23));self.placeholder.place(relx=.5,rely=.5,anchor='center')",1)
 s=s.replace("self.video.bind('<Configure>',lambda e:self.update_view())",
             "self.video.bind('<Configure>',lambda e:self.update_view())",1)
 s=s.replace("if item[0]=='fatal':self.note.configure(text=item[1]);self.started=False",
@@ -91,4 +115,4 @@ s=s.replace("def stop(self):self.commands.put(('stop',None));self.note.configure
             "def stop(self):self.commands.put(('stop',None));self.note.configure(text='Stopped.');self.paused=False;self.placeholder.place(relx=.5,rely=.5,anchor='center')",1)
 p.write_text(s,encoding='utf-8')
 
-print('v4.0 feature patch completed')
+print('v5.0 feature patch completed')
