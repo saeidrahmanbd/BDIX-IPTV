@@ -162,21 +162,42 @@ if not found: raise RuntimeError("ChoiceDialog class not found")
 
 print("Playlist Studio 5.0.3 UI patch applied successfully.")
 
-# Defer optional startup integrations until Tk has entered its event loop.
+# Defer the entire heavy Studio startup until Tk has entered its event loop.
+# This is the critical fix for the white "(Not Responding)" window.
 p,s=read('playlist_studio.py')
 cm=re.search(r'(?ms)^class Studio\b.*?(?=^class \w+|\Z)',s)
 if not cm: raise RuntimeError('Studio class not found for startup deferral')
 cls=cm.group(0)
-if 'self.row_logos=RowLogos(self)' in cls:
-    cls=cls.replace('self.row_logos=RowLogos(self)','self.row_logos=None;self.after(0,lambda:setattr(self,"row_logos",RowLogos(self)))',1)
-if 'self.file_drops=FileDrops(self)' in cls:
-    cls=cls.replace('self.file_drops=FileDrops(self)','self.file_drops=None;self.after(0,lambda:setattr(self,"file_drops",FileDrops(self)))',1)
 im=re.search(r'(?ms)^    def __init__\(self\):.*?(?=^    def \w+\()',cls)
 if not im: raise RuntimeError('Studio __init__ not found for startup deferral')
 init=im.group(0)
-if 'self.refresh()' not in init: raise RuntimeError('refresh startup call not found')
-init=init.replace('self.refresh()','self.after(0,self.refresh)',1)
-init=init.replace('self.refresh()','self.after(0,self.refresh)',1)
+if 'self.build()' not in init: raise RuntimeError('Studio build call not found')
+if 'self.bind_keys()' not in init: raise RuntimeError('Studio bind_keys call not found')
+if 'self.refresh()' not in init: raise RuntimeError('Studio refresh call not found')
+init=init.replace('self.build()','self.after_idle(self._finish_startup)',1)
+init=init.replace('self.bind_keys()','pass',1)
+init=init.replace('self.refresh()','pass',1)
+init=init.replace('self.row_logos=RowLogos(self)','self.row_logos=None',1)
+init=init.replace('self.file_drops=FileDrops(self)','self.file_drops=None',1)
 cls=cls[:im.start()]+init+cls[im.end():]
-s=s[:cm.start()]+cls+s[cm.end():]
-write(p,s)
+pos=cls.find('    def ',im.start()+len(init))
+if pos<0: raise RuntimeError('Studio method boundary not found')
+helper="""    def _finish_startup(self):
+        try:
+            self.build()
+            self.bind_keys()
+            self.row_logos=RowLogos(self)
+            self.file_drops=FileDrops(self)
+            self.refresh()
+        except Exception as exc:
+            try:
+                import os,traceback
+                with open(os.path.join(os.environ.get('TEMP','.'),'PlaylistStudio-startup.log'),'a',encoding='utf-8') as fh:
+                    fh.write('STARTUP ERROR: '+repr(exc)+'\\n'+traceback.format_exc()+'\\n')
+            except Exception:
+                pass
+            raise
+
+"""
+cls=cls[:pos]+helper+cls[pos:]
+s=s[:i]+section;
