@@ -19,10 +19,22 @@ for rel in ('playlist_studio.py','studio_extras.py','hybrid_ui.py'):
     s=s.replace('PLAYLIST STUDIO  /  3.0','BDIX-IPTV  /  PLAYLIST STUDIO 5.0')
     write(p,s)
 
-# PyInstaller/VLC bootstrap: make the bundled native VLC runtime discoverable before python-vlc is imported.
+# PyInstaller/VLC bootstrap: normalize any earlier copy, then inject exactly one
+# bootstrap after future imports so bundled native VLC is discoverable before python-vlc.
 p,s=read('playlist_studio.py')
-if '_ps5_vlc_root' not in s:
-    bootstrap="""import os as _ps5_os
+
+# Remove any previously injected complete bootstrap from the uploaded base source.
+legacy_bootstrap=re.compile(
+    r"(?ms)^import os as _ps5_os\r?\n.*?^    _ps5_os\.environ\['PATH'\].*?(?:\r?\n|$)"
+)
+s=legacy_bootstrap.sub('',s)
+
+# Remove orphaned marker lines left by an older partial patch.
+s=re.sub(r"(?m)^.*_ps5_vlc_candidates.*(?:\r?\n|$)",'',s)
+s=re.sub(r"(?m)^.*_ps5_vlc_root.*(?:\r?\n|$)",'',s)
+s=re.sub(r"(?m)^.*_ps5_bundle_root.*(?:\r?\n|$)",'',s)
+
+bootstrap="""import os as _ps5_os
 import sys as _ps5_sys
 from pathlib import Path as _ps5_Path
 _ps5_bundle_root=_ps5_Path(getattr(_ps5_sys,'_MEIPASS',_ps5_Path(__file__).resolve().parent))
@@ -41,12 +53,12 @@ if _ps5_vlc_root is not None:
     _ps5_os.environ['VLC_PLUGIN_PATH']=str(_ps5_vlc_root/'plugins')
     _ps5_os.environ['PATH']=str(_ps5_vlc_root)+_ps5_os.pathsep+_ps5_os.environ.get('PATH','')
     """
-    future_matches=list(re.finditer(r'(?m)^from __future__ import .*?(?:\r?\n|$)',s))
-    if future_matches:
-        pos=future_matches[-1].end()
-        s=s[:pos]+bootstrap+s[pos:]
-    else:
-        s=bootstrap+s
+future_matches=list(re.finditer(r'(?m)^from __future__ import .*?(?:\r?\n|$)',s))
+if future_matches:
+    pos=future_matches[-1].end()
+    s=s[:pos]+bootstrap+s[pos:]
+else:
+    s=bootstrap+s
 write(p,s)
 
 # Main application state: multiple categories + remembered table scroll.
