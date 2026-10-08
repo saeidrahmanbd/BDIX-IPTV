@@ -5,7 +5,7 @@
 
 # 📺 Saeid Rahman — BDIX IPTV Playlist
 
-A curated IPTV playlist focused on **Bangladeshi channels, Indian channels, and selected international content** — organized for clean browsing, reliable streams, accurate metadata, and useful backups.
+A curated IPTV playlist focused on **Bangladeshi channels, Indian channels, and selected international content** — organized for clean browsing, consistent metadata, reliable stream references, and practical backups.
 
 ## 📂 Playlist
 
@@ -15,48 +15,58 @@ Compatible with **XCIPTV** and other M3U-compatible players.
 
 ## 📥 Download Center
 
-Everything visitors commonly need, in one place:
-
 - 📺 **[Main M3U Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)**
-- 🖥️ **[Playlist Studio](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest)** — latest Windows release
+- 🖥️ **[Playlist Studio v5.0](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest)** — Windows playlist manager, editor & player
+- 🛠️ **[Playlist Studio Build Kit](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest)** — Windows build package
 - 🛜 **[Xtream Codes](xtream/README.md)** — Xtream Gateway / XCIPTV
 - 📄 **[EPG Coverage](reports/epg-coverage.md)** — EPG status and coverage
-- ⚙️ **[Sample Configuration](examples/sample-config.md)**
 - 📚 **[Documentation](docs/README.md)**
 
 **[→ Open the full Download Center](DOWNLOADS.md)**
 
-## 🖥️ Playlist Studio 3.0
+## 🖥️ Playlist Studio v5.0
 
-**Playlist Studio 3.0** is the Windows companion application for managing, editing, scanning, and playing IPTV playlists.
+**Playlist Studio 5.0** is the Windows companion application for managing, editing, organizing, testing, and playing M3U/M3U8 playlists from a single workspace.
 
-### ✨ Highlights
+### ✨ Key Features
 
-- M3U playlist editing and organization
-- Local M3U and M3U URL import
-- IPTV stream playback
+- M3U / M3U8 playlist management
+- Channel and category organization
+- Channel information, logo, EPG and stream URL editing
+- Multi-channel and multi-category selection
+- Duplicate channel and stream detection
+- Built-in video playback
+- Stream scanning and status checking
 - Xtream Codes support
-- Stalker Portal / MAC support
-- Stream scanning and verification
-- EPG and channel-logo management
-- Channel metadata editing
+- MAC / Stalker Portal support
+- Multiple interface themes
+- Import playlists from files or URLs
 - Save / Save As
-- Fullscreen playback
-- Excel reporting
-- Portable single-file Windows executable
+- GitHub integration
 
-### 🎨 Fluent Dark Interface
+### 🖥️ Program Glimpse
 
-Playlist Studio 3.0 uses a modern **Fluent Dark** interface designed to keep playlist management, playback, channel metadata, and stream testing in one practical workspace.
-
-![Playlist Studio 3.0 — Fluent Dark Interface](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/playlist-studio-3.0-portable-build/Playlist%20Studio%203.0.png)
+![Playlist Studio 5.0](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/assets/Playlist%20Studio%205.0.png)
 
 ### 📥 Download
 
-- **[Download Playlist Studio 3.0](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest)**
-- **[View all releases](https://github.com/saeidrahmanbd/BDIX-IPTV/releases)**
+**[⬇️ Download Playlist Studio 5.0 Portable](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/download/v5.0.0/Playlist-Studio-5.0.Portable.exe)**
 
-The Windows release is **portable**. Extract the ZIP and run Playlist-Studio-3.0-Fluent-Dark.exe. No Python or separate VLC installation is required.
+**[📦 Download Windows Build Kit](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/download/v5.0.0/Playlist-Studio-5.0-Windows-Build-Kit-Final.zip)**
+
+The supplied application is **portable** and requires no traditional installation.
+
+### 🛠️ Build from the Windows Build Kit
+
+1. Download `Playlist-Studio-5.0-Windows-Build-Kit-Final.zip`.
+2. Extract the ZIP file.
+3. Open the extracted folder.
+4. Run **`BUILD-Windows.cmd`**.
+5. Wait for the build process to finish.
+6. The generated application will be available in the main folder and `dist` folder.
+7. Run **`Playlist-Studio-5.0.exe`**.
+
+See **`Readme.txt`** inside the build kit for detailed instructions.
 
 ## 📊 Project Status
 
@@ -69,25 +79,15 @@ The repository is maintained with automated quality checks:
 | 📡 Stream Health | Automated checks |
 | 📄 EPG | Coverage monitored |
 | 🧹 Playlist Audit | Automated |
-| 📝 Changelog | Automated |
+| 📝 Maintenance Reports | Automated |
 
 **[→ Live Update Report](reports/Update%20Report.md)**
 
-## 🗂️ Organization
+## 🗂️ Playlist Organization
 
-- 🇧🇩 Bangladesh
-- 🇮🇳 India — grouped by language/region
-- 🎬 Movies
-- 🎵 Music
-- 📰 News
-- ⚽ Sports
-- 🧒 Kids
-- 🌿 Documentary & Wildlife
-- ☪️ Religious
-- 🌍 Selected International
-- 🔁 Backup Streams
+The playlist is organized into country, language, content, and backup groups, with category order and channel identity maintained for compatible players.
 
-The playlist prioritizes **clean channel identity, consistent metadata, local logos, and practical backup streams** over simply collecting more entries.
+The project prioritizes **clean channel identity, consistent metadata, local logos, duplicate-free stream URLs, and practical backup streams** over simply collecting more entries.
 
 ## 🔧 Maintenance
 
@@ -99,32 +99,33 @@ Automated maintenance covers:
 - Logo integrity and consistency
 - EPG coverage analysis
 - Stream health monitoring
-- Automated changelog generation
+- Maintenance and quality reports
 
 Primary curated entries are protected from indiscriminate automatic changes.
 
 ## 🛡️ Protection Rules
 
-1. Duplicate stream URLs are never allowed.
-2. Existing primary streams are not silently removed.
-3. Backup streams are never deleted because a health check fails.
-4. New Channels and New Backup are separate user-controlled review queues for manual checking and sorting.
-5. Deleting a candidate from New Channels or New Backup records a persistent discovery rejection, so the same candidate does not return on the next run.
-6. To deliberately allow a rejected candidate again, remove its entry from `reports/discovery-state.json` and commit the change.
-5. Health failures become review candidates, not automatic deletion decisions.
-6. Dashboard figures are generated from the current playlist and current reports.
-7. Every maintenance run records quality metrics.
+1. Duplicate stream URLs are not allowed.
+2. Existing primary streams are protected from silent removal.
+3. Backup streams are not automatically deleted because of health failures.
+4. New Channels and New Backup remain user-controlled review queues.
+5. Health failures become review candidates rather than automatic deletion decisions.
+6. Dashboard figures are generated from the current playlist and reports.
+7. Maintenance runs record quality metrics.
 
-**[→ Stream Health Report](reports/stream-health.md) · [→ Playlist Audit](reports/playlist-audit.md) · [→ Changelog](CHANGELOG.md)**
+**[→ Stream Health Report](reports/stream-health.md) · [→ Playlist Audit](reports/playlist-audit.md)**
 
 ## 📈 Reports
 
-- [Playlist audit](reports/playlist-audit.md)
-- [Stream health](reports/stream-health.md)
-- [Maintenance report](reports/maintenance-report.md)
-- [EPG coverage](reports/epg-coverage.md)
+- [Playlist Audit](reports/playlist-audit.md)
+- [Stream Health](reports/stream-health.md)
+- [Maintenance Report](reports/maintenance-report.md)
+- [EPG Coverage](reports/epg-coverage.md)
 - [Update Report](reports/Update%20Report.md)
 
+## 📚 Documentation
+
+See the **[Documentation](docs/README.md)** section for Playlist Studio and project information.
 
 ## 📬 Support
 
