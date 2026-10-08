@@ -162,6 +162,24 @@ if not found: raise RuntimeError("ChoiceDialog class not found")
 
 print("Playlist Studio 5.0.3 UI patch applied successfully.")
 
+# Startup stack trace for the Windows diagnostic build.
+p,s=read('playlist_studio.py')
+if 'PlaylistStudio-stacktrace.log' not in s:
+    probe="import tkinter as tk"
+    if probe not in s: raise RuntimeError('Tk import anchor not found for startup tracing')
+    trace="""import faulthandler
+_ps5_trace_fh=None
+try:
+    import os
+    _ps5_trace_fh=open(os.path.join(os.environ.get('TEMP','.'),'PlaylistStudio-stacktrace.log'),'w',encoding='utf-8')
+    faulthandler.enable(_ps5_trace_fh)
+    faulthandler.dump_traceback_later(8,repeat=True,file=_ps5_trace_fh)
+except Exception:
+    pass
+"""
+    s=s.replace(probe,probe+"\\n"+trace,1)
+    write(p,s)
+
 # Defer the entire heavy Studio startup until Tk has entered its event loop.
 # This is the critical fix for the white "(Not Responding)" window.
 p,s=read('playlist_studio.py')
