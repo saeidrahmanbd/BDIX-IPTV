@@ -117,6 +117,7 @@ jobs:
         run: |
           $main = Get-Content -LiteralPath (Join-Path $env:SOURCE_ROOT 'Source\playlist_studio.py') -Raw
           $extras = Get-Content -LiteralPath (Join-Path $env:SOURCE_ROOT 'Source\studio_extras.py') -Raw
+          $ui = Get-Content -LiteralPath (Join-Path $env:SOURCE_ROOT 'Source\hybrid_ui.py') -Raw
           if (($main -split '_ps5_vlc_candidates').Count -ne 2) { throw 'Unexpected duplicate VLC bootstrap markers.' }
           if ($main -notmatch '_ps5_vlc_candidates') { throw 'VLC bootstrap was not injected.' }
           if ($main -notmatch '_ps5_Path\(__file__\)\.resolve\(\)\.parent\.parent.*/VLC') { throw 'Source-root VLC fallback was not injected.' }
@@ -125,10 +126,10 @@ jobs:
           if ($main -notmatch "active_groups=\[\]") { throw 'Multi-category state was not injected.' }
           if ($extras -notmatch 'bdix_preview\.png') { throw 'BDIX-IPTV preview integration was not injected.' }
           if ($extras -notmatch 'ImageTk\.PhotoImage') { throw 'BDIX-IPTV preview image rendering was not injected.' }
-          if ($main -notmatch "selectmode='extended'") { throw 'Ctrl+Mouse category selection was not enabled.' }
-          if ($main -notmatch "Stream URL',430,180") { throw 'Stream URL column sizing was not applied.' }
-          if ($main -notmatch "width=500,style='Card.TFrame'") { throw 'Inspector sizing was not applied.' }
-          if ($main -notmatch 'BDIX-IPTV.*Playlist Studio 5\.0') { throw 'BDIX-IPTV 5.0 branding was not applied.' }
+          if ($ui -notmatch "selectmode='extended'") { throw 'Ctrl+Mouse category selection was not enabled.' }
+          if ($ui -notmatch "Stream URL',430,180") { throw 'Stream URL column sizing was not applied.' }
+          if ($ui -notmatch "width=500,style='Card.TFrame'") { throw 'Inspector sizing was not applied.' }
+          if ($ui -notmatch 'BDIX-IPTV.*Playlist Studio 5\.0') { throw 'BDIX-IPTV 5.0 branding was not applied.' }
           if ($main -match '_finish_startup') { throw 'Startup deferral must not be present.' }
           Write-Host 'Patched-source structural checks: PASS'
 
@@ -139,6 +140,15 @@ jobs:
           if ($LASTEXITCODE -ne 0) {
             throw 'Python source compilation failed.'
           }
+          $required = @(
+            "$env:SOURCE_ROOT\Source\playlist_studio.py",
+            "$env:SOURCE_ROOT\Source\studio_extras.py",
+            "$env:SOURCE_ROOT\Source\hybrid_ui.py"
+          )
+          foreach($file in $required){
+            if(-not(Test-Path $file)){throw "Required patched source file missing: $file"}
+          }
+          Write-Host 'Required patched source files: PASS'
 
       - name: Raw Python startup smoke test
         shell: pwsh
