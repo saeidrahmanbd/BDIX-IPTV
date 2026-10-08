@@ -149,7 +149,7 @@ if "from theme_manager import install_theme_support" not in s:
     s = "from theme_manager import install_theme_support\n" + s
 
 # Install immediately before the application's final mainloop call.
-mainloops = list(re.finditer(r"(?m)^(\\s*)([A-Za-z_]\\w*)\\.mainloop\\(\\)\\s*$", s))
+mainloops = list(re.finditer(r"(?m)^(\s*)([A-Za-z_]\w*)\.mainloop\(\)\s*$", s))
 if mainloops:
     m = mainloops[-1]
     indent, var = m.group(1), m.group(2)
@@ -157,10 +157,10 @@ if mainloops:
     s = s[:m.start()] + call + s[m.end():]
 elif "install_theme_support(" not in s:
     # Fallback for sources that start the loop through a named root object.
-    cls = re.search(r"(?m)^class\\s+([A-Za-z_]\\w*)\\s*\\([^)]*(?:Tk|CTk)[^)]*\\):", s)
+    cls = re.search(r"(?m)^class\s+([A-Za-z_]\w*)\s*\([^)]*(?:Tk|CTk)[^)]*\):", s)
     if cls:
         name = cls.group(1)
-        init = re.search(rf"(?ms)^    def __init__\\([^\\n]*\\):.*?(?=^    def |\\Z)", s[cls.end():])
+        init = re.search(rf"(?ms)^    def __init__\([^\n]*\):.*?(?=^    def |\Z)", s[cls.end():])
         if init:
             block = init.group(0)
             if "install_theme_support(" not in block:
