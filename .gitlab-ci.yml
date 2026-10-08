@@ -1,0 +1,215 @@
+stages:
+  - build
+
+# Playlist Studio 5.0 — GitLab.com hosted Windows build.
+# Windows hosted runners use PowerShell and the tag below.
+variables:
+  GIT_DEPTH: "1"
+
+build-playlist-studio-5:
+  stage: build
+  tags:
+    - saas-windows-medium-amd64
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "playlist-studio-3.0-portable-build"'
+      changes:
+        - "Playlist-Studio-Fluent-Dark-v9.zip"
+        - "build/**/*"
+        - ".gitlab-ci.yml"
+    - if: '$CI_PIPELINE_SOURCE == "web"'
+    - if: '$CI_COMMIT_TAG'
+
+  script:
+    - |
+      $ErrorActionPreference = 'Stop'
+      Write-Host "=== Playlist Studio 5.0 / GitLab Windows build ==="
+
+      # Make Python 3.12 deterministic.
+      $py312ok = $false
+      if (Get-Command py -ErrorAction SilentlyContinue) {
+        try { & py -3.12 --version; $py312ok = ($LASTEXITCODE -eq 0) } catch {}
+      }
+      if (-not $py312ok) { choco install python312 --yes --no-progress }
+
+      if (-not (Test-Path 'Playlist-Studio-Fluent-Dark-v9.zip')) {
+        throw 'Playlist-Studio-Fluent-Dark-v9.zip was not found.'
+      }
+      if (Test-Path 'buildkit') { Remove-Item 'buildkit' -Recurse -Force }
+      New-Item -ItemType Directory buildkit | Out-Null
+      Expand-Archive 'Playlist-Studio-Fluent-Dark-v9.zip' buildkit -Force
+
+      $src = Get-ChildItem buildkit -Recurse -Filter playlist_studio.py -File | Select-Object -First 1
+      if (-not $src) { throw 'playlist_studio.py was not found inside the source ZIP.' }
+      $env:SOURCE_ROOT = $src.Directory.Parent.FullName
+      Write-Host "Source root: $env:SOURCE_ROOT"
+
+      # Preserve an Xtream path such as /bdix.
+      $target = Join-Path $env:SOURCE_ROOT 'Source\bdix_integration.py'
+      if (-not (Test-Path $target)) { throw "bdix_integration.py not found: $target" }
+      $text = Get-Content $target -Raw
+      $pattern = '(?ms)^def normalize_server\(server\):\r?\n.*?^def xtream_login\(cfg:XtreamConfig\):'
+      $replacement = @"
+def normalize_server(server):
+    server=server.strip()
+    if not server: raise PlaylistError('Xtream server URL is required.')
+    p=urllib.parse.urlsplit(server if '://' in server else 'http://' + server)
+    if p.scheme not in ('http','https') or not p.hostname: raise PlaylistError('Enter a valid Xtream server URL.')
+    if p.query or p.fragment: raise PlaylistError('Xtream server URL must not contain a query string or fragment.')
+    path=(p.path or '').rstrip('/')
+    return f'{p.scheme}://{p.netloc}{path}'
+
+def xtream_login(cfg:XtreamConfig):
+"@
+      $patched = [regex]::Replace($text, $pattern, $replacement, 1)
+      if ($patched -eq $text) { throw 'Xtream normalize_server patch did not match.' }
+      Set-Content $target $patched -Encoding UTF8
+
+      # Build dependencies.
+      & py -3.12 -m pip install --upgrade pip
+      if ($LASTEXITCODE -ne 0) { throw 'pip upgrade failed.' }
+      & py -3.12 -m pip install Pillow openpyxl pyinstaller
+      if ($LASTEXITCODE -ne 0) { throw 'Python dependencies failed.' }
+
+      # v5.0 feature patch. Never continue if it fails.
+      & py -3.12 "$env:CI_PROJECT_DIR\build\feature_patch.py" "$env:SOURCE_ROOT\Source"
+      if ($LASTEXITCODE -ne 0) { throw 'Playlist Studio feature patch failed.' }
+      & py -3.12 -m py_compile "$env:CI_PROJECT_DIR\build\feature_patch.py"
+      if ($LASTEXITCODE -ne 0) { throw 'feature_patch.py syntax validation failed.' }
+
+      & py -3.12 "$env:CI_PROJECT_DIR\build\make_brand_assets.py" "$env:SOURCE_ROOT"
+      if ($LASTEXITCODE -ne 0) { throw 'Brand asset generation failed.' }
+
+      $preview = Join-Path $env:SOURCE_ROOT 'bdix_preview.png'
+      $icon = Join-Path $env:SOURCE_ROOT 'studio.ico'
+      if (-not (Test-Path $preview)) { throw 'BDIX-IPTV preview was not generated.' }
+      if (-not (Test-Path $icon)) { throw 'BDIX-IPTV icon was not generated.' }
+      & py -3.12 -c "from PIL import Image; Image.open(r'$preview').load(); Image.open(r'$icon').load(); print('Brand assets: PASS')"
+      if ($LASTEXITCODE -ne 0) { throw 'Brand asset validation failed.' }
+
+      # Integration verification.
+      $source = Join-Path $env:SOURCE_ROOT 'Source'
+      $studio = Join-Path $source 'playlist_studio.py'
+      $theme = Join-Path $source 'theme_manager.py'
+      if (-not (Test-Path $studio)) { throw 'playlist_studio.py missing after patch.' }
+      if (-not (Test-Path $theme)) { throw 'theme_manager.py missing after patch.' }
+      $ts = Get-Content $theme -Raw
+      $ss = Get-Content $studio -Raw
+      foreach ($name in @('Dark','Blue','Green','Purple','Light','Classic')) {
+        if ($ts -notmatch ('"' + [regex]::Escape($name) + '"\s*:')) { throw "Theme missing: $name" }
+      }
+      if ($ss -notmatch 'from theme_manager import install_theme_support') { throw 'Theme import missing.' }
+      if (($ss -split 'install_theme_support\(').Count -lt 2) { throw 'Theme startup call missing.' }
+      if ($ss -notmatch 'Playlist Studio 5\.0') { throw 'Playlist Studio 5.0 branding missing.' }
+      Write-Host 'Playlist Studio 5.0 integration verification: PASS'
+
+      & py -3.12 -m compileall -q "$env:SOURCE_ROOT\Source"
+      if ($LASTEXITCODE -ne 0) { throw 'Python source compilation failed.' }
+
+      $env:PYTHONPATH = $source
+      & py -3.12 -c "from bdix_integration import XtreamConfig, normalize_server, xtream_m3u_url; assert normalize_server('https://worker.example/bdix/') == 'https://worker.example/bdix'; assert normalize_server('https://worker.example/') == 'https://worker.example'; print(xtream_m3u_url(XtreamConfig(server='https://worker.example/bdix', username='u', password='p'))); print('Xtream path test: PASS')"
+      if ($LASTEXITCODE -ne 0) { throw 'Xtream path test failed.' }
+
+      # Bundle verified VLC 3.0.23 x64.
+      $url = 'https://download.videolan.org/pub/videolan/vlc/3.0.23/win64/vlc-3.0.23-win64.zip'
+      $expected = '992d19dbd0b8a7cde9167d2f7780b1ef6f92acc8a71acfa736101a21f35181e1'
+      $zip = Join-Path $env:CI_PROJECT_DIR 'vlc.zip'
+      $tmp = Join-Path $env:CI_PROJECT_DIR 'vlc-extract'
+      $dest = Join-Path $env:SOURCE_ROOT 'VLC'
+      Invoke-WebRequest -UseBasicParsing $url -OutFile $zip
+      if ((Get-FileHash -Algorithm SHA256 $zip).Hash.ToLower() -ne $expected) { throw 'VLC SHA-256 mismatch.' }
+      Expand-Archive $zip $tmp -Force
+      $vlcRoot = Get-ChildItem $tmp -Directory | Where-Object { Test-Path (Join-Path $_.FullName 'libvlc.dll') } | Select-Object -First 1
+      if (-not $vlcRoot) { throw 'VLC archive did not contain libvlc.dll.' }
+      New-Item -ItemType Directory $dest -Force | Out-Null
+      Copy-Item (Join-Path $vlcRoot.FullName '*') $dest -Recurse -Force
+      if (-not (Test-Path (Join-Path $dest 'libvlc.dll'))) { throw 'libvlc.dll missing.' }
+      if (-not (Test-Path (Join-Path $dest 'libvlccore.dll'))) { throw 'libvlccore.dll missing.' }
+
+      # Build Windows x64 application.
+      Remove-Item (Join-Path $env:SOURCE_ROOT 'build') -Recurse -Force -ErrorAction SilentlyContinue
+      Remove-Item (Join-Path $env:SOURCE_ROOT 'dist') -Recurse -Force -ErrorAction SilentlyContinue
+      Get-ChildItem $env:SOURCE_ROOT -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
+      Push-Location $env:SOURCE_ROOT
+      & py -3.12 -m PyInstaller --noconfirm --clean --onedir --windowed --name 'Playlist-Studio-5.0' --icon 'studio.ico' --add-data 'VLC;VLC' --add-data 'bdix_preview.png;.' Source\playlist_studio.py
+      if ($LASTEXITCODE -ne 0) { Pop-Location; throw 'PyInstaller build failed.' }
+      $app = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0'
+      $exe = Join-Path $app 'Playlist-Studio-5.0.exe'
+      if (-not (Test-Path $exe)) { Pop-Location; throw 'Playlist-Studio-5.0.exe was not produced.' }
+      $size = (Get-ChildItem $app -Recurse -File | Measure-Object Length -Sum).Sum
+      if ($size -lt 10000000) { Pop-Location; throw 'Application output is unexpectedly small.' }
+      $exeHash = (Get-FileHash -Algorithm SHA256 $exe).Hash.ToLower()
+      Pop-Location
+      Set-Content build.env "EXE_SHA256=$exeHash" -Encoding UTF8
+
+      # Install Inno Setup if the hosted image does not already have it.
+      $iscc = Get-ChildItem 'C:\Program Files (x86)' -Directory -Filter 'Inno Setup*' -ErrorAction SilentlyContinue |
+        Sort-Object FullName -Descending |
+        ForEach-Object { Join-Path $_.FullName 'ISCC.exe' } |
+        Where-Object { Test-Path $_ } | Select-Object -First 1
+      if (-not $iscc) {
+        choco install innosetup --yes --no-progress
+        $iscc = Get-ChildItem 'C:\Program Files (x86)' -Directory -Filter 'Inno Setup*' -ErrorAction SilentlyContinue |
+          Sort-Object FullName -Descending |
+          ForEach-Object { Join-Path $_.FullName 'ISCC.exe' } |
+          Where-Object { Test-Path $_ } | Select-Object -First 1
+      }
+      if (-not $iscc) { throw 'Inno Setup compiler is unavailable.' }
+
+      $iss = Join-Path $env:CI_PROJECT_DIR 'Playlist-Studio-5.0.iss'
+      $sourceDir = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0'
+      $output = Join-Path $env:CI_PROJECT_DIR 'installer-output'
+      New-Item -ItemType Directory $output -Force | Out-Null
+
+      @'
+#define MyAppName "Playlist Studio 5.0"
+#define MyAppVersion "5.0.0"
+#define MyAppPublisher "BDIX-IPTV"
+#define MyAppExeName "Playlist-Studio-5.0.exe"
+[Setup]
+AppId={{B1D1X-IPTV-PS4-2026}}
+AppName={#MyAppName}
+AppVersion={#MyAppVersion}
+AppPublisher={#MyAppPublisher}
+DefaultDirName={autopf}\BDIX-IPTV\Playlist Studio
+DefaultGroupName=Playlist Studio 5.0
+OutputDir=__OUTPUT__
+OutputBaseFilename=Playlist-Studio-5.0-Setup
+SetupIconFile=__ICON__
+Compression=lzma2
+SolidCompression=yes
+ArchitecturesInstallIn64BitMode=x64
+PrivilegesRequired=admin
+UninstallDisplayIcon={app}\{#MyAppExeName}
+[Files]
+Source: "__SOURCE__\*"; DestDir: "{app}"; Flags: recursesubdirs ignoreversion
+[Icons]
+Name: "{group}\Playlist Studio 5.0"; Filename: "{app}\{#MyAppExeName}"
+Name: "{commondesktop}\Playlist Studio 5.0"; Filename: "{app}\{#MyAppExeName}"
+[Run]
+Filename: "{app}\{#MyAppExeName}"; Description: "Launch Playlist Studio 5.0"; Flags: nowait postinstall skipifsilent
+'@ | Set-Content $iss -Encoding UTF8
+
+      $issText = Get-Content $iss -Raw
+      $issText = $issText.Replace('__OUTPUT__',$output).Replace('__ICON__',(Join-Path $env:SOURCE_ROOT 'studio.ico')).Replace('__SOURCE__',$sourceDir)
+      Set-Content $iss $issText -Encoding UTF8
+      & $iscc $iss
+      if ($LASTEXITCODE -ne 0) { throw 'Inno Setup compilation failed.' }
+
+      $setup = Join-Path $output 'Playlist-Studio-5.0-Setup.exe'
+      if (-not (Test-Path $setup)) { throw 'Installer was not produced.' }
+      $setupHash = (Get-FileHash -Algorithm SHA256 $setup).Hash.ToLower()
+      $report = "Playlist Studio 5.0" + [Environment]::NewLine + "GitLab Windows x64 build." + [Environment]::NewLine + "SHA-256:" + [Environment]::NewLine + $setupHash
+      Set-Content (Join-Path $output 'SHA256.txt') $report -Encoding UTF8
+      Write-Host "Installer SHA-256: $setupHash"
+      Write-Host "=== GitLab build complete ==="
+
+  artifacts:
+    name: "Playlist-Studio-5.0-$CI_COMMIT_SHORT_SHA"
+    expose_as: "Playlist Studio 5.0 Windows installer"
+    paths:
+      - installer-output/Playlist-Studio-5.0-Setup.exe
+      - installer-output/SHA256.txt
+      - build.env
+    reports:
+      dotenv: build.env
+    expire_in: 30 days
