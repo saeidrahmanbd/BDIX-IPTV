@@ -153,7 +153,7 @@ mainloops = list(re.finditer(r"(?m)^(\s*)([A-Za-z_]\w*)\.mainloop\(\)\s*$", s))
 if mainloops:
     m = mainloops[-1]
     indent, var = m.group(1), m.group(2)
-    call = f"{indent}install_theme_support({var})\\n{indent}{var}.mainloop()"
+    call = f"{indent}install_theme_support({var})\n{indent}{var}.mainloop()"
     s = s[:m.start()] + call + s[m.end():]
 elif "install_theme_support(" not in s:
     # Fallback for sources that start the loop through a named root object.
@@ -167,7 +167,7 @@ elif "install_theme_support(" not in s:
                 lines = block.splitlines(True)
                 for i, line in enumerate(lines):
                     if i > 0 and line.strip() and not line.lstrip().startswith("#"):
-                        lines.insert(i, "        install_theme_support(self)\\n")
+                        lines.insert(i, "        install_theme_support(self)\n")
                         break
                 block = "".join(lines)
                 s = s[:cls.end()] + s[cls.end():].replace(init.group(0), block, 1)
