@@ -118,7 +118,11 @@ jobs:
           $main = Get-Content -LiteralPath (Join-Path $env:SOURCE_ROOT 'Source\playlist_studio.py') -Raw
           $extras = Get-Content -LiteralPath (Join-Path $env:SOURCE_ROOT 'Source\studio_extras.py') -Raw
           $ui = Get-Content -LiteralPath (Join-Path $env:SOURCE_ROOT 'Source\hybrid_ui.py') -Raw
-          if (($main -split '_ps5_vlc_candidates').Count -ne 2) { throw 'Unexpected duplicate VLC bootstrap markers.' }
+          $candidateCount = [regex]::Matches($main, '(?m)^_ps5_vlc_candidates=\(').Count
+          $rootCount = [regex]::Matches($main, '(?m)^_ps5_vlc_root=next\(').Count
+          if ($candidateCount -ne 1 -or $rootCount -ne 1) {
+            throw "VLC bootstrap must contain exactly one candidate tuple and one root assignment. Found candidates=$candidateCount root=$rootCount"
+          }
           if ($main -notmatch '_ps5_vlc_candidates') { throw 'VLC bootstrap was not injected.' }
           if ($main -notmatch '_ps5_Path\(__file__\)\.resolve\(\)\.parent\.parent.*/VLC') { throw 'Source-root VLC fallback was not injected.' }
           if ($main -notmatch 'VLC_PLUGIN_PATH') { throw 'VLC plugin path bootstrap was not injected.' }
