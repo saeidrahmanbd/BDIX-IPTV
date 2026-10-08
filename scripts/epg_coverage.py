@@ -33,7 +33,7 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
     "https://iptv-epg.org/files/epg-in.xml",
     "https://epg.pw/xmltv/epg_IN.xml",
-    "https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml",
+    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml",
     "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml",
