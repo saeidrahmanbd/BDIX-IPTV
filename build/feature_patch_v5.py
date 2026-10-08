@@ -207,8 +207,10 @@ helper="""    def _finish_startup(self):
             self.setup_style()
             self.build()
             self.bind_keys()
-            self.row_logos=RowLogos(self)
-            self.file_drops=FileDrops(self)
+            # Optional native integrations are disabled during startup.
+            # They were causing a Windows access-violation in the diagnostic EXE.
+            self.row_logos=None
+            self.file_drops=None
             self.refresh()
         except Exception as exc:
             try:
