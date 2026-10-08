@@ -87,20 +87,23 @@ p.write_text(s,encoding='utf-8')
 p=root/'studio_extras.py'; s=p.read_text(encoding='utf-8')
 if "from pathlib import Path" not in s:
     s="from pathlib import Path\n"+s
-old_placeholder="self.placeholder=tk.Label(self.video,text='BDIX-IPTV\\nPLAYLIST STUDIO 5.0',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23));self.placeholder.place(relx=.5,rely=.5,anchor='center')"
+
+# The supplied source has changed its placeholder formatting across build-kit revisions.
+# Patch the first actual placeholder assignment instead of depending on one exact string.
 new_placeholder="""preview_path=Path(__file__).resolve().parent.parent/'bdix_preview.png'
         self._preview_image=tk.PhotoImage(file=str(preview_path)) if preview_path.exists() else None
         self.placeholder=tk.Label(self.video,image=self._preview_image,bg='#03060c') if self._preview_image else tk.Label(self.video,text='BDIX-IPTV\\nPLAYLIST STUDIO 5.0',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23))
         self.placeholder.place(relx=.5,rely=.5,anchor='center')"""
-if old_placeholder in s:
-    s=s.replace(old_placeholder,new_placeholder,1)
-else:
-    # Handle the original unpatched placeholder as well.
-    old2="self.placeholder=tk.Label(self.video,text='▶\\nPLAYLIST STUDIO',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23));self.placeholder.place(relx=.5,rely=.5,anchor='center')"
-    if old2 in s:
-        s=s.replace(old2,new_placeholder,1)
-    else:
-        raise RuntimeError("Idle preview placeholder was not found")
+placeholder_pattern=r"(?m)^(\s*)self\.placeholder\s*=.*(?:\n\s*self\.placeholder\.place\([^\n]*\))?"
+s,n=re.subn(placeholder_pattern,lambda m:m.group(1)+new_placeholder.replace("\n","\n"+m.group(1)),s,count=1)
+if n!=1:
+    # Some revisions use a different variable name but still create a label in the video pane.
+    fallback=r"(?m)^(\s*)[A-Za-z_][A-Za-z0-9_]*\s*=\s*tk\.Label\(self\.video,.*$"
+    s,n=re.subn(fallback,lambda m:m.group(1)+new_placeholder.replace("\n","\n"+m.group(1)),s,count=1)
+if n!=1:
+    raise RuntimeError("No idle preview widget assignment found in studio_extras.py")
+p.write_text(s,encoding='utf-8')
+
 p.write_text(s,encoding='utf-8')
 p=root/'studio_extras.py'; s=p.read_text(encoding='utf-8')
 s=s.replace("height=280 if compact else 320","height=360 if compact else 400",1)
