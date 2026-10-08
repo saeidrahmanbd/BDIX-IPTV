@@ -90,7 +90,7 @@ jobs:
       - name: Install build dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install Pillow openpyxl pyinstaller
+          python -m pip install Pillow openpyxl nuitka
 
       - name: Apply Playlist Studio feature and branding patch
         shell: pwsh
@@ -142,59 +142,38 @@ jobs:
           Write-Host 'Raw Python startup smoke test: PASS'
           Write-Host "Main window handle: $handle"
 
-      - name: Runtime startup smoke test
+      - name: Build and test Nuitka standalone
         shell: pwsh
         working-directory: ${{ env.SOURCE_ROOT }}
         run: |
-          if (Test-Path 'diagnostic') { Remove-Item 'diagnostic' -Recurse -Force }
-          if (Test-Path 'build') { Remove-Item 'build' -Recurse -Force }
-          if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
-          Get-ChildItem -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
-          python -m PyInstaller --noconfirm --clean --onedir --console --name 'Playlist-Studio-5.0-Diagnostic' Source\playlist_studio.py
-          $exe = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0-Diagnostic\Playlist-Studio-5.0-Diagnostic.exe'
-          if (-not (Test-Path $exe)) { throw 'Diagnostic executable was not produced.' }
-          $stdout = Join-Path $env:RUNNER_TEMP 'playlist-studio.stdout.log'
-          $stderr = Join-Path $env:RUNNER_TEMP 'playlist-studio.stderr.log'
+          if (Test-Path 'build-nuitka') { Remove-Item 'build-nuitka' -Recurse -Force }
+          if (Test-Path 'dist-nuitka') { Remove-Item 'dist-nuitka' -Recurse -Force }
+          python -m nuitka --mode=standalone --enable-plugin=tk-inter --windows-console-mode=force --windows-icon-from-ico=studio.ico --include-data-dir=VLC=VLC --include-data-file=Source\bdix_preview.png=bdix_preview.png --output-dir=dist-nuitka --output-filename=Playlist-Studio-5.0.exe Source\playlist_studio.py
+          if ($LASTEXITCODE -ne 0) { throw 'Nuitka standalone build failed.' }
+          $exe = Get-ChildItem -Path 'dist-nuitka' -Recurse -Filter 'Playlist-Studio-5.0.exe' -File | Select-Object -First 1
+          if (-not $exe) { throw 'Nuitka did not produce Playlist-Studio-5.0.exe.' }
+          $stdout = Join-Path $env:RUNNER_TEMP 'playlist-studio-nuitka.stdout.log'
+          $stderr = Join-Path $env:RUNNER_TEMP 'playlist-studio-nuitka.stderr.log'
           Remove-Item $stdout,$stderr -Force -ErrorAction SilentlyContinue
-          $proc = Start-Process -FilePath $exe -WorkingDirectory (Split-Path $exe) -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr
+          $proc = Start-Process -FilePath $exe.FullName -WorkingDirectory $exe.DirectoryName -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr
           Start-Sleep -Seconds 12
           if ($proc.HasExited) {
             $out = if (Test-Path $stdout) { Get-Content $stdout -Raw } else { '' }
             $err = if (Test-Path $stderr) { Get-Content $stderr -Raw } else { '' }
-            Write-Host '--- Diagnostic STDOUT ---'
+            Write-Host '--- Nuitka STDOUT ---'
             Write-Host $out
-            Write-Host '--- Diagnostic STDERR ---'
+            Write-Host '--- Nuitka STDERR ---'
             Write-Host $err
-            throw "Playlist Studio exited during the startup smoke test with code $($proc.ExitCode)."
+            throw "Nuitka application exited during startup with code $($proc.ExitCode)."
           }
           $p = Get-Process -Id $proc.Id
           $handle = $p.MainWindowHandle
           if ($handle -eq 0) {
             Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
-            throw 'Playlist Studio process stayed alive but did not create a main window.'
-          }
-          Add-Type @'
-          using System;
-          using System.Runtime.InteropServices;
-          public static class WindowHealth {
-            [DllImport("user32.dll", SetLastError=true)]
-            public static extern IntPtr SendMessageTimeout(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam, uint fuFlags, uint uTimeout, out IntPtr lpdwResult);
-          }
-          '@
-          $result = [IntPtr]::Zero
-          $response = [WindowHealth]::SendMessageTimeout($handle, 0x0000, [IntPtr]::Zero, [IntPtr]::Zero, 0x0002, 3000, [ref]$result)
-          if ($response -eq [IntPtr]::Zero) {
-            $title = $p.MainWindowTitle
-            $trace = Join-Path $env:TEMP 'PlaylistStudio-stacktrace.log'
-            if (Test-Path $trace) {
-              Write-Host '--- PlaylistStudio startup stack trace ---'
-              Get-Content $trace -Raw | Write-Host
-            }
-            Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
-            throw "Playlist Studio created a window but it is NOT RESPONDING. Title: $title"
+            throw 'Nuitka application stayed alive but did not create a main window.'
           }
           Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
-          Write-Host 'Playlist Studio diagnostic startup smoke test: PASS (responsive)'
+          Write-Host 'Nuitka standalone startup smoke test: PASS'
           Write-Host "Main window handle: $handle"
 
       - name: Verify Xtream path behavior
@@ -243,30 +222,22 @@ jobs:
             throw 'Bundled VLC is missing libvlccore.dll.'
           }
 
-      - name: Build single-file Windows executable
+      - name: Build Nuitka Windows installer
         shell: pwsh
         working-directory: ${{ env.SOURCE_ROOT }}
         run: |
-          if (Test-Path 'build') { Remove-Item 'build' -Recurse -Force }
-          if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
-          Get-ChildItem -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
-
-          python -m PyInstaller --noconfirm --clean --onefile --windowed --name 'Playlist-Studio-5.0-Portable' --add-data 'VLC;VLC' --add-data 'Source\bdix_preview.png;.' Source\playlist_studio.py
-
-          $exe = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0-Portable.exe'
-          if (-not (Test-Path $exe)) {
-            throw 'PyInstaller completed without producing the expected executable.'
-          }
-
-          $size = (Get-Item $exe).Length
-          if ($size -lt 50000000) {
-            throw "Executable is unexpectedly small: $size bytes"
-          }
-
-          $hash = (Get-FileHash -Algorithm SHA256 $exe).Hash.ToLower()
-          "EXE_SIZE=$size" | Out-File -FilePath $env:GITHUB_ENV -Append
-          "EXE_SHA256=$hash" | Out-File -FilePath $env:GITHUB_ENV -Append
-          "Built: $size bytes"
+          if (Test-Path 'dist-nuitka-installer') { Remove-Item 'dist-nuitka-installer' -Recurse -Force }
+          python -m nuitka --mode=standalone --windows-create-installer --windows-console-mode=disable --windows-icon-from-ico=studio.ico --include-data-dir=VLC=VLC --include-data-file=Source\bdix_preview.png=bdix_preview.png --output-dir=dist-nuitka-installer --output-filename=Playlist-Studio-5.0.exe Source\playlist_studio.py
+          if ($LASTEXITCODE -ne 0) { throw 'Nuitka installer build failed.' }
+          $setup = Get-ChildItem -Path 'dist-nuitka-installer' -Recurse -Filter '*-setup.exe' -File | Select-Object -First 1
+          if (-not $setup) { throw 'Nuitka did not produce a setup executable.' }
+          $size = $setup.Length
+          if ($size -lt 10000000) { throw "Setup executable is unexpectedly small: $size bytes" }
+          $hash = (Get-FileHash -Algorithm SHA256 $setup.FullName).Hash.ToLower()
+          Copy-Item $setup.FullName (Join-Path $env:GITHUB_WORKSPACE 'Playlist-Studio-5.0-Setup.exe') -Force
+          "SETUP_SIZE=$size" | Out-File -FilePath $env:GITHUB_ENV -Append
+          "SETUP_SHA256=$hash" | Out-File -FilePath $env:GITHUB_ENV -Append
+          "Setup: $size bytes"
           "SHA-256: $hash"
 
       - name: Package portable download
@@ -285,11 +256,20 @@ jobs:
 
           SHA-256:
           $env:EXE_SHA256
-          "@ | Set-Content -Path 'release\SHA256.txt' -Encoding UTF8
+          "@ | Set-Content -Path 'release\SHA256.txt' -Encod      - name: Package setup download
+        shell: pwsh
+        run: |
+          @"
+          Playlist Studio 5.0 — BDIX-IPTV
+          Windows x64 setup installer.
 
-          Compress-Archive -Path 'release\*' -DestinationPath (Join-Path $env:GITHUB_WORKSPACE 'Playlist-Studio-5.0-Portable.zip') -Force
+          The installer deploys the complete application and VLC runtime.
+          SHA-256:
+          $env:SETUP_SHA256
+          "@ | Set-Content -Path 'SHA256-Setup.txt' -Encoding UTF8
+          Compress-Archive -Path 'Playlist-Studio-5.0-Setup.exe','SHA256-Setup.txt' -DestinationPath 'Playlist-Studio-5.0-Setup.zip' -Force
 
-      - name: Create or update v5.0.2 GitHub Release
+      - name: Create or update v5.0.3 GitHub Release
         shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
@@ -298,11 +278,13 @@ jobs:
           $repo='${{ github.repository }}'
           gh release view $tag --repo $repo > $null 2>&1
           if ($LASTEXITCODE -ne 0) {
-            gh release create $tag --repo $repo --target $env:GITHUB_SHA --title "Playlist Studio 5.0" --notes "Playlist Studio 5.0.3 — BDIX-IPTV Fluent Dark portable Windows x64 build with startup smoke-test validation and verified UI fixes."
-            if ($LASTEXITCODE -ne 0) { throw 'Unable to create Playlist Studio v5.0.2 release.' }
+            gh release create $tag --repo $repo --target $env:GITHUB_SHA --title "Playlist Studio 5.0" --notes "Playlist Studio 5.0.3 — BDIX-IPTV Windows installer built with Nuitka after PyInstaller portable startup failure."
+            if ($LASTEXITCODE -ne 0) { throw 'Unable to create Playlist Studio v5.0.3 release.' }
           }
-          gh release upload $tag 'Playlist-Studio-5.0-Portable.zip' --repo $repo --clobber
-          if ($LASTEXITCODE -ne 0) { throw 'Unable to upload Playlist Studio v5.0.2 portable ZIP.' }
+          gh release upload $tag 'Playlist-Studio-5.0-Setup.exe' --repo $repo --clobber
+          gh release upload $tag 'Playlist-Studio-5.0-Setup.zip' --repo $repo --clobber
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to upload Playlist Studio v5.0.3 setup files.' }
+
       - name: Upload portable artifact
         uses: actions/upload-artifact@v4
         with:
