@@ -240,23 +240,7 @@ jobs:
           "Setup: $size bytes"
           "SHA-256: $hash"
 
-      - name: Package portable download
-        shell: pwsh
-        working-directory: ${{ env.SOURCE_ROOT }}
-        run: |
-          if (Test-Path 'release') { Remove-Item 'release' -Recurse -Force }
-          New-Item -ItemType Directory -Path 'release' | Out-Null
-          Copy-Item 'dist\Playlist-Studio-5.0-Portable.exe' 'release\'
-          @"
-          Playlist Studio 5.0 — Fluent Dark
-          Windows x64 portable single-file build.
-
-          The executable includes the required VLC runtime.
-          No installation is required.
-
-          SHA-256:
-          $env:EXE_SHA256
-          "@ | Set-Content -Path 'release\SHA256.txt' -Encod      - name: Package setup download
+      - name: Package setup download
         shell: pwsh
         run: |
           @"
