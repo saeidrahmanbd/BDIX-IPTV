@@ -1,5 +1,5 @@
-name: Build Playlist Studio 4.0 Portable
-# BDIX-IPTV feature build v4.0
+name: Build Playlist Studio 5.0 Setup
+# BDIX-IPTV feature build v5.0
 
 on:
   workflow_dispatch:
@@ -164,10 +164,10 @@ jobs:
           if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
           Get-ChildItem -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
 
-          python -m PyInstaller --noconfirm --clean --onedir --windowed --name 'Playlist-Studio-4.0-Fluent-Dark' --icon 'studio.ico' --add-data 'VLC;VLC' Source\playlist_studio.py
+          python -m PyInstaller --noconfirm --clean --onedir --windowed --name 'Playlist-Studio-5.0-Fluent-Dark' --icon 'studio.ico' --add-data 'VLC;VLC' Source\playlist_studio.py
 
-          $app = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-4.0-Fluent-Dark'
-          $exe = Join-Path $app 'Playlist-Studio-4.0-Fluent-Dark.exe'
+          $app = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0-Fluent-Dark'
+          $exe = Join-Path $app 'Playlist-Studio-5.0-Fluent-Dark.exe'
           if (-not (Test-Path $exe)) { throw 'PyInstaller did not produce the standard application.' }
           $size = (Get-ChildItem $app -Recurse -File | Measure-Object Length -Sum).Sum
           if ($size -lt 10000000) { throw "Application output is unexpectedly small: $size bytes" }
@@ -178,16 +178,16 @@ jobs:
         shell: pwsh
         working-directory: ${{ env.SOURCE_ROOT }}
         run: |
-          $iss = Join-Path $env:RUNNER_TEMP 'Playlist-Studio-4.0.iss'
-          $source = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-4.0-Fluent-Dark'
+          $iss = Join-Path $env:RUNNER_TEMP 'Playlist-Studio-5.0.iss'
+          $source = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0-Fluent-Dark'
           $output = Join-Path $env:GITHUB_WORKSPACE 'installer-output'
           if (Test-Path $output) { Remove-Item $output -Recurse -Force }
           New-Item -ItemType Directory -Path $output | Out-Null
           @'
           #define MyAppName "BDIX-IPTV Playlist Studio"
-          #define MyAppVersion "4.0.0"
+          #define MyAppVersion "5.0.0"
           #define MyAppPublisher "BDIX-IPTV"
-          #define MyAppExeName "Playlist-Studio-4.0-Fluent-Dark.exe"
+          #define MyAppExeName "Playlist-Studio-5.0-Fluent-Dark.exe"
           [Setup]
           AppId={{B1D1X-IPTV-PS4-2026}}
           AppName={#MyAppName}
@@ -196,7 +196,7 @@ jobs:
           DefaultDirName={autopf}\BDIX-IPTV\Playlist Studio
           DefaultGroupName=BDIX-IPTV\Playlist Studio
           OutputDir=__OUTPUT__
-          OutputBaseFilename=BDIX-IPTV-Playlist-Studio-4.0-Setup
+          OutputBaseFilename=BDIX-IPTV-Playlist-Studio-5.0-Setup
           SetupIconFile=__ICON__
           Compression=lzma2
           SolidCompression=yes
@@ -218,30 +218,30 @@ jobs:
           if (-not (Test-Path $iscc)) { throw 'Inno Setup compiler is not available on the GitHub runner.' }
           & $iscc $iss
           if ($LASTEXITCODE -ne 0) { throw 'Inno Setup compilation failed.' }
-          $setup = Join-Path $output 'BDIX-IPTV-Playlist-Studio-4.0-Setup.exe'
+          $setup = Join-Path $output 'BDIX-IPTV-Playlist-Studio-5.0-Setup.exe'
           if (-not (Test-Path $setup)) { throw 'Installer was not produced.' }
           $setupHash = (Get-FileHash -Algorithm SHA256 $setup).Hash.ToLower()
-          "BDIX-IPTV Playlist Studio 4.0`nStandard Windows installer.`nSHA-256:`n$setupHash" | Set-Content (Join-Path $output 'SHA256.txt') -Encoding UTF8
+          "BDIX-IPTV Playlist Studio 5.0`nStandard Windows installer.`nSHA-256:`n$setupHash" | Set-Content (Join-Path $output 'SHA256.txt') -Encoding UTF8
 
       - name: Upload Windows installer
         uses: actions/upload-artifact@v4
         with:
-          name: BDIX-IPTV-Playlist-Studio-4.0-Setup
+          name: BDIX-IPTV-Playlist-Studio-5.0-Setup
           path: ${{ github.workspace }}\installer-output\*
           if-no-files-found: error
           retention-days: 30
 
-      - name: Create or update v4.0.0 GitHub Release
+      - name: Create or update v5.0.0 GitHub Release
         shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          $tag='v4.0.0'
+          $tag='v5.0.0'
           $repo='${{ github.repository }}'
           gh release view $tag --repo $repo > $null 2>&1
           if ($LASTEXITCODE -ne 0) {
-            gh release create $tag --repo $repo --target $env:GITHUB_SHA --title 'Playlist Studio v4.0' --notes 'BDIX-IPTV Playlist Studio 4.0 — standard Windows installer.'
-            if ($LASTEXITCODE -ne 0) { throw 'Unable to create Playlist Studio v4.0 release.' }
+            gh release create $tag --repo $repo --target $env:GITHUB_SHA --title 'Playlist Studio v5.0' --notes 'BDIX-IPTV Playlist Studio 5.0 — standard Windows installer.'
+            if ($LASTEXITCODE -ne 0) { throw 'Unable to create Playlist Studio v5.0 release.' }
           }
-          gh release upload $tag "$env:GITHUB_WORKSPACE\installer-output\BDIX-IPTV-Playlist-Studio-4.0-Setup.exe" --repo $repo --clobber
-          if ($LASTEXITCODE -ne 0) { throw 'Unable to upload Playlist Studio 4.0 installer.' }
+          gh release upload $tag "$env:GITHUB_WORKSPACE\installer-output\BDIX-IPTV-Playlist-Studio-5.0-Setup.exe" --repo $repo --clobber
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to upload Playlist Studio 5.0 installer.' }
