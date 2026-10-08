@@ -142,42 +142,6 @@ jobs:
           Write-Host 'Raw Python startup smoke test: PASS'
           Write-Host "Main window handle: $handle"
 
-      - name: Build and test PyInstaller setup payload
-        shell: pwsh
-        working-directory: ${{ env.SOURCE_ROOT }}
-        run: |
-          if (Test-Path 'build') { Remove-Item 'build' -Recurse -Force }
-          if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
-          Get-ChildItem -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
-          python -m PyInstaller --noconfirm --clean --onedir --windowed --name 'Playlist-Studio-5.0' --add-data 'VLC;VLC' --add-data 'Source\bdix_preview.png;.' Source\playlist_studio.py
-          if ($LASTEXITCODE -ne 0) { throw 'PyInstaller setup payload build failed.' }
-          $exe = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0\Playlist-Studio-5.0.exe'
-          if (-not (Test-Path $exe)) { throw 'PyInstaller setup payload executable was not produced.' }
-          $proc = Start-Process -FilePath $exe -WorkingDirectory (Split-Path $exe) -PassThru
-          Start-Sleep -Seconds 15
-          if ($proc.HasExited) { throw "Setup payload exited during startup with code $($proc.ExitCode)." }
-          $p = Get-Process -Id $proc.Id
-          $handle = $p.MainWindowHandle
-          if ($handle -eq 0) { Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue; throw 'Setup payload created no main window.' }
-          Add-Type @'
-          using System;
-          using System.Runtime.InteropServices;
-          public static class WindowHealth {
-            [DllImport("user32.dll", SetLastError=true)]
-            public static extern IntPtr SendMessageTimeout(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam, uint fuFlags, uint uTimeout, out IntPtr lpdwResult);
-          }
-          '@
-          $result=[IntPtr]::Zero
-          $response=[WindowHealth]::SendMessageTimeout($handle,0x0000,[IntPtr]::Zero,[IntPtr]::Zero,0x0002,3000,[ref]$result)
-          if ($response -eq [IntPtr]::Zero) {
-            $trace=Join-Path $env:TEMP 'PlaylistStudio-stacktrace.log'
-            if(Test-Path $trace){Write-Host '--- startup stack trace ---';Get-Content $trace -Raw|Write-Host}
-            Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
-            throw "PyInstaller setup payload window is NOT RESPONDING. Title: $($p.MainWindowTitle)"
-          }
-          Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
-          Write-Host 'PyInstaller setup payload startup test: PASS (responsive)'
-
       - name: Verify Xtream path behavior
         shell: pwsh
         working-directory: ${{ env.SOURCE_ROOT }}
@@ -257,6 +221,42 @@ jobs:
           Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
           Write-Host 'Nuitka standalone startup smoke test: PASS'
           Write-Host "Main window handle: $handle"
+
+      - name: Build and test PyInstaller setup payload
+        shell: pwsh
+        working-directory: ${{ env.SOURCE_ROOT }}
+        run: |
+          if (Test-Path 'build') { Remove-Item 'build' -Recurse -Force }
+          if (Test-Path 'dist') { Remove-Item 'dist' -Recurse -Force }
+          Get-ChildItem -Filter '*.spec' -File | Remove-Item -Force -ErrorAction SilentlyContinue
+          python -m PyInstaller --noconfirm --clean --onedir --windowed --name 'Playlist-Studio-5.0' --add-data 'VLC;VLC' --add-data 'Source\bdix_preview.png;.' Source\playlist_studio.py
+          if ($LASTEXITCODE -ne 0) { throw 'PyInstaller setup payload build failed.' }
+          $exe = Join-Path $env:SOURCE_ROOT 'dist\Playlist-Studio-5.0\Playlist-Studio-5.0.exe'
+          if (-not (Test-Path $exe)) { throw 'PyInstaller setup payload executable was not produced.' }
+          $proc = Start-Process -FilePath $exe -WorkingDirectory (Split-Path $exe) -PassThru
+          Start-Sleep -Seconds 15
+          if ($proc.HasExited) { throw "Setup payload exited during startup with code $($proc.ExitCode)." }
+          $p = Get-Process -Id $proc.Id
+          $handle = $p.MainWindowHandle
+          if ($handle -eq 0) { Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue; throw 'Setup payload created no main window.' }
+          Add-Type @'
+          using System;
+          using System.Runtime.InteropServices;
+          public static class WindowHealth {
+            [DllImport("user32.dll", SetLastError=true)]
+            public static extern IntPtr SendMessageTimeout(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam, uint fuFlags, uint uTimeout, out IntPtr lpdwResult);
+          }
+          '@
+          $result=[IntPtr]::Zero
+          $response=[WindowHealth]::SendMessageTimeout($handle,0x0000,[IntPtr]::Zero,[IntPtr]::Zero,0x0002,3000,[ref]$result)
+          if ($response -eq [IntPtr]::Zero) {
+            $trace=Join-Path $env:TEMP 'PlaylistStudio-stacktrace.log'
+            if(Test-Path $trace){Write-Host '--- startup stack trace ---';Get-Content $trace -Raw|Write-Host}
+            Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+            throw "PyInstaller setup payload window is NOT RESPONDING. Title: $($p.MainWindowTitle)"
+          }
+          Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+          Write-Host 'PyInstaller setup payload startup test: PASS (responsive)'
 
       - name: Build Windows setup installer
         shell: pwsh
