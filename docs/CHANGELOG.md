@@ -26,3 +26,8 @@
 - Added Program Glimpse
 
 For the complete release information, see **[Playlist Studio v5.0](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.0.0)**.
+
+## 2026-10-08
+
+- No meaningful playlist changes detected.
+
