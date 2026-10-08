@@ -11,16 +11,16 @@ def repl(path, old, new, label, count=1):
     p.write_text(s,encoding='utf-8')
 
 # --- Core window/version branding ---
-repl('playlist_studio.py',"self.title('Playlist Studio')","self.title('BDIX-IPTV / Playlist Studio 5.0')",'window title')
+repl('playlist_studio.py',"self.title('Playlist Studio')","self.title('Playlist Studio 5.0')",'window title')
 # Normalize any legacy 3.0/4.0 labels that are part of the supplied source UI.
 p=root/'playlist_studio.py'; s=p.read_text(encoding='utf-8')
-s=s.replace('Playlist Studio 3.0','BDIX-IPTV / Playlist Studio 5.0').replace('Playlist Studio 4.0','BDIX-IPTV / Playlist Studio 5.0')
+s=s.replace('Playlist Studio 3.0','Playlist Studio 5.0').replace('Playlist Studio 4.0','Playlist Studio 5.0')
 p.write_text(s,encoding='utf-8')
 repl('playlist_studio.py',"ttk.Label(body,text='Xtream Codes login'","ttk.Label(body,text='Xtream Codes login'",'Xtream anchor',1)
 # Update About/version strings without touching functionality.
 p=root/'studio_extras.py'; s=p.read_text(encoding='utf-8')
-s=s.replace('PLAYLIST STUDIO  /  2.8.2','BDIX-IPTV  /  PLAYLIST STUDIO 5.0')
-s=s.replace('Scan centre · Playlist Studio','Scan centre · BDIX-IPTV / Playlist Studio 5.0').replace('Playlist Studio 3.0','BDIX-IPTV / Playlist Studio 5.0').replace('Playlist Studio 4.0','BDIX-IPTV / Playlist Studio 5.0')
+s=s.replace('PLAYLIST STUDIO  /  2.8.2','PLAYLIST STUDIO 5.0')
+s=s.replace('Scan centre · Playlist Studio','Scan centre · Playlist Studio 5.0').replace('Playlist Studio 3.0','Playlist Studio 5.0').replace('Playlist Studio 4.0','Playlist Studio 5.0')
 p.write_text(s,encoding='utf-8')
 
 # --- Multi-category selection + per-view scroll memory ---
@@ -105,7 +105,7 @@ p.write_text(s,encoding='utf-8')
 p=root/'studio_extras.py'; s=p.read_text(encoding='utf-8')
 s=s.replace("height=280 if compact else 320","height=360 if compact else 400",1)
 s=s.replace("self.placeholder=tk.Label(self.video,text='▶\nPLAYLIST STUDIO',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23));self.placeholder.place(relx=.5,rely=.5,anchor='center')",
-            "self.placeholder=tk.Label(self.video,text='BDIX-IPTV\nPLAYLIST STUDIO 5.0',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23));self.placeholder.place(relx=.5,rely=.5,anchor='center')",1)
+            "self.placeholder=tk.Label(self.video,text='PLAYLIST STUDIO 5.0',bg='#03060c',fg=ACCENT,font=('Segoe UI Semibold',23));self.placeholder.place(relx=.5,rely=.5,anchor='center')",1)
 s=s.replace("self.video.bind('<Configure>',lambda e:self.update_view())",
             "self.video.bind('<Configure>',lambda e:self.update_view())",1)
 s=s.replace("if item[0]=='fatal':self.note.configure(text=item[1]);self.started=False",
