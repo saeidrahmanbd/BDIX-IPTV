@@ -38,7 +38,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             git clean -fd
-            cp epg.xml /tmp/bdix-epg-previous.xml 2>/dev/null || true
+            cp epg/epg.xml /tmp/bdix-epg-previous.xml 2>/dev/null || true
             python scripts/normalize_metadata.py
             # Automatic candidate discovery is enabled. New channels go to New Channels,
             # backup candidates go to New Backup, and user-deleted review entries are remembered
@@ -47,9 +47,9 @@ jobs:
             python scripts/migrate_external_logos_fixed.py
             python scripts/epg_coverage.py
             python scripts/generate_epg.py
-            test -s epg.xml
-            grep -q '<programme ' epg.xml
-            cp epg.xml /tmp/bdix-epg-generated.xml
+            test -s epg/epg.xml
+            grep -q '<programme ' epg/epg.xml
+            cp epg/epg.xml /tmp/bdix-epg-generated.xml
 
             # EPG source coverage can temporarily fluctuate. A regression must
             # never block the rest of playlist maintenance, but a degraded guide
@@ -59,9 +59,9 @@ jobs:
             EPG_GATE_STATUS=$?
             set -e
             if [ "$EPG_GATE_STATUS" -ne 0 ]; then
-              echo "::warning::EPG publish gate blocked this generated guide; retaining the previous known-good epg.xml."
+              echo "::warning::EPG publish gate blocked this generated guide; retaining the previous known-good epg/epg.xml."
               if [ -s /tmp/bdix-epg-previous.xml ] && grep -q '<programme ' /tmp/bdix-epg-previous.xml; then
-                cp /tmp/bdix-epg-previous.xml epg.xml
+                cp /tmp/bdix-epg-previous.xml epg/epg.xml
                 echo "Retained previous EPG because the new guide regressed."
               else
                 echo "::error::No valid previous EPG is available after a publish-gate failure."
@@ -70,7 +70,7 @@ jobs:
             else
               echo "EPG publish gate passed; accepting newly generated guide."
             fi
-            cp epg.xml /tmp/bdix-epg-publish.xml
+            cp epg/epg.xml /tmp/bdix-epg-publish.xml
             # Refresh EPG coverage against the final guide retained by the publish gate.
             python scripts/epg_coverage.py
             python scripts/sync_epg_worker_map.py
@@ -121,19 +121,19 @@ jobs:
             # The guide is a generated publication artifact. Restore the
             # publish-approved copy immediately before staging so later
             # maintenance tools cannot accidentally publish an empty/stale EPG.
-            cp /tmp/bdix-epg-publish.xml epg.xml
-            test -s epg.xml
-            grep -q '<programme ' epg.xml
-            echo "Validated EPG working-tree bytes: $(wc -c < epg.xml)"
-            echo "Validated EPG working-tree sha256: $(sha256sum epg.xml | awk '{print $1}')"
+            cp /tmp/bdix-epg-publish.xml epg/epg.xml
+            test -s epg/epg.xml
+            grep -q '<programme ' epg/epg.xml
+            echo "Validated EPG working-tree bytes: $(wc -c < epg/epg.xml)"
+            echo "Validated EPG working-tree sha256: $(sha256sum epg/epg.xml | awk '{print $1}')"
             git add IPTV-Playlist.m3u logos/ reports/ assets/dashboard.svg xtream/worker.js
-            git add -f epg.xml
-            STAGED_EPG_BYTES="$(git cat-file -s :epg.xml)"
+            git add -f epg/epg.xml
+            STAGED_EPG_BYTES="$(git cat-file -s :epg/epg.xml)"
             echo "Staged EPG bytes: ${STAGED_EPG_BYTES}"
             test "${STAGED_EPG_BYTES}" -gt 0
             # Avoid SIGPIPE under pipefail: materialize the staged blob once,
             # then validate/hash the file without piping git output into grep.
-            git cat-file blob :epg.xml > /tmp/bdix-epg-staged.xml
+            git cat-file blob :epg/epg.xml > /tmp/bdix-epg-staged.xml
             grep -q '<programme ' /tmp/bdix-epg-staged.xml
             echo "Staged EPG sha256: $(sha256sum /tmp/bdix-epg-staged.xml | awk '{print $1}')"
             if git diff --cached --quiet; then exit 0; fi
