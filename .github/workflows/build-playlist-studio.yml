@@ -92,6 +92,12 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install Pillow openpyxl pyinstaller
 
+      - name: Validate build scripts
+        shell: pwsh
+        run: |
+          python -m py_compile "$env:GITHUB_WORKSPACE\build\feature_patch_v5.py" "$env:GITHUB_WORKSPACE\build\make_brand_assets_v5.py"
+          if ($LASTEXITCODE -ne 0) { throw 'Build script compilation failed.' }
+
       - name: Apply Playlist Studio feature and branding patch
         shell: pwsh
         run: |
@@ -105,6 +111,17 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw 'Playlist Studio branding asset generation failed.' }
           if (-not (Test-Path (Join-Path $env:SOURCE_ROOT 'studio.ico'))) { throw 'BDIX-IPTV application icon was not generated.' }
           if (-not (Test-Path (Join-Path $env:SOURCE_ROOT 'Source\bdix_preview.png'))) { throw 'BDIX-IPTV preview image was not copied into the Python source.' }
+
+      - name: Validate patched source structure
+        shell: pwsh
+        run: |
+          $main = Get-Content -LiteralPath (Join-Path $env:SOURCE_ROOT 'Source\playlist_studio.py') -Raw
+          $extras = Get-Content -LiteralPath (Join-Path $env:SOURCE_ROOT 'Source\studio_extras.py') -Raw
+          if ($main -notmatch '_ps5_vlc_candidates') { throw 'VLC bootstrap was not injected.' }
+          if ($main -notmatch 'VLC_PLUGIN_PATH') { throw 'VLC plugin path bootstrap was not injected.' }
+          if ($main -match '_finish_startup') { throw 'Unverified startup deferral code is present.' }
+          if ($extras -notmatch 'bdix_preview\.png') { throw 'BDIX-IPTV preview integration was not injected.' }
+          Write-Host 'Patched-source structural checks: PASS'
 
       - name: Validate Python source
         shell: pwsh
@@ -230,12 +247,13 @@ jobs:
           $result=[IntPtr]::Zero
           $response=[WindowHealth]::SendMessageTimeout($handle,0x0000,[IntPtr]::Zero,[IntPtr]::Zero,0x0002,3000,[ref]$result)
           if ($response -eq [IntPtr]::Zero) {
-            Write-Warning "PyInstaller payload is still initializing after 15 seconds. Capturing the startup trace, then allowing packaging to continue."
             $trace=Join-Path $env:TEMP 'PlaylistStudio-stacktrace.log'
             if(Test-Path $trace){Write-Host '--- startup stack trace ---';Get-Content $trace -Raw|Write-Host}
+            Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+            throw 'PyInstaller payload window is not responsive after 15 seconds.'
           }
           Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
-          Write-Host 'PyInstaller setup payload startup test: PASS (process/window created)'
+          Write-Host 'PyInstaller setup payload startup test: PASS (responsive main window)'
 
       - name: Build Windows setup installer
         shell: pwsh
