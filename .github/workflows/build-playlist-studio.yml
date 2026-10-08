@@ -95,7 +95,11 @@ jobs:
         shell: pwsh
         run: |
           python "$env:GITHUB_WORKSPACE\build\feature_patch.py" "$env:SOURCE_ROOT\Source"
+          if ($LASTEXITCODE -ne 0) { throw 'Playlist Studio feature patch failed.' }
+          python -m py_compile "$env:GITHUB_WORKSPACE\build\feature_patch.py"
+          if ($LASTEXITCODE -ne 0) { throw 'Playlist Studio feature patch has invalid Python syntax.' }
           python "$env:GITHUB_WORKSPACE\build\make_brand_assets.py" "$env:SOURCE_ROOT"
+          if ($LASTEXITCODE -ne 0) { throw 'Brand asset generation failed.' }
           $preview = Join-Path $env:SOURCE_ROOT 'bdix_preview.png'
           $icon = Join-Path $env:SOURCE_ROOT 'studio.ico'
           if (-not (Test-Path $preview)) { throw 'BDIX-IPTV preview asset was not generated.' }
