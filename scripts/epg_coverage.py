@@ -24,6 +24,9 @@ EPG_ALIASES = {
 # Locked identities must not be broadened again by the automatic coverage mapper.
 EPG_LOCKS = {
     "ColorsCineplex.in@SD": ["543298"],
+    # Dish TV catalogue-verified Star Jalsha SD XMLTV ID. Keep the existing
+    # playlist identity (Star.Jalsha.in) unchanged; map this provider ID to it.
+    "Star.Jalsha.in": ["StarJalsha.in@SD"],
 }
 
 REPORT = Path("reports/epg-coverage.md")
