@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-10-08 11:41 UTC**_
+_Last generated: **2026-10-09 09:05 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -13,15 +13,15 @@ _Last generated: **2026-10-08 11:41 UTC**_
 | New Channels | **40** |
 | New Backup Streams | **50** |
 | Local Logos | **99.9%** |
-| EPG Programme Coverage | **78.6%** |
+| EPG Programme Coverage | **77.9%** |
 | EPG Mapping | **81.9%** |
 | Stream Health Tested | **1008** |
-| Stream Health Failures | **141** |
-| Persistent Failures | **120** |
+| Stream Health Failures | **168** |
+| Persistent Failures | **121** |
 | Near-Duplicate URL Families | **0** |
 | Audit Blocking Issues | **16** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-08T11:41:55+00:00** |
+| Pre-Publish Gate Generated | **2026-10-09T09:05:42+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -47,21 +47,21 @@ _Last generated: **2026-10-08 11:41 UTC**_
 ## EPG
 - Indian channels audited: **276**
 - Mapped: **226 (81.9%)**
-- Current/future programme coverage: **217/276 (78.6%)**
+- Current/future programme coverage: **215/276 (77.9%)**
 - No mapping: **50**
 - Publication remains subject to source-policy approval.
 
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-08T11:40:57.632483+00:00** |
-| EPG coverage | **2026-10-08T11:40:57+00:00** |
-| Stream health | **2026-10-08T11:41:55+00:00** |
-| Pre-publish gate | **2026-10-08T11:41:55+00:00** |
+| Playlist audit | **2026-10-09T09:04:47.122134+00:00** |
+| EPG coverage | **2026-10-09T09:04:46+00:00** |
+| Stream health | **2026-10-09T09:05:42+00:00** |
+| Pre-publish gate | **2026-10-09T09:05:42+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
-- Latest entries change: **1143 → 1151**
-- Latest health failures: **141 → 141**
+- Latest entries change: **1151 → 1151**
+- Latest health failures: **141 → 168**
 
 Historical records are retained in reports/maintenance-history.json.
