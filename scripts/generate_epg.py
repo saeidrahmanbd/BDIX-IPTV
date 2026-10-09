@@ -242,6 +242,74 @@ def clean_schedule(records):
     chosen.reverse()
     return chosen
 
+def infer_source_offsets(records):
+    """Infer only high-confidence, per-channel/source-ID schedule offsets.
+
+    A correction requires repeated programme title + duration matches from at
+    least two independent source IDs agreeing on a start time, with one source
+    ID consistently displaced by >=2 hours across at least four programmes.
+    This deliberately avoids global timezone shifts and ambiguous single hits.
+    """
+    signatures = {}
+    for r in records:
+        start, stop = r.get("start_dt"), r.get("stop_dt")
+        title = normalized_title(r.get("title"))
+        if not start or not stop or stop <= start or title_score(title) == 0:
+            continue
+        duration_bin = round((stop - start).total_seconds() / 300)
+        key = (title, duration_bin)
+        signatures.setdefault(key, {}).setdefault(
+            (r["source_index"], r["source_id"]), []
+        ).append(r)
+
+    proposals = {}
+    for source_map in signatures.values():
+        # Repeated same-title shows are ambiguous; use only signatures that
+        # occur once per source ID and are present in at least three IDs.
+        unique = {
+            source_key: rows[0]
+            for source_key, rows in source_map.items()
+            if len(rows) == 1
+        }
+        if len(unique) < 3:
+            continue
+        ordered = sorted(unique.items(), key=lambda item: item[1]["start_dt"])
+        clusters = []
+        for item in ordered:
+            start = item[1]["start_dt"]
+            if not clusters or (start - clusters[-1][-1][1]["start_dt"]).total_seconds() > 600:
+                clusters.append([item])
+            else:
+                clusters[-1].append(item)
+        if len(clusters) < 2:
+            continue
+        consensus = max(clusters, key=len)
+        if len(consensus) < 2:
+            continue
+        consensus_sources = {item[0] for item in consensus}
+        consensus_start = sorted(item[1]["start_dt"] for item in consensus)[len(consensus) // 2]
+        for cluster in clusters:
+            if cluster is consensus or len(cluster) != 1:
+                continue
+            source_key, record = cluster[0]
+            if source_key in consensus_sources:
+                continue
+            delta = consensus_start - record["start_dt"]
+            minutes = round(delta.total_seconds() / 300) * 5
+            if abs(minutes) >= 120:
+                proposals.setdefault(source_key, []).append(minutes)
+
+    corrections = {}
+    for source_key, minutes_list in proposals.items():
+        buckets = {}
+        for minutes in minutes_list:
+            buckets[minutes] = buckets.get(minutes, 0) + 1
+        best_minutes, best_count = max(buckets.items(), key=lambda item: item[1])
+        if best_count >= 4 and best_count / len(minutes_list) >= 0.75:
+            corrections[source_key] = timedelta(minutes=best_minutes)
+    return corrections
+
+
 def main():
     channels = playlist_channels()
     reverse = load_mapping()
@@ -320,8 +388,34 @@ def main():
     raw_count = 0
     removed_count = 0
     generic_counts = 0
+    timing_audit = [
+        "# EPG Timing Audit",
+        "",
+        "Automatic corrections require repeated cross-source title and duration matches, "
+        "at least four consistent matches, >=75% agreement, at least three source IDs, "
+        "and a displacement of two hours or more.",
+        "",
+        "## Detected corrections",
+        "",
+    ]
+    correction_count = 0
     for target in sorted(mapped_targets):
         records = by_target.get(target, [])
+        corrections = infer_source_offsets(records)
+        for source_key, delta in corrections.items():
+            source_index, source_id = source_key
+            matching = [r for r in records if r["source_index"] == source_index and r["source_id"] == source_id]
+            for r in matching:
+                r["start_dt"] = r["start_dt"] + delta
+                if r["stop_dt"]:
+                    r["stop_dt"] = r["stop_dt"] + delta
+                r["source_offset"] = delta
+            correction_count += 1
+            timing_audit.append(
+                "- **{}** ({}): source ID {} from {} shifted by {:+g} hours after repeated cross-source agreement.".format(
+                    channels[target], target, source_id, SOURCES[source_index], delta.total_seconds() / 3600
+                )
+            )
         cleaned = clean_schedule(records)
         raw_count += len(records)
         removed_count += len(records) - len(cleaned)
@@ -330,10 +424,11 @@ def main():
         channel_offset = CHANNEL_TIME_OFFSETS.get(target, timedelta(0))
         for r in cleaned:
             attrs = dict(r["attrs"])
-            if channel_offset:
-                attrs["start"] = shift_xmltv_timestamp(attrs.get("start", ""), channel_offset)
+            total_offset = channel_offset + r.get("source_offset", timedelta(0))
+            if total_offset:
+                attrs["start"] = shift_xmltv_timestamp(attrs.get("start", ""), total_offset)
                 if attrs.get("stop"):
-                    attrs["stop"] = shift_xmltv_timestamp(attrs.get("stop", ""), channel_offset)
+                    attrs["stop"] = shift_xmltv_timestamp(attrs.get("stop", ""), total_offset)
             p = ET.Element("programme", attrs)
             for child in r["children"]:
                 p.append(ET.fromstring(ET.tostring(child, encoding="utf-8")))
@@ -352,6 +447,11 @@ def main():
     print(f"EPG cleanup: removed {removed_count} exact-duplicate/overlapping programmes")
     print(f"EPG cleanup: retained {generic_counts} generic-title programmes where no named alternative won")
     print(f"EPG generated: {len(mapped_targets)} mapped channels, {final_count} programmes")
+    if correction_count == 0:
+        timing_audit.append("- No source offsets met the strict automatic-correction threshold.")
+    timing_audit.extend(["", f"Detected source-ID corrections: **{correction_count}**", ""])
+    Path("reports").mkdir(parents=True, exist_ok=True)
+    Path("reports/epg-timing-audit.md").write_text("\\n".join(timing_audit), encoding="utf-8")
 
     ET.indent(root, space="  ")
     OUTPUT.write_bytes(
