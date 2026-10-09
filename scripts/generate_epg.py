@@ -451,7 +451,7 @@ def main():
         timing_audit.append("- No source offsets met the strict automatic-correction threshold.")
     timing_audit.extend(["", f"Detected source-ID corrections: **{correction_count}**", ""])
     Path("reports").mkdir(parents=True, exist_ok=True)
-    Path("reports/epg-timing-audit.md").write_text("\\n".join(timing_audit), encoding="utf-8")
+    Path("reports/epg-timing-audit.md").write_text("\n".join(timing_audit), encoding="utf-8")
 
     ET.indent(root, space="  ")
     OUTPUT.write_bytes(
