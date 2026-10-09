@@ -164,7 +164,10 @@ def main():
         old_epg=prev.get("epg_id","").strip()
         # Indian Bangla channels must retain one primary provider ID.
         # Multiple provider schedules are a major source of false EPG matches.
-        if ch["group"] == "Indian Bangla":
+        if is_bangladesh and not locked_ids:
+            epg_id=""
+            old_epg=""
+        elif ch["group"] == "Indian Bangla":
             epg_id=(hits[0] if hits else old_epg)
         else:
             epg_id=" | ".join(hits[:8]) or old_epg
