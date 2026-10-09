@@ -130,8 +130,15 @@ def main():
         candidates=[]
         prev=previous.get(ch["tvg_id"],{})
         locked_ids=EPG_LOCKS.get(ch["tvg_id"])
+        is_bangladesh = ch["group"].strip() == "Bangladesh"
         if locked_ids:
             candidates=list(dict.fromkeys(x.strip() for x in locked_ids if x.strip()))
+        elif is_bangladesh:
+            # The configured source catalogue is India-focused. Never reuse an
+            # old Indian mapping or infer a Bangladesh mapping from a similar
+            # channel name (e.g. NTV.bd -> NTV.in, News 24.bd -> News.24.in).
+            # Add Bangladesh IDs only after verifying a genuine local schedule.
+            candidates=[]
         else:
             candidates += [x.strip() for x in (prev.get("epg_id","").split("|") if prev.get("epg_id") else []) if x.strip()]
             candidates += [ch["tvg_id"], re.sub(r"@(?:sd|hd|uhd|fhd)$","",ch["tvg_id"],flags=re.I)]
@@ -141,9 +148,12 @@ def main():
         hits=[]; hit_sources=[]; total=0; live=False
         for src,data in zip(SOURCES,source_data):
             ids,future,counts,names=data
-            src_hits=[x for x in candidates if x in ids]
-            if not src_hits: src_hits=[x for x in ids if norm_id(x) in normalized]
-            if not src_hits: src_hits=list(names.get(name_key,set()))
+            if is_bangladesh and not locked_ids:
+                src_hits=[]
+            else:
+                src_hits=[x for x in candidates if x in ids]
+                if not src_hits: src_hits=[x for x in ids if norm_id(x) in normalized]
+                if not src_hits: src_hits=list(names.get(name_key,set()))
             if src_hits:
                 hit_sources.append(src)
                 for cid in src_hits:
