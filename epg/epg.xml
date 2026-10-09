@@ -12887,23 +12887,6 @@ A closer look at international news, events, current affairs, and exclusive stor
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/c3a231a17b16f8c079577a546419dc22.jpg" />
     <premiere />
   </programme>
-  <programme start="20261009060200 +0000" stop="20261009083800 +0000" channel="AndPictures.in@SD">
-    <category lang="en">Film</category>
-    <category lang="en">Action</category>
-    <credits>
-      <director>Hari</director>
-      <actor>Suriya</actor>
-      <actor>Anushka Shetty</actor>
-      <actor>Shruti K. Haasan</actor>
-      <actor>Thakur Anoop Singh</actor>
-      <actor>Robo Shankar</actor>
-      <actor>Sarath Babu</actor>
-      <producer>K.E. Gnanavelraja</producer>
-    </credits>
-    <desc lang="en">Durai Singham, an honest and uncompromising DCP, takes on a businessman and his goons who are involved in illegal dumping of toxic waste and causing serious health concerns.</desc>
-    <icon src="https://iptv-epg.org/images/RGU4lwgeXi6ZXI0RuFutSsKPUJqTM4knWN7_ODNV1Aeu0CyTnRJ_iaND6B3oOr4WQqn7Q_-uVCRRepBt9DtKc7CELnNSsLbqw7AsLPwRA6JjIjt0mYacDINxe87e" />
-    <title lang="en">Suriya S3</title>
-  </programme>
   <programme channel="AndPictures.in@SD" start="20261009140800 +0530" stop="20261009163800 +0530">
     <title lang="en">Geetha Govindam</title>
     <desc lang="en">Vijay Govind, a young lecturer in a college, wishes to get married at the earliest. He tries to woo Geetha, an independent and a level-headed woman, who is not easy to convince.</desc>
@@ -22534,13 +22517,6 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
     <icon src="https://iptv-epg.org/images/KKFt18z3vNc0QpXkmCsUoYA-Voe5JQzDVFabvdggwSzDIWbVKk1vwiLfb1twMuK1ML17XrOHcz0gm2LRpIBrwiicqsj26gtFO3pIZ-OXFkP4DIeSA0z0Wk1qF6Q" />
     <title lang="en">Movie</title>
   </programme>
-  <programme channel="CartoonNetwork.uk" start="20261009140000 +0530" stop="20261009141000 +0530">
-    <title lang="en">Omi No.1</title>
-    <desc lang="en">Omi, an ultra-rich nine-year-old heir, encounters hilarious and eye-opening situations that teach him about the realities of life.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <icon src="https://dtil.tmsimg.com/assets/p31961062_b_h9_ab.jpg?lock=880x660" />
-  </programme>
   <programme channel="CartoonNetwork.uk" start="20261009141000 +0530" stop="20261009143000 +0530">
     <title lang="en">Kian And Kiki</title>
     <desc lang="en">Follow the enchanting adventures of Kian and Kiki, a spirited sibling duo from a family of magicians, as they navigate their extraordinary magical powers and embark on whimsical journeys.</desc>
@@ -24679,14 +24655,10 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="Colors.in" start="20261009134800 +0530" stop="20261009140900 +0530">
-    <title>Balika Vadhu - Kacchi Umar Ke Pakke Rishte</title>
-    <desc>Anandi, a child bride, married into an affluent family at a tender age, struggles to cope with the traditions. Soon, she overcomes multiple personal obstacles to emerge as an example for rural women.</desc>
-    <category>TV Show</category>
-    <category>Drama</category>
+  <programme channel="Colors.in" start="20261009140000 +0530" stop="20261009143000 +0530">
+    <title lang="en">Balika Vadhu - Kacchi Umar Ke Pakke Rishte</title>
+    <desc lang="en">Anandi, a child bride, married into an affluent family at a tender age, struggles to cope with the traditions. Soon, she overcomes multiple personal obstacles to emerge as an example for rural women.</desc>
     <credits>
-      <director>Sidharth Sengupta</director>
-      <director>Pradeep Yadav</director>
       <actor>Pratyusha Banerjee</actor>
       <actor>Toral Rasputra</actor>
       <actor>Avika Gor</actor>
@@ -24702,38 +24674,15 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
       <actor>Vikrant Massey</actor>
       <actor>Satyajit Sharma</actor>
       <actor>Neha Marda</actor>
-      <producer>Sunjoy Waddhwa</producer>
-      <producer>Comall Sunjoy W</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p10500189_b_h10_ab.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="Colors.in" start="20261009140900 +0530" stop="20261009142900 +0530">
-    <title>Balika Vadhu - Kacchi Umar Ke Pakke Rishte</title>
-    <desc>Anandi, a child bride, married into an affluent family at a tender age, struggles to cope with the traditions. Soon, she overcomes multiple personal obstacles to emerge as an example for rural women.</desc>
-    <category>TV Show</category>
-    <category>Drama</category>
-    <credits>
       <director>Sidharth Sengupta</director>
       <director>Pradeep Yadav</director>
-      <actor>Pratyusha Banerjee</actor>
-      <actor>Toral Rasputra</actor>
-      <actor>Avika Gor</actor>
-      <actor>Shashank Vyas</actor>
-      <actor>Avinash Mukherjee</actor>
-      <actor>Anjum Farooki</actor>
-      <actor>Sidharth Shukla</actor>
-      <actor>Sriti Jha</actor>
-      <actor>Surekha Sikri</actor>
-      <actor>Anup Soni</actor>
-      <actor>Smita Bansal</actor>
-      <actor>Veebha Anand</actor>
-      <actor>Vikrant Massey</actor>
-      <actor>Satyajit Sharma</actor>
-      <actor>Neha Marda</actor>
       <producer>Sunjoy Waddhwa</producer>
       <producer>Comall Sunjoy W</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p10500189_b_h10_ab.jpg?lock=1280x720" />
+    <category lang="en">TV Show</category>
+    <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p10500189_b_h9_ab.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E53</episode-num>
   </programme>
   <programme channel="Colors.in" start="20261009143000 +0530" stop="20261009150000 +0530">
     <title lang="en">Balika Vadhu - Kacchi Umar Ke Pakke Rishte</title>
@@ -28854,25 +28803,9 @@ Yung and Mahi's bond is tested when the latter supports a rival, while Amrapali 
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/15e7d9d34571c2d5826d275429a6f138.jpg" />
     <premiere />
   </programme>
-  <programme channel="ColorsCineplex.in@SD" start="20261009133400 +0530" stop="20261009160900 +0530">
-    <title lang="en">Mufti</title>
-    <desc lang="en">An undercover cop tries to infiltrate an infamous don's criminal empire.</desc>
-    <credits>
-      <actor>Shivarajkumar</actor>
-      <actor>Sriimurali</actor>
-      <actor>Shanvi Srivastava</actor>
-      <actor>Devaraj</actor>
-      <actor>Chaya Singh</actor>
-      <actor>Nyla Pramod</actor>
-      <actor>Madhu Guruswamy</actor>
-      <actor>Vasishta N. Simha</actor>
-      <director>Narthan</director>
-      <producer>Bhoghendra</producer>
-      <producer>Jayanna</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Action</category>
-    <icon src="https://dtil.tmsimg.com/assets/p15280358_b_h9_aa.jpg?lock=880x660" />
+  <programme start="20261009140000 +0530" stop="20261009170000 +0530" channel="ColorsCineplex.in@SD" catchup-id="100065999">
+    <title>Big Brother</title>
+    <desc>A man becomes a vigilante and protector of women after his sister has acid thrown in her face.</desc>
   </programme>
   <programme start="20261009170000 +0530" stop="20261009190000 +0530" channel="ColorsCineplex.in@SD" catchup-id="100065967">
     <title>Madhagaja</title>
@@ -91621,21 +91554,9 @@ This is Sport - Talk Show Category.</desc>
     <desc lang="en">Bear navigates Ireland's rugged terrain, scaling 2000ft cliffs, building fires, and foraging for food, and feasting on the carcass of a dead sheep.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DISCOVERY_CHANNEL_49224_12OCT080000_12OCT090000/images/LANDSCAPE_169_HD/DISCOVERY_ManVsWild_49224.jpg" />
   </programme>
-  <programme channel="DiscoveryKids.au" start="20261009083000 +0000" stop="20261009084200 +0000">
-    <title lang="zh">Kris Roll No 21</title>
-    <desc>After Kris wins a trip on a cruise, he asks his classmates to join him on this adventure. Meanwhile, Kanishk seeks the crab demon's support to defeat Kris.</desc>
-    <date>20261009</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="DiscoveryKids.au" start="20261009084200 +0000" stop="20261009085400 +0000">
-    <title lang="zh">Kris Roll No 21</title>
-    <desc>While the children eagerly explore an old Roman museum, Kanishk joins forces with his vicious ally to hold Kris and his friends captive.</desc>
-    <date>20261009</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261009135800 +0530" stop="20261009142100 +0530" channel="DiscoveryKids.au" catchup-id="100006950">
+    <title>Society Mai Bunder-Titoo</title>
+    <desc>Tito helps his mischievous monkey friend return home after the town complaints increase. S03E19.</desc>
   </programme>
   <programme channel="DiscoveryKids.au" start="20261009085400 +0000" stop="20261009090600 +0000">
     <title lang="zh">Kris Roll No 21</title>
@@ -110806,19 +110727,6 @@ During the Holi celebrations, Shera is challenged to a spirited watercolour comp
     <category>Film</category>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800011-20261015223700/list/GreatMoviesIslandOfShadows21513772c41b6a163e74274b491b070bae8fe30.jpg" />
-  </programme>
-  <programme channel="Goldmines.in@SD" start="20261009111500 +0530" stop="20261009140900 +0530">
-    <title>The Real Jackpot</title>
-    <desc>A security guard travels from India to Pakistan to find a hidden treasure left by his grandfather. However, he faces an obstacle when an evil man tries to stop him.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2013</date>
-    <credits>
-      <actor>Tottempudi Gopichand</actor>
-      <actor>Taapsee Pannu</actor>
-      <actor>Shakti Kapoor</actor>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p28424033_b_h10_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="Goldmines.in@SD" start="20261009140900 +0530" stop="20261009165700 +0530">
     <title>Race Gurram</title>
@@ -148575,13 +148483,6 @@ Shalini lives in America but desires to relocate to India. Meanwhile, a girl fro
     <desc lang="pa-IN">A comprehensive compilation presents some of the best and most popular songs from movies in the Punjabi film industry played back to back.</desc>
     <category lang="pa-IN">178</category>
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/12670691c68810ce73bc6a9813b3c4d8.jpg" />
-    <premiere />
-  </programme>
-  <programme start="20261009133800 +0530" stop="20261009141200 +0530" channel="PocketFilms.in">
-    <title lang="hi-IN">Desh Ki Pardesh ?</title>
-    <desc lang="hi-IN">Bringing the best in cinema.</desc>
-    <category lang="hi-IN">177</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/ee71a631180dcff69f45e414da10b709.jpg" />
     <premiere />
   </programme>
   <programme start="20261009141200 +0530" stop="20261009143200 +0530" channel="PocketFilms.in">
@@ -188508,14 +188409,6 @@ The narrator presents a dramatised re-enactment of cases which unveil the depth 
     <desc lang="en">Start your day with Good Morning Sirippoli's back-to-back comedy clippings. Smile now!</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SIRIPPOLI_1482128_12OCT080000_12OCT090000/images/LANDSCAPE_169_HD/SIRIPPOLI_GoodMorningSirippoli_1482128.jpg" />
   </programme>
-  <programme channel="SongdewTV.in@SD" start="20261009082000 +0000" stop="20261009084000 +0000">
-    <title lang="zh">Songdew Select</title>
-    <desc>A comprehensive compilation of independent music, showcasing the diverse creativity and unique voices of artists, offering listeners an eclectic blend of genres and styles.</desc>
-    <date>20261009</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
   <programme channel="SongdewTV.in@SD" start="20261009084000 +0000" stop="20261009084500 +0000">
     <title lang="zh">Take 7</title>
     <desc>A comprehensive and detailed insight into behind the scenes of music videos, highlighting the process and compilation of songs.</desc>
@@ -193566,53 +193459,221 @@ The narrator presents a dramatised re-enactment of cases which unveil the depth 
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/f31bbe589d5ef1338381fb7acd157018.jpg" />
     <premiere />
   </programme>
-  <programme start="20261009134100 +0530" stop="20261009141300 +0530" channel="SonyPal.in@SD" catchup-id="100017590">
-    <title>Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc>Inspector Pandey arrests Chunky for using Babita's image on tobacco hoardings. S01 E1841.</desc>
+  <programme channel="SonyPal.in@SD" start="20261009135500 +0530" stop="20261009141800 +0530">
+    <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
+    <desc lang="en">As the women of Gokuldham spend some time with Jhilmil, they learn more about Popatlal and his unfulfilled dreams. They then decide to help Popatlal fulfil his dreams.</desc>
+    <credits>
+      <actor>Dilip Joshi</actor>
+      <actor>Nitish Bhaluni</actor>
+      <actor>Amit Bhatt</actor>
+      <actor>Sachin Shroff</actor>
+      <actor>Sunayana Fozdar</actor>
+      <actor>Tanuj Mahashabde</actor>
+      <actor>Munmun Dutta</actor>
+      <actor>Mandar Chandwadkar</actor>
+      <actor>Sonalika Joshi</actor>
+      <actor>Palak Sindhwani</actor>
+      <actor>Nirmal Soni</actor>
+      <actor>Ambika Ranjankar</actor>
+      <actor>Kush Shah</actor>
+      <actor>Balwinder Singh Suri</actor>
+      <actor>Monaz Mevawalla</actor>
+      <actor>Samay Shah</actor>
+      <actor>Azhar Shaikh</actor>
+      <actor>Shyam Pathak</actor>
+      <actor>Navina Wadekar</actor>
+      <actor>Sharad Sankla</actor>
+      <actor>Tanmay Vekaria</actor>
+      <actor>Daya Shankar Pandey</actor>
+      <director>Dharmesh Mehta</director>
+      <director>Harshad Joshi</director>
+      <producer>Asit Kumarr Modi</producer>
+      <producer>Neela Asit Modi</producer>
+    </credits>
+    <category lang="en">TV Show</category>
+    <category lang="en">Sitcom</category>
+    <icon src="https://dtil.tmsimg.com/assets/p8862533_b_h9_ad.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E2233</episode-num>
   </programme>
-  <programme start="20261009141300 +0530" stop="20261009143000 +0530" channel="SonyPal.in@SD" catchup-id="100017555">
-    <title>Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc>Jethalal gets worried that his friendship with Babita is probably ruined. S01 E1842.</desc>
+  <programme channel="SonyPal.in@SD" start="20261009141800 +0530" stop="20261009144200 +0530">
+    <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
+    <desc lang="en">Popatlal is left feeling heartbroken as Jhilmil leaves for Ghaziabad. However, he still harbours hopes of marrying her someday.</desc>
+    <credits>
+      <actor>Dilip Joshi</actor>
+      <actor>Nitish Bhaluni</actor>
+      <actor>Amit Bhatt</actor>
+      <actor>Sachin Shroff</actor>
+      <actor>Sunayana Fozdar</actor>
+      <actor>Tanuj Mahashabde</actor>
+      <actor>Munmun Dutta</actor>
+      <actor>Mandar Chandwadkar</actor>
+      <actor>Sonalika Joshi</actor>
+      <actor>Palak Sindhwani</actor>
+      <actor>Nirmal Soni</actor>
+      <actor>Ambika Ranjankar</actor>
+      <actor>Kush Shah</actor>
+      <actor>Balwinder Singh Suri</actor>
+      <actor>Monaz Mevawalla</actor>
+      <actor>Samay Shah</actor>
+      <actor>Azhar Shaikh</actor>
+      <actor>Shyam Pathak</actor>
+      <actor>Navina Wadekar</actor>
+      <actor>Sharad Sankla</actor>
+      <actor>Tanmay Vekaria</actor>
+      <actor>Daya Shankar Pandey</actor>
+      <director>Dharmesh Mehta</director>
+      <director>Harshad Joshi</director>
+      <producer>Asit Kumarr Modi</producer>
+      <producer>Neela Asit Modi</producer>
+    </credits>
+    <category lang="en">TV Show</category>
+    <category lang="en">Sitcom</category>
+    <icon src="https://dtil.tmsimg.com/assets/p8862533_b_h9_ad.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E2234</episode-num>
   </programme>
-  <programme channel="SonyPal.in@SD" start="20261009090000 +0000" stop="20261009093000 +0000">
-    <title lang="zh">Teleshopping</title>
-    <desc>Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <date>20261009</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme channel="SonyPal.in@SD" start="20261009144200 +0530" stop="20261009150800 +0530">
+    <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
+    <desc lang="en">Jethalal sees a model in the newspaper who looks like Babita and calls Daya to ask if it is her. Later, he tries to convince Babita to take up modelling full-time.</desc>
+    <credits>
+      <actor>Dilip Joshi</actor>
+      <actor>Nitish Bhaluni</actor>
+      <actor>Amit Bhatt</actor>
+      <actor>Sachin Shroff</actor>
+      <actor>Sunayana Fozdar</actor>
+      <actor>Tanuj Mahashabde</actor>
+      <actor>Munmun Dutta</actor>
+      <actor>Mandar Chandwadkar</actor>
+      <actor>Sonalika Joshi</actor>
+      <actor>Palak Sindhwani</actor>
+      <actor>Nirmal Soni</actor>
+      <actor>Ambika Ranjankar</actor>
+      <actor>Kush Shah</actor>
+      <actor>Balwinder Singh Suri</actor>
+      <actor>Monaz Mevawalla</actor>
+      <actor>Samay Shah</actor>
+      <actor>Azhar Shaikh</actor>
+      <actor>Shyam Pathak</actor>
+      <actor>Navina Wadekar</actor>
+      <actor>Sharad Sankla</actor>
+      <actor>Tanmay Vekaria</actor>
+      <actor>Daya Shankar Pandey</actor>
+      <director>Dharmesh Mehta</director>
+      <director>Harshad Joshi</director>
+      <producer>Asit Kumarr Modi</producer>
+      <producer>Neela Asit Modi</producer>
+    </credits>
+    <category lang="en">TV Show</category>
+    <category lang="en">Sitcom</category>
+    <icon src="https://dtil.tmsimg.com/assets/p8862533_b_h9_ad.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E1830</episode-num>
   </programme>
-  <programme channel="SonyPal.in@SD" start="20261009093000 +0000" stop="20261009095000 +0000">
-    <title lang="zh">Chidiya Ghar</title>
-    <desc>A retired headmaster resides in a house named for his late wife, with family possessing animal-like traits. Their community interactions yield valuable life lessons as they navigate daily challenges.</desc>
-    <date>20261009</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme channel="SonyPal.in@SD" start="20261009150800 +0530" stop="20261009152400 +0530">
+    <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
+    <desc lang="en">A marketing executive relentlessly calls Jethalal to invest in his company. Later, Jethalal receives a call from Babita about the pictures in her phone's memory card.</desc>
+    <credits>
+      <actor>Dilip Joshi</actor>
+      <actor>Nitish Bhaluni</actor>
+      <actor>Amit Bhatt</actor>
+      <actor>Sachin Shroff</actor>
+      <actor>Sunayana Fozdar</actor>
+      <actor>Tanuj Mahashabde</actor>
+      <actor>Munmun Dutta</actor>
+      <actor>Mandar Chandwadkar</actor>
+      <actor>Sonalika Joshi</actor>
+      <actor>Palak Sindhwani</actor>
+      <actor>Nirmal Soni</actor>
+      <actor>Ambika Ranjankar</actor>
+      <actor>Kush Shah</actor>
+      <actor>Balwinder Singh Suri</actor>
+      <actor>Monaz Mevawalla</actor>
+      <actor>Samay Shah</actor>
+      <actor>Azhar Shaikh</actor>
+      <actor>Shyam Pathak</actor>
+      <actor>Navina Wadekar</actor>
+      <actor>Sharad Sankla</actor>
+      <actor>Tanmay Vekaria</actor>
+      <actor>Daya Shankar Pandey</actor>
+      <director>Dharmesh Mehta</director>
+      <director>Harshad Joshi</director>
+      <producer>Asit Kumarr Modi</producer>
+      <producer>Neela Asit Modi</producer>
+    </credits>
+    <category lang="en">TV Show</category>
+    <category lang="en">Sitcom</category>
+    <icon src="https://dtil.tmsimg.com/assets/p8862533_b_h9_ad.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E1831</episode-num>
   </programme>
-  <programme channel="SonyPal.in@SD" start="20261009095000 +0000" stop="20261009101300 +0000">
-    <title lang="zh">Chidiya Ghar</title>
-    <desc>A few goons enter the city and plan to torture Kesri and his family.</desc>
-    <date>20261009</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme channel="SonyPal.in@SD" start="20261009152400 +0530" stop="20261009155800 +0530">
+    <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
+    <desc lang="en">Jethalal and his friends recreate the scenario in which Dhanraj gave Bhide the gold. However, they do this to convince the police to release Bhide from jail.</desc>
+    <credits>
+      <actor>Dilip Joshi</actor>
+      <actor>Nitish Bhaluni</actor>
+      <actor>Amit Bhatt</actor>
+      <actor>Sachin Shroff</actor>
+      <actor>Sunayana Fozdar</actor>
+      <actor>Tanuj Mahashabde</actor>
+      <actor>Munmun Dutta</actor>
+      <actor>Mandar Chandwadkar</actor>
+      <actor>Sonalika Joshi</actor>
+      <actor>Palak Sindhwani</actor>
+      <actor>Nirmal Soni</actor>
+      <actor>Ambika Ranjankar</actor>
+      <actor>Kush Shah</actor>
+      <actor>Balwinder Singh Suri</actor>
+      <actor>Monaz Mevawalla</actor>
+      <actor>Samay Shah</actor>
+      <actor>Azhar Shaikh</actor>
+      <actor>Shyam Pathak</actor>
+      <actor>Navina Wadekar</actor>
+      <actor>Sharad Sankla</actor>
+      <actor>Tanmay Vekaria</actor>
+      <actor>Daya Shankar Pandey</actor>
+      <director>Dharmesh Mehta</director>
+      <director>Harshad Joshi</director>
+      <producer>Asit Kumarr Modi</producer>
+      <producer>Neela Asit Modi</producer>
+    </credits>
+    <category lang="en">TV Show</category>
+    <category lang="en">Sitcom</category>
+    <icon src="https://dtil.tmsimg.com/assets/p8862533_b_h9_ad.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E1832</episode-num>
   </programme>
-  <programme channel="SonyPal.in@SD" start="20261009101300 +0000" stop="20261009103300 +0000">
-    <title lang="zh">Chidiya Ghar</title>
-    <desc>A retired headmaster resides in a house named for his late wife, with family possessing animal-like traits. Their community interactions yield valuable life lessons as they navigate daily challenges.</desc>
-    <date>20261009</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="SonyPal.in@SD" start="20261009103300 +0000" stop="20261009105300 +0000">
-    <title lang="zh">Chidiya Ghar</title>
-    <desc>The family members perform their roles at the play planned for Mendhak's birthday party.</desc>
-    <date>20261009</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme channel="SonyPal.in@SD" start="20261009155800 +0530" stop="20261009162600 +0530">
+    <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
+    <desc lang="en">Jethalal manages to acquire a modelling contract for Babita. Soon, he asks Taarak how he can get her signature on the document without her knowledge.</desc>
+    <credits>
+      <actor>Dilip Joshi</actor>
+      <actor>Nitish Bhaluni</actor>
+      <actor>Amit Bhatt</actor>
+      <actor>Sachin Shroff</actor>
+      <actor>Sunayana Fozdar</actor>
+      <actor>Tanuj Mahashabde</actor>
+      <actor>Munmun Dutta</actor>
+      <actor>Mandar Chandwadkar</actor>
+      <actor>Sonalika Joshi</actor>
+      <actor>Palak Sindhwani</actor>
+      <actor>Nirmal Soni</actor>
+      <actor>Ambika Ranjankar</actor>
+      <actor>Kush Shah</actor>
+      <actor>Balwinder Singh Suri</actor>
+      <actor>Monaz Mevawalla</actor>
+      <actor>Samay Shah</actor>
+      <actor>Azhar Shaikh</actor>
+      <actor>Shyam Pathak</actor>
+      <actor>Navina Wadekar</actor>
+      <actor>Sharad Sankla</actor>
+      <actor>Tanmay Vekaria</actor>
+      <actor>Daya Shankar Pandey</actor>
+      <director>Dharmesh Mehta</director>
+      <director>Harshad Joshi</director>
+      <producer>Asit Kumarr Modi</producer>
+      <producer>Neela Asit Modi</producer>
+    </credits>
+    <category lang="en">TV Show</category>
+    <category lang="en">Sitcom</category>
+    <icon src="https://dtil.tmsimg.com/assets/p8862533_b_h9_ad.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E1833</episode-num>
   </programme>
   <programme channel="SonyPal.in@SD" start="20261009162600 +0530" stop="20261009165000 +0530">
     <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
@@ -254207,14 +254268,6 @@ Sarah's first date takes her to the Red-Light District; Amber shares a passionat
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261009140000 +0530" stop="20261009141200 +0530" channel="ThalaaTV.in">
-    <title>Karimedu Karuvayan</title>
-    <sub-title>THALAA TV | TAMIL</sub-title>
-    <desc>Starring Vijayakanth and Nalini, directed by Ramanarayanan.</desc>
-    <category>Drama</category>
-    <language>TAMIL</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/THALAA%20TV/POSTER/Karimedu%20Karuvayan.png" />
-  </programme>
   <programme start="20261009141200 +0530" stop="20261009142500 +0530" channel="ThalaaTV.in">
     <title>Karimedu Karuvayan</title>
     <sub-title>THALAA TV | TAMIL</sub-title>
@@ -262079,14 +262132,6 @@ Sarah's first date takes her to the Red-Light District; Amber shares a passionat
     <category>Kids</category>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261015233600/list/TinyPOPTheCatintheHatKnowsaLotAboutThat2087465e28043349843462d91124852b168708a.jpg" />
-  </programme>
-  <programme start="20261009135900 +0530" stop="20261009141100 +0530" channel="TollyTV.in">
-    <title>Seetaramayya Gari Manavaralu</title>
-    <sub-title>TOLLY TV | TELUGU</sub-title>
-    <desc>Sitaramayya, estranged from his family, embraces his granddaughter after tragedy.</desc>
-    <category>Movies</category>
-    <language>TELUGU</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/TOLLY%20TV/IMAGES/Seetaramayya%20Gari%20Manavaralu.png" />
   </programme>
   <programme start="20261009141100 +0530" stop="20261009142400 +0530" channel="TollyTV.in">
     <title>Seetaramayya Gari Manavaralu</title>
@@ -289933,42 +289978,6 @@ When an evil spirit haunts a village in Bihar, a mother experiences eerie supern
     <episode-num>S1 E87</episode-num>
     <icon src="https://iptv-epg.org/images/FJOaGeetQRNooge-UXCOYLRXJrXUYluwqscTyqcQD_Ul-EXz_1u-oUHmfbEaqg_NIcrjClQO3iu-85x3ujXCFSdmSfGBbr4cDXUoqD7MpsTvA0L126W4NLz8ltdf" />
     <title lang="en">Fear Files</title>
-  </programme>
-  <programme start="20261009140600 +0530" stop="20261009140900 +0530" channel="custom.duck.tv">
-    <title>Toby McFly</title>
-    <desc>Toby McFly, a pilot dog, embarks on exciting adventures as he shares aerial views of nature, animals and people.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/e37aec9c76f6da74ec1b492645c72adf.jpg?width=700" />
-    <credits>
-      <director>Roza Györffy</director>
-    </credits>
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261009140900 +0530" stop="20261009141200 +0530" channel="custom.duck.tv">
-    <title>Tempo Giusto</title>
-    <desc>Lola, a cheerful young girl, and Henry, a little boy, help children understand the concept of time while showing them what to do at different hours of the day.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/9d208ea438c163baffc2647cbfa3430f.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261009141200 +0530" stop="20261009141400 +0530" channel="custom.duck.tv">
-    <title>Henry's Stories</title>
-    <desc>Henry, a creative little boy, together with his sack and story cards, shares tales that children experience in their daily lives.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/76ecd4a27b5a453d26e9c3f87cb04968.jpg?width=700" />
-    <credits>
-      <director>Róza Györffy</director>
-    </credits>
-    <rating>
-      <value>TVY</value>
-    </rating>
   </programme>
   <programme start="20261009141400 +0530" stop="20261009141700 +0530" channel="custom.duck.tv">
     <title>DuckSchool</title>
