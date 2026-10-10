@@ -32,11 +32,11 @@ Cloudflare recommends Worker Secrets for sensitive values. Do not put the Xtream
 
 ## Categories
 
-The gateway preserves the playlist category structure, including Bangladesh, Indian Bangla, Indian Movies, Indian Music, Indian Entertainment, International, Documentary & Wildlife, Kids, Religious, Sports, Backup, New Channels and New Backup.
+The gateway preserves the playlist category structure, including Bangladesh, Indian Bangla, Indian Movies, Indian Music, Indian Entertainment, Pakistani, International, Documentary & Wildlife, Kids, Religious, Sports, Backup, New Channels and New Backup. Review-only groups such as `Not Playing` and `Test` are excluded from the Xtream channel/category output.
 
 ## EPG
 
-The current playlist does not contain a complete programme schedule, so XMLTV/EPG currently returns an empty EPG structure. Channel logos, names, categories and tvg-id values are preserved.
+The gateway serves XMLTV data from the repository's published `epg/epg.xml` first, then attempts its configured public EPG sources if that file cannot be fetched or is unusable. Programme coverage depends on the current guide and channel-ID mappings; some channels may have no listings. The gateway preserves playlist channel IDs, names, categories and logos where supported.
 
 ## Updates
 
