@@ -57,4 +57,4 @@ See **`Readme.txt`** inside the build kit for detailed instructions.
 - Playlist formats: **M3U / M3U8**
 - Playback: **Built-in**
 
-**[View Playlist Studio v5.0 Release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.0.0)**
+**[View Playlist Studio v5.0 Release](https://github.com/saeidrahmanbd/Playlist-Studio/releases/tag/v5.0.0)**
