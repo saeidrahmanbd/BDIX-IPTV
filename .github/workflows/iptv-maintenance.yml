@@ -132,7 +132,7 @@ import json,re
 from pathlib import Path
 from datetime import datetime,timezone
 def metric(text,label):
-    m=re.search(rf'- {re.escape(label)}: \\*\\*(\\d+)\\*\\*',text)
+    m=re.search(rf'- {re.escape(label)}: {re.escape(chr(42)*2)}(\\d+){re.escape(chr(42)*2)}',text)
     return int(m.group(1)) if m else None
 audit=Path('reports/playlist-audit.md').read_text(encoding='utf-8')
 health=Path('reports/stream-health.md').read_text(encoding='utf-8')
@@ -155,7 +155,7 @@ if isinstance(hist,list) and hist:
       'health_failures':metric(health,'Failed this check'),
       'health_persistent':metric(health,'Persistent failures (3+ consecutive)')
     })
-    p.write_text(json.dumps(hist[-180:],indent=2)+'\\n',encoding='utf-8')
+    p.write_text(json.dumps(hist[-180:],indent=2)+chr(10),encoding='utf-8')
 PY
             python scripts/generate_dashboard.py
             # The guide is a generated publication artifact. Restore the
