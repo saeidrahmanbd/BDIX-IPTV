@@ -24,17 +24,17 @@ Playlist Studio 5.0 is a Windows application for managing, organizing, editing, 
 
 ### Portable Application
 
-**[⬇️ Download Playlist Studio 5.0 Portable](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/download/v5.0.0/Playlist-Studio-5.0.Portable.exe)**
+**[⬇️ Download Playlist Studio 5.0 Portable](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.Portable.exe)**
 
 No traditional installation is required.
 
 ### Windows Build Kit
 
-**[📦 Download Windows Build Kit](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/download/v5.0.0/Playlist-Studio-5.0-Windows-Build-Kit-Final.zip)**
+**[📦 Download Windows Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug11.zip)**
 
 ## Build Instructions
 
-1. Download `Playlist-Studio-5.0-Windows-Build-Kit-Final.zip`
+1. Download `Playlist-Studio-5_0-Windows-Build-Kit-Debug11.zip`
 2. Extract the ZIP file
 3. Open the extracted folder
 4. Run **`BUILD-Windows.cmd`**
