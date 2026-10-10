@@ -117,6 +117,13 @@ jobs:
               set -e
               echo "Final post-rollback audit: $FINAL_AUDIT_STATUS"
               echo "Final post-rollback gate: $FINAL_GATE_STATUS"
+              # The audit may have modified the playlist before rejecting it.
+              # After restoring the published playlist, refresh every report
+              # whose metrics depend on playlist contents; otherwise dashboards
+              # can describe the rejected working-tree candidate.
+              python scripts/build_identity_index.py
+              python scripts/stream_health.py
+              python scripts/generate_dashboard.py
             fi
             # The guide is a generated publication artifact. Restore the
             # publish-approved copy immediately before staging so later
