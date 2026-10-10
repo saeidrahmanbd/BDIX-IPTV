@@ -63,6 +63,6 @@ See **`Readme.txt`** inside the build kit for detailed instructions.
 ## Links
 
 - [Latest Release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest)
-- [v5.0.0 Release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.0.0)
+- [v5.0.0 Release](https://github.com/saeidrahmanbd/Playlist-Studio/releases/tag/v5.0.0)
 - [Project README](../README.md)
 - [Download Center](DOWNLOADS.md)
