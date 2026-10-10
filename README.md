@@ -16,7 +16,7 @@ Compatible with **XCIPTV** and other M3U-compatible players.
 ## 📥 Download Center
 
 - 📺 **[Main M3U Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)**
-- 🖥️ **[Playlist Studio v5.0](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest)** — Windows playlist manager, editor & player
+- 🖥️ **[Playlist Studio v5.0](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.Portable.exe)** — Windows playlist manager, editor & player
 - 🛠️ **[Playlist Studio Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug11.zip)** — Windows build package
 - 🛜 **[Xtream Codes](xtream/README.md)** — Xtream Gateway / XCIPTV
 - 📄 **[EPG Coverage](reports/epg-coverage.md)** — EPG status and coverage
