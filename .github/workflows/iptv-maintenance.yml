@@ -128,35 +128,35 @@ jobs:
             # Rewrite the latest history record after any rollback so its
             # metrics describe the final retained playlist, not a rejected candidate.
             python - <<'PY'
-import json,re
-from pathlib import Path
-from datetime import datetime,timezone
-def metric(text,label):
-    m=re.search(rf'- {re.escape(label)}: {re.escape(chr(42)*2)}(\\d+){re.escape(chr(42)*2)}',text)
-    return int(m.group(1)) if m else None
-audit=Path('reports/playlist-audit.md').read_text(encoding='utf-8')
-health=Path('reports/stream-health.md').read_text(encoding='utf-8')
-p=Path('reports/maintenance-history.json')
-try: hist=json.loads(p.read_text(encoding='utf-8'))
-except Exception: hist=[]
-if isinstance(hist,list) and hist:
-    rec=hist[-1]
-    rec.update({
-      'timestamp_utc':datetime.now(timezone.utc).isoformat(),
-      'entries':metric(audit,'Playlist entries'),
-      'unique_channel_ids':metric(audit,'Unique channel IDs'),
-      'duplicate_ids':metric(audit,'IDs with multiple streams'),
-      'duplicate_urls':metric(audit,'Duplicate stream URLs'),
-      'metadata_conflicts':metric(audit,'Metadata conflicts'),
-      'logo_exceptions':metric(audit,'Logo exceptions'),
-      'primary_number_collisions':metric(audit,'Primary channel-number collisions'),
-      'protected_primary_changes':metric(audit,'Protected primary-entry changes'),
-      'health_tested':metric(health,'Streams tested'),
-      'health_failures':metric(health,'Failed this check'),
-      'health_persistent':metric(health,'Persistent failures (3+ consecutive)')
-    })
-    p.write_text(json.dumps(hist[-180:],indent=2)+chr(10),encoding='utf-8')
-PY
+            import json,re
+            from pathlib import Path
+            from datetime import datetime,timezone
+            def metric(text,label):
+                m=re.search(rf'- {re.escape(label)}: {re.escape(chr(42)*2)}(\\d+){re.escape(chr(42)*2)}',text)
+                return int(m.group(1)) if m else None
+            audit=Path('reports/playlist-audit.md').read_text(encoding='utf-8')
+            health=Path('reports/stream-health.md').read_text(encoding='utf-8')
+            p=Path('reports/maintenance-history.json')
+            try: hist=json.loads(p.read_text(encoding='utf-8'))
+            except Exception: hist=[]
+            if isinstance(hist,list) and hist:
+                rec=hist[-1]
+                rec.update({
+                  'timestamp_utc':datetime.now(timezone.utc).isoformat(),
+                  'entries':metric(audit,'Playlist entries'),
+                  'unique_channel_ids':metric(audit,'Unique channel IDs'),
+                  'duplicate_ids':metric(audit,'IDs with multiple streams'),
+                  'duplicate_urls':metric(audit,'Duplicate stream URLs'),
+                  'metadata_conflicts':metric(audit,'Metadata conflicts'),
+                  'logo_exceptions':metric(audit,'Logo exceptions'),
+                  'primary_number_collisions':metric(audit,'Primary channel-number collisions'),
+                  'protected_primary_changes':metric(audit,'Protected primary-entry changes'),
+                  'health_tested':metric(health,'Streams tested'),
+                  'health_failures':metric(health,'Failed this check'),
+                  'health_persistent':metric(health,'Persistent failures (3+ consecutive)')
+                })
+                p.write_text(json.dumps(hist[-180:],indent=2)+chr(10),encoding='utf-8')
+            PY
             python scripts/generate_dashboard.py
             # The guide is a generated publication artifact. Restore the
             # publish-approved copy immediately before staging so later
