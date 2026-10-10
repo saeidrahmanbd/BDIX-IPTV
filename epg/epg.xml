@@ -29837,24 +29837,6 @@ Surprise removal from leadership trial sparks broken trust and sharp words. Subs
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/f31bbe589d5ef1338381fb7acd157018.jpg" />
     <premiere />
   </programme>
-  <programme channel="ColorsCineplexSuperhits.in@SD" start="20261010100100 +0530" stop="20261010123500 +0530">
-    <title lang="en">Khallas</title>
-    <desc lang="en">Rishi, an officer, is sent on an undercover mission to Hyderabad to gather intel on a gangster.</desc>
-    <credits>
-      <actor>Richa Gangopadhyay</actor>
-      <actor>Deeksha Seth</actor>
-      <actor>Ravi Teja</actor>
-      <actor>Prakash Raj</actor>
-      <actor>Richa Langella</actor>
-      <actor>Santosh Kumar Yadav</actor>
-      <actor>Kota Srinivasa Rao</actor>
-      <actor>Sunil</actor>
-      <director>Harish Shankar</director>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Action</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29462933_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="ColorsCineplexSuperhits.in@SD" start="20261010123500 +0530" stop="20261010152200 +0530">
     <title lang="en">Dumdaar Khiladi</title>
     <desc lang="en">A man and a woman develop a great bond after the latter arrives in Hyderabad. However, they realise their love for each other when the woman's marriage is arranged to a person of her parent's choice.</desc>
@@ -37270,14 +37252,6 @@ Aai Tulija Bhavani strives to overcome multiple challenges and defeat the evil p
     <episode-num>S1 E715</episode-num>
     <icon src="https://iptv-epg.org/images/_lknHKzuUcXepTSqMf8Cf5yVIFWuUhC9LIDmWOulBEagfSMxUjGkOEzR3K8VQG9FHvCmlRsfo0D3DzPMfUFNIuUUoLoRPMtBL7yLaHQE3kNFoVmQft2jrLbCbz7gHQ" />
     <title lang="en">Aai Tuljabhavani</title>
-  </programme>
-  <programme channel="ColorsRishteyAmericas.in" start="20261010042100 +0000" stop="20261010070700 +0000">
-    <title lang="zh">Divya Sanskaar</title>
-    <desc>A religious leader delivers insightful discourses on the sacred scriptures, helping devotees understand the path to spirituality and the true essence of life.</desc>
-    <date>20261010</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
   </programme>
   <programme channel="ColorsRishteyAmericas.in" start="20261010070700 +0000" stop="20261010072800 +0000">
     <title lang="zh">Shiv-Shakti Tap..Tyaag..Tandav</title>
@@ -79964,21 +79938,13 @@ A national level multi-sport competition organised by Sports Authority of India 
     <icon src="https://iptv-epg.org/images/Q_zDWL0c5B00IrTQ2hUJJacP-BaXbTrWKOQVx5RUHCPRqwnDCQjSlbavgr_rbgRpDrfnuMijrfwmumSOdxVfWnqnb50m3BO6fFDO3Eg1D-a1MCKJNggT6Et0dG5w6A" />
     <title lang="en">Sports Programme</title>
   </programme>
-  <programme channel="DDTamil.in@SD" start="20261010055000 +0000" stop="20261010070500 +0000">
-    <title lang="zh">Bhakthi Maalai</title>
-    <desc>Various talented music artists and vocalists perform some of the most revered devotional songs in praise of the Almighty.</desc>
-    <date>20261010</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="DDTamil.in@SD" start="20261010070500 +0000" stop="20261010073000 +0000">
-    <title lang="zh">Nadha Sangamam</title>
-    <desc>Renowned singers and musicians perform a collection of melodious classical songs written by prolific artists and songwriters.</desc>
-    <date>20261010</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme channel="DDTamil.in@SD" start="20261010120500 +0530" stop="20261010130000 +0530">
+    <title lang="en">Soll Aayutham</title>
+    <desc lang="en">This is Sport - Talk Show Category.</desc>
+    <category lang="en">Sport</category>
+    <category lang="en">Talk Show</category>
+    <icon src="https://dtil.tmsimg.com/assets/p32809209_b_h9_aa.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E26</episode-num>
   </programme>
   <programme channel="DDTamil.in@SD" start="20261010130000 +0530" stop="20261010133000 +0530">
     <title lang="en">Seidhigal</title>
@@ -93168,16 +93134,13 @@ A national level multi-sport competition organised by Sports Authority of India 
       <stereo>stereo</stereo>
     </audio>
   </programme>
-  <programme channel="DiscoveryChannel.in@SD" start="20261010115100 +0530" stop="20261010124000 +0530">
-    <title lang="en">Arabia: A Journey Through The Heart Of The Middle East</title>
-    <desc lang="en">Explorer Levison Wood ventures out to the remotest corners of the Middle East and shares the unique customs, hopes and dreams of the Arabian people.</desc>
-    <credits>
-      <actor>Levison Wood</actor>
-    </credits>
-    <category lang="en">Documentary</category>
-    <category lang="en">Travel</category>
-    <icon src="https://dtil.tmsimg.com/assets/p16740617_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E3</episode-num>
+  <programme channel="DiscoveryChannel.in@SD" start="20261010062100 +0000" stop="20261010071000 +0000">
+    <title lang="zh">Arabia: A Journey Through The Heart Of The Middle East</title>
+    <desc>Explorer Levison Wood ventures out to the remotest corners of the Middle East and shares the unique customs, hopes and dreams of the Arabian people.</desc>
+    <date>20261010</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
   <programme channel="DiscoveryChannel.in@SD" start="20261010124000 +0530" stop="20261010130600 +0530">
     <title lang="en">Storage Wars</title>
@@ -94192,23 +94155,6 @@ A national level multi-sport competition organised by Sports Authority of India 
     <title lang="en">Marooned With Ed Stafford</title>
     <desc lang="en">Ed Stafford is alone in Borneo's thick jungles with no tools, no food, and no backup. Just raw survival instincts against dense forest, wild creatures, and unrelenting rain.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DISCOVERY_CHANNEL_173569_13OCT064700_13OCT073700/images/LANDSCAPE_169_HD/DISCOVERY_MaroonedWithEdStafford_173569.jpg" />
-  </programme>
-  <programme channel="DiscoveryKids.au" start="20261010121100 +0530" stop="20261010123300 +0530">
-    <title lang="en">Titoo</title>
-    <desc lang="en">A missing alien sparks a town-wide search led by the police. However, determined to help the alien return home, Tito hides it in his house.</desc>
-    <credits>
-      <actor>Harsh Joshi</actor>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27070770_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S3 E10</episode-num>
   </programme>
   <programme channel="DiscoveryKids.au" start="20261010071000 +0000" stop="20261010071800 +0000">
     <title lang="zh">Baby Little Singham</title>
@@ -111601,17 +111547,6 @@ The boys are bothered by the current water shortage. To solve the problem of wat
     <icon src="https://iptv-epg.org/images/Rb2rZ11FEmF-PckDUYDea0TZbUGtCReZpaZdGxIcZ6JXuXrpXiAR74YEgyOCKuXGfeu4CCsyze-iXKFH2z8rc4xaniZAxpd2T1OqLb4wDChlOs5xWd95BOiznM2X8-a4ofqZRxTcHIRIulGLYw9A1eWqNYgkwerdZHQOV09fFHt4ibKvGrLukghEI5msAHeqfafwgw" />
     <title lang="en">Sindhu</title>
   </programme>
-  <programme start="20261010123000 +0530" stop="20261010124000 +0530" channel="FoodFood.in@SD">
-    <title>Bake Diaries</title>
-    <desc>The chef presents a wide range of delicious baking recipes and gives useful baking tips to enhance the flavour of the dish.</desc>
-    <category>Cooking</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/627de40f6b2ae8ae6e0e9161c6f28f41.jpg?width=700" />
-    <episode-num system="onscreen">28</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261010124000 +0530" stop="20261010125000 +0530" channel="FoodFood.in@SD">
     <title>Aaj Kya Banaye</title>
     <desc>Prominent chefs share various recipes, clearly explaining and demonstrating the process of cooking the dish step-by-step.</desc>
@@ -112985,13 +112920,6 @@ The boys are bothered by the current water shortage. To solve the problem of wat
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme channel="GREATmovies.uk" start="20261010064100 +0000" stop="20261010070700 +0000">
-    <title lang="en">Air Rescue</title>
-    <desc lang="en">Fly with the pilots and intensive care paramedics of The Westpac Lifesaver Rescue Helicopter Service who provide emergency medical treatment and assistance to those in life-threatening situations.</desc>
-    <category>Film</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800011-20261010121100/list/GreatMoviesAirRescue208745554220247bfcf4f8fb9b1cadd4967fe82.jpg" />
   </programme>
   <programme channel="GREATmovies.uk" start="20261010070700 +0000" stop="20261010073300 +0000">
     <title lang="en">Air Rescue</title>
@@ -127704,16 +127632,6 @@ A young girl named Thulasi dreams of continuing her education despite living wit
     <icon src="https://iptv-epg.org/images/2IHjP5NEdD_t3MTRWDrrbM-I1leaK2LWu85JVETld62wAxm-DIkCz0C5goZhsy4HtJ6RMWyoTWX-nnc_3f0Rp6XyJvZF2Kqc-ayfji1J_pVKh9glE-3-WRl6ye6Cwg" />
     <title lang="en">Yogi</title>
   </programme>
-  <programme start="20261010120500 +0530" stop="20261010123500 +0530" channel="KappaTV.in@ALT1">
-    <title>The Laughter Grid</title>
-    <desc>A comprehensive compilation of some of the most hilarious video clips that have left a lasting impression is played to entertain the audience.</desc>
-    <category>Entertainment</category>
-    <language>Malayalam</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/5c9823a5c323d0586e74fdf5aaa7f7b7.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261010123500 +0530" stop="20261010130000 +0530" channel="KappaTV.in@ALT1">
     <title>Funlimited</title>
     <desc>Bringing the best in television.</desc>
@@ -139072,27 +138990,6 @@ Skilled participants take the stage to perform a series of hilarious skits to en
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/9276fa412c4ae503c16dec7dd6b93419.jpg" />
     <premiere />
   </programme>
-  <programme channel="MoviesNow.in@SD" start="20261010111600 +0530" stop="20261010124100 +0530">
-    <title lang="en">Lucy</title>
-    <desc lang="en">A woman is transformed into a lethal post-human weapon after she is forced into a dark underworld deal. She uses her newfound abilities to take revenge on the criminal empire that enslaved her.</desc>
-    <credits>
-      <actor>Scarlett Johansson</actor>
-      <actor>Morgan Freeman</actor>
-      <actor>Choi Min-sik</actor>
-      <actor>Amr Waked</actor>
-      <actor>Julian Rhind-Tutt</actor>
-      <actor>Pilou Asbæk</actor>
-      <actor>Lio Tipton</actor>
-      <actor>Nicolas Phongpheth</actor>
-      <actor>Jan Oliver Schroeder</actor>
-      <actor>Luca Angeletti</actor>
-      <director>Luc Besson</director>
-      <producer>Virginie Silla</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Thriller</category>
-    <icon src="https://dtil.tmsimg.com/assets/p10479310_v_h9_ae.jpg?lock=880x660" />
-  </programme>
   <programme channel="MoviesNow.in@SD" start="20261010124100 +0530" stop="20261010145600 +0530">
     <title lang="en">The Karate Kid</title>
     <desc lang="en">Dre, a young boy, finds himself bullied by Cheng, a rebellious kung fu prodigy at his school. However, things change after he befriends Mr Han, a maintenance man, who happens to be a kung fu expert.</desc>
@@ -143790,16 +143687,6 @@ The host invites prominent personalities and engages them in candid conversation
       <value>TVG</value>
     </rating>
   </programme>
-  <programme start="20261010111100 +0530" stop="20261010123600 +0530" channel="NHBollyRaga.in">
-    <title>Superhits Of 90s</title>
-    <desc>A selectively compiled collection of some of the most popular and nostalgic melodies from the 1990s is played in succession.</desc>
-    <category>Music</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/dbb1b2a1d09a23ec1a68ccacb02068c9.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261010123600 +0530" stop="20261010151000 +0530" channel="NHBollyRaga.in">
     <title>Dharmendra He Man Of Bollywood</title>
     <desc>A comprehensive compilation of Dharmendra's most iconic and melodious songs honouring his legendary run in Bollywood is played one after the other.</desc>
@@ -143990,23 +143877,18 @@ The host invites prominent personalities and engages them in candid conversation
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="NationalGeographic.in@SD" start="20261010114500 +0530" stop="20261010123300 +0530">
-    <title>India's Mega Festivals</title>
-    <desc>The host visits Braj, a region in India famous for its religious significance, in order to experience the thrill of Holi celebrations.</desc>
-    <category>TV Show</category>
-    <category>Travel</category>
+  <programme channel="NationalGeographic.in@SD" start="20261010120000 +0530" stop="20261010130000 +0530">
+    <title lang="en">Pole to Pole With Will Smith</title>
+    <desc lang="en">Inspired by his late mentor, Will Smith embarks on a 100-day quest to tackle incredible challenges, traveling from pole to pole in the company of scientists, explorers and local experts.</desc>
     <credits>
-      <actor>Gary Mehigan</actor>
-      <actor>Pablo Naranjo</actor>
+      <actor>Will Smith</actor>
+      <director>Tom Barbor-Might</director>
+      <director>Dionne Bromfield</director>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p30870053_b_h8_aa.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="NationalGeographic.in@SD" start="20261010123300 +0530" stop="20261010125600 +0530">
-    <title>Resq Squad</title>
-    <desc>A group of ardent animal lovers set off on a noble and risky mission to rescue animals who are stuck in dangerous situations.</desc>
-    <category>Documentary</category>
-    <category>Factual Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p25284692_b_h10_ad.jpg?lock=1280x720" />
+    <category lang="en">TV Show</category>
+    <category lang="en">Adventure</category>
+    <icon src="https://dtil.tmsimg.com/assets/p31980123_b_h9_ab.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E1</episode-num>
   </programme>
   <programme channel="NationalGeographic.in@SD" start="20261010130000 +0530" stop="20261010140000 +0530">
     <title lang="en">India's Mega Festivals</title>
@@ -155158,14 +155040,6 @@ The host invites prominent personalities and engages them in candid conversation
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/12670691c68810ce73bc6a9813b3c4d8.jpg" />
     <premiere />
   </programme>
-  <programme start="20261010120800 +0530" stop="20261010123900 +0530" channel="PocketFilms.in">
-    <title lang="hi-IN">Keep Punching</title>
-    <desc lang="hi-IN">Keep Punching.</desc>
-    <category lang="hi-IN">183</category>
-    <category lang="hi-IN">177</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/c30af8509f5905a2c147619afd0f464c.jpg" />
-    <premiere />
-  </programme>
   <programme start="20261010123900 +0530" stop="20261010132700 +0530" channel="PocketFilms.in">
     <title lang="hi-IN">The Friend To Die For</title>
     <desc lang="hi-IN">The abduction of a young girl by a serial killer takes an unforeseen turn as revelations emerge, challenging initial assumptions about the case.</desc>
@@ -156117,14 +155991,6 @@ The host invites prominent personalities and engages them in candid conversation
     <category lang="hi-IN">177</category>
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/f31bbe589d5ef1338381fb7acd157018.jpg" />
     <premiere />
-  </programme>
-  <programme channel="Pogo.in@SD" start="20261010065400 +0000" stop="20261010070600 +0000">
-    <title lang="zh">Smaashhing Simmba</title>
-    <desc>Simmba, an honest and courageous police officer, teams up with his fearless colleagues in his mission to confront and defeat the evil forces of society.</desc>
-    <date>20261010</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
   </programme>
   <programme channel="Pogo.in@SD" start="20261010070600 +0000" stop="20261010071800 +0000">
     <title lang="zh">Smaashhing Simmba</title>
@@ -176791,21 +176657,12 @@ Narkasur and Kans are two evil entities who threaten to destroy the world. Littl
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/4ca04da5fdc4030f95ff48fd905987ed.jpg" />
     <premiere />
   </programme>
-  <programme channel="Rang.in@SD" start="20261010065000 +0000" stop="20261010071000 +0000">
-    <title lang="zh">Adi Anadi</title>
-    <desc>Bringing the best in television.</desc>
-    <date>20261010</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="Rang.in@SD" start="20261010071000 +0000" stop="20261010073000 +0000">
-    <title lang="zh">Rowd Hoi Aaha Na</title>
-    <desc>Aditya's sudden return with unknown children sparks questions and tests Asmita's ability to accept this unexpected family expansion.</desc>
-    <date>20261010</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme channel="Rang.in@SD" start="20261010123000 +0530" stop="20261010130000 +0530">
+    <title lang="en">Oi Khapla</title>
+    <desc lang="en">A group of people from a remote village share their trials and tribulations that are dealt with in a humorous manner.</desc>
+    <category lang="en">Documentary</category>
+    <category lang="en">Others</category>
+    <icon src="https://dtil.tmsimg.com/assets/p28931994_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="Rang.in@SD" start="20261010073000 +0000" stop="20261010075000 +0000">
     <title lang="zh">Adi Anadi</title>
@@ -180151,21 +180008,12 @@ Narkasur and Kans are two evil entities who threaten to destroy the world. Littl
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/d933c76aacc0ce1d69f7e729d6ab680e.jpg" />
     <premiere />
   </programme>
-  <programme channel="Rengoni.in@SD" start="20261010065000 +0000" stop="20261010071000 +0000">
-    <title lang="zh">Ahir Baibhabi</title>
-    <desc>Bringing the best in television.</desc>
-    <date>20261010</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="Rengoni.in@SD" start="20261010071000 +0000" stop="20261010073000 +0000">
-    <title lang="zh">Ramdhenu</title>
-    <desc>Various renowned artists including Akash Lahan, Sristi Sarma, Kristi Sarma and Mrinal Jyoti Mahanta perform the Radha-Krishna dance.</desc>
-    <date>20261010</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme channel="Rengoni.in@SD" start="20261010123000 +0530" stop="20261010130000 +0530">
+    <title lang="en">Ramdhenu</title>
+    <desc lang="en">Various renowned artists including Akash Lahan, Sristi Sarma, Kristi Sarma and Mrinal Jyoti Mahanta perform the Radha-Krishna dance.</desc>
+    <category lang="en">TV Show</category>
+    <category lang="en">Religious</category>
+    <icon src="https://dtil.tmsimg.com/assets/p28931999_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="Rengoni.in@SD" start="20261010130000 +0530" stop="20261010133000 +0530">
     <title lang="en">Deuta</title>
@@ -197145,21 +196993,14 @@ After deciding that she will not go back to Hastinapur, Satyavati approaches Vid
     <desc lang="en">Back - To - Back comedy clippings soori comedy</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SIRIPPOLI_1357534_13OCT070000_13OCT073000/images/LANDSCAPE_169_HD/SIRIPPOLI_SooriBreakFreeComedy_1357534.jpg" />
   </programme>
-  <programme channel="SongdewTV.in@SD" start="20261010070000 +0000" stop="20261010070500 +0000">
-    <title lang="zh">Replay</title>
-    <desc>A religious leader elaborates on the teachings of the Almighty and encourages followers to take the path of spirituality.</desc>
-    <date>20261010</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="SongdewTV.in@SD" start="20261010070500 +0000" stop="20261010071000 +0000">
-    <title lang="zh">Songdew Fresh</title>
-    <desc>A comprehensive compilation of the latest music tracks, curated to elevate and inspire positive vibes, offering a refreshing and motivating experience for listeners.</desc>
-    <date>20261010</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261010122500 +0530" stop="20261010124500 +0530" channel="SongdewTV.in@SD">
+    <title lang="hi-IN">Songdew Select</title>
+    <desc lang="hi-IN">Featuring Best of Independent Music.</desc>
+    <category lang="hi-IN">Music</category>
+    <category lang="hi-IN">Reality &amp; Game Shows</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg" />
+    <episode-num system="onscreen">E12</episode-num>
+    <premiere />
   </programme>
   <programme start="20261010124500 +0530" stop="20261010125000 +0530" channel="SongdewTV.in@SD">
     <title lang="hi-IN">Songdew Fresh</title>
@@ -229274,21 +229115,62 @@ Real-time match updates and highlights keep fans informed, providing instant acc
     <desc lang="en">The movie name is yet to be announced by the channel.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_WAH_341453_13OCT060000_13OCT090000/images/LANDSCAPE_169_HD/SonyWAH_Movie_341453.jpg" />
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261010065300 +0000" stop="20261010070300 +0000">
-    <title lang="zh">Honey Bunny Ka Jholmaal</title>
-    <desc>Katker, distressed by her troubled life, is advised by Khanna to seek counsel from a sage. Later, Honey, Bunny, and their friends grow suspicious, fearing the sage may be plotting to exploit Katker.</desc>
-    <date>20261010</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="SonyYay.in@SD" start="20261010070300 +0000" stop="20261010071400 +0000">
-    <title lang="zh">Honey Bunny Ka Jholmaal</title>
-    <desc>Honey and Bunny try to scare Popat while he is watching television. Later, he comes up with a plan to terrify them both.</desc>
-    <date>20261010</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme channel="SonyYay.in@SD" start="20261010110100 +0530" stop="20261010124600 +0530">
+    <title lang="en">Shinchan Movie: Robot Dad</title>
+    <desc lang="en">Shin-chan gets excited to see his father Hiroshi turn into a robot. However, he must fight other robots in order to help his father reclaim his original body.</desc>
+    <credits>
+      <actor>Akiko Yajima</actor>
+      <actor>Keiji Fujiwara</actor>
+      <actor>Miki Narahashi</actor>
+      <actor>Satomi Koorogi</actor>
+      <actor>Mari Mashiba</actor>
+      <actor>Tamao Hayashi</actor>
+      <actor>Chie Satou</actor>
+      <actor>Rokurô Naya</actor>
+      <actor>Haruhi Terada</actor>
+      <actor>Teiyu Ichiryusai</actor>
+      <actor>Michie Tomizawa</actor>
+      <actor>Sakiko Tamagawa</actor>
+      <actor>Tomoko Otsuka</actor>
+      <actor>Reiko Suzuki</actor>
+      <actor>Daiki Nakamura</actor>
+      <actor>Junko Hagimori</actor>
+      <actor>Masako Miura</actor>
+      <actor>Nobuyuki Hiyama</actor>
+      <actor>Fumihiko Tachiki</actor>
+      <actor>Emi Takei</actor>
+      <actor>Croket</actor>
+      <actor>Shinya Ôtaki</actor>
+      <actor>Minako Ichiki</actor>
+      <actor>Motomu Kiyokawa</actor>
+      <actor>Takashi Taguchi</actor>
+      <actor>Mitsuaki Hoshino</actor>
+      <actor>Kissei Kumamoto</actor>
+      <actor>Toshimitsu Oda</actor>
+      <actor>Shiryu Ito</actor>
+      <actor>Yuji Sato</actor>
+      <actor>Naoko Kubota</actor>
+      <actor>Chie Kojiro</actor>
+      <actor>Kaoru Morota</actor>
+      <actor>Yoko Somi</actor>
+      <actor>Toko Aoyama</actor>
+      <actor>Ai Fukada</actor>
+      <actor>Koji Yusa</actor>
+      <actor>Shinya Owada</actor>
+      <director>Wataru Takahashi</director>
+      <director>Takashi Ikehata</director>
+      <producer>Yasushi Wada</producer>
+      <producer>Kazuhiko Akatsu</producer>
+      <producer>Rika Tsuruzaki</producer>
+      <producer>Kokushi Miura</producer>
+      <producer>Yuki Yoshida</producer>
+      <producer>Takahiro Kishimoto</producer>
+      <producer>Tomoharu Matsuhisa</producer>
+      <producer>Kensuke Suzuki</producer>
+    </credits>
+    <category lang="en">Film</category>
+    <category lang="en">Animation</category>
+    <icon src="https://dtil.tmsimg.com/assets/p18845174_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="SonyYay.in@SD" start="20261010124600 +0530" stop="20261010125500 +0530">
     <title lang="en">Shin Chan</title>
@@ -264134,16 +264016,6 @@ Dolly calls Sarah out on her unrealistic expectations; Bruno shakes up Monica's 
     <desc lang="en">Dilse is a music talk show featuring engaging conversations with singers, musicians, and artists, along with inspiring stories, memorable performances, and insights into the world of music.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_TARANG_MUSIC_1904990_13OCT070000_13OCT073000/images/LANDSCAPE_169/1751373794000_TarangMusic_DilseMusic_1904990.jpg" />
   </programme>
-  <programme start="20261010123000 +0530" stop="20261010124100 +0530" channel="TeluguOne.in@HD">
-    <title>Handmade Hand Bags</title>
-    <desc>Handmade Hand Bags</desc>
-    <category>Entertainment</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/983dee4db1cf8c7f2f42f4a5ced6dc52.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261010124100 +0530" stop="20261010124400 +0530" channel="TeluguOne.in@HD">
     <title>Handmade Hand Bags</title>
     <desc>Handmade Hand Bags</desc>
@@ -267117,14 +266989,6 @@ Dolly calls Sarah out on her unrealistic expectations; Bruno shakes up Monica's 
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261010122600 +0530" stop="20261010123900 +0530" channel="ThalaaTV.in">
-    <title>Idhaya Vaasal </title>
-    <sub-title>THALAA TV | TAMIL</sub-title>
-    <desc>Aravind falls for Vaani, but her parents? disapproval sparks a fight for their love.</desc>
-    <category>Drama</category>
-    <language>TAMIL</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/THALAA%20TV/POSTER/Idhaya%20Vaasal.png" />
-  </programme>
   <programme start="20261010123900 +0530" stop="20261010125100 +0530" channel="ThalaaTV.in">
     <title>Idhaya Vaasal </title>
     <sub-title>THALAA TV | TAMIL</sub-title>
@@ -269966,13 +269830,6 @@ Dolly calls Sarah out on her unrealistic expectations; Bruno shakes up Monica's 
     <title lang="en">The Itchy Twitchy Kaa!</title>
     <desc lang="en">Mowgli goes to visit Kaa with a question. How many monkeys can a python swallow in one gulp?</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6ac98720ac52db5a2366455c/images/LANDSCAPE_169/9372_370abaf4-87cf-4ecf-ac5b-181564e3a34e.png" />
-  </programme>
-  <programme channel="TinyPop.uk" start="20261010070100 +0000" stop="20261010071000 +0000">
-    <title lang="en">THE HIVE</title>
-    <desc lang="en">This preschool CGI animated series follows the fortunes of the extremely cute Bee family, who live together with their friends and relations in the Hive.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261010123100/list/TinyPOPTHEHIVE2151548a1df5365511a46dca90e5ecf0150e735.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261010071000 +0000" stop="20261010072000 +0000">
     <title lang="en">THE HIVE</title>
@@ -274964,14 +274821,6 @@ Dolly calls Sarah out on her unrealistic expectations; Bruno shakes up Monica's 
     <category>Kids</category>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261016234600/list/TinyPOPTheCatintheHatKnowsaLotAboutThat20874658284cd244abc48d5b5670152bd58b984.jpg" />
-  </programme>
-  <programme start="20261010122800 +0530" stop="20261010124000 +0530" channel="TollyTV.in">
-    <title>Bhagavanthuda</title>
-    <sub-title>TOLLY TV | TELUGU</sub-title>
-    <desc>A cop battles the system and his enemies to emerge victorious.</desc>
-    <category>Movies</category>
-    <language>TELUGU</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/TOLLY%20TV/IMAGES/Bhagavanthuda.png" />
   </programme>
   <programme start="20261010124000 +0530" stop="20261010125200 +0530" channel="TollyTV.in">
     <title>Bhagavanthuda</title>
@@ -282271,13 +282120,12 @@ North Georgia's landscape demands quiet contemplation, the host discovers its de
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/b9f844ccf873ca884ba12eb9541cd6ad.jpg" />
     <premiere />
   </programme>
-  <programme start="20261010123000 +0530" stop="20261010123500 +0530" channel="VasanthTV.in@SD" catchup-id="100057429">
-    <title>India Song</title>
-    <desc>Artists perform a patriotic song depicting the beauty, traditions and cultures of India.</desc>
-  </programme>
-  <programme start="20261010123500 +0530" stop="20261010130000 +0530" channel="VasanthTV.in@SD" catchup-id="100057445">
-    <title>Kantha Sasti Kavasam</title>
-    <desc>A melodious rendering of a hymn dedicated to Lord Murugan is played.</desc>
+  <programme start="20261010123000 +0530" stop="20261010130000 +0530" channel="VasanthTV.in@SD">
+    <title lang="ta-IN">நிஜம் பேசும் நிழல்</title>
+    <desc lang="ta-IN">Nijam Pesum Nizhal.</desc>
+    <category lang="ta-IN">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/33fdb542f8d60d665f16fb67365e02ef.jpg" />
+    <premiere />
   </programme>
   <programme start="20261010130000 +0530" stop="20261010130500 +0530" channel="VasanthTV.in@SD">
     <title lang="ta-IN">இண்டியா சாங்க்</title>
@@ -297821,23 +297669,25 @@ Deeming it a lucky charm, Vrinda marries Sanjay, who loves Divya. Serving as a c
     <icon src="https://iptv-epg.org/images/39n4b32WwYyEU8pHNtMfwCsepQhC5ZRARxMnGGAjTFUSwEcU4OMtGsj1n3YKOGwt8hLgQ7NG9EcHr34DwVGmfonutDWeG68Xxk6H_ZfRciXRLzVBVC0R_ntGAO-j4Q" />
     <title lang="en">Tu Hi Re Dil Mein</title>
   </programme>
-  <programme channel="ZeeTalkies.in@HD" start="20261010045700 +0000" stop="20261010070900 +0000">
-    <title lang="zh">Andheri Raat Mein Diya Tere Haath Mein</title>
-    <desc>Two friends join the underworld to make money and to lead a comfortable life. Later, they realise the ill-effects of crime and want to lead a normal life.</desc>
-    <date>20261010</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme channel="ZeeTalkies.in@HD" start="20261010103000 +0530" stop="20261010130000 +0530">
+    <title lang="en">Taani</title>
+    <desc lang="en">Taani, a woman from a poor family, starts working as a maid after seeing her father, an autorickshaw driver, work hard day and night to pay for her education.</desc>
+    <credits>
+      <actor>Ketaki Mategaonkar</actor>
+      <actor>Arun Nalavade</actor>
+      <actor>Devendra Dodke</actor>
+      <actor>Vilas Ujawane</actor>
+      <actor>Sachin Deshpande</actor>
+      <actor>Vatsala Ambone</actor>
+      <director>Sanjiv Kolte</director>
+      <producer>Vandana Patke Thakur</producer>
+      <producer>Ajay Thakur</producer>
+    </credits>
+    <category lang="en">Film</category>
+    <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p11352891_v_h9_ab.jpg?lock=880x660" />
   </programme>
-  <programme channel="ZeeTalkies.in@HD" start="20261010070900 +0000" stop="20261010073100 +0000">
-    <title lang="zh">Fillers</title>
-    <desc>A comprehensive compilation of promotional videos and trailers of Bollywood movies featuring popular actors and actresses.</desc>
-    <date>20261010</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="ZeeTalkies.in@HD" start="20261010073100 +0000" stop="20261010083000 +0000">
+  <programme channel="ZeeTalkies.in@HD" start="20261010073000 +0000" stop="20261010083000 +0000">
     <title lang="zh">Patanjali Yog by Yog Rishi Swami Ramdev</title>
     <desc>Renowned Indian spiritual leader Swami Ramdev delivers demonstrations of various yoga poses and exercises for a healthy life.</desc>
     <date>20261010</date>
@@ -303112,42 +302962,6 @@ Pyaar Tune Kya Kiya is a television show that portrays the love stories of India
     <desc lang="en">Stories of the paranormal unfold through accounts of individuals who claim to have encountered mysterious and supernatural events, delving into the fear of the unknown.</desc>
     <icon src="https://iptv-epg.org/images/zp9zxYWsQxPGpe3OVkqf8D21qnNAm2gBRGlsCmMXsxhVDSYcjTzTiC38DxbyYy3oq5gVsRAwY1UFOg7s07xBM1y8teQ8JugEt_1vHSsyZVEOBKEehRIxU7_p7JM" />
     <title lang="en">Fear Files</title>
-  </programme>
-  <programme start="20261010123100 +0530" stop="20261010123400 +0530" channel="custom.duck.tv">
-    <title>Risto Gusto</title>
-    <desc>Basil, Yam and Oregano demonstrate their culinary skills as they prepare a wide variety of healthy dishes in their restaurant, Risto Gusto.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/683bc58f89d7a90db8c3a97f335559bc.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261010123400 +0530" stop="20261010123600 +0530" channel="custom.duck.tv">
-    <title>Hubbi and Friends</title>
-    <desc>Hubbi and his friends embark on a series of exciting adventures when they try to repair things and help children in developing their problem-solving skills.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/04a653539fb5c888c17e8f864531ddec.jpg?width=700" />
-    <credits>
-      <director>Roza Györffy</director>
-    </credits>
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261010123600 +0530" stop="20261010124000 +0530" channel="custom.duck.tv">
-    <title>Planet Jumpers</title>
-    <desc>Siblings Luna and Lou experience unimaginable adventures as they journey through space with their family, exploring new planets, places and technologies.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/49c6c8791a0a364f4860293abe55a25a.jpg?width=700" />
-    <credits>
-      <director>Roza Györffy</director>
-    </credits>
-    <rating>
-      <value>TVY</value>
-    </rating>
   </programme>
   <programme start="20261010124000 +0530" stop="20261010124500 +0530" channel="custom.duck.tv">
     <title>Dotty, the Kitty</title>

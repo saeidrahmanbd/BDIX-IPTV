@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-10-10 13:05 UTC**_
+_Last generated: **2026-10-10 13:14 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -16,17 +16,17 @@ _Last generated: **2026-10-10 13:05 UTC**_
 | EPG Programme Coverage | **79.0%** |
 | EPG Mapping | **81.9%** |
 | Stream Health Tested | **1008** |
-| Stream Health Failures | **186** |
-| Persistent Failures | **170** |
+| Stream Health Failures | **173** |
+| Persistent Failures | **168** |
 | Near-Duplicate URL Families | **0** |
-| Audit Blocking Issues | **4** |
+| Audit Blocking Issues | **6** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-10T13:04:36+00:00** |
+| Pre-Publish Gate Generated | **2026-10-10T13:13:33+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
-- Same-name / different-ID collisions: **39**
+- Same-name / different-ID collisions: **28**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
@@ -34,7 +34,7 @@ _Last generated: **2026-10-10 13:05 UTC**_
 - Not Playing logo exceptions: **1**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
-- Alphabetical ordering issues: **3**
+- Alphabetical ordering issues: **5**
 - Signed/tokenized URLs: **9**
 
 ## Safety & Automation
@@ -54,14 +54,14 @@ _Last generated: **2026-10-10 13:05 UTC**_
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-10T13:04:36.877279+00:00** |
-| EPG coverage | **2026-10-10T13:03:42+00:00** |
-| Stream health | **2026-10-10T13:05:29+00:00** |
-| Pre-publish gate | **2026-10-10T13:04:36+00:00** |
+| Playlist audit | **2026-10-10T13:13:33.766831+00:00** |
+| EPG coverage | **2026-10-10T13:12:41+00:00** |
+| Stream health | **2026-10-10T13:14:24+00:00** |
+| Pre-publish gate | **2026-10-10T13:13:33+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
 - Latest entries change: **1152 → 1152**
-- Latest health failures: **174 → 185**
+- Latest health failures: **185 → 173**
 
 Historical records are retained in reports/maintenance-history.json.

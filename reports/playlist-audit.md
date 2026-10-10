@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-10T13:04:36.877279+00:00**
+Generated: **2026-10-10T13:13:33.766831+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -10,7 +10,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - IDs with multiple streams: **182**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
-- Same-name / different-ID collisions: **39**
+- Same-name / different-ID collisions: **28**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
@@ -22,7 +22,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
-- Alphabetical ordering issues: **3**
+- Alphabetical ordering issues: **5**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 
@@ -788,9 +788,11 @@ None.
 ## Ordering
 
 Category block order: OK.
-- **Not Playing** — **C Malayalam TV** appears after **Zee Cinemalu**
-- **Not Playing** — **Nagorik TV** appears after **ZB Cartoon**
-- **Not Playing** — **9X Jalwa** appears after **Xplor**
+- **Bangladesh** — **Channel 9** appears after **Channel 24**
+- **International** — **24 Hour Free Movies** appears after **&Privé**
+- **International** — **4ever Cinema** appears after **24 Hour Free Movies**
+- **Backup** — **7S Music** appears after **&TV**
+- **Not Playing** — **9X Jalwa** appears after **&pictures**
 
 ## Suspicious URLs
 
@@ -824,9 +826,6 @@ None.
 
 - **&tv** → andtv.in@sd, new.and.tv.hd
 - **8xm** → 8xm.pk@sd, new.8xm
-- **9x jalwa** → 9xjalwa.in, new.9x.jalwa
-- **9x tashan** → 9xtashan.in@sd, new.9x.tashan
-- **b4u kadak** → b4ukadak.in@sd, new.b4u.kadak
 - **b4u movies** → b4umovies.in@india, new.b4u.movies
 - **b4u music** → b4umusic.in@india, new.b4u.music
 - **bangla tv** → banglatv.bd, new.bangla.tv
@@ -834,26 +833,18 @@ None.
 - **colors bangla** → colors.bangla.in, new.colors.bangla
 - **colors bangla cinema** → colorsbanglacinema.in@sd, new.colors.bangla.cinema
 - **colors cineplex superhits** → colorscineplexsuperhits.in@sd, custom.colors.cineplex.superhits
-- **dangal** → dangaltv.in@sd, new.dangal
 - **ekhon tv** → ekhontv.bd, staging.ekhon.tv
-- **goldmines** → goldmines.in@sd, new.goldmines
-- **goldmines bollywood** → goldminesbollywood.in@sd, new.goldmines.bollywood
 - **goldmines movies** → goldminesmovies.in@sd, staging.goldmines.movies
 - **hum masala** → hummasala.pk, new.hum.masala
 - **hum tv** → humtv.pk, new.hum
 - **iqra bangla** → iqrabangla.uk, staging.iqra.bangla
 - **maasranga tv** → maasrangatv.bd, new.maasranga.tv
-- **manoranjan tv** → manoranjantv.in@sd, new.manoranjan.tv
-- **shemaroo tv** → new.shemaroo.tv, shemarootv.in@sd
 - **sony aath** → new.sony.aath, sony.aath.in
 - **sony entertainment tv** → new.sony.entertainment.tv, new.sony.entertainment.tv.hd, sonyentertainmenttelevision.in@sd
 - **sony max** → new.sony.max, new.sony.max.hd, sonymax.in@sd
 - **sony max 2** → new.sony.max.2, sonymax2.in@sd
 - **sony pix** → new.sony.pix.hd, sonypix.in
 - **sony sab** → new.sony.sab, sonysab.in@hd
-- **star gold** → new.star.gold, stargold.in@hd
-- **star jalsha** → new.star.jalsha, star.jalsha.in
-- **star movies select** → new.star.movies.select, starmoviesselect.in@hd
 - **t sports** → staging.t.sports, tsports.bd
 - **thikana** → staging.thikana, thikanatv.us
 - **zee action** → new.zee.action, zeeaction.in
