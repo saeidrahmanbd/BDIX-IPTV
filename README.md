@@ -24,49 +24,13 @@ Compatible with **XCIPTV** and other M3U-compatible players.
 
 **[→ Open the full Download Center](docs/DOWNLOADS.md)**
 
-## 🖥️ Playlist Studio v5.0
+## 🖥️ Playlist Studio
 
-**Playlist Studio 5.0** is the Windows companion application for managing, editing, organizing, testing, and playing M3U/M3U8 playlists from a single workspace.
+[Playlist Studio 5.0](https://github.com/saeidrahmanbd/Playlist-Studio) is a separate portable Windows playlist manager, editor and player. It supports M3U/M3U8, compatible Xtream Codes and Stalker Portal connections, built-in playback, stream scanning, metadata editing and GitHub workflows.
 
-### ✨ Key Features
-
-- M3U / M3U8 playlist management
-- Channel and category organization
-- Channel information, logo, EPG and stream URL editing
-- Multi-channel and multi-category selection
-- Duplicate channel and stream detection
-- Built-in video playback
-- Stream scanning and status checking
-- Xtream Codes support
-- MAC / Stalker Portal support
-- Multiple interface themes
-- Import playlists from files or URLs
-- Save / Save As
-- GitHub integration
-
-### 🖥️ Program Glimpse
-
-![Playlist Studio 5.0](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/assets/Playlist%20Studio%205.0.png)
-
-### 📥 Download
-
-**[⬇️ Download Playlist Studio 5.0 Portable](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.exe)**
-
-**[📦 Download Windows Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug12.zip)**
-
-The supplied application is **portable** and requires no traditional installation.
-
-### 🛠️ Build from the Windows Build Kit
-
-1. Download `Playlist-Studio-5_0-Windows-Build-Kit-Debug12.zip`.
-2. Extract the ZIP file.
-3. Open the extracted folder.
-4. Run **`BUILD-Windows.cmd`**.
-5. Wait for the build process to finish.
-6. The generated application will be available in the main folder and `dist` folder.
-7. Run **`Playlist-Studio-5.0.exe`**.
-
-See **`Readme.txt`** inside the build kit for detailed instructions.
+- **[Download the portable application](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.exe)**
+- **[Download the Windows Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug12.zip)**
+- [Usage and build instructions](docs/PLAYLIST-STUDIO.md)
 
 ## 📊 Project Status
 
