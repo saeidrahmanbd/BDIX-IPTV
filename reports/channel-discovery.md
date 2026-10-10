@@ -1,7 +1,7 @@
 # Channel Discovery
 
 - New channels: **40**
-- New backups: **50**
+- New backups: **51**
 - Rejected/suppressed: **601**
 - Remembered rejected new-channel identities: **0**
 - Remembered rejected backup URLs: **0**
@@ -98,6 +98,7 @@
 - &TV (576p) (India) — http://103.151.60.162:2122/play/a020/index.m3u8?hls
 - &TV HD (1080p) (India) — http://202.70.146.135:8000/play/a06c/index.m3u8
 - YRF Music (1080p) (India) — https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
+- YRF Music Nepal (India) — https://vidaa.kableone.com/hls/live/2111218/YrfMusic/1.m3u8
 - Zee Cinema HD (1080p) (India) — http://103.151.60.162:2122/play/a024/index.m3u8?hls
 - Zee TV (576p) (India) — http://51.75.127.199:3141/zeetv/index.m3u8
 - Zee TV HD (720p) [Geo-blocked] (India) — http://41.205.93.154/ZEE-TV/index.m3u8

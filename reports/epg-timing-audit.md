@@ -4,41 +4,67 @@ Automatic corrections require repeated cross-source title and duration matches, 
 
 ## Detected corrections
 
-- **&pictures** (AndPictures.in@SD): source ID ts267 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **&pictures** (AndPictures.in@SD): source ID ts148 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **&pictures** (AndPictures.in@SD): source ID ts148 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
 - **Xplor** (AndxplorHD.in): source ID and.xplorHD.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **Cartoon Network** (CartoonNetwork.uk): source ID ts238 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **Colors Kannada Cinema** (ColorsKannadaCinema.in@SD): source ID ts667 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **Colors Super** (ColorsSuper.in): source ID ts533 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **DD Girnar** (DDGirnar.in@SD): source ID ts323 from https://avkb.short.gy/epg.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
-- **DD Madhya Pradesh** (DDMadhyaPradesh.in@SD): source ID ts330 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **DD National** (DDNational.in@SD): source ID 543184 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
-- **DD Punjabi** (DDPunjabi.in@SD): source ID ts335 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Animal Planet** (AnimalPlanet.in@SD): source ID 543099 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Cartoon Network** (CartoonNetwork.uk): source ID 543449 from https://epg.pw/xmltv/epg_IN.xml shifted by +16 hours after repeated cross-source agreement.
+- **Chithiram** (Chithiram.in@SD): source ID ts1166 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Colors Gujarati** (ColorsGujarati.in@SD): source ID 543314 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Colors Kannada Cinema** (ColorsKannadaCinema.in@SD): source ID ts667 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Colors Super** (ColorsSuper.in): source ID 543284 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Colors Super** (ColorsSuper.in): source ID ts533 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **DD Arun Prabha** (DDArunPrabha.in@SD): source ID 543094 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **DD Chandana** (DDChandana.in@SD): source ID 543175 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **DD Girnar** (DDGirnar.in@SD): source ID 543062 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **DD Haryana** (DDHaryana.in@SD): source ID ts1212 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **DD Himachal Pradesh** (DDHimachalPradesh.in@SD): source ID ts1217 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **DD Kashir** (DDKashir.in@SD): source ID 543500 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **DD Kisan** (DDKisan.in@SD): source ID 543191 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **DD Madhya Pradesh** (DDMadhyaPradesh.in@SD): source ID ts330 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **DD Malayalam** (DDMalayalam.in@SD): source ID 543259 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **DD Odia** (DDOdia.in@SD): source ID 543028 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **DD Punjabi** (DDPunjabi.in@SD): source ID 543437 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **DD Punjabi** (DDPunjabi.in@SD): source ID ts335 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **DD Rajasthan** (DDRajasthan.in@SD): source ID ts332 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **DD Urdu** (DDUrdu.in@SD): source ID ts338 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **Kalaignar TV** (KalaignarTV.in@SD): source ID 543395 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
-- **MNX** (MNX.in@SD): source ID 543194 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
-- **MN+** (MoviesNowPlus.in@SD): source ID ts210 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **National Geographic** (NationalGeographic.in@SD): source ID NATIONAL.GEOGRAPHIC.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by +8 hours after repeated cross-source agreement.
-- **PTC Punjabi** (PTCPunjabi.in@SD): source ID ts122 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **PTC Punjabi Gold** (PTCPunjabiGold.in@SD): source ID ts794 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **DD Rajasthan** (DDRajasthan.in@SD): source ID 543060 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **DD Rajasthan** (DDRajasthan.in@SD): source ID ts332 from https://avkb.short.gy/tsepg.xml.gz shifted by -24 hours after repeated cross-source agreement.
+- **DD Rajasthan** (DDRajasthan.in@SD): source ID ts332 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **DD Saptagiri** (DDSaptagiri.in@SD): source ID 543376 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **DD Tamil** (DDTamil.in@SD): source ID 543273 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **DD Urdu** (DDUrdu.in@SD): source ID ts338 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **DD Uttar Pradesh** (DDUttarPradesh.in@SD): source ID ts339 from https://avkb.short.gy/tsepg.xml.gz shifted by -24 hours after repeated cross-source agreement.
+- **Discovery Kids** (DiscoveryKids.au): source ID ts119 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Fakt Marathi** (FaktMarathi.in@SD): source ID 543453 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Isai Aruvi** (IsaiAruvi.in@SD): source ID 543163 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Kairali TV** (KairaliTV.in@SD): source ID 543357 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Manoranjan TV** (ManoranjanTV.in@SD): source ID ts731 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Nat Geo Wild** (NationalGeographicWild.in@SD): source ID 543052 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Nat Geo Wild** (NationalGeographicWild.in@SD): source ID 543356 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **PTC Chakde** (PTCChakde.in@SD): source ID 543198 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **PTC Music** (PTCMusic.in@SD): source ID 543071 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **PTC Punjabi** (PTCPunjabi.in@SD): source ID ts122 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **PTC Punjabi Gold** (PTCPunjabiGold.in@SD): source ID ts794 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
 - **Peppers TV** (PeppersTV.in@SD): source ID ts421 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Pitaara TV** (Pitaara.in@SD): source ID 543026 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Polimer TV** (PolimerTV.in@SD): source ID 543431 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
-- **Polimer TV** (PolimerTV.in@SD): source ID ts272 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **Public Music** (PublicMusic.in@SD): source ID ts424 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **Raj Digital Plus** (RajDigitalPlus.in@SD): source ID ts426 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Polimer TV** (PolimerTV.in@SD): source ID ts272 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Public Music** (PublicMusic.in@SD): source ID 543355 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Raj Digital Plus** (RajDigitalPlus.in@SD): source ID ts426 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
 - **Raj Musix Kannada** (RajMusixKannada.in@SD): source ID 543078 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
-- **Raj Musix Tamil** (RajMusixTamil.in@SD): source ID 543499 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Raj Musix Telugu** (RajMusixTelugu.in@SD): source ID 543024 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Raj TV** (RajTV.in@SD): source ID 543033 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
-- **Raj TV** (RajTV.in@SD): source ID ts439 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **Rang** (Rang.in@SD): source ID ts101 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **Sony Yay** (SonyYay.in@SD): source ID Sony.yay.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
-- **Star Suvarna Plus** (StarSuvarnaPlus.in@SD): source ID ts540 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **Vanitha TV** (VanithaTV.in@SD): source ID 227 from https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml shifted by -5.5 hours after repeated cross-source agreement.
-- **Vasanth TV** (VasanthTV.in@SD): source ID ts499 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **Zee Bollywood** (ZeeBollywood.in@SD): source ID ts175 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **Zee Kannada** (ZeeKannada.in@SD): source ID ts675 from https://avkb.short.gy/tsepg.xml.gz shifted by -10.5 hours after repeated cross-source agreement.
-- **Zing** (Zing.in@SD): source ID ts517 from https://avkb.short.gy/tsepg.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Raj TV** (RajTV.in@SD): source ID ts439 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Siri Kannada All Time** (SiriKannadaAllTime.in): source ID 543254 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Siri Kannada All Time** (SiriKannadaAllTime.in): source ID ts940 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Sirippoli TV** (SirippoliTV.in@SD): source ID ts611 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Sonic** (Sonic.in@SD): source ID ts127 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Sony Sports Ten 5** (SonySportsTen5.in): source ID ts35 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Star Suvarna Plus** (StarSuvarnaPlus.in@SD): source ID 543423 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Super Hungama** (SuperHungama.in@SD): source ID 543103 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Tarang Music** (TarangMusic.in@SD): source ID 543280 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Vasanth TV** (VasanthTV.in@SD): source ID ts499 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Vendhar TV** (VendharTV.in@SD): source ID ts659 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Zee Bollywood** (ZeeBollywood.in@SD): source ID 543294 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Zee Bollywood** (ZeeBollywood.in@SD): source ID ts175 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **Zee Kannada** (ZeeKannada.in@SD): source ID ts675 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
 
-Detected source-ID corrections: **36**
+Detected source-ID corrections: **62**

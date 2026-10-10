@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-09T15:57:53+00:00",
+  "generated": "2026-10-10T08:30:41+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -9564,17 +9564,19 @@
     "yrfmusic": {
       "names": [
         "YRF Music",
-        "YRF Music (1080p)"
+        "YRF Music (1080p)",
+        "YRF Music Nepal"
       ],
       "ids": [
         "yrfmusic.in",
+        "yrfmusic.in@nepal",
         "yrfmusic.in@sd"
       ],
       "groups": [
         "Indian Music",
         "New Backup"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
       "backup": 0
     },

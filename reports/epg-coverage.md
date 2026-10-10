@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-09T15:57:52+00:00**
+Generated: **2026-10-10T08:30:40+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
@@ -9,40 +9,37 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 
 - Active Indian channels audited: **276**
 - Channels with an EPG mapping: **226**
-- Current/future programme coverage: **215/276 (77.9%)**
+- Current/future programme coverage: **218/276 (79.0%)**
 - No guide mapping found: **50**
 
 ## Source Status
 
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 817 current/future IDs; 113136 programme rows
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 530 current/future IDs; 21017 programme rows
-- **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 67828 programme rows
-- **OK** — https://epg.pw/xmltv/epg_IN.xml — 529 channel IDs; 528 current/future IDs; 19767 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml — 687 channel IDs; 633 current/future IDs; 64770 programme rows
-- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 25 current/future IDs; 72460 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 766 channel IDs; 758 current/future IDs; 82497 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1480 channel IDs; 1453 current/future IDs; 95482 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 280 channel IDs; 280 current/future IDs; 12954 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 112 channel IDs; 99 current/future IDs; 23959 programme rows
-- **OK** — https://avkb.short.gy/epg.xml.gz — 1677 channel IDs; 399 current/future IDs; 52237 programme rows
-- **OK** — https://avkb.short.gy/jioepg.xml.gz — 1303 channel IDs; 0 current/future IDs; 43338 programme rows
-- **OK** — https://avkb.short.gy/tsepg.xml.gz — 717 channel IDs; 328 current/future IDs; 43956 programme rows
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 817 current/future IDs; 112500 programme rows
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 530 current/future IDs; 20847 programme rows
+- **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 68005 programme rows
+- **OK** — https://epg.pw/xmltv/epg_IN.xml — 528 channel IDs; 528 current/future IDs; 19351 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml — 690 channel IDs; 636 current/future IDs; 64726 programme rows
+- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 318 current/future IDs; 43956 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 766 channel IDs; 760 current/future IDs; 82250 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1484 channel IDs; 1457 current/future IDs; 94500 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 280 channel IDs; 280 current/future IDs; 13583 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 112 channel IDs; 99 current/future IDs; 23901 programme rows
+- **OK** — https://avkb.short.gy/epg.xml.gz — 2272 channel IDs; 1007 current/future IDs; 71766 programme rows
+- **OK** — https://avkb.short.gy/jioepg.xml.gz — 1303 channel IDs; 1303 current/future IDs; 42908 programme rows
+- **OK** — https://avkb.short.gy/tsepg.xml.gz — 717 channel IDs; 677 current/future IDs; 33488 programme rows
 
 ## Channels Requiring Attention
 
 | Group | Channel | Playlist ID | EPG ID | Status |
 |---|---|---|---|---|
-| Indian Music | ETV Beats | ETVBeats.in@HD | 3559 | MAPPED_ENDED |
-| Indian Entertainment | Ekamra Bharat Odia | EkamraBharatOdia.in@SD | Ekamra.Bharat.Odia.in | ts1196 | MAPPED_ID_ONLY |
 | Indian Movies | Ekamra Cinema | custom.ekamra.cinema | Ekamra.Cinema.in | MAPPED_ID_ONLY |
-| Indian Entertainment | Ekamra Manoranjan | custom.ekamra.manoranjan | Ekamra.Manoranjan.in | ts1207 | MAPPED_ID_ONLY |
 | Indian Music | Ekamra Musiq | custom.ekamra.musiq | Ekamra.Musiq.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Manoranjan Prime | ManoranjanPrime.in@SD | 154892 | MAPPED_ID_ONLY |
 | Indian Entertainment | One Paschima | OnePaschima.in@SD | One.Paschima.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Prarthana TV | PrarthanaTV.in@SD | Prarthana.TV.in | MAPPED_ID_ONLY |
 | Indian Music | Steelbird Music | SteelbirdMusic.in@SD | Steelbird.Music.in | MAPPED_ID_ONLY |
+| Indian Entertainment | Suriyan TV | SuriyanTV.in@SD | ts1384 | MAPPED_ID_ONLY |
 | Indian Entertainment | Odisha TV | OdishaTV.in@SD | OdishaTV.in | MAPPED_NOT_CURRENTLY_FOUND |
-| Indian Entertainment | Suriyan TV | SuriyanTV.in@SD | ts1384 | MAPPED_NOT_CURRENTLY_FOUND |
 | Indian Movies | &pictures 2 | new.and.pictures.hd | - | NO_GUIDE_HIT |
 | Indian Music | 7X Punjabi | custom.7x.punjabi | - | NO_GUIDE_HIT |
 | Indian Bangla | Amar Bangla Digital | custom.amar.bangla.digital | - | NO_GUIDE_HIT |
