@@ -1,6 +1,6 @@
 # BDIX Playlist Audit
 
-Generated: **2026-10-09T09:39:26+00:00**
+Generated: **2026-10-10T09:02:50+00:00**
 
 ## Summary
 
@@ -16,8 +16,8 @@ Generated: **2026-10-09T09:39:26+00:00**
 - Malformed entries: **0**
 - Unknown categories: **0**
 - Streams tested: **255**
-- Reachable: **73**
-- Failed: **182**
+- Reachable: **0**
+- Failed: **255**
 
 ## Protection Policy
 
