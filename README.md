@@ -16,8 +16,8 @@ Compatible with **XCIPTV** and other M3U-compatible players.
 ## 📥 Download Center
 
 - 📺 **[Main M3U Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)**
-- 🖥️ **[Playlist Studio v5.0](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.Portable.exe)** — Windows playlist manager, editor & player
-- 🛠️ **[Playlist Studio Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug11.zip)** — Windows build package
+- 🖥️ **[Playlist Studio v5.0](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.exe)** — Windows playlist manager, editor & player
+- 🛠️ **[Playlist Studio Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug12.zip)** — Windows build package
 - 🛜 **[Xtream Codes](xtream/README.md)** — Xtream Gateway / XCIPTV
 - 📄 **[EPG Coverage](reports/epg-coverage.md)** — EPG status and coverage
 - 📚 **[Documentation](docs/README.md)**
@@ -50,15 +50,15 @@ Compatible with **XCIPTV** and other M3U-compatible players.
 
 ### 📥 Download
 
-**[⬇️ Download Playlist Studio 5.0 Portable](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.Portable.exe)**
+**[⬇️ Download Playlist Studio 5.0 Portable](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.exe)**
 
-**[📦 Download Windows Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug11.zip)**
+**[📦 Download Windows Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug12.zip)**
 
 The supplied application is **portable** and requires no traditional installation.
 
 ### 🛠️ Build from the Windows Build Kit
 
-1. Download `Playlist-Studio-5_0-Windows-Build-Kit-Debug11.zip`.
+1. Download `Playlist-Studio-5_0-Windows-Build-Kit-Debug12.zip`.
 2. Extract the ZIP file.
 3. Open the extracted folder.
 4. Run **`BUILD-Windows.cmd`**.
