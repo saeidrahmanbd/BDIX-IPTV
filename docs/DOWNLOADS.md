@@ -10,13 +10,13 @@ M3U playlist compatible with XCIPTV and other compatible players.
 
 ### Portable Windows Application
 
-**[⬇️ Download Playlist-Studio-5.0.Portable.exe](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.Portable.exe)**
+**[⬇️ Download Playlist-Studio-5.0.exe](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.exe)**
 
 No traditional installation is required.
 
 ### Windows Build Kit
 
-**[📦 Download Playlist-Studio-5_0-Windows-Build-Kit-Debug11.zip](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug11.zip)**
+**[📦 Download Playlist-Studio-5_0-Windows-Build-Kit-Debug12.zip](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug12.zip)**
 
 See the **[Playlist Studio documentation](docs/PLAYLIST-STUDIO.md)** for build instructions.
 
