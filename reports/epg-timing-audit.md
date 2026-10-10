@@ -9,7 +9,6 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **Animal Planet** (AnimalPlanet.in@SD): source ID 543099 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Cartoon Network** (CartoonNetwork.uk): source ID 543449 from https://epg.pw/xmltv/epg_IN.xml shifted by +16 hours after repeated cross-source agreement.
 - **Chithiram** (Chithiram.in@SD): source ID ts1166 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **Colors Super** (ColorsSuper.in): source ID 543284 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **DD Arun Prabha** (DDArunPrabha.in@SD): source ID 543094 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **DD Chandana** (DDChandana.in@SD): source ID 543175 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **DD Girnar** (DDGirnar.in@SD): source ID 543062 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
@@ -43,9 +42,9 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **Siri Kannada All Time** (SiriKannadaAllTime.in): source ID ts940 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
 - **Sonic** (Sonic.in@SD): source ID ts127 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
 - **Sony Sports Ten 5** (SonySportsTen5.in): source ID ts35 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **Star Suvarna Plus** (StarSuvarnaPlus.in@SD): source ID 543423 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Super Hungama** (SuperHungama.in@SD): source ID 543103 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Tarang Music** (TarangMusic.in@SD): source ID 543280 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Vasanth TV** (VasanthTV.in@SD): source ID ts499 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
 - **Vendhar TV** (VendharTV.in@SD): source ID ts659 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
 
-Detected source-ID corrections: **43**
+Detected source-ID corrections: **42**

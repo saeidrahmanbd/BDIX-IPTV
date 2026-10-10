@@ -1,27 +1,27 @@
 # Update Report
 
-_Last generated: **2026-10-10 — corrected against live IPTV-Playlist.m3u**_
+_Last generated: **2026-10-10 12:35 UTC**_
 
 | Metric | Current |
 |---|---:|
-| Streams | **1061** |
-| Active Channel Identities | **Not refreshed in this correction** |
-| Active Primary Streams | **Not refreshed in this correction** |
-| Bangladesh | **Not refreshed in this correction** |
-| India | **Not refreshed in this correction** |
-| Backup Streams | **Not refreshed in this correction** |
-| New Channels | **Not refreshed in this correction** |
-| New Backup Streams | **Not refreshed in this correction** |
+| Streams | **1152** |
+| Active Channel Identities | **594** |
+| Active Primary Streams | **594** |
+| Bangladesh | **57** |
+| India | **276** |
+| Backup Streams | **398** |
+| New Channels | **40** |
+| New Backup Streams | **51** |
 | Local Logos | **100.0%** |
 | EPG Programme Coverage | **79.0%** |
 | EPG Mapping | **81.9%** |
-| Stream Health Tested | **Not refreshed in this correction** |
-| Stream Health Failures | **Not refreshed in this correction** |
-| Persistent Failures | **Not refreshed in this correction** |
+| Stream Health Tested | **1008** |
+| Stream Health Failures | **174** |
+| Persistent Failures | **166** |
 | Near-Duplicate URL Families | **0** |
-| Audit Blocking Issues | **Not refreshed in this correction** |
-| Pre-Publish Gate | **Not rerun in this correction** |
-| Pre-Publish Gate Generated | **Not rerun in this correction** |
+| Audit Blocking Issues | **15** |
+| Pre-Publish Gate | **PASS** |
+| Pre-Publish Gate Generated | **2026-10-10T12:35:46+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -54,18 +54,14 @@ _Last generated: **2026-10-10 — corrected against live IPTV-Playlist.m3u**_
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-10T12:20:58.572529+00:00** |
-| EPG coverage | **2026-10-10T12:20:58+00:00** |
-| Stream health | **2026-10-10T12:21:52+00:00** |
-| Pre-publish gate | **2026-10-10T12:21:53+00:00** |
-
-## Data freshness note
-
-The stream total above was verified directly against the current `IPTV-Playlist.m3u` (1,061 entries). Other historical metrics are deliberately marked as not refreshed rather than presenting stale values as current. Run the IPTV Playlist Update workflow to regenerate all reports from the same playlist revision.
+| Playlist audit | **2026-10-10T12:34:54.739819+00:00** |
+| EPG coverage | **2026-10-10T12:34:54+00:00** |
+| Stream health | **2026-10-10T12:35:46+00:00** |
+| Pre-publish gate | **2026-10-10T12:35:46+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
 - Latest entries change: **1152 → 1152**
-- Latest health failures: **188 → 185**
+- Latest health failures: **185 → 174**
 
 Historical records are retained in reports/maintenance-history.json.

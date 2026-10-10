@@ -1,25 +1,21 @@
 # IPTV Maintenance Report
 
-_Corrected: **2026-10-10 — stream count checked against live IPTV-Playlist.m3u**_
+_Generated: **2026-10-10 12:35 UTC**_
 
 | Item | Result |
 |---|---:|
-| Current playlist streams | **1061** |
-| Current channel IDs | **Not refreshed in this correction** |
-| Backup streams | **Not refreshed in this correction** |
-| New Channels | **Not refreshed in this correction** |
-| New Queue (legacy) | **Not refreshed in this correction** |
+| Current playlist streams | **1152** |
+| Current channel IDs | **713** |
+| Backup streams | **398** |
+| New Channels | **0** |
+| New Queue (legacy) | **0** |
 | Logo exceptions | **0** |
-| EPG mapping | **Not refreshed in this correction** |
-| EPG programme coverage | **Not refreshed in this correction** |
-| Health failures | **Not refreshed in this correction** |
-| Persistent health failures | **Not refreshed in this correction** |
-| Audit blockers | **Not refreshed in this correction** |
-| Pre-publish gate | **Not rerun in this correction** |
-
-## Data freshness note
-- The stream total was verified directly against the live playlist (1,061 entries).
-- Other operational metrics are marked unrefreshed rather than presented as current. Run the IPTV Playlist Update workflow to regenerate the complete report set.
+| EPG mapping | **81.9%** |
+| EPG programme coverage | **79.0%** |
+| Health failures | **174** |
+| Persistent health failures | **166** |
+| Audit blockers | **15** |
+| Pre-publish gate | **PASS** |
 
 ## Protection
 - Duplicate stream URLs are blocking.
