@@ -132,7 +132,7 @@ jobs:
             from pathlib import Path
             from datetime import datetime,timezone
             def metric(text,label):
-                m=re.search(rf'- {re.escape(label)}: {re.escape(chr(42)*2)}(\\d+){re.escape(chr(42)*2)}',text)
+                m=re.search(rf'- {re.escape(label)}: {re.escape(chr(42)*2)}(\d+){re.escape(chr(42)*2)}',text)
                 return int(m.group(1)) if m else None
             audit=Path('reports/playlist-audit.md').read_text(encoding='utf-8')
             health=Path('reports/stream-health.md').read_text(encoding='utf-8')
