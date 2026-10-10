@@ -249,7 +249,14 @@ for cid, items in sorted(by_id.items()):
     if len(names) > 1 or len(groups) > 1 or len(countries) > 1:
         metadata_conflicts.append((cid, names, groups, countries))
 
-name_collisions = {k:v for k,v in by_name.items() if len({identity_root(identity(x[0])) for x in v}) > 1}
+REVIEW_GROUPS = {"New Channels", "New Backup", "New", "Not Playing"}
+# Review queues may intentionally contain alternate IDs for manual testing;
+# report identity collisions only among publishable channel entries.
+name_collisions = {
+    k: [x for x in v if attrs(x[0]).get("group-title", "").strip() not in REVIEW_GROUPS]
+    for k, v in by_name.items()
+}
+name_collisions = {k:v for k,v in name_collisions.items() if len({identity_root(identity(x[0])) for x in v}) > 1}
 
 primary_by_root = defaultdict(list)
 primary_by_name = defaultdict(list)
@@ -365,7 +372,7 @@ import unicodedata
 
 def natural_sort_key(value):
     value = unicodedata.normalize("NFKD", value).casefold().strip()
-    return [int(part) if part.isdigit() else part for part in re.split(r"(\\d+)", value)]
+    return [int(part) if part.isdigit() else part for part in re.split(r"(\d+)", value)]
 
 for group in category_transitions:
     names = [display_name(info).strip() for info, url in entries if attrs(info).get("group-title", "").strip() == group]
@@ -467,14 +474,14 @@ for info, url in primary_entries:
     if group in {"New Channels","New Backup","New"}:
         continue
     pname = attrs(info).get("tvg-name", "").strip()
-    key = re.sub(r"s+", " ", re.sub(r"s*[[^]]+]s*$", "", pname)).strip().lower()
+    key = normalized_name(pname)
     primary_by_norm_name.setdefault(key, pname)
 for info, url in entries:
     group = attrs(info).get("group-title", "").strip()
     if group not in {"New", "New Channels", "New Backup"}:
         continue
     name = attrs(info).get("tvg-name", "").strip()
-    key = re.sub(r"s+", " ", re.sub(r"s*[[^]]+]s*$", "", name)).strip().lower()
+    key = normalized_name(name)
     canonical = primary_by_norm_name.get(key)
     if canonical and canonical != name:
         review_name_mismatches.append((display_name(info), canonical, group))
