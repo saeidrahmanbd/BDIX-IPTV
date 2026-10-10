@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-10T08:31:37.706679+00:00**
+Generated: **2026-10-10T12:21:53.362838+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -14,12 +14,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **10**
+- Logo exceptions: **0**
 - Logo references checked: **1061**
 - Not Playing logo exceptions: **1**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **5**
+- Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Alphabetical ordering issues: **3**
@@ -864,8 +864,8 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1050**
-- missing: **10**
+- Healthy/local references: **1060**
+- missing: **0**
 - broken-local: **0**
 - external: **1**
 - non-png: **0**
@@ -873,16 +873,6 @@ None.
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
-- missing — Channel 52 [staging.channel.52] — 
-- missing — All Time Movies [staging.dhinchaak] — 
-- missing — Assam Talks [staging.assam.talks] — 
-- missing — Islam TV [staging.islam.tv] — 
-- missing — Channel 24 [staging.channel.24] — 
-- missing — Ekhon TV [staging.ekhon.tv] — 
-- missing — Goldmines Movies [staging.goldmines.movies] — 
-- missing — Iqra Bangla [staging.iqra.bangla] — 
-- missing — T Sports [staging.t.sports] — 
-- missing — Thikana [staging.thikana] — 
 
 ## Protected Primary Entries
 

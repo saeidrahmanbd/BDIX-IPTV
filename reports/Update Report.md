@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-10-10 08:31 UTC**_
+_Last generated: **2026-10-10 12:21 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -12,16 +12,16 @@ _Last generated: **2026-10-10 08:31 UTC**_
 | Backup Streams | **398** |
 | New Channels | **40** |
 | New Backup Streams | **51** |
-| Local Logos | **99.9%** |
+| Local Logos | **100.0%** |
 | EPG Programme Coverage | **79.0%** |
 | EPG Mapping | **81.9%** |
 | Stream Health Tested | **1008** |
-| Stream Health Failures | **188** |
+| Stream Health Failures | **185** |
 | Persistent Failures | **137** |
 | Near-Duplicate URL Families | **0** |
-| Audit Blocking Issues | **16** |
+| Audit Blocking Issues | **15** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-10T08:31:37+00:00** |
+| Pre-Publish Gate Generated | **2026-10-10T12:21:53+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -30,7 +30,7 @@ _Last generated: **2026-10-10 08:31 UTC**_
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
-- Logo exceptions: **1**
+- Logo exceptions: **0**
 - Not Playing logo exceptions: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **2**
@@ -54,14 +54,14 @@ _Last generated: **2026-10-10 08:31 UTC**_
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-10T08:30:41.404599+00:00** |
-| EPG coverage | **2026-10-10T08:30:40+00:00** |
-| Stream health | **2026-10-10T08:31:36+00:00** |
-| Pre-publish gate | **2026-10-10T08:31:37+00:00** |
+| Playlist audit | **2026-10-10T12:20:58.572529+00:00** |
+| EPG coverage | **2026-10-10T12:20:58+00:00** |
+| Stream health | **2026-10-10T12:21:52+00:00** |
+| Pre-publish gate | **2026-10-10T12:21:53+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
-- Latest entries change: **1151 → 1152**
-- Latest health failures: **145 → 188**
+- Latest entries change: **1152 → 1152**
+- Latest health failures: **188 → 185**
 
 Historical records are retained in reports/maintenance-history.json.
