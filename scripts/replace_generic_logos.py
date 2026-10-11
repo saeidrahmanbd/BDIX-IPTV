@@ -61,7 +61,7 @@ LOCAL_LOGO_FILES = {
 TV_LOGO_HINTS = {
     "Boomerang": "countries/united-states/boomerang-us.png",
     "Boomerang UK": "countries/united-kingdom/boomerang-uk.png",
-    "BT Sports 2": "countries/united-kingdom/hd/bt-sport-2-hd-uk.png",
+    "Bt Sports 2": "countries/united-kingdom/hd/bt-sport-2-hd-uk.png",
     "Comedy Central": "countries/united-states/comedy-central-us.png",
     "Cosmote Sports 1": "countries/greece/cosmote-sport-1-gr.png",
     "Cosmote Sports 4": "countries/greece/cosmote-sport-4-gr.png",
@@ -96,11 +96,11 @@ TV_LOGO_REPO = "https://github.com/tv-logo/tv-logos"
 # Exact station assets discovered on broadcaster/streaming-service pages.
 DIRECT_LOGO_HINTS = {
     "BTV Sangsad": {
-        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sangsad_Television_Emblem.svg",
-        "format": "SVG",
-        "page": "https://en.wikipedia.org/wiki/Sangsad_Bangladesh_Television",
-        "source": "Sangsad Television emblem",
-        "license": "Wikimedia Commons file; see source page",
+        "url": "https://i.imgur.com/jkouxLg.png",
+        "format": "PNG",
+        "page": "https://iptv-org.github.io/channels/bd/SangsadTV",
+        "source": "IPTV-org Sangsad TV channel page",
+        "license": "Station logo sourced from IPTV-org channel listing",
         "license_url": "",
     },
     "92.8 FM Radio Bhumi": {
@@ -181,6 +181,30 @@ DIRECT_LOGO_HINTS = {
         "page": "https://radio-bd.com/bushra/",
         "source": "Radio-bd.com station logo",
         "license": "Station logo served by Radio-bd.com",
+        "license_url": "",
+    },
+    "Radio Padma – 99.2 FM": {
+        "url": "https://i1.sndcdn.com/avatars-yIzlzJLEhaHQVxe9-lbOLvA-t1080x1080.jpg",
+        "format": "JPEG",
+        "page": "https://soundcloud.com/radiopadma",
+        "source": "Radio Padma SoundCloud profile",
+        "license": "Station artwork served by SoundCloud",
+        "license_url": "",
+    },
+    "Radio Tangail": {
+        "url": "https://zenoimages.s3.us-west-001.backblazeb2.com/0932bfac-ea04-4f30-9e3e-e268bc9462e8/images/logo",
+        "format": "PNG",
+        "page": "https://zeno.fm/radio/radiotangail/",
+        "source": "Radio Tangail Zeno station page",
+        "license": "Station logo served by Zeno",
+        "license_url": "",
+    },
+    "My 90s Bengali Online": {
+        "url": "https://proxy.zeno.fm/content/stations/agxzfnplbm8tc3RhdHNyMgsSCkF1dGhDbGllbnQYgIDQwZOSmAoMCxIOU3RhdGlvblByb2ZpbGUYgICwjMSC4AgMogEEemVubw/image/?u=1700245114000",
+        "format": "PNG",
+        "page": "https://zeno.fm/radio/mybangla/",
+        "source": "My Bangla Zeno station page",
+        "license": "Station artwork served by Zeno",
         "license_url": "",
     },
 }
@@ -427,12 +451,17 @@ def get_local_logo(channel):
     if not target:
         return None
 
-    # Exact, curated overrides remain first in line, but only if the asset exists
-    # and it is not itself a generic template.
+    # Exact, curated overrides remain first in line. Search nested folders
+    # such as /logos/unused too, then promote the exact file to /logos root.
     explicit = LOCAL_LOGO_FILES.get(channel)
     if explicit:
         path = LOGOS / explicit
-        if path.is_file() and not is_generic_file(path):
+        if not path.is_file():
+            path = next((p for p in LOGOS.rglob(explicit) if p.is_file()), None)
+        if path and path.is_file() and not is_generic_file(path):
+            destination = LOGOS / explicit
+            if path.parent != LOGOS and not destination.exists():
+                shutil.copyfile(path, destination)
             return explicit
 
     supported = {".svg", ".png", ".jpg", ".jpeg", ".webp", ".avif"}
