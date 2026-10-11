@@ -37,6 +37,9 @@ EPG_ALIASES = {
     "SETASHD": ["SonyEntertainmentTelevision.in@HD"],
     "new.and.pictures.hd": ["Andpictures.in@HD"],
     "custom.epic": ["EpicTV.in@SD"],
+    "custom.isai.aruvi.tv": ["IsaiAruvi.in@SD"],
+    "custom.the.q": ["TheQIndia.us@SD"],
+    "Star Gold Romance.in": ["StarGoldRomance.in@SD"],
     # The IDs above are exact channel IDs documented in the DishTV XMLTV catalogue;
     # each mapping is still accepted only when a configured live XMLTV source contains it.
     "Enterr10 Bangla.in": ["ENTER10.BANGLA.in", "Enterr10Bangla.in"],
