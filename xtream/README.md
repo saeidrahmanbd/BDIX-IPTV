@@ -32,7 +32,7 @@ Cloudflare recommends Worker Secrets for sensitive values. Do not put the Xtream
 
 ## Categories
 
-The gateway preserves the playlist category structure, including Bangladesh, Indian Bangla, Indian Movies, Indian Music, Indian Entertainment, Pakistani, International, Documentary & Wildlife, Kids, Religious, Sports, Backup, New Channels and New Backup. Review-only groups such as `Not Playing` and `Test` are excluded from the Xtream channel/category output.
+The gateway preserves the approved playlist category structure. Retired discovery/review groups are not part of the playlist taxonomy.
 
 ## EPG
 
