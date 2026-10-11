@@ -34,6 +34,7 @@ SOURCES = [
     "https://avkb.short.gy/jioepg.xml.gz",
     "https://avkb.short.gy/tsepg.xml.gz",
     "https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml",
+    "https://iptv-org.github.io/epg/guides/in.xml",
 ]
 
 # Per-channel broadcast-delay corrections, in hours.
