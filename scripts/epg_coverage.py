@@ -213,7 +213,7 @@ def main():
         lines.append(f'| {r["group"]} | {r["channel"]} | {r["tvg_id"]} | {r["epg_id"] or "-"} | {r["status"]} |')
     REPORT.parent.mkdir(parents=True,exist_ok=True)
     # Validate the actual published guide, not only source-level mapping.
-    guide_path = Path("epg.xml")
+    guide_path = Path("epg/epg.xml")
     if guide_path.exists() and guide_path.stat().st_size > 0:
         try:
             guide_root = ET.parse(guide_path).getroot()

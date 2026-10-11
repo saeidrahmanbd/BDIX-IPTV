@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Resolve missing/external channel logos and store them as local PNG files."""
-import io, json, re, urllib.request
+import io, json, re, urllib.request, hashlib
 from pathlib import Path
-from PIL import Image
+from urllib.parse import urlsplit
+from PIL import Image, ImageDraw, ImageFont
 try:
     import cairosvg
 except ImportError:
@@ -25,6 +26,16 @@ FALLBACK_LOGOS = {
     "loltv": "https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/lol-tv.png",
     "mytimemovie": "https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork/8cb0d25f-b096-4e26-a957-6b271f7f0560.jpeg",
     "mytimemovienetworkbr": "https://i.imgur.com/aiGQtzI.png",
+    "axs": "https://commons.wikimedia.org/wiki/Special:FilePath/AXS_TV_logo.svg",
+    "epixtv": "https://commons.wikimedia.org/wiki/Special:FilePath/Epix.png",
+    "hbo": "https://commons.wikimedia.org/wiki/Special:FilePath/HBO_logo.svg",
+    "hbo2": "https://commons.wikimedia.org/wiki/Special:FilePath/HBO2_logo.png",
+    "ytv": "https://commons.wikimedia.org/wiki/Special:FilePath/Ytv_logo.png",
+    "foodnetwork": "https://commons.wikimedia.org/wiki/Special:FilePath/Food_Network_Logo.svg",
+    "hgtv": "https://commons.wikimedia.org/wiki/Special:FilePath/HGTV_logo.png",
+    "travelchannel": "https://commons.wikimedia.org/wiki/Special:FilePath/Travel_Channel_HD_Logo.png",
+    "colorsinfinity": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-infinity.png",
+    "enter10bangla": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png",
     "rakutenmovies": "https://s3.aynaott.com/storage/22af43810a37af9a151f1e0a23adde63",
     "sparklemovies": "https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBAJ400042T1_20250107T025804SQUARE.png",
     "vevohiphoprb": "https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBD2300001C0_20250107T030829SQUARE.png",
@@ -122,6 +133,50 @@ def clean_name(value):
     return re.sub(r"[^a-z0-9]+", "", value.lower())
 def safe_name(value): return (re.sub(r"[^A-Za-z0-9]+", "-", value).strip("-").lower()[:90] or "channel")
 def is_local(value): return value.startswith(RAW_BASE) or value.startswith("logos/") or "raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV" in value
+def is_generic_logo(value):
+    raw = str(value or "").strip().split("#",1)[0].split("?",1)[0].lower().rstrip("/")
+    return bool(re.search(r"^https?://(?:www\.)?(?:i\.)?imgur\.com/79g2kma\.png$", raw, re.I))
+def is_generated_placeholder(value):
+    try:
+        return Path(urlsplit(str(value or "")).path).name.lower().startswith("placeholder-")
+    except Exception:
+        return False
+def generate_placeholder_logo(label, target):
+    """Create a unique, explicitly non-official text logo only when no verified asset exists."""
+    digest = hashlib.sha256(str(label).casefold().encode("utf-8")).digest()
+    accent = (90 + digest[0] % 130, 70 + digest[1] % 140, 90 + digest[2] % 130, 255)
+    width, height = 800, 450
+    image = Image.new("RGBA", (width, height), (18, 24, 38, 255))
+    pixels = image.load()
+    for y in range(height):
+        mix = y / max(1, height - 1)
+        base = (int(15 + 18 * mix), int(23 + 10 * mix), int(38 + 22 * mix), 255)
+        for x in range(width):
+            pixels[x, y] = base
+    draw = ImageDraw.Draw(image)
+    draw.rounded_rectangle((28, 28, width-28, height-28), radius=36, outline=accent, width=5)
+    draw.rounded_rectangle((56, 56, 76, height-56), radius=10, fill=accent)
+    draw.ellipse((width-126, 64, width-74, 116), fill=accent)
+    words = re.sub(r"\s+", " ", str(label or "TV Channel")).strip().upper()
+    font_path = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+    font = None
+    for size in (58, 52, 46, 40, 34, 28):
+        try:
+            font = ImageFont.truetype(font_path, size)
+        except Exception:
+            font = ImageFont.load_default()
+        if draw.textbbox((0, 0), words, font=font)[2] <= width - 180:
+            break
+    bbox = draw.textbbox((0, 0), words, font=font)
+    x = max(95, (width - (bbox[2] - bbox[0])) // 2)
+    y = (height - (bbox[3] - bbox[1])) // 2 - bbox[1]
+    draw.text((x, y), words, font=font, fill=(248, 250, 252, 255), stroke_width=0)
+    try:
+        small = ImageFont.truetype(font_path, 16)
+    except Exception:
+        small = ImageFont.load_default()
+    draw.text((98, height-82), "CHANNEL LOGO", font=small, fill=accent)
+    image.save(target, format="PNG", optimize=True)
 def fetch_bytes(url):
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(request, timeout=30) as response:
@@ -202,6 +257,11 @@ for line in lines:
     title = metadata.get("tvg-name") or line.rsplit(",", 1)[-1].strip()
     base_title = clean_name(title)
     channel_id = exact_id(metadata)
+    # Remove the known common placeholder logo instead of copying/downloading it.
+    if is_generic_logo(logo) or is_generated_placeholder(logo):
+        line = force_local(line, "")
+        metadata = attrs(line)
+        logo = ""
     mapped_logo = explicit_logo_for_id(channel_id) if channel_id else None
 
     # Explicit ID overrides are authoritative and run before any existing-logo shortcut.
@@ -263,6 +323,30 @@ for line in lines:
         changed += 1; resolved_from_existing += 1
         continue
 
+    # Convert a valid current external image into a repository-hosted PNG.
+    # This makes previously external tvg-logo URLs local and auditable.
+    if logo and not is_local(logo) and not is_generic_logo(logo):
+        filename = f"{safe_name(title)}.png"
+        target = LOGOS / filename
+        replacement = RAW_BASE + filename
+        try:
+            if target.exists():
+                try:
+                    with Image.open(target) as im: im.verify()
+                except Exception:
+                    target.unlink(missing_ok=True)
+            if not target.exists():
+                download_png(logo, target); downloaded += 1
+            output.append(force_local(line, replacement))
+            changed += 1; resolved_from_fallback += 1
+            if channel_id:
+                local_by_id.setdefault(channel_id, set()).add(replacement)
+            local_by_name.setdefault(base_title, set()).add(replacement)
+            continue
+        except Exception as exc:
+            failed += 1
+            print(f"External logo download failed: {title}: {exc}")
+
     fallback = FALLBACK_LOGOS.get(base_title)
     if fallback:
         filename = f"{safe_name(title)}.png"
@@ -308,8 +392,23 @@ for line in lines:
                 failed += 1
                 print(f"Catalogue logo failed: {title}: {exc}")
 
-    unresolved.append(title)
-    output.append(line)
+    # No official/verified source matched. Keep the entry visually usable with a
+    # unique title-based fallback (never a shared/generic logo); try genuine sources
+    # again on the next run because placeholder-*.png is not treated as authoritative.
+    filename = f"placeholder-{safe_name(title)}.png"
+    target = LOGOS / filename
+    replacement = RAW_BASE + filename
+    try:
+        generate_placeholder_logo(title, target)
+        output.append(force_local(line, replacement))
+        changed += 1
+        unresolved.append(title)
+        print(f"Generated non-official text fallback logo: {title}")
+    except Exception as exc:
+        failed += 1
+        unresolved.append(title)
+        output.append(line)
+        print(f"Fallback logo generation failed: {title}: {exc}")
 
 new_text = "\n".join(output).rstrip() + "\n"
 if new_text != original:

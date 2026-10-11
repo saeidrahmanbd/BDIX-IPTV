@@ -3,6 +3,7 @@
 from pathlib import Path
 import re
 import json
+import unicodedata
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/metadata-normalization.md")
 RAW="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 EXCLUDE={"Backup","New","New Channels","New Backup","Not Playing"}
@@ -182,7 +183,16 @@ LOGOS={
   "Zoom Music": "zoom-music.png",
   "Zoom TV": "zoom-tv.png",
   "Zee TV": "zee-tv.png",
-  "Sun Bangla": "sun-bangla.png"
+  "Sun Bangla": "sun-bangla.png",
+  "Deshe Bideshe": "deshe-bideshe.png",
+  "Colors MENA": "colors-mena.png",
+  "Colors Infinity": "colors-infinity.png",
+  "Discovery Science": "discovery-science.png",
+  "Discovery Turbo": "discovery-turbo.png",
+  "HISTORY TV": "history.png",
+  "Nat Geo TV": "national-geographic.png",
+  "MTV": "mtv-india-hd-720p.png",
+  "Enter10 Bangla": "enterr10-bangla.png"
 }
 ATTR=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 def attrs(s): return dict(ATTR.findall(s))
@@ -202,13 +212,15 @@ def norm(s):
  s=str(s or "").lower()
  s=re.sub(r"\[[^]]*\]|\([^)]*\)"," ",s)
  s=re.sub(r"\b(?:uhd|fhd|hd|sd|4k|1080p|720p|576p|480p|360p)\b"," ",s,flags=re.I)
- return re.sub(r"[^a-z0-9]+","",s.replace("&","and"))
+ value=re.sub(r"[^a-z0-9]+","",s.replace("&","and"))
+ aliases={"ekhonetv":"ekhontv","rocktv":"suriyantv","suriyantvtamil":"suriyantv"}
+ return aliases.get(value,value)
 def clean(s):
  s=re.sub(r"\s+"," ",re.sub(r"[._]+"," ",str(s or ""))).strip()
  s=re.sub(r"\s*\(\s*(?:\d{3,4}p|UHD|FHD|HD\+?|SD)\s*\)\s*$","",s,flags=re.I)
  s=re.sub(r"\s+(?:\d{3,4}p|UHD|FHD|HD\+?|SD)\s*$","",s,flags=re.I)
  return s.strip()
-CASE={"ATN BANGLA UK":"ATN Bangla UK","SUN BANGLA":"Sun Bangla"}
+CASE={"ATN BANGLA UK":"ATN Bangla UK","SUN BANGLA":"Sun Bangla","Ekhone TV":"Ekhon TV","EKHONE TV":"Ekhon TV","Ekattor Tv":"Ekattor TV","Sony MAX":"Sony Max","Sony AATH":"Sony Aath"}
 def normalize_id(cid):
  return re.sub(r"@SD(?=@ALT1$)","",str(cid or ""),flags=re.I)
 def set_attr(m,k,v):
@@ -271,7 +283,11 @@ for r in rows:
   cid=normalize_id((pr["a"].get("tvg-id") if pr else None) or IDS.get(name) or a.get("tvg-id") or "custom."+norm(name))
   m=set_attr(m,"tvg-id",cid); m=set_attr(m,"channel-id",cid); m=set_attr(m,"tvg-name",name); display=name
   logo=(pr["a"].get("tvg-logo") if pr else None) or LOGOS.get(r["name"]) or LOGOS.get(name)
-  if logo and not a.get("tvg-logo"): m=set_attr(m,"tvg-logo",logo if logo.startswith("http") else RAW+logo); stats["logos"]+=1
+  if logo:
+   logo_url=logo if logo.startswith("http") else RAW+logo
+   current_logo=(a.get("tvg-logo") or "").strip()
+   if not current_logo or (pr and current_logo != logo_url):
+    m=set_attr(m,"tvg-logo",logo_url); stats["logos"]+=1
   m=re.sub(r'\s*tvg-chno="[^"]*"',"",m); stats["backups"]+=1
  lines[r["i"]]=f"{m},{name}"
 
@@ -297,6 +313,16 @@ backup_records=[r for r in records if group_of(r)=="Backup"]
 review_records=[r for r in records if group_of(r) in review_groups]
 normal_records=[r for r in records if group_of(r) not in {"Backup"} and group_of(r) not in review_groups]
 records=normal_records+backup_records+review_records
+CATEGORY_RANK={name:i for i,name in enumerate(CATEGORY_REGISTRY)}
+def natural_sort_key(value):
+ value=unicodedata.normalize("NFKD",str(value or "")).casefold().strip()
+ return [int(part) if part.isdigit() else part for part in re.split(r"(\d+)",value)]
+def record_display(rec):
+ _,display=split_extinf(rec[0])
+ return display.strip()
+def record_url(rec):
+ return next((line.strip() for line in rec[1:] if line.strip().startswith(("http://","https://"))), "")
+records.sort(key=lambda rec:(CATEGORY_RANK.get(group_of(rec),len(CATEGORY_RANK)),natural_sort_key(record_display(rec)),record_url(rec)))
 lines=preamble+[line for rec in records for line in rec]
 P.write_text("\n".join(lines)+"\n",encoding="utf-8")
 R.write_text("# Playlist Metadata Normalization\n\n"+f"- Entries processed: **{len(rows)}**\n- Primary channel numbers added: **{stats['numbers']}**\n- Logo references repaired: **{stats['logos']}**\n- Backup/review entries normalized: **{stats['backups']}**\n",encoding="utf-8")

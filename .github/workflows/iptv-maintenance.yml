@@ -44,6 +44,8 @@ jobs:
             # backup candidates go to New Backup, and user-deleted review entries are remembered
             # in reports/discovery-state.json so they do not recur on later runs.
             python scripts/discover_channels_v3.py
+            # Discovery appends review candidates; normalize again so their metadata and A-Z order pass audit.
+            python scripts/normalize_metadata.py
             python scripts/migrate_external_logos_fixed.py
             python scripts/epg_coverage.py
             python scripts/generate_epg.py
