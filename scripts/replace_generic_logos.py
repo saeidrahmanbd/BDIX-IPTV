@@ -54,6 +54,8 @@ LOCAL_LOGO_FILES = {
     "Ktv Sports Plus": "ktv-sport-plus.png",
     "Spondon Radio": "spondon.png",
     "Sony Cine": "cine-sony-720p-c27cf4bb09.png",
+    "Oman Sports": "oman-sports-tv.png",
+    "Wow Kids": "wow-kidz.png",
 }
 
 # Exact channel/region matches from the public tv-logo/tv-logos collection.
@@ -248,7 +250,7 @@ DIRECT_LOGO_HINTS = {
         "license_url": "",
     },
     "Nexus Television": {
-        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nexus_Television_Logo.png",
+        "url": "https://en.wikipedia.org/wiki/Special:FilePath/Nexus_Television_Logo.png",
         "format": "PNG",
         "page": "https://en.wikipedia.org/wiki/Nexus_Television",
         "source": "Nexus Television channel article",
