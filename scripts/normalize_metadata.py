@@ -236,10 +236,13 @@ category_line="#PLAYLIST-STUDIO-CATEGORIES:"+json.dumps(CATEGORY_REGISTRY,ensure
 # category registry is restored immediately below.
 lines=[l for l in lines if l.strip() and not (l.startswith("#PLAYLIST-STUDIO-") and not l.startswith("#PLAYLIST-STUDIO-CATEGORIES:"))]
 lines=[l for l in lines if not l.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
-if lines and lines[0].startswith("#EXTM3U"):
- mm=re.search(r'url-tvg="([^"]+)"',lines[0],re.I)
- lines[0]=f'#EXTM3U url-tvg="{mm.group(1)}"' if mm else "#EXTM3U"
- lines.insert(1,category_line)
+# Standard M3U consumers expect the global #EXTM3U line first; keep its
+# url-tvg/x-tvg-url attributes intact, then preserve Studio's category registry.
+m3u_index=next((i for i,line in enumerate(lines) if line.startswith("#EXTM3U")),None)
+if m3u_index is not None:
+ m3u_header=lines.pop(m3u_index)
+ # Non-EXTM3U preamble comments remain present, but follow the real playlist header.
+ lines=[m3u_header,category_line]+lines
 else:
  lines.insert(0,category_line)
 rows=[]

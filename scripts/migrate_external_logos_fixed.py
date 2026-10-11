@@ -26,6 +26,8 @@ FALLBACK_LOGOS = {
     "loltv": "https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/lol-tv.png",
     "mytimemovie": "https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork/8cb0d25f-b096-4e26-a957-6b271f7f0560.jpeg",
     "mytimemovienetworkbr": "https://i.imgur.com/aiGQtzI.png",
+    # Official YET Television logo; verified from YET TV's own channel-logo assets.
+    "yettv": "https://yettelevision.com/assets/images/logo/channel_1.png",
     "axs": "https://commons.wikimedia.org/wiki/Special:FilePath/AXS_TV_logo.svg",
     "epixtv": "https://commons.wikimedia.org/wiki/Special:FilePath/Epix.png",
     "hbo": "https://commons.wikimedia.org/wiki/Special:FilePath/HBO_logo.svg",
