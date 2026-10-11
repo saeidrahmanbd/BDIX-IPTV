@@ -1,38 +1,49 @@
-# Generic Channel Logo Audit — Three Playlists
+# Channel Logo Audit — Three Playlists
 
 Audit date: 2026-10-11  
 Repository: https://github.com/saeidrahmanbd/BDIX-IPTV
 
 ## Current playlist integrity
 
-| Playlist | Entries | Entries with logo | Entries without logo | Known generic-looking logo refs remaining | External-hosted logo refs | Missing local asset paths |
+| Playlist | Entries | Entries with logo | Entries without logo | Known generic filename refs | External logo refs | Missing local asset paths |
 |---|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1,145 | 1,130 | 15 | 0 | 0 | 0 |
-| BDIX-Playlist.m3u | 190 | 186 | 4 | 0 | 5 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 330 | 231 | 0 | 0 | 0 |
+| IPTV-Playlist.m3u | 1,145 | 1,123 | 22 | 0 | 0 | 0 |
+| BDIX-Playlist.m3u | 190 | 184 | 6 | 0 | 5 | 0 |
+| NVisionBD-Playlist.m3u | 561 | 328 | 233 | 0 | 0 | 0 |
+| **Total** | **1,896** | **1,635** | **261** | **0** | **5** | **0** |
 
-"Known generic-looking" means the specific generic-looking filenames previously identified (`channel-1.png`, `channel-9.png`, `channel-16.png`, `channel-24.png`, `channel-52.png`, and `nvisionbd-*`) are no longer referenced by these three playlists. It does **not** mean every remaining image has been authenticated.
+“Known generic filename refs” only covers the specific previously identified `channel-1/9/16/24/52.png` and `nvisionbd-*` patterns. It does **not** mean every remaining image is authentic.
 
-## Corrective actions applied
+## Image-by-image checks completed in this pass
 
-- Unlinked 15 logo references across the primary and backup entries in `IPTV-Playlist.m3u` that pointed to the five generic-looking `channel-N.png` assets. All **1,145 entries and stream lines were preserved**.
-- Unlinked three generic-looking logo references from `BDIX-Playlist.m3u` for Channel 1, Channel 9 and Channel 24. The mismatched logo for `EPL channel 1` had already been removed. All **190 entries and stream lines were preserved**.
-- In `NVisionBD-Playlist.m3u`, removed generic-looking references for Channel 1 HD, Channel 9 HD and Channel 24 HD, preserved all 561 entries, and restored 17 references to pre-existing repository assets based on channel-name/filename alignment.
-- Missing logo references are intentionally left blank until an exact channel-specific image can be verified. No invented logos were created and no channel entries were deleted.
+Two image files were visually inspected and failed the clean-broadcaster-logo standard:
 
-## Remaining issues
+- `logos/btv-news.png` visibly combines BTV News branding with an unrelated **“M3U World 4K”** overlay.
+- `logos/bangla-tv.png` visibly adds a **“BONGO FLIX”** watermark over the Bangla TV logo.
 
-- `IPTV-Playlist.m3u`: 15 entries now have no logo reference pending authentication of the five channel-number assets.
-- `BDIX-Playlist.m3u`: four entries have no logo reference (Channel 1, Channel 9, Channel 24 and EPL channel 1). Five other logo URLs are served from Toffee's CDN; they were not copied into the repository because source terms and reuse rights need review.
-- `NVisionBD-Playlist.m3u`: 231 entries have no logo reference pending source-by-source verification.
-- The repository's previous replacement workflow only detected SVGs containing the `CHANNEL MARK` template. That detection alone is not sufficient to catch suspicious PNG/JPEG filenames or mismatched channel identities.
+Removed these two `tvg-logo` references from all three playlists wherever present (11 references total). The affected channel entries and stream URLs were preserved. The files were not deleted, and no replacement was guessed. These channel entries now correctly remain without a logo until a clean, exact asset is verified.
 
-## Integrity limits
+## Earlier corrective actions retained
 
-All remaining local logo references checked in this pass point to existing files. This is a path-integrity check, **not** visual authentication. A logo is approved only after comparing the image itself with an official broadcaster/brand source or another attributable reliable source for that exact channel.
+- Removed references to generic-looking `channel-N.png` assets from all three playlists without deleting channel entries.
+- Kept missing logo references blank rather than substituting artwork from similarly named channels.
+- All logo paths currently referenced resolve to repository files; the five external logo references in BDIX are still present and need a separate source/rights review.
 
-## Next actions
+## Reliable source leads for continued verification
 
-1. Authenticate the remaining logo-less entries against exact broadcaster/brand sources; restore only verified assets.
-2. Inspect other referenced logos for visual identity mismatches, watermarks, and unrelated brands.
-3. Expand automated checks to flag generic-looking raster filenames and suspicious channel-name/logo combinations without automatically replacing uncertain images.
+These are candidate source registries, not proof that a particular file in this repository matches the official image:
+
+- [Bangladesh Television official website](https://btv.gov.bd/) — official source for BTV branding and channel identity.
+- [Wikimedia Commons: logos of television channels in Bangladesh](https://commons.wikimedia.org/wiki/Category:Logos_of_television_channels_in_Bangladesh) — includes identifiable source pages for BTV News, Channel 9, Channel 16, Channel 24, Jamuna TV, ATN Bangla, and others. Check each file page and compare the actual image before use.
+- [JioStar media toolkit — official channel logos](https://www.jiostar.com/mediatoolkit/all-logos/) — includes official downloadable brand assets such as Star Jalsha, Colors Bangla, and Jalsha Movies.
+
+## Remaining work
+
+The remaining 1,635 referenced logos have **not** all been authenticated image-by-image. Continue by visually checking each distinct file, comparing it with an official broadcaster asset or a reliable attributable source, quarantining watermarked/mismatched images, and only restoring a logo reference after an exact match. Never infer authenticity from a filename alone.
+
+## Integrity safeguards
+
+- No channel entries or stream URLs were deleted in this pass.
+- No logo artwork was invented.
+- Suspect image files were retained for traceability; only playlist references were removed.
+- The counts above are current after the latest playlist edits.
