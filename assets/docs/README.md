@@ -7,7 +7,7 @@ Welcome to the documentation hub for **BDIX-IPTV**.
 | Resource | Description |
 |---|---|
 | 📺 [Main M3U Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) | Current maintained IPTV playlist |
-| 🖥️ [Playlist Studio](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest) | Latest Windows portable playlist editor |
+| 🖥️ [Playlist Studio](https://github.com/saeidrahmanbd/Playlist-Studio/releases/latest) | Latest Windows portable playlist editor |
 | 🛜 [Xtream Gateway](../../xtream/README.md) | Xtream Codes-compatible gateway documentation |
 | 📡 [EPG Documentation](../../epg/README.md) | EPG sources, validation and related files |
 | ⚙️ [Sample Configuration](../examples/sample-config.md) | Safe configuration examples |
@@ -36,7 +36,7 @@ EPG configuration is maintained separately from the main playlist. See the [EPG 
 
 ## 🖥️ Playlist Studio
 
-[Playlist Studio](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest) is the Windows portable application used for playlist management and playback-related workflows.
+[Playlist Studio](https://github.com/saeidrahmanbd/Playlist-Studio/releases/latest) is the Windows portable application used for playlist management and playback-related workflows.
 
 ## 🔧 Repository structure
 
