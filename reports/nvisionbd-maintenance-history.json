@@ -33,13 +33,13 @@
     "malformed": 0
   },
   {
-    "timestamp_utc": "2026-10-11T09:52:25+00:00",
+    "timestamp_utc": "2026-10-11T09:55:20+00:00",
     "entries": 646,
     "unique_urls": 646,
     "status_counts": {
+      "Unverified": 513,
       "Dead": 121,
-      "Unverified": 514,
-      "Responsive": 11
+      "Responsive": 12
     },
     "duplicate_urls": 0,
     "duplicate_ids": 81,
