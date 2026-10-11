@@ -6,7 +6,7 @@ from datetime import datetime,timezone
 from pathlib import Path
 PLAYLIST=Path("IPTV-Playlist.m3u"); OUT=Path("reports/channel-identity-index.json")
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
-EXCLUDE={"New Channels","New Backup","New","Not Playing"}
+EXCLUDE=set()
 def attrs(s): return dict(ATTR.findall(s))
 def root(cid):
     cid=(cid or "").strip().lower().split("@",1)[0]
