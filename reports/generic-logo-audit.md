@@ -1,6 +1,6 @@
 # Generic Channel Logo Audit — Three Playlists
 
-Audit date: 2026-10-11 11:50 UTC  
+Audit date: 2026-10-11 11:51 UTC  
 Repository: https://github.com/saeidrahmanbd/BDIX-IPTV  
 Method: scans current playlist metadata and checks referenced local SVG files for the generic CHANNEL MARK template.
 
@@ -10,9 +10,9 @@ Method: scans current playlist metadata and checks referenced local SVG files fo
 |---|---:|---:|
 | IPTV-Playlist.m3u | 1145 | 0 |
 | BDIX-Playlist.m3u | 217 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 106 |
+| NVisionBD-Playlist.m3u | 561 | 99 |
 
-Current NVisionBD placeholder assets: **106 unique files**.
+Current NVisionBD placeholder assets: **99 unique files**.
 
 ## Remaining affected NVisionBD channel labels
 
@@ -32,7 +32,6 @@ Current NVisionBD placeholder assets: **106 unique files**.
 - BTV Sangsad
 - Bangla Big Boss 24x7
 - Bangla Hits
-- Bangla Radio
 - Banijoy Mr Been
 - Bd Radio FM
 - Be.joy Kids
@@ -77,7 +76,6 @@ Current NVisionBD placeholder assets: **106 unique files**.
 - Niki Jr Kids
 - Oman Sports
 - Palki FM
-- Peoples Radio
 - Persiana Travel
 - Pk Geo Super
 - Pk Ten Cricket
@@ -86,15 +84,10 @@ Current NVisionBD placeholder assets: **106 unique files**.
 - Radio Bangla Rock
 - Radio Bangladesh Co
 - Radio Barakah
-- Radio Bushra
-- Radio Din Raat 93.6 FM
 - Radio Gaan Baksho
 - Radio Janata
-- Radio Mahananda - 98.8
 - Radio Padma – 99.2 FM
 - Radio Ritmo On Line
-- Radio Shadhin - 92.4 FM
-- Radio Shadin
 - Radio Sonali Dingulo
 - Radio Tangail
 - Radio Vivid Voice | Mymensingh

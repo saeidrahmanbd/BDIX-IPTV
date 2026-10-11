@@ -869,7 +869,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-23XSpIq
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1uVHk05KuGLq1mVb0dIruH
 #EXTINF:-1 xui-id="41704" tvg-id="custom.bangla.hits" tvg-name="Bangla Hits" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-bangla-hits.svg" tvg-chno="432" channel-id="custom.bangla.hits" group-title="Radio",Bangla Hits
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0Jg8_jjdK15mhqqu-55UOc
-#EXTINF:-1 xui-id="188458" tvg-id="custom.bangla.radio" tvg-name="Bangla Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-bangla-radio.svg" tvg-chno="433" channel-id="custom.bangla.radio" group-title="Radio",Bangla Radio
+#EXTINF:-1 xui-id="188458" tvg-id="custom.bangla.radio" tvg-name="Bangla Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-bangla-radio.png" tvg-chno="433" channel-id="custom.bangla.radio" group-title="Radio",Bangla Radio
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3KKA_iDgATD-XPLskiwNE3
 #EXTINF:-1 xui-id="41687" tvg-id="custom.bd.radio.fm" tvg-name="Bd Radio FM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-bd-radio-fm.svg" tvg-chno="434" channel-id="custom.bd.radio.fm" group-title="Radio",Bd Radio FM
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36a5vNE9EszvYSMUCr-TVw
@@ -889,7 +889,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3D7nchb
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3kngs1TTLo3RuBF9G23XNL
 #EXTINF:-1 xui-id="41703" tvg-id="custom.palki.fm" tvg-name="Palki FM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-palki-fm.svg" tvg-chno="442" channel-id="custom.palki.fm" group-title="Radio",Palki FM
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1CbYUWO95z1T3JNKC2N4Ii
-#EXTINF:-1 xui-id="188456" tvg-id="custom.peoples.radio" tvg-name="Peoples Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-peoples-radio.svg" tvg-chno="443" channel-id="custom.peoples.radio" group-title="Radio",Peoples Radio
+#EXTINF:-1 xui-id="188456" tvg-id="custom.peoples.radio" tvg-name="Peoples Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-peoples-radio.jpg" tvg-chno="443" channel-id="custom.peoples.radio" group-title="Radio",Peoples Radio
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3V54GfPaJhkDFclMsNjOYE
 #EXTINF:-1 xui-id="41697" tvg-id="custom.radio.adamya" tvg-name="Radio Adamya" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-radio-adamya.svg" tvg-chno="444" channel-id="custom.radio.adamya" group-title="Radio",Radio Adamya
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1kUeabGOAN-die_6hraj21
@@ -901,25 +901,25 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Uh4xXy
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3PB9S56BfhtXebMFEx3-N7
 #EXTINF:-1 xui-id="188455" tvg-id="custom.radio.bhumi.92.80.fm" tvg-name="Radio Bhumi 92.80 FM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-bhumi-92-80-fm.png" tvg-chno="448" channel-id="custom.radio.bhumi.92.80.fm" group-title="Radio",Radio Bhumi 92.80 FM
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-35GEPsk3Burbt3BEEw8cjQ
-#EXTINF:-1 xui-id="41682" tvg-id="custom.radio.bushra" tvg-name="Radio Bushra" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-radio-bushra.svg" tvg-chno="449" channel-id="custom.radio.bushra" group-title="Radio",Radio Bushra
+#EXTINF:-1 xui-id="41682" tvg-id="custom.radio.bushra" tvg-name="Radio Bushra" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-bushra.png" tvg-chno="449" channel-id="custom.radio.bushra" group-title="Radio",Radio Bushra
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1QxS_pk7MR2J5kPoD3SgPF
 #EXTINF:-1 xui-id="41673" tvg-id="custom.radio.capital.fm.94.8" tvg-name="Radio Capital FM 94.8" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-capital-fm-94-8.jpg" tvg-chno="450" channel-id="custom.radio.capital.fm.94.8" group-title="Radio",Radio Capital FM 94.8
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1S0S5D_soqA2_fxYUwHZVI
-#EXTINF:-1 xui-id="41668" tvg-id="custom.radio.din.raat.93.6.fm" tvg-name="Radio Din Raat 93.6 FM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-radio-din-raat-93-6-fm.svg" tvg-chno="451" channel-id="custom.radio.din.raat.93.6.fm" group-title="Radio",Radio Din Raat 93.6 FM
+#EXTINF:-1 xui-id="41668" tvg-id="custom.radio.din.raat.93.6.fm" tvg-name="Radio Din Raat 93.6 FM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-din-raat-93-6-fm.jpg" tvg-chno="451" channel-id="custom.radio.din.raat.93.6.fm" group-title="Radio",Radio Din Raat 93.6 FM
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0eZ00eyAWoD_m2DaFUI941
 #EXTINF:-1 xui-id="41679" tvg-id="custom.radio.gaan.baksho" tvg-name="Radio Gaan Baksho" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-radio-gaan-baksho.svg" tvg-chno="452" channel-id="custom.radio.gaan.baksho" group-title="Radio",Radio Gaan Baksho
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36yh5WidZGScuTqa6fMTKv
 #EXTINF:-1 xui-id="41708" tvg-id="custom.radio.janata" tvg-name="Radio Janata" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-radio-janata.svg" tvg-chno="453" channel-id="custom.radio.janata" group-title="Radio",Radio Janata
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1OL54DAELUnL1uUvotpQyc
-#EXTINF:-1 xui-id="41677" tvg-id="custom.radio.mahananda.98.8" tvg-name="Radio Mahananda - 98.8" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-radio-mahananda-98-8.svg" tvg-chno="454" channel-id="custom.radio.mahananda.98.8" group-title="Radio",Radio Mahananda - 98.8
+#EXTINF:-1 xui-id="41677" tvg-id="custom.radio.mahananda.98.8" tvg-name="Radio Mahananda - 98.8" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-mahananda-98-8.png" tvg-chno="454" channel-id="custom.radio.mahananda.98.8" group-title="Radio",Radio Mahananda - 98.8
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3UT4n_lbyoO4imhnKDDXEe
 #EXTINF:-1 xui-id="41681" tvg-id="custom.radio.padma.99.2.fm" tvg-name="Radio Padma – 99.2 FM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-radio-padma-99-2-fm.svg" tvg-chno="455" channel-id="custom.radio.padma.99.2.fm" group-title="Radio",Radio Padma – 99.2 FM
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3aW8YsAkwy9swlbR7BvRt6
 #EXTINF:-1 xui-id="41699" tvg-id="custom.radio.ritmo.on.line" tvg-name="Radio Ritmo On Line" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-radio-ritmo-on-line.svg" tvg-chno="456" channel-id="custom.radio.ritmo.on.line" group-title="Radio",Radio Ritmo On Line
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0G3uxhuao8q-y-o1LKz1HC
-#EXTINF:-1 xui-id="41670" tvg-id="custom.radio.shadhin.92.4.fm" tvg-name="Radio Shadhin - 92.4 FM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-radio-shadhin-92-4-fm.svg" tvg-chno="457" channel-id="custom.radio.shadhin.92.4.fm" group-title="Radio",Radio Shadhin - 92.4 FM
+#EXTINF:-1 xui-id="41670" tvg-id="custom.radio.shadhin.92.4.fm" tvg-name="Radio Shadhin - 92.4 FM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-shadhin-92-4-fm.jpg" tvg-chno="457" channel-id="custom.radio.shadhin.92.4.fm" group-title="Radio",Radio Shadhin - 92.4 FM
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2_8E3fxTvNK3C4oExBUTDc
-#EXTINF:-1 xui-id="179202" tvg-id="custom.radio.shadin" tvg-name="Radio Shadin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-radio-shadin.svg" tvg-chno="458" channel-id="custom.radio.shadin" group-title="Radio",Radio Shadin
+#EXTINF:-1 xui-id="179202" tvg-id="custom.radio.shadin" tvg-name="Radio Shadin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-shadin.jpg" tvg-chno="458" channel-id="custom.radio.shadin" group-title="Radio",Radio Shadin
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-03GfBa3WoKwP2ug95DsNSQ
 #EXTINF:-1 xui-id="41698" tvg-id="custom.radio.sonali.dingulo" tvg-name="Radio Sonali Dingulo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-radio-sonali-dingulo.svg" tvg-chno="459" channel-id="custom.radio.sonali.dingulo" group-title="Radio",Radio Sonali Dingulo
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2dtwlwziEVXRINWnEpAxTl
