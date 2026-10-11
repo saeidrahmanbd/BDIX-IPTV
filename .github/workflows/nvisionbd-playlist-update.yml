@@ -14,9 +14,9 @@ permissions:
   contents: write
 
 concurrency:
-  group: nvisionbd-playlist-update
+  group: bdix-iptv-main-writer
   cancel-in-progress: false
-  queue: single
+  queue: max
 
 jobs:
   maintain:
