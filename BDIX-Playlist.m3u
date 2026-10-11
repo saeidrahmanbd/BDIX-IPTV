@@ -307,7 +307,7 @@ https://media.hmair.xyz/api/play/Saudi%20Sunnah.m3u8
 https://media.hmair.xyz/api/play/BFL%20%7C%20Live%201.m3u8
 #EXTINF:-1 xui-id="3826" tvg-id="DDSports.in@SD" tvg-name="DD Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-sports-fb997548.png" tvg-chno="999" channel-id="DDSports.in@SD" group-title="Sports",DD Sports
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_UZjwt4ii540pP_yKK-8j8
-#EXTINF:-1 tvg-id="hmair.eplchannel1" tvg-name="EPL channel 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-1.png" channel-id="hmair.eplchannel1" tvg-chno="1129" group-title="Sports", EPL channel 1
+#EXTINF:-1 tvg-id="hmair.eplchannel1" tvg-name="EPL channel 1" channel-id="hmair.eplchannel1" tvg-chno="1129" group-title="Sports", EPL channel 1
 https://media.hmair.xyz/api/play/EPL%20channel%201.m3u8
 #EXTINF:-1 tvg-id="hmair.eurosporthd" tvg-name="Eurosport HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/eurosport.png" channel-id="hmair.eurosporthd" tvg-chno="1130" group-title="Sports", Eurosport HD
 https://media.hmair.xyz/api/play/Eurosport%20HD.m3u8
