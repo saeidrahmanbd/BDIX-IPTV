@@ -1031,6 +1031,19 @@ def main():
                             source += " (station-page image fallback)"
                     except Exception as page_error:
                         last_download_error = page_error
+                # As a final recovery step, use a uniquely licensed Wikimedia
+                # Commons logo when no curated image URL could be downloaded.
+                if not new_file:
+                    try:
+                        fallback = commons_candidate(channel)
+                        if fallback:
+                            new_file = download_to_repo(fallback["url"], channel, fallback.get("format", ""))
+                            source = "Wikimedia Commons exact logo fallback"
+                            source_page = fallback.get("page", "")
+                            license_name = fallback.get("license", "")
+                            license_url = fallback.get("license_url", "")
+                    except Exception as commons_error:
+                        last_download_error = commons_error
                 if not new_file:
                     raise ValueError("all logo image URLs failed: " + str(last_download_error)[:140])
                 source_page = candidate.get("page", "")
