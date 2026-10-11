@@ -1,5 +1,4 @@
 name: Replace Generic Channel Logos
-# Source-verified pass: use exact IPTV-org IDs first, then conservative Commons fallback.
 
 on:
   workflow_dispatch:
@@ -8,14 +7,13 @@ on:
       - main
     paths:
       - "scripts/replace_generic_logos.py"
-      - ".github/workflows/replace-generic-logos.yml"
 
 permissions:
   contents: write
 
 concurrency:
   group: replace-generic-channel-logos
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   replace:
@@ -38,12 +36,31 @@ jobs:
 
       - name: Commit verified replacements and reports
         run: |
-          if git diff --quiet; then
-            echo "No repository changes were produced."
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add NVisionBD-Playlist.m3u logos reports/generic-logo-replacement-results.md reports/generic-logo-audit.md
+          if git diff --cached --quiet; then
+            echo "No repository changes were produced."
+            exit 0
+          fi
           git commit -m "Replace verified generic channel logos"
-          git push
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main; then
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+            else
+              git rebase --abort || true
+              echo "Rebase conflict; regenerate from current main before retrying."
+              git reset --hard origin/main
+              python -m py_compile scripts/replace_generic_logos.py
+              python scripts/replace_generic_logos.py
+              git add NVisionBD-Playlist.m3u logos reports/generic-logo-replacement-results.md reports/generic-logo-audit.md
+              git diff --cached --quiet && exit 0
+              git commit -m "Replace verified generic channel logos"
+            fi
+            sleep $((attempt * 2))
+          done
+          echo "Unable to push after three up-to-date retries."
+          exit 1
