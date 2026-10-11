@@ -1,23 +1,18 @@
 # Channel Discovery
 
-- New channels: **40**
-- New backups: **51**
-- Rejected/suppressed: **601**
+- New channels: **33**
+- New backups: **41**
+- Rejected/suppressed: **563**
 - Remembered rejected new-channel identities: **0**
 - Remembered rejected backup URLs: **0**
 
 ## New Channels
 
-- Express News (576p) (Bangladesh) — http://51.75.127.199:3141/expressnews/index.m3u8
 - Rupashi Bangla TV (720p) (Bangladesh) — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8
 - Vokta TV (720p) (Bangladesh) — https://vokta.raytahost.com/live/voktatv/index.m3u8
 - Apna Punjab TV (720p) (India) — https://plus.gigabitcdn.net/live-stream/apna-punjab-H3sE/playlist.m3u8
-- Asianet (576p) (India) — http://51.75.127.199:3141/asianet/index.m3u8
 - Bflix Movies (576p) (India) — http://103.151.60.162:2122/play/a01e/index.m3u8?hls
-- Big Magic (576p) (India) — http://51.75.127.199:3141/bigmagic/index.m3u8
 - Captain (576p) (India) — https://mumbai-edge.smartplaytv.in/captain/index.m3u8
-- Colors Gujarati Cinema (576p) (India) — http://51.75.127.199:3141/colorsgujaraticinema/index.m3u8
-- Colors Infinity HD (1080p) (India) — http://51.75.127.199:3141/colorsinfinityhd/index.m3u8
 - Epic Parivar (576p) (India) — http://103.151.60.162:2122/play/a01p/index.m3u8?hls
 - ETV Plus HD (1080p) (India) — https://d12ee3o8yfkkhd.cloudfront.net/c6a4b411295f47f48c908d2ac0605bad/index.m3u8
 - ETV Telugu HD (1080p) (India) — https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_HD_H264_cloud_in/index.m3u8
@@ -30,24 +25,22 @@
 - Maha Movie (576p) (India) — https://cdn.pishow.tv/ott/live/10007/master.m3u8
 - Maha Punjabi (India) — https://cdn.pishow.tv/ott/live/1521/master.m3u8
 - Mango Mobile TV (1080p) (India) — https://amg01911-mangotv-amg01911c1-xiaomi-in-1270.playouts.now.amagi.tv/playlist/amg01911-mangomassmedia-mangotv-xiaomiin/playlist.m3u8
-- Nakshatra Digital TV (576p) (India) — http://51.75.127.199:3141/nakshatradigitaltv/index.m3u8
 - Nepal 1 (576p) (India) — https://mumt05.tangotv.in/87NeALx2NEPAL1/index.m3u8
 - NTC TV (720p) (India) — https://galaxyott.live/hls/ntv.m3u8
 - Pasand TV (576p) (India) — https://d1msejlow1t3l4.cloudfront.net/fta/pasand/playlist.m3u8
-- RS Bharat (576p) (India) — http://51.75.127.199:3141/rsbharat/index.m3u8
 - Shemaroo Umang (720p) (India) — https://airtelapp.shemaroo.com/shemarooumang/smil:shemarooumangadp.smil/playlist.m3u8
-- Sidharth TV (576p) (India) — http://51.75.127.199:3141/sidharthtv/index.m3u8
 - Sooriyan TV (1080p) (India) — https://live20.bozztv.com/giatv/giatv-Infinittyott/Infinittyott/playlist.m3u8
 - Star Kiran (576p) (India) — http://103.151.60.162:2122/play/a032/index.m3u8?hls
-- Star Maa Gold (576p) (India) — http://51.75.127.199:3141/starmaagold/index.m3u8
-- Star Maa Music (576p) (India) — http://51.75.127.199:3141/starmaamusic/index.m3u8
-- Star Suvarna (576p) (India) — http://51.75.127.199:3141/starsuvarna/index.m3u8
-- Star Utsav (576p) (India) — http://51.75.127.199:3141/starutsav/index.m3u8
-- Star Vijay (576p) (India) — http://51.75.127.199:3141/starvijay/index.m3u8
 - Sun TV HD (1080p) (India) — http://103.151.60.162:2122/play/a02a/index.m3u8?hls
 - Tarang TV (720p) (India) — https://livetv.tarangplus.in/tarangtv-origin/live/playlist.m3u8
-- Wah Punjabi (576p) (India) — http://51.75.127.199:3141/wahpunjabi/index.m3u8
 - YET Max (720p) (India) — https://live.yettelevision.com:5443/LiveApp/streams/yettv2.m3u8
+- YET TV (720p) (India) — https://live.yettelevision.com:5443/LiveApp/streams/yettv.m3u8
+- Zee Dil Se (1080p) (India) — https://amg00862-amg00862c6-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c6-amgplt0173/playlist.m3u8
+- Zee Horror Nights (1080p) (India) — https://amg00862-amg00862c7-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c7-amgplt0173/playlist.m3u8
+- Zee Marathi HD (720p) (India) — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ZeeMarathiHD.m3u8
+- Zee South Flix (1080p) (India) — https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
+- Zee Telugu HD (720p) (India) — https://mumbai-edge.smartplaytv.in/ZeeTeluguHD/index.m3u8
+- Zodiak TV (1080p) (India) — https://ranacable.duckdns.org/ZodiakTv/index.m3u8
 
 ## New Backups
 
@@ -56,49 +49,39 @@
 - Ekhon TV (1080p) (Bangladesh) — https://tplay.live/out/bangladesh/ekhontv.index.m3u8
 - Gazi TV (1080p) (Bangladesh) — http://tvn1.chowdhury-shaheb.com/gazitv/index.m3u8
 - Jalsha Movies HD (1080p) (Bangladesh) — http://103.185.24.134:3001/JALSHA-MOVIES-HD/index.m3u8
+- National Geographic (India) HD (1080p) (Bangladesh) — http://103.185.24.134:3001/NATGEO-HD/index.m3u8
 - National Geographic Wild (India) HD (1080p) (Bangladesh) — http://103.185.24.134:3001/NATGEO-WILD-HD/index.m3u8
 - Star Jalsha (576p) (Bangladesh) — http://103.151.60.162:2122/play/a00w/index.m3u8?hls
 - Zee Bangla (576p) (Bangladesh) — http://103.151.60.162:2122/play/a011/index.m3u8?hls
+- Zee Bangla HD (1080p) (Bangladesh) — http://103.151.60.162:2122/play/a02p/index.m3u8?hls
 - 9X Jhakaas (1080p) (India) — https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8
 - 9XM (1080p) (India) — https://9xjio.wiseplayout.com/9XM/master.m3u8
 - 9X Tashan (1080p) (India) — https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8
 - Anjan TV (720p) (India) — https://anjan.vstream.online/anjanorg/ngrp:anjan_hdall/playlist.m3u8
-- Asianet HD (1080p) (India) — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starasianet.smil/chunklist_b1928000.m3u8
 - Asianet Movies HD (720p) (India) — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:asianetmovies1.smil/playlist.m3u8
 - B4U Bhojpuri (1080p) (India) — https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8
-- Colors (576p) (India) — http://51.75.127.199:3141/colorssd/index.m3u8
 - Colors HD (1080p) (India) — http://66.102.126.10:8000/play/a00a/index.m3u8
 - Colors Bangla HD (1080p) (India) — http://103.165.93.31:8095/colorsBangla/index.m3u8
-- Colors Bangla (576p) (India) — http://51.75.127.199:3141/colorsbanglasd/index.m3u8
-- Colors Cineplex HD (1080p) (India) — http://51.75.127.199:3141/colorscineplexhd/index.m3u8
-- Colors Cineplex Bollywood (576p) (India) — http://51.75.127.199:3141/colorscineplexbollywood/index.m3u8
-- Colors Infinity (576p) (India) — http://51.75.127.199:3141/colorsinfinitysd/index.m3u8
-- Colors Kannada (576p) (India) — http://51.75.127.199:3141/colorskannadasd/index.m3u8
-- Colors Marathi (576p) (India) — http://51.75.127.199:3141/colorsmarathisd/index.m3u8
-- Colors Tamil (576p) (India) — http://51.75.127.199:3141/colorstamil/index.m3u8
+- Colors Bangla Cinema (576p) (India) — http://103.151.60.162:2122/play/a02m/index.m3u8?hls
+- Colors Cineplex HD (1080p) (India) — http://103.151.60.162:2122/play/a02s/index.m3u8?hls
 - Epic Bharat Digital (1080p) (India) — https://cc-p1izg43bk7sj5.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-p1izg43bk7sj5/DIYC/PMSL/IN10/Nazara_IN_B/Nazara_IN_B.m3u8
 - ETV Cinema HD (1080p) (India) — https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_CINEMA_H264_cloud_in/index.m3u8
 - ETV Music (1080p) (India) — https://mumbai-edge.smartplaytv.in/ETVABHIRUCHI/index.m3u8
 - Movies Now HD (1080p) (India) — http://103.151.60.162:2122/play/a02w/index.m3u8?hls
-- MTV (India) HD (720p) (India) — http://51.75.127.199:3141/mtvhd/index.m3u8
 - Shemaroo Josh (576p) (India) — https://mumt04.tangotv.in/m18aqlK4SHEMAROOJOSH/index.m3u8
 - Sony Entertainment Television (576p) (India) — http://103.151.60.162:2122/play/a015/index.m3u8?hls
 - Sony Max HD (1080p) (India) — http://103.185.24.134:3001/SonyMAX/index.m3u8
 - Sony SAB (576p) (India) — http://103.151.60.162:2122/play/a01q/index.m3u8?hls
 - Star Gold HD (1080p) (India) — http://103.185.24.134:3001/Star-Gold/index.m3u8
 - Star Gold 2 HD (1080p) (India) — http://103.151.60.162:2122/play/a01v/index.m3u8?hls
-- Star Gold 2 (576p) (India) — http://51.75.127.199:3141/stargold2/index.m3u8
-- Star Gold Select (576p) (India) — http://51.75.127.199:3141/stargoldselect/index.m3u8
-- Star Maa (576p) (India) — http://51.75.127.199:3141/starmaa/index.m3u8
-- Star Maa Movies (576p) (India) — http://51.75.127.199:3141/starmaamovies/index.m3u8
-- StarPlus (India) (576p) (India) — http://51.75.127.199:3141/starplus/index.m3u8
+- Star Movies (India) HD (1080p) (India) — http://103.185.24.134:3001/Star-Movies/index.m3u8
 - StarPlus (India) HD (1080i) (India) — http://202.70.146.135:8000/play/a009/index.m3u8
-- Star Pravah (576p) (India) — http://51.75.127.199:3141/starpravah/index.m3u8
 - Suriyan TV (576p) (India) — https://stream.sscloud7.com/live/suriyantv/index.m3u8
 - &TV (576p) (India) — http://103.151.60.162:2122/play/a020/index.m3u8?hls
 - &TV HD (1080p) (India) — http://202.70.146.135:8000/play/a06c/index.m3u8
 - YRF Music (1080p) (India) — https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
 - YRF Music Nepal (India) — https://vidaa.kableone.com/hls/live/2111218/YrfMusic/1.m3u8
 - Zee Cinema HD (1080p) (India) — http://103.151.60.162:2122/play/a024/index.m3u8?hls
-- Zee TV (576p) (India) — http://51.75.127.199:3141/zeetv/index.m3u8
+- Zee Cinemalu HD (720p) (India) — https://mumbai-edge.smartplaytv.in/ZeeCinemaluHD/index.m3u8
+- Zee TV (576p) (India) — http://103.151.60.162:2122/play/a01u/index.m3u8?hls
 - Zee TV HD (720p) [Geo-blocked] (India) — http://41.205.93.154/ZEE-TV/index.m3u8
