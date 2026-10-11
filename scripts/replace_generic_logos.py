@@ -30,6 +30,9 @@ REJECTED_PREVIOUS_MATCHES = {
     "nvisionbd-action-24.jpg": ("nvisionbd-action-24.svg", "Prior match was an event photo, not the channel logo"),
     "nvisionbd-digital-fashion.png": ("nvisionbd-digital-fashion.svg", "Prior match was a different business logo"),
     "nvisionbd-sport-2.jpg": ("nvisionbd-sport-2.svg", "Prior match was a different regional sports channel"),
+    "nvisionbd-official-digital-fashion.png": ("nvisionbd-digital-fashion.svg", "Commons result was a business agency, not this TV channel"),
+    "nvisionbd-official-sport-2.jpg": ("nvisionbd-sport-2.svg", "Commons result was Polsat Sport 2, a different service"),
+    "nvisionbd-official-the-q.png": ("nvisionbd-the-q.svg", "Commons result was a standalone Q mark with ambiguous channel identity"),
 }
 
 # Repository-first policy: scan every eligible file in /logos before any external lookup.
@@ -235,9 +238,18 @@ def commons_candidate(channel):
         stem_words = norm(Path(title).stem).split()
         if not target_words or not all(word in stem_words for word in target_words):
             continue
-        # Require an explicit logo/wordmark title; never accept an event photo
-        # just because its filename contains a similar channel name.
+        # Require an explicit logo/wordmark title, and reject extra brand names
+        # or organization types that imply a different logo. Extra tokens are
+        # limited to format/quality descriptors and the occasional channel label.
         if not any(word in stem_words for word in ("logo", "logotype", "wordmark")):
+            continue
+        harmless_extras = {
+            "logo", "logotype", "wordmark", "channel", "tv", "network", "official",
+            "transparent", "white", "black", "hd", "uhd", "sd", "4k", "png", "svg",
+            "webp", "jpg", "jpeg", "2023", "2024", "2025", "2026"
+        }
+        extra_tokens = set(stem_words) - set(target_words) - harmless_extras
+        if extra_tokens:
             continue
         infos = page.get("imageinfo") or []
         if not infos:
@@ -385,10 +397,15 @@ def main():
     text = PLAYLIST.read_text(encoding="utf-8", errors="replace")
     # Repair malformed URLs left by the previous script.
     text = re.sub(r"https:/raw\.githubusercontent\.com/", "https://raw.githubusercontent.com/", text)
-    # Restore the correct generic file for the three prior lookalike matches.
+    # Restore generic references where a previous run used a lookalike logo.
+    # Remove only the rejected output assets produced by the earlier logo pass.
     for bad_name, (good_name, _reason) in REJECTED_PREVIOUS_MATCHES.items():
         text = re.sub(r'tvg-logo="[^"]*' + re.escape(bad_name) + r'"',
                       'tvg-logo="' + raw_logo_url(good_name) + '"', text)
+        if bad_name.startswith("nvisionbd-official-"):
+            rejected_path = LOGOS / bad_name
+            if rejected_path.is_file():
+                rejected_path.unlink()
 
     try:
         iptv_indexes = load_iptv_org_indexes()
