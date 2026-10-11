@@ -1,6 +1,6 @@
 # BDIX Playlist Audit
 
-Generated: **2026-10-11T16:39:18+00:00**
+Generated: **2026-10-11T17:08:14+00:00**
 
 ## Summary
 
@@ -12,7 +12,7 @@ Generated: **2026-10-11T16:39:18+00:00**
 - Duplicate channel identities: **9**
 - Missing channel IDs: **0**
 - Missing channel numbers: **0**
-- Missing logos: **0**
+- Missing logos: **4**
 - Malformed entries: **0**
 - Unknown categories: **0**
 - Streams tested: **190**
@@ -56,7 +56,7 @@ None.
 
 - Missing channel ID: None
 - Missing channel number: None
-- Missing logo: None
+- Missing logo: Channel 1, Channel 24, Channel 9, EPL channel 1
 
 ## Malformed Entries
 
