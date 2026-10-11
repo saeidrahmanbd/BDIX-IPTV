@@ -44,27 +44,5 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 
 ## 2026-10-11
 
-- 🗑️ **26 channel(s) removed**
-
-### Removed channels
-- Apna Punjab TV
-- Bflix Movies
-- Captain
-- Epic TV Digital
-- ETV Plus
-- ETV Telugu
-- GTC Punjabi
-- Jaihind TV
-- KCL TV
-- Maha Movie
-- Maha Punjabi
-- Mango Mobile TV
-- Nepal 1
-- NTC TV
-- Rupashi Bangla TV
-- Vokta TV
-- YET Max
-- YET TV
-- Zee Dil Se
-- Zee Horror Nights
+- No meaningful playlist changes detected.
 
