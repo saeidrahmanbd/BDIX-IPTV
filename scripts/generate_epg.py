@@ -72,7 +72,7 @@ def playlist_channels():
             if not line.startswith("#EXTINF:"):
                 continue
             attrs = {}
-            for m in re.finditer(r'([\\w-]+)="([^"]*)"', line):
+            for m in re.finditer(r'([\w-]+)="([^"]*)"', line):
                 attrs[m[1]] = m[2]
             group = attrs.get("group-title", "").strip()
             tvg_id = attrs.get("tvg-id", "").strip()
