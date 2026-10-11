@@ -7,13 +7,14 @@ on:
       - main
     paths:
       - "scripts/replace_generic_logos.py"
+      - ".github/workflows/replace-generic-logos.yml"
 
 permissions:
   contents: write
 
 concurrency:
   group: replace-generic-channel-logos
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   replace:
