@@ -114,7 +114,7 @@ def main():
            "Non-destructive connectivity check. A successful HTTP response confirms reachability of the stream endpoint, not guaranteed video/audio playback.","",
            "## Summary","",f"- Streams tested: **{len(results)}**",f"- Reachable: **{ok}**",f"- Failed this check: **{fail}**",
            f"- Persistent failures (3+ consecutive): **{len(persistent)}**",f"- Intermittent failures: **{len(intermittent)}**",
-           f"- Primary tested: **{sum(1 for r in results if r['group'] not in ('Backup', 'Not Playing'))}**",f"- Backup tested: **{groups.get('Backup',0)}**",f"- Not Playing tested: **{groups.get('Not Playing',0)}**","",
+           f"- Primary tested: **{sum(1 for r in results if r['group'] not in ('Backup',))}**",f"- Backup tested: **{groups.get('Backup',0)}**","",
            "## Failure Classification","",
            *[f"- {k}: **{v}**" for k,v in sorted(failure_classes.items())],
            "## Persistent Failures",""]
