@@ -293,7 +293,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-31_YqBR
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1pW9ZjirtQn_Evzm6hdwke
 #EXTINF:-1 xui-id="189230" tvg-id="custom.hindi.big.boss.24x7.2026" tvg-name="Hindi Big Boss 24x7 2026" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-hindi-big-boss-24x7-2026.svg" tvg-chno="144" channel-id="custom.hindi.big.boss.24x7.2026" group-title="Indian Entertainment",Hindi Big Boss 24x7 2026
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-03aPXysYWR_ZPuotGGpv1G
-#EXTINF:-1 xui-id="188338" tvg-id="custom.hindi.khabar" tvg-name="Hindi Khabar" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-hindi-khabar.svg" tvg-chno="145" channel-id="custom.hindi.khabar" group-title="Indian Entertainment",Hindi Khabar
+#EXTINF:-1 xui-id="188338" tvg-id="custom.hindi.khabar" tvg-name="Hindi Khabar" tvg-logo="https:/raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-hindi-khabar.png" tvg-chno="145" channel-id="custom.hindi.khabar" group-title="Indian Entertainment",Hindi Khabar
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2mEUrCsATHj8zATK3kmuxQ
 #EXTINF:-1 xui-id="188339" tvg-id="custom.india.today" tvg-name="India Today" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-india-today.svg" tvg-chno="146" channel-id="custom.india.today" group-title="Indian Entertainment",India Today
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1A0tV6QoS8YZs9QWlIurr8
@@ -335,11 +335,11 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3NgLDw4
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2TXGOSKuJZYtqmE8WfPuCr
 #EXTINF:-1 xui-id="180800" tvg-id="custom.pmi.tv" tvg-name="Pmi TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pmi-tv.png" tvg-chno="165" channel-id="custom.pmi.tv" group-title="Pakistani",Pmi TV
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1UTM8sAUkKpJsfG8Anny66
-#EXTINF:-1 xui-id="180952" tvg-id="custom.action.24" tvg-name="Action 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-action-24.svg" tvg-chno="166" channel-id="custom.action.24" group-title="International",Action 24
+#EXTINF:-1 xui-id="180952" tvg-id="custom.action.24" tvg-name="Action 24" tvg-logo="https:/raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-action-24.jpg" tvg-chno="166" channel-id="custom.action.24" group-title="International",Action 24
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0toE2gGfjK3aNhu5u1tJBR
 #EXTINF:-1 xui-id="188413" tvg-id="plex.tv.Action.Hollywood.Movies.plex" tvg-name="Action Hollywood Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/action-hollywood-movies.png" tvg-chno="167" channel-id="plex.tv.Action.Hollywood.Movies.plex" group-title="International",Action Hollywood Movies
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1jGGK76ohUjJaz5W8clgou
-#EXTINF:-1 xui-id="180953" tvg-id="custom.aflam" tvg-name="Aflam" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-aflam.svg" tvg-chno="168" channel-id="custom.aflam" group-title="International",Aflam
+#EXTINF:-1 xui-id="180953" tvg-id="custom.aflam" tvg-name="Aflam" tvg-logo="https:/raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-aflam.png" tvg-chno="168" channel-id="custom.aflam" group-title="International",Aflam
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-37pexfGGbMafO3Q6mC8QPE
 #EXTINF:-1 xui-id="6069" tvg-id="custom.afrobeats" tvg-name="Afrobeats" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-afrobeats.svg" tvg-chno="169" channel-id="custom.afrobeats" group-title="International",Afrobeats
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1KSHDzUioMXKS7wJb7URH3
@@ -383,7 +383,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1B-4Gnp
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3psrRFLFo78GWdbNGDGqhh
 #EXTINF:-1 xui-id="179423" tvg-id="DDTripura.in@SD" tvg-name="DD Tripura" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-tripura.png" tvg-chno="189" channel-id="DDTripura.in@SD" group-title="International",DD Tripura
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-32IP2J1IRVGgXMygsky0BT
-#EXTINF:-1 xui-id="180060" tvg-id="custom.digital.fashion" tvg-name="Digital Fashion" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-digital-fashion.svg" tvg-chno="190" channel-id="custom.digital.fashion" group-title="International",Digital Fashion
+#EXTINF:-1 xui-id="180060" tvg-id="custom.digital.fashion" tvg-name="Digital Fashion" tvg-logo="https:/raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-digital-fashion.png" tvg-chno="190" channel-id="custom.digital.fashion" group-title="International",Digital Fashion
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0WEOlWl7Yejp0SLe-r_yP3
 #EXTINF:-1 xui-id="179379" tvg-id="DWNews.de" tvg-name="Dw News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dw-news.jpg" tvg-chno="191" channel-id="DWNews.de" group-title="International",Dw News
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1swegU0q-rHVFfuNELVN9d
@@ -413,7 +413,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2dChadP
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0VNcgKr3_IUKKOjyt8YmUx
 #EXTINF:-1 xui-id="188434" tvg-id="custom.laff.tv" tvg-name="Laff TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-laff-tv.svg" tvg-chno="204" channel-id="custom.laff.tv" group-title="International",Laff TV
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3xfPd7-sb43KVKeeFr3MNo
-#EXTINF:-1 xui-id="6172" tvg-id="custom.magic.tv" tvg-name="Magic TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-magic-tv.svg" tvg-chno="205" channel-id="custom.magic.tv" group-title="International",Magic TV
+#EXTINF:-1 xui-id="6172" tvg-id="custom.magic.tv" tvg-name="Magic TV" tvg-logo="https:/raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-magic-tv.png" tvg-chno="205" channel-id="custom.magic.tv" group-title="International",Magic TV
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2JiGK83iEiSWDdQPNn2PcQ
 #EXTINF:-1 xui-id="180024" tvg-id="custom.mbc" tvg-name="MBC" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mbc-tv.png" tvg-chno="206" channel-id="custom.mbc" group-title="International",MBC
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2FgNj9cLliNWJYlcFuf6gx
@@ -557,7 +557,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3BQF7hN
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2XQDJfORDlhG94DmEs4iSG
 #EXTINF:-1 xui-id="188377" tvg-id="custom.disney.jr" tvg-name="Disney Jr" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-jr.png" tvg-chno="276" channel-id="custom.disney.jr" group-title="Kids",Disney Jr
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1DN1G9Wb25m5kQR1k95UCO
-#EXTINF:-1 xui-id="671" tvg-id="Disney Junior.in" tvg-name="Disney Junior" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-disney-junior.svg" tvg-chno="277" channel-id="Disney Junior.in" group-title="Kids",Disney Junior
+#EXTINF:-1 xui-id="671" tvg-id="Disney Junior.in" tvg-name="Disney Junior" tvg-logo="https:/raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-disney-junior.png" tvg-chno="277" channel-id="Disney Junior.in" group-title="Kids",Disney Junior
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2qOkr8xqLGG18BwimKM8Eu
 #EXTINF:-1 xui-id="180911" tvg-id="custom.ducktv" tvg-name="Ducktv" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-ducktv.svg" tvg-chno="278" channel-id="custom.ducktv" group-title="Kids",Ducktv
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0H3NxGeKxMIy6_Q83c2Y4h
@@ -625,7 +625,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2u_PfLO
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1JBZDl942dVc0KPE2c_qc6
 #EXTINF:-1 xui-id="188477" tvg-id="custom.saudi.sunnah" tvg-name="Saudi Sunnah" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saudi-sunnah-hd.svg" tvg-chno="310" channel-id="custom.saudi.sunnah" group-title="Religious",Saudi Sunnah
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3WEDtXGihNeQte23mZv0ON
-#EXTINF:-1 xui-id="179978" tvg-id="custom.arena.sport.1" tvg-name="Arena Sport 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-arena-sport-1.svg" tvg-chno="311" channel-id="custom.arena.sport.1" group-title="Sports",Arena Sport 1
+#EXTINF:-1 xui-id="179978" tvg-id="custom.arena.sport.1" tvg-name="Arena Sport 1" tvg-logo="https:/raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-arena-sport-1.png" tvg-chno="311" channel-id="custom.arena.sport.1" group-title="Sports",Arena Sport 1
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0TYx0X4Qnt_Awfh3vZVqgK
 #EXTINF:-1 xui-id="188515" tvg-id="custom.asean.cup.2026" tvg-name="Asean Cup 2026" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-asean-cup-2026.svg" tvg-chno="312" channel-id="custom.asean.cup.2026" group-title="Sports",Asean Cup 2026
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0UPzAoxs1f2mIymGE-zDUa
@@ -777,7 +777,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3CmJznH
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-11A-xLEaaniJNW9_8HOKwO
 #EXTINF:-1 xui-id="179976" tvg-id="custom.sport.1" tvg-name="Sport 1 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-sport-1.svg" tvg-chno="386" channel-id="custom.sport.1" group-title="Sports",Sport 1 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2RfXvx-d8FT25Xn7p9hCVg
-#EXTINF:-1 xui-id="179977" tvg-id="custom.sport.2" tvg-name="Sport 2 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-sport-2.svg" tvg-chno="387" channel-id="custom.sport.2" group-title="Sports",Sport 2 HD
+#EXTINF:-1 xui-id="179977" tvg-id="custom.sport.2" tvg-name="Sport 2 HD" tvg-logo="https:/raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-sport-2.jpg" tvg-chno="387" channel-id="custom.sport.2" group-title="Sports",Sport 2 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1rLAXdTsGRL8CC4KfulOam
 #EXTINF:-1 xui-id="185590" tvg-id="custom.sports.1" tvg-name="Sports 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-sports-5485adff.png" tvg-chno="388" channel-id="custom.sports.1" group-title="Sports",Sports 1
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2AlvCJTV3Z-mXm8UTomlo2
