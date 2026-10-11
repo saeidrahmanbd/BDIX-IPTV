@@ -1,6 +1,6 @@
 # Generic Channel Logo Audit — Three Playlists
 
-Audit date: 2026-10-11 11:57 UTC  
+Audit date: 2026-10-11 12:00 UTC  
 Repository: https://github.com/saeidrahmanbd/BDIX-IPTV  
 Method: scans current playlist metadata and checks referenced local SVG files for the generic CHANNEL MARK template.
 
@@ -10,9 +10,9 @@ Method: scans current playlist metadata and checks referenced local SVG files fo
 |---|---:|---:|
 | IPTV-Playlist.m3u | 1145 | 0 |
 | BDIX-Playlist.m3u | 217 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 84 |
+| NVisionBD-Playlist.m3u | 561 | 79 |
 
-Current NVisionBD placeholder assets: **84 unique files**.
+Current NVisionBD placeholder assets: **79 unique files**.
 
 ## Remaining affected NVisionBD channel labels
 
@@ -36,7 +36,6 @@ Current NVisionBD placeholder assets: **84 unique files**.
 - Cafe Film
 - Cartoon Channel
 - Cooking TV
-- Dhaka FM 90.4
 - Digital Fashion
 - Disney Channel Big City Greens
 - Doyel Radio
@@ -49,8 +48,6 @@ Current NVisionBD placeholder assets: **84 unique files**.
 - Fight 24/7
 - Filmua Drama
 - Flo Racing
-- Fuel TV Apac
-- Fuel TV Europe
 - Global Panjab
 - Hindi Big Boss 24x7 2026
 - Htv Sport
@@ -66,7 +63,6 @@ Current NVisionBD placeholder assets: **84 unique files**.
 - Niki Jr Kids
 - Palki FM
 - Persiana Travel
-- Pk Geo Super
 - Pk Ten Cricket
 - Power Turk
 - Radio Adamya
@@ -77,7 +73,6 @@ Current NVisionBD placeholder assets: **84 unique files**.
 - Radio Janata
 - Radio Ritmo On Line
 - Radio Sonali Dingulo
-- Radio Vivid Voice | Mymensingh
 - Radio Zenith FM
 - Rick Astley
 - Sagor FM
