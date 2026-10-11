@@ -18,22 +18,22 @@ No traditional installation is required.
 
 **[📦 Download Playlist-Studio-5_0-Windows-Build-Kit-Debug16.zip](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug16.zip)**
 
-See the **[Playlist Studio documentation](docs/PLAYLIST-STUDIO.md)** for build instructions.
+See the **[Playlist Studio documentation](PLAYLIST-STUDIO.md)** for build instructions.
 
 ## 🛜 Xtream
 
-**[Open Xtream Documentation](xtream/README.md)**
+**[Open Xtream Documentation](../xtream/README.md)**
 
 ## 📄 Reports
 
-- [Playlist Audit](reports/playlist-audit.md)
-- [Stream Health](reports/stream-health.md)
-- [EPG Coverage](reports/epg-coverage.md)
-- [Update Report](reports/Update%20Report.md)
+- [Playlist Audit](../reports/playlist-audit.md)
+- [Stream Health](../reports/stream-health.md)
+- [EPG Coverage](../reports/epg-coverage.md)
+- [Update Report](../reports/Update%20Report.md)
 
 ## 📚 Documentation
 
-**[Open Documentation](docs/README.md)**
+**[Open Documentation](README.md)**
 
 ---
 
