@@ -5,7 +5,7 @@ from datetime import datetime,timezone
 from collections import Counter,defaultdict
 from pathlib import Path
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md")
-ATTR=re.compile(r'([\w-]+)="([^"]*)"'); EXCLUDE={"Backup","Not Playing"}
+ATTR=re.compile(r'([\w-]+)="([^"]*)"'); EXCLUDE={"Backup"}
 def attrs(s): return dict(ATTR.findall(s))
 def parse(text):
     lines=text.replace("\r","").splitlines(); out=[]; cur=None
@@ -30,7 +30,7 @@ def main():
     removed=[]
     for a,u in old_primary:
         groups=cur_all_groups.get(u.lower(), set())
-        if groups & {"Backup","Not Playing"}:
+        if groups & {"Backup"}:
             quarantined.append((a.get("tvg-name",""),u,next(iter(groups & {"Backup","Not Playing"}))))
         elif not groups:
             removed.append((a.get("tvg-name",""),u))
@@ -71,7 +71,7 @@ def main():
            f"- Primary entries missing tvg-chno: **{len(missing)}**",f"- Entries added this run: **{len(added)}**",f"- Entries removed this run: **{len(removed_all)}**",f"- Entries modified this run: **{len(modified)}**","","## Change Summary",
            "1. Never publish duplicate stream URLs.","2. Never silently remove an existing primary stream.",
            "3. Never silently promote/reclassify review-queue entries.",
-           "4. Never silently delete Not Playing holding entries.","5. Never publish duplicate or missing primary channel numbers."]
+           "4. Never silently delete protected Backup entries.","5. Never publish duplicate or missing primary channel numbers."]
     if added:
         lines.append("Added: " + ", ".join(added[:20]) + (" ..." if len(added)>20 else ""))
     else: lines.append("Added: none")
