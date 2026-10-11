@@ -5,7 +5,7 @@ Scope: public XMLTV feeds and channel-ID catalogues for the Bangladesh-group cha
 
 ## Result
 
-**No reliable Bangladesh-domestic XMLTV feed was verified in the public sources checked.** I found no current source whose XMLTV channel IDs and programme data could safely be mapped to the local `.bd` identities. Therefore, this audit does not add mappings, alter playlist IDs, or synthesize programme data.
+**No reliable Bangladesh-domestic XMLTV feed was verified in the public sources checked.** However, one actively published schedule source provides exact programme data for the UK-specific channel **ATN Bangla UK**, and this exact match has now been added for `ATNBanglaUK.uk` only. No local `.bd` IDs were mapped, playlist IDs were not altered, and no programme data was synthesized.
 
 This is a negative finding for the sources checked, not proof that no private or broadcaster-internal feed exists.
 
@@ -16,6 +16,7 @@ This is a negative finding for the sources checked, not proof that no private or
 | [epg.pw XMLTV guide catalogue](https://epg.pw/xmltv.html?lang=en) | The published country-feed list includes a range of country feeds (including India) but no Bangladesh feed. | No Bangladesh feed to add. |
 | [epgshare01 directory](https://epgshare01.online/epgshare01/) and its [source-ID readme](https://epgshare01.online/epgshare01/0_READ_ME_FIRST_AS_I_CONTAIN_VERY_HELPFUL_INFO.html) | The directory publishes per-source `.xml.gz` files and matching `.txt` channel-ID lists. No dedicated `epg_ripper_BD1`/Bangladesh feed was found. The combined catalogue did not contain exact native IDs such as `ATNBangla.bd`, `ChannelI.bd`, `NTV.bd`, `JamunaTV.bd`, or `SomoyNewsTV.bd`. | Do not map native Bangladesh IDs from Indian or diaspora lookalikes. The all-sources archive is very large and is not a safe substitute for an exact source. |
 | [iptv-org/epg source catalogue](https://github.com/iptv-org/epg/tree/master/sites) and [guide status list](https://github.com/iptv-org/epg/blob/master/GUIDES.md) | No live public Bangladesh-local guide was verified. Some stale source configuration mentions Canadian service variants; the matching CA1 listing endpoint currently returns 404. | Treat CA1 entries as leads only, not an active feed. |
+| [nasimali/epg-auto guide (published XMLTV)](https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml) and [Sky XMLTV channel-ID catalogue](https://github.com/WiiLink24/tv-epg/blob/3a119500bdb1cb31f739afce0851527707d60733/sites/sky.com/sky.com.channels.xml) | The published merged guide currently contains `<channel id="6753">` and programme rows; the Sky catalogue independently identifies site ID `6753` as `ATNBanglaUK.uk` / “ATN Bangla UK”. This guide is configured in the repository's source list already. | **Verified narrow mapping:** `ATNBanglaUK.uk` → source EPG ID `6753`. Do not use it for `ATNBangla.bd`. |
 
 ## Exact IDs found in a currently listed diaspora feed
 
@@ -38,7 +39,7 @@ The [iptv-org/epg CA1 channel configuration](https://github.com/iptv-org/epg/blo
 
 These are source/site identifiers, not verified native `.bd` IDs; the corresponding `epg_ripper_CA1.txt` endpoint returned 404 during this check. They are excluded from eligible sources until a live feed and current programme data can be verified.
 
-The active UK1 list also includes `IQRA.BANGLA.uk`, but that is a UK service ID and is not a substitute for schedules for Bangladesh-local channels.
+The active `nasimali/epg-auto` guide supplies numeric ID `3914` with programme rows for Iqra Bangla; the existing repository lock `IqraBangla.uk` → `3914` remains scoped to the UK service. The published guide also includes `6753` for ATN Bangla UK. These diaspora mappings do not establish coverage for the domestic `ATNBangla.bd`, `NTV.bd`, or other `.bd` IDs.
 
 ## Playlist channel identities to preserve
 
@@ -54,4 +55,13 @@ A feed can be promoted to the production source list only after all of the follo
 4. The time zone and any regional/time-shift version are accounted for.
 5. The match is added as a narrow, explicit mapping; no fuzzy-name or India-channel fallback is used.
 
-Until then, native Bangladesh channel guide coverage should remain reported as missing rather than being filled with guessed or mismatched programmes.
+## Implemented exact mapping
+
+| Playlist ID | XMLTV source ID | Evidence | Scope |
+|---|---|---|---|
+| `ATNBanglaUK.uk` | `6753` | Active merged XMLTV has programme rows for 6753; Sky channel catalogue identifies 6753 as ATN Bangla UK. | UK service only |
+| `IqraBangla.uk` | `3914` | Active merged XMLTV has programme rows for 3914; current repository lock already uses this exact source ID. | UK service only |
+
+The merged XMLTV file uses generic display-name values such as `Channel 6753`; the identification is confirmed against the separate Sky channel catalogue rather than inferred from that placeholder display-name. Some other IDs in the feed have conflicting or commented-out mappings in public catalogues (for example 5426 and 3815), so they were deliberately **not** applied.
+
+Until a genuinely local source is found, native Bangladesh channel guide coverage should remain reported as missing rather than being filled with guessed or mismatched programmes.
