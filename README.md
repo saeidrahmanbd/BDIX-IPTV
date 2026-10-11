@@ -17,7 +17,7 @@ Compatible with **XCIPTV** and other M3U-compatible players.
 
 - 📺 **[Main M3U Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)**
 - 🖥️ **[Playlist Studio v5.0](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.exe)** — Windows playlist manager, editor & player
-- 🛠️ **[Playlist Studio Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug12.zip)** — Windows build package
+- 🛠️ **[Playlist Studio Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug16.zip)** — Windows build package
 - 🛜 **[Xtream Codes](xtream/README.md)** — Xtream Gateway / XCIPTV
 - 📄 **[EPG Coverage](reports/epg-coverage.md)** — EPG status and coverage
 - 📚 **[Documentation](docs/README.md)**
@@ -29,7 +29,7 @@ Compatible with **XCIPTV** and other M3U-compatible players.
 [Playlist Studio 5.0](https://github.com/saeidrahmanbd/Playlist-Studio) is a separate portable Windows playlist manager, editor and player. It supports M3U/M3U8, compatible Xtream Codes and Stalker Portal connections, built-in playback, stream scanning, metadata editing and GitHub workflows.
 
 - **[Download the portable application](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.exe)**
-- **[Download the Windows Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug12.zip)**
+- **[Download the Windows Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug16.zip)**
 - [Usage and build instructions](docs/PLAYLIST-STUDIO.md)
 
 ## 📊 Project Status
