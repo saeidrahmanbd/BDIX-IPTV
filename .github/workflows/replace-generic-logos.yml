@@ -13,8 +13,9 @@ permissions:
   contents: write
 
 concurrency:
-  group: replace-generic-channel-logos
+  group: bdix-iptv-main-writer
   cancel-in-progress: false
+  queue: max
 
 jobs:
   replace:
