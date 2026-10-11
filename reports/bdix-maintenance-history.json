@@ -194,5 +194,19 @@
     "health_tested": 190,
     "health_failures": 189,
     "safe_repairs": 0
+  },
+  {
+    "timestamp_utc": "2026-10-11T14:13:58+00:00",
+    "entries": 190,
+    "unique_urls": 190,
+    "duplicate_urls": 0,
+    "duplicate_ids": 9,
+    "missing_ids": 0,
+    "missing_chno": 0,
+    "missing_logos": 0,
+    "malformed": 0,
+    "health_tested": 190,
+    "health_failures": 189,
+    "safe_repairs": 0
   }
 ]
