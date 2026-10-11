@@ -299,11 +299,11 @@ DIRECT_LOGO_HINTS = {
         "license_url": "",
     },
     "Radio Vivid Voice | Mymensingh": {
-        "url": "https://static-media.streema.com/media/cache/05/90/0590522328065ed7e6580a9b3f46cf07.png",
+        "url": "https://radio.streamitter.com/images/logos/EFVAMB.png",
         "format": "PNG",
-        "page": "https://pt.streema.com/radios/Radio_Vivid_Voice",
-        "source": "Streema Radio Vivid Voice station page",
-        "license": "Station logo shown by Streema",
+        "page": "https://github.com/junguler/m3u-radio-music-playlists/blob/4f7f422c65652805edf56a71b7ab17ac417b2755/strea-m-itter/bangladesh.m3u",
+        "source": "Streamitter Bangladesh radio logo reference",
+        "license": "Station artwork; reuse rights not specified",
         "license_url": "",
     },
     "Fuel TV Apac": {
@@ -356,6 +356,7 @@ DIRECT_LOGO_HINTS = {
     },
     "Persiana Travel": {
         "url": "https://s3.aynaott.com/storage/be9b48d87dcd7711cac19c17d8e01b27",
+        "fallback_urls": ["https://www.lyngsat.com/logo/tv/pp/persiana-travel-fr.png"],
         "format": "",
         "page": "https://github.com/judy-gotv/iptv/blob/fb3fc31b1d46c2aef55bcadbe5f0be65ab3c5796/BD.m3u",
         "source": "Ayna OTT logo reference in a public playlist",
@@ -379,10 +380,10 @@ DIRECT_LOGO_HINTS = {
         "license_url": "",
     },
     "Uttorbango Betar": {
-        "url": "https://radio.streamitter.com/images/logos/2YBNB.png",
+        "url": "https://d371i8ihhgym7w.cloudfront.net/95642916.png",
         "format": "PNG",
-        "page": "https://github.com/junguler/m3u-radio-music-playlists/blob/4f7f422c65652805edf56a71b7ab17ac417b2755/strea-m-itter/bangladesh.m3u",
-        "source": "Streamitter Bangladesh radio logo reference",
+        "page": "https://github.com/junguler/m3u-radio-music-playlists/blob/4f7f422c65652805edf56a71b7ab17ac417b2755/radio-ly/bd.m3u",
+        "source": "Public Bangladesh radio playlist exact logo reference",
         "license": "Station artwork; reuse rights not specified",
         "license_url": "",
     },
@@ -421,12 +422,22 @@ def raw_logo_url(filename):
 
 def fetch_bytes(url, timeout=30, max_bytes=5_000_000):
     request = Request(url, headers={"User-Agent": UA})
-    with urlopen(request, timeout=timeout) as response:
-        raw = response.read(max_bytes + 1)
-        content_type = response.headers.get("Content-Type", "").split(";", 1)[0].strip().lower()
-    if len(raw) > max_bytes:
-        raise ValueError("download exceeds 5 MB limit")
-    return raw, content_type
+    last_error = None
+    for attempt in range(3):
+        try:
+            with urlopen(request, timeout=timeout) as response:
+                raw = response.read(max_bytes + 1)
+                content_type = response.headers.get("Content-Type", "").split(";", 1)[0].strip().lower()
+            if len(raw) > max_bytes:
+                raise ValueError("download exceeds 5 MB limit")
+            return raw, content_type
+        except Exception as error:
+            last_error = error
+            if attempt < 2 and ("Temporary failure in name resolution" in str(error) or "timed out" in str(error).lower()):
+                time.sleep(attempt + 1)
+                continue
+            raise
+    raise last_error
 
 
 def fetch_json(url):
@@ -850,13 +861,25 @@ def main():
                     unresolved.append((channel, old_file, "No unique source-verified channel logo found"))
                     time.sleep(0.1)
                     continue
-                src = candidate["url"]
-                cache_key = (src, channel)
-                if cache_key in download_cache:
-                    new_file = download_cache[cache_key]
-                else:
-                    new_file = download_to_repo(src, channel, candidate.get("format", ""))
-                    download_cache[cache_key] = new_file
+                candidate_urls = [candidate["url"]] + list(candidate.get("fallback_urls") or [])
+                last_download_error = None
+                new_file = None
+                for src in candidate_urls:
+                    try:
+                        cache_key = (src, channel)
+                        if cache_key in download_cache:
+                            new_file = download_cache[cache_key]
+                        else:
+                            new_file = download_to_repo(src, channel, candidate.get("format", ""))
+                            download_cache[cache_key] = new_file
+                        if src != candidate["url"]:
+                            source += " (fallback image URL)"
+                        break
+                    except Exception as download_error:
+                        last_download_error = download_error
+                        new_file = None
+                if not new_file:
+                    raise ValueError("all logo image URLs failed: " + str(last_download_error)[:140])
                 source_page = candidate.get("page", "")
                 license_name = candidate.get("license", "")
                 license_url = candidate.get("license_url", "")
