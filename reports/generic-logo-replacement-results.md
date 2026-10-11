@@ -2,17 +2,18 @@
 
 This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.
 
-- Run time: 2026-10-11 12:44 UTC
+- Run time: 2026-10-11 13:09 UTC
 - IPTV-org dataset: loaded
 - Historical logo mappings: loaded 338 exact historical logo mappings
 - Unique generic assets examined: 42
-- Successful replacements: 1
-- Unresolved/manual review: 41
+- Successful replacements: 2
+- Unresolved/manual review: 40
 
 ## Replacements
 
 | Channel | Former generic file | New local file | Source | License / attribution |
 |---|---|---|---|---|
+| Abc Music Radio | nvisionbd-abc-music-radio.svg | [nvisionbd-official-abc-music-radio.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-abc-music-radio.png) | [Radio-bd.com station logo collection](https://radio-bd.com/) | Station logo served by directory; reuse rights not specified |
 | The Q | nvisionbd-the-q.svg | [nvisionbd-official-the-q.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-the-q.png) | [Exact original tvg-logo URL from playlist history](https://github.com/saeidrahmanbd/BDIX-IPTV/blob/cde4fc51a5fe73858c167366ae5651b138433fb8/NVisionBD-Playlist.m3u) | Historical source URL; reuse rights not specified |
 
 ## Unresolved — retained for manual source verification
@@ -21,7 +22,6 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 |---|---|---|
 | 10 TV | nvisionbd-10-tv.svg | No unique source-verified channel logo found |
 | 88 Stereo [not 24/7] | nvisionbd-88-stereo-not-24-7.svg | No unique source-verified channel logo found |
-| Abc Music Radio | nvisionbd-abc-music-radio.svg | Lookup/download/validation error: all logo image URLs failed: HTTP Error 404: Not Found |
 | Adventure 4k | nvisionbd-adventure.svg | Lookup/download/validation error: all logo image URLs failed: HTTP Error 403: Forbidden |
 | Alistiqamah | nvisionbd-alistiqamah.svg | No unique source-verified channel logo found |
 | Asia Flix TV | nvisionbd-asia-flix-tv.svg | No unique source-verified channel logo found |
