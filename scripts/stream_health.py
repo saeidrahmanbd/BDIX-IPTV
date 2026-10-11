@@ -132,7 +132,7 @@ def main():
     else: lines.append("None.")
     lines += ["","## Policy","","- Health failures never delete or reclassify streams automatically.",
               "- Backup streams remain protected even after repeated failures.",
-              "- New review entries are excluded from automated health promotion decisions.",
+              "- Not Playing holding entries are never automatically promoted or deleted.",
               "- Persistent failures are reported for review; they are never automatic deletion candidates."]
     REPORT.parent.mkdir(parents=True,exist_ok=True); REPORT.write_text("\n".join(lines)+"\n",encoding="utf-8")
     print(f"Stream health: tested={len(results)} ok={ok} failed={fail} persistent={len(persistent)}")
