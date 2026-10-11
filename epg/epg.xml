@@ -42604,32 +42604,30 @@ Aai Tulija Bhavani strives to overcome multiple challenges and defeat the evil p
     <icon src="https://iptv-epg.org/images/_lknHKzuUcXepTSqMf8Cf5yVIFWuUhC9LIDmWOulBEagfSMxUjGkOEzR3K8VQG9FHvCmlRsfo0D3DzPMfUFNIuUUoLoRPMtBL7yLaHQE3kNFoVmQft2jrLbCbz7gHQ" />
     <title lang="en">Aai Tuljabhavani</title>
   </programme>
-  <programme start="20261011105100 +0000" stop="20261011111900 +0000" channel="ColorsRishteyAmericas.in">
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
+  <programme channel="ColorsRishteyAmericas.in" start="20261011162800 +0530" stop="20261011165900 +0530">
+    <title>Laagi Tujhse Lagan</title>
+    <desc>This is TV Show - Crime Category</desc>
+    <category>TV Show</category>
+    <category>Crime</category>
     <credits>
-      <director>Pawan Kumar Marut</director>
-      <director>Dev Dutt J. Gupta</director>
-      <director>Deelip Kumar</director>
-      <actor>Dipika Kakar</actor>
-      <actor>Avika Gor</actor>
-      <actor>Manish Raisinghan</actor>
-      <actor>Vaishali Takkar</actor>
-      <actor>Varun Sharma</actor>
-      <actor>Nikki Sharma</actor>
-      <actor>Krissann Barretto</actor>
-      <actor>Dheeraj Dhoopar</actor>
-      <actor>Jayati Bhatia</actor>
-      <actor>Shweta Sinha</actor>
-      <actor>Ashu Sharma</actor>
-      <actor>Snehal Sahay</actor>
-      <producer>Rashmi Sharma</producer>
+      <director>Mitesh Chitalia</director>
+      <director>Mayank Gupta</director>
+      <director>Ramesh Pandey</director>
+      <actor>Mahhi Vij</actor>
+      <actor>Mishal Raheja</actor>
+      <actor>Shabbir Ahluwalia</actor>
+      <actor>Kali Prasad Mukherjee</actor>
+      <actor>Chinmayee Surve</actor>
+      <actor>Jay Thakkar</actor>
+      <actor>Swati Chitnis</actor>
+      <actor>Vinay Rohrra</actor>
+      <actor>Aashka Goradia</actor>
+      <actor>Jaineeraj Rajpurohit</actor>
+      <producer>Paresh Rawal</producer>
+      <producer>Swaroop Sampat</producer>
+      <producer>Hemal Thakkar</producer>
     </credits>
-    <desc lang="en">S1 E755
-When an infuriated Shaurya threatens to kill the entire Bharadwaj family, Jhanvi snatches his gun and shoots him.</desc>
-    <episode-num>S1 E755</episode-num>
-    <icon src="https://iptv-epg.org/images/xABuy9SiEsAVMwOncaw0hKxd3UAf8xZovbN7Tw6fR4Zz3JHn7pXYDFvib1iZYaBH0H1HBDxCBJ4O-dg2LxcsOTJntBTuz8cmQIKTrspahw2HJyeGuJwUpFosnpgNbw" />
-    <title lang="en">Sasural Simar Ka</title>
+    <icon src="https://dtil.tmsimg.com/assets/p7988713_b_h8_ac.jpg?lock=1280x720" />
   </programme>
   <programme channel="ColorsRishteyAmericas.in" start="20261011165900 +0530" stop="20261011172600 +0530">
     <title>Laagi Tujhse Lagan</title>
@@ -169151,16 +169149,6 @@ The host invites prominent personalities and engages them in candid conversation
     <desc lang="en">Siddhanth Sharma, a strict disciplinarian, is forced to chase hi brother, Amar, after he is accused of murder. However, his wife, Sheila, a lawyer, decides to defend Amar.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/RUNNTV/PROGRAM/6acb7c9bd18403c94af69ee9/images/LANDSCAPE_169/0b32d9e5-292f-4bd9-a061-891ec4778239.png" />
   </programme>
-  <programme start="20261011154200 +0530" stop="20261011164700 +0530" channel="NHBollyRaga.in">
-    <title>Gane Naye Purane</title>
-    <desc>A comprehensive compilation of soulful golden era classics and the latest chart-topping Bollywood songs is played back-to-back.</desc>
-    <category>Music</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b190919d90a54a39292222b977e349c7.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261011164700 +0530" stop="20261011190200 +0530" channel="NHBollyRaga.in">
     <title>Kumar Sanu Alka Yagnik</title>
     <desc>A comprehensive compilation of legendary hit songs featuring the iconic duo Kumar Sanu and Alka Yagnik, showcasing soulful melodies and romantic tracks, is played back-to-back.</desc>
@@ -281498,46 +281486,13 @@ The host sheds light on real-life criminal cases and crime stories while giving 
     <icon src="https://iptv-epg.org/images/D_5l8CfQrQUIz5SZien_Y5y3OoGeFy3mBxVBs5qfc6CKcik0JtsgqpGxHCILVyGe78qPBbYPLAAtzcophA6M3RPAJvWtN5jasA30iBcQ_ouoihL_Db-_cYoqE0AJ" />
     <title lang="en">Savdhaan India: Rewind</title>
   </programme>
-  <programme channel="StarGold.in@HD" start="20261011134700 +0530" stop="20261011164900 +0530">
-    <title>Welcome</title>
-    <desc>Two thugs meet Rajiv, who belongs to a respectable family, and want to fix their sister's wedding with him. However, when Rajiv's uncle refuses to the match, a series of hilarious situations occur.</desc>
-    <category>Film</category>
-    <category>Rom-Com</category>
-    <date>2007</date>
-    <credits>
-      <director>Anees Bazmee</director>
-      <actor>Akshay Kumar</actor>
-      <actor>Nana Patekar</actor>
-      <actor>Anil Kapoor</actor>
-      <actor>Mallika Sherawat</actor>
-      <actor>Katrina Kaif</actor>
-      <actor>Feroz Khan</actor>
-      <actor>Paresh Rawal</actor>
-      <actor>Malaika Arora Khan</actor>
-      <producer>Firoz Nadiadwala</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p176589_v_h10_ac.jpg?lock=1280x720" />
+  <programme start="20261011141800 +0530" stop="20261011165200 +0530" channel="StarGold.in@HD" catchup-id="100263838">
+    <title>Gatta Kusthi</title>
+    <desc>A man unexpectedly marries a woman who is the opposite of everything he wants in a bride.</desc>
   </programme>
-  <programme channel="StarGold.in@HD" start="20261011164900 +0530" stop="20261011195000 +0530">
-    <title>Welcome Back</title>
-    <desc>Majnu and Uday, a duo of fearsome gangsters, decide to quit the life of crime for good. However, they consider resorting to their old ways when they have difficulty finding a groom for their sister.</desc>
-    <category>Film</category>
-    <category>Crime</category>
-    <date>2015</date>
-    <credits>
-      <director>Anees Bazmee</director>
-      <actor>Anil Kapoor</actor>
-      <actor>Nana Patekar</actor>
-      <actor>Dimple Kapadia</actor>
-      <actor>John Abraham</actor>
-      <actor>Shruti K. Haasan</actor>
-      <actor>Shiney Ahuja</actor>
-      <actor>Ankita Shrivastava</actor>
-      <actor>Paresh Rawal</actor>
-      <actor>Naseeruddin Shah</actor>
-      <producer>Firoz Nadiadwala</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p12069713_v_h10_aa.jpg?lock=1280x720" />
+  <programme start="20261011165200 +0530" stop="20261011195000 +0530" channel="StarGold.in@HD" catchup-id="100263836">
+    <title>Action Jackson</title>
+    <desc>After falling in love with a clumsy girl, a goon comes in contact with AJ, his doppelgänger.</desc>
   </programme>
   <programme channel="StarGold.in@HD" start="20261011195000 +0530" stop="20261011230500 +0530">
     <title>Dangal</title>
@@ -321923,13 +321878,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <title lang="en">The Survival Of Fittest</title>
     <desc lang="en">Although his lifestyle involves honey, bas and lots of ps, Baloo thinks he is very fit…</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acb9d85a98f93e8a69511cf/images/LANDSCAPE_169/9360_8e35c6f4-9047-4a08-84a0-b1e58677123a.png" />
-  </programme>
-  <programme channel="TinyPop.uk" start="20261011110800 +0000" stop="20261011111800 +0000">
-    <title lang="en">Masha And The Bear Shorties</title>
-    <desc lang="en">Masha is getting ready for school. Masha is trying to squeeze in a bus a stroller with her little baby Rose. Masha and the animals are dancing a Hawaiian dance.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261011163800/list/TinyPOPMashaAndTheBearShorties2056997bdba7c64a3284b8798b26d35413b1999.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261011111800 +0000" stop="20261011112800 +0000">
     <title lang="en">Masha And The Bear Shorties</title>
@@ -421842,32 +421790,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261011164300 +0530" stop="20261011164700 +0530" channel="custom.duck.tv">
-    <title>Planet Jumpers</title>
-    <desc>Siblings Luna and Lou experience unimaginable adventures as they journey through space with their family, exploring new planets, places and technologies.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/49c6c8791a0a364f4860293abe55a25a.jpg?width=700" />
-    <credits>
-      <director>Roza Györffy</director>
-    </credits>
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261011164700 +0530" stop="20261011164900 +0530" channel="custom.duck.tv">
-    <title>Happy Meadow</title>
-    <desc>Sari and Nati are two playful rabbits who hop to the forest to enjoy the day with their woodland friends. They go on adventures and learn new things every day.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/26a36556f4fc9983561213c2940716d8.jpg?width=700" />
-    <credits>
-      <director>Roza Györffy</director>
-    </credits>
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261011164900 +0530" stop="20261011165300 +0530" channel="custom.duck.tv">
     <title>Fireteam in Action</title>
     <desc>Three brave firemen, Shorty, Roundy and Tally, lend a helping hand to the people whenever the need arises. They never hesitate to do their work and are always helpful to the citizens.</desc>
@@ -493914,262 +493836,37 @@ Jeevsiddhi, who is trained by Chanakya, enters the innermost circles of Rakshasa
       <value>12</value>
     </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261011105200 +0000" stop="20261011111800 +0000">
-    <title lang="en">SpongeBob SquarePants</title>
-    <sub-title lang="en">Karate Pals</sub-title>
-    <desc lang="en">The friends become unstoppable after Sandy teaches them karate; before long, the entire town learns the martial art and joins the action.</desc>
-    <credits>
-      <actor>Tom Kenny</actor>
-      <actor>Bill Fagerbakke</actor>
-      <actor>Rodger Bumpass</actor>
-      <director>Vincent Waller</director>
-    </credits>
-    <date>2026</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
+  <programme channel="custom.nicktoons" start="20261011110000 +0000" stop="20261011113100 +0000">
+    <title lang="en">ALVINNN!!! and The Chipmunks</title>
+    <desc lang="en">Alvin catches Simon taking a test to discover his soul-mate in 'Albrittina', then in 'Simon for President', Simon and Alvin decide to launch their own campaigns for class president.</desc>
     <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <category lang="en">Fantasy</category>
-    <category lang="en">Entertainment</category>
-    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S16</episode-num>
-    <premiere lang="en" />
-    <rating system="USA Parental Rating">
-      <value>TVY7</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>K7</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>A</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>7</value>
-    </rating>
-    <rating system="방송통신심의위원회">
-      <value>7</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>6</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>6</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
+    <category lang="en">Cartoon</category>
+    <icon src="https://images.metadata.sky.com/pd-image/f14f2346-167a-4fb9-9faf-37a16f2d68d5/16-9" />
+    <episode-num system="xmltv_ns">0.5.</episode-num>
   </programme>
-  <programme channel="custom.nicktoons" start="20261011111800 +0000" stop="20261011114400 +0000">
-    <title lang="en">SpongeBob SquarePants</title>
-    <sub-title lang="en">Hello Bikini Bottom!</sub-title>
-    <desc lang="en">Mr. Krabs decides to manage SpongeBob and Squidward's world tour.</desc>
-    <credits>
-      <actor>Tom Kenny</actor>
-      <actor>Bill Fagerbakke</actor>
-      <actor>Rodger Bumpass</actor>
-    </credits>
-    <date>2012</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
+  <programme channel="custom.nicktoons" start="20261011113100 +0000" stop="20261011120000 +0000">
+    <title lang="en">ALVINNN!!! and The Chipmunks</title>
+    <desc lang="en">Simon is ecstatic when he's elected the school's safety monitor in "To Serve and Protect.</desc>
     <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <category lang="en">Fantasy</category>
-    <category lang="en">Entertainment</category>
-    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S8 E23</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVY7</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>A</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>S</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>7</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>6</value>
-    </rating>
+    <category lang="en">Cartoon</category>
+    <icon src="https://images.metadata.sky.com/pd-image/f34ffc04-ded2-4fa3-9a45-7e28772d3e81/16-9" />
+    <episode-num system="xmltv_ns">0.6.</episode-num>
   </programme>
-  <programme channel="custom.nicktoons" start="20261011114400 +0000" stop="20261011121000 +0000">
-    <title lang="en">SpongeBob SquarePants</title>
-    <sub-title lang="en">Wormy; Patty Hype</sub-title>
-    <desc lang="en">Sandy puts SpongeBob and Patrick in charge of her pet caterpillar; SpongeBob invents colored Krabby patties.</desc>
-    <credits>
-      <actor>Tom Kenny</actor>
-      <actor>Bill Fagerbakke</actor>
-      <actor>Rodger Bumpass</actor>
-      <director>Walt Dohrn</director>
-      <director>Stephen Hillenburg</director>
-      <director>Paul Tibbitt</director>
-    </credits>
-    <date>2001</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
+  <programme channel="custom.nicktoons" start="20261011120000 +0000" stop="20261011123100 +0000">
+    <title lang="en">ALVINNN!!! and The Chipmunks</title>
+    <desc lang="en">Theodore is convinced that Miss Croner's missing cat is the cause of a terrible curse in 'Good Luck Mr. Whiskers', then in 'Who's Your Daddy', Dave gets a cold, so Alvin takes over.</desc>
     <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <category lang="en">Fantasy</category>
-    <category lang="en">Entertainment</category>
-    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S2 E7</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVY7</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>A</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>K7</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>7</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>6</value>
-    </rating>
+    <category lang="en">Cartoon</category>
+    <icon src="https://images.metadata.sky.com/pd-image/f70213d8-ca2f-42cb-9b8d-48bf45b821e3/16-9" />
+    <episode-num system="xmltv_ns">0.9.</episode-num>
   </programme>
-  <programme channel="custom.nicktoons" start="20261011121000 +0000" stop="20261011123600 +0000">
-    <title lang="en">SpongeBob SquarePants</title>
-    <sub-title lang="en">Extreme Spots; Squirrel Record</sub-title>
-    <desc lang="en">SpongeBob and Patrick try to join an extreme sports team; Sandy finds a book of world records and proceeds to try to break them all.</desc>
-    <credits>
-      <actor>Tom Kenny</actor>
-      <actor>Bill Fagerbakke</actor>
-      <actor>Rodger Bumpass</actor>
-    </credits>
-    <date>2012</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
+  <programme channel="custom.nicktoons" start="20261011123100 +0000" stop="20261011130000 +0000">
+    <title lang="en">ALVINNN!!! and The Chipmunks</title>
+    <desc lang="en">The Chipmunks decide to find Dave a new girlfriend in 'Slippin Thru My Fingers', then in 'Driving Dave Crazy', the Chipmunks accidentally ruin Dave's new song for the music festival.</desc>
     <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <category lang="en">Fantasy</category>
-    <category lang="en">Entertainment</category>
-    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S9 E1</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVY7</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>A</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>S</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>7</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>6</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>6</value>
-    </rating>
-  </programme>
-  <programme channel="custom.nicktoons" start="20261011123600 +0000" stop="20261011130200 +0000">
-    <title lang="en">SpongeBob SquarePants</title>
-    <sub-title lang="en">Grandma's Kisses; Squidville</sub-title>
-    <desc lang="en">SpongeBob gets embarrassed when his grandmother kisses him in public; Squidward leaves Bikini Bottom.</desc>
-    <credits>
-      <actor>Tom Kenny</actor>
-      <actor>Bill Fagerbakke</actor>
-      <actor>Rodger Bumpass</actor>
-    </credits>
-    <date>2001</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <category lang="en">Fantasy</category>
-    <category lang="en">Entertainment</category>
-    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S2 E9</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVY7</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>A</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>S</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>7</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>6</value>
-    </rating>
+    <category lang="en">Cartoon</category>
+    <icon src="https://images.metadata.sky.com/pd-image/cc1cc799-89b1-4f06-9649-28c2bc2b26ce/16-9" />
+    <episode-num system="xmltv_ns">0.12.</episode-num>
   </programme>
   <programme channel="custom.nicktoons" start="20261011130200 +0000" stop="20261011132800 +0000">
     <title lang="en">SpongeBob SquarePants</title>
