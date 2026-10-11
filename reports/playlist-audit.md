@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-11T10:11:39.417454+00:00**
+Generated: **2026-10-11T10:29:41.090176+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -16,7 +16,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Protected primary-entry changes: **0**
 - Logo exceptions: **0**
 - Logo references checked: **1186**
-- Not Playing logo exceptions: **0**
 - Duplicate primary identities: **1**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **71**

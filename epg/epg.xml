@@ -44355,19 +44355,6 @@ Contestants from all walks of life compete with each other to win the cash prize
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/134df15f09b2b59de345714ec9dc86e9.jpg" />
     <premiere />
   </programme>
-  <programme start="20261011091000 +0530" stop="20261011094500 +0530" channel="ColorsMarathi.in@SD">
-    <title lang="mr-IN">मोहिनी - प्रेमाची फिल्मी कहाणी</title>
-    <sub-title lang="mr-IN">Superstar RK and Mohini begin with hate at first sight, but destiny brings them together. Their journey unfolds with love, drama and betrayal in a classic filmy romance</sub-title>
-    <desc lang="mr-IN">व्यावसायिक बनू इच्छिणारी मोहिनी, अभिनेता आरकेला भेटते आणि शत्रुत्वातून त्यांच्यात प्रेम व विश्वासघाताचे नाते निर्माण होते.</desc>
-    <credits>
-      <director>Shailesh Dere,Mukul Abhyankar,Charudatta Bhagwat,Aditya Parulekar</director>
-      <actor>Sameer Paranjape (RK),Anagha Thakur (Mohini)</actor>
-    </credits>
-    <category lang="mr-IN">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/baa7d547ede1de0166e699ec129ca8ba.jpg" />
-    <episode-num system="onscreen">E197</episode-num>
-    <premiere />
-  </programme>
   <programme start="20261011094500 +0530" stop="20261011102000 +0530" channel="ColorsMarathi.in@SD">
     <title lang="mr-IN">मोहिनी - प्रेमाची फिल्मी कहाणी</title>
     <sub-title lang="mr-IN">Superstar RK and Mohini begin with hate at first sight, but destiny brings them together. Their journey unfolds with love, drama and betrayal in a classic filmy romance</sub-title>
@@ -47450,25 +47437,13 @@ Aai Tulija Bhavani strives to overcome multiple challenges and defeat the evil p
       <stereo>stereo</stereo>
     </audio>
   </programme>
-  <programme channel="ColorsRishteyAmericas.in" start="20261011093400 +0530" stop="20261011095600 +0530">
-    <title lang="en">PAW Patrol</title>
-    <desc lang="en">A group of six rescue dogs, led by a tech-savvy boy named Ryder, have come together to form a pack. Together they embark on adventures and work as a team in order to protect the community.</desc>
-    <credits>
-      <actor>Kai Harris</actor>
-      <actor>Justin Paul Kelly</actor>
-      <actor>Christian Corrao</actor>
-      <actor>Lilly Bartlam</actor>
-      <actor>Jackson Reid</actor>
-      <actor>Lucien Duncan-Reid</actor>
-      <actor>Jordan Mazeral</actor>
-      <actor>Ron Pardo</actor>
-      <director>Jamie Whitney</director>
-      <director>Charles E. Bastien</director>
-      <producer>Patricia Burns</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p10077400_b_h9_cy.jpg?lock=880x660" />
+  <programme channel="ColorsRishteyAmericas.in" start="20261011040400 +0000" stop="20261011042600 +0000">
+    <title lang="zh">PAW Patrol</title>
+    <desc>A group of six rescue dogs, led by a tech-savvy boy named Ryder, have come together to form a pack. Together they embark on adventures and work as a team in order to protect the community.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
   <programme channel="ColorsRishteyAmericas.in" start="20261011095600 +0530" stop="20261011101800 +0530">
     <title lang="en">PAW Patrol</title>
@@ -60837,14 +60812,6 @@ A dynastic struggle between the collateral branches of the Kuru clan, the Kaurav
     <category lang="hi-IN">178</category>
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/5fde8e9645da6c0862a6a353cab8951d.jpg" />
     <premiere />
-  </programme>
-  <programme channel="DDChandana.in@SD" start="20261010194500 +0000" stop="20261010201500 +0000">
-    <title lang="zh">Legal Programme</title>
-    <desc>The host interacts with a subject-matter expert, who provides a comprehensive understanding of important legal concepts.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
   </programme>
   <programme channel="DDChandana.in@SD" start="20261010201500 +0000" stop="20261010204500 +0000">
     <title lang="zh">Discussion</title>
@@ -95040,14 +95007,6 @@ Bringing the best in television.</desc>
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/7d626b4732386418b68e932e6f357eba.jpg" />
     <premiere />
   </programme>
-  <programme start="20261011090000 +0530" stop="20261011094500 +0530" channel="DDUttarPradesh.in@SD">
-    <title lang="hi-IN">नमस्ते यूपी</title>
-    <sub-title lang="hi-IN">The host presents the latest in political, economic, social and sports updates and stories of the day from all across the state of Uttar Pradesh</sub-title>
-    <desc lang="hi-IN">प्रस्तुतकर्ता उत्तर प्रदेश राज्य भर से दिन भर की राजनीतिक, आर्थिक, सामाजिक और खेल संबंधी नवीनतम अपडेट और कहानियाँ प्रस्तुत करते हैं।.</desc>
-    <category lang="hi-IN">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/c14e939cc947bb1aa9ac7f8ae247df6e.jpg" />
-    <premiere />
-  </programme>
   <programme start="20261011094500 +0530" stop="20261011100000 +0530" channel="DDUttarPradesh.in@SD">
     <title lang="hi-IN">गुमसुदा</title>
     <sub-title lang="hi-IN">The host presents details of missing persons and provides their families' contact information, accompanied by relevant images</sub-title>
@@ -105425,90 +105384,37 @@ Bringing the best in television.</desc>
     <desc lang="en">Ed Stafford is alone in Borneo's thick jungles with no tools, no food, and no backup. Just raw survival instincts against dense forest, wild creatures, and unrelenting rain.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DISCOVERY_CHANNEL_173569_14OCT064600_14OCT073200/images/LANDSCAPE_169_HD/DISCOVERY_MaroonedWithEdStafford_173569.jpg" />
   </programme>
-  <programme channel="DiscoveryKids.au" start="20261011092800 +0530" stop="20261011094000 +0530">
-    <title lang="en">Titoo</title>
-    <desc lang="en">Titoo, an inspiring eight-year-old boy, wishes to help everyone in need. However, his attempts only get him into trouble.</desc>
-    <credits>
-      <actor>Harsh Joshi</actor>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29329295_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S13 E10</episode-num>
+  <programme channel="DiscoveryKids.au" start="20261011041800 +0000" stop="20261011043000 +0000">
+    <title lang="zh">Smaashhing Simmba</title>
+    <desc>Pillu Kaka calls Simmba for help after he gets locked out of the palace he is supposed to be guarding. But soon, Simmba encounters Teekhi Mirchi out on a burgling spree.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
-  <programme channel="DiscoveryKids.au" start="20261011094000 +0530" stop="20261011095200 +0530">
-    <title lang="en">Titoo</title>
-    <desc lang="en">Titoo, an inspiring eight-year-old boy, wishes to help everyone in need. However, his attempts only get him into trouble.</desc>
-    <credits>
-      <actor>Harsh Joshi</actor>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29329295_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S13 E11</episode-num>
+  <programme channel="DiscoveryKids.au" start="20261011043000 +0000" stop="20261011044200 +0000">
+    <title lang="zh">Little Singham</title>
+    <desc>Little Singham, an honest but ferocious police officer, fights against injustice and defends his town from formidable enemies.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
-  <programme channel="DiscoveryKids.au" start="20261011095200 +0530" stop="20261011100300 +0530">
-    <title lang="en">Titoo</title>
-    <desc lang="en">Titoo, an inspiring eight-year-old boy, wishes to help everyone in need. However, his attempts only get him into trouble.</desc>
-    <credits>
-      <actor>Harsh Joshi</actor>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29329295_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S13 E12</episode-num>
+  <programme channel="DiscoveryKids.au" start="20261011044200 +0000" stop="20261011045400 +0000">
+    <title lang="zh">Little Singham</title>
+    <desc>Little Singham, an honest but ferocious police officer, fights against injustice and defends his town from formidable enemies.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
-  <programme channel="DiscoveryKids.au" start="20261011100300 +0530" stop="20261011101500 +0530">
-    <title lang="en">Titoo</title>
-    <desc lang="en">Titoo, an inspiring eight-year-old boy, wishes to help everyone in need. However, his attempts only get him into trouble.</desc>
-    <credits>
-      <actor>Harsh Joshi</actor>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29329295_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S13 E13</episode-num>
-  </programme>
-  <programme channel="DiscoveryKids.au" start="20261011101500 +0530" stop="20261011103800 +0530">
-    <title lang="en">Titoo</title>
-    <desc lang="en">A dance contest at school sparks rivalry when Shera challenges Titoo. Subsequently, Titoo discovers a pair of magical shoes, promising to enhance his performance.</desc>
-    <credits>
-      <actor>Harsh Joshi</actor>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27070770_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S3 E9</episode-num>
+  <programme channel="DiscoveryKids.au" start="20261011045400 +0000" stop="20261011050600 +0000">
+    <title lang="zh">Little Singham</title>
+    <desc>Little Singham, an honest but ferocious police officer, fights against injustice and defends his town from formidable enemies.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
   <programme channel="DiscoveryKids.au" start="20261011103800 +0530" stop="20261011104900 +0530">
     <title lang="en">Titoo</title>
@@ -132389,14 +132295,6 @@ The host invites aspiring dancers to showcase their dancing skills, while the me
     <episode-num system="onscreen">E23</episode-num>
     <premiere />
   </programme>
-  <programme channel="HistoryTV18.in@SD" start="20261010194000 +0000" stop="20261010202200 +0000">
-    <title lang="zh">Secrets of Penthouse</title>
-    <desc>Bob Guccione's journey from ambitious publisher to media mogul unfolds as Penthouse Magazine propels him to staggering wealth. However, his pursuit of success exacts a heavy toll.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
   <programme channel="HistoryTV18.in@SD" start="20261010202200 +0000" stop="20261010210400 +0000">
     <title lang="zh">Forged in Fire: Beat the Judges</title>
     <desc>Three skilled Forged in Fire Champions have to slash through level one to have a chance to rock out a nine-ringed broadsword.</desc>
@@ -132501,17 +132399,13 @@ The host invites aspiring dancers to showcase their dancing skills, while the me
       <stereo>stereo</stereo>
     </audio>
   </programme>
-  <programme start="20261011092100 +0530" stop="20261011094300 +0530" channel="HistoryTV18.in@SD">
-    <title lang="en-GB">Storage Wars</title>
-    <sub-title lang="en-GB">Out in Hesperia, California, when Mary faces transportation troubles, she decides to team up with Kenny and takes him out to pasture</sub-title>
-    <desc lang="en-GB">Professional buyers go to auctions and explore storage units in search of lucrative as well as interesting items that could fetch them a big profit.</desc>
-    <credits>
-      <actor>Darrell Sheets,Brandi Passante,Dan Dotson,Laura Dotson,Barry Weiss,Ivy Calvin,Ivy Calvin Jr.,Isaiah Calvin,Rene Nezhoda,Kenny Crossley,Lisa DeLarios,Dusty Riach,Thom Beers,Jarrod Schulz,Dave Hester,Brandon Sheets,Casey Nezhoda,Emily Wears,Mary Padian,Justin Bryant,Edwina Registre,Shana Dahan</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/4703604ed849ef611d34abc5519ffb53.jpg" />
-    <episode-num system="onscreen">E4</episode-num>
-    <premiere />
+  <programme channel="HistoryTV18.in@SD" start="20261011035100 +0000" stop="20261011041300 +0000">
+    <title lang="zh">Storage Wars</title>
+    <desc>Brandi is fired up about expanding her brand in San Bernardino. Later, Rene is positive that everyone is out to get him and Dusty tackles a locker dustier than him.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
   <programme start="20261011094300 +0530" stop="20261011100500 +0530" channel="HistoryTV18.in@SD">
     <title lang="en-GB">Kings of Restoration</title>
@@ -134663,20 +134557,6 @@ The host invites aspiring dancers to showcase their dancing skills, while the me
     <title lang="en">Atashinchi</title>
     <desc lang="en">The Tachibanas' daily lives reveal a warm, everyday family. By watching small routines, readers see love, habits, and bonds that form a clear, relatable portrait.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_HUNGAMA_1481490_14OCT060000_14OCT070000/images/LANDSCAPE_169_HD/HungamaTV_Atashinchi_1481490.jpg" />
-  </programme>
-  <programme start="20261011092600 +0530" stop="20261011095700 +0530" channel="INWILD.nl">
-    <title>Chris Humfrey's Animal Instinct</title>
-    <desc>The eccentric Aussie goes on journey of discovery to understand importance of protecting all life.</desc>
-    <category>Animals</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b63372a5185310c70407bb91da7aabf6.jpg?width=700" />
-    <credits>
-      <actor>Chris Humfrey</actor>
-    </credits>
-    <episode-num system="onscreen">3</episode-num>
-    <rating>
-      <value>TVG</value>
-    </rating>
   </programme>
   <programme start="20261011095700 +0530" stop="20261011102800 +0530" channel="INWILD.nl">
     <title>Chris Humfrey's Animal Instinct</title>
@@ -137198,17 +137078,6 @@ The host invites aspiring dancers to showcase their dancing skills, while the me
     <category lang="hi-IN">178</category>
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/b1c09a0ae4255811fa3fbd954558c4fa.jpg" />
     <premiere />
-  </programme>
-  <programme channel="InvestigationDiscovery.in@SD" start="20261011090100 +0530" stop="20261011095700 +0530">
-    <title lang="en">Blood Relatives</title>
-    <desc lang="en">In Alabama, murder is on the menu at a party after one family's distrust and finger pointing lead detectives on a cross-country search for a killer.</desc>
-    <credits>
-      <actor>Brenda Strong</actor>
-    </credits>
-    <category lang="en">Documentary</category>
-    <category lang="en">Others</category>
-    <icon src="https://dtil.tmsimg.com/assets/p13061224_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S5 E6</episode-num>
   </programme>
   <programme channel="InvestigationDiscovery.in@SD" start="20261011095700 +0530" stop="20261011105300 +0530">
     <title lang="en">Alien Encounters: Fact or Fiction</title>
@@ -158180,57 +158049,13 @@ Skilled participants take the stage to perform a series of hilarious skits to en
       <stereo>stereo</stereo>
     </audio>
   </programme>
-  <programme channel="MoviesNow.in@SD" start="20261011081100 +0530" stop="20261011094900 +0530">
-    <title lang="en">Tom &amp; Jerry</title>
-    <desc lang="en">Jerry, a mischievous mouse, takes refuge in a fancy hotel that is set to host a wedding. In order to get rid of him, one of the event planners hires Jerry's feline rival, Tom.</desc>
-    <credits>
-      <actor>Chloë Grace Moretz</actor>
-      <actor>Michael Peña</actor>
-      <actor>Jordan Bolger</actor>
-      <actor>Rob Delaney</actor>
-      <actor>Patsy Ferran</actor>
-      <actor>Pallavi Sharda</actor>
-      <actor>Colin Jost</actor>
-      <actor>Somi De Souza</actor>
-      <actor>Ajay Chhabra</actor>
-      <actor>Patrick Poletti</actor>
-      <actor>Janis Ahern</actor>
-      <actor>Ken Jeong</actor>
-      <actor>Camilla Arfwedson</actor>
-      <actor>Joe Bone</actor>
-      <actor>Edward Judge</actor>
-      <actor>Brian Bovell</actor>
-      <actor>David Nolan</actor>
-      <actor>Jude Coward Nicoll</actor>
-      <actor>Christina Chong</actor>
-      <actor>Daniel Adegboyega</actor>
-      <actor>Craig Stein</actor>
-      <actor>Edward Dogliani</actor>
-      <actor>Paolo Bonolis</actor>
-      <actor>Haley Bishop</actor>
-      <actor>Norma Butikofer</actor>
-      <actor>Kerri McLean</actor>
-      <actor>Sophie Holland</actor>
-      <actor>Scott Coker</actor>
-      <actor>Josselyn Ospina-Escobar</actor>
-      <actor>Marc Wesley DeHaney</actor>
-      <actor>Joseph Begley</actor>
-      <actor>Joe Buck</actor>
-      <actor>Bobby Cannavale</actor>
-      <actor>Nicky Jam</actor>
-      <actor>Joey Wells</actor>
-      <actor>Harry Ratchford</actor>
-      <actor>Will Spank Horton</actor>
-      <actor>Na'im Lynn</actor>
-      <actor>Lil Rel Howery</actor>
-      <actor>Utkarsh Ambudkar</actor>
-      <actor>Tim Story</actor>
-      <director>Tim Story</director>
-      <producer>Christopher DeFaria</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Fantasy</category>
-    <icon src="https://dtil.tmsimg.com/assets/p18418917_v_h9_ad.jpg?lock=880x660" />
+  <programme channel="MoviesNow.in@SD" start="20261011024100 +0000" stop="20261011041900 +0000">
+    <title lang="zh">Tom &amp; Jerry</title>
+    <desc>Jerry, a mischievous mouse, takes refuge in a fancy hotel that is set to host a wedding. In order to get rid of him, one of the event planners hires Jerry's feline rival, Tom.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
   <programme channel="MoviesNow.in@SD" start="20261011094900 +0530" stop="20261011114700 +0530">
     <title lang="en">Mission: Impossible II</title>
@@ -161155,33 +160980,13 @@ The host invites prominent personalities and engages them in candid conversation
       <stereo>stereo</stereo>
     </audio>
   </programme>
-  <programme channel="MoviesNowPlus.in@SD" start="20261011074500 +0530" stop="20261011094600 +0530">
-    <title lang="en">The Company You Keep</title>
-    <desc lang="en">Grant, a wanted man and a former member of the revolutionary militant group, the Weather Underground, goes on the run after a journalist reveals his identity.</desc>
-    <credits>
-      <actor>Robert Redford</actor>
-      <actor>Shia LaBeouf</actor>
-      <actor>Julie Christie</actor>
-      <actor>Susan Sarandon</actor>
-      <actor>Nick Nolte</actor>
-      <actor>Chris Cooper</actor>
-      <actor>Terrence Howard</actor>
-      <actor>Stanley Tucci</actor>
-      <actor>Richard Jenkins</actor>
-      <actor>Anna Kendrick</actor>
-      <actor>Brendan Gleeson</actor>
-      <actor>Brit Marling</actor>
-      <actor>Sam Elliott</actor>
-      <actor>Stephen Root</actor>
-      <actor>Jackie Evancho</actor>
-      <director>Robert Redford</director>
-      <producer>Nicolas Chartier</producer>
-      <producer>Robert Redford</producer>
-      <producer>Bill Holderman</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Thriller</category>
-    <icon src="https://dtil.tmsimg.com/assets/p9451249_v_h9_ak.jpg?lock=880x660" />
+  <programme channel="MoviesNowPlus.in@SD" start="20261011021500 +0000" stop="20261011041600 +0000">
+    <title lang="zh">The Company You Keep</title>
+    <desc>Grant, a wanted man and a former member of the revolutionary militant group, the Weather Underground, goes on the run after a journalist reveals his identity.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
   <programme channel="MoviesNowPlus.in@SD" start="20261011094600 +0530" stop="20261011112900 +0530">
     <title lang="en">Speed Kills</title>
@@ -164869,18 +164674,6 @@ The host invites prominent personalities and engages them in candid conversation
     <title lang="en">David Blaine: Do Not Attempt</title>
     <desc lang="en">Japan : David explores the concept of mastery by meeting people who spend life refining a sole skill.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_NATIONAL_GEOGRAPHIC_CHANNEL_1850699_14OCT060000_14OCT070000/images/LANDSCAPE_169_HD/NGC_DavidBlaineDoNotAttempt_1850699.jpg" />
-  </programme>
-  <programme channel="NationalGeographicWild.in@SD" start="20261011090000 +0530" stop="20261011094600 +0530">
-    <title lang="en">Secrets of the Penguins</title>
-    <desc lang="en">Wildlife filmmaker Bertie Gregory captures some of the strongest survival bonds of Emperor Penguins in the harshest environments.</desc>
-    <credits>
-      <actor>Bertie Gregory</actor>
-      <producer>Bertie Gregory</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Reality Show</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29714019_b_h9_ah.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E2</episode-num>
   </programme>
   <programme channel="NationalGeographicWild.in@SD" start="20261011094600 +0530" stop="20261011103300 +0530">
     <title lang="en">Africa's Deadliest</title>
@@ -184336,13 +184129,13 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
       <stereo>stereo</stereo>
     </audio>
   </programme>
-  <programme start="20261011092000 +0530" stop="20261011094500 +0530" channel="PolimerTV.in@SD">
-    <title lang="ta-IN">டெலி ஷாப்பிங் / கல கலவென சிரி</title>
-    <desc lang="ta-IN">Tele Shopping / Kala Kalavena Siri.</desc>
-    <category lang="ta-IN">178</category>
-    <category lang="ta-IN">177</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/f35205dcb58ab1bbff09e109e03bc52c.jpg" />
-    <premiere />
+  <programme channel="PolimerTV.in@SD" start="20261011035000 +0000" stop="20261011041500 +0000">
+    <title lang="zh">Tele Shopping / Kala Kalavena Siri</title>
+    <desc>This is TV Show - Entertainment Category.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
   <programme start="20261011094500 +0530" stop="20261011101000 +0530" channel="PolimerTV.in@SD">
     <title lang="ta-IN">டெலி ஷாப்பிங் / சினிமா சினிமா</title>
@@ -202516,21 +202309,12 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/931c0f74d7f5c633ce4be4e106e85b2f.jpg" />
     <premiere />
   </programme>
-  <programme channel="Rang.in@SD" start="20261011035000 +0000" stop="20261011041000 +0000">
-    <title lang="zh">Puwoti Tora</title>
-    <desc>Bringing the best in television.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="Rang.in@SD" start="20261011041000 +0000" stop="20261011043000 +0000">
-    <title lang="zh">Namu Narayan</title>
-    <desc>Various people attempt to overcome personal struggles, along with striving to balance their interpersonal relations with others in society.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme channel="Rang.in@SD" start="20261011093000 +0530" stop="20261011100000 +0530">
+    <title lang="en">Alaka Ragini</title>
+    <desc lang="en">A man makes a life-altering decision to fulfill the final wish of a dying woman. However, this choice triggers unforeseen consequences that challenge social norms and caste discrimination.</desc>
+    <category lang="en">TV Show</category>
+    <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p32100755_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="Rang.in@SD" start="20261011100000 +0530" stop="20261011103000 +0530">
     <title lang="en">Adi Anadi</title>
@@ -204641,15 +204425,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <icon src="https://iptv-epg.org/images/fpKNMxWiWcn11supKxjEueE6GXoPYQKEDCujIqfJi3z82GbfHFWWSB4pfIxJqmeDytJZuaVLBuZGg0y2hP4_G5DHfnplRKXySl0Hlm_SWaOXcGauZp1XpSLAifs_rg" />
     <title lang="en">Adi Anadi</title>
   </programme>
-  <programme start="20261011092200 +0530" stop="20261011094600 +0530" channel="RedBullTV.at@EUMENA">
-    <title lang="en-GB">Reel Rock</title>
-    <sub-title lang="en-GB">Join Alex Honnold and Cedar Wright in one of the coldest and most remote places on Earth: Antarctica. No strangers to sufferfests, this duo tackle massive granite towers</sub-title>
-    <desc lang="en-GB">Follows the world's top climbers, alpinists and mountaineers to the wildest places on Earth. New stories of triumph, failure and redemption unfold as they pursue the thrill of adventure.</desc>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/24669810e0663d551a6d9095451b7346.jpg" />
-    <episode-num system="onscreen">E2</episode-num>
-    <premiere />
-  </programme>
   <programme start="20261011094600 +0530" stop="20261011103300 +0530" channel="RedBullTV.at@EUMENA">
     <title lang="en-GB">Red Bull Rampage</title>
     <desc lang="en-GB">Freeride mountain bike action from the Utah desert. Competitors are judged on their technical ability and range of tricks as they take on the treacherous downhill course.</desc>
@@ -206000,14 +205775,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/48964b9644c924e7beadd7fbb05a017d.jpg" />
     <episode-num system="onscreen">E4</episode-num>
     <premiere />
-  </programme>
-  <programme channel="Rengoni.in@SD" start="20261011035000 +0000" stop="20261011041000 +0000">
-    <title lang="zh">Beharbari Outpost</title>
-    <desc>At the Beharbari outpost, local police officers tackle unique and outrageous cases while upholding crucial values and morals for the community.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
   </programme>
   <programme channel="Rengoni.in@SD" start="20261011041000 +0000" stop="20261011043000 +0000">
     <title lang="zh">Jonaki</title>
@@ -224861,37 +224628,14 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <desc lang="en">The movie name is yet to be announced by the channel.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SIRIPPOLI_971465_14OCT060000_14OCT070000/images/LANDSCAPE_169_HD/SIRIPPOLI_Movie_971465.jpg" />
   </programme>
-  <programme channel="SongdewTV.in@SD" start="20261011040500 +0000" stop="20261011041000 +0000">
-    <title lang="zh">Track Tales</title>
-    <desc>Various individuals share their music and personal journeys, offering insights into their inspirations, performances and achievements.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="SongdewTV.in@SD" start="20261011041000 +0000" stop="20261011041500 +0000">
-    <title lang="zh">Songdew Fresh</title>
-    <desc>A comprehensive compilation of the latest music tracks, curated to elevate and inspire positive vibes, offering a refreshing and motivating experience for listeners.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="SongdewTV.in@SD" start="20261011041500 +0000" stop="20261011042500 +0000">
-    <title lang="zh">Songdew Select</title>
-    <desc>A comprehensive compilation of independent music, showcasing the diverse creativity and unique voices of artists, offering listeners an eclectic blend of genres and styles.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="SongdewTV.in@SD" start="20261011042500 +0000" stop="20261011043000 +0000">
-    <title lang="zh">Friday Night Originals</title>
-    <desc>Several renowned musicians and bands come together to perform some of their most acclaimed songs in a bid to enthral the audience.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261011070000 +0530" stop="20261011100000 +0530" channel="SongdewTV.in@SD">
+    <title lang="hi-IN">Chai \u0026 Chill</title>
+    <desc lang="hi-IN">Add a pinch of melody in your morning tea.</desc>
+    <category lang="hi-IN">Music</category>
+    <category lang="hi-IN">Reality &amp; Game Shows</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg" />
+    <episode-num system="onscreen">E1</episode-num>
+    <premiere />
   </programme>
   <programme channel="SongdewTV.in@SD" start="20261011100000 +0530" stop="20261011101000 +0530">
     <title lang="en">Songdew Select</title>
@@ -232553,14 +232297,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <category lang="hi-IN">177</category>
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/f31bbe589d5ef1338381fb7acd157018.jpg" />
     <premiere />
-  </programme>
-  <programme channel="SonyPal.in@SD" start="20261011035600 +0000" stop="20261011041200 +0000">
-    <title lang="zh">Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc>Bhide learns that Manoj, a customer of Madhavi's products, has not paid his money in six months and decides to go to his house and confront him.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
   </programme>
   <programme channel="SonyPal.in@SD" start="20261011041200 +0000" stop="20261011042900 +0000">
     <title lang="zh">Taarak Mehta Ka Ooltah Chashmah</title>
@@ -257451,22 +257187,6 @@ Real-time match updates and highlights keep fans informed, providing instant acc
     <desc lang="en">The movie name is yet to be announced by the channel.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_WAH_341453_14OCT060000_14OCT090000/images/LANDSCAPE_169_HD/SonyWAH_Movie_341453.jpg" />
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261010200100 +0000" stop="20261010201100 +0000">
-    <title lang="zh">Honey Bunny Ka Jholmaal</title>
-    <desc>Honey and Bunny, two cats who are twin brothers, go on exciting adventures while protecting each other from enemies at every turn.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="SonyYay.in@SD" start="20261010201100 +0000" stop="20261010202200 +0000">
-    <title lang="zh">Honey Bunny Ka Jholmaal</title>
-    <desc>Honey and Bunny, two cats who are twin brothers, go on exciting adventures while protecting each other from enemies at every turn.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
   <programme channel="SonyYay.in@SD" start="20261010202200 +0000" stop="20261010203300 +0000">
     <title lang="zh">Honey Bunny Ka Jholmaal</title>
     <desc>Honey and Bunny, two cats who are twin brothers, go on exciting adventures while protecting each other from enemies at every turn.</desc>
@@ -257835,68 +257555,29 @@ Real-time match updates and highlights keep fans informed, providing instant acc
       <stereo>stereo</stereo>
     </audio>
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261011093200 +0530" stop="20261011094000 +0530">
-    <title lang="en">Shin Chan</title>
-    <desc lang="en">Misae coerces Shin-chan to do the dishes as punishment for hiding his lunch box in Shiro's house. However, Shin-chan messes up the kitchen.</desc>
-    <credits>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-      <director>Mitsuru Hongo</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h9_ae.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E113</episode-num>
+  <programme channel="SonyYay.in@SD" start="20261011040200 +0000" stop="20261011041000 +0000">
+    <title lang="zh">Shin Chan</title>
+    <desc>Misae coerces Shin-chan to do the dishes as punishment for hiding his lunch box in Shiro's house. However, Shin-chan messes up the kitchen.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261011094000 +0530" stop="20261011094700 +0530">
-    <title lang="en">Shin Chan</title>
-    <desc lang="en">A five-year-old boy, has many misadventures due to his peculiar antics, while his parents and tutors try to discipline him.</desc>
-    <credits>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-      <director>Mitsuru Hongo</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h9_ae.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E114</episode-num>
+  <programme channel="SonyYay.in@SD" start="20261011041000 +0000" stop="20261011041700 +0000">
+    <title lang="zh">Shin Chan</title>
+    <desc>A five-year-old boy, has many misadventures due to his peculiar antics, while his parents and tutors try to discipline him.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261011094700 +0530" stop="20261011095400 +0530">
-    <title lang="en">Shin Chan</title>
-    <desc lang="en">Hiroshi takes the family on a fishing trip and his motion sickness makes him vomit. However, he later helps Shin-chan catch a large fish.</desc>
-    <credits>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-      <director>Mitsuru Hongo</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h9_ae.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E115</episode-num>
+  <programme channel="SonyYay.in@SD" start="20261011041700 +0000" stop="20261011042400 +0000">
+    <title lang="zh">Shin Chan</title>
+    <desc>Hiroshi takes the family on a fishing trip and his motion sickness makes him vomit. However, he later helps Shin-chan catch a large fish.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
   <programme channel="SonyYay.in@SD" start="20261011095400 +0530" stop="20261011100100 +0530">
     <title lang="en">Shin Chan</title>
@@ -265602,37 +265283,10 @@ The host sheds light on real-life criminal cases and crime stories while giving 
     <desc lang="en">The movie name is yet to be announced by this channel.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_STAR_GOLD_196823_14OCT060000_14OCT090000/images/LANDSCAPE_169_HD/STARGOLD_Movie_196823.jpg" />
   </programme>
-  <programme channel="StarGoldSelect.in@SD" start="20261011081100 +0530" stop="20261011095200 +0530">
-    <title>Dil Bechara</title>
-    <desc>While struggling to survive, Manny and Kizie, who each have a terminal illness, fall in love with each other. Thereafter, the two try to spend the rest of their days being happy and staying positive.</desc>
-    <category>Film</category>
-    <category>Romance</category>
-    <date>2020</date>
+  <programme channel="StarGoldSelect.in@SD" start="20261011093000 +0530" stop="20261011110000 +0530">
+    <title lang="en">Dear Dad</title>
+    <desc lang="en">Interspersed with life-altering revelations and breathtaking sceneries, an unexpected road trip becomes a turning point in the relationship of a father-son duo.</desc>
     <credits>
-      <director>Mukesh Chhabra</director>
-      <actor>Sushant Singh Rajput</actor>
-      <actor>Sanjana Sanghi</actor>
-      <actor>Sahil Vaid</actor>
-      <actor>Saswata Chatterjee</actor>
-      <actor>Swastika Mukherjee</actor>
-      <actor>Sunit Tandon</actor>
-      <actor>Michael Muthu</actor>
-      <actor>Rajie Vijay Sarathy</actor>
-      <actor>Subbalakshmi</actor>
-      <actor>Saif Ali Khan</actor>
-      <producer>Hetvi Karia</producer>
-      <producer>Prasanna R. Coondapur</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p16953282_v_h10_aa.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="StarGoldSelect.in@SD" start="20261011095200 +0530" stop="20261011112000 +0530">
-    <title>Dear Dad</title>
-    <desc>Interspersed with life-altering revelations and breathtaking sceneries, an unexpected road trip becomes a turning point in the relationship of a father-son duo.</desc>
-    <category>Film</category>
-    <category>Drama</category>
-    <date>2016</date>
-    <credits>
-      <director>Tanuj Bhramar</director>
       <actor>Himanshu Sharma</actor>
       <actor>Ekavali Khanna</actor>
       <actor>Arvind Swami</actor>
@@ -265640,10 +265294,13 @@ The host sheds light on real-life criminal cases and crime stories while giving 
       <actor>Indu Ramchandani</actor>
       <actor>Ranjith Thakur</actor>
       <actor>Aman Uppal</actor>
+      <director>Tanuj Bhramar</director>
       <producer>Shaan Vyas</producer>
       <producer>Ratnakar M.</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p14213958_v_h10_ac.jpg?lock=1280x720" />
+    <category lang="en">Film</category>
+    <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p14213958_v_h9_ac.jpg?lock=880x660" />
   </programme>
   <programme start="20261011060000 +0000" stop="20261011070000 +0000" channel="StarGoldSelect.in@SD">
     <title>No Data</title>
@@ -275886,13 +275543,6 @@ Withdrawn Saumya gathers the courage to reshape her existence upon meeting Jeet,
     <desc lang="en">A woman, strongly opposed to arranged marriages, gets married to a man against her choice. Years later, their marital bliss is interrupted with the arrival of his former lover.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_STAR_PRAVAH_1771168_14OCT063000_14OCT070000/images/LANDSCAPE_169_HD/StarPravah_TuHiReMajhaMitva_1771168.jpg" />
   </programme>
-  <programme channel="StarSports1.in@HD" start="20261011093000 +0530" stop="20261011094500 +0530">
-    <title lang="en">1st ODI: India v West Indies; One-Day International Cricket</title>
-    <desc lang="en">An extensive and thorough coverage of one-day cricket matches contested by various international teams from across the globe.</desc>
-    <category lang="en">Sport</category>
-    <category lang="en">Cricket</category>
-    <icon src="https://dtil.tmsimg.com/assets/p8509066_b_h9_ab.jpg?lock=880x660" />
-  </programme>
   <programme channel="StarSports1.in@HD" start="20261011094500 +0530" stop="20261011100000 +0530">
     <title lang="en">2nd ODI: India vs West Indies; One-Day International Cricket</title>
     <desc lang="en">An extensive and thorough coverage of one-day cricket matches contested by various international teams from across the globe.</desc>
@@ -277653,13 +277303,6 @@ Highlights of the matches played during the ICC Cricket World Cup, wherein inter
     <desc lang="en">Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/7-KV4WxNtJYcKnAB8tqW7eBOt0rKQ3NetD2MOd_DwkmsdjJgqamEaiSLLwxsNCdb40jIWoKIYDpl3O11MKu7R-GMdDbaZkWxzNJ7aNtv05cna9OyDX5GX7QeO0yc" />
     <title lang="en">Sports Programme</title>
-  </programme>
-  <programme channel="StarSports1Hindi.in@HD" start="20261011093000 +0530" stop="20261011094500 +0530">
-    <title lang="en">1st ODI: India v West Indies; One-Day International Cricket</title>
-    <desc lang="en">An extensive and thorough coverage of one-day cricket matches contested by various international teams from across the globe.</desc>
-    <category lang="en">Sport</category>
-    <category lang="en">Cricket</category>
-    <icon src="https://dtil.tmsimg.com/assets/p8509066_b_h9_ab.jpg?lock=880x660" />
   </programme>
   <programme channel="StarSports1Hindi.in@HD" start="20261011094500 +0530" stop="20261011100000 +0530">
     <title lang="en">2nd ODI: India vs West Indies; One-Day International Cricket</title>
@@ -281432,13 +281075,6 @@ Highlights of the matches played during the ICC Cricket World Cup, wherein inter
     <desc lang="en">Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/Q_zDWL0c5B00IrTQ2hUJJacP-BaXbTrWKOQVx5RUHCPRqwnDCQjSlbavgr_rbgRpDrfnuMijrfwmumSOdxVfWnqnb50m3BO6fFDO3Eg1D-a1MCKJNggT6Et0dG5w6A" />
     <title lang="en">Sports Programme</title>
-  </programme>
-  <programme channel="StarSportsSelect1.in@SD" start="20261011093000 +0530" stop="20261011094500 +0530">
-    <title lang="en">Premier League Highlights</title>
-    <desc lang="en">Highlights of the Premier League matches, where professional football teams compete against each other to win the championship title.</desc>
-    <category lang="en">News</category>
-    <category lang="en">Magazine Programme</category>
-    <icon src="https://dtil.tmsimg.com/assets/p18771049_b_h9_af.jpg?lock=880x660" />
   </programme>
   <programme channel="StarSportsSelect1.in@SD" start="20261011094500 +0530" stop="20261011100000 +0530">
     <title lang="en">Premier League Highlights</title>
@@ -295288,42 +294924,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <desc lang="en">Mangala Alati presents the sacred Mangala Alati, featuring prayers, rituals, and devotional moments that create a serene atmosphere of faith, hope, and positivity each day.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_TARANG_113152_14OCT063000_14OCT073000/images/LANDSCAPE_169/1790250252000_TARANG_MangalaAlati_113152.jpg" />
   </programme>
-  <programme start="20261011093400 +0530" stop="20261011094500 +0530" channel="TeluguOne.in@HD">
-    <title>Swarabhishekam</title>
-    <desc>Brothers Srinivasachari and Ranga are popular music directors in the Telugu industry. However, when Surekha, Ranga's wife, gets envious of his brother's success, the siblings fall apart.</desc>
-    <category>Musical</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/cbeb529b5b1ee0278a3147b170eac1f3.jpg?width=700" />
-    <credits>
-      <actor>Srikanth (Ranga)</actor>
-      <actor>Urvashi (Rukminiamma)</actor>
-      <actor>Laya (Surekha)</actor>
-      <actor>K. Viswanath (Srinivasachari)</actor>
-      <actor>Amukta Malyada (Bujji)</actor>
-      <actor>Sivaji (Chandu)</actor>
-    </credits>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261011094500 +0530" stop="20261011095700 +0530" channel="TeluguOne.in@HD">
-    <title>Swarabhishekam</title>
-    <desc>Brothers Srinivasachari and Ranga are popular music directors in the Telugu industry. However, when Surekha, Ranga's wife, gets envious of his brother's success, the siblings fall apart.</desc>
-    <category>Musical</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/cbeb529b5b1ee0278a3147b170eac1f3.jpg?width=700" />
-    <credits>
-      <actor>Srikanth (Ranga)</actor>
-      <actor>Urvashi (Rukminiamma)</actor>
-      <actor>Laya (Surekha)</actor>
-      <actor>K. Viswanath (Srinivasachari)</actor>
-      <actor>Amukta Malyada (Bujji)</actor>
-      <actor>Sivaji (Chandu)</actor>
-    </credits>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261011095700 +0530" stop="20261011100900 +0530" channel="TeluguOne.in@HD">
     <title>Swarabhishekam</title>
     <desc>Brothers Srinivasachari and Ranga are popular music directors in the Telugu industry. However, when Surekha, Ranga's wife, gets envious of his brother's success, the siblings fall apart.</desc>
@@ -299708,16 +299308,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/8b420b6e3cac44832b4063d9e5252b19.jpg" />
     <premiere />
   </programme>
-  <programme channel="TheJungleBook.in" start="20261011093000 +0530" stop="20261011094300 +0530">
-    <title lang="en">The Monkey Business</title>
-    <desc lang="en">Tabaqui interrupts Mowgli and Rikki Tikki Tavi whilst they are playing.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6ac71c7b84671e08ae856786/images/LANDSCAPE_169/9324_463e2941-4e59-4ac7-892c-6f6a8b3d00e4.png" />
-  </programme>
-  <programme channel="TheJungleBook.in" start="20261011094300 +0530" stop="20261011095600 +0530">
-    <title lang="en">The pavo The peacock</title>
-    <desc lang="en">A new lady bear, Bela, is in the jungle and Baloo is has fallen hard for her</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6ac71c7b84671e08ae856787/images/LANDSCAPE_169/9351_707bda73-d930-42ad-9bb4-1d28719246e3.png" />
-  </programme>
   <programme channel="TheJungleBook.in" start="20261011095600 +0530" stop="20261011100900 +0530">
     <title lang="en">The Human After</title>
     <desc lang="en">Jealousy rears its head when Mowgli finds a mirror</desc>
@@ -301274,13 +300864,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <title lang="en">The Ske Bite</title>
     <desc lang="en">It is the night of the Council of Wolves, but Akela is nowhere to be seen</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acad8a3c7923c1547c18da0/images/LANDSCAPE_169/9294_eec408e6-49c8-4992-8064-6a8b92904473.png" />
-  </programme>
-  <programme channel="TinyPop.uk" start="20261011040900 +0000" stop="20261011042200 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261011093900/list/TinyPOPCareBearsUnlockTheMagic205699295a80220a74e4df49473b367756e46e3.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261011042200 +0000" stop="20261011043500 +0000">
     <title lang="en">Care Bears: Unlock The Magic</title>
@@ -331691,53 +331274,85 @@ Weighed down by his past, Jay rejects the idea of love. But Sharvari comes into 
     <title lang="en">Narad Vijay</title>
     <desc lang="en">Lord Narayana sends Narada to Earth to test a devotee’s will, sparking clashes among the faithful.</desc>
   </programme>
-  <programme channel="ZeeTV.in@SD" start="20261011040200 +0000" stop="20261011042500 +0000">
-    <title lang="zh">Ganga Mai Ki Betiyaan</title>
-    <desc>After her husband abandons her for not giving birth to a son, a resilient Ganga Mai dedicates herself to raising her three daughters with unwavering strength, grace, and affection.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme channel="ZeeTV.in@SD" start="20261011093000 +0530" stop="20261011100000 +0530">
+    <title lang="en">Ganga Mai Ki Betiyaan</title>
+    <desc lang="en">Sneha readies herself to consummate her union with Siddhu, attempting to convert her fake pregnancy into reality.</desc>
+    <credits>
+      <actor>Amandeep Sidhu</actor>
+      <actor>Sheezan Khan</actor>
+      <director>Ankur Bhatia</director>
+      <director>Uttam Ahlawat</director>
+      <producer>Ravi Dubey</producer>
+      <producer>Sargun Mehta</producer>
+    </credits>
+    <category lang="en">TV Show</category>
+    <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p31042360_b_h9_ad.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E375</episode-num>
   </programme>
-  <programme channel="ZeeTV.in@SD" start="20261011042500 +0000" stop="20261011045300 +0000">
-    <title lang="zh">Vasudha</title>
-    <desc>Tijan announces Phool's engagement to Samar to everyone. However, Chandrika fails to reveal the truth about him.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme channel="ZeeTV.in@SD" start="20261011100000 +0530" stop="20261011103000 +0530">
+    <title lang="en">Ganga Mai Ki Betiyaan</title>
+    <desc lang="en">Murli requests a Panchayat gathering to acknowledge his errors and secure a fresh opportunity alongside Sahana.</desc>
+    <credits>
+      <actor>Amandeep Sidhu</actor>
+      <actor>Sheezan Khan</actor>
+      <director>Ankur Bhatia</director>
+      <director>Uttam Ahlawat</director>
+      <producer>Ravi Dubey</producer>
+      <producer>Sargun Mehta</producer>
+    </credits>
+    <category lang="en">TV Show</category>
+    <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p31042360_b_h9_ad.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E376</episode-num>
   </programme>
-  <programme channel="ZeeTV.in@SD" start="20261011045300 +0000" stop="20261011052400 +0000">
-    <title lang="zh">Jagadhatri</title>
-    <desc>Unbeknownst to her family, a young woman leads a double life as an undercover intelligence officer, determined to clear her mother's name.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme channel="ZeeTV.in@SD" start="20261011103000 +0530" stop="20261011110000 +0530">
+    <title lang="en">Ganga Mai Ki Betiyaan</title>
+    <desc lang="en">Murli aspires to regain Sahana's affection, whilst the Panchayat council actively prepares to determine their ultimate destiny together.</desc>
+    <credits>
+      <actor>Amandeep Sidhu</actor>
+      <actor>Sheezan Khan</actor>
+      <director>Ankur Bhatia</director>
+      <director>Uttam Ahlawat</director>
+      <producer>Ravi Dubey</producer>
+      <producer>Sargun Mehta</producer>
+    </credits>
+    <category lang="en">TV Show</category>
+    <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p31042360_b_h9_ad.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E377</episode-num>
   </programme>
-  <programme channel="ZeeTV.in@SD" start="20261011052400 +0000" stop="20261011054700 +0000">
-    <title lang="zh">Tu Hi Re Dil Mein</title>
-    <desc>Deeming it a lucky charm, Vrinda marries Sanjay, who loves Divya. Serving as a caretaker in his home, she endures silent sacrifices, wondering if love will ever find her.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme channel="ZeeTV.in@SD" start="20261011110000 +0530" stop="20261011113000 +0530">
+    <title lang="en">Ganga Mai Ki Betiyaan</title>
+    <desc lang="en">After her husband abandons her for not giving birth to a son, a resilient Ganga Mai dedicates herself to raising her three daughters with unwavering strength, grace, and affection.</desc>
+    <credits>
+      <actor>Amandeep Sidhu</actor>
+      <actor>Sheezan Khan</actor>
+      <director>Ankur Bhatia</director>
+      <director>Uttam Ahlawat</director>
+      <producer>Ravi Dubey</producer>
+      <producer>Sargun Mehta</producer>
+    </credits>
+    <category lang="en">TV Show</category>
+    <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p31042360_b_h9_ad.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E378</episode-num>
   </programme>
-  <programme channel="ZeeTV.in@SD" start="20261011054700 +0000" stop="20261011061000 +0000">
-    <title lang="zh">Tum Se Tum Tak</title>
-    <desc>A young woman's unexpected bond with a much older businessman brings emotional twists while challenging societal expectations and family ideals.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="ZeeTV.in@SD" start="20261011061000 +0000" stop="20261011063200 +0000">
-    <title lang="zh">Humari Radha</title>
-    <desc>Radha strives to rescue her matrimonial bond. Meanwhile, deep affection and treacherous acts dramatically transform her existence.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme channel="ZeeTV.in@SD" start="20261011113000 +0530" stop="20261011120000 +0530">
+    <title lang="en">Ganga Mai Ki Betiyaan</title>
+    <desc lang="en">After her husband abandons her for not giving birth to a son, a resilient Ganga Mai dedicates herself to raising her three daughters with unwavering strength, grace, and affection.</desc>
+    <credits>
+      <actor>Amandeep Sidhu</actor>
+      <actor>Sheezan Khan</actor>
+      <director>Ankur Bhatia</director>
+      <director>Uttam Ahlawat</director>
+      <producer>Ravi Dubey</producer>
+      <producer>Sargun Mehta</producer>
+    </credits>
+    <category lang="en">TV Show</category>
+    <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p31042360_b_h9_ad.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E379</episode-num>
   </programme>
   <programme channel="ZeeTV.in@SD" start="20261011063200 +0000" stop="20261011065500 +0000">
     <title lang="zh">Ganga Mai Ki Betiyaan</title>
@@ -346119,37 +345734,42 @@ Shackled by generations of hatred, two rival families see their destinies entwin
     <icon src="https://iptv-epg.org/images/4-7xhFDgZNpr2h1Taya69J-4FyrwRQTQtV-NARkv-1OUBI-VwZjjz1pSeSHffOZLPDHkps6EJF8Tr7pnMOGWghjHyfb5-QeDQQWFB0w-Z9bTJgmlzP_fbeRda8mEKQ" />
     <title lang="en">Santhwanam 2</title>
   </programme>
-  <programme channel="custom.colors.infinity" start="20261011033000 +0000" stop="20261011041000 +0000">
-    <title lang="zh">Evil</title>
-    <desc>Psychologist Kristen Bouchard reluctantly works together with David Acosta, a priest in training, to investigate and find a logical explanation for every supernatural occurrence within the Church.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261011085000 +0530" stop="20261011100000 +0530" channel="custom.colors.infinity">
+    <title lang="en-GB">Evil</title>
+    <desc lang="en-GB">Psychologist Kristen Bouchard reluctantly works together with David Acosta, a priest in training, to investigate and find a logical explanation for every supernatural occurrence within the Church.</desc>
+    <credits>
+      <actor>Katja Herbers (Kristen Bouchard),Mike Colter (David Acosta),Aasif Mandvi (Ben Shakir),Michael Emerson (Leland Townsend),Kurt Fuller (Dr. Boggs),Andrea Martin (Sister Andrea),Christine Lahti (Sheryl Luria),Brooklyn Shuck (Lynn Bouchard),Skylar Gray (Lila Bouchard),Maddy Crocco (Lexis Bouchard),Dalya Knapp (Laura Bouchard)</actor>
+    </credits>
+    <category lang="en-GB">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/7035785301cc889f28fb695656803041.jpg" />
+    <episode-num system="onscreen">E7</episode-num>
+    <premiere />
   </programme>
-  <programme channel="custom.colors.infinity" start="20261011041000 +0000" stop="20261011050000 +0000">
-    <title lang="zh">Evil</title>
-    <desc>The team encounters a lorry driver whose wife thinks he is possessed and explores the possibility of a demon haunting the highway.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261011100000 +0530" stop="20261011105000 +0530" channel="custom.colors.infinity">
+    <title lang="en-GB">A Million Little Things</title>
+    <sub-title lang="en-GB">Eddie and Katherine's divorce mediation grows more complicated. Moreover, Rome's brother arrives, while Gary and Maggie take another step toward completing her bucket list</sub-title>
+    <desc lang="en-GB">The lives of a group of carefree friends from Boston change when one of them shockingly dies. They soon realise the importance of cherishing their friendship.</desc>
+    <credits>
+      <director>James Griffiths</director>
+      <actor>David Giuntoli,Romany Malco,Allison Miller,Christina Moses,Grace Park,James Roday Rodriguez,Stephanie Szostak,Lizzy Greene,Tristan Byon,Chance Hurstfield,Floriana Lima,Ron Livingston,Christina Ochoa</actor>
+    </credits>
+    <category lang="en-GB">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/a7b677841d45bbd2a3d652c718c9a880.jpg" />
+    <episode-num system="onscreen">E15</episode-num>
+    <premiere />
   </programme>
-  <programme channel="custom.colors.infinity" start="20261011050000 +0000" stop="20261011054500 +0000">
-    <title lang="zh">Evil</title>
-    <desc>Sister Andrea defends her career and sanity during a trial against Leland. Meanwhile, the team investigates reports of an alleged angel sighting.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="custom.colors.infinity" start="20261011054500 +0000" stop="20261011063000 +0000">
-    <title lang="zh">Fantasy Island</title>
-    <desc>Jilted bride Laura arrives on the island still in her wedding dress, having just been stood up at the altar. Meanwhile, Isla tells Ruby about the complicated past between her people and the Roarkes.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
+  <programme start="20261011105000 +0530" stop="20261011120000 +0530" channel="custom.colors.infinity">
+    <title lang="en-GB">A Million Little Things</title>
+    <sub-title lang="en-GB">Maggie's friends anxiously await the outcome of her surgery. Meanwhile, an unexpected arrival by her mother creates a tense initial encounter with Gary</sub-title>
+    <desc lang="en-GB">The lives of a group of carefree friends from Boston change when one of them shockingly dies. They soon realise the importance of cherishing their friendship.</desc>
+    <credits>
+      <director>Richard J. Lewis</director>
+      <actor>David Giuntoli,Romany Malco,Allison Miller,Christina Moses,Grace Park,James Roday Rodriguez,Stephanie Szostak,Lizzy Greene,Tristan Byon,Chance Hurstfield,Floriana Lima,Ron Livingston,Christina Ochoa</actor>
+    </credits>
+    <category lang="en-GB">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/a7b677841d45bbd2a3d652c718c9a880.jpg" />
+    <episode-num system="onscreen">E16</episode-num>
+    <premiere />
   </programme>
   <programme start="20261011120000 +0530" stop="20261011122000 +0530" channel="custom.colors.infinity">
     <title lang="en-GB">Ghosts</title>
@@ -351698,14 +351318,6 @@ Zak and the crew descend upon a Southern California park to investigate a haunte
     <icon src="https://iptv-epg.org/images/auLgCBOJ9Cb1JcgmF21cKHU8ImJ5u83zscNtiWb7H2wxi7jbC5EH-iBo0DHi-PQLKm31A2rXh4iGG1wrCTGFOvASRGEJ6bokdHq3-T8Rxvk0jo4-LA6kfNbL8wY" />
     <title lang="en">Ghost Adventures</title>
   </programme>
-  <programme channel="custom.discovery.turbo" start="20261010192500 +0000" stop="20261010202000 +0000">
-    <title lang="zh">Street Outlaws</title>
-    <desc>With Chief out of town, Chuck takes over as race master, but must still defend number one. On race night, with racers missing, Monza and Dave jump into the top five.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
   <programme channel="custom.discovery.turbo" start="20261010202000 +0000" stop="20261010211500 +0000">
     <title lang="zh">Salvage Hunters: Classic Cars</title>
     <desc>Drew and Paul rescue a classic: a Vauxhall Viva. The car was extensively modified in the 1960s but after years in storage, it's well past its best.</desc>
@@ -351778,15 +351390,13 @@ Zak and the crew descend upon a Southern California park to investigate a haunte
       <stereo>stereo</stereo>
     </audio>
   </programme>
-  <programme channel="custom.discovery.turbo" start="20261011092000 +0530" stop="20261011094500 +0530">
-    <title lang="en">$3K in 3 Days to Go Four-Wheeling; Dirt Every Day</title>
-    <desc lang="en">Fred and Dave drag home an Isuzu VehiCROSS for £2,200 and have three days to get it ready for some off-roading in Pennsylvania.</desc>
-    <credits>
-      <actor>Fred Williams</actor>
-    </credits>
-    <category lang="en">Sport</category>
-    <icon src="https://dtil.tmsimg.com/assets/p13881624_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S7 E12</episode-num>
+  <programme channel="custom.discovery.turbo" start="20261011035000 +0000" stop="20261011041500 +0000">
+    <title lang="zh">$3K in 3 Days to Go Four-Wheeling; Dirt Every Day</title>
+    <desc>Fred and Dave drag home an Isuzu VehiCROSS for £2,200 and have three days to get it ready for some off-roading in Pennsylvania.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
   <programme channel="custom.discovery.turbo" start="20261011094500 +0530" stop="20261011101000 +0530">
     <title lang="en">Stock Trucks vs. the Rubicon Trail; Dirt Every Day</title>
@@ -354416,67 +354026,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <episode-num>S9 E1</episode-num>
     <icon src="https://iptv-epg.org/images/m6QOrEm8AWINuPBSyFJQzw07NhfWHgh4M3-Un9kBXFEGvZTy_v1la351mnuFIHRzE2WiwzPKpSN5dve2sVSRlLLy-hLNJXH-mERlMTqw-UB2uBn-7KYtN-KtozyHMw" />
     <title lang="en">All Girls Garage</title>
-  </programme>
-  <programme start="20261011093600 +0530" stop="20261011094000 +0530" channel="custom.duck.tv">
-    <title>Listen to This</title>
-    <desc>A group of children fuses animal voices with the sound of musical instruments in an attempt to create a range of new melodies.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/630766eeed3ec65c0c6f098bf336b76d.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261011094000 +0530" stop="20261011094200 +0530" channel="custom.duck.tv">
-    <title>Mimo and Bobo</title>
-    <desc>When Mimo, the panda bear, and Bobo, the monkey, enter preschool, they learn useful lessons about friendship as well as moral values.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f7100646ff9cce813dad74448f69f4d6.jpg?width=700" />
-    <episode-num system="onscreen">11</episode-num>
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261011094200 +0530" stop="20261011094400 +0530" channel="custom.duck.tv">
-    <title>Safari</title>
-    <desc>Exploring the wild and wonderful world of animals with the help of lively visuals and music.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/dd9be9b86e3841ebc4d0e3c174aaefed.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261011094400 +0530" stop="20261011094800 +0530" channel="custom.duck.tv">
-    <title>Color Magic</title>
-    <desc>An assortment of vibrant paints comes to life and teach children how to differentiate between all the colours in an amusing manner.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/2c13a352a70227c2e539726776c0192d.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261011094800 +0530" stop="20261011095100 +0530" channel="custom.duck.tv">
-    <title>Vehicles</title>
-    <desc>A team of animated vehicles springs to life and assists in exploring different modes of travel. They help young children to improve their creativity and foster imaginative and developmental skills.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/6af111ddc9f125f817ee0e4108a8023a.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261011095100 +0530" stop="20261011095400 +0530" channel="custom.duck.tv">
-    <title>Vege-tales</title>
-    <desc>A colourful assortment of vegetables, each with its own unique personality, showcases diverse shapes and sizes. This helps children to recognise the differences between various culinary ingredients.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/92cdfaa462ffda1cd4ea01c1f6f9aa37.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
   </programme>
   <programme start="20261011095400 +0530" stop="20261011095800 +0530" channel="custom.duck.tv">
     <title>Mimo and Bobo</title>
@@ -363576,14 +363125,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <title>Ekamra Lahari</title>
     <desc>A compilation of the timeless old classic Odia hits is played to entertain the audience.</desc>
   </programme>
-  <programme channel="custom.enter10.bangla" start="20261011034300 +0000" stop="20261011041900 +0000">
-    <title lang="zh">Crime Alert</title>
-    <desc>The host presents a collection of true stories involving ordinary citizens who committed horrific crimes for the sake of love, revenge and various other motivating factors.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
   <programme channel="custom.enter10.bangla" start="20261011041900 +0000" stop="20261011045300 +0000">
     <title lang="zh">Crime Alert</title>
     <desc>The host presents a collection of true stories involving ordinary citizens who committed horrific crimes for the sake of love, revenge and various other motivating factors.</desc>
@@ -364177,29 +363718,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme channel="custom.history.tv" start="20261011092100 +0530" stop="20261011094300 +0530">
-    <title lang="en">Storage Wars</title>
-    <desc lang="en">Out in Hesperia, California, when Mary faces transportation troubles, she decides to team up with Kenny and takes him out to pasture.</desc>
-    <credits>
-      <actor>Darrell Sheets</actor>
-      <actor>Brandi Passante</actor>
-      <actor>Dan Dotson</actor>
-      <actor>Laura Dotson</actor>
-      <actor>Barry Weiss</actor>
-      <actor>Ivy Calvin</actor>
-      <actor>Ivy Calvin Jr.</actor>
-      <actor>Isaiah Calvin</actor>
-      <actor>Rene Nezhoda</actor>
-      <actor>Kenny Crossley</actor>
-      <actor>Lisa DeLarios</actor>
-      <actor>Dusty Riach</actor>
-      <actor>Thom Beers</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Events/Festivals</category>
-    <icon src="https://dtil.tmsimg.com/assets/p16114179_b_h9_ab.jpg?lock=880x660" />
-    <episode-num system="onscreen">S12 E4</episode-num>
   </programme>
   <programme channel="custom.history.tv" start="20261011094300 +0530" stop="20261011100500 +0530">
     <title lang="en">Kings of Restoration</title>
@@ -373961,12 +373479,9 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/1c7c2a4ad2a76c81a1b7934d9979cea4.jpg" />
     <premiere />
   </programme>
-  <programme channel="staging.dhinchaak" start="20261011084600 +0530" stop="20261011110000 +0530">
-    <title>Saajan Ki Baahon Mein</title>
-    <desc>Lovers Sagar and Sapna separate due to her father's opposition and meet after many years. However, Sagar reveals that he is to marry Kavita, while Sapna is about to be engaged to Rakesh.</desc>
-    <category>Film</category>
-    <category>Romance</category>
-    <date>1995</date>
+  <programme start="20261011031600 +0000" stop="20261011053000 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Romance</category>
     <credits>
       <director>Jay Prakash</director>
       <actor>Rishi Kapoor</actor>
@@ -373979,20 +373494,20 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
       <actor>Pran Sikand</actor>
       <producer>Dinesh Patel</producer>
     </credits>
+    <desc lang="en">Lovers Sagar and Sapna separate due to her father's opposition and meet after many years. However, Sagar reveals that he is to marry Kavita, while Sapna is about to be engaged to Rakesh.</desc>
+    <icon src="https://iptv-epg.org/images/doQdQpX1mvAHsGZnBsF-1nbeI8xvVKycq1nAeq98O4NClMuoQPR_0R1uTcqaCyCskNGuwv40mz5Sfrkktb_KcqFjbrBrzb7UwGvBWNjqZj14lP40dxC5AESWupE" />
+    <title lang="en">Saajan Ki Baahon Mein</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261011110000 +0530" stop="20261011111500 +0530">
-    <title>Teleshopping</title>
-    <desc>This is TV Show - Consumer Category</desc>
-    <category>TV Show</category>
-    <category>Consumer</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29154371_b_h8_aa.jpg?lock=1280x720" />
+  <programme start="20261011053000 +0000" stop="20261011054500 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Consumer</category>
+    <desc lang="en">This is TV Show - Consumer Category.</desc>
+    <icon src="https://iptv-epg.org/images/tO1Ofz_KRzE29J2Qz0KVwO3G3lEiIHO1J8m2CqMzPKdjxz2TPfZ1Zf2jQeUyB9r_j11YqnJtE69uZwVp3FnYCDKvc6iUuY6s5CmLD-YMxlQ_SrFcxtX17LoNfPnOfA" />
+    <title lang="en">Teleshopping</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261011111500 +0530" stop="20261011134700 +0530">
-    <title>Bengal Tiger</title>
-    <desc>Akash, a simple man, falls in love with politician Gajapathi's daughter, Meera. However, on learning the identity of Akash's father, Gajapathi suspects that he wants revenge for a past transgression.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2015</date>
+  <programme start="20261011054500 +0000" stop="20261011081700 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
     <credits>
       <director>Sampath Nandi</director>
       <actor>Ravi Teja</actor>
@@ -374004,14 +373519,13 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
       <actor>Rao Ramesh</actor>
       <producer>K.K. Radha Mohan</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p12393416_v_h10_aa.jpg?lock=1280x720" />
+    <desc lang="en">Akash, a simple man, falls in love with politician Gajapathi's daughter, Meera. However, on learning the identity of Akash's father, Gajapathi suspects that he wants revenge for a past transgression.</desc>
+    <icon src="https://iptv-epg.org/images/s1zdTALnXapc31GeipbsPTd_Hjj6aiFqgiuUXP9kkkIjFWoLoplLvdQS2etmaGycwujY5CdLl2iR0eaFBVkGORwdDtpRtrZBaVjDKOYNi5HBXzsiXw58Wwy_fNL_" />
+    <title lang="en">Bengal Tiger</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261011134700 +0530" stop="20261011162100 +0530">
-    <title>Nagavalli</title>
-    <desc>Aditya is a police officer whose life takes a miserable turn when his wife, Rajeshwari, experiences strange hallucinations. He realises how helpless he is feeling as his past returns to haunt him.</desc>
-    <category>Film</category>
-    <category>Drama</category>
-    <date>2012</date>
+  <programme start="20261011081700 +0000" stop="20261011105100 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Drama</category>
     <credits>
       <director>Kumar</director>
       <actor>Nedumudi Venu</actor>
@@ -374027,14 +373541,13 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
       <producer>A. Narasimha</producer>
       <producer>A Keshav</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p14811896_v_h10_aa.jpg?lock=1280x720" />
+    <desc lang="en">Aditya is a police officer whose life takes a miserable turn when his wife, Rajeshwari, experiences strange hallucinations. He realises how helpless he is feeling as his past returns to haunt him.</desc>
+    <icon src="https://iptv-epg.org/images/y8pDA7ssBJdaIqE3VG_8lIvluiblhpfC90zAytATdsKmPHYPTL7egWinWt2P5ic9dAdZiv0s8OuBfEHjic5ASHd86ybLx57jWwokiGPe47dGh1Ad-sIyVJwwpX6x" />
+    <title lang="en">Nagavalli</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261011162100 +0530" stop="20261011190000 +0530">
-    <title>Dochai</title>
-    <desc>Conman Chandu stumbles upon a large sum of money that can solve all his problems. However, this places him in the crosshairs of a corrupt policeman and a fearsome crime boss.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2015</date>
+  <programme start="20261011105100 +0000" stop="20261011133000 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
     <credits>
       <director>Sudheer Varma</director>
       <actor>Naga Chaitanya Akkineni</actor>
@@ -374048,14 +373561,13 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
       <actor>Sapthagiri</actor>
       <producer>B.V.S.N. Prasad</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p11710258_b_h10_al.jpg?lock=1280x720" />
+    <desc lang="en">Conman Chandu stumbles upon a large sum of money that can solve all his problems. However, this places him in the crosshairs of a corrupt policeman and a fearsome crime boss.</desc>
+    <icon src="https://iptv-epg.org/images/b5mrw2NeOcFZ5cSyyf8ZA9tlRdYhtGXGxLxLYGpqNNs6un6yofaowXYqNsqGFzZ9vCts5qNK21xZSw1J6V95L6HpKYxl7ZbuaUFUCOVidOUIEvEh3Oe-BnlYIYK_" />
+    <title lang="en">Dochai</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261011190000 +0530" stop="20261011214800 +0530">
-    <title>Poojai</title>
-    <desc>A temple priest gives evidence in court about a murder that he has witnessed. Unfortunately for him, he bears witness against an influential landlord.</desc>
-    <category>Film</category>
-    <category>Thriller</category>
-    <date>2014</date>
+  <programme start="20261011133000 +0000" stop="20261011161800 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Thriller</category>
     <credits>
       <director>Hari</director>
       <actor>Vishal</actor>
@@ -374069,14 +373581,13 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
       <actor>Prathap K. Pothan</actor>
       <producer>Vishal</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p11188899_b_h10_ad.jpg?lock=1280x720" />
+    <desc lang="en">A temple priest gives evidence in court about a murder that he has witnessed. Unfortunately for him, he bears witness against an influential landlord.</desc>
+    <icon src="https://iptv-epg.org/images/n1IwXhuNUz5udUvfpgeSkl9Jml0-OODh8HPTCf2rKB5LSbuLjYfnpyYSewC83C3EtfeeivA4S0LsPxm56qn4CKYNcSxvrDf_-zLAYt9y-XBGVj-7wWGyseyLtBI8" />
+    <title lang="en">Poojai</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261011214800 +0530" stop="20261012002400 +0530">
-    <title>Chatrapathi</title>
-    <desc>Separated from his family during a conflict, a refugee embarks on a mission to reunite with his adoptive family. However, he faces several challenges after his foster brother conspires against him.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2005</date>
+  <programme start="20261011161800 +0000" stop="20261011185400 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
     <credits>
       <director>S.S. Rajamouli</director>
       <actor>Prabhas</actor>
@@ -374089,14 +373600,13 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
       <actor>Venu Madhav</actor>
       <producer>B.V.S.N. Prasad</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p11525991_b_h8_ag.jpg?lock=1280x720" />
+    <desc lang="en">Separated from his family during a conflict, a refugee embarks on a mission to reunite with his adoptive family. However, he faces several challenges after his foster brother conspires against him.</desc>
+    <icon src="https://iptv-epg.org/images/tvbir6PtgS8PDdDwhlYOd28VeLd3t7onh_p55MxY0FDg_LxXnuMJ_qYNwXI_H3nMYPz6FL2aDCx9b4Pral4jZ_38QyzYHX4bMdyRaSDY8EbLIwqWMlq_6R-Qfm2dFA" />
+    <title lang="en">Chatrapathi</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261012002400 +0530" stop="20261012020200 +0530">
-    <title>Baasha</title>
-    <desc>Bound by a promise to his late father, a gangster becomes an autorickshaw driver. However, when his past catches up with him, he must choose between succumbing to his old ways and keeping his word.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>1995</date>
+  <programme start="20261011185400 +0000" stop="20261011203200 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
     <credits>
       <director>Suresh Krishna</director>
       <actor>Ranjnikanth</actor>
@@ -374109,14 +373619,13 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
       <producer>V Rajammal</producer>
       <producer>V. Thamilazhagan</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p10048677_v_h11_aa.jpg?lock=1280x720" />
+    <desc lang="en">Bound by a promise to his late father, a gangster becomes an autorickshaw driver. However, when his past catches up with him, he must choose between succumbing to his old ways and keeping his word.</desc>
+    <icon src="https://iptv-epg.org/images/6pl-e9qpyPk0xK1aOL7RhJQ88vCXV5UMIXMLCYT6aVC_LPbwbz0MH0lA6siNVRgNBNF0rUzzguDaXs-DIawHi_FRnuO72smAyFQUGM8u66jlEQiAB6tAkmYaHXm_" />
+    <title lang="en">Baasha</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261012020200 +0530" stop="20261012033900 +0530">
-    <title>Rang Rasiya</title>
-    <desc>A young and talented Raja Ravi Varma trains under the king of Kerala. He moves to Bombay and meets Sugandha, who initially discredits his artwork but later becomes his muse.</desc>
-    <category>Film</category>
-    <category>Drama</category>
-    <date>2008</date>
+  <programme start="20261011203200 +0000" stop="20261011220900 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Drama</category>
     <credits>
       <director>Ketan Mehta</director>
       <actor>Randeep Hooda</actor>
@@ -374127,21 +373636,20 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
       <actor>Jim Boeven</actor>
       <actor>Feryna Wazheir</actor>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p14553972_v_h10_aa.jpg?lock=1280x720" />
+    <desc lang="en">A young and talented Raja Ravi Varma trains under the king of Kerala. He moves to Bombay and meets Sugandha, who initially discredits his artwork but later becomes his muse.</desc>
+    <icon src="https://iptv-epg.org/images/PsvW1Osr7SnYacUsaRW-w25VJJVw0qCVfqxoA5-nJjHVp5PhNSXUIO2oPf4FVSgPm8oR-q3EVVV4onHNUXOl-DN7oBJotVyfq5yhl03qA45cqH6rYFtTWJKXLBS_6g" />
+    <title lang="en">Rang Rasiya</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261012033900 +0530" stop="20261012034100 +0530">
-    <title>Directer Cut</title>
-    <desc>Bringing the best in television.</desc>
-    <category>TV Show</category>
-    <category>Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29039007_b_h8_aa.jpg?lock=1280x720" />
+  <programme start="20261011220900 +0000" stop="20261011221100 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/48vuUS3HURDL9e-YrnpmEckZBu3ZyQ8_E3ZOcDrBGOfAaBSe2n0i_rAWjFCsIJ-hMwBwX24-PeS4FgD_cS9Mt3Jm1QlVKJ23E7Ly7sGEnPnBgnG--4D8LprHC_lHDQ" />
+    <title lang="en">Directer Cut</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261012034100 +0530" stop="20261012045900 +0530">
-    <title>Kirumi</title>
-    <desc>Kathir, a young man, informs the police about illegal activities and the culprits get arrested. Later, they are released and decide to murder him and his family.</desc>
-    <category>Film</category>
-    <category>Crime</category>
-    <date>2015</date>
+  <programme start="20261011221100 +0000" stop="20261011232900 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Crime</category>
     <credits>
       <director>Anucharan Murugaiyan</director>
       <actor>Kathir</actor>
@@ -374158,21 +373666,20 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
       <producer>M. Jayaraman</producer>
       <producer>S. Rajendran</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p12180360_b_h10_aa.jpg?lock=1280x720" />
+    <desc lang="en">Kathir, a young man, informs the police about illegal activities and the culprits get arrested. Later, they are released and decide to murder him and his family.</desc>
+    <icon src="https://iptv-epg.org/images/e2B9o-ZIcI7_IPqa6eU0a3fPQUjxB6hdCB3kFoqWEnVbo6kGZfkZ9BYRee4ZweRgznKkV6DmEslzcR3Oq_Su844xrd5RBRnO7rFrxaOaEWk3ofKhX58U03a6_muNQA" />
+    <title lang="en">Kirumi</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261012045900 +0530" stop="20261012062900 +0530">
-    <title>Teleshopping</title>
-    <desc>This is TV Show - Consumer Category</desc>
-    <category>TV Show</category>
-    <category>Consumer</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29154371_b_h8_aa.jpg?lock=1280x720" />
+  <programme start="20261011232900 +0000" stop="20261012005900 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Consumer</category>
+    <desc lang="en">This is TV Show - Consumer Category.</desc>
+    <icon src="https://iptv-epg.org/images/tO1Ofz_KRzE29J2Qz0KVwO3G3lEiIHO1J8m2CqMzPKdjxz2TPfZ1Zf2jQeUyB9r_j11YqnJtE69uZwVp3FnYCDKvc6iUuY6s5CmLD-YMxlQ_SrFcxtX17LoNfPnOfA" />
+    <title lang="en">Teleshopping</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261012062900 +0530" stop="20261012083500 +0530">
-    <title>Yugandhar</title>
-    <desc>Poor villagers, who are evicted from their lands and forced to become anti-social elements, struggle to get their property back. They get treated as outcasts by the government.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>1993</date>
+  <programme start="20261012005900 +0000" stop="20261012030500 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
     <credits>
       <director>N. Chandra</director>
       <actor>Mithun Chakravarty</actor>
@@ -374180,21 +373687,20 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
       <actor>Sangeeta Bijlani</actor>
       <actor>Gulshan Grover</actor>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p8218437_v_h10_aa.jpg?lock=1280x720" />
+    <desc lang="en">Poor villagers, who are evicted from their lands and forced to become anti-social elements, struggle to get their property back. They get treated as outcasts by the government.</desc>
+    <icon src="https://iptv-epg.org/images/5iUYhhlmH8OM89JSSOqVGbpjyl1_TfcsfKTKobwokZTsqKpkH6Mxl4fCcKlELdiaWLrJL7_bcroZ2N7wJweuEcPS-104XqG_Bf9nMf8HNi9CDNSRRRxBA6KZIJx-" />
+    <title lang="en">Yugandhar</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261012083500 +0530" stop="20261012085000 +0530">
-    <title>Teleshopping</title>
-    <desc>This is TV Show - Consumer Category</desc>
-    <category>TV Show</category>
-    <category>Consumer</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29154371_b_h8_aa.jpg?lock=1280x720" />
+  <programme start="20261012030500 +0000" stop="20261012032000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Consumer</category>
+    <desc lang="en">This is TV Show - Consumer Category.</desc>
+    <icon src="https://iptv-epg.org/images/tO1Ofz_KRzE29J2Qz0KVwO3G3lEiIHO1J8m2CqMzPKdjxz2TPfZ1Zf2jQeUyB9r_j11YqnJtE69uZwVp3FnYCDKvc6iUuY6s5CmLD-YMxlQ_SrFcxtX17LoNfPnOfA" />
+    <title lang="en">Teleshopping</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261012085000 +0530" stop="20261012110000 +0530">
-    <title>Yugandhar</title>
-    <desc>Poor villagers, who are evicted from their lands and forced to become anti-social elements, struggle to get their property back. They get treated as outcasts by the government.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>1993</date>
+  <programme start="20261012032000 +0000" stop="20261012053000 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
     <credits>
       <director>N. Chandra</director>
       <actor>Mithun Chakravarty</actor>
@@ -374202,21 +373708,20 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
       <actor>Sangeeta Bijlani</actor>
       <actor>Gulshan Grover</actor>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p8218437_v_h10_aa.jpg?lock=1280x720" />
+    <desc lang="en">Poor villagers, who are evicted from their lands and forced to become anti-social elements, struggle to get their property back. They get treated as outcasts by the government.</desc>
+    <icon src="https://iptv-epg.org/images/5iUYhhlmH8OM89JSSOqVGbpjyl1_TfcsfKTKobwokZTsqKpkH6Mxl4fCcKlELdiaWLrJL7_bcroZ2N7wJweuEcPS-104XqG_Bf9nMf8HNi9CDNSRRRxBA6KZIJx-" />
+    <title lang="en">Yugandhar</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261012110000 +0530" stop="20261012111500 +0530">
-    <title>Teleshopping</title>
-    <desc>This is TV Show - Consumer Category</desc>
-    <category>TV Show</category>
-    <category>Consumer</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29154371_b_h8_aa.jpg?lock=1280x720" />
+  <programme start="20261012053000 +0000" stop="20261012054500 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Consumer</category>
+    <desc lang="en">This is TV Show - Consumer Category.</desc>
+    <icon src="https://iptv-epg.org/images/tO1Ofz_KRzE29J2Qz0KVwO3G3lEiIHO1J8m2CqMzPKdjxz2TPfZ1Zf2jQeUyB9r_j11YqnJtE69uZwVp3FnYCDKvc6iUuY6s5CmLD-YMxlQ_SrFcxtX17LoNfPnOfA" />
+    <title lang="en">Teleshopping</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261012111500 +0530" stop="20261012140200 +0530">
-    <title>Rakshasudu</title>
-    <desc>After getting appointed as an inspector, Arun undertakes a mission to track down a notorious serial killer who targets teen girls.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2019</date>
+  <programme start="20261012054500 +0000" stop="20261012083200 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
     <credits>
       <director>Ramesh Varma</director>
       <actor>Bellamkonda Sreenivas</actor>
@@ -374232,27 +373737,26 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
       <actor>Ravi Prakash</actor>
       <producer>Satyanarayana Koneru</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p17206807_b_h10_ag.jpg?lock=1280x720" />
+    <desc lang="en">After getting appointed as an inspector, Arun undertakes a mission to track down a notorious serial killer who targets teen girls.</desc>
+    <icon src="https://iptv-epg.org/images/yaIDakbga8RsdMgbDYMilnWEpmUoRsqaEOcE645S1kR6KP8f8HuTpazZJH6dN_txQubFXckUvNDoiESGDfuemy1-7uMTUNdDPuDU1hFhbty_1nws1QEf1nIhfALIcg" />
+    <title lang="en">Rakshasudu</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261012140200 +0530" stop="20261012163300 +0530">
-    <title>BUSINESSMEN</title>
-    <desc>This is Film - Drama Category</desc>
-    <category>Film</category>
-    <category>Drama</category>
-    <date>2023</date>
+  <programme start="20261012083200 +0000" stop="20261012110300 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Drama</category>
     <credits>
       <actor>Stan Nze</actor>
       <actor>Ifeanyi Kalu</actor>
       <actor>Lucy Ameh</actor>
       <actor>Laren Kinstone</actor>
     </credits>
+    <desc lang="en">This is Film - Drama Category.</desc>
+    <icon src="https://iptv-epg.org/images/Rb2rZ11FEmF-PckDUYDea0TZbUGtCReZpaZdGxIcZ6JXuXrpXiAR74YEgyOCKuXGfeu4CCsyze-iXKFH2z8rc4xaniZAxpd2T1OqLb4wDChlOs5xWd95BOiznM2X8-a4ofqZRxTcHIRIulGLYw9A1eWqNYgkwerdZHQOV09fFHt4ibKvGrLukghEI5msAHeqfafwgw" />
+    <title lang="en">BUSINESSMEN</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261012163300 +0530" stop="20261012190000 +0530">
-    <title>Baanam</title>
-    <desc>Bhagath, who is the son of a former Naxalite, lives in a small town. He aspires to become an IPS officer so that he can protect the public from the tyranny of Shakti, a local don.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2009</date>
+  <programme start="20261012110300 +0000" stop="20261012133000 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
     <credits>
       <director>Chaitanya Dantuluri</director>
       <actor>Nara Rohit</actor>
@@ -374263,14 +373767,13 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
       <actor>Rajeev Kanakala</actor>
       <producer>Seshu Priyanka Chalasani</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p7858159_b_h8_ab.jpg?lock=1280x720" />
+    <desc lang="en">Bhagath, who is the son of a former Naxalite, lives in a small town. He aspires to become an IPS officer so that he can protect the public from the tyranny of Shakti, a local don.</desc>
+    <icon src="https://iptv-epg.org/images/xzB3PiNdAy-cs4Xqxr3P4NIAVLmSdw6e179woAq2aU0RiJbM8ucl_4XpdTn-m6Xd0-jXzDguyST7gIRIbsDiNmEX0pt23ZIlb9k7plfAqfoWGvHfC4Qncv3rXXpk" />
+    <title lang="en">Baanam</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261012190000 +0530" stop="20261012213100 +0530">
-    <title>Si3</title>
-    <desc>When a police officer discovers a powerful gangster behind a gruesome murder, he vows to dismantle the gangster's tyranny.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2017</date>
+  <programme start="20261012133000 +0000" stop="20261012160100 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
     <credits>
       <director>Hari</director>
       <actor>Suriya</actor>
@@ -374282,14 +373785,13 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
       <actor>Nassar</actor>
       <actor>Radha Ravi</actor>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p13607364_v_h10_ab.jpg?lock=1280x720" />
+    <desc lang="en">When a police officer discovers a powerful gangster behind a gruesome murder, he vows to dismantle the gangster's tyranny.</desc>
+    <icon src="https://iptv-epg.org/images/25Ipbf-huAQZGmgmDlAYfH1-jBApqtabSPT0QL3Qu5Nr5Fg_H4f2IiwVB8UMVvYg9G3w-th2h9SojikBapXcBWFvhkL6NKx-Kv-4ngk1lg9x2YOvOBUI4dQHvPS8dA" />
+    <title lang="en">Si3</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261012213100 +0530" stop="20261013002900 +0530">
-    <title>The Villain</title>
-    <desc>Ramu sets out to find his estranged brother, Rama, to reunite him with their mother. However, Ramu soon discovers that Rama is a mafia don, which makes it difficult for Ramu to approach his brother.</desc>
-    <category>Film</category>
-    <category>Thriller</category>
-    <date>2018</date>
+  <programme start="20261012160100 +0000" stop="20261012185900 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Thriller</category>
     <credits>
       <director>Prem</director>
       <actor>Shivarajkumar</actor>
@@ -374305,14 +373807,13 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
       <actor>Kote Prabhakar</actor>
       <producer>C.R. Manohar</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p16137428_b_h8_ab.jpg?lock=1280x720" />
+    <desc lang="en">Ramu sets out to find his estranged brother, Rama, to reunite him with their mother. However, Ramu soon discovers that Rama is a mafia don, which makes it difficult for Ramu to approach his brother.</desc>
+    <icon src="https://iptv-epg.org/images/-mIyNdYWvkbedOWl2Ifz6OwLbqxfaQpznA5ZpGNiR8KigjpMqyQkQRUosP82N6vjo78M0UYcddzmg1Qpn1G2vTzA15TJR3faURTndVTIF4LVQ3PmQb5CUxKkXpWPUA" />
+    <title lang="en">The Villain</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261013002900 +0530" stop="20261013021000 +0530">
-    <title>Nagesh Thiraiyarangam</title>
-    <desc>Nagesh tries to make his ends meet by working as a real estate broker. He tries to sell his ancestral property for his sister's wedding, but soon paranormal occurrences become a part of his life.</desc>
-    <category>Film</category>
-    <category>Horror</category>
-    <date>2018</date>
+  <programme start="20261012185900 +0000" stop="20261012204000 +0000" channel="staging.dhinchaak">
+    <category lang="en">Film</category>
+    <category lang="en">Horror</category>
     <credits>
       <director>Mohamad Issack</director>
       <actor>Aari Arujunan</actor>
@@ -374325,48 +373826,176 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
       <actor>Athulya Ravi</actor>
       <producer>Rajendra M Rajan</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p22601990_b_h10_aa.jpg?lock=1280x720" />
+    <desc lang="en">Nagesh tries to make his ends meet by working as a real estate broker. He tries to sell his ancestral property for his sister's wedding, but soon paranormal occurrences become a part of his life.</desc>
+    <icon src="https://iptv-epg.org/images/Rb2rZ11FEmF-PckDUYDea0TZbUGtCReZpaZdGxIcZ6JXuXrpXiAR74YEgyOCKuXGfeu4CCsyze-iXKFH2z8rc4xaniZAxpd2T1OqLb4wDChlOs5xWd95BOiznM2X8-a4ofqZRxTcHIRIulGLYw9A1eWqNYgkwerdZHQOV09fFHt4ibKvGrLukghEI5msAHeqfafwgw" />
+    <title lang="en">Nagesh Thiraiyarangam</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261013021000 +0530" stop="20261013060000 +0530">
-    <title>Movie</title>
-    <desc>Bringing the best in television.</desc>
-    <category>TV Show</category>
-    <category>Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p809737_b_h8_af.jpg?lock=1280x720" />
+  <programme start="20261012204000 +0000" stop="20261013003000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261013060000 +0530" stop="20261013100000 +0530">
-    <title>Movie</title>
-    <desc>Bringing the best in television.</desc>
-    <category>TV Show</category>
-    <category>Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p809737_b_h8_af.jpg?lock=1280x720" />
+  <programme start="20261013003000 +0000" stop="20261013043000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261013100000 +0530" stop="20261013140000 +0530">
-    <title>Movie</title>
-    <desc>Bringing the best in television.</desc>
-    <category>TV Show</category>
-    <category>Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p809737_b_h8_af.jpg?lock=1280x720" />
+  <programme start="20261013043000 +0000" stop="20261013083000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261013140000 +0530" stop="20261013180000 +0530">
-    <title>Movie</title>
-    <desc>Bringing the best in television.</desc>
-    <category>TV Show</category>
-    <category>Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p809737_b_h8_af.jpg?lock=1280x720" />
+  <programme start="20261013083000 +0000" stop="20261013123000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261013180000 +0530" stop="20261013220000 +0530">
-    <title>Movie</title>
-    <desc>Bringing the best in television.</desc>
-    <category>TV Show</category>
-    <category>Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p809737_b_h8_af.jpg?lock=1280x720" />
+  <programme start="20261013123000 +0000" stop="20261013163000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
   </programme>
-  <programme channel="staging.dhinchaak" start="20261013220000 +0530" stop="20261014020000 +0530">
-    <title>Movie</title>
-    <desc>Bringing the best in television.</desc>
-    <category>TV Show</category>
-    <category>Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p809737_b_h8_af.jpg?lock=1280x720" />
+  <programme start="20261013163000 +0000" stop="20261013203000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261013203000 +0000" stop="20261014003000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261014003000 +0000" stop="20261014043000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261014043000 +0000" stop="20261014083000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261014083000 +0000" stop="20261014123000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261014123000 +0000" stop="20261014163000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261014163000 +0000" stop="20261014203000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261014203000 +0000" stop="20261015003000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261015003000 +0000" stop="20261015043000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261015043000 +0000" stop="20261015083000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261015083000 +0000" stop="20261015123000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261015123000 +0000" stop="20261015163000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261015163000 +0000" stop="20261015203000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261015203000 +0000" stop="20261016003000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261016003000 +0000" stop="20261016043000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261016043000 +0000" stop="20261016083000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261016083000 +0000" stop="20261016123000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261016123000 +0000" stop="20261016163000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
+  </programme>
+  <programme start="20261016163000 +0000" stop="20261016203000 +0000" channel="staging.dhinchaak">
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <desc lang="en">Bringing the best in television.</desc>
+    <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
+    <title lang="en">Movie</title>
   </programme>
 </tv>
