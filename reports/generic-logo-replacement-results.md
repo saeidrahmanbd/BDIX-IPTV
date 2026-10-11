@@ -2,17 +2,17 @@
 
 This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.
 
-- Run time: 2026-10-11 12:05 UTC
+- Run time: 2026-10-11 12:07 UTC
 - IPTV-org dataset: loaded
-- Unique generic assets examined: 75
+- Unique generic assets examined: 74
 - Successful replacements: 2
-- Unresolved/manual review: 73
+- Unresolved/manual review: 72
 
 ## Replacements
 
 | Channel | Former generic file | New local file | Source | License / attribution |
 |---|---|---|---|---|
-| Radio Gaan Baksho | nvisionbd-radio-gaan-baksho.svg | [nvisionbd-official-radio-gaan-baksho.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-gaan-baksho.png) | [RadioSpinner Bangladeshi radio logo reference](https://github.com/junguler/m3u-radio-music-playlists/blob/4f7f422c65652805edf56a71b7ab17ac417b2755/radio_spinner/bangladeshi.m3u) | Station artwork; reuse rights not specified |
+| Persiana Travel | nvisionbd-persiana-travel.svg | [nvisionbd-official-persiana-travel.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-persiana-travel.png) | [Ayna OTT logo reference in a public playlist](https://github.com/judy-gotv/iptv/blob/fb3fc31b1d46c2aef55bcadbe5f0be65ab3c5796/BD.m3u) | Logo image; reuse rights not specified |
 | The Q | nvisionbd-the-q.svg | [nvisionbd-official-the-q.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-the-q.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/india/the-q-in.png) | No license file found in source repository |
 
 ## Unresolved — retained for manual source verification
@@ -62,7 +62,6 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Nat Geo Bangla | nvisionbd-nat-geo-bangla.svg | No unique source-verified channel logo found |
 | Niki Jr Kids | nvisionbd-niki-jr-kids.svg | No unique source-verified channel logo found |
 | Palki FM | nvisionbd-palki-fm.svg | No unique source-verified channel logo found |
-| Persiana Travel | nvisionbd-persiana-travel.svg | Lookup/download/validation error: source bytes are not a supported channel image |
 | Pk Ten Cricket | nvisionbd-pk-ten-cricket.svg | No unique source-verified channel logo found |
 | Power Turk | nvisionbd-power-turk.svg | No unique source-verified channel logo found |
 | Radio Adamya | nvisionbd-radio-adamya.svg | No unique source-verified channel logo found |
