@@ -61,8 +61,9 @@ EPG_ALIASES = {
     "skysportspremiereleague.uk": ["SkySportsPremierLeague.uk", "SkySp.PL.HD.uk", "SkySp.PL.uk"],
 }
 
-# Hard locks for mappings that have been manually verified against the live channel.
-# Locked identities must not be broadened again by the automatic coverage mapper.
+# Narrow service-level mapping locks backed by exact provider/EPG ID evidence.
+# Do not use these locks to translate a regional or domestic channel to a
+# similarly named channel from another country. Locked mappings stay exact.
 EPG_LOCKS = {
     "ColorsCineplex.in@SD": ["543298"],
     "IqraBangla.uk": ["3914"],
