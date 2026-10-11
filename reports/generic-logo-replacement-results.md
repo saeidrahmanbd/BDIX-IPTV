@@ -2,18 +2,21 @@
 
 This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.
 
-- Run time: 2026-10-11 12:09 UTC
+- Run time: 2026-10-11 12:12 UTC
 - IPTV-org dataset: loaded
-- Unique generic assets examined: 73
-- Successful replacements: 2
-- Unresolved/manual review: 71
+- Unique generic assets examined: 72
+- Successful replacements: 5
+- Unresolved/manual review: 67
 
 ## Replacements
 
 | Channel | Former generic file | New local file | Source | License / attribution |
 |---|---|---|---|---|
+| Be.joy Kids | nvisionbd-be-joy-kids.svg | [nvisionbd-official-be-joy-kids.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-be-joy-kids.png) | [IPTV-org exact unique channel name: BeJoykids.it](https://bejoy.kids/wp-content/uploads/2025/09/Logo_Bejoy.png) | IPTV-org public logo dataset ([license](https://github.com/iptv-org/database)) |
+| ETV | nvisionbd-etv.svg | [nvisionbd-official-etv.jpg](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-etv.jpg) | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Logo-etv.jpg) | CC BY-SA 4.0 ([license](https://creativecommons.org/licenses/by-sa/4.0)) |
+| Fail Army | nvisionbd-fail-army.svg | [nvisionbd-official-fail-army.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-fail-army.png) | [IPTV-org exact unique channel name: FailArmy.us](https://i.imgur.com/VIpQJxL.png) | IPTV-org public logo dataset ([license](https://github.com/iptv-org/database)) |
+| Filmua Drama | nvisionbd-filmua-drama.svg | [nvisionbd-official-filmua-drama.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-filmua-drama.png) | [IPTV-org exact unique channel name: FilmUADrama.ua](https://i.imgur.com/Hnwsh5d.png) | IPTV-org public logo dataset ([license](https://github.com/iptv-org/database)) |
 | The Q | nvisionbd-the-q.svg | [nvisionbd-official-the-q.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-the-q.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/india/the-q-in.png) | No license file found in source repository |
-| Uttorbango Betar | nvisionbd-uttorbango-betar.svg | [nvisionbd-official-uttorbango-betar.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-uttorbango-betar.png) | [Public Bangladesh radio playlist exact logo reference](https://github.com/junguler/m3u-radio-music-playlists/blob/4f7f422c65652805edf56a71b7ab17ac417b2755/radio-ly/bd.m3u) | Station artwork; reuse rights not specified |
 
 ## Unresolved — retained for manual source verification
 
@@ -33,7 +36,6 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Bangla Hits | nvisionbd-bangla-hits.svg | No unique source-verified channel logo found |
 | Banijoy Mr Been | nvisionbd-banijoy-mr-been.svg | No unique source-verified channel logo found |
 | Bd Radio FM | nvisionbd-bd-radio-fm.svg | No unique source-verified channel logo found |
-| Be.joy Kids | nvisionbd-be-joy-kids.svg | No unique source-verified channel logo found |
 | Blockbaster HD | nvisionbd-blockbaster.svg | No unique source-verified channel logo found |
 | Cafe Film | nvisionbd-cafe-film.svg | No unique source-verified channel logo found |
 | Cartoon Channel | nvisionbd-cartoon-channel.svg | No unique source-verified channel logo found |
@@ -44,12 +46,9 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Dream Music Prime | nvisionbd-dream-music-prime.svg | No unique source-verified channel logo found |
 | English Premier League 2 | nvisionbd-english-premier-league-2.svg | No unique source-verified channel logo found |
 | Espn5 HD | nvisionbd-espn5.svg | No unique source-verified channel logo found |
-| ETV | nvisionbd-etv.svg | No unique source-verified channel logo found |
-| Fail Army | nvisionbd-fail-army.svg | No unique source-verified channel logo found |
 | Fashion 1 | nvisionbd-fashion-1.svg | No unique source-verified channel logo found |
 | Fight 24/7 | nvisionbd-fight-24-7.svg | No unique source-verified channel logo found |
-| Filmua Drama | nvisionbd-filmua-drama.svg | No unique source-verified channel logo found |
-| Flo Racing | nvisionbd-flo-racing.svg | No unique source-verified channel logo found |
+| Flo Racing | nvisionbd-flo-racing.svg | Lookup/download/validation error: all logo image URLs failed: HTTP Error 403: Forbidden |
 | Global Panjab | nvisionbd-global-panjab.svg | Lookup/download/validation error: all logo image URLs failed: <urlopen error [Errno -3] Temporary failure in name resolution> |
 | Hindi Big Boss 24x7 2026 | nvisionbd-hindi-big-boss-24x7-2026.svg | No unique source-verified channel logo found |
 | Htv Sport | nvisionbd-htv-sport.svg | No unique source-verified channel logo found |
