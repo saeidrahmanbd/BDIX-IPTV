@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="203" viewBox="0 0 360 203">
+<defs><linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#14aebd"/><stop offset="1" stop-color="#0b3b52"/></linearGradient><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe39a"/><stop offset="1" stop-color="#ffb93f"/></linearGradient></defs>
+<g stroke-linecap="round" stroke-linejoin="round">
+<path d="M66 31 Q88 4 110 31 M58 38 Q88 1 118 38 M50 45 Q88 -7 126 45" fill="none" stroke="#30dccd" stroke-width="3"/>
+<rect x="22" y="43" width="117" height="117" rx="20" fill="#0b2233" stroke="#30dccd" stroke-width="4"/>
+<rect x="37" y="59" width="87" height="86" rx="13" fill="url(#panel)"/>
+<path d="M46 83h15l19 20 19-20h15l-26 31v23H72v-23z" fill="#fff"/>
+<path d="M76 116h8v21h-8z" fill="#ffb93f"/>
+<text x="160" y="107" fill="#f6fbff" font-family="DejaVu Sans,Arial,sans-serif" font-weight="900" font-size="52">YET</text>
+<text x="163" y="137" fill="#30dccd" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700" font-size="12" letter-spacing=".5">TELEVISION</text>
+<path d="M163 145h152" stroke="url(#gold)" stroke-width="4"/>
+<text x="278" y="135" fill="#ffb93f" font-family="DejaVu Sans,Arial,sans-serif" font-weight="900" font-size="22">TV</text>
+</g></svg>

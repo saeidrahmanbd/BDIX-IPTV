@@ -2223,7 +2223,7 @@ https://livetv.tarangplus.in/tarangtv-origin/live/playlist.m3u8
 https://vokta.raytahost.com/live/voktatv/index.m3u8
 #EXTINF:-1 tvg-id="YETMax.in@HD" tvg-name="YET Max" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/yet-max.png" channel-id="YETMax.in@HD" group-title="New Channels",YET Max
 https://live.yettelevision.com:5443/LiveApp/streams/yettv2.m3u8
-#EXTINF:-1 tvg-id="YETTV.in@HD" tvg-name="YET TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/placeholder-yet-tv.png" channel-id="YETTV.in@HD" group-title="New Channels",YET TV
+#EXTINF:-1 tvg-id="YETTV.in@HD" tvg-name="YET TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/yet-tv-custom.png" channel-id="YETTV.in@HD" group-title="New Channels",YET TV
 https://live.yettelevision.com:5443/LiveApp/streams/yettv.m3u8
 #EXTINF:-1 tvg-id="ZeeDilSe.in@HD" tvg-name="Zee Dil Se" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-dil-se.png" channel-id="ZeeDilSe.in@HD" group-title="New Channels",Zee Dil Se
 https://amg00862-amg00862c6-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c6-amgplt0173/playlist.m3u8
