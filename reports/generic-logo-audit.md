@@ -1,6 +1,6 @@
 # Generic Channel Logo Audit — Three Playlists
 
-Audit date: 2026-10-11 11:55 UTC  
+Audit date: 2026-10-11 11:57 UTC  
 Repository: https://github.com/saeidrahmanbd/BDIX-IPTV  
 Method: scans current playlist metadata and checks referenced local SVG files for the generic CHANNEL MARK template.
 
@@ -10,9 +10,9 @@ Method: scans current playlist metadata and checks referenced local SVG files fo
 |---|---:|---:|
 | IPTV-Playlist.m3u | 1145 | 0 |
 | BDIX-Playlist.m3u | 217 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 86 |
+| NVisionBD-Playlist.m3u | 561 | 84 |
 
-Current NVisionBD placeholder assets: **86 unique files**.
+Current NVisionBD placeholder assets: **84 unique files**.
 
 ## Remaining affected NVisionBD channel labels
 
@@ -63,7 +63,6 @@ Current NVisionBD placeholder assets: **86 unique files**.
 - Magical Blade FM
 - Moner Radio
 - Nat Geo Bangla
-- Nexus Television
 - Niki Jr Kids
 - Palki FM
 - Persiana Travel
@@ -99,7 +98,6 @@ Current NVisionBD placeholder assets: **86 unique files**.
 - Whiples Cinema
 - Wifm 100.9
 - Wild Life
-- Wow Kids
 - Xrema Accion
 - Xtrem Sports
 

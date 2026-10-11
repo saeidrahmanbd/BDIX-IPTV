@@ -2,23 +2,19 @@
 
 This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.
 
-- Run time: 2026-10-11 11:55 UTC
+- Run time: 2026-10-11 11:57 UTC
 - IPTV-org dataset: loaded
-- Unique generic assets examined: 93
-- Successful replacements: 7
-- Unresolved/manual review: 86
+- Unique generic assets examined: 87
+- Successful replacements: 3
+- Unresolved/manual review: 84
 
 ## Replacements
 
 | Channel | Former generic file | New local file | Source | License / attribution |
 |---|---|---|---|---|
-| Afra Film | nvisionbd-afra-film.svg | [nvisionbd-official-afra-film.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-afra-film.png) | [AFRA Film official page](https://afratv.com/AFRAFILM.html) | Broadcaster logo served on its official website |
-| Amar Ujala | nvisionbd-amar-ujala.svg | [nvisionbd-official-amar-ujala.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-amar-ujala.png) | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Amar_Ujala_Logo.png) | Public domain text logo ([license](https://creativecommons.org/publicdomain/zero/1.0/)) |
-| Cricbuzz | nvisionbd-cricbuzz.svg | [nvisionbd-official-cricbuzz.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-cricbuzz.png) | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cricbuzz_Logo.png) | Public domain text logo ([license](https://creativecommons.org/publicdomain/zero/1.0/)) |
-| Madani TV Bangla | nvisionbd-madani-tv-bangla.svg | [nvisionbd-official-madani-tv-bangla.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-madani-tv-bangla.png) | [Madani Channel Bangla Live listing](https://muslimandquran.com/islamic-media/live-islamic-tv-channels/madani-channel-bangla-live) | Station logo shown on third-party channel listing |
-| News 18 Assam | nvisionbd-news-18-assam.svg | [nvisionbd-official-news-18-assam.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-news-18-assam.png) | [Seeklogo News18 Assam brand listing](https://seeklogo.com/vector-logo/606384/news18-assam) | Source listing; reuse rights not specified |
-| Oman Sports | nvisionbd-oman-sports.svg | [nvisionbd-official-oman-sports.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-oman-sports.png) | [IPTV-org Oman Sports TV channel page](https://iptv-org.github.io/channels/om/OmanSportsTV) | Station logo sourced from IPTV-org channel listing |
+| Nexus Television | nvisionbd-nexus-television.svg | [nvisionbd-official-nexus-television.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-nexus-television.png) | [Nexus Television channel article](https://en.wikipedia.org/wiki/Nexus_Television) | File license applies; see source page |
 | The Q | nvisionbd-the-q.svg | [nvisionbd-official-the-q.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-the-q.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/india/the-q-in.png) | No license file found in source repository |
+| Wow Kids | nvisionbd-wow-kids.svg | [wow-kidz.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz.png) | [Existing verified repository asset](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) | Existing repository asset |
 
 ## Unresolved — retained for manual source verification
 
@@ -71,7 +67,6 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Magical Blade FM | nvisionbd-magical-blade-fm.svg | No unique source-verified channel logo found |
 | Moner Radio | nvisionbd-moner-radio.svg | No unique source-verified channel logo found |
 | Nat Geo Bangla | nvisionbd-nat-geo-bangla.svg | No unique source-verified channel logo found |
-| Nexus Television | nvisionbd-nexus-television.svg | Lookup/download/validation error: HTTP Error 404: Not Found |
 | Niki Jr Kids | nvisionbd-niki-jr-kids.svg | No unique source-verified channel logo found |
 | Palki FM | nvisionbd-palki-fm.svg | No unique source-verified channel logo found |
 | Persiana Travel | nvisionbd-persiana-travel.svg | No unique source-verified channel logo found |
@@ -107,6 +102,5 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Whiples Cinema | nvisionbd-whiples-cinema.svg | No unique source-verified channel logo found |
 | Wifm 100.9 | nvisionbd-wifm-100-9.svg | No unique source-verified channel logo found |
 | Wild Life | nvisionbd-wild-life.svg | No unique source-verified channel logo found |
-| Wow Kids | nvisionbd-wow-kids.svg | No unique source-verified channel logo found |
 | Xrema Accion | nvisionbd-xrema-accion.svg | No unique source-verified channel logo found |
 | Xtrem Sports | nvisionbd-xtrem-sports.svg | No unique source-verified channel logo found |

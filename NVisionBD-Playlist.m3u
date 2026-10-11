@@ -431,7 +431,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1zH4xz2
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2LrsAsrryCIzgimBH-8YnR
 #EXTINF:-1 xui-id="18678" tvg-id="custom.my.time.movie" tvg-name="My Time Movie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-my-time-movie.png" tvg-chno="213" channel-id="custom.my.time.movie" group-title="International",My Time Movie
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2wxML5qkpZihuOOsgdACKg
-#EXTINF:-1 xui-id="180699" tvg-id="custom.nexus.television" tvg-name="Nexus Television" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-nexus-television.svg" tvg-chno="214" channel-id="custom.nexus.television" group-title="International",Nexus Television
+#EXTINF:-1 xui-id="180699" tvg-id="custom.nexus.television" tvg-name="Nexus Television" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-nexus-television.png" tvg-chno="214" channel-id="custom.nexus.television" group-title="International",Nexus Television
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3-JbCFoo2CcX1DIht_kWJO
 #EXTINF:-1 xui-id="180042" tvg-id="custom.power.turk" tvg-name="Power Turk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-power-turk.svg" tvg-chno="215" channel-id="custom.power.turk" group-title="International",Power Turk
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0LLIS34vZQKH5N1cg3g0l9
@@ -597,7 +597,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ZmqlMh
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-17XcTxyiubhWkDx_Q_tDaC
 #EXTINF:-1 xui-id="179504" tvg-id="custom.tom.and.jerry.tv" tvg-name="Tom & Jerry TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tom-and-jerry.png" tvg-chno="296" channel-id="custom.tom.and.jerry.tv" group-title="Kids",Tom & Jerry TV
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0o4xh3SzrIIhxKFhpoe_32
-#EXTINF:-1 xui-id="180784" tvg-id="custom.wow.kids" tvg-name="Wow Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-wow-kids.svg" tvg-chno="297" channel-id="custom.wow.kids" group-title="Kids",Wow Kids
+#EXTINF:-1 xui-id="180784" tvg-id="custom.wow.kids" tvg-name="Wow Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz.png" tvg-chno="297" channel-id="custom.wow.kids" group-title="Kids",Wow Kids
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3XH5Ux12Ki4r9LGDqrMhYq
 #EXTINF:-1 xui-id="180053" tvg-id="custom.zb.cartoon" tvg-name="ZB Cartoon" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zb-cartoon.png" tvg-chno="298" channel-id="custom.zb.cartoon" group-title="Kids",ZB Cartoon
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0nxzBQPNCLtZy33wyP47zy
