@@ -108,6 +108,7 @@ DIRECT_PAGE_HINTS = {
     "Radio Zenith FM": ("https://zeno.fm/radio/radio-zenith-fm/", True),
     "Dream Music Prime": ("https://zeno.fm/radio/dream-music-prime/", True),
     "Wifm 100.9": ("https://www.wifmradio.com/", False),
+    "Tapmad": ("https://www.tapmad.com/", False),
 }
 
 
@@ -613,7 +614,18 @@ def get_iptv_org_candidate(channel_label, tvg_id, indexes):
     key = clean_channel_name(channel_label)
     ids = name_to_ids.get(key, set())
     if len(ids) != 1:
-        return None
+        # Some channel catalogs write a brand as one token (10TV) while the
+        # playlist uses a separator (10 TV). Accept this only if the compact
+        # spelling resolves to one unique channel ID across all known aliases.
+        compact_key = re.sub(r"\\s+", "", key)
+        compact_ids = set()
+        for alias, alias_ids in name_to_ids.items():
+            if re.sub(r"\\s+", "", alias) == compact_key:
+                compact_ids.update(alias_ids)
+        if len(compact_ids) == 1:
+            ids = compact_ids
+        else:
+            return None
     candidate_id = next(iter(ids))
     logo = choose_iptv_logo(candidate_id, logos_by_id)
     if not logo:
@@ -943,6 +955,18 @@ def main():
                     except Exception as download_error:
                         last_download_error = download_error
                         new_file = None
+                if not new_file and channel in DIRECT_PAGE_HINTS:
+                    # Retry from the official/station page if a direct image URL
+                    # was dead or blocked. Only logo-marked images are accepted.
+                    page_url, allow_og_image = DIRECT_PAGE_HINTS[channel]
+                    try:
+                        page_logo = find_page_logo(page_url, allow_og_image=allow_og_image)
+                        if page_logo:
+                            new_file = download_to_repo(page_logo, channel, "")
+                            candidate["page"] = page_url
+                            source += " (station-page image fallback)"
+                    except Exception as page_error:
+                        last_download_error = page_error
                 if not new_file:
                     raise ValueError("all logo image URLs failed: " + str(last_download_error)[:140])
                 source_page = candidate.get("page", "")
