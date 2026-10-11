@@ -22,7 +22,7 @@ def main():
     e=parse(); a=read(AUDIT); g=read(EPG); h=read(HEALTH); gate=read(GATE)
     gm=re.search(r'Status:\s*\*\*(PASS|BLOCK)\*\*',gate); gate_status=gm.group(1) if gm else "UNKNOWN"
     groups=Counter(x.get("group-title","") for x in e)
-    active_groups={"Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","International","Documentary & Wildlife","Kids","Religious","Sports"}
+    active_groups={"Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports"}
     active=len({x.get("tvg-id") or x.get("channel-id") for x in e if x.get("group-title") in active_groups and (x.get("tvg-id") or x.get("channel-id"))})
     primary_streams=sum(1 for x in e if x.get("group-title") in active_groups)
     local=metric(a,"Healthy/local references"); logos=round(local*100/len(e),1) if e else 0
