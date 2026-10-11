@@ -199,7 +199,7 @@ jobs:
           git commit -m 'Run NVisionBD playlist maintenance'
           for attempt in 1 2 3; do
             git fetch origin main
-            git rebase origin/main || { git rebase --abort; exit 1; }
+            git rebase -X theirs origin/main || { git rebase --abort; exit 1; }
             if git push origin HEAD:main; then exit 0; fi
             sleep 3
           done
