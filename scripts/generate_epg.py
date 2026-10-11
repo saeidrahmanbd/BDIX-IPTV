@@ -81,6 +81,32 @@ def playlist_channels():
                 out.setdefault(tvg_id, name)
     return out
 
+def playlist_groups():
+    """Return the first active group for each playlist identity."""
+    groups = {}
+    for playlist_path in PLAYLISTS:
+        if not playlist_path.exists():
+            continue
+        for line in playlist_path.read_text(encoding="utf-8-sig").splitlines():
+            if not line.startswith("#EXTINF:"):
+                continue
+            attrs = {}
+            for m in re.finditer(r'([\w-]+)="([^"]*)"', line):
+                attrs[m[1]] = m[2]
+            group = attrs.get("group-title", "").strip()
+            tvg_id = attrs.get("tvg-id", "").strip()
+            if tvg_id and group not in INACTIVE_GROUPS:
+                groups.setdefault(tvg_id, group)
+    return groups
+
+
+# Hindi/Devanagari programme metadata is often attached to a Bengali channel
+# by a cross-provider ID/name collision. Never publish those titles as if they
+# were Bengali listings. Prefer valid Bengali/Latin titles from another mapped
+# provider; if none exist, leave that programme slot unlisted rather than lie.
+DEVANAGARI_RE = re.compile(r"[\u0900-\u097F]")
+TEXT_FIELDS = {"title", "sub-title", "desc"}
+
 def load_mapping():
     # One source XMLTV ID may supply several playlist-specific tvg-ids.
     reverse = {}
@@ -320,6 +346,7 @@ def infer_source_offsets(records):
 
 def main():
     channels = playlist_channels()
+    groups = playlist_groups()
     reverse = load_mapping()
     print(f"EPG generator inputs: active playlist IDs={len(channels)}; source-to-playlist mapping IDs={len(reverse)}; mapping file={MAPPING}; exists={MAPPING.exists()}")
     if not channels:
@@ -366,12 +393,25 @@ def main():
                 title = (elem.findtext("title") or "").strip()
                 children = clone_children(elem)
                 for target in targets:
+                    # Indian Bangla channels must not inherit Hindi-script EPG
+                    # titles from a mismatched source feed. Continue collecting
+                    # other providers for this channel where available.
+                    is_indian_bangla = groups.get(target) == "Indian Bangla"
+                    if is_indian_bangla and DEVANAGARI_RE.search(title):
+                        continue
+                    safe_children = []
+                    for child in children:
+                        if child.tag in TEXT_FIELDS and DEVANAGARI_RE.search(child.text or ""):
+                            # A Hindi-script subtitle/description is also not
+                            # useful on a Bengali channel; discard that field.
+                            continue
+                        safe_children.append(ET.fromstring(ET.tostring(child, encoding="utf-8")))
                     attrs = dict(elem.attrib)
                     attrs["channel"] = target
                     rec = {
                         "attrs": attrs,
                         "title": title,
-                        "children": [ET.fromstring(ET.tostring(child, encoding="utf-8")) for child in children],
+                        "children": safe_children,
                         "start_dt": start_dt,
                         "stop_dt": stop_dt,
                         "source_index": source_index,
