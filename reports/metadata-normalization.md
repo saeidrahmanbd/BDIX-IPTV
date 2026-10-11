@@ -1,6 +1,6 @@
 # Playlist Metadata Normalization
 
-- Entries processed: **1186**
-- Primary channel numbers added: **71**
+- Entries processed: **1145**
+- Primary channel numbers added: **30**
 - Logo references repaired: **0**
 - Backup/review entries normalized: **474**
