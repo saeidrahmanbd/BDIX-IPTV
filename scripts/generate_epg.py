@@ -324,7 +324,7 @@ def main():
     if not channels or not reverse:
         raise SystemExit("No usable playlist/EPG mappings found")
 
-mapped_targets = {}
+    mapped_targets = {}
     for source_id, targets in reverse.items():
         for target in targets:
             if target in channels:
