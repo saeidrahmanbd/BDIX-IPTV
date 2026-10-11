@@ -5,7 +5,7 @@ Scope: public XMLTV feeds and channel-ID catalogues for the Bangladesh-group cha
 
 ## Result
 
-**No reliable Bangladesh-domestic XMLTV feed was verified in the public sources checked.** However, one actively published schedule source provides exact programme data for the UK-specific channel **ATN Bangla UK**, and this exact match has now been added for `ATNBanglaUK.uk` only. No local `.bd` IDs were mapped, playlist IDs were not altered, and no programme data was synthesized.
+**No reliable Bangladesh-domestic XMLTV feed was verified in the public sources checked.** However, one actively published schedule source provides exact programme data for the UK/diaspora services **ATN Bangla UK**, **Deen TV**, and **Iqra Bangla**. The exact matches are limited to those service-specific playlist IDs; no domestic `.bd` identities have been mapped. No local `.bd` IDs were mapped, playlist IDs were not altered, and no programme data was synthesized.
 
 This is a negative finding for the sources checked, not proof that no private or broadcaster-internal feed exists.
 
@@ -39,7 +39,7 @@ The [iptv-org/epg CA1 channel configuration](https://github.com/iptv-org/epg/blo
 
 These are source/site identifiers, not verified native `.bd` IDs; the corresponding `epg_ripper_CA1.txt` endpoint returned 404 during this check. They are excluded from eligible sources until a live feed and current programme data can be verified.
 
-The active `nasimali/epg-auto` guide supplies numeric ID `3914` with programme rows for Iqra Bangla; the existing repository lock `IqraBangla.uk` → `3914` remains scoped to the UK service. The published guide also includes `6753` for ATN Bangla UK. These diaspora mappings do not establish coverage for the domestic `ATNBangla.bd`, `NTV.bd`, or other `.bd` IDs.
+The active `nasimali/epg-auto` guide supplies numeric ID `3914` with programme rows for Iqra Bangla; the existing repository lock `IqraBangla.uk` → `3914` remains scoped to the UK service. The published guide also includes `6753` for ATN Bangla UK and `1235` for Deen TV. These diaspora mappings do not establish coverage for the domestic `ATNBangla.bd`, `NTV.bd`, or other `.bd` IDs.
 
 ## Playlist channel identities to preserve
 
@@ -59,8 +59,9 @@ A feed can be promoted to the production source list only after all of the follo
 
 | Playlist ID | XMLTV source ID | Evidence | Scope |
 |---|---|---|---|
-| `ATNBanglaUK.uk` | `6753` | Active merged XMLTV has programme rows for 6753; Sky channel catalogue identifies 6753 as ATN Bangla UK. | UK service only |
-| `IqraBangla.uk` | `3914` | Active merged XMLTV has programme rows for 3914; current repository lock already uses this exact source ID. | UK service only |
+| `ATNBanglaUK.uk` | `6753` | Active merged XMLTV has programme rows for 6753; the Sky channel catalogue identifies 6753 as ATN Bangla UK. | UK service only |
+| `DeenTV.uk` | `1235` | Active merged XMLTV has programme rows for 1235; the Sky channel catalogue identifies 1235 as Deen TV. | UK service only |
+| `IqraBangla.uk` | `3914` | Active merged XMLTV has programme rows for 3914; current repository lock already uses this exact source ID, and the Sky channel catalogue identifies 3914 as Iqra Bangla. | UK service only |
 
 The merged XMLTV file uses generic display-name values such as `Channel 6753`; the identification is confirmed against the separate Sky channel catalogue rather than inferred from that placeholder display-name. Some other IDs in the feed have conflicting or commented-out mappings in public catalogues (for example 5426 and 3815), so they were deliberately **not** applied.
 
