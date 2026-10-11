@@ -2,16 +2,27 @@
 
 This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.
 
-- Run time: 2026-10-11 11:39 UTC
+- Run time: 2026-10-11 11:43 UTC
 - IPTV-org dataset: loaded
 - Unique generic assets examined: 142
-- Successful replacements: 0
-- Unresolved/manual review: 142
+- Successful replacements: 11
+- Unresolved/manual review: 131
 
 ## Replacements
 
 | Channel | Former generic file | New local file | Source | License / attribution |
 |---|---|---|---|---|
+| Boomerang UK | nvisionbd-boomerang-uk.svg | [nvisionbd-official-boomerang-uk.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-boomerang-uk.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/boomerang-uk.png) | No license file found in source repository |
+| Digi Sport 1 | nvisionbd-digi-sport-1.svg | [nvisionbd-official-digi-sport-1.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-digi-sport-1.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/romania/digi-sport-1-ro.png) | No license file found in source repository |
+| Digi Sport 2 | nvisionbd-digi-sport-2.svg | [nvisionbd-official-digi-sport-2.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-digi-sport-2.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/romania/digi-sport-2-ro.png) | No license file found in source repository |
+| Epic | nvisionbd-epic.svg | [nvisionbd-official-epic.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-epic.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/india/epic-in.png) | No license file found in source repository |
+| Fashion TV HD | nvisionbd-fashion-tv.svg | [nvisionbd-official-fashion-tv.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-fashion-tv.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/international/fashion-tv-int.png) | No license file found in source repository |
+| Laff TV | nvisionbd-laff-tv.svg | [nvisionbd-official-laff-tv.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-laff-tv.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/laff-us.png) | No license file found in source repository |
+| Movie Sphere | nvisionbd-movie-sphere.svg | [nvisionbd-official-movie-sphere.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-movie-sphere.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/movie-sphere-us.png) | No license file found in source repository |
+| Premier Sports 1 | nvisionbd-premier-sports-1.svg | [nvisionbd-official-premier-sports-1.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-premier-sports-1.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/premier-sports-1-uk.png) | No license file found in source repository |
+| The Q | nvisionbd-the-q.svg | [nvisionbd-official-the-q.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-the-q.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/india/the-q-in.png) | No license file found in source repository |
+| Tsn Aq1 | nvisionbd-tsn-aq1.svg | [nvisionbd-official-tsn-aq1.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-tsn-aq1.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/canada/tsn-ca.png) | No license file found in source repository |
+| Ziggo Sport Live | nvisionbd-ziggo-sport.svg | [nvisionbd-official-ziggo-sport-live.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-ziggo-sport-live.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/netherlands/ziggo-sport-nl.png) | No license file found in source repository |
 
 ## Unresolved — retained for manual source verification
 
@@ -40,7 +51,6 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Bd Radio FM | nvisionbd-bd-radio-fm.svg | No unique source-verified channel logo found |
 | Be.joy Kids | nvisionbd-be-joy-kids.svg | No unique source-verified channel logo found |
 | Blockbaster HD | nvisionbd-blockbaster.svg | No unique source-verified channel logo found |
-| Boomerang UK | nvisionbd-boomerang-uk.svg | No unique source-verified channel logo found |
 | Boomerang | nvisionbd-boomerang.svg | No unique source-verified channel logo found |
 | Bt Sports 2 | nvisionbd-bt-sports-2.svg | No unique source-verified channel logo found |
 | BTV Sangsad | nvisionbd-btv-sangsad.svg | No unique source-verified channel logo found |
@@ -53,19 +63,15 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Cowboy Movie Channel | nvisionbd-cowboy-movie-channel.svg | No unique source-verified channel logo found |
 | Cricbuzz | nvisionbd-cricbuzz.svg | No unique source-verified channel logo found |
 | Dhaka FM 90.4 | nvisionbd-dhaka-fm-90-4.svg | No unique source-verified channel logo found |
-| Digi Sport 1 | nvisionbd-digi-sport-1.svg | No unique source-verified channel logo found |
-| Digi Sport 2 | nvisionbd-digi-sport-2.svg | No unique source-verified channel logo found |
 | Digital Fashion | nvisionbd-digital-fashion.svg | No unique source-verified channel logo found |
 | Disney Channel Big City Greens | nvisionbd-disney-channel-big-city-greens.svg | No unique source-verified channel logo found |
 | Doyel Radio | nvisionbd-doyel-radio.svg | No unique source-verified channel logo found |
 | Dream Music Prime | nvisionbd-dream-music-prime.svg | No unique source-verified channel logo found |
 | English Premier League 2 | nvisionbd-english-premier-league-2.svg | No unique source-verified channel logo found |
-| Epic | nvisionbd-epic.svg | No unique source-verified channel logo found |
 | Espn5 HD | nvisionbd-espn5.svg | No unique source-verified channel logo found |
 | ETV | nvisionbd-etv.svg | No unique source-verified channel logo found |
 | Fail Army | nvisionbd-fail-army.svg | No unique source-verified channel logo found |
 | Fashion 1 | nvisionbd-fashion-1.svg | No unique source-verified channel logo found |
-| Fashion TV HD | nvisionbd-fashion-tv.svg | No unique source-verified channel logo found |
 | Fight 24/7 | nvisionbd-fight-24-7.svg | No unique source-verified channel logo found |
 | Filmua Drama | nvisionbd-filmua-drama.svg | No unique source-verified channel logo found |
 | Flo Racing | nvisionbd-flo-racing.svg | No unique source-verified channel logo found |
@@ -79,7 +85,6 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Ind Unite8 Sports 1 HD | nvisionbd-ind-unite8-sports-1.svg | No unique source-verified channel logo found |
 | Kiev Sport HD | nvisionbd-kiev-sport.svg | No unique source-verified channel logo found |
 | Ktv Sports Plus | nvisionbd-ktv-sports-plus.svg | No unique source-verified channel logo found |
-| Laff TV | nvisionbd-laff-tv.svg | No unique source-verified channel logo found |
 | Laliga Live 1 | nvisionbd-laliga-1.svg | No unique source-verified channel logo found |
 | Laliga Live 2 | nvisionbd-laliga-2.svg | No unique source-verified channel logo found |
 | Laligatv | nvisionbd-laligatv.svg | No unique source-verified channel logo found |
@@ -90,7 +95,6 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Magical Blade FM | nvisionbd-magical-blade-fm.svg | No unique source-verified channel logo found |
 | Moner Radio | nvisionbd-moner-radio.svg | No unique source-verified channel logo found |
 | Movie Sphere Au | nvisionbd-movie-sphere-au.svg | No unique source-verified channel logo found |
-| Movie Sphere | nvisionbd-movie-sphere.svg | No unique source-verified channel logo found |
 | My 90s Bengali Online | nvisionbd-my-90s-bengali-online.svg | No unique source-verified channel logo found |
 | My Time Movie | nvisionbd-my-time-movie.svg | No unique source-verified channel logo found |
 | Nat Geo Bangla | nvisionbd-nat-geo-bangla.svg | No unique source-verified channel logo found |
@@ -104,7 +108,6 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Pk Geo Super | nvisionbd-pk-geo-super.svg | No unique source-verified channel logo found |
 | Pk Ten Cricket | nvisionbd-pk-ten-cricket.svg | No unique source-verified channel logo found |
 | Power Turk | nvisionbd-power-turk.svg | No unique source-verified channel logo found |
-| Premier Sports 1 | nvisionbd-premier-sports-1.svg | No unique source-verified channel logo found |
 | Radio Adamya | nvisionbd-radio-adamya.svg | No unique source-verified channel logo found |
 | Radio Bangla Rock | nvisionbd-radio-bangla-rock.svg | No unique source-verified channel logo found |
 | Radio Bangladesh Co | nvisionbd-radio-bangladesh-co.svg | No unique source-verified channel logo found |
@@ -138,9 +141,7 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Sports Grid | nvisionbd-sports-grid.svg | No unique source-verified channel logo found |
 | Star Cinema | nvisionbd-star-cinema.svg | No unique source-verified channel logo found |
 | Tapmad | nvisionbd-tapmad.svg | No unique source-verified channel logo found |
-| The Q | nvisionbd-the-q.svg | No unique source-verified channel logo found |
 | TNT Sport 1 | nvisionbd-tnt-sport-1.svg | No unique source-verified channel logo found |
-| Tsn Aq1 | nvisionbd-tsn-aq1.svg | No unique source-verified channel logo found |
 | UK TNT Sports 1 HD | nvisionbd-uk-tnt-sports-1.svg | No unique source-verified channel logo found |
 | UK TNT Sports 2 HD | nvisionbd-uk-tnt-sports-2.svg | No unique source-verified channel logo found |
 | UK TNT Sports 3 HD | nvisionbd-uk-tnt-sports-3.svg | No unique source-verified channel logo found |
@@ -158,4 +159,3 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Wow Kids | nvisionbd-wow-kids.svg | No unique source-verified channel logo found |
 | Xrema Accion | nvisionbd-xrema-accion.svg | No unique source-verified channel logo found |
 | Xtrem Sports | nvisionbd-xtrem-sports.svg | No unique source-verified channel logo found |
-| Ziggo Sport Live | nvisionbd-ziggo-sport.svg | No unique source-verified channel logo found |

@@ -1,6 +1,6 @@
 # Generic Channel Logo Audit — Three Playlists
 
-Audit date: 2026-10-11 11:39 UTC  
+Audit date: 2026-10-11 11:43 UTC  
 Repository: https://github.com/saeidrahmanbd/BDIX-IPTV  
 Method: scans current playlist metadata and checks referenced local SVG files for the generic CHANNEL MARK template.
 
@@ -10,9 +10,9 @@ Method: scans current playlist metadata and checks referenced local SVG files fo
 |---|---:|---:|
 | IPTV-Playlist.m3u | 1145 | 0 |
 | BDIX-Playlist.m3u | 217 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 142 |
+| NVisionBD-Playlist.m3u | 561 | 131 |
 
-Current NVisionBD placeholder assets: **142 unique files**.
+Current NVisionBD placeholder assets: **131 unique files**.
 
 ## Remaining affected NVisionBD channel labels
 
@@ -41,7 +41,6 @@ Current NVisionBD placeholder assets: **142 unique files**.
 - Be.joy Kids
 - Blockbaster HD
 - Boomerang
-- Boomerang UK
 - Bt Sports 2
 - Cafe Film
 - Cartoon Channel
@@ -52,20 +51,16 @@ Current NVisionBD placeholder assets: **142 unique files**.
 - Cowboy Movie Channel
 - Cricbuzz
 - Dhaka FM 90.4
-- Digi Sport 1
-- Digi Sport 2
 - Digital Fashion
 - Disney Channel Big City Greens
 - Doyel Radio
 - Dream Music Prime
 - ETV
 - English Premier League 2
-- Epic
 - Espn5 HD
 - FX TV
 - Fail Army
 - Fashion 1
-- Fashion TV HD
 - Fight 24/7
 - Filmua Drama
 - Flo Racing
@@ -78,7 +73,6 @@ Current NVisionBD placeholder assets: **142 unique files**.
 - Ind Unite8 Sports 1 HD
 - Kiev Sport HD
 - Ktv Sports Plus
-- Laff TV
 - Laliga Live 1
 - Laliga Live 2
 - Laligatv
@@ -88,7 +82,6 @@ Current NVisionBD placeholder assets: **142 unique files**.
 - Magenta Sports 2
 - Magical Blade FM
 - Moner Radio
-- Movie Sphere
 - Movie Sphere Au
 - My 90s Bengali Online
 - My Time Movie
@@ -103,7 +96,6 @@ Current NVisionBD placeholder assets: **142 unique files**.
 - Pk Geo Super
 - Pk Ten Cricket
 - Power Turk
-- Premier Sports 1
 - Radio Adamya
 - Radio Bangla Rock
 - Radio Bangladesh Co
@@ -138,8 +130,6 @@ Current NVisionBD placeholder assets: **142 unique files**.
 - Star Cinema
 - TNT Sport 1
 - Tapmad
-- The Q
-- Tsn Aq1
 - UK TNT Sports 1 HD
 - UK TNT Sports 2 HD
 - UK TNT Sports 3 HD
@@ -157,7 +147,6 @@ Current NVisionBD placeholder assets: **142 unique files**.
 - Wow Kids
 - Xrema Accion
 - Xtrem Sports
-- Ziggo Sport Live
 
 ## Scope and quality rules
 
