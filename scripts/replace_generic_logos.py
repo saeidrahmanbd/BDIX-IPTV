@@ -20,12 +20,14 @@ def fetch_json(url):
         return json.loads(response.read().decode("utf-8"))
 
 def is_generic(relative):
-    relative_path = Path(relative)
-    # Playlist references may be "logos/name.svg" or just "name.svg".
+    # Playlist logo values are usually raw.githubusercontent.com URLs.
+    from urllib.parse import urlparse, unquote
+    parsed_path = unquote(urlparse(relative).path) if "://" in relative else relative
+    relative_path = Path(parsed_path)
     parts = relative_path.parts
     if parts and parts[0] == "logos":
         relative_path = Path(*parts[1:])
-    path = LOGOS / relative_path
+    path = LOGOS / relative_path.name
     if path.suffix.lower() != ".svg" or not path.is_file():
         return False
     return "CHANNEL MARK" in path.read_text(encoding="utf-8", errors="ignore").upper()
