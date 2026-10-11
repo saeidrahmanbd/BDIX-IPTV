@@ -10,7 +10,6 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **DD Chandana** (DDChandana.in@SD): source ID 543175 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **DD Kashir** (DDKashir.in@SD): source ID 543500 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **DD Kisan** (DDKisan.in@SD): source ID 543191 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
-- **DD Malayalam** (DDMalayalam.in@SD): source ID 543259 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **DD Odia** (DDOdia.in@SD): source ID 543028 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **DD Rajasthan** (DDRajasthan.in@SD): source ID 543060 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **DD Sahyadri** (DDSahyadri.in@SD): source ID 543462 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
@@ -19,17 +18,21 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **Isai Aruvi** (IsaiAruvi.in@SD): source ID ts647 from https://avkb.short.gy/tsepg.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **MNX** (MNX.in@SD): source ID 543194 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Movies Now** (MoviesNow.in@SD): source ID 543174 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
-- **MN+** (MoviesNowPlus.in@SD): source ID 543209 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
-- **PTC Chakde** (PTCChakde.in@SD): source ID 543198 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Pitaara TV** (Pitaara.in@SD): source ID 543026 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Pogo** (Pogo.in@SD): source ID 543393 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Polimer TV** (PolimerTV.in@SD): source ID 543431 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Raj Musix Kannada** (RajMusixKannada.in@SD): source ID 543078 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Raj TV** (RajTV.in@SD): source ID 543033 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Shemaroo Marathi Bana** (ShemarooMarathiBana.in@SD): source ID 543104 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Sony Sports Ten 5** (SonySportsTen5.in): source ID SONY.SPORTS.TEN.5.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by +8 hours after repeated cross-source agreement.
-- **Sony Yay** (SonyYay.in@SD): source ID 543317 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Star Movies** (StarMovies.in@SD): source ID 543187 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Star Sports 3** (StarSports3.in@SD): source ID 543366 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Tarang Music** (TarangMusic.in@SD): source ID 543280 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Tarang TV** (TarangTV.in@SD): source ID 543140 from https://epg.pw/xmltv/epg_IN.xml shifted by +16 hours after repeated cross-source agreement.
 - **Vissa TV** (VissaTV.in@SD): source ID 543439 from https://epg.pw/xmltv/epg_IN.xml shifted by +16 hours after repeated cross-source agreement.
+- **Epic** (custom.epic): source ID 543171 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Isai Aruvi TV** (custom.isai.aruvi.tv): source ID ts647 from https://avkb.short.gy/tsepg.xml.gz shifted by -24 hours after repeated cross-source agreement.
+- **Discovery HD** (hmair.discoveryhd): source ID 543256 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **POGO** (hmair.pogo): source ID 543393 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 
-Detected source-ID corrections: **27**
+Detected source-ID corrections: **30**

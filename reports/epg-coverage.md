@@ -1,16 +1,16 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-11T13:22:32+00:00**
+Generated: **2026-10-11T13:47:14+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **299**
-- Channels with an EPG mapping: **243**
-- Current/future programme coverage: **233/299 (77.9%)**
-- No guide mapping found: **56**
+- Active Indian channels audited: **341**
+- Channels with an EPG mapping: **274**
+- Current/future programme coverage: **263/341 (77.1%)**
+- No guide mapping found: **67**
 
 ## Source Status
 
@@ -20,7 +20,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 528 channel IDs; 528 current/future IDs; 19095 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml — 690 channel IDs; 636 current/future IDs; 65191 programme rows
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 379 current/future IDs; 33488 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 766 channel IDs; 760 current/future IDs; 81863 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 766 channel IDs; 759 current/future IDs; 81863 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1484 channel IDs; 1457 current/future IDs; 94875 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 280 channel IDs; 280 current/future IDs; 13607 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 112 channel IDs; 99 current/future IDs; 24088 programme rows
@@ -42,23 +42,33 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Entertainment | Prarthana TV | PrarthanaTV.in@SD | Prarthana.TV.in | MAPPED_ID_ONLY |
 | Indian Music | Steelbird Music | SteelbirdMusic.in@SD | Steelbird.Music.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Suriyan TV | SuriyanTV.in@SD | ts1384 | MAPPED_ID_ONLY |
+| Indian Movies | The Q India | custom.the.q.india | The.Q.India.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Odisha TV | OdishaTV.in@SD | OdishaTV.in | MAPPED_NOT_CURRENTLY_FOUND |
-| Indian Movies | &pictures 2 | new.and.pictures.hd | - | NO_GUIDE_HIT |
 | Indian Music | 7X Punjabi | custom.7x.punjabi | - | NO_GUIDE_HIT |
 | Indian Music | ATN Music | ATNMusic.bd | - | NO_GUIDE_HIT |
+| Indian Movies | Afra Film | custom.afra.film | - | NO_GUIDE_HIT |
+| Indian Music | Afro Music Channel | custom.afro.music.channel | - | NO_GUIDE_HIT |
 | Indian Bangla | Amar Bangla Digital | custom.amar.bangla.digital | - | NO_GUIDE_HIT |
 | Indian Movies | B4U Bhojpuri Plus | B4UBhojpuri.in@Plus | - | NO_GUIDE_HIT |
+| Indian Bangla | Bangla Big Boss 24x7 | custom.bangla.big.boss.24x7 | - | NO_GUIDE_HIT |
 | Indian Bangla | Bangla Plus | BanglaPlus.in | - | NO_GUIDE_HIT |
+| Indian Movies | Biz Cinema | custom.biz.cinema | - | NO_GUIDE_HIT |
+| Indian Movies | Bollywood Classic HD | custom.bollywood.classic | - | NO_GUIDE_HIT |
 | Indian Movies | Bollywood Film | BollywoodFilm.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | C Malayalam TV | CMalayalamTV.ca@SD | - | NO_GUIDE_HIT |
+| Indian Movies | Cafe Film | custom.cafe.film | - | NO_GUIDE_HIT |
 | Indian Bangla | Channel 52 | staging.channel.52 | - | NO_GUIDE_HIT |
 | Indian Movies | Colors Cineplex [UK] | custom.colors.cineplex | - | NO_GUIDE_HIT |
 | Indian Entertainment | Colors MENA | custom.colors.mena | - | NO_GUIDE_HIT |
 | Indian Music | Deewana | DeewanaHD.in | - | NO_GUIDE_HIT |
 | Indian Movies | Epic Bhojpuri Digital | custom.epic.bhojpuri.digital | - | NO_GUIDE_HIT |
+| Indian Music | Euro Indie Music Chart TV | custom.euro.indie.music.chart.tv | - | NO_GUIDE_HIT |
+| Indian Movies | Filmax | custom.filmax | - | NO_GUIDE_HIT |
 | Indian Entertainment | Flowers US | custom.flowers.us | - | NO_GUIDE_HIT |
+| Indian Entertainment | Global Panjab | custom.global.panjab | - | NO_GUIDE_HIT |
 | Indian Movies | Goldmines 2 | Goldmines2.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Goldmines Action | GoldminesAction.in | - | NO_GUIDE_HIT |
+| Indian Entertainment | Hindi Big Boss 24x7 2026 | custom.hindi.big.boss.24x7.2026 | - | NO_GUIDE_HIT |
 | Indian Music | Hindi Hits | HindiHits.in | - | NO_GUIDE_HIT |
 | Indian Movies | Hindi Movie Classic 24 | new.hindi.movie.classic.24 | - | NO_GUIDE_HIT |
 | Indian Movies | Hindi Movies | custom.hindi.movies | - | NO_GUIDE_HIT |
@@ -85,7 +95,9 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Entertainment | SADA TV | SADATV.in | - | NO_GUIDE_HIT |
 | Indian Bangla | SNB Cinema | custom.snb.cinema | - | NO_GUIDE_HIT |
 | Indian Bangla | Sananda | SanandaTV.in | - | NO_GUIDE_HIT |
+| Indian Bangla | Sananda TV | custom.sananda.tv | - | NO_GUIDE_HIT |
 | Indian Movies | Shubh Cinema TV | ShubhCinemaTV.in | - | NO_GUIDE_HIT |
+| Indian Movies | Sine Plus | custom.sine.plus | - | NO_GUIDE_HIT |
 | Indian Entertainment | Sony KAL | SonyKALHindi.us | - | NO_GUIDE_HIT |
 | Indian Movies | Sony Max 2 [US] | custom.sony.max.2 | - | NO_GUIDE_HIT |
 | Indian Entertainment | Sooriyan TV | SooriyanTV.ca@SD | - | NO_GUIDE_HIT |
@@ -103,11 +115,11 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 ## Published Guide Validation
 
 - Playlist EPG references: **OK**
-- Guide channel IDs published: **311**
-- Mapped playlist IDs present in guide: **311/313 (99.4%)**
-- Mapped playlist IDs with current/future programmes: **295/313 (94.2%)**
-- Mapped IDs missing from the published XMLTV channel list: **2**
-- IDs missing from guide: AndTV.in@SD, Enterr10Bangla.in@SD
-- Mapped IDs with no current/future programmes: **16**
-- IDs without current/future programmes (first 30): AndpriveHD.in, ETVBeats.in@HD, FriendsTV.in@SD, ManoranjanPrime.in@SD, OdishaTV.in@SD, OnePaschima.in@SD, PrarthanaTV.in@SD, RupasiBangla.in@SD, Sony.Aath.in, Star.Jalsha.Movies.in, Star.Jalsha.in, SteelbirdMusic.in@SD, SuriyanTV.in@SD, ZeeBangla.in@HD, custom.ekamra.cinema, custom.ekamra.musiq
+- Guide channel IDs published: **415**
+- Mapped playlist IDs present in guide: **415/415 (100.0%)**
+- Mapped playlist IDs with current/future programmes: **393/415 (94.7%)**
+- Mapped IDs missing from the published XMLTV channel list: **0**
+- IDs missing from guide: none
+- Mapped IDs with no current/future programmes: **22**
+- IDs without current/future programmes (first 30): AndpriveHD.in, ETVBeats.in@HD, FriendsTV.in@SD, ManoranjanPrime.in@SD, OdishaTV.in@SD, OnePaschima.in@SD, PrarthanaTV.in@SD, RupasiBangla.in@SD, Sony.Aath.in, Star.Jalsha.Movies.in, Star.Jalsha.in, SteelbirdMusic.in@SD, SunBangla.in@SD, SuriyanTV.in@SD, ZeeBangla.in@HD, ZeeBanglaSonar.in@SD, custom.bdix.aakashaath, custom.ekamra.cinema, custom.ekamra.musiq, custom.the.q.india, hmair.sonyentertainmenttelevision, hmair.sonyentertainmenttelevisionhd
 - This validation is against the guide currently present in the working tree/publish candidate.
