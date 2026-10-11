@@ -1,6 +1,6 @@
 # NVisionBD Playlist Audit
 
-Generated (UTC): **2026-10-11T09:58:22+00:00**
+Generated (UTC): **2026-10-11T10:02:30+00:00**
 
 ## Summary
 
@@ -15,26 +15,26 @@ Generated (UTC): **2026-10-11T09:58:22+00:00**
 
 ## Group Counts
 
-- Backup: **175**
+- Backup: **189**
 - Bangladesh: **48**
 - Documentary & Wildlife: **31**
 - Indian Bangla: **27**
 - Indian Entertainment: **28**
-- Indian Movies: **26**
+- Indian Movies: **25**
 - Indian Music: **16**
-- International: **67**
+- International: **65**
 - Kids: **31**
 - Pakistani: **8**
 - Radio: **46**
 - Religious: **9**
-- Sports: **134**
+- Sports: **123**
 
 ## Stream Probe Summary
 
-- Responsive: **12**
-- Restricted: **0**
-- Dead: **121**
-- Unverified: **513**
+- Responsive: **125**
+- Restricted: **1**
+- Dead: **0**
+- Unverified: **520**
 
 ## Duplicate Stream URLs
 
