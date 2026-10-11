@@ -10,7 +10,12 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-PLAYLIST = Path("IPTV-Playlist.m3u")
+PLAYLISTS = [
+    Path("IPTV-Playlist.m3u"),
+    Path("BDIX-Playlist.m3u"),
+    Path("NVisionBD-Playlist.m3u"),
+]
+INACTIVE_GROUPS = {"Backup", "Test", "Not Playing", "New Backup", "New Channels"}
 MAPPING = Path("reports/epg-india-channel-mapping.csv")
 OUTPUT = Path("epg/epg.xml")
 
@@ -58,21 +63,26 @@ def fetch(url):
     return data
 
 def playlist_channels():
-    lines = PLAYLIST.read_text(encoding="utf-8-sig").splitlines()
+    """Include primary channel IDs from all three playlists, keeping main-list names first."""
     out = {}
-    for line in lines:
-        if line.startswith("#EXTINF:"):
+    for playlist_path in PLAYLISTS:
+        if not playlist_path.exists():
+            continue
+        for line in playlist_path.read_text(encoding="utf-8-sig").splitlines():
+            if not line.startswith("#EXTINF:"):
+                continue
             attrs = {}
-            for m in re.finditer(r'([\w-]+)="([^"]*)"', line):
-                attrs[m.group(1)] = m.group(2)
-            group = attrs.get("group-title", "")
+            for m in re.finditer(r'([\\w-]+)="([^"]*)"', line):
+                attrs[m[1]] = m[2]
+            group = attrs.get("group-title", "").strip()
             tvg_id = attrs.get("tvg-id", "").strip()
             name = attrs.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip()
-            if tvg_id and group not in ("Backup",):
-                out[tvg_id] = name
+            if tvg_id and group not in INACTIVE_GROUPS:
+                out.setdefault(tvg_id, name)
     return out
 
 def load_mapping():
+    # One source XMLTV ID may supply several playlist-specific tvg-ids.
     reverse = {}
     if not MAPPING.exists():
         return reverse
@@ -82,14 +92,11 @@ def load_mapping():
             if not target:
                 continue
             ids = [x.strip() for x in row.get("epg_id", "").split("|") if x.strip()]
-            # Indian Bangla channels use one primary EPG provider only.
-            # Combining schedules from multiple providers can attach another
-            # provider's programme to the correct live channel.
             if row.get("group", "").strip() == "Indian Bangla":
                 ids = ids[:1]
             for source_id in ids:
-                reverse[source_id] = target
-    return reverse
+                reverse.setdefault(source_id, set()).add(target)
+    return {source_id: sorted(targets) for source_id, targets in reverse.items()}
 
 def stamp(value):
     try:
@@ -317,10 +324,11 @@ def main():
     if not channels or not reverse:
         raise SystemExit("No usable playlist/EPG mappings found")
 
-    mapped_targets = {}
-    for source_id, target in reverse.items():
-        if target in channels:
-            mapped_targets.setdefault(target, set()).add(source_id)
+mapped_targets = {}
+    for source_id, targets in reverse.items():
+        for target in targets:
+            if target in channels:
+                mapped_targets.setdefault(target, set()).add(source_id)
     if not mapped_targets:
         raise SystemExit("No mapped playlist channels found in EPG mapping")
 
@@ -341,8 +349,8 @@ def main():
                 if elem.tag != "programme":
                     continue
                 source_id = elem.attrib.get("channel", "").strip()
-                target = reverse.get(source_id)
-                if not target or target not in mapped_targets:
+                targets = [target for target in reverse.get(source_id, []) if target in mapped_targets]
+                if not targets:
                     elem.clear()
                     continue
 
@@ -353,19 +361,21 @@ def main():
                     continue
 
                 title = (elem.findtext("title") or "").strip()
-                attrs = dict(elem.attrib)
-                attrs["channel"] = target
-                rec = {
-                    "attrs": attrs,
-                    "title": title,
-                    "children": clone_children(elem),
-                    "start_dt": start_dt,
-                    "stop_dt": stop_dt,
-                    "source_index": source_index,
-                    "source": src,
-                    "source_id": source_id,
-                }
-                candidates.setdefault((target, source_index, source_id), []).append(rec)
+                children = clone_children(elem)
+                for target in targets:
+                    attrs = dict(elem.attrib)
+                    attrs["channel"] = target
+                    rec = {
+                        "attrs": attrs,
+                        "title": title,
+                        "children": [ET.fromstring(ET.tostring(child, encoding="utf-8")) for child in children],
+                        "start_dt": start_dt,
+                        "stop_dt": stop_dt,
+                        "source_index": source_index,
+                        "source": src,
+                        "source_id": source_id,
+                    }
+                    candidates.setdefault((target, source_index, source_id), []).append(rec)
                 elem.clear()
         except Exception as exc:
             source_stats[src] = f"FAILED: {exc}"

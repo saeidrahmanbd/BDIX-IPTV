@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Build and continuously improve EPG mappings from public XMLTV sources."""
-import csv, gzip, io, re, urllib.request
+import csv, gzip, io, json, re, urllib.request
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
@@ -19,6 +19,8 @@ EPG_ALIASES = {
     "IqraBangla.uk": ["3914"],
     "TamilanTV.in": ["jtv2958", "2958"],
     "SonyKALHindi.us": ["US1#Sony.KAL.us"],
+    "custom.bdix.aakashaath": ["AakaashAath.in"],
+    "Enterr10 Bangla.in": ["ENTER10.BANGLA.in", "Enterr10Bangla.in"],
     # Verified DishTV/XMLTV catalogue aliases for playlist entries whose IDs are local/custom.
     # These only map if an active configured XMLTV source actually contains the exact ID.
     "custom.colors.infinity": ["ColorsInfinity.in@HD", "ColorsInfinity.in@SD"],
@@ -37,6 +39,7 @@ EPG_LOCKS = {
 }
 
 REPORT = Path("reports/epg-coverage.md")
+THREE_PLAYLIST_REPORT = Path("reports/epg-three-playlist-audit.md")
 
 SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
@@ -76,23 +79,39 @@ def parse_stamp(value):
         return dt.astimezone(timezone.utc)
     except ValueError: return None
 
+PLAYLISTS = [
+    Path("IPTV-Playlist.m3u"),
+    Path("BDIX-Playlist.m3u"),
+    Path("NVisionBD-Playlist.m3u"),
+]
+INACTIVE_GROUPS = {"Backup", "Test", "Not Playing", "New Backup", "New Channels"}
+
 def parse_playlist():
-    lines = PLAYLIST.read_text(encoding="utf-8-sig").splitlines()
-    out=[]; cur=None
-    for line in lines:
-        if line.startswith("#EXTINF:"):
-            a=attrs(line)
-            cur={"tvg_id":a.get("tvg-id","").strip(),"name":a.get("tvg-name","").strip() or line.rsplit(",",1)[-1].strip(),
-                 "group":a.get("group-title","").strip(),"country":a.get("tvg-country","").strip().upper()}
-        elif cur and line.strip().startswith(("http://","https://")):
-            if cur["group"] not in ("Backup",):
-                out.append(cur)
-            cur=None
-    seen=set(); result=[]
-    for x in out:
-        key=(x["tvg_id"],x["name"],x["group"])
-        if key not in seen: seen.add(key); result.append(x)
-    return result
+    """Read primary channels from all three playlists, preserving aliases."""
+    combined = {}
+    for playlist_path in PLAYLISTS:
+        if not playlist_path.exists():
+            continue
+        lines = playlist_path.read_text(encoding="utf-8-sig").splitlines()
+        cur = None
+        for line in lines:
+            if line.startswith("#EXTINF:"):
+                a = attrs(line)
+                cur = {
+                    "tvg_id": a.get("tvg-id", "").strip(),
+                    "name": a.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip(),
+                    "group": a.get("group-title", "").strip(),
+                    "country": a.get("tvg-country", "").strip().upper(),
+                }
+            elif cur and line.strip().startswith(("http://", "https://")):
+                if cur["tvg_id"] and cur["group"] not in INACTIVE_GROUPS:
+                    cid, name = cur["tvg_id"], cur["name"]
+                    if cid not in combined:
+                        combined[cid] = {**cur, "aliases": [name]}
+                    elif name and name not in combined[cid]["aliases"]:
+                        combined[cid]["aliases"].append(name)
+                cur = None
+    return sorted(combined.values(), key=lambda x: (x["group"], x["name"].lower(), x["tvg_id"]))
 
 def fetch_source(url):
     req=urllib.request.Request(url,headers={"User-Agent":"BDIX-IPTV-EPG-Maintenance/4.0","Accept":"application/xml,text/xml,application/gzip,*/*"})
@@ -155,7 +174,7 @@ def main():
             candidates += [ch["tvg_id"], re.sub(r"@(?:sd|hd|uhd|fhd)$","",ch["tvg_id"],flags=re.I)]
             candidates += EPG_ALIASES.get(ch["tvg_id"], [])
             candidates=list(dict.fromkeys(x for x in candidates if x))
-        normalized={norm_id(x) for x in candidates}; name_key=norm_name(ch["name"])
+        normalized={norm_id(x) for x in candidates}; name_keys={norm_name(x) for x in ch.get("aliases", [ch["name"]]) if norm_name(x)}
         hits=[]; hit_sources=[]; total=0; live=False
         for src,data in zip(SOURCES,source_data):
             ids,future,counts,names=data
@@ -164,7 +183,11 @@ def main():
             else:
                 src_hits=[x for x in candidates if x in ids]
                 if not src_hits: src_hits=[x for x in ids if norm_id(x) in normalized]
-                if not src_hits: src_hits=list(names.get(name_key,set()))
+                if not src_hits:
+                    name_hits=set()
+                    for name_key in name_keys:
+                        name_hits.update(names.get(name_key, set()))
+                    src_hits=sorted(name_hits)
             if src_hits:
                 hit_sources.append(src)
                 for cid in src_hits:
@@ -261,7 +284,69 @@ def main():
             ]
         except Exception as exc:
             lines += ["", "## Published Guide Validation", "", f"- Validation: **ERROR** — {str(exc)[:220]}"]
-    REPORT.write_text("\n".join(lines)+"\n",encoding="utf-8")
-    print(f"EPG maintenance: India={len(india)} mapped={len(mapped)} live/future={len(live)} no-hit={len(no_hit)}")
+    REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
+    # Cross-playlist audit, based on exact tvg-id matches.
+    playlist_stats = []
+    detail_blocks = []
+    worker_ids = set()
+    worker_path = Path("xtream/worker.js")
+    if worker_path.exists():
+        try:
+            worker_text = worker_path.read_text(encoding="utf-8")
+            match = re.search(r"const EPG_ID_MAP\s*=\s*(\{.*?\});", worker_text, re.S)
+            if match:
+                worker_ids = set(json.loads(match.group(1)).keys())
+        except Exception:
+            worker_ids = set()
+    by_tvg = {r["tvg_id"]: r for r in rows if r.get("tvg_id")}
+    for playlist_path in PLAYLISTS:
+        if not playlist_path.exists():
+            continue
+        file_lines = playlist_path.read_text(encoding="utf-8-sig").splitlines()
+        items = []
+        for line in file_lines:
+            if not line.startswith("#EXTINF:"):
+                continue
+            a = attrs(line)
+            group = a.get("group-title", "").strip()
+            tvg_id = a.get("tvg-id", "").strip()
+            title = a.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip()
+            if tvg_id and group not in INACTIVE_GROUPS:
+                items.append({"id": tvg_id, "name": title, "group": group})
+        primary_ids = {}
+        for item in items:
+            primary_ids.setdefault(item["id"], item)
+        indian = [x for x in primary_ids.values() if x["group"].startswith("Indian")]
+        mapped_ids = [x for x in indian if by_tvg.get(x["id"], {}).get("epg_id")]
+        live_ids = [x for x in indian if by_tvg.get(x["id"], {}).get("status") == "MAPPED"]
+        worker_mapped = [x for x in indian if x["id"] in worker_ids]
+        header = next((line for line in file_lines if line.startswith("#EXTM3U")), "")
+        refs = re.findall(r'(?:url-tvg|x-tvg-url)="([^"]+)"', header)
+        expected = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"
+        header_ok = bool(refs) and all(u == expected for u in refs)
+        total_entries = len([line for line in file_lines if line.startswith("#EXTINF:")])
+        playlist_stats.append((playlist_path.name, total_entries, len(primary_ids), len(indian), len(mapped_ids), len(live_ids), len(worker_mapped), header_ok))
+        missing = [x for x in indian if not by_tvg.get(x["id"], {}).get("epg_id")]
+        detail_blocks += [f"### {playlist_path.name}", ""]
+        if missing:
+            detail_blocks += [f"- Indian-group IDs without an exact mapping: **{len(missing)}/{len(indian)}**", ""]
+            detail_blocks += [", ".join(f'`{x["id"]}` ({x["name"]})' for x in missing), ""]
+        else:
+            detail_blocks += ["- All Indian-group IDs have exact mapping entries.", ""]
+    audit = [
+        "# EPG Audit — Three Playlists", "",
+        "Generated: **" + datetime.now(timezone.utc).date().isoformat() + "**", "",
+        "Coverage uses exact playlist `tvg-id` matches against the shared mapping registry. Current/future counts use mapping status and do not assert stream health.", "",
+        "| Playlist | Entries | Unique primary IDs | Unique Indian IDs | Mapped | Current/future | Xtream map | EPG header |",
+        "|---|---:|---:|---:|---:|---:|---:|---|",
+    ]
+    for name, total, primary_count, india_count, mapped_count, live_count, worker_count, header_ok in playlist_stats:
+        pct = round(mapped_count * 100 / india_count, 1) if india_count else 0
+        live_pct = round(live_count * 100 / india_count, 1) if india_count else 0
+        audit.append(f"| {name} | {total} | {primary_count} | {india_count} | {mapped_count}/{india_count} ({pct}%) | {live_count}/{india_count} ({live_pct}%) | {worker_count}/{india_count} | {'OK' if header_ok else 'MISSING/MISMATCH'} |")
+    audit += ["", "## Channels without mappings", ""] + detail_blocks
+    THREE_PLAYLIST_REPORT.parent.mkdir(parents=True, exist_ok=True)
+    THREE_PLAYLIST_REPORT.write_text("\n".join(audit).rstrip() + "\n", encoding="utf-8")
+    print(f"EPG maintenance: unique IDs={len(channels)}; Indian={len(india)} mapped={len(mapped)} live/future={len(live)} no-hit={len(no_hit)}")
 if __name__=="__main__": main()
