@@ -1,32 +1,38 @@
 # Generic Channel Logo Audit — Three Playlists
 
-Audit date: 2026-10-11 (verified against `main` after the latest playlist commit)  
+Audit date: 2026-10-11  
 Repository: https://github.com/saeidrahmanbd/BDIX-IPTV
 
-## Live playlist integrity
+## Current playlist integrity
 
-| Playlist | Entries | Entries with logo | Entries without logo | Generic-looking logo references | Non-repository logo URLs | Missing local asset paths |
+| Playlist | Entries | Entries with logo | Entries without logo | Known generic-looking logo refs remaining | External-hosted logo refs | Missing local asset paths |
 |---|---:|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1,145 | 1,145 | 0 | 5 filename patterns / repeated references | 0 | 0 |
-| BDIX-Playlist.m3u | 190 | 189 | 1 | 3 filename patterns / 3 entry references; `EPL channel 1` mismatch removed | 5 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 330 | 231 | 0 of the known `channel-1/9/16/24/52.png` and `nvisionbd-*` patterns | 0 | 0 |
+| IPTV-Playlist.m3u | 1,145 | 1,130 | 15 | 0 | 0 | 0 |
+| BDIX-Playlist.m3u | 190 | 186 | 4 | 0 | 5 | 0 |
+| NVisionBD-Playlist.m3u | 561 | 330 | 231 | 0 | 0 | 0 |
 
-## Confirmed findings
+"Known generic-looking" means the specific generic-looking filenames previously identified (`channel-1.png`, `channel-9.png`, `channel-16.png`, `channel-24.png`, `channel-52.png`, and `nvisionbd-*`) are no longer referenced by these three playlists. It does **not** mean every remaining image has been authenticated.
 
-- `IPTV-Playlist.m3u` still references generic-looking `channel-1.png`, `channel-9.png`, `channel-16.png`, `channel-24.png`, and `channel-52.png`. These need image-by-image review; filename-based suspicion is not proof of a fabricated image.
-- `BDIX-Playlist.m3u` still uses `channel-1.png`, `channel-9.png`, and `channel-24.png` for the generic channel labels Channel 1, Channel 9 and Channel 24. The mismatched logo was removed from `EPL channel 1`; its channel entry and stream URL were preserved. Five entries still load images from Toffee's CDN rather than from the repository's `/logos` folder.
-- `NVisionBD-Playlist.m3u` retains all 561 channel entries and stream lines. The three generic-looking logo references (`Channel 1 HD`, `Channel 9 HD`, `Channel 24 HD`) were removed from metadata; no channel or stream entry was deleted.
-- Seventeen logo references were restored from pre-existing local files where the channel identity corresponded to the asset filename/name. The NVisionBD playlist now has 330 logo references and 231 entries left logo-less pending exact source verification.
-- No logo URL in the three playlists points to a missing path in the current repository tree. This checks path integrity only, not whether the actual picture is official or correctly branded.
-- The `logos/` folder has 2,275 image/SVG files, while the three playlists reference 713 distinct local asset paths. Many files appear unused or historical; do not bulk-delete them without checking history and references.
+## Corrective actions applied
 
-## Verification limits
+- Unlinked 15 logo references across the primary and backup entries in `IPTV-Playlist.m3u` that pointed to the five generic-looking `channel-N.png` assets. All **1,145 entries and stream lines were preserved**.
+- Unlinked three generic-looking logo references from `BDIX-Playlist.m3u` for Channel 1, Channel 9 and Channel 24. The mismatched logo for `EPL channel 1` had already been removed. All **190 entries and stream lines were preserved**.
+- In `NVisionBD-Playlist.m3u`, removed generic-looking references for Channel 1 HD, Channel 9 HD and Channel 24 HD, preserved all 561 entries, and restored 17 references to pre-existing repository assets based on channel-name/filename alignment.
+- Missing logo references are intentionally left blank until an exact channel-specific image can be verified. No invented logos were created and no channel entries were deleted.
 
-This is a metadata and asset-path audit plus targeted identity checks. It is **not** a full visual authentication of every logo file. An image is certified only after comparing its actual pixels with a source attributable to the broadcaster/brand. Do not replace an absent logo with invented artwork or a similarly named company's logo.
+## Remaining issues
 
-## Next high-priority actions
+- `IPTV-Playlist.m3u`: 15 entries now have no logo reference pending authentication of the five channel-number assets.
+- `BDIX-Playlist.m3u`: four entries have no logo reference (Channel 1, Channel 9, Channel 24 and EPL channel 1). Five other logo URLs are served from Toffee's CDN; they were not copied into the repository because source terms and reuse rights need review.
+- `NVisionBD-Playlist.m3u`: 231 entries have no logo reference pending source-by-source verification.
+- The repository's previous replacement workflow only detected SVGs containing the `CHANNEL MARK` template. That detection alone is not sufficient to catch suspicious PNG/JPEG filenames or mismatched channel identities.
 
-1. Inspect and replace the five `channel-N.png` patterns in `IPTV-Playlist.m3u` only after the corresponding image is verified against the correct channel.
-2. Review the three remaining generic-looking channel logos in `BDIX-Playlist.m3u`, and localize the five Toffee CDN images into `/logos` only if the fetched images are valid and correspond to their channels.
-3. Continue source-by-source authentication of referenced local assets, prioritizing likely mismatches and images with no recorded provenance.
-4. Update the audit generator so it detects generic PNGs/JPEGs and channel-name mismatches as well as the old SVG `CHANNEL MARK` template. Do not report zero generic logos solely because there are no matching SVG files.
+## Integrity limits
+
+All remaining local logo references checked in this pass point to existing files. This is a path-integrity check, **not** visual authentication. A logo is approved only after comparing the image itself with an official broadcaster/brand source or another attributable reliable source for that exact channel.
+
+## Next actions
+
+1. Authenticate the remaining logo-less entries against exact broadcaster/brand sources; restore only verified assets.
+2. Inspect other referenced logos for visual identity mismatches, watermarks, and unrelated brands.
+3. Expand automated checks to flag generic-looking raster filenames and suspicious channel-name/logo combinations without automatically replacing uncertain images.
