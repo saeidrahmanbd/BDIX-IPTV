@@ -1,30 +1,33 @@
-# Generic Logo Replacement Results
+# Generic Logo Replacement and Authenticity Results
 
 Audit date: 2026-10-11
 
-This log separates automated integrity checks from broadcaster-logo authentication. A successful URL/path check is not evidence that a logo is official.
+This report separates playlist/path integrity from actual image authentication. A valid local file path is not proof that the image is official.
 
-## Current NVisionBD result
+## Current playlist snapshot
 
-- Current correction commit: `279479e1257a26cd2696a933f5310dd421727783`
-- Entries retained: **561**
-- Entries carrying a logo: **330**
-- Entries without a logo pending a verified exact source: **231**
-- Distinct local logo paths referenced: **230**
-- Missing referenced local asset paths: **0**
-- External-hosted logo URLs: **0**
-- Known generic-looking logo patterns remaining (`channel-1/9/16/24/52.png`, `nvisionbd-*`): **0**
+| Playlist | Entries | With logo | Without logo | External refs | Known generic filename refs |
+|---|---:|---:|---:|---:|---:|
+| IPTV-Playlist.m3u | 1,145 | 1,123 | 22 | 0 | 0 |
+| BDIX-Playlist.m3u | 190 | 184 | 6 | 5 | 0 |
+| NVisionBD-Playlist.m3u | 561 | 328 | 233 | 0 | 0 |
 
-## Changes applied in this pass
+## Image-level findings and changes
 
-- Restored 17 logo references to existing repository assets where the current filename corresponded to the channel identity (including ATN News, Bangla TV, Duronto TV, Ekushey TV, Global TV, Green TV, Mohona TV, Nagorik TV, Sananda TV, Star Gold, Colors, Star Plus, Zee TV and Epic Music).
-- Removed generic-looking logo references for Channel 1 HD, Channel 9 HD and Channel 24 HD. The three playlist entries and their stream URLs remain intact.
-- No new image artwork was generated, and no logo image file was deleted in this pass.
+- **Rejected `logos/btv-news.png`:** the image visibly contains BTV News branding plus an unrelated “M3U World 4K” overlay. Removed its playlist references from IPTV-Playlist.m3u and BDIX-Playlist.m3u.
+- **Rejected `logos/bangla-tv.png`:** the image visibly carries a “BONGO FLIX” watermark. Removed its playlist references from IPTV-Playlist.m3u, BDIX-Playlist.m3u, and NVisionBD-Playlist.m3u.
+- Total references removed for these two contaminated images: **11**.
+- Channel entries and stream URLs were preserved. The image files remain in the repository for traceability; no replacement was guessed.
+- Previous generic-looking `channel-N.png` references remain unlinked from playlists.
 
-## Still unresolved
+## Next verification sources
 
-The 231 logo-less entries need exact, reliable source images before logos are restored. Existing files with plausible filenames must still be checked visually and against primary/attributable sources before being called official. Do not automatically populate these with logos from similarly named channels or broad-search results.
+- BTV official site: https://btv.gov.bd/
+- Bangladesh TV logo source category on Wikimedia Commons: https://commons.wikimedia.org/wiki/Category:Logos_of_television_channels_in_Bangladesh
+- JioStar official media toolkit: https://www.jiostar.com/mediatoolkit/all-logos/
+
+These links help find candidate official assets. A logo is not approved until the actual repository image is compared with the exact source image and the source attribution is recorded.
 
 ## Important limitation
 
-The repository's existing script/report only detects SVG files containing a specific `CHANNEL MARK` template. It can miss generic-looking PNG/JPEG assets and cross-channel mismatches. The current result should therefore not be interpreted as complete visual authentication.
+The remaining 1,635 logo references have not all been individually authenticated. Continue with image-by-image checks; do not label an asset official solely because its filename or displayed channel name matches.
