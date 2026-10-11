@@ -20307,15 +20307,6 @@ A lady who previously spurned Manmohan's proposal rings him to arrange a rendezv
     <category lang="en">Film</category>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_502,h_282,c_scale,f_webp,q_auto:eco/resources//list/AndxplorHDTurtle12503399a2efe8016894a7abd2217919379224f.jpg" />
   </programme>
-  <programme start="20261011104000 +0000" stop="20261011113700 +0000" channel="AnimalPlanet.in@SD">
-    <category lang="en">Documentary</category>
-    <category lang="en">Others</category>
-    <desc lang="en">S1 E2
-A filmmaker travels from Hokkaido's forests to the coastlines of Okinawa to discover the secrets of Japan's most iconic animals.</desc>
-    <episode-num>S1 E2</episode-num>
-    <icon src="https://iptv-epg.org/images/EyFLF0bI9E6VkR0GJw6Qn4M6xvx21jUF5YYpLtv2puQUnDVkrD5cBFsvo6dhFl0zY5JxDwNDn3voBs4C8nRIlaDUw1XT2GodI-Ag_qP0QuC0Wj6_9aNfxYy1BNRPig" />
-    <title lang="en">Japan's Wild Side</title>
-  </programme>
   <programme start="20261011113700 +0000" stop="20261011123300 +0000" channel="AnimalPlanet.in@SD">
     <category lang="en">Documentary</category>
     <category lang="en">Factual Entertainment</category>
@@ -29607,11 +29598,9 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
       <value>U/A-12</value>
     </rating>
   </programme>
-  <programme channel="Colors.in" start="20261011163900 +0530" stop="20261011170600 +0530">
-    <title>Thapki Pyar Ki</title>
-    <desc>Thapki, a lively and intelligent girl, faces certain problems that affect her life. However, she decides to move to a city in order to find a job and meet all her challenges with a positive attitude.</desc>
-    <category>TV Show</category>
-    <category>Drama</category>
+  <programme start="20261011113000 +0000" stop="20261011120000 +0000" channel="Colors.in">
+    <category lang="en">TV Show</category>
+    <category lang="en">Drama</category>
     <credits>
       <director>Ranjan Kumar Singh</director>
       <director>Aanand Kumaar</director>
@@ -29628,30 +29617,11 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
       <producer>Ved Raj</producer>
       <producer>Dheeraj Sarna</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p12002812_b_h10_ab.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="Colors.in" start="20261011170600 +0530" stop="20261011173300 +0530">
-    <title>Thapki Pyar Ki</title>
-    <desc>Thapki, a lively and intelligent girl, faces certain problems that affect her life. However, she decides to move to a city in order to find a job and meet all her challenges with a positive attitude.</desc>
-    <category>TV Show</category>
-    <category>Drama</category>
-    <credits>
-      <director>Ranjan Kumar Singh</director>
-      <director>Aanand Kumaar</director>
-      <actor>Jigyasa Singh</actor>
-      <actor>Manish Goplani</actor>
-      <actor>Ankit Bathla</actor>
-      <actor>Sheena Bajaj</actor>
-      <actor>Jaya Bhattacharya</actor>
-      <actor>Kritika Sharma</actor>
-      <actor>Abhinandan Jindal</actor>
-      <actor>Monica Khanna</actor>
-      <producer>Faizal Alanaa</producer>
-      <producer>Kamna Nirula Menezes</producer>
-      <producer>Ved Raj</producer>
-      <producer>Dheeraj Sarna</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p12002812_b_h10_ab.jpg?lock=1280x720" />
+    <desc lang="en">S1 E503
+Thapki, a lively and intelligent girl, faces certain problems that affect her life. However, she decides to move to a city in order to find a job and meet all her challenges with a positive attitude.</desc>
+    <episode-num>S1 E503</episode-num>
+    <icon src="https://iptv-epg.org/images/S_iG23o6WtEPiMKcBAniB6L4Z1RjBT1qi1ZmlkcRVwn_dd1wTKOdDUZu95v5qWzz9Iqpl3OX0RCGERYPkHFBeeHKTqqf7VCf2PO4Z57HoBQ0GRSGys_WCyMpJt4t" />
+    <title lang="en">Thapki Pyar Ki</title>
   </programme>
   <programme channel="Colors.in" start="20261011173300 +0530" stop="20261011180100 +0530">
     <title>Thapki Pyar Ki</title>
@@ -50664,13 +50634,6 @@ Various players from across the region participate in a tennis tournament organi
     <desc lang="en">A family drama serial presenting emotional relationships, social values, and everyday struggles.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DD_ARUNPRABHA_2011084_14OCT213000_14OCT220000/images/LANDSCAPE_169/1767805289000_DDArunprabha_HindiSerial_2011084.jpg" />
   </programme>
-  <programme channel="DDAssam.in@SD" start="20261011170000 +0530" stop="20261011170500 +0530">
-    <title>News At Glance</title>
-    <desc>The host provides an overview of the latest information on key political, economic and social issues in the state and country.</desc>
-    <category>News</category>
-    <category>News Bulletin</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28931940_b_h8_aa.jpg?lock=1280x720" />
-  </programme>
   <programme channel="DDAssam.in@SD" start="20261011170500 +0530" stop="20261011173000 +0530">
     <title>Chiphung</title>
     <desc>Gohin Boro, Rakesh Boro and their troupe of artists perform a captivating folk dance of the Bodo tribe, showcasing tradition and culture.</desc>
@@ -57638,13 +57601,6 @@ The host showcases Gujarat's glorious past and highlights the remarkable achieve
     <desc lang="en">The host presents a detailed report of people who have been reported missing and provides tips on how to pursue the case legally.</desc>
     <icon src="https://iptv-epg.org/images/JAx7-E0aiom91-Fe7kweV_t70gkXkRchuHlWWfNLqeJXWn75O6Zks1nFzd2c3YTeYDotHjeWzE6mGA8w9UzvPtZYgQZgR6DuH9ukf3N6e00hX3Hsfo7nVF-_38CziA" />
     <title lang="en">Sos Missing Announcement</title>
-  </programme>
-  <programme channel="DDGoa.in@SD" start="20261011170000 +0530" stop="20261011170500 +0530">
-    <title>News Headlines</title>
-    <desc>The host presents the latest news and developments surrounding various socio-economic and political issues and provides updates on current events.</desc>
-    <category>News</category>
-    <category>News Bulletin</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28933250_b_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="DDGoa.in@SD" start="20261011170500 +0530" stop="20261011183000 +0530">
     <title>Mythological Drama</title>
@@ -142468,17 +142424,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <desc lang="en">Shin-chan, a mischievous five-year-old, constantly disrupts the lives of those around him with his childish antics, generating humorous chaos and exasperation.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_HUNGAMA_1489_14OCT183000_14OCT220000/images/LANDSCAPE_169_HD/HungamaTV_Shinchan_1489.jpg" />
   </programme>
-  <programme start="20261011164000 +0530" stop="20261011170800 +0530" channel="INWILD.nl">
-    <title>Second Chance Pets</title>
-    <desc>Dogs suffering from mobility issues due to injuries, arthritis or amputations are provided with leg braces and prosthetics.</desc>
-    <category>Animals</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/0f84153c7b4f4dbdb8397bbedcdf0ab7.jpg?width=700" />
-    <episode-num system="onscreen">5</episode-num>
-    <rating>
-      <value>TVG</value>
-    </rating>
-  </programme>
   <programme start="20261011170800 +0530" stop="20261011173600 +0530" channel="INWILD.nl">
     <title>Second Chance Pets</title>
     <desc>Dogs suffering from mobility issues due to injuries, arthritis or amputations are provided with leg braces and prosthetics.</desc>
@@ -196319,16 +196264,6 @@ Shalini lives in America but desires to relocate to India. Meanwhile, a girl fro
     <desc lang="en">Bhola seeks work in the city and catches the eye of Aveera, but must save his village.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_PITAARA_1690139_14OCT200000_14OCT230000/images/LANDSCAPE_169_HD/Pitaara_OyeBholeOye_1690139.jpg" />
   </programme>
-  <programme start="20261011163100 +0530" stop="20261011170900 +0530" channel="PocketFilms.in">
-    <title>Samaapan</title>
-    <desc>An impoverished vocalist named Avik faces financial hardships as he tries to provide for his family while attempting to win over his love, Shukla.</desc>
-    <category>Drama</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/2a791f3713e4d71789726f515b942c59.jpg?width=700" />
-    <rating>
-      <value>U/A-13</value>
-    </rating>
-  </programme>
   <programme start="20261011170900 +0530" stop="20261011171900 +0530" channel="PocketFilms.in">
     <title>Once Upon A Time In Office</title>
     <desc>A young woman faces unfair treatment from older male colleagues, causing discomfort. After seeking help without success, she ponders ways to address and overcome the challenging situation at work.</desc>
@@ -237468,17 +237403,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <icon src="https://tv.assets.pressassociation.io/4ac10a17-809d-5998-ac39-064bc977d8e8.jpg" />
     <episode-num system="onscreen">S2026 E31</episode-num>
   </programme>
-  <programme start="20261011164500 +0530" stop="20261011170500 +0530" channel="SongdewTV.in@SD">
-    <title>New Pinch</title>
-    <desc>Featuring best of new indie music</desc>
-    <category>Music</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg?width=700" />
-    <episode-num system="onscreen">6</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261011170500 +0530" stop="20261011171000 +0530" channel="SongdewTV.in@SD">
     <title>Friday Night Originals</title>
     <desc>Features live jam session of some of best musicians and bands</desc>
@@ -245477,33 +245401,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <category lang="en">Film</category>
     <category lang="en">Romance</category>
     <icon src="https://dtil.tmsimg.com/assets/p8395567_v_h9_ae.jpg?lock=880x660" />
-  </programme>
-  <programme start="20261011104600 +0000" stop="20261011113500 +0000" channel="SonyPal.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Comedy</category>
-    <credits>
-      <director>Bharat Kukreti</director>
-      <director>Anukalp Goswami</director>
-      <actor>Kapil Sharma</actor>
-      <actor>Kiku Sharda</actor>
-      <actor>Sumona Chakravarti</actor>
-      <actor>Rajiv Thakur</actor>
-      <actor>Chandan Prabhakar</actor>
-      <actor>Krushna Abhishek</actor>
-      <actor>Archana Puran Singh</actor>
-      <actor>Atul Parchure</actor>
-      <producer>Kapil Sharma</producer>
-      <producer>Salman Khan</producer>
-      <producer>Deepak Dhar</producer>
-      <producer>Gurjot Singh</producer>
-      <producer>Akshit Lahoria</producer>
-      <producer>Vidhi Mor</producer>
-    </credits>
-    <desc lang="en">S1 E180
-Kapil Sharma invites Ajay Devgn, Nora Fatehi, Ammy Virk and Sharad Kelkar to discuss their movie and entertain the audience with hilarious interactions.</desc>
-    <episode-num>S1 E180</episode-num>
-    <icon src="https://iptv-epg.org/images/IHpPdb4Rmy1DOlpDEmxAULtODo7YabgK0rpL02EUOJnbkjTAUCpnVEtC4x046d5FsrtSA2s3b8i8yAq4DhHJESi_gJniOYlewQBYLtKlAX1DDqsu-_i3n1LU_qD1" />
-    <title lang="en">The Kapil Sharma Show</title>
   </programme>
   <programme start="20261011113500 +0000" stop="20261011120200 +0000" channel="SonyPal.in@SD">
     <category lang="en">TV Show</category>
@@ -315277,24 +315174,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <desc lang="en">After the murder of Veer's parents, adopted girl Leela enters the royal Haveli to protect the rightful heir while battling conspiracies and power-hungry relatives.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_TARANG_2110399_14OCT213000_14OCT220000/images/LANDSCAPE_169/1784396018000_TARANG_AManaManena_2110399.jpg" />
   </programme>
-  <programme start="20261011165600 +0530" stop="20261011170800 +0530" channel="TeluguOne.in@HD">
-    <title>Siva Putrudu</title>
-    <desc>An outcast, who is raised by the caretaker of a cemetery, ends up working at a cannabis farm. Later, he is arrested and befriends a fellow inmate.</desc>
-    <category>Action</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b582a07f3521f6d9f8baa1a26d2d10df.jpg?width=700" />
-    <credits>
-      <actor>Vikram</actor>
-      <actor>Suriya</actor>
-      <actor>Mahadevan</actor>
-      <actor>Karunas</actor>
-      <actor>Manobala</actor>
-      <actor>Laila</actor>
-    </credits>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261011170800 +0530" stop="20261011171900 +0530" channel="TeluguOne.in@HD">
     <title>Siva Putrudu</title>
     <desc>An outcast, who is raised by the caretaker of a cemetery, ends up working at a cannabis farm. Later, he is arrested and befriends a fellow inmate.</desc>
@@ -317686,14 +317565,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme start="20261011165600 +0530" stop="20261011170800 +0530" channel="ThalaaTV.in">
-    <title>Idhaya Vaasal </title>
-    <sub-title>THALAA TV | TAMIL</sub-title>
-    <desc>Aravind falls for Vaani, but her parents? disapproval sparks a fight for their love.</desc>
-    <category>Drama</category>
-    <language>TAMIL</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/THALAA%20TV/POSTER/Idhaya%20Vaasal.png" />
   </programme>
   <programme start="20261011170800 +0530" stop="20261011172000 +0530" channel="ThalaaTV.in">
     <title>Idhaya Vaasal </title>
@@ -320197,13 +320068,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <title lang="en">The Survival Of Fittest</title>
     <desc lang="en">Although his lifestyle involves honey, bas and lots of ps, Baloo thinks he is very fit…</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acb9d85a98f93e8a69511cf/images/LANDSCAPE_169/9360_8e35c6f4-9047-4a08-84a0-b1e58677123a.png" />
-  </programme>
-  <programme channel="TinyPop.uk" start="20261011112800 +0000" stop="20261011113800 +0000">
-    <title lang="en">Masha And The Bear Shorties</title>
-    <desc lang="en">Masha is getting ready for school. Masha is trying to squeeze in a bus a stroller with her little baby Rose. Masha and the animals are dancing a Hawaiian dance.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261011165800/list/TinyPOPMashaAndTheBearShorties2056997a70b864046d34772a3c26756520df84c.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261011113800 +0000" stop="20261011114900 +0000">
     <title lang="en">Masha And The Bear Shorties</title>
@@ -325608,14 +325472,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <category>Kids</category>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261017235300/list/TinyPOPTHEHIVE2151548c9e3feeb8927483ab4ea5a54ad023895.jpg" />
-  </programme>
-  <programme start="20261011165400 +0530" stop="20261011170600 +0530" channel="TollyTV.in">
-    <title>Jhansi Rani</title>
-    <sub-title>TOLLY TV | TELUGU</sub-title>
-    <desc>Jhansi Rani hunts a conman who tricked women, seeking justice for her sister.</desc>
-    <category>Movies</category>
-    <language>TELUGU</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/TOLLY%20TV/IMAGES/Jhansi%20Rani.png" />
   </programme>
   <programme start="20261011170600 +0530" stop="20261011171800 +0530" channel="TollyTV.in">
     <title>Jhansi Rani</title>
@@ -419681,36 +419537,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261011170200 +0530" stop="20261011170400 +0530" channel="custom.duck.tv">
-    <title>Ducky and Friends</title>
-    <desc>Ducky experiences the world with her friends Lola, Henry and Toby, as they learn how to play nicely and enjoy exploring new things together.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/c46d0763d7d62ade15c646c1f1869bd5.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261011170400 +0530" stop="20261011170600 +0530" channel="custom.duck.tv">
-    <title>Get Up!</title>
-    <desc>Langi, Rundi and Rendi exercise by matching the peculiar movements of nature. They attempt to teach children how performing exercises makes one fit.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f0310a6126cf508b1a375dacc9b2d09d.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261011170600 +0530" stop="20261011170700 +0530" channel="custom.duck.tv">
-    <title>Nature Dudes</title>
-    <desc>The hosts present the natural rotation of seasons and its different impacts on the lives of various animals and plants throughout the year.</desc>
-    <category>Nature</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/490871073a72cbb039b7d61aab320ebe.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261011170700 +0530" stop="20261011171000 +0530" channel="custom.duck.tv">
     <title>Lola and the Numbers</title>
     <desc>Lola, a smart little girl, is fond of playing and learning. She loves to count with her friends who are numbers themselves.</desc>
@@ -427075,34 +426901,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <rating>
       <value>TVY</value>
     </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011113200 +0000" stop="20261011113500 +0000">
-    <title lang="en">Risto Gusto</title>
-    <desc lang="en">Basil, Yam and Oregano showcase their culinary skills as they prepare a variety of dishes at their Risto Gusto restaurant.</desc>
-    <date>2016</date>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Cooking</category>
-    <icon src="http://dtil.tmsimg.com/assets/p21888073_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011113500 +0000" stop="20261011113800 +0000">
-    <title lang="en">Africa</title>
-    <desc lang="en">Introducing native African animals in their natural environment and the games they play.</desc>
-    <date>2016</date>
-    <category lang="en">Children</category>
-    <category lang="en">Animals</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13127940_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
   </programme>
   <programme channel="custom.ducktv" start="20261011114000 +0000" stop="20261011114300 +0000">
     <title lang="en">ABC - duckBC</title>
@@ -463341,13 +463139,6 @@ Jeevsiddhi, who is trained by Chanakya, enters the innermost circles of Rakshasa
     <category lang="en">Golf</category>
     <icon src="http://dtil.tmsimg.com/assets/p33984291_b_h10_aa.jpg?w=960&amp;h=540" />
     <premiere lang="en" />
-  </programme>
-  <programme start="20261011110400 +0000" stop="20261011113400 +0000" channel="custom.good.news.today">
-    <category lang="en">News</category>
-    <category lang="en">News Bulletin</category>
-    <desc lang="en">The host presents information about the social, economic and political issues of the day and provides updates on current events.</desc>
-    <icon src="https://iptv-epg.org/images/BMopoKECrGEJrAduqzCDXcJddiYPTucI4NK33bSnpm1vG5MMjLiq-gpRiYe3S1skLIvJZ2NAPEx8MUhYbVuDSC0Rht0pE-XC0Ky5K1wrz9o7kTwB5h25tV2KB2_q" />
-    <title lang="en">GNT Express</title>
   </programme>
   <programme start="20261011113400 +0000" stop="20261011120400 +0000" channel="custom.good.news.today">
     <category lang="en">News</category>
@@ -530770,15 +530561,6 @@ A lady who previously spurned Manmohan's proposal rings him to arrange a rendezv
     <rating>
       <value>TVG</value>
     </rating>
-  </programme>
-  <programme start="20261011104000 +0000" stop="20261011113700 +0000" channel="hmair.animalplanethd">
-    <category lang="en">Documentary</category>
-    <category lang="en">Others</category>
-    <desc lang="en">S1 E2
-A filmmaker travels from Hokkaido's forests to the coastlines of Okinawa to discover the secrets of Japan's most iconic animals.</desc>
-    <episode-num>S1 E2</episode-num>
-    <icon src="https://iptv-epg.org/images/EyFLF0bI9E6VkR0GJw6Qn4M6xvx21jUF5YYpLtv2puQUnDVkrD5cBFsvo6dhFl0zY5JxDwNDn3voBs4C8nRIlaDUw1XT2GodI-Ag_qP0QuC0Wj6_9aNfxYy1BNRPig" />
-    <title lang="en">Japan's Wild Side</title>
   </programme>
   <programme start="20261011113700 +0000" stop="20261011123300 +0000" channel="hmair.animalplanethd">
     <category lang="en">Documentary</category>
