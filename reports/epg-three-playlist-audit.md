@@ -6,9 +6,31 @@ Coverage uses exact playlist `tvg-id` matches against the shared mapping registr
 
 | Playlist | Entries | Unique primary IDs | Unique Indian IDs | Mapped | Current/future | Xtream map | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1145 | 652 | 299 | 246/299 (82.3%) | 236/299 (78.9%) | 244/299 | OK |
+| IPTV-Playlist.m3u | 1145 | 652 | 299 | 246/299 (82.3%) | 236/299 (78.9%) | 246/299 | OK |
 | BDIX-Playlist.m3u | 190 | 178 | 17 | 16/17 (94.1%) | 16/17 (94.1%) | 16/17 | OK |
 | NVisionBD-Playlist.m3u | 561 | 467 | 106 | 90/106 (84.9%) | 88/106 (83.0%) | 90/106 | OK |
+
+## Published XMLTV verification — all active channels
+
+This section measures the guide actually present at report-generation time, not merely upstream source matches.
+If the publish gate retains an older guide, the workflow must refresh this report against the retained guide.
+
+| Playlist | Active unique IDs | Mapped IDs | Published IDs with programmes | Current/future IDs |
+|---|---:|---:|---:|---:|
+| IPTV-Playlist.m3u | 652 | 343 | 311 | 311 |
+| IPTV-Playlist.m3u — Bangladesh | 60 | 0 | 0 | 0 |
+| BDIX-Playlist.m3u | 178 | 99 | 85 | 85 |
+| BDIX-Playlist.m3u — Bangladesh | 42 | 1 | 1 | 1 |
+| NVisionBD-Playlist.m3u | 467 | 187 | 167 | 167 |
+| NVisionBD-Playlist.m3u — Bangladesh | 50 | 0 | 0 | 0 |
+
+- Non-English programme text fields detected: **0**
+- Missing or blank programme titles: **0**
+- Active-channel programme overlap rows: **0 across 0 channels**
+- Channels with overlaps (top 30): none
+- XMLTV read error: **none**
+- Latin-script text is not proof of English: untagged transliterations need human/source verification.
+- Never invent programme titles or map Bangladesh broadcasters to similarly named Indian channels.
 
 ## Channels without mappings
 
