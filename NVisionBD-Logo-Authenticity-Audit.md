@@ -10,9 +10,9 @@ A logo is approved only when the **image itself** is matched to an official broa
 ## Current integrity snapshot
 
 - Playlist entries: **561**
-- Entries with a logo reference: **370**
-- Entries with no logo pending verification: **191**
-- Distinct local logo asset paths referenced: **248**
+- Entries with a logo reference: **330**
+- Entries with no logo pending verification: **231**
+- Distinct local logo asset paths referenced: **230**
 - Missing local logo references among entries that have a logo: **0** (verified against the complete recursive Git tree)
 - External-hosted logo URLs: **0** (the playlist references GitHub-hosted local repository assets)
 
@@ -20,7 +20,7 @@ A logo is approved only when the **image itself** is matched to an official broa
 
 ## Corrective action already applied
 
-Removed 42 references to unverified bespoke/custom artwork and deleted the corresponding unverified artwork files. Preserved all 561 channel entries and their stream URLs. The 42 entries below remain without `tvg-logo` until an exact authentic image can be obtained and localized.
+Removed 42 references to unverified bespoke/custom artwork in an earlier pass, and removed three additional generic-looking PNG references in this pass. Seventeen references to existing repository assets were restored in this pass based on filename/channel-name alignment; these still require source-by-source image authentication. Preserved all 561 channel entries and their stream URLs. Unverified entries remain without `tvg-logo` until an exact authentic image can be obtained and localized.
 
 ## Source-by-source results for the 42 unresolved entries
 
