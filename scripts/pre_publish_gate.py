@@ -31,7 +31,7 @@ def main():
     for a,u in old_primary:
         groups=cur_all_groups.get(u.lower(), set())
         if groups & {"Backup","Not Playing"}:
-            quarantined.append((a.get("tvg-name",""),u,next(iter(groups & {"Backup"}))))
+            quarantined.append((a.get("tvg-name",""),u,next(iter(groups & {"Backup","Not Playing"}))))
         elif not groups:
             removed.append((a.get("tvg-name",""),u))
     blocked_removed=removed
