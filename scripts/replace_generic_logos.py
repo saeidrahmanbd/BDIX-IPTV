@@ -269,14 +269,67 @@ def commons_candidate(channel):
 
 
 def get_local_logo(channel):
-    filename = LOCAL_LOGO_FILES.get(channel)
-    if not filename:
-        return None
-    path = LOGOS / filename
-    if path.is_file() and not is_generic_file(path):
-        return filename
-    return None
+    """Search the repository's entire /logos folder before any external lookup.
 
+    Match by normalized channel name only. Generic template assets, nvisionbd-
+    placeholders, placeholder-* files, backups and unrelated fuzzy name matches
+    are never accepted automatically.
+    """
+    target = clean_channel_name(channel)
+    if not target:
+        return None
+
+    # Exact, curated overrides remain first in line, but only if the asset exists
+    # and it is not itself a generic template.
+    explicit = LOCAL_LOGO_FILES.get(channel)
+    if explicit:
+        path = LOGOS / explicit
+        if path.is_file() and not is_generic_file(path):
+            return explicit
+
+    supported = {".svg", ".png", ".jpg", ".jpeg", ".webp"}
+    matches = []
+    for path in LOGOS.iterdir():
+        if not path.is_file() or path.suffix.lower() not in supported:
+            continue
+        lower_name = path.name.lower()
+        if lower_name.startswith(("nvisionbd-", "placeholder-")):
+            continue
+        if re.search(r"-backup-?\d*(?:\.|$)", lower_name):
+            continue
+        if is_generic_file(path):
+            continue
+
+        stem = path.stem.lower()
+        # Remove generated hash and quality/resolution suffixes from filenames.
+        stem = re.sub(r"-[a-f0-9]{8,}$", "", stem)
+        previous = None
+        while stem != previous:
+            previous = stem
+            stem = re.sub(
+                r"-(?:1080p|720p|576p|480p|360p|4k|8k|uhd|fhd|hd|sd|hevc|h265|h264)$",
+                "", stem, flags=re.I
+            )
+        candidate = clean_channel_name(stem)
+        if candidate != target:
+            continue
+
+        # Prefer a canonical filename over a hashed / resolution-specific copy.
+        original_norm = clean_channel_name(path.stem)
+        has_hash = bool(re.search(r"-[a-f0-9]{8,}$", path.stem.lower()))
+        has_quality = bool(re.search(
+            r"-(?:1080p|720p|576p|480p|360p|4k|8k|uhd|fhd|hd|sd|hevc|h265|h264)$",
+            path.stem.lower()
+        ))
+        ext_rank = {".svg": 0, ".png": 1, ".webp": 2, ".jpg": 3, ".jpeg": 4}.get(path.suffix.lower(), 9)
+        matches.append((has_hash, has_quality, ext_rank, path.name.casefold(), path.name))
+
+    if not matches:
+        return None
+    matches.sort()
+    # Multiple files with the exact same normalized identity are safe only as
+    # alternate copies of that exact filename identity; canonical copy wins.
+    return matches[0][-1]
 
 def build_audit():
     playlist_names = ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "NVisionBD-Playlist.m3u"]
