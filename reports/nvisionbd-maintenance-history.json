@@ -160,5 +160,21 @@
     "missing_logos": 0,
     "missing_numbers": 0,
     "malformed": 0
+  },
+  {
+    "timestamp_utc": "2026-10-11T11:26:11+00:00",
+    "entries": 561,
+    "unique_urls": 561,
+    "status_counts": {
+      "Responsive": 119,
+      "Unverified": 440,
+      "Restricted": 2
+    },
+    "duplicate_urls": 0,
+    "duplicate_ids": 62,
+    "missing_ids": 0,
+    "missing_logos": 0,
+    "missing_numbers": 0,
+    "malformed": 0
   }
 ]
