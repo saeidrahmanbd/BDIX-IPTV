@@ -139,7 +139,7 @@ function parsePlaylist(text, includeBackup = false) {
     const ext=lines[i], comma=ext.lastIndexOf(","); if(comma<0 || i+1>=lines.length) continue;
     const a=parseAttrs(ext), name=ext.slice(comma+1).trim(), url=lines[i+1].trim();
     if(!name || !url || url.startsWith("#")) continue;
-    const rawGroup=normalizeGroup(a["group-title"] || "Uncategorized"); const group=rawGroup || "Uncategorized"; if([...(includeBackup ? [] : ["backup"]), "new channels", "new backup", "not playing", "test"].includes(groupKey(group))) continue; const tvgId=a["tvg-id"] || "", tvgName=a["tvg-name"] || name, logo=a["tvg-logo"] || "";
+    const rawGroup=normalizeGroup(a["group-title"] || "Uncategorized"); const group=rawGroup || "Uncategorized"; if([...(includeBackup ? [] : ["backup"]), "test"].includes(groupKey(group))) continue; const tvgId=a["tvg-id"] || "", tvgName=a["tvg-name"] || name, logo=a["tvg-logo"] || "";
     entries.push({ id:stableId(tvgId+"|"+name+"|"+group+"|"+url), name, tvgId, tvgName, logo, group, channelNo:a["tvg-chno"]||"", url });
     i++;
   }
