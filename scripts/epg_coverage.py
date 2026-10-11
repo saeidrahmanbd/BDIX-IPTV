@@ -18,6 +18,10 @@ EPG_ALIASES = {
     "KappaTV.in@ALT1": ["jtv786", "786", "377"],
     "TamilanTV.in": ["jtv2958", "2958"],
     "SonyKALHindi.us": ["US1#Sony.KAL.us"],
+    # Verified DishTV/XMLTV catalogue aliases for playlist entries whose IDs are local/custom.
+    # These only map if an active configured XMLTV source actually contains the exact ID.
+    "custom.colors.infinity": ["ColorsInfinity.in@HD", "ColorsInfinity.in@SD"],
+    "custom.enter10.bangla": ["Enterr10Bangla.in@SD"],
 }
 
 # Hard locks for mappings that have been manually verified against the live channel.
@@ -227,11 +231,16 @@ def main():
                 stop = parse_stamp(prog.attrib.get("stop", "")) if prog.attrib.get("stop") else None
                 if cid and start and (start >= now_guide or (stop and start <= now_guide <= stop) or (stop and stop >= now_guide)):
                     guide_live.add(cid)
-            header = PLAYLIST.read_text(encoding="utf-8-sig").splitlines()[0]
-            expected = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg.xml"
+            playlist_lines = PLAYLIST.read_text(encoding="utf-8-sig").splitlines()
+            header = next((line for line in playlist_lines if line.startswith("#EXTM3U")), "")
+            expected = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"
             refs = re.findall(r'(?:url-tvg|x-tvg-url)="([^"]+)"', header)
-            present = len(mapped_targets & guide_channels)
-            live_present = len(mapped_targets & guide_live)
+            present_ids = mapped_targets & guide_channels
+            live_ids = mapped_targets & guide_live
+            missing_guide_ids = sorted(mapped_targets - guide_channels)
+            mapped_without_live_ids = sorted((mapped_targets & guide_channels) - guide_live)
+            present = len(present_ids)
+            live_present = len(live_ids)
             lines += [
                 "",
                 "## Published Guide Validation",
@@ -240,6 +249,10 @@ def main():
                 f"- Guide channel IDs published: **{len(guide_channels)}**",
                 f"- Mapped playlist IDs present in guide: **{present}/{len(mapped_targets)} ({round(present*100/len(mapped_targets),1) if mapped_targets else 0}%)**",
                 f"- Mapped playlist IDs with current/future programmes: **{live_present}/{len(mapped_targets)} ({round(live_present*100/len(mapped_targets),1) if mapped_targets else 0}%)**",
+                f"- Mapped IDs missing from the published XMLTV channel list: **{len(missing_guide_ids)}**",
+                "- IDs missing from guide: " + (", ".join(missing_guide_ids) if missing_guide_ids else "none"),
+                f"- Mapped IDs with no current/future programmes: **{len(mapped_without_live_ids)}**",
+                "- IDs without current/future programmes (first 30): " + (", ".join(mapped_without_live_ids[:30]) if mapped_without_live_ids else "none"),
                 "- This validation is against the guide currently present in the working tree/publish candidate.",
             ]
         except Exception as exc:
