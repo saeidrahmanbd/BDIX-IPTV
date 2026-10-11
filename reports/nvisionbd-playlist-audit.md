@@ -1,6 +1,6 @@
 # NVisionBD Playlist Audit
 
-Generated (UTC): **2026-10-11T17:32:04+00:00**
+Generated (UTC): **2026-10-11T17:38:34+00:00**
 
 ## Summary
 
@@ -9,7 +9,7 @@ Generated (UTC): **2026-10-11T17:32:04+00:00**
 - Duplicate stream URLs: **0**
 - Duplicate channel identities: **59**
 - Missing channel IDs: **0**
-- Missing logos: **233**
+- Missing logos: **235**
 - Missing channel numbers: **0**
 - Malformed entries: **0**
 
@@ -31,10 +31,10 @@ Generated (UTC): **2026-10-11T17:32:04+00:00**
 
 ## Stream Probe Summary
 
-- Responsive: **114**
-- Restricted: **4**
-- Dead: **0**
-- Unverified: **443**
+- Responsive: **9**
+- Restricted: **0**
+- Dead: **121**
+- Unverified: **431**
 
 ## Duplicate Stream URLs
 

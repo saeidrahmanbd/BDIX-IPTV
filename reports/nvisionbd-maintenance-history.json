@@ -290,18 +290,18 @@
     "malformed": 0
   },
   {
-    "timestamp_utc": "2026-10-11T17:32:04+00:00",
+    "timestamp_utc": "2026-10-11T17:38:34+00:00",
     "entries": 561,
     "unique_urls": 561,
     "status_counts": {
-      "Responsive": 114,
-      "Unverified": 443,
-      "Restricted": 4
+      "Unverified": 431,
+      "Dead": 121,
+      "Responsive": 9
     },
     "duplicate_urls": 0,
     "duplicate_ids": 59,
     "missing_ids": 0,
-    "missing_logos": 233,
+    "missing_logos": 235,
     "missing_numbers": 0,
     "malformed": 0
   }
