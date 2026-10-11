@@ -8,7 +8,7 @@ Repository: https://github.com/saeidrahmanbd/BDIX-IPTV
 | Playlist | Entries | Entries with logo | Entries without logo | Generic-looking logo references | Non-repository logo URLs | Missing local asset paths |
 |---|---:|---:|---:|---:|---:|---:|
 | IPTV-Playlist.m3u | 1,145 | 1,145 | 0 | 5 filename patterns / repeated references | 0 | 0 |
-| BDIX-Playlist.m3u | 190 | 190 | 0 | 3 filename patterns / 3 entry references | 5 | 0 |
+| BDIX-Playlist.m3u | 190 | 190 | 0 | 3 filename patterns / 3 entry references; `EPL channel 1` mismatch removed | 5 | 0 |
 | NVisionBD-Playlist.m3u | 561 | 330 | 231 | 0 of the known `channel-1/9/16/24/52.png` and `nvisionbd-*` patterns | 0 | 0 |
 
 ## Confirmed findings
