@@ -15,9 +15,9 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: iptv-maintenance
+  group: bdix-iptv-main-writer
   cancel-in-progress: false
-  queue: single
+  queue: max
 jobs:
   maintain:
     if: ${{ !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance')) }}

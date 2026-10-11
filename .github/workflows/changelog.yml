@@ -11,9 +11,9 @@ permissions:
   contents: write
 
 concurrency:
-  group: iptv-changelog
+  group: bdix-iptv-main-writer
   cancel-in-progress: false
-  queue: single
+  queue: max
 
 jobs:
   changelog:
