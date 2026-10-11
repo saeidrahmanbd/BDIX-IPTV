@@ -10,13 +10,13 @@ A logo is approved only when the **image itself** is matched to an official broa
 ## Current integrity snapshot
 
 - Playlist entries: **561**
-- Entries with a logo reference: **519**
-- Entries with no logo pending verification: **42**
-- Distinct local logo asset paths referenced: **397**
-- Missing local logo references among entries that have a logo: **0** (last integrity check)
+- Entries with a logo reference: **370**
+- Entries with no logo pending verification: **191**
+- Distinct local logo asset paths referenced: **248**
+- Missing local logo references among entries that have a logo: **0** (verified against the complete recursive Git tree)
 - External-hosted logo URLs: **0** (the playlist references GitHub-hosted local repository assets)
 
-**Important:** the 519 existing logo references are not automatically authenticated by the integrity checks. Their asset provenance still needs to be verified one by one. This report does not certify the whole logo collection.
+**Important:** the 370 remaining logo references are not automatically authenticated by the integrity checks. Their asset provenance still needs to be verified one by one. This report does not certify the whole logo collection.
 
 ## Corrective action already applied
 
@@ -74,7 +74,7 @@ Status meanings:
 
 ## Remaining source-by-source work
 
-The playlist currently references **397 distinct local logo files across 519 entries**. Each distinct file needs an evidence record containing: channel/brand, local path, exact official source URL, confirmation that the image matches the source asset, and disposition (approved/replaced/removed). Until that check is complete, these files must be treated as **not yet certified**, even if their filenames look correct.
+The playlist currently references **248 distinct local logo files across 370 entries**. Each distinct file needs an evidence record containing: channel/brand, local path, exact official source URL, confirmation that the image matches the source asset, and disposition (approved/replaced/removed). Until that check is complete, these files must be treated as **not yet certified**, even if their filenames look correct.
 
 No substitute artwork should be drawn or generated to fill gaps. When a primary-source image cannot be retrieved and verified, keep the entry logo-less rather than using a lookalike.
 
