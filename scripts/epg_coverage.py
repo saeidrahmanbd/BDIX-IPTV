@@ -16,6 +16,7 @@ EPG_ALIASES = {
     "MTVIndia.in@SD": ["jtv248", "248"],
     "MusicMastii.in": ["jtv584", "584", "IN4#MASTII.in"],
     "KappaTV.in@ALT1": ["jtv786", "786", "377"],
+    "IqraBangla.uk": ["3914"],
     "TamilanTV.in": ["jtv2958", "2958"],
     "SonyKALHindi.us": ["US1#Sony.KAL.us"],
     # Verified DishTV/XMLTV catalogue aliases for playlist entries whose IDs are local/custom.
@@ -28,6 +29,7 @@ EPG_ALIASES = {
 # Locked identities must not be broadened again by the automatic coverage mapper.
 EPG_LOCKS = {
     "ColorsCineplex.in@SD": ["543298"],
+    "IqraBangla.uk": ["3914"],
     # Dish TV catalogue-verified Star Jalsha SD XMLTV ID. Keep the existing
     # playlist identity (Star.Jalsha.in) unchanged; map this provider ID to it.
     "Star.Jalsha.in": ["StarJalsha.in@SD"],
@@ -49,6 +51,7 @@ SOURCES = [
     "https://avkb.short.gy/epg.xml.gz",
     "https://avkb.short.gy/jioepg.xml.gz",
     "https://avkb.short.gy/tsepg.xml.gz",
+    "https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml",
 ]
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
