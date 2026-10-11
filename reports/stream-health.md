@@ -1,16 +1,16 @@
 # Stream Health Report
 
-Generated: **2026-10-11T13:59:40+00:00**
+Generated: **2026-10-11T14:06:24+00:00**
 
 Non-destructive connectivity check. A successful HTTP response confirms reachability of the stream endpoint, not guaranteed video/audio playback.
 
 ## Summary
 
 - Streams tested: **1145**
-- Reachable: **949**
-- Failed this check: **196**
-- Persistent failures (3+ consecutive): **189**
-- Intermittent failures: **7**
+- Reachable: **928**
+- Failed this check: **217**
+- Persistent failures (3+ consecutive): **190**
+- Intermittent failures: **27**
 - Primary tested: **652**
 - Backup tested: **493**
 
@@ -18,402 +18,425 @@ Non-destructive connectivity check. A successful HTTP response confirms reachabi
 
 - Connection: **17**
 - HTTP 401/403 (auth): **4**
-- HTTP 404 (not found): **50**
-- HTTP 5xx (server): **4**
+- HTTP 404 (not found): **47**
+- HTTP 4xx (other): **1**
+- HTTP 5xx (server): **2**
 - Network: **2**
 - Other: **1**
 - TLS: **2**
-- Timeout: **116**
+- Timeout: **141**
 ## Persistent Failures
 
-- **&TV** — Backup — consecutive failures: **14** — HTTP 404
-- **&TV** — Backup — consecutive failures: **5** — HTTP 404
-- **9X Tashan** — Backup — consecutive failures: **6** — HTTP 404
-- **9XM** — Backup — consecutive failures: **108** — Timeout
-- **ATN News** — Backup — consecutive failures: **233** — Timeout
-- **Animal Planet** — Backup — consecutive failures: **233** — Timeout
-- **B4U Kadak** — Backup — consecutive failures: **10** — HTTP 404
-- **B4U Movies** — Backup — consecutive failures: **5** — HTTP 404
-- **B4U Music** — Backup — consecutive failures: **5** — HTTP 404
-- **BBC Earth** — Backup — consecutive failures: **233** — Timeout
-- **BTV National** — Backup — consecutive failures: **233** — Timeout
-- **Cartoon Network** — Backup — consecutive failures: **114** — Timeout
-- **Channel I** — Backup — consecutive failures: **233** — Timeout
-- **Colors Bangla** — Backup — consecutive failures: **233** — Timeout
-- **Colors Bangla Cinema** — Backup — consecutive failures: **233** — Timeout
-- **Colors Bangla Cinema** — Backup — consecutive failures: **233** — Timeout
-- **Colors Bangla Cinema** — Backup — consecutive failures: **40** — Connection
-- **Colors Cineplex** — Backup — consecutive failures: **14** — HTTP 404
-- **DBC News** — Backup — consecutive failures: **14** — Network
-- **Deepto TV** — Backup — consecutive failures: **233** — Timeout
-- **Discover Pakistan** — Backup — consecutive failures: **63** — HTTP 403
-- **Discovery** — Backup — consecutive failures: **233** — Timeout
-- **Duronto TV** — Backup — consecutive failures: **233** — Timeout
-- **Duronto TV** — Backup — consecutive failures: **207** — Timeout
-- **Duronto TV** — Backup — consecutive failures: **53** — HTTP 404
-- **ETV Music** — Backup — consecutive failures: **14** — HTTP 404
-- **Ekattor TV** — Backup — consecutive failures: **233** — Timeout
-- **Enterr10 Bangla** — Backup — consecutive failures: **233** — Timeout
-- **Goldmines** — Backup — consecutive failures: **5** — HTTP 404
-- **History TV18** — Backup — consecutive failures: **233** — Timeout
-- **Hum Masala** — Backup — consecutive failures: **47** — HTTP 404
-- **Hum Masala** — Backup — consecutive failures: **5** — HTTP 404
-- **Hum TV** — Backup — consecutive failures: **5** — HTTP 404
-- **Jalsha Movies** — Backup — consecutive failures: **233** — Timeout
-- **Jalsha Movies** — Backup — consecutive failures: **233** — Timeout
-- **M Sports** — Backup — consecutive failures: **10** — TLS
-- **MNTV (Tamil)** — Backup — consecutive failures: **14** — HTTP 404
-- **Maasranga TV** — Backup — consecutive failures: **233** — Timeout
-- **Madani TV** — Backup — consecutive failures: **233** — Timeout
-- **Music India** — Backup — consecutive failures: **108** — Timeout
-- **Nagorik TV** — Backup — consecutive failures: **233** — Timeout
-- **Nat Geo Wild** — Backup — consecutive failures: **56** — Connection
-- **National Geographic** — Backup — consecutive failures: **233** — Timeout
-- **National Geographic** — Backup — consecutive failures: **40** — Connection
-- **News 24** — Backup — consecutive failures: **233** — Timeout
-- **Nick Jr** — Backup — consecutive failures: **114** — Timeout
-- **Pogo** — Backup — consecutive failures: **114** — Timeout
-- **Romedy Now** — Backup — consecutive failures: **40** — Connection
-- **Sangeet Bangla** — Backup — consecutive failures: **108** — Timeout
-- **Sangeet Bangla** — Backup — consecutive failures: **233** — Timeout
-- **Sangeet Bangla** — Backup — consecutive failures: **6** — HTTP 404
-- **Somoy TV** — Backup — consecutive failures: **233** — Timeout
-- **Sony Aath** — Backup — consecutive failures: **233** — Timeout
-- **Sony Aath** — Backup — consecutive failures: **5** — HTTP 404
-- **Sony Entertainment TV** — Backup — consecutive failures: **233** — Timeout
-- **Sony Entertainment TV** — Backup — consecutive failures: **5** — HTTP 404
-- **Sony Entertainment TV** — Backup — consecutive failures: **5** — HTTP 404
-- **Sony Max** — Backup — consecutive failures: **233** — Timeout
-- **Sony Max** — Backup — consecutive failures: **5** — HTTP 404
-- **Sony Max** — Backup — consecutive failures: **5** — HTTP 404
-- **Sony Max 2** — Backup — consecutive failures: **5** — HTTP 404
-- **Sony PIX** — Backup — consecutive failures: **5** — HTTP 404
-- **Sony SAB** — Backup — consecutive failures: **5** — HTTP 404
-- **Sony Sports Ten 3** — Backup — consecutive failures: **114** — Timeout
-- **Sony Yay** — Backup — consecutive failures: **114** — Timeout
-- **Star Gold** — Backup — consecutive failures: **233** — Timeout
-- **Star Jalsha** — Backup — consecutive failures: **233** — Timeout
-- **Star Jalsha** — Backup — consecutive failures: **233** — Timeout
-- **Star Jalsha** — Backup — consecutive failures: **29** — Timeout
-- **Star Movies** — Backup — consecutive failures: **114** — Timeout
-- **Star Movies** — Backup — consecutive failures: **40** — Connection
-- **Star Movies Select** — Backup — consecutive failures: **114** — Timeout
-- **Star News** — Backup — consecutive failures: **53** — HTTP 500
-- **Star News** — Backup — consecutive failures: **53** — HTTP 404
-- **Star Plus** — Backup — consecutive failures: **233** — Timeout
-- **Star Plus** — Backup — consecutive failures: **14** — HTTP 404
-- **Star Utsav Movies** — Backup — consecutive failures: **40** — Connection
-- **Sun Bangla** — Backup — consecutive failures: **233** — Timeout
-- **Travelxp Hindi** — Backup — consecutive failures: **233** — Timeout
-- **Vasanth TV** — Backup — consecutive failures: **14** — HTTP 404
-- **Vijay Super** — Backup — consecutive failures: **40** — Connection
-- **Zee Action** — Backup — consecutive failures: **5** — HTTP 404
-- **Zee Bangla** — Backup — consecutive failures: **233** — Timeout
-- **Zee Bangla** — Backup — consecutive failures: **41** — Connection
-- **Zee Bangla** — Backup — consecutive failures: **5** — Other
-- **Zee Bangla** — Backup — consecutive failures: **5** — HTTP 404
-- **Zee Bangla Cinema** — Backup — consecutive failures: **5** — HTTP 404
-- **Zee Bangla Sonar** — Backup — consecutive failures: **36** — Timeout
-- **Zee Bangla Sonar** — Backup — consecutive failures: **15** — Timeout
-- **Zee Bangla Sonar** — Backup — consecutive failures: **36** — Timeout
-- **Zee Bangla Sonar** — Backup — consecutive failures: **36** — Timeout
-- **Zee Bollywood** — Backup — consecutive failures: **5** — HTTP 404
-- **Zee Cinema** — Backup — consecutive failures: **233** — Timeout
-- **Zee Cinema** — Backup — consecutive failures: **5** — HTTP 404
-- **Zee TV** — Backup — consecutive failures: **233** — Timeout
-- **Zee TV** — Backup — consecutive failures: **5** — HTTP 404
-- **Zoom Music** — Backup — consecutive failures: **233** — Timeout
-- **ATN Bangla** — Bangladesh — consecutive failures: **233** — Timeout
-- **BTV National** — Bangladesh — consecutive failures: **233** — Timeout
-- **Boishakhi TV** — Bangladesh — consecutive failures: **233** — Timeout
-- **Channel 24** — Bangladesh — consecutive failures: **233** — Timeout
-- **DBC News** — Bangladesh — consecutive failures: **233** — Timeout
-- **Duronto TV** — Bangladesh — consecutive failures: **233** — Timeout
-- **Ekhon TV** — Bangladesh — consecutive failures: **233** — Timeout
-- **Ekushey TV** — Bangladesh — consecutive failures: **233** — Timeout
-- **G TV** — Bangladesh — consecutive failures: **233** — Timeout
-- **Gazi TV** — Bangladesh — consecutive failures: **14** — Network
-- **Independent TV** — Bangladesh — consecutive failures: **233** — Timeout
-- **Jamuna TV** — Bangladesh — consecutive failures: **233** — Timeout
-- **Somoy TV** — Bangladesh — consecutive failures: **233** — Timeout
-- **Star News** — Bangladesh — consecutive failures: **53** — HTTP 404
-- **Animal Planet** — Documentary & Wildlife — consecutive failures: **233** — Timeout
-- **Discovery** — Documentary & Wildlife — consecutive failures: **233** — Timeout
-- **Nat Geo Wild** — Documentary & Wildlife — consecutive failures: **233** — Timeout
-- **National Geographic** — Documentary & Wildlife — consecutive failures: **233** — Timeout
-- **Sony BBC Earth** — Documentary & Wildlife — consecutive failures: **233** — Timeout
-- **TLC** — Documentary & Wildlife — consecutive failures: **233** — Timeout
-- **Travelxp Hindi** — Documentary & Wildlife — consecutive failures: **233** — Timeout
-- **Colors Bangla** — Indian Bangla — consecutive failures: **233** — Timeout
-- **Enterr10 Bangla** — Indian Bangla — consecutive failures: **233** — Timeout
-- **Sony Aath** — Indian Bangla — consecutive failures: **233** — Timeout
-- **Zee Bangla** — Indian Bangla — consecutive failures: **233** — Timeout
-- **Zee Bangla Sonar** — Indian Bangla — consecutive failures: **233** — Timeout
-- **Assam Talks** — Indian Entertainment — consecutive failures: **41** — HTTP 403
-- **Colors** — Indian Entertainment — consecutive failures: **233** — Timeout
-- **MTV India** — Indian Entertainment — consecutive failures: **108** — Timeout
-- **Star Bharat** — Indian Entertainment — consecutive failures: **233** — Timeout
-- **Star Kiran** — Indian Entertainment — consecutive failures: **14** — HTTP 404
-- **Sun TV** — Indian Entertainment — consecutive failures: **14** — HTTP 404
-- **Tamilan TV** — Indian Entertainment — consecutive failures: **5** — HTTP 404
-- **Zee Telugu** — Indian Entertainment — consecutive failures: **14** — HTTP 404
-- **&pictures** — Indian Movies — consecutive failures: **233** — Timeout
-- **&pictures 2** — Indian Movies — consecutive failures: **5** — HTTP 404
-- **All Time Movies** — Indian Movies — consecutive failures: **5** — HTTP 404
-- **Asianet Movies** — Indian Movies — consecutive failures: **14** — HTTP 404
-- **B4U Bhojpuri Plus** — Indian Movies — consecutive failures: **40** — Connection
-- **Colors Cineplex** — Indian Movies — consecutive failures: **233** — Timeout
-- **Colors Cineplex Superhits** — Indian Movies — consecutive failures: **40** — Connection
-- **Colors Kannada Cinema** — Indian Movies — consecutive failures: **40** — Connection
-- **Sidharth Gold** — Indian Movies — consecutive failures: **40** — Connection
-- **Star Gold Select** — Indian Movies — consecutive failures: **40** — Connection
-- **Star Suvarna Plus** — Indian Movies — consecutive failures: **40** — Connection
-- **Xplor** — Indian Movies — consecutive failures: **233** — Timeout
-- **Zee Anmol** — Indian Movies — consecutive failures: **5** — HTTP 404
-- **Zee Cinemalu** — Indian Movies — consecutive failures: **14** — HTTP 404
-- **Zee Talkies** — Indian Movies — consecutive failures: **53** — Connection
-- **7X Music** — Indian Music — consecutive failures: **40** — Connection
-- **Only Music** — Indian Music — consecutive failures: **8** — HTTP 404
-- **Zing** — Indian Music — consecutive failures: **233** — Timeout
-- **&Privé** — International — consecutive failures: **233** — Timeout
-- **AXN** — International — consecutive failures: **233** — Timeout
-- **Al Jazeera** — International — consecutive failures: **233** — Timeout
-- **BBC News** — International — consecutive failures: **108** — Timeout
-- **DW News** — International — consecutive failures: **233** — Timeout
-- **HBO** — International — consecutive failures: **29** — HTTP 403
-- **Lotus TV** — International — consecutive failures: **233** — Timeout
-- **MN+** — International — consecutive failures: **233** — Timeout
-- **MNX** — International — consecutive failures: **233** — Timeout
-- **Movies Now** — International — consecutive failures: **233** — Timeout
-- **Romedy Now** — International — consecutive failures: **233** — Timeout
-- **Sony PIX** — International — consecutive failures: **233** — Timeout
-- **Star Movies Select** — International — consecutive failures: **40** — Connection
-- **Starz Cinema** — International — consecutive failures: **14** — HTTP 404
-- **Zee Cafe** — International — consecutive failures: **5** — HTTP 404
-- **ETV Bal Bharat** — Kids — consecutive failures: **233** — Timeout
-- **Hungama** — Kids — consecutive failures: **233** — Timeout
-- **Nick** — Kids — consecutive failures: **233** — Timeout
-- **Nick Jr** — Kids — consecutive failures: **233** — Timeout
-- **Sonic** — Kids — consecutive failures: **233** — Timeout
-- **Super Hungama** — Kids — consecutive failures: **233** — Timeout
-- **Geo News** — Pakistani — consecutive failures: **233** — Timeout
-- **HUM Sitaray** — Pakistani — consecutive failures: **5** — HTTP 404
-- **Hum Masala** — Pakistani — consecutive failures: **233** — Timeout
-- **Azan TV** — Religious — consecutive failures: **14** — HTTP 404
-- **Peace TV Bangla** — Religious — consecutive failures: **233** — Timeout
-- **A Sports** — Sports — consecutive failures: **114** — Timeout
-- **M Sports** — Sports — consecutive failures: **10** — TLS
-- **PTV Sports** — Sports — consecutive failures: **233** — Timeout
-- **Sony Sports Ten 4** — Sports — consecutive failures: **233** — Timeout
-- **Sony Sports Ten 5** — Sports — consecutive failures: **233** — Timeout
-- **Sony Ten 2** — Sports — consecutive failures: **233** — Timeout
-- **Star Sports 1** — Sports — consecutive failures: **233** — Timeout
-- **Star Sports 2** — Sports — consecutive failures: **233** — Timeout
-- **Star Sports 3** — Sports — consecutive failures: **233** — Timeout
-- **Star Sports SL 1** — Sports — consecutive failures: **29** — Timeout
-- **Star Sports Select 1** — Sports — consecutive failures: **233** — Timeout
-- **Star Sports Select 2** — Sports — consecutive failures: **233** — Timeout
-- **T Sports** — Sports — consecutive failures: **233** — Timeout
-- **Unite8 1** — Sports — consecutive failures: **233** — Timeout
+- **&TV** — Backup — consecutive failures: **15** — HTTP 404
+- **&TV** — Backup — consecutive failures: **6** — HTTP 404
+- **9X Tashan** — Backup — consecutive failures: **7** — HTTP 404
+- **9XM** — Backup — consecutive failures: **109** — Timeout
+- **ATN News** — Backup — consecutive failures: **234** — Timeout
+- **Animal Planet** — Backup — consecutive failures: **234** — Timeout
+- **B4U Kadak** — Backup — consecutive failures: **11** — HTTP 404
+- **B4U Movies** — Backup — consecutive failures: **6** — HTTP 404
+- **B4U Music** — Backup — consecutive failures: **6** — HTTP 404
+- **BBC Earth** — Backup — consecutive failures: **234** — Timeout
+- **BTV National** — Backup — consecutive failures: **234** — Timeout
+- **Cartoon Network** — Backup — consecutive failures: **115** — Timeout
+- **Channel I** — Backup — consecutive failures: **234** — Timeout
+- **Colors Bangla** — Backup — consecutive failures: **234** — Timeout
+- **Colors Bangla Cinema** — Backup — consecutive failures: **234** — Timeout
+- **Colors Bangla Cinema** — Backup — consecutive failures: **234** — Timeout
+- **Colors Bangla Cinema** — Backup — consecutive failures: **41** — Connection
+- **Colors Cineplex** — Backup — consecutive failures: **15** — HTTP 404
+- **DBC News** — Backup — consecutive failures: **15** — Network
+- **Deepto TV** — Backup — consecutive failures: **234** — Timeout
+- **Discover Pakistan** — Backup — consecutive failures: **64** — HTTP 403
+- **Discovery** — Backup — consecutive failures: **234** — Timeout
+- **Duronto TV** — Backup — consecutive failures: **234** — Timeout
+- **Duronto TV** — Backup — consecutive failures: **208** — Timeout
+- **Duronto TV** — Backup — consecutive failures: **54** — Timeout
+- **ETV Music** — Backup — consecutive failures: **15** — HTTP 404
+- **Ekattor TV** — Backup — consecutive failures: **234** — Timeout
+- **Enterr10 Bangla** — Backup — consecutive failures: **234** — Timeout
+- **Goldmines** — Backup — consecutive failures: **6** — HTTP 404
+- **History TV18** — Backup — consecutive failures: **234** — Timeout
+- **Hum Masala** — Backup — consecutive failures: **48** — HTTP 404
+- **Hum Masala** — Backup — consecutive failures: **6** — HTTP 404
+- **Hum TV** — Backup — consecutive failures: **6** — HTTP 404
+- **Jalsha Movies** — Backup — consecutive failures: **234** — Timeout
+- **Jalsha Movies** — Backup — consecutive failures: **234** — Timeout
+- **M Sports** — Backup — consecutive failures: **11** — TLS
+- **MNTV (Tamil)** — Backup — consecutive failures: **15** — HTTP 404
+- **Maasranga TV** — Backup — consecutive failures: **234** — Timeout
+- **Madani TV** — Backup — consecutive failures: **234** — Timeout
+- **Music India** — Backup — consecutive failures: **109** — Timeout
+- **Nagorik TV** — Backup — consecutive failures: **234** — Timeout
+- **Nat Geo Wild** — Backup — consecutive failures: **57** — Connection
+- **National Geographic** — Backup — consecutive failures: **234** — Timeout
+- **National Geographic** — Backup — consecutive failures: **41** — Connection
+- **News 24** — Backup — consecutive failures: **234** — Timeout
+- **Nick Jr** — Backup — consecutive failures: **115** — Timeout
+- **Pogo** — Backup — consecutive failures: **115** — Timeout
+- **RTV** — Backup — consecutive failures: **3** — Timeout
+- **Romedy Now** — Backup — consecutive failures: **41** — Connection
+- **Sangeet Bangla** — Backup — consecutive failures: **109** — Timeout
+- **Sangeet Bangla** — Backup — consecutive failures: **234** — Timeout
+- **Sangeet Bangla** — Backup — consecutive failures: **7** — HTTP 404
+- **Somoy TV** — Backup — consecutive failures: **234** — Timeout
+- **Sony Aath** — Backup — consecutive failures: **234** — Timeout
+- **Sony Aath** — Backup — consecutive failures: **6** — HTTP 404
+- **Sony Entertainment TV** — Backup — consecutive failures: **234** — Timeout
+- **Sony Entertainment TV** — Backup — consecutive failures: **6** — HTTP 404
+- **Sony Entertainment TV** — Backup — consecutive failures: **6** — HTTP 404
+- **Sony Max** — Backup — consecutive failures: **234** — Timeout
+- **Sony Max** — Backup — consecutive failures: **6** — HTTP 404
+- **Sony Max** — Backup — consecutive failures: **6** — HTTP 404
+- **Sony Max 2** — Backup — consecutive failures: **6** — HTTP 404
+- **Sony PIX** — Backup — consecutive failures: **6** — HTTP 404
+- **Sony SAB** — Backup — consecutive failures: **6** — HTTP 404
+- **Sony Sports Ten 3** — Backup — consecutive failures: **115** — Timeout
+- **Sony Yay** — Backup — consecutive failures: **115** — Timeout
+- **Star Gold** — Backup — consecutive failures: **234** — Timeout
+- **Star Jalsha** — Backup — consecutive failures: **234** — Timeout
+- **Star Jalsha** — Backup — consecutive failures: **234** — Timeout
+- **Star Jalsha** — Backup — consecutive failures: **30** — Timeout
+- **Star Movies** — Backup — consecutive failures: **115** — Timeout
+- **Star Movies** — Backup — consecutive failures: **41** — Connection
+- **Star Movies Select** — Backup — consecutive failures: **115** — Timeout
+- **Star News** — Backup — consecutive failures: **54** — Timeout
+- **Star News** — Backup — consecutive failures: **54** — Timeout
+- **Star Plus** — Backup — consecutive failures: **234** — Timeout
+- **Star Plus** — Backup — consecutive failures: **15** — HTTP 404
+- **Star Utsav Movies** — Backup — consecutive failures: **41** — Connection
+- **Sun Bangla** — Backup — consecutive failures: **234** — Timeout
+- **Travelxp Hindi** — Backup — consecutive failures: **234** — Timeout
+- **Vasanth TV** — Backup — consecutive failures: **15** — HTTP 404
+- **Vijay Super** — Backup — consecutive failures: **41** — Connection
+- **Zee Action** — Backup — consecutive failures: **6** — HTTP 404
+- **Zee Bangla** — Backup — consecutive failures: **234** — Timeout
+- **Zee Bangla** — Backup — consecutive failures: **42** — Connection
+- **Zee Bangla** — Backup — consecutive failures: **6** — Other
+- **Zee Bangla** — Backup — consecutive failures: **6** — HTTP 404
+- **Zee Bangla Cinema** — Backup — consecutive failures: **6** — HTTP 404
+- **Zee Bangla Sonar** — Backup — consecutive failures: **37** — Timeout
+- **Zee Bangla Sonar** — Backup — consecutive failures: **16** — Timeout
+- **Zee Bangla Sonar** — Backup — consecutive failures: **37** — Timeout
+- **Zee Bangla Sonar** — Backup — consecutive failures: **37** — Timeout
+- **Zee Bollywood** — Backup — consecutive failures: **6** — HTTP 404
+- **Zee Cinema** — Backup — consecutive failures: **234** — Timeout
+- **Zee Cinema** — Backup — consecutive failures: **6** — HTTP 404
+- **Zee TV** — Backup — consecutive failures: **234** — Timeout
+- **Zee TV** — Backup — consecutive failures: **6** — HTTP 404
+- **Zoom Music** — Backup — consecutive failures: **234** — Timeout
+- **ATN Bangla** — Bangladesh — consecutive failures: **234** — Timeout
+- **BTV National** — Bangladesh — consecutive failures: **234** — Timeout
+- **Boishakhi TV** — Bangladesh — consecutive failures: **234** — Timeout
+- **Channel 24** — Bangladesh — consecutive failures: **234** — Timeout
+- **DBC News** — Bangladesh — consecutive failures: **234** — Timeout
+- **Duronto TV** — Bangladesh — consecutive failures: **234** — Timeout
+- **Ekhon TV** — Bangladesh — consecutive failures: **234** — Timeout
+- **Ekushey TV** — Bangladesh — consecutive failures: **234** — Timeout
+- **G TV** — Bangladesh — consecutive failures: **234** — Timeout
+- **Gazi TV** — Bangladesh — consecutive failures: **15** — Network
+- **Independent TV** — Bangladesh — consecutive failures: **234** — Timeout
+- **Jamuna TV** — Bangladesh — consecutive failures: **234** — Timeout
+- **Somoy TV** — Bangladesh — consecutive failures: **234** — Timeout
+- **Star News** — Bangladesh — consecutive failures: **54** — Timeout
+- **Animal Planet** — Documentary & Wildlife — consecutive failures: **234** — Timeout
+- **Discovery** — Documentary & Wildlife — consecutive failures: **234** — Timeout
+- **Nat Geo Wild** — Documentary & Wildlife — consecutive failures: **234** — Timeout
+- **National Geographic** — Documentary & Wildlife — consecutive failures: **234** — Timeout
+- **Sony BBC Earth** — Documentary & Wildlife — consecutive failures: **234** — Timeout
+- **TLC** — Documentary & Wildlife — consecutive failures: **234** — Timeout
+- **Travelxp Hindi** — Documentary & Wildlife — consecutive failures: **234** — Timeout
+- **Colors Bangla** — Indian Bangla — consecutive failures: **234** — Timeout
+- **Enterr10 Bangla** — Indian Bangla — consecutive failures: **234** — Timeout
+- **Sony Aath** — Indian Bangla — consecutive failures: **234** — Timeout
+- **Zee Bangla** — Indian Bangla — consecutive failures: **234** — Timeout
+- **Zee Bangla Sonar** — Indian Bangla — consecutive failures: **234** — Timeout
+- **Assam Talks** — Indian Entertainment — consecutive failures: **42** — HTTP 403
+- **Colors** — Indian Entertainment — consecutive failures: **234** — Timeout
+- **MTV India** — Indian Entertainment — consecutive failures: **109** — Timeout
+- **Star Bharat** — Indian Entertainment — consecutive failures: **234** — Timeout
+- **Star Kiran** — Indian Entertainment — consecutive failures: **15** — HTTP 404
+- **Sun TV** — Indian Entertainment — consecutive failures: **15** — HTTP 404
+- **Tamilan TV** — Indian Entertainment — consecutive failures: **6** — HTTP 404
+- **Zee Telugu** — Indian Entertainment — consecutive failures: **15** — HTTP 404
+- **&pictures** — Indian Movies — consecutive failures: **234** — Timeout
+- **&pictures 2** — Indian Movies — consecutive failures: **6** — HTTP 404
+- **All Time Movies** — Indian Movies — consecutive failures: **6** — HTTP 404
+- **Asianet Movies** — Indian Movies — consecutive failures: **15** — HTTP 404
+- **B4U Bhojpuri Plus** — Indian Movies — consecutive failures: **41** — Connection
+- **Colors Cineplex** — Indian Movies — consecutive failures: **234** — Timeout
+- **Colors Cineplex Superhits** — Indian Movies — consecutive failures: **41** — Connection
+- **Colors Kannada Cinema** — Indian Movies — consecutive failures: **41** — Connection
+- **Sidharth Gold** — Indian Movies — consecutive failures: **41** — Connection
+- **Star Gold Select** — Indian Movies — consecutive failures: **41** — Connection
+- **Star Suvarna Plus** — Indian Movies — consecutive failures: **41** — Connection
+- **Xplor** — Indian Movies — consecutive failures: **234** — Timeout
+- **Zee Anmol** — Indian Movies — consecutive failures: **6** — HTTP 404
+- **Zee Cinemalu** — Indian Movies — consecutive failures: **15** — HTTP 404
+- **Zee Talkies** — Indian Movies — consecutive failures: **54** — Connection
+- **7X Music** — Indian Music — consecutive failures: **41** — Connection
+- **Only Music** — Indian Music — consecutive failures: **9** — HTTP 404
+- **Zing** — Indian Music — consecutive failures: **234** — Timeout
+- **&Privé** — International — consecutive failures: **234** — Timeout
+- **AXN** — International — consecutive failures: **234** — Timeout
+- **Al Jazeera** — International — consecutive failures: **234** — Timeout
+- **BBC News** — International — consecutive failures: **109** — Timeout
+- **DW News** — International — consecutive failures: **234** — Timeout
+- **HBO** — International — consecutive failures: **30** — HTTP 403
+- **Lotus TV** — International — consecutive failures: **234** — Timeout
+- **MN+** — International — consecutive failures: **234** — Timeout
+- **MNX** — International — consecutive failures: **234** — Timeout
+- **Movies Now** — International — consecutive failures: **234** — Timeout
+- **Romedy Now** — International — consecutive failures: **234** — Timeout
+- **Sony PIX** — International — consecutive failures: **234** — Timeout
+- **Star Movies Select** — International — consecutive failures: **41** — Connection
+- **Starz Cinema** — International — consecutive failures: **15** — HTTP 404
+- **Zee Cafe** — International — consecutive failures: **6** — HTTP 404
+- **ETV Bal Bharat** — Kids — consecutive failures: **234** — Timeout
+- **Hungama** — Kids — consecutive failures: **234** — Timeout
+- **Nick** — Kids — consecutive failures: **234** — Timeout
+- **Nick Jr** — Kids — consecutive failures: **234** — Timeout
+- **Sonic** — Kids — consecutive failures: **234** — Timeout
+- **Super Hungama** — Kids — consecutive failures: **234** — Timeout
+- **Geo News** — Pakistani — consecutive failures: **234** — Timeout
+- **HUM Sitaray** — Pakistani — consecutive failures: **6** — HTTP 404
+- **Hum Masala** — Pakistani — consecutive failures: **234** — Timeout
+- **Azan TV** — Religious — consecutive failures: **15** — HTTP 404
+- **Peace TV Bangla** — Religious — consecutive failures: **234** — Timeout
+- **A Sports** — Sports — consecutive failures: **115** — Timeout
+- **M Sports** — Sports — consecutive failures: **11** — TLS
+- **PTV Sports** — Sports — consecutive failures: **234** — Timeout
+- **Sony Sports Ten 4** — Sports — consecutive failures: **234** — Timeout
+- **Sony Sports Ten 5** — Sports — consecutive failures: **234** — Timeout
+- **Sony Ten 2** — Sports — consecutive failures: **234** — Timeout
+- **Star Sports 1** — Sports — consecutive failures: **234** — Timeout
+- **Star Sports 2** — Sports — consecutive failures: **234** — Timeout
+- **Star Sports 3** — Sports — consecutive failures: **234** — Timeout
+- **Star Sports SL 1** — Sports — consecutive failures: **30** — Timeout
+- **Star Sports Select 1** — Sports — consecutive failures: **234** — Timeout
+- **Star Sports Select 2** — Sports — consecutive failures: **234** — Timeout
+- **T Sports** — Sports — consecutive failures: **234** — Timeout
+- **Unite8 1** — Sports — consecutive failures: **234** — Timeout
 
 ## Failed This Check
 
-- **&TV** — Backup — streak 14 — HTTP 404
-- **&TV** — Backup — streak 5 — HTTP 404
-- **9X Tashan** — Backup — streak 6 — HTTP 404
-- **9XM** — Backup — streak 108 — Timeout
-- **ATN News** — Backup — streak 233 — Timeout
-- **Animal Planet** — Backup — streak 233 — Timeout
-- **Animal Planet** — Backup — streak 1 — HTTP 404
-- **B4U Kadak** — Backup — streak 10 — HTTP 404
-- **B4U Movies** — Backup — streak 5 — HTTP 404
-- **B4U Music** — Backup — streak 5 — HTTP 404
-- **BBC Earth** — Backup — streak 233 — Timeout
-- **BTV National** — Backup — streak 233 — Timeout
-- **Cartoon Network** — Backup — streak 114 — Timeout
-- **Channel 16** — Backup — streak 1 — HTTP 500
-- **Channel I** — Backup — streak 233 — Timeout
-- **Colors Bangla** — Backup — streak 233 — Timeout
-- **Colors Bangla** — Backup — streak 1 — HTTP 401
-- **Colors Bangla Cinema** — Backup — streak 233 — Timeout
-- **Colors Bangla Cinema** — Backup — streak 233 — Timeout
-- **Colors Bangla Cinema** — Backup — streak 40 — Connection
-- **Colors Cineplex** — Backup — streak 14 — HTTP 404
-- **DBC News** — Backup — streak 14 — Network
-- **Deepto TV** — Backup — streak 233 — Timeout
-- **Discover Pakistan** — Backup — streak 63 — HTTP 403
-- **Discovery** — Backup — streak 233 — Timeout
-- **Duronto TV** — Backup — streak 233 — Timeout
-- **Duronto TV** — Backup — streak 207 — Timeout
-- **Duronto TV** — Backup — streak 53 — HTTP 404
-- **ETV Music** — Backup — streak 14 — HTTP 404
-- **Ekattor TV** — Backup — streak 233 — Timeout
-- **Enterr10 Bangla** — Backup — streak 233 — Timeout
-- **Goldmines** — Backup — streak 5 — HTTP 404
-- **History TV18** — Backup — streak 233 — Timeout
-- **Hum Masala** — Backup — streak 47 — HTTP 404
-- **Hum Masala** — Backup — streak 5 — HTTP 404
-- **Hum TV** — Backup — streak 5 — HTTP 404
-- **Jalsha Movies** — Backup — streak 233 — Timeout
-- **Jalsha Movies** — Backup — streak 233 — Timeout
-- **M Sports** — Backup — streak 10 — TLS
-- **MNTV (Tamil)** — Backup — streak 14 — HTTP 404
-- **Maasranga TV** — Backup — streak 233 — Timeout
-- **Madani TV** — Backup — streak 233 — Timeout
-- **Music India** — Backup — streak 108 — Timeout
-- **Nagorik TV** — Backup — streak 233 — Timeout
-- **Nat Geo Wild** — Backup — streak 56 — Connection
-- **National Geographic** — Backup — streak 233 — Timeout
-- **National Geographic** — Backup — streak 40 — Connection
-- **News 24** — Backup — streak 233 — Timeout
-- **Nick Jr** — Backup — streak 114 — Timeout
-- **Pogo** — Backup — streak 114 — Timeout
-- **RTV** — Backup — streak 2 — HTTP 404
-- **Romedy Now** — Backup — streak 40 — Connection
-- **Sangeet Bangla** — Backup — streak 108 — Timeout
-- **Sangeet Bangla** — Backup — streak 233 — Timeout
-- **Sangeet Bangla** — Backup — streak 6 — HTTP 404
-- **Somoy TV** — Backup — streak 233 — Timeout
-- **Sony Aath** — Backup — streak 233 — Timeout
-- **Sony Aath** — Backup — streak 5 — HTTP 404
-- **Sony Entertainment TV** — Backup — streak 233 — Timeout
-- **Sony Entertainment TV** — Backup — streak 5 — HTTP 404
-- **Sony Entertainment TV** — Backup — streak 5 — HTTP 404
-- **Sony Max** — Backup — streak 233 — Timeout
-- **Sony Max** — Backup — streak 5 — HTTP 404
-- **Sony Max** — Backup — streak 5 — HTTP 404
-- **Sony Max 2** — Backup — streak 5 — HTTP 404
-- **Sony PIX** — Backup — streak 5 — HTTP 404
-- **Sony SAB** — Backup — streak 5 — HTTP 404
-- **Sony Sports Ten 3** — Backup — streak 114 — Timeout
-- **Sony Yay** — Backup — streak 114 — Timeout
-- **Star Gold** — Backup — streak 233 — Timeout
-- **Star Jalsha** — Backup — streak 233 — Timeout
-- **Star Jalsha** — Backup — streak 233 — Timeout
-- **Star Jalsha** — Backup — streak 29 — Timeout
-- **Star Movies** — Backup — streak 114 — Timeout
-- **Star Movies** — Backup — streak 40 — Connection
-- **Star Movies Select** — Backup — streak 114 — Timeout
-- **Star News** — Backup — streak 53 — HTTP 500
-- **Star News** — Backup — streak 53 — HTTP 404
-- **Star Plus** — Backup — streak 233 — Timeout
-- **Star Plus** — Backup — streak 14 — HTTP 404
-- **Star Utsav Movies** — Backup — streak 40 — Connection
-- **Sun Bangla** — Backup — streak 233 — Timeout
-- **Travelxp Hindi** — Backup — streak 233 — Timeout
-- **Vasanth TV** — Backup — streak 14 — HTTP 404
-- **Vijay Super** — Backup — streak 40 — Connection
-- **Zee Action** — Backup — streak 5 — HTTP 404
-- **Zee Bangla** — Backup — streak 1 — HTTP 404
-- **Zee Bangla** — Backup — streak 233 — Timeout
-- **Zee Bangla** — Backup — streak 41 — Connection
-- **Zee Bangla** — Backup — streak 5 — Other
-- **Zee Bangla** — Backup — streak 5 — HTTP 404
-- **Zee Bangla Cinema** — Backup — streak 5 — HTTP 404
-- **Zee Bangla Sonar** — Backup — streak 36 — Timeout
-- **Zee Bangla Sonar** — Backup — streak 15 — Timeout
-- **Zee Bangla Sonar** — Backup — streak 36 — Timeout
-- **Zee Bangla Sonar** — Backup — streak 36 — Timeout
-- **Zee Bollywood** — Backup — streak 5 — HTTP 404
-- **Zee Cinema** — Backup — streak 233 — Timeout
-- **Zee Cinema** — Backup — streak 5 — HTTP 404
-- **Zee TV** — Backup — streak 233 — Timeout
-- **Zee TV** — Backup — streak 5 — HTTP 404
-- **Zoom Music** — Backup — streak 233 — Timeout
-- **ATN Bangla** — Bangladesh — streak 233 — Timeout
-- **BTV National** — Bangladesh — streak 233 — Timeout
-- **Boishakhi TV** — Bangladesh — streak 233 — Timeout
-- **Channel 24** — Bangladesh — streak 233 — Timeout
-- **DBC News** — Bangladesh — streak 233 — Timeout
-- **Duronto TV** — Bangladesh — streak 233 — Timeout
-- **Ekhon TV** — Bangladesh — streak 233 — Timeout
-- **Ekushey TV** — Bangladesh — streak 233 — Timeout
-- **G TV** — Bangladesh — streak 233 — Timeout
-- **Gazi TV** — Bangladesh — streak 14 — Network
-- **Independent TV** — Bangladesh — streak 233 — Timeout
-- **Jamuna TV** — Bangladesh — streak 233 — Timeout
-- **NTV Europe** — Bangladesh — streak 1 — HTTP 500
-- **Somoy TV** — Bangladesh — streak 233 — Timeout
-- **Star News** — Bangladesh — streak 53 — HTTP 404
-- **Animal Planet** — Documentary & Wildlife — streak 233 — Timeout
-- **Discovery** — Documentary & Wildlife — streak 233 — Timeout
-- **Nat Geo Wild** — Documentary & Wildlife — streak 233 — Timeout
-- **National Geographic** — Documentary & Wildlife — streak 233 — Timeout
-- **Sony BBC Earth** — Documentary & Wildlife — streak 233 — Timeout
-- **TLC** — Documentary & Wildlife — streak 233 — Timeout
-- **Travelxp Hindi** — Documentary & Wildlife — streak 233 — Timeout
-- **Colors Bangla** — Indian Bangla — streak 233 — Timeout
-- **Enterr10 Bangla** — Indian Bangla — streak 233 — Timeout
-- **Sony Aath** — Indian Bangla — streak 233 — Timeout
-- **Zee Bangla** — Indian Bangla — streak 233 — Timeout
-- **Zee Bangla Sonar** — Indian Bangla — streak 233 — Timeout
-- **Assam Talks** — Indian Entertainment — streak 41 — HTTP 403
-- **Colors** — Indian Entertainment — streak 233 — Timeout
-- **MTV India** — Indian Entertainment — streak 108 — Timeout
-- **Star Bharat** — Indian Entertainment — streak 233 — Timeout
-- **Star Kiran** — Indian Entertainment — streak 14 — HTTP 404
-- **Sun TV** — Indian Entertainment — streak 14 — HTTP 404
-- **Suriyan TV** — Indian Entertainment — streak 1 — HTTP 503
-- **Tamilan TV** — Indian Entertainment — streak 5 — HTTP 404
-- **Zee Telugu** — Indian Entertainment — streak 14 — HTTP 404
-- **&pictures** — Indian Movies — streak 233 — Timeout
-- **&pictures 2** — Indian Movies — streak 5 — HTTP 404
-- **All Time Movies** — Indian Movies — streak 5 — HTTP 404
-- **Asianet Movies** — Indian Movies — streak 14 — HTTP 404
-- **B4U Bhojpuri Plus** — Indian Movies — streak 40 — Connection
-- **Colors Cineplex** — Indian Movies — streak 233 — Timeout
-- **Colors Cineplex Superhits** — Indian Movies — streak 40 — Connection
-- **Colors Kannada Cinema** — Indian Movies — streak 40 — Connection
-- **Sidharth Gold** — Indian Movies — streak 40 — Connection
-- **Star Gold Select** — Indian Movies — streak 40 — Connection
-- **Star Suvarna Plus** — Indian Movies — streak 40 — Connection
-- **Xplor** — Indian Movies — streak 233 — Timeout
-- **Zee Anmol** — Indian Movies — streak 5 — HTTP 404
-- **Zee Cinemalu** — Indian Movies — streak 14 — HTTP 404
-- **Zee Talkies** — Indian Movies — streak 53 — Connection
-- **7X Music** — Indian Music — streak 40 — Connection
-- **Only Music** — Indian Music — streak 8 — HTTP 404
-- **Zing** — Indian Music — streak 233 — Timeout
-- **&Privé** — International — streak 233 — Timeout
-- **AXN** — International — streak 233 — Timeout
-- **Al Jazeera** — International — streak 233 — Timeout
-- **BBC News** — International — streak 108 — Timeout
-- **DW News** — International — streak 233 — Timeout
-- **HBO** — International — streak 29 — HTTP 403
-- **Lotus TV** — International — streak 233 — Timeout
-- **MN+** — International — streak 233 — Timeout
-- **MNX** — International — streak 233 — Timeout
-- **Movies Now** — International — streak 233 — Timeout
-- **Romedy Now** — International — streak 233 — Timeout
-- **Sony PIX** — International — streak 233 — Timeout
-- **Star Movies Select** — International — streak 40 — Connection
-- **Starz Cinema** — International — streak 14 — HTTP 404
-- **Zee Cafe** — International — streak 5 — HTTP 404
-- **ETV Bal Bharat** — Kids — streak 233 — Timeout
-- **Hungama** — Kids — streak 233 — Timeout
-- **Nick** — Kids — streak 233 — Timeout
-- **Nick Jr** — Kids — streak 233 — Timeout
-- **Sonic** — Kids — streak 233 — Timeout
-- **Super Hungama** — Kids — streak 233 — Timeout
-- **Geo News** — Pakistani — streak 233 — Timeout
-- **HUM Sitaray** — Pakistani — streak 5 — HTTP 404
-- **Hum Masala** — Pakistani — streak 233 — Timeout
-- **Azan TV** — Religious — streak 14 — HTTP 404
-- **Peace TV Bangla** — Religious — streak 233 — Timeout
-- **A Sports** — Sports — streak 114 — Timeout
-- **M Sports** — Sports — streak 10 — TLS
-- **PTV Sports** — Sports — streak 233 — Timeout
-- **Sony Sports Ten 4** — Sports — streak 233 — Timeout
-- **Sony Sports Ten 5** — Sports — streak 233 — Timeout
-- **Sony Ten 2** — Sports — streak 233 — Timeout
-- **Star Sports 1** — Sports — streak 233 — Timeout
-- **Star Sports 2** — Sports — streak 233 — Timeout
-- **Star Sports 3** — Sports — streak 233 — Timeout
-- **Star Sports SL 1** — Sports — streak 29 — Timeout
-- **Star Sports Select 1** — Sports — streak 233 — Timeout
-- **Star Sports Select 2** — Sports — streak 233 — Timeout
-- **T Sports** — Sports — streak 233 — Timeout
-- **Unite8 1** — Sports — streak 233 — Timeout
+- **&TV** — Backup — streak 15 — HTTP 404
+- **&TV** — Backup — streak 6 — HTTP 404
+- **9X Tashan** — Backup — streak 7 — HTTP 404
+- **9XM** — Backup — streak 109 — Timeout
+- **ATN News** — Backup — streak 234 — Timeout
+- **Animal Planet** — Backup — streak 234 — Timeout
+- **B4U Kadak** — Backup — streak 11 — HTTP 404
+- **B4U Movies** — Backup — streak 6 — HTTP 404
+- **B4U Music** — Backup — streak 6 — HTTP 404
+- **BBC Earth** — Backup — streak 234 — Timeout
+- **BTV National** — Backup — streak 234 — Timeout
+- **Cartoon Network** — Backup — streak 115 — Timeout
+- **Channel 1** — Backup — streak 1 — Timeout
+- **Channel 16** — Backup — streak 2 — Timeout
+- **Channel I** — Backup — streak 234 — Timeout
+- **Channel S** — Backup — streak 1 — Timeout
+- **Channel S** — Backup — streak 1 — Timeout
+- **Colors Bangla** — Backup — streak 234 — Timeout
+- **Colors Bangla** — Backup — streak 2 — HTTP 401
+- **Colors Bangla Cinema** — Backup — streak 234 — Timeout
+- **Colors Bangla Cinema** — Backup — streak 234 — Timeout
+- **Colors Bangla Cinema** — Backup — streak 41 — Connection
+- **Colors Cineplex** — Backup — streak 15 — HTTP 404
+- **DBC News** — Backup — streak 15 — Network
+- **Dangal** — Backup — streak 1 — HTTP 404
+- **Deepto TV** — Backup — streak 234 — Timeout
+- **Discover Pakistan** — Backup — streak 64 — HTTP 403
+- **Discovery** — Backup — streak 234 — Timeout
+- **Duronto TV** — Backup — streak 234 — Timeout
+- **Duronto TV** — Backup — streak 208 — Timeout
+- **Duronto TV** — Backup — streak 54 — Timeout
+- **ETV Music** — Backup — streak 15 — HTTP 404
+- **Ekattor TV** — Backup — streak 234 — Timeout
+- **Ekhon TV** — Backup — streak 1 — Timeout
+- **Enterr10 Bangla** — Backup — streak 234 — Timeout
+- **G TV** — Backup — streak 1 — Timeout
+- **G TV** — Backup — streak 1 — Timeout
+- **Goldmines** — Backup — streak 6 — HTTP 404
+- **History TV18** — Backup — streak 234 — Timeout
+- **Hum Masala** — Backup — streak 48 — HTTP 404
+- **Hum Masala** — Backup — streak 6 — HTTP 404
+- **Hum TV** — Backup — streak 6 — HTTP 404
+- **Jalsha Movies** — Backup — streak 234 — Timeout
+- **Jalsha Movies** — Backup — streak 234 — Timeout
+- **M Sports** — Backup — streak 11 — TLS
+- **MNTV (Tamil)** — Backup — streak 15 — HTTP 404
+- **Maasranga TV** — Backup — streak 234 — Timeout
+- **Madani TV** — Backup — streak 234 — Timeout
+- **Movie Bangla** — Backup — streak 1 — Timeout
+- **Movie Bangla** — Backup — streak 1 — Timeout
+- **Music India** — Backup — streak 109 — Timeout
+- **My TV** — Backup — streak 1 — Timeout
+- **Nagorik TV** — Backup — streak 234 — Timeout
+- **Nat Geo Wild** — Backup — streak 57 — Connection
+- **National Geographic** — Backup — streak 234 — Timeout
+- **National Geographic** — Backup — streak 41 — Connection
+- **News 24** — Backup — streak 234 — Timeout
+- **Nick Jr** — Backup — streak 115 — Timeout
+- **Pogo** — Backup — streak 115 — Timeout
+- **RTV** — Backup — streak 3 — Timeout
+- **Romedy Now** — Backup — streak 41 — Connection
+- **SA TV** — Backup — streak 1 — Timeout
+- **SA TV** — Backup — streak 1 — Timeout
+- **Sangeet Bangla** — Backup — streak 109 — Timeout
+- **Sangeet Bangla** — Backup — streak 234 — Timeout
+- **Sangeet Bangla** — Backup — streak 7 — HTTP 404
+- **Somoy TV** — Backup — streak 234 — Timeout
+- **Sony Aath** — Backup — streak 234 — Timeout
+- **Sony Aath** — Backup — streak 6 — HTTP 404
+- **Sony Entertainment TV** — Backup — streak 234 — Timeout
+- **Sony Entertainment TV** — Backup — streak 6 — HTTP 404
+- **Sony Entertainment TV** — Backup — streak 6 — HTTP 404
+- **Sony Max** — Backup — streak 234 — Timeout
+- **Sony Max** — Backup — streak 6 — HTTP 404
+- **Sony Max** — Backup — streak 6 — HTTP 404
+- **Sony Max 2** — Backup — streak 6 — HTTP 404
+- **Sony PIX** — Backup — streak 6 — HTTP 404
+- **Sony SAB** — Backup — streak 6 — HTTP 404
+- **Sony Sports Ten 3** — Backup — streak 115 — Timeout
+- **Sony Yay** — Backup — streak 115 — Timeout
+- **Star Gold** — Backup — streak 234 — Timeout
+- **Star Jalsha** — Backup — streak 234 — Timeout
+- **Star Jalsha** — Backup — streak 234 — Timeout
+- **Star Jalsha** — Backup — streak 30 — Timeout
+- **Star Movies** — Backup — streak 115 — Timeout
+- **Star Movies** — Backup — streak 41 — Connection
+- **Star Movies Select** — Backup — streak 115 — Timeout
+- **Star News** — Backup — streak 54 — Timeout
+- **Star News** — Backup — streak 54 — Timeout
+- **Star Plus** — Backup — streak 234 — Timeout
+- **Star Plus** — Backup — streak 15 — HTTP 404
+- **Star Utsav Movies** — Backup — streak 41 — Connection
+- **Sun Bangla** — Backup — streak 234 — Timeout
+- **Travelxp Hindi** — Backup — streak 234 — Timeout
+- **Vasanth TV** — Backup — streak 15 — HTTP 404
+- **Vijay Super** — Backup — streak 41 — Connection
+- **Zee Action** — Backup — streak 6 — HTTP 404
+- **Zee Bangla** — Backup — streak 234 — Timeout
+- **Zee Bangla** — Backup — streak 42 — Connection
+- **Zee Bangla** — Backup — streak 6 — Other
+- **Zee Bangla** — Backup — streak 6 — HTTP 404
+- **Zee Bangla Cinema** — Backup — streak 6 — HTTP 404
+- **Zee Bangla Sonar** — Backup — streak 37 — Timeout
+- **Zee Bangla Sonar** — Backup — streak 1 — Timeout
+- **Zee Bangla Sonar** — Backup — streak 16 — Timeout
+- **Zee Bangla Sonar** — Backup — streak 37 — Timeout
+- **Zee Bangla Sonar** — Backup — streak 37 — Timeout
+- **Zee Bollywood** — Backup — streak 6 — HTTP 404
+- **Zee Cinema** — Backup — streak 234 — Timeout
+- **Zee Cinema** — Backup — streak 1 — Timeout
+- **Zee Cinema** — Backup — streak 6 — HTTP 404
+- **Zee TV** — Backup — streak 234 — Timeout
+- **Zee TV** — Backup — streak 6 — HTTP 404
+- **Zoom Music** — Backup — streak 234 — Timeout
+- **ATN Bangla** — Bangladesh — streak 234 — Timeout
+- **Ananda TV** — Bangladesh — streak 1 — Timeout
+- **BTV National** — Bangladesh — streak 234 — Timeout
+- **Boishakhi TV** — Bangladesh — streak 234 — Timeout
+- **Channel 16** — Bangladesh — streak 1 — Timeout
+- **Channel 24** — Bangladesh — streak 234 — Timeout
+- **DBC News** — Bangladesh — streak 234 — Timeout
+- **Duronto TV** — Bangladesh — streak 234 — Timeout
+- **Ekhon TV** — Bangladesh — streak 234 — Timeout
+- **Ekushey TV** — Bangladesh — streak 234 — Timeout
+- **G TV** — Bangladesh — streak 234 — Timeout
+- **Gazi TV** — Bangladesh — streak 15 — Network
+- **Green TV** — Bangladesh — streak 1 — Timeout
+- **Independent TV** — Bangladesh — streak 234 — Timeout
+- **Jamuna TV** — Bangladesh — streak 234 — Timeout
+- **NTV Europe** — Bangladesh — streak 2 — HTTP 500
+- **Somoy TV** — Bangladesh — streak 234 — Timeout
+- **Star News** — Bangladesh — streak 54 — Timeout
+- **Animal Planet** — Documentary & Wildlife — streak 234 — Timeout
+- **Discovery** — Documentary & Wildlife — streak 234 — Timeout
+- **Nat Geo Wild** — Documentary & Wildlife — streak 234 — Timeout
+- **National Geographic** — Documentary & Wildlife — streak 234 — Timeout
+- **Sony BBC Earth** — Documentary & Wildlife — streak 234 — Timeout
+- **TLC** — Documentary & Wildlife — streak 234 — Timeout
+- **Travelxp Hindi** — Documentary & Wildlife — streak 234 — Timeout
+- **Colors Bangla** — Indian Bangla — streak 234 — Timeout
+- **Enterr10 Bangla** — Indian Bangla — streak 234 — Timeout
+- **Sony Aath** — Indian Bangla — streak 234 — Timeout
+- **Zee Bangla** — Indian Bangla — streak 234 — Timeout
+- **Zee Bangla Sonar** — Indian Bangla — streak 234 — Timeout
+- **Assam Talks** — Indian Entertainment — streak 42 — HTTP 403
+- **Colors** — Indian Entertainment — streak 234 — Timeout
+- **MTV India** — Indian Entertainment — streak 109 — Timeout
+- **Star Bharat** — Indian Entertainment — streak 234 — Timeout
+- **Star Kiran** — Indian Entertainment — streak 15 — HTTP 404
+- **Sun TV** — Indian Entertainment — streak 15 — HTTP 404
+- **Suriyan TV** — Indian Entertainment — streak 2 — HTTP 503
+- **Tamilan TV** — Indian Entertainment — streak 6 — HTTP 404
+- **Zee Telugu** — Indian Entertainment — streak 15 — HTTP 404
+- **&pictures** — Indian Movies — streak 234 — Timeout
+- **&pictures 2** — Indian Movies — streak 6 — HTTP 404
+- **All Time Movies** — Indian Movies — streak 6 — HTTP 404
+- **Asianet Movies** — Indian Movies — streak 15 — HTTP 404
+- **B4U Bhojpuri Plus** — Indian Movies — streak 41 — Connection
+- **Colors Cineplex** — Indian Movies — streak 234 — Timeout
+- **Colors Cineplex Superhits** — Indian Movies — streak 41 — Connection
+- **Colors Kannada Cinema** — Indian Movies — streak 41 — Connection
+- **Sidharth Gold** — Indian Movies — streak 41 — Connection
+- **Star Gold Select** — Indian Movies — streak 41 — Connection
+- **Star Suvarna Plus** — Indian Movies — streak 41 — Connection
+- **Xplor** — Indian Movies — streak 234 — Timeout
+- **Zee Anmol** — Indian Movies — streak 6 — HTTP 404
+- **Zee Cinemalu** — Indian Movies — streak 15 — HTTP 404
+- **Zee Talkies** — Indian Movies — streak 54 — Connection
+- **7X Music** — Indian Music — streak 41 — Connection
+- **Only Music** — Indian Music — streak 9 — HTTP 404
+- **Sana Plus** — Indian Music — streak 1 — HTTP 404
+- **Zing** — Indian Music — streak 234 — Timeout
+- **&Privé** — International — streak 234 — Timeout
+- **4ever Drama** — International — streak 1 — Timeout
+- **AXN** — International — streak 234 — Timeout
+- **Al Jazeera** — International — streak 234 — Timeout
+- **BBC News** — International — streak 109 — Timeout
+- **DW News** — International — streak 234 — Timeout
+- **HBO** — International — streak 30 — HTTP 403
+- **HBO 2** — International — streak 1 — HTTP 404
+- **Lotus TV** — International — streak 234 — Timeout
+- **MN+** — International — streak 234 — Timeout
+- **MNX** — International — streak 234 — Timeout
+- **Movies Now** — International — streak 234 — Timeout
+- **Romedy Now** — International — streak 234 — Timeout
+- **Sony PIX** — International — streak 234 — Timeout
+- **Star Movies Select** — International — streak 41 — Connection
+- **Starz Cinema** — International — streak 15 — HTTP 404
+- **Zee Cafe** — International — streak 6 — HTTP 404
+- **ETV Bal Bharat** — Kids — streak 234 — Timeout
+- **Hungama** — Kids — streak 234 — Timeout
+- **Nick** — Kids — streak 234 — Timeout
+- **Nick Jr** — Kids — streak 234 — Timeout
+- **Sonic** — Kids — streak 234 — Timeout
+- **Sonic Bangla** — Kids — streak 1 — HTTP 429
+- **Super Hungama** — Kids — streak 234 — Timeout
+- **Geo News** — Pakistani — streak 234 — Timeout
+- **HUM Sitaray** — Pakistani — streak 6 — HTTP 404
+- **Hum Masala** — Pakistani — streak 234 — Timeout
+- **Azan TV** — Religious — streak 15 — HTTP 404
+- **Islamic TV** — Religious — streak 1 — Timeout
+- **Makkah Live** — Religious — streak 1 — Timeout
+- **Peace TV Bangla** — Religious — streak 234 — Timeout
+- **A Sports** — Sports — streak 115 — Timeout
+- **M Sports** — Sports — streak 11 — TLS
+- **PTV Sports** — Sports — streak 234 — Timeout
+- **Sony Sports Ten 4** — Sports — streak 234 — Timeout
+- **Sony Sports Ten 5** — Sports — streak 234 — Timeout
+- **Sony Ten 2** — Sports — streak 234 — Timeout
+- **Star Sports 1** — Sports — streak 234 — Timeout
+- **Star Sports 2** — Sports — streak 234 — Timeout
+- **Star Sports 3** — Sports — streak 234 — Timeout
+- **Star Sports SL 1** — Sports — streak 30 — Timeout
+- **Star Sports Select 1** — Sports — streak 234 — Timeout
+- **Star Sports Select 2** — Sports — streak 234 — Timeout
+- **T Sports** — Sports — streak 234 — Timeout
+- **Unite8 1** — Sports — streak 234 — Timeout
 
 ## Near-Duplicate URL Families
 

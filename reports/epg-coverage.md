@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-11T13:58:11+00:00**
+Generated: **2026-10-11T14:04:46+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
@@ -117,9 +117,9 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 - Playlist EPG references: **OK**
 - Guide channel IDs published: **415**
 - Mapped playlist IDs present in guide: **415/415 (100.0%)**
-- Mapped playlist IDs with current/future programmes: **393/415 (94.7%)**
+- Mapped playlist IDs with current/future programmes: **374/415 (90.1%)**
 - Mapped IDs missing from the published XMLTV channel list: **0**
 - IDs missing from guide: none
-- Mapped IDs with no current/future programmes: **22**
-- IDs without current/future programmes (first 30): AndpriveHD.in, ETVBeats.in@HD, FriendsTV.in@SD, ManoranjanPrime.in@SD, OdishaTV.in@SD, OnePaschima.in@SD, PrarthanaTV.in@SD, RupasiBangla.in@SD, Sony.Aath.in, Star.Jalsha.Movies.in, Star.Jalsha.in, SteelbirdMusic.in@SD, SunBangla.in@SD, SuriyanTV.in@SD, ZeeBangla.in@HD, ZeeBanglaSonar.in@SD, custom.bdix.aakashaath, custom.ekamra.cinema, custom.ekamra.musiq, custom.the.q.india, hmair.sonyentertainmenttelevision, hmair.sonyentertainmenttelevisionhd
+- Mapped IDs with no current/future programmes: **41**
+- IDs without current/future programmes (first 30): AamarBangla.in, AndpriveHD.in, BHI.Channel.in, ColorsBanglaCinema.in@SD, DhoomMusic.in@SD, ETVBeats.in@HD, FriendsTV.in@SD, MONTVBangla.in, ManoranjanPrime.in@SD, Mastiii.in@SD, OdishaTV.in@SD, OnePaschima.in@SD, PrarthanaTV.in@SD, RongeenTV.in@SD, RupasiBangla.in@SD, SangeetBangla.in@SD, Sony.Aath.in, Star.Jalsha.Movies.in, Star.Jalsha.in, SteelbirdMusic.in@SD, SunBangla.in@SD, SuriyanTV.in@SD, UBangla.in, ZeeBangla.in@HD, ZeeBanglaSonar.in@SD, custom.abp.ananda, custom.bdix.9bangla, custom.bdix.aakashaath, custom.bdix.abpananda, custom.bdix.banglajago
 - This validation is against the guide currently present in the working tree/publish candidate.
