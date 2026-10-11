@@ -385,6 +385,20 @@ def main():
     guide_programme_counts = defaultdict(int)
     guide_lang_violations = 0
     guide_missing_titles = 0
+    guide_intervals = defaultdict(list)
+    active_guide_ids = set()
+    for playlist_path in PLAYLISTS:
+        if not playlist_path.exists():
+            continue
+        for line in playlist_path.read_text(encoding="utf-8-sig").splitlines():
+            if not line.startswith("#EXTINF:"):
+                continue
+            a = attrs(line)
+            cid = a.get("tvg-id", "").strip()
+            group = a.get("group-title", "").strip()
+            if cid and group not in INACTIVE_GROUPS:
+                active_guide_ids.add(cid)
+    guide_overlap_counts = {}
     guide_parse_error = None
     if guide_path.exists() and guide_path.stat().st_size > 0:
         try:
@@ -416,7 +430,23 @@ def main():
                     guide_programme_counts[cid] += 1
                     if start and (start >= now_guide or (stop and stop >= now_guide)):
                         guide_live_ids.add(cid)
+                    if cid in active_guide_ids and start and stop and stop > start:
+                        guide_intervals[cid].append((start, stop))
                 element.clear()
+            # Count overlapping programme rows per active playlist channel.
+            # XMLTV schedules can legitimately have adjacent boundaries; only
+            # strict interval overlap (next start < previous stop) is flagged.
+            for cid, intervals in guide_intervals.items():
+                intervals.sort(key=lambda pair: (pair[0], pair[1]))
+                furthest_stop = None
+                overlap_rows = 0
+                for start, stop in intervals:
+                    if furthest_stop is not None and start < furthest_stop:
+                        overlap_rows += 1
+                    if furthest_stop is None or stop > furthest_stop:
+                        furthest_stop = stop
+                if overlap_rows:
+                    guide_overlap_counts[cid] = overlap_rows
         except Exception as exc:
             guide_parse_error = str(exc)
     else:
@@ -460,6 +490,8 @@ def main():
     audit.extend([
         "", f"- Non-English programme text fields detected: **{guide_lang_violations}**",
         f"- Missing or blank programme titles: **{guide_missing_titles}**",
+        f"- Active-channel programme overlap rows: **{sum(guide_overlap_counts.values())} across {len(guide_overlap_counts)} channels**",
+        "- Channels with overlaps (top 30): " + (", ".join(f"`{cid}` ({count})" for cid, count in sorted(guide_overlap_counts.items(), key=lambda item: (-item[1], item[0]))[:30]) if guide_overlap_counts else "none"),
         f"- XMLTV read error: **{guide_parse_error or 'none'}**",
         "- Latin-script text is not proof of English: untagged transliterations need human/source verification.",
         "- Never invent programme titles or map Bangladesh broadcasters to similarly named Indian channels.",
