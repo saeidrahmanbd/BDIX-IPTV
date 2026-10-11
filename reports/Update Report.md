@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-10-11 05:22 UTC**_
+_Last generated: **2026-10-11 05:37 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -12,16 +12,16 @@ _Last generated: **2026-10-11 05:22 UTC**_
 | Backup Streams | **450** |
 | New Channels | **33** |
 | New Backup Streams | **41** |
-| Local Logos | **100.0%** |
+| Local Logos | **99.9%** |
 | EPG Programme Coverage | **78.4%** |
 | EPG Mapping | **81.6%** |
 | Stream Health Tested | **1083** |
-| Stream Health Failures | **150** |
-| Persistent Failures | **148** |
+| Stream Health Failures | **166** |
+| Persistent Failures | **147** |
 | Near-Duplicate URL Families | **0** |
-| Audit Blocking Issues | **0** |
+| Audit Blocking Issues | **1** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-11T05:22:00+00:00** |
+| Pre-Publish Gate Generated | **2026-10-11T05:36:42+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -30,7 +30,7 @@ _Last generated: **2026-10-11 05:22 UTC**_
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
-- Logo exceptions: **0**
+- Logo exceptions: **1**
 - Not Playing logo exceptions: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
@@ -54,14 +54,14 @@ _Last generated: **2026-10-11 05:22 UTC**_
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-11T05:21:09.086580+00:00** |
-| EPG coverage | **2026-10-11T05:21:07+00:00** |
-| Stream health | **2026-10-11T05:22:00+00:00** |
-| Pre-publish gate | **2026-10-11T05:22:00+00:00** |
+| Playlist audit | **2026-10-11T05:36:41.856488+00:00** |
+| EPG coverage | **2026-10-11T05:35:43+00:00** |
+| Stream health | **2026-10-11T05:37:36+00:00** |
+| Pre-publish gate | **2026-10-11T05:36:42+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
 - Latest entries change: **1210 → 1210**
-- Latest health failures: **154 → 150**
+- Latest health failures: **150 → 166**
 
 Historical records are retained in reports/maintenance-history.json.

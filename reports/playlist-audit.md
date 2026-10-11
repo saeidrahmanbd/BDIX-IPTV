@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-11T05:21:09.086580+00:00**
+Generated: **2026-10-11T05:36:41.856488+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -14,7 +14,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **0**
+- Logo exceptions: **1**
 - Logo references checked: **1210**
 - Not Playing logo exceptions: **0**
 - Duplicate primary identities: **0**
@@ -1037,15 +1037,16 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1210**
+- Healthy/local references: **1209**
 - missing: **0**
 - broken-local: **0**
 - external: **0**
 - non-png: **0**
 - invalid-dimensions: **0**
-- corrupt-image: **0**
+- corrupt-image: **1**
 - unvalidated-image: **0**
 - other: **0**
+- corrupt-image — YET TV [yettv.in@hd] — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/yet-tv-custom.png
 
 ## Protected Primary Entries
 

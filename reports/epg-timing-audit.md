@@ -6,7 +6,6 @@ Automatic corrections require repeated cross-source title and duration matches, 
 
 - **Al Jazeera** (AlJazeera.qa@English): source ID 543135 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Alankar TV** (AlankarTV.in@SD): source ID 543118 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
-- **Amrita TV** (AmritaTV.in@SD): source ID 543102 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Xplor** (AndxplorHD.in): source ID and.xplorHD.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
 - **Animal Planet** (AnimalPlanet.in@SD): source ID 543099 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Colors Gujarati** (ColorsGujarati.in@SD): source ID 543314 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
@@ -53,18 +52,14 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **Raj Digital Plus** (RajDigitalPlus.in@SD): source ID 543042 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Raj Digital Plus** (RajDigitalPlus.in@SD): source ID RAJ.DIGITAL.PLUS.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **Raj Musix Kannada** (RajMusixKannada.in@SD): source ID 543078 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
-- **Raj Musix Tamil** (RajMusixTamil.in@SD): source ID 543499 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Raj TV** (RajTV.in@SD): source ID 543033 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
-- **Raj TV** (RajTV.in@SD): source ID RAJ.TV.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **Rengoni** (Rengoni.in@SD): source ID 543249 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Romedy Now** (RomedyNow.in@SD): source ID 543123 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Shemaroo Marathi Bana** (ShemarooMarathiBana.in@SD): source ID 543104 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
-- **Shemaroo TV** (ShemarooTV.in@SD): source ID 543214 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Siri Kannada All Time** (SiriKannadaAllTime.in): source ID 543254 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Sony PAL** (SonyPal.in@SD): source ID 543324 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Sony Sports Ten 5** (SonySportsTen5.in): source ID SONY.SPORTS.TEN.5.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by +8 hours after repeated cross-source agreement.
 - **Sony Yay** (SonyYay.in@SD): source ID 543317 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
-- **Star Sports 3** (StarSports3.in@SD): source ID 543366 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Star Suvarna Plus** (StarSuvarnaPlus.in@SD): source ID 543423 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Vasanth TV** (VasanthTV.in@SD): source ID 543287 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Vissa TV** (VissaTV.in@SD): source ID 543439 from https://epg.pw/xmltv/epg_IN.xml shifted by +16 hours after repeated cross-source agreement.
@@ -72,4 +67,4 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **Zee Bollywood** (ZeeBollywood.in@SD): source ID 543294 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Discovery Turbo** (custom.discovery.turbo): source ID 543148 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 
-Detected source-ID corrections: **67**
+Detected source-ID corrections: **62**
