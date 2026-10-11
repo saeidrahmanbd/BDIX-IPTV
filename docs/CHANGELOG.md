@@ -25,7 +25,7 @@
 - Added direct release download links
 - Added Program Glimpse
 
-For the complete release information, see **[Playlist Studio v5.0](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.0.0)**.
+For the primary application release, see **[Playlist Studio v5.0](https://github.com/saeidrahmanbd/Playlist-Studio/releases/tag/v5.0.0)**. The build files are also mirrored in the [BDIX-IPTV v5.0.0 release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.0.0).
 
 ## 2026-10-08
 
