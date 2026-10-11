@@ -50,6 +50,25 @@ LOCAL_LOGO_FILES = {
     "Ducktv": "duck-tv.png",
     "Afrobeats": "afrobeats.png",
 }
+
+# Exact channel/region matches from the public tv-logo/tv-logos collection.
+# Use only where the playlist name or its known channel identity identifies region.
+TV_LOGO_HINTS = {
+    "Boomerang UK": "countries/united-kingdom/boomerang-uk.png",
+    "Digi Sport 1": "countries/romania/digi-sport-1-ro.png",
+    "Digi Sport 2": "countries/romania/digi-sport-2-ro.png",
+    "Epic": "countries/india/epic-in.png",
+    "Fashion TV HD": "countries/international/fashion-tv-int.png",
+    "Laff TV": "countries/united-states/laff-us.png",
+    "Movie Sphere": "countries/united-states/movie-sphere-us.png",
+    "Premier Sports 1": "countries/united-kingdom/premier-sports-1-uk.png",
+    "The Q": "countries/india/the-q-in.png",
+    "Tsn Aq1": "countries/canada/tsn-ca.png",
+    "Ziggo Sport Live": "countries/netherlands/ziggo-sport-nl.png",
+}
+TV_LOGO_BASE = "https://raw.githubusercontent.com/tv-logo/tv-logos/main/"
+TV_LOGO_REPO = "https://github.com/tv-logo/tv-logos"
+
 STOP_WORDS = {"hd", "uhd", "fhd", "sd", "4k", "8k", "1080p", "720p", "576p", "hevc", "h265", "h264"}
 COMMONS_STOP_WORDS = {"the"}
 SUPPORTED_FORMATS = {"SVG", "PNG", "JPEG", "JPG", "WEBP"}
@@ -455,6 +474,16 @@ def main():
                             "license": "IPTV-org public logo dataset",
                             "license_url": "https://github.com/iptv-org/database",
                         }
+                if not candidate and channel in TV_LOGO_HINTS:
+                    hint_path = TV_LOGO_HINTS[channel]
+                    candidate = {
+                        "url": TV_LOGO_BASE + hint_path,
+                        "format": Path(hint_path).suffix.lstrip(".").upper(),
+                        "page": TV_LOGO_REPO + "/blob/main/" + hint_path,
+                        "license": "No license file found in source repository",
+                        "license_url": "",
+                    }
+                    source = "tv-logo/tv-logos exact channel/region match"
                 if not candidate:
                     candidate = commons_candidate(channel)
                     if candidate:
