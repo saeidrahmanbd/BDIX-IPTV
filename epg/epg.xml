@@ -14729,7 +14729,7 @@ A closer look at international news, events, current affairs, and exclusive stor
     <icon src="https://iptv-epg.org/images/4SQViwnkQNlwLg7U7RH9A-RpnoY_t_GfSwjJpULvm2tVSgDYeOZK4YomcsQalL2tVDaD3tuxtfGH8iLdNzDK-2bRfdQJKw6noEuRcgu-7ZAUt2BZu7XbXz_7xDPj5Q" />
     <title lang="en">Crocodile Island</title>
   </programme>
-  <programme channel="AndTV.in@SD" start="20261011140000 +0530" stop="20261011163800 +0530">
+  <programme channel="AndTV.in@SD" start="20261011140000 +0530" stop="20261011164400 +0530">
     <title>Toilet: Ek Prem Katha</title>
     <desc>Jaya marries Keshav but is disappointed to learn that there is no toilet in his house. As a result, Keshav tries to pacify her with temporary arrangements.</desc>
     <category>Film</category>
@@ -14747,7 +14747,7 @@ A closer look at international news, events, current affairs, and exclusive stor
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p14275649_v_h10_ab.jpg?lock=1280x720" />
   </programme>
-  <programme channel="AndTV.in@SD" start="20261011163800 +0530" stop="20261011170000 +0530">
+  <programme channel="AndTV.in@SD" start="20261011164400 +0530" stop="20261011170000 +0530">
     <title>Bhabi ji Ghar Par Hai!</title>
     <desc>Vibhuti Narayan Mishra and Manmohan Tiwari live in the same neighbourhood in Kanpur. They both try to impress each other's wives but end up landing in peculiar situations.</desc>
     <category>TV Show</category>
@@ -29833,11 +29833,9 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
       <value>U/A-12</value>
     </rating>
   </programme>
-  <programme channel="Colors.in" start="20261011161200 +0530" stop="20261011163900 +0530">
-    <title>Thapki Pyar Ki</title>
-    <desc>Thapki, a lively and intelligent girl, faces certain problems that affect her life. However, she decides to move to a city in order to find a job and meet all her challenges with a positive attitude.</desc>
-    <category>TV Show</category>
-    <category>Drama</category>
+  <programme start="20261011110000 +0000" stop="20261011113000 +0000" channel="Colors.in">
+    <category lang="en">TV Show</category>
+    <category lang="en">Drama</category>
     <credits>
       <director>Ranjan Kumar Singh</director>
       <director>Aanand Kumaar</director>
@@ -29854,13 +29852,15 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
       <producer>Ved Raj</producer>
       <producer>Dheeraj Sarna</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p12002812_b_h10_ab.jpg?lock=1280x720" />
+    <desc lang="en">S1 E502
+Thapki, a lively and intelligent girl, faces certain problems that affect her life. However, she decides to move to a city in order to find a job and meet all her challenges with a positive attitude.</desc>
+    <episode-num>S1 E502</episode-num>
+    <icon src="https://iptv-epg.org/images/S_iG23o6WtEPiMKcBAniB6L4Z1RjBT1qi1ZmlkcRVwn_dd1wTKOdDUZu95v5qWzz9Iqpl3OX0RCGERYPkHFBeeHKTqqf7VCf2PO4Z57HoBQ0GRSGys_WCyMpJt4t" />
+    <title lang="en">Thapki Pyar Ki</title>
   </programme>
-  <programme channel="Colors.in" start="20261011163900 +0530" stop="20261011170600 +0530">
-    <title>Thapki Pyar Ki</title>
-    <desc>Thapki, a lively and intelligent girl, faces certain problems that affect her life. However, she decides to move to a city in order to find a job and meet all her challenges with a positive attitude.</desc>
-    <category>TV Show</category>
-    <category>Drama</category>
+  <programme start="20261011113000 +0000" stop="20261011120000 +0000" channel="Colors.in">
+    <category lang="en">TV Show</category>
+    <category lang="en">Drama</category>
     <credits>
       <director>Ranjan Kumar Singh</director>
       <director>Aanand Kumaar</director>
@@ -29877,30 +29877,11 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
       <producer>Ved Raj</producer>
       <producer>Dheeraj Sarna</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p12002812_b_h10_ab.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="Colors.in" start="20261011170600 +0530" stop="20261011173300 +0530">
-    <title>Thapki Pyar Ki</title>
-    <desc>Thapki, a lively and intelligent girl, faces certain problems that affect her life. However, she decides to move to a city in order to find a job and meet all her challenges with a positive attitude.</desc>
-    <category>TV Show</category>
-    <category>Drama</category>
-    <credits>
-      <director>Ranjan Kumar Singh</director>
-      <director>Aanand Kumaar</director>
-      <actor>Jigyasa Singh</actor>
-      <actor>Manish Goplani</actor>
-      <actor>Ankit Bathla</actor>
-      <actor>Sheena Bajaj</actor>
-      <actor>Jaya Bhattacharya</actor>
-      <actor>Kritika Sharma</actor>
-      <actor>Abhinandan Jindal</actor>
-      <actor>Monica Khanna</actor>
-      <producer>Faizal Alanaa</producer>
-      <producer>Kamna Nirula Menezes</producer>
-      <producer>Ved Raj</producer>
-      <producer>Dheeraj Sarna</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p12002812_b_h10_ab.jpg?lock=1280x720" />
+    <desc lang="en">S1 E503
+Thapki, a lively and intelligent girl, faces certain problems that affect her life. However, she decides to move to a city in order to find a job and meet all her challenges with a positive attitude.</desc>
+    <episode-num>S1 E503</episode-num>
+    <icon src="https://iptv-epg.org/images/S_iG23o6WtEPiMKcBAniB6L4Z1RjBT1qi1ZmlkcRVwn_dd1wTKOdDUZu95v5qWzz9Iqpl3OX0RCGERYPkHFBeeHKTqqf7VCf2PO4Z57HoBQ0GRSGys_WCyMpJt4t" />
+    <title lang="en">Thapki Pyar Ki</title>
   </programme>
   <programme channel="Colors.in" start="20261011173300 +0530" stop="20261011180100 +0530">
     <title>Thapki Pyar Ki</title>
@@ -92182,23 +92163,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261011105800 +0000" stop="20261011110800 +0000" channel="Discovery Kids.in">
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <actor>Bobby Moynihan</actor>
-      <actor>Eric Edelstein</actor>
-      <actor>Demetri Martin</actor>
-      <actor>Charlyne Yi</actor>
-      <actor>Patton Oswalt</actor>
-      <actor>Jason Lee</actor>
-    </credits>
-    <desc lang="en">S1 E4
-Chloe researches the Bears for a presentation. But, when they sneak a peek at her dry report, they decide to jazz it up with exaggerated facts about themselves.</desc>
-    <episode-num>S1 E4</episode-num>
-    <icon src="https://iptv-epg.org/images/bqYXClwJK3KivPxXv4pUJHjJbBMI5kkrFVoLG_C2iORIVbWOUu1VGwgJgI_VNI-CUDFiH_-OHoGTvuaVhXBM8FJlEVwVe9jP9XQHhT9P_iw3TywyYGFmuKKPnym5" />
-    <title lang="en">We Bare Bears</title>
-  </programme>
   <programme start="20261011110800 +0000" stop="20261011112000 +0000" channel="Discovery Kids.in">
     <category lang="en">Children</category>
     <category lang="en">Animation</category>
@@ -105130,23 +105094,6 @@ Zak and the crew descend upon a Southern California park to investigate a haunte
     <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
       <value>AL</value>
     </rating>
-  </programme>
-  <programme start="20261011105800 +0000" stop="20261011110800 +0000" channel="DiscoveryKids.au">
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <actor>Bobby Moynihan</actor>
-      <actor>Eric Edelstein</actor>
-      <actor>Demetri Martin</actor>
-      <actor>Charlyne Yi</actor>
-      <actor>Patton Oswalt</actor>
-      <actor>Jason Lee</actor>
-    </credits>
-    <desc lang="en">S1 E4
-Chloe researches the Bears for a presentation. But, when they sneak a peek at her dry report, they decide to jazz it up with exaggerated facts about themselves.</desc>
-    <episode-num>S1 E4</episode-num>
-    <icon src="https://iptv-epg.org/images/bqYXClwJK3KivPxXv4pUJHjJbBMI5kkrFVoLG_C2iORIVbWOUu1VGwgJgI_VNI-CUDFiH_-OHoGTvuaVhXBM8FJlEVwVe9jP9XQHhT9P_iw3TywyYGFmuKKPnym5" />
-    <title lang="en">We Bare Bears</title>
   </programme>
   <programme start="20261011110800 +0000" stop="20261011112000 +0000" channel="DiscoveryKids.au">
     <category lang="en">Children</category>
@@ -173040,19 +172987,6 @@ The host invites prominent personalities and engages them in candid conversation
     <desc lang="en">Storming Waters : Hazen faces enormous waterfalls as he enters gorge country in an epic survival challenge.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_NATIONAL_GEOGRAPHIC_CHANNEL_1285104_14OCT213000_14OCT220000/images/LANDSCAPE_169_HD/NGC_PrimalSurvivorEscapeTheAmazon_1285104.jpg" />
   </programme>
-  <programme start="20261011102400 +0000" stop="20261011110900 +0000" channel="NationalGeographicWild.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <credits>
-      <actor>Colin Salmon</actor>
-      <producer>Mea Trenor</producer>
-    </credits>
-    <desc lang="en">S1 E4
-Life in the African jungle is a constant, brutal game of survival, where motherly instincts, fierce and unbreakable, ultimately rule.</desc>
-    <episode-num>S1 E4</episode-num>
-    <icon src="https://iptv-epg.org/images/-AWsXIJ7zlFKZRGPw6_7HoouuOYkzT30tzKWE2qrRiK2iF_eSHTZ3ZMtPPG05pt8sf91cpvTKzAkCyVRq5gIDwznIW7goTSuTg_yDbuLLXopOHfnOw2vbPkKJqoO" />
-    <title lang="en">Killer Safari</title>
-  </programme>
   <programme start="20261011110900 +0000" stop="20261011115500 +0000" channel="NationalGeographicWild.in@SD">
     <category lang="en">TV Show</category>
     <category lang="en">Entertainment</category>
@@ -202168,13 +202102,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <icon src="https://iptv-epg.org/images/kIGMbNgmfX1YSmQwwE7SGufwTyQDQ9jq_JyJtZhUhJWhsbPK3yYVbDabpsoiZ1HBRDLr9qXzKTPgc_p8IDbJnvNotmVQlZOHsR5WVJwnmfE1tGcAJOUgPrJZNT1v" />
     <title lang="en">Music Xpress</title>
   </programme>
-  <programme channel="Pop.uk" start="20261011105500 +0000" stop="20261011110500 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261011162500/list/ZEEPOPGrizzyAndTheLemmings2056732b075581337a54cf09334ab680cd72dbb.jpg" />
-  </programme>
   <programme channel="Pop.uk" start="20261011110500 +0000" stop="20261011111400 +0000">
     <title lang="en">Grizzy And The Lemmings</title>
     <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
@@ -218615,14 +218542,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <desc lang="en">Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/fpKNMxWiWcn11supKxjEueE6GXoPYQKEDCujIqfJi3z82GbfHFWWSB4pfIxJqmeDytJZuaVLBuZGg0y2hP4_G5DHfnplRKXySl0Hlm_SWaOXcGauZp1XpSLAifs_rg" />
     <title lang="en">Adi Anadi</title>
-  </programme>
-  <programme start="20261011160700 +0530" stop="20261011163800 +0530" channel="RedBullTV.at@EUMENA">
-    <title lang="en-GB">Reel Rock</title>
-    <desc lang="en-GB">Follows the world's top climbers, alpinists and mountaineers to the wildest places on Earth. New stories of triumph, failure and redemption unfold as they pursue the thrill of adventure.</desc>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/24669810e0663d551a6d9095451b7346.jpg" />
-    <episode-num system="onscreen">E6</episode-num>
-    <premiere />
   </programme>
   <programme start="20261011163800 +0530" stop="20261011165800 +0530" channel="RedBullTV.at@EUMENA">
     <title lang="en-GB">Reel Rock</title>
@@ -239019,17 +238938,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <category lang="en">Sport</category>
     <icon src="https://tv.assets.pressassociation.io/4ac10a17-809d-5998-ac39-064bc977d8e8.jpg" />
     <episode-num system="onscreen">S2026 E31</episode-num>
-  </programme>
-  <programme start="20261011162000 +0530" stop="20261011163500 +0530" channel="SongdewTV.in@SD">
-    <title>ROCK</title>
-    <desc>Featuring  the Best of Indie-Rock</desc>
-    <category>Music</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg?width=700" />
-    <episode-num system="onscreen">9</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
   </programme>
   <programme start="20261011163500 +0530" stop="20261011164000 +0530" channel="SongdewTV.in@SD">
     <title>Take 7</title>
@@ -274105,10 +274013,6 @@ Real-time match updates and highlights keep fans informed, providing instant acc
     <title lang="en">2012</title>
     <desc lang="en">Failed writer guides family through global disasters.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_WAH_1776351_13OCT031900_13OCT060000/images/LANDSCAPE_169/1734860977000_SonyWAH_2012_1776351.jpg" />
-  </programme>
-  <programme start="20261011105700 +0000" stop="20261011110500 +0000" channel="SonyYay.in@SD" catchup-id="100076776">
-    <title>Shin Chan</title>
-    <desc>Shin-chan, a mischievous five-year-old, constantly disrupts the lives of those around him with his childish antics, generating humorous chaos and exasperation. S01E916.</desc>
   </programme>
   <programme start="20261011110500 +0000" stop="20261011111000 +0000" channel="SonyYay.in@SD" catchup-id="100076710">
     <title>Shin Chan</title>
@@ -322233,13 +322137,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <title lang="en">The Survival Of Fittest</title>
     <desc lang="en">Although his lifestyle involves honey, bas and lots of ps, Baloo thinks he is very fit…</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acb9d85a98f93e8a69511cf/images/LANDSCAPE_169/9360_8e35c6f4-9047-4a08-84a0-b1e58677123a.png" />
-  </programme>
-  <programme channel="TinyPop.uk" start="20261011105800 +0000" stop="20261011110800 +0000">
-    <title lang="en">Masha And The Bear</title>
-    <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261011162800/list/TinyPOPMashaAndTheBear2056996fd61de4fd870441fa3858fae7a7e18a5.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261011110800 +0000" stop="20261011111800 +0000">
     <title lang="en">Masha And The Bear Shorties</title>
@@ -378007,14 +377904,6 @@ Delving into a range of varied topics, the host discusses the social, economic a
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261011160700 +0530" stop="20261011163800 +0530" channel="custom.bdix.redbulltv">
-    <title lang="en-GB">Reel Rock</title>
-    <desc lang="en-GB">Follows the world's top climbers, alpinists and mountaineers to the wildest places on Earth. New stories of triumph, failure and redemption unfold as they pursue the thrill of adventure.</desc>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/24669810e0663d551a6d9095451b7346.jpg" />
-    <episode-num system="onscreen">E6</episode-num>
-    <premiere />
-  </programme>
   <programme start="20261011163800 +0530" stop="20261011165800 +0530" channel="custom.bdix.redbulltv">
     <title lang="en-GB">Reel Rock</title>
     <sub-title lang="en-GB">Siebe Vanhee recruits his childhood heroes, Sean Villanueva O'Driscoll and Nico Favresse, to attempt the first free ascent of an alpine big wall in Patagonia, Argentina</sub-title>
@@ -422263,26 +422152,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261011163000 +0530" stop="20261011163400 +0530" channel="custom.duck.tv">
-    <title>Cucu, I'm here!</title>
-    <desc>Two little imaginary friends Peeky-Pink and Peeky-Blue keep themselves busy playing hide and seek games all through the day around their house.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/43a46b306270fe5c4f251583f01911e9.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261011163400 +0530" stop="20261011163700 +0530" channel="custom.duck.tv">
-    <title>Cucu, I'm here!</title>
-    <desc>Two little imaginary friends Peeky-Pink and Peeky-Blue keep themselves busy playing hide and seek games all through the day around their house.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/43a46b306270fe5c4f251583f01911e9.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261011163700 +0530" stop="20261011164000 +0530" channel="custom.duck.tv">
     <title>Higher The Better</title>
     <desc>Two friends, Kiteko and Umi, keep a check on the daily life of toddlers and try to learn everything about their everyday activities and field trip adventures.</desc>
@@ -429778,15 +429647,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <rating>
       <value>TVY</value>
     </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011110100 +0000" stop="20261011110400 +0000">
-    <title lang="en">Mimo &amp; Bobo</title>
-    <desc lang="en">Mimo and his loyal friend Bobo set out for a world of preschool adventure as they gain valuable experiences and skills along the way.</desc>
-    <date>2016</date>
-    <category lang="en">Children</category>
-    <category lang="en">Educational</category>
-    <icon src="http://dtil.tmsimg.com/assets/p22593846_b_h10_ad.jpg?w=960&amp;h=540" />
-    <previously-shown />
   </programme>
   <programme channel="custom.ducktv" start="20261011111000 +0000" stop="20261011111200 +0000">
     <title lang="en">Leon-ART</title>
@@ -466160,13 +466020,6 @@ Jeevsiddhi, who is trained by Chanakya, enters the innermost circles of Rakshasa
     <category lang="en">Golf</category>
     <icon src="http://dtil.tmsimg.com/assets/p33984291_b_h10_aa.jpg?w=960&amp;h=540" />
     <premiere lang="en" />
-  </programme>
-  <programme start="20261011103400 +0000" stop="20261011110400 +0000" channel="custom.good.news.today">
-    <category lang="en">News</category>
-    <category lang="en">News Bulletin</category>
-    <desc lang="en">The host presents information about the social, economic and political issues of the day and provides updates on current events.</desc>
-    <icon src="https://iptv-epg.org/images/NyHJJq2fW0ESJX-N2IQWrJH2qGq_n1Q2AVCLAG6ea81sLGjtaCqHlVCvEGZiNWRyEfaoJrA9vLlK8EuIDAGbCbIqFrUMg6tcd50WlxunWfIp420hiL1zFsRvrHAPJg" />
-    <title lang="en">GNT Special</title>
   </programme>
   <programme start="20261011110400 +0000" stop="20261011113400 +0000" channel="custom.good.news.today">
     <category lang="en">News</category>
@@ -503533,7 +503386,7 @@ Jeevsiddhi, who is trained by Chanakya, enters the innermost circles of Rakshasa
       <value>6</value>
     </rating>
   </programme>
-  <programme channel="custom.solntse" start="20261011140000 +0530" stop="20261011163800 +0530">
+  <programme channel="custom.solntse" start="20261011140000 +0530" stop="20261011164400 +0530">
     <title>Toilet: Ek Prem Katha</title>
     <desc>Jaya marries Keshav but is disappointed to learn that there is no toilet in his house. As a result, Keshav tries to pacify her with temporary arrangements.</desc>
     <category>Film</category>
@@ -503551,7 +503404,7 @@ Jeevsiddhi, who is trained by Chanakya, enters the innermost circles of Rakshasa
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p14275649_v_h10_ab.jpg?lock=1280x720" />
   </programme>
-  <programme channel="custom.solntse" start="20261011163800 +0530" stop="20261011170000 +0530">
+  <programme channel="custom.solntse" start="20261011164400 +0530" stop="20261011170000 +0530">
     <title>Bhabi ji Ghar Par Hai!</title>
     <desc>Vibhuti Narayan Mishra and Manmohan Tiwari live in the same neighbourhood in Kanpur. They both try to impress each other's wives but end up landing in peculiar situations.</desc>
     <category>TV Show</category>
@@ -539017,23 +538870,6 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
     <title lang="en">Ed Stafford's Rite of Passage</title>
     <desc lang="en">Ed Stafford guides young adventurers through demanding wilderness challenges, helping them build confidence, resilience and survival skills while reconnecting with nature.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DISCOVERY_CHANNEL_2052016_14OCT210100_14OCT220000/images/LANDSCAPE_169_HD/DISCOVERY_EdStaffordsRiteofPassage_2052016.jpg" />
-  </programme>
-  <programme start="20261011105800 +0000" stop="20261011110800 +0000" channel="hmair.discoverykids">
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <actor>Bobby Moynihan</actor>
-      <actor>Eric Edelstein</actor>
-      <actor>Demetri Martin</actor>
-      <actor>Charlyne Yi</actor>
-      <actor>Patton Oswalt</actor>
-      <actor>Jason Lee</actor>
-    </credits>
-    <desc lang="en">S1 E4
-Chloe researches the Bears for a presentation. But, when they sneak a peek at her dry report, they decide to jazz it up with exaggerated facts about themselves.</desc>
-    <episode-num>S1 E4</episode-num>
-    <icon src="https://iptv-epg.org/images/bqYXClwJK3KivPxXv4pUJHjJbBMI5kkrFVoLG_C2iORIVbWOUu1VGwgJgI_VNI-CUDFiH_-OHoGTvuaVhXBM8FJlEVwVe9jP9XQHhT9P_iw3TywyYGFmuKKPnym5" />
-    <title lang="en">We Bare Bears</title>
   </programme>
   <programme start="20261011110800 +0000" stop="20261011112000 +0000" channel="hmair.discoverykids">
     <category lang="en">Children</category>
@@ -575667,10 +575503,6 @@ Five noble brothers unite in a righteous war against greed and corruption.</desc
     <episode-num>S1 E118</episode-num>
     <icon src="https://iptv-epg.org/images/BsY4a48U4F6Ux0ekqJp32nbSIKydn2yWqhoXD_qsrXU5IUKyxDKMbJ9qclnmwvuV95MDVzGs89EhP3Algb5JUG-9SI9D9QPHBFgoqka1JH0vL93oh9exerC1yOB0GQ" />
     <title lang="en">Hastinapur Ke Veer</title>
-  </programme>
-  <programme start="20261011105700 +0000" stop="20261011110500 +0000" channel="hmair.sonyyay" catchup-id="100076776">
-    <title>Shin Chan</title>
-    <desc>Shin-chan, a mischievous five-year-old, constantly disrupts the lives of those around him with his childish antics, generating humorous chaos and exasperation. S01E916.</desc>
   </programme>
   <programme start="20261011110500 +0000" stop="20261011111000 +0000" channel="hmair.sonyyay" catchup-id="100076710">
     <title>Shin Chan</title>
