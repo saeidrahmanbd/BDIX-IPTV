@@ -1,13 +1,13 @@
 # NVisionBD Playlist Audit
 
-Generated (UTC): **2026-10-11T10:42:55+00:00**
+Generated (UTC): **2026-10-11T10:50:26+00:00**
 
 ## Summary
 
-- Playlist entries: **566**
-- Unique stream URLs: **566**
+- Playlist entries: **561**
+- Unique stream URLs: **561**
 - Duplicate stream URLs: **0**
-- Duplicate channel identities: **63**
+- Duplicate channel identities: **62**
 - Missing channel IDs: **0**
 - Missing logos: **0**
 - Missing channel numbers: **0**
@@ -15,7 +15,7 @@ Generated (UTC): **2026-10-11T10:42:55+00:00**
 
 ## Group Counts
 
-- Backup: **95**
+- Backup: **90**
 - Bangladesh: **51**
 - Documentary & Wildlife: **31**
 - Indian Bangla: **28**
@@ -31,10 +31,10 @@ Generated (UTC): **2026-10-11T10:42:55+00:00**
 
 ## Stream Probe Summary
 
-- Responsive: **115**
-- Restricted: **3**
-- Dead: **0**
-- Unverified: **448**
+- Responsive: **6**
+- Restricted: **0**
+- Dead: **121**
+- Unverified: **434**
 
 ## Duplicate Stream URLs
 
@@ -61,7 +61,6 @@ None.
 - channeli.bd: Channel I (Alt 2), Channel I HD
 - channels.uk: Channel S, Channel S HD
 - colors.bangla.in: Colors Bangla (Alt 2), Colors Bangla HD
-- custom.afra.film: Afra Film, Afra Film (Alt 2)
 - custom.enter10.bangla: Enter10 Bangla, Enter10 Bangla (Alt 2), Enter10 Bangla (Alt 3), Enter10 Bangla (Alt 4), Enter10 Bangla (Alt 5)
 - custom.love.nature: Love Nature, Love Nature (Alt 2)
 - custom.mtv: MTV (Alt 2), MTV (Alt 3), MTV HD
