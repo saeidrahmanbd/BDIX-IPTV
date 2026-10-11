@@ -1,6 +1,6 @@
 # NVisionBD Playlist Audit
 
-Generated (UTC): **2026-10-11T14:17:52+00:00**
+Generated (UTC): **2026-10-11T14:23:30+00:00**
 
 ## Summary
 
@@ -9,7 +9,7 @@ Generated (UTC): **2026-10-11T14:17:52+00:00**
 - Duplicate stream URLs: **0**
 - Duplicate channel identities: **60**
 - Missing channel IDs: **0**
-- Missing logos: **0**
+- Missing logos: **42**
 - Missing channel numbers: **0**
 - Malformed entries: **0**
 
@@ -31,10 +31,10 @@ Generated (UTC): **2026-10-11T14:17:52+00:00**
 
 ## Stream Probe Summary
 
-- Responsive: **122**
-- Restricted: **3**
-- Dead: **0**
-- Unverified: **436**
+- Responsive: **9**
+- Restricted: **0**
+- Dead: **121**
+- Unverified: **431**
 
 ## Duplicate Stream URLs
 
@@ -106,7 +106,7 @@ None.
 ## Missing Metadata
 
 - Missing ID: None
-- Missing logo: None
+- Missing logo: Cafe Film, Sine Plus, 10 TV, Global Panjab, Asia Flix TV, Aurora Media Flims, Blockbaster HD, Digital Fashion, Fashion 1, Power Turk, Star Cinema, Whiples Cinema, Xrema Accion, Adventure 4k, Banijoy Mr Been, Cartoon Channel, Disney Channel Big City Greens, Alistiqamah, Espn5 HD, Fight 24/7, Flo Racing, Htv Sport, Kiev Sport HD, Sport 1 HD, Sport 2 HD, Tapmad, Tapmad, Tapmad, 88 Stereo [not 24/7], Bangla Hits, Doyel Radio, Dream Music Prime, Magical Blade FM, Moner Radio, Radio Bangla Rock, Radio Barakah, Radio Janata, Radio Ritmo On Line, Radio Zenith FM, Sagor FM, Wc Music, Wifm 100.9
 - Missing channel number: None
 
 ## Malformed Entries
