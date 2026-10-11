@@ -977,7 +977,7 @@ https://mumt03.tangotv.in/Dsly5z3HFOODFOOD/index.m3u8
 https://tvsen3.aynaott.com/7hm4TfVp/index.m3u8
 #EXTINF:-1 tvg-id="Getfactual.us" tvg-name="Get factual" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/get-factual.png" tvg-chno="866" channel-id="Getfactual.us" group-title="Documentary & Wildlife",Get factual
 https://d1nhni5l2n8hjt.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rzh07me7cf8x7/gf.m3u8
-#EXTINF:-1 tvg-chno="859" tvg-id="custom.hgtv" tvg-name="HGTV" channel-id="custom.hgtv" group-title="Documentary & Wildlife" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/placeholder-hgtv.png",HGTV
+#EXTINF:-1 tvg-chno="859" tvg-id="custom.hgtv" tvg-name="HGTV" channel-id="custom.hgtv" group-title="Documentary & Wildlife" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hgtv.png",HGTV
 https://tvsen3.aynaott.com/Ge23xfY5/index.m3u8
 #EXTINF:-1 tvg-id="HistoryWarfareNow.us" tvg-name="History & Warfare Now" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history-warfare-now.png" tvg-chno="868" channel-id="HistoryWarfareNow.us" group-title="Documentary & Wildlife",History & Warfare Now
 https://d1nzda2a2b3swt.cloudfront.net/History_Warfare_Now.m3u8
@@ -1041,7 +1041,7 @@ https://lotus.stingray.com/manifest/ose-122ads-montreal/samsungtvplus/master.m3u
 https://amg01775-amg01775c1-amgplt0343.playout.now3.amagi.tv/playlist/amg01775-amg01775c1-amgplt0343/playlist.m3u8
 #EXTINF:-1 tvg-id="TLC.in@HD" tvg-name="TLC" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tlc.png" tvg-chno="98" channel-id="TLC.in@HD" group-title="Documentary & Wildlife",TLC
 http://198.195.239.50:8095/TLC.HD/index.m3u8
-#EXTINF:-1 tvg-chno="106" tvg-id="custom.travel.channel" tvg-name="Travel Channel" channel-id="custom.travel.channel" group-title="Documentary & Wildlife" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/placeholder-travel-channel.png",Travel Channel
+#EXTINF:-1 tvg-chno="106" tvg-id="custom.travel.channel" tvg-name="Travel Channel" channel-id="custom.travel.channel" group-title="Documentary & Wildlife" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-channel.png",Travel Channel
 https://tvsen3.aynaott.com/sFwCR6Fu/index.m3u8
 #EXTINF:-1 tvg-id="custom.travelxp.english" tvg-name="Travelxp English" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travelxp-english.png" tvg-chno="915" channel-id="custom.travelxp.english" group-title="Documentary & Wildlife",Travelxp English
 https://travelxp-travelxp-1-eu.rakuten.wurl.tv/playlist.m3u8
