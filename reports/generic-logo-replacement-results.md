@@ -2,17 +2,17 @@
 
 This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.
 
-- Run time: 2026-10-11 12:03 UTC
+- Run time: 2026-10-11 12:05 UTC
 - IPTV-org dataset: loaded
-- Unique generic assets examined: 76
+- Unique generic assets examined: 75
 - Successful replacements: 2
-- Unresolved/manual review: 74
+- Unresolved/manual review: 73
 
 ## Replacements
 
 | Channel | Former generic file | New local file | Source | License / attribution |
 |---|---|---|---|---|
-| 51 Radio TV [geo-blocked] | nvisionbd-51-radio-tv-geo-blocked.svg | [nvisionbd-official-51-radio-tv-geo-blocked.webp](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-51-radio-tv-geo-blocked.webp) | [IPRTL logo collection exact 51 Radio TV match](https://github.com/iprtl/p1/tree/master/logo) | Logo source found in public repository; reuse rights not stated |
+| Radio Gaan Baksho | nvisionbd-radio-gaan-baksho.svg | [nvisionbd-official-radio-gaan-baksho.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-gaan-baksho.png) | [RadioSpinner Bangladeshi radio logo reference](https://github.com/junguler/m3u-radio-music-playlists/blob/4f7f422c65652805edf56a71b7ab17ac417b2755/radio_spinner/bangladeshi.m3u) | Station artwork; reuse rights not specified |
 | The Q | nvisionbd-the-q.svg | [nvisionbd-official-the-q.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-the-q.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/india/the-q-in.png) | No license file found in source repository |
 
 ## Unresolved — retained for manual source verification
@@ -62,14 +62,13 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Nat Geo Bangla | nvisionbd-nat-geo-bangla.svg | No unique source-verified channel logo found |
 | Niki Jr Kids | nvisionbd-niki-jr-kids.svg | No unique source-verified channel logo found |
 | Palki FM | nvisionbd-palki-fm.svg | No unique source-verified channel logo found |
-| Persiana Travel | nvisionbd-persiana-travel.svg | Lookup/download/validation error: HTTP Error 403: Forbidden |
+| Persiana Travel | nvisionbd-persiana-travel.svg | Lookup/download/validation error: source bytes are not a supported channel image |
 | Pk Ten Cricket | nvisionbd-pk-ten-cricket.svg | No unique source-verified channel logo found |
 | Power Turk | nvisionbd-power-turk.svg | No unique source-verified channel logo found |
 | Radio Adamya | nvisionbd-radio-adamya.svg | No unique source-verified channel logo found |
 | Radio Bangla Rock | nvisionbd-radio-bangla-rock.svg | Lookup/download/validation error: HTTP Error 404: Not Found |
 | Radio Bangladesh Co | nvisionbd-radio-bangladesh-co.svg | No unique source-verified channel logo found |
 | Radio Barakah | nvisionbd-radio-barakah.svg | No unique source-verified channel logo found |
-| Radio Gaan Baksho | nvisionbd-radio-gaan-baksho.svg | No unique source-verified channel logo found |
 | Radio Janata | nvisionbd-radio-janata.svg | No unique source-verified channel logo found |
 | Radio Ritmo On Line | nvisionbd-radio-ritmo-on-line.svg | No unique source-verified channel logo found |
 | Radio Sonali Dingulo | nvisionbd-radio-sonali-dingulo.svg | No unique source-verified channel logo found |
@@ -86,7 +85,7 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Tapmad | nvisionbd-tapmad.svg | No unique source-verified channel logo found |
 | TNT Sport 1 | nvisionbd-tnt-sport-1.svg | No unique source-verified channel logo found |
 | Utbd FM | nvisionbd-utbd-fm.svg | No unique source-verified channel logo found |
-| Uttorbango Betar | nvisionbd-uttorbango-betar.svg | Lookup/download/validation error: source bytes are not a supported channel image |
+| Uttorbango Betar | nvisionbd-uttorbango-betar.svg | Lookup/download/validation error: HTTP Error 404: Not Found |
 | Valobasar Rupali Sur | nvisionbd-valobasar-rupali-sur.svg | No unique source-verified channel logo found |
 | Wc Music | nvisionbd-wc-music.svg | No unique source-verified channel logo found |
 | Whiples Cinema | nvisionbd-whiples-cinema.svg | No unique source-verified channel logo found |

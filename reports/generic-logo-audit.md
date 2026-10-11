@@ -1,6 +1,6 @@
 # Generic Channel Logo Audit — Three Playlists
 
-Audit date: 2026-10-11 12:03 UTC  
+Audit date: 2026-10-11 12:05 UTC  
 Repository: https://github.com/saeidrahmanbd/BDIX-IPTV  
 Method: scans current playlist metadata and checks referenced local SVG files for the generic CHANNEL MARK template.
 
@@ -10,9 +10,9 @@ Method: scans current playlist metadata and checks referenced local SVG files fo
 |---|---:|---:|
 | IPTV-Playlist.m3u | 1145 | 0 |
 | BDIX-Playlist.m3u | 217 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 74 |
+| NVisionBD-Playlist.m3u | 561 | 73 |
 
-Current NVisionBD placeholder assets: **74 unique files**.
+Current NVisionBD placeholder assets: **73 unique files**.
 
 ## Remaining affected NVisionBD channel labels
 
@@ -66,7 +66,6 @@ Current NVisionBD placeholder assets: **74 unique files**.
 - Radio Bangla Rock
 - Radio Bangladesh Co
 - Radio Barakah
-- Radio Gaan Baksho
 - Radio Janata
 - Radio Ritmo On Line
 - Radio Sonali Dingulo
