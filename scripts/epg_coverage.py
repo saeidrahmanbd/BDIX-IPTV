@@ -17,7 +17,6 @@ EPG_ALIASES = {
     "MusicMastii.in": ["jtv584", "584", "IN4#MASTII.in"],
     "KappaTV.in@ALT1": ["jtv786", "786", "377"],
     "IqraBangla.uk": ["3914"],
-    "IqraBangla.uk": ["3914"],
     "TamilanTV.in": ["jtv2958", "2958"],
     "SonyKALHindi.us": ["US1#Sony.KAL.us"],
     # Verified DishTV/XMLTV catalogue aliases for playlist entries whose IDs are local/custom.
@@ -53,7 +52,6 @@ SOURCES = [
     "https://avkb.short.gy/epg.xml.gz",
     "https://avkb.short.gy/jioepg.xml.gz",
     "https://avkb.short.gy/tsepg.xml.gz",
-    "https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml",
     "https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml",
 ]
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
