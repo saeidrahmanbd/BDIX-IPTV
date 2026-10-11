@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-11T04:42:15+00:00**
+Generated: **2026-10-11T04:52:45+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
@@ -96,8 +96,12 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 
 ## Published Guide Validation
 
-- Playlist EPG references: **MISMATCH**
+- Playlist EPG references: **OK**
 - Guide channel IDs published: **298**
 - Mapped playlist IDs present in guide: **298/300 (99.3%)**
 - Mapped playlist IDs with current/future programmes: **283/300 (94.3%)**
+- Mapped IDs missing from the published XMLTV channel list: **2**
+- IDs missing from guide: AndTV.in@SD, Enterr10Bangla.in@SD
+- Mapped IDs with no current/future programmes: **15**
+- IDs without current/future programmes (first 30): AndpriveHD.in, ETVBeats.in@HD, ManoranjanPrime.in@SD, OdishaTV.in@SD, OnePaschima.in@SD, PrarthanaTV.in@SD, RupasiBangla.in@SD, Sony.Aath.in, Star.Jalsha.Movies.in, Star.Jalsha.in, SteelbirdMusic.in@SD, SuriyanTV.in@SD, ZeeBangla.in@HD, custom.ekamra.cinema, custom.ekamra.musiq
 - This validation is against the guide currently present in the working tree/publish candidate.
