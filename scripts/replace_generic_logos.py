@@ -8,13 +8,14 @@ Resolution order:
 Anything ambiguous remains untouched and is reported for manual review.
 """
 import json
+import html
 import shutil
 import re
 import time
 import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urlencode, urlparse, unquote
+from urllib.parse import urlencode, urlparse, unquote, urljoin
 from urllib.request import Request, urlopen
 
 PLAYLIST = Path("NVisionBD-Playlist.m3u")
@@ -95,6 +96,55 @@ TV_LOGO_HINTS = {
 }
 TV_LOGO_BASE = "https://raw.githubusercontent.com/tv-logo/tv-logos/main/"
 TV_LOGO_REPO = "https://github.com/tv-logo/tv-logos"
+
+# Official station pages used only as a last-mile image lookup. The page parser
+# accepts explicit logo-marked <img> elements; OG images are allowed only for
+# station profile pages where they are commonly the station avatar.
+DIRECT_PAGE_HINTS = {
+    "10 TV": ("https://www.10tv.in/", False),
+    "88 Stereo [not 24/7]": ("https://www.88stereo.com/", False),
+    "Radio Adamya": ("https://zeno.fm/radio/radio-adamya/", True),
+    "Radio Barakah": ("https://zeno.fm/radio/radio-barakah/", True),
+    "Radio Zenith FM": ("https://zeno.fm/radio/radio-zenith-fm/", True),
+    "Dream Music Prime": ("https://zeno.fm/radio/dream-music-prime/", True),
+    "Wifm 100.9": ("https://www.wifmradio.com/", False),
+}
+
+
+def find_page_logo(page_url, allow_og_image=False):
+    """Find a logo image URL on an official station page without copying page art."""
+    raw, mime = fetch_bytes(page_url, timeout=20, max_bytes=2_000_000)
+    if "html" not in mime and not raw.lstrip().startswith((b"<!DOCTYPE html", b"<html")):
+        return None
+    source = raw.decode("utf-8", errors="ignore")
+    img_candidates = []
+    for tag in re.findall(r"<img\\b[^>]*>", source, flags=re.I):
+        attrs = {
+            key.lower(): html.unescape(value)
+            for key, _, value in re.findall(r"""([\\w:-]+)\\s*=\\s*["']([^"']*)["']""", tag)
+        }
+        src = attrs.get("src") or attrs.get("data-src") or ""
+        if not src or src.startswith(("data:", "blob:")):
+            continue
+        descriptor = " ".join([attrs.get("alt", ""), attrs.get("title", ""), attrs.get("class", ""), attrs.get("id", ""), src]).lower()
+        score = sum(2 for word in ("logo", "brand", "station") if word in descriptor)
+        if score:
+            img_candidates.append((score, urljoin(page_url, src)))
+    if img_candidates:
+        img_candidates.sort(key=lambda item: item[0], reverse=True)
+        return img_candidates[0][1]
+    if allow_og_image:
+        meta_tags = re.findall(r"<meta\\b[^>]*>", source, flags=re.I)
+        for tag in meta_tags:
+            attrs = {
+                key.lower(): html.unescape(value)
+                for key, _, value in re.findall(r"""([\\w:-]+)\\s*=\\s*["']([^"']*)["']""", tag)
+            }
+            property_name = (attrs.get("property") or attrs.get("name") or "").lower()
+            image_url = attrs.get("content") or ""
+            if property_name in ("og:image", "twitter:image") and image_url.startswith(("http://", "https://")):
+                return image_url
+    return None
 
 # Exact station assets discovered on broadcaster/streaming-service pages.
 DIRECT_LOGO_HINTS = {
@@ -832,6 +882,21 @@ def main():
                     source_page = candidate.get("page", "")
                     license_name = candidate.get("license", "")
                     license_url = candidate.get("license_url", "")
+                elif channel in DIRECT_PAGE_HINTS:
+                    page_url, allow_og_image = DIRECT_PAGE_HINTS[channel]
+                    try:
+                        logo_url = find_page_logo(page_url, allow_og_image=allow_og_image)
+                    except Exception:
+                        logo_url = None
+                    if logo_url:
+                        candidate = {
+                            "url": logo_url,
+                            "format": "",
+                            "page": page_url,
+                            "license": "Logo image served by the station website; reuse rights not specified",
+                            "license_url": "",
+                        }
+                        source = "Station website logo image"
                 elif channel in TV_LOGO_HINTS:
                     hint_path = TV_LOGO_HINTS[channel]
                     candidate = {
