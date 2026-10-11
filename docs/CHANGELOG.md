@@ -44,29 +44,5 @@ For the complete release information, see **[Playlist Studio v5.0](https://githu
 
 ## 2026-10-11
 
-- 🆕 **33 new channel candidate(s) added to New Channels**
-- 🔁 **41 new backup candidate(s) added to New Backup**
-- 🖼️ **21 logo reference(s) corrected**
-
-### New channels
-- Apna Punjab TV
-- Bflix Movies
-- Captain
-- Epic Parivar
-- ETV Plus
-- ETV Telugu
-- Friends TV
-- Gangaur TV
-- GTC Punjabi
-- Jaihind TV
-- KCL TV
-- Kerala Vision
-- Maha Movie
-- Maha Punjabi
-- Mango Mobile TV
-- Nepal 1
-- NTC TV
-- Pasand TV
-- Rupashi Bangla TV
-- Shemaroo Umang
+- 🖼️ **2 logo reference(s) corrected**
 
