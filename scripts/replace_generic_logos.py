@@ -118,10 +118,10 @@ def find_page_logo(page_url, allow_og_image=False):
         return None
     source = raw.decode("utf-8", errors="ignore")
     img_candidates = []
-    for tag in re.findall(r"<img\\b[^>]*>", source, flags=re.I):
+    for tag in re.findall(r"<img\b[^>]*>", source, flags=re.I):
         attrs = {
             key.lower(): html.unescape(value)
-            for key, _, value in re.findall(r"""([\\w:-]+)\\s*=\\s*["']([^"']*)["']""", tag)
+            for key, _, value in re.findall(r"""([\w:-]+)\s*=\s*["']([^"']*)["']""", tag)
         }
         src = attrs.get("src") or attrs.get("data-src") or ""
         if not src or src.startswith(("data:", "blob:")):
@@ -134,11 +134,11 @@ def find_page_logo(page_url, allow_og_image=False):
         img_candidates.sort(key=lambda item: item[0], reverse=True)
         return img_candidates[0][1]
     if allow_og_image:
-        meta_tags = re.findall(r"<meta\\b[^>]*>", source, flags=re.I)
+        meta_tags = re.findall(r"<meta\b[^>]*>", source, flags=re.I)
         for tag in meta_tags:
             attrs = {
                 key.lower(): html.unescape(value)
-                for key, _, value in re.findall(r"""([\\w:-]+)\\s*=\\s*["']([^"']*)["']""", tag)
+                for key, _, value in re.findall(r"""([\w:-]+)\s*=\s*["']([^"']*)["']""", tag)
             }
             property_name = (attrs.get("property") or attrs.get("name") or "").lower()
             image_url = attrs.get("content") or ""
