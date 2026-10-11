@@ -92,7 +92,7 @@ def parse_playlist():
 
 def fetch_source(url):
     req=urllib.request.Request(url,headers={"User-Agent":"BDIX-IPTV-EPG-Maintenance/4.0","Accept":"application/xml,text/xml,application/gzip,*/*"})
-    with urllib.request.urlopen(req,timeout=90) as r: data=r.read()
+    with urllib.request.urlopen(req,timeout=45) as r: data=r.read()
     if url.endswith(".gz") or data[:2]==b"\x1f\x8b": data=gzip.decompress(data)
     ids=set(); future=set(); counts=defaultdict(int); names=defaultdict(set); now=datetime.now(timezone.utc)
     for _,elem in ET.iterparse(io.BytesIO(data),events=("end",)):

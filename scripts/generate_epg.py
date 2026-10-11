@@ -50,7 +50,7 @@ def fetch(url):
             "Accept": "application/gzip,application/xml,*/*",
         },
     )
-    with urllib.request.urlopen(req, timeout=90) as r:
+    with urllib.request.urlopen(req, timeout=45) as r:
         data = r.read()
     if data[:2] == b"\x1f\x8b" or url.endswith(".gz"):
         data = gzip.decompress(data)
