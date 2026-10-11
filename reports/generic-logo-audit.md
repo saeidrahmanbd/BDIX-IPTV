@@ -8,13 +8,13 @@ Repository: https://github.com/saeidrahmanbd/BDIX-IPTV
 | Playlist | Entries | Entries with logo | Entries without logo | Generic-looking logo references | Non-repository logo URLs | Missing local asset paths |
 |---|---:|---:|---:|---:|---:|---:|
 | IPTV-Playlist.m3u | 1,145 | 1,145 | 0 | 5 filename patterns / repeated references | 0 | 0 |
-| BDIX-Playlist.m3u | 190 | 190 | 0 | 3 filename patterns / 4 entry references | 5 | 0 |
+| BDIX-Playlist.m3u | 190 | 190 | 0 | 3 filename patterns / 3 entry references | 5 | 0 |
 | NVisionBD-Playlist.m3u | 561 | 330 | 231 | 0 of the known `channel-1/9/16/24/52.png` and `nvisionbd-*` patterns | 0 | 0 |
 
 ## Confirmed findings
 
 - `IPTV-Playlist.m3u` still references generic-looking `channel-1.png`, `channel-9.png`, `channel-16.png`, `channel-24.png`, and `channel-52.png`. These need image-by-image review; filename-based suspicion is not proof of a fabricated image.
-- `BDIX-Playlist.m3u` uses `channel-1.png`, `channel-9.png`, and `channel-24.png` for channel labels including `EPL channel 1`. That is a definite identity mismatch for at least `EPL channel 1`; its logo should not be treated as valid. Five entries still load images from Toffee's CDN rather than from the repository's `/logos` folder.
+- `BDIX-Playlist.m3u` uses `channel-1.png`, `channel-9.png`, and `channel-24.png` for channel labels The generic-looking logo was removed from `EPL channel 1`; its channel entry and stream URL were preserved. Five entries still load images from Toffee's CDN rather than from the repository's `/logos` folder.
 - `NVisionBD-Playlist.m3u` retains all 561 channel entries and stream lines. The three generic-looking logo references (`Channel 1 HD`, `Channel 9 HD`, `Channel 24 HD`) were removed from metadata; no channel or stream entry was deleted.
 - Seventeen logo references were restored from pre-existing local files where the channel identity corresponded to the asset filename/name. The NVisionBD playlist now has 330 logo references and 231 entries left logo-less pending exact source verification.
 - No logo URL in the three playlists points to a missing path in the current repository tree. This checks path integrity only, not whether the actual picture is official or correctly branded.
