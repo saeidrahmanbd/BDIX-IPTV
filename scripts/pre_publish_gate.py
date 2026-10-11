@@ -5,7 +5,7 @@ from datetime import datetime,timezone
 from collections import Counter,defaultdict
 from pathlib import Path
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md")
-ATTR=re.compile(r'([\w-]+)="([^"]*)"'); EXCLUDE={"Backup"}
+ATTR=re.compile(r'([\w-]+)="([^"]*)"'); EXCLUDE={"Backup","Not Playing"}
 def attrs(s): return dict(ATTR.findall(s))
 def parse(text):
     lines=text.replace("\r","").splitlines(); out=[]; cur=None
@@ -30,7 +30,7 @@ def main():
     removed=[]
     for a,u in old_primary:
         groups=cur_all_groups.get(u.lower(), set())
-        if groups & {"Backup"}:
+        if groups & {"Backup","Not Playing"}:
             quarantined.append((a.get("tvg-name",""),u,next(iter(groups & {"Backup"}))))
         elif not groups:
             removed.append((a.get("tvg-name",""),u))
