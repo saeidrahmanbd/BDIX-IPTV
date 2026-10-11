@@ -26,4 +26,4 @@ The repository contains the curated M3U playlist, EPG resources, channel logos, 
 
 ### Releases
 
-For the latest Playlist Studio release and downloadable files, visit the **[GitHub Releases](https://github.com/saeidrahmanbd/BDIX-IPTV/releases)** page.
+For the latest Playlist Studio release and downloadable files, visit the **[Playlist Studio Releases](https://github.com/saeidrahmanbd/Playlist-Studio/releases)** page. The v5.0.0 assets are also mirrored in the [BDIX-IPTV release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.0.0).
