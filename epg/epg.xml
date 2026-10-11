@@ -12049,21 +12049,6 @@ A closer look at international news, events, current affairs, and exclusive stor
     <icon src="https://iptv-epg.org/images/2TpVwhcDhm5YF3D6zJ6t2zCSvuKDo4oqT_NisETRZrxX_tHP0oFjjeMXoRoIfk1-fxb9mq41qnCgw0Mk4UDLhRDNQrzr3F2vSkBF0tPSFzvvxdL01-YBNMVpC2o" />
     <title lang="en">Newshour</title>
   </programme>
-  <programme channel="AlankarTV.in@SD" start="20261011140000 +0530" stop="20261011165000 +0530">
-    <title>2 Chocolate</title>
-    <desc>Raja falls deeply in love with Ahana, but she doesn't feel the same. They grow apart, only to realise how much they truly need each other.</desc>
-    <category>Film</category>
-    <category>Romance</category>
-    <date>2021</date>
-    <credits>
-      <director>Sushant Mani</director>
-      <actor>Lohit</actor>
-      <actor>Chita Ranjan</actor>
-      <actor>Swapna</actor>
-      <producer>Akshay Kumar Parija</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p30750263_b_h10_aa.jpg?lock=1280x720" />
-  </programme>
   <programme channel="AlankarTV.in@SD" start="20261011165000 +0530" stop="20261011170000 +0530">
     <title>Tele Shopping</title>
     <desc>The host provides the features and specifications of a wide range of products which can be purchased from the comforts of one's home.</desc>
@@ -85233,25 +85218,6 @@ Bringing the best in television.</desc>
     <title>Sahityaki / Sahitya Yatra</title>
     <desc>The host discusses literature with guests; the host talks to writers about their work.</desc>
   </programme>
-  <programme start="20261011083000 +0000" stop="20261011112000 +0000" channel="DDYadagiri.in@SD">
-    <category lang="en">Film</category>
-    <category lang="en">Fantasy</category>
-    <credits>
-      <director>Kodi Ramakrishna</director>
-      <actor>Prema</actor>
-      <actor>Vanitha</actor>
-      <actor>Abu Salim</actor>
-      <actor>Bhanu Chander</actor>
-      <actor>Sowcar Janaki</actor>
-      <actor>Babu Mohan</actor>
-      <actor>Mahendran</actor>
-      <actor>Shiju</actor>
-      <producer>M.S. Raju</producer>
-    </credits>
-    <desc lang="en">Devi, a snake goddess, vows to protect the daughter of the man who died while trying to save her from a powerful demon. However, she falls in love with a human, unaware of the consequences.</desc>
-    <icon src="https://iptv-epg.org/images/BfmT1tNkpG-4tZJGiei2Y5GH9dlBCXdu_WrSEMDbjOT9gAkKywVp2ZG9tu9gofoALWiiO_mkHdSUXSPG7srrc96mLqbym9nNigBUs4Kru4uH9dt7hXm-9nXQyq4iQQ" />
-    <title lang="en">Devi</title>
-  </programme>
   <programme start="20261011112000 +0000" stop="20261011113000 +0000" channel="DDYadagiri.in@SD">
     <category lang="en">TV Show</category>
     <category lang="en">Entertainment</category>
@@ -92123,23 +92089,6 @@ Bringing the best in television.</desc>
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme start="20261011110800 +0000" stop="20261011112000 +0000" channel="Discovery Kids.in">
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <actor>Bobby Moynihan</actor>
-      <actor>Eric Edelstein</actor>
-      <actor>Demetri Martin</actor>
-      <actor>Charlyne Yi</actor>
-      <actor>Patton Oswalt</actor>
-      <actor>Jason Lee</actor>
-    </credits>
-    <desc lang="en">S1 E5
-After being rescued at a farmer's market, Panda believes he has found the woman of his dreams. However, Grizzly and Ice Bear accidentally keep ruining his date.</desc>
-    <episode-num>S1 E5</episode-num>
-    <icon src="https://iptv-epg.org/images/bqYXClwJK3KivPxXv4pUJHjJbBMI5kkrFVoLG_C2iORIVbWOUu1VGwgJgI_VNI-CUDFiH_-OHoGTvuaVhXBM8FJlEVwVe9jP9XQHhT9P_iw3TywyYGFmuKKPnym5" />
-    <title lang="en">We Bare Bears</title>
   </programme>
   <programme start="20261011112000 +0000" stop="20261011113200 +0000" channel="Discovery Kids.in">
     <category lang="en">Children</category>
@@ -105055,23 +105004,6 @@ Zak and the crew descend upon a Southern California park to investigate a haunte
     <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
       <value>AL</value>
     </rating>
-  </programme>
-  <programme start="20261011110800 +0000" stop="20261011112000 +0000" channel="DiscoveryKids.au">
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <actor>Bobby Moynihan</actor>
-      <actor>Eric Edelstein</actor>
-      <actor>Demetri Martin</actor>
-      <actor>Charlyne Yi</actor>
-      <actor>Patton Oswalt</actor>
-      <actor>Jason Lee</actor>
-    </credits>
-    <desc lang="en">S1 E5
-After being rescued at a farmer's market, Panda believes he has found the woman of his dreams. However, Grizzly and Ice Bear accidentally keep ruining his date.</desc>
-    <episode-num>S1 E5</episode-num>
-    <icon src="https://iptv-epg.org/images/bqYXClwJK3KivPxXv4pUJHjJbBMI5kkrFVoLG_C2iORIVbWOUu1VGwgJgI_VNI-CUDFiH_-OHoGTvuaVhXBM8FJlEVwVe9jP9XQHhT9P_iw3TywyYGFmuKKPnym5" />
-    <title lang="en">We Bare Bears</title>
   </programme>
   <programme start="20261011112000 +0000" stop="20261011113200 +0000" channel="DiscoveryKids.au">
     <category lang="en">Children</category>
@@ -159736,26 +159668,6 @@ A young girl named Thulasi dreams of continuing her education despite living wit
     <icon src="https://iptv-epg.org/images/E3NAkvQF2TDVsXXQEixR3a4uVQxF2SZPxDIsTczUgBbQ-vBl2gETwB43ADljtBlthOtjh-DEE_FSO9xYGUGFC5oL1igpfq7S2M4cqAJpFqk51K3XdlDv2owsmFOydA" />
     <title lang="en">Chotu Dada</title>
   </programme>
-  <programme start="20261011091000 +0000" stop="20261011112500 +0000" channel="MazhavilManorama.in@SD">
-    <category lang="en">Film</category>
-    <category lang="en">Thriller</category>
-    <credits>
-      <director>Manoj Palodan</director>
-      <actor>Anoop Menon</actor>
-      <actor>Dhyan Sreenivasan</actor>
-      <actor>Siddique</actor>
-      <actor>Sheelu Abraham</actor>
-      <actor>Azees Nedumangad</actor>
-      <actor>Major Ravi</actor>
-      <actor>Sajin Cherukayil</actor>
-      <actor>Asif Ali</actor>
-      <producer>Shameer Thottingal</producer>
-      <producer>Abraham Mathew</producer>
-    </credits>
-    <desc lang="en">The life of a weather officer harbouring an obsession with certainty gets complicated when a bizarre incident concerning a neighbour incites his suspicions about his own wife.</desc>
-    <icon src="https://iptv-epg.org/images/j5Y8psMrtfbx693WTzU3OsKNwqy5QobSi3U-BR1BRNr20rgXvT6Das0OLelpJJwq01TDB04u0xGa9C6GJETERE_HaowcWfIqkYEmdE538jW8pO_hkPgSYb7K--K3iA" />
-    <title lang="en">Raveendra Nee Evide?</title>
-  </programme>
   <programme start="20261011112500 +0000" stop="20261011150000 +0000" channel="MazhavilManorama.in@SD">
     <category lang="en">Film</category>
     <category lang="en">Drama</category>
@@ -201944,13 +201856,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <icon src="https://iptv-epg.org/images/kIGMbNgmfX1YSmQwwE7SGufwTyQDQ9jq_JyJtZhUhJWhsbPK3yYVbDabpsoiZ1HBRDLr9qXzKTPgc_p8IDbJnvNotmVQlZOHsR5WVJwnmfE1tGcAJOUgPrJZNT1v" />
     <title lang="en">Music Xpress</title>
   </programme>
-  <programme channel="Pop.uk" start="20261011111400 +0000" stop="20261011112300 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261011164400/list/ZEEPOPGrizzyAndTheLemmings2056732e68e1fb51a7b4e598d56e14a06ed96e5.jpg" />
-  </programme>
   <programme channel="Pop.uk" start="20261011112300 +0000" stop="20261011113200 +0000">
     <title lang="en">Grizzy And The Lemmings</title>
     <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
@@ -238767,21 +238672,16 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <icon src="https://tv.assets.pressassociation.io/4ac10a17-809d-5998-ac39-064bc977d8e8.jpg" />
     <episode-num system="onscreen">S2026 E31</episode-num>
   </programme>
-  <programme start="20261011164500 +0530" stop="20261011165000 +0530" channel="SongdewTV.in@SD">
-    <title>Songdew Fresh</title>
-    <sub-title>Songdew | HINDI</sub-title>
-    <desc>Latest Music</desc>
-    <category>Entertainment</category>
-    <language>HINDI</language>
-    <icon src="https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/cricket_images/images/Songdew-TV_720x405.jpg" />
-  </programme>
-  <programme start="20261011165000 +0530" stop="20261011165500 +0530" channel="SongdewTV.in@SD">
-    <title>Friday Night Originals</title>
-    <sub-title>Songdew | HINDI</sub-title>
-    <desc>Features live jam session of some of best musicians and bands</desc>
-    <category>Entertainment</category>
-    <language>HINDI</language>
-    <icon src="https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/cricket_images/images/Songdew-TV_720x405.jpg" />
+  <programme start="20261011164500 +0530" stop="20261011170500 +0530" channel="SongdewTV.in@SD">
+    <title>New Pinch</title>
+    <desc>Featuring best of new indie music</desc>
+    <category>Music</category>
+    <language>English</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg?width=700" />
+    <episode-num system="onscreen">6</episode-num>
+    <rating>
+      <value>U</value>
+    </rating>
   </programme>
   <programme start="20261011170500 +0530" stop="20261011171000 +0530" channel="SongdewTV.in@SD">
     <title>Friday Night Originals</title>
@@ -255833,45 +255733,6 @@ Tapu Sena wins the Dahi Handi contest and saves Abdul's shop by obtaining the re
     <episode-num>S1 E4185</episode-num>
     <icon src="https://iptv-epg.org/images/s7SrcZiOMq1KPKnnzYgBEJVB0BcSPjW7OHL3RSsl6PUfxsy-SLd-8b3N1SG3bgLsfwrbKopLHNVJNMS9GGAb0ikx--4-csF6ZSghyEo3xggAKYbMywaviOPEeAc" />
     <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
-  </programme>
-  <programme channel="SonyPix.in" start="20261011145600 +0530" stop="20261011165500 +0530">
-    <title>Jumanji: The Next Level</title>
-    <desc>After Spencer goes missing, his team of confidantes comes back to Jumanji to go to the undiscovered regions and support him in escaping the world's most lethal game.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2019</date>
-    <credits>
-      <director>Jake Kasdan</director>
-      <actor>Dwayne Johnson</actor>
-      <actor>Kevin Hart</actor>
-      <actor>Jack Black</actor>
-      <actor>Karen Gillan</actor>
-      <actor>Awkwafina</actor>
-      <actor>Nick Jonas</actor>
-      <actor>Alex Wolff</actor>
-      <actor>Morgan Turner</actor>
-      <actor>Ashley Scott</actor>
-      <actor>Madison Iseman</actor>
-      <actor>Ser'Darius Blain</actor>
-      <actor>Danny DeVito</actor>
-      <actor>Danny Glover</actor>
-      <actor>Rhys Darby</actor>
-      <actor>Colin Hanks</actor>
-      <actor>Rory McCann</actor>
-      <actor>Marin Hinkle</actor>
-      <actor>Vince Pisani</actor>
-      <actor>Dorothy Steel</actor>
-      <actor>Jennifer Patino</actor>
-      <actor>Madison Johnson</actor>
-      <actor>Dania Ramirez</actor>
-      <actor>Derek Russo</actor>
-      <producer>Dany Garcia</producer>
-      <producer>Hiram Garcia</producer>
-      <producer>Dwayne Johnson</producer>
-      <producer>Jake Kasdan</producer>
-      <producer>Matthew Tolmach</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p15446613_v_h10_af.jpg?lock=1280x720" />
   </programme>
   <programme channel="SonyPix.in" start="20261011165500 +0530" stop="20261011191000 +0530">
     <title>Blade Runner 2049</title>
@@ -281486,13 +281347,26 @@ The host sheds light on real-life criminal cases and crime stories while giving 
     <icon src="https://iptv-epg.org/images/D_5l8CfQrQUIz5SZien_Y5y3OoGeFy3mBxVBs5qfc6CKcik0JtsgqpGxHCILVyGe78qPBbYPLAAtzcophA6M3RPAJvWtN5jasA30iBcQ_ouoihL_Db-_cYoqE0AJ" />
     <title lang="en">Savdhaan India: Rewind</title>
   </programme>
-  <programme start="20261011141800 +0530" stop="20261011165200 +0530" channel="StarGold.in@HD" catchup-id="100263838">
-    <title>Gatta Kusthi</title>
-    <desc>A man unexpectedly marries a woman who is the opposite of everything he wants in a bride.</desc>
-  </programme>
-  <programme start="20261011165200 +0530" stop="20261011195000 +0530" channel="StarGold.in@HD" catchup-id="100263836">
-    <title>Action Jackson</title>
-    <desc>After falling in love with a clumsy girl, a goon comes in contact with AJ, his doppelgänger.</desc>
+  <programme channel="StarGold.in@HD" start="20261011164900 +0530" stop="20261011195000 +0530">
+    <title>Welcome Back</title>
+    <desc>Majnu and Uday, a duo of fearsome gangsters, decide to quit the life of crime for good. However, they consider resorting to their old ways when they have difficulty finding a groom for their sister.</desc>
+    <category>Film</category>
+    <category>Crime</category>
+    <date>2015</date>
+    <credits>
+      <director>Anees Bazmee</director>
+      <actor>Anil Kapoor</actor>
+      <actor>Nana Patekar</actor>
+      <actor>Dimple Kapadia</actor>
+      <actor>John Abraham</actor>
+      <actor>Shruti K. Haasan</actor>
+      <actor>Shiney Ahuja</actor>
+      <actor>Ankita Shrivastava</actor>
+      <actor>Paresh Rawal</actor>
+      <actor>Naseeruddin Shah</actor>
+      <producer>Firoz Nadiadwala</producer>
+    </credits>
+    <icon src="https://dtil.tmsimg.com/assets/p12069713_v_h10_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="StarGold.in@HD" start="20261011195000 +0530" stop="20261011230500 +0530">
     <title>Dangal</title>
@@ -327296,14 +327170,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <category>Kids</category>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261017235300/list/TinyPOPTHEHIVE2151548c9e3feeb8927483ab4ea5a54ad023895.jpg" />
-  </programme>
-  <programme start="20261011164100 +0530" stop="20261011165400 +0530" channel="TollyTV.in">
-    <title>Jhansi Rani</title>
-    <sub-title>TOLLY TV | TELUGU</sub-title>
-    <desc>Jhansi Rani hunts a conman who tricked women, seeking justice for her sister.</desc>
-    <category>Movies</category>
-    <language>TELUGU</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/TOLLY%20TV/IMAGES/Jhansi%20Rani.png" />
   </programme>
   <programme start="20261011165400 +0530" stop="20261011170600 +0530" channel="TollyTV.in">
     <title>Jhansi Rani</title>
@@ -381455,38 +381321,6 @@ Delving into a range of varied topics, the host discusses the social, economic a
     <episode-num system="onscreen">E1</episode-num>
     <premiere />
   </programme>
-  <programme channel="custom.boomerang" start="20261011111000 +0000" stop="20261011112000 +0000">
-    <title lang="en">Looney Tunes</title>
-    <sub-title lang="en">Zoom and Bored</sub-title>
-    <desc lang="en">Coyote uses a bottle full of bees, a brick wall, a boulder in a catapult and a harpoon gun to try and catch the Road Runner.</desc>
-    <credits>
-      <actor>Mel Blanc</actor>
-      <actor>June Foray</actor>
-      <director>Chuck Jones</director>
-    </credits>
-    <date>1957</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p24768210_b_h10_ae.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVY</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>0</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
-  </programme>
   <programme channel="custom.boomerang" start="20261011112000 +0000" stop="20261011113000 +0000">
     <title lang="en">Looney Tunes</title>
     <sub-title lang="en">Go Fly a Kit</sub-title>
@@ -416282,21 +416116,6 @@ Zak and the crew descend upon a Southern California park to investigate a haunte
     <icon src="https://iptv-epg.org/images/auLgCBOJ9Cb1JcgmF21cKHU8ImJ5u83zscNtiWb7H2wxi7jbC5EH-iBo0DHi-PQLKm31A2rXh4iGG1wrCTGFOvASRGEJ6bokdHq3-T8Rxvk0jo4-LA6kfNbL8wY" />
     <title lang="en">Ghost Adventures</title>
   </programme>
-  <programme start="20261011103000 +0000" stop="20261011112000 +0000" channel="custom.discovery.turbo">
-    <category lang="en">TV Show</category>
-    <category lang="en">Reality Show</category>
-    <credits>
-      <actor>Dave \"Heavy D\" Sparks</actor>
-      <actor>\"Diesel Dave\" Kiley</actor>
-      <actor>Keaton The Muscle Hoskins</actor>
-      <actor>Josh \"Red Beard\" Stuart</actor>
-    </credits>
-    <desc lang="en">S8 E2
-Heavy D thinks he's found gold in a rare diesel Cadillac. Diesel Bi-Wheel is almost ready to roll, but the guys may need to pump the brakes.</desc>
-    <episode-num>S8 E2</episode-num>
-    <icon src="https://iptv-epg.org/images/xA1IALE6aeBRveHRgvva698QfM7mBmMQJL1z64SkS-cWv3b59Qeu2n1eVtQwYNLhLyv80i_ChIS9csR-LCv7PA3Ix8jEgpDC0B0XN_4Rg1esg63jjjSJfd_4yTyA" />
-    <title lang="en">Diesel Brothers</title>
-  </programme>
   <programme start="20261011112000 +0000" stop="20261011121000 +0000" channel="custom.discovery.turbo">
     <category lang="en">TV Show</category>
     <category lang="en">Education (Adult)</category>
@@ -421788,19 +421607,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261011164900 +0530" stop="20261011165300 +0530" channel="custom.duck.tv">
-    <title>Fireteam in Action</title>
-    <desc>Three brave firemen, Shorty, Roundy and Tally, lend a helping hand to the people whenever the need arises. They never hesitate to do their work and are always helpful to the citizens.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/bdb6e64990197224c92d633538f030e9.jpg?width=700" />
-    <credits>
-      <director>Roza Györffy</director>
-    </credits>
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261011165300 +0530" stop="20261011165600 +0530" channel="custom.duck.tv">
@@ -429233,24 +429039,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <rating>
       <value>TVY</value>
     </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011111700 +0000" stop="20261011112000 +0000">
-    <title lang="en">Mimo's World</title>
-    <desc lang="en">Mimo and his best friend Bobo meet new characters and invite them to go on several adventures together.</desc>
-    <date>2016</date>
-    <category lang="en">Children</category>
-    <category lang="en">Educational</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13128197_b_h10_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="custom.ducktv" start="20261011112000 +0000" stop="20261011112400 +0000">
-    <title lang="en">Ristorante</title>
-    <desc lang="en">A collection of stories that demonstrate how a restaurant works, from food preparation to cooking, baking and serving.</desc>
-    <date>2016</date>
-    <category lang="en">Children</category>
-    <category lang="en">Cooking</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13128234_b_h10_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
   </programme>
   <programme channel="custom.ducktv" start="20261011112800 +0000" stop="20261011113200 +0000">
     <title lang="en">Mimo and Bobo PLUS</title>
@@ -453599,16 +453387,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261011111500 +0000" stop="20261011112500 +0000" channel="custom.epic">
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <credits>
-      <director>Priyarth Mukherjee</director>
-    </credits>
-    <desc lang="en">The filmmaker sheds light on the recipients of India's highest civilian honour in order to explore the unknown stories behind their success.</desc>
-    <icon src="https://iptv-epg.org/images/ckBLusnGOVmQPc3tOBUYjBrEME7FcVCINYajCtpXl3Xpqhg_CQqq5BcU-E6Rr2BW7ls6WG3jOUrS2iSnVYS9oUc0SXecPT15lGiiXljj6Ofy0pxEEQgqo1azgtQiVg" />
-    <title lang="en">Bharat Ratna The Jewels Of India</title>
   </programme>
   <programme start="20261011112500 +0000" stop="20261011115500 +0000" channel="custom.epic">
     <category lang="en">Documentary</category>
@@ -518955,47 +518733,6 @@ A lady who previously spurned Manmohan's proposal rings him to arrange a rendezv
     <desc lang="en">Reaction, analysis and your chance to have your say on the day's sport. Call the show on 03717 22 33 44 (Calls charged at national rate) or text 81089 (50p + charges).</desc>
     <category lang="en">Music &amp; Radio</category>
   </programme>
-  <programme channel="custom.teen.nick" start="20261011105300 +0000" stop="20261011112000 +0000">
-    <title lang="en">Zoey 101</title>
-    <sub-title lang="en">Trading Places</sub-title>
-    <desc lang="en">Zoey returns to PCA to reveal her feelings for Chase.</desc>
-    <credits>
-      <actor>Jamie Lynn Spears</actor>
-      <actor>Paul Butcher</actor>
-      <actor>Victoria Justice</actor>
-    </credits>
-    <date>2008</date>
-    <category lang="en">Series</category>
-    <category lang="en">Children</category>
-    <category lang="en">Sitcom</category>
-    <icon src="http://dtil.tmsimg.com/assets/p7892973_b_h10_aa.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S4 E1</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVY7</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C8</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>A</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>10</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>0</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-  </programme>
   <programme channel="custom.teen.nick" start="20261011112000 +0000" stop="20261011114700 +0000">
     <title lang="en">Zoey 101</title>
     <sub-title lang="en">Walk-A-Thon</sub-title>
@@ -532269,14 +532006,6 @@ A lady who previously spurned Manmohan's proposal rings him to arrange a rendezv
     <desc lang="en">Cricket action and highlights from around the world.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6ac835b6e62860cabccb49a5/images/LANDSCAPE_169/output1920x1080.jpeg" />
   </programme>
-  <programme start="20261011155100 +0530" stop="20261011165200 +0530" channel="custom.xtrem.sports">
-    <title>Because</title>
-    <sub-title>XTREM SPORTS | ENGLISH</sub-title>
-    <desc>A high-end freeski documentary following 22 professional athletes across record snowfall winters, facing deep powder, massive cliffs, and extreme expeditions, while sharing their ambition, discipline, and drive to reach the next level of their careers.</desc>
-    <category>Sports</category>
-    <language>ENGLISH</language>
-    <icon src="https://s3.eu-west-2.wasabisys.com/xtremsport/BECAUSE.jpg" />
-  </programme>
   <programme start="20261011165200 +0530" stop="20261011174800 +0530" channel="custom.xtrem.sports">
     <title>Begging For Change</title>
     <sub-title>XTREM SPORTS | ENGLISH</sub-title>
@@ -538146,23 +537875,6 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
     <title lang="en">Ed Stafford's Rite of Passage</title>
     <desc lang="en">Ed Stafford guides young adventurers through demanding wilderness challenges, helping them build confidence, resilience and survival skills while reconnecting with nature.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DISCOVERY_CHANNEL_2052016_14OCT210100_14OCT220000/images/LANDSCAPE_169_HD/DISCOVERY_EdStaffordsRiteofPassage_2052016.jpg" />
-  </programme>
-  <programme start="20261011110800 +0000" stop="20261011112000 +0000" channel="hmair.discoverykids">
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <actor>Bobby Moynihan</actor>
-      <actor>Eric Edelstein</actor>
-      <actor>Demetri Martin</actor>
-      <actor>Charlyne Yi</actor>
-      <actor>Patton Oswalt</actor>
-      <actor>Jason Lee</actor>
-    </credits>
-    <desc lang="en">S1 E5
-After being rescued at a farmer's market, Panda believes he has found the woman of his dreams. However, Grizzly and Ice Bear accidentally keep ruining his date.</desc>
-    <episode-num>S1 E5</episode-num>
-    <icon src="https://iptv-epg.org/images/bqYXClwJK3KivPxXv4pUJHjJbBMI5kkrFVoLG_C2iORIVbWOUu1VGwgJgI_VNI-CUDFiH_-OHoGTvuaVhXBM8FJlEVwVe9jP9XQHhT9P_iw3TywyYGFmuKKPnym5" />
-    <title lang="en">We Bare Bears</title>
   </programme>
   <programme start="20261011112000 +0000" stop="20261011113200 +0000" channel="hmair.discoverykids">
     <category lang="en">Children</category>
@@ -547508,21 +547220,6 @@ Little Singham, an honest but ferocious police officer, fights against injustice
     <episode-num>S1 E49</episode-num>
     <icon src="https://iptv-epg.org/images/fFfwu07M2GNI6OsF78RSCAg0GFFcpJDJLs0CPsN9rV0BRUeFKgTHLQw3M6SdLmrmSXZO7dlAqiyMFXBPWWhRR70MKpOFvvYhAQJh9IO4n_8jlqfvE7JA9tmjwAHR" />
     <title lang="en">Little Singham</title>
-  </programme>
-  <programme start="20261011103000 +0000" stop="20261011112000 +0000" channel="hmair.discoveryturbo">
-    <category lang="en">TV Show</category>
-    <category lang="en">Reality Show</category>
-    <credits>
-      <actor>Dave \"Heavy D\" Sparks</actor>
-      <actor>\"Diesel Dave\" Kiley</actor>
-      <actor>Keaton The Muscle Hoskins</actor>
-      <actor>Josh \"Red Beard\" Stuart</actor>
-    </credits>
-    <desc lang="en">S8 E2
-Heavy D thinks he's found gold in a rare diesel Cadillac. Diesel Bi-Wheel is almost ready to roll, but the guys may need to pump the brakes.</desc>
-    <episode-num>S8 E2</episode-num>
-    <icon src="https://iptv-epg.org/images/xA1IALE6aeBRveHRgvva698QfM7mBmMQJL1z64SkS-cWv3b59Qeu2n1eVtQwYNLhLyv80i_ChIS9csR-LCv7PA3Ix8jEgpDC0B0XN_4Rg1esg63jjjSJfd_4yTyA" />
-    <title lang="en">Diesel Brothers</title>
   </programme>
   <programme start="20261011112000 +0000" stop="20261011121000 +0000" channel="hmair.discoveryturbo">
     <category lang="en">TV Show</category>
@@ -565583,45 +565280,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <category lang="en">Film</category>
     <category lang="en">Mystery</category>
     <icon src="https://dtil.tmsimg.com/assets/p15168346_v_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="hmair.sonypixhd" start="20261011145600 +0530" stop="20261011165500 +0530">
-    <title>Jumanji: The Next Level</title>
-    <desc>After Spencer goes missing, his team of confidantes comes back to Jumanji to go to the undiscovered regions and support him in escaping the world's most lethal game.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2019</date>
-    <credits>
-      <director>Jake Kasdan</director>
-      <actor>Dwayne Johnson</actor>
-      <actor>Kevin Hart</actor>
-      <actor>Jack Black</actor>
-      <actor>Karen Gillan</actor>
-      <actor>Awkwafina</actor>
-      <actor>Nick Jonas</actor>
-      <actor>Alex Wolff</actor>
-      <actor>Morgan Turner</actor>
-      <actor>Ashley Scott</actor>
-      <actor>Madison Iseman</actor>
-      <actor>Ser'Darius Blain</actor>
-      <actor>Danny DeVito</actor>
-      <actor>Danny Glover</actor>
-      <actor>Rhys Darby</actor>
-      <actor>Colin Hanks</actor>
-      <actor>Rory McCann</actor>
-      <actor>Marin Hinkle</actor>
-      <actor>Vince Pisani</actor>
-      <actor>Dorothy Steel</actor>
-      <actor>Jennifer Patino</actor>
-      <actor>Madison Johnson</actor>
-      <actor>Dania Ramirez</actor>
-      <actor>Derek Russo</actor>
-      <producer>Dany Garcia</producer>
-      <producer>Hiram Garcia</producer>
-      <producer>Dwayne Johnson</producer>
-      <producer>Jake Kasdan</producer>
-      <producer>Matthew Tolmach</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p15446613_v_h10_af.jpg?lock=1280x720" />
   </programme>
   <programme channel="hmair.sonypixhd" start="20261011165500 +0530" stop="20261011191000 +0530">
     <title>Blade Runner 2049</title>
