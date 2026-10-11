@@ -529,7 +529,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36oZVJE
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2U70Lfz12mSBwxfn59azrr
 #EXTINF:-1 xui-id="589" tvg-id="custom.wild.earth" tvg-name="Wild Earth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wildearth.png" tvg-chno="262" channel-id="custom.wild.earth" group-title="Documentary & Wildlife",Wild Earth
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1V4xKIBtq0XYnCucXEEXnF
-#EXTINF:-1 xui-id="179435" tvg-id="custom.wild.life" tvg-name="Wild Life" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-wild-life.svg" tvg-chno="263" channel-id="custom.wild.life" group-title="Documentary & Wildlife",Wild Life
+#EXTINF:-1 xui-id="179435" tvg-id="custom.wild.life" tvg-name="Wild Life" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wildearth.png" tvg-chno="263" channel-id="custom.wild.life" group-title="Documentary & Wildlife",Wild Life
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0eOKA0SETFzF5U6nfDb9Wr
 #EXTINF:-1 xui-id="188416" tvg-id="WildTV.ca@SD" tvg-name="Wild TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wild-tv.png" tvg-chno="264" channel-id="WildTV.ca@SD" group-title="Documentary & Wildlife",Wild TV
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2d3NuNYWJPJa0_waiedITX
@@ -615,7 +615,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2yTL4Hb
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3ftIhJXmi3NGYxbDUkMqv_
 #EXTINF:-1 xui-id="620" tvg-id="custom.madani.tv.bangla" tvg-name="Madani TV Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-madani-tv-bangla.png" tvg-chno="305" channel-id="custom.madani.tv.bangla" group-title="Religious",Madani TV Bangla
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Eb4aZ-bYGshWX_85IUqhS
-#EXTINF:-1 xui-id="180977" tvg-id="custom.madina" tvg-name="Madina Live" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-madina.svg" tvg-chno="306" channel-id="custom.madina" group-title="Religious",Madina Live
+#EXTINF:-1 xui-id="180977" tvg-id="custom.madina" tvg-name="Madina Live" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-madina-live.png" tvg-chno="306" channel-id="custom.madina" group-title="Religious",Madina Live
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3R2O59mEOcZbq-ivuu9UGP
 #EXTINF:-1 xui-id="619" tvg-id="custom.makkah.live" tvg-name="Makkah Live" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/makkah-live.png" tvg-chno="307" channel-id="custom.makkah.live" group-title="Religious",Makkah Live
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0v9i5ykrMQwswR57Xr7Cmd
@@ -771,7 +771,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3XFkTYf
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0qDjcHPktVpCT_IT6uuJS2
 #EXTINF:-1 xui-id="180002" tvg-id="custom.rtsh.sport" tvg-name="Rtsh Sport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-rtsh-sport.png" tvg-chno="383" channel-id="custom.rtsh.sport" group-title="Sports",Rtsh Sport
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-10GToTf1nBDcDV9DSKbOeQ
-#EXTINF:-1 xui-id="179972" tvg-id="custom.setanta.sport" tvg-name="Setanta Sport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-setanta-sport.svg" tvg-chno="384" channel-id="custom.setanta.sport" group-title="Sports",Setanta Sport
+#EXTINF:-1 xui-id="179972" tvg-id="custom.setanta.sport" tvg-name="Setanta Sport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-setanta-sport.jpg" tvg-chno="384" channel-id="custom.setanta.sport" group-title="Sports",Setanta Sport
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3CmJznHRvImhZHb7ueSjgJ
 #EXTINF:-1 xui-id="184945" tvg-id="SSPOFB" tvg-name="Sky Sports Laliga" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-sky-sports-laliga.svg" tvg-chno="385" channel-id="SSPOFB" group-title="Sports",Sky Sports Laliga
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-11A-xLEaaniJNW9_8HOKwO
@@ -879,7 +879,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1gIbpQH
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0-edLus17RmZH1iSNlDt56
 #EXTINF:-1 xui-id="41688" tvg-id="custom.dream.music.prime" tvg-name="Dream Music Prime" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-dream-music-prime.svg" tvg-chno="437" channel-id="custom.dream.music.prime" group-title="Radio",Dream Music Prime
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3e848rM9rezuMk0wwlIaOU
-#EXTINF:-1 xui-id="41678" tvg-id="custom.love.gold.bangla" tvg-name="Love Gold Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-love-gold-bangla.svg" tvg-chno="438" channel-id="custom.love.gold.bangla" group-title="Radio",Love Gold Bangla
+#EXTINF:-1 xui-id="41678" tvg-id="custom.love.gold.bangla" tvg-name="Love Gold Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-love-gold-bangla.png" tvg-chno="438" channel-id="custom.love.gold.bangla" group-title="Radio",Love Gold Bangla
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0RcI-Pk8Y1g3CYtoVzscEX
 #EXTINF:-1 xui-id="41692" tvg-id="custom.magical.blade.fm" tvg-name="Magical Blade FM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-magical-blade-fm.svg" tvg-chno="439" channel-id="custom.magical.blade.fm" group-title="Radio",Magical Blade FM
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0fvt6tI6qALFia3pBA67hH

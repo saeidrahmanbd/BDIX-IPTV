@@ -2,22 +2,21 @@
 
 This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.
 
-- Run time: 2026-10-11 12:00 UTC
+- Run time: 2026-10-11 12:01 UTC
 - IPTV-org dataset: loaded
-- Unique generic assets examined: 85
-- Successful replacements: 6
-- Unresolved/manual review: 79
+- Unique generic assets examined: 80
+- Successful replacements: 5
+- Unresolved/manual review: 75
 
 ## Replacements
 
 | Channel | Former generic file | New local file | Source | License / attribution |
 |---|---|---|---|---|
-| Dhaka FM 90.4 | nvisionbd-dhaka-fm-90-4.svg | [nvisionbd-official-dhaka-fm-90-4.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-dhaka-fm-90-4.png) | [Dhaka FM official website](https://dhakafm904.com/overview.html) | Station logo served by the broadcaster |
-| Fuel TV Apac | nvisionbd-fuel-tv-apac.svg | [nvisionbd-official-fuel-tv-apac.svg](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-fuel-tv-apac.svg) | [Wikimedia Commons Fuel TV logo](https://commons.wikimedia.org/wiki/File:Fuel_TV.svg) | See the Commons file page for source and licensing |
-| Fuel TV Europe | nvisionbd-fuel-tv-europe.svg | [nvisionbd-official-fuel-tv-europe.svg](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-fuel-tv-europe.svg) | [Wikimedia Commons Fuel TV logo](https://commons.wikimedia.org/wiki/File:Fuel_TV.svg) | See the Commons file page for source and licensing |
-| Pk Geo Super | nvisionbd-pk-geo-super.svg | [nvisionbd-official-pk-geo-super.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-pk-geo-super.png) | [IPTV-org Geo Super channel page](https://iptv-org.github.io/channels/pk/GeoSuper) | Channel logo from IPTV-org listing |
-| Radio Vivid Voice / Mymensingh | nvisionbd-radio-vivid-voice-mymensingh.svg | [nvisionbd-official-radio-vivid-voice-mymensingh.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-vivid-voice-mymensingh.png) | [Streema Radio Vivid Voice station page](https://pt.streema.com/radios/Radio_Vivid_Voice) | Station logo shown by Streema |
+| Love Gold Bangla | nvisionbd-love-gold-bangla.svg | [nvisionbd-official-love-gold-bangla.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-love-gold-bangla.png) | [Public radio playlist logo reference](https://github.com/alaminislam203/my_playlist) | Station logo; reuse rights not specified |
+| Madina Live | nvisionbd-madina.svg | [nvisionbd-official-madina-live.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-madina-live.png) | [Madina Live public playlist logo reference](https://cdn-globecast.akamaized.net/live/eds/saudi_sunnah/hls_roku/index.m3u8) | Station logo; reuse rights not specified |
+| Setanta Sport | nvisionbd-setanta-sport.svg | [nvisionbd-official-setanta-sport.jpg](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-setanta-sport.jpg) | [Setanta Sport logo reference in public playlist](https://github.com/kilirushi/iptv/blob/f8765b54e7b66080201e07d168418e302c672c7d/cate/bein_sport.m3u) | Source/rights should be verified separately |
 | The Q | nvisionbd-the-q.svg | [nvisionbd-official-the-q.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-the-q.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/india/the-q-in.png) | No license file found in source repository |
+| Wild Life | nvisionbd-wild-life.svg | [wildearth.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wildearth.png) | [Existing verified repository asset](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) | Existing repository asset |
 
 ## Unresolved — retained for manual source verification
 
@@ -62,18 +61,16 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Kiev Sport HD | nvisionbd-kiev-sport.svg | No unique source-verified channel logo found |
 | Laliga Live 1 | nvisionbd-laliga-1.svg | No unique source-verified channel logo found |
 | Laliga Live 2 | nvisionbd-laliga-2.svg | No unique source-verified channel logo found |
-| Love Gold Bangla | nvisionbd-love-gold-bangla.svg | No unique source-verified channel logo found |
-| Madina Live | nvisionbd-madina.svg | No unique source-verified channel logo found |
 | Magical Blade FM | nvisionbd-magical-blade-fm.svg | No unique source-verified channel logo found |
 | Moner Radio | nvisionbd-moner-radio.svg | No unique source-verified channel logo found |
 | Nat Geo Bangla | nvisionbd-nat-geo-bangla.svg | No unique source-verified channel logo found |
 | Niki Jr Kids | nvisionbd-niki-jr-kids.svg | No unique source-verified channel logo found |
 | Palki FM | nvisionbd-palki-fm.svg | No unique source-verified channel logo found |
-| Persiana Travel | nvisionbd-persiana-travel.svg | No unique source-verified channel logo found |
+| Persiana Travel | nvisionbd-persiana-travel.svg | Lookup/download/validation error: HTTP Error 403: Forbidden |
 | Pk Ten Cricket | nvisionbd-pk-ten-cricket.svg | No unique source-verified channel logo found |
 | Power Turk | nvisionbd-power-turk.svg | No unique source-verified channel logo found |
 | Radio Adamya | nvisionbd-radio-adamya.svg | No unique source-verified channel logo found |
-| Radio Bangla Rock | nvisionbd-radio-bangla-rock.svg | No unique source-verified channel logo found |
+| Radio Bangla Rock | nvisionbd-radio-bangla-rock.svg | Lookup/download/validation error: HTTP Error 404: Not Found |
 | Radio Bangladesh Co | nvisionbd-radio-bangladesh-co.svg | No unique source-verified channel logo found |
 | Radio Barakah | nvisionbd-radio-barakah.svg | No unique source-verified channel logo found |
 | Radio Gaan Baksho | nvisionbd-radio-gaan-baksho.svg | No unique source-verified channel logo found |
@@ -83,7 +80,6 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Radio Zenith FM | nvisionbd-radio-zenith-fm.svg | No unique source-verified channel logo found |
 | Rick Astley | nvisionbd-rick-astley.svg | No unique source-verified channel logo found |
 | Sagor FM | nvisionbd-sagor-fm.svg | No unique source-verified channel logo found |
-| Setanta Sport | nvisionbd-setanta-sport.svg | No unique source-verified channel logo found |
 | Sine Plus | nvisionbd-sine-plus.svg | No unique source-verified channel logo found |
 | Sky Sports Laliga | nvisionbd-sky-sports-laliga.svg | No unique source-verified channel logo found |
 | Sport 1 HD | nvisionbd-sport-1.svg | No unique source-verified channel logo found |
@@ -99,6 +95,5 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Wc Music | nvisionbd-wc-music.svg | No unique source-verified channel logo found |
 | Whiples Cinema | nvisionbd-whiples-cinema.svg | No unique source-verified channel logo found |
 | Wifm 100.9 | nvisionbd-wifm-100-9.svg | No unique source-verified channel logo found |
-| Wild Life | nvisionbd-wild-life.svg | No unique source-verified channel logo found |
 | Xrema Accion | nvisionbd-xrema-accion.svg | No unique source-verified channel logo found |
 | Xtrem Sports | nvisionbd-xtrem-sports.svg | No unique source-verified channel logo found |

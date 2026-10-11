@@ -1,6 +1,6 @@
 # Generic Channel Logo Audit — Three Playlists
 
-Audit date: 2026-10-11 12:00 UTC  
+Audit date: 2026-10-11 12:01 UTC  
 Repository: https://github.com/saeidrahmanbd/BDIX-IPTV  
 Method: scans current playlist metadata and checks referenced local SVG files for the generic CHANNEL MARK template.
 
@@ -10,9 +10,9 @@ Method: scans current playlist metadata and checks referenced local SVG files fo
 |---|---:|---:|
 | IPTV-Playlist.m3u | 1145 | 0 |
 | BDIX-Playlist.m3u | 217 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 79 |
+| NVisionBD-Playlist.m3u | 561 | 75 |
 
-Current NVisionBD placeholder assets: **79 unique files**.
+Current NVisionBD placeholder assets: **75 unique files**.
 
 ## Remaining affected NVisionBD channel labels
 
@@ -55,8 +55,6 @@ Current NVisionBD placeholder assets: **79 unique files**.
 - Kiev Sport HD
 - Laliga Live 1
 - Laliga Live 2
-- Love Gold Bangla
-- Madina Live
 - Magical Blade FM
 - Moner Radio
 - Nat Geo Bangla
@@ -76,7 +74,6 @@ Current NVisionBD placeholder assets: **79 unique files**.
 - Radio Zenith FM
 - Rick Astley
 - Sagor FM
-- Setanta Sport
 - Sine Plus
 - Sky Sports Laliga
 - Sport 1 HD
@@ -92,7 +89,6 @@ Current NVisionBD placeholder assets: **79 unique files**.
 - Wc Music
 - Whiples Cinema
 - Wifm 100.9
-- Wild Life
 - Xrema Accion
 - Xtrem Sports
 
