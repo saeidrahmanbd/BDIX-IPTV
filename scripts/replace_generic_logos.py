@@ -330,6 +330,14 @@ DIRECT_LOGO_HINTS = {
         "license": "Station logo; reuse rights not specified",
         "license_url": "",
     },
+    "Radio Gaan Baksho": {
+        "url": "https://radiospinner.com/media/logos/180/84732/logo_t6wxUJOvSy.png",
+        "format": "PNG",
+        "page": "https://github.com/junguler/m3u-radio-music-playlists/blob/4f7f422c65652805edf56a71b7ab17ac417b2755/radio_spinner/bangladeshi.m3u",
+        "source": "RadioSpinner Bangladeshi radio logo reference",
+        "license": "Station artwork; reuse rights not specified",
+        "license_url": "",
+    },
     "Love Gold Bangla": {
         "url": "https://i.imgur.com/pLqV8yN.png",
         "format": "PNG",
@@ -347,11 +355,11 @@ DIRECT_LOGO_HINTS = {
         "license_url": "",
     },
     "Persiana Travel": {
-        "url": "https://www.lyngsat.com/logo/tv/pp/persiana-travel-fr.png",
-        "format": "PNG",
-        "page": "https://www.lyngsat.com/tvchannels/ir/Persiana-Travel.html",
-        "source": "LyngSat channel logo",
-        "license": "Logo served by LyngSat; reuse rights not specified",
+        "url": "https://s3.aynaott.com/storage/be9b48d87dcd7711cac19c17d8e01b27",
+        "format": "",
+        "page": "https://github.com/judy-gotv/iptv/blob/fb3fc31b1d46c2aef55bcadbe5f0be65ab3c5796/BD.m3u",
+        "source": "Ayna OTT logo reference in a public playlist",
+        "license": "Logo image; reuse rights not specified",
         "license_url": "",
     },
     "Setanta Sport": {
@@ -371,10 +379,10 @@ DIRECT_LOGO_HINTS = {
         "license_url": "",
     },
     "Uttorbango Betar": {
-        "url": "https://im1.lixty.com/images/bd-uttorbango-betar-logo.jpg",
-        "format": "JPEG",
-        "page": "https://github.com/junguler/m3u-radio-music-playlists/blob/4f7f422c65652805edf56a71b7ab17ac417b2755/lixty/Bengali.m3u",
-        "source": "Lixty Bengali radio logo reference",
+        "url": "https://radio.streamitter.com/images/logos/2YBNB.png",
+        "format": "PNG",
+        "page": "https://github.com/junguler/m3u-radio-music-playlists/blob/4f7f422c65652805edf56a71b7ab17ac417b2755/strea-m-itter/bangladesh.m3u",
+        "source": "Streamitter Bangladesh radio logo reference",
         "license": "Station artwork; reuse rights not specified",
         "license_url": "",
     },
@@ -452,6 +460,19 @@ def valid_image(raw, content_type, file_format=""):
         return raw.startswith(b"\xff\xd8\xff")
     if content_type == "image/webp" or fmt == "WEBP":
         return raw[:4] == b"RIFF" and raw[8:12] == b"WEBP"
+    # Some station/image CDNs send application/octet-stream or an empty MIME.
+    # For source entries with no forced format, sniff standard image signatures.
+    if not fmt:
+        if raw.startswith(b"\\x89PNG\\r\\n\\x1a\\n"):
+            return True
+        if raw.startswith(b"\\xff\\xd8\\xff"):
+            return True
+        if raw[:4] == b"RIFF" and raw[8:12] == b"WEBP":
+            return True
+        head = raw.lstrip()[:500].lower()
+        if b"<svg" in head:
+            text = raw.decode("utf-8", errors="ignore")
+            return "CHANNEL MARK" not in text.upper() and "<script" not in text.lower()
     return False
 
 
