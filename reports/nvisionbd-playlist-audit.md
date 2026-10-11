@@ -1,13 +1,13 @@
 # NVisionBD Playlist Audit
 
-Generated (UTC): **2026-10-11T09:45:47+00:00**
+Generated (UTC): **2026-10-11T09:52:25+00:00**
 
 ## Summary
 
 - Playlist entries: **646**
 - Unique stream URLs: **646**
 - Duplicate stream URLs: **0**
-- Duplicate channel identities: **79**
+- Duplicate channel identities: **81**
 - Missing channel IDs: **0**
 - Missing logos: **0**
 - Missing channel numbers: **0**
@@ -15,26 +15,26 @@ Generated (UTC): **2026-10-11T09:45:47+00:00**
 
 ## Group Counts
 
-- Bangladesh: **90**
-- Documentary &amp; Wildlife: **33**
-- Indian Bangla: **65**
-- Indian Entertainment: **34**
-- Indian Movies: **49**
-- Indian Music: **28**
-- International: **54**
+- Bangladesh: **96**
+- Documentary & Wildlife: **36**
+- Indian Bangla: **52**
+- Indian Entertainment: **39**
+- Indian Movies: **38**
+- Indian Music: **24**
+- International: **67**
 - Kids: **31**
-- Pakistani: **6**
-- Radio: **47**
+- Pakistani: **10**
+- Radio: **46**
 - Religious: **11**
-- Sports: **136**
+- Sports: **134**
 - Unidentified: **62**
 
 ## Stream Probe Summary
 
-- Responsive: **120**
-- Restricted: **5**
-- Dead: **5**
-- Unverified: **516**
+- Responsive: **11**
+- Restricted: **0**
+- Dead: **121**
+- Unverified: **514**
 
 ## Duplicate Stream URLs
 
@@ -44,6 +44,7 @@ None.
 
 - 9xjhakaas.in@sd: 9x Jhakaas, 9x Jhakaas (Alt 2)
 - 9xtashan.in@sd: 9x Tashan, 9x Tashan (Alt 2)
+- aakaashaath.in@sd: Aakaash Aath
 - aaryaatv.in: Aaryaa TV, Aaryaa TV (Alt 2)
 - anandatv.bd: Ananda TV (Alt 2), Ananda TV HD
 - animalplanet.in@sd: Animal Planet HD, Animal Planet HD (Alt 2)
@@ -53,7 +54,7 @@ None.
 - bahrainsports2.bh@sd: Bahrain Sports 2, Bahrain Sports 2 (Alt 2)
 - banglatv.bd: Bangla TV, Bangla TV (Alt 2), Bangla TV (Alt 3), Bangla TV (Alt 4), Bangla TV HD
 - banglavision.bd: Bangla Vision, Bangla Vision (Alt 2), Bangla Vision HD
-- beinsportsxtra.us: Bein Sports Xtra, Bein Sports Xtra (Alt 2)
+- beinsportsxtra.us: beIN Sports Xtra, beIN Sports Xtra (Alt 2)
 - bhojpuricinema.in@sd: Bhojpuri Cinema, Bhojpuri Cinema (Alt 2)
 - bijoytv.bd: Bijoy TV (Alt 2), Bijoy TV HD
 - boishakhitv.bd: Boishakhi TV, Boishakhi TV (Alt 2), Boishakhi TV (Alt 3)
@@ -63,10 +64,10 @@ None.
 - colors.bangla.in: Colors Bangla (Alt 2), Colors Bangla HD
 - custom.afra.film: Afra Film, Afra Film (Alt 2)
 - custom.bd.t.sports: Bd T Sports, Bd T Sports HD (Alt 2)
-- custom.bein.sports.1: Bein Sports 1 HD, Bein Sports 1 HD (Alt 2)
+- custom.bein.sports.1: beIN Sports 1 HD, beIN Sports 1 HD (Alt 2)
 - custom.biz.cinema: Biz Cinema, Biz Cinema (Alt 2)
 - custom.blockbaster: Blockbaster (Alt 2), Blockbaster HD
-- custom.enter.10.bangla: Enter 10 Bangla, Enter 10 Bangla (Alt 2), Enter 10 Bangla (Alt 4)
+- custom.enter10.bangla: Enter10 Bangla, Enter10 Bangla (Alt 2), Enter10 Bangla (Alt 3), Enter10 Bangla (Alt 4)
 - custom.golf.channel: Golf Channel, Golf Channel (Alt 2)
 - custom.kolkatatv: Kolkata TV, Kolkata TV (Alt 2), Kolkata TV (Alt 3)
 - custom.love.nature: Love Nature, Love Nature (Alt 2)
@@ -74,7 +75,6 @@ None.
 - custom.oman.sports: Oman Sports, Oman Sports (Alt 2)
 - custom.r.plus: R Plus, R Plus (Alt 2)
 - custom.republic.bangla: Republic Bangla (Alt 2), Republic Bangla (Alt 3)
-- custom.star.jalsha: Star Jalsha (Alt 3), Star Jalsha (Alt 4)
 - custom.star.news: Star News (Alt 2), Star News (Alt 3), Star News HD
 - custom.tapmad.1: Tapmad [live 1], Tapmad [live 1] (Alt 2)
 - custom.tapmad.2: Tapmad [live 2], Tapmad [live 2] (Alt 2)
@@ -91,7 +91,6 @@ None.
 - gazitv.bd@sd: Gazi TV, Gazi TV (Alt 2), Gazi TV HD
 - globaltv.bd: Global TV (Alt 2), Global TV HD
 - goldminesbollywood.in@sd: Goldmines Bollywood, Goldmines Bollywood (Alt 2)
-- jalsha: Star Jalsha (Alt 2), Star Jalsha HD
 - jamunatv.bd: Jamuna TV (Alt 2), Jamuna TV (Alt 3), Jamuna TV (Alt 4), Jamuna TV HD
 - joomusic.pk: Joo Music, Joo Music (Alt 2), Joo Music (Alt 3)
 - maasrangatv.bd: Maasranga TV (Alt 2), Maasranga TV (Alt 3), Maasranga TV HD
@@ -101,16 +100,18 @@ None.
 - news24.bd: News 24, News 24 HD (Alt 2)
 - nexustv.bd: Nexus TV (Alt 2), Nexus TV HD
 - ntv.bd: Ntv (Alt 2), Ntv (Alt 3), Ntv HD
-- ptvsports.pk: Ptv Sports, Ptv Sports (Alt 2), Ptv Sports (Alt 3)
+- ptvsports.pk: PTV Sports, PTV Sports (Alt 2), PTV Sports (Alt 3)
 - rajdhanitv.bd: Rajdhani TV, Rajdhani TV (Alt 2)
 - redbulltv.at@eumena: Red Bull TV, Red Bull TV (Alt 2)
 - rongeentv.in@sd: Rongeen TV, Rongeen TV (Alt 2), Rongeen TV (Alt 3)
 - rplusgold.in@sd: R Plus Gold, R Plus Gold (Alt 2), R Plus Gold (Alt 3)
 - rtv.bd: Rtv (Alt 2), Rtv HD, Rtv HD (Alt 3)
 - sangeetbangla.in@sd: Sangeet Bangla, Sangeet Bangla (Alt 2), Sangeet Bangla (Alt 3), Sangeet Bangla (Alt 4)
+- satv.bd: Sa TV, Sa TV HD
 - shemarootv.in@sd: Shemaroo TV, Shemaroo TV (Alt 2)
-- sksparh: US: Sky Sports Main Event, US: Sky Sports Premier League
+- sksparh: US Sky Sports Main Event, US Sky Sports Premier League
 - sony.aath.in: Sony Aath, Sony Aath (Alt 2)
+- star.jalsha.in: Star Jalsha (Alt 2), Star Jalsha (Alt 3), Star Jalsha (Alt 4), Star Jalsha HD
 - star.jalsha.movies.in: Jalsha Movies (Alt 2), Jalsha Movies HD
 - stargold.in@hd: Star Gold, Star Gold HD (Alt 2)
 - starplus.in@sd: Star Plus (Alt 2), Star Plus HD
@@ -118,8 +119,9 @@ None.
 - steelbirdmusic.in@sd: Steelbird Music, Steelbird Music (Alt 2)
 - thikanatv.us: Thikana, Thikana (Alt 2)
 - tlc.in@hd: Tlc (Alt 2), Tlc HD
-- tntspor: UK: TNT Sports 1 HD, UK: TNT Sports 2 HD, UK: TNT Sports 3 HD, UK: TNT Sports 4 HD
+- tntspor: UK TNT Sports 1 HD, UK TNT Sports 2 HD, UK TNT Sports 3 HD, UK TNT Sports 4 HD
 - zee24ghanta.in@sd: Zee 24 Ghanta, Zee 24 Ghanta (Alt 2)
+- zeebangla.in@hd: Zee Bangla (Alt 2), Zee Bangla (Alt 3), Zee Bangla HD
 - zeebanglasonar.in@sd: Zee Bangla Sonar, Zee Bangla Sonar (Alt 2)
 
 ## Missing Metadata
