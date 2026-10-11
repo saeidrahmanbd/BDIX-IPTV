@@ -1,6 +1,6 @@
 # Channel Logo Gallery
 
-**Total image/SVG files in repository tree: 2,275**
+**Gallery-listed logo assets: 564 (legacy list; live repository tree currently contains 2,279 logo files)**
 
 This gallery is a legacy inventory, not an authentication certificate. Do not delete files solely because a name looks generic; inspect playlist and history references first.
 
