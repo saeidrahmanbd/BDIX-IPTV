@@ -65,12 +65,12 @@
     "malformed": 0
   },
   {
-    "timestamp_utc": "2026-10-11T10:02:30+00:00",
+    "timestamp_utc": "2026-10-11T10:05:50+00:00",
     "entries": 646,
     "unique_urls": 646,
     "status_counts": {
-      "Responsive": 125,
-      "Unverified": 520,
+      "Responsive": 130,
+      "Unverified": 515,
       "Restricted": 1
     },
     "duplicate_urls": 0,
