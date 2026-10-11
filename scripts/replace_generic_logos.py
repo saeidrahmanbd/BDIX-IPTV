@@ -21,7 +21,11 @@ def fetch_json(url):
 
 def is_generic(relative):
     relative_path = Path(relative)
-    path = relative_path if relative_path.parts and relative_path.parts[0] == "logos" else LOGOS / relative_path
+    # Playlist references may be "logos/name.svg" or just "name.svg".
+    parts = relative_path.parts
+    if parts and parts[0] == "logos":
+        relative_path = Path(*parts[1:])
+    path = LOGOS / relative_path
     if path.suffix.lower() != ".svg" or not path.is_file():
         return False
     return "CHANNEL MARK" in path.read_text(encoding="utf-8", errors="ignore").upper()
