@@ -20,6 +20,22 @@ EPG_ALIASES = {
     "TamilanTV.in": ["jtv2958", "2958"],
     "SonyKALHindi.us": ["US1#Sony.KAL.us"],
     "custom.bdix.aakashaath": ["AakaashAath.in"],
+    "custom.bdix.abpananda": ["ABPAnanda.in@SD"],
+    "custom.abp.ananda": ["ABPAnanda.in@SD"],
+    "custom.bdix.9bangla": ["TV9Bangla.in@SD"],
+    "custom.ctvn.akd.plus": ["CTVNAKDPlus.in@SD"],
+    "RepublicBangla.in": ["RepublicBangla.in@SD"],
+    "custom.anmol.cinema": ["AnmolCinema.in@SD"],
+    "custom.anmol.cinema.2": ["AnmolCinema2.in@SD"],
+    "custom.the.q.india": ["TheQIndia.us@SD"],
+    "custom.news.18.bangla": ["News18Bangla.in@SD"],
+    "custom.news.18.assam": ["News18AssamNorthEast.in@SD"],
+    "custom.aaj.tak": ["AajTak.in@SD"],
+    "custom.10.tv": ["10TV.in@SD"],
+    "custom.good.news.today": ["GoodNewsToday.in@SD"],
+    "custom.epic": ["EpicTV.in@SD"],
+    # The IDs above are exact channel IDs documented in the DishTV XMLTV catalogue;
+    # each mapping is still accepted only when a configured live XMLTV source contains it.
     "Enterr10 Bangla.in": ["ENTER10.BANGLA.in", "Enterr10Bangla.in"],
     # Verified DishTV/XMLTV catalogue aliases for playlist entries whose IDs are local/custom.
     # These only map if an active configured XMLTV source actually contains the exact ID.
