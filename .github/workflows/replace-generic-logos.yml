@@ -1,0 +1,30 @@
+
+name: Replace Generic Channel Logos
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check logo replacement script
+        run: |
+          if [ ! -f scripts/replace_generic_logos.py ]; then
+            echo "::error::The logo replacement script is missing."
+            echo "Install scripts/replace_generic_logos.py before running this workflow."
+            exit 1
+          fi
+          python -m py_compile scripts/replace_generic_logos.py
+          echo "Logo replacement script exists and passed syntax validation."
