@@ -144,8 +144,8 @@ function parsePlaylist(text, includeBackup = false) {
     i++;
   }
   const groups=[];
-  for(const g of categoryNames){ const clean=normalizeGroup(g); if(clean && ![...(includeBackup ? [] : ["backup"]), "not playing","test"].includes(groupKey(clean)) && !groups.some(x=>groupKey(x)===groupKey(clean))) groups.push(clean); }
-  for(const e of entries){ const match=groups.find(g=>groupKey(g)===groupKey(e.group)); if(match) e.group=match; else if(e.group && ![...(includeBackup ? [] : ["backup"]), "not playing","test"].includes(groupKey(e.group))) groups.push(e.group); }
+  for(const g of categoryNames){ const clean=normalizeGroup(g); if(clean && ![...(includeBackup ? [] : ["backup"]),"test"].includes(groupKey(clean)) && !groups.some(x=>groupKey(x)===groupKey(clean))) groups.push(clean); }
+  for(const e of entries){ const match=groups.find(g=>groupKey(g)===groupKey(e.group)); if(match) e.group=match; else if(e.group && ![...(includeBackup ? [] : ["backup"]), "test"].includes(groupKey(e.group))) groups.push(e.group); }
   const categoryId=new Map(groups.map((g,i)=>[groupKey(g),String(i+1)]));
   for(const e of entries) e.categoryId=categoryId.get(groupKey(e.group))||"0";
   return {entries,groups};
