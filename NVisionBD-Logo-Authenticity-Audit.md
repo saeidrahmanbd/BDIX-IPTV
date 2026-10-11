@@ -16,7 +16,7 @@ A logo is approved only when the **image itself** is matched to an official broa
 - Missing local logo references among entries that have a logo: **0** (verified against the complete recursive Git tree)
 - External-hosted logo URLs: **0** (the playlist references GitHub-hosted local repository assets)
 
-**Important:** the 370 remaining logo references are not automatically authenticated by the integrity checks. Their asset provenance still needs to be verified one by one. This report does not certify the whole logo collection.
+**Important:** the logo references currently remaining are not automatically authenticated by the integrity checks. Their asset provenance still needs to be verified one by one. This report does not certify the whole logo collection.
 
 ## Corrective action already applied
 
@@ -74,7 +74,7 @@ Status meanings:
 
 ## Remaining source-by-source work
 
-The playlist currently references **248 distinct local logo files across 370 entries**. Each distinct file needs an evidence record containing: channel/brand, local path, exact official source URL, confirmation that the image matches the source asset, and disposition (approved/replaced/removed). Until that check is complete, these files must be treated as **not yet certified**, even if their filenames look correct.
+The playlist currently references **230 distinct local logo files across 330 entries with a logo**. Each distinct file needs an evidence record containing: channel/brand, local path, exact official source URL, confirmation that the image matches the source asset, and disposition (approved/replaced/removed). Until that check is complete, these files must be treated as **not yet certified**, even if their filenames look correct.
 
 No substitute artwork should be drawn or generated to fill gaps. When a primary-source image cannot be retrieved and verified, keep the entry logo-less rather than using a lookalike.
 
@@ -237,10 +237,10 @@ A visual spot-check showed that at least one asset named as an “official” lo
 ### Integrity after cleanup
 
 - Playlist entries: **561**
-- Entries still carrying a logo: **370**
-- Entries without a logo pending verification: **191**
-- Distinct local logo files still referenced: **248**
+- Entries still carrying a logo: **330**
+- Entries without a logo pending verification: **231**
+- Distinct local logo files still referenced: **230**
 - Remaining `nvisionbd-*` logo references: **0**
 - All entries and stream lines retained; logo metadata only was changed in this cleanup.
 
-The remaining 248 distinct logo assets still require source-by-source image authentication. They are not certified merely because they remain in the playlist. Only restore a quarantined reference after documenting the exact official asset URL and verifying the image itself against that source.
+The remaining 230 distinct logo assets still require source-by-source image authentication. They are not certified merely because they remain in the playlist. Only restore a quarantined reference after documenting the exact official asset URL and verifying the image itself against that source.
