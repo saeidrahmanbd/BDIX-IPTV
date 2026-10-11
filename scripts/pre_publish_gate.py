@@ -71,7 +71,7 @@ def main():
            f"- Primary entries missing tvg-chno: **{len(missing)}**",f"- Entries added this run: **{len(added)}**",f"- Entries removed this run: **{len(removed_all)}**",f"- Entries modified this run: **{len(modified)}**","","## Change Summary",
            "1. Never publish duplicate stream URLs.","2. Never silently remove an existing primary stream.",
            "3. Never silently promote/reclassify review-queue entries.",
-           "4. Never silently delete New review entries.","5. Never publish duplicate or missing primary channel numbers."]
+           "4. Never silently delete Not Playing holding entries.","5. Never publish duplicate or missing primary channel numbers."]
     if added:
         lines.append("Added: " + ", ".join(added[:20]) + (" ..." if len(added)>20 else ""))
     else: lines.append("Added: none")
