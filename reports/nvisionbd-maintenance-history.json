@@ -1,0 +1,18 @@
+[
+  {
+    "timestamp_utc": "2026-10-11T09:37:18+00:00",
+    "entries": 646,
+    "unique_urls": 646,
+    "status_counts": {
+      "Responsive": 128,
+      "Unverified": 517,
+      "Restricted": 1
+    },
+    "duplicate_urls": 0,
+    "duplicate_ids": 6,
+    "missing_ids": 526,
+    "missing_logos": 140,
+    "missing_numbers": 646,
+    "malformed": 0
+  }
+]
