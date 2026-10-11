@@ -1,23 +1,23 @@
 # BDIX Playlist Audit
 
-Generated: **2026-10-11T10:33:55+00:00**
+Generated: **2026-10-11T10:35:26+00:00**
 
 ## Summary
 
 - Playlist: **BDIX-Playlist.m3u**
-- Total entries: **255**
-- Unique stream URLs: **255**
-- Unique channel identities: **214**
+- Total entries: **217**
+- Unique stream URLs: **217**
+- Unique channel identities: **182**
 - Duplicate stream URLs: **0**
-- Duplicate channel identities: **34**
+- Duplicate channel identities: **30**
 - Missing channel IDs: **0**
 - Missing channel numbers: **0**
 - Missing logos: **0**
 - Malformed entries: **0**
 - Unknown categories: **0**
-- Streams tested: **255**
-- Reachable: **73**
-- Failed: **182**
+- Streams tested: **217**
+- Reachable: **74**
+- Failed: **143**
 
 ## Protection Policy
 
@@ -29,12 +29,12 @@ Safe metadata repairs made: **0**
 - Bangladesh: **58**
 - Indian Bangla: **21**
 - Hindi: **45**
-- International: **19**
+- International: **17**
 - Documentary & Wildlife: **20**
 - Kids: **10**
 - Religious: **7**
-- Sports: **28**
-- Test: **47**
+- Sports: **27**
+- Test: **12**
 
 ## Duplicate Stream URLs
 
@@ -50,23 +50,19 @@ None.
 - cartoonnetwork.uk: Cartoon Network, Cartoon Network [Jannat]
 - channeli.bd: Channel I, Channel i [Jannat]
 - channels.uk: Channel S, Channel S [Jannat]
-- dbcnews.bd: DBC News
-- deshtv.bd: Desh TV, Desh TV [Jannat]
+- dbcnews.bd: Bangla Vision, DBC News
+- deshtv.bd: Bangla Vision, Desh TV, Desh TV [Jannat]
 - discovery science.in: DISCOVERY SCIENCE, Discovery Science [Jannat]
 - discoverychannel.in@sd: Discovery, Discovery [Jannat]
-- ekattortv.bd: Ekattor TV, Ekattor TV [Jannat]
-- ekhontv.bd: Ekhon TV, Ekhon TV [Jannat]
+- ekattortv.bd: Bangla Vision, Ekattor TV, Ekattor TV [Jannat]
+- ekhontv.bd: Bangla Vision, Ekhon TV, Ekhon TV [Jannat]
 - globaltv.bd: Global TV, Global TV [Jannat]
-- greentv.bd: Green TV
 - independenttv.bd: Independent TV, Independent TV [Jannat]
 - jamunatv.bd: Jamuna TV, Jamuna TV [Jannat]
-- maasrangatv.bd: Maasranga TV
-- mytv.bd: My TV
-- news24.bd: News 24
+- news24.bd: Bangla Vision, News 24
 - nexustv.bd: Nexus TV, Nexus TV [Jannat]
 - ntv.bd: NTV, NTV [Jannat]
 - rajdhanitv.bd: Rajdhani TV, Rajdhani TV [Jannat]
-- rtv.bd: RTV
 - somoynewstv.bd: Somoy TV, Somoy TV [Jannat]
 - sony.aath.in: Sony AATH, Sony Aath [Jannat]
 - sonymax.in@sd: Sony MAX [Jannat], Sony Max
