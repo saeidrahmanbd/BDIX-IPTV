@@ -1,23 +1,30 @@
 # Generic Logo Replacement Results
 
-This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.
+Audit date: 2026-10-11
 
-- Run time: 2026-10-11 14:28 UTC
-- IPTV-org dataset: loaded
-- Historical logo mappings: loaded 338 exact historical logo mappings
-- Unique generic assets examined: 1
-- Successful replacements: 1
-- Unresolved/manual review: 0
+This log separates automated integrity checks from broadcaster-logo authentication. A successful URL/path check is not evidence that a logo is official.
 
-## Replacements
+## Current NVisionBD result
 
-| Channel | Former generic file | New local file | Source | License / attribution |
-|---|---|---|---|---|
-| The Q | nvisionbd-the-q.svg | [nvisionbd-official-the-q.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-the-q.png) | [Exact original tvg-logo URL from playlist history](https://github.com/saeidrahmanbd/BDIX-IPTV/blob/cde4fc51a5fe73858c167366ae5651b138433fb8/NVisionBD-Playlist.m3u) | Historical source URL; reuse rights not specified |
+- Current correction commit: `279479e1257a26cd2696a933f5310dd421727783`
+- Entries retained: **561**
+- Entries carrying a logo: **330**
+- Entries without a logo pending a verified exact source: **231**
+- Distinct local logo paths referenced: **230**
+- Missing referenced local asset paths: **0**
+- External-hosted logo URLs: **0**
+- Known generic-looking logo patterns remaining (`channel-1/9/16/24/52.png`, `nvisionbd-*`): **0**
 
-## Unresolved — retained for manual source verification
+## Changes applied in this pass
 
-| Channel | Current placeholder asset | Reason |
-|---|---|---|
+- Restored 17 logo references to existing repository assets where the current filename corresponded to the channel identity (including ATN News, Bangla TV, Duronto TV, Ekushey TV, Global TV, Green TV, Mohona TV, Nagorik TV, Sananda TV, Star Gold, Colors, Star Plus, Zee TV and Epic Music).
+- Removed generic-looking logo references for Channel 1 HD, Channel 9 HD and Channel 24 HD. The three playlist entries and their stream URLs remain intact.
+- No new image artwork was generated, and no logo image file was deleted in this pass.
 
-All identified generic assets were replaced with source-verified local logos.
+## Still unresolved
+
+The 231 logo-less entries need exact, reliable source images before logos are restored. Existing files with plausible filenames must still be checked visually and against primary/attributable sources before being called official. Do not automatically populate these with logos from similarly named channels or broad-search results.
+
+## Important limitation
+
+The repository's existing script/report only detects SVG files containing a specific `CHANNEL MARK` template. It can miss generic-looking PNG/JPEG assets and cross-channel mismatches. The current result should therefore not be interpreted as complete visual authentication.
