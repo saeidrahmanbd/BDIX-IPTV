@@ -317,8 +317,7 @@ try:
         key = stable(info, url)
         if group not in PRIMARY_EXCEPTIONS:
             new_primary[key] += 1
-        elif group == "Not Playing":
-            new_not_playing[key] += 1
+        
 
     # A metadata identity repair may intentionally change an existing primary
     # tvg-id/channel-id when the exact stream URL is preserved under a derived
@@ -398,7 +397,6 @@ lines = [
     f"- Protected primary-entry changes: **{len(protected_changes)}**",
     f"- Logo exceptions: **{len(logo_exceptions)}**",
     f"- Logo references checked: **{sum(logo_counts.values())}**",
-    f"- Not Playing logo exceptions: **{len(review_logo_exceptions)}**",
     f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**",
     f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**",
     f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**",
@@ -546,7 +544,7 @@ def run_change_guard():
     old_keys = {key(i,u) for i,u in old_entries}
     new_keys = {key(i,u) for i,u in entries}
     added, removed = new_keys-old_keys, old_keys-new_keys
-    review_urls = {u.strip().lower() for i,u in entries if attrs(i).get("group-title","").strip() in {"New", "New Channels", "New Backup"} and u}
+    review_urls = set()
     review_added = {k for k in added if k[1].strip().lower() in review_urls}
     active_added = added - review_added
     max_changes = 150
@@ -601,10 +599,7 @@ def run_change_guard():
         group = attrs(info).get("group-title", "").strip()
         if group in set() and url.strip():
             old_review[url.strip().lower()] = group
-    for info, url in entries:
-        group = attrs(info).get("group-title", "").strip()
-        if group in {"New Channels", "New Backup"} and url.strip():
-            new_review[url.strip().lower()] = group
+    # Discovery review queues are retired; no playlist group is reserved for them.
     review_reclassified = [
         (url, old_group, new_review.get(url, ""))
         for url, old_group in old_review.items()
@@ -722,7 +717,7 @@ for info, url in entries:
     group = a.get("group-title", "").strip()
     # Backup entries may use
     # a descriptive display alias. Do not reject them for that presentation.
-    if group == "Not Playing":
+    if group == "Backup":
         continue
     tvg_name = a.get("tvg-name", "").strip()
     display = info.rsplit(",", 1)[-1].strip()
