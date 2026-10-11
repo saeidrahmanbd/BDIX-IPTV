@@ -463,9 +463,9 @@ def valid_image(raw, content_type, file_format=""):
     # Some station/image CDNs send application/octet-stream or an empty MIME.
     # For source entries with no forced format, sniff standard image signatures.
     if not fmt:
-        if raw.startswith(b"\\x89PNG\\r\\n\\x1a\\n"):
+        if raw.startswith(bytes([137, 80, 78, 71, 13, 10, 26, 10])):
             return True
-        if raw.startswith(b"\\xff\\xd8\\xff"):
+        if raw.startswith(bytes([255, 216, 255])):
             return True
         if raw[:4] == b"RIFF" and raw[8:12] == b"WEBP":
             return True
