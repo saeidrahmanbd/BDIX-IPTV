@@ -19,7 +19,7 @@ EPG_ALIASES = {
     "IqraBangla.uk": ["3914"],
     "TamilanTV.in": ["jtv2958", "2958"],
     "SonyKALHindi.us": ["US1#Sony.KAL.us"],
-    "custom.bdix.aakashaath": ["AakaashAath.in"],
+    "custom.bdix.aakashaath": ["AakaashAath.in@SD"],
     "custom.bdix.abpananda": ["ABPAnanda.in@SD"],
     "custom.abp.ananda": ["ABPAnanda.in@SD"],
     "custom.bdix.9bangla": ["TV9Bangla.in@SD"],
@@ -33,6 +33,9 @@ EPG_ALIASES = {
     "custom.aaj.tak": ["AajTak.in@SD"],
     "custom.10.tv": ["10TV.in@SD"],
     "custom.good.news.today": ["GoodNewsToday.in@SD"],
+    "custom.india.today": ["IndiaToday.in@SD"],
+    "SETASHD": ["SonyEntertainmentTelevision.in@HD"],
+    "new.and.pictures.hd": ["Andpictures.in@HD"],
     "custom.epic": ["EpicTV.in@SD"],
     # The IDs above are exact channel IDs documented in the DishTV XMLTV catalogue;
     # each mapping is still accepted only when a configured live XMLTV source contains it.
