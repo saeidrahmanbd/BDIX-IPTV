@@ -44,5 +44,5 @@ For the complete release information, see **[Playlist Studio v5.0](https://githu
 
 ## 2026-10-11
 
-- 🖼️ **2 logo reference(s) corrected**
+- No meaningful playlist changes detected.
 
