@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-11T14:04:46+00:00**
+Generated: **2026-10-11T14:30:20+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
@@ -28,6 +28,10 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 - **OK** — https://avkb.short.gy/jioepg.xml.gz — 1303 channel IDs; 265 current/future IDs; 42761 programme rows
 - **OK** — https://avkb.short.gy/tsepg.xml.gz — 717 channel IDs; 698 current/future IDs; 35733 programme rows
 - **OK** — https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml — 11 channel IDs; 10 current/future IDs; 1910 programme rows
+- **FAILED** — https://iptv-org.github.io/epg/guides/in.xml — 0 channel IDs; 0 current/future IDs; 0 programme rows; HTTP Error 404: Not Found
+- **FAILED** — https://iptv-org.github.io/epg/guides/uk.xml — 0 channel IDs; 0 current/future IDs; 0 programme rows; HTTP Error 404: Not Found
+- **FAILED** — https://iptv-org.github.io/epg/guides/us.xml — 0 channel IDs; 0 current/future IDs; 0 programme rows; HTTP Error 404: Not Found
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz — 486 channel IDs; 385 current/future IDs; 41689 programme rows
 
 ## Channels Requiring Attention
 
@@ -115,11 +119,11 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 ## Published Guide Validation
 
 - Playlist EPG references: **OK**
-- Guide channel IDs published: **415**
-- Mapped playlist IDs present in guide: **415/415 (100.0%)**
-- Mapped playlist IDs with current/future programmes: **374/415 (90.1%)**
+- Guide channel IDs published: **438**
+- Mapped playlist IDs present in guide: **438/438 (100.0%)**
+- Mapped playlist IDs with current/future programmes: **396/438 (90.4%)**
 - Mapped IDs missing from the published XMLTV channel list: **0**
 - IDs missing from guide: none
-- Mapped IDs with no current/future programmes: **41**
+- Mapped IDs with no current/future programmes: **42**
 - IDs without current/future programmes (first 30): AamarBangla.in, AndpriveHD.in, BHI.Channel.in, ColorsBanglaCinema.in@SD, DhoomMusic.in@SD, ETVBeats.in@HD, FriendsTV.in@SD, MONTVBangla.in, ManoranjanPrime.in@SD, Mastiii.in@SD, OdishaTV.in@SD, OnePaschima.in@SD, PrarthanaTV.in@SD, RongeenTV.in@SD, RupasiBangla.in@SD, SangeetBangla.in@SD, Sony.Aath.in, Star.Jalsha.Movies.in, Star.Jalsha.in, SteelbirdMusic.in@SD, SunBangla.in@SD, SuriyanTV.in@SD, UBangla.in, ZeeBangla.in@HD, ZeeBanglaSonar.in@SD, custom.abp.ananda, custom.bdix.9bangla, custom.bdix.aakashaath, custom.bdix.abpananda, custom.bdix.banglajago
 - This validation is against the guide currently present in the working tree/publish candidate.

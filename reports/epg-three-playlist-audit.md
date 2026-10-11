@@ -8,7 +8,7 @@ Coverage uses exact playlist `tvg-id` matches against the shared mapping registr
 |---|---:|---:|---:|---:|---:|---:|---|
 | IPTV-Playlist.m3u | 1145 | 652 | 299 | 244/299 (81.6%) | 234/299 (78.3%) | 244/299 | OK |
 | BDIX-Playlist.m3u | 190 | 178 | 17 | 16/17 (94.1%) | 16/17 (94.1%) | 16/17 | OK |
-| NVisionBD-Playlist.m3u | 561 | 462 | 106 | 90/106 (84.9%) | 88/106 (83.0%) | 90/106 | OK |
+| NVisionBD-Playlist.m3u | 561 | 466 | 106 | 90/106 (84.9%) | 88/106 (83.0%) | 90/106 | OK |
 
 ## Channels without mappings
 
