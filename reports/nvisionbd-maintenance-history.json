@@ -14,5 +14,22 @@
     "missing_logos": 140,
     "missing_numbers": 646,
     "malformed": 0
+  },
+  {
+    "timestamp_utc": "2026-10-11T09:45:47+00:00",
+    "entries": 646,
+    "unique_urls": 646,
+    "status_counts": {
+      "Responsive": 120,
+      "Unverified": 516,
+      "Restricted": 5,
+      "Dead": 5
+    },
+    "duplicate_urls": 0,
+    "duplicate_ids": 79,
+    "missing_ids": 0,
+    "missing_logos": 0,
+    "missing_numbers": 0,
+    "malformed": 0
   }
 ]
