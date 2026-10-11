@@ -46,8 +46,6 @@ _Last generated: **{now}**_
 | Bangladesh | **{groups.get("Bangladesh",0)}** |
 | India | **{sum(v for k,v in groups.items() if k.startswith("Indian "))}** |
 | Backup Streams | **{groups.get("Backup",0)}** |
-| New Channels | **{groups.get("New Channels",0)}** |
-| New Backup Streams | **{groups.get("New Backup",0)}** |
 | Local Logos | **{logos}%** |
 | EPG Programme Coverage | **{livepct}%** |
 | EPG Mapping | **{mapct}%** |
@@ -65,7 +63,6 @@ _Last generated: **{now}**_
 - Primary channel-number collisions: **{metric(a,"Primary channel-number collisions")}**
 - Primary entries missing channel numbers: **{metric(a,"Primary entries missing channel numbers")}**
 - Logo exceptions: **{metric(a,"Logo exceptions")}**
-- Not Playing logo exceptions: **{metric(a,"Not Playing logo exceptions")}**
 - Malformed EXTINF entries: **{metric(a,"Malformed EXTINF entries")}**
 - Category block-order issues: **{metric(a,"Category block-order issues")}**
 - Alphabetical ordering issues: **{metric(a,"Alphabetical ordering issues")}**
@@ -117,8 +114,6 @@ _Generated: **{now}**_
 | Current playlist streams | **{len(e)}** |
 | Current channel IDs | **{metric(a,"Unique channel IDs")}** |
 | Backup streams | **{groups.get("Backup",0)}** |
-| New Channels | **{groups.get("New",0)}** |
-| New Queue (legacy) | **{groups.get("New",0)}** |
 | Logo exceptions | **{metric(a,"Logo exceptions")}** |
 | EPG mapping | **{mapct}%** |
 | EPG programme coverage | **{livepct}%** |
