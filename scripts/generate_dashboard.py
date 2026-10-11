@@ -71,7 +71,7 @@ _Last generated: **{now}**_
 ## Safety & Automation
 - Stream health is non-destructive and keeps per-URL failure history.
 - Backup streams are never automatically deleted because of health failures.
-- Review queues remain user-controlled.
+- Discovery queues are retired; only the approved canonical playlist categories are maintained.
 - Pre-publish gate status: **{gate_status}**
 - Canonical channel identity index: reports/channel-identity-index.json
 
