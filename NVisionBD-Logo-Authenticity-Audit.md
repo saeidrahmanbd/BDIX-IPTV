@@ -10,15 +10,17 @@ A logo is approved only when the **image itself** is matched to an official broa
 ## Current integrity snapshot
 
 - Playlist entries: **561**
-- Entries with a logo reference: **328**
-- Entries with no logo pending verification: **233**
-- Distinct local logo asset paths referenced: **228** (after removing two contaminated logo references)
+- Entries with a logo reference: **326**
+- Entries with no logo pending verification: **235**
+- Distinct local logo asset paths referenced: **227**
 - Missing local logo asset paths: **0**
 - External-hosted logo URLs: **0**
 
-## Image-level finding in this pass
+## Image-level findings in this pass
 
-The image at `logos/bangla-tv.png` visibly contains a “BONGO FLIX” watermark over the Bangla TV branding. It fails the clean broadcaster-logo standard. Removed the logo reference from both Bangla TV entries in this playlist; both channel entries and stream URLs remain intact. The image file was retained for traceability and was not replaced with a guessed logo.
+- `logos/bangla-tv.png` visibly contains a “BONGO FLIX” watermark over the Bangla TV branding. Removed its logo reference from both Bangla TV entries; entries and stream URLs remain intact.
+- `logos/tom-and-jerry.png` depicts *Tom & Jerry Tales* show artwork, not a channel-specific broadcaster logo. Removed the reference from both Tom & Jerry channel entries; entries and stream URLs remain intact.
+- Both image files were retained for traceability. No substitute logo was guessed.
 
 ## Previous changes retained
 
@@ -36,4 +38,4 @@ These are research leads only. Do not treat a remaining repository asset as auth
 
 ## Remaining work
 
-The other 328 referenced entries have not all been authenticated image-by-image. Continue checking the actual image contents, comparing against exact official/attributable source assets, and removing references to contaminated or mismatched images without deleting playlist entries or stream URLs.
+The other 326 referenced entries have not all been authenticated image-by-image. Continue checking actual image contents, comparing against exact official/attributable source assets, and removing references to contaminated or mismatched images without deleting playlist entries or stream URLs.
