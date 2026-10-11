@@ -39,7 +39,11 @@ EPG_ALIASES = {
     "custom.epic": ["EpicTV.in@SD"],
     "custom.isai.aruvi.tv": ["IsaiAruvi.in@SD"],
     "custom.the.q": ["TheQIndia.us@SD"],
-    "Star Gold Romance.in": ["StarGoldRomance.in@SD"],
+    "Star Gold Romance.in": ["StarGoldRomance.in@SD", "Star.Gold.Romance.Tv.Channel.Today.in2"],
+    "new.and.pictures.hd": ["Andpictures.in@HD", "And.Pictures.Tv.Channel.Today.in2"],
+    "B4UBhojpuri.in@Plus": ["B4u.Bhojpuri.in2"],
+    "custom.anmol.cinema": ["AnmolCinema.in@SD", "Zee.Anmol.Cinema.Today.Movies.in2"],
+    "custom.anmol.cinema.2": ["AnmolCinema2.in@SD", "Zee.Anmol.Cinema.2.in2"],
     # The IDs above are exact channel IDs documented in the DishTV XMLTV catalogue;
     # each mapping is still accepted only when a configured live XMLTV source contains it.
     "Enterr10 Bangla.in": ["ENTER10.BANGLA.in", "Enterr10Bangla.in"],
@@ -73,6 +77,7 @@ THREE_PLAYLIST_REPORT = Path("reports/epg-three-playlist-audit.md")
 
 SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
     "https://iptv-epg.org/files/epg-in.xml",
     "https://epg.pw/xmltv/epg_IN.xml",
