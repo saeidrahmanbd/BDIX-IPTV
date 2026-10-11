@@ -2,32 +2,54 @@
 
 This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.
 
-- Run time: 2026-10-11 11:47 UTC
+- Run time: 2026-10-11 11:50 UTC
 - IPTV-org dataset: loaded
 - Unique generic assets examined: 132
-- Successful replacements: 1
-- Unresolved/manual review: 131
+- Successful replacements: 26
+- Unresolved/manual review: 106
 
 ## Replacements
 
 | Channel | Former generic file | New local file | Source | License / attribution |
 |---|---|---|---|---|
-| The Q | nvisionbd-the-q.svg | [nvisionbd-official-the-q.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-the-q.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/india/the-q-in.png) | No license file found in source repository |
+| 24/7 Batul The Great | nvisionbd-24-7-batul-the-great.svg | [bantul-the-great-35f9777f.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bantul-the-great-35f9777f.png) | [Existing verified repository asset](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) | Existing repository asset |
+| 92.8 FM Radio Bhumi | nvisionbd-92-8-fm-radio-bhumi.svg | [nvisionbd-official-92-8-fm-radio-bhumi.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-92-8-fm-radio-bhumi.png) | [TuneIn station logo](https://tunein.com/radio/Radio-Bhumi-928-s260643/) | Station logo served by TuneIn |
+| Afrobeats | nvisionbd-afrobeats.svg | [afrobeats.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/afrobeats.png) | [Existing verified repository asset](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) | Existing repository asset |
+| Boomerang | nvisionbd-boomerang.svg | [nvisionbd-official-boomerang.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-boomerang.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/boomerang-us.png) | No license file found in source repository |
+| Comedy Central | nvisionbd-comedy-central.svg | [nvisionbd-official-comedy-central.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-comedy-central.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/comedy-central-us.png) | No license file found in source repository |
+| Cosmote Sports 1 | nvisionbd-cosmote-sports-1.svg | [nvisionbd-official-cosmote-sports-1.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-cosmote-sports-1.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/greece/cosmote-sport-1-gr.png) | No license file found in source repository |
+| Cosmote Sports 4 | nvisionbd-cosmote-sports-4.svg | [nvisionbd-official-cosmote-sports-4.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-cosmote-sports-4.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/greece/cosmote-sport-4-gr.png) | No license file found in source repository |
+| Cowboy Movie Channel | nvisionbd-cowboy-movie-channel.svg | [cowboy-movie-channel.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cowboy-movie-channel.png) | [Existing verified repository asset](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) | Existing repository asset |
+| FX TV | nvisionbd-fx-tv.svg | [nvisionbd-official-fx-tv.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-fx-tv.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/fx-us.png) | No license file found in source repository |
+| Golf Channel | nvisionbd-golf-channel.svg | [nvisionbd-official-golf-channel.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-golf-channel.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nbc-golf-channel-us.png) | No license file found in source repository |
+| Laligatv | nvisionbd-laligatv.svg | [nvisionbd-official-laligatv.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-laligatv.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/nordic/norway/laliga-tv-no.png) | No license file found in source repository |
+| Magenta Sports 2 | nvisionbd-magenta-sports-2.svg | [nvisionbd-official-magenta-sports-2.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-magenta-sports-2.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/austria/magenta-sport-2-at.png) | No license file found in source repository |
+| Movie Sphere Au | nvisionbd-movie-sphere-au.svg | [nvisionbd-official-movie-sphere-au.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-movie-sphere-au.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/movie-sphere-us.png) | No license file found in source repository |
+| My Time Movie | nvisionbd-my-time-movie.svg | [nvisionbd-official-my-time-movie.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-my-time-movie.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/misc/vod/my-time-movie-network-vod.png) | No license file found in source repository |
+| Radio Bhumi 92.80 FM | nvisionbd-radio-bhumi-92-80-fm.svg | [nvisionbd-official-radio-bhumi-92-80-fm.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-bhumi-92-80-fm.png) | [TuneIn station logo](https://tunein.com/radio/Radio-Bhumi-928-s260643/) | Station logo served by TuneIn |
+| Radio Capital FM 94.8 | nvisionbd-radio-capital-fm-94-8.svg | [nvisionbd-official-radio-capital-fm-94-8.jpg](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-capital-fm-94-8.jpg) | [SoundCloud station artwork](https://soundcloud.com/user-470956485) | Station artwork served by SoundCloud |
+| Spondon Radio | nvisionbd-spondon-radio.svg | [spondon.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/spondon.png) | [Existing verified repository asset](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) | Existing repository asset |
+| Sports Grid | nvisionbd-sports-grid.svg | [nvisionbd-official-sports-grid.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-sports-grid.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/misc/vod/sports-grid-vod-us.png) | No license file found in source repository |
+| The Q | nvisionbd-the-q.svg | [nvisionbd-official-the-q.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-the-q.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/india/the-q-in.png) | No license file found in source repository |
+| UK TNT Sports 1 HD | nvisionbd-uk-tnt-sports-1.svg | [nvisionbd-official-uk-tnt-sports-1.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-uk-tnt-sports-1.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/hd/tnt-sports-1-hd-uk.png) | No license file found in source repository |
+| UK TNT Sports 2 HD | nvisionbd-uk-tnt-sports-2.svg | [nvisionbd-official-uk-tnt-sports-2.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-uk-tnt-sports-2.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/hd/tnt-sports-2-hd-uk.png) | No license file found in source repository |
+| UK TNT Sports 3 HD | nvisionbd-uk-tnt-sports-3.svg | [nvisionbd-official-uk-tnt-sports-3.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-uk-tnt-sports-3.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/hd/tnt-sports-3-hd-uk.png) | No license file found in source repository |
+| UK TNT Sports 4 HD | nvisionbd-uk-tnt-sports-4.svg | [nvisionbd-official-uk-tnt-sports-4.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-uk-tnt-sports-4.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/hd/tnt-sports-4-hd-uk.png) | No license file found in source repository |
+| US Sky Sports Main Event | nvisionbd-us-sky-sports-main-event.svg | [nvisionbd-official-us-sky-sports-main-event.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-us-sky-sports-main-event.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/hd/sky-sports-main-event-hd-uk.png) | No license file found in source repository |
+| US Sky Sports Premier League | nvisionbd-us-sky-sports-premier-league.svg | [nvisionbd-official-us-sky-sports-premier-league.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-us-sky-sports-premier-league.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/hd/sky-sports-premier-league-hd-uk.png) | No license file found in source repository |
+| US Willow By Cricbuzz | nvisionbd-us-willow-by-cricbuzz.svg | [nvisionbd-official-us-willow-by-cricbuzz.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-us-willow-by-cricbuzz.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/willow-us.png) | No license file found in source repository |
 
 ## Unresolved — retained for manual source verification
 
 | Channel | Current placeholder asset | Reason |
 |---|---|---|
 | 10 TV | nvisionbd-10-tv.svg | No unique source-verified channel logo found |
-| 24/7 Batul The Great | nvisionbd-24-7-batul-the-great.svg | No unique source-verified channel logo found |
 | 51 Radio TV [geo-blocked] | nvisionbd-51-radio-tv-geo-blocked.svg | No unique source-verified channel logo found |
 | 88 Stereo [not 24/7] | nvisionbd-88-stereo-not-24-7.svg | No unique source-verified channel logo found |
-| 92.8 FM Radio Bhumi | nvisionbd-92-8-fm-radio-bhumi.svg | No unique source-verified channel logo found |
 | Abc Music Radio | nvisionbd-abc-music-radio.svg | No unique source-verified channel logo found |
 | Adt FM | nvisionbd-adt-fm.svg | No unique source-verified channel logo found |
 | Adventure 4k | nvisionbd-adventure.svg | No unique source-verified channel logo found |
 | Afra Film | nvisionbd-afra-film.svg | No unique source-verified channel logo found |
-| Afrobeats | nvisionbd-afrobeats.svg | No unique source-verified channel logo found |
 | Alistiqamah | nvisionbd-alistiqamah.svg | No unique source-verified channel logo found |
 | Amar Ujala | nvisionbd-amar-ujala.svg | No unique source-verified channel logo found |
 | &xplorer HD | nvisionbd-and-xplorer.svg | No unique source-verified channel logo found |
@@ -41,16 +63,11 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Bd Radio FM | nvisionbd-bd-radio-fm.svg | No unique source-verified channel logo found |
 | Be.joy Kids | nvisionbd-be-joy-kids.svg | No unique source-verified channel logo found |
 | Blockbaster HD | nvisionbd-blockbaster.svg | No unique source-verified channel logo found |
-| Boomerang | nvisionbd-boomerang.svg | No unique source-verified channel logo found |
 | Bt Sports 2 | nvisionbd-bt-sports-2.svg | No unique source-verified channel logo found |
-| BTV Sangsad | nvisionbd-btv-sangsad.svg | No unique source-verified channel logo found |
+| BTV Sangsad | nvisionbd-btv-sangsad.svg | Lookup/download/validation error: HTTP Error 404: Not Found |
 | Cafe Film | nvisionbd-cafe-film.svg | No unique source-verified channel logo found |
 | Cartoon Channel | nvisionbd-cartoon-channel.svg | No unique source-verified channel logo found |
-| Comedy Central | nvisionbd-comedy-central.svg | No unique source-verified channel logo found |
 | Cooking TV | nvisionbd-cooking-tv.svg | No unique source-verified channel logo found |
-| Cosmote Sports 1 | nvisionbd-cosmote-sports-1.svg | No unique source-verified channel logo found |
-| Cosmote Sports 4 | nvisionbd-cosmote-sports-4.svg | No unique source-verified channel logo found |
-| Cowboy Movie Channel | nvisionbd-cowboy-movie-channel.svg | No unique source-verified channel logo found |
 | Cricbuzz | nvisionbd-cricbuzz.svg | No unique source-verified channel logo found |
 | Dhaka FM 90.4 | nvisionbd-dhaka-fm-90-4.svg | No unique source-verified channel logo found |
 | Digital Fashion | nvisionbd-digital-fashion.svg | No unique source-verified channel logo found |
@@ -67,9 +84,7 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Flo Racing | nvisionbd-flo-racing.svg | No unique source-verified channel logo found |
 | Fuel TV Apac | nvisionbd-fuel-tv-apac.svg | No unique source-verified channel logo found |
 | Fuel TV Europe | nvisionbd-fuel-tv-europe.svg | No unique source-verified channel logo found |
-| FX TV | nvisionbd-fx-tv.svg | No unique source-verified channel logo found |
 | Global Panjab | nvisionbd-global-panjab.svg | No unique source-verified channel logo found |
-| Golf Channel | nvisionbd-golf-channel.svg | No unique source-verified channel logo found |
 | Hindi Big Boss 24x7 2026 | nvisionbd-hindi-big-boss-24x7-2026.svg | No unique source-verified channel logo found |
 | Htv Sport | nvisionbd-htv-sport.svg | No unique source-verified channel logo found |
 | Ind Unite8 Sports 1 HD | nvisionbd-ind-unite8-sports-1.svg | No unique source-verified channel logo found |
@@ -77,16 +92,12 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Ktv Sports Plus | nvisionbd-ktv-sports-plus.svg | No unique source-verified channel logo found |
 | Laliga Live 1 | nvisionbd-laliga-1.svg | No unique source-verified channel logo found |
 | Laliga Live 2 | nvisionbd-laliga-2.svg | No unique source-verified channel logo found |
-| Laligatv | nvisionbd-laligatv.svg | No unique source-verified channel logo found |
 | Love Gold Bangla | nvisionbd-love-gold-bangla.svg | No unique source-verified channel logo found |
 | Madani TV Bangla | nvisionbd-madani-tv-bangla.svg | No unique source-verified channel logo found |
 | Madina Live | nvisionbd-madina.svg | No unique source-verified channel logo found |
-| Magenta Sports 2 | nvisionbd-magenta-sports-2.svg | No unique source-verified channel logo found |
 | Magical Blade FM | nvisionbd-magical-blade-fm.svg | No unique source-verified channel logo found |
 | Moner Radio | nvisionbd-moner-radio.svg | No unique source-verified channel logo found |
-| Movie Sphere Au | nvisionbd-movie-sphere-au.svg | No unique source-verified channel logo found |
 | My 90s Bengali Online | nvisionbd-my-90s-bengali-online.svg | No unique source-verified channel logo found |
-| My Time Movie | nvisionbd-my-time-movie.svg | No unique source-verified channel logo found |
 | Nat Geo Bangla | nvisionbd-nat-geo-bangla.svg | No unique source-verified channel logo found |
 | News 18 Assam | nvisionbd-news-18-assam.svg | No unique source-verified channel logo found |
 | Nexus Television | nvisionbd-nexus-television.svg | No unique source-verified channel logo found |
@@ -102,9 +113,7 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Radio Bangla Rock | nvisionbd-radio-bangla-rock.svg | No unique source-verified channel logo found |
 | Radio Bangladesh Co | nvisionbd-radio-bangladesh-co.svg | No unique source-verified channel logo found |
 | Radio Barakah | nvisionbd-radio-barakah.svg | No unique source-verified channel logo found |
-| Radio Bhumi 92.80 FM | nvisionbd-radio-bhumi-92-80-fm.svg | No unique source-verified channel logo found |
 | Radio Bushra | nvisionbd-radio-bushra.svg | No unique source-verified channel logo found |
-| Radio Capital FM 94.8 | nvisionbd-radio-capital-fm-94-8.svg | No unique source-verified channel logo found |
 | Radio Din Raat 93.6 FM | nvisionbd-radio-din-raat-93-6-fm.svg | No unique source-verified channel logo found |
 | Radio Gaan Baksho | nvisionbd-radio-gaan-baksho.svg | No unique source-verified channel logo found |
 | Radio Janata | nvisionbd-radio-janata.svg | No unique source-verified channel logo found |
@@ -123,22 +132,13 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Sine Plus | nvisionbd-sine-plus.svg | No unique source-verified channel logo found |
 | Sky Sports Laliga | nvisionbd-sky-sports-laliga.svg | No unique source-verified channel logo found |
 | Sony Cine | nvisionbd-sony-cine.svg | No unique source-verified channel logo found |
-| Spondon Radio | nvisionbd-spondon-radio.svg | No unique source-verified channel logo found |
 | Sport 1 HD | nvisionbd-sport-1.svg | No unique source-verified channel logo found |
 | Sport 2 HD | nvisionbd-sport-2.svg | No unique source-verified channel logo found |
 | Sports Digital Fsbl | nvisionbd-sports-digital-fsbl.svg | No unique source-verified channel logo found |
 | Sports Fishing TV | nvisionbd-sports-fishing-tv.svg | No unique source-verified channel logo found |
-| Sports Grid | nvisionbd-sports-grid.svg | No unique source-verified channel logo found |
 | Star Cinema | nvisionbd-star-cinema.svg | No unique source-verified channel logo found |
 | Tapmad | nvisionbd-tapmad.svg | No unique source-verified channel logo found |
 | TNT Sport 1 | nvisionbd-tnt-sport-1.svg | No unique source-verified channel logo found |
-| UK TNT Sports 1 HD | nvisionbd-uk-tnt-sports-1.svg | No unique source-verified channel logo found |
-| UK TNT Sports 2 HD | nvisionbd-uk-tnt-sports-2.svg | No unique source-verified channel logo found |
-| UK TNT Sports 3 HD | nvisionbd-uk-tnt-sports-3.svg | No unique source-verified channel logo found |
-| UK TNT Sports 4 HD | nvisionbd-uk-tnt-sports-4.svg | No unique source-verified channel logo found |
-| US Sky Sports Main Event | nvisionbd-us-sky-sports-main-event.svg | No unique source-verified channel logo found |
-| US Sky Sports Premier League | nvisionbd-us-sky-sports-premier-league.svg | No unique source-verified channel logo found |
-| US Willow By Cricbuzz | nvisionbd-us-willow-by-cricbuzz.svg | No unique source-verified channel logo found |
 | Utbd FM | nvisionbd-utbd-fm.svg | No unique source-verified channel logo found |
 | Uttorbango Betar | nvisionbd-uttorbango-betar.svg | No unique source-verified channel logo found |
 | Valobasar Rupali Sur | nvisionbd-valobasar-rupali-sur.svg | No unique source-verified channel logo found |

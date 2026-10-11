@@ -1,6 +1,6 @@
 # Generic Channel Logo Audit — Three Playlists
 
-Audit date: 2026-10-11 11:47 UTC  
+Audit date: 2026-10-11 11:50 UTC  
 Repository: https://github.com/saeidrahmanbd/BDIX-IPTV  
 Method: scans current playlist metadata and checks referenced local SVG files for the generic CHANNEL MARK template.
 
@@ -10,23 +10,20 @@ Method: scans current playlist metadata and checks referenced local SVG files fo
 |---|---:|---:|
 | IPTV-Playlist.m3u | 1145 | 0 |
 | BDIX-Playlist.m3u | 217 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 131 |
+| NVisionBD-Playlist.m3u | 561 | 106 |
 
-Current NVisionBD placeholder assets: **131 unique files**.
+Current NVisionBD placeholder assets: **106 unique files**.
 
 ## Remaining affected NVisionBD channel labels
 
 - &xplorer HD
 - 10 TV
-- 24/7 Batul The Great
 - 51 Radio TV [geo-blocked]
 - 88 Stereo [not 24/7]
-- 92.8 FM Radio Bhumi
 - Abc Music Radio
 - Adt FM
 - Adventure 4k
 - Afra Film
-- Afrobeats
 - Alistiqamah
 - Amar Ujala
 - Asean Cup 2026
@@ -40,15 +37,10 @@ Current NVisionBD placeholder assets: **131 unique files**.
 - Bd Radio FM
 - Be.joy Kids
 - Blockbaster HD
-- Boomerang
 - Bt Sports 2
 - Cafe Film
 - Cartoon Channel
-- Comedy Central
 - Cooking TV
-- Cosmote Sports 1
-- Cosmote Sports 4
-- Cowboy Movie Channel
 - Cricbuzz
 - Dhaka FM 90.4
 - Digital Fashion
@@ -58,7 +50,6 @@ Current NVisionBD placeholder assets: **131 unique files**.
 - ETV
 - English Premier League 2
 - Espn5 HD
-- FX TV
 - Fail Army
 - Fashion 1
 - Fight 24/7
@@ -67,7 +58,6 @@ Current NVisionBD placeholder assets: **131 unique files**.
 - Fuel TV Apac
 - Fuel TV Europe
 - Global Panjab
-- Golf Channel
 - Hindi Big Boss 24x7 2026
 - Htv Sport
 - Ind Unite8 Sports 1 HD
@@ -75,16 +65,12 @@ Current NVisionBD placeholder assets: **131 unique files**.
 - Ktv Sports Plus
 - Laliga Live 1
 - Laliga Live 2
-- Laligatv
 - Love Gold Bangla
 - Madani TV Bangla
 - Madina Live
-- Magenta Sports 2
 - Magical Blade FM
 - Moner Radio
-- Movie Sphere Au
 - My 90s Bengali Online
-- My Time Movie
 - Nat Geo Bangla
 - News 18 Assam
 - Nexus Television
@@ -100,9 +86,7 @@ Current NVisionBD placeholder assets: **131 unique files**.
 - Radio Bangla Rock
 - Radio Bangladesh Co
 - Radio Barakah
-- Radio Bhumi 92.80 FM
 - Radio Bushra
-- Radio Capital FM 94.8
 - Radio Din Raat 93.6 FM
 - Radio Gaan Baksho
 - Radio Janata
@@ -121,22 +105,13 @@ Current NVisionBD placeholder assets: **131 unique files**.
 - Sine Plus
 - Sky Sports Laliga
 - Sony Cine
-- Spondon Radio
 - Sport 1 HD
 - Sport 2 HD
 - Sports Digital Fsbl
 - Sports Fishing TV
-- Sports Grid
 - Star Cinema
 - TNT Sport 1
 - Tapmad
-- UK TNT Sports 1 HD
-- UK TNT Sports 2 HD
-- UK TNT Sports 3 HD
-- UK TNT Sports 4 HD
-- US Sky Sports Main Event
-- US Sky Sports Premier League
-- US Willow By Cricbuzz
 - Utbd FM
 - Uttorbango Betar
 - Valobasar Rupali Sur
