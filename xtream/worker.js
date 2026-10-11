@@ -1,6 +1,7 @@
 // Deployment pipeline: code and required secrets are deployed as one version.
 const DEFAULT_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u";
 const DEFAULT_BDIX_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u";
+const DEFAULT_NVISION_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/NVisionBD-Playlist.m3u";
 const CACHE_KEY = "https://bdix-iptv.internal/playlist-v5-backup-stream-filter";
 const CACHE_TTL = 60;
 
@@ -379,7 +380,7 @@ function streams(data,cat){
   }));
 }
 function m3u(data,request,env){
-  const u=new URL(request.url), base=u.pathname==="/bdix"||u.pathname.startsWith("/bdix/")?"/bdix":"", ext=(u.searchParams.get("output")||"m3u8").toLowerCase()==="ts"?"ts":"m3u8", epgUrl=u.origin+base+"/xmltv-public.php", out=[`#EXTM3U url-tvg="${epgUrl}" x-tvg-url="${epgUrl}"`];
+  const u=new URL(request.url), base=u.pathname==="/bdix"||u.pathname.startsWith("/bdix/")?"/bdix":u.pathname==="/nvision"||u.pathname.startsWith("/nvision/")?"/nvision":"", ext=(u.searchParams.get("output")||"m3u8").toLowerCase()==="ts"?"ts":"m3u8", epgUrl=u.origin+base+"/xmltv-public.php", out=[`#EXTM3U url-tvg="${epgUrl}" x-tvg-url="${epgUrl}"`];
   for(const e of data.entries){
     const attrs=[`tvg-id="${e.tvgId}"`,`tvg-name="${e.tvgName}"`,`tvg-logo="${e.logo}"`,`channel-id="${e.tvgId||e.name}#${e.id}"`,`group-title="${e.group}"`];
     if(e.channelNo) attrs.push(`tvg-chno="${e.channelNo}"`);
@@ -393,8 +394,8 @@ export default {
  async fetch(request,env){
   try{
    if(!env.XTREAM_USERNAME||!env.XTREAM_PASSWORD) return json({error:"Xtream credentials are not configured."},500);
-   const url=new URL(request.url), rawPath=url.pathname, isBdix=rawPath==="/bdix"||rawPath.startsWith("/bdix/"), path=isBdix?(rawPath.slice(5)||"/"):rawPath;
-   const playlistEnv=isBdix?{...env,PLAYLIST_URL:env.BDIX_PLAYLIST_URL||DEFAULT_BDIX_PLAYLIST_URL}:env;
+   const url=new URL(request.url), rawPath=url.pathname, isBdix=rawPath==="/bdix"||rawPath.startsWith("/bdix/"), isNvision=rawPath==="/nvision"||rawPath.startsWith("/nvision/"), basePath=isBdix?"/bdix":isNvision?"/nvision":"", path=basePath?(rawPath.slice(basePath.length)||"/"):rawPath;
+   const playlistEnv=isBdix?{...env,PLAYLIST_URL:env.BDIX_PLAYLIST_URL||DEFAULT_BDIX_PLAYLIST_URL}:isNvision?{...env,PLAYLIST_URL:env.NVISION_PLAYLIST_URL||DEFAULT_NVISION_PLAYLIST_URL}:env;
    if(path==="/"||path==="/health") return json({ok:true,service:"BDIX-IPTV Xtream Gateway"});
    if(path==="/epg-health"){
     const epg=parseXmltv(await getEpg(env));
