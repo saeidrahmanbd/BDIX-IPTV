@@ -615,7 +615,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2yTL4Hb
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3ftIhJXmi3NGYxbDUkMqv_
 #EXTINF:-1 xui-id="620" tvg-id="custom.madani.tv.bangla" tvg-name="Madani TV Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-madani-tv-bangla.svg" tvg-chno="305" channel-id="custom.madani.tv.bangla" group-title="Religious",Madani TV Bangla
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Eb4aZ-bYGshWX_85IUqhS
-#EXTINF:-1 xui-id="180977" tvg-id="custom.madina" tvg-name="Madina Live" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-madina-live.png" tvg-chno="306" channel-id="custom.madina" group-title="Religious",Madina Live
+#EXTINF:-1 xui-id="180977" tvg-id="custom.madina" tvg-name="Madina Live" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-madina.svg" tvg-chno="306" channel-id="custom.madina" group-title="Religious",Madina Live
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3R2O59mEOcZbq-ivuu9UGP
 #EXTINF:-1 xui-id="619" tvg-id="custom.makkah.live" tvg-name="Makkah Live" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/makkah-live.png" tvg-chno="307" channel-id="custom.makkah.live" group-title="Religious",Makkah Live
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0v9i5ykrMQwswR57Xr7Cmd
@@ -673,7 +673,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0CRBf_k
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1FsH6CvA6UrkObZj85nLdM
 #EXTINF:-1 xui-id="179950" tvg-id="custom.espn5" tvg-name="Espn5 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-espn5.svg" tvg-chno="334" channel-id="custom.espn5" group-title="Sports",Espn5 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0NJtGgzX1oybHTBJF-fyj0
-#EXTINF:-1 xui-id="180868" tvg-id="custom.fifa" tvg-name="Fifa+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-fifa-plus.svg" tvg-chno="335" channel-id="custom.fifa" group-title="Sports",Fifa+
+#EXTINF:-1 xui-id="180868" tvg-id="custom.fifa" tvg-name="Fifa+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-fifa.svg" tvg-chno="335" channel-id="custom.fifa" group-title="Sports",Fifa+
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0CEObGLrPx_f3YYdTjLWgu
 #EXTINF:-1 xui-id="180870" tvg-id="custom.fight.24.7" tvg-name="Fight 24/7" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-fight-24-7.svg" tvg-chno="336" channel-id="custom.fight.24.7" group-title="Sports",Fight 24/7
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Er7HSyrhjjkT0_JPUB8VD
@@ -729,9 +729,9 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1DLMbY5
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0Qgc-h-cYcG0rTHZCS5pPU
 #EXTINF:-1 xui-id="180888" tvg-id="custom.lacrosse.tv" tvg-name="Lacrosse TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-lacrosse-tv.svg" tvg-chno="362" channel-id="custom.lacrosse.tv" group-title="Sports",Lacrosse TV
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0cngl3otdHlQNbmPpWW3MK
-#EXTINF:-1 xui-id="187570" tvg-id="custom.laliga.1" tvg-name="Laliga Live 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-laliga-live-1.png" tvg-chno="363" channel-id="custom.laliga.1" group-title="Sports",Laliga Live 1
+#EXTINF:-1 xui-id="187570" tvg-id="custom.laliga.1" tvg-name="Laliga Live 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-laliga-1.svg" tvg-chno="363" channel-id="custom.laliga.1" group-title="Sports",Laliga Live 1
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-240vaQq7NVMFl9PhpixU9L
-#EXTINF:-1 xui-id="187571" tvg-id="custom.laliga.2" tvg-name="Laliga Live 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-laliga-live-2.png" tvg-chno="364" channel-id="custom.laliga.2" group-title="Sports",Laliga Live 2
+#EXTINF:-1 xui-id="187571" tvg-id="custom.laliga.2" tvg-name="Laliga Live 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-laliga-2.svg" tvg-chno="364" channel-id="custom.laliga.2" group-title="Sports",Laliga Live 2
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2f6WmMpNU_H9itKOMfAG01
 #EXTINF:-1 xui-id="175507" tvg-id="LALTV" tvg-name="Laligatv" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-laligatv.svg" tvg-chno="365" channel-id="LALTV" group-title="Sports",Laligatv
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-25X1OotJLnr45NwAfwZlh-
@@ -849,7 +849,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3bUan3j
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2DkDnE_jmTmOAZeRZkt0k4
 #EXTINF:-1 xui-id="188299" tvg-id="custom.xtrem.sports" tvg-name="Xtrem Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-xtrem-sports.svg" tvg-chno="422" channel-id="custom.xtrem.sports" group-title="Sports",Xtrem Sports
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3xsscnpLqQpsyG3f-PBmRp
-#EXTINF:-1 xui-id="179986" tvg-id="custom.ziggo.sport" tvg-name="Ziggo Sport Live" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-ziggo-sport-live.png" tvg-chno="423" channel-id="custom.ziggo.sport" group-title="Sports",Ziggo Sport Live
+#EXTINF:-1 xui-id="179986" tvg-id="custom.ziggo.sport" tvg-name="Ziggo Sport Live" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-ziggo-sport.svg" tvg-chno="423" channel-id="custom.ziggo.sport" group-title="Sports",Ziggo Sport Live
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1n74HgKhHSy617Z0UJcYlt
 #EXTINF:-1 xui-id="179984" tvg-id="custom.ziggo.sport.2" tvg-name="Ziggo Sport 2 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-ziggo-sport-2.svg" tvg-chno="424" channel-id="custom.ziggo.sport.2" group-title="Sports",Ziggo Sport 2 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0cFFChMLOUdP4wJs1nQkXh
