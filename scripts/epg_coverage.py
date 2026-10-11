@@ -378,6 +378,92 @@ def main():
         pct = round(mapped_count * 100 / india_count, 1) if india_count else 0
         live_pct = round(live_count * 100 / india_count, 1) if india_count else 0
         audit.append(f"| {name} | {total} | {primary_count} | {india_count} | {mapped_count}/{india_count} ({pct}%) | {live_count}/{india_count} ({live_pct}%) | {worker_count}/{india_count} | {'OK' if header_ok else 'MISSING/MISMATCH'} |")
+    # Audit the actual publish-candidate XMLTV across ALL three playlists.
+    # Source-level mapping counts alone can overstate playable guide coverage.
+    guide_path = Path("epg/epg.xml")
+    guide_live_ids = set()
+    guide_programme_counts = defaultdict(int)
+    guide_lang_violations = 0
+    guide_missing_titles = 0
+    guide_parse_error = None
+    if guide_path.exists() and guide_path.stat().st_size > 0:
+        try:
+            import unicodedata
+            xml_lang = "{http://www.w3.org/XML/1998/namespace}lang"
+            now_guide = datetime.now(timezone.utc)
+            for _, element in ET.iterparse(str(guide_path), events=("end",)):
+                if element.tag != "programme":
+                    continue
+                cid = element.attrib.get("channel", "").strip()
+                start = parse_stamp(element.attrib.get("start", ""))
+                stop = parse_stamp(element.attrib.get("stop", ""))
+                title = element.find("title")
+                if title is None or not (title.text or "").strip():
+                    guide_missing_titles += 1
+                for field in element:
+                    if field.tag not in {"title", "sub-title", "desc"}:
+                        continue
+                    lang = (field.attrib.get(xml_lang) or field.attrib.get("lang") or "").strip().lower()
+                    invalid_tag = bool(lang and lang not in {"en", "eng"} and not lang.startswith(("en-", "en_")))
+                    invalid_script = any(
+                        unicodedata.category(ch).startswith("L") and
+                        "LATIN" not in unicodedata.name(ch, "")
+                        for ch in (field.text or "")
+                    )
+                    if invalid_tag or invalid_script:
+                        guide_lang_violations += 1
+                if cid:
+                    guide_programme_counts[cid] += 1
+                    if start and (start >= now_guide or (stop and stop >= now_guide)):
+                        guide_live_ids.add(cid)
+                element.clear()
+        except Exception as exc:
+            guide_parse_error = str(exc)
+    else:
+        guide_parse_error = "Published guide missing or empty"
+
+    audit.extend([
+        "", "## Published XMLTV verification — all active channels", "",
+        "This section measures the guide actually present at report-generation time, not merely upstream source matches.",
+        "If the publish gate retains an older guide, the workflow must refresh this report against the retained guide.",
+        "",
+        "| Playlist | Active unique IDs | Mapped IDs | Published IDs with programmes | Current/future IDs |",
+        "|---|---:|---:|---:|---:|",
+    ])
+    for playlist_path in PLAYLISTS:
+        if not playlist_path.exists():
+            continue
+        active = {}
+        for line in playlist_path.read_text(encoding="utf-8-sig").splitlines():
+            if not line.startswith("#EXTINF:"):
+                continue
+            a = attrs(line)
+            cid = a.get("tvg-id", "").strip()
+            group = a.get("group-title", "").strip()
+            if cid and group not in INACTIVE_GROUPS:
+                active.setdefault(cid, group)
+        mapped_count = sum(bool(by_tvg.get(cid, {}).get("epg_id")) for cid in active)
+        published_count = sum(guide_programme_counts[cid] > 0 for cid in active)
+        current_count = sum(cid in guide_live_ids for cid in active)
+        audit.append(
+            f"| {playlist_path.name} | {len(active)} | {mapped_count} | "
+            f"{published_count} | {current_count} |"
+        )
+        bangladesh_ids = [cid for cid, group in active.items() if group == "Bangladesh"]
+        if bangladesh_ids:
+            audit.append(
+                f"| {playlist_path.name} — Bangladesh | {len(bangladesh_ids)} | "
+                f"{sum(bool(by_tvg.get(cid, {}).get('epg_id')) for cid in bangladesh_ids)} | "
+                f"{sum(guide_programme_counts[cid] > 0 for cid in bangladesh_ids)} | "
+                f"{sum(cid in guide_live_ids for cid in bangladesh_ids)} |"
+            )
+    audit.extend([
+        "", f"- Non-English programme text fields detected: **{guide_lang_violations}**",
+        f"- Missing or blank programme titles: **{guide_missing_titles}**",
+        f"- XMLTV read error: **{guide_parse_error or 'none'}**",
+        "- Latin-script text is not proof of English: untagged transliterations need human/source verification.",
+        "- Never invent programme titles or map Bangladesh broadcasters to similarly named Indian channels.",
+    ])
     audit += ["", "## Channels without mappings", ""] + detail_blocks
     THREE_PLAYLIST_REPORT.parent.mkdir(parents=True, exist_ok=True)
     THREE_PLAYLIST_REPORT.write_text("\n".join(audit).rstrip() + "\n", encoding="utf-8")
