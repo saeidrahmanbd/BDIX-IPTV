@@ -1,6 +1,6 @@
 # Generic Channel Logo Audit — Three Playlists
 
-Audit date: 2026-10-11 11:51 UTC  
+Audit date: 2026-10-11 11:54 UTC  
 Repository: https://github.com/saeidrahmanbd/BDIX-IPTV  
 Method: scans current playlist metadata and checks referenced local SVG files for the generic CHANNEL MARK template.
 
@@ -10,9 +10,9 @@ Method: scans current playlist metadata and checks referenced local SVG files fo
 |---|---:|---:|
 | IPTV-Playlist.m3u | 1145 | 0 |
 | BDIX-Playlist.m3u | 217 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 99 |
+| NVisionBD-Playlist.m3u | 561 | 92 |
 
-Current NVisionBD placeholder assets: **99 unique files**.
+Current NVisionBD placeholder assets: **92 unique files**.
 
 ## Remaining affected NVisionBD channel labels
 
@@ -29,14 +29,12 @@ Current NVisionBD placeholder assets: **99 unique files**.
 - Asean Cup 2026
 - Asia Flix TV
 - Aurora Media Flims
-- BTV Sangsad
 - Bangla Big Boss 24x7
 - Bangla Hits
 - Banijoy Mr Been
 - Bd Radio FM
 - Be.joy Kids
 - Blockbaster HD
-- Bt Sports 2
 - Cafe Film
 - Cartoon Channel
 - Cooking TV
@@ -61,7 +59,6 @@ Current NVisionBD placeholder assets: **99 unique files**.
 - Htv Sport
 - Ind Unite8 Sports 1 HD
 - Kiev Sport HD
-- Ktv Sports Plus
 - Laliga Live 1
 - Laliga Live 2
 - Love Gold Bangla
@@ -69,7 +66,6 @@ Current NVisionBD placeholder assets: **99 unique files**.
 - Madina Live
 - Magical Blade FM
 - Moner Radio
-- My 90s Bengali Online
 - Nat Geo Bangla
 - News 18 Assam
 - Nexus Television
@@ -86,10 +82,8 @@ Current NVisionBD placeholder assets: **99 unique files**.
 - Radio Barakah
 - Radio Gaan Baksho
 - Radio Janata
-- Radio Padma – 99.2 FM
 - Radio Ritmo On Line
 - Radio Sonali Dingulo
-- Radio Tangail
 - Radio Vivid Voice | Mymensingh
 - Radio Zenith FM
 - Rick Astley
@@ -97,7 +91,6 @@ Current NVisionBD placeholder assets: **99 unique files**.
 - Setanta Sport
 - Sine Plus
 - Sky Sports Laliga
-- Sony Cine
 - Sport 1 HD
 - Sport 2 HD
 - Sports Digital Fsbl

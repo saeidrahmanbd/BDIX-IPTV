@@ -2,23 +2,23 @@
 
 This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.
 
-- Run time: 2026-10-11 11:51 UTC
+- Run time: 2026-10-11 11:54 UTC
 - IPTV-org dataset: loaded
-- Unique generic assets examined: 107
+- Unique generic assets examined: 100
 - Successful replacements: 8
-- Unresolved/manual review: 99
+- Unresolved/manual review: 92
 
 ## Replacements
 
 | Channel | Former generic file | New local file | Source | License / attribution |
 |---|---|---|---|---|
-| Bangla Radio | nvisionbd-bangla-radio.svg | [nvisionbd-official-bangla-radio.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-bangla-radio.png) | [Radio-bd.com station logo](https://radio-bd.com/bangla-95/) | Station logo served by Radio-bd.com |
-| Peoples Radio | nvisionbd-peoples-radio.svg | [nvisionbd-official-peoples-radio.jpg](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-peoples-radio.jpg) | [myTuner station logo](https://mytuner-radio.com/radio/peoples-radio-916-fm-429045/) | Station logo served by myTuner |
-| Radio Bushra | nvisionbd-radio-bushra.svg | [nvisionbd-official-radio-bushra.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-bushra.png) | [Radio-bd.com station logo](https://radio-bd.com/bushra/) | Station logo served by Radio-bd.com |
-| Radio Din Raat 93.6 FM | nvisionbd-radio-din-raat-93-6-fm.svg | [nvisionbd-official-radio-din-raat-93-6-fm.jpg](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-din-raat-93-6-fm.jpg) | [myTuner station logo](https://mytuner-radio.com/radio/radio-din-raat-468346/) | Station logo served by myTuner |
-| Radio Mahananda - 98.8 | nvisionbd-radio-mahananda-98-8.svg | [nvisionbd-official-radio-mahananda-98-8.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-mahananda-98-8.png) | [myTuner station logo](https://mytuner-radio.com/radio/radio-mahananda-988-fm-491658/) | Station logo served by myTuner |
-| Radio Shadhin - 92.4 FM | nvisionbd-radio-shadhin-92-4-fm.svg | [nvisionbd-official-radio-shadhin-92-4-fm.jpg](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-shadhin-92-4-fm.jpg) | [myTuner station logo](https://mytuner-radio.com/radio/radio-shadhin-429049/) | Station logo served by myTuner |
-| Radio Shadin | nvisionbd-radio-shadin.svg | [nvisionbd-official-radio-shadin.jpg](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-shadin.jpg) | [myTuner station logo](https://mytuner-radio.com/radio/radio-shadhin-429049/) | Station logo served by myTuner |
+| Bt Sports 2 | nvisionbd-bt-sports-2.svg | [nvisionbd-official-bt-sports-2.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-bt-sports-2.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/hd/bt-sport-2-hd-uk.png) | No license file found in source repository |
+| BTV Sangsad | nvisionbd-btv-sangsad.svg | [nvisionbd-official-btv-sangsad.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-btv-sangsad.png) | [IPTV-org Sangsad TV channel page](https://iptv-org.github.io/channels/bd/SangsadTV) | Station logo sourced from IPTV-org channel listing |
+| Ktv Sports Plus | nvisionbd-ktv-sports-plus.svg | [ktv-sport-plus.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ktv-sport-plus.png) | [Existing verified repository asset](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) | Existing repository asset |
+| My 90s Bengali Online | nvisionbd-my-90s-bengali-online.svg | [nvisionbd-official-my-90s-bengali-online.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-my-90s-bengali-online.png) | [My Bangla Zeno station page](https://zeno.fm/radio/mybangla/) | Station artwork served by Zeno |
+| Radio Padma – 99.2 FM | nvisionbd-radio-padma-99-2-fm.svg | [nvisionbd-official-radio-padma-99-2-fm.jpg](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-padma-99-2-fm.jpg) | [Radio Padma SoundCloud profile](https://soundcloud.com/radiopadma) | Station artwork served by SoundCloud |
+| Radio Tangail | nvisionbd-radio-tangail.svg | [nvisionbd-official-radio-tangail.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-tangail.png) | [Radio Tangail Zeno station page](https://zeno.fm/radio/radiotangail/) | Station logo served by Zeno |
+| Sony Cine | nvisionbd-sony-cine.svg | [cine-sony-720p-c27cf4bb09.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cine-sony-720p-c27cf4bb09.png) | [Existing verified repository asset](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) | Existing repository asset |
 | The Q | nvisionbd-the-q.svg | [nvisionbd-official-the-q.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-the-q.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/india/the-q-in.png) | No license file found in source repository |
 
 ## Unresolved — retained for manual source verification
@@ -44,8 +44,6 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Bd Radio FM | nvisionbd-bd-radio-fm.svg | No unique source-verified channel logo found |
 | Be.joy Kids | nvisionbd-be-joy-kids.svg | No unique source-verified channel logo found |
 | Blockbaster HD | nvisionbd-blockbaster.svg | No unique source-verified channel logo found |
-| Bt Sports 2 | nvisionbd-bt-sports-2.svg | No unique source-verified channel logo found |
-| BTV Sangsad | nvisionbd-btv-sangsad.svg | Lookup/download/validation error: HTTP Error 404: Not Found |
 | Cafe Film | nvisionbd-cafe-film.svg | No unique source-verified channel logo found |
 | Cartoon Channel | nvisionbd-cartoon-channel.svg | No unique source-verified channel logo found |
 | Cooking TV | nvisionbd-cooking-tv.svg | No unique source-verified channel logo found |
@@ -70,7 +68,6 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Htv Sport | nvisionbd-htv-sport.svg | No unique source-verified channel logo found |
 | Ind Unite8 Sports 1 HD | nvisionbd-ind-unite8-sports-1.svg | No unique source-verified channel logo found |
 | Kiev Sport HD | nvisionbd-kiev-sport.svg | No unique source-verified channel logo found |
-| Ktv Sports Plus | nvisionbd-ktv-sports-plus.svg | No unique source-verified channel logo found |
 | Laliga Live 1 | nvisionbd-laliga-1.svg | No unique source-verified channel logo found |
 | Laliga Live 2 | nvisionbd-laliga-2.svg | No unique source-verified channel logo found |
 | Love Gold Bangla | nvisionbd-love-gold-bangla.svg | No unique source-verified channel logo found |
@@ -78,7 +75,6 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Madina Live | nvisionbd-madina.svg | No unique source-verified channel logo found |
 | Magical Blade FM | nvisionbd-magical-blade-fm.svg | No unique source-verified channel logo found |
 | Moner Radio | nvisionbd-moner-radio.svg | No unique source-verified channel logo found |
-| My 90s Bengali Online | nvisionbd-my-90s-bengali-online.svg | No unique source-verified channel logo found |
 | Nat Geo Bangla | nvisionbd-nat-geo-bangla.svg | No unique source-verified channel logo found |
 | News 18 Assam | nvisionbd-news-18-assam.svg | No unique source-verified channel logo found |
 | Nexus Television | nvisionbd-nexus-television.svg | No unique source-verified channel logo found |
@@ -95,10 +91,8 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Radio Barakah | nvisionbd-radio-barakah.svg | No unique source-verified channel logo found |
 | Radio Gaan Baksho | nvisionbd-radio-gaan-baksho.svg | No unique source-verified channel logo found |
 | Radio Janata | nvisionbd-radio-janata.svg | No unique source-verified channel logo found |
-| Radio Padma – 99.2 FM | nvisionbd-radio-padma-99-2-fm.svg | No unique source-verified channel logo found |
 | Radio Ritmo On Line | nvisionbd-radio-ritmo-on-line.svg | No unique source-verified channel logo found |
 | Radio Sonali Dingulo | nvisionbd-radio-sonali-dingulo.svg | No unique source-verified channel logo found |
-| Radio Tangail | nvisionbd-radio-tangail.svg | No unique source-verified channel logo found |
 | Radio Vivid Voice / Mymensingh | nvisionbd-radio-vivid-voice-mymensingh.svg | No unique source-verified channel logo found |
 | Radio Zenith FM | nvisionbd-radio-zenith-fm.svg | No unique source-verified channel logo found |
 | Rick Astley | nvisionbd-rick-astley.svg | No unique source-verified channel logo found |
@@ -106,7 +100,6 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Setanta Sport | nvisionbd-setanta-sport.svg | No unique source-verified channel logo found |
 | Sine Plus | nvisionbd-sine-plus.svg | No unique source-verified channel logo found |
 | Sky Sports Laliga | nvisionbd-sky-sports-laliga.svg | No unique source-verified channel logo found |
-| Sony Cine | nvisionbd-sony-cine.svg | No unique source-verified channel logo found |
 | Sport 1 HD | nvisionbd-sport-1.svg | No unique source-verified channel logo found |
 | Sport 2 HD | nvisionbd-sport-2.svg | No unique source-verified channel logo found |
 | Sports Digital Fsbl | nvisionbd-sports-digital-fsbl.svg | No unique source-verified channel logo found |
