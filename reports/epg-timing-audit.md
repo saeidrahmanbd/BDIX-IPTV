@@ -54,7 +54,6 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **Raj Digital Plus** (RajDigitalPlus.in@SD): source ID RAJ.DIGITAL.PLUS.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **Raj Musix Kannada** (RajMusixKannada.in@SD): source ID 543078 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Raj Musix Tamil** (RajMusixTamil.in@SD): source ID 543499 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
-- **Raj Musix Telugu** (RajMusixTelugu.in@SD): source ID 543024 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Raj TV** (RajTV.in@SD): source ID 543033 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Raj TV** (RajTV.in@SD): source ID RAJ.TV.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **Rengoni** (Rengoni.in@SD): source ID 543249 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
@@ -73,4 +72,4 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **Zee Bollywood** (ZeeBollywood.in@SD): source ID 543294 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Discovery Turbo** (custom.discovery.turbo): source ID 543148 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 
-Detected source-ID corrections: **68**
+Detected source-ID corrections: **67**
