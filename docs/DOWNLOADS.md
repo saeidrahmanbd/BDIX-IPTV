@@ -16,7 +16,7 @@ No traditional installation is required.
 
 ### Windows Build Kit
 
-**[📦 Download Playlist-Studio-5_0-Windows-Build-Kit-Debug12.zip](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug12.zip)**
+**[📦 Download Playlist-Studio-5_0-Windows-Build-Kit-Debug16.zip](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug16.zip)**
 
 See the **[Playlist Studio documentation](docs/PLAYLIST-STUDIO.md)** for build instructions.
 
