@@ -30,11 +30,11 @@ No traditional installation is required.
 
 ### Windows Build Kit
 
-[Download Playlist Studio 5.0 Windows Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug12.zip)
+[Download Playlist Studio 5.0 Windows Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug16.zip)
 
 ## Build Instructions
 
-1. Download `Playlist-Studio-5_0-Windows-Build-Kit-Debug12.zip`
+1. Download `Playlist-Studio-5_0-Windows-Build-Kit-Debug16.zip`
 2. Extract the ZIP file
 3. Open the extracted folder
 4. Run **`BUILD-Windows.cmd`**
@@ -62,7 +62,7 @@ See **`Readme.txt`** inside the build kit for detailed instructions.
 
 ## Links
 
-- [Latest Release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest)
+- [Latest Release](https://github.com/saeidrahmanbd/Playlist-Studio/releases/latest)
 - [v5.0.0 Release](https://github.com/saeidrahmanbd/Playlist-Studio/releases/tag/v5.0.0)
 - [Project README](../README.md)
 - [Download Center](DOWNLOADS.md)
