@@ -8,17 +8,19 @@ This report separates playlist/path integrity from actual image authentication. 
 
 | Playlist | Entries | With logo | Without logo | External refs | Known generic filename refs |
 |---|---:|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 1,145 | 1,123 | 22 | 0 | 0 |
+| IPTV-Playlist.m3u | 1,145 | 1,122 | 23 | 0 | 0 |
 | BDIX-Playlist.m3u | 190 | 184 | 6 | 5 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 328 | 233 | 0 | 0 |
+| NVisionBD-Playlist.m3u | 561 | 326 | 235 | 0 | 0 |
+| **Total** | **1,896** | **1,632** | **264** | **5** | **0** |
 
 ## Image-level findings and changes
 
-- **Rejected `logos/btv-news.png`:** the image visibly contains BTV News branding plus an unrelated “M3U World 4K” overlay. Removed its playlist references from IPTV-Playlist.m3u and BDIX-Playlist.m3u.
-- **Rejected `logos/bangla-tv.png`:** the image visibly carries a “BONGO FLIX” watermark. Removed its playlist references from IPTV-Playlist.m3u, BDIX-Playlist.m3u, and NVisionBD-Playlist.m3u.
-- Total references removed for these two contaminated images: **11**.
+- **Rejected `logos/btv-news.png`:** visibly contains BTV News branding plus an unrelated “M3U World 4K” overlay. Its playlist references were removed from IPTV-Playlist.m3u and BDIX-Playlist.m3u.
+- **Rejected `logos/bangla-tv.png`:** visibly carries a “BONGO FLIX” watermark. Its playlist references were removed from all three playlists.
+- **Rejected `logos/tom-and-jerry.png` as a channel logo:** the image depicts the *Tom & Jerry Tales* show rather than a channel-specific broadcaster logo. Its references were removed from IPTV-Playlist.m3u and NVisionBD-Playlist.m3u.
+- Total references removed for these three suspect assets: **14**.
 - Channel entries and stream URLs were preserved. The image files remain in the repository for traceability; no replacement was guessed.
-- Previous generic-looking `channel-N.png` references remain unlinked from playlists.
+- Previously identified generic-looking `channel-N.png` references remain unlinked from playlists.
 
 ## Next verification sources
 
@@ -30,4 +32,4 @@ These links help find candidate official assets. A logo is not approved until th
 
 ## Important limitation
 
-The remaining 1,635 logo references have not all been individually authenticated. Continue with image-by-image checks; do not label an asset official solely because its filename or displayed channel name matches.
+The remaining 1,632 logo references have not all been individually authenticated. Continue with image-by-image checks; do not label an asset official solely because its filename or displayed channel name matches.
