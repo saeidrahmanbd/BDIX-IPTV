@@ -1,4 +1,5 @@
 name: Replace Generic Channel Logos
+# Source-verified pass: use exact IPTV-org IDs first, then conservative Commons fallback.
 
 on:
   workflow_dispatch:
