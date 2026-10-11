@@ -81434,11 +81434,6 @@ Bringing the best in television.</desc>
     <desc lang="en">Stay tuned for a special program-enjoy entertainment that caters to diverse interests.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DD_TRIPURA_1291105_14OCT060000_14OCT070000/images/LANDSCAPE_169/1687259484000_DDTRIPURA_RegularProgram_1291105.jpg" />
   </programme>
-  <programme channel="DDUrdu.in@SD" start="20261011150000 +0530" stop="20261011155000 +0530">
-    <title lang="en">Telefilm</title>
-    <desc lang="en">Watch a complete story unfold in one sitting with this engaging telefilm, filled with emotional moments, surprising twists, and characters that leave a lasting impression</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DD_URDU_99672_11OCT150000_11OCT155000/images/LANDSCAPE_169/1726949751000_DDUrdu_Telefilm_99672.jpg" />
-  </programme>
   <programme channel="DDUrdu.in@SD" start="20261011155000 +0530" stop="20261011160000 +0530">
     <title lang="en">Filler</title>
     <desc lang="en">Bringing the best in television.</desc>
@@ -150927,22 +150922,6 @@ A young girl named Thulasi dreams of continuing her education despite living wit
     <desc lang="en">Navigating the treacherous waters of adolescence, four freshmen face the daunting social pressures and awkward encounters at their inaugural high school party.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_MNX_1860425_14OCT060000_14OCT072000/images/LANDSCAPE_169/1745150699000_MNX_Incoming_1860425.jpg" />
   </programme>
-  <programme start="20261011143000 +0530" stop="20261011155000 +0530" channel="MTVIndia.in@SD">
-    <title>Splitsvilla</title>
-    <desc>Young men and women go through various obstacles, challenges, and intense heartbreaks to find their perfect partner.</desc>
-    <category>Reality</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/e3de06c616d67bd203a46c1efb7a96a6.jpg?width=700" />
-    <credits>
-      <actor>Rannvijay Singha</actor>
-      <actor>Sunny Leone</actor>
-      <actor>Nikhil Chinapa</actor>
-    </credits>
-    <episode-num system="onscreen">16</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261011155000 +0530" stop="20261011180000 +0530" channel="MTVIndia.in@SD">
     <title>MTV Hustle</title>
     <desc>Aspiring artists from across the country compete in various challenges to showcase their skills, with each performance bringing them closer to the opportunity to launch a successful career.</desc>
@@ -190371,13 +190350,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <icon src="https://iptv-epg.org/images/kIGMbNgmfX1YSmQwwE7SGufwTyQDQ9jq_JyJtZhUhJWhsbPK3yYVbDabpsoiZ1HBRDLr9qXzKTPgc_p8IDbJnvNotmVQlZOHsR5WVJwnmfE1tGcAJOUgPrJZNT1v" />
     <title lang="en">Music Xpress</title>
   </programme>
-  <programme channel="Pop.uk" start="20261011101000 +0000" stop="20261011101900 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261011154000/list/ZEEPOPGrizzyAndTheLemmings2056732fbf1ac49305b4dc698ed297992370111.jpg" />
-  </programme>
   <programme channel="Pop.uk" start="20261011101900 +0000" stop="20261011102800 +0000">
     <title lang="en">Grizzy And The Lemmings</title>
     <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
@@ -226959,12 +226931,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <icon src="https://tv.assets.pressassociation.io/4ac10a17-809d-5998-ac39-064bc977d8e8.jpg" />
     <episode-num system="onscreen">S2026 E31</episode-num>
   </programme>
-  <programme channel="SongdewTV.in@SD" start="20261011154500 +0530" stop="20261011155000 +0530">
-    <title lang="en">Songdew Fresh</title>
-    <desc lang="en">A comprehensive compilation of the latest music tracks, curated to elevate and inspire positive vibes, offering a refreshing and motivating experience for listeners.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p15781078_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme start="20261011155000 +0530" stop="20261011160500 +0530" channel="SongdewTV.in@SD">
     <title>Songdew Select</title>
     <desc>Featuring Best of Independent Music</desc>
@@ -233672,23 +233638,24 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
       <value>G</value>
     </rating>
   </programme>
-  <programme channel="SonyMax.in@SD" start="20261011114200 +0530" stop="20261011154900 +0530">
-    <title>Taare Zameen Par</title>
-    <desc>Ishaan is criticised by his parents for his poor academic performance and is sent away to a boarding school. Ram, an art teacher, however, realises he has dyslexia and helps him uncover his potential.</desc>
+  <programme channel="SonyMax.in@SD" start="20261011142100 +0530" stop="20261011163100 +0530">
+    <title>Middle Class Melodies</title>
+    <desc>Raghava, a young man, runs a breakfast center in his village but wishes to open a small hotel in a nearby town. However, he faces challenges in his quest and must overcome them to succeed.</desc>
     <category>Film</category>
-    <category>Drama</category>
-    <date>2007</date>
+    <category>Comedy</category>
+    <date>2020</date>
     <credits>
-      <director>Aamir Khan</director>
-      <actor>Darsheel Safary</actor>
-      <actor>Aamir Khan</actor>
-      <actor>Tanay Chheda</actor>
-      <actor>Sachet Engineer</actor>
-      <actor>Tisca Chopra</actor>
-      <actor>Vipin Sharma</actor>
-      <producer>Aamir Khan</producer>
+      <director>Vinod Ananthoju</director>
+      <actor>Varsha Bollamma</actor>
+      <actor>Anand Devarakonda</actor>
+      <actor>Chaitanya Garikipati</actor>
+      <actor>Divya Sripada</actor>
+      <actor>Goparaju Ramana</actor>
+      <actor>Surabhi Prabhavati</actor>
+      <actor>Prem Sagar</actor>
+      <producer>V. Anand Prasad</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p175247_v_h10_ab.jpg?lock=1280x720" />
+    <icon src="https://dtil.tmsimg.com/assets/p19105031_v_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="SonyMax.in@SD" start="20261011163100 +0530" stop="20261011185000 +0530">
     <title>The Mummy Returns</title>
@@ -306282,11 +306249,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="TheJungleBook.in" start="20261011153400 +0530" stop="20261011154700 +0530">
-    <title lang="en">The Best In Class</title>
-    <desc lang="en">Shere Kahn and Baloo are in a tiff and the tiger takes away a fish from the bear</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6ac770c219e0ae1645c82b9b/images/LANDSCAPE_169/9330_6ab1f20c-846a-43cd-a9b9-4af073040974.png" />
-  </programme>
   <programme channel="TheJungleBook.in" start="20261011154700 +0530" stop="20261011160000 +0530">
     <title lang="en">The A Real Wolf</title>
     <desc lang="en">The birds are at a brawl and can’t decide who the most beautiful bird is</desc>
@@ -365827,40 +365789,6 @@ Delving into a range of varied topics, the host discusses the social, economic a
     <episode-num system="onscreen">E1</episode-num>
     <premiere />
   </programme>
-  <programme channel="custom.boomerang" start="20261011101000 +0000" stop="20261011102000 +0000">
-    <title lang="en">Looney Tunes</title>
-    <sub-title lang="en">The Slap-Hoppy Mouse</sub-title>
-    <desc lang="en">Local cat gossip says that Sylvester is no longer a great mouse catcher; to prove them wrong Sylvester takes his son mouse-catching.</desc>
-    <credits>
-      <actor>Mel Blanc</actor>
-      <actor>June Foray</actor>
-    </credits>
-    <date>1956</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p24768210_b_h10_ae.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVY</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>0</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
-  </programme>
   <programme channel="custom.boomerang" start="20261011102000 +0000" stop="20261011103000 +0000">
     <title lang="en">Looney Tunes</title>
     <sub-title lang="en">A Star Is Bored</sub-title>
@@ -398154,19 +398082,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261011154400 +0530" stop="20261011154700 +0530" channel="custom.duck.tv">
-    <title>Finn and Fianna</title>
-    <desc>Finn and Fianna are two baby elves who explore the environment using their cognitive and perceptual senses in order to learn about its unique attributes.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/4a37343a2290660a7d01be591d11c5dc.jpg?width=700" />
-    <credits>
-      <director>Róza Györffy</director>
-    </credits>
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261011154700 +0530" stop="20261011155100 +0530" channel="custom.duck.tv">
     <title>Happy Meadow</title>
     <desc>Sari and Nati are two playful rabbits who hop to the forest to enjoy the day with their woodland friends. They go on adventures and learn new things every day.</desc>
@@ -423519,19 +423434,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme channel="custom.epic" start="20261011152500 +0530" stop="20261011155000 +0530">
-    <title lang="en">Raja Rasoi Aur Andaaz Anokha</title>
-    <desc lang="en">Chef Ranveer Brar is fascinated by the impact of the Maratha culture on Indian cuisine. Later, he prepares a few dishes from their recipes.</desc>
-    <credits>
-      <actor>Ranveer Brar</actor>
-      <actor>Manwendra Tripathy</actor>
-      <director>Ruchir Arun</director>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p16960862_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S2 E10</episode-num>
-  </programme>
   <programme channel="custom.epic" start="20261011155000 +0530" stop="20261011161500 +0530">
     <title lang="en">Raja Rasoi Aur Anya Kahaniyaan</title>
     <desc lang="en">The narrator provides information about the local cuisines in several regions of India and the extravagant culinary traditions of Indian royalty.</desc>
@@ -447493,39 +447395,13 @@ Jeevsiddhi, who is trained by Chanakya, enters the innermost circles of Rakshasa
     <category>News Bulletin</category>
     <icon src="https://dtil.tmsimg.com/assets/p28386655_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme channel="custom.mtv" start="20261011143000 +0530" stop="20261011155000 +0530">
-    <title lang="en">Splitsvilla</title>
-    <desc lang="en">The Mischief Maker causes drama by reviving an old connection between the ideal match. Later, the mischief maker arrives at the dome session.</desc>
-    <credits>
-      <actor>Rannvijay Singha</actor>
-      <actor>Sunny Leone</actor>
-      <actor>Nikhil Chinapa</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Reality Show</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27085844_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S15 E16</episode-num>
+  <programme start="20261011091500 +0000" stop="20261011104500 +0000" channel="custom.mtv" catchup-id="100081483">
+    <title>Hustle</title>
+    <desc>Aspiring rappers from across the country compete in challenges to showcase their skills.</desc>
   </programme>
-  <programme channel="custom.mtv" start="20261011155000 +0530" stop="20261011180000 +0530">
-    <title lang="en">MTV Hustle</title>
-    <desc lang="en">Aspiring artists from across the country compete in various challenges to showcase their skills, with each performance bringing them closer to the opportunity to launch a successful career.</desc>
-    <credits>
-      <actor>Gaelyn Mendonca</actor>
-      <actor>Krissann Barretto</actor>
-      <actor>Jasmeet Singh Bhatia</actor>
-      <actor>Talha Siddiqui</actor>
-      <actor>Super Mannik</actor>
-      <actor>Wicked Sunny</actor>
-      <actor>Raftaar</actor>
-      <actor>Nucleya</actor>
-      <actor>Raja Kumari</actor>
-      <actor>Badshah</actor>
-      <actor>Ankit Singh Patyal</actor>
-      <director>Sagar More</director>
-    </credits>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p17232494_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S5 E19</episode-num>
+  <programme start="20261011104500 +0000" stop="20261011120000 +0000" channel="custom.mtv" catchup-id="100081479">
+    <title>Splitsvilla</title>
+    <desc>Young men and women go through obstacles and intense heartbreaks to find their perfect partner.</desc>
   </programme>
   <programme channel="custom.mtv" start="20261011180000 +0530" stop="20261011190000 +0530">
     <title lang="en">Roadies</title>
@@ -521303,23 +521179,24 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p8395567_v_h8_ak.jpg?lock=1280x720" />
   </programme>
-  <programme channel="hmair.sonymaxhd" start="20261011114200 +0530" stop="20261011154900 +0530">
-    <title>Taare Zameen Par</title>
-    <desc>Ishaan is criticised by his parents for his poor academic performance and is sent away to a boarding school. Ram, an art teacher, however, realises he has dyslexia and helps him uncover his potential.</desc>
+  <programme channel="hmair.sonymaxhd" start="20261011142100 +0530" stop="20261011163100 +0530">
+    <title>Middle Class Melodies</title>
+    <desc>Raghava, a young man, runs a breakfast center in his village but wishes to open a small hotel in a nearby town. However, he faces challenges in his quest and must overcome them to succeed.</desc>
     <category>Film</category>
-    <category>Drama</category>
-    <date>2007</date>
+    <category>Comedy</category>
+    <date>2020</date>
     <credits>
-      <director>Aamir Khan</director>
-      <actor>Darsheel Safary</actor>
-      <actor>Aamir Khan</actor>
-      <actor>Tanay Chheda</actor>
-      <actor>Sachet Engineer</actor>
-      <actor>Tisca Chopra</actor>
-      <actor>Vipin Sharma</actor>
-      <producer>Aamir Khan</producer>
+      <director>Vinod Ananthoju</director>
+      <actor>Varsha Bollamma</actor>
+      <actor>Anand Devarakonda</actor>
+      <actor>Chaitanya Garikipati</actor>
+      <actor>Divya Sripada</actor>
+      <actor>Goparaju Ramana</actor>
+      <actor>Surabhi Prabhavati</actor>
+      <actor>Prem Sagar</actor>
+      <producer>V. Anand Prasad</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p175247_v_h10_ab.jpg?lock=1280x720" />
+    <icon src="https://dtil.tmsimg.com/assets/p19105031_v_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="hmair.sonymaxhd" start="20261011163100 +0530" stop="20261011185000 +0530">
     <title>The Mummy Returns</title>
