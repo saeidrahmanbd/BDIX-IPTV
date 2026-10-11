@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-11T09:02:02+00:00",
+  "generated": "2026-10-11T10:11:39+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -114,7 +114,7 @@
         "Not Playing"
       ],
       "streams": 4,
-      "primary": 1,
+      "primary": 2,
       "backup": 2
     },
     "9xjhakaas": {
@@ -129,7 +129,7 @@
         "New Backup"
       ],
       "streams": 2,
-      "primary": 1,
+      "primary": 2,
       "backup": 0
     },
     "9xm": {
@@ -145,7 +145,7 @@
         "New Backup"
       ],
       "streams": 5,
-      "primary": 1,
+      "primary": 2,
       "backup": 3
     },
     "9xtashan": {
@@ -161,7 +161,7 @@
         "Not Playing"
       ],
       "streams": 3,
-      "primary": 1,
+      "primary": 3,
       "backup": 0
     },
     "aakaashaath": {
@@ -350,7 +350,7 @@
         "New Backup"
       ],
       "streams": 6,
-      "primary": 1,
+      "primary": 2,
       "backup": 4
     },
     "anandtv": {
@@ -409,7 +409,7 @@
         "Not Playing"
       ],
       "streams": 6,
-      "primary": 1,
+      "primary": 3,
       "backup": 3
     },
     "andxplorhd": {
@@ -467,7 +467,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "asianetmovies": {
@@ -481,7 +481,7 @@
         "Not Playing"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "asiantv": {
@@ -569,7 +569,7 @@
         "Not Playing"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "atnnews": {
@@ -670,7 +670,7 @@
         "Not Playing"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "b4ubhojpuri": {
@@ -687,7 +687,7 @@
         "New Backup"
       ],
       "streams": 2,
-      "primary": 1,
+      "primary": 2,
       "backup": 0
     },
     "b4ukadak": {
@@ -703,7 +703,7 @@
         "Not Playing"
       ],
       "streams": 4,
-      "primary": 1,
+      "primary": 2,
       "backup": 2
     },
     "b4umovies": {
@@ -961,7 +961,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "bhi.channel": {
@@ -1121,7 +1121,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "cartoonnetwork": {
@@ -1282,7 +1282,7 @@
         "Not Playing"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "cmcusacountrymusicchannel": {
@@ -1312,7 +1312,7 @@
         "New Backup"
       ],
       "streams": 3,
-      "primary": 1,
+      "primary": 2,
       "backup": 1
     },
     "colors.bangla": {
@@ -1328,7 +1328,7 @@
         "New Backup"
       ],
       "streams": 9,
-      "primary": 1,
+      "primary": 2,
       "backup": 7
     },
     "colorsbanglacinema": {
@@ -1359,7 +1359,7 @@
         "Not Playing"
       ],
       "streams": 3,
-      "primary": 1,
+      "primary": 2,
       "backup": 1
     },
     "colorscineplexbollywood": {
@@ -2859,7 +2859,7 @@
         "Not Playing"
       ],
       "streams": 4,
-      "primary": 1,
+      "primary": 2,
       "backup": 2
     },
     "darshanatv": {
@@ -2890,7 +2890,7 @@
         "Not Playing"
       ],
       "streams": 7,
-      "primary": 1,
+      "primary": 2,
       "backup": 5
     },
     "ddarunprabha": {
@@ -3696,7 +3696,7 @@
         "New Backup"
       ],
       "streams": 7,
-      "primary": 1,
+      "primary": 2,
       "backup": 5
     },
     "ekusheytv": {
@@ -3758,7 +3758,7 @@
         "New Backup"
       ],
       "streams": 3,
-      "primary": 1,
+      "primary": 2,
       "backup": 1
     },
     "epicbhojpuri": {
@@ -3830,7 +3830,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "espn": {
@@ -3887,7 +3887,7 @@
         "New Backup"
       ],
       "streams": 2,
-      "primary": 1,
+      "primary": 2,
       "backup": 0
     },
     "etvcomedy": {
@@ -3930,7 +3930,7 @@
         "Not Playing"
       ],
       "streams": 2,
-      "primary": 1,
+      "primary": 2,
       "backup": 0
     },
     "etvplus": {
@@ -3944,7 +3944,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "etvtelugu": {
@@ -3958,7 +3958,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "eumusic": {
@@ -4131,7 +4131,7 @@
         "Not Playing"
       ],
       "streams": 6,
-      "primary": 1,
+      "primary": 2,
       "backup": 4
     },
     "gbaj400042t1": {
@@ -4233,7 +4233,7 @@
         "Not Playing"
       ],
       "streams": 5,
-      "primary": 1,
+      "primary": 2,
       "backup": 3
     },
     "goldmines2": {
@@ -4294,7 +4294,7 @@
         "Not Playing"
       ],
       "streams": 4,
-      "primary": 1,
+      "primary": 2,
       "backup": 2
     },
     "gracenetwork": {
@@ -4366,7 +4366,7 @@
         "Not Playing"
       ],
       "streams": 4,
-      "primary": 1,
+      "primary": 4,
       "backup": 0
     },
     "gtcpunjabi": {
@@ -4380,7 +4380,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "hidost": {
@@ -4712,7 +4712,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "jalwatv": {
@@ -4971,7 +4971,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "keralavision": {
@@ -5172,7 +5172,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "mahapunjabi": {
@@ -5186,7 +5186,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "makkahtv": {
@@ -5228,7 +5228,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "manoranjangrand": {
@@ -5272,7 +5272,7 @@
         "Not Playing"
       ],
       "streams": 2,
-      "primary": 1,
+      "primary": 2,
       "backup": 0
     },
     "manoranjantv": {
@@ -5287,7 +5287,7 @@
         "Not Playing"
       ],
       "streams": 2,
-      "primary": 1,
+      "primary": 2,
       "backup": 0
     },
     "marutamtv": {
@@ -5302,7 +5302,7 @@
         "Not Playing"
       ],
       "streams": 2,
-      "primary": 1,
+      "primary": 2,
       "backup": 0
     },
     "mastiii": {
@@ -5999,7 +5999,7 @@
         "New Backup"
       ],
       "streams": 4,
-      "primary": 1,
+      "primary": 2,
       "backup": 2
     },
     "nationalgeographicwild": {
@@ -6017,7 +6017,7 @@
         "New Backup"
       ],
       "streams": 3,
-      "primary": 1,
+      "primary": 2,
       "backup": 1
     },
     "nepal1": {
@@ -6031,7 +6031,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "new.and.pictures": {
@@ -6304,7 +6304,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "ntv": {
@@ -7346,7 +7346,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "rupasibangla": {
@@ -7578,7 +7578,7 @@
         "Not Playing"
       ],
       "streams": 2,
-      "primary": 1,
+      "primary": 2,
       "backup": 0
     },
     "shemarooumang": {
@@ -7836,7 +7836,7 @@
         "New Backup"
       ],
       "streams": 6,
-      "primary": 1,
+      "primary": 2,
       "backup": 4
     },
     "sonymax2": {
@@ -8136,7 +8136,7 @@
         "Not Playing"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "staging.islam": {
@@ -8181,7 +8181,7 @@
         "New Backup"
       ],
       "streams": 6,
-      "primary": 1,
+      "primary": 2,
       "backup": 4
     },
     "starbharat": {
@@ -8211,7 +8211,7 @@
         "New Backup"
       ],
       "streams": 3,
-      "primary": 1,
+      "primary": 2,
       "backup": 1
     },
     "stargold2": {
@@ -8267,7 +8267,7 @@
         "Not Playing"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "starmaa": {
@@ -8312,7 +8312,7 @@
         "New Backup"
       ],
       "streams": 3,
-      "primary": 0,
+      "primary": 1,
       "backup": 2
     },
     "starmoviesselect": {
@@ -8358,7 +8358,7 @@
         "Not Playing"
       ],
       "streams": 4,
-      "primary": 1,
+      "primary": 3,
       "backup": 1
     },
     "starpravah": {
@@ -8485,7 +8485,7 @@
         "Not Playing"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "steelbirdmusic": {
@@ -8654,7 +8654,7 @@
         "Not Playing"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "superhungama": {
@@ -8684,7 +8684,7 @@
         "New Backup"
       ],
       "streams": 3,
-      "primary": 1,
+      "primary": 2,
       "backup": 1
     },
     "suriyatv": {
@@ -9241,7 +9241,7 @@
         "Not Playing"
       ],
       "streams": 2,
-      "primary": 1,
+      "primary": 2,
       "backup": 0
     },
     "vcv": {
@@ -9312,7 +9312,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "wildearth": {
@@ -9418,7 +9418,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "yettv": {
@@ -9432,7 +9432,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "yrfmusic": {
@@ -9596,7 +9596,7 @@
         "Not Playing"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "zeedilse": {
@@ -9610,7 +9610,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "zeehorrornights": {
@@ -9624,7 +9624,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "zeekannada": {
@@ -9666,7 +9666,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "zeetalkies": {
@@ -9708,7 +9708,7 @@
         "Not Playing"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "zeetv": {
@@ -9751,7 +9751,7 @@
         "New Channels"
       ],
       "streams": 1,
-      "primary": 0,
+      "primary": 1,
       "backup": 0
     },
     "zoomoo": {

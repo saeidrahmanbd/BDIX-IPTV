@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-11T09:02:02.302087+00:00**
+Generated: **2026-10-11T10:11:39.417454+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -9,7 +9,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Unique channel IDs: **693**
 - IDs with multiple streams: **220**
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **0**
+- Metadata conflicts: **29**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
@@ -17,11 +17,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Logo exceptions: **0**
 - Logo references checked: **1186**
 - Not Playing logo exceptions: **0**
-- Duplicate primary identities: **0**
+- Duplicate primary identities: **1**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **0**
+- Primary entries missing channel numbers: **71**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **0**
+- Category block-order issues: **3**
 - Alphabetical ordering issues: **0**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
@@ -964,7 +964,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-None.
+- **greentv.bd** in **Not Playing** — Green TV, Green TV, Green TV
 
 ## Primary Channel-Number Collisions
 
@@ -976,7 +976,9 @@ None.
 
 ## Ordering
 
-Category block order: OK.
+- category block **New Channels** — unknown category
+- category block **New Backup** — unknown category
+- category block **Not Playing** — unknown category
 Alphabetical order: OK.
 
 ## Suspicious URLs
@@ -1001,7 +1003,35 @@ None.
 
 ## Metadata Conflicts
 
-None.
+- **9xjalwa.in** — names: 9x jalwa; groups: Indian Music, Not Playing; countries: , IN
+- **9xjhakaas.in@sd** — names: 9x jhakaas; groups: Indian Music, New Backup; countries: 
+- **9xm.in@sd** — names: 9xm; groups: Indian Music, New Backup; countries: 
+- **9xtashan.in@sd** — names: 9x tashan; groups: Indian Music, New Backup, Not Playing; countries: 
+- **anandatv.bd** — names: ananda tv; groups: Bangladesh, New Backup; countries: 
+- **andtv.in@sd** — names: &tv; groups: Indian Entertainment, New Backup, Not Playing; countries: 
+- **b4ukadak.in@sd** — names: b4u kadak; groups: Indian Movies, Not Playing; countries: 
+- **colors.bangla.in** — names: colors bangla; groups: Indian Bangla, New Backup; countries: 
+- **colors.in** — names: colors; groups: Indian Entertainment, New Backup; countries: , IN
+- **colorscineplex.in@sd** — names: colors cineplex; groups: Indian Movies, Not Playing; countries: 
+- **dangaltv.in@sd** — names: dangal; groups: Indian Entertainment, Not Playing; countries: 
+- **dbcnews.bd** — names: dbc news; groups: Bangladesh, Not Playing; countries: 
+- **ekhontv.bd** — names: ekhon tv; groups: Bangladesh, New Backup; countries: 
+- **etvcinema.in** — names: etv cinema; groups: Indian Movies, New Backup; countries: , IN
+- **etvmusic.in** — names: etv music; groups: Indian Music, Not Playing; countries: 
+- **goldmines.in@sd** — names: goldmines; groups: Indian Movies, Not Playing; countries: , IN
+- **goldminesmovies.in@sd** — names: goldmines movies; groups: Indian Movies, Not Playing; countries: 
+- **greentv.bd** — names: green tv; groups: Bangladesh, Not Playing; countries: 
+- **manoranjanprime.in@sd** — names: manoranjan prime; groups: Indian Entertainment, Not Playing; countries: , IN
+- **manoranjantv.in@sd** — names: manoranjan tv; groups: Indian Movies, Not Playing; countries: , IN
+- **marutamtv.in** — names: mntv (tamil); groups: Indian Entertainment, Not Playing; countries: IN
+- **nationalgeographic.in@sd** — names: national geographic; groups: Documentary & Wildlife, New Backup; countries: 
+- **shemarootv.in@sd** — names: shemaroo tv; groups: Indian Entertainment, Not Playing; countries: , IN
+- **sonymax.in@sd** — names: sony max; groups: Indian Movies, New Backup; countries: 
+- **star.jalsha.movies.in** — names: jalsha movies; groups: Indian Bangla, New Backup; countries: 
+- **stargold.in@hd** — names: star gold; groups: Indian Movies, New Backup; countries: 
+- **starplus.in@sd** — names: star plus; groups: Indian Entertainment, New Backup, Not Playing; countries: , IN
+- **suriyantv.in@sd** — names: suriyan tv; groups: Indian Entertainment, New Backup; countries: , IN
+- **vasanthtv.in@sd** — names: vasanth tv; groups: Indian Entertainment, Not Playing; countries: , IN
 
 ## Cross-Country Backup Collisions
 
