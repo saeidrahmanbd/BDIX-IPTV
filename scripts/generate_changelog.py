@@ -137,8 +137,8 @@ def main():
         s=meaningful(prev,cur)
     date=datetime.now(timezone.utc).strftime("%Y-%m-%d")
     lines=[f"# Changelog — {date}","",f"## {date}",""]
-    if s["added"]: lines.append(f"- 🆕 **{s['added']} new channel candidate(s) added to New Channels**")
-    if s.get("review_backups"): lines.append(f"- 🔁 **{s['review_backups']} new backup candidate(s) added to New Backup**")
+    if s["added"]: lines.append(f"- 🆕 **{s['added']} new channel(s) added to the approved playlist categories**")
+    if s.get("review_backups"): lines.append(f"- 🔁 **{s['review_backups']} backup stream(s) added to Backup**")
     if s["removed"]: lines.append(f"- 🗑️ **{s['removed']} channel(s) removed**")
     if s["backup_updated"]: lines.append(f"- 🔄 **{s['backup_updated']} backup stream(s) updated**")
     if s["logos"]: lines.append(f"- 🖼️ **{s['logos']} logo reference(s) corrected**")
