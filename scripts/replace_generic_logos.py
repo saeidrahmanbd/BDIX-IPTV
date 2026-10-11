@@ -306,7 +306,9 @@ def get_local_logo(channel):
         if not path.is_file() or path.suffix.lower() not in supported:
             continue
         lower_name = path.name.lower()
-        if lower_name.startswith(("nvisionbd-", "placeholder-")):
+        if lower_name.startswith("placeholder-"):
+            continue
+        if lower_name.startswith("nvisionbd-") and not lower_name.startswith("nvisionbd-official-"):
             continue
         if re.search(r"-backup-?\d*(?:\.|$)", lower_name):
             continue
@@ -314,6 +316,9 @@ def get_local_logo(channel):
             continue
 
         stem = path.stem.lower()
+        # Already source-checked logos saved by this workflow can also be reused.
+        if stem.startswith("nvisionbd-official-"):
+            stem = stem[len("nvisionbd-official-"):]
         # Remove generated hash and quality/resolution suffixes from filenames.
         stem = re.sub(r"-[a-f0-9]{8,}$", "", stem)
         previous = None
