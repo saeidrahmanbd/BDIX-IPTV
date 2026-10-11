@@ -560,6 +560,58 @@ def set_tvg_logo(line, url):
     return re.sub(r'tvg-logo="[^"]*"', 'tvg-logo="' + url + '"', line, count=1)
 
 
+# Read original channel-logo URLs from the last pre-placeholder revision.
+# This recovers exact historical channel-to-image mappings and avoids guessing
+# based on approximate names from general logo catalogs.
+HISTORICAL_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/cde4fc51a5fe73858c167366ae5651b138433fb8/NVisionBD-Playlist.m3u"
+HISTORICAL_PLAYLIST_PAGE = "https://github.com/saeidrahmanbd/BDIX-IPTV/blob/cde4fc51a5fe73858c167366ae5651b138433fb8/NVisionBD-Playlist.m3u"
+
+
+def load_historical_logo_index():
+    raw, _ = fetch_bytes(HISTORICAL_PLAYLIST_URL, timeout=45, max_bytes=25_000_000)
+    historical = raw.decode("utf-8", errors="replace")
+    by_name = {}
+    url_users = {}
+    for line in historical.splitlines():
+        if not line.startswith("#EXTINF:"):
+            continue
+        attrs, label = parse_extinf(line)
+        url = (attrs.get("tvg-logo") or "").strip()
+        if not url.startswith(("http://", "https://")):
+            continue
+        base = basename(url).lower()
+        if (base in ("unidentified.png", "unknown.png", "no-logo.png")
+                or "placeholder" in base or "generic" in base
+                or "nvisionbd-" in base):
+            continue
+        key = norm(label)
+        if not key:
+            continue
+        by_name.setdefault(key, set()).add(url)
+        url_users.setdefault(url, set()).add(key)
+
+    # Do not reuse one old image for many unrelated channels; some historic
+    # metadata entries shared a single generic sports image by mistake.
+    output = {}
+    for key, urls in by_name.items():
+        if len(urls) != 1:
+            continue
+        url = next(iter(urls))
+        if len(url_users.get(url, set())) > 2:
+            continue
+        extension = Path(urlparse(url).path).suffix.lower()
+        fmt = {".png": "PNG", ".jpg": "JPEG", ".jpeg": "JPEG", ".webp": "WEBP", ".svg": "SVG"}.get(extension, "")
+        output[key] = {
+            "url": url,
+            "format": fmt,
+            "page": HISTORICAL_PLAYLIST_PAGE,
+            "source": "Exact original tvg-logo URL from playlist history",
+            "license": "Historical source URL; reuse rights not specified",
+            "license_url": "",
+        }
+    return output
+
+
 def load_iptv_org_indexes():
     channels = fetch_json(IPTV_CHANNELS_URL)
     logos = fetch_json(IPTV_LOGOS_URL)
@@ -859,6 +911,12 @@ def main():
     except Exception as error:
         iptv_indexes = None
         iptv_status = "unavailable: " + str(error)[:160]
+    try:
+        historical_logo_index = load_historical_logo_index()
+        historical_status = f"loaded {len(historical_logo_index)} exact historical logo mappings"
+    except Exception as error:
+        historical_logo_index = {}
+        historical_status = "unavailable: " + str(error)[:160]
 
     targets = {}
     for line in text.splitlines():
@@ -891,6 +949,12 @@ def main():
                 if channel in DIRECT_LOGO_HINTS:
                     candidate = dict(DIRECT_LOGO_HINTS[channel])
                     source = candidate.pop("source", "Direct station source")
+                    source_page = candidate.get("page", "")
+                    license_name = candidate.get("license", "")
+                    license_url = candidate.get("license_url", "")
+                elif norm(channel) in historical_logo_index:
+                    candidate = dict(historical_logo_index[norm(channel)])
+                    source = candidate.pop("source", "Historical playlist logo URL")
                     source_page = candidate.get("page", "")
                     license_name = candidate.get("license", "")
                     license_url = candidate.get("license_url", "")
@@ -997,6 +1061,7 @@ def main():
         "This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.", "",
         f"- Run time: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}",
         f"- IPTV-org dataset: {iptv_status}",
+        f"- Historical logo mappings: {historical_status}",
         f"- Unique generic assets examined: {len(targets)}",
         f"- Successful replacements: {len(replacements)}",
         f"- Unresolved/manual review: {len(unresolved)}", "",
