@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-11T12:22:35+00:00**
+Generated: **2026-10-11T12:49:31+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
@@ -19,12 +19,12 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 - **OK** — https://iptv-epg.org/files/epg-in.xml — 415 channel IDs; 415 current/future IDs; 67721 programme rows
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 528 channel IDs; 528 current/future IDs; 19095 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml — 690 channel IDs; 636 current/future IDs; 65191 programme rows
-- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 380 current/future IDs; 33488 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 766 channel IDs; 762 current/future IDs; 81863 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1484 channel IDs; 1457 current/future IDs; 94795 programme rows
+- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 379 current/future IDs; 33488 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 766 channel IDs; 760 current/future IDs; 81863 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1484 channel IDs; 1457 current/future IDs; 94875 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 280 channel IDs; 280 current/future IDs; 13607 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 112 channel IDs; 99 current/future IDs; 24088 programme rows
-- **OK** — https://avkb.short.gy/epg.xml.gz — 1837 channel IDs; 670 current/future IDs; 55906 programme rows
+- **OK** — https://avkb.short.gy/epg.xml.gz — 1837 channel IDs; 669 current/future IDs; 55906 programme rows
 - **OK** — https://avkb.short.gy/jioepg.xml.gz — 1303 channel IDs; 265 current/future IDs; 42761 programme rows
 - **OK** — https://avkb.short.gy/tsepg.xml.gz — 717 channel IDs; 698 current/future IDs; 35733 programme rows
 - **OK** — https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml — 11 channel IDs; 10 current/future IDs; 1910 programme rows
