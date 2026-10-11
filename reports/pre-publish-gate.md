@@ -1,8 +1,8 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-10-11T11:06:39+00:00**
+Generated: **2026-10-11T12:20:25+00:00**
 
-Status: **BLOCK**
+Status: **PASS**
 
 - Current entries: **1145**
 - Duplicate stream URLs: **0**
@@ -11,22 +11,20 @@ Status: **BLOCK**
 - Review entries reclassified: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
-- Primary entries missing tvg-chno: **30**
+- Primary entries missing tvg-chno: **0**
 - Entries added this run: **0**
 - Entries removed this run: **0**
-- Entries modified this run: **0**
+- Entries modified this run: **1**
 
 ## Change Summary
 1. Never publish duplicate stream URLs.
 2. Never silently remove an existing primary stream.
 3. Never silently promote/reclassify review-queue entries.
-4. Never silently delete New review entries.
+4. Never silently delete protected Backup entries.
 5. Never publish duplicate or missing primary channel numbers.
 Added: none
 Removed: none
-Modified metadata entries: 0
+Modified metadata entries: 1
 Quarantined primary streams: none
 
-## Blocking Reasons
-- duplicate primary identities: 1
-- primary entries missing tvg-chno: 30
+No blocking conditions detected.

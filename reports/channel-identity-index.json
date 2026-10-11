@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-11T11:06:39+00:00",
+  "generated": "2026-10-11T12:18:58+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -110,12 +110,11 @@
       ],
       "groups": [
         "Backup",
-        "Indian Music",
-        "Not Playing"
+        "Indian Music"
       ],
       "streams": 4,
-      "primary": 2,
-      "backup": 2
+      "primary": 1,
+      "backup": 3
     },
     "9xjhakaas": {
       "names": [
@@ -154,12 +153,12 @@
         "9xtashan.in@sd"
       ],
       "groups": [
-        "Indian Music",
-        "Not Playing"
+        "Backup",
+        "Indian Music"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "aakaashaath": {
       "names": [
@@ -400,12 +399,11 @@
       ],
       "groups": [
         "Backup",
-        "Indian Entertainment",
-        "Not Playing"
+        "Indian Entertainment"
       ],
       "streams": 5,
-      "primary": 2,
-      "backup": 3
+      "primary": 1,
+      "backup": 4
     },
     "andxplorhd": {
       "names": [
@@ -459,7 +457,7 @@
         "asianetmovies.in@hd"
       ],
       "groups": [
-        "Not Playing"
+        "Indian Movies"
       ],
       "streams": 1,
       "primary": 1,
@@ -547,7 +545,7 @@
         "atnmusic.bd"
       ],
       "groups": [
-        "Not Playing"
+        "Indian Music"
       ],
       "streams": 1,
       "primary": 1,
@@ -648,7 +646,7 @@
         "azantv.ca"
       ],
       "groups": [
-        "Not Playing"
+        "Religious"
       ],
       "streams": 1,
       "primary": 1,
@@ -677,12 +675,11 @@
       ],
       "groups": [
         "Backup",
-        "Indian Movies",
-        "Not Playing"
+        "Indian Movies"
       ],
       "streams": 4,
-      "primary": 2,
-      "backup": 2
+      "primary": 1,
+      "backup": 3
     },
     "b4umovies": {
       "names": [
@@ -1229,7 +1226,7 @@
         "cmalayalamtv.ca@sd"
       ],
       "groups": [
-        "Not Playing"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -1303,12 +1300,11 @@
       ],
       "groups": [
         "Backup",
-        "Indian Movies",
-        "Not Playing"
+        "Indian Movies"
       ],
       "streams": 3,
-      "primary": 2,
-      "backup": 1
+      "primary": 1,
+      "backup": 2
     },
     "colorscineplexbollywood": {
       "names": [
@@ -2803,12 +2799,11 @@
       ],
       "groups": [
         "Backup",
-        "Indian Entertainment",
-        "Not Playing"
+        "Indian Entertainment"
       ],
       "streams": 4,
-      "primary": 2,
-      "backup": 2
+      "primary": 1,
+      "backup": 3
     },
     "darshanatv": {
       "names": [
@@ -2834,12 +2829,11 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh",
-        "Not Playing"
+        "Bangladesh"
       ],
       "streams": 7,
-      "primary": 2,
-      "backup": 5
+      "primary": 1,
+      "backup": 6
     },
     "ddarunprabha": {
       "names": [
@@ -3855,12 +3849,12 @@
         "etvmusic.in"
       ],
       "groups": [
-        "Indian Music",
-        "Not Playing"
+        "Backup",
+        "Indian Music"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "eumusic": {
       "names": [
@@ -4028,8 +4022,7 @@
       ],
       "groups": [
         "Backup",
-        "Bangladesh",
-        "Not Playing"
+        "Bangladesh"
       ],
       "streams": 6,
       "primary": 2,
@@ -4130,12 +4123,11 @@
       ],
       "groups": [
         "Backup",
-        "Indian Movies",
-        "Not Playing"
+        "Indian Movies"
       ],
       "streams": 5,
-      "primary": 2,
-      "backup": 3
+      "primary": 1,
+      "backup": 4
     },
     "goldmines2": {
       "names": [
@@ -4191,12 +4183,11 @@
       ],
       "groups": [
         "Backup",
-        "Indian Movies",
-        "Not Playing"
+        "Indian Movies"
       ],
       "streams": 4,
-      "primary": 2,
-      "backup": 2
+      "primary": 1,
+      "backup": 3
     },
     "gracenetwork": {
       "names": [
@@ -4263,12 +4254,12 @@
         "greentv.bd"
       ],
       "groups": [
-        "Bangladesh",
-        "Not Playing"
+        "Backup",
+        "Bangladesh"
       ],
       "streams": 4,
-      "primary": 4,
-      "backup": 0
+      "primary": 1,
+      "backup": 3
     },
     "hidost": {
       "names": [
@@ -5085,12 +5076,12 @@
         "manoranjanprime.in@sd"
       ],
       "groups": [
-        "Indian Entertainment",
-        "Not Playing"
+        "Backup",
+        "Indian Entertainment"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "manoranjantv": {
       "names": [
@@ -5100,12 +5091,12 @@
         "manoranjantv.in@sd"
       ],
       "groups": [
-        "Indian Movies",
-        "Not Playing"
+        "Backup",
+        "Indian Movies"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "marutamtv": {
       "names": [
@@ -5115,12 +5106,12 @@
         "marutamtv.in"
       ],
       "groups": [
-        "Indian Entertainment",
-        "Not Playing"
+        "Backup",
+        "Indian Entertainment"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "mastiii": {
       "names": [
@@ -7345,12 +7336,12 @@
         "shemarootv.in@sd"
       ],
       "groups": [
-        "Indian Entertainment",
-        "Not Playing"
+        "Backup",
+        "Indian Entertainment"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "shemarooumang": {
       "names": [
@@ -7567,8 +7558,7 @@
     },
     "sonyentertainmenttelevision": {
       "names": [
-        "Sony Entertainment TV",
-        "Sony Entertainment Television"
+        "Sony Entertainment TV"
       ],
       "ids": [
         "sonyentertainmenttelevision.in@sd"
@@ -7903,7 +7893,7 @@
         "staging.dhinchaak"
       ],
       "groups": [
-        "Not Playing"
+        "Indian Movies"
       ],
       "streams": 1,
       "primary": 1,
@@ -8032,7 +8022,7 @@
         "starkiran.in@sd"
       ],
       "groups": [
-        "Not Playing"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -8118,12 +8108,11 @@
       ],
       "groups": [
         "Backup",
-        "Indian Entertainment",
-        "Not Playing"
+        "Indian Entertainment"
       ],
       "streams": 3,
-      "primary": 2,
-      "backup": 1
+      "primary": 1,
+      "backup": 2
     },
     "starpravah": {
       "names": [
@@ -8246,7 +8235,7 @@
         "starzcinema.us"
       ],
       "groups": [
-        "Not Playing"
+        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -8415,7 +8404,7 @@
         "suntv.in@hd"
       ],
       "groups": [
-        "Not Playing"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -9000,12 +8989,12 @@
         "vasanthtv.in@sd"
       ],
       "groups": [
-        "Indian Entertainment",
-        "Not Playing"
+        "Backup",
+        "Indian Entertainment"
       ],
       "streams": 2,
-      "primary": 2,
-      "backup": 0
+      "primary": 1,
+      "backup": 1
     },
     "vcv": {
       "names": [
@@ -9314,7 +9303,7 @@
         "zeecinemalu.in@hd"
       ],
       "groups": [
-        "Not Playing"
+        "Indian Movies"
       ],
       "streams": 1,
       "primary": 1,
@@ -9384,7 +9373,7 @@
         "zeetelugu.in@hd"
       ],
       "groups": [
-        "Not Playing"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
