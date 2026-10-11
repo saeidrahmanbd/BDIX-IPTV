@@ -16,9 +16,9 @@ permissions:
   contents: write
 
 concurrency:
-  group: bdix-playlist-update
+  group: bdix-iptv-main-writer
   cancel-in-progress: false
-  queue: single
+  queue: max
 
 jobs:
   maintain:
