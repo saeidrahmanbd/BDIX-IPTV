@@ -28,13 +28,13 @@ https://tvsen6.aynaott.com/TjGR1GcxKetHNVcMVxbq/index.m3u8
 http://198.195.239.50:8095/btv/index.m3u8
 #EXTINF:-1 tvg-id="custom.btv.news" tvg-name="BTV News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-news.png" tvg-chno="17" channel-id="custom.btv.news" group-title="Bangladesh",BTV News
 https://btv.hridoytv-channel.workers.dev/news.m3u8
-#EXTINF:-1 tvg-id="custom.channel.1" tvg-name="Channel 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-1.png" tvg-chno="19" channel-id="custom.channel.1" group-title="Bangladesh",Channel 1
+#EXTINF:-1 tvg-id="custom.channel.1" tvg-name="Channel 1" tvg-chno="19" channel-id="custom.channel.1" group-title="Bangladesh",Channel 1
 https://stream.ottplus.live/live/channel_1_hd_abr/index.m3u8
-#EXTINF:-1 tvg-id="Channel9.bd" tvg-name="Channel 9" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-9.png" tvg-chno="23" channel-id="Channel9.bd" group-title="Bangladesh",Channel 9
+#EXTINF:-1 tvg-id="Channel9.bd" tvg-name="Channel 9" tvg-chno="23" channel-id="Channel9.bd" group-title="Bangladesh",Channel 9
 http://livetv.akr4m.com:8080/bdtv/restrem/16.m3u8
-#EXTINF:-1 tvg-chno="21" tvg-id="custom.channel.16" tvg-name="Channel 16" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-16.png" channel-id="custom.channel.16" group-title="Bangladesh",Channel 16
+#EXTINF:-1 tvg-chno="21" tvg-id="custom.channel.16" tvg-name="Channel 16" channel-id="custom.channel.16" group-title="Bangladesh",Channel 16
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel16bd.stream/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png" tvg-chno="22" channel-id="Channel24.bd" group-title="Bangladesh",Channel 24
+#EXTINF:-1 tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-chno="22" channel-id="Channel24.bd" group-title="Bangladesh",Channel 24
 http://198.195.239.50:8095/CHANNEL.24.HD/index.m3u8
 #EXTINF:-1 tvg-id="ChannelI.bd" tvg-name="Channel I" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-i.png" tvg-chno="24" channel-id="ChannelI.bd" group-title="Bangladesh",Channel I
 https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/index.m3u8
@@ -130,7 +130,7 @@ http://115.187.41.216:8080/hls/amardigital/index.m3u8
 https://live-stream.utkalbongo.com/hls/livebanglatvstream.m3u8
 #EXTINF:-1 tvg-id="BHI.Channel.in" tvg-name="BHI Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bhi-channel.png" tvg-chno="246" channel-id="BHI.Channel.in" group-title="Indian Bangla",BHI Channel
 https://server.livelegitpro.in/bhichannel/bhichannel/index.m3u8
-#EXTINF:-1 tvg-id="staging.channel.52" channel-id="staging.channel.52" tvg-chno="1108" tvg-name="Channel 52" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-52.png" group-title="Indian Bangla",Channel 52
+#EXTINF:-1 tvg-id="staging.channel.52" channel-id="staging.channel.52" tvg-chno="1108" tvg-name="Channel 52" group-title="Indian Bangla",Channel 52
 https://tvsen6.aynaott.com/channel52/index.m3u8
 #EXTINF:-1 tvg-chno="247" channel-id="Colors.Bangla.in" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png" tvg-id="Colors.Bangla.in" tvg-name="Colors Bangla" group-title="Indian Bangla",Colors Bangla
 http://198.195.239.50:8095/COLORS.BANGLA.HD/index.m3u8
@@ -1474,25 +1474,25 @@ http://198.195.239.50:8095/BTV.HD/index.m3u8
 http://198.195.239.50:8095/cartoonNetwork/index.m3u8
 #EXTINF:-1 tvg-id="CGTNDocumentary.cn" tvg-name="CGTN Documentary" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cgtn-documentary.png" channel-id="CGTNDocumentary.cn" group-title="Backup",CGTN Documentary
 https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8
-#EXTINF:-1 tvg-id="custom.channel.1" tvg-name="Channel 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-1.png" channel-id="custom.channel.1" group-title="Backup",Channel 1
+#EXTINF:-1 tvg-id="custom.channel.1" tvg-name="Channel 1" channel-id="custom.channel.1" group-title="Backup",Channel 1
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel1bd.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.channel.1" tvg-name="Channel 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-1.png" channel-id="custom.channel.1" group-title="Backup",Channel 1
+#EXTINF:-1 tvg-id="custom.channel.1" tvg-name="Channel 1" channel-id="custom.channel.1" group-title="Backup",Channel 1
 https://drk6xq0vhn.gpcdn.net/live/channel_1_hd_abr/index.m3u8
-#EXTINF:-1 tvg-id="Channel9.bd" tvg-name="Channel 9" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-9.png" channel-id="Channel9.bd" group-title="Backup",Channel 9
+#EXTINF:-1 tvg-id="Channel9.bd" tvg-name="Channel 9" channel-id="Channel9.bd" group-title="Backup",Channel 9
 https://box.bbaria.net/Channel9/tracks-v1a1/index.m3u8
-#EXTINF:-1 tvg-id="custom.channel.16" tvg-name="Channel 16" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-16.png" channel-id="custom.channel.16" group-title="Backup",Channel 16
+#EXTINF:-1 tvg-id="custom.channel.16" tvg-name="Channel 16" channel-id="custom.channel.16" group-title="Backup",Channel 16
 https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8
-#EXTINF:-1 tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png" channel-id="Channel24.bd" group-title="Backup",Channel 24
+#EXTINF:-1 tvg-id="Channel24.bd" tvg-name="Channel 24" channel-id="Channel24.bd" group-title="Backup",Channel 24
 http://livetv.akr4m.com:8080/bdtv/restrem/14.m3u8
-#EXTINF:-1 tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png" channel-id="Channel24.bd" group-title="Backup",Channel 24
+#EXTINF:-1 tvg-id="Channel24.bd" tvg-name="Channel 24" channel-id="Channel24.bd" group-title="Backup",Channel 24
 https://drk6xq0vhn.gpcdn.net/live/channel_24_abr/index.m3u8
-#EXTINF:-1 tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png" channel-id="Channel24.bd" group-title="Backup",Channel 24
+#EXTINF:-1 tvg-id="Channel24.bd" tvg-name="Channel 24" channel-id="Channel24.bd" group-title="Backup",Channel 24
 https://drk6xq0vhn.gpcdn.net/live/channel_24_abr/live/channel_24_720/chunks.m3u8
-#EXTINF:-1 tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png" channel-id="Channel24.bd" group-title="Backup",Channel 24
+#EXTINF:-1 tvg-id="Channel24.bd" tvg-name="Channel 24" channel-id="Channel24.bd" group-title="Backup",Channel 24
 https://iptvlive.ahmed-bd-org.workers.dev/channel-24-hd-1/index.m3u8
-#EXTINF:-1 tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png" channel-id="Channel24.bd" group-title="Backup",Channel 24
+#EXTINF:-1 tvg-id="Channel24.bd" tvg-name="Channel 24" channel-id="Channel24.bd" group-title="Backup",Channel 24
 https://stream.ottplus.live/live/channel_24_abr/index.m3u8
-#EXTINF:-1 tvg-id="Channel24.bd" channel-id="Channel24.bd" tvg-name="Channel 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png" group-title="Backup",Channel 24
+#EXTINF:-1 tvg-id="Channel24.bd" channel-id="Channel24.bd" tvg-name="Channel 24" group-title="Backup",Channel 24
 https://tvsen6.aynaott.com/YrVDF8gujkdh/index.m3u8
 #EXTINF:-1 tvg-id="ChannelI.bd" tvg-name="Channel I" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-i.png" channel-id="ChannelI.bd" group-title="Backup",Channel I
 http://198.195.239.50:8095/CHANNEL.I.HD/index.m3u8
