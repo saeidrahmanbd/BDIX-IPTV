@@ -72,7 +72,7 @@ Primary curated entries are protected from indiscriminate automatic changes.
 1. Duplicate stream URLs are not allowed.
 2. Existing primary streams are protected from silent removal.
 3. Backup streams are not automatically deleted because of health failures.
-4. New Channels and New Backup remain user-controlled review queues.
+4. Discovery queues are retired; only approved playlist categories are maintained.
 5. Health failures become review candidates rather than automatic deletion decisions.
 6. Dashboard figures are generated from the current playlist and reports.
 7. Maintenance runs record quality metrics.
