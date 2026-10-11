@@ -6,6 +6,7 @@ Automatic corrections require repeated cross-source title and duration matches, 
 
 - **Xplor** (AndxplorHD.in): source ID and.xplorHD.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
 - **Isai Aruvi** (IsaiAruvi.in@SD): source ID ts647 from https://avkb.short.gy/tsepg.xml.gz shifted by -24 hours after repeated cross-source agreement.
+- **National Geographic** (NationalGeographic.in@SD): source ID NATIONAL.GEOGRAPHIC.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by +24 hours after repeated cross-source agreement.
 - **Isai Aruvi TV** (custom.isai.aruvi.tv): source ID ts647 from https://avkb.short.gy/tsepg.xml.gz shifted by -24 hours after repeated cross-source agreement.
 
-Detected source-ID corrections: **3**
+Detected source-ID corrections: **4**
