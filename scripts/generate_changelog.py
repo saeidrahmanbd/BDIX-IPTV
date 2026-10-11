@@ -88,8 +88,8 @@ def meaningful(prev,cur):
     added=[x for x in new if x["url"] not in old_urls]
     removed=[x for x in old if x["url"] not in new_urls]
 
-    new_channels=[x for x in added if x["group"]=="New Channels" and x["id"].lower() not in {y["id"].lower() for y in old}]
-    removed_channels=[x for x in removed if x["group"] not in {"Backup","New Channels","New Backup","New","Not Playing"} and x["id"].lower() not in {y["id"].lower() for y in new}]
+    new_channels=[]
+    removed_channels=[x for x in removed if x["group"] != "Backup" and x["id"].lower() not in {y["id"].lower() for y in new}]
 
     backup_updated=0
     for x in added:
@@ -110,7 +110,7 @@ def meaningful(prev,cur):
     duplicate_old=len(old_urls)-len(old)
     duplicate_new=len(new_urls)-len(new)
 
-    review_backups=[x for x in added if x["group"]=="New Backup"]
+    review_backups=[]
     return {
         "added":len(new_channels),
         "review_backups":len(review_backups),
