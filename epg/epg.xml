@@ -59818,15 +59818,12 @@ Bringing the best in television.</desc>
     <category>Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p11026703_b_h10_ac.jpg?lock=1280x720" />
   </programme>
-  <programme channel="DDKashir.in@SD" start="20261011151000 +0530" stop="20261011154000 +0530">
-    <title lang="en">Sadai-E-Saaz</title>
-    <desc lang="en">A magazine program offers a mix of articles, features, and segments covering various topics.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DD_KASHIR_236529_11OCT151000_11OCT154000/images/LANDSCAPE_169/1742140222000_DDKashir_Sadai-E-Saaz_236529.jpg" />
-  </programme>
-  <programme channel="DDKashir.in@SD" start="20261011154000 +0530" stop="20261011160000 +0530">
-    <title lang="en">Series Of Shrines</title>
-    <desc lang="en">A shrine is a sacred place containing something significant, like the tomb or relic of a religious figure.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DD_KASHIR_1707958_11OCT154000_11OCT160000/images/LANDSCAPE_169/1725207939000_DDKashir_SeriesOfShrines_1707958.jpg" />
+  <programme channel="DDKashir.in@SD" start="20261011153500 +0530" stop="20261011160000 +0530">
+    <title lang="en">Atha Shar</title>
+    <desc lang="en">Bringing the best in television.</desc>
+    <category lang="en">Documentary</category>
+    <category lang="en">Others</category>
+    <icon src="https://dtil.tmsimg.com/assets/p28952552_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="DDKashir.in@SD" start="20261011160000 +0530" stop="20261011163000 +0530">
     <title lang="en">Samanbal</title>
@@ -149166,14 +149163,6 @@ A young girl named Thulasi dreams of continuing her education despite living wit
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261011135100 +0530" stop="20261011154100 +0530" channel="LoLTV.in">
-    <title>Gumshoe</title>
-    <sub-title>LOL TV | ENGLISH</sub-title>
-    <desc>When hopeless New Orleans private eye Biff Basham is hired by a seductive nightclub singer to pay off a blackmailer, he thinks his money worries are over. But when his client's husband is murdered, he is plunged into a dangerous world of organized crime and espionage in this zany comedy. Can Biff unmask the killer before he becomes the next victim?</desc>
-    <category>Comedy</category>
-    <language>ENGLISH</language>
-    <icon src="https://d1ci3apo8cxilc.cloudfront.net/LOL-TV-ENG-DASH/videos/posters/LOL_TV_Comedy_Gumshoe_Movie_English.png" />
-  </programme>
   <programme start="20261011154100 +0530" stop="20261011175000 +0530" channel="LoLTV.in">
     <title>Girl Wired</title>
     <sub-title>LOL TV | ENGLISH</sub-title>
@@ -162501,45 +162490,20 @@ The host invites prominent personalities and engages them in candid conversation
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261011133200 +0530" stop="20261011154200 +0530" channel="NHBollyRaga.in">
-    <title>Disco Dancer</title>
-    <desc>Bringing back the flashy disco vibes with this sensational Disco Dancer jukebox. Whether you are a retro lover or a new-age dancer, these beats will keep you moving!</desc>
-    <category>Music</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/67060a12e937a72878091c1037771a25.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
+  <programme channel="NHBollyRaga.in" start="20261011133236 +0530" stop="20261011154227 +0530">
+    <title lang="en">Disco Dancer</title>
+    <desc lang="en">Bring back the flashy disco vibes with this sensational Disco Dancer jukebox. Whether you're a retro lover or a new-age dancer, these beats will keep you moving!</desc>
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/RUNNTV/PROGRAM/6aca2b1c211eae10dbeb74d1/images/LANDSCAPE_169/ae5bd272-c1d5-4cb4-871d-e191664dcbb7.png" />
   </programme>
-  <programme start="20261011154200 +0530" stop="20261011164700 +0530" channel="NHBollyRaga.in">
-    <title>Gane Naye Purane</title>
-    <desc>A comprehensive compilation of soulful golden era classics and the latest chart-topping Bollywood songs is played back-to-back.</desc>
-    <category>Music</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b190919d90a54a39292222b977e349c7.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
+  <programme channel="NHBollyRaga.in" start="20261011154228 +0530" stop="20261011164711 +0530">
+    <title lang="en">Gane Naye Purane</title>
+    <desc lang="en">Relive the golden era of music with classic melodies, retro rhythms, and timeless tunes that never fade. A nostalgic trip for true old-school lovers!</desc>
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/RUNNTV/PROGRAM/6aca2b1c211eae10dbeb74d3/images/LANDSCAPE_169/0aa714cd-3eb7-49f4-b200-a4834bd833e4.png" />
   </programme>
-  <programme start="20261011164700 +0530" stop="20261011190200 +0530" channel="NHBollyRaga.in">
-    <title>Kumar Sanu Alka Yagnik</title>
-    <desc>A comprehensive compilation of legendary hit songs featuring the iconic duo Kumar Sanu and Alka Yagnik, showcasing soulful melodies and romantic tracks, is played back-to-back.</desc>
-    <category>Music</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/9640bf13b0277aea45a6c35307596eb9.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261011190200 +0530" stop="20261011213700 +0530" channel="NHBollyRaga.in">
-    <title>R D Burman - Musical Maverick</title>
-    <desc>A selectively compiled collection of some of the most popular and nostalgic melodies by noted music director R. D. Burman is played in succession.</desc>
-    <category>Music</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/a977fd3c97359eb9ddff0164354be7cf.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
+  <programme channel="NHBollyRaga.in" start="20261011164712 +0530" stop="20261011190208 +0530">
+    <title lang="en">Kumar Sanu Alka Yagnik</title>
+    <desc lang="en">Fall in love all over again with Kumar Sanu &amp; Alka Yagnik! Their magical duets—full of passion, heartbreak, and nostalgia—are pure 90s gold.</desc>
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/RUNNTV/PROGRAM/6aca2b1d211eae10dbeb74d5/images/LANDSCAPE_169/21e433fa-3ddc-4729-baf3-64e6ba4b537f.png" />
   </programme>
   <programme start="20261011213700 +0530" stop="20261011225200 +0530" channel="NHBollyRaga.in">
     <title>Best Of 70s - The Golden Era</title>
@@ -190460,13 +190424,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <desc lang="en">A comprehensive compilation of some of the most popular songs produced by renowned artists is played to enthrall the audience.</desc>
     <icon src="https://iptv-epg.org/images/kIGMbNgmfX1YSmQwwE7SGufwTyQDQ9jq_JyJtZhUhJWhsbPK3yYVbDabpsoiZ1HBRDLr9qXzKTPgc_p8IDbJnvNotmVQlZOHsR5WVJwnmfE1tGcAJOUgPrJZNT1v" />
     <title lang="en">Music Xpress</title>
-  </programme>
-  <programme channel="Pop.uk" start="20261011100000 +0000" stop="20261011101000 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261011153000/list/ZEEPOPGrizzyAndTheLemmings2056732ed374174ed644f4f9c1a8d35e6818031.jpg" />
   </programme>
   <programme channel="Pop.uk" start="20261011101000 +0000" stop="20261011101900 +0000">
     <title lang="en">Grizzy And The Lemmings</title>
@@ -227070,17 +227027,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <category lang="en">Sport</category>
     <icon src="https://tv.assets.pressassociation.io/4ac10a17-809d-5998-ac39-064bc977d8e8.jpg" />
     <episode-num system="onscreen">S2026 E31</episode-num>
-  </programme>
-  <programme start="20261011152500 +0530" stop="20261011154000 +0530" channel="SongdewTV.in@SD">
-    <title>Songdew Select</title>
-    <desc>Featuring Best of Independent Music</desc>
-    <category>Music</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg?width=700" />
-    <episode-num system="onscreen">12</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
   </programme>
   <programme channel="SongdewTV.in@SD" start="20261011154000 +0530" stop="20261011154500 +0530">
     <title lang="en">Friday Night Originals</title>
@@ -307968,13 +307914,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <desc lang="en">It is the night of the Council of Wolves, but Akela is nowhere to be seen</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acad8a3c7923c1547c18da0/images/LANDSCAPE_169/9294_eec408e6-49c8-4992-8064-6a8b92904473.png" />
   </programme>
-  <programme channel="TinyPop.uk" start="20261011094300 +0000" stop="20261011101100 +0000">
-    <title lang="en">The Cat in the Hat Knows a Lot About That</title>
-    <desc lang="en">The kids want to get a trunk up into the treehouse and go to the Machine-a-Ma-Zoo, where they're introduced to simple machines. Then, Sally loses her 'slidiness'!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261011151300/list/TinyPOPTheCatintheHatKnowsaLotAboutThat2111789674ed20979814a5aa1ec1659a131af19.jpg" />
-  </programme>
   <programme channel="TinyPop.uk" start="20261011101100 +0000" stop="20261011103900 +0000">
     <title lang="en">The Cat in the Hat Knows a Lot About That</title>
     <desc lang="en">The kids want to get a trunk up into the treehouse and go to the Machine-a-Ma-Zoo, where they're introduced to simple machines. Then, Sally loses her 'slidiness'!</desc>
@@ -313427,14 +313366,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <category>Kids</category>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261017235300/list/TinyPOPTHEHIVE2151548c9e3feeb8927483ab4ea5a54ad023895.jpg" />
-  </programme>
-  <programme start="20261011152800 +0530" stop="20261011154000 +0530" channel="TollyTV.in">
-    <title>Jhansi Rani</title>
-    <sub-title>TOLLY TV | TELUGU</sub-title>
-    <desc>Jhansi Rani hunts a conman who tricked women, seeking justice for her sister.</desc>
-    <category>Movies</category>
-    <language>TELUGU</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/TOLLY%20TV/IMAGES/Jhansi%20Rani.png" />
   </programme>
   <programme start="20261011154000 +0530" stop="20261011155200 +0530" channel="TollyTV.in">
     <title>Jhansi Rani</title>
@@ -366101,40 +366032,6 @@ Delving into a range of varied topics, the host discusses the social, economic a
     <episode-num system="onscreen">E1</episode-num>
     <premiere />
   </programme>
-  <programme channel="custom.boomerang" start="20261011100000 +0000" stop="20261011101000 +0000">
-    <title lang="en">Looney Tunes</title>
-    <sub-title lang="en">Stupor Duck</sub-title>
-    <desc lang="en">Daffy Duck plays Cluck Trent by day and Stupor Duck by night to fight evil in a Superman parody.</desc>
-    <credits>
-      <actor>Mel Blanc</actor>
-      <actor>June Foray</actor>
-    </credits>
-    <date>1961</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p24768210_b_h10_ae.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVY</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>0</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
-  </programme>
   <programme channel="custom.boomerang" start="20261011101000 +0000" stop="20261011102000 +0000">
     <title lang="en">Looney Tunes</title>
     <sub-title lang="en">The Slap-Hoppy Mouse</sub-title>
@@ -398469,16 +398366,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261011153700 +0530" stop="20261011154100 +0530" channel="custom.duck.tv">
-    <title>Milo Dino</title>
-    <desc>Milo, the little dinosaur, learns new things about their era every day and has astonishing adventures with his dinosaur friends.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/229ffc6adfd30cd5b8ec7527beef3d51.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261011154100 +0530" stop="20261011154400 +0530" channel="custom.duck.tv">
     <title>Connected World</title>
     <desc>Children of different nationalities meet at a day-care centre. As they play together, they also explore different cultures and learn to socialise.</desc>
@@ -406224,34 +406111,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <rating>
       <value>TVY</value>
     </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011100600 +0000" stop="20261011100800 +0000">
-    <title lang="en">Fireteam</title>
-    <desc lang="en">Three firemen help out the residents of their village every way they can.</desc>
-    <date>2016</date>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Educational</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13128115_b_h10_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011100800 +0000" stop="20261011101200 +0000">
-    <title lang="en">Mimo and Bobo PLUS</title>
-    <desc lang="en">Mimo and his loyal friend Bobo set out for a world of preschool adventure as they gain valuable experiences and skills along the way.</desc>
-    <date>2016</date>
-    <category lang="en">Children</category>
-    <category lang="en">Educational</category>
-    <icon src="http://dtil.tmsimg.com/assets/p22593846_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
   </programme>
   <programme channel="custom.ducktv" start="20261011101200 +0000" stop="20261011101500 +0000">
     <title lang="en">Hubbi Will Take Care of It</title>
@@ -483955,16 +483814,6 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
     <rating system="Kijkwijzer">
       <value>6</value>
     </rating>
-  </programme>
-  <programme channel="custom.the.q" start="20261011152000 +0530" stop="20261011154000 +0530">
-    <title>Maskari</title>
-    <desc>A confident and fun-loving young man gets into comedic situations as he lives his life and spends time with his family and friends.</desc>
-    <category>TV Show</category>
-    <category>Comedy</category>
-    <credits>
-      <actor>Chetan Lokhande</actor>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p27208513_b_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="custom.the.q" start="20261011154000 +0530" stop="20261011160000 +0530">
     <title>Teleshopping</title>
