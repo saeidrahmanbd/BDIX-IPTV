@@ -173,7 +173,7 @@ lines += [
     "",
     "- Permitted markets: Indian, Chinese, Korean, Thai, Turkish, Indonesian, and Hollywood.",
     "- Only movie/music candidates are accepted by the strict updater.",
-    "- Locked categories are preserved and **New Channels** remains last.",
+    "- Locked categories are preserved and Backup remains last.",
 ]
 
 REPORT.parent.mkdir(parents=True, exist_ok=True)
