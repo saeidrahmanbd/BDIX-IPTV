@@ -617,10 +617,10 @@ def get_iptv_org_candidate(channel_label, tvg_id, indexes):
         # Some channel catalogs write a brand as one token (10TV) while the
         # playlist uses a separator (10 TV). Accept this only if the compact
         # spelling resolves to one unique channel ID across all known aliases.
-        compact_key = re.sub(r"\\s+", "", key)
+        compact_key = re.sub(r"\s+", "", key)
         compact_ids = set()
         for alias, alias_ids in name_to_ids.items():
-            if re.sub(r"\\s+", "", alias) == compact_key:
+            if re.sub(r"\s+", "", alias) == compact_key:
                 compact_ids.update(alias_ids)
         if len(compact_ids) == 1:
             ids = compact_ids
