@@ -32,6 +32,7 @@ REJECTED_PREVIOUS_MATCHES = {
     "nvisionbd-sport-2.jpg": ("nvisionbd-sport-2.svg", "Prior match was a different regional sports channel"),
 }
 
+# Repository-first policy: scan every eligible file in /logos before any external lookup.
 # Known exact local assets. Use only if the target file exists and is non-generic.
 LOCAL_LOGO_FILES = {
     "Zee Cinema HD": "zee-cinema.png",
