@@ -1,13 +1,13 @@
 # NVisionBD Playlist Audit
 
-Generated (UTC): **2026-10-11T13:40:26+00:00**
+Generated (UTC): **2026-10-11T14:14:55+00:00**
 
 ## Summary
 
 - Playlist entries: **561**
 - Unique stream URLs: **561**
 - Duplicate stream URLs: **0**
-- Duplicate channel identities: **62**
+- Duplicate channel identities: **60**
 - Missing channel IDs: **0**
 - Missing logos: **0**
 - Missing channel numbers: **0**
@@ -31,10 +31,10 @@ Generated (UTC): **2026-10-11T13:40:26+00:00**
 
 ## Stream Probe Summary
 
-- Responsive: **8**
+- Responsive: **11**
 - Restricted: **0**
 - Dead: **121**
-- Unverified: **432**
+- Unverified: **429**
 
 ## Duplicate Stream URLs
 
@@ -93,7 +93,6 @@ None.
 - sangeetbangla.in@sd: Sangeet Bangla, Sangeet Bangla (Alt 2), Sangeet Bangla (Alt 3), Sangeet Bangla (Alt 4)
 - satv.bd: Sa TV (Alt 2), Sa TV HD
 - shemarootv.in@sd: Shemaroo TV, Shemaroo TV (Alt 2)
-- sksparh: US Sky Sports Main Event, US Sky Sports Premier League
 - sony.aath.in: Sony Aath, Sony Aath (Alt 2)
 - star.jalsha.in: Star Jalsha (Alt 2), Star Jalsha (Alt 3), Star Jalsha (Alt 4), Star Jalsha HD
 - star.jalsha.movies.in: Jalsha Movies (Alt 2), Jalsha Movies HD
@@ -102,7 +101,6 @@ None.
 - starsportsselect1.in: In -hindi- Star Sports 1 HD, In Star Sports Select 1 HD
 - steelbirdmusic.in@sd: Steelbird Music, Steelbird Music (Alt 2)
 - thikanatv.us: Thikana, Thikana (Alt 2)
-- tntspor: UK TNT Sports 1 HD, UK TNT Sports 2 HD, UK TNT Sports 3 HD, UK TNT Sports 4 HD
 - zeebangla.in@hd: Zee Bangla (Alt 2), Zee Bangla (Alt 3), Zee Bangla HD
 
 ## Missing Metadata

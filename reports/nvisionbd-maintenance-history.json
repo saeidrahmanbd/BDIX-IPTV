@@ -208,5 +208,21 @@
     "missing_logos": 0,
     "missing_numbers": 0,
     "malformed": 0
+  },
+  {
+    "timestamp_utc": "2026-10-11T14:14:55+00:00",
+    "entries": 561,
+    "unique_urls": 561,
+    "status_counts": {
+      "Dead": 121,
+      "Unverified": 429,
+      "Responsive": 11
+    },
+    "duplicate_urls": 0,
+    "duplicate_ids": 60,
+    "missing_ids": 0,
+    "missing_logos": 0,
+    "missing_numbers": 0,
+    "malformed": 0
   }
 ]
