@@ -1,6 +1,6 @@
 # NVisionBD Playlist Audit
 
-Generated (UTC): **2026-10-11T13:31:45+00:00**
+Generated (UTC): **2026-10-11T13:34:21+00:00**
 
 ## Summary
 
@@ -31,10 +31,10 @@ Generated (UTC): **2026-10-11T13:31:45+00:00**
 
 ## Stream Probe Summary
 
-- Responsive: **10**
+- Responsive: **8**
 - Restricted: **0**
 - Dead: **121**
-- Unverified: **430**
+- Unverified: **432**
 
 ## Duplicate Stream URLs
 
