@@ -220,7 +220,7 @@ def clean(s):
  s=re.sub(r"\s*\(\s*(?:\d{3,4}p|UHD|FHD|HD\+?|SD)\s*\)\s*$","",s,flags=re.I)
  s=re.sub(r"\s+(?:\d{3,4}p|UHD|FHD|HD\+?|SD)\s*$","",s,flags=re.I)
  return s.strip()
-CASE={"ATN BANGLA UK":"ATN Bangla UK","SUN BANGLA":"Sun Bangla","Ekhone TV":"Ekhon TV","EKHONE TV":"Ekhon TV","Ekattor Tv":"Ekattor TV","Sony MAX":"Sony Max","Sony AATH":"Sony Aath"}
+CASE={"ATN BANGLA UK":"ATN Bangla UK","SUN BANGLA":"Sun Bangla","Ekhone TV":"Ekhon TV","EKHONE TV":"Ekhon TV","Ekattor Tv":"Ekattor TV","Sony MAX":"Sony Max","Sony AATH":"Sony Aath","Sony Entertainment Television":"Sony Entertainment TV"}
 def normalize_id(cid):
  return re.sub(r"@SD(?=@ALT1$)","",str(cid or ""),flags=re.I)
 def set_attr(m,k,v):
