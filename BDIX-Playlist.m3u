@@ -21,11 +21,11 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_AC5diY9zoPDtnn10RTLCo
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9k2JufmTt1ob_ZNWpwfjKY
 #EXTINF:-1 xui-id="358" tvg-id="custom.btv.news" tvg-name="BTV News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-news.png" tvg-chno="17" channel-id="custom.btv.news" group-title="Bangladesh",BTV News
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8YoekT0BdrjgEfQ4fmPrIo
-#EXTINF:-1 xui-id="179032" tvg-id="custom.channel.1" tvg-name="Channel 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-1.png" tvg-chno="19" channel-id="custom.channel.1" group-title="Bangladesh",Channel 1
+#EXTINF:-1 xui-id="179032" tvg-id="custom.channel.1" tvg-name="Channel 1" tvg-chno="19" channel-id="custom.channel.1" group-title="Bangladesh",Channel 1
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h3hwJ_7dBno_QXXvQA_CF8g
-#EXTINF:-1 xui-id="18817" tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png" tvg-chno="22" channel-id="Channel24.bd" group-title="Bangladesh",Channel 24
+#EXTINF:-1 xui-id="18817" tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-chno="22" channel-id="Channel24.bd" group-title="Bangladesh",Channel 24
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h1qqs5oS5S6n_LTBHjGVQGE
-#EXTINF:-1 xui-id="382" tvg-id="Channel9.bd" tvg-name="Channel 9" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-9.png" tvg-chno="23" channel-id="Channel9.bd" group-title="Bangladesh",Channel 9
+#EXTINF:-1 xui-id="382" tvg-id="Channel9.bd" tvg-name="Channel 9" tvg-chno="23" channel-id="Channel9.bd" group-title="Bangladesh",Channel 9
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hz7XyihAYmQKXwDmgiEPYRY
 #EXTINF:-1 xui-id="363" tvg-id="ChannelI.bd" tvg-name="Channel I" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-i.png" tvg-chno="24" channel-id="ChannelI.bd" group-title="Bangladesh",Channel I
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9llgrLKyIYwnVGkGOOW3dM
