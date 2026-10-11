@@ -84,21 +84,7 @@ jobs:
             python scripts/pre_publish_gate.py
             GATE_STATUS=$?
             set -e
-            python - <<'PY'
-          import json,re
-          from pathlib import Path
-          from datetime import datetime,timezone
-          p=Path('reports/playlist-audit.md').read_text(encoding='utf-8')
-          h=Path('reports/stream-health.md').read_text(encoding='utf-8') if Path('reports/stream-health.md').exists() else ''
-          def metric(s,label):
-              m=re.search(rf'- {re.escape(label)}: \*\*(\d+)\*\*',s); return int(m.group(1)) if m else None
-          rec={'timestamp_utc':datetime.now(timezone.utc).isoformat(),'entries':metric(p,'Playlist entries'),'unique_channel_ids':metric(p,'Unique channel IDs'),'duplicate_ids':metric(p,'IDs with multiple streams'),'duplicate_urls':metric(p,'Duplicate stream URLs'),'metadata_conflicts':metric(p,'Metadata conflicts'),'logo_exceptions':metric(p,'Logo exceptions'),'primary_number_collisions':metric(p,'Primary channel-number collisions'),'protected_primary_changes':metric(p,'Protected primary-entry changes'),'health_tested':metric(h,'Streams tested'),'health_failures':metric(h,'Failed this check'),'health_persistent':metric(h,'Persistent failures (3+ consecutive)')}
-          f=Path('reports/maintenance-history.json')
-          try: hist=json.loads(f.read_text(encoding='utf-8')) if f.exists() else []
-          except Exception: hist=[]
-          if not isinstance(hist,list): hist=[]
-          hist.append(rec); f.parent.mkdir(parents=True,exist_ok=True); f.write_text(json.dumps(hist[-180:],indent=2)+'\n',encoding='utf-8')
-          PY
+            python scripts/record_maintenance_history.py
             python scripts/generate_dashboard.py
             # Stream health is diagnostic only: transient HTTP timeouts and
             # CDN/protection failures must never roll back valid playlist
@@ -127,36 +113,7 @@ jobs:
             fi
             # Rewrite the latest history record after any rollback so its
             # metrics describe the final retained playlist, not a rejected candidate.
-            python - <<'PY'
-            import json,re
-            from pathlib import Path
-            from datetime import datetime,timezone
-            def metric(text,label):
-                m=re.search(rf'- {re.escape(label)}: {re.escape(chr(42)*2)}(\d+){re.escape(chr(42)*2)}',text)
-                return int(m.group(1)) if m else None
-            audit=Path('reports/playlist-audit.md').read_text(encoding='utf-8')
-            health=Path('reports/stream-health.md').read_text(encoding='utf-8')
-            p=Path('reports/maintenance-history.json')
-            try: hist=json.loads(p.read_text(encoding='utf-8'))
-            except Exception: hist=[]
-            if isinstance(hist,list) and hist:
-                rec=hist[-1]
-                rec.update({
-                  'timestamp_utc':datetime.now(timezone.utc).isoformat(),
-                  'entries':metric(audit,'Playlist entries'),
-                  'unique_channel_ids':metric(audit,'Unique channel IDs'),
-                  'duplicate_ids':metric(audit,'IDs with multiple streams'),
-                  'duplicate_urls':metric(audit,'Duplicate stream URLs'),
-                  'metadata_conflicts':metric(audit,'Metadata conflicts'),
-                  'logo_exceptions':metric(audit,'Logo exceptions'),
-                  'primary_number_collisions':metric(audit,'Primary channel-number collisions'),
-                  'protected_primary_changes':metric(audit,'Protected primary-entry changes'),
-                  'health_tested':metric(health,'Streams tested'),
-                  'health_failures':metric(health,'Failed this check'),
-                  'health_persistent':metric(health,'Persistent failures (3+ consecutive)')
-                })
-                p.write_text(json.dumps(hist[-180:],indent=2)+chr(10),encoding='utf-8')
-            PY
+            python scripts/record_maintenance_history.py --refresh
             python scripts/generate_dashboard.py
             # The guide is a generated publication artifact. Restore the
             # publish-approved copy immediately before staging so later
