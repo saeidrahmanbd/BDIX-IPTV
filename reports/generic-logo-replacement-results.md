@@ -2,28 +2,24 @@
 
 This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.
 
-- Run time: 2026-10-11 12:01 UTC
+- Run time: 2026-10-11 12:03 UTC
 - IPTV-org dataset: loaded
-- Unique generic assets examined: 80
-- Successful replacements: 5
-- Unresolved/manual review: 75
+- Unique generic assets examined: 76
+- Successful replacements: 2
+- Unresolved/manual review: 74
 
 ## Replacements
 
 | Channel | Former generic file | New local file | Source | License / attribution |
 |---|---|---|---|---|
-| Love Gold Bangla | nvisionbd-love-gold-bangla.svg | [nvisionbd-official-love-gold-bangla.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-love-gold-bangla.png) | [Public radio playlist logo reference](https://github.com/alaminislam203/my_playlist) | Station logo; reuse rights not specified |
-| Madina Live | nvisionbd-madina.svg | [nvisionbd-official-madina-live.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-madina-live.png) | [Madina Live public playlist logo reference](https://cdn-globecast.akamaized.net/live/eds/saudi_sunnah/hls_roku/index.m3u8) | Station logo; reuse rights not specified |
-| Setanta Sport | nvisionbd-setanta-sport.svg | [nvisionbd-official-setanta-sport.jpg](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-setanta-sport.jpg) | [Setanta Sport logo reference in public playlist](https://github.com/kilirushi/iptv/blob/f8765b54e7b66080201e07d168418e302c672c7d/cate/bein_sport.m3u) | Source/rights should be verified separately |
+| 51 Radio TV [geo-blocked] | nvisionbd-51-radio-tv-geo-blocked.svg | [nvisionbd-official-51-radio-tv-geo-blocked.webp](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-51-radio-tv-geo-blocked.webp) | [IPRTL logo collection exact 51 Radio TV match](https://github.com/iprtl/p1/tree/master/logo) | Logo source found in public repository; reuse rights not stated |
 | The Q | nvisionbd-the-q.svg | [nvisionbd-official-the-q.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-the-q.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/india/the-q-in.png) | No license file found in source repository |
-| Wild Life | nvisionbd-wild-life.svg | [wildearth.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wildearth.png) | [Existing verified repository asset](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) | Existing repository asset |
 
 ## Unresolved — retained for manual source verification
 
 | Channel | Current placeholder asset | Reason |
 |---|---|---|
 | 10 TV | nvisionbd-10-tv.svg | No unique source-verified channel logo found |
-| 51 Radio TV [geo-blocked] | nvisionbd-51-radio-tv-geo-blocked.svg | No unique source-verified channel logo found |
 | 88 Stereo [not 24/7] | nvisionbd-88-stereo-not-24-7.svg | No unique source-verified channel logo found |
 | Abc Music Radio | nvisionbd-abc-music-radio.svg | No unique source-verified channel logo found |
 | Adt FM | nvisionbd-adt-fm.svg | No unique source-verified channel logo found |
@@ -90,7 +86,7 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Tapmad | nvisionbd-tapmad.svg | No unique source-verified channel logo found |
 | TNT Sport 1 | nvisionbd-tnt-sport-1.svg | No unique source-verified channel logo found |
 | Utbd FM | nvisionbd-utbd-fm.svg | No unique source-verified channel logo found |
-| Uttorbango Betar | nvisionbd-uttorbango-betar.svg | No unique source-verified channel logo found |
+| Uttorbango Betar | nvisionbd-uttorbango-betar.svg | Lookup/download/validation error: source bytes are not a supported channel image |
 | Valobasar Rupali Sur | nvisionbd-valobasar-rupali-sur.svg | No unique source-verified channel logo found |
 | Wc Music | nvisionbd-wc-music.svg | No unique source-verified channel logo found |
 | Whiples Cinema | nvisionbd-whiples-cinema.svg | No unique source-verified channel logo found |

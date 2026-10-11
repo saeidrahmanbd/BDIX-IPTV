@@ -1,6 +1,6 @@
 # Generic Channel Logo Audit — Three Playlists
 
-Audit date: 2026-10-11 12:01 UTC  
+Audit date: 2026-10-11 12:03 UTC  
 Repository: https://github.com/saeidrahmanbd/BDIX-IPTV  
 Method: scans current playlist metadata and checks referenced local SVG files for the generic CHANNEL MARK template.
 
@@ -10,15 +10,14 @@ Method: scans current playlist metadata and checks referenced local SVG files fo
 |---|---:|---:|
 | IPTV-Playlist.m3u | 1145 | 0 |
 | BDIX-Playlist.m3u | 217 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 75 |
+| NVisionBD-Playlist.m3u | 561 | 74 |
 
-Current NVisionBD placeholder assets: **75 unique files**.
+Current NVisionBD placeholder assets: **74 unique files**.
 
 ## Remaining affected NVisionBD channel labels
 
 - &xplorer HD
 - 10 TV
-- 51 Radio TV [geo-blocked]
 - 88 Stereo [not 24/7]
 - Abc Music Radio
 - Adt FM
