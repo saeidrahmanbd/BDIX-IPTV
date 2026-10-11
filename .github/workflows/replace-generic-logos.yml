@@ -2,6 +2,12 @@ name: Replace Generic Channel Logos
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/replace_generic_logos.py"
+      - ".github/workflows/replace-generic-logos.yml"
 
 permissions:
   contents: write
@@ -13,7 +19,7 @@ concurrency:
 jobs:
   replace:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,7 +35,7 @@ jobs:
       - name: Find and replace verified generic logos
         run: python scripts/replace_generic_logos.py
 
-      - name: Commit verified replacements and report
+      - name: Commit verified replacements and reports
         run: |
           if git diff --quiet; then
             echo "No repository changes were produced."
@@ -37,6 +43,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add NVisionBD-Playlist.m3u logos reports/generic-logo-replacement-results.md
+          git add NVisionBD-Playlist.m3u logos reports/generic-logo-replacement-results.md reports/generic-logo-audit.md
           git commit -m "Replace verified generic channel logos"
           git push
