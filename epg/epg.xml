@@ -90277,23 +90277,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="Discovery Kids.in" start="20261011143600 +0530" stop="20261011144700 +0530">
-    <title lang="en">Titoo</title>
-    <desc lang="en">Titoo, an inspiring eight-year-old boy, wishes to help everyone in need. However, his attempts only get him into trouble.</desc>
-    <credits>
-      <actor>Harsh Joshi</actor>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29329295_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S13 E21</episode-num>
-  </programme>
   <programme channel="Discovery Kids.in" start="20261011144700 +0530" stop="20261011145800 +0530">
     <title lang="en">Titoo</title>
     <desc lang="en">Titoo, an inspiring eight-year-old boy, wishes to help everyone in need. However, his attempts only get him into trouble.</desc>
@@ -102962,23 +102945,6 @@ Zak and the crew descend upon a Southern California park to investigate a haunte
     <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
       <value>A12</value>
     </rating>
-  </programme>
-  <programme channel="DiscoveryKids.au" start="20261011143600 +0530" stop="20261011144700 +0530">
-    <title lang="en">Titoo</title>
-    <desc lang="en">Titoo, an inspiring eight-year-old boy, wishes to help everyone in need. However, his attempts only get him into trouble.</desc>
-    <credits>
-      <actor>Harsh Joshi</actor>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29329295_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S13 E21</episode-num>
   </programme>
   <programme channel="DiscoveryKids.au" start="20261011144700 +0530" stop="20261011145800 +0530">
     <title lang="en">Titoo</title>
@@ -130774,17 +130740,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme channel="GREATmovies.uk" start="20261011082000 +0000" stop="20261011091600 +0000">
-    <title lang="en">Hailey Dean Mystery: Dating Is</title>
-    <desc lang="en">Murder: When a dating app is linked to multiple missing persons cases, can therapist and sleuth Hailey Dean prevent first dates becoming deadly dates.</desc>
-    <date>2017</date>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Detective</category>
-    <icon src="https://images.metadata.sky.com/pd-image/16e36e77-6ba7-369e-a162-d39ab216f2a1/16-9" />
-    <rating system="UK">
-      <value>PG</value>
-    </rating>
-  </programme>
   <programme channel="GREATmovies.uk" start="20261011091600 +0000" stop="20261011092100 +0000">
     <title lang="en">Good News on GREAT!</title>
     <desc lang="en">An uplifting round-up of good news stories from the UK and around the world.</desc>
@@ -138821,17 +138776,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <title lang="en">Atashinchi</title>
     <desc lang="en">The Tachibanas' daily lives reveal a warm, everyday family. By watching small routines, readers see love, habits, and bonds that form a clear, relatable portrait.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_HUNGAMA_1481490_14OCT060000_14OCT070000/images/LANDSCAPE_169_HD/HungamaTV_Atashinchi_1481490.jpg" />
-  </programme>
-  <programme start="20261011141400 +0530" stop="20261011144900 +0530" channel="INWILD.nl">
-    <title>Race of Life</title>
-    <desc>A look at communities among wild animals, both big and small, and their struggle to survive in hostile environments.</desc>
-    <category>Documentary</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/5baf73e91638367ab4d8f3912e11de1c.jpg?width=700" />
-    <episode-num system="onscreen">6</episode-num>
-    <rating>
-      <value>TVG</value>
-    </rating>
   </programme>
   <programme start="20261011144900 +0530" stop="20261011151600 +0530" channel="INWILD.nl">
     <title>Second Chance Pets</title>
@@ -166105,14 +166049,6 @@ The host invites prominent personalities and engages them in candid conversation
       <value>PG</value>
     </rating>
   </programme>
-  <programme channel="NOWRock.uk@SD" start="20261011060000 +0000" stop="20261011092000 +0000">
-    <title lang="en">Air Guitar Anthems! 1980-1989</title>
-    <desc lang="en">Dust down your air guitar, because we've 40 rock anthems from the '80s to strum along to! From AC/DC in 1980 to GN'R in 1989, via U2, Kiss, Toto, Springsteen and ZZ Top.</desc>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Music</category>
-    <category lang="en">Special</category>
-    <icon src="https://jrsy.tmsimg.com/assets/p19784321_i_h9_ab.jpg" />
-  </programme>
   <programme channel="NOWRock.uk@SD" start="20261011092000 +0000" stop="20261011100000 +0000">
     <title lang="en">Sunday Rock Classics</title>
     <desc lang="en">Rounding off the week with rock classics and anthems! We guarantee AC/DC, Nirvana, Queen, Meat Loaf, Bon Jovi &amp; much more!</desc>
@@ -169311,23 +169247,26 @@ Life in the African jungle is a constant, brutal game of survival, where motherl
     <icon src="https://iptv-epg.org/images/hjx2yoIhH_XdHongSbxny5UjSDDRiGwXByiBwUM4MvPcsSXk7kE63NFPJOWNuIpFJ2yDxvZZe9x8WqwX7kZZ75nOUICVdF1I1D_lCBrYcG546cUwwJGSgG1KHPm8" />
     <title lang="en">Africa's Deadliest</title>
   </programme>
-  <programme channel="NickJr.in@SD" start="20261011091500 +0000" stop="20261011092000 +0000">
+  <programme channel="NickJr.in@SD" start="20261011143000 +0530" stop="20261011150000 +0530">
     <title lang="en">Peppa Pig</title>
-    <sub-title lang="en">Funny Music</sub-title>
-    <desc lang="en">A new synthesiser arrives for Daddy Pig, and his family collect sounds for it from around the house while he is out at work.</desc>
+    <desc lang="en">A curious, naive, yet friendly little pig navigates through her life with her friends and family.</desc>
+    <credits>
+      <actor>John Sparkes</actor>
+      <actor>Amelie Bea Smith</actor>
+      <actor>Richard Ridings</actor>
+      <actor>Morwenna Banks</actor>
+      <actor>Oliver May</actor>
+      <actor>Meg Hall</actor>
+      <actor>Tallulah Conabeare</actor>
+      <director>Phil Hall</director>
+      <director>Joris van Hulzen</director>
+      <director>Mark Baker</director>
+      <director>Neville Astley</director>
+      <producer>Julian Nott</producer>
+    </credits>
     <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/da849f17-1e64-4c7d-9d66-3567a2bc6158/16-9" />
-    <episode-num system="xmltv_ns">5.8.</episode-num>
-  </programme>
-  <programme channel="NickJr.in@SD" start="20261011092000 +0000" stop="20261011092900 +0000">
-    <title lang="en">Peppa Pig</title>
-    <sub-title lang="en">Parking Ticket</sub-title>
-    <desc lang="en">When Daddy Pig gets a parking ticket, Peppa and George learn that grown-ups have rules just like children - and get told off too.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/e44e1788-3f64-4435-8951-8f6ada3f99c3/16-9" />
-    <episode-num system="xmltv_ns">5.6.</episode-num>
+    <category lang="en">Animation</category>
+    <icon src="https://dtil.tmsimg.com/assets/p274928_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="NickJr.in@SD" start="20261011150000 +0530" stop="20261011153000 +0530">
     <title lang="en">Masha and the Bear</title>
@@ -209307,15 +209246,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <icon src="https://iptv-epg.org/images/fpKNMxWiWcn11supKxjEueE6GXoPYQKEDCujIqfJi3z82GbfHFWWSB4pfIxJqmeDytJZuaVLBuZGg0y2hP4_G5DHfnplRKXySl0Hlm_SWaOXcGauZp1XpSLAifs_rg" />
     <title lang="en">Adi Anadi</title>
   </programme>
-  <programme start="20261011140100 +0530" stop="20261011144900 +0530" channel="RedBullTV.at@EUMENA">
-    <title lang="en-GB">MTB RAW</title>
-    <sub-title lang="en-GB">To become one of the world's best MTB slopestyle riders it takes a dedication to training in the right conditions. Step inside Matt Jones' secret compound to find out what it takes to beat the best</sub-title>
-    <desc lang="en-GB">See what happens when the talent and creativity of filmmakers and MTB athletes is combined. A special kind of magic emerges, including incredible riding with ground-breaking filmmaking for the ultimate two-wheeled rush.</desc>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/7e45058573af0154ef68ba092b33c0ee.jpg" />
-    <episode-num system="onscreen">E5</episode-num>
-    <premiere />
-  </programme>
   <programme start="20261011144900 +0530" stop="20261011153600 +0530" channel="RedBullTV.at@EUMENA">
     <title lang="en-GB">True to This</title>
     <desc lang="en-GB">The first to combine surf, skate and snowboarding under one brand, exploring Volcom's groundbreaking fusion of this trio of board sports in a cinematic journey celebrating rebellious style and attitude.</desc>
@@ -229808,12 +229738,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <category lang="en">Sport</category>
     <icon src="https://tv.assets.pressassociation.io/4ac10a17-809d-5998-ac39-064bc977d8e8.jpg" />
     <episode-num system="onscreen">S2026 E31</episode-num>
-  </programme>
-  <programme channel="SongdewTV.in@SD" start="20261011144000 +0530" stop="20261011145000 +0530">
-    <title lang="en">HIP-HOP</title>
-    <desc lang="en">A compilation of greatest hits of the most popular musical genre, Hip-hop, featuring songs from various popular artists.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28411970_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="SongdewTV.in@SD" start="20261011145000 +0530" stop="20261011145500 +0530">
     <title lang="en">Track Tales</title>
@@ -297558,19 +297482,6 @@ Premier League match highlights show top goals, best plays and key moments, whil
       <value>15</value>
     </rating>
   </programme>
-  <programme start="20261011133000 +0530" stop="20261011144900 +0530" channel="StingrayDJAZZ.ca@SD">
-    <title>Tony Bennett - Live in London</title>
-    <desc>Tony Bennett makes his debut appearance at London's iTunes Fest at the Roundhouse, performing "The Best Is Yet to Come," "Fly Me to the Moon" and "I Left My Heart in San Francisco."</desc>
-    <category>Music</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/64fdfba10e1c1bcbeca19e62926a8727.jpg?width=700" />
-    <credits>
-      <actor>Tony Bennet</actor>
-    </credits>
-    <rating>
-      <value>AL</value>
-    </rating>
-  </programme>
   <programme start="20261011144900 +0530" stop="20261011145900 +0530" channel="StingrayDJAZZ.ca@SD">
     <title>Great Jazz Pianists</title>
     <desc>Embark on a journey through the world of jazz piano as we showcase some iconic and influential pianists in history; this collection of performances captures the unique essence and brilliance of legendary pianists.</desc>
@@ -317275,14 +317186,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <category>Kids</category>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261017235300/list/TinyPOPTHEHIVE2151548c9e3feeb8927483ab4ea5a54ad023895.jpg" />
-  </programme>
-  <programme start="20261011143600 +0530" stop="20261011144800 +0530" channel="TollyTV.in">
-    <title>Lavvandi Navvandi</title>
-    <sub-title>TOLLY TV | TELUGU</sub-title>
-    <desc>Two friends with the same name cause hilarious mix-ups with their girlfriends.</desc>
-    <category>Movies</category>
-    <language>TELUGU</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/TOLLY%20TV/IMAGES/Lavvandi%20Navvandi.png" />
   </programme>
   <programme start="20261011144800 +0530" stop="20261011150100 +0530" channel="TollyTV.in">
     <title>Lavvandi Navvandi</title>
@@ -366467,15 +366370,6 @@ Delving into a range of varied topics, the host discusses the social, economic a
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261011140100 +0530" stop="20261011144900 +0530" channel="custom.bdix.redbulltv">
-    <title lang="en-GB">MTB RAW</title>
-    <sub-title lang="en-GB">To become one of the world's best MTB slopestyle riders it takes a dedication to training in the right conditions. Step inside Matt Jones' secret compound to find out what it takes to beat the best</sub-title>
-    <desc lang="en-GB">See what happens when the talent and creativity of filmmakers and MTB athletes is combined. A special kind of magic emerges, including incredible riding with ground-breaking filmmaking for the ultimate two-wheeled rush.</desc>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/7e45058573af0154ef68ba092b33c0ee.jpg" />
-    <episode-num system="onscreen">E5</episode-num>
-    <premiere />
-  </programme>
   <programme start="20261011144900 +0530" stop="20261011153600 +0530" channel="custom.bdix.redbulltv">
     <title lang="en-GB">True to This</title>
     <desc lang="en-GB">The first to combine surf, skate and snowboarding under one brand, exploring Volcom's groundbreaking fusion of this trio of board sports in a cinematic journey celebrating rebellious style and attitude.</desc>
@@ -400560,17 +400454,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <desc lang="en">It is about a clumsy boy, mitsuo suwa, who is chosen to apprentice to a powerful superhero</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DISNEY_CHANNEL_750568_14OCT060000_14OCT070000/images/LANDSCAPE_169_HD/DisneyChannel_Perman_750568.jpg" />
   </programme>
-  <programme channel="custom.disney.jr" start="20261011091000 +0000" stop="20261011092000 +0000">
-    <title lang="en">Bluey</title>
-    <desc lang="en">Wild Girls:Coco wants to play a game but Chloe has other plans.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/f9412c4d-d5fb-3270-880f-68afc445305e/16-9" />
-    <episode-num system="xmltv_ns">29..</episode-num>
-    <rating system="UK">
-      <value>U</value>
-    </rating>
-  </programme>
   <programme channel="custom.disney.jr" start="20261011092000 +0000" stop="20261011093000 +0000">
     <title lang="en">Bluey</title>
     <desc lang="en">The Decider:The Heelers and Lucky's family watch the game.</desc>
@@ -402985,29 +402868,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261011144400 +0530" stop="20261011144700 +0530" channel="custom.duck.tv">
-    <title>Small - But Hardworking</title>
-    <desc>Three clever elves love to build amazing things using wood and ice. With their creative skills, they craft sturdy and beautiful structures.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/7a01acd3c602a442818012b4144b11f6.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261011144700 +0530" stop="20261011145000 +0530" channel="custom.duck.tv">
-    <title>Happy Meadow</title>
-    <desc>Sari and Nati are two playful rabbits who hop to the forest to enjoy the day with their woodland friends. They go on adventures and learn new things every day.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/26a36556f4fc9983561213c2940716d8.jpg?width=700" />
-    <credits>
-      <director>Roza Györffy</director>
-    </credits>
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261011145000 +0530" stop="20261011145200 +0530" channel="custom.duck.tv">
@@ -410955,57 +410815,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/0bb4bb7bf006a9877bf4dfe1935cb547.jpg?width=700" />
     <rating>
       <value>TVY</value>
-    </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011091300 +0000" stop="20261011091700 +0000">
-    <title lang="en">Lola and the Numbers</title>
-    <desc lang="en">Lola, a clever young girl, is always ready to count objects with her Number Friends. Together, they embark on several adventures and learn how to solve numerical problems.</desc>
-    <credits>
-      <director>Roza Györffy</director>
-    </credits>
-    <date>2016</date>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Fantasy</category>
-    <category lang="en">Educational</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13127877_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011091700 +0000" stop="20261011091900 +0000">
-    <title lang="en">Hubbi and Friends</title>
-    <desc lang="en">Hubbi and his handymen friends embark on adventures in the countryside while they fix things and show children how to improve their problem-solving skills.</desc>
-    <credits>
-      <director>Roza Györffy</director>
-    </credits>
-    <date>2016</date>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Fantasy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p22610203_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
     </rating>
   </programme>
   <programme channel="custom.ducktv" start="20261011091900 +0000" stop="20261011092300 +0000">
@@ -500093,23 +499902,6 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
     <desc lang="en">Ed Stafford is alone in Borneo's thick jungles with no tools, no food, and no backup. Just raw survival instincts against dense forest, wild creatures, and unrelenting rain.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DISCOVERY_CHANNEL_173569_14OCT064600_14OCT073200/images/LANDSCAPE_169_HD/DISCOVERY_MaroonedWithEdStafford_173569.jpg" />
   </programme>
-  <programme channel="hmair.discoverykids" start="20261011143600 +0530" stop="20261011144700 +0530">
-    <title lang="en">Titoo</title>
-    <desc lang="en">Titoo, an inspiring eight-year-old boy, wishes to help everyone in need. However, his attempts only get him into trouble.</desc>
-    <credits>
-      <actor>Harsh Joshi</actor>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29329295_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S13 E21</episode-num>
-  </programme>
   <programme channel="hmair.discoverykids" start="20261011144700 +0530" stop="20261011145800 +0530">
     <title lang="en">Titoo</title>
     <desc lang="en">Titoo, an inspiring eight-year-old boy, wishes to help everyone in need. However, his attempts only get him into trouble.</desc>
@@ -514927,15 +514719,12 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <icon src="https://iptv-epg.org/images/nhzeSo88tQMPVmYK6tNIdstmt_eX3BLz3eEJ4eg2z-iYlb1WTuorUVriFU6SoOTMQRRGyOvUGVu-jyrZlRK7YuqFAOH2aG2xGi3CKF2EEZW1hxphOfx3PeP0IPJ0DQ" />
     <title lang="en">AEW Collision</title>
   </programme>
-  <programme channel="hmair.france24" start="20261011144400 +0530" stop="20261011144600 +0530">
-    <title lang="en">Introduction</title>
-    <desc lang="en">Join our lively host as they break down the hottest updates in politics, sports, and social and economic news, keeping you informed and entertained with every scoop!</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_FRANCE_24_1608082_11OCT144400_11OCT144600/images/LANDSCAPE_169/1710845727000_FRANCE24_Introduction_1608082.jpg" />
-  </programme>
-  <programme channel="hmair.france24" start="20261011144600 +0530" stop="20261011150000 +0530">
-    <title lang="en">Talking Europe Part 1</title>
+  <programme start="20261011091500 +0000" stop="20261011093000 +0000" channel="hmair.france24">
+    <category lang="en">News</category>
+    <category lang="en">Talk Show</category>
     <desc lang="en">Politicians, activists and researchers debate the issues facing the EU and a 'guest of the week' offers their insight in a long-format interview that gets to the heart of the matter.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_FRANCE_24_695022_11OCT144600_11OCT150000/images/LANDSCAPE_169/1719440664000_FRANCE24_TalkingEuropePart1_695022.jpg" />
+    <icon src="https://iptv-epg.org/images/A3uiuVjtYp2IAceDE5k8NltOCADyxZlvomZ5p2NDwlVLwEahWTjir02gzsk8q_Yz2oe1F4Zip3tgwi28pSBgjvOrRZXqMJCjEeKqYCLkKF38Ds7Y7bGlwwsYB_rH" />
+    <title lang="en">Talking Europe</title>
   </programme>
   <programme start="20261011093000 +0000" stop="20261011094300 +0000" channel="hmair.france24">
     <category lang="en">News</category>
@@ -557672,12 +557461,6 @@ A young woman's unexpected bond with a much older businessman brings emotional t
     <desc lang="en">Nagesh tries to make his ends meet by working as a real estate broker. He tries to sell his ancestral property for his sister's wedding, but soon paranormal occurrences become a part of his life.</desc>
     <icon src="https://iptv-epg.org/images/Rb2rZ11FEmF-PckDUYDea0TZbUGtCReZpaZdGxIcZ6JXuXrpXiAR74YEgyOCKuXGfeu4CCsyze-iXKFH2z8rc4xaniZAxpd2T1OqLb4wDChlOs5xWd95BOiznM2X8-a4ofqZRxTcHIRIulGLYw9A1eWqNYgkwerdZHQOV09fFHt4ibKvGrLukghEI5msAHeqfafwgw" />
     <title lang="en">Nagesh Thiraiyarangam</title>
-  </programme>
-  <programme channel="staging.islam.tv" start="20261011090000 +0000" stop="20261011092000 +0000">
-    <title lang="en">Big Kitchen</title>
-    <desc lang="en">Join Chef Hamza as he meets well-known personalities and enjoy his hilarious attempts to put them through their culinary paces.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Educational</category>
   </programme>
   <programme channel="staging.islam.tv" start="20261011092000 +0000" stop="20261011093000 +0000">
     <title lang="en">Live Prayers from Makkah: Dhuhr</title>
