@@ -30,11 +30,11 @@ No traditional installation is required.
 
 ### Windows Build Kit
 
-**[📦 Download Windows Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug12.zip)**
+**[📦 Download Windows Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug16.zip)**
 
 ## Build Instructions
 
-1. Download `Playlist-Studio-5_0-Windows-Build-Kit-Debug12.zip`
+1. Download `Playlist-Studio-5_0-Windows-Build-Kit-Debug16.zip`
 2. Extract the ZIP file
 3. Open the extracted folder
 4. Run **`BUILD-Windows.cmd`**
