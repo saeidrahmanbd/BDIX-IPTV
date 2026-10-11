@@ -14,7 +14,7 @@ Use this URL in XCIPTV or another M3U-compatible IPTV player.
 
 ## 🖥️ Playlist Studio
 
-### [⬇️ Download the latest Playlist Studio](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest)
+### [⬇️ Download the latest Playlist Studio](https://github.com/saeidrahmanbd/Playlist-Studio/releases/latest)
 
 Windows portable application for playlist editing and playback workflows.
 
