@@ -17,6 +17,7 @@ EPG_ALIASES = {
     "MusicMastii.in": ["jtv584", "584", "IN4#MASTII.in"],
     "KappaTV.in@ALT1": ["jtv786", "786", "377"],
     "IqraBangla.uk": ["3914"],
+    "DeenTV.uk": ["1235"],
     # Exact Sky XMLTV identity for ATN Bangla UK (site ID 6753), confirmed
     # against the Sky channel catalogue and the active nasimali/epg-auto XMLTV
     # output. Applies only to this UK service, never to ATNBangla.bd.
