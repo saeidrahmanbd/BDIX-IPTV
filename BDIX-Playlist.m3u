@@ -19,7 +19,7 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h2g6_rWfuFxgvWC65mBZfaM
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_AC5diY9zoPDtnn10RTLCo
 #EXTINF:-1 xui-id="357" tvg-id="BTVNational.bd" tvg-name="BTV National" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-national-2db28e10.png" tvg-chno="16" channel-id="BTVNational.bd" group-title="Bangladesh",BTV National
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9k2JufmTt1ob_ZNWpwfjKY
-#EXTINF:-1 xui-id="358" tvg-id="custom.btv.news" tvg-name="BTV News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-news.png" tvg-chno="17" channel-id="custom.btv.news" group-title="Bangladesh",BTV News
+#EXTINF:-1 xui-id="358" tvg-id="custom.btv.news" tvg-name="BTV News" tvg-chno="17" channel-id="custom.btv.news" group-title="Bangladesh",BTV News
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8YoekT0BdrjgEfQ4fmPrIo
 #EXTINF:-1 xui-id="179032" tvg-id="custom.channel.1" tvg-name="Channel 1" tvg-chno="19" channel-id="custom.channel.1" group-title="Bangladesh",Channel 1
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h3hwJ_7dBno_QXXvQA_CF8g
@@ -357,7 +357,7 @@ https://media.hmair.xyz/api/play/TOFFEE%20Sports%20VIP.m3u8
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5YpvjhOm0Mx3nSSzAbC0e8
 #EXTINF:-1 xui-id="435" tvg-id="DUPWCHD" tvg-name="US: WILLOW SPORTS HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/us-willow-sports-hd.png" tvg-chno="987" channel-id="DUPWCHD" group-title="Sports",US: WILLOW SPORTS HD
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h7G6zFWjtRP7-p-r4gz_RJw
-#EXTINF:-1 xui-id="394" tvg-id="BanglaTV.bd" tvg-name="Bangla TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bangla-tv.png" tvg-chno="5" channel-id="BanglaTV.bd" group-title="Test",Bangla TV
+#EXTINF:-1 xui-id="394" tvg-id="BanglaTV.bd" tvg-name="Bangla TV" tvg-chno="5" channel-id="BanglaTV.bd" group-title="Test",Bangla TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hwnT42t0FcX0FRKTXerhEkg
 #EXTINF:-1 xui-id="180691" channel-id="DBCNews.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/banglavision.png" tvg-id="DBCNews.bd" tvg-name="Bangla Vision" tvg-chno="11" group-title="Test",Bangla Vision
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hwKGioRgBBM_T2ZY3xq5V88
