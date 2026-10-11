@@ -56,6 +56,7 @@ LOCAL_LOGO_FILES = {
     "Sony Cine": "cine-sony-720p-c27cf4bb09.png",
     "Oman Sports": "oman-sports-tv.png",
     "Wow Kids": "wow-kidz.png",
+    "Wild Life": "wildearth.png",
 }
 
 # Exact channel/region matches from the public tv-logo/tv-logos collection.
@@ -319,6 +320,46 @@ DIRECT_LOGO_HINTS = {
         "page": "https://commons.wikimedia.org/wiki/File:Fuel_TV.svg",
         "source": "Wikimedia Commons Fuel TV logo",
         "license": "See the Commons file page for source and licensing",
+        "license_url": "",
+    },
+    "Radio Bangla Rock": {
+        "url": "https://radio.streamitter.com/images/logos/R13IIV.png",
+        "format": "PNG",
+        "page": "https://radio.bongonet.net:8020/radiobanglarock",
+        "source": "Radio Bangla Rock public playlist logo reference",
+        "license": "Station logo; reuse rights not specified",
+        "license_url": "",
+    },
+    "Love Gold Bangla": {
+        "url": "https://i.imgur.com/pLqV8yN.png",
+        "format": "PNG",
+        "page": "https://github.com/alaminislam203/my_playlist",
+        "source": "Public radio playlist logo reference",
+        "license": "Station logo; reuse rights not specified",
+        "license_url": "",
+    },
+    "Madina Live": {
+        "url": "https://images-na.ssl-images-amazon.com/images/I/71CywdrFaZL.png",
+        "format": "PNG",
+        "page": "https://cdn-globecast.akamaized.net/live/eds/saudi_sunnah/hls_roku/index.m3u8",
+        "source": "Madina Live public playlist logo reference",
+        "license": "Station logo; reuse rights not specified",
+        "license_url": "",
+    },
+    "Persiana Travel": {
+        "url": "https://www.lyngsat.com/logo/tv/pp/persiana-travel-fr.png",
+        "format": "PNG",
+        "page": "https://www.lyngsat.com/tvchannels/ir/Persiana-Travel.html",
+        "source": "LyngSat channel logo",
+        "license": "Logo served by LyngSat; reuse rights not specified",
+        "license_url": "",
+    },
+    "Setanta Sport": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Setanta-logo.jpg",
+        "format": "JPEG",
+        "page": "https://github.com/kilirushi/iptv/blob/f8765b54e7b66080201e07d168418e302c672c7d/cate/bein_sport.m3u",
+        "source": "Setanta Sport logo reference in public playlist",
+        "license": "Source/rights should be verified separately",
         "license_url": "",
     },
 }
