@@ -14,8 +14,8 @@ REPORT = Path("reports/playlist-audit.md")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
-PRIMARY_EXCEPTIONS = {"Backup"}
-CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup"]
+PRIMARY_EXCEPTIONS = {"Backup", "Not Playing"}
+CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "Not Playing"]
 
 def attrs(line):
     return dict(ATTR_RE.findall(line))
@@ -262,7 +262,7 @@ primary_by_root = defaultdict(list)
 primary_by_name = defaultdict(list)
 for cid, items in by_id.items():
     for info, url in items:
-        if attrs(info).get("group-title", "").strip() != "Backup":
+        if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS:
             primary_by_root[identity_root(cid)].append((cid, info, url))
             primary_by_name[normalized_name(display_name(info))].append((cid, info, url))
 
