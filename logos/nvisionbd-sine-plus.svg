@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" role="img" aria-label="Sine Plus logo">
-<rect width="320" height="180" fill="#250b24"/><path d="M0 140Q80 95 160 140T320 140V180H0Z" fill="#761d62"/><circle cx="64" cy="75" r="36" fill="#ed367d"/><path d="M52 45L52 105L91 75Z" fill="#fff4f9"/>
-<text x="111" y="83" fill="#ffffff" font-family="Arial,sans-serif" font-size="39" font-weight="800">SINE</text><text x="113" y="125" fill="#ff82b1" font-family="Arial,sans-serif" font-size="31" font-weight="700" letter-spacing="5">PLUS</text><path d="M112 139H281" stroke="#ff82b1" stroke-width="3"/></svg>
