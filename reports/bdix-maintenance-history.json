@@ -96,5 +96,19 @@
     "health_tested": 255,
     "health_failures": 182,
     "safe_repairs": 0
+  },
+  {
+    "timestamp_utc": "2026-10-11T05:16:46+00:00",
+    "entries": 255,
+    "unique_urls": 255,
+    "duplicate_urls": 0,
+    "duplicate_ids": 34,
+    "missing_ids": 0,
+    "missing_chno": 0,
+    "missing_logos": 0,
+    "malformed": 0,
+    "health_tested": 255,
+    "health_failures": 182,
+    "safe_repairs": 0
   }
 ]
