@@ -2,27 +2,17 @@
 
 This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.
 
-- Run time: 2026-10-11 11:43 UTC
+- Run time: 2026-10-11 11:47 UTC
 - IPTV-org dataset: loaded
-- Unique generic assets examined: 142
-- Successful replacements: 11
+- Unique generic assets examined: 132
+- Successful replacements: 1
 - Unresolved/manual review: 131
 
 ## Replacements
 
 | Channel | Former generic file | New local file | Source | License / attribution |
 |---|---|---|---|---|
-| Boomerang UK | nvisionbd-boomerang-uk.svg | [nvisionbd-official-boomerang-uk.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-boomerang-uk.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/boomerang-uk.png) | No license file found in source repository |
-| Digi Sport 1 | nvisionbd-digi-sport-1.svg | [nvisionbd-official-digi-sport-1.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-digi-sport-1.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/romania/digi-sport-1-ro.png) | No license file found in source repository |
-| Digi Sport 2 | nvisionbd-digi-sport-2.svg | [nvisionbd-official-digi-sport-2.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-digi-sport-2.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/romania/digi-sport-2-ro.png) | No license file found in source repository |
-| Epic | nvisionbd-epic.svg | [nvisionbd-official-epic.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-epic.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/india/epic-in.png) | No license file found in source repository |
-| Fashion TV HD | nvisionbd-fashion-tv.svg | [nvisionbd-official-fashion-tv.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-fashion-tv.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/international/fashion-tv-int.png) | No license file found in source repository |
-| Laff TV | nvisionbd-laff-tv.svg | [nvisionbd-official-laff-tv.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-laff-tv.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/laff-us.png) | No license file found in source repository |
-| Movie Sphere | nvisionbd-movie-sphere.svg | [nvisionbd-official-movie-sphere.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-movie-sphere.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/movie-sphere-us.png) | No license file found in source repository |
-| Premier Sports 1 | nvisionbd-premier-sports-1.svg | [nvisionbd-official-premier-sports-1.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-premier-sports-1.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/premier-sports-1-uk.png) | No license file found in source repository |
 | The Q | nvisionbd-the-q.svg | [nvisionbd-official-the-q.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-the-q.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/india/the-q-in.png) | No license file found in source repository |
-| Tsn Aq1 | nvisionbd-tsn-aq1.svg | [nvisionbd-official-tsn-aq1.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-tsn-aq1.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/canada/tsn-ca.png) | No license file found in source repository |
-| Ziggo Sport Live | nvisionbd-ziggo-sport.svg | [nvisionbd-official-ziggo-sport-live.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-ziggo-sport-live.png) | [tv-logo/tv-logos exact channel/region match](https://github.com/tv-logo/tv-logos/blob/main/countries/netherlands/ziggo-sport-nl.png) | No license file found in source repository |
 
 ## Unresolved — retained for manual source verification
 
