@@ -59,3 +59,19 @@ Supported BDIX endpoints:
 - `/bdix/xmltv-public.php`
 
 The original IPTV-Playlist Xtream endpoint remains unchanged at the Worker root.
+
+## NVisionBD-Playlist Xtream endpoint
+
+The same Worker exposes **NVisionBD-Playlist.m3u** under the `/nvision` base path, using the same `XTREAM_USERNAME` and `XTREAM_PASSWORD` Worker secrets.
+
+For XCIPTV, set Server URL to:
+
+`https://bdix-iptv-xtream.saeidrahman.workers.dev/nvision`
+
+Supported endpoints:
+- `/nvision/player_api.php?username=USER&password=PASS`
+- `/nvision/get.php?username=USER&password=PASS&type=m3u_plus&output=m3u8`
+- `/nvision/xmltv.php?username=USER&password=PASS`
+- `/nvision/xmltv-public.php`
+
+The root IPTV-Playlist endpoint and the existing `/bdix` endpoint remain unchanged. The gateway uses the repository's current `NVisionBD-Playlist.m3u` as its source.
