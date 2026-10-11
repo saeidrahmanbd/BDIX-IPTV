@@ -1,6 +1,6 @@
 # Generic Channel Logo Audit — Three Playlists
 
-Audit date: 2026-10-11 11:35 UTC  
+Audit date: 2026-10-11 11:39 UTC  
 Repository: https://github.com/saeidrahmanbd/BDIX-IPTV  
 Method: scans current playlist metadata and checks referenced local SVG files for the generic CHANNEL MARK template.
 
@@ -10,9 +10,9 @@ Method: scans current playlist metadata and checks referenced local SVG files fo
 |---|---:|---:|
 | IPTV-Playlist.m3u | 1145 | 0 |
 | BDIX-Playlist.m3u | 217 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 139 |
+| NVisionBD-Playlist.m3u | 561 | 142 |
 
-Current NVisionBD placeholder assets: **139 unique files**.
+Current NVisionBD placeholder assets: **142 unique files**.
 
 ## Remaining affected NVisionBD channel labels
 
@@ -54,6 +54,7 @@ Current NVisionBD placeholder assets: **139 unique files**.
 - Dhaka FM 90.4
 - Digi Sport 1
 - Digi Sport 2
+- Digital Fashion
 - Disney Channel Big City Greens
 - Doyel Radio
 - Dream Music Prime
@@ -130,12 +131,14 @@ Current NVisionBD placeholder assets: **139 unique files**.
 - Sony Cine
 - Spondon Radio
 - Sport 1 HD
+- Sport 2 HD
 - Sports Digital Fsbl
 - Sports Fishing TV
 - Sports Grid
 - Star Cinema
 - TNT Sport 1
 - Tapmad
+- The Q
 - Tsn Aq1
 - UK TNT Sports 1 HD
 - UK TNT Sports 2 HD
