@@ -1,6 +1,6 @@
 # NVisionBD Stream Health
 
-Generated (UTC): **2026-10-11T13:34:21+00:00**
+Generated (UTC): **2026-10-11T13:40:26+00:00**
 
 Connectivity probes are diagnostic only. A failed request does not prove a stream is permanently dead; provider restrictions, network routing, and transient timeouts can cause false negatives.
 
@@ -13,564 +13,564 @@ Connectivity probes are diagnostic only. A failed request does not prove a strea
 
 ## Results
 
-- **Dead** — Me TV — HTTP 404 — 509 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0-8NI4xyda011ONnjaure3
-- **Dead** — Assam Talks — HTTP 404 — 855 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0-Za1Oz-B_ae5oOvHGDseA
-- **Dead** — Colors Bangla Cinema — HTTP 404 — 849 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-00BFyikDKoBo478Yev0Zex
-- **Dead** — Hindi Big Boss 24x7 2026 — HTTP 404 — 699 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-03aPXysYWR_ZPuotGGpv1G
-- **Dead** — 8xm — HTTP 404 — 901 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-04HoQY8s0GUz-0K0nlVK5S
-- **Dead** — Zoom Music — HTTP 404 — 853 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-04SJxetb1biV1JfYixZwpT
-- **Dead** — Thikana — HTTP 404 — 1897 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0CW_uWyTzVEOAZe4pXGgwk
-- **Dead** — The Q India — HTTP 404 — 855 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0G1XpWximSvM4YSh2OyLPu
-- **Dead** — Canada One — HTTP 404 — 881 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0HXTpj1HzsnUMg3EJkR9to
-- **Dead** — R Plus — HTTP 404 — 848 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0RpavodUesyDy0jGQVIsGD
-- **Dead** — Hum Masala — HTTP 404 — 865 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0S_RrnFevuhbRAjSH8tadZ
-- **Dead** — Ekattor TV HD — HTTP 404 — 845 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0SkQWXRDMpPRC10nYVMI8y
-- **Dead** — Jago News 24 — HTTP 404 — 914 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0TYfWylFDHAyiJbGKutrls
-- **Dead** — Dangal 2 — HTTP 404 — 847 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0Yn-zYBHUUPZ1LJ2Mt3Ef1
-- **Dead** — Sangeet Bangla — HTTP 404 — 849 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0ZMGKa29DQVWQ8qRXF471G
-- **Dead** — BTV Sangsad — HTTP 404 — 769 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0cXpgZCtpSL585mxHHOQQh
-- **Dead** — News 24 — HTTP 404 — 878 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0fHSnyVwey8-iskKC6DWYT
-- **Dead** — Rajdhani TV — HTTP 404 — 879 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0kjSjr0plL4L3pXOFEZI0T
-- **Dead** — Ekushey TV HD — HTTP 404 — 577 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0kv2jiOPBpL7hi9nlRms9t
-- **Dead** — Nexus TV HD — HTTP 404 — 881 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0mdyzaq7WbjYPqJPrzpCUj
-- **Dead** — Mohona TV HD — HTTP 404 — 809 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0miqRrugidU64Ac8GFrRwn
-- **Dead** — Sony TV HD — HTTP 404 — 850 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0nmnur5zi-Ez27BzxJFxHi
+- **Dead** — Me TV — HTTP 404 — 1872 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0-8NI4xyda011ONnjaure3
+- **Dead** — Assam Talks — HTTP 404 — 853 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0-Za1Oz-B_ae5oOvHGDseA
+- **Dead** — Hindi Big Boss 24x7 2026 — HTTP 404 — 1509 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-03aPXysYWR_ZPuotGGpv1G
+- **Dead** — MTV HD — HTTP 404 — 808 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0B2OlKVERWiJB3xnSb8Bm7
+- **Dead** — Thikana — HTTP 404 — 804 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0CW_uWyTzVEOAZe4pXGgwk
+- **Dead** — Enter10 Bangla — HTTP 404 — 851 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0FnHIrD-qTWpGeGgmj8AIT
+- **Dead** — The Q India — HTTP 404 — 854 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0G1XpWximSvM4YSh2OyLPu
+- **Dead** — Zee Bangla HD — HTTP 404 — 849 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0Gw_rEkndbnwX4bYYZHAar
+- **Dead** — Channel 1 HD — HTTP 404 — 873 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0M-RNOPjgusDYZvKEyLrJj
+- **Dead** — R Plus — HTTP 404 — 850 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0RpavodUesyDy0jGQVIsGD
+- **Dead** — Hum Masala — HTTP 404 — 799 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0S_RrnFevuhbRAjSH8tadZ
+- **Dead** — Jago News 24 — HTTP 404 — 617 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0TYfWylFDHAyiJbGKutrls
+- **Dead** — Dangal 2 — HTTP 404 — 846 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0Yn-zYBHUUPZ1LJ2Mt3Ef1
+- **Dead** — Sangeet Bangla — HTTP 404 — 855 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0ZMGKa29DQVWQ8qRXF471G
+- **Dead** — BTV Sangsad — HTTP 404 — 1593 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0cXpgZCtpSL585mxHHOQQh
+- **Dead** — Star Gold Select HD — HTTP 404 — 858 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0d4oWgHGCog0wd_ZRbHOBw
+- **Dead** — DD Himachal Pradesh — HTTP 404 — 850 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0gNNSJnuE_cUrLS7ijlnkg
+- **Dead** — Bangla Vision HD — HTTP 404 — 2004 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0ikeO7xJ806HG-RIffsbcc
+- **Dead** — Ekushey TV HD — HTTP 404 — 484 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0kv2jiOPBpL7hi9nlRms9t
+- **Dead** — Aurora Media Flims — HTTP 404 — 2017 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0lgypuPtg4HLcDYWT_aXgY
+- **Dead** — Nexus TV HD — HTTP 404 — 747 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0mdyzaq7WbjYPqJPrzpCUj
+- **Dead** — Mohona TV HD — HTTP 404 — 816 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0miqRrugidU64Ac8GFrRwn
+- **Dead** — Sony TV HD — HTTP 404 — 799 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0nmnur5zi-Ez27BzxJFxHi
 - **Dead** — Nick Bangla — HTTP 404 — 850 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0qOipPAsnh4r4nSj5ijWKm
-- **Dead** — Zee Bollywood — HTTP 404 — 903 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0tE1gGSDTH4f8LQtw7DcUd
-- **Dead** — Action 24 — HTTP 404 — 850 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0toE2gGfjK3aNhu5u1tJBR
-- **Dead** — Sony Aath — HTTP 404 — 853 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0u6B3YMGg3MOeYAP1GlnIH
-- **Dead** — Zee Action — HTTP 404 — 848 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0zFtxHavb4ZnNhLluyAtBk
-- **Dead** — Sony Sab HD — HTTP 404 — 851 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1-gLHD-0hxRajMCr9p_xFe
-- **Dead** — 9x Jhakaas — HTTP 404 — 902 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-10BPEopZP7lrdHKNKgOkzt
-- **Dead** — Kolkata TV — HTTP 404 — 885 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-10ej_OpCHjZwrPjTxCzGc-
-- **Dead** — Jalsha Movies HD — HTTP 404 — 848 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-123liXbTgegkbilV79YM0M
-- **Dead** — Epic — HTTP 404 — 701 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-16I0_s94AvktCzLRm17SRj
-- **Dead** — India Today — HTTP 404 — 749 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1A0tV6QoS8YZs9QWlIurr8
-- **Dead** — ABP Ananda — HTTP 404 — 745 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1CFEv-Svw5oBLtiZAar2FV
-- **Dead** — Star Gold — HTTP 404 — 868 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ELyWuA7KnM9lWuIKp6nwZ
-- **Dead** — Epic Music — HTTP 404 — 906 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Fp3ZH8UXhjxrBdTsmm3w4
-- **Dead** — Aakaash Aath — HTTP 404 — 848 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1FuLRRuME97I9226v1E_rK
-- **Dead** — Star Bharat HD — HTTP 404 — 849 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Hrd7Nttm_N2tnOaghR5Mk
-- **Dead** — Sun Bangla HD — HTTP 404 — 849 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Ihe4l-PweQM7rnVaZpHya
-- **Dead** — Colors Cineplex HD — HTTP 404 — 849 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1IrFhOUSdKcUcUK9qfoWA-
-- **Dead** — Anand TV — HTTP 404 — 870 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1JT_gEv4HIVEpiBh0zrWgp
-- **Dead** — Biz Cinema — HTTP 404 — 2132 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1L8_9Z5INiC5YVlBerSafJ
-- **Dead** — &pictures HD — HTTP 404 — 869 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1M75DlOyDM816um77GOefP
-- **Dead** — Steelbird Music — HTTP 404 — 849 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Q-y2MNWeQ0bx7a8JtiFu_
-- **Dead** — 7s Music — HTTP 404 — 899 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1R29bXk2XZ6yQpBLHP_h0u
-- **Dead** — Star Gold Romance — HTTP 404 — 855 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1SkOhc94xqKFBh5LUqiOHg
-- **Dead** — Cafe Film — HTTP 404 — 851 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1UUZF4pu7hDpouRROwKI5J
-- **Dead** — Bijoy TV HD — HTTP 404 — 835 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ZRe5iIfIg18wRiyfb8lZ1
-- **Dead** — ZB Cinema — HTTP 404 — 883 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1aEnjy2MZUa3IoigPr66d6
+- **Dead** — Boishakhi TV — HTTP 404 — 1551 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0rYPCDyP7pjL8cqGBLOo7L
+- **Dead** — Zee Bollywood — HTTP 404 — 852 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0tE1gGSDTH4f8LQtw7DcUd
+- **Dead** — Action 24 — HTTP 404 — 794 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0toE2gGfjK3aNhu5u1tJBR
+- **Dead** — Sony Aath — HTTP 404 — 842 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0u6B3YMGg3MOeYAP1GlnIH
+- **Dead** — Movie Bangla — HTTP 404 — 817 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0wILpYfXBbOLOZenpl_OzC
+- **Dead** — BTV National HD — HTTP 404 — 729 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0wJGB76LVM3If5bP0lJyEA
+- **Dead** — Gazi TV HD — HTTP 404 — 683 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0xcl9JW1kFySQCQg4tUM40
+- **Dead** — Channel I HD — HTTP 404 — 2029 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0zBUEkgz9dH7WjTB0KymcQ
+- **Dead** — Zee Action — HTTP 404 — 851 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0zFtxHavb4ZnNhLluyAtBk
+- **Dead** — Sony Sab HD — HTTP 404 — 747 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1-gLHD-0hxRajMCr9p_xFe
+- **Dead** — Kolkata TV — HTTP 404 — 852 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-10ej_OpCHjZwrPjTxCzGc-
+- **Dead** — Jalsha Movies HD — HTTP 404 — 858 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-123liXbTgegkbilV79YM0M
+- **Dead** — Zee 24 Ghanta — HTTP 404 — 849 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-14eJdsQNa0c7p9vV9R8Ufe
+- **Dead** — My TV HD — HTTP 404 — 873 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-15P1u9nY9FRRq-zT7SGyAf
+- **Dead** — India Today — HTTP 404 — 903 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1A0tV6QoS8YZs9QWlIurr8
+- **Dead** — SRK TV — HTTP 404 — 802 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1AO3fqaHmCvvRFzQkn_shC
+- **Dead** — Star Gold — HTTP 404 — 853 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ELyWuA7KnM9lWuIKp6nwZ
+- **Dead** — Epic Music — HTTP 404 — 799 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Fp3ZH8UXhjxrBdTsmm3w4
+- **Dead** — Aakaash Aath — HTTP 404 — 819 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1FuLRRuME97I9226v1E_rK
+- **Dead** — Star Bharat HD — HTTP 404 — 827 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Hrd7Nttm_N2tnOaghR5Mk
+- **Dead** — Sun Bangla HD — HTTP 404 — 847 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Ihe4l-PweQM7rnVaZpHya
+- **Dead** — Colors Cineplex HD — HTTP 404 — 855 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1IrFhOUSdKcUcUK9qfoWA-
+- **Dead** — Anand TV — HTTP 404 — 829 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1JT_gEv4HIVEpiBh0zrWgp
+- **Dead** — Steelbird Music — HTTP 404 — 824 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Q-y2MNWeQ0bx7a8JtiFu_
+- **Dead** — Star Gold Romance — HTTP 404 — 850 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1SkOhc94xqKFBh5LUqiOHg
+- **Dead** — Pmi TV — HTTP 404 — 799 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1UTM8sAUkKpJsfG8Anny66
+- **Dead** — Cafe Film — HTTP 404 — 799 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1UUZF4pu7hDpouRROwKI5J
+- **Dead** — Bijoy TV HD — HTTP 404 — 791 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ZRe5iIfIg18wRiyfb8lZ1
+- **Dead** — DD Haryana — HTTP 404 — 846 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ZmaDk6Sq6PpqsZo_y-_9R
+- **Dead** — Bhojpuri Cinema — HTTP 404 — 886 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Zx63nT6eu6Xk-sQi4DGws
 - **Dead** — Maasranga TV HD — HTTP 404 — 716 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ahX9ZjXlXfgCCiWeU_5KU
-- **Dead** — 10 TV — HTTP 404 — 875 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1cmA2GoAPfx9IIBYYipSa2
-- **Dead** — Somoy TV HD — HTTP 404 — 892 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1eaq4xDbuA7rbIBYagtrNY
-- **Dead** — Sony Max HD — HTTP 404 — 867 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1fUyFimCZrZ2a7m57B8snF
-- **Dead** — Global TV HD — HTTP 404 — 668 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1gAfuLx1dnlDKH9xNrbytd
-- **Dead** — NTV HD — HTTP 404 — 878 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1h-DcInkIMA2NW18jkkklB
-- **Dead** — Euro Indie Music Chart TV — HTTP 404 — 851 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1hKmnTBRmaB4ITbXSDVy66
-- **Dead** — Action Hollywood Movies — HTTP 404 — 850 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1jGGK76ohUjJaz5W8clgou
-- **Dead** — Good News Today — HTTP 404 — 701 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1pW9ZjirtQn_Evzm6hdwke
-- **Dead** — Bangla Plus HD — HTTP 404 — 887 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1qWlabv4u37utMXFbWrJ9Z
-- **Dead** — Goldmines Bollywood — HTTP 404 — 878 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1qZnNcDeTbJW5Taz0nEvBw
-- **Dead** — Yrf Music — HTTP 404 — 850 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1t8878yApXjuO1DgqExdN0
-- **Dead** — Shemaroo Josh — HTTP 404 — 854 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1v1FO4_VgestrWIsF26pGp
-- **Dead** — DD Assam — HTTP 404 — 868 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1yQvbU6c5Z7XWnMY9hO2ea
-- **Dead** — Jamuna TV HD — HTTP 404 — 765 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2-V5vJrADI_UhAvT5HiowM
-- **Dead** — Filmax — HTTP 404 — 851 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2056mp3i0h7E7jQ8KTRoIH
-- **Dead** — News 18 Assam — HTTP 404 — 870 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-22Ki24x5jiOBil6UZ5mA9d
-- **Dead** — Asia Flix TV — HTTP 404 — 848 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-23EJJOfQ6WOnIJV0GyEmZp
-- **Dead** — Rtv HD — HTTP 404 — 798 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-23Vl3jSKshCHIZTkLkoDwk
-- **Dead** — NRB TV — HTTP 404 — 882 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-27Dy1CrhzD9xNMsXM5OM3z
-- **Dead** — Shemaroo TV — HTTP 404 — 1902 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-28iXkq9r0RS-4pycP2YJ1s
-- **Dead** — Zee TV HD — HTTP 404 — 846 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-29w3ERoDO3aa84JPXhHij9
-- **Dead** — Discover Pakistan — HTTP 404 — 845 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2I4LL49tIeQFCsUBaNn1FZ
-- **Dead** — ATN Bangla HD — HTTP 404 — 1097 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2J97nFUF70D86hJSfMT1IL
-- **Dead** — Deshi TV — HTTP 404 — 608 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2K-aU4V8-GvAGmCspZhOL5
-- **Dead** — Duronto TV HD — HTTP 404 — 908 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2LxYCeJbH2GHaViScYwtDa
-- **Dead** — Zee Bangla Sonar — HTTP 404 — 849 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2MBdptte8ydN_vFPunnCdM
-- **Dead** — Colors Bangla HD — HTTP 404 — 854 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2QVk9iHb8ih4mSCRqAanQX
-- **Dead** — DD Manipur — HTTP 404 — 1597 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2Qs7GW_h07j7PyfkPR5pm-
-- **Dead** — CTVN AKD Plus — HTTP 404 — 849 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2R0SCY9VR9C88XMw5lRtyG
-- **Dead** — Probashi TV — HTTP 404 — 874 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2RZ_iC0zGcrXozOpUMbwBy
-- **Dead** — Joo Music — HTTP 404 — 859 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2TXGOSKuJZYtqmE8WfPuCr
-- **Dead** — Channel S HD — HTTP 404 — 855 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2UtXOWDmgVOY9kPzOWvF43
-- **Dead** — R Plus Gold — HTTP 404 — 853 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2ZLD5sN3G0zGwVZgn6iLZf
-- **Dead** — Anger Management Channel — HTTP 404 — 859 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2_IGqObZauTYgDVin4jwOF
-- **Dead** — Al Jazeera — HTTP 404 — 850 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2_sSgAVgQwAG6BaAYiNU-T
+- **Dead** — Somoy TV HD — HTTP 404 — 794 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1eaq4xDbuA7rbIBYagtrNY
+- **Dead** — Sony Max HD — HTTP 404 — 839 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1fUyFimCZrZ2a7m57B8snF
+- **Dead** — Global TV HD — HTTP 404 — 733 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1gAfuLx1dnlDKH9xNrbytd
+- **Dead** — NTV HD — HTTP 404 — 846 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1h-DcInkIMA2NW18jkkklB
+- **Dead** — Euro Indie Music Chart TV — HTTP 404 — 799 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1hKmnTBRmaB4ITbXSDVy66
+- **Dead** — Shemaroo Umang — HTTP 404 — 751 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1iy8_iy0psw6zpW4Q8dCzv
+- **Dead** — Action Hollywood Movies — HTTP 404 — 832 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1jGGK76ohUjJaz5W8clgou
+- **Dead** — Anmol Cinema — HTTP 404 — 843 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1naWrKRRJZi_el62XKO5lH
+- **Dead** — Channel 9 HD — HTTP 404 — 3086 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1pxVp0I59Pa2_zWwbWiRGi
+- **Dead** — Bangla Plus HD — HTTP 404 — 852 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1qWlabv4u37utMXFbWrJ9Z
+- **Dead** — Yrf Music — HTTP 404 — 849 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1t8878yApXjuO1DgqExdN0
+- **Dead** — DD Assam — HTTP 404 — 843 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1yQvbU6c5Z7XWnMY9hO2ea
+- **Dead** — Jamuna TV HD — HTTP 404 — 718 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2-V5vJrADI_UhAvT5HiowM
+- **Dead** — Filmax — HTTP 404 — 853 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2056mp3i0h7E7jQ8KTRoIH
+- **Dead** — Asia Flix TV — HTTP 404 — 1934 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-23EJJOfQ6WOnIJV0GyEmZp
+- **Dead** — Rtv HD — HTTP 404 — 793 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-23Vl3jSKshCHIZTkLkoDwk
+- **Dead** — NRB TV — HTTP 404 — 751 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-27Dy1CrhzD9xNMsXM5OM3z
+- **Dead** — Shemaroo TV — HTTP 404 — 901 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-28iXkq9r0RS-4pycP2YJ1s
+- **Dead** — Zee TV HD — HTTP 404 — 853 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-29w3ERoDO3aa84JPXhHij9
+- **Dead** — ATN Bangla HD — HTTP 404 — 1664 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2J97nFUF70D86hJSfMT1IL
+- **Dead** — Zee Bangla Sonar — HTTP 404 — 847 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2MBdptte8ydN_vFPunnCdM
+- **Dead** — Bollywood Classic HD — HTTP 404 — 852 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2PqjbVROLEzmjTUV6x9Tmz
+- **Dead** — Colors Bangla HD — HTTP 404 — 847 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2QVk9iHb8ih4mSCRqAanQX
+- **Dead** — DD Manipur — HTTP 404 — 849 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2Qs7GW_h07j7PyfkPR5pm-
+- **Dead** — CTVN AKD Plus — HTTP 404 — 859 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2R0SCY9VR9C88XMw5lRtyG
+- **Dead** — Probashi TV — HTTP 404 — 850 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2RZ_iC0zGcrXozOpUMbwBy
+- **Dead** — Joo Music — HTTP 404 — 800 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2TXGOSKuJZYtqmE8WfPuCr
+- **Dead** — R Plus Gold — HTTP 404 — 1814 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2ZLD5sN3G0zGwVZgn6iLZf
+- **Dead** — Anger Management Channel — HTTP 404 — 815 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2_IGqObZauTYgDVin4jwOF
+- **Dead** — Al Jazeera — HTTP 404 — 810 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2_sSgAVgQwAG6BaAYiNU-T
 - **Dead** — Anmol Cinema 2 — HTTP 404 — 852 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2c9W1UA8ILV34Qjwu4wxcL
-- **Dead** — &tv HD — HTTP 404 — 1598 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2iL-qELascqw-24FF6AsRu
-- **Dead** — MBC Bollywood HD — HTTP 404 — 901 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2liCa210ImbnkDwFv4UGJA
-- **Dead** — Hindi Khabar — HTTP 404 — 748 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2mEUrCsATHj8zATK3kmuxQ
-- **Dead** — Ananda TV HD — HTTP 404 — 900 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2mmGsZcWxIEOx0NH6Q6VG9
-- **Dead** — Sa TV HD — HTTP 404 — 848 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2o7mSEXFuzIDH2O6rqjdjq
-- **Dead** — Manoranjan TV — HTTP 404 — 803 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2oyNQyoW9jhrbE2BqFbY4q
-- **Dead** — Bangla Big Boss 24x7 — HTTP 404 — 838 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2p2JgWqv71AlK6NHf2BxQr
-- **Dead** — AXS — HTTP 404 — 846 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2t3s2diuUFtrSSX5UwneoQ
-- **Dead** — Zee Anmol Cinema — HTTP 404 — 847 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2y0EL1FKXUQsmB0t_4S3KT
-- **Dead** — 9XM — HTTP 404 — 862 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-30aWkHW4rZHFRRrHd_Eszb
-- **Dead** — Blockbaster HD — HTTP 404 — 853 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-314jw_vzp2KUEwpbSpW-6f
-- **Dead** — Global Panjab — HTTP 404 — 1906 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-31_YqBR5TnB-wFiprfOx6w
-- **Dead** — DD Bangla — HTTP 404 — 847 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-353b_z_7PUQmbJ1_ypZd_f
-- **Dead** — Star Jalsha HD — HTTP 404 — 850 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-35aVXNmHacUh34HiF5XkOw
-- **Dead** — Isai Aruvi TV — HTTP 404 — 903 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-39efiMMcpvrOQGTlSnyIyd
-- **Dead** — Zing — HTTP 404 — 1445 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-39iDL9it2toZkvrxMtUeza
-- **Dead** — NDTV — HTTP 404 — 750 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3CmnogMl_21KgNY-LCW1DO
-- **Dead** — Nagorik TV HD — HTTP 404 — 880 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3D_Ct2ZrLEY17ehyYMHENV
-- **Dead** — Bangla TV HD — HTTP 404 — 1138 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3FU4IhG55NQRRPQI62I3PL
-- **Dead** — BBC News — HTTP 404 — 856 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Lwua8Qjjl93_tM58o0RDc
-- **Dead** — Hum TV HD — HTTP 404 — 852 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3NgLDw4Pv_TCxfsKxSBHxT
-- **Dead** — Colors HD — HTTP 404 — 1903 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3QGS86hUr9gLGzYeTsokr4
-- **Dead** — Aaj Tak HD — HTTP 404 — 1602 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3TVuL-rttFPcnt75nyvFd6
-- **Dead** — Baraza TV — HTTP 404 — 854 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3cQoruuK0MUge0-g9rNqC5
-- **Dead** — Deepto TV HD — HTTP 404 — 891 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3eQri1Nag3YsrUp0RtiDOY
-- **Dead** — Star Plus HD — HTTP 404 — 856 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3fFjESAjYKUl2gyWge05Gb
-- **Dead** — Ekhon TV HD — HTTP 404 — 629 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3lVeKtyiRz9KBhmRcrNy2k
-- **Dead** — G Series Drama — HTTP 404 — 869 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3oFoSIk5iFfac5Ia2cx3FS
-- **Dead** — Zee Cinema HD — HTTP 404 — 829 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3pRWlb-UzLZK_7DhOthedf
-- **Dead** — Amc — HTTP 404 — 859 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3t4fn_0OcdUHwrGBSBc-IV
-- **Dead** — Ruposhi Bangla — HTTP 404 — 898 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3tCM48oZ9_l9LgsEneqA4U
-- **Dead** — Epic Bhojpuri — HTTP 404 — 847 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3wpuSttOo4-89M0WcNaSVF
-- **Dead** — Rongeen TV — HTTP 404 — 858 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3xEaUYOQFWh8RKuGKzIRFM
-- **Dead** — DD National — HTTP 404 — 754 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3xL6AjSufBwemAAne-5RXI
-- **Dead** — Aaryaa TV — HTTP 404 — 871 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3xh-qUG3ghDNaB2q3vC83p
-- **Responsive** — B4u Music — HTTP 200 — 858 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-10qMcRefMiK82WpNrvgHD6
-- **Responsive** — Sky Sports Laliga — HTTP 200 — 780 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-11A-xLEaaniJNW9_8HOKwO
-- **Responsive** — ESPN Vivo — HTTP 200 — 566 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1FsH6CvA6UrkObZj85nLdM
-- **Responsive** — Premier Sports 1 — HTTP 200 — 1481 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1mBQ91nuFrpG07CM7a7OQA
-- **Responsive** — Laligatv — HTTP 200 — 491 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-25X1OotJLnr45NwAfwZlh-
-- **Responsive** — UK Eurosport 2 — HTTP 200 — 480 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3DfvmZRY2Rvetnd9qsZq1k
-- **Responsive** — Tsn Aq1 — HTTP 200 — 486 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Q9CbRgHLal4syT5lIO0R_
-- **Responsive** — Music India — HTTP 200 — 850 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Z9zi9Fk8_TMDWDwM5d609
-- **Unverified** — Doyel Radio — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0-edLus17RmZH1iSNlDt56
-- **Unverified** — The Q — HTTP 503 — 487 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-01grD5bNcabrHfTcvbzPnw
-- **Unverified** — Spondon Radio — TimeoutError — 8254 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-02gP1N8IX3rXQRIOkcyLWN
-- **Unverified** — Radio Shadin — TimeoutError — 8255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-03GfBa3WoKwP2ug95DsNSQ
-- **Unverified** — Boishakhi TV (Alt 2) — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-03YwQA0EOWLYRQQizwn9mi
-- **Unverified** — Cricket Gold — TimeoutError — 8244 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-04LEh1XcJWhpZpctMBaO-7
-- **Unverified** — English Premier League 2 — TimeoutError — 8254 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-056rbP9ONpmLHlgEx7W6y8
-- **Unverified** — beIN Sports 1 HD — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-06uvaatcMuDBXC7Qw6M9C5
-- **Unverified** — Independent TV (Alt 2) — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-07KSqTnZCzk2UZYLN96JPH
-- **Unverified** — Star Plus (Alt 2) — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-07zGR8HM7oZcGhvMgtBP40
-- **Unverified** — 92.8 FM Radio Bhumi — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-09SYuTe0s6l4dL4nRQnjeg
-- **Unverified** — UK TNT Sports 2 HD — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-09ezPbJa9ATlGge1DBLeBD
-- **Unverified** — MTV HD — HTTP 503 — 484 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0B2OlKVERWiJB3xnSb8Bm7
-- **Unverified** — Sports Fishing TV — TimeoutError — 8257 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0BL-3klrcxgF62T_iKZycX
-- **Unverified** — Wc Music — TimeoutError — 8248 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0BqOTToxHkKlD1_dNt-FoZ
-- **Unverified** — Fifa+ — TimeoutError — 8294 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0CEObGLrPx_f3YYdTjLWgu
-- **Unverified** — ESPN HD — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0CRBf_k-hkpFrY-yi8hcmU
-- **Unverified** — M4 Sport — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0DQla1j2xotfI0yw1F526A
-- **Unverified** — Global TV (Alt 2) — TimeoutError — 8257 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0E35Y-gJhSXKEjU3DtwMUy
-- **Unverified** — In Sony Sports Ten 1 HD — TimeoutError — 8262 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0E83d_PCilef4fC7Frac-_
-- **Unverified** — Al-Quran Bangla — TimeoutError — 8373 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0EFBQQuleovxxQwAgob1y4
-- **Unverified** — Enter10 Bangla — HTTP 503 — 1245 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0FnHIrD-qTWpGeGgmj8AIT
-- **Unverified** — Radio Ritmo On Line — TimeoutError — 9315 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0G3uxhuao8q-y-o1LKz1HC
-- **Unverified** — Pk Ten Sports HD — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0GGA0iwo8LN1G-5TT7PW6y
-- **Unverified** — Tapmad — TimeoutError — 9288 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0GhCGD1f8tvkcB5tRJSNRX
-- **Unverified** — Zee Bangla HD — HTTP 503 — 481 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0Gw_rEkndbnwX4bYYZHAar
-- **Unverified** — Ducktv — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0H3NxGeKxMIy6_Q83c2Y4h
-- **Unverified** — Tlc HD — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0HWXRhPqe_VTK99pE88PRc
-- **Unverified** — Travel Channel — TimeoutError — 8248 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0IZgaDqwp8pd0XOx27nBZB
-- **Unverified** — Rakuten Movies — TimeoutError — 8255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0JU0j67h8TuWPepuNsMmcp
-- **Unverified** — Bangla Hits — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0Jg8_jjdK15mhqqu-55UOc
-- **Unverified** — Cricbuzz — TimeoutError — 8366 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0K3Fsej9ANTxbSUSJS0SJW
-- **Unverified** — Power Turk — TimeoutError — 8266 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0LLIS34vZQKH5N1cg3g0l9
-- **Unverified** — Channel 1 HD — HTTP 503 — 732 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0M-RNOPjgusDYZvKEyLrJj
-- **Unverified** — Unite8 Sports 1 — TimeoutError — 8255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0NC1bLTABFriKAjO0OWgc8
-- **Unverified** — Espn5 HD — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0NJtGgzX1oybHTBJF-fyj0
-- **Unverified** — Viju Tv1000 Action — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0Nirbw1-MDmut0SMACPwp4
-- **Unverified** — MTV (Alt 2) — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0PFw8e3_1w8-OjKIEQj6LI
-- **Unverified** — Ktv Sports Plus — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0Qgc-h-cYcG0rTHZCS5pPU
-- **Unverified** — Love Gold Bangla — TimeoutError — 8245 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0RcI-Pk8Y1g3CYtoVzscEX
-- **Unverified** — DBC News HD — HTTP 503 — 1436 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0RoZJX68s8bqk0ZojehBJt
-- **Unverified** — Goal TV — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0S2ThYVpuLOAY_THcuoJUv
-- **Unverified** — Ekhon TV (Alt 2) — TimeoutError — 8257 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0TV8hLXtbDtV4nLRrnIJzO
-- **Unverified** — Arena Sport 1 — TimeoutError — 8318 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0TYx0X4Qnt_Awfh3vZVqgK
-- **Unverified** — Talk Sport — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0UAKcMd4H5Tcvr06D6U7LJ
-- **Unverified** — Asean Cup 2026 — TimeoutError — 8265 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0UPzAoxs1f2mIymGE-zDUa
-- **Unverified** — Kronehit — HTTP 503 — 492 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0VNcgKr3_IUKKOjyt8YmUx
-- **Unverified** — Maasranga TV (Alt 3) — TimeoutError — 8248 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0VVw41cXeqn57WaJqpgMah
-- **Unverified** — Digital Fashion — TimeoutError — 8245 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0WEOlWl7Yejp0SLe-r_yP3
-- **Unverified** — beIN Sports Xtra — TimeoutError — 8246 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0WWcx8Go2n63R2MvFRLN6Q
-- **Unverified** — Nat Geo Bangla — TimeoutError — 8263 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0WoaSXNTnigf0v0tyPqBkc
-- **Unverified** — Star Gold HD (Alt 2) — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0XAQzTbhArTayW0DmPioKB
-- **Unverified** — Raj Digital Plus — HTTP 503 — 479 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0XjZtdzPIDWF-ynTdHAJlp
-- **Unverified** — Bhi Channel — HTTP 503 — 485 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0YO5JgObyQmYcwbpHdddWS
-- **Unverified** — Bangla TV (Alt 4) — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0YlXBUG6s9rkNBgewzDlsZ
-- **Unverified** — Travel XP (Alt 2) — TimeoutError — 9303 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0ZIBbC2thfreybSDo7sbUz
-- **Unverified** — News 24 (Alt 3) — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0a8ANWrc1arJPZd3W6hfJM
+- **Dead** — Star News HD — HTTP 404 — 797 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2ddhgBpDT9IzuzOBWt8yWE
+- **Dead** — Bangla TV — HTTP 404 — 692 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2f9hfNJNzbkaLbQms18X-c
+- **Dead** — BTV Chattogram — HTTP 404 — 980 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2iLbx1-PhVH7Ak49o93rKh
+- **Dead** — Independent TV — HTTP 404 — 520 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2kgp-Ii857F7HprisZ-pvL
+- **Dead** — MBC Bollywood HD — HTTP 404 — 930 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2liCa210ImbnkDwFv4UGJA
+- **Dead** — Sa TV HD — HTTP 404 — 803 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2o7mSEXFuzIDH2O6rqjdjq
+- **Dead** — Manoranjan TV — HTTP 404 — 898 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2oyNQyoW9jhrbE2BqFbY4q
+- **Dead** — Bangla Big Boss 24x7 — HTTP 404 — 853 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2p2JgWqv71AlK6NHf2BxQr
+- **Dead** — Ary News — HTTP 404 — 852 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2qE1k0YOg-TuhpvcW3eO4J
+- **Dead** — AXN — HTTP 404 — 804 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2wb0NNssQI00pGo93qtVSz
+- **Dead** — Zee Anmol Cinema — HTTP 404 — 850 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2y0EL1FKXUQsmB0t_4S3KT
+- **Dead** — News 18 Bangla — HTTP 404 — 1866 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2yQ7oCnG2fK2uc5u537c8S
+- **Dead** — Balle Balle — HTTP 404 — 800 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3-Y3MlltZYcPlOXVEzxbEV
+- **Dead** — Global Panjab — HTTP 404 — 863 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-31_YqBR5TnB-wFiprfOx6w
+- **Dead** — DD Bangla — HTTP 404 — 850 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-353b_z_7PUQmbJ1_ypZd_f
+- **Dead** — Star Jalsha HD — HTTP 404 — 847 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-35aVXNmHacUh34HiF5XkOw
+- **Dead** — Isai Aruvi TV — HTTP 404 — 1973 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-39efiMMcpvrOQGTlSnyIyd
+- **Dead** — NDTV — HTTP 404 — 843 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3CmnogMl_21KgNY-LCW1DO
+- **Dead** — Nagorik TV HD — HTTP 404 — 771 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3D_Ct2ZrLEY17ehyYMHENV
+- **Dead** — Bangla TV HD — HTTP 404 — 942 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3FU4IhG55NQRRPQI62I3PL
+- **Dead** — Asian TV HD — HTTP 404 — 845 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3FpOZXISq01Nhsy-LZqryC
+- **Dead** — Star Gold 2 — HTTP 404 — 850 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3GL2GMItbb3cvEnT0Hf3ra
+- **Dead** — 9x Jalwa — HTTP 404 — 833 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3H6ZSSA6it261-kmv0Kc-5
+- **Dead** — Hum TV HD — HTTP 404 — 802 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3NgLDw4Pv_TCxfsKxSBHxT
+- **Dead** — Colors HD — HTTP 404 — 851 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3QGS86hUr9gLGzYeTsokr4
+- **Dead** — Ktv Bangla — HTTP 404 — 2023 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3SgMEUMT8e5HEC7SjZ6Y55
+- **Dead** — Deepto TV HD — HTTP 404 — 606 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3eQri1Nag3YsrUp0RtiDOY
+- **Dead** — Star Plus HD — HTTP 404 — 858 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3fFjESAjYKUl2gyWge05Gb
+- **Dead** — Green TV — HTTP 404 — 582 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3fP86AW0H200t7wTuD3kV7
+- **Dead** — Ekhon TV HD — HTTP 404 — 467 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3lVeKtyiRz9KBhmRcrNy2k
+- **Dead** — Channel 24 HD — HTTP 404 — 1013 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3ra5uPNOIwEE9b7mY5rO0f
+- **Dead** — Ruposhi Bangla — HTTP 404 — 844 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3tCM48oZ9_l9LgsEneqA4U
+- **Dead** — Epic Bhojpuri — HTTP 404 — 801 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3wpuSttOo4-89M0WcNaSVF
+- **Dead** — Rongeen TV — HTTP 404 — 856 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3xEaUYOQFWh8RKuGKzIRFM
+- **Dead** — DD National — HTTP 404 — 849 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3xL6AjSufBwemAAne-5RXI
+- **Responsive** — Sky Sports Laliga — HTTP 200 — 467 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-11A-xLEaaniJNW9_8HOKwO
+- **Responsive** — ESPN Vivo — HTTP 200 — 530 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1FsH6CvA6UrkObZj85nLdM
+- **Responsive** — Premier Sports 1 — HTTP 200 — 465 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1mBQ91nuFrpG07CM7a7OQA
+- **Responsive** — Laligatv — HTTP 200 — 462 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-25X1OotJLnr45NwAfwZlh-
+- **Responsive** — UK Fox Sports Cricket — HTTP 200 — 1144 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2mwyelB6J-OClHxbFWnB73
+- **Responsive** — UK Eurosport 2 — HTTP 200 — 453 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3DfvmZRY2Rvetnd9qsZq1k
+- **Responsive** — Tsn Aq1 — HTTP 200 — 441 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Q9CbRgHLal4syT5lIO0R_
+- **Responsive** — Music India — HTTP 200 — 793 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Z9zi9Fk8_TMDWDwM5d609
+- **Unverified** — Doyel Radio — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0-edLus17RmZH1iSNlDt56
+- **Unverified** — Colors Bangla Cinema — HTTP 503 — 501 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-00BFyikDKoBo478Yev0Zex
+- **Unverified** — The Q — HTTP 503 — 463 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-01grD5bNcabrHfTcvbzPnw
+- **Unverified** — Spondon Radio — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-02gP1N8IX3rXQRIOkcyLWN
+- **Unverified** — Radio Shadin — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-03GfBa3WoKwP2ug95DsNSQ
+- **Unverified** — Boishakhi TV (Alt 2) — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-03YwQA0EOWLYRQQizwn9mi
+- **Unverified** — 8xm — HTTP 503 — 444 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-04HoQY8s0GUz-0K0nlVK5S
+- **Unverified** — Cricket Gold — TimeoutError — 8229 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-04LEh1XcJWhpZpctMBaO-7
+- **Unverified** — Zoom Music — HTTP 503 — 472 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-04SJxetb1biV1JfYixZwpT
+- **Unverified** — English Premier League 2 — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-056rbP9ONpmLHlgEx7W6y8
+- **Unverified** — beIN Sports 1 HD — TimeoutError — 8247 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-06uvaatcMuDBXC7Qw6M9C5
+- **Unverified** — Independent TV (Alt 2) — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-07KSqTnZCzk2UZYLN96JPH
+- **Unverified** — Star Plus (Alt 2) — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-07zGR8HM7oZcGhvMgtBP40
+- **Unverified** — 92.8 FM Radio Bhumi — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-09SYuTe0s6l4dL4nRQnjeg
+- **Unverified** — UK TNT Sports 2 HD — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-09ezPbJa9ATlGge1DBLeBD
+- **Unverified** — Sports Fishing TV — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0BL-3klrcxgF62T_iKZycX
+- **Unverified** — Wc Music — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0BqOTToxHkKlD1_dNt-FoZ
+- **Unverified** — Fifa+ — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0CEObGLrPx_f3YYdTjLWgu
+- **Unverified** — ESPN HD — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0CRBf_k-hkpFrY-yi8hcmU
+- **Unverified** — M4 Sport — TimeoutError — 8284 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0DQla1j2xotfI0yw1F526A
+- **Unverified** — Global TV (Alt 2) — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0E35Y-gJhSXKEjU3DtwMUy
+- **Unverified** — In Sony Sports Ten 1 HD — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0E83d_PCilef4fC7Frac-_
+- **Unverified** — Al-Quran Bangla — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0EFBQQuleovxxQwAgob1y4
+- **Unverified** — Radio Ritmo On Line — TimeoutError — 8246 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0G3uxhuao8q-y-o1LKz1HC
+- **Unverified** — Pk Ten Sports HD — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0GGA0iwo8LN1G-5TT7PW6y
+- **Unverified** — Tapmad — TimeoutError — 8230 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0GhCGD1f8tvkcB5tRJSNRX
+- **Unverified** — Ducktv — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0H3NxGeKxMIy6_Q83c2Y4h
+- **Unverified** — Tlc HD — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0HWXRhPqe_VTK99pE88PRc
+- **Unverified** — Canada One — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0HXTpj1HzsnUMg3EJkR9to
+- **Unverified** — Travel Channel — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0IZgaDqwp8pd0XOx27nBZB
+- **Unverified** — Rakuten Movies — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0JU0j67h8TuWPepuNsMmcp
+- **Unverified** — Bangla Hits — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0Jg8_jjdK15mhqqu-55UOc
+- **Unverified** — Cricbuzz — TimeoutError — 8233 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0K3Fsej9ANTxbSUSJS0SJW
+- **Unverified** — Power Turk — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0LLIS34vZQKH5N1cg3g0l9
+- **Unverified** — Unite8 Sports 1 — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0NC1bLTABFriKAjO0OWgc8
+- **Unverified** — Espn5 HD — TimeoutError — 8242 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0NJtGgzX1oybHTBJF-fyj0
+- **Unverified** — Viju Tv1000 Action — TimeoutError — 8243 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0Nirbw1-MDmut0SMACPwp4
+- **Unverified** — MTV (Alt 2) — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0PFw8e3_1w8-OjKIEQj6LI
+- **Unverified** — Ktv Sports Plus — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0Qgc-h-cYcG0rTHZCS5pPU
+- **Unverified** — Love Gold Bangla — TimeoutError — 8231 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0RcI-Pk8Y1g3CYtoVzscEX
+- **Unverified** — DBC News HD — HTTP 503 — 646 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0RoZJX68s8bqk0ZojehBJt
+- **Unverified** — Goal TV — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0S2ThYVpuLOAY_THcuoJUv
+- **Unverified** — Ekattor TV HD — HTTP 503 — 2666 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0SkQWXRDMpPRC10nYVMI8y
+- **Unverified** — Ekhon TV (Alt 2) — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0TV8hLXtbDtV4nLRrnIJzO
+- **Unverified** — Arena Sport 1 — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0TYx0X4Qnt_Awfh3vZVqgK
+- **Unverified** — Talk Sport — TimeoutError — 8246 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0UAKcMd4H5Tcvr06D6U7LJ
+- **Unverified** — Asean Cup 2026 — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0UPzAoxs1f2mIymGE-zDUa
+- **Unverified** — Kronehit — TimeoutError — 9263 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0VNcgKr3_IUKKOjyt8YmUx
+- **Unverified** — Maasranga TV (Alt 3) — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0VVw41cXeqn57WaJqpgMah
+- **Unverified** — Digital Fashion — HTTP 503 — 443 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0WEOlWl7Yejp0SLe-r_yP3
+- **Unverified** — beIN Sports Xtra — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0WWcx8Go2n63R2MvFRLN6Q
+- **Unverified** — Nat Geo Bangla — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0WoaSXNTnigf0v0tyPqBkc
+- **Unverified** — Star Gold HD (Alt 2) — TimeoutError — 8262 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0XAQzTbhArTayW0DmPioKB
+- **Unverified** — Raj Digital Plus — HTTP 503 — 570 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0XjZtdzPIDWF-ynTdHAJlp
+- **Unverified** — Bhi Channel — HTTP 503 — 457 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0YO5JgObyQmYcwbpHdddWS
+- **Unverified** — Bangla TV (Alt 4) — TimeoutError — 9239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0YlXBUG6s9rkNBgewzDlsZ
+- **Unverified** — Travel XP (Alt 2) — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0ZIBbC2thfreybSDo7sbUz
+- **Unverified** — News 24 (Alt 3) — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0a8ANWrc1arJPZd3W6hfJM
 - **Unverified** — Red Bull TV — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0aDt3OVWKmk4GFHJ2r0AVW
-- **Unverified** — Sportv — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0at1LjZvkuHpWIwsJlFJ_W
-- **Unverified** — Sangeet Bangla (Alt 4) — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0beDn_1-hmcmjlE_Ufgma3
-- **Unverified** — Sa TV (Alt 2) — TimeoutError — 8265 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0bf-3M9DUDDm8llCc09iKT
-- **Unverified** — Discovery HD — TimeoutError — 8246 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0c-kIEg90XL2Nfaey3gJjx
-- **Unverified** — Ziggo Sport 2 HD — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0cFFChMLOUdP4wJs1nQkXh
-- **Unverified** — Lacrosse TV — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0cngl3otdHlQNbmPpWW3MK
-- **Unverified** — Star Gold Select HD — HTTP 503 — 493 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0d4oWgHGCog0wd_ZRbHOBw
-- **Unverified** — Bangla Vision (Alt 3) — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0e0gjh_HZylOQu0fr5MITn
-- **Unverified** — DBC News (Alt 2) — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0e8FkNSCDuifvqqpoXDW2P
-- **Unverified** — Wild Life — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0eOKA0SETFzF5U6nfDb9Wr
-- **Unverified** — Radio Din Raat 93.6 FM — TimeoutError — 8265 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0eZ00eyAWoD_m2DaFUI941
-- **Unverified** — Ekhon TV (Alt 3) — TimeoutError — 9262 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0fUPGRENZb-ePFYBD_gaqS
-- **Unverified** — Magical Blade FM — TimeoutError — 8257 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0fvt6tI6qALFia3pBA67hH
-- **Unverified** — DD Himachal Pradesh — HTTP 503 — 1197 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0gNNSJnuE_cUrLS7ijlnkg
-- **Unverified** — US Willow 2 — TimeoutError — 8246 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0hOE8ta5jHNQq-64R9nMmU
-- **Unverified** — Fuel TV Apac — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0iHiQ5ZMpHyf5WHwGE087F
-- **Unverified** — Bangla Vision HD — HTTP 503 — 754 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0ikeO7xJ806HG-RIffsbcc
-- **Unverified** — Claro Sports — TimeoutError — 8243 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0kwtveYMm4BKYbqVIEuNZl
-- **Unverified** — Nickelodeon — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0lZ3VkVyh2MgECUgA4Q7h8
-- **Unverified** — Aurora Media Flims — HTTP 503 — 484 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0lgypuPtg4HLcDYWT_aXgY
-- **Unverified** — 4k Travel — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0lpB2PQ_V7c323ckWJeEVZ
-- **Unverified** — ETV — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0mClnrxUnxzHe1dJGb1viN
-- **Unverified** — ATN News (Alt 2) — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0n-uIZzg81j_mVmucJCug6
-- **Unverified** — Star Movies Select HD — TimeoutError — 8254 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0nFBuPJft8_-kIJHlv-FfT
-- **Unverified** — Sony Max 2 — HTTP 503 — 485 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0nlBr73yTK2WJZt5xJPBOG
-- **Unverified** — ZB Cartoon — TimeoutError — 8279 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0nxzBQPNCLtZy33wyP47zy
-- **Unverified** — Digi Sport 1 — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0o4Z-JiR0W4ZVBDoucvBlD
-- **Unverified** — Tom & Jerry TV — TimeoutError — 8367 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0o4xh3SzrIIhxKFhpoe_32
-- **Unverified** — Jamuna TV (Alt 4) — TimeoutError — 8254 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0ph2UN_BQkSHRWMOQVKtep
-- **Unverified** — Real Madrid TV — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0qDjcHPktVpCT_IT6uuJS2
-- **Unverified** — Boishakhi TV — HTTP 503 — 750 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0rYPCDyP7pjL8cqGBLOo7L
-- **Unverified** — Fubo Sports — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0tFGzURW5SCXa9iVYEA_iX
-- **Unverified** — US Sky Sports Cricket — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0tGOpIi8mN9OExs2GZtGj5
-- **Unverified** — Star Jalsha (Alt 2) — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0uCYSe5xOThfWQ64z2WQsH
-- **Unverified** — Filmua Live — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0uvsx_a8LdZXlZC2zirM7w
-- **Unverified** — Sony Aath (Alt 2) — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0uxekEFPsn8DDOM7c7-t08
-- **Unverified** — Enter10 Bangla (Alt 4) — TimeoutError — 8242 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0v7YFmKXhiwPOL2PSNplYl
-- **Unverified** — Makkah Live — TimeoutError — 8357 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0v9i5ykrMQwswR57Xr7Cmd
-- **Unverified** — Mohona TV (Alt 2) — TimeoutError — 8266 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0vLvdXs72vQWA5Igr2PAu2
-- **Unverified** — Movie Bangla — HTTP 503 — 523 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0wILpYfXBbOLOZenpl_OzC
-- **Unverified** — BTV National HD — HTTP 503 — 1957 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0wJGB76LVM3If5bP0lJyEA
-- **Unverified** — 9x Tashan (Alt 2) — TimeoutError — 8241 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0wmhQuQlkSgX7dS8ly0lpi
-- **Unverified** — Be.joy Kids — TimeoutError — 8254 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0xJDGtLSHh4V9W3ssRnqKm
-- **Unverified** — Gazi TV HD — HTTP 503 — 521 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0xcl9JW1kFySQCQg4tUM40
-- **Unverified** — 98.1 Pearl FM — TimeoutError — 8248 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0ybixvH9YdCAlJZXJ51OSA
-- **Unverified** — Rongeen TV (Alt 3) — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0ylXDPLdcNf6F4HN86ogGD
-- **Unverified** — Sports Grid — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0ymnzqTC8CrVKkeBh3i5Gd
-- **Unverified** — Channel I HD — HTTP 503 — 714 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0zBUEkgz9dH7WjTB0KymcQ
-- **Unverified** — Investigation Discovery — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0zhmkWYvFhCU849gY3tErc
-- **Unverified** — Jamuna TV (Alt 2) — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-10-BvKNWoj6sRcUpBeXYsq
-- **Unverified** — Rtsh Sport — TimeoutError — 8243 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-10GToTf1nBDcDV9DSKbOeQ
-- **Unverified** — Moonbug Kids — TimeoutError — 8261 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-11X2w5U38IRuDyevSTv6NE
-- **Unverified** — US Willow By Cricbuzz — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-12Ge0p6B7Rw2PGXiCx6wrw
-- **Unverified** — In Sony Sports Ten 3 HD — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-12qZAmRGWzWv6ooZ7JYeZx
-- **Unverified** — UK TNT Sports 3 HD — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-14AXbmojM893qG4k9NHkX9
-- **Unverified** — Zee 24 Ghanta — HTTP 503 — 487 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-14eJdsQNa0c7p9vV9R8Ufe
-- **Unverified** — Fashion 1 — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-15KEWZgS6HdePSsY2b5ojs
-- **Unverified** — Aaryaa TV (Alt 2) — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-15KxMcBV7OpgCziKHnOG50
-- **Unverified** — My TV HD — HTTP 503 — 1725 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-15P1u9nY9FRRq-zT7SGyAf
-- **Unverified** — Food Network — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-15uC0RERb80txImDRYxwmm
-- **Unverified** — MTV (Alt 3) — TimeoutError — 8248 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-166FDO_Tz_ePk0fInL4W2d
-- **Unverified** — Nick HD — TimeoutError — 8255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-17-F_Xt9MubeXCmb0fGPUL
-- **Unverified** — Tom & Jerry 24/7 — TimeoutError — 8246 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-17XcTxyiubhWkDx_Q_tDaC
-- **Unverified** — Sine Plus — HTTP 503 — 485 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-17w62QoUqnJMZh0y98VRRu
-- **Unverified** — Max Sport 1 — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-186sFGi7nXz0ZplEY2VDpf
-- **Unverified** — Republic Bangla — HTTP 503 — 480 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-19Fm3s09AS3FUqmKK3ppVJ
-- **Unverified** — Discovery Science — TimeoutError — 8257 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1A98yhqcyaaTc-Pb8QHBYN
-- **Unverified** — SRK TV — HTTP 503 — 487 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1AO3fqaHmCvvRFzQkn_shC
-- **Unverified** — Comedy Central — HTTP 503 — 487 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1B-4Gnp3i1C5_LhFgrlv6e
-- **Unverified** — Ziggo Sport 3 HD — TimeoutError — 8255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1BGpBIKzze8Pt-Ux2suLWk
-- **Unverified** — beIN Sports Arabic HD — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1BiGL4E3Ohzdw2FkpIokhY
-- **Unverified** — Hungama TV — TimeoutError — 8267 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1C5w38Fm7pW7nd1kM90fNu
-- **Unverified** — Palki FM — TimeoutError — 8270 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1CbYUWO95z1T3JNKC2N4Ii
-- **Unverified** — Ktv Sport Plus — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1DLMbY5FlJOvmxnC9F30LC
-- **Unverified** — Disney Jr — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1DN1G9Wb25m5kQR1k95UCO
-- **Unverified** — Epic Music (Alt 2) — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1DSDnw428MfnBrQL0XojSJ
-- **Unverified** — Magenta Sports 2 — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Dmo2iI097naZ52Lgubt8Q
-- **Unverified** — Bd T Sports — TimeoutError — 8294 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Dn0Memgh9c7zH5Gv0Zh9E
-- **Unverified** — Boishakhi TV (Alt 3) — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1E39SHTrHlVoVlUwBn9NPX
-- **Unverified** — US Sky Sports Premier League — TimeoutError — 8257 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1EWb4fUgf5zkHWJ912OkOw
-- **Unverified** — In Sony Sports Ten 2 HD — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1EaYeNSf0x_VVsg_uvvp1A
-- **Unverified** — In Star Sports 3 — TimeoutError — 8302 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1FhqQ36yt7k2g2gvgfm3Cq
-- **Unverified** — Jalsha Movies (Alt 2) — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1FxlXfHiwqrMeu2Kio72DV
-- **Unverified** — Colors Bangla (Alt 2) — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1G4ogZ8bp7GiAXcB6wByEN
-- **Unverified** — Kiev Sport HD — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Gk5hyXRzhDt4TOifjDZd_
-- **Unverified** — Enter10 Bangla (Alt 3) — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Go2TDk3YHBkYI3Dx9orpm
-- **Unverified** — Banijoy Mr Been — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1HpBOEJkLyCyrR-Yd3Bn6k
-- **Unverified** — In Sony Sports Ten 5 HD — TimeoutError — 8277 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1HysMXC79YsatY3itdf9OT
-- **Unverified** — Cartoon Channel — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1I-8nBDaY639kISuw9h4Si
-- **Unverified** — Quran TV — TimeoutError — 8302 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1JBZDl942dVc0KPE2c_qc6
-- **Unverified** — Rongeen TV (Alt 2) — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1JN1lg2zBqknqKnZtVUhX5
-- **Unverified** — In Star Sports Select 1 HD — TimeoutError — 8298 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1JNOqkQlLKSwh4qbtCuV_2
-- **Unverified** — Afrobeats — HTTP 503 — 486 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1KSHDzUioMXKS7wJb7URH3
-- **Unverified** — Bangla Vision (Alt 2) — TimeoutError — 8247 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1MAUe19vO8DHQnTTc8qz5F
-- **Unverified** — Oman Sports — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1MKimCygSoR4TOw7pK6BGH
-- **Unverified** — ATN Bangla (Alt 2) — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Msb6OK7HXRKEJz46LIyvQ
-- **Unverified** — Radio Janata — TimeoutError — 8259 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1OL54DAELUnL1uUvotpQyc
-- **Unverified** — In Eurosport HD — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1P1uF7240KFNhfsuMPslGN
+- **Unverified** — Sportv — TimeoutError — 9240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0at1LjZvkuHpWIwsJlFJ_W
+- **Unverified** — Sangeet Bangla (Alt 4) — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0beDn_1-hmcmjlE_Ufgma3
+- **Unverified** — Sa TV (Alt 2) — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0bf-3M9DUDDm8llCc09iKT
+- **Unverified** — Discovery HD — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0c-kIEg90XL2Nfaey3gJjx
+- **Unverified** — Ziggo Sport 2 HD — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0cFFChMLOUdP4wJs1nQkXh
+- **Unverified** — Lacrosse TV — TimeoutError — 8242 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0cngl3otdHlQNbmPpWW3MK
+- **Unverified** — Bangla Vision (Alt 3) — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0e0gjh_HZylOQu0fr5MITn
+- **Unverified** — DBC News (Alt 2) — TimeoutError — 8262 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0e8FkNSCDuifvqqpoXDW2P
+- **Unverified** — Wild Life — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0eOKA0SETFzF5U6nfDb9Wr
+- **Unverified** — Radio Din Raat 93.6 FM — TimeoutError — 9266 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0eZ00eyAWoD_m2DaFUI941
+- **Unverified** — News 24 — HTTP 503 — 1478 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0fHSnyVwey8-iskKC6DWYT
+- **Unverified** — Ekhon TV (Alt 3) — TimeoutError — 8233 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0fUPGRENZb-ePFYBD_gaqS
+- **Unverified** — Magical Blade FM — TimeoutError — 8387 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0fvt6tI6qALFia3pBA67hH
+- **Unverified** — US Willow 2 — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0hOE8ta5jHNQq-64R9nMmU
+- **Unverified** — Fuel TV Apac — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0iHiQ5ZMpHyf5WHwGE087F
+- **Unverified** — Rajdhani TV — HTTP 503 — 1458 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0kjSjr0plL4L3pXOFEZI0T
+- **Unverified** — Claro Sports — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0kwtveYMm4BKYbqVIEuNZl
+- **Unverified** — Nickelodeon — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0lZ3VkVyh2MgECUgA4Q7h8
+- **Unverified** — 4k Travel — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0lpB2PQ_V7c323ckWJeEVZ
+- **Unverified** — ETV — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0mClnrxUnxzHe1dJGb1viN
+- **Unverified** — ATN News (Alt 2) — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0n-uIZzg81j_mVmucJCug6
+- **Unverified** — Star Movies Select HD — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0nFBuPJft8_-kIJHlv-FfT
+- **Unverified** — Sony Max 2 — HTTP 503 — 447 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0nlBr73yTK2WJZt5xJPBOG
+- **Unverified** — ZB Cartoon — TimeoutError — 8233 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0nxzBQPNCLtZy33wyP47zy
+- **Unverified** — Digi Sport 1 — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0o4Z-JiR0W4ZVBDoucvBlD
+- **Unverified** — Tom & Jerry TV — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0o4xh3SzrIIhxKFhpoe_32
+- **Unverified** — Jamuna TV (Alt 4) — TimeoutError — 8233 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0ph2UN_BQkSHRWMOQVKtep
+- **Unverified** — Real Madrid TV — TimeoutError — 8246 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0qDjcHPktVpCT_IT6uuJS2
+- **Unverified** — Fubo Sports — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0tFGzURW5SCXa9iVYEA_iX
+- **Unverified** — US Sky Sports Cricket — TimeoutError — 8233 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0tGOpIi8mN9OExs2GZtGj5
+- **Unverified** — Star Jalsha (Alt 2) — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0uCYSe5xOThfWQ64z2WQsH
+- **Unverified** — Filmua Live — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0uvsx_a8LdZXlZC2zirM7w
+- **Unverified** — Sony Aath (Alt 2) — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0uxekEFPsn8DDOM7c7-t08
+- **Unverified** — Enter10 Bangla (Alt 4) — TimeoutError — 8231 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0v7YFmKXhiwPOL2PSNplYl
+- **Unverified** — Makkah Live — TimeoutError — 8230 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0v9i5ykrMQwswR57Xr7Cmd
+- **Unverified** — Mohona TV (Alt 2) — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0vLvdXs72vQWA5Igr2PAu2
+- **Unverified** — 9x Tashan (Alt 2) — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0wmhQuQlkSgX7dS8ly0lpi
+- **Unverified** — Be.joy Kids — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0xJDGtLSHh4V9W3ssRnqKm
+- **Unverified** — 98.1 Pearl FM — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0ybixvH9YdCAlJZXJ51OSA
+- **Unverified** — Rongeen TV (Alt 3) — TimeoutError — 8243 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0ylXDPLdcNf6F4HN86ogGD
+- **Unverified** — Sports Grid — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0ymnzqTC8CrVKkeBh3i5Gd
+- **Unverified** — Investigation Discovery — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0zhmkWYvFhCU849gY3tErc
+- **Unverified** — Jamuna TV (Alt 2) — TimeoutError — 8228 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-10-BvKNWoj6sRcUpBeXYsq
+- **Unverified** — 9x Jhakaas — HTTP 503 — 456 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-10BPEopZP7lrdHKNKgOkzt
+- **Unverified** — Rtsh Sport — TimeoutError — 8260 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-10GToTf1nBDcDV9DSKbOeQ
+- **Unverified** — B4u Music — HTTP 503 — 440 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-10qMcRefMiK82WpNrvgHD6
+- **Unverified** — Moonbug Kids — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-11X2w5U38IRuDyevSTv6NE
+- **Unverified** — US Willow By Cricbuzz — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-12Ge0p6B7Rw2PGXiCx6wrw
+- **Unverified** — In Sony Sports Ten 3 HD — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-12qZAmRGWzWv6ooZ7JYeZx
+- **Unverified** — UK TNT Sports 3 HD — TimeoutError — 8245 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-14AXbmojM893qG4k9NHkX9
+- **Unverified** — Fashion 1 — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-15KEWZgS6HdePSsY2b5ojs
+- **Unverified** — Aaryaa TV (Alt 2) — TimeoutError — 8246 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-15KxMcBV7OpgCziKHnOG50
+- **Unverified** — Food Network — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-15uC0RERb80txImDRYxwmm
+- **Unverified** — MTV (Alt 3) — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-166FDO_Tz_ePk0fInL4W2d
+- **Unverified** — Epic — HTTP 503 — 457 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-16I0_s94AvktCzLRm17SRj
+- **Unverified** — Nick HD — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-17-F_Xt9MubeXCmb0fGPUL
+- **Unverified** — Tom & Jerry 24/7 — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-17XcTxyiubhWkDx_Q_tDaC
+- **Unverified** — Sine Plus — HTTP 503 — 463 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-17w62QoUqnJMZh0y98VRRu
+- **Unverified** — Max Sport 1 — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-186sFGi7nXz0ZplEY2VDpf
+- **Unverified** — Republic Bangla — HTTP 503 — 461 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-19Fm3s09AS3FUqmKK3ppVJ
+- **Unverified** — Discovery Science — TimeoutError — 8233 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1A98yhqcyaaTc-Pb8QHBYN
+- **Unverified** — Comedy Central — HTTP 503 — 453 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1B-4Gnp3i1C5_LhFgrlv6e
+- **Unverified** — Ziggo Sport 3 HD — TimeoutError — 8242 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1BGpBIKzze8Pt-Ux2suLWk
+- **Unverified** — beIN Sports Arabic HD — TimeoutError — 8241 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1BiGL4E3Ohzdw2FkpIokhY
+- **Unverified** — Hungama TV — TimeoutError — 8243 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1C5w38Fm7pW7nd1kM90fNu
+- **Unverified** — ABP Ananda — HTTP 503 — 447 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1CFEv-Svw5oBLtiZAar2FV
+- **Unverified** — Palki FM — TimeoutError — 8241 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1CbYUWO95z1T3JNKC2N4Ii
+- **Unverified** — Ktv Sport Plus — TimeoutError — 8230 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1DLMbY5FlJOvmxnC9F30LC
+- **Unverified** — Disney Jr — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1DN1G9Wb25m5kQR1k95UCO
+- **Unverified** — Epic Music (Alt 2) — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1DSDnw428MfnBrQL0XojSJ
+- **Unverified** — Magenta Sports 2 — TimeoutError — 8287 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Dmo2iI097naZ52Lgubt8Q
+- **Unverified** — Bd T Sports — TimeoutError — 8229 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Dn0Memgh9c7zH5Gv0Zh9E
+- **Unverified** — Boishakhi TV (Alt 3) — TimeoutError — 8255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1E39SHTrHlVoVlUwBn9NPX
+- **Unverified** — US Sky Sports Premier League — TimeoutError — 8241 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1EWb4fUgf5zkHWJ912OkOw
+- **Unverified** — In Sony Sports Ten 2 HD — TimeoutError — 8244 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1EaYeNSf0x_VVsg_uvvp1A
+- **Unverified** — In Star Sports 3 — TimeoutError — 8229 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1FhqQ36yt7k2g2gvgfm3Cq
+- **Unverified** — Jalsha Movies (Alt 2) — TimeoutError — 8245 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1FxlXfHiwqrMeu2Kio72DV
+- **Unverified** — Colors Bangla (Alt 2) — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1G4ogZ8bp7GiAXcB6wByEN
+- **Unverified** — Kiev Sport HD — TimeoutError — 8227 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Gk5hyXRzhDt4TOifjDZd_
+- **Unverified** — Enter10 Bangla (Alt 3) — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Go2TDk3YHBkYI3Dx9orpm
+- **Unverified** — Banijoy Mr Been — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1HpBOEJkLyCyrR-Yd3Bn6k
+- **Unverified** — In Sony Sports Ten 5 HD — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1HysMXC79YsatY3itdf9OT
+- **Unverified** — Cartoon Channel — TimeoutError — 9257 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1I-8nBDaY639kISuw9h4Si
+- **Unverified** — Quran TV — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1JBZDl942dVc0KPE2c_qc6
+- **Unverified** — Rongeen TV (Alt 2) — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1JN1lg2zBqknqKnZtVUhX5
+- **Unverified** — In Star Sports Select 1 HD — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1JNOqkQlLKSwh4qbtCuV_2
+- **Unverified** — Afrobeats — HTTP 503 — 457 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1KSHDzUioMXKS7wJb7URH3
+- **Unverified** — Biz Cinema — HTTP 503 — 454 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1L8_9Z5INiC5YVlBerSafJ
+- **Unverified** — &pictures HD — HTTP 503 — 458 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1M75DlOyDM816um77GOefP
+- **Unverified** — Bangla Vision (Alt 2) — TimeoutError — 9252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1MAUe19vO8DHQnTTc8qz5F
+- **Unverified** — Oman Sports — TimeoutError — 8230 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1MKimCygSoR4TOw7pK6BGH
+- **Unverified** — ATN Bangla (Alt 2) — TimeoutError — 8248 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Msb6OK7HXRKEJz46LIyvQ
+- **Unverified** — Radio Janata — TimeoutError — 8231 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1OL54DAELUnL1uUvotpQyc
+- **Unverified** — In Eurosport HD — TimeoutError — 8231 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1P1uF7240KFNhfsuMPslGN
 - **Unverified** — Syfy TV — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1PwB7Gle9_9UgJE712Brsn
-- **Unverified** — Deen TV — TimeoutError — 8273 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1QRtpAGL2w3PQKOTDVT-yg
-- **Unverified** — Zee Cafe HD — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1QbSFiOijdwQEyvGDjHg-D
-- **Unverified** — Radio Bushra — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1QxS_pk7MR2J5kPoD3SgPF
-- **Unverified** — Movie Sphere — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1R2mDxNo0gtSxvsGbRqmoS
-- **Unverified** — Unite8 Sports 2 — TimeoutError — 8254 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1RI8CxHIuj_5nK8pLDsI_5
-- **Unverified** — Radio Capital FM 94.8 — TimeoutError — 8263 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1S0S5D_soqA2_fxYUwHZVI
-- **Unverified** — History TV — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1U8Jqw9LlObxXySkE9tb0x
-- **Unverified** — Pmi TV — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1UTM8sAUkKpJsfG8Anny66
-- **Unverified** — Radio Bangladesh Co — TimeoutError — 8246 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Uh4xXy8hJCuyUIWNcU3QB
-- **Unverified** — Rds Social TV — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1UiEqtfrls3o9FOgq7Cz0H
-- **Unverified** — Asian TV (Alt 2) — TimeoutError — 8245 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Ut-EGOcUTOJaeFhGHdLw9
-- **Unverified** — Wild Earth — TimeoutError — 8255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1V4xKIBtq0XYnCucXEEXnF
-- **Unverified** — Animal Planet HD (Alt 2) — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1VA1zbdTh7oohF3O8khAz4
-- **Unverified** — Fail Army — TimeoutError — 8243 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1VZR8F8B63yMreF2_thtOT
-- **Unverified** — In -hindi- Star Sports 1 HD — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Vv1qBLAylK99s9S0DKDmF
-- **Unverified** — Nicktoons — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1VzYO8fRtc4eP0-L2EEBr_
-- **Unverified** — ATN News HD — HTTP 503 — 762 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1WZlDYFWlEka-Lz_m3hDEr
-- **Unverified** — NTV (Alt 2) — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1XXcGy8XbG8N_KG_hQfY85
-- **Unverified** — DD Haryana — HTTP 503 — 496 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ZmaDk6Sq6PpqsZo_y-_9R
-- **Unverified** — Teen Nick — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ZmqlMhCYazdYK9190afbV
-- **Unverified** — Bhojpuri Cinema — HTTP 503 — 1503 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Zx63nT6eu6Xk-sQi4DGws
-- **Unverified** — Nat Geo TV — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1_U16G_K4J-YuWhbOdDf_e
-- **Unverified** — Gazi TV (Alt 2) — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1_bD4oIU5hhs8MqADK70Zm
-- **Unverified** — UK Eurosport 1 — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1axZtL6ON6vgmgEbp9ybxF
-- **Unverified** — In DD Sports HD — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1dQJZe0w1NT2uJUVWm1mJV
-- **Unverified** — Bahrain Sports 2 — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1duiu8tyfYtyYHVEOcuM3o
-- **Unverified** — Cosmote Sports 4 — TimeoutError — 8348 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1emG2IHM5KiSHsnBubHpKr
-- **Unverified** — Bangla TV (Alt 2) — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1f0OReayV-YmW2sZQjw0Bv
-- **Unverified** — Epix TV — HTTP 503 — 479 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1fDEbn7uOW6ujFxRC3ceWS
-- **Unverified** — Screamin — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1fIlu5vVAaRGWsDm7-Iqq2
-- **Unverified** — CNN — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1fpCo44XZxFrLQACas33qb
-- **Unverified** — Dhaka FM 90.4 — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1gIbpQHGjbjyIrnlTs0zv2
-- **Unverified** — Minimax — TimeoutError — 8257 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1gXVhLhcUGtvIHmjXMNF_G
-- **Unverified** — Desh TV HD — HTTP 503 — 700 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1iMdlVUutZ7taXp4B5x6ud
-- **Unverified** — Shemaroo Umang — HTTP 503 — 488 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1iy8_iy0psw6zpW4Q8dCzv
-- **Unverified** — Deshe Bideshe — HTTP 503 — 618 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1j2eDTF1wgZmKP6tbNpGwN
-- **Unverified** — Boishakhi TV (Alt 4) — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1jxZd7NE7JNTd_ziOnbWUj
-- **Unverified** — Hindi Movie Classic 24 — HTTP 503 — 489 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1jzFaJ47UO8mbWrYDSo7xu
-- **Unverified** — Radio Adamya — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1kUeabGOAN-die_6hraj21
-- **Unverified** — Sananda TV — HTTP 503 — 494 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1lFFNvZy8WqTHgp5A74kgk
-- **Unverified** — Radio Vivid Voice | Mymensingh — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1lUl2DXEuiC6D28BYs_2LZ
-- **Unverified** — Wifm 100.9 — TimeoutError — 8255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1lzVyxVd1GQqf8awY3KomE
-- **Unverified** — Nick Jr — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1mfHF4cy3EwwRAulUBFdtt
-- **Unverified** — Ziggo Sport Live — TimeoutError — 8254 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1n74HgKhHSy617Z0UJcYlt
-- **Unverified** — Sony Yay — TimeoutError — 8257 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1nSwE8ojeDy2YqvxJJNSu3
-- **Unverified** — Enter10 Bangla (Alt 2) — TimeoutError — 8255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1nU_JBk5vzSClqe6I2j3N2
-- **Unverified** — Anmol Cinema — HTTP 503 — 482 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1naWrKRRJZi_el62XKO5lH
-- **Unverified** — Gazi TV — HTTP 503 — 479 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1olnSbV2IQ2zxCVK9sNk8h
-- **Unverified** — Tapmad — TimeoutError — 8254 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1pZOCNySHZXrAa0EAAirOY
-- **Unverified** — Channel 9 HD — HTTP 503 — 718 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1pxVp0I59Pa2_zWwbWiRGi
-- **Unverified** — HBO 2 — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1q7MVAp_vQuWjToO_tC_cQ
-- **Unverified** — M Sports — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1qLPDl5UrBMdIo6oflQrkq
-- **Unverified** — 88 Stereo [not 24/7] — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1qqI1tC4DGXOyYduOUDKgF
-- **Unverified** — 51 Radio TV [geo-blocked] — TimeoutError — 8254 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1r-QV7zblFB4cEU2D98Eak
-- **Unverified** — Topestrada TV — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1r0F_qcTRf58icGglPhwe7
-- **Unverified** — Sport 2 HD — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1rLAXdTsGRL8CC4KfulOam
-- **Unverified** — Tapmad — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1rTbDI8lVTOkovJxjJkGze
-- **Unverified** — Goldmines Bollywood (Alt 2) — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1rxmx6G6OG6KfVjgG90Z8h
-- **Unverified** — Dw News — HTTP 503 — 511 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1swegU0q-rHVFfuNELVN9d
-- **Unverified** — Zee Bangla (Alt 2) — TimeoutError — 8254 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1tI1c9a05Cy0qw7RE13KBb
-- **Unverified** — Jungle Book — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1tKU5o0KJsQ6FTn86o_4b6
-- **Unverified** — Adt FM — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1uVHk05KuGLq1mVb0dIruH
-- **Unverified** — Channel S — HTTP 503 — 505 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ugdJAolWFbvehzxc9d9ZG
-- **Unverified** — Deepto TV (Alt 2) — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1x1iKGVS8eOB19fHLoKMQs
-- **Unverified** — Duronto TV (Alt 2) — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1xFKRI4LjasG82cTiPpffN
-- **Unverified** — Amar Ujala — HTTP 503 — 491 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1xefaoUCxnHzxSFfWcV9PX
-- **Unverified** — Discovery Bangla — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1xrfU-O8T1NqQKhkL03FJ-
-- **Unverified** — Discovery Turbo — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ydm41PayQ64JfD5umY76J
-- **Unverified** — ATN Bangla (Alt 3) — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1yoQaZ240vRdm0boA2Sr-o
-- **Unverified** — Movies Now HD — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1zH4xz2wNTo_xWvzs-BlpP
-- **Unverified** — Hard Knocks — TimeoutError — 8260 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2-NS5O4GFhBssbQcGiMU4E
-- **Unverified** — Bt Sports 2 — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-20I6CJzV45wX-rqDOrX4bp
-- **Unverified** — Arirang TV — HTTP 503 — 483 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-20Y9SIsspczs1p4ka0B-US
-- **Unverified** — Boomerang UK — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-20z-WE7dBowOcN-Buyl5rK
-- **Unverified** — Fashion TV HD — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-210DFiBNuTi3nkrrRgwdB_
-- **Unverified** — Star Movies HD — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-22--mrQ7zJZzjcNCsJkwX4
-- **Unverified** — Hgtv — TimeoutError — 8254 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-22mkIZgcz6P77w9L-9Bpiu
-- **Unverified** — Abc Music Radio — TimeoutError — 8266 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-23XSpIqCDvnAahDur9L8z9
-- **Unverified** — Laliga Live 1 — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-240vaQq7NVMFl9PhpixU9L
-- **Unverified** — Supersport Cricket — TimeoutError — 8246 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-249bV_NsACVZ8h3A69vAD-
-- **Unverified** — Niki Jr Kids — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-26m7Li7L-mIQmIMF5oc5cA
-- **Unverified** — Star Jalsha (Alt 3) — TimeoutError — 8263 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-27wpYKcaTB0ilO1K-did7i
-- **Unverified** — Sports 1 — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2AlvCJTV3Z-mXm8UTomlo2
-- **Unverified** — Rick Astley — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2B9sZREv0xxyL8qxQ8GP5U
-- **Unverified** — World War TV — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2DWEcPWCQb2YME5vQPFHCS
-- **Unverified** — Willow TV — TimeoutError — 8257 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2DkDnE_jmTmOAZeRZkt0k4
-- **Unverified** — MBC — HTTP 503 — 507 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2FgNj9cLliNWJYlcFuf6gx
-- **Unverified** — US Sky Sports Main Event — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2G5QzSeGUNUf5wt8_B2xjW
-- **Unverified** — Persiana Travel — TimeoutError — 8260 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2HY-19wbk57eB5fbZdZYV6
-- **Unverified** — DBC News (Alt 3) — TimeoutError — 8265 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2I0GRMT_9MbZffK21Raz7H
-- **Unverified** — Filmua Drama — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2Ih2Czxu6pnghZo5DXXHCB
-- **Unverified** — Sony Pix HD — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2Ir1mnjvLu_Yxh1jcXbQnU
-- **Unverified** — News 18 Bangla (Alt 2) — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2JQ8R-UDub1uWCvPot9y9q
-- **Unverified** — Magic TV — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2JiGK83iEiSWDdQPNn2PcQ
-- **Unverified** — FX TV — HTTP 503 — 492 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2L14FoVnc3F4UXZvXd4gkz
-- **Unverified** — Moviesphere UK — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2LrsAsrryCIzgimBH-8YnR
-- **Unverified** — Bhojpuri Cinema (Alt 2) — TimeoutError — 8254 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2MKHBajSwEDlt7G2PMTSLx
-- **Unverified** — Trace Urban — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2NaG2_mKQiNeSypI9BbqPx
-- **Unverified** — Whiples Cinema — TimeoutError — 8267 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2No_1-XYEwAJW62InYCW_a
-- **Unverified** — Rtv (Alt 2) — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2Nzgo-SX_Y3-hopPzFOpdE
-- **Unverified** — UK TNT Sports 1 HD — TimeoutError — 8245 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2O7JEhzQcoET8WwJM1KdLy
-- **Unverified** — Sports First TV — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2OGMeSmX2xxjRV_dlU_uhL
-- **Unverified** — Pogo — TimeoutError — 8242 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2OsIRQv1c7qHG_2zS8Nl7x
-- **Unverified** — Bollywood Classic HD — HTTP 503 — 484 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2PqjbVROLEzmjTUV6x9Tmz
-- **Unverified** — 9x Jhakaas (Alt 2) — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2PylYeC5PBbgy-pXUeR4-p
-- **Unverified** — Iqra Bangla — TimeoutError — 8283 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2R9PvQxo3kMLYBfOI7kMvw
-- **Unverified** — Sport 1 HD — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2RfXvx-d8FT25Xn7p9hCVg
-- **Unverified** — Sports Digital Fsbl — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2RpbSv5cd253lt4kHjV9mu
-- **Unverified** — Fight Network — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2RyGL1yp-j7dDDgSem1nBv
-- **Unverified** — My TV (Alt 4) — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2T3Il4psGOeLjX2t9Xm8Ei
-- **Unverified** — Amc TV — TimeoutError — 9285 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2TDstjQ-EGz8kxiGXVZl6i
-- **Unverified** — Flo Racing — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2TLyymSyiziLr1N1XgVdzv
-- **Unverified** — Discovery Family — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2Tt9zxdtiqiylFgo2C75C9
-- **Unverified** — Travel Xp Bangla — TimeoutError — 8267 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2U70Lfz12mSBwxfn59azrr
-- **Unverified** — &xplorer HD — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2UzA4iLudg4qenlYSULtQ5
-- **Unverified** — Disney Channel Big City Greens — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2XQDJfORDlhG94DmEs4iSG
-- **Unverified** — B4u Movies — HTTP 503 — 478 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2Y1cTymV-YzuZ5JxOw50NS
-- **Unverified** — Valobasar Rupali Sur — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2YACEpJcLPaSUcPrscs457
-- **Unverified** — Cosmote Sports 1 — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2ZMClBbxk6EzZp9kdhl7Rx
-- **Unverified** — Fuel TV Europe — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2ZbevsOdHIR0N2g4AJ05MW
-- **Unverified** — Joo Music (Alt 2) — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2Ze1swfhInAfsYy3QrQ-c9
-- **Unverified** — Radio Shadhin - 92.4 FM — TimeoutError — 9278 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2_8E3fxTvNK3C4oExBUTDc
-- **Unverified** — Turkmenistan Sport — TimeoutError — 8264 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2_JeNVdAcP108-I1QecwgM
-- **Unverified** — My TV (Alt 3) — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2a7jHC9wldgWJjB1ASTX0v
-- **Unverified** — US ESPN 1 — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2aDwJaYeHnh590sZGm4Qqr
-- **Unverified** — Saudia Radio — TimeoutError — 8246 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2aqk6wMGX-VS2vd2mbsJMG
-- **Unverified** — Maasranga TV (Alt 2) — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2bfakrMJRAC4sEDd7q8uwg
-- **Unverified** — beIN Sports Extra HD — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2bpFTH3fZ6Q2O987CQlDm1
-- **Unverified** — Super Hungama TV — TimeoutError — 8247 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2bs1r4LwNqfODeQmwpFaJA
-- **Unverified** — Wild TV — TimeoutError — 8247 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2d3NuNYWJPJa0_waiedITX
-- **Unverified** — Hit — HTTP 503 — 507 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2dChadPw6g-7Jei7ZQYU6d
-- **Unverified** — Star News HD — HTTP 503 — 484 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2ddhgBpDT9IzuzOBWt8yWE
-- **Unverified** — Radio Sonali Dingulo — TimeoutError — 8262 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2dtwlwziEVXRINWnEpAxTl
-- **Unverified** — Trace Latina — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2eWTc8L3j4T8sbvFA-hJp2
-- **Unverified** — Laliga Live 2 — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2f6WmMpNU_H9itKOMfAG01
-- **Unverified** — Bangla TV — HTTP 503 — 752 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2f9hfNJNzbkaLbQms18X-c
-- **Unverified** — Pk PTV Sports — TimeoutError — 8269 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2f9s-LywE7RYs1UdDaasV_
-- **Unverified** — BTV Chattogram — HTTP 503 — 741 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2iLbx1-PhVH7Ak49o93rKh
-- **Unverified** — News 24 HD (Alt 2) — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2ibjJUM8d_sjDVci0KcOCh
-- **Unverified** — Max Sport 4 — TimeoutError — 8245 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2k7-1FxwhAmFkV3hSJcvNG
-- **Unverified** — Independent TV — HTTP 503 — 524 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2kgp-Ii857F7HprisZ-pvL
-- **Unverified** — Ekattor TV (Alt 2) — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2lLb0Z6RPDBpX8PDU6T-7z
-- **Unverified** — UK Fox Sports Cricket — TimeoutError — 8255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2mwyelB6J-OClHxbFWnB73
-- **Unverified** — Adventure 4k — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2nakzXWLqTyDwPmmAvUxeT
-- **Unverified** — Cooking TV — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2ockplqycZ9LUGlkujNIdV
-- **Unverified** — BTV National HD (Alt 2) — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2ppbK-imtxJaAo5eA7zWrt
-- **Unverified** — In Star Sports 1 HD — TimeoutError — 8260 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2q6LN-thQwsmikR4HmQKBV
-- **Unverified** — Ary News — HTTP 503 — 489 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2qE1k0YOg-TuhpvcW3eO4J
-- **Unverified** — Sangeet Bangla (Alt 2) — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2qInWpNeUSeXC-YYpJb6j8
-- **Unverified** — Disney Junior — TimeoutError — 8245 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2qOkr8xqLGG18BwimKM8Eu
-- **Unverified** — Ind Discovery Kids — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2rr5ko4VJ7b3jUWDTHrW-L
-- **Unverified** — Htv Sport — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2rshOeZ4A6NnkHMxXNyQTA
-- **Unverified** — Adventure Earth — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2tYwNtiRLwdbA_z4kueySE
-- **Unverified** — Radio Zenith FM — TimeoutError — 8255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2tmkDU1dAHMe7t9TTecXXy
-- **Unverified** — 24/7 Batul The Great — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2tqiLUQm3PoLJ7sT7jN6oE
-- **Unverified** — Radio Bangla Rock — TimeoutError — 8246 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2txw9MVhIQEdgDs0TFaQyP
-- **Unverified** — Peace TV Bangla — TimeoutError — 8335 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2u_PfLOW__2ZI5RwJBin-d
-- **Unverified** — Nat Geo Wild HD — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2v87a2MGRxF90xf-nz9h4R
-- **Unverified** — In Star Sports 2 HD — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2v9k5sy9XeqzjhoBav-mAL
-- **Unverified** — Enter10 Bangla (Alt 5) — TimeoutError — 8254 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2vPkG_hSTjIlwKPgKjvxeh
-- **Unverified** — AXN — HTTP 503 — 486 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2wb0NNssQI00pGo93qtVSz
-- **Unverified** — My Time Movie — TimeoutError — 8243 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2wxML5qkpZihuOOsgdACKg
-- **Unverified** — News 18 Bangla — HTTP 503 — 479 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2yQ7oCnG2fK2uc5u537c8S
-- **Unverified** — Islamic TV — TimeoutError — 8267 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2yTL4Hb8B9Roe8eBzXbHmX
-- **Unverified** — Sony Cine — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3-86WxFitbXRUVMh8fBZEQ
-- **Unverified** — Music India (Alt 3) — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3-InlSV5tvT58FC-kVyXvw
-- **Unverified** — Nexus Television — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3-JbCFoo2CcX1DIht_kWJO
-- **Unverified** — Balle Balle — HTTP 503 — 479 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3-Y3MlltZYcPlOXVEzxbEV
-- **Unverified** — Rajdhani TV (Alt 2) — TimeoutError — 8254 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-30g8xezvOJxZCAQqKciJNS
-- **Unverified** — Sagor FM — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-30yhEwpejPzm2FO6jVqC_-
-- **Unverified** — DD Tripura — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-32IP2J1IRVGgXMygsky0BT
-- **Unverified** — US Sky Sports Football — TimeoutError — 9292 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-34Ue-pRetKnuf6rci4ntg4
-- **Unverified** — Digi Sport 2 — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-34_0Fucc0Glp2NP6_A6O_G
-- **Unverified** — Hum Sitaray — HTTP 503 — 480 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-34cQkyuQ-rqLmMeiNznND_
-- **Unverified** — Radio Bhumi 92.80 FM — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-35GEPsk3Burbt3BEEw8cjQ
-- **Unverified** — My TV (Alt 2) — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36IRYxUhNfKEHIBV-ea0kz
-- **Unverified** — Bd Radio FM — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36a5vNE9EszvYSMUCr-TVw
-- **Unverified** — Thikana (Alt 2) — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36aw0u5BhVgbNxhqp6gAwR
-- **Unverified** — BTV News — HTTP 503 — 737 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36bxx766Ae65rZo8l8vcw1
-- **Unverified** — Travel Xp HD — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36oZVJEdfwYN2ianT1rDdP
-- **Unverified** — Radio Gaan Baksho — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36yh5WidZGScuTqa6fMTKv
-- **Unverified** — Shemaroo TV (Alt 2) — TimeoutError — 8248 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-37m5i9IjPpkp4Ea8sVeQjq
-- **Unverified** — Aflam — HTTP 503 — 483 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-37pexfGGbMafO3Q6mC8QPE
-- **Unverified** — Steelbird Music (Alt 2) — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-381Erj35CY9aqbLwv7tXjW
-- **Unverified** — Afro Music Channel — HTTP 503 — 480 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-385eh4d6_E73NP456_B7fJ
-- **Unverified** — Star Family — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-38HHkfQKvvnQkajUg4ZY0b
-- **Unverified** — Star Jalsha (Alt 4) — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-392KthqKXAOLtT9blpe8E-
-- **Unverified** — Tennis Channel — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-39L-xYW-FHCzsanwDHEMsa
-- **Unverified** — Channel S — HTTP 503 — 485 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-39xxWHFqdYLN5XgOmuMOzA
-- **Unverified** — Nova Sport 1 HD — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3A5a88YJKrQVxo3a2tQwmo
-- **Unverified** — Joo Music (Alt 3) — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3AEDhUpdeuEiZPgE30i-_c
-- **Unverified** — TNT Sport 1 — TimeoutError — 8263 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3AnCqvnwvDJUPmSEnf0sOc
-- **Unverified** — Rtv HD (Alt 3) — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3AoU1mmKzSNew7R8g16lvC
-- **Unverified** — Disney Channel — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3BQF7hNoxpWxA7AyPoHyTm
-- **Unverified** — Star News (Alt 3) — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3C0VXJKCvY5Qa_vlQavuWn
-- **Unverified** — Love Nature — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3C1kw_v8cJ_objZudNlQfh
-- **Unverified** — Desh TV (Alt 3) — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3CZCLNK5PmHuWrk8V3DzVM
-- **Unverified** — Setanta Sport — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3CmJznHRvImhZHb7ueSjgJ
-- **Unverified** — Moner Radio — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3D7nchb-Rlpl3ihPn3l0Ka
-- **Unverified** — Pk Ten Cricket — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3DUsgO0qkSSrbT7yYZNabV
-- **Unverified** — Madani TV Bangla — TimeoutError — 9300 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Eb4aZ-bYGshWX_85IUqhS
-- **Unverified** — Fight 24/7 — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Er7HSyrhjjkT0_JPUB8VD
-- **Unverified** — Asian TV HD — HTTP 503 — 780 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3FpOZXISq01Nhsy-LZqryC
-- **Unverified** — Nexus TV (Alt 2) — TimeoutError — 8257 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3G5lFe_DKUa_TD81OPirVe
-- **Unverified** — Star Gold 2 — HTTP 503 — 485 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3GL2GMItbb3cvEnT0Hf3ra
-- **Unverified** — Desh TV (Alt 2) — TimeoutError — 8270 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3GWyy8lwY4235zt6Fzd7L8
-- **Unverified** — Utbd FM — TimeoutError — 8254 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3GjQPitWsdXOqOyLBs-d0R
-- **Unverified** — 9x Jalwa — HTTP 503 — 480 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3H6ZSSA6it261-kmv0Kc-5
-- **Unverified** — Cartoon Network HD — TimeoutError — 8257 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3HOz4Xo27HAYsnlBF2QGEG
-- **Unverified** — Max Sport 2 — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3H_rzvqKpqvDfND97QTm4E
-- **Unverified** — Silk Way Cinema — TimeoutError — 8247 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3HeFg86KfHD9N5q8mekBWz
-- **Unverified** — Xrema Accion — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Hh20d-Nnnd4-H_wnL1GVw
-- **Unverified** — Zee Bangla (Alt 3) — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3JXALHeZp2V012P079O4bA
-- **Unverified** — UK TNT Sports 4 HD — TimeoutError — 8267 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3KDwKNgcjP4MpZ3jI-JIH-
-- **Unverified** — Bangla Radio — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3KKA_iDgATD-XPLskiwNE3
-- **Unverified** — Ind Unite8 Sports 1 HD — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3KpSeepH7l2X0Y-swy4anL
-- **Unverified** — 9x Tashan — HTTP 503 — 492 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3MA1hEXWXQQIW9IzeWJiXe
-- **Unverified** — Bangla TV (Alt 3) — TimeoutError — 8266 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3M_Oq6aoB8Q5vURnM_Y142
-- **Unverified** — beIN Sports 3 HD — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Mj_QDROYj6uT9Qf7sEEA5
-- **Unverified** — Aakaash Aath (Alt 2) — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3ONwBOqt1AFbf-yjx13qpy
-- **Unverified** — Boomerang — TimeoutError — 9262 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3P-Tj235HDDlFTHKEj2cDx
-- **Unverified** — Radio Barakah — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3PB9S56BfhtXebMFEx3-N7
-- **Unverified** — Channel I (Alt 2) — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3QJ3Vs0hy_UZ1fjtQrQWkL
-- **Unverified** — Mnx HD — HTTP 503 — 483 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3QgEuIjjBReZTVooj-_pxL
-- **Unverified** — Madina Live — TimeoutError — 8297 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3R2O59mEOcZbq-ivuu9UGP
-- **Unverified** — 9XM (Alt 2) — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3RcQX-qShpsP0InlZKiQwE
-- **Unverified** — Star Cinema — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3SMrZwCSHai1GR_egxUSbp
-- **Unverified** — Ktv Bangla — HTTP 503 — 484 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3SgMEUMT8e5HEC7SjZ6Y55
-- **Unverified** — Balapan — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3SzzS98GuplAOXYgdxiwiN
-- **Unverified** — Radio Mahananda - 98.8 — TimeoutError — 9269 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3UT4n_lbyoO4imhnKDDXEe
-- **Unverified** — Afra Film — HTTP 503 — 491 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3UU7gmoD7al-FuNebNkWTs
-- **Unverified** — Sangeet Bangla (Alt 3) — TimeoutError — 8263 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3UUOh48bQwVNDVrrQB7cob
-- **Unverified** — Peoples Radio — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3V54GfPaJhkDFclMsNjOYE
-- **Unverified** — Saudi Sunnah — TimeoutError — 8298 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3WEDtXGihNeQte23mZv0ON
-- **Unverified** — PTV Sports — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3XFkTYfmBPcC-HnT3K_iiu
-- **Unverified** — Wow Kids — TimeoutError — 8327 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3XH5Ux12Ki4r9LGDqrMhYq
-- **Unverified** — Uttorbango Betar — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3YV8Py1TXlz7yaiiqMjgJM
-- **Unverified** — Dangal 2 (Alt 2) — TimeoutError — 8263 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Yi4x7tWC_EEYeY4iR3YL8
-- **Unverified** — Alistiqamah — TimeoutError — 8316 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3YkjfVrf0kOgo229HIbgQw
-- **Unverified** — Radio Padma – 99.2 FM — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3aW8YsAkwy9swlbR7BvRt6
-- **Unverified** — US Willow Sports HD — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3bUan3jaG24tEdb_4USBo9
-- **Unverified** — beIN Sports Turkiye — TimeoutError — 8247 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3bsHDFS9RwuxQ4HfeTdi15
-- **Unverified** — Ytv — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3dsOVo6n1e94Pq4kDt88op
-- **Unverified** — Max Sport 3 — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3e0cgwkiIOAQ742GNqfIAs
+- **Unverified** — Deen TV — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1QRtpAGL2w3PQKOTDVT-yg
+- **Unverified** — Zee Cafe HD — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1QbSFiOijdwQEyvGDjHg-D
+- **Unverified** — Radio Bushra — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1QxS_pk7MR2J5kPoD3SgPF
+- **Unverified** — 7s Music — HTTP 503 — 456 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1R29bXk2XZ6yQpBLHP_h0u
+- **Unverified** — Movie Sphere — TimeoutError — 8230 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1R2mDxNo0gtSxvsGbRqmoS
+- **Unverified** — Unite8 Sports 2 — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1RI8CxHIuj_5nK8pLDsI_5
+- **Unverified** — Radio Capital FM 94.8 — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1S0S5D_soqA2_fxYUwHZVI
+- **Unverified** — History TV — TimeoutError — 8244 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1U8Jqw9LlObxXySkE9tb0x
+- **Unverified** — Radio Bangladesh Co — TimeoutError — 8241 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Uh4xXy8hJCuyUIWNcU3QB
+- **Unverified** — Rds Social TV — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1UiEqtfrls3o9FOgq7Cz0H
+- **Unverified** — Asian TV (Alt 2) — TimeoutError — 8248 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Ut-EGOcUTOJaeFhGHdLw9
+- **Unverified** — Wild Earth — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1V4xKIBtq0XYnCucXEEXnF
+- **Unverified** — Animal Planet HD (Alt 2) — TimeoutError — 8242 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1VA1zbdTh7oohF3O8khAz4
+- **Unverified** — Fail Army — TimeoutError — 9237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1VZR8F8B63yMreF2_thtOT
+- **Unverified** — In -hindi- Star Sports 1 HD — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Vv1qBLAylK99s9S0DKDmF
+- **Unverified** — Nicktoons — TimeoutError — 8224 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1VzYO8fRtc4eP0-L2EEBr_
+- **Unverified** — ATN News HD — HTTP 503 — 1701 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1WZlDYFWlEka-Lz_m3hDEr
+- **Unverified** — NTV (Alt 2) — TimeoutError — 8246 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1XXcGy8XbG8N_KG_hQfY85
+- **Unverified** — Teen Nick — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ZmqlMhCYazdYK9190afbV
+- **Unverified** — Nat Geo TV — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1_U16G_K4J-YuWhbOdDf_e
+- **Unverified** — Gazi TV (Alt 2) — TimeoutError — 8229 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1_bD4oIU5hhs8MqADK70Zm
+- **Unverified** — ZB Cinema — HTTP 503 — 468 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1aEnjy2MZUa3IoigPr66d6
+- **Unverified** — UK Eurosport 1 — TimeoutError — 8243 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1axZtL6ON6vgmgEbp9ybxF
+- **Unverified** — 10 TV — HTTP 503 — 1472 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1cmA2GoAPfx9IIBYYipSa2
+- **Unverified** — In DD Sports HD — TimeoutError — 8231 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1dQJZe0w1NT2uJUVWm1mJV
+- **Unverified** — Bahrain Sports 2 — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1duiu8tyfYtyYHVEOcuM3o
+- **Unverified** — Cosmote Sports 4 — TimeoutError — 8230 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1emG2IHM5KiSHsnBubHpKr
+- **Unverified** — Bangla TV (Alt 2) — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1f0OReayV-YmW2sZQjw0Bv
+- **Unverified** — Epix TV — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1fDEbn7uOW6ujFxRC3ceWS
+- **Unverified** — Screamin — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1fIlu5vVAaRGWsDm7-Iqq2
+- **Unverified** — CNN — HTTP 503 — 452 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1fpCo44XZxFrLQACas33qb
+- **Unverified** — Dhaka FM 90.4 — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1gIbpQHGjbjyIrnlTs0zv2
+- **Unverified** — Minimax — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1gXVhLhcUGtvIHmjXMNF_G
+- **Unverified** — Desh TV HD — HTTP 503 — 636 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1iMdlVUutZ7taXp4B5x6ud
+- **Unverified** — Deshe Bideshe — HTTP 503 — 635 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1j2eDTF1wgZmKP6tbNpGwN
+- **Unverified** — Boishakhi TV (Alt 4) — TimeoutError — 8263 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1jxZd7NE7JNTd_ziOnbWUj
+- **Unverified** — Hindi Movie Classic 24 — HTTP 503 — 601 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1jzFaJ47UO8mbWrYDSo7xu
+- **Unverified** — Radio Adamya — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1kUeabGOAN-die_6hraj21
+- **Unverified** — Sananda TV — HTTP 503 — 456 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1lFFNvZy8WqTHgp5A74kgk
+- **Unverified** — Radio Vivid Voice | Mymensingh — TimeoutError — 8265 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1lUl2DXEuiC6D28BYs_2LZ
+- **Unverified** — Wifm 100.9 — TimeoutError — 8231 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1lzVyxVd1GQqf8awY3KomE
+- **Unverified** — Nick Jr — TimeoutError — 8233 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1mfHF4cy3EwwRAulUBFdtt
+- **Unverified** — Ziggo Sport Live — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1n74HgKhHSy617Z0UJcYlt
+- **Unverified** — Sony Yay — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1nSwE8ojeDy2YqvxJJNSu3
+- **Unverified** — Enter10 Bangla (Alt 2) — TimeoutError — 8233 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1nU_JBk5vzSClqe6I2j3N2
+- **Unverified** — Gazi TV — TimeoutError — 9255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1olnSbV2IQ2zxCVK9sNk8h
+- **Unverified** — Good News Today — HTTP 503 — 564 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1pW9ZjirtQn_Evzm6hdwke
+- **Unverified** — Tapmad — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1pZOCNySHZXrAa0EAAirOY
+- **Unverified** — HBO 2 — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1q7MVAp_vQuWjToO_tC_cQ
+- **Unverified** — M Sports — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1qLPDl5UrBMdIo6oflQrkq
+- **Unverified** — Goldmines Bollywood — HTTP 503 — 616 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1qZnNcDeTbJW5Taz0nEvBw
+- **Unverified** — 88 Stereo [not 24/7] — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1qqI1tC4DGXOyYduOUDKgF
+- **Unverified** — 51 Radio TV [geo-blocked] — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1r-QV7zblFB4cEU2D98Eak
+- **Unverified** — Topestrada TV — TimeoutError — 9252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1r0F_qcTRf58icGglPhwe7
+- **Unverified** — Sport 2 HD — TimeoutError — 8241 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1rLAXdTsGRL8CC4KfulOam
+- **Unverified** — Tapmad — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1rTbDI8lVTOkovJxjJkGze
+- **Unverified** — Goldmines Bollywood (Alt 2) — TimeoutError — 8230 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1rxmx6G6OG6KfVjgG90Z8h
+- **Unverified** — Dw News — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1swegU0q-rHVFfuNELVN9d
+- **Unverified** — Zee Bangla (Alt 2) — TimeoutError — 8233 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1tI1c9a05Cy0qw7RE13KBb
+- **Unverified** — Jungle Book — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1tKU5o0KJsQ6FTn86o_4b6
+- **Unverified** — Adt FM — TimeoutError — 8255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1uVHk05KuGLq1mVb0dIruH
+- **Unverified** — Channel S — TimeoutError — 8229 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ugdJAolWFbvehzxc9d9ZG
+- **Unverified** — Shemaroo Josh — HTTP 503 — 514 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1v1FO4_VgestrWIsF26pGp
+- **Unverified** — Deepto TV (Alt 2) — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1x1iKGVS8eOB19fHLoKMQs
+- **Unverified** — Duronto TV (Alt 2) — TimeoutError — 8247 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1xFKRI4LjasG82cTiPpffN
+- **Unverified** — Amar Ujala — HTTP 503 — 464 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1xefaoUCxnHzxSFfWcV9PX
+- **Unverified** — Discovery Bangla — TimeoutError — 9301 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1xrfU-O8T1NqQKhkL03FJ-
+- **Unverified** — Discovery Turbo — TimeoutError — 8258 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ydm41PayQ64JfD5umY76J
+- **Unverified** — ATN Bangla (Alt 3) — TimeoutError — 8244 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1yoQaZ240vRdm0boA2Sr-o
+- **Unverified** — Movies Now HD — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1zH4xz2wNTo_xWvzs-BlpP
+- **Unverified** — Hard Knocks — TimeoutError — 9247 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2-NS5O4GFhBssbQcGiMU4E
+- **Unverified** — Bt Sports 2 — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-20I6CJzV45wX-rqDOrX4bp
+- **Unverified** — Arirang TV — HTTP 503 — 442 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-20Y9SIsspczs1p4ka0B-US
+- **Unverified** — Boomerang UK — TimeoutError — 8233 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-20z-WE7dBowOcN-Buyl5rK
+- **Unverified** — Fashion TV HD — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-210DFiBNuTi3nkrrRgwdB_
+- **Unverified** — Star Movies HD — TimeoutError — 8228 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-22--mrQ7zJZzjcNCsJkwX4
+- **Unverified** — News 18 Assam — TimeoutError — 9243 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-22Ki24x5jiOBil6UZ5mA9d
+- **Unverified** — Hgtv — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-22mkIZgcz6P77w9L-9Bpiu
+- **Unverified** — Abc Music Radio — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-23XSpIqCDvnAahDur9L8z9
+- **Unverified** — Laliga Live 1 — TimeoutError — 8230 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-240vaQq7NVMFl9PhpixU9L
+- **Unverified** — Supersport Cricket — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-249bV_NsACVZ8h3A69vAD-
+- **Unverified** — Niki Jr Kids — TimeoutError — 8242 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-26m7Li7L-mIQmIMF5oc5cA
+- **Unverified** — Star Jalsha (Alt 3) — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-27wpYKcaTB0ilO1K-did7i
+- **Unverified** — Sports 1 — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2AlvCJTV3Z-mXm8UTomlo2
+- **Unverified** — Rick Astley — TimeoutError — 8259 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2B9sZREv0xxyL8qxQ8GP5U
+- **Unverified** — World War TV — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2DWEcPWCQb2YME5vQPFHCS
+- **Unverified** — Willow TV — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2DkDnE_jmTmOAZeRZkt0k4
+- **Unverified** — MBC — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2FgNj9cLliNWJYlcFuf6gx
+- **Unverified** — US Sky Sports Main Event — TimeoutError — 8266 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2G5QzSeGUNUf5wt8_B2xjW
+- **Unverified** — Persiana Travel — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2HY-19wbk57eB5fbZdZYV6
+- **Unverified** — DBC News (Alt 3) — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2I0GRMT_9MbZffK21Raz7H
+- **Unverified** — Discover Pakistan — HTTP 503 — 443 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2I4LL49tIeQFCsUBaNn1FZ
+- **Unverified** — Filmua Drama — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2Ih2Czxu6pnghZo5DXXHCB
+- **Unverified** — Sony Pix HD — TimeoutError — 8255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2Ir1mnjvLu_Yxh1jcXbQnU
+- **Unverified** — News 18 Bangla (Alt 2) — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2JQ8R-UDub1uWCvPot9y9q
+- **Unverified** — Magic TV — TimeoutError — 8226 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2JiGK83iEiSWDdQPNn2PcQ
+- **Unverified** — Deshi TV — HTTP 503 — 647 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2K-aU4V8-GvAGmCspZhOL5
+- **Unverified** — FX TV — TimeoutError — 8241 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2L14FoVnc3F4UXZvXd4gkz
+- **Unverified** — Moviesphere UK — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2LrsAsrryCIzgimBH-8YnR
+- **Unverified** — Duronto TV HD — HTTP 503 — 633 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2LxYCeJbH2GHaViScYwtDa
+- **Unverified** — Bhojpuri Cinema (Alt 2) — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2MKHBajSwEDlt7G2PMTSLx
+- **Unverified** — Trace Urban — TimeoutError — 9280 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2NaG2_mKQiNeSypI9BbqPx
+- **Unverified** — Whiples Cinema — TimeoutError — 8244 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2No_1-XYEwAJW62InYCW_a
+- **Unverified** — Rtv (Alt 2) — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2Nzgo-SX_Y3-hopPzFOpdE
+- **Unverified** — UK TNT Sports 1 HD — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2O7JEhzQcoET8WwJM1KdLy
+- **Unverified** — Sports First TV — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2OGMeSmX2xxjRV_dlU_uhL
+- **Unverified** — Pogo — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2OsIRQv1c7qHG_2zS8Nl7x
+- **Unverified** — 9x Jhakaas (Alt 2) — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2PylYeC5PBbgy-pXUeR4-p
+- **Unverified** — Iqra Bangla — TimeoutError — 8258 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2R9PvQxo3kMLYBfOI7kMvw
+- **Unverified** — Sport 1 HD — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2RfXvx-d8FT25Xn7p9hCVg
+- **Unverified** — Sports Digital Fsbl — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2RpbSv5cd253lt4kHjV9mu
+- **Unverified** — Fight Network — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2RyGL1yp-j7dDDgSem1nBv
+- **Unverified** — My TV (Alt 4) — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2T3Il4psGOeLjX2t9Xm8Ei
+- **Unverified** — Amc TV — HTTP 503 — 451 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2TDstjQ-EGz8kxiGXVZl6i
+- **Unverified** — Flo Racing — TimeoutError — 8247 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2TLyymSyiziLr1N1XgVdzv
+- **Unverified** — Discovery Family — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2Tt9zxdtiqiylFgo2C75C9
+- **Unverified** — Travel Xp Bangla — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2U70Lfz12mSBwxfn59azrr
+- **Unverified** — Channel S HD — HTTP 503 — 459 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2UtXOWDmgVOY9kPzOWvF43
+- **Unverified** — &xplorer HD — TimeoutError — 8233 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2UzA4iLudg4qenlYSULtQ5
+- **Unverified** — Disney Channel Big City Greens — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2XQDJfORDlhG94DmEs4iSG
+- **Unverified** — B4u Movies — HTTP 503 — 511 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2Y1cTymV-YzuZ5JxOw50NS
+- **Unverified** — Valobasar Rupali Sur — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2YACEpJcLPaSUcPrscs457
+- **Unverified** — Cosmote Sports 1 — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2ZMClBbxk6EzZp9kdhl7Rx
+- **Unverified** — Fuel TV Europe — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2ZbevsOdHIR0N2g4AJ05MW
+- **Unverified** — Joo Music (Alt 2) — TimeoutError — 8227 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2Ze1swfhInAfsYy3QrQ-c9
+- **Unverified** — Radio Shadhin - 92.4 FM — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2_8E3fxTvNK3C4oExBUTDc
+- **Unverified** — Turkmenistan Sport — TimeoutError — 8243 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2_JeNVdAcP108-I1QecwgM
+- **Unverified** — My TV (Alt 3) — TimeoutError — 8255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2a7jHC9wldgWJjB1ASTX0v
+- **Unverified** — US ESPN 1 — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2aDwJaYeHnh590sZGm4Qqr
+- **Unverified** — Saudia Radio — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2aqk6wMGX-VS2vd2mbsJMG
+- **Unverified** — Maasranga TV (Alt 2) — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2bfakrMJRAC4sEDd7q8uwg
+- **Unverified** — beIN Sports Extra HD — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2bpFTH3fZ6Q2O987CQlDm1
+- **Unverified** — Super Hungama TV — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2bs1r4LwNqfODeQmwpFaJA
+- **Unverified** — Wild TV — TimeoutError — 8231 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2d3NuNYWJPJa0_waiedITX
+- **Unverified** — Hit — TimeoutError — 9265 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2dChadPw6g-7Jei7ZQYU6d
+- **Unverified** — Radio Sonali Dingulo — TimeoutError — 8254 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2dtwlwziEVXRINWnEpAxTl
+- **Unverified** — Trace Latina — TimeoutError — 9281 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2eWTc8L3j4T8sbvFA-hJp2
+- **Unverified** — Laliga Live 2 — TimeoutError — 8247 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2f6WmMpNU_H9itKOMfAG01
+- **Unverified** — Pk PTV Sports — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2f9s-LywE7RYs1UdDaasV_
+- **Unverified** — &tv HD — HTTP 503 — 450 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2iL-qELascqw-24FF6AsRu
+- **Unverified** — News 24 HD (Alt 2) — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2ibjJUM8d_sjDVci0KcOCh
+- **Unverified** — Max Sport 4 — TimeoutError — 8233 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2k7-1FxwhAmFkV3hSJcvNG
+- **Unverified** — Ekattor TV (Alt 2) — TimeoutError — 8231 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2lLb0Z6RPDBpX8PDU6T-7z
+- **Unverified** — Hindi Khabar — HTTP 503 — 451 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2mEUrCsATHj8zATK3kmuxQ
+- **Unverified** — Ananda TV HD — HTTP 503 — 1697 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2mmGsZcWxIEOx0NH6Q6VG9
+- **Unverified** — Adventure 4k — TimeoutError — 8231 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2nakzXWLqTyDwPmmAvUxeT
+- **Unverified** — Cooking TV — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2ockplqycZ9LUGlkujNIdV
+- **Unverified** — BTV National HD (Alt 2) — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2ppbK-imtxJaAo5eA7zWrt
+- **Unverified** — In Star Sports 1 HD — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2q6LN-thQwsmikR4HmQKBV
+- **Unverified** — Sangeet Bangla (Alt 2) — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2qInWpNeUSeXC-YYpJb6j8
+- **Unverified** — Disney Junior — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2qOkr8xqLGG18BwimKM8Eu
+- **Unverified** — Ind Discovery Kids — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2rr5ko4VJ7b3jUWDTHrW-L
+- **Unverified** — Htv Sport — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2rshOeZ4A6NnkHMxXNyQTA
+- **Unverified** — AXS — HTTP 503 — 444 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2t3s2diuUFtrSSX5UwneoQ
+- **Unverified** — Adventure Earth — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2tYwNtiRLwdbA_z4kueySE
+- **Unverified** — Radio Zenith FM — TimeoutError — 8224 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2tmkDU1dAHMe7t9TTecXXy
+- **Unverified** — 24/7 Batul The Great — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2tqiLUQm3PoLJ7sT7jN6oE
+- **Unverified** — Radio Bangla Rock — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2txw9MVhIQEdgDs0TFaQyP
+- **Unverified** — Peace TV Bangla — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2u_PfLOW__2ZI5RwJBin-d
+- **Unverified** — Nat Geo Wild HD — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2v87a2MGRxF90xf-nz9h4R
+- **Unverified** — In Star Sports 2 HD — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2v9k5sy9XeqzjhoBav-mAL
+- **Unverified** — Enter10 Bangla (Alt 5) — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2vPkG_hSTjIlwKPgKjvxeh
+- **Unverified** — My Time Movie — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2wxML5qkpZihuOOsgdACKg
+- **Unverified** — Islamic TV — TimeoutError — 8241 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2yTL4Hb8B9Roe8eBzXbHmX
+- **Unverified** — Sony Cine — TimeoutError — 8243 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3-86WxFitbXRUVMh8fBZEQ
+- **Unverified** — Music India (Alt 3) — TimeoutError — 8230 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3-InlSV5tvT58FC-kVyXvw
+- **Unverified** — Nexus Television — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3-JbCFoo2CcX1DIht_kWJO
+- **Unverified** — 9XM — HTTP 503 — 451 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-30aWkHW4rZHFRRrHd_Eszb
+- **Unverified** — Rajdhani TV (Alt 2) — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-30g8xezvOJxZCAQqKciJNS
+- **Unverified** — Sagor FM — TimeoutError — 8261 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-30yhEwpejPzm2FO6jVqC_-
+- **Unverified** — Blockbaster HD — TimeoutError — 8315 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-314jw_vzp2KUEwpbSpW-6f
+- **Unverified** — DD Tripura — HTTP 503 — 1612 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-32IP2J1IRVGgXMygsky0BT
+- **Unverified** — US Sky Sports Football — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-34Ue-pRetKnuf6rci4ntg4
+- **Unverified** — Digi Sport 2 — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-34_0Fucc0Glp2NP6_A6O_G
+- **Unverified** — Hum Sitaray — HTTP 503 — 447 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-34cQkyuQ-rqLmMeiNznND_
+- **Unverified** — Radio Bhumi 92.80 FM — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-35GEPsk3Burbt3BEEw8cjQ
+- **Unverified** — My TV (Alt 2) — TimeoutError — 8228 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36IRYxUhNfKEHIBV-ea0kz
+- **Unverified** — Bd Radio FM — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36a5vNE9EszvYSMUCr-TVw
+- **Unverified** — Thikana (Alt 2) — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36aw0u5BhVgbNxhqp6gAwR
+- **Unverified** — BTV News — HTTP 503 — 664 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36bxx766Ae65rZo8l8vcw1
+- **Unverified** — Travel Xp HD — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36oZVJEdfwYN2ianT1rDdP
+- **Unverified** — Radio Gaan Baksho — TimeoutError — 8241 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36yh5WidZGScuTqa6fMTKv
+- **Unverified** — Shemaroo TV (Alt 2) — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-37m5i9IjPpkp4Ea8sVeQjq
+- **Unverified** — Aflam — HTTP 503 — 448 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-37pexfGGbMafO3Q6mC8QPE
+- **Unverified** — Steelbird Music (Alt 2) — TimeoutError — 8231 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-381Erj35CY9aqbLwv7tXjW
+- **Unverified** — Afro Music Channel — HTTP 503 — 445 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-385eh4d6_E73NP456_B7fJ
+- **Unverified** — Star Family — TimeoutError — 8231 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-38HHkfQKvvnQkajUg4ZY0b
+- **Unverified** — Star Jalsha (Alt 4) — TimeoutError — 9248 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-392KthqKXAOLtT9blpe8E-
+- **Unverified** — Tennis Channel — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-39L-xYW-FHCzsanwDHEMsa
+- **Unverified** — Zing — HTTP 503 — 483 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-39iDL9it2toZkvrxMtUeza
+- **Unverified** — Channel S — HTTP 503 — 446 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-39xxWHFqdYLN5XgOmuMOzA
+- **Unverified** — Nova Sport 1 HD — TimeoutError — 8245 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3A5a88YJKrQVxo3a2tQwmo
+- **Unverified** — Joo Music (Alt 3) — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3AEDhUpdeuEiZPgE30i-_c
+- **Unverified** — TNT Sport 1 — TimeoutError — 8248 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3AnCqvnwvDJUPmSEnf0sOc
+- **Unverified** — Rtv HD (Alt 3) — TimeoutError — 9267 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3AoU1mmKzSNew7R8g16lvC
+- **Unverified** — Disney Channel — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3BQF7hNoxpWxA7AyPoHyTm
+- **Unverified** — Star News (Alt 3) — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3C0VXJKCvY5Qa_vlQavuWn
+- **Unverified** — Love Nature — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3C1kw_v8cJ_objZudNlQfh
+- **Unverified** — Desh TV (Alt 3) — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3CZCLNK5PmHuWrk8V3DzVM
+- **Unverified** — Setanta Sport — TimeoutError — 9255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3CmJznHRvImhZHb7ueSjgJ
+- **Unverified** — Moner Radio — TimeoutError — 8319 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3D7nchb-Rlpl3ihPn3l0Ka
+- **Unverified** — Pk Ten Cricket — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3DUsgO0qkSSrbT7yYZNabV
+- **Unverified** — Madani TV Bangla — TimeoutError — 8243 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Eb4aZ-bYGshWX_85IUqhS
+- **Unverified** — Fight 24/7 — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Er7HSyrhjjkT0_JPUB8VD
+- **Unverified** — Nexus TV (Alt 2) — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3G5lFe_DKUa_TD81OPirVe
+- **Unverified** — Desh TV (Alt 2) — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3GWyy8lwY4235zt6Fzd7L8
+- **Unverified** — Utbd FM — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3GjQPitWsdXOqOyLBs-d0R
+- **Unverified** — Cartoon Network HD — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3HOz4Xo27HAYsnlBF2QGEG
+- **Unverified** — Max Sport 2 — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3H_rzvqKpqvDfND97QTm4E
+- **Unverified** — Silk Way Cinema — TimeoutError — 8225 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3HeFg86KfHD9N5q8mekBWz
+- **Unverified** — Xrema Accion — TimeoutError — 8242 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Hh20d-Nnnd4-H_wnL1GVw
+- **Unverified** — Zee Bangla (Alt 3) — TimeoutError — 8233 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3JXALHeZp2V012P079O4bA
+- **Unverified** — UK TNT Sports 4 HD — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3KDwKNgcjP4MpZ3jI-JIH-
+- **Unverified** — Bangla Radio — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3KKA_iDgATD-XPLskiwNE3
+- **Unverified** — Ind Unite8 Sports 1 HD — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3KpSeepH7l2X0Y-swy4anL
+- **Unverified** — BBC News — HTTP 503 — 445 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Lwua8Qjjl93_tM58o0RDc
+- **Unverified** — 9x Tashan — HTTP 503 — 449 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3MA1hEXWXQQIW9IzeWJiXe
+- **Unverified** — Bangla TV (Alt 3) — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3M_Oq6aoB8Q5vURnM_Y142
+- **Unverified** — beIN Sports 3 HD — TimeoutError — 8243 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Mj_QDROYj6uT9Qf7sEEA5
+- **Unverified** — Aakaash Aath (Alt 2) — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3ONwBOqt1AFbf-yjx13qpy
+- **Unverified** — Boomerang — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3P-Tj235HDDlFTHKEj2cDx
+- **Unverified** — Radio Barakah — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3PB9S56BfhtXebMFEx3-N7
+- **Unverified** — Channel I (Alt 2) — TimeoutError — 8275 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3QJ3Vs0hy_UZ1fjtQrQWkL
+- **Unverified** — Mnx HD — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3QgEuIjjBReZTVooj-_pxL
+- **Unverified** — Madina Live — TimeoutError — 8230 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3R2O59mEOcZbq-ivuu9UGP
+- **Unverified** — 9XM (Alt 2) — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3RcQX-qShpsP0InlZKiQwE
+- **Unverified** — Star Cinema — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3SMrZwCSHai1GR_egxUSbp
+- **Unverified** — Balapan — TimeoutError — 8232 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3SzzS98GuplAOXYgdxiwiN
+- **Unverified** — Aaj Tak HD — HTTP 503 — 1471 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3TVuL-rttFPcnt75nyvFd6
+- **Unverified** — Radio Mahananda - 98.8 — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3UT4n_lbyoO4imhnKDDXEe
+- **Unverified** — Afra Film — HTTP 503 — 453 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3UU7gmoD7al-FuNebNkWTs
+- **Unverified** — Sangeet Bangla (Alt 3) — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3UUOh48bQwVNDVrrQB7cob
+- **Unverified** — Peoples Radio — TimeoutError — 8245 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3V54GfPaJhkDFclMsNjOYE
+- **Unverified** — Saudi Sunnah — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3WEDtXGihNeQte23mZv0ON
+- **Unverified** — PTV Sports — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3XFkTYfmBPcC-HnT3K_iiu
+- **Unverified** — Wow Kids — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3XH5Ux12Ki4r9LGDqrMhYq
+- **Unverified** — Uttorbango Betar — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3YV8Py1TXlz7yaiiqMjgJM
+- **Unverified** — Dangal 2 (Alt 2) — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Yi4x7tWC_EEYeY4iR3YL8
+- **Unverified** — Alistiqamah — TimeoutError — 8230 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3YkjfVrf0kOgo229HIbgQw
+- **Unverified** — Radio Padma – 99.2 FM — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3aW8YsAkwy9swlbR7BvRt6
+- **Unverified** — US Willow Sports HD — TimeoutError — 8243 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3bUan3jaG24tEdb_4USBo9
+- **Unverified** — beIN Sports Turkiye — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3bsHDFS9RwuxQ4HfeTdi15
+- **Unverified** — Baraza TV — TimeoutError — 8246 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3cQoruuK0MUge0-g9rNqC5
+- **Unverified** — Ytv — TimeoutError — 8248 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3dsOVo6n1e94Pq4kDt88op
+- **Unverified** — Max Sport 3 — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3e0cgwkiIOAQ742GNqfIAs
 - **Unverified** — Dream Music Prime — TimeoutError — 8246 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3e848rM9rezuMk0wwlIaOU
-- **Unverified** — Ekattor TV (Alt 3) — TimeoutError — 8271 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3eQbgFhwO-wuGz6lz-zZb3
-- **Unverified** — Green TV — HTTP 503 — 1827 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3fP86AW0H200t7wTuD3kV7
-- **Unverified** — Music India (Alt 2) — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3fZbK6othVm4HfOCaXIJS6
-- **Unverified** — Madani TV — TimeoutError — 9351 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3ftIhJXmi3NGYxbDUkMqv_
-- **Unverified** — Jordan Sport — TimeoutError — 8268 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3iIEe4hnPX5M1nbvjrqpHT
-- **Unverified** — Mn+ HD — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3jDkxtu45sbA36o1ZcG7F9
-- **Unverified** — Trace Sport Stars HD — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3jrfUNpqsuyZ6UmHAi0b2a
-- **Unverified** — Nbc Sports — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3kL0SoIGdvN_Hdr_d7fxch
-- **Unverified** — My 90s Bengali Online — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3kngs1TTLo3RuBF9G23XNL
-- **Unverified** — In Star Sports Select 2 HD — TimeoutError — 8244 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3kqTWRfiXhr3ho_Mslj0U5
-- **Unverified** — Animal Planet HD — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3lJUM0IlgiLR47M_Tbnikr
-- **Unverified** — beIN Sports English 2 HD — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3mHb5Y1boZy_gnLDvC88dy
-- **Unverified** — beIN Sports English 1 HD — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3ma-jWn8mOFcAHN4RlRYOZ
-- **Unverified** — Jamuna TV (Alt 3) — TimeoutError — 8252 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3n7gMVtqjy2ilRDrApkU8R
-- **Unverified** — Love Nature (Alt 2) — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3o1SXoBCTeSbl6R7RYfSo8
-- **Unverified** — Golf Channel — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3oH6suI_9Z3Vjnhu7-Hme2
-- **Unverified** — Mr Bean Animated — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3oSpotsAy3jbDMtH5d8Ea9
-- **Unverified** — Cowboy Movie Channel — HTTP 503 — 479 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3psrRFLFo78GWdbNGDGqhh
-- **Unverified** — Sony BBC Earth HD — TimeoutError — 8250 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3qSLWnBggAEN6qzRwt7fxT
-- **Unverified** — NTV (Alt 3) — TimeoutError — 8256 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3rXaYla09Sc-kCPapKl7cA
-- **Unverified** — Channel 24 HD — HTTP 503 — 1445 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3ra5uPNOIwEE9b7mY5rO0f
-- **Unverified** — Star News (Alt 2) — TimeoutError — 8253 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3s8gVOz-Jdwh6g2pVWQid6
-- **Unverified** — Radio Tangail — TimeoutError — 8245 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3v2XEQknyM001NnDNDKxBG
-- **Unverified** — Bijoy TV (Alt 2) — TimeoutError — 8264 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3vysvnt6B324mFQIR13OYq
-- **Unverified** — Ananda TV (Alt 2) — TimeoutError — 8268 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3wPoef3A_riO6WaEyL-24d
-- **Unverified** — Sonic Bangla — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3xMCDNg-SJMyv90XoE-tgf
-- **Unverified** — Laff TV — HTTP 503 — 484 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3xfPd7-sb43KVKeeFr3MNo
-- **Unverified** — Xtrem Sports — TimeoutError — 8257 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3xsscnpLqQpsyG3f-PBmRp
-- **Unverified** — Pk Geo Super — TimeoutError — 8257 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3z989dz2CxE9pfGbQ0qxMy
-- **Unverified** — Movie Sphere Au — TimeoutError — 8249 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3zU3cck2pc8i0rxsfn1XqT
+- **Unverified** — Ekattor TV (Alt 3) — TimeoutError — 8248 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3eQbgFhwO-wuGz6lz-zZb3
+- **Unverified** — Music India (Alt 2) — TimeoutError — 8230 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3fZbK6othVm4HfOCaXIJS6
+- **Unverified** — Madani TV — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3ftIhJXmi3NGYxbDUkMqv_
+- **Unverified** — Jordan Sport — TimeoutError — 8237 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3iIEe4hnPX5M1nbvjrqpHT
+- **Unverified** — Mn+ HD — TimeoutError — 8241 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3jDkxtu45sbA36o1ZcG7F9
+- **Unverified** — Trace Sport Stars HD — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3jrfUNpqsuyZ6UmHAi0b2a
+- **Unverified** — Nbc Sports — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3kL0SoIGdvN_Hdr_d7fxch
+- **Unverified** — My 90s Bengali Online — TimeoutError — 8255 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3kngs1TTLo3RuBF9G23XNL
+- **Unverified** — In Star Sports Select 2 HD — TimeoutError — 8251 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3kqTWRfiXhr3ho_Mslj0U5
+- **Unverified** — Animal Planet HD — TimeoutError — 8227 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3lJUM0IlgiLR47M_Tbnikr
+- **Unverified** — beIN Sports English 2 HD — TimeoutError — 8233 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3mHb5Y1boZy_gnLDvC88dy
+- **Unverified** — beIN Sports English 1 HD — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3ma-jWn8mOFcAHN4RlRYOZ
+- **Unverified** — Jamuna TV (Alt 3) — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3n7gMVtqjy2ilRDrApkU8R
+- **Unverified** — Love Nature (Alt 2) — TimeoutError — 8231 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3o1SXoBCTeSbl6R7RYfSo8
+- **Unverified** — G Series Drama — HTTP 503 — 1108 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3oFoSIk5iFfac5Ia2cx3FS
+- **Unverified** — Golf Channel — TimeoutError — 8259 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3oH6suI_9Z3Vjnhu7-Hme2
+- **Unverified** — Mr Bean Animated — TimeoutError — 8236 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3oSpotsAy3jbDMtH5d8Ea9
+- **Unverified** — Zee Cinema HD — HTTP 503 — 464 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3pRWlb-UzLZK_7DhOthedf
+- **Unverified** — Cowboy Movie Channel — TimeoutError — 8231 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3psrRFLFo78GWdbNGDGqhh
+- **Unverified** — Sony BBC Earth HD — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3qSLWnBggAEN6qzRwt7fxT
+- **Unverified** — NTV (Alt 3) — TimeoutError — 8244 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3rXaYla09Sc-kCPapKl7cA
+- **Unverified** — Star News (Alt 2) — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3s8gVOz-Jdwh6g2pVWQid6
+- **Unverified** — Amc — HTTP 503 — 452 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3t4fn_0OcdUHwrGBSBc-IV
+- **Unverified** — Radio Tangail — TimeoutError — 8234 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3v2XEQknyM001NnDNDKxBG
+- **Unverified** — Bijoy TV (Alt 2) — TimeoutError — 8240 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3vysvnt6B324mFQIR13OYq
+- **Unverified** — Ananda TV (Alt 2) — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3wPoef3A_riO6WaEyL-24d
+- **Unverified** — Sonic Bangla — TimeoutError — 8245 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3xMCDNg-SJMyv90XoE-tgf
+- **Unverified** — Laff TV — TimeoutError — 8235 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3xfPd7-sb43KVKeeFr3MNo
+- **Unverified** — Aaryaa TV — HTTP 503 — 451 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3xh-qUG3ghDNaB2q3vC83p
+- **Unverified** — Xtrem Sports — TimeoutError — 8243 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3xsscnpLqQpsyG3f-PBmRp
+- **Unverified** — Pk Geo Super — TimeoutError — 8239 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3z989dz2CxE9pfGbQ0qxMy
+- **Unverified** — Movie Sphere Au — TimeoutError — 8238 ms — http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3zU3cck2pc8i0rxsfn1XqT
