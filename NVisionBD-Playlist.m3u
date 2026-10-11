@@ -1,8 +1,11 @@
-#EXTM3U
-## NVisionBD Playlist — audited and normalized
-## All channel logos use repository-local assets; original provider stream URLs preserved
-#PLAYLIST-STUDIO-NAME:"NVisionBD-Organized"
-#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Radio","Unidentified"]
+#EXTM3U url-tvg="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml" x-tvg-url="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"
+#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","New Channels","New Backup","New","Not Playing"]
+#=================================
+# Developed by: SAEID RAHMAN
+# Facebook: https://www.facebook.com/saeid.rahman.sr
+# Email: saeidrahman.mkt@gmail.com
+#=================================
+#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Radio","Backup"]
 #EXTINF:-1 xui-id="393" tvg-id="AnandaTV.bd" tvg-name="Ananda TV HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="1" channel-id="AnandaTV.bd" group-title="Bangladesh",Ananda TV HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2mmGsZcWxIEOx0NH6Q6VG9
 #EXTINF:-1 xui-id="188370" tvg-id="AnandaTV.bd" tvg-name="Ananda TV (Alt 2)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="2" channel-id="AnandaTV.bd" group-title="Bangladesh",Ananda TV (Alt 2)
