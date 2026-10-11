@@ -27945,30 +27945,6 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
     <category>Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p29740219_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme start="20261011124500 +0530" stop="20261011154500 +0530" channel="Colors.Bangla.in">
-    <title>Durgeshgorer Guptodhon</title>
-    <desc>Sona Da, along with Abir and Jhinuk, visits his student's ancestral mansion in Durgeshgor. Once there, the trio comes across a vital clue that could lead them to one of the greatest treasures.</desc>
-    <category>Mystery</category>
-    <language>Bengali</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/261cc82431d148804b4bb725f83a5829.jpg?width=700" />
-    <credits>
-      <director>Dhrubo Banerjee</director>
-      <director>Subhendu Dasmunshi</director>
-      <actor>Abir Chatterjee</actor>
-      <actor>Arjun Chakraborty</actor>
-      <actor>Ishaa Saha</actor>
-      <actor>Aryann Bhowmick</actor>
-      <actor>Lily Chakravarty</actor>
-      <actor>Anindya Chatterjee</actor>
-      <actor>Kharaj Mukherjee</actor>
-      <actor>Koushik Sen</actor>
-      <actor>June Malia</actor>
-      <actor>Kamaleswar Mukherjee</actor>
-    </credits>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261011154500 +0530" stop="20261011173000 +0530" channel="Colors.Bangla.in">
     <title>Bigg Boss Bangla</title>
     <desc>Sourav Ganguly hosts celebrity contestants as they live together in a common house, compete in various challenges and have to deal with each other's differences in order to win the prize.</desc>
@@ -28466,14 +28442,10 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
       <value>U/A-12</value>
     </rating>
   </programme>
-  <programme channel="Colors.in" start="20261011151600 +0530" stop="20261011154500 +0530">
-    <title>Thapki Pyar Ki</title>
-    <desc>Thapki, a lively and intelligent girl, faces certain problems that affect her life. However, she decides to move to a city in order to find a job and meet all her challenges with a positive attitude.</desc>
-    <category>TV Show</category>
-    <category>Drama</category>
+  <programme channel="Colors.in" start="20261011153000 +0530" stop="20261011160000 +0530">
+    <title lang="en">Thapki Pyar Ki</title>
+    <desc lang="en">Thapki, a lively and intelligent girl, faces certain problems that affect her life. However, she decides to move to a city in order to find a job and meet all her challenges with a positive attitude.</desc>
     <credits>
-      <director>Ranjan Kumar Singh</director>
-      <director>Aanand Kumaar</director>
       <actor>Jigyasa Singh</actor>
       <actor>Manish Goplani</actor>
       <actor>Ankit Bathla</actor>
@@ -28482,16 +28454,17 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
       <actor>Kritika Sharma</actor>
       <actor>Abhinandan Jindal</actor>
       <actor>Monica Khanna</actor>
+      <director>Ranjan Kumar Singh</director>
+      <director>Aanand Kumaar</director>
       <producer>Faizal Alanaa</producer>
       <producer>Kamna Nirula Menezes</producer>
       <producer>Ved Raj</producer>
       <producer>Dheeraj Sarna</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p12002812_b_h10_ab.jpg?lock=1280x720" />
-  </programme>
-  <programme start="20261011101500 +0000" stop="20261011103000 +0000" channel="Colors.in" catchup-id="100180219">
-    <title>Thapki Pyar Ki</title>
-    <desc>Kabir gets touched by seeing Thapki's anger towards Bihaan and decides to help her by announcing their marriage and proposing to her in front of everyone. Earlier, Shraddha tries to conspire. S01 E500.</desc>
+    <category lang="en">TV Show</category>
+    <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p12002812_b_h9_ab.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E499</episode-num>
   </programme>
   <programme channel="Colors.in" start="20261011160000 +0530" stop="20261011161500 +0530">
     <title lang="en">Thapki Pyar Ki</title>
@@ -120859,35 +120832,24 @@ Little Singham, an honest but ferocious police officer, fights against injustice
     <desc lang="en">Arjun wants to be a skating champion. This story follows his journey as he tries to achieve his dream. Will he succeed and become a champion?</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_ETV_BAL_BHARAT_1874931_14OCT063000_14OCT070000/images/LANDSCAPE_169/1746876386000_ETVBALBHARAT_HawaHawai_1874931.jpg" />
   </programme>
-  <programme start="20261011130000 +0530" stop="20261011154500 +0530" channel="ETVCinema.in">
-    <title>Donga Mogudu</title>
-    <desc>A wealthy businessman leads an unhappy life due to the constant harassment by his wife and her mother. His life soon changes when he meets his lookalike and switches places with him.</desc>
-    <category>Action</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/bff5e2677c3aa140700ed92d78dc6964.jpg?width=700" />
+  <programme channel="ETVCinema.in" start="20261011130000 +0530" stop="20261011160000 +0530">
+    <title lang="en">Donga Mogudu</title>
+    <desc lang="en">A wealthy businessman leads an unhappy life due to the constant harassment by his wife and her mother. His life soon changes when he meets his lookalike and switches places with him.</desc>
     <credits>
-      <actor>Chiranjeevi (Ravi Teja / Nagaraju)</actor>
-      <actor>Bhanupriya (Priyamvada)</actor>
-      <actor>Radhika (Geetha)</actor>
-      <actor>Madhavi (Lalitha)</actor>
-      <actor>Gollapudi Maruthi Rao (Brahmaji)</actor>
-      <actor>Giribabu (Gopalam)</actor>
+      <actor>Chiranjeevi</actor>
+      <actor>Bhanupriya</actor>
+      <actor>Raadhika Sarathkumar</actor>
+      <actor>Maadhavi</actor>
+      <actor>Gollapudi Maruthi Rao</actor>
+      <actor>Giribabu</actor>
       <actor>Jayanthi</actor>
-      <actor>Raogopalrao</actor>
+      <actor>Rao Gopal Rao</actor>
+      <director>A. Kodandarami Reddy</director>
+      <producer>Venkanna Babu S.P.</producer>
     </credits>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261011154500 +0530" stop="20261011160000 +0530" channel="ETVCinema.in">
-    <title>Telugu Hits</title>
-    <desc>A compilation of some of the most trending Telugu hits composed by famous artists is played back-to-back to enthrall the audience.</desc>
-    <category>Music</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/06c20f83de74209bd1d7bf469ab03f8d.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
+    <icon src="https://dtil.tmsimg.com/assets/p14296052_b_h9_af.jpg?lock=880x660" />
   </programme>
   <programme start="20261011160000 +0530" stop="20261011184900 +0530" channel="ETVCinema.in">
     <title>Sandade Sandadi</title>
@@ -129274,13 +129236,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme channel="GREATmovies.uk" start="20261011084200 +0000" stop="20261011101400 +0000">
-    <title lang="en">Hellgate</title>
-    <desc lang="en">1952 Western starring Sterling Hayden. After the Civil War a rancher is wrongfully imprisoned in a notorious desert prison. When a deadly plague threatens to overwhelm the jail, can he help stop it?</desc>
-    <category>Film</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800011-20261011141200/list/GreatMoviesHellgate20640354a4c9b32672a42cf9973fbf077a44186.jpg" />
-  </programme>
   <programme channel="GREATmovies.uk" start="20261011101400 +0000" stop="20261011114900 +0000">
     <title lang="en">The House On The Hill</title>
     <desc lang="en">2019 Dark thriller with Samaire Armstrong. After years in a mental hospital, Megan visits her brother, only to find no one even remembers him. Is she losing her mind or is a sinister plot in play?</desc>
@@ -134586,19 +134541,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <episode-num system="onscreen">E23</episode-num>
     <premiere />
   </programme>
-  <programme start="20261011152300 +0530" stop="20261011154500 +0530" channel="HistoryTV18.in@SD">
-    <title lang="en-GB">Kings of Restoration</title>
-    <sub-title lang="en-GB">A client comes in and requests the team to restore a vintage arcade game. Later, Rick and Tyler make a competitive wager</sub-title>
-    <desc lang="en-GB">A group of experts tries to restore American vintage items to their original state while facing a number of challenges during the job.</desc>
-    <credits>
-      <director>Courtney Kogler</director>
-      <actor>Bodie Stroud,Dale Walksler,Andy Bowman Jr.,Steve Hale,Bob Halliday,Rick Dale,Tyler Dale</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/d6c3d1dcfeee52882a1c2641875a02c5.jpg" />
-    <episode-num system="onscreen">E9</episode-num>
-    <premiere />
-  </programme>
   <programme start="20261011154500 +0530" stop="20261011163000 +0530" channel="HistoryTV18.in@SD">
     <title lang="en-GB">Forged in Fire: Knife or Death</title>
     <sub-title lang="en-GB">The bladesmiths, martial artists and knife throwers who survived the intimidating course are back to prove their skills in the final showdown</sub-title>
@@ -137182,17 +137124,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <title lang="en">Atashinchi</title>
     <desc lang="en">The Tachibanas' daily lives reveal a warm, everyday family. By watching small routines, readers see love, habits, and bonds that form a clear, relatable portrait.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_HUNGAMA_1481490_14OCT060000_14OCT070000/images/LANDSCAPE_169_HD/HungamaTV_Atashinchi_1481490.jpg" />
-  </programme>
-  <programme start="20261011151600 +0530" stop="20261011154400 +0530" channel="INWILD.nl">
-    <title>Second Chance Pets</title>
-    <desc>Dogs suffering from mobility issues due to injuries, arthritis or amputations are provided with leg braces and prosthetics.</desc>
-    <category>Animals</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/0f84153c7b4f4dbdb8397bbedcdf0ab7.jpg?width=700" />
-    <episode-num system="onscreen">2</episode-num>
-    <rating>
-      <value>TVG</value>
-    </rating>
   </programme>
   <programme start="20261011154400 +0530" stop="20261011161200 +0530" channel="INWILD.nl">
     <title>Second Chance Pets</title>
@@ -162490,20 +162421,35 @@ The host invites prominent personalities and engages them in candid conversation
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="NHBollyRaga.in" start="20261011133236 +0530" stop="20261011154227 +0530">
-    <title lang="en">Disco Dancer</title>
-    <desc lang="en">Bring back the flashy disco vibes with this sensational Disco Dancer jukebox. Whether you're a retro lover or a new-age dancer, these beats will keep you moving!</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/RUNNTV/PROGRAM/6aca2b1c211eae10dbeb74d1/images/LANDSCAPE_169/ae5bd272-c1d5-4cb4-871d-e191664dcbb7.png" />
+  <programme start="20261011154200 +0530" stop="20261011164700 +0530" channel="NHBollyRaga.in">
+    <title>Gane Naye Purane</title>
+    <desc>A comprehensive compilation of soulful golden era classics and the latest chart-topping Bollywood songs is played back-to-back.</desc>
+    <category>Music</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b190919d90a54a39292222b977e349c7.jpg?width=700" />
+    <rating>
+      <value>U</value>
+    </rating>
   </programme>
-  <programme channel="NHBollyRaga.in" start="20261011154228 +0530" stop="20261011164711 +0530">
-    <title lang="en">Gane Naye Purane</title>
-    <desc lang="en">Relive the golden era of music with classic melodies, retro rhythms, and timeless tunes that never fade. A nostalgic trip for true old-school lovers!</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/RUNNTV/PROGRAM/6aca2b1c211eae10dbeb74d3/images/LANDSCAPE_169/0aa714cd-3eb7-49f4-b200-a4834bd833e4.png" />
+  <programme start="20261011164700 +0530" stop="20261011190200 +0530" channel="NHBollyRaga.in">
+    <title>Kumar Sanu Alka Yagnik</title>
+    <desc>A comprehensive compilation of legendary hit songs featuring the iconic duo Kumar Sanu and Alka Yagnik, showcasing soulful melodies and romantic tracks, is played back-to-back.</desc>
+    <category>Music</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/9640bf13b0277aea45a6c35307596eb9.jpg?width=700" />
+    <rating>
+      <value>U</value>
+    </rating>
   </programme>
-  <programme channel="NHBollyRaga.in" start="20261011164712 +0530" stop="20261011190208 +0530">
-    <title lang="en">Kumar Sanu Alka Yagnik</title>
-    <desc lang="en">Fall in love all over again with Kumar Sanu &amp; Alka Yagnik! Their magical duets—full of passion, heartbreak, and nostalgia—are pure 90s gold.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/RUNNTV/PROGRAM/6aca2b1d211eae10dbeb74d5/images/LANDSCAPE_169/21e433fa-3ddc-4729-baf3-64e6ba4b537f.png" />
+  <programme start="20261011190200 +0530" stop="20261011213700 +0530" channel="NHBollyRaga.in">
+    <title>R D Burman - Musical Maverick</title>
+    <desc>A selectively compiled collection of some of the most popular and nostalgic melodies by noted music director R. D. Burman is played in succession.</desc>
+    <category>Music</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/a977fd3c97359eb9ddff0164354be7cf.jpg?width=700" />
+    <rating>
+      <value>U</value>
+    </rating>
   </programme>
   <programme start="20261011213700 +0530" stop="20261011225200 +0530" channel="NHBollyRaga.in">
     <title>Best Of 70s - The Golden Era</title>
@@ -194919,15 +194865,11 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <icon src="https://iptv-epg.org/images/Z_xqbYRaxM9x1ub6PzHJhyC5I_U5jX4IQ-yVuZ9MWwK__sLzOM7Jz9_-BqBFnS79FsbbJZXH2YJiK32rVj-gkV9o2COkVHRnqvGnceEeJJH0jip3_Oskr15zyAU" />
     <title lang="en">Movie</title>
   </programme>
-  <programme channel="PublicMusic.in@SD" start="20261011150000 +0530" stop="20261011154500 +0530">
-    <title lang="en">Heart Favourite</title>
-    <desc lang="en">Listen to the best romantic hits and timeless love songs, perfect for any mood.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_PUBLIC_MUSIC_864320_11OCT150000_11OCT154500/images/LANDSCAPE_169/1722011462000_PublicMusic_HeartFavourite_864320.jpg" />
-  </programme>
-  <programme channel="PublicMusic.in@SD" start="20261011154500 +0530" stop="20261011160000 +0530">
-    <title lang="en">Teleshopping</title>
-    <desc lang="en">Explore a wide range of products and enjoy a convenient shopping experience, ideal for viewers who love to shop easily and comfortably from home.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_PUBLIC_MUSIC_1995747_11OCT154500_11OCT160000/images/LANDSCAPE_169/1765217769000_AAJTAKHD_Teleshopping_930090.jpg" />
+  <programme channel="PublicMusic.in@SD" start="20261011150000 +0530" stop="20261011160000 +0530">
+    <title lang="en">100 Century Songs</title>
+    <desc lang="en">A comprehensive compilation of the 100 most popular songs composed and performed by various talented artists is played back to back.</desc>
+    <category lang="en">Music</category>
+    <icon src="https://dtil.tmsimg.com/assets/p29078196_b_h9_ab.jpg?lock=880x660" />
   </programme>
   <programme channel="PublicMusic.in@SD" start="20261011160000 +0530" stop="20261011164500 +0530">
     <title lang="en">Heart Favourite</title>
@@ -209866,17 +209808,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme start="20261011135700 +0530" stop="20261011154600 +0530" channel="RomedyNow.in@SD">
-    <title lang="en-GB">Barb \u0026 Star Go to Vista Del Mar</title>
-    <desc lang="en-GB">Best friends Barb and Star leave their small town to go on vacation to sunny Vista Del Mar. However, their holiday takes a strange turn due to a villain's plot to destroy the community.</desc>
-    <credits>
-      <director>Josh Greenbaum</director>
-      <actor>Kristen Wiig (Sharon Gordon Fisherman/Star),Annie Mumolo (Barb),Jamie Dornan (Edgar Pagét),Damon Wayans Jr. (Darlie Bunkle),Fortune Feimster (Pinky),Wendi McLendon-Covey (Mickey Revelet),Rose Abdoo (Bev),Vanessa Bayer (Debbie),Phyllis Smith (Delores),Kwame Patterson (George the Bartender),Michael Hitchcock (Gary the Concierge),Karen Maruyama (Caricature Artist),Hank Rogerson (Sharon Gordon Fisherman's Father),Mark Jonathan Davis (Richard Cheese),Ariane Price (Singing Divorcee)</actor>
-    </credits>
-    <category lang="en-GB">177</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/eb151202b2314f977acf07c7ee2995b6.jpg" />
-    <premiere />
   </programme>
   <programme start="20261011154600 +0530" stop="20261011174400 +0530" channel="RomedyNow.in@SD">
     <title lang="en-GB">New Year's Eve</title>
@@ -227027,13 +226958,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <category lang="en">Sport</category>
     <icon src="https://tv.assets.pressassociation.io/4ac10a17-809d-5998-ac39-064bc977d8e8.jpg" />
     <episode-num system="onscreen">S2026 E31</episode-num>
-  </programme>
-  <programme channel="SongdewTV.in@SD" start="20261011154000 +0530" stop="20261011154500 +0530">
-    <title lang="en">Friday Night Originals</title>
-    <desc lang="en">Several renowned musicians and bands come together to perform some of their most acclaimed songs in a bid to enthral the audience.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27658307_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="SongdewTV.in@SD" start="20261011154500 +0530" stop="20261011155000 +0530">
     <title lang="en">Songdew Fresh</title>
@@ -287589,13 +287513,6 @@ Highlights of the matches played during the ICC Cricket World Cup, wherein inter
     <icon src="https://iptv-epg.org/images/Q_zDWL0c5B00IrTQ2hUJJacP-BaXbTrWKOQVx5RUHCPRqwnDCQjSlbavgr_rbgRpDrfnuMijrfwmumSOdxVfWnqnb50m3BO6fFDO3Eg1D-a1MCKJNggT6Et0dG5w6A" />
     <title lang="en">Sports Programme</title>
   </programme>
-  <programme channel="StarSportsSelect1.in" start="20261011153000 +0530" stop="20261011154500 +0530">
-    <title lang="en">Premier League Highlights</title>
-    <desc lang="en">Highlights of the Premier League matches, where professional football teams compete against each other to win the championship title.</desc>
-    <category lang="en">News</category>
-    <category lang="en">Magazine Programme</category>
-    <icon src="https://dtil.tmsimg.com/assets/p18771049_b_h9_af.jpg?lock=880x660" />
-  </programme>
   <programme channel="StarSportsSelect1.in" start="20261011154500 +0530" stop="20261011161500 +0530">
     <title lang="en">Premier League Highlights</title>
     <desc lang="en">Highlights of the Premier League matches, where professional football teams compete against each other to win the championship title.</desc>
@@ -288642,13 +288559,6 @@ The best fights and most memorable moments from One Championship, one of the big
     <desc lang="en">Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/7-KV4WxNtJYcKnAB8tqW7eBOt0rKQ3NetD2MOd_DwkmsdjJgqamEaiSLLwxsNCdb40jIWoKIYDpl3O11MKu7R-GMdDbaZkWxzNJ7aNtv05cna9OyDX5GX7QeO0yc" />
     <title lang="en">Sports Programme</title>
-  </programme>
-  <programme channel="StarSportsSelect1.in@SD" start="20261011153000 +0530" stop="20261011154500 +0530">
-    <title lang="en">Premier League Highlights</title>
-    <desc lang="en">Highlights of the Premier League matches, where professional football teams compete against each other to win the championship title.</desc>
-    <category lang="en">News</category>
-    <category lang="en">Magazine Programme</category>
-    <icon src="https://dtil.tmsimg.com/assets/p18771049_b_h9_af.jpg?lock=880x660" />
   </programme>
   <programme channel="StarSportsSelect1.in@SD" start="20261011154500 +0530" stop="20261011161500 +0530">
     <title lang="en">Premier League Highlights</title>
@@ -292266,95 +292176,6 @@ Premier League match highlights show top goals, best plays and key moments, whil
     <title lang="en">Sarkari Haraju</title>
     <desc lang="en">After loaning a large sum to his deceitful lover in Miami, Mahi seeks repayment from her politician father in Vizag. His visit unveils a massive banking scandal.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_STAR_SUVARNA_PLUS_1587178_14OCT060000_14OCT090000/images/LANDSCAPE_169_HD/SuvarnaPlus_SarkariHaraju_1587178.jpg" />
-  </programme>
-  <programme channel="StarzCinema.us" start="20261011084700 +0000" stop="20261011101500 +0000">
-    <title lang="en">Paranormal Activity 4</title>
-    <desc lang="en">It has been five years since Katie (Katie Featherston) murdered her sister and disappeared with her infant nephew, Hunter, in tow. Now, a new family is about to fall prey to nighttime terrors. A mysterious accident next door leads to teenage Alex (Kathryn Newton) and her family becoming the temporary guardians of Robbie (Brady Allen), a very creepy neighbor boy. Cameras installed throughout Alex's home capture the sinister events that unfold after Robbie's arrival.</desc>
-    <credits>
-      <actor>Kathryn Newton</actor>
-      <actor>Matt Shively</actor>
-      <actor>Aiden Lovekamp</actor>
-      <director>Henry Joost</director>
-      <director>Ariel Schulman</director>
-    </credits>
-    <date>2012</date>
-    <category lang="en">Movie</category>
-    <category lang="en">Horror</category>
-    <category lang="en">Thriller</category>
-    <icon src="http://dtil.tmsimg.com/assets/p9024369_v_h10_af.jpg?w=960&amp;h=540" />
-    <premiere lang="en" />
-    <rating system="Motion Picture Association">
-      <value>R</value>
-    </rating>
-    <rating system="British Board of Film Classification">
-      <value>15</value>
-    </rating>
-    <rating system="Alberta's Film Classification Board">
-      <value>14A</value>
-    </rating>
-    <rating system="B.C. Film Classification Office">
-      <value>14A</value>
-    </rating>
-    <rating system="Saskatchewan Film and Video Classification Board">
-      <value>14A</value>
-    </rating>
-    <rating system="Manitoba Film Classification Board">
-      <value>14A</value>
-    </rating>
-    <rating system="Ontario Film Authority">
-      <value>14A</value>
-    </rating>
-    <rating system="Maritime Film Classification Board">
-      <value>14</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>13+</value>
-    </rating>
-    <rating system="UK Content Provider">
-      <value>15</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>16</value>
-    </rating>
-    <rating system="Ministero della Cultura">
-      <value>T</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>M 15+</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>K16</value>
-    </rating>
-    <rating system="Arcom">
-      <value>-12</value>
-    </rating>
-    <rating system="Instituto Nacional de Cine y Artes Audiovisuales">
-      <value>SAM 13</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>16</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>B</value>
-    </rating>
-    <rating system="映倫">
-      <value>G</value>
-    </rating>
-    <rating system="Medietilsynet">
-      <value>15 år</value>
-    </rating>
-    <rating system="Medierådet">
-      <value>15</value>
-    </rating>
-    <rating system="영상물등급위원회">
-      <value>15+</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>14</value>
-    </rating>
-    <star-rating system="TMS">
-      <value>4.0/10</value>
-    </star-rating>
   </programme>
   <programme channel="StarzCinema.us" start="20261011101500 +0000" stop="20261011115400 +0000">
     <title lang="en">Quartet</title>
@@ -302953,24 +302774,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <desc lang="en">Mangala Alati presents the sacred Mangala Alati, featuring prayers, rituals, and devotional moments that create a serene atmosphere of faith, hope, and positivity each day.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_TARANG_113152_14OCT063000_14OCT073000/images/LANDSCAPE_169/1790250252000_TARANG_MangalaAlati_113152.jpg" />
   </programme>
-  <programme start="20261011153400 +0530" stop="20261011154600 +0530" channel="TeluguOne.in@HD">
-    <title>Siva Putrudu</title>
-    <desc>An outcast, who is raised by the caretaker of a cemetery, ends up working at a cannabis farm. Later, he is arrested and befriends a fellow inmate.</desc>
-    <category>Action</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b582a07f3521f6d9f8baa1a26d2d10df.jpg?width=700" />
-    <credits>
-      <actor>Vikram</actor>
-      <actor>Suriya</actor>
-      <actor>Mahadevan</actor>
-      <actor>Karunas</actor>
-      <actor>Manobala</actor>
-      <actor>Laila</actor>
-    </credits>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261011154600 +0530" stop="20261011155800 +0530" channel="TeluguOne.in@HD">
     <title>Siva Putrudu</title>
     <desc>An outcast, who is raised by the caretaker of a cemetery, ends up working at a cannabis farm. Later, he is arrested and befriends a fellow inmate.</desc>
@@ -305488,14 +305291,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme start="20261011153300 +0530" stop="20261011154500 +0530" channel="ThalaaTV.in">
-    <title>Karimedu Karuvayan</title>
-    <sub-title>THALAA TV | TAMIL</sub-title>
-    <desc>Starring Vijayakanth and Nalini, directed by Ramanarayanan.</desc>
-    <category>Drama</category>
-    <language>TAMIL</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/THALAA%20TV/POSTER/Karimedu%20Karuvayan.png" />
   </programme>
   <programme start="20261011154500 +0530" stop="20261011155400 +0530" channel="ThalaaTV.in">
     <title>Karimedu Karuvayan</title>
@@ -374748,13 +374543,6 @@ Delving into a range of varied topics, the host discusses the social, economic a
     <title>Mr. Bean - The Animated Series</title>
     <desc>Join the strange but hilariously funny Mr Bean and his stuffed teddy on adventures such as avoiding an irate landlady or an evil one-eyed cat.</desc>
   </programme>
-  <programme start="20261011153000 +0530" stop="20261011154500 +0530" channel="custom.cnn">
-    <title lang="en-GB">Marketplace Asia</title>
-    <desc lang="en-GB">The host shares the latest updates and developments surrounding ventures and stock markets in different Asian countries.</desc>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/dcd81dc86e98c7086145ef513ff2b0d2.jpg" />
-    <premiere />
-  </programme>
   <programme start="20261011154500 +0530" stop="20261011160000 +0530" channel="custom.cnn">
     <title lang="en-GB">Marketplace Middle East</title>
     <desc lang="en-GB">The host presents a roundup of the latest trends and developments from the world of finance, emphasizing on region's important cities and sectors.</desc>
@@ -398366,16 +398154,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261011154100 +0530" stop="20261011154400 +0530" channel="custom.duck.tv">
-    <title>Connected World</title>
-    <desc>Children of different nationalities meet at a day-care centre. As they play together, they also explore different cultures and learn to socialise.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/6162fd19080de9173f36251ff9a31a4e.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261011154400 +0530" stop="20261011154700 +0530" channel="custom.duck.tv">
     <title>Finn and Fianna</title>
     <desc>Finn and Fianna are two baby elves who explore the environment using their cognitive and perceptual senses in order to learn about its unique attributes.</desc>
@@ -406110,25 +405888,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/0bb4bb7bf006a9877bf4dfe1935cb547.jpg?width=700" />
     <rating>
       <value>TVY</value>
-    </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011101200 +0000" stop="20261011101500 +0000">
-    <title lang="en">Hubbi Will Take Care of It</title>
-    <desc lang="en">Hubbi the hippo, Matti the beaver and their friend Milo are three countryside handymen who embark on adventures to repair broken things.</desc>
-    <date>2016</date>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Fantasy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13128149_b_h10_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
     </rating>
   </programme>
   <programme channel="custom.ducktv" start="20261011101900 +0000" stop="20261011102100 +0000">
@@ -438727,22 +438486,6 @@ Jeevsiddhi, who is trained by Chanakya, enters the innermost circles of Rakshasa
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme channel="custom.history.tv" start="20261011152300 +0530" stop="20261011154500 +0530">
-    <title lang="en">Kings of Restoration</title>
-    <desc lang="en">A client comes in and requests the team to restore a vintage arcade game. Later, Rick and Tyler make a competitive wager.</desc>
-    <credits>
-      <actor>Bodie Stroud</actor>
-      <actor>Dale Walksler</actor>
-      <actor>Andy Bowman Jr.</actor>
-      <actor>Steve Hale</actor>
-      <actor>Bob Halliday</actor>
-      <producer>Christopher Williams</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Reality Show</category>
-    <icon src="https://dtil.tmsimg.com/assets/p10784603_b_h9_ag.jpg?lock=880x660" />
-    <episode-num system="onscreen">S6 E9</episode-num>
   </programme>
   <programme channel="custom.history.tv" start="20261011154500 +0530" stop="20261011163000 +0530">
     <title lang="en">Forged in Fire: Knife or Death</title>
@@ -492215,13 +491958,6 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
     <title>Singapore Tonight</title>
     <desc>A round-up of all the day's events in Singapore as well as coverage of breaking news.</desc>
   </programme>
-  <programme start="20261011153000 +0530" stop="20261011154500 +0530" channel="hmair.cnn">
-    <title lang="en-GB">Marketplace Asia</title>
-    <desc lang="en-GB">The host shares the latest updates and developments surrounding ventures and stock markets in different Asian countries.</desc>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/dcd81dc86e98c7086145ef513ff2b0d2.jpg" />
-    <premiere />
-  </programme>
   <programme start="20261011154500 +0530" stop="20261011160000 +0530" channel="hmair.cnn">
     <title lang="en-GB">Marketplace Middle East</title>
     <desc lang="en-GB">The host presents a roundup of the latest trends and developments from the world of finance, emphasizing on region's important cities and sectors.</desc>
@@ -508818,20 +508554,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <desc lang="en">Popular pro-wrestlers from the AEW Roster compete against each other in fights every Saturday to win the championship title.</desc>
     <icon src="https://iptv-epg.org/images/nhzeSo88tQMPVmYK6tNIdstmt_eX3BLz3eEJ4eg2z-iYlb1WTuorUVriFU6SoOTMQRRGyOvUGVu-jyrZlRK7YuqFAOH2aG2xGi3CKF2EEZW1hxphOfx3PeP0IPJ0DQ" />
     <title lang="en">AEW Collision</title>
-  </programme>
-  <programme start="20261011100000 +0000" stop="20261011101300 +0000" channel="hmair.france24">
-    <category lang="en">News</category>
-    <category lang="en">News Bulletin</category>
-    <desc lang="en">An international news bulletin, presented live from the newsroom.</desc>
-    <icon src="https://iptv-epg.org/images/-8_dupG2laMUO_PwEsTolgf41V-4wWULeKrpb14VZ-QAXey3kIzQm4irVdRg33z_OM2KVagaXXY1X0DygDYazDKMLb5zf29cVQyR5vk2LhrnO8DQmeY_FhFsHwp2" />
-    <title lang="en">News</title>
-  </programme>
-  <programme start="20261011101300 +0000" stop="20261011101500 +0000" channel="hmair.france24">
-    <category lang="en">News</category>
-    <category lang="en">News Bulletin</category>
-    <desc lang="en">The host provides an introduction to the latest stories and developments from around the world, offering insightful analysis of current events.</desc>
-    <icon src="https://iptv-epg.org/images/PZfZzxFmx97zO22jxXKNkW2UycgR_HsjLW2VOBS_2owsk3GcEGXTVnYQtwTrE-XfgS24l9i2HqgWWO_2Np5-sZqII1ZLE7qUPqKdM9iorqDZQZD6Upi7yEdfh5LmRg" />
-    <title lang="en">Introduction</title>
   </programme>
   <programme start="20261011101500 +0000" stop="20261011103000 +0000" channel="hmair.france24">
     <category lang="en">News</category>
@@ -551970,10 +551692,6 @@ A young woman's unexpected bond with a much older businessman brings emotional t
     <title lang="en">The Sports Bar</title>
     <desc lang="en">Reaction, analysis and your chance to have your say on the day's sport. Call the show on 03717 22 33 44 (Calls charged at national rate) or text 81089 (50p + charges).</desc>
     <category lang="en">Music &amp; Radio</category>
-  </programme>
-  <programme start="20261011100000 +0000" stop="20261011101500 +0000" channel="tntsports1.uk">
-    <title>The Breakdown: Fabregas And Chalobah</title>
-    <desc>Ahead of Como’s first-ever UEFA Champions League campaign, Liam McDevitt meets Head Coach Cesc Fabregas and new signing Trevoh Chalobah.</desc>
   </programme>
   <programme start="20261011101500 +0000" stop="20261011123000 +0000" channel="tntsports1.uk">
     <title>Live Serie A: Como v Roma</title>
