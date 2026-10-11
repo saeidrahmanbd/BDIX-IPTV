@@ -25,7 +25,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ZRe5iI
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0rYPCDyP7pjL8cqGBLOo7L
 #EXTINF:-1 xui-id="188373" tvg-id="BTVChattogram.bd" tvg-name="BTV Chattogram" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-chattogram.png" tvg-chno="10" channel-id="BTVChattogram.bd" group-title="Bangladesh",BTV Chattogram
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2iLbx1-PhVH7Ak49o93rKh
-#EXTINF:-1 xui-id="357" tvg-id="BTVNational.bd" tvg-name="BTV National HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-national-2db28e10.png" tvg-chno="11" channel-id="BTVNational.bd" group-title="Bangladesh",BTV National HD
+#EXTINF:-1 xui-id="357" tvg-id="BTVNational.bd" tvg-name="BTV National HD" tvg-chno="11" channel-id="BTVNational.bd" group-title="Bangladesh",BTV National HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0wJGB76LVM3If5bP0lJyEA
 #EXTINF:-1 xui-id="358" tvg-id="custom.btv.news" tvg-name="BTV News" tvg-chno="12" channel-id="custom.btv.news" group-title="Bangladesh",BTV News
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36bxx766Ae65rZo8l8vcw1
@@ -299,7 +299,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2mEUrCs
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1A0tV6QoS8YZs9QWlIurr8
 #EXTINF:-1 xui-id="188403" tvg-id="ManoranjanTV.in@SD" tvg-name="Manoranjan TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/manoranjan-tv.png" tvg-chno="147" channel-id="ManoranjanTV.in@SD" group-title="Indian Entertainment",Manoranjan TV
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2oyNQyoW9jhrbE2BqFbY4q
-#EXTINF:-1 xui-id="613" tvg-id="custom.ndtv" tvg-name="NDTV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ndtv.png" tvg-chno="148" channel-id="custom.ndtv" group-title="Indian Entertainment",NDTV
+#EXTINF:-1 xui-id="613" tvg-id="custom.ndtv" tvg-name="NDTV" tvg-chno="148" channel-id="custom.ndtv" group-title="Indian Entertainment",NDTV
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3CmnogMl_21KgNY-LCW1DO
 #EXTINF:-1 xui-id="179424" tvg-id="custom.news.18.assam" tvg-name="News 18 Assam" tvg-chno="149" channel-id="custom.news.18.assam" group-title="Indian Entertainment",News 18 Assam
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-22Ki24x5jiOBil6UZ5mA9d
@@ -699,13 +699,13 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1dQJZe0
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1P1uF7240KFNhfsuMPslGN
 #EXTINF:-1 xui-id="2919" tvg-id="StarSports1Hindi.in@HD" tvg-name="In -hindi- Star Sports 1 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/in-hindi-star-sports-1-hd.png" tvg-chno="347" channel-id="StarSports1Hindi.in@HD" group-title="Sports",In -hindi- Star Sports 1 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Vv1qBLAylK99s9S0DKDmF
-#EXTINF:-1 xui-id="404" tvg-id="SonySportsTEN1.in" tvg-name="In Sony Sports Ten 1 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-1.png" tvg-chno="348" channel-id="SonySportsTEN1.in" group-title="Sports",In Sony Sports Ten 1 HD
+#EXTINF:-1 xui-id="404" tvg-id="SonySportsTEN1.in" tvg-name="In Sony Sports Ten 1 HD" tvg-chno="348" channel-id="SonySportsTEN1.in" group-title="Sports",In Sony Sports Ten 1 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0E83d_PCilef4fC7Frac-_
-#EXTINF:-1 xui-id="405" tvg-id="SonySportsTEN2.in" tvg-name="In Sony Sports Ten 2 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-1.png" tvg-chno="349" channel-id="SonySportsTEN2.in" group-title="Sports",In Sony Sports Ten 2 HD
+#EXTINF:-1 xui-id="405" tvg-id="SonySportsTEN2.in" tvg-name="In Sony Sports Ten 2 HD" tvg-chno="349" channel-id="SonySportsTEN2.in" group-title="Sports",In Sony Sports Ten 2 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1EaYeNSf0x_VVsg_uvvp1A
-#EXTINF:-1 xui-id="406" tvg-id="SonySportsTEN3.in" tvg-name="In Sony Sports Ten 3 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-1.png" tvg-chno="350" channel-id="SonySportsTEN3.in" group-title="Sports",In Sony Sports Ten 3 HD
+#EXTINF:-1 xui-id="406" tvg-id="SonySportsTEN3.in" tvg-name="In Sony Sports Ten 3 HD" tvg-chno="350" channel-id="SonySportsTEN3.in" group-title="Sports",In Sony Sports Ten 3 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-12qZAmRGWzWv6ooZ7JYeZx
-#EXTINF:-1 xui-id="407" tvg-id="SONYSPORTSTEN5.in" tvg-name="In Sony Sports Ten 5 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-1.png" tvg-chno="351" channel-id="SONYSPORTSTEN5.in" group-title="Sports",In Sony Sports Ten 5 HD
+#EXTINF:-1 xui-id="407" tvg-id="SONYSPORTSTEN5.in" tvg-name="In Sony Sports Ten 5 HD" tvg-chno="351" channel-id="SONYSPORTSTEN5.in" group-title="Sports",In Sony Sports Ten 5 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1HysMXC79YsatY3itdf9OT
 #EXTINF:-1 xui-id="398" tvg-id="StarSports1.in" tvg-name="In Star Sports 1 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/in-hindi-star-sports-1-hd.png" tvg-chno="352" channel-id="StarSports1.in" group-title="Sports",In Star Sports 1 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2q6LN-thQwsmikR4HmQKBV
@@ -989,7 +989,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-03YwQA0
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1E39SHTrHlVoVlUwBn9NPX
 #EXTINF:-1 xui-id="180054" tvg-id="BoishakhiTV.bd" tvg-name="Boishakhi TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/boishakhi-tv.png" tvg-chno="494" channel-id="BoishakhiTV.bd" group-title="Backup",Boishakhi TV (Alt 4)
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1jxZd7NE7JNTd_ziOnbWUj
-#EXTINF:-1 xui-id="188371" tvg-id="BTVNational.bd" tvg-name="BTV National HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-national-2db28e10.png" tvg-chno="495" channel-id="BTVNational.bd" group-title="Backup",BTV National HD (Alt 2)
+#EXTINF:-1 xui-id="188371" tvg-id="BTVNational.bd" tvg-name="BTV National HD" tvg-chno="495" channel-id="BTVNational.bd" group-title="Backup",BTV National HD (Alt 2)
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2ppbK-imtxJaAo5eA7zWrt
 #EXTINF:-1 xui-id="188345" tvg-id="ChannelI.bd" tvg-name="Channel I" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-i.png" tvg-chno="496" channel-id="ChannelI.bd" group-title="Backup",Channel I (Alt 2)
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3QJ3Vs0hy_UZ1fjtQrQWkL
