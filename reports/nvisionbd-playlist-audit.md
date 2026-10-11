@@ -1,6 +1,6 @@
 # NVisionBD Playlist Audit
 
-Generated (UTC): **2026-10-11T14:57:25+00:00**
+Generated (UTC): **2026-10-11T15:13:59+00:00**
 
 ## Summary
 
@@ -9,7 +9,7 @@ Generated (UTC): **2026-10-11T14:57:25+00:00**
 - Duplicate stream URLs: **0**
 - Duplicate channel identities: **59**
 - Missing channel IDs: **0**
-- Missing logos: **191**
+- Missing logos: **238**
 - Missing channel numbers: **0**
 - Malformed entries: **0**
 
@@ -31,10 +31,10 @@ Generated (UTC): **2026-10-11T14:57:25+00:00**
 
 ## Stream Probe Summary
 
-- Responsive: **10**
+- Responsive: **12**
 - Restricted: **0**
 - Dead: **121**
-- Unverified: **430**
+- Unverified: **428**
 
 ## Duplicate Stream URLs
 
@@ -105,7 +105,7 @@ None.
 ## Missing Metadata
 
 - Missing ID: None
-- Missing logo: BTV Sangsad, Bangla Big Boss 24x7, CTVN AKD Plus, Afra Film, Anmol Cinema, Anmol Cinema 2, Biz Cinema, Cafe Film, Sine Plus, The Q India, Afro Music Channel, Euro Indie Music Chart TV, 10 TV, Amar Ujala, &tv HD, Epic, Global Panjab, Hindi Big Boss 24x7 2026, Hindi Khabar, India Today, News 18 Assam, The Q, Ary News, Action 24, Aflam, Anger Management Channel, Asia Flix TV, Aurora Media Flims, Baraza TV, Blockbaster HD, Comedy Central, Digital Fashion, ETV, Fail Army, Fashion 1, Filmua Drama, FX TV, Hard Knocks, Hit, Kronehit, Laff TV, Magic TV, Movie Sphere, Movie Sphere Au, My Time Movie, Nexus Television, Power Turk, Screamin, Silk Way Cinema, Star Cinema
+- Missing logo: ATN News HD, Bangla TV, Bangla TV HD, BTV News, BTV Sangsad, Duronto TV HD, Ekushey TV HD, Global TV HD, Green TV, Mohona TV HD, Nagorik TV HD, Bangla Big Boss 24x7, CTVN AKD Plus, Jalsha Movies HD, Nick Bangla, Sananda TV, Afra Film, Anmol Cinema, Anmol Cinema 2, Biz Cinema, Cafe Film, Hindi Movie Classic 24, Sine Plus, Star Gold, Star Gold Select HD, The Q India, Afro Music Channel, Epic Music, Euro Indie Music Chart TV, 10 TV, Amar Ujala, &tv HD, Colors HD, Epic, Global Panjab, Hindi Big Boss 24x7 2026, Hindi Khabar, India Today, News 18 Assam, Star Plus HD, The Q, Zee TV HD, Ary News, Action 24, Action Hollywood Movies, Aflam, Anger Management Channel, Asia Flix TV, Aurora Media Flims, Baraza TV
 - Missing channel number: None
 
 ## Malformed Entries
