@@ -100,12 +100,28 @@ def playlist_groups():
     return groups
 
 
-# Hindi/Devanagari programme metadata is often attached to a Bengali channel
-# by a cross-provider ID/name collision. Never publish those titles as if they
-# were Bengali listings. Prefer valid Bengali/Latin titles from another mapped
-# provider; if none exist, leave that programme slot unlisted rather than lie.
-DEVANAGARI_RE = re.compile(r"[\u0900-\u097F]")
+# The published programme guide is English-only for every channel.
+# Reject non-English language-tagged text and text containing non-Latin scripts;
+# do not silently display Hindi, Bengali, Arabic, Cyrillic, etc. as English.
+import unicodedata
+
 TEXT_FIELDS = {"title", "sub-title", "desc"}
+XML_LANG = "{http://www.w3.org/XML/1998/namespace}lang"
+
+
+def is_english_text_element(elem):
+    text = (elem.text or "").strip()
+    if not text:
+        return True
+    lang = (elem.attrib.get(XML_LANG) or elem.attrib.get("lang") or "").strip().lower()
+    if lang and not (lang == "en" or lang == "eng" or lang.startswith("en-") or lang.startswith("en_")):
+        return False
+    for char in text:
+        if unicodedata.category(char).startswith("L"):
+            name = unicodedata.name(char, "")
+            if "LATIN" not in name:
+                return False
+    return True
 
 def load_mapping():
     # One source XMLTV ID may supply several playlist-specific tvg-ids.
@@ -390,20 +406,19 @@ def main():
                     elem.clear()
                     continue
 
-                title = (elem.findtext("title") or "").strip()
+                title_elem = elem.find("title")
+                title = (title_elem.text or "").strip() if title_elem is not None else ""
                 children = clone_children(elem)
                 for target in targets:
-                    # Indian Bangla channels must not inherit Hindi-script EPG
-                    # titles from a mismatched source feed. Continue collecting
-                    # other providers for this channel where available.
-                    is_indian_bangla = groups.get(target) == "Indian Bangla"
-                    if is_indian_bangla and DEVANAGARI_RE.search(title):
+                    # English-only policy applies to every channel, not just
+                    # Indian Bangla. Reject non-English titles and text fields;
+                    # other providers may still supply an English alternative.
+                    if title_elem is None or not is_english_text_element(title_elem):
                         continue
                     safe_children = []
                     for child in children:
-                        if is_indian_bangla and child.tag in TEXT_FIELDS and DEVANAGARI_RE.search(child.text or ""):
-                            # A Hindi-script subtitle/description is also not
-                            # useful on a Bengali channel; discard that field.
+                        if child.tag in TEXT_FIELDS and not is_english_text_element(child):
+                            # Drop non-English subtitle/description fields.
                             continue
                         safe_children.append(ET.fromstring(ET.tostring(child, encoding="utf-8")))
                     attrs = dict(elem.attrib)
