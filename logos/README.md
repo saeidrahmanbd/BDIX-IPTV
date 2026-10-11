@@ -1,8 +1,8 @@
 # Channel Logo Gallery
 
-**Total logos: 564**
+**Total image/SVG files in repository tree: 2,275**
 
-Click **🗑 Delete** below a wrong/fake logo. GitHub will open that exact file; use the trash/delete control on the file page and commit the deletion.
+This gallery is a legacy inventory, not an authentication certificate. Do not delete files solely because a name looks generic; inspect playlist and history references first.
 
 <table>
 <tr>
