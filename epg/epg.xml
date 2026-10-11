@@ -21794,10 +21794,6 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
     <icon src="https://iptv-epg.org/images/hAdw-El8we0VuDymLaoJ1u6z9XuZgz3oiKFQxPKzISThj5DhigkeK_bIHzK-uHC1RfBwXm9LhEThr1rNy3l7AKyxKZBhfkJ_KtQd0C3N_N3ZkRKYX_v3tZ3lkdk" />
     <title lang="en">Surviving the Drought</title>
   </programme>
-  <programme start="20261011113000 +0000" stop="20261011114500 +0000" channel="AnjanTV.in@SD" catchup-id="100071378">
-    <title>Sangam</title>
-    <desc>Prominent personalities gather to celebrate and promote India's culture and heritage.</desc>
-  </programme>
   <programme start="20261011114500 +0000" stop="20261011121500 +0000" channel="AnjanTV.in@SD" catchup-id="100071407">
     <title>Arogya</title>
     <desc>A medical expert shares remedies and tips that help in curing a range of illnesses. S01 E20.</desc>
@@ -52698,13 +52694,6 @@ Various players from across the region participate in a tennis tournament organi
     <desc lang="en">Khusro Bagh</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DD_BHARATI_2151133_14OCT213000_14OCT223000/images/LANDSCAPE_169/1791312627000_DDBHARATI_KhusroBagh_2151133.jpg" />
   </programme>
-  <programme channel="DDBihar.in@SD" start="20261011170000 +0530" stop="20261011171500 +0530">
-    <title>News In Hindi</title>
-    <desc>The host sheds light on the latest news updates and developments pertaining to society, business, economics, sports and culture from India and around the world.</desc>
-    <category>News</category>
-    <category>News Bulletin</category>
-    <icon src="https://dtil.tmsimg.com/assets/p13284406_b_h8_ab.jpg?lock=1280x720" />
-  </programme>
   <programme channel="DDBihar.in@SD" start="20261011171500 +0530" stop="20261011173000 +0530">
     <title>News in Urdu</title>
     <desc>The host presents information about the social, economic and political issues of the day and provides updates on current events.</desc>
@@ -58231,12 +58220,6 @@ The host showcases Gujarat's glorious past and highlights the remarkable achieve
     <category>News Bulletin</category>
     <icon src="https://dtil.tmsimg.com/assets/p25410278_b_h8_ad.jpg?lock=1280x720" />
   </programme>
-  <programme channel="DDHaryana.in@SD" start="20261011170400 +0530" stop="20261011171500 +0530">
-    <title>Tarane Purane</title>
-    <desc>A comprehensive compilation of some of the most famous old Bollywood songs, composed by well-known artists and singers are played.</desc>
-    <category>Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p22437447_b_h8_aa.jpg?lock=1280x720" />
-  </programme>
   <programme channel="DDHaryana.in@SD" start="20261011173200 +0530" stop="20261011175900 +0530">
     <title>Kisan</title>
     <desc>The host provides insights on the latest techniques used for farming and organic cultivation, and sheds light on various government policies and other agriculture related fields.</desc>
@@ -58488,13 +58471,6 @@ The host showcases Gujarat's glorious past and highlights the remarkable achieve
     <category>TV Show</category>
     <category>Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p28932814_b_h8_ab.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="DDHimachalPradesh.in@SD" start="20261011170000 +0530" stop="20261011171500 +0530">
-    <title>Features</title>
-    <desc>Bringing the best in television.</desc>
-    <category>TV Show</category>
-    <category>Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28722287_b_h10_ad.jpg?lock=1280x720" />
   </programme>
   <programme channel="DDHimachalPradesh.in@SD" start="20261011171500 +0530" stop="20261011173000 +0530">
     <title>Zilon Se Samachar</title>
@@ -60486,13 +60462,6 @@ The host showcases Gujarat's glorious past and highlights the remarkable achieve
     <desc lang="en">The host presents detailed information on the life, career and achievements of prominent figures in the world of cinema.</desc>
     <icon src="https://iptv-epg.org/images/7VIy_hUlT_gl866Qn9nCkuWke2ouz5Rv1q2rKsW9MCzYXCDBoSd_sApPNFlCLkE30JZJSMuzbB8mKSeBBaMTjGUhYYyjpVgDBbTcnKxNVRNdPFTXaSOONMhm1xWFbQ" />
     <title lang="en">Spotlight Cinema</title>
-  </programme>
-  <programme channel="DDJharkhand.in@SD" start="20261011170000 +0530" stop="20261011171500 +0530">
-    <title>Santhali Samachar</title>
-    <desc>The host presents information about the social, economic and political issues of the day and provides updates on current events.</desc>
-    <category>News</category>
-    <category>News Bulletin</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28943565_b_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="DDJharkhand.in@SD" start="20261011171500 +0530" stop="20261011173000 +0530">
     <title>Vritachitra</title>
@@ -91562,23 +91531,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261011113200 +0000" stop="20261011114400 +0000" channel="Discovery Kids.in">
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <actor>Bobby Moynihan</actor>
-      <actor>Eric Edelstein</actor>
-      <actor>Demetri Martin</actor>
-      <actor>Charlyne Yi</actor>
-      <actor>Patton Oswalt</actor>
-      <actor>Jason Lee</actor>
-    </credits>
-    <desc lang="en">S1 E7
-Grizz loves burritos so much that when a restaurant makes a Bear-Sized Burrito, he refuses to eat it and instead carries it everywhere, until it gradually spoils.</desc>
-    <episode-num>S1 E7</episode-num>
-    <icon src="https://iptv-epg.org/images/bqYXClwJK3KivPxXv4pUJHjJbBMI5kkrFVoLG_C2iORIVbWOUu1VGwgJgI_VNI-CUDFiH_-OHoGTvuaVhXBM8FJlEVwVe9jP9XQHhT9P_iw3TywyYGFmuKKPnym5" />
-    <title lang="en">We Bare Bears</title>
-  </programme>
   <programme start="20261011114400 +0000" stop="20261011115600 +0000" channel="Discovery Kids.in">
     <category lang="en">Children</category>
     <category lang="en">Animation</category>
@@ -104431,23 +104383,6 @@ Zak and the crew descend upon a Southern California park to investigate a haunte
     <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
       <value>AL</value>
     </rating>
-  </programme>
-  <programme start="20261011113200 +0000" stop="20261011114400 +0000" channel="DiscoveryKids.au">
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <actor>Bobby Moynihan</actor>
-      <actor>Eric Edelstein</actor>
-      <actor>Demetri Martin</actor>
-      <actor>Charlyne Yi</actor>
-      <actor>Patton Oswalt</actor>
-      <actor>Jason Lee</actor>
-    </credits>
-    <desc lang="en">S1 E7
-Grizz loves burritos so much that when a restaurant makes a Bear-Sized Burrito, he refuses to eat it and instead carries it everywhere, until it gradually spoils.</desc>
-    <episode-num>S1 E7</episode-num>
-    <icon src="https://iptv-epg.org/images/bqYXClwJK3KivPxXv4pUJHjJbBMI5kkrFVoLG_C2iORIVbWOUu1VGwgJgI_VNI-CUDFiH_-OHoGTvuaVhXBM8FJlEVwVe9jP9XQHhT9P_iw3TywyYGFmuKKPnym5" />
-    <title lang="en">We Bare Bears</title>
   </programme>
   <programme start="20261011114400 +0000" stop="20261011115600 +0000" channel="DiscoveryKids.au">
     <category lang="en">Children</category>
@@ -139675,18 +139610,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <episode-num system="onscreen">E23</episode-num>
     <premiere />
   </programme>
-  <programme start="20261011163000 +0530" stop="20261011171500 +0530" channel="HistoryTV18.in@SD">
-    <title lang="en-GB">History's Greatest Heists With Pierce Brosnan</title>
-    <sub-title lang="en-GB">Thieves tunnel underneath and into the vault of a bank in London. However, they get caught in a cat-and-mouse game when an amateur radio enthusiast intercepts their walkie-talkie chatter</sub-title>
-    <desc lang="en-GB">The filmmaker delves into history's greatest heists, uncovering the minds of criminals and strategies to pull off the dangerous crime.</desc>
-    <credits>
-      <actor>Pierce Brosnan</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/5762aaa24b7eb2afb319f949352aa988.jpg" />
-    <episode-num system="onscreen">E3</episode-num>
-    <premiere />
-  </programme>
   <programme start="20261011171500 +0530" stop="20261011180000 +0530" channel="HistoryTV18.in@SD">
     <title lang="en-GB">How Disney Built America</title>
     <sub-title lang="en-GB">Walt Disney builds the first theme park despite several obstacles in order to offer visitors an immersive experience that feels like a story</sub-title>
@@ -166722,37 +166645,6 @@ The host invites prominent personalities and engages them in candid conversation
     <desc lang="en">After putting an end to the dystopian Hunger Games, Katniss Everdeen and her friends attempt to rescue a brainwashed companion and free their nation from the control of President Coriolanus Snow.</desc>
     <icon src="https://iptv-epg.org/images/5g_jkBq8wAuxyc0rssDmHSlYGQivWx01WmEuc1s8UUct-smcyQPA8e16SrUSAuQbeDK1nqkOL395vm99p-MhS-Pkjnx_XFOB2UI1xXvn63-pajkY3iU45Qvl9KXFKA" />
     <title lang="en">The Hunger Games: Mockingjay, Part 1</title>
-  </programme>
-  <programme channel="MoviesNowPlus.in@SD" start="20261011150900 +0530" stop="20261011171400 +0530">
-    <title>Julie &amp; Julia</title>
-    <desc>Julie Powell, a young blogger, is determined to emulate Julia Child's cooking techniques. Though separated by time, the two women share a common passion for food that intertwines their lives.</desc>
-    <category>Film</category>
-    <category>Comedy</category>
-    <date>2009</date>
-    <credits>
-      <director>Nora Ephron</director>
-      <actor>Meryl Streep</actor>
-      <actor>Amy Adams</actor>
-      <actor>Stanley Tucci</actor>
-      <actor>Chris Messina</actor>
-      <actor>Linda Emond</actor>
-      <actor>Mary Lynn Rajskub</actor>
-      <actor>Jane Lynch</actor>
-      <actor>Frances Sternhagen</actor>
-      <actor>Helen Carey</actor>
-      <actor>Deborah Rush</actor>
-      <actor>Joan Juliet Buck</actor>
-      <actor>Crystal Noelle</actor>
-      <actor>George Bartenieff</actor>
-      <actor>Vanessa Ferlito</actor>
-      <actor>Casey Wilson</actor>
-      <actor>Jillian Bach</actor>
-      <producer>Nora Ephron</producer>
-      <producer>Laurence Mark</producer>
-      <producer>Amy Robinson</producer>
-      <producer>Eric Steel</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p186815_v_h8_aj.jpg?lock=1280x720" />
   </programme>
   <programme channel="MoviesNowPlus.in@SD" start="20261011171400 +0530" stop="20261011192400 +0530">
     <title>The Prestige</title>
@@ -290409,13 +290301,6 @@ Withdrawn Saumya gathers the courage to reshape her existence upon meeting Jeet,
     <desc lang="en">The show focuses on the life, challenges, and resilience of a visually impaired girl.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_STAR_PRAVAH_2057103_14OCT213000_14OCT220000/images/LANDSCAPE_169_HD/StarPravah_Aanandii_2057103.jpg" />
   </programme>
-  <programme start="20261011113000 +0000" stop="20261011114500 +0000" channel="StarSports1.in">
-    <category lang="en">Sports</category>
-    <category lang="en">Cricket</category>
-    <desc lang="en">Experts preview the strengths, weaknesses, composition and strategies of the teams competing in a prestigious cricket series.</desc>
-    <icon src="https://iptv-epg.org/images/riOjbZw8lCeCyYRsWI1V0xoNyLUfYx6UWK1M1QsRYW25LLs3Zgu5iowrZM67Pt2qhU-uMLrMkoRNWk9V_RXO96854HgqotJw23Z7zhoUFKvwe7Sxt2IqNtQyBc_H" />
-    <title lang="en">India vs. West Indies Series 2026; Game Plan</title>
-  </programme>
   <programme start="20261011114500 +0000" stop="20261011120000 +0000" channel="StarSports1.in">
     <category lang="en">Sports</category>
     <category lang="en">Cricket</category>
@@ -291875,13 +291760,6 @@ Highlights of the matches played during the ICC Cricket World Cup, wherein inter
     <icon src="https://iptv-epg.org/images/7-KV4WxNtJYcKnAB8tqW7eBOt0rKQ3NetD2MOd_DwkmsdjJgqamEaiSLLwxsNCdb40jIWoKIYDpl3O11MKu7R-GMdDbaZkWxzNJ7aNtv05cna9OyDX5GX7QeO0yc" />
     <title lang="en">Sports Programme</title>
   </programme>
-  <programme start="20261011113000 +0000" stop="20261011114500 +0000" channel="StarSports1.in@HD">
-    <category lang="en">Sports</category>
-    <category lang="en">Cricket</category>
-    <desc lang="en">Experts preview the strengths, weaknesses, composition and strategies of the teams competing in a prestigious cricket series.</desc>
-    <icon src="https://iptv-epg.org/images/riOjbZw8lCeCyYRsWI1V0xoNyLUfYx6UWK1M1QsRYW25LLs3Zgu5iowrZM67Pt2qhU-uMLrMkoRNWk9V_RXO96854HgqotJw23Z7zhoUFKvwe7Sxt2IqNtQyBc_H" />
-    <title lang="en">India vs. West Indies Series 2026; Game Plan</title>
-  </programme>
   <programme start="20261011114500 +0000" stop="20261011120000 +0000" channel="StarSports1.in@HD">
     <category lang="en">Sports</category>
     <category lang="en">Cricket</category>
@@ -293340,13 +293218,6 @@ Highlights of the matches played during the ICC Cricket World Cup, wherein inter
     <desc lang="en">Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/7-KV4WxNtJYcKnAB8tqW7eBOt0rKQ3NetD2MOd_DwkmsdjJgqamEaiSLLwxsNCdb40jIWoKIYDpl3O11MKu7R-GMdDbaZkWxzNJ7aNtv05cna9OyDX5GX7QeO0yc" />
     <title lang="en">Sports Programme</title>
-  </programme>
-  <programme start="20261011113000 +0000" stop="20261011114500 +0000" channel="StarSports1Hindi.in@HD">
-    <category lang="en">Sports</category>
-    <category lang="en">Cricket</category>
-    <desc lang="en">Experts preview the strengths, weaknesses, composition and strategies of the teams competing in a prestigious cricket series.</desc>
-    <icon src="https://iptv-epg.org/images/riOjbZw8lCeCyYRsWI1V0xoNyLUfYx6UWK1M1QsRYW25LLs3Zgu5iowrZM67Pt2qhU-uMLrMkoRNWk9V_RXO96854HgqotJw23Z7zhoUFKvwe7Sxt2IqNtQyBc_H" />
-    <title lang="en">India vs. West Indies Series 2026; Game Plan</title>
   </programme>
   <programme start="20261011114500 +0000" stop="20261011120000 +0000" channel="StarSports1Hindi.in@HD">
     <category lang="en">Sports</category>
@@ -295410,13 +295281,6 @@ Highlights of the matches played during the ICC Cricket World Cup, wherein inter
     <icon src="https://iptv-epg.org/images/7-KV4WxNtJYcKnAB8tqW7eBOt0rKQ3NetD2MOd_DwkmsdjJgqamEaiSLLwxsNCdb40jIWoKIYDpl3O11MKu7R-GMdDbaZkWxzNJ7aNtv05cna9OyDX5GX7QeO0yc" />
     <title lang="en">Sports Programme</title>
   </programme>
-  <programme start="20261011113000 +0000" stop="20261011114500 +0000" channel="StarSports3.in">
-    <category lang="en">Sports</category>
-    <category lang="en">Cricket</category>
-    <desc lang="en">Experts preview the strengths, weaknesses, composition and strategies of the teams competing in a prestigious cricket series.</desc>
-    <icon src="https://iptv-epg.org/images/riOjbZw8lCeCyYRsWI1V0xoNyLUfYx6UWK1M1QsRYW25LLs3Zgu5iowrZM67Pt2qhU-uMLrMkoRNWk9V_RXO96854HgqotJw23Z7zhoUFKvwe7Sxt2IqNtQyBc_H" />
-    <title lang="en">India vs. West Indies Series 2026; Game Plan</title>
-  </programme>
   <programme start="20261011114500 +0000" stop="20261011120000 +0000" channel="StarSports3.in">
     <category lang="en">Sports</category>
     <category lang="en">Cricket</category>
@@ -297089,13 +296953,6 @@ Highlights of the matches played during the ICC Cricket World Cup, wherein inter
     <desc lang="en">Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/Q_zDWL0c5B00IrTQ2hUJJacP-BaXbTrWKOQVx5RUHCPRqwnDCQjSlbavgr_rbgRpDrfnuMijrfwmumSOdxVfWnqnb50m3BO6fFDO3Eg1D-a1MCKJNggT6Et0dG5w6A" />
     <title lang="en">Sports Programme</title>
-  </programme>
-  <programme start="20261011113000 +0000" stop="20261011114500 +0000" channel="StarSports3.in@SD">
-    <category lang="en">Sports</category>
-    <category lang="en">Cricket</category>
-    <desc lang="en">Experts preview the strengths, weaknesses, composition and strategies of the teams competing in a prestigious cricket series.</desc>
-    <icon src="https://iptv-epg.org/images/riOjbZw8lCeCyYRsWI1V0xoNyLUfYx6UWK1M1QsRYW25LLs3Zgu5iowrZM67Pt2qhU-uMLrMkoRNWk9V_RXO96854HgqotJw23Z7zhoUFKvwe7Sxt2IqNtQyBc_H" />
-    <title lang="en">India vs. West Indies Series 2026; Game Plan</title>
   </programme>
   <programme start="20261011114500 +0000" stop="20261011120000 +0000" channel="StarSports3.in@SD">
     <category lang="en">Sports</category>
@@ -301025,13 +300882,6 @@ The best fights and most memorable moments from One Championship, one of the big
     <icon src="https://iptv-epg.org/images/7-KV4WxNtJYcKnAB8tqW7eBOt0rKQ3NetD2MOd_DwkmsdjJgqamEaiSLLwxsNCdb40jIWoKIYDpl3O11MKu7R-GMdDbaZkWxzNJ7aNtv05cna9OyDX5GX7QeO0yc" />
     <title lang="en">Sports Programme</title>
   </programme>
-  <programme start="20261011113000 +0000" stop="20261011114500 +0000" channel="StarSportsSelect2.in">
-    <category lang="en">News</category>
-    <category lang="en">Magazine Programme</category>
-    <desc lang="en">Highlights of the Premier League matches, where professional football teams compete against each other to win the championship title.</desc>
-    <icon src="https://iptv-epg.org/images/PR-hbQeHhpbXFUdBlPTrTjm06Hj3Aay_A_6shpx7j06eY2fXici5AXDdmeiaLwurOvfNGGm1YB8t13Z-R-waNNc-ep-VeWGcO8QeWf4gQ28LOBU4pOpcCnbhD-LIZA" />
-    <title lang="en">Premier League Highlights</title>
-  </programme>
   <programme start="20261011114500 +0000" stop="20261011120000 +0000" channel="StarSportsSelect2.in">
     <category lang="en">News</category>
     <category lang="en">Magazine Programme</category>
@@ -302040,13 +301890,6 @@ Premier League match highlights show top goals, best plays and key moments, whil
     <desc lang="en">Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/7-KV4WxNtJYcKnAB8tqW7eBOt0rKQ3NetD2MOd_DwkmsdjJgqamEaiSLLwxsNCdb40jIWoKIYDpl3O11MKu7R-GMdDbaZkWxzNJ7aNtv05cna9OyDX5GX7QeO0yc" />
     <title lang="en">Sports Programme</title>
-  </programme>
-  <programme start="20261011113000 +0000" stop="20261011114500 +0000" channel="StarSportsSelect2.in@SD">
-    <category lang="en">News</category>
-    <category lang="en">Magazine Programme</category>
-    <desc lang="en">Highlights of the Premier League matches, where professional football teams compete against each other to win the championship title.</desc>
-    <icon src="https://iptv-epg.org/images/PR-hbQeHhpbXFUdBlPTrTjm06Hj3Aay_A_6shpx7j06eY2fXici5AXDdmeiaLwurOvfNGGm1YB8t13Z-R-waNNc-ep-VeWGcO8QeWf4gQ28LOBU4pOpcCnbhD-LIZA" />
-    <title lang="en">Premier League Highlights</title>
   </programme>
   <programme start="20261011114500 +0000" stop="20261011120000 +0000" channel="StarSportsSelect2.in@SD">
     <category lang="en">News</category>
@@ -325395,14 +325238,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261017235300/list/TinyPOPTHEHIVE2151548c9e3feeb8927483ab4ea5a54ad023895.jpg" />
   </programme>
-  <programme start="20261011170600 +0530" stop="20261011171800 +0530" channel="TollyTV.in">
-    <title>Jhansi Rani</title>
-    <sub-title>TOLLY TV | TELUGU</sub-title>
-    <desc>Jhansi Rani hunts a conman who tricked women, seeking justice for her sister.</desc>
-    <category>Movies</category>
-    <language>TELUGU</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/TOLLY%20TV/IMAGES/Jhansi%20Rani.png" />
-  </programme>
   <programme start="20261011171800 +0530" stop="20261011173100 +0530" channel="TollyTV.in">
     <title>Jhansi Rani</title>
     <sub-title>TOLLY TV | TELUGU</sub-title>
@@ -335778,356 +335613,6 @@ The host travels to the historic city of Savannah, exploring its elegant charm, 
       <value>U/A-12</value>
     </rating>
   </programme>
-  <programme channel="ZeeAction.in" start="20261012192800 +0000" stop="20261012203000 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013005800/list/ActionCinemaTeleShopping175522243cb0afc80e742929c1ab5aeeceb8699.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261012203000 +0000" stop="20261012225300 +0000">
-    <title lang="en">Meri Izzat</title>
-    <desc lang="en">After misunderstanding and losing their daughter, a woman leaves her husband. Years later, he meets someone who resembles his lost daughter.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013020000/list/ActionCinemaMeriIzzat9474f6eb5bb4be904d98a451db6107ecd8af.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261012225300 +0000" stop="20261013010100 +0000">
-    <title lang="en">Pratibandh</title>
-    <desc lang="en">Inspector Siddanth protects Shanti, witness to a murder. This offends his superiors who plan to teach him a lesson.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013042300/list/ActionCinemaPratibandh9487d051146cc86b426e97bd27a73e189d75.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261013010100 +0000" stop="20261013034400 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013063100/list/ActionCinemaTeleShopping1755222c3779ed94b7945debd839156511514b0.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261013034400 +0000" stop="20261013061500 +0000">
-    <title lang="en">Aaj Ka Raavan Raaj</title>
-    <desc lang="en">Seenu is faction leader Reddeppa's righthand man. When Reddeppa finds out that his daughter and Seenu are in love, he tries to kill Seenu.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013091400/list/ActionCinemaAajKaRaavanRaaj198579457d8f68d1b9f45b3ab2797d13196f720.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261013061500 +0000" stop="20261013084100 +0000">
-    <title lang="en">Nindha</title>
-    <desc lang="en">After six murder case suspects get kidnapped, an officer goes on a quest to find the truth.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013114500/list/ActionCinemaNindha21329146509968d1cae48a5a15e455e7825caae.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261013084100 +0000" stop="20261013105900 +0000">
-    <title lang="en">Kurukshetra</title>
-    <desc lang="en">ACP Prithviraj, an honest man, arrests Chief Minister Baburao's son for raping a woman. Consequently, Baburao leaves no stone unturned to get revenge against Prithviraj.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013141100/list/ActionCinemaKurukshetra1324119f28d5b10bd3840ffac7f13ade2986f05.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261013105900 +0000" stop="20261013140000 +0000">
-    <title lang="en">Jayasimha</title>
-    <desc lang="en">Jayasimha, a forest officer, fights animal poaching in a hostile village. His stand for nature puts his family in danger, turning duty into a fight for survival and truth.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013162900/list/ActionCinemaJayasimha1201892f94cf47452264c8fae97a42e773cc98e.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261013140000 +0000" stop="20261013164200 +0000">
-    <title lang="en">Chakra Ka Rakshak</title>
-    <desc lang="en">A cop and a soldier team up to stop dangerous cybercriminals. To win, they must risk everything in both the real and the virtual worlds.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013193000/list/ActionCinemaChakraKaRakshak16221679b81382a49684e99b1015101d9d8d887.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261013164200 +0000" stop="20261013193500 +0000">
-    <title lang="en">Qatil Saya</title>
-    <desc lang="en">A police officer is tasked with investigating a series of bizarre deaths in a hilly town. However, while he works to solve the case, his family is haunted by unnatural events.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013221200/list/ActionCinemaQatilSaya1243868fddfbd63d97d4c94ba98ccd3e8e271e8.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261013193500 +0000" stop="20261013203000 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014010500/list/ActionCinemaTeleShopping175522292694de0ad9142e7a99c3d18d057e6cc.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261013203000 +0000" stop="20261013225300 +0000">
-    <title lang="en">Lalkar Ek Jung</title>
-    <desc lang="en">Siblings Ashok and Lakshmi tie the knot, but navigating their new life together proves to be chaotic and unpredictable, leading to unexpected twists and heartfelt moments.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014020000/list/ActionCinemaLalkarEkJung9468f5e9cc478ef94b17b088c7dda5abd6d8.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261013225300 +0000" stop="20261014010100 +0000">
-    <title lang="en">Virataparva</title>
-    <desc lang="en">Virataparva</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014042300/list/ActionCinemaVirataparva21497062266f2392e974352aba05853ad555bb2.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261014010100 +0000" stop="20261014031300 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014063100/list/ActionCinemaTeleShopping17552226fc7329687934ac0bb55f123bb8452fa.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261014031300 +0000" stop="20261014060600 +0000">
-    <title lang="en">Siddhu The Warrior</title>
-    <desc lang="en">A rich man helps his dying mother by risking everything. To heal her, he becomes a beggar for 48 hours, crossing social boundaries to save her life.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014084300/list/ActionCinemaSiddhuTheWarrior1974596451050903996421f98d276982102e3ee.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261014060600 +0000" stop="20261014081900 +0000">
-    <title lang="en">Badla Naag Ka 3</title>
-    <desc lang="en">Lakshmi as Malar plays a shape-shifting serpent who claims to be married to Sarva aka Vikram in his previous birth. Thus, she keeps chasing Sarva and his wife in his present birth, Divya.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014113600/list/ActionCinemaBadlaNaagKa31102277090c82d372654032a6d2eb952025bc24.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261014081900 +0000" stop="20261014104100 +0000">
-    <title lang="en">Benki</title>
-    <desc lang="en">When antisocial elements in a humble village community harass a young woman, her protective brother embarks on a path of vengeance.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014134900/list/ActionCinemaBenki2111574e5c066daae284dfba14c8e2d3d799da1.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261014104100 +0000" stop="20261014140000 +0000">
-    <title lang="en">Mumbai Ki Kiran Bedi</title>
-    <desc lang="en">A man meets a woman who resembles his late daughter, an IPS officer, and mentors her to emulate Kiran Bedi's fearless leadership and justice.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014161100/list/ActionCinemaMumbaiKiKiranBedi263710276ec183c23d4e26a12eae0c5b68dbcd.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261014140000 +0000" stop="20261014163200 +0000">
-    <title lang="en">Aho Vikramaarka</title>
-    <desc lang="en">A tough cop finds a dark secret and must fight the evil Asura. He wants to save people who are trapped and stop the villain's cruel plan.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014193000/list/ActionCinemaAhoVikramaarka1912575cc9cca5116154e339ad58f4ed7872495.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261014163200 +0000" stop="20261014192800 +0000">
-    <title lang="en">Action Rowdy</title>
-    <desc lang="en">A man saves a woman. They learn they're from the same place and fall in love. His powerful father fights a project that threatens villages. His brother is a criminal.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014220200/list/ActionCinemaActionRowdy1901467e3647a92a433420caa5f2f0f263d75ed.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261014192800 +0000" stop="20261014203000 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015005800/list/ActionCinemaTeleShopping1755222284c0104e23d4774acc280f063af2bad.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261014203000 +0000" stop="20261014225200 +0000">
-    <title lang="en">Chiranjeevi</title>
-    <desc lang="en">When a man unintentionally kills his own wife, he tries to hide the truth from his father, a sincere police officer.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015020000/list/ActionCinemaChiranjeevi94323e71eb9439454964a941477d092d2e6e.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261014225200 +0000" stop="20261015005900 +0000">
-    <title lang="en">Tales Of Mahanagara</title>
-    <desc lang="en">Tales Of Mahanagara Weaves Together The Lives Of A Cab Driver, An Artist, And Two Laymen In The City, As Their Seemingly Unrelated Stories Converge When They Become Trapped In A Life-Threatening Experiment.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015042200/list/ActionCinemaTalesOfMahanagara208469882d960a3c2554a1aac24dc46f1707b8a.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261015005900 +0000" stop="20261015024400 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015062900/list/ActionCinemaTeleShopping175522295c7ee02315a4fd8981d23aced581714.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261015024400 +0000" stop="20261015052600 +0000">
-    <title lang="en">Rowdy No.1</title>
-    <desc lang="en">A young labourer, falls in love with Bhagyalakshmi. Later, he finds out that her mother, who was an honest woman, was assassinated by a corrupt politician and sets out to avenge her death.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015081400/list/ActionCinemaRowdyNo11416935549572052f8b4e31b52046cd6542accd.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261015052600 +0000" stop="20261015083000 +0000">
-    <title lang="en">Bangarraju</title>
-    <desc lang="en">Chinna Bangarraju, a charming man, enjoys a carefree life. But, when familial and personal problems start to haunt him, his grandfather comes to his rescue.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015105600/list/ActionCinemaBangarraju144762435bcf39cc69a4e498669bd3d5e36051a.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261015083000 +0000" stop="20261015110500 +0000">
-    <title lang="en">Businessman 2</title>
-    <desc lang="en">Karthik, a money-minded tycoon, gets engaged to Anushka, who belongs to a rich family. However, he soon learns about the differences in his family and decides to end them.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015140000/list/ActionCinemaBusinessman29365146f09663ae4004a888d7fc2d312db548b.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261015110500 +0000" stop="20261015140000 +0000">
-    <title lang="en">Kasam Hindustan Ki</title>
-    <desc lang="en">Dhuruvan is a forest ranger, who is assigned the job of training five girls from the NCC camp. The group hears of a terrorist activity being carried out in the forest and makes a plan to defeat them.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015163500/list/ActionCinemaKasamHindustanKi283499e8cbe3a3f4c41c69b432b19e2f3f23c.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261015140000 +0000" stop="20261015163000 +0000">
-    <title lang="en">Hero The Bullet</title>
-    <desc lang="en">Siva, a reckless youngster who loves his family, risks everything after clashing with a dangerous don to protect them and ensure their safety.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015193000/list/ActionCinemaHeroTheBullet1666529bfb6ba2e043848eab423965254d78c6e.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261015163000 +0000" stop="20261015193500 +0000">
-    <title lang="en">Ghost</title>
-    <desc lang="en">Karan Khanna is accused for the murder of his wife. When his new lawyer Simran decides to defend him, she comes across a spirit who might be involved.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015220000/list/ActionCinemaGhost10508896e4b408017664455a6c1d7143c4cb921.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261015193500 +0000" stop="20261015203000 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016010500/list/ActionCinemaTeleShopping1755222bc41051a80e54523aa4e531924b9b266.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261015203000 +0000" stop="20261015224700 +0000">
-    <title lang="en">Chor Aur Chand</title>
-    <desc lang="en">To avoid an arranged marriage, Reema is on the run with an ex-convict who breaks into her house. Her father asks a gangster to help find her.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016020000/list/ActionCinemaChorAurChand9433246bd2cac398431aa14e73d99f8a8689.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261015224700 +0000" stop="20261016005600 +0000">
-    <title lang="en">Vaishnavi</title>
-    <desc lang="en">A girl with divine powers born to Venkata Narayana, resorts to sooth-saying on a particular day every year.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016041700/list/ActionCinemaVaishnavi43287491d79dab0e9449e28c75154f6d92b773.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261016005600 +0000" stop="20261016030500 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016062600/list/ActionCinemaTeleShopping1755222b0ea4f13f19d496984e896ade2a96056.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261016030500 +0000" stop="20261016054500 +0000">
-    <title lang="en">100</title>
-    <desc lang="en">Young cop Sathya hates his control room job-until a 100th call throws him into a mystery that changes everything and pushes him far beyond routine duty.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016083500/list/ActionCinema1001232194beaafeabec904a4587017dbdff6c5bf0.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261016054500 +0000" stop="20261016081500 +0000">
-    <title lang="en">Hitlist</title>
-    <desc lang="en">Hitlist</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016111500/list/movie1f4460d0c803421e876ed8f6a0d19f24.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261016081500 +0000" stop="20261016105800 +0000">
-    <title lang="en">Policegiri</title>
-    <desc lang="en">Fearless cop Rudra takes on notorious criminal Nagori, leading to a thrilling showdown. But the confrontation plunges Rudra into a maze of troubles.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016134500/list/ActionCinemaPolicegiri16676026440eac78a544ff58051ce3b30417b87.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261016105800 +0000" stop="20261016140000 +0000">
-    <title lang="en">International Rowdy</title>
-    <desc lang="en">An ex-agent assigned to track down the culprit who attacked the embassy in Malaysia finds his old foe has now developed a hazardous drug.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016162800/list/ActionCinemaInternationalRowdy658351bbe40e7d25914231b010424f97043f6c.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261016140000 +0000" stop="20261016163400 +0000">
-    <title lang="en">Pt Sir</title>
-    <desc lang="en">Pt Sir</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016193000/list/ActionCinemaPtSir2149701607f88e10cb641a9903afb13106618b8.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261016163400 +0000" stop="20261016193500 +0000">
-    <title lang="en">Pathu Thala</title>
-    <desc lang="en">An undercover cop goes to find and kill a crime lord. However, when he realizes that the crime lord's business intentions are good and he has his own challenges,</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016220400/list/ActionCinemaPathuThala1728384a18feafc8e62462ab56b840ba0b09bca.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261016193500 +0000" stop="20261016203000 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017010500/list/ActionCinemaTeleShopping17552226c20aa829a2f43cea166e63a4492fad4.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261016203000 +0000" stop="20261016225700 +0000">
-    <title lang="en">Ek Aur Vinashak</title>
-    <desc lang="en">Ravi, an aspiring director and Sandhya meet on the sets and fall in love. They need to deal with a local goon who falls for Sandhya.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017020000/list/ActionCinemaEkAurVinashak943707605be99f5c4de18e4c6ae8c8846751.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261016225700 +0000" stop="20261017005900 +0000">
-    <title lang="en">Machgaya Tehlka</title>
-    <desc lang="en">Bose visits his brother, living in a colony targeted by a ruthless land-grabbing don. He inspires the people to unite and stand up for their rights.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017042700/list/ActionCinemaMachgayaTehlka856215051639cf8546484b81eb2001985f78ed.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261017005900 +0000" stop="20261017022900 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017062900/list/ActionCinemaTeleShopping1755222d96d6dd32ac24517b0768e4c7356e313.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261017022900 +0000" stop="20261017050600 +0000">
-    <title lang="en">Forensic</title>
-    <desc lang="en">Samuel uses his forensic skills and discovers breakthroughs in a serial killing case as further victims are added to the list. Shikha too uncovers evidences that might lead to the killer's identity.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017075900/list/ActionCinemaForensic1206897423e9c5242f64e179f8fd981c90f7af8.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261017050600 +0000" stop="20261017075300 +0000">
-    <title lang="en">Sheshnaag</title>
-    <desc lang="en">A shape-shifting snake transforms herself into various forms in order to seek revenge from those who have wronged her.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017103600/list/ActionCinemaSheshnaag487044f379f675fa00467fbf084985ec3c475a.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261017075300 +0000" stop="20261017105400 +0000">
-    <title lang="en">Army</title>
-    <desc lang="en">On her wedding day, Seeta's world shatters when terrorist Nagraj kills her husband, Major Arjun. Fueled by grief and rage, she rallies a gang of criminals to seek revenge.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017132300/list/ActionCinemaArmy171404cb3638933e741eeba7b58892df9d807.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261017105400 +0000" stop="20261017140000 +0000">
-    <title lang="en">2.0</title>
-    <desc lang="en">When mobile phones mysteriously fly out of people's hands, Dr. Vaseegaran and robot Nila investigate. Realizing Pakshi Rajan is behind it, they revive Chitti to battle the powerful threat.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017162400/list/ActionCinema2O1918464f88c8caa8bf245d7a23d1bbc7885253a.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261017140000 +0000" stop="20261017164400 +0000">
-    <title lang="en">Bruce Lee</title>
-    <desc lang="en">A stuntman gets mistaken for a cop by an enthusiastic woman and hilariously ends up tackling crime, all while trying to keep up the ruse!</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017193000/list/ActionCinemaBruceLee1732146de6f4eb57ca54491bfebecfe22d4c3c2.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261017164400 +0000" stop="20261017192800 +0000">
-    <title lang="en">The Return of Kaalia</title>
-    <desc lang="en">When his sister is killed by her in-laws for dowry, a devastated Kaalia embarks on a mission to kill men who harass women.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017221400/list/ActionCinemaTheReturnofKaalia649743b4e2fece1f054b6b83177850ac81ff36.jpg" />
-  </programme>
   <programme start="20261011162100 +0530" stop="20261011192700 +0530" channel="ZeeAnmolCinema.in">
     <title>K3 - Kaali Ka Karishma</title>
     <desc>A young man, who lives happily with his family but is scared of ghosts, visits Coimbatore, Tamil Nadu, with his family. There, he is soon possessed by a vengeful ghost with a sinister past.</desc>
@@ -336384,29 +335869,6 @@ The host travels to the historic city of Savannah, exploring its elegant charm, 
     <rating>
       <value>U/A-12</value>
     </rating>
-  </programme>
-  <programme start="20261011080700 +0000" stop="20261011114700 +0000" channel="ZeeBollywood.in@SD">
-    <category lang="en">Film</category>
-    <category lang="en">Thriller</category>
-    <credits>
-      <director>Ramesh Sippy</director>
-      <actor>Sunil Dutt</actor>
-      <actor>Shashi Kapoor</actor>
-      <actor>Amitabh Bachchan</actor>
-      <actor>Shatrughan Sinha</actor>
-      <actor>Rakhee Gulzar</actor>
-      <actor>Parveen Babi</actor>
-      <actor>Bindiya Goswami</actor>
-      <actor>Johnny Walker</actor>
-      <actor>Kulbhushan Kharbanda</actor>
-      <actor>Mazhar Khan</actor>
-      <actor>Sudhir</actor>
-      <actor>Padmini Kapila</actor>
-      <producer>G. P. Sippy</producer>
-    </credits>
-    <desc lang="en">After their cop brother dies at the hands of a ruthless gangster, Vijay and Ravi are determined to find the gangster and take their revenge.</desc>
-    <icon src="https://iptv-epg.org/images/y--1VvJ6BEu6ymR_NrRL6jShwCrdNWPeCW1_POiwPop2tv-T2EuPIcbF7wovHckS46B5Sowk73fLpnI7O8J_ZJFxkcc2QhJZ7iaBgmuprzMWz2emzKjbo4iCFw" />
-    <title lang="en">Shaan</title>
   </programme>
   <programme start="20261011114700 +0000" stop="20261011143000 +0000" channel="ZeeBollywood.in@SD">
     <category lang="en">Film</category>
@@ -419425,26 +418887,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261011171200 +0530" stop="20261011171400 +0530" channel="custom.duck.tv">
-    <title>Nature Dudes</title>
-    <desc>The hosts present the natural rotation of seasons and its different impacts on the lives of various animals and plants throughout the year.</desc>
-    <category>Nature</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/490871073a72cbb039b7d61aab320ebe.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261011171400 +0530" stop="20261011171500 +0530" channel="custom.duck.tv">
-    <title>Happy Garden</title>
-    <desc>Young viewers learn how different types of fruits and vegetables grow from seeds in the Happy Garden and how people enjoy their taste and fragrance.</desc>
-    <category>House/garden</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/4f747ffc0c345f0dfea62c05405ea1d4.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261011171500 +0530" stop="20261011171900 +0530" channel="custom.duck.tv">
     <title>Dotty, the Kitty</title>
     <desc>Dotty the kitten tries to complete pictures by connecting the dots on the outline of various objects selected by the pencil.</desc>
@@ -426755,37 +426197,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/0bb4bb7bf006a9877bf4dfe1935cb547.jpg?width=700" />
     <rating>
       <value>TVY</value>
-    </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011114300 +0000" stop="20261011114500 +0000">
-    <title lang="en">Sounds Around Us</title>
-    <desc lang="en">Elf twins Liza and Ben use their wits and senses to identify the sources of all the sounds that they hear in their everyday lives.</desc>
-    <date>2016</date>
-    <category lang="en">Children</category>
-    <category lang="en">Fantasy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p21888587_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011114500 +0000" stop="20261011114800 +0000">
-    <title lang="en">Monica &amp; Rudy</title>
-    <desc lang="en">The little girl teaches her parrot to repeat the sounds of the city.</desc>
-    <date>2016</date>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Educational</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13128204_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
     </rating>
   </programme>
   <programme channel="custom.ducktv" start="20261011114800 +0000" stop="20261011115000 +0000">
@@ -456285,26 +455696,6 @@ Jeevsiddhi, who is trained by Chanakya, enters the innermost circles of Rakshasa
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme channel="custom.fight.network" start="20261011104500 +0000" stop="20261011114500 +0000">
-    <title lang="en">IMPACT in 60</title>
-    <sub-title lang="en">Best of James Storm</sub-title>
-    <desc lang="en">A look back at the storied IMPACT Wrestling career highs for "The Cowboy" James Storm, who has wrestled the most matches for the company in its 18 plus year history.</desc>
-    <date>2021</date>
-    <category lang="en">Series</category>
-    <category lang="en">Pro wrestling</category>
-    <icon src="http://dtil.tmsimg.com/assets/p19344644_b_h8_aa.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">E12</episode-num>
-    <previously-shown />
-    <rating system="Canadian Parental Rating">
-      <value>14+</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TV14</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>13</value>
-    </rating>
   </programme>
   <programme channel="custom.fight.network" start="20261011114500 +0000" stop="20261011123700 +0000">
     <title lang="en">OVW TV: Primetime</title>
@@ -491135,208 +490526,29 @@ Jeevsiddhi, who is trained by Chanakya, enters the innermost circles of Rakshasa
       <value>12</value>
     </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261011111800 +0000" stop="20261011114400 +0000">
-    <title lang="en">SpongeBob SquarePants</title>
-    <sub-title lang="en">Hello Bikini Bottom!</sub-title>
-    <desc lang="en">Mr. Krabs decides to manage SpongeBob and Squidward's world tour.</desc>
-    <credits>
-      <actor>Tom Kenny</actor>
-      <actor>Bill Fagerbakke</actor>
-      <actor>Rodger Bumpass</actor>
-    </credits>
-    <date>2012</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
+  <programme channel="custom.nicktoons" start="20261011113100 +0000" stop="20261011120000 +0000">
+    <title lang="en">ALVINNN!!! and The Chipmunks</title>
+    <desc lang="en">Simon is ecstatic when he's elected the school's safety monitor in "To Serve and Protect.</desc>
     <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <category lang="en">Fantasy</category>
-    <category lang="en">Entertainment</category>
-    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S8 E23</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVY7</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>A</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>S</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>7</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>6</value>
-    </rating>
+    <category lang="en">Cartoon</category>
+    <icon src="https://images.metadata.sky.com/pd-image/f34ffc04-ded2-4fa3-9a45-7e28772d3e81/16-9" />
+    <episode-num system="xmltv_ns">0.6.</episode-num>
   </programme>
-  <programme channel="custom.nicktoons" start="20261011114400 +0000" stop="20261011121000 +0000">
-    <title lang="en">SpongeBob SquarePants</title>
-    <sub-title lang="en">Wormy; Patty Hype</sub-title>
-    <desc lang="en">Sandy puts SpongeBob and Patrick in charge of her pet caterpillar; SpongeBob invents colored Krabby patties.</desc>
-    <credits>
-      <actor>Tom Kenny</actor>
-      <actor>Bill Fagerbakke</actor>
-      <actor>Rodger Bumpass</actor>
-      <director>Walt Dohrn</director>
-      <director>Stephen Hillenburg</director>
-      <director>Paul Tibbitt</director>
-    </credits>
-    <date>2001</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
+  <programme channel="custom.nicktoons" start="20261011120000 +0000" stop="20261011123100 +0000">
+    <title lang="en">ALVINNN!!! and The Chipmunks</title>
+    <desc lang="en">Theodore is convinced that Miss Croner's missing cat is the cause of a terrible curse in 'Good Luck Mr. Whiskers', then in 'Who's Your Daddy', Dave gets a cold, so Alvin takes over.</desc>
     <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <category lang="en">Fantasy</category>
-    <category lang="en">Entertainment</category>
-    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S2 E7</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVY7</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>A</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>K7</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>7</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>6</value>
-    </rating>
+    <category lang="en">Cartoon</category>
+    <icon src="https://images.metadata.sky.com/pd-image/f70213d8-ca2f-42cb-9b8d-48bf45b821e3/16-9" />
+    <episode-num system="xmltv_ns">0.9.</episode-num>
   </programme>
-  <programme channel="custom.nicktoons" start="20261011121000 +0000" stop="20261011123600 +0000">
-    <title lang="en">SpongeBob SquarePants</title>
-    <sub-title lang="en">Extreme Spots; Squirrel Record</sub-title>
-    <desc lang="en">SpongeBob and Patrick try to join an extreme sports team; Sandy finds a book of world records and proceeds to try to break them all.</desc>
-    <credits>
-      <actor>Tom Kenny</actor>
-      <actor>Bill Fagerbakke</actor>
-      <actor>Rodger Bumpass</actor>
-    </credits>
-    <date>2012</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
+  <programme channel="custom.nicktoons" start="20261011123100 +0000" stop="20261011130000 +0000">
+    <title lang="en">ALVINNN!!! and The Chipmunks</title>
+    <desc lang="en">The Chipmunks decide to find Dave a new girlfriend in 'Slippin Thru My Fingers', then in 'Driving Dave Crazy', the Chipmunks accidentally ruin Dave's new song for the music festival.</desc>
     <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <category lang="en">Fantasy</category>
-    <category lang="en">Entertainment</category>
-    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S9 E1</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVY7</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>A</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>S</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>7</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>6</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>6</value>
-    </rating>
-  </programme>
-  <programme channel="custom.nicktoons" start="20261011123600 +0000" stop="20261011130200 +0000">
-    <title lang="en">SpongeBob SquarePants</title>
-    <sub-title lang="en">Grandma's Kisses; Squidville</sub-title>
-    <desc lang="en">SpongeBob gets embarrassed when his grandmother kisses him in public; Squidward leaves Bikini Bottom.</desc>
-    <credits>
-      <actor>Tom Kenny</actor>
-      <actor>Bill Fagerbakke</actor>
-      <actor>Rodger Bumpass</actor>
-    </credits>
-    <date>2001</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <category lang="en">Fantasy</category>
-    <category lang="en">Entertainment</category>
-    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S2 E9</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVY7</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>A</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>S</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>7</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>6</value>
-    </rating>
+    <category lang="en">Cartoon</category>
+    <icon src="https://images.metadata.sky.com/pd-image/cc1cc799-89b1-4f06-9649-28c2bc2b26ce/16-9" />
+    <episode-num system="xmltv_ns">0.12.</episode-num>
   </programme>
   <programme channel="custom.nicktoons" start="20261011130200 +0000" stop="20261011132800 +0000">
     <title lang="en">SpongeBob SquarePants</title>
@@ -516350,44 +515562,6 @@ A lady who previously spurned Manmohan's proposal rings him to arrange a rendezv
     <desc lang="en">Reaction, analysis and your chance to have your say on the day's sport. Call the show on 03717 22 33 44 (Calls charged at national rate) or text 81089 (50p + charges).</desc>
     <category lang="en">Music &amp; Radio</category>
   </programme>
-  <programme channel="custom.teen.nick" start="20261011112000 +0000" stop="20261011114700 +0000">
-    <title lang="en">Zoey 101</title>
-    <sub-title lang="en">Walk-A-Thon</sub-title>
-    <desc lang="en">Lola pledges more money than she can give to a charity walk-a-thon; Quinn and Logan start to realize that they might like each other.</desc>
-    <credits>
-      <actor>Jamie Lynn Spears</actor>
-      <actor>Paul Butcher</actor>
-      <actor>Austin Robert Butler</actor>
-    </credits>
-    <date>2008</date>
-    <category lang="en">Series</category>
-    <category lang="en">Children</category>
-    <category lang="en">Sitcom</category>
-    <icon src="http://dtil.tmsimg.com/assets/p7892973_b_h10_aa.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S4 E7</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVY7</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C8</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>10</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>0</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-  </programme>
   <programme channel="custom.teen.nick" start="20261011114700 +0000" stop="20261011121300 +0000">
     <title lang="en">Zoey 101</title>
     <sub-title lang="en">Vince Is Back</sub-title>
@@ -535427,23 +534601,6 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
     <desc lang="en">Ed Stafford guides young adventurers through demanding wilderness challenges, helping them build confidence, resilience and survival skills while reconnecting with nature.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DISCOVERY_CHANNEL_2052016_14OCT210100_14OCT220000/images/LANDSCAPE_169_HD/DISCOVERY_EdStaffordsRiteofPassage_2052016.jpg" />
   </programme>
-  <programme start="20261011113200 +0000" stop="20261011114400 +0000" channel="hmair.discoverykids">
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <actor>Bobby Moynihan</actor>
-      <actor>Eric Edelstein</actor>
-      <actor>Demetri Martin</actor>
-      <actor>Charlyne Yi</actor>
-      <actor>Patton Oswalt</actor>
-      <actor>Jason Lee</actor>
-    </credits>
-    <desc lang="en">S1 E7
-Grizz loves burritos so much that when a restaurant makes a Bear-Sized Burrito, he refuses to eat it and instead carries it everywhere, until it gradually spoils.</desc>
-    <episode-num>S1 E7</episode-num>
-    <icon src="https://iptv-epg.org/images/bqYXClwJK3KivPxXv4pUJHjJbBMI5kkrFVoLG_C2iORIVbWOUu1VGwgJgI_VNI-CUDFiH_-OHoGTvuaVhXBM8FJlEVwVe9jP9XQHhT9P_iw3TywyYGFmuKKPnym5" />
-    <title lang="en">We Bare Bears</title>
-  </programme>
   <programme start="20261011114400 +0000" stop="20261011115600 +0000" channel="hmair.discoverykids">
     <category lang="en">Children</category>
     <category lang="en">Animation</category>
@@ -549945,13 +549102,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <desc lang="en">Popular pro-wrestlers from the AEW Roster compete against each other in fights every Saturday to win the championship title.</desc>
     <icon src="https://iptv-epg.org/images/nhzeSo88tQMPVmYK6tNIdstmt_eX3BLz3eEJ4eg2z-iYlb1WTuorUVriFU6SoOTMQRRGyOvUGVu-jyrZlRK7YuqFAOH2aG2xGi3CKF2EEZW1hxphOfx3PeP0IPJ0DQ" />
     <title lang="en">AEW Collision</title>
-  </programme>
-  <programme start="20261011113000 +0000" stop="20261011114500 +0000" channel="hmair.france24">
-    <category lang="en">News</category>
-    <category lang="en">News Bulletin</category>
-    <desc lang="en">An international news bulletin, presented live from the newsroom.</desc>
-    <icon src="https://iptv-epg.org/images/-8_dupG2laMUO_PwEsTolgf41V-4wWULeKrpb14VZ-QAXey3kIzQm4irVdRg33z_OM2KVagaXXY1X0DygDYazDKMLb5zf29cVQyR5vk2LhrnO8DQmeY_FhFsHwp2" />
-    <title lang="en">News</title>
   </programme>
   <programme start="20261011114500 +0000" stop="20261011120000 +0000" channel="hmair.france24">
     <category lang="en">News</category>
@@ -579753,356 +578903,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
       <value>U/A-12</value>
     </rating>
   </programme>
-  <programme channel="hmair.zeeaction" start="20261012192800 +0000" stop="20261012203000 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013005800/list/ActionCinemaTeleShopping175522243cb0afc80e742929c1ab5aeeceb8699.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261012203000 +0000" stop="20261012225300 +0000">
-    <title lang="en">Meri Izzat</title>
-    <desc lang="en">After misunderstanding and losing their daughter, a woman leaves her husband. Years later, he meets someone who resembles his lost daughter.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013020000/list/ActionCinemaMeriIzzat9474f6eb5bb4be904d98a451db6107ecd8af.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261012225300 +0000" stop="20261013010100 +0000">
-    <title lang="en">Pratibandh</title>
-    <desc lang="en">Inspector Siddanth protects Shanti, witness to a murder. This offends his superiors who plan to teach him a lesson.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013042300/list/ActionCinemaPratibandh9487d051146cc86b426e97bd27a73e189d75.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261013010100 +0000" stop="20261013034400 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013063100/list/ActionCinemaTeleShopping1755222c3779ed94b7945debd839156511514b0.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261013034400 +0000" stop="20261013061500 +0000">
-    <title lang="en">Aaj Ka Raavan Raaj</title>
-    <desc lang="en">Seenu is faction leader Reddeppa's righthand man. When Reddeppa finds out that his daughter and Seenu are in love, he tries to kill Seenu.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013091400/list/ActionCinemaAajKaRaavanRaaj198579457d8f68d1b9f45b3ab2797d13196f720.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261013061500 +0000" stop="20261013084100 +0000">
-    <title lang="en">Nindha</title>
-    <desc lang="en">After six murder case suspects get kidnapped, an officer goes on a quest to find the truth.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013114500/list/ActionCinemaNindha21329146509968d1cae48a5a15e455e7825caae.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261013084100 +0000" stop="20261013105900 +0000">
-    <title lang="en">Kurukshetra</title>
-    <desc lang="en">ACP Prithviraj, an honest man, arrests Chief Minister Baburao's son for raping a woman. Consequently, Baburao leaves no stone unturned to get revenge against Prithviraj.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013141100/list/ActionCinemaKurukshetra1324119f28d5b10bd3840ffac7f13ade2986f05.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261013105900 +0000" stop="20261013140000 +0000">
-    <title lang="en">Jayasimha</title>
-    <desc lang="en">Jayasimha, a forest officer, fights animal poaching in a hostile village. His stand for nature puts his family in danger, turning duty into a fight for survival and truth.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013162900/list/ActionCinemaJayasimha1201892f94cf47452264c8fae97a42e773cc98e.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261013140000 +0000" stop="20261013164200 +0000">
-    <title lang="en">Chakra Ka Rakshak</title>
-    <desc lang="en">A cop and a soldier team up to stop dangerous cybercriminals. To win, they must risk everything in both the real and the virtual worlds.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013193000/list/ActionCinemaChakraKaRakshak16221679b81382a49684e99b1015101d9d8d887.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261013164200 +0000" stop="20261013193500 +0000">
-    <title lang="en">Qatil Saya</title>
-    <desc lang="en">A police officer is tasked with investigating a series of bizarre deaths in a hilly town. However, while he works to solve the case, his family is haunted by unnatural events.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261013221200/list/ActionCinemaQatilSaya1243868fddfbd63d97d4c94ba98ccd3e8e271e8.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261013193500 +0000" stop="20261013203000 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014010500/list/ActionCinemaTeleShopping175522292694de0ad9142e7a99c3d18d057e6cc.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261013203000 +0000" stop="20261013225300 +0000">
-    <title lang="en">Lalkar Ek Jung</title>
-    <desc lang="en">Siblings Ashok and Lakshmi tie the knot, but navigating their new life together proves to be chaotic and unpredictable, leading to unexpected twists and heartfelt moments.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014020000/list/ActionCinemaLalkarEkJung9468f5e9cc478ef94b17b088c7dda5abd6d8.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261013225300 +0000" stop="20261014010100 +0000">
-    <title lang="en">Virataparva</title>
-    <desc lang="en">Virataparva</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014042300/list/ActionCinemaVirataparva21497062266f2392e974352aba05853ad555bb2.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261014010100 +0000" stop="20261014031300 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014063100/list/ActionCinemaTeleShopping17552226fc7329687934ac0bb55f123bb8452fa.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261014031300 +0000" stop="20261014060600 +0000">
-    <title lang="en">Siddhu The Warrior</title>
-    <desc lang="en">A rich man helps his dying mother by risking everything. To heal her, he becomes a beggar for 48 hours, crossing social boundaries to save her life.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014084300/list/ActionCinemaSiddhuTheWarrior1974596451050903996421f98d276982102e3ee.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261014060600 +0000" stop="20261014081900 +0000">
-    <title lang="en">Badla Naag Ka 3</title>
-    <desc lang="en">Lakshmi as Malar plays a shape-shifting serpent who claims to be married to Sarva aka Vikram in his previous birth. Thus, she keeps chasing Sarva and his wife in his present birth, Divya.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014113600/list/ActionCinemaBadlaNaagKa31102277090c82d372654032a6d2eb952025bc24.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261014081900 +0000" stop="20261014104100 +0000">
-    <title lang="en">Benki</title>
-    <desc lang="en">When antisocial elements in a humble village community harass a young woman, her protective brother embarks on a path of vengeance.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014134900/list/ActionCinemaBenki2111574e5c066daae284dfba14c8e2d3d799da1.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261014104100 +0000" stop="20261014140000 +0000">
-    <title lang="en">Mumbai Ki Kiran Bedi</title>
-    <desc lang="en">A man meets a woman who resembles his late daughter, an IPS officer, and mentors her to emulate Kiran Bedi's fearless leadership and justice.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014161100/list/ActionCinemaMumbaiKiKiranBedi263710276ec183c23d4e26a12eae0c5b68dbcd.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261014140000 +0000" stop="20261014163200 +0000">
-    <title lang="en">Aho Vikramaarka</title>
-    <desc lang="en">A tough cop finds a dark secret and must fight the evil Asura. He wants to save people who are trapped and stop the villain's cruel plan.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014193000/list/ActionCinemaAhoVikramaarka1912575cc9cca5116154e339ad58f4ed7872495.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261014163200 +0000" stop="20261014192800 +0000">
-    <title lang="en">Action Rowdy</title>
-    <desc lang="en">A man saves a woman. They learn they're from the same place and fall in love. His powerful father fights a project that threatens villages. His brother is a criminal.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261014220200/list/ActionCinemaActionRowdy1901467e3647a92a433420caa5f2f0f263d75ed.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261014192800 +0000" stop="20261014203000 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015005800/list/ActionCinemaTeleShopping1755222284c0104e23d4774acc280f063af2bad.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261014203000 +0000" stop="20261014225200 +0000">
-    <title lang="en">Chiranjeevi</title>
-    <desc lang="en">When a man unintentionally kills his own wife, he tries to hide the truth from his father, a sincere police officer.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015020000/list/ActionCinemaChiranjeevi94323e71eb9439454964a941477d092d2e6e.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261014225200 +0000" stop="20261015005900 +0000">
-    <title lang="en">Tales Of Mahanagara</title>
-    <desc lang="en">Tales Of Mahanagara Weaves Together The Lives Of A Cab Driver, An Artist, And Two Laymen In The City, As Their Seemingly Unrelated Stories Converge When They Become Trapped In A Life-Threatening Experiment.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015042200/list/ActionCinemaTalesOfMahanagara208469882d960a3c2554a1aac24dc46f1707b8a.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261015005900 +0000" stop="20261015024400 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015062900/list/ActionCinemaTeleShopping175522295c7ee02315a4fd8981d23aced581714.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261015024400 +0000" stop="20261015052600 +0000">
-    <title lang="en">Rowdy No.1</title>
-    <desc lang="en">A young labourer, falls in love with Bhagyalakshmi. Later, he finds out that her mother, who was an honest woman, was assassinated by a corrupt politician and sets out to avenge her death.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015081400/list/ActionCinemaRowdyNo11416935549572052f8b4e31b52046cd6542accd.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261015052600 +0000" stop="20261015083000 +0000">
-    <title lang="en">Bangarraju</title>
-    <desc lang="en">Chinna Bangarraju, a charming man, enjoys a carefree life. But, when familial and personal problems start to haunt him, his grandfather comes to his rescue.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015105600/list/ActionCinemaBangarraju144762435bcf39cc69a4e498669bd3d5e36051a.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261015083000 +0000" stop="20261015110500 +0000">
-    <title lang="en">Businessman 2</title>
-    <desc lang="en">Karthik, a money-minded tycoon, gets engaged to Anushka, who belongs to a rich family. However, he soon learns about the differences in his family and decides to end them.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015140000/list/ActionCinemaBusinessman29365146f09663ae4004a888d7fc2d312db548b.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261015110500 +0000" stop="20261015140000 +0000">
-    <title lang="en">Kasam Hindustan Ki</title>
-    <desc lang="en">Dhuruvan is a forest ranger, who is assigned the job of training five girls from the NCC camp. The group hears of a terrorist activity being carried out in the forest and makes a plan to defeat them.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015163500/list/ActionCinemaKasamHindustanKi283499e8cbe3a3f4c41c69b432b19e2f3f23c.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261015140000 +0000" stop="20261015163000 +0000">
-    <title lang="en">Hero The Bullet</title>
-    <desc lang="en">Siva, a reckless youngster who loves his family, risks everything after clashing with a dangerous don to protect them and ensure their safety.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015193000/list/ActionCinemaHeroTheBullet1666529bfb6ba2e043848eab423965254d78c6e.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261015163000 +0000" stop="20261015193500 +0000">
-    <title lang="en">Ghost</title>
-    <desc lang="en">Karan Khanna is accused for the murder of his wife. When his new lawyer Simran decides to defend him, she comes across a spirit who might be involved.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261015220000/list/ActionCinemaGhost10508896e4b408017664455a6c1d7143c4cb921.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261015193500 +0000" stop="20261015203000 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016010500/list/ActionCinemaTeleShopping1755222bc41051a80e54523aa4e531924b9b266.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261015203000 +0000" stop="20261015224700 +0000">
-    <title lang="en">Chor Aur Chand</title>
-    <desc lang="en">To avoid an arranged marriage, Reema is on the run with an ex-convict who breaks into her house. Her father asks a gangster to help find her.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016020000/list/ActionCinemaChorAurChand9433246bd2cac398431aa14e73d99f8a8689.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261015224700 +0000" stop="20261016005600 +0000">
-    <title lang="en">Vaishnavi</title>
-    <desc lang="en">A girl with divine powers born to Venkata Narayana, resorts to sooth-saying on a particular day every year.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016041700/list/ActionCinemaVaishnavi43287491d79dab0e9449e28c75154f6d92b773.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261016005600 +0000" stop="20261016030500 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016062600/list/ActionCinemaTeleShopping1755222b0ea4f13f19d496984e896ade2a96056.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261016030500 +0000" stop="20261016054500 +0000">
-    <title lang="en">100</title>
-    <desc lang="en">Young cop Sathya hates his control room job-until a 100th call throws him into a mystery that changes everything and pushes him far beyond routine duty.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016083500/list/ActionCinema1001232194beaafeabec904a4587017dbdff6c5bf0.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261016054500 +0000" stop="20261016081500 +0000">
-    <title lang="en">Hitlist</title>
-    <desc lang="en">Hitlist</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016111500/list/movie1f4460d0c803421e876ed8f6a0d19f24.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261016081500 +0000" stop="20261016105800 +0000">
-    <title lang="en">Policegiri</title>
-    <desc lang="en">Fearless cop Rudra takes on notorious criminal Nagori, leading to a thrilling showdown. But the confrontation plunges Rudra into a maze of troubles.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016134500/list/ActionCinemaPolicegiri16676026440eac78a544ff58051ce3b30417b87.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261016105800 +0000" stop="20261016140000 +0000">
-    <title lang="en">International Rowdy</title>
-    <desc lang="en">An ex-agent assigned to track down the culprit who attacked the embassy in Malaysia finds his old foe has now developed a hazardous drug.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016162800/list/ActionCinemaInternationalRowdy658351bbe40e7d25914231b010424f97043f6c.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261016140000 +0000" stop="20261016163400 +0000">
-    <title lang="en">Pt Sir</title>
-    <desc lang="en">Pt Sir</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016193000/list/ActionCinemaPtSir2149701607f88e10cb641a9903afb13106618b8.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261016163400 +0000" stop="20261016193500 +0000">
-    <title lang="en">Pathu Thala</title>
-    <desc lang="en">An undercover cop goes to find and kill a crime lord. However, when he realizes that the crime lord's business intentions are good and he has his own challenges,</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261016220400/list/ActionCinemaPathuThala1728384a18feafc8e62462ab56b840ba0b09bca.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261016193500 +0000" stop="20261016203000 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017010500/list/ActionCinemaTeleShopping17552226c20aa829a2f43cea166e63a4492fad4.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261016203000 +0000" stop="20261016225700 +0000">
-    <title lang="en">Ek Aur Vinashak</title>
-    <desc lang="en">Ravi, an aspiring director and Sandhya meet on the sets and fall in love. They need to deal with a local goon who falls for Sandhya.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017020000/list/ActionCinemaEkAurVinashak943707605be99f5c4de18e4c6ae8c8846751.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261016225700 +0000" stop="20261017005900 +0000">
-    <title lang="en">Machgaya Tehlka</title>
-    <desc lang="en">Bose visits his brother, living in a colony targeted by a ruthless land-grabbing don. He inspires the people to unite and stand up for their rights.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017042700/list/ActionCinemaMachgayaTehlka856215051639cf8546484b81eb2001985f78ed.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261017005900 +0000" stop="20261017022900 +0000">
-    <title lang="en">Tele Shopping</title>
-    <desc lang="en">Learn about a wide selection of products and take advantage of a convenient method of shopping. A show for those who love to shop from the comforts of their home.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017062900/list/ActionCinemaTeleShopping1755222d96d6dd32ac24517b0768e4c7356e313.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261017022900 +0000" stop="20261017050600 +0000">
-    <title lang="en">Forensic</title>
-    <desc lang="en">Samuel uses his forensic skills and discovers breakthroughs in a serial killing case as further victims are added to the list. Shikha too uncovers evidences that might lead to the killer's identity.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017075900/list/ActionCinemaForensic1206897423e9c5242f64e179f8fd981c90f7af8.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261017050600 +0000" stop="20261017075300 +0000">
-    <title lang="en">Sheshnaag</title>
-    <desc lang="en">A shape-shifting snake transforms herself into various forms in order to seek revenge from those who have wronged her.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017103600/list/ActionCinemaSheshnaag487044f379f675fa00467fbf084985ec3c475a.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261017075300 +0000" stop="20261017105400 +0000">
-    <title lang="en">Army</title>
-    <desc lang="en">On her wedding day, Seeta's world shatters when terrorist Nagraj kills her husband, Major Arjun. Fueled by grief and rage, she rallies a gang of criminals to seek revenge.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017132300/list/ActionCinemaArmy171404cb3638933e741eeba7b58892df9d807.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261017105400 +0000" stop="20261017140000 +0000">
-    <title lang="en">2.0</title>
-    <desc lang="en">When mobile phones mysteriously fly out of people's hands, Dr. Vaseegaran and robot Nila investigate. Realizing Pakshi Rajan is behind it, they revive Chitti to battle the powerful threat.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017162400/list/ActionCinema2O1918464f88c8caa8bf245d7a23d1bbc7885253a.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261017140000 +0000" stop="20261017164400 +0000">
-    <title lang="en">Bruce Lee</title>
-    <desc lang="en">A stuntman gets mistaken for a cop by an enthusiastic woman and hilariously ends up tackling crime, all while trying to keep up the ruse!</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017193000/list/ActionCinemaBruceLee1732146de6f4eb57ca54491bfebecfe22d4c3c2.jpg" />
-  </programme>
-  <programme channel="hmair.zeeaction" start="20261017164400 +0000" stop="20261017192800 +0000">
-    <title lang="en">The Return of Kaalia</title>
-    <desc lang="en">When his sister is killed by her in-laws for dowry, a devastated Kaalia embarks on a mission to kill men who harass women.</desc>
-    <category>Film</category>
-    <language>Hindi</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017221400/list/ActionCinemaTheReturnofKaalia649743b4e2fece1f054b6b83177850ac81ff36.jpg" />
-  </programme>
   <programme start="20261011170000 +0530" stop="20261011173000 +0530" channel="hmair.zeeanmol">
     <title>Bhagya Lakshmi</title>
     <desc>Hailing from a middle-class family, Lakshmi's life is upended when she realises that her marriage to Rishi Oberoi is a sham to keep his death at bay.</desc>
@@ -581088,29 +579888,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme start="20261011080700 +0000" stop="20261011114700 +0000" channel="hmair.zeebollywood">
-    <category lang="en">Film</category>
-    <category lang="en">Thriller</category>
-    <credits>
-      <director>Ramesh Sippy</director>
-      <actor>Sunil Dutt</actor>
-      <actor>Shashi Kapoor</actor>
-      <actor>Amitabh Bachchan</actor>
-      <actor>Shatrughan Sinha</actor>
-      <actor>Rakhee Gulzar</actor>
-      <actor>Parveen Babi</actor>
-      <actor>Bindiya Goswami</actor>
-      <actor>Johnny Walker</actor>
-      <actor>Kulbhushan Kharbanda</actor>
-      <actor>Mazhar Khan</actor>
-      <actor>Sudhir</actor>
-      <actor>Padmini Kapila</actor>
-      <producer>G. P. Sippy</producer>
-    </credits>
-    <desc lang="en">After their cop brother dies at the hands of a ruthless gangster, Vijay and Ravi are determined to find the gangster and take their revenge.</desc>
-    <icon src="https://iptv-epg.org/images/y--1VvJ6BEu6ymR_NrRL6jShwCrdNWPeCW1_POiwPop2tv-T2EuPIcbF7wovHckS46B5Sowk73fLpnI7O8J_ZJFxkcc2QhJZ7iaBgmuprzMWz2emzKjbo4iCFw" />
-    <title lang="en">Shaan</title>
   </programme>
   <programme start="20261011114700 +0000" stop="20261011143000 +0000" channel="hmair.zeebollywood">
     <category lang="en">Film</category>
@@ -592707,10 +591484,6 @@ A young woman's unexpected bond with a much older businessman brings emotional t
     <title>MotoGP: GP of Indonesia</title>
     <desc>Race action from the 2026 MotoGP Grand Prix of Indonesia at Pertamina Mandalika International Circuit, as the title battle between Jorge Martin and Marc Marquez intensifies.</desc>
   </programme>
-  <programme start="20261011113000 +0000" stop="20261011114500 +0000" channel="tntsports2.uk">
-    <title>World Superbike Rewind</title>
-    <desc>We rewind to experience the most exhilarating moments from the Aragon Round of the 2026 Superbike World Championship at MotorLand Aragon in Spain.</desc>
-  </programme>
   <programme start="20261011114500 +0000" stop="20261011120000 +0000" channel="tntsports2.uk">
     <title>World Superbike Rewind</title>
     <desc>Coached by Daniel Cormier and Michael Bisping, this documentary series follows MMA fighters as they train and compete against each other for a contract with the UFC.</desc>
@@ -592930,10 +591703,6 @@ A young woman's unexpected bond with a much older businessman brings emotional t
   <programme start="20261013090000 +0000" stop="20261013093000 +0000" channel="tntsports2.uk">
     <title>UCL: Napoli v Arsenal</title>
     <desc>Last season's finalists Arsenal begin their quest for European glory with a tough test against Massimiliano Allegri's Napoli at the Stadio Diego Armando Maradona.</desc>
-  </programme>
-  <programme start="20261011104500 +0000" stop="20261011114500 +0000" channel="tntsports3.uk">
-    <title>Cycling: Il Lombardia Men</title>
-    <desc>Action from the 120th anniversary of Il Lombardia Men. This 239km course features 4,600 metres of elevation gain on the route from Bergamo to Como.</desc>
   </programme>
   <programme start="20261011114500 +0000" stop="20261011130000 +0000" channel="tntsports3.uk">
     <title>Live Cyclocross: Dendermonde</title>
