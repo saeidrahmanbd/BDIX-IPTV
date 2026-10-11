@@ -1,23 +1,23 @@
 # BDIX Playlist Audit
 
-Generated: **2026-10-11T10:35:26+00:00**
+Generated: **2026-10-11T13:03:47+00:00**
 
 ## Summary
 
 - Playlist: **BDIX-Playlist.m3u**
-- Total entries: **217**
-- Unique stream URLs: **217**
-- Unique channel identities: **182**
+- Total entries: **190**
+- Unique stream URLs: **190**
+- Unique channel identities: **181**
 - Duplicate stream URLs: **0**
-- Duplicate channel identities: **30**
+- Duplicate channel identities: **9**
 - Missing channel IDs: **0**
 - Missing channel numbers: **0**
 - Missing logos: **0**
 - Malformed entries: **0**
 - Unknown categories: **0**
-- Streams tested: **217**
-- Reachable: **74**
-- Failed: **143**
+- Streams tested: **190**
+- Reachable: **1**
+- Failed: **189**
 
 ## Protection Policy
 
@@ -26,12 +26,12 @@ Safe metadata repairs made: **0**
 
 ## Categories
 
-- Bangladesh: **58**
-- Indian Bangla: **21**
-- Hindi: **45**
+- Bangladesh: **42**
+- Indian Bangla: **17**
+- Hindi: **43**
 - International: **17**
-- Documentary & Wildlife: **20**
-- Kids: **10**
+- Documentary & Wildlife: **16**
+- Kids: **9**
 - Religious: **7**
 - Sports: **27**
 - Test: **12**
@@ -42,36 +42,15 @@ None.
 
 ## Duplicate Channel Identities
 
-- anandatv.bd: Ananda TV, Ananda TV [Jannat]
-- animalplanet.in@sd: Animal Planet, Animal Planet [Jannat]
-- asiantv.bd: Asian TV, Asian TV [Jannat]
-- b4umusic.in@india: B4U Music, B4U Music [Jannat]
-- bijoytv.bd: Bijoy TV, Bijoy TV [Jannat]
-- cartoonnetwork.uk: Cartoon Network, Cartoon Network [Jannat]
-- channeli.bd: Channel I, Channel i [Jannat]
-- channels.uk: Channel S, Channel S [Jannat]
 - dbcnews.bd: Bangla Vision, DBC News
-- deshtv.bd: Bangla Vision, Desh TV, Desh TV [Jannat]
-- discovery science.in: DISCOVERY SCIENCE, Discovery Science [Jannat]
-- discoverychannel.in@sd: Discovery, Discovery [Jannat]
-- ekattortv.bd: Bangla Vision, Ekattor TV, Ekattor TV [Jannat]
-- ekhontv.bd: Bangla Vision, Ekhon TV, Ekhon TV [Jannat]
-- globaltv.bd: Global TV, Global TV [Jannat]
-- independenttv.bd: Independent TV, Independent TV [Jannat]
-- jamunatv.bd: Jamuna TV, Jamuna TV [Jannat]
+- deshtv.bd: Bangla Vision, Desh TV
+- ekattortv.bd: Bangla Vision, Ekattor TV
+- ekhontv.bd: Bangla Vision, Ekhon TV
+- jamunatv.bd: Jamuna TV
 - news24.bd: Bangla Vision, News 24
-- nexustv.bd: Nexus TV, Nexus TV [Jannat]
-- ntv.bd: NTV, NTV [Jannat]
-- rajdhanitv.bd: Rajdhani TV, Rajdhani TV [Jannat]
-- somoynewstv.bd: Somoy TV, Somoy TV [Jannat]
-- sony.aath.in: Sony AATH, Sony Aath [Jannat]
-- sonymax.in@sd: Sony MAX [Jannat], Sony Max
 - starplus.in@sd: Star Plus
-- tlc.in@hd: TLC, TLC [Jannat]
 - tsports.bd: T Sports
-- zeebangla.in@hd: Zee Bangla, Zee Bangla [Jannat]
-- zeebanglasonar.in@sd: Zee Bangla Cinema, Zee Bangla Cinema [Jannat]
-- zing.in@sd: Zing, Zing [Jannat]
+- zeebangla.in@hd: Zee Bangla
 
 ## Missing Metadata
 
