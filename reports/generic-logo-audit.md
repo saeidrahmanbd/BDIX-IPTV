@@ -1,137 +1,164 @@
 # Generic Channel Logo Audit — Three Playlists
 
-Audit date: 2026-10-11  
+Audit date: 2026-10-11 11:35 UTC  
 Repository: https://github.com/saeidrahmanbd/BDIX-IPTV  
-Method: parsed each playlist's `tvg-logo` values and cross-checked the logo assets whose SVG artwork contains the generic `CHANNEL MARK` placeholder design.
+Method: scans current playlist metadata and checks referenced local SVG files for the generic CHANNEL MARK template.
 
 ## Summary
 
-| Playlist | Entries | Matches to identified generic placeholder assets |
+| Playlist | Entries | Unique generic placeholder assets |
 |---|---:|---:|
-| `IPTV-Playlist.m3u` | 1,186 | 0 |
-| `BDIX-Playlist.m3u` | 217 | 0 |
-| `NVisionBD-Playlist.m3u` | 561 | 99 |
+| IPTV-Playlist.m3u | 1145 | 0 |
+| BDIX-Playlist.m3u | 217 | 0 |
+| NVisionBD-Playlist.m3u | 561 | 139 |
 
-The 99 affected NVisionBD entries use 97 distinct generic SVG files. This is a targeted placeholder audit, not proof that all other artwork is authentic. Other logos still need source/identity verification.
+Current NVisionBD placeholder assets: **139 unique files**.
 
-## Findings
+## Remaining affected NVisionBD channel labels
 
-The identified placeholders use the same templated design: dark gradient card, initials badge, channel name, and the text `CHANNEL MARK`. They must not be treated as official channel logos.
-
-Affected channel labels (alphabetical):
-
-- &tv HD
 - &xplorer HD
 - 10 TV
-- Action 24
+- 24/7 Batul The Great
+- 51 Radio TV [geo-blocked]
+- 88 Stereo [not 24/7]
+- 92.8 FM Radio Bhumi
+- Abc Music Radio
 - Adt FM
 - Adventure 4k
-- Aflam
 - Afra Film
-- Afro Music Channel
 - Afrobeats
 - Alistiqamah
 - Amar Ujala
-- Anger Management Channel
-- Ary News
+- Asean Cup 2026
+- Asia Flix TV
+- Aurora Media Flims
 - BTV Sangsad
-- Balapan
+- Bangla Big Boss 24x7
 - Bangla Hits
-- Baraza TV
+- Bangla Radio
+- Banijoy Mr Been
 - Bd Radio FM
 - Be.joy Kids
-- Biz Cinema
 - Blockbaster HD
 - Boomerang
+- Boomerang UK
 - Bt Sports 2
 - Cafe Film
 - Cartoon Channel
+- Comedy Central
 - Cooking TV
+- Cosmote Sports 1
+- Cosmote Sports 4
 - Cowboy Movie Channel
 - Cricbuzz
+- Dhaka FM 90.4
+- Digi Sport 1
+- Digi Sport 2
 - Disney Channel Big City Greens
 - Doyel Radio
-- Ducktv
+- Dream Music Prime
 - ETV
+- English Premier League 2
 - Epic
 - Espn5 HD
 - FX TV
 - Fail Army
 - Fashion 1
 - Fashion TV HD
-- Fifa+
 - Fight 24/7
+- Filmua Drama
 - Flo Racing
-- Fubo Sports
+- Fuel TV Apac
+- Fuel TV Europe
+- Global Panjab
 - Golf Channel
-- Hit
+- Hindi Big Boss 24x7 2026
 - Htv Sport
-- India Today
+- Ind Unite8 Sports 1 HD
 - Kiev Sport HD
-- Kronehit
-- Lacrosse TV
+- Ktv Sports Plus
 - Laff TV
 - Laliga Live 1
 - Laliga Live 2
 - Laligatv
-- M4 Sport
+- Love Gold Bangla
+- Madani TV Bangla
 - Madina Live
-- Magic TV
-- Max Sport 1
-- Max Sport 2
-- Max Sport 3
-- Max Sport 4
+- Magenta Sports 2
+- Magical Blade FM
 - Moner Radio
-- Nbc Sports
+- Movie Sphere
+- Movie Sphere Au
+- My 90s Bengali Online
+- My Time Movie
+- Nat Geo Bangla
+- News 18 Assam
+- Nexus Television
+- Niki Jr Kids
 - Oman Sports
 - Palki FM
+- Peoples Radio
+- Persiana Travel
+- Pk Geo Super
+- Pk Ten Cricket
 - Power Turk
+- Premier Sports 1
+- Radio Adamya
+- Radio Bangla Rock
+- Radio Bangladesh Co
+- Radio Barakah
+- Radio Bhumi 92.80 FM
+- Radio Bushra
+- Radio Capital FM 94.8
+- Radio Din Raat 93.6 FM
+- Radio Gaan Baksho
+- Radio Janata
+- Radio Mahananda - 98.8
+- Radio Padma – 99.2 FM
+- Radio Ritmo On Line
+- Radio Shadhin - 92.4 FM
+- Radio Shadin
+- Radio Sonali Dingulo
+- Radio Tangail
+- Radio Vivid Voice | Mymensingh
+- Radio Zenith FM
 - Rick Astley
-- Rtsh Sport
 - Sagor FM
-- Screamin
+- Setanta Sport
 - Sine Plus
+- Sky Sports Laliga
 - Sony Cine
+- Spondon Radio
 - Sport 1 HD
-- Sport 2 HD
+- Sports Digital Fsbl
+- Sports Fishing TV
 - Sports Grid
-- Sportv
 - Star Cinema
 - TNT Sport 1
-- Talk Sport
 - Tapmad
-- Tennis Channel
-- The Q
-- The Q India
 - Tsn Aq1
+- UK TNT Sports 1 HD
+- UK TNT Sports 2 HD
+- UK TNT Sports 3 HD
+- UK TNT Sports 4 HD
+- US Sky Sports Main Event
+- US Sky Sports Premier League
+- US Willow By Cricbuzz
 - Utbd FM
+- Uttorbango Betar
+- Valobasar Rupali Sur
 - Wc Music
+- Whiples Cinema
 - Wifm 100.9
-- Wild Earth
 - Wild Life
-- Willow TV
 - Wow Kids
-- Zee Cafe HD
-- Zee Cinema HD
-- Zee TV HD
+- Xrema Accion
+- Xtrem Sports
 - Ziggo Sport Live
-- Zing
-- Zoom Music
 
-## Remediation status
+## Scope and quality rules
 
-- [x] Parsed all three playlist files.
-- [x] Identified 97 unique SVG files matching the generic design.
-- [x] Listed affected channel labels.
-- [ ] Find and verify original broadcaster/provider logo sources.
-- [ ] Download the original artwork into `/logos`.
-- [ ] Update playlist `tvg-logo` references and validate that all local paths exist.
-- [ ] Keep unresolved channels explicitly listed for manual review rather than inventing artwork.
-
-## Source and quality rules
-
-1. Prefer official broadcaster websites, official CDN assets, or a well-maintained logo repository with identifiable source files.
-2. Validate that the downloaded artwork matches the channel—not merely a similar channel name.
-3. Store the downloaded image in this repository's `logos/` directory and use its raw GitHub URL in playlists.
-4. Preserve stream URLs and channel metadata during logo-only changes.
-5. If no trustworthy original is found, do not fabricate an “official” logo; retain the current file temporarily and mark it unresolved.
+- Only NVisionBD-Playlist.m3u is modified by the replacement workflow.
+- A replacement must be a validated image, must not contain the CHANNEL MARK template, and must have a source recorded in the replacement-results report.
+- If multiple channels share a name, or no trustworthy source is found, the placeholder is retained and listed for manual review.
+- Old generic files are not deleted automatically, to avoid breaking any other reference.
