@@ -20,7 +20,8 @@ def fetch_json(url):
         return json.loads(response.read().decode("utf-8"))
 
 def is_generic(relative):
-    path = LOGOS / relative
+    relative_path = Path(relative)
+    path = relative_path if relative_path.parts and relative_path.parts[0] == "logos" else LOGOS / relative_path
     if path.suffix.lower() != ".svg" or not path.is_file():
         return False
     return "CHANNEL MARK" in path.read_text(encoding="utf-8", errors="ignore").upper()
