@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - IPTV-Playlist.m3u
+      - BDIX-Playlist.m3u
+      - NVisionBD-Playlist.m3u
       - scripts/**
       - reports/epg-india-channel-mapping.csv
       - .github/workflows/iptv-maintenance.yml
