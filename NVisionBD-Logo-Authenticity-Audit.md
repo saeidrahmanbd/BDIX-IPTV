@@ -77,3 +77,170 @@ Status meanings:
 The playlist currently references **397 distinct local logo files across 519 entries**. Each distinct file needs an evidence record containing: channel/brand, local path, exact official source URL, confirmation that the image matches the source asset, and disposition (approved/replaced/removed). Until that check is complete, these files must be treated as **not yet certified**, even if their filenames look correct.
 
 No substitute artwork should be drawn or generated to fill gaps. When a primary-source image cannot be retrieved and verified, keep the entry logo-less rather than using a lookalike.
+
+## Additional conservative cleanup — 2026-10-11
+
+A visual spot-check showed that at least one asset named as an “official” logo (`nvisionbd-official-btv-sangsad.png`) was a recreated illustration rather than a verified broadcaster-supplied logo. A filename/prefix is not provenance. Therefore, **149 playlist logo references** pointing to `logos/nvisionbd-*` files were removed from playlist metadata until the actual images can be matched against primary sources. The channel entries and stream URLs were preserved; the asset files were not deleted. This is a precautionary quarantine, not a claim that all 149 images are fake.
+
+### Channels quarantined from unverified `nvisionbd-*` logo references
+
+- BTV Sangsad
+- Bangla Big Boss 24x7
+- CTVN AKD Plus
+- Afra Film
+- Anmol Cinema
+- Anmol Cinema 2
+- Biz Cinema
+- The Q India
+- Afro Music Channel
+- Euro Indie Music Chart TV
+- Amar Ujala
+- &tv HD
+- Epic
+- Hindi Big Boss 24x7 2026
+- Hindi Khabar
+- India Today
+- News 18 Assam
+- The Q
+- Ary News
+- Action 24
+- Aflam
+- Anger Management Channel
+- Baraza TV
+- Comedy Central
+- ETV
+- Fail Army
+- Filmua Drama
+- FX TV
+- Hard Knocks
+- Hit
+- Kronehit
+- Laff TV
+- Magic TV
+- Movie Sphere
+- Movie Sphere Au
+- My Time Movie
+- Nexus Television
+- Screamin
+- Silk Way Cinema
+- Star Family
+- Topestrada TV
+- Viju Tv1000 Action
+- &xplorer HD
+- Cooking TV
+- Fashion TV HD
+- Nat Geo Bangla
+- Persiana Travel
+- Balapan
+- Be.joy Kids
+- Boomerang
+- Boomerang UK
+- Disney Junior
+- Niki Jr Kids
+- Madani TV Bangla
+- Madina Live
+- Arena Sport 1
+- Asean Cup 2026
+- Bt Sports 2
+- Claro Sports
+- Cosmote Sports 1
+- Cosmote Sports 4
+- Cricbuzz
+- Digi Sport 1
+- Digi Sport 2
+- English Premier League 2
+- Fifa+
+- Fight Network
+- Fubo Sports
+- Fuel TV Apac
+- Fuel TV Europe
+- Golf Channel
+- In Eurosport HD
+- Ind Unite8 Sports 1 HD
+- Jordan Sport
+- Ktv Sport Plus
+- Lacrosse TV
+- Laliga Live 1
+- Laliga Live 2
+- Laligatv
+- M4 Sport
+- Magenta Sports 2
+- Max Sport 1
+- Max Sport 2
+- Max Sport 3
+- Max Sport 4
+- Nbc Sports
+- Nova Sport 1 HD
+- Oman Sports
+- Pk Geo Super
+- Pk Ten Cricket
+- Premier Sports 1
+- Rtsh Sport
+- Setanta Sport
+- Sky Sports Laliga
+- Sports Digital Fsbl
+- Sports First TV
+- Sports Fishing TV
+- Sports Grid
+- Sportv
+- Supersport Cricket
+- Tennis Channel
+- TNT Sport 1
+- Tsn Aq1
+- Turkmenistan Sport
+- UK TNT Sports 1 HD
+- UK TNT Sports 2 HD
+- UK TNT Sports 3 HD
+- UK TNT Sports 4 HD
+- Unite8 Sports 1
+- Unite8 Sports 2
+- US Sky Sports Main Event
+- US Sky Sports Premier League
+- US Willow By Cricbuzz
+- Willow TV
+- Xtrem Sports
+- Ziggo Sport Live
+- Ziggo Sport 2 HD
+- Ziggo Sport 3 HD
+- 51 Radio TV [geo-blocked]
+- 92.8 FM Radio Bhumi
+- 98.1 Pearl FM
+- Abc Music Radio
+- Adt FM
+- Bangla Radio
+- Bd Radio FM
+- Dhaka FM 90.4
+- Love Gold Bangla
+- My 90s Bengali Online
+- Palki FM
+- Peoples Radio
+- Radio Adamya
+- Radio Bangladesh Co
+- Radio Bhumi 92.80 FM
+- Radio Bushra
+- Radio Capital FM 94.8
+- Radio Din Raat 93.6 FM
+- Radio Gaan Baksho
+- Radio Mahananda - 98.8
+- Radio Padma – 99.2 FM
+- Radio Shadhin - 92.4 FM
+- Radio Shadin
+- Radio Sonali Dingulo
+- Radio Tangail
+- Radio Vivid Voice | Mymensingh
+- Rick Astley
+- Saudia Radio
+- Utbd FM
+- Uttorbango Betar
+- Valobasar Rupali Sur
+
+### Integrity after cleanup
+
+- Playlist entries: **561**
+- Entries still carrying a logo: **370**
+- Entries without a logo pending verification: **191**
+- Distinct local logo files still referenced: **248**
+- Remaining `nvisionbd-*` logo references: **0**
+- All entries and stream lines retained; logo metadata only was changed in this cleanup.
+
+The remaining 248 distinct logo assets still require source-by-source image authentication. They are not certified merely because they remain in the playlist. Only restore a quarantined reference after documenting the exact official asset URL and verifying the image itself against that source.
