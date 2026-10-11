@@ -1,6 +1,6 @@
 # Generic Channel Logo Audit — Three Playlists
 
-Audit date: 2026-10-11 11:54 UTC  
+Audit date: 2026-10-11 11:55 UTC  
 Repository: https://github.com/saeidrahmanbd/BDIX-IPTV  
 Method: scans current playlist metadata and checks referenced local SVG files for the generic CHANNEL MARK template.
 
@@ -10,9 +10,9 @@ Method: scans current playlist metadata and checks referenced local SVG files fo
 |---|---:|---:|
 | IPTV-Playlist.m3u | 1145 | 0 |
 | BDIX-Playlist.m3u | 217 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 92 |
+| NVisionBD-Playlist.m3u | 561 | 86 |
 
-Current NVisionBD placeholder assets: **92 unique files**.
+Current NVisionBD placeholder assets: **86 unique files**.
 
 ## Remaining affected NVisionBD channel labels
 
@@ -23,9 +23,7 @@ Current NVisionBD placeholder assets: **92 unique files**.
 - Abc Music Radio
 - Adt FM
 - Adventure 4k
-- Afra Film
 - Alistiqamah
-- Amar Ujala
 - Asean Cup 2026
 - Asia Flix TV
 - Aurora Media Flims
@@ -38,7 +36,6 @@ Current NVisionBD placeholder assets: **92 unique files**.
 - Cafe Film
 - Cartoon Channel
 - Cooking TV
-- Cricbuzz
 - Dhaka FM 90.4
 - Digital Fashion
 - Disney Channel Big City Greens
@@ -62,15 +59,12 @@ Current NVisionBD placeholder assets: **92 unique files**.
 - Laliga Live 1
 - Laliga Live 2
 - Love Gold Bangla
-- Madani TV Bangla
 - Madina Live
 - Magical Blade FM
 - Moner Radio
 - Nat Geo Bangla
-- News 18 Assam
 - Nexus Television
 - Niki Jr Kids
-- Oman Sports
 - Palki FM
 - Persiana Travel
 - Pk Geo Super

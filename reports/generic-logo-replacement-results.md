@@ -2,23 +2,22 @@
 
 This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.
 
-- Run time: 2026-10-11 11:54 UTC
+- Run time: 2026-10-11 11:55 UTC
 - IPTV-org dataset: loaded
-- Unique generic assets examined: 100
-- Successful replacements: 8
-- Unresolved/manual review: 92
+- Unique generic assets examined: 93
+- Successful replacements: 7
+- Unresolved/manual review: 86
 
 ## Replacements
 
 | Channel | Former generic file | New local file | Source | License / attribution |
 |---|---|---|---|---|
-| Bt Sports 2 | nvisionbd-bt-sports-2.svg | [nvisionbd-official-bt-sports-2.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-bt-sports-2.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/hd/bt-sport-2-hd-uk.png) | No license file found in source repository |
-| BTV Sangsad | nvisionbd-btv-sangsad.svg | [nvisionbd-official-btv-sangsad.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-btv-sangsad.png) | [IPTV-org Sangsad TV channel page](https://iptv-org.github.io/channels/bd/SangsadTV) | Station logo sourced from IPTV-org channel listing |
-| Ktv Sports Plus | nvisionbd-ktv-sports-plus.svg | [ktv-sport-plus.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ktv-sport-plus.png) | [Existing verified repository asset](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) | Existing repository asset |
-| My 90s Bengali Online | nvisionbd-my-90s-bengali-online.svg | [nvisionbd-official-my-90s-bengali-online.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-my-90s-bengali-online.png) | [My Bangla Zeno station page](https://zeno.fm/radio/mybangla/) | Station artwork served by Zeno |
-| Radio Padma – 99.2 FM | nvisionbd-radio-padma-99-2-fm.svg | [nvisionbd-official-radio-padma-99-2-fm.jpg](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-padma-99-2-fm.jpg) | [Radio Padma SoundCloud profile](https://soundcloud.com/radiopadma) | Station artwork served by SoundCloud |
-| Radio Tangail | nvisionbd-radio-tangail.svg | [nvisionbd-official-radio-tangail.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-tangail.png) | [Radio Tangail Zeno station page](https://zeno.fm/radio/radiotangail/) | Station logo served by Zeno |
-| Sony Cine | nvisionbd-sony-cine.svg | [cine-sony-720p-c27cf4bb09.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cine-sony-720p-c27cf4bb09.png) | [Existing verified repository asset](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) | Existing repository asset |
+| Afra Film | nvisionbd-afra-film.svg | [nvisionbd-official-afra-film.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-afra-film.png) | [AFRA Film official page](https://afratv.com/AFRAFILM.html) | Broadcaster logo served on its official website |
+| Amar Ujala | nvisionbd-amar-ujala.svg | [nvisionbd-official-amar-ujala.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-amar-ujala.png) | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Amar_Ujala_Logo.png) | Public domain text logo ([license](https://creativecommons.org/publicdomain/zero/1.0/)) |
+| Cricbuzz | nvisionbd-cricbuzz.svg | [nvisionbd-official-cricbuzz.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-cricbuzz.png) | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cricbuzz_Logo.png) | Public domain text logo ([license](https://creativecommons.org/publicdomain/zero/1.0/)) |
+| Madani TV Bangla | nvisionbd-madani-tv-bangla.svg | [nvisionbd-official-madani-tv-bangla.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-madani-tv-bangla.png) | [Madani Channel Bangla Live listing](https://muslimandquran.com/islamic-media/live-islamic-tv-channels/madani-channel-bangla-live) | Station logo shown on third-party channel listing |
+| News 18 Assam | nvisionbd-news-18-assam.svg | [nvisionbd-official-news-18-assam.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-news-18-assam.png) | [Seeklogo News18 Assam brand listing](https://seeklogo.com/vector-logo/606384/news18-assam) | Source listing; reuse rights not specified |
+| Oman Sports | nvisionbd-oman-sports.svg | [nvisionbd-official-oman-sports.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-oman-sports.png) | [IPTV-org Oman Sports TV channel page](https://iptv-org.github.io/channels/om/OmanSportsTV) | Station logo sourced from IPTV-org channel listing |
 | The Q | nvisionbd-the-q.svg | [nvisionbd-official-the-q.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-the-q.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/india/the-q-in.png) | No license file found in source repository |
 
 ## Unresolved — retained for manual source verification
@@ -31,9 +30,7 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Abc Music Radio | nvisionbd-abc-music-radio.svg | No unique source-verified channel logo found |
 | Adt FM | nvisionbd-adt-fm.svg | No unique source-verified channel logo found |
 | Adventure 4k | nvisionbd-adventure.svg | No unique source-verified channel logo found |
-| Afra Film | nvisionbd-afra-film.svg | No unique source-verified channel logo found |
 | Alistiqamah | nvisionbd-alistiqamah.svg | No unique source-verified channel logo found |
-| Amar Ujala | nvisionbd-amar-ujala.svg | No unique source-verified channel logo found |
 | &xplorer HD | nvisionbd-and-xplorer.svg | No unique source-verified channel logo found |
 | Asean Cup 2026 | nvisionbd-asean-cup-2026.svg | No unique source-verified channel logo found |
 | Asia Flix TV | nvisionbd-asia-flix-tv.svg | No unique source-verified channel logo found |
@@ -47,7 +44,6 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Cafe Film | nvisionbd-cafe-film.svg | No unique source-verified channel logo found |
 | Cartoon Channel | nvisionbd-cartoon-channel.svg | No unique source-verified channel logo found |
 | Cooking TV | nvisionbd-cooking-tv.svg | No unique source-verified channel logo found |
-| Cricbuzz | nvisionbd-cricbuzz.svg | No unique source-verified channel logo found |
 | Dhaka FM 90.4 | nvisionbd-dhaka-fm-90-4.svg | No unique source-verified channel logo found |
 | Digital Fashion | nvisionbd-digital-fashion.svg | No unique source-verified channel logo found |
 | Disney Channel Big City Greens | nvisionbd-disney-channel-big-city-greens.svg | No unique source-verified channel logo found |
@@ -71,15 +67,12 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Laliga Live 1 | nvisionbd-laliga-1.svg | No unique source-verified channel logo found |
 | Laliga Live 2 | nvisionbd-laliga-2.svg | No unique source-verified channel logo found |
 | Love Gold Bangla | nvisionbd-love-gold-bangla.svg | No unique source-verified channel logo found |
-| Madani TV Bangla | nvisionbd-madani-tv-bangla.svg | No unique source-verified channel logo found |
 | Madina Live | nvisionbd-madina.svg | No unique source-verified channel logo found |
 | Magical Blade FM | nvisionbd-magical-blade-fm.svg | No unique source-verified channel logo found |
 | Moner Radio | nvisionbd-moner-radio.svg | No unique source-verified channel logo found |
 | Nat Geo Bangla | nvisionbd-nat-geo-bangla.svg | No unique source-verified channel logo found |
-| News 18 Assam | nvisionbd-news-18-assam.svg | No unique source-verified channel logo found |
-| Nexus Television | nvisionbd-nexus-television.svg | No unique source-verified channel logo found |
+| Nexus Television | nvisionbd-nexus-television.svg | Lookup/download/validation error: HTTP Error 404: Not Found |
 | Niki Jr Kids | nvisionbd-niki-jr-kids.svg | No unique source-verified channel logo found |
-| Oman Sports | nvisionbd-oman-sports.svg | No unique source-verified channel logo found |
 | Palki FM | nvisionbd-palki-fm.svg | No unique source-verified channel logo found |
 | Persiana Travel | nvisionbd-persiana-travel.svg | No unique source-verified channel logo found |
 | Pk Geo Super | nvisionbd-pk-geo-super.svg | No unique source-verified channel logo found |
