@@ -1,6 +1,6 @@
 # NVisionBD Playlist Audit
 
-Generated (UTC): **2026-10-11T14:14:55+00:00**
+Generated (UTC): **2026-10-11T14:17:52+00:00**
 
 ## Summary
 
@@ -31,10 +31,10 @@ Generated (UTC): **2026-10-11T14:14:55+00:00**
 
 ## Stream Probe Summary
 
-- Responsive: **11**
-- Restricted: **0**
-- Dead: **121**
-- Unverified: **429**
+- Responsive: **122**
+- Restricted: **3**
+- Dead: **0**
+- Unverified: **436**
 
 ## Duplicate Stream URLs
 
@@ -98,7 +98,7 @@ None.
 - star.jalsha.movies.in: Jalsha Movies (Alt 2), Jalsha Movies HD
 - stargold.in@hd: Star Gold, Star Gold HD (Alt 2)
 - starplus.in@sd: Star Plus (Alt 2), Star Plus HD
-- starsportsselect1.in: In -hindi- Star Sports 1 HD, In Star Sports Select 1 HD
+- starsports1.in: In -hindi- Star Sports 1 HD, In Star Sports 1 HD
 - steelbirdmusic.in@sd: Steelbird Music, Steelbird Music (Alt 2)
 - thikanatv.us: Thikana, Thikana (Alt 2)
 - zeebangla.in@hd: Zee Bangla (Alt 2), Zee Bangla (Alt 3), Zee Bangla HD

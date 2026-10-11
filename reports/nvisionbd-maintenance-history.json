@@ -210,13 +210,13 @@
     "malformed": 0
   },
   {
-    "timestamp_utc": "2026-10-11T14:14:55+00:00",
+    "timestamp_utc": "2026-10-11T14:17:52+00:00",
     "entries": 561,
     "unique_urls": 561,
     "status_counts": {
-      "Dead": 121,
-      "Unverified": 429,
-      "Responsive": 11
+      "Unverified": 436,
+      "Responsive": 122,
+      "Restricted": 3
     },
     "duplicate_urls": 0,
     "duplicate_ids": 60,
