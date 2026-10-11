@@ -1,6 +1,6 @@
 # NVisionBD Playlist Audit
 
-Generated (UTC): **2026-10-11T10:36:07+00:00**
+Generated (UTC): **2026-10-11T10:39:04+00:00**
 
 ## Summary
 
@@ -17,7 +17,7 @@ Generated (UTC): **2026-10-11T10:36:07+00:00**
 
 - Backup: **95**
 - Bangladesh: **51**
-- Documentary &amp; Wildlife: **31**
+- Documentary & Wildlife: **31**
 - Indian Bangla: **28**
 - Indian Entertainment: **32**
 - Indian Movies: **29**
@@ -31,10 +31,10 @@ Generated (UTC): **2026-10-11T10:36:07+00:00**
 
 ## Stream Probe Summary
 
-- Responsive: **7**
-- Restricted: **0**
-- Dead: **121**
-- Unverified: **438**
+- Responsive: **123**
+- Restricted: **2**
+- Dead: **1**
+- Unverified: **440**
 
 ## Duplicate Stream URLs
 

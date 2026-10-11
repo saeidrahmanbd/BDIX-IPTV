@@ -113,13 +113,14 @@
     "malformed": 0
   },
   {
-    "timestamp_utc": "2026-10-11T10:36:07+00:00",
+    "timestamp_utc": "2026-10-11T10:39:04+00:00",
     "entries": 566,
     "unique_urls": 566,
     "status_counts": {
-      "Dead": 121,
-      "Unverified": 438,
-      "Responsive": 7
+      "Responsive": 123,
+      "Unverified": 440,
+      "Restricted": 2,
+      "Dead": 1
     },
     "duplicate_urls": 0,
     "duplicate_ids": 63,
