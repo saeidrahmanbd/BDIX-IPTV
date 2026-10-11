@@ -1,16 +1,16 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-11T07:39:39+00:00**
+Generated: **2026-10-11T08:16:04+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **283**
-- Channels with an EPG mapping: **231**
-- Current/future programme coverage: **222/283 (78.4%)**
-- No guide mapping found: **52**
+- Active Indian channels audited: **291**
+- Channels with an EPG mapping: **237**
+- Current/future programme coverage: **227/291 (78.0%)**
+- No guide mapping found: **54**
 
 ## Source Status
 
@@ -22,7 +22,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 - **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 380 current/future IDs; 33488 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 766 channel IDs; 763 current/future IDs; 81863 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1484 channel IDs; 1457 current/future IDs; 94795 programme rows
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 280 channel IDs; 280 current/future IDs; 7963 programme rows
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 280 channel IDs; 280 current/future IDs; 13607 programme rows
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 112 channel IDs; 99 current/future IDs; 24088 programme rows
 - **OK** — https://avkb.short.gy/epg.xml.gz — 1837 channel IDs; 670 current/future IDs; 55906 programme rows
 - **OK** — https://avkb.short.gy/jioepg.xml.gz — 1303 channel IDs; 265 current/future IDs; 42761 programme rows
@@ -35,6 +35,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Music | ETV Beats | ETVBeats.in@HD | 3559 | MAPPED_ENDED |
 | Indian Movies | Ekamra Cinema | custom.ekamra.cinema | Ekamra.Cinema.in | MAPPED_ID_ONLY |
 | Indian Music | Ekamra Musiq | custom.ekamra.musiq | Ekamra.Musiq.in | MAPPED_ID_ONLY |
+| Indian Bangla | Friends TV | FriendsTV.in@SD | Friends.TV.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Manoranjan Prime | ManoranjanPrime.in@SD | 154892 | MAPPED_ID_ONLY |
 | Indian Entertainment | One Paschima | OnePaschima.in@SD | One.Paschima.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Prarthana TV | PrarthanaTV.in@SD | Prarthana.TV.in | MAPPED_ID_ONLY |
@@ -63,6 +64,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Bangla | Jtv Classic | custom.jtv.classic | - | NO_GUIDE_HIT |
 | Indian Entertainment | Kairali Arabia | KairaliArabia.in | - | NO_GUIDE_HIT |
 | Indian Music | Kalika TV | KalikaTV.in@SD | - | NO_GUIDE_HIT |
+| Indian Entertainment | Kerala Vision | KeralaVision.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | MBC Bollywood | MBCBollywood.ae | - | NO_GUIDE_HIT |
 | Indian Movies | MH One Movies | MHOneMovies.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | MH One Prime | Mh1Prime.in | - | NO_GUIDE_HIT |
@@ -83,6 +85,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Movies | Shubh Cinema TV | ShubhCinemaTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | Sony KAL | SonyKALHindi.us | - | NO_GUIDE_HIT |
 | Indian Movies | Sony Max 2 [US] | custom.sony.max.2 | - | NO_GUIDE_HIT |
+| Indian Entertainment | Sooriyan TV | SooriyanTV.ca@SD | - | NO_GUIDE_HIT |
 | Indian Movies | South Movies | custom.south.movies | - | NO_GUIDE_HIT |
 | Indian Movies | South Station | SouthStation.in | - | NO_GUIDE_HIT |
 | Indian Bangla | Star Bangla | custom.starbangla | - | NO_GUIDE_HIT |
@@ -97,11 +100,11 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 ## Published Guide Validation
 
 - Playlist EPG references: **OK**
-- Guide channel IDs published: **298**
-- Mapped playlist IDs present in guide: **298/300 (99.3%)**
-- Mapped playlist IDs with current/future programmes: **283/300 (94.3%)**
+- Guide channel IDs published: **304**
+- Mapped playlist IDs present in guide: **304/306 (99.3%)**
+- Mapped playlist IDs with current/future programmes: **288/306 (94.1%)**
 - Mapped IDs missing from the published XMLTV channel list: **2**
 - IDs missing from guide: AndTV.in@SD, Enterr10Bangla.in@SD
-- Mapped IDs with no current/future programmes: **15**
-- IDs without current/future programmes (first 30): AndpriveHD.in, ETVBeats.in@HD, ManoranjanPrime.in@SD, OdishaTV.in@SD, OnePaschima.in@SD, PrarthanaTV.in@SD, RupasiBangla.in@SD, Sony.Aath.in, Star.Jalsha.Movies.in, Star.Jalsha.in, SteelbirdMusic.in@SD, SuriyanTV.in@SD, ZeeBangla.in@HD, custom.ekamra.cinema, custom.ekamra.musiq
+- Mapped IDs with no current/future programmes: **16**
+- IDs without current/future programmes (first 30): AndpriveHD.in, ETVBeats.in@HD, FriendsTV.in@SD, ManoranjanPrime.in@SD, OdishaTV.in@SD, OnePaschima.in@SD, PrarthanaTV.in@SD, RupasiBangla.in@SD, Sony.Aath.in, Star.Jalsha.Movies.in, Star.Jalsha.in, SteelbirdMusic.in@SD, SuriyanTV.in@SD, ZeeBangla.in@HD, custom.ekamra.cinema, custom.ekamra.musiq
 - This validation is against the guide currently present in the working tree/publish candidate.
