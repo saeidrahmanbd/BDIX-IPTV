@@ -49,12 +49,12 @@ EPG_ALIASES = {
     "custom.enter10.bangla": ["Enterr10Bangla.in@SD"],
     # Distinct UK sports channels were incorrectly sharing one playlist ID in NVisionBD.
     # Use standard XMLTV identities; accept only IDs that exist in a configured live source.
-    "tntsports1.uk": ["TNTSport1.uk", "tntsports1.uk"],
-    "tntsports2.uk": ["TNTSport2.uk", "tntsports2.uk"],
-    "tntsports3.uk": ["TNTSport3.uk", "tntsports3.uk"],
-    "tntsports4.uk": ["TNTSport4.uk", "tntsports4.uk"],
-    "skysportsmainevent.uk": ["skysportsmainevent.uk", "SkySportsMainEvent.uk"],
-    "skysportspremiereleague.uk": ["skysportspremiereleague.uk", "SkySportsPremierLeague.uk"],
+    "tntsports1.uk": ["TNTSports1.uk", "tntsports1.uk"],
+    "tntsports2.uk": ["TNTSports2.uk", "tntsports2.uk"],
+    "tntsports3.uk": ["TNTSports3.uk", "tntsports3.uk"],
+    "tntsports4.uk": ["TNTSports4.uk", "tntsports4.uk"],
+    "skysportsmainevent.uk": ["SkySpMainEvHD.uk", "SkySpMainEv.uk"],
+    "skysportspremiereleague.uk": ["SkySp.PL.HD.uk", "SkySp.PL.uk"],
 }
 
 # Hard locks for mappings that have been manually verified against the live channel.
@@ -87,6 +87,9 @@ SOURCES = [
     "https://avkb.short.gy/tsepg.xml.gz",
     "https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml",
     "https://iptv-org.github.io/epg/guides/in.xml",
+    "https://iptv-org.github.io/epg/guides/uk.xml",
+    "https://iptv-org.github.io/epg/guides/us.xml",
+    "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
 ]
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
