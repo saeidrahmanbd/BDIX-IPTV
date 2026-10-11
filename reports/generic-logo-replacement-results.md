@@ -2,18 +2,18 @@
 
 This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.
 
-- Run time: 2026-10-11 12:07 UTC
+- Run time: 2026-10-11 12:09 UTC
 - IPTV-org dataset: loaded
-- Unique generic assets examined: 74
+- Unique generic assets examined: 73
 - Successful replacements: 2
-- Unresolved/manual review: 72
+- Unresolved/manual review: 71
 
 ## Replacements
 
 | Channel | Former generic file | New local file | Source | License / attribution |
 |---|---|---|---|---|
-| Persiana Travel | nvisionbd-persiana-travel.svg | [nvisionbd-official-persiana-travel.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-persiana-travel.png) | [Ayna OTT logo reference in a public playlist](https://github.com/judy-gotv/iptv/blob/fb3fc31b1d46c2aef55bcadbe5f0be65ab3c5796/BD.m3u) | Logo image; reuse rights not specified |
 | The Q | nvisionbd-the-q.svg | [nvisionbd-official-the-q.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-the-q.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/india/the-q-in.png) | No license file found in source repository |
+| Uttorbango Betar | nvisionbd-uttorbango-betar.svg | [nvisionbd-official-uttorbango-betar.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-uttorbango-betar.png) | [Public Bangladesh radio playlist exact logo reference](https://github.com/junguler/m3u-radio-music-playlists/blob/4f7f422c65652805edf56a71b7ab17ac417b2755/radio-ly/bd.m3u) | Station artwork; reuse rights not specified |
 
 ## Unresolved — retained for manual source verification
 
@@ -50,7 +50,7 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Fight 24/7 | nvisionbd-fight-24-7.svg | No unique source-verified channel logo found |
 | Filmua Drama | nvisionbd-filmua-drama.svg | No unique source-verified channel logo found |
 | Flo Racing | nvisionbd-flo-racing.svg | No unique source-verified channel logo found |
-| Global Panjab | nvisionbd-global-panjab.svg | Lookup/download/validation error: <urlopen error [Errno -3] Temporary failure in name resolution> |
+| Global Panjab | nvisionbd-global-panjab.svg | Lookup/download/validation error: all logo image URLs failed: <urlopen error [Errno -3] Temporary failure in name resolution> |
 | Hindi Big Boss 24x7 2026 | nvisionbd-hindi-big-boss-24x7-2026.svg | No unique source-verified channel logo found |
 | Htv Sport | nvisionbd-htv-sport.svg | No unique source-verified channel logo found |
 | Ind Unite8 Sports 1 HD | nvisionbd-ind-unite8-sports-1.svg | No unique source-verified channel logo found |
@@ -65,7 +65,7 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Pk Ten Cricket | nvisionbd-pk-ten-cricket.svg | No unique source-verified channel logo found |
 | Power Turk | nvisionbd-power-turk.svg | No unique source-verified channel logo found |
 | Radio Adamya | nvisionbd-radio-adamya.svg | No unique source-verified channel logo found |
-| Radio Bangla Rock | nvisionbd-radio-bangla-rock.svg | Lookup/download/validation error: HTTP Error 404: Not Found |
+| Radio Bangla Rock | nvisionbd-radio-bangla-rock.svg | Lookup/download/validation error: all logo image URLs failed: HTTP Error 404: Not Found |
 | Radio Bangladesh Co | nvisionbd-radio-bangladesh-co.svg | No unique source-verified channel logo found |
 | Radio Barakah | nvisionbd-radio-barakah.svg | No unique source-verified channel logo found |
 | Radio Janata | nvisionbd-radio-janata.svg | No unique source-verified channel logo found |
@@ -84,7 +84,6 @@ This report covers the current NVisionBD-Playlist.m3u. Only confidently matched,
 | Tapmad | nvisionbd-tapmad.svg | No unique source-verified channel logo found |
 | TNT Sport 1 | nvisionbd-tnt-sport-1.svg | No unique source-verified channel logo found |
 | Utbd FM | nvisionbd-utbd-fm.svg | No unique source-verified channel logo found |
-| Uttorbango Betar | nvisionbd-uttorbango-betar.svg | Lookup/download/validation error: HTTP Error 404: Not Found |
 | Valobasar Rupali Sur | nvisionbd-valobasar-rupali-sur.svg | No unique source-verified channel logo found |
 | Wc Music | nvisionbd-wc-music.svg | No unique source-verified channel logo found |
 | Whiples Cinema | nvisionbd-whiples-cinema.svg | No unique source-verified channel logo found |
