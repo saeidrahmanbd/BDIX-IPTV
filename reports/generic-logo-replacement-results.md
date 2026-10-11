@@ -2,20 +2,16 @@
 
 This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.
 
-- Run time: 2026-10-11 12:12 UTC
+- Run time: 2026-10-11 12:14 UTC
 - IPTV-org dataset: loaded
-- Unique generic assets examined: 72
-- Successful replacements: 5
+- Unique generic assets examined: 68
+- Successful replacements: 1
 - Unresolved/manual review: 67
 
 ## Replacements
 
 | Channel | Former generic file | New local file | Source | License / attribution |
 |---|---|---|---|---|
-| Be.joy Kids | nvisionbd-be-joy-kids.svg | [nvisionbd-official-be-joy-kids.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-be-joy-kids.png) | [IPTV-org exact unique channel name: BeJoykids.it](https://bejoy.kids/wp-content/uploads/2025/09/Logo_Bejoy.png) | IPTV-org public logo dataset ([license](https://github.com/iptv-org/database)) |
-| ETV | nvisionbd-etv.svg | [nvisionbd-official-etv.jpg](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-etv.jpg) | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Logo-etv.jpg) | CC BY-SA 4.0 ([license](https://creativecommons.org/licenses/by-sa/4.0)) |
-| Fail Army | nvisionbd-fail-army.svg | [nvisionbd-official-fail-army.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-fail-army.png) | [IPTV-org exact unique channel name: FailArmy.us](https://i.imgur.com/VIpQJxL.png) | IPTV-org public logo dataset ([license](https://github.com/iptv-org/database)) |
-| Filmua Drama | nvisionbd-filmua-drama.svg | [nvisionbd-official-filmua-drama.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-filmua-drama.png) | [IPTV-org exact unique channel name: FilmUADrama.ua](https://i.imgur.com/Hnwsh5d.png) | IPTV-org public logo dataset ([license](https://github.com/iptv-org/database)) |
 | The Q | nvisionbd-the-q.svg | [nvisionbd-official-the-q.png](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-the-q.png) | [tv-logo/tv-logos channel/region source](https://github.com/tv-logo/tv-logos/blob/main/countries/india/the-q-in.png) | No license file found in source repository |
 
 ## Unresolved — retained for manual source verification
