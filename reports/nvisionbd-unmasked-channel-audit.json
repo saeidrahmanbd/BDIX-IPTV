@@ -2,7 +2,7 @@
   "generated_utc": "2026-10-11",
   "source": "NVisionBD-Playlist.m3u",
   "source_entries": 566,
-  "final_entries": 566,
+  "final_entries": 561,
   "group_counts": {
     "Bangladesh": 51,
     "Indian Bangla": 28,
@@ -16,7 +16,7 @@
     "Religious": 12,
     "Sports": 115,
     "Radio": 46,
-    "Backup": 95
+    "Backup": 90
   },
   "promoted_orphan_channels": [
     {
@@ -114,28 +114,7 @@
     "Enter10 Bangla (Alt 5)",
     "Travel XP (Alt 2)"
   ],
-  "orphan_backup_entries_without_primary": [
-    {
-      "name": "Acc Digital Network",
-      "id": "custom.acc.digital.network",
-      "reason": "Ambiguous identity; retained in Backup"
-    },
-    {
-      "name": "Na!oc",
-      "id": "custom.na.oc",
-      "reason": "Ambiguous identity; retained in Backup"
-    },
-    {
-      "name": "OTT Club",
-      "id": "custom.ott.club",
-      "reason": "Ambiguous identity; retained in Backup"
-    },
-    {
-      "name": "PK",
-      "id": "custom.pk",
-      "reason": "Ambiguous identity; retained in Backup"
-    }
-  ],
+  "orphan_backup_entries_without_primary": [],
   "generated_channel_specific_logos": 210,
   "generated_logo_files": [
     "nvisionbd-btv-sangsad.svg",
@@ -358,5 +337,12 @@
     "Alternate feeds matched to existing primary channel entries remain in Backup.",
     "Sports, Kids, and International backup duplicates were removed when a primary entry exists, per playlist rules.",
     "Ambiguous orphan labels were retained in Backup for review instead of assigning guessed identities."
+  ],
+  "removed_backup_entries": [
+    "Acc Digital Network",
+    "Afra Film (Alt 2)",
+    "Na!oc",
+    "OTT Club",
+    "PK"
   ]
 }
