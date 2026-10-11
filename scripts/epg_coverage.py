@@ -40,7 +40,6 @@ EPG_ALIASES = {
     "custom.isai.aruvi.tv": ["IsaiAruvi.in@SD"],
     "custom.the.q": ["TheQIndia.us@SD"],
     "Star Gold Romance.in": ["StarGoldRomance.in@SD", "Star.Gold.Romance.Tv.Channel.Today.in2"],
-    "B4UBhojpuri.in@Plus": ["B4u.Bhojpuri.in2"],
     # The IDs above are exact channel IDs documented in the DishTV XMLTV catalogue;
     # each mapping is still accepted only when a configured live XMLTV source contains it.
     "Enterr10 Bangla.in": ["ENTER10.BANGLA.in", "Enterr10Bangla.in"],
@@ -62,7 +61,6 @@ EPG_ALIASES = {
 # Locked identities must not be broadened again by the automatic coverage mapper.
 EPG_LOCKS = {
     "ColorsCineplex.in@SD": ["543298"],
-    "IqraBangla.uk": ["3914"],
     "IqraBangla.uk": ["3914"],
     # Dish TV catalogue-verified Star Jalsha SD XMLTV ID. Keep the existing
     # playlist identity (Star.Jalsha.in) unchanged; map this provider ID to it.
