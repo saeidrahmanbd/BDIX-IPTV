@@ -25,7 +25,6 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **DD Punjabi** (DDPunjabi.in@SD): source ID 543437 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **DD Rajasthan** (DDRajasthan.in@SD): source ID 543060 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **DD Sahyadri** (DDSahyadri.in@SD): source ID 543462 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
-- **DD Saptagiri** (DDSaptagiri.in@SD): source ID 543376 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **DD Sports** (DDSports.in@SD): source ID 543389 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **DD Tamil** (DDTamil.in@SD): source ID 543273 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **DD Urdu** (DDUrdu.in@SD): source ID 543021 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
@@ -67,6 +66,7 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **Sony Sports Ten 5** (SonySportsTen5.in): source ID SONY.SPORTS.TEN.5.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by +8 hours after repeated cross-source agreement.
 - **Sony Yay** (SonyYay.in@SD): source ID 543317 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
 - **Star Movies Select** (StarMoviesSelect.in@HD): source ID 543316 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
+- **Star Plus** (StarPlus.in@SD): source ID ts8 from https://avkb.short.gy/tsepg.xml.gz shifted by -16 hours after repeated cross-source agreement.
 - **Star Sports 1** (StarSports1.in@HD): source ID STAR.SPORTS.1.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by +8 hours after repeated cross-source agreement.
 - **Star Sports 1 Hindi** (StarSports1Hindi.in@HD): source ID STAR.SPORTS.1.HINDI.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by +8 hours after repeated cross-source agreement.
 - **Star Sports 3** (StarSports3.in@SD): source ID 543366 from https://epg.pw/xmltv/epg_IN.xml shifted by -8 hours after repeated cross-source agreement.
