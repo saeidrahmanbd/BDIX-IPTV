@@ -47,6 +47,14 @@ EPG_ALIASES = {
     # These only map if an active configured XMLTV source actually contains the exact ID.
     "custom.colors.infinity": ["ColorsInfinity.in@HD", "ColorsInfinity.in@SD"],
     "custom.enter10.bangla": ["Enterr10Bangla.in@SD"],
+    # Distinct UK sports channels were incorrectly sharing one playlist ID in NVisionBD.
+    # Use standard XMLTV identities; accept only IDs that exist in a configured live source.
+    "tntsports1.uk": ["TNTSport1.uk", "tntsports1.uk"],
+    "tntsports2.uk": ["TNTSport2.uk", "tntsports2.uk"],
+    "tntsports3.uk": ["TNTSport3.uk", "tntsports3.uk"],
+    "tntsports4.uk": ["TNTSport4.uk", "tntsports4.uk"],
+    "skysportsmainevent.uk": ["skysportsmainevent.uk", "SkySportsMainEvent.uk"],
+    "skysportspremiereleague.uk": ["skysportspremiereleague.uk", "SkySportsPremierLeague.uk"],
 }
 
 # Hard locks for mappings that have been manually verified against the live channel.
