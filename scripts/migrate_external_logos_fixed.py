@@ -32,8 +32,8 @@ FALLBACK_LOGOS = {
     "hbo2": "https://commons.wikimedia.org/wiki/Special:FilePath/HBO2_logo.png",
     "ytv": "https://commons.wikimedia.org/wiki/Special:FilePath/Ytv_logo.png",
     "foodnetwork": "https://commons.wikimedia.org/wiki/Special:FilePath/Food_Network_Logo.svg",
-    "hgtv": "https://commons.wikimedia.org/wiki/Special:FilePath/HGTV_logo.png",
-    "travelchannel": "https://commons.wikimedia.org/wiki/Special:FilePath/Travel_Channel_HD_Logo.png",
+    "hgtv": "https://upload.wikimedia.org/wikipedia/commons/0/05/HGTV_logo.png",
+    "travelchannel": "https://upload.wikimedia.org/wikipedia/commons/0/05/Travel_Channel_Logo.png",
     "colorsinfinity": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-infinity.png",
     "enter10bangla": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png",
     "rakutenmovies": "https://s3.aynaott.com/storage/22af43810a37af9a151f1e0a23adde63",
@@ -212,7 +212,7 @@ for line in lines:
     if not line.startswith("#EXTINF"): continue
     metadata = attrs(line)
     logo = metadata.get("tvg-logo", "").strip()
-    if logo and is_local(logo) and logo.lower().endswith(".png"):
+    if logo and not is_generic_logo(logo) and not is_generated_placeholder(logo) and is_local(logo) and logo.lower().endswith(".png"):
         channel_id = exact_id(metadata)
         title = metadata.get("tvg-name") or line.rsplit(",", 1)[-1].strip()
         filename = logo[len(RAW_BASE):].split("?", 1)[0] if logo.startswith(RAW_BASE) else Path(logo).name
@@ -246,6 +246,7 @@ for item in logos:
 
 changed = downloaded = failed = resolved_from_existing = resolved_from_catalogue = resolved_from_fallback = converted_local = 0
 unresolved = []
+generated_placeholders = []
 output = []
 
 for line in lines:
@@ -402,7 +403,7 @@ for line in lines:
         generate_placeholder_logo(title, target)
         output.append(force_local(line, replacement))
         changed += 1
-        unresolved.append(title)
+        generated_placeholders.append(title)
         print(f"Generated non-official text fallback logo: {title}")
     except Exception as exc:
         failed += 1
@@ -421,5 +422,7 @@ print(f"Resolved from explicit fallback sources: {resolved_from_fallback}")
 print(f"Resolved from IPTV-org catalogue: {resolved_from_catalogue}")
 print(f"Local non-PNG logos converted: {converted_local}")
 print(f"Logo downloads failed: {failed}")
-print(f"Still unresolved: {len(unresolved)}")
+print(f"Still unresolved (no usable logo attached): {len(unresolved)}")
 for title in unresolved: print(f"UNRESOLVED: {title}")
+print(f"Generated non-official text fallback logos: {len(generated_placeholders)}")
+for title in generated_placeholders: print(f"GENERATED PLACEHOLDER: {title}")
