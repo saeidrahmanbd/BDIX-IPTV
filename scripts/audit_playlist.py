@@ -14,8 +14,8 @@ REPORT = Path("reports/playlist-audit.md")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
-PRIMARY_EXCEPTIONS = {"Backup", "New Channels", "New Backup", "New", "Not Playing"}
-CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "New Channels", "New Backup", "New", "Not Playing"]
+PRIMARY_EXCEPTIONS = {"Backup"}
+CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup"]
 
 def attrs(line):
     return dict(ATTR_RE.findall(line))
@@ -249,7 +249,7 @@ for cid, items in sorted(by_id.items()):
     if len(names) > 1 or len(groups) > 1 or len(countries) > 1:
         metadata_conflicts.append((cid, names, groups, countries))
 
-REVIEW_GROUPS = {"New Channels", "New Backup", "New", "Not Playing"}
+REVIEW_GROUPS = set()
 # Review queues may intentionally contain alternate IDs for manual testing;
 # report identity collisions only among publishable channel entries.
 name_collisions = {
@@ -286,7 +286,7 @@ for info, url in entries:
     logo_counts["healthy" if not issue or issue == "repository-reference" else issue] += 1
     if issue in {"missing", "broken-local", "external", "unsupported-format", "invalid-dimensions", "corrupt-image", "unvalidated-image", "other"}:
         item = (display_name(info), identity(info), issue, attrs(info).get("tvg-logo",""))
-        if attrs(info).get("group-title", "").strip() == "Not Playing":
+        if attrs(info).get("group-title", "").strip() == "Backup":
             review_logo_exceptions.append(item)
         else:
             logo_exceptions.append(item)
@@ -299,7 +299,7 @@ try:
     new_not_playing = Counter()
 
     # A primary entry is protected against silent removal or URL/identity
-    # changes. Moving the exact same entry to Not Playing is intentional
+    # changes. Moving the exact same entry to Backup is intentional
     # quarantine behavior and is not a destructive change.
     def stable(info, url):
         a = attrs(info)
@@ -471,14 +471,14 @@ review_name_mismatches = []
 primary_by_norm_name = {}
 for info, url in primary_entries:
     group = attrs(info).get("group-title", "").strip()
-    if group in {"New Channels","New Backup","New"}:
+    if group in set():
         continue
     pname = attrs(info).get("tvg-name", "").strip()
     key = normalized_name(pname)
     primary_by_norm_name.setdefault(key, pname)
 for info, url in entries:
     group = attrs(info).get("group-title", "").strip()
-    if group not in {"New", "New Channels", "New Backup"}:
+    if group not in set():
         continue
     name = attrs(info).get("tvg-name", "").strip()
     key = normalized_name(name)
@@ -591,15 +591,15 @@ def run_change_guard():
             "would be removed or rewritten."
         )
 
-    # Review queues are user-controlled. A stream placed in New Channels or
-    # New Backup must remain in that review group until the user explicitly
+    # Playlist categories are controlled by the canonical category registry.
+    # Obsolete discovery groups are not treated as special categories.
     # promotes it. Never silently reclassify it into an active category or
     # approved Backup during automated maintenance.
     old_review = {}
     new_review = {}
     for info, url in old_entries:
         group = attrs(info).get("group-title", "").strip()
-        if group in {"New Channels", "New Backup"} and url.strip():
+        if group in set() and url.strip():
             old_review[url.strip().lower()] = group
     for info, url in entries:
         group = attrs(info).get("group-title", "").strip()
@@ -684,7 +684,7 @@ if missing_tvg_id:
 blocking_missing_logo = [
     (info, url) for info, url in entries
     if not attrs(info).get("tvg-logo", "").strip()
-    and attrs(info).get("group-title", "").strip() != "Not Playing"
+    and attrs(info).get("group-title", "").strip() != "Backup"
 ]
 if blocking_missing_logo:
     raise SystemExit("All active/reviewable playlist entries must carry tvg-logo.")
@@ -698,7 +698,7 @@ if stray_name_markers:
 
 inconsistent_tvg_names = []
 for cid, items in by_id.items():
-    # Backup/Not Playing entries may legitimately carry display variants
+    # Backup entries may legitimately carry display variants
     # such as resolution or quarantine naming. Enforce tvg-name consistency
     # only across active primary entries.
     primary_items = [
@@ -720,7 +720,7 @@ name_tvg_mismatches = []
 for info, url in entries:
     a = attrs(info)
     group = a.get("group-title", "").strip()
-    # Not Playing entries are quarantined/manual-review entries and may use
+    # Backup entries may use
     # a descriptive display alias. Do not reject them for that presentation.
     if group == "Not Playing":
         continue
