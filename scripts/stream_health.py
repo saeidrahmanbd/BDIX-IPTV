@@ -38,7 +38,7 @@ def probe(item):
     started=time.monotonic()
     try:
         req=Request(url,headers={"User-Agent":"BDIX-IPTV-HealthCheck/1.0","Accept":"*/*","Range":"bytes=0-4095"})
-        with urlopen(req,timeout=8) as r:
+        with urlopen(req,timeout=15) as r:
             data=r.read(4096)
             status=getattr(r,"status",200)
             ctype=r.headers.get("Content-Type","")
