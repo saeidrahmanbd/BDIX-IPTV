@@ -1,13 +1,13 @@
 # NVisionBD Playlist Audit
 
-Generated (UTC): **2026-10-11T10:08:40+00:00**
+Generated (UTC): **2026-10-11T10:25:03+00:00**
 
 ## Summary
 
-- Playlist entries: **632**
-- Unique stream URLs: **632**
+- Playlist entries: **566**
+- Unique stream URLs: **566**
 - Duplicate stream URLs: **0**
-- Duplicate channel identities: **71**
+- Duplicate channel identities: **60**
 - Missing channel IDs: **0**
 - Missing logos: **0**
 - Missing channel numbers: **0**
@@ -15,8 +15,8 @@ Generated (UTC): **2026-10-11T10:08:40+00:00**
 
 ## Group Counts
 
-- Backup: **175**
-- Bangladesh: **48**
+- Backup: **115**
+- Bangladesh: **50**
 - Documentary & Wildlife: **31**
 - Indian Bangla: **27**
 - Indian Entertainment: **28**
@@ -27,14 +27,14 @@ Generated (UTC): **2026-10-11T10:08:40+00:00**
 - Pakistani: **8**
 - Radio: **46**
 - Religious: **9**
-- Sports: **123**
+- Sports: **115**
 
 ## Stream Probe Summary
 
-- Responsive: **21**
+- Responsive: **8**
 - Restricted: **0**
 - Dead: **121**
-- Unverified: **490**
+- Unverified: **437**
 
 ## Duplicate Stream URLs
 
@@ -61,17 +61,10 @@ None.
 - channels.uk: Channel S, Channel S HD
 - colors.bangla.in: Colors Bangla (Alt 2), Colors Bangla HD
 - custom.afra.film: Afra Film, Afra Film (Alt 2)
-- custom.biz.cinema: Biz Cinema, Biz Cinema (Alt 2)
 - custom.enter10.bangla: Enter10 Bangla, Enter10 Bangla (Alt 2), Enter10 Bangla (Alt 3), Enter10 Bangla (Alt 4)
-- custom.kolkatatv: Kolkata TV, Kolkata TV (Alt 2), Kolkata TV (Alt 3)
 - custom.love.nature: Love Nature, Love Nature (Alt 2)
 - custom.mtv: MTV (Alt 2), MTV (Alt 3), MTV HD
-- custom.r.plus: R Plus, R Plus (Alt 2)
-- custom.republic.bangla: Republic Bangla (Alt 2), Republic Bangla (Alt 3)
 - custom.star.news: Star News (Alt 2), Star News (Alt 3), Star News HD
-- custom.tapmad.1: Tapmad [live 1], Tapmad [live 1] (Alt 2)
-- custom.tapmad.2: Tapmad [live 2], Tapmad [live 2] (Alt 2)
-- custom.travel.xp: Travel Xp (Alt 2), Travel Xp HD
 - dangal2.in@sd: Dangal 2, Dangal 2 (Alt 2)
 - dbcnews.bd: DBC News (Alt 2), DBC News (Alt 3), DBC News HD
 - deeptotv.bd: Deepto TV (Alt 2), Deepto TV HD
@@ -94,7 +87,6 @@ None.
 - ntv.bd: Ntv (Alt 2), Ntv (Alt 3), Ntv HD
 - rajdhanitv.bd: Rajdhani TV, Rajdhani TV (Alt 2)
 - rongeentv.in@sd: Rongeen TV, Rongeen TV (Alt 2), Rongeen TV (Alt 3)
-- rplusgold.in@sd: R Plus Gold, R Plus Gold (Alt 2), R Plus Gold (Alt 3)
 - rtv.bd: Rtv (Alt 2), Rtv HD, Rtv HD (Alt 3)
 - sangeetbangla.in@sd: Sangeet Bangla, Sangeet Bangla (Alt 2), Sangeet Bangla (Alt 3), Sangeet Bangla (Alt 4)
 - satv.bd: Sa TV, Sa TV HD
@@ -108,11 +100,8 @@ None.
 - starsportsselect1.in: In -hindi- Star Sports 1 HD, In Star Sports Select 1 HD
 - steelbirdmusic.in@sd: Steelbird Music, Steelbird Music (Alt 2)
 - thikanatv.us: Thikana, Thikana (Alt 2)
-- tlc.in@hd: Tlc (Alt 2), Tlc HD
 - tntspor: UK TNT Sports 1 HD, UK TNT Sports 2 HD, UK TNT Sports 3 HD, UK TNT Sports 4 HD
-- zee24ghanta.in@sd: Zee 24 Ghanta, Zee 24 Ghanta (Alt 2)
 - zeebangla.in@hd: Zee Bangla (Alt 2), Zee Bangla (Alt 3), Zee Bangla HD
-- zeebanglasonar.in@sd: Zee Bangla Sonar, Zee Bangla Sonar (Alt 2)
 
 ## Missing Metadata
 
