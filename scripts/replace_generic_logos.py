@@ -8,6 +8,7 @@ Resolution order:
 Anything ambiguous remains untouched and is reported for manual review.
 """
 import json
+import shutil
 import re
 import time
 import unicodedata
@@ -49,25 +50,84 @@ LOCAL_LOGO_FILES = {
     "Talk Sport": "talksport.png",
     "Ducktv": "duck-tv.png",
     "Afrobeats": "afrobeats.png",
+    "24/7 Batul The Great": "bantul-the-great-35f9777f.png",
+    "Ktv Sports Plus": "ktv-sport-plus.png",
+    "Spondon Radio": "spondon.png",
+    "Sony Cine": "cine-sony-720p-c27cf4bb09.png",
 }
 
 # Exact channel/region matches from the public tv-logo/tv-logos collection.
 # Use only where the playlist name or its known channel identity identifies region.
 TV_LOGO_HINTS = {
+    "Boomerang": "countries/united-states/boomerang-us.png",
     "Boomerang UK": "countries/united-kingdom/boomerang-uk.png",
+    "BT Sports 2": "countries/united-kingdom/hd/bt-sport-2-hd-uk.png",
+    "Comedy Central": "countries/united-states/comedy-central-us.png",
+    "Cosmote Sports 1": "countries/greece/cosmote-sport-1-gr.png",
+    "Cosmote Sports 4": "countries/greece/cosmote-sport-4-gr.png",
     "Digi Sport 1": "countries/romania/digi-sport-1-ro.png",
     "Digi Sport 2": "countries/romania/digi-sport-2-ro.png",
     "Epic": "countries/india/epic-in.png",
     "Fashion TV HD": "countries/international/fashion-tv-int.png",
+    "FX TV": "countries/united-states/fx-us.png",
+    "Golf Channel": "countries/united-states/nbc-golf-channel-us.png",
     "Laff TV": "countries/united-states/laff-us.png",
+    "Laligatv": "countries/nordic/norway/laliga-tv-no.png",
+    "Magenta Sports 2": "countries/austria/magenta-sport-2-at.png",
     "Movie Sphere": "countries/united-states/movie-sphere-us.png",
+    "Movie Sphere Au": "countries/united-states/movie-sphere-us.png",
+    "My Time Movie": "misc/vod/my-time-movie-network-vod.png",
     "Premier Sports 1": "countries/united-kingdom/premier-sports-1-uk.png",
+    "Sports Grid": "misc/vod/sports-grid-vod-us.png",
     "The Q": "countries/india/the-q-in.png",
-    "Tsn Aq1": "countries/canada/tsn-ca.png",
+    "Tsn Aq1": "countries/canada/tsn-1-ca.png",
+    "UK TNT Sports 1 HD": "countries/united-kingdom/hd/tnt-sports-1-hd-uk.png",
+    "UK TNT Sports 2 HD": "countries/united-kingdom/hd/tnt-sports-2-hd-uk.png",
+    "UK TNT Sports 3 HD": "countries/united-kingdom/hd/tnt-sports-3-hd-uk.png",
+    "UK TNT Sports 4 HD": "countries/united-kingdom/hd/tnt-sports-4-hd-uk.png",
+    "US Sky Sports Main Event": "countries/united-kingdom/hd/sky-sports-main-event-hd-uk.png",
+    "US Sky Sports Premier League": "countries/united-kingdom/hd/sky-sports-premier-league-hd-uk.png",
+    "US Willow By Cricbuzz": "countries/united-states/willow-us.png",
     "Ziggo Sport Live": "countries/netherlands/ziggo-sport-nl.png",
 }
 TV_LOGO_BASE = "https://raw.githubusercontent.com/tv-logo/tv-logos/main/"
 TV_LOGO_REPO = "https://github.com/tv-logo/tv-logos"
+
+# Exact station assets discovered on broadcaster/streaming-service pages.
+DIRECT_LOGO_HINTS = {
+    "BTV Sangsad": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sangsad_Television_Emblem.svg",
+        "format": "SVG",
+        "page": "https://en.wikipedia.org/wiki/Sangsad_Bangladesh_Television",
+        "source": "Sangsad Television emblem",
+        "license": "Wikimedia Commons file; see source page",
+        "license_url": "",
+    },
+    "92.8 FM Radio Bhumi": {
+        "url": "https://cdn-radiotime-logos.tunein.com/s260643g.png",
+        "format": "PNG",
+        "page": "https://tunein.com/radio/Radio-Bhumi-928-s260643/",
+        "source": "TuneIn station logo",
+        "license": "Station logo served by TuneIn",
+        "license_url": "",
+    },
+    "Radio Bhumi 92.80 FM": {
+        "url": "https://cdn-radiotime-logos.tunein.com/s260643g.png",
+        "format": "PNG",
+        "page": "https://tunein.com/radio/Radio-Bhumi-928-s260643/",
+        "source": "TuneIn station logo",
+        "license": "Station logo served by TuneIn",
+        "license_url": "",
+    },
+    "Radio Capital FM 94.8": {
+        "url": "https://i1.sndcdn.com/avatars-000277800736-n9rf9s-t1080x1080.jpg",
+        "format": "JPEG",
+        "page": "https://soundcloud.com/user-470956485",
+        "source": "SoundCloud station artwork",
+        "license": "Station artwork served by SoundCloud",
+        "license_url": "",
+    },
+}
 
 STOP_WORDS = {"hd", "uhd", "fhd", "sd", "4k", "8k", "1080p", "720p", "576p", "hevc", "h265", "h264"}
 COMMONS_STOP_WORDS = {"the"}
@@ -319,9 +379,11 @@ def get_local_logo(channel):
         if path.is_file() and not is_generic_file(path):
             return explicit
 
-    supported = {".svg", ".png", ".jpg", ".jpeg", ".webp"}
+    supported = {".svg", ".png", ".jpg", ".jpeg", ".webp", ".avif"}
     matches = []
-    for path in LOGOS.iterdir():
+    # Recursive scan includes logos/unused as requested; an exact match there
+    # is copied into /logos root so playlist URLs remain simple and stable.
+    for path in LOGOS.rglob("*"):
         if not path.is_file() or path.suffix.lower() not in supported:
             continue
         lower_name = path.name.lower()
@@ -364,9 +426,19 @@ def get_local_logo(channel):
     if not matches:
         return None
     matches.sort()
-    # Multiple files with the exact same normalized identity are safe only as
-    # alternate copies of that exact filename identity; canonical copy wins.
-    return matches[0][-1]
+    # Prefer a canonical copy in /logos root. If the exact match lives in
+    # /logos/unused, restore a root copy rather than leaving the playlist to
+    # depend on the unused subfolder.
+    chosen = next((item for item in matches if (LOGOS / item[-1]).is_file()), matches[0])
+    source_path = next(path for path in LOGOS.rglob(chosen[-1]) if path.is_file())
+    destination = LOGOS / source_path.name
+    if source_path.parent != LOGOS:
+        if not destination.exists():
+            shutil.copyfile(source_path, destination)
+        elif is_generic_file(destination):
+            destination.unlink()
+            shutil.copyfile(source_path, destination)
+    return destination.name
 
 def build_audit():
     playlist_names = ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "NVisionBD-Playlist.m3u"]
@@ -463,7 +535,26 @@ def main():
                 candidate = None
                 source, source_page = "", ""
                 license_name, license_url = "", ""
-                if iptv_indexes:
+                # Curated exact sources take precedence over a name-based
+                # catalog suggestion, which can identify a similarly named
+                # channel from the wrong country or brand.
+                if channel in DIRECT_LOGO_HINTS:
+                    candidate = dict(DIRECT_LOGO_HINTS[channel])
+                    source = candidate.pop("source", "Direct station source")
+                    source_page = candidate.get("page", "")
+                    license_name = candidate.get("license", "")
+                    license_url = candidate.get("license_url", "")
+                elif channel in TV_LOGO_HINTS:
+                    hint_path = TV_LOGO_HINTS[channel]
+                    candidate = {
+                        "url": TV_LOGO_BASE + hint_path,
+                        "format": Path(hint_path).suffix.lstrip(".").upper(),
+                        "page": TV_LOGO_REPO + "/blob/main/" + hint_path,
+                        "license": "No license file found in source repository",
+                        "license_url": "",
+                    }
+                    source = "tv-logo/tv-logos channel/region source"
+                if not candidate and iptv_indexes:
                     result = get_iptv_org_candidate(channel, item["tvg_id"], iptv_indexes)
                     if result and result[0]:
                         logo_obj, source = result
@@ -474,16 +565,6 @@ def main():
                             "license": "IPTV-org public logo dataset",
                             "license_url": "https://github.com/iptv-org/database",
                         }
-                if not candidate and channel in TV_LOGO_HINTS:
-                    hint_path = TV_LOGO_HINTS[channel]
-                    candidate = {
-                        "url": TV_LOGO_BASE + hint_path,
-                        "format": Path(hint_path).suffix.lstrip(".").upper(),
-                        "page": TV_LOGO_REPO + "/blob/main/" + hint_path,
-                        "license": "No license file found in source repository",
-                        "license_url": "",
-                    }
-                    source = "tv-logo/tv-logos exact channel/region match"
                 if not candidate:
                     candidate = commons_candidate(channel)
                     if candidate:
