@@ -77913,19 +77913,21 @@ Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/xODKQEiSebIizwEYbvqZU5ohgBaIj-Vxt9PgKacRvppQef_xP1C0gbTdP_uOC4l6u6iQNk8G_qPcyBQlWVMj2yym-eYPJqvjmaLjja7U3zOBVEbNCj20MS7e0K7x" />
     <title lang="en">Hello Sahyadri</title>
   </programme>
-  <programme start="20261011113000 +0000" stop="20261011114000 +0000" channel="DDSaptagiri.in@SD">
-    <category lang="en">News</category>
-    <category lang="en">News Bulletin</category>
-    <desc lang="en">The host presents the latest news updates concerning the political, social, economic and sports fronts from across all the districts of the state.</desc>
-    <icon src="https://iptv-epg.org/images/nSJjpOMhtg5rYFW5DtDwzq9bWRvK4LGsrUb-yu_5pQiwyeKl7X1BsYulDil_kmcdBj_j82bWzLi5bnT7wwkIyAdPZDiBAWK6k3IYGWVrHLXYw7umNBOXZJ9BNb50" />
-    <title lang="en">District News Bulletin</title>
+  <programme start="20261011170000 +0530" stop="20261011173000 +0530" channel="DDSaptagiri.in@SD">
+    <title>Albums</title>
+    <sub-title>Power Vision TV | MALAYALAM</sub-title>
+    <desc>Devout Christians perform soulful renditions of melodious devotional songs in praise of the Almighty and seek His blessings.</desc>
+    <category>Community</category>
+    <language>MALAYALAM</language>
+    <icon src="https://epg.yuppcdn.net/assets/p564334_i_h8_aa.jpg" />
   </programme>
-  <programme start="20261011114000 +0000" stop="20261011123000 +0000" channel="DDSaptagiri.in@SD">
-    <category lang="en">News</category>
-    <category lang="en">News Bulletin</category>
-    <desc lang="en">The host sheds light on prominent developments from the world of sports, weather, international politics and economy in quick succession.</desc>
-    <icon src="https://iptv-epg.org/images/LBzeQstny0pywJcuYyljNJmzQ3ErPCh1Lb16nv653ch4Wvsj2KdzyboFe2hoTzOvgj254ujvgRsgQooPcKb_1fWj2sESu8MIu3hw75a7SsNSnKZqmkGii8elf8Tz" />
-    <title lang="en">Current Affairs</title>
+  <programme start="20261011173000 +0530" stop="20261011180000 +0530" channel="DDSaptagiri.in@SD">
+    <title>Thiruvachana Sandesham</title>
+    <sub-title>Power Vision TV | MALAYALAM</sub-title>
+    <desc>Religious leaders deliver discourses on the life of Jesus Christ and explain verses from the Holy Bible to help people connect with the Almighty.</desc>
+    <category>Religious</category>
+    <language>MALAYALAM</language>
+    <icon src="https://epg.yuppcdn.net/assets/p28739318_i_h8_aa.jpg" />
   </programme>
   <programme start="20261011123000 +0000" stop="20261011130000 +0000" channel="DDSaptagiri.in@SD">
     <category lang="en">TV Show</category>
@@ -113758,51 +113760,6 @@ Little Singham, an honest but ferocious police officer, fights against injustice
     <icon src="https://iptv-epg.org/images/fFfwu07M2GNI6OsF78RSCAg0GFFcpJDJLs0CPsN9rV0BRUeFKgTHLQw3M6SdLmrmSXZO7dlAqiyMFXBPWWhRR70MKpOFvvYhAQJh9IO4n_8jlqfvE7JA9tmjwAHR" />
     <title lang="en">Little Singham</title>
   </programme>
-  <programme channel="Disney Junior.in" start="20261011111500 +0000" stop="20261011114000 +0000">
-    <title lang="en">Bluey</title>
-    <sub-title lang="en">Exercise; Stickbird; Relax</sub-title>
-    <desc lang="en">The slice-of-life adventures of an Australian Blue Heeler Cattle Dog puppy.</desc>
-    <credits>
-      <actor>David McCormack</actor>
-      <actor>Melanie Zanetti</actor>
-      <actor>Dan Brumm</actor>
-      <director>Joe Brumm</director>
-    </credits>
-    <date>2023</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Adventure</category>
-    <category lang="en">Animals</category>
-    <icon src="http://dtil.tmsimg.com/assets/p16030422_b_h10_az.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S3</episode-num>
-    <previously-shown />
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>A</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-    <rating system="방송통신심의위원회">
-      <value>All</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
-  </programme>
   <programme channel="Disney Junior.in" start="20261011114000 +0000" stop="20261011120000 +0000">
     <title lang="en">Bluey</title>
     <sub-title lang="en">Musical Statues; Stories; Puppets</sub-title>
@@ -133242,17 +133199,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <desc lang="en">This is TV Show - Drama Category.</desc>
     <icon src="https://iptv-epg.org/images/Rb2rZ11FEmF-PckDUYDea0TZbUGtCReZpaZdGxIcZ6JXuXrpXiAR74YEgyOCKuXGfeu4CCsyze-iXKFH2z8rc4xaniZAxpd2T1OqLb4wDChlOs5xWd95BOiznM2X8-a4ofqZRxTcHIRIulGLYw9A1eWqNYgkwerdZHQOV09fFHt4ibKvGrLukghEI5msAHeqfafwgw" />
     <title lang="en">Sindhu</title>
-  </programme>
-  <programme start="20261011170000 +0530" stop="20261011171000 +0530" channel="FoodFood.in@SD">
-    <title>Dairy Delights</title>
-    <desc>Bringing the best in television.</desc>
-    <category>Entertainment</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/51e13db40c8394add7580efd5338a544.jpg?width=700" />
-    <episode-num system="onscreen">32</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
   </programme>
   <programme start="20261011171000 +0530" stop="20261011172000 +0530" channel="FoodFood.in@SD">
     <title>Great Recipes - Great Chef</title>
@@ -200832,13 +200778,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <icon src="https://iptv-epg.org/images/kIGMbNgmfX1YSmQwwE7SGufwTyQDQ9jq_JyJtZhUhJWhsbPK3yYVbDabpsoiZ1HBRDLr9qXzKTPgc_p8IDbJnvNotmVQlZOHsR5WVJwnmfE1tGcAJOUgPrJZNT1v" />
     <title lang="en">Music Xpress</title>
   </programme>
-  <programme channel="Pop.uk" start="20261011113200 +0000" stop="20261011114100 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261011170200/list/ZEEPOPGrizzyAndTheLemmings205673208aa282e5a71482fad97fcb4dc65cf49.jpg" />
-  </programme>
   <programme channel="Pop.uk" start="20261011114100 +0000" stop="20261011115000 +0000">
     <title lang="en">Grizzy And The Lemmings</title>
     <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
@@ -237403,38 +237342,21 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <icon src="https://tv.assets.pressassociation.io/4ac10a17-809d-5998-ac39-064bc977d8e8.jpg" />
     <episode-num system="onscreen">S2026 E31</episode-num>
   </programme>
-  <programme start="20261011170500 +0530" stop="20261011171000 +0530" channel="SongdewTV.in@SD">
-    <title>Friday Night Originals</title>
-    <desc>Features live jam session of some of best musicians and bands</desc>
-    <category>Music</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg?width=700" />
-    <episode-num system="onscreen">2</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
+  <programme start="20261011165500 +0530" stop="20261011172000 +0530" channel="SongdewTV.in@SD">
+    <title>New Pinch</title>
+    <sub-title>Songdew | HINDI</sub-title>
+    <desc>Featuring best of new indie music</desc>
+    <category>Entertainment</category>
+    <language>HINDI</language>
+    <icon src="https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/cricket_images/images/Songdew-TV_720x405.jpg" />
   </programme>
-  <programme start="20261011171000 +0530" stop="20261011171500 +0530" channel="SongdewTV.in@SD">
-    <title>Songdew Fresh</title>
-    <desc>Latest Music</desc>
-    <category>Music</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg?width=700" />
-    <episode-num system="onscreen">11</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261011171500 +0530" stop="20261011172500 +0530" channel="SongdewTV.in@SD">
-    <title>Songdew Select</title>
-    <desc>Featuring Best of Independent Music</desc>
-    <category>Music</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg?width=700" />
-    <episode-num system="onscreen">12</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
+  <programme start="20261011172000 +0530" stop="20261011172500 +0530" channel="SongdewTV.in@SD">
+    <title>Unplugged</title>
+    <sub-title>Songdew | HINDI</sub-title>
+    <desc>Featuring best of acoustic music</desc>
+    <category>Entertainment</category>
+    <language>HINDI</language>
+    <icon src="https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/cricket_images/images/Songdew-TV_720x405.jpg" />
   </programme>
   <programme start="20261011172500 +0530" stop="20261011173000 +0530" channel="SongdewTV.in@SD">
     <title>Track Tales</title>
@@ -379411,40 +379333,6 @@ Delving into a range of varied topics, the host discusses the social, economic a
     <episode-num system="onscreen">E1</episode-num>
     <premiere />
   </programme>
-  <programme channel="custom.boomerang" start="20261011113000 +0000" stop="20261011114000 +0000">
-    <title lang="en">Looney Tunes</title>
-    <sub-title lang="en">Bedevilled Rabbit</sub-title>
-    <desc lang="en">Bugs Bunny is confused when he awakes to find himself in a carrot patch in the middle of Tasmania, but things go from bad to worse when the Tasmanian Devil himself turns up.</desc>
-    <credits>
-      <actor>Mel Blanc</actor>
-      <actor>June Foray</actor>
-    </credits>
-    <date>1957</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p24768210_b_h10_ae.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVY</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>0</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
-  </programme>
   <programme channel="custom.boomerang" start="20261011114000 +0000" stop="20261011115000 +0000">
     <title lang="en">Looney Tunes</title>
     <sub-title lang="en">What's Opera, Doc?</sub-title>
@@ -419537,39 +419425,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261011170700 +0530" stop="20261011171000 +0530" channel="custom.duck.tv">
-    <title>Lola and the Numbers</title>
-    <desc>Lola, a smart little girl, is fond of playing and learning. She loves to count with her friends who are numbers themselves.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/ff298db244e1f4dd7e45532194c6a7cc.jpg?width=700" />
-    <credits>
-      <director>Roza Györffy</director>
-    </credits>
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261011171000 +0530" stop="20261011171100 +0530" channel="custom.duck.tv">
-    <title>Nature Dudes</title>
-    <desc>The hosts present the natural rotation of seasons and its different impacts on the lives of various animals and plants throughout the year.</desc>
-    <category>Nature</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/490871073a72cbb039b7d61aab320ebe.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261011171100 +0530" stop="20261011171200 +0530" channel="custom.duck.tv">
-    <title>Happy Garden</title>
-    <desc>Young viewers learn how different types of fruits and vegetables grow from seeds in the Happy Garden and how people enjoy their taste and fragrance.</desc>
-    <category>House/garden</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/4f747ffc0c345f0dfea62c05405ea1d4.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261011171200 +0530" stop="20261011171400 +0530" channel="custom.duck.tv">
     <title>Nature Dudes</title>
     <desc>The hosts present the natural rotation of seasons and its different impacts on the lives of various animals and plants throughout the year.</desc>
@@ -426901,18 +426756,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <rating>
       <value>TVY</value>
     </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011114000 +0000" stop="20261011114300 +0000">
-    <title lang="en">ABC - duckBC</title>
-    <desc lang="en">Pen, Pencil, Stamp, Eraser and Brush introduce the Latin alphabet as they compete by writing letters in different styles.</desc>
-    <credits>
-      <director>Roza Györffy</director>
-    </credits>
-    <date>2016</date>
-    <category lang="en">Children</category>
-    <category lang="en">Fantasy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p21838774_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
   </programme>
   <programme channel="custom.ducktv" start="20261011114300 +0000" stop="20261011114500 +0000">
     <title lang="en">Sounds Around Us</title>
