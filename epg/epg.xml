@@ -6377,32 +6377,6 @@
     <desc lang="en">Bade and Chote present a compilation of the biggest and most popular songs from Punjabi movies, musicians and singers to entertain audiences.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_9X_TASHAN_16057_14OCT213000_14OCT220000/images/LANDSCAPE_169/1725015175000_Tashan_Bade-ChotesPlaylist_16057.jpg" />
   </programme>
-  <programme channel="AMC.us" start="20261011104600 +0000" stop="20261011115100 +0000">
-    <title lang="en">The Boulet Brothers' Dragula</title>
-    <sub-title lang="en">Frankenhooker</sub-title>
-    <desc lang="en">Guest judges Joe Bob Briggs and Diana Prince judge a music video with costumes inspired by "Frankenhooker.".</desc>
-    <date>2024</date>
-    <category lang="en">Series</category>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Game show</category>
-    <category lang="en">Horror</category>
-    <category lang="en">Competition Reality</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14519968_b_h8_ag.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S6 E8</episode-num>
-    <previously-shown />
-    <rating system="Régie du cinéma">
-      <value>18+</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>18+</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVMA</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>MA 15+</value>
-    </rating>
-  </programme>
   <programme channel="AMC.us" start="20261011115100 +0000" stop="20261011124600 +0000">
     <title lang="en">The Boulet Brothers' Dragula</title>
     <sub-title lang="en">Dead by Daylight</sub-title>
@@ -89387,12 +89361,6 @@ Bringing the best in television.</desc>
     <category>TV Show</category>
     <category>Entertainment</category>
   </programme>
-  <programme channel="DeenTV.uk" start="20261011100000 +0000" stop="20261011115200 +0000">
-    <title lang="en">Qari ul Quran</title>
-    <desc lang="en">Religious programme for all age groups which helps them to learn the correct way of reading the Quran.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Educational</category>
-  </programme>
   <programme channel="DeenTV.uk" start="20261011115200 +0000" stop="20261011120000 +0000">
     <title lang="en">Azan-E-Zuhr</title>
     <desc lang="en">A religious announcement for the prayer time.</desc>
@@ -133135,17 +133103,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <icon src="https://iptv-epg.org/images/Rb2rZ11FEmF-PckDUYDea0TZbUGtCReZpaZdGxIcZ6JXuXrpXiAR74YEgyOCKuXGfeu4CCsyze-iXKFH2z8rc4xaniZAxpd2T1OqLb4wDChlOs5xWd95BOiznM2X8-a4ofqZRxTcHIRIulGLYw9A1eWqNYgkwerdZHQOV09fFHt4ibKvGrLukghEI5msAHeqfafwgw" />
     <title lang="en">Sindhu</title>
   </programme>
-  <programme start="20261011171000 +0530" stop="20261011172000 +0530" channel="FoodFood.in@SD">
-    <title>Great Recipes - Great Chef</title>
-    <desc>Renowned chefs teach the viewers how to prepare various mouthwatering recipes in a simple way and provide essential cooking tips.</desc>
-    <category>Cooking</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/47b0558d1188fdc76507ec0581d51c8a.jpg?width=700" />
-    <episode-num system="onscreen">22</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261011172000 +0530" stop="20261011173000 +0530" channel="FoodFood.in@SD">
     <title>Meethi Mulaqaat</title>
     <desc>Bringing the best in television.</desc>
@@ -134432,12 +134389,16 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme channel="GREATmovies.uk" start="20261011101400 +0000" stop="20261011114900 +0000">
-    <title lang="en">The House On The Hill</title>
-    <desc lang="en">2019 Dark thriller with Samaire Armstrong. After years in a mental hospital, Megan visits her brother, only to find no one even remembers him. Is she losing her mind or is a sinister plot in play?</desc>
-    <category>Film</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800011-20261011154400/list/GreatMoviesTheHouseOnTheHill215137080e974ef4796410aa69dc78a1e6590a1.jpg" />
+  <programme channel="GREATmovies.uk" start="20261011101000 +0000" stop="20261011120000 +0000">
+    <title lang="en">Hailey Dean Mysteries: A</title>
+    <desc lang="en">Marriage Made For Murder: When her code of ethics prevents her from telling the police about a client's confession, can Hailey find another way to bring a killer to justice.</desc>
+    <date>2018</date>
+    <category lang="en">Movie</category>
+    <category lang="en">Mystery</category>
+    <icon src="https://images.metadata.sky.com/pd-image/48af3acf-d262-4ac9-a469-6d76e97243ad/16-9" />
+    <rating system="UK">
+      <value>PG</value>
+    </rating>
   </programme>
   <programme channel="GREATmovies.uk" start="20261011120000 +0000" stop="20261011130000 +0000">
     <title lang="en">Murder, She Wrote</title>
@@ -137879,13 +137840,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
       <producer>Nagendra Babu</producer>
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p11356569_v_h10_ab.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="HUMMasala.pk" start="20261011110300 +0000" stop="20261011115200 +0000">
-    <title lang="en">Question Hour</title>
-    <desc lang="en">A hard-hitting talk show that will exercise the right to ask pertinent and difficult questions to the concerned authorities.</desc>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Chat Show</category>
-    <icon src="https://images.metadata.sky.com/pd-image/d27749af-10e7-493a-b8a0-8694996114a7/16-9" />
   </programme>
   <programme channel="HUMMasala.pk" start="20261011115200 +0000" stop="20261011115700 +0000">
     <title lang="en">Azan-e-Zuhr</title>
@@ -146024,17 +145978,12 @@ Retiree Alex Strategos is consumed by loneliness. He turns to internet dating an
     <icon src="https://iptv-epg.org/images/3TVoxJRagkCNi0S_CJDD9C_MEiP0aXTEDp9sZ2vM5YfuaQ3oy2e_slxUwWRYKslqHa8FrBgpX9yeqp9iiiKkEcsw2UGz2DwICpveEIFuZP14u2qfajP9C92GhmGY" />
     <title lang="en">Web of Lies</title>
   </programme>
-  <programme channel="IqraBangla.uk" start="20261011113000 +0000" stop="20261011115200 +0000">
-    <title lang="en">Islamic Q&amp;A With IQRA</title>
-    <desc lang="en">Question and Answer program related to daily islamic life.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Religion</category>
-  </programme>
-  <programme channel="IqraBangla.uk" start="20261011115200 +0000" stop="20261011115700 +0000">
-    <title lang="en">Azan-E-Zuhr</title>
-    <desc lang="en">The adhan (Azaan) is a special Islamic call to salat (prayer).Timing of azan is based on East London Mosque.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Religion</category>
+  <programme start="20261011120000 +0100" stop="20261011130000 +0100" channel="IqraBangla.uk">
+    <title>Iqra-Ul-Quran</title>
+    <desc>Live call in session for viewers to learn and engage with the Quran daily. It's designed to improve your Tajweed to follow in recitation to make it beautiful and accurate.</desc>
+    <rating>
+      <value>--</value>
+    </rating>
   </programme>
   <programme start="20261011130000 +0100" stop="20261011133000 +0100" channel="IqraBangla.uk">
     <title>Hamd O Naat</title>
@@ -196102,16 +196051,6 @@ Shalini lives in America but desires to relocate to India. Meanwhile, a girl fro
     <desc lang="en">Bhola seeks work in the city and catches the eye of Aveera, but must save his village.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_PITAARA_1690139_14OCT200000_14OCT230000/images/LANDSCAPE_169_HD/Pitaara_OyeBholeOye_1690139.jpg" />
   </programme>
-  <programme start="20261011170900 +0530" stop="20261011171900 +0530" channel="PocketFilms.in">
-    <title>Once Upon A Time In Office</title>
-    <desc>A young woman faces unfair treatment from older male colleagues, causing discomfort. After seeking help without success, she ponders ways to address and overcome the challenging situation at work.</desc>
-    <category>Comedy</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/5c16fb9ec73c413ab4f7d045b332439c.jpg?width=700" />
-    <rating>
-      <value>U/A-13</value>
-    </rating>
-  </programme>
   <programme start="20261011171900 +0530" stop="20261011174900 +0530" channel="PocketFilms.in">
     <title>Pilibhit</title>
     <desc>Siraj, a poor flute maker, resides in the forest of Pilibhit, known for its man-eating tigers. Soon, his poverty and the tragedies in his life threaten to break his values.</desc>
@@ -200669,13 +200608,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <desc lang="en">A comprehensive compilation of some of the most popular songs produced by renowned artists is played to enthrall the audience.</desc>
     <icon src="https://iptv-epg.org/images/kIGMbNgmfX1YSmQwwE7SGufwTyQDQ9jq_JyJtZhUhJWhsbPK3yYVbDabpsoiZ1HBRDLr9qXzKTPgc_p8IDbJnvNotmVQlZOHsR5WVJwnmfE1tGcAJOUgPrJZNT1v" />
     <title lang="en">Music Xpress</title>
-  </programme>
-  <programme channel="Pop.uk" start="20261011114100 +0000" stop="20261011115000 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261011171100/list/ZEEPOPGrizzyAndTheLemmings2056732c374f264f1924f879323487a40dbebe1.jpg" />
   </programme>
   <programme channel="Pop.uk" start="20261011115000 +0000" stop="20261011115900 +0000">
     <title lang="en">Grizzy And The Lemmings</title>
@@ -207372,19 +207304,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <title lang="en">Unarvugal</title>
     <desc lang="en">An emotional talk show explores feelings, relationships, and life experiences, offering comfort, understanding, and inspiration to viewers.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_PUTHU_YUGAM_90863_14OCT213000_14OCT220000/images/LANDSCAPE_169_HD/PUTHUYUGAM_Unarvugal_90863.jpg" />
-  </programme>
-  <programme start="20261011150800 +0530" stop="20261011171900 +0530" channel="QelloConcertsbyStingray.ca@SD">
-    <title>Matchbox Twenty - Live in London 2012</title>
-    <desc>Filmed at Roundhouse, London, this concert film will give all fans an experience from start to finish; Matchbox Twenty performs their hits including Bright Lights, Parade, You're So Real, and more.</desc>
-    <category>Special</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b50fdaebae8811b4ae565174db17f31a.jpg?width=700" />
-    <credits>
-      <actor>Matchbox 20</actor>
-    </credits>
-    <rating>
-      <value>TVPG</value>
-    </rating>
   </programme>
   <programme start="20261011171900 +0530" stop="20261011192200 +0530" channel="QelloConcertsbyStingray.ca@SD">
     <title>Lenny Kravitz - Live at the iTunes Festival</title>
@@ -237234,21 +237153,16 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <icon src="https://tv.assets.pressassociation.io/4ac10a17-809d-5998-ac39-064bc977d8e8.jpg" />
     <episode-num system="onscreen">S2026 E31</episode-num>
   </programme>
-  <programme start="20261011165500 +0530" stop="20261011172000 +0530" channel="SongdewTV.in@SD">
-    <title>New Pinch</title>
-    <sub-title>Songdew | HINDI</sub-title>
-    <desc>Featuring best of new indie music</desc>
-    <category>Entertainment</category>
-    <language>HINDI</language>
-    <icon src="https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/cricket_images/images/Songdew-TV_720x405.jpg" />
-  </programme>
-  <programme start="20261011172000 +0530" stop="20261011172500 +0530" channel="SongdewTV.in@SD">
-    <title>Unplugged</title>
-    <sub-title>Songdew | HINDI</sub-title>
-    <desc>Featuring best of acoustic music</desc>
-    <category>Entertainment</category>
-    <language>HINDI</language>
-    <icon src="https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/cricket_images/images/Songdew-TV_720x405.jpg" />
+  <programme start="20261011171500 +0530" stop="20261011172500 +0530" channel="SongdewTV.in@SD">
+    <title>Songdew Select</title>
+    <desc>Featuring Best of Independent Music</desc>
+    <category>Music</category>
+    <language>English</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg?width=700" />
+    <episode-num system="onscreen">12</episode-num>
+    <rating>
+      <value>U</value>
+    </rating>
   </programme>
   <programme start="20261011172500 +0530" stop="20261011173000 +0530" channel="SongdewTV.in@SD">
     <title>Track Tales</title>
@@ -314939,41 +314853,11 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <desc lang="en">After the murder of Veer's parents, adopted girl Leela enters the royal Haveli to protect the rightful heir while battling conspiracies and power-hungry relatives.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_TARANG_2110399_14OCT213000_14OCT220000/images/LANDSCAPE_169/1784396018000_TARANG_AManaManena_2110399.jpg" />
   </programme>
-  <programme start="20261011170800 +0530" stop="20261011171900 +0530" channel="TeluguOne.in@HD">
-    <title>Siva Putrudu</title>
-    <desc>An outcast, who is raised by the caretaker of a cemetery, ends up working at a cannabis farm. Later, he is arrested and befriends a fellow inmate.</desc>
-    <category>Action</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b582a07f3521f6d9f8baa1a26d2d10df.jpg?width=700" />
-    <credits>
-      <actor>Vikram</actor>
-      <actor>Suriya</actor>
-      <actor>Mahadevan</actor>
-      <actor>Karunas</actor>
-      <actor>Manobala</actor>
-      <actor>Laila</actor>
-    </credits>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261011171900 +0530" stop="20261011173100 +0530" channel="TeluguOne.in@HD">
-    <title>Siva Putrudu</title>
-    <desc>An outcast, who is raised by the caretaker of a cemetery, ends up working at a cannabis farm. Later, he is arrested and befriends a fellow inmate.</desc>
-    <category>Action</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b582a07f3521f6d9f8baa1a26d2d10df.jpg?width=700" />
-    <credits>
-      <actor>Vikram</actor>
-      <actor>Suriya</actor>
-      <actor>Mahadevan</actor>
-      <actor>Karunas</actor>
-      <actor>Manobala</actor>
-      <actor>Laila</actor>
-    </credits>
-    <rating>
-      <value>U</value>
-    </rating>
+  <programme start="20261011170000 +0530" stop="20261011173000 +0530" channel="TeluguOne.in@HD">
+    <title>Program@17:00</title>
+    <sub-title>Telugu One | TELUGU</sub-title>
+    <language>TELUGU</language>
+    <icon src="http://static.aka.yupp.yuppcdn.net/yupptv/roku/images/skyworth/v5/Telugu-One_roku.jpg" />
   </programme>
   <programme start="20261011173100 +0530" stop="20261011174300 +0530" channel="TeluguOne.in@HD">
     <title>Siva Putrudu</title>
@@ -317330,14 +317214,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme start="20261011170800 +0530" stop="20261011172000 +0530" channel="ThalaaTV.in">
-    <title>Idhaya Vaasal </title>
-    <sub-title>THALAA TV | TAMIL</sub-title>
-    <desc>Aravind falls for Vaani, but her parents? disapproval sparks a fight for their love.</desc>
-    <category>Drama</category>
-    <language>TAMIL</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/THALAA%20TV/POSTER/Idhaya%20Vaasal.png" />
   </programme>
   <programme start="20261011172000 +0530" stop="20261011173300 +0530" channel="ThalaaTV.in">
     <title>Idhaya Vaasal </title>
@@ -319833,13 +319709,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <title lang="en">The Survival Of Fittest</title>
     <desc lang="en">Although his lifestyle involves honey, bas and lots of ps, Baloo thinks he is very fit…</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acb9d85a98f93e8a69511cf/images/LANDSCAPE_169/9360_8e35c6f4-9047-4a08-84a0-b1e58677123a.png" />
-  </programme>
-  <programme channel="TinyPop.uk" start="20261011113800 +0000" stop="20261011114900 +0000">
-    <title lang="en">Masha And The Bear Shorties</title>
-    <desc lang="en">Masha is getting ready for school. Masha is trying to squeeze in a bus a stroller with her little baby Rose. Masha and the animals are dancing a Hawaiian dance.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261011170800/list/TinyPOPMashaAndTheBearShorties2056997b5935274c74c4831bf8473276b028157.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261011114900 +0000" stop="20261011120000 +0000">
     <title lang="en">Masha And The Bear Shorties</title>
@@ -336736,31 +336605,6 @@ The host travels to the historic city of Savannah, exploring its elegant charm, 
     <desc lang="en">After being abandoned by his sons, an elderly father grappling with dementia embarks on a life-changing journey. He is aided by a cunning thief who is determined to reunite him with his family.</desc>
     <icon src="https://iptv-epg.org/images/PjUWY8uTlqT6riTbFE0PaXBo-w6yV2y02tvY9F9gNlZ-UX25q5IatJIQsT3v1PqqqncWAN3mDWOJi4yCFJqFOPVKIflhxJDTAHng4hvRXqQW90NyHCKDfSCvYh8OMw" />
     <title lang="en">Vanvaas</title>
-  </programme>
-  <programme start="20261011082600 +0000" stop="20261011114900 +0000" channel="ZeeCinema.in@HD">
-    <category lang="en">Film</category>
-    <category lang="en">Romance</category>
-    <credits>
-      <director>Sooraj R. Barjatya</director>
-      <actor>Shahid Kapoor</actor>
-      <actor>Amrita Rao</actor>
-      <actor>Anupam Kher</actor>
-      <actor>Alok Nath</actor>
-      <actor>Seema Biswas</actor>
-      <actor>Samir Soni</actor>
-      <actor>Lata Sabharwal</actor>
-      <actor>Manoj Joshi</actor>
-      <actor>Amrita Prakash</actor>
-      <actor>Dinesh Lamba</actor>
-      <actor>Ameya Pandya</actor>
-      <actor>Jatin Sial</actor>
-      <actor>Aditi Bhatia</actor>
-      <actor>Ayesha Takia</actor>
-      <producer>Rajkumar Barjatya</producer>
-    </credits>
-    <desc lang="en">Poonam, a traditional young woman, gets engaged to Prem, a wealthy man. Their faith and love are tested when an accident occurs and leaves Poonam with first degree burns.</desc>
-    <icon src="https://iptv-epg.org/images/2jXkG9KQIQcaqcV2o-htDj-qN-9mAwwcKYkM0A3WlykFyKBVNeo3mOQ0vOAvUNPkyc1D_2iDNsLWosQPX-dmyHrJtwPe6QzW6VJB_fjGwywgFQtzipdQHkuBhg" />
-    <title lang="en">Vivah: A Journey From Engagement to Marriage</title>
   </programme>
   <programme channel="ZeeCinema.in@HD" start="20261011195500 +0530" stop="20261011231800 +0530">
     <title lang="en">Bajrangi Bhaijaan</title>
@@ -361547,32 +361391,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="custom.amc.tv" start="20261011104600 +0000" stop="20261011115100 +0000">
-    <title lang="en">The Boulet Brothers' Dragula</title>
-    <sub-title lang="en">Frankenhooker</sub-title>
-    <desc lang="en">Guest judges Joe Bob Briggs and Diana Prince judge a music video with costumes inspired by "Frankenhooker.".</desc>
-    <date>2024</date>
-    <category lang="en">Series</category>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Game show</category>
-    <category lang="en">Horror</category>
-    <category lang="en">Competition Reality</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14519968_b_h8_ag.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S6 E8</episode-num>
-    <previously-shown />
-    <rating system="Régie du cinéma">
-      <value>18+</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>18+</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVMA</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>MA 15+</value>
-    </rating>
-  </programme>
   <programme channel="custom.amc.tv" start="20261011115100 +0000" stop="20261011124600 +0000">
     <title lang="en">The Boulet Brothers' Dragula</title>
     <sub-title lang="en">Dead by Daylight</sub-title>
@@ -378795,70 +378613,12 @@ Delving into a range of varied topics, the host discusses the social, economic a
     <episode-num system="onscreen">E1</episode-num>
     <premiere />
   </programme>
-  <programme channel="custom.boomerang" start="20261011114000 +0000" stop="20261011115000 +0000">
-    <title lang="en">Looney Tunes</title>
-    <sub-title lang="en">What's Opera, Doc?</sub-title>
-    <desc lang="en">Elmer Fudd is hunting Bugs Bunny and chases him into an opera where they act out their characters.</desc>
-    <credits>
-      <actor>Mel Blanc</actor>
-      <actor>June Foray</actor>
-    </credits>
-    <date>1957</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
+  <programme channel="custom.boomerang" start="20261011110000 +0000" stop="20261011120000 +0000">
+    <title lang="en">What's New Scooby-Doo?</title>
+    <desc lang="en">Mummy Scares Best; The Fast And The Wormious; The Mystery Inc. gang travels to Egypt, where, on an archaeological dig, a mummy is on the loose and turning everyone into Zombies.</desc>
     <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p24768210_b_h10_ae.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVY</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>0</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
-  </programme>
-  <programme channel="custom.boomerang" start="20261011115000 +0000" stop="20261011120000 +0000">
-    <title lang="en">Looney Tunes</title>
-    <sub-title lang="en">Touche and Go</sub-title>
-    <desc lang="en">Pepé le Pew pursues a cat by the seaside, under the sea and on a desert island.</desc>
-    <credits>
-      <actor>Mel Blanc</actor>
-      <actor>June Foray</actor>
-    </credits>
-    <date>1957</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p24768210_b_h10_ae.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>0</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
+    <category lang="en">Cartoon</category>
+    <icon src="https://images.metadata.sky.com/pd-image/cc07297b-1b3c-4140-81b6-469f16f90e4a/16-9" />
   </programme>
   <programme channel="custom.boomerang" start="20261011120000 +0000" stop="20261011121000 +0000">
     <title lang="en">Tom &amp; Jerry</title>
@@ -418887,36 +418647,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261011171500 +0530" stop="20261011171900 +0530" channel="custom.duck.tv">
-    <title>Dotty, the Kitty</title>
-    <desc>Dotty the kitten tries to complete pictures by connecting the dots on the outline of various objects selected by the pencil.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/1cee4e050e2141fcaf193faed3e2b6a3.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261011171900 +0530" stop="20261011172000 +0530" channel="custom.duck.tv">
-    <title>Happy Garden</title>
-    <desc>Young viewers learn how different types of fruits and vegetables grow from seeds in the Happy Garden and how people enjoy their taste and fragrance.</desc>
-    <category>House/garden</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/4f747ffc0c345f0dfea62c05405ea1d4.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261011172000 +0530" stop="20261011172200 +0530" channel="custom.duck.tv">
-    <title>My Pet Family</title>
-    <desc>Tony goes on adventures together with his beloved pets, Molly and Lucas, as he cares and plays with them responsibly.</desc>
-    <category>Entertainment</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/7b64f0a909ba145d976c33a76f90901a.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261011172200 +0530" stop="20261011172400 +0530" channel="custom.duck.tv">
     <title>Cucu, I'm here!</title>
     <desc>Two little imaginary friends Peeky-Pink and Peeky-Blue keep themselves busy playing hide and seek games all through the day around their house.</desc>
@@ -426198,23 +425928,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <rating>
       <value>TVY</value>
     </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011114800 +0000" stop="20261011115000 +0000">
-    <title lang="en">Home Sweet Home</title>
-    <desc lang="en">A look at the baby animals well-known to toddlers in the stories of "Home Sweet Home," who return to their families and cuddle with their loved ones after exploring their surroundings.</desc>
-    <date>2018</date>
-    <category lang="en">Children</category>
-    <category lang="en">Animals</category>
-    <icon src="http://dtil.tmsimg.com/assets/p15310231_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="custom.ducktv" start="20261011115000 +0000" stop="20261011115100 +0000">
-    <title lang="en">Nature Dudes</title>
-    <desc lang="en">A compilation of educational videos about the four seasons where animals and plants demonstrate how they enjoy the changing weather all year.</desc>
-    <date>2017</date>
-    <category lang="en">Nature</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14696642_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
   </programme>
   <programme channel="custom.ducktv" start="20261011115100 +0000" stop="20261011115400 +0000">
     <title lang="en">Monica and Rudy 2</title>
@@ -553300,13 +553013,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <icon src="https://iptv-epg.org/images/IPW5egNi4A4S7oW_wIMKOxNzvsDHIlvkPuMJcevVtw4d8-ruSCeAXob76UkYJQCqFsnHQS5QEJgNn5PoIKWq31rXmNO1Y_viSNv6LUspJ1jE7sDgqB24FQ363lg1Wg" />
     <title lang="en">The 51 Percent</title>
   </programme>
-  <programme channel="hmair.hummasala" start="20261011110300 +0000" stop="20261011115200 +0000">
-    <title lang="en">Question Hour</title>
-    <desc lang="en">A hard-hitting talk show that will exercise the right to ask pertinent and difficult questions to the concerned authorities.</desc>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Chat Show</category>
-    <icon src="https://images.metadata.sky.com/pd-image/d27749af-10e7-493a-b8a0-8694996114a7/16-9" />
-  </programme>
   <programme channel="hmair.hummasala" start="20261011115200 +0000" stop="20261011115700 +0000">
     <title lang="en">Azan-e-Zuhr</title>
     <desc lang="en">A call for prayer for Namaz-e-Zuhar.</desc>
@@ -581027,31 +580733,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261011082600 +0000" stop="20261011114900 +0000" channel="hmair.zeecinemahd">
-    <category lang="en">Film</category>
-    <category lang="en">Romance</category>
-    <credits>
-      <director>Sooraj R. Barjatya</director>
-      <actor>Shahid Kapoor</actor>
-      <actor>Amrita Rao</actor>
-      <actor>Anupam Kher</actor>
-      <actor>Alok Nath</actor>
-      <actor>Seema Biswas</actor>
-      <actor>Samir Soni</actor>
-      <actor>Lata Sabharwal</actor>
-      <actor>Manoj Joshi</actor>
-      <actor>Amrita Prakash</actor>
-      <actor>Dinesh Lamba</actor>
-      <actor>Ameya Pandya</actor>
-      <actor>Jatin Sial</actor>
-      <actor>Aditi Bhatia</actor>
-      <actor>Ayesha Takia</actor>
-      <producer>Rajkumar Barjatya</producer>
-    </credits>
-    <desc lang="en">Poonam, a traditional young woman, gets engaged to Prem, a wealthy man. Their faith and love are tested when an accident occurs and leaves Poonam with first degree burns.</desc>
-    <icon src="https://iptv-epg.org/images/2jXkG9KQIQcaqcV2o-htDj-qN-9mAwwcKYkM0A3WlykFyKBVNeo3mOQ0vOAvUNPkyc1D_2iDNsLWosQPX-dmyHrJtwPe6QzW6VJB_fjGwywgFQtzipdQHkuBhg" />
-    <title lang="en">Vivah: A Journey From Engagement to Marriage</title>
-  </programme>
   <programme channel="hmair.zeecinemahd" start="20261011195800 +0530" stop="20261011230500 +0530">
     <title lang="en">Bajrangi Bhaijaan</title>
     <desc lang="en">Pawan Chaturvedi rises above the divisive bounds of nationality and religion to help a little Pakistani girl stranded in India.</desc>
@@ -590238,21 +589919,15 @@ A young woman's unexpected bond with a much older businessman brings emotional t
     <category lang="en">Hindi</category>
     <category lang="en">Film</category>
   </programme>
-  <programme channel="staging.islam.tv" start="20261011113000 +0000" stop="20261011115000 +0000">
-    <title lang="en">Short Film: I am Jerusalem</title>
-    <desc lang="en">Experimental Short Film: In a world fractured by fear and division, Bilal, a man broken by personal loss, sets out on a journey to find freedom and unity.</desc>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Arts</category>
-  </programme>
-  <programme channel="staging.islam.tv" start="20261011115000 +0000" stop="20261011115200 +0000">
-    <title lang="en">Oh Allah</title>
-    <desc lang="en">A series of supplications to the almighty Allah.</desc>
+  <programme channel="staging.islam.tv" start="20261011115100 +0000" stop="20261011115600 +0000">
+    <title lang="en">Zuhr Azan</title>
+    <desc lang="en">Islamic call to prayer - Invites Muslims to perform the FARD prayer, Timing of azan is based on London Croydon Mosque.</desc>
     <category lang="en">News &amp; Documentary</category>
     <category lang="en">Religion</category>
   </programme>
-  <programme channel="staging.islam.tv" start="20261011115200 +0000" stop="20261011120000 +0000">
-    <title lang="en">Dhuhr Adhan</title>
-    <desc lang="en">Dhuhr Adhan.</desc>
+  <programme channel="staging.islam.tv" start="20261011115600 +0000" stop="20261011120000 +0000">
+    <title lang="en">Ad Dua</title>
+    <desc lang="en">Some selected supplications from the Quran and Hadeeth.</desc>
     <category lang="en">News &amp; Documentary</category>
     <category lang="en">Religion</category>
   </programme>
