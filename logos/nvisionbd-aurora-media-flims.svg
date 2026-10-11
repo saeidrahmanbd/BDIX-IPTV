@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" role="img" aria-label="Aurora Media Films logo">
-<defs><linearGradient id="aur" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#071a3a"/><stop offset=".6" stop-color="#2c4277"/><stop offset="1" stop-color="#080c19"/></linearGradient></defs><rect width="320" height="180" fill="url(#aur)"/>
-<path d="M0 95Q45 44 92 80T185 72T320 63" fill="none" stroke="#62e7d7" stroke-width="7" opacity=".8"/><path d="M0 108Q45 57 92 93T185 85T320 76" fill="none" stroke="#a28dff" stroke-width="3"/>
-<circle cx="160" cy="48" r="18" fill="#ffe1a1"/><path d="M135 49Q160 18 185 49Q160 40 135 49Z" fill="#ffe1a1"/><text x="160" y="130" fill="#ffffff" font-family="Arial,sans-serif" font-size="26" font-weight="800" text-anchor="middle" letter-spacing="2">AURORA MEDIA</text><text x="160" y="153" fill="#8df2e2" font-family="Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle" letter-spacing="6">FILMS</text></svg>
