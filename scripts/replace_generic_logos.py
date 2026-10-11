@@ -362,6 +362,22 @@ DIRECT_LOGO_HINTS = {
         "license": "Source/rights should be verified separately",
         "license_url": "",
     },
+    "51 Radio TV [geo-blocked]": {
+        "url": "https://raw.githubusercontent.com/iprtl/p1/master/logo/51radiotv.webp",
+        "format": "WEBP",
+        "page": "https://github.com/iprtl/p1/tree/master/logo",
+        "source": "IPRTL logo collection exact 51 Radio TV match",
+        "license": "Logo source found in public repository; reuse rights not stated",
+        "license_url": "",
+    },
+    "Uttorbango Betar": {
+        "url": "https://im1.lixty.com/images/bd-uttorbango-betar-logo.jpg",
+        "format": "JPEG",
+        "page": "https://github.com/junguler/m3u-radio-music-playlists/blob/4f7f422c65652805edf56a71b7ab17ac417b2755/lixty/Bengali.m3u",
+        "source": "Lixty Bengali radio logo reference",
+        "license": "Station artwork; reuse rights not specified",
+        "license_url": "",
+    },
 }
 
 STOP_WORDS = {"hd", "uhd", "fhd", "sd", "4k", "8k", "1080p", "720p", "576p", "hevc", "h265", "h264"}
