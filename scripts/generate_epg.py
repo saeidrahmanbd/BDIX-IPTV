@@ -401,7 +401,7 @@ def main():
                         continue
                     safe_children = []
                     for child in children:
-                        if child.tag in TEXT_FIELDS and DEVANAGARI_RE.search(child.text or ""):
+                        if is_indian_bangla and child.tag in TEXT_FIELDS and DEVANAGARI_RE.search(child.text or ""):
                             # A Hindi-script subtitle/description is also not
                             # useful on a Bengali channel; discard that field.
                             continue
