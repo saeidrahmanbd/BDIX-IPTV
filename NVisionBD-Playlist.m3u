@@ -817,13 +817,13 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1axZtL6
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3DfvmZRY2Rvetnd9qsZq1k
 #EXTINF:-1 xui-id="643" tvg-id="PTVFOXS" tvg-name="UK Fox Sports Cricket" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fox-sports.png" tvg-chno="406" channel-id="PTVFOXS" group-title="Sports",UK Fox Sports Cricket
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2mwyelB6J-OClHxbFWnB73
-#EXTINF:-1 xui-id="826" tvg-id="TNTSPOR" tvg-name="UK TNT Sports 1 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-uk-tnt-sports-1.png" tvg-chno="407" channel-id="TNTSPOR" group-title="Sports",UK TNT Sports 1 HD
+#EXTINF:-1 xui-id="826" tvg-id="tntsports1.uk" tvg-name="UK TNT Sports 1 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-uk-tnt-sports-1.png" tvg-chno="407" channel-id="tntsports1.uk" group-title="Sports",UK TNT Sports 1 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2O7JEhzQcoET8WwJM1KdLy
-#EXTINF:-1 xui-id="425" tvg-id="TNTSPOR" tvg-name="UK TNT Sports 2 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-uk-tnt-sports-2.png" tvg-chno="408" channel-id="TNTSPOR" group-title="Sports",UK TNT Sports 2 HD
+#EXTINF:-1 xui-id="425" tvg-id="tntsports2.uk" tvg-name="UK TNT Sports 2 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-uk-tnt-sports-2.png" tvg-chno="408" channel-id="tntsports2.uk" group-title="Sports",UK TNT Sports 2 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-09ezPbJa9ATlGge1DBLeBD
-#EXTINF:-1 xui-id="18073" tvg-id="TNTSPOR" tvg-name="UK TNT Sports 3 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-uk-tnt-sports-3.png" tvg-chno="409" channel-id="TNTSPOR" group-title="Sports",UK TNT Sports 3 HD
+#EXTINF:-1 xui-id="18073" tvg-id="tntsports3.uk" tvg-name="UK TNT Sports 3 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-uk-tnt-sports-3.png" tvg-chno="409" channel-id="tntsports3.uk" group-title="Sports",UK TNT Sports 3 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-14AXbmojM893qG4k9NHkX9
-#EXTINF:-1 xui-id="180975" tvg-id="TNTSPOR" tvg-name="UK TNT Sports 4 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-uk-tnt-sports-4.png" tvg-chno="410" channel-id="TNTSPOR" group-title="Sports",UK TNT Sports 4 HD
+#EXTINF:-1 xui-id="180975" tvg-id="tntsports4.uk" tvg-name="UK TNT Sports 4 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-uk-tnt-sports-4.png" tvg-chno="410" channel-id="tntsports4.uk" group-title="Sports",UK TNT Sports 4 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3KDwKNgcjP4MpZ3jI-JIH-
 #EXTINF:-1 xui-id="188462" tvg-id="custom.unite8.sports.1" tvg-name="Unite8 Sports 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-unite8-sports-1.webp" tvg-chno="411" channel-id="custom.unite8.sports.1" group-title="Sports",Unite8 Sports 1
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0NC1bLTABFriKAjO0OWgc8
@@ -835,9 +835,9 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2aDwJaY
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0tGOpIi8mN9OExs2GZtGj5
 #EXTINF:-1 xui-id="942" tvg-id="SSPOFBH" tvg-name="US Sky Sports Football" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-sports-football.png" tvg-chno="415" channel-id="SSPOFBH" group-title="Sports",US Sky Sports Football
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-34Ue-pRetKnuf6rci4ntg4
-#EXTINF:-1 xui-id="941" tvg-id="SKSPARH" tvg-name="US Sky Sports Main Event" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-us-sky-sports-main-event.png" tvg-chno="416" channel-id="SKSPARH" group-title="Sports",US Sky Sports Main Event
+#EXTINF:-1 xui-id="941" tvg-id="skysportsmainevent.uk" tvg-name="US Sky Sports Main Event" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-us-sky-sports-main-event.png" tvg-chno="416" channel-id="skysportsmainevent.uk" group-title="Sports",US Sky Sports Main Event
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2G5QzSeGUNUf5wt8_B2xjW
-#EXTINF:-1 xui-id="944" tvg-id="SKSPARH" tvg-name="US Sky Sports Premier League" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-us-sky-sports-premier-league.png" tvg-chno="417" channel-id="SKSPARH" group-title="Sports",US Sky Sports Premier League
+#EXTINF:-1 xui-id="944" tvg-id="skysportspremiereleague.uk" tvg-name="US Sky Sports Premier League" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-us-sky-sports-premier-league.png" tvg-chno="417" channel-id="skysportspremiereleague.uk" group-title="Sports",US Sky Sports Premier League
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1EWb4fUgf5zkHWJ912OkOw
 #EXTINF:-1 xui-id="629" tvg-id="WILXHD" tvg-name="US Willow 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/us-willow-sports-hd.png" tvg-chno="418" channel-id="WILXHD" group-title="Sports",US Willow 2
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0hOE8ta5jHNQq-64R9nMmU
