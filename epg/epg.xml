@@ -14620,15 +14620,13 @@ A closer look at international news, events, current affairs, and exclusive stor
       <stereo>stereo</stereo>
     </audio>
   </programme>
-  <programme channel="AnimalPlanet.in@SD" start="20261011105600 +0530" stop="20261011115100 +0530">
-    <title lang="en">The View From on High</title>
-    <desc lang="en">Using drones, helicopters and balloons, the filmmaker attempts to uncover the hidden secrets of nature that have been inaccessible to humans.</desc>
-    <credits>
-      <director>Andrea Gastgeb</director>
-    </credits>
-    <category lang="en">Documentary</category>
-    <category lang="en">Nature</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27551108_b_h9_ag.jpg?lock=880x660" />
+  <programme channel="AnimalPlanet.in@SD" start="20261011052600 +0000" stop="20261011062100 +0000">
+    <title lang="zh">The View From on High</title>
+    <desc>Using drones, helicopters and balloons, the filmmaker attempts to uncover the hidden secrets of nature that have been inaccessible to humans.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
   <programme channel="AnimalPlanet.in@SD" start="20261011115100 +0530" stop="20261011124600 +0530">
     <title lang="en">Wild Cats</title>
@@ -125258,65 +125256,45 @@ Little Singham, an honest but ferocious police officer, fights against injustice
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/b1c09a0ae4255811fa3fbd954558c4fa.jpg" />
     <premiere />
   </programme>
-  <programme channel="InvestigationDiscovery.in@SD" start="20261011112100 +0530" stop="20261011114900 +0530">
-    <title lang="en">Redrum</title>
-    <desc lang="en">Tyrannised by his father and traumatised by his sexually abusive scout master, Heath takes a gun to his family; will more violence follow this massacre?</desc>
-    <credits>
-      <actor>D.C. Goode</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Crime</category>
-    <icon src="https://dtil.tmsimg.com/assets/p9734515_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E1</episode-num>
+  <programme channel="InvestigationDiscovery.in@SD" start="20261011054600 +0000" stop="20261011063600 +0000">
+    <title lang="zh">True Conviction</title>
+    <desc>A hooded gunman shoots and kills Donna Willard while her son watches from the top of the stairs.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
-  <programme channel="InvestigationDiscovery.in@SD" start="20261011114900 +0530" stop="20261011124500 +0530">
-    <title lang="en">The Murder Tapes</title>
-    <desc lang="en">Tempers flare outside a home where Savannah police officers discover three bodies; one argument may offer a vital lead in the case.</desc>
-    <credits>
-      <actor>Dave DeAndrea</actor>
-      <actor>Vic Noto</actor>
-      <actor>Rob LaColla Jr.</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Crime</category>
-    <icon src="https://dtil.tmsimg.com/assets/p21635427_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S5 E6</episode-num>
+  <programme channel="InvestigationDiscovery.in@SD" start="20261011063600 +0000" stop="20261011073000 +0000">
+    <title lang="zh">Evil Lives Here</title>
+    <desc>Dennis Ryan grows up believing his father's violent teachings will prepare him to save the lives of everyone in their farmhouse, then the teenager discovers the horrible truth.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
-  <programme channel="InvestigationDiscovery.in@SD" start="20261011124500 +0530" stop="20261011134100 +0530">
-    <title lang="en">Shattered</title>
-    <desc lang="en">In 2001, a man's visit home turns into a desperate search for his missing father.</desc>
-    <category lang="en">Documentary</category>
-    <category lang="en">Others</category>
-    <icon src="https://dtil.tmsimg.com/assets/p15863467_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S2 E3</episode-num>
+  <programme channel="InvestigationDiscovery.in@SD" start="20261011073000 +0000" stop="20261011083000 +0000">
+    <title lang="zh">Evil Lives Here</title>
+    <desc>Dennis Ryan grows up believing his father's violent teachings will prepare him to save the lives of everyone in their farmhouse, then the teenager discovers the horrible truth.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
-  <programme channel="InvestigationDiscovery.in@SD" start="20261011134100 +0530" stop="20261011143700 +0530">
-    <title lang="en">Evil Lives Here</title>
-    <desc lang="en">Debra Davis never suspects her husband's perversions are signs of something evil deep inside him.</desc>
-    <credits>
-      <actor>James M. Reilly</actor>
-      <actor>T.J. Craig</actor>
-      <actor>Robert Levey II</actor>
-      <actor>Kathy-Ann Hart</actor>
-      <actor>Brian Vadim</actor>
-      <producer>Jaime Hanaway</producer>
-    </credits>
-    <category lang="en">Documentary</category>
-    <category lang="en">Others</category>
-    <icon src="https://dtil.tmsimg.com/assets/p14925084_b_h9_ab.jpg?lock=880x660" />
-    <episode-num system="onscreen">S3 E3</episode-num>
+  <programme channel="InvestigationDiscovery.in@SD" start="20261011083000 +0000" stop="20261011092000 +0000">
+    <title lang="zh">Shattered</title>
+    <desc>In 2006, residents in Indianapolis called 911 to report gunfire coming from a house. Police find a total of seven bodies in a terrible mass shooting.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
-  <programme channel="InvestigationDiscovery.in@SD" start="20261011143700 +0530" stop="20261011153300 +0530">
-    <title lang="en">Disappeared</title>
-    <desc lang="en">Former basketball star Rico Harris mysteriously vanishes while driving to Seattle. Investigators start a journey that becomes more baffling as time passes.</desc>
-    <credits>
-      <actor>Christopher Crutchfield Walker</actor>
-      <producer>Diana Sperrazza</producer>
-    </credits>
-    <category lang="en">Documentary</category>
-    <category lang="en">Others</category>
-    <icon src="https://dtil.tmsimg.com/assets/p12705912_b_h9_ag.jpg?lock=880x660" />
-    <episode-num system="onscreen">S7 E7</episode-num>
+  <programme channel="InvestigationDiscovery.in@SD" start="20261011092000 +0000" stop="20261011101000 +0000">
+    <title lang="zh">Betrayed</title>
+    <desc>A retired prison officer thinks he's lived through the riskiest years of his life, but handling his second wife and her jealous ex-husband proves far more deadly.</desc>
+    <date>20261011</date>
+    <audio>
+      <stereo>stereo</stereo>
+    </audio>
   </programme>
   <programme channel="InvestigationDiscovery.in@SD" start="20261011101000 +0000" stop="20261011103500 +0000">
     <title lang="zh">Who the (Bleep) Did I Marry?</title>
@@ -143066,14 +143044,6 @@ A young girl named Thulasi dreams of continuing her education despite living wit
     <category lang="hi-IN">178</category>
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/d4c110d0acc48671685430e697742bdf.jpg" />
     <premiere />
-  </programme>
-  <programme channel="MazhavilManorama.in@SD" start="20261011051200 +0000" stop="20261011061800 +0000">
-    <title lang="zh">Oru Chiri Iru Chiri Bumper Chiri</title>
-    <desc>Skilled participants take the stage to perform a series of hilarious skits to entertain the audience and the judges to win prizes.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
   </programme>
   <programme channel="MazhavilManorama.in@SD" start="20261011061800 +0000" stop="20261011070200 +0000">
     <title lang="zh">Super Kanmani</title>
@@ -165394,14 +165364,6 @@ Shalini lives in America but desires to relocate to India. Meanwhile, a girl fro
     <category lang="hi-IN">177</category>
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/f31bbe589d5ef1338381fb7acd157018.jpg" />
     <premiere />
-  </programme>
-  <programme channel="Pogo.in@SD" start="20261010220600 +0000" stop="20261010221800 +0000">
-    <title lang="zh">Smaashhing Simmba</title>
-    <desc>Simmba, an honest and courageous police officer, teams up with his fearless colleagues in his mission to confront and defeat the evil forces of society.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
   </programme>
   <programme channel="Pogo.in@SD" start="20261010221800 +0000" stop="20261010223000 +0000">
     <title lang="zh">Smaashhing Simmba</title>
@@ -188749,18 +188711,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <icon src="https://iptv-epg.org/images/fpKNMxWiWcn11supKxjEueE6GXoPYQKEDCujIqfJi3z82GbfHFWWSB4pfIxJqmeDytJZuaVLBuZGg0y2hP4_G5DHfnplRKXySl0Hlm_SWaOXcGauZp1XpSLAifs_rg" />
     <title lang="en">Adi Anadi</title>
   </programme>
-  <programme start="20261011113000 +0530" stop="20261011115000 +0530" channel="RedBullTV.at@EUMENA">
-    <title lang="en-GB">Reel Rock</title>
-    <sub-title lang="en-GB">Siebe Vanhee recruits his childhood heroes, Sean Villanueva O'Driscoll and Nico Favresse, to attempt the first free ascent of an alpine big wall in Patagonia, Argentina</sub-title>
-    <desc lang="en-GB">Follows the world's top climbers, alpinists and mountaineers to the wildest places on Earth. New stories of triumph, failure and redemption unfold as they pursue the thrill of adventure.</desc>
-    <credits>
-      <actor>Siebe Vanhee,Sean Villanueva O'Driscoll</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/24669810e0663d551a6d9095451b7346.jpg" />
-    <episode-num system="onscreen">E4</episode-num>
-    <premiere />
-  </programme>
   <programme start="20261011115000 +0530" stop="20261011121400 +0530" channel="RedBullTV.at@EUMENA">
     <title lang="en-GB">Red Bull Sports Events</title>
     <sub-title lang="en-GB">Check out the best of the action as Red Bull King of the Air took to the skies in Cape Town, South Africa</sub-title>
@@ -207567,15 +207517,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <title lang="en">Movie</title>
     <desc lang="en">The movie name is yet to be announced by the channel.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SIRIPPOLI_971465_14OCT060000_14OCT070000/images/LANDSCAPE_169_HD/SIRIPPOLI_Movie_971465.jpg" />
-  </programme>
-  <programme start="20261011114000 +0530" stop="20261011115000 +0530" channel="SongdewTV.in@SD">
-    <title lang="hi-IN">Songdew Select</title>
-    <desc lang="hi-IN">Featuring Best of Independent Music.</desc>
-    <category lang="hi-IN">Music</category>
-    <category lang="hi-IN">Reality &amp; Game Shows</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg" />
-    <episode-num system="onscreen">E12</episode-num>
-    <premiere />
   </programme>
   <programme start="20261011115000 +0530" stop="20261011115500 +0530" channel="SongdewTV.in@SD">
     <title lang="hi-IN">Unplugged</title>
@@ -252652,17 +252593,9 @@ Extra clips and unseen footage from Bigg Boss providing a deeper look at the unf
     <desc lang="en">A fun-filled show featuring the best comedy moments from the latest Tollywood films, delivering nonstop laughter and light-hearted entertainment.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_STAR_MAA_MOVIES_HD_723323_14OCT063000_14OCT070000/images/LANDSCAPE_169/1756684870000_StarMAA_FunTime_492045.jpg" />
   </programme>
-  <programme channel="StarMoviesSelect.in@HD" start="20261011043400 +0000" stop="20261011061800 +0000">
+  <programme channel="StarMoviesSelect.in@HD" start="20261011043800 +0000" stop="20261011062300 +0000">
     <title lang="zh">Journey to the West: The Demons Strike Back</title>
     <desc>Tang Sanzang, a monk and his three disciples strive to overcome multiple challenges and fight monsters during the course of their journey.</desc>
-    <date>20261011</date>
-    <audio>
-      <stereo>stereo</stereo>
-    </audio>
-  </programme>
-  <programme channel="StarMoviesSelect.in@HD" start="20261011061800 +0000" stop="20261011062300 +0000">
-    <title lang="zh">Filler</title>
-    <desc>Bringing the best in television.</desc>
     <date>20261011</date>
     <audio>
       <stereo>stereo</stereo>
@@ -282742,13 +282675,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <desc lang="en">It is the night of the Council of Wolves, but Akela is nowhere to be seen</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acad8a3c7923c1547c18da0/images/LANDSCAPE_169/9294_eec408e6-49c8-4992-8064-6a8b92904473.png" />
   </programme>
-  <programme channel="TinyPop.uk" start="20261011060600 +0000" stop="20261011061900 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261011113600/list/TinyPOPCareBearsUnlockTheMagic20569925980a1db48af43c681efc012f1055bab.jpg" />
-  </programme>
   <programme channel="TinyPop.uk" start="20261011061900 +0000" stop="20261011063100 +0000">
     <title lang="en">Care Bears: Unlock The Magic</title>
     <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
@@ -303141,28 +303067,6 @@ The host travels to the historic city of Savannah, exploring its elegant charm, 
     <category>Film</category>
     <language>Hindi</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-017200000-20261017221400/list/ActionCinemaTheReturnofKaalia649743b4e2fece1f054b6b83177850ac81ff36.jpg" />
-  </programme>
-  <programme channel="ZeeBanglaSonar.in@SD" start="20261011090000 +0530" stop="20261011114800 +0530">
-    <title>Shesh Theke Shuru</title>
-    <desc>Mahid, a Dhaka-based businessman, falls in love with a girl on a flight to London. Soon enough, his relationship is threatened as his dark past resurfaces.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2019</date>
-    <credits>
-      <director>Raj Chakraborty</director>
-      <director>Sarwar Mohammad</director>
-      <actor>Sayantika Banerjee</actor>
-      <actor>Ritabhari Chakraborty</actor>
-      <actor>Tridha Choudhury</actor>
-      <actor>Jeet</actor>
-      <actor>Koyel Mallick</actor>
-      <actor>Joy Bhowmik</actor>
-      <producer>Jeet</producer>
-      <producer>Gopal Madnani</producer>
-      <producer>Amit Jumrani</producer>
-      <producer>Sunny Surani</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p18178050_b_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="ZeeBanglaSonar.in@SD" start="20261011114800 +0530" stop="20261011142300 +0530">
     <title>Putuler Protisodh</title>
@@ -332021,18 +331925,6 @@ Zak and the crew descend upon a Southern California park to investigate a haunte
     <icon src="https://iptv-epg.org/images/auLgCBOJ9Cb1JcgmF21cKHU8ImJ5u83zscNtiWb7H2wxi7jbC5EH-iBo0DHi-PQLKm31A2rXh4iGG1wrCTGFOvASRGEJ6bokdHq3-T8Rxvk0jo4-LA6kfNbL8wY" />
     <title lang="en">Ghost Adventures</title>
   </programme>
-  <programme channel="custom.discovery.turbo" start="20261011112500 +0530" stop="20261011115000 +0530">
-    <title lang="en">All Girls Garage</title>
-    <desc lang="en">The crew gets a chance to help a friend out on her FR-S racecar; she built the car with her dad, and now wants to install a supercharger kit.</desc>
-    <credits>
-      <actor>Bogi Lateiner</actor>
-      <actor>Faye Hadley</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Education (Adult)</category>
-    <icon src="https://dtil.tmsimg.com/assets/p18094217_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S9 E11</episode-num>
-  </programme>
   <programme channel="custom.discovery.turbo" start="20261011115000 +0530" stop="20261011124000 +0530">
     <title lang="en">Garage Squad</title>
     <desc lang="en">This 1971 De Tomaso Pantera is more of a pelt than a panther; a shell of a car, it needs almost everything to be installed before anyone can hear it growl.</desc>
@@ -334602,26 +334494,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <episode-num>S9 E1</episode-num>
     <icon src="https://iptv-epg.org/images/m6QOrEm8AWINuPBSyFJQzw07NhfWHgh4M3-Un9kBXFEGvZTy_v1la351mnuFIHRzE2WiwzPKpSN5dve2sVSRlLLy-hLNJXH-mERlMTqw-UB2uBn-7KYtN-KtozyHMw" />
     <title lang="en">All Girls Garage</title>
-  </programme>
-  <programme start="20261011114400 +0530" stop="20261011114800 +0530" channel="custom.duck.tv">
-    <title>We Are Playing Now</title>
-    <desc>A mother and father play with their kids on the playground using paints and paper so that they can learn new lessons and develop their skills.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/97cd0b1173736191792d3b9a689251dc.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261011114800 +0530" stop="20261011115100 +0530" channel="custom.duck.tv">
-    <title>Monica and Rudy 2</title>
-    <desc>Monica and her yellow pet bird Rudy delve into the world of rhythms and enjoy learning new things and seeing new sights.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/434191cab5dc9877d73989d0fe13c32f.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
   </programme>
   <programme start="20261011115100 +0530" stop="20261011115300 +0530" channel="custom.duck.tv">
     <title>Mimo and Bobo</title>
@@ -344421,13 +344293,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <category lang="en">Travel</category>
     <icon src="https://dtil.tmsimg.com/assets/p17484934_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E9</episode-num>
-  </programme>
-  <programme start="20261011113200 +0530" stop="20261011115000 +0530" channel="custom.kolkatatv">
-    <title lang="bn-IN">Sangbad Saradin</title>
-    <desc lang="bn-IN">The host presents a detailed analysis of some of the latest updates and top stories pertaining to the current affairs of the nation.</desc>
-    <category lang="bn-IN">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/1eedd3e7c10a092161f97e9f1abaedf3.jpg" />
-    <premiere />
   </programme>
   <programme start="20261011115000 +0530" stop="20261011115900 +0530" channel="custom.kolkatatv">
     <title lang="bn-IN">Bangla Ekhon</title>
