@@ -115,6 +115,20 @@ EXTRA_DIRECT_HINTS = {
         "license": "Tapmad brand asset from its official website",
         "license_url": "",
     },
+    "88 Stereo [not 24/7]": {
+        "url": "https://cdn-profiles.tunein.com/s10749/images/logod.jpg?t=637503840760000000",
+        "format": "JPEG",
+        "page": "https://tunein.com/radio/Radio-88-Stereo-887-s10749/",
+        "license": "Station logo served by TuneIn",
+        "license_url": "",
+    },
+    "Power Turk": {
+        "url": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/powerturk-tr.png",
+        "format": "PNG",
+        "page": "https://github.com/tv-logo/tv-logos/blob/main/countries/turkey/powerturk-tr.png",
+        "license": "Public TV logo repository; original logo rights belong to broadcaster",
+        "license_url": "https://github.com/tv-logo/tv-logos",
+    },
     "Dream Music Prime": {
         "url": "https://images.zeno.fm/qCoeGkoZ7uMDvdOso_NCx_7ZVgkxpHVWtvkP9RcAy1k/rs%3Afill%3A152%3A152/q%3A75/g%3Ace%3A0%3A0/aHR0cHM6Ly9wcm94eS56ZW5vLmZtL2NvbnRlbnQvc3RhdGlvbnMvYjg4OGM3NGItNzAzMS00NmM3LTg5MGEtNDg3MzczYjYzMDQ5L2ltYWdlLz91PTE2NzI4MjgxNzMwMDA",
         "format": "",
