@@ -94,7 +94,8 @@ SOURCES = [
     "https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml",
     "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
     "https://www.open-epg.com/files/unitedkingdom.xml.gz",
-    "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz,
+    "https://iptv-epg.org/files/epg-us.xml.gz"",
 ]
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
