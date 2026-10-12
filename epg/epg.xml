@@ -176747,19 +176747,6 @@ A host of interesting characters encounter several frustrating and comical situa
       <value>SAM 13</value>
     </rating>
   </programme>
-  <programme start="20261012001800 +0000" stop="20261012003500 +0000" channel="MoviesNow.in@SD">
-    <category lang="en">Sports</category>
-    <category lang="en">Talk Show</category>
-    <credits>
-      <actor>Mandira Bedi</actor>
-      <actor>Shibani Dandekar</actor>
-    </credits>
-    <desc lang="en">S3 E4
-The host invites prominent personalities and engages them in candid conversations about their personal and professional lives.</desc>
-    <episode-num>S3 E4</episode-num>
-    <icon src="https://iptv-epg.org/images/v5aleLOUsv2n03EFMtg60jOZqda9ZYrn1Pyf1tJ1vmZkiCzofeudFZkZiBrLXreN9fchGa24jVdsGXv0Rc0Vb_hKkTVf-ackmviA3q8cs73P5_HeJaQJCxi-lET2LQ" />
-    <title lang="en">Mallika Sherawat; The Love Laugh Live Show</title>
-  </programme>
   <programme start="20261012003500 +0000" stop="20261012021900 +0000" channel="MoviesNow.in@SD">
     <category lang="en">Film</category>
     <category lang="en">Thriller</category>
@@ -252866,27 +252853,11 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <icon src="https://tv.assets.pressassociation.io/3a316425-b513-5459-84ae-8ce7fcac1681.jpg" />
     <episode-num system="onscreen">S2026 E32</episode-num>
   </programme>
-  <programme start="20261012055000 +0530" stop="20261012060500 +0530" channel="SongdewTV.in@SD">
+  <programme channel="SongdewTV.in@SD" start="20261012055000 +0530" stop="20261012061000 +0530">
     <title>Songdew Select</title>
-    <desc>Featuring Best of Independent Music</desc>
+    <desc>A comprehensive compilation of independent music, showcasing the diverse creativity and unique voices of artists, offering listeners an eclectic blend of genres and styles.</desc>
     <category>Music</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg?width=700" />
-    <episode-num system="onscreen">12</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261012060500 +0530" stop="20261012061000 +0530" channel="SongdewTV.in@SD">
-    <title>Take 7</title>
-    <desc>Featuring behind the scenes of music videos</desc>
-    <category>Music</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg?width=700" />
-    <episode-num system="onscreen">13</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
+    <icon src="https://dtil.tmsimg.com/assets/p15781083_b_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="SongdewTV.in@SD" start="20261012061000 +0530" stop="20261012061500 +0530">
     <title>Take 7</title>
@@ -340883,13 +340854,6 @@ Jen and Tim's fight escalates and everyone is caught in the crossfire; Cortney l
     <desc lang="en">Mowgli goes to visit Kaa with a question. How many monkeys can a python swallow in one gulp?</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acc2a228d1a0fbd854910f1/images/LANDSCAPE_169/9372_370abaf4-87cf-4ecf-ac5b-181564e3a34e.png" />
   </programme>
-  <programme channel="TinyPop.uk" start="20261012002600 +0000" stop="20261012003600 +0000">
-    <title lang="en">Masha And The Bear</title>
-    <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012055600/list/TinyPOPMashaAndTheBear2056996e559c84051f74786a189b1402880b66f.jpg" />
-  </programme>
   <programme channel="TinyPop.uk" start="20261012003600 +0000" stop="20261012004500 +0000">
     <title lang="en">Masha And The Bear</title>
     <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
@@ -351588,12 +351552,6 @@ This is Documentary - Others Category.</desc>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme start="20261012003000 +0000" stop="20261012003500 +0000" channel="VasanthTV.in@SD">
-    <category lang="en">Music</category>
-    <desc lang="en">A group of experienced artists, musicians and singers perform a special patriotic song depicting the beauty, traditions and cultures of India.</desc>
-    <icon src="https://iptv-epg.org/images/Q7UWs4G4c7dGR1YdKFSfnJSBl9pQyHmJWBahzxSQgGPLufwNpivgw1uV4vER_nG9t5gC2iDpGkSLDK_slnB1NhxcLMDO5sMrvjlINkhRoBNmr3Yg9eb3DrTE0jAsLA" />
-    <title lang="en">India Song</title>
-  </programme>
   <programme start="20261012003500 +0000" stop="20261012010000 +0000" channel="VasanthTV.in@SD">
     <category lang="en">TV Show</category>
     <category lang="en">Religious</category>
@@ -359807,9 +359765,12 @@ This is Documentary - Others Category.</desc>
     <icon src="https://iptv-epg.org/images/Rb2rZ11FEmF-PckDUYDea0TZbUGtCReZpaZdGxIcZ6JXuXrpXiAR74YEgyOCKuXGfeu4CCsyze-iXKFH2z8rc4xaniZAxpd2T1OqLb4wDChlOs5xWd95BOiznM2X8-a4ofqZRxTcHIRIulGLYw9A1eWqNYgkwerdZHQOV09fFHt4ibKvGrLukghEI5msAHeqfafwgw" />
     <title lang="en">Vijaypath</title>
   </programme>
-  <programme start="20261011221000 +0000" stop="20261012003800 +0000" channel="ZeeCinema.in@HD">
-    <category lang="en">Film</category>
-    <category lang="en">Romance</category>
+  <programme channel="ZeeCinema.in@HD" start="20261012034900 +0530" stop="20261012063000 +0530">
+    <title>Hi Papa</title>
+    <desc>A loving father and his young daughter face life-altering changes when his romantic interest weds another man, challenging their bond and reshaping their future together.</desc>
+    <category>Film</category>
+    <category>Romance</category>
+    <date>2023</date>
     <credits>
       <director>Shouryuv</director>
       <actor>Mrunal Thakur</actor>
@@ -359823,9 +359784,7 @@ This is Documentary - Others Category.</desc>
       <producer>K.S. Murthy</producer>
       <producer>Vijender Reddy Teegala</producer>
     </credits>
-    <desc lang="en">A loving father and his young daughter face life-altering changes when his romantic interest weds another man, challenging their bond and reshaping their future together.</desc>
-    <icon src="https://iptv-epg.org/images/t4elnlzWrzCYRPzX1kZF_iY8GQ14snizdcIuKCzLmrPCxuVBb9-SJ-joZiPbwuXwYrH_DFAMALn0Ei-csLt2oSFjPDCKoC0NTQAfW_UaTOmG3IBBYHC2t8sEJf18" />
-    <title lang="en">Hi Papa</title>
+    <icon src="https://dtil.tmsimg.com/assets/p26118227_v_h10_ab.jpg?lock=1280x720" />
   </programme>
   <programme channel="ZeeCinema.in@HD" start="20261012063000 +0530" stop="20261012065400 +0530">
     <title>The Faith Show</title>
@@ -441118,36 +441077,6 @@ A Toyota MR2 makes power, but not the power it once had; Bogi and Faye check the
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261012060000 +0530" stop="20261012060200 +0530" channel="custom.duck.tv">
-    <title>Beaver Family</title>
-    <desc>A family of beavers struggle to fend for themselves and try to survive each day while facing and overcoming several obstacles.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/c8bdff91c3efbbdc06177a924d7209c0.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012060200 +0530" stop="20261012060600 +0530" channel="custom.duck.tv">
-    <title>Panni and Fanni</title>
-    <desc>Two happy fairies wave their wands and turn a boring shape into a pair of unique drawings.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/e0b4c6ae0e327b21f2d22680decb7777.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012060600 +0530" stop="20261012060800 +0530" channel="custom.duck.tv">
-    <title>Didy Baby</title>
-    <desc>Little baby animals overcome the different obstacles they face everyday by helping each other and encourage children to do the same.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/994980d9030c79a0e59fef498478945f.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261012060800 +0530" stop="20261012061100 +0530" channel="custom.duck.tv">
@@ -533735,44 +533664,6 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
     <desc lang="en">Reaction, analysis and your chance to have your say on the day's sport. Call the show on 03717 22 33 44 (Calls charged at national rate) or text 81089 (50p + charges).</desc>
     <category lang="en">Music &amp; Radio</category>
   </programme>
-  <programme channel="custom.teen.nick" start="20261012000900 +0000" stop="20261012003600 +0000">
-    <title lang="en">Zoey 101</title>
-    <sub-title lang="en">Roller Coaster</sub-title>
-    <desc lang="en">Michael is not happy when the physics teacher decides to take the class on a field trip to ride a roller coaster.</desc>
-    <credits>
-      <actor>Jamie Lynn Spears</actor>
-      <actor>Paul Butcher</actor>
-      <actor>Austin Robert Butler</actor>
-    </credits>
-    <date>2008</date>
-    <category lang="en">Series</category>
-    <category lang="en">Children</category>
-    <category lang="en">Sitcom</category>
-    <icon src="http://dtil.tmsimg.com/assets/p7892973_b_h10_aa.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S4 E11</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVY7</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C8</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>10</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>0</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-  </programme>
   <programme channel="custom.teen.nick" start="20261012003600 +0000" stop="20261012010300 +0000">
     <title lang="en">Zoey 101</title>
     <sub-title lang="en">People Auction</sub-title>
@@ -604166,26 +604057,6 @@ Jen and Tim's fight escalates and everyone is caught in the crossfire; Cortney l
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme start="20261011221000 +0000" stop="20261012003800 +0000" channel="hmair.zeecinemahd">
-    <category lang="en">Film</category>
-    <category lang="en">Romance</category>
-    <credits>
-      <director>Shouryuv</director>
-      <actor>Mrunal Thakur</actor>
-      <actor>Shruti K. Haasan</actor>
-      <actor>Nani</actor>
-      <actor>Jayaram</actor>
-      <actor>Angad Bedi</actor>
-      <actor>Kiara Khanna</actor>
-      <actor>Hemayat Rahman</actor>
-      <producer>Mohan Cherukuri</producer>
-      <producer>K.S. Murthy</producer>
-      <producer>Vijender Reddy Teegala</producer>
-    </credits>
-    <desc lang="en">A loving father and his young daughter face life-altering changes when his romantic interest weds another man, challenging their bond and reshaping their future together.</desc>
-    <icon src="https://iptv-epg.org/images/t4elnlzWrzCYRPzX1kZF_iY8GQ14snizdcIuKCzLmrPCxuVBb9-SJ-joZiPbwuXwYrH_DFAMALn0Ei-csLt2oSFjPDCKoC0NTQAfW_UaTOmG3IBBYHC2t8sEJf18" />
-    <title lang="en">Hi Papa</title>
   </programme>
   <programme start="20261012003800 +0000" stop="20261012033800 +0000" channel="hmair.zeecinemahd">
     <category lang="en">Film</category>
