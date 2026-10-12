@@ -5,4 +5,3 @@ const CACHE_KEY = "https://bdix-iptv.internal/playlist-v5-backup-stream-filter";
 const CACHE_TTL = 60;
 
 const EPG_PUBLIC_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml";
-// NVisionBD playlist retired by maintainer request. Only IPTV and BDIX endpoints remain enabled.
