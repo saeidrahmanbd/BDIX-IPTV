@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-12T07:12:09.097012+00:00",
+  "generated_at_utc": "2026-10-12T07:24:15.748Z",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -12951,7 +12951,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "BDIX-Playlist.m3u",
@@ -14281,7 +14281,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -14571,7 +14571,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -14731,7 +14731,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15061,7 +15061,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15121,7 +15121,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15211,7 +15211,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15261,7 +15261,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15531,7 +15531,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15621,7 +15621,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15631,7 +15631,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15661,7 +15661,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15991,7 +15991,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -16031,7 +16031,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -16261,7 +16261,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -16271,7 +16271,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -16521,7 +16521,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -16651,7 +16651,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -16671,7 +16671,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -16751,7 +16751,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -16901,7 +16901,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17171,7 +17171,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17181,7 +17181,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17631,7 +17631,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17671,7 +17671,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17701,7 +17701,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17711,7 +17711,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17841,7 +17841,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17871,7 +17871,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17931,7 +17931,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17951,7 +17951,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -18011,7 +18011,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -18021,7 +18021,7 @@
       "logo": "",
       "status": "needs_review",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Logo is missing."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
