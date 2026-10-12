@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-12T03:25:29+00:00**
+Generated: **2026-10-12T03:36:23+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
@@ -119,9 +119,9 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 - Playlist EPG references: **OK**
 - Guide channel IDs published: **471**
 - Mapped playlist IDs present in guide: **471/471 (100.0%)**
-- Mapped playlist IDs with current/future programmes: **424/471 (90.0%)**
+- Mapped playlist IDs with current/future programmes: **425/471 (90.2%)**
 - Mapped IDs missing from the published XMLTV channel list: **0**
 - IDs missing from guide: none
-- Mapped IDs with no current/future programmes: **47**
-- IDs without current/future programmes (first 30): AamarBangla.in, AndpriveHD.in, BHI.Channel.in, CinevaultWesterns.us, ColorsBanglaCinema.in@SD, DhoomMusic.in@SD, ETVBeats.in@HD, FriendsTV.in@SD, GoldminesMovies.in@SD, HistoryHit.uk, MHOneDilSe.in@SD, MONTVBangla.in, ManoranjanPrime.in@SD, Mastiii.in@SD, OdishaTV.in@SD, OnePaschima.in@SD, PrarthanaTV.in@SD, RealWild.uk, RongeenTV.in@SD, RupasiBangla.in@SD, SangeetBangla.in@SD, Sony.Aath.in, Star.Jalsha.Movies.in, Star.Jalsha.in, SteelbirdMusic.in@SD, SunBangla.in@SD, SuriyanTV.in@SD, UBangla.in, ZeeBangla.in@HD, ZeeBanglaSonar.in@SD
+- Mapped IDs with no current/future programmes: **46**
+- IDs without current/future programmes (first 30): AamarBangla.in, AndpriveHD.in, BHI.Channel.in, CinevaultWesterns.us, ColorsBanglaCinema.in@SD, DhoomMusic.in@SD, ETVBeats.in@HD, FriendsTV.in@SD, HistoryHit.uk, MHOneDilSe.in@SD, MONTVBangla.in, ManoranjanPrime.in@SD, Mastiii.in@SD, OdishaTV.in@SD, OnePaschima.in@SD, PrarthanaTV.in@SD, RealWild.uk, RongeenTV.in@SD, RupasiBangla.in@SD, SangeetBangla.in@SD, Sony.Aath.in, Star.Jalsha.Movies.in, Star.Jalsha.in, SteelbirdMusic.in@SD, SunBangla.in@SD, SuriyanTV.in@SD, UBangla.in, ZeeBangla.in@HD, ZeeBanglaSonar.in@SD, custom.abp.ananda
 - This validation is against the guide currently present in the working tree/publish candidate.

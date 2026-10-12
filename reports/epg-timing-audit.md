@@ -5,6 +5,7 @@ Automatic corrections require repeated cross-source title and duration matches, 
 ## Detected corrections
 
 - **Xplor** (AndxplorHD.in): source ID and.xplorHD.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
+- **DD Saptagiri** (DDSaptagiri.in@SD): source ID ts337 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +24 hours after repeated cross-source agreement.
 - **Cartoon Network HD +** (hmair.cartoonnetworkhd): source ID CARTOON.NETWORK.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by +24 hours after repeated cross-source agreement.
 
-Detected source-ID corrections: **2**
+Detected source-ID corrections: **3**
