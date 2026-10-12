@@ -75753,13 +75753,6 @@ A subject matter expert provides a comprehensive explanation of various concepts
     <icon src="https://iptv-epg.org/images/wIh6YHr27gnHgHhUfVTbiyFZH9Jv9E8G-l_TmNtLq_0TKrukjCg6skbDFhFxOQNOMsRuc54zGyzlb3Szbmamm-twzmduOdk-ubL1j62jdjnZmF0hopwv8dc_anjCZw" />
     <title lang="en">Folk Music</title>
   </programme>
-  <programme start="20261012013000 +0000" stop="20261012021500 +0000" channel="DDSahyadri.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <desc lang="en">The host invites prominent personalities and renowned individuals and interviews them about their life, work and achievements.</desc>
-    <icon src="https://iptv-epg.org/images/sfz2M6GAr8xxk3Bqm3GArGOkNhSIrQA51vjXAeRnFZXEfXSgQpGu4FTeFnABfCowDEaioXm8jzUxZFWUB_ZPvvNHHGArYX-NVfsyK6LOgw69LKOr4CMavubRc5pi0g" />
-    <title lang="en">Sukhachi Sanjivani</title>
-  </programme>
   <programme start="20261012021500 +0000" stop="20261012023000 +0000" channel="DDSahyadri.in@SD">
     <category lang="en">News</category>
     <category lang="en">News Bulletin</category>
@@ -84821,13 +84814,6 @@ Bringing the best in television.</desc>
   <programme start="20261013180000 +0000" stop="20261013183000 +0000" channel="DDUttarakhand.in@SD" catchup-id="100144428">
     <title>Sahityaki / Sahitya Yatra</title>
     <desc>The host discusses literature with guests; the host talks to writers about their work.</desc>
-  </programme>
-  <programme start="20261012013000 +0000" stop="20261012021500 +0000" channel="DDYadagiri.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <desc lang="en">The host provides latest updates on key developments, and touches various segments, including health, fitness, and cooking.</desc>
-    <icon src="https://iptv-epg.org/images/vEizxDWKDUZTFolqeZ8ZGmv8QwWX-PhLWh0UPCIFuK-uzYP2wMyJhdg2TOV8z9qu5LSQFBpJOb7GAQ2DhB4E2xF_yQsGeM6Zi80eoSqc9l08OeSm9bVJHNxMzXtY_A" />
-    <title lang="en">Morning Muchatlu</title>
   </programme>
   <programme start="20261012021500 +0000" stop="20261012023000 +0000" channel="DDYadagiri.in@SD">
     <category lang="en">News</category>
@@ -168537,35 +168523,6 @@ A host of interesting characters encounter several frustrating and comical situa
       <value>SAM 13</value>
     </rating>
   </programme>
-  <programme start="20261012003500 +0000" stop="20261012021900 +0000" channel="MoviesNow.in@SD">
-    <category lang="en">Film</category>
-    <category lang="en">Thriller</category>
-    <credits>
-      <director>Bong Joon-ho</director>
-      <actor>Chris Evans</actor>
-      <actor>Song Kang-ho</actor>
-      <actor>Tilda Swinton</actor>
-      <actor>Jamie Bell</actor>
-      <actor>Octavia Spencer</actor>
-      <actor>John Hurt</actor>
-      <actor>Ed Harris</actor>
-      <actor>Ewen Bremner</actor>
-      <actor>Go Ah-sung</actor>
-      <actor>Alison Pill</actor>
-      <actor>Vlad Ivanov</actor>
-      <actor>Luke Pasqualino</actor>
-      <actor>Clark Middleton</actor>
-      <actor>Steve Park</actor>
-      <actor>Paul Lazar</actor>
-      <producer>Jeong Tae-seong</producer>
-      <producer>Steven Nam</producer>
-      <producer>Park Chan-wook</producer>
-      <producer>Lee Taeheon</producer>
-    </credits>
-    <desc lang="en">New power dynamics emerge amongst the survivors of the second ice age when they board a train travelling across the globe.</desc>
-    <icon src="https://iptv-epg.org/images/T1d0NqOocp4fDpy8Tq5P-QYO4e2AookCdc3yIIGU8pxKWlIA-I7yz3ofW4SVeNoV8pWdDbZeh_1Ul4tkMhI3n4cpAXc_S0UpuLazBHLuwv-M3bnkISSbdoU16gUPgQ" />
-    <title lang="en">Snowpiercer</title>
-  </programme>
   <programme channel="MoviesNow.in@SD" start="20261012074900 +0530" stop="20261012094100 +0530">
     <title lang="en">American Made</title>
     <desc lang="en">Barry Seal is a US pilot who smuggles drugs for the CIA in the 1980s. Later, his secret work gets revealed as part of the Iran-Contra scandal.</desc>
@@ -170940,38 +170897,6 @@ Nirav Chhabra and Myra Malik reflect on their romance and their shared mission t
     <episode-num>S1 E1</episode-num>
     <icon src="https://iptv-epg.org/images/z7nR4vt9Ri-ypL6Q1DuDaASOBDXWXLKuAR-uJhkN_iDXvqDZsaAVou7Zg-WouHfd0L8RZIxgPYLOt-WbKhxOWka4PWllvR877XJS6xRbozonSJbGF-AlspSjv80b" />
     <title lang="en">Ready 2 Mingle</title>
-  </programme>
-  <programme channel="MoviesNowPlus.in@SD" start="20261012055000 +0530" stop="20261012074800 +0530">
-    <title>Southpaw</title>
-    <desc>After a devastating accident shatters his world, a once-celebrated champion boxer spirals into a destructive abyss. Subsequently, he decides to fight for his daughter and revive his fading career.</desc>
-    <category>Film</category>
-    <category>Drama</category>
-    <date>2015</date>
-    <credits>
-      <director>Antoine Fuqua</director>
-      <actor>Jake Gyllenhaal</actor>
-      <actor>Forest Whitaker</actor>
-      <actor>Naomie Harris</actor>
-      <actor>50 Cent</actor>
-      <actor>Oona Laurence</actor>
-      <actor>Skylan Brooks</actor>
-      <actor>Beau Knapp</actor>
-      <actor>Rachel McAdams</actor>
-      <actor>Victor Ortiz</actor>
-      <actor>Rita Ora</actor>
-      <actor>Miguel Gomez</actor>
-      <actor>Dominic Colón</actor>
-      <actor>Malcolm M. Mays</actor>
-      <actor>Clare Foley</actor>
-      <producer>Todd Black</producer>
-      <producer>Peter Riche</producer>
-      <producer>Alan Riche</producer>
-      <producer>Jason Blumenthal</producer>
-      <producer>Antoine Fuqua</producer>
-      <producer>Steve Tisch</producer>
-      <producer>Jerry Ye</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p11447189_v_h8_ai.jpg?lock=1280x720" />
   </programme>
   <programme channel="MoviesNowPlus.in@SD" start="20261012074800 +0530" stop="20261012093200 +0530">
     <title lang="en">Big Eyes</title>
@@ -240851,12 +240776,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <desc lang="en">Dedicated to the legendary comedian Vivek, this show features his unforgettable scenes, witty humor, and social satire in every frame.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SIRIPPOLI_1357535_15OCT070000_15OCT073000/images/LANDSCAPE_169_HD/SIRIPPOLI_VivekBreakFreeComedy_1357535.jpg" />
   </programme>
-  <programme channel="SkySportsFootball.ie" start="20261012020000 +0000" stop="20261012021500 +0000">
-    <title lang="en">EFL Greatest Games</title>
-    <sub-title lang="en">Sheffield Wednesday v Newcastle United from the 2016/17 season</sub-title>
-    <desc lang="en">Sheffield Wednesday v Newcastle United from the 2016/17 season.</desc>
-    <icon src="https://tv.assets.pressassociation.io/d1a8e316-30ee-58c8-bfe1-34d22a890de8.jpg" />
-  </programme>
   <programme channel="SkySportsFootball.ie" start="20261012021500 +0000" stop="20261012023000 +0000">
     <title lang="en">EFL Greatest Games</title>
     <sub-title lang="en">Fulham v Aston Villa in the 2016/17 Championship season</sub-title>
@@ -278985,26 +278904,6 @@ Real-time match updates and highlights keep fans informed, providing instant acc
     <desc lang="en">Failed writer guides family through global disasters.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_WAH_1776351_13OCT031900_13OCT060000/images/LANDSCAPE_169/1734860977000_SonyWAH_2012_1776351.jpg" />
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261012073800 +0530" stop="20261012074500 +0530">
-    <title>Shin Chan</title>
-    <desc>Hiroshi lets Shin-chan accompany him to the police station where he plans to renew his driving license. However, Shin-chan troubles an officer there.</desc>
-    <category>Children</category>
-    <category>Entertainment</category>
-    <credits>
-      <director>Mitsuru Hongo</director>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h8_ae.jpg?lock=1280x720" />
-  </programme>
   <programme channel="SonyYay.in@SD" start="20261012074500 +0530" stop="20261012075200 +0530">
     <title>Shin Chan</title>
     <desc>A five-year-old boy, has many misadventures due to his peculiar antics, while his parents and tutors try to discipline him.</desc>
@@ -302046,13 +301945,6 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
     <icon src="https://iptv-epg.org/images/7-KV4WxNtJYcKnAB8tqW7eBOt0rKQ3NetD2MOd_DwkmsdjJgqamEaiSLLwxsNCdb40jIWoKIYDpl3O11MKu7R-GMdDbaZkWxzNJ7aNtv05cna9OyDX5GX7QeO0yc" />
     <title lang="en">Sports Programme</title>
   </programme>
-  <programme start="20261012020000 +0000" stop="20261012021500 +0000" channel="StarSports3.in">
-    <category lang="en">News</category>
-    <category lang="en">Magazine Programme</category>
-    <desc lang="en">Highlights of the Premier League matches, where professional football teams compete against each other to win the championship title.</desc>
-    <icon src="https://iptv-epg.org/images/PR-hbQeHhpbXFUdBlPTrTjm06Hj3Aay_A_6shpx7j06eY2fXici5AXDdmeiaLwurOvfNGGm1YB8t13Z-R-waNNc-ep-VeWGcO8QeWf4gQ28LOBU4pOpcCnbhD-LIZA" />
-    <title lang="en">Premier League Highlights</title>
-  </programme>
   <programme start="20261012021500 +0000" stop="20261012023000 +0000" channel="StarSports3.in">
     <category lang="en">Sports</category>
     <category lang="en">Cricket</category>
@@ -303554,13 +303446,6 @@ Highlights of the matches played during the ICC Cricket World Cup, wherein inter
     <desc lang="en">Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/Q_zDWL0c5B00IrTQ2hUJJacP-BaXbTrWKOQVx5RUHCPRqwnDCQjSlbavgr_rbgRpDrfnuMijrfwmumSOdxVfWnqnb50m3BO6fFDO3Eg1D-a1MCKJNggT6Et0dG5w6A" />
     <title lang="en">Sports Programme</title>
-  </programme>
-  <programme start="20261012020000 +0000" stop="20261012021500 +0000" channel="StarSports3.in@SD">
-    <category lang="en">News</category>
-    <category lang="en">Magazine Programme</category>
-    <desc lang="en">Highlights of the Premier League matches, where professional football teams compete against each other to win the championship title.</desc>
-    <icon src="https://iptv-epg.org/images/PR-hbQeHhpbXFUdBlPTrTjm06Hj3Aay_A_6shpx7j06eY2fXici5AXDdmeiaLwurOvfNGGm1YB8t13Z-R-waNNc-ep-VeWGcO8QeWf4gQ28LOBU4pOpcCnbhD-LIZA" />
-    <title lang="en">Premier League Highlights</title>
   </programme>
   <programme start="20261012021500 +0000" stop="20261012023000 +0000" channel="StarSports3.in@SD">
     <category lang="en">Sports</category>
@@ -305151,13 +305036,6 @@ Highlights of the matches played during the ICC Cricket World Cup, wherein inter
     <icon src="https://iptv-epg.org/images/Q_zDWL0c5B00IrTQ2hUJJacP-BaXbTrWKOQVx5RUHCPRqwnDCQjSlbavgr_rbgRpDrfnuMijrfwmumSOdxVfWnqnb50m3BO6fFDO3Eg1D-a1MCKJNggT6Et0dG5w6A" />
     <title lang="en">Sports Programme</title>
   </programme>
-  <programme start="20261012020000 +0000" stop="20261012021500 +0000" channel="StarSportsSelect1.in">
-    <category lang="en">News</category>
-    <category lang="en">Magazine Programme</category>
-    <desc lang="en">Highlights of the Premier League matches, where professional football teams compete against each other to win the championship title.</desc>
-    <icon src="https://iptv-epg.org/images/PR-hbQeHhpbXFUdBlPTrTjm06Hj3Aay_A_6shpx7j06eY2fXici5AXDdmeiaLwurOvfNGGm1YB8t13Z-R-waNNc-ep-VeWGcO8QeWf4gQ28LOBU4pOpcCnbhD-LIZA" />
-    <title lang="en">Premier League Highlights</title>
-  </programme>
   <programme start="20261012021500 +0000" stop="20261012023000 +0000" channel="StarSportsSelect1.in">
     <category lang="en">News</category>
     <category lang="en">Magazine Programme</category>
@@ -306084,13 +305962,6 @@ The best fights and most memorable moments from One Championship, one of the big
     <desc lang="en">Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/7-KV4WxNtJYcKnAB8tqW7eBOt0rKQ3NetD2MOd_DwkmsdjJgqamEaiSLLwxsNCdb40jIWoKIYDpl3O11MKu7R-GMdDbaZkWxzNJ7aNtv05cna9OyDX5GX7QeO0yc" />
     <title lang="en">Sports Programme</title>
-  </programme>
-  <programme start="20261012020000 +0000" stop="20261012021500 +0000" channel="StarSportsSelect1.in@SD">
-    <category lang="en">News</category>
-    <category lang="en">Magazine Programme</category>
-    <desc lang="en">Highlights of the Premier League matches, where professional football teams compete against each other to win the championship title.</desc>
-    <icon src="https://iptv-epg.org/images/PR-hbQeHhpbXFUdBlPTrTjm06Hj3Aay_A_6shpx7j06eY2fXici5AXDdmeiaLwurOvfNGGm1YB8t13Z-R-waNNc-ep-VeWGcO8QeWf4gQ28LOBU4pOpcCnbhD-LIZA" />
-    <title lang="en">Premier League Highlights</title>
   </programme>
   <programme start="20261012021500 +0000" stop="20261012023000 +0000" channel="StarSportsSelect1.in@SD">
     <category lang="en">News</category>
@@ -322451,11 +322322,6 @@ Jen and Tim's fight escalates and everyone is caught in the crossfire; Cortney l
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme channel="TheJungleBook.in" start="20261012073300 +0530" stop="20261012074600 +0530">
-    <title lang="en">The Survival Of Fittest</title>
-    <desc lang="en">Although his lifestyle involves honey, bas and lots of ps, Baloo thinks he is very fit…</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6ac851c0ee0c6fea969d0b9f/images/LANDSCAPE_169/9360_8e35c6f4-9047-4a08-84a0-b1e58677123a.png" />
   </programme>
   <programme channel="TheJungleBook.in" start="20261012074600 +0530" stop="20261012075900 +0530">
     <title lang="en">The Fished Out</title>
@@ -363551,13 +363417,12 @@ Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/jfCUx-FBgc0JwF393GN5yrdrVf2L-mg16F6IQdSp8h7yvHVONUCGtnrsk-9KyIXFDvXr0sBwtrzFWuYTig26CHZY14HaozyjiLH2PXAO5DwCvui625pdRJ6_F9i9Uw" />
     <title lang="en">Gossips Garage</title>
   </programme>
-  <programme start="20261012020000 +0000" stop="20261012021500 +0000" channel="custom.aaj.tak" catchup-id="100112798">
-    <title>100 Shahar 100 Khabar</title>
-    <desc>.</desc>
-  </programme>
-  <programme start="20261012021500 +0000" stop="20261012023000 +0000" channel="custom.aaj.tak" catchup-id="100112807">
-    <title>Duniya Aaj tak</title>
-    <desc>.</desc>
+  <programme start="20261012020000 +0000" stop="20261012023000 +0000" channel="custom.aaj.tak">
+    <category lang="en">News</category>
+    <category lang="en">News Bulletin</category>
+    <desc lang="en">The host presents the latest political, social, economic and sports news updates and speaks about the recent developments in the country.</desc>
+    <icon src="https://iptv-epg.org/images/GW_hRy9ctCFYyVkEdHiZeciWLQrX98aTvIMoOGA2DyHHjmCqMLjCZroYv0oGRWU9TQ5a2ybbAQJWMXBtnSpBwUmkQOignMSBC3_dQbHXFEKzBe-vXwrAEhoYQihaQQ" />
+    <title lang="en">100 Shahar 100 Khabar</title>
   </programme>
   <programme start="20261012023000 +0000" stop="20261012025000 +0000" channel="custom.aaj.tak" catchup-id="100112800">
     <title>Khabrein Superfast</title>
@@ -383709,48 +383574,6 @@ The host talks to prominent personalities from the world of politics, culture, e
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/5334d0790a70322aa8c259c0323d0533.jpg" />
     <episode-num system="onscreen">E2</episode-num>
     <premiere />
-  </programme>
-  <programme channel="custom.boomerang" start="20261012020000 +0000" stop="20261012021500 +0000">
-    <title lang="en">Clarence</title>
-    <sub-title lang="en">Hurricane Dilliss</sub-title>
-    <desc lang="en">When Mary's mother, Dillis, visits, she interferes in all aspects of Clarence, Mary and Chad's lives.</desc>
-    <credits>
-      <actor>Spencer Rothbell</actor>
-      <actor>Tom Kenny</actor>
-      <actor>Sean Giambrone</actor>
-    </credits>
-    <date>2015</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p10517219_b_h10_am.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S1 E37</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVPG</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>PG</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>PG</value>
-    </rating>
-    <rating system="방송통신심의위원회">
-      <value>7</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>6</value>
-    </rating>
-    <rating system="Instituto Nacional de Cine y Artes Audiovisuales">
-      <value>ATP</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>A10</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>6</value>
-    </rating>
   </programme>
   <programme channel="custom.boomerang" start="20261012021500 +0000" stop="20261012023000 +0000">
     <title lang="en">Clarence</title>
@@ -415144,17 +414967,6 @@ A Toyota MR2 makes power, but not the power it once had; Bogi and Faye check the
     <desc lang="en">6-year-old connor, amaya and greg, who transform into their dynamic superhero alter egos, catboy, owlette and gekko, when they put on their pajamas at night and activate their special animal amulets.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DISNEY_CHANNEL_HD_1426951_15OCT070000_15OCT083000/images/LANDSCAPE_169/1701342578000_DisneyChannelHD_PJMasks_1426951.jpg" />
   </programme>
-  <programme channel="custom.disney.jr" start="20261012015000 +0000" stop="20261012021500 +0000">
-    <title lang="en">Robogobo: Season 1</title>
-    <desc lang="en">Family Fun Night Fiasco/ Team Baddie:Baddies interrupt Hopper. RoboGobo becomes Robo-Jumbo.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/54802fdc-fb8e-4abc-8fcc-23962d51ccc2/16-9" />
-    <episode-num system="onscreen">0</episode-num>
-    <rating system="UK">
-      <value>U</value>
-    </rating>
-  </programme>
   <programme channel="custom.disney.jr" start="20261012021500 +0000" stop="20261012023500 +0000">
     <title lang="en">RoboGobo: Season 2</title>
     <sub-title lang="en">Robo-Riders/ Super Robo-Raccoons:Dax creates vehicles</sub-title>
@@ -417718,17 +417530,6 @@ A Toyota MR2 makes power, but not the power it once had; Bogi and Faye check the
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261012074400 +0530" stop="20261012074700 +0530" channel="custom.duck.tv">
-    <title>Mimo and Bobo</title>
-    <desc>When Mimo, the panda bear, and Bobo, the monkey, enter preschool, they learn useful lessons about friendship as well as moral values.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f7100646ff9cce813dad74448f69f4d6.jpg?width=700" />
-    <episode-num system="onscreen">11</episode-num>
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261012074700 +0530" stop="20261012075000 +0530" channel="custom.duck.tv">
@@ -485327,77 +485128,457 @@ Various artists re-enact the bravest escapes from captivity that prominent perso
       <value>12</value>
     </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012015500 +0000" stop="20261012021500 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">Theodore gets stuck taking care of Miss Croner's cats in 'The Cat Sitter', then in 'Addicted', The Chipettes challenge the Chipmunks to go three hours without their favourite things.</desc>
+  <programme channel="custom.nicktoons" start="20261012020500 +0000" stop="20261012023100 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">SpongeBob LongPants; Larry's Gym</sub-title>
+    <desc lang="en">When SpongeBob gets a pair of long pants, they change his life in unexpected ways; when Larry the Lobster opens a new gym in Bikini Bottom, SpongeBob becomes his best customer.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+    </credits>
+    <date>2016</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/c9c3ba07-c715-407a-825a-f9344e5286f0/16-9" />
-    <episode-num system="xmltv_ns">2.2.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S9 E17</episode-num>
+    <previously-shown />
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>6</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012021500 +0000" stop="20261012023500 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">The boys accidently break Dave's new flat screen TV in 'The Fugitives', and in 'Sherlock Chipmunk', Jeanette and Eleanor act as Sherlock Holmes and Watson when Theodore's teddy disappears.</desc>
+  <programme channel="custom.nicktoons" start="20261012023100 +0000" stop="20261012025700 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">The Bully; Just One Bite</sub-title>
+    <desc lang="en">SpongeBob discovers that Squidward has never actually tried a Krabby patty; a bully threatens SpongeBob.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+    </credits>
+    <date>2001</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/752f55c5-f244-4db2-a962-c6713202bd61/16-9" />
-    <episode-num system="xmltv_ns">2.9.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S3 E1</episode-num>
+    <previously-shown />
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>K7</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>6</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012023500 +0000" stop="20261012030000 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">The boys build a treehouse in the backyard and move out in 'Independence Day', and in 'Opposites Attract', an invention of Simon's accidently magnetizes Alvin and Simon to each other.</desc>
+  <programme channel="custom.nicktoons" start="20261012025700 +0000" stop="20261012032300 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">The Fishbowl; Married to Money</sub-title>
+    <desc lang="en">When Sandy tries to study SpongeBob and Patrick's behavioral patterns, her science experiment goes awry; after following Plankton's advice, Mr. Krabs decides to marry the only thing he has ever loved - money.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+    </credits>
+    <date>2016</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/17edc225-cb2d-436a-a884-2b2772c39969/16-9" />
-    <episode-num system="xmltv_ns">2.10.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S9 E19</episode-num>
+    <previously-shown />
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>K7</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>6</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012030000 +0000" stop="20261012033000 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">Dave struggles on a hike with the Chipettes in 'Girls Night Out', then in 'Tables Turned', Alvin's prank on Simon backfires.</desc>
+  <programme channel="custom.nicktoons" start="20261012032300 +0000" stop="20261012035000 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">The Nasty Patty; The Idiot Box</sub-title>
+    <desc lang="en">Mr. Krabs and SpongeBob hide the health inspector's body; SpongeBob and Patrick throw out their new TV and keep the box.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+    </credits>
+    <date>2002</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/9a74b3fb-c0db-4277-9e1d-de1cb450b368/16-9" />
-    <episode-num system="xmltv_ns">2.13.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S3 E4</episode-num>
+    <previously-shown />
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>AL</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>K7</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012033000 +0000" stop="20261012040000 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">The town is under attack when Simon creates a drone in 'Pizza Dash', then in 'Glory Days', the Chipmunks worry that they're making Dave boring when they find out he used to be a rock star.</desc>
+  <programme channel="custom.nicktoons" start="20261012035000 +0000" stop="20261012041600 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">Mall Girl Pearl; Two Thumbs Down</sub-title>
+    <desc lang="en">Pearl gets a job to be cool like her friends, but the only store that is hiring is the lamest store at the mall; SpongeBob loses the use of his thumbs.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+    </credits>
+    <date>2016</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/2dc71a7e-b4dd-441f-8dc8-de374ba06d9d/16-9" />
-    <episode-num system="xmltv_ns">2.16.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S9 E18</episode-num>
+    <previously-shown />
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>K7</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>6</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012040000 +0000" stop="20261012043000 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">Simon's experiments cause trouble when Dave asks him to declutter in 'Pack Animal', then in 'The Haunted Getaway', the boys face a haunted cabin.</desc>
+  <programme channel="custom.nicktoons" start="20261012041600 +0000" stop="20261012044200 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">The Snowball Effect; One Krab's Trash</sub-title>
+    <desc lang="en">SpongeBob and Patrick throw snowballs at Squidward; Mr. Krabs has a garage sale.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+      <director>Paul Tibbitt</director>
+    </credits>
+    <date>2002</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/5a47f822-3076-4822-a5d9-90580a376420/16-9" />
-    <episode-num system="xmltv_ns">2.20.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S3 E3</episode-num>
+    <previously-shown />
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>AL</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>K7</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012043000 +0000" stop="20261012050000 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">Brittany dreams of being a fashion designer in 'The Devil Wears Rodentia', then in 'Career Day', Alvin suspects Dave of being a local bank robber when Dave starts acting suspiciously.</desc>
+  <programme channel="custom.nicktoons" start="20261012044200 +0000" stop="20261012050800 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">The Fry Cook and the Elves; It's About Mime</sub-title>
+    <desc lang="en">SpongeBob can't shake a group of elves who want to repay him for a good deed; a mime begins following (and imitating) SpongeBob, much to his annoyance.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+      <director>Vincent Waller</director>
+    </credits>
+    <date>2026</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/c4c396f0-669a-40ee-83eb-b3c25202ef49/16-9" />
-    <episode-num system="xmltv_ns">2.21.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S17 E6</episode-num>
+    <previously-shown />
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>K7</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="방송통신심의위원회">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>6</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>AL</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012050000 +0000" stop="20261012053100 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">Alvin accidentally clones himself in 'Double Trouble', then in 'Liar Liar', Alvin tells a small lie that quickly turns into a huge disaster, dragging everyone into his tangled web.</desc>
+  <programme channel="custom.nicktoons" start="20261012050800 +0000" stop="20261012053400 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">As Seen on TV; Can You Spare a Dime</sub-title>
+    <desc lang="en">Stardom goes to SpongeBob's head after he appears in Krabs' low-budget commercial; Squidward becomes impoverished.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+    </credits>
+    <date>2002</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/78c2be98-5c58-4176-99db-9b5de8c34739/16-9" />
-    <episode-num system="xmltv_ns">1.9.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S3 E5</episode-num>
+    <previously-shown />
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>6</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012053100 +0000" stop="20261012060000 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">Theodore's new toy is annoying Alvin and Simon in 'Talking Teddy', then in 'Principal Interest', Alvin is none-too thrilled about going back to school, until he sees the new Principal.</desc>
+  <programme channel="custom.nicktoons" start="20261012053400 +0000" stop="20261012060000 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">Sold!; Lame and Fortune</sub-title>
+    <desc lang="en">SpongeBob and Patrick think their homes have been sold and move away, pleasing Squidward; fortune cookies predict the future, so Plankton uses them for his schemes.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+    </credits>
+    <date>2016</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/2f2a5ffe-f430-4488-a04f-f8055242f260/16-9" />
-    <episode-num system="xmltv_ns">0.0.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S9 E21</episode-num>
+    <previously-shown />
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>6</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
   </programme>
   <programme channel="custom.nicktoons" start="20261012060000 +0000" stop="20261012062500 +0000">
     <title lang="en">SpongeBob SquarePants</title>
@@ -516408,16 +516589,6 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
     <category lang="en">Baseball</category>
     <icon src="https://images.metadata.sky.com/pd-image/d2b82807-8339-4be0-88b9-d6eacfd9ec84/16-9" />
     <episode-num system="xmltv_ns">.74.</episode-num>
-  </programme>
-  <programme channel="skysportspremiereleague.uk" start="20261012020000 +0000" stop="20261012021500 +0000">
-    <title lang="en">PL Greatest: Bolton/Chelsea 2005</title>
-    <desc lang="en">Chelsea: Enjoy the greatest Premier League game for the league's 49 clubs, as voted for by fans. For Chelsea, the win over Bolton in 2005 that won the Blues their first title in 50 years.</desc>
-    <category lang="en">Sports</category>
-    <category lang="en">Football</category>
-    <icon src="https://images.metadata.sky.com/pd-image/93f59002-1db3-43ee-be3d-9842c3e9744c/16-9" />
-    <rating system="UK">
-      <value>U</value>
-    </rating>
   </programme>
   <programme channel="skysportspremiereleague.uk" start="20261012021500 +0000" stop="20261012023000 +0000">
     <title lang="en">PL Greatest Games:Spurs/Arsenal'04</title>
