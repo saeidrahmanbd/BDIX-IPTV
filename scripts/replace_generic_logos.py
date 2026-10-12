@@ -101,7 +101,8 @@ TV_LOGO_REPO = "https://github.com/tv-logo/tv-logos"
 # accepts explicit logo-marked <img> elements; OG images are allowed only for
 # station profile pages where they are commonly the station avatar.
 DIRECT_PAGE_HINTS = {
-    "10 TV": ("https://www.10tv.in/", False),
+    "Global Panjab": ("https://globalpunjabtv.com/", True),
+    "10 TV": ("https://10tv.in/", True),
     "88 Stereo [not 24/7]": ("https://www.88stereo.com/", False),
     "Radio Adamya": ("https://zeno.fm/radio/radio-adamya/", True),
     "Radio Barakah": ("https://zeno.fm/radio/radio-barakah/", True),
