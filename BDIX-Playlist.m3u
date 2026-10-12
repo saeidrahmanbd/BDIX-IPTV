@@ -30,10 +30,10 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9k2JufmTt1ob_ZNWpwfjKY
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8YoekT0BdrjgEfQ4fmPrIo
 #EXTINF:-1 xui-id="179032" tvg-id="custom.channel.1" tvg-name="Channel 1" tvg-chno="19" channel-id="custom.channel.1" group-title="Bangladesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-1.png",Channel 1
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h3hwJ_7dBno_QXXvQA_CF8g
-#EXTINF:-1 xui-id="18817" tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-chno="22" channel-id="Channel24.bd" group-title="Bangladesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png",Channel 24
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h1qqs5oS5S6n_LTBHjGVQGE
 #EXTINF:-1 xui-id="382" tvg-id="Channel9.bd" tvg-name="Channel 9" tvg-chno="23" channel-id="Channel9.bd" group-title="Bangladesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-9.png",Channel 9
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hz7XyihAYmQKXwDmgiEPYRY
+#EXTINF:-1 xui-id="18817" tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-chno="22" channel-id="Channel24.bd" group-title="Bangladesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png",Channel 24
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h1qqs5oS5S6n_LTBHjGVQGE
 #EXTINF:-1 xui-id="363" tvg-id="ChannelI.bd" tvg-name="Channel I" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-i.png" tvg-chno="24" channel-id="ChannelI.bd" group-title="Bangladesh",Channel I
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9llgrLKyIYwnVGkGOOW3dM
 #EXTINF:-1 xui-id="93526" tvg-id="ChannelS.uk" tvg-name="Channel S" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png" tvg-chno="73" channel-id="ChannelS.uk" group-title="Bangladesh",Channel S
@@ -122,8 +122,22 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h2N77Az6srrAbchmTBEB0ro
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9R_fUL8Uhe9SKJPLkwIHIg
 #EXTINF:-1 xui-id="18982" tvg-id="ZeeBanglaSonar.in@SD" tvg-name="Zee Bangla Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png" tvg-chno="306" channel-id="ZeeBanglaSonar.in@SD" group-title="Indian Bangla",Zee Bangla Cinema
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hwXRgwvKvQTn4Nol11F44jU
-#EXTINF:-1 xui-id="161665" tvg-id="AndTV.in@SD" tvg-name="&TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ndtv.png" tvg-chno="468" channel-id="AndTV.in@SD" group-title="Indian Entertainment",&TV
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h3OWFwPFM8a_zHaNPVE17TI
+#EXTINF:-1 xui-id="2319" tvg-id="BhojpuriCinema.in@SD" tvg-name="Bhojpuri Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bhojpuri-cinema.png" tvg-chno="310" channel-id="BhojpuriCinema.in@SD" group-title="Indian Movies",Bhojpuri Cinema
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h76cxQ4yUHWthrG33yi5Fzw
+#EXTINF:-1 xui-id="515" tvg-id="ColorsCineplex.in@SD" tvg-name="Colors Cineplex" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-cineplex.png" tvg-chno="48" channel-id="ColorsCineplex.in@SD" group-title="Indian Movies",Colors Cineplex
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h0afj5-wDFVIeR4D2HICXwM
+#EXTINF:-1 xui-id="507" tvg-id="MBCBollywood.ae" tvg-name="MBC Bollywood" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mbc-bollywood.png" tvg-chno="345" channel-id="MBCBollywood.ae" group-title="Indian Movies",MBC Bollywood
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8nQLecNylgrBLkUaUiQAyw
+#EXTINF:-1 xui-id="18826" tvg-id="SonyMax.in@SD" tvg-name="Sony Max" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max.png" tvg-chno="384" channel-id="SonyMax.in@SD" group-title="Indian Movies",Sony Max
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h0yDhuPjajDECpj9_HmBbtk
+#EXTINF:-1 xui-id="495" tvg-id="StarGold.in@HD" tvg-name="Star Gold" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-star-gold-2d8d66200b.png" tvg-chno="392" channel-id="StarGold.in@HD" group-title="Indian Movies",Star Gold
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h88Vwd-RYjQbJ-cqkeqI9-8
+#EXTINF:-1 xui-id="633" tvg-id="StarGold2.in@HD" tvg-name="Star Gold 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-2.png" tvg-chno="302" channel-id="StarGold2.in@HD" group-title="Indian Movies",Star Gold 2
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hznI48wytPPowStmefC_DCQ
+#EXTINF:-1 xui-id="2172" tvg-id="Star Gold Romance.in" tvg-name="STAR GOLD ROMANCE" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-star-gold-romance-9117b9a373.png" tvg-chno="303" channel-id="Star Gold Romance.in" group-title="Indian Movies",STAR GOLD ROMANCE
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h777UehfaVIw3o6_OtJnQ7g
+#EXTINF:-1 xui-id="161673" tvg-id="ZeeCinema.in@HD" tvg-name="Zee Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema.png" tvg-chno="58" channel-id="ZeeCinema.in@HD" group-title="Indian Movies",Zee Cinema
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_vN9qdjnhMZ7-2Sa_s0KD4
 #EXTINF:-1 xui-id="519" tvg-id="9XJalwa.in" tvg-name="9X Jalwa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalwa.png" tvg-chno="436" channel-id="9XJalwa.in" group-title="Indian Music",9X Jalwa
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hyDISIvjt0sesuWEVKQD2d0
 #EXTINF:-1 xui-id="18830" tvg-id="9XJhakaas.in@SD" tvg-name="9X Jhakaas" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jhakaas.png" tvg-chno="414" channel-id="9XJhakaas.in@SD" group-title="Indian Music",9X Jhakaas
@@ -132,56 +146,42 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5CxnMlH9VkWz8Cms-FPM5A
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h4YTUJ64ZGaykjIzJygd9mg
 #EXTINF:-1 xui-id="161681" tvg-id="B4UMusic.in@India" tvg-name="B4U Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png" tvg-chno="400" channel-id="B4UMusic.in@India" group-title="Indian Music",B4U Music
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9nLa0farr-MQt0k2XYDnDM
-#EXTINF:-1 xui-id="2319" tvg-id="BhojpuriCinema.in@SD" tvg-name="Bhojpuri Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bhojpuri-cinema.png" tvg-chno="310" channel-id="BhojpuriCinema.in@SD" group-title="Indian Movies",Bhojpuri Cinema
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h76cxQ4yUHWthrG33yi5Fzw
-#EXTINF:-1 xui-id="18597" tvg-id="custom.bdix.canadaone" tvg-name="CANADA ONE" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canada-one.png" tvg-chno="503" channel-id="custom.bdix.canadaone" group-title="International",CANADA ONE
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hzcAZuSnjGHbiTAq77NAE40
-#EXTINF:-1 xui-id="41284" tvg-id="Colors.in" tvg-name="Colors" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-colors-3cfc323d7c.png" tvg-chno="475" channel-id="Colors.in" group-title="Indian Entertainment",Colors
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h4472KDgDFWiSEhOynXf4lE
-#EXTINF:-1 xui-id="515" tvg-id="ColorsCineplex.in@SD" tvg-name="Colors Cineplex" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-cineplex.png" tvg-chno="48" channel-id="ColorsCineplex.in@SD" group-title="Indian Movies",Colors Cineplex
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h0afj5-wDFVIeR4D2HICXwM
-#EXTINF:-1 xui-id="490" tvg-id="Dangal2.in@SD" tvg-name="Dangal 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dangal-2.png" tvg-chno="480" channel-id="Dangal2.in@SD" group-title="Indian Entertainment",Dangal 2
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h7K-VZyjuIj3-2YWZo1iuYw
 #EXTINF:-1 xui-id="521" tvg-id="EpicMusic.in@SD" tvg-name="Epic Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-music.png" tvg-chno="59" channel-id="EpicMusic.in@SD" group-title="Indian Music",Epic Music
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hwF-NZsNjPvL20ydFosJO2E
 #EXTINF:-1 xui-id="6168" tvg-id="IsaiAruvi.in@SD" tvg-name="Isai Aruvi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/isai-aruvi.png" tvg-chno="435" channel-id="IsaiAruvi.in@SD" group-title="Indian Music",Isai Aruvi
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h11TeGb7b_2i0suToR_6qtw
-#EXTINF:-1 xui-id="94408" tvg-id="JooMusic.pk" tvg-name="Joo Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/joo-music.png" tvg-chno="438" channel-id="JooMusic.pk" group-title="Pakistani",Joo Music
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_9_zPTSAJP5pNM8lqo4yDA
-#EXTINF:-1 xui-id="507" tvg-id="MBCBollywood.ae" tvg-name="MBC Bollywood" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mbc-bollywood.png" tvg-chno="345" channel-id="MBCBollywood.ae" group-title="Indian Movies",MBC Bollywood
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8nQLecNylgrBLkUaUiQAyw
-#EXTINF:-1 xui-id="683" tvg-id="MTVIndia.in@SD" tvg-name="MTV India" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mtv.png" tvg-chno="1078" channel-id="MTVIndia.in@SD" group-title="Indian Entertainment",MTV India
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_PYm_-onoMUFiKJd-0F1R4
 #EXTINF:-1 xui-id="18342" tvg-id="MusicIndia.in@SD" tvg-name="Music India" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/music-india.png" tvg-chno="444" channel-id="MusicIndia.in@SD" group-title="Indian Music",Music India
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hz5xYY86NTkMiYayfpcZpVA
-#EXTINF:-1 xui-id="18826" tvg-id="SonyMax.in@SD" tvg-name="Sony Max" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max.png" tvg-chno="384" channel-id="SonyMax.in@SD" group-title="Indian Movies",Sony Max
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h0yDhuPjajDECpj9_HmBbtk
+#EXTINF:-1 xui-id="520" tvg-id="Zing.in@SD" tvg-name="Zing" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zing.png" tvg-chno="460" channel-id="Zing.in@SD" group-title="Indian Music",Zing
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9MYzfW9yl3vvthpUGactZg
+#EXTINF:-1 xui-id="161665" tvg-id="AndTV.in@SD" tvg-name="&TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ndtv.png" tvg-chno="468" channel-id="AndTV.in@SD" group-title="Indian Entertainment",&TV
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h3OWFwPFM8a_zHaNPVE17TI
+#EXTINF:-1 xui-id="41284" tvg-id="Colors.in" tvg-name="Colors" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-colors-3cfc323d7c.png" tvg-chno="475" channel-id="Colors.in" group-title="Indian Entertainment",Colors
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h4472KDgDFWiSEhOynXf4lE
+#EXTINF:-1 xui-id="490" tvg-id="Dangal2.in@SD" tvg-name="Dangal 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dangal-2.png" tvg-chno="480" channel-id="Dangal2.in@SD" group-title="Indian Entertainment",Dangal 2
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h7K-VZyjuIj3-2YWZo1iuYw
+#EXTINF:-1 xui-id="683" tvg-id="MTVIndia.in@SD" tvg-name="MTV India" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mtv.png" tvg-chno="1078" channel-id="MTVIndia.in@SD" group-title="Indian Entertainment",MTV India
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_PYm_-onoMUFiKJd-0F1R4
 #EXTINF:-1 xui-id="141830" tvg-id="SonySAB.in@HD" tvg-name="Sony SAB" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sab.png" tvg-chno="682" channel-id="SonySAB.in@HD" group-title="Indian Entertainment",Sony SAB
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h4Q1vWDLG9pcFaMpqe3_YaA
 #EXTINF:-1 xui-id="141784" tvg-id="custom.bdix.sony" tvg-name="SONY TV HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-tv-hd.png" tvg-chno="530" channel-id="custom.bdix.sony" group-title="Indian Entertainment",SONY TV HD
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h-kr7S43-rs1iXDxXIMjkpU
 #EXTINF:-1 xui-id="479" tvg-id="StarBharat.in" tvg-name="Star Bharat" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-bharat.png" tvg-chno="688" channel-id="StarBharat.in" group-title="Indian Entertainment",Star Bharat
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hx07P1jJU2-RGCFShsPRKq4
-#EXTINF:-1 xui-id="495" tvg-id="StarGold.in@HD" tvg-name="Star Gold" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-star-gold-2d8d66200b.png" tvg-chno="392" channel-id="StarGold.in@HD" group-title="Indian Movies",Star Gold
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h88Vwd-RYjQbJ-cqkeqI9-8
-#EXTINF:-1 xui-id="633" tvg-id="StarGold2.in@HD" tvg-name="Star Gold 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-2.png" tvg-chno="302" channel-id="StarGold2.in@HD" group-title="Indian Movies",Star Gold 2
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hznI48wytPPowStmefC_DCQ
-#EXTINF:-1 xui-id="2172" tvg-id="Star Gold Romance.in" tvg-name="STAR GOLD ROMANCE" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-star-gold-romance-9117b9a373.png" tvg-chno="303" channel-id="Star Gold Romance.in" group-title="Indian Movies",STAR GOLD ROMANCE
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h777UehfaVIw3o6_OtJnQ7g
 #EXTINF:-1 xui-id="143845" tvg-id="StarPlus.in@SD" tvg-name="Star Plus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-star-plus-17496c1826.png" tvg-chno="685" channel-id="StarPlus.in@SD" group-title="Indian Entertainment",Star Plus
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h-dIcdSPuu24_lvw5WC10RU
-#EXTINF:-1 xui-id="161673" tvg-id="ZeeCinema.in@HD" tvg-name="Zee Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema.png" tvg-chno="58" channel-id="ZeeCinema.in@HD" group-title="Indian Movies",Zee Cinema
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_vN9qdjnhMZ7-2Sa_s0KD4
 #EXTINF:-1 xui-id="161658" tvg-id="ZeeTV.in@SD" tvg-name="Zee TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg" tvg-chno="707" channel-id="ZeeTV.in@SD" group-title="Indian Entertainment",Zee TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5mqlKV14xDuPAinM8qJFnI
-#EXTINF:-1 xui-id="520" tvg-id="Zing.in@SD" tvg-name="Zing" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zing.png" tvg-chno="460" channel-id="Zing.in@SD" group-title="Indian Music",Zing
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9MYzfW9yl3vvthpUGactZg
 #EXTINF:-1 xui-id="518" tvg-id="Zoom.in" tvg-name="ZOOM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png" tvg-chno="407" channel-id="Zoom.in" group-title="Indian Entertainment",ZOOM
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8MYGUZe1FR5QcCRXHOvR4s
+#EXTINF:-1 xui-id="94408" tvg-id="JooMusic.pk" tvg-name="Joo Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/joo-music.png" tvg-chno="438" channel-id="JooMusic.pk" group-title="Pakistani",Joo Music
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_9_zPTSAJP5pNM8lqo4yDA
 #EXTINF:-1 xui-id="954" tvg-id="AlJazeera.qa@English" tvg-name="Al Jazeera" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/al-jazeera.png" tvg-chno="714" channel-id="AlJazeera.qa@English" group-title="International",Al Jazeera
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h0Fl0HH0yjhLGehK-DJOHYQ
 #EXTINF:-1 xui-id="3517" tvg-id="BBCNews.uk" tvg-name="BBC News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-news.png" tvg-chno="1084" channel-id="BBCNews.uk" group-title="International",BBC News
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5tNomOxfPYYqVNLZ6SNX6Q
+#EXTINF:-1 xui-id="18597" tvg-id="custom.bdix.canadaone" tvg-name="CANADA ONE" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canada-one.png" tvg-chno="503" channel-id="custom.bdix.canadaone" group-title="International",CANADA ONE
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hzcAZuSnjGHbiTAq77NAE40
 #EXTINF:-1 xui-id="2131" tvg-id="custom.bdix.cnninternationla" tvg-name="CNN INTERNATIONLA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cnn-internationla.png" tvg-chno="668" channel-id="custom.bdix.cnninternationla" group-title="International",CNN INTERNATIONLA
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h6hjUwTVqSndxV-WqwYokTs
 #EXTINF:-1 xui-id="18678" tvg-id="MyTimeMovieNetwork.uk@SD" tvg-name="Mytime Movie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie.png" tvg-chno="772" channel-id="MyTimeMovieNetwork.uk@SD" group-title="International",Mytime Movie
@@ -206,8 +206,6 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hwZrelAleTZyiEQQwQjERpA
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h97ktYc0NXs5OZfmuIMV27U
 #EXTINF:-1 xui-id="142365" tvg-id="NationalGeographicWild.in@SD" tvg-name="Nat Geo Wild" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png" tvg-chno="96" channel-id="NationalGeographicWild.in@SD" group-title="Documentary & Wildlife",Nat Geo Wild
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9QWYs3csqbwMBgT4G-Yz9s
-#EXTINF:-1 xui-id="984" tvg-id="custom.bdix.redbulltv" tvg-name="Red Bull TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/red-bull-tv.png" tvg-chno="783" channel-id="custom.bdix.redbulltv" group-title="Sports",Red Bull TV
-http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8wAfgcfcQ7FGSf-LR4MZF8
 #EXTINF:-1 xui-id="593" tvg-id="TLC.in@HD" tvg-name="TLC" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tlc.png" tvg-chno="98" channel-id="TLC.in@HD" group-title="Documentary & Wildlife",TLC
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h-b6GEqO-rwf3EcaAKXZXAw
 #EXTINF:-1 xui-id="588" tvg-id="custom.bdix.travelxp" tvg-name="TRAVEL XP HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-xp.png" tvg-chno="785" channel-id="custom.bdix.travelxp" group-title="Documentary & Wildlife",TRAVEL XP HD
@@ -248,6 +246,8 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h-dcvq-XfJ4ydiY6s7n7TcU
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h3pN_WKoD6bywWFiKXBamjo
 #EXTINF:-1 xui-id="419" tvg-id="PTVSports.pk" tvg-name="PTV Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ptv-sports.png" tvg-chno="1024" channel-id="PTVSports.pk" group-title="Sports",PTV Sports
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_ln_hLNabHp3cvuyxzFtAo
+#EXTINF:-1 xui-id="984" tvg-id="custom.bdix.redbulltv" tvg-name="Red Bull TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/red-bull-tv.png" tvg-chno="783" channel-id="custom.bdix.redbulltv" group-title="Sports",Red Bull TV
+http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8wAfgcfcQ7FGSf-LR4MZF8
 #EXTINF:-1 xui-id="415" tvg-id="SkySportsCricket.ie" tvg-name="Sky Sports Cricket" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-sports-cricket.png" tvg-chno="1032" channel-id="SkySportsCricket.ie" group-title="Sports",Sky Sports Cricket
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h-cA1ojhGxsZd4B7gRUs9Qo
 #EXTINF:-1 xui-id="942" tvg-id="SkySportsFootball.ie" tvg-name="Sky Sports Football" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sky-sports-football.png" tvg-chno="1033" channel-id="SkySportsFootball.ie" group-title="Sports",Sky Sports Football
