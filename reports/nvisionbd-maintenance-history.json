@@ -336,12 +336,12 @@
     "malformed": 0
   },
   {
-    "timestamp_utc": "2026-10-12T07:36:08+00:00",
+    "timestamp_utc": "2026-10-12T07:58:18+00:00",
     "entries": 561,
     "unique_urls": 561,
     "status_counts": {
-      "Responsive": 113,
-      "Unverified": 448
+      "Unverified": 452,
+      "Responsive": 109
     },
     "duplicate_urls": 0,
     "duplicate_ids": 59,
