@@ -77,6 +77,34 @@ def main():
             changes.append(f"line {row['line_no']}: added missing tvg-name")
         lines[row["index"]] = line
 
+    # Test entries may intentionally mirror production channels, but their
+    # channel numbers must not collide with production entries or one another.
+    # Preserve every production number; move only colliding Test entries into
+    # a reserved high-number range. This is metadata-only and never changes URLs.
+    current_rows = entries(lines)
+    number_rows = defaultdict(list)
+    for row in current_rows:
+        number = row["attrs"].get("tvg-chno", "").strip()
+        if number.isdigit() and int(number) > 0:
+            number_rows[number].append(row)
+    used_numbers = {int(n) for n in number_rows}
+    next_test_number = 9001
+    for number, colliders in number_rows.items():
+        if len(colliders) < 2:
+            continue
+        for row in colliders:
+            if row["attrs"].get("group-title", "").strip() != "Test":
+                continue
+            while next_test_number in used_numbers:
+                next_test_number += 1
+            updated = set_attr(lines[row["index"]], "tvg-chno", str(next_test_number))
+            lines[row["index"]] = updated
+            changes.append(
+                f"line {row['line_no']}: moved Test channel number {number} to {next_test_number} to avoid collision"
+            )
+            used_numbers.add(next_test_number)
+            next_test_number += 1
+
     if changes:
         PLAYLIST.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
