@@ -603,7 +603,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3XH5Ux1
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0nxzBQPNCLtZy33wyP47zy
 #EXTINF:-1 xui-id="41676" tvg-id="custom.al.quran.bangla" tvg-name="Al-Quran Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran.png" tvg-chno="299" channel-id="custom.al.quran.bangla" group-title="Religious",Al-Quran Bangla
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0EFBQQuleovxxQwAgob1y4
-#EXTINF:-1 xui-id="180030" tvg-id="custom.alistiqamah" tvg-name="Alistiqamah" tvg-chno="300" channel-id="custom.alistiqamah" group-title="Religious",Alistiqamah
+#EXTINF:-1 xui-id="180030" tvg-id="custom.alistiqamah" tvg-name="Alistiqamah" tvg-chno="300" channel-id="custom.alistiqamah" group-title="Religious" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-alistiqamah-9a88b9bed2.png",Alistiqamah
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3YkjfVrf0kOgo229HIbgQw
 #EXTINF:-1 xui-id="188439" tvg-id="DeenTV.uk" tvg-name="Deen TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deen-tv-576p.png" tvg-chno="301" channel-id="DeenTV.uk" group-title="Religious",Deen TV
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1QRtpAGL2w3PQKOTDVT-yg

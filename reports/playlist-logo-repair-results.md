@@ -1,6 +1,6 @@
 # Three-Playlist Logo Repair Results
 
-Run time: **2026-10-12 05:06 UTC**  
+Run time: **2026-10-12 05:08 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -11,7 +11,7 @@ Historical mapping index: loaded 336 historical name mappings
 |---|---:|---:|---:|---:|---:|
 | BDIX-Playlist.m3u | 185 | 0 | 2 | 0 | 2 |
 | IPTV-Playlist.m3u | 1145 | 0 | 0 | 0 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 4 | 40 | 0 | 40 |
+| NVisionBD-Playlist.m3u | 561 | 1 | 39 | 0 | 39 |
 
 ## Repair log
 
@@ -30,7 +30,6 @@ Historical mapping index: loaded 336 historical name mappings
 | NVisionBD-Playlist.m3u | 368 | Blockbaster HD | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 386 | Digital Fashion | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 396 | Fashion 1 | (missing) | (none) | none |  | No exact clean logo found; left blank |
-| NVisionBD-Playlist.m3u | 436 | Power Turk | (missing) | nvisionbd-verified-power-turk-3806bd2b7a.png | [Exact external logo asset](https://github.com/tv-logo/tv-logos/blob/main/countries/turkey/powerturk-tr.png) | Public TV logo repository; original logo rights belong to broadcaster — https://github.com/tv-logo/tv-logos | replaced |
 | NVisionBD-Playlist.m3u | 450 | Star Cinema | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 468 | Whiples Cinema | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 470 | Xrema Accion | (missing) | (none) | none |  | No exact clean logo found; left blank |
@@ -41,7 +40,7 @@ Historical mapping index: loaded 336 historical name mappings
 | NVisionBD-Playlist.m3u | 550 | Cartoon Channel | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 596 | Tom & Jerry 24/7 | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 598 | Tom & Jerry TV | (missing) | (none) | none |  | No exact clean logo found; left blank |
-| NVisionBD-Playlist.m3u | 606 | Alistiqamah | (missing) | (none) | none |  | No exact clean logo found; left blank |
+| NVisionBD-Playlist.m3u | 606 | Alistiqamah | (missing) | nvisionbd-verified-alistiqamah-9a88b9bed2.png | [Exact external logo asset](https://iptv-org.github.io/channels/om/AlistiqamaTV) | Station logo from IPTV-org channel listing — https://iptv-org.github.io/channels/om/AlistiqamaTV | replaced |
 | NVisionBD-Playlist.m3u | 648 | beIN Sports Turkiye | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 674 | Espn5 HD | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 678 | Fight 24/7 | (missing) | (none) | none |  | No exact clean logo found; left blank |
@@ -56,17 +55,14 @@ Historical mapping index: loaded 336 historical name mappings
 | NVisionBD-Playlist.m3u | 788 | Sports Fishing TV | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 850 | Xtrem Sports | (missing) | (none) | Exact original tvg-logo URL from playlist history |  | Download/validation failed: downloaded image failed local validation |
 | NVisionBD-Playlist.m3u | 850 | Xtrem Sports | (missing) | (none) | none |  | No exact clean logo found; left blank |
-| NVisionBD-Playlist.m3u | 860 | 88 Stereo [not 24/7] | (missing) | nvisionbd-verified-88-stereo-not-24-7-82d858a135.jpg | [Exact external logo asset](https://tunein.com/radio/Radio-88-Stereo-887-s10749/) | Station logo served by TuneIn | replaced |
 | NVisionBD-Playlist.m3u | 870 | Bangla Hits | (missing) | (none) | Bangladesh radio station logo collection |  | Download/validation failed: HTTP Error 404: Not Found |
 | NVisionBD-Playlist.m3u | 870 | Bangla Hits | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 878 | Doyel Radio | (missing) | (none) | none |  | No exact clean logo found; left blank |
-| NVisionBD-Playlist.m3u | 880 | Dream Music Prime | (missing) | nvisionbd-verified-dream-music-prime-6e77c3eeda.avif | [Exact external logo asset](https://zeno.fm/radio/dream-music-prime/) | Station logo served by Zeno | replaced |
 | NVisionBD-Playlist.m3u | 884 | Magical Blade FM | (missing) | (none) | Radio-bd.com station logo collection |  | Download/validation failed: HTTP Error 404: Not Found |
 | NVisionBD-Playlist.m3u | 884 | Magical Blade FM | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 886 | Moner Radio | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 898 | Radio Bangladesh Co | (missing) | (none) | Exact original tvg-logo URL from playlist history |  | Download/validation failed: downloaded image failed local validation |
 | NVisionBD-Playlist.m3u | 898 | Radio Bangladesh Co | (missing) | (none) | none |  | No exact clean logo found; left blank |
-| NVisionBD-Playlist.m3u | 900 | Radio Barakah | (missing) | nvisionbd-verified-radio-barakah-4953b6e2dd.avif | [Exact external logo asset](https://zeno.fm/radio/radiobarakah/) | Station logo served by Zeno | replaced |
 | NVisionBD-Playlist.m3u | 912 | Radio Janata | (missing) | (none) | Radio-bd.com station logo collection |  | Download/validation failed: HTTP Error 404: Not Found |
 | NVisionBD-Playlist.m3u | 912 | Radio Janata | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 918 | Radio Ritmo On Line | (missing) | (none) | Radio-bd.com station logo collection |  | Download/validation failed: HTTP Error 404: Not Found |
