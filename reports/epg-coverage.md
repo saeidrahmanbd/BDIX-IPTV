@@ -1,16 +1,16 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-12T07:15:42+00:00**
+Generated: **2026-10-12T07:52:41+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **341**
-- Channels with an EPG mapping: **276**
-- Current/future programme coverage: **265/341 (77.7%)**
-- No guide mapping found: **65**
+- Active Indian channels audited: **324**
+- Channels with an EPG mapping: **261**
+- Current/future programme coverage: **250/324 (77.2%)**
+- No guide mapping found: **63**
 
 ## Source Status
 
@@ -53,7 +53,6 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Movies | Afra Film | custom.afra.film | - | NO_GUIDE_HIT |
 | Indian Music | Afro Music Channel | custom.afro.music.channel | - | NO_GUIDE_HIT |
 | Indian Bangla | Amar Bangla Digital | custom.amar.bangla.digital | - | NO_GUIDE_HIT |
-| Indian Movies | B4U Bhojpuri Plus | B4UBhojpuri.in@Plus | - | NO_GUIDE_HIT |
 | Indian Bangla | Bangla Big Boss 24x7 | custom.bangla.big.boss.24x7 | - | NO_GUIDE_HIT |
 | Indian Bangla | Bangla Plus | BanglaPlus.in | - | NO_GUIDE_HIT |
 | Indian Movies | Biz Cinema | custom.biz.cinema | - | NO_GUIDE_HIT |
@@ -111,17 +110,16 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Movies | The Movie Club | TheMovieClub.in@HD | - | NO_GUIDE_HIT |
 | Indian Movies | The Movie Club +2 | TheMovieClub.in@Plus2 | - | NO_GUIDE_HIT |
 | Indian Entertainment | UTV Palakkad | UTVPalakkad.in@SD | - | NO_GUIDE_HIT |
-| Indian Entertainment | VCV | VCV.in@SD | - | NO_GUIDE_HIT |
 | Indian Music | Zoom Music | custom.zoommusic | - | NO_GUIDE_HIT |
 
 ## Published Guide Validation
 
 - Playlist EPG references: **OK**
-- Guide channel IDs published: **471**
-- Mapped playlist IDs present in guide: **471/471 (100.0%)**
-- Mapped playlist IDs with current/future programmes: **426/471 (90.4%)**
+- Guide channel IDs published: **425**
+- Mapped playlist IDs present in guide: **425/425 (100.0%)**
+- Mapped playlist IDs with current/future programmes: **382/425 (89.9%)**
 - Mapped IDs missing from the published XMLTV channel list: **0**
 - IDs missing from guide: none
-- Mapped IDs with no current/future programmes: **45**
+- Mapped IDs with no current/future programmes: **43**
 - IDs without current/future programmes (first 30): AamarBangla.in, AndpriveHD.in, BHI.Channel.in, CinevaultWesterns.us, ColorsBanglaCinema.in@SD, DhoomMusic.in@SD, ETVBeats.in@HD, FriendsTV.in@SD, HistoryHit.uk, MONTVBangla.in, ManoranjanPrime.in@SD, Mastiii.in@SD, OdishaTV.in@SD, OnePaschima.in@SD, PrarthanaTV.in@SD, RealWild.uk, RongeenTV.in@SD, RupasiBangla.in@SD, SangeetBangla.in@SD, Sony.Aath.in, Star.Jalsha.Movies.in, Star.Jalsha.in, SteelbirdMusic.in@SD, SunBangla.in@SD, SuriyanTV.in@SD, UBangla.in, ZeeBangla.in@HD, ZeeBanglaSonar.in@SD, custom.abp.ananda, custom.bdix.9bangla
 - This validation is against the guide currently present in the working tree/publish candidate.
