@@ -129,7 +129,9 @@ jobs:
             grep -q '<programme ' epg/epg.xml
             echo "Validated EPG working-tree bytes: $(wc -c < epg/epg.xml)"
             echo "Validated EPG working-tree sha256: $(sha256sum epg/epg.xml | awk '{print $1}')"
-            git add IPTV-Playlist.m3u logos/ reports/ assets/dashboard.svg xtream/worker.js
+            # Enforce the immutable author block after every playlist transformation and before staging.
+            python scripts/enforce_playlist_attribution.py
+            git add IPTV-Playlist.m3u BDIX-Playlist.m3u NVisionBD-Playlist.m3u logos/ reports/ assets/dashboard.svg xtream/worker.js
             git add -f epg/epg.xml
             STAGED_EPG_BYTES="$(git cat-file -s :epg/epg.xml)"
             echo "Staged EPG bytes: ${STAGED_EPG_BYTES}"
