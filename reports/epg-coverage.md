@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-12T11:58:54+00:00**
+Generated: **2026-10-12T12:12:12+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
@@ -33,7 +33,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz — 486 channel IDs; 385 current/future IDs; 41897 programme rows
 - **OK** — https://www.open-epg.com/files/unitedkingdom.xml.gz — 562 channel IDs; 536 current/future IDs; 32648 programme rows
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz — 769 channel IDs; 753 current/future IDs; 79959 programme rows
-- **OK** — https://iptv-epg.org/files/epg-us.xml.gz — 12994 channel IDs; 12861 current/future IDs; 1171731 programme rows
+- **OK** — https://iptv-epg.org/files/epg-us.xml.gz — 12994 channel IDs; 12860 current/future IDs; 1171731 programme rows
 
 ## Channels Requiring Attention
 
