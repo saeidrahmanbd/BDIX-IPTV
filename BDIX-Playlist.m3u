@@ -79,10 +79,6 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h4N9d6ueEfggSXKfcYhz-Fg
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hzPjeg9u-ke5av5bSIG7PZg
 #EXTINF:-1 xui-id="175336" tvg-id="custom.star.news" tvg-name="Star News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-news-722ad595.png" tvg-chno="223" channel-id="custom.star.news" group-title="Bangladesh",Star News
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hycgULfkUpcYoqlSOXrYCBk
-#EXTINF:-1 tvg-id="hmair.toffeemovies" tvg-logo="https://assets-prod.services.toffeelive.com/b60Ss5UBrjBfS2_RJPb8/posters/c68ede73-0be0-41b7-9130-9628a16f2feb.png" tvg-name="Toffee Movies" channel-id="hmair.toffeemovies" tvg-chno="1101" group-title="Bangladesh", Toffee Movies
-https://media.hmair.xyz/api/play/Toffee%20Movies.m3u8
-#EXTINF:-1 tvg-id="hmair.toffeetv" tvg-logo="https://assets-prod.services.toffeelive.com/DNMXs5UBm1RY_In7IJ72/posters/737b5c6e-8435-4cd8-81de-16a499fa6f4e.png" tvg-name="Toffee TV" channel-id="hmair.toffeetv" tvg-chno="1102" group-title="Bangladesh", Toffee TV
-https://media.hmair.xyz/api/play/Toffee%20TV.m3u8
 #EXTINF:-1 xui-id="144334" channel-id="GreenTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/green-tv.png" tvg-id="GreenTV.bd" tvg-name="Green TV" tvg-chno="101" group-title="Bangladesh",Green TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h6WCGh6FckhbXq5cpILPV30
 #EXTINF:-1 xui-id="2881" tvg-id="custom.bdix.aakashaath" tvg-name="AAKASH AATH" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aakaash-aath.png" tvg-chno="201" channel-id="custom.bdix.aakashaath" group-title="Indian Bangla",AAKASH AATH
@@ -209,8 +205,6 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8MYGUZe1FR5QcCRXHOvR4s
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h0Fl0HH0yjhLGehK-DJOHYQ
 #EXTINF:-1 xui-id="3517" tvg-id="BBCNews.uk" tvg-name="BBC News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-news.png" tvg-chno="1084" channel-id="BBCNews.uk" group-title="International",BBC News
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5tNomOxfPYYqVNLZ6SNX6Q
-#EXTINF:-1 tvg-id="hmair.channelnewsasia" tvg-logo="https://assets-prod.services.toffeelive.com/rYOv_p8BJIOHmUelrnXh/posters/d537453f-7e5b-45f3-9b52-42f6f65950c8.png" tvg-name="Channel News Asia" channel-id="hmair.channelnewsasia" tvg-chno="1112" group-title="International", Channel News Asia
-https://media.hmair.xyz/api/play/Channel%20News%20Asia.m3u8
 #EXTINF:-1 xui-id="2131" tvg-id="custom.bdix.cnninternationla" tvg-name="CNN INTERNATIONLA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cnn-internationla.png" tvg-chno="668" channel-id="custom.bdix.cnninternationla" group-title="International",CNN INTERNATIONLA
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h6hjUwTVqSndxV-WqwYokTs
 #EXTINF:-1 tvg-id="hmair.cnn" tvg-name="CNN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cnn-internationla.png" channel-id="hmair.cnn" tvg-chno="1113" group-title="International", CNN
@@ -229,8 +223,6 @@ https://media.hmair.xyz/api/play/HUM%20Sitaray.m3u8
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h4W1wae9lpkbSM2n2zReGf0
 #EXTINF:-1 xui-id="599" tvg-id="custom.bdix.ndtv24x7" tvg-name="NDTV 24x7" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ndtv-24x7.png" tvg-chno="725" channel-id="custom.bdix.ndtv24x7" group-title="International",NDTV 24x7
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hzeU3DHzU6FJTOW1a754ZgE
-#EXTINF:-1 tvg-id="hmair.russiatoday" tvg-logo="https://assets-prod.services.toffeelive.com/CNT2_p8BalKyvLQIBSUG/posters/1e937055-a014-4274-bb69-b1b56d18c434.png" tvg-name="Russia Today" channel-id="hmair.russiatoday" tvg-chno="1119" group-title="International", Russia Today
-https://media.hmair.xyz/api/play/Russia%20Today.m3u8
 #EXTINF:-1 xui-id="541" tvg-id="StarMovies.in@SD" tvg-name="Star Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-movies-2087bb49.png" tvg-chno="744" channel-id="StarMovies.in@SD" group-title="International",Star Movies
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h2P7KTis24YpbThIup8TRyg
 #EXTINF:-1 xui-id="532" tvg-id="custom.bdix.tracelatina" tvg-name="TRACE LATINA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trace-latina.png" tvg-chno="746" channel-id="custom.bdix.tracelatina" group-title="International",TRACE LATINA
@@ -303,8 +295,6 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9WWNogV-lEyk1odd1vFOYI
 https://media.hmair.xyz/api/play/Saudi%20Quran.m3u8
 #EXTINF:-1 tvg-id="hmair.saudisunnah" tvg-name="Saudi Sunnah" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saudi-sunnah.png" channel-id="hmair.saudisunnah" tvg-chno="1127" group-title="Religious", Saudi Sunnah
 https://media.hmair.xyz/api/play/Saudi%20Sunnah.m3u8
-#EXTINF:-1 tvg-id="hmair.bfllive1" tvg-logo="https://assets-prod.services.toffeelive.com/HHnAgJkBcqxnFHJBabwO/posters/967dd1fe-c2af-442e-a0b1-22320ed82c88.png" tvg-name="BFL | Live 1" channel-id="hmair.bfllive1" tvg-chno="1128" group-title="Sports", BFL | Live 1
-https://media.hmair.xyz/api/play/BFL%20%7C%20Live%201.m3u8
 #EXTINF:-1 xui-id="3826" tvg-id="DDSports.in@SD" tvg-name="DD Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-sports-fb997548.png" tvg-chno="999" channel-id="DDSports.in@SD" group-title="Sports",DD Sports
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_UZjwt4ii540pP_yKK-8j8
 #EXTINF:-1 tvg-id="hmair.eplchannel1" tvg-name="EPL channel 1" channel-id="hmair.eplchannel1" tvg-chno="1129" group-title="Sports", EPL channel 1
