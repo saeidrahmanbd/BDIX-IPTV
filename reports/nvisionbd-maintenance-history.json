@@ -306,17 +306,17 @@
     "malformed": 0
   },
   {
-    "timestamp_utc": "2026-10-12T03:46:37+00:00",
+    "timestamp_utc": "2026-10-12T03:54:47+00:00",
     "entries": 561,
     "unique_urls": 561,
     "status_counts": {
-      "Responsive": 103,
-      "Unverified": 458
+      "Responsive": 94,
+      "Unverified": 467
     },
     "duplicate_urls": 0,
     "duplicate_ids": 59,
     "missing_ids": 0,
-    "missing_logos": 245,
+    "missing_logos": 246,
     "missing_numbers": 0,
     "malformed": 0
   }
