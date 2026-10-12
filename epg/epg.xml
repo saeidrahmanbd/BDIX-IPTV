@@ -13733,34 +13733,30 @@ A closer look at international news, events, current affairs, and exclusive stor
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="AndPictures.in@SD" start="20261012081900 +0530" stop="20261012110900 +0530">
-    <title>Dayaalu</title>
-    <desc>A young boy gets orphaned after his parents die in a car accident. Years later, he meets two college students who are the reincarnation of his parents.</desc>
-    <category>Film</category>
-    <category>Comedy</category>
-    <date>2014</date>
+  <programme channel="AndPictures.in@SD" start="20261012105700 +0530" stop="20261012134100 +0530">
+    <title lang="en">Dhadak</title>
+    <desc lang="en">A world of uncertainties awaits Madhu and Parthavi as their love transcends class divides and blossoms despite the fierce disapproval of their families.</desc>
     <credits>
-      <director>Vikram Kumar</director>
-      <actor>Akkineni Nageswara Rao</actor>
-      <actor>Nagarjuna Akkineni</actor>
-      <actor>Shriya Saran</actor>
-      <actor>Samantha Ruth Prabhu</actor>
-      <actor>Brahmanandam</actor>
-      <actor>Mohammad Ali</actor>
-      <actor>Amitabh Bachchan</actor>
-      <actor>MS Narayana</actor>
-      <actor>Akhil Akkineni</actor>
-      <actor>Jaya Prakash Reddy</actor>
-      <actor>Krishna Murali Posani</actor>
-      <actor>Naga Chaitanya Akkineni</actor>
-      <producer>Nagarjuna Akkineni</producer>
-      <producer>Mahesh Ramanathan</producer>
+      <actor>Janhvi Kapoor</actor>
+      <actor>Ishaan Khatter</actor>
+      <actor>Ashutosh Rana</actor>
+      <actor>Ankit Bisht</actor>
+      <actor>Aditya Kumar</actor>
+      <actor>Kharaj Mukherjee</actor>
+      <actor>Vishwanath Chatterjee</actor>
+      <actor>Shalini Kapoor</actor>
+      <actor>Aishwarya Narkar</actor>
+      <actor>Govind Pandey</actor>
+      <actor>Shubhavi Choksey</actor>
+      <actor>Shridhar Watsar</actor>
+      <director>Shashank Khaitan</director>
+      <producer>Hiroo Johar</producer>
+      <producer>Karan Johar</producer>
+      <producer>Apoorva Mehta</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p28863225_v_h11_ab.jpg?lock=1280x720" />
-  </programme>
-  <programme start="20261012054000 +0000" stop="20261012081100 +0000" channel="AndPictures.in@SD" catchup-id="100113654">
-    <title>Dhadak</title>
-    <desc>A young couple's love transcends class and blooms despite their families' disapproval.</desc>
+    <category lang="en">Film</category>
+    <category lang="en">Romance</category>
+    <icon src="https://dtil.tmsimg.com/assets/p15741548_v_h9_ad.jpg?lock=880x660" />
   </programme>
   <programme start="20261012081100 +0000" stop="20261012083000 +0000" channel="AndPictures.in@SD" catchup-id="100112545">
     <title>Baadshah</title>
@@ -20678,17 +20674,10 @@ Vibhuti Narayan Mishra and Manmohan Tiwari live in the same neighbourhood in Kan
     <desc lang="en">A story that throws light on the struggles, heartbreaks, dreams and hopes of students who go abroad to study.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SYMANDXPLOR_HD_811023_12OCT125000_12OCT150300/images/LANDSCAPE_169/1786894116000_xplorHD_MadaboutDance_811023.jpg" />
   </programme>
-  <programme channel="AndxplorHD.in" start="20261012150300 +0530" stop="20261012164100 +0530">
+  <programme channel="AndxplorHD.in" start="20261012150300 +0530" stop="20261012164900 +0530">
     <title lang="en">Go Goa Gone</title>
     <desc lang="en">Three slackers face chaos on a zombie-infested island, blending horror and hilarity as they fight the undead with absurd tactics and plenty of dark humor.</desc>
-    <category lang="en">Film</category>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_502,h_282,c_scale,f_webp,q_auto:eco/resources//list/AndxplorHDGoGoaGone1000063bb5c94fa9dda42a19f169bcfbb6c488f.jpg" />
-  </programme>
-  <programme channel="AndxplorHD.in" start="20261012164100 +0530" stop="20261012164900 +0530">
-    <title lang="en">Freaky Ali</title>
-    <desc lang="en">Freaky Ali.</desc>
-    <category lang="en">Film</category>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_502,h_282,c_scale,f_webp,q_auto:eco/resources//list/AndxplorHDFreakyAli214908802abc6a5992148a890b87cb85012cd0c.jpg" />
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SYMANDXPLOR_HD_1000063_12OCT150300_12OCT164900/images/LANDSCAPE_169_HD/AndxplorHD_GoGoaGone_1000063.jpg" />
   </programme>
   <programme channel="AndxplorHD.in" start="20261012164900 +0530" stop="20261012185400 +0530">
     <title lang="en">Freaky Ali</title>
@@ -29553,15 +29542,6 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
     <desc>A compilation of some of the most popular and melodious songs sung and composed by talented artists is played back-to-back.</desc>
     <category>Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p29740219_b_h8_aa.jpg?lock=1280x720" />
-  </programme>
-  <programme start="20261012051500 +0000" stop="20261012054200 +0000" channel="Choppertown.us">
-    <category lang="en">Food + Home + Culture</category>
-    <date>2007</date>
-    <desc lang="en">S1 E6 — Exterminate or Retaliate
-Lou orchestrates a truck ambush. Then, they repo a tractor and confront punk kids for four wheelers.</desc>
-    <episode-num>S1 E6</episode-num>
-    <icon src="https://iptv-epg.org/images/R4LWUq0s9gJIU-eVvgw40r90-qXpr6QKtRIdfr0YHDFKtUFP8x_9ejq80NGHB6ap64BNzZJwVf2KM_ueP1HgWxE5qFSmGJsg6e-cOxMO26o3a6N9xkcunArrq8odV4e0yNCdpio6oc5g__RAFJdt1JdV_QR8XyeQybBdblIEwQ1zVH-0Dmcil6WaMhowL-Iu3lG5TPRwx-U1AbYP7OZb6Xzpy7hW" />
-    <title lang="en">Operation Repo</title>
   </programme>
   <programme start="20261012054200 +0000" stop="20261012060800 +0000" channel="Choppertown.us">
     <category lang="en">Food + Home + Culture</category>
@@ -38477,38 +38457,10 @@ Celebrity contestants live in an isolated house and perform assigned tasks, in o
     <icon src="https://iptv-epg.org/images/9NworId_GihjLIgsWG7HlWTdl5_gLupMTFl2_7sUa-bfhKPmzvvVyvqbRsQpTHnRZjnfMoWoiLLGpW6sP-DeZhwYwdDLGPs4i4WysGD_by8B4RZYci26E_Wug_ED9w" />
     <title lang="en">Bigg Boss</title>
   </programme>
-  <programme channel="ColorsCineplex.in@SD" start="20261012111400 +0530" stop="20261012131000 +0530">
-    <title>Pogaru</title>
-    <desc>A local thug stands up against the atrocities committed on common people and fights to secure justice for them, thus earning the public's respect and affection.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2021</date>
+  <programme channel="ColorsCineplex.in@SD" start="20261012112100 +0530" stop="20261012143600 +0530">
+    <title lang="en">Aavesham</title>
+    <desc lang="en">Three teens come to Bangalore for their engineering education and get involved in a fight. They find a local gangster to help them.</desc>
     <credits>
-      <director>Nandakishore</director>
-      <actor>Dhruva Sarja</actor>
-      <actor>Rashmika Mandanna</actor>
-      <actor>Sampath Raj</actor>
-      <actor>Dhananjay</actor>
-      <actor>Chikkanna</actor>
-      <actor>Raghavendra Rajkumar</actor>
-      <actor>Pavitra Lokesh</actor>
-      <actor>P. Ravi Shankar</actor>
-      <actor>Raj Deepak Shetty</actor>
-      <actor>Kai Greene</actor>
-      <actor>'Kuri' Prathap</actor>
-      <actor>Tara Anuradha</actor>
-      <producer>B K Gangadhar</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p20103670_v_h10_ab.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="ColorsCineplex.in@SD" start="20261012131000 +0530" stop="20261012155500 +0530">
-    <title>Aavesham</title>
-    <desc>After moving into a hostel in Bangalore for their engineering course, three teenagers get into a terrible brawl with their seniors. To exact revenge, they decide to befriend a gangster.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2024</date>
-    <credits>
-      <director>Jithu Madhavan</director>
       <actor>Fahadh Faasil</actor>
       <actor>Sajin Gopu</actor>
       <actor>Hipzster</actor>
@@ -38522,21 +38474,19 @@ Celebrity contestants live in an isolated house and perform assigned tasks, in o
       <actor>Pramod Veliyanad</actor>
       <actor>Ashish Vidyarthi</actor>
       <actor>Mansoor Ali Khan</actor>
+      <director>Jithu Madhavan</director>
       <producer>Fahadh Faasil</producer>
       <producer>Nazriya Nazim</producer>
       <producer>Anwar Rasheed</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p27097658_v_h8_ad.jpg?lock=1280x720" />
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
+    <icon src="https://dtil.tmsimg.com/assets/p27097658_v_h9_ad.jpg?lock=880x660" />
   </programme>
-  <programme channel="ColorsCineplex.in@SD" start="20261012155500 +0530" stop="20261012181700 +0530">
-    <title>Yashoda</title>
-    <desc>Surrogate mother Yashodha is advised to follow a few guidelines to keep herself and her baby healthy and safe. However, something happens at the surrogate centre that puts both of them at risk.</desc>
-    <category>Film</category>
-    <category>Thriller</category>
-    <date>2022</date>
+  <programme channel="ColorsCineplex.in@SD" start="20261012143600 +0530" stop="20261012171100 +0530">
+    <title lang="en">Yashoda</title>
+    <desc lang="en">Surrogate mother Yashodha is advised to follow a few guidelines to keep herself and her baby healthy and safe, but something happens at the surrogate centre that puts both of them at risk.</desc>
     <credits>
-      <director>Haresh Narayan</director>
-      <director>K. Hari Shankar</director>
       <actor>Samantha Ruth Prabhu</actor>
       <actor>Unni Mukundan</actor>
       <actor>Varalaxmi Sarathkumar</actor>
@@ -38546,18 +38496,18 @@ Celebrity contestants live in an isolated house and perform assigned tasks, in o
       <actor>Shatru</actor>
       <actor>Divya Sripada</actor>
       <actor>Kalpika Ganesh</actor>
+      <director>Haresh Narayan</director>
+      <director>K. Hari Shankar</director>
       <producer>Sivalenka Krishna Prasad</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p23338613_b_h8_ac.jpg?lock=1280x720" />
+    <category lang="en">Film</category>
+    <category lang="en">Thriller</category>
+    <icon src="https://dtil.tmsimg.com/assets/p23338613_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="ColorsCineplex.in@SD" start="20261012181700 +0530" stop="20261012201300 +0530">
-    <title>Devaki Nandana Vasudeva</title>
-    <desc>When a prophecy declares that his nephew will cause his downfall, Kamsaraja becomes worried and stops at nothing to take him down.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2024</date>
+  <programme channel="ColorsCineplex.in@SD" start="20261012171100 +0530" stop="20261012194400 +0530">
+    <title lang="en">Devaki Nandana Vasudeva</title>
+    <desc lang="en">Driven by fear of an astrological prophecy, Kamsa torments his sister's family, convinced her child will cause his downfall. When imprisoned, Krishna shields the family from Kamsa's sinister schemes.</desc>
     <credits>
-      <director>Arjun Jandyala</director>
       <actor>Ashok Galla</actor>
       <actor>Devdutta Nage</actor>
       <actor>Manasa Varanasi</actor>
@@ -38567,36 +38517,34 @@ Celebrity contestants live in an isolated house and perform assigned tasks, in o
       <actor>Naga Mahesh</actor>
       <actor>Sravan Raghavendram</actor>
       <actor>Sanjay Swaroop</actor>
+      <director>Arjun Jandyala</director>
       <producer>Somineni Balakrishna</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p29406892_b_h8_ad.jpg?lock=1280x720" />
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
+    <icon src="https://dtil.tmsimg.com/assets/p29406892_b_h9_ac.jpg?lock=880x660" />
   </programme>
-  <programme channel="ColorsCineplex.in@SD" start="20261012201300 +0530" stop="20261012223100 +0530">
-    <title>My Boss Bajrangbali</title>
-    <desc>A corrupt politician kills Anji's parents and plans to demolish a temple. Later, Lord Hanuman takes human form to help Anji fight the politician.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2004</date>
+  <programme channel="ColorsCineplex.in@SD" start="20261012194400 +0530" stop="20261012223000 +0530">
+    <title lang="en">My Boss Bajrangbali</title>
+    <desc lang="en">An orphan is an ardent devotee of Lord Hanuman and vows to keep his devotion intact - even against mobsters that threaten to kill.</desc>
     <credits>
-      <director>Krishna Vamshi</director>
       <actor>Nitin</actor>
       <actor>Arjun Sarja</actor>
       <actor>Charmy Kaur</actor>
       <actor>Pilla Prasad</actor>
       <actor>Chandra Mohan</actor>
       <actor>Prakash Raj</actor>
+      <director>Krishna Vamshi</director>
       <producer>P.T. Giridhar Rao</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p10837991_v_h10_aa.jpg?lock=1280x720" />
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
+    <icon src="https://dtil.tmsimg.com/assets/p10837991_v_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="ColorsCineplex.in@SD" start="20261012223100 +0530" stop="20261013005400 +0530">
-    <title>Etharkkum Thunindhavan</title>
-    <desc>Kannabiran, a lawyer, saves a young woman from a pornography racket run by Inba, a minister's son. However, Inba threatens to leak explicit videos of several women, making Kannabiran go after him.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2022</date>
+  <programme channel="ColorsCineplex.in@SD" start="20261012223000 +0530" stop="20261013004100 +0530">
+    <title lang="en">Etharkkum Thunindhavan</title>
+    <desc lang="en">When a lawyer uncovers a ruthless leader's criminal network that sexually exploits and threatens young women, he embarks on a bloody pursuit of justice.</desc>
     <credits>
-      <director>Pandiraj</director>
       <actor>Suriya</actor>
       <actor>Priyanka Arulmohan</actor>
       <actor>Pugazh</actor>
@@ -38608,9 +38556,12 @@ Celebrity contestants live in an isolated house and perform assigned tasks, in o
       <actor>Ilavarasu</actor>
       <actor>Redin Kingsley</actor>
       <actor>M.S. Bhaskar</actor>
+      <director>Pandiraj</director>
       <producer>Kalanidhi Maran</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p21726639_v_h10_ab.jpg?lock=1280x720" />
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
+    <icon src="https://dtil.tmsimg.com/assets/p21726639_v_h9_ab.jpg?lock=880x660" />
   </programme>
   <programme channel="ColorsCineplex.in@SD" start="20261013005400 +0530" stop="20261013024600 +0530">
     <title>The Return Of Vaastav</title>
@@ -64156,13 +64107,6 @@ A dynastic struggle between the collateral branches of the Kuru clan, the Kaurav
     <category>Others</category>
     <icon src="https://dtil.tmsimg.com/assets/p28942924_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme channel="DDKashir.in@SD" start="20261012110000 +0530" stop="20261012111000 +0530">
-    <title lang="en">News Kashmiri / Urdu</title>
-    <desc lang="en">An anchor reports the latest social, political and economic news stories and updates from the state of Jammu and Kashmir.</desc>
-    <category lang="en">News</category>
-    <category lang="en">News Bulletin</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28955456_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="DDKashir.in@SD" start="20261012111000 +0530" stop="20261012113500 +0530">
     <title lang="en">Samanbal</title>
     <desc lang="en">The host invites various experts as guests in order to discuss different social problems affecting the women of our society.</desc>
@@ -66376,15 +66320,12 @@ A dynastic struggle between the collateral branches of the Kuru clan, the Kaurav
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme channel="DDMalayalam.in@SD" start="20261012110000 +0530" stop="20261012111000 +0530">
-    <title lang="en">News Headlines</title>
-    <desc lang="en">Live display of headlines presenting important news stories and updates in real-time, keeping viewers informed with quick summaries of major developments.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DD_MALAYALAM_108041_12OCT110000_12OCT111000/images/LANDSCAPE_169/1708339440000_DDMALAYALAM_NewsHeadlines_108041.jpg" />
-  </programme>
-  <programme channel="DDMalayalam.in@SD" start="20261012111000 +0530" stop="20261012113000 +0530">
-    <title lang="en">Classical Music</title>
-    <desc lang="en">Comedy program featuring humorous acts, lively characters, and entertaining stories aimed at bringing joy and laughter to audiences through light-hearted content.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DD_MALAYALAM_107574_12OCT111000_12OCT113000/images/LANDSCAPE_169/1714067571000_DDMALAYALAM_ClassicalMusic_107574.jpg" />
+  <programme channel="DDMalayalam.in@SD" start="20261012110000 +0530" stop="20261012113000 +0530">
+    <title lang="en">Varthakal</title>
+    <desc lang="en">The host presents some of the latest news stories, current affairs and developments pertaining to economics, politics and sports.</desc>
+    <category lang="en">News</category>
+    <category lang="en">News Bulletin</category>
+    <icon src="https://dtil.tmsimg.com/assets/p29032662_b_h9_ac.jpg?lock=880x660" />
   </programme>
   <programme channel="DDMalayalam.in@SD" start="20261012113000 +0530" stop="20261012120000 +0530">
     <title lang="en">Krishi Darshan</title>
@@ -199452,16 +199393,6 @@ A quintessential October trip to Northern Minnesota chasing walleyes and ruffed 
     <desc lang="en">A playlist of top Bollywood songs from the 2000s, created by many famous artists, is played one after another for a simple, enjoyable musical experience.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_PITAARA_2084437_15OCT070000_15OCT080000/images/LANDSCAPE_169_HD/Pitaara_BeatMode_2084437.jpg" />
   </programme>
-  <programme start="20261012104900 +0530" stop="20261012111000 +0530" channel="PocketFilms.in">
-    <title>Swad Anusar</title>
-    <desc>A wealthy amnesiac returns home, discovers his family's murderous plot, later dies from poisoned food, however promises ghostly vengeance.</desc>
-    <category>Drama</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/1eac08225c7c82a84653196f87073bc4.jpg?width=700" />
-    <rating>
-      <value>U/A-13</value>
-    </rating>
-  </programme>
   <programme start="20261012111000 +0530" stop="20261012113900 +0530" channel="PocketFilms.in">
     <title>The Footage</title>
     <desc>The Footage</desc>
@@ -238891,12 +238822,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <category lang="en">Sport</category>
     <icon src="https://tv.assets.pressassociation.io/3a316425-b513-5459-84ae-8ce7fcac1681.jpg" />
     <episode-num system="onscreen">S2026 E32</episode-num>
-  </programme>
-  <programme channel="SongdewTV.in@SD" start="20261012110500 +0530" stop="20261012111000 +0530">
-    <title lang="en">Unplugged</title>
-    <desc lang="en">A comprehensive compilation of acoustic music, featuring a diverse array of artists, showcasing their unique styles and heartfelt performances.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27658334_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="SongdewTV.in@SD" start="20261012111000 +0530" stop="20261012111500 +0530">
     <title lang="en">Songdew Fresh</title>
@@ -302889,25 +302814,6 @@ Jen and Tim's fight escalates and everyone is caught in the crossfire; Cortney l
     <desc lang="en">Mangala Alati presents the sacred Mangala Alati, featuring prayers, rituals, and devotional moments that create a serene atmosphere of faith, hope, and positivity each day.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_TARANG_113152_15OCT063000_15OCT073000/images/LANDSCAPE_169/1790250252000_TARANG_MangalaAlati_113152.jpg" />
   </programme>
-  <programme start="20261012105600 +0530" stop="20261012110900 +0530" channel="TeluguOne.in@HD">
-    <title>Aasayam</title>
-    <desc>Sarojini, a courageous woman, battles out corrupt and wicked politicians following her conscientious father's murder at their hands.</desc>
-    <category>Drama</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/a1ace90e20ebb55773b48c542420ecb7.jpg?width=700" />
-    <credits>
-      <director>A Mohan Gandhi.</director>
-      <actor>Vijaya Shanthi</actor>
-      <actor>Jagapathi Babu</actor>
-      <actor>Srikanth</actor>
-      <actor>Vijaya Kumar</actor>
-      <actor>Devan</actor>
-      <actor>Tanikella Bharani</actor>
-    </credits>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261012110900 +0530" stop="20261012112000 +0530" channel="TeluguOne.in@HD">
     <title>Aasayam</title>
     <desc>Sarojini, a courageous woman, battles out corrupt and wicked politicians following her conscientious father's murder at their hands.</desc>
@@ -330577,29 +330483,6 @@ Startling new leaks have thrust the Roswell saga back into the spotlight.</desc>
     <desc lang="en">Stay informed about Kolkata! This show shares news on social topics, money matters, and local politics. Get the latest updates on what's happening in the city.</desc>
     <category lang="en">News</category>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_502,h_282,c_scale,f_webp,q_auto:eco/resources//list/24GHANTAJaBolboSattiBolbo1855920bdb730626fab4fada13319cc20a53a7d.jpg" />
-  </programme>
-  <programme channel="ZeeAction.in" start="20261012082400 +0530" stop="20261012111000 +0530">
-    <title lang="en">Meri Taqat Mera Faisla</title>
-    <desc lang="en">A young man follows in his father's footsteps by working for the welfare of the people living in his district. However, a corrupt politician threatens to thwart his plans.</desc>
-    <credits>
-      <actor>Dhanush</actor>
-      <actor>Tamannaah Bhatia</actor>
-      <actor>Rajkiran</actor>
-      <actor>Prakash Raj</actor>
-      <actor>Ganja Karuppu</actor>
-      <actor>Livingston</actor>
-      <actor>Y.G. Mahendran</actor>
-      <actor>Ponnambalam</actor>
-      <actor>Urvashi</actor>
-      <actor>Nizhalgal Ravi</actor>
-      <actor>Charlie</actor>
-      <actor>Sudha Chandran</actor>
-      <director>Hari</director>
-      <producer>B. Venkatarama Reddy</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Action</category>
-    <icon src="https://dtil.tmsimg.com/assets/p9998756_v_h9_ab.jpg?lock=880x660" />
   </programme>
   <programme channel="ZeeAction.in" start="20261012111000 +0530" stop="20261012131600 +0530">
     <title lang="en">Chatrapathi</title>
@@ -373873,39 +373756,6 @@ A Toyota MR2 makes power, but not the power it once had; Bogi and Faye check the
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261012110400 +0530" stop="20261012110800 +0530" channel="custom.duck.tv">
-    <title>Enchanting Sights</title>
-    <desc>A fun learning experience incorporating captivating imagery and pleasant music for tiny tots.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/a9d2d918ee198dc4fc7176cf2eeed025.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012110800 +0530" stop="20261012111000 +0530" channel="custom.duck.tv">
-    <title>Vehicles</title>
-    <desc>A team of animated vehicles springs to life and assists in exploring different modes of travel. They help young children to improve their creativity and foster imaginative and developmental skills.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/6af111ddc9f125f817ee0e4108a8023a.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012111000 +0530" stop="20261012111300 +0530" channel="custom.duck.tv">
-    <title>Dinoland</title>
-    <desc>Four dinosaur babies explore their surroundings and encounter several obstacles that they overcome by helping each other.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f3d0c183c19f00e6aad085fbe90206e6.jpg?width=700" />
-    <credits>
-      <director>Roza Györffy</director>
-    </credits>
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261012111300 +0530" stop="20261012111600 +0530" channel="custom.duck.tv">

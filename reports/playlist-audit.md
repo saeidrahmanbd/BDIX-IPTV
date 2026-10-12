@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-12T11:39:39.124343+00:00**
+Generated: **2026-10-12T11:47:18.424707+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
