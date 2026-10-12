@@ -60001,13 +60001,6 @@ Various players from across the region participate in a tennis tournament organi
     <icon src="https://iptv-epg.org/images/7VIy_hUlT_gl866Qn9nCkuWke2ouz5Rv1q2rKsW9MCzYXCDBoSd_sApPNFlCLkE30JZJSMuzbB8mKSeBBaMTjGUhYYyjpVgDBbTcnKxNVRNdPFTXaSOONMhm1xWFbQ" />
     <title lang="en">Spotlight Cinema</title>
   </programme>
-  <programme channel="DDJharkhand.in@SD" start="20261012030000 +0530" stop="20261012030700 +0530">
-    <title>Rojgar Samachar</title>
-    <desc>The host presents the latest stories and significant updates related to the job sector in India in order to provide employment opportunities to the viewers.</desc>
-    <category>News</category>
-    <category>News Bulletin</category>
-    <icon src="https://dtil.tmsimg.com/assets/p13532863_b_h10_ab.jpg?lock=1280x720" />
-  </programme>
   <programme channel="DDJharkhand.in@SD" start="20261012030700 +0530" stop="20261012033000 +0530">
     <title>Chitrahaar</title>
     <desc>A comprehensive compilation of popular Bollywood songs designed to captivate music lovers with a timeless collection of enchanting melodies.</desc>
@@ -85713,32 +85706,6 @@ Bringing the best in television.</desc>
     <title lang="en">Bhagwat Katha</title>
     <desc lang="en">A spiritual discourse on the Bhagavata Purana, sharing stories of devotion, moral values, and divine wisdom through traditional narration.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DANGAL_2_1308869_15OCT031000_15OCT095500/images/LANDSCAPE_169/1684265204000_Dangal2_BhagwatKatha_1308869.jpg" />
-  </programme>
-  <programme channel="DangalTV.in@SD" start="20261012002500 +0530" stop="20261012030500 +0530">
-    <title lang="en">Raksha Bandhan</title>
-    <desc lang="en">Embracing his role as the provider, Lala Kedarnath puts personal romantic interests on the back burner until his quirky sisters can be married off into loving families.</desc>
-    <credits>
-      <actor>Akshay Kumar</actor>
-      <actor>Bhumi Pednekar</actor>
-      <actor>Sadia Khateeb</actor>
-      <actor>Deepika Khanna</actor>
-      <actor>Smrithi Srikanth</actor>
-      <actor>Sahejmeen Kaur</actor>
-      <actor>Seema Pahwa</actor>
-      <actor>Neeraj Sood</actor>
-      <actor>Sahil Mehta</actor>
-      <actor>Abhilash Thapliyal</actor>
-      <actor>Abhinav Gautam</actor>
-      <actor>Manu Rishi Chadha</actor>
-      <actor>Karan Puri</actor>
-      <director>Aanand L. Rai</director>
-      <producer>Alka Hiranandani</producer>
-      <producer>Aanand L. Rai</producer>
-      <producer>Himanshu Sharma</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Romance</category>
-    <icon src="https://dtil.tmsimg.com/assets/p22180594_v_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="DangalTV.in@SD" start="20261012030500 +0530" stop="20261012073000 +0530">
     <title lang="en">Ram Ratan Dhan Payo</title>
@@ -126486,23 +126453,6 @@ Little Singham, an honest but ferocious police officer, fights against injustice
     <title>Jatra</title>
     <desc>Talented theatre artists perform plays that reflect on many social and cultural issues.</desc>
   </programme>
-  <programme channel="Enterr10 Bangla.in" start="20261012022300 +0530" stop="20261012030400 +0530">
-    <title lang="en">Crime Alert</title>
-    <desc lang="en">The host presents a collection of true stories involving ordinary citizens who committed horrific crimes for the sake of love, revenge and various other motivating factors.</desc>
-    <credits>
-      <actor>Girish Jain</actor>
-      <actor>Amit Pachori</actor>
-      <actor>Sudha Chandran</actor>
-      <director>Anil Rawat</director>
-      <producer>Anirban Bhattacharyya</producer>
-      <producer>Sudha Chandran</producer>
-      <producer>Suhaib Ilyasi</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Crime</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27029209_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E493</episode-num>
-  </programme>
   <programme channel="Enterr10 Bangla.in" start="20261012030400 +0530" stop="20261012035000 +0530">
     <title lang="en">Crime Alert</title>
     <desc lang="en">The host presents a collection of true stories involving ordinary citizens who committed horrific crimes for the sake of love, revenge and various other motivating factors.</desc>
@@ -126709,23 +126659,6 @@ Little Singham, an honest but ferocious police officer, fights against injustice
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p17058408_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E159</episode-num>
-  </programme>
-  <programme channel="Enterr10Bangla.in@SD" start="20261012022300 +0530" stop="20261012030400 +0530">
-    <title lang="en">Crime Alert</title>
-    <desc lang="en">The host presents a collection of true stories involving ordinary citizens who committed horrific crimes for the sake of love, revenge and various other motivating factors.</desc>
-    <credits>
-      <actor>Girish Jain</actor>
-      <actor>Amit Pachori</actor>
-      <actor>Sudha Chandran</actor>
-      <director>Anil Rawat</director>
-      <producer>Anirban Bhattacharyya</producer>
-      <producer>Sudha Chandran</producer>
-      <producer>Suhaib Ilyasi</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Crime</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27029209_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E493</episode-num>
   </programme>
   <programme channel="Enterr10Bangla.in@SD" start="20261012030400 +0530" stop="20261012035000 +0530">
     <title lang="en">Crime Alert</title>
@@ -141654,19 +141587,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <title lang="en">Selfie With Bajrangi</title>
     <desc lang="en">Ankush, a 9-year-old boy, lives with his widowed mother until the mysterious Bajrangi Kid Hanuman enters their lives and changes everything forever.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_HUNGAMA_594418_15OCT070000_15OCT080000/images/LANDSCAPE_169_HD/HungamaTV_SelfieWithBajrangi_594418.jpg" />
-  </programme>
-  <programme start="20261012020000 +0530" stop="20261012030400 +0530" channel="INWILD.nl">
-    <title>Wild Iberia</title>
-    <desc>Explore the unknown face of Spain; snow, rain, clouds and cold envelop the land; the ibex migrate to the valleys and wolves patrol the mountains as vultures circle the skies overhead.</desc>
-    <category>Animals</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/7fe9e8fa64794eb7cfc3487dc6d106ef.jpg?width=700" />
-    <credits>
-      <actor>Stephen Hughes</actor>
-    </credits>
-    <rating>
-      <value>TVG</value>
-    </rating>
   </programme>
   <programme start="20261012030400 +0530" stop="20261012040800 +0530" channel="INWILD.nl">
     <title>Wild Iberia</title>
@@ -174879,15 +174799,6 @@ Life in the African jungle is a constant, brutal game of survival, where motherl
     <desc lang="en">The filmmaker gives an insight into the wildlife of Africa and how they have evolved over time to survive and sustain themselves.</desc>
     <icon src="https://iptv-epg.org/images/hjx2yoIhH_XdHongSbxny5UjSDDRiGwXByiBwUM4MvPcsSXk7kE63NFPJOWNuIpFJ2yDxvZZe9x8WqwX7kZZ75nOUICVdF1I1D_lCBrYcG546cUwwJGSgG1KHPm8" />
     <title lang="en">Africa's Deadliest</title>
-  </programme>
-  <programme channel="NickJr.in@SD" start="20261011213000 +0000" stop="20261011213500 +0000">
-    <title lang="en">Peppa Pig</title>
-    <sub-title lang="en">Paper Games</sub-title>
-    <desc lang="en">Peppa and her friends are at playgroup. Madame Gazelle is teaching the children fun games to play with paper.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/78bb56ca-20c7-3840-84af-b423966eb62a/16-9" />
-    <episode-num system="xmltv_ns">7.1.</episode-num>
   </programme>
   <programme channel="NickJr.in@SD" start="20261011213500 +0000" stop="20261011214500 +0000">
     <title lang="en">Peppa Pig</title>
@@ -216433,14 +216344,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <icon src="https://iptv-epg.org/images/fpKNMxWiWcn11supKxjEueE6GXoPYQKEDCujIqfJi3z82GbfHFWWSB4pfIxJqmeDytJZuaVLBuZGg0y2hP4_G5DHfnplRKXySl0Hlm_SWaOXcGauZp1XpSLAifs_rg" />
     <title lang="en">Adi Anadi</title>
   </programme>
-  <programme start="20261012021200 +0530" stop="20261012030900 +0530" channel="RedBullTV.at@EUMENA">
-    <title lang="en-GB">Blue Crush - Women's Surfing in the 1990s</title>
-    <desc lang="en-GB">Charting the rise of women's surfing in the late 1990s.</desc>
-    <category lang="en-GB">177</category>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/7d626b4732386418b68e932e6f357eba.jpg" />
-    <premiere />
-  </programme>
   <programme start="20261012030900 +0530" stop="20261012040500 +0530" channel="RedBullTV.at@EUMENA">
     <title lang="en-GB">Cycling</title>
     <sub-title lang="en-GB">Pogačar, Vingegaard, Roglič and Isaac del Toro gathered together in an unprecedented challenge. No teams, no collective strategies, pure talent facing the mountains and the asphalt. Two settings will put them to the test</sub-title>
@@ -242658,13 +242561,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p19353762_b_h10_ac.jpg?lock=1280x720" />
   </programme>
-  <programme channel="SonyKALHindi.us" start="20261011210800 +0000" stop="20261011213500 +0000">
-    <title lang="en">Punyashlok Ahilya Bai</title>
-    <desc lang="en">A period drama set in the 18th century, based on the life of Ahilyabai Holkar, who, alongside her father-in-law Malhar Rao Holkar, defied the pre-defined norms of the patriarchal society.</desc>
-    <date>2026</date>
-    <icon src="http://dtil.tmsimg.com/assets/p32701839_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
   <programme channel="SonyKALHindi.us" start="20261011213500 +0000" stop="20261011220000 +0000">
     <title lang="en">Punyashlok Ahilya Bai</title>
     <desc lang="en">A period drama set in the 18th century, based on the life of Ahilyabai Holkar, who, alongside her father-in-law Malhar Rao Holkar, defied the pre-defined norms of the patriarchal society.</desc>
@@ -246096,10 +245992,14 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <desc lang="en">In a bid to survive the streets of Mumbai, a farmer becomes a mafia don with a crime network of his own.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_MAX_2_151980_13OCT013500_13OCT030000/images/LANDSCAPE_169/1674033508000_Max2_AatankHiAatank_151980.jpg" />
   </programme>
-  <programme channel="SonyPal.in@SD" start="20261012024500 +0530" stop="20261012030500 +0530">
-    <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc lang="en">Taarak and Jethalal challenge Bapuji regarding his courageous stunt, pleading with him to avoid such peril and avoid venturing into danger in the future.</desc>
+  <programme channel="SonyPal.in@SD" start="20261012025600 +0530" stop="20261012031400 +0530">
+    <title>Taarak Mehta Ka Ooltah Chashmah</title>
+    <desc>As more residents spot a ghost in Gokuldham, they begin to believe that their society is haunted. Later, they all try to run for cover.</desc>
+    <category>TV Show</category>
+    <category>Sitcom</category>
     <credits>
+      <director>Dharmesh Mehta</director>
+      <director>Harshad Joshi</director>
       <actor>Dilip Joshi</actor>
       <actor>Nitish Bhaluni</actor>
       <actor>Amit Bhatt</actor>
@@ -246122,20 +246022,19 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
       <actor>Sharad Sankla</actor>
       <actor>Tanmay Vekaria</actor>
       <actor>Daya Shankar Pandey</actor>
-      <director>Dharmesh Mehta</director>
-      <director>Harshad Joshi</director>
       <producer>Asit Kumarr Modi</producer>
       <producer>Neela Asit Modi</producer>
     </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Sitcom</category>
-    <icon src="https://dtil.tmsimg.com/assets/p8862533_b_h9_ad.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E4697</episode-num>
+    <icon src="https://dtil.tmsimg.com/assets/p12557899_b_h11_ad.jpg?lock=1280x720" />
   </programme>
-  <programme channel="SonyPal.in@SD" start="20261012030500 +0530" stop="20261012032500 +0530">
-    <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc lang="en">Bapuji questions Jethalal regarding his donation to Ghushal and demands to see physical proof of the contribution. Later, Jethalal struggles to provide a justification for his actions.</desc>
+  <programme channel="SonyPal.in@SD" start="20261012031400 +0530" stop="20261012033200 +0530">
+    <title>Taarak Mehta Ka Ooltah Chashmah</title>
+    <desc>A famous ghostbuster, Tam Tam, arrives at Gokuldham in order to capture the ghost. However, she faces numerous obstacles along the way.</desc>
+    <category>TV Show</category>
+    <category>Sitcom</category>
     <credits>
+      <director>Dharmesh Mehta</director>
+      <director>Harshad Joshi</director>
       <actor>Dilip Joshi</actor>
       <actor>Nitish Bhaluni</actor>
       <actor>Amit Bhatt</actor>
@@ -246158,20 +246057,19 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
       <actor>Sharad Sankla</actor>
       <actor>Tanmay Vekaria</actor>
       <actor>Daya Shankar Pandey</actor>
-      <director>Dharmesh Mehta</director>
-      <director>Harshad Joshi</director>
       <producer>Asit Kumarr Modi</producer>
       <producer>Neela Asit Modi</producer>
     </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Sitcom</category>
-    <icon src="https://dtil.tmsimg.com/assets/p8862533_b_h9_ad.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E4698</episode-num>
+    <icon src="https://dtil.tmsimg.com/assets/p12557899_b_h11_ad.jpg?lock=1280x720" />
   </programme>
-  <programme channel="SonyPal.in@SD" start="20261012032500 +0530" stop="20261012034400 +0530">
-    <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc lang="en">Bhide grows furious with Jethalal for delaying the payment of the society repair cheque. Later, he sets out with a firm determination to confront Jethalal and collect the money at any cost.</desc>
+  <programme channel="SonyPal.in@SD" start="20261012033200 +0530" stop="20261012034300 +0530">
+    <title>Taarak Mehta Ka Ooltah Chashmah</title>
+    <desc>Bhootnath makes himself invisible and introduces himself to the residents of Gokuldham. However, they refuse to believe that he exists.</desc>
+    <category>TV Show</category>
+    <category>Sitcom</category>
     <credits>
+      <director>Dharmesh Mehta</director>
+      <director>Harshad Joshi</director>
       <actor>Dilip Joshi</actor>
       <actor>Nitish Bhaluni</actor>
       <actor>Amit Bhatt</actor>
@@ -246194,15 +246092,10 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
       <actor>Sharad Sankla</actor>
       <actor>Tanmay Vekaria</actor>
       <actor>Daya Shankar Pandey</actor>
-      <director>Dharmesh Mehta</director>
-      <director>Harshad Joshi</director>
       <producer>Asit Kumarr Modi</producer>
       <producer>Neela Asit Modi</producer>
     </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Sitcom</category>
-    <icon src="https://dtil.tmsimg.com/assets/p8862533_b_h9_ad.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E4699</episode-num>
+    <icon src="https://dtil.tmsimg.com/assets/p12557899_b_h11_ad.jpg?lock=1280x720" />
   </programme>
   <programme channel="SonyPal.in@SD" start="20261012034400 +0530" stop="20261012040200 +0530">
     <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
@@ -314569,27 +314462,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <desc lang="en">Mangala Alati presents the sacred Mangala Alati, featuring prayers, rituals, and devotional moments that create a serene atmosphere of faith, hope, and positivity each day.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_TARANG_113152_15OCT063000_15OCT073000/images/LANDSCAPE_169/1790250252000_TARANG_MangalaAlati_113152.jpg" />
   </programme>
-  <programme start="20261012025500 +0530" stop="20261012030600 +0530" channel="TeluguOne.in@HD">
-    <title>Vaade Veedu</title>
-    <desc>A couple is distraught when their son gets kidnapped and the father dies due to the trauma. Years later, the son crosses paths with them, unaware of their identity.</desc>
-    <category>Drama</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f383d6b483c4cf496738f21314a88fca.jpg?width=700" />
-    <credits>
-      <director>D. Yoganand</director>
-      <actor>N.T. Ramarao (Rambabu / Kondadu)</actor>
-      <actor>Manjula (Savitri)</actor>
-      <actor>Krishnam Raju (Shankar)</actor>
-      <actor>Nagabhushanam (Kodandam)</actor>
-      <actor>Padmanabham (Bheemudu)</actor>
-      <actor>Allu Ramalingaiah (Sidhanthi)</actor>
-      <actor>Mikkilineni (Zamindar Jaganatha Rao)</actor>
-      <actor>Ramana Reddy</actor>
-    </credits>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261012030600 +0530" stop="20261012031800 +0530" channel="TeluguOne.in@HD">
     <title>Vaade Veedu</title>
     <desc>A couple is distraught when their son gets kidnapped and the father dies due to the trauma. Years later, the son crosses paths with them, unaware of their identity.</desc>
@@ -318359,14 +318231,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012025400 +0530" stop="20261012030600 +0530" channel="ThalaaTV.in">
-    <title>Ganam Kottaar Avargalae</title>
-    <sub-title>THALAA TV | TAMIL</sub-title>
-    <desc>Timid lawyer Bhaskar must save his mentor Desikachari, accused in a murder case.</desc>
-    <category>Action</category>
-    <language>TAMIL</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/THALAA%20TV/POSTER/Ganam%20Kottaar%20Avargalae.png" />
-  </programme>
   <programme start="20261012030600 +0530" stop="20261012031900 +0530" channel="ThalaaTV.in">
     <title>Ganam Kottaar Avargalae</title>
     <sub-title>THALAA TV | TAMIL</sub-title>
@@ -320633,13 +320497,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <title lang="en">The Itchy Twitchy Kaa!</title>
     <desc lang="en">Mowgli goes to visit Kaa with a question. How many monkeys can a python swallow in one gulp?</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acc2a228d1a0fbd854910f1/images/LANDSCAPE_169/9372_370abaf4-87cf-4ecf-ac5b-181564e3a34e.png" />
-  </programme>
-  <programme channel="TinyPop.uk" start="20261011212700 +0000" stop="20261011213700 +0000">
-    <title lang="en">Masha And The Bear</title>
-    <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012025700/list/TinyPOPMashaAndTheBear2056996c01e56c0cbee49d19f3942f4746caff8.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261011213700 +0000" stop="20261011214600 +0000">
     <title lang="en">Masha And The Bear</title>
@@ -338627,29 +338484,21 @@ A compilation of some of the most popular and melodious songs sung and composed 
     <icon src="https://iptv-epg.org/images/ken0x6qJ2Sq52wiHdqPcgovbprSK5NtFaUIN8KoMgYfyLcKQJhplicRnHeSigEti4FatZOM3P0FrayWZrKJfGN8uMn9ujaqwrqZBS0uBlPicxpSwGzEUV2GIKMCXpw" />
     <title lang="en">Drama Juniors</title>
   </programme>
-  <programme channel="ZeeKannada.in@SD" start="20261012013000 +0530" stop="20261012030400 +0530">
-    <title>Dance Karnataka Dance Super Moms</title>
-    <desc>This is TV Show - Reality Show Category</desc>
-    <category>TV Show</category>
-    <category>Reality Show</category>
-    <credits>
-      <actor>Anushree</actor>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p34050366_b_h10_ab.jpg?lock=1280x720" />
+  <programme channel="ZeeKannada.in@SD" start="20261012030200 +0530" stop="20261012034700 +0530">
+    <title lang="en">Aaradhane</title>
+    <desc lang="en">A religious leader performs sacred rituals and worships the idol of a Hindu deity while chanting holy hymns to seek divine blessings.</desc>
+    <category lang="en">TV Show</category>
+    <category lang="en">Religious</category>
+    <icon src="https://dtil.tmsimg.com/assets/p29095128_b_h9_ab.jpg?lock=880x660" />
+    <episode-num system="onscreen">S2 E3</episode-num>
   </programme>
-  <programme channel="ZeeKannada.in@SD" start="20261012030400 +0530" stop="20261012034900 +0530">
-    <title>Aaradhane</title>
-    <desc>A religious leader performs sacred rituals and worships the idol of a Hindu deity while chanting holy hymns to seek divine blessings.</desc>
-    <category>TV Show</category>
-    <category>Religious</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29095128_b_h8_ab.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="ZeeKannada.in@SD" start="20261012034900 +0530" stop="20261012040000 +0530">
-    <title>Fillers</title>
-    <desc>A comprehensive compilation of promotional videos and trailers of Bollywood movies featuring popular actors and actresses.</desc>
-    <category>TV Show</category>
-    <category>Variety Show</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27494746_b_h8_aa.jpg?lock=1280x720" />
+  <programme channel="ZeeKannada.in@SD" start="20261012034700 +0530" stop="20261012040000 +0530">
+    <title lang="en">Filler</title>
+    <desc lang="en">Bringing the best in television.</desc>
+    <category lang="en">TV Show</category>
+    <category lang="en">Entertainment</category>
+    <icon src="https://dtil.tmsimg.com/assets/p26697972_b_h9_aa.jpg?lock=880x660" />
+    <episode-num system="onscreen">S2 E444</episode-num>
   </programme>
   <programme channel="ZeeKannada.in@SD" start="20261012040000 +0530" stop="20261012051900 +0530">
     <title lang="en">Sa Re Ga Ma Pa Lil Champs 2026</title>
@@ -374085,14 +373934,6 @@ Delving into a range of varied topics, the host discusses the social, economic a
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme start="20261012021200 +0530" stop="20261012030900 +0530" channel="custom.bdix.redbulltv">
-    <title lang="en-GB">Blue Crush - Women's Surfing in the 1990s</title>
-    <desc lang="en-GB">Charting the rise of women's surfing in the late 1990s.</desc>
-    <category lang="en-GB">177</category>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/7d626b4732386418b68e932e6f357eba.jpg" />
-    <premiere />
   </programme>
   <programme start="20261012030900 +0530" stop="20261012040500 +0530" channel="custom.bdix.redbulltv">
     <title lang="en-GB">Cycling</title>
@@ -412627,16 +412468,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012030100 +0530" stop="20261012030700 +0530" channel="custom.duck.tv">
-    <title>Sunville</title>
-    <desc>In the charming village of Sunville, Mr. Goat and the others fill each day with exciting adventures. They bring joy and warmth through their interactions and helpful deeds.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f4694bb56437a39aa1c8dc5bfc414ce1.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261012030700 +0530" stop="20261012031100 +0530" channel="custom.duck.tv">
     <title>Monica and Rudy 2</title>
     <desc>Monica and her yellow pet bird Rudy delve into the world of rhythms and enjoy learning new things and seeing new sights.</desc>
@@ -423018,47 +422849,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <rating>
       <value>TVY</value>
     </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011213200 +0000" stop="20261011213500 +0000">
-    <title lang="en">Shaping Up</title>
-    <desc lang="en">A group of geometric shapes form themselves into various objects to help children develop proper image recognition and creative thinking skills.</desc>
-    <date>2016</date>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Educational</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13128241_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011213500 +0000" stop="20261011213700 +0000">
-    <title lang="en">Mimo &amp; Bobo</title>
-    <desc lang="en">Mimo and his loyal friend Bobo set out for a world of preschool adventure as they gain valuable experiences and skills along the way.</desc>
-    <date>2016</date>
-    <category lang="en">Children</category>
-    <category lang="en">Educational</category>
-    <icon src="http://dtil.tmsimg.com/assets/p22593846_b_h10_ad.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="custom.ducktv" start="20261011213700 +0000" stop="20261011213900 +0000">
-    <title lang="en">Little Melodies</title>
-    <desc lang="en">Beautiful English nursery songs with our favorite characters.</desc>
-    <date>2016</date>
-    <category lang="en">Children</category>
-    <category lang="en">Music</category>
-    <category lang="en">Educational</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13128186_b_h10_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
   </programme>
   <programme channel="custom.ducktv" start="20261011213900 +0000" stop="20261011214300 +0000">
     <title lang="en">Happy Meadow</title>
@@ -443689,23 +443479,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <title>Ekamra Lahari</title>
     <desc>A compilation of the timeless old classic Odia hits is played to entertain the audience.</desc>
   </programme>
-  <programme channel="custom.enter10.bangla" start="20261012022300 +0530" stop="20261012030400 +0530">
-    <title lang="en">Crime Alert</title>
-    <desc lang="en">The host presents a collection of true stories involving ordinary citizens who committed horrific crimes for the sake of love, revenge and various other motivating factors.</desc>
-    <credits>
-      <actor>Girish Jain</actor>
-      <actor>Amit Pachori</actor>
-      <actor>Sudha Chandran</actor>
-      <director>Anil Rawat</director>
-      <producer>Anirban Bhattacharyya</producer>
-      <producer>Sudha Chandran</producer>
-      <producer>Suhaib Ilyasi</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Crime</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27029209_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E493</episode-num>
-  </programme>
   <programme channel="custom.enter10.bangla" start="20261012030400 +0530" stop="20261012035000 +0530">
     <title lang="en">Crime Alert</title>
     <desc lang="en">The host presents a collection of true stories involving ordinary citizens who committed horrific crimes for the sake of love, revenge and various other motivating factors.</desc>
@@ -444101,19 +443874,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme channel="custom.epic" start="20261012024000 +0530" stop="20261012030500 +0530">
-    <title lang="en">Indipedia</title>
-    <desc lang="en">The host travels to different states in India and learns more about the customs and traditions that have been a part of the country since ancient times.</desc>
-    <credits>
-      <actor>Edward Sonnenblick</actor>
-      <director>Shubhra Chatterji</director>
-      <producer>Monia Pinto</producer>
-    </credits>
-    <category lang="en">Documentary</category>
-    <category lang="en">Travel</category>
-    <icon src="https://dtil.tmsimg.com/assets/p22527569_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E3</episode-num>
   </programme>
   <programme channel="custom.epic" start="20261012030500 +0530" stop="20261012034000 +0530">
     <title lang="en">Epic Ke Dus</title>
@@ -456522,92 +456282,6 @@ Jeevsiddhi, who is trained by Chanakya, enters the innermost circles of Rakshasa
     <category>News</category>
     <language>Hindi</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-000050002-20261017230000/list/GNTGoodLuckToday11847969431ddd54cef4df3ae61b0e330280fc9.jpg" />
-  </programme>
-  <programme channel="custom.hbo.2" start="20261011194300 +0000" stop="20261011213400 +0000">
-    <title lang="en">Mission: Impossible</title>
-    <desc lang="en">When U.S. government operative Ethan Hunt (Tom Cruise) and his mentor, Jim Phelps (Jon Voight), go on a covert assignment that takes a disastrous turn, Jim is killed, and Ethan becomes the prime murder suspect. Now a fugitive, Hunt recruits brilliant hacker Luther Stickell (Ving Rhames) and maverick pilot Franz Krieger (Jean Reno) to help him sneak into a heavily guarded CIA building to retrieve a confidential computer file that will prove his innocence.</desc>
-    <credits>
-      <actor>Tom Cruise</actor>
-      <actor>Jon Voight</actor>
-      <actor>Henry Czerny</actor>
-      <director>Brian De Palma</director>
-    </credits>
-    <date>1996</date>
-    <category lang="en">Movie</category>
-    <category lang="en">Action</category>
-    <category lang="en">Adventure</category>
-    <category lang="en">Thriller</category>
-    <icon src="http://dtil.tmsimg.com/assets/p18045_v_h8_ah.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Motion Picture Association">
-      <value>PG-13</value>
-    </rating>
-    <rating system="British Board of Film Classification">
-      <value>PG</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>12</value>
-    </rating>
-    <rating system="Ministero della Cultura">
-      <value>T</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>M 15+</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Arcom">
-      <value>-10</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>16</value>
-    </rating>
-    <rating system="Ontario Film Authority">
-      <value>PG</value>
-    </rating>
-    <rating system="Medietilsynet">
-      <value>15 år</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>K12</value>
-    </rating>
-    <rating system="Statens medieråd">
-      <value>Från 11 år</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>B</value>
-    </rating>
-    <rating system="映倫">
-      <value>G</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>12</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>12</value>
-    </rating>
-    <rating system="영상물등급위원회">
-      <value>15+</value>
-    </rating>
-    <rating system="Instituto Nacional de Cine y Artes Audiovisuales">
-      <value>ATP</value>
-    </rating>
-    <rating system="Medierådet">
-      <value>11</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>14</value>
-    </rating>
-    <rating system="UK Content Provider">
-      <value>15</value>
-    </rating>
-    <rating system="Central Board of Film Certification">
-      <value>U</value>
-    </rating>
-    <star-rating system="TMS">
-      <value>5.0/10</value>
-    </star-rating>
   </programme>
   <programme channel="custom.hbo.2" start="20261011213400 +0000" stop="20261011222100 +0000">
     <title lang="en">Jaÿ-Z in 8</title>
@@ -494010,102 +493684,6 @@ A lady who previously spurned Manmohan's proposal rings him to arrange a rendezv
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme channel="custom.sony.cine" start="20261011193500 +0000" stop="20261011213600 +0000">
-    <title lang="en">District 9</title>
-    <credits>
-      <actor>Sharlto Copley</actor>
-      <actor>Jason Cope</actor>
-      <actor>David James</actor>
-      <director>Neill Blomkamp</director>
-    </credits>
-    <date>2009</date>
-    <category lang="en">Movie</category>
-    <category lang="en">Science fiction</category>
-    <category lang="en">Drama</category>
-    <icon src="http://dtil.tmsimg.com/assets/p177953_v_h10_aj.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Motion Picture Association">
-      <value>R</value>
-    </rating>
-    <rating system="British Board of Film Classification">
-      <value>15</value>
-    </rating>
-    <rating system="Manitoba Film Classification Board">
-      <value>14A</value>
-    </rating>
-    <rating system="B.C. Film Classification Office">
-      <value>18A</value>
-    </rating>
-    <rating system="Saskatchewan Film and Video Classification Board">
-      <value>18A</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>13+</value>
-    </rating>
-    <rating system="Ontario Film Authority">
-      <value>14A</value>
-    </rating>
-    <rating system="Alberta's Film Classification Board">
-      <value>14A</value>
-    </rating>
-    <rating system="UK Content Provider">
-      <value>15</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>14</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>16</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>K16</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>16</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>MA 15+</value>
-    </rating>
-    <rating system="Instituto Nacional de Cine y Artes Audiovisuales">
-      <value>SAM 16</value>
-    </rating>
-    <rating system="Medietilsynet">
-      <value>15 år</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>B15</value>
-    </rating>
-    <rating system="Statens medieråd">
-      <value>Från 15 år</value>
-    </rating>
-    <rating system="Ministero della Cultura">
-      <value>T</value>
-    </rating>
-    <rating system="映倫">
-      <value>PG12</value>
-    </rating>
-    <rating system="Medierådet">
-      <value>15</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>16</value>
-    </rating>
-    <rating system="방송통신심의위원회">
-      <value>15</value>
-    </rating>
-    <rating system="영상물등급위원회">
-      <value>18+</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>16</value>
-    </rating>
-    <rating system="Arcom">
-      <value>-12</value>
-    </rating>
-    <star-rating system="TMS">
-      <value>7.0/10</value>
-    </star-rating>
   </programme>
   <programme channel="custom.sony.cine" start="20261011213600 +0000" stop="20261011231900 +0000">
     <title lang="en">The River Murders</title>
