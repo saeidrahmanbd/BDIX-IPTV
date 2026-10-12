@@ -177,7 +177,7 @@ def generate_placeholder_logo(label, target):
         small = ImageFont.truetype(font_path, 16)
     except Exception:
         small = ImageFont.load_default()
-    draw.text((98, height-82), "CHANNEL LOGO", font=small, fill=accent)
+    draw.text((98, height-82), "UNOFFICIAL ARTWORK", font=small, fill=accent)
     image.save(target, format="PNG", optimize=True)
 def fetch_bytes(url):
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -395,11 +395,23 @@ for line in lines:
                 failed += 1
                 print(f"Catalogue logo failed: {title}: {exc}")
 
-    # No exact, verified logo source matched. Do not create non-official placeholder
-    # artwork: leave tvg-logo empty so a later audit can safely retry source lookup.
-    output.append(force_local(line, ""))
-    unresolved.append(title)
-    print(f"UNVERIFIED LOGO LEFT BLANK: {title}")
+    # No usable source matched. Use original fallback artwork that is visibly
+    # marked unofficial; the manifest never treats it as broadcaster branding.
+    filename = f"generated-fallback-{safe_name(title)}.png"
+    target = LOGOS / filename
+    replacement_logo = RAW_BASE + filename
+    try:
+        if not target.exists():
+            generate_placeholder_logo(title, target)
+            generated_placeholders.append(title)
+        output.append(force_local(line, replacement_logo))
+        changed += 1
+        continue
+    except Exception as exc:
+        failed += 1
+        output.append(force_local(line, ""))
+        unresolved.append(title)
+        print(f"FALLBACK ARTWORK FAILED; LEFT BLANK: {title}: {exc}")
 
 new_text = "\n".join(output).rstrip() + "\n"
 if new_text != original:
@@ -414,4 +426,4 @@ print(f"Local non-PNG logos converted: {converted_local}")
 print(f"Logo downloads failed: {failed}")
 print(f"Still unresolved (no usable logo attached): {len(unresolved)}")
 for title in unresolved: print(f"UNRESOLVED: {title}")
-print("Placeholder generation is disabled; unverified logos remain blank.")
+print(f"Clearly marked generated fallback artwork created: {len(generated_placeholders)}")
