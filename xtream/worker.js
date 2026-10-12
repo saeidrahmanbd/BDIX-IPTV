@@ -1,0 +1,1 @@
+// The NVisionBD playlist has been retired. This Worker entry point is intentionally disabled until the maintained IPTV/BDIX gateway source is restored.
