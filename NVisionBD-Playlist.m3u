@@ -255,7 +255,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1t8878y
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-39iDL9it2toZkvrxMtUeza
 #EXTINF:-1 xui-id="180786" tvg-id="custom.zoommusic" tvg-name="Zoom Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-music.png" tvg-chno="125" channel-id="custom.zoommusic" group-title="Indian Music",Zoom Music
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-04SJxetb1biV1JfYixZwpT
-#EXTINF:-1 xui-id="180701" tvg-id="custom.10.tv" tvg-name="10 TV" tvg-chno="126" channel-id="custom.10.tv" group-title="Indian Entertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-10-tv-096e02b1.svg",10 TV
+#EXTINF:-1 xui-id="180701" tvg-id="custom.10.tv" tvg-name="10 TV" tvg-chno="126" channel-id="custom.10.tv" group-title="Indian Entertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-10-tv-6c9aa3e23f.png",10 TV
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1cmA2GoAPfx9IIBYYipSa2
 #EXTINF:-1 xui-id="600" tvg-id="custom.aaj.tak" tvg-name="Aaj Tak HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aaj-tak-hd.png" tvg-chno="127" channel-id="custom.aaj.tak" group-title="Indian Entertainment",Aaj Tak HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3TVuL-rttFPcnt75nyvFd6
@@ -671,7 +671,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-056rbP9
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0CRBf_k-hkpFrY-yi8hcmU
 #EXTINF:-1 xui-id="189105" tvg-id="ESPNCM" tvg-name="ESPN Vivo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn.png" tvg-chno="333" channel-id="ESPNCM" group-title="Sports",ESPN Vivo
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1FsH6CvA6UrkObZj85nLdM
-#EXTINF:-1 xui-id="179950" tvg-id="custom.espn5" tvg-name="Espn5 HD" tvg-chno="334" channel-id="custom.espn5" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-espn5-2e7e33ee.svg",Espn5 HD
+#EXTINF:-1 xui-id="179950" tvg-id="custom.espn5" tvg-name="Espn5 HD" tvg-chno="334" channel-id="custom.espn5" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-espn5-1ec0066afd.jpg",Espn5 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0NJtGgzX1oybHTBJF-fyj0
 #EXTINF:-1 xui-id="180868" tvg-id="custom.fifa" tvg-name="Fifa+" tvg-chno="335" channel-id="custom.fifa" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-fifa-plus.svg",Fifa+
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0CEObGLrPx_f3YYdTjLWgu
@@ -875,7 +875,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3KKA_iD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36a5vNE9EszvYSMUCr-TVw
 #EXTINF:-1 xui-id="41671" tvg-id="custom.dhaka.fm.90.4" tvg-name="Dhaka FM 90.4" tvg-chno="435" channel-id="custom.dhaka.fm.90.4" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-dhaka-fm-90-4.png",Dhaka FM 90.4
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1gIbpQHGjbjyIrnlTs0zv2
-#EXTINF:-1 xui-id="41689" tvg-id="custom.doyel.radio" tvg-name="Doyel Radio" tvg-chno="436" channel-id="custom.doyel.radio" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-doyel-radio-793a1b6a.svg",Doyel Radio
+#EXTINF:-1 xui-id="41689" tvg-id="custom.doyel.radio" tvg-name="Doyel Radio" tvg-chno="436" channel-id="custom.doyel.radio" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-doyel-radio-4dca18c2f6.jpg",Doyel Radio
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0-edLus17RmZH1iSNlDt56
 #EXTINF:-1 xui-id="41688" tvg-id="custom.dream.music.prime" tvg-name="Dream Music Prime" tvg-chno="437" channel-id="custom.dream.music.prime" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-dream-music-prime-6e77c3eeda.avif",Dream Music Prime
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3e848rM9rezuMk0wwlIaOU
@@ -945,7 +945,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3YV8Py1
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2YACEpJcLPaSUcPrscs457
 #EXTINF:-1 xui-id="41696" tvg-id="custom.wc.music" tvg-name="Wc Music" tvg-chno="470" channel-id="custom.wc.music" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-wc-music-7768e9fe.svg",Wc Music
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0BqOTToxHkKlD1_dNt-FoZ
-#EXTINF:-1 xui-id="41683" tvg-id="custom.wifm.100.9" tvg-name="Wifm 100.9" tvg-chno="471" channel-id="custom.wifm.100.9" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-wifm-100-9-d08be206.svg",Wifm 100.9
+#EXTINF:-1 xui-id="41683" tvg-id="custom.wifm.100.9" tvg-name="Wifm 100.9" tvg-chno="471" channel-id="custom.wifm.100.9" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-wifm-100-9-0cb4874c91.png",Wifm 100.9
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1lzVyxVd1GQqf8awY3KomE
 #EXTINF:-1 xui-id="180682" tvg-id="9XJhakaas.in@SD" tvg-name="9x Jhakaas" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jhakaas.png" tvg-chno="472" channel-id="9XJhakaas.in@SD" group-title="Backup",9x Jhakaas (Alt 2)
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2PylYeC5PBbgy-pXUeR4-p
