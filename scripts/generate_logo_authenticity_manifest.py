@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 from datetime import datetime, timezone
 
-PLAYLISTS = ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "NVisionBD-Playlist.m3u"]
+PLAYLISTS = ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u"]
 OUT = Path("reports/logo-authenticity-manifest.json")
 REGISTRY_PATH = Path("reports/logo-source-registry.json")
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
