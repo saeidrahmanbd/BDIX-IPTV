@@ -1,6 +1,6 @@
 # Generic Logo Replacement Results
 
-This report covers the current NVisionBD-Playlist.m3u. Only confidently matched, validated artwork is applied; ambiguous sources remain unresolved.
+This historical report describes a retired playlist and is retained only as an archived record.
 
 - Run time: 2026-10-12 04:54 UTC
 - IPTV-org dataset: loaded
