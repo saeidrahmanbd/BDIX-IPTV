@@ -1,6 +1,6 @@
 # Three-Playlist Logo Repair Results
 
-Run time: **2026-10-12 05:23 UTC**  
+Run time: **2026-10-12 05:35 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,17 +9,28 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Missing after | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|
-| BDIX-Playlist.m3u | 185 | 1 | 1 | 0 | 1 |
-| IPTV-Playlist.m3u | 1145 | 0 | 0 | 0 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 1 | 32 | 0 | 32 |
+| BDIX-Playlist.m3u | 185 | 0 | 1 | 0 | 1 |
+| IPTV-Playlist.m3u | 1145 | 13 | 0 | 0 | 0 |
+| NVisionBD-Playlist.m3u | 561 | 0 | 32 | 0 | 32 |
 
 ## Repair log
 
 | Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
 |---|---:|---|---|---|---|---|---|
-| BDIX-Playlist.m3u | 274 | NICK BANGLA | nick-bangla.png | nvisionbd-verified-nick-bangla-26fef2ac19.png | [Exact external logo asset](https://github.com/channeliptv0/IPTV/blob/f26247efa6b641fda8d6bb16f01f99f4948d8a3b/Master/Bangla.m3u) | Channel-specific logo URL found in a public IPTV logo listing; original logo rights belong to broadcaster | replaced |
 | BDIX-Playlist.m3u | 300 | EPL channel 1 | (missing) | (none) | none |  | No exact clean logo found; left blank |
-| NVisionBD-Playlist.m3u | 136 | Nick Bangla | nick-bangla.png | nvisionbd-verified-nick-bangla-26fef2ac19.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 29 | BTV News | btv-news.png | nvisionbd-verified-btv-news-33c61f1708.jpg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 69 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 719 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 1167 | Tom and Jerry | tom-and-jerry.png | nvisionbd-verified-tom-and-jerry-927bd66719.jpg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 1737 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1739 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1741 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2273 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2275 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2277 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2279 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2281 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2283 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
 | NVisionBD-Playlist.m3u | 200 | Sine Plus | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 258 | 10 TV | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 290 | Global Panjab | (missing) | (none) | Global Punjab TV website |  | Download/validation failed: <urlopen error [Errno -3] Temporary failure in name resolution> |
