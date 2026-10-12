@@ -46,3 +46,7 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 
 - 🖼️ **7 logo reference(s) corrected**
 
+## 2026-10-12
+
+- 🖼️ **23 logo reference(s) corrected**
+
