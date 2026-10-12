@@ -33,6 +33,9 @@ jobs:
       - name: Run BDIX Playlist Update
         run: python3 scripts/bdix_playlist_update.py
 
+      - name: Enforce protected playlist attribution
+        run: python3 scripts/enforce_playlist_attribution.py
+
       - name: Commit BDIX maintenance results
         shell: bash
         run: |
