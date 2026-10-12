@@ -6,8 +6,6 @@ on:
     paths:
       - BDIX-Playlist.m3u
       - scripts/bdix_playlist_update.py
-      - logos/**
-      - .github/workflows/bdix-playlist-update.yml
   schedule:
     - cron: '47 2 * * *'
   workflow_dispatch:
@@ -22,6 +20,7 @@ concurrency:
 
 jobs:
   maintain:
+    if: ${{ !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Run BDIX playlist maintenance')) }}
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
