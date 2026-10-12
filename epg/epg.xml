@@ -92298,27 +92298,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="Discovery Kids.in" start="20261012020000 +0530" stop="20261012021200 +0530">
-    <title lang="en">Little Singham</title>
-    <desc lang="en">Little Singham, an honest but ferocious police officer, fights against injustice and defends his town from formidable enemies.</desc>
-    <credits>
-      <actor>Swapnil Kumari</actor>
-      <actor>Jigna Bharadhwaj</actor>
-      <actor>Sonal Kaushal</actor>
-      <actor>Neshma Chemburkar</actor>
-      <actor>Ganessh Divekar</actor>
-      <actor>Shaily Dubey</actor>
-      <actor>Saumya Daan</actor>
-      <actor>Anamaya Verma</actor>
-      <actor>Sumrridhi Shukla</actor>
-      <director>Vikram Veturi</director>
-      <director>Alok Sharma</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28150718_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S5 E46</episode-num>
-  </programme>
   <programme channel="Discovery Kids.in" start="20261012021200 +0530" stop="20261012022400 +0530">
     <title lang="en">Little Singham</title>
     <desc lang="en">Little Singham, an honest but ferocious police officer, fights against injustice and defends his town from formidable enemies.</desc>
@@ -104366,27 +104345,6 @@ Zak and the crew descend upon a Southern California park to investigate a haunte
     <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
       <value>AL</value>
     </rating>
-  </programme>
-  <programme channel="DiscoveryKids.au" start="20261012020000 +0530" stop="20261012021200 +0530">
-    <title lang="en">Little Singham</title>
-    <desc lang="en">Little Singham, an honest but ferocious police officer, fights against injustice and defends his town from formidable enemies.</desc>
-    <credits>
-      <actor>Swapnil Kumari</actor>
-      <actor>Jigna Bharadhwaj</actor>
-      <actor>Sonal Kaushal</actor>
-      <actor>Neshma Chemburkar</actor>
-      <actor>Ganessh Divekar</actor>
-      <actor>Shaily Dubey</actor>
-      <actor>Saumya Daan</actor>
-      <actor>Anamaya Verma</actor>
-      <actor>Sumrridhi Shukla</actor>
-      <director>Vikram Veturi</director>
-      <director>Alok Sharma</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28150718_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S5 E46</episode-num>
   </programme>
   <programme channel="DiscoveryKids.au" start="20261012021200 +0530" stop="20261012022400 +0530">
     <title lang="en">Little Singham</title>
@@ -198324,17 +198282,6 @@ Shalini lives in America but desires to relocate to India. Meanwhile, a girl fro
       <value>U/A-13</value>
     </rating>
   </programme>
-  <programme channel="Pogo.in@SD" start="20261012020000 +0530" stop="20261012021200 +0530">
-    <title lang="en">Smaashhing Simmba</title>
-    <desc lang="en">Simmba, an honest and courageous police officer, teams up with his fearless colleagues in his mission to confront and defeat the evil forces of society.</desc>
-    <credits>
-      <actor>Abhishek Dutta</actor>
-      <producer>Rohit Shetty</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p23765022_b_h9_ab.jpg?lock=880x660" />
-  </programme>
   <programme channel="Pogo.in@SD" start="20261012021200 +0530" stop="20261012022400 +0530">
     <title lang="en">Smaashhing Simmba</title>
     <desc lang="en">Simmba, an honest and courageous police officer, teams up with his fearless colleagues in his mission to confront and defeat the evil forces of society.</desc>
@@ -218598,19 +218545,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <desc lang="en">Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/fpKNMxWiWcn11supKxjEueE6GXoPYQKEDCujIqfJi3z82GbfHFWWSB4pfIxJqmeDytJZuaVLBuZGg0y2hP4_G5DHfnplRKXySl0Hlm_SWaOXcGauZp1XpSLAifs_rg" />
     <title lang="en">Adi Anadi</title>
-  </programme>
-  <programme start="20261012014800 +0530" stop="20261012021200 +0530" channel="RedBullTV.at@EUMENA">
-    <title lang="en-GB">Red Bull Sports Events</title>
-    <sub-title lang="en-GB">Check out the best of the action as Red Bull King of the Air took to the skies in Cape Town, South Africa</sub-title>
-    <desc lang="en-GB">Have a look at the wide variety of Red Bull sport events happening around the world. From kitesurfing to skydiving to motocross and so many more, the world of Red Bull is packed with action and excitement.</desc>
-    <credits>
-      <director>Mitch Reinholt</director>
-    </credits>
-    <category lang="en-GB">181</category>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/6ad5cdaa0230a20494915173e59a9e3e.jpg" />
-    <episode-num system="onscreen">E1</episode-num>
-    <premiere />
   </programme>
   <programme start="20261012021200 +0530" stop="20261012030900 +0530" channel="RedBullTV.at@EUMENA">
     <title lang="en-GB">Blue Crush - Women's Surfing in the 1990s</title>
@@ -273665,20 +273599,6 @@ Real-time match updates and highlights keep fans informed, providing instant acc
     <desc lang="en">Failed writer guides family through global disasters.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_WAH_1776351_13OCT031900_13OCT060000/images/LANDSCAPE_169/1734860977000_SonyWAH_2012_1776351.jpg" />
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261012020000 +0530" stop="20261012021200 +0530">
-    <title lang="en">Honey Bunny Ka Jholmaal</title>
-    <desc lang="en">Popat turns ecstatic after all of his random predictions come true. However, Popat's newfound abilities create a stir among his animal friends.</desc>
-    <credits>
-      <actor>Mubeen Saudagar</actor>
-      <actor>Meena Nahata</actor>
-      <actor>Dolly Lopes</actor>
-      <director>Vijay Roche</director>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p24103923_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E145</episode-num>
-  </programme>
   <programme channel="SonyYay.in@SD" start="20261012021200 +0530" stop="20261012022200 +0530">
     <title lang="en">Honey Bunny Ka Jholmaal</title>
     <desc lang="en">Honey, Bunny and their companions embark on an organized excursion utilising a tour bus. However, the driver falls ill, consequently they navigate the vehicle to conclude the journey.</desc>
@@ -305707,30 +305627,6 @@ Premier League match highlights show top goals, best plays and key moments, whil
     <desc lang="en">A tantrik has a confrontation with Jayamma when the latter decides to build a temple on a land which was meant to be a place for conducting sacrifice.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_STAR_SUVARNA_PLUS_276378_15OCT060000_15OCT090000/images/LANDSCAPE_169_HD/SuvarnaPlus_JayammanaMaga_276378.jpg" />
   </programme>
-  <programme channel="StarzCinema.us" start="20261011191100 +0000" stop="20261011204500 +0000">
-    <title lang="en">Table for Three</title>
-    <desc lang="en">A jilted man (Brandon Routh) shares his apartment with a seemingly ideal couple (Jesse Bradford, Sophia Bush) who intrude on his life.</desc>
-    <credits>
-      <actor>Brandon Routh</actor>
-      <actor>Jesse Bradford</actor>
-      <actor>Sophia Bush</actor>
-      <director>Michael Samonek</director>
-    </credits>
-    <date>2009</date>
-    <category lang="en">Movie</category>
-    <category lang="en">Romantic comedy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p7957181_v_h10_ad.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Motion Picture Association">
-      <value>R</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>MA 15+</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>13+</value>
-    </rating>
-  </programme>
   <programme channel="StarzCinema.us" start="20261011204500 +0000" stop="20261011224400 +0000">
     <title lang="en">Closing the Ring</title>
     <desc lang="en">During the 1940s, a group of young men go off to war, leaving behind Ethel Ann (Mischa Barton), who is in love with one of them, Teddy. In modern-day Belfast, a man named Jimmy (Martin McCann) endeavors to return a ring found in the wreckage of a crashed plane. He travels to Michigan, where the grown Ethel Ann (Shirley MacLaine), who married another man after Teddy was killed in battle, now lives. Ethel Ann must decide whether to go with Jimmy to meet the soldier who last saw Teddy alive.</desc>
@@ -321733,14 +321629,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme start="20261012020500 +0530" stop="20261012021700 +0530" channel="ThalaaTV.in">
-    <title>Ganam Kottaar Avargalae</title>
-    <sub-title>THALAA TV | TAMIL</sub-title>
-    <desc>Timid lawyer Bhaskar must save his mentor Desikachari, accused in a murder case.</desc>
-    <category>Action</category>
-    <language>TAMIL</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/THALAA%20TV/POSTER/Ganam%20Kottaar%20Avargalae.png" />
   </programme>
   <programme start="20261012021700 +0530" stop="20261012022900 +0530" channel="ThalaaTV.in">
     <title>Ganam Kottaar Avargalae</title>
@@ -341687,28 +341575,6 @@ The host travels to the historic city of Savannah, exploring its elegant charm, 
     <icon src="https://iptv-epg.org/images/XnXWxJE6Qqds6fTcoNRkcQHAUbDsNPZ_Ixl700cWD_RZaAMFk_ljl3QfcMUMOlxRdTAEl_tWz5f4GlfhNtbM43AaDpHJwkGXeZzvjY00txJXlrHu2anaXnO2h24G" />
     <title lang="en">Tehkikaat</title>
   </programme>
-  <programme channel="ZeeCinemalu.in@HD" start="20261012000000 +0530" stop="20261012021400 +0530">
-    <title lang="en">Aay</title>
-    <desc lang="en">After the COVID-19 pandemic, a man returns home and meets an orthodox woman who prefers to judge potential partners by their caste.</desc>
-    <credits>
-      <actor>Narne Nithiin</actor>
-      <actor>Nayan Sarika</actor>
-      <actor>Rajkumar Kasireddy</actor>
-      <actor>Ankith Koyya</actor>
-      <actor>Vinod Kumar Alva</actor>
-      <actor>Krishna Chaitanya</actor>
-      <actor>Srivani</actor>
-      <actor>Mime Gopi</actor>
-      <actor>V. T. V. Ganesh</actor>
-      <director>Kanchipally Anji Babu</director>
-      <producer>Allu Aravind</producer>
-      <producer>Bunny Vasu</producer>
-      <producer>Koppineedi Vidya</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Comedy</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28304485_v_h9_ad.jpg?lock=880x660" />
-  </programme>
   <programme channel="ZeeCinemalu.in@HD" start="20261012021400 +0530" stop="20261012030000 +0530">
     <title lang="en">Fillers</title>
     <desc lang="en">A comprehensive compilation of promotional videos and trailers of Bollywood movies featuring popular actors and actresses.</desc>
@@ -347639,26 +347505,9 @@ Weighed down by his past, Jay rejects the idea of love. But Sharvari comes into 
     <icon src="https://iptv-epg.org/images/-6fRHzc2TomPlJbksDScfpydQoArJYMXsOV--3zuHZruqTokks_4OwrKpjLvz2wwmDnuJ7lqJK-WsOnZV3I4EShmk5PbjuEX3nJFfUC3lg6akrQ9WQssKsCaOn7A_Q" />
     <title lang="en">Sanai Chaughade</title>
   </programme>
-  <programme start="20261011203000 +0000" stop="20261011204500 +0000" channel="ZeeTV.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <credits>
-      <director>Ankur Bhatia</director>
-      <director>Uttam Ahlawat</director>
-      <actor>Amandeep Sidhu</actor>
-      <actor>Sheezan Khan</actor>
-      <producer>Ravi Dubey</producer>
-      <producer>Sargun Mehta</producer>
-    </credits>
-    <desc lang="en">S1 E380
-After her husband abandons her for not giving birth to a son, a resilient Ganga Mai dedicates herself to raising her three daughters with unwavering strength, grace, and affection.</desc>
-    <episode-num>S1 E380</episode-num>
-    <icon src="https://iptv-epg.org/images/E8yONtgCDUuanDCI23nEKbkbz2vIpDV28VW8zcBzbuuBq5vYuHhfZ0oQXBbCMjF8Y0CXc2ZVQWPEJyO1zF31FlqW9znA_NiP9uFTm8neHKRe5xzm9zZuDEzu7ASeVA" />
-    <title lang="en">Ganga Mai Ki Betiyaan</title>
-  </programme>
-  <programme start="20261011204500 +0000" stop="20261011210000 +0000" channel="ZeeTV.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
+  <programme channel="ZeeTV.in@SD" start="20261012015600 +0530" stop="20261012022600 +0530">
+    <title lang="en">Vasudha</title>
+    <desc lang="en">Vasudha is delighted upon learning from Hanumant that she has secured a position in the mansion's kitchen. Meanwhile, Devansh entrusts Avinash with a watch to deliver to Karishma.</desc>
     <credits>
       <actor>Priya Thakur</actor>
       <actor>Nausheen Ali Sardar</actor>
@@ -347667,15 +347516,14 @@ After her husband abandons her for not giving birth to a son, a resilient Ganga 
       <actor>Poonam Dwivedi</actor>
       <producer>Arvind Babbal</producer>
     </credits>
-    <desc lang="en">S1 E702
-Though they have different perspectives, the amiable and endearing Vasudha works as a housekeeper in Chandrika, a business tycoon's house.</desc>
-    <episode-num>S1 E702</episode-num>
-    <icon src="https://iptv-epg.org/images/nwjDptrbwDMVpdWq-o-aGqD1YfySnN2cJReIgoxWipM7pj-yGg-u2sH0YQI3GWfCKDxREPgejdbps3sClXko77RNShw3AKfgQpwFur_cFVnolXB6s2edXLBhWVsXig" />
-    <title lang="en">Vasudha</title>
-  </programme>
-  <programme start="20261011210000 +0000" stop="20261011213000 +0000" channel="ZeeTV.in@SD">
     <category lang="en">TV Show</category>
     <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p28225153_b_h9_ac.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E18</episode-num>
+  </programme>
+  <programme channel="ZeeTV.in@SD" start="20261012022600 +0530" stop="20261012030100 +0530">
+    <title lang="en">Jagadhatri</title>
+    <desc lang="en">Jagadhatri is troubled and doesn't know she's hurting Shivay, who cares for her deeply. But, it is yet to be seen if she sees how much Shivay loves her.</desc>
     <credits>
       <actor>Sonakshi Batra</actor>
       <actor>Farman Haider</actor>
@@ -347687,11 +347535,10 @@ Though they have different perspectives, the amiable and endearing Vasudha works
       <actor>Jonas Khan</actor>
       <producer>Rahul Kumar Tewary</producer>
     </credits>
-    <desc lang="en">S1 E326
-Unbeknownst to her family, a young woman leads a double life as an undercover intelligence officer, determined to clear her mother's name.</desc>
-    <episode-num>S1 E326</episode-num>
-    <icon src="https://iptv-epg.org/images/TFa5I9k2ex2GX2cXJsilp8a5vnm-ag9-xwsSk_0Gi5YYFmeSdtjEq4iXCGSbe15M1n_rSXRbMP_ImeOm12mgpSljKx7ntWCV_D7OflgTQSwD_ruGVbi-2PMAx0fS1Q" />
-    <title lang="en">Jagadhatri</title>
+    <category lang="en">TV Show</category>
+    <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p31685189_b_h9_ac.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E11</episode-num>
   </programme>
   <programme channel="ZeeTV.in@SD" start="20261012030100 +0530" stop="20261012032700 +0530">
     <title lang="en">Tu Hi Re Dil Mein</title>
@@ -355331,34 +355178,32 @@ A shy woman from a small town falls for a wealthy tycoon but struggles to expres
     <icon src="https://iptv-epg.org/images/rz8_JlfTQwd1aMjvaQyfj6iNWTsHIqmIJqzj73P0jxk1tUSOpdkQWp84eIBbke4Uay-9LF0b7ZUMJDz5-EXcvdw-YLk2-FQQ59B1rr32XVOD8ggPyJ5Hx3eFsmzkXQ" />
     <title lang="en">Idhayam</title>
   </programme>
-  <programme channel="ZeeTelugu.in@HD" start="20261012000400 +0530" stop="20261012021700 +0530">
-    <title lang="en">Jawan</title>
-    <desc lang="en">Driven by a personal vendetta, a man sets out to rectify the wrongs in the society to keep a promise made years ago.</desc>
+  <programme channel="ZeeTelugu.in@HD" start="20261012000600 +0530" stop="20261012021800 +0530">
+    <title>Jawaan</title>
+    <desc>Yellapragada Jai, an honest man, faces challenges when his childhood friend, Keshava, becomes a criminal. To protect his country, Jai puts everything on the line to thwart Keshava's perilous plans.</desc>
+    <category>Film</category>
+    <category>Action</category>
+    <date>2017</date>
     <credits>
-      <actor>Shah Rukh Khan</actor>
-      <actor>Nayanthara</actor>
-      <actor>Deepika Padukone</actor>
-      <actor>Vijay Sethupathi</actor>
-      <actor>Sanya Malhotra</actor>
-      <actor>Sunil Grover</actor>
-      <actor>Sanjay Dutt</actor>
-      <actor>Priyamani</actor>
-      <actor>Girija Oak</actor>
-      <actor>Lehar Khan</actor>
-      <director>Atlee</director>
-      <producer>Gauri Khan</producer>
+      <director>B.V.S. Ravi</director>
+      <actor>Sai Dharam Tej</actor>
+      <actor>Prasanna</actor>
+      <actor>Subbaraju</actor>
+      <actor>Jayaprakash</actor>
+      <actor>Mehreen Pirzada</actor>
+      <actor>Easwari Rao</actor>
+      <actor>Srinivasa Rao Kota</actor>
+      <actor>Surya</actor>
+      <producer>Dil Raju</producer>
     </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Thriller</category>
-    <icon src="https://dtil.tmsimg.com/assets/p24533950_v_h9_ae.jpg?lock=880x660" />
+    <icon src="https://dtil.tmsimg.com/assets/p14868796_v_h10_aa.jpg?lock=1280x720" />
   </programme>
-  <programme channel="ZeeTelugu.in@HD" start="20261012021700 +0530" stop="20261012030000 +0530">
-    <title lang="en">Filler</title>
-    <desc lang="en">Bringing the best in television.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26697978_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E391</episode-num>
+  <programme channel="ZeeTelugu.in@HD" start="20261012021800 +0530" stop="20261012030000 +0530">
+    <title>Fillers</title>
+    <desc>A comprehensive compilation of promotional videos and trailers of Bollywood movies featuring popular actors and actresses.</desc>
+    <category>TV Show</category>
+    <category>Variety Show</category>
+    <icon src="https://dtil.tmsimg.com/assets/p27494746_b_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="ZeeTelugu.in@HD" start="20261012030000 +0530" stop="20261012051100 +0530">
     <title lang="en">Ayalaan</title>
@@ -377886,19 +377731,6 @@ Delving into a range of varied topics, the host discusses the social, economic a
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme start="20261012014800 +0530" stop="20261012021200 +0530" channel="custom.bdix.redbulltv">
-    <title lang="en-GB">Red Bull Sports Events</title>
-    <sub-title lang="en-GB">Check out the best of the action as Red Bull King of the Air took to the skies in Cape Town, South Africa</sub-title>
-    <desc lang="en-GB">Have a look at the wide variety of Red Bull sport events happening around the world. From kitesurfing to skydiving to motocross and so many more, the world of Red Bull is packed with action and excitement.</desc>
-    <credits>
-      <director>Mitch Reinholt</director>
-    </credits>
-    <category lang="en-GB">181</category>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/6ad5cdaa0230a20494915173e59a9e3e.jpg" />
-    <episode-num system="onscreen">E1</episode-num>
-    <premiere />
   </programme>
   <programme start="20261012021200 +0530" stop="20261012030900 +0530" channel="custom.bdix.redbulltv">
     <title lang="en-GB">Blue Crush - Women's Surfing in the 1990s</title>
@@ -416986,39 +416818,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012020900 +0530" stop="20261012021200 +0530" channel="custom.duck.tv">
-    <title>Lola and the Numbers</title>
-    <desc>Lola, a smart little girl, is fond of playing and learning. She loves to count with her friends who are numbers themselves.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/ff298db244e1f4dd7e45532194c6a7cc.jpg?width=700" />
-    <credits>
-      <director>Roza Györffy</director>
-    </credits>
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012021200 +0530" stop="20261012021500 +0530" channel="custom.duck.tv">
-    <title>Panni and Fanni</title>
-    <desc>Two happy fairies wave their wands and turn a boring shape into a pair of unique drawings.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/e0b4c6ae0e327b21f2d22680decb7777.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012021500 +0530" stop="20261012021700 +0530" channel="custom.duck.tv">
-    <title>Didy Baby</title>
-    <desc>Little baby animals overcome the different obstacles they face everyday by helping each other and encourage children to do the same.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/994980d9030c79a0e59fef498478945f.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261012021700 +0530" stop="20261012022100 +0530" channel="custom.duck.tv">
     <title>Monica and Rudy 2</title>
     <desc>Monica and her yellow pet bird Rudy delve into the world of rhythms and enjoy learning new things and seeing new sights.</desc>
@@ -427565,34 +427364,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/4358c471c057cb4a7a3c4d2e07704501.jpg?width=700" />
     <rating>
       <value>TVY</value>
-    </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011204100 +0000" stop="20261011204400 +0000">
-    <title lang="en">Mimo's World</title>
-    <desc lang="en">Mimo and his best friend Bobo meet new characters and invite them to go on several adventures together.</desc>
-    <date>2016</date>
-    <category lang="en">Children</category>
-    <category lang="en">Educational</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13128197_b_h10_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="custom.ducktv" start="20261011204400 +0000" stop="20261011204700 +0000">
-    <title lang="en">Beaver Family</title>
-    <desc lang="en">A family of beavers learn to overcome various challenges every day as they help each other navigate the world around them.</desc>
-    <date>2016</date>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Animals</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13127950_b_h10_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
     </rating>
   </programme>
   <programme channel="custom.ducktv" start="20261011204700 +0000" stop="20261011205000 +0000">
@@ -527984,27 +527755,6 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
     <desc lang="en">Ed Stafford is alone in Borneo's thick jungles with no tools, no food, and no backup. Just raw survival instincts against dense forest, wild creatures, and unrelenting rain.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DISCOVERY_CHANNEL_173569_15OCT064800_15OCT073800/images/LANDSCAPE_169_HD/DISCOVERY_MaroonedWithEdStafford_173569.jpg" />
   </programme>
-  <programme channel="hmair.discoverykids" start="20261012020000 +0530" stop="20261012021200 +0530">
-    <title lang="en">Little Singham</title>
-    <desc lang="en">Little Singham, an honest but ferocious police officer, fights against injustice and defends his town from formidable enemies.</desc>
-    <credits>
-      <actor>Swapnil Kumari</actor>
-      <actor>Jigna Bharadhwaj</actor>
-      <actor>Sonal Kaushal</actor>
-      <actor>Neshma Chemburkar</actor>
-      <actor>Ganessh Divekar</actor>
-      <actor>Shaily Dubey</actor>
-      <actor>Saumya Daan</actor>
-      <actor>Anamaya Verma</actor>
-      <actor>Sumrridhi Shukla</actor>
-      <director>Vikram Veturi</director>
-      <director>Alok Sharma</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28150718_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S5 E46</episode-num>
-  </programme>
   <programme channel="hmair.discoverykids" start="20261012021200 +0530" stop="20261012022400 +0530">
     <title lang="en">Little Singham</title>
     <desc lang="en">Little Singham, an honest but ferocious police officer, fights against injustice and defends his town from formidable enemies.</desc>
@@ -541417,13 +541167,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <icon src="https://iptv-epg.org/images/nhzeSo88tQMPVmYK6tNIdstmt_eX3BLz3eEJ4eg2z-iYlb1WTuorUVriFU6SoOTMQRRGyOvUGVu-jyrZlRK7YuqFAOH2aG2xGi3CKF2EEZW1hxphOfx3PeP0IPJ0DQ" />
     <title lang="en">AEW Collision</title>
   </programme>
-  <programme start="20261011203000 +0000" stop="20261011204500 +0000" channel="hmair.france24">
-    <category lang="en">News</category>
-    <category lang="en">News Bulletin</category>
-    <desc lang="en">An international news bulletin, presented live from the newsroom.</desc>
-    <icon src="https://iptv-epg.org/images/-8_dupG2laMUO_PwEsTolgf41V-4wWULeKrpb14VZ-QAXey3kIzQm4irVdRg33z_OM2KVagaXXY1X0DygDYazDKMLb5zf29cVQyR5vk2LhrnO8DQmeY_FhFsHwp2" />
-    <title lang="en">News</title>
-  </programme>
   <programme start="20261011204500 +0000" stop="20261011210000 +0000" channel="hmair.france24">
     <category lang="en">News</category>
     <category lang="en">News Bulletin</category>
@@ -549282,17 +549025,6 @@ Retiree Alex Strategos is consumed by loneliness. He turns to internet dating an
     <desc lang="en">Stranded passengers must fight against man-eating crocodiles after their plane makes an emergency landing on a remote island.</desc>
     <icon src="https://iptv-epg.org/images/4SQViwnkQNlwLg7U7RH9A-RpnoY_t_GfSwjJpULvm2tVSgDYeOZK4YomcsQalL2tVDaD3tuxtfGH8iLdNzDK-2bRfdQJKw6noEuRcgu-7ZAUt2BZu7XbXz_7xDPj5Q" />
     <title lang="en">Crocodile Island</title>
-  </programme>
-  <programme channel="hmair.pogo" start="20261012020000 +0530" stop="20261012021200 +0530">
-    <title lang="en">Smaashhing Simmba</title>
-    <desc lang="en">Simmba, an honest and courageous police officer, teams up with his fearless colleagues in his mission to confront and defeat the evil forces of society.</desc>
-    <credits>
-      <actor>Abhishek Dutta</actor>
-      <producer>Rohit Shetty</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p23765022_b_h9_ab.jpg?lock=880x660" />
   </programme>
   <programme channel="hmair.pogo" start="20261012021200 +0530" stop="20261012022400 +0530">
     <title lang="en">Smaashhing Simmba</title>
@@ -562206,20 +561938,6 @@ Five noble brothers unite in a righteous war against greed and corruption.</desc
     <icon src="https://iptv-epg.org/images/BsY4a48U4F6Ux0ekqJp32nbSIKydn2yWqhoXD_qsrXU5IUKyxDKMbJ9qclnmwvuV95MDVzGs89EhP3Algb5JUG-9SI9D9QPHBFgoqka1JH0vL93oh9exerC1yOB0GQ" />
     <title lang="en">Hastinapur Ke Veer</title>
   </programme>
-  <programme channel="hmair.sonyyay" start="20261012020000 +0530" stop="20261012021200 +0530">
-    <title lang="en">Honey Bunny Ka Jholmaal</title>
-    <desc lang="en">Popat turns ecstatic after all of his random predictions come true. However, Popat's newfound abilities create a stir among his animal friends.</desc>
-    <credits>
-      <actor>Mubeen Saudagar</actor>
-      <actor>Meena Nahata</actor>
-      <actor>Dolly Lopes</actor>
-      <director>Vijay Roche</director>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p24103923_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E145</episode-num>
-  </programme>
   <programme channel="hmair.sonyyay" start="20261012021200 +0530" stop="20261012022200 +0530">
     <title lang="en">Honey Bunny Ka Jholmaal</title>
     <desc lang="en">Honey, Bunny and their companions embark on an organized excursion utilising a tour bus. However, the driver falls ill, consequently they navigate the vehicle to conclude the journey.</desc>
@@ -574689,26 +574407,9 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <icon src="https://iptv-epg.org/images/XnXWxJE6Qqds6fTcoNRkcQHAUbDsNPZ_Ixl700cWD_RZaAMFk_ljl3QfcMUMOlxRdTAEl_tWz5f4GlfhNtbM43AaDpHJwkGXeZzvjY00txJXlrHu2anaXnO2h24G" />
     <title lang="en">Tehkikaat</title>
   </programme>
-  <programme start="20261011203000 +0000" stop="20261011204500 +0000" channel="hmair.zeetvhd">
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <credits>
-      <director>Ankur Bhatia</director>
-      <director>Uttam Ahlawat</director>
-      <actor>Amandeep Sidhu</actor>
-      <actor>Sheezan Khan</actor>
-      <producer>Ravi Dubey</producer>
-      <producer>Sargun Mehta</producer>
-    </credits>
-    <desc lang="en">S1 E380
-After her husband abandons her for not giving birth to a son, a resilient Ganga Mai dedicates herself to raising her three daughters with unwavering strength, grace, and affection.</desc>
-    <episode-num>S1 E380</episode-num>
-    <icon src="https://iptv-epg.org/images/E8yONtgCDUuanDCI23nEKbkbz2vIpDV28VW8zcBzbuuBq5vYuHhfZ0oQXBbCMjF8Y0CXc2ZVQWPEJyO1zF31FlqW9znA_NiP9uFTm8neHKRe5xzm9zZuDEzu7ASeVA" />
-    <title lang="en">Ganga Mai Ki Betiyaan</title>
-  </programme>
-  <programme start="20261011204500 +0000" stop="20261011210000 +0000" channel="hmair.zeetvhd">
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
+  <programme channel="hmair.zeetvhd" start="20261012015000 +0530" stop="20261012021800 +0530">
+    <title lang="en">Vasudha</title>
+    <desc lang="en">Tijan announces Phool's engagement to Samar to everyone. However, Chandrika fails to reveal the truth about him.</desc>
     <credits>
       <actor>Priya Thakur</actor>
       <actor>Nausheen Ali Sardar</actor>
@@ -574717,15 +574418,14 @@ After her husband abandons her for not giving birth to a son, a resilient Ganga 
       <actor>Poonam Dwivedi</actor>
       <producer>Arvind Babbal</producer>
     </credits>
-    <desc lang="en">S1 E702
-Though they have different perspectives, the amiable and endearing Vasudha works as a housekeeper in Chandrika, a business tycoon's house.</desc>
-    <episode-num>S1 E702</episode-num>
-    <icon src="https://iptv-epg.org/images/nwjDptrbwDMVpdWq-o-aGqD1YfySnN2cJReIgoxWipM7pj-yGg-u2sH0YQI3GWfCKDxREPgejdbps3sClXko77RNShw3AKfgQpwFur_cFVnolXB6s2edXLBhWVsXig" />
-    <title lang="en">Vasudha</title>
-  </programme>
-  <programme start="20261011210000 +0000" stop="20261011213000 +0000" channel="hmair.zeetvhd">
     <category lang="en">TV Show</category>
     <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p28225153_b_h9_ac.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E702</episode-num>
+  </programme>
+  <programme channel="hmair.zeetvhd" start="20261012021800 +0530" stop="20261012025000 +0530">
+    <title lang="en">Jagadhatri</title>
+    <desc lang="en">Jagadhatri foils Lisa's trap and escapes with the money meant for Rudra.</desc>
     <credits>
       <actor>Sonakshi Batra</actor>
       <actor>Farman Haider</actor>
@@ -574737,15 +574437,14 @@ Though they have different perspectives, the amiable and endearing Vasudha works
       <actor>Jonas Khan</actor>
       <producer>Rahul Kumar Tewary</producer>
     </credits>
-    <desc lang="en">S1 E326
-Unbeknownst to her family, a young woman leads a double life as an undercover intelligence officer, determined to clear her mother's name.</desc>
-    <episode-num>S1 E326</episode-num>
-    <icon src="https://iptv-epg.org/images/TFa5I9k2ex2GX2cXJsilp8a5vnm-ag9-xwsSk_0Gi5YYFmeSdtjEq4iXCGSbe15M1n_rSXRbMP_ImeOm12mgpSljKx7ntWCV_D7OflgTQSwD_ruGVbi-2PMAx0fS1Q" />
-    <title lang="en">Jagadhatri</title>
+    <category lang="en">TV Show</category>
+    <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p31685189_b_h9_ac.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E326</episode-num>
   </programme>
-  <programme channel="hmair.zeetvhd" start="20261012030100 +0530" stop="20261012032700 +0530">
+  <programme channel="hmair.zeetvhd" start="20261012025000 +0530" stop="20261012031200 +0530">
     <title lang="en">Tu Hi Re Dil Mein</title>
-    <desc lang="en">Believed to bring luck, Vrinda marries her dream man, Sanjay, who loves Divya. Living as a caretaker, she faces silent sacrifices, unsure if fate will choose her.</desc>
+    <desc lang="en">Deeming it a lucky charm, Vrinda marries Sanjay, who loves Divya. Serving as a caretaker in his home, she endures silent sacrifices, wondering if love will ever find her.</desc>
     <credits>
       <actor>Priyanshi Yadav</actor>
       <actor>Abrar Qazi</actor>
@@ -574757,11 +574456,11 @@ Unbeknownst to her family, a young woman leads a double life as an undercover in
     <category lang="en">TV Show</category>
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p33321700_b_h9_ac.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E7</episode-num>
+    <episode-num system="onscreen">S1 E118</episode-num>
   </programme>
-  <programme start="20261011220000 +0000" stop="20261011221500 +0000" channel="hmair.zeetvhd">
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
+  <programme channel="hmair.zeetvhd" start="20261012031200 +0530" stop="20261012033400 +0530">
+    <title lang="en">Tum Se Tum Tak</title>
+    <desc lang="en">A young woman's unexpected bond with a much older businessman brings emotional twists while challenging societal expectations and family ideals.</desc>
     <credits>
       <actor>Niharika Chouksey</actor>
       <actor>Sharad Kelkar</actor>
@@ -574771,42 +574470,39 @@ Unbeknownst to her family, a young woman leads a double life as an undercover in
       <actor>Vandana Pathak</actor>
       <producer>Prateek Sharma</producer>
     </credits>
-    <desc lang="en">S1 E459
-A young woman's unexpected bond with a much older businessman brings emotional twists while challenging societal expectations and family ideals.</desc>
-    <episode-num>S1 E459</episode-num>
-    <icon src="https://iptv-epg.org/images/6EkGfkl6LJcPM8xdumzQmDC5LEKomsu_gOQZ9Cq4FbR0esJm7FA4aRed2dJd9d9UkmrneSj53Yz3PPW9cmmvPss4A1R2eCPR7od2vsmuYEQTIoTS4_wCNB6-amxXUg" />
-    <title lang="en">Tum Se Tum Tak</title>
-  </programme>
-  <programme start="20261011221500 +0000" stop="20261011223000 +0000" channel="hmair.zeetvhd">
     <category lang="en">TV Show</category>
     <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p30514065_b_h9_ac.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E459</episode-num>
+  </programme>
+  <programme channel="hmair.zeetvhd" start="20261012033400 +0530" stop="20261012035700 +0530">
+    <title lang="en">Humari Radha</title>
+    <desc lang="en">Radha strives to rescue her matrimonial bond. Meanwhile, deep affection and treacherous acts dramatically transform her existence.</desc>
     <credits>
       <actor>Simran Kaur</actor>
       <actor>Akshay Mhatre</actor>
       <actor>Vaidehi Nair</actor>
     </credits>
-    <desc lang="en">S1 E79
-Radha strives to rescue her matrimonial bond. Meanwhile, deep affection and treacherous acts dramatically transform her existence.</desc>
-    <episode-num>S1 E79</episode-num>
-    <icon src="https://iptv-epg.org/images/1SJIN5f5EUmcFx1J5qQQrnAhVWPIpqGGaSh5RZ9KaR7-gNjDEyCGYyWF0ziPx3lePqzfqJM6fLfXsiAcbWNB1FHxiZhOuueHjEzG10pjhEHbLCkOXPXDumdtlwniVw" />
-    <title lang="en">Humari Radha</title>
-  </programme>
-  <programme start="20261011223000 +0000" stop="20261011230000 +0000" channel="hmair.zeetvhd">
     <category lang="en">TV Show</category>
     <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p33643621_b_h9_ab.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E79</episode-num>
+  </programme>
+  <programme channel="hmair.zeetvhd" start="20261012035700 +0530" stop="20261012042500 +0530">
+    <title lang="en">Vasudha</title>
+    <desc lang="en">Tijan announces Phool's engagement to Samar to everyone. However, Chandrika fails to reveal the truth about him.</desc>
     <credits>
-      <director>Ankur Bhatia</director>
-      <director>Uttam Ahlawat</director>
-      <actor>Amandeep Sidhu</actor>
-      <actor>Sheezan Khan</actor>
-      <producer>Ravi Dubey</producer>
-      <producer>Sargun Mehta</producer>
+      <actor>Priya Thakur</actor>
+      <actor>Nausheen Ali Sardar</actor>
+      <actor>Abhishek Sharma</actor>
+      <actor>Pratiksha Rai</actor>
+      <actor>Poonam Dwivedi</actor>
+      <producer>Arvind Babbal</producer>
     </credits>
-    <desc lang="en">S1 E380
-After her husband abandons her for not giving birth to a son, a resilient Ganga Mai dedicates herself to raising her three daughters with unwavering strength, grace, and affection.</desc>
-    <episode-num>S1 E380</episode-num>
-    <icon src="https://iptv-epg.org/images/E8yONtgCDUuanDCI23nEKbkbz2vIpDV28VW8zcBzbuuBq5vYuHhfZ0oQXBbCMjF8Y0CXc2ZVQWPEJyO1zF31FlqW9znA_NiP9uFTm8neHKRe5xzm9zZuDEzu7ASeVA" />
-    <title lang="en">Ganga Mai Ki Betiyaan</title>
+    <category lang="en">TV Show</category>
+    <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p28225153_b_h9_ac.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E702</episode-num>
   </programme>
   <programme start="20261011230000 +0000" stop="20261011231500 +0000" channel="hmair.zeetvhd">
     <category lang="en">TV Show</category>
@@ -581836,14 +581532,6 @@ A young woman's unexpected bond with a much older businessman brings emotional t
     <icon src="https://images.metadata.sky.com/pd-image/d2b82807-8339-4be0-88b9-d6eacfd9ec84/16-9" />
     <episode-num system="xmltv_ns">.74.</episode-num>
   </programme>
-  <programme channel="skysportspremiereleague.uk" start="20261011201500 +0000" stop="20261011204500 +0000">
-    <title lang="en">SNF: Man United v Spurs Highlights</title>
-    <desc lang="en">Entering must-win territory just five games into the Premier League season, United and Spurs search for a much-needed lift on Saturday Night Football under the Old Trafford lights.</desc>
-    <category lang="en">Sports</category>
-    <category lang="en">Football</category>
-    <icon src="https://images.metadata.sky.com/pd-image/8b34da2b-e0cc-4453-8c7d-2042e61cb8f5/16-9" />
-    <episode-num system="onscreen">10</episode-num>
-  </programme>
   <programme channel="skysportspremiereleague.uk" start="20261011204500 +0000" stop="20261011210000 +0000">
     <title lang="en">PL Greatest Games:M City/L'Pool 15</title>
     <desc lang="en">Relive a Premier League classic, as Man City face Liverpool back in November 2015. City needed a win to go back top of the table, while Liverpool were adapting to life under Jurgen Klopp.</desc>
@@ -585180,10 +584868,6 @@ A young woman's unexpected bond with a much older businessman brings emotional t
     <title lang="en">The Sports Bar</title>
     <desc lang="en">Reaction, analysis and your chance to have your say on the day's sport. Call the show on 03717 22 33 44 (Calls charged at national rate) or text 81089 (50p + charges).</desc>
     <category lang="en">Music &amp; Radio</category>
-  </programme>
-  <programme start="20261011183000 +0000" stop="20261011204500 +0000" channel="tntsports1.uk">
-    <title>Live Serie A: Cagliari v Juventus</title>
-    <desc>Action from Unipol Domus as Luciano Spalletti's Juventus face high-flying Cagliari, who have won four of their first five Serie A games of the season under Fabio Pisacane.</desc>
   </programme>
   <programme start="20261011204500 +0000" stop="20261011210000 +0000" channel="tntsports1.uk">
     <title>Groundbreaking: Villa Park</title>
