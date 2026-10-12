@@ -5,7 +5,6 @@ compatibility_date = "2026-09-26"
 [vars]
 PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u"
 BDIX_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u"
-NVISION_PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/NVisionBD-Playlist.m3u"
 TIMEZONE = "Asia/Dhaka"
 
 [secrets]
