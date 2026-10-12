@@ -102,6 +102,12 @@ TV_LOGO_REPO = "https://github.com/tv-logo/tv-logos"
 # station profile pages where they are commonly the station avatar.
 DIRECT_PAGE_HINTS = {
     "Global Panjab": ("https://globalpunjabtv.com/", True),
+    "Bangla Hits": ("https://zeno.fm/radio/bangla-hits/", True),
+    "Doyel Radio": ("https://zeno.fm/radio/doyel-radio/", True),
+    "Moner Radio": ("https://zeno.fm/radio/monarul/", True),
+    "Radio Janata": ("https://zeno.fm/radio/radio-janata/", True),
+    "Sagor FM": ("https://zeno.fm/radio/sagor-fm/", True),
+    "Wifm 100.9": ("https://wifmradio.com/", True),
     "Flo Racing": ("https://www.floracing.com/", True),
     "Nick Bangla": ("https://www.nick.com.bd/", False),
     "10 TV": ("https://10tv.in/", True),
