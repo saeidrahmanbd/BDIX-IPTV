@@ -56,11 +56,11 @@ jobs:
               git rebase --abort || true
               echo "Rebase conflict; regenerate from current main before retrying."
               git reset --hard origin/main
-              python -m py_compile scripts/replace_generic_logos.py
-              python scripts/replace_generic_logos.py
-              git add NVisionBD-Playlist.m3u logos reports/generic-logo-replacement-results.md reports/generic-logo-audit.md
+              python -m py_compile scripts/repair_playlist_logos.py scripts/replace_generic_logos.py
+              python scripts/repair_playlist_logos.py
+              git add BDIX-Playlist.m3u IPTV-Playlist.m3u NVisionBD-Playlist.m3u logos reports/playlist-logo-repair-results.md
               git diff --cached --quiet && exit 0
-              git commit -m "Replace verified generic channel logos"
+              git commit -m "Run IPTV playlist maintenance: repair verified channel logos"
             fi
             sleep $((attempt * 2))
           done
