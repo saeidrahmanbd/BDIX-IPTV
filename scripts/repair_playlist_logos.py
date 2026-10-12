@@ -76,6 +76,89 @@ LOCAL_OVERRIDES = {
     "channel 1": "channel-1.png",
 }
 
+# Exact, source-attributed fallback URLs for unresolved channels. These are
+# only consulted after the repository-wide local logo search. Keep them here
+# so all playlist variants reuse the same locally stored image.
+EXTRA_DIRECT_HINTS = {
+    "Cafe Film": {
+        "url": "https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/CafeFilm.ir.png",
+        "format": "PNG",
+        "page": "https://github.com/shayanline/iptv-iran/blob/main/assets/logos/CafeFilm.ir.png",
+        "license": "Public IPTV logo repository; original logo rights belong to broadcaster",
+        "license_url": "https://github.com/shayanline/iptv-iran",
+    },
+    "Persiana Travel": {
+        "url": "https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/PersianaTravel.fr.png",
+        "format": "PNG",
+        "page": "https://github.com/shayanline/iptv-iran/blob/main/assets/logos/PersianaTravel.fr.png",
+        "license": "Public IPTV logo repository; original logo rights belong to broadcaster",
+        "license_url": "https://github.com/shayanline/iptv-iran",
+    },
+    "Aurora Media Flims": {
+        "url": "https://i.imgur.com/DVC5w6H.png",
+        "format": "PNG",
+        "page": "https://github.com/nsdevaraj/48239b1a55a1df69be38126ed1092e13",
+        "license": "Public playlist logo reference; original logo rights belong to broadcaster",
+        "license_url": "",
+    },
+    "Radio Bangla Rock": {
+        "url": "https://cdn-radiotime-logos.tunein.com/s253847d.png",
+        "format": "PNG",
+        "page": "https://tunein.com/radio/Radio-Bangla-Rock-s253847/",
+        "license": "Station logo served by TuneIn",
+        "license_url": "",
+    },
+    "Tapmad": {
+        "url": "https://www.tapmad.com/tapmad-icon.svg",
+        "format": "SVG",
+        "page": "https://www.tapmad.com/",
+        "license": "Tapmad brand asset from its official website",
+        "license_url": "",
+    },
+    "Dream Music Prime": {
+        "url": "https://images.zeno.fm/qCoeGkoZ7uMDvdOso_NCx_7ZVgkxpHVWtvkP9RcAy1k/rs%3Afill%3A152%3A152/q%3A75/g%3Ace%3A0%3A0/aHR0cHM6Ly9wcm94eS56ZW5vLmZtL2NvbnRlbnQvc3RhdGlvbnMvYjg4OGM3NGItNzAzMS00NmM3LTg5MGEtNDg3MzczYjYzMDQ5L2ltYWdlLz91PTE2NzI4MjgxNzMwMDA",
+        "format": "",
+        "page": "https://zeno.fm/radio/dream-music-prime/",
+        "license": "Station logo served by Zeno",
+        "license_url": "",
+    },
+    "Radio Barakah": {
+        "url": "https://images.zeno.fm/wSOx1NwNUG6eJNFe2MbZTKU6BvXBDMX5vjbef7G2k_s/rs%3Afill%3A152%3A152/q%3A75/g%3Ace%3A0%3A0/aHR0cHM6Ly9wcm94eS56ZW5vLmZtL2NvbnRlbnQvc3RhdGlvbnMvYWd4emZucGxibTh0YzNSaGRITnlNZ3NTQ2tGMWRHaERiR2xsYm5RWWdJQ3dnNWVUbXdzTUN4SU9VM1JoZEdsdmJsQnliMlpwYkdVWWdJQ3dvX3o0aFFrTW9nRUVlbVZ1YncvaW1hZ2UvP3U9MTY2MTYxNDM0MzAwMA",
+        "format": "",
+        "page": "https://zeno.fm/radio/radiobarakah/",
+        "license": "Station logo served by Zeno",
+        "license_url": "",
+    },
+    "beIN Sports Arabic HD": {
+        "url": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/world-middle-east/bein-sports/bein-sports-arabic-mea.png",
+        "format": "PNG",
+        "page": "https://github.com/tv-logo/tv-logos/blob/main/countries/world-middle-east/bein-sports/bein-sports-arabic-mea.png",
+        "license": "Public TV logo repository; original logo rights belong to broadcaster",
+        "license_url": "https://github.com/tv-logo/tv-logos",
+    },
+    "beIN Sports Extra HD": {
+        "url": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/international/beinsports/old/horizontal/bein-sports-xtra-hz-int.png",
+        "format": "PNG",
+        "page": "https://github.com/tv-logo/tv-logos/blob/main/countries/international/beinsports/old/horizontal/bein-sports-xtra-hz-int.png",
+        "license": "Public TV logo repository; original logo rights belong to broadcaster",
+        "license_url": "https://github.com/tv-logo/tv-logos",
+    },
+    "TNT Sport 1": {
+        "url": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/hd/tnt-sports-1-hd-uk.png",
+        "format": "PNG",
+        "page": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/hd/tnt-sports-1-hd-uk.png",
+        "license": "Public TV logo repository; original logo rights belong to broadcaster",
+        "license_url": "https://github.com/tv-logo/tv-logos",
+    },
+    "Disney Channel Big City Greens": {
+        "url": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/international/disney-channel-int.png",
+        "format": "PNG",
+        "page": "https://github.com/tv-logo/tv-logos/blob/main/countries/international/disney-channel-int.png",
+        "license": "Public TV logo repository; original logo rights belong to broadcaster",
+        "license_url": "https://github.com/tv-logo/tv-logos",
+    },
+}
+
 IMAGE_EXTS = {".svg", ".png", ".jpg", ".jpeg", ".webp", ".avif"}
 QUALITY_SUFFIX = re.compile(
     r"-(?:1080p|720p|576p|480p|360p|4k|8k|uhd|fhd|hd|sd|hevc|h265|h264)$",
@@ -137,8 +220,10 @@ def asset_key(path):
     stem = path.stem.casefold()
     if stem.startswith("nvisionbd-official-"):
         stem = stem[len("nvisionbd-official-"):]
+    elif stem.startswith("nvisionbd-verified-"):
+        stem = stem[len("nvisionbd-verified-"):]
     elif stem.startswith("nvisionbd-"):
-        # These are often project-made marks/placeholders, not broadcaster art.
+        # Other project-made marks are not trusted as broadcaster art.
         return ""
     elif stem.startswith("verified-"):
         stem = stem[len("verified-"):]
@@ -231,6 +316,11 @@ def find_mapping(mapping, channel):
 
 
 def candidate_for(channel, attrs, iptv_indexes, history_index):
+    # Hand-checked exact fallback URLs, after the repository-wide local search.
+    item = find_mapping(EXTRA_DIRECT_HINTS, channel)
+    if item:
+        return dict(item), "Exact external logo asset"
+
     # Curated exact source hints are the first external step, after a local scan.
     item = find_mapping(source.DIRECT_LOGO_HINTS, channel)
     if item:
