@@ -587,6 +587,8 @@ def valid_image(raw, content_type, file_format=""):
         return raw.startswith(b"\xff\xd8\xff")
     if content_type == "image/webp" or fmt == "WEBP":
         return raw[:4] == b"RIFF" and raw[8:12] == b"WEBP"
+    if content_type == "image/avif" or fmt == "AVIF":
+        return b"ftypavif" in raw[:40] or b"ftypavis" in raw[:40]
     # Some station/image CDNs send application/octet-stream or an empty MIME.
     # For source entries with no forced format, sniff standard image signatures.
     if not fmt:
@@ -595,6 +597,8 @@ def valid_image(raw, content_type, file_format=""):
         if raw.startswith(bytes([255, 216, 255])):
             return True
         if raw[:4] == b"RIFF" and raw[8:12] == b"WEBP":
+            return True
+        if b"ftypavif" in raw[:40] or b"ftypavis" in raw[:40]:
             return True
         head = raw.lstrip()[:500].lower()
         if b"<svg" in head:
@@ -608,7 +612,7 @@ def extension_for(content_type, file_format="", source_url=""):
     by_fmt = {"SVG": ".svg", "PNG": ".png", "JPEG": ".jpg", "JPG": ".jpg", "WEBP": ".webp"}
     if fmt in by_fmt:
         return by_fmt[fmt]
-    by_mime = {"image/svg+xml": ".svg", "image/png": ".png", "image/jpeg": ".jpg", "image/jpg": ".jpg", "image/webp": ".webp"}
+    by_mime = {"image/svg+xml": ".svg", "image/png": ".png", "image/jpeg": ".jpg", "image/jpg": ".jpg", "image/webp": ".webp", "image/avif": ".avif"}
     if content_type in by_mime:
         return by_mime[content_type]
     suffix = Path(urlparse(source_url).path).suffix.lower()
