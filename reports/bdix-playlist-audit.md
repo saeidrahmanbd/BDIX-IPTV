@@ -1,6 +1,6 @@
 # BDIX Playlist Audit
 
-Generated: **2026-10-12T02:46:23+00:00**
+Generated: **2026-10-12T06:34:51+00:00**
 
 ## Summary
 
@@ -12,7 +12,7 @@ Generated: **2026-10-12T02:46:23+00:00**
 - Duplicate channel identities: **9**
 - Missing channel IDs: **0**
 - Missing channel numbers: **0**
-- Missing logos: **6**
+- Missing logos: **1**
 - Malformed entries: **0**
 - Unknown categories: **0**
 - Streams tested: **185**
@@ -56,7 +56,7 @@ None.
 
 - Missing channel ID: None
 - Missing channel number: None
-- Missing logo: BTV News, Channel 1, Channel 24, Channel 9, EPL channel 1, Bangla TV
+- Missing logo: EPL channel 1
 
 ## Malformed Entries
 
