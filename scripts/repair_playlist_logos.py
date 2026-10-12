@@ -360,18 +360,6 @@ def candidate_for(channel, attrs, iptv_indexes, history_index):
             "license_url": "",
         }, "Curated exact channel/region asset"
 
-    if iptv_indexes:
-        result = source.get_iptv_org_candidate(channel, attrs.get("tvg-id", ""), iptv_indexes)
-        if result and result[0].get("url"):
-            logo, source_name = result
-            return {
-                "url": logo.get("url", ""),
-                "format": str(logo.get("format") or "").upper(),
-                "page": logo.get("url", ""),
-                "license": "IPTV-org public logo dataset",
-                "license_url": "https://github.com/iptv-org/database",
-            }, source_name
-
     page_hint = find_mapping(source.DIRECT_PAGE_HINTS, channel)
     if page_hint:
         page_url, allow_og = page_hint
@@ -387,6 +375,18 @@ def candidate_for(channel, attrs, iptv_indexes, history_index):
                 "license": "Logo image served on the broadcaster/station page",
                 "license_url": "",
             }, "Broadcaster/station page"
+
+    if iptv_indexes:
+        result = source.get_iptv_org_candidate(channel, attrs.get("tvg-id", ""), iptv_indexes)
+        if result and result[0].get("url"):
+            logo, source_name = result
+            return {
+                "url": logo.get("url", ""),
+                "format": str(logo.get("format") or "").upper(),
+                "page": logo.get("url", ""),
+                "license": "IPTV-org public logo dataset",
+                "license_url": "https://github.com/iptv-org/database",
+            }, source_name
 
     historical = history_index.get(norm_key(channel))
     if historical and Path(urllib.parse.urlparse(historical.get("url", "")).path).name.casefold() not in BAD_ASSETS | GENERIC_ASSETS:
