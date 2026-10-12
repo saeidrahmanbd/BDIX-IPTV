@@ -102,6 +102,7 @@ TV_LOGO_REPO = "https://github.com/tv-logo/tv-logos"
 # station profile pages where they are commonly the station avatar.
 DIRECT_PAGE_HINTS = {
     "Global Panjab": ("https://globalpunjabtv.com/", True),
+    "Flo Racing": ("https://www.floracing.com/", True),
     "Nick Bangla": ("https://www.nick.com.bd/", False),
     "10 TV": ("https://10tv.in/", True),
     "88 Stereo [not 24/7]": ("https://www.88stereo.com/", False),
