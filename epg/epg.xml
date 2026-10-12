@@ -20415,11 +20415,6 @@ Vibhuti Narayan Mishra and Manmohan Tiwari live in the same neighbourhood in Kan
     <icon src="https://iptv-epg.org/images/gg0thLAXRPBk07Xs4uKVpjst85Z5xMI9XQZlmwG94o6FaVMfpToG-LZeJoooZVkJkyho1_xZX3Ouo1qgsurGaWUNFviKx0i_-dcApKWjM5EDUxZqG67N-zLs_9jOQA" />
     <title lang="en">Bhabi ji Ghar Par Hai!</title>
   </programme>
-  <programme channel="AndxplorHD.in" start="20261012052500 +0530" stop="20261012073800 +0530">
-    <title lang="en">Kuch Kuch Locha Hai</title>
-    <desc lang="en">Praveen Patel, A 45-Year-Old Married Businessman, Is Approached By Shanaya, An Actress, Who Wants To Move In With Him To Prepare For A Role. He Then Pretends To Be Single To Impress Her.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SYMANDXPLOR_HD_2123877_12OCT052500_12OCT073800/images/LANDSCAPE_169/1786611281000_AndxplorHD_KuchKuchLochaHai_2123877.jpg" />
-  </programme>
   <programme channel="AndxplorHD.in" start="20261012073800 +0530" stop="20261012095900 +0530">
     <title lang="en">Jayantabhai Ki Luv Story</title>
     <desc lang="en">When Simran, A Young Woman, Struggles To Settle In Mumbai And Lands Into A Hostile Neighbourhood, Jayantabhai, A Small-Time Gangster, Helps And Falls In Love With Her, Unaware That She Is His Rival.</desc>
@@ -92370,24 +92365,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012015900 +0000" stop="20261012021000 +0000" channel="Discovery Kids.in">
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <actor>Harsh Joshi</actor>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <desc lang="en">S1 E1
-Titoo comes up with a plan to get free burgers from his school canteen. However, he gets filled with gas when he eats too much.</desc>
-    <episode-num>S1 E1</episode-num>
-    <icon src="https://iptv-epg.org/images/KpZVQQJJ-qWM5NRiUs5wDyna7_qHJcuCerWhqK1IcovooRoAn1_M9yiVhsFlh7EyNTi2DmUbSwfJJKOlUe_H2wLnwHsOtK_s4KjWm5349It6w7TRlPWCd3qGz8A1KQ" />
-    <title lang="en">Titoo</title>
-  </programme>
   <programme start="20261012021000 +0000" stop="20261012022100 +0000" channel="Discovery Kids.in">
     <category lang="en">Children</category>
     <category lang="en">Animation</category>
@@ -105779,24 +105756,6 @@ Zak Bagans, Aaron Goodwin, Billy Tolley and Jay Wasley investigate the most haun
     <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
       <value>AL</value>
     </rating>
-  </programme>
-  <programme start="20261012015900 +0000" stop="20261012021000 +0000" channel="DiscoveryKids.au">
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <actor>Harsh Joshi</actor>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <desc lang="en">S1 E1
-Titoo comes up with a plan to get free burgers from his school canteen. However, he gets filled with gas when he eats too much.</desc>
-    <episode-num>S1 E1</episode-num>
-    <icon src="https://iptv-epg.org/images/KpZVQQJJ-qWM5NRiUs5wDyna7_qHJcuCerWhqK1IcovooRoAn1_M9yiVhsFlh7EyNTi2DmUbSwfJJKOlUe_H2wLnwHsOtK_s4KjWm5349It6w7TRlPWCd3qGz8A1KQ" />
-    <title lang="en">Titoo</title>
   </programme>
   <programme start="20261012021000 +0000" stop="20261012022100 +0000" channel="DiscoveryKids.au">
     <category lang="en">Children</category>
@@ -147224,21 +147183,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012012000 +0000" stop="20261012021000 +0000" channel="InvestigationDiscovery.in@SD">
-    <category lang="en">Documentary</category>
-    <category lang="en">Others</category>
-    <credits>
-      <director>Yoram Astrakhan</director>
-      <actor>Mark Krenik</actor>
-      <actor>Harvey B. Jackson</actor>
-      <actor>Jeff Pride</actor>
-    </credits>
-    <desc lang="en">S1 E5
-A retired prison officer thinks he's lived through the riskiest years of his life, but handling his second wife and her jealous ex-husband proves far more deadly.</desc>
-    <episode-num>S1 E5</episode-num>
-    <icon src="https://iptv-epg.org/images/sm5PAc0h9YYY1JC4vI7nN-jLP4a3QacPwXtbq6desHDeEuazXcfx0qMsTPm8uRXv9lt-7NdDXW5xwKWllIUu8_pVbGNHQitH8cDI_9kiJJn5-lzfeyy8-ur2HbNU" />
-    <title lang="en">Betrayed</title>
-  </programme>
   <programme start="20261012021000 +0000" stop="20261012023500 +0000" channel="InvestigationDiscovery.in@SD">
     <category lang="en">Documentary</category>
     <category lang="en">Others</category>
@@ -172292,27 +172236,6 @@ Nirav Chhabra and Myra Malik reflect on their romance and their shared mission t
     <desc>A compilation of the greatest Bollywood musical hits, meticulously curated to provide entertainment and a vivid musical experience.</desc>
     <category>Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p27451520_b_h10_ab.jpg?lock=1280x720" />
-  </programme>
-  <programme start="20261012052500 +0530" stop="20261012074000 +0530" channel="NHBollyFlix.in">
-    <title>Kiss Kis Ko</title>
-    <desc>A group of boys forms a music band and decide to perform publicly in order to make a career. However, they run into problems when their newest member, a girl, wants to change the name of the band.</desc>
-    <category>Music</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/52cca63daaddd1e13e8057556da837a0.jpg?width=700" />
-    <credits>
-      <director>Sharad Saran</director>
-      <actor>Sudhanshu Pandey</actor>
-      <actor>Karan</actor>
-      <actor>Aparna Kumesh</actor>
-      <actor>Raj Zutshi</actor>
-      <actor>Alyy Khan</actor>
-      <actor>Bhumika Puri</actor>
-      <actor>Sherrin Varghese</actor>
-      <actor>Shreyas Das</actor>
-    </credits>
-    <rating>
-      <value>U/A-13</value>
-    </rating>
   </programme>
   <programme start="20261012074000 +0530" stop="20261012100900 +0530" channel="NHBollyFlix.in">
     <title>Dost</title>
@@ -198902,16 +198825,6 @@ Shalini lives in America but desires to relocate to India. Meanwhile, a girl fro
     <desc lang="en">A playlist of top Bollywood songs from the 2000s, created by many famous artists, is played one after another for a simple, enjoyable musical experience.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_PITAARA_2084437_15OCT070000_15OCT080000/images/LANDSCAPE_169_HD/Pitaara_BeatMode_2084437.jpg" />
   </programme>
-  <programme start="20261012073000 +0530" stop="20261012074100 +0530" channel="PocketFilms.in">
-    <title>Prowl</title>
-    <desc>Bringing the best in cinema.</desc>
-    <category>Drama</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/466f4144bfe2ab5afa5facb805b36e69.jpg?width=700" />
-    <rating>
-      <value>U/A-13</value>
-    </rating>
-  </programme>
   <programme start="20261012074100 +0530" stop="20261012082100 +0530" channel="PocketFilms.in">
     <title>Woh Khaas</title>
     <desc>A successful businessman decides to take a break from his mundane life and goes on a vacation. Furthermore, he happens to meet a stranger who transforms him.</desc>
@@ -211397,16 +211310,6 @@ Duggu Dumbbell proposes a triple-feat strength contest to Simmba, with the defea
     <title lang="en">Neram Nalla Neram - Live</title>
     <desc lang="en">An astrologer analyzes planetary transitions and predicts the future while answering horoscope queries live over the phone.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_PUTHU_YUGAM_1390542_15OCT070000_15OCT073000/images/LANDSCAPE_169_HD/PUTHUYUGAM_NeramNallaNeram-Live_1390542.jpg" />
-  </programme>
-  <programme start="20261012061700 +0530" stop="20261012074200 +0530" channel="QelloConcertsbyStingray.ca@SD">
-    <title>Rod Stewart Live From Nokia Time Square, New York</title>
-    <desc>Rod Stewart Live From Nokia Time Square, New York</desc>
-    <category>Special</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/6a11b3ad7c2d146aac64fa36a3b47d41.jpg?width=700" />
-    <rating>
-      <value>TVPG</value>
-    </rating>
   </programme>
   <programme start="20261012074200 +0530" stop="20261012092700 +0530" channel="QelloConcertsbyStingray.ca@SD">
     <title>Hall &amp; Oates - Live at The Sydney Entertainment Centre</title>
@@ -226574,33 +226477,37 @@ Duggu Dumbbell proposes a triple-feat strength contest to Simmba, with the defea
     <icon src="https://iptv-epg.org/images/HQLlB9KufBGN25TwP-4WUTgST9WK4xDQH9eCDHKmNwyRioSALY2uSiqcUTWOggaEg7VHZRl7IzZQoRR4sc__Xx3Tu8hAOPnZ6Oaqeq1XCh2lTQWd5GfmZLOjhYRb" />
     <title lang="en">Safe Haven</title>
   </programme>
-  <programme channel="SETASHD" start="20261012012900 +0000" stop="20261012021400 +0000">
-    <title lang="en">Crime Patrol</title>
-    <desc lang="en">Join India's police force in action as they deal with criminal activities around the country in this dramatisation of real life crime stories, narrated by Anup Soni.</desc>
-    <icon src="https://images.metadata.sky.com/pd-image/07f089eb-ec6f-488b-b8bb-66718d1d6874/16-9" />
-    <episode-num system="xmltv_ns">0.225.</episode-num>
-    <rating system="UK">
-      <value>PG</value>
+  <programme start="20261012070000 +0530" stop="20261012080000 +0530" channel="SETASHD">
+    <title>Indian Game Show With Bharti And Harssh</title>
+    <desc>Celebrity guests compete in a series of high-energy challenges to win exciting prizes, while hosts Bharti Singh and Haarsh Limbachiyaa engage in playful banter with them.</desc>
+    <category>Game show</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/9d40bc8a41e738b1f2f6ba01784307af.jpg?width=700" />
+    <credits>
+      <director>Kamal Rajput</director>
+      <director>Chetan Dubey</director>
+      <actor>Bharti Singh</actor>
+      <actor>Haarsh Limbachiya</actor>
+    </credits>
+    <episode-num system="onscreen">10</episode-num>
+    <rating>
+      <value>U</value>
     </rating>
   </programme>
-  <programme channel="SETASHD" start="20261012021400 +0000" stop="20261012030100 +0000">
-    <title lang="en">Crime Patrol</title>
-    <desc lang="en">Join India's police force in action as they deal with criminal activities around the country in this dramatisation of real life crime stories, narrated by Anup Soni.</desc>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Detective</category>
-    <icon src="https://images.metadata.sky.com/pd-image/7252be92-e146-4412-81e1-3f8653a8730a/16-9" />
-    <episode-num system="xmltv_ns">0.226.</episode-num>
-    <rating system="UK">
-      <value>PG</value>
-    </rating>
-  </programme>
-  <programme channel="SETASHD" start="20261012030100 +0000" stop="20261012035300 +0000">
-    <title lang="en">Crime Patrol</title>
-    <desc lang="en">Join India's police force in action as they deal with criminal activities around the country in this dramatisation of real life crime stories, narrated by Anup Soni.</desc>
-    <icon src="https://images.metadata.sky.com/pd-image/0db02caf-55f2-44d1-953e-0b2bb7acf026/16-9" />
-    <episode-num system="xmltv_ns">0.227.</episode-num>
-    <rating system="UK">
-      <value>PG</value>
+  <programme start="20261012080000 +0530" stop="20261012093000 +0530" channel="SETASHD">
+    <title>Kaun Banega Crorepati</title>
+    <desc>Host Amitabh Bachchan asks a series of questions to several contestants to test their general knowledge and give them a chance to win a cash prize.</desc>
+    <category>Game show</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/742f021866e4d708672b606b3ed01b6d.jpg?width=700" />
+    <credits>
+      <director>Arun Sheshkumar</director>
+      <director>Rahul Verma</director>
+      <actor>Amitabh Bachchan</actor>
+    </credits>
+    <episode-num system="onscreen">45</episode-num>
+    <rating>
+      <value>U</value>
     </rating>
   </programme>
   <programme start="20261012093000 +0530" stop="20261012103000 +0530" channel="SETASHD">
@@ -250643,11 +250550,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="SonyMax2.in@SD" start="20261012043900 +0530" stop="20261012074300 +0530">
-    <title lang="en">Phool</title>
-    <desc lang="en">Dharamraaj and Balram agreed to arrange their children's marriage, but Balram later changed his mind.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_MAX_2_275062_12OCT043900_12OCT074300/images/LANDSCAPE_169_HD/Max2_Phool_275062.jpg" />
-  </programme>
   <programme channel="SonyMax2.in@SD" start="20261012074300 +0530" stop="20261012102300 +0530">
     <title lang="en">Love Love Love</title>
     <desc lang="en">Amit, a taxi driver's son, and Reema, a rich businessman's daughter, challenge norms and fall in love, proving money can't measure true feelings.</desc>
@@ -250720,128 +250622,35 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <desc lang="en">In a bid to survive the streets of Mumbai, a farmer becomes a mafia don with a crime network of his own.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_MAX_2_151980_13OCT013500_13OCT030000/images/LANDSCAPE_169/1674033508000_Max2_AatankHiAatank_151980.jpg" />
   </programme>
-  <programme start="20261012014900 +0000" stop="20261012021000 +0000" channel="SonyPal.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Comedy</category>
-    <credits>
-      <director>Anil Dubey</director>
-      <director>Amarpreet G.S. Chhabra</director>
-      <director>Hemen Chauhan</director>
-      <director>Deeksha RJ Kushwaha</director>
-      <director>Uttam Ahlawat</director>
-      <director>Rrahul Mevawala</director>
-      <actor>Rajendra Gupta</actor>
-      <actor>Mamta Gurnani</actor>
-      <actor>Paresh Ganatra</actor>
-      <actor>Shilpa Shinde</actor>
-      <actor>Sumit Arora</actor>
-      <actor>Debina Bonnerjee</actor>
-      <producer>Ashwani Dhir</producer>
-    </credits>
-    <desc lang="en">S1 E274
-Babuji to leave for Lucknow to sort out a pension-related problem. On the other hand, Ghotak receives a promotion.</desc>
-    <episode-num>S1 E274</episode-num>
-    <icon src="https://iptv-epg.org/images/M15Z5hkGcdzimzbPdgXB_n07dtZgiCq6lJoz0EoNPOAxWqMqojGdyo-Y3kgc74C_rjkUQ_Y-2TDZ5xjyCoQ_IO_cxm4i-I8F8K0JUbDU3f8mBWNoyzFK-3oK31AtvQ" />
+  <programme channel="SonyPal.in@SD" start="20261012073700 +0530" stop="20261012075900 +0530">
     <title lang="en">Chidiya Ghar</title>
+    <desc lang="en">In retired principal Kesari Narayan's family, each member possesses quirky qualities and is named after an animal or bird.</desc>
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_PAL_261214_12OCT073700_12OCT075900/images/LANDSCAPE_169_HD/SONYPAL_ChidiyaGhar_261214.jpg" />
   </programme>
-  <programme start="20261012021000 +0000" stop="20261012023200 +0000" channel="SonyPal.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Comedy</category>
-    <credits>
-      <director>Anil Dubey</director>
-      <director>Amarpreet G.S. Chhabra</director>
-      <director>Hemen Chauhan</director>
-      <director>Deeksha RJ Kushwaha</director>
-      <director>Uttam Ahlawat</director>
-      <director>Rrahul Mevawala</director>
-      <actor>Rajendra Gupta</actor>
-      <actor>Mamta Gurnani</actor>
-      <actor>Paresh Ganatra</actor>
-      <actor>Shilpa Shinde</actor>
-      <actor>Sumit Arora</actor>
-      <actor>Debina Bonnerjee</actor>
-      <producer>Ashwani Dhir</producer>
-    </credits>
-    <desc lang="en">S1 E275
-Koyal's mother arrives at Chidiya Ghar, assuming Koyal is pregnant.</desc>
-    <episode-num>S1 E275</episode-num>
-    <icon src="https://iptv-epg.org/images/M15Z5hkGcdzimzbPdgXB_n07dtZgiCq6lJoz0EoNPOAxWqMqojGdyo-Y3kgc74C_rjkUQ_Y-2TDZ5xjyCoQ_IO_cxm4i-I8F8K0JUbDU3f8mBWNoyzFK-3oK31AtvQ" />
+  <programme channel="SonyPal.in@SD" start="20261012075900 +0530" stop="20261012081900 +0530">
     <title lang="en">Chidiya Ghar</title>
+    <desc lang="en">In retired principal Kesari Narayan's family, each member possesses quirky qualities and is named after an animal or bird.</desc>
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_PAL_261214_12OCT075900_12OCT081900/images/LANDSCAPE_169_HD/SONYPAL_ChidiyaGhar_261214.jpg" />
   </programme>
-  <programme start="20261012023200 +0000" stop="20261012030200 +0000" channel="SonyPal.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Comedy</category>
-    <credits>
-      <director>Anil Dubey</director>
-      <director>Amarpreet G.S. Chhabra</director>
-      <director>Hemen Chauhan</director>
-      <director>Deeksha RJ Kushwaha</director>
-      <director>Uttam Ahlawat</director>
-      <director>Rrahul Mevawala</director>
-      <actor>Rajendra Gupta</actor>
-      <actor>Mamta Gurnani</actor>
-      <actor>Paresh Ganatra</actor>
-      <actor>Shilpa Shinde</actor>
-      <actor>Sumit Arora</actor>
-      <actor>Debina Bonnerjee</actor>
-      <producer>Ashwani Dhir</producer>
-    </credits>
-    <desc lang="en">S1 E276
-A retired headmaster resides in a house named for his late wife, with family possessing animal-like traits. Their community interactions yield valuable life lessons as they navigate daily challenges.</desc>
-    <episode-num>S1 E276</episode-num>
-    <icon src="https://iptv-epg.org/images/M15Z5hkGcdzimzbPdgXB_n07dtZgiCq6lJoz0EoNPOAxWqMqojGdyo-Y3kgc74C_rjkUQ_Y-2TDZ5xjyCoQ_IO_cxm4i-I8F8K0JUbDU3f8mBWNoyzFK-3oK31AtvQ" />
+  <programme channel="SonyPal.in@SD" start="20261012081900 +0530" stop="20261012084900 +0530">
     <title lang="en">Chidiya Ghar</title>
+    <desc lang="en">In retired principal Kesari Narayan's family, each member possesses quirky qualities and is named after an animal or bird.</desc>
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_PAL_261214_12OCT081900_12OCT084900/images/LANDSCAPE_169_HD/SONYPAL_ChidiyaGhar_261214.jpg" />
   </programme>
-  <programme start="20261012030200 +0000" stop="20261012032400 +0000" channel="SonyPal.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Comedy</category>
-    <credits>
-      <director>Anil Dubey</director>
-      <director>Amarpreet G.S. Chhabra</director>
-      <director>Hemen Chauhan</director>
-      <director>Deeksha RJ Kushwaha</director>
-      <director>Uttam Ahlawat</director>
-      <director>Rrahul Mevawala</director>
-      <actor>Rajendra Gupta</actor>
-      <actor>Mamta Gurnani</actor>
-      <actor>Paresh Ganatra</actor>
-      <actor>Shilpa Shinde</actor>
-      <actor>Sumit Arora</actor>
-      <actor>Debina Bonnerjee</actor>
-      <producer>Ashwani Dhir</producer>
-    </credits>
-    <desc lang="en">S1 E277
-A retired headmaster resides in a house named for his late wife, with family possessing animal-like traits. Their community interactions yield valuable life lessons as they navigate daily challenges.</desc>
-    <episode-num>S1 E277</episode-num>
-    <icon src="https://iptv-epg.org/images/M15Z5hkGcdzimzbPdgXB_n07dtZgiCq6lJoz0EoNPOAxWqMqojGdyo-Y3kgc74C_rjkUQ_Y-2TDZ5xjyCoQ_IO_cxm4i-I8F8K0JUbDU3f8mBWNoyzFK-3oK31AtvQ" />
-    <title lang="en">Chidiya Ghar</title>
+  <programme channel="SonyPal.in@SD" start="20261012084900 +0530" stop="20261012092400 +0530">
+    <title lang="en">Uttar Ramayan</title>
+    <desc lang="en">Uttar Ramayan</desc>
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_PAL_2148273_12OCT084900_12OCT092400/images/LANDSCAPE_169/1790936234000_SONYPAL_UttarRamayan_2148273.jpg" />
   </programme>
-  <programme channel="SonyPal.in@SD" start="20261012085400 +0530" stop="20261012094600 +0530">
-    <title lang="en">Ramayan</title>
-    <desc lang="en">Ram informs Lakshman that, despite his father's malevolence, Meghnad deserves respect. Similar to Ram, he died for his father, showcasing his filial loyalty, and in doing so, he achieved immortality.</desc>
-    <credits>
-      <actor>Arun Govil</actor>
-      <actor>Deepika Chikhalia</actor>
-      <actor>Sunil Lahri</actor>
-      <actor>Arvind Trivedi</actor>
-      <actor>Dara Singh Randhawa</actor>
-      <actor>Sanjay Jog</actor>
-      <director>Ramanand Sagar</director>
-      <producer>Anand Sagar</producer>
-      <producer>Moti Sagar</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p19953881_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E71</episode-num>
+  <programme channel="SonyPal.in@SD" start="20261012092400 +0530" stop="20261012095700 +0530">
+    <title lang="en">Hastinapur Ke Veer S01</title>
+    <desc lang="en">Hastinapur Ke Veer S01</desc>
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_PAL_2146993_12OCT092400_12OCT095700/images/LANDSCAPE_169/1790637482000_SONYPAL_HastinapurKeVeerS01_2146993.jpg" />
   </programme>
-  <programme channel="SonyPal.in@SD" start="20261012094600 +0530" stop="20261012105200 +0530">
-    <title lang="en">Jai Shree Ganesh - Vighnaharta Ki Divya Kathayein</title>
-    <desc lang="en">Bringing the best in television.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://epg-garcenote-assets.s3.amazonaws.com/dishtvd2h/resources/assets/thumbnails/programs/default/default_880x660.png" />
-    <episode-num system="onscreen">S1 E7</episode-num>
+  <programme channel="SonyPal.in@SD" start="20261012095700 +0530" stop="20261012102900 +0530">
+    <title lang="en">Yam Hain Hum</title>
+    <desc lang="en">Yamraj descends to earth to enlighten humans and show them the path of righteousness.</desc>
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_PAL_284950_12OCT095700_12OCT102900/images/LANDSCAPE_169/1685661371000_SONYPAL_YamHainHum_284950.jpg" />
   </programme>
   <programme channel="SonyPal.in@SD" start="20261012105200 +0530" stop="20261012112300 +0530">
     <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
@@ -279175,26 +278984,6 @@ Real-time match updates and highlights keep fans informed, providing instant acc
     <title lang="en">2012</title>
     <desc lang="en">Failed writer guides family through global disasters.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_WAH_1776351_13OCT031900_13OCT060000/images/LANDSCAPE_169/1734860977000_SonyWAH_2012_1776351.jpg" />
-  </programme>
-  <programme channel="SonyYay.in@SD" start="20261012073100 +0530" stop="20261012073800 +0530">
-    <title>Shin Chan</title>
-    <desc>Matsuzaka is out on a date with her boyfriend when Shin-chan turns up and interrupts them. As a result, Matsuzaka takes him home.</desc>
-    <category>Children</category>
-    <category>Entertainment</category>
-    <credits>
-      <director>Mitsuru Hongo</director>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h8_ae.jpg?lock=1280x720" />
   </programme>
   <programme channel="SonyYay.in@SD" start="20261012073800 +0530" stop="20261012074500 +0530">
     <title>Shin Chan</title>
@@ -317991,16 +317780,6 @@ Jen and Tim's fight escalates and everyone is caught in the crossfire; Cortney l
     <desc lang="en">Mangala Alati presents the sacred Mangala Alati, featuring prayers, rituals, and devotional moments that create a serene atmosphere of faith, hope, and positivity each day.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_TARANG_113152_15OCT063000_15OCT073000/images/LANDSCAPE_169/1790250252000_TARANG_MangalaAlati_113152.jpg" />
   </programme>
-  <programme start="20261012073500 +0530" stop="20261012074100 +0530" channel="TeluguOne.in@HD">
-    <title>Lord Shiva Powerful Song</title>
-    <desc>Lord Shiva Powerful Song</desc>
-    <category>Music</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/983dee4db1cf8c7f2f42f4a5ced6dc52.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261012074100 +0530" stop="20261012075200 +0530" channel="TeluguOne.in@HD">
     <title>Shivastakam Prabhum Prananatham</title>
     <desc>Shivastakam Prabhum Prananatham</desc>
@@ -324283,13 +324062,6 @@ Jen and Tim's fight escalates and everyone is caught in the crossfire; Cortney l
     <title lang="en">The Itchy Twitchy Kaa!</title>
     <desc lang="en">Mowgli goes to visit Kaa with a question. How many monkeys can a python swallow in one gulp?</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acc2a228d1a0fbd854910f1/images/LANDSCAPE_169/9372_370abaf4-87cf-4ecf-ac5b-181564e3a34e.png" />
-  </programme>
-  <programme channel="TinyPop.uk" start="20261012015800 +0000" stop="20261012021100 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012072800/list/TinyPOPCareBearsUnlockTheMagic2056992cde29c20174d4bb09e2e5ea64bd3f34e.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261012021100 +0000" stop="20261012022400 +0000">
     <title lang="en">Care Bears: Unlock The Magic</title>
@@ -380941,33 +380713,37 @@ The host talks to prominent personalities from the world of politics, culture, e
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/5fb77f8d4bc4b5dc682b504b1ac86b12.jpg" />
     <premiere />
   </programme>
-  <programme channel="custom.bdix.sony" start="20261012012900 +0000" stop="20261012021400 +0000">
-    <title lang="en">Crime Patrol</title>
-    <desc lang="en">Join India's police force in action as they deal with criminal activities around the country in this dramatisation of real life crime stories, narrated by Anup Soni.</desc>
-    <icon src="https://images.metadata.sky.com/pd-image/07f089eb-ec6f-488b-b8bb-66718d1d6874/16-9" />
-    <episode-num system="xmltv_ns">0.225.</episode-num>
-    <rating system="UK">
-      <value>PG</value>
+  <programme start="20261012070000 +0530" stop="20261012080000 +0530" channel="custom.bdix.sony">
+    <title>Indian Game Show With Bharti And Harssh</title>
+    <desc>Celebrity guests compete in a series of high-energy challenges to win exciting prizes, while hosts Bharti Singh and Haarsh Limbachiyaa engage in playful banter with them.</desc>
+    <category>Game show</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/9d40bc8a41e738b1f2f6ba01784307af.jpg?width=700" />
+    <credits>
+      <director>Kamal Rajput</director>
+      <director>Chetan Dubey</director>
+      <actor>Bharti Singh</actor>
+      <actor>Haarsh Limbachiya</actor>
+    </credits>
+    <episode-num system="onscreen">10</episode-num>
+    <rating>
+      <value>U</value>
     </rating>
   </programme>
-  <programme channel="custom.bdix.sony" start="20261012021400 +0000" stop="20261012030100 +0000">
-    <title lang="en">Crime Patrol</title>
-    <desc lang="en">Join India's police force in action as they deal with criminal activities around the country in this dramatisation of real life crime stories, narrated by Anup Soni.</desc>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Detective</category>
-    <icon src="https://images.metadata.sky.com/pd-image/7252be92-e146-4412-81e1-3f8653a8730a/16-9" />
-    <episode-num system="xmltv_ns">0.226.</episode-num>
-    <rating system="UK">
-      <value>PG</value>
-    </rating>
-  </programme>
-  <programme channel="custom.bdix.sony" start="20261012030100 +0000" stop="20261012035300 +0000">
-    <title lang="en">Crime Patrol</title>
-    <desc lang="en">Join India's police force in action as they deal with criminal activities around the country in this dramatisation of real life crime stories, narrated by Anup Soni.</desc>
-    <icon src="https://images.metadata.sky.com/pd-image/0db02caf-55f2-44d1-953e-0b2bb7acf026/16-9" />
-    <episode-num system="xmltv_ns">0.227.</episode-num>
-    <rating system="UK">
-      <value>PG</value>
+  <programme start="20261012080000 +0530" stop="20261012093000 +0530" channel="custom.bdix.sony">
+    <title>Kaun Banega Crorepati</title>
+    <desc>Host Amitabh Bachchan asks a series of questions to several contestants to test their general knowledge and give them a chance to win a cash prize.</desc>
+    <category>Game show</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/742f021866e4d708672b606b3ed01b6d.jpg?width=700" />
+    <credits>
+      <director>Arun Sheshkumar</director>
+      <director>Rahul Verma</director>
+      <actor>Amitabh Bachchan</actor>
+    </credits>
+    <episode-num system="onscreen">45</episode-num>
+    <rating>
+      <value>U</value>
     </rating>
   </programme>
   <programme start="20261012093000 +0530" stop="20261012103000 +0530" channel="custom.bdix.sony">
@@ -383934,12 +383710,47 @@ The host talks to prominent personalities from the world of politics, culture, e
     <episode-num system="onscreen">E2</episode-num>
     <premiere />
   </programme>
-  <programme channel="custom.boomerang" start="20261012010000 +0000" stop="20261012021000 +0000">
-    <title lang="en">Grizzy and The Lemmings</title>
-    <desc lang="en">He is big as a bear, strong as a bear, smart... as a bear. No other animal dares to contest Grizzy. Except the lemmings..</desc>
+  <programme channel="custom.boomerang" start="20261012020000 +0000" stop="20261012021500 +0000">
+    <title lang="en">Clarence</title>
+    <sub-title lang="en">Hurricane Dilliss</sub-title>
+    <desc lang="en">When Mary's mother, Dillis, visits, she interferes in all aspects of Clarence, Mary and Chad's lives.</desc>
+    <credits>
+      <actor>Spencer Rothbell</actor>
+      <actor>Tom Kenny</actor>
+      <actor>Sean Giambrone</actor>
+    </credits>
+    <date>2015</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/fa35cb44-4cb4-39b6-b0f7-7d07ff5a672a/16-9" />
+    <category lang="en">Comedy</category>
+    <icon src="http://dtil.tmsimg.com/assets/p10517219_b_h10_am.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S1 E37</episode-num>
+    <previously-shown />
+    <rating system="USA Parental Rating">
+      <value>TVPG</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>PG</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>PG</value>
+    </rating>
+    <rating system="방송통신심의위원회">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>6</value>
+    </rating>
+    <rating system="Instituto Nacional de Cine y Artes Audiovisuales">
+      <value>ATP</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>A10</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
   </programme>
   <programme channel="custom.boomerang" start="20261012021500 +0000" stop="20261012023000 +0000">
     <title lang="en">Clarence</title>
@@ -392833,10 +392644,6 @@ The host talks to prominent personalities from the world of politics, culture, e
     <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
       <value>AL</value>
     </rating>
-  </programme>
-  <programme start="20261012010000 +0000" stop="20261012021000 +0000" channel="custom.boomerang.uk">
-    <title>Grizzy and the Lemmings</title>
-    <desc>He is big as a bear, strong as a bear, smart as a bear. No other animal dares to contest him.</desc>
   </programme>
   <programme start="20261012021000 +0000" stop="20261012031000 +0000" channel="custom.boomerang.uk">
     <title>Mush-Mush and the Mushables</title>
@@ -411974,27 +411781,6 @@ Zak Bagans, Aaron Goodwin, Billy Tolley and Jay Wasley investigate the most haun
     <icon src="https://iptv-epg.org/images/McaqyMwEkSoTo4f0Tt4hCsirr1PB71mZRzWiEWXAgI3dstN_-Opm48O0Pkmrqt1sxXX9CVZTUWcHqhDAKJ4-btJn7M1haeYUzeVM6BnD767ddglGsUMCNnDv6fzOUA" />
     <title lang="en">Ghost Adventures</title>
   </programme>
-  <programme start="20261012012000 +0000" stop="20261012021000 +0000" channel="custom.discovery.turbo">
-    <category lang="en">Documentary</category>
-    <category lang="en">Others</category>
-    <credits>
-      <actor>Justin ''Big Chief'' Shearer</actor>
-      <actor>Daddy Dave</actor>
-      <actor>Shawn \"Murder Nova\" Ellington</actor>
-      <actor>Dominator</actor>
-      <actor>Monza</actor>
-      <actor>Chuck</actor>
-      <actor>Farmtruck</actor>
-      <actor>AZN</actor>
-      <actor>Chris 'Kamikaze'</actor>
-      <actor>Doc</actor>
-    </credits>
-    <desc lang="en">S10 E5
-With Chief out of town, Chuck takes over as race master, but must still defend number one. On race night, with racers missing, Monza and Dave jump into the top five.</desc>
-    <episode-num>S10 E5</episode-num>
-    <icon src="https://iptv-epg.org/images/K1Im3q53WWapB3b0QUKoRQuEdQ8zU7ChW1mpoivC1iSkp-1Q5pmGyXQxAiHbx_vbR-fBqMJPqPHSTABpg0Is2PiYP3FPR-GeuvBHRjKlEfCz3Zt6VJXMdJ9khL-A" />
-    <title lang="en">Street Outlaws</title>
-  </programme>
   <programme start="20261012021000 +0000" stop="20261012030000 +0000" channel="custom.discovery.turbo">
     <category lang="en">TV Show</category>
     <category lang="en">Reality Show</category>
@@ -417932,26 +417718,6 @@ A Toyota MR2 makes power, but not the power it once had; Bogi and Faye check the
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261012073700 +0530" stop="20261012074200 +0530" channel="custom.duck.tv">
-    <title>The World of Animals</title>
-    <desc>The presenter helps children learn about animals and understand the difference between domestic and wild animals.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f04243de7b0a9cd4db5720975fe264bd.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012074200 +0530" stop="20261012074400 +0530" channel="custom.duck.tv">
-    <title>Didy Baby</title>
-    <desc>Little baby animals overcome the different obstacles they face everyday by helping each other and encourage children to do the same.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/994980d9030c79a0e59fef498478945f.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261012074400 +0530" stop="20261012074700 +0530" channel="custom.duck.tv">
@@ -461398,104 +461164,6 @@ Various artists re-enact the bravest escapes from captivity that prominent perso
     <category>News</category>
     <language>Hindi</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-000050002-20261018230000/list/GNTGoodLuckToday11847969a5ed23a0b1549faabac2c67120322d1.jpg" />
-  </programme>
-  <programme channel="custom.hbo.2" start="20261011233100 +0000" stop="20261012020800 +0000">
-    <title lang="en">The Revenant</title>
-    <desc lang="en">While exploring the uncharted wilderness in 1823, frontiersman Hugh Glass (Leonardo DiCaprio) sustains life-threatening injuries from a brutal bear attack. When a member (Tom Hardy) of his hunting team kills his young son (Forrest Goodluck) and leaves him for dead, Glass must utilize his survival skills to find a way back to civilization. Grief-stricken and fueled by vengeance, the legendary fur trapper treks through the snowy terrain to track down the man who betrayed him.</desc>
-    <credits>
-      <actor>Leonardo DiCaprio</actor>
-      <actor>Tom Hardy</actor>
-      <actor>Domhnall Gleeson</actor>
-      <director>Alejandro G. Iñárritu</director>
-      <director>Alejandro González Iñárritu</director>
-    </credits>
-    <date>2015</date>
-    <category lang="en">Movie</category>
-    <category lang="en">Adventure</category>
-    <category lang="en">Western</category>
-    <category lang="en">Action</category>
-    <category lang="en">Drama</category>
-    <category lang="en">Thriller</category>
-    <icon src="http://dtil.tmsimg.com/assets/p11598208_v_h8_ah.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Motion Picture Association">
-      <value>R</value>
-    </rating>
-    <rating system="Ontario Film Authority">
-      <value>14A</value>
-    </rating>
-    <rating system="Alberta's Film Classification Board">
-      <value>14A</value>
-    </rating>
-    <rating system="B.C. Film Classification Office">
-      <value>14A</value>
-    </rating>
-    <rating system="Saskatchewan Film and Video Classification Board">
-      <value>14A</value>
-    </rating>
-    <rating system="Manitoba Film Classification Board">
-      <value>18A</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>13+</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>16</value>
-    </rating>
-    <rating system="UK Content Provider">
-      <value>15</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>16</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>MA 15+</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>K16</value>
-    </rating>
-    <rating system="British Board of Film Classification">
-      <value>15</value>
-    </rating>
-    <rating system="Arcom">
-      <value>-12</value>
-    </rating>
-    <rating system="Medietilsynet">
-      <value>15 år</value>
-    </rating>
-    <rating system="Instituto Nacional de Cine y Artes Audiovisuales">
-      <value>SAM 16</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>B15</value>
-    </rating>
-    <rating system="Statens medieråd">
-      <value>Från 15 år</value>
-    </rating>
-    <rating system="Irish Film Classification Office">
-      <value>15A</value>
-    </rating>
-    <rating system="映倫">
-      <value>R15+</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>16</value>
-    </rating>
-    <rating system="Medierådet">
-      <value>15</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>16</value>
-    </rating>
-    <rating system="영상물등급위원회">
-      <value>15+</value>
-    </rating>
-    <rating system="Central Board of Film Certification">
-      <value>A</value>
-    </rating>
-    <star-rating system="TMS">
-      <value>7.0/10</value>
-    </star-rating>
   </programme>
   <programme channel="custom.hbo.2" start="20261012020800 +0000" stop="20261012040800 +0000">
     <title lang="en">Birdman or (The Unexpected Virtue of Ignorance)</title>
