@@ -1843,11 +1843,11 @@ https://drk6xq0vhn.gpcdn.net/live/rajdhani_tv/index.m3u8
 https://iptvlive.ahmed-bd-org.workers.dev/rajdhani-tv-1/index.m3u8
 #EXTINF:-1 tvg-id="Ramdhenu.in@SD" tvg-name="Ramdhenu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ramdhenu.png" channel-id="Ramdhenu.in@SD" tvg-language="asm" tvg-country="IN" group-title="Backup",Ramdhenu
 https://mumt01.tangotv.in/O5aw8Zn3RAMDHENU/index.m3u8
-#EXTINF:-1 tvg-id="RongeenTV.in@SD" tvg-name="Rongeen TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rongeen-tv.png" channel-id="RongeenTV.in@SD" tvg-language="hin" tvg-country="IN" group-title="Backup",Rongeen TV
+#EXTINF:-1 tvg-id="RongeenTV.in@SD" tvg-name="Rongeen TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rongeen-tv.png" channel-id="RongeenTV.in@SD" tvg-language="ben" tvg-country="IN" group-title="Backup",Rongeen TV
 https://iptvlive.ahmed-bd-org.workers.dev/rongeen-tv-1/index.m3u8
-#EXTINF:-1 tvg-id="RongeenTV.in@SD" tvg-name="Rongeen TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rongeen-tv.png" channel-id="RongeenTV.in@SD" tvg-language="hin" tvg-country="IN" group-title="Backup",Rongeen TV
+#EXTINF:-1 tvg-id="RongeenTV.in@SD" tvg-name="Rongeen TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rongeen-tv.png" channel-id="RongeenTV.in@SD" tvg-language="ben" tvg-country="IN" group-title="Backup",Rongeen TV
 https://mumbai-edge.smartplaytv.in/RongeenTV/index.m3u8
-#EXTINF:-1 tvg-id="RongeenTV.in@SD" tvg-name="Rongeen TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rongeen-tv.png" channel-id="RongeenTV.in@SD" tvg-language="hin" tvg-country="IN" group-title="Backup",Rongeen TV
+#EXTINF:-1 tvg-id="RongeenTV.in@SD" tvg-name="Rongeen TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rongeen-tv.png" channel-id="RongeenTV.in@SD" tvg-language="ben" tvg-country="IN" group-title="Backup",Rongeen TV
 https://server.thelegitpro.in/rongeentv/rongeentv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="RTDocumentary.ru" tvg-name="RT Documentary" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rt-documentary.png" channel-id="RTDocumentary.ru" group-title="Backup",RT Documentary
 https://rt-rtd.rttv.com/dvr/rtdoc/playlist.m3u8
