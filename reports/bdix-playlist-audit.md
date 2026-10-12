@@ -1,23 +1,23 @@
 # BDIX Playlist Audit
 
-Generated: **2026-10-11T17:08:14+00:00**
+Generated: **2026-10-12T02:46:23+00:00**
 
 ## Summary
 
 - Playlist: **BDIX-Playlist.m3u**
-- Total entries: **190**
-- Unique stream URLs: **190**
-- Unique channel identities: **181**
+- Total entries: **185**
+- Unique stream URLs: **185**
+- Unique channel identities: **176**
 - Duplicate stream URLs: **0**
 - Duplicate channel identities: **9**
 - Missing channel IDs: **0**
 - Missing channel numbers: **0**
-- Missing logos: **4**
+- Missing logos: **6**
 - Malformed entries: **0**
 - Unknown categories: **0**
-- Streams tested: **190**
+- Streams tested: **185**
 - Reachable: **1**
-- Failed: **189**
+- Failed: **184**
 
 ## Protection Policy
 
@@ -26,14 +26,14 @@ Safe metadata repairs made: **0**
 
 ## Categories
 
-- Bangladesh: **42**
+- Bangladesh: **40**
 - Indian Bangla: **17**
 - Hindi: **43**
-- International: **17**
+- International: **15**
 - Documentary & Wildlife: **16**
 - Kids: **9**
 - Religious: **7**
-- Sports: **27**
+- Sports: **26**
 - Test: **12**
 
 ## Duplicate Stream URLs
@@ -56,7 +56,7 @@ None.
 
 - Missing channel ID: None
 - Missing channel number: None
-- Missing logo: Channel 1, Channel 24, Channel 9, EPL channel 1
+- Missing logo: BTV News, Channel 1, Channel 24, Channel 9, EPL channel 1, Bangla TV
 
 ## Malformed Entries
 
