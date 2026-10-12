@@ -1,6 +1,6 @@
 # NVisionBD Playlist Audit
 
-Generated (UTC): **2026-10-11T17:38:34+00:00**
+Generated (UTC): **2026-10-12T02:58:27+00:00**
 
 ## Summary
 
@@ -9,7 +9,7 @@ Generated (UTC): **2026-10-11T17:38:34+00:00**
 - Duplicate stream URLs: **0**
 - Duplicate channel identities: **59**
 - Missing channel IDs: **0**
-- Missing logos: **235**
+- Missing logos: **236**
 - Missing channel numbers: **0**
 - Malformed entries: **0**
 
@@ -31,10 +31,10 @@ Generated (UTC): **2026-10-11T17:38:34+00:00**
 
 ## Stream Probe Summary
 
-- Responsive: **9**
+- Responsive: **80**
 - Restricted: **0**
-- Dead: **121**
-- Unverified: **431**
+- Dead: **0**
+- Unverified: **481**
 
 ## Duplicate Stream URLs
 
@@ -105,7 +105,7 @@ None.
 ## Missing Metadata
 
 - Missing ID: None
-- Missing logo: Bangla TV, Bangla TV HD, BTV National HD, BTV News, BTV Sangsad, Channel 1 HD, Channel 9 HD, Channel 24 HD, Bangla Big Boss 24x7, CTVN AKD Plus, Jalsha Movies HD, Afra Film, Anmol Cinema, Anmol Cinema 2, Biz Cinema, Cafe Film, Hindi Movie Classic 24, Sine Plus, The Q India, Afro Music Channel, Euro Indie Music Chart TV, 10 TV, Amar Ujala, &tv HD, Epic, Global Panjab, Hindi Big Boss 24x7 2026, Hindi Khabar, India Today, NDTV, News 18 Assam, The Q, Ary News, Action 24, Action Hollywood Movies, Aflam, Anger Management Channel, Asia Flix TV, Aurora Media Flims, Baraza TV, Blockbaster HD, Canada One, Channel S, Channel S, Channel S HD, Comedy Central, Digital Fashion, ETV, Fail Army, Fashion 1
+- Missing logo: ATN News HD, Bangla TV, Bangla TV HD, BTV National HD, BTV News, BTV Sangsad, Channel 1 HD, Channel 9 HD, Channel 24 HD, Bangla Big Boss 24x7, CTVN AKD Plus, Jalsha Movies HD, Afra Film, Anmol Cinema, Anmol Cinema 2, Biz Cinema, Cafe Film, Hindi Movie Classic 24, Sine Plus, The Q India, Afro Music Channel, Euro Indie Music Chart TV, 10 TV, Amar Ujala, &tv HD, Epic, Global Panjab, Hindi Big Boss 24x7 2026, Hindi Khabar, India Today, NDTV, News 18 Assam, The Q, Ary News, Action 24, Action Hollywood Movies, Aflam, Anger Management Channel, Asia Flix TV, Aurora Media Flims, Baraza TV, Blockbaster HD, Canada One, Channel S, Channel S, Channel S HD, Comedy Central, Digital Fashion, ETV, Fail Army
 - Missing channel number: None
 
 ## Malformed Entries
