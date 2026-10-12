@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-12T12:07:17.439903+00:00",
+  "generated_at_utc": "2026-10-12T14:18:50.642319+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -11505,8 +11505,8 @@
     {
       "playlist": "BDIX-Playlist.m3u",
       "channel_name": "Bangla Vision",
-      "tvg_id": "DBCNews.bd",
-      "channel_id": "DBCNews.bd",
+      "tvg_id": "DeshTV.bd",
+      "channel_id": "DeshTV.bd",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/banglavision.png",
       "status": "needs_review",
       "source_url": "",
@@ -11515,8 +11515,8 @@
     {
       "playlist": "BDIX-Playlist.m3u",
       "channel_name": "Bangla Vision",
-      "tvg_id": "DeshTV.bd",
-      "channel_id": "DeshTV.bd",
+      "tvg_id": "DBCNews.bd",
+      "channel_id": "DBCNews.bd",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/banglavision.png",
       "status": "needs_review",
       "source_url": "",
