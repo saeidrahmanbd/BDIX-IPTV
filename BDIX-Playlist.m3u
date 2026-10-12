@@ -146,7 +146,7 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h7K-VZyjuIj3-2YWZo1iuYw
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hwF-NZsNjPvL20ydFosJO2E
 #EXTINF:-1 xui-id="6168" tvg-id="IsaiAruvi.in@SD" tvg-name="Isai Aruvi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/isai-aruvi.png" tvg-chno="435" channel-id="IsaiAruvi.in@SD" group-title="Hindi",Isai Aruvi
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h11TeGb7b_2i0suToR_6qtw
-#EXTINF:-1 xui-id="94408" tvg-id="JooMusic.pk" tvg-name="Joo Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/joo-music.png" tvg-chno="438" channel-id="JooMusic.pk" group-title="Hindi",Joo Music
+#EXTINF:-1 xui-id="94408" tvg-id="JooMusic.pk" tvg-name="Joo Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/joo-music.png" tvg-chno="438" channel-id="JooMusic.pk" group-title="International",Joo Music
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_9_zPTSAJP5pNM8lqo4yDA
 #EXTINF:-1 xui-id="507" tvg-id="MBCBollywood.ae" tvg-name="MBC Bollywood" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mbc-bollywood.png" tvg-chno="345" channel-id="MBCBollywood.ae" group-title="Hindi",MBC Bollywood
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8nQLecNylgrBLkUaUiQAyw
@@ -206,7 +206,7 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hwZrelAleTZyiEQQwQjERpA
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h97ktYc0NXs5OZfmuIMV27U
 #EXTINF:-1 xui-id="142365" tvg-id="NationalGeographicWild.in@SD" tvg-name="Nat Geo Wild" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png" tvg-chno="96" channel-id="NationalGeographicWild.in@SD" group-title="Documentary & Wildlife",Nat Geo Wild
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9QWYs3csqbwMBgT4G-Yz9s
-#EXTINF:-1 xui-id="984" tvg-id="custom.bdix.redbulltv" tvg-name="Red Bull TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/red-bull-tv.png" tvg-chno="783" channel-id="custom.bdix.redbulltv" group-title="Documentary & Wildlife",Red Bull TV
+#EXTINF:-1 xui-id="984" tvg-id="custom.bdix.redbulltv" tvg-name="Red Bull TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/red-bull-tv.png" tvg-chno="783" channel-id="custom.bdix.redbulltv" group-title="Sports",Red Bull TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8wAfgcfcQ7FGSf-LR4MZF8
 #EXTINF:-1 xui-id="593" tvg-id="TLC.in@HD" tvg-name="TLC" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tlc.png" tvg-chno="98" channel-id="TLC.in@HD" group-title="Documentary & Wildlife",TLC
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h-b6GEqO-rwf3EcaAKXZXAw
