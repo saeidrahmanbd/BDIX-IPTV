@@ -6,7 +6,6 @@ import sys
 PLAYLISTS = (
     Path("BDIX-Playlist.m3u"),
     Path("IPTV-Playlist.m3u"),
-    Path("NVisionBD-Playlist.m3u"),
 )
 BLOCK = (
     "#=================================",
