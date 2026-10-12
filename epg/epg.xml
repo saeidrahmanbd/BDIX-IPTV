@@ -6092,10 +6092,10 @@
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme channel="AMC.us" start="20261012010500 +0000" stop="20261012015100 +0000">
+  <programme channel="AMC.us" start="20261012010000 +0000" stop="20261012020500 +0000">
     <title lang="en">The Terror: Devil in Silver</title>
-    <sub-title lang="en">Disturbed</sub-title>
-    <desc lang="en">Pepper meets his roommate, Coffee; weird sounds in the ceiling; Pepper is visited by a bloody former inhabitant of New Hyde and attacked by a mysterious entity; Marisol visits and Pepper gets into it with Loochie; Pepper gets ahold of staff keys.</desc>
+    <sub-title lang="en">A Number in the System</sub-title>
+    <desc lang="en">Dorry receives a twisted procedure; Dorry knows the devil Coffee, Pepper and Loochie make a plan to fight him; Pepper has a session with Dr. Walter and is reminded of his biggest shame; Coffee discovers what's past the Silver Door. Gunfire and gore.</desc>
     <credits>
       <actor>Dan Stevens</actor>
       <actor>CCH Pounder</actor>
@@ -6106,8 +6106,8 @@
     <category lang="en">Series</category>
     <category lang="en">Horror</category>
     <icon src="http://dtil.tmsimg.com/assets/p32657586_b_h8_ae.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S1 E2</episode-num>
-    <previously-shown />
+    <episode-num system="onscreen">S1 E4</episode-num>
+    <premiere lang="en" />
     <rating system="USA Parental Rating">
       <value>TVMA</value>
     </rating>
@@ -6121,10 +6121,10 @@
       <value>A16</value>
     </rating>
   </programme>
-  <programme channel="AMC.us" start="20261012015100 +0000" stop="20261012023800 +0000">
+  <programme channel="AMC.us" start="20261012020500 +0000" stop="20261012031000 +0000">
     <title lang="en">The Terror: Devil in Silver</title>
-    <sub-title lang="en">New York in June</sub-title>
-    <desc lang="en">Staff denies Pepper's attack; Coffee explains a beast lives behind the silver door; Anthony visits; Pepper goes off his meds; the staff take the patients for pizza, and it's total chaos; the devil shows Pepper what will happen if he doesn't comply.</desc>
+    <sub-title lang="en">A Number in the System</sub-title>
+    <desc lang="en">Dorry receives a twisted procedure; Dorry knows the devil Coffee, Pepper and Loochie make a plan to fight him; Pepper has a session with Dr. Walter and is reminded of his biggest shame; Coffee discovers what's past the Silver Door. Gunfire and gore.</desc>
     <credits>
       <actor>Dan Stevens</actor>
       <actor>CCH Pounder</actor>
@@ -6135,36 +6135,7 @@
     <category lang="en">Series</category>
     <category lang="en">Horror</category>
     <icon src="http://dtil.tmsimg.com/assets/p32657586_b_h8_ae.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S1 E3</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVMA</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>18+</value>
-    </rating>
-    <rating system="UK Content Provider">
-      <value>15</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>A16</value>
-    </rating>
-  </programme>
-  <programme channel="AMC.us" start="20261012023800 +0000" stop="20261012032700 +0000">
-    <title lang="en">The Terror: Devil in Silver</title>
-    <sub-title lang="en">November in My Soul</sub-title>
-    <desc lang="en">Pepper, a moving man from Queens, is defending his girlfriend Marisol from a violent ex when he's arrested by three plainclothes cops; the cops commit Pepper to New Hyde Psychiatric Hospital for a 72-hour hold; Dr. Walter makes his first appearance.</desc>
-    <credits>
-      <actor>Dan Stevens</actor>
-      <actor>CCH Pounder</actor>
-      <actor>Chinaza Uche</actor>
-      <director>Karyn Kusama</director>
-    </credits>
-    <date>2026</date>
-    <category lang="en">Series</category>
-    <category lang="en">Horror</category>
-    <icon src="http://dtil.tmsimg.com/assets/p32657586_b_h8_ae.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S1 E1</episode-num>
+    <episode-num system="onscreen">S1 E4</episode-num>
     <previously-shown />
     <rating system="USA Parental Rating">
       <value>TVMA</value>
@@ -79912,15 +79883,6 @@ Lord Hanuman grows up to become a devout follower of Lord Rama and is fiercely l
     <icon src="https://iptv-epg.org/images/Q_zDWL0c5B00IrTQ2hUJJacP-BaXbTrWKOQVx5RUHCPRqwnDCQjSlbavgr_rbgRpDrfnuMijrfwmumSOdxVfWnqnb50m3BO6fFDO3Eg1D-a1MCKJNggT6Et0dG5w6A" />
     <title lang="en">Sports Programme</title>
   </programme>
-  <programme start="20261012015000 +0000" stop="20261012015500 +0000" channel="DDTamil.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Health and Wellbeing</category>
-    <desc lang="en">S1 E19
-The host explores and discusses various elements of Siddha medicine while also offering brilliant expert insights on different health issues.</desc>
-    <episode-num>S1 E19</episode-num>
-    <icon src="https://iptv-epg.org/images/bvMbvivsSf0OLGj06xf8AtqfUf6BFH8Y8B8VDB38a0fJ9_mJZ5zL__kI0ykfv_mk5L8c0A2zNbN_UWT3uIeD01mD-FQGpmVnbcO4Tb8xJBZwG3Wdx1BY-MmysM7Mog" />
-    <title lang="en">Siddhar Vazhi Maruthuvam</title>
-  </programme>
   <programme start="20261012015500 +0000" stop="20261012020000 +0000" channel="DDTamil.in@SD">
     <category lang="en">TV Show</category>
     <category lang="en">Health and Wellbeing</category>
@@ -92318,24 +92280,6 @@ Bringing the best in television.</desc>
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme start="20261012013000 +0000" stop="20261012015900 +0000" channel="Discovery Kids.in">
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <actor>Harsh Joshi</actor>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <desc lang="en">S14 E26
-Titoo, an inspiring eight-year-old boy, wishes to help everyone in need. However, his attempts only get him into trouble.</desc>
-    <episode-num>S14 E26</episode-num>
-    <icon src="https://iptv-epg.org/images/twHm3hs19xieqEcB40V0ZOK4VSk9xrJsvz6akSNpxk9vHsjon40-BdDCFvvnZUs_BjLKeILtjwRoHuxPdvbP39-1A3QtcCs7Sf9sa_rbJ1ENAp2GBjanFxxjaZ0z" />
-    <title lang="en">Titoo</title>
   </programme>
   <programme start="20261012015900 +0000" stop="20261012021000 +0000" channel="Discovery Kids.in">
     <category lang="en">Children</category>
@@ -105811,24 +105755,6 @@ Zak Bagans, Aaron Goodwin, Billy Tolley and Jay Wasley investigate the most haun
     <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
       <value>AL</value>
     </rating>
-  </programme>
-  <programme start="20261012013000 +0000" stop="20261012015900 +0000" channel="DiscoveryKids.au">
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <actor>Harsh Joshi</actor>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <desc lang="en">S14 E26
-Titoo, an inspiring eight-year-old boy, wishes to help everyone in need. However, his attempts only get him into trouble.</desc>
-    <episode-num>S14 E26</episode-num>
-    <icon src="https://iptv-epg.org/images/twHm3hs19xieqEcB40V0ZOK4VSk9xrJsvz6akSNpxk9vHsjon40-BdDCFvvnZUs_BjLKeILtjwRoHuxPdvbP39-1A3QtcCs7Sf9sa_rbJ1ENAp2GBjanFxxjaZ0z" />
-    <title lang="en">Titoo</title>
   </programme>
   <programme start="20261012015900 +0000" stop="20261012021000 +0000" channel="DiscoveryKids.au">
     <category lang="en">Children</category>
@@ -145186,22 +145112,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <desc lang="en">Ankush, a 9-year-old boy, lives with his widowed mother until the mysterious Bajrangi Kid Hanuman enters their lives and changes everything forever.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_HUNGAMA_594418_15OCT070000_15OCT080000/images/LANDSCAPE_169_HD/HungamaTV_SelfieWithBajrangi_594418.jpg" />
   </programme>
-  <programme start="20261012062000 +0530" stop="20261012072500 +0530" channel="INWILD.nl">
-    <title>Python Hunters</title>
-    <desc>With invasive species invading Florida, it is up to animal control officers to deal with and get rid of the invading animals. Green iguanas, Nile monitors, rock pythons and Burmese pythons are among the most common species entering the Sunshine State. An elite squad of hunters, known as the Python Hunters, is fighting back. The Python Hunters are tasked with protecting the local environment by getting the invasive species under control. It's an important conservation mission and, if it fails, one of America's most-important ecosystems may never be able to recover.</desc>
-    <category>Documentary</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b1f2f5a2c7117072d7906c738f8c08cf.jpg?width=700" />
-    <credits>
-      <actor>Greg Graziani</actor>
-      <actor>Shawn Heflick</actor>
-      <actor>Michael Cole</actor>
-    </credits>
-    <episode-num system="onscreen">2</episode-num>
-    <rating>
-      <value>TVG</value>
-    </rating>
-  </programme>
   <programme start="20261012072500 +0530" stop="20261012083000 +0530" channel="INWILD.nl">
     <title>Python Hunters</title>
     <desc>With invasive species invading Florida, it is up to animal control officers to deal with and get rid of the invading animals. Green iguanas, Nile monitors, rock pythons and Burmese pythons are among the most common species entering the Sunshine State. An elite squad of hunters, known as the Python Hunters, is fighting back. The Python Hunters are tasked with protecting the local environment by getting the invasive species under control. It's an important conservation mission and, if it fails, one of America's most-important ecosystems may never be able to recover.</desc>
@@ -159676,33 +159586,6 @@ A young girl named Thulasi dreams of continuing her education despite living wit
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="MNX.in@SD" start="20261012054300 +0530" stop="20261012072400 +0530">
-    <title>The Dyatlov Pass Incident</title>
-    <desc>Five students go to the location of the infamous Dyatlov pass incident to make a documentary, but things take a turn for the worse as the secret of what happened there is revealed.</desc>
-    <category>Film</category>
-    <category>Thriller</category>
-    <date>2013</date>
-    <credits>
-      <director>Renny Harlin</director>
-      <actor>Gemma Atkinson</actor>
-      <actor>Matt Stokoe</actor>
-      <actor>Richard Reid</actor>
-      <actor>Holly Goss</actor>
-      <actor>Jane Perry</actor>
-      <actor>Boris Stepanov</actor>
-      <actor>Luke Albright</actor>
-      <actor>Ryan Hawley</actor>
-      <actor>Anastasiya Burdina</actor>
-      <actor>Anton Klimov</actor>
-      <producer>Sergei Bespalov</producer>
-      <producer>Renny Harlin</producer>
-      <producer>Kia Jam</producer>
-      <producer>Alexander Rodnyansky</producer>
-      <producer>Sergey Melkumov</producer>
-      <producer>Nikki Stanghetti</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p10128728_v_h10_ad.jpg?lock=1280x720" />
-  </programme>
   <programme channel="MNX.in@SD" start="20261012072400 +0530" stop="20261012085600 +0530">
     <title>Tactical Force</title>
     <desc>After a botched mission, a SWAT team is sent to retrain in an abandoned hangar, where two rival mob factions wage war on them upon realising they lack ammunition.</desc>
@@ -162816,12 +162699,6 @@ A young girl named Thulasi dreams of continuing her education despite living wit
     <category>TV Show</category>
     <category>Comedy</category>
     <icon src="https://dtil.tmsimg.com/assets/p29049690_b_h10_ab.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="ManoranjanMovies.in@SD" start="20261012070000 +0530" stop="20261012072500 +0530">
-    <title>Punjabi Hits</title>
-    <desc>A comprehensive compilation of Punjabi songs performed by prominent artists is played back to back to captivate the audience.</desc>
-    <category>Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p12007217_b_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="ManoranjanMovies.in@SD" start="20261012072500 +0530" stop="20261012090300 +0530">
     <title>Filler</title>
@@ -172867,26 +172744,6 @@ Nirav Chhabra and Myra Malik reflect on their romance and their shared mission t
     </credits>
     <rating>
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261012044100 +0530" stop="20261012072600 +0530" channel="NHBollyGold.in">
-    <title>Gair</title>
-    <desc>Vijay falls for Madhu and wishes to marry her. However, things take a turn when Raja, Vijay's step-brother, attempts to destroy their relationship.</desc>
-    <category>Drama</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b19068b16785138896332c29a99d099e.jpg?width=700" />
-    <credits>
-      <director>Ashok Gaikwad</director>
-      <actor>Ajay Devgan</actor>
-      <actor>Raveena Tandon</actor>
-      <actor>Amrish Puri</actor>
-      <actor>Paresh Rawal</actor>
-      <actor>Kiran Kumar</actor>
-      <actor>Ashok Gaikwad</actor>
-      <actor>Reena Roy</actor>
-    </credits>
-    <rating>
-      <value>U/A-13</value>
     </rating>
   </programme>
   <programme start="20261012072600 +0530" stop="20261012100100 +0530" channel="NHBollyGold.in">
@@ -279226,26 +279083,6 @@ Real-time match updates and highlights keep fans informed, providing instant acc
     <desc lang="en">Failed writer guides family through global disasters.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_WAH_1776351_13OCT031900_13OCT060000/images/LANDSCAPE_169/1734860977000_SonyWAH_2012_1776351.jpg" />
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261012071700 +0530" stop="20261012072400 +0530">
-    <title>Shin Chan</title>
-    <desc>A man disallows Shin-chan and his friends from entering an area from where cherry blossoms can be observed. Consequently, whilst he is away, the kids gain entry.</desc>
-    <category>Children</category>
-    <category>Entertainment</category>
-    <credits>
-      <director>Mitsuru Hongo</director>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h8_ae.jpg?lock=1280x720" />
-  </programme>
   <programme channel="SonyYay.in@SD" start="20261012072400 +0530" stop="20261012073100 +0530">
     <title>Shin Chan</title>
     <desc>Shinnosuke Nohara, a five-year-old boy with a fascination for older women, commits frequent mischief around his friends and family.</desc>
@@ -310353,16 +310190,6 @@ Premier League match highlights show top goals, best plays and key moments, whil
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012062900 +0530" stop="20261012072900 +0530" channel="StingrayNaturescape.ca">
-    <title>Pass Island: Phillipines</title>
-    <desc>Exploring a paradise home with white sandy beaches and crystal-clear waters.</desc>
-    <category>Special</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b85dbfb0483f1f94b48b632f0b0ca507.jpg?width=700" />
-    <rating>
-      <value>AL</value>
-    </rating>
-  </programme>
   <programme start="20261012072900 +0530" stop="20261012082900 +0530" channel="StingrayNaturescape.ca">
     <title>Date With Nature</title>
     <desc>Photographers capture the serenity of a lakeside paradise, navigating the shores, revealing the secrets of aquatic life and how the light shines upon the water's surface.</desc>
@@ -318248,16 +318075,6 @@ Jen and Tim's fight escalates and everyone is caught in the crossfire; Cortney l
     <desc lang="en">Mangala Alati presents the sacred Mangala Alati, featuring prayers, rituals, and devotional moments that create a serene atmosphere of faith, hope, and positivity each day.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_TARANG_113152_15OCT063000_15OCT073000/images/LANDSCAPE_169/1790250252000_TARANG_MangalaAlati_113152.jpg" />
   </programme>
-  <programme start="20261012071700 +0530" stop="20261012072700 +0530" channel="TeluguOne.in@HD">
-    <title>TeluguOne Health</title>
-    <desc>TeluguOne Health</desc>
-    <category>Health</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/983dee4db1cf8c7f2f42f4a5ced6dc52.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261012072700 +0530" stop="20261012073500 +0530" channel="TeluguOne.in@HD">
     <title>TeluguOne Health</title>
     <desc>TeluguOne Health</desc>
@@ -323881,13 +323698,6 @@ Jen and Tim's fight escalates and everyone is caught in the crossfire; Cortney l
     <title lang="en">The Itchy Twitchy Kaa!</title>
     <desc lang="en">Mowgli goes to visit Kaa with a question. How many monkeys can a python swallow in one gulp?</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acc2a228d1a0fbd854910f1/images/LANDSCAPE_169/9372_370abaf4-87cf-4ecf-ac5b-181564e3a34e.png" />
-  </programme>
-  <programme channel="TinyPop.uk" start="20261012014500 +0000" stop="20261012015800 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012071500/list/TinyPOPCareBearsUnlockTheMagic205699297a155c363d24daa8879cc8990b05984.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261012015800 +0000" stop="20261012021100 +0000">
     <title lang="en">Care Bears: Unlock The Magic</title>
@@ -366038,10 +365848,10 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="custom.amc.tv" start="20261012010500 +0000" stop="20261012015100 +0000">
+  <programme channel="custom.amc.tv" start="20261012010000 +0000" stop="20261012020500 +0000">
     <title lang="en">The Terror: Devil in Silver</title>
-    <sub-title lang="en">Disturbed</sub-title>
-    <desc lang="en">Pepper meets his roommate, Coffee; weird sounds in the ceiling; Pepper is visited by a bloody former inhabitant of New Hyde and attacked by a mysterious entity; Marisol visits and Pepper gets into it with Loochie; Pepper gets ahold of staff keys.</desc>
+    <sub-title lang="en">A Number in the System</sub-title>
+    <desc lang="en">Dorry receives a twisted procedure; Dorry knows the devil Coffee, Pepper and Loochie make a plan to fight him; Pepper has a session with Dr. Walter and is reminded of his biggest shame; Coffee discovers what's past the Silver Door. Gunfire and gore.</desc>
     <credits>
       <actor>Dan Stevens</actor>
       <actor>CCH Pounder</actor>
@@ -366052,8 +365862,8 @@ Bringing the best in television.</desc>
     <category lang="en">Series</category>
     <category lang="en">Horror</category>
     <icon src="http://dtil.tmsimg.com/assets/p32657586_b_h8_ae.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S1 E2</episode-num>
-    <previously-shown />
+    <episode-num system="onscreen">S1 E4</episode-num>
+    <premiere lang="en" />
     <rating system="USA Parental Rating">
       <value>TVMA</value>
     </rating>
@@ -366067,10 +365877,10 @@ Bringing the best in television.</desc>
       <value>A16</value>
     </rating>
   </programme>
-  <programme channel="custom.amc.tv" start="20261012015100 +0000" stop="20261012023800 +0000">
+  <programme channel="custom.amc.tv" start="20261012020500 +0000" stop="20261012031000 +0000">
     <title lang="en">The Terror: Devil in Silver</title>
-    <sub-title lang="en">New York in June</sub-title>
-    <desc lang="en">Staff denies Pepper's attack; Coffee explains a beast lives behind the silver door; Anthony visits; Pepper goes off his meds; the staff take the patients for pizza, and it's total chaos; the devil shows Pepper what will happen if he doesn't comply.</desc>
+    <sub-title lang="en">A Number in the System</sub-title>
+    <desc lang="en">Dorry receives a twisted procedure; Dorry knows the devil Coffee, Pepper and Loochie make a plan to fight him; Pepper has a session with Dr. Walter and is reminded of his biggest shame; Coffee discovers what's past the Silver Door. Gunfire and gore.</desc>
     <credits>
       <actor>Dan Stevens</actor>
       <actor>CCH Pounder</actor>
@@ -366081,36 +365891,7 @@ Bringing the best in television.</desc>
     <category lang="en">Series</category>
     <category lang="en">Horror</category>
     <icon src="http://dtil.tmsimg.com/assets/p32657586_b_h8_ae.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S1 E3</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVMA</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>18+</value>
-    </rating>
-    <rating system="UK Content Provider">
-      <value>15</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>A16</value>
-    </rating>
-  </programme>
-  <programme channel="custom.amc.tv" start="20261012023800 +0000" stop="20261012032700 +0000">
-    <title lang="en">The Terror: Devil in Silver</title>
-    <sub-title lang="en">November in My Soul</sub-title>
-    <desc lang="en">Pepper, a moving man from Queens, is defending his girlfriend Marisol from a violent ex when he's arrested by three plainclothes cops; the cops commit Pepper to New Hyde Psychiatric Hospital for a 72-hour hold; Dr. Walter makes his first appearance.</desc>
-    <credits>
-      <actor>Dan Stevens</actor>
-      <actor>CCH Pounder</actor>
-      <actor>Chinaza Uche</actor>
-      <director>Karyn Kusama</director>
-    </credits>
-    <date>2026</date>
-    <category lang="en">Series</category>
-    <category lang="en">Horror</category>
-    <icon src="http://dtil.tmsimg.com/assets/p32657586_b_h8_ae.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S1 E1</episode-num>
+    <episode-num system="onscreen">S1 E4</episode-num>
     <previously-shown />
     <rating system="USA Parental Rating">
       <value>TVMA</value>
@@ -393801,16 +393582,6 @@ The host talks to prominent personalities from the world of politics, culture, e
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/4873929f9398a2539ee9478b7af831c7.jpg" />
     <premiere />
   </programme>
-  <programme channel="custom.colors.cineplex" start="20261012013500 +0000" stop="20261012015500 +0000">
-    <title lang="en">Filler</title>
-    <desc lang="en">A short interstitial programme providing brief entertainment, information or visual content between scheduled shows, helping maintain continuity throughout the channel's programming.</desc>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Drama</category>
-    <icon src="https://images.metadata.sky.com/pd-image/b62b06c3-8258-4902-9065-29fa3897fb9e/16-9" />
-    <rating system="UK">
-      <value>PG</value>
-    </rating>
-  </programme>
   <programme channel="custom.colors.cineplex" start="20261012015500 +0000" stop="20261012044000 +0000">
     <title lang="en">Gair Kaanooni</title>
     <desc lang="en">Kapil, a determined police officer, seeks to capture the dreaded gangster D'costa with Azam's help. But when Azam is killed, his son rises to avenge him and deliver long-awaited justice.</desc>
@@ -417774,37 +417545,6 @@ A Toyota MR2 makes power, but not the power it once had; Bogi and Faye check the
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261012072000 +0530" stop="20261012072400 +0530" channel="custom.duck.tv">
-    <title>Vege-tales</title>
-    <desc>A colourful assortment of vegetables, each with its own unique personality, showcases diverse shapes and sizes. This helps children to recognise the differences between various culinary ingredients.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/92cdfaa462ffda1cd4ea01c1f6f9aa37.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012072400 +0530" stop="20261012072700 +0530" channel="custom.duck.tv">
-    <title>Mimo and Bobo</title>
-    <desc>When Mimo, the panda bear, and Bobo, the monkey, enter preschool, they learn useful lessons about friendship as well as moral values.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f7100646ff9cce813dad74448f69f4d6.jpg?width=700" />
-    <episode-num system="onscreen">11</episode-num>
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012072700 +0530" stop="20261012072900 +0530" channel="custom.duck.tv">
-    <title>Vehicles</title>
-    <desc>A team of animated vehicles springs to life and assists in exploring different modes of travel. They help young children to improve their creativity and foster imaginative and developmental skills.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/6af111ddc9f125f817ee0e4108a8023a.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261012072900 +0530" stop="20261012073200 +0530" channel="custom.duck.tv">
@@ -459320,13 +459060,6 @@ Various artists re-enact the bravest escapes from captivity that prominent perso
     <icon src="http://dtil.tmsimg.com/assets/p33984291_b_h10_aa.jpg?w=960&amp;h=540" />
     <premiere lang="en" />
   </programme>
-  <programme start="20261012013000 +0000" stop="20261012015500 +0000" channel="custom.good.news.today">
-    <category lang="en">News</category>
-    <category lang="en">Interviews</category>
-    <desc lang="en">The host and spiritual leader, Dhirendra Krishna Shastri, holds conversations on various topics and issues of significance.</desc>
-    <icon src="https://iptv-epg.org/images/8h06Zngco1dX56tmMuXD9ctRAbyWXwbnkzxCoOeasW26oajmKawdqog9TFFKAL1ucGgWNAIrfhhIsH-2Xg_Bu3PqQy9ADv700BP_kv0vOWPmbwmQ-jZ5-K_asQsDmg" />
-    <title lang="en">Achchi Baat Dhirendra Shastri Ke Saath</title>
-  </programme>
   <programme start="20261012015500 +0000" stop="20261012022000 +0000" channel="custom.good.news.today">
     <category lang="en">News</category>
     <category lang="en">News Bulletin</category>
@@ -485748,86 +485481,507 @@ Various artists re-enact the bravest escapes from captivity that prominent perso
       <value>12</value>
     </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012014000 +0000" stop="20261012015500 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <sub-title lang="en">Let's Make a Deal</sub-title>
-    <desc lang="en">While attempting to make a special present for Dave, Alvin creates a snowball effect of chaos.</desc>
+  <programme channel="custom.nicktoons" start="20261012013900 +0000" stop="20261012020500 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">Club SpongeBob; My Pretty Seahorse</sub-title>
+    <desc lang="en">SpongeBob, Patrick and Squidward squeeze inside a tiny treehouse; SpongeBob adopts a stray seahorse.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+    </credits>
+    <date>2002</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/fe2ef29c-dbcb-4b48-a9b5-f9c7e7bf1e1d/16-9" />
-    <episode-num system="xmltv_ns">1.10.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S3 E12</episode-num>
+    <previously-shown />
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>K7</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>AL</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012015500 +0000" stop="20261012021500 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">Theodore gets stuck taking care of Miss Croner's cats in 'The Cat Sitter', then in 'Addicted', The Chipettes challenge the Chipmunks to go three hours without their favourite things.</desc>
+  <programme channel="custom.nicktoons" start="20261012020500 +0000" stop="20261012023100 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">SpongeBob LongPants; Larry's Gym</sub-title>
+    <desc lang="en">When SpongeBob gets a pair of long pants, they change his life in unexpected ways; when Larry the Lobster opens a new gym in Bikini Bottom, SpongeBob becomes his best customer.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+    </credits>
+    <date>2016</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/c9c3ba07-c715-407a-825a-f9344e5286f0/16-9" />
-    <episode-num system="xmltv_ns">2.2.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S9 E17</episode-num>
+    <previously-shown />
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>6</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012021500 +0000" stop="20261012023500 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">The boys accidently break Dave's new flat screen TV in 'The Fugitives', and in 'Sherlock Chipmunk', Jeanette and Eleanor act as Sherlock Holmes and Watson when Theodore's teddy disappears.</desc>
+  <programme channel="custom.nicktoons" start="20261012023100 +0000" stop="20261012025700 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">The Bully; Just One Bite</sub-title>
+    <desc lang="en">SpongeBob discovers that Squidward has never actually tried a Krabby patty; a bully threatens SpongeBob.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+    </credits>
+    <date>2001</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/752f55c5-f244-4db2-a962-c6713202bd61/16-9" />
-    <episode-num system="xmltv_ns">2.9.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S3 E1</episode-num>
+    <previously-shown />
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>K7</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>6</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012023500 +0000" stop="20261012030000 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">The boys build a treehouse in the backyard and move out in 'Independence Day', and in 'Opposites Attract', an invention of Simon's accidently magnetizes Alvin and Simon to each other.</desc>
+  <programme channel="custom.nicktoons" start="20261012025700 +0000" stop="20261012032300 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">The Fishbowl; Married to Money</sub-title>
+    <desc lang="en">When Sandy tries to study SpongeBob and Patrick's behavioral patterns, her science experiment goes awry; after following Plankton's advice, Mr. Krabs decides to marry the only thing he has ever loved - money.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+    </credits>
+    <date>2016</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/17edc225-cb2d-436a-a884-2b2772c39969/16-9" />
-    <episode-num system="xmltv_ns">2.10.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S9 E19</episode-num>
+    <previously-shown />
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>K7</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>6</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012030000 +0000" stop="20261012033000 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">Dave struggles on a hike with the Chipettes in 'Girls Night Out', then in 'Tables Turned', Alvin's prank on Simon backfires.</desc>
+  <programme channel="custom.nicktoons" start="20261012032300 +0000" stop="20261012035000 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">The Nasty Patty; The Idiot Box</sub-title>
+    <desc lang="en">Mr. Krabs and SpongeBob hide the health inspector's body; SpongeBob and Patrick throw out their new TV and keep the box.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+    </credits>
+    <date>2002</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/9a74b3fb-c0db-4277-9e1d-de1cb450b368/16-9" />
-    <episode-num system="xmltv_ns">2.13.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S3 E4</episode-num>
+    <previously-shown />
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>AL</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>K7</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012033000 +0000" stop="20261012040000 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">The town is under attack when Simon creates a drone in 'Pizza Dash', then in 'Glory Days', the Chipmunks worry that they're making Dave boring when they find out he used to be a rock star.</desc>
+  <programme channel="custom.nicktoons" start="20261012035000 +0000" stop="20261012041600 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">Mall Girl Pearl; Two Thumbs Down</sub-title>
+    <desc lang="en">Pearl gets a job to be cool like her friends, but the only store that is hiring is the lamest store at the mall; SpongeBob loses the use of his thumbs.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+    </credits>
+    <date>2016</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/2dc71a7e-b4dd-441f-8dc8-de374ba06d9d/16-9" />
-    <episode-num system="xmltv_ns">2.16.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S9 E18</episode-num>
+    <previously-shown />
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>K7</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>6</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012040000 +0000" stop="20261012043000 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">Simon's experiments cause trouble when Dave asks him to declutter in 'Pack Animal', then in 'The Haunted Getaway', the boys face a haunted cabin.</desc>
+  <programme channel="custom.nicktoons" start="20261012041600 +0000" stop="20261012044200 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">The Snowball Effect; One Krab's Trash</sub-title>
+    <desc lang="en">SpongeBob and Patrick throw snowballs at Squidward; Mr. Krabs has a garage sale.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+      <director>Paul Tibbitt</director>
+    </credits>
+    <date>2002</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/5a47f822-3076-4822-a5d9-90580a376420/16-9" />
-    <episode-num system="xmltv_ns">2.20.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S3 E3</episode-num>
+    <previously-shown />
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>AL</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>K7</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012043000 +0000" stop="20261012050000 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">Brittany dreams of being a fashion designer in 'The Devil Wears Rodentia', then in 'Career Day', Alvin suspects Dave of being a local bank robber when Dave starts acting suspiciously.</desc>
+  <programme channel="custom.nicktoons" start="20261012044200 +0000" stop="20261012050800 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">The Fry Cook and the Elves; It's About Mime</sub-title>
+    <desc lang="en">SpongeBob can't shake a group of elves who want to repay him for a good deed; a mime begins following (and imitating) SpongeBob, much to his annoyance.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+      <director>Vincent Waller</director>
+    </credits>
+    <date>2026</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/c4c396f0-669a-40ee-83eb-b3c25202ef49/16-9" />
-    <episode-num system="xmltv_ns">2.21.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S17 E6</episode-num>
+    <previously-shown />
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>K7</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="방송통신심의위원회">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>6</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>AL</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012050000 +0000" stop="20261012053100 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">Alvin accidentally clones himself in 'Double Trouble', then in 'Liar Liar', Alvin tells a small lie that quickly turns into a huge disaster, dragging everyone into his tangled web.</desc>
+  <programme channel="custom.nicktoons" start="20261012050800 +0000" stop="20261012053400 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">As Seen on TV; Can You Spare a Dime</sub-title>
+    <desc lang="en">Stardom goes to SpongeBob's head after he appears in Krabs' low-budget commercial; Squidward becomes impoverished.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+    </credits>
+    <date>2002</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/78c2be98-5c58-4176-99db-9b5de8c34739/16-9" />
-    <episode-num system="xmltv_ns">1.9.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S3 E5</episode-num>
+    <previously-shown />
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>6</value>
+    </rating>
   </programme>
-  <programme channel="custom.nicktoons" start="20261012053100 +0000" stop="20261012060000 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">Theodore's new toy is annoying Alvin and Simon in 'Talking Teddy', then in 'Principal Interest', Alvin is none-too thrilled about going back to school, until he sees the new Principal.</desc>
+  <programme channel="custom.nicktoons" start="20261012053400 +0000" stop="20261012060000 +0000">
+    <title lang="en">SpongeBob SquarePants</title>
+    <sub-title lang="en">Sold!; Lame and Fortune</sub-title>
+    <desc lang="en">SpongeBob and Patrick think their homes have been sold and move away, pleasing Squidward; fortune cookies predict the future, so Plankton uses them for his schemes.</desc>
+    <credits>
+      <actor>Tom Kenny</actor>
+      <actor>Bill Fagerbakke</actor>
+      <actor>Rodger Bumpass</actor>
+    </credits>
+    <date>2016</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/2f2a5ffe-f430-4488-a04f-f8055242f260/16-9" />
-    <episode-num system="xmltv_ns">0.0.</episode-num>
+    <category lang="en">Comedy</category>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Entertainment</category>
+    <icon src="http://dtil.tmsimg.com/assets/p184854_b_h10_bi.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S9 E21</episode-num>
+    <previously-shown />
+    <rating system="Film &amp; Publication Board">
+      <value>A</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>6</value>
+    </rating>
+    <rating system="USA Parental Rating">
+      <value>TVY7</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>G</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>6</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>6</value>
+    </rating>
   </programme>
   <programme channel="custom.nicktoons" start="20261012060000 +0000" stop="20261012062500 +0000">
     <title lang="en">SpongeBob SquarePants</title>
@@ -502483,47 +502637,6 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
     <title lang="en">The Sports Bar</title>
     <desc lang="en">Reaction, analysis and your chance to have your say on the day's sport. Call the show on 03717 22 33 44 (Calls charged at national rate) or text 81089 (50p + charges).</desc>
     <category lang="en">Music &amp; Radio</category>
-  </programme>
-  <programme channel="custom.teen.nick" start="20261012013000 +0000" stop="20261012015700 +0000">
-    <title lang="en">Zoey 101</title>
-    <sub-title lang="en">New Roomies</sub-title>
-    <desc lang="en">Zoey moves to a new room because her roommates are constantly fighting.</desc>
-    <credits>
-      <actor>Jamie Lynn Spears</actor>
-      <actor>Paul Butcher</actor>
-      <actor>Sean Flynn</actor>
-    </credits>
-    <date>2005</date>
-    <category lang="en">Series</category>
-    <category lang="en">Children</category>
-    <category lang="en">Sitcom</category>
-    <icon src="http://dtil.tmsimg.com/assets/p7892971_b_h10_az.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S1 E2</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVY7</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C8</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>A</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>10</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>0</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
   </programme>
   <programme channel="custom.teen.nick" start="20261012015700 +0000" stop="20261012022400 +0000">
     <title lang="en">Zoey 101</title>

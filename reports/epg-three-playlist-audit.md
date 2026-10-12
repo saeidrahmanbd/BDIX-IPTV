@@ -21,7 +21,7 @@ If the publish gate retains an older guide, the workflow must refresh this repor
 | IPTV-Playlist.m3u — Bangladesh | 58 | 0 | 0 | 0 |
 | BDIX-Playlist.m3u | 131 | 69 | 57 | 57 |
 | BDIX-Playlist.m3u — Bangladesh | 41 | 1 | 1 | 1 |
-| NVisionBD-Playlist.m3u | 467 | 187 | 167 | 167 |
+| NVisionBD-Playlist.m3u | 467 | 187 | 167 | 166 |
 | NVisionBD-Playlist.m3u — Bangladesh | 50 | 0 | 0 | 0 |
 
 - Non-English programme text fields detected: **0**
