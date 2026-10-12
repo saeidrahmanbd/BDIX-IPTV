@@ -5,7 +5,6 @@ on:
     paths:
       - IPTV-Playlist.m3u
       - BDIX-Playlist.m3u
-      - NVisionBD-Playlist.m3u
       - scripts/normalize_metadata.py
       - scripts/migrate_external_logos_fixed.py
       - scripts/generate_logo_authenticity_manifest.py
@@ -144,7 +143,7 @@ jobs:
             echo "Validated EPG working-tree sha256: $(sha256sum epg/epg.xml | awk '{print $1}')"
             # Enforce the immutable author block after every playlist transformation and before staging.
             python scripts/enforce_playlist_attribution.py
-            git add IPTV-Playlist.m3u BDIX-Playlist.m3u NVisionBD-Playlist.m3u logos/ reports/ assets/dashboard.svg xtream/worker.js
+            git add IPTV-Playlist.m3u BDIX-Playlist.m3u logos/ reports/ assets/dashboard.svg xtream/worker.js
             git add -f epg/epg.xml
             STAGED_EPG_BYTES="$(git cat-file -s :epg/epg.xml)"
             echo "Staged EPG bytes: ${STAGED_EPG_BYTES}"
