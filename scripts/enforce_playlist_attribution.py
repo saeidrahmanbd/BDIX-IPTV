@@ -20,7 +20,7 @@ def enforce(path: Path) -> bool:
     if not path.is_file():
         # Some focused workflows may run in a checkout where a playlist is absent.
         return False
-    lines = path.read_text(encoding="utf-8-sig").replace("\\r", "").splitlines()
+    lines = path.read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
     if not lines or not lines[0].startswith("#EXTM3U"):
         raise SystemExit(f"{path}: missing #EXTM3U first line; refusing to rewrite.")
     # Remove exact existing copies of the protected block, then restore exactly one
@@ -33,10 +33,10 @@ def enforce(path: Path) -> bool:
         else:
             i += 1
     lines[1:1] = list(BLOCK)
-    content = "\\n".join(lines).rstrip("\\n") + "\\n"
-    old = path.read_text(encoding="utf-8-sig").replace("\\r", "")
+    content = "\n".join(lines).rstrip("\n") + "\n"
+    old = path.read_text(encoding="utf-8-sig").replace("\r", "")
     if old != content:
-        path.write_text(content, encoding="utf-8", newline="\\n")
+        path.write_text(content, encoding="utf-8")
         print(f"{path}: restored protected attribution block.")
     else:
         print(f"{path}: attribution block verified.")

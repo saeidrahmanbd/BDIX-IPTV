@@ -687,7 +687,7 @@ def main():
             name = Path(urllib.parse.urlparse(logo).path).name.casefold() if logo else ""
             if not logo:
                 missing_after += 1
-            if name in BAD_ASSETS or name in GENERIC_ASSETS or bool(re.search(r"(?:placeholder|generated-fallback|generic-logo)", name)):
+            if name in BAD_ASSETS or name in GENERIC_ASSETS or bool(re.search(r"(?:placeholder|generic-logo)", name)):
                 flagged_after += 1
         summary[playlist] = {
             "entries": entries, "changed": changed, "missing_after": missing_after,
