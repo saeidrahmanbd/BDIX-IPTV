@@ -25886,14 +25886,6 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
     <category>Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p28594667_b_h8_ab.jpg?lock=1280x720" />
   </programme>
-  <programme start="20261012033900 +0530" stop="20261012053700 +0530" channel="BangBangTV">
-    <title>Death Rattle Crystal Ice</title>
-    <sub-title>BANG BANG TV | ENGLISH</sub-title>
-    <desc>Meth, murder and mayhem cooked up by a crooked Sheriff and his gang of misfits is battled by a Special Ops Agent seeking payback for his brother's death at their hands.</desc>
-    <category>Movie</category>
-    <language>ENGLISH</language>
-    <icon src="https://s3.eu-west-1.wasabisys.com/bri/BANG BANG TV/movies images/DeathRattleCrystalIce.jpg" />
-  </programme>
   <programme start="20261012053700 +0530" stop="20261012060000 +0530" channel="BangBangTV">
     <title>Program @ 5:00 AM</title>
     <sub-title>BANG BANG TV | ENGLISH</sub-title>
@@ -41182,52 +41174,10 @@ Aai Tulija Bhavani strives to overcome multiple challenges and defeat the evil p
     <icon src="https://iptv-epg.org/images/_lknHKzuUcXepTSqMf8Cf5yVIFWuUhC9LIDmWOulBEagfSMxUjGkOEzR3K8VQG9FHvCmlRsfo0D3DzPMfUFNIuUUoLoRPMtBL7yLaHQE3kNFoVmQft2jrLbCbz7gHQ" />
     <title lang="en">Aai Tuljabhavani</title>
   </programme>
-  <programme channel="ColorsRishteyAmericas.in" start="20261012051800 +0530" stop="20261012053800 +0530">
-    <title>Shiv-Shakti Tap..Tyaag..Tandav</title>
-    <desc>Lord Shiva and his wife Goddess Parvati navigate through the trials and tribulations of their divine union, selflessly performing their duties for humanity.</desc>
-    <category>TV Show</category>
-    <category>Entertainment</category>
-    <credits>
-      <director>Muzammil Desai</director>
-      <director>J.P. Sharma</director>
-      <director>Kamal Monga</director>
-      <director>Sharad Pandeyy</director>
-      <director>Kiran Gorde</director>
-      <director>Raghav Chandra Shekhara Shukla</director>
-      <director>Alam Khan Pathan</director>
-      <actor>Ram Yashvardhan</actor>
-      <actor>Subha Rajput</actor>
-      <actor>Tarun Khanna</actor>
-      <actor>Srikant Dwivedi</actor>
-      <actor>Sheetal Tiwari</actor>
-      <actor>Akanksha Rawat</actor>
-      <actor>Manan Mehta</actor>
-      <actor>Sandeep Aurora</actor>
-      <actor>Puneet Vashisht</actor>
-      <actor>Ketan Karande</actor>
-      <producer>Siddharth Kumar Tewary</producer>
-      <producer>Gayatri Gil Tewary</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p29136221_b_h8_aa.jpg?lock=1280x720" />
-  </programme>
-  <programme start="20261012000800 +0000" stop="20261012003000 +0000" channel="ColorsRishteyAmericas.in">
+  <programme start="20261012024000 +0530" stop="20261012060000 +0530" channel="ColorsRishteyAmericas.in">
+    <title lang="en">Shakti</title>
+    <category lang="en">Hindi</category>
     <category lang="en">TV Show</category>
-    <category lang="en">Religious</category>
-    <credits>
-      <director>Gautam Anil Nagrath</director>
-      <director>Harish Narwariya</director>
-      <actor>Aishwarya Raj Bhakuni</actor>
-      <actor>Shalini Kapoor</actor>
-      <actor>Sahil Sambyal</actor>
-      <actor>Vishal Karwal</actor>
-      <actor>Veer Gurjar</actor>
-      <actor>Swarupu</actor>
-    </credits>
-    <desc lang="en">S1 E43
-Narada learns from Brahma that Vishnu must descend as Venkateshwara to destroy an evil.</desc>
-    <episode-num>S1 E43</episode-num>
-    <icon src="https://iptv-epg.org/images/Rb2rZ11FEmF-PckDUYDea0TZbUGtCReZpaZdGxIcZ6JXuXrpXiAR74YEgyOCKuXGfeu4CCsyze-iXKFH2z8rc4xaniZAxpd2T1OqLb4wDChlOs5xWd95BOiznM2X8-a4ofqZRxTcHIRIulGLYw9A1eWqNYgkwerdZHQOV09fFHt4ibKvGrLukghEI5msAHeqfafwgw" />
-    <title lang="en">Shri Tirupati Balaji</title>
   </programme>
   <programme start="20261012060000 +0530" stop="20261012085000 +0530" channel="ColorsRishteyAmericas.in">
     <title lang="en">The Legend Of Hanuman</title>
@@ -90648,25 +90598,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012000000 +0000" stop="20261012001000 +0000" channel="Discovery Kids.in">
-    <category lang="en">TV Show</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <director>Ah Loong</director>
-      <director>Dheeraj Berry</director>
-      <actor>Pooja Punjabi</actor>
-      <actor>Vinod Kulkarni</actor>
-      <actor>Gaurav Pareek</actor>
-      <actor>Laxmi Narayan Pareek</actor>
-      <actor>Narayan Pareek</actor>
-      <producer>Ashwini Kulkarni</producer>
-      <producer>Meera Latkar</producer>
-      <producer>Monica Tata</producer>
-    </credits>
-    <desc lang="en">When Golu injures his leg, a jealous Kanishk hatches a plan to gain sympathy. Later, he tries to fake an injury and plots to defeat Kris.</desc>
-    <icon src="https://iptv-epg.org/images/Xjjfd_K5AG1hBXetUp2TG4B3c3G6Qx7I6AeP4V-ExTWI7OCZ2uiEeOIsQQpW4vulaNbIBAHvW1Nu8iAlKF6z2_SsXXTp36nXC3YaVibFnEn78E4I1Dx2Cl4RPX_bsg" />
-    <title lang="en">Kris Roll No 21</title>
-  </programme>
   <programme start="20261012001000 +0000" stop="20261012002000 +0000" channel="Discovery Kids.in">
     <category lang="en">TV Show</category>
     <category lang="en">Animation</category>
@@ -102175,25 +102106,6 @@ Zak and the crew descend upon a Southern California park to investigate a haunte
     <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
       <value>AL</value>
     </rating>
-  </programme>
-  <programme start="20261012000000 +0000" stop="20261012001000 +0000" channel="DiscoveryKids.au">
-    <category lang="en">TV Show</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <director>Ah Loong</director>
-      <director>Dheeraj Berry</director>
-      <actor>Pooja Punjabi</actor>
-      <actor>Vinod Kulkarni</actor>
-      <actor>Gaurav Pareek</actor>
-      <actor>Laxmi Narayan Pareek</actor>
-      <actor>Narayan Pareek</actor>
-      <producer>Ashwini Kulkarni</producer>
-      <producer>Meera Latkar</producer>
-      <producer>Monica Tata</producer>
-    </credits>
-    <desc lang="en">When Golu injures his leg, a jealous Kanishk hatches a plan to gain sympathy. Later, he tries to fake an injury and plots to defeat Kris.</desc>
-    <icon src="https://iptv-epg.org/images/Xjjfd_K5AG1hBXetUp2TG4B3c3G6Qx7I6AeP4V-ExTWI7OCZ2uiEeOIsQQpW4vulaNbIBAHvW1Nu8iAlKF6z2_SsXXTp36nXC3YaVibFnEn78E4I1Dx2Cl4RPX_bsg" />
-    <title lang="en">Kris Roll No 21</title>
   </programme>
   <programme start="20261012001000 +0000" stop="20261012002000 +0000" channel="DiscoveryKids.au">
     <category lang="en">TV Show</category>
@@ -171190,19 +171102,6 @@ The host invites prominent personalities and engages them in candid conversation
     <desc lang="en">Nashik : Join chef Ranveer Brar on a delicious journey of India's forgotten traditions and recipes.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_NATIONAL_GEOGRAPHIC_CHANNEL_1819076_15OCT070000_15OCT080000/images/LANDSCAPE_169_HD/NGC_TheWanderingChef_1819076.jpg" />
   </programme>
-  <programme start="20261011232400 +0000" stop="20261012000600 +0000" channel="NationalGeographicWild.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Reality Show</category>
-    <credits>
-      <actor>Bertie Gregory</actor>
-      <producer>Bertie Gregory</producer>
-    </credits>
-    <desc lang="en">S1 E2
-Wildlife filmmaker Bertie Gregory captures some of the strongest survival bonds of Emperor Penguins in the harshest environments.</desc>
-    <episode-num>S1 E2</episode-num>
-    <icon src="https://iptv-epg.org/images/pokgT4v1euqHOwJyBGtvPVNLyDaFTf1mh1-izK5dG06SHJUYChNaM2l5CIXSqRSIi6dSZ4GXslLet__7cixeBfE-JQVIuqTO-6DgcE4ea7BnXCw2BKjbqNU0XM1KRQ" />
-    <title lang="en">Secrets of the Penguins</title>
-  </programme>
   <programme start="20261012000600 +0000" stop="20261012003000 +0000" channel="NationalGeographicWild.in@SD">
     <category lang="en">Documentary</category>
     <category lang="en">Factual Entertainment</category>
@@ -191472,16 +191371,6 @@ Shalini lives in America but desires to relocate to India. Meanwhile, a girl fro
     <title lang="en">Funtoosh</title>
     <desc lang="en">Tune in to our lively show where experts from different fields share and debate fascinating topics, keeping you entertained and informed in an engaging, interactive format!</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_PEARS_TV_1686519_15OCT070000_15OCT080000/images/LANDSCAPE_169/1745752713000_PearTV_Funtoosh_1686519.jpg" />
-  </programme>
-  <programme start="20261012000000 +0530" stop="20261012054000 +0530" channel="PeppersTV.in@SD">
-    <title>Religious Program</title>
-    <desc>A religious leader delivers a discourse on the teachings of the Almighty to enlighten the devotees and guide them on a path of spiritual growth.</desc>
-    <category>Religious</category>
-    <language>Tamil</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/6c4eaba2656e6515e6371d19a1739996.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
   </programme>
   <programme start="20261012054000 +0530" stop="20261012060000 +0530" channel="PeppersTV.in@SD">
     <title>Subrabhatham</title>
@@ -211948,13 +211837,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <desc lang="en">Groove to the beats of the latest chart-toppers and all-time favorites!</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_RAMDHENU_225052_15OCT070000_15OCT073000/images/LANDSCAPE_169/1756684870000_Ramdhenu_RamdhenuHits_225052.jpg" />
   </programme>
-  <programme start="20261011235000 +0000" stop="20261012001000 +0000" channel="Rang.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Religious</category>
-    <desc lang="en">Bringing the best in television.</desc>
-    <icon src="https://iptv-epg.org/images/_bxnFU7q7h2WUAzEFDNI9uTpKKh2bn0ODU57-T1KCZtgmgfLLeEDwqQLVHgelG_1Ike9IogRqbMH7aIfijoO1SaU0IzmC4X-hnEgs5zJgVKPumeAVVuVgc1kh7q79g" />
-    <title lang="en">Mahadev</title>
-  </programme>
   <programme start="20261012001000 +0000" stop="20261012003000 +0000" channel="Rang.in@SD">
     <category lang="en">Documentary</category>
     <category lang="en">Others</category>
@@ -217408,16 +217290,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012034900 +0530" stop="20261012054000 +0530" channel="RomedyNow.in@SD">
-    <title lang="en-GB">It's Complicated</title>
-    <desc lang="en-GB">Jane, a divorcee, runs into her ex-husband at their son's graduation ceremony. Since they are divorced and he has remarried, problems evolve when they start falling in love all over again.</desc>
-    <credits>
-      <actor>Meryl Streep (Jane),Steve Martin (Adam),Alec Baldwin (Jake),John Krasinski (Harley),Lake Bell (Agness),Rita Wilson (Trish),Zoe Kazan (Gabby),Hunter Parrish (Luke),Caitlin FitzGerald (Lauren),Mary Kay Place (Joanne),Alexandra Wentworth (Diane),Nora Dunn (Sally),Blanchard Ryan (Annalise),James Patrick Stuart (Dr. Moss),Robert Curtis-Brown (Peter),Peter Mackenzie (Dr. Alan),Michael Rivera (Eddie)</actor>
-    </credits>
-    <category lang="en-GB">177</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/3af90dc534130a576ea7aa1efe8a19f6.jpg" />
-    <premiere />
-  </programme>
   <programme start="20261012054000 +0530" stop="20261012073300 +0530" channel="RomedyNow.in@SD">
     <title lang="en-GB">The Notebook</title>
     <desc lang="en-GB">Duke reads the story of Allie and Noah, two lovers who were separated by fate, to Ms Hamilton, an old woman who suffers from dementia, on a daily basis out of his notebook.</desc>
@@ -218455,24 +218327,13 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <icon src="https://iptv-epg.org/images/MNlmtWooe4M9jAq93U8WKcy64ohHls5TvCoWFvRFWE1nghPYBIdAfVZL5cn73_KcA0LMSWqMVoDxyX6g14Fub__kuWurcj-JzHX-ZFR8inPG2dk_PATQ0HO5K3I" />
     <title lang="en">Mamma Mia!</title>
   </programme>
-  <programme start="20261012050000 +0530" stop="20261012054000 +0530" channel="SETASHD">
-    <title>Best of Crime Patrol</title>
-    <desc>Some of the best cases of 'Crime Patrol', which investigates how innocent people turn into criminals due to the influence of evil in society.</desc>
-    <category>Crime</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/0932d8744a6edf76be3e7a83bbd25e5f.jpg?width=700" />
-    <credits>
-      <director>Darshan Raj</director>
-      <actor>Anup Soni</actor>
-      <actor>Saakshi Tanwar</actor>
-      <actor>Sanjeev Tyagi</actor>
-      <actor>Nissar Khan</actor>
-      <actor>Ujjwal Chopra</actor>
-      <actor>Rajendra Sishatkar</actor>
-    </credits>
-    <episode-num system="onscreen">653</episode-num>
-    <rating>
-      <value>U</value>
+  <programme channel="SETASHD" start="20261011235100 +0000" stop="20261012004600 +0000">
+    <title lang="en">Crime Patrol</title>
+    <desc lang="en">Join India's police force in action as they deal with criminal activities around the country in this dramatisation of real life crime stories, narrated by Anup Soni.</desc>
+    <icon src="https://images.metadata.sky.com/pd-image/63b83c45-8504-48c7-b822-8ee2aaba96c5/16-9" />
+    <episode-num system="xmltv_ns">0.223.</episode-num>
+    <rating system="UK">
+      <value>PG</value>
     </rating>
   </programme>
   <programme channel="SETASHD" start="20261012004600 +0000" stop="20261012012900 +0000">
@@ -233691,12 +233552,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <desc lang="en">Motherwell v Hibernian from 2010.</desc>
     <icon src="https://tv.assets.pressassociation.io/1592cd0a-ed5a-5bdb-a656-780958594d23.jpg" />
   </programme>
-  <programme channel="SkySportsNFL.uk" start="20261011233000 +0000" stop="20261012001000 +0000">
-    <title lang="en">NBC's FNIA</title>
-    <desc lang="en">The build-up to Atlanta Falcons v Baltimore Ravens, plus reaction to Sunday's week five matches.</desc>
-    <category lang="en">Sport</category>
-    <icon src="https://tv.assets.pressassociation.io/41ec323f-424b-5409-bc01-7fb671571869.jpg" />
-  </programme>
   <programme channel="SkySportsNFL.uk" start="20261012001000 +0000" stop="20261012034500 +0000">
     <title lang="en">Live NFL</title>
     <sub-title lang="en">Baltimore Ravens @ Atlanta Falcons 11.10</sub-title>
@@ -234348,12 +234203,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <category lang="en">Sport</category>
     <icon src="https://tv.assets.pressassociation.io/3a316425-b513-5459-84ae-8ce7fcac1681.jpg" />
     <episode-num system="onscreen">S2026 E32</episode-num>
-  </programme>
-  <programme channel="SongdewTV.in@SD" start="20261012053000 +0530" stop="20261012054000 +0530">
-    <title>Songdew Select</title>
-    <desc>A comprehensive compilation of independent music, showcasing the diverse creativity and unique voices of artists, offering listeners an eclectic blend of genres and styles.</desc>
-    <category>Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p15781083_b_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="SongdewTV.in@SD" start="20261012054000 +0530" stop="20261012054500 +0530">
     <title>Friday Night Originals</title>
@@ -315414,13 +315263,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <desc lang="en">Mowgli goes to visit Kaa with a question. How many monkeys can a python swallow in one gulp?</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acc2a228d1a0fbd854910f1/images/LANDSCAPE_169/9372_370abaf4-87cf-4ecf-ac5b-181564e3a34e.png" />
   </programme>
-  <programme channel="TinyPop.uk" start="20261011235800 +0000" stop="20261012000700 +0000">
-    <title lang="en">Masha And The Bear</title>
-    <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012052800/list/TinyPOPMashaAndTheBear20569962c90e616525b436f994822976b3551db.jpg" />
-  </programme>
   <programme channel="TinyPop.uk" start="20261012000700 +0000" stop="20261012001600 +0000">
     <title lang="en">Masha And The Bear</title>
     <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
@@ -326982,16 +326824,6 @@ The host travels to the historic city of Savannah, exploring its elegant charm, 
     <icon src="https://iptv-epg.org/images/bMMVCkYWJOPWd4VCcqtldWjWDOl-sjPO9JPswK_XKPv2pw5mwej9AioIbFRVylQ_UIUxqv0eMtaQKzGw-cugMToMATmN_MQu9s1HvbMJEF9cqdGWTioJXini1aRGug" />
     <title lang="en">Vellicham</title>
   </programme>
-  <programme start="20261012042500 +0530" stop="20261012054000 +0530" channel="VendharTV.in@SD">
-    <title>Deiveega Geethangal</title>
-    <desc>Talented singers and musicians perform a comprehensive compilation of melodious devotional songs and compositions in praise of the Almighty.</desc>
-    <category>Musical</category>
-    <language>Tamil</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/899b3fa64ad03cef56a35e16ac30393e.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261012054000 +0530" stop="20261012060000 +0530" channel="VendharTV.in@SD">
     <title>Venkatesha Suprabadham</title>
     <desc>A comprehensive compilation of devotional songs that are composed and sung in the praise of Lord Venkateswara is played at dawn.</desc>
@@ -332518,25 +332350,37 @@ The host travels to the historic city of Savannah, exploring its elegant charm, 
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012051700 +0530" stop="20261012053800 +0530" channel="ZeeBollywood.in@SD">
-    <title>Fillers</title>
-    <desc>A comprehensive compilation of promotional videos and trailers of Bollywood movies featuring popular actors and actresses.</desc>
-    <category>Variety</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/86babb9a8e819dd6d8199230a77a7248.jpg?width=700" />
-    <rating>
-      <value>A</value>
-    </rating>
+  <programme start="20261011233500 +0000" stop="20261012022200 +0000" channel="ZeeBollywood.in@SD">
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
+    <credits>
+      <director>Vicky Ranawat</director>
+      <actor>Ronit Roy</actor>
+      <actor>Tisca Chopra</actor>
+      <actor>Prem Chopra</actor>
+      <actor>Saeed Jaffrey</actor>
+      <actor>Shakti Kapoor</actor>
+      <actor>Kunika Sadanand</actor>
+      <actor>Girija Shankar</actor>
+      <producer>Ishitiyak Ahmed</producer>
+    </credits>
+    <desc lang="en">Nagpal kills Chaudhry and his son, Ram, a military officer. Chaudhry's second son, Vikram, vows to destroy Nagpal who is all set to become the Chief Minister on the upcoming Indian Independence Day.</desc>
+    <icon src="https://iptv-epg.org/images/c3d7Oq-dL41bQ_W7ARqXahoMZ9jfBuwXUeS-2d3mc47b3bOMGfp4NL1x9brG-PJN3E8iJTz0UmiE15trhxvhtDbTTgMPSYkVqAQ-IWMt-pwEwVytC3ixEjg4q3w" />
+    <title lang="en">15th August</title>
   </programme>
-  <programme channel="ZeeBollywood.in@SD" start="20261012053800 +0530" stop="20261012075900 +0530">
-    <title lang="en">15Th August</title>
-    <desc lang="en">After killing Chaudhry and his son Ram, Nagpal eyes political power as Chief Minister, but Vikram, the surviving son, vows revenge and sets out to destroy him before Independence Day.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_ZEE_BOLLYWOOD_2081541_12OCT053800_12OCT075900/images/LANDSCAPE_169_HD/ZeeBollywood_15ThAugust_2081541.jpg" />
-  </programme>
-  <programme channel="ZeeBollywood.in@SD" start="20261012075900 +0530" stop="20261012103800 +0530">
+  <programme channel="ZeeBollywood.in@SD" start="20261012075200 +0530" stop="20261012104300 +0530">
     <title lang="en">King Uncle</title>
-    <desc lang="en">Industrialist Ashok Bansal's harsh ways push away his siblings. But when orphan girl Munna enters their lives, she slowly softens his tough heart and changes the family.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_ZEE_BOLLYWOOD_930340_12OCT075900_12OCT103800/images/LANDSCAPE_169_HD/ZeeBollywood_KingUncle_930340.jpg" />
+    <desc lang="en">Ashok, an austere man, experiences a profound shift in his life when an orphan girl enters his world, infusing it with warmth and meaning that he had long forgotten.</desc>
+    <credits>
+      <actor>Jackie Shroff</actor>
+      <actor>Shah Rukh Khan</actor>
+      <actor>Nagma</actor>
+      <actor>Anu Agrawal</actor>
+      <director>Rakesh Roshan</director>
+    </credits>
+    <category lang="en">Film</category>
+    <category lang="en">Comedy</category>
+    <icon src="https://dtil.tmsimg.com/assets/p63666_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="ZeeBollywood.in@SD" start="20261012104300 +0530" stop="20261012133600 +0530">
     <title lang="en">Krishna</title>
@@ -371501,24 +371345,13 @@ Delving into a range of varied topics, the host discusses the social, economic a
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/5fb77f8d4bc4b5dc682b504b1ac86b12.jpg" />
     <premiere />
   </programme>
-  <programme start="20261012050000 +0530" stop="20261012054000 +0530" channel="custom.bdix.sony">
-    <title>Best of Crime Patrol</title>
-    <desc>Some of the best cases of 'Crime Patrol', which investigates how innocent people turn into criminals due to the influence of evil in society.</desc>
-    <category>Crime</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/0932d8744a6edf76be3e7a83bbd25e5f.jpg?width=700" />
-    <credits>
-      <director>Darshan Raj</director>
-      <actor>Anup Soni</actor>
-      <actor>Saakshi Tanwar</actor>
-      <actor>Sanjeev Tyagi</actor>
-      <actor>Nissar Khan</actor>
-      <actor>Ujjwal Chopra</actor>
-      <actor>Rajendra Sishatkar</actor>
-    </credits>
-    <episode-num system="onscreen">653</episode-num>
-    <rating>
-      <value>U</value>
+  <programme channel="custom.bdix.sony" start="20261011235100 +0000" stop="20261012004600 +0000">
+    <title lang="en">Crime Patrol</title>
+    <desc lang="en">Join India's police force in action as they deal with criminal activities around the country in this dramatisation of real life crime stories, narrated by Anup Soni.</desc>
+    <icon src="https://images.metadata.sky.com/pd-image/63b83c45-8504-48c7-b822-8ee2aaba96c5/16-9" />
+    <episode-num system="xmltv_ns">0.223.</episode-num>
+    <rating system="UK">
+      <value>PG</value>
     </rating>
   </programme>
   <programme channel="custom.bdix.sony" start="20261012004600 +0000" stop="20261012012900 +0000">
@@ -407933,26 +407766,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261012053300 +0530" stop="20261012053600 +0530" channel="custom.duck.tv">
-    <title>Safari</title>
-    <desc>Exploring the wild and wonderful world of animals with the help of lively visuals and music.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/dd9be9b86e3841ebc4d0e3c174aaefed.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012053600 +0530" stop="20261012054000 +0530" channel="custom.duck.tv">
-    <title>Mimo and Bobo</title>
-    <desc>When Mimo, the panda bear, and Bobo, the monkey, enter preschool, they learn useful lessons about friendship as well as moral values.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f7100646ff9cce813dad74448f69f4d6.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261012054000 +0530" stop="20261012054300 +0530" channel="custom.duck.tv">
@@ -498885,44 +498698,6 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
     <desc lang="en">Reaction, analysis and your chance to have your say on the day's sport. Call the show on 03717 22 33 44 (Calls charged at national rate) or text 81089 (50p + charges).</desc>
     <category lang="en">Music &amp; Radio</category>
   </programme>
-  <programme channel="custom.teen.nick" start="20261011234200 +0000" stop="20261012000900 +0000">
-    <title lang="en">Zoey 101</title>
-    <sub-title lang="en">PCA Confidential</sub-title>
-    <desc lang="en">Prospective students question Zoey and the gang about their experiences at PCA.</desc>
-    <credits>
-      <actor>Jamie Lynn Spears</actor>
-      <actor>Paul Butcher</actor>
-      <actor>Sean Flynn</actor>
-    </credits>
-    <date>2008</date>
-    <category lang="en">Series</category>
-    <category lang="en">Children</category>
-    <category lang="en">Sitcom</category>
-    <icon src="http://dtil.tmsimg.com/assets/p7892973_b_h10_aa.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S4 E14</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVY7</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C8</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>10</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>0</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-  </programme>
   <programme channel="custom.teen.nick" start="20261012000900 +0000" stop="20261012003600 +0000">
     <title lang="en">Zoey 101</title>
     <sub-title lang="en">Roller Coaster</sub-title>
@@ -511862,14 +511637,6 @@ The Indian cricket team's camaraderie, teamwork, and passion for cricket is on d
     <desc lang="en">Cricket action and highlights from around the world.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6ac835b6e62860cabccb49a5/images/LANDSCAPE_169/output1920x1080.jpeg" />
   </programme>
-  <programme start="20261012044500 +0530" stop="20261012054000 +0530" channel="custom.xtrem.sports">
-    <title>Silent Revolution</title>
-    <sub-title>XTREM SPORTS | ENGLISH</sub-title>
-    <desc>A documentary series exploring the European BMX scene, following riders across competitions, training, and daily life to reveal the dedication, culture, and challenges behind professional BMX.</desc>
-    <category>Sports</category>
-    <language>ENGLISH</language>
-    <icon src="https://s3.eu-west-2.wasabisys.com/xtremsport/Xtrem_Silent Revolution.jpg" />
-  </programme>
   <programme start="20261012054000 +0530" stop="20261012060000 +0530" channel="custom.xtrem.sports">
     <title>Program @ 5:00 AM</title>
     <sub-title>XTREM SPORTS | ENGLISH</sub-title>
@@ -517568,25 +517335,6 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
     <title lang="en">Marooned With Ed Stafford</title>
     <desc lang="en">Ed Stafford is alone in Borneo's thick jungles with no tools, no food, and no backup. Just raw survival instincts against dense forest, wild creatures, and unrelenting rain.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DISCOVERY_CHANNEL_173569_15OCT064800_15OCT073800/images/LANDSCAPE_169_HD/DISCOVERY_MaroonedWithEdStafford_173569.jpg" />
-  </programme>
-  <programme start="20261012000000 +0000" stop="20261012001000 +0000" channel="hmair.discoverykids">
-    <category lang="en">TV Show</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <director>Ah Loong</director>
-      <director>Dheeraj Berry</director>
-      <actor>Pooja Punjabi</actor>
-      <actor>Vinod Kulkarni</actor>
-      <actor>Gaurav Pareek</actor>
-      <actor>Laxmi Narayan Pareek</actor>
-      <actor>Narayan Pareek</actor>
-      <producer>Ashwini Kulkarni</producer>
-      <producer>Meera Latkar</producer>
-      <producer>Monica Tata</producer>
-    </credits>
-    <desc lang="en">When Golu injures his leg, a jealous Kanishk hatches a plan to gain sympathy. Later, he tries to fake an injury and plots to defeat Kris.</desc>
-    <icon src="https://iptv-epg.org/images/Xjjfd_K5AG1hBXetUp2TG4B3c3G6Qx7I6AeP4V-ExTWI7OCZ2uiEeOIsQQpW4vulaNbIBAHvW1Nu8iAlKF6z2_SsXXTp36nXC3YaVibFnEn78E4I1Dx2Cl4RPX_bsg" />
-    <title lang="en">Kris Roll No 21</title>
   </programme>
   <programme start="20261012001000 +0000" stop="20261012002000 +0000" channel="hmair.discoverykids">
     <category lang="en">TV Show</category>
@@ -561671,25 +561419,37 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012051700 +0530" stop="20261012053800 +0530" channel="hmair.zeebollywood">
-    <title>Fillers</title>
-    <desc>A comprehensive compilation of promotional videos and trailers of Bollywood movies featuring popular actors and actresses.</desc>
-    <category>Variety</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/86babb9a8e819dd6d8199230a77a7248.jpg?width=700" />
-    <rating>
-      <value>A</value>
-    </rating>
+  <programme start="20261011233500 +0000" stop="20261012022200 +0000" channel="hmair.zeebollywood">
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
+    <credits>
+      <director>Vicky Ranawat</director>
+      <actor>Ronit Roy</actor>
+      <actor>Tisca Chopra</actor>
+      <actor>Prem Chopra</actor>
+      <actor>Saeed Jaffrey</actor>
+      <actor>Shakti Kapoor</actor>
+      <actor>Kunika Sadanand</actor>
+      <actor>Girija Shankar</actor>
+      <producer>Ishitiyak Ahmed</producer>
+    </credits>
+    <desc lang="en">Nagpal kills Chaudhry and his son, Ram, a military officer. Chaudhry's second son, Vikram, vows to destroy Nagpal who is all set to become the Chief Minister on the upcoming Indian Independence Day.</desc>
+    <icon src="https://iptv-epg.org/images/c3d7Oq-dL41bQ_W7ARqXahoMZ9jfBuwXUeS-2d3mc47b3bOMGfp4NL1x9brG-PJN3E8iJTz0UmiE15trhxvhtDbTTgMPSYkVqAQ-IWMt-pwEwVytC3ixEjg4q3w" />
+    <title lang="en">15th August</title>
   </programme>
-  <programme channel="hmair.zeebollywood" start="20261012053800 +0530" stop="20261012075900 +0530">
-    <title lang="en">15Th August</title>
-    <desc lang="en">After killing Chaudhry and his son Ram, Nagpal eyes political power as Chief Minister, but Vikram, the surviving son, vows revenge and sets out to destroy him before Independence Day.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_ZEE_BOLLYWOOD_2081541_12OCT053800_12OCT075900/images/LANDSCAPE_169_HD/ZeeBollywood_15ThAugust_2081541.jpg" />
-  </programme>
-  <programme channel="hmair.zeebollywood" start="20261012075900 +0530" stop="20261012103800 +0530">
+  <programme channel="hmair.zeebollywood" start="20261012075200 +0530" stop="20261012104300 +0530">
     <title lang="en">King Uncle</title>
-    <desc lang="en">Industrialist Ashok Bansal's harsh ways push away his siblings. But when orphan girl Munna enters their lives, she slowly softens his tough heart and changes the family.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_ZEE_BOLLYWOOD_930340_12OCT075900_12OCT103800/images/LANDSCAPE_169_HD/ZeeBollywood_KingUncle_930340.jpg" />
+    <desc lang="en">Ashok, an austere man, experiences a profound shift in his life when an orphan girl enters his world, infusing it with warmth and meaning that he had long forgotten.</desc>
+    <credits>
+      <actor>Jackie Shroff</actor>
+      <actor>Shah Rukh Khan</actor>
+      <actor>Nagma</actor>
+      <actor>Anu Agrawal</actor>
+      <director>Rakesh Roshan</director>
+    </credits>
+    <category lang="en">Film</category>
+    <category lang="en">Comedy</category>
+    <icon src="https://dtil.tmsimg.com/assets/p63666_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="hmair.zeebollywood" start="20261012104300 +0530" stop="20261012133600 +0530">
     <title lang="en">Krishna</title>
@@ -570298,14 +570058,6 @@ A young woman's unexpected bond with a much older businessman brings emotional t
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme channel="skysportsmainevent.uk" start="20261011233000 +0000" stop="20261012001000 +0000">
-    <title lang="en">Live Football Night In America</title>
-    <desc lang="en">During week five of the season, the Football Night in America team preview Baltimore's trip to Atlanta and look back on a weekend of NFL action.</desc>
-    <category lang="en">Sports</category>
-    <category lang="en">American Football</category>
-    <icon src="https://images.metadata.sky.com/pd-image/72017230-0c00-4952-9c54-947199c1da95/16-9" />
-    <episode-num system="xmltv_ns">.7.</episode-num>
   </programme>
   <programme channel="skysportsmainevent.uk" start="20261012001000 +0000" stop="20261012034500 +0000">
     <title lang="en">Live NFL Ravens @ Falcons</title>
