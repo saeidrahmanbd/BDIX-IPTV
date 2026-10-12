@@ -50,6 +50,7 @@ jobs:
             fi
             # Candidate discovery is retired; maintain only the approved playlist structure.
             python scripts/migrate_external_logos_fixed.py
+            python scripts/generate_logo_authenticity_manifest.py
             python scripts/epg_coverage.py
             python scripts/generate_epg.py
             test -s epg/epg.xml
