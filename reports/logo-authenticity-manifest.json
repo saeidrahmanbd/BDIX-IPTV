@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-12T07:24:15.748Z",
+  "generated_at_utc": "2026-10-12T07:24:53.428Z",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -148,7 +148,7 @@
       "channel_name": "BTV News",
       "tvg_id": "custom.btv.news",
       "channel_id": "custom.btv.news",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-news.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-btv-news-33c61f1708.jpg",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -348,7 +348,7 @@
       "channel_name": "Green TV",
       "tvg_id": "GreenTV.bd",
       "channel_id": "GreenTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/green-tv.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-green-tv-fa848f9d71.jpg",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -3598,7 +3598,7 @@
       "channel_name": "Zee TV",
       "tvg_id": "ZeeTV.in@SD",
       "channel_id": "ZeeTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -5838,7 +5838,7 @@
       "channel_name": "Tom and Jerry",
       "tvg_id": "TomAndJerry.do",
       "channel_id": "TomAndJerry.do",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tom-and-jerry.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-tom-and-jerry-927bd66719.jpg",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -8688,7 +8688,7 @@
       "channel_name": "Green TV",
       "tvg_id": "GreenTV.bd",
       "channel_id": "GreenTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/green-tv.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-green-tv-fa848f9d71.jpg",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -8698,7 +8698,7 @@
       "channel_name": "Green TV",
       "tvg_id": "GreenTV.bd",
       "channel_id": "GreenTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/green-tv.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-green-tv-fa848f9d71.jpg",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -8708,7 +8708,7 @@
       "channel_name": "Green TV",
       "tvg_id": "GreenTV.bd",
       "channel_id": "GreenTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/green-tv.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-green-tv-fa848f9d71.jpg",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -11368,7 +11368,7 @@
       "channel_name": "Zee TV",
       "tvg_id": "ZeeTV.in@SD",
       "channel_id": "ZeeTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -11378,7 +11378,7 @@
       "channel_name": "Zee TV",
       "tvg_id": "ZeeTV.in@SD",
       "channel_id": "ZeeTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -11388,7 +11388,7 @@
       "channel_name": "Zee TV",
       "tvg_id": "ZeeTV.in@SD",
       "channel_id": "ZeeTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -11398,7 +11398,7 @@
       "channel_name": "Zee TV",
       "tvg_id": "ZeeTV.in@SD",
       "channel_id": "ZeeTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -11408,7 +11408,7 @@
       "channel_name": "Zee TV",
       "tvg_id": "ZeeTV.in@SD",
       "channel_id": "ZeeTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -11418,7 +11418,7 @@
       "channel_name": "Zee TV",
       "tvg_id": "ZeeTV.in@SD",
       "channel_id": "ZeeTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-zee-tv-2fb6673cf7.svg",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -12948,10 +12948,10 @@
       "channel_name": "EPL channel 1",
       "tvg_id": "hmair.eplchannel1",
       "channel_id": "hmair.eplchannel1",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-epl-channel-1-52ac4c81.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "BDIX-Playlist.m3u",
@@ -14278,10 +14278,10 @@
       "channel_name": "Sine Plus",
       "tvg_id": "custom.sine.plus",
       "channel_id": "custom.sine.plus",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-sine-plus-a3f56638.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -14568,10 +14568,10 @@
       "channel_name": "10 TV",
       "tvg_id": "custom.10.tv",
       "channel_id": "custom.10.tv",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-10-tv-096e02b1.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -14728,10 +14728,10 @@
       "channel_name": "Global Panjab",
       "tvg_id": "custom.global.panjab",
       "channel_id": "custom.global.panjab",
-      "logo": "",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "Logo is missing."
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-global-panjab-ce10594c3e.png",
+      "status": "third_party_verified",
+      "source_url": "https://apps.apple.com/ca/app/global-punjab-tv/id1408487692",
+      "reason": "Image visually inspected: the exact GLOBAL PUNJAB wordmark is present without a visible watermark. Asset matches the app artwork listed for Global Punjab TV in the App Store; source is the app listing, not a broadcaster media-kit file."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15058,10 +15058,10 @@
       "channel_name": "Asia Flix TV",
       "tvg_id": "custom.asia.flix.tv",
       "channel_id": "custom.asia.flix.tv",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-asia-flix-tv-0725f354.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15118,10 +15118,10 @@
       "channel_name": "Blockbaster HD",
       "tvg_id": "custom.blockbaster",
       "channel_id": "custom.blockbaster",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-blockbaster-8b0f532d.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15208,10 +15208,10 @@
       "channel_name": "Digital Fashion",
       "tvg_id": "custom.digital.fashion",
       "channel_id": "custom.digital.fashion",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-digital-fashion-7f86a23d.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15258,10 +15258,10 @@
       "channel_name": "Fashion 1",
       "tvg_id": "custom.fashion.1",
       "channel_id": "custom.fashion.1",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-fashion-1-85fe46a6.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15528,10 +15528,10 @@
       "channel_name": "Star Cinema",
       "tvg_id": "custom.star.cinema",
       "channel_id": "custom.star.cinema",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-star-cinema-cdb7c42d.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15618,20 +15618,20 @@
       "channel_name": "Whiples Cinema",
       "tvg_id": "custom.whiples.cinema",
       "channel_id": "custom.whiples.cinema",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-whiples-cinema-d2c304b5.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
       "channel_name": "Xrema Accion",
       "tvg_id": "custom.xrema.accion",
       "channel_id": "custom.xrema.accion",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-xrema-accion-60d30535.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15658,10 +15658,10 @@
       "channel_name": "Adventure 4k",
       "tvg_id": "custom.adventure",
       "channel_id": "custom.adventure",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-adventure-216a45b8.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -15988,10 +15988,10 @@
       "channel_name": "Banijoy Mr Been",
       "tvg_id": "custom.banijoy.mr.been",
       "channel_id": "custom.banijoy.mr.been",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-banijoy-mr-been-9f824eca.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -16028,10 +16028,10 @@
       "channel_name": "Cartoon Channel",
       "tvg_id": "custom.cartoon.channel",
       "channel_id": "custom.cartoon.channel",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-cartoon-channel-e082583d.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -16258,20 +16258,20 @@
       "channel_name": "Tom & Jerry 24/7",
       "tvg_id": "custom.tom.and.jerry.24.7",
       "channel_id": "custom.tom.and.jerry.24.7",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-tom-and-jerry-24-7-d133a72e.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
       "channel_name": "Tom & Jerry TV",
       "tvg_id": "custom.tom.and.jerry.tv",
       "channel_id": "custom.tom.and.jerry.tv",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-tom-and-jerry-tv-6dcfd0fa.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -16518,10 +16518,10 @@
       "channel_name": "beIN Sports Turkiye",
       "tvg_id": "custom.bein.sports.turkiye",
       "channel_id": "custom.bein.sports.turkiye",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-bein-sports-turkiye-151340f2.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -16648,10 +16648,10 @@
       "channel_name": "Espn5 HD",
       "tvg_id": "custom.espn5",
       "channel_id": "custom.espn5",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-espn5-2e7e33ee.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -16668,10 +16668,10 @@
       "channel_name": "Fight 24/7",
       "tvg_id": "custom.fight.24.7",
       "channel_id": "custom.fight.24.7",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-fight-24-7-74714466.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -16748,10 +16748,10 @@
       "channel_name": "Htv Sport",
       "tvg_id": "custom.htv.sport",
       "channel_id": "custom.htv.sport",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-htv-sport-50f30a8c.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -16898,10 +16898,10 @@
       "channel_name": "Kiev Sport HD",
       "tvg_id": "custom.kiev.sport",
       "channel_id": "custom.kiev.sport",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-kiev-sport-f64c4a32.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17168,20 +17168,20 @@
       "channel_name": "Sport 1 HD",
       "tvg_id": "custom.sport.1",
       "channel_id": "custom.sport.1",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-sport-1-cbb0399a.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
       "channel_name": "Sport 2 HD",
       "tvg_id": "custom.sport.2",
       "channel_id": "custom.sport.2",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-sport-2-7bf5b3e6.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17628,10 +17628,10 @@
       "channel_name": "Bangla Hits",
       "tvg_id": "custom.bangla.hits",
       "channel_id": "custom.bangla.hits",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-bangla-hits-4938e078.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17668,10 +17668,10 @@
       "channel_name": "Doyel Radio",
       "tvg_id": "custom.doyel.radio",
       "channel_id": "custom.doyel.radio",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-doyel-radio-793a1b6a.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17698,20 +17698,20 @@
       "channel_name": "Magical Blade FM",
       "tvg_id": "custom.magical.blade.fm",
       "channel_id": "custom.magical.blade.fm",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-magical-blade-fm-7b0306b2.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
       "channel_name": "Moner Radio",
       "tvg_id": "custom.moner.radio",
       "channel_id": "custom.moner.radio",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-moner-radio-0a256b05.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17838,10 +17838,10 @@
       "channel_name": "Radio Janata",
       "tvg_id": "custom.radio.janata",
       "channel_id": "custom.radio.janata",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-radio-janata-650a3885.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17868,10 +17868,10 @@
       "channel_name": "Radio Ritmo On Line",
       "tvg_id": "custom.radio.ritmo.on.line",
       "channel_id": "custom.radio.ritmo.on.line",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-radio-ritmo-on-line-4ab3f25b.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17928,10 +17928,10 @@
       "channel_name": "Radio Zenith FM",
       "tvg_id": "custom.radio.zenith.fm",
       "channel_id": "custom.radio.zenith.fm",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-radio-zenith-fm-5fa703a7.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -17948,10 +17948,10 @@
       "channel_name": "Sagor FM",
       "tvg_id": "custom.sagor.fm",
       "channel_id": "custom.sagor.fm",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-sagor-fm-1171c6c1.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
@@ -18008,20 +18008,20 @@
       "channel_name": "Wc Music",
       "tvg_id": "custom.wc.music",
       "channel_id": "custom.wc.music",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-wc-music-7768e9fe.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
       "channel_name": "Wifm 100.9",
       "tvg_id": "custom.wifm.100.9",
       "channel_id": "custom.wifm.100.9",
-      "logo": "",
-      "status": "needs_review",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-wifm-100-9-d08be206.svg",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "Logo is missing."
+      "reason": "Original generated artwork labelled UNOFFICIAL FALLBACK ART; channel-specific fallback artwork, not an official broadcaster logo."
     },
     {
       "playlist": "NVisionBD-Playlist.m3u",
