@@ -39,3 +39,22 @@ These are research leads only. Do not treat a remaining repository asset as auth
 ## Remaining work
 
 The other 326 referenced entries have not all been authenticated image-by-image. Continue checking actual image contents, comparing against exact official/attributable source assets, and removing references to contaminated or mismatched images without deleting playlist entries or stream URLs.
+
+
+## Follow-up visual spot-check (2026-10-12)
+
+A visual spot-check of repository assets found these additional issues:
+
+- `logos/atn-news.png` included a third-party “BONGO FLIX” overlay in the ATN News mark. Its playlist logo reference was removed; the channel/stream entry was preserved.
+- The file named `logos/arirang-tv.png` visually displays the KBS WORLD wordmark, not Arirang TV. This is a filename/content mismatch. The active Arirang playlist entry currently points to `logos/unused/arirang-cd34632359.png`, so that alternate file must be separately verified before restoring any logo.
+- `logos/a-sports-5485adff.png` contains a phone number embedded in the artwork. This is not a clean broadcaster logo; no official replacement was installed because the exact official image bytes could not be retrieved and committed through this text-only GitHub file interface.
+
+### Live playlist snapshot after this pass
+
+- Entries: **561**
+- Entries carrying a logo: **325**
+- Entries without a logo: **236**
+- Distinct local logo assets referenced: **227**
+- All entries and stream URLs were preserved during logo-reference cleanup.
+
+**Completion status:** this is not a completed image-by-image authentication of every referenced file. The 227 remaining distinct assets have not each been compared against a broadcaster-owned original. The available GitHub file-writing action accepts UTF-8 text, not binary image uploads, so I cannot honestly claim to have replaced raster mismatches with exact official image bytes in this pass. Continue by authenticating each asset and only installing a replacement when the actual official image file can be transferred intact; otherwise remove that logo reference pending verification.
