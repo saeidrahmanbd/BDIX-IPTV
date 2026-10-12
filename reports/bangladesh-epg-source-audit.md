@@ -1,7 +1,7 @@
 # Bangladesh EPG Source Audit
 
 Checked: **2026-10-11**
-Scope: public XMLTV feeds and channel-ID catalogues for the Bangladesh-group channels in IPTV-Playlist.m3u, BDIX-Playlist.m3u, and NVisionBD-Playlist.m3u.
+Scope: public XMLTV feeds and channel-ID catalogues for the Bangladesh-group channels in IPTV-Playlist.m3u and BDIX-Playlist.m3u.
 
 ## Result
 
