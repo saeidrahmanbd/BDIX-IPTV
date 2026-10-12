@@ -150,6 +150,20 @@ EXTRA_DIRECT_HINTS = {
         "license": "Station logo served by Zeno",
         "license_url": "",
     },
+    "In Sony Sports Ten 3 HD": {
+        "url": "https://www.sonypicturesnetworks.com/images/logos/Sony_Sports_Ten_3_Hindi_HD.png",
+        "format": "PNG",
+        "page": "https://www.sonypicturesnetworks.com/channels",
+        "license": "Sony Pictures Networks India official channel logo; broadcaster retains rights",
+        "license_url": "https://www.sonypicturesnetworks.com/",
+    },
+    "Sony Sports Ten 3 HD": {
+        "url": "https://www.sonypicturesnetworks.com/images/logos/Sony_Sports_Ten_3_Hindi_HD.png",
+        "format": "PNG",
+        "page": "https://www.sonypicturesnetworks.com/channels",
+        "license": "Sony Pictures Networks India official channel logo; broadcaster retains rights",
+        "license_url": "https://www.sonypicturesnetworks.com/",
+    },
     "beIN Sports Arabic HD": {
         "url": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/world-middle-east/bein-sports/bein-sports-arabic-mea.png",
         "format": "PNG",
