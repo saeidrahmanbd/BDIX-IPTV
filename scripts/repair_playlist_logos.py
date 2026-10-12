@@ -80,6 +80,13 @@ LOCAL_OVERRIDES = {
 # only consulted after the repository-wide local logo search. Keep them here
 # so all playlist variants reuse the same locally stored image.
 EXTRA_DIRECT_HINTS = {
+    "Nick Bangla": {
+        "url": "https://otapp.store/uploads/tv_image/sm/nick-bangla.png",
+        "format": "PNG",
+        "page": "https://github.com/channeliptv0/IPTV/blob/f26247efa6b641fda8d6bb16f01f99f4948d8a3b/Master/Bangla.m3u",
+        "license": "Channel-specific logo URL found in a public IPTV logo listing; original logo rights belong to broadcaster",
+        "license_url": "",
+    },
     "Alistiqamah": {
         "url": "https://i.imgur.com/2FPtYZr.png",
         "format": "PNG",
