@@ -1,25 +1,25 @@
 # Update Report
 
-_Last generated: **2026-10-12 10:43 UTC**_
+_Last generated: **2026-10-12 11:00 UTC**_
 
 | Metric | Current |
 |---|---:|
 | Streams | **1018** |
 | Active Channel Identities | **624** |
 | Active Primary Streams | **625** |
-| Bangladesh | **57** |
+| Bangladesh | **58** |
 | India | **283** |
 | Backup Streams | **393** |
 | Local Logos | **100.0%** |
-| EPG Programme Coverage | **80.1%** |
-| EPG Mapping | **83.3%** |
+| EPG Programme Coverage | **80.4%** |
+| EPG Mapping | **83.5%** |
 | Stream Health Tested | **1018** |
-| Stream Health Failures | **134** |
-| Persistent Failures | **125** |
+| Stream Health Failures | **149** |
+| Persistent Failures | **124** |
 | Near-Duplicate URL Families | **0** |
 | Audit Blocking Issues | **1** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-12T10:43:48+00:00** |
+| Pre-Publish Gate Generated | **2026-10-12T11:00:57+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -42,23 +42,23 @@ _Last generated: **2026-10-12 10:43 UTC**_
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## EPG
-- Indian channels audited: **287**
-- Mapped: **239 (83.3%)**
-- Current/future programme coverage: **230/287 (80.1%)**
+- Indian channels audited: **291**
+- Mapped: **243 (83.5%)**
+- Current/future programme coverage: **234/291 (80.4%)**
 - No mapping: **48**
 - Publication remains subject to source-policy approval.
 
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-12T10:42:29.298563+00:00** |
-| EPG coverage | **2026-10-12T10:42:24+00:00** |
-| Stream health | **2026-10-12T10:43:48+00:00** |
-| Pre-publish gate | **2026-10-12T10:43:48+00:00** |
+| Playlist audit | **2026-10-12T10:59:30.109575+00:00** |
+| EPG coverage | **2026-10-12T10:59:26+00:00** |
+| Stream health | **2026-10-12T11:00:57+00:00** |
+| Pre-publish gate | **2026-10-12T11:00:57+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
-- Latest entries change: **1013 → 1018**
-- Latest health failures: **134 → 134**
+- Latest entries change: **1018 → 1018**
+- Latest health failures: **134 → 149**
 
 Historical records are retained in reports/maintenance-history.json.

@@ -1,15 +1,15 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-12T10:42:24+00:00**
+Generated: **2026-10-12T10:59:26+00:00**
 
 The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.
 The published XMLTV guide is **epg.xml**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.
 
 ## Coverage Summary
 
-- Active Indian channels audited: **287**
-- Channels with an EPG mapping: **239**
-- Current/future programme coverage: **230/287 (80.1%)**
+- Active Indian channels audited: **291**
+- Channels with an EPG mapping: **243**
+- Current/future programme coverage: **234/291 (80.4%)**
 - No guide mapping found: **48**
 
 ## Source Status
@@ -33,7 +33,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz — 486 channel IDs; 385 current/future IDs; 41897 programme rows
 - **OK** — https://www.open-epg.com/files/unitedkingdom.xml.gz — 562 channel IDs; 536 current/future IDs; 32648 programme rows
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz — 769 channel IDs; 753 current/future IDs; 79959 programme rows
-- **OK** — https://iptv-epg.org/files/epg-us.xml.gz — 12994 channel IDs; 12864 current/future IDs; 1171731 programme rows
+- **OK** — https://iptv-epg.org/files/epg-us.xml.gz — 12994 channel IDs; 12861 current/future IDs; 1171731 programme rows
 
 ## Channels Requiring Attention
 
@@ -49,8 +49,8 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Entertainment | Suriyan TV | SuriyanTV.in@SD | ts1384 | MAPPED_ID_ONLY |
 | Indian Entertainment | Odisha TV | OdishaTV.in@SD | OdishaTV.in | MAPPED_NOT_CURRENTLY_FOUND |
 | Indian Music | 7X Punjabi | custom.7x.punjabi | - | NO_GUIDE_HIT |
-| Indian Music | ATN Music | ATNMusic.bd | - | NO_GUIDE_HIT |
 | Indian Bangla | Amar Bangla Digital | custom.amar.bangla.digital | - | NO_GUIDE_HIT |
+| Indian Entertainment | Baiscope TV | custom.baiscope.tv | - | NO_GUIDE_HIT |
 | Indian Bangla | Bangla Plus | BanglaPlus.in | - | NO_GUIDE_HIT |
 | Indian Movies | Bollywood Film | BollywoodFilm.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | C Malayalam TV | CMalayalamTV.ca@SD | - | NO_GUIDE_HIT |
@@ -69,7 +69,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Bangla | Jhankar TV | JhankarTV.ca | - | NO_GUIDE_HIT |
 | Indian Bangla | Jtv Classic | custom.jtv.classic | - | NO_GUIDE_HIT |
 | Indian Entertainment | Kairali Arabia | KairaliArabia.in | - | NO_GUIDE_HIT |
-| Indian Music | Kalika TV | KalikaTV.in@SD | - | NO_GUIDE_HIT |
+| Indian Entertainment | Kalika TV | KalikaTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Kerala Vision | KeralaVision.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | MBC Bollywood | MBCBollywood.ae | - | NO_GUIDE_HIT |
 | Indian Movies | MH One Movies | MHOneMovies.in | - | NO_GUIDE_HIT |
@@ -78,7 +78,7 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 | Indian Movies | Mango | Mango.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Mei Alai TV | MeiAlaiTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | NKR TV Kannada | NKRTVKannada.in | - | NO_GUIDE_HIT |
-| Indian Movies | NTV (Malyalam) | custom.ntv.malayalam | - | NO_GUIDE_HIT |
+| Indian Entertainment | NTV (Malyalam) | custom.ntv.malayalam | - | NO_GUIDE_HIT |
 | Indian Entertainment | Oli TV | OliTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Bangla | Orange Bangla TV | OrangeBanglaTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Pulari TV | PulariTV.in@SD | - | NO_GUIDE_HIT |
@@ -100,9 +100,9 @@ The published XMLTV guide is **epg.xml**, generated from this same mapping and r
 ## Published Guide Validation
 
 - Playlist EPG references: **OK**
-- Guide channel IDs published: **373**
-- Mapped playlist IDs present in guide: **373/373 (100.0%)**
-- Mapped playlist IDs with current/future programmes: **338/373 (90.6%)**
+- Guide channel IDs published: **372**
+- Mapped playlist IDs present in guide: **372/372 (100.0%)**
+- Mapped playlist IDs with current/future programmes: **337/372 (90.6%)**
 - Mapped IDs missing from the published XMLTV channel list: **0**
 - IDs missing from guide: none
 - Mapped IDs with no current/future programmes: **35**

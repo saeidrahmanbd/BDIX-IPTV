@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12T10:42:29+00:00",
+  "generated": "2026-10-12T10:59:30+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -530,7 +530,7 @@
         "atnmusic.bd"
       ],
       "groups": [
-        "Indian Music"
+        "Bangladesh"
       ],
       "streams": 1,
       "primary": 1,
@@ -1096,7 +1096,7 @@
       ],
       "groups": [
         "Backup",
-        "Religious"
+        "Bangladesh"
       ],
       "streams": 5,
       "primary": 1,
@@ -1511,7 +1511,7 @@
         "custom.baiscope.tv"
       ],
       "groups": [
-        "Bangladesh"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -1892,7 +1892,7 @@
         "custom.enter10.bangla"
       ],
       "groups": [
-        "Indian Entertainment"
+        "Indian Bangla"
       ],
       "streams": 1,
       "primary": 1,
@@ -2230,7 +2230,7 @@
         "custom.ntv.malayalam"
       ],
       "groups": [
-        "Indian Movies"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -4631,7 +4631,7 @@
         "kalikatv.in@sd"
       ],
       "groups": [
-        "Indian Music"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,
@@ -7570,7 +7570,7 @@
         "spondon.in@sd"
       ],
       "groups": [
-        "Indian Music"
+        "Indian Entertainment"
       ],
       "streams": 1,
       "primary": 1,

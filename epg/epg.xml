@@ -93,9 +93,6 @@
   <channel id="CartoonNetwork.uk">
     <display-name>Cartoon Network</display-name>
   </channel>
-  <channel id="ChannelS.uk">
-    <display-name>Channel S</display-name>
-  </channel>
   <channel id="Chithiram.in@SD">
     <display-name>Chithiram</display-name>
   </channel>
@@ -28152,13 +28149,6 @@ Le'ts celebrate Baby Shark Month by singing along with a baby shark!</desc>
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p29943258_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="CartoonNetwork.uk" start="20261012100000 +0530" stop="20261012102000 +0530">
-    <title lang="en">Larva</title>
-    <desc lang="en">Two curious little worms explore the objects that they daily come across in their world which is located under the ground.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p16979308_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="CartoonNetwork.uk" start="20261012102000 +0530" stop="20261012103000 +0530">
     <title lang="en">Larva</title>
     <desc lang="en">Two curious little worms explore the objects that they daily come across in their world which is located under the ground.</desc>
@@ -29569,707 +29559,6 @@ Le'ts celebrate Baby Shark Month by singing along with a baby shark!</desc>
     <icon src="https://iptv-epg.org/images/UUgl4tO52PsE3i2hfLlfLD9J32PU53W-tTph5fp7tKEg3wRkBR9F8Pys-OUjqme_64P6pYA8BNqkSJixqNUT2IdbzSRNTbxjVWYS3uj1HcffwGH5DzLE43Rs8DlX" />
     <title lang="en">Bionic Max</title>
   </programme>
-  <programme channel="ChannelS.uk" start="20261012140000 +0000" stop="20261012143000 +0000">
-    <title lang="en">Community Show</title>
-    <date>1999</date>
-    <category lang="en">Public affairs</category>
-    <icon src="http://dtil.tmsimg.com/assets/p632084_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261012143000 +0000" stop="20261012150000 +0000">
-    <title lang="en">The Best of Movie's Songs</title>
-    <date>2017</date>
-    <category lang="en">Music</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14674653_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261012160000 +0000" stop="20261012163000 +0000">
-    <title lang="en">News</title>
-    <desc lang="en">The host presents the latest social, economic and political news, updates and developments from around the world.</desc>
-    <date>2000</date>
-    <category lang="en">News</category>
-    <icon src="http://dtil.tmsimg.com/assets/p825063_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261012163000 +0000" stop="20261012170000 +0000">
-    <title lang="en">The Golden Moment Of Vietnamese Music</title>
-    <date>2017</date>
-    <category lang="en">Music</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14674392_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261012180000 +0000" stop="20261012183000 +0000">
-    <title lang="en">Paid Programming</title>
-    <desc lang="en">Paid programming.</desc>
-    <category lang="en">Consumer</category>
-    <category lang="en">Shopping</category>
-    <category lang="en">Variety</category>
-    <icon src="http://dtil.tmsimg.com/assets/p459763_b_h8_bq.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>A</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-  </programme>
-  <programme channel="ChannelS.uk" start="20261012183000 +0000" stop="20261012190000 +0000">
-    <title lang="en">The Entertaiment Show</title>
-    <date>2017</date>
-    <category lang="en">Variety</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14675033_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261012190000 +0000" stop="20261012193000 +0000">
-    <title lang="en">Talent Shows</title>
-    <date>2017</date>
-    <category lang="en">Variety</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14675004_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261012193000 +0000" stop="20261012200000 +0000">
-    <title lang="en">Talent Shows</title>
-    <date>2017</date>
-    <category lang="en">Variety</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14675004_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261012200000 +0000" stop="20261012203000 +0000">
-    <title lang="en">Afternoon News</title>
-    <desc lang="en">Stay informed with the latest breaking news and headlines.</desc>
-    <date>2014</date>
-    <category lang="en">News</category>
-    <icon src="http://dtil.tmsimg.com/assets/p10547607_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261012203000 +0000" stop="20261012210000 +0000">
-    <title lang="en">Z Talk</title>
-    <date>2017</date>
-    <category lang="en">Community</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14459416_b_h10_ac.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261012210000 +0000" stop="20261012213000 +0000">
-    <title lang="en">Z Talk</title>
-    <date>2017</date>
-    <category lang="en">Community</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14459416_b_h10_ac.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261012213000 +0000" stop="20261012220000 +0000">
-    <title lang="en">Z Talk</title>
-    <date>2017</date>
-    <category lang="en">Community</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14459416_b_h10_ac.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261012220000 +0000" stop="20261012223000 +0000">
-    <title lang="en">Paid Programming</title>
-    <desc lang="en">Paid programming.</desc>
-    <category lang="en">Consumer</category>
-    <category lang="en">Shopping</category>
-    <category lang="en">Variety</category>
-    <icon src="http://dtil.tmsimg.com/assets/p459763_b_h8_bq.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>A</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-  </programme>
-  <programme channel="ChannelS.uk" start="20261012223000 +0000" stop="20261012230000 +0000">
-    <title lang="en">Children Program</title>
-    <date>2015</date>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="http://dtil.tmsimg.com/assets/p11815050_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013000000 +0000" stop="20261013003000 +0000">
-    <title lang="en">Paid Programming</title>
-    <desc lang="en">Paid programming.</desc>
-    <category lang="en">Consumer</category>
-    <category lang="en">Shopping</category>
-    <category lang="en">Variety</category>
-    <icon src="http://dtil.tmsimg.com/assets/p459763_b_h8_bq.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>A</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013003000 +0000" stop="20261013010000 +0000">
-    <title lang="en">Comedy Show</title>
-    <date>2012</date>
-    <category lang="en">Comedy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p9514636_st_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013020000 +0000" stop="20261013023000 +0000">
-    <title lang="en">K-Show</title>
-    <date>2017</date>
-    <category lang="en">Community</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13675607_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013023000 +0000" stop="20261013030000 +0000">
-    <title lang="en">Community Show</title>
-    <date>1999</date>
-    <category lang="en">Public affairs</category>
-    <icon src="http://dtil.tmsimg.com/assets/p632084_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013030000 +0000" stop="20261013033000 +0000">
-    <title lang="en">Evening News</title>
-    <desc lang="en">Entertainment programming.</desc>
-    <date>2016</date>
-    <category lang="en">News</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13443706_b_h10_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013033000 +0000" stop="20261013040000 +0000">
-    <title lang="en">Game Show</title>
-    <date>2014</date>
-    <category lang="en">Game show</category>
-    <icon src="http://dtil.tmsimg.com/assets/p11295505_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013040000 +0000" stop="20261013043000 +0000">
-    <title lang="en">Game Show</title>
-    <date>2014</date>
-    <category lang="en">Game show</category>
-    <icon src="http://dtil.tmsimg.com/assets/p11295505_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013053000 +0000" stop="20261013060000 +0000">
-    <title lang="en">News</title>
-    <desc lang="en">The host presents the latest social, economic and political news, updates and developments from around the world.</desc>
-    <date>2000</date>
-    <category lang="en">News</category>
-    <icon src="http://dtil.tmsimg.com/assets/p825063_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013060000 +0000" stop="20261013063000 +0000">
-    <title lang="en">Show the Tourist 24H</title>
-    <date>2017</date>
-    <category lang="en">Community</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14675091_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013063000 +0000" stop="20261013130000 +0000">
-    <title lang="en">Sitcom</title>
-    <date>2001</date>
-    <category lang="en">Comedy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p906460_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013140000 +0000" stop="20261013143000 +0000">
-    <title lang="en">Show Traditional story of Vietnam</title>
-    <date>2017</date>
-    <category lang="en">Community</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14675097_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013160000 +0000" stop="20261013163000 +0000">
-    <title lang="en">News</title>
-    <desc lang="en">The host presents the latest social, economic and political news, updates and developments from around the world.</desc>
-    <date>2000</date>
-    <category lang="en">News</category>
-    <icon src="http://dtil.tmsimg.com/assets/p825063_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013163000 +0000" stop="20261013170000 +0000">
-    <title lang="en">Music Show the Melodies</title>
-    <date>2017</date>
-    <category lang="en">Music</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14675084_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013180000 +0000" stop="20261013183000 +0000">
-    <title lang="en">The Music Show</title>
-    <date>2014</date>
-    <category lang="en">Music</category>
-    <icon src="http://dtil.tmsimg.com/assets/p10792296_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013183000 +0000" stop="20261013190000 +0000">
-    <title lang="en">The Music Show</title>
-    <date>2014</date>
-    <category lang="en">Music</category>
-    <icon src="http://dtil.tmsimg.com/assets/p10792296_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013190000 +0000" stop="20261013193000 +0000">
-    <title lang="en">Show the Variety of Life</title>
-    <date>2017</date>
-    <category lang="en">Variety</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14675090_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013193000 +0000" stop="20261013200000 +0000">
-    <title lang="en">Gameshow One Million per Minute</title>
-    <date>2017</date>
-    <category lang="en">Game show</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14675076_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013200000 +0000" stop="20261013203000 +0000">
-    <title lang="en">Afternoon News</title>
-    <desc lang="en">Stay informed with the latest breaking news and headlines.</desc>
-    <date>2014</date>
-    <category lang="en">News</category>
-    <icon src="http://dtil.tmsimg.com/assets/p10547607_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013203000 +0000" stop="20261013210000 +0000">
-    <title lang="en">Cooking Show</title>
-    <date>2014</date>
-    <category lang="en">Cooking</category>
-    <icon src="http://dtil.tmsimg.com/assets/p10846143_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013210000 +0000" stop="20261013213000 +0000">
-    <title lang="en">Happy Friday Show</title>
-    <date>2017</date>
-    <category lang="en">Community</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14675106_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013213000 +0000" stop="20261013220000 +0000">
-    <title lang="en">Happy Friday Show</title>
-    <date>2017</date>
-    <category lang="en">Community</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14675106_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013220000 +0000" stop="20261013223000 +0000">
-    <title lang="en">Paid Programming</title>
-    <desc lang="en">Paid programming.</desc>
-    <category lang="en">Consumer</category>
-    <category lang="en">Shopping</category>
-    <category lang="en">Variety</category>
-    <icon src="http://dtil.tmsimg.com/assets/p459763_b_h8_bq.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>A</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-  </programme>
-  <programme channel="ChannelS.uk" start="20261013223000 +0000" stop="20261013230000 +0000">
-    <title lang="en">Children Program</title>
-    <date>2015</date>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="http://dtil.tmsimg.com/assets/p11815050_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014000000 +0000" stop="20261014003000 +0000">
-    <title lang="en">Fahion Show</title>
-    <date>2017</date>
-    <category lang="en">Fashion</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14675123_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014003000 +0000" stop="20261014010000 +0000">
-    <title lang="en">Show the Tourist 24H</title>
-    <date>2017</date>
-    <category lang="en">Community</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14675091_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014020000 +0000" stop="20261014023000 +0000">
-    <title lang="en">Gameshow the Challenge for Celebrities</title>
-    <date>2017</date>
-    <category lang="en">Game show</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14674824_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014023000 +0000" stop="20261014030000 +0000">
-    <title lang="en">Paid Programming</title>
-    <desc lang="en">Paid programming.</desc>
-    <category lang="en">Consumer</category>
-    <category lang="en">Shopping</category>
-    <category lang="en">Variety</category>
-    <icon src="http://dtil.tmsimg.com/assets/p459763_b_h8_bq.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>A</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014030000 +0000" stop="20261014033000 +0000">
-    <title lang="en">Evening News</title>
-    <desc lang="en">Entertainment programming.</desc>
-    <date>2016</date>
-    <category lang="en">News</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13443706_b_h10_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014033000 +0000" stop="20261014040000 +0000">
-    <title lang="en">Tonight With Viet Thao</title>
-    <desc lang="en">Features interviews with artists, singers and celebrities, showcasing stories and musical performances.</desc>
-    <date>2017</date>
-    <category lang="en">Talk</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14675043_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014040000 +0000" stop="20261014043000 +0000">
-    <title lang="en">Tonight With Viet Thao</title>
-    <desc lang="en">Features interviews with artists, singers and celebrities, showcasing stories and musical performances.</desc>
-    <date>2017</date>
-    <category lang="en">Talk</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14675043_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014053000 +0000" stop="20261014060000 +0000">
-    <title lang="en">News</title>
-    <desc lang="en">The host presents the latest social, economic and political news, updates and developments from around the world.</desc>
-    <date>2000</date>
-    <category lang="en">News</category>
-    <icon src="http://dtil.tmsimg.com/assets/p825063_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014060000 +0000" stop="20261014063000 +0000">
-    <title lang="en">Documentary</title>
-    <date>2016</date>
-    <category lang="en">Documentary</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13043530_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014063000 +0000" stop="20261014130000 +0000">
-    <title lang="en">Travel Show</title>
-    <date>2011</date>
-    <category lang="en">Travel</category>
-    <icon src="http://dtil.tmsimg.com/assets/p8987469_st_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014140000 +0000" stop="20261014143000 +0000">
-    <title lang="en">The Golden Moment Of Vietnamese Music</title>
-    <date>2017</date>
-    <category lang="en">Music</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14674392_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014143000 +0000" stop="20261014150000 +0000">
-    <title lang="en">Travel Show</title>
-    <date>2011</date>
-    <category lang="en">Travel</category>
-    <icon src="http://dtil.tmsimg.com/assets/p8987469_st_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014160000 +0000" stop="20261014163000 +0000">
-    <title lang="en">News</title>
-    <desc lang="en">The host presents the latest social, economic and political news, updates and developments from around the world.</desc>
-    <date>2000</date>
-    <category lang="en">News</category>
-    <icon src="http://dtil.tmsimg.com/assets/p825063_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014163000 +0000" stop="20261014170000 +0000">
-    <title lang="en">Gameshow The men Talk</title>
-    <date>2017</date>
-    <category lang="en">Game show</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14674633_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014180000 +0000" stop="20261014183000 +0000">
-    <title lang="en">Community Show</title>
-    <date>1999</date>
-    <category lang="en">Public affairs</category>
-    <icon src="http://dtil.tmsimg.com/assets/p632084_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014183000 +0000" stop="20261014190000 +0000">
-    <title lang="en">The Best of Movie's Songs</title>
-    <date>2017</date>
-    <category lang="en">Music</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14674653_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014190000 +0000" stop="20261014193000 +0000">
-    <title lang="en">Paid Programming</title>
-    <desc lang="en">Paid programming.</desc>
-    <category lang="en">Consumer</category>
-    <category lang="en">Shopping</category>
-    <category lang="en">Variety</category>
-    <icon src="http://dtil.tmsimg.com/assets/p459763_b_h8_bq.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>A</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014193000 +0000" stop="20261014200000 +0000">
-    <title lang="en">Sitcom</title>
-    <date>2001</date>
-    <category lang="en">Comedy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p906460_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014200000 +0000" stop="20261014203000 +0000">
-    <title lang="en">Afternoon News</title>
-    <desc lang="en">Stay informed with the latest breaking news and headlines.</desc>
-    <date>2014</date>
-    <category lang="en">News</category>
-    <icon src="http://dtil.tmsimg.com/assets/p10547607_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014203000 +0000" stop="20261014210000 +0000">
-    <title lang="en">K-Show</title>
-    <date>2017</date>
-    <category lang="en">Community</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13675607_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014210000 +0000" stop="20261014213000 +0000">
-    <title lang="en">Game Show</title>
-    <date>2014</date>
-    <category lang="en">Game show</category>
-    <icon src="http://dtil.tmsimg.com/assets/p11295505_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014213000 +0000" stop="20261014220000 +0000">
-    <title lang="en">Game Show</title>
-    <date>2014</date>
-    <category lang="en">Game show</category>
-    <icon src="http://dtil.tmsimg.com/assets/p11295505_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014220000 +0000" stop="20261014223000 +0000">
-    <title lang="en">Paid Programming</title>
-    <desc lang="en">Paid programming.</desc>
-    <category lang="en">Consumer</category>
-    <category lang="en">Shopping</category>
-    <category lang="en">Variety</category>
-    <icon src="http://dtil.tmsimg.com/assets/p459763_b_h8_bq.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>A</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-  </programme>
-  <programme channel="ChannelS.uk" start="20261014223000 +0000" stop="20261014230000 +0000">
-    <title lang="en">Children Program</title>
-    <date>2015</date>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="http://dtil.tmsimg.com/assets/p11815050_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261015000000 +0000" stop="20261015003000 +0000">
-    <title lang="en">Paid Programming</title>
-    <desc lang="en">Paid programming.</desc>
-    <category lang="en">Consumer</category>
-    <category lang="en">Shopping</category>
-    <category lang="en">Variety</category>
-    <icon src="http://dtil.tmsimg.com/assets/p459763_b_h8_bq.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>A</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-  </programme>
-  <programme channel="ChannelS.uk" start="20261015003000 +0000" stop="20261015010000 +0000">
-    <title lang="en">Gameshow the Challenge for Celebrities</title>
-    <date>2017</date>
-    <category lang="en">Game show</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14674824_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261015020000 +0000" stop="20261015023000 +0000">
-    <title lang="en">Show Midnight Hotspot</title>
-    <date>2017</date>
-    <category lang="en">Community</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14674984_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261015023000 +0000" stop="20261015030000 +0000">
-    <title lang="en">Paid Programming</title>
-    <desc lang="en">Paid programming.</desc>
-    <category lang="en">Consumer</category>
-    <category lang="en">Shopping</category>
-    <category lang="en">Variety</category>
-    <icon src="http://dtil.tmsimg.com/assets/p459763_b_h8_bq.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>A</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-  </programme>
-  <programme channel="ChannelS.uk" start="20261015030000 +0000" stop="20261015033000 +0000">
-    <title lang="en">Evening News</title>
-    <desc lang="en">Entertainment programming.</desc>
-    <date>2016</date>
-    <category lang="en">News</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13443706_b_h10_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261015033000 +0000" stop="20261015040000 +0000">
-    <title lang="en">Live Z Talk</title>
-    <desc lang="en">A platform that creates a space for creatives to speak about the highs and lows of entrepreneurship, and the persistence it takes to go from a vision to a milestone.</desc>
-    <date>2017</date>
-    <category lang="en">Talk</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14674998_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="ChannelS.uk" start="20261015040000 +0000" stop="20261015043000 +0000">
-    <title lang="en">Live Z Talk</title>
-    <desc lang="en">A platform that creates a space for creatives to speak about the highs and lows of entrepreneurship, and the persistence it takes to go from a vision to a milestone.</desc>
-    <date>2017</date>
-    <category lang="en">Talk</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14674998_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
   <programme channel="Chithiram.in@SD" start="20261012100000 +0530" stop="20261012110000 +0530">
     <title>Nostalgic 90s</title>
     <desc>A comprehensive compilation of some of the most famous 90s songs curated by well-known artists is played back to back to entertain the viewers.</desc>
@@ -30551,15 +29840,6 @@ Le'ts celebrate Baby Shark Month by singing along with a baby shark!</desc>
     <desc>A compilation of some of the most popular and melodious songs sung and composed by talented artists is played back-to-back.</desc>
     <category>Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p29740219_b_h8_aa.jpg?lock=1280x720" />
-  </programme>
-  <programme start="20261012042200 +0000" stop="20261012044900 +0000" channel="Choppertown.us">
-    <category lang="en">Food + Home + Culture</category>
-    <date>2007</date>
-    <desc lang="en">S1 E4 — Adult Film Star
-Lou, Froy, Matt face assault charges, repo BMW during film shoot, find debtor's car with assistance.</desc>
-    <episode-num>S1 E4</episode-num>
-    <icon src="https://iptv-epg.org/images/R4LWUq0s9gJIU-eVvgw40r90-qXpr6QKtRIdfr0YHDFKtUFP8x_9ejq80NGHB6ap64BNzZJwVf2KM_ueP1HgWxE5qFSmGJsg6e-cOxMO26o3a6N9xkcunArrq8odV4e0yNCdpio6oc5g__RAFJdt1JdV_QR8XyeQybBdblIEwQ1zVH-0Dmcil6WaMhowL-Iu3lG5TPRwx-U1AbYP7OZb6Xzpy7hW" />
-    <title lang="en">Operation Repo</title>
   </programme>
   <programme start="20261012044900 +0000" stop="20261012051500 +0000" channel="Choppertown.us">
     <category lang="en">Food + Home + Culture</category>
@@ -44627,19 +43907,6 @@ Contestants from all walks of life compete with each other to win the cash prize
     <icon src="https://iptv-epg.org/images/4wdQB0aRlX1VZhAmP8z6aMO7qgKvif6p0nvsJvtSLRZFfv1y7O1-5KEYpYcYwz2_kwkr6wMAGiT1kFJuPIBG1e75L1xVWHbaOi5PjtwmJIM56odqBCb0M35LG7qJFw" />
     <title lang="en">Bigg Boss Kannada</title>
   </programme>
-  <programme channel="ColorsMarathi.in@SD" start="20261012094000 +0530" stop="20261012102000 +0530">
-    <title lang="en">Aai Tuljabhavani</title>
-    <desc lang="en">Aai Tulija Bhavani strives to overcome multiple challenges and defeat the evil powers, in order to protect humanity and maintain peace.</desc>
-    <credits>
-      <actor>Vishwanath Kulkarni</actor>
-      <actor>Pooja Kale</actor>
-      <actor>Vijayalaxmi Kumbhar</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28426384_b_h9_ac.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E711</episode-num>
-  </programme>
   <programme channel="ColorsMarathi.in@SD" start="20261012102000 +0530" stop="20261012105500 +0530">
     <title lang="en">Mi Jinkun Ghein Saara</title>
     <desc lang="en">Chhavi dedicates herself to protecting her adoptive family, the Rajgurus. Upon the arrival of a new daughter-in-law, Shambhavi, Chhavi prepares to defend the household against her hidden motives.</desc>
@@ -48213,10 +47480,25 @@ Aai Tulija Bhavani strives to overcome multiple challenges and defeat the evil p
     <icon src="https://iptv-epg.org/images/_lknHKzuUcXepTSqMf8Cf5yVIFWuUhC9LIDmWOulBEagfSMxUjGkOEzR3K8VQG9FHvCmlRsfo0D3DzPMfUFNIuUUoLoRPMtBL7yLaHQE3kNFoVmQft2jrLbCbz7gHQ" />
     <title lang="en">Aai Tuljabhavani</title>
   </programme>
-  <programme start="20261012085000 +0530" stop="20261012102000 +0530" channel="ColorsRishteyAmericas.in">
-    <title lang="en">Paw Patrol</title>
-    <category lang="en">Hindi</category>
-    <category lang="en">TV Show</category>
+  <programme channel="ColorsRishteyAmericas.in" start="20261012095500 +0530" stop="20261012102700 +0530">
+    <title>PAW Patrol</title>
+    <desc>Rubble is pretending to be a super pup but gets himself in trouble. When Ryder's Robot Pup breaks and starts going wild around Adventure Bay, it takes the whole PAW Patrol to help Ryder find it.</desc>
+    <category>Children</category>
+    <category>Animation</category>
+    <credits>
+      <director>Jamie Whitney</director>
+      <director>Charles E. Bastien</director>
+      <actor>Kai Harris</actor>
+      <actor>Justin Paul Kelly</actor>
+      <actor>Christian Corrao</actor>
+      <actor>Lilly Bartlam</actor>
+      <actor>Jackson Reid</actor>
+      <actor>Lucien Duncan-Reid</actor>
+      <actor>Jordan Mazeral</actor>
+      <actor>Ron Pardo</actor>
+      <producer>Patricia Burns</producer>
+    </credits>
+    <icon src="https://dtil.tmsimg.com/assets/p12113861_b_h10_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="ColorsRishteyAmericas.in" start="20261012102700 +0530" stop="20261012104700 +0530">
     <title>Motu Patlu</title>
@@ -65452,13 +64734,6 @@ A dynastic struggle between the collateral branches of the Kuru clan, the Kaurav
     <category>Others</category>
     <icon src="https://dtil.tmsimg.com/assets/p28942924_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme channel="DDKashir.in@SD" start="20261012091000 +0530" stop="20261012101000 +0530">
-    <title lang="en">Doctor On Line</title>
-    <desc lang="en">The host invites various medical professionals to shed light on various diseases and answer health queries from prospective callers.</desc>
-    <category lang="en">Sport</category>
-    <category lang="en">Talk Show</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27198315_b_h9_ab.jpg?lock=880x660" />
-  </programme>
   <programme channel="DDKashir.in@SD" start="20261012101000 +0530" stop="20261012103000 +0530">
     <title lang="en">Sarhad Ke Do Rukh</title>
     <desc lang="en">The host presents the latest new stories, updates and developments pertaining to the field of economics, politics and sports.</desc>
@@ -67707,15 +66982,12 @@ A dynastic struggle between the collateral branches of the Kuru clan, the Kaurav
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme channel="DDMalayalam.in@SD" start="20261012100000 +0530" stop="20261012101000 +0530">
-    <title lang="en">News Headlines</title>
-    <desc lang="en">Live display of headlines presenting important news stories and updates in real-time, keeping viewers informed with quick summaries of major developments.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DD_MALAYALAM_108041_12OCT100000_12OCT101000/images/LANDSCAPE_169/1708339440000_DDMALAYALAM_NewsHeadlines_108041.jpg" />
-  </programme>
-  <programme channel="DDMalayalam.in@SD" start="20261012101000 +0530" stop="20261012110000 +0530">
-    <title lang="en">Samoohyapadam</title>
-    <desc lang="en">Program exploring social concerns through reports, interviews, and real-life stories, aiming to educate and inspire viewers to understand and engage with their surroundings.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DD_MALAYALAM_141842_12OCT101000_12OCT110000/images/LANDSCAPE_169/1791194476000_DDMALAYALAM_Samoohyapadam_141842.jpg" />
+  <programme channel="DDMalayalam.in@SD" start="20261012100000 +0530" stop="20261012110000 +0530">
+    <title lang="en">DD Talk</title>
+    <desc lang="en">The host invites prominent personalities from different fields and engages in a conversation with them on various topics as well as their life experiences.</desc>
+    <category lang="en">Sport</category>
+    <category lang="en">Talk Show</category>
+    <icon src="https://dtil.tmsimg.com/assets/p32325313_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="DDMalayalam.in@SD" start="20261012110000 +0530" stop="20261012111000 +0530">
     <title lang="en">News Headlines</title>
@@ -75337,13 +74609,6 @@ Embark on a musical journey through eight Indian states and learn about local ba
     <icon src="https://iptv-epg.org/images/4C7EF_LJbcflk6AFnBXi4ZxdQaWHl8zUryruRB8VvqFbGu9hCXGtQuEB6wVruAIz8Gng9daHyqqBH5ss8ocqqWv32DWQHWdVA-_Za2uYBHMJzLyjz_qm8VhWELx69w" />
     <title lang="en">Gopal Rahasya</title>
   </programme>
-  <programme channel="DDPunjabi.in@SD" start="20261012100000 +0530" stop="20261012101000 +0530">
-    <title lang="en">Zaika</title>
-    <desc lang="en">A culinary expert provides numerous cooking tips and tricks and shares various delectable recipes with step-by-step guides to prepare them.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Cooking</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28946396_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="DDPunjabi.in@SD" start="20261012101000 +0530" stop="20261012103500 +0530">
     <title lang="en">Hanerian Gallian</title>
     <desc lang="en">The host invites experts to discuss drug addiction, preventive measures and its treatment in an effort to create awareness among the masses.</desc>
@@ -77268,25 +76533,10 @@ Embark on a musical journey through eight Indian states and learn about local ba
     <icon src="https://iptv-epg.org/images/GoaMg34aNuMs4xD-jt0gmHwrdWN3qCyqdvveHivWpGCbvBp8V10N5tTUAl5vN5MKhUFlf_4QZ5mOy5zLtMnd9kuMr5LaNHX4ULiYMb3ijJnHESGbH4sf5LINrvFYvA" />
     <title lang="en">Vaartavali</title>
   </programme>
-  <programme channel="DDRajasthan.in@SD" start="20261012100000 +0530" stop="20261012101500 +0530">
+  <programme channel="DDRajasthan.in@SD" start="20261012100000 +0530" stop="20261012103000 +0530">
     <title lang="en">Hindi News</title>
-    <desc lang="en">The anchor delivers the latest updates and breaking news stories in Hindi, covering politics, sports and entertainment shaping the country.</desc>
-    <category lang="en">News</category>
-    <category lang="en">News Bulletin</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27495808_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="DDRajasthan.in@SD" start="20261012101500 +0530" stop="20261012102000 +0530">
-    <title lang="en">SOS / Highlight</title>
-    <desc lang="en">Bringing the best in television.</desc>
-    <category lang="en">Documentary</category>
-    <category lang="en">Others</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29120264_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="DDRajasthan.in@SD" start="20261012102000 +0530" stop="20261012103000 +0530">
-    <title lang="en">Rajasthani Folk Music</title>
-    <desc lang="en">A comprehensive compilation of some of the most melodious Rajasthani songs sung by beloved artists played in quick succession.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29120016_b_h9_aa.jpg?lock=880x660" />
+    <desc lang="en">Watch as the host analyzes global issues and highlights current events and developments in detail.</desc>
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DD_RAJASTHAN_617195_12OCT100000_12OCT103000/images/LANDSCAPE_169/1693332439000_DDRajasthan_HindiNews_617195.jpg" />
   </programme>
   <programme channel="DDRajasthan.in@SD" start="20261012103000 +0530" stop="20261012110000 +0530">
     <title lang="en">Charcha Mein</title>
@@ -90999,13 +90249,6 @@ Highlights of all the action from international cricket tournaments, where teams
     <title lang="en">Cricket Highlights</title>
     <live />
   </programme>
-  <programme channel="Dangal2.in@SD" start="20261012033400 +0530" stop="20261012101000 +0530">
-    <title lang="en">Bhagwat Katha</title>
-    <desc lang="en">A religious leader delivers a discourse based on verses from the Bhagavata Purana and explains their spiritual significance to the devout.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Religious</category>
-    <icon src="https://dtil.tmsimg.com/assets/p591686_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="Dangal2.in@SD" start="20261012101000 +0530" stop="20261012120600 +0530">
     <title lang="en">Ramayan</title>
     <desc lang="en">Prince Rama embarks on a daring mission to save his kidnapped wife Sita from the evil Ravana. Aided by his loyal brother Lakshmana and an army of monkeys, Rama faces various challenges in his journey.</desc>
@@ -94390,29 +93633,26 @@ Highlights of all the action from international cricket tournaments, where teams
     <category>Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p33587741_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme channel="DeenTV.uk" start="20261012010000 +0000" stop="20261012044500 +0000">
-    <title lang="en">Live Transmission from Makkah</title>
-    <desc lang="en">Live transmission of the activities from the Harame Makkah.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Religion</category>
+  <programme start="20261012030000 +0100" stop="20261012064500 +0100" channel="DeenTV.uk">
+    <title>Live Transmission from Makkah</title>
+    <desc>Live transmission of the activities from the Harame Makkah</desc>
+    <rating>
+      <value>--</value>
+    </rating>
   </programme>
-  <programme channel="DeenTV.uk" start="20261012044500 +0000" stop="20261012045200 +0000">
-    <title lang="en">Azan-E-Fajr</title>
-    <desc lang="en">A religious announcement for the prayer time.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Religion</category>
+  <programme start="20261012064500 +0100" stop="20261012065200 +0100" channel="DeenTV.uk">
+    <title>Azan-E-Fajr</title>
+    <desc>A religious announcement for the prayer time.</desc>
+    <rating>
+      <value>--</value>
+    </rating>
   </programme>
-  <programme channel="DeenTV.uk" start="20261012045200 +0000" stop="20261012060000 +0000">
-    <title lang="en">Live Transmission from Makkah</title>
-    <desc lang="en">Live transmission of the activities from the Harame Makkah.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Religion</category>
-  </programme>
-  <programme channel="DeenTV.uk" start="20261012060000 +0000" stop="20261012080000 +0000">
-    <title lang="en">Live Transmission from Makkah</title>
-    <desc lang="en">Live transmission of the activities from the Harame Makkah.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Religion</category>
+  <programme start="20261012065200 +0100" stop="20261012080000 +0100" channel="DeenTV.uk">
+    <title>Live Transmission from Makkah</title>
+    <desc>Live transmission of the activities from the Harame Makkah</desc>
+    <rating>
+      <value>--</value>
+    </rating>
   </programme>
   <programme channel="DeenTV.uk" start="20261012080000 +0000" stop="20261012083000 +0000">
     <title lang="en">Tilawat-E-Quran</title>
@@ -100275,40 +99515,6 @@ Zak Bagans, Aaron Goodwin, Billy Tolley and Jay Wasley investigate the most haun
     <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
       <value>AL</value>
     </rating>
-  </programme>
-  <programme channel="DiscoveryKids.au" start="20261012095800 +0530" stop="20261012101000 +0530">
-    <title lang="en">Titoo</title>
-    <desc lang="en">Titoo and his friends enter into a kite competition where they try different ways to beat their opponents. However, things take a turn when the winners are announced.</desc>
-    <credits>
-      <actor>Harsh Joshi</actor>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26974808_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E11</episode-num>
-  </programme>
-  <programme channel="DiscoveryKids.au" start="20261012101000 +0530" stop="20261012102200 +0530">
-    <title lang="en">Titoo</title>
-    <desc lang="en">During the Holi celebrations, Shera is challenged to a spirited watercolour competition by Titoo. But soon chaos ensues as they both go all out to win.</desc>
-    <credits>
-      <actor>Harsh Joshi</actor>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26974808_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E12</episode-num>
   </programme>
   <programme channel="DiscoveryKids.au" start="20261012102200 +0530" stop="20261012103400 +0530">
     <title lang="en">Titoo</title>
@@ -110011,100 +109217,31 @@ Little Singham, an honest but ferocious police officer, fights against injustice
     <icon src="https://iptv-epg.org/images/fFfwu07M2GNI6OsF78RSCAg0GFFcpJDJLs0CPsN9rV0BRUeFKgTHLQw3M6SdLmrmSXZO7dlAqiyMFXBPWWhRR70MKpOFvvYhAQJh9IO4n_8jlqfvE7JA9tmjwAHR" />
     <title lang="en">Little Singham</title>
   </programme>
-  <programme channel="Disney Junior.in" start="20261012043000 +0000" stop="20261012045500 +0000">
-    <title lang="en">Bluey</title>
-    <sub-title lang="en">Unicorse; Born Yesterday; Curry Quest</sub-title>
-    <desc lang="en">Bluey can't get to sleep, so Mum reads her a story; Dad pretends he was born yesterday; Bingo and Dad brave a magpie protecting its nest.</desc>
+  <programme channel="Disney Junior.in" start="20261012083000 +0530" stop="20261012103000 +0530">
+    <title lang="en">The Lion Guard</title>
+    <desc lang="en">Kion, Simba's son, becomes the leader of the Lion Guard, striving to protect the wildlife from dangerous powers and attempts to maintain peace.</desc>
     <credits>
-      <actor>David McCormack</actor>
-      <actor>Melanie Zanetti</actor>
-      <actor>Dan Brumm</actor>
-      <director>Joe Brumm</director>
+      <actor>Max Charles</actor>
+      <actor>Rob Lowe</actor>
+      <actor>Gabrielle Union</actor>
+      <actor>Eden Riegel</actor>
+      <actor>Khary Payton</actor>
+      <actor>Jeff Bennett</actor>
+      <actor>Kevin Schon</actor>
+      <actor>Ernie Sabella</actor>
+      <actor>Joshua Rush</actor>
+      <actor>Diamond White</actor>
+      <actor>Dusan Brown</actor>
+      <actor>Atticus Shaffer</actor>
+      <actor>Jonny Rees</actor>
+      <actor>Madison Pettis</actor>
+      <actor>Sarah Hyland</actor>
+      <actor>Andrew Kishino</actor>
+      <director>Howy Parkins</director>
     </credits>
-    <date>2022</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Adventure</category>
-    <category lang="en">Animals</category>
-    <icon src="http://dtil.tmsimg.com/assets/p16030422_b_h10_az.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S3</episode-num>
-    <previously-shown />
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVY</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>A</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-    <rating system="방송통신심의위원회">
-      <value>All</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
-  </programme>
-  <programme channel="Disney Junior.in" start="20261012045500 +0000" stop="20261012052000 +0000">
-    <title lang="en">PJ Masks</title>
-    <sub-title lang="en">Armadylan Action Hero; Super Muscles Show Off</sub-title>
-    <desc lang="en">Ninja uses Armadylan's dream of becoming a kung fu movie star to break into a museum; while Gekko and Armadylan guard the city, their watch turns into a contest of strength.</desc>
-    <credits>
-      <actor>Jacob Ewaniuk</actor>
-      <actor>Kyle Harrison Breitkopf</actor>
-      <actor>Addison Holley</actor>
-      <director>Christian De Vita</director>
-      <director>Merle-Anne Ridley</director>
-    </credits>
-    <date>2021</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Adventure</category>
-    <icon src="http://dtil.tmsimg.com/assets/p12115698_b_h8_be.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S3 E70</episode-num>
-    <previously-shown />
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>0</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>K7</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVY</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>A</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-    <rating system="방송통신심의위원회">
-      <value>All</value>
-    </rating>
-    <rating system="Ministero della Cultura">
-      <value>T</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
+    <category lang="en">Animation</category>
+    <icon src="https://dtil.tmsimg.com/assets/p12371444_b_h9_be.jpg?lock=880x660" />
   </programme>
   <programme channel="Disney Junior.in" start="20261012052000 +0000" stop="20261012054500 +0000">
     <title lang="en">PJ Masks</title>
@@ -123283,10 +122420,6 @@ From Horejsi Family Athletics Center in Lawrence, Kan.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012041500 +0000" stop="20261012044500 +0000" channel="ETVMusic.in" catchup-id="100119095">
-    <title>Kitchen Mantra</title>
-    <desc>A culinary expert shares various cooking tips and recipes for healthy meals.</desc>
-  </programme>
   <programme start="20261012044500 +0000" stop="20261012050000 +0000" channel="ETVMusic.in" catchup-id="100119096">
     <title>Amma Chethi Vanta</title>
     <desc>The host presents a delicious variety of Andhra-style cuisines and other cooking recipes.</desc>
@@ -134527,24 +133660,6 @@ The best racehorses square off in the premier races from across the country.</de
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p28413142_v_h11_aa.jpg?lock=1280x720" />
   </programme>
-  <programme channel="GoldminesBollywood.in@SD" start="20261012075800 +0530" stop="20261012101100 +0530">
-    <title>Baghawat - Ek Jung</title>
-    <desc>Krishna and Arjun work for rival mafia bosses who fight for control of the city. Their siblings fall in love and attempt to broker peace, but the crime lords plot to end the romance.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2001</date>
-    <credits>
-      <director>Deepak Pawar</director>
-      <actor>Mithun Chakravarty</actor>
-      <actor>Manvi Goswami</actor>
-      <actor>Mohan Joshi</actor>
-      <actor>Aditya Pancholi</actor>
-      <actor>Deepak Shirke</actor>
-      <actor>Ishrat Ali</actor>
-      <producer>Deepak Pawar</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p13499132_b_h10_ab.jpg?lock=1280x720" />
-  </programme>
   <programme channel="GoldminesBollywood.in@SD" start="20261012101100 +0530" stop="20261012123900 +0530">
     <title>Veerana</title>
     <desc>Mahindra Pratap and his younger brother Sameer kill Nikita, a witch who uses her charm to kill people. After many years, Nikita comes back from the dead and targets Mahindra Pratap's daughter Jasmin.</desc>
@@ -136448,20 +135563,6 @@ Personal disputes and problems with drugs, alcohol and illness accompany the mus
     <desc lang="en">Gravitas Movies</desc>
     <icon src="https://iptv-epg.org/images/KMMih7uu5LJ1Oc5HFNdzRPaCOObzNoK84BkoZovXhN__NEMNSdtysKbCwQt96Lw-mcvc7qJ1TSlxQx9VAuuUa0V38HASJOwHtb37udFuL8E" />
     <title lang="en">Gravitas Movies</title>
-  </programme>
-  <programme channel="HUMMasala.pk" start="20261012040300 +0000" stop="20261012044500 +0000">
-    <title lang="en">Hum Awaaz</title>
-    <desc lang="en">Highlighting the social and environmental issues and its remedies hosted by Zunaib Khanzada.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Feature</category>
-    <icon src="https://images.metadata.sky.com/pd-image/ca6f0405-a3f7-4204-bf84-bf8a05cef9bd/16-9" />
-  </programme>
-  <programme channel="HUMMasala.pk" start="20261012044500 +0000" stop="20261012045000 +0000">
-    <title lang="en">Azan-e-Fajr</title>
-    <desc lang="en">Call for prayer.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Religion</category>
-    <icon src="https://images.metadata.sky.com/pd-image/ed81c58e-87e6-4cbf-880d-24fbbbebc6e6/16-9" />
   </programme>
   <programme channel="HUMMasala.pk" start="20261012045000 +0000" stop="20261012050000 +0000">
     <title lang="en">Hum Awaaz</title>
@@ -144849,23 +143950,12 @@ Retiree Alex Strategos is consumed by loneliness. He turns to internet dating an
     <icon src="https://iptv-epg.org/images/3TVoxJRagkCNi0S_CJDD9C_MEiP0aXTEDp9sZ2vM5YfuaQ3oy2e_slxUwWRYKslqHa8FrBgpX9yeqp9iiiKkEcsw2UGz2DwICpveEIFuZP14u2qfajP9C92GhmGY" />
     <title lang="en">Web of Lies</title>
   </programme>
-  <programme channel="IqraBangla.uk" start="20261012013000 +0000" stop="20261012044500 +0000">
-    <title lang="en">Live Transmission from Madina</title>
-    <desc lang="en">Live Transmission from the holy city of Madina Al Munawwara.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Religion</category>
-  </programme>
-  <programme channel="IqraBangla.uk" start="20261012044500 +0000" stop="20261012045200 +0000">
-    <title lang="en">Azan-E-Fajr</title>
-    <desc lang="en">The adhan (Azaan) is a special Islamic call to salat (prayer).Timing of azan is based on East London Mosque.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Religion</category>
-  </programme>
-  <programme channel="IqraBangla.uk" start="20261012045200 +0000" stop="20261012051200 +0000">
-    <title lang="en">Surah Yaseen</title>
-    <desc lang="en">Beautiful recitation of Surah Yaseen by Mohamed Huzayfa Shaikh.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Religion</category>
+  <programme start="20261012033000 +0100" stop="20261012064500 +0100" channel="IqraBangla.uk">
+    <title>Live Transmission from Madina</title>
+    <desc>Live Transmission from the holy city of Madina Al Munawwara.</desc>
+    <rating>
+      <value>--</value>
+    </rating>
   </programme>
   <programme start="20261012064500 +0100" stop="20261012065200 +0100" channel="IqraBangla.uk">
     <title>Azan-E-Fajr</title>
@@ -149563,26 +148653,6 @@ Retiree Alex Strategos is consumed by loneliness. He turns to internet dating an
     <title lang="en">Comali</title>
     <desc lang="en">Ravi, a young lad, goes into a coma when he meets with an accident. However, he struggles to cope up when he wakes up 16 years later.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_KAIRALI_TV_870164_15OCT050000_15OCT060000/images/LANDSCAPE_169/1709932299000_KAIRALITV_Comali_870164.jpg" />
-  </programme>
-  <programme channel="KairaliWe.in@SD" start="20261012081500 +0530" stop="20261012101500 +0530">
-    <title>Aagneyam</title>
-    <desc>Young and pure of heart, Madhavan is adored by every single one of his villagers. However, a false accusation of two murders alters the course of his life.</desc>
-    <category>Film</category>
-    <category>Thriller</category>
-    <date>1993</date>
-    <credits>
-      <director>P.G. Viswambharan</director>
-      <actor>Jayaram</actor>
-      <actor>Nedumudi Venu</actor>
-      <actor>Thilakan</actor>
-      <actor>Sunita</actor>
-      <actor>Gautami</actor>
-      <actor>Maathu</actor>
-      <actor>Siddique</actor>
-      <actor>Innocent</actor>
-      <actor>Sukumari</actor>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p10913847_b_h10_ag.jpg?lock=1280x720" />
   </programme>
   <programme channel="KairaliWe.in@SD" start="20261012101500 +0530" stop="20261012124500 +0530">
     <title>Honey Bee</title>
@@ -199169,13 +198239,6 @@ A quintessential October trip to Northern Minnesota chasing walleyes and ruffed 
     <icon src="https://iptv-epg.org/images/u4I6ZdzlNoSvsGdbQIHFmRUp9oM-sSG59fqmRgK3AOtDB1qwBJMpJLc4AOYwFXXpdSkl2XLkXY9Xf2vOJuMZy-Y-5mXFIc6FFvX40CbmugV9KXuCFBQmqwS7C6rVKg" />
     <title lang="en">Pollywood Beats</title>
   </programme>
-  <programme start="20261012043000 +0000" stop="20261012044500 +0000" channel="PasandTV.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Adventure</category>
-    <desc lang="en">Bringing the best in television.</desc>
-    <icon src="https://iptv-epg.org/images/450ApTIyurwd7YWStwK8jxgGCP4UpwJlO3RvbrRC3ejoDFBpS4V1M62I9YfmRV58XDu2hjnBY68wL6iqDmFVJL9kV1Xcm0NG998lP8Vzq9pJS1163tVxFK8XVxdUXg" />
-    <title lang="en">Jungle ka Raja</title>
-  </programme>
   <programme start="20261012044500 +0000" stop="20261012050000 +0000" channel="PasandTV.in@SD">
     <category lang="en">TV Show</category>
     <category lang="en">Adventure</category>
@@ -206560,13 +205623,6 @@ Duggu Dumbbell proposes a triple-feat strength contest to Simmba, with the defea
     <desc lang="en">Bheem is an extremely brave, strong and intelligent young boy. He often manages to solve everyone's problems which endears him to the townspeople of Dholakpur.</desc>
     <icon src="https://iptv-epg.org/images/NSDeRoxZvNpT3poJOPRZg5l18a1qwn1w8ZCW8sLs51rVPMHX6B_fIWdNppHAxiFn4Usp6fLZVmx2Z2SjYfrN8L4oPoCOmTXE5uGI3UyF6q8JlMnoXGxbHDoOdjnh" />
     <title lang="en">Chhota Bheem</title>
-  </programme>
-  <programme channel="PolimerTV.in@SD" start="20261012094500 +0530" stop="20261012101000 +0530">
-    <title lang="en">Thirai Kathambam</title>
-    <desc lang="en">A comprehensive compilation of movie scenes from the latest Kollywood films featuring prominent actors and comedians is played in quick succession.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29030327_b_h9_ab.jpg?lock=880x660" />
   </programme>
   <programme channel="PolimerTV.in@SD" start="20261012101000 +0530" stop="20261012123000 +0530">
     <title lang="en">Kalyana Parisu</title>
@@ -214652,16 +213708,6 @@ Duggu Dumbbell proposes a triple-feat strength contest to Simmba, with the defea
     <title lang="en">Neram Nalla Neram - Live</title>
     <desc lang="en">An astrologer analyzes planetary transitions and predicts the future while answering horoscope queries live over the phone.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_PUTHU_YUGAM_1390542_15OCT070000_15OCT073000/images/LANDSCAPE_169_HD/PUTHUYUGAM_NeramNallaNeram-Live_1390542.jpg" />
-  </programme>
-  <programme start="20261012092700 +0530" stop="20261012101200 +0530" channel="QelloConcertsbyStingray.ca@SD">
-    <title>Bastille - Reading and Leeds Festival 2022</title>
-    <desc>The Reading and Leeds Festivals are a pair of annual music festivals that take place in Reading and Leeds, England; featuring Bastille.</desc>
-    <category>Special</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/3eb69e652907010abe215982914b4d4c.jpg?width=700" />
-    <rating>
-      <value>TVPG</value>
-    </rating>
   </programme>
   <programme start="20261012101200 +0530" stop="20261012120300 +0530" channel="QelloConcertsbyStingray.ca@SD">
     <title>Blondie -- Live in London 2014</title>
@@ -241826,13 +240872,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <desc lang="en">Motherwell v Hibernian from 2010.</desc>
     <icon src="https://tv.assets.pressassociation.io/1592cd0a-ed5a-5bdb-a656-780958594d23.jpg" />
   </programme>
-  <programme channel="SkySportsNFL.uk" start="20261012043000 +0000" stop="20261012044500 +0000">
-    <title lang="en">NFL Bitesize Highlights</title>
-    <sub-title lang="en">Denver Broncos @ San Francisco 49ers 04.10</sub-title>
-    <desc lang="en">San Francisco 49ers v Denver Broncos.</desc>
-    <category lang="en">Sport</category>
-    <icon src="https://tv.assets.pressassociation.io/13391fe0-f3ce-5924-b304-936f953c1c08.jpg" />
-  </programme>
   <programme channel="SkySportsNFL.uk" start="20261012044500 +0000" stop="20261012050000 +0000">
     <title lang="en">NFL Bitesize Highlights</title>
     <sub-title lang="en">Los Angeles Chargers @ Seattle Seahawks 04.10</sub-title>
@@ -242449,35 +241488,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <category lang="en">Sport</category>
     <icon src="https://tv.assets.pressassociation.io/3a316425-b513-5459-84ae-8ce7fcac1681.jpg" />
     <episode-num system="onscreen">S2026 E32</episode-num>
-  </programme>
-  <programme channel="SongdewTV.in@SD" start="20261012100000 +0530" stop="20261012101000 +0530">
-    <title lang="en">Songdew Select</title>
-    <desc lang="en">A comprehensive compilation of independent music, showcasing the diverse creativity and unique voices of artists, offering listeners an eclectic blend of genres and styles.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p15781083_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="SongdewTV.in@SD" start="20261012101000 +0530" stop="20261012101500 +0530">
-    <title lang="en">Take 7</title>
-    <desc lang="en">A comprehensive and detailed insight into behind the scenes of music videos, highlighting the process and compilation of songs.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28412261_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="SongdewTV.in@SD" start="20261012101500 +0530" stop="20261012102000 +0530">
-    <title lang="en">Songdew Fresh</title>
-    <desc lang="en">A comprehensive compilation of the latest music tracks, curated to elevate and inspire positive vibes, offering a refreshing and motivating experience for listeners.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p15781078_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme start="20261012102000 +0530" stop="20261012102500 +0530" channel="SongdewTV.in@SD">
-    <title>Songdew Fresh</title>
-    <desc>Latest Music</desc>
-    <category>Music</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg?width=700" />
-    <episode-num system="onscreen">11</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
   </programme>
   <programme start="20261012102500 +0530" stop="20261012103000 +0530" channel="SongdewTV.in@SD">
     <title>Friday Night Originals</title>
@@ -246095,19 +245105,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <title lang="en">Pakdam Pakdai</title>
     <desc lang="en">There is a war between Doggy Don and three clever mice, while Doggy Don's older brother, an ex-army dog, is smarter and prepares to win back their contested territory.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONIC_191246_15OCT071500_15OCT100000/images/LANDSCAPE_169_HD/Sonic_PakdamPakdai_191246.jpg" />
-  </programme>
-  <programme channel="SonyBBCEarth.in@SD" start="20261012100000 +0530" stop="20261012102400 +0530">
-    <title lang="en">Deadly 60</title>
-    <desc lang="en">Steve Backshall, along with his crew, travels to different parts of the world in order to find the 60 most deadly animals living on the planet.</desc>
-    <credits>
-      <actor>Steve Backshall</actor>
-      <director>Ruth Harries</director>
-      <producer>Ruth Harries</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Education</category>
-    <icon src="https://dtil.tmsimg.com/assets/p18067403_b_h9_ag.jpg?lock=880x660" />
-    <episode-num system="onscreen">S4 E3</episode-num>
   </programme>
   <programme channel="SonyBBCEarth.in@SD" start="20261012102400 +0530" stop="20261012104900 +0530">
     <title lang="en">Deadly 60</title>
@@ -250633,24 +249630,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
       <producer>Aishwarya Yadav</producer>
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p21851696_b_h10_ac.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="SonyMax2.in@SD" start="20261012074300 +0530" stop="20261012102300 +0530">
-    <title>Love Love Love</title>
-    <desc>Reema strives to fight for her relationship with Amit, despite her father's wishes.</desc>
-    <category>Film</category>
-    <category>Romance</category>
-    <date>1989</date>
-    <credits>
-      <director>Babbar Subhash</director>
-      <actor>Aamir Khan</actor>
-      <actor>Juhi Chawla</actor>
-      <actor>Gulshan Grover</actor>
-      <actor>Dalip Tahil</actor>
-      <actor>Om Shivpuri</actor>
-      <actor>Sarla Yeolekar</actor>
-      <producer>Babbar Subhash</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p130357_v_h10_ac.jpg?lock=1280x720" />
   </programme>
   <programme channel="SonyMax2.in@SD" start="20261012102300 +0530" stop="20261012134800 +0530">
     <title>Maqsad</title>
@@ -260411,29 +259390,6 @@ The entrance of Golkuldam is suddenly covered with watermelons, making everyone 
     <episode-num>S1 E4719</episode-num>
     <icon src="https://iptv-epg.org/images/s7SrcZiOMq1KPKnnzYgBEJVB0BcSPjW7OHL3RSsl6PUfxsy-SLd-8b3N1SG3bgLsfwrbKopLHNVJNMS9GGAb0ikx--4-csF6ZSghyEo3xggAKYbMywaviOPEeAc" />
     <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
-  </programme>
-  <programme channel="SonyPix.in" start="20261012083500 +0530" stop="20261012101100 +0530">
-    <title lang="en">The Retirement Plan</title>
-    <desc lang="en">When their involvement with the wrong people puts her and her family at risk, Ashley turns to her estranged father for help, who is living a retired life in the Cayman Islands.</desc>
-    <credits>
-      <actor>Nicolas Cage</actor>
-      <actor>Ron Perlman</actor>
-      <actor>Ashley Greene</actor>
-      <actor>Jackie Earle Haley</actor>
-      <actor>Grace Byers</actor>
-      <actor>Ernie Hudson</actor>
-      <actor>Lynn Whitfield</actor>
-      <actor>Joel David Moore</actor>
-      <actor>Thalia Campbell</actor>
-      <actor>Rick Fox</actor>
-      <director>Tim Brown</director>
-      <producer>Doug Murray</producer>
-      <producer>Nicholas Tabarrok</producer>
-      <producer>William G. Santor</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Action</category>
-    <icon src="https://epg-garcenote-assets.s3.amazonaws.com/dishtvd2h/resources/assets/thumbnails/programs/default/default_880x660.png" />
   </programme>
   <programme channel="SonyPix.in" start="20261012101100 +0530" stop="20261012114800 +0530">
     <title lang="en">You Don't Mess With the Zohan</title>
@@ -275580,48 +274536,6 @@ Real-time match updates and highlights keep fans informed, providing instant acc
       <producer>Larry J. Franco</producer>
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p193479_v_h8_ab.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="SonyYay.in@SD" start="20261012095800 +0530" stop="20261012101800 +0530">
-    <title lang="en">Shin Chan</title>
-    <desc lang="en">Shin-chan is taken to a music school by Misae so he can learn music. However, the teacher of the institution leaves Misae upset.</desc>
-    <credits>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-      <director>Mitsuru Hongo</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h9_ae.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E60</episode-num>
-  </programme>
-  <programme channel="SonyYay.in@SD" start="20261012101800 +0530" stop="20261012102500 +0530">
-    <title lang="en">Shin Chan</title>
-    <desc lang="en">When it begins to rain torrentially, Misae quickly moves the clothes to the first floor but forgets to close a tap which leads to flooding.</desc>
-    <credits>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-      <director>Mitsuru Hongo</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h9_ae.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E65</episode-num>
   </programme>
   <programme channel="SonyYay.in@SD" start="20261012102500 +0530" stop="20261012103200 +0530">
     <title lang="en">Shin Chan</title>
@@ -295552,14 +294466,6 @@ Highlights of the matches played during the ICC Cricket World Cup, wherein inter
     <icon src="https://iptv-epg.org/images/Q_zDWL0c5B00IrTQ2hUJJacP-BaXbTrWKOQVx5RUHCPRqwnDCQjSlbavgr_rbgRpDrfnuMijrfwmumSOdxVfWnqnb50m3BO6fFDO3Eg1D-a1MCKJNggT6Et0dG5w6A" />
     <title lang="en">Sports Programme</title>
   </programme>
-  <programme channel="StarSports3.in@SD" start="20261012100000 +0530" stop="20261012101500 +0530">
-    <title lang="en">Follow The Blues</title>
-    <desc lang="en">The Indian cricket team's camaraderie, teamwork, and passion for cricket is on display in an insider's view of all the on and off-field activities.</desc>
-    <category lang="en">Sport</category>
-    <category lang="en">Cricket</category>
-    <icon src="https://dtil.tmsimg.com/assets/p32057320_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S2026 E134</episode-num>
-  </programme>
   <programme channel="StarSports3.in@SD" start="20261012101500 +0530" stop="20261012103000 +0530">
     <title lang="en">3rd T20: India vs West Indies; T20 Cricket</title>
     <desc lang="en">Professional players from different cricketing teams play in the Twenty20 format, competing against each other to win the match.</desc>
@@ -297105,13 +296011,6 @@ Highlights of the matches played during the ICC Cricket World Cup, wherein inter
     <desc lang="en">Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/Q_zDWL0c5B00IrTQ2hUJJacP-BaXbTrWKOQVx5RUHCPRqwnDCQjSlbavgr_rbgRpDrfnuMijrfwmumSOdxVfWnqnb50m3BO6fFDO3Eg1D-a1MCKJNggT6Et0dG5w6A" />
     <title lang="en">Sports Programme</title>
-  </programme>
-  <programme channel="StarSportsSelect1.in@SD" start="20261012100000 +0530" stop="20261012101500 +0530">
-    <title lang="en">Liverpool vs Manchester City; Premier League: Match Highlights</title>
-    <desc lang="en">Premier League match highlights show top goals, best plays and key moments, while these exciting clips sum up games and keep fans updated on the league.</desc>
-    <category lang="en">Sport</category>
-    <category lang="en">Football</category>
-    <icon src="https://dtil.tmsimg.com/assets/p22520376_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="StarSportsSelect1.in@SD" start="20261012101500 +0530" stop="20261012103000 +0530">
     <title lang="en">Premier League Highlights</title>
@@ -299375,16 +298274,6 @@ Premier League match highlights show top goals, best plays and key moments, whil
     <desc lang="en">Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/7-KV4WxNtJYcKnAB8tqW7eBOt0rKQ3NetD2MOd_DwkmsdjJgqamEaiSLLwxsNCdb40jIWoKIYDpl3O11MKu7R-GMdDbaZkWxzNJ7aNtv05cna9OyDX5GX7QeO0yc" />
     <title lang="en">Sports Programme</title>
-  </programme>
-  <programme start="20261012091400 +0530" stop="20261012101800 +0530" channel="StingrayDJAZZ.ca@SD">
-    <title>Rhoda Scott &amp; La Velle: Jazz à Vienne</title>
-    <desc>Although American soul and jazz organist Rhoda Scott spent most of her career in France, this performance at the antique theater of Vienne is special: she presents an intimate and beautiful performance with US gospel and blues singer La Velle.</desc>
-    <category>Special</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/e4c93e13fdad06627ff55e8ec165eece.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
   </programme>
   <programme start="20261012101800 +0530" stop="20261012103000 +0530" channel="StingrayDJAZZ.ca@SD">
     <title>Hackensack</title>
@@ -307304,44 +306193,6 @@ Jen and Tim's fight escalates and everyone is caught in the crossfire; Cortney l
     <desc lang="en">Mangala Alati presents the sacred Mangala Alati, featuring prayers, rituals, and devotional moments that create a serene atmosphere of faith, hope, and positivity each day.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_TARANG_113152_15OCT063000_15OCT073000/images/LANDSCAPE_169/1790250252000_TARANG_MangalaAlati_113152.jpg" />
   </programme>
-  <programme start="20261012095800 +0530" stop="20261012101000 +0530" channel="TeluguOne.in@HD">
-    <title>Aasayam</title>
-    <desc>Sarojini, a courageous woman, battles out corrupt and wicked politicians following her conscientious father's murder at their hands.</desc>
-    <category>Drama</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/a1ace90e20ebb55773b48c542420ecb7.jpg?width=700" />
-    <credits>
-      <director>A Mohan Gandhi.</director>
-      <actor>Vijaya Shanthi</actor>
-      <actor>Jagapathi Babu</actor>
-      <actor>Srikanth</actor>
-      <actor>Vijaya Kumar</actor>
-      <actor>Devan</actor>
-      <actor>Tanikella Bharani</actor>
-    </credits>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261012101000 +0530" stop="20261012102100 +0530" channel="TeluguOne.in@HD">
-    <title>Aasayam</title>
-    <desc>Sarojini, a courageous woman, battles out corrupt and wicked politicians following her conscientious father's murder at their hands.</desc>
-    <category>Drama</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/a1ace90e20ebb55773b48c542420ecb7.jpg?width=700" />
-    <credits>
-      <director>A Mohan Gandhi.</director>
-      <actor>Vijaya Shanthi</actor>
-      <actor>Jagapathi Babu</actor>
-      <actor>Srikanth</actor>
-      <actor>Vijaya Kumar</actor>
-      <actor>Devan</actor>
-      <actor>Tanikella Bharani</actor>
-    </credits>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261012102100 +0530" stop="20261012103300 +0530" channel="TeluguOne.in@HD">
     <title>Aasayam</title>
     <desc>Sarojini, a courageous woman, battles out corrupt and wicked politicians following her conscientious father's murder at their hands.</desc>
@@ -311791,11 +310642,6 @@ Jen and Tim's fight escalates and everyone is caught in the crossfire; Cortney l
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="TheJungleBook.in" start="20261012100900 +0530" stop="20261012102200 +0530">
-    <title lang="en">The Lucky Star</title>
-    <desc lang="en">Mowgli discovers a baby crocodile in a nest and takes him to the Friendly Area.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6ac88a06ffbb55f310798f29/images/LANDSCAPE_169/9287_4f5b128b-9551-4bbc-ae91-69df2cc714b2.png" />
-  </programme>
   <programme channel="TheJungleBook.in" start="20261012102200 +0530" stop="20261012103500 +0530">
     <title lang="en">The Elephant's Secret</title>
     <desc lang="en">Mowgli and Bagheera come across a female buffalo that has a very sick son</desc>
@@ -313397,26 +312243,6 @@ Jen and Tim's fight escalates and everyone is caught in the crossfire; Cortney l
     <rating>
       <value>12</value>
     </rating>
-  </programme>
-  <programme start="20261012033100 +0000" stop="20261012044000 +0000" channel="TheWalkingDeadUniverse.us">
-    <category lang="en">Drama</category>
-    <category lang="en">Horror</category>
-    <category lang="en">Science fiction</category>
-    <category lang="en">Series</category>
-    <credits>
-      <actor>Andrew Lincoln</actor>
-      <actor>Danai Gurira</actor>
-      <actor>Pollyanna McIntosh</actor>
-      <actor>Lesley-Ann Brandt</actor>
-      <actor>Terry O'Quinn</actor>
-      <actor>Matthew Jeffers</actor>
-    </credits>
-    <desc lang="en">S01 E02 — Gone
-Michonne finds unexpected help on her search for Rick.</desc>
-    <episode-num>S01 E02</episode-num>
-    <icon src="https://iptv-epg.org/images/zlscR7mQ1Qn3Djb4i1fSAdY0FMHPt1AW-bI9-eVwTxsqGV8renOfYgF-36fv1fU_p6YP07U2cV492muAzGW04BCikq2tkKRsQW_ZUQ2EWCI" />
-    <previously-shown />
-    <title lang="en">The Walking Dead: The Ones Who Live</title>
   </programme>
   <programme start="20261012044000 +0000" stop="20261012053000 +0000" channel="TheWalkingDeadUniverse.us">
     <category lang="en">Drama</category>
@@ -317549,13 +316375,6 @@ Someone stumbles upon a brand-new society unlike anything seen before.</desc>
     <icon src="https://iptv-epg.org/images/71MT1JAwlYsG0I8jGbTV3rA4Kp1qyn9-3WdvxUPOQ3gwjpEapMMEkuF1W-7zVtBuydCZT2ae0gaIIomYA9XOaP3y0RcevDyMtOE0L60SPWU" />
     <previously-shown />
     <title lang="en">The Walking Dead</title>
-  </programme>
-  <programme channel="TinyPop.uk" start="20261012043200 +0000" stop="20261012044400 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012100200/list/TinyPOPCareBearsUnlockTheMagic20569922be2aab01caf4fa9b3449bbd606cc1f5.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261012044400 +0000" stop="20261012045700 +0000">
     <title lang="en">Care Bears: Unlock The Magic</title>
@@ -368460,16 +367279,6 @@ The host talks to prominent personalities from the world of politics, culture, e
       <value>NA</value>
     </rating>
   </programme>
-  <programme channel="custom.colors.cineplex" start="20261012015500 +0000" stop="20261012044000 +0000">
-    <title lang="en">Gair Kaanooni</title>
-    <desc lang="en">Kapil, a determined police officer, seeks to capture the dreaded gangster D'costa with Azam's help. But when Azam is killed, his son rises to avenge him and deliver long-awaited justice.</desc>
-    <category lang="en">Movie</category>
-    <category lang="en">Action</category>
-    <icon src="https://images.metadata.sky.com/pd-image/3048acac-4480-48c5-b356-63e4f66957f5/16-9" />
-    <rating system="UK">
-      <value>PG</value>
-    </rating>
-  </programme>
   <programme channel="custom.colors.cineplex" start="20261012044000 +0000" stop="20261012072000 +0000">
     <title lang="en">Kotwal Saab</title>
     <desc lang="en">Bharat arrests Mahesh, a corrupt henchman. But Mahesh reveals a shocking truth about Bharat's wife, turning the officer's world upside down and testing his loyalty and love.</desc>
@@ -368699,19 +367508,6 @@ The host talks to prominent personalities from the world of politics, culture, e
     <rating system="UK">
       <value>PG</value>
     </rating>
-  </programme>
-  <programme start="20261012100000 +0530" stop="20261012102000 +0530" channel="custom.colors.infinity">
-    <title lang="en-GB">Ghosts</title>
-    <sub-title lang="en-GB">When a TV documentary crew comes to Woodstone Mansion to shoot an episode of 'Dumb Deaths', Pete confronts a hard truth about the day he dies</sub-title>
-    <desc lang="en-GB">Samantha, a cheerful freelance journalist, and Jay, an up-and-coming chef from the city, throw both caution and money to the wind when they decide to convert a huge run-down country estate they inherited into a bed and breakfast -- only to find it's inhabited by the many spirits of deceased residents. The departed souls are a close-knit, eclectic group that includes a saucy Prohibition-era lounge singer, a pompous 1700's Militiaman, a '60s hippie fond of hallucinogens and an overly upbeat '80s scout troop leader. If the spirits were anxious about the commotion a renovation and B\u0026B will create in their home, it's nothing compared to when they realize Samantha is the first live person who can see and hear them.</desc>
-    <credits>
-      <director>Nick Wong</director>
-      <actor>Rose McIver (Samantha),Utkarsh Ambudkar (Jay),Brandon Scott Jones (Isaac),Richie Moriarty (Pete),Danielle Pinnock (Alberta),Asher Grodman (Trevor),Román Zaragoza (Sasappis),Sheila Carrasco (Flower),Rebecca Wisocky (Hetty),Devan Chandler Long (Thorfinn),Ben Feldman (Kyle)</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/3e2b33e3d3cbdde1d69544174d7d6608.jpg" />
-    <episode-num system="onscreen">E7</episode-num>
-    <premiere />
   </programme>
   <programme start="20261012102000 +0530" stop="20261012104000 +0530" channel="custom.colors.infinity">
     <title lang="en-GB">Ghosts</title>
@@ -373931,23 +372727,6 @@ Zak Bagans, Aaron Goodwin, Billy Tolley and Jay Wasley investigate the most haun
     <icon src="https://iptv-epg.org/images/McaqyMwEkSoTo4f0Tt4hCsirr1PB71mZRzWiEWXAgI3dstN_-Opm48O0Pkmrqt1sxXX9CVZTUWcHqhDAKJ4-btJn7M1haeYUzeVM6BnD767ddglGsUMCNnDv6fzOUA" />
     <title lang="en">Ghost Adventures</title>
   </programme>
-  <programme channel="custom.discovery.turbo" start="20261012092000 +0530" stop="20261012101000 +0530">
-    <title lang="en">Fast N' Loud</title>
-    <desc lang="en">The Monkeys rev up for their last attempt to finish the '72 Buick Riviera super-build in time for SEMA. $300,000 has been invested, so failure is not an option.</desc>
-    <credits>
-      <actor>Richard Rawlings</actor>
-      <actor>Jason Aker</actor>
-      <actor>Tony Cano</actor>
-      <actor>Jeremy Cheatham</actor>
-      <actor>Charles Cimino</actor>
-      <actor>Mike Coy</actor>
-      <actor>Russell J. Holmes</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Reality Show</category>
-    <icon src="https://dtil.tmsimg.com/assets/p16899247_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S15 E11</episode-num>
-  </programme>
   <programme channel="custom.discovery.turbo" start="20261012101000 +0530" stop="20261012110000 +0530">
     <title lang="en">Diesel Brothers</title>
     <desc lang="en">Heavy D thinks he's found gold in a rare diesel Cadillac. Diesel Bi-Wheel is almost ready to roll, but the guys may need to pump the brakes.</desc>
@@ -378966,56 +377745,6 @@ A Toyota MR2 makes power, but not the power it once had; Bogi and Faye check the
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261012100900 +0530" stop="20261012101100 +0530" channel="custom.duck.tv">
-    <title>Sunville</title>
-    <desc>In the charming village of Sunville, Mr. Goat and the others fill each day with exciting adventures. They bring joy and warmth through their interactions and helpful deeds.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f4694bb56437a39aa1c8dc5bfc414ce1.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012101100 +0530" stop="20261012101500 +0530" channel="custom.duck.tv">
-    <title>In The Museum</title>
-    <desc>A clown uses trial and error method to restore the missing parts of paintings in a museum.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/2a7242d887a96972ca6b26c7c1ad5ebb.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012101500 +0530" stop="20261012101800 +0530" channel="custom.duck.tv">
-    <title>Didy Baby</title>
-    <desc>Little baby animals overcome the different obstacles they face everyday by helping each other and encourage children to do the same.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/994980d9030c79a0e59fef498478945f.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012101800 +0530" stop="20261012102100 +0530" channel="custom.duck.tv">
-    <title>Didy Baby</title>
-    <desc>Little baby animals overcome the different obstacles they face everyday by helping each other and encourage children to do the same.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/994980d9030c79a0e59fef498478945f.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012102100 +0530" stop="20261012102400 +0530" channel="custom.duck.tv">
-    <title>Didy Baby</title>
-    <desc>Little baby animals overcome the different obstacles they face everyday by helping each other and encourage children to do the same.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/994980d9030c79a0e59fef498478945f.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261012102400 +0530" stop="20261012102700 +0530" channel="custom.duck.tv">
@@ -388273,270 +387002,22 @@ A Toyota MR2 makes power, but not the power it once had; Bogi and Faye check the
     <category lang="en">Crime</category>
     <icon src="https://dtil.tmsimg.com/assets/p25787165_b_h9_ac.jpg?lock=880x660" />
   </programme>
-  <programme start="20261013010000 +0000" stop="20261013020000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  <programme channel="custom.enter10.bangla" start="20261013060100 +0530" stop="20261013090000 +0530">
+    <title lang="en">Jungle Book</title>
+    <desc lang="en">Mowgli, a boy reared by wolves in a jungle, and wolf cubs Leela and Gray attend Baloo's Forest School. Together, they discover independence, their strengths, and learn to overcome their weaknesses.</desc>
+    <category lang="en">Children</category>
+    <category lang="en">Animation</category>
+    <icon src="https://dtil.tmsimg.com/assets/p28640287_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme start="20261013020000 +0000" stop="20261013030000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013030000 +0000" stop="20261013040000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013040000 +0000" stop="20261013050000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013050000 +0000" stop="20261013060000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013060000 +0000" stop="20261013070000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013070000 +0000" stop="20261013080000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013080000 +0000" stop="20261013090000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013090000 +0000" stop="20261013100000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013100000 +0000" stop="20261013110000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013110000 +0000" stop="20261013120000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013120000 +0000" stop="20261013130000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013130000 +0000" stop="20261013140000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013140000 +0000" stop="20261013150000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013150000 +0000" stop="20261013160000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013160000 +0000" stop="20261013170000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013170000 +0000" stop="20261013180000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013180000 +0000" stop="20261013190000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013190000 +0000" stop="20261013200000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013200000 +0000" stop="20261013210000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013210000 +0000" stop="20261013220000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013220000 +0000" stop="20261013230000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261013230000 +0000" stop="20261014000000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014000000 +0000" stop="20261014010000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014010000 +0000" stop="20261014020000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014020000 +0000" stop="20261014030000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014030000 +0000" stop="20261014040000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014040000 +0000" stop="20261014050000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014050000 +0000" stop="20261014060000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014060000 +0000" stop="20261014070000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014070000 +0000" stop="20261014080000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014080000 +0000" stop="20261014090000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014090000 +0000" stop="20261014100000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014100000 +0000" stop="20261014110000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014110000 +0000" stop="20261014120000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014120000 +0000" stop="20261014130000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014130000 +0000" stop="20261014140000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014140000 +0000" stop="20261014150000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014150000 +0000" stop="20261014160000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014160000 +0000" stop="20261014170000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014170000 +0000" stop="20261014180000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014180000 +0000" stop="20261014190000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014190000 +0000" stop="20261014200000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014200000 +0000" stop="20261014210000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014210000 +0000" stop="20261014220000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014220000 +0000" stop="20261014230000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014230000 +0000" stop="20261015000000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261015000000 +0000" stop="20261015010000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261015010000 +0000" stop="20261015020000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261015020000 +0000" stop="20261015030000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261015030000 +0000" stop="20261015040000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261015040000 +0000" stop="20261015050000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261015050000 +0000" stop="20261015060000 +0000" channel="custom.enter10.bangla">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  <programme channel="custom.enter10.bangla" start="20261013090000 +0530" stop="20261013110100 +0530">
+    <title lang="en">Naagmani</title>
+    <desc lang="en">A shapeshifting serpent couple takes rebirth in order to complete their love story, unaware of a threat that has followed them.</desc>
+    <credits>
+      <actor>Aleya Ghosh</actor>
+    </credits>
+    <category lang="en">TV Show</category>
+    <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p28803841_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="custom.food.network" start="20261012043000 +0000" stop="20261012050000 +0000">
     <title lang="en">Teleshopping</title>
@@ -400410,13 +398891,6 @@ A Toyota MR2 makes power, but not the power it once had; Bogi and Faye check the
     <title lang="en">Kallaka Povathu Yaaru S07</title>
     <desc lang="en">A stand-up comedy show in which the contestants have to undergo several rounds to prove their talents to win the title.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_STAR_VIJAY_975911_15OCT070000_15OCT080000/images/LANDSCAPE_169/1756684870000_STARVIJAY_KallakaPovathuYaaruS07_975911.jpg" />
-  </programme>
-  <programme channel="custom.starsports2" start="20261012100000 +0530" stop="20261012101500 +0530">
-    <title lang="en">1st T20: India vs Afghanistan; T20 Cricket</title>
-    <desc lang="en">Professional players from different cricketing teams play in the Twenty20 format, competing against each other to win the match.</desc>
-    <category lang="en">Sport</category>
-    <category lang="en">Cricket</category>
-    <icon src="https://dtil.tmsimg.com/assets/p8414564_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="custom.starsports2" start="20261012101500 +0530" stop="20261012103000 +0530">
     <title lang="en">1st T20I: South Africa vs India; T20 Cricket</title>
