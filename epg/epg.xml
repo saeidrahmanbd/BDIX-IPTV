@@ -35729,27 +35729,9 @@ Celebrity contestants live in an isolated house and perform assigned tasks, in o
     <icon src="https://iptv-epg.org/images/9NworId_GihjLIgsWG7HlWTdl5_gLupMTFl2_7sUa-bfhKPmzvvVyvqbRsQpTHnRZjnfMoWoiLLGpW6sP-DeZhwYwdDLGPs4i4WysGD_by8B4RZYci26E_Wug_ED9w" />
     <title lang="en">Bigg Boss</title>
   </programme>
-  <programme channel="ColorsCineplex.in@SD" start="20261012045800 +0530" stop="20261012084200 +0530">
-    <title>Aakhri Chaal : Ab kaun bachega</title>
-    <desc>This is Film - Crime Category</desc>
-    <category>Film</category>
-    <category>Crime</category>
-    <date>2018</date>
-    <credits>
-      <director>Mani Ratnam</director>
-      <actor>T.R. Silambarasan</actor>
-      <actor>Arvind Swami</actor>
-      <actor>Vijay Sethupathi</actor>
-      <actor>Arun Vijay</actor>
-      <actor>Prakash Raj</actor>
-      <actor>Jayasudha</actor>
-      <actor>Jyotika</actor>
-      <actor>Aishwarya Rajesh</actor>
-      <actor>Aditi Rao Hydari</actor>
-      <producer>Mani Ratnam</producer>
-      <producer>A. Subaskaran</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p28888738_v_h10_ab.jpg?lock=1280x720" />
+  <programme start="20261012073200 +0530" stop="20261012085100 +0530" channel="ColorsCineplex.in@SD" catchup-id="100297614">
+    <title>DK Bose</title>
+    <desc>A series of events forces a corrupt police officer to turn over a new leaf.</desc>
   </programme>
   <programme start="20261012085100 +0530" stop="20261012111400 +0530" channel="ColorsCineplex.in@SD" catchup-id="100297611">
     <title>Chhota Bheem and the Curse of Damyaan</title>
@@ -77113,13 +77095,6 @@ A subject matter expert provides a comprehensive explanation of various concepts
     <desc lang="en">Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/4C7EF_LJbcflk6AFnBXi4ZxdQaWHl8zUryruRB8VvqFbGu9hCXGtQuEB6wVruAIz8Gng9daHyqqBH5ss8ocqqWv32DWQHWdVA-_Za2uYBHMJzLyjz_qm8VhWELx69w" />
     <title lang="en">Gopal Rahasya</title>
-  </programme>
-  <programme start="20261012004500 +0000" stop="20261012011000 +0000" channel="DDPunjabi.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Religious</category>
-    <desc lang="en">Bringing the best in television.</desc>
-    <icon src="https://iptv-epg.org/images/qFrfE_3U4UNJGAvqthrJq9owU14x5QjrSOt3PTjAjJkMA81NaO7C7qU5BQ0LU1uUCXkJncK9Fu0r1eNd2DwkthTwt6HyU7DR13KWg_tn9IysycNgE3KtNJMFJ49D" />
-    <title lang="en">Shabad Vichar</title>
   </programme>
   <programme start="20261012011000 +0000" stop="20261012013000 +0000" channel="DDPunjabi.in@SD">
     <category lang="en">Music</category>
@@ -206168,16 +206143,6 @@ Shalini lives in America but desires to relocate to India. Meanwhile, a girl fro
     <desc lang="en">A playlist of top Bollywood songs from the 2000s, created by many famous artists, is played one after another for a simple, enjoyable musical experience.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_PITAARA_2084437_15OCT070000_15OCT080000/images/LANDSCAPE_169_HD/Pitaara_BeatMode_2084437.jpg" />
   </programme>
-  <programme start="20261012062000 +0530" stop="20261012064000 +0530" channel="PocketFilms.in">
-    <title>The Apple</title>
-    <desc>In a small town near Delhi, two young boys from contrasting socioeconomic backgrounds happen to have a fateful encounter.</desc>
-    <category>Drama</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/288dc74659e03fa64871910969a7ec33.jpg?width=700" />
-    <rating>
-      <value>U/A-13</value>
-    </rating>
-  </programme>
   <programme start="20261012064000 +0530" stop="20261012065300 +0530" channel="PocketFilms.in">
     <title>The Last Act</title>
     <desc>Chitra, a method actor known for her ability to deliver realistic performances, starts preparing for her next role. However, things take a dark turn when the intensity of her character and her desire to excel in her work cause her to lose touch with reality.</desc>
@@ -227169,13 +227134,6 @@ Duggu Dumbbell proposes a triple-feat strength contest to Simmba, with the defea
     <title lang="en">Ramdhenu Hits</title>
     <desc lang="en">Groove to the beats of the latest chart-toppers and all-time favorites!</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_RAMDHENU_225052_15OCT070000_15OCT073000/images/LANDSCAPE_169/1756684870000_Ramdhenu_RamdhenuHits_225052.jpg" />
-  </programme>
-  <programme start="20261012005000 +0000" stop="20261012011000 +0000" channel="Rang.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Religious</category>
-    <desc lang="en">Various renowned artists including Akash Lahan, Sristi Sarma, Kristi Sarma and Mrinal Jyoti Mahanta perform the Radha-Krishna dance.</desc>
-    <icon src="https://iptv-epg.org/images/0rdyFxoG9oNUDiRaJeC1nRau332pz11rpJbSe7gjR0P1E3k9YN_Vn5Daz5uxHDaCAc1Z9pD95ytjF2JPi5iRfF4cMK3Nw0EBVB_pKyk88mM7DXYIzPULO4rt_DYmpw" />
-    <title lang="en">Ramdhenu</title>
   </programme>
   <programme start="20261012011000 +0000" stop="20261012013000 +0000" channel="Rang.in@SD">
     <category lang="en">TV Show</category>
@@ -251486,27 +251444,11 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <icon src="https://tv.assets.pressassociation.io/3a316425-b513-5459-84ae-8ce7fcac1681.jpg" />
     <episode-num system="onscreen">S2026 E32</episode-num>
   </programme>
-  <programme start="20261012063000 +0530" stop="20261012064000 +0530" channel="SongdewTV.in@SD">
+  <programme channel="SongdewTV.in@SD" start="20261012063500 +0530" stop="20261012064500 +0530">
     <title>Music Dil Se</title>
-    <desc>Featuring Music Journey of Indie Artists</desc>
+    <desc>Professional Indie music artists share their musical journey and career milestones that contributed to their success in life.</desc>
     <category>Music</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg?width=700" />
-    <episode-num system="onscreen">5</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261012064000 +0530" stop="20261012064500 +0530" channel="SongdewTV.in@SD">
-    <title>Songdew Fresh</title>
-    <desc>Latest Music</desc>
-    <category>Music</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg?width=700" />
-    <episode-num system="onscreen">11</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
+    <icon src="https://dtil.tmsimg.com/assets/p28411988_b_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="SongdewTV.in@SD" start="20261012064500 +0530" stop="20261012065000 +0530">
     <title>Songdew Fresh</title>
@@ -256316,44 +256258,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
       <actor>Simon Reeve</actor>
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p19353762_b_h10_ac.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="SonyKALHindi.us" start="20261012001700 +0000" stop="20261012010800 +0000">
-    <title lang="en">CID</title>
-    <desc lang="en">A group of officers who work for the Crime Investigation Department of the police force seek the help of a professional forensic expert and solve various criminal cases.</desc>
-    <credits>
-      <actor>Shivaji Satam</actor>
-      <actor>Aditya Srivastava</actor>
-      <actor>Dayanand Shetty</actor>
-      <director>Christabelle D'souza</director>
-      <director>Suleman Quadri</director>
-      <director>Udayan Pradeep Shukla</director>
-      <director>Santosh Shetty</director>
-      <director>Siba Mishra</director>
-      <director>Salil Singh</director>
-    </credits>
-    <date>1998</date>
-    <category lang="en">Crime drama</category>
-    <category lang="en">Thriller</category>
-    <icon src="http://dtil.tmsimg.com/assets/p28962935_b_h11_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Canadian Parental Rating">
-      <value>PG</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVPG</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>PG</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>A14</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>12</value>
-    </rating>
-    <rating system="방송통신심의위원회">
-      <value>19</value>
-    </rating>
   </programme>
   <programme channel="SonyKALHindi.us" start="20261012010800 +0000" stop="20261012013500 +0000">
     <title lang="en">Punyashlok Ahilya Bai</title>
@@ -288452,26 +288356,6 @@ Real-time match updates and highlights keep fans informed, providing instant acc
     <desc lang="en">Failed writer guides family through global disasters.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_WAH_1776351_13OCT031900_13OCT060000/images/LANDSCAPE_169/1734860977000_SonyWAH_2012_1776351.jpg" />
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261012063100 +0530" stop="20261012063800 +0530">
-    <title>Shin Chan</title>
-    <desc>Hiroshi and Shin-chan seek Nanako's assistance for cooking after Misae catches a fever. However, when Nanako's food is greatly appreciated, Misae gets angry.</desc>
-    <category>Children</category>
-    <category>Entertainment</category>
-    <credits>
-      <director>Mitsuru Hongo</director>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h8_ae.jpg?lock=1280x720" />
-  </programme>
   <programme channel="SonyYay.in@SD" start="20261012063800 +0530" stop="20261012064400 +0530">
     <title>Shin Chan</title>
     <desc>Hiroshi decides to record the activities of the children to make home videos. However, the biased attention to Himawari makes Shin-chan feel excluded.</desc>
@@ -297485,36 +297369,41 @@ The host sheds light on real-life criminal cases and crime stories while giving 
     <desc lang="en">Rahul, a married man, goes to a party with his family and gets drunk while interacting with a beautiful woman. The next morning, he tries to retrace the night's events to determine what went down.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_STAR_GOLD_HD_960871_13OCT032700_13OCT060000/images/LANDSCAPE_169_HD/STARGOLDHD_RaatGayiBaatGayi_960871.jpg" />
   </programme>
-  <programme start="20261012051000 +0530" stop="20261012064000 +0530" channel="StarGold2.in@HD">
-    <title>Rx Karthik</title>
-    <desc>Karthik, a young man, always distances himself from family and emotional attachments. However, his life takes an unusual turn after he meets Anjali in India.</desc>
-    <category>Action</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/65fed50b938bcbfc7aca8eadc7b7f89b.jpg?width=700" />
+  <programme channel="StarGold2.in@HD" start="20261012063600 +0530" stop="20261012083400 +0530">
+    <title>Rajendra Ka Raj</title>
+    <desc>The tragic accident turns the life of Raju, a man who was born with money, upside down. He becomes a laughingstock of the village and must prove himself.</desc>
+    <category>Film</category>
+    <category>Drama</category>
+    <date>2021</date>
     <credits>
-      <director>Rishi</director>
-      <actor>Karthikeya Gummakonda</actor>
-      <actor>Murali Sharma</actor>
-      <actor>Gollapudi Marthi Rao</actor>
-      <actor>Simrat Kaur</actor>
-      <actor>Jhansi</actor>
-      <actor>Prudhvi Raj</actor>
-      <actor>Pragathi</actor>
-      <actor>Sumithra</actor>
+      <actor>Raj Tarun</actor>
+      <actor>Kashish Khan</actor>
+      <actor>Posani Krishna Murali</actor>
+      <actor>Aadukalam Naren</actor>
+      <actor>Ravi Krishna</actor>
     </credits>
-    <rating>
-      <value>U</value>
-    </rating>
+    <icon src="https://dtil.tmsimg.com/assets/p25888568_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme channel="StarGold2.in@HD" start="20261012064000 +0530" stop="20261012083700 +0530">
-    <title lang="en">Rajendra Ka Raj</title>
-    <desc lang="en">The wealthy heir faces village scornand embarks on a journey to earn respect and redemption.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_STAR_GOLD_2_HD_1649172_12OCT064000_12OCT083700/images/LANDSCAPE_169_HD/StarGold2HD_RajendraKaRaj_1649172.jpg" />
-  </programme>
-  <programme channel="StarGold2.in@HD" start="20261012083700 +0530" stop="20261012111700 +0530">
-    <title lang="en">Lal Singh Chaddha</title>
-    <desc lang="en">The movie name is yet to be announced by the channel.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_STAR_GOLD_2_HD_2048615_12OCT083700_12OCT111700/images/LANDSCAPE_169_HD/StarGold2HD_LalSinghChaddha_2048615.jpg" />
+  <programme channel="StarGold2.in@HD" start="20261012083400 +0530" stop="20261012111700 +0530">
+    <title>Laal Singh Chaddha</title>
+    <desc>Laal Singh Chaddha, a man with a disability, recounts the early years of his life to a passenger on a train. Now, his only wish is to be reunited with his childhood sweetheart, Rupa.</desc>
+    <category>Film</category>
+    <category>Comedy</category>
+    <date>2022</date>
+    <credits>
+      <director>Advait Chandan</director>
+      <actor>Aamir Khan</actor>
+      <actor>Kareena Kapoor</actor>
+      <actor>Mona Singh</actor>
+      <actor>Naga Chaitanya Akkineni</actor>
+      <actor>Manav Vij</actor>
+      <actor>Abhinay Raj Singh</actor>
+      <actor>Teetu Verma</actor>
+      <actor>Ahmad Ibn Umar</actor>
+      <producer>Aamir Khan</producer>
+      <producer>Kiran Rao</producer>
+    </credits>
+    <icon src="https://dtil.tmsimg.com/assets/p20824854_v_h8_af.jpg?lock=1280x720" />
   </programme>
   <programme channel="StarGold2.in@HD" start="20261012111700 +0530" stop="20261012133700 +0530">
     <title>Awara Paagal Deewana</title>
@@ -302545,7 +302434,7 @@ The old and new heroines of the channel compete against each other in fun activi
     <category lang="en">Action</category>
     <icon src="https://dtil.tmsimg.com/assets/p24790955_b_h9_ac.jpg?lock=880x660" />
   </programme>
-  <programme channel="StarMoviesSelect.in@HD" start="20261012051800 +0530" stop="20261012063900 +0530">
+  <programme channel="StarMoviesSelect.in@HD" start="20261012052600 +0530" stop="20261012064500 +0530">
     <title>Free Fall</title>
     <desc>Although he has a girlfriend and a baby on the way, a police officer unexpectedly falls in love with his male colleague.</desc>
     <category>Film</category>
@@ -302569,7 +302458,7 @@ The old and new heroines of the channel compete against each other in fun activi
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p11208073_v_h10_ab.jpg?lock=1280x720" />
   </programme>
-  <programme channel="StarMoviesSelect.in@HD" start="20261012063900 +0530" stop="20261012081400 +0530">
+  <programme channel="StarMoviesSelect.in@HD" start="20261012064500 +0530" stop="20261012082100 +0530">
     <title>George and the Dragon</title>
     <desc>After witnessing extreme bloodshed, Knight George decides to forsake war and seek redemption. However, he is forced to get back to his old ways when he sets out to rescue King Edgar's daughter.</desc>
     <category>Film</category>
@@ -333031,16 +332920,6 @@ Jen and Tim's fight escalates and everyone is caught in the crossfire; Cortney l
     <title lang="en">Mangala Alati</title>
     <desc lang="en">Mangala Alati presents the sacred Mangala Alati, featuring prayers, rituals, and devotional moments that create a serene atmosphere of faith, hope, and positivity each day.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_TARANG_113152_15OCT063000_15OCT073000/images/LANDSCAPE_169/1790250252000_TARANG_MangalaAlati_113152.jpg" />
-  </programme>
-  <programme start="20261012062700 +0530" stop="20261012063900 +0530" channel="TeluguOne.in@HD">
-    <title>Markandeya Puranam By Vaddiparthi Padmakar</title>
-    <desc>Markandeya Puranam By Vaddiparthi Padmakar</desc>
-    <category>Entertainment</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/983dee4db1cf8c7f2f42f4a5ced6dc52.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
   </programme>
   <programme start="20261012063900 +0530" stop="20261012064900 +0530" channel="TeluguOne.in@HD">
     <title>Markandeya Puranam By Vaddiparthi Padmakar</title>
@@ -438595,29 +438474,6 @@ A Toyota MR2 makes power, but not the power it once had; Bogi and Faye check the
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012063500 +0530" stop="20261012063800 +0530" channel="custom.duck.tv">
-    <title>Bathroom</title>
-    <desc>The bathtub is a splashy playground to a roly-poly elephant and a tiny yellow duckling.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/78d99818db493cf5dabf717dcb643993.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012063800 +0530" stop="20261012064200 +0530" channel="custom.duck.tv">
-    <title>Mini Fairy Tales</title>
-    <desc>A comprehensive compilation of short stories about the most popular fairies, princesses, elves and dragons from fairytales.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/60fd244d1c3c283d3ad27a7535ee37fb.jpg?width=700" />
-    <credits>
-      <director>Roza Györffy</director>
-    </credits>
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261012064200 +0530" stop="20261012064400 +0530" channel="custom.duck.tv">
     <title>Enlightment Corner</title>
     <desc>Colourful characters demonstrate how to interact with various objects in the environment and build useful things in an amusing manner.</desc>
@@ -507814,14 +507670,6 @@ Various artists re-enact the bravest escapes from captivity that prominent perso
     <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
       <value>12</value>
     </rating>
-  </programme>
-  <programme channel="custom.nicktoons" start="20261012004500 +0000" stop="20261012011000 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">Dave, Simon and Theodore are worried for Alvin's safety in 'The Karate Kidder', then in 'Playing Favourites', Alvin and Theo challenge Simon to a go-cart race.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/1ec39c90-4e93-4f04-936a-d6dbc1c5b86d/16-9" />
-    <episode-num system="xmltv_ns">2.0.</episode-num>
   </programme>
   <programme channel="custom.nicktoons" start="20261012011000 +0000" stop="20261012012000 +0000">
     <title lang="en">ALVINNN!!! and The Chipmunks</title>
@@ -588556,26 +588404,6 @@ Five noble brothers unite in a righteous war against greed and corruption.</desc
     <episode-num>S1 E118</episode-num>
     <icon src="https://iptv-epg.org/images/BsY4a48U4F6Ux0ekqJp32nbSIKydn2yWqhoXD_qsrXU5IUKyxDKMbJ9qclnmwvuV95MDVzGs89EhP3Algb5JUG-9SI9D9QPHBFgoqka1JH0vL93oh9exerC1yOB0GQ" />
     <title lang="en">Hastinapur Ke Veer</title>
-  </programme>
-  <programme channel="hmair.sonyyay" start="20261012063100 +0530" stop="20261012063800 +0530">
-    <title>Shin Chan</title>
-    <desc>Hiroshi and Shin-chan seek Nanako's assistance for cooking after Misae catches a fever. However, when Nanako's food is greatly appreciated, Misae gets angry.</desc>
-    <category>Children</category>
-    <category>Entertainment</category>
-    <credits>
-      <director>Mitsuru Hongo</director>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h8_ae.jpg?lock=1280x720" />
   </programme>
   <programme channel="hmair.sonyyay" start="20261012063800 +0530" stop="20261012064400 +0530">
     <title>Shin Chan</title>
