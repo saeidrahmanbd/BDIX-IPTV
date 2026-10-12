@@ -197,7 +197,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2liCa21
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0XjZtdzPIDWF-ynTdHAJlp
 #EXTINF:-1 xui-id="180772" tvg-id="ShemarooJosh.in@SD" tvg-name="Shemaroo Josh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shemaroo-josh.png" tvg-chno="96" channel-id="ShemarooJosh.in@SD" group-title="Indian Movies",Shemaroo Josh
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1v1FO4_VgestrWIsF26pGp
-#EXTINF:-1 xui-id="180922" tvg-id="custom.sine.plus" tvg-name="Sine Plus" tvg-chno="97" channel-id="custom.sine.plus" group-title="Indian Movies",Sine Plus
+#EXTINF:-1 xui-id="180922" tvg-id="custom.sine.plus" tvg-name="Sine Plus" tvg-chno="97" channel-id="custom.sine.plus" group-title="Indian Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-sine-plus-a3f56638.svg",Sine Plus
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-17w62QoUqnJMZh0y98VRRu
 #EXTINF:-1 xui-id="18826" tvg-id="SonyMax.in@SD" tvg-name="Sony Max HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/sony-max-1080p-6f6723257b.png" tvg-chno="98" channel-id="SonyMax.in@SD" group-title="Indian Movies",Sony Max HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1fUyFimCZrZ2a7m57B8snF
@@ -255,7 +255,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1t8878y
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-39iDL9it2toZkvrxMtUeza
 #EXTINF:-1 xui-id="180786" tvg-id="custom.zoommusic" tvg-name="Zoom Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-music.png" tvg-chno="125" channel-id="custom.zoommusic" group-title="Indian Music",Zoom Music
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-04SJxetb1biV1JfYixZwpT
-#EXTINF:-1 xui-id="180701" tvg-id="custom.10.tv" tvg-name="10 TV" tvg-chno="126" channel-id="custom.10.tv" group-title="Indian Entertainment",10 TV
+#EXTINF:-1 xui-id="180701" tvg-id="custom.10.tv" tvg-name="10 TV" tvg-chno="126" channel-id="custom.10.tv" group-title="Indian Entertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-10-tv-096e02b1.svg",10 TV
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1cmA2GoAPfx9IIBYYipSa2
 #EXTINF:-1 xui-id="600" tvg-id="custom.aaj.tak" tvg-name="Aaj Tak HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aaj-tak-hd.png" tvg-chno="127" channel-id="custom.aaj.tak" group-title="Indian Entertainment",Aaj Tak HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3TVuL-rttFPcnt75nyvFd6
@@ -287,7 +287,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3xL6AjS
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0FnHIrD-qTWpGeGgmj8AIT
 #EXTINF:-1 xui-id="179416" tvg-id="custom.epic" tvg-name="Epic" tvg-chno="141" channel-id="custom.epic" group-title="Indian Entertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-epic.png",Epic
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-16I0_s94AvktCzLRm17SRj
-#EXTINF:-1 xui-id="180745" tvg-id="custom.global.panjab" tvg-name="Global Panjab" tvg-chno="142" channel-id="custom.global.panjab" group-title="Indian Entertainment",Global Panjab
+#EXTINF:-1 xui-id="180745" tvg-id="custom.global.panjab" tvg-name="Global Panjab" tvg-chno="142" channel-id="custom.global.panjab" group-title="Indian Entertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-global-panjab-ce10594c3e.png",Global Panjab
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-31_YqBR5TnB-wFiprfOx6w
 #EXTINF:-1 xui-id="601" tvg-id="custom.good.news.today" tvg-name="Good News Today" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/good-news-today.png" tvg-chno="143" channel-id="custom.good.news.today" group-title="Indian Entertainment",Good News Today
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1pW9ZjirtQn_Evzm6hdwke
@@ -353,7 +353,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2TDstjQ
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2_IGqObZauTYgDVin4jwOF
 #EXTINF:-1 xui-id="18636" tvg-id="custom.arirang.tv" tvg-name="Arirang TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/arirang-cd34632359.png" tvg-chno="174" channel-id="custom.arirang.tv" group-title="International",Arirang TV
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-20Y9SIsspczs1p4ka0B-US
-#EXTINF:-1 xui-id="180827" tvg-id="custom.asia.flix.tv" tvg-name="Asia Flix TV" tvg-chno="175" channel-id="custom.asia.flix.tv" group-title="International",Asia Flix TV
+#EXTINF:-1 xui-id="180827" tvg-id="custom.asia.flix.tv" tvg-name="Asia Flix TV" tvg-chno="175" channel-id="custom.asia.flix.tv" group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-asia-flix-tv-0725f354.svg",Asia Flix TV
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-23EJJOfQ6WOnIJV0GyEmZp
 #EXTINF:-1 xui-id="180828" tvg-id="custom.aurora.media.flims" tvg-name="Aurora Media Flims" tvg-chno="176" channel-id="custom.aurora.media.flims" group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-aurora-media-flims-a41205f51a.png",Aurora Media Flims
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0lgypuPtg4HLcDYWT_aXgY
@@ -365,7 +365,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2t3s2di
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3cQoruuK0MUge0-g9rNqC5
 #EXTINF:-1 xui-id="3517" tvg-id="BBCNews.uk" tvg-name="BBC News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-news.png" tvg-chno="180" channel-id="BBCNews.uk" group-title="International",BBC News
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Lwua8Qjjl93_tM58o0RDc
-#EXTINF:-1 xui-id="180964" tvg-id="custom.blockbaster" tvg-name="Blockbaster HD" tvg-chno="181" channel-id="custom.blockbaster" group-title="International",Blockbaster HD
+#EXTINF:-1 xui-id="180964" tvg-id="custom.blockbaster" tvg-name="Blockbaster HD" tvg-chno="181" channel-id="custom.blockbaster" group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-blockbaster-8b0f532d.svg",Blockbaster HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-314jw_vzp2KUEwpbSpW-6f
 #EXTINF:-1 xui-id="18597" tvg-id="custom.canada.one" tvg-name="Canada One" tvg-chno="182" channel-id="custom.canada.one" group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/canada-one.png",Canada One
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0HXTpj1HzsnUMg3EJkR9to
@@ -383,7 +383,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1B-4Gnp
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3psrRFLFo78GWdbNGDGqhh
 #EXTINF:-1 xui-id="179423" tvg-id="DDTripura.in@SD" tvg-name="DD Tripura" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-tripura.png" tvg-chno="189" channel-id="DDTripura.in@SD" group-title="International",DD Tripura
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-32IP2J1IRVGgXMygsky0BT
-#EXTINF:-1 xui-id="180060" tvg-id="custom.digital.fashion" tvg-name="Digital Fashion" tvg-chno="190" channel-id="custom.digital.fashion" group-title="International",Digital Fashion
+#EXTINF:-1 xui-id="180060" tvg-id="custom.digital.fashion" tvg-name="Digital Fashion" tvg-chno="190" channel-id="custom.digital.fashion" group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-digital-fashion-7f86a23d.svg",Digital Fashion
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0WEOlWl7Yejp0SLe-r_yP3
 #EXTINF:-1 xui-id="179379" tvg-id="DWNews.de" tvg-name="Dw News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dw-news.jpg" tvg-chno="191" channel-id="DWNews.de" group-title="International",Dw News
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1swegU0q-rHVFfuNELVN9d
@@ -393,7 +393,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1fDEbn7
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0mClnrxUnxzHe1dJGb1viN
 #EXTINF:-1 xui-id="180902" tvg-id="custom.fail.army" tvg-name="Fail Army" tvg-chno="194" channel-id="custom.fail.army" group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-fail-army.png",Fail Army
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1VZR8F8B63yMreF2_thtOT
-#EXTINF:-1 xui-id="180036" tvg-id="custom.fashion.1" tvg-name="Fashion 1" tvg-chno="195" channel-id="custom.fashion.1" group-title="International",Fashion 1
+#EXTINF:-1 xui-id="180036" tvg-id="custom.fashion.1" tvg-name="Fashion 1" tvg-chno="195" channel-id="custom.fashion.1" group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-fashion-1-85fe46a6.svg",Fashion 1
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-15KEWZgS6HdePSsY2b5ojs
 #EXTINF:-1 xui-id="180841" tvg-id="FilmUALive.ua" tvg-name="Filmua Live" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/filmua-live-b70299cedc.png" tvg-chno="196" channel-id="FilmUALive.ua" group-title="International",Filmua Live
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0uvsx_a8LdZXlZC2zirM7w
@@ -447,7 +447,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3HeFg86
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3-86WxFitbXRUVMh8fBZEQ
 #EXTINF:-1 xui-id="535" tvg-id="SonyPix.in" tvg-name="Sony Pix HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-pix-hd.png" tvg-chno="221" channel-id="SonyPix.in" group-title="International",Sony Pix HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2Ir1mnjvLu_Yxh1jcXbQnU
-#EXTINF:-1 xui-id="180916" tvg-id="custom.star.cinema" tvg-name="Star Cinema" tvg-chno="222" channel-id="custom.star.cinema" group-title="International",Star Cinema
+#EXTINF:-1 xui-id="180916" tvg-id="custom.star.cinema" tvg-name="Star Cinema" tvg-chno="222" channel-id="custom.star.cinema" group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-star-cinema-cdb7c42d.svg",Star Cinema
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3SMrZwCSHai1GR_egxUSbp
 #EXTINF:-1 xui-id="180915" tvg-id="custom.star.family" tvg-name="Star Family" tvg-chno="223" channel-id="custom.star.family" group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-star-family.png",Star Family
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-38HHkfQKvvnQkajUg4ZY0b
@@ -465,15 +465,15 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2eWTc8L
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2NaG2_mKQiNeSypI9BbqPx
 #EXTINF:-1 xui-id="180896" tvg-id="custom.viju.tv1000.action" tvg-name="Viju Tv1000 Action" tvg-chno="230" channel-id="custom.viju.tv1000.action" group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-viju-tv1000-action.png",Viju Tv1000 Action
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0Nirbw1-MDmut0SMACPwp4
-#EXTINF:-1 xui-id="180894" tvg-id="custom.whiples.cinema" tvg-name="Whiples Cinema" tvg-chno="231" channel-id="custom.whiples.cinema" group-title="International",Whiples Cinema
+#EXTINF:-1 xui-id="180894" tvg-id="custom.whiples.cinema" tvg-name="Whiples Cinema" tvg-chno="231" channel-id="custom.whiples.cinema" group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-whiples-cinema-d2c304b5.svg",Whiples Cinema
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2No_1-XYEwAJW62InYCW_a
-#EXTINF:-1 xui-id="180893" tvg-id="custom.xrema.accion" tvg-name="Xrema Accion" tvg-chno="232" channel-id="custom.xrema.accion" group-title="International",Xrema Accion
+#EXTINF:-1 xui-id="180893" tvg-id="custom.xrema.accion" tvg-name="Xrema Accion" tvg-chno="232" channel-id="custom.xrema.accion" group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-xrema-accion-60d30535.svg",Xrema Accion
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Hh20d-Nnnd4-H_wnL1GVw
 #EXTINF:-1 xui-id="188428" tvg-id="custom.ytv" tvg-name="Ytv" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ytv.png" tvg-chno="233" channel-id="custom.ytv" group-title="International",Ytv
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3dsOVo6n1e94Pq4kDt88op
 #EXTINF:-1 xui-id="161684" tvg-id="new.zee.cafe" tvg-name="Zee Cafe HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cafe.png" tvg-chno="234" channel-id="new.zee.cafe" group-title="International",Zee Cafe HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1QbSFiOijdwQEyvGDjHg-D
-#EXTINF:-1 xui-id="2322" tvg-id="custom.adventure" tvg-name="Adventure 4k" tvg-chno="235" channel-id="custom.adventure" group-title="Documentary & Wildlife",Adventure 4k
+#EXTINF:-1 xui-id="2322" tvg-id="custom.adventure" tvg-name="Adventure 4k" tvg-chno="235" channel-id="custom.adventure" group-title="Documentary & Wildlife" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-adventure-216a45b8.svg",Adventure 4k
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2nakzXWLqTyDwPmmAvUxeT
 #EXTINF:-1 xui-id="188405" tvg-id="custom.adventure.earth" tvg-name="Adventure Earth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/adventure-earth.png" tvg-chno="236" channel-id="custom.adventure.earth" group-title="Documentary & Wildlife",Adventure Earth
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2tYwNtiRLwdbA_z4kueySE
@@ -539,7 +539,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2DWEcPW
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2tqiLUQm3PoLJ7sT7jN6oE
 #EXTINF:-1 xui-id="180820" tvg-id="custom.balapan" tvg-name="Balapan" tvg-chno="267" channel-id="custom.balapan" group-title="Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-balapan.png",Balapan
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3SzzS98GuplAOXYgdxiwiN
-#EXTINF:-1 xui-id="180821" tvg-id="custom.banijoy.mr.been" tvg-name="Banijoy Mr Been" tvg-chno="268" channel-id="custom.banijoy.mr.been" group-title="Kids",Banijoy Mr Been
+#EXTINF:-1 xui-id="180821" tvg-id="custom.banijoy.mr.been" tvg-name="Banijoy Mr Been" tvg-chno="268" channel-id="custom.banijoy.mr.been" group-title="Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-banijoy-mr-been-9f824eca.svg",Banijoy Mr Been
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1HpBOEJkLyCyrR-Yd3Bn6k
 #EXTINF:-1 xui-id="180822" tvg-id="custom.be.joy.kids" tvg-name="Be.joy Kids" tvg-chno="269" channel-id="custom.be.joy.kids" group-title="Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-be-joy-kids.png",Be.joy Kids
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0xJDGtLSHh4V9W3ssRnqKm
@@ -547,7 +547,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0xJDGtL
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3P-Tj235HDDlFTHKEj2cDx
 #EXTINF:-1 xui-id="180823" tvg-id="custom.boomerang.uk" tvg-name="Boomerang UK" tvg-chno="271" channel-id="custom.boomerang.uk" group-title="Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-boomerang-uk.png",Boomerang UK
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-20z-WE7dBowOcN-Buyl5rK
-#EXTINF:-1 xui-id="180914" tvg-id="custom.cartoon.channel" tvg-name="Cartoon Channel" tvg-chno="272" channel-id="custom.cartoon.channel" group-title="Kids",Cartoon Channel
+#EXTINF:-1 xui-id="180914" tvg-id="custom.cartoon.channel" tvg-name="Cartoon Channel" tvg-chno="272" channel-id="custom.cartoon.channel" group-title="Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-cartoon-channel-e082583d.svg",Cartoon Channel
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1I-8nBDaY639kISuw9h4Si
 #EXTINF:-1 xui-id="681" tvg-id="CartoonNetwork.uk" tvg-name="Cartoon Network HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network-hd.png" tvg-chno="273" channel-id="CartoonNetwork.uk" group-title="Kids",Cartoon Network HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3HOz4Xo27HAYsnlBF2QGEG
@@ -593,9 +593,9 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1nSwE8o
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2bs1r4LwNqfODeQmwpFaJA
 #EXTINF:-1 xui-id="188385" tvg-id="custom.teen.nick" tvg-name="Teen Nick" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick.png" tvg-chno="294" channel-id="custom.teen.nick" group-title="Kids",Teen Nick
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ZmqlMhCYazdYK9190afbV
-#EXTINF:-1 xui-id="158420" tvg-id="custom.tom.and.jerry.24.7" tvg-name="Tom & Jerry 24/7" tvg-chno="295" channel-id="custom.tom.and.jerry.24.7" group-title="Kids",Tom & Jerry 24/7
+#EXTINF:-1 xui-id="158420" tvg-id="custom.tom.and.jerry.24.7" tvg-name="Tom & Jerry 24/7" tvg-chno="295" channel-id="custom.tom.and.jerry.24.7" group-title="Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-tom-and-jerry-24-7-d133a72e.svg",Tom & Jerry 24/7
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-17XcTxyiubhWkDx_Q_tDaC
-#EXTINF:-1 xui-id="179504" tvg-id="custom.tom.and.jerry.tv" tvg-name="Tom & Jerry TV" tvg-chno="296" channel-id="custom.tom.and.jerry.tv" group-title="Kids",Tom & Jerry TV
+#EXTINF:-1 xui-id="179504" tvg-id="custom.tom.and.jerry.tv" tvg-name="Tom & Jerry TV" tvg-chno="296" channel-id="custom.tom.and.jerry.tv" group-title="Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-tom-and-jerry-tv-6dcfd0fa.svg",Tom & Jerry TV
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0o4xh3SzrIIhxKFhpoe_32
 #EXTINF:-1 xui-id="180784" tvg-id="custom.wow.kids" tvg-name="Wow Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wow-kidz.png" tvg-chno="297" channel-id="custom.wow.kids" group-title="Kids",Wow Kids
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3XH5Ux12Ki4r9LGDqrMhYq
@@ -645,7 +645,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3ma-jWn
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3mHb5Y1boZy_gnLDvC88dy
 #EXTINF:-1 xui-id="142649" tvg-id="BEIN1HD" tvg-name="beIN Sports Extra HD" tvg-chno="320" channel-id="BEIN1HD" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-bein-sports-extra-79815e9178.png",beIN Sports Extra HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2bpFTH3fZ6Q2O987CQlDm1
-#EXTINF:-1 xui-id="180859" tvg-id="custom.bein.sports.turkiye" tvg-name="beIN Sports Turkiye" tvg-chno="321" channel-id="custom.bein.sports.turkiye" group-title="Sports",beIN Sports Turkiye
+#EXTINF:-1 xui-id="180859" tvg-id="custom.bein.sports.turkiye" tvg-name="beIN Sports Turkiye" tvg-chno="321" channel-id="custom.bein.sports.turkiye" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-bein-sports-turkiye-151340f2.svg",beIN Sports Turkiye
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3bsHDFS9RwuxQ4HfeTdi15
 #EXTINF:-1 xui-id="179945" tvg-id="beINSPORTSXTRA.us" tvg-name="beIN Sports Xtra" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-xtra.png" tvg-chno="322" channel-id="beINSPORTSXTRA.us" group-title="Sports",beIN Sports Xtra
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0WWcx8Go2n63R2MvFRLN6Q
@@ -671,11 +671,11 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-056rbP9
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0CRBf_k-hkpFrY-yi8hcmU
 #EXTINF:-1 xui-id="189105" tvg-id="ESPNCM" tvg-name="ESPN Vivo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn.png" tvg-chno="333" channel-id="ESPNCM" group-title="Sports",ESPN Vivo
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1FsH6CvA6UrkObZj85nLdM
-#EXTINF:-1 xui-id="179950" tvg-id="custom.espn5" tvg-name="Espn5 HD" tvg-chno="334" channel-id="custom.espn5" group-title="Sports",Espn5 HD
+#EXTINF:-1 xui-id="179950" tvg-id="custom.espn5" tvg-name="Espn5 HD" tvg-chno="334" channel-id="custom.espn5" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-espn5-2e7e33ee.svg",Espn5 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0NJtGgzX1oybHTBJF-fyj0
 #EXTINF:-1 xui-id="180868" tvg-id="custom.fifa" tvg-name="Fifa+" tvg-chno="335" channel-id="custom.fifa" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-fifa-plus.svg",Fifa+
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0CEObGLrPx_f3YYdTjLWgu
-#EXTINF:-1 xui-id="180870" tvg-id="custom.fight.24.7" tvg-name="Fight 24/7" tvg-chno="336" channel-id="custom.fight.24.7" group-title="Sports",Fight 24/7
+#EXTINF:-1 xui-id="180870" tvg-id="custom.fight.24.7" tvg-name="Fight 24/7" tvg-chno="336" channel-id="custom.fight.24.7" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-fight-24-7-74714466.svg",Fight 24/7
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Er7HSyrhjjkT0_JPUB8VD
 #EXTINF:-1 xui-id="180869" tvg-id="custom.fight.network" tvg-name="Fight Network" tvg-chno="337" channel-id="custom.fight.network" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fight-network.png",Fight Network
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2RyGL1yp-j7dDDgSem1nBv
@@ -691,7 +691,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2ZbevsO
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0S2ThYVpuLOAY_THcuoJUv
 #EXTINF:-1 xui-id="180879" tvg-id="custom.golf.channel" tvg-name="Golf Channel" tvg-chno="343" channel-id="custom.golf.channel" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-golf-channel.png",Golf Channel
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3oH6suI_9Z3Vjnhu7-Hme2
-#EXTINF:-1 xui-id="180882" tvg-id="custom.htv.sport" tvg-name="Htv Sport" tvg-chno="344" channel-id="custom.htv.sport" group-title="Sports",Htv Sport
+#EXTINF:-1 xui-id="180882" tvg-id="custom.htv.sport" tvg-name="Htv Sport" tvg-chno="344" channel-id="custom.htv.sport" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-htv-sport-50f30a8c.svg",Htv Sport
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2rshOeZ4A6NnkHMxXNyQTA
 #EXTINF:-1 xui-id="3826" tvg-id="DD Sports.in" tvg-name="In DD Sports HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-sports-fb997548.png" tvg-chno="345" channel-id="DD Sports.in" group-title="Sports",In DD Sports HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1dQJZe0w1NT2uJUVWm1mJV
@@ -721,7 +721,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3kqTWRf
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3KpSeepH7l2X0Y-swy4anL
 #EXTINF:-1 xui-id="180884" tvg-id="custom.jordan.sport" tvg-name="Jordan Sport" tvg-chno="358" channel-id="custom.jordan.sport" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-jordan-sport.png",Jordan Sport
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3iIEe4hnPX5M1nbvjrqpHT
-#EXTINF:-1 xui-id="180001" tvg-id="custom.kiev.sport" tvg-name="Kiev Sport HD" tvg-chno="359" channel-id="custom.kiev.sport" group-title="Sports",Kiev Sport HD
+#EXTINF:-1 xui-id="180001" tvg-id="custom.kiev.sport" tvg-name="Kiev Sport HD" tvg-chno="359" channel-id="custom.kiev.sport" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-kiev-sport-f64c4a32.svg",Kiev Sport HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Gk5hyXRzhDt4TOifjDZd_
 #EXTINF:-1 xui-id="179396" tvg-id="custom.ktv.sport.plus" tvg-name="Ktv Sport Plus" tvg-chno="360" channel-id="custom.ktv.sport.plus" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ktv-sport-plus.png",Ktv Sport Plus
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1DLMbY5FlJOvmxnC9F30LC
@@ -775,9 +775,9 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-10GToTf
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3CmJznHRvImhZHb7ueSjgJ
 #EXTINF:-1 xui-id="184945" tvg-id="SSPOFB" tvg-name="Sky Sports Laliga" tvg-chno="385" channel-id="SSPOFB" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-sky-sports-laliga.png",Sky Sports Laliga
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-11A-xLEaaniJNW9_8HOKwO
-#EXTINF:-1 xui-id="179976" tvg-id="custom.sport.1" tvg-name="Sport 1 HD" tvg-chno="386" channel-id="custom.sport.1" group-title="Sports",Sport 1 HD
+#EXTINF:-1 xui-id="179976" tvg-id="custom.sport.1" tvg-name="Sport 1 HD" tvg-chno="386" channel-id="custom.sport.1" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-sport-1-cbb0399a.svg",Sport 1 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2RfXvx-d8FT25Xn7p9hCVg
-#EXTINF:-1 xui-id="179977" tvg-id="custom.sport.2" tvg-name="Sport 2 HD" tvg-chno="387" channel-id="custom.sport.2" group-title="Sports",Sport 2 HD
+#EXTINF:-1 xui-id="179977" tvg-id="custom.sport.2" tvg-name="Sport 2 HD" tvg-chno="387" channel-id="custom.sport.2" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-sport-2-7bf5b3e6.svg",Sport 2 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1rLAXdTsGRL8CC4KfulOam
 #EXTINF:-1 xui-id="185590" tvg-id="custom.sports.1" tvg-name="Sports 1" tvg-chno="388" channel-id="custom.sports.1" group-title="Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-sports-1-02ede86d6d.png",Sports 1
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2AlvCJTV3Z-mXm8UTomlo2
@@ -867,7 +867,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0ybixvH
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-23XSpIqCDvnAahDur9L8z9
 #EXTINF:-1 xui-id="41690" tvg-id="custom.adt.fm" tvg-name="Adt FM" tvg-chno="431" channel-id="custom.adt.fm" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-adt-fm.webp",Adt FM
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1uVHk05KuGLq1mVb0dIruH
-#EXTINF:-1 xui-id="41704" tvg-id="custom.bangla.hits" tvg-name="Bangla Hits" tvg-chno="432" channel-id="custom.bangla.hits" group-title="Radio",Bangla Hits
+#EXTINF:-1 xui-id="41704" tvg-id="custom.bangla.hits" tvg-name="Bangla Hits" tvg-chno="432" channel-id="custom.bangla.hits" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-bangla-hits-4938e078.svg",Bangla Hits
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0Jg8_jjdK15mhqqu-55UOc
 #EXTINF:-1 xui-id="188458" tvg-id="custom.bangla.radio" tvg-name="Bangla Radio" tvg-chno="433" channel-id="custom.bangla.radio" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-bangla-radio.png",Bangla Radio
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3KKA_iDgATD-XPLskiwNE3
@@ -875,15 +875,15 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3KKA_iD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36a5vNE9EszvYSMUCr-TVw
 #EXTINF:-1 xui-id="41671" tvg-id="custom.dhaka.fm.90.4" tvg-name="Dhaka FM 90.4" tvg-chno="435" channel-id="custom.dhaka.fm.90.4" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-dhaka-fm-90-4.png",Dhaka FM 90.4
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1gIbpQHGjbjyIrnlTs0zv2
-#EXTINF:-1 xui-id="41689" tvg-id="custom.doyel.radio" tvg-name="Doyel Radio" tvg-chno="436" channel-id="custom.doyel.radio" group-title="Radio",Doyel Radio
+#EXTINF:-1 xui-id="41689" tvg-id="custom.doyel.radio" tvg-name="Doyel Radio" tvg-chno="436" channel-id="custom.doyel.radio" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-doyel-radio-793a1b6a.svg",Doyel Radio
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0-edLus17RmZH1iSNlDt56
 #EXTINF:-1 xui-id="41688" tvg-id="custom.dream.music.prime" tvg-name="Dream Music Prime" tvg-chno="437" channel-id="custom.dream.music.prime" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-dream-music-prime-6e77c3eeda.avif",Dream Music Prime
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3e848rM9rezuMk0wwlIaOU
 #EXTINF:-1 xui-id="41678" tvg-id="custom.love.gold.bangla" tvg-name="Love Gold Bangla" tvg-chno="438" channel-id="custom.love.gold.bangla" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-love-gold-bangla.png",Love Gold Bangla
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0RcI-Pk8Y1g3CYtoVzscEX
-#EXTINF:-1 xui-id="41692" tvg-id="custom.magical.blade.fm" tvg-name="Magical Blade FM" tvg-chno="439" channel-id="custom.magical.blade.fm" group-title="Radio",Magical Blade FM
+#EXTINF:-1 xui-id="41692" tvg-id="custom.magical.blade.fm" tvg-name="Magical Blade FM" tvg-chno="439" channel-id="custom.magical.blade.fm" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-magical-blade-fm-7b0306b2.svg",Magical Blade FM
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0fvt6tI6qALFia3pBA67hH
-#EXTINF:-1 xui-id="41695" tvg-id="custom.moner.radio" tvg-name="Moner Radio" tvg-chno="440" channel-id="custom.moner.radio" group-title="Radio",Moner Radio
+#EXTINF:-1 xui-id="41695" tvg-id="custom.moner.radio" tvg-name="Moner Radio" tvg-chno="440" channel-id="custom.moner.radio" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-moner-radio-0a256b05.svg",Moner Radio
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3D7nchb-Rlpl3ihPn3l0Ka
 #EXTINF:-1 xui-id="41675" tvg-id="custom.my.90s.bengali.online" tvg-name="My 90s Bengali Online" tvg-chno="441" channel-id="custom.my.90s.bengali.online" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-my-90s-bengali-online.png",My 90s Bengali Online
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3kngs1TTLo3RuBF9G23XNL
@@ -909,13 +909,13 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1S0S5D_
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0eZ00eyAWoD_m2DaFUI941
 #EXTINF:-1 xui-id="41679" tvg-id="custom.radio.gaan.baksho" tvg-name="Radio Gaan Baksho" tvg-chno="452" channel-id="custom.radio.gaan.baksho" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-gaan-baksho.png",Radio Gaan Baksho
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36yh5WidZGScuTqa6fMTKv
-#EXTINF:-1 xui-id="41708" tvg-id="custom.radio.janata" tvg-name="Radio Janata" tvg-chno="453" channel-id="custom.radio.janata" group-title="Radio",Radio Janata
+#EXTINF:-1 xui-id="41708" tvg-id="custom.radio.janata" tvg-name="Radio Janata" tvg-chno="453" channel-id="custom.radio.janata" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-radio-janata-650a3885.svg",Radio Janata
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1OL54DAELUnL1uUvotpQyc
 #EXTINF:-1 xui-id="41677" tvg-id="custom.radio.mahananda.98.8" tvg-name="Radio Mahananda - 98.8" tvg-chno="454" channel-id="custom.radio.mahananda.98.8" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-mahananda-98-8.png",Radio Mahananda - 98.8
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3UT4n_lbyoO4imhnKDDXEe
 #EXTINF:-1 xui-id="41681" tvg-id="custom.radio.padma.99.2.fm" tvg-name="Radio Padma – 99.2 FM" tvg-chno="455" channel-id="custom.radio.padma.99.2.fm" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-padma-99-2-fm.jpg",Radio Padma – 99.2 FM
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3aW8YsAkwy9swlbR7BvRt6
-#EXTINF:-1 xui-id="41699" tvg-id="custom.radio.ritmo.on.line" tvg-name="Radio Ritmo On Line" tvg-chno="456" channel-id="custom.radio.ritmo.on.line" group-title="Radio",Radio Ritmo On Line
+#EXTINF:-1 xui-id="41699" tvg-id="custom.radio.ritmo.on.line" tvg-name="Radio Ritmo On Line" tvg-chno="456" channel-id="custom.radio.ritmo.on.line" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-radio-ritmo-on-line-4ab3f25b.svg",Radio Ritmo On Line
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0G3uxhuao8q-y-o1LKz1HC
 #EXTINF:-1 xui-id="41670" tvg-id="custom.radio.shadhin.92.4.fm" tvg-name="Radio Shadhin - 92.4 FM" tvg-chno="457" channel-id="custom.radio.shadhin.92.4.fm" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-shadhin-92-4-fm.jpg",Radio Shadhin - 92.4 FM
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2_8E3fxTvNK3C4oExBUTDc
@@ -927,11 +927,11 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2dtwlwz
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3v2XEQknyM001NnDNDKxBG
 #EXTINF:-1 xui-id="41684" tvg-id="custom.radio.vivid.voice.mymensingh" tvg-name="Radio Vivid Voice | Mymensingh" tvg-chno="461" channel-id="custom.radio.vivid.voice.mymensingh" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-vivid-voice-mymensingh.png",Radio Vivid Voice | Mymensingh
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1lUl2DXEuiC6D28BYs_2LZ
-#EXTINF:-1 xui-id="41701" tvg-id="custom.radio.zenith.fm" tvg-name="Radio Zenith FM" tvg-chno="462" channel-id="custom.radio.zenith.fm" group-title="Radio",Radio Zenith FM
+#EXTINF:-1 xui-id="41701" tvg-id="custom.radio.zenith.fm" tvg-name="Radio Zenith FM" tvg-chno="462" channel-id="custom.radio.zenith.fm" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-radio-zenith-fm-5fa703a7.svg",Radio Zenith FM
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2tmkDU1dAHMe7t9TTecXXy
 #EXTINF:-1 xui-id="41686" tvg-id="custom.rick.astley" tvg-name="Rick Astley" tvg-chno="463" channel-id="custom.rick.astley" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-rick-astley.jpg",Rick Astley
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2B9sZREv0xxyL8qxQ8GP5U
-#EXTINF:-1 xui-id="41693" tvg-id="custom.sagor.fm" tvg-name="Sagor FM" tvg-chno="464" channel-id="custom.sagor.fm" group-title="Radio",Sagor FM
+#EXTINF:-1 xui-id="41693" tvg-id="custom.sagor.fm" tvg-name="Sagor FM" tvg-chno="464" channel-id="custom.sagor.fm" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-sagor-fm-1171c6c1.svg",Sagor FM
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-30yhEwpejPzm2FO6jVqC_-
 #EXTINF:-1 xui-id="188459" tvg-id="custom.saudia.radio" tvg-name="Saudia Radio" tvg-chno="465" channel-id="custom.saudia.radio" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-saudia-radio.png",Saudia Radio
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2aqk6wMGX-VS2vd2mbsJMG
@@ -943,9 +943,9 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3GjQPit
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3YV8Py1TXlz7yaiiqMjgJM
 #EXTINF:-1 xui-id="41706" tvg-id="custom.valobasar.rupali.sur" tvg-name="Valobasar Rupali Sur" tvg-chno="469" channel-id="custom.valobasar.rupali.sur" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-valobasar-rupali-sur.webp",Valobasar Rupali Sur
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2YACEpJcLPaSUcPrscs457
-#EXTINF:-1 xui-id="41696" tvg-id="custom.wc.music" tvg-name="Wc Music" tvg-chno="470" channel-id="custom.wc.music" group-title="Radio",Wc Music
+#EXTINF:-1 xui-id="41696" tvg-id="custom.wc.music" tvg-name="Wc Music" tvg-chno="470" channel-id="custom.wc.music" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-wc-music-7768e9fe.svg",Wc Music
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0BqOTToxHkKlD1_dNt-FoZ
-#EXTINF:-1 xui-id="41683" tvg-id="custom.wifm.100.9" tvg-name="Wifm 100.9" tvg-chno="471" channel-id="custom.wifm.100.9" group-title="Radio",Wifm 100.9
+#EXTINF:-1 xui-id="41683" tvg-id="custom.wifm.100.9" tvg-name="Wifm 100.9" tvg-chno="471" channel-id="custom.wifm.100.9" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-wifm-100-9-d08be206.svg",Wifm 100.9
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1lzVyxVd1GQqf8awY3KomE
 #EXTINF:-1 xui-id="180682" tvg-id="9XJhakaas.in@SD" tvg-name="9x Jhakaas" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jhakaas.png" tvg-chno="472" channel-id="9XJhakaas.in@SD" group-title="Backup",9x Jhakaas (Alt 2)
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2PylYeC5PBbgy-pXUeR4-p
