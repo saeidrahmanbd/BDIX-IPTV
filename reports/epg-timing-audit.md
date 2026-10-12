@@ -11,13 +11,11 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **DD Saptagiri** (DDSaptagiri.in@SD): source ID ts337 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +24 hours after repeated cross-source agreement.
 - **DD Tamil** (DDTamil.in@SD): source ID DD.TAMIL.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **DD Yadagiri** (DDYadagiri.in@SD): source ID DD.YADAGIRI.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
-- **Isai Aruvi** (IsaiAruvi.in@SD): source ID ISAI.ARUVI.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **Sun TV** (SunTV.in@HD): source ID SUN.TV.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **Vissa TV** (VissaTV.in@SD): source ID VISSA.TV.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **10 TV** (custom.10.tv): source ID 10.TV.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **Aaj Tak HD** (custom.aaj.tak): source ID AAJ.TAK.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **Epic** (custom.epic): source ID EPIC.TV.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **ETV** (custom.etv): source ID ETV.HD.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
-- **Isai Aruvi TV** (custom.isai.aruvi.tv): source ID ISAI.ARUVI.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 
-Detected source-ID corrections: **15**
+Detected source-ID corrections: **13**
