@@ -57,7 +57,7 @@ def main():
         "counts_by_playlist": counts, "entry_count": len(records), "entries": records
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    OUT.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     tally = {}
     for item in records:
         tally[item["status"]] = tally.get(item["status"], 0) + 1
