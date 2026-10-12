@@ -99734,25 +99734,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012001000 +0000" stop="20261012002000 +0000" channel="Discovery Kids.in">
-    <category lang="en">TV Show</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <director>Ah Loong</director>
-      <director>Dheeraj Berry</director>
-      <actor>Pooja Punjabi</actor>
-      <actor>Vinod Kulkarni</actor>
-      <actor>Gaurav Pareek</actor>
-      <actor>Laxmi Narayan Pareek</actor>
-      <actor>Narayan Pareek</actor>
-      <producer>Ashwini Kulkarni</producer>
-      <producer>Meera Latkar</producer>
-      <producer>Monica Tata</producer>
-    </credits>
-    <desc lang="en">While Kris and his friends plan to host a funfair, Kanishk instructs his evil minions to unite and ambush Kris all at once in order to defeat him.</desc>
-    <icon src="https://iptv-epg.org/images/Xjjfd_K5AG1hBXetUp2TG4B3c3G6Qx7I6AeP4V-ExTWI7OCZ2uiEeOIsQQpW4vulaNbIBAHvW1Nu8iAlKF6z2_SsXXTp36nXC3YaVibFnEn78E4I1Dx2Cl4RPX_bsg" />
-    <title lang="en">Kris Roll No 21</title>
-  </programme>
   <programme start="20261012002000 +0000" stop="20261012003000 +0000" channel="Discovery Kids.in">
     <category lang="en">TV Show</category>
     <category lang="en">Animation</category>
@@ -113362,25 +113343,6 @@ Zak Bagans, Aaron Goodwin, Billy Tolley and Jay Wasley investigate the most haun
     <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
       <value>AL</value>
     </rating>
-  </programme>
-  <programme start="20261012001000 +0000" stop="20261012002000 +0000" channel="DiscoveryKids.au">
-    <category lang="en">TV Show</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <director>Ah Loong</director>
-      <director>Dheeraj Berry</director>
-      <actor>Pooja Punjabi</actor>
-      <actor>Vinod Kulkarni</actor>
-      <actor>Gaurav Pareek</actor>
-      <actor>Laxmi Narayan Pareek</actor>
-      <actor>Narayan Pareek</actor>
-      <producer>Ashwini Kulkarni</producer>
-      <producer>Meera Latkar</producer>
-      <producer>Monica Tata</producer>
-    </credits>
-    <desc lang="en">While Kris and his friends plan to host a funfair, Kanishk instructs his evil minions to unite and ambush Kris all at once in order to defeat him.</desc>
-    <icon src="https://iptv-epg.org/images/Xjjfd_K5AG1hBXetUp2TG4B3c3G6Qx7I6AeP4V-ExTWI7OCZ2uiEeOIsQQpW4vulaNbIBAHvW1Nu8iAlKF6z2_SsXXTp36nXC3YaVibFnEn78E4I1Dx2Cl4RPX_bsg" />
-    <title lang="en">Kris Roll No 21</title>
   </programme>
   <programme start="20261012002000 +0000" stop="20261012003000 +0000" channel="DiscoveryKids.au">
     <category lang="en">TV Show</category>
@@ -177730,24 +177692,6 @@ A host of interesting characters encounter several frustrating and comical situa
       <value>SAM 13</value>
     </rating>
   </programme>
-  <programme start="20261011235700 +0000" stop="20261012001800 +0000" channel="MoviesNow.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <credits>
-      <actor>Neelima Azim</actor>
-      <actor>Ayush Mehra</actor>
-      <actor>Shreya Gupto</actor>
-      <actor>Ashok Pandey</actor>
-      <actor>Abhay Mishra</actor>
-      <actor>Sawan Tank</actor>
-      <actor>Ruhi Singh</actor>
-    </credits>
-    <desc lang="en">S1 E4
-Mom's Kitchen is doing well, but a bad review by a popular food critic threatens Aditya and Suhasini's small business. Subsequently, Aditya and Suhasini figure out how to protect their business.</desc>
-    <episode-num>S1 E4</episode-num>
-    <icon src="https://iptv-epg.org/images/QYehR_Cg0G-zSZopl5W4Xh_IhiHOdU56ubKDvMq_PnQ8YC_z9TOEsgFMSZXK_dbMGMZRZHhQXwo8-e1Dq4SsDC-2SXNQpRgtzcwafRMVhhCsYKJPpilDFpAmAvqtGw" />
-    <title lang="en">Mom &amp; Co.</title>
-  </programme>
   <programme start="20261012001800 +0000" stop="20261012003500 +0000" channel="MoviesNow.in@SD">
     <category lang="en">Sports</category>
     <category lang="en">Talk Show</category>
@@ -180164,30 +180108,6 @@ Nirav Chhabra and Myra Malik reflect on their romance and their shared mission t
     <episode-num>S1 E1</episode-num>
     <icon src="https://iptv-epg.org/images/z7nR4vt9Ri-ypL6Q1DuDaASOBDXWXLKuAR-uJhkN_iDXvqDZsaAVou7Zg-WouHfd0L8RZIxgPYLOt-WbKhxOWka4PWllvR877XJS6xRbozonSJbGF-AlspSjv80b" />
     <title lang="en">Ready 2 Mingle</title>
-  </programme>
-  <programme channel="MoviesNowPlus.in@SD" start="20261012041500 +0530" stop="20261012055000 +0530">
-    <title>Speed Kills</title>
-    <desc>Wealthy speedboat racer Ben Aronoff leads a secret life that lands him in trouble with both law enforcement and drug lords.</desc>
-    <category>Film</category>
-    <category>Thriller</category>
-    <date>2018</date>
-    <credits>
-      <director>John Luessenhop</director>
-      <director>Jodi Scurfield</director>
-      <actor>John Travolta</actor>
-      <actor>Katheryn Winnick</actor>
-      <actor>Kellan Lutz</actor>
-      <actor>Matthew Modine</actor>
-      <actor>James Remar</actor>
-      <actor>Jordi Mollà</actor>
-      <actor>Jennifer Esposito</actor>
-      <actor>Tom Sizemore</actor>
-      <actor>Moran Atias</actor>
-      <producer>Oscar Generale</producer>
-      <producer>Richard Rionda Del Castro</producer>
-      <producer>Luillo Ruiz</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p16049000_v_h10_ad.jpg?lock=1280x720" />
   </programme>
   <programme channel="MoviesNowPlus.in@SD" start="20261012055000 +0530" stop="20261012074800 +0530">
     <title>Southpaw</title>
@@ -254283,12 +254203,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <icon src="https://tv.assets.pressassociation.io/3a316425-b513-5459-84ae-8ce7fcac1681.jpg" />
     <episode-num system="onscreen">S2026 E32</episode-num>
   </programme>
-  <programme channel="SongdewTV.in@SD" start="20261012054500 +0530" stop="20261012055000 +0530">
-    <title>Songdew Fresh</title>
-    <desc>A comprehensive compilation of the latest music tracks, curated to elevate and inspire positive vibes, offering a refreshing and motivating experience for listeners.</desc>
-    <category>Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p15781078_b_h8_aa.jpg?lock=1280x720" />
-  </programme>
   <programme start="20261012055000 +0530" stop="20261012060500 +0530" channel="SongdewTV.in@SD">
     <title>Songdew Select</title>
     <desc>Featuring Best of Independent Music</desc>
@@ -259183,18 +259097,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
       <actor>Simon Reeve</actor>
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p19353762_b_h10_ac.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="SonyKALHindi.us" start="20261011232200 +0000" stop="20261012001700 +0000">
-    <title lang="en">Adalat</title>
-    <desc lang="en">Lawyer K.D. Pathak takes up the challenge of defending the accused by personally investigating the crime.</desc>
-    <credits>
-      <actor>Ronit Roy</actor>
-      <actor>Mushtaq Khan</actor>
-    </credits>
-    <date>2010</date>
-    <category lang="en">Drama</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13170722_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
   </programme>
   <programme channel="SonyKALHindi.us" start="20261012001700 +0000" stop="20261012010800 +0000">
     <title lang="en">CID</title>
@@ -300624,27 +300526,26 @@ The host sheds light on real-life criminal cases and crime stories while giving 
     <desc lang="en">Rahul, a married man, goes to a party with his family and gets drunk while interacting with a beautiful woman. The next morning, he tries to retrace the night's events to determine what went down.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_STAR_GOLD_HD_960871_13OCT032700_13OCT060000/images/LANDSCAPE_169_HD/STARGOLDHD_RaatGayiBaatGayi_960871.jpg" />
   </programme>
-  <programme channel="StarGold2.in@HD" start="20261012043400 +0530" stop="20261012054900 +0530">
-    <title>Uriyadi</title>
-    <desc>The lives of four bachelors, who lead a carefree life, take a turn when they are dragged into a political fight. But, as time passes, they end up finding their mutual interconnections.</desc>
+  <programme channel="StarGold2.in@HD" start="20261012050200 +0530" stop="20261012063600 +0530">
+    <title>Rx Karthik</title>
+    <desc>Karthik, a young man, always distances himself from family and emotional attachments. However, his life takes an unusual turn after he meets Anjali in India.</desc>
     <category>Film</category>
-    <category>Drama</category>
-    <date>2016</date>
+    <category>Action</category>
+    <date>2017</date>
     <credits>
-      <director>Vijay Kumar</director>
-      <actor>Vijay Kumar</actor>
-      <actor>Mime Gopi</actor>
-      <actor>Citizen Sivakumar</actor>
-      <actor>Henna Bella</actor>
-      <actor>Chandru</actor>
-      <actor>Jeyakanth</actor>
-      <actor>Suruli</actor>
-      <actor>Sivaperumal</actor>
-      <actor>Shankar Thas</actor>
-      <producer>Sameer Bharath Ram</producer>
-      <producer>Vijay Kumar</producer>
+      <director>Rishi</director>
+      <actor>Kartikeya Gummakonda</actor>
+      <actor>Murli Sharma</actor>
+      <actor>Gollapudi Marthi Rao</actor>
+      <actor>Simrat Kaur</actor>
+      <actor>Jhansi</actor>
+      <actor>Prudhvi Raj</actor>
+      <actor>Pragathi</actor>
+      <actor>Sumithra</actor>
+      <producer>Ramanashree Gummakonda</producer>
+      <producer>Raviner Gummakonda</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p13076928_v_h10_aa.jpg?lock=1280x720" />
+    <icon src="https://dtil.tmsimg.com/assets/p14826384_b_h10_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="StarGold2.in@HD" start="20261012063600 +0530" stop="20261012083400 +0530">
     <title>Rajendra Ka Raj</title>
@@ -342743,85 +342644,138 @@ Jen and Tim's fight escalates and everyone is caught in the crossfire; Cortney l
     <desc lang="en">Mowgli goes to visit Kaa with a question. How many monkeys can a python swallow in one gulp?</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acc2a228d1a0fbd854910f1/images/LANDSCAPE_169/9372_370abaf4-87cf-4ecf-ac5b-181564e3a34e.png" />
   </programme>
-  <programme start="20261012000715 +0000" stop="20261012001644 +0000" channel="TinyPop.uk">
-    <title>Masha And The Bear</title>
-    <desc>Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
+  <programme channel="TinyPop.uk" start="20261012001600 +0000" stop="20261012002600 +0000">
+    <title lang="en">Masha And The Bear</title>
+    <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012054600/list/TinyPOPMashaAndTheBear2056996db85ae061d8b4bd49a5a518999551a86.jpg" />
   </programme>
-  <programme start="20261012001644 +0000" stop="20261012002636 +0000" channel="TinyPop.uk">
-    <title>Masha And The Bear</title>
-    <desc>Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
+  <programme channel="TinyPop.uk" start="20261012002600 +0000" stop="20261012003600 +0000">
+    <title lang="en">Masha And The Bear</title>
+    <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012055600/list/TinyPOPMashaAndTheBear2056996e559c84051f74786a189b1402880b66f.jpg" />
   </programme>
-  <programme start="20261012002636 +0000" stop="20261012003615 +0000" channel="TinyPop.uk">
-    <title>Masha And The Bear</title>
-    <desc>Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
+  <programme channel="TinyPop.uk" start="20261012003600 +0000" stop="20261012004500 +0000">
+    <title lang="en">Masha And The Bear</title>
+    <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012060600/list/TinyPOPMashaAndTheBear2056996f57f6f0a2bad4bba93da13423f2787d4.jpg" />
   </programme>
-  <programme start="20261012003615 +0000" stop="20261012004534 +0000" channel="TinyPop.uk">
-    <title>Masha And The Bear</title>
-    <desc>Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
+  <programme channel="TinyPop.uk" start="20261012004500 +0000" stop="20261012005500 +0000">
+    <title lang="en">Masha And The Bear Shorties</title>
+    <desc lang="en">Masha is getting ready for school. Masha is trying to squeeze in a bus a stroller with her little baby Rose. Masha and the animals are dancing a Hawaiian dance.</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012061500/list/TinyPOPMashaAndTheBearShorties2056997c4f23539650a42909de140721857782a.jpg" />
   </programme>
-  <programme start="20261012004534 +0000" stop="20261012005534 +0000" channel="TinyPop.uk">
-    <title>Masha and the Bear Shorties</title>
-    <desc>Masha tries to get on to a ride that she is is too short and too young for. In the toy store, the Bear lets Masha pick only one toy.</desc>
+  <programme channel="TinyPop.uk" start="20261012005500 +0000" stop="20261012010600 +0000">
+    <title lang="en">Masha And The Bear Shorties</title>
+    <desc lang="en">Masha is getting ready for school. Masha is trying to squeeze in a bus a stroller with her little baby Rose. Masha and the animals are dancing a Hawaiian dance.</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012062500/list/TinyPOPMashaAndTheBearShorties2056997b3ee842214824028b09f1c8e8ed0fa9d.jpg" />
   </programme>
-  <programme start="20261012005534 +0000" stop="20261012010616 +0000" channel="TinyPop.uk">
-    <title>Masha and the Bear Shorties</title>
-    <desc>Masha picks the most expensive pizza because she likes how it looks on the picture on the menu. Masha decided to have a fashion show! What is going on? Is Masha misbehaving? Is she being mischievous?</desc>
+  <programme channel="TinyPop.uk" start="20261012010600 +0000" stop="20261012011900 +0000">
+    <title lang="en">Care Bears: Unlock The Magic</title>
+    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012063600/list/TinyPOPCareBearsUnlockTheMagic2056992c1d07bfdac3445509ec2486ce145a956.jpg" />
   </programme>
-  <programme start="20261012010616 +0000" stop="20261012011925 +0000" channel="TinyPop.uk">
-    <title>Care Bears: Unlock The Magic</title>
-    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+  <programme channel="TinyPop.uk" start="20261012011900 +0000" stop="20261012013200 +0000">
+    <title lang="en">Care Bears: Unlock The Magic</title>
+    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012064900/list/TinyPOPCareBearsUnlockTheMagic20569925ab2ddfc9f7e41c78a7826abd77032f3.jpg" />
   </programme>
-  <programme start="20261012011925 +0000" stop="20261012013234 +0000" channel="TinyPop.uk">
-    <title>Care Bears: Unlock The Magic</title>
-    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+  <programme channel="TinyPop.uk" start="20261012013200 +0000" stop="20261012014500 +0000">
+    <title lang="en">Care Bears: Unlock The Magic</title>
+    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012070200/list/TinyPOPCareBearsUnlockTheMagic205699203894000f1f94beeaa5b4a4d385a87c4.jpg" />
   </programme>
-  <programme start="20261012013234 +0000" stop="20261012014520 +0000" channel="TinyPop.uk">
-    <title>Care Bears: Unlock The Magic</title>
-    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+  <programme channel="TinyPop.uk" start="20261012014500 +0000" stop="20261012015800 +0000">
+    <title lang="en">Care Bears: Unlock The Magic</title>
+    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012071500/list/TinyPOPCareBearsUnlockTheMagic205699297a155c363d24daa8879cc8990b05984.jpg" />
   </programme>
-  <programme start="20261012014520 +0000" stop="20261012015806 +0000" channel="TinyPop.uk">
-    <title>Care Bears: Unlock The Magic</title>
-    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+  <programme channel="TinyPop.uk" start="20261012015800 +0000" stop="20261012021100 +0000">
+    <title lang="en">Care Bears: Unlock The Magic</title>
+    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012072800/list/TinyPOPCareBearsUnlockTheMagic2056992cde29c20174d4bb09e2e5ea64bd3f34e.jpg" />
   </programme>
-  <programme start="20261012015806 +0000" stop="20261012021118 +0000" channel="TinyPop.uk">
-    <title>Care Bears: Unlock The Magic</title>
-    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+  <programme channel="TinyPop.uk" start="20261012021100 +0000" stop="20261012022400 +0000">
+    <title lang="en">Care Bears: Unlock The Magic</title>
+    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012074100/list/TinyPOPCareBearsUnlockTheMagic20569922596e0f828c0431b9dc0ee3a081f196c.jpg" />
   </programme>
-  <programme start="20261012021118 +0000" stop="20261012022431 +0000" channel="TinyPop.uk">
-    <title>Care Bears: Unlock The Magic</title>
-    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+  <programme channel="TinyPop.uk" start="20261012022400 +0000" stop="20261012023700 +0000">
+    <title lang="en">Care Bears: Unlock The Magic</title>
+    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012075400/list/TinyPOPCareBearsUnlockTheMagic20569922b814efd9fc84bdda7c0780774106ef5.jpg" />
   </programme>
-  <programme start="20261012022431 +0000" stop="20261012023716 +0000" channel="TinyPop.uk">
-    <title>Care Bears: Unlock The Magic</title>
-    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+  <programme channel="TinyPop.uk" start="20261012023700 +0000" stop="20261012025000 +0000">
+    <title lang="en">Care Bears: Unlock The Magic</title>
+    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012080700/list/TinyPOPCareBearsUnlockTheMagic20569921eeeacc2c64c494484778588e3d872f8.jpg" />
   </programme>
-  <programme start="20261012023716 +0000" stop="20261012025002 +0000" channel="TinyPop.uk">
-    <title>Care Bears: Unlock The Magic</title>
-    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+  <programme channel="TinyPop.uk" start="20261012025000 +0000" stop="20261012030200 +0000">
+    <title lang="en">Care Bears: Unlock The Magic</title>
+    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012082000/list/TinyPOPCareBearsUnlockTheMagic2056992b91f58b9a2474f57bb91f44a0c0c5d48.jpg" />
   </programme>
-  <programme start="20261012025002 +0000" stop="20261012030247 +0000" channel="TinyPop.uk">
-    <title>Care Bears: Unlock The Magic</title>
-    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+  <programme channel="TinyPop.uk" start="20261012030200 +0000" stop="20261012031500 +0000">
+    <title lang="en">Care Bears: Unlock The Magic</title>
+    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012083200/list/TinyPOPCareBearsUnlockTheMagic20569929a7e0f666534472c92960d1bb543622b.jpg" />
   </programme>
-  <programme start="20261012030247 +0000" stop="20261012031533 +0000" channel="TinyPop.uk">
-    <title>Care Bears: Unlock The Magic</title>
-    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+  <programme channel="TinyPop.uk" start="20261012031500 +0000" stop="20261012032800 +0000">
+    <title lang="en">Care Bears: Unlock The Magic</title>
+    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012084500/list/TinyPOPCareBearsUnlockTheMagic2056992f866cc7d54374e9b87d150eb82f56d35.jpg" />
   </programme>
-  <programme start="20261012031533 +0000" stop="20261012032818 +0000" channel="TinyPop.uk">
-    <title>Care Bears: Unlock The Magic</title>
-    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+  <programme channel="TinyPop.uk" start="20261012032800 +0000" stop="20261012034100 +0000">
+    <title lang="en">Care Bears: Unlock The Magic</title>
+    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012085800/list/TinyPOPCareBearsUnlockTheMagic2056992ef2aa50291404015a980270584501c56.jpg" />
   </programme>
-  <programme start="20261012032818 +0000" stop="20261012034104 +0000" channel="TinyPop.uk">
-    <title>Care Bears: Unlock The Magic</title>
-    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+  <programme channel="TinyPop.uk" start="20261012034100 +0000" stop="20261012035300 +0000">
+    <title lang="en">Care Bears: Unlock The Magic</title>
+    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012091100/list/TinyPOPCareBearsUnlockTheMagic20569921ac267964e5346bda40c33c749aff8ab.jpg" />
   </programme>
-  <programme start="20261012034104 +0000" stop="20261012035350 +0000" channel="TinyPop.uk">
-    <title>Care Bears: Unlock The Magic</title>
-    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-  </programme>
-  <programme start="20261012035350 +0000" stop="20261012040000 +0000" channel="TinyPop.uk">
-    <title>Care Bears: Unlock The Magic</title>
-    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+  <programme channel="TinyPop.uk" start="20261012035300 +0000" stop="20261012040000 +0000">
+    <title lang="en">Care Bears: Unlock The Magic</title>
+    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
+    <category>Kids</category>
+    <language>English</language>
+    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012092300/list/TinyPOPCareBearsUnlockTheMagic2056992f8397fc52b7e49cd8ce91cdfe2a2b8ca.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261012040000 +0000" stop="20261012040600 +0000">
     <title lang="en">Care Bears: Unlock The Magic</title>
@@ -443428,26 +443382,6 @@ A Toyota MR2 makes power, but not the power it once had; Bogi and Faye check the
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261012054500 +0530" stop="20261012054900 +0530" channel="custom.duck.tv">
-    <title>Sunville</title>
-    <desc>In the charming village of Sunville, Mr. Goat and the others fill each day with exciting adventures. They bring joy and warmth through their interactions and helpful deeds.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f4694bb56437a39aa1c8dc5bfc414ce1.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012054900 +0530" stop="20261012055100 +0530" channel="custom.duck.tv">
-    <title>Vege-tales</title>
-    <desc>A colourful assortment of vegetables, each with its own unique personality, showcases diverse shapes and sizes. This helps children to recognise the differences between various culinary ingredients.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/92cdfaa462ffda1cd4ea01c1f6f9aa37.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261012055100 +0530" stop="20261012055500 +0530" channel="custom.duck.tv">
@@ -555525,25 +555459,6 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
     <title lang="en">Marooned With Ed Stafford</title>
     <desc lang="en">Ed Stafford is alone in Borneo's thick jungles with no tools, no food, and no backup. Just raw survival instincts against dense forest, wild creatures, and unrelenting rain.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DISCOVERY_CHANNEL_173569_15OCT064800_15OCT073800/images/LANDSCAPE_169_HD/DISCOVERY_MaroonedWithEdStafford_173569.jpg" />
-  </programme>
-  <programme start="20261012001000 +0000" stop="20261012002000 +0000" channel="hmair.discoverykids">
-    <category lang="en">TV Show</category>
-    <category lang="en">Animation</category>
-    <credits>
-      <director>Ah Loong</director>
-      <director>Dheeraj Berry</director>
-      <actor>Pooja Punjabi</actor>
-      <actor>Vinod Kulkarni</actor>
-      <actor>Gaurav Pareek</actor>
-      <actor>Laxmi Narayan Pareek</actor>
-      <actor>Narayan Pareek</actor>
-      <producer>Ashwini Kulkarni</producer>
-      <producer>Meera Latkar</producer>
-      <producer>Monica Tata</producer>
-    </credits>
-    <desc lang="en">While Kris and his friends plan to host a funfair, Kanishk instructs his evil minions to unite and ambush Kris all at once in order to defeat him.</desc>
-    <icon src="https://iptv-epg.org/images/Xjjfd_K5AG1hBXetUp2TG4B3c3G6Qx7I6AeP4V-ExTWI7OCZ2uiEeOIsQQpW4vulaNbIBAHvW1Nu8iAlKF6z2_SsXXTp36nXC3YaVibFnEn78E4I1Dx2Cl4RPX_bsg" />
-    <title lang="en">Kris Roll No 21</title>
   </programme>
   <programme start="20261012002000 +0000" stop="20261012003000 +0000" channel="hmair.discoverykids">
     <category lang="en">TV Show</category>
