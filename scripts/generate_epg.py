@@ -13,7 +13,6 @@ from pathlib import Path
 PLAYLISTS = [
     Path("IPTV-Playlist.m3u"),
     Path("BDIX-Playlist.m3u"),
-    Path("NVisionBD-Playlist.m3u"),
 ]
 INACTIVE_GROUPS = {"Backup", "Test", "Not Playing", "New Backup", "New Channels"}
 MAPPING = Path("reports/epg-india-channel-mapping.csv")
