@@ -1,27 +1,27 @@
 # Playlist Audit
-Generated: **2026-10-12T08:35:46.633319+00:00**
+Generated: **2026-10-12T10:42:29.298563+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1013**
+- Playlist entries: **1018**
 - Unique channel IDs: **636**
-- IDs with multiple streams: **175**
+- IDs with multiple streams: **176**
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **0**
+- Metadata conflicts: **1**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
 - Logo exceptions: **0**
-- Logo references checked: **1013**
-- Duplicate primary identities: **1**
+- Logo references checked: **1018**
+- Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **4**
+- Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
-- Alphabetical ordering issues: **5**
+- Alphabetical ordering issues: **0**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 
@@ -45,11 +45,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### 9xtashan.in@sd (2 streams)
 - 9X Tashan — Indian Music — https://wiselp.wiseplayout.com/9X_Tashan/master.m3u8
 - 9X Tashan — Backup — https://tvsen6.aynaott.com/sMqhLN6n/index.m3u8
-### aakaashaath.in@sd (5 streams)
+### aakaashaath.in@sd (6 streams)
 - Aakaash Aath — Indian Bangla — https://mumt03.tangotv.in/Dsly5z3HAAKASHAATH/index.m3u8
 - Aakaash Aath — Backup — http://tvsen5.aynascope.net/Wm9Lv2RjZGT6/index.m3u8
 - Aakaash Aath — Backup — https://mumt03.tangotv.in/Dsly5z3HAAKASHAATH/tracks-v1a1/mono.m3u8
 - Aakaash Aath — Backup — https://tvsen5.aynaott.com/Wm9Lv2RjZGT6/index.m3u8
+- Aakaash Aath — Backup — https://tvsen5.aynaott.com/Wm9Lv2RjZGT6/tracks-v1a1/mono.m3u8
 - Aakaash Aath — Backup — https://tvsen5.aynaott.com/Wm9Lv2RjZGT6/tracks-v1a1/mono.ts.m3u8
 ### amritatv.in@sd (2 streams)
 - Amrita TV — Indian Entertainment — https://ddash74r36xqp.cloudfront.net/master.m3u8
@@ -166,12 +167,13 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### channel9.bd (2 streams)
 - Channel 9 — Bangladesh — http://livetv.akr4m.com:8080/bdtv/restrem/16.m3u8
 - Channel 9 — Backup — https://box.bbaria.net/Channel9/tracks-v1a1/index.m3u8
-### channeli.bd (6 streams)
+### channeli.bd (7 streams)
 - Channel I — Bangladesh — https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/index.m3u8
 - Channel I — Backup — http://198.195.239.50:8095/CHANNEL.I.HD/index.m3u8
 - Channel I — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/channel-i/index.m3u8
 - Channel I — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-i-1/index.m3u8
 - Channel I — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-i-hd-1/index.m3u8
+- Channel I — Backup — https://tvsen3.b-cdn.net/qUud8Nxs/index.m3u8
 - Channel I — Backup — https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/tracks-v1a1/mono.ts.m3u8
 ### channels.uk (5 streams)
 - Channel S — Religious — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8
@@ -362,9 +364,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Fakt Marathi — Backup — https://cdn.pishow.tv/ott/live/10002/master.m3u8
 ### gazitv.bd (5 streams)
 - G TV — Bangladesh — http://198.195.239.50:8095/GAZI.TV.HD/index.m3u8
-- G TV — Bangladesh — https://app.ncare.live/live-orgin/gazibdz.stream/live-orgin/gazibdz.stream/chunks.m3u8
 - G TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/gazibdz.stream/tracks-v1a1/mono.m3u8
 - G TV — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/gazibdz.stream/live-orgin/gazibdz.stream/playlist.m3u8
+- G TV — Backup — https://app.ncare.live/live-orgin/gazibdz.stream/live-orgin/gazibdz.stream/chunks.m3u8
 - G TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/g-tv-1/index.m3u8
 ### globaltv.bd (2 streams)
 - Global TV — Bangladesh — https://tvsen6.aynaott.com/y0q9eFAuquAtvTxRzUHq/index.m3u8
@@ -508,8 +510,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Music India — Indian Music — https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8
 - Music India — Backup — http://198.195.239.50:8095/MUSIC.INDIA/index.m3u8
 - Music India — Backup — https://cdn.pishow.tv/ott/live/226/master.m3u8
-### mytv.bd (4 streams)
+### mytv.bd (5 streams)
 - My TV — Bangladesh — https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8
+- My TV — Backup — http://116.204.149.16/mytv/index.m3u8
 - My TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mytv-up-off.stream/index.m3u8
 - My TV — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8
 - My TV — Backup — https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/tracks-v1a1/mono.ts.m3u8
@@ -696,8 +699,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### starmoviesselect.in@hd (2 streams)
 - Star Movies Select — International — http://198.195.239.50:8095/STAR.MOVIES.SEL.HD/index.m3u8
 - Star Movies Select — Backup — http://103.151.60.162:2122/play/a02l/index.m3u8?hls
-### starplus.in@sd (2 streams)
+### starplus.in@sd (3 streams)
 - Star Plus — Indian Entertainment — http://livetv.akr4m.com:8080/bdtv/restrem/62.m3u8
+- Star Plus — Backup — http://103.114.11.37:8081/Star-Plus-HD/index.m3u8
 - Star Plus — Backup — http://198.195.239.50:8095/STAR.PLUS.HD/index.m3u8
 ### studioyuva.in (2 streams)
 - Studio Yuva — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3STUDIOYUVA/index.m3u8
@@ -714,6 +718,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### ubangla.in (2 streams)
 - U Bangla — Indian Bangla — https://stream.ottlive.co.in/ubangla/index.m3u8
 - U Bangla — Backup — https://stream.ottlive.co.in/ubangla/tracks-v1a1/mono.m3u8
+### ultimatetv.in@sd (2 streams)
+- Ultimate TV — Indian Movies — https://mumbai-edge.smartplaytv.in/utv/index.m3u8
+- Ultimate TV — Indian Music — https://stream.ottlive.co.in/utvtamil/index.m3u8
 ### vanithatv.in@sd (2 streams)
 - Vanitha TV — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3VANITHA/index.m3u8
 - Vanitha TV — Backup — https://cdn.pishow.tv/ott/live/393/master.m3u8
@@ -757,7 +764,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-- **gazitv.bd** in **Bangladesh** — G TV, G TV
+None.
 
 ## Primary Channel-Number Collisions
 
@@ -770,11 +777,7 @@ None.
 ## Ordering
 
 Category block order: OK.
-- **Bangladesh** — **Channel 9** appears after **Channel 24**
-- **International** — **24 Hour Free Movies** appears after **&Privé**
-- **International** — **4ever Cinema** appears after **24 Hour Free Movies**
-- **Backup** — **7S Music** appears after **&TV**
-- **Backup** — **Channel 9** appears after **Channel 24**
+Alphabetical order: OK.
 
 ## Suspicious URLs
 
@@ -798,7 +801,7 @@ None.
 
 ## Metadata Conflicts
 
-None.
+- **ultimatetv.in@sd** — names: ultimate tv; groups: Indian Movies, Indian Music; countries: 
 
 ## Cross-Country Backup Collisions
 
@@ -810,7 +813,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1013**
+- Healthy/local references: **1018**
 - missing: **0**
 - broken-local: **0**
 - external: **0**

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12T08:35:46+00:00",
+  "generated": "2026-10-12T10:42:29+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -157,9 +157,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 5,
+      "streams": 6,
       "primary": 1,
-      "backup": 4
+      "backup": 5
     },
     "aamarbangla": {
       "names": [
@@ -1083,9 +1083,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 6,
+      "streams": 7,
       "primary": 1,
-      "backup": 5
+      "backup": 6
     },
     "channels": {
       "names": [
@@ -2075,7 +2075,7 @@
         "custom.jalsha.bangla.bd"
       ],
       "groups": [
-        "Bangladesh"
+        "Indian Bangla"
       ],
       "streams": 1,
       "primary": 1,
@@ -3876,8 +3876,8 @@
         "Bangladesh"
       ],
       "streams": 5,
-      "primary": 2,
-      "backup": 3
+      "primary": 1,
+      "backup": 4
     },
     "gbaj400042t1": {
       "names": [
@@ -5559,9 +5559,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 4,
+      "streams": 5,
       "primary": 1,
-      "backup": 3
+      "backup": 4
     },
     "nagoriktv": {
       "names": [
@@ -7801,9 +7801,9 @@
         "Backup",
         "Indian Entertainment"
       ],
-      "streams": 2,
+      "streams": 3,
       "primary": 1,
-      "backup": 1
+      "backup": 2
     },
     "starpravah": {
       "names": [
@@ -8534,10 +8534,11 @@
         "ultimatetv.in@sd"
       ],
       "groups": [
+        "Indian Movies",
         "Indian Music"
       ],
-      "streams": 1,
-      "primary": 1,
+      "streams": 2,
+      "primary": 2,
       "backup": 0
     },
     "unidentified": {
