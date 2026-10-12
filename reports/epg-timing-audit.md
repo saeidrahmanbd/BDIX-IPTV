@@ -5,7 +5,6 @@ Automatic corrections require repeated cross-source title and duration matches, 
 ## Detected corrections
 
 - **Xplor** (AndxplorHD.in): source ID and.xplorHD.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by +5.5 hours after repeated cross-source agreement.
-- **Zing** (Zing.in@SD): source ID jtv585 from https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml shifted by -24 hours after repeated cross-source agreement.
 - **Cartoon Network HD +** (hmair.cartoonnetworkhd): source ID CARTOON.NETWORK.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by +24 hours after repeated cross-source agreement.
 
-Detected source-ID corrections: **3**
+Detected source-ID corrections: **2**

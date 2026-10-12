@@ -7,7 +7,7 @@ Coverage uses exact playlist `tvg-id` matches against the shared mapping registr
 | Playlist | Entries | Unique primary IDs | Unique Indian IDs | Mapped | Current/future | Xtream map | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---|
 | IPTV-Playlist.m3u | 1145 | 652 | 299 | 246/299 (82.3%) | 236/299 (78.9%) | 246/299 | OK |
-| BDIX-Playlist.m3u | 190 | 178 | 17 | 16/17 (94.1%) | 16/17 (94.1%) | 16/17 | OK |
+| BDIX-Playlist.m3u | 185 | 173 | 17 | 16/17 (94.1%) | 16/17 (94.1%) | 16/17 | OK |
 | NVisionBD-Playlist.m3u | 561 | 467 | 106 | 90/106 (84.9%) | 88/106 (83.0%) | 90/106 | OK |
 
 ## Published XMLTV verification — all active channels
@@ -17,11 +17,11 @@ If the publish gate retains an older guide, the workflow must refresh this repor
 
 | Playlist | Active unique IDs | Mapped IDs | Published IDs with programmes | Current/future IDs |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 652 | 343 | 311 | 306 |
+| IPTV-Playlist.m3u | 652 | 343 | 311 | 309 |
 | IPTV-Playlist.m3u — Bangladesh | 60 | 0 | 0 | 0 |
-| BDIX-Playlist.m3u | 178 | 99 | 85 | 85 |
-| BDIX-Playlist.m3u — Bangladesh | 42 | 1 | 1 | 1 |
-| NVisionBD-Playlist.m3u | 467 | 187 | 167 | 166 |
+| BDIX-Playlist.m3u | 173 | 97 | 83 | 83 |
+| BDIX-Playlist.m3u — Bangladesh | 40 | 1 | 1 | 1 |
+| NVisionBD-Playlist.m3u | 467 | 187 | 167 | 167 |
 | NVisionBD-Playlist.m3u — Bangladesh | 50 | 0 | 0 | 0 |
 
 - Non-English programme text fields detected: **0**
