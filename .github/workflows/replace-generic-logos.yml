@@ -37,6 +37,9 @@ jobs:
       - name: Repair missing, generic, and contaminated logos in all playlists
         run: python scripts/repair_playlist_logos.py
 
+      - name: Enforce protected playlist attribution
+        run: python scripts/enforce_playlist_attribution.py
+
       - name: Commit verified replacements and reports
         run: |
           git config user.name "github-actions[bot]"
