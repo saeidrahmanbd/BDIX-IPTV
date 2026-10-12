@@ -203,13 +203,13 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-17w62Qo
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1fUyFimCZrZ2a7m57B8snF
 #EXTINF:-1 xui-id="180903" tvg-id="SonyMax2.in@SD" tvg-name="Sony Max 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max-2.png" tvg-chno="99" channel-id="SonyMax2.in@SD" group-title="Indian Movies",Sony Max 2
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0nlBr73yTK2WJZt5xJPBOG
-#EXTINF:-1 xui-id="180844" tvg-id="StarGold.in@HD" tvg-name="Star Gold" tvg-chno="100" channel-id="StarGold.in@HD" group-title="Indian Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold.png",Star Gold
+#EXTINF:-1 xui-id="180844" tvg-id="StarGold.in@HD" tvg-name="Star Gold" tvg-chno="100" channel-id="StarGold.in@HD" group-title="Indian Movies" ,Star Gold
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1ELyWuA7KnM9lWuIKp6nwZ
 #EXTINF:-1 xui-id="633" tvg-id="StarGold2.in@HD" tvg-name="Star Gold 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-2.png" tvg-chno="101" channel-id="StarGold2.in@HD" group-title="Indian Movies",Star Gold 2
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3GL2GMItbb3cvEnT0Hf3ra
 #EXTINF:-1 xui-id="2172" tvg-id="Star Gold Romance.in" tvg-name="Star Gold Romance" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-2.png" tvg-chno="102" channel-id="Star Gold Romance.in" group-title="Indian Movies",Star Gold Romance
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1SkOhc94xqKFBh5LUqiOHg
-#EXTINF:-1 xui-id="497" tvg-id="StarGoldSelect.in@SD" tvg-name="Star Gold Select HD" tvg-chno="103" channel-id="StarGoldSelect.in@SD" group-title="Indian Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-select.png",Star Gold Select HD
+#EXTINF:-1 xui-id="497" tvg-id="StarGoldSelect.in@SD" tvg-name="Star Gold Select HD" tvg-chno="103" channel-id="StarGoldSelect.in@SD" group-title="Indian Movies" ,Star Gold Select HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0d4oWgHGCog0wd_ZRbHOBw
 #EXTINF:-1 xui-id="180781" tvg-id="custom.the.q.india" tvg-name="The Q India" tvg-chno="104" channel-id="custom.the.q.india" group-title="Indian Movies",The Q India
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0G1XpWximSvM4YSh2OyLPu
