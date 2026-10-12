@@ -395,23 +395,11 @@ for line in lines:
                 failed += 1
                 print(f"Catalogue logo failed: {title}: {exc}")
 
-    # No official/verified source matched. Keep the entry visually usable with a
-    # unique title-based fallback (never a shared/generic logo); try genuine sources
-    # again on the next run because placeholder-*.png is not treated as authoritative.
-    filename = f"placeholder-{safe_name(title)}.png"
-    target = LOGOS / filename
-    replacement = RAW_BASE + filename
-    try:
-        generate_placeholder_logo(title, target)
-        output.append(force_local(line, replacement))
-        changed += 1
-        generated_placeholders.append(title)
-        print(f"Generated non-official text fallback logo: {title}")
-    except Exception as exc:
-        failed += 1
-        unresolved.append(title)
-        output.append(line)
-        print(f"Fallback logo generation failed: {title}: {exc}")
+    # No exact, verified logo source matched. Do not create non-official placeholder
+    # artwork: leave tvg-logo empty so a later audit can safely retry source lookup.
+    output.append(force_local(line, ""))
+    unresolved.append(title)
+    print(f"UNVERIFIED LOGO LEFT BLANK: {title}")
 
 new_text = "\n".join(output).rstrip() + "\n"
 if new_text != original:
@@ -426,5 +414,4 @@ print(f"Local non-PNG logos converted: {converted_local}")
 print(f"Logo downloads failed: {failed}")
 print(f"Still unresolved (no usable logo attached): {len(unresolved)}")
 for title in unresolved: print(f"UNRESOLVED: {title}")
-print(f"Generated non-official text fallback logos: {len(generated_placeholders)}")
-for title in generated_placeholders: print(f"GENERATED PLACEHOLDER: {title}")
+print("Placeholder generation is disabled; unverified logos remain blank.")
