@@ -1,6 +1,6 @@
 # Three-Playlist Logo Repair Results
 
-Run time: **2026-10-12 05:17 UTC**  
+Run time: **2026-10-12 05:19 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -46,6 +46,7 @@ Historical mapping index: loaded 336 historical name mappings
 | NVisionBD-Playlist.m3u | 682 | Flo Racing | (missing) | (none) | IPTV-org exact unique channel name: FloRacing.us |  | Download/validation failed: HTTP Error 403: Forbidden |
 | NVisionBD-Playlist.m3u | 682 | Flo Racing | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 694 | Htv Sport | (missing) | (none) | none |  | No exact clean logo found; left blank |
+| NVisionBD-Playlist.m3u | 706 | In Sony Sports Ten 3 HD | (missing) | (none) | Exact external logo asset |  | Download/validation failed: HTTP Error 403: Forbidden |
 | NVisionBD-Playlist.m3u | 706 | In Sony Sports Ten 3 HD | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 724 | Kiev Sport HD | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 778 | Sport 1 HD | (missing) | (none) | none |  | No exact clean logo found; left blank |
@@ -54,7 +55,7 @@ Historical mapping index: loaded 336 historical name mappings
 | NVisionBD-Playlist.m3u | 788 | Sports Fishing TV | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 850 | Xtrem Sports | (missing) | (none) | Exact original tvg-logo URL from playlist history |  | Download/validation failed: downloaded image failed local validation |
 | NVisionBD-Playlist.m3u | 850 | Xtrem Sports | (missing) | (none) | none |  | No exact clean logo found; left blank |
-| NVisionBD-Playlist.m3u | 870 | Bangla Hits | (missing) | (none) | Bangladesh radio station logo collection |  | Download/validation failed: source response is not a valid supported image |
+| NVisionBD-Playlist.m3u | 870 | Bangla Hits | (missing) | (none) | Bangladesh radio station logo collection |  | Download/validation failed: HTTP Error 404: Not Found |
 | NVisionBD-Playlist.m3u | 870 | Bangla Hits | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 878 | Doyel Radio | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 884 | Magical Blade FM | (missing) | (none) | Radio-bd.com station logo collection |  | Download/validation failed: HTTP Error 404: Not Found |
