@@ -1,6 +1,6 @@
 # Three-Playlist Logo Repair Results
 
-Run time: **2026-10-12 05:19 UTC**  
+Run time: **2026-10-12 05:21 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -11,7 +11,7 @@ Historical mapping index: loaded 336 historical name mappings
 |---|---:|---:|---:|---:|---:|
 | BDIX-Playlist.m3u | 185 | 0 | 2 | 0 | 2 |
 | IPTV-Playlist.m3u | 1145 | 0 | 0 | 0 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 0 | 39 | 0 | 39 |
+| NVisionBD-Playlist.m3u | 561 | 1 | 38 | 0 | 38 |
 
 ## Repair log
 
@@ -46,8 +46,7 @@ Historical mapping index: loaded 336 historical name mappings
 | NVisionBD-Playlist.m3u | 682 | Flo Racing | (missing) | (none) | IPTV-org exact unique channel name: FloRacing.us |  | Download/validation failed: HTTP Error 403: Forbidden |
 | NVisionBD-Playlist.m3u | 682 | Flo Racing | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 694 | Htv Sport | (missing) | (none) | none |  | No exact clean logo found; left blank |
-| NVisionBD-Playlist.m3u | 706 | In Sony Sports Ten 3 HD | (missing) | (none) | Exact external logo asset |  | Download/validation failed: HTTP Error 403: Forbidden |
-| NVisionBD-Playlist.m3u | 706 | In Sony Sports Ten 3 HD | (missing) | (none) | none |  | No exact clean logo found; left blank |
+| NVisionBD-Playlist.m3u | 706 | In Sony Sports Ten 3 HD | (missing) | nvisionbd-verified-in-sony-sports-ten-3-817b8e9349.png | [Exact external logo asset](https://github.com/tv-logo/tv-logos/blob/main/countries/india/sony-ten-3-hd-in.png) | Channel-specific Sony Sports Ten 3 logo from the TV-logo catalog; broadcaster retains rights — https://github.com/tv-logo/tv-logos | replaced |
 | NVisionBD-Playlist.m3u | 724 | Kiev Sport HD | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 778 | Sport 1 HD | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 780 | Sport 2 HD | (missing) | (none) | none |  | No exact clean logo found; left blank |
