@@ -365,12 +365,6 @@ def candidate_for(channel, attrs, iptv_indexes, history_index):
                 "license_url": "https://github.com/iptv-org/database",
             }, source_name
 
-    historical = history_index.get(norm_key(channel))
-    if historical and Path(urllib.parse.urlparse(historical.get("url", "")).path).name.casefold() not in BAD_ASSETS | GENERIC_ASSETS:
-        item = dict(historical)
-        source_name = item.pop("source", "Exact-name historical playlist logo mapping")
-        return item, source_name
-
     page_hint = find_mapping(source.DIRECT_PAGE_HINTS, channel)
     if page_hint:
         page_url, allow_og = page_hint
@@ -386,6 +380,12 @@ def candidate_for(channel, attrs, iptv_indexes, history_index):
                 "license": "Logo image served on the broadcaster/station page",
                 "license_url": "",
             }, "Broadcaster/station page"
+
+    historical = history_index.get(norm_key(channel))
+    if historical and Path(urllib.parse.urlparse(historical.get("url", "")).path).name.casefold() not in BAD_ASSETS | GENERIC_ASSETS:
+        item = dict(historical)
+        source_name = item.pop("source", "Exact-name historical playlist logo mapping")
+        return item, source_name
 
     try:
         item = source.commons_candidate(channel)
