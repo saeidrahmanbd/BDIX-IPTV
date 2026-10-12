@@ -81396,14 +81396,6 @@ Embark on a musical journey through eight Indian states and learn about local ba
     <icon src="https://iptv-epg.org/images/ae7LM6LEK87QcVwISIEv288R8Qe6_9rLGFX-8O6kq-SOPmUm7MfXWqFUc1zDs58XBX5zX6vu9P5c-nhVCg3UpZkaOg57B28rV3aEJwwNrjAEKLuC21C6h6ZBH5yCoA" />
     <title lang="en">Tarane Purane</title>
   </programme>
-  <programme channel="DDSports.in@SD" start="20261012100000 +0530" stop="20261012112000 +0530">
-    <title lang="en">Single's Final; ITF Men's 15K Tennis Tournament</title>
-    <desc lang="en">Various players from across the region participate in a tennis tournament organised by the International Tennis Federation.</desc>
-    <category lang="en">Sport</category>
-    <category lang="en">Tennis</category>
-    <icon src="https://dtil.tmsimg.com/assets/p23488187_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S2025</episode-num>
-  </programme>
   <programme channel="DDSports.in@SD" start="20261012112000 +0530" stop="20261012130500 +0530">
     <title lang="en">Sreenidi Deccan FC vs. Shillong Lajong FC; I-League Soccer</title>
     <desc lang="en">Professional football teams compete in the I-League Soccer to emerge victorious and win the coveted trophy.</desc>
@@ -92697,26 +92689,17 @@ Highlights of all the action from international cricket tournaments, where teams
     <category>Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p33587741_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme start="20261012030000 +0100" stop="20261012064500 +0100" channel="DeenTV.uk">
-    <title>Live Transmission from Makkah</title>
-    <desc>Live transmission of the activities from the Harame Makkah</desc>
-    <rating>
-      <value>--</value>
-    </rating>
+  <programme channel="DeenTV.uk" start="20261012045200 +0000" stop="20261012060000 +0000">
+    <title lang="en">Live Transmission from Makkah</title>
+    <desc lang="en">Live transmission of the activities from the Harame Makkah.</desc>
+    <category lang="en">News &amp; Documentary</category>
+    <category lang="en">Religion</category>
   </programme>
-  <programme start="20261012064500 +0100" stop="20261012065200 +0100" channel="DeenTV.uk">
-    <title>Azan-E-Fajr</title>
-    <desc>A religious announcement for the prayer time.</desc>
-    <rating>
-      <value>--</value>
-    </rating>
-  </programme>
-  <programme start="20261012065200 +0100" stop="20261012080000 +0100" channel="DeenTV.uk">
-    <title>Live Transmission from Makkah</title>
-    <desc>Live transmission of the activities from the Harame Makkah</desc>
-    <rating>
-      <value>--</value>
-    </rating>
+  <programme channel="DeenTV.uk" start="20261012060000 +0000" stop="20261012080000 +0000">
+    <title lang="en">Live Transmission from Makkah</title>
+    <desc lang="en">Live transmission of the activities from the Harame Makkah.</desc>
+    <category lang="en">News &amp; Documentary</category>
+    <category lang="en">Religion</category>
   </programme>
   <programme channel="DeenTV.uk" start="20261012080000 +0000" stop="20261012083000 +0000">
     <title lang="en">Tilawat-E-Quran</title>
@@ -108182,145 +108165,39 @@ Little Singham, an honest but ferocious police officer, fights against injustice
     <icon src="https://iptv-epg.org/images/fFfwu07M2GNI6OsF78RSCAg0GFFcpJDJLs0CPsN9rV0BRUeFKgTHLQw3M6SdLmrmSXZO7dlAqiyMFXBPWWhRR70MKpOFvvYhAQJh9IO4n_8jlqfvE7JA9tmjwAHR" />
     <title lang="en">Little Singham</title>
   </programme>
-  <programme channel="Disney Junior.in" start="20261012052000 +0000" stop="20261012054500 +0000">
-    <title lang="en">PJ Masks</title>
-    <sub-title lang="en">Newton's Discovery; Romeo's Pirate Trap</sub-title>
-    <desc lang="en">Newton's powers have been neutralized because of Romeo's blockade of the asteroids; Pirate Robot wants to upgrade his ship.</desc>
-    <credits>
-      <actor>Jacob Ewaniuk</actor>
-      <actor>Kyle Harrison Breitkopf</actor>
-      <actor>Addison Holley</actor>
-      <director>Christian De Vita</director>
-      <director>Merle-Anne Ridley</director>
-    </credits>
-    <date>2022</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Adventure</category>
-    <icon src="http://dtil.tmsimg.com/assets/p12115698_b_h8_be.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S5</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVY</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>K7</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>0</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>0</value>
-    </rating>
-    <rating system="방송통신심의위원회">
-      <value>All</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>6</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
-  </programme>
-  <programme channel="Disney Junior.in" start="20261012054500 +0000" stop="20261012061000 +0000">
+  <programme channel="Disney Junior.in" start="20261012103000 +0530" stop="20261012113000 +0530">
     <title lang="en">Bluey</title>
-    <sub-title lang="en">Bedroom; Perfect; Obstacle Course</sub-title>
-    <desc lang="en">Bluey gets her own room; Bluey wants her Father's Day card to be perfect; Mum sets up a backyard obstacle course just for fun.</desc>
+    <desc lang="en">Bluey, an exuberant and creative Blue Heeler puppy, sets off on adventures with her younger sibling, Bingo, which drives them into hilarious situations.</desc>
     <credits>
       <actor>David McCormack</actor>
       <actor>Melanie Zanetti</actor>
       <actor>Dan Brumm</actor>
-      <director>Joe Brumm</director>
+      <actor>Myf Warhurst</actor>
+      <actor>Ann Kerr</actor>
+      <actor>Megan Washington</actor>
+      <actor>Chris Brumm</actor>
+      <actor>Ian McFadyen</actor>
     </credits>
-    <date>2022</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Adventure</category>
-    <category lang="en">Animals</category>
-    <icon src="http://dtil.tmsimg.com/assets/p16030422_b_h10_az.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S3</episode-num>
-    <previously-shown />
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>A</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-    <rating system="방송통신심의위원회">
-      <value>All</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
+    <category lang="en">Animation</category>
+    <icon src="https://dtil.tmsimg.com/assets/p16030422_b_h9_az.jpg?lock=880x660" />
   </programme>
-  <programme channel="Disney Junior.in" start="20261012061000 +0000" stop="20261012063500 +0000">
+  <programme channel="Disney Junior.in" start="20261012113000 +0530" stop="20261012120000 +0530">
     <title lang="en">Bluey</title>
-    <sub-title lang="en">Turtle Boy; Onesies; Tradies</sub-title>
-    <desc lang="en">Bingo finds a toy turtle at the playground and wants to take him home; Mom's sister Brandy comes over for a visit; Bluey and Bingo hide under the house and spy on two mysterious tradies working in the backyard.</desc>
+    <desc lang="en">Bluey, an exuberant and creative Blue Heeler puppy, sets off on adventures with her younger sibling, Bingo, which drives them into hilarious situations.</desc>
     <credits>
       <actor>David McCormack</actor>
       <actor>Melanie Zanetti</actor>
       <actor>Dan Brumm</actor>
-      <director>Joe Brumm</director>
+      <actor>Myf Warhurst</actor>
+      <actor>Ann Kerr</actor>
+      <actor>Megan Washington</actor>
+      <actor>Chris Brumm</actor>
+      <actor>Ian McFadyen</actor>
     </credits>
-    <date>2023</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Adventure</category>
-    <category lang="en">Animals</category>
-    <icon src="http://dtil.tmsimg.com/assets/p16030422_b_h10_az.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S3</episode-num>
-    <previously-shown />
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>A</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>AL</value>
-    </rating>
-    <rating system="방송통신심의위원회">
-      <value>All</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
+    <category lang="en">Animation</category>
+    <icon src="https://dtil.tmsimg.com/assets/p16030422_b_h9_az.jpg?lock=880x660" />
   </programme>
   <programme channel="Disney Junior.in" start="20261012063500 +0000" stop="20261012070000 +0000">
     <title lang="en">Mickey Mouse Clubhouse</title>
@@ -136035,18 +135912,6 @@ Personal disputes and problems with drugs, alcohol and illness accompany the mus
     <episode-num system="onscreen">E24</episode-num>
     <premiere />
   </programme>
-  <programme start="20261012105000 +0530" stop="20261012111500 +0530" channel="HistoryTV18.in@SD">
-    <title lang="en-GB">OMG! Yeh Mera India</title>
-    <sub-title lang="en-GB">Explore a house that was built in 21 days using recycled materials and mud. Also, meet a 72-year-old from Kerala who can drive anything with wheels, including bulldozers and cranes</sub-title>
-    <desc lang="en-GB">The host sheds light on Indian culture by travelling across the country to explore food, rituals, traditions and some rare talents.</desc>
-    <credits>
-      <actor>Krushna Abhishek</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/e35428e12b473bc1ee3b7d422ce22b9a.jpg" />
-    <episode-num system="onscreen">E1</episode-num>
-    <premiere />
-  </programme>
   <programme start="20261012111500 +0530" stop="20261012120000 +0530" channel="HistoryTV18.in@SD">
     <title lang="en-GB">Forged in Fire: Knife or Death</title>
     <sub-title lang="en-GB">A competitor tries to prove the resilience of the ancient Kopis sword while facing America's historical Bowie. Later, the two finalists compete in the daunting Dead Run</sub-title>
@@ -142420,13 +142285,6 @@ Retiree Alex Strategos is consumed by loneliness. He turns to internet dating an
     <episode-num>S4 E4</episode-num>
     <icon src="https://iptv-epg.org/images/3TVoxJRagkCNi0S_CJDD9C_MEiP0aXTEDp9sZ2vM5YfuaQ3oy2e_slxUwWRYKslqHa8FrBgpX9yeqp9iiiKkEcsw2UGz2DwICpveEIFuZP14u2qfajP9C92GhmGY" />
     <title lang="en">Web of Lies</title>
-  </programme>
-  <programme start="20261012033000 +0100" stop="20261012064500 +0100" channel="IqraBangla.uk">
-    <title>Live Transmission from Madina</title>
-    <desc>Live Transmission from the holy city of Madina Al Munawwara.</desc>
-    <rating>
-      <value>--</value>
-    </rating>
   </programme>
   <programme start="20261012064500 +0100" stop="20261012065200 +0100" channel="IqraBangla.uk">
     <title>Azan-E-Fajr</title>
@@ -175350,13 +175208,10 @@ On and off the ice news and highlights with bonus coverage.</desc>
       <value>NA</value>
     </rating>
   </programme>
-  <programme start="20261012050000 +0000" stop="20261012055000 +0000" channel="NOWRock.uk@SD">
-    <title>21st Century Rock Queens</title>
-    <desc>These are power ladies who really rock! From Avril Lavigne and Pink to Amy Lee and Hayley Williams.</desc>
-  </programme>
-  <programme start="20261012055000 +0000" stop="20261012060000 +0000" channel="NOWRock.uk@SD">
-    <title>The New Legends Of Rock</title>
-    <desc>Rock Riffs, indie anthems and a new generation of rock legends from 2000 to now! Expect YungBlud, BMTH, The Arctic Monkeys, Fall Out Boy &amp; loads more!</desc>
+  <programme channel="NOWRock.uk@SD" start="20261012050000 +0000" stop="20261012060000 +0000">
+    <title lang="en">The Anthems!</title>
+    <desc lang="en">Turn it up to 11 for the finest rock anthems, featuring Kings of Leon, The Killers, Green Day, Biffy Clyro, and the Foo Fighters!</desc>
+    <icon src="https://jrsy.tmsimg.com/assets/p27746678_i_h9_ab.jpg" />
   </programme>
   <programme channel="NOWRock.uk@SD" start="20261012060000 +0000" stop="20261012070000 +0000">
     <title lang="en">The Anthems!</title>
@@ -178378,80 +178233,244 @@ The filmmaker sheds light on the moves made by some predators that mark the diff
     <icon src="https://iptv-epg.org/images/bkWBV0OVq0YwddwdLbMcB8-D1dJiqq0vERfsMYAmnz6dUn6fCm91_7liQmvkNp90Tr-BySHR_vpk2OWCOqrJ4sWpAdu_z4bMLgwI77B_HCOlHu-6Sb5M7u-yrsPRdQ" />
     <title lang="en">Botswana</title>
   </programme>
-  <programme channel="NickJr.in@SD" start="20261012053500 +0000" stop="20261012054500 +0000">
-    <title lang="en">Peppa Pig</title>
-    <sub-title lang="en">Roof Top Garden</sub-title>
-    <desc lang="en">Peppa and family come to help make a garden on the roof of the apartments. Mr Bull assists with a big truck and crane. There is even a little something for Mrs Duck.</desc>
+  <programme channel="NickJr.in@SD" start="20261012052400 +0000" stop="20261012055100 +0000">
+    <title lang="en">Team Umizoomi</title>
+    <sub-title lang="en">A Sledding Snow Day</sub-title>
+    <desc lang="en">Milli, Geo and Bot travel through the city to bring a sled to their friend.</desc>
+    <credits>
+      <actor>Madeleine Rose Yen</actor>
+      <actor>Ethan Kempner</actor>
+      <actor>Donovan Patton</actor>
+    </credits>
+    <date>2012</date>
+    <category lang="en">Series</category>
     <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/f217a9e7-7d55-32ac-94bf-2f17bcbadce2/16-9" />
-    <episode-num system="xmltv_ns">6.30.</episode-num>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Educational</category>
+    <category lang="en">Animated</category>
+    <icon src="http://dtil.tmsimg.com/assets/p9036232_b_h10_aa.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S3 E12</episode-num>
+    <previously-shown />
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>0</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>C</value>
+    </rating>
+    <rating system="USA Parental Rating">
+      <value>TVY</value>
+    </rating>
+    <rating system="Régie du cinéma">
+      <value>G</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>0</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>AL</value>
+    </rating>
   </programme>
-  <programme channel="NickJr.in@SD" start="20261012054500 +0000" stop="20261012055000 +0000">
-    <title lang="en">Peppa Pig</title>
-    <sub-title lang="en">Moving In</sub-title>
-    <desc lang="en">Peppa is playing with Candy Cat when Emily Elephant's Granny moves out of the apartment. When the new neighbours arrive, Peppa recognises her holiday friend Rohan Rhino.</desc>
+  <programme channel="NickJr.in@SD" start="20261012055100 +0000" stop="20261012061500 +0000">
+    <title lang="en">Team Umizoomi</title>
+    <sub-title lang="en">Meatball Madness</sub-title>
+    <desc lang="en">Milli, Geo and Bot must retrieve the stop button for Chef Mario's Meatball Machine.</desc>
+    <credits>
+      <actor>Madeleine Rose Yen</actor>
+      <actor>Juan Mirt</actor>
+      <actor>Donovan Patton</actor>
+    </credits>
+    <date>2013</date>
+    <category lang="en">Series</category>
     <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/f9458132-7672-3f6a-aa06-7437e2be6c9d/16-9" />
-    <episode-num system="xmltv_ns">6.31.</episode-num>
+    <category lang="en">Fantasy</category>
+    <category lang="en">Educational</category>
+    <category lang="en">Animated</category>
+    <icon src="http://dtil.tmsimg.com/assets/p9668597_b_h10_aa.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S4 E8</episode-num>
+    <previously-shown />
+    <rating system="British Board of Film Classification">
+      <value>U</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>L</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>C</value>
+    </rating>
+    <rating system="USA Parental Rating">
+      <value>TVY</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>0</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>0</value>
+    </rating>
   </programme>
-  <programme channel="NickJr.in@SD" start="20261012055000 +0000" stop="20261012060000 +0000">
-    <title lang="en">Peppa Pig</title>
-    <sub-title lang="en">Everybody Sleepover!</sub-title>
-    <desc lang="en">Peppa and all her friends are having a sleepover - different friends in each of the apartments in the high street. So they play hide and seek across all the rooms.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/b442c49a-47cb-3a8f-8a62-921927332dd9/16-9" />
-    <episode-num system="xmltv_ns">6.32.</episode-num>
-  </programme>
-  <programme channel="NickJr.in@SD" start="20261012113000 +0530" stop="20261012120000 +0530">
+  <programme channel="NickJr.in@SD" start="20261012061500 +0000" stop="20261012063900 +0000">
     <title lang="en">PAW Patrol</title>
-    <desc lang="en">A group of six rescue dogs, led by a tech-savvy boy named Ryder, have come together to form a pack. Together they embark on adventures and work as a team in order to protect the community.</desc>
+    <sub-title lang="en">Pups Save a Mer-Pup</sub-title>
+    <desc lang="en">When the pups and Cap'n Turbot camp out under a magical moon, they are transformed into mer-pups so they can perform an underwater rescue.</desc>
     <credits>
-      <actor>Kai Harris</actor>
-      <actor>Justin Paul Kelly</actor>
-      <actor>Christian Corrao</actor>
-      <actor>Lilly Bartlam</actor>
-      <actor>Jackson Reid</actor>
-      <actor>Lucien Duncan-Reid</actor>
-      <actor>Jordan Mazeral</actor>
-      <actor>Ron Pardo</actor>
+      <actor>Elijha Hammill</actor>
+      <actor>Max Calinescu</actor>
+      <actor>Drew Davis</actor>
       <director>Jamie Whitney</director>
-      <director>Charles E. Bastien</director>
-      <producer>Patricia Burns</producer>
     </credits>
+    <date>2015</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p10077400_b_h9_cy.jpg?lock=880x660" />
+    <category lang="en">Educational</category>
+    <category lang="en">Adventure</category>
+    <icon src="http://dtil.tmsimg.com/assets/p10077400_b_h8_de.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S2 E13</episode-num>
+    <previously-shown />
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>0</value>
+    </rating>
+    <rating system="USA Parental Rating">
+      <value>TVY</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>C</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Régie du cinéma">
+      <value>G</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>0</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>7</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>AL</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>AL</value>
+    </rating>
   </programme>
-  <programme channel="NickJr.in@SD" start="20261012120000 +0530" stop="20261012123000 +0530">
-    <title lang="en">Masha and the Bear</title>
-    <desc lang="en">A little girl named Masha lives in the forest with her dog, goat and pig, often getting into funny situations. She befriends a paternal bear who tries to keep her away from disaster.</desc>
+  <programme channel="NickJr.in@SD" start="20261012063900 +0000" stop="20261012070400 +0000">
+    <title lang="en">PAW Patrol</title>
+    <sub-title lang="en">Mission PAW: Pups Save the Royal Throne</sub-title>
+    <desc lang="en">The pups must come to the rescue when Sweetie plans to steal the royal throne so that she can rule.</desc>
     <credits>
-      <actor>Alina Kukushkina</actor>
-      <actor>Boris Kutnevich</actor>
-      <director>Vlad Bayramgulov</director>
-      <producer>Oleg Kuzovkov</producer>
-      <producer>Dmitriy Loveyko</producer>
+      <actor>Jaxon Mercey</actor>
+      <actor>Max Calinescu</actor>
+      <actor>Drew Davis</actor>
+      <director>Jamie Whitney</director>
     </credits>
+    <date>2017</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p794701_b_h9_ci.jpg?lock=880x660" />
+    <category lang="en">Educational</category>
+    <category lang="en">Adventure</category>
+    <icon src="http://dtil.tmsimg.com/assets/p10077400_b_h8_de.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S4 E10</episode-num>
+    <previously-shown />
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>0</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>C</value>
+    </rating>
+    <rating system="USA Parental Rating">
+      <value>TVY</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Régie du cinéma">
+      <value>G</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>0</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>0</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>AL</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>AL</value>
+    </rating>
   </programme>
-  <programme channel="NickJr.in@SD" start="20261012123000 +0530" stop="20261012130000 +0530">
-    <title lang="en">Masha and the Bear</title>
-    <desc lang="en">A little girl named Masha lives in the forest with her dog, goat and pig, often getting into funny situations. She befriends a paternal bear who tries to keep her away from disaster.</desc>
+  <programme channel="NickJr.in@SD" start="20261012070400 +0000" stop="20261012072800 +0000">
+    <title lang="en">PAW Patrol</title>
+    <sub-title lang="en">All-Star Pups!; Pups Save Sports Day</sub-title>
+    <desc lang="en">The pups play kickball against Raimondo's team, until an eagle steals the ball; the All-Star pups are ready to compete in the summer sports day when Daring Danny X turns the field into an ice rink.</desc>
     <credits>
-      <actor>Alina Kukushkina</actor>
-      <actor>Boris Kutnevich</actor>
-      <director>Vlad Bayramgulov</director>
-      <producer>Oleg Kuzovkov</producer>
-      <producer>Dmitriy Loveyko</producer>
+      <actor>Elijha Hammill</actor>
+      <actor>Max Calinescu</actor>
+      <actor>Drew Davis</actor>
+      <director>Jamie Whitney</director>
     </credits>
+    <date>2016</date>
+    <category lang="en">Series</category>
+    <category lang="en">Animated</category>
     <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p794701_b_h9_ci.jpg?lock=880x660" />
+    <category lang="en">Educational</category>
+    <category lang="en">Adventure</category>
+    <icon src="http://dtil.tmsimg.com/assets/p10077400_b_h8_de.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">S3 E17</episode-num>
+    <previously-shown />
+    <rating system="Freiwillige Selbstkontrolle Fernsehen">
+      <value>0</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>C</value>
+    </rating>
+    <rating system="USA Parental Rating">
+      <value>TVY</value>
+    </rating>
+    <rating system="Australian Classification Board">
+      <value>G</value>
+    </rating>
+    <rating system="Régie du cinéma">
+      <value>G</value>
+    </rating>
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
+      <value>0</value>
+    </rating>
+    <rating system="Krajowa Rada Radiofonii i Telewizji">
+      <value>0</value>
+    </rating>
+    <rating system="Kijkwijzer">
+      <value>AL</value>
+    </rating>
+    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
+      <value>AL</value>
+    </rating>
   </programme>
   <programme channel="NickJr.in@SD" start="20261012073100 +0000" stop="20261012074000 +0000">
     <title lang="en">Tim Rex in Space</title>
@@ -204496,117 +204515,69 @@ Duggu Dumbbell proposes a triple-feat strength contest to Simmba, with the defea
     <icon src="https://iptv-epg.org/images/KwvWuo-EuzHok_K1TidK1OkU_XrEXzJBzWxVgz4mNtW4WhjFR0DodEjQXJ5828p9rY097lWSamn_K2ubM-bngNCQSqBlsaOE3iHAHIzgy180NRzpOL1MyBypBl1Q" />
     <title lang="en">Malargalae Malarungal</title>
   </programme>
-  <programme channel="Pop.uk" start="20261012052500 +0000" stop="20261012055000 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012105500/list/ZEEPOPNumbChucks215146791f9b0f408a14cc3987379f3dbedeee9.jpg" />
+  <programme start="20261012052559 +0000" stop="20261012055059 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Dilweed and Fungus try to help Buford out by setting up Hooves on a date with Granny. Then, Dilweed and Fungus find a caveman living in a block of ice.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012055000 +0000" stop="20261012061500 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012112000/list/ZEEPOPNumbChucks2151467e01298a16e6e4e3791d9687964664417.jpg" />
+  <programme start="20261012055059 +0000" stop="20261012061559 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Buford teams up with a mysterious hero in an attempt to fleece Dilweed and Fungus out of their Key to the City. Then, Dilweed and Fungus accidentally injure Lenny the Crossing Goose.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012061500 +0000" stop="20261012064000 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012114500/list/ZEEPOPNumbChucks2151467619d2ef7e0a942f28fc432fb6270bfb6.jpg" />
+  <programme start="20261012061559 +0000" stop="20261012064059 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Buford convinces the Chucks they've fallen asleep and awoken a 1,000 years in the future. Then, Dilweed and Fungus act as Buford's lawyers when he's accused of stealing the Salmon of Justice.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012064000 +0000" stop="20261012070500 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012121000/list/ZEEPOPNumbChucks215146781570b4ebc774877af44b9243e824d6b.jpg" />
+  <programme start="20261012064059 +0000" stop="20261012070559 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Buford comes up with the greatest insult ever, but Dilweed and Fungus misinterpret it as the greatest nickname ever. Then, Fungus puts on Granny Butternut's old glasses and they make him a genius.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012070500 +0000" stop="20261012073000 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012123500/list/ZEEPOPNumbChucks2151467fb4bfa6520fe4058bf26f66f8da3419c.jpg" />
+  <programme start="20261012070559 +0000" stop="20261012073058 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Quills' strange history is revealed when odd Russian bears show up at Pinheads. Then, Dilweed and Fungus go to a taping of their favourite show, the Winky the Mole Show.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012073000 +0000" stop="20261012075500 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012130000/list/ZEEPOPNumbChucks2151467a58ef5f38d064877a6d7a8976f382a3d.jpg" />
+  <programme start="20261012073058 +0000" stop="20261012075558 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Dilweed and Fungus think Woodchuck Morris is calling to give them directives, but it's really Hooves who is trying to protect his prize gourd from them. Then, Buford gets amnesia.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012075500 +0000" stop="20261012082000 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012132500/list/ZEEPOPNumbChucks2151467ca6db936a209484bb9702f0272e98441.jpg" />
+  <programme start="20261012075558 +0000" stop="20261012082058 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Dilweed and Fungus accidentally become rich! Then, Dilweed and Fungus follow Hooves sneaking off one night and discover he's a member of a strange moose club.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012082000 +0000" stop="20261012084500 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012135000/list/ZEEPOPNumbChucks21514673f93ad3ef5bd4b2f8587a93cf643a479.jpg" />
+  <programme start="20261012082058 +0000" stop="20261012084558 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Thanks to Dilweed and Fungus, most of Ding-a-ling Springs gets stranded on a deserted island. Then, Dilweed and Fungus are lost at sea when they meet a strange new friend.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012084500 +0000" stop="20261012091000 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012141500/list/ZEEPOPNumbChucks21514674b997bd20fe44c75b856aeaee7dc64d1.jpg" />
+  <programme start="20261012084558 +0000" stop="20261012091058 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>After the Groundhog sees his shadow, Dilweed and Fungus promise to bring an end to a terrible winter. Then, Dilweed is mistaken for a robot from the future.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012091000 +0000" stop="20261012092000 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012144000/list/ZEEPOPGrizzyAndTheLemmings2056732f1171b8a179743a489037f7e7156fbd4.jpg" />
+  <programme start="20261012091058 +0000" stop="20261012092006 +0000" channel="Pop.uk">
+    <title>Grizzy And The Lemmings</title>
+    <desc>A grizzly bear contends with a group of troublesome lemmings</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012092000 +0000" stop="20261012092900 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012145000/list/ZEEPOPGrizzyAndTheLemmings2056732a52c4af5cc074eca872f2d08d56e10dc.jpg" />
+  <programme start="20261012092006 +0000" stop="20261012092915 +0000" channel="Pop.uk">
+    <title>Grizzy And The Lemmings</title>
+    <desc>A grizzly bear contends with a group of troublesome lemmings</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012092900 +0000" stop="20261012093800 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012145900/list/ZEEPOPGrizzyAndTheLemmings20567328169d572bfc74610a22f3fbe2ba66292.jpg" />
+  <programme start="20261012092915 +0000" stop="20261012093824 +0000" channel="Pop.uk">
+    <title>Grizzy And The Lemmings</title>
+    <desc>A grizzly bear contends with a group of troublesome lemmings</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012093800 +0000" stop="20261012094700 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012150800/list/ZEEPOPGrizzyAndTheLemmings2056732abe068bbabed41c3977457fa59d2c4cd.jpg" />
+  <programme start="20261012093824 +0000" stop="20261012094733 +0000" channel="Pop.uk">
+    <title>Grizzy And The Lemmings</title>
+    <desc>A grizzly bear contends with a group of troublesome lemmings</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012094700 +0000" stop="20261012095600 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012151700/list/ZEEPOPGrizzyAndTheLemmings2056732e6092b6fedc74abdb4e8275ebdd15925.jpg" />
+  <programme start="20261012094733 +0000" stop="20261012095642 +0000" channel="Pop.uk">
+    <title>Grizzy And The Lemmings</title>
+    <desc>A grizzly bear contends with a group of troublesome lemmings</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012095600 +0000" stop="20261012100500 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012152600/list/ZEEPOPGrizzyAndTheLemmings2056732b50d4ee2f5f64a9fad5570997e30fb65.jpg" />
+  <programme start="20261012095642 +0000" stop="20261012100551 +0000" channel="Pop.uk">
+    <title>Grizzy And The Lemmings</title>
+    <desc>A grizzly bear contends with a group of troublesome lemmings</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012100500 +0000" stop="20261012101500 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012153500/list/ZEEPOPGrizzyAndTheLemmings2056732e650a5762eca4f08986937c1ef82a379.jpg" />
+  <programme start="20261012100551 +0000" stop="20261012101500 +0000" channel="Pop.uk">
+    <title>Grizzy And The Lemmings</title>
+    <desc>A grizzly bear contends with a group of troublesome lemmings</desc>
   </programme>
   <programme channel="Pop.uk" start="20261012101500 +0000" stop="20261012102400 +0000">
     <title lang="en">Grizzy And The Lemmings</title>
@@ -238822,23 +238793,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <category lang="en">Sport</category>
     <icon src="https://tv.assets.pressassociation.io/3a316425-b513-5459-84ae-8ce7fcac1681.jpg" />
     <episode-num system="onscreen">S2026 E32</episode-num>
-  </programme>
-  <programme channel="SongdewTV.in@SD" start="20261012111000 +0530" stop="20261012111500 +0530">
-    <title lang="en">Songdew Fresh</title>
-    <desc lang="en">A comprehensive compilation of the latest music tracks, curated to elevate and inspire positive vibes, offering a refreshing and motivating experience for listeners.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p15781078_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme start="20261012111500 +0530" stop="20261012112000 +0530" channel="SongdewTV.in@SD">
-    <title>HIP-HOP</title>
-    <desc>Featuring  the Best of Indie-Hip-Hop</desc>
-    <category>Music</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg?width=700" />
-    <episode-num system="onscreen">4</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
   </programme>
   <programme start="20261012112000 +0530" stop="20261012112500 +0530" channel="SongdewTV.in@SD">
     <title>Track Tales</title>
@@ -279701,35 +279655,10 @@ The host sheds light on real-life criminal cases and crime stories while giving 
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p11362860_v_h10_ac.jpg?lock=1280x720" />
   </programme>
-  <programme channel="StarGold2.in@HD" start="20261012083700 +0530" stop="20261012111700 +0530">
-    <title>Laal Singh Chaddha</title>
-    <desc>Laal Singh Chaddha, a man with a disability, recounts the early years of his life to a passenger on a train. Now, his only wish is to be reunited with his childhood sweetheart, Rupa.</desc>
-    <category>Film</category>
-    <category>Comedy</category>
-    <date>2022</date>
+  <programme channel="StarGold2.in@HD" start="20261012090800 +0530" stop="20261012121100 +0530">
+    <title lang="en">Awara Paagal Deewana</title>
+    <desc lang="en">Dr Anmol, a dentist and henpecked husband, lives a miserable existence in New York due to his domineering wife. However, his troubles increase when he unwittingly gets embroiled in a mafia rivalry.</desc>
     <credits>
-      <director>Advait Chandan</director>
-      <actor>Aamir Khan</actor>
-      <actor>Kareena Kapoor</actor>
-      <actor>Mona Singh</actor>
-      <actor>Naga Chaitanya Akkineni</actor>
-      <actor>Manav Vij</actor>
-      <actor>Abhinay Raj Singh</actor>
-      <actor>Teetu Verma</actor>
-      <actor>Ahmad Ibn Umar</actor>
-      <producer>Aamir Khan</producer>
-      <producer>Kiran Rao</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p20824854_v_h8_af.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="StarGold2.in@HD" start="20261012111700 +0530" stop="20261012133800 +0530">
-    <title>Awara Paagal Deewana</title>
-    <desc>Dr Anmol, a dentist and henpecked husband, lives a miserable existence in New York due to his domineering wife. However, his troubles increase when he unwittingly gets embroiled in a mafia rivalry.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2002</date>
-    <credits>
-      <director>Vikram Bhatt</director>
       <actor>Akshay Kumar</actor>
       <actor>Sunil Shetty</actor>
       <actor>Rahul Dev</actor>
@@ -279739,39 +279668,38 @@ The host sheds light on real-life criminal cases and crime stories while giving 
       <actor>Johnny Lever</actor>
       <actor>Aarti Chhabria</actor>
       <actor>Amrita Arora</actor>
+      <director>Vikram Bhatt</director>
       <producer>Firoz Nadiadwala</producer>
       <producer>A.G. Nadiadwala</producer>
       <producer>Firoz A. Nadiadwala</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p149130_b_h10_ai.jpg?lock=1280x720" />
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
+    <icon src="https://dtil.tmsimg.com/assets/p149130_b_h9_ai.jpg?lock=880x660" />
   </programme>
-  <programme channel="StarGold2.in@HD" start="20261012133800 +0530" stop="20261012154700 +0530">
-    <title>Patna Shukla</title>
-    <desc>Tanvi Shukla, a housewife, is also a minor league lawyer. Her skills are put to the ultimate test when she helps a student expose an education scam.</desc>
-    <category>Film</category>
-    <category>Drama</category>
-    <date>2024</date>
+  <programme channel="StarGold2.in@HD" start="20261012121100 +0530" stop="20261012140000 +0530">
+    <title lang="en">Jai Maa Vaishno Devi</title>
+    <desc lang="en">A childless couple are devotees of goddess Vaishno Devi and organise a ritual to receive her blessings. However, when a demon destroys the ritual, the goddess herself takes action.</desc>
     <credits>
-      <director>Vivek Budakoti</director>
-      <actor>Raveena Tandon</actor>
-      <actor>Manav Vij</actor>
-      <actor>Chandan Roy Sanyal</actor>
-      <actor>Satish Kaushik</actor>
-      <actor>Raju Kher</actor>
-      <actor>Arijeet Kaurav</actor>
-      <actor>Anushka Kaushik</actor>
-      <producer>Arbaaz Khan</producer>
+      <actor>Aloka Mukherjee</actor>
+      <actor>Arun Govil</actor>
+      <actor>Rakesh Bedi</actor>
+      <actor>Gajendra Chauhan</actor>
+      <actor>Kiran Juneja</actor>
+      <actor>Girja Shankar</actor>
+      <actor>Devidas Chippa</actor>
+      <actor>Rooplata</actor>
+      <director>Shatilal Soni</director>
+      <producer>Gulshan Kumar</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p28974670_v_h10_aa.jpg?lock=1280x720" />
+    <category lang="en">Film</category>
+    <category lang="en">Drama</category>
+    <icon src="https://dtil.tmsimg.com/assets/p25493489_v_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="StarGold2.in@HD" start="20261012154700 +0530" stop="20261012180700 +0530">
-    <title>Kis Kisko Pyaar Karu</title>
-    <desc>A young man adores his three wives and lives in the same building with them. But his facade crumbles when they learn about his fourth bride.</desc>
-    <category>Film</category>
-    <category>Comedy</category>
-    <date>2015</date>
+  <programme channel="StarGold2.in@HD" start="20261012140000 +0530" stop="20261012171900 +0530">
+    <title lang="en">Kis Kisko Pyaar Karoon</title>
+    <desc lang="en">A young man adores his three wives and lives in the same building with them. But his facade crumbles when they learn about his fourth bride.</desc>
     <credits>
-      <director>Abbas Alibhai Burmawalla</director>
       <actor>Kapil Sharma</actor>
       <actor>Elli Avrram</actor>
       <actor>Simran Kaur Mundi</actor>
@@ -279781,20 +279709,19 @@ The host sheds light on real-life criminal cases and crime stories while giving 
       <actor>Supriya Pathak</actor>
       <actor>Varun Sharma</actor>
       <actor>Kundan Pandey</actor>
+      <director>Abbas Alibhai Burmawalla</director>
       <producer>Abbas Alibhai Burmawalla</producer>
       <producer>Ganesh Jain</producer>
       <producer>Ratan Jain</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p12133196_b_h10_ab.jpg?lock=1280x720" />
+    <category lang="en">Film</category>
+    <category lang="en">Comedy</category>
+    <icon src="https://dtil.tmsimg.com/assets/p12133196_v_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="StarGold2.in@HD" start="20261012180700 +0530" stop="20261012205000 +0530">
-    <title>Kyo Kii Main Jhuth Nahin Bolta</title>
-    <desc>Raj is a lawyer who finds great success with his countless fibs. However, when his son wishes for his father to stop lying, Raj is magically forced to speak the truth, which lands him in trouble.</desc>
-    <category>Film</category>
-    <category>Action</category>
-    <date>2001</date>
+  <programme channel="StarGold2.in@HD" start="20261012171900 +0530" stop="20261012205000 +0530">
+    <title lang="en">Kyo Kii Main Jhuth Nahin Bolta</title>
+    <desc lang="en">Raj is a lawyer who finds great success with his countless fibs. However, when his son wishes for his father to stop lying, Raj is magically forced to speak the truth, which lands him in trouble.</desc>
     <credits>
-      <director>David Dhawan</director>
       <actor>Govinda</actor>
       <actor>Sushmita Sen</actor>
       <actor>Rambha</actor>
@@ -279804,10 +279731,13 @@ The host sheds light on real-life criminal cases and crime stories while giving 
       <actor>Ashish Vidyarthi</actor>
       <actor>Shahbaz Khan</actor>
       <actor>Razak Khan</actor>
+      <director>David Dhawan</director>
       <producer>Shobha Kapoor</producer>
       <producer>Ekta Kapoor</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p74016_v_h10_ab.jpg?lock=1280x720" />
+    <category lang="en">Film</category>
+    <category lang="en">Action</category>
+    <icon src="https://dtil.tmsimg.com/assets/p74016_v_h9_ab.jpg?lock=880x660" />
   </programme>
   <programme channel="StarGold2.in@HD" start="20261012205000 +0530" stop="20261012231200 +0530">
     <title>Drishyam 2</title>
@@ -292784,13 +292714,6 @@ Highlights of the matches played during the ICC Cricket World Cup, wherein inter
     <icon src="https://iptv-epg.org/images/Q_zDWL0c5B00IrTQ2hUJJacP-BaXbTrWKOQVx5RUHCPRqwnDCQjSlbavgr_rbgRpDrfnuMijrfwmumSOdxVfWnqnb50m3BO6fFDO3Eg1D-a1MCKJNggT6Et0dG5w6A" />
     <title lang="en">Sports Programme</title>
   </programme>
-  <programme channel="StarSportsSelect1.in@SD" start="20261012110000 +0530" stop="20261012111500 +0530">
-    <title lang="en">Premier League Highlights</title>
-    <desc lang="en">Highlights of the Premier League matches, where professional football teams compete against each other to win the championship title.</desc>
-    <category lang="en">News</category>
-    <category lang="en">Magazine Programme</category>
-    <icon src="https://dtil.tmsimg.com/assets/p18771049_b_h9_af.jpg?lock=880x660" />
-  </programme>
   <programme channel="StarSportsSelect1.in@SD" start="20261012111500 +0530" stop="20261012113000 +0530">
     <title lang="en">Premier League Highlights</title>
     <desc lang="en">Highlights of the Premier League matches, where professional football teams compete against each other to win the championship title.</desc>
@@ -302814,25 +302737,6 @@ Jen and Tim's fight escalates and everyone is caught in the crossfire; Cortney l
     <desc lang="en">Mangala Alati presents the sacred Mangala Alati, featuring prayers, rituals, and devotional moments that create a serene atmosphere of faith, hope, and positivity each day.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_TARANG_113152_15OCT063000_15OCT073000/images/LANDSCAPE_169/1790250252000_TARANG_MangalaAlati_113152.jpg" />
   </programme>
-  <programme start="20261012110900 +0530" stop="20261012112000 +0530" channel="TeluguOne.in@HD">
-    <title>Aasayam</title>
-    <desc>Sarojini, a courageous woman, battles out corrupt and wicked politicians following her conscientious father's murder at their hands.</desc>
-    <category>Drama</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/a1ace90e20ebb55773b48c542420ecb7.jpg?width=700" />
-    <credits>
-      <director>A Mohan Gandhi.</director>
-      <actor>Vijaya Shanthi</actor>
-      <actor>Jagapathi Babu</actor>
-      <actor>Srikanth</actor>
-      <actor>Vijaya Kumar</actor>
-      <actor>Devan</actor>
-      <actor>Tanikella Bharani</actor>
-    </credits>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261012112000 +0530" stop="20261012113200 +0530" channel="TeluguOne.in@HD">
     <title>Aasayam</title>
     <desc>Sarojini, a courageous woman, battles out corrupt and wicked politicians following her conscientious father's murder at their hands.</desc>
@@ -307186,11 +307090,6 @@ Jen and Tim's fight escalates and everyone is caught in the crossfire; Cortney l
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme channel="TheJungleBook.in" start="20261012110100 +0530" stop="20261012111400 +0530">
-    <title lang="en">The Monkey Business</title>
-    <desc lang="en">Tabaqui interrupts Mowgli and Rikki Tikki Tavi whilst they are playing.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6ac88a07ffbb55f310798f2d/images/LANDSCAPE_169/9324_463e2941-4e59-4ac7-892c-6f6a8b3d00e4.png" />
   </programme>
   <programme channel="TheJungleBook.in" start="20261012111400 +0530" stop="20261012112700 +0530">
     <title lang="en">The Two For price Of One</title>
@@ -312877,13 +312776,6 @@ Someone stumbles upon a brand-new society unlike anything seen before.</desc>
     <icon src="https://iptv-epg.org/images/71MT1JAwlYsG0I8jGbTV3rA4Kp1qyn9-3WdvxUPOQ3gwjpEapMMEkuF1W-7zVtBuydCZT2ae0gaIIomYA9XOaP3y0RcevDyMtOE0L60SPWU" />
     <previously-shown />
     <title lang="en">The Walking Dead</title>
-  </programme>
-  <programme channel="TinyPop.uk" start="20261012053500 +0000" stop="20261012054800 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012110500/list/TinyPOPCareBearsUnlockTheMagic205699265cb756a840e4f56b0a69d95e5087584.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261012054800 +0000" stop="20261012060100 +0000">
     <title lang="en">Care Bears: Unlock The Magic</title>
@@ -373758,26 +373650,6 @@ A Toyota MR2 makes power, but not the power it once had; Bogi and Faye check the
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012111300 +0530" stop="20261012111600 +0530" channel="custom.duck.tv">
-    <title>Sunville</title>
-    <desc>In the charming village of Sunville, Mr. Goat and the others fill each day with exciting adventures. They bring joy and warmth through their interactions and helpful deeds.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f4694bb56437a39aa1c8dc5bfc414ce1.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012111600 +0530" stop="20261012111900 +0530" channel="custom.duck.tv">
-    <title>Dotty, the Kitty</title>
-    <desc>Dotty the kitten tries to complete pictures by connecting the dots on the outline of various objects selected by the pencil.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/1cee4e050e2141fcaf193faed3e2b6a3.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261012111900 +0530" stop="20261012112300 +0530" channel="custom.duck.tv">
     <title>Colorwheel</title>
     <desc>Exploring the magical realm of colours with a pair of animal friends and the colour wheel.</desc>
@@ -386655,17 +386527,6 @@ A Toyota MR2 makes power, but not the power it once had; Bogi and Faye check the
       <value>7.0/10</value>
     </star-rating>
   </programme>
-  <programme channel="custom.history.tv" start="20261012105000 +0530" stop="20261012111500 +0530">
-    <title lang="en">OMG! Yeh Mera India</title>
-    <desc lang="en">Explore a house that was built in 21 days using recycled materials and mud. Also, meet a 72-year-old from Kerala who can drive anything with wheels, including bulldozers and cranes.</desc>
-    <credits>
-      <actor>Krushna Abhishek</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Reality Show</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28600953_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S9 E1</episode-num>
-  </programme>
   <programme channel="custom.history.tv" start="20261012111500 +0530" stop="20261012120000 +0530">
     <title lang="en">Forged in Fire: Knife or Death</title>
     <desc lang="en">A competitor tries to prove the resilience of the ancient Kopis sword while facing America's historical Bowie. Later, the two finalists compete in the daunting Dead Run.</desc>
@@ -394624,14 +394485,6 @@ A Toyota MR2 makes power, but not the power it once had; Bogi and Faye check the
     <desc lang="en">A stand-up comedy show in which the contestants have to undergo several rounds to prove their talents to win the title.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_STAR_VIJAY_975911_15OCT070000_15OCT080000/images/LANDSCAPE_169/1756684870000_STARVIJAY_KallakaPovathuYaaruS07_975911.jpg" />
   </programme>
-  <programme channel="custom.starsports2" start="20261012110000 +0530" stop="20261012111500 +0530">
-    <title lang="en">Follow The Blues</title>
-    <desc lang="en">The Indian cricket team's camaraderie, teamwork, and passion for cricket is on display in an insider's view of all the on and off-field activities.</desc>
-    <category lang="en">Sport</category>
-    <category lang="en">Cricket</category>
-    <icon src="https://dtil.tmsimg.com/assets/p32057320_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S2026 E134</episode-num>
-  </programme>
   <programme channel="custom.starsports2" start="20261012111500 +0530" stop="20261012113000 +0530">
     <title lang="en">2nd T20: India vs West Indies; T20 Cricket</title>
     <desc lang="en">Professional players from different cricketing teams play in the Twenty20 format, competing against each other to win the match.</desc>
@@ -396021,11 +395874,6 @@ A Toyota MR2 makes power, but not the power it once had; Bogi and Faye check the
     <title lang="en">Songs Program</title>
     <desc lang="en">The compilation of back-to-back music based on the Assamese language is presented.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_ASSAM_TALKS_1021691_15OCT070000_15OCT073000/images/LANDSCAPE_169/1756684870000_AssamTalks_SongsProgram_1021691.jpg" />
-  </programme>
-  <programme start="20261012084900 +0530" stop="20261012111500 +0530" channel="staging.dhinchaak">
-    <title lang="en">Yugandhar</title>
-    <category lang="en">Hindi</category>
-    <category lang="en">Film</category>
   </programme>
   <programme start="20261012111500 +0530" stop="20261012140200 +0530" channel="staging.dhinchaak">
     <title lang="en">Rakshasudu</title>
