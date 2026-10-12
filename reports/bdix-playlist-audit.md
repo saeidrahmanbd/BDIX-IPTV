@@ -1,23 +1,23 @@
 # BDIX Playlist Audit
 
-Generated: **2026-10-12T07:00:53+00:00**
+Generated: **2026-10-12T08:37:37+00:00**
 
 ## Summary
 
 - Playlist: **BDIX-Playlist.m3u**
-- Total entries: **185**
-- Unique stream URLs: **185**
-- Unique channel identities: **176**
+- Total entries: **139**
+- Unique stream URLs: **139**
+- Unique channel identities: **131**
 - Duplicate stream URLs: **0**
-- Duplicate channel identities: **9**
+- Duplicate channel identities: **8**
 - Missing channel IDs: **0**
 - Missing channel numbers: **0**
-- Missing logos: **1**
+- Missing logos: **0**
 - Malformed entries: **0**
 - Unknown categories: **0**
-- Streams tested: **185**
-- Reachable: **1**
-- Failed: **184**
+- Streams tested: **139**
+- Reachable: **0**
+- Failed: **139**
 
 ## Protection Policy
 
@@ -26,15 +26,15 @@ Safe metadata repairs made: **0**
 
 ## Categories
 
-- Bangladesh: **40**
+- Bangladesh: **41**
 - Indian Bangla: **17**
-- Hindi: **43**
-- International: **15**
-- Documentary & Wildlife: **16**
-- Kids: **9**
-- Religious: **7**
-- Sports: **26**
-- Test: **12**
+- Hindi: **28**
+- International: **8**
+- Documentary & Wildlife: **10**
+- Kids: **5**
+- Religious: **5**
+- Sports: **17**
+- Test: **8**
 
 ## Duplicate Stream URLs
 
@@ -45,7 +45,6 @@ None.
 - dbcnews.bd: Bangla Vision, DBC News
 - deshtv.bd: Bangla Vision, Desh TV
 - ekattortv.bd: Bangla Vision, Ekattor TV
-- ekhontv.bd: Bangla Vision, Ekhon TV
 - jamunatv.bd: Jamuna TV
 - news24.bd: Bangla Vision, News 24
 - starplus.in@sd: Star Plus
@@ -56,7 +55,7 @@ None.
 
 - Missing channel ID: None
 - Missing channel number: None
-- Missing logo: EPL channel 1
+- Missing logo: None
 
 ## Malformed Entries
 
