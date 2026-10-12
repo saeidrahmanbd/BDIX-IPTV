@@ -22,7 +22,16 @@ def main():
     text=WORKER.read_text(encoding="utf-8")
     pattern=re.compile(r'const EPG_ID_MAP\s*=\s*\{.*?\};',re.S)
     replacement="const EPG_ID_MAP = " + json.dumps(dict(sorted(mapping.items())),ensure_ascii=False,separators=(",",":")) + ";\n"
-    if not pattern.search(text): raise SystemExit("EPG_ID_MAP block not found")
+    if not pattern.search(text):
+        # The repository may intentionally carry a retired/disabled Worker stub.
+        # Do not let its absent optional map block prevent publication of the
+        # standalone, shared XMLTV guide. If an active handler exists, however,
+        # a missing map is a genuine integration error and must still fail.
+        active_handler = re.search(r"\\bexport\\s+default\\b|\\baddEventListener\\s*\\(\\s*['\\\"]fetch['\\\"]", text)
+        if not active_handler:
+            print("EPG worker map sync skipped: xtream/worker.js has no active Worker handler; shared XMLTV guide maintenance can continue.")
+            return
+        raise SystemExit("EPG_ID_MAP block not found in active Xtream Worker")
     new=pattern.sub(replacement,text,count=1)
     if new!=text: WORKER.write_text(new,encoding="utf-8")
     print(f"EPG worker mappings synchronized: {len(mapping)} channel identities")
