@@ -49,5 +49,27 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 
 ## 2026-10-12
 
-- No meaningful playlist changes detected.
+- 🗑️ **27 channel(s) removed**
+
+### Removed channels
+- Gazi TV
+- Probashi TV
+- ZB Music
+- &pictures 2
+- B4U Bhojpuri Plus
+- Colors Kannada Cinema
+- Sidharth Gold
+- Star Gold Select
+- Star Suvarna Plus
+- Zee Anmol
+- Zee Cinemalu
+- Zee Talkies
+- 7X Music
+- DD Bihar
+- DD Kisan
+- Star Kiran
+- Sun TV
+- VCV
+- Zee Telugu
+- BS Film
 
