@@ -24,7 +24,6 @@ RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos
 PLAYLISTS = [
     "BDIX-Playlist.m3u",
     "IPTV-Playlist.m3u",
-    "NVisionBD-Playlist.m3u",
 ]
 REPORT = Path("reports/playlist-logo-repair-results.md")
 
