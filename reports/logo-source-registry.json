@@ -1,7 +1,1 @@
-{
-  "NVisionBD-Playlist.m3u|custom.global.panjab|Global Panjab|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-global-panjab-ce10594c3e.png": {
-    "status": "third_party_verified",
-    "source_url": "https://apps.apple.com/ca/app/global-punjab-tv/id1408487692",
-    "notes": "Image visually inspected: the exact GLOBAL PUNJAB wordmark is present without a visible watermark. Asset matches the app artwork listed for Global Punjab TV in the App Store; source is the app listing, not a broadcaster media-kit file."
-  }
-}
+{}
