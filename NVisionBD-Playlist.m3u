@@ -269,7 +269,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1JT_gEv
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2iL-qELascqw-24FF6AsRu
 #EXTINF:-1 xui-id="188449" tvg-id="staging.assam.talks" tvg-name="Assam Talks" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/assam-talks.png" tvg-chno="132" channel-id="staging.assam.talks" group-title="Indian Entertainment",Assam Talks
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0-Za1Oz-B_ae5oOvHGDseA
-#EXTINF:-1 xui-id="41284" tvg-id="Colors.in" tvg-name="Colors HD" tvg-chno="133" channel-id="Colors.in" group-title="Indian Entertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors.png",Colors HD
+#EXTINF:-1 xui-id="41284" tvg-id="Colors.in" tvg-name="Colors HD" tvg-chno="133" channel-id="Colors.in" group-title="Indian Entertainment" ,Colors HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3QGS86hUr9gLGzYeTsokr4
 #EXTINF:-1 xui-id="490" tvg-id="Dangal2.in@SD" tvg-name="Dangal 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dangal-2.png" tvg-chno="134" channel-id="Dangal2.in@SD" group-title="Indian Entertainment",Dangal 2
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0Yn-zYBHUUPZ1LJ2Mt3Ef1
@@ -635,7 +635,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1duiu8t
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Dn0Memgh9c7zH5Gv0Zh9E
 #EXTINF:-1 xui-id="656" tvg-id="custom.bein.sports.1" tvg-name="beIN Sports 1 HD" tvg-chno="315" channel-id="custom.bein.sports.1" group-title="Sports",beIN Sports 1 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-06uvaatcMuDBXC7Qw6M9C5
-#EXTINF:-1 xui-id="18585" tvg-id="beINSports3.qa" tvg-name="beIN Sports 3 HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-3.png" tvg-chno="316" channel-id="beINSports3.qa" group-title="Sports",beIN Sports 3 HD
+#EXTINF:-1 xui-id="18585" tvg-id="beINSports3.qa" tvg-name="beIN Sports 3 HD"  tvg-chno="316" channel-id="beINSports3.qa" group-title="Sports",beIN Sports 3 HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3Mj_QDROYj6uT9Qf7sEEA5
 #EXTINF:-1 xui-id="142608" tvg-id="BEINCHD" tvg-name="beIN Sports Arabic HD" tvg-chno="317" channel-id="BEINCHD" group-title="Sports",beIN Sports Arabic HD
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1BiGL4E3Ohzdw2FkpIokhY
