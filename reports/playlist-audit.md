@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-11T17:53:40.365125+00:00**
+Generated: **2026-10-12T01:52:52.199594+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -14,7 +14,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **0**
+- Logo exceptions: **8**
 - Logo references checked: **1145**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
@@ -993,8 +993,8 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1145**
-- missing: **0**
+- Healthy/local references: **1122**
+- missing: **23**
 - broken-local: **0**
 - external: **0**
 - non-png: **0**
@@ -1002,6 +1002,14 @@ None.
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
+- missing — Bangla TV [banglatv.bd] — 
+- missing — BTV News [custom.btv.news] — 
+- missing — Channel 1 [custom.channel.1] — 
+- missing — Channel 9 [channel9.bd] — 
+- missing — Channel 16 [custom.channel.16] — 
+- missing — Channel 24 [channel24.bd] — 
+- missing — Channel 52 [staging.channel.52] — 
+- missing — Tom and Jerry [tomandjerry.do] — 
 
 ## Protected Primary Entries
 

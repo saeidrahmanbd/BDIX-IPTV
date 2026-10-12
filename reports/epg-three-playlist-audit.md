@@ -1,6 +1,6 @@
 # EPG Audit — Three Playlists
 
-Generated: **2026-10-11**
+Generated: **2026-10-12**
 
 Coverage uses exact playlist `tvg-id` matches against the shared mapping registry. Current/future counts use mapping status and do not assert stream health.
 
@@ -17,11 +17,11 @@ If the publish gate retains an older guide, the workflow must refresh this repor
 
 | Playlist | Active unique IDs | Mapped IDs | Published IDs with programmes | Current/future IDs |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 652 | 343 | 311 | 311 |
+| IPTV-Playlist.m3u | 652 | 343 | 311 | 306 |
 | IPTV-Playlist.m3u — Bangladesh | 60 | 0 | 0 | 0 |
 | BDIX-Playlist.m3u | 178 | 99 | 85 | 85 |
 | BDIX-Playlist.m3u — Bangladesh | 42 | 1 | 1 | 1 |
-| NVisionBD-Playlist.m3u | 467 | 187 | 167 | 167 |
+| NVisionBD-Playlist.m3u | 467 | 187 | 167 | 166 |
 | NVisionBD-Playlist.m3u — Bangladesh | 50 | 0 | 0 | 0 |
 
 - Non-English programme text fields detected: **0**
