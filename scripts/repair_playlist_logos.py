@@ -8,6 +8,7 @@ Commons. Never invent a broadcaster logo or use an unrelated lookalike.
 from pathlib import Path
 from datetime import datetime, timezone
 import hashlib
+import html
 import json
 import re
 import shutil
@@ -80,6 +81,20 @@ LOCAL_OVERRIDES = {
 # only consulted after the repository-wide local logo search. Keep them here
 # so all playlist variants reuse the same locally stored image.
 EXTRA_DIRECT_HINTS = {
+    "10 TV": {
+        "url": "https://cdn.smartads.in/images/product/television/10TV-Telugu-News.png",
+        "format": "PNG",
+        "page": "https://smartads.in/services/television/10tv-telugu-news-tv-advertising",
+        "license": "Exact 10TV Telugu channel logo reproduced in a channel media listing; original branding rights belong to broadcaster",
+        "license_url": "",
+    },
+    "Global Panjab": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/3c/d5/0d/3cd50d43-1337-94f9-dbcb-fc40334d51c8/App_Icon-marketing.lsr/1200x630bb.png",
+        "format": "PNG",
+        "page": "https://apps.apple.com/ca/app/global-punjab-tv/id1408487692",
+        "license": "Global Punjab TV app branding served by Apple's App Store; original branding rights belong to broadcaster",
+        "license_url": "",
+    },
     "Nick Bangla": {
         "url": "https://otapp.store/uploads/tv_image/sm/nick-bangla.png",
         "format": "PNG",
@@ -451,6 +466,111 @@ def raw_url(filename):
     return RAW_BASE + urllib.parse.quote(filename)
 
 
+def make_generated_fallback(channel, category):
+    """Create a unique, clearly tracked fallback only after source lookup fails.
+
+    The artwork uses a channel-specific label, a category-aware symbol and a
+    deterministic palette. It is not represented as a broadcaster-original logo;
+    the provenance manifest identifies it as generated_fallback.
+    """
+    category = (category or "Channel").strip()
+    channel = (channel or "Channel").strip()
+    safe_slug = source.slug(channel) or "channel"
+    digest = hashlib.sha256((channel + "|" + category).encode("utf-8")).hexdigest()[:8]
+    filename = f"generated-fallback-{safe_slug}-{digest}.svg"
+    destination = LOGOS / filename
+    if destination.is_file() and file_is_valid(destination):
+        return filename
+
+    palettes = [
+        ("#111827", "#22D3EE", "#F8FAFC"), ("#25113D", "#FB7185", "#FFF7ED"),
+        ("#0B2B36", "#FBBF24", "#F8FAFC"), ("#173321", "#A3E635", "#F7FEE7"),
+        ("#182044", "#A78BFA", "#F5F3FF"), ("#402018", "#FDBA74", "#FFF7ED"),
+        ("#192A48", "#60A5FA", "#EFF6FF"), ("#3B1737", "#F472B6", "#FDF2F8"),
+        ("#132F2A", "#34D399", "#ECFDF5"), ("#35220F", "#FDE047", "#FEFCE8"),
+        ("#172033", "#F97316", "#FFF7ED"), ("#20223A", "#2DD4BF", "#F0FDFA"),
+    ]
+    palette_idx = int(digest[:2], 16) % len(palettes)
+    background, accent, ink = palettes[palette_idx]
+    cat = category.casefold()
+    if "radio" in cat or "music" in cat:
+        motif = (
+            f'<circle cx="91" cy="168" r="9" fill="{accent}"/>'
+            f'<path d="M72 149 Q51 168 72 187 M110 149 Q131 168 110 187" fill="none" stroke="{ink}" stroke-width="5" stroke-linecap="round"/>'
+            f'<path d="M60 136 Q25 168 60 200 M122 136 Q157 168 122 200" fill="none" stroke="{accent}" stroke-width="4" stroke-linecap="round"/>'
+        )
+    elif "sport" in cat:
+        motif = (
+            f'<circle cx="91" cy="168" r="42" fill="none" stroke="{ink}" stroke-width="5"/>'
+            f'<path d="M91 146 L110 160 L103 182 L79 182 L72 160 Z M91 146 L91 126 M110 160 L129 153 M103 182 L115 198 M79 182 L67 198 M72 160 L53 153" fill="none" stroke="{accent}" stroke-width="5" stroke-linejoin="round"/>'
+        )
+    elif "kid" in cat or "cartoon" in channel.casefold() or "jerry" in channel.casefold() or "mr been" in channel.casefold():
+        motif = (
+            f'<path d="M91 124 L102 151 L131 153 L109 172 L116 200 L91 185 L66 200 L73 172 L51 153 L80 151 Z" fill="{accent}"/>'
+            f'<circle cx="54" cy="130" r="6" fill="{ink}"/><circle cx="127" cy="205" r="5" fill="{ink}"/><circle cx="130" cy="127" r="4" fill="{accent}"/>'
+        )
+    elif "fashion" in cat:
+        motif = (
+            f'<path d="M91 123 L135 168 L91 213 L47 168 Z" fill="{accent}"/>'
+            f'<path d="M91 139 L118 168 L91 197 L64 168 Z" fill="none" stroke="{ink}" stroke-width="4"/>'
+        )
+    elif "movie" in cat or "cinema" in channel.casefold() or "film" in channel.casefold() or "flix" in channel.casefold():
+        motif = (
+            f'<rect x="49" y="132" width="84" height="72" rx="10" fill="none" stroke="{ink}" stroke-width="5"/>'
+            f'<path d="M50 150 H132 M50 186 H132 M70 133 V149 M93 133 V149 M116 133 V149 M70 187 V203 M93 187 V203 M116 187 V203" stroke="{accent}" stroke-width="5"/>'
+        )
+    else:
+        motif = (
+            f'<circle cx="91" cy="168" r="43" fill="none" stroke="{ink}" stroke-width="5"/>'
+            f'<path d="M80 143 L111 168 L80 193 Z" fill="{accent}"/>'
+            f'<path d="M55 120 Q91 98 127 120 M55 216 Q91 238 127 216" fill="none" stroke="{accent}" stroke-width="4" stroke-linecap="round"/>'
+        )
+
+    words = channel.split()
+    wrapped, current = [], ""
+    for word in words:
+        candidate = (current + " " + word).strip()
+        if current and len(candidate) > 17:
+            wrapped.append(current)
+            current = word
+        else:
+            current = candidate
+    if current:
+        wrapped.append(current)
+    if len(wrapped) > 3:
+        wrapped = wrapped[:2] + [" ".join(wrapped[2:])]
+    longest = max((len(x) for x in wrapped), default=8)
+    font_size = 31 if longest <= 13 else 27 if longest <= 17 else 23
+    start_y = 168 - (len(wrapped) - 1) * 18
+    text_lines = []
+    for i, line in enumerate(wrapped):
+        text_lines.append(
+            f'<text x="181" y="{start_y + i * 36}" font-family="Arial,Helvetica,sans-serif" '
+            f'font-size="{font_size}" font-weight="700" fill="{ink}">{html.escape(line)}</text>'
+        )
+    category_label = html.escape(category.upper())
+    svg = (
+        '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="340" viewBox="0 0 600 340">'
+        f'<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">'
+        f'<stop offset="0" stop-color="{background}"/><stop offset="1" stop-color="#0A0F1C"/></linearGradient></defs>'
+        '<rect width="600" height="340" rx="30" fill="url(#bg)"/>'
+        f'<circle cx="555" cy="38" r="126" fill="{accent}" opacity=".10"/>'
+        f'<path d="M0 284 L600 177 L600 340 L0 340 Z" fill="{accent}" opacity=".08"/>'
+        f'<rect x="16" y="16" width="568" height="308" rx="24" fill="none" stroke="{accent}" stroke-width="2" opacity=".7"/>'
+        f'<rect x="34" y="32" width="116" height="276" rx="22" fill="{accent}" opacity=".12"/>'
+        f'<g>{motif}</g>'
+        + "".join(text_lines) +
+        f'<rect x="181" y="235" width="7" height="31" rx="3" fill="{accent}"/>'
+        f'<text x="202" y="255" font-family="Arial,Helvetica,sans-serif" font-size="15" '
+        f'font-weight="700" letter-spacing="2" fill="{accent}">{category_label}</text>'
+        f'<text x="566" y="300" text-anchor="end" font-family="Arial,Helvetica,sans-serif" '
+        f'font-size="10" font-weight="600" letter-spacing="1.4" fill="{ink}" opacity=".55">UNOFFICIAL FALLBACK ART</text>'
+        '</svg>'
+    )
+    destination.write_text(svg, encoding="utf-8")
+    return filename if file_is_valid(destination) else None
+
+
 def main():
     LOGOS.mkdir(parents=True, exist_ok=True)
     try:
@@ -482,7 +602,7 @@ def main():
             continue
         original = path.read_text(encoding="utf-8-sig").replace("\r\n", "\n").replace("\r", "\n")
         lines = original.splitlines()
-        changed = unresolved = entries = 0
+        changed = unresolved = entries = fallback_count = 0
         output = []
         for line_number, line in enumerate(lines, start=1):
             if not line.startswith("#EXTINF:"):
@@ -493,7 +613,7 @@ def main():
             current = (attrs.get("tvg-logo") or "").strip()
             basename = Path(urllib.parse.urlparse(current).path).name.casefold() if current else ""
             missing = not current
-            flagged = basename in BAD_ASSETS or basename in GENERIC_ASSETS or bool(re.search(r"(?:placeholder|generated-fallback|generic-logo)", basename))
+            flagged = basename in BAD_ASSETS or basename in GENERIC_ASSETS or bool(re.search(r"(?:placeholder|generic-logo)", basename))
             if not (missing or flagged):
                 output.append(line)
                 continue
@@ -533,12 +653,25 @@ def main():
                 changed += 1
                 report_rows.append((playlist, line_number, channel, basename, new_file, source_name, source_page, license_name + ((" — " + license_url) if license_url else ""), "replaced"))
             else:
-                unresolved += 1
-                if flagged:
-                    # Do not leave a known-generic, contaminated, or mismatched
-                    # image attached to a channel when no reliable replacement exists.
-                    line = set_logo(line, "")
-                report_rows.append((playlist, line_number, channel, basename, "", "none", "", "", "No exact clean logo found; left blank" if missing else "Quarantined flagged logo; no exact replacement found"))
+                # Never substitute an unrelated broadcaster asset. If exact source
+                # lookups fail, add unique channel-labelled artwork as an explicitly
+                # unofficial fallback and mark it in the provenance manifest.
+                fallback_file = make_generated_fallback(channel, attrs.get("group-title", ""))
+                if fallback_file:
+                    fixes_cache[key] = fallback_file
+                    line = set_logo(line, raw_url(fallback_file))
+                    changed += 1
+                    fallback_count += 1
+                    report_rows.append((playlist, line_number, channel, basename, fallback_file,
+                                        "Generated channel-specific fallback", "",
+                                        "Original generated artwork; not an official broadcaster logo",
+                                        "fallback installed; exact clean original not found"))
+                else:
+                    unresolved += 1
+                    if flagged:
+                        line = set_logo(line, "")
+                    report_rows.append((playlist, line_number, channel, basename, "", "none", "", "",
+                                        "No exact clean logo or fallback could be produced; left blank"))
             output.append(line)
 
         new_text = "\n".join(output).rstrip() + "\n"
@@ -558,7 +691,8 @@ def main():
                 flagged_after += 1
         summary[playlist] = {
             "entries": entries, "changed": changed, "missing_after": missing_after,
-            "flagged_after": flagged_after, "unresolved": unresolved,
+            "flagged_after": flagged_after, "generated_fallbacks": fallback_count,
+            "unresolved": unresolved,
         }
 
     REPORT.parent.mkdir(parents=True, exist_ok=True)
@@ -570,11 +704,11 @@ def main():
         f"IPTV-org data: {iptv_status}  ",
         f"Historical mapping index: {history_status}", "",
         "## Results by playlist", "",
-        "| Playlist | Entries | References changed | Missing after | Known generic/contaminated refs after | Unresolved repair targets |",
-        "|---|---:|---:|---:|---:|---:|",
+        "| Playlist | Entries | References changed | Generated fallbacks | Missing after | Known generic/contaminated refs after | Unresolved repair targets |",
+        "|---|---:|---:|---:|---:|---:|---:|",
     ]
     for name, data in summary.items():
-        report.append(f"| {name} | {data['entries']} | {data['changed']} | {data['missing_after']} | {data['flagged_after']} | {data['unresolved']} |")
+        report.append(f"| {name} | {data['entries']} | {data['changed']} | {data['generated_fallbacks']} | {data['missing_after']} | {data['flagged_after']} | {data['unresolved']} |")
     report += ["", "## Repair log", "",
                "| Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |",
                "|---|---:|---|---|---|---|---|---|"]
@@ -585,10 +719,10 @@ def main():
             f"{new_file or '(none)'} | {src.replace('|', '/')} | {attribution.replace('|', '/')} | {result} |"
         )
     report += ["", "## Quality rule", "",
-               "- Only exact, clean local assets or externally downloaded and validated image assets were applied.",
-               "- Generic/fallback and previously contaminated/mismatched assets were not reused.",
-               "- When no exact clean asset was found, a bad reference was removed rather than replaced with unrelated artwork.",
-               "- Original playlist entries, channel metadata, and stream URLs were otherwise preserved.", ""]
+               "- Exact, clean local assets are searched first; then curated, source-attributed external logo URLs are downloaded and validated.",
+               "- When no exact clean original is found, a distinct channel-labelled fallback is installed; generated fallbacks are explicitly marked as unofficial in the authenticity manifest.",
+               "- Contaminated or mismatched source files are never reused as fallbacks; the generated art does not imitate a broadcaster's official mark.",
+               "- Original playlist entries, channel metadata, categories, and stream URLs are preserved.", ""]
     REPORT.write_text("\n".join(report), encoding="utf-8")
     print(json.dumps({"summary": summary, "iptv_org": iptv_status, "history": history_status}, ensure_ascii=False))
 
