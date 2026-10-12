@@ -9,8 +9,6 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **DD National** (DDNational.in@SD): source ID DD.National.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **DD Rajasthan** (DDRajasthan.in@SD): source ID DD.RAJASTHAN.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **DD Saptagiri** (DDSaptagiri.in@SD): source ID ts337 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +24 hours after repeated cross-source agreement.
-- **DD Saptagiri** (DDSaptagiri.in@SD): source ID DD.Saptagiri.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
-- **DD Tamil** (DDTamil.in@SD): source ID ts334 from https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz shifted by +48 hours after repeated cross-source agreement.
 - **DD Tamil** (DDTamil.in@SD): source ID DD.TAMIL.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **DD Yadagiri** (DDYadagiri.in@SD): source ID DD.YADAGIRI.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **Isai Aruvi** (IsaiAruvi.in@SD): source ID ISAI.ARUVI.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
@@ -22,4 +20,4 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **ETV** (custom.etv): source ID ETV.HD.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **Isai Aruvi TV** (custom.isai.aruvi.tv): source ID ISAI.ARUVI.in from https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz shifted by -24 hours after repeated cross-source agreement.
 
-Detected source-ID corrections: **17**
+Detected source-ID corrections: **15**
