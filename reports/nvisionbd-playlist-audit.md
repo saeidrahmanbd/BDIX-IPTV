@@ -1,6 +1,6 @@
 # NVisionBD Playlist Audit
 
-Generated (UTC): **2026-10-12T06:37:24+00:00**
+Generated (UTC): **2026-10-12T07:36:08+00:00**
 
 ## Summary
 
@@ -9,7 +9,7 @@ Generated (UTC): **2026-10-12T06:37:24+00:00**
 - Duplicate stream URLs: **0**
 - Duplicate channel identities: **59**
 - Missing channel IDs: **0**
-- Missing logos: **33**
+- Missing logos: **32**
 - Missing channel numbers: **0**
 - Malformed entries: **0**
 
@@ -31,10 +31,10 @@ Generated (UTC): **2026-10-12T06:37:24+00:00**
 
 ## Stream Probe Summary
 
-- Responsive: **94**
+- Responsive: **113**
 - Restricted: **0**
 - Dead: **0**
-- Unverified: **467**
+- Unverified: **448**
 
 ## Duplicate Stream URLs
 
@@ -105,7 +105,7 @@ None.
 ## Missing Metadata
 
 - Missing ID: None
-- Missing logo: Sine Plus, 10 TV, Global Panjab, Asia Flix TV, Blockbaster HD, Digital Fashion, Fashion 1, Star Cinema, Whiples Cinema, Xrema Accion, Adventure 4k, Banijoy Mr Been, Cartoon Channel, Tom & Jerry 24/7, Tom & Jerry TV, beIN Sports Turkiye, Espn5 HD, Fight 24/7, Htv Sport, In Sony Sports Ten 3 HD, Kiev Sport HD, Sport 1 HD, Sport 2 HD, Bangla Hits, Doyel Radio, Magical Blade FM, Moner Radio, Radio Janata, Radio Ritmo On Line, Radio Zenith FM, Sagor FM, Wc Music, Wifm 100.9
+- Missing logo: Sine Plus, 10 TV, Global Panjab, Asia Flix TV, Blockbaster HD, Digital Fashion, Fashion 1, Star Cinema, Whiples Cinema, Xrema Accion, Adventure 4k, Banijoy Mr Been, Cartoon Channel, Tom & Jerry 24/7, Tom & Jerry TV, beIN Sports Turkiye, Espn5 HD, Fight 24/7, Htv Sport, Kiev Sport HD, Sport 1 HD, Sport 2 HD, Bangla Hits, Doyel Radio, Magical Blade FM, Moner Radio, Radio Janata, Radio Ritmo On Line, Radio Zenith FM, Sagor FM, Wc Music, Wifm 100.9
 - Missing channel number: None
 
 ## Malformed Entries
