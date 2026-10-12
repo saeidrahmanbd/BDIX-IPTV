@@ -6,6 +6,7 @@ on:
       - IPTV-Playlist.m3u
       - BDIX-Playlist.m3u
       - scripts/normalize_metadata.py
+      - scripts/sort_playlists.py
       - scripts/migrate_external_logos_fixed.py
       - scripts/generate_logo_authenticity_manifest.py
       - scripts/check_epg_config.py
@@ -56,6 +57,8 @@ jobs:
             git clean -fd
             cp epg/epg.xml /tmp/bdix-epg-previous.xml 2>/dev/null || true
             python scripts/normalize_metadata.py
+            # Sort both maintained playlists by canonical category order and A–Z within each category.
+            python scripts/sort_playlists.py
             if grep -Eiq 'group-title="(New Channels|New Backup|New|Not Playing)"' IPTV-Playlist.m3u; then
               echo "::error::Legacy playlist category detected after normalization."
               exit 1
