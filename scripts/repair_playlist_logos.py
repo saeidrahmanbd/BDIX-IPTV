@@ -82,10 +82,66 @@ LOCAL_OVERRIDES = {
 # so all playlist variants reuse the same locally stored image.
 EXTRA_DIRECT_HINTS = {
     "10 TV": {
-        "url": "https://cdn.smartads.in/images/product/television/10TV-Telugu-News.png",
+        "url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_10TV/images/LOGO_HD/image.png",
         "format": "PNG",
-        "page": "https://smartads.in/services/television/10tv-telugu-news-tv-advertising",
-        "license": "Exact 10TV Telugu channel logo reproduced in a channel media listing; original branding rights belong to broadcaster",
+        "page": "https://10tv.in/",
+        "license": "10TV Telugu logo served by its live-TV asset CDN; channel identity matched to 10TV Telugu",
+        "license_url": "",
+    },
+    "Espn5 HD": {
+        "url": "https://media.philstar.com/photos/2021/10/13/espn-5_2021-10-13_11-24-12.jpg",
+        "format": "JPEG",
+        "page": "https://www.philstar.com/sports/2021/10/13/2133868/final-buzzer-sounds-espn5s-sports-website",
+        "license": "Attributable ESPN5 brand image reproduced by Philstar; logo only, no unrelated channel substitution",
+        "license_url": "",
+    },
+    "Htv Sport": {
+        "url": "https://s935.cdn.mytvnet.vn/vimages/69/92/28/83/3b/b0/69283-phtvththao-channel-unkn.png",
+        "format": "PNG",
+        "page": "https://mytv.com.vn/truyen-hinh/18",
+        "license": "HTV Thể thao channel logo shown on MyTV's channel page",
+        "license_url": "",
+    },
+    "Wifm 100.9": {
+        "url": "https://cdn-radiotime-logos.tunein.com/s29540g.png",
+        "format": "PNG",
+        "page": "https://tunein.com/radio/WIFM-FM-1009-s29540/",
+        "license": "WIFM-FM 100.9 station logo served by TuneIn; station identity matched to WIFM 100.9",
+        "license_url": "",
+    },
+    "Bangla Hits": {
+        "url": "https://proxy.zeno.fm/content/stations/agxzfnplbm8tc3RhdHNyMgsSCkF1dGhDbGllbnQYgICQ1rKLugsMCxIOU3RhdGlvblByb2ZpbGUbw/image/?u=1659476812000",
+        "format": "",
+        "page": "https://zeno.fm/radio/bangla-hits/",
+        "license": "Station profile image served by Zeno for the exact BANGLA HITS station; inspect for watermark/phone overlays before approval",
+        "license_url": "",
+    },
+    "Doyel Radio": {
+        "url": "https://proxy.zeno.fm/content/stations/37f5f5b0-24c4-41ac-bf3a-6e9232a16f57/image/?u=1667505462000",
+        "format": "",
+        "page": "https://zeno.fm/radio/doyel-radio/",
+        "license": "Station profile image served by Zeno for the exact Doyel Radio station",
+        "license_url": "",
+    },
+    "Moner Radio": {
+        "url": "https://proxy.zeno.fm/content/stations/agxzfnplbm8tc3RhdHNyMgsSCkF1dGhDbGllbnQYgICQ_6Wx8wsMCxIOU3RhdGlvblByb2ZpbGUbw/image/?u=1660620409000",
+        "format": "",
+        "page": "https://zeno.fm/radio/monarul/",
+        "license": "Station profile image served by Zeno for the exact Moner Radio station",
+        "license_url": "",
+    },
+    "Radio Janata": {
+        "url": "https://proxy.zeno.fm/content/stations/agxzfnplbm8tc3RhdHNyMgsSCkF1dGhDbGllbnQYgICQveDlzwoMCxIOU3RhdGlvblByb2ZpbGUbw/image/?u=1664520294000",
+        "format": "",
+        "page": "https://zeno.fm/radio/radio-janata/",
+        "license": "Station profile image served by Zeno for the exact Radio Janata station",
+        "license_url": "",
+    },
+    "Sagor FM": {
+        "url": "https://proxy.zeno.fm/content/stations/agxzfnplbm8tc3RhdHNyMgsSCkF1dGhDbGllbnQYgICw4IKiugkMCxIOU3RhdGlvblByb2ZpbGUbw/image/?u=1661089415000",
+        "format": "",
+        "page": "https://zeno.fm/radio/sagor-fm/",
+        "license": "Station profile image served by Zeno for the exact Sagor FM station; inspect for phone overlays before approval",
         "license_url": "",
     },
     "Global Panjab": {
@@ -613,7 +669,7 @@ def main():
             current = (attrs.get("tvg-logo") or "").strip()
             basename = Path(urllib.parse.urlparse(current).path).name.casefold() if current else ""
             missing = not current
-            flagged = basename in BAD_ASSETS or basename in GENERIC_ASSETS or bool(re.search(r"(?:placeholder|generic-logo)", basename))
+            flagged = basename in BAD_ASSETS or basename in GENERIC_ASSETS or bool(re.search(r"(?:placeholder|generated-fallback|generic-logo)", basename))
             if not (missing or flagged):
                 output.append(line)
                 continue
