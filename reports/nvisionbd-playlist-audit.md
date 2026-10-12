@@ -1,6 +1,6 @@
 # NVisionBD Playlist Audit
 
-Generated (UTC): **2026-10-12T04:16:53+00:00**
+Generated (UTC): **2026-10-12T06:37:24+00:00**
 
 ## Summary
 
@@ -9,7 +9,7 @@ Generated (UTC): **2026-10-12T04:16:53+00:00**
 - Duplicate stream URLs: **0**
 - Duplicate channel identities: **59**
 - Missing channel IDs: **0**
-- Missing logos: **250**
+- Missing logos: **33**
 - Missing channel numbers: **0**
 - Malformed entries: **0**
 
@@ -31,10 +31,10 @@ Generated (UTC): **2026-10-12T04:16:53+00:00**
 
 ## Stream Probe Summary
 
-- Responsive: **90**
+- Responsive: **94**
 - Restricted: **0**
 - Dead: **0**
-- Unverified: **471**
+- Unverified: **467**
 
 ## Duplicate Stream URLs
 
@@ -105,7 +105,7 @@ None.
 ## Missing Metadata
 
 - Missing ID: None
-- Missing logo: ATN News HD, Bangla TV, Bangla TV HD, BTV National HD, BTV News, BTV Sangsad, Channel 1 HD, Channel 9 HD, Channel 24 HD, Duronto TV HD, Ekushey TV HD, Global TV HD, Green TV, Mohona TV HD, Nagorik TV HD, Bangla Big Boss 24x7, CTVN AKD Plus, Jalsha Movies HD, Nick Bangla, Sananda TV, Afra Film, Anmol Cinema, Anmol Cinema 2, Biz Cinema, Cafe Film, Hindi Movie Classic 24, Sine Plus, Star Gold, Star Gold Select HD, The Q India, Afro Music Channel, Euro Indie Music Chart TV, 10 TV, Amar Ujala, &tv HD, Colors HD, Epic, Global Panjab, Hindi Big Boss 24x7 2026, Hindi Khabar, India Today, NDTV, News 18 Assam, Star Plus HD, The Q, Zee TV HD, Ary News, Action 24, Action Hollywood Movies, Aflam
+- Missing logo: Sine Plus, 10 TV, Global Panjab, Asia Flix TV, Blockbaster HD, Digital Fashion, Fashion 1, Star Cinema, Whiples Cinema, Xrema Accion, Adventure 4k, Banijoy Mr Been, Cartoon Channel, Tom & Jerry 24/7, Tom & Jerry TV, beIN Sports Turkiye, Espn5 HD, Fight 24/7, Htv Sport, In Sony Sports Ten 3 HD, Kiev Sport HD, Sport 1 HD, Sport 2 HD, Bangla Hits, Doyel Radio, Magical Blade FM, Moner Radio, Radio Janata, Radio Ritmo On Line, Radio Zenith FM, Sagor FM, Wc Music, Wifm 100.9
 - Missing channel number: None
 
 ## Malformed Entries
