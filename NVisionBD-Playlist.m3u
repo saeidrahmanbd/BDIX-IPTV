@@ -433,7 +433,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2LrsAsr
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2wxML5qkpZihuOOsgdACKg
 #EXTINF:-1 xui-id="180699" tvg-id="custom.nexus.television" tvg-name="Nexus Television" tvg-chno="214" channel-id="custom.nexus.television" group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-nexus-television.png",Nexus Television
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3-JbCFoo2CcX1DIht_kWJO
-#EXTINF:-1 xui-id="180042" tvg-id="custom.power.turk" tvg-name="Power Turk" tvg-chno="215" channel-id="custom.power.turk" group-title="International",Power Turk
+#EXTINF:-1 xui-id="180042" tvg-id="custom.power.turk" tvg-name="Power Turk" tvg-chno="215" channel-id="custom.power.turk" group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-power-turk-3806bd2b7a.png",Power Turk
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0LLIS34vZQKH5N1cg3g0l9
 #EXTINF:-1 xui-id="179401" tvg-id="RakutenMovies" tvg-name="Rakuten Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rakuten-movies.png" tvg-chno="216" channel-id="RakutenMovies" group-title="International",Rakuten Movies
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0JU0j67h8TuWPepuNsMmcp
@@ -857,7 +857,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0cFFChM
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1BGpBIKzze8Pt-Ux2suLWk
 #EXTINF:-1 xui-id="180936" tvg-id="custom.51.radio.tv.geo.blocked" tvg-name="51 Radio TV [geo-blocked]" tvg-chno="426" channel-id="custom.51.radio.tv.geo.blocked" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-51-radio-tv-geo-blocked-e8d259fe6e.webp",51 Radio TV [geo-blocked]
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1r-QV7zblFB4cEU2D98Eak
-#EXTINF:-1 xui-id="180944" tvg-id="custom.88.stereo.not.24.7" tvg-name="88 Stereo [not 24/7]" tvg-chno="427" channel-id="custom.88.stereo.not.24.7" group-title="Radio",88 Stereo [not 24/7]
+#EXTINF:-1 xui-id="180944" tvg-id="custom.88.stereo.not.24.7" tvg-name="88 Stereo [not 24/7]" tvg-chno="427" channel-id="custom.88.stereo.not.24.7" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-88-stereo-not-24-7-82d858a135.jpg",88 Stereo [not 24/7]
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1qqI1tC4DGXOyYduOUDKgF
 #EXTINF:-1 xui-id="41672" tvg-id="custom.92.8.fm.radio.bhumi" tvg-name="92.8 FM Radio Bhumi" tvg-chno="428" channel-id="custom.92.8.fm.radio.bhumi" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-92-8-fm-radio-bhumi.png",92.8 FM Radio Bhumi
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-09SYuTe0s6l4dL4nRQnjeg
@@ -877,7 +877,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-36a5vNE
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1gIbpQHGjbjyIrnlTs0zv2
 #EXTINF:-1 xui-id="41689" tvg-id="custom.doyel.radio" tvg-name="Doyel Radio" tvg-chno="436" channel-id="custom.doyel.radio" group-title="Radio",Doyel Radio
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0-edLus17RmZH1iSNlDt56
-#EXTINF:-1 xui-id="41688" tvg-id="custom.dream.music.prime" tvg-name="Dream Music Prime" tvg-chno="437" channel-id="custom.dream.music.prime" group-title="Radio",Dream Music Prime
+#EXTINF:-1 xui-id="41688" tvg-id="custom.dream.music.prime" tvg-name="Dream Music Prime" tvg-chno="437" channel-id="custom.dream.music.prime" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-dream-music-prime-6e77c3eeda.avif",Dream Music Prime
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3e848rM9rezuMk0wwlIaOU
 #EXTINF:-1 xui-id="41678" tvg-id="custom.love.gold.bangla" tvg-name="Love Gold Bangla" tvg-chno="438" channel-id="custom.love.gold.bangla" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-love-gold-bangla.png",Love Gold Bangla
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-0RcI-Pk8Y1g3CYtoVzscEX
@@ -897,7 +897,7 @@ http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1kUeabG
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-2txw9MVhIQEdgDs0TFaQyP
 #EXTINF:-1 xui-id="188457" tvg-id="custom.radio.bangladesh.co" tvg-name="Radio Bangladesh Co" tvg-chno="446" channel-id="custom.radio.bangladesh.co" group-title="Radio",Radio Bangladesh Co
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-1Uh4xXy8hJCuyUIWNcU3QB
-#EXTINF:-1 xui-id="41707" tvg-id="custom.radio.barakah" tvg-name="Radio Barakah" tvg-chno="447" channel-id="custom.radio.barakah" group-title="Radio",Radio Barakah
+#EXTINF:-1 xui-id="41707" tvg-id="custom.radio.barakah" tvg-name="Radio Barakah" tvg-chno="447" channel-id="custom.radio.barakah" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-radio-barakah-4953b6e2dd.avif",Radio Barakah
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-3PB9S56BfhtXebMFEx3-N7
 #EXTINF:-1 xui-id="188455" tvg-id="custom.radio.bhumi.92.80.fm" tvg-name="Radio Bhumi 92.80 FM" tvg-chno="448" channel-id="custom.radio.bhumi.92.80.fm" group-title="Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-radio-bhumi-92-80-fm.png",Radio Bhumi 92.80 FM
 http://b.nvisionbd.com:80/play/kw2_GErRljFvFzQcnPaNHcyWD9ydNgGR7Klza_EhD-35GEPsk3Burbt3BEEw8cjQ
