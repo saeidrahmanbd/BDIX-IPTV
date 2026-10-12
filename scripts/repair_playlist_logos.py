@@ -80,6 +80,13 @@ LOCAL_OVERRIDES = {
 # only consulted after the repository-wide local logo search. Keep them here
 # so all playlist variants reuse the same locally stored image.
 EXTRA_DIRECT_HINTS = {
+    "Alistiqamah": {
+        "url": "https://i.imgur.com/2FPtYZr.png",
+        "format": "PNG",
+        "page": "https://iptv-org.github.io/channels/om/AlistiqamaTV",
+        "license": "Station logo from IPTV-org channel listing",
+        "license_url": "https://iptv-org.github.io/channels/om/AlistiqamaTV",
+    },
     "Cafe Film": {
         "url": "https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/CafeFilm.ir.png",
         "format": "PNG",
