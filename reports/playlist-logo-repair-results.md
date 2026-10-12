@@ -1,6 +1,6 @@
 # Three-Playlist Logo Repair Results
 
-Run time: **2026-10-12 05:08 UTC**  
+Run time: **2026-10-12 05:10 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -11,7 +11,7 @@ Historical mapping index: loaded 336 historical name mappings
 |---|---:|---:|---:|---:|---:|
 | BDIX-Playlist.m3u | 185 | 0 | 2 | 0 | 2 |
 | IPTV-Playlist.m3u | 1145 | 0 | 0 | 0 | 0 |
-| NVisionBD-Playlist.m3u | 561 | 1 | 39 | 0 | 39 |
+| NVisionBD-Playlist.m3u | 561 | 0 | 39 | 0 | 39 |
 
 ## Repair log
 
@@ -40,7 +40,6 @@ Historical mapping index: loaded 336 historical name mappings
 | NVisionBD-Playlist.m3u | 550 | Cartoon Channel | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 596 | Tom & Jerry 24/7 | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 598 | Tom & Jerry TV | (missing) | (none) | none |  | No exact clean logo found; left blank |
-| NVisionBD-Playlist.m3u | 606 | Alistiqamah | (missing) | nvisionbd-verified-alistiqamah-9a88b9bed2.png | [Exact external logo asset](https://iptv-org.github.io/channels/om/AlistiqamaTV) | Station logo from IPTV-org channel listing — https://iptv-org.github.io/channels/om/AlistiqamaTV | replaced |
 | NVisionBD-Playlist.m3u | 648 | beIN Sports Turkiye | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 674 | Espn5 HD | (missing) | (none) | none |  | No exact clean logo found; left blank |
 | NVisionBD-Playlist.m3u | 678 | Fight 24/7 | (missing) | (none) | none |  | No exact clean logo found; left blank |
