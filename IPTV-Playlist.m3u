@@ -167,7 +167,7 @@ http://115.187.41.216:8080/hls/montvbangla/index.m3u8
 https://cdn.pishow.tv/ott/live/1499/master.m3u8
 #EXTINF:-1 tvg-id="RPlusGold.in@SD" tvg-name="R Plus Gold" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus-gold.png" tvg-chno="273" channel-id="RPlusGold.in@SD" group-title="Indian Bangla",R Plus Gold
 https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/cf883da3-f9f5-4c70-b0ef-b3ac2e2ad1e3/index.m3u8
-#EXTINF:-1 channel-id="RongeenTV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rongeen-tv.png" tvg-id="RongeenTV.in@SD" tvg-name="Rongeen TV" tvg-chno="274" tvg-language="hin" tvg-country="IN" group-title="Indian Bangla",Rongeen TV
+#EXTINF:-1 channel-id="RongeenTV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rongeen-tv.png" tvg-id="RongeenTV.in@SD" tvg-name="Rongeen TV" tvg-chno="274" tvg-language="ben" tvg-country="IN" group-title="Indian Bangla",Rongeen TV
 https://server.thelegitpro.in/rongeentv/rongeentv/index.m3u8
 #EXTINF:-1 tvg-id="RupasiBangla.in@SD" tvg-name="Ruposhi Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ruposhi-bangla.png" tvg-chno="275" channel-id="RupasiBangla.in@SD" group-title="Indian Bangla",Ruposhi Bangla
 https://mumt05.tangotv.in/87NeALx2RUPASIBANGLA/index.m3u8
