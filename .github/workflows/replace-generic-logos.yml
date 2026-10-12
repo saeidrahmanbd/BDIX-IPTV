@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: bdix-iptv-main-writer
+  group: bdix-iptv-logo-repair-writer
   cancel-in-progress: false
   queue: max
 
