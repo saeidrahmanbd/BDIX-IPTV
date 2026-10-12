@@ -271,7 +271,7 @@ https://media.hmair.xyz/api/play/Cartoon%20Network%20HD%20%2B.m3u8
 https://media.hmair.xyz/api/play/Discovery%20Kids.m3u8
 #EXTINF:-1 xui-id="671" tvg-id="Disney Junior.in" tvg-name="DISNEY JUNIOR" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-jr.png" tvg-chno="801" channel-id="Disney Junior.in" group-title="Kids",DISNEY JUNIOR
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hzQr1GDXRIEYG_ejdeShuFU
-#EXTINF:-1 xui-id="179128" tvg-id="custom.bdix.nickbangla" tvg-name="NICK BANGLA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-bangla.png" tvg-chno="806" channel-id="custom.bdix.nickbangla" group-title="Kids",NICK BANGLA
+#EXTINF:-1 xui-id="179128" tvg-id="custom.bdix.nickbangla" tvg-name="NICK BANGLA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-nick-bangla-26fef2ac19.png" tvg-chno="806" channel-id="custom.bdix.nickbangla" group-title="Kids",NICK BANGLA
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8mW-NsTzyKt5adBiEMhkzw
 #EXTINF:-1 xui-id="569" tvg-id="NickJr.in@SD" tvg-name="Nick Jr" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png" tvg-chno="897" channel-id="NickJr.in@SD" group-title="Kids",Nick Jr
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h7mKDW05Zl9RrOXIffrM3Pc
