@@ -17,6 +17,8 @@ Coverage reports are written to `reports/epg-coverage.md` and `reports/epg-three
 
 The country-specific sources configured for both mapping analysis and XMLTV generation include the India feed [`https://iptv-epg.org/files/epg-in.xml.gz`](https://iptv-epg.org/files/epg-in.xml.gz) and the United States feed [`https://iptv-epg.org/files/epg-us.xml.gz`](https://iptv-epg.org/files/epg-us.xml.gz). The US feed advertises substantially broader catalogue coverage than the existing epgshare US2 feed, so both are retained for exact-ID matching and programme comparison rather than assuming one source covers every channel. The compressed URLs are detected and decompressed before XML parsing. Source availability and channel counts do not guarantee that a playlist channel has a valid schedule; the generated coverage report must confirm the actual overlap.
 
+The source list also includes the supplemental Samsung TV Plus India guide at `https://i.mjh.nz/SamsungTVPlus/in.xml`. The EPG catalogue identifies South Station as `SouthStation.in@HD`; the coverage script accepts that mapping only when a configured XMLTV source contains the exact ID, and the report separately checks for current/future programmes.
+
 ## Mapping safeguards
 
 - Keep each playlist's `tvg-id` unchanged. For a known channel represented by different IDs in separate playlists, add a narrow, documented alias in `scripts/epg_coverage.py`; do not merge identities based on a loose name match.

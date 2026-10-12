@@ -41,6 +41,8 @@ EPG_ALIASES = {
     "custom.india.today": ["IndiaToday.in@SD"],
     "SETASHD": ["SonyEntertainmentTelevision.in@HD"],
     "new.and.pictures.hd": ["Andpictures.in@HD", "And.Pictures.Tv.Channel.Today.in2"],
+    # i.mjh.nz Samsung TV Plus India catalogue confirms this XMLTV identity.
+    "SouthStation.in": ["SouthStation.in@HD"],
     "custom.epic": ["EpicTV.in@SD"],
     "custom.isai.aruvi.tv": ["IsaiAruvi.in@SD"],
     "custom.the.q": ["TheQIndia.us@SD"],
@@ -81,6 +83,8 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
     "https://iptv-epg.org/files/epg-in.xml.gz",
+    # Supplemental Samsung TV Plus India XMLTV feed from the supplied EPG catalogue.
+    "https://i.mjh.nz/SamsungTVPlus/in.xml",
     "https://epg.pw/xmltv/epg_IN.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml",
     "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
