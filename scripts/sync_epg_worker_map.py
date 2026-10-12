@@ -27,7 +27,7 @@ def main():
         # Do not let its absent optional map block prevent publication of the
         # standalone, shared XMLTV guide. If an active handler exists, however,
         # a missing map is a genuine integration error and must still fail.
-        active_handler = re.search(r"\\bexport\\s+default\\b|\\baddEventListener\\s*\\(\\s*['\\\"]fetch['\\\"]", text)
+        active_handler = "export default" in text or ("addEventListener" in text and "fetch" in text)
         if not active_handler:
             print("EPG worker map sync skipped: xtream/worker.js has no active Worker handler; shared XMLTV guide maintenance can continue.")
             return
