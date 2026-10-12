@@ -151,11 +151,11 @@ EXTRA_DIRECT_HINTS = {
         "license_url": "",
     },
     "In Sony Sports Ten 3 HD": {
-        "url": "https://www.sonypicturesnetworks.com/images/logos/Sony_Sports_Ten_3_Hindi_HD.png",
+        "url": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/india/sony-ten-3-hd-in.png",
         "format": "PNG",
-        "page": "https://www.sonypicturesnetworks.com/channels",
-        "license": "Sony Pictures Networks India official channel logo; broadcaster retains rights",
-        "license_url": "https://www.sonypicturesnetworks.com/",
+        "page": "https://github.com/tv-logo/tv-logos/blob/main/countries/india/sony-ten-3-hd-in.png",
+        "license": "Channel-specific Sony Sports Ten 3 logo from the TV-logo catalog; broadcaster retains rights",
+        "license_url": "https://github.com/tv-logo/tv-logos",
     },
     "Sony Sports Ten 3 HD": {
         "url": "https://www.sonypicturesnetworks.com/images/logos/Sony_Sports_Ten_3_Hindi_HD.png",
