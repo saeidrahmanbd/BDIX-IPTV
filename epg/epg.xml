@@ -6640,32 +6640,6 @@
     <desc lang="en">A compilation of the top five popular Punjabi tracks, recorded and performed by renowned musicians and artists, played back-to-back for non-stop enjoyment.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_9X_TASHAN_1419777_15OCT070000_15OCT073000/images/LANDSCAPE_169/1725015227000_Tashan_FithitShow_1419777.jpg" />
   </programme>
-  <programme channel="AMC.us" start="20261011191600 +0000" stop="20261011201800 +0000">
-    <title lang="en">The Boulet Brothers' Dragula</title>
-    <sub-title lang="en">Monochrome Monster</sub-title>
-    <desc lang="en">The cast presents a runway inspired by horror films with guest judges Mike Flanagan and Violet Chachki.</desc>
-    <date>2024</date>
-    <category lang="en">Series</category>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Game show</category>
-    <category lang="en">Horror</category>
-    <category lang="en">Competition Reality</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14519968_b_h8_ag.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S6 E6</episode-num>
-    <previously-shown />
-    <rating system="Régie du cinéma">
-      <value>18+</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>18+</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVMA</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>MA 15+</value>
-    </rating>
-  </programme>
   <programme channel="AMC.us" start="20261011201800 +0000" stop="20261011211600 +0000">
     <title lang="en">The Boulet Brothers' Dragula</title>
     <sub-title lang="en">Dungeons and Drag Queens: The Underdark</sub-title>
@@ -39899,27 +39873,6 @@ Contestants from all walks of life compete with each other to win the cash prize
     <title lang="en">Yeradu Nakshathragalu</title>
     <desc lang="en">A prince and a poor boy, who look alike, meet and are fascinated by each other's lives. They swap places to live in another world.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_COLORS_KANNADA_CINEMA_2049643_15OCT063000_15OCT100000/images/LANDSCAPE_169_HD/ColorsKannadaCinema_YeraduNakshathragalu_2049643.jpg" />
-  </programme>
-  <programme channel="ColorsMarathi.in@SD" start="20261012011000 +0530" stop="20261012015000 +0530">
-    <title lang="en">Jai Jai Swami Samarth</title>
-    <desc lang="en">A revered religious leader appears in Akkalkot, Maharashtra, and through his teachings guides his devotees towards the path of righteousness.</desc>
-    <credits>
-      <actor>Akshay Mudwadkar</actor>
-      <actor>Vijaya Babar</actor>
-      <actor>Kritina Vartak</actor>
-      <actor>Pooja Raibagi</actor>
-      <actor>Atul Sanas</actor>
-      <actor>Akshata Sawant</actor>
-      <actor>Nitya Pawar</actor>
-      <actor>Satish Salagare</actor>
-      <director>Umesh Namjoshi</director>
-      <producer>Rakesh Sarang</producer>
-      <producer>Sangeeta Sarang</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p19284162_b_h9_ab.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E62</episode-num>
   </programme>
   <programme channel="ColorsMarathi.in@SD" start="20261012015000 +0530" stop="20261012023000 +0530">
     <title lang="en">Aai Tuljabhavani</title>
@@ -92816,18 +92769,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="Discovery Kids.in" start="20261012013600 +0530" stop="20261012014800 +0530">
-    <title lang="en">Smaashhing Simmba</title>
-    <desc lang="en">Simmba comes to know that the Bad Biker gang has hatched a plan to steal from the local flea market. So, he comes up with his own plan to nab them red-handed and send them to jail.</desc>
-    <credits>
-      <actor>Abhishek Dutta</actor>
-      <producer>Rohit Shetty</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p23765022_b_h9_ab.jpg?lock=880x660" />
-    <episode-num system="onscreen">S2 E15</episode-num>
-  </programme>
   <programme channel="Discovery Kids.in" start="20261012014800 +0530" stop="20261012020000 +0530">
     <title lang="en">Smaashhing Simmba</title>
     <desc lang="en">Chaos ensues as High-tech Hunter creates a clone of Ricky and replaces him with it. Soon, Simmba catches wind of the situation and sets out to stop High-tech Hunter's plan.</desc>
@@ -104921,18 +104862,6 @@ Zak and the crew descend upon a Southern California park to investigate a haunte
     <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
       <value>AL</value>
     </rating>
-  </programme>
-  <programme channel="DiscoveryKids.au" start="20261012013600 +0530" stop="20261012014800 +0530">
-    <title lang="en">Smaashhing Simmba</title>
-    <desc lang="en">Simmba comes to know that the Bad Biker gang has hatched a plan to steal from the local flea market. So, he comes up with his own plan to nab them red-handed and send them to jail.</desc>
-    <credits>
-      <actor>Abhishek Dutta</actor>
-      <producer>Rohit Shetty</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p23765022_b_h9_ab.jpg?lock=880x660" />
-    <episode-num system="onscreen">S2 E15</episode-num>
   </programme>
   <programme channel="DiscoveryKids.au" start="20261012014800 +0530" stop="20261012020000 +0530">
     <title lang="en">Smaashhing Simmba</title>
@@ -128365,23 +128294,6 @@ Little Singham, an honest but ferocious police officer, fights against injustice
     <title>Jatra</title>
     <desc>Talented theatre artists perform plays that reflect on many social and cultural issues.</desc>
   </programme>
-  <programme channel="Enterr10 Bangla.in" start="20261012011300 +0530" stop="20261012014900 +0530">
-    <title lang="en">Crime Alert</title>
-    <desc lang="en">The host presents a collection of true stories involving ordinary citizens who committed horrific crimes for the sake of love, revenge and various other motivating factors.</desc>
-    <credits>
-      <actor>Girish Jain</actor>
-      <actor>Amit Pachori</actor>
-      <actor>Sudha Chandran</actor>
-      <director>Anil Rawat</director>
-      <producer>Anirban Bhattacharyya</producer>
-      <producer>Sudha Chandran</producer>
-      <producer>Suhaib Ilyasi</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Crime</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27029209_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E469</episode-num>
-  </programme>
   <programme channel="Enterr10 Bangla.in" start="20261012014900 +0530" stop="20261012022300 +0530">
     <title lang="en">Crime Alert</title>
     <desc lang="en">The host presents a collection of true stories involving ordinary citizens who committed horrific crimes for the sake of love, revenge and various other motivating factors.</desc>
@@ -128622,23 +128534,6 @@ Little Singham, an honest but ferocious police officer, fights against injustice
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p17058408_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E159</episode-num>
-  </programme>
-  <programme channel="Enterr10Bangla.in@SD" start="20261012011300 +0530" stop="20261012014900 +0530">
-    <title lang="en">Crime Alert</title>
-    <desc lang="en">The host presents a collection of true stories involving ordinary citizens who committed horrific crimes for the sake of love, revenge and various other motivating factors.</desc>
-    <credits>
-      <actor>Girish Jain</actor>
-      <actor>Amit Pachori</actor>
-      <actor>Sudha Chandran</actor>
-      <director>Anil Rawat</director>
-      <producer>Anirban Bhattacharyya</producer>
-      <producer>Sudha Chandran</producer>
-      <producer>Suhaib Ilyasi</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Crime</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27029209_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E469</episode-num>
   </programme>
   <programme channel="Enterr10Bangla.in@SD" start="20261012014900 +0530" stop="20261012022300 +0530">
     <title lang="en">Crime Alert</title>
@@ -171807,25 +171702,6 @@ The host invites prominent personalities and engages them in candid conversation
     <category>Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p27451520_b_h10_ab.jpg?lock=1280x720" />
   </programme>
-  <programme start="20261012000000 +0530" stop="20261012015000 +0530" channel="NHBollyFlix.in">
-    <title>Dost</title>
-    <desc>Vishwa's best friend, Raghu, betrays him for money and gets him arrested for a crime he did not commit. Soon after his release, Vishwa seeks revenge and decides to commit the crime he was jailed for.</desc>
-    <category>Drama</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/78c55649d38e42ff352836138184d88c.jpg?width=700" />
-    <credits>
-      <actor>Sarathkumar</actor>
-      <actor>Prakash Raj</actor>
-      <actor>Raghuvaran</actor>
-      <actor>Abhirami</actor>
-      <actor>Vadivelu</actor>
-      <actor>Santhana Bharathi</actor>
-      <actor>Indhu</actor>
-    </credits>
-    <rating>
-      <value>U/A-13</value>
-    </rating>
-  </programme>
   <programme start="20261012015000 +0530" stop="20261012032100 +0530" channel="NHBollyFlix.in">
     <title>Ye Kaisa Pal Do Pal Ka Pyar</title>
     <desc>A wealthy woman falls for a man of lower social status and decides to elope with him, unaware of the challenges ahead in life.</desc>
@@ -174283,17 +174159,6 @@ The host invites prominent personalities and engages them in candid conversation
     <rating system="Canadian Parental Rating">
       <value>PG</value>
     </rating>
-  </programme>
-  <programme channel="NOWRock.uk@SD" start="20261011180000 +0000" stop="20261011202000 +0000">
-    <title lang="en">Alex Baker's 30 High School Heroes</title>
-    <desc lang="en">Dust off your old posters as Alex relives 30 era-defining mega bangers that made high school legendary! Featuring Evanescence, No Doubt, Limp Bizkit, Wheatus &amp; many more!</desc>
-    <credits>
-      <presenter>Alex Baker</presenter>
-    </credits>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Music</category>
-    <category lang="en">Special</category>
-    <icon src="https://jrsy.tmsimg.com/assets/p29983191_i_h9_aa.jpg" />
   </programme>
   <programme channel="NOWRock.uk@SD" start="20261011202000 +0000" stop="20261011210000 +0000">
     <title lang="en">The New Legends Of Rock</title>
@@ -177609,23 +177474,23 @@ Life in the African jungle is a constant, brutal game of survival, where motherl
     <icon src="https://iptv-epg.org/images/hjx2yoIhH_XdHongSbxny5UjSDDRiGwXByiBwUM4MvPcsSXk7kE63NFPJOWNuIpFJ2yDxvZZe9x8WqwX7kZZ75nOUICVdF1I1D_lCBrYcG546cUwwJGSgG1KHPm8" />
     <title lang="en">Africa's Deadliest</title>
   </programme>
-  <programme channel="NickJr.in@SD" start="20261011201000 +0000" stop="20261011202000 +0000">
-    <title lang="en">Tim Rex in Space</title>
-    <sub-title lang="en">Mole</sub-title>
-    <desc lang="en">Tim and Dad have to catch a troublesome mole.</desc>
+  <programme channel="NickJr.in@SD" start="20261012013000 +0530" stop="20261012020000 +0530">
+    <title lang="en">Shimmer and Shine</title>
+    <desc lang="en">Astronauts Leah and Zac are on a quest to speak to an alien. Shimmer and Shine send an alien right into her garden so she can talk to one face to face.</desc>
+    <credits>
+      <actor>Eva Bella</actor>
+      <actor>Isabella Crovetti</actor>
+      <actor>Dee Bradley Baker</actor>
+      <actor>Alina Foley</actor>
+      <actor>Blake Bertrand</actor>
+      <actor>Lacey Chabert</actor>
+      <director>Matt Engstrom</director>
+      <director>Carin-Anne Greco</director>
+    </credits>
     <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/ffa0b285-574d-4886-a68f-e97d29fa51ca/16-9" />
-    <episode-num system="xmltv_ns">0.29.</episode-num>
-  </programme>
-  <programme channel="NickJr.in@SD" start="20261011202000 +0000" stop="20261011202900 +0000">
-    <title lang="en">Tim Rex in Space</title>
-    <sub-title lang="en">Explorer</sub-title>
-    <desc lang="en">Tim explores Rumbleton to find somewhere he can have fun alone.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/8a529a02-b78f-4584-92a8-ebde327b34ac/16-9" />
-    <episode-num system="xmltv_ns">0.30.</episode-num>
+    <category lang="en">Animation</category>
+    <icon src="https://dtil.tmsimg.com/assets/p11997863_b_h9_aa.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E12</episode-num>
   </programme>
   <programme channel="NickJr.in@SD" start="20261012020000 +0530" stop="20261012023000 +0530">
     <title lang="en">Rusty Rivets</title>
@@ -219835,18 +219700,6 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     <icon src="https://iptv-epg.org/images/fpKNMxWiWcn11supKxjEueE6GXoPYQKEDCujIqfJi3z82GbfHFWWSB4pfIxJqmeDytJZuaVLBuZGg0y2hP4_G5DHfnplRKXySl0Hlm_SWaOXcGauZp1XpSLAifs_rg" />
     <title lang="en">Adi Anadi</title>
   </programme>
-  <programme start="20261012013000 +0530" stop="20261012014800 +0530" channel="RedBullTV.at@EUMENA">
-    <title lang="en-GB">Skate Tales</title>
-    <sub-title lang="en-GB">Madars travels to Brazil to uncover Tiago Lemos's rise from the streets to global skate stardom</sub-title>
-    <desc lang="en-GB">Skateboarder Madars Apse travels the world to skate with and learn from people pushing the culture of skateboarding in their own special way.</desc>
-    <credits>
-      <actor>Madars Apse</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/7d29368d38df1beda75cdde99d2a6d69.jpg" />
-    <episode-num system="onscreen">E2</episode-num>
-    <premiere />
-  </programme>
   <programme start="20261012014800 +0530" stop="20261012021200 +0530" channel="RedBullTV.at@EUMENA">
     <title lang="en-GB">Red Bull Sports Events</title>
     <sub-title lang="en-GB">Check out the best of the action as Red Bull King of the Air took to the skies in Cape Town, South Africa</sub-title>
@@ -241159,27 +241012,11 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <icon src="https://tv.assets.pressassociation.io/3a316425-b513-5459-84ae-8ce7fcac1681.jpg" />
     <episode-num system="onscreen">S2026 E32</episode-num>
   </programme>
-  <programme start="20261012014500 +0530" stop="20261012015000 +0530" channel="SongdewTV.in@SD">
-    <title>Songdew Select</title>
-    <desc>Featuring Best of Independent Music</desc>
-    <category>Music</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg?width=700" />
-    <episode-num system="onscreen">12</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261012015000 +0530" stop="20261012015500 +0530" channel="SongdewTV.in@SD">
-    <title>Friday Night Originals</title>
-    <desc>Features live jam session of some of best musicians and bands</desc>
-    <category>Music</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f9487d55c137dc908fea8febef5f5efe.jpg?width=700" />
-    <episode-num system="onscreen">2</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
+  <programme channel="SongdewTV.in@SD" start="20261012014500 +0530" stop="20261012015500 +0530">
+    <title lang="en">Songdew Select</title>
+    <desc lang="en">A comprehensive compilation of independent music, showcasing the diverse creativity and unique voices of artists, offering listeners an eclectic blend of genres and styles.</desc>
+    <category lang="en">Music</category>
+    <icon src="https://dtil.tmsimg.com/assets/p15781083_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="SongdewTV.in@SD" start="20261012015500 +0530" stop="20261012020000 +0530">
     <title lang="en">Friday Night Originals</title>
@@ -246524,18 +246361,6 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p19353762_b_h10_ac.jpg?lock=1280x720" />
   </programme>
-  <programme channel="SonyKALHindi.us" start="20261011192200 +0000" stop="20261011201700 +0000">
-    <title lang="en">Adalat</title>
-    <desc lang="en">Lawyer K.D. Pathak takes up the challenge of defending the accused by personally investigating the crime.</desc>
-    <credits>
-      <actor>Ronit Roy</actor>
-      <actor>Mushtaq Khan</actor>
-    </credits>
-    <date>2010</date>
-    <category lang="en">Drama</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13170722_b_h8_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
   <programme channel="SonyKALHindi.us" start="20261011201700 +0000" stop="20261011210800 +0000">
     <title lang="en">CID</title>
     <desc lang="en">A group of officers who work for the Crime Investigation Department of the police force seek the help of a professional forensic expert and solve various criminal cases.</desc>
@@ -250041,14 +249866,10 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <desc lang="en">In a bid to survive the streets of Mumbai, a farmer becomes a mafia don with a crime network of his own.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_MAX_2_151980_13OCT013500_13OCT030000/images/LANDSCAPE_169/1674033508000_Max2_AatankHiAatank_151980.jpg" />
   </programme>
-  <programme channel="SonyPal.in@SD" start="20261012012700 +0530" stop="20261012014700 +0530">
-    <title>Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc>The residents of a housing society help each other find solutions when they face common real-life challenges and get involved in sticky situations.</desc>
-    <category>TV Show</category>
-    <category>Sitcom</category>
+  <programme channel="SonyPal.in@SD" start="20261012014600 +0530" stop="20261012020600 +0530">
+    <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
+    <desc lang="en">Gokuldham Society is full of quirky neighbours who laugh, fight, and come together through every challenge. A mix of comedy, emotion, and strong community spirit.</desc>
     <credits>
-      <director>Dharmesh Mehta</director>
-      <director>Harshad Joshi</director>
       <actor>Dilip Joshi</actor>
       <actor>Nitish Bhaluni</actor>
       <actor>Amit Bhatt</actor>
@@ -250071,19 +249892,20 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
       <actor>Sharad Sankla</actor>
       <actor>Tanmay Vekaria</actor>
       <actor>Daya Shankar Pandey</actor>
+      <director>Dharmesh Mehta</director>
+      <director>Harshad Joshi</director>
       <producer>Asit Kumarr Modi</producer>
       <producer>Neela Asit Modi</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p12557899_b_h11_ad.jpg?lock=1280x720" />
+    <category lang="en">TV Show</category>
+    <category lang="en">Sitcom</category>
+    <icon src="https://dtil.tmsimg.com/assets/p8862533_b_h9_ad.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E4694</episode-num>
   </programme>
-  <programme channel="SonyPal.in@SD" start="20261012014700 +0530" stop="20261012020800 +0530">
-    <title>Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc>Tapu and the kids see someone on the terrace of Gokuldham Society and get a good fright when they investigate.</desc>
-    <category>TV Show</category>
-    <category>Sitcom</category>
+  <programme channel="SonyPal.in@SD" start="20261012020600 +0530" stop="20261012022600 +0530">
+    <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
+    <desc lang="en">Tapu visits the Haathis in search of his grandfather, but Komal denies seeing him. Later, Jethalal calls Popatlal enquiring about his father's whereabouts.</desc>
     <credits>
-      <director>Dharmesh Mehta</director>
-      <director>Harshad Joshi</director>
       <actor>Dilip Joshi</actor>
       <actor>Nitish Bhaluni</actor>
       <actor>Amit Bhatt</actor>
@@ -250106,45 +249928,15 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
       <actor>Sharad Sankla</actor>
       <actor>Tanmay Vekaria</actor>
       <actor>Daya Shankar Pandey</actor>
-      <producer>Asit Kumarr Modi</producer>
-      <producer>Neela Asit Modi</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p12557899_b_h11_ad.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="SonyPal.in@SD" start="20261012020800 +0530" stop="20261012022600 +0530">
-    <title>Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc>Just as the kids inform the elders of Gokuldham Society about a white ghost, Gogi gets trapped on the terrace.</desc>
-    <category>TV Show</category>
-    <category>Sitcom</category>
-    <credits>
       <director>Dharmesh Mehta</director>
       <director>Harshad Joshi</director>
-      <actor>Dilip Joshi</actor>
-      <actor>Nitish Bhaluni</actor>
-      <actor>Amit Bhatt</actor>
-      <actor>Sachin Shroff</actor>
-      <actor>Sunayana Fozdar</actor>
-      <actor>Tanuj Mahashabde</actor>
-      <actor>Munmun Dutta</actor>
-      <actor>Mandar Chandwadkar</actor>
-      <actor>Sonalika Joshi</actor>
-      <actor>Palak Sindhwani</actor>
-      <actor>Nirmal Soni</actor>
-      <actor>Ambika Ranjankar</actor>
-      <actor>Kush Shah</actor>
-      <actor>Balwinder Singh Suri</actor>
-      <actor>Monaz Mevawalla</actor>
-      <actor>Samay Shah</actor>
-      <actor>Azhar Shaikh</actor>
-      <actor>Shyam Pathak</actor>
-      <actor>Navina Wadekar</actor>
-      <actor>Sharad Sankla</actor>
-      <actor>Tanmay Vekaria</actor>
-      <actor>Daya Shankar Pandey</actor>
       <producer>Asit Kumarr Modi</producer>
       <producer>Neela Asit Modi</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p12557899_b_h11_ad.jpg?lock=1280x720" />
+    <category lang="en">TV Show</category>
+    <category lang="en">Sitcom</category>
+    <icon src="https://dtil.tmsimg.com/assets/p8862533_b_h9_ad.jpg?lock=880x660" />
+    <episode-num system="onscreen">S1 E4695</episode-num>
   </programme>
   <programme channel="SonyPal.in@SD" start="20261012022600 +0530" stop="20261012024300 +0530">
     <title>Taarak Mehta Ka Ooltah Chashmah</title>
@@ -275228,20 +275020,6 @@ Real-time match updates and highlights keep fans informed, providing instant acc
     <title lang="en">2012</title>
     <desc lang="en">Failed writer guides family through global disasters.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_WAH_1776351_13OCT031900_13OCT060000/images/LANDSCAPE_169/1734860977000_SonyWAH_2012_1776351.jpg" />
-  </programme>
-  <programme channel="SonyYay.in@SD" start="20261012013800 +0530" stop="20261012014900 +0530">
-    <title lang="en">Honey Bunny Ka Jholmaal</title>
-    <desc lang="en">Honey and Bunny, two cats who are twin brothers, go on exciting adventures while protecting each other from enemies at every turn.</desc>
-    <credits>
-      <actor>Mubeen Saudagar</actor>
-      <actor>Meena Nahata</actor>
-      <actor>Dolly Lopes</actor>
-      <director>Vijay Roche</director>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p24103923_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E143</episode-num>
   </programme>
   <programme channel="SonyYay.in@SD" start="20261012014900 +0530" stop="20261012020000 +0530">
     <title lang="en">Honey Bunny Ka Jholmaal</title>
@@ -366811,32 +366589,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="custom.amc.tv" start="20261011191600 +0000" stop="20261011201800 +0000">
-    <title lang="en">The Boulet Brothers' Dragula</title>
-    <sub-title lang="en">Monochrome Monster</sub-title>
-    <desc lang="en">The cast presents a runway inspired by horror films with guest judges Mike Flanagan and Violet Chachki.</desc>
-    <date>2024</date>
-    <category lang="en">Series</category>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Game show</category>
-    <category lang="en">Horror</category>
-    <category lang="en">Competition Reality</category>
-    <icon src="http://dtil.tmsimg.com/assets/p14519968_b_h8_ag.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S6 E6</episode-num>
-    <previously-shown />
-    <rating system="Régie du cinéma">
-      <value>18+</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>18+</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVMA</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>MA 15+</value>
-    </rating>
-  </programme>
   <programme channel="custom.amc.tv" start="20261011201800 +0000" stop="20261011211600 +0000">
     <title lang="en">The Boulet Brothers' Dragula</title>
     <sub-title lang="en">Dungeons and Drag Queens: The Underdark</sub-title>
@@ -380017,18 +379769,6 @@ Delving into a range of varied topics, the host discusses the social, economic a
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012013000 +0530" stop="20261012014800 +0530" channel="custom.bdix.redbulltv">
-    <title lang="en-GB">Skate Tales</title>
-    <sub-title lang="en-GB">Madars travels to Brazil to uncover Tiago Lemos's rise from the streets to global skate stardom</sub-title>
-    <desc lang="en-GB">Skateboarder Madars Apse travels the world to skate with and learn from people pushing the culture of skateboarding in their own special way.</desc>
-    <credits>
-      <actor>Madars Apse</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/7d29368d38df1beda75cdde99d2a6d69.jpg" />
-    <episode-num system="onscreen">E2</episode-num>
-    <premiere />
-  </programme>
   <programme start="20261012014800 +0530" stop="20261012021200 +0530" channel="custom.bdix.redbulltv">
     <title lang="en-GB">Red Bull Sports Events</title>
     <sub-title lang="en-GB">Check out the best of the action as Red Bull King of the Air took to the skies in Cape Town, South Africa</sub-title>
@@ -383864,37 +383604,6 @@ Delving into a range of varied topics, the host discusses the social, economic a
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/5334d0790a70322aa8c259c0323d0533.jpg" />
     <episode-num system="onscreen">E1</episode-num>
     <premiere />
-  </programme>
-  <programme channel="custom.boomerang" start="20261011201000 +0000" stop="20261011202000 +0000">
-    <title lang="en">Looney Tunes</title>
-    <sub-title lang="en">What's Opera, Doc?</sub-title>
-    <desc lang="en">Elmer Fudd is hunting Bugs Bunny and chases him into an opera where they act out their characters.</desc>
-    <credits>
-      <actor>Mel Blanc</actor>
-      <actor>June Foray</actor>
-    </credits>
-    <date>1957</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p24768210_b_h10_ae.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVY</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>0</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
   </programme>
   <programme channel="custom.boomerang" start="20261011202000 +0000" stop="20261011203000 +0000">
     <title lang="en">Looney Tunes</title>
@@ -394966,68 +394675,31 @@ Delving into a range of varied topics, the host discusses the social, economic a
       <value>PG</value>
     </rating>
   </programme>
-  <programme channel="custom.colors.infinity" start="20261012010000 +0530" stop="20261012015000 +0530">
-    <title lang="en">A Million Little Things</title>
-    <desc lang="en">Maggie's friends anxiously await the outcome of her surgery. Meanwhile, an unexpected arrival by her mother creates a tense initial encounter with Gary.</desc>
+  <programme start="20261012014000 +0530" stop="20261012022500 +0530" channel="custom.colors.infinity">
+    <title lang="en-GB">Dexter</title>
+    <sub-title lang="en-GB">Dexter follows a recently released murderer who plans to kill again. Later, a woman is found chopped up in a pro-hockey ice rink</sub-title>
+    <desc lang="en-GB">Dexter Morgan, a man with murderous impulses, leads a double life. He works as a forensic technician for the police department during the day and kills heinous criminals in his free time.</desc>
     <credits>
-      <actor>David Giuntoli</actor>
-      <actor>Romany Malco</actor>
-      <actor>Allison Miller</actor>
-      <actor>Christina Marie Moses</actor>
-      <actor>Grace Park</actor>
-      <actor>James Roday Rodriguez</actor>
-      <actor>Stephanie Szostak</actor>
-      <actor>Lizzy Greene</actor>
-      <actor>Tristan Byon</actor>
-      <actor>Chance Hurstfield</actor>
-      <actor>Floriana Lima</actor>
+      <director>Michael Cuesta</director>
+      <actor>Michael C. Hall (Dexter Morgan),Jennifer Carpenter (Debra Morgan),C.S. Lee (Vince Masuka),David Zayas (Angel Batista),James Remar (Harry Morgan),Desmond Harrington (Joey Quinn),Geoff Pierson (Captain Tom Matthews),Aimee Garcia (Jamie Batista),Lauren Vélez (Lt. Maria LaGuerta),Christina Robinson (Astor),Preston Bailey (Cody),Julia Stiles (Lumen Ann Pierce),Julie Benz (Rita Bennett),John Lithgow (Arthur Mitchell),Devon Graye (Teenage Dexter),Dominic Janes (Young Dexter),Cristos (Norberto Cervantes),Rudolf Martin (Carlos Guerrero),Scott William Winters (Detective McNamara),Valerie Cruz (Syl Prado),Kristin Dattilo (Det. Barbara Gianna),Jason Manuel Olazabal (Ramon Prado),David Ramsey (Anton),Jimmy Smits (Miguel Prado),Erik King (Sgt. Doakes),Keith Carradine (Agent Lundy),JoBeth Williams (Gail),Jaime Murray (Lila)</actor>
     </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p15522922_b_h9_ab.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E16</episode-num>
+    <category lang="en-GB">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/2adcd302077b9167a8a579e2077ace49.jpg" />
+    <episode-num system="onscreen">E3</episode-num>
+    <premiere />
   </programme>
-  <programme channel="custom.colors.infinity" start="20261012015000 +0530" stop="20261012023000 +0530">
-    <title lang="en">Evil</title>
-    <desc lang="en">Psychologist Kristen Bouchard reluctantly works together with David Acosta, a priest in training, to investigate and find a logical explanation for every supernatural occurrence within the Church.</desc>
+  <programme start="20261012022500 +0530" stop="20261012032000 +0530" channel="custom.colors.infinity">
+    <title lang="en-GB">Dexter</title>
+    <sub-title lang="en-GB">Dexter becomes deeply intrigued when the Ice Truck Killer begins placing photographs from Dexter’s childhood at crime scenes</sub-title>
+    <desc lang="en-GB">Dexter Morgan, a man with murderous impulses, leads a double life. He works as a forensic technician for the police department during the day and kills heinous criminals in his free time.</desc>
     <credits>
-      <actor>Katja Herbers</actor>
-      <actor>Mike Colter</actor>
-      <actor>Aasif Mandvi</actor>
-      <actor>Michael Emerson</actor>
-      <actor>Kurt Fuller</actor>
-      <actor>Andrea Martin</actor>
-      <actor>Christine Lahti</actor>
-      <actor>Brooklyn Shuck</actor>
-      <actor>Skylar Gray</actor>
-      <actor>Maddy Crocco</actor>
-      <actor>Dalya Knapp</actor>
+      <director>Robert Lieberman</director>
+      <actor>Michael C. Hall (Dexter Morgan),Jennifer Carpenter (Debra Morgan),C.S. Lee (Vince Masuka),David Zayas (Angel Batista),James Remar (Harry Morgan),Desmond Harrington (Joey Quinn),Geoff Pierson (Captain Tom Matthews),Aimee Garcia (Jamie Batista),Lauren Vélez (Lt. Maria LaGuerta),Christina Robinson (Astor),Preston Bailey (Cody),Julia Stiles (Lumen Ann Pierce),Julie Benz (Rita Bennett),John Lithgow (Arthur Mitchell),Devon Graye (Teenage Dexter),Dominic Janes (Young Dexter),Cristos (Norberto Cervantes),Rudolf Martin (Carlos Guerrero),Scott William Winters (Detective McNamara),Valerie Cruz (Syl Prado),Kristin Dattilo (Det. Barbara Gianna),Jason Manuel Olazabal (Ramon Prado),David Ramsey (Anton),Jimmy Smits (Miguel Prado),Erik King (Sgt. Doakes),Keith Carradine (Agent Lundy),JoBeth Williams (Gail),Jaime Murray (Lila)</actor>
     </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Crime</category>
-    <icon src="https://dtil.tmsimg.com/assets/p21924767_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S3 E6</episode-num>
-  </programme>
-  <programme channel="custom.colors.infinity" start="20261012023000 +0530" stop="20261012032000 +0530">
-    <title lang="en">Evil</title>
-    <desc lang="en">Psychologist Kristen Bouchard reluctantly works together with David Acosta, a priest in training, to investigate and find a logical explanation for every supernatural occurrence within the Church.</desc>
-    <credits>
-      <actor>Katja Herbers</actor>
-      <actor>Mike Colter</actor>
-      <actor>Aasif Mandvi</actor>
-      <actor>Michael Emerson</actor>
-      <actor>Kurt Fuller</actor>
-      <actor>Andrea Martin</actor>
-      <actor>Christine Lahti</actor>
-      <actor>Brooklyn Shuck</actor>
-      <actor>Skylar Gray</actor>
-      <actor>Maddy Crocco</actor>
-      <actor>Dalya Knapp</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Crime</category>
-    <icon src="https://dtil.tmsimg.com/assets/p21924767_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S3 E7</episode-num>
+    <category lang="en-GB">178</category>
+    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/2adcd302077b9167a8a579e2077ace49.jpg" />
+    <episode-num system="onscreen">E4</episode-num>
+    <premiere />
   </programme>
   <programme start="20261012032000 +0530" stop="20261012034500 +0530" channel="custom.colors.infinity">
     <title lang="en-GB">Veep</title>
@@ -405723,14 +405395,6 @@ Felix and Oscar both want to be the president of their building's tenants' assoc
       <value>15</value>
     </rating>
   </programme>
-  <programme start="20261012012400 +0530" stop="20261012014800 +0530" channel="custom.cowboy.movie.channel">
-    <title>The Lone Ranger</title>
-    <sub-title>COWBOY MOVIE CHANNEL | ENGLISH</sub-title>
-    <desc>The origin of the Lone Ranger's horse Silver and his use of silver bullets is explained.</desc>
-    <category>Series</category>
-    <language>ENGLISH</language>
-    <icon src="https://d1ci3apo8cxilc.cloudfront.net/COWBOY-MOVIE-CHANNEL-ENG-DASH/videos/posters/Lone_Ranger_TV_e02.png" />
-  </programme>
   <programme start="20261012014800 +0530" stop="20261012033300 +0530" channel="custom.cowboy.movie.channel">
     <title>The Sundowners</title>
     <sub-title>COWBOY MOVIE CHANNEL | ENGLISH</sub-title>
@@ -413588,17 +413252,6 @@ Zak and the crew descend upon a Southern California park to investigate a haunte
     <icon src="https://iptv-epg.org/images/auLgCBOJ9Cb1JcgmF21cKHU8ImJ5u83zscNtiWb7H2wxi7jbC5EH-iBo0DHi-PQLKm31A2rXh4iGG1wrCTGFOvASRGEJ6bokdHq3-T8Rxvk0jo4-LA6kfNbL8wY" />
     <title lang="en">Ghost Adventures</title>
   </programme>
-  <programme channel="custom.discovery.turbo" start="20261012005500 +0530" stop="20261012015000 +0530">
-    <title lang="en">Faster With Finnegan</title>
-    <desc lang="en">Cotten challenges Finnegan and Newbern to some front-wheel-drive, high-school-antics-style racing.</desc>
-    <credits>
-      <actor>Mike Finnegan</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Reality Show</category>
-    <icon src="https://dtil.tmsimg.com/assets/p19593682_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S2 E5</episode-num>
-  </programme>
   <programme channel="custom.discovery.turbo" start="20261012015000 +0530" stop="20261012024500 +0530">
     <title lang="en">Salvage Hunters: Classic Cars</title>
     <desc lang="en">Paul has paid just over £15,000 for an Alfa Romeo 2000 GTV that appears to be in great shape. However, Drew is horrified when he learns it's an automatic.</desc>
@@ -419399,26 +419052,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261012014600 +0530" stop="20261012014900 +0530" channel="custom.duck.tv">
-    <title>Didy Baby</title>
-    <desc>Little baby animals overcome the different obstacles they face everyday by helping each other and encourage children to do the same.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/994980d9030c79a0e59fef498478945f.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261012014900 +0530" stop="20261012015100 +0530" channel="custom.duck.tv">
-    <title>The World of Animals</title>
-    <desc>The presenter helps children learn about animals and understand the difference between domestic and wild animals.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f04243de7b0a9cd4db5720975fe264bd.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261012015100 +0530" stop="20261012015500 +0530" channel="custom.duck.tv">
@@ -430070,34 +429703,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/4358c471c057cb4a7a3c4d2e07704501.jpg?width=700" />
     <rating>
       <value>TVY</value>
-    </rating>
-  </programme>
-  <programme channel="custom.ducktv" start="20261011201400 +0000" stop="20261011201800 +0000">
-    <title lang="en">Mimo and Bobo PLUS</title>
-    <desc lang="en">Mimo and his loyal friend Bobo set out for a world of preschool adventure as they gain valuable experiences and skills along the way.</desc>
-    <date>2016</date>
-    <category lang="en">Children</category>
-    <category lang="en">Educational</category>
-    <icon src="http://dtil.tmsimg.com/assets/p22593846_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
-  <programme channel="custom.ducktv" start="20261011201800 +0000" stop="20261011202100 +0000">
-    <title lang="en">Waterworld</title>
-    <desc lang="en">Introduces the exotic animals of the seas.</desc>
-    <date>2016</date>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Animals</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13128274_b_h10_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
     </rating>
   </programme>
   <programme channel="custom.ducktv" start="20261011202100 +0000" stop="20261011202400 +0000">
@@ -451239,23 +450844,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <title>Ekamra Lahari</title>
     <desc>A compilation of the timeless old classic Odia hits is played to entertain the audience.</desc>
   </programme>
-  <programme channel="custom.enter10.bangla" start="20261012011300 +0530" stop="20261012014900 +0530">
-    <title lang="en">Crime Alert</title>
-    <desc lang="en">The host presents a collection of true stories involving ordinary citizens who committed horrific crimes for the sake of love, revenge and various other motivating factors.</desc>
-    <credits>
-      <actor>Girish Jain</actor>
-      <actor>Amit Pachori</actor>
-      <actor>Sudha Chandran</actor>
-      <director>Anil Rawat</director>
-      <producer>Anirban Bhattacharyya</producer>
-      <producer>Sudha Chandran</producer>
-      <producer>Suhaib Ilyasi</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Crime</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27029209_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E469</episode-num>
-  </programme>
   <programme channel="custom.enter10.bangla" start="20261012014900 +0530" stop="20261012022300 +0530">
     <title lang="en">Crime Alert</title>
     <desc lang="en">The host presents a collection of true stories involving ordinary citizens who committed horrific crimes for the sake of love, revenge and various other motivating factors.</desc>
@@ -451685,14 +451273,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme channel="custom.epic" start="20261012012500 +0530" stop="20261012015000 +0530">
-    <title lang="en">Epic Khoj</title>
-    <desc lang="en">The host looks at how the Marwari community gained prominence in business circles and explains their cultural origins.</desc>
-    <category lang="en">Documentary</category>
-    <category lang="en">Others</category>
-    <icon src="https://dtil.tmsimg.com/assets/p22481041_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E3</episode-num>
   </programme>
   <programme channel="custom.epic" start="20261012015000 +0530" stop="20261012024000 +0530">
     <title lang="en">Destruction Decoded</title>
@@ -478839,38 +478419,32 @@ Jeevsiddhi, who is trained by Chanakya, enters the innermost circles of Rakshasa
     <category>News Bulletin</category>
     <icon src="https://dtil.tmsimg.com/assets/p28386431_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme start="20261011184500 +0000" stop="20261011202000 +0000" channel="custom.mtv" catchup-id="100122899">
-    <title>Splitsvilla</title>
-    <desc>A new popular couple enters the villa as the finale approaches. S15 E36.</desc>
-  </programme>
-  <programme start="20261011202000 +0000" stop="20261011213000 +0000" channel="custom.mtv" catchup-id="100122892">
-    <title>Roadies</title>
-    <desc>The contestants showcase their talents in the entertainment challenge. S20 E34.</desc>
-  </programme>
-  <programme start="20261011213000 +0000" stop="20261011223000 +0000" channel="custom.mtv" catchup-id="100122900">
-    <title>Anything For Love</title>
-    <desc>The host invites participants on stage to perform tasks that test their relationships. S01 E05.</desc>
-  </programme>
-  <programme channel="custom.mtv" start="20261012041500 +0530" stop="20261012060000 +0530">
-    <title lang="en">MTV Hustle</title>
-    <desc lang="en">Aspiring artists from across the country compete in various challenges to showcase their skills, with each performance bringing them closer to the opportunity to launch a successful career.</desc>
+  <programme channel="custom.mtv" start="20261012010000 +0530" stop="20261012023000 +0530">
+    <title lang="en">Roadies</title>
+    <desc lang="en">The gang leaders forge alliances to safeguard their team members. Consequently, tensions escalate during the game's first vote-out session.</desc>
     <credits>
+      <actor>Cyrus Sahukar</actor>
+      <actor>Rannvijay Singh</actor>
+      <actor>Gurbani</actor>
       <actor>Gaelyn Mendonca</actor>
-      <actor>Krissann Barretto</actor>
-      <actor>Jasmeet Singh Bhatia</actor>
-      <actor>Talha Siddiqui</actor>
-      <actor>Super Mannik</actor>
-      <actor>Wicked Sunny</actor>
-      <actor>Raftaar</actor>
-      <actor>Nucleya</actor>
-      <actor>Raja Kumari</actor>
-      <actor>Badshah</actor>
-      <actor>Ankit Singh Patyal</actor>
-      <director>Sagar More</director>
+      <actor>Sonu Sood</actor>
     </credits>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p17232494_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S5 E20</episode-num>
+    <category lang="en">TV Show</category>
+    <category lang="en">Adventure</category>
+    <icon src="https://dtil.tmsimg.com/assets/p25117854_b_h9_ad.jpg?lock=880x660" />
+    <episode-num system="onscreen">S20 E21</episode-num>
+  </programme>
+  <programme start="20261011210000 +0000" stop="20261011220000 +0000" channel="custom.mtv" catchup-id="100122785">
+    <title>Roadies</title>
+    <desc>Participants from different parts of the country compete with each other to win the prize.</desc>
+  </programme>
+  <programme start="20261011220000 +0000" stop="20261011230000 +0000" channel="custom.mtv" catchup-id="100122790">
+    <title>Splitsvilla</title>
+    <desc>Young men and women go through obstacles and intense heartbreaks to find their perfect partner.</desc>
+  </programme>
+  <programme start="20261011230000 +0000" stop="20261012003000 +0000" channel="custom.mtv" catchup-id="100122795">
+    <title>Hustle</title>
+    <desc>Aspiring rappers from across the country compete in challenges to showcase their skills.</desc>
   </programme>
   <programme channel="custom.mtv" start="20261012060000 +0530" stop="20261012110000 +0530">
     <title lang="en">Pump Up Mornings</title>
@@ -531029,18 +530603,6 @@ Chongo is unwilling to share the buffalo with the rest of the pride while Fig co
     <desc lang="en">Ed Stafford is alone in Borneo's thick jungles with no tools, no food, and no backup. Just raw survival instincts against dense forest, wild creatures, and unrelenting rain.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_DISCOVERY_CHANNEL_173569_15OCT064800_15OCT073800/images/LANDSCAPE_169_HD/DISCOVERY_MaroonedWithEdStafford_173569.jpg" />
   </programme>
-  <programme channel="hmair.discoverykids" start="20261012013600 +0530" stop="20261012014800 +0530">
-    <title lang="en">Smaashhing Simmba</title>
-    <desc lang="en">Simmba comes to know that the Bad Biker gang has hatched a plan to steal from the local flea market. So, he comes up with his own plan to nab them red-handed and send them to jail.</desc>
-    <credits>
-      <actor>Abhishek Dutta</actor>
-      <producer>Rohit Shetty</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p23765022_b_h9_ab.jpg?lock=880x660" />
-    <episode-num system="onscreen">S2 E15</episode-num>
-  </programme>
   <programme channel="hmair.discoverykids" start="20261012014800 +0530" stop="20261012020000 +0530">
     <title lang="en">Smaashhing Simmba</title>
     <desc lang="en">Chaos ensues as High-tech Hunter creates a clone of Ricky and replaces him with it. Soon, Simmba catches wind of the situation and sets out to stop High-tech Hunter's plan.</desc>
@@ -539780,17 +539342,6 @@ Little Singham, an honest but ferocious police officer, fights against injustice
     <episode-num>S1 E49</episode-num>
     <icon src="https://iptv-epg.org/images/fFfwu07M2GNI6OsF78RSCAg0GFFcpJDJLs0CPsN9rV0BRUeFKgTHLQw3M6SdLmrmSXZO7dlAqiyMFXBPWWhRR70MKpOFvvYhAQJh9IO4n_8jlqfvE7JA9tmjwAHR" />
     <title lang="en">Little Singham</title>
-  </programme>
-  <programme channel="hmair.discoveryturbo" start="20261012005500 +0530" stop="20261012015000 +0530">
-    <title lang="en">Faster With Finnegan</title>
-    <desc lang="en">Cotten challenges Finnegan and Newbern to some front-wheel-drive, high-school-antics-style racing.</desc>
-    <credits>
-      <actor>Mike Finnegan</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Reality Show</category>
-    <icon src="https://dtil.tmsimg.com/assets/p19593682_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S2 E5</episode-num>
   </programme>
   <programme channel="hmair.discoveryturbo" start="20261012015000 +0530" stop="20261012024500 +0530">
     <title lang="en">Salvage Hunters: Classic Cars</title>
@@ -565385,20 +564936,6 @@ Five noble brothers unite in a righteous war against greed and corruption.</desc
     <icon src="https://iptv-epg.org/images/BsY4a48U4F6Ux0ekqJp32nbSIKydn2yWqhoXD_qsrXU5IUKyxDKMbJ9qclnmwvuV95MDVzGs89EhP3Algb5JUG-9SI9D9QPHBFgoqka1JH0vL93oh9exerC1yOB0GQ" />
     <title lang="en">Hastinapur Ke Veer</title>
   </programme>
-  <programme channel="hmair.sonyyay" start="20261012013800 +0530" stop="20261012014900 +0530">
-    <title lang="en">Honey Bunny Ka Jholmaal</title>
-    <desc lang="en">Honey and Bunny, two cats who are twin brothers, go on exciting adventures while protecting each other from enemies at every turn.</desc>
-    <credits>
-      <actor>Mubeen Saudagar</actor>
-      <actor>Meena Nahata</actor>
-      <actor>Dolly Lopes</actor>
-      <director>Vijay Roche</director>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p24103923_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E143</episode-num>
-  </programme>
   <programme channel="hmair.sonyyay" start="20261012014900 +0530" stop="20261012020000 +0530">
     <title lang="en">Honey Bunny Ka Jholmaal</title>
     <desc lang="en">Honey and Bunny, two cats who are twin brothers, go on exciting adventures while protecting each other from enemies at every turn.</desc>
@@ -577985,9 +577522,9 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <icon src="https://iptv-epg.org/images/XnXWxJE6Qqds6fTcoNRkcQHAUbDsNPZ_Ixl700cWD_RZaAMFk_ljl3QfcMUMOlxRdTAEl_tWz5f4GlfhNtbM43AaDpHJwkGXeZzvjY00txJXlrHu2anaXnO2h24G" />
     <title lang="en">Tehkikaat</title>
   </programme>
-  <programme channel="hmair.zeetvhd" start="20261012012700 +0530" stop="20261012015000 +0530">
+  <programme channel="hmair.zeetvhd" start="20261012013000 +0530" stop="20261012015600 +0530">
     <title lang="en">Ganga Mai Ki Betiyaan</title>
-    <desc lang="en">After her husband abandons her for not giving birth to a son, a resilient Ganga Mai dedicates herself to raising her three daughters with unwavering strength, grace, and affection.</desc>
+    <desc lang="en">Soni's question about Manohar upsets Sneha, while Manohar brags about tricking Sahana and Indu threatens him, leading to Sneha filing a complaint against Siddhu later.</desc>
     <credits>
       <actor>Amandeep Sidhu</actor>
       <actor>Sheezan Khan</actor>
@@ -577999,7 +577536,7 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <category lang="en">TV Show</category>
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p31042360_b_h9_ad.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E380</episode-num>
+    <episode-num system="onscreen">S1 E48</episode-num>
   </programme>
   <programme start="20261011203000 +0000" stop="20261011204500 +0000" channel="hmair.zeetvhd">
     <category lang="en">TV Show</category>
