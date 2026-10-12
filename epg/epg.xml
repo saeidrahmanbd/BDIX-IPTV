@@ -29184,11 +29184,9 @@ This is TV Show - Religious Category.</desc>
       <value>U/A-12</value>
     </rating>
   </programme>
-  <programme channel="Colors.in" start="20261012050600 +0530" stop="20261012053400 +0530">
-    <title>Shayad Yahi Hai Pyaar</title>
-    <desc>After leaving a toxic relationship, 35-year-old Preeti gets a second chance at love when 25-year-old Aarav enters her life. As their bond grows, they navigate societal taboos due to their age gap.</desc>
-    <category>TV Show</category>
-    <category>Drama</category>
+  <programme start="20261011230000 +0000" stop="20261012003000 +0000" channel="Colors.in">
+    <category lang="en">TV Show</category>
+    <category lang="en">Drama</category>
     <credits>
       <director>Vikram Labhe</director>
       <actor>Aditi Dev Sharma</actor>
@@ -29200,25 +29198,11 @@ This is TV Show - Religious Category.</desc>
       <actor>Sarthak Sharma</actor>
       <producer>Vinay Pillai</producer>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p34138733_b_h10_aa.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="Colors.in" start="20261012053400 +0530" stop="20261012060000 +0530">
-    <title>Shayad Yahi Hai Pyaar</title>
-    <desc>After leaving a toxic relationship, 35-year-old Preeti gets a second chance at love when 25-year-old Aarav enters her life. As their bond grows, they navigate societal taboos due to their age gap.</desc>
-    <category>TV Show</category>
-    <category>Drama</category>
-    <credits>
-      <director>Vikram Labhe</director>
-      <actor>Aditi Dev Sharma</actor>
-      <actor>Daksh Puri</actor>
-      <actor>Kunal Karan Kapoor</actor>
-      <actor>Jagat Rawat</actor>
-      <actor>Nidhi Tiwari</actor>
-      <actor>Namami Vashishth</actor>
-      <actor>Sarthak Sharma</actor>
-      <producer>Vinay Pillai</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p34138733_b_h10_aa.jpg?lock=1280x720" />
+    <desc lang="en">S1 E11
+After leaving a toxic relationship, 35-year-old Preeti gets a second chance at love when 25-year-old Aarav enters her life. As their bond grows, they navigate societal taboos due to their age gap.</desc>
+    <episode-num>S1 E11</episode-num>
+    <icon src="https://iptv-epg.org/images/D7AcaTrsuhUQlrBHJIBGbMdkl9L_x7bO1lDjWO0zbIUegbFZ5rW7M0Gg6weBUBqF-O4AY_2wSqdnZUFrpXC-qfhabHja23mpIJu0sI3I42ZF8CBeMImH0UF9WEqy" />
+    <title lang="en">Shayad Yahi Hai Pyaar</title>
   </programme>
   <programme start="20261012003000 +0000" stop="20261012010000 +0000" channel="Colors.in">
     <category lang="en">TV Show</category>
@@ -32737,16 +32721,27 @@ Celebrity contestants live in an isolated house and perform assigned tasks, in o
     <icon src="https://iptv-epg.org/images/9NworId_GihjLIgsWG7HlWTdl5_gLupMTFl2_7sUa-bfhKPmzvvVyvqbRsQpTHnRZjnfMoWoiLLGpW6sP-DeZhwYwdDLGPs4i4WysGD_by8B4RZYci26E_Wug_ED9w" />
     <title lang="en">Bigg Boss</title>
   </programme>
-  <programme channel="ColorsCineplex.in@SD" start="20261012070800 +0530" stop="20261012073200 +0530">
-    <title>Filler</title>
-    <desc>Bringing the best in television.</desc>
-    <category>TV Show</category>
-    <category>Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p9162875_b_h8_ae.jpg?lock=1280x720" />
-  </programme>
-  <programme start="20261012073200 +0530" stop="20261012085100 +0530" channel="ColorsCineplex.in@SD" catchup-id="100297614">
-    <title>DK Bose</title>
-    <desc>A series of events forces a corrupt police officer to turn over a new leaf.</desc>
+  <programme channel="ColorsCineplex.in@SD" start="20261012045800 +0530" stop="20261012084200 +0530">
+    <title>Aakhri Chaal : Ab kaun bachega</title>
+    <desc>This is Film - Crime Category</desc>
+    <category>Film</category>
+    <category>Crime</category>
+    <date>2018</date>
+    <credits>
+      <director>Mani Ratnam</director>
+      <actor>T.R. Silambarasan</actor>
+      <actor>Arvind Swami</actor>
+      <actor>Vijay Sethupathi</actor>
+      <actor>Arun Vijay</actor>
+      <actor>Prakash Raj</actor>
+      <actor>Jayasudha</actor>
+      <actor>Jyotika</actor>
+      <actor>Aishwarya Rajesh</actor>
+      <actor>Aditi Rao Hydari</actor>
+      <producer>Mani Ratnam</producer>
+      <producer>A. Subaskaran</producer>
+    </credits>
+    <icon src="https://dtil.tmsimg.com/assets/p28888738_v_h10_ab.jpg?lock=1280x720" />
   </programme>
   <programme start="20261012085100 +0530" stop="20261012111400 +0530" channel="ColorsCineplex.in@SD" catchup-id="100297611">
     <title>Chhota Bheem and the Curse of Damyaan</title>
@@ -110565,93 +110560,20 @@ Little Singham, an honest but ferocious police officer, fights against injustice
     <icon src="https://iptv-epg.org/images/fFfwu07M2GNI6OsF78RSCAg0GFFcpJDJLs0CPsN9rV0BRUeFKgTHLQw3M6SdLmrmSXZO7dlAqiyMFXBPWWhRR70MKpOFvvYhAQJh9IO4n_8jlqfvE7JA9tmjwAHR" />
     <title lang="en">Little Singham</title>
   </programme>
-  <programme channel="Disney Junior.in" start="20261011234000 +0000" stop="20261012000500 +0000">
-    <title lang="en">Marvel's Spidey and His Amazing Friends</title>
-    <sub-title lang="en">Rocket Rhino!; Trick or TRACE-E</sub-title>
-    <desc lang="en">The Green Goblin manages to throw the heroes' plans off course; a new superpowered spidey-jetpack ends up in the hands of Rhino.</desc>
+  <programme channel="Disney Junior.in" start="20261012030000 +0530" stop="20261012060000 +0530">
+    <title>Mickey Mouse Clubhouse</title>
+    <desc>Mickey, Minnie, Pluto, Goofy, Daisy, Donald and many other clubhouse friends go on educational adventures and impart important lessons in a fun way.</desc>
+    <category>Children</category>
+    <category>Animation</category>
     <credits>
-      <actor>Benjamin Valic</actor>
-      <actor>Lily Sanfelippo</actor>
-      <actor>Jakari Fraser</actor>
-      <director>Darren Bachynski</director>
+      <actor>Wayne Allwine</actor>
+      <actor>Russi Taylor</actor>
+      <actor>Bill Farmer</actor>
+      <actor>Tony Anselmo</actor>
+      <actor>Tress MacNeille</actor>
+      <actor>Bret Iwan</actor>
     </credits>
-    <date>2021</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Adventure</category>
-    <icon src="http://dtil.tmsimg.com/assets/p20327168_b_h8_ci.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S1 E8</episode-num>
-    <previously-shown />
-    <rating system="Canadian Parental Rating">
-      <value>C</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVY</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>6</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>6</value>
-    </rating>
-    <rating system="방송통신심의위원회">
-      <value>All</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>7</value>
-    </rating>
-  </programme>
-  <programme channel="Disney Junior.in" start="20261012000500 +0000" stop="20261012003000 +0000">
-    <title lang="en">Marvel's Spidey and His Amazing Friends</title>
-    <sub-title lang="en">Mighty May!; Electro Overload</sub-title>
-    <desc lang="en">Aunt May becomes a superhero for the day; Team Spidey uses their Rescue-Webs vehicles to stop Electro.</desc>
-    <credits>
-      <actor>Alkaio Thiele</actor>
-      <actor>Jakari Fraser</actor>
-      <actor>Audrey Bennett</actor>
-      <director>Darren Bachynski</director>
-      <director>Chris Gilligan</director>
-      <director>Chris Moreno</director>
-    </credits>
-    <date>2026</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Adventure</category>
-    <icon src="http://dtil.tmsimg.com/assets/p33417729_b_h8_ab.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S5 E7</episode-num>
-    <previously-shown />
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>7</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>6</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVY</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>6</value>
-    </rating>
-    <rating system="방송통신심의위원회">
-      <value>All</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
+    <icon src="https://dtil.tmsimg.com/assets/p9223588_b_h10_ak.jpg?lock=1280x720" />
   </programme>
   <programme channel="Disney Junior.in" start="20261012003000 +0000" stop="20261012005500 +0000">
     <title lang="en">Bluey</title>
@@ -134280,13 +134202,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <title>Naya Gana</title>
     <desc>A compilation of some of the latest songs is played back to back.</desc>
   </programme>
-  <programme channel="GeoNews.pk" start="20261012000000 +0000" stop="20261012000500 +0000">
-    <title lang="en">Geo World News Headlines</title>
-    <desc lang="en">Tune in to Geo News for all the latest headlines from around the globe, keeping you updated on the biggest news stories as they unfold.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">News</category>
-    <icon src="https://images.metadata.sky.com/pd-image/77b4ff94-53e6-40a9-b5e0-a817868ceca1/16-9" />
-  </programme>
   <programme channel="GeoNews.pk" start="20261012000500 +0000" stop="20261012010000 +0000">
     <title lang="en">Naya Pakistan</title>
     <desc lang="en">Geo News offers an exclusive current affairs program covering all national and international political and social issues.</desc>
@@ -135304,13 +135219,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <category>TV Show</category>
     <category>Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p809737_b_h8_af.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="HUMMasala.pk" start="20261012000000 +0000" stop="20261012000300 +0000">
-    <title lang="en">Headline News</title>
-    <desc lang="en">Coverage on important topics of politics, law and order, justice, economy, weather, sports, international developments, science, and other important topics in the society.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">News</category>
-    <icon src="https://images.metadata.sky.com/pd-image/c2ba5e4f-7911-4663-b770-09fb3546a55a/16-9" />
   </programme>
   <programme channel="HUMMasala.pk" start="20261012000300 +0000" stop="20261012010000 +0000">
     <title lang="en">Hum Awaaz</title>
@@ -141155,20 +141063,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
       <actor>Rick Fenny</actor>
     </credits>
     <episode-num system="onscreen">3</episode-num>
-    <rating>
-      <value>TVG</value>
-    </rating>
-  </programme>
-  <programme start="20261012050500 +0530" stop="20261012053200 +0530" channel="InTravel.in@HD">
-    <title>The Coolest Places on Earth</title>
-    <desc>If you're expecting this show to feature locations like Antarctica and the North Pole, you may be disappointed because the "coolest" in the title refers to how impressive a place is, not its temperature. Instead, the show explores the history and culture of cities and landmarks that are among the most astonishing sites on the planet. Each episode features three locations, showcasing the history, geography and traditions of each to help young people gain a better understanding of the diverse world in which they live.</desc>
-    <category>Travel</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/c25e36b54deeaaa9a2a802787c217bd5.jpg?width=700" />
-    <credits>
-      <actor>Roger Leopardi</actor>
-    </credits>
-    <episode-num system="onscreen">20</episode-num>
     <rating>
       <value>TVG</value>
     </rating>
@@ -167255,7 +167149,7 @@ The host invites prominent personalities and engages them in candid conversation
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261013011000 +0530" stop="20261013023000 +0530" channel="NHBollyFlix.in">
+  <programme start="20261013011000 +0530" stop="20261013035100 +0530" channel="NHBollyFlix.in">
     <title>Pyar Zindagi Hai</title>
     <desc>Pratap falls in love with his sister-in-law Priya and decides to kill his wife. However, his plans to win Priya's affection are obstructed by Priya's fiancé.</desc>
     <category>Romance</category>
@@ -167272,6 +167166,68 @@ The host invites prominent personalities and engages them in candid conversation
     </credits>
     <rating>
       <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20261013035100 +0530" stop="20261013064400 +0530" channel="NHBollyFlix.in">
+    <title>Zakhmi Insan</title>
+    <desc>Rajeshwari and Antony fall in love with each other despite their class differences. However, when her father kills her sister for marrying a lower caste man, she decides to elope with Antony.</desc>
+    <category>Action</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/138637d86be1d1d6ed0b702ed843a18d.jpg?width=700" />
+    <credits>
+      <director>Babu Yogeswaran</director>
+      <actor>Jeyam Ravi</actor>
+      <actor>Renuka Menon</actor>
+      <actor>Vadivelu</actor>
+      <actor>Adithya</actor>
+      <actor>Fefsi Vijayan</actor>
+      <actor>Krishna Ghattamaneni</actor>
+      <actor>Shanmugha Rajan</actor>
+      <actor>Tarika</actor>
+      <actor>Abhinay</actor>
+    </credits>
+    <rating>
+      <value>U/A-13</value>
+    </rating>
+  </programme>
+  <programme start="20261013064400 +0530" stop="20261013085300 +0530" channel="NHBollyFlix.in">
+    <title>Krishna Cottage</title>
+    <desc>A group of college students are forced to take shelter in the mysterious Krishna Cottage for the night. Little do they know that a spirit haunts the house.</desc>
+    <category>Thriller</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/d9b978a1d660105bf037d153a7ae5a05.jpg?width=700" />
+    <credits>
+      <director>Santram Verma</director>
+      <actor>Sohail Khan</actor>
+      <actor>Isha Koppik</actor>
+      <actor>Natassha</actor>
+      <actor>Rati Agnihotri</actor>
+      <actor>Vrajesh Hirjee</actor>
+      <actor>Divya Palat</actor>
+      <actor>Hiten Tejwani</actor>
+      <actor>Alihassan Turabi</actor>
+      <actor>Sneha Ullel</actor>
+    </credits>
+    <rating>
+      <value>U</value>
+    </rating>
+  </programme>
+  <programme start="20261013085300 +0530" stop="20261013113000 +0530" channel="NHBollyFlix.in">
+    <title>Kitne Door Kitne Paas</title>
+    <desc>Jatin and Karishma, who meet each other on a plane to India, are set to marry the partners chosen by their respective parents. However, they find themselves attracted to each other.</desc>
+    <category>Romance</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/ca2460e02cc71823b9d4669364491280.jpg?width=700" />
+    <credits>
+      <actor>Fardeen Khan</actor>
+      <actor>Amrita Arora</actor>
+      <actor>Paresh Rawal</actor>
+      <actor>Satish Shah</actor>
+      <actor>Govind Namdev</actor>
+      <actor>Shehzad Khan</actor>
+    </credits>
+    <rating>
+      <value>U</value>
     </rating>
   </programme>
   <programme start="20261012044100 +0530" stop="20261012072600 +0530" channel="NHBollyGold.in">
@@ -167463,7 +167419,7 @@ The host invites prominent personalities and engages them in candid conversation
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261013020400 +0530" stop="20261013023000 +0530" channel="NHBollyGold.in">
+  <programme start="20261013020400 +0530" stop="20261013042600 +0530" channel="NHBollyGold.in">
     <title>Ram Rajya</title>
     <desc>Lord Rama returns to Ayodhya with his wife Sita after defeating Ravana in an epic battle. However, he exiles his wife when people start doubting her purity.</desc>
     <category>Fantasy</category>
@@ -167472,6 +167428,70 @@ The host invites prominent personalities and engages them in candid conversation
     <credits>
       <director>Vijay Bhatt</director>
       <actor>Bina Rai</actor>
+    </credits>
+    <rating>
+      <value>U</value>
+    </rating>
+  </programme>
+  <programme start="20261013042600 +0530" stop="20261013070500 +0530" channel="NHBollyGold.in">
+    <title>Hitler</title>
+    <desc>Siddhanth Sharma, a strict disciplinarian, is forced to chase his brother, Amar, after he is accused of murder. However, his wife, Sheila, a lawyer, decides to defend Amar.</desc>
+    <category>Crime drama</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/91acc58db9136c66bb8781c76c5a5a41.jpg?width=700" />
+    <credits>
+      <director>T.L.V. Prasad</director>
+      <actor>Mithun Chakraborty</actor>
+      <actor>Shilpa Shirodkar</actor>
+      <actor>Dipti Bhatnagar</actor>
+      <actor>Sadiya Siddiqui</actor>
+      <actor>Mohnish Bahl</actor>
+      <actor>Vikas Anand</actor>
+      <actor>Arun Bakshi</actor>
+      <actor>Hemant Birje</actor>
+      <actor>Anil Dhawan</actor>
+      <actor>Manek Bedi</actor>
+    </credits>
+    <rating>
+      <value>U</value>
+    </rating>
+  </programme>
+  <programme start="20261013070500 +0530" stop="20261013093100 +0530" channel="NHBollyGold.in">
+    <title>Santosh</title>
+    <desc>A rich woman marries a poor man but after having a child, she abandons them for her old life and remarries into wealth. Years later, her two sons from different worlds clash, their fates entwined by their mother's past decisions.</desc>
+    <category>Drama</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/0d25724393b33b3414249285ca72be43.jpg?width=700" />
+    <credits>
+      <director>Kaushal Bharati</director>
+      <actor>Manoj Kumar</actor>
+      <actor>Nirupa Roy</actor>
+      <actor>Rakhee Gulzar</actor>
+      <actor>Prem Chopra</actor>
+      <actor>Hema Malini</actor>
+      <actor>Kamini Kaushal</actor>
+      <actor>Amjad Khan</actor>
+      <actor>Madan Puri</actor>
+    </credits>
+    <rating>
+      <value>U</value>
+    </rating>
+  </programme>
+  <programme start="20261013093100 +0530" stop="20261013113000 +0530" channel="NHBollyGold.in">
+    <title>Kirayadar</title>
+    <desc>When Anil, son of their absentee landlord, arrives in Mumbai and asks them to move out of his home, Laxmi and Jaya's lives turn chaotic.</desc>
+    <category>Comedy drama</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/ec03bc17dfff8d7ce43d5f295958bfa8.jpg?width=700" />
+    <credits>
+      <actor>Raj Babbar</actor>
+      <actor>Padmini Kolhapure</actor>
+      <actor>Utpal Dutt</actor>
+      <actor>Vidya Sinha</actor>
+      <actor>Pinchoo Kapoor</actor>
+      <actor>Paintal</actor>
+      <actor>Manmauji</actor>
+      <actor>Ravi Jhankal</actor>
     </credits>
     <rating>
       <value>U</value>
@@ -167582,7 +167602,7 @@ The host invites prominent personalities and engages them in candid conversation
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261013021200 +0530" stop="20261013031800 +0530" channel="NHBollyRaga.in">
+  <programme start="20261013021200 +0530" stop="20261013043300 +0530" channel="NHBollyRaga.in">
     <title>Masti Bhare Geet</title>
     <desc>A comprehensive compilation of popular and melodic songs featuring a diverse range of tracks is played one after the other.</desc>
     <category>Music</category>
@@ -167592,32 +167612,32 @@ The host invites prominent personalities and engages them in candid conversation
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261013031800 +0530" stop="20261013053200 +0530" channel="NHBollyRaga.in">
-    <title>Best Of B R Chopra</title>
-    <desc>A compilation of timeless tracks featured in Hindi cinema made by director and producer B R Chopra is played in succession.</desc>
+  <programme start="20261013043300 +0530" stop="20261013065000 +0530" channel="NHBollyRaga.in">
+    <title>Blissful Beats</title>
+    <desc>A comprehensive compilation of some of the most rhythmic songs composed by renowned artists is played to entertain the audience.</desc>
     <category>Music</category>
     <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/81a9c695851035ecd9e0e331208c0fb1.jpg?width=700" />
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/3cb6931263c7f2cc4ca60b54aae3968c.jpg?width=700" />
     <rating>
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261013053200 +0530" stop="20261013080000 +0530" channel="NHBollyRaga.in">
-    <title>Hema Malini Parveen Babi Hit Bollywood Divas</title>
-    <desc>A comprehensive compilation of timeless and memorable hits featuring Bollywood's iconic stars Hema Malini and Parveen Babi.</desc>
+  <programme start="20261013065000 +0530" stop="20261013090000 +0530" channel="NHBollyRaga.in">
+    <title>Disco Dancer</title>
+    <desc>Bringing back the flashy disco vibes with this sensational Disco Dancer jukebox. Whether you are a retro lover or a new-age dancer, these beats will keep you moving!</desc>
     <category>Music</category>
     <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/4cba22c316faa8df209e8e3716cb440f.jpg?width=700" />
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/67060a12e937a72878091c1037771a25.jpg?width=700" />
     <rating>
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261013080000 +0530" stop="20261013090700 +0530" channel="NHBollyRaga.in">
-    <title>Prabhat Bhakti</title>
-    <desc>Prabhat Bhakti</desc>
+  <programme start="20261013090000 +0530" stop="20261013090700 +0530" channel="NHBollyRaga.in">
+    <title>Gane Naye Purane</title>
+    <desc>A comprehensive compilation of soulful golden era classics and the latest chart-topping Bollywood songs is played back-to-back.</desc>
     <category>Music</category>
     <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/80c80099f19dfb632933a8f8677ca1c1.jpg?width=700" />
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b190919d90a54a39292222b977e349c7.jpg?width=700" />
     <rating>
       <value>U</value>
     </rating>
@@ -172661,15 +172681,6 @@ The film-maker follows female leaders in the animal kingdom and the resilience a
     <desc lang="en">The filmmaker gives an insight into the wildlife of Africa and how they have evolved over time to survive and sustain themselves.</desc>
     <icon src="https://iptv-epg.org/images/hjx2yoIhH_XdHongSbxny5UjSDDRiGwXByiBwUM4MvPcsSXk7kE63NFPJOWNuIpFJ2yDxvZZe9x8WqwX7kZZ75nOUICVdF1I1D_lCBrYcG546cUwwJGSgG1KHPm8" />
     <title lang="en">Africa's Deadliest</title>
-  </programme>
-  <programme channel="NickJr.in@SD" start="20261012000000 +0000" stop="20261012000500 +0000">
-    <title lang="en">Peppa Pig</title>
-    <sub-title lang="en">Indoor Adventure</sub-title>
-    <desc lang="en">A storm cancels Peppa and her family's adventure plans so they decide to take it inside. Using their imagination, they go sledding, climb a mountain and have a campfire in the attic.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/32cc2d4a-f957-4427-8980-a34b8b9cf6fa/16-9" />
-    <episode-num system="xmltv_ns">7.46.</episode-num>
   </programme>
   <programme channel="NickJr.in@SD" start="20261012000500 +0000" stop="20261012001500 +0000">
     <title lang="en">Peppa Pig</title>
@@ -193548,12 +193559,72 @@ Shalini lives in America but desires to relocate to India. Meanwhile, a girl fro
       <value>U/A-13</value>
     </rating>
   </programme>
-  <programme start="20261013034600 +0530" stop="20261013060000 +0530" channel="PocketFilms.in">
+  <programme start="20261013034600 +0530" stop="20261013040700 +0530" channel="PocketFilms.in">
     <title>Swad Anusar</title>
     <desc>A wealthy amnesiac returns home, discovers his family's murderous plot, later dies from poisoned food, however promises ghostly vengeance.</desc>
     <category>Drama</category>
     <language>Hindi</language>
     <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/1eac08225c7c82a84653196f87073bc4.jpg?width=700" />
+    <rating>
+      <value>U/A-13</value>
+    </rating>
+  </programme>
+  <programme start="20261013040700 +0530" stop="20261013043600 +0530" channel="PocketFilms.in">
+    <title>The Footage</title>
+    <desc>The Footage</desc>
+    <category>Drama</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/e207c3d7f19cbd96f8f2aaa976f4118f.jpg?width=700" />
+    <credits>
+      <director>Karan Singh Rathore</director>
+    </credits>
+    <rating>
+      <value>U/A-13</value>
+    </rating>
+  </programme>
+  <programme start="20261013043600 +0530" stop="20261013045900 +0530" channel="PocketFilms.in">
+    <title>Two Strangers</title>
+    <desc>A man with a scientific background deals with a mysterious health condition. However, destiny intervenes and cures his issue.</desc>
+    <category>Science fiction</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/011b0f1d58bfe3a2a5fefb8a6df68685.jpg?width=700" />
+    <rating>
+      <value>U/A-13</value>
+    </rating>
+  </programme>
+  <programme start="20261013045900 +0530" stop="20261013051800 +0530" channel="PocketFilms.in">
+    <title>The Unsent Letter</title>
+    <desc>The Unsent Letter</desc>
+    <category>Drama</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/6a3b6ff3169dea288db107519ff47517.jpg?width=700" />
+    <rating>
+      <value>U/A-13</value>
+    </rating>
+  </programme>
+  <programme start="20261013051800 +0530" stop="20261013055400 +0530" channel="PocketFilms.in">
+    <title>The Please Book</title>
+    <desc>The Please Book</desc>
+    <category>Drama</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/e3152627508fb13d80dbd9272a1f128b.jpg?width=700" />
+    <credits>
+      <actor>Kundan Kumar</actor>
+      <actor>Rakesh Kukreti</actor>
+      <actor>Shashwita Sharma</actor>
+      <actor>Soneer Vadhera</actor>
+      <actor>Swati Tarar</actor>
+    </credits>
+    <rating>
+      <value>U</value>
+    </rating>
+  </programme>
+  <programme start="20261013055400 +0530" stop="20261013062500 +0530" channel="PocketFilms.in">
+    <title>Yaantrik</title>
+    <desc>Yaantrik</desc>
+    <category>Drama</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/32b4b5c518069478b795d67ddb24f2c4.jpg?width=700" />
     <rating>
       <value>U/A-13</value>
     </rating>
@@ -242472,20 +242543,143 @@ After arriving in Hastinapur, Kunti gets down from the chariot and proceeds towa
     <desc lang="en">Nela Ticket, an orphan, is raised by Ananda Bhoopati, who is later killed by his own son, Aditya. However, things turn ugly after Nela Ticket and Aditya come face-to-face.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_MAX_HD_776150_12OCT195200_12OCT224200/images/LANDSCAPE_169_HD/MaxHD_NelaTicket_776150.jpg" />
   </programme>
-  <programme channel="SonyMax.in@SD" start="20261012224200 +0530" stop="20261013004400 +0530">
-    <title lang="en">Jumanji: Welcome To The Jungle</title>
-    <desc lang="en">Four teens discover a jungle game, become their adult avatars, and must survive, uncover a 20-year mystery left by Alex Vreeke, or remain inside forever.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_MAX_HD_1007348_12OCT224200_13OCT004400/images/LANDSCAPE_169_HD/MaxHD_JumanjiWelcomeToTheJungle_1007348.jpg" />
+  <programme start="20261012225800 +0530" stop="20261012235959 +0530" channel="SonyMax.in@SD">
+    <title>Jumanji: Welcome to the Jungle</title>
+    <desc>Four teens are transported into a magical jungle game, becoming adult avatars and must navigate challenges to return home safely.</desc>
+    <category>Adventure</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/6c0112cc6ed55fc647028bf6f5041aba.jpg?width=700" />
+    <credits>
+      <director>Chris McKenna</director>
+      <director>Erik Sommers</director>
+      <director>Scott Rosenberg</director>
+      <director>Jeff Pinkner</director>
+      <actor>Dwayne Johnson (Spencer)</actor>
+      <actor>Kevin Hart (Fridge)</actor>
+      <actor>Jack Black (Bethany)</actor>
+      <actor>Karen Gillan (Martha)</actor>
+      <actor>Rhys Darby (Nigel)</actor>
+      <actor>Bobby Cannavale (Van Pelt)</actor>
+      <actor>Nick Jonas (Alex)</actor>
+      <actor>Alex Wolff (Young Spencer)</actor>
+      <actor>Ser'Darius Blain (Young Fridge)</actor>
+      <actor>Madison Iseman (Young Bethany)</actor>
+      <actor>Morgan Turner (Young Martha)</actor>
+      <actor>Sean Buxton (Jogger)</actor>
+      <actor>Mason Guccione (Gamer)</actor>
+      <actor>Marin Hinkle (Spencer's Mom)</actor>
+      <actor>Tracey Bonner (Fridge's Mom)</actor>
+      <actor>Najah Jackson (Girl in Car)</actor>
+      <actor>Natasha Charles Parker (Bethany's Mom)</actor>
+      <actor>Kat Altman (Lucinda)</actor>
+      <actor>Maribeth Monroe (Teacher)</actor>
+      <actor>Missi Pyle (Coach Web)</actor>
+      <actor>Michael Shacket (Fussfeld)</actor>
+      <actor>Jamie Renell (Male Gym Teacher)</actor>
+      <actor>Marc Evan Jackson (Principal Bentley)</actor>
+      <actor>Carlease Burke (Miss Mathers)</actor>
+      <actor>Jason New (Bivouac Biker)</actor>
+      <actor>William Tokarsky (Bread Vendor)</actor>
+      <actor>Rohan Chand (Kid at Bazaar)</actor>
+      <actor>Tait Fletcher (Scorpion Recipient)</actor>
+      <actor>Steve Dunlevy (Transportation Shed Guard)</actor>
+      <actor>Rob Mars (Transportation Shed Guard)</actor>
+    </credits>
+    <rating>
+      <value>U/A-12</value>
+    </rating>
   </programme>
-  <programme channel="SonyMax.in@SD" start="20261013004400 +0530" stop="20261013020700 +0530">
-    <title lang="en">Final Destination 2</title>
-    <desc lang="en">Final Destination 2</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_MAX_HD_2010928_13OCT004400_13OCT020700/images/LANDSCAPE_169_HD/MaxHD_FinalDestination2_2010928.jpg" />
+  <programme start="20261013000000 +0530" stop="20261013010300 +0530" channel="SonyMax.in@SD">
+    <title>Jumanji: Welcome to the Jungle</title>
+    <desc>Four teens are transported into a magical jungle game, becoming adult avatars and must navigate challenges to return home safely.</desc>
+    <category>Adventure</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/6c0112cc6ed55fc647028bf6f5041aba.jpg?width=700" />
+    <credits>
+      <director>Chris McKenna</director>
+      <director>Erik Sommers</director>
+      <director>Scott Rosenberg</director>
+      <director>Jeff Pinkner</director>
+      <actor>Dwayne Johnson (Spencer)</actor>
+      <actor>Kevin Hart (Fridge)</actor>
+      <actor>Jack Black (Bethany)</actor>
+      <actor>Karen Gillan (Martha)</actor>
+      <actor>Rhys Darby (Nigel)</actor>
+      <actor>Bobby Cannavale (Van Pelt)</actor>
+      <actor>Nick Jonas (Alex)</actor>
+      <actor>Alex Wolff (Young Spencer)</actor>
+      <actor>Ser'Darius Blain (Young Fridge)</actor>
+      <actor>Madison Iseman (Young Bethany)</actor>
+      <actor>Morgan Turner (Young Martha)</actor>
+      <actor>Sean Buxton (Jogger)</actor>
+      <actor>Mason Guccione (Gamer)</actor>
+      <actor>Marin Hinkle (Spencer's Mom)</actor>
+      <actor>Tracey Bonner (Fridge's Mom)</actor>
+      <actor>Najah Jackson (Girl in Car)</actor>
+      <actor>Natasha Charles Parker (Bethany's Mom)</actor>
+      <actor>Kat Altman (Lucinda)</actor>
+      <actor>Maribeth Monroe (Teacher)</actor>
+      <actor>Missi Pyle (Coach Web)</actor>
+      <actor>Michael Shacket (Fussfeld)</actor>
+      <actor>Jamie Renell (Male Gym Teacher)</actor>
+      <actor>Marc Evan Jackson (Principal Bentley)</actor>
+      <actor>Carlease Burke (Miss Mathers)</actor>
+      <actor>Jason New (Bivouac Biker)</actor>
+      <actor>William Tokarsky (Bread Vendor)</actor>
+      <actor>Rohan Chand (Kid at Bazaar)</actor>
+      <actor>Tait Fletcher (Scorpion Recipient)</actor>
+      <actor>Steve Dunlevy (Transportation Shed Guard)</actor>
+      <actor>Rob Mars (Transportation Shed Guard)</actor>
+    </credits>
+    <rating>
+      <value>U/A-12</value>
+    </rating>
   </programme>
-  <programme channel="SonyMax.in@SD" start="20261013020700 +0530" stop="20261013060000 +0530">
-    <title lang="en">Baby &amp; Baby</title>
-    <desc lang="en">Two traditional families await newborns. A hospital mix-up turns their lives upside down. What follows is confusion, chaos, and a hilarious journey of parenting and identity.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_MAX_HD_1899778_13OCT020700_13OCT060000/images/LANDSCAPE_169_HD/MaxHD_BabyBaby_1899778.jpg" />
+  <programme start="20261013010300 +0530" stop="20261013022700 +0530" channel="SonyMax.in@SD">
+    <title>Final Destination 2</title>
+    <desc>After foreseeing a deadly freak accident, Kimberly saves herself and others, only to find that Death is relentlessly pursuing them for escaping his clutches.</desc>
+    <category>Horror</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/78045fa157ec9e920deefee09815aa84.jpg?width=700" />
+    <credits>
+      <director>David R. Ellis</director>
+      <actor>Ali Larter (Clear Rivers)</actor>
+      <actor>A.J. Cook (Kimberly Corman)</actor>
+      <actor>Michael Landes (Officer Thomas Burke)</actor>
+      <actor>Terrence "T.C." Carson (Eugene Dix)</actor>
+      <actor>Jonathan Cherry (Rory)</actor>
+      <actor>Keegan Connor Tracy (Kat)</actor>
+      <actor>Sarah Carter (Shaina)</actor>
+      <actor>Lynda Boyd (Nora Carpenter)</actor>
+      <actor>David Paetkau (Evan Lewis)</actor>
+      <actor>Justina Machado (Isabella Hudson)</actor>
+      <actor>James Kirk (Tim Carpenter)</actor>
+      <actor>Tony Todd (Mr. Bludworth)</actor>
+    </credits>
+    <rating>
+      <value>U</value>
+    </rating>
+  </programme>
+  <programme start="20261013022700 +0530" stop="20261013060000 +0530" channel="SonyMax.in@SD">
+    <title>Ashwamedham</title>
+    <desc>Dhruva, an undercover agent, works to thwart a massive cyberattack. However, he struggles against hackers who seem to predict his every move, staying one step ahead.</desc>
+    <category>Action</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/3f08631c78ac5171791d0df6d0890e40.jpg?width=700" />
+    <credits>
+      <director>Nitin G.</director>
+      <actor>Shivangi (Shreya)</actor>
+      <actor>Suman (Magician)</actor>
+      <actor>Vennela Kishore (Hacker)</actor>
+      <actor>Priyadarshi (Friend)</actor>
+      <actor>Dhruva Karunakar (Dhruva)</actor>
+      <actor>Arjun Ambati (Vivek)</actor>
+      <actor>Prachi</actor>
+      <actor>Sonyaa (Mohini)</actor>
+    </credits>
+    <rating>
+      <value>U</value>
+    </rating>
   </programme>
   <programme channel="SonyMax2.in@SD" start="20261012022100 +0530" stop="20261012060000 +0530">
     <title>Majhdhaar</title>
@@ -243559,209 +243753,49 @@ A retired headmaster resides in a house named for his late wife, with family pos
     <icon src="https://dtil.tmsimg.com/assets/p8862533_b_h9_ad.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E3373</episode-num>
   </programme>
-  <programme start="20261012235400 +0530" stop="20261012235959 +0530" channel="SonyPal.in@SD">
-    <title>Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc>The residents of a housing society help each other find solutions when they face common real-life challenges and get involved in sticky situations.</desc>
-    <category>Sitcom</category>
+  <programme start="20261013000000 +0530" stop="20261013000100 +0530" channel="SonyPal.in@SD">
+    <title>Hastinapur Ke Veer</title>
+    <desc>Five noble Pandava brothers bravely unite to combat ruthless injustice threatening their peaceful kingdom. Furthermore, their unwavering devotion to dharma secures total victory.</desc>
+    <category>Drama</category>
     <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/8a759b3cf8e2f4422873ff506e50c552.jpg?width=700" />
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/9107d9fd9d8dfc20eeda8ce331420db1.jpg?width=700" />
     <credits>
-      <director>Dharmesh Mehta</director>
-      <director>Harshad Joshi</director>
-      <actor>Dilip Joshi (Jethalal Champaklal Gada)</actor>
-      <actor>Nitish Bhaluni (Tipendra 'Tapu' Jethalal Gada)</actor>
-      <actor>Amit Bhatt (Champaklal Jayantilal Gada)</actor>
-      <actor>Sachin Shroff (Taarak Mehta)</actor>
-      <actor>Sunayana Fozdar (Anjali Taarak Mehta)</actor>
-      <actor>Tanuj Mahashabde (Krishnan Iyer)</actor>
-      <actor>Munmun Dutta (Babita Iyer)</actor>
-      <actor>Mandar Chandwadkar (Aatmaram Tukaram Bhide)</actor>
-      <actor>Sonalika Joshi (Madhavi 'Madhu' Aatmaram Bhide)</actor>
-      <actor>Palak Sindhwani (Sonalika 'Sonu' Aatmaram Bhide)</actor>
-      <actor>Nirmal Soni (Dr Hansraj Baldevraj Hathi)</actor>
-      <actor>Ambika Ranjankar (Komal 'Komu' Hansraj Hathi)</actor>
-      <actor>Kush Shah (Gulabkumar 'Goli' Hathi)</actor>
-      <actor>Balwinder Singh Suri (Roshan Singh Harjeet Singh Sodhi)</actor>
-      <actor>Monaz Mevawalla (Roshan Daruwala Kaur Sodhi)</actor>
-      <actor>Samay Shah (Gurcharan 'Gogi' Singh Roshan Singh Sodhi)</actor>
-      <actor>Azhar Shaikh (Pankaj 'Pinku' Diwan Sahay)</actor>
-      <actor>Shyam Pathak (Patrakar Popatlal Pandey)</actor>
-      <actor>Navina Wadekar (Bawri Dhondulal Kanpuria)</actor>
-      <actor>Sharad Sankla (Abdul Nawab Miyaa)</actor>
-      <actor>Tanmay Vekaria (Bagheshwar 'Bagha' Daddu Undhaiwala)</actor>
-      <actor>Daya Shankar Pandey (Inspector Chalu Pandey)</actor>
-      <actor>Jennifer Mistry Bansiwal (Mrs Roshan Sodhi)</actor>
-      <actor>Ghanshyam Nayak (Natwarlal 'Natu Kaka' Prabhashankar Undhaiwala)</actor>
-      <actor>Kavi Kumar Azad (Dr Hansraj Hathi)</actor>
-      <actor>Nidhi Bhanushali (Sonalika 'Sonu' Bhide)</actor>
-      <actor>Jheel Mehta (Sonalika 'Sonu' Bhide)</actor>
-      <actor>Bhavya Gandhi (Tipendra 'Tapu' Jethalal Gada)</actor>
-      <actor>Monika Bhadoriya (Bawri)</actor>
-      <actor>Gurcharan Singh (Roshan Singh Harjeet Singh Sodhi)</actor>
-      <actor>Disha Vakani (Dayaben Gada)</actor>
-      <actor>Shailesh Lodha (Taarak Mehta)</actor>
-      <actor>Neha Mehta (Anjali Taarak Mehta)</actor>
+      <director>Maan Singh</director>
+      <actor>Toral Rasputra (Kunti)</actor>
+      <actor>Manish Wadhwa (Bhishma)</actor>
+      <actor>Chandan Anand (Shakuni)</actor>
+      <actor>Vikas Salgotra (Vidur)</actor>
+      <actor>Jiten Lalwani (Dronacharya)</actor>
+      <actor>Athar Khan (Yudhishthir)</actor>
+      <actor>Subhash Khatri</actor>
+      <actor>Urva Sawaliya (Arjun)</actor>
+      <actor>Harit Gabani (Nakul)</actor>
+      <actor>Ayudh Bhanushali (Duryodhan)</actor>
     </credits>
-    <episode-num system="onscreen">3374</episode-num>
+    <episode-num system="onscreen">12</episode-num>
     <rating>
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261013000000 +0530" stop="20261013001300 +0530" channel="SonyPal.in@SD">
-    <title>Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc>The residents of a housing society help each other find solutions when they face common real-life challenges and get involved in sticky situations.</desc>
-    <category>Sitcom</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/8a759b3cf8e2f4422873ff506e50c552.jpg?width=700" />
-    <credits>
-      <director>Dharmesh Mehta</director>
-      <director>Harshad Joshi</director>
-      <actor>Dilip Joshi (Jethalal Champaklal Gada)</actor>
-      <actor>Nitish Bhaluni (Tipendra 'Tapu' Jethalal Gada)</actor>
-      <actor>Amit Bhatt (Champaklal Jayantilal Gada)</actor>
-      <actor>Sachin Shroff (Taarak Mehta)</actor>
-      <actor>Sunayana Fozdar (Anjali Taarak Mehta)</actor>
-      <actor>Tanuj Mahashabde (Krishnan Iyer)</actor>
-      <actor>Munmun Dutta (Babita Iyer)</actor>
-      <actor>Mandar Chandwadkar (Aatmaram Tukaram Bhide)</actor>
-      <actor>Sonalika Joshi (Madhavi 'Madhu' Aatmaram Bhide)</actor>
-      <actor>Palak Sindhwani (Sonalika 'Sonu' Aatmaram Bhide)</actor>
-      <actor>Nirmal Soni (Dr Hansraj Baldevraj Hathi)</actor>
-      <actor>Ambika Ranjankar (Komal 'Komu' Hansraj Hathi)</actor>
-      <actor>Kush Shah (Gulabkumar 'Goli' Hathi)</actor>
-      <actor>Balwinder Singh Suri (Roshan Singh Harjeet Singh Sodhi)</actor>
-      <actor>Monaz Mevawalla (Roshan Daruwala Kaur Sodhi)</actor>
-      <actor>Samay Shah (Gurcharan 'Gogi' Singh Roshan Singh Sodhi)</actor>
-      <actor>Azhar Shaikh (Pankaj 'Pinku' Diwan Sahay)</actor>
-      <actor>Shyam Pathak (Patrakar Popatlal Pandey)</actor>
-      <actor>Navina Wadekar (Bawri Dhondulal Kanpuria)</actor>
-      <actor>Sharad Sankla (Abdul Nawab Miyaa)</actor>
-      <actor>Tanmay Vekaria (Bagheshwar 'Bagha' Daddu Undhaiwala)</actor>
-      <actor>Daya Shankar Pandey (Inspector Chalu Pandey)</actor>
-      <actor>Jennifer Mistry Bansiwal (Mrs Roshan Sodhi)</actor>
-      <actor>Ghanshyam Nayak (Natwarlal 'Natu Kaka' Prabhashankar Undhaiwala)</actor>
-      <actor>Kavi Kumar Azad (Dr Hansraj Hathi)</actor>
-      <actor>Nidhi Bhanushali (Sonalika 'Sonu' Bhide)</actor>
-      <actor>Jheel Mehta (Sonalika 'Sonu' Bhide)</actor>
-      <actor>Bhavya Gandhi (Tipendra 'Tapu' Jethalal Gada)</actor>
-      <actor>Monika Bhadoriya (Bawri)</actor>
-      <actor>Gurcharan Singh (Roshan Singh Harjeet Singh Sodhi)</actor>
-      <actor>Disha Vakani (Dayaben Gada)</actor>
-      <actor>Shailesh Lodha (Taarak Mehta)</actor>
-      <actor>Neha Mehta (Anjali Taarak Mehta)</actor>
-    </credits>
-    <episode-num system="onscreen">3374</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
+  <programme channel="SonyPal.in@SD" start="20261013000100 +0530" stop="20261013001900 +0530">
+    <title lang="en">Taarak Mehta Ka Ooltah Chashmah S01</title>
+    <desc lang="en">Gokuldham Society is full of quirky neighbours who laugh, fight, and come together through every challenge. A mix of comedy, emotion, and strong community spirit.</desc>
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_PAL_1665884_13OCT000100_13OCT001900/images/LANDSCAPE_169_HD/SONYPAL_TaarakMehtaKaOoltahChashmahS01_1665884.jpg" />
   </programme>
-  <programme channel="SonyPal.in@SD" start="20261013001300 +0530" stop="20261013003300 +0530">
-    <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc lang="en">The men of Gokuldham are overjoyed as they are about to have a party with alcohol. However, things soon take a sudden turn as a woman walks in on them.</desc>
-    <credits>
-      <actor>Dilip Joshi</actor>
-      <actor>Nitish Bhaluni</actor>
-      <actor>Amit Bhatt</actor>
-      <actor>Sachin Shroff</actor>
-      <actor>Sunayana Fozdar</actor>
-      <actor>Tanuj Mahashabde</actor>
-      <actor>Munmun Dutta</actor>
-      <actor>Mandar Chandwadkar</actor>
-      <actor>Sonalika Joshi</actor>
-      <actor>Palak Sindhwani</actor>
-      <actor>Nirmal Soni</actor>
-      <actor>Ambika Ranjankar</actor>
-      <actor>Kush Shah</actor>
-      <actor>Balwinder Singh Suri</actor>
-      <actor>Monaz Mevawalla</actor>
-      <actor>Samay Shah</actor>
-      <actor>Azhar Shaikh</actor>
-      <actor>Shyam Pathak</actor>
-      <actor>Navina Wadekar</actor>
-      <actor>Sharad Sankla</actor>
-      <actor>Tanmay Vekaria</actor>
-      <actor>Daya Shankar Pandey</actor>
-      <director>Dharmesh Mehta</director>
-      <director>Harshad Joshi</director>
-      <producer>Asit Kumarr Modi</producer>
-      <producer>Neela Asit Modi</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Sitcom</category>
-    <icon src="https://dtil.tmsimg.com/assets/p8862533_b_h9_ad.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E3375</episode-num>
+  <programme channel="SonyPal.in@SD" start="20261013001900 +0530" stop="20261013003600 +0530">
+    <title lang="en">Taarak Mehta Ka Ooltah Chashmah S01</title>
+    <desc lang="en">Gokuldham Society is full of quirky neighbours who laugh, fight, and come together through every challenge. A mix of comedy, emotion, and strong community spirit.</desc>
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_PAL_1665884_13OCT001900_13OCT003600/images/LANDSCAPE_169_HD/SONYPAL_TaarakMehtaKaOoltahChashmahS01_1665884.jpg" />
   </programme>
-  <programme channel="SonyPal.in@SD" start="20261013003300 +0530" stop="20261013005300 +0530">
-    <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc lang="en">Jethalal tries to sneak out of his house to party with the men of Gokuldham. However, Champaklal finds a unique way to stop Jethalal from attending the event.</desc>
-    <credits>
-      <actor>Dilip Joshi</actor>
-      <actor>Nitish Bhaluni</actor>
-      <actor>Amit Bhatt</actor>
-      <actor>Sachin Shroff</actor>
-      <actor>Sunayana Fozdar</actor>
-      <actor>Tanuj Mahashabde</actor>
-      <actor>Munmun Dutta</actor>
-      <actor>Mandar Chandwadkar</actor>
-      <actor>Sonalika Joshi</actor>
-      <actor>Palak Sindhwani</actor>
-      <actor>Nirmal Soni</actor>
-      <actor>Ambika Ranjankar</actor>
-      <actor>Kush Shah</actor>
-      <actor>Balwinder Singh Suri</actor>
-      <actor>Monaz Mevawalla</actor>
-      <actor>Samay Shah</actor>
-      <actor>Azhar Shaikh</actor>
-      <actor>Shyam Pathak</actor>
-      <actor>Navina Wadekar</actor>
-      <actor>Sharad Sankla</actor>
-      <actor>Tanmay Vekaria</actor>
-      <actor>Daya Shankar Pandey</actor>
-      <director>Dharmesh Mehta</director>
-      <director>Harshad Joshi</director>
-      <producer>Asit Kumarr Modi</producer>
-      <producer>Neela Asit Modi</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Sitcom</category>
-    <icon src="https://dtil.tmsimg.com/assets/p8862533_b_h9_ad.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E3376</episode-num>
+  <programme channel="SonyPal.in@SD" start="20261013003600 +0530" stop="20261013005400 +0530">
+    <title lang="en">Taarak Mehta Ka Ooltah Chashmah S01</title>
+    <desc lang="en">Gokuldham Society is full of quirky neighbours who laugh, fight, and come together through every challenge. A mix of comedy, emotion, and strong community spirit.</desc>
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_PAL_1665884_13OCT003600_13OCT005400/images/LANDSCAPE_169_HD/SONYPAL_TaarakMehtaKaOoltahChashmahS01_1665884.jpg" />
   </programme>
-  <programme channel="SonyPal.in@SD" start="20261013005300 +0530" stop="20261013011200 +0530">
-    <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc lang="en">Jethalal informs Babita that he is organising a special party for the women of Gokuldham. However, Babita soon begins to doubt Jethalal's intentions.</desc>
-    <credits>
-      <actor>Dilip Joshi</actor>
-      <actor>Nitish Bhaluni</actor>
-      <actor>Amit Bhatt</actor>
-      <actor>Sachin Shroff</actor>
-      <actor>Sunayana Fozdar</actor>
-      <actor>Tanuj Mahashabde</actor>
-      <actor>Munmun Dutta</actor>
-      <actor>Mandar Chandwadkar</actor>
-      <actor>Sonalika Joshi</actor>
-      <actor>Palak Sindhwani</actor>
-      <actor>Nirmal Soni</actor>
-      <actor>Ambika Ranjankar</actor>
-      <actor>Kush Shah</actor>
-      <actor>Balwinder Singh Suri</actor>
-      <actor>Monaz Mevawalla</actor>
-      <actor>Samay Shah</actor>
-      <actor>Azhar Shaikh</actor>
-      <actor>Shyam Pathak</actor>
-      <actor>Navina Wadekar</actor>
-      <actor>Sharad Sankla</actor>
-      <actor>Tanmay Vekaria</actor>
-      <actor>Daya Shankar Pandey</actor>
-      <director>Dharmesh Mehta</director>
-      <director>Harshad Joshi</director>
-      <producer>Asit Kumarr Modi</producer>
-      <producer>Neela Asit Modi</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Sitcom</category>
-    <icon src="https://dtil.tmsimg.com/assets/p8862533_b_h9_ad.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E3377</episode-num>
+  <programme channel="SonyPal.in@SD" start="20261013005400 +0530" stop="20261013011200 +0530">
+    <title lang="en">Taarak Mehta Ka Ooltah Chashmah S01</title>
+    <desc lang="en">Gokuldham Society is full of quirky neighbours who laugh, fight, and come together through every challenge. A mix of comedy, emotion, and strong community spirit.</desc>
+    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_PAL_1665884_13OCT005400_13OCT011200/images/LANDSCAPE_169_HD/SONYPAL_TaarakMehtaKaOoltahChashmahS01_1665884.jpg" />
   </programme>
   <programme channel="SonyPal.in@SD" start="20261013011200 +0530" stop="20261013013100 +0530">
     <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
@@ -266664,10 +266698,57 @@ Real-time match updates and highlights keep fans informed, providing instant acc
     <desc lang="en">ACP Pradyuman, Daya and Abhijeet form an elite CID team, assisted by forensic expert Dr Salunkhe. Together, they investigate complex crimes and use their skills to solve difficult cases.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_WAH_1313779_12OCT214800_12OCT230300/images/LANDSCAPE_169_HD/SonyWAH_CID_1313779.jpg" />
   </programme>
-  <programme channel="SonyWah.in@SD" start="20261012230300 +0530" stop="20261013001100 +0530">
-    <title lang="en">CID</title>
-    <desc lang="en">ACP Pradyuman, Daya and Abhijeet form an elite CID team, assisted by forensic expert Dr Salunkhe. Together, they investigate complex crimes and use their skills to solve difficult cases.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_SONY_WAH_1313779_12OCT230300_13OCT001100/images/LANDSCAPE_169_HD/SonyWAH_CID_1313779.jpg" />
+  <programme start="20261012230300 +0530" stop="20261012235959 +0530" channel="SonyWah.in@SD">
+    <title>CID</title>
+    <desc>ACP Pradyuman, Daya and Abhijeet are an elite trio of officers who work for the CID. Together, they seek the help of professional forensic expert Dr Salunkhe to solve various criminal cases.</desc>
+    <category>Crime drama</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/d94f7fcf02fa2e62e9cd073280adf801.jpg?width=700" />
+    <credits>
+      <director>Christabelle D'souza</director>
+      <director>Suleman Quadri</director>
+      <director>Udayan Pradeep Shukla</director>
+      <director>Santosh Shetty</director>
+      <director>Siba Mishra</director>
+      <director>Salil Singh</director>
+      <director>Nandu Kale</director>
+      <actor>Shivaji Satam (ACP Pradyuman)</actor>
+      <actor>Aditya Srivastava (Senior Inspector Abhijeet)</actor>
+      <actor>Dayanand Shetty (Senior Inspector Daya)</actor>
+      <actor>Dinesh Phadnis (Inspector Fredricks)</actor>
+      <actor>Narendra Gupta (Dr. Salunkhe)</actor>
+      <actor>Shraddha Musale (Dr. Tarika)</actor>
+    </credits>
+    <episode-num system="onscreen">413</episode-num>
+    <rating>
+      <value>U/A-12</value>
+    </rating>
+  </programme>
+  <programme start="20261013000000 +0530" stop="20261013001100 +0530" channel="SonyWah.in@SD">
+    <title>CID</title>
+    <desc>ACP Pradyuman, Daya and Abhijeet are an elite trio of officers who work for the CID. Together, they seek the help of professional forensic expert Dr Salunkhe to solve various criminal cases.</desc>
+    <category>Crime drama</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/d94f7fcf02fa2e62e9cd073280adf801.jpg?width=700" />
+    <credits>
+      <director>Christabelle D'souza</director>
+      <director>Suleman Quadri</director>
+      <director>Udayan Pradeep Shukla</director>
+      <director>Santosh Shetty</director>
+      <director>Siba Mishra</director>
+      <director>Salil Singh</director>
+      <director>Nandu Kale</director>
+      <actor>Shivaji Satam (ACP Pradyuman)</actor>
+      <actor>Aditya Srivastava (Senior Inspector Abhijeet)</actor>
+      <actor>Dayanand Shetty (Senior Inspector Daya)</actor>
+      <actor>Dinesh Phadnis (Inspector Fredricks)</actor>
+      <actor>Narendra Gupta (Dr. Salunkhe)</actor>
+      <actor>Shraddha Musale (Dr. Tarika)</actor>
+    </credits>
+    <episode-num system="onscreen">413</episode-num>
+    <rating>
+      <value>U/A-12</value>
+    </rating>
   </programme>
   <programme channel="SonyWah.in@SD" start="20261013001100 +0530" stop="20261013020000 +0530">
     <title lang="en">Tagarupalya</title>
@@ -313162,14 +313243,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012052200 +0530" stop="20261012053400 +0530" channel="ThalaaTV.in">
-    <title>Ram Lakshman</title>
-    <sub-title>THALAA TV | TAMIL</sub-title>
-    <desc>Ram and his elephant Lakshman are inseparable; Lakshman helps when Ram is accused of murder.</desc>
-    <category>Drama </category>
-    <language>TAMIL</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/THALAA%20TV/POSTER/Ram%20Lakshman.png" />
-  </programme>
   <programme start="20261012053400 +0530" stop="20261012060000 +0530" channel="ThalaaTV.in">
     <title>Program @ 5:00 AM</title>
     <sub-title>THALAA TV | TAMIL</sub-title>
@@ -321143,14 +321216,6 @@ Victoria's date leads to a surprising discovery; Tony questions Luiza's matchmak
     <category>Kids</category>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261018235800/list/TinyPOPTHEHIVE215154840e2fe0b82f149b5a8342002d97b5fc0.jpg" />
-  </programme>
-  <programme start="20261012052100 +0530" stop="20261012053400 +0530" channel="TollyTV.in">
-    <title>Lavvandi Navvandi</title>
-    <sub-title>TOLLY TV | TELUGU</sub-title>
-    <desc>Two friends with the same name cause hilarious mix-ups with their girlfriends.</desc>
-    <category>Movies</category>
-    <language>TELUGU</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/TOLLY%20TV/IMAGES/Lavvandi%20Navvandi.png" />
   </programme>
   <programme start="20261012053400 +0530" stop="20261012060000 +0530" channel="TollyTV.in">
     <title>Program @ 5:00 AM</title>
@@ -407868,16 +407933,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261012053100 +0530" stop="20261012053300 +0530" channel="custom.duck.tv">
-    <title>Raul</title>
-    <desc>Raul the hippo, with his bird companion, embarks on charming adventures that captivate young viewers. Their escapades offer valuable lessons about everyday life and inspire creativity.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/6620902f721197715db07e170b049de6.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261012053300 +0530" stop="20261012053600 +0530" channel="custom.duck.tv">
@@ -528123,16 +528178,6 @@ A '69 Mustang with a supercharged stroker engine is in need of more throttle res
     <icon src="https://iptv-epg.org/images/m6QOrEm8AWINuPBSyFJQzw07NhfWHgh4M3-Un9kBXFEGvZTy_v1la351mnuFIHRzE2WiwzPKpSN5dve2sVSRlLLy-hLNJXH-mERlMTqw-UB2uBn-7KYtN-KtozyHMw" />
     <title lang="en">All Girls Garage</title>
   </programme>
-  <programme start="20261012053000 +0530" stop="20261012053200 +0530" channel="hmair.dw">
-    <title lang="en-GB">DW News</title>
-    <desc lang="en-GB">Detailed explanations, competent analysis, coverage of world current affairs: politics, business, sport and culture. Fascinating insights beyond the headlines. Connecting the dots for viewers around the world.</desc>
-    <credits>
-      <actor>Ben Fajzullin</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/58b579672b46cee35c49bd5215ec5484.jpg" />
-    <premiere />
-  </programme>
   <programme start="20261012053200 +0530" stop="20261012060000 +0530" channel="hmair.dw">
     <title lang="en-GB">Euromaxx</title>
     <desc lang="en-GB">The host sheds light on people, lifestyle, places, arts, music and fashion in Europe.</desc>
@@ -534715,13 +534760,6 @@ The filmmaker highlights some of the most memorable matches, wrestlers, champion
     <desc lang="en">The host analyses the different ways through which women of the current era are redefining the policies of the governments of the world.</desc>
     <icon src="https://iptv-epg.org/images/IPW5egNi4A4S7oW_wIMKOxNzvsDHIlvkPuMJcevVtw4d8-ruSCeAXob76UkYJQCqFsnHQS5QEJgNn5PoIKWq31rXmNO1Y_viSNv6LUspJ1jE7sDgqB24FQ363lg1Wg" />
     <title lang="en">The 51 Percent</title>
-  </programme>
-  <programme channel="hmair.hummasala" start="20261012000000 +0000" stop="20261012000300 +0000">
-    <title lang="en">Headline News</title>
-    <desc lang="en">Coverage on important topics of politics, law and order, justice, economy, weather, sports, international developments, science, and other important topics in the society.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">News</category>
-    <icon src="https://images.metadata.sky.com/pd-image/c2ba5e4f-7911-4663-b770-09fb3546a55a/16-9" />
   </programme>
   <programme channel="hmair.hummasala" start="20261012000300 +0000" stop="20261012010000 +0000">
     <title lang="en">Hum Awaaz</title>
@@ -542910,6 +542948,52 @@ Dasha Vinaash manages to break the 'Mahadevi Trishul' and captures Chhota Bheem'
     </credits>
     <rating>
       <value>U/A-12</value>
+    </rating>
+  </programme>
+  <programme start="20261013010300 +0530" stop="20261013022700 +0530" channel="hmair.sonymaxhd">
+    <title>Final Destination 2</title>
+    <desc>After foreseeing a deadly freak accident, Kimberly saves herself and others, only to find that Death is relentlessly pursuing them for escaping his clutches.</desc>
+    <category>Horror</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/78045fa157ec9e920deefee09815aa84.jpg?width=700" />
+    <credits>
+      <director>David R. Ellis</director>
+      <actor>Ali Larter (Clear Rivers)</actor>
+      <actor>A.J. Cook (Kimberly Corman)</actor>
+      <actor>Michael Landes (Officer Thomas Burke)</actor>
+      <actor>Terrence "T.C." Carson (Eugene Dix)</actor>
+      <actor>Jonathan Cherry (Rory)</actor>
+      <actor>Keegan Connor Tracy (Kat)</actor>
+      <actor>Sarah Carter (Shaina)</actor>
+      <actor>Lynda Boyd (Nora Carpenter)</actor>
+      <actor>David Paetkau (Evan Lewis)</actor>
+      <actor>Justina Machado (Isabella Hudson)</actor>
+      <actor>James Kirk (Tim Carpenter)</actor>
+      <actor>Tony Todd (Mr. Bludworth)</actor>
+    </credits>
+    <rating>
+      <value>U</value>
+    </rating>
+  </programme>
+  <programme start="20261013022700 +0530" stop="20261013060000 +0530" channel="hmair.sonymaxhd">
+    <title>Ashwamedham</title>
+    <desc>Dhruva, an undercover agent, works to thwart a massive cyberattack. However, he struggles against hackers who seem to predict his every move, staying one step ahead.</desc>
+    <category>Action</category>
+    <language>Hindi</language>
+    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/3f08631c78ac5171791d0df6d0890e40.jpg?width=700" />
+    <credits>
+      <director>Nitin G.</director>
+      <actor>Shivangi (Shreya)</actor>
+      <actor>Suman (Magician)</actor>
+      <actor>Vennela Kishore (Hacker)</actor>
+      <actor>Priyadarshi (Friend)</actor>
+      <actor>Dhruva Karunakar (Dhruva)</actor>
+      <actor>Arjun Ambati (Vivek)</actor>
+      <actor>Prachi</actor>
+      <actor>Sonyaa (Mohini)</actor>
+    </credits>
+    <rating>
+      <value>U</value>
     </rating>
   </programme>
   <programme channel="hmair.sonypixhd" start="20261012040500 +0530" stop="20261012054100 +0530">
