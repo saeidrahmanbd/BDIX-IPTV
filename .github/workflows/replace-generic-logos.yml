@@ -31,10 +31,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate logo repair scripts
-        run: python -m py_compile scripts/repair_playlist_logos.py scripts/replace_generic_logos.py
+      - name: Validate logo repair script
+        run: python -m py_compile scripts/repair_playlist_logos.py
 
-      - name: Repair missing, generic, and contaminated logos in all playlists
+      - name: Repair missing, generic, and contaminated logos in the two remaining playlists
         run: python scripts/repair_playlist_logos.py
 
       - name: Enforce protected playlist attribution
@@ -44,7 +44,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add BDIX-Playlist.m3u IPTV-Playlist.m3u NVisionBD-Playlist.m3u logos reports/playlist-logo-repair-results.md
+          git add BDIX-Playlist.m3u IPTV-Playlist.m3u logos reports/playlist-logo-repair-results.md
           if git diff --cached --quiet; then
             echo "No repository changes were produced."
             exit 0
@@ -62,7 +62,7 @@ jobs:
               git reset --hard origin/main
               python -m py_compile scripts/repair_playlist_logos.py scripts/replace_generic_logos.py
               python scripts/repair_playlist_logos.py
-              git add BDIX-Playlist.m3u IPTV-Playlist.m3u NVisionBD-Playlist.m3u logos reports/playlist-logo-repair-results.md
+              git add BDIX-Playlist.m3u IPTV-Playlist.m3u logos reports/playlist-logo-repair-results.md
               git diff --cached --quiet && exit 0
               git commit -m "Run IPTV playlist maintenance: repair verified channel logos"
             fi
