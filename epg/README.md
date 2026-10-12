@@ -15,7 +15,7 @@ Coverage reports are written to `reports/epg-coverage.md` and `reports/epg-three
 
 ## Sources
 
-The India source configured for both mapping analysis and XMLTV generation is [`https://iptv-epg.org/files/epg-in.xml.gz`](https://iptv-epg.org/files/epg-in.xml.gz). It is combined with the other configured XMLTV feeds. The compressed URL is used directly; the scripts detect gzip data and decompress it before XML parsing.
+The country-specific sources configured for both mapping analysis and XMLTV generation include the India feed [`https://iptv-epg.org/files/epg-in.xml.gz`](https://iptv-epg.org/files/epg-in.xml.gz) and the United States feed [`https://iptv-epg.org/files/epg-us.xml.gz`](https://iptv-epg.org/files/epg-us.xml.gz). The US feed advertises substantially broader catalogue coverage than the existing epgshare US2 feed, so both are retained for exact-ID matching and programme comparison rather than assuming one source covers every channel. The compressed URLs are detected and decompressed before XML parsing. Source availability and channel counts do not guarantee that a playlist channel has a valid schedule; the generated coverage report must confirm the actual overlap.
 
 ## Mapping safeguards
 
