@@ -42054,22 +42054,6 @@ Contestants from all walks of life compete with each other to win the cash prize
     <desc lang="en">A prince and a poor boy, who look alike, meet and are fascinated by each other's lives. They swap places to live in another world.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_COLORS_KANNADA_CINEMA_2049643_15OCT063000_15OCT100000/images/LANDSCAPE_169_HD/ColorsKannadaCinema_YeraduNakshathragalu_2049643.jpg" />
   </programme>
-  <programme start="20261011235000 +0000" stop="20261012002500 +0000" channel="ColorsMarathi.in@SD">
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <credits>
-      <actor>Janhvi Tambat</actor>
-      <actor>Amruta Phadke</actor>
-      <actor>Sanchit Chaudhari</actor>
-      <actor>Amit Rekhi</actor>
-      <actor>Pooja Moily</actor>
-    </credits>
-    <desc lang="en">S1 E205
-Chhavi dedicates herself to protecting her adoptive family, the Rajgurus. Upon the arrival of a new daughter-in-law, Shambhavi, Chhavi prepares to defend the household against her hidden motives.</desc>
-    <episode-num>S1 E205</episode-num>
-    <icon src="https://iptv-epg.org/images/1W-bXcuzZnnLaA7EckzPnUQ1u7AORAPbUM_S-wr7-RCmJHAMF0YBY6w36nlmbyBqNAtR_7uNUKM0-1Zyk5JglE4gpJ47I-xJ8vzh8UjdNDYv5uEgtVjDU5D15sAp-g" />
-    <title lang="en">Mi Jinkun Ghein Saara</title>
-  </programme>
   <programme start="20261012002500 +0000" stop="20261012010000 +0000" channel="ColorsMarathi.in@SD">
     <category lang="en">TV Show</category>
     <category lang="en">Drama</category>
@@ -181949,16 +181933,6 @@ Nirav Chhabra and Myra Malik reflect on their romance and their shared mission t
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012042900 +0530" stop="20261012055400 +0530" channel="NHBollyRaga.in">
-    <title>Superhits Of 90s</title>
-    <desc>A selectively compiled collection of some of the most popular and nostalgic melodies from the 1990s is played in succession.</desc>
-    <category>Music</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/dbb1b2a1d09a23ec1a68ccacb02068c9.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme channel="NHBollyRaga.in" start="20261012055422 +0530" stop="20261012082810 +0530">
     <title lang="en">Dharmendra He Man Of Bollywood</title>
     <desc lang="en">Time-travel through Dharmendra's iconic hits – the ultimate He-Man of Bollywood! Timeless romance, unforgettable melodies that define an era of pure masala magic!</desc>
@@ -213788,229 +213762,133 @@ Duggu Dumbbell proposes a triple-feat strength contest to Simmba, with the defea
     <icon src="https://iptv-epg.org/images/KwvWuo-EuzHok_K1TidK1OkU_XrEXzJBzWxVgz4mNtW4WhjFR0DodEjQXJ5828p9rY097lWSamn_K2ubM-bngNCQSqBlsaOE3iHAHIzgy180NRzpOL1MyBypBl1Q" />
     <title lang="en">Malargalae Malarungal</title>
   </programme>
-  <programme channel="Pop.uk" start="20261012001200 +0000" stop="20261012002600 +0000">
-    <title lang="en">Bakugan</title>
-    <desc lang="en">In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012054200/list/ZEEPOPBakugan2087446da5abb0eb86e41dd8ae76fa821a1d329.jpg" />
+  <programme start="20261012001252 +0000" stop="20261012002622 +0000" channel="Pop.uk">
+    <title>Bakugan</title>
+    <desc>In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012002600 +0000" stop="20261012003900 +0000">
-    <title lang="en">Bakugan</title>
-    <desc lang="en">In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012055600/list/ZEEPOPBakugan2087446b77e801be11e47bea1b699e7d6a949ae.jpg" />
+  <programme start="20261012002622 +0000" stop="20261012003947 +0000" channel="Pop.uk">
+    <title>Bakugan</title>
+    <desc>In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012003900 +0000" stop="20261012005300 +0000">
-    <title lang="en">Bakugan</title>
-    <desc lang="en">In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012060900/list/ZEEPOPBakugan208744602ccc1de594f4e6dbb05b48f2c1281fa.jpg" />
+  <programme start="20261012003947 +0000" stop="20261012005308 +0000" channel="Pop.uk">
+    <title>Bakugan</title>
+    <desc>In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012005300 +0000" stop="20261012010600 +0000">
-    <title lang="en">Bakugan</title>
-    <desc lang="en">In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012062300/list/ZEEPOPBakugan20874462f9f103c25c94ac8bb19939f131f1e10.jpg" />
+  <programme start="20261012005308 +0000" stop="20261012010635 +0000" channel="Pop.uk">
+    <title>Bakugan</title>
+    <desc>In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012010600 +0000" stop="20261012011900 +0000">
-    <title lang="en">Bakugan</title>
-    <desc lang="en">In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012063600/list/ZEEPOPBakugan20874462216b5b6c8b64d63abca2d1f5792d1f4.jpg" />
+  <programme start="20261012010635 +0000" stop="20261012011951 +0000" channel="Pop.uk">
+    <title>Bakugan</title>
+    <desc>In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012011900 +0000" stop="20261012013300 +0000">
-    <title lang="en">Bakugan</title>
-    <desc lang="en">In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012064900/list/ZEEPOPBakugan20874468aa41d42272940c7917b59e59ee9602d.jpg" />
+  <programme start="20261012011951 +0000" stop="20261012013316 +0000" channel="Pop.uk">
+    <title>Bakugan</title>
+    <desc>In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012013300 +0000" stop="20261012014600 +0000">
-    <title lang="en">Bakugan</title>
-    <desc lang="en">In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012070300/list/ZEEPOPBakugan20874464d05986ec6ae4930b8f511990074675a.jpg" />
+  <programme start="20261012013316 +0000" stop="20261012014641 +0000" channel="Pop.uk">
+    <title>Bakugan</title>
+    <desc>In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012014600 +0000" stop="20261012020000 +0000">
-    <title lang="en">Bakugan</title>
-    <desc lang="en">In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012071600/list/ZEEPOPBakugan208744643d8863295014aa4afabb593a8bb4e8c.jpg" />
+  <programme start="20261012014641 +0000" stop="20261012020011 +0000" channel="Pop.uk">
+    <title>Bakugan</title>
+    <desc>In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012020000 +0000" stop="20261012022600 +0000">
-    <title lang="en">Shasha And Milo</title>
-    <desc lang="en">Shasha the cat and Milo the boy discover their heroic shapeshifting destiny.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012073000/list/ZEEPOPShashaAndMilo20567373ab398cceda14a4ca24f7e07496990e0.jpg" />
+  <programme start="20261012020011 +0000" stop="20261012022622 +0000" channel="Pop.uk">
+    <title>Shasha and Milo</title>
+    <desc>Shasha the cat and Milo the boy discover their heroic shapeshifting destiny.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012022600 +0000" stop="20261012025200 +0000">
-    <title lang="en">Shasha And Milo</title>
-    <desc lang="en">Shasha the cat and Milo the boy discover their heroic shapeshifting destiny.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012075600/list/ZEEPOPShashaAndMilo2056737c30a86f5ed8d47c79a7428338bbf5683.jpg" />
+  <programme start="20261012022622 +0000" stop="20261012025233 +0000" channel="Pop.uk">
+    <title>Shasha and Milo</title>
+    <desc>Shasha the cat and Milo the boy discover their heroic shapeshifting destiny.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012025200 +0000" stop="20261012031800 +0000">
-    <title lang="en">Shasha And Milo</title>
-    <desc lang="en">Shasha the cat and Milo the boy discover their heroic shapeshifting destiny.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012082200/list/ZEEPOPShashaAndMilo2056737bbcabc4a3ee24602b43f5bb271a435c8.jpg" />
+  <programme start="20261012025233 +0000" stop="20261012031845 +0000" channel="Pop.uk">
+    <title>Shasha and Milo</title>
+    <desc>Shasha the cat and Milo the boy discover their heroic shapeshifting destiny.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012031800 +0000" stop="20261012034400 +0000">
-    <title lang="en">Shasha And Milo</title>
-    <desc lang="en">Shasha the cat and Milo the boy discover their heroic shapeshifting destiny.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012084800/list/ZEEPOPShashaAndMilo20567376e56b96e30df4cd9811f742286f4ffe7.jpg" />
+  <programme start="20261012031845 +0000" stop="20261012034456 +0000" channel="Pop.uk">
+    <title>Shasha and Milo</title>
+    <desc>Shasha the cat and Milo the boy discover their heroic shapeshifting destiny.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012034400 +0000" stop="20261012041000 +0000">
-    <title lang="en">Shasha And Milo</title>
-    <desc lang="en">Shasha the cat and Milo the boy discover their heroic shapeshifting destiny.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012091400/list/ZEEPOPShashaAndMilo2056737eb88dd232f7f4f28989a2646091832dd.jpg" />
+  <programme start="20261012034456 +0000" stop="20261012041059 +0000" channel="Pop.uk">
+    <title>Shasha and Milo</title>
+    <desc>Shasha the cat and Milo the boy discover their heroic shapeshifting destiny.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012041000 +0000" stop="20261012043500 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012094000/list/ZEEPOPNumbChucks2151467b4fd3d739a9d44dc8edac50bb052dc83.jpg" />
+  <programme start="20261012041059 +0000" stop="20261012043600 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012043500 +0000" stop="20261012050000 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012100500/list/ZEEPOPNumbChucks215146738397ad94fff4c2db05bd84ebdb9aafa.jpg" />
+  <programme start="20261012043600 +0000" stop="20261012050100 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Hooves loses his house on a game show thanks to the Chucks and their questionable knowledge of Woodchuck Morris. Then, Dilweed and Fungus are given the chance to help make a meal for Woodchuck Morris.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012050000 +0000" stop="20261012052500 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012103000/list/ZEEPOPNumbChucks2151467bdf1465d44d247c99fc98b2a141aad9b.jpg" />
+  <programme start="20261012050100 +0000" stop="20261012052559 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Dilweed and Fungus accidentally lose Hooves' prized kite and they need to rescue it before he finds out. Then, The Chucks train toddlers to help them keep watch after sleep robbers steal their TV.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012052500 +0000" stop="20261012055000 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012105500/list/ZEEPOPNumbChucks215146791f9b0f408a14cc3987379f3dbedeee9.jpg" />
+  <programme start="20261012052559 +0000" stop="20261012055059 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Dilweed and Fungus try to help Buford out by setting up Hooves on a date with Granny. Then, Dilweed and Fungus find a caveman living in a block of ice.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012055000 +0000" stop="20261012061500 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012112000/list/ZEEPOPNumbChucks2151467e01298a16e6e4e3791d9687964664417.jpg" />
+  <programme start="20261012055059 +0000" stop="20261012061559 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Buford teams up with a mysterious hero in an attempt to fleece Dilweed and Fungus out of their Key to the City. Then, Dilweed and Fungus accidentally injure Lenny the Crossing Goose.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012061500 +0000" stop="20261012064000 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012114500/list/ZEEPOPNumbChucks2151467619d2ef7e0a942f28fc432fb6270bfb6.jpg" />
+  <programme start="20261012061559 +0000" stop="20261012064059 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Buford convinces the Chucks they've fallen asleep and awoken a 1,000 years in the future. Then, Dilweed and Fungus act as Buford's lawyers when he's accused of stealing the Salmon of Justice.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012064000 +0000" stop="20261012070500 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012121000/list/ZEEPOPNumbChucks215146781570b4ebc774877af44b9243e824d6b.jpg" />
+  <programme start="20261012064059 +0000" stop="20261012070559 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Buford comes up with the greatest insult ever, but Dilweed and Fungus misinterpret it as the greatest nickname ever. Then, Fungus puts on Granny Butternut's old glasses and they make him a genius.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012070500 +0000" stop="20261012073000 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012123500/list/ZEEPOPNumbChucks2151467fb4bfa6520fe4058bf26f66f8da3419c.jpg" />
+  <programme start="20261012070559 +0000" stop="20261012073058 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Quills' strange history is revealed when odd Russian bears show up at Pinheads. Then, Dilweed and Fungus go to a taping of their favourite show, the Winky the Mole Show.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012073000 +0000" stop="20261012075500 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012130000/list/ZEEPOPNumbChucks2151467a58ef5f38d064877a6d7a8976f382a3d.jpg" />
+  <programme start="20261012073058 +0000" stop="20261012075558 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Dilweed and Fungus think Woodchuck Morris is calling to give them directives, but it's really Hooves who is trying to protect his prize gourd from them. Then, Buford gets amnesia.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012075500 +0000" stop="20261012082000 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012132500/list/ZEEPOPNumbChucks2151467ca6db936a209484bb9702f0272e98441.jpg" />
+  <programme start="20261012075558 +0000" stop="20261012082058 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Dilweed and Fungus accidentally become rich! Then, Dilweed and Fungus follow Hooves sneaking off one night and discover he's a member of a strange moose club.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012082000 +0000" stop="20261012084500 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012135000/list/ZEEPOPNumbChucks21514673f93ad3ef5bd4b2f8587a93cf643a479.jpg" />
+  <programme start="20261012082058 +0000" stop="20261012084558 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>Thanks to Dilweed and Fungus, most of Ding-a-ling Springs gets stranded on a deserted island. Then, Dilweed and Fungus are lost at sea when they meet a strange new friend.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012084500 +0000" stop="20261012091000 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012141500/list/ZEEPOPNumbChucks21514674b997bd20fe44c75b856aeaee7dc64d1.jpg" />
+  <programme start="20261012084558 +0000" stop="20261012091058 +0000" channel="Pop.uk">
+    <title>Numb Chucks</title>
+    <desc>After the Groundhog sees his shadow, Dilweed and Fungus promise to bring an end to a terrible winter. Then, Dilweed is mistaken for a robot from the future.</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012091000 +0000" stop="20261012092000 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012144000/list/ZEEPOPGrizzyAndTheLemmings2056732f1171b8a179743a489037f7e7156fbd4.jpg" />
+  <programme start="20261012091058 +0000" stop="20261012092006 +0000" channel="Pop.uk">
+    <title>Grizzy And The Lemmings</title>
+    <desc>A grizzly bear contends with a group of troublesome lemmings</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012092000 +0000" stop="20261012092900 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012145000/list/ZEEPOPGrizzyAndTheLemmings2056732a52c4af5cc074eca872f2d08d56e10dc.jpg" />
+  <programme start="20261012092006 +0000" stop="20261012092915 +0000" channel="Pop.uk">
+    <title>Grizzy And The Lemmings</title>
+    <desc>A grizzly bear contends with a group of troublesome lemmings</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012092900 +0000" stop="20261012093800 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012145900/list/ZEEPOPGrizzyAndTheLemmings20567328169d572bfc74610a22f3fbe2ba66292.jpg" />
+  <programme start="20261012092915 +0000" stop="20261012093824 +0000" channel="Pop.uk">
+    <title>Grizzy And The Lemmings</title>
+    <desc>A grizzly bear contends with a group of troublesome lemmings</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012093800 +0000" stop="20261012094700 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012150800/list/ZEEPOPGrizzyAndTheLemmings2056732abe068bbabed41c3977457fa59d2c4cd.jpg" />
+  <programme start="20261012093824 +0000" stop="20261012094733 +0000" channel="Pop.uk">
+    <title>Grizzy And The Lemmings</title>
+    <desc>A grizzly bear contends with a group of troublesome lemmings</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012094700 +0000" stop="20261012095600 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012151700/list/ZEEPOPGrizzyAndTheLemmings2056732e6092b6fedc74abdb4e8275ebdd15925.jpg" />
+  <programme start="20261012094733 +0000" stop="20261012095642 +0000" channel="Pop.uk">
+    <title>Grizzy And The Lemmings</title>
+    <desc>A grizzly bear contends with a group of troublesome lemmings</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012095600 +0000" stop="20261012100500 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012152600/list/ZEEPOPGrizzyAndTheLemmings2056732b50d4ee2f5f64a9fad5570997e30fb65.jpg" />
+  <programme start="20261012095642 +0000" stop="20261012100551 +0000" channel="Pop.uk">
+    <title>Grizzy And The Lemmings</title>
+    <desc>A grizzly bear contends with a group of troublesome lemmings</desc>
   </programme>
-  <programme channel="Pop.uk" start="20261012100500 +0000" stop="20261012101500 +0000">
-    <title lang="en">Grizzy And The Lemmings</title>
-    <desc lang="en">A grizzly bear contends with a group of troublesome lemmings</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261012153500/list/ZEEPOPGrizzyAndTheLemmings2056732e650a5762eca4f08986937c1ef82a379.jpg" />
+  <programme start="20261012100551 +0000" stop="20261012101500 +0000" channel="Pop.uk">
+    <title>Grizzy And The Lemmings</title>
+    <desc>A grizzly bear contends with a group of troublesome lemmings</desc>
   </programme>
   <programme channel="Pop.uk" start="20261012101500 +0000" stop="20261012102400 +0000">
     <title lang="en">Grizzy And The Lemmings</title>
@@ -297664,20 +297542,64 @@ Real-time match updates and highlights keep fans informed, providing instant acc
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012040000 +0530" stop="20261012055500 +0530" channel="Star Gold Romance.in">
-    <title lang="en">Jaan Tere Naam</title>
-    <category lang="en">Hindi</category>
-    <category lang="en">Film</category>
+  <programme channel="Star Gold Romance.in" start="20261012045400 +0530" stop="20261012070400 +0530">
+    <title>Jaan Tere Naam</title>
+    <desc>Sunil expresses his love for Pinky, and they enjoy each other's company. However, the ones who are against their relationship create misunderstandings between them and that leads to a breakup.</desc>
+    <category>Film</category>
+    <category>Romance</category>
+    <date>1992</date>
+    <credits>
+      <director>Deepak Balraj Vij</director>
+      <actor>Vijay Arora</actor>
+      <actor>Farheen</actor>
+      <actor>Ali Asgar</actor>
+      <actor>Ronit Roy</actor>
+      <actor>Navneet Nishan</actor>
+      <actor>Joan David</actor>
+      <producer>Jimmy Nirula</producer>
+    </credits>
+    <icon src="https://dtil.tmsimg.com/assets/p15483521_v_h10_aa.jpg?lock=1280x720" />
   </programme>
-  <programme start="20261012055500 +0530" stop="20261012092000 +0530" channel="Star Gold Romance.in">
+  <programme channel="Star Gold Romance.in" start="20261012070400 +0530" stop="20261012094800 +0530">
     <title lang="en">Raja Babu</title>
-    <category lang="en">Hindi</category>
+    <desc lang="en">Raja, a rich but illiterate young man, falls for Madhu after seeing her photographs, and she mistakes him for a lawyer. Things turn ugly when she discovers the truth, leading to chaos and heartbreak.</desc>
+    <credits>
+      <actor>Govinda</actor>
+      <actor>Karishma Kapoor</actor>
+      <actor>Shakti Kapoor</actor>
+      <actor>Kader Khan</actor>
+      <actor>Aruna Irani</actor>
+      <actor>Prem Chopra</actor>
+      <actor>Gulshan Grover</actor>
+      <actor>Yunus Parvez</actor>
+      <director>David Dhawan</director>
+      <producer>Nandu G. Tolani</producer>
+    </credits>
     <category lang="en">Film</category>
+    <category lang="en">Action</category>
+    <icon src="https://dtil.tmsimg.com/assets/p63668_v_h9_ab.jpg?lock=880x660" />
   </programme>
-  <programme start="20261012092000 +0530" stop="20261012122400 +0530" channel="Star Gold Romance.in">
+  <programme channel="Star Gold Romance.in" start="20261012094800 +0530" stop="20261012122700 +0530">
     <title lang="en">Kunwara</title>
-    <category lang="en">Hindi</category>
+    <desc lang="en">Raju and Urmila fall deeply in love and vow to reunite in India. However, complications arise when Raju agrees to pose as Sharmila's husband before her family.</desc>
+    <credits>
+      <actor>Govinda</actor>
+      <actor>Urmila Matondkar</actor>
+      <actor>Nagma</actor>
+      <actor>Om Puri</actor>
+      <actor>Kader Khan</actor>
+      <actor>Johnny Lever</actor>
+      <actor>Inder Kumar</actor>
+      <actor>Shammi</actor>
+      <director>David Dhawan</director>
+      <producer>Allu Arvind</producer>
+      <producer>Kumar Sadhuram Taurani</producer>
+      <producer>Ramesh Sadhuram Taurani</producer>
+      <producer>Mukesh Udeshi</producer>
+    </credits>
     <category lang="en">Film</category>
+    <category lang="en">Rom-Com</category>
+    <icon src="https://dtil.tmsimg.com/assets/p70499_v_h9_ac.jpg?lock=880x660" />
   </programme>
   <programme start="20261012070000 +0000" stop="20261012080000 +0000" channel="Star Gold Romance.in">
     <title>No Data</title>
@@ -305460,9 +305382,9 @@ The old and new heroines of the channel compete against each other in fun activi
     <desc lang="en">Bhoomi is all set to get married but her life changes when Vishal and his cousin rape her. But she and her father set out to punish the perpetrators and decide to take the law into their own hands.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_STAR_MAA_MOVIES_HD_1183653_15OCT070000_15OCT090000/images/LANDSCAPE_169_HD/MaaMoviesHD_Bhoomi_1183653.jpg" />
   </programme>
-  <programme channel="StarMovies.in@SD" start="20261012041100 +0530" stop="20261012055600 +0530">
+  <programme channel="StarMovies.in@SD" start="20261012041500 +0530" stop="20261012055900 +0530">
     <title>Mojin The Treasure Valley</title>
-    <desc>Tomb raider Hu Bayi and his team set out to look for the lost tomb of Emperor Xian and find an artefact to lift their curse on a monster-infested island.</desc>
+    <desc>In search of a curse breaker, tomb raider Hu Bayi and his team set out to look for the lost tomb of Emperor Xian on a monster-infested island.</desc>
     <category>Film</category>
     <category>Action</category>
     <date>2018</date>
@@ -305471,12 +305393,14 @@ The old and new heroines of the channel compete against each other in fun activi
       <actor>Heng Cai</actor>
       <actor>Xuan Gu</actor>
       <actor>Heng Yu</actor>
-      <actor>Taishen Cheng</actor>
-      <actor>Marc Ma</actor>
+      <actor>Taisheng Chen</actor>
+      <actor>Yusi Chen</actor>
+      <actor>Chih-Wei Tang</actor>
+      <actor>Chung Hua Tou</actor>
     </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p28581964_v_h10_aa.jpg?lock=1280x720" />
+    <icon src="https://dtil.tmsimg.com/assets/p29550362_b_h10_aa.jpg?lock=1280x720" />
   </programme>
-  <programme channel="StarMovies.in@SD" start="20261012055600 +0530" stop="20261012070600 +0530">
+  <programme channel="StarMovies.in@SD" start="20261012055900 +0530" stop="20261012071000 +0530">
     <title>Super Typhoon</title>
     <desc>A wrathful goddess unleashes a cataclysmic typhoon upon the world as punishment for humanity's transgressions. Panic ensues as people are forced to confront monstrous creatures amid the chaos.</desc>
     <category>Film</category>
@@ -305490,7 +305414,7 @@ The old and new heroines of the channel compete against each other in fun activi
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p20942011_b_h10_ab.jpg?lock=1280x720" />
   </programme>
-  <programme channel="StarMovies.in@SD" start="20261012070600 +0530" stop="20261012084500 +0530">
+  <programme channel="StarMovies.in@SD" start="20261012071000 +0530" stop="20261012084900 +0530">
     <title>Moana</title>
     <desc>Moana, the daughter of a Polynesian chief, sets out to return a mystical relic to the goddess Te Fiti in order to get rid of a blight that has struck her island.</desc>
     <category>Film</category>
@@ -305511,10 +305435,14 @@ The old and new heroines of the channel compete against each other in fun activi
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p12628458_v_h10_ar.jpg?lock=1280x720" />
   </programme>
-  <programme channel="StarMovies.in@SD" start="20261012084500 +0530" stop="20261012102800 +0530">
-    <title lang="en">Predator 2</title>
-    <desc lang="en">Lieutenant Mike Harrigan faces a surge of violent crime in a sweltering Los Angeles while a stealthy extraterrestrial predator stalks those it deems strong enough to be hunted.</desc>
+  <programme channel="StarMovies.in@SD" start="20261012084900 +0530" stop="20261012103200 +0530">
+    <title>Predator 2</title>
+    <desc>Lieutenant Mike Harrigan faces a surge of violent crime in a sweltering Los Angeles while a stealthy extraterrestrial predator stalks those it deems strong enough to be hunted.</desc>
+    <category>Film</category>
+    <category>Action</category>
+    <date>1990</date>
     <credits>
+      <director>Stephen Hopkins</director>
       <actor>Danny Glover</actor>
       <actor>Gary Busey</actor>
       <actor>Rubén Blades</actor>
@@ -305526,19 +305454,20 @@ The old and new heroines of the channel compete against each other in fun activi
       <actor>Kent McCord</actor>
       <actor>Morton Downey Jr.</actor>
       <actor>Calvin Lockhart</actor>
-      <director>Stephen Hopkins</director>
       <producer>Lawrence Gordon</producer>
       <producer>Joel Silver</producer>
       <producer>John Davis</producer>
     </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Action</category>
-    <icon src="https://dtil.tmsimg.com/assets/p12894_v_h9_aj.jpg?lock=880x660" />
+    <icon src="https://dtil.tmsimg.com/assets/p12894_v_h10_ai.jpg?lock=1280x720" />
   </programme>
-  <programme channel="StarMovies.in@SD" start="20261012102800 +0530" stop="20261012124500 +0530">
-    <title lang="en">Pirates of the Caribbean: The Curse of the Black Pearl</title>
-    <desc lang="en">Captain Jack Sparrow and Will Turner team up to rescue Elizabeth from Barbossa's cursed crew while navigating treacherous waters and supernatural dangers.</desc>
+  <programme channel="StarMovies.in@SD" start="20261012103200 +0530" stop="20261012124700 +0530">
+    <title>Pirates of the Caribbean: The Curse of the Black Pearl</title>
+    <desc>Captain Jack Sparrow and Will Turner team up to rescue Elizabeth from Barbossa's cursed crew while navigating treacherous waters and supernatural dangers.</desc>
+    <category>Film</category>
+    <category>Action</category>
+    <date>2003</date>
     <credits>
+      <director>Gore Verbinski</director>
       <actor>Johnny Depp</actor>
       <actor>Geoffrey Rush</actor>
       <actor>Orlando Bloom</actor>
@@ -305554,17 +305483,18 @@ The old and new heroines of the channel compete against each other in fun activi
       <actor>Trevor Goddard</actor>
       <actor>Isaac C. Singleton Jr.</actor>
       <actor>Brye Cooper</actor>
-      <director>Gore Verbinski</director>
       <producer>Jerry Bruckheimer</producer>
     </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Action</category>
-    <icon src="https://dtil.tmsimg.com/assets/p32093_v_h9_aq.jpg?lock=880x660" />
+    <icon src="https://dtil.tmsimg.com/assets/p32093_v_h10_aq.jpg?lock=1280x720" />
   </programme>
-  <programme channel="StarMovies.in@SD" start="20261012124500 +0530" stop="20261012145400 +0530">
-    <title lang="en">X-Men 2</title>
-    <desc lang="en">William Stryker, an anti-mutant colonel, captures Professor Xavier in a special operation against him. Meanwhile, the rest of the students team up with Magneto in order to retrieve him back.</desc>
+  <programme channel="StarMovies.in@SD" start="20261012124700 +0530" stop="20261012145600 +0530">
+    <title>X-Men 2</title>
+    <desc>William Stryker, an anti-mutant colonel, captures Professor Xavier in a special operation against him. Meanwhile, the rest of the students team up with Magneto in order to retrieve him back.</desc>
+    <category>Film</category>
+    <category>Action</category>
+    <date>2003</date>
     <credits>
+      <director>Bryan Singer</director>
       <actor>Patrick Stewart</actor>
       <actor>Hugh Jackman</actor>
       <actor>Ian McKellen</actor>
@@ -305581,18 +305511,19 @@ The old and new heroines of the channel compete against each other in fun activi
       <actor>Anna Paquin</actor>
       <actor>Katie Stuart</actor>
       <actor>Kea Wong</actor>
-      <director>Bryan Singer</director>
       <producer>Lauren Shuler Donner</producer>
       <producer>Ralph Winter</producer>
     </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Action</category>
-    <icon src="https://dtil.tmsimg.com/assets/p31889_v_h9_ab.jpg?lock=880x660" />
+    <icon src="https://dtil.tmsimg.com/assets/p31889_v_h10_ac.jpg?lock=1280x720" />
   </programme>
-  <programme channel="StarMovies.in@SD" start="20261012145400 +0530" stop="20261012165900 +0530">
-    <title lang="en">Dawn of the Planet of the Apes</title>
-    <desc lang="en">Caesar, a chimpanzee and leader of the evolved apes, allows a human family into his territory. However, due to a vindictive bonobo, misunderstandings arise between the two species, resulting in war.</desc>
+  <programme channel="StarMovies.in@SD" start="20261012145600 +0530" stop="20261012170000 +0530">
+    <title>Dawn of the Planet of the Apes</title>
+    <desc>Caesar, a chimpanzee and leader of the evolved apes, allows a human family into his territory. However, due to a vindictive bonobo, misunderstandings arise between the two species, resulting in war.</desc>
+    <category>Film</category>
+    <category>Action</category>
+    <date>2014</date>
     <credits>
+      <director>Matt Reeves</director>
       <actor>Andy Serkis</actor>
       <actor>Jason Clarke</actor>
       <actor>Gary Oldman</actor>
@@ -305608,20 +305539,21 @@ The old and new heroines of the channel compete against each other in fun activi
       <actor>Karin Konoval</actor>
       <actor>Keir O'Donnell</actor>
       <actor>Kevin Rankin</actor>
-      <director>Matt Reeves</director>
       <producer>Rick Jaffa</producer>
       <producer>Amanda Silver</producer>
       <producer>Peter Chernin</producer>
       <producer>Dylan Clark</producer>
     </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Action</category>
-    <icon src="https://dtil.tmsimg.com/assets/p10063629_v_h9_au.jpg?lock=880x660" />
+    <icon src="https://dtil.tmsimg.com/assets/p10063629_v_h8_at.jpg?lock=1280x720" />
   </programme>
-  <programme channel="StarMovies.in@SD" start="20261012165900 +0530" stop="20261012183400 +0530">
-    <title lang="en">A Quiet Place: Day One</title>
-    <desc lang="en">Sam navigates a living nightmare in an invaded New York City, struggling to survive in silence against deadly creatures with ultra sensitive hearing.</desc>
+  <programme channel="StarMovies.in@SD" start="20261012170000 +0530" stop="20261012183500 +0530">
+    <title>A Quiet Place: Day One</title>
+    <desc>Sam navigates a living nightmare in an invaded New York City, struggling to survive in silence against deadly creatures with ultra sensitive hearing.</desc>
+    <category>Film</category>
+    <category>Thriller</category>
+    <date>2024</date>
     <credits>
+      <director>Michael Sarnoski</director>
       <actor>Lupita Nyong'o</actor>
       <actor>Joseph Quinn</actor>
       <actor>Alex Wolff</actor>
@@ -305630,20 +305562,21 @@ The old and new heroines of the channel compete against each other in fun activi
       <actor>Eliane Umuhire</actor>
       <actor>Thea Butler</actor>
       <actor>Alfie Todd</actor>
-      <director>Michael Sarnoski</director>
       <producer>Michael Bay</producer>
       <producer>Andrew Form</producer>
       <producer>Brad Fuller</producer>
       <producer>John Krasinski</producer>
     </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Thriller</category>
-    <icon src="https://dtil.tmsimg.com/assets/p22100632_v_h9_ao.jpg?lock=880x660" />
+    <icon src="https://dtil.tmsimg.com/assets/p22100632_v_h8_ao.jpg?lock=1280x720" />
   </programme>
-  <programme channel="StarMovies.in@SD" start="20261012183400 +0530" stop="20261012204500 +0530">
-    <title lang="en">Black Panther</title>
-    <desc lang="en">T'Challa, the prince of Wakanda, returns to his nation to become king after his father's death. However, he faces a challenger who wants to take over his kingdom and its resources.</desc>
+  <programme channel="StarMovies.in@SD" start="20261012183500 +0530" stop="20261012204500 +0530">
+    <title>Black Panther</title>
+    <desc>T'Challa, the prince of Wakanda, returns to his nation to become king after his father's death. However, he faces a challenger who wants to take over his kingdom and its resources.</desc>
+    <category>Film</category>
+    <category>Action</category>
+    <date>2018</date>
     <credits>
+      <director>Ryan Coogler</director>
       <actor>Chadwick Boseman</actor>
       <actor>Michael B. Jordan</actor>
       <actor>Lupita Nyong'o</actor>
@@ -305658,12 +305591,9 @@ The old and new heroines of the channel compete against each other in fun activi
       <actor>Florence Kasumba</actor>
       <actor>Sterling K. Brown</actor>
       <actor>John Kani</actor>
-      <director>Ryan Coogler</director>
       <producer>Kevin Feige</producer>
     </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Action</category>
-    <icon src="https://dtil.tmsimg.com/assets/p12878741_v_h9_an.jpg?lock=880x660" />
+    <icon src="https://dtil.tmsimg.com/assets/p12878741_v_h10_an.jpg?lock=1280x720" />
   </programme>
   <programme channel="StarMovies.in@SD" start="20261012204500 +0530" stop="20261012222400 +0530">
     <title lang="en">Disney's The Jungle Book</title>
@@ -342644,138 +342574,81 @@ Jen and Tim's fight escalates and everyone is caught in the crossfire; Cortney l
     <desc lang="en">Mowgli goes to visit Kaa with a question. How many monkeys can a python swallow in one gulp?</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acc2a228d1a0fbd854910f1/images/LANDSCAPE_169/9372_370abaf4-87cf-4ecf-ac5b-181564e3a34e.png" />
   </programme>
-  <programme channel="TinyPop.uk" start="20261012001600 +0000" stop="20261012002600 +0000">
-    <title lang="en">Masha And The Bear</title>
-    <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012054600/list/TinyPOPMashaAndTheBear2056996db85ae061d8b4bd49a5a518999551a86.jpg" />
+  <programme start="20261012001644 +0000" stop="20261012002636 +0000" channel="TinyPop.uk">
+    <title>Masha And The Bear</title>
+    <desc>Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012002600 +0000" stop="20261012003600 +0000">
-    <title lang="en">Masha And The Bear</title>
-    <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012055600/list/TinyPOPMashaAndTheBear2056996e559c84051f74786a189b1402880b66f.jpg" />
+  <programme start="20261012002636 +0000" stop="20261012003615 +0000" channel="TinyPop.uk">
+    <title>Masha And The Bear</title>
+    <desc>Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012003600 +0000" stop="20261012004500 +0000">
-    <title lang="en">Masha And The Bear</title>
-    <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012060600/list/TinyPOPMashaAndTheBear2056996f57f6f0a2bad4bba93da13423f2787d4.jpg" />
+  <programme start="20261012003615 +0000" stop="20261012004534 +0000" channel="TinyPop.uk">
+    <title>Masha And The Bear</title>
+    <desc>Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012004500 +0000" stop="20261012005500 +0000">
-    <title lang="en">Masha And The Bear Shorties</title>
-    <desc lang="en">Masha is getting ready for school. Masha is trying to squeeze in a bus a stroller with her little baby Rose. Masha and the animals are dancing a Hawaiian dance.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012061500/list/TinyPOPMashaAndTheBearShorties2056997c4f23539650a42909de140721857782a.jpg" />
+  <programme start="20261012004534 +0000" stop="20261012005534 +0000" channel="TinyPop.uk">
+    <title>Masha and the Bear Shorties</title>
+    <desc>Masha tries to get on to a ride that she is is too short and too young for. In the toy store, the Bear lets Masha pick only one toy.</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012005500 +0000" stop="20261012010600 +0000">
-    <title lang="en">Masha And The Bear Shorties</title>
-    <desc lang="en">Masha is getting ready for school. Masha is trying to squeeze in a bus a stroller with her little baby Rose. Masha and the animals are dancing a Hawaiian dance.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012062500/list/TinyPOPMashaAndTheBearShorties2056997b3ee842214824028b09f1c8e8ed0fa9d.jpg" />
+  <programme start="20261012005534 +0000" stop="20261012010616 +0000" channel="TinyPop.uk">
+    <title>Masha and the Bear Shorties</title>
+    <desc>Masha picks the most expensive pizza because she likes how it looks on the picture on the menu. Masha decided to have a fashion show! What is going on? Is Masha misbehaving? Is she being mischievous?</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012010600 +0000" stop="20261012011900 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012063600/list/TinyPOPCareBearsUnlockTheMagic2056992c1d07bfdac3445509ec2486ce145a956.jpg" />
+  <programme start="20261012010616 +0000" stop="20261012011925 +0000" channel="TinyPop.uk">
+    <title>Care Bears: Unlock The Magic</title>
+    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012011900 +0000" stop="20261012013200 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012064900/list/TinyPOPCareBearsUnlockTheMagic20569925ab2ddfc9f7e41c78a7826abd77032f3.jpg" />
+  <programme start="20261012011925 +0000" stop="20261012013234 +0000" channel="TinyPop.uk">
+    <title>Care Bears: Unlock The Magic</title>
+    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012013200 +0000" stop="20261012014500 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012070200/list/TinyPOPCareBearsUnlockTheMagic205699203894000f1f94beeaa5b4a4d385a87c4.jpg" />
+  <programme start="20261012013234 +0000" stop="20261012014520 +0000" channel="TinyPop.uk">
+    <title>Care Bears: Unlock The Magic</title>
+    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012014500 +0000" stop="20261012015800 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012071500/list/TinyPOPCareBearsUnlockTheMagic205699297a155c363d24daa8879cc8990b05984.jpg" />
+  <programme start="20261012014520 +0000" stop="20261012015806 +0000" channel="TinyPop.uk">
+    <title>Care Bears: Unlock The Magic</title>
+    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012015800 +0000" stop="20261012021100 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012072800/list/TinyPOPCareBearsUnlockTheMagic2056992cde29c20174d4bb09e2e5ea64bd3f34e.jpg" />
+  <programme start="20261012015806 +0000" stop="20261012021118 +0000" channel="TinyPop.uk">
+    <title>Care Bears: Unlock The Magic</title>
+    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012021100 +0000" stop="20261012022400 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012074100/list/TinyPOPCareBearsUnlockTheMagic20569922596e0f828c0431b9dc0ee3a081f196c.jpg" />
+  <programme start="20261012021118 +0000" stop="20261012022431 +0000" channel="TinyPop.uk">
+    <title>Care Bears: Unlock The Magic</title>
+    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012022400 +0000" stop="20261012023700 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012075400/list/TinyPOPCareBearsUnlockTheMagic20569922b814efd9fc84bdda7c0780774106ef5.jpg" />
+  <programme start="20261012022431 +0000" stop="20261012023716 +0000" channel="TinyPop.uk">
+    <title>Care Bears: Unlock The Magic</title>
+    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012023700 +0000" stop="20261012025000 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012080700/list/TinyPOPCareBearsUnlockTheMagic20569921eeeacc2c64c494484778588e3d872f8.jpg" />
+  <programme start="20261012023716 +0000" stop="20261012025002 +0000" channel="TinyPop.uk">
+    <title>Care Bears: Unlock The Magic</title>
+    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012025000 +0000" stop="20261012030200 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012082000/list/TinyPOPCareBearsUnlockTheMagic2056992b91f58b9a2474f57bb91f44a0c0c5d48.jpg" />
+  <programme start="20261012025002 +0000" stop="20261012030247 +0000" channel="TinyPop.uk">
+    <title>Care Bears: Unlock The Magic</title>
+    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012030200 +0000" stop="20261012031500 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012083200/list/TinyPOPCareBearsUnlockTheMagic20569929a7e0f666534472c92960d1bb543622b.jpg" />
+  <programme start="20261012030247 +0000" stop="20261012031533 +0000" channel="TinyPop.uk">
+    <title>Care Bears: Unlock The Magic</title>
+    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012031500 +0000" stop="20261012032800 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012084500/list/TinyPOPCareBearsUnlockTheMagic2056992f866cc7d54374e9b87d150eb82f56d35.jpg" />
+  <programme start="20261012031533 +0000" stop="20261012032818 +0000" channel="TinyPop.uk">
+    <title>Care Bears: Unlock The Magic</title>
+    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012032800 +0000" stop="20261012034100 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012085800/list/TinyPOPCareBearsUnlockTheMagic2056992ef2aa50291404015a980270584501c56.jpg" />
+  <programme start="20261012032818 +0000" stop="20261012034104 +0000" channel="TinyPop.uk">
+    <title>Care Bears: Unlock The Magic</title>
+    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012034100 +0000" stop="20261012035300 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012091100/list/TinyPOPCareBearsUnlockTheMagic20569921ac267964e5346bda40c33c749aff8ab.jpg" />
+  <programme start="20261012034104 +0000" stop="20261012035350 +0000" channel="TinyPop.uk">
+    <title>Care Bears: Unlock The Magic</title>
+    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
   </programme>
-  <programme channel="TinyPop.uk" start="20261012035300 +0000" stop="20261012040000 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261012092300/list/TinyPOPCareBearsUnlockTheMagic2056992f8397fc52b7e49cd8ce91cdfe2a2b8ca.jpg" />
+  <programme start="20261012035350 +0000" stop="20261012040000 +0000" channel="TinyPop.uk">
+    <title>Care Bears: Unlock The Magic</title>
+    <desc>Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
   </programme>
   <programme channel="TinyPop.uk" start="20261012040000 +0000" stop="20261012040600 +0000">
     <title lang="en">Care Bears: Unlock The Magic</title>
@@ -443384,16 +443257,6 @@ A Toyota MR2 makes power, but not the power it once had; Bogi and Faye check the
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261012055100 +0530" stop="20261012055500 +0530" channel="custom.duck.tv">
-    <title>Dotty, the Kitty</title>
-    <desc>Dotty the kitten tries to complete pictures by connecting the dots on the outline of various objects selected by the pencil.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/1cee4e050e2141fcaf193faed3e2b6a3.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261012055500 +0530" stop="20261012055800 +0530" channel="custom.duck.tv">
     <title>The World of Animals</title>
     <desc>The presenter helps children learn about animals and understand the difference between domestic and wild animals.</desc>
@@ -513185,14 +513048,6 @@ Various artists re-enact the bravest escapes from captivity that prominent perso
     <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
       <value>12</value>
     </rating>
-  </programme>
-  <programme channel="custom.nicktoons" start="20261012000000 +0000" stop="20261012002500 +0000">
-    <title lang="en">ALVINNN!!! and The Chipmunks</title>
-    <desc lang="en">Alvin takes Simon's place on a camping trip in 'Excavation Vacation', and in 'Trophy Dad', The Chipmunks suspect Dave is lying about the various awards he's won.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Cartoon</category>
-    <icon src="https://images.metadata.sky.com/pd-image/4d0f3fa0-f4ef-4fd9-9b48-c4b109e5026b/16-9" />
-    <episode-num system="xmltv_ns">4.13.</episode-num>
   </programme>
   <programme channel="custom.nicktoons" start="20261012002500 +0000" stop="20261012004500 +0000">
     <title lang="en">ALVINNN!!! and The Chipmunks</title>
@@ -612377,15 +612232,43 @@ Aspiring singers from across India compete on Sa Re Ga Ma Pa 2026. With powerful
     <icon src="https://iptv-epg.org/images/wDoQymOrOFnLPfFjibkrsdEAvrHpiWIZYKDtesaK_sSduGG2EPjVNI7MN1YWNlbPG1zVDmtppxxdEd9pgPZfW6siLWDFKxoIq9xDeSJVukxzGIzoP-KIr2-B2rTgcQ" />
     <title lang="en">Sa Re Ga Ma Pa 2026</title>
   </programme>
-  <programme start="20261012044500 +0530" stop="20261012055600 +0530" channel="new.and.pictures.hd">
-    <title lang="en">Respite</title>
-    <category lang="en">Hindi</category>
+  <programme start="20261011214200 +0000" stop="20261012003000 +0000" channel="new.and.pictures.hd">
     <category lang="en">Film</category>
+    <category lang="en">Romance</category>
+    <credits>
+      <director>Gautham Menon</director>
+      <actor>Madhavan</actor>
+      <actor>Saif Ali Khan</actor>
+      <actor>Dia Mirza</actor>
+      <actor>Vrajesh Hirjee</actor>
+      <actor>Tanaaz Currim Irani</actor>
+      <actor>Anupam Kher</actor>
+      <actor>Navin Nischol</actor>
+      <actor>Smita Jaykar</actor>
+      <producer>Vashu Bhagnani</producer>
+    </credits>
+    <desc lang="en">Maddy has seven days to win Reena's affections before she finds out that he is not Rajeev, the childhood friend and prospective fiancé she has been expecting.</desc>
+    <icon src="https://iptv-epg.org/images/iDRG6qHUD3YOwMeGr_v6LWvCG9BWPo4wFnqeY3xPpOAr4qpWJrBsbzwdAu_9Rss6vrNIEitQyvD7S93V6km2gF4MJN3R60DaM2buKYizCPmOA43-YZDoTvHi8w" />
+    <title lang="en">Rehnaa Hai Terre Dil Mein</title>
   </programme>
-  <programme start="20261012055600 +0530" stop="20261012075600 +0530" channel="new.and.pictures.hd">
-    <title lang="en">Crook</title>
-    <category lang="en">Hindi</category>
+  <programme start="20261012003000 +0000" stop="20261012022300 +0000" channel="new.and.pictures.hd">
     <category lang="en">Film</category>
+    <category lang="en">Thriller</category>
+    <credits>
+      <director>Mohit Suri</director>
+      <actor>Emraan Hashmi</actor>
+      <actor>Neha Sharma</actor>
+      <actor>Arjan Bajwa</actor>
+      <actor>Mashhoor Amrohi</actor>
+      <actor>Kavin Dave</actor>
+      <actor>Shella Alan</actor>
+      <actor>Gulshan Grover</actor>
+      <actor>Francis Chouler</actor>
+      <producer>Mukesh Bhatt</producer>
+    </credits>
+    <desc lang="en">After his uncle catches him selling pirated DVDs, Jai Dixit is sent to Australia with a new identity. However, whilst falling in love with a woman, he assumes yet another identity to pursue her.</desc>
+    <icon src="https://iptv-epg.org/images/mTpVOQklId2KZmAETU42JxfhLA4Jepob8_9wcd6bafj401pEpQL96XvkDGUJ_YhVfKkpePvy0IgOvZtOEd-L2OTPHCYosRCatRSov62k2w9Z_W7RyNF3IEYW8YI" />
+    <title lang="en">Crook</title>
   </programme>
   <programme start="20261012075600 +0530" stop="20261012105900 +0530" channel="new.and.pictures.hd">
     <title lang="en">Dayalu</title>
