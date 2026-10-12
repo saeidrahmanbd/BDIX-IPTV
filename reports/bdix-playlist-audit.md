@@ -1,6 +1,6 @@
 # BDIX Playlist Audit
 
-Generated: **2026-10-12T09:46:55+00:00**
+Generated: **2026-10-12T11:22:13+00:00**
 
 ## Summary
 
@@ -28,12 +28,12 @@ Safe metadata repairs made: **0**
 
 - Bangladesh: **41**
 - Indian Bangla: **17**
-- Hindi: **28**
-- International: **8**
-- Documentary & Wildlife: **10**
+- Hindi: **27**
+- International: **9**
+- Documentary & Wildlife: **9**
 - Kids: **5**
 - Religious: **5**
-- Sports: **17**
+- Sports: **18**
 - Test: **8**
 
 ## Duplicate Stream URLs
