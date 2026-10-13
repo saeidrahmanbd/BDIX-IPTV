@@ -6,7 +6,7 @@ Coverage uses exact playlist `tvg-id` matches against the shared mapping registr
 
 | Playlist | Entries | Unique primary IDs | Unique Indian IDs | Mapped | Current/future | Xtream map | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1018 | 624 | 282 | 234/282 (83.0%) | 223/282 (79.1%) | 0/282 | OK |
+| IPTV-Playlist.m3u | 1031 | 627 | 282 | 234/282 (83.0%) | 223/282 (79.1%) | 0/282 | OK |
 | BDIX-Playlist.m3u | 139 | 131 | 43 | 41/43 (95.3%) | 41/43 (95.3%) | 0/43 | OK |
 
 ## Published XMLTV verification — all active channels
@@ -16,9 +16,9 @@ If the publish gate retains an older guide, the workflow must refresh this repor
 
 | Playlist | Active unique IDs | Mapped IDs | Published IDs with programmes | Current/future IDs |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 624 | 351 | 319 | 318 |
-| IPTV-Playlist.m3u — Bangladesh | 58 | 0 | 0 | 0 |
-| BDIX-Playlist.m3u | 131 | 71 | 59 | 59 |
+| IPTV-Playlist.m3u | 627 | 351 | 315 | 315 |
+| IPTV-Playlist.m3u — Bangladesh | 60 | 0 | 0 | 0 |
+| BDIX-Playlist.m3u | 131 | 71 | 56 | 56 |
 | BDIX-Playlist.m3u — Bangladesh | 41 | 0 | 0 | 0 |
 
 - Non-English programme text fields detected: **0**

@@ -1,27 +1,27 @@
 # Playlist Audit
-Generated: **2026-10-13T03:53:03.213072+00:00**
+Generated: **2026-10-13T04:27:22.211424+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1018**
+- Playlist entries: **1031**
 - Unique channel IDs: **636**
 - IDs with multiple streams: **176**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **1**
-- Same-name / different-ID collisions: **0**
+- Same-name / different-ID collisions: **9**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **0**
-- Logo references checked: **1018**
+- Logo exceptions: **4**
+- Logo references checked: **1031**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **0**
+- Primary entries missing channel numbers: **4**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
-- Alphabetical ordering issues: **0**
+- Alphabetical ordering issues: **3**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 
@@ -777,7 +777,9 @@ None.
 ## Ordering
 
 Category block order: OK.
-Alphabetical order: OK.
+- **Bangladesh** — **Channel 9** appears after **Channel 24**
+- **Backup** — **7S Music** appears after **&TV**
+- **Backup** — **Channel 9** appears after **Channel 24**
 
 ## Suspicious URLs
 
@@ -809,12 +811,20 @@ None.
 
 ## Same-Name / Different-ID Collisions
 
-None.
+- **colors bangla cinema** → , colorsbanglacinema.in@sd
+- **movies now** → , moviesnow.in@sd
+- **ntv** → , ntv.bd
+- **rtv** → , rtv.bd
+- **sa tv** → , satv.bd
+- **sony entertainment tv** → , sonyentertainmenttelevision.in@sd
+- **sony sab** → , sonysab.in@hd
+- **star movies select** → , starmoviesselect.in@hd
+- **zee tv** → , zeetv.in@sd
 
 ## Logo Integrity
 
 - Healthy/local references: **1018**
-- missing: **0**
+- missing: **13**
 - broken-local: **0**
 - external: **0**
 - non-png: **0**
@@ -822,6 +832,10 @@ None.
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
+- missing — G Series Drama [] — 
+- missing — Probashi TV [] — 
+- missing — HUM Masala HD [] — 
+- missing — HUM Sitaray HD [] — 
 
 ## Protected Primary Entries
 
