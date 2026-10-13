@@ -16,9 +16,9 @@ If the publish gate retains an older guide, the workflow must refresh this repor
 
 | Playlist | Active unique IDs | Mapped IDs | Published IDs with programmes | Current/future IDs |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 627 | 351 | 315 | 315 |
+| IPTV-Playlist.m3u | 627 | 351 | 319 | 318 |
 | IPTV-Playlist.m3u — Bangladesh | 60 | 0 | 0 | 0 |
-| BDIX-Playlist.m3u | 131 | 71 | 56 | 56 |
+| BDIX-Playlist.m3u | 131 | 71 | 59 | 59 |
 | BDIX-Playlist.m3u — Bangladesh | 41 | 0 | 0 | 0 |
 
 - Non-English programme text fields detected: **0**
