@@ -13335,15 +13335,6 @@ Join Hogi and Forest as they become doctors and heal their friends!</desc>
     <category>Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p29740219_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme start="20261013214800 +0000" stop="20261013221500 +0000" channel="Choppertown.us">
-    <category lang="en">Food + Home + Culture</category>
-    <date>2011</date>
-    <desc lang="en">S8 E18 — The Junior Partner
-With Matt onboard, the team repos a rich kid's ride, an "Uncle Sam" vehicle, and battles rowdy rugby players.</desc>
-    <episode-num>S8 E18</episode-num>
-    <icon src="https://iptv-epg.org/images/R4LWUq0s9gJIU-eVvgw40r90-qXpr6QKtRIdfr0YHDFKtUFP8x_9ejq80NGHB6ap64BNzZJwVf2KM_ueP1HgWxE5qFSmGJsg6e-cOxMO26o3a6N9xkcunArrq8odV4e0yNCdpio6oc5g__RAFJdt1JdV_QR8XyeQybBdblIEwQ1zVH-0Dmcil6WaMhowL-Iu3lG5TPRwx-U1AbYP7OZb6Xzpy7hW" />
-    <title lang="en">Operation Repo</title>
-  </programme>
   <programme start="20261013221500 +0000" stop="20261013224100 +0000" channel="Choppertown.us">
     <category lang="en">Food + Home + Culture</category>
     <date>2025</date>
@@ -21255,13 +21246,6 @@ Lou, Sonia, and Froy have to push away a debtor while trying to push a classic c
     <category lang="en">News Bulletin</category>
     <icon src="https://dtil.tmsimg.com/assets/p32141297_b_h9_ab.jpg?lock=880x660" />
   </programme>
-  <programme channel="DDChandana.in@SD" start="20261014031500 +0530" stop="20261014034500 +0530">
-    <title lang="en">That Anta Heli</title>
-    <desc lang="en">The host invites various contestants who compete against each other by answering a series of questions to win the coveted title.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Game Show</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29131448_b_h9_ab.jpg?lock=880x660" />
-  </programme>
   <programme channel="DDChandana.in@SD" start="20261014034500 +0530" stop="20261014041500 +0530">
     <title lang="en">Literary Guru</title>
     <desc lang="en">The host holds insightful conversations with renowned experts in the field of literature, discussing their personal journey and professional accomplishments.</desc>
@@ -24494,13 +24478,6 @@ Lou, Sonia, and Froy have to push away a debtor while trying to push a classic c
     <category lang="en">Documentary</category>
     <category lang="en">Others</category>
     <icon src="https://dtil.tmsimg.com/assets/p28953808_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="DDManipur.in@SD" start="20261014031500 +0530" stop="20261014034500 +0530">
-    <title>Science Programme/ Commission Prog</title>
-    <desc>The presenter sheds light on various concepts in science and scientific activities in Manipuri society with the help of experts.</desc>
-    <category>TV Show</category>
-    <category>Education (Adult)</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28937223_b_h10_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="DDManipur.in@SD" start="20261014034500 +0530" stop="20261014041500 +0530">
     <title>Spectrum</title>
@@ -33996,23 +33973,6 @@ Highlights of all the action from international cricket tournaments, where teams
     <category lang="en">TV Show</category>
     <category lang="en">Travel</category>
     <icon src="https://dtil.tmsimg.com/assets/p31940124_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="DiscoveryKids.au" start="20261014033600 +0530" stop="20261014034400 +0530">
-    <title lang="en">Baby Little Singham</title>
-    <desc lang="en">Infant Little Singham enthrals everyone with his antics and mischiefs while he embarks on adventures and fights villains.</desc>
-    <credits>
-      <actor>Sumrridhi Shukla</actor>
-      <actor>Jigna Bhardwaj</actor>
-      <actor>Sonal Kaushal</actor>
-      <actor>Anamaya Verma</actor>
-      <actor>Neshma Chemburkar</actor>
-      <actor>Ganessh Divekar</actor>
-      <director>Vikram Veturi</director>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27641528_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S2 E40</episode-num>
   </programme>
   <programme channel="DiscoveryKids.au" start="20261014034400 +0530" stop="20261014035200 +0530">
     <title lang="en">Baby Little Singham</title>
@@ -44456,20 +44416,6 @@ From Merchants Bank Field at Memorial Stadium in Bloomington, Ind.</desc>
     <category>TV Show</category>
     <category>Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p809737_b_h8_af.jpg?lock=1280x720" />
-  </programme>
-  <programme start="20261013201900 +0000" stop="20261013221700 +0000" channel="GravitasMovies.us">
-    <category lang="en">Biography</category>
-    <category lang="en">Documentary</category>
-    <category lang="en">Movie</category>
-    <credits>
-      <director>Zoe McIntosh</director>
-      <producer>Tom Blackwell</producer>
-      <producer>Fraser Brown</producer>
-    </credits>
-    <date>2023</date>
-    <desc lang="en">UFC champion Israel Adesanya quickly became a force to be reckoned with in the world of MMA throughout the 2010s.</desc>
-    <icon src="https://iptv-epg.org/images/sqKNhhF7QN80edcOgXRl1NGV_5K3TIAJtuHs_GT-yPQ2BAC1RKI51Y5TZJfoIRx-lrvtZnZ6WuCAJtcwakNlGgsZK2Icityf1geuK39-GR4" />
-    <title lang="en">Stylebender</title>
   </programme>
   <programme start="20261013221700 +0000" stop="20261014003100 +0000" channel="GravitasMovies.us">
     <category lang="en">Action</category>
@@ -61087,22 +61033,6 @@ Interviews with the cast and filmmakers of The Weight, Monster: The LIzzie Borde
     <icon src="https://iptv-epg.org/images/E3NAkvQF2TDVsXXQEixR3a4uVQxF2SZPxDIsTczUgBbQ-vBl2gETwB43ADljtBlthOtjh-DEE_FSO9xYGUGFC5oL1igpfq7S2M4cqAJpFqk51K3XdlDv2owsmFOydA" />
     <title lang="en">Chotu Dada</title>
   </programme>
-  <programme channel="MazhavilManorama.in@SD" start="20261014024200 +0530" stop="20261014034800 +0530">
-    <title lang="en">Oru Chiri Iru Chiri Bumper Chiri</title>
-    <desc lang="en">Skilled participants take the stage to perform a series of hilarious skits to entertain the audience and the judges to win prizes.</desc>
-    <credits>
-      <actor>Karthik Surya</actor>
-      <actor>Manju Pillai</actor>
-      <actor>Sabumon Abdusamad</actor>
-      <actor>Naseer Sankranthi</actor>
-      <actor>Mallika Sukumaran</actor>
-      <producer>Satheesh Kumar</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Comedy</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29600715_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E256</episode-num>
-  </programme>
   <programme channel="MazhavilManorama.in@SD" start="20261014034800 +0530" stop="20261014041000 +0530">
     <title lang="en">Oru Chiri Iru Chiri Bumper Chiri Special</title>
     <desc lang="en">Skilled participants take the stage to perform various comedy skits to entertain the audience and the judges to win prizes.</desc>
@@ -67713,16 +67643,6 @@ Interviews with the cast and filmmakers of The Weight, Monster: The LIzzie Borde
     <category lang="en">Music</category>
     <category lang="en">Special</category>
     <icon src="https://jrsy.tmsimg.com/assets/p25597324_i_h9_aa.jpg" />
-  </programme>
-  <programme channel="NationalGeographicWild.in@SD" start="20261014030000 +0530" stop="20261014034500 +0530">
-    <title lang="en">Cobra Mafia</title>
-    <desc lang="en">The host presents the behavioural and physical features of the king cobras, forest cobras, white cobras and the Indo-Chinese spitting cobras, highlighting their geographical presence.</desc>
-    <credits>
-      <producer>Vanessa Lucas</producer>
-    </credits>
-    <category lang="en">Documentary</category>
-    <category lang="en">Factual Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p11634143_b_h9_aj.jpg?lock=880x660" />
   </programme>
   <programme channel="NationalGeographicWild.in@SD" start="20261014034500 +0530" stop="20261014042900 +0530">
     <title lang="en">Animal Fight Club</title>
@@ -77680,17 +77600,6 @@ Bringing the best in television.</desc>
     <category lang="en">Comedy</category>
     <icon src="https://dtil.tmsimg.com/assets/p33328200_v_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="Pogo.in@SD" start="20261014033600 +0530" stop="20261014034800 +0530">
-    <title lang="en">Smaashhing Simmba</title>
-    <desc lang="en">Simmba, an honest and courageous police officer, teams up with his fearless colleagues in his mission to confront and defeat the evil forces of society.</desc>
-    <credits>
-      <actor>Abhishek Dutta</actor>
-      <producer>Rohit Shetty</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p23765022_b_h9_ab.jpg?lock=880x660" />
-  </programme>
   <programme channel="Pogo.in@SD" start="20261014034800 +0530" stop="20261014040000 +0530">
     <title lang="en">Smaashhing Simmba</title>
     <desc lang="en">Simmba, an honest and courageous police officer, teams up with his fearless colleagues in his mission to confront and defeat the evil forces of society.</desc>
@@ -78092,13 +78001,6 @@ Bringing the best in television.</desc>
     <category lang="en">Children</category>
     <category lang="en">Animation</category>
     <icon src="https://dtil.tmsimg.com/assets/p16326968_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="Pop.uk" start="20261013215000 +0000" stop="20261013221500 +0000">
-    <title lang="en">Dragon Ball Super</title>
-    <desc lang="en">Goku and Beerus have a duel on King Kai's planet.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261014032000/list/ZEEPOPDragonBallSuper20567309e95bdb4bc774f0cb455f6c6b97f4161.jpg" />
   </programme>
   <programme channel="Pop.uk" start="20261013221500 +0000" stop="20261013224100 +0000">
     <title lang="en">Dragon Ball Super</title>
@@ -88616,12 +88518,6 @@ Bringing the best in television.</desc>
     <category>Comedy</category>
     <icon src="https://dtil.tmsimg.com/assets/p29697152_b_h8_ac.jpg?lock=1280x720" />
   </programme>
-  <programme channel="SkySportsFootball.ie" start="20261013220000 +0000" stop="20261013221500 +0000">
-    <title lang="en">EFL Greatest Games</title>
-    <sub-title lang="en">Gillingham v Manchester City</sub-title>
-    <desc lang="en">Gillingham v Manchester City. A chance to see highlights of the 1998/99 Second Division play-off final from Wembley Stadium.</desc>
-    <icon src="https://tv.assets.pressassociation.io/297312aa-9e45-5ae1-a0df-9db039d9c4f7.jpg" />
-  </programme>
   <programme channel="SkySportsFootball.ie" start="20261013221500 +0000" stop="20261013223000 +0000">
     <title lang="en">EFL Greatest Games</title>
     <sub-title lang="en">Bolton Wanderers v Watford from 1998/99</sub-title>
@@ -95001,41 +94897,6 @@ Bringing the best in television.</desc>
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p33652289_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E47</episode-num>
-  </programme>
-  <programme channel="SonyPix.in" start="20261014014200 +0530" stop="20261014034500 +0530">
-    <title lang="en">The Equalizer</title>
-    <desc lang="en">Robert McCall gives up violence and wishes to lead a quiet life. However, brutal events force him to take up the fight for justice once again.</desc>
-    <credits>
-      <actor>Denzel Washington</actor>
-      <actor>Marton Csokas</actor>
-      <actor>Chloë Grace Moretz</actor>
-      <actor>David Harbour</actor>
-      <actor>Bill Pullman</actor>
-      <actor>Melissa Leo</actor>
-      <actor>Haley Bennett</actor>
-      <actor>David Meunier</actor>
-      <actor>Johnny Skourtis</actor>
-      <actor>Alex Veadov</actor>
-      <actor>Vladimir Kulich</actor>
-      <actor>E. Roger Mitchell</actor>
-      <actor>James Wilcox</actor>
-      <actor>Mike O'Dea</actor>
-      <actor>Anastasia Sanidopoulos Mousis</actor>
-      <actor>Allen Maldonado</actor>
-      <actor>Rhet Kidd</actor>
-      <director>Antoine Fuqua</director>
-      <producer>Todd Black</producer>
-      <producer>Jason Blumenthal</producer>
-      <producer>Denzel Washington</producer>
-      <producer>Alex Siskin</producer>
-      <producer>Steve Tisch</producer>
-      <producer>Mace Neufeld</producer>
-      <producer>Tony Eldridge</producer>
-      <producer>Michael Sloan</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Thriller</category>
-    <icon src="https://dtil.tmsimg.com/assets/p10549100_v_h9_ac.jpg?lock=880x660" />
   </programme>
   <programme channel="SonyPix.in" start="20261014034500 +0530" stop="20261014052300 +0530">
     <title lang="en">Charlie's Angels: Full Throttle</title>
@@ -110311,14 +110172,6 @@ Bringing the best in television.</desc>
       <value>PG</value>
     </rating>
   </programme>
-  <programme start="20261014033500 +0530" stop="20261014034700 +0530" channel="ThalaaTV.in">
-    <title>Idhaya Vaasal </title>
-    <sub-title>THALAA TV | TAMIL</sub-title>
-    <desc>Aravind falls for Vaani, but her parents? disapproval sparks a fight for their love.</desc>
-    <category>Drama</category>
-    <language>TAMIL</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/THALAA%20TV/POSTER/Idhaya%20Vaasal.png" />
-  </programme>
   <programme start="20261014034700 +0530" stop="20261014035900 +0530" channel="ThalaaTV.in">
     <title>Idhaya Vaasal </title>
     <sub-title>THALAA TV | TAMIL</sub-title>
@@ -125079,14 +124932,6 @@ Startling new leaks have thrust the Roswell saga back into the spotlight.</desc>
     <category lang="en">Action</category>
     <icon src="https://dtil.tmsimg.com/assets/p17650237_v_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="ZeeKannada.in@SD" start="20261014030000 +0530" stop="20261014034400 +0530">
-    <title lang="en">Aaradhane</title>
-    <desc lang="en">A religious leader performs sacred rituals and worships the idol of a Hindu deity while chanting holy hymns to seek divine blessings.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Religious</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29095128_b_h9_ab.jpg?lock=880x660" />
-    <episode-num system="onscreen">S2 E5</episode-num>
-  </programme>
   <programme channel="ZeeKannada.in@SD" start="20261014034400 +0530" stop="20261014040000 +0530">
     <title lang="en">Filler</title>
     <desc lang="en">Bringing the best in television.</desc>
@@ -127058,31 +126903,6 @@ Startling new leaks have thrust the Roswell saga back into the spotlight.</desc>
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p15797529_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E2</episode-num>
-  </programme>
-  <programme channel="ZooMoo.sg" start="20261013220000 +0000" stop="20261013221500 +0000">
-    <title lang="en">Jelly Jamm</title>
-    <sub-title lang="en">Color de diversión</sub-title>
-    <date>2012</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Fantasy</category>
-    <category lang="en">Comedy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p8795823_b_h8_ah.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S1 E41</episode-num>
-    <previously-shown />
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVY</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
   </programme>
   <programme channel="ZooMoo.sg" start="20261013221500 +0000" stop="20261013223000 +0000">
     <title lang="en">Jelly Jamm</title>
@@ -151397,26 +151217,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261014034200 +0530" stop="20261014034400 +0530" channel="custom.duck.tv">
-    <title>Panni and Fanni</title>
-    <desc>Two happy fairies wave their wands and turn a boring shape into a pair of unique drawings.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/e0b4c6ae0e327b21f2d22680decb7777.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261014034400 +0530" stop="20261014034800 +0530" channel="custom.duck.tv">
-    <title>The World of Animals</title>
-    <desc>The presenter helps children learn about animals and understand the difference between domestic and wild animals.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f04243de7b0a9cd4db5720975fe264bd.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261014034800 +0530" stop="20261014035200 +0530" channel="custom.duck.tv">
