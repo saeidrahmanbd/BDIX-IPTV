@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-10-14 04:59 UTC**_
+_Last generated: **2026-10-14 05:08 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -11,15 +11,15 @@ _Last generated: **2026-10-14 04:59 UTC**_
 | India | **285** |
 | Backup Streams | **346** |
 | Local Logos | **93.1%** |
-| EPG Programme Coverage | **79.6%** |
-| EPG Mapping | **82.9%** |
+| EPG Programme Coverage | **0%** |
+| EPG Mapping | **0%** |
 | Stream Health Tested | **940** |
-| Stream Health Failures | **33** |
-| Persistent Failures | **32** |
+| Stream Health Failures | **35** |
+| Persistent Failures | **30** |
 | Near-Duplicate URL Families | **0** |
 | Audit Blocking Issues | **69** |
 | Pre-Publish Gate | **BLOCK** |
-| Pre-Publish Gate Generated | **2026-10-14T04:58:48+00:00** |
+| Pre-Publish Gate Generated | **2026-10-14T05:08:16+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -42,23 +42,23 @@ _Last generated: **2026-10-14 04:59 UTC**_
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## EPG
-- Indian channels audited: **299**
-- Mapped: **248 (82.9%)**
-- Current/future programme coverage: **238/299 (79.6%)**
-- No mapping: **51**
+- Indian channels audited: **0**
+- Mapped: **0 (0%)**
+- Current/future programme coverage: **0/0 (0%)**
+- No mapping: **0**
 - Publication remains subject to source-policy approval.
 
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-14T04:58:48.755053+00:00** |
-| EPG coverage | **2026-10-14T04:58:12+00:00** |
-| Stream health | **2026-10-14T04:59:22+00:00** |
-| Pre-publish gate | **2026-10-14T04:58:48+00:00** |
+| Playlist audit | **2026-10-14T05:08:16.703811+00:00** |
+| EPG coverage | **2026-10-14T05:07:40+00:00** |
+| Stream health | **2026-10-14T05:08:50+00:00** |
+| Pre-publish gate | **2026-10-14T05:08:16+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
 - Latest entries change: **940 → 940**
-- Latest health failures: **39 → 33**
+- Latest health failures: **33 → 35**
 
 Historical records are retained in reports/maintenance-history.json.

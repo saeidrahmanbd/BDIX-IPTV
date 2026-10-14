@@ -1,95 +1,96 @@
 # Stream Health Report
 
-Generated: **2026-10-14T04:59:22+00:00**
+Generated: **2026-10-14T05:08:50+00:00**
 
 Non-destructive connectivity check. A successful HTTP response confirms reachability of the stream endpoint, not guaranteed video/audio playback.
 
 ## Summary
 
 - Streams tested: **940**
-- Reachable: **907**
-- Failed this check: **33**
-- Persistent failures (3+ consecutive): **32**
-- Intermittent failures: **1**
+- Reachable: **905**
+- Failed this check: **35**
+- Persistent failures (3+ consecutive): **30**
+- Intermittent failures: **5**
 - Primary tested: **594**
 - Backup tested: **346**
 
 ## Failure Classification
 
 - HTTP 401/403 (auth): **4**
-- HTTP 404 (not found): **2**
+- HTTP 404 (not found): **5**
 - HTTP 5xx (server): **7**
-- Timeout: **20**
+- TLS: **1**
+- Timeout: **18**
 ## Persistent Failures
 
-- **Channel 1** — Backup — consecutive failures: **10** — Timeout
-- **Channel 16** — Backup — consecutive failures: **16** — Timeout
-- **Channel S** — Backup — consecutive failures: **10** — Timeout
-- **Channel S** — Backup — consecutive failures: **10** — Timeout
-- **Disney Channel India** — Backup — consecutive failures: **14** — HTTP 403
-- **Ekhon TV** — Backup — consecutive failures: **10** — Timeout
-- **G TV** — Backup — consecutive failures: **10** — Timeout
-- **G TV** — Backup — consecutive failures: **10** — Timeout
-- **Goldmines Bollywood** — Backup — consecutive failures: **12** — HTTP 404
-- **Goldmines Movies** — Backup — consecutive failures: **16** — HTTP 404
-- **Movie Bangla** — Backup — consecutive failures: **10** — Timeout
-- **Movie Bangla** — Backup — consecutive failures: **10** — Timeout
-- **My TV** — Backup — consecutive failures: **10** — Timeout
-- **RTV** — Backup — consecutive failures: **10** — Timeout
-- **SA TV** — Backup — consecutive failures: **10** — Timeout
-- **SA TV** — Backup — consecutive failures: **10** — Timeout
-- **Ananda TV** — Bangladesh — consecutive failures: **11** — Timeout
-- **Green TV** — Bangladesh — consecutive failures: **10** — Timeout
-- **Assam Talks** — Indian Entertainment — consecutive failures: **148** — HTTP 403
-- **AXN Black Czech Republic** — International — consecutive failures: **43** — HTTP 503
-- **AXN CEE** — International — consecutive failures: **43** — HTTP 503
-- **FilmBox** — International — consecutive failures: **16** — Timeout
-- **HBO** — International — consecutive failures: **136** — HTTP 403
-- **Music Box Classic** — International — consecutive failures: **43** — HTTP 503
-- **Music Box Dance** — International — consecutive failures: **43** — HTTP 503
-- **Music Box Hits** — International — consecutive failures: **43** — HTTP 503
-- **Music Box Sexy** — International — consecutive failures: **43** — HTTP 503
-- **ETV Bal Bharat** — Kids — consecutive failures: **340** — Timeout
-- **Minimax** — Kids — consecutive failures: **43** — HTTP 503
-- **Teen Nick** — Kids — consecutive failures: **14** — HTTP 403
-- **Islamic TV** — Religious — consecutive failures: **10** — Timeout
-- **Makkah Live** — Religious — consecutive failures: **10** — Timeout
+- **Channel 1** — Backup — consecutive failures: **12** — Timeout
+- **Channel 16** — Backup — consecutive failures: **18** — Timeout
+- **Channel S** — Backup — consecutive failures: **12** — Timeout
+- **Channel S** — Backup — consecutive failures: **12** — Timeout
+- **Disney Channel India** — Backup — consecutive failures: **16** — HTTP 403
+- **Ekhon TV** — Backup — consecutive failures: **12** — Timeout
+- **G TV** — Backup — consecutive failures: **12** — Timeout
+- **G TV** — Backup — consecutive failures: **12** — Timeout
+- **Goldmines Bollywood** — Backup — consecutive failures: **14** — HTTP 404
+- **Movie Bangla** — Backup — consecutive failures: **12** — Timeout
+- **Movie Bangla** — Backup — consecutive failures: **12** — Timeout
+- **My TV** — Backup — consecutive failures: **12** — Timeout
+- **RTV** — Backup — consecutive failures: **12** — Timeout
+- **SA TV** — Backup — consecutive failures: **12** — Timeout
+- **SA TV** — Backup — consecutive failures: **12** — Timeout
+- **Ananda TV** — Bangladesh — consecutive failures: **13** — Timeout
+- **Green TV** — Bangladesh — consecutive failures: **12** — Timeout
+- **Assam Talks** — Indian Entertainment — consecutive failures: **150** — HTTP 403
+- **AXN Black Czech Republic** — International — consecutive failures: **45** — HTTP 503
+- **AXN CEE** — International — consecutive failures: **45** — HTTP 503
+- **HBO** — International — consecutive failures: **138** — HTTP 403
+- **Music Box Classic** — International — consecutive failures: **45** — HTTP 503
+- **Music Box Dance** — International — consecutive failures: **45** — HTTP 503
+- **Music Box Hits** — International — consecutive failures: **45** — HTTP 503
+- **Music Box Sexy** — International — consecutive failures: **45** — HTTP 503
+- **ETV Bal Bharat** — Kids — consecutive failures: **342** — Timeout
+- **Minimax** — Kids — consecutive failures: **45** — HTTP 503
+- **Teen Nick** — Kids — consecutive failures: **16** — HTTP 403
+- **Islamic TV** — Religious — consecutive failures: **12** — Timeout
+- **Makkah Live** — Religious — consecutive failures: **12** — Timeout
 
 ## Failed This Check
 
-- **Channel 1** — Backup — streak 10 — Timeout
-- **Channel 16** — Backup — streak 16 — Timeout
-- **Channel S** — Backup — streak 10 — Timeout
-- **Channel S** — Backup — streak 10 — Timeout
-- **Disney Channel India** — Backup — streak 14 — HTTP 403
-- **Ekhon TV** — Backup — streak 10 — Timeout
-- **G TV** — Backup — streak 10 — Timeout
-- **G TV** — Backup — streak 10 — Timeout
-- **Goldmines Bollywood** — Backup — streak 12 — HTTP 404
-- **Goldmines Movies** — Backup — streak 16 — HTTP 404
-- **Movie Bangla** — Backup — streak 10 — Timeout
-- **Movie Bangla** — Backup — streak 10 — Timeout
-- **My TV** — Backup — streak 10 — Timeout
-- **RTV** — Backup — streak 10 — Timeout
-- **SA TV** — Backup — streak 10 — Timeout
-- **SA TV** — Backup — streak 10 — Timeout
-- **Ananda TV** — Bangladesh — streak 11 — Timeout
-- **Green TV** — Bangladesh — streak 10 — Timeout
-- **Assam Talks** — Indian Entertainment — streak 148 — HTTP 403
-- **AXN Black Czech Republic** — International — streak 43 — HTTP 503
-- **AXN CEE** — International — streak 43 — HTTP 503
-- **FilmBox** — International — streak 16 — Timeout
-- **HBO** — International — streak 136 — HTTP 403
-- **Music Box Classic** — International — streak 43 — HTTP 503
-- **Music Box Dance** — International — streak 43 — HTTP 503
-- **Music Box Hits** — International — streak 43 — HTTP 503
-- **Music Box Sexy** — International — streak 43 — HTTP 503
-- **ETV Bal Bharat** — Kids — streak 340 — Timeout
-- **Minimax** — Kids — streak 43 — HTTP 503
-- **Teen Nick** — Kids — streak 14 — HTTP 403
-- **Islamic TV** — Religious — streak 10 — Timeout
-- **Makkah Live** — Religious — streak 10 — Timeout
-- **Sony Sports Ten 3** — Sports — streak 1 — Timeout
+- **Balle Balle** — Backup — streak 1 — HTTP 404
+- **Channel 1** — Backup — streak 12 — Timeout
+- **Channel 16** — Backup — streak 18 — Timeout
+- **Channel S** — Backup — streak 12 — Timeout
+- **Channel S** — Backup — streak 12 — Timeout
+- **Disney Channel India** — Backup — streak 16 — HTTP 403
+- **Ekhon TV** — Backup — streak 12 — Timeout
+- **G TV** — Backup — streak 12 — Timeout
+- **G TV** — Backup — streak 12 — Timeout
+- **Goldmines Bollywood** — Backup — streak 14 — HTTP 404
+- **ME TV** — Backup — streak 1 — HTTP 404
+- **ME TV** — Backup — streak 1 — HTTP 404
+- **ME TV** — Backup — streak 1 — HTTP 404
+- **Movie Bangla** — Backup — streak 12 — Timeout
+- **Movie Bangla** — Backup — streak 12 — Timeout
+- **My TV** — Backup — streak 12 — Timeout
+- **RTV** — Backup — streak 12 — Timeout
+- **SA TV** — Backup — streak 12 — Timeout
+- **SA TV** — Backup — streak 12 — Timeout
+- **Ananda TV** — Bangladesh — streak 13 — Timeout
+- **Green TV** — Bangladesh — streak 12 — Timeout
+- **Assam Talks** — Indian Entertainment — streak 150 — HTTP 403
+- **AXN Black Czech Republic** — International — streak 45 — HTTP 503
+- **AXN CEE** — International — streak 45 — HTTP 503
+- **FON Music** — International — streak 1 — TLS
+- **HBO** — International — streak 138 — HTTP 403
+- **Music Box Classic** — International — streak 45 — HTTP 503
+- **Music Box Dance** — International — streak 45 — HTTP 503
+- **Music Box Hits** — International — streak 45 — HTTP 503
+- **Music Box Sexy** — International — streak 45 — HTTP 503
+- **ETV Bal Bharat** — Kids — streak 342 — Timeout
+- **Minimax** — Kids — streak 45 — HTTP 503
+- **Teen Nick** — Kids — streak 16 — HTTP 403
+- **Islamic TV** — Religious — streak 12 — Timeout
+- **Makkah Live** — Religious — streak 12 — Timeout
 
 ## Near-Duplicate URL Families
 
