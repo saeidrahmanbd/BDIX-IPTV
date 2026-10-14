@@ -45795,17 +45795,6 @@ From Merchants Bank Field at Memorial Stadium in Bloomington, Ind.</desc>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800011-20261019223600/list/GreatMoviesTheWrongBabysitter215136769cb0e09efb341b19d12b083422309cb.jpg" />
   </programme>
-  <programme channel="GREATromance.uk" start="20261013220000 +0000" stop="20261013225500 +0000">
-    <title lang="en">Christmas in Evergreen</title>
-    <desc lang="en">Christmas romance starring Ashley Williams. In the magical town of Evergreen, will a wish upon a snow globe bring Allie her perfect Christmas - even if it's not with who she expected.</desc>
-    <date>2017</date>
-    <category lang="en">Movie</category>
-    <category lang="en">Romance</category>
-    <icon src="https://images.metadata.sky.com/pd-image/49518b45-18d5-4436-b12d-5d7d094f955a/16-9" />
-    <rating system="UK">
-      <value>PG</value>
-    </rating>
-  </programme>
   <programme channel="GREATromance.uk" start="20261013225500 +0000" stop="20261013235000 +0000">
     <title lang="en">Christmas Wedding Planner</title>
     <desc lang="en">Romantic drama with Jocelyn Hudon. A woman is hired to plan her cousin's elaborate wedding, and things are going perfectly - until a handsome stranger arrives asking questions about the groom.</desc>
@@ -51141,18 +51130,6 @@ Christian religious leaders teach about Jesus and his various teachings on love,
     <category lang="en-GB">178</category>
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/26ca5ba8c0cdb4512eb5e2c3d3a66498.jpg" />
     <episode-num system="onscreen">E26</episode-num>
-    <premiere />
-  </programme>
-  <programme start="20261014035800 +0530" stop="20261014041900 +0530" channel="HistoryTV18.in@SD">
-    <title lang="en-GB">Counting Cars</title>
-    <sub-title lang="en-GB">Danny relies on his team to complete the job in just a week, as he is forced to give up his prized 1972 Monte Carlo for one of his biggest clients. Later, Danny looks at a 1948 Olds</sub-title>
-    <desc lang="en-GB">Danny Koker and his crew are fans of the coolest American cars and are involved in the restoration and modification of classic cars and bikes.</desc>
-    <credits>
-      <actor>Danny Koker,Kevin Mack,Mike \"Horny\" Henry,Ryan Evans,Shannon Aikau,Scott Jones</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/7909df8766dbcc4b3ffc1929a6a7c8be.jpg" />
-    <episode-num system="onscreen">E13</episode-num>
     <premiere />
   </programme>
   <programme start="20261014041900 +0530" stop="20261014044000 +0530" channel="HistoryTV18.in@SD">
@@ -95946,30 +95923,6 @@ Bringing the best in television.</desc>
     <icon src="https://dtil.tmsimg.com/assets/p11899458_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E3322</episode-num>
   </programme>
-  <programme channel="SonyKALHindi.us" start="20261013222500 +0000" stop="20261013224800 +0000">
-    <title lang="en">Taarak Mehta Ka Ooltah Chashmah</title>
-    <desc lang="en">The residents of a housing society help each other find solutions when they face common real-life challenges and get involved in sticky situations.</desc>
-    <credits>
-      <actor>Dilip Joshi</actor>
-      <actor>Nitish Bhaluni</actor>
-      <actor>Amit Bhatt</actor>
-      <director>Dharmesh Mehta</director>
-      <director>Harshad Joshi</director>
-    </credits>
-    <date>2008</date>
-    <category lang="en">Sitcom</category>
-    <icon src="http://dtil.tmsimg.com/assets/p12557899_b_h11_ad.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-  </programme>
   <programme channel="SonyKALHindi.us" start="20261013224800 +0000" stop="20261013231300 +0000">
     <title lang="en">Aladdin naam toh suna hoga</title>
     <desc lang="en">Aladdin, a poor thief, stumbles upon a mysterious magical lamp which contains a Genie; however, he realizes that an evil sorcerer, Jafar, also covets the lamp in order to rule over Baghdad.</desc>
@@ -111300,16 +111253,6 @@ Bringing the best in television.</desc>
     <category lang="en">Magazine Programme</category>
     <icon src="https://dtil.tmsimg.com/assets/p18771049_b_h9_af.jpg?lock=880x660" />
   </programme>
-  <programme start="20261014025900 +0530" stop="20261014041900 +0530" channel="StingrayDJAZZ.ca@SD">
-    <title>'The Divine One' in 1958 - Sarah Vaughan, Richard Davis, Ronnell Bright and Art Morgan</title>
-    <desc>Renditions of songs by Harold Arlen, Leonard Bernstein, Johnny Burke, the Gershwins, and Stephen Sondheim are pure diva magic.</desc>
-    <category>Special</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/7e790e81571a3c8957728318ce03a511.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261014041900 +0530" stop="20261014042900 +0530" channel="StingrayDJAZZ.ca@SD">
     <title>Jazzmeia Horn at Malta Jazz Festival</title>
     <desc>Vocalist Jazzmeia Horn's 2019 Malta Jazz Festival appearance; a celebration of jazz's future, infused with the soul of its past.</desc>
@@ -116404,14 +116347,6 @@ Bringing the best in television.</desc>
       <value>NA</value>
     </rating>
   </programme>
-  <programme start="20261014041000 +0530" stop="20261014042300 +0530" channel="ThalaaTV.in">
-    <title>Melmaruvathur Arputhangal</title>
-    <sub-title>THALAA TV | TAMIL</sub-title>
-    <desc>Devotee Marimuthu seeks Goddess Devi?s help to save his sister Karpagam from possession.</desc>
-    <category>Family</category>
-    <language>TAMIL</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/THALAA%20TV/POSTER/Melmaruvathur%20Arputhangal.png" />
-  </programme>
   <programme start="20261014042300 +0530" stop="20261014043500 +0530" channel="ThalaaTV.in">
     <title>Melmaruvathur Arputhangal</title>
     <sub-title>THALAA TV | TAMIL</sub-title>
@@ -118439,32 +118374,6 @@ Bringing the best in television.</desc>
     <rating>
       <value>3</value>
     </rating>
-  </programme>
-  <programme start="20261013220200 +0000" stop="20261013225600 +0000" channel="TheWalkingDeadUniverse.us">
-    <category lang="en">Drama</category>
-    <category lang="en">Horror</category>
-    <category lang="en">Science fiction</category>
-    <category lang="en">Series</category>
-    <credits>
-      <actor>Norman Reedus</actor>
-      <actor>Melissa McBride</actor>
-      <actor>Lauren Cohan</actor>
-      <actor>Josh McDermitt</actor>
-      <actor>Christian Serratos</actor>
-      <actor>Seth Gilliam</actor>
-      <actor>Ross Marquand</actor>
-      <actor>Jeffrey Dean Morgan</actor>
-      <actor>Khary Payton</actor>
-      <actor>Callan McAuliffe</actor>
-      <actor>Eleanor Matsuura</actor>
-      <actor>Cooper Andrews</actor>
-    </credits>
-    <desc lang="en">S02 E07 — Pretty Much Dead Already
-Secrets are told and revealed; Hershel refuses to acknowledge the world's new reality; Andrea comes out of her shell; everything is food for something.</desc>
-    <episode-num>S02 E07</episode-num>
-    <icon src="https://iptv-epg.org/images/71MT1JAwlYsG0I8jGbTV3rA4Kp1qyn9-3WdvxUPOQ3gwjpEapMMEkuF1W-7zVtBuydCZT2ae0gaIIomYA9XOaP3y0RcevDyMtOE0L60SPWU" />
-    <previously-shown />
-    <title lang="en">The Walking Dead</title>
   </programme>
   <programme start="20261013225600 +0000" stop="20261013235000 +0000" channel="TheWalkingDeadUniverse.us">
     <category lang="en">Drama</category>
@@ -122261,13 +122170,6 @@ A close look at Negan and the lives of the Saviors during the conflict through a
     <icon src="https://iptv-epg.org/images/71MT1JAwlYsG0I8jGbTV3rA4Kp1qyn9-3WdvxUPOQ3gwjpEapMMEkuF1W-7zVtBuydCZT2ae0gaIIomYA9XOaP3y0RcevDyMtOE0L60SPWU" />
     <previously-shown />
     <title lang="en">The Walking Dead</title>
-  </programme>
-  <programme channel="TinyPop.uk" start="20261013224300 +0000" stop="20261013225300 +0000">
-    <title lang="en">Masha And The Bear</title>
-    <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261014041300/list/TinyPOPMashaAndTheBear205699616d23ac4cee94e5c92452886d3e7a338.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261013225300 +0000" stop="20261013230200 +0000">
     <title lang="en">Masha And The Bear</title>
@@ -126405,14 +126307,6 @@ A close look at Negan and the lives of the Saviors during the conflict through a
     <category>Kids</category>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261018235800/list/TinyPOPTHEHIVE215154840e2fe0b82f149b5a8342002d97b5fc0.jpg" />
-  </programme>
-  <programme start="20261014040500 +0530" stop="20261014042200 +0530" channel="TollyTV.in">
-    <title>Bhagavanthuda</title>
-    <sub-title>TOLLY TV | TELUGU</sub-title>
-    <desc>A cop battles the system and his enemies to emerge victorious.</desc>
-    <category>Movies</category>
-    <language>TELUGU</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/TOLLY%20TV/IMAGES/Bhagavanthuda.png" />
   </programme>
   <programme start="20261014042200 +0530" stop="20261014043500 +0530" channel="TollyTV.in">
     <title>ATM</title>
@@ -145769,17 +145663,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
     <episode-num system="onscreen">E4</episode-num>
     <premiere />
   </programme>
-  <programme start="20261014034000 +0530" stop="20261014042000 +0530" channel="custom.bdix.sony">
-    <title>Best of Crime Patrol - Crime Patrol Dial 100</title>
-    <desc>A compilation of some of the most spine-chilling cases from 'Crime Patrol Dial 100', which investigates murders, kidnappings and thefts among other heinous crimes.</desc>
-    <category>Crime</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/1fcbd4b9d02e11d2426544ade19bd2e9.jpg?width=700" />
-    <episode-num system="onscreen">948</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261014042000 +0530" stop="20261014054000 +0530" channel="custom.bdix.sony">
     <title>Crime Patrol</title>
     <desc>The host presents dramatised re-enactments of real-life crime cases that revolve around harassment, kidnapping and murder.</desc>
@@ -160997,49 +160880,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261014041400 +0530" stop="20261014041700 +0530" channel="custom.duck.tv">
-    <title>Safari</title>
-    <desc>Exploring the wild and wonderful world of animals with the help of lively visuals and music.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/dd9be9b86e3841ebc4d0e3c174aaefed.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261014041700 +0530" stop="20261014042000 +0530" channel="custom.duck.tv">
-    <title>Vehicles</title>
-    <desc>A team of animated vehicles springs to life and assists in exploring different modes of travel. They help young children to improve their creativity and foster imaginative and developmental skills.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/6af111ddc9f125f817ee0e4108a8023a.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261014042000 +0530" stop="20261014042200 +0530" channel="custom.duck.tv">
-    <title>Doll Team to The Rescue</title>
-    <desc>Bell the doll always lends a helping hand to everyone in the forest, and she is supported by Lilo the bear and Fido the kangaroo in her efforts.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/2547d91b7ec4ea417c3338f4ec8e5225.jpg?width=700" />
-    <credits>
-      <director>Roza Györffy</director>
-    </credits>
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261014042200 +0530" stop="20261014042500 +0530" channel="custom.duck.tv">
-    <title>Hop-hop</title>
-    <desc>An adorable family of rabbits helps toddlers develop their motor and processing skills in a fun and entertaining manner.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/0161bcfa2a3feda62b3f93170b214478.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261014042500 +0530" stop="20261014042700 +0530" channel="custom.duck.tv">
     <title>Hop-hop</title>
     <desc>An adorable family of rabbits helps toddlers develop their motor and processing skills in a fun and entertaining manner.</desc>
@@ -172550,84 +172390,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
     <icon src="https://images.metadata.sky.com/pd-image/ebeecf2e-88c5-495c-9526-4b116ae5763d/16-9" />
     <episode-num system="xmltv_ns">4.4.</episode-num>
   </programme>
-  <programme channel="custom.hbo.2" start="20261013201300 +0000" stop="20261013225200 +0000">
-    <title lang="en">Eyes Wide Shut</title>
-    <desc lang="en">After Dr. Bill Hartford's (Tom Cruise) wife, Alice (Nicole Kidman), admits to having sexual fantasies about a man she met, Bill becomes obsessed with having a sexual encounter. He discovers an underground sexual group and attends one of their meetings -- and quickly discovers that he is in over his head.</desc>
-    <credits>
-      <actor>Tom Cruise</actor>
-      <actor>Nicole Kidman</actor>
-      <actor>Sydney Pollack</actor>
-      <director>Stanley Kubrick</director>
-    </credits>
-    <date>1999</date>
-    <category lang="en">Movie</category>
-    <category lang="en">Drama</category>
-    <icon src="http://dtil.tmsimg.com/assets/p23544_v_h8_aj.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Motion Picture Association">
-      <value>R</value>
-    </rating>
-    <rating system="Alberta's Film Classification Board">
-      <value>18A</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>C</value>
-    </rating>
-    <rating system="British Board of Film Classification">
-      <value>18</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>18</value>
-    </rating>
-    <rating system="Ontario Film Authority">
-      <value>R</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>16</value>
-    </rating>
-    <rating system="UK Content Provider">
-      <value>18</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>R 18+</value>
-    </rating>
-    <rating system="Ministero della Cultura">
-      <value>VM14</value>
-    </rating>
-    <rating system="Arcom">
-      <value>-10</value>
-    </rating>
-    <rating system="Medietilsynet">
-      <value>15 år</value>
-    </rating>
-    <rating system="Instituto Nacional de Cine y Artes Audiovisuales">
-      <value>SAM 18</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>K16</value>
-    </rating>
-    <rating system="Statens medieråd">
-      <value>Från 15 år</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>13+</value>
-    </rating>
-    <rating system="映倫">
-      <value>R18+</value>
-    </rating>
-    <rating system="Medierådet">
-      <value>15</value>
-    </rating>
-    <rating system="영상물등급위원회">
-      <value>18+</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>12</value>
-    </rating>
-    <star-rating system="TMS">
-      <value>6.0/10</value>
-    </star-rating>
-  </programme>
   <programme channel="custom.hbo.2" start="20261013225200 +0000" stop="20261013234700 +0000">
     <title lang="en">War</title>
     <sub-title lang="en">No More Nasty Surprises</sub-title>
@@ -181239,47 +181001,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
     <category lang="en">TV Show</category>
     <category lang="en">Variety Show</category>
     <icon src="https://dtil.tmsimg.com/assets/p27494736_b_h9_ad.jpg?lock=880x660" />
-  </programme>
-  <programme channel="custom.teennick" start="20261013222100 +0000" stop="20261013224800 +0000">
-    <title lang="en">The Thundermans</title>
-    <sub-title lang="en">Doppel-Gamers</sub-title>
-    <desc lang="en">Max and Phoebe realize they have been neglecting their younger siblings when Billy and Nora bond with an outgoing pair of teens at a gamer's convention.</desc>
-    <credits>
-      <actor>Kira Kosarin</actor>
-      <actor>Jack Griffo</actor>
-      <actor>Rosa Blasi</actor>
-    </credits>
-    <date>2015</date>
-    <category lang="en">Series</category>
-    <category lang="en">Children</category>
-    <category lang="en">Sitcom</category>
-    <icon src="http://dtil.tmsimg.com/assets/p10259786_b_h8_av.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S3 E7</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>7</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>0</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>6</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>A10</value>
-    </rating>
   </programme>
   <programme channel="custom.teennick" start="20261013224800 +0000" stop="20261013231500 +0000">
     <title lang="en">The Thundermans</title>
