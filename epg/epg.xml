@@ -11113,12 +11113,6 @@
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p29327717_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme start="20261014000000 +0100" stop="20261014003500 +0100" channel="AlistiqamaTV.om">
-    <title lang="en">Imam Nafea Reading</title>
-    <desc lang="en">Religion Imam Nafie recites the Holy Qur'anic verses to help Muslims improve their daily lives. Moaaz Safwat Salem.</desc>
-    <category lang="en">Show</category>
-    <icon src="https://sat.tv/wp-content/themes/twentytwenty-child/data_lineups/nilesat/images3/epg-222742.jpg" />
-  </programme>
   <programme start="20261014003500 +0100" stop="20261014010000 +0100" channel="AlistiqamaTV.om">
     <title lang="en">Fiqh</title>
     <desc lang="en">Religion Discussion to educate Muslims about Islamic jurisprudence throughout the different day-to-day aspects of life, explaining the rights and responsibilities of individuals in Islam.</desc>
@@ -14187,11 +14181,6 @@
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014025900 +0530" stop="20261014050900 +0530" channel="B4UKadak.in@SD">
-    <title lang="en">Baat Ban Gayi</title>
-    <category lang="en">Hindi</category>
-    <category lang="en">Film</category>
   </programme>
   <programme start="20261014050900 +0530" stop="20261014074800 +0530" channel="B4UKadak.in@SD">
     <title lang="en">Karishma Kudrat Ka</title>
@@ -22632,15 +22621,6 @@ Join Hogi and Forest as they become doctors and heal their friends!</desc>
     <category>Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p29740219_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme start="20261013230700 +0000" stop="20261013233400 +0000" channel="Choppertown.us">
-    <category lang="en">Food + Home + Culture</category>
-    <date>2011</date>
-    <desc lang="en">S8 E21 — New Truck Day
-The new truck arrives, fueling the growing feud between Team Lou and Team Matt.</desc>
-    <episode-num>S8 E21</episode-num>
-    <icon src="https://iptv-epg.org/images/R4LWUq0s9gJIU-eVvgw40r90-qXpr6QKtRIdfr0YHDFKtUFP8x_9ejq80NGHB6ap64BNzZJwVf2KM_ueP1HgWxE5qFSmGJsg6e-cOxMO26o3a6N9xkcunArrq8odV4e0yNCdpio6oc5g__RAFJdt1JdV_QR8XyeQybBdblIEwQ1zVH-0Dmcil6WaMhowL-Iu3lG5TPRwx-U1AbYP7OZb6Xzpy7hW" />
-    <title lang="en">Operation Repo</title>
-  </programme>
   <programme start="20261013233400 +0000" stop="20261014000000 +0000" channel="Choppertown.us">
     <category lang="en">Food + Home + Culture</category>
     <date>2011</date>
@@ -28291,13 +28271,6 @@ Lou, Sonia, and Froy have to push away a debtor while trying to push a classic c
     <category lang="en">Film</category>
     <category lang="en">Action</category>
     <icon src="https://dtil.tmsimg.com/assets/p14472997_v_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="ColorsCineplexBollywood.in@SD" start="20261014043700 +0530" stop="20261014050500 +0530">
-    <title>Filler</title>
-    <desc>Bringing the best in television.</desc>
-    <category>TV Show</category>
-    <category>Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28139681_b_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="ColorsCineplexBollywood.in@SD" start="20261014050500 +0530" stop="20261014081700 +0530">
     <title>Mann</title>
@@ -66897,22 +66870,6 @@ Christian religious leaders teach about Jesus and his various teachings on love,
     <desc>Miracle Venom explores the strange, and often bizarre world of the oceans most venomous animals. Follow Dr. Glen Burns as he handles deadly Sea Snakes with only his bare hands.</desc>
     <icon src="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/IN_USQO570425A_905944714_3_20250225T155033452Z_72_imageprocessorclient-tvplus-linear-b76dd9bbb-slcx2.jpeg" />
   </programme>
-  <programme start="20261014043200 +0530" stop="20261014051300 +0530" channel="InTravel.in@HD">
-    <title>Car &amp; Country Quest</title>
-    <desc>The hosts team up for a thrilling journey around the world, discovering remarkable places and unforgettable driving experiences.</desc>
-    <category>Auto</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/2bfca126da0c93e6cfbee949cd0e11d7.jpg?width=700" />
-    <credits>
-      <actor>Deepak Narendran</actor>
-      <actor>Freddie Hunt</actor>
-      <actor>Ashique Thahir</actor>
-    </credits>
-    <episode-num system="onscreen">6</episode-num>
-    <rating>
-      <value>TVPG</value>
-    </rating>
-  </programme>
   <programme start="20261014051300 +0530" stop="20261014061200 +0530" channel="InTravel.in@HD">
     <title>Beyond the Beaten Path</title>
     <desc>From walking over the Himalayas to visit the King of the Forbidden Kingdom of Manthang, to taking reindeer sleighs across the Arctic, the brothers will take you on unforgettable adventures.</desc>
@@ -92849,94 +92806,6 @@ Interviews with the cast and filmmakers of The Weight, Monster: The LIzzie Borde
     <icon src="https://iptv-epg.org/images/WuJ7ZnDXxZpMcQxg4ioZc7p3vr8cwhnz4gShFdyAK_3bLqmrY-IMTYeR-tvQckeMLpA776kmot3v3Xqf_-UkyOisSoADQbrHtwI2hpvvIJs" />
     <title lang="en">The Best of Enemies</title>
   </programme>
-  <programme channel="MovieSphereGold.us" start="20261013213100 +0000" stop="20261013234400 +0000">
-    <title lang="en">Lucky Number Slevin</title>
-    <desc lang="en">A case of mistaken identity puts a man named Slevin (Josh Hartnett) in the middle of a war between two rival New York crime lords: The Rabbi (Ben Kingsley) and the Boss (Morgan Freeman). While under the watchful eyes of Detective Brikowski (Stanley Tucci) and well-known assassin Goodkat (Bruce Willis), Slevin must quickly devise a plan to save his skin before his luck runs out.</desc>
-    <credits>
-      <actor>Josh Hartnett</actor>
-      <actor>Morgan Freeman</actor>
-      <actor>Ben Kingsley</actor>
-      <director>Paul McGuigan</director>
-    </credits>
-    <date>2006</date>
-    <category lang="en">Movie</category>
-    <category lang="en">Crime drama</category>
-    <category lang="en">Thriller</category>
-    <icon src="http://dtil.tmsimg.com/assets/p159527_v_h10_al.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Motion Picture Association">
-      <value>R</value>
-    </rating>
-    <rating system="Ontario Film Authority">
-      <value>18A</value>
-    </rating>
-    <rating system="B.C. Film Classification Office">
-      <value>18A</value>
-    </rating>
-    <rating system="Saskatchewan Film and Video Classification Board">
-      <value>18A</value>
-    </rating>
-    <rating system="Alberta's Film Classification Board">
-      <value>18A</value>
-    </rating>
-    <rating system="Manitoba Film Classification Board">
-      <value>18A</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>13+</value>
-    </rating>
-    <rating system="British Board of Film Classification">
-      <value>18</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>16</value>
-    </rating>
-    <rating system="UK Content Provider">
-      <value>18</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>16</value>
-    </rating>
-    <rating system="Ministero della Cultura">
-      <value>T</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>K16</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>18</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>C</value>
-    </rating>
-    <rating system="Statens medieråd">
-      <value>Från 15 år</value>
-    </rating>
-    <rating system="映倫">
-      <value>R15+</value>
-    </rating>
-    <rating system="Medietilsynet">
-      <value>15 år</value>
-    </rating>
-    <rating system="Medierådet">
-      <value>15</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>MA 15+</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>16</value>
-    </rating>
-    <rating system="Instituto Nacional de Cine y Artes Audiovisuales">
-      <value>SAM 16</value>
-    </rating>
-    <rating system="영상물등급위원회">
-      <value>18+</value>
-    </rating>
-    <star-rating system="TMS">
-      <value>5.0/10</value>
-    </star-rating>
-  </programme>
   <programme channel="MovieSphereGold.us" start="20261013234400 +0000" stop="20261014013400 +0000">
     <title lang="en">Catch .44</title>
     <desc lang="en">The plan of three women (Malin Akerman, Nikki Reed, Deborah Ann Woll) to intercept a drug shipment for their boss (Bruce Willis) goes horribly wrong.</desc>
@@ -96217,17 +96086,6 @@ Interviews with the cast and filmmakers of The Weight, Monster: The LIzzie Borde
     <title>Aaja Nachle</title>
     <desc>Aaja Nachle</desc>
     <icon src="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/IN_USQO570425A_544325218_0_20240709T052800515Z_140.png" />
-  </programme>
-  <programme start="20261013224300 +0000" stop="20261013234200 +0000" channel="Mythbusters.us">
-    <title lang="en">MythBusters</title>
-    <sub-title lang="en">Battle Of The Sexes</sub-title>
-    <desc lang="en">In this controversial episode, the Mythbusters pit Men against Women in the ultimate Battle of the Sexes. Get set for all-out war as the team tests five age-old gender-based cliches.</desc>
-    <category lang="en">Special Interest</category>
-    <icon src="https://www.fetchtv.com.au/v2/epg/program/171247/image/334x188" />
-    <episode-num system="onscreen">S10 E5</episode-num>
-    <rating system="AU">
-      <value>M</value>
-    </rating>
   </programme>
   <programme start="20261013234200 +0000" stop="20261014004100 +0000" channel="Mythbusters.us">
     <title lang="en">MythBusters</title>
@@ -111308,13 +111166,6 @@ Bringing the best in television.</desc>
     <category lang="en">Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p29030724_b_h9_ab.jpg?lock=880x660" />
   </programme>
-  <programme channel="Pop.uk" start="20261013232100 +0000" stop="20261013233500 +0000">
-    <title lang="en">Bakugan</title>
-    <desc lang="en">In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261014045100/list/ZEEPOPBakugan208744660224c5a94f145f08722d25b42bae447.jpg" />
-  </programme>
   <programme channel="Pop.uk" start="20261013233500 +0000" stop="20261013234800 +0000">
     <title lang="en">Bakugan</title>
     <desc lang="en">In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
@@ -119488,14 +119339,6 @@ Bringing the best in television.</desc>
     <category lang="en">Documentary</category>
     <category lang="en">Others</category>
     <icon src="https://dtil.tmsimg.com/assets/p28931985_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme start="20261014042700 +0530" stop="20261014051400 +0530" channel="RedBullTV.at@EUMENA">
-    <title lang="en-GB">Chumbo: Made for Big Wave Surfing</title>
-    <desc lang="en-GB">Getting a glimpse into surfer Lucas Chianca's incredible life as the Brazilian waterman balances chasing heavy waves around the world with his biggest challenge yet, becoming a father for the first time.</desc>
-    <category lang="en-GB">82</category>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/07d3e4cbea51b4b2ef76da7c29bd646d.jpg" />
-    <premiere />
   </programme>
   <programme start="20261014051400 +0530" stop="20261014061500 +0530" channel="RedBullTV.at@EUMENA">
     <title lang="en-GB">Castles in the Sky</title>
@@ -130666,34 +130509,6 @@ Bringing the best in television.</desc>
     <category lang="en">Comedy</category>
     <icon src="https://dtil.tmsimg.com/assets/p11899458_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E3322</episode-num>
-  </programme>
-  <programme channel="SonyKALHindi.us" start="20261013231300 +0000" stop="20261013233900 +0000">
-    <title lang="en">Baal Veer</title>
-    <desc lang="en">Following the magical adventures of Baal Veer in fairyland.</desc>
-    <credits>
-      <actor>Dev Joshi</actor>
-      <actor>Anushka Sen</actor>
-      <actor>Rudra Soni</actor>
-      <director>Sanjay Satvase</director>
-      <director>Kushal Awasthi</director>
-      <director>Ambare P Sachin</director>
-      <director>Amarpreet G.S. Chhabra</director>
-      <director>Vijay Saini</director>
-      <director>Nilesh Ambekar</director>
-    </credits>
-    <date>2012</date>
-    <category lang="en">Fantasy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p30034978_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
   </programme>
   <programme channel="SonyKALHindi.us" start="20261013233900 +0000" stop="20261014000500 +0000">
     <title lang="en">Baal Veer</title>
@@ -152726,14 +152541,6 @@ Bringing the best in television.</desc>
       <value>NA</value>
     </rating>
   </programme>
-  <programme start="20261014050000 +0530" stop="20261014051200 +0530" channel="ThalaaTV.in">
-    <title>Melmaruvathur Arputhangal</title>
-    <sub-title>THALAA TV | TAMIL</sub-title>
-    <desc>Devotee Marimuthu seeks Goddess Devi?s help to save his sister Karpagam from possession.</desc>
-    <category>Family</category>
-    <language>TAMIL</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/THALAA%20TV/POSTER/Melmaruvathur%20Arputhangal.png" />
-  </programme>
   <programme start="20261014051200 +0530" stop="20261014052400 +0530" channel="ThalaaTV.in">
     <title>Melmaruvathur Arputhangal</title>
     <sub-title>THALAA TV | TAMIL</sub-title>
@@ -158962,13 +158769,6 @@ A close look at Negan and the lives of the Saviors during the conflict through a
     <previously-shown />
     <title lang="en">The Walking Dead</title>
   </programme>
-  <programme channel="TinyPop.uk" start="20261013233000 +0000" stop="20261013234000 +0000">
-    <title lang="en">Masha And The Bear</title>
-    <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261014050000/list/TinyPOPMashaAndTheBear2056996c7c0a9568e4b405b9db6864e6c4a816d.jpg" />
-  </programme>
   <programme channel="TinyPop.uk" start="20261013234000 +0000" stop="20261013234900 +0000">
     <title lang="en">Masha And The Bear</title>
     <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
@@ -163070,14 +162870,6 @@ A close look at Negan and the lives of the Saviors during the conflict through a
     <category>Kids</category>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261018235800/list/TinyPOPTHEHIVE215154840e2fe0b82f149b5a8342002d97b5fc0.jpg" />
-  </programme>
-  <programme start="20261014045900 +0530" stop="20261014051200 +0530" channel="TollyTV.in">
-    <title>ATM</title>
-    <sub-title>TOLLY TV | TELUGU</sub-title>
-    <desc>IBI MD Menon hires sharp investigator Felix after ACP Harris fails to stop ATM robberies.</desc>
-    <category>Movies</category>
-    <language>TELUGU</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/TOLLY%20TV/IMAGES/ATM.png" />
   </programme>
   <programme start="20261014051200 +0530" stop="20261014052400 +0530" channel="TollyTV.in">
     <title>ATM</title>
@@ -191065,14 +190857,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261014042700 +0530" stop="20261014051400 +0530" channel="custom.bdix.redbulltv">
-    <title lang="en-GB">Chumbo: Made for Big Wave Surfing</title>
-    <desc lang="en-GB">Getting a glimpse into surfer Lucas Chianca's incredible life as the Brazilian waterman balances chasing heavy waves around the world with his biggest challenge yet, becoming a father for the first time.</desc>
-    <category lang="en-GB">82</category>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/07d3e4cbea51b4b2ef76da7c29bd646d.jpg" />
-    <premiere />
-  </programme>
   <programme start="20261014051400 +0530" stop="20261014061500 +0530" channel="custom.bdix.redbulltv">
     <title lang="en-GB">Castles in the Sky</title>
     <desc lang="en-GB">This film was shot in five countries for more than three years. It's a documentary that gathers top surfers during insane adventures. As soon as they get on a plane, they have the whole world to explore.</desc>
@@ -208475,36 +208259,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261014050300 +0530" stop="20261014050800 +0530" channel="custom.duck.tv">
-    <title>Albert Explains</title>
-    <desc>Professor Albert sheds light on the different functions of regular objects and their multiple applications and systems.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/5fd5352163e709800503bd9d04cefe1a.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261014050800 +0530" stop="20261014051100 +0530" channel="custom.duck.tv">
-    <title>Monica and Rudy 2</title>
-    <desc>Monica and her yellow pet bird Rudy delve into the world of rhythms and enjoy learning new things and seeing new sights.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/434191cab5dc9877d73989d0fe13c32f.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261014051100 +0530" stop="20261014051500 +0530" channel="custom.duck.tv">
-    <title>Panni and Fanni</title>
-    <desc>Two happy fairies wave their wands and turn a boring shape into a pair of unique drawings.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/e0b4c6ae0e327b21f2d22680decb7777.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261014051500 +0530" stop="20261014051800 +0530" channel="custom.duck.tv">
     <title>Train</title>
     <desc>A cheerful train, guided by a diligent conductor, takes passengers to their destination. Together, they create a fun and adventurous experience for every journey.</desc>
@@ -219827,23 +219581,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
     <category lang="en">Cooking</category>
     <icon src="https://images.metadata.sky.com/pd-image/ebeecf2e-88c5-495c-9526-4b116ae5763d/16-9" />
     <episode-num system="xmltv_ns">4.4.</episode-num>
-  </programme>
-  <programme channel="custom.hbo" start="20261013221500 +0000" stop="20261013234000 +0000">
-    <title lang="en">A Christmas Mystery</title>
-    <desc lang="en">A group of intrepid kids sets out to solve the case of a town's stolen Christmas treasure in this engaging holiday family caper.</desc>
-    <credits>
-      <actor>Violet Mcgraw</actor>
-      <actor>Eddie Cibrian</actor>
-      <actor>Christoph Sanders</actor>
-      <director>Alex Ranarivelo</director>
-    </credits>
-    <date>2022</date>
-    <category lang="en">Movies</category>
-    <category lang="en">Comedy</category>
-    <icon src="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch115_160_115" />
-    <rating system="MPAA">
-      <value>PG</value>
-    </rating>
   </programme>
   <programme channel="custom.hbo" start="20261013234000 +0000" stop="20261014013000 +0000">
     <title lang="en">Green Lantern</title>
@@ -232762,50 +232499,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
     <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/93a7bdbcb5acefc63ce3b62d2df97a5c.jpg?width=700" />
     <rating>
       <value>U</value>
-    </rating>
-  </programme>
-  <programme channel="custom.teennick" start="20261013231500 +0000" stop="20261013234200 +0000">
-    <title lang="en">The Thundermans</title>
-    <sub-title lang="en">Crime After Crime</sub-title>
-    <desc lang="en">Hank starts a neighborhood watch group; Max takes the blame for mysterious crimes to hide his secret.</desc>
-    <credits>
-      <actor>Kira Kosarin</actor>
-      <actor>Jack Griffo</actor>
-      <actor>Rosa Blasi</actor>
-    </credits>
-    <date>2014</date>
-    <category lang="en">Series</category>
-    <category lang="en">Children</category>
-    <category lang="en">Sitcom</category>
-    <icon src="http://dtil.tmsimg.com/assets/p10259787_b_h8_aa.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S1 E10</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>0</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>7</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>6</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>A10</value>
     </rating>
   </programme>
   <programme channel="custom.teennick" start="20261013234200 +0000" stop="20261014000900 +0000">
