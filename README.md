@@ -91,6 +91,8 @@ Other players (VLC, TiviMate, IPTV Smarters, Kodi, etc.) work the same way — a
 
 ## 🖥️ Playlist Studio
 
+![Playlist Studio 5.0](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/assets/Playlist%20Studio%205.0.png)
+
 [**Playlist Studio 5.0**](https://github.com/saeidrahmanbd/Playlist-Studio) is a separate, portable Windows playlist manager, editor and player.
 
 - 📂 **M3U / M3U8** playlists, compatible **Xtream Codes** and **Stalker Portal** connections
