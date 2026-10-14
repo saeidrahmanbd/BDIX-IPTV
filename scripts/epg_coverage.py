@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Build and continuously improve EPG mappings from public XMLTV sources."""
-import csv, gzip, io, json, re, urllib.request
+import csv, gzip, io, json, re, unicodedata, urllib.request
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
@@ -55,6 +55,29 @@ SOURCES = [
     "https://avkb.short.gy/epg.xml.gz", "https://avkb.short.gy/jioepg.xml.gz", "https://avkb.short.gy/tsepg.xml.gz",
     "https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml", "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
     "https://www.open-epg.com/files/unitedkingdom.xml.gz", "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz", "https://iptv-epg.org/files/epg-us.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_CZ1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_DO1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_GR1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_HK1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_HU1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_MX1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_SA2.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_BEIN1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
 ]
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 def attrs(s): return dict(ATTR_RE.findall(s))
@@ -75,6 +98,39 @@ def parse_stamp(value):
 PLAYLISTS = [Path("IPTV-Playlist.m3u"), Path("BDIX-Playlist.m3u")]
 INACTIVE_GROUPS = {"Backup", "Test", "Not Playing", "New Backup", "New Channels"}
 
+def playlist_records(path):
+    """Return M3U entries with stream URLs and parsed identity fields."""
+    if not path.exists():
+        return []
+    records = []
+    current = None
+    for line in path.read_text(encoding="utf-8-sig").splitlines():
+        if line.startswith("#EXTINF:"):
+            a = attrs(line)
+            current = {
+                "tvg_id": a.get("tvg-id", "").strip(),
+                "name": a.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip(),
+                "group": a.get("group-title", "").strip(),
+                "country": a.get("tvg-country", "").strip().upper(),
+            }
+        elif current and line.strip().startswith(("http://", "https://")):
+            current["url"] = line.strip()
+            records.append(current)
+            current = None
+    return records
+
+
+def header_status(path):
+    """Check a playlist's declared XMLTV reference against the published guide URL."""
+    if not path.exists():
+        return "MISSING PLAYLIST"
+    header = next((line for line in path.read_text(encoding="utf-8-sig").splitlines() if line.startswith("#EXTM3U")), "")
+    refs = re.findall(r'(?:url-tvg|x-tvg-url)="([^"]+)"', header)
+    if not refs:
+        return "MISSING EPG HEADER"
+    return "OK" if all(url == EPG_PUBLIC_URL for url in refs) else "MISMATCH"
+
+
 def parse_playlist():
     combined = {}
     for playlist_path in PLAYLISTS:
@@ -91,25 +147,57 @@ def parse_playlist():
                 cur = None
     return sorted(combined.values(), key=lambda x: (x["group"], x["name"].lower(), x["tvg_id"]))
 
+def is_english_text_element(elem):
+    """Match the generator's English-title policy when measuring EPG coverage."""
+    text = (elem.text or "").strip()
+    if not text:
+        return True
+    lang = (elem.attrib.get("{http://www.w3.org/XML/1998/namespace}lang") or elem.attrib.get("lang") or "").strip().lower()
+    if lang and not (lang == "en" or lang == "eng" or lang.startswith("en-") or lang.startswith("en_")):
+        return False
+    for char in text:
+        if unicodedata.category(char).startswith("L") and "LATIN" not in unicodedata.name(char, ""):
+            return False
+    return True
+
+
 def fetch_source(url):
     req = urllib.request.Request(url, headers={"User-Agent": "BDIX-IPTV-EPG-Maintenance/4.0", "Accept": "application/xml,text/xml,application/gzip,*/*"})
-    with urllib.request.urlopen(req, timeout=45) as r: data = r.read()
-    if url.endswith(".gz") or data[:2] == b"\x1f\x8b": data = gzip.decompress(data)
-    ids=set(); future=set(); counts=defaultdict(int); names=defaultdict(set); now=datetime.now(timezone.utc)
+    with urllib.request.urlopen(req, timeout=45) as r:
+        data = r.read()
+    if url.endswith(".gz") or data[:2] == b"\x1f\x8b":
+        data = gzip.decompress(data)
+    ids = set()
+    future = set()
+    counts = defaultdict(int)
+    names = defaultdict(set)
+    now = datetime.now(timezone.utc)
+    lower = now - timedelta(hours=6)
+    upper = now + timedelta(days=7)
     for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):
         if elem.tag == "channel":
-            cid=elem.attrib.get("id","").strip()
+            cid = elem.attrib.get("id", "").strip()
             if cid:
                 ids.add(cid)
                 for dn in elem.findall("display-name"):
-                    if dn.text: names[norm_name(dn.text)].add(cid)
-        elif elem.tag == "programme":
-            cid=elem.attrib.get("channel","").strip()
-            if cid:
-                counts[cid]+=1; st=parse_stamp(elem.attrib.get("start","")); sp=parse_stamp(elem.attrib.get("stop",""))
-                if (st and st>=now) or (st and sp and st<=now<=sp) or (sp and sp>=now): future.add(cid)
+                    if dn.text:
+                        names[norm_name(dn.text)].add(cid)
             elem.clear()
-    return ids,future,counts,names
+        elif elem.tag == "programme":
+            cid = elem.attrib.get("channel", "").strip()
+            start = parse_stamp(elem.attrib.get("start", ""))
+            stop = parse_stamp(elem.attrib.get("stop", "")) if elem.attrib.get("stop") else None
+            title = elem.find("title")
+            if (
+                cid and start and stop and stop > start
+                and start <= upper and stop >= lower
+                and title is not None and is_english_text_element(title)
+            ):
+                counts[cid] += 1
+                if stop >= now:
+                    future.add(cid)
+            elem.clear()
+    return ids, future, counts, names
 
 def load_previous():
     out={}
@@ -128,7 +216,7 @@ def main():
             source_data.append((set(),set(),defaultdict(int),defaultdict(set))); source_status.append((src,"FAILED",0,0,0,str(exc)[:220]))
     rows=[]
     for ch in channels:
-        candidates=[]; prev=previous.get(ch["tvg_id"],{}); locked_ids=EPG_LOCKS.get(ch["tvg_id"]); is_bangladesh=ch["group"].strip()=="Bangladesh"
+        candidates=[]; prev=previous.get(ch["tvg_id"],{}); locked_ids=EPG_LOCKS.get(ch["tvg_id"]); is_bangladesh=(ch["group"].strip()=="Bangladesh" or bool(re.search(r"\.bd(?:@|$)", ch["tvg_id"], re.I)))
         if locked_ids: candidates=list(dict.fromkeys(x.strip() for x in locked_ids if x.strip()))
         elif is_bangladesh: candidates=[]
         else:
@@ -167,24 +255,168 @@ def main():
     with MAPPING.open("w",encoding="utf-8",newline="") as fh:
         w=csv.DictWriter(fh,fieldnames=["group","channel","tvg_id","epg_id","source","status","note"]); w.writeheader(); w.writerows(sorted(rows,key=lambda r:(r["group"],r["channel"])))
 
-    india=[r for r in rows if r["group"].startswith("Indian")]; mapped=[r for r in india if r["epg_id"]]; live=[r for r in india if r["status"]=="MAPPED"]; no_hit=[r for r in india if r["status"]=="NO_GUIDE_HIT"]
-    lines=["# EPG Coverage & Mapping Report","",f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**","","The automation maps playlist identities to available public XMLTV IDs, preserves previously verified mappings, and reports current/future programme coverage.",f"The published XMLTV guide is **{EPG_PUBLISHED_PATH.as_posix()}**, generated from this same mapping and referenced by the playlist header via **url-tvg** and **x-tvg-url**.","","## Coverage Summary","",f"- Active Indian channels audited: **{len(india)}**",f"- Channels with an EPG mapping: **{len(mapped)}**",f"- Current/future programme coverage: **{len(live)}/{len(india)} ({round(len(live)/len(india)*100,1) if india else 0}%)**",f"- No guide mapping found: **{len(no_hit)}**","","## Source Status",""]
-    for src,status,ids,future,programmes,error in source_status: lines.append(f"- **{status}** — {src} — {ids} channel IDs; {future} current/future IDs; {programmes} programme rows"+(f"; {error}" if error else ""))
-    lines += ["","## Channels Requiring Attention","","| Group | Channel | Playlist ID | EPG ID | Status |","|---|---|---|---|---|"]
-    for r in sorted([x for x in india if x["status"]!="MAPPED"],key=lambda z:(z["status"],z["channel"])): lines.append(f'| {r["group"]} | {r["channel"]} | {r["tvg_id"]} | {r["epg_id"] or "-"} | {r["status"]} |')
+    group_summary = defaultdict(lambda: {"active": 0, "mapped": 0, "live": 0, "unmapped": 0})
+    for row in rows:
+        stats = group_summary[row["group"]]
+        stats["active"] += 1
+        stats["mapped"] += bool(row["epg_id"])
+        stats["live"] += row["status"] == "MAPPED"
+        stats["unmapped"] += not bool(row["epg_id"])
 
-    REPORT.parent.mkdir(parents=True,exist_ok=True)
-    if EPG_PUBLISHED_PATH.exists() and EPG_PUBLISHED_PATH.stat().st_size>0:
-        try:
-            guide_root=ET.parse(EPG_PUBLISHED_PATH).getroot(); guide_channels={c.attrib.get("id","").strip() for c in guide_root.findall("channel") if c.attrib.get("id","").strip()}; mapped_targets={r["epg_id"] for r in rows if r["epg_id"]}; guide_live=set(); now_guide=datetime.now(timezone.utc)
-            for prog in guide_root.findall("programme"):
-                cid=prog.attrib.get("channel","").strip(); start=parse_stamp(prog.attrib.get("start","")); stop=parse_stamp(prog.attrib.get("stop","")) if prog.attrib.get("stop") else None
-                if cid and start and (start>=now_guide or (stop and start<=now_guide<=stop) or (stop and stop>=now_guide)): guide_live.add(cid)
-            header=next((line for line in PLAYLIST.read_text(encoding="utf-8-sig").splitlines() if line.startswith("#EXTM3U")),""); refs=re.findall(r'(?:url-tvg|x-tvg-url)="([^"]+)"',header); expected=EPG_PUBLIC_URL
-            present_ids=mapped_targets & guide_channels; live_ids=mapped_targets & guide_live; missing=sorted(mapped_targets-guide_channels); without_live=sorted((mapped_targets&guide_channels)-guide_live)
-            lines += ["","## Published Guide Validation","",f"- Published guide path: **{EPG_PUBLISHED_PATH}**",f"- Playlist EPG references: **{'OK' if refs and all(u==expected for u in refs) else 'MISMATCH'}**",f"- Guide channel IDs published: **{len(guide_channels)}**",f"- Mapped playlist IDs present in guide: **{len(present_ids)}/{len(mapped_targets)} ({round(len(present_ids)*100/len(mapped_targets),1) if mapped_targets else 0}%)**",f"- Mapped playlist IDs with current/future programmes: **{len(live_ids)}/{len(mapped_targets)} ({round(len(live_ids)*100/len(mapped_targets),1) if mapped_targets else 0}%)**",f"- Mapped IDs missing from the published XMLTV channel list: **{len(missing)}**","- IDs missing from guide: "+(", ".join(missing) if missing else "none"),f"- Mapped IDs with no current/future programmes: **{len(without_live)}**","- IDs without current/future programmes (first 30): "+(", ".join(without_live[:30]) if without_live else "none")]
-        except Exception as exc: lines += ["","## Published Guide Validation","",f"- Validation: **ERROR** — {str(exc)[:220]}"]
-    else: lines += ["","## Published Guide Validation","",f"- Validation: **ERROR** — {EPG_PUBLISHED_PATH} is missing or empty"]
-    REPORT.write_text("\n".join(lines)+"\n",encoding="utf-8")
+    total_active = len(rows)
+    total_mapped = sum(bool(r["epg_id"]) for r in rows)
+    total_live = sum(r["status"] == "MAPPED" for r in rows)
+    total_unmapped = sum(not bool(r["epg_id"]) for r in rows)
+    lines = [
+        "# EPG Coverage & Mapping Report",
+        "",
+        f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",
+        "",
+        "This report audits active unique channel identities across the playlist files in the repository. A source mapping is not counted as usable current/future coverage unless it has a valid programme interval and acceptable English-title data within the generator's -6-hour/+7-day window.",
+        f"The XMLTV guide is published at **{EPG_PUBLISHED_PATH.as_posix()}**. The published guide uses the playlist's tvg-id as the XMLTV channel ID, not the upstream provider's source ID.",
+        "",
+        "## Overall Coverage",
+        "",
+        f"- Active unique playlist channel IDs audited: **{total_active}**",
+        f"- IDs with an EPG source mapping: **{total_mapped}/{total_active} ({round(100*total_mapped/total_active,1) if total_active else 0}%)**",
+        f"- IDs with usable current/future English programme data: **{total_live}/{total_active} ({round(100*total_live/total_active,1) if total_active else 0}%)**",
+        f"- IDs with no EPG source mapping: **{total_unmapped}**",
+        "",
+        "## Coverage by Playlist Group",
+        "",
+        "| Group | Active IDs | Mapped IDs | Current/future | No mapping |",
+        "|---|---:|---:|---:|---:|",
+    ]
+    for group in sorted(group_summary):
+        s = group_summary[group]
+        lines.append(f"| {group} | {s['active']} | {s['mapped']} | {s['live']} | {s['unmapped']} |")
+
+    lines += ["", "## Source Status", ""]
+    for src, status, ids, future, programmes, error in source_status:
+        lines.append(
+            f"- **{status}** — {src} — {ids} channel IDs; {future} IDs with usable current/future programmes; {programmes} eligible English-title programme rows in the guide window"
+            + (f"; {error}" if error else "")
+        )
+
+    lines += [
+        "",
+        "## Channels Requiring Attention",
+        "",
+        "The table includes every active channel identity without usable current/future guide data, not only Indian channels. NO_GUIDE_HIT means no configured source could be matched; MAPPED_ID_ONLY means an identity was found but no usable schedule was available; MAPPED_NOT_CURRENTLY_FOUND means a retained mapping was not found in the currently configured feeds.",
+        "",
+        "| Group | Channel | Playlist ID | EPG source ID | Status |",
+        "|---|---|---|---|---|",
+    ]
+    for r in sorted([x for x in rows if x["status"] != "MAPPED"], key=lambda z: (z["group"], z["status"], z["channel"].lower())):
+        lines.append(f'| {r["group"]} | {r["channel"]} | {r["tvg_id"]} | {r["epg_id"] or "-"} | {r["status"]} |')
+
+    REPORT.parent.mkdir(parents=True, exist_ok=True)
+    guide_channels = set()
+    guide_live = set()
+    guide_programmes = 0
+    guide_error = ""
+    now_guide = datetime.now(timezone.utc)
+    lower_guide = now_guide - timedelta(hours=6)
+    upper_guide = now_guide + timedelta(days=7)
+    try:
+        if not EPG_PUBLISHED_PATH.exists() or EPG_PUBLISHED_PATH.stat().st_size == 0:
+            raise RuntimeError(f"{EPG_PUBLISHED_PATH} is missing or empty")
+        for _, elem in ET.iterparse(str(EPG_PUBLISHED_PATH), events=("end",)):
+            if elem.tag == "channel":
+                cid = elem.attrib.get("id", "").strip()
+                if cid:
+                    guide_channels.add(cid)
+                elem.clear()
+            elif elem.tag == "programme":
+                cid = elem.attrib.get("channel", "").strip()
+                start = parse_stamp(elem.attrib.get("start", ""))
+                stop = parse_stamp(elem.attrib.get("stop", "")) if elem.attrib.get("stop") else None
+                title = elem.find("title")
+                if (
+                    cid and start and stop and stop > start
+                    and start <= upper_guide and stop >= lower_guide
+                    and title is not None and is_english_text_element(title)
+                ):
+                    guide_programmes += 1
+                    if stop >= now_guide:
+                        guide_live.add(cid)
+                elem.clear()
+    except Exception as exc:
+        guide_error = str(exc)[:300]
+
+    active_ids = {r["tvg_id"] for r in rows if r["tvg_id"]}
+    mapped_targets = {r["tvg_id"] for r in rows if r["tvg_id"] and r["epg_id"]}
+    present_ids = mapped_targets & guide_channels
+    live_ids = mapped_targets & guide_live
+    active_present = active_ids & guide_channels
+    active_live = active_ids & guide_live
+    missing = sorted(mapped_targets - guide_channels)
+    without_live = sorted(present_ids - guide_live)
+    header_results = [(path, header_status(path)) for path in PLAYLISTS]
+    lines += [
+        "",
+        "## Published Guide Validation",
+        "",
+        f"- XMLTV channel IDs published: **{len(guide_channels)}**",
+        f"- Active playlist IDs present in the published guide: **{len(active_present)}/{len(active_ids)} ({round(100*len(active_present)/len(active_ids),1) if active_ids else 0}%)**",
+        f"- Active playlist IDs with usable current/future programmes: **{len(active_live)}/{len(active_ids)} ({round(100*len(active_live)/len(active_ids),1) if active_ids else 0}%)**",
+        f"- Mapped playlist IDs present in the guide: **{len(present_ids)}/{len(mapped_targets)} ({round(100*len(present_ids)/len(mapped_targets),1) if mapped_targets else 0}%)**",
+        f"- Mapped playlist IDs with usable current/future programmes: **{len(live_ids)}/{len(mapped_targets)} ({round(100*len(live_ids)/len(mapped_targets),1) if mapped_targets else 0}%)**",
+        f"- Eligible programme rows published in the guide window: **{guide_programmes}**",
+        f"- Mapped playlist IDs missing from the published XMLTV channel list: **{len(missing)}**",
+        "- Missing mapped playlist IDs: " + (", ".join(missing[:60]) if missing else "none") + (f" (and {len(missing)-60} more)" if len(missing) > 60 else ""),
+        f"- Published mapped IDs without usable current/future programmes: **{len(without_live)}**",
+        "- IDs without usable current/future programmes: " + (", ".join(without_live[:60]) if without_live else "none") + (f" (and {len(without_live)-60} more)" if len(without_live) > 60 else ""),
+    ]
+    if guide_error:
+        lines.append(f"- XMLTV validation error: **{guide_error}**")
+    lines += ["", "## Playlist EPG Headers", "", "| Playlist | Header status |", "|---|---|"]
+    for path, status in header_results:
+        lines.append(f"| {path.as_posix()} | {status} |")
+    REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    mapping_by_id = {r["tvg_id"]: r for r in rows if r["tvg_id"]}
+    report_lines = [
+        "# EPG Audit — Published Playlists",
+        "",
+        f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",
+        "",
+        "This report measures the two M3U files currently published at the repository root. The historic filename epg-three-playlist-audit.md is retained for link compatibility; it does not mean a third playlist file exists.",
+        "",
+        "| Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---|",
+    ]
+    for path in PLAYLISTS:
+        records = playlist_records(path)
+        active_for_file = [x for x in records if x["tvg_id"] and x["group"] not in INACTIVE_GROUPS]
+        active_for_file_ids = {x["tvg_id"] for x in active_for_file}
+        mapped_for_file = {cid for cid in active_for_file_ids if mapping_by_id.get(cid, {}).get("epg_id")}
+        current_for_file = {cid for cid in active_for_file_ids if mapping_by_id.get(cid, {}).get("status") == "MAPPED"}
+        present_for_file = active_for_file_ids & guide_channels
+        live_for_file = active_for_file_ids & guide_live
+        no_map = len(active_for_file_ids - mapped_for_file)
+        status = header_status(path)
+        report_lines.append(
+            f"| {path.name} | {len(records)} | {len(active_for_file_ids)} | {len(mapped_for_file)} | {len(current_for_file)} | {len(present_for_file)} | {len(live_for_file)} | {no_map} | {status} |"
+        )
+
+    report_lines += ["", "## Group coverage", "", "| Group | Active unique IDs | Mapped IDs | Current/future source schedules | No mapping |", "|---|---:|---:|---:|---:|"]
+    for group in sorted(group_summary):
+        s = group_summary[group]
+        report_lines.append(f"| {group} | {s['active']} | {s['mapped']} | {s['live']} | {s['unmapped']} |")
+    report_lines += [
+        "",
+        "## Interpretation",
+        "",
+        "- Mapped IDs means a playlist identity was connected to a source XMLTV ID.",
+        "- Current/future source schedules means source data contains eligible English-title programmes inside the generator's -6-hour/+7-day window.",
+        "- IDs in published guide and IDs with published schedules are verified against XMLTV using the playlist's tvg-id identities; these counts are not source-provider IDs.",
+        "- Domestic Bangladesh channels are not fuzzy-matched to similarly named Indian or foreign services. They remain unmapped until a trustworthy listing source or an exact explicit mapping can be verified.",
+        "",
+    ]
+    if guide_error:
+        report_lines += ["## Published XMLTV validation", "", "ERROR: " + guide_error, ""]
+    THREE_PLAYLIST_REPORT.parent.mkdir(parents=True, exist_ok=True)
+    THREE_PLAYLIST_REPORT.write_text("\n".join(report_lines), encoding="utf-8")
 
 if __name__=="__main__": main()
