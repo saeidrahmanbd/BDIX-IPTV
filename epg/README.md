@@ -24,7 +24,6 @@ The source list also includes the supplemental Samsung TV Plus India guide at `h
 - Keep each playlist's `tvg-id` unchanged. For a known channel represented by different IDs in separate playlists, add a narrow, documented alias in `scripts/epg_coverage.py`; do not merge identities based on a loose name match.
 - Candidate aliases are accepted only when one of the configured XMLTV sources contains the exact candidate ID. Catalogue IDs establish channel identity, not that a schedule is currently available.
 - Indian Bangla channels retain a single primary EPG source ID to reduce the risk of mixing schedules from different feeds.
-- The supplementary [StreamingTVGuides XMLTV feed](https://iptv-org.github.io/epg/sites/streamingtvguides.com/streamingtvguides.com.xml) is allowlisted only for `Circle.us`, `custom.epix.tv`, and `MBCDramaUSA.us`, matched against exact source catalogue identities. It is not used for domestic Bangladesh or Pakistan IDs based on a US-market channel name.
 - Do not infer Bangladesh channel schedules from similarly named Indian channels. Add local mappings only after confirming a genuine Bangladesh listing source.
 - Backup, Test, Not Playing, New Backup, and New Channels groups are excluded from active mapping coverage.
 - Mapping coverage is not stream-health coverage. `MAPPED` means at least one configured source has current/future programme data; it does not guarantee that the live stream works.

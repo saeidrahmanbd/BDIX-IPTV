@@ -32,9 +32,6 @@ EPG_ALIASES = {
     "tntsports2.uk": ["TNTSport2.uk", "TNTSports2.uk", "tntsports2.uk"], "tntsports3.uk": ["TNTSport3.uk", "TNTSports3.uk", "tntsports3.uk"],
     "tntsports4.uk": ["TNTSport4.uk", "TNTSports4.uk", "tntsports4.uk"], "skysportsmainevent.uk": ["SkySportsMainEvent.uk", "SkySpMainEvHD.uk", "SkySpMainEv.uk"],
     "skysportspremiereleague.uk": ["SkySportsPremierLeague.uk", "SkySp.PL.HD.uk", "SkySp.PL.uk"],
-    "Circle.us": ["CIRCLE"],
-    "custom.epix.tv": ["EPIXHD"],
-    "MBCDramaUSA.us": ["MBCDRHD"],
 }
 
 EPG_LOCKS = {
@@ -45,9 +42,6 @@ EPG_LOCKS = {
     # ATNBangla.bd or any other domestic Bangladesh identity.
     "ATNBanglaUK.uk": ["6753"],
 }
-
-STREAMINGTVGUIDES_SOURCE = "https://iptv-org.github.io/epg/sites/streamingtvguides.com/streamingtvguides.com.xml"
-STREAMINGTVGUIDES_ALLOWLIST = {"Circle.us", "custom.epix.tv", "MBCDramaUSA.us"}
 
 REPORT = Path("reports/epg-coverage.md")
 THREE_PLAYLIST_REPORT = Path("reports/epg-three-playlist-audit.md")
@@ -84,7 +78,6 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_BEIN1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
-    "https://iptv-org.github.io/epg/sites/streamingtvguides.com/streamingtvguides.com.xml",
 ]
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 def attrs(s): return dict(ATTR_RE.findall(s))
@@ -233,8 +226,6 @@ def main():
         normalized={norm_id(x) for x in candidates}; name_keys={norm_name(x) for x in ch.get("aliases",[ch["name"]]) if norm_name(x)}
         hits=[]; hit_sources=[]; total=0; live=False; best_live=[]
         for src,data in zip(SOURCES,source_data):
-            if src == STREAMINGTVGUIDES_SOURCE and ch["tvg_id"] not in STREAMINGTVGUIDES_ALLOWLIST:
-                continue
             ids,future,counts,names=data
             if is_bangladesh and not locked_ids: src_hits=[]
             else:
