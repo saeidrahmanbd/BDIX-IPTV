@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-10-14 09:33 UTC**_
+_Last generated: **2026-10-14 10:00 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -11,15 +11,15 @@ _Last generated: **2026-10-14 09:33 UTC**_
 | India | **285** |
 | Backup Streams | **346** |
 | Local Logos | **100.0%** |
-| EPG Programme Coverage | **61.1%** |
-| EPG Mapping | **65.3%** |
+| EPG Programme Coverage | **0.0%** |
+| EPG Mapping | **65.2%** |
 | Stream Health Tested | **940** |
-| Stream Health Failures | **90** |
+| Stream Health Failures | **99** |
 | Persistent Failures | **88** |
 | Near-Duplicate URL Families | **0** |
 | Audit Blocking Issues | **52** |
 | Pre-Publish Gate | **BLOCK** |
-| Pre-Publish Gate Generated | **2026-10-14T09:33:10+00:00** |
+| Pre-Publish Gate Generated | **2026-10-14T10:00:16+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -42,23 +42,23 @@ _Last generated: **2026-10-14 09:33 UTC**_
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## EPG
-- Active channel IDs audited: **648**
-- Mapped: **423 (65.3%)**
-- Current/future programme coverage: **396/648 (61.1%)**
+- Active channel IDs audited: **647**
+- Mapped: **422 (65.2%)**
+- Current/future programme coverage: **0/647 (0.0%)**
 - No mapping: **225**
 - Publication remains subject to source-policy approval.
 
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-14T09:33:10.336465+00:00** |
-| EPG coverage | **2026-10-14T09:32:42+00:00** |
-| Stream health | **2026-10-14T09:33:34+00:00** |
-| Pre-publish gate | **2026-10-14T09:33:10+00:00** |
+| Playlist audit | **2026-10-14T10:00:16.539094+00:00** |
+| EPG coverage | **2026-10-14T09:59:48+00:00** |
+| Stream health | **2026-10-14T10:00:42+00:00** |
+| Pre-publish gate | **2026-10-14T10:00:16+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
 - Latest entries change: **940 → 940**
-- Latest health failures: **97 → 90**
+- Latest health failures: **90 → 99**
 
 Historical records are retained in reports/maintenance-history.json.

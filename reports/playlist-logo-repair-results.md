@@ -1,6 +1,6 @@
 # Three-Playlist Logo Repair Results
 
-Run time: **2026-10-14 09:24 UTC**  
+Run time: **2026-10-14 09:53 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -17,7 +17,7 @@ Historical mapping index: loaded 336 historical name mappings
 | Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
 |---|---:|---|---|---|---|---|---|
 | IPTV-Playlist.m3u | 129 | Bangla Cinema | generated-fallback-bangla-cinema-ce3797ef.svg | bangla-cinema.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1089 | Teen Nick | generated-fallback-teen-nick-cf2a4a80.svg | teen-nick.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 1086 | Teen Nick | generated-fallback-teen-nick-cf2a4a80.svg | teen-nick.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 
 ## Quality rule
 

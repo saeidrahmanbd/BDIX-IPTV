@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-14T09:24:38.616852+00:00",
+  "generated_at_utc": "2026-10-14T09:53:23.671883+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -977,16 +977,6 @@
       "channel_name": "B4U Movies",
       "tvg_id": "B4UMovies.in@India",
       "channel_id": "B4UMovies.in@India",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "B4U Movies",
-      "tvg_id": "b4umovies.in@india",
-      "channel_id": "b4umovies.in@india",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png",
       "status": "needs_review",
       "source_url": "",
@@ -6338,6 +6328,16 @@
       "tvg_id": "B4UKadak.in@SD",
       "channel_id": "B4UKadak.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-kadak.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "B4U Movies",
+      "tvg_id": "B4UMovies.in@India",
+      "channel_id": "B4UMovies.in@India",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
