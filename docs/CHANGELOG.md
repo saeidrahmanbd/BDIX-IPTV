@@ -57,27 +57,5 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 
 ## 2026-10-14
 
-- 🗑️ **51 channel(s) removed**
-
-### Removed channels
-- ATN Music
-- BTV National
-- Rajdhani TV
-- Star News
-- Zee Bangla Sonar
-- &pictures
-- All Time Movies
-- Asianet Movies
-- NH BollyGold
-- Star Gold
-- Xplor
-- Zing
-- Manoranjan Grand
-- MTV India
-- Star Bharat
-- Geo News
-- Hum Masala
-- &Privé
-- Al Jazeera
-- AXN
+- No meaningful playlist changes detected.
 
