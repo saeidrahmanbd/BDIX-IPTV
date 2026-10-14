@@ -16,7 +16,7 @@ import time
 import unicodedata
 import urllib.parse
 
-import replace_generic_logos as source
+import logo_source_catalog as source
 
 ROOT = Path(".")
 LOGOS = Path("logos")
