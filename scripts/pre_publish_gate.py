@@ -86,5 +86,7 @@ def main():
     lines += ["","## Blocking Reasons"]+["- "+x for x in issues] if issues else ["","No blocking conditions detected."]
     R.parent.mkdir(parents=True,exist_ok=True); R.write_text("\n".join(lines)+"\n",encoding="utf-8")
     print("Pre-publish gate:",status)
+    for issue in issues:
+        print("Pre-publish blocking reason:", issue)
     if issues: sys.exit(1)
 if __name__=="__main__": main()

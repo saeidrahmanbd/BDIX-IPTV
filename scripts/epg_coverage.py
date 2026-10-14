@@ -473,6 +473,7 @@ def main():
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     guide_channels = set()
     guide_live = set()
+    guide_window = set()
     guide_programmes = 0
     guide_error = ""
     now_guide = datetime.now(timezone.utc)
@@ -499,6 +500,7 @@ def main():
                     and is_english_text_element(title)
                 ):
                     guide_programmes += 1
+                    guide_window.add(cid)
                     if stop >= now_guide:
                         guide_live.add(cid)
                 elem.clear()
@@ -511,10 +513,13 @@ def main():
     live_ids = mapped_targets & guide_live
     active_present = active_ids & guide_channels
     active_live = active_ids & guide_live
+    active_window = active_ids & guide_window
     missing = sorted(mapped_targets - guide_channels)
     without_live = sorted(present_ids - guide_live)
     source_live_ids = {r["tvg_id"] for r in rows if r["tvg_id"] and r["status"] == "MAPPED"}
-    source_live_without_publication = sorted(source_live_ids - active_live)
+    source_live_without_publication = sorted(source_live_ids - active_window)
+    published_window_without_source = sorted(active_window - source_live_ids)
+    source_live_without_current = sorted(source_live_ids - active_live)
     published_live_without_source = sorted(active_live - source_live_ids)
     channel_names = {r["tvg_id"]: r["channel"] for r in rows if r["tvg_id"]}
     header_results = [(path, header_status(path)) for path in PLAYLISTS]
@@ -525,8 +530,10 @@ def main():
         f"- XMLTV channel IDs published: **{len(guide_channels)}**",
         f"- Active playlist IDs present in the published guide: **{len(active_present)}/{len(active_ids)} ({round(100*len(active_present)/len(active_ids),1) if active_ids else 0}%)**",
         f"- Active playlist IDs with usable current/future programmes: **{len(active_live)}/{len(active_ids)} ({round(100*len(active_live)/len(active_ids),1) if active_ids else 0}%)**",
+        f"- Active playlist IDs with usable programmes anywhere in the guide window (-6h/+7d): **{len(active_window)}/{len(active_ids)} ({round(100*len(active_window)/len(active_ids),1) if active_ids else 0}%)**",
         f"- Mapped playlist IDs present in the guide: **{len(present_ids)}/{len(mapped_targets)} ({round(100*len(present_ids)/len(mapped_targets),1) if mapped_targets else 0}%)**",
         f"- Mapped playlist IDs with usable current/future programmes: **{len(live_ids)}/{len(mapped_targets)} ({round(100*len(live_ids)/len(mapped_targets),1) if mapped_targets else 0}%)**",
+        f"- Mapped playlist IDs with usable programmes anywhere in the guide window: **{len(mapped_targets & guide_window)}/{len(mapped_targets)} ({round(100*len(mapped_targets & guide_window)/len(mapped_targets),1) if mapped_targets else 0}%)**",
         f"- Eligible programme rows published in the guide window: **{guide_programmes}**",
         f"- Mapped playlist IDs missing from the published XMLTV channel list: **{len(missing)}**",
         "- Missing mapped playlist IDs: " + (", ".join(missing[:60]) if missing else "none") + (f" (and {len(missing)-60} more)" if len(missing) > 60 else ""),
@@ -542,11 +549,16 @@ def main():
         "## Source / Published Schedule Reconciliation",
         "",
         f"- IDs with usable current/future source schedule data: **{total_live}/{total_active} ({round(100*total_live/total_active,1) if total_active else 0}%)**",
-        f"- IDs with usable current/future schedules in published XMLTV: **{len(active_live)}/{len(active_ids)} ({round(100*len(active_live)/len(active_ids),1) if active_ids else 0}%)**",
-        f"- Source-scheduled IDs without published usable schedules: **{len(source_live_without_publication)}**",
-        "- Source-scheduled IDs without published usable schedules: " + format_identity_list(source_live_without_publication),
-        f"- Published usable-schedule IDs not counted source-eligible: **{len(published_live_without_source)}**",
-        "- Published usable-schedule IDs not counted source-eligible: " + format_identity_list(published_live_without_source),
+        f"- IDs with usable current/future schedules in published XMLTV at report time: **{len(active_live)}/{len(active_ids)} ({round(100*len(active_live)/len(active_ids),1) if active_ids else 0}%)**",
+        f"- IDs with usable programmes in the published guide's common -6h/+7d window: **{len(active_window)}/{len(active_ids)} ({round(100*len(active_window)/len(active_ids),1) if active_ids else 0}%)**",
+        f"- Current/future source IDs without any usable published programme in that common window: **{len(source_live_without_publication)}**",
+        "- Source-scheduled IDs without a usable published programme in the common window: " + format_identity_list(source_live_without_publication),
+        f"- IDs with an in-window published programme but no current/future source match at the later scan: **{len(published_window_without_source)}**",
+        "- In-window published IDs not counted source-current/future: " + format_identity_list(published_window_without_source),
+        f"- Source-current/future IDs whose published programme is no longer current by report time: **{len(source_live_without_current)}**",
+        "- Source-current/future IDs no longer current in the published guide: " + format_identity_list(source_live_without_current),
+        f"- Published current/future IDs not counted source-current/future: **{len(published_live_without_source)}**",
+        "- Published current/future IDs not counted source-current/future: " + format_identity_list(published_live_without_source),
         "",
     ]
     if guide_error:

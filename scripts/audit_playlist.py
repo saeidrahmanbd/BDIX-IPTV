@@ -21,22 +21,32 @@ def attrs(line):
     return dict(ATTR_RE.findall(line))
 
 def parse(text):
+    """Parse EXTINF entries and URLs, preserving intervening VLC/HLS directives."""
     lines = text.replace("\r", "").splitlines()
-    entries = []
-    i = 0
-    while i < len(lines):
-        if lines[i].startswith("#EXTINF"):
-            info = lines[i]
-            url = ""
-            j = i + 1
-            while j < len(lines) and not lines[j].strip():
-                j += 1
-            if j < len(lines) and lines[j].startswith(("http://", "https://")):
-                url = lines[j].strip()
-            entries.append((info, url))
-            i = j
-        i += 1
-    return entries
+    parsed = []
+    current_info = None
+    for line in lines:
+        if line.startswith("#EXTINF"):
+            if current_info is not None:
+                parsed.append((current_info, ""))
+            current_info = line
+            continue
+        if current_info is None:
+            continue
+        value = line.strip()
+        if value.startswith(("http://", "https://")):
+            parsed.append((current_info, value))
+            current_info = None
+        elif not value or value.startswith("#"):
+            # Directives such as #EXTVLCOPT belong to the current entry;
+            # keep scanning until the actual URL or the next EXTINF.
+            continue
+        else:
+            parsed.append((current_info, ""))
+            current_info = None
+    if current_info is not None:
+        parsed.append((current_info, ""))
+    return parsed
 
 def identity(info):
     a = attrs(info)
