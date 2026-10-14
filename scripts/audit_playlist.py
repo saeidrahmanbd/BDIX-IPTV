@@ -172,9 +172,21 @@ def validate_extinf(line_no, line):
         if pos < len(attrs_part) and not attrs_part[pos].isspace():
             errors.append(f"missing whitespace between attributes near {key}")
             break
+    # A stream may be preceded by per-entry directives such as #EXTVLCOPT.
+    # Skip blank lines and metadata directives while searching for the actual URI;
+    # these directives must remain attached to their entry and are not structural errors.
     j = line_no
-    while j < len(raw_lines) and not raw_lines[j].strip():
-        j += 1
+    while j < len(raw_lines):
+        candidate = raw_lines[j].strip()
+        if not candidate:
+            j += 1
+            continue
+        if candidate.lower().startswith(("http://", "https://")):
+            break
+        if candidate.startswith("#") and not candidate.upper().startswith("#EXTINF:"):
+            j += 1
+            continue
+        break
     if j >= len(raw_lines) or not raw_lines[j].strip().lower().startswith(("http://", "https://")):
         errors.append("missing stream URL")
     return errors
