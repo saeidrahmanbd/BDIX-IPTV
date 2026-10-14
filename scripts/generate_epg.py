@@ -24,8 +24,9 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
     "https://iptv-epg.org/files/epg-in.xml.gz",
-    # Supplemental Samsung TV Plus India XMLTV feed from the supplied EPG catalogue.
+    # Samsung TV Plus schedules for India and the US; useful for matching FAST channels.
     "https://i.mjh.nz/SamsungTVPlus/in.xml",
+    "https://i.mjh.nz/SamsungTVPlus/us.xml",
     "https://epg.pw/xmltv/epg_IN.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml",
     "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
@@ -36,6 +37,10 @@ SOURCES = [
     "https://avkb.short.gy/epg.xml.gz",
     "https://avkb.short.gy/jioepg.xml.gz",
     "https://avkb.short.gy/tsepg.xml.gz",
+    # Targeted FAST-channel guides avoid the oversized all-sources mega-feed.
+    "https://epgshare01.online/epgshare01/epg_ripper_DISTROTV1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_RAKUTEN1.xml.gz",
     "https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml",
     "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
     "https://www.open-epg.com/files/unitedkingdom.xml.gz",

@@ -49,11 +49,13 @@ THREE_PLAYLIST_REPORT = Path("reports/epg-three-playlist-audit.md")
 SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz", "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz", "https://iptv-epg.org/files/epg-in.xml.gz",
-    "https://i.mjh.nz/SamsungTVPlus/in.xml", "https://epg.pw/xmltv/epg_IN.xml",
+    "https://i.mjh.nz/SamsungTVPlus/in.xml", "https://i.mjh.nz/SamsungTVPlus/us.xml", "https://epg.pw/xmltv/epg_IN.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml", "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml", "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml", "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml",
     "https://avkb.short.gy/epg.xml.gz", "https://avkb.short.gy/jioepg.xml.gz", "https://avkb.short.gy/tsepg.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_DISTROTV1.xml.gz", "https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_RAKUTEN1.xml.gz",
     "https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml", "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
     "https://www.open-epg.com/files/unitedkingdom.xml.gz", "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz", "https://iptv-epg.org/files/epg-us.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz",
@@ -235,7 +237,7 @@ def main():
     for ch in channels:
         candidates=[]; prev=previous.get(ch["tvg_id"],{}); locked_ids=EPG_LOCKS.get(ch["tvg_id"]); is_bangladesh=(ch["group"].strip()=="Bangladesh" or bool(re.search(r"\.bd(?:@|$)", ch["tvg_id"], re.I)))
         if locked_ids: candidates=list(dict.fromkeys(x.strip() for x in locked_ids if x.strip()))
-        elif is_bangladesh: candidates=[]
+        elif is_bangladesh: candidates=[ch["tvg_id"]] + EPG_ALIASES.get(ch["tvg_id"], [])
         else:
             candidates += [x.strip() for x in (prev.get("epg_id","").split("|") if prev.get("epg_id") else []) if x.strip()]
             candidates += [ch["tvg_id"], re.sub(r"@(?:sd|hd|uhd|fhd)$","",ch["tvg_id"],flags=re.I)] + EPG_ALIASES.get(ch["tvg_id"], [])
@@ -244,7 +246,9 @@ def main():
         hits=[]; hit_sources=[]; total=0; live=False; best_live=[]
         for src,data in zip(SOURCES,source_data):
             ids,future,counts,names=data
-            if is_bangladesh and not locked_ids: src_hits=[]
+            if is_bangladesh:
+                # Safety: exact playlist IDs/explicit aliases only; never use ID normalization or name fuzzy matching.
+                src_hits=[x for x in candidates if x in ids]
             else:
                 src_hits=[x for x in candidates if x in ids]
                 if not src_hits: src_hits=[x for x in ids if norm_id(x) in normalized]
@@ -259,8 +263,7 @@ def main():
                     total += counts.get(cid,0)
                     if cid in future: best_live.append(cid); live=True
         old_epg=prev.get("epg_id","").strip()
-        if is_bangladesh and not locked_ids: epg_id=""; old_epg=""
-        elif ch["group"]=="Indian Bangla": epg_id=(best_live[0] if best_live else (hits[0] if hits else old_epg))
+        if ch["group"]=="Indian Bangla": epg_id=(best_live[0] if best_live else (hits[0] if hits else old_epg))
         else: epg_id=(best_live[0] if best_live else (hits[0] if hits else old_epg))
         if live: status="MAPPED"
         elif hits: status="MAPPED_ID_ONLY" if total==0 else "MAPPED_ENDED"
