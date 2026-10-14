@@ -1,0 +1,10 @@
+name = "bdix-iptv-bdix"
+main = "worker.js"
+compatibility_date = "2026-10-14"
+
+[vars]
+PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u"
+TIMEZONE = "Asia/Dhaka"
+
+[secrets]
+required = ["XTREAM_USERNAME", "XTREAM_PASSWORD"]
