@@ -23,14 +23,8 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: xtream-main
           command: deploy
-          secrets: |
-            XTREAM_USERNAME
-            XTREAM_PASSWORD
-        env:
-          XTREAM_USERNAME: ${{ secrets.XTREAM_USERNAME }}
-          XTREAM_PASSWORD: ${{ secrets.XTREAM_PASSWORD }}
 
-      - name: Verify main IPTV Xtream login and API response
+      - name: Verify main IPTV Xtream login, API response and live-stream listing
         env:
           XTREAM_USERNAME: ${{ secrets.XTREAM_USERNAME }}
           XTREAM_PASSWORD: ${{ secrets.XTREAM_PASSWORD }}
@@ -39,22 +33,29 @@ jobs:
           python3 - <<'PY'
           import json, os, urllib.parse, urllib.request
           host = "bdix-iptv-main.saeidrahman.workers.dev"
-          q = urllib.parse.urlencode({
-              "username": os.environ["XTREAM_USERNAME"],
-              "password": os.environ["XTREAM_PASSWORD"]
-          })
-          url = f"https://{host}/player_api.php?{q}"
-          req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-          with urllib.request.urlopen(req, timeout=20) as r:
-              status = r.status
-              data = json.loads(r.read().decode("utf-8", "replace"))
+          base = f"https://{host}/player_api.php"
+          def get(params):
+              q = urllib.parse.urlencode(params)
+              req = urllib.request.Request(f"{base}?{q}", headers={"User-Agent": "Mozilla/5.0"})
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  return r.status, json.loads(r.read().decode("utf-8", "replace"))
+          creds = {"username": os.environ["XTREAM_USERNAME"], "password": os.environ["XTREAM_PASSWORD"]}
+          status, data = get(creds)
           user = data.get("user_info", {})
           server = data.get("server_info", {})
-          print(f"Main IPTV: HTTP {status}; auth={user.get('auth')}; status={user.get('status')}; protocol={server.get('server_protocol')}; host={server.get('url')}")
+          print(f"Main IPTV login: HTTP {status}; auth={user.get('auth')}; status={user.get('status')}; protocol={server.get('server_protocol')}; host={server.get('url')}")
           if status != 200 or user.get("auth") != 1 or user.get("status") != "Active":
               raise SystemExit("Main IPTV Xtream authentication failed")
           if server.get("server_protocol") != "https" or server.get("url") != host or server.get("https_port") != "443":
               raise SystemExit("Main IPTV Xtream server_info is not compatible")
+          status, cats = get({**creds, "action": "get_live_categories"})
+          print(f"Main IPTV categories: HTTP {status}; count={len(cats) if isinstance(cats, list) else 0}")
+          if status != 200 or not isinstance(cats, list) or not cats:
+              raise SystemExit("Main IPTV returned no live categories")
+          status, streams = get({**creds, "action": "get_live_streams", "category_id": "0"})
+          print(f"Main IPTV streams: HTTP {status}; count={len(streams) if isinstance(streams, list) else 0}")
+          if status != 200 or not isinstance(streams, list) or not streams:
+              raise SystemExit("Main IPTV returned no live streams for category_id=0")
           PY
 
   deploy-bdix:
@@ -70,14 +71,8 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: xtream-bdix
           command: deploy
-          secrets: |
-            XTREAM_USERNAME
-            XTREAM_PASSWORD
-        env:
-          XTREAM_USERNAME: ${{ secrets.XTREAM_USERNAME }}
-          XTREAM_PASSWORD: ${{ secrets.XTREAM_PASSWORD }}
 
-      - name: Verify BDIX Xtream login and API response
+      - name: Verify BDIX Xtream login, API response and live-stream listing
         env:
           XTREAM_USERNAME: ${{ secrets.XTREAM_USERNAME }}
           XTREAM_PASSWORD: ${{ secrets.XTREAM_PASSWORD }}
@@ -86,20 +81,27 @@ jobs:
           python3 - <<'PY'
           import json, os, urllib.parse, urllib.request
           host = "bdix-iptv-bdix.saeidrahman.workers.dev"
-          q = urllib.parse.urlencode({
-              "username": os.environ["XTREAM_USERNAME"],
-              "password": os.environ["XTREAM_PASSWORD"]
-          })
-          url = f"https://{host}/player_api.php?{q}"
-          req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-          with urllib.request.urlopen(req, timeout=20) as r:
-              status = r.status
-              data = json.loads(r.read().decode("utf-8", "replace"))
+          base = f"https://{host}/player_api.php"
+          def get(params):
+              q = urllib.parse.urlencode(params)
+              req = urllib.request.Request(f"{base}?{q}", headers={"User-Agent": "Mozilla/5.0"})
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  return r.status, json.loads(r.read().decode("utf-8", "replace"))
+          creds = {"username": os.environ["XTREAM_USERNAME"], "password": os.environ["XTREAM_PASSWORD"]}
+          status, data = get(creds)
           user = data.get("user_info", {})
           server = data.get("server_info", {})
-          print(f"BDIX: HTTP {status}; auth={user.get('auth')}; status={user.get('status')}; protocol={server.get('server_protocol')}; host={server.get('url')}")
+          print(f"BDIX login: HTTP {status}; auth={user.get('auth')}; status={user.get('status')}; protocol={server.get('server_protocol')}; host={server.get('url')}")
           if status != 200 or user.get("auth") != 1 or user.get("status") != "Active":
               raise SystemExit("BDIX Xtream authentication failed")
           if server.get("server_protocol") != "https" or server.get("url") != host or server.get("https_port") != "443":
               raise SystemExit("BDIX Xtream server_info is not compatible")
+          status, cats = get({**creds, "action": "get_live_categories"})
+          print(f"BDIX categories: HTTP {status}; count={len(cats) if isinstance(cats, list) else 0}")
+          if status != 200 or not isinstance(cats, list) or not cats:
+              raise SystemExit("BDIX returned no live categories")
+          status, streams = get({**creds, "action": "get_live_streams", "category_id": "0"})
+          print(f"BDIX streams: HTTP {status}; count={len(streams) if isinstance(streams, list) else 0}")
+          if status != 200 or not isinstance(streams, list) or not streams:
+              raise SystemExit("BDIX returned no live streams for category_id=0")
           PY
