@@ -8,6 +8,7 @@ P=Path("IPTV-Playlist.m3u"); R=Path("reports/metadata-normalization.md")
 RAW="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 EXCLUDE={"Backup"}
 IDS={
+  "Jalsha Movies HD": "Star.Jalsha.Movies.HD.in",
   "Desh TV": "DeshTV.bd",
   "&pictures": "AndPictures.in@SD",
   "Ekamra Cinema": "custom.ekamra.cinema",
@@ -128,6 +129,7 @@ LOGOS={
   "History TV18": "history.png",
   "INDEPENDENT.TV": "independent-tv.png",
   "Jalsha Movies": "jalsha-movies-hd.png",
+  "Jalsha Movies HD": "jalsha-movies-hd.png",
   "JALSHA MOVIES": "jalsha-movies-hd.png",
   "JALSHA.MOVIES.": "jalsha-movies-hd.png",
   "JAMUNA.TV": "jamuna-tv.png",
@@ -209,12 +211,18 @@ def split_extinf(line):
 def norm(s):
  s=str(s or "").lower()
  s=re.sub(r"\[[^]]*\]|\([^)]*\)"," ",s)
+ # Jalsha Movies and Jalsha Movies HD are distinct primary channels with
+ # different programming. Do not collapse the HD channel into the base name.
+ raw_value=re.sub(r"[^a-z0-9]+","",s.replace("&","and"))
+ if raw_value == "jalshamovieshd": return raw_value
  s=re.sub(r"\b(?:uhd|fhd|hd|sd|4k|1080p|720p|576p|480p|360p)\b"," ",s,flags=re.I)
  value=re.sub(r"[^a-z0-9]+","",s.replace("&","and"))
  aliases={"ekhonetv":"ekhontv","rocktv":"suriyantv","suriyantvtamil":"suriyantv"}
  return aliases.get(value,value)
 def clean(s):
  s=re.sub(r"\s+"," ",re.sub(r"[._]+"," ",str(s or ""))).strip()
+ # Preserve the channel name suffix for the separate Jalsha Movies HD service.
+ if re.fullmatch(r"jalsha\s+movies\s+hd",s,flags=re.I): return "Jalsha Movies HD"
  s=re.sub(r"\s*\(\s*(?:\d{3,4}p|UHD|FHD|HD\+?|SD)\s*\)\s*$","",s,flags=re.I)
  s=re.sub(r"\s+(?:\d{3,4}p|UHD|FHD|HD\+?|SD)\s*$","",s,flags=re.I)
  return s.strip()
