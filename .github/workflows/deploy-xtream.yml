@@ -45,6 +45,53 @@ jobs:
           workingDirectory: xtream
           command: deploy --secrets-file "${{ runner.temp }}/xtream-secrets.json"
 
+      - name: Verify deployed Xtream authentication
+        env:
+          XTREAM_USERNAME: ${{ secrets.XTREAM_USERNAME }}
+          XTREAM_PASSWORD: ${{ secrets.XTREAM_PASSWORD }}
+          XTREAM_URL: https://bdix-iptv-xtream.saeidrahman.workers.dev
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import os
+          import sys
+          import urllib.parse
+          import urllib.request
+
+          base = os.environ["XTREAM_URL"].rstrip("/")
+          u = os.environ["XTREAM_USERNAME"]
+          p = os.environ["XTREAM_PASSWORD"]
+          query = urllib.parse.urlencode({"username": u, "password": p})
+          url = f"{base}/player_api.php?{query}"
+
+          try:
+              with urllib.request.urlopen(url, timeout=20) as r:
+                  status = r.status
+                  body = r.read().decode("utf-8", "replace")
+          except Exception as e:
+              print(f"Xtream smoke test request failed: {type(e).__name__}: {e}")
+              sys.exit(1)
+
+          print(f"Xtream smoke test HTTP status: {status}")
+          try:
+              data = json.loads(body)
+          except Exception:
+              print("Xtream smoke test failed: response was not JSON")
+              print(body[:500])
+              sys.exit(1)
+
+          auth = data.get("user_info", {}).get("auth")
+          state = data.get("user_info", {}).get("status")
+          print(f"Xtream authentication result: auth={auth}, status={state}")
+
+          if status != 200 or auth != 1:
+              print("Xtream smoke test FAILED: deployed Worker rejected the configured credentials.")
+              sys.exit(1)
+
+          print("Xtream smoke test PASSED: deployed Worker accepted the configured credentials.")
+          PY
+
       - name: Remove temporary secrets file
         if: always()
         run: rm -f "${{ runner.temp }}/xtream-secrets.json"
