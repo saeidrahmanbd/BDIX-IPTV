@@ -1,37 +1,37 @@
 # Update Report
 
-_Last generated: **2026-10-13 09:37 UTC**_
+_Last generated: **2026-10-14 03:58 UTC**_
 
 | Metric | Current |
 |---|---:|
-| Streams | **1031** |
-| Active Channel Identities | **624** |
-| Active Primary Streams | **629** |
-| Bangladesh | **60** |
-| India | **283** |
-| Backup Streams | **402** |
-| Local Logos | **98.7%** |
-| EPG Programme Coverage | **79.7%** |
-| EPG Mapping | **83.5%** |
-| Stream Health Tested | **1031** |
-| Stream Health Failures | **143** |
-| Persistent Failures | **134** |
+| Streams | **940** |
+| Active Channel Identities | **561** |
+| Active Primary Streams | **578** |
+| Bangladesh | **55** |
+| India | **275** |
+| Backup Streams | **362** |
+| Local Logos | **93.1%** |
+| EPG Programme Coverage | **80.0%** |
+| EPG Mapping | **83.1%** |
+| Stream Health Tested | **940** |
+| Stream Health Failures | **52** |
+| Persistent Failures | **16** |
 | Near-Duplicate URL Families | **0** |
-| Audit Blocking Issues | **12** |
+| Audit Blocking Issues | **79** |
 | Pre-Publish Gate | **BLOCK** |
-| Pre-Publish Gate Generated | **2026-10-13T09:36:04+00:00** |
+| Pre-Publish Gate Generated | **2026-10-14T03:57:50+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **1**
-- Same-name / different-ID collisions: **9**
-- Duplicate primary identities: **0**
+- Metadata conflicts: **3**
+- Same-name / different-ID collisions: **35**
+- Duplicate primary identities: **2**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **4**
-- Logo exceptions: **4**
-- Malformed EXTINF entries: **0**
+- Primary entries missing channel numbers: **35**
+- Logo exceptions: **14**
+- Malformed EXTINF entries: **19**
 - Category block-order issues: **0**
-- Alphabetical ordering issues: **3**
+- Alphabetical ordering issues: **6**
 - Signed/tokenized URLs: **9**
 
 ## Safety & Automation
@@ -42,23 +42,23 @@ _Last generated: **2026-10-13 09:37 UTC**_
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## EPG
-- Indian channels audited: **291**
-- Mapped: **243 (83.5%)**
-- Current/future programme coverage: **232/291 (79.7%)**
-- No mapping: **48**
+- Indian channels audited: **290**
+- Mapped: **241 (83.1%)**
+- Current/future programme coverage: **232/290 (80.0%)**
+- No mapping: **49**
 - Publication remains subject to source-policy approval.
 
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-13T09:36:04.285482+00:00** |
-| EPG coverage | **2026-10-13T09:34:38+00:00** |
-| Stream health | **2026-10-13T09:37:21+00:00** |
-| Pre-publish gate | **2026-10-13T09:36:04+00:00** |
+| Playlist audit | **2026-10-14T03:57:50.037442+00:00** |
+| EPG coverage | **2026-10-14T03:57:01+00:00** |
+| Stream health | **2026-10-14T03:58:34+00:00** |
+| Pre-publish gate | **2026-10-14T03:57:50+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
-- Latest entries change: **1031 → 1031**
-- Latest health failures: **146 → 143**
+- Latest entries change: **1031 → 940**
+- Latest health failures: **143 → 52**
 
 Historical records are retained in reports/maintenance-history.json.
