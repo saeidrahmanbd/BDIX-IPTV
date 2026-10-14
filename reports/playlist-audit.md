@@ -1,27 +1,27 @@
 # Playlist Audit
-Generated: **2026-10-14T03:57:50.037442+00:00**
+Generated: **2026-10-14T04:16:17.996957+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
 - Playlist entries: **940**
-- Unique channel IDs: **583**
-- IDs with multiple streams: **149**
+- Unique channel IDs: **584**
+- IDs with multiple streams: **148**
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **3**
+- Metadata conflicts: **1**
 - Same-name / different-ID collisions: **35**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **14**
+- Logo exceptions: **16**
 - Logo references checked: **940**
-- Duplicate primary identities: **2**
+- Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **35**
-- Malformed EXTINF entries: **19**
+- Primary entries missing channel numbers: **51**
+- Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
-- Alphabetical ordering issues: **6**
+- Alphabetical ordering issues: **1**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 
@@ -62,7 +62,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - &TV — Backup — https://3f56f997.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9BbmRUVl9ITFM/playlist.m3u8
 - &TV — Backup — https://stream.ottplus.live/live/and_tv_hd_abr/index.m3u8
 ### animalplanet.in@sd (3 streams)
-- Animal Planet — Backup — https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd/index.m3u8
+- Animal Planet — Documentary & Wildlife — https://drk6xq0vhn.gpcdn.net/live/animal_planet_hd/index.m3u8
 - Animal Planet — Backup — https://tvsen3.aynaott.com/wpa56Uk3/index.m3u8
 - Animal Planet — Backup — https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8
 ### anjantv.in@sd (2 streams)
@@ -266,11 +266,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - E24 — Backup — https://mumt04.tangotv.in/m18aqlK4E24/index.m3u8
 ### ekattortv.bd (3 streams)
 - Ekattor TV — Bangladesh — https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8
-- Ekattor TV — Bangladesh — https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/tracks-v1a1/mono.ts.m3u8
 - Ekattor TV — Backup — https://stream.ottplus.live/live/ekattor_tv_abr/index.m3u8
+- Ekattor TV — Backup — https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/tracks-v1a1/mono.ts.m3u8
 ### ekhontv.bd (5 streams)
+- Ekhon TV — Bangladesh — https://drk6xq0vhn.gpcdn.net/live/ekhon_tv_abr/index.m3u8
 - Ekhon TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/globaltv.stream/index.m3u8
-- Ekhon TV — Backup — https://drk6xq0vhn.gpcdn.net/live/ekhon_tv_abr/index.m3u8
 - Ekhon TV — Backup — https://stream.ottplus.live/live/ekhon_tv_abr/index.m3u8
 - Ekhon TV — Backup — https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8
 - Ekhon TV — Backup — https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8?e=1784102563
@@ -278,7 +278,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Ekushey TV — Bangladesh — https://tvsen5.aynaott.com/SyQuXz8sC3TB/index.m3u8
 - Ekushey TV — Backup — https://tvsen6.aynaott.com/y4mEVZNAbeNWTbd6Z2Pw/index.m3u8
 ### enterr10bangla.in@sd (6 streams)
-- Enterr10 Bangla — Backup — https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8
+- Enterr10 Bangla — Indian Bangla — https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8
 - Enterr10 Bangla — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-10-bangla-1/index.m3u8
 - Enterr10 Bangla — Backup — https://live-bangla.akamaized.net/liveabr/playlist.m3u8
 - Enterr10 Bangla — Backup — https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_240p/chunks.m3u8
@@ -545,9 +545,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Sony Aath — Indian Bangla — https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8
 - Sony Aath — Backup — https://stream.ottplus.live/live/sony_aath_abr/index.m3u8
 ### sonyentertainmenttelevision.in@sd (6 streams)
+- Sony Entertainment TV — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/sony_ent_hd_abr/index.m3u8
 - Sony Entertainment TV — Backup — http://103.151.60.162:2122/play/a015/index.m3u8?hls
 - Sony Entertainment TV — Backup — http://38.96.178.205/SONYHD/index.m3u8
-- Sony Entertainment TV — Backup — https://drk6xq0vhn.gpcdn.net/live/sony_ent_hd_abr/index.m3u8
 - Sony Entertainment TV — Backup — https://drk6xq0vhn.gpcdn.net/live/sony_ent_sd_abr/index.m3u8
 - Sony Entertainment TV — Backup — https://stream.ottplus.live/live/sony_ent_hd_abr/index.m3u8
 - Sony Entertainment TV — Backup — https://stream.ottplus.live/live/sony_ent_sd_abr/index.m3u8
@@ -565,9 +565,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Star Jalsha — Backup — http://103.151.60.162:2122/play/a00w/index.m3u8
 - Star Jalsha — Backup — http://103.151.60.162:2122/play/a00w/index.m3u8?hls
 - Star Jalsha — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
-### star.jalsha.movies.in (2 streams)
-- Jalsha Movies — Indian Bangla — https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8
-- Jalsha Movies HD — Indian Bangla — http://103.151.60.162:2122/play/a00x/index.m3u8
 ### studioyuva.in (2 streams)
 - Studio Yuva — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3STUDIOYUVA/index.m3u8
 - Studio Yuva — Backup — https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=[REDACTED]
@@ -620,8 +617,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-- **ekattortv.bd** in **Bangladesh** — Ekattor TV, Ekattor TV
-- **star.jalsha.movies.in** in **Indian Bangla** — Jalsha Movies, Jalsha Movies HD
+None.
 
 ## Primary Channel-Number Collisions
 
@@ -629,34 +625,11 @@ None.
 
 ## Malformed EXTINF Entries
 
-- line 33: missing stream URL
-- line 296: missing stream URL
-- line 301: missing stream URL
-- line 668: missing stream URL
-- line 671: missing stream URL
-- line 1260: missing stream URL
-- line 1309: missing stream URL
-- line 1314: missing stream URL
-- line 1429: missing stream URL
-- line 1436: missing stream URL
-- line 1439: missing stream URL
-- line 1442: missing stream URL
-- line 1539: missing stream URL
-- line 1556: missing stream URL
-- line 1667: missing stream URL
-- line 1784: missing stream URL
-- line 1805: missing stream URL
-- line 1862: missing stream URL
-- line 1883: missing stream URL
+None.
 
 ## Ordering
 
 Category block order: OK.
-- **Bangladesh** — **Channel 9** appears after **Channel 24**
-- **Bangladesh** — **Somoy TV** appears after **Time Television**
-- **Indian Movies** — **B4U Movies** appears after **Zee Cinema**
-- **Indian Entertainment** — **Star Utsav** appears after **Zee TV**
-- **Kids** — **Discovery Family** appears after **ZooMoo**
 - **Backup** — **7S Music** appears after **&TV**
 
 ## Suspicious URLs
@@ -681,8 +654,6 @@ None.
 
 ## Metadata Conflicts
 
-- **ekattortv.bd** — names: ekattor tv; groups: Bangladesh; countries: , BD
-- **star.jalsha.movies.in** — names: jalsha movies, jalsha movies hd; groups: Indian Bangla; countries: 
 - **ultimatetv.in@sd** — names: ultimate tv; groups: Indian Movies, Indian Music; countries: 
 
 ## Cross-Country Backup Collisions
@@ -750,8 +721,10 @@ None.
 - missing — Zee Anmol [] — 
 - missing — HUM Masala HD [] — 
 - missing — HUM Sitaray HD [] — 
+- missing — TLC [] — 
 - missing — Discovery Family [] — 
 - missing — Teen Nick [] — 
+- missing — Peace TV Bangla [] — 
 
 ## Protected Primary Entries
 

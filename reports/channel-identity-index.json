@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-14T03:57:50+00:00",
+  "generated": "2026-10-14T04:16:18+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -170,12 +170,11 @@
         "aamarbangla.in@sd"
       ],
       "groups": [
-        "Backup",
         "Indian Bangla"
       ],
       "streams": 2,
-      "primary": 1,
-      "backup": 1
+      "primary": 2,
+      "backup": 0
     },
     "aaryaatv": {
       "names": [
@@ -356,11 +355,12 @@
         "animalplanet.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Backup",
+        "Documentary & Wildlife"
       ],
       "streams": 3,
-      "primary": 0,
-      "backup": 3
+      "primary": 1,
+      "backup": 2
     },
     "anjantv": {
       "names": [
@@ -459,11 +459,11 @@
         "aurlife.pk"
       ],
       "groups": [
-        "Backup"
+        "Pakistani"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "autentichistory": {
       "names": [
@@ -1122,11 +1122,11 @@
         "colorscineplexsuperhits.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Indian Movies"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "colorsgujarati": {
       "names": [
@@ -3253,8 +3253,8 @@
         "Bangladesh"
       ],
       "streams": 3,
-      "primary": 2,
-      "backup": 1
+      "primary": 1,
+      "backup": 2
     },
     "ekhontv": {
       "names": [
@@ -3264,11 +3264,12 @@
         "ekhontv.bd"
       ],
       "groups": [
-        "Backup"
+        "Backup",
+        "Bangladesh"
       ],
       "streams": 5,
-      "primary": 0,
-      "backup": 5
+      "primary": 1,
+      "backup": 4
     },
     "ekusheytv": {
       "names": [
@@ -3307,11 +3308,12 @@
         "enterr10bangla.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Backup",
+        "Indian Bangla"
       ],
       "streams": 6,
-      "primary": 0,
-      "backup": 6
+      "primary": 1,
+      "backup": 5
     },
     "epicbharat": {
       "names": [
@@ -4969,11 +4971,11 @@
         "moviesnow.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Indian Movies"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "moviesphere": {
       "names": [
@@ -5231,11 +5233,11 @@
         "nagoriktv.bd"
       ],
       "groups": [
-        "Backup"
+        "Bangladesh"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "nantv": {
       "names": [
@@ -5588,11 +5590,11 @@
         "pardesitv.ca"
       ],
       "groups": [
-        "Backup"
+        "International"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "pasandtv": {
       "names": [
@@ -6771,11 +6773,12 @@
         "sonyentertainmenttelevision.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Backup",
+        "Indian Entertainment"
       ],
       "streams": 6,
-      "primary": 0,
-      "backup": 6
+      "primary": 1,
+      "backup": 5
     },
     "sonykalhindi": {
       "names": [
@@ -6899,11 +6902,11 @@
         "sonypix.in"
       ],
       "groups": [
-        "Backup"
+        "Indian Movies"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "sonysab": {
       "names": [
@@ -7077,8 +7080,7 @@
     },
     "star.jalsha.movies": {
       "names": [
-        "Jalsha Movies",
-        "Jalsha Movies HD"
+        "Jalsha Movies"
       ],
       "ids": [
         "star.jalsha.movies.in"
@@ -7086,8 +7088,22 @@
       "groups": [
         "Indian Bangla"
       ],
-      "streams": 2,
-      "primary": 2,
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "star.jalsha.movies.hd": {
+      "names": [
+        "Jalsha Movies HD"
+      ],
+      "ids": [
+        "star.jalsha.movies.hd.in"
+      ],
+      "groups": [
+        "Indian Bangla"
+      ],
+      "streams": 1,
+      "primary": 1,
       "backup": 0
     },
     "stargold2": {
@@ -7098,11 +7114,11 @@
         "stargold2.in@hd"
       ],
       "groups": [
-        "Backup"
+        "Indian Movies"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "stargoldthrills": {
       "names": [
@@ -7154,11 +7170,11 @@
         "starmoviesselect.in@hd"
       ],
       "groups": [
-        "Backup"
+        "Indian Movies"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "starnet": {
       "names": [
@@ -7182,11 +7198,11 @@
         "starplus.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Indian Entertainment"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "starpravah": {
       "names": [
@@ -8013,8 +8029,8 @@
         "Indian Music"
       ],
       "streams": 3,
-      "primary": 1,
-      "backup": 2
+      "primary": 2,
+      "backup": 1
     },
     "zbcartoon": {
       "names": [
