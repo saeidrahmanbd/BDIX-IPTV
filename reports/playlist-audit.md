@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-14T08:26:42.678542+00:00**
+Generated: **2026-10-14T08:56:28.534376+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -14,14 +14,14 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **16**
+- Logo exceptions: **0**
 - Logo references checked: **940**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **51**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
-- Alphabetical ordering issues: **1**
+- Alphabetical ordering issues: **0**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 
@@ -630,7 +630,7 @@ None.
 ## Ordering
 
 Category block order: OK.
-- **Backup** — **7S Music** appears after **&TV**
+Alphabetical order: OK.
 
 ## Suspicious URLs
 
@@ -700,8 +700,8 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **875**
-- missing: **65**
+- Healthy/local references: **940**
+- missing: **0**
 - broken-local: **0**
 - external: **0**
 - non-png: **0**
@@ -709,22 +709,6 @@ None.
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
-- missing — BTV World [] — 
-- missing — G Series Drama [] — 
-- missing — Jonmobhumi TV [] — 
-- missing — Probashi TV [] — 
-- missing — Bangla Cinema [] — 
-- missing — B4U Movies [] — 
-- missing — Star Gold Select [] — 
-- missing — Star Utsav Movies [] — 
-- missing — Star Utsav [] — 
-- missing — Zee Anmol [] — 
-- missing — HUM Masala HD [] — 
-- missing — HUM Sitaray HD [] — 
-- missing — TLC [] — 
-- missing — Discovery Family [] — 
-- missing — Teen Nick [] — 
-- missing — Peace TV Bangla [] — 
 
 ## Protected Primary Entries
 

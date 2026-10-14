@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-14T08:11:25.596301+00:00",
+  "generated_at_utc": "2026-10-14T08:47:58.623582+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -297,10 +297,10 @@
       "channel_name": "G Series Drama",
       "tvg_id": "custom.gseriesdrama",
       "channel_id": "custom.gseriesdrama",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-g-series-drama.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/g-series-drama.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -507,10 +507,10 @@
       "channel_name": "Probashi TV",
       "tvg_id": "custom.probashitv",
       "channel_id": "custom.probashitv",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-probashi-tv.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/probashi-tv.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -617,10 +617,10 @@
       "channel_name": "Bangla Cinema",
       "tvg_id": "custom.banglacinema",
       "channel_id": "custom.banglacinema",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-bangla-cinema.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bangla-cinema.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -985,8 +985,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "B4U Movies",
-      "tvg_id": "custom.b4umovies",
-      "channel_id": "custom.b4umovies",
+      "tvg_id": "b4umovies.in@india",
+      "channel_id": "b4umovies.in@india",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png",
       "status": "needs_review",
       "source_url": "",
@@ -1427,7 +1427,7 @@
       "channel_name": "Star Gold Select",
       "tvg_id": "custom.stargoldselect",
       "channel_id": "custom.stargoldselect",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-select.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-star-gold-select-c7e1112a77.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -1508,16 +1508,6 @@
       "tvg_id": "TollyTV.in",
       "channel_id": "TollyTV.in",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tolly-tv.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Ultimate TV",
-      "tvg_id": "UltimateTV.in@SD",
-      "channel_id": "UltimateTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ultimate-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -2008,6 +1998,16 @@
       "tvg_id": "ThalaaTV.in",
       "channel_id": "ThalaaTV.in",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/thalaa-tv.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Ultimate TV",
+      "tvg_id": "UltimateTV.in@SD",
+      "channel_id": "UltimateTV.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ultimate-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -4407,10 +4407,10 @@
       "channel_name": "TLC",
       "tvg_id": "custom.tlc",
       "channel_id": "custom.tlc",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-tlc.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tlc.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -5397,10 +5397,10 @@
       "channel_name": "Teen Nick",
       "tvg_id": "custom.teennick",
       "channel_id": "custom.teennick",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-teen-nick.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/teen-nick.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -6097,7 +6097,7 @@
       "channel_name": "Al Jazeera",
       "tvg_id": "custom.aljazeera.english",
       "channel_id": "custom.aljazeera.english",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/al-jazeera.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-al-jazeera-26daa60b6e.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -7217,10 +7217,10 @@
       "channel_name": "Discovery",
       "tvg_id": "custom.discovery",
       "channel_id": "custom.discovery",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-discovery.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -7527,10 +7527,10 @@
       "channel_name": "G Series Drama",
       "tvg_id": "custom.gseriesdrama",
       "channel_id": "custom.gseriesdrama",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-g-series-drama.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/g-series-drama.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -8397,10 +8397,10 @@
       "channel_name": "Nick Jr",
       "tvg_id": "custom.nickjr",
       "channel_id": "custom.nickjr",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-nick-jr.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -9027,10 +9027,10 @@
       "channel_name": "Star Gold",
       "tvg_id": "custom.stargold",
       "channel_id": "custom.stargold",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-star-gold.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-star-gold-2d8d66200b.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
