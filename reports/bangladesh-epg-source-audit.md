@@ -1,6 +1,6 @@
 # Bangladesh EPG Source Audit
 
-Checked: **2026-10-11**
+Checked: **2026-10-14**
 Scope: public XMLTV feeds and channel-ID catalogues for the Bangladesh-group channels in IPTV-Playlist.m3u and BDIX-Playlist.m3u.
 
 ## Result
@@ -82,5 +82,7 @@ The following additional public pages were checked during a broader current-date
 
 ### Current disposition
 
-**No additional domestic Bangladesh schedule source met the verification threshold on 14 October 2026.** There is still no dependable public XMLTV endpoint verified for the remaining Bangladesh-group channels. Keep domestic Bangladesh IDs unmapped rather than substituting a foreign/diaspora feed, old schedules, inferred programme names, or placeholder data. A live official “next programme” display may be worth reverse-engineering only if it returns machine-readable current title and start/end times and can be refreshed reliably; no such endpoint has been verified yet.
+**No reliable public XMLTV feed for the domestic Bangladesh channel set was verified.** However, the official [RTV weekly schedule](https://www.rtvbd.tv/schedule.php) currently publishes named programmes with weekday and start times; it was visible during this review on 14 October 2026. The repository now has a narrow HTML adapter for the exact playlist identity `RTV.bd` only. Because the page lists starts but not explicit end times, the adapter emits intervals only where the next listed start is within 120 minutes; long gaps and each day's final listing are omitted rather than assigned invented durations. This provides schedule data for RTV only and does not establish EPG mappings for other domestic channels.
+
+The adapter verifies the page's current weekly structure at runtime and fails closed if too few explicit entries are parsed. RTV does not publish XMLTV directly, and the page terms have not been verified as granting redistribution rights, so that remains a separate rights review. The official BTV daily and weekly schedule catalogue is not treated as current because those pages record last updates in August 2025 ([daily schedule](https://btv.gov.bd/site/page/6bc2fea7-2a61-4479-9e6e-1811d0e0a9ec/-%E0%A6%A6%E0%A7%88%E0%A6%A8%E0%A6%BF%E0%A6%95-%E0%A6%85%E0%A6%A8%E0%A7%81%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE%E0%A6%A8%E0%A6%B8%E0%A7%82%E0%A6%9A%E0%A6%BF), [weekly schedule](https://btv.gov.bd/pages/static-pages/6922df6c933eb65569e21e63)). All other domestic IDs remain unmapped until a trustworthy matching schedule source is verified.
 

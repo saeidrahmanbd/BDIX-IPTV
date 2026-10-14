@@ -89,6 +89,16 @@ def entries(lines):
     return out
 
 
+def following_url(lines, index):
+    for candidate in lines[index + 1:]:
+        if candidate.startswith("#EXTINF:"):
+            break
+        value = candidate.strip()
+        if value.startswith(("http://", "https://")):
+            return value
+    return ""
+
+
 def repair(path):
     if not path.is_file():
         return 0, 0, 0
@@ -97,6 +107,21 @@ def repair(path):
     changes = 0
     collision_repairs = 0
     number_repairs = 0
+
+    # This blank-identity Filamchi proxy is an alternate stream, not canonical
+    # B4U Movies. Preserve the URL but quarantine the entry as Backup so it
+    # cannot create a duplicate active primary identity after ID completion.
+    for idx, line in entries(lines):
+        a = attrs(line)
+        if (
+            a.get("group-title", "").strip() == "Indian Movies"
+            and canonical_name(display_name(line)) == "b4u movies"
+            and not a.get("tvg-id", "").strip()
+            and not a.get("channel-id", "").strip()
+            and "/api/play/Filamchi.m3u8" in following_url(lines, idx)
+        ):
+            lines[idx] = set_attr(line, "group-title", "Backup")
+            changes += 1
 
     # First resolve the audited same-name/different-ID cases. Every audited
     # collision currently has one blank identity and one known canonical ID.

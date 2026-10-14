@@ -9,7 +9,10 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
-from official_epg_sources import HUM_TV_SOURCE, HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes
+from official_epg_sources import (
+    HUM_TV_SOURCE, HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes,
+    RTV_SOURCE, RTV_CHANNEL_ID, fetch_rtv_programmes,
+)
 
 PLAYLISTS = [
     Path("IPTV-Playlist.m3u"),
@@ -69,6 +72,7 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_BEIN1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
+    "https://www.rtvbd.tv/schedule.php",
     "https://hum.tv/schedule/",
 ]
 
@@ -425,26 +429,37 @@ def main():
     source_stats = {}
     for source_index, src in enumerate(SOURCES):
         try:
-            if src == HUM_TV_SOURCE:
-                hum_targets = [target for target in reverse.get(HUM_TV_CHANNEL_ID, []) if target in mapped_targets]
-                if not hum_targets:
-                    source_stats[src] = "SKIPPED: no active exact Hum TV mapping"
+            if src in (HUM_TV_SOURCE, RTV_SOURCE):
+                if src == HUM_TV_SOURCE:
+                    schedule_id, schedule_fetch, schedule_label = (
+                        HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes, "HUM TV"
+                    )
+                else:
+                    schedule_id, schedule_fetch, schedule_label = (
+                        RTV_CHANNEL_ID, fetch_rtv_programmes, "RTV"
+                    )
+                schedule_targets = [
+                    target for target in reverse.get(schedule_id, [])
+                    if target in mapped_targets
+                ]
+                if not schedule_targets:
+                    source_stats[src] = f"SKIPPED: no active exact {schedule_label} mapping"
                     continue
-                hum_programmes = fetch_hum_tv_programmes(now)
-                source_stats[src] = f"OK: {len(hum_programmes)} timed official slots"
-                for programme in hum_programmes:
+                schedule_programmes = schedule_fetch(now)
+                source_stats[src] = f"OK: {len(schedule_programmes)} timed official slots"
+                for programme in schedule_programmes:
                     source_id = programme["channel_id"]
                     title = programme["title"]
                     start_dt = programme["start_dt"]
                     stop_dt = programme["stop_dt"]
                     attrs = {
-                        "channel": HUM_TV_CHANNEL_ID,
+                        "channel": schedule_id,
                         "start": start_dt.strftime("%Y%m%d%H%M%S %z"),
                         "stop": stop_dt.strftime("%Y%m%d%H%M%S %z"),
                     }
                     title_elem = ET.Element("title")
                     title_elem.text = title
-                    for target in hum_targets:
+                    for target in schedule_targets:
                         channel_attrs = dict(attrs)
                         channel_attrs["channel"] = target
                         rec = {
@@ -484,7 +499,11 @@ def main():
                     # English-only policy applies to every channel, not just
                     # Indian Bangla. Reject non-English titles and text fields;
                     # other providers may still supply an English alternative.
-                    if title_elem is None or not is_english_text_element(title_elem):
+                    if (
+                        title_elem is None
+                        or not (title_elem.text or "").strip()
+                        or not is_english_text_element(title_elem)
+                    ):
                         continue
                     safe_children = []
                     for child in children:

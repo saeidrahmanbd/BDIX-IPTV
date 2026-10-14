@@ -308,11 +308,11 @@ try:
     old = subprocess.check_output(["git", "show", "HEAD:IPTV-Playlist.m3u"], text=True, stderr=subprocess.DEVNULL)
     old_primary = Counter()
     new_primary = Counter()
-    new_not_playing = Counter()
+    new_backup_by_url = Counter()
 
     # A primary entry is protected against silent removal or URL/identity
-    # changes. Moving the exact same entry to Backup is intentional
-    # quarantine behavior and is not a destructive change.
+    # changes. Moving the exact same URL to Backup is explicit quarantine,
+    # not deletion; the stream must remain present in the file.
     def stable(info, url):
         a = attrs(info)
         return (
@@ -329,7 +329,8 @@ try:
         key = stable(info, url)
         if group not in PRIMARY_EXCEPTIONS:
             new_primary[key] += 1
-        
+        elif url.strip():
+            new_backup_by_url[url.strip().lower()] += 1
 
     # A metadata identity repair may intentionally change an existing primary
     # tvg-id/channel-id when the exact stream URL is preserved under a derived
@@ -342,7 +343,9 @@ try:
     for key, count in old_primary.items():
         cid, url = key
         direct = new_primary[key]
-        if direct + new_not_playing[key] >= count:
+        if direct >= count:
+            continue
+        if direct + new_backup_by_url[url.strip().lower()] >= count:
             continue
         preserved = 0
         for new_cid, new_count in new_primary_by_url.get(url, []):
@@ -582,6 +585,10 @@ def run_change_guard():
         key(i,u) for i,u in entries
         if attrs(i).get("group-title","").strip() not in PRIMARY_EXCEPTIONS
     )
+    new_backup_by_url = Counter(
+        u.strip().lower() for i,u in entries
+        if attrs(i).get("group-title","").strip() in PRIMARY_EXCEPTIONS and u.strip()
+    )
     new_primary_by_url = defaultdict(Counter)
     for (cid, url), count in new_primary.items():
         new_primary_by_url[url][cid] += count
@@ -590,6 +597,9 @@ def run_change_guard():
     for (old_cid, url), count in old_primary.items():
         direct = new_primary[(old_cid, url)]
         if direct >= count:
+            continue
+        quarantined = min(count - direct, new_backup_by_url.get(url.strip().lower(), 0))
+        if direct + quarantined >= count:
             continue
         # Allow only the specific identity-repair form produced by metadata
         # normalization: the same primary stream URL retained under a derived

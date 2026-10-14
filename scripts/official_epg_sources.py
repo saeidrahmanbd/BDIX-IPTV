@@ -8,7 +8,10 @@ from zoneinfo import ZoneInfo
 
 HUM_TV_SOURCE = "https://hum.tv/schedule/"
 HUM_TV_CHANNEL_ID = "HumTV.pk"
+RTV_SOURCE = "https://www.rtvbd.tv/schedule.php"
+RTV_CHANNEL_ID = "RTV.bd"
 PAKISTAN_TZ = ZoneInfo("Asia/Karachi")
+BANGLADESH_TZ = ZoneInfo("Asia/Dhaka")
 WEEKDAYS = {
     "monday": 0, "tuesday": 1, "wednesday": 2, "thursday": 3,
     "friday": 4, "saturday": 5, "sunday": 6,
@@ -163,6 +166,176 @@ def fetch_hum_tv_programmes(now=None):
                 continue
             programmes.append({
                 "channel_id": HUM_TV_CHANNEL_ID,
+                "title": event["title"],
+                "start_dt": start,
+                "stop_dt": stop,
+            })
+
+    unique = {}
+    for programme in programmes:
+        key = (programme["start_dt"], programme["stop_dt"], programme["title"])
+        unique[key] = programme
+    return sorted(unique.values(), key=lambda x: (x["start_dt"], x["title"]))
+
+
+RTV_WEEKDAYS = {
+    "mon": 0, "monday": 0, "tue": 1, "tues": 1, "tuesday": 1,
+    "wed": 2, "wednesday": 2, "thu": 3, "thur": 3, "thurs": 3, "thursday": 3,
+    "fri": 4, "friday": 4, "sat": 5, "saturday": 5, "sun": 6, "sunday": 6,
+}
+RTV_GENERIC = GENERIC | {"rtv", "today's schedule", "today's programme", "today's program"}
+RTV_BLOCK_TAGS = {
+    "address", "article", "br", "div", "footer", "h1", "h2", "h3", "h4",
+    "header", "li", "main", "p", "section", "td", "th", "tr", "ul",
+}
+RTV_SKIP_TAGS = {"script", "style", "noscript", "svg"}
+
+
+class _RtvScheduleParser(HTMLParser):
+    """Extract visible lines from RTV's official weekly schedule page."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts = []
+        self.skip_stack = []
+
+    def handle_starttag(self, tag, attrs):
+        tag = tag.lower()
+        if self.skip_stack:
+            if tag in RTV_SKIP_TAGS:
+                self.skip_stack.append(tag)
+            return
+        if tag in RTV_SKIP_TAGS:
+            self.skip_stack.append(tag)
+            return
+        if tag in RTV_BLOCK_TAGS:
+            self.parts.append("\n")
+
+    def handle_endtag(self, tag):
+        tag = tag.lower()
+        if self.skip_stack:
+            if tag == self.skip_stack[-1]:
+                self.skip_stack.pop()
+            return
+        if tag in RTV_BLOCK_TAGS:
+            self.parts.append("\n")
+
+    def handle_data(self, data):
+        if not self.skip_stack and data:
+            self.parts.append(data)
+
+    def text(self):
+        return "".join(self.parts)
+
+
+def fetch_rtv_programmes(now=None):
+    """Fetch RTV's official weekly schedule, deriving only short adjacent slots.
+
+    The page provides weekday, named programme, and start-time entries but no
+    explicit stop times. Emit a slot only when the next start that day is at
+    most 120 minutes later. Omit wider gaps and each day's final listing rather
+    than inventing end times. Applies only to exact RTV.bd.
+    """
+    now = now or datetime.now(timezone.utc)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    now_utc = now.astimezone(timezone.utc)
+    request = urllib.request.Request(
+        RTV_SOURCE,
+        headers={
+            "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
+            "Accept": "text/html,application/xhtml+xml,*/*",
+        },
+    )
+    with urllib.request.urlopen(request, timeout=30) as response:
+        html = response.read().decode("utf-8", errors="replace")
+
+    parser = _RtvScheduleParser()
+    parser.feed(html)
+    parser.close()
+
+    weekly_events = []
+    current_day = None
+    pending = None
+    for raw_line in parser.text().splitlines():
+        line = _clean(raw_line)
+        if not line:
+            continue
+        day_key = re.sub(r"[^a-z]", "", line.casefold())
+        if day_key in RTV_WEEKDAYS:
+            current_day = RTV_WEEKDAYS[day_key]
+            pending = None
+            continue
+        match = TIME_RE.search(line)
+        if match and current_day is not None:
+            hour = int(match.group(1)) % 12
+            if match.group(3).upper() == "P":
+                hour += 12
+            minute = int(match.group(2))
+            if hour > 23 or minute > 59:
+                pending = None
+                continue
+            title = _clean(line[match.end():])
+            title = re.sub(r"^[\s\-–—:]+", "", title)
+            title = re.split(r"\s*(?:->|→)\s*", title, maxsplit=1)[0].strip()
+            if title:
+                pending = None
+                if title.casefold() not in RTV_GENERIC:
+                    weekly_events.append({
+                        "weekday": current_day, "hour": hour, "minute": minute, "title": title
+                    })
+            else:
+                pending = (current_day, hour, minute)
+            continue
+        if pending:
+            title = re.split(r"\s*(?:->|→)\s*", line, maxsplit=1)[0].strip()
+            day, hour, minute = pending
+            pending = None
+            if title and title.casefold() not in RTV_GENERIC and not TIME_RE.search(title):
+                weekly_events.append({
+                    "weekday": day, "hour": hour, "minute": minute, "title": title
+                })
+
+    unique_events = {}
+    for event in weekly_events:
+        key = (event["weekday"], event["hour"], event["minute"], event["title"].casefold())
+        unique_events[key] = event
+    weekly_events = list(unique_events.values())
+    if len(weekly_events) < 14 or len({x["weekday"] for x in weekly_events}) < 5:
+        raise RuntimeError(
+            "RTV schedule parsing returned too few explicit named weekday entries; "
+            "the official page markup may have changed."
+        )
+
+    lower = now_utc - timedelta(hours=6)
+    upper = now_utc + timedelta(days=7)
+    local_today = now_utc.astimezone(BANGLADESH_TZ).date()
+    programmes = []
+    for offset in range(8):
+        day = local_today + timedelta(days=offset)
+        events = sorted(
+            (x for x in weekly_events if x["weekday"] == day.weekday()),
+            key=lambda x: (x["hour"], x["minute"], x["title"].casefold()),
+        )
+        for index, event in enumerate(events[:-1]):
+            nxt = events[index + 1]
+            start_minutes = event["hour"] * 60 + event["minute"]
+            stop_minutes = nxt["hour"] * 60 + nxt["minute"]
+            duration = stop_minutes - start_minutes
+            if duration <= 0 or duration > 120:
+                continue
+            start_local = datetime.combine(
+                day, time(event["hour"], event["minute"]), tzinfo=BANGLADESH_TZ
+            )
+            stop_local = datetime.combine(
+                day, time(nxt["hour"], nxt["minute"]), tzinfo=BANGLADESH_TZ
+            )
+            start = start_local.astimezone(timezone.utc)
+            stop = stop_local.astimezone(timezone.utc)
+            if stop < lower or start > upper:
+                continue
+            programmes.append({
+                "channel_id": RTV_CHANNEL_ID,
                 "title": event["title"],
                 "start_dt": start,
                 "stop_dt": stop,

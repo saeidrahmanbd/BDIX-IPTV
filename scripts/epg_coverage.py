@@ -2,7 +2,10 @@
 """Build and continuously improve EPG mappings from public XMLTV sources."""
 import csv, gzip, io, json, re, unicodedata, urllib.request
 import xml.etree.ElementTree as ET
-from official_epg_sources import HUM_TV_SOURCE, HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes
+from official_epg_sources import (
+    HUM_TV_SOURCE, HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes,
+    RTV_SOURCE, RTV_CHANNEL_ID, fetch_rtv_programmes,
+)
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -93,6 +96,7 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_BEIN1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
+    "https://www.rtvbd.tv/schedule.php",
     "https://hum.tv/schedule/",
 ]
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
@@ -178,6 +182,21 @@ def is_english_text_element(elem):
 
 
 def fetch_source(url):
+    if url == RTV_SOURCE:
+        programmes = fetch_rtv_programmes()
+        ids = {RTV_CHANNEL_ID} if programmes else set()
+        future = set()
+        counts = defaultdict(int)
+        names = defaultdict(set)
+        now = datetime.now(timezone.utc)
+        for program in programmes:
+            cid = program["channel_id"]
+            counts[cid] += 1
+            names[norm_name("RTV")].add(cid)
+            if program["stop_dt"] >= now:
+                future.add(cid)
+        return ids, future, counts, names
+
     if url == HUM_TV_SOURCE:
         programmes = fetch_hum_tv_programmes()
         ids = {HUM_TV_CHANNEL_ID} if programmes else set()
@@ -222,7 +241,8 @@ def fetch_source(url):
             if (
                 cid and start and stop and stop > start
                 and start <= upper and stop >= lower
-                and title is not None and is_english_text_element(title)
+                and title is not None and bool((title.text or "").strip())
+                and is_english_text_element(title)
             ):
                 counts[cid] += 1
                 if stop >= now:
@@ -419,7 +439,7 @@ def main():
         "",
         f"- Active unique playlist channel IDs audited: **{total_active}**",
         f"- IDs with an EPG source mapping: **{total_mapped}/{total_active} ({round(100*total_mapped/total_active,1) if total_active else 0}%)**",
-        f"- IDs with usable current/future English programme data: **{total_live}/{total_active} ({round(100*total_live/total_active,1) if total_active else 0}%)**",
+        f"- IDs with usable current/future source schedules (nonblank English titles): **{total_live}/{total_active} ({round(100*total_live/total_active,1) if total_active else 0}%)**",
         f"- IDs with no EPG source mapping: **{total_unmapped}**",
         "",
         "## Coverage by Playlist Group",
@@ -475,7 +495,8 @@ def main():
                 if (
                     cid and start and stop and stop > start
                     and start <= upper_guide and stop >= lower_guide
-                    and title is not None and is_english_text_element(title)
+                    and title is not None and bool((title.text or "").strip())
+                    and is_english_text_element(title)
                 ):
                     guide_programmes += 1
                     if stop >= now_guide:
@@ -492,6 +513,10 @@ def main():
     active_live = active_ids & guide_live
     missing = sorted(mapped_targets - guide_channels)
     without_live = sorted(present_ids - guide_live)
+    source_live_ids = {r["tvg_id"] for r in rows if r["tvg_id"] and r["status"] == "MAPPED"}
+    source_live_without_publication = sorted(source_live_ids - active_live)
+    published_live_without_source = sorted(active_live - source_live_ids)
+    channel_names = {r["tvg_id"]: r["channel"] for r in rows if r["tvg_id"]}
     header_results = [(path, header_status(path)) for path in PLAYLISTS]
     lines += [
         "",
@@ -507,6 +532,22 @@ def main():
         "- Missing mapped playlist IDs: " + (", ".join(missing[:60]) if missing else "none") + (f" (and {len(missing)-60} more)" if len(missing) > 60 else ""),
         f"- Published mapped IDs without usable current/future programmes: **{len(without_live)}**",
         "- IDs without usable current/future programmes: " + (", ".join(without_live[:60]) if without_live else "none") + (f" (and {len(without_live)-60} more)" if len(without_live) > 60 else ""),
+    ]
+    def format_identity_list(ids):
+        return ", ".join(
+            f"{channel_names.get(cid, 'Unknown channel')} (`{cid}`)" for cid in ids
+        ) if ids else "none"
+    lines += [
+        "",
+        "## Source / Published Schedule Reconciliation",
+        "",
+        f"- IDs with usable current/future source schedule data: **{total_live}/{total_active} ({round(100*total_live/total_active,1) if total_active else 0}%)**",
+        f"- IDs with usable current/future schedules in published XMLTV: **{len(active_live)}/{len(active_ids)} ({round(100*len(active_live)/len(active_ids),1) if active_ids else 0}%)**",
+        f"- Source-scheduled IDs without published usable schedules: **{len(source_live_without_publication)}**",
+        "- Source-scheduled IDs without published usable schedules: " + format_identity_list(source_live_without_publication),
+        f"- Published usable-schedule IDs not counted source-eligible: **{len(published_live_without_source)}**",
+        "- Published usable-schedule IDs not counted source-eligible: " + format_identity_list(published_live_without_source),
+        "",
     ]
     if guide_error:
         lines.append(f"- XMLTV validation error: **{guide_error}**")
