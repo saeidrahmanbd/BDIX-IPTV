@@ -596,7 +596,7 @@ def run_change_guard():
         # ID such as old_id@ALT1 or old_id@HD.
         preserved = sum(
             n for new_cid, n in new_primary_by_url.get(url, {}).items()
-            if new_cid.startswith(old_cid + "@")
+            if (not old_cid and new_cid) or (old_cid and new_cid.startswith(old_cid + "@"))
         )
         if direct + preserved < count:
             removed_primary.extend([(old_cid, url)] * (count - direct - preserved))
