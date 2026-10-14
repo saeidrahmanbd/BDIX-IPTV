@@ -274,26 +274,49 @@ def main():
 
     # Strict candidate audit: similarity suggestions are evidence for human review only.
     # No fuzzy candidate is written to the mapping CSV automatically.
+    def without_region_suffix(value):
+        suffixes = (
+            "czechrepublic", "unitedkingdom", "international", "malayalam",
+            "telugu", "bengali", "hindi", "tamil", "canada", "australia",
+            "ukraine", "poland", "france", "germany", "mexico", "arabia",
+            "india", "europe", "english", "favoris", "comedy", "movies",
+            "action", "drama", "family", "east", "west", "mena", "usa",
+            "uae", "uk", "us", "au", "br", "ca", "fr", "de", "in",
+        )
+        value = norm_name(value)
+        for suffix in suffixes:
+            if value.endswith(suffix) and len(value) - len(suffix) >= 5:
+                return value[:-len(suffix)]
+        return value
+
     audit_rows = []
     channel_by_id = {channel["tvg_id"]: channel for channel in channels}
+    unmapped_rows = [row for row in rows if not row["epg_id"]]
     for row in rows:
         if row["epg_id"] or row["status"] != "NO_GUIDE_HIT":
             continue
         target = channel_by_id.get(row["tvg_id"], {})
         target_names = [norm_name(row["channel"])]
         target_names += [norm_name(x) for x in target.get("aliases", []) if norm_name(x)]
+        target_forms = set(target_names)
+        target_forms |= {without_region_suffix(name) for name in target_names}
         candidates_by_id = {}
         for src, source_tuple in zip(SOURCES, source_data):
             source_ids, source_future, source_counts, source_names = source_tuple
             for source_name_key, source_ids_for_name in source_names.items():
                 if not source_name_key or len(source_name_key) < 5:
                     continue
+                source_forms = {
+                    source_name_key,
+                    without_region_suffix(source_name_key),
+                }
                 best_score = max(
-                    (SequenceMatcher(None, target_name, source_name_key).ratio()
-                     for target_name in target_names if target_name),
+                    (SequenceMatcher(None, target_form, source_form).ratio()
+                     for target_form in target_forms for source_form in source_forms
+                     if target_form and source_form),
                     default=0.0,
                 )
-                if best_score < 0.76:
+                if best_score < 0.68:
                     continue
                 for source_id in source_ids_for_name:
                     # Only suggest IDs with usable near-term schedule data.
@@ -331,17 +354,19 @@ def main():
 
     audit_path = Path("reports/epg-unmapped-audit.md")
     audit_path.parent.mkdir(parents=True, exist_ok=True)
+    channels_with_candidates = {item["tvg_id"] for item in audit_rows}
     audit_lines = [
         "# Strict Unmapped EPG Audit",
         "",
         f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",
         "",
-        "This audit compares every unmapped active playlist identity against display names from the configured XMLTV feeds. Candidates below have current/future schedule records, but name similarity is not proof of identity.",
+        "This audit compares every unmapped active playlist identity against display names from the configured XMLTV feeds. Candidates have current/future schedule records, but name similarity is not proof of identity.",
         "No candidate in this report is automatically applied to the mapping CSV. Any match must be verified against the source channel identity, territory/variant, and current programme data first.",
         "",
-        f"- Unmapped channel identities reviewed: **{sum(1 for row in rows if not row['epg_id'])}**",
-        f"- Unmapped identities with at least one review candidate: **{len(set(item['tvg_id'] for item in audit_rows))}**",
+        f"- Unmapped channel identities reviewed: **{len(unmapped_rows)}**",
+        f"- Unmapped identities with at least one review candidate: **{len(channels_with_candidates)}**",
         f"- Candidate rows: **{len(audit_rows)}**",
+        f"- Unmapped identities with no review candidate: **{len(set(row['tvg_id'] for row in unmapped_rows) - channels_with_candidates)}**",
         "",
         "## Candidate matches for manual review",
         "",
@@ -355,9 +380,22 @@ def main():
         )
     audit_lines += [
         "",
+        "## Unmapped identities without a schedule-backed candidate",
+        "",
+        "| Group | Channel | Playlist tvg-id | Status | Reason |",
+        "|---|---|---|---|---|",
+    ]
+    for row in sorted(unmapped_rows, key=lambda x: (x["group"], x["channel"].lower())):
+        if row["tvg_id"] in channels_with_candidates:
+            continue
+        audit_lines.append(
+            f"| {row['group']} | {row['channel']} | {row['tvg_id']} | {row['status']} | No name-similar source ID with current/future programme rows in configured feeds |"
+        )
+    audit_lines += [
+        "",
         "## Bangladesh-specific review",
         "",
-        "Bangladesh-group identities are never automatically fuzzy-matched. Candidate rows are research leads only; only an exact tvg-id or a specifically verified alias may be promoted. The official BTV site publishes programme schedules, but the pages verified so far are Bangla-language static/weekly schedules rather than a confirmed, reusable English XMLTV feed. No fabricated schedules are inserted.",
+        "Bangladesh-group identities are never automatically fuzzy-matched. Candidate rows are research leads only; only an exact tvg-id or a specifically verified alias may be promoted. The official BTV site publishes daily and weekly programme schedule pages, but the latest indexed daily and weekly schedule pages found in this audit were last updated in August 2025 and are not a current reliable automated schedule feed. No stale or fabricated schedules are inserted.",
         "",
     ]
     audit_path.write_text("\n".join(audit_lines) + "\n", encoding="utf-8")
