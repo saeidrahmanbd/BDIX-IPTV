@@ -1,13 +1,202 @@
-const EPG_URL="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml";
-function j(x,s=200){return new Response(JSON.stringify(x),{status:s,headers:{"content-type":"application/json"}})}
-function a(l){const o={};for(const m of l.matchAll(/([\w-]+)="([^"]*)"/g))o[m[1]]=m[2];return o}
-function parse(t){let c=null,r=[],id=100000000;for(const l of t.split(/\r?\n/)){if(l.startsWith("#EXTINF:")){const x=a(l),i=l.indexOf(",");c={id:id++,tvgId:x["tvg-id"]||"",name:x["tvg-name"]||(i<0?"":l.slice(i+1)),logo:x["tvg-logo"]||"",group:x["group-title"]||"Uncategorized",chno:x["tvg-chno"]||""}}else if(c&&/^https?:\/\//i.test(l)){r.push({...c,url:l});c=null}}return r}
-async function get(){const r=await fetch(envURL);if(!r.ok)throw Error(`Playlist HTTP ${r.status}`);return parse(await r.text())}
-function ok(u,e){return (u.searchParams.get("username")||"").trim()===String(e.XTREAM_USERNAME||"").trim()&&(u.searchParams.get("password")||"")===String(e.XTREAM_PASSWORD||"")}
-let envURL="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u";
-export default{async fetch(req,env){const u=new URL(req.url),p=u.pathname;
-if(p==="/health"){try{const s=await get();return j({ok:true,streams:s.length,playlist:envURL})}catch(e){return j({ok:false,error:String(e)},502)}}
-if(p==="/xmltv.php"){if(!ok(u,env))return j({user_info:{auth:0,status:"Disabled"}},401);const r=await fetch(EPG_URL);return new Response(await r.text(),{status:r.status,headers:{"content-type":"application/xml"}})}
-if(p==="/player_api.php"){if(!ok(u,env))return j({user_info:{auth:0,status:"Disabled"}},401);try{const s=await get(),groups=[...new Set(s.map(x=>x.group))].map((x,i)=>({category_id:String(i+1),category_name:x,parent_id:0})),act=(u.searchParams.get("action")||"").toLowerCase();if(act==="get_live_categories")return j(groups);if(act==="get_live_streams")return j(s.map(x=>({num:Number(x.chno)||0,name:x.name,stream_type:"live",stream_id:x.id,stream_icon:x.logo,epg_channel_id:x.tvgId,category_id:String(groups.findIndex(g=>g.category_name===x.group)+1),direct_source:x.url,stream_url:`${u.origin}/live/{username}/{password}/${x.id}.ts`})));return j({user_info:{username:u.searchParams.get("username"),auth:1,status:"Active",is_trial:"0",active_cons:"0",max_connections:"10",allowed_output_formats:["m3u8","ts"]},server_info:{url:u.origin,https_port:"443",protocol:"https",timezone:"Asia/Dhaka"}})}catch(e){return j({error:String(e)},502)}}
-const m=p.match(/^\/live\/([^/]+)\/([^/]+)\/(\d+)\.ts$/);if(m){const v=new URL(req.url);v.searchParams.set("username",decodeURIComponent(m[1]));v.searchParams.set("password",decodeURIComponent(m[2]));if(!ok(v,env))return new Response("Unauthorized",{status:401});const s=(await get()).find(x=>x.id===Number(m[3]));return s?fetch(s.url):new Response("Stream not found",{status:404})}
-return j({ok:true,service:"BDIX-IPTV Xtream BDIX"})}}
+const PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u";
+const EPG_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml";
+
+function json(data, status = 200) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" }
+  });
+}
+function xml(data, status = 200) {
+  return new Response(data, {
+    status,
+    headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "no-store" }
+  });
+}
+function text(data, status = 200, type = "text/plain; charset=utf-8") {
+  return new Response(data, {
+    status,
+    headers: { "content-type": type, "cache-control": "no-store" }
+  });
+}
+function attrs(line) {
+  const out = {};
+  for (const m of line.matchAll(/([\w-]+)="([^"]*)"/g)) out[m[1]] = m[2];
+  return out;
+}
+function parseM3U(data) {
+  const streams = [];
+  let current = null;
+  let id = 100000000;
+  for (const raw of data.split(/\r?\n/)) {
+    const line = raw.trim();
+    if (line.startsWith("#EXTINF:")) {
+      const a = attrs(line);
+      const i = line.indexOf(",");
+      current = {
+        id: id++,
+        tvgId: a["tvg-id"] || "",
+        name: a["tvg-name"] || (i < 0 ? "" : line.slice(i + 1)),
+        logo: a["tvg-logo"] || "",
+        group: a["group-title"] || "Uncategorized",
+        chno: a["tvg-chno"] || ""
+      };
+    } else if (current && /^https?:\/\//i.test(line)) {
+      streams.push({ ...current, url: line });
+      current = null;
+    }
+  }
+  return streams;
+}
+async function playlist(env) {
+  const source = env.PLAYLIST_URL || PLAYLIST_URL;
+  const r = await fetch(source, { headers: { "User-Agent": "BDIX-IPTV-Xtream/6.1" } });
+  if (!r.ok) throw Error(`Playlist HTTP ${r.status}`);
+  const streams = parseM3U(await r.text());
+  if (!streams.length) throw Error("Playlist contains no streams");
+  return streams;
+}
+function auth(url, env) {
+  const expectedUser = String(env.XTREAM_USERNAME || "").trim();
+  const expectedPass = String(env.XTREAM_PASSWORD || "");
+  return Boolean(expectedUser && expectedPass) &&
+    (url.searchParams.get("username") || "").trim() === expectedUser &&
+    (url.searchParams.get("password") || "") === expectedPass;
+}
+function userInfo(url, authenticated) {
+  return {
+    username: url.searchParams.get("username") || "",
+    message: "",
+    auth: authenticated ? 1 : 0,
+    status: authenticated ? "Active" : "Disabled",
+    exp_date: null,
+    is_trial: "0",
+    active_cons: "0",
+    created_at: String(Math.floor(Date.now() / 1000)),
+    max_connections: "10",
+    allowed_output_formats: ["m3u8", "ts"]
+  };
+}
+function serverInfo(url) {
+  const now = new Date();
+  const parts = Object.fromEntries(new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Asia/Dhaka",
+    year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", second: "2-digit",
+    hourCycle: "h23"
+  }).formatToParts(now).map(part => [part.type, part.value]));
+  return {
+    url: url.hostname,
+    port: "443",
+    https_port: "443",
+    server_protocol: "https",
+    protocol: "https",
+    rtmp_port: "",
+    timezone: "Asia/Dhaka",
+    timestamp_now: Math.floor(now.getTime() / 1000),
+    time_now: `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}:${parts.second}`
+  };
+}
+function categories(streams) {
+  return [...new Set(streams.map(s => s.group))]
+    .map((name, i) => ({ category_id: String(i + 1), category_name: name, parent_id: 0 }));
+}
+function streamPayload(s, categoryId, origin) {
+  return {
+    num: Number(s.chno) || 0,
+    name: s.name,
+    stream_type: "live",
+    stream_id: s.id,
+    stream_icon: s.logo,
+    epg_channel_id: s.tvgId,
+    category_id: categoryId,
+    tv_archive: 0,
+    direct_source: s.url,
+    stream_url: `${origin}/live/{username}/{password}/${s.id}.ts`,
+    tvg_id: s.tvgId,
+    tvg_name: s.name
+  };
+}
+
+export default {
+  async fetch(request, env) {
+    const u = new URL(request.url);
+    const p = u.pathname;
+    const origin = u.origin;
+
+    if (p === "/health") {
+      try {
+        const streams = await playlist(env);
+        return json({ ok: true, playlist: env.PLAYLIST_URL || PLAYLIST_URL, streams: streams.length });
+      } catch (e) {
+        return json({ ok: false, error: String(e) }, 502);
+      }
+    }
+
+    if (p === "/xmltv.php") {
+      if (!auth(u, env)) return json({ user_info: userInfo(u, false) }, 401);
+      const r = await fetch(EPG_URL);
+      return xml(await r.text(), r.status);
+    }
+
+    if (p === "/player_api.php") {
+      const info = { user_info: userInfo(u, auth(u, env)), server_info: serverInfo(u) };
+      if (!auth(u, env)) return json(info);
+      try {
+        const streams = await playlist(env);
+        const c = categories(streams);
+        const categoryByName = new Map(c.map(x => [x.category_name, x.category_id]));
+        const action = (u.searchParams.get("action") || "").toLowerCase();
+
+        if (action === "get_live_categories") return json(c);
+        if (action === "get_live_streams") {
+          const categoryId = u.searchParams.get("category_id");
+          return json(streams
+            .filter(s => !categoryId || categoryByName.get(s.group) === categoryId)
+            .map(s => streamPayload(s, categoryByName.get(s.group), origin)));
+        }
+        return json(info);
+      } catch (e) {
+        return json({ error: String(e) }, 502);
+      }
+    }
+
+    if (p === "/get.php") {
+      if (!auth(u, env)) return text("Unauthorized", 401);
+      try {
+        const streams = await playlist(env);
+        const lines = ["#EXTM3U"];
+        for (const s of streams) {
+          lines.push(
+            `#EXTINF:-1 tvg-id="${s.tvgId}" tvg-name="${s.name.replaceAll('"', "&quot;")}" tvg-logo="${s.logo}" group-title="${s.group}" tvg-chno="${s.chno}",${s.name}`,
+            `${origin}/live/${encodeURIComponent(env.XTREAM_USERNAME)}/${encodeURIComponent(env.XTREAM_PASSWORD)}/${s.id}.ts`
+          );
+        }
+        return text(lines.join("\n") + "\n", 200, "audio/x-mpegurl; charset=utf-8");
+      } catch (e) {
+        return text(String(e), 502);
+      }
+    }
+
+    const m = p.match(/^\/live\/([^/]+)\/([^/]+)\/(\d+)\.(?:ts|m3u8)$/i);
+    if (m) {
+      const streamRequest = new URL(request.url);
+      streamRequest.searchParams.set("username", decodeURIComponent(m[1]));
+      streamRequest.searchParams.set("password", decodeURIComponent(m[2]));
+      if (!auth(streamRequest, env)) return text("Unauthorized", 401);
+      try {
+        const s = (await playlist(env)).find(x => x.id === Number(m[3]));
+        if (!s) return text("Stream not found", 404);
+        return fetch(s.url, { headers: { "User-Agent": "BDIX-IPTV-Xtream/6.1" } });
+      } catch (e) {
+        return text(String(e), 502);
+      }
+    }
+
+    return json({
+      ok: true,
+      service: "BDIX-IPTV Xtream BDIX",
+      endpoints: ["player_api.php", "get.php", "xmltv.php", "live/<username>/<password>/<stream_id>.ts"]
+    });
+  }
+};
