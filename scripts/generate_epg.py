@@ -63,6 +63,7 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_BEIN1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
+    "https://iptv-org.github.io/epg/sites/streamingtvguides.com/streamingtvguides.com.xml",
 ]
 
 # Per-channel broadcast-delay corrections, in hours.
