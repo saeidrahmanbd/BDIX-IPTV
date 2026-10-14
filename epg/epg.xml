@@ -2330,36 +2330,6 @@
     <desc lang="en">A live host interacts with viewers and plays their requested songs.</desc>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_7S_MUSIC_1313691_17OCT063000_17OCT070000/images/LANDSCAPE_169/1689853196000_7SMusic_InteractiveLiveNewHitSongsSlot_1313691.jpg" />
   </programme>
-  <programme start="20261014080000 +0000" stop="20261014090000 +0000" channel="9XJalwa.in">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014090000 +0000" stop="20261014100000 +0000" channel="9XJalwa.in">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014100000 +0000" stop="20261014110000 +0000" channel="9XJalwa.in">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014110000 +0000" stop="20261014120000 +0000" channel="9XJalwa.in">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014120000 +0000" stop="20261014130000 +0000" channel="9XJalwa.in">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014130000 +0000" stop="20261014140000 +0000" channel="9XJalwa.in">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
   <programme start="20261014140000 +0000" stop="20261014150000 +0000" channel="9XJalwa.in">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
@@ -2676,6 +2646,46 @@
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
   <programme start="20261017050000 +0000" stop="20261017060000 +0000" channel="9XJalwa.in">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017060000 +0000" stop="20261017070000 +0000" channel="9XJalwa.in">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017070000 +0000" stop="20261017080000 +0000" channel="9XJalwa.in">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017080000 +0000" stop="20261017090000 +0000" channel="9XJalwa.in">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017090000 +0000" stop="20261017100000 +0000" channel="9XJalwa.in">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017100000 +0000" stop="20261017110000 +0000" channel="9XJalwa.in">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017110000 +0000" stop="20261017120000 +0000" channel="9XJalwa.in">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017120000 +0000" stop="20261017130000 +0000" channel="9XJalwa.in">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017130000 +0000" stop="20261017140000 +0000" channel="9XJalwa.in">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
@@ -4767,40 +4777,6 @@
     <desc lang="en">Talented dancers from every corner of the country share their performances to foot-tapping music, showcasing their skills to win the title.</desc>
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p29746800_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="AMC.us" start="20261014072800 +0000" stop="20261014081700 +0000">
-    <title lang="en">Creepshow</title>
-    <sub-title lang="en">Dead &amp; Breakfast, Pesticide</sub-title>
-    <desc lang="en">A marketing ploy at a haunted Bed and Breakfast becomes too realistic; an exterminator gets more than he bargained for when he takes on a big job.</desc>
-    <credits>
-      <actor>Ali Larter</actor>
-      <actor>C. Thomas Howell</actor>
-      <actor>Iman Benson</actor>
-      <director>Axelle Carolyn</director>
-    </credits>
-    <date>2021</date>
-    <category lang="en">Series</category>
-    <category lang="en">Horror</category>
-    <category lang="en">Fantasy</category>
-    <category lang="en">Dark comedy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p17416148_b_h8_ae.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S2 E2</episode-num>
-    <previously-shown />
-    <rating system="Canadian Parental Rating">
-      <value>18+</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>16</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>A16</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TV14</value>
-    </rating>
-    <rating system="Arcom">
-      <value>-12</value>
-    </rating>
   </programme>
   <programme channel="AMC.us" start="20261014081700 +0000" stop="20261014090500 +0000">
     <title lang="en">Creepshow</title>
@@ -8173,36 +8149,6 @@
       <value>--</value>
     </rating>
   </programme>
-  <programme start="20261014080000 +0000" stop="20261014090000 +0000" channel="AakaashAath.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014090000 +0000" stop="20261014100000 +0000" channel="AakaashAath.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014100000 +0000" stop="20261014110000 +0000" channel="AakaashAath.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014110000 +0000" stop="20261014120000 +0000" channel="AakaashAath.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014120000 +0000" stop="20261014130000 +0000" channel="AakaashAath.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014130000 +0000" stop="20261014140000 +0000" channel="AakaashAath.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
   <programme start="20261014140000 +0000" stop="20261014150000 +0000" channel="AakaashAath.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
@@ -8519,6 +8465,46 @@
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
   <programme start="20261017050000 +0000" stop="20261017060000 +0000" channel="AakaashAath.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017060000 +0000" stop="20261017070000 +0000" channel="AakaashAath.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017070000 +0000" stop="20261017080000 +0000" channel="AakaashAath.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017080000 +0000" stop="20261017090000 +0000" channel="AakaashAath.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017090000 +0000" stop="20261017100000 +0000" channel="AakaashAath.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017100000 +0000" stop="20261017110000 +0000" channel="AakaashAath.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017110000 +0000" stop="20261017120000 +0000" channel="AakaashAath.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017120000 +0000" stop="20261017130000 +0000" channel="AakaashAath.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017130000 +0000" stop="20261017140000 +0000" channel="AakaashAath.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
@@ -13797,36 +13783,6 @@
     <category lang="en">Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p26995102_b_h9_ab.jpg?lock=880x660" />
   </programme>
-  <programme start="20261014080000 +0000" stop="20261014090000 +0000" channel="AnjanTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014090000 +0000" stop="20261014100000 +0000" channel="AnjanTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014100000 +0000" stop="20261014110000 +0000" channel="AnjanTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014110000 +0000" stop="20261014120000 +0000" channel="AnjanTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014120000 +0000" stop="20261014130000 +0000" channel="AnjanTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014130000 +0000" stop="20261014140000 +0000" channel="AnjanTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
   <programme start="20261014140000 +0000" stop="20261014150000 +0000" channel="AnjanTV.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
@@ -14143,6 +14099,46 @@
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
   <programme start="20261017050000 +0000" stop="20261017060000 +0000" channel="AnjanTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017060000 +0000" stop="20261017070000 +0000" channel="AnjanTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017070000 +0000" stop="20261017080000 +0000" channel="AnjanTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017080000 +0000" stop="20261017090000 +0000" channel="AnjanTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017090000 +0000" stop="20261017100000 +0000" channel="AnjanTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017100000 +0000" stop="20261017110000 +0000" channel="AnjanTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017110000 +0000" stop="20261017120000 +0000" channel="AnjanTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017120000 +0000" stop="20261017130000 +0000" channel="AnjanTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017130000 +0000" stop="20261017140000 +0000" channel="AnjanTV.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
@@ -29281,36 +29277,6 @@ Lou, Sonia, and Froy have to push away a debtor while trying to push a classic c
     <category lang="en">News Bulletin</category>
     <icon src="https://dtil.tmsimg.com/assets/p28955456_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme start="20261014080000 +0000" stop="20261014090000 +0000" channel="DDMadhyaPradesh.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014090000 +0000" stop="20261014100000 +0000" channel="DDMadhyaPradesh.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014100000 +0000" stop="20261014110000 +0000" channel="DDMadhyaPradesh.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014110000 +0000" stop="20261014120000 +0000" channel="DDMadhyaPradesh.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014120000 +0000" stop="20261014130000 +0000" channel="DDMadhyaPradesh.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014130000 +0000" stop="20261014140000 +0000" channel="DDMadhyaPradesh.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
   <programme start="20261014140000 +0000" stop="20261014150000 +0000" channel="DDMadhyaPradesh.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
@@ -29627,6 +29593,46 @@ Lou, Sonia, and Froy have to push away a debtor while trying to push a classic c
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
   <programme start="20261017050000 +0000" stop="20261017060000 +0000" channel="DDMadhyaPradesh.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017060000 +0000" stop="20261017070000 +0000" channel="DDMadhyaPradesh.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017070000 +0000" stop="20261017080000 +0000" channel="DDMadhyaPradesh.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017080000 +0000" stop="20261017090000 +0000" channel="DDMadhyaPradesh.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017090000 +0000" stop="20261017100000 +0000" channel="DDMadhyaPradesh.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017100000 +0000" stop="20261017110000 +0000" channel="DDMadhyaPradesh.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017110000 +0000" stop="20261017120000 +0000" channel="DDMadhyaPradesh.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017120000 +0000" stop="20261017130000 +0000" channel="DDMadhyaPradesh.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017130000 +0000" stop="20261017140000 +0000" channel="DDMadhyaPradesh.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
@@ -45552,36 +45558,6 @@ Highlights of all the action from international cricket tournaments, where teams
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p28803841_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme start="20261014080000 +0000" stop="20261014090000 +0000" channel="Enterr10Bangla.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014090000 +0000" stop="20261014100000 +0000" channel="Enterr10Bangla.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014100000 +0000" stop="20261014110000 +0000" channel="Enterr10Bangla.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014110000 +0000" stop="20261014120000 +0000" channel="Enterr10Bangla.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014120000 +0000" stop="20261014130000 +0000" channel="Enterr10Bangla.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014130000 +0000" stop="20261014140000 +0000" channel="Enterr10Bangla.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
   <programme start="20261014140000 +0000" stop="20261014150000 +0000" channel="Enterr10Bangla.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
@@ -45898,6 +45874,46 @@ Highlights of all the action from international cricket tournaments, where teams
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
   <programme start="20261017050000 +0000" stop="20261017060000 +0000" channel="Enterr10Bangla.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017060000 +0000" stop="20261017070000 +0000" channel="Enterr10Bangla.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017070000 +0000" stop="20261017080000 +0000" channel="Enterr10Bangla.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017080000 +0000" stop="20261017090000 +0000" channel="Enterr10Bangla.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017090000 +0000" stop="20261017100000 +0000" channel="Enterr10Bangla.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017100000 +0000" stop="20261017110000 +0000" channel="Enterr10Bangla.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017110000 +0000" stop="20261017120000 +0000" channel="Enterr10Bangla.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017120000 +0000" stop="20261017130000 +0000" channel="Enterr10Bangla.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017130000 +0000" stop="20261017140000 +0000" channel="Enterr10Bangla.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
@@ -47520,36 +47536,6 @@ Highlights of all the action from international cricket tournaments, where teams
     <category lang="en">Marathi</category>
     <category lang="en">TV Show</category>
   </programme>
-  <programme start="20261014080000 +0000" stop="20261014090000 +0000" channel="FoodFood.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014090000 +0000" stop="20261014100000 +0000" channel="FoodFood.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014100000 +0000" stop="20261014110000 +0000" channel="FoodFood.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014110000 +0000" stop="20261014120000 +0000" channel="FoodFood.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014120000 +0000" stop="20261014130000 +0000" channel="FoodFood.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014130000 +0000" stop="20261014140000 +0000" channel="FoodFood.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
   <programme start="20261014140000 +0000" stop="20261014150000 +0000" channel="FoodFood.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
@@ -47866,6 +47852,46 @@ Highlights of all the action from international cricket tournaments, where teams
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
   <programme start="20261017050000 +0000" stop="20261017060000 +0000" channel="FoodFood.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017060000 +0000" stop="20261017070000 +0000" channel="FoodFood.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017070000 +0000" stop="20261017080000 +0000" channel="FoodFood.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017080000 +0000" stop="20261017090000 +0000" channel="FoodFood.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017090000 +0000" stop="20261017100000 +0000" channel="FoodFood.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017100000 +0000" stop="20261017110000 +0000" channel="FoodFood.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017110000 +0000" stop="20261017120000 +0000" channel="FoodFood.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017120000 +0000" stop="20261017130000 +0000" channel="FoodFood.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017130000 +0000" stop="20261017140000 +0000" channel="FoodFood.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
@@ -49478,27 +49504,6 @@ National League Championship Series, Game 7. (If necessary)</desc>
     <category>Film</category>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800011-20261019223600/list/GreatMoviesTheWrongBabysitter215136769cb0e09efb341b19d12b083422309cb.jpg" />
-  </programme>
-  <programme channel="GREATromance.uk" start="20261014071500 +0000" stop="20261014081000 +0000">
-    <title lang="en">Reunited at Christmas</title>
-    <desc lang="en">Christmas romance with Nikki DeLoach. When Sam's fractured family gathers for one last Christmas at her late grandmother's home, will reviving lost festive traditions lead to second chances.</desc>
-    <date>2018</date>
-    <category lang="en">Movie</category>
-    <category lang="en">Romance</category>
-    <icon src="https://images.metadata.sky.com/pd-image/e02c4bc0-da2c-41a3-9af3-29163dcddae6/16-9" />
-    <rating system="UK">
-      <value>PG</value>
-    </rating>
-  </programme>
-  <programme channel="GREATromance.uk" start="20261014081000 +0000" stop="20261014081500 +0000">
-    <title lang="en">Good News on GREAT!</title>
-    <desc lang="en">An uplifting round-up of good news stories from the UK and around the world.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Showbiz</category>
-    <icon src="https://images.metadata.sky.com/pd-image/15ee696c-5125-4199-a826-fd61a8b03877/16-9" />
-    <rating system="UK">
-      <value>PG</value>
-    </rating>
   </programme>
   <programme channel="GREATromance.uk" start="20261014081500 +0000" stop="20261014091500 +0000">
     <title lang="en">Reunited at Christmas</title>
@@ -57901,14 +57906,6 @@ National League Championship Series, Game 7. (If necessary)</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="InvestigationDiscovery.in@SD" start="20261014124500 +0530" stop="20261014134100 +0530">
-    <title lang="en">Shattered</title>
-    <desc lang="en">In 2001, a man's visit home turns into a desperate search for his missing father.</desc>
-    <category lang="en">Documentary</category>
-    <category lang="en">Others</category>
-    <icon src="https://dtil.tmsimg.com/assets/p15863467_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S2 E3</episode-num>
-  </programme>
   <programme channel="InvestigationDiscovery.in@SD" start="20261014134100 +0530" stop="20261014143700 +0530">
     <title lang="en">Evil Lives Here</title>
     <desc lang="en">Debra Davis never suspects her husband's perversions are signs of something evil deep inside him.</desc>
@@ -59436,36 +59433,6 @@ National League Championship Series, Game 7. (If necessary)</desc>
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p466712_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme start="20261014080000 +0000" stop="20261014090000 +0000" channel="JeevanTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014090000 +0000" stop="20261014100000 +0000" channel="JeevanTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014100000 +0000" stop="20261014110000 +0000" channel="JeevanTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014110000 +0000" stop="20261014120000 +0000" channel="JeevanTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014120000 +0000" stop="20261014130000 +0000" channel="JeevanTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014130000 +0000" stop="20261014140000 +0000" channel="JeevanTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
   <programme start="20261014140000 +0000" stop="20261014150000 +0000" channel="JeevanTV.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
@@ -59782,6 +59749,46 @@ National League Championship Series, Game 7. (If necessary)</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
   <programme start="20261017050000 +0000" stop="20261017060000 +0000" channel="JeevanTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017060000 +0000" stop="20261017070000 +0000" channel="JeevanTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017070000 +0000" stop="20261017080000 +0000" channel="JeevanTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017080000 +0000" stop="20261017090000 +0000" channel="JeevanTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017090000 +0000" stop="20261017100000 +0000" channel="JeevanTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017100000 +0000" stop="20261017110000 +0000" channel="JeevanTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017110000 +0000" stop="20261017120000 +0000" channel="JeevanTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017120000 +0000" stop="20261017130000 +0000" channel="JeevanTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017130000 +0000" stop="20261017140000 +0000" channel="JeevanTV.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
@@ -63149,36 +63156,6 @@ National League Championship Series, Game 7. (If necessary)</desc>
       <value>TV-Y7</value>
     </rating>
   </programme>
-  <programme start="20261014080000 +0000" stop="20261014090000 +0000" channel="KhushbooBangla.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014090000 +0000" stop="20261014100000 +0000" channel="KhushbooBangla.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014100000 +0000" stop="20261014110000 +0000" channel="KhushbooBangla.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014110000 +0000" stop="20261014120000 +0000" channel="KhushbooBangla.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014120000 +0000" stop="20261014130000 +0000" channel="KhushbooBangla.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014130000 +0000" stop="20261014140000 +0000" channel="KhushbooBangla.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
   <programme start="20261014140000 +0000" stop="20261014150000 +0000" channel="KhushbooBangla.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
@@ -63495,6 +63472,46 @@ National League Championship Series, Game 7. (If necessary)</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
   <programme start="20261017050000 +0000" stop="20261017060000 +0000" channel="KhushbooBangla.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017060000 +0000" stop="20261017070000 +0000" channel="KhushbooBangla.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017070000 +0000" stop="20261017080000 +0000" channel="KhushbooBangla.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017080000 +0000" stop="20261017090000 +0000" channel="KhushbooBangla.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017090000 +0000" stop="20261017100000 +0000" channel="KhushbooBangla.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017100000 +0000" stop="20261017110000 +0000" channel="KhushbooBangla.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017110000 +0000" stop="20261017120000 +0000" channel="KhushbooBangla.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017120000 +0000" stop="20261017130000 +0000" channel="KhushbooBangla.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017130000 +0000" stop="20261017140000 +0000" channel="KhushbooBangla.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
@@ -74747,24 +74764,6 @@ A woman in a medical office is confronted by a hanging skeleton; a man deals wit
     <icon src="https://iptv-epg.org/images/0Qhtw21LCuyULy-NzI4okrxWVi0diITksKnBSLljmp-16h0TLlNF4bjCTSl0p7-TJJYl3ld5_Y_a8eRlPkISWmMYuagxg1FB4uOLfyIn2N4" />
     <previously-shown />
     <title lang="en">America's Funniest Home Videos</title>
-  </programme>
-  <programme start="20261014130000 +0530" stop="20261014134500 +0530" channel="MTVIndia.in@SD">
-    <title>Roadies</title>
-    <desc>Participants, selected from different parts of the country via auditions, compete against each other in various tasks to win the grand prize.</desc>
-    <category>Reality</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/d7dfbe4350f26b761302cfb1a3694906.jpg?width=700" />
-    <credits>
-      <actor>Cyrus Sahukar</actor>
-      <actor>Rannvijay Singh</actor>
-      <actor>Bani J.</actor>
-      <actor>Gaelyn Mendonca</actor>
-      <actor>Sonu Sood</actor>
-    </credits>
-    <episode-num system="onscreen">35</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
   </programme>
   <programme start="20261014134500 +0530" stop="20261014143000 +0530" channel="MTVIndia.in@SD">
     <title>Roadies</title>
@@ -91144,36 +91143,6 @@ Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/IFAnINomlyqUJZU9XQLVJQjcpguhFpwJz6CFLZXo_gFwQxBX44y2P-NlNeVHbTr3T4ZtjBqzyppKenQ0hjMFNbEbPuC1-KBbf3oYCVjWVwSBiKkbHF8DQ7bfl9Jt9Q" />
     <title lang="en">Gana Bajana</title>
   </programme>
-  <programme start="20261014080000 +0000" stop="20261014090000 +0000" channel="PearTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014090000 +0000" stop="20261014100000 +0000" channel="PearTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014100000 +0000" stop="20261014110000 +0000" channel="PearTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014110000 +0000" stop="20261014120000 +0000" channel="PearTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014120000 +0000" stop="20261014130000 +0000" channel="PearTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014130000 +0000" stop="20261014140000 +0000" channel="PearTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
   <programme start="20261014140000 +0000" stop="20261014150000 +0000" channel="PearTV.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
@@ -91494,32 +91463,42 @@ Bringing the best in television.</desc>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme start="20261014080000 +0000" stop="20261014090000 +0000" channel="PeppersTV.in@SD">
+  <programme start="20261017060000 +0000" stop="20261017070000 +0000" channel="PearTV.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme start="20261014090000 +0000" stop="20261014100000 +0000" channel="PeppersTV.in@SD">
+  <programme start="20261017070000 +0000" stop="20261017080000 +0000" channel="PearTV.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme start="20261014100000 +0000" stop="20261014110000 +0000" channel="PeppersTV.in@SD">
+  <programme start="20261017080000 +0000" stop="20261017090000 +0000" channel="PearTV.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme start="20261014110000 +0000" stop="20261014120000 +0000" channel="PeppersTV.in@SD">
+  <programme start="20261017090000 +0000" stop="20261017100000 +0000" channel="PearTV.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme start="20261014120000 +0000" stop="20261014130000 +0000" channel="PeppersTV.in@SD">
+  <programme start="20261017100000 +0000" stop="20261017110000 +0000" channel="PearTV.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme start="20261014130000 +0000" stop="20261014140000 +0000" channel="PeppersTV.in@SD">
+  <programme start="20261017110000 +0000" stop="20261017120000 +0000" channel="PearTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017120000 +0000" stop="20261017130000 +0000" channel="PearTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017130000 +0000" stop="20261017140000 +0000" channel="PearTV.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
@@ -91840,6 +91819,46 @@ Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
   <programme start="20261017050000 +0000" stop="20261017060000 +0000" channel="PeppersTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017060000 +0000" stop="20261017070000 +0000" channel="PeppersTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017070000 +0000" stop="20261017080000 +0000" channel="PeppersTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017080000 +0000" stop="20261017090000 +0000" channel="PeppersTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017090000 +0000" stop="20261017100000 +0000" channel="PeppersTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017100000 +0000" stop="20261017110000 +0000" channel="PeppersTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017110000 +0000" stop="20261017120000 +0000" channel="PeppersTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017120000 +0000" stop="20261017130000 +0000" channel="PeppersTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017130000 +0000" stop="20261017140000 +0000" channel="PeppersTV.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
@@ -102493,36 +102512,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261014080000 +0000" stop="20261014090000 +0000" channel="RongeenTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014090000 +0000" stop="20261014100000 +0000" channel="RongeenTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014100000 +0000" stop="20261014110000 +0000" channel="RongeenTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014110000 +0000" stop="20261014120000 +0000" channel="RongeenTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014120000 +0000" stop="20261014130000 +0000" channel="RongeenTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014130000 +0000" stop="20261014140000 +0000" channel="RongeenTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
   <programme start="20261014140000 +0000" stop="20261014150000 +0000" channel="RongeenTV.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
@@ -102839,6 +102828,46 @@ Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
   <programme start="20261017050000 +0000" stop="20261017060000 +0000" channel="RongeenTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017060000 +0000" stop="20261017070000 +0000" channel="RongeenTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017070000 +0000" stop="20261017080000 +0000" channel="RongeenTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017080000 +0000" stop="20261017090000 +0000" channel="RongeenTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017090000 +0000" stop="20261017100000 +0000" channel="RongeenTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017100000 +0000" stop="20261017110000 +0000" channel="RongeenTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017110000 +0000" stop="20261017120000 +0000" channel="RongeenTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017120000 +0000" stop="20261017130000 +0000" channel="RongeenTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017130000 +0000" stop="20261017140000 +0000" channel="RongeenTV.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
@@ -104362,36 +104391,6 @@ Bringing the best in television.</desc>
     <desc>Garam Masala</desc>
     <icon src="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/IN_USQO570425A_544325168_0_20240709T052800667Z_141.png" />
   </programme>
-  <programme start="20261014080000 +0000" stop="20261014090000 +0000" channel="SangeetMarathi.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014090000 +0000" stop="20261014100000 +0000" channel="SangeetMarathi.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014100000 +0000" stop="20261014110000 +0000" channel="SangeetMarathi.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014110000 +0000" stop="20261014120000 +0000" channel="SangeetMarathi.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014120000 +0000" stop="20261014130000 +0000" channel="SangeetMarathi.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014130000 +0000" stop="20261014140000 +0000" channel="SangeetMarathi.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
   <programme start="20261014140000 +0000" stop="20261014150000 +0000" channel="SangeetMarathi.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
@@ -104708,6 +104707,46 @@ Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
   <programme start="20261017050000 +0000" stop="20261017060000 +0000" channel="SangeetMarathi.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017060000 +0000" stop="20261017070000 +0000" channel="SangeetMarathi.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017070000 +0000" stop="20261017080000 +0000" channel="SangeetMarathi.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017080000 +0000" stop="20261017090000 +0000" channel="SangeetMarathi.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017090000 +0000" stop="20261017100000 +0000" channel="SangeetMarathi.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017100000 +0000" stop="20261017110000 +0000" channel="SangeetMarathi.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017110000 +0000" stop="20261017120000 +0000" channel="SangeetMarathi.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017120000 +0000" stop="20261017130000 +0000" channel="SangeetMarathi.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017130000 +0000" stop="20261017140000 +0000" channel="SangeetMarathi.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
@@ -106472,36 +106511,6 @@ Bringing the best in television.</desc>
     <icon src="https://dtil.tmsimg.com/assets/p19953881_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E10</episode-num>
   </programme>
-  <programme start="20261014080000 +0000" stop="20261014090000 +0000" channel="ShemarooUmang.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014090000 +0000" stop="20261014100000 +0000" channel="ShemarooUmang.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014100000 +0000" stop="20261014110000 +0000" channel="ShemarooUmang.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014110000 +0000" stop="20261014120000 +0000" channel="ShemarooUmang.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014120000 +0000" stop="20261014130000 +0000" channel="ShemarooUmang.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014130000 +0000" stop="20261014140000 +0000" channel="ShemarooUmang.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
   <programme start="20261014140000 +0000" stop="20261014150000 +0000" channel="ShemarooUmang.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
@@ -106818,6 +106827,46 @@ Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
   <programme start="20261017050000 +0000" stop="20261017060000 +0000" channel="ShemarooUmang.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017060000 +0000" stop="20261017070000 +0000" channel="ShemarooUmang.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017070000 +0000" stop="20261017080000 +0000" channel="ShemarooUmang.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017080000 +0000" stop="20261017090000 +0000" channel="ShemarooUmang.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017090000 +0000" stop="20261017100000 +0000" channel="ShemarooUmang.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017100000 +0000" stop="20261017110000 +0000" channel="ShemarooUmang.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017110000 +0000" stop="20261017120000 +0000" channel="ShemarooUmang.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017120000 +0000" stop="20261017130000 +0000" channel="ShemarooUmang.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017130000 +0000" stop="20261017140000 +0000" channel="ShemarooUmang.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
@@ -109336,18 +109385,6 @@ Bringing the best in television.</desc>
     <category lang="en">Sport</category>
     <icon src="https://tv.assets.pressassociation.io/f1dcad9d-9e73-534f-b564-bc7a018a2cb7.jpg" />
     <episode-num system="onscreen">S2026 E34</episode-num>
-  </programme>
-  <programme channel="SongdewTV.in@SD" start="20261014132500 +0530" stop="20261014134000 +0530">
-    <title lang="en">Songdew Select</title>
-    <desc lang="en">A comprehensive compilation of independent music, showcasing the diverse creativity and unique voices of artists, offering listeners an eclectic blend of genres and styles.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p15781083_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="SongdewTV.in@SD" start="20261014134000 +0530" stop="20261014134500 +0530">
-    <title lang="en">Track Tales</title>
-    <desc lang="en">Various individuals share their music and personal journeys, offering insights into their inspirations, performances and achievements.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p15781085_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="SongdewTV.in@SD" start="20261014134500 +0530" stop="20261014135000 +0530">
     <title lang="en">Songdew Fresh</title>
@@ -116682,27 +116719,6 @@ Bringing the best in television.</desc>
     <category lang="en">Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p809737_b_h9_af.jpg?lock=880x660" />
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261014133900 +0530" stop="20261014134600 +0530">
-    <title lang="en">Shin Chan</title>
-    <desc lang="en">Shin-chan, a mischievous five-year-old, constantly disrupts the lives of those around him with his childish antics, generating humorous chaos and exasperation.</desc>
-    <credits>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-      <director>Mitsuru Hongo</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h9_ae.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E862</episode-num>
-  </programme>
   <programme channel="SonyYay.in@SD" start="20261014134600 +0530" stop="20261014140300 +0530">
     <title lang="en">Shin Chan</title>
     <desc lang="en">A five-year-old boy, has many misadventures due to his peculiar antics, while his parents and tutors try to discipline him.</desc>
@@ -119887,33 +119903,6 @@ Bringing the best in television.</desc>
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p14136445_v_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="StarGoldThrills.in@SD" start="20261014115000 +0530" stop="20261014134700 +0530">
-    <title lang="en">Fantastic Four: Rise of the Silver Surfer</title>
-    <desc lang="en">The Fantastic Four fight against all odds to defeat a powerful foe, Silver Surfer, and stop him from destroying Earth before it's too late.</desc>
-    <credits>
-      <actor>Ioan Gruffudd</actor>
-      <actor>Jessica Alba</actor>
-      <actor>Chris Evans</actor>
-      <actor>Michael Chiklis</actor>
-      <actor>Julian McMahon</actor>
-      <actor>Kerry Washington</actor>
-      <actor>Andre Braugher</actor>
-      <actor>Laurence Fishburne</actor>
-      <actor>Beau Garrett</actor>
-      <actor>Brian Posehn</actor>
-      <actor>Zach Grenier</actor>
-      <actor>Kenneth Welsh</actor>
-      <actor>Doug Jones</actor>
-      <actor>Giuliana Rancic</actor>
-      <director>Tim Story</director>
-      <producer>Bernd Eichinger</producer>
-      <producer>Avi Arad</producer>
-      <producer>Ralph Winter</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Action</category>
-    <icon src="https://dtil.tmsimg.com/assets/p165108_v_h9_ax.jpg?lock=880x660" />
-  </programme>
   <programme channel="StarGoldThrills.in@SD" start="20261014134700 +0530" stop="20261014163700 +0530">
     <title lang="en">Spider-Man: Homecoming</title>
     <desc lang="en">Peter Parker tries to stop the Vulture from selling weapons made with advanced Chitauri technology while trying to balance his life as an ordinary high school student.</desc>
@@ -122577,13 +122566,6 @@ Bringing the best in television.</desc>
     <category lang="en">Sport</category>
     <category lang="en">Cricket</category>
     <icon src="https://dtil.tmsimg.com/assets/p8414564_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="StarSports3.in@SD" start="20261014133000 +0530" stop="20261014134500 +0530">
-    <title lang="en">Premier League Highlights</title>
-    <desc lang="en">Highlights of the Premier League matches, where professional football teams compete against each other to win the championship title.</desc>
-    <category lang="en">News</category>
-    <category lang="en">Magazine Programme</category>
-    <icon src="https://dtil.tmsimg.com/assets/p18771049_b_h9_af.jpg?lock=880x660" />
   </programme>
   <programme channel="StarSports3.in@SD" start="20261014134500 +0530" stop="20261014140000 +0530">
     <title lang="en">Premier League Highlights</title>
@@ -130576,13 +130558,6 @@ Bringing the best in television.</desc>
       <value>TV-14</value>
     </rating>
   </programme>
-  <programme channel="TinyPop.uk" start="20261014080800 +0000" stop="20261014081800 +0000">
-    <title lang="en">THE HIVE</title>
-    <desc lang="en">This preschool CGI animated series follows the fortunes of the extremely cute Bee family, who live together with their friends and relations in the Hive.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261014133800/list/TinyPOPTHEHIVE2151548931669205391492b9c437209409fe073.jpg" />
-  </programme>
   <programme channel="TinyPop.uk" start="20261014081800 +0000" stop="20261014082700 +0000">
     <title lang="en">THE HIVE</title>
     <desc lang="en">This preschool CGI animated series follows the fortunes of the extremely cute Bee family, who live together with their friends and relations in the Hive.</desc>
@@ -134363,14 +134338,6 @@ Bringing the best in television.</desc>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261018235800/list/TinyPOPTHEHIVE215154840e2fe0b82f149b5a8342002d97b5fc0.jpg" />
   </programme>
-  <programme start="20261014132900 +0530" stop="20261014134200 +0530" channel="TollyTV.in">
-    <title>Mouna Ragam</title>
-    <sub-title>TOLLY TV | TELUGU</sub-title>
-    <desc>Divya mourns her lover but is forced to marry Chandrakumar; asks for a divorce as a wedding gift.</desc>
-    <category>Movies</category>
-    <language>TELUGU</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/TOLLY%20TV/IMAGES/Mouna%20Ragam.png" />
-  </programme>
   <programme start="20261014134200 +0530" stop="20261014135400 +0530" channel="TollyTV.in">
     <title>Mouna Ragam</title>
     <sub-title>TOLLY TV | TELUGU</sub-title>
@@ -136951,36 +136918,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261014080000 +0000" stop="20261014090000 +0000" channel="VanithaTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014090000 +0000" stop="20261014100000 +0000" channel="VanithaTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014100000 +0000" stop="20261014110000 +0000" channel="VanithaTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014110000 +0000" stop="20261014120000 +0000" channel="VanithaTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014120000 +0000" stop="20261014130000 +0000" channel="VanithaTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014130000 +0000" stop="20261014140000 +0000" channel="VanithaTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
   <programme start="20261014140000 +0000" stop="20261014150000 +0000" channel="VanithaTV.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
@@ -137301,6 +137238,46 @@ Bringing the best in television.</desc>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
+  <programme start="20261017060000 +0000" stop="20261017070000 +0000" channel="VanithaTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017070000 +0000" stop="20261017080000 +0000" channel="VanithaTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017080000 +0000" stop="20261017090000 +0000" channel="VanithaTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017090000 +0000" stop="20261017100000 +0000" channel="VanithaTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017100000 +0000" stop="20261017110000 +0000" channel="VanithaTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017110000 +0000" stop="20261017120000 +0000" channel="VanithaTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017120000 +0000" stop="20261017130000 +0000" channel="VanithaTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017130000 +0000" stop="20261017140000 +0000" channel="VanithaTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
   <programme channel="VasanthTV.in@SD" start="20261014133000 +0530" stop="20261014163000 +0530">
     <title lang="en">Aandavan Kattalai</title>
     <desc lang="en">Professor Krishnan, a devout follower of Swami Vivekananda, decides to remain a bachelor. However, he is smitten by his student Radha and succumbs to her beauty.</desc>
@@ -137497,36 +137474,6 @@ Bringing the best in television.</desc>
     <category lang="en">TV Show</category>
     <category lang="en">Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p29042914_b_h9_ac.jpg?lock=880x660" />
-  </programme>
-  <programme start="20261014080000 +0000" stop="20261014090000 +0000" channel="VendharTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014090000 +0000" stop="20261014100000 +0000" channel="VendharTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014100000 +0000" stop="20261014110000 +0000" channel="VendharTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014110000 +0000" stop="20261014120000 +0000" channel="VendharTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014120000 +0000" stop="20261014130000 +0000" channel="VendharTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme start="20261014130000 +0000" stop="20261014140000 +0000" channel="VendharTV.in@SD">
-    <title>No Data</title>
-    <desc>https://iptv-epg.org/help</desc>
-    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
   <programme start="20261014140000 +0000" stop="20261014150000 +0000" channel="VendharTV.in@SD">
     <title>No Data</title>
@@ -137844,6 +137791,46 @@ Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
   <programme start="20261017050000 +0000" stop="20261017060000 +0000" channel="VendharTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017060000 +0000" stop="20261017070000 +0000" channel="VendharTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017070000 +0000" stop="20261017080000 +0000" channel="VendharTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017080000 +0000" stop="20261017090000 +0000" channel="VendharTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017090000 +0000" stop="20261017100000 +0000" channel="VendharTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017100000 +0000" stop="20261017110000 +0000" channel="VendharTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017110000 +0000" stop="20261017120000 +0000" channel="VendharTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017120000 +0000" stop="20261017130000 +0000" channel="VendharTV.in@SD">
+    <title>No Data</title>
+    <desc>https://iptv-epg.org/help</desc>
+    <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
+  </programme>
+  <programme start="20261017130000 +0000" stop="20261017140000 +0000" channel="VendharTV.in@SD">
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
@@ -143367,26 +143354,6 @@ Bringing the best in television.</desc>
     <category lang="en">Film</category>
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p30202119_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="ZeeBollywood.in@SD" start="20261014105600 +0530" stop="20261014134300 +0530">
-    <title lang="en">Shiva Shakti</title>
-    <desc lang="en">Shiva forms a close friendship with Shakti when he comes to the city to earn money for his sister Kusum's wedding. However, he later vows to kill Shakti when Kusum becomes pregnant with his child.</desc>
-    <credits>
-      <actor>Shatrughan Sinha</actor>
-      <actor>Govinda</actor>
-      <actor>Kimi Katkar</actor>
-      <actor>Anita Raj</actor>
-      <actor>Anupam Kher</actor>
-      <actor>Gulshan Grover</actor>
-      <actor>Shiva</actor>
-      <actor>Goga Kapoor</actor>
-      <actor>Ashok Saraf</actor>
-      <director>Anand</director>
-      <producer>Anand</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Action</category>
-    <icon src="https://dtil.tmsimg.com/assets/p8735410_v_h9_ac.jpg?lock=880x660" />
   </programme>
   <programme channel="ZeeBollywood.in@SD" start="20261014134300 +0530" stop="20261014170100 +0530">
     <title lang="en">Karishma Kudrat Ka</title>
@@ -162623,16 +162590,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
       <value>NA</value>
     </rating>
   </programme>
-  <programme channel="custom.colors.cineplex" start="20261014050000 +0000" stop="20261014081500 +0000">
-    <title lang="en">Vishwatma</title>
-    <desc lang="en">Prabhat, a policeman, and Akash, a reformed criminal, travel to Kenya to apprehend an underworld leader. However, they have to break the rules of the land upheld by Surya Pratap of the Kenyan police.</desc>
-    <category lang="en">Movie</category>
-    <category lang="en">Action</category>
-    <icon src="https://images.metadata.sky.com/pd-image/9eef60b3-8ddc-4344-92a3-baf884d710c9/16-9" />
-    <rating system="UK">
-      <value>PG</value>
-    </rating>
-  </programme>
   <programme channel="custom.colors.cineplex" start="20261014081500 +0000" stop="20261014111000 +0000">
     <title lang="en">Kunwara</title>
     <desc lang="en">Raju and Urmila fell in love in New Zealand. Helping a pregnant woman with a troubled past puts Raju's relationship at risk, forcing him to choose between hearts.</desc>
@@ -164431,18 +164388,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/88eeccd41727ec292150618cd9ba29d4.jpg" />
     <episode-num system="onscreen">E2</episode-num>
     <premiere />
-  </programme>
-  <programme start="20261014074400 +0000" stop="20261014081600 +0000" channel="custom.crime.justice">
-    <title lang="en">Claimed &amp; Shamed</title>
-    <sub-title lang="en">Claimed And Shamed</sub-title>
-    <desc lang="en">An ex-policeman claims a hefty payout for injuries; investigators discover a cannabis grow-op.</desc>
-    <date>2023</date>
-    <category lang="en">Crime</category>
-    <icon src="https://images.frequency.com/video/lueb5odudri91jfdxgrs541td/w1920_h1080/lueb5odudri91jfdxgrs541td.jpg" />
-    <episode-num system="onscreen">S1 E7</episode-num>
-    <rating system="US">
-      <value>Teen</value>
-    </rating>
   </programme>
   <programme start="20261014081600 +0000" stop="20261014084900 +0000" channel="custom.crime.justice">
     <title lang="en">Claimed &amp; Shamed</title>
@@ -175162,26 +175107,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261014133900 +0530" stop="20261014134300 +0530" channel="custom.duck.tv">
-    <title>Mimo and Bobo PLUS</title>
-    <desc>Mimo and Bobo PLUS</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/29e29018362d150cc5a52028fc6b3f26.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261014134300 +0530" stop="20261014134700 +0530" channel="custom.duck.tv">
-    <title>Happy Kingdom</title>
-    <desc>Princess Sari, Prince Nati, a caring squirrel who loves to cook, a fearless hedgehog and a bear who is a wizard set out on a series of adventures in Happy Meadow.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/1607698b6d890ba8959d72aa74b57a89.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261014134700 +0530" stop="20261014135000 +0530" channel="custom.duck.tv">
@@ -191781,21 +191706,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
     <rating>
       <value>NA</value>
     </rating>
-  </programme>
-  <programme channel="custom.mtv" start="20261014130000 +0530" stop="20261014134500 +0530">
-    <title lang="en">Roadies</title>
-    <desc lang="en">Three gangs risk everything competing in a high-stakes, word-making bike race. However, sudden twists transform the competition into a frantic chase.</desc>
-    <credits>
-      <actor>Cyrus Sahukar</actor>
-      <actor>Rannvijay Singh</actor>
-      <actor>Gurbani</actor>
-      <actor>Gaelyn Mendonca</actor>
-      <actor>Sonu Sood</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Adventure</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27749474_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S19 E35</episode-num>
   </programme>
   <programme channel="custom.mtv" start="20261014134500 +0530" stop="20261014143000 +0530">
     <title lang="en">Roadies</title>
