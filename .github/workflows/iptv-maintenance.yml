@@ -25,8 +25,6 @@ on:
       - scripts/record_maintenance_history.py
       - scripts/generate_dashboard.py
       - scripts/enforce_playlist_attribution.py
-      - xtream/worker.js
-      - xtream/wrangler.toml
       - reports/epg-india-channel-mapping.csv
   schedule:
     - cron: '17 2 * * *'
@@ -110,7 +108,7 @@ jobs:
             python scripts/record_maintenance_history.py
             python scripts/generate_dashboard.py
             if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
-              git restore -- IPTV-Playlist.m3u logos/ xtream/worker.js || true
+              git restore -- IPTV-Playlist.m3u logos/ || true
               set +e
               python scripts/audit_playlist.py
               FINAL_AUDIT_STATUS=$?
@@ -131,7 +129,7 @@ jobs:
             echo "Validated EPG working-tree bytes: $(wc -c < epg/epg.xml)"
             echo "Validated EPG working-tree sha256: $(sha256sum epg/epg.xml | awk '{print $1}')"
             python scripts/enforce_playlist_attribution.py
-            git add IPTV-Playlist.m3u BDIX-Playlist.m3u logos/ reports/ assets/dashboard.svg xtream/worker.js
+            git add IPTV-Playlist.m3u BDIX-Playlist.m3u logos/ reports/ assets/dashboard.svg
             git add -f epg/epg.xml
             STAGED_EPG_BYTES="$(git cat-file -s :epg/epg.xml)"
             echo "Staged EPG bytes: ${STAGED_EPG_BYTES}"
