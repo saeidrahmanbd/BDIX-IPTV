@@ -1,6 +1,6 @@
 # IPTV Maintenance Report
 
-_Generated: **2026-10-14 09:23 UTC**_
+_Generated: **2026-10-14 09:33 UTC**_
 
 | Item | Result |
 |---|---:|
@@ -10,8 +10,8 @@ _Generated: **2026-10-14 09:23 UTC**_
 | Logo exceptions | **0** |
 | EPG mapping | **65.3%** |
 | EPG programme coverage | **61.1%** |
-| Health failures | **97** |
-| Persistent health failures | **87** |
+| Health failures | **90** |
+| Persistent health failures | **88** |
 | Audit blockers | **52** |
 | Pre-publish gate | **BLOCK** |
 

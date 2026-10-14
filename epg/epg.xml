@@ -25143,11 +25143,6 @@ Lou, Sonia, and Froy have to push away a debtor while trying to push a classic c
     <icon src="https://dtil.tmsimg.com/assets/p19284162_b_h9_ab.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E65</episode-num>
   </programme>
-  <programme start="20261014060000 +0530" stop="20261014085000 +0530" channel="ColorsRishteyAmericas.in">
-    <title lang="en">The Legend Of Hanuman</title>
-    <category lang="en">Hindi</category>
-    <category lang="en">TV Show</category>
-  </programme>
   <programme start="20261014085000 +0530" stop="20261014102000 +0530" channel="ColorsRishteyAmericas.in">
     <title lang="en">Paw Patrol</title>
     <category lang="en">Hindi</category>
@@ -59137,16 +59132,6 @@ National League Championship Series, Game 7. (If necessary)</desc>
     <episode-num system="onscreen">E26</episode-num>
     <premiere />
   </programme>
-  <programme start="20261014020900 +0000" stop="20261014031900 +0000" channel="HistoryHit.uk">
-    <title lang="en">Churchill: The Road to Victory</title>
-    <desc lang="en">A courageous politician, led Great Britain to victory in World War II after P.M Chamberlain's resignation.</desc>
-    <date>2020</date>
-    <category lang="en">Explore</category>
-    <icon src="https://d11hei8e1dyf6i.cloudfront.net/TIMLN/LEGCTRS001EP001.jpg" />
-    <rating system="US">
-      <value>NR</value>
-    </rating>
-  </programme>
   <programme start="20261014031900 +0000" stop="20261014034600 +0000" channel="HistoryHit.uk">
     <title lang="en">Walking With Churchill with Andrew Roberts</title>
     <desc lang="en">Andrew Roberts shares a selection of items from his Winston Churchill collection, documenting the fascinating life of one of Britain's most iconic figures.</desc>
@@ -60159,17 +60144,6 @@ National League Championship Series, Game 7. (If necessary)</desc>
     <rating system="US">
       <value>NR</value>
     </rating>
-  </programme>
-  <programme start="20261014081400 +0530" stop="20261014085800 +0530" channel="HistoryTV18.in@SD">
-    <title lang="en-GB">Born to be Wild</title>
-    <desc lang="en-GB">Andrew travels to South America, where he spends a month living alone in the Amazon rainforest of Peru in order to find as many animals as he can.</desc>
-    <credits>
-      <actor>Andrew Ucles</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/c96f1fa26e3f58b45d097b1257a25ebd.jpg" />
-    <episode-num system="onscreen">E1</episode-num>
-    <premiere />
   </programme>
   <programme start="20261014085800 +0530" stop="20261014092100 +0530" channel="HistoryTV18.in@SD">
     <title lang="en-GB">Tour D' Royale</title>
@@ -62098,20 +62072,6 @@ National League Championship Series, Game 7. (If necessary)</desc>
     <sub-title>Shark Divers</sub-title>
     <desc>Sharks are BIG business in adrenaline eco-tourism. And some thrill seekers deliberately pursue close encounters with deadly sharks without the protection of a cage. The bigger and more dangerous the shark, the better.</desc>
     <icon src="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/IN_USQO570425A_905944714_3_20250225T155033452Z_72_imageprocessorclient-tvplus-linear-b76dd9bbb-slcx2.jpeg" />
-  </programme>
-  <programme start="20261014082300 +0530" stop="20261014085200 +0530" channel="InTravel.in@HD">
-    <title>Maximum Foodie</title>
-    <desc>A cataloging of Sashi De's foodie journey across the globe; featuring rendezvous with the best chefs on the planet, an insight into exotic ingredients, and untold culinary tales.</desc>
-    <category>Cooking</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/bd91cdf2e16bfaa28a3a782803a29eac.jpg?width=700" />
-    <credits>
-      <actor>Liesel Hlista</actor>
-    </credits>
-    <episode-num system="onscreen">3</episode-num>
-    <rating>
-      <value>TVG</value>
-    </rating>
   </programme>
   <programme start="20261014085200 +0530" stop="20261014092200 +0530" channel="InTravel.in@HD">
     <title>Maximum Foodie</title>
@@ -86729,74 +86689,6 @@ A woman in a medical office is confronted by a hanging skeleton; a man deals wit
       <value>M</value>
     </rating>
   </programme>
-  <programme channel="MovieSphereGold.us" start="20261014013400 +0000" stop="20261014032200 +0000">
-    <title lang="en">The Prince</title>
-    <desc lang="en">A retired assassin is drawn back into his former life and a confrontation with an old rival when his daughter is kidnapped.</desc>
-    <credits>
-      <actor>John Cusack</actor>
-      <actor>Rain</actor>
-      <actor>Jessica Lowndes</actor>
-      <director>Brian A. Miller</director>
-    </credits>
-    <date>2014</date>
-    <category lang="en">Movie</category>
-    <category lang="en">Action</category>
-    <category lang="en">Thriller</category>
-    <category lang="en">Crime drama</category>
-    <icon src="http://dtil.tmsimg.com/assets/p10837127_v_h10_ag.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Motion Picture Association">
-      <value>R</value>
-    </rating>
-    <rating system="Manitoba Film Classification Board">
-      <value>14A</value>
-    </rating>
-    <rating system="Ontario Film Authority">
-      <value>14A</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>16</value>
-    </rating>
-    <rating system="UK Content Provider">
-      <value>15</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>16</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>MA 15+</value>
-    </rating>
-    <rating system="Arcom">
-      <value>-12</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>K16</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="映倫">
-      <value>R15+</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>16</value>
-    </rating>
-    <rating system="British Board of Film Classification">
-      <value>15</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>C</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>16</value>
-    </rating>
-    <rating system="Medietilsynet">
-      <value>15 år</value>
-    </rating>
-    <star-rating system="TMS">
-      <value>3.0/10</value>
-    </star-rating>
-  </programme>
   <programme channel="MovieSphereGold.us" start="20261014032200 +0000" stop="20261014053300 +0000">
     <title lang="en">Marauders</title>
     <desc lang="en">FBI agents (Christopher Meloni, Dave Bautista) uncover a conspiracy while trying to nail a group of deadly bank robbers.</desc>
@@ -100888,13 +100780,6 @@ Bringing the best in television.</desc>
     <category lang="en">TV Show</category>
     <category lang="en">Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p29030724_b_h9_ab.jpg?lock=880x660" />
-  </programme>
-  <programme channel="Pop.uk" start="20261014025500 +0000" stop="20261014032100 +0000">
-    <title lang="en">Shasha And Milo</title>
-    <desc lang="en">Shasha the cat and Milo the boy discover their heroic shapeshifting destiny.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261014082500/list/ZEEPOPShashaAndMilo2056737252336f9fc6c45e8a151fc81ca347715.jpg" />
   </programme>
   <programme channel="Pop.uk" start="20261014032100 +0000" stop="20261014034700 +0000">
     <title lang="en">Shasha And Milo</title>
@@ -142283,11 +142168,6 @@ Bringing the best in television.</desc>
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme channel="TheJungleBook.in" start="20261014083800 +0530" stop="20261014085100 +0530">
-    <title lang="en">The Junglewise</title>
-    <desc lang="en">Shere Kahn and Baloo are in a tiff and the tiger takes away a fish from the bear.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acb10fb0a7e70231e8cc6d2/images/LANDSCAPE_169/9303_4b5846e8-49e4-4956-8a80-d5097ed75377.png" />
   </programme>
   <programme channel="TheJungleBook.in" start="20261014085100 +0530" stop="20261014090400 +0530">
     <title lang="en">The Is That You, Kaa</title>
@@ -189483,17 +189363,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
       <value>AL</value>
     </rating>
   </programme>
-  <programme channel="custom.disney.jr" start="20261014031500 +0000" stop="20261014032000 +0000">
-    <title lang="en">Bluey</title>
-    <desc lang="en">Horsey Ride:Bluey play a game of Horsey Ride.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/95534483-7361-44b9-bc73-e22c761dd0ac/16-9" />
-    <episode-num system="xmltv_ns">9..</episode-num>
-    <rating system="UK">
-      <value>U</value>
-    </rating>
-  </programme>
   <programme channel="custom.disney.jr" start="20261014032000 +0000" stop="20261014033000 +0000">
     <title lang="en">Bluey</title>
     <desc lang="en">Hotel:In a game, Bluey and Bingo's crazy hotel has Dad as a guest.</desc>
@@ -192074,36 +191943,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261014084800 +0530" stop="20261014085200 +0530" channel="custom.duck.tv">
-    <title>Partners in Fun</title>
-    <desc>A young monkey and the cub of a bear engage themselves by playing entertaining games and going on several exciting adventures.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/d8cec18648690f06ea44c88f273a0ed0.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261014085200 +0530" stop="20261014085500 +0530" channel="custom.duck.tv">
-    <title>Miyu and Litto</title>
-    <desc>Two best friends, Miyu and Litto, take the help of a colour wheel to locate the right direction and set out on an adventure.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/237970dd7dec22596f666427bdb96e14.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261014085500 +0530" stop="20261014085800 +0530" channel="custom.duck.tv">
-    <title>City Life</title>
-    <desc>A vibrant city, full of energy, offers countless opportunities for children to meet new people and explore exciting places. These unexpected encounters can help them to develop their social skills.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/d4bfe13d7180711e3fe1f236b81da173.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261014085800 +0530" stop="20261014090100 +0530" channel="custom.duck.tv">

@@ -1,6 +1,6 @@
 # Strict Unmapped EPG Audit
 
-Generated: **2026-10-14T09:23:04+00:00**
+Generated: **2026-10-14T09:32:42+00:00**
 
 Only exact normalized display-name matches or exact matches after removing a recognized territory/language suffix are listed below. Every candidate has current/future schedule rows in a configured feed, but candidates remain review-only and are never automatically applied.
 Bangladesh-group channels are not name-matched here. Their domestic schedules require exact ID/explicit alias evidence; a similar Indian or foreign channel is not acceptable.
@@ -20,8 +20,8 @@ Bangladesh-group channels are not name-matched here. Their domestic schedules re
 | Documentary & Wildlife | Documentary+ USA | custom.documentary.usa | documentary | documentary.HD.ca2 | EXACT_AFTER_REGION_SUFFIX | 25 | https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz | MANUAL_REVIEW_ONLY |
 | Documentary & Wildlife | Documentary+ USA | custom.documentary.usa | documentary | plex.tv.Documentary+.plex | EXACT_AFTER_REGION_SUFFIX | 71 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
 | Indian Entertainment | Colors MENA | custom.colors.mena | colors | 158149 | EXACT_AFTER_REGION_SUFFIX | 94 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | custom.colors.mena | colors | COLORS.HD.uk | EXACT_AFTER_REGION_SUFFIX | 117 | https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | custom.colors.mena | colors | COLORS.hk | EXACT_AFTER_REGION_SUFFIX | 113 | https://epgshare01.online/epgshare01/epg_ripper_HK1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | custom.colors.mena | colors | COLORS.HD.uk | EXACT_AFTER_REGION_SUFFIX | 116 | https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | custom.colors.mena | colors | COLORS.hk | EXACT_AFTER_REGION_SUFFIX | 112 | https://epgshare01.online/epgshare01/epg_ripper_HK1.xml.gz | MANUAL_REVIEW_ONLY |
 | Indian Entertainment | Colors MENA | custom.colors.mena | colors | LIVETV_LIVETVCHANNEL_COLORS | EXACT_AFTER_REGION_SUFFIX | 94 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
 | Indian Entertainment | Colors MENA | custom.colors.mena | colors | LIVETV_LIVETVCHANNEL_COLORS_HD | EXACT_AFTER_REGION_SUFFIX | 96 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
 | Indian Entertainment | Flowers US | custom.flowers.us | flowers | 143065 | EXACT_AFTER_REGION_SUFFIX | 81 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
@@ -43,7 +43,7 @@ Bangladesh-group channels are not name-matched here. Their domestic schedules re
 | International | MyTime Movie Network East | MyTimeMovieNetworkEast.us | mytimemovienetwork | plex.tv.MyTime.Movie.Network.plex | EXACT_AFTER_REGION_SUFFIX | 59 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
 | International | XITE Hits UK | XITEHits.nl@UK | xitehits | USBD3300004RH | EXACT_AFTER_REGION_SUFFIX | 3 | https://i.mjh.nz/SamsungTVPlus/us.xml | MANUAL_REVIEW_ONLY |
 | International | XITE Hits UK | XITEHits.nl@UK | xitehits | plex.tv.XITE.Hits.plex | EXACT_AFTER_REGION_SUFFIX | 31 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
-| Religious | Madani TV | custom.madani.tv | madaniuk | MadaniChannel.uk | EXACT_AFTER_REGION_SUFFIX | 39 | https://www.open-epg.com/files/unitedkingdom.xml.gz | MANUAL_REVIEW_ONLY |
+| Religious | Madani TV | custom.madani.tv | madaniuk | MadaniChannel.uk | EXACT_AFTER_REGION_SUFFIX | 38 | https://www.open-epg.com/files/unitedkingdom.xml.gz | MANUAL_REVIEW_ONLY |
 | Sports | Sky Sports Cricket | SkySportsCricket.ie | skysportscricketuk | SkySportsCricket.uk | EXACT_AFTER_REGION_SUFFIX | 30 | https://www.open-epg.com/files/unitedkingdom.xml.gz | MANUAL_REVIEW_ONLY |
 
 ## Bangladesh-specific review
