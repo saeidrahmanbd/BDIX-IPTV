@@ -59372,27 +59372,6 @@ From Merchants Bank Field at Memorial Stadium in Bloomington, Ind.</desc>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800011-20261019223600/list/GreatMoviesTheWrongBabysitter215136769cb0e09efb341b19d12b083422309cb.jpg" />
   </programme>
-  <programme channel="GREATromance.uk" start="20261013225500 +0000" stop="20261013235000 +0000">
-    <title lang="en">Christmas Wedding Planner</title>
-    <desc lang="en">Romantic drama with Jocelyn Hudon. A woman is hired to plan her cousin's elaborate wedding, and things are going perfectly - until a handsome stranger arrives asking questions about the groom.</desc>
-    <date>2017</date>
-    <category lang="en">Movie</category>
-    <category lang="en">Romance</category>
-    <icon src="https://images.metadata.sky.com/pd-image/0fb35a46-ae33-4a35-8ad4-75b2059470b2/16-9" />
-    <rating system="UK">
-      <value>PG</value>
-    </rating>
-  </programme>
-  <programme channel="GREATromance.uk" start="20261013235000 +0000" stop="20261013235500 +0000">
-    <title lang="en">Good News on GREAT!</title>
-    <desc lang="en">An uplifting round-up of good news stories from the UK and around the world.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Showbiz</category>
-    <icon src="https://images.metadata.sky.com/pd-image/8c416571-4fcf-4005-8a4e-0493673ace62/16-9" />
-    <rating system="UK">
-      <value>PG</value>
-    </rating>
-  </programme>
   <programme channel="GREATromance.uk" start="20261013235500 +0000" stop="20261014005000 +0000">
     <title lang="en">Christmas Wedding Planner</title>
     <desc lang="en">Romantic drama with Jocelyn Hudon. A woman is hired to plan her cousin's elaborate wedding, and things are going perfectly - until a handsome stranger arrives asking questions about the groom.</desc>
@@ -64897,19 +64876,6 @@ Christian religious leaders teach about Jesus and his various teachings on love,
     <category lang="en-GB">178</category>
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/26ca5ba8c0cdb4512eb5e2c3d3a66498.jpg" />
     <episode-num system="onscreen">E26</episode-num>
-    <premiere />
-  </programme>
-  <programme start="20261014044000 +0530" stop="20261014052000 +0530" channel="HistoryTV18.in@SD">
-    <title lang="en-GB">Forged in Fire: Beat the Judges</title>
-    <sub-title lang="en-GB">Three skilled Forged in Fire Champions have to slash through level one to have a chance to rock out a nine-ringed broadsword</sub-title>
-    <desc lang="en-GB">Three champions return with one goal in mind, to prove that they are the best. However, they must first compete with each other before the winner has a face-off with a judge in an epic challenge.</desc>
-    <credits>
-      <director>Alfonso Trinidad</director>
-      <actor>Wil Willis,J. Neilson,Doug Marcaida,David Baker,Ben Abbott</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/a1ec4c2dcdf634dcd9f7c5978a620ae0.jpg" />
-    <episode-num system="onscreen">E6</episode-num>
     <premiere />
   </programme>
   <programme start="20261014052000 +0530" stop="20261014054000 +0530" channel="HistoryTV18.in@SD">
@@ -75310,42 +75276,6 @@ Christian religious leaders teach about Jesus and his various teachings on love,
     <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/8778032f75fa46c3a6baa2f7f5c40f14.jpg?width=700" />
     <rating>
       <value>U</value>
-    </rating>
-  </programme>
-  <programme channel="KnowledgeNetwork.ca" start="20261013233000 +0000" stop="20261013235000 +0000">
-    <title lang="en">The Creature Cases</title>
-    <sub-title lang="en">The Bat Cave Crisis</sub-title>
-    <desc lang="en">The duo must figure out why bats are suddenly sneezing after waking up from their winter sleep.</desc>
-    <credits>
-      <actor>Nneka Okoye</actor>
-      <actor>Shash Hira</actor>
-      <actor>Teresa Gallagher</actor>
-    </credits>
-    <date>2026</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Action</category>
-    <category lang="en">Adventure</category>
-    <category lang="en">Science</category>
-    <category lang="en">Educational</category>
-    <icon src="http://dtil.tmsimg.com/assets/p21890924_b_h10_aw.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S3</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVY</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C</value>
-    </rating>
-    <rating system="방송통신심의위원회">
-      <value>All</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
     </rating>
   </programme>
   <programme channel="KnowledgeNetwork.ca" start="20261013235000 +0000" stop="20261014000000 +0000">
@@ -111165,13 +111095,6 @@ Bringing the best in television.</desc>
     <category lang="en">TV Show</category>
     <category lang="en">Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p29030724_b_h9_ab.jpg?lock=880x660" />
-  </programme>
-  <programme channel="Pop.uk" start="20261013233500 +0000" stop="20261013234800 +0000">
-    <title lang="en">Bakugan</title>
-    <desc lang="en">In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261014050500/list/ZEEPOPBakugan208744645f5c97981664f4d83ddaead93a6d512.jpg" />
   </programme>
   <programme channel="Pop.uk" start="20261013234800 +0000" stop="20261014000200 +0000">
     <title lang="en">Bakugan</title>
@@ -152541,14 +152464,6 @@ Bringing the best in television.</desc>
       <value>NA</value>
     </rating>
   </programme>
-  <programme start="20261014051200 +0530" stop="20261014052400 +0530" channel="ThalaaTV.in">
-    <title>Melmaruvathur Arputhangal</title>
-    <sub-title>THALAA TV | TAMIL</sub-title>
-    <desc>Devotee Marimuthu seeks Goddess Devi?s help to save his sister Karpagam from possession.</desc>
-    <category>Family</category>
-    <language>TAMIL</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/THALAA%20TV/POSTER/Melmaruvathur%20Arputhangal.png" />
-  </programme>
   <programme start="20261014052400 +0530" stop="20261014053600 +0530" channel="ThalaaTV.in">
     <title>Melmaruvathur Arputhangal</title>
     <sub-title>THALAA TV | TAMIL</sub-title>
@@ -154972,32 +154887,6 @@ Bringing the best in television.</desc>
     <rating>
       <value>12</value>
     </rating>
-  </programme>
-  <programme start="20261013225600 +0000" stop="20261013235000 +0000" channel="TheWalkingDeadUniverse.us">
-    <category lang="en">Drama</category>
-    <category lang="en">Horror</category>
-    <category lang="en">Science fiction</category>
-    <category lang="en">Series</category>
-    <credits>
-      <actor>Norman Reedus</actor>
-      <actor>Melissa McBride</actor>
-      <actor>Lauren Cohan</actor>
-      <actor>Josh McDermitt</actor>
-      <actor>Christian Serratos</actor>
-      <actor>Seth Gilliam</actor>
-      <actor>Ross Marquand</actor>
-      <actor>Jeffrey Dean Morgan</actor>
-      <actor>Khary Payton</actor>
-      <actor>Callan McAuliffe</actor>
-      <actor>Eleanor Matsuura</actor>
-      <actor>Cooper Andrews</actor>
-    </credits>
-    <desc lang="en">S02 E08 — Nebraska
-Rick and the others try to restore order after a terrible discovery; Hershel takes up an old habit and disappears.</desc>
-    <episode-num>S02 E08</episode-num>
-    <icon src="https://iptv-epg.org/images/71MT1JAwlYsG0I8jGbTV3rA4Kp1qyn9-3WdvxUPOQ3gwjpEapMMEkuF1W-7zVtBuydCZT2ae0gaIIomYA9XOaP3y0RcevDyMtOE0L60SPWU" />
-    <previously-shown />
-    <title lang="en">The Walking Dead</title>
   </programme>
   <programme start="20261013235000 +0000" stop="20261014004600 +0000" channel="TheWalkingDeadUniverse.us">
     <category lang="en">Drama</category>
@@ -158768,13 +158657,6 @@ A close look at Negan and the lives of the Saviors during the conflict through a
     <icon src="https://iptv-epg.org/images/71MT1JAwlYsG0I8jGbTV3rA4Kp1qyn9-3WdvxUPOQ3gwjpEapMMEkuF1W-7zVtBuydCZT2ae0gaIIomYA9XOaP3y0RcevDyMtOE0L60SPWU" />
     <previously-shown />
     <title lang="en">The Walking Dead</title>
-  </programme>
-  <programme channel="TinyPop.uk" start="20261013234000 +0000" stop="20261013234900 +0000">
-    <title lang="en">Masha And The Bear</title>
-    <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261014051000/list/TinyPOPMashaAndTheBear205699615483f2ae60f42f99aa947d568e5049f.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261013234900 +0000" stop="20261013235900 +0000">
     <title lang="en">Masha And The Bear</title>
@@ -162870,14 +162752,6 @@ A close look at Negan and the lives of the Saviors during the conflict through a
     <category>Kids</category>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261018235800/list/TinyPOPTHEHIVE215154840e2fe0b82f149b5a8342002d97b5fc0.jpg" />
-  </programme>
-  <programme start="20261014051200 +0530" stop="20261014052400 +0530" channel="TollyTV.in">
-    <title>ATM</title>
-    <sub-title>TOLLY TV | TELUGU</sub-title>
-    <desc>IBI MD Menon hires sharp investigator Felix after ACP Harris fails to stop ATM robberies.</desc>
-    <category>Movies</category>
-    <language>TELUGU</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/TOLLY%20TV/IMAGES/ATM.png" />
   </programme>
   <programme start="20261014052400 +0530" stop="20261014053600 +0530" channel="TollyTV.in">
     <title>ATM</title>
@@ -196257,18 +196131,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
       <value>PG</value>
     </rating>
   </programme>
-  <programme start="20261014044000 +0530" stop="20261014052000 +0530" channel="custom.colors.infinity">
-    <title lang="en-GB">Fantasy Island</title>
-    <sub-title lang="en-GB">Gwen's fantasy is to go back in time and be the pampered, rich and cared for princess she longs to be. However, she soon finds out the king is preparing to marry her off to a cruel, ambitious prince</sub-title>
-    <desc lang="en-GB">The guests that enter a luxury wish-granting resort get more than what they bargained for as their desires get fulfilled, but the outcome is unsatisfactory.</desc>
-    <credits>
-      <actor>Roselyn Sanchez (Elena Roarke),Kiara Barnes (Ruby Akuda),John Gabriel Rodriquez (Javier)</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/258deb4c13e536eac9bf75e8c3a27736.jpg" />
-    <episode-num system="onscreen">E9</episode-num>
-    <premiere />
-  </programme>
   <programme start="20261014052000 +0530" stop="20261014060000 +0530" channel="custom.colors.infinity">
     <title lang="en-GB">Fantasy Island</title>
     <sub-title lang="en-GB">A middle-aged couple and a younger couple arrive separately with their own unique fantasies. Meanwhile, Javier and Roarke finally have a conversation discussing their relationship</sub-title>
@@ -208259,36 +208121,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261014051500 +0530" stop="20261014051800 +0530" channel="custom.duck.tv">
-    <title>Train</title>
-    <desc>A cheerful train, guided by a diligent conductor, takes passengers to their destination. Together, they create a fun and adventurous experience for every journey.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b2e28d67cef943cd899f7d13acc98b9a.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261014051800 +0530" stop="20261014052000 +0530" channel="custom.duck.tv">
-    <title>Didy Baby</title>
-    <desc>Little baby animals overcome the different obstacles they face everyday by helping each other and encourage children to do the same.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/994980d9030c79a0e59fef498478945f.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261014052000 +0530" stop="20261014052200 +0530" channel="custom.duck.tv">
-    <title>City Life</title>
-    <desc>A vibrant city, full of energy, offers countless opportunities for children to meet new people and explore exciting places. These unexpected encounters can help them to develop their social skills.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/d4bfe13d7180711e3fe1f236b81da173.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
   <programme start="20261014052200 +0530" stop="20261014052600 +0530" channel="custom.duck.tv">
     <title>My Toys - My Friends</title>
     <desc>A cuddly teddy bear and his toy buddies laugh, play, and learn new things together.</desc>
@@ -220229,44 +220061,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
     <icon src="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch115_160_115" />
     <rating system="MPAA">
       <value>M</value>
-    </rating>
-  </programme>
-  <programme channel="custom.hbo.2" start="20261013225200 +0000" stop="20261013234700 +0000">
-    <title lang="en">War</title>
-    <sub-title lang="en">No More Nasty Surprises</sub-title>
-    <desc lang="en">As Morgan and Carla prepare for mediation, a slip-up gives her lawyers a chance to challenge their prenup; but Morgan's lawyers have a secret weapon.</desc>
-    <credits>
-      <actor>Dominic West</actor>
-      <actor>Sienna Miller</actor>
-      <actor>Phoebe Fox</actor>
-    </credits>
-    <date>2026</date>
-    <category lang="en">Series</category>
-    <category lang="en">Drama</category>
-    <category lang="en">Thriller</category>
-    <icon src="http://dtil.tmsimg.com/assets/p33820193_b_h8_ac.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S1 E2</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVMA</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>18+</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>12</value>
-    </rating>
-    <rating system="UK Content Provider">
-      <value>15</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>A16</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>B15</value>
-    </rating>
-    <rating system="Instituto Nacional de Cine y Artes Audiovisuales">
-      <value>SAM 16</value>
     </rating>
   </programme>
   <programme channel="custom.hbo.2" start="20261013234700 +0000" stop="20261014003300 +0000">

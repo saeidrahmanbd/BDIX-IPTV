@@ -1,67 +1,66 @@
 # Stream Health Report
 
-Generated: **2026-10-14T05:48:42+00:00**
+Generated: **2026-10-14T05:58:28+00:00**
 
 Non-destructive connectivity check. A successful HTTP response confirms reachability of the stream endpoint, not guaranteed video/audio playback.
 
 ## Summary
 
 - Streams tested: **940**
-- Reachable: **918**
-- Failed this check: **22**
-- Persistent failures (3+ consecutive): **14**
-- Intermittent failures: **8**
+- Reachable: **917**
+- Failed this check: **23**
+- Persistent failures (3+ consecutive): **13**
+- Intermittent failures: **10**
 - Primary tested: **594**
 - Backup tested: **346**
 
 ## Failure Classification
 
 - HTTP 401/403 (auth): **4**
-- HTTP 404 (not found): **1**
-- HTTP 5xx (server): **11**
-- TLS: **2**
-- Timeout: **4**
+- HTTP 404 (not found): **4**
+- HTTP 5xx (server): **9**
+- Timeout: **6**
 ## Persistent Failures
 
-- **Channel 16** — Backup — consecutive failures: **22** — HTTP 404
-- **Disney Channel India** — Backup — consecutive failures: **20** — HTTP 403
-- **Assam Talks** — Indian Entertainment — consecutive failures: **154** — HTTP 403
-- **AXN Black Czech Republic** — International — consecutive failures: **49** — HTTP 503
-- **AXN CEE** — International — consecutive failures: **49** — HTTP 503
-- **FilmBox** — International — consecutive failures: **4** — Timeout
-- **HBO** — International — consecutive failures: **142** — HTTP 403
-- **Music Box Classic** — International — consecutive failures: **49** — HTTP 503
-- **Music Box Dance** — International — consecutive failures: **49** — HTTP 503
-- **Music Box Hits** — International — consecutive failures: **49** — HTTP 503
-- **Music Box Sexy** — International — consecutive failures: **49** — HTTP 503
-- **ETV Bal Bharat** — Kids — consecutive failures: **346** — Timeout
-- **Minimax** — Kids — consecutive failures: **49** — HTTP 503
-- **Teen Nick** — Kids — consecutive failures: **20** — HTTP 403
+- **Channel 16** — Backup — consecutive failures: **24** — HTTP 500
+- **Disney Channel India** — Backup — consecutive failures: **22** — HTTP 403
+- **Assam Talks** — Indian Entertainment — consecutive failures: **156** — HTTP 403
+- **AXN Black Czech Republic** — International — consecutive failures: **51** — HTTP 503
+- **AXN CEE** — International — consecutive failures: **51** — HTTP 503
+- **HBO** — International — consecutive failures: **144** — HTTP 403
+- **Music Box Classic** — International — consecutive failures: **51** — HTTP 503
+- **Music Box Dance** — International — consecutive failures: **51** — HTTP 503
+- **Music Box Hits** — International — consecutive failures: **51** — HTTP 503
+- **Music Box Sexy** — International — consecutive failures: **51** — HTTP 503
+- **ETV Bal Bharat** — Kids — consecutive failures: **348** — Timeout
+- **Minimax** — Kids — consecutive failures: **51** — HTTP 503
+- **Teen Nick** — Kids — consecutive failures: **22** — HTTP 403
 
 ## Failed This Check
 
-- **Channel 16** — Backup — streak 22 — HTTP 404
-- **Disney Channel India** — Backup — streak 20 — HTTP 403
-- **G TV** — Backup — streak 1 — HTTP 500
-- **G TV** — Backup — streak 1 — HTTP 500
-- **Movie Bangla** — Backup — streak 1 — HTTP 500
-- **Movie Bangla** — Backup — streak 1 — HTTP 500
-- **Anand TV** — Indian Entertainment — streak 1 — TLS
-- **Assam Talks** — Indian Entertainment — streak 154 — HTTP 403
-- **Mei Alai TV** — Indian Entertainment — streak 2 — Timeout
-- **AXN Black Czech Republic** — International — streak 49 — HTTP 503
-- **AXN CEE** — International — streak 49 — HTTP 503
-- **FON Music** — International — streak 1 — TLS
-- **FilmBox** — International — streak 4 — Timeout
-- **HBO** — International — streak 142 — HTTP 403
-- **Music Box Classic** — International — streak 49 — HTTP 503
-- **Music Box Dance** — International — streak 49 — HTTP 503
-- **Music Box Hits** — International — streak 49 — HTTP 503
-- **Music Box Sexy** — International — streak 49 — HTTP 503
-- **ETV Bal Bharat** — Kids — streak 346 — Timeout
-- **Minimax** — Kids — streak 49 — HTTP 503
-- **Teen Nick** — Kids — streak 20 — HTTP 403
-- **Sony Sports Ten 3** — Sports — streak 2 — Timeout
+- **Ananda TV** — Backup — streak 2 — HTTP 404
+- **Balle Balle** — Backup — streak 2 — HTTP 404
+- **Channel 16** — Backup — streak 24 — HTTP 500
+- **Channel S** — Backup — streak 1 — HTTP 500
+- **Disney Channel India** — Backup — streak 22 — HTTP 403
+- **Duronto TV** — Backup — streak 2 — Timeout
+- **Goldmines Bollywood** — Backup — streak 2 — HTTP 404
+- **Shemaroo TV** — Backup — streak 2 — HTTP 404
+- **Assam Talks** — Indian Entertainment — streak 156 — HTTP 403
+- **Star Gold Thrills** — Indian Movies — streak 1 — Timeout
+- **AXN Black Czech Republic** — International — streak 51 — HTTP 503
+- **AXN CEE** — International — streak 51 — HTTP 503
+- **HBO** — International — streak 144 — HTTP 403
+- **Music Box Classic** — International — streak 51 — HTTP 503
+- **Music Box Dance** — International — streak 51 — HTTP 503
+- **Music Box Hits** — International — streak 51 — HTTP 503
+- **Music Box Sexy** — International — streak 51 — HTTP 503
+- **ETV Bal Bharat** — Kids — streak 348 — Timeout
+- **Minimax** — Kids — streak 51 — HTTP 503
+- **Teen Nick** — Kids — streak 22 — HTTP 403
+- **Astro Cricbuzz** — Sports — streak 1 — Timeout
+- **FOX Cricket 501** — Sports — streak 1 — Timeout
+- **Ten Sports** — Sports — streak 1 — Timeout
 
 ## Near-Duplicate URL Families
 
