@@ -12,6 +12,7 @@ on:
       - scripts/check_epg_config.py
       - scripts/epg_coverage.py
       - scripts/generate_epg.py
+      - scripts/official_epg_sources.py
       - scripts/epg_publish_gate.py
       - scripts/sync_epg_worker_map.py
       - scripts/audit_playlist.py

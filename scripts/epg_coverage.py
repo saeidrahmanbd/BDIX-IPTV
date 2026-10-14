@@ -2,6 +2,7 @@
 """Build and continuously improve EPG mappings from public XMLTV sources."""
 import csv, gzip, io, json, re, unicodedata, urllib.request
 import xml.etree.ElementTree as ET
+from official_epg_sources import HUM_TV_SOURCE, HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -78,6 +79,7 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_BEIN1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
+    "https://hum.tv/schedule/",
 ]
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 def attrs(s): return dict(ATTR_RE.findall(s))
@@ -162,6 +164,21 @@ def is_english_text_element(elem):
 
 
 def fetch_source(url):
+    if url == HUM_TV_SOURCE:
+        programmes = fetch_hum_tv_programmes()
+        ids = {HUM_TV_CHANNEL_ID} if programmes else set()
+        future = set()
+        counts = defaultdict(int)
+        names = defaultdict(set)
+        now = datetime.now(timezone.utc)
+        for program in programmes:
+            cid = program["channel_id"]
+            counts[cid] += 1
+            names[norm_name("Hum TV")].add(cid)
+            if program["stop_dt"] >= now:
+                future.add(cid)
+        return ids, future, counts, names
+
     req = urllib.request.Request(url, headers={"User-Agent": "BDIX-IPTV-EPG-Maintenance/4.0", "Accept": "application/xml,text/xml,application/gzip,*/*"})
     with urllib.request.urlopen(req, timeout=45) as r:
         data = r.read()

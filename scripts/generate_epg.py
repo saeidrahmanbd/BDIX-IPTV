@@ -9,6 +9,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from official_epg_sources import HUM_TV_SOURCE, HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes
 
 PLAYLISTS = [
     Path("IPTV-Playlist.m3u"),
@@ -63,6 +64,7 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_BEIN1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
+    "https://hum.tv/schedule/",
 ]
 
 # Per-channel broadcast-delay corrections, in hours.
@@ -418,6 +420,41 @@ def main():
     source_stats = {}
     for source_index, src in enumerate(SOURCES):
         try:
+            if src == HUM_TV_SOURCE:
+                hum_targets = [target for target in reverse.get(HUM_TV_CHANNEL_ID, []) if target in mapped_targets]
+                if not hum_targets:
+                    source_stats[src] = "SKIPPED: no active exact Hum TV mapping"
+                    continue
+                hum_programmes = fetch_hum_tv_programmes(now)
+                source_stats[src] = f"OK: {len(hum_programmes)} timed official slots"
+                for programme in hum_programmes:
+                    source_id = programme["channel_id"]
+                    title = programme["title"]
+                    start_dt = programme["start_dt"]
+                    stop_dt = programme["stop_dt"]
+                    attrs = {
+                        "channel": HUM_TV_CHANNEL_ID,
+                        "start": start_dt.strftime("%Y%m%d%H%M%S %z"),
+                        "stop": stop_dt.strftime("%Y%m%d%H%M%S %z"),
+                    }
+                    title_elem = ET.Element("title")
+                    title_elem.text = title
+                    for target in hum_targets:
+                        channel_attrs = dict(attrs)
+                        channel_attrs["channel"] = target
+                        rec = {
+                            "attrs": channel_attrs,
+                            "title": title,
+                            "children": [ET.fromstring(ET.tostring(title_elem, encoding="utf-8"))],
+                            "start_dt": start_dt,
+                            "stop_dt": stop_dt,
+                            "source_index": source_index,
+                            "source": src,
+                            "source_id": source_id,
+                        }
+                        candidates.setdefault((target, source_index, source_id), []).append(rec)
+                continue
+
             data = fetch(src)
             source_stats[src] = "OK"
             for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):
