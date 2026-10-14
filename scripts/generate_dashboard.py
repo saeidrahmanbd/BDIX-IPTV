@@ -28,8 +28,17 @@ def main():
     local=metric(a,"Healthy/local references"); logos=round(local*100/len(e),1) if e else 0
     issues=sum(metric(a,k) for k in ["Duplicate stream URLs","Metadata conflicts","Cross-country backup collisions","Protected primary-entry changes","Logo exceptions","Duplicate primary identities","Primary channel-number collisions","Primary entries missing channel numbers","Malformed EXTINF entries","Category block-order issues","Alphabetical ordering issues"])
     hfail=metric(h,"Failed this check"); hpersist=metric(h,"Persistent failures (3+ consecutive)"); htested=metric(h,"Streams tested"); hnear=metric(h,"Near-duplicate URL families")
-    india=metric(g,"Active Indian channels audited"); mapped=metric(g,"Channels with an EPG mapping"); missing=metric(g,"No guide mapping found")
-    m=re.search(r'Current/future programme coverage:\s*\*\*(\d+)/(\d+) \(([\d.]+)%\)',g,re.I); live=int(m.group(1)) if m else 0; livepct=float(m.group(3)) if m else 0; mapct=round(mapped*100/india,1) if india else 0
+    # Parse the current overall-coverage format, with a fallback for older reports.
+    total_match=re.search(r'Active unique playlist channel IDs audited:\\s*\\*\\*(\\d+)\\*\\*',g,re.I)
+    mapping_match=re.search(r'IDs with an EPG source mapping:\\s*\\*\\*(\\d+)/(\\d+) \\(([\\d.]+)%\\)\\*\\*',g,re.I)
+    current_match=re.search(r'IDs with usable current/future English programme data:\\s*\\*\\*(\\d+)/(\\d+) \\(([\\d.]+)%\\)\\*\\*',g,re.I)
+    missing_match=re.search(r'IDs with no EPG source mapping:\\s*\\*\\*(\\d+)\\*\\*',g,re.I)
+    india=int(total_match.group(1)) if total_match else metric(g,"Active Indian channels audited")
+    mapped=int(mapping_match.group(1)) if mapping_match else metric(g,"Channels with an EPG mapping")
+    missing=int(missing_match.group(1)) if missing_match else metric(g,"No guide mapping found")
+    live=int(current_match.group(1)) if current_match else 0
+    livepct=float(current_match.group(3)) if current_match else 0.0
+    mapct=float(mapping_match.group(3)) if mapping_match else (round(mapped*100/india,1) if india else 0)
     now=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     try: hist=json.loads(HISTORY.read_text(encoding="utf-8")); hist=hist[-30:] if isinstance(hist,list) else []
     except Exception: hist=[]
@@ -76,7 +85,7 @@ _Last generated: **{now}**_
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## EPG
-- Indian channels audited: **{india}**
+- Active channel IDs audited: **{india}**
 - Mapped: **{mapped} ({mapct}%)**
 - Current/future programme coverage: **{live}/{india} ({livepct}%)**
 - No mapping: **{missing}**
