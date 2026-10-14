@@ -10,48 +10,98 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy-main:
+  deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v6
-      - name: Prepare secrets
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Prepare Xtream secrets file
         env:
-          U: ${{ secrets.XTREAM_USERNAME }}
-          P: ${{ secrets.XTREAM_PASSWORD }}
-        run: python3 -c 'import json,os; json.dump({"XTREAM_USERNAME":os.environ["U"],"XTREAM_PASSWORD":os.environ["P"]},open("$RUNNER_TEMP/xtream.json","w"))'
-      - name: Deploy main gateway
+          XTREAM_USERNAME: ${{ secrets.XTREAM_USERNAME }}
+          XTREAM_PASSWORD: ${{ secrets.XTREAM_PASSWORD }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          path = Path(os.environ["RUNNER_TEMP"]) / "xtream-secrets.json"
+          path.write_text(json.dumps({
+              "XTREAM_USERNAME": os.environ["XTREAM_USERNAME"],
+              "XTREAM_PASSWORD": os.environ["XTREAM_PASSWORD"],
+          }), encoding="utf-8")
+          print(f"Prepared secrets file: {path}")
+          PY
+
+      - name: Deploy main IPTV Xtream gateway
+        id: deploy_main
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: xtream-main
-          command: deploy --secrets-file "${{ runner.temp }}/xtream.json"
-      - name: Verify main gateway
-        env:
-          U: ${{ secrets.XTREAM_USERNAME }}
-          P: ${{ secrets.XTREAM_PASSWORD }}
-        run: python3 -c 'import json,os,urllib.parse,urllib.request; u="https://bdix-iptv-main.saeidrahman.workers.dev/player_api.php?"+urllib.parse.urlencode({"username":os.environ["U"],"password":os.environ["P"]}); d=json.load(urllib.request.urlopen(u,timeout=20)); assert d.get("user_info",{}).get("auth")==1, d; print("MAIN XTREAM LOGIN OK")'
+          command: deploy --secrets-file "${{ runner.temp }}/xtream-secrets.json"
 
-  deploy-bdix:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v6
-      - name: Prepare secrets
-        env:
-          U: ${{ secrets.XTREAM_USERNAME }}
-          P: ${{ secrets.XTREAM_PASSWORD }}
-        run: python3 -c 'import json,os; json.dump({"XTREAM_USERNAME":os.environ["U"],"XTREAM_PASSWORD":os.environ["P"]},open("$RUNNER_TEMP/xtream.json","w"))'
-      - name: Deploy BDIX gateway
+      - name: Deploy BDIX Xtream gateway
+        id: deploy_bdix
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: xtream-bdix
-          command: deploy --secrets-file "${{ runner.temp }}/xtream.json"
-      - name: Verify BDIX gateway
+          command: deploy --secrets-file "${{ runner.temp }}/xtream-secrets.json"
+
+      - name: Verify both Xtream gateways
         env:
-          U: ${{ secrets.XTREAM_USERNAME }}
-          P: ${{ secrets.XTREAM_PASSWORD }}
-        run: python3 -c 'import json,os,urllib.parse,urllib.request; u="https://bdix-iptv-bdix.saeidrahman.workers.dev/player_api.php?"+urllib.parse.urlencode({"username":os.environ["U"],"password":os.environ["P"]}); d=json.load(urllib.request.urlopen(u,timeout=20)); assert d.get("user_info",{}).get("auth")==1, d; print("BDIX XTREAM LOGIN OK")'
+          XTREAM_USERNAME: ${{ secrets.XTREAM_USERNAME }}
+          XTREAM_PASSWORD: ${{ secrets.XTREAM_PASSWORD }}
+          MAIN_URL: https://bdix-iptv-main.saeidrahman.workers.dev
+          BDIX_URL: https://bdix-iptv-bdix.saeidrahman.workers.dev
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os, sys, urllib.parse, urllib.request
+
+          def check(base, label):
+              query = urllib.parse.urlencode({
+                  "username": os.environ["XTREAM_USERNAME"],
+                  "password": os.environ["XTREAM_PASSWORD"],
+              })
+              url = base.rstrip("/") + "/player_api.php?" + query
+              try:
+                  with urllib.request.urlopen(url, timeout=20) as r:
+                      status = r.status
+                      body = r.read().decode("utf-8", "replace")
+              except Exception as e:
+                  print(f"{label}: request failed: {type(e).__name__}: {e}")
+                  sys.exit(1)
+              try:
+                  data = json.loads(body)
+              except Exception:
+                  print(f"{label}: non-JSON response (HTTP {status})")
+                  print(body[:300])
+                  sys.exit(1)
+              info = data.get("user_info", {})
+              print(f"{label}: HTTP {status}, auth={info.get('auth')}, status={info.get('status')}")
+              if status != 200 or info.get("auth") != 1 or info.get("status") != "Active":
+                  print(f"{label}: authentication smoke test FAILED")
+                  sys.exit(1)
+              print(f"{label}: authentication smoke test PASSED")
+
+          check(os.environ["MAIN_URL"], "Main IPTV")
+          check(os.environ["BDIX_URL"], "BDIX")
+          PY
+
+      - name: Remove temporary secrets file
+        if: always()
+        run: rm -f "${{ runner.temp }}/xtream-secrets.json"
+
+      - name: Report deployment output
+        if: always()
+        run: |
+          echo "=== Main Wrangler output ==="
+          echo '${{ steps.deploy_main.outputs.command-output }}'
+          echo "=== BDIX Wrangler output ==="
+          echo '${{ steps.deploy_bdix.outputs.command-output }}'
