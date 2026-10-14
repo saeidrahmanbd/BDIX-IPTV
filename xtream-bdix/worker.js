@@ -109,13 +109,18 @@ function streamPayload(s, categoryId, origin) {
     stream_id: s.id,
     stream_icon: s.logo,
     epg_channel_id: s.tvgId,
-    category_id: categoryId,
+    category_id: String(categoryId),
     tv_archive: 0,
     direct_source: s.url,
     stream_url: `${origin}/live/{username}/{password}/${s.id}.ts`,
     tvg_id: s.tvgId,
     tvg_name: s.name
   };
+}
+function wantsAllCategories(categoryId) {
+  if (categoryId == null) return true;
+  const v = String(categoryId).trim().toLowerCase();
+  return v === "" || v === "0" || v === "-1" || v === "all" || v === "all_categories";
 }
 
 export default {
@@ -152,8 +157,8 @@ export default {
         if (action === "get_live_streams") {
           const categoryId = u.searchParams.get("category_id");
           return json(streams
-            .filter(s => !categoryId || categoryByName.get(s.group) === categoryId)
-            .map(s => streamPayload(s, categoryByName.get(s.group), origin)));
+            .filter(s => wantsAllCategories(categoryId) || String(categoryByName.get(s.group)) === String(categoryId))
+            .map(s => streamPayload(s, categoryByName.get(s.group) || "0", origin)));
         }
         return json(info);
       } catch (e) {
