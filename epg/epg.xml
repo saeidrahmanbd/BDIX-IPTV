@@ -17914,27 +17914,6 @@ Lou, Sonia, and Froy have to push away a debtor while trying to push a classic c
     <icon src="https://dtil.tmsimg.com/assets/p13524055_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E108</episode-num>
   </programme>
-  <programme channel="Colors.in" start="20261014023900 +0530" stop="20261014035000 +0530">
-    <title lang="en">Bigg Boss</title>
-    <desc lang="en">Sharp criticism is faced by Scout, Yung and Aman from Salman over recent behaviour. As empathy for Qazi is demanded and eviction fears grow, an unexpected guest enters the house.</desc>
-    <credits>
-      <actor>Salman Khan</actor>
-      <actor>Vijay Vikram Singh</actor>
-      <actor>Atul Kapoor</actor>
-      <director>Ankur Poddar</director>
-      <director>Deepak Dhar</director>
-      <director>Kapil Batra</director>
-      <director>Shounok Ghosh</director>
-      <director>Taranjiet Singh Namdhari</director>
-      <director>Abhiroop</director>
-      <producer>Deepak Dhar</producer>
-      <producer>Aman Sharma</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Reality - Talent</category>
-    <icon src="https://dtil.tmsimg.com/assets/p33987277_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S20 E36</episode-num>
-  </programme>
   <programme channel="Colors.in" start="20261014035000 +0530" stop="20261014050700 +0530">
     <title lang="en">Bigg Boss</title>
     <desc lang="en">Celebrity contestants live in an isolated house and perform assigned tasks, in order to win the cash prize, while also trying to avoid being eliminated.</desc>
@@ -33973,23 +33952,6 @@ Highlights of all the action from international cricket tournaments, where teams
     <category lang="en">TV Show</category>
     <category lang="en">Travel</category>
     <icon src="https://dtil.tmsimg.com/assets/p31940124_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="DiscoveryKids.au" start="20261014034400 +0530" stop="20261014035200 +0530">
-    <title lang="en">Baby Little Singham</title>
-    <desc lang="en">Infant Little Singham enthrals everyone with his antics and mischiefs while he embarks on adventures and fights villains.</desc>
-    <credits>
-      <actor>Sumrridhi Shukla</actor>
-      <actor>Jigna Bhardwaj</actor>
-      <actor>Sonal Kaushal</actor>
-      <actor>Anamaya Verma</actor>
-      <actor>Neshma Chemburkar</actor>
-      <actor>Ganessh Divekar</actor>
-      <director>Vikram Veturi</director>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27641528_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S2 E41</episode-num>
   </programme>
   <programme channel="DiscoveryKids.au" start="20261014035200 +0530" stop="20261014040000 +0530">
     <title lang="en">Baby Little Singham</title>
@@ -96535,20 +96497,6 @@ Bringing the best in television.</desc>
     <category lang="en">Action</category>
     <icon src="https://dtil.tmsimg.com/assets/p8797139_v_h9_af.jpg?lock=880x660" />
   </programme>
-  <programme channel="SonyYay.in@SD" start="20261014034200 +0530" stop="20261014035300 +0530">
-    <title lang="en">Honey Bunny Ka Jholmaal</title>
-    <desc lang="en">Twin feline brothers, Honey and Bunny, navigate thrilling escapades across India. They confront adversaries while maintaining unwavering loyalty and protection for one another.</desc>
-    <credits>
-      <actor>Mubeen Saudagar</actor>
-      <actor>Meena Nahata</actor>
-      <actor>Dolly Lopes</actor>
-      <director>Vijay Roche</director>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p24103923_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E62</episode-num>
-  </programme>
   <programme channel="SonyYay.in@SD" start="20261014035300 +0530" stop="20261014040400 +0530">
     <title lang="en">Honey Bunny Ka Jholmaal</title>
     <desc lang="en">Twin cats Honey and Bunny protect each other from enemies on their adventures.</desc>
@@ -106355,26 +106303,6 @@ Bringing the best in television.</desc>
     <icon src="https://dtil.tmsimg.com/assets/p28935071_b_h9_ad.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E636</episode-num>
   </programme>
-  <programme start="20261014034200 +0530" stop="20261014035400 +0530" channel="TeluguOne.in@HD">
-    <title>Takkari Donga Chakkani Chukka</title>
-    <desc>A notorious gangster stumbles upon his lookalike and plans to use him as a scapegoat to conceal his crimes. However, the gangster's mysterious death compels the doppelgänger to prove his innocence.</desc>
-    <category>Drama</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/c391bf703aba60c20cbb478b129225b8.jpg?width=700" />
-    <credits>
-      <director>K.S.R. Das</director>
-      <actor>Krishna (Gopi/Shyam)</actor>
-      <actor>Vijaya Nirmala (Geetha)</actor>
-      <actor>Kantha Rao</actor>
-      <actor>Rajasri</actor>
-      <actor>Kaikala Satyanarayana (Phayakar)</actor>
-      <actor>Rajababu (Malishwala Chinnayya)</actor>
-      <actor>Rajanala (Dada)</actor>
-    </credits>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261014035400 +0530" stop="20261014040400 +0530" channel="TeluguOne.in@HD">
     <title>Takkari Donga Chakkani Chukka</title>
     <desc>A notorious gangster stumbles upon his lookalike and plans to use him as a scapegoat to conceal his crimes. However, the gangster's mysterious death compels the doppelgänger to prove his innocence.</desc>
@@ -116046,13 +115974,6 @@ A close look at Negan and the lives of the Saviors during the conflict through a
     <previously-shown />
     <title lang="en">The Walking Dead</title>
   </programme>
-  <programme channel="TinyPop.uk" start="20261013221000 +0000" stop="20261013222000 +0000">
-    <title lang="en">Masha And The Bear Shorties</title>
-    <desc lang="en">Masha is getting ready for school. Masha is trying to squeeze in a bus a stroller with her little baby Rose. Masha and the animals are dancing a Hawaiian dance.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261014034000/list/TinyPOPMashaAndTheBearShorties2056997fe3c31720a204fecbc90f690cffe0177.jpg" />
-  </programme>
   <programme channel="TinyPop.uk" start="20261013222000 +0000" stop="20261013223100 +0000">
     <title lang="en">Masha And The Bear Shorties</title>
     <desc lang="en">Masha is getting ready for school. Masha is trying to squeeze in a bus a stroller with her little baby Rose. Masha and the animals are dancing a Hawaiian dance.</desc>
@@ -120210,14 +120131,6 @@ A close look at Negan and the lives of the Saviors during the conflict through a
     <category>Kids</category>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261018235800/list/TinyPOPTHEHIVE215154840e2fe0b82f149b5a8342002d97b5fc0.jpg" />
-  </programme>
-  <programme start="20261014034000 +0530" stop="20261014035200 +0530" channel="TollyTV.in">
-    <title>Bhagavanthuda</title>
-    <sub-title>TOLLY TV | TELUGU</sub-title>
-    <desc>A cop battles the system and his enemies to emerge victorious.</desc>
-    <category>Movies</category>
-    <language>TELUGU</language>
-    <icon src="https://s3.ap-northeast-1.wasabisys.com/mask/TOLLY%20TV/IMAGES/Bhagavanthuda.png" />
   </programme>
   <programme start="20261014035200 +0530" stop="20261014040500 +0530" channel="TollyTV.in">
     <title>Bhagavanthuda</title>
@@ -148472,17 +148385,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
       <value>AL</value>
     </rating>
   </programme>
-  <programme channel="custom.disney.jr" start="20261013221000 +0000" stop="20261013222000 +0000">
-    <title lang="en">Bluey</title>
-    <desc lang="en">Ticklecrabs:The kids play Tickle Crabs with Dad.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/4c15e743-7cca-4577-a5d6-3fff793adc89/16-9" />
-    <episode-num system="xmltv_ns">19..</episode-num>
-    <rating system="UK">
-      <value>U</value>
-    </rating>
-  </programme>
   <programme channel="custom.disney.jr" start="20261013222000 +0000" stop="20261013223000 +0000">
     <title lang="en">Bluey</title>
     <desc lang="en">Escape:Bluey and Bingo get dropped off at Nana's.</desc>
@@ -151217,26 +151119,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261014034800 +0530" stop="20261014035200 +0530" channel="custom.duck.tv">
-    <title>Leon-ART</title>
-    <desc>A young teddy bear, Leon, draws a variety of things using his wild and creative imagination, introducing children to the world of painting.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/0d7fe0e53e381196824b3d2bde00eb14.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261014035200 +0530" stop="20261014035400 +0530" channel="custom.duck.tv">
-    <title>Raul</title>
-    <desc>Raul the hippo, with his bird companion, embarks on charming adventures that captivate young viewers. Their escapades offer valuable lessons about everyday life and inspire creativity.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/6620902f721197715db07e170b049de6.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261014035400 +0530" stop="20261014035700 +0530" channel="custom.duck.tv">
@@ -170966,55 +170848,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
     <category lang="en">TV Show</category>
     <category lang="en">Variety Show</category>
     <icon src="https://dtil.tmsimg.com/assets/p27494736_b_h9_ad.jpg?lock=880x660" />
-  </programme>
-  <programme channel="custom.teennick" start="20261013215400 +0000" stop="20261013222100 +0000">
-    <title lang="en">The Thundermans</title>
-    <sub-title lang="en">The Neverfriending Story</sub-title>
-    <desc lang="en">When Phoebe and Max's friends begin spending time with each other, the twins worry that they will be stuck together all the time.</desc>
-    <credits>
-      <actor>Kira Kosarin</actor>
-      <actor>Jack Griffo</actor>
-      <actor>Rosa Blasi</actor>
-    </credits>
-    <date>2015</date>
-    <category lang="en">Series</category>
-    <category lang="en">Children</category>
-    <category lang="en">Sitcom</category>
-    <category lang="en">Action</category>
-    <category lang="en">Adventure</category>
-    <icon src="http://dtil.tmsimg.com/assets/p10566543_b_h8_aa.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S2 E14</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle Fernsehen">
-      <value>6</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Film &amp; Publication Board">
-      <value>A</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>7</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>6</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>6</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>A10</value>
-    </rating>
   </programme>
   <programme channel="custom.teennick" start="20261013222100 +0000" stop="20261013224800 +0000">
     <title lang="en">The Thundermans</title>
