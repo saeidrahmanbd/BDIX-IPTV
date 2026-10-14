@@ -1,218 +1,72 @@
 # Stream Health Report
 
-Generated: **2026-10-14T10:00:42+00:00**
+Generated: **2026-10-14T10:56:19+00:00**
 
 Non-destructive connectivity check. A successful HTTP response confirms reachability of the stream endpoint, not guaranteed video/audio playback.
 
 ## Summary
 
 - Streams tested: **940**
-- Reachable: **841**
-- Failed this check: **99**
-- Persistent failures (3+ consecutive): **88**
-- Intermittent failures: **11**
-- Primary tested: **594**
-- Backup tested: **346**
+- Reachable: **915**
+- Failed this check: **25**
+- Persistent failures (3+ consecutive): **16**
+- Intermittent failures: **9**
+- Primary tested: **593**
+- Backup tested: **347**
 
 ## Failure Classification
 
 - HTTP 401/403 (auth): **4**
-- HTTP 404 (not found): **81**
-- HTTP 4xx (other): **1**
-- HTTP 5xx (server): **10**
-- Timeout: **3**
+- HTTP 404 (not found): **4**
+- HTTP 5xx (server): **9**
+- Other: **1**
+- Timeout: **7**
 ## Persistent Failures
 
-- **ATN News** — Backup — consecutive failures: **10** — HTTP 404
-- **ATN News** — Backup — consecutive failures: **10** — HTTP 404
-- **Aakaash Aath** — Backup — consecutive failures: **10** — HTTP 404
-- **Aakaash Aath** — Backup — consecutive failures: **10** — HTTP 404
-- **Aakaash Aath** — Backup — consecutive failures: **10** — HTTP 404
-- **Aakaash Aath** — Backup — consecutive failures: **10** — HTTP 404
-- **Ananda TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Ananda TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Asian TV** — Backup — consecutive failures: **10** — HTTP 404
-- **BTV Chattogram** — Backup — consecutive failures: **10** — HTTP 404
-- **BTV National** — Backup — consecutive failures: **10** — HTTP 404
-- **BTV News** — Backup — consecutive failures: **10** — HTTP 404
-- **Bangla TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Bangla TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Bangla TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Bangla Vision** — Backup — consecutive failures: **10** — HTTP 404
-- **Bangla Vision** — Backup — consecutive failures: **10** — HTTP 404
-- **Bangla Vision** — Backup — consecutive failures: **10** — HTTP 404
-- **Bangla Vision** — Backup — consecutive failures: **10** — HTTP 404
-- **Bijoy TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Boishakhi TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Channel 16** — Backup — consecutive failures: **44** — HTTP 500
-- **Channel I** — Backup — consecutive failures: **10** — HTTP 404
-- **Channel I** — Backup — consecutive failures: **10** — HTTP 404
-- **Channel I** — Backup — consecutive failures: **10** — HTTP 404
-- **DBC News** — Backup — consecutive failures: **10** — HTTP 404
-- **DBC News** — Backup — consecutive failures: **10** — HTTP 404
-- **Dangal 2** — Backup — consecutive failures: **10** — HTTP 404
-- **Desh TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Disney Channel India** — Backup — consecutive failures: **42** — HTTP 403
-- **Ekattor TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Ekhon TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Ekhon TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Ekushey TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Goldmines Bollywood** — Backup — consecutive failures: **10** — HTTP 404
-- **Goldmines Movies** — Backup — consecutive failures: **10** — HTTP 404
-- **Kolkata TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Maasranga TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Maasranga TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Maasranga TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Maasranga TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Maasranga TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Mohona TV** — Backup — consecutive failures: **10** — HTTP 404
-- **My TV** — Backup — consecutive failures: **10** — HTTP 404
-- **NTV** — Backup — consecutive failures: **10** — HTTP 404
-- **NTV** — Backup — consecutive failures: **10** — HTTP 404
-- **NTV** — Backup — consecutive failures: **10** — HTTP 404
-- **News 24** — Backup — consecutive failures: **10** — HTTP 404
-- **News 24** — Backup — consecutive failures: **10** — HTTP 404
-- **News 24** — Backup — consecutive failures: **10** — HTTP 404
-- **Nexus TV** — Backup — consecutive failures: **10** — HTTP 404
-- **RTV** — Backup — consecutive failures: **10** — HTTP 404
-- **RTV** — Backup — consecutive failures: **10** — HTTP 404
-- **SA TV** — Backup — consecutive failures: **10** — HTTP 404
-- **SA TV** — Backup — consecutive failures: **10** — HTTP 404
-- **Shemaroo TV** — Backup — consecutive failures: **10** — HTTP 404
-- **ZB Cartoon** — Backup — consecutive failures: **10** — HTTP 404
-- **ATN News** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **Asian TV** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **BTV Chattogram** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **BTV World** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **Bangla Vision** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **Boishakhi TV** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **Channel 24** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **Channel I** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **DBC News** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **Deepto TV** — Bangladesh — consecutive failures: **12** — HTTP 404
-- **Ekattor TV** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **Ekushey TV** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **Jamuna TV** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **Mohona TV** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **My TV** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **NTV** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **News 24** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **RTV** — Bangladesh — consecutive failures: **10** — HTTP 404
-- **Assam Talks** — Indian Entertainment — consecutive failures: **176** — HTTP 403
-- **MNTV (Tamil)** — Indian Entertainment — consecutive failures: **10** — HTTP 404
-- **AXN Black Czech Republic** — International — consecutive failures: **71** — HTTP 503
-- **AXN CEE** — International — consecutive failures: **71** — HTTP 503
-- **FilmBox** — International — consecutive failures: **6** — Timeout
-- **HBO** — International — consecutive failures: **164** — HTTP 403
-- **Music Box Classic** — International — consecutive failures: **71** — HTTP 503
-- **Music Box Dance** — International — consecutive failures: **71** — HTTP 503
-- **Music Box Hits** — International — consecutive failures: **71** — HTTP 503
-- **Music Box Sexy** — International — consecutive failures: **71** — HTTP 503
-- **ETV Bal Bharat** — Kids — consecutive failures: **368** — Timeout
-- **Minimax** — Kids — consecutive failures: **71** — HTTP 503
-- **Teen Nick** — Kids — consecutive failures: **42** — HTTP 403
+- **Channel 16** — Backup — consecutive failures: **46** — HTTP 404
+- **Disney Channel India** — Backup — consecutive failures: **44** — HTTP 403
+- **Deepto TV** — Bangladesh — consecutive failures: **14** — HTTP 404
+- **Assam Talks** — Indian Entertainment — consecutive failures: **178** — HTTP 403
+- **MNTV (Tamil)** — Indian Entertainment — consecutive failures: **12** — HTTP 404
+- **AXN Black Czech Republic** — International — consecutive failures: **73** — HTTP 503
+- **AXN CEE** — International — consecutive failures: **73** — HTTP 503
+- **FilmBox** — International — consecutive failures: **8** — Timeout
+- **HBO** — International — consecutive failures: **166** — HTTP 403
+- **Music Box Classic** — International — consecutive failures: **73** — HTTP 503
+- **Music Box Dance** — International — consecutive failures: **73** — HTTP 503
+- **Music Box Hits** — International — consecutive failures: **73** — HTTP 503
+- **Music Box Sexy** — International — consecutive failures: **73** — HTTP 503
+- **ETV Bal Bharat** — Kids — consecutive failures: **370** — Timeout
+- **Minimax** — Kids — consecutive failures: **73** — HTTP 503
+- **Teen Nick** — Kids — consecutive failures: **44** — HTTP 403
 
 ## Failed This Check
 
-- **ATN News** — Backup — streak 10 — HTTP 404
-- **ATN News** — Backup — streak 10 — HTTP 404
-- **Aakaash Aath** — Backup — streak 10 — HTTP 404
-- **Aakaash Aath** — Backup — streak 10 — HTTP 404
-- **Aakaash Aath** — Backup — streak 10 — HTTP 404
-- **Aakaash Aath** — Backup — streak 10 — HTTP 404
-- **Ananda TV** — Backup — streak 1 — HTTP 404
-- **Ananda TV** — Backup — streak 10 — HTTP 404
-- **Ananda TV** — Backup — streak 10 — HTTP 404
-- **Asian TV** — Backup — streak 10 — HTTP 404
-- **BTV Chattogram** — Backup — streak 10 — HTTP 404
-- **BTV National** — Backup — streak 10 — HTTP 404
-- **BTV News** — Backup — streak 10 — HTTP 404
-- **Bangla TV** — Backup — streak 10 — HTTP 404
-- **Bangla TV** — Backup — streak 10 — HTTP 404
-- **Bangla TV** — Backup — streak 10 — HTTP 404
-- **Bangla Vision** — Backup — streak 10 — HTTP 404
-- **Bangla Vision** — Backup — streak 10 — HTTP 404
-- **Bangla Vision** — Backup — streak 10 — HTTP 404
-- **Bangla Vision** — Backup — streak 10 — HTTP 404
-- **Bijoy TV** — Backup — streak 10 — HTTP 404
-- **Boishakhi TV** — Backup — streak 10 — HTTP 404
-- **Channel 16** — Backup — streak 44 — HTTP 500
-- **Channel I** — Backup — streak 10 — HTTP 404
-- **Channel I** — Backup — streak 10 — HTTP 404
-- **Channel I** — Backup — streak 10 — HTTP 404
-- **DBC News** — Backup — streak 10 — HTTP 404
-- **DBC News** — Backup — streak 10 — HTTP 404
-- **Dangal 2** — Backup — streak 10 — HTTP 404
-- **Desh TV** — Backup — streak 10 — HTTP 404
-- **Disney Channel India** — Backup — streak 42 — HTTP 403
-- **Ekattor TV** — Backup — streak 10 — HTTP 404
-- **Ekhon TV** — Backup — streak 1 — HTTP 500
-- **Ekhon TV** — Backup — streak 10 — HTTP 404
-- **Ekhon TV** — Backup — streak 10 — HTTP 404
-- **Ekushey TV** — Backup — streak 10 — HTTP 404
-- **Goldmines Bollywood** — Backup — streak 10 — HTTP 404
-- **Goldmines Movies** — Backup — streak 10 — HTTP 404
-- **Kolkata TV** — Backup — streak 10 — HTTP 404
-- **Maasranga TV** — Backup — streak 10 — HTTP 404
-- **Maasranga TV** — Backup — streak 10 — HTTP 404
-- **Maasranga TV** — Backup — streak 10 — HTTP 404
-- **Maasranga TV** — Backup — streak 10 — HTTP 404
-- **Maasranga TV** — Backup — streak 10 — HTTP 404
-- **Mohona TV** — Backup — streak 10 — HTTP 404
-- **My TV** — Backup — streak 10 — HTTP 404
-- **NTV** — Backup — streak 10 — HTTP 404
-- **NTV** — Backup — streak 10 — HTTP 404
-- **NTV** — Backup — streak 10 — HTTP 404
-- **NTV Europe** — Backup — streak 1 — HTTP 500
-- **News 24** — Backup — streak 10 — HTTP 404
-- **News 24** — Backup — streak 10 — HTTP 404
-- **News 24** — Backup — streak 10 — HTTP 404
-- **Nexus TV** — Backup — streak 10 — HTTP 404
-- **RTV** — Backup — streak 10 — HTTP 404
-- **RTV** — Backup — streak 10 — HTTP 404
-- **SA TV** — Backup — streak 10 — HTTP 404
-- **SA TV** — Backup — streak 10 — HTTP 404
-- **Shemaroo TV** — Backup — streak 10 — HTTP 404
-- **ZB Cartoon** — Backup — streak 10 — HTTP 404
-- **ATN News** — Bangladesh — streak 10 — HTTP 404
-- **Ananda TV** — Bangladesh — streak 2 — HTTP 404
-- **Asian TV** — Bangladesh — streak 10 — HTTP 404
-- **BTV Chattogram** — Bangladesh — streak 10 — HTTP 404
-- **BTV World** — Bangladesh — streak 10 — HTTP 404
-- **Bangla Vision** — Bangladesh — streak 10 — HTTP 404
-- **Boishakhi TV** — Bangladesh — streak 10 — HTTP 404
-- **Channel 24** — Bangladesh — streak 10 — HTTP 404
-- **Channel I** — Bangladesh — streak 10 — HTTP 404
-- **DBC News** — Bangladesh — streak 10 — HTTP 404
-- **Deepto TV** — Bangladesh — streak 12 — HTTP 404
-- **Ekattor TV** — Bangladesh — streak 10 — HTTP 404
-- **Ekushey TV** — Bangladesh — streak 10 — HTTP 404
-- **Jamuna TV** — Bangladesh — streak 10 — HTTP 404
-- **Mohona TV** — Bangladesh — streak 10 — HTTP 404
-- **My TV** — Bangladesh — streak 10 — HTTP 404
-- **NTV** — Bangladesh — streak 10 — HTTP 404
-- **News 24** — Bangladesh — streak 10 — HTTP 404
-- **RTV** — Bangladesh — streak 10 — HTTP 404
-- **Jalsha Movies HD** — Indian Bangla — streak 1 — HTTP 404
-- **Assam Talks** — Indian Entertainment — streak 176 — HTTP 403
-- **Colors Infinity** — Indian Entertainment — streak 1 — HTTP 404
-- **Epic Parivar** — Indian Entertainment — streak 1 — HTTP 404
-- **MNTV (Tamil)** — Indian Entertainment — streak 10 — HTTP 404
-- **Movies Now** — Indian Movies — streak 1 — HTTP 404
-- **Star Movies Select** — Indian Movies — streak 1 — HTTP 404
-- **AXN Black Czech Republic** — International — streak 71 — HTTP 503
-- **AXN CEE** — International — streak 71 — HTTP 503
-- **FilmBox** — International — streak 6 — Timeout
-- **HBO** — International — streak 164 — HTTP 403
-- **Music Box Classic** — International — streak 71 — HTTP 503
-- **Music Box Dance** — International — streak 71 — HTTP 503
-- **Music Box Hits** — International — streak 71 — HTTP 503
-- **Music Box Sexy** — International — streak 71 — HTTP 503
-- **ETV Bal Bharat** — Kids — streak 368 — Timeout
-- **Minimax** — Kids — streak 71 — HTTP 503
-- **Sonic Bangla** — Kids — streak 1 — HTTP 429
-- **Teen Nick** — Kids — streak 42 — HTTP 403
-- **Sony Sports Ten 3** — Sports — streak 2 — Timeout
+- **Channel 16** — Backup — streak 46 — HTTP 404
+- **Channel S** — Backup — streak 1 — HTTP 500
+- **Disney Channel India** — Backup — streak 44 — HTTP 403
+- **Duronto TV** — Backup — streak 2 — Timeout
+- **Deepto TV** — Bangladesh — streak 14 — HTTP 404
+- **Green TV** — Bangladesh — streak 1 — HTTP 500
+- **Assam Talks** — Indian Entertainment — streak 178 — HTTP 403
+- **MNTV (Tamil)** — Indian Entertainment — streak 12 — HTTP 404
+- **Star Gold Thrills** — Indian Movies — streak 2 — Timeout
+- **Raj Music Telugu** — Indian Music — streak 2 — HTTP 404
+- **AXN Black Czech Republic** — International — streak 73 — HTTP 503
+- **AXN CEE** — International — streak 73 — HTTP 503
+- **FON Music** — International — streak 1 — Other
+- **FilmBox** — International — streak 8 — Timeout
+- **HBO** — International — streak 166 — HTTP 403
+- **Music Box Classic** — International — streak 73 — HTTP 503
+- **Music Box Dance** — International — streak 73 — HTTP 503
+- **Music Box Hits** — International — streak 73 — HTTP 503
+- **Music Box Sexy** — International — streak 73 — HTTP 503
+- **ETV Bal Bharat** — Kids — streak 370 — Timeout
+- **Minimax** — Kids — streak 73 — HTTP 503
+- **Teen Nick** — Kids — streak 44 — HTTP 403
+- **Astro Cricbuzz** — Sports — streak 2 — Timeout
+- **FOX Cricket 501** — Sports — streak 2 — Timeout
+- **Ten Sports** — Sports — streak 2 — Timeout
 
 ## Near-Duplicate URL Families
 

@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-14T10:00:16.539094+00:00**
+Generated: **2026-10-14T10:55:51.321899+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -18,10 +18,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Logo references checked: **940**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **51**
+- Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **0**
-- Alphabetical ordering issues: **0**
+- Category block-order issues: **9**
+- Alphabetical ordering issues: **2**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 
@@ -629,8 +629,17 @@ None.
 
 ## Ordering
 
-Category block order: OK.
-Alphabetical order: OK.
+- category block **Indian Movies** — out of canonical block order
+- category block **Indian Music** — out of canonical block order
+- category block **Indian Entertainment** — out of canonical block order
+- category block **Pakistani** — out of canonical block order
+- category block **International** — out of canonical block order
+- category block **Documentary & Wildlife** — out of canonical block order
+- category block **Kids** — out of canonical block order
+- category block **Religious** — out of canonical block order
+- category block **Sports** — out of canonical block order
+- **Backup** — **7S Music** appears after **B4U Movies**
+- **Backup** — **7S Music** appears after **B4U Movies**
 
 ## Suspicious URLs
 

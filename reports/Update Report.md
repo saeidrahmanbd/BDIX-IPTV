@@ -1,25 +1,25 @@
 # Update Report
 
-_Last generated: **2026-10-14 10:00 UTC**_
+_Last generated: **2026-10-14 10:56 UTC**_
 
 | Metric | Current |
 |---|---:|
 | Streams | **940** |
 | Active Channel Identities | **577** |
-| Active Primary Streams | **594** |
+| Active Primary Streams | **593** |
 | Bangladesh | **56** |
-| India | **285** |
-| Backup Streams | **346** |
+| India | **284** |
+| Backup Streams | **347** |
 | Local Logos | **100.0%** |
 | EPG Programme Coverage | **0.0%** |
 | EPG Mapping | **65.2%** |
 | Stream Health Tested | **940** |
-| Stream Health Failures | **99** |
-| Persistent Failures | **88** |
+| Stream Health Failures | **25** |
+| Persistent Failures | **16** |
 | Near-Duplicate URL Families | **0** |
-| Audit Blocking Issues | **52** |
-| Pre-Publish Gate | **BLOCK** |
-| Pre-Publish Gate Generated | **2026-10-14T10:00:16+00:00** |
+| Audit Blocking Issues | **12** |
+| Pre-Publish Gate | **PASS** |
+| Pre-Publish Gate Generated | **2026-10-14T10:55:51+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -27,18 +27,18 @@ _Last generated: **2026-10-14 10:00 UTC**_
 - Same-name / different-ID collisions: **35**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **51**
+- Primary entries missing channel numbers: **0**
 - Logo exceptions: **0**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **0**
-- Alphabetical ordering issues: **0**
+- Category block-order issues: **9**
+- Alphabetical ordering issues: **2**
 - Signed/tokenized URLs: **9**
 
 ## Safety & Automation
 - Stream health is non-destructive and keeps per-URL failure history.
 - Backup streams are never automatically deleted because of health failures.
 - Discovery queues are retired; only the approved canonical playlist categories are maintained.
-- Pre-publish gate status: **BLOCK**
+- Pre-publish gate status: **PASS**
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## EPG
@@ -51,14 +51,14 @@ _Last generated: **2026-10-14 10:00 UTC**_
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-14T10:00:16.539094+00:00** |
-| EPG coverage | **2026-10-14T09:59:48+00:00** |
-| Stream health | **2026-10-14T10:00:42+00:00** |
-| Pre-publish gate | **2026-10-14T10:00:16+00:00** |
+| Playlist audit | **2026-10-14T10:55:51.321899+00:00** |
+| EPG coverage | **2026-10-14T10:55:20+00:00** |
+| Stream health | **2026-10-14T10:56:19+00:00** |
+| Pre-publish gate | **2026-10-14T10:55:51+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
 - Latest entries change: **940 → 940**
-- Latest health failures: **90 → 99**
+- Latest health failures: **99 → 25**
 
 Historical records are retained in reports/maintenance-history.json.
