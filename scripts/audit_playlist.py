@@ -346,7 +346,12 @@ try:
             continue
         preserved = 0
         for new_cid, new_count in new_primary_by_url.get(url, []):
-            if new_cid.startswith(cid + "@"):
+            # Completing an empty legacy channel identity is a safe metadata repair
+            # when the exact stream URL remains in the primary playlist. Do not
+            # confuse adding tvg-id/channel-id to that same stream with removal.
+            if not cid and new_cid:
+                preserved += new_count
+            elif cid and new_cid.startswith(cid + "@"):
                 preserved += new_count
         if direct + preserved < count:
             protected_changes.append((cid, url, "primary entry removed or changed"))

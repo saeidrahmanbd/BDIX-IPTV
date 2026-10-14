@@ -66,3 +66,21 @@ A feed can be promoted to the production source list only after all of the follo
 The merged XMLTV file uses generic display-name values such as `Channel 6753`; the identification is confirmed against the separate Sky channel catalogue rather than inferred from that placeholder display-name. Some other IDs in the feed have conflicting or commented-out mappings in public catalogues (for example 5426 and 3815), so they were deliberately **not** applied.
 
 Until a genuinely local source is found, native Bangladesh channel guide coverage should remain reported as missing rather than being filled with guessed or mismatched programmes.
+
+## Supplemental source re-check — 14 October 2026
+
+The following additional public pages were checked during a broader current-date search. None passed the acceptance rules above for native Bangladesh EPG mappings.
+
+| Candidate | What was found | Decision |
+|---|---|---|
+| [Official BTV portal](https://btv.gov.bd/) and [programme schedule menu](https://btv.gov.bd/views/sitemap) | The portal lists schedule/TV-guide pages for BTV, BTV News, and BTV Chattogram. The linked [daily schedule archive](https://btv.gov.bd/site/page/6bc2fea7-2a61-4479-9e6e-1811d0e0a9ec/-%E0%A6%A6%E0%A7%88%E0%A6%A8%E0%A6%BF%E0%A6%95-%E0%A6%85%E0%A6%A8%E0%A7%81%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE%E0%A6%A8%E0%A6%B8%E0%A7%82%E0%A6%9A%E0%A6%BF) and [weekly archive](https://btv.gov.bd/pages/static-pages/6922df6c933eb65569e21e63) report last updates in August 2025. | Official but stale; do not manufacture a 2026 timetable from it. Recheck for a live/current data endpoint before implementing a scraper. |
+| [Ekushey TV programme schedule page](https://www.ekushey-tv.com/17/program-schedule) | Searchable page content contains broad “today” labels, but also legacy weekday schedules from 2017 and did not establish a complete, current dated programme grid. | Lead only; not accepted as current schedule data. |
+| [NTV programme page](https://ncdn.ntvbd.com/%E0%A6%8F%E0%A6%A8%E0%A0%9F%E0%A0%AD%E0%A0%B0-%E0%A6%85%E0%A6%A8%E0%A0%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE%E0%A6%A8) | The page points viewers to a weekly schedule, but the indexed page is several years old; recent event articles describe one-off programming, not a current repeating grid. | No current, automated schedule source verified. |
+| [WatchTVList ATN listings](https://www.watchtvlist.com/tv/atn/) | It publishes a schedule under a Bangladesh label, but the page does not establish that the schedule matches the exact domestic ATN Bangla feed; descriptions include region-specific details, so regional identity and time alignment remain ambiguous. | Do not map to ATNBangla.bd without an independent same-service/time check. |
+| [Sling TV ATN Bangla schedule](https://watch.sling.com/1/channel/61564f72605b44868fd9ff5833957825/browse) | A schedule exists for the ATN Bangla service offered through Sling's US subscription lineup. | Regional/service mismatch risk; not evidence for the Bangladesh-local stream. |
+| [globetvapp public country EPG repository](https://github.com/globetvapp/epg) and [iptv-org EPG source catalogue](https://github.com/iptv-org/epg/tree/master/sites) | The repository tree checked did not expose a Bangladesh country feed, and the source catalogue contained no verified current Bangladesh-local grabber/source. | No source added. |
+
+### Current disposition
+
+**No additional domestic Bangladesh schedule source met the verification threshold on 14 October 2026.** There is still no dependable public XMLTV endpoint verified for the remaining Bangladesh-group channels. Keep domestic Bangladesh IDs unmapped rather than substituting a foreign/diaspora feed, old schedules, inferred programme names, or placeholder data. A live official “next programme” display may be worth reverse-engineering only if it returns machine-readable current title and start/end times and can be refreshed reliably; no such endpoint has been verified yet.
+
