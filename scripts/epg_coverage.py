@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Build and continuously improve EPG mappings from public XMLTV sources."""
 import csv, gzip, io, json, re, unicodedata, urllib.request
-from difflib import SequenceMatcher
 import xml.etree.ElementTree as ET
 from official_epg_sources import HUM_TV_SOURCE, HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes
 from collections import defaultdict
@@ -34,6 +33,18 @@ EPG_ALIASES = {
     "tntsports2.uk": ["TNTSport2.uk", "TNTSports2.uk", "tntsports2.uk"], "tntsports3.uk": ["TNTSport3.uk", "TNTSports3.uk", "tntsports3.uk"],
     "tntsports4.uk": ["TNTSport4.uk", "TNTSports4.uk", "tntsports4.uk"], "skysportsmainevent.uk": ["SkySportsMainEvent.uk", "SkySpMainEvHD.uk", "SkySpMainEv.uk"],
     "skysportspremiereleague.uk": ["SkySportsPremierLeague.uk", "SkySp.PL.HD.uk", "SkySp.PL.uk"],
+
+    # Verified identities found in existing source feeds during the strict unmapped audit.
+    "AamarBangla.in@SD": ["jtv1962"],
+    "custom.travelxp.english": ["Travelxp.uk"],
+    "custom.wild.flix.hindi": ["IN460000585"],
+    "custom.world.war.tv": ["WorldWarTV.uk"],
+    "custom.xxtreme.jobs.hindi": ["IN46000011Q"],
+    "custom.sony.max.2": ["143801", "LIVETV_LIVETVCHANNEL_SONY_MAX_2", "jtv483"],
+    "MovieSphere.us@AU": ["Moviesphere.au"],
+    "custom.bdix.cnninternationla": ["157679"],
+    "custom.toonami.aftermath.east": ["ToonamiAftermath.us"],
+    "DocumentaryPlus": ["plex.tv.Documentary+.plex"],
 }
 
 EPG_LOCKS = {
@@ -272,73 +283,64 @@ def main():
         else: status="NO_GUIDE_HIT"
         rows.append({"group":ch["group"],"channel":ch["name"],"tvg_id":ch["tvg_id"],"epg_id":epg_id,"source":" | ".join(hit_sources),"status":status,"note":"Auto-maintained; verify ambiguous/name matches manually."})
 
-    # Strict candidate audit: similarity suggestions are evidence for human review only.
-    # No fuzzy candidate is written to the mapping CSV automatically.
+    # Strict candidates are exact channel-name matches after removing known
+    # territory/language suffixes. They are review-only and never auto-applied.
+    # Bangladesh-group channels are excluded from fuzzy name matching entirely.
     def without_region_suffix(value):
+        value = norm_name(value)
         suffixes = (
             "czechrepublic", "unitedkingdom", "international", "malayalam",
             "telugu", "bengali", "hindi", "tamil", "canada", "australia",
             "ukraine", "poland", "france", "germany", "mexico", "arabia",
-            "india", "europe", "english", "favoris", "comedy", "movies",
-            "action", "drama", "family", "east", "west", "mena", "usa",
-            "uae", "uk", "us", "au", "br", "ca", "fr", "de", "in",
+            "india", "europe", "english", "favoris", "east", "west",
+            "mena", "usa", "uae", "uk", "us", "au", "br", "ca", "fr", "de", "in",
         )
-        value = norm_name(value)
         for suffix in suffixes:
             if value.endswith(suffix) and len(value) - len(suffix) >= 5:
                 return value[:-len(suffix)]
         return value
 
     audit_rows = []
-    channel_by_id = {channel["tvg_id"]: channel for channel in channels}
     unmapped_rows = [row for row in rows if not row["epg_id"]]
-    for row in rows:
-        if row["epg_id"] or row["status"] != "NO_GUIDE_HIT":
+    channels_with_candidates = set()
+    for row in unmapped_rows:
+        if row["group"].strip() == "Bangladesh":
             continue
-        target = channel_by_id.get(row["tvg_id"], {})
-        target_names = [norm_name(row["channel"])]
-        target_names += [norm_name(x) for x in target.get("aliases", []) if norm_name(x)]
-        target_forms = set(target_names)
-        target_forms |= {without_region_suffix(name) for name in target_names}
+        target_name = norm_name(row["channel"])
+        target_regionless = without_region_suffix(row["channel"])
         candidates_by_id = {}
         for src, source_tuple in zip(SOURCES, source_data):
             source_ids, source_future, source_counts, source_names = source_tuple
             for source_name_key, source_ids_for_name in source_names.items():
                 if not source_name_key or len(source_name_key) < 5:
                     continue
-                source_forms = {
-                    source_name_key,
-                    without_region_suffix(source_name_key),
-                }
-                best_score = max(
-                    (SequenceMatcher(None, target_form, source_form).ratio()
-                     for target_form in target_forms for source_form in source_forms
-                     if target_form and source_form),
-                    default=0.0,
-                )
-                if best_score < 0.68:
+                source_regionless = without_region_suffix(source_name_key)
+                # Strict equality only: no fuzzy or substring-based candidates.
+                is_exact = target_name == source_name_key
+                is_region_variant = bool(target_regionless and target_regionless == source_regionless)
+                if not (is_exact or is_region_variant):
                     continue
                 for source_id in source_ids_for_name:
-                    # Only suggest IDs with usable near-term schedule data.
                     if source_id not in source_future:
                         continue
                     item = candidates_by_id.setdefault(source_id, {
                         "source_id": source_id,
                         "source_name": source_name_key,
-                        "score": best_score,
                         "programme_rows": source_counts.get(source_id, 0),
                         "sources": [],
+                        "match_type": "EXACT_NAME" if is_exact else "EXACT_AFTER_REGION_SUFFIX",
                     })
-                    if best_score > item["score"]:
-                        item["score"] = best_score
-                        item["source_name"] = source_name_key
                     item["programme_rows"] = max(item["programme_rows"], source_counts.get(source_id, 0))
                     if src not in item["sources"]:
                         item["sources"].append(src)
+                    if is_exact:
+                        item["match_type"] = "EXACT_NAME"
         ranked = sorted(
             candidates_by_id.values(),
-            key=lambda item: (-item["score"], -item["programme_rows"], item["source_id"]),
+            key=lambda item: (item["match_type"] != "EXACT_NAME", -item["programme_rows"], item["source_id"]),
         )[:5]
+        if ranked:
+            channels_with_candidates.add(row["tvg_id"])
         for item in ranked:
             audit_rows.append({
                 "group": row["group"],
@@ -346,56 +348,45 @@ def main():
                 "tvg_id": row["tvg_id"],
                 "candidate_name": item["source_name"],
                 "candidate_epg_id": item["source_id"],
-                "similarity": round(item["score"], 3),
+                "similarity": 1.0,
                 "usable_programmes": item["programme_rows"],
                 "source_urls": item["sources"],
                 "review_status": "MANUAL_REVIEW_ONLY",
+                "match_type": item["match_type"],
             })
 
     audit_path = Path("reports/epg-unmapped-audit.md")
     audit_path.parent.mkdir(parents=True, exist_ok=True)
-    channels_with_candidates = {item["tvg_id"] for item in audit_rows}
     audit_lines = [
         "# Strict Unmapped EPG Audit",
         "",
         f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",
         "",
-        "This audit compares every unmapped active playlist identity against display names from the configured XMLTV feeds. Candidates have current/future schedule records, but name similarity is not proof of identity.",
-        "No candidate in this report is automatically applied to the mapping CSV. Any match must be verified against the source channel identity, territory/variant, and current programme data first.",
+        "Only exact normalized display-name matches or exact matches after removing a recognized territory/language suffix are listed below. Every candidate has current/future schedule rows in a configured feed, but candidates remain review-only and are never automatically applied.",
+        "Bangladesh-group channels are not name-matched here. Their domestic schedules require exact ID/explicit alias evidence; a similar Indian or foreign channel is not acceptable.",
         "",
-        f"- Unmapped channel identities reviewed: **{len(unmapped_rows)}**",
-        f"- Unmapped identities with at least one review candidate: **{len(channels_with_candidates)}**",
+        f"- Unmapped active channel identities reviewed: **{len(unmapped_rows)}**",
+        f"- Unmapped identities with exact/region-normalized schedule candidates: **{len(channels_with_candidates)}**",
         f"- Candidate rows: **{len(audit_rows)}**",
-        f"- Unmapped identities with no review candidate: **{len(set(row['tvg_id'] for row in unmapped_rows) - channels_with_candidates)}**",
+        f"- Unmapped identities without an exact schedule-backed candidate: **{len(set(row['tvg_id'] for row in unmapped_rows) - channels_with_candidates)}**",
         "",
-        "## Candidate matches for manual review",
+        "## Exact candidates for manual review",
         "",
-        "| Group | Playlist channel | Playlist tvg-id | Candidate source name normalized | Candidate EPG ID | Similarity | Usable programme rows | Source feed(s) | Decision |",
-        "|---|---|---|---|---|---:|---:|---|---|",
+        "| Group | Playlist channel | Playlist tvg-id | Candidate source name | Candidate EPG ID | Match type | Usable programme rows | Source feed(s) | Decision |",
+        "|---|---|---|---|---|---|---:|---|---|",
     ]
-    for item in sorted(audit_rows, key=lambda x: (x["group"], x["channel"].lower(), -x["similarity"], x["candidate_epg_id"])):
+    for item in sorted(audit_rows, key=lambda x: (x["group"], x["channel"].lower(), x["match_type"], x["candidate_epg_id"])):
         urls = "<br>".join(item["source_urls"])
         audit_lines.append(
-            f"| {item['group']} | {item['channel']} | {item['tvg_id']} | {item['candidate_name']} | {item['candidate_epg_id']} | {item['similarity']:.3f} | {item['usable_programmes']} | {urls} | MANUAL_REVIEW_ONLY |"
-        )
-    audit_lines += [
-        "",
-        "## Unmapped identities without a schedule-backed candidate",
-        "",
-        "| Group | Channel | Playlist tvg-id | Status | Reason |",
-        "|---|---|---|---|---|",
-    ]
-    for row in sorted(unmapped_rows, key=lambda x: (x["group"], x["channel"].lower())):
-        if row["tvg_id"] in channels_with_candidates:
-            continue
-        audit_lines.append(
-            f"| {row['group']} | {row['channel']} | {row['tvg_id']} | {row['status']} | No name-similar source ID with current/future programme rows in configured feeds |"
+            f"| {item['group']} | {item['channel']} | {item['tvg_id']} | {item['candidate_name']} | {item['candidate_epg_id']} | {item['match_type']} | {item['usable_programmes']} | {urls} | MANUAL_REVIEW_ONLY |"
         )
     audit_lines += [
         "",
         "## Bangladesh-specific review",
         "",
-        "Bangladesh-group identities are never automatically fuzzy-matched. Candidate rows are research leads only; only an exact tvg-id or a specifically verified alias may be promoted. The official BTV site publishes daily and weekly programme schedule pages, but the latest indexed daily and weekly schedule pages found in this audit were last updated in August 2025 and are not a current reliable automated schedule feed. No stale or fabricated schedules are inserted.",
+        f"- Bangladesh-group IDs without a mapping: **{sum(1 for row in unmapped_rows if row['group'].strip() == 'Bangladesh')}**",
+        "The configured diaspora guide from nasimali/epg-auto uses numeric Sky channel IDs with generic display names such as Channel 3914; this audit does not infer channel-to-SID identity from list ordering. Only the explicitly verified IDs already configured for Iqra Bangla, ATN Bangla UK, and Deen TV are used.",
+        "Official Bangladeshi broadcaster pages expose program or video listings, but no dependable public, current XMLTV feed for the domestic channel set was verified in this pass. No schedule is fabricated from stale static schedules or unrelated foreign channels.",
         "",
     ]
     audit_path.write_text("\n".join(audit_lines) + "\n", encoding="utf-8")
