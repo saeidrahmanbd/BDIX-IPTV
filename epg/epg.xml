@@ -11874,12 +11874,6 @@
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p29327717_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme start="20261014010000 +0100" stop="20261014012000 +0100" channel="AlistiqamaTV.om">
-    <title lang="en">Imam Nafea Reading</title>
-    <desc lang="en">Religion Imam Nafie recites the Holy Qur'anic verses to help Muslims improve their daily lives. Moaaz Safwat Salem.</desc>
-    <category lang="en">Show</category>
-    <icon src="https://sat.tv/wp-content/themes/twentytwenty-child/data_lineups/nilesat/images3/epg-222742.jpg" />
-  </programme>
   <programme start="20261014012000 +0100" stop="20261014014000 +0100" channel="AlistiqamaTV.om">
     <title lang="en">We Learned From His Morals</title>
     <desc lang="en">Religion Through an analysis of noble hadiths reported by the Companions, Dr. Salah bin Salem Baothman presents an in-depth look at the Prophet Mohamed's, peace be upon him, moral stance and virtuous attributes.</desc>
@@ -39387,9 +39381,8 @@ Highlights of all the action from international cricket tournaments, where teams
   <programme start="20261014184000 +0000" stop="20261014211000 +0000" channel="DUPWCHD">
     <category lang="en">Cricket</category>
     <category>Sports</category>
-    <desc lang="en">Coverage of Twenty20 cricket matches contested by international teams.</desc>
-    <icon src="https://iptv-epg.org/images/M3qABr2FQ9FiSnYUbr12IhnFHl2AgVKF7w_NHrSNPrnXCGuGLA_SOAmfBCPRUr5rjMW7R3S2F7pxmOJiIiHvqBNeQjo2mpqo_6PAsdpJbnc" />
-    <title lang="en">T20 Cricket</title>
+    <desc lang="en">From Param Veers Sports Complex in Rydal, Ga.</desc>
+    <title lang="en">Atlanta Open T20 Tournament</title>
     <live />
   </programme>
   <programme start="20261014211000 +0000" stop="20261014214000 +0000" channel="DUPWCHD">
@@ -39611,9 +39604,8 @@ A preview of a cricket match.</desc>
   <programme start="20261015140000 +0000" stop="20261015171000 +0000" channel="DUPWCHD">
     <category lang="en">Cricket</category>
     <category>Sports</category>
-    <desc lang="en">Coverage of Twenty20 cricket matches contested by international teams.</desc>
-    <icon src="https://iptv-epg.org/images/M3qABr2FQ9FiSnYUbr12IhnFHl2AgVKF7w_NHrSNPrnXCGuGLA_SOAmfBCPRUr5rjMW7R3S2F7pxmOJiIiHvqBNeQjo2mpqo_6PAsdpJbnc" />
-    <title lang="en">T20 Cricket</title>
+    <desc lang="en">From Param Veers Sports Complex in Rydal, Ga.</desc>
+    <title lang="en">Atlanta Open T20 Tournament</title>
     <live />
   </programme>
   <programme start="20261015171000 +0000" stop="20261015174000 +0000" channel="DUPWCHD">
@@ -39647,9 +39639,8 @@ A preview of a cricket match.</desc>
   <programme start="20261015180000 +0000" stop="20261015211000 +0000" channel="DUPWCHD">
     <category lang="en">Cricket</category>
     <category>Sports</category>
-    <desc lang="en">Coverage of Twenty20 cricket matches contested by international teams.</desc>
-    <icon src="https://iptv-epg.org/images/M3qABr2FQ9FiSnYUbr12IhnFHl2AgVKF7w_NHrSNPrnXCGuGLA_SOAmfBCPRUr5rjMW7R3S2F7pxmOJiIiHvqBNeQjo2mpqo_6PAsdpJbnc" />
-    <title lang="en">T20 Cricket</title>
+    <desc lang="en">From Param Veers Sports Complex in Rydal, Ga.</desc>
+    <title lang="en">Atlanta Open T20 Tournament</title>
     <live />
   </programme>
   <programme start="20261015211000 +0000" stop="20261015214000 +0000" channel="DUPWCHD">
@@ -39861,9 +39852,8 @@ Coverage of cricket action from the legends tournament held in Edgbaston, Birmin
   <programme start="20261016184000 +0000" stop="20261016213000 +0000" channel="DUPWCHD">
     <category lang="en">Cricket</category>
     <category>Sports</category>
-    <desc lang="en">Coverage of Twenty20 cricket matches contested by international teams.</desc>
-    <icon src="https://iptv-epg.org/images/M3qABr2FQ9FiSnYUbr12IhnFHl2AgVKF7w_NHrSNPrnXCGuGLA_SOAmfBCPRUr5rjMW7R3S2F7pxmOJiIiHvqBNeQjo2mpqo_6PAsdpJbnc" />
-    <title lang="en">T20 Cricket</title>
+    <desc lang="en">From Param Veers Sports Complex in Rydal, Ga.</desc>
+    <title lang="en">Atlanta Open T20 Tournament</title>
     <live />
   </programme>
   <programme start="20261016213000 +0000" stop="20261016220000 +0000" channel="DUPWCHD">
@@ -40066,10 +40056,12 @@ A preview of a cricket match.</desc>
   </programme>
   <programme start="20261017140000 +0000" stop="20261017171000 +0000" channel="DUPWCHD">
     <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
     <category>Sports</category>
-    <desc lang="en">Coverage of Twenty20 cricket matches contested by international teams.</desc>
-    <icon src="https://iptv-epg.org/images/M3qABr2FQ9FiSnYUbr12IhnFHl2AgVKF7w_NHrSNPrnXCGuGLA_SOAmfBCPRUr5rjMW7R3S2F7pxmOJiIiHvqBNeQjo2mpqo_6PAsdpJbnc" />
-    <title lang="en">T20 Cricket</title>
+    <desc lang="en">Semifinal: Teams TBA
+From Param Veers Sports Complex in Rydal, Ga.</desc>
+    <icon src="https://iptv-epg.org/images/W_3I2TXh6x7fewRNydhyhk45eWGygaVqzZFjx-HC4MoHrvBhRFeViD_NtnTqXzSabd2syRSRk-Kv49BUCckY608miRyMNsm9zZYCeT3rtts" />
+    <title lang="en">Atlanta Open T20 Tournament</title>
     <live />
   </programme>
   <programme start="20261017171000 +0000" stop="20261017174000 +0000" channel="DUPWCHD">
@@ -40102,10 +40094,12 @@ A preview of a cricket match.</desc>
   </programme>
   <programme start="20261017181000 +0000" stop="20261017213000 +0000" channel="DUPWCHD">
     <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
     <category>Sports</category>
-    <desc lang="en">Coverage of Twenty20 cricket matches contested by international teams.</desc>
-    <icon src="https://iptv-epg.org/images/M3qABr2FQ9FiSnYUbr12IhnFHl2AgVKF7w_NHrSNPrnXCGuGLA_SOAmfBCPRUr5rjMW7R3S2F7pxmOJiIiHvqBNeQjo2mpqo_6PAsdpJbnc" />
-    <title lang="en">T20 Cricket</title>
+    <desc lang="en">Semifinal: Teams TBA
+From Param Veers Sports Complex in Rydal, Ga.</desc>
+    <icon src="https://iptv-epg.org/images/W_3I2TXh6x7fewRNydhyhk45eWGygaVqzZFjx-HC4MoHrvBhRFeViD_NtnTqXzSabd2syRSRk-Kv49BUCckY608miRyMNsm9zZYCeT3rtts" />
+    <title lang="en">Atlanta Open T20 Tournament</title>
     <live />
   </programme>
   <programme start="20261017213000 +0000" stop="20261017220000 +0000" channel="DUPWCHD">
@@ -40545,6 +40539,252 @@ Highlights of all the action from international cricket tournaments, where teams
     <title lang="en">Cricket Highlights</title>
   </programme>
   <programme start="20261019170000 +0000" stop="20261019180000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">India Women vs Zimbabwe Women: 2nd T20I
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261019180000 +0000" stop="20261019190000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">CPL 2026: Amazon Warriors vs Falcons - Qualifier 1
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261019190000 +0000" stop="20261019200000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">ETPL 2026: Castle Rockers vs Wolves - Final
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261019200000 +0000" stop="20261019210000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">South Africa vs Australia: 2nd Test, Day 2
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261019210000 +0000" stop="20261019220000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">WCL 2026: TBC vs TBC - Final
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261019220000 +0000" stop="20261019230000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">South Africa vs Australia: 2nd Test, Day 2
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261019230000 +0000" stop="20261020000000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">India Women vs Zimbabwe Women: 2nd T20I
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261020000000 +0000" stop="20261020010000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">South Africa vs Australia: 2nd Test, Day 2
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261020010000 +0000" stop="20261020020000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">India vs West Indies - 3rd ODI
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/scpQ9rzLQmlQIpjKzjbkSPMJH6f16YQSSALkBAbhnvFiHqAnhz_8XoYhwhDGyXhaZwJe62bxoFGltMZsTLp1Ix5UO1S5KetPd0uDq3CM5Ws" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261020020000 +0000" stop="20261020030000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">South Africa vs Australia: 2nd Test, Day 2
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261020030000 +0000" stop="20261020040000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">WCL 2026: TBC vs TBC - Final
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261020040000 +0000" stop="20261020050000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">South Africa vs Australia: 2nd Test, Day 2
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261020050000 +0000" stop="20261020060000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">South Africa vs Australia: 3rd ODI
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/scpQ9rzLQmlQIpjKzjbkSPMJH6f16YQSSALkBAbhnvFiHqAnhz_8XoYhwhDGyXhaZwJe62bxoFGltMZsTLp1Ix5UO1S5KetPd0uDq3CM5Ws" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261020060000 +0000" stop="20261020070000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">India Women vs Zimbabwe Women: 2nd T20I
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261020070000 +0000" stop="20261020080000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">Australia Women vs New Zealand Women: 1st T20I
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261020080000 +0000" stop="20261020081000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">Australia Women vs New Zealand Women: 2nd T20I
+A preview of a cricket match.</desc>
+    <icon src="https://iptv-epg.org/images/SYIdosE93vOqeoeGZCTM8B2cVGe3T7QQZa-OYytbMobmKXMiaSCavr31o_IdYi00ZIUehoColtBN1SZ8OETTx-opnvtiAiCwgLowYpNAr6I" />
+    <title lang="en">Cricket Preview</title>
+    <live />
+  </programme>
+  <programme start="20261020081000 +0000" stop="20261020113000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">Australia vs. New Zealand
+2nd T20I.</desc>
+    <icon src="https://iptv-epg.org/images/0AM3ZeAO8UTbj9av5F1-McqCPGndLH45UME_nCFxFBMabtbJXcEqBYa0zHj3G-TPBkhgA6n5bMXN-VNAHp_1JUzefIxn9q4nnBnZCICajDk" />
+    <title lang="en">Women's T20 Cricket</title>
+    <live />
+  </programme>
+  <programme start="20261020113000 +0000" stop="20261020120000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">Australia Women vs New Zealand Women: 2nd T20I
+Action from cricket matches around the world.</desc>
+    <icon src="https://iptv-epg.org/images/58PenteVA3IaazCl5uyBo6rPmrn1ksq46zRNq3nLSydcv8zUx5iJee4jN5cxClfvdWTn3ktQWzSDbTvxO99aaFfGXpWdEj48voglvQF9kXA" />
+    <title lang="en">Cricket Review</title>
+    <live />
+  </programme>
+  <programme start="20261020120000 +0000" stop="20261020123000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">South Africa vs Australia: 2nd Test, Day 2
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261020123000 +0000" stop="20261020130000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">India Women vs Zimbabwe Women: 2nd T20I
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <previously-shown />
+    <title lang="en">Cricket Highlights</title>
+  </programme>
+  <programme start="20261020130000 +0000" stop="20261020132000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category>Sports</category>
+    <date>2011</date>
+    <desc lang="en">Filler cricket programming.</desc>
+    <icon src="https://iptv-epg.org/images/beTB07l2S_7SngWrVgsOV4DWok1pDna2HVopQPlnq5mEA90e_r_s5Mi0gBN2fwK2XD6KEt7zFKF3WHHOY-mI4tVQcH1m6jrUKU43P8kajo8" />
+    <title lang="en">Cricket Filler</title>
+  </programme>
+  <programme start="20261020132000 +0000" stop="20261020133000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">India Women vs Zimbabwe Women: 3rd T20I
+A preview of a cricket match.</desc>
+    <icon src="https://iptv-epg.org/images/SYIdosE93vOqeoeGZCTM8B2cVGe3T7QQZa-OYytbMobmKXMiaSCavr31o_IdYi00ZIUehoColtBN1SZ8OETTx-opnvtiAiCwgLowYpNAr6I" />
+    <title lang="en">Cricket Preview</title>
+    <live />
+  </programme>
+  <programme start="20261020133000 +0000" stop="20261020164000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">India Women vs Zimbabwe Women: 3rd T20I
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <title lang="en">Cricket Highlights</title>
+    <live />
+  </programme>
+  <programme start="20261020164000 +0000" stop="20261020171000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">India Women vs Zimbabwe Women: 3rd T20I
+Highlights of all the action from international cricket tournaments, where teams compete to win the title.</desc>
+    <icon src="https://iptv-epg.org/images/hk4j4pBFSU5U06Ck4vlSBYOp97MpW8cNKzh5--Je622cf-2DsmyOG5sR6qBLVmAZAU5fp-4L1RwDJGU84atP-FjW9XJm683NRR8lBr4IcRA" />
+    <title lang="en">Cricket Highlights</title>
+    <live />
+  </programme>
+  <programme start="20261020171000 +0000" stop="20261020173000 +0000" channel="DUPWCHD">
+    <category lang="en">Cricket</category>
+    <category>Sports</category>
+    <date>2011</date>
+    <desc lang="en">Filler cricket programming.</desc>
+    <icon src="https://iptv-epg.org/images/beTB07l2S_7SngWrVgsOV4DWok1pDna2HVopQPlnq5mEA90e_r_s5Mi0gBN2fwK2XD6KEt7zFKF3WHHOY-mI4tVQcH1m6jrUKU43P8kajo8" />
+    <title lang="en">Cricket Filler</title>
+  </programme>
+  <programme start="20261020173000 +0000" stop="20261020180000 +0000" channel="DUPWCHD">
     <category lang="en">Cricket</category>
     <category lang="en">Series</category>
     <category>Sports</category>
@@ -52087,10 +52327,6 @@ Highlights of all the action from international cricket tournaments, where teams
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p25983828_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme start="20261013232700 +0000" stop="20261014022900 +0000" channel="FITE247.us@SD">
-    <desc lang="en">Greektown Wrestling Summer Vacation Tour 2023 is live on FITE+ straight from Germania Club of Hamilton. The event features wrestlers such as the AEW megastar Eddie Kingston, White Bronco, Sonny Kiss &amp; much more.</desc>
-    <title lang="en">Greektown Wrestling - Hamilton - Summer Vacation Tour 2023</title>
-  </programme>
   <programme start="20261014022900 +0000" stop="20261014025600 +0000" channel="FITE247.us@SD">
     <desc lang="en">The claws come out when two feisty females make their way to the cage! It's time for Monster Knockout: Michael Moorer vs Adrian Riggs on FITE+!</desc>
     <title lang="en">Monster Knockout - Michael Moorer vs Adrian Riggs</title>
@@ -52553,14 +52789,14 @@ Highlights of all the action from international cricket tournaments, where teams
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
   <programme start="20261013233000 +0000" stop="20261014003000 +0000" channel="FoxSports1.us">
-    <category lang="en">Sports</category>
-    <category lang="en">Football</category>
+    <category lang="en">Auto racing</category>
     <category lang="en">Series</category>
-    <desc lang="en">Indiana at Nebraska
-No. 7 Indiana visits Nebraska in a Week 6 Big Ten game. Indiana beat Rutgers, 47-15, in Week 5 for its fifth straight win, while Nebraska beat Maryland, 48-23. Josh Hoover leads Indiana, while Nebraska is paced by quarterback Anthony Colandrea.</desc>
-    <icon src="https://iptv-epg.org/images/dQ2_euyyaS9n0aKd1kUG46W9j7aYj-fdjxoKrvnzAAleA19tzKxxWb1kuyW5BAqOa0Nbda7LWEvP81GX3zu7tm7Ykm-GAIqaTaFe81rwVR4" />
-    <previously-shown />
-    <title lang="en">College Football</title>
+    <category>Sports</category>
+    <desc lang="en">Charlotte Recap
+NASCAR legend Kevin Harvick shares his expert opinion on NASCAR news and interviews the biggest names in sports and the racing world.</desc>
+    <icon src="https://iptv-epg.org/images/vsc0tpbMwycBDsUwVmZ1GFZM6QNELBT923_Yo7hYOuJ66aErQRCW8zF_Jv9mKs4CwyT1_3nWblB9tdLALR67d_jROu2Ri3QRzC_q_fLNi3c" />
+    <title lang="en">Kevin Harvick's Happy Hour</title>
+    <new />
   </programme>
   <programme start="20261014003000 +0000" stop="20261014013000 +0000" channel="FoxSports1.us">
     <category lang="en">Sports</category>
@@ -52587,7 +52823,7 @@ The No. 22 Houston Cougars visit the Kansas State Wildcats for a regular-season 
     <category lang="en">Baseball</category>
     <category lang="en">Series</category>
     <desc lang="en">Los Angeles Dodgers at Milwaukee Brewers
-National League Championship Series, Game 2.</desc>
+The Milwaukee Brewers host the Los Angeles Dodgers in Game 2 of the National League Championship Series. Following a 2-1 Game 1 victory, Milwaukee turns to pitcher Logan Henderson, while Yoshinobu Yamamoto takes the mound for Los Angeles.</desc>
     <icon src="https://iptv-epg.org/images/ftrQ9mHcGwV0pF-mK63ttkgXHIfyvWP-SBpA3GRrCIglBWStC9gtQZ_9mKVqCVi8ON_XLwVs2M-ZCmqH6iIQ6MFY5CIAXYPQTHm1Y7ynx5c" />
     <previously-shown />
     <title lang="en">MLB Baseball</title>
@@ -52701,7 +52937,7 @@ Former teammates, best friends and NFL legends Rob Gronkowski and Julian Edelman
     <category lang="en">Baseball</category>
     <category lang="en">Series</category>
     <desc lang="en">Milwaukee Brewers at Los Angeles Dodgers
-National League Championship Series, Game 3.</desc>
+The Los Angeles Dodgers play the Milwaukee Brewers in an NLCS Game 3 in LA. Los Angeles looks to Freddie Freeman to halt a two-game slump, while Milwaukee relies on Robert Gasser after William Contreras homered in a 7-4 Game 2 victory.</desc>
     <icon src="https://iptv-epg.org/images/-MFI-pgQ3ySfPtct_L4YSgVFR-_1wt_1QBFHJhCJoih3sZ8xeZ-fBZdpYmxs2K1Txuizo0AReK5TbNVVN9FY9Ne_0NGwr0nT6oUBO1zwYAM" />
     <title lang="en">MLB Baseball</title>
     <live />
@@ -52724,7 +52960,7 @@ National League Championship Series, Game 3.</desc>
     <category lang="en">Baseball</category>
     <category lang="en">Series</category>
     <desc lang="en">Milwaukee Brewers at Los Angeles Dodgers
-National League Championship Series, Game 3.</desc>
+The Los Angeles Dodgers play the Milwaukee Brewers in an NLCS Game 3 in LA. Los Angeles looks to Freddie Freeman to halt a two-game slump, while Milwaukee relies on Robert Gasser after William Contreras homered in a 7-4 Game 2 victory.</desc>
     <icon src="https://iptv-epg.org/images/-MFI-pgQ3ySfPtct_L4YSgVFR-_1wt_1QBFHJhCJoih3sZ8xeZ-fBZdpYmxs2K1Txuizo0AReK5TbNVVN9FY9Ne_0NGwr0nT6oUBO1zwYAM" />
     <previously-shown />
     <title lang="en">MLB Baseball</title>
@@ -52734,7 +52970,7 @@ National League Championship Series, Game 3.</desc>
     <category lang="en">Baseball</category>
     <category lang="en">Series</category>
     <desc lang="en">Milwaukee Brewers at Los Angeles Dodgers
-National League Championship Series, Game 3.</desc>
+The Los Angeles Dodgers play the Milwaukee Brewers in an NLCS Game 3 in LA. Los Angeles looks to Freddie Freeman to halt a two-game slump, while Milwaukee relies on Robert Gasser after William Contreras homered in a 7-4 Game 2 victory.</desc>
     <icon src="https://iptv-epg.org/images/-MFI-pgQ3ySfPtct_L4YSgVFR-_1wt_1QBFHJhCJoih3sZ8xeZ-fBZdpYmxs2K1Txuizo0AReK5TbNVVN9FY9Ne_0NGwr0nT6oUBO1zwYAM" />
     <previously-shown />
     <title lang="en">MLB Baseball</title>
@@ -53012,7 +53248,7 @@ Decision time for Loose Cannon Andy Taylor: lock up a small profit, or put it al
     <category lang="en">Series</category>
     <desc lang="en">Milwaukee Brewers at Los Angeles Dodgers
 National League Championship Series, Game 5. (If necessary)</desc>
-    <icon src="https://iptv-epg.org/images/xFb4565j0oIEoUrLcjA3MJ3DqAsNIW9WQ3UqytdL9dnkGSwr5aw2NI-gbAqu_CKNlFn5aICpfndLGcAPSqwe_9EWk4lMGmWyb0RIl-QOOgk" />
+    <icon src="https://iptv-epg.org/images/9BQqozij9C0rzzTBzC-Y_O5FMnp2Ek6yFABQxSSJdsHhnrTIhfT64f7BuComyHHLeNKiLQykWy37pxGRzhfsdPvepkFVOrclmB3dfTYQoSM" />
     <title lang="en">MLB Baseball</title>
     <live />
   </programme>
@@ -53027,7 +53263,7 @@ National League Championship Series, Game 5. (If necessary)</desc>
     <category lang="en">Sports</category>
     <category lang="en">Series</category>
     <desc lang="en">NASCAR CRAFTSMAN Truck Series Chase Race at Phoenix
-From Phoenix Raceway in Avondale, Ariz.</desc>
+The NASCAR Craftsman Truck Series holds its playoff Chase race at Phoenix Raceway. Drivers battle for 150 laps covering a total of 150 miles. Standings leader Kaden Honeycutt guides the field with 2,251 points ahead of rival Layne Riggs.</desc>
     <icon src="https://iptv-epg.org/images/d2FH6Pv6NeZfWBofx3KdnzxZsko2AzlAKduZePwEKTXLlEhko06wbgLxzUy_clGDcGX8UBrSpaft0b_EtRhw8y8xN3rUj2H8anewFlf_aWE" />
     <previously-shown />
     <title lang="en">NASCAR Craftsman Truck Series</title>
@@ -53038,7 +53274,7 @@ From Phoenix Raceway in Avondale, Ariz.</desc>
     <category lang="en">Series</category>
     <desc lang="en">Milwaukee Brewers at Los Angeles Dodgers
 National League Championship Series, Game 5. (If necessary)</desc>
-    <icon src="https://iptv-epg.org/images/xFb4565j0oIEoUrLcjA3MJ3DqAsNIW9WQ3UqytdL9dnkGSwr5aw2NI-gbAqu_CKNlFn5aICpfndLGcAPSqwe_9EWk4lMGmWyb0RIl-QOOgk" />
+    <icon src="https://iptv-epg.org/images/9BQqozij9C0rzzTBzC-Y_O5FMnp2Ek6yFABQxSSJdsHhnrTIhfT64f7BuComyHHLeNKiLQykWy37pxGRzhfsdPvepkFVOrclmB3dfTYQoSM" />
     <previously-shown />
     <title lang="en">MLB Baseball</title>
   </programme>
@@ -53110,15 +53346,38 @@ From Bill Snyder Family Football Stadium in Manhattan, Kan.</desc>
     <title lang="en">College Football</title>
     <live />
   </programme>
-  <programme start="20261017193000 +0000" stop="20261017230000 +0000" channel="FoxSports1.us">
+  <programme start="20261017193000 +0000" stop="20261017220000 +0000" channel="FoxSports1.us">
+    <category lang="en">Horse racing</category>
     <category lang="en">Sports</category>
-    <category lang="en">Football</category>
     <category lang="en">Series</category>
-    <desc lang="en">Teams TBA
-All the action from college football.</desc>
-    <icon src="https://iptv-epg.org/images/eUhXVX-Fmqv89jjs1J19HNB2L7CXVWXre5OaI_978dV-GfkpcgM8zyK4cl0eaItPbZlB--stUwYdlyeaQ4OKIh8tf7NIBmPYDIOfFZwRmi4" />
-    <title lang="en">College Football</title>
+    <date>2026</date>
+    <desc lang="en">America's Day At the Races
+The best racehorses square off in the premier races from across the country.</desc>
+    <icon src="https://iptv-epg.org/images/EUwORyPbsKnlJvlnnNmKtTJ4TlAJbZi3HyeGQnaQAIGzBXKcEVrH6h49QvNhNtiN914-TU59zFUcBJNeADJjx1OygNZRCn1zXz9M8p1WlPI" />
+    <title lang="en">Horse Racing</title>
     <live />
+  </programme>
+  <programme start="20261017220000 +0000" stop="20261017223000 +0000" channel="FoxSports1.us">
+    <category lang="en">Action sports</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <date>2026</date>
+    <desc lang="en">Team World Championship
+Follow the top U.S. Timbersports athletes as they compete against the World in the STIHL World Team Championships from Milan, Italy.</desc>
+    <icon src="https://iptv-epg.org/images/QDh4fY1ZyfW6tNSsBzYBsvJP6pcY0_VIhBa1zj0RBGnTfMEwXCMovBkd4iAFmQw_SrEjVA7D_3REmUzNgnOxvpyXaJaFOBFSmeIHq9r16EQ" />
+    <previously-shown />
+    <title lang="en">STIHL Timbersports</title>
+  </programme>
+  <programme start="20261017223000 +0000" stop="20261017230000 +0000" channel="FoxSports1.us">
+    <category lang="en">Action sports</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <date>2026</date>
+    <desc lang="en">Individual World Championship
+Showcasing the world's best lumberjacks competing across six events.</desc>
+    <icon src="https://iptv-epg.org/images/QDh4fY1ZyfW6tNSsBzYBsvJP6pcY0_VIhBa1zj0RBGnTfMEwXCMovBkd4iAFmQw_SrEjVA7D_3REmUzNgnOxvpyXaJaFOBFSmeIHq9r16EQ" />
+    <previously-shown />
+    <title lang="en">STIHL Timbersports</title>
   </programme>
   <programme start="20261017230000 +0000" stop="20261018023000 +0000" channel="FoxSports1.us">
     <category lang="en">Sports</category>
@@ -53140,7 +53399,17 @@ From Clarence T. C. Ching Athletics Complex in Honolulu.</desc>
     <title lang="en">College Football</title>
     <live />
   </programme>
-  <programme start="20261018060000 +0000" stop="20261018090000 +0000" channel="FoxSports1.us">
+  <programme start="20261018060000 +0000" stop="20261018080000 +0000" channel="FoxSports1.us">
+    <category lang="en">Volleyball</category>
+    <category lang="en">Sports</category>
+    <category lang="en">Series</category>
+    <desc lang="en">Ohio State at USC
+Women's College Volleyball</desc>
+    <icon src="https://iptv-epg.org/images/oHTCbUucBLLYDLE8MMldKjgohMLGIzChaG6v_pm9nRFYNg8l-XewpR0z6cJuINr6BnyIaEIBps9Qq8PdlbiWKbvdUMuQCa2YHXZaTObjcS8" />
+    <previously-shown />
+    <title lang="en">Women's College Volleyball</title>
+  </programme>
+  <programme start="20261018080000 +0000" stop="20261018110000 +0000" channel="FoxSports1.us">
     <category lang="en">Sports</category>
     <category lang="en">Football</category>
     <category lang="en">Series</category>
@@ -53150,13 +53419,13 @@ From Merchants Bank Field at Memorial Stadium in Bloomington, Ind.</desc>
     <previously-shown />
     <title lang="en">College Football</title>
   </programme>
-  <programme start="20261018090000 +0000" stop="20261018120000 +0000" channel="FoxSports1.us">
+  <programme start="20261018110000 +0000" stop="20261018120000 +0000" channel="FoxSports1.us">
     <category lang="en">Sports</category>
     <category lang="en">Football</category>
     <category lang="en">Series</category>
-    <desc lang="en">Arizona State at Texas Tech
-From Galaxy Stadium in Lubbock, Texas..</desc>
-    <icon src="https://iptv-epg.org/images/FNKNTnNqeNJt6O_3kYWSzq1dZrf-B5K_n26U0wRBhaI7YZFBihhIBjZOlfYGr2uAmIFg0U8awD513tRo3Yo4Wq8_vN1GFlid5IdWoepC0kw" />
+    <desc lang="en">Washington at Purdue
+From Ross-Ade Stadium in West Lafayette, Ind.</desc>
+    <icon src="https://iptv-epg.org/images/3Maamva65vUZEs411KcGKW-wXZ-P-XxvM0R1B_H3iNlLsnmKI4x5ia1SASqHu8dzqv8KWr5XNuJr4kyYVCFO878BPMzFbMmDuQtU-HoZjF4" />
     <previously-shown />
     <title lang="en">College Football</title>
   </programme>
@@ -53164,9 +53433,9 @@ From Galaxy Stadium in Lubbock, Texas..</desc>
     <category lang="en">Sports</category>
     <category lang="en">Football</category>
     <category lang="en">Series</category>
-    <desc lang="en">Oklahoma State at Houston
-From TDECU Stadium in Houston.</desc>
-    <icon src="https://iptv-epg.org/images/1FzfNEvY7Tcpjyisl-msnbfkWsbqUMifF7W1FeGpghoEF9F8vZxlEVl18T-k6-JAp1SIkT3UhpcRF_vXO_LRP7R6XOoisqnCW6L098RPnFo" />
+    <desc lang="en">Nebraska at Oregon
+From Autzen Stadium in Eugene, Ore.</desc>
+    <icon src="https://iptv-epg.org/images/uPkJgQDFb_1rwTQUapMflyyftTiqRCqRDrf_0MJ2f9KgiJB-kcE3sLkQu2Ls1PB7piQofqEaO0dQZfWo0wfG8vN1netQ_j5G-4XjugSLxHU" />
     <previously-shown />
     <title lang="en">College Football</title>
   </programme>
@@ -53299,6 +53568,143 @@ From Merchants Bank Field at Memorial Stadium in Bloomington, Ind.</desc>
     <title lang="en">Wake Up Barstool</title>
   </programme>
   <programme start="20261019160000 +0000" stop="20261019190000 +0000" channel="FoxSports1.us">
+    <category lang="en">Sports talk</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <credits>
+      <actor>Kristine Leahy</actor>
+    </credits>
+    <desc lang="en">A thought-provoking, opinionated and topic-driven journey through the top sports stories of the day with host Colin Cowherd.</desc>
+    <icon src="https://iptv-epg.org/images/WyC69JTgcDXLXw8R2YtpNDjC7E5Z75o0eiaNeTWTQXL5uPfTiFuXgZDKa5Z-bSgBqa1viefz5H-WP63Su4iz4wghZuWZtVPjjRXMX3EX9N0" />
+    <title lang="en">The Herd With Colin Cowherd</title>
+    <live />
+  </programme>
+  <programme start="20261019190000 +0000" stop="20261019210000 +0000" channel="FoxSports1.us">
+    <category lang="en">Sports talk</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">Nick Wright, Chris Broussard and Kevin Wildes explore and offer their opinions on the biggest stories in sports.</desc>
+    <icon src="https://iptv-epg.org/images/18VpqiEmYTI8iDcSNLKieUTUQIoe3ShH0sCO5-qV3a1DcW7IU7LVsAY3WVW2PakI-I_kx240eqykNtDfkJqkuocmGwbYKM8SbnF6SxWBK3w" />
+    <title lang="en">First Things First</title>
+    <live />
+  </programme>
+  <programme start="20261019210000 +0000" stop="20261019220000 +0000" channel="FoxSports1.us">
+    <category lang="en">Sports talk</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">Nick Wright, Chris Broussard, Kevin Wildes, and OT anchor Danny Parkins offer their opinions on the day's biggest sports stories.</desc>
+    <icon src="https://iptv-epg.org/images/S29hAEv5Hw70KuEB1NnFLHEuFSX9mqObLcm1HeGik5Oe5qrsxU7I0RoMIBs5puQpYCmONUJtCN0WoE8OZXvFuQqS9EWGde6ydKguEw0KkSw" />
+    <title lang="en">First Things First: OT</title>
+    <live />
+  </programme>
+  <programme start="20261019220000 +0000" stop="20261019223000 +0000" channel="FoxSports1.us">
+    <category lang="en">Football</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">S01 E12 — NFL Week 6 Reaction
+Former teammates, best friends and NFL legends Rob Gronkowski and Julian Edelman react to each week of the football season as only they can.</desc>
+    <episode-num>S01 E12</episode-num>
+    <icon src="https://iptv-epg.org/images/Po9kKtSzZBsxOxCbx24x8r7z1_tFqXhp1nlme1151eDkY8NWlW6ruxMhfldgM0hn4PRbLMobyKlSLWhdK7mBedWX881M3XLA2LDMEd9F1ro" />
+    <title lang="en">The Gronk &amp; Jules Show</title>
+    <new />
+  </programme>
+  <programme start="20261019223000 +0000" stop="20261019233000 +0000" channel="FoxSports1.us">
+    <category lang="en">Sports</category>
+    <category lang="en">Series</category>
+    <desc lang="en">NASCAR CRAFTSMAN Truck Series Chase Race at Phoenix
+The NASCAR Craftsman Truck Series holds its playoff Chase race at Phoenix Raceway. Drivers battle for 150 laps covering a total of 150 miles. Standings leader Kaden Honeycutt guides the field with 2,251 points ahead of rival Layne Riggs.</desc>
+    <icon src="https://iptv-epg.org/images/d2FH6Pv6NeZfWBofx3KdnzxZsko2AzlAKduZePwEKTXLlEhko06wbgLxzUy_clGDcGX8UBrSpaft0b_EtRhw8y8xN3rUj2H8anewFlf_aWE" />
+    <previously-shown />
+    <title lang="en">NASCAR Craftsman Truck Series</title>
+  </programme>
+  <programme start="20261019233000 +0000" stop="20261020000000 +0000" channel="FoxSports1.us">
+    <category lang="en">Sports</category>
+    <desc lang="en">Pregame analysis from Major League Baseball.</desc>
+    <icon src="https://iptv-epg.org/images/Oco52HVAjp8WRHRRMe6_wjf5mjfX7yazMZpQQH3cbDgxPLJG7jvhK0Dn4j-j68p5bqUPTptPID2UaM6AwMpF2NMEe9YXRO0lmXR0Mi84HUk" />
+    <title lang="en">MLB on FOX Pregame</title>
+    <live />
+  </programme>
+  <programme start="20261020000000 +0000" stop="20261020030000 +0000" channel="FoxSports1.us">
+    <category lang="en">Sports</category>
+    <category lang="en">Baseball</category>
+    <category lang="en">Series</category>
+    <desc lang="en">Los Angeles Dodgers at Milwaukee Brewers
+National League Championship Series, Game 7. (If necessary)</desc>
+    <icon src="https://iptv-epg.org/images/-5a2-6aQxNGpd4EgkpxrVb7OBzOSgbleRqxRXgPoOyX6L_RjZ9riEZvbT_wyYW50IEb-3VqwYrFqL3eu5Jug_rHkDusemkZX5zefn16l-BY" />
+    <title lang="en">MLB Baseball</title>
+    <live />
+  </programme>
+  <programme start="20261020030000 +0000" stop="20261020040000 +0000" channel="FoxSports1.us">
+    <category lang="en">Sports</category>
+    <desc lang="en">Highlights, analysis and a wrap-up of today's MLB action.</desc>
+    <icon src="https://iptv-epg.org/images/5upgu513XeiAbdGo9e2IG2PvrWinhCu-skJqLajCaHPKB8DaDai1NBabhBn7Gj_mJNK9yApCHX-qSwUqteddo6c3oQFUpFL5HC0I5p38DXs" />
+    <title lang="en">MLB on FS1 Postgame</title>
+    <live />
+  </programme>
+  <programme start="20261020040000 +0000" stop="20261020050000 +0000" channel="FoxSports1.us">
+    <category lang="en">Sports</category>
+    <desc lang="en">Highlights, analysis and a wrap-up of today's MLB action.</desc>
+    <icon src="https://iptv-epg.org/images/5upgu513XeiAbdGo9e2IG2PvrWinhCu-skJqLajCaHPKB8DaDai1NBabhBn7Gj_mJNK9yApCHX-qSwUqteddo6c3oQFUpFL5HC0I5p38DXs" />
+    <title lang="en">MLB on FS1 Postgame</title>
+  </programme>
+  <programme start="20261020050000 +0000" stop="20261020080000 +0000" channel="FoxSports1.us">
+    <category lang="en">Sports</category>
+    <category lang="en">Baseball</category>
+    <category lang="en">Series</category>
+    <desc lang="en">Los Angeles Dodgers at Milwaukee Brewers
+National League Championship Series, Game 7. (If necessary)</desc>
+    <icon src="https://iptv-epg.org/images/-5a2-6aQxNGpd4EgkpxrVb7OBzOSgbleRqxRXgPoOyX6L_RjZ9riEZvbT_wyYW50IEb-3VqwYrFqL3eu5Jug_rHkDusemkZX5zefn16l-BY" />
+    <previously-shown />
+    <title lang="en">MLB Baseball</title>
+  </programme>
+  <programme start="20261020080000 +0000" stop="20261020103000 +0000" channel="FoxSports1.us">
+    <category lang="en">Sports</category>
+    <category lang="en">Baseball</category>
+    <category lang="en">Series</category>
+    <desc lang="en">Los Angeles Dodgers at Milwaukee Brewers
+National League Championship Series, Game 7. (If necessary)</desc>
+    <icon src="https://iptv-epg.org/images/-5a2-6aQxNGpd4EgkpxrVb7OBzOSgbleRqxRXgPoOyX6L_RjZ9riEZvbT_wyYW50IEb-3VqwYrFqL3eu5Jug_rHkDusemkZX5zefn16l-BY" />
+    <previously-shown />
+    <title lang="en">MLB Baseball</title>
+  </programme>
+  <programme start="20261020103000 +0000" stop="20261020110000 +0000" channel="FoxSports1.us">
+    <category lang="en">Entertainment</category>
+    <category lang="en">Newsmagazine</category>
+    <category lang="en">News</category>
+    <date>2014</date>
+    <desc lang="en">Gossip and exclusive stories about athletes' personal lives.</desc>
+    <icon src="https://iptv-epg.org/images/GQ_ubGfk0q0c86Yi0GrrDAUiobZpM6tlO5UtryXkhhJoyATB38fWtaNQqnB766p4t6bEFVu1rnCK_p-GpH4UoxSUrrJ3Jb0ce5m1hmO9QGA" />
+    <title lang="en">TMZ Sports</title>
+    <new />
+  </programme>
+  <programme start="20261020110000 +0000" stop="20261020120000 +0000" channel="FoxSports1.us">
+    <category lang="en">Sports talk</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">Nick Wright, Chris Broussard and Kevin Wildes explore and offer their opinions on the biggest stories in sports.</desc>
+    <icon src="https://iptv-epg.org/images/18VpqiEmYTI8iDcSNLKieUTUQIoe3ShH0sCO5-qV3a1DcW7IU7LVsAY3WVW2PakI-I_kx240eqykNtDfkJqkuocmGwbYKM8SbnF6SxWBK3w" />
+    <previously-shown />
+    <title lang="en">First Things First</title>
+  </programme>
+  <programme start="20261020120000 +0000" stop="20261020140000 +0000" channel="FoxSports1.us">
+    <category lang="en">Sports talk</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">Dave Portnoy, Big Cat, PFT, and the Barstool crew bring viral headlines, big-name guests and a TV show built by the common sports fan, for the common sports fan.</desc>
+    <icon src="https://iptv-epg.org/images/7CzbN0aB8Op0TGGpUn5noDTD3_Rv_MZJV7aCrF9dOOXthf19U5uUbvhw5i2lv6XCz6GlMNRXXjXJ9s3L7vkv_63C3KnTdJePN59H2JW2KBI" />
+    <title lang="en">Wake Up Barstool</title>
+    <live />
+  </programme>
+  <programme start="20261020140000 +0000" stop="20261020160000 +0000" channel="FoxSports1.us">
+    <category lang="en">Sports talk</category>
+    <category lang="en">Series</category>
+    <category>Sports</category>
+    <desc lang="en">Dave Portnoy, Big Cat, PFT, and the Barstool crew bring viral headlines, big-name guests and a TV show built by the common sports fan, for the common sports fan.</desc>
+    <icon src="https://iptv-epg.org/images/7CzbN0aB8Op0TGGpUn5noDTD3_Rv_MZJV7aCrF9dOOXthf19U5uUbvhw5i2lv6XCz6GlMNRXXjXJ9s3L7vkv_63C3KnTdJePN59H2JW2KBI" />
+    <previously-shown />
+    <title lang="en">Wake Up Barstool</title>
+  </programme>
+  <programme start="20261020160000 +0000" stop="20261020190000 +0000" channel="FoxSports1.us">
     <category lang="en">Sports talk</category>
     <category lang="en">Series</category>
     <category>Sports</category>
@@ -70659,23 +71065,6 @@ From Merchants Bank Field at Memorial Stadium in Bloomington, Ind.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="KnowledgeNetwork.ca" start="20261014000000 +0000" stop="20261014002000 +0000">
-    <title lang="en">Galapagos X</title>
-    <sub-title lang="en">Robot Dance Battle</sub-title>
-    <desc lang="en">In the future, there is no more fossil fuel and power is generated by people on stationary bikes; the team goes back in time to find Doc Crock sabotaging renewable energy sources.</desc>
-    <date>2024</date>
-    <category lang="en">Series</category>
-    <category lang="en">Children</category>
-    <category lang="en">Adventure</category>
-    <icon src="http://dtil.tmsimg.com/assets/p27320231_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVY</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C</value>
-    </rating>
-  </programme>
   <programme channel="KnowledgeNetwork.ca" start="20261014002000 +0000" stop="20261014003000 +0000">
     <title lang="en">Luna, Chip &amp; Inkie: Adventure Rangers Go</title>
     <sub-title lang="en">Cake Mistake</sub-title>
@@ -81542,68 +81931,484 @@ Ton and Allen rumble with a band of high-bidding bikers; the guys discover a 37 
     <title lang="en">Auction Hunters</title>
   </programme>
   <programme start="20261019100000 +0000" stop="20261019110000 +0000" channel="MTV2.us">
-    <category lang="en">Entertainment</category>
     <category lang="en">Reality</category>
-    <date>2015</date>
-    <desc lang="en">The original teen moms of the series face the ongoing challenges of motherhood.</desc>
-    <icon src="https://iptv-epg.org/images/mxd61gFKQ7VPzhR33eTWnGZmet4StaFEWzUA8g-vL7LjjrAQLraHYe8qN6R7Firsb_kqll4-IEW_2d4Xl9q4krtx4JReU3hXUZgUxQ_4B9A" />
-    <title lang="en">Teen Mom OG</title>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E01 — Couples Take Cartagena!
+The teen moms and their partners travel to Cartagena, hosted by Cheyenne and Jade; couples are invited to a beachside resort to rekindle romance and face their issues with the help of professionals.</desc>
+    <episode-num>S03 E01</episode-num>
+    <icon src="https://iptv-epg.org/images/uGa0BoceLeUwO1xkmUPkXvW6bAteUxr0f8UPJ84xPFy2qbAh3EvBOukEbKoXwRkGrJsdYnS2YFpt1X929i5Z7QbFJ4vsWL3nSxojyvH8Rto" />
+    <previously-shown />
+    <title lang="en">Teen Mom: Family Reunion</title>
   </programme>
   <programme start="20261019110000 +0000" stop="20261019120000 +0000" channel="MTV2.us">
-    <category lang="en">Entertainment</category>
     <category lang="en">Reality</category>
-    <date>2015</date>
-    <desc lang="en">The original teen moms of the series face the ongoing challenges of motherhood.</desc>
-    <icon src="https://iptv-epg.org/images/mxd61gFKQ7VPzhR33eTWnGZmet4StaFEWzUA8g-vL7LjjrAQLraHYe8qN6R7Firsb_kqll4-IEW_2d4Xl9q4krtx4JReU3hXUZgUxQ_4B9A" />
-    <title lang="en">Teen Mom OG</title>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E02 — Get the Moan Out
+Cast members from across the "Teen Mom" franchise come together for a tropical vacation; but it's not all rest and relaxation, as the moms dive deep into relationship, friendship and parenting issues.</desc>
+    <episode-num>S03 E02</episode-num>
+    <icon src="https://iptv-epg.org/images/uGa0BoceLeUwO1xkmUPkXvW6bAteUxr0f8UPJ84xPFy2qbAh3EvBOukEbKoXwRkGrJsdYnS2YFpt1X929i5Z7QbFJ4vsWL3nSxojyvH8Rto" />
+    <previously-shown />
+    <title lang="en">Teen Mom: Family Reunion</title>
   </programme>
   <programme start="20261019120000 +0000" stop="20261019130000 +0000" channel="MTV2.us">
-    <category lang="en">Entertainment</category>
     <category lang="en">Reality</category>
-    <date>2015</date>
-    <desc lang="en">The original teen moms of the series face the ongoing challenges of motherhood.</desc>
-    <icon src="https://iptv-epg.org/images/mxd61gFKQ7VPzhR33eTWnGZmet4StaFEWzUA8g-vL7LjjrAQLraHYe8qN6R7Firsb_kqll4-IEW_2d4Xl9q4krtx4JReU3hXUZgUxQ_4B9A" />
-    <title lang="en">Teen Mom OG</title>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E03 — Time to Get Naked!
+Cast members from across the "Teen Mom" franchise come together for a tropical vacation; but it's not all rest and relaxation, as the moms dive deep into relationship, friendship and parenting issues.</desc>
+    <episode-num>S03 E03</episode-num>
+    <icon src="https://iptv-epg.org/images/uGa0BoceLeUwO1xkmUPkXvW6bAteUxr0f8UPJ84xPFy2qbAh3EvBOukEbKoXwRkGrJsdYnS2YFpt1X929i5Z7QbFJ4vsWL3nSxojyvH8Rto" />
+    <previously-shown />
+    <title lang="en">Teen Mom: Family Reunion</title>
   </programme>
   <programme start="20261019130000 +0000" stop="20261019140000 +0000" channel="MTV2.us">
-    <category lang="en">Entertainment</category>
     <category lang="en">Reality</category>
-    <date>2015</date>
-    <desc lang="en">The original teen moms of the series face the ongoing challenges of motherhood.</desc>
-    <icon src="https://iptv-epg.org/images/mxd61gFKQ7VPzhR33eTWnGZmet4StaFEWzUA8g-vL7LjjrAQLraHYe8qN6R7Firsb_kqll4-IEW_2d4Xl9q4krtx4JReU3hXUZgUxQ_4B9A" />
-    <title lang="en">Teen Mom OG</title>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E04 — In the Driver's Seat
+Tensions rise as Mackenzie and her new boyfriend arrive at the villa; Mackenzie hopes to make amends with Cheyenne; a dune buggy drive leads the couples to a cathartic beach workshop.</desc>
+    <episode-num>S03 E04</episode-num>
+    <icon src="https://iptv-epg.org/images/uGa0BoceLeUwO1xkmUPkXvW6bAteUxr0f8UPJ84xPFy2qbAh3EvBOukEbKoXwRkGrJsdYnS2YFpt1X929i5Z7QbFJ4vsWL3nSxojyvH8Rto" />
+    <previously-shown />
+    <title lang="en">Teen Mom: Family Reunion</title>
   </programme>
   <programme start="20261019140000 +0000" stop="20261019150000 +0000" channel="MTV2.us">
-    <category lang="en">Entertainment</category>
     <category lang="en">Reality</category>
-    <date>2015</date>
-    <desc lang="en">The original teen moms of the series face the ongoing challenges of motherhood.</desc>
-    <icon src="https://iptv-epg.org/images/mxd61gFKQ7VPzhR33eTWnGZmet4StaFEWzUA8g-vL7LjjrAQLraHYe8qN6R7Firsb_kqll4-IEW_2d4Xl9q4krtx4JReU3hXUZgUxQ_4B9A" />
-    <title lang="en">Teen Mom OG</title>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E05 — Ice Ice Baby
+The moms challenge the men in an obstacle course that leaves one of them injured; emotions run high for the women during a hypnosis workshop; a coaching session presses Cheyenne and Mackenzie to interact; a new arrival.</desc>
+    <episode-num>S03 E05</episode-num>
+    <icon src="https://iptv-epg.org/images/uGa0BoceLeUwO1xkmUPkXvW6bAteUxr0f8UPJ84xPFy2qbAh3EvBOukEbKoXwRkGrJsdYnS2YFpt1X929i5Z7QbFJ4vsWL3nSxojyvH8Rto" />
+    <previously-shown />
+    <title lang="en">Teen Mom: Family Reunion</title>
   </programme>
   <programme start="20261019150000 +0000" stop="20261019160000 +0000" channel="MTV2.us">
-    <category lang="en">Entertainment</category>
     <category lang="en">Reality</category>
-    <date>2015</date>
-    <desc lang="en">The original teen moms of the series face the ongoing challenges of motherhood.</desc>
-    <icon src="https://iptv-epg.org/images/mxd61gFKQ7VPzhR33eTWnGZmet4StaFEWzUA8g-vL7LjjrAQLraHYe8qN6R7Firsb_kqll4-IEW_2d4Xl9q4krtx4JReU3hXUZgUxQ_4B9A" />
-    <title lang="en">Teen Mom OG</title>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E06 — Rooftop Romance &amp; Red Flags
+Cheyenne and Mackenzie recover from a tense hypnosis session; the group lets loose during a party at a rooftop bar in Cartagena, but the fun fizzles when two couples clash.</desc>
+    <episode-num>S03 E06</episode-num>
+    <icon src="https://iptv-epg.org/images/uGa0BoceLeUwO1xkmUPkXvW6bAteUxr0f8UPJ84xPFy2qbAh3EvBOukEbKoXwRkGrJsdYnS2YFpt1X929i5Z7QbFJ4vsWL3nSxojyvH8Rto" />
+    <previously-shown />
+    <title lang="en">Teen Mom: Family Reunion</title>
   </programme>
   <programme start="20261019160000 +0000" stop="20261019170000 +0000" channel="MTV2.us">
-    <category lang="en">Entertainment</category>
     <category lang="en">Reality</category>
-    <date>2015</date>
-    <desc lang="en">The original teen moms of the series face the ongoing challenges of motherhood.</desc>
-    <icon src="https://iptv-epg.org/images/mxd61gFKQ7VPzhR33eTWnGZmet4StaFEWzUA8g-vL7LjjrAQLraHYe8qN6R7Firsb_kqll4-IEW_2d4Xl9q4krtx4JReU3hXUZgUxQ_4B9A" />
-    <title lang="en">Teen Mom OG</title>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E07 — Something's Fishy
+A call from home ignites new conflict between Kayla and Ryan; Mack and Khes coordinate a family dinner that doesn't go as planned; Chey and Zach meet with Michaiah to discuss their fight the previous night.</desc>
+    <episode-num>S03 E07</episode-num>
+    <icon src="https://iptv-epg.org/images/uGa0BoceLeUwO1xkmUPkXvW6bAteUxr0f8UPJ84xPFy2qbAh3EvBOukEbKoXwRkGrJsdYnS2YFpt1X929i5Z7QbFJ4vsWL3nSxojyvH8Rto" />
+    <previously-shown />
+    <title lang="en">Teen Mom: Family Reunion</title>
   </programme>
   <programme start="20261019170000 +0000" stop="20261019180000 +0000" channel="MTV2.us">
-    <category lang="en">Entertainment</category>
     <category lang="en">Reality</category>
-    <date>2015</date>
-    <desc lang="en">The original teen moms of the series face the ongoing challenges of motherhood.</desc>
-    <icon src="https://iptv-epg.org/images/mxd61gFKQ7VPzhR33eTWnGZmet4StaFEWzUA8g-vL7LjjrAQLraHYe8qN6R7Firsb_kqll4-IEW_2d4Xl9q4krtx4JReU3hXUZgUxQ_4B9A" />
-    <title lang="en">Teen Mom OG</title>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E08 — Trouble Comes in Threes
+The villa is jolted by the arrival of Kiaya, Briana and Leah, three single moms, who are looking to party; a personal watercraft accident sends Kiaya to the hospital; Leah causes drama when she lets loose.</desc>
+    <episode-num>S03 E08</episode-num>
+    <icon src="https://iptv-epg.org/images/uGa0BoceLeUwO1xkmUPkXvW6bAteUxr0f8UPJ84xPFy2qbAh3EvBOukEbKoXwRkGrJsdYnS2YFpt1X929i5Z7QbFJ4vsWL3nSxojyvH8Rto" />
+    <previously-shown />
+    <title lang="en">Teen Mom: Family Reunion</title>
+  </programme>
+  <programme start="20261019180000 +0000" stop="20261019190000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E09 — Bride or Die
+Leah's apology fails to ease tensions with Kiaya; Mack reveals a relationship fear to Khesanio; a celebration of Jade and Sean's upcoming nuptials leads to surprises and drama among friends.</desc>
+    <episode-num>S03 E09</episode-num>
+    <icon src="https://iptv-epg.org/images/uGa0BoceLeUwO1xkmUPkXvW6bAteUxr0f8UPJ84xPFy2qbAh3EvBOukEbKoXwRkGrJsdYnS2YFpt1X929i5Z7QbFJ4vsWL3nSxojyvH8Rto" />
+    <previously-shown />
+    <title lang="en">Teen Mom: Family Reunion</title>
+  </programme>
+  <programme start="20261019190000 +0000" stop="20261019193000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E11 — No More Mr. Nice Guy
+Lauren goes out with a male model from a photo shoot, leaving Brody to question everything that has developed recently.</desc>
+    <episode-num>S03 E11</episode-num>
+    <icon src="https://iptv-epg.org/images/oGaID_Y9ukh7PYK6pLyNXdGVxAGEuOeZKEcnDP24-Xt3kegmhY3eShnGWrk-xquNT3d1lHeTX1Qwt4MpCLT6VUWugwSTlQ4GX4g54xu8dts" />
+    <previously-shown />
+    <title lang="en">The Hills</title>
+  </programme>
+  <programme start="20261019193000 +0000" stop="20261019200000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E12 — Stress and the City
+Whitney and Lauren go to New York to present their ideas about the big fashion show; Franky tries to fix Brody and Spencer's friendship.</desc>
+    <episode-num>S03 E12</episode-num>
+    <icon src="https://iptv-epg.org/images/oGaID_Y9ukh7PYK6pLyNXdGVxAGEuOeZKEcnDP24-Xt3kegmhY3eShnGWrk-xquNT3d1lHeTX1Qwt4MpCLT6VUWugwSTlQ4GX4g54xu8dts" />
+    <previously-shown />
+    <title lang="en">The Hills</title>
+  </programme>
+  <programme start="20261019200000 +0000" stop="20261019203000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E13 — Young Hollywood
+Whitney is in charge of the Young Hollywood party; Heidi celebrates her birthday with Spencer; Audrina may have a new admirer.</desc>
+    <episode-num>S03 E13</episode-num>
+    <icon src="https://iptv-epg.org/images/oGaID_Y9ukh7PYK6pLyNXdGVxAGEuOeZKEcnDP24-Xt3kegmhY3eShnGWrk-xquNT3d1lHeTX1Qwt4MpCLT6VUWugwSTlQ4GX4g54xu8dts" />
+    <previously-shown />
+    <title lang="en">The Hills</title>
+  </programme>
+  <programme start="20261019203000 +0000" stop="20261019210000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E14 — Forgive and Forget
+Lauren runs into Heidi and they fight; Audrina and Justin struggle in their undefined relationship.</desc>
+    <episode-num>S03 E14</episode-num>
+    <icon src="https://iptv-epg.org/images/oGaID_Y9ukh7PYK6pLyNXdGVxAGEuOeZKEcnDP24-Xt3kegmhY3eShnGWrk-xquNT3d1lHeTX1Qwt4MpCLT6VUWugwSTlQ4GX4g54xu8dts" />
+    <previously-shown />
+    <title lang="en">The Hills</title>
+  </programme>
+  <programme start="20261019210000 +0000" stop="20261019213000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E15 — With This Ring
+Lauren plays matchmaker; Spencer resists Heidi's wedding plans which results in a fight.</desc>
+    <episode-num>S03 E15</episode-num>
+    <icon src="https://iptv-epg.org/images/oGaID_Y9ukh7PYK6pLyNXdGVxAGEuOeZKEcnDP24-Xt3kegmhY3eShnGWrk-xquNT3d1lHeTX1Qwt4MpCLT6VUWugwSTlQ4GX4g54xu8dts" />
+    <previously-shown />
+    <title lang="en">The Hills</title>
+  </programme>
+  <programme start="20261019213000 +0000" stop="20261019220000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E16 — A Night at the Opera
+Andrea catches Justin kissing another girl; Spencer's sister Stephanie picks a fight with Lauren and Brody.</desc>
+    <episode-num>S03 E16</episode-num>
+    <icon src="https://iptv-epg.org/images/oGaID_Y9ukh7PYK6pLyNXdGVxAGEuOeZKEcnDP24-Xt3kegmhY3eShnGWrk-xquNT3d1lHeTX1Qwt4MpCLT6VUWugwSTlQ4GX4g54xu8dts" />
+    <previously-shown />
+    <title lang="en">The Hills</title>
+  </programme>
+  <programme start="20261019220000 +0000" stop="20261019223000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E17 — Once a Player ...
+Lauren believes she will not get serious about playboy Brody; Spencer's sister tells him about Heidi's doubts; Audrina goes on her first date since her breakup.</desc>
+    <episode-num>S03 E17</episode-num>
+    <icon src="https://iptv-epg.org/images/oGaID_Y9ukh7PYK6pLyNXdGVxAGEuOeZKEcnDP24-Xt3kegmhY3eShnGWrk-xquNT3d1lHeTX1Qwt4MpCLT6VUWugwSTlQ4GX4g54xu8dts" />
+    <previously-shown />
+    <title lang="en">The Hills</title>
+  </programme>
+  <programme start="20261019223000 +0000" stop="20261019230000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E18 — When One Door Closes ...
+Whitney gets an offer to work in Paris; Heidi and Spencer's future is jeopardized.</desc>
+    <episode-num>S03 E18</episode-num>
+    <icon src="https://iptv-epg.org/images/oGaID_Y9ukh7PYK6pLyNXdGVxAGEuOeZKEcnDP24-Xt3kegmhY3eShnGWrk-xquNT3d1lHeTX1Qwt4MpCLT6VUWugwSTlQ4GX4g54xu8dts" />
+    <previously-shown />
+    <title lang="en">The Hills</title>
+  </programme>
+  <programme start="20261019230000 +0000" stop="20261020000000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E19 — Paris Changes Everything
+Lauren learns that Brody has found someone new, nearly ruining her trip to Paris; Spencer tries to win back Heidi.</desc>
+    <episode-num>S03 E19</episode-num>
+    <icon src="https://iptv-epg.org/images/oGaID_Y9ukh7PYK6pLyNXdGVxAGEuOeZKEcnDP24-Xt3kegmhY3eShnGWrk-xquNT3d1lHeTX1Qwt4MpCLT6VUWugwSTlQ4GX4g54xu8dts" />
+    <previously-shown />
+    <title lang="en">The Hills</title>
+  </programme>
+  <programme start="20261020000000 +0000" stop="20261020003000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E20 — Back to L.A.
+Whitney must choose between Teen Vogue and a new career; Lauren and Brody clash over his new girlfriend; Heidi adjusts to life without Spencer.</desc>
+    <episode-num>S03 E20</episode-num>
+    <icon src="https://iptv-epg.org/images/oGaID_Y9ukh7PYK6pLyNXdGVxAGEuOeZKEcnDP24-Xt3kegmhY3eShnGWrk-xquNT3d1lHeTX1Qwt4MpCLT6VUWugwSTlQ4GX4g54xu8dts" />
+    <previously-shown />
+    <title lang="en">The Hills</title>
+  </programme>
+  <programme start="20261020003000 +0000" stop="20261020010000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E21 — An Unexpected Friend
+Lauren befriends Spencer's sister in her fashion class; Whitney believes her job is a dream come true.</desc>
+    <episode-num>S03 E21</episode-num>
+    <icon src="https://iptv-epg.org/images/oGaID_Y9ukh7PYK6pLyNXdGVxAGEuOeZKEcnDP24-Xt3kegmhY3eShnGWrk-xquNT3d1lHeTX1Qwt4MpCLT6VUWugwSTlQ4GX4g54xu8dts" />
+    <previously-shown />
+    <title lang="en">The Hills</title>
+  </programme>
+  <programme start="20261020010000 +0000" stop="20261020013000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E22 — When Spencer Finds Out...
+When Lauren invites Stephanie to her birthday party, Heidi and Spencer question her loyalty; Spencer launches a plan.</desc>
+    <episode-num>S03 E22</episode-num>
+    <icon src="https://iptv-epg.org/images/oGaID_Y9ukh7PYK6pLyNXdGVxAGEuOeZKEcnDP24-Xt3kegmhY3eShnGWrk-xquNT3d1lHeTX1Qwt4MpCLT6VUWugwSTlQ4GX4g54xu8dts" />
+    <previously-shown />
+    <title lang="en">The Hills</title>
+  </programme>
+  <programme start="20261020013000 +0000" stop="20261020020000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E23 — Just Be Careful ...
+Heidi tries to win back Audrina's friendship; Lauren is suspicious of Heidi's motives; Whitney adjusts to her new job.</desc>
+    <episode-num>S03 E23</episode-num>
+    <icon src="https://iptv-epg.org/images/oGaID_Y9ukh7PYK6pLyNXdGVxAGEuOeZKEcnDP24-Xt3kegmhY3eShnGWrk-xquNT3d1lHeTX1Qwt4MpCLT6VUWugwSTlQ4GX4g54xu8dts" />
+    <previously-shown />
+    <title lang="en">The Hills</title>
+  </programme>
+  <programme start="20261020020000 +0000" stop="20261020023000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E24 — Girls' Night Out
+Heidi enjoys being single until she sees Spencer with other women; Lauren helps Whitney during Los Angeles' fashion week.</desc>
+    <episode-num>S03 E24</episode-num>
+    <icon src="https://iptv-epg.org/images/oGaID_Y9ukh7PYK6pLyNXdGVxAGEuOeZKEcnDP24-Xt3kegmhY3eShnGWrk-xquNT3d1lHeTX1Qwt4MpCLT6VUWugwSTlQ4GX4g54xu8dts" />
+    <previously-shown />
+    <title lang="en">The Hills</title>
+  </programme>
+  <programme start="20261020023000 +0000" stop="20261020030000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S03 E25 — A New Roommate
+Heidi makes a last attempt to regain Lauren's friendship; Audrina spends more time with Heidi and Justin.</desc>
+    <episode-num>S03 E25</episode-num>
+    <icon src="https://iptv-epg.org/images/oGaID_Y9ukh7PYK6pLyNXdGVxAGEuOeZKEcnDP24-Xt3kegmhY3eShnGWrk-xquNT3d1lHeTX1Qwt4MpCLT6VUWugwSTlQ4GX4g54xu8dts" />
+    <previously-shown />
+    <title lang="en">The Hills</title>
+  </programme>
+  <programme start="20261020030000 +0000" stop="20261020033000 +0000" channel="MTV2.us">
+    <category lang="en">Sitcom</category>
+    <credits>
+      <actor>Jamie Foxx</actor>
+      <actor>Garrett Morris</actor>
+      <actor>Ellia English</actor>
+      <actor>Garcelle Beauvais-Nilon</actor>
+      <actor>Christopher Duncan</actor>
+    </credits>
+    <date>1996</date>
+    <desc lang="en">An aspiring performer works at his aunt and uncle's hotel.</desc>
+    <icon src="https://iptv-epg.org/images/Nh-dvk-hmxEY0agKLMRPSbXXh2Sk10XEUQNXAQ7DezS3KvZfjqXghKRSLxY_zuKT7imr5jaj8cZEhML7tO4lywEBDQPZ2OhtENyT8bVNxFQ" />
+    <title lang="en">The Jamie Foxx Show</title>
+  </programme>
+  <programme start="20261020033000 +0000" stop="20261020040000 +0000" channel="MTV2.us">
+    <category lang="en">Sitcom</category>
+    <credits>
+      <actor>Jamie Foxx</actor>
+      <actor>Garrett Morris</actor>
+      <actor>Ellia English</actor>
+      <actor>Garcelle Beauvais-Nilon</actor>
+      <actor>Christopher Duncan</actor>
+    </credits>
+    <date>1996</date>
+    <desc lang="en">An aspiring performer works at his aunt and uncle's hotel.</desc>
+    <icon src="https://iptv-epg.org/images/Nh-dvk-hmxEY0agKLMRPSbXXh2Sk10XEUQNXAQ7DezS3KvZfjqXghKRSLxY_zuKT7imr5jaj8cZEhML7tO4lywEBDQPZ2OhtENyT8bVNxFQ" />
+    <title lang="en">The Jamie Foxx Show</title>
+  </programme>
+  <programme start="20261020040000 +0000" stop="20261020043000 +0000" channel="MTV2.us">
+    <category lang="en">Sitcom</category>
+    <credits>
+      <actor>Jamie Foxx</actor>
+      <actor>Garrett Morris</actor>
+      <actor>Ellia English</actor>
+      <actor>Garcelle Beauvais-Nilon</actor>
+      <actor>Christopher Duncan</actor>
+    </credits>
+    <date>1996</date>
+    <desc lang="en">An aspiring performer works at his aunt and uncle's hotel.</desc>
+    <icon src="https://iptv-epg.org/images/Nh-dvk-hmxEY0agKLMRPSbXXh2Sk10XEUQNXAQ7DezS3KvZfjqXghKRSLxY_zuKT7imr5jaj8cZEhML7tO4lywEBDQPZ2OhtENyT8bVNxFQ" />
+    <title lang="en">The Jamie Foxx Show</title>
+  </programme>
+  <programme start="20261020043000 +0000" stop="20261020050000 +0000" channel="MTV2.us">
+    <category lang="en">Sitcom</category>
+    <credits>
+      <actor>Jamie Foxx</actor>
+      <actor>Garrett Morris</actor>
+      <actor>Ellia English</actor>
+      <actor>Garcelle Beauvais-Nilon</actor>
+      <actor>Christopher Duncan</actor>
+    </credits>
+    <date>1996</date>
+    <desc lang="en">An aspiring performer works at his aunt and uncle's hotel.</desc>
+    <icon src="https://iptv-epg.org/images/Nh-dvk-hmxEY0agKLMRPSbXXh2Sk10XEUQNXAQ7DezS3KvZfjqXghKRSLxY_zuKT7imr5jaj8cZEhML7tO4lywEBDQPZ2OhtENyT8bVNxFQ" />
+    <title lang="en">The Jamie Foxx Show</title>
+  </programme>
+  <programme start="20261020050000 +0000" stop="20261020053000 +0000" channel="MTV2.us">
+    <category lang="en">Sitcom</category>
+    <credits>
+      <actor>Marlon Wayans</actor>
+      <actor>Shawn Wayans</actor>
+      <actor>John Witherspoon</actor>
+      <actor>Paula Parker</actor>
+      <actor>Jill Tasker</actor>
+      <actor>Darrel Heath</actor>
+      <actor>Anna Horsford</actor>
+    </credits>
+    <date>1995</date>
+    <desc lang="en">Two young brothers try their wings in New York.</desc>
+    <icon src="https://iptv-epg.org/images/kvqrzXjEL5-xCC22YQIsG_DU_lxquvy9XcFYJEsUPAe1jh5R7EqbdRc2hkJP3jXh-y6Rq3uNyifT0HhooxOv1yL0ApLJsp1KYSXPx-RA5sA" />
+    <title lang="en">The Wayans Bros.</title>
+  </programme>
+  <programme start="20261020053000 +0000" stop="20261020060000 +0000" channel="MTV2.us">
+    <category lang="en">Sitcom</category>
+    <credits>
+      <actor>Marlon Wayans</actor>
+      <actor>Shawn Wayans</actor>
+      <actor>John Witherspoon</actor>
+      <actor>Paula Parker</actor>
+      <actor>Jill Tasker</actor>
+      <actor>Darrel Heath</actor>
+      <actor>Anna Horsford</actor>
+    </credits>
+    <date>1995</date>
+    <desc lang="en">Two young brothers try their wings in New York.</desc>
+    <icon src="https://iptv-epg.org/images/kvqrzXjEL5-xCC22YQIsG_DU_lxquvy9XcFYJEsUPAe1jh5R7EqbdRc2hkJP3jXh-y6Rq3uNyifT0HhooxOv1yL0ApLJsp1KYSXPx-RA5sA" />
+    <title lang="en">The Wayans Bros.</title>
+  </programme>
+  <programme start="20261020060000 +0000" stop="20261020063000 +0000" channel="MTV2.us">
+    <category lang="en">Sitcom</category>
+    <credits>
+      <actor>Marlon Wayans</actor>
+      <actor>Shawn Wayans</actor>
+      <actor>John Witherspoon</actor>
+      <actor>Paula Parker</actor>
+      <actor>Jill Tasker</actor>
+      <actor>Darrel Heath</actor>
+      <actor>Anna Horsford</actor>
+    </credits>
+    <date>1995</date>
+    <desc lang="en">Two young brothers try their wings in New York.</desc>
+    <icon src="https://iptv-epg.org/images/kvqrzXjEL5-xCC22YQIsG_DU_lxquvy9XcFYJEsUPAe1jh5R7EqbdRc2hkJP3jXh-y6Rq3uNyifT0HhooxOv1yL0ApLJsp1KYSXPx-RA5sA" />
+    <title lang="en">The Wayans Bros.</title>
+  </programme>
+  <programme start="20261020063000 +0000" stop="20261020070000 +0000" channel="MTV2.us">
+    <category lang="en">Sitcom</category>
+    <credits>
+      <actor>Marlon Wayans</actor>
+      <actor>Shawn Wayans</actor>
+      <actor>John Witherspoon</actor>
+      <actor>Paula Parker</actor>
+      <actor>Jill Tasker</actor>
+      <actor>Darrel Heath</actor>
+      <actor>Anna Horsford</actor>
+    </credits>
+    <date>1995</date>
+    <desc lang="en">Two young brothers try their wings in New York.</desc>
+    <icon src="https://iptv-epg.org/images/kvqrzXjEL5-xCC22YQIsG_DU_lxquvy9XcFYJEsUPAe1jh5R7EqbdRc2hkJP3jXh-y6Rq3uNyifT0HhooxOv1yL0ApLJsp1KYSXPx-RA5sA" />
+    <title lang="en">The Wayans Bros.</title>
+  </programme>
+  <programme start="20261020070000 +0000" stop="20261020080000 +0000" channel="MTV2.us">
+    <category lang="en">Comedy</category>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <date>2017</date>
+    <desc lang="en">S27 E13 — Cats, Playgrounds, and Laughing Babies
+Amusing face filters; a small puppy tries to protect its food from a Great Dane; cats cause chaos; siblings drop their father's birthday cake; a girl searches for her bike helmet, not realizing it's on her head.</desc>
+    <episode-num>S27 E13</episode-num>
+    <icon src="https://iptv-epg.org/images/0Qhtw21LCuyULy-NzI4okrxWVi0diITksKnBSLljmp-16h0TLlNF4bjCTSl0p7-TJJYl3ld5_Y_a8eRlPkISWmMYuagxg1FB4uOLfyIn2N4" />
+    <previously-shown />
+    <title lang="en">America's Funniest Home Videos</title>
+  </programme>
+  <programme start="20261020080000 +0000" stop="20261020090000 +0000" channel="MTV2.us">
+    <category lang="en">Comedy</category>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <date>2017</date>
+    <desc lang="en">S27 E14 — Stumblebums, Dogs in Slo-Mo, and Animal Kingdom
+Dogs in slow motion; a woman catches a bird in her house, then releases it outside, only for it to come back in; funny clips involving teeth; parents cram into a photo booth with their four children.</desc>
+    <episode-num>S27 E14</episode-num>
+    <icon src="https://iptv-epg.org/images/0Qhtw21LCuyULy-NzI4okrxWVi0diITksKnBSLljmp-16h0TLlNF4bjCTSl0p7-TJJYl3ld5_Y_a8eRlPkISWmMYuagxg1FB4uOLfyIn2N4" />
+    <previously-shown />
+    <title lang="en">America's Funniest Home Videos</title>
+  </programme>
+  <programme start="20261020090000 +0000" stop="20261020100000 +0000" channel="MTV2.us">
+    <category lang="en">Comedy</category>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <date>2017</date>
+    <desc lang="en">S27 E15 — Animals Stealing Hats Versus Stilts, In the Background, and Scares
+A delivery room nurse is shocked to find a prop Medusa doll under the blanket of a woman in labor; a girl frets that children "are so exhausting"; a woman captures her husband laughing hysterically in his sleep.</desc>
+    <episode-num>S27 E15</episode-num>
+    <icon src="https://iptv-epg.org/images/0Qhtw21LCuyULy-NzI4okrxWVi0diITksKnBSLljmp-16h0TLlNF4bjCTSl0p7-TJJYl3ld5_Y_a8eRlPkISWmMYuagxg1FB4uOLfyIn2N4" />
+    <previously-shown />
+    <title lang="en">America's Funniest Home Videos</title>
+  </programme>
+  <programme start="20261020100000 +0000" stop="20261020110000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S05 E04 — Meatballs Don't Hike
+The girls' trip to Hollywood takes a detour when they learn Vinny sold his house; before everyone heads back east, Vinny plans to give them an unforgettable LA experience, but unfortunately they won't forget the infighting between Angelina and Vinny.</desc>
+    <episode-num>S05 E04</episode-num>
+    <icon src="https://iptv-epg.org/images/EjUaxzkfKzG07ySvBJoQYPy2DeBDkTBwBkzorn0lP41LmDz2H0Su7RKWaK1emhvWtJPUwsCk5W2l2WpMx427ypm0r7ZDfMCABEFeWHfU0Xw" />
+    <previously-shown />
+    <title lang="en">Jersey Shore Family Vacation</title>
+  </programme>
+  <programme start="20261020110000 +0000" stop="20261020120000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S05 E05 — Two Baptisms and a Pet Psychic
+Pauly heads to Jersey for the week, and everyone gets to meet baby Romeo; Angelina needs clarity about her marriage, so she enlists the help of a pet psychic; The Situation gets ready for his Blessification.</desc>
+    <episode-num>S05 E05</episode-num>
+    <icon src="https://iptv-epg.org/images/EjUaxzkfKzG07ySvBJoQYPy2DeBDkTBwBkzorn0lP41LmDz2H0Su7RKWaK1emhvWtJPUwsCk5W2l2WpMx427ypm0r7ZDfMCABEFeWHfU0Xw" />
+    <previously-shown />
+    <title lang="en">Jersey Shore Family Vacation</title>
+  </programme>
+  <programme start="20261020120000 +0000" stop="20261020130000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S05 E06 — The Blessification
+Mike feels reborn after being blessed; Angelina is feeling lost after a spiritual reading with a pet psychic; the roomies get ready for their next family vacation.</desc>
+    <episode-num>S05 E06</episode-num>
+    <icon src="https://iptv-epg.org/images/EjUaxzkfKzG07ySvBJoQYPy2DeBDkTBwBkzorn0lP41LmDz2H0Su7RKWaK1emhvWtJPUwsCk5W2l2WpMx427ypm0r7ZDfMCABEFeWHfU0Xw" />
+    <previously-shown />
+    <title lang="en">Jersey Shore Family Vacation</title>
+  </programme>
+  <programme start="20261020130000 +0000" stop="20261020140000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S05 E07 — The Not-So-International Vacation
+The gang heads out for a family vacation, and Mike gets a geography lesson; Jenni is in for a big surprise, and conflict comes from an unexpected place.</desc>
+    <episode-num>S05 E07</episode-num>
+    <icon src="https://iptv-epg.org/images/EjUaxzkfKzG07ySvBJoQYPy2DeBDkTBwBkzorn0lP41LmDz2H0Su7RKWaK1emhvWtJPUwsCk5W2l2WpMx427ypm0r7ZDfMCABEFeWHfU0Xw" />
+    <previously-shown />
+    <title lang="en">Jersey Shore Family Vacation</title>
+  </programme>
+  <programme start="20261020140000 +0000" stop="20261020150000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S05 E08 — Deena's Revenge
+Pauly D learns how to play bingo; Angelina melts down without her luggage; Mike begins an investigation; an alarming discovery shakes the roommates.</desc>
+    <episode-num>S05 E08</episode-num>
+    <icon src="https://iptv-epg.org/images/EjUaxzkfKzG07ySvBJoQYPy2DeBDkTBwBkzorn0lP41LmDz2H0Su7RKWaK1emhvWtJPUwsCk5W2l2WpMx427ypm0r7ZDfMCABEFeWHfU0Xw" />
+    <previously-shown />
+    <title lang="en">Jersey Shore Family Vacation</title>
+  </programme>
+  <programme start="20261020150000 +0000" stop="20261020160000 +0000" channel="MTV2.us">
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <desc lang="en">S05 E09 — Happy Birthday, Vinny!
+Things get heated after the roomies realize they've been pranked by Deena; Snooki arrives just in time for a floating tiki bar, Mike's freedom party.</desc>
+    <episode-num>S05 E09</episode-num>
+    <icon src="https://iptv-epg.org/images/EjUaxzkfKzG07ySvBJoQYPy2DeBDkTBwBkzorn0lP41LmDz2H0Su7RKWaK1emhvWtJPUwsCk5W2l2WpMx427ypm0r7ZDfMCABEFeWHfU0Xw" />
+    <previously-shown />
+    <title lang="en">Jersey Shore Family Vacation</title>
+  </programme>
+  <programme start="20261020160000 +0000" stop="20261020170000 +0000" channel="MTV2.us">
+    <category lang="en">Comedy</category>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <date>2017</date>
+    <desc lang="en">S27 E16 — Weddings, Bad Hair Days, and Oh Mother Where Art Thou?
+Wedding moments include a best man who faints; people attempt the Mannequin Challenge; a magician pouts when his sister reveals how he did his trick; a boy shows off the haircut he gave himself.</desc>
+    <episode-num>S27 E16</episode-num>
+    <icon src="https://iptv-epg.org/images/0Qhtw21LCuyULy-NzI4okrxWVi0diITksKnBSLljmp-16h0TLlNF4bjCTSl0p7-TJJYl3ld5_Y_a8eRlPkISWmMYuagxg1FB4uOLfyIn2N4" />
+    <previously-shown />
+    <title lang="en">America's Funniest Home Videos</title>
+  </programme>
+  <programme start="20261020170000 +0000" stop="20261020180000 +0000" channel="MTV2.us">
+    <category lang="en">Comedy</category>
+    <category lang="en">Reality</category>
+    <category lang="en">Series</category>
+    <date>2017</date>
+    <desc lang="en">S27 E17 — Workforce Follies, Bird Brains, and Party Games
+A woman in a medical office is confronted by a hanging skeleton; a man deals with a bucket of stew that overturned in the trunk of his car; a safari park ostrich swallows a car air freshener; a grandmother has a virtual reality experience.</desc>
+    <episode-num>S27 E17</episode-num>
+    <icon src="https://iptv-epg.org/images/0Qhtw21LCuyULy-NzI4okrxWVi0diITksKnBSLljmp-16h0TLlNF4bjCTSl0p7-TJJYl3ld5_Y_a8eRlPkISWmMYuagxg1FB4uOLfyIn2N4" />
+    <previously-shown />
+    <title lang="en">America's Funniest Home Videos</title>
   </programme>
   <programme start="20261014044500 +0530" stop="20261014060000 +0530" channel="MTVIndia.in@SD">
     <title>Roadies</title>
@@ -101212,13 +102017,6 @@ Bringing the best in television.</desc>
     <category lang="en">TV Show</category>
     <category lang="en">Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p29030724_b_h9_ab.jpg?lock=880x660" />
-  </programme>
-  <programme channel="Pop.uk" start="20261014000200 +0000" stop="20261014001500 +0000">
-    <title lang="en">Bakugan</title>
-    <desc lang="en">In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261014053200/list/ZEEPOPBakugan2087446b301cd53b1f4478fa35de30529509059.jpg" />
   </programme>
   <programme channel="Pop.uk" start="20261014001500 +0000" stop="20261014002800 +0000">
     <title lang="en">Bakugan</title>
@@ -144905,13 +145703,6 @@ Bringing the best in television.</desc>
       <value>TV-14</value>
     </rating>
   </programme>
-  <programme channel="TinyPop.uk" start="20261014000800 +0000" stop="20261014001800 +0000">
-    <title lang="en">Masha And The Bear</title>
-    <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261014053800/list/TinyPOPMashaAndTheBear20569965cd3ecbad13d42a298208097b7562eef.jpg" />
-  </programme>
   <programme channel="TinyPop.uk" start="20261014001800 +0000" stop="20261014002700 +0000">
     <title lang="en">Masha And The Bear</title>
     <desc lang="en">Meet a lively and mischievous little girl named Masha and her best friend the Bear!</desc>
@@ -162138,17 +162929,6 @@ Bringing the best in television.</desc>
       <value>TV-G</value>
     </rating>
   </programme>
-  <programme start="20261013233000 +0000" stop="20261014002000 +0000" channel="beINSports3.qa">
-    <title lang="en">Classic Copa Libertadores</title>
-    <sub-title lang="en">Corinthians vs Boca Juniors - Final 2012</sub-title>
-    <desc lang="en">2012: Corinthians won the Copa Libertadores for the first time, Emerson scoring twice in the second leg of the final  to sink the six-time champion.</desc>
-    <category lang="en">Sports</category>
-    <icon src="https://www.fetchtv.com.au/v2/epg/program/5282344/image/334x188" />
-    <episode-num system="onscreen">S1 E7</episode-num>
-    <rating system="AU">
-      <value>NR</value>
-    </rating>
-  </programme>
   <programme start="20261014002000 +0000" stop="20261014023000 +0000" channel="beINSports3.qa">
     <title lang="en">Copa Sudamericana</title>
     <sub-title lang="en">Boca Juniors vs Vasco De Gama - SF 1st Leg</sub-title>
@@ -178567,17 +179347,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/5334d0790a70322aa8c259c0323d0533.jpg" />
     <premiere />
   </programme>
-  <programme start="20261014000000 +0000" stop="20261014001500 +0000" channel="custom.bein.sports.1">
-    <title lang="en">ATP Tour</title>
-    <sub-title lang="en">Champions of Monte Carlo 2018-2019</sub-title>
-    <desc lang="en">In this series of features, we look back at some of the most memorable moments, rivalries and achievements at ATP Masters events.</desc>
-    <category lang="en">Sports</category>
-    <icon src="https://www.fetchtv.com.au/v2/epg/program/1877072/image/334x188" />
-    <episode-num system="onscreen">S1 E8</episode-num>
-    <rating system="AU">
-      <value>NR</value>
-    </rating>
-  </programme>
   <programme start="20261014001500 +0000" stop="20261014003000 +0000" channel="custom.bein.sports.1">
     <title lang="en">ATP Tour</title>
     <sub-title lang="en">Champions of Monte Carlo 2010-2011</sub-title>
@@ -193149,59 +193918,6 @@ Showcasing iconic events that have shaped WWE history and thrilled fans for deca
     <episode-num system="onscreen">0</episode-num>
     <rating system="UK">
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261014054200 +0530" stop="20261014054500 +0530" channel="custom.duck.tv">
-    <title>Beaver Family</title>
-    <desc>A family of beavers struggle to fend for themselves and try to survive each day while facing and overcoming several obstacles.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/c8bdff91c3efbbdc06177a924d7209c0.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261014054500 +0530" stop="20261014054700 +0530" channel="custom.duck.tv">
-    <title>Doll Team to The Rescue</title>
-    <desc>Bell the doll always lends a helping hand to everyone in the forest, and she is supported by Lilo the bear and Fido the kangaroo in her efforts.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/2547d91b7ec4ea417c3338f4ec8e5225.jpg?width=700" />
-    <credits>
-      <director>Roza Györffy</director>
-    </credits>
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261014054700 +0530" stop="20261014055100 +0530" channel="custom.duck.tv">
-    <title>Waterworld</title>
-    <desc>Children are introduced to the lives of various aquatic creatures and all kinds of exotic animals that live underwater.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/a88297a1b95dcf48ae4f42ce047775fe.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261014055100 +0530" stop="20261014055200 +0530" channel="custom.duck.tv">
-    <title>Pixie 2</title>
-    <desc>A magician elf named Pixie teaches children short and simple words from the English language in creative and exciting ways.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/6606502a3411d66f102606344316377f.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261014055200 +0530" stop="20261014055500 +0530" channel="custom.duck.tv">
-    <title>Vege-tales</title>
-    <desc>A colourful assortment of vegetables, each with its own unique personality, showcases diverse shapes and sizes. This helps children to recognise the differences between various culinary ingredients.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/92cdfaa462ffda1cd4ea01c1f6f9aa37.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
     </rating>
   </programme>
   <programme start="20261014055500 +0530" stop="20261014055800 +0530" channel="custom.duck.tv">

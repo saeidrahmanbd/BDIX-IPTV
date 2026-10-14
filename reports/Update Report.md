@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-10-14 06:17 UTC**_
+_Last generated: **2026-10-14 06:30 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -11,15 +11,15 @@ _Last generated: **2026-10-14 06:17 UTC**_
 | India | **285** |
 | Backup Streams | **346** |
 | Local Logos | **93.1%** |
-| EPG Programme Coverage | **0%** |
-| EPG Mapping | **0%** |
+| EPG Programme Coverage | **59.6%** |
+| EPG Mapping | **63.7%** |
 | Stream Health Tested | **940** |
-| Stream Health Failures | **26** |
-| Persistent Failures | **21** |
+| Stream Health Failures | **18** |
+| Persistent Failures | **14** |
 | Near-Duplicate URL Families | **0** |
 | Audit Blocking Issues | **69** |
 | Pre-Publish Gate | **BLOCK** |
-| Pre-Publish Gate Generated | **2026-10-14T06:16:46+00:00** |
+| Pre-Publish Gate Generated | **2026-10-14T06:29:43+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -42,23 +42,23 @@ _Last generated: **2026-10-14 06:17 UTC**_
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## EPG
-- Indian channels audited: **0**
-- Mapped: **0 (0%)**
-- Current/future programme coverage: **0/0 (0%)**
-- No mapping: **0**
+- Active channel IDs audited: **648**
+- Mapped: **413 (63.7%)**
+- Current/future programme coverage: **386/648 (59.6%)**
+- No mapping: **235**
 - Publication remains subject to source-policy approval.
 
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-14T06:16:46.541450+00:00** |
-| EPG coverage | **2026-10-14T06:16:14+00:00** |
-| Stream health | **2026-10-14T06:17:15+00:00** |
-| Pre-publish gate | **2026-10-14T06:16:46+00:00** |
+| Playlist audit | **2026-10-14T06:29:42.960063+00:00** |
+| EPG coverage | **2026-10-14T06:29:16+00:00** |
+| Stream health | **2026-10-14T06:30:16+00:00** |
+| Pre-publish gate | **2026-10-14T06:29:43+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
 - Latest entries change: **940 → 940**
-- Latest health failures: **23 → 26**
+- Latest health failures: **26 → 18**
 
 Historical records are retained in reports/maintenance-history.json.
