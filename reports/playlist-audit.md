@@ -1,27 +1,27 @@
 # Playlist Audit
-Generated: **2026-10-15T04:30:06.398383+00:00**
+Generated: **2026-10-15T06:05:49.729605+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **940**
-- Unique channel IDs: **584**
-- IDs with multiple streams: **148**
+- Playlist entries: **1043**
+- Unique channel IDs: **573**
+- IDs with multiple streams: **147**
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **1**
-- Same-name / different-ID collisions: **35**
+- Metadata conflicts: **2**
+- Same-name / different-ID collisions: **77**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **0**
-- Logo references checked: **940**
-- Duplicate primary identities: **0**
+- Logo exceptions: **53**
+- Logo references checked: **1043**
+- Duplicate primary identities: **1**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **0**
+- Primary entries missing channel numbers: **57**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **9**
-- Alphabetical ordering issues: **2**
+- Category block-order issues: **0**
+- Alphabetical ordering issues: **3**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 
@@ -73,9 +73,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Asian TV — Backup — https://stream.ottplus.live/live/asian_tv_abr/index.m3u8
 - Asian TV — Backup — https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/index.m3u8
 ### atnbangla.bd (5 streams)
-- ATN Bangla — Bangladesh — http://tvsen5.aynascope.net/atnbangla/index.m3u8
+- ATN Bangla — Bangladesh — https://tvsen5.aynaott.com/atnbangla/index.m3u8
+- ATN Bangla — Backup — http://tvsen5.aynascope.net/atnbangla/index.m3u8
 - ATN Bangla — Backup — https://iptvlive.ahmed-bd-org.workers.dev/atn-bangla-1/index.m3u8
-- ATN Bangla — Backup — https://tvsen5.aynaott.com/atnbangla/index.m3u8
 - ATN Bangla — Backup — https://tvsen5.aynaott.com/P3y2URgG7LDe/index.m3u8
 - ATN Bangla — Backup — https://tvsen5.aynaott.com/P3y2URgG7LDe/tracks-v1a1/mono.ts.m3u8
 ### atnbanglauk.uk (2 streams)
@@ -151,9 +151,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Channel I — Backup — https://tvsen3.b-cdn.net/qUud8Nxs/index.m3u8
 - Channel I — Backup — https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/tracks-v1a1/mono.ts.m3u8
 ### channels.uk (5 streams)
-- Channel S — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8
+- Channel S — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8
+- Channel S UK — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8
 - Channel S — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channels.stream/index.m3u8
-- Channel S — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8
 - Channel S — Backup — https://app.ncare.live/live-orgin/channels.stream/live-orgin/channels.stream/chunks.m3u8
 - Channel S — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-s-1/index.m3u8
 ### choppertown.us (2 streams)
@@ -246,9 +246,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### deentv.uk (2 streams)
 - Deen TV — Religious — https://cd198.anystream.uk:9092/iqapp/d33ntv/playlist.m3u8
 - Deen TV — Backup — https://tvsen3.aynaott.com/TJcnZW3U/index.m3u8
-### deeptotv.bd (2 streams)
-- Deepto TV — Bangladesh — https://byphdgllyk.gpcdn.net/hls/deeptotv/0_1/index.m3u8
-- Deepto TV — Backup — https://byphdgllyk.gpcdn.net/hls/deeptotv/index.m3u8
 ### deewanahd.in (2 streams)
 - Deewana — Indian Music — https://live20.bozztv.com/giatvplayout7/giatv-209592/index.m3u8
 - Deewana — Backup — https://live20.bozztv.com/giatvplayout7/giatv-209592/tracks-v1a1/mono.ts.m3u8
@@ -314,11 +311,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### goldminesaction.in (2 streams)
 - Goldmines Action — Indian Movies — https://mumt03.tangotv.in/Dsly5z3HGOLDMINESACTION/index.m3u8
 - Goldmines Action — Backup — https://mumt03.tangotv.in/Dsly5z3HGOLDMINESACTION/tracks-v1a1/mono.m3u8
-### goldminesbollywood.in@sd (4 streams)
+### goldminesbollywood.in@sd (3 streams)
 - Goldmines Bollywood — Indian Movies — https://streams.tangotv.in/GOLDMINESBOLLYWOOD/ORIGIN/index.m3u8
 - Goldmines Bollywood — Backup — https://mumt03.tangotv.in/Dsly5z3HGOLDMINESBOLLYWOOD/index.m3u8
 - Goldmines Bollywood — Backup — https://streams.tangotv.in/GOLDMINESBOLLYWOOD/ORIGIN/tracks-v1a1/mono.m3u8
-- Goldmines Bollywood — Backup — https://tvsen6.aynaott.com/55xNrLdf/index.m3u8
 ### goldminesmovies.in@sd (4 streams)
 - Goldmines Movies — Indian Movies — https://streams.tangotv.in/GOLDMINEMOVIES/ORIGIN/index.m3u8
 - Goldmines Movies — Backup — https://cdn.pishow.tv/ott/live/1461/master.m3u8
@@ -501,11 +497,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - RT Documentary — Documentary & Wildlife — http://rt-esp.rttv.com/live/rtesp/playlist_800Kb.m3u8
 - RT Documentary — Backup — https://rt-rtd.rttv.com/dvr/rtdoc/playlist.m3u8
 ### rtv.bd (5 streams)
-- RTV — Bangladesh — http://tvsen5.aynascope.net/RtvHD/index.m3u8
+- RTV — Bangladesh — https://tvsen5.aynaott.com/RtvHD/index.m3u8
+- RTV — Backup — http://tvsen5.aynascope.net/RtvHD/index.m3u8
 - RTV — Backup — http://116.204.149.16/rtvhd/index.m3u8
 - RTV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/rtv-sg.stream/index.m3u8
 - RTV — Backup — https://tvsen5.aynaott.com/ba47dHpDk3Se/index.m3u8
-- RTV — Backup — https://tvsen5.aynaott.com/RtvHD/index.m3u8
 ### rupasibangla.in@sd (3 streams)
 - Ruposhi Bangla — Indian Bangla — https://mumt05.tangotv.in/87NeALx2RUPASIBANGLA/index.m3u8
 - Ruposhi Bangla — Backup — https://da86m1sqpm3o0.cloudfront.net/28072023/smil:rupashibangla.smil/playlist.m3u8
@@ -617,7 +613,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-None.
+- **channels.uk** in **Bangladesh** — Channel S, Channel S UK
 
 ## Primary Channel-Number Collisions
 
@@ -629,17 +625,10 @@ None.
 
 ## Ordering
 
-- category block **Indian Movies** — out of canonical block order
-- category block **Indian Music** — out of canonical block order
-- category block **Indian Entertainment** — out of canonical block order
-- category block **Pakistani** — out of canonical block order
-- category block **International** — out of canonical block order
-- category block **Documentary & Wildlife** — out of canonical block order
-- category block **Kids** — out of canonical block order
-- category block **Religious** — out of canonical block order
-- category block **Sports** — out of canonical block order
-- **Backup** — **7S Music** appears after **B4U Movies**
-- **Backup** — **7S Music** appears after **B4U Movies**
+Category block order: OK.
+- **Bangladesh** — **Channel 9** appears after **Channel 24**
+- **International** — **4ever Cinema** appears after **24 Hour Free Movies**
+- **Backup** — **7S Music** appears after **&TV**
 
 ## Suspicious URLs
 
@@ -663,6 +652,7 @@ None.
 
 ## Metadata Conflicts
 
+- **channels.uk** — names: channel s, channel s uk; groups: Bangladesh; countries: 
 - **ultimatetv.in@sd** — names: ultimate tv; groups: Indian Movies, Indian Music; countries: 
 
 ## Cross-Country Backup Collisions
@@ -672,45 +662,87 @@ None.
 ## Same-Name / Different-ID Collisions
 
 - **action hollywood movies** → , plex.tv.action.hollywood.movies.plex
+- **al quran al kareem tv** → , alquranalkareemtv.sa
 - **amc** → , amc.us
+- **america's got talent** → , custom.america.s.got.talent
+- **american idol** → , custom.american.idol
+- **ananda tv** → , anandatv.bd
+- **animal planet** → , animalplanet.in@sd
+- **axs** → , custom.axs
 - **b4u movies** → , b4umovies.in@india
+- **balle balle** → , balleballe.in@sd
+- **baraza music tv** → , barazamusictv.gr
+- **bijoy tv** → , bijoytv.bd
 - **btv chattogram** → , btvchattogram.bd
 - **btv news** → , custom.btv.news
+- **cgtn documentary** → , cgtndocumentary.cn
+- **channel 1** → , custom.channel.1
+- **channel 52** → , staging.channel.52
+- **channel s** → , channels.uk
 - **colors cineplex** → , colorscineplex.in@sd
+- **dangal** → , dangaltv.in@sd
 - **dangal 2** → , dangal2.in@sd
+- **deen tv** → , deentv.uk
+- **deepto tv** → , deeptotv.bd
 - **desh tv** → , deshtv.bd
-- **discovery kids** → , discoverykids.au
-- **discovery science** → , custom.discovery.science
-- **discovery turbo** → , custom.discovery.turbo
+- **desi channel** → , desichannel.in
+- **discover pakistan** → , discoverpakistan.pk@sd
 - **disney channel india** → , disneychannel.in@hd
+- **duronto tv** → , durontotv.bd
+- **ekushey tv** → , ekusheytv.bd
 - **food food** → , foodfood.in@sd
+- **food network** → , custom.food.network
+- **g tv** → , gazitv.bd
+- **global tv** → , globaltv.bd
+- **goldmines** → , goldmines.in@sd
+- **gravitas movies** → , gravitasmovies.us
+- **great! romance** → , greatromance.uk
+- **green tv** → , greentv.bd
 - **hbo** → , custom.hbo
 - **history tv18** → , historytv18.in@sd
+- **independent tv** → , independenttv.bd
 - **investigation discovery** → , investigationdiscovery.in@sd
+- **inwild** → , inwild.nl
+- **iqra bangla** → , iqrabangla.uk
+- **jago news 24** → , jagonews24.bd
 - **kolkata tv** → , custom.kolkatatv
+- **maasranga tv** → , maasrangatv.bd
+- **manoranjan tv** → , manoranjantv.in@sd
+- **medina live** → , medinalive.bd
 - **movie bangla** → , moviebangla.bd
 - **movies now** → , moviesnow.in@sd
-- **nexus tv** → , nexustv.bd
+- **mtv** → , custom.mtv
+- **my tv** → , mytv.bd
+- **nat geo tv** → , custom.nat.geo.tv
 - **ntv** → , ntv.bd
+- **outdoor channel** → , outdoorchannel.us
+- **pardesi tv** → , pardesitv.ca
 - **powertürk tv** → , powerturktv.tr
 - **quran tv** → , qurantv.iq
+- **real wild** → , realwild.uk
+- **retro music tv** → , retromusictv.cz
 - **rtv** → , rtv.bd
 - **sa tv** → , satv.bd
-- **shemaroo tv** → , shemarootv.in@sd
+- **sananda** → , sanandatv.in
+- **shanson tv** → , shansontv.ru
+- **somoy tv** → , somoynewstv.bd
 - **sony entertainment tv** → , sonyentertainmenttelevision.in@sd
-- **sony max** → , sonymax.in@sd
 - **sony sab** → , sonysab.in@hd
+- **srk** → , custom.srk
 - **star movies select** → , starmoviesselect.in@hd
+- **the walking dead universe** → , thewalkingdeaduniverse.us
+- **trace uk** → , traceuk.uk
+- **trace urban** → , traceurban.fr
 - **travelxp english** → , custom.travelxp.english
-- **zee action** → , zeeaction.in
-- **zee bangla cinema** → , zeebanglacinema.in@sd
-- **zee bollywood** → , zeebollywood.in@sd
+- **wildearth** → , wildearth.za
+- **xite hits** → , xitehits.nl
+- **zee bangla** → , zeebangla.in@hd
 - **zee tv** → , zeetv.in@sd
 
 ## Logo Integrity
 
-- Healthy/local references: **940**
-- missing: **0**
+- Healthy/local references: **990**
+- missing: **53**
 - broken-local: **0**
 - external: **0**
 - non-png: **0**
@@ -718,6 +750,59 @@ None.
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
+- missing — Rajdhani TV [] — 
+- missing — TBN24 [] — 
+- missing — ZB Cinema [] — 
+- missing — K Cine [] — 
+- missing — Saga Music Haryanvi [] — 
+- missing — Global Punjab [] — 
+- missing — See TV [] — 
+- missing — Waseb TV [] — 
+- missing — 1Mus [] — 
+- missing — Afrobeats [] — 
+- missing — American Horrors [] — 
+- missing — AMG TV Classic [] — 
+- missing — Arabica TV [] — 
+- missing — Arirang [] — 
+- missing — Blues TV [] — 
+- missing — Classic Movies [] — 
+- missing — CMC TV [] — 
+- missing — Cook & Bake [] — 
+- missing — Dance TV [] — 
+- missing — Digital Fashion [] — 
+- missing — Fashion One [] — 
+- missing — Fashion TV [] — 
+- missing — Groove [] — 
+- missing — iON TV UK [] — 
+- missing — Kronehit [] — 
+- missing — Mad [] — 
+- missing — MBC 1 [] — 
+- missing — MBC 4 [] — 
+- missing — Movie Dome Family [] — 
+- missing — Paramount Network [] — 
+- missing — Qvc Uk [] — 
+- missing — Saudi TV [] — 
+- missing — Sony One: The Blacklist (FR) [] — 
+- missing — Stingray Remember the 80s [] — 
+- missing — Stingray Today's KPOP [] — 
+- missing — Teleritmo [] — 
+- missing — Tipping Point [] — 
+- missing — Toonami Aftermath Movie [] — 
+- missing — Trace Latina [] — 
+- missing — Tunes 6 [] — 
+- missing — Vevo '70s & '80s [] — 
+- missing — Vevo Pop [] — 
+- missing — Young Bollywood [] — 
+- missing — Love Nature [] — 
+- missing — Mayday: Air Disaster [] — 
+- missing — PBS Arts [] — 
+- missing — Survivor [] — 
+- missing — WaterBear [] — 
+- missing — Wheel World [] — 
+- missing — Witness to Justice [] — 
+- missing — Al-Zahra TV Turkic [] — 
+- missing — Dua Channel [] — 
+- missing — EMAN TV [] — 
 
 ## Protected Primary Entries
 

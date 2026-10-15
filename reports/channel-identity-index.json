@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-15T04:30:06+00:00",
+  "generated": "2026-10-15T06:05:49+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -481,26 +481,10 @@
     },
     "axnblack": {
       "names": [
-        "AXN Black Czech Republic",
         "AXN Black Poland"
       ],
       "ids": [
-        "axnblack.us@czechrepublic",
         "axnblack.us@poland"
-      ],
-      "groups": [
-        "International"
-      ],
-      "streams": 2,
-      "primary": 2,
-      "backup": 0
-    },
-    "axncee": {
-      "names": [
-        "AXN CEE"
-      ],
-      "ids": [
-        "axncee.es@hungary"
       ],
       "groups": [
         "International"
@@ -944,7 +928,8 @@
     },
     "channels": {
       "names": [
-        "Channel S"
+        "Channel S",
+        "Channel S UK"
       ],
       "ids": [
         "channels.uk"
@@ -954,22 +939,8 @@
         "Bangladesh"
       ],
       "streams": 5,
-      "primary": 1,
-      "backup": 4
-    },
-    "chithiram": {
-      "names": [
-        "Chithiram"
-      ],
-      "ids": [
-        "chithiram.in@sd"
-      ],
-      "groups": [
-        "Indian Entertainment"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
+      "primary": 2,
+      "backup": 3
     },
     "choppertown": {
       "names": [
@@ -2992,12 +2963,11 @@
         "deeptotv.bd"
       ],
       "groups": [
-        "Backup",
         "Bangladesh"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "deewanahd": {
       "names": [
@@ -3402,20 +3372,6 @@
       "primary": 1,
       "backup": 0
     },
-    "etvbalbharat": {
-      "names": [
-        "ETV Bal Bharat"
-      ],
-      "ids": [
-        "etvbalbharat.in@sd"
-      ],
-      "groups": [
-        "Kids"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "etvbeats": {
       "names": [
         "ETV Beats"
@@ -3524,20 +3480,6 @@
       ],
       "groups": [
         "Pakistani"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "filmbox": {
-      "names": [
-        "FilmBox"
-      ],
-      "ids": [
-        "filmbox.nl@netherlands"
-      ],
-      "groups": [
-        "International"
       ],
       "streams": 1,
       "primary": 1,
@@ -3782,9 +3724,9 @@
         "Backup",
         "Indian Movies"
       ],
-      "streams": 4,
+      "streams": 3,
       "primary": 1,
-      "backup": 3
+      "backup": 2
     },
     "goldminesmovies": {
       "names": [
@@ -4876,20 +4818,6 @@
       "primary": 1,
       "backup": 1
     },
-    "minimax": {
-      "names": [
-        "Minimax"
-      ],
-      "ids": [
-        "minimax.hu"
-      ],
-      "groups": [
-        "Kids"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "mksix": {
       "names": [
         "MK Six"
@@ -5051,62 +4979,6 @@
       "primary": 1,
       "backup": 0
     },
-    "musicboxclassic": {
-      "names": [
-        "Music Box Classic"
-      ],
-      "ids": [
-        "musicboxclassic.cz"
-      ],
-      "groups": [
-        "International"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "musicboxdance": {
-      "names": [
-        "Music Box Dance"
-      ],
-      "ids": [
-        "musicboxdance.cz"
-      ],
-      "groups": [
-        "International"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "musicboxhits": {
-      "names": [
-        "Music Box Hits"
-      ],
-      "ids": [
-        "musicboxhits.cz@sd"
-      ],
-      "groups": [
-        "International"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "musicboxsexy": {
-      "names": [
-        "Music Box Sexy"
-      ],
-      "ids": [
-        "musicboxsexy.cz"
-      ],
-      "groups": [
-        "International"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "musicindia": {
       "names": [
         "Music India"
@@ -5238,20 +5110,6 @@
       "streams": 1,
       "primary": 1,
       "backup": 0
-    },
-    "nantv": {
-      "names": [
-        "Nan TV"
-      ],
-      "ids": [
-        "nantv.bd"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
     },
     "nashemusic": {
       "names": [
