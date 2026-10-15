@@ -76,13 +76,7 @@ def normalized_name(name):
     return re.sub(r"\s*\[[^]]+\]\s*$", "", name).strip().lower()
 
 def redact_url(url):
-    """Redact query tokens, Xtream paths, and dvltv opaque route tokens from audit output."""
-    url = re.sub(
-        r'(^https?://(?:www\.)?dvltv\.cc(?::\d+)?/play/)[^/?#]+',
-        r'\1[REDACTED]',
-        url,
-        flags=re.I,
-    )
+    """Redact query tokens and Xtream-style path credentials in audit output."""
     url = re.sub(
         r'(/live/)[^/?#]+/[^/?#]+/([^/?#]+\.ts)(?=$|[?#])',
         r'\1[REDACTED]/[REDACTED]/\2',

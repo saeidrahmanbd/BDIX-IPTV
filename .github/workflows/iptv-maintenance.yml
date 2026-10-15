@@ -22,7 +22,6 @@ on:
       - scripts/build_identity_index.py
       - scripts/stream_health.py
       - scripts/stream_risk_review.py
-      - scripts/audit_backup_orphans.py
       - scripts/pre_publish_gate.py
       - scripts/record_maintenance_history.py
       - scripts/generate_dashboard.py
@@ -106,7 +105,6 @@ jobs:
             python scripts/stream_health.py
             HEALTH_STATUS=$?
             python scripts/stream_risk_review.py
-            python scripts/audit_backup_orphans.py
             if [ ! -s reports/stream-health.md ]; then HEALTH_STATUS=2; fi
             python scripts/pre_publish_gate.py
             GATE_STATUS=$?
@@ -126,7 +124,6 @@ jobs:
               python scripts/build_identity_index.py
               python scripts/stream_health.py
               python scripts/stream_risk_review.py
-              python scripts/audit_backup_orphans.py
               python scripts/generate_dashboard.py
             fi
             python scripts/record_maintenance_history.py --refresh

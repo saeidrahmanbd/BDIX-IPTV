@@ -7,7 +7,7 @@ Scope:
 - normalize the Ultimate TV metadata conflict to the IPTV-org canonical
   music identity/category;
 - fill missing primary tvg-chno values with unused positive numbers;
-- remove explicitly prohibited dvltv.cc/play records; never rewrite permitted stream URLs or touch Backup channel numbers.
+- never change stream URLs or touch Backup channel numbers.
 """
 from pathlib import Path
 import re
@@ -99,40 +99,12 @@ def following_url(lines, index):
     return ""
 
 
-def is_forbidden_dvltv_url(url):
-    return bool(re.search(r"^https?://(?:[^/]+\.)?dvltv\.cc(?::\d+)?/play(?:/|$)", url or "", re.I))
-
-
-def remove_forbidden_dvltv_entries(lines):
-    """Remove complete M3U records whose stream URL is on prohibited dvltv.cc/play."""
-    kept = []
-    removed = 0
-    i = 0
-    while i < len(lines):
-        if not lines[i].startswith("#EXTINF:"):
-            kept.append(lines[i])
-            i += 1
-            continue
-        j = i + 1
-        while j < len(lines) and not lines[j].startswith("#EXTINF:"):
-            j += 1
-        url = next((x.strip() for x in lines[i + 1:j]
-                    if x.strip().startswith(("http://", "https://"))), "")
-        if is_forbidden_dvltv_url(url):
-            removed += 1
-        else:
-            kept.extend(lines[i:j])
-        i = j
-    return kept, removed
-
-
 def repair(path):
     if not path.is_file():
         return 0, 0, 0
 
     lines = path.read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
-    lines, removed_dvltv = remove_forbidden_dvltv_entries(lines)
-    changes = removed_dvltv
+    changes = 0
     collision_repairs = 0
     number_repairs = 0
 
@@ -227,7 +199,7 @@ def repair(path):
     if changes:
         path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
-    print(f"{path}: changes={changes} dvltv_removed={removed_dvltv} collision_ids={collision_repairs} channel_numbers={number_repairs}")
+    print(f"{path}: changes={changes} collision_ids={collision_repairs} channel_numbers={number_repairs}")
     return changes, collision_repairs, number_repairs
 
 
