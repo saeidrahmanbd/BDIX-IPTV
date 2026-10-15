@@ -58,14 +58,16 @@ def main():
   if re.search(r'https?://[^/]*vods?\d*\.[^/]+/',url,re.I) or re.search(r'/vod(?:/|$)',url,re.I): removed+=1; continue
   if re.search(r'[?&](?:token|auth)=(?:test|testpub)(?:&|$)',url,re.I): removed+=1; continue
   if re.search(r'https?://[^/@]+@[^/]+',url,re.I): removed+=1; continue
-  # Stable title/category fixes.
   if n.casefold()=='ntv (malyalam)': info=set_display(set_attr(info,'tvg-name','NTV (Malayalam)'),'NTV (Malayalam)'); changed+=1
   if attrs(info).get('tvg-country','').upper()=='UK': info=set_attr(info,'tvg-country','GB'); changed+=1
+  if n.casefold() in {'s un bangla','sUn bangla'.casefold(),'sananda'}:
+   if n.casefold()=='sananda' and ('sunbangla' in low or 'sun-bangla' in low or 'sunbangla' in info.casefold()):
+    info=set_attr(info,'tvg-name','Sun Bangla'); info=set_attr(info,'tvg-id','custom.sun.bangla'); info=set_attr(info,'channel-id','custom.sun.bangla'); info=set_display(info,'Sun Bangla'); changed+=1
+   elif n.casefold()=='s un bangla':
+    info=set_attr(info,'tvg-name','Sun Bangla'); info=set_attr(info,'tvg-id','custom.sun.bangla'); info=set_attr(info,'channel-id','custom.sun.bangla'); info=set_display(info,'Sun Bangla'); changed+=1
   if n.casefold()=='baiscope tv': info=set_attr(info,'group-title','Bangladesh'); changed+=1
   if n.casefold()=='atn music': info=set_attr(info,'group-title','Bangladesh'); changed+=1
-  # Remove clearly volatile ad-insertion backup URLs for Zoom Music only.
   if n.casefold()=='zoom music' and ('dai.google.com' in low or 'doubleclick.net' in low): removed+=1; continue
-  # These two endpoints identify different channels; do not label them B4U Movies.
   if n.casefold()=='b4u movies':
    if '/api/play/filamchi.m3u8' in low:
     info=set_attr(info,'tvg-name','Filamchi'); info=set_attr(info,'tvg-id','custom.filamchi'); info=set_attr(info,'channel-id','custom.filamchi'); info=set_attr(info,'group-title','Backup'); info=remove_attr(info,'tvg-chno'); info=set_display(info,'Filamchi'); changed+=1
@@ -77,7 +79,6 @@ def main():
   if key and key in seen: removed+=1; continue
   if key: seen.add(key)
   b[0]=info; out.append(b)
- # Do not renumber valid primaries; only fill duplicate/missing primary numbers.
  used=set()
  for b in out:
   a=attrs(b[0]); g=a.get('group-title','').strip(); n=a.get('tvg-chno','').strip()
