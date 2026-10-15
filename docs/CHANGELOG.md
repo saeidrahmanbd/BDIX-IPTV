@@ -61,21 +61,5 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 
 ## 2026-10-15
 
-- 🗑️ **14 channel(s) removed**
-
-### Removed channels
-- Sony Max 2 [US]
-- Star Gold Thrills
-- Sonic Bangla
-- Astro Cricbuzz
-- beIN Sports 1
-- Bein Sports 3
-- beIN SPORTS 6
-- beIN SPORTS 7
-- FOX Cricket 501
-- Sky Sports Action
-- Sky Sports Cricket
-- Sky Sports Football
-- Sony Sports Ten 3
-- Ten Sports
+- No meaningful playlist changes detected.
 
