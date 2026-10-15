@@ -61,5 +61,19 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 
 ## 2026-10-15
 
-- No meaningful playlist changes detected.
+- 🗑️ **10 channel(s) removed**
+- 🔄 **74 backup stream(s) updated**
+- 📡 **127 stream(s) replaced**
+
+### Removed channels
+- Chithiram
+- AXN Black Czech Republic
+- AXN CEE
+- FilmBox
+- Music Box Classic
+- Music Box Dance
+- Music Box Hits
+- Music Box Sexy
+- ETV Bal Bharat
+- Minimax
 
