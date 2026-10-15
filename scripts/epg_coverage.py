@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build and continuously improve EPG mappings from public XMLTV sources."""
-import csv, gzip, io, json, re, unicodedata, urllib.request
+import csv, gzip, io, json, os, re, unicodedata, urllib.request
+from urllib.parse import urlparse
 import xml.etree.ElementTree as ET
 from official_epg_sources import (
     HUM_TV_SOURCE, HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes,
@@ -99,6 +100,44 @@ SOURCES = [
     "https://www.rtvbd.tv/schedule.php",
     "https://hum.tv/schedule/",
 ]
+PRIVATE_SOURCE_ENV = "M3U4U_XMLTV_URL"
+PRIVATE_SOURCE_LABEL = "M3U4U XMLTV (private Actions secret)"
+
+
+def configured_sources():
+    """Add the personalized M3U4U feed only from a GitHub Actions secret."""
+    sources = list(SOURCES)
+    private_url = os.environ.get(PRIVATE_SOURCE_ENV, "").strip()
+    if not private_url:
+        return sources
+    parsed = urlparse(private_url)
+    if (
+        parsed.scheme.lower() != "https"
+        or (parsed.hostname or "").lower() not in {"m3u4u.com", "www.m3u4u.com"}
+        or not parsed.path.startswith(("/epg/", "/xml/"))
+    ):
+        print(
+            f"Ignoring {PRIVATE_SOURCE_ENV}: use an HTTPS M3U4U XMLTV endpoint; "
+            "the configured URL is not printed."
+        )
+        return sources
+    if private_url not in sources:
+        sources.append(private_url)
+    return sources
+
+
+def source_label(src):
+    if src == os.environ.get(PRIVATE_SOURCE_ENV, "").strip():
+        return PRIVATE_SOURCE_LABEL
+    return src
+
+
+def source_error(src, exc):
+    if source_label(src) == PRIVATE_SOURCE_LABEL:
+        return "details suppressed for private source"
+    return str(exc)[:220]
+
+
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 def attrs(s): return dict(ATTR_RE.findall(s))
 def norm_name(s):
@@ -260,11 +299,12 @@ def load_previous():
 
 def main():
     channels=parse_playlist(); previous=load_previous(); source_data=[]; source_status=[]
-    for src in SOURCES:
+    source_urls = configured_sources()
+    for src in source_urls:
         try:
-            data=fetch_source(src); source_data.append(data); ids,future,counts,names=data; source_status.append((src,"OK",len(ids),len(future),sum(counts.values()),""))
+            data=fetch_source(src); source_data.append(data); ids,future,counts,names=data; source_status.append((source_label(src),"OK",len(ids),len(future),sum(counts.values()),""))
         except Exception as exc:
-            source_data.append((set(),set(),defaultdict(int),defaultdict(set))); source_status.append((src,"FAILED",0,0,0,str(exc)[:220]))
+            source_data.append((set(),set(),defaultdict(int),defaultdict(set))); source_status.append((source_label(src),"FAILED",0,0,0,source_error(src, exc)))
     rows=[]
     for ch in channels:
         candidates=[]; prev=previous.get(ch["tvg_id"],{}); locked_ids=EPG_LOCKS.get(ch["tvg_id"]); is_bangladesh=(ch["group"].strip()=="Bangladesh" or bool(re.search(r"\.bd(?:@|$)", ch["tvg_id"], re.I)))
@@ -276,7 +316,7 @@ def main():
             candidates=list(dict.fromkeys(x for x in candidates if x))
         normalized={norm_id(x) for x in candidates}; name_keys={norm_name(x) for x in ch.get("aliases",[ch["name"]]) if norm_name(x)}
         hits=[]; hit_sources=[]; total=0; live=False; best_live=[]
-        for src,data in zip(SOURCES,source_data):
+        for src,data in zip(source_urls,source_data):
             ids,future,counts,names=data
             if is_bangladesh:
                 # Safety: exact playlist IDs/explicit aliases only; never use ID normalization or name fuzzy matching.
@@ -289,7 +329,7 @@ def main():
                     for name_key in name_keys: name_hits.update(names.get(name_key,set()))
                     src_hits=sorted(name_hits)
             if src_hits:
-                hit_sources.append(src)
+                hit_sources.append(source_label(src))
                 for cid in src_hits:
                     if cid not in hits: hits.append(cid)
                     total += counts.get(cid,0)
@@ -351,8 +391,8 @@ def main():
                         "match_type": "EXACT_NAME" if is_exact else "EXACT_AFTER_REGION_SUFFIX",
                     })
                     item["programme_rows"] = max(item["programme_rows"], source_counts.get(source_id, 0))
-                    if src not in item["sources"]:
-                        item["sources"].append(src)
+                    if source_label(src) not in item["sources"]:
+                        item["sources"].append(source_label(src))
                     if is_exact:
                         item["match_type"] = "EXACT_NAME"
         ranked = sorted(

@@ -4,8 +4,10 @@ import bisect
 import csv
 import gzip
 import io
+import os
 import re
 import urllib.request
+from urllib.parse import urlparse
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -75,6 +77,38 @@ SOURCES = [
     "https://www.rtvbd.tv/schedule.php",
     "https://hum.tv/schedule/",
 ]
+
+PRIVATE_SOURCE_ENV = "M3U4U_XMLTV_URL"
+PRIVATE_SOURCE_LABEL = "M3U4U XMLTV (private Actions secret)"
+
+
+def configured_sources():
+    """Add the personalized M3U4U feed only from a GitHub Actions secret."""
+    sources = list(SOURCES)
+    private_url = os.environ.get(PRIVATE_SOURCE_ENV, "").strip()
+    if not private_url:
+        return sources
+    parsed = urlparse(private_url)
+    if (
+        parsed.scheme.lower() != "https"
+        or (parsed.hostname or "").lower() not in {"m3u4u.com", "www.m3u4u.com"}
+        or not parsed.path.startswith(("/epg/", "/xml/"))
+    ):
+        print(
+            f"Ignoring {PRIVATE_SOURCE_ENV}: use an HTTPS M3U4U XMLTV endpoint; "
+            "the configured URL is not printed."
+        )
+        return sources
+    if private_url not in sources:
+        sources.append(private_url)
+    return sources
+
+
+def source_label(src):
+    if src == os.environ.get(PRIVATE_SOURCE_ENV, "").strip():
+        return PRIVATE_SOURCE_LABEL
+    return src
+
 
 # Per-channel broadcast-delay corrections, in hours.
 # Colors Cineplex's upstream guide is 2 hours behind the live stream.
@@ -427,7 +461,8 @@ def main():
     # schedule simply because it appeared earlier in SOURCES.
     candidates = {}
     source_stats = {}
-    for source_index, src in enumerate(SOURCES):
+    source_urls = configured_sources()
+    for source_index, src in enumerate(source_urls):
         try:
             if src in (HUM_TV_SOURCE, RTV_SOURCE):
                 if src == HUM_TV_SOURCE:
@@ -587,7 +622,7 @@ def main():
             correction_count += 1
             timing_audit.append(
                 "- **{}** ({}): source ID {} from {} shifted by {:+g} hours after repeated cross-source agreement.".format(
-                    channels[target], target, source_id, SOURCES[source_index], delta.total_seconds() / 3600
+                    channels[target], target, source_id, source_label(source_urls[source_index]), delta.total_seconds() / 3600
                 )
             )
         cleaned = clean_schedule(records)

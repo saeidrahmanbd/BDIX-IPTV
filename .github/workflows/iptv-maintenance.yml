@@ -40,6 +40,8 @@ jobs:
     if: ${{ !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance')) }}
     runs-on: ubuntu-latest
     timeout-minutes: 35
+    env:
+      M3U4U_XMLTV_URL: ${{ secrets.M3U4U_XMLTV_URL }}
     steps:
       - uses: actions/checkout@v7
         with: {fetch-depth: 0}

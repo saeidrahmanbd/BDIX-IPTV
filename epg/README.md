@@ -19,6 +19,14 @@ The synchronized source pool includes India, UK and US feeds plus regional feeds
 
 The source list also includes supplemental Samsung TV Plus India and US guides (`https://i.mjh.nz/SamsungTVPlus/in.xml` and `https://i.mjh.nz/SamsungTVPlus/us.xml`) plus targeted DistroTV, Plex, and Rakuten TV XMLTV feeds to improve FAST/streaming-channel coverage. Bangladesh-group services are matched only using an exact playlist `tvg-id` or an explicitly configured alias; name-only fuzzy matching remains disabled for those services. The EPG catalogue identifies South Station as `SouthStation.in@HD`; the coverage script accepts that mapping only when a configured XMLTV source contains the exact ID, and the report separately checks for current/future programmes.
 
+## Optional M3U4U supplemental feed
+
+The personalized M3U4U XML and XMLTV (GZ) endpoints are alternate formats of the same guide; configure only the compressed endpoint. The maintenance scripts support it through the GitHub Actions repository secret **`M3U4U_XMLTV_URL`**. Store an **HTTPS** M3U4U `/epg/` or `/xml/` endpoint in that secret; never paste the personalized URL into source code, workflow YAML, playlist files, or reports.
+
+To enable it, open the repository's **Settings → Secrets and variables → Actions → New repository secret**, set the name to `M3U4U_XMLTV_URL`, and use the HTTPS version of the supplied compressed endpoint as its value. The scripts validate the host/path before using it, and mask the endpoint in generated mapping and source-status reports. If the secret is absent or invalid, maintenance continues with the existing public sources.
+
+M3U4U schedules are considered alongside existing feeds; they do not replace them. Matching stays subject to exact channel IDs/aliases for Bangladesh services and the existing English-title/time-window checks. The sample feed contains non-English schedules (including Hindi, Telugu, Hungarian, and Dutch entries), which must not be treated as English coverage. Automated retrieval and public redistribution rights for programme data still need to be confirmed before public schedule publication.
+
 ## Mapping safeguards
 
 - Keep each playlist's `tvg-id` unchanged. For a known channel represented by different IDs in separate playlists, add a narrow, documented alias in `scripts/epg_coverage.py`; do not merge identities based on a loose name match.
