@@ -21335,25 +21335,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category lang="en">Action</category>
     <icon src="https://dtil.tmsimg.com/assets/p29979941_b_h9_ab.jpg?lock=880x660" />
   </programme>
-  <programme channel="ColorsCineplex.in@SD" start="20261015082400 +0530" stop="20261015111000 +0530">
-    <title lang="en">Subham</title>
-    <desc lang="en">A group of married men band together to find solutions, after their wives get possessed while watching a cable TV soap opera serial.</desc>
-    <credits>
-      <actor>Harshith Reddy</actor>
-      <actor>Shriya Kontham</actor>
-      <actor>Shalini Kondepudi</actor>
-      <actor>Shravani Lakshmi</actor>
-      <actor>Charan Peri</actor>
-      <actor>Vamshidhar Goud</actor>
-      <actor>Gavireddy Srinivas</actor>
-      <actor>Samantha Ruth Prabhu</actor>
-      <director>Praveen Kandregula</director>
-      <producer>Samantha Ruth Prabhu</producer>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Horror</category>
-    <icon src="https://dtil.tmsimg.com/assets/p30175542_v_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="ColorsCineplex.in@SD" start="20261015111000 +0530" stop="20261015135000 +0530">
     <title lang="en">Gopichand Chanakya</title>
     <desc lang="en">Arjun, a highly sought-after RAW agent, is known for his skills at catching some of the most hardened criminals. However, he falls in danger when he goes after Ibrahim Qureshi, a terrorist.</desc>
@@ -25822,13 +25803,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category lang="en">Education (Adult)</category>
     <icon src="https://dtil.tmsimg.com/assets/p29112846_b_h9_ab.jpg?lock=880x660" />
   </programme>
-  <programme channel="DDBharati.in@SD" start="20261015083000 +0530" stop="20261015090500 +0530">
-    <title>Jai Durga</title>
-    <desc>This is TV Show - Entertainment Category</desc>
-    <category>TV Show</category>
-    <category>Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p32668413_b_h8_aa.jpg?lock=1280x720" />
-  </programme>
   <programme channel="DDBharati.in@SD" start="20261015090500 +0530" stop="20261015100000 +0530">
     <title>DD Morning Show</title>
     <desc>Experts and industry leaders join an insightful discussion, covering a wide range of topics, including economy, technology, social issues and cultural developments.</desc>
@@ -30163,13 +30137,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category>Documentary</category>
     <category>Others</category>
     <icon src="https://dtil.tmsimg.com/assets/p28943681_b_h8_aa.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="DDKashir.in@SD" start="20261015090000 +0530" stop="20261015091000 +0530">
-    <title lang="en">News Kashmiri / Urdu</title>
-    <desc lang="en">An anchor reports the latest social, political and economic news stories and updates from the state of Jammu and Kashmir.</desc>
-    <category lang="en">News</category>
-    <category lang="en">News Bulletin</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28955456_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="DDKashir.in@SD" start="20261015091000 +0530" stop="20261015094000 +0530">
     <title lang="en">Aath Kamin Aath Rout</title>
@@ -82397,13 +82364,6 @@ Victoria calls on "Catfish" to help her meet the man that she's been chatting wi
   <programme channel="MahaaMax.in" start="20261015063000 +0530" stop="20261018063000 +0530">
     <title lang="en">MAHAA MAX</title>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MAHAA_MAX/images/LANDSCAPE_169/LANDSCAPE_169_0fGb8fBk7_MAHAA-MAX_264x144.webp" />
-  </programme>
-  <programme channel="ManoranjanMovies.in@SD" start="20261015072500 +0530" stop="20261015090400 +0530">
-    <title>Filler</title>
-    <desc>Bringing the best in television.</desc>
-    <category>TV Show</category>
-    <category>Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26697972_b_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="ManoranjanMovies.in@SD" start="20261015090400 +0530" stop="20261015091500 +0530">
     <title>Punjabi Hits</title>
@@ -141863,11 +141823,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="TheJungleBook.in" start="20261015085100 +0530" stop="20261015090400 +0530">
-    <title lang="en">The Journey To The Nesting Grounds</title>
-    <desc lang="en">Baloo and Bageerah find their meal in Mowgli’s tree and are pretty shocked.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acc628b2c63e04ff6596ee2/images/LANDSCAPE_169/9362_5d262f7f-cad1-4543-941d-d3b261b060f1.png" />
-  </programme>
   <programme channel="TheJungleBook.in" start="20261015090400 +0530" stop="20261015091700 +0530">
     <title lang="en">The phaos sty Trick</title>
     <desc lang="en">The wolf pack want to make Mowgli an honorary of the pack but phao</desc>
@@ -143546,13 +143501,6 @@ Bringing the best in television.</desc>
     <rating>
       <value>TV-14</value>
     </rating>
-  </programme>
-  <programme channel="TinyPop.uk" start="20261015032600 +0000" stop="20261015033900 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261015085600/list/TinyPOPCareBearsUnlockTheMagic2056992fb9f911bd78741dfbc5202c16717e00c.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261015033900 +0000" stop="20261015035200 +0000">
     <title lang="en">Care Bears: Unlock The Magic</title>
@@ -194532,17 +194480,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
       <value>AL</value>
     </rating>
   </programme>
-  <programme channel="custom.disney.jr" start="20261015033000 +0000" stop="20261015034000 +0000">
-    <title lang="en">Bluey</title>
-    <desc lang="en">The Pool:A pool trip is a blast, until Dad forgets everything.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/b07446f5-2e80-43b6-bc0f-6f6d43dcb424/16-9" />
-    <episode-num system="xmltv_ns">9..</episode-num>
-    <rating system="UK">
-      <value>U</value>
-    </rating>
-  </programme>
   <programme channel="custom.disney.jr" start="20261015034000 +0000" stop="20261015034500 +0000">
     <title lang="en">Bluey</title>
     <desc lang="en">Shops:Bluey's game of Shops can't start until they fix the rules.</desc>
@@ -197402,26 +197339,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <category lang="en">News</category>
     <category lang="en">Investigation</category>
     <icon src="https://sat.tvhttps://www.sat.tv/wp-content/themes/twentytwenty-child/assets/img/prog-6201.svg" />
-  </programme>
-  <programme start="20261015090200 +0530" stop="20261015090400 +0530" channel="custom.duck.tv">
-    <title>Safari</title>
-    <desc>Exploring the wild and wonderful world of animals with the help of lively visuals and music.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/dd9be9b86e3841ebc4d0e3c174aaefed.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261015090400 +0530" stop="20261015090800 +0530" channel="custom.duck.tv">
-    <title>Didy Baby</title>
-    <desc>Little baby animals overcome the different obstacles they face everyday by helping each other and encourage children to do the same.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/994980d9030c79a0e59fef498478945f.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
   </programme>
   <programme start="20261015090800 +0530" stop="20261015091100 +0530" channel="custom.duck.tv">
     <title>Vehicles</title>
@@ -221943,18 +221860,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <icon src="https://dtil.tmsimg.com/assets/p30041122_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E876</episode-num>
   </programme>
-  <programme channel="custom.nat.geo.tv" start="20261015031000 +0000" stop="20261015033500 +0000">
-    <title lang="en">When Sharks Attack</title>
-    <sub-title lang="en">Australia's Deadliest Coast</sub-title>
-    <desc lang="en">In 2010 the number of shark attacks in Western Australia exploded. Join the experts as they try to identify the cause of this change. (S6, ep 8) 12+.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Nature</category>
-    <icon src="https://images.metadata.sky.com/pd-image/c3920eb4-6b60-425f-9827-f3d7a178b201/16-9" />
-    <episode-num system="xmltv_ns">4.7.</episode-num>
-    <rating system="UK">
-      <value>12</value>
-    </rating>
-  </programme>
   <programme channel="custom.nat.geo.tv" start="20261015033500 +0000" stop="20261015040000 +0000">
     <title lang="en">When Sharks Attack</title>
     <sub-title lang="en">Fear In Fire Island</sub-title>
@@ -225729,18 +225634,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
   <programme start="20261016080000 +0000" stop="20261016100000 +0000" channel="custom.qvcuk">
     <title>The Christmas Morning Show</title>
     <desc>Each morning wake up to QVC and a fantastic selection of Christmas pressie ideas to save you from the rush of festive shopping. Tune in for some special guests too.</desc>
-  </programme>
-  <programme start="20261015024700 +0000" stop="20261015033900 +0000" channel="custom.robot.wars.by.mech">
-    <title lang="en">Robot Wars</title>
-    <sub-title lang="en">The Fourth Wars - Heat P</sub-title>
-    <desc lang="en">An impressive weapon manages to fight off two robots simultaneously, ripping through armor and insides. As one of the finalists is still reeling from the previous rounds, will they manage to come back and take the finals?</desc>
-    <date>2001</date>
-    <category lang="en">Explore</category>
-    <icon src="https://dki01q1l7yn3y.cloudfront.net/thumbnails-platform-prod/assets/cs::content::shows/13637-15685/27929137-background_v3.jpg" />
-    <episode-num system="onscreen">S4 E21</episode-num>
-    <rating system="US">
-      <value>PG</value>
-    </rating>
   </programme>
   <programme start="20261015033900 +0000" stop="20261015043100 +0000" channel="custom.robot.wars.by.mech">
     <title lang="en">Robot Wars</title>
