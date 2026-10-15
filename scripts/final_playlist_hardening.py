@@ -1,16 +1,11 @@
 #!/usr/bin/env python3
 """Final deterministic playlist hardening.
 
-This is the last playlist writer in maintenance. It enforces the canonical
-category blocks and A-Z order and applies only explicitly approved metadata
-classification fixes. Stream URLs and channel numbers are never changed.
-
-IPTV-Playlist.m3u uses the full canonical production taxonomy. BDIX-Playlist.m3u
-has one additional legacy/source category, Test, which is preserved as its
-terminal block rather than being treated as an error.
+Hardens one explicitly selected playlist at a time. Stream URLs are never
+changed, but exact duplicate stream URLs are removed deterministically.
 """
 from pathlib import Path
-import re, unicodedata
+import re, sys, unicodedata
 
 PLAYLIST_ORDERS={
     'IPTV-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Backup','New Channels','New Backup','Not Playing'],
@@ -40,6 +35,15 @@ def process(path):
  if not path.is_file(): return
  order=PLAYLIST_ORDERS[path.name]; rank={x:i for i,x in enumerate(order)}
  pre,rec=parse(path)
+ # Remove exact duplicate stream URLs while preserving the first occurrence.
+ seen=set(); unique=[]
+ for r in rec:
+  u=next((x.strip() for x in r[1:] if x.strip().startswith(('http://','https://'))),'')
+  k=u.casefold()
+  if k and k in seen: continue
+  if k: seen.add(k)
+  unique.append(r)
+ rec=unique
  for r in rec:
   a=attrs(r[0]); cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold(); g=a.get('group-title','').strip()
   if cid=='ultimatetv.in@sd' and g!='Backup': r[0]=set_attr(r[0],'group-title','Indian Music')
@@ -74,4 +78,8 @@ def process(path):
  path.write_text('\n'.join(pre+[x for r in rec for x in r])+'\n',encoding='utf-8')
  print(f'HARDENED {path}: {len(rec)} records')
 
-for p in map(Path, PLAYLIST_ORDERS): process(p)
+paths=sys.argv[1:] or list(PLAYLIST_ORDERS)
+for name in paths:
+ p=Path(name)
+ if p.name not in PLAYLIST_ORDERS: raise SystemExit(f'Unsupported playlist: {p}')
+ process(p)
