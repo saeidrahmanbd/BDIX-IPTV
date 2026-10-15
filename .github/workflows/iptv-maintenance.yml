@@ -67,14 +67,10 @@ jobs:
             git clean -fd
             cp BDIX-Playlist.m3u /tmp/bdix-playlist-protected.m3u
             cp epg/epg.xml /tmp/bdix-epg-previous.xml 2>/dev/null || true
-
-            # Claude-provided deterministic repair pass: produces a fixed public
-            # playlist plus private/quarantine review files without overwriting input.
             rm -rf fixed_output
             python scripts/fix_playlist.py IPTV-Playlist.m3u --outdir fixed_output
             test -s fixed_output/IPTV-Playlist.fixed.m3u
             cp fixed_output/IPTV-Playlist.fixed.m3u IPTV-Playlist.m3u
-
             python scripts/repair_iptv_audit_findings.py
             python scripts/repair_playlist_quality.py
             python scripts/normalize_metadata.py
@@ -82,10 +78,7 @@ jobs:
             python scripts/sort_playlists.py IPTV-Playlist.m3u
             python scripts/apply_gemini_playlist_repairs.py
             python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
-            if grep -Eiq 'group-title="(New Channels|New Backup|New|Not Playing)"' IPTV-Playlist.m3u; then
-              echo "::error::Legacy playlist category detected after normalization."
-              exit 1
-            fi
+            if grep -Eiq 'group-title="(New Channels|New Backup|New|Not Playing)"' IPTV-Playlist.m3u; then echo '::error::Legacy playlist category detected after normalization.'; exit 1; fi
             python scripts/migrate_external_logos_fixed.py
             python scripts/generate_logo_authenticity_manifest.py
             python scripts/epg_coverage.py
@@ -98,17 +91,9 @@ jobs:
             EPG_GATE_STATUS=$?
             set -e
             if [ "$EPG_GATE_STATUS" -ne 0 ]; then
-              echo "::warning::EPG publish gate blocked this generated guide; retaining the previous known-good epg/epg.xml."
-              if [ -s /tmp/bdix-epg-previous.xml ] && grep -q '<programme ' /tmp/bdix-epg-previous.xml; then
-                cp /tmp/bdix-epg-previous.xml epg/epg.xml
-                echo "Retained previous EPG because the new guide regressed."
-              else
-                echo "::error::No valid previous EPG is available after a publish-gate failure."
-                exit 1
-              fi
-            else
-              echo "EPG publish gate passed; accepting newly generated guide."
-            fi
+              echo '::warning::EPG publish gate blocked this generated guide; retaining the previous known-good epg/epg.xml.'
+              if [ -s /tmp/bdix-epg-previous.xml ] && grep -q '<programme ' /tmp/bdix-epg-previous.xml; then cp /tmp/bdix-epg-previous.xml epg/epg.xml; else echo '::error::No valid previous EPG is available after a publish-gate failure.'; exit 1; fi
+            else echo 'EPG publish gate passed; accepting newly generated guide.'; fi
             cp epg/epg.xml /tmp/bdix-epg-publish.xml
             python scripts/sync_epg_worker_map.py
             python scripts/epg_coverage.py
@@ -126,7 +111,7 @@ jobs:
             python scripts/record_maintenance_history.py
             python scripts/generate_dashboard.py
             if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
-              echo "::warning::Audit/pre-publish gate reported issues. Preserving the deterministic IPTV repair in IPTV-Playlist.m3u; no automatic rollback of the repaired playlist will occur."
+              echo '::warning::Audit/pre-publish gate reported issues. Preserving the deterministic IPTV repair in IPTV-Playlist.m3u; no automatic rollback of the repaired playlist will occur.'
               echo "Audit status: $AUDIT_STATUS"
               echo "Pre-publish gate status: $GATE_STATUS"
               git restore -- logos/ || true
@@ -148,10 +133,25 @@ jobs:
             git cat-file blob :epg/epg.xml > /tmp/bdix-epg-staged.xml
             grep -q '<programme ' /tmp/bdix-epg-staged.xml
             echo "Staged EPG sha256: $(sha256sum /tmp/bdix-epg-staged.xml | awk '{print $1}')"
-            if git diff --cached --quiet; then
-              echo "No maintenance changes to publish."
-              exit 0
-            fi
+            # Hard publication invariant: no duplicate stream URL may exist in IPTV-Playlist.m3u.
+            python - <<'PY'
+from pathlib import Path
+import re
+p=Path('IPTV-Playlist.m3u')
+urls=[]
+for line in p.read_text(encoding='utf-8',errors='replace').splitlines():
+    s=line.strip()
+    if s.startswith(('http://','https://')): urls.append(s.casefold())
+from collections import Counter
+c=Counter(urls)
+dups=[u for u,n in c.items() if n>1]
+if dups:
+    print(f'::error::Duplicate stream URLs remain: {len(dups)} unique URLs are repeated.')
+    for u in dups[:20]: print(u)
+    raise SystemExit(1)
+print(f'URL uniqueness check passed: {len(urls)} stream URLs, 0 duplicates.')
+PY
+            if git diff --cached --quiet; then echo 'No maintenance changes to publish.'; exit 0; fi
             git commit -m 'Run IPTV playlist maintenance'
             if git push origin HEAD:main; then exit 0; fi
             sleep 3
