@@ -369,7 +369,7 @@ def main():
         target_name = norm_name(row["channel"])
         target_regionless = without_region_suffix(row["channel"])
         candidates_by_id = {}
-        for src, source_tuple in zip(SOURCES, source_data):
+        for src, source_tuple in zip(source_urls, source_data):
             source_ids, source_future, source_counts, source_names = source_tuple
             for source_name_key, source_ids_for_name in source_names.items():
                 if not source_name_key or len(source_name_key) < 5:
