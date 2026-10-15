@@ -1,21 +1,21 @@
 # Playlist Audit
-Generated: **2026-10-15T10:44:18.978326+00:00**
+Generated: **2026-10-15T11:05:23.765064+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1037**
-- Unique channel IDs: **652**
+- Playlist entries: **1020**
+- Unique channel IDs: **638**
 - IDs with multiple streams: **195**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
-- Protected primary-entry changes: **0**
+- Protected primary-entry changes: **14**
 - Logo exceptions: **0**
-- Logo references checked: **1037**
+- Logo references checked: **1020**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
@@ -24,7 +24,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Alphabetical ordering issues: **0**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
-- Embedded Xtream-style credential paths (redacted): **8**
+- Embedded Xtream-style credential paths (redacted): **0**
 
 ## Duplicate IDs
 
@@ -344,9 +344,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### disneychannel.in@hd (2 streams)
 - Disney Channel India — Kids — http://181.119.215.61:8000/play/a0g1/index.m3u8
 - Disney Channel India — Backup — https://tvsen7.aynaott.com/disney/index.m3u8
-### durontotv.bd (4 streams)
+### durontotv.bd (3 streams)
 - Duronto TV — Bangladesh — https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8
-- Duronto TV — Backup — http://rgkkw.live:8080/live/[REDACTED]/[REDACTED]/433.ts
 - Duronto TV — Backup — https://tvsen5.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.fmp4.m3u8
 - Duronto TV — Backup — https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/tracks-v1a1/mono.ts.m3u8
 ### e24.in (2 streams)
@@ -356,12 +355,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Ekattor TV — Bangladesh — https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8
 - Ekattor TV — Backup — https://stream.ottplus.live/live/ekattor_tv_abr/index.m3u8
 - Ekattor TV — Backup — https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/tracks-v1a1/mono.ts.m3u8
-### ekhontv.bd (5 streams)
+### ekhontv.bd (4 streams)
 - Ekhon TV — Bangladesh — https://drk6xq0vhn.gpcdn.net/live/ekhon_tv_abr/index.m3u8
 - Ekhon TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/globaltv.stream/index.m3u8
 - Ekhon TV — Backup — https://stream.ottplus.live/live/ekhon_tv_abr/index.m3u8
 - Ekhon TV — Backup — https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8
-- Ekhon TV — Backup — https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8?e=1784102563
 ### ekusheytv.bd (7 streams)
 - Ekushey TV — Bangladesh — https://tvsen5.aynaott.com/SyQuXz8sC3TB/index.m3u8
 - Ekushey TV — Backup — http://210.4.72.204/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
@@ -594,13 +592,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### nrbtv.ca (2 streams)
 - NRB TV — Bangladesh — https://app.ncare.live/live-orgin/nrb-eu.stream/playlist.m3u8
 - NRB TV — Backup — https://uni6rtmp.tulix.tv/nrbnetwork/myStream.sdp/playlist.m3u8
-### ntv.bd (7 streams)
+### ntv.bd (6 streams)
 - NTV — Bangladesh — https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8
 - NTV — Backup — https://2-fss-1.streamhoster.com/pl_122/201748-1431018-1/chunklist.m3u8
 - NTV — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/ntv/index.m3u8
 - NTV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/ntv-1/index.m3u8
 - NTV — Backup — https://tvsen5.aynaott.com/JHPxHAWonztVucyc4GzF/index.m3u8
-- NTV — Backup — https://tvsen5.aynaott.com/JHPxHAWonztVucyc4GzF/index.m3u8?e=1784102559
 - NTV — Backup — https://tvsen5.aynaott.com/xV4jEKf3D9zc/tracks-v1a1/mono.ts.m3u8
 ### ntveurope.bd (2 streams)
 - NTV Europe — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/ntvuk00332211.stream/playlist.m3u8
@@ -839,14 +836,7 @@ None.
 
 ## Embedded Xtream-Style Credential Paths (redacted)
 
-- **Sony Max 2 [US]** — Indian Movies — http://fortv.cc:8080/live/[REDACTED]/[REDACTED]/125795.ts
-- **Star Gold Thrills** — Indian Movies — http://rgkkw.live:8080/live/[REDACTED]/[REDACTED]/773735.ts
-- **Sonic Bangla** — Kids — http://bosstv.click:8080/live/[REDACTED]/[REDACTED]/92412.ts
-- **Astro Cricbuzz** — Sports — http://rgkkw.live:8080/live/[REDACTED]/[REDACTED]/2494.ts
-- **FOX Cricket 501** — Sports — http://rgkkw.live:8080/live/[REDACTED]/[REDACTED]/4748.ts
-- **Sony Sports Ten 3** — Sports — http://rgkkw.live:8080/live/[REDACTED]/[REDACTED]/98863.ts
-- **Ten Sports** — Sports — http://rgkkw.live:8080/live/[REDACTED]/[REDACTED]/98.ts
-- **Duronto TV** — Backup — http://rgkkw.live:8080/live/[REDACTED]/[REDACTED]/433.ts
+None.
 
 ## Review Queue Name Consistency
 
@@ -866,7 +856,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1037**
+- Healthy/local references: **1020**
 - missing: **0**
 - broken-local: **0**
 - external: **0**
@@ -878,4 +868,17 @@ None.
 
 ## Protected Primary Entries
 
-No protected primary-entry changes detected.
+- **custom.sony.max.2** — http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/125795.ts: primary entry removed or changed
+- **stargoldthrills.in@sd** — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/773735.ts: primary entry removed or changed
+- **custom.sonic.bangla** — http://bosstv.click:8080/live/18012689/77561563/92412.ts: primary entry removed or changed
+- **astrocricket.my** — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/2494.ts: primary entry removed or changed
+- **custom.bein.sports.1** — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6123/index.m3u8: primary entry removed or changed
+- **beinsports3.qa** — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6124/index.m3u8: primary entry removed or changed
+- **beinsports6.qa** — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6127/index.m3u8: primary entry removed or changed
+- **beinsports7.qa** — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6128/index.m3u8: primary entry removed or changed
+- **foxsports501hd.au** — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/4748.ts: primary entry removed or changed
+- **skysportsnfl.uk** — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9155/index.m3u8: primary entry removed or changed
+- **skysportscricket.ie** — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9258/index.m3u8: primary entry removed or changed
+- **skysportsfootball.ie** — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9289/index.m3u8: primary entry removed or changed
+- **sonysportsten3.in** — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98863.ts: primary entry removed or changed
+- **tensports.pk** — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98.ts: primary entry removed or changed

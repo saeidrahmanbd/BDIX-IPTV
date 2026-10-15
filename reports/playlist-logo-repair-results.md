@@ -1,6 +1,6 @@
 # Three-Playlist Logo Repair Results
 
-Run time: **2026-10-15 10:35 UTC**  
+Run time: **2026-10-15 10:55 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -10,7 +10,7 @@ Historical mapping index: loaded 336 historical name mappings
 | Playlist | Entries | References changed | Generated fallbacks | Missing after | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|
 | BDIX-Playlist.m3u | 139 | 0 | 0 | 0 | 0 | 0 |
-| IPTV-Playlist.m3u | 1037 | 14 | 0 | 0 | 0 | 0 |
+| IPTV-Playlist.m3u | 1020 | 14 | 0 | 0 | 0 | 0 |
 
 ## Repair log
 
@@ -18,18 +18,18 @@ Historical mapping index: loaded 336 historical name mappings
 |---|---:|---|---|---|---|---|---|
 | IPTV-Playlist.m3u | 34 | BTV News | btv-news.png | nvisionbd-verified-btv-news-33c61f1708.jpg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 | IPTV-Playlist.m3u | 81 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 716 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1203 | Tom and Jerry | tom-and-jerry.png | nvisionbd-verified-tom-and-jerry-927bd66719.jpg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1468 | BTV News | btv-news.png | nvisionbd-verified-btv-news-33c61f1708.jpg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1710 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1712 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1714 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1716 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 2080 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 2082 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 2084 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 2086 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 2088 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 712 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 1197 | Tom and Jerry | tom-and-jerry.png | nvisionbd-verified-tom-and-jerry-927bd66719.jpg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 1440 | BTV News | btv-news.png | nvisionbd-verified-btv-news-33c61f1708.jpg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1678 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1680 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1682 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1684 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2046 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2048 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2050 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2052 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2054 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
 
 ## Quality rule
 

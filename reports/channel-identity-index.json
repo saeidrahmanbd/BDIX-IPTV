@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-15T10:44:19+00:00",
+  "generated": "2026-10-15T11:05:23+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -394,20 +394,6 @@
       "primary": 1,
       "backup": 2
     },
-    "astrocricket": {
-      "names": [
-        "Astro Cricbuzz"
-      ],
-      "ids": [
-        "astrocricket.my"
-      ],
-      "groups": [
-        "Sports"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "atnbangla": {
       "names": [
         "ATN Bangla"
@@ -693,48 +679,6 @@
       ],
       "groups": [
         "International"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "beinsports3": {
-      "names": [
-        "Bein Sports 3"
-      ],
-      "ids": [
-        "beinsports3.qa"
-      ],
-      "groups": [
-        "Sports"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "beinsports6": {
-      "names": [
-        "beIN SPORTS 6"
-      ],
-      "ids": [
-        "beinsports6.qa"
-      ],
-      "groups": [
-        "Sports"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "beinsports7": {
-      "names": [
-        "beIN SPORTS 7"
-      ],
-      "ids": [
-        "beinsports7.qa"
-      ],
-      "groups": [
-        "Sports"
       ],
       "streams": 1,
       "primary": 1,
@@ -1496,20 +1440,6 @@
       ],
       "groups": [
         "Kids"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "custom.bein.sports.1": {
-      "names": [
-        "beIN Sports 1"
-      ],
-      "ids": [
-        "custom.bein.sports.1"
-      ],
-      "groups": [
-        "Sports"
       ],
       "streams": 1,
       "primary": 1,
@@ -2859,34 +2789,6 @@
       "primary": 1,
       "backup": 0
     },
-    "custom.sonic.bangla": {
-      "names": [
-        "Sonic Bangla"
-      ],
-      "ids": [
-        "custom.sonic.bangla"
-      ],
-      "groups": [
-        "Kids"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "custom.sony.max.2": {
-      "names": [
-        "Sony Max 2 [US]"
-      ],
-      "ids": [
-        "custom.sony.max.2"
-      ],
-      "groups": [
-        "Indian Movies"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "custom.sony.ten.5": {
       "names": [
         "Sony Ten 5"
@@ -4154,9 +4056,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 4,
+      "streams": 3,
       "primary": 1,
-      "backup": 3
+      "backup": 2
     },
     "dwnews": {
       "names": [
@@ -4255,9 +4157,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 5,
+      "streams": 4,
       "primary": 1,
-      "backup": 4
+      "backup": 3
     },
     "ekusheytv": {
       "names": [
@@ -4580,20 +4482,6 @@
       ],
       "ids": [
         "foxsports1.us"
-      ],
-      "groups": [
-        "Sports"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "foxsports501hd": {
-      "names": [
-        "FOX Cricket 501"
-      ],
-      "ids": [
-        "foxsports501hd.au"
       ],
       "groups": [
         "Sports"
@@ -6380,9 +6268,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 7,
+      "streams": 6,
       "primary": 1,
-      "backup": 6
+      "backup": 5
     },
     "ntveurope": {
       "names": [
@@ -7614,48 +7502,6 @@
       "primary": 1,
       "backup": 0
     },
-    "skysportscricket": {
-      "names": [
-        "Sky Sports Cricket"
-      ],
-      "ids": [
-        "skysportscricket.ie"
-      ],
-      "groups": [
-        "Sports"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "skysportsfootball": {
-      "names": [
-        "Sky Sports Football"
-      ],
-      "ids": [
-        "skysportsfootball.ie"
-      ],
-      "groups": [
-        "Sports"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "skysportsnfl": {
-      "names": [
-        "Sky Sports Action"
-      ],
-      "ids": [
-        "skysportsnfl.uk"
-      ],
-      "groups": [
-        "Sports"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "smurftv": {
       "names": [
         "Smurf TV"
@@ -7900,20 +7746,6 @@
       "primary": 1,
       "backup": 0
     },
-    "sonysportsten3": {
-      "names": [
-        "Sony Sports Ten 3"
-      ],
-      "ids": [
-        "sonysportsten3.in"
-      ],
-      "groups": [
-        "Sports"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
     "sonywah": {
       "names": [
         "Sony WAH"
@@ -8047,20 +7879,6 @@
       ],
       "ids": [
         "stargold2.in@hd"
-      ],
-      "groups": [
-        "Indian Movies"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "stargoldthrills": {
-      "names": [
-        "Star Gold Thrills"
-      ],
-      "ids": [
-        "stargoldthrills.in@sd"
       ],
       "groups": [
         "Indian Movies"
@@ -8487,20 +8305,6 @@
       ],
       "groups": [
         "Indian Entertainment"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "tensports": {
-      "names": [
-        "Ten Sports"
-      ],
-      "ids": [
-        "tensports.pk"
-      ],
-      "groups": [
-        "Sports"
       ],
       "streams": 1,
       "primary": 1,
