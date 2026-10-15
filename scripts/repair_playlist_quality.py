@@ -1,21 +1,15 @@
 #!/usr/bin/env python3
-"""Repair deterministic playlist-quality blockers before the maintenance audit.
+"""Deterministic quality repair for IPTV-Playlist.m3u only.
 
-Scope:
-- fill the 35 audited same-name/different-ID collisions when the missing side
-  has no channel identity, using the already-audited canonical ID;
-- normalize the Ultimate TV metadata conflict to the IPTV-org canonical
-  music identity/category;
-- fill missing primary tvg-chno values with unused positive numbers;
-- never change stream URLs or touch Backup channel numbers.
+This script intentionally NEVER reads or writes BDIX-Playlist.m3u.
 """
 from pathlib import Path
 import re
 import unicodedata
 
-PLAYLISTS = (Path("IPTV-Playlist.m3u"), Path("BDIX-Playlist.m3u"))
+PLAYLIST = Path("IPTV-Playlist.m3u")
 ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
-PRIMARY_EXCLUDED = {"Backup"}
+PRIMARY_EXCLUDED = {"Backup", "New Backup", "Not Playing"}
 
 COLLISION_IDS = {
     "action hollywood movies": "plex.tv.action.hollywood.movies.plex",
@@ -70,9 +64,7 @@ def set_attr(line, key, value):
 def canonical_name(value):
     value = unicodedata.normalize("NFKD", str(value or ""))
     value = "".join(ch for ch in value if not unicodedata.combining(ch))
-    value = value.casefold()
-    value = re.sub(r"[^a-z0-9]+", " ", value).strip()
-    return value
+    return re.sub(r"[^a-z0-9]+", " ", value.casefold()).strip()
 
 
 def display_name(line):
@@ -81,12 +73,7 @@ def display_name(line):
 
 
 def entries(lines):
-    out = []
-    for i, line in enumerate(lines):
-        if not line.startswith("#EXTINF:"):
-            continue
-        out.append((i, line))
-    return out
+    return [(i, line) for i, line in enumerate(lines) if line.startswith("#EXTINF:")]
 
 
 def following_url(lines, index):
@@ -99,70 +86,48 @@ def following_url(lines, index):
     return ""
 
 
-def repair(path):
-    if not path.is_file():
-        return 0, 0, 0
-
-    lines = path.read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
+def repair():
+    if not PLAYLIST.is_file():
+        return
+    lines = PLAYLIST.read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
     changes = 0
-    collision_repairs = 0
-    number_repairs = 0
 
-    # This blank-identity Filamchi proxy is an alternate stream, not canonical
-    # B4U Movies. Preserve the URL but quarantine the entry as Backup so it
-    # cannot create a duplicate active primary identity after ID completion.
+    # Quarantine the known alternate Filamchi endpoint rather than pretending it
+    # is canonical B4U Movies. Preserve its URL and identity as a Backup.
     for idx, line in entries(lines):
         a = attrs(line)
-        if (
-            a.get("group-title", "").strip() == "Indian Movies"
-            and canonical_name(display_name(line)) == "b4u movies"
-            and not a.get("tvg-id", "").strip()
-            and not a.get("channel-id", "").strip()
-            and "/api/play/Filamchi.m3u8" in following_url(lines, idx)
-        ):
+        if (a.get("group-title", "").strip() == "Indian Movies" and
+            canonical_name(display_name(line)) == "b4u movies" and
+            not a.get("tvg-id", "").strip() and
+            not a.get("channel-id", "").strip() and
+            "/api/play/Filamchi.m3u8" in following_url(lines, idx)):
             lines[idx] = set_attr(line, "group-title", "Backup")
             changes += 1
 
-    # First resolve the audited same-name/different-ID cases. Every audited
-    # collision currently has one blank identity and one known canonical ID.
-    # Fill only the blank side; never overwrite a non-empty ID.
+    # Resolve only blank identities from the audited collision list. Never
+    # overwrite an existing non-empty identity.
     for idx, line in entries(lines):
         a = attrs(line)
         if a.get("tvg-id", "").strip() or a.get("channel-id", "").strip():
             continue
-        key = canonical_name(display_name(line))
-        cid = COLLISION_IDS.get(key)
-        if not cid:
-            continue
-        line = set_attr(line, "tvg-id", cid)
-        line = set_attr(line, "channel-id", cid)
-        lines[idx] = line
-        changes += 1
-        collision_repairs += 1
+        cid = COLLISION_IDS.get(canonical_name(display_name(line)))
+        if cid:
+            line = set_attr(line, "tvg-id", cid)
+            line = set_attr(line, "channel-id", cid)
+            lines[idx] = line
+            changes += 1
 
-    # Channel S and Channel S UK are different services; preserve distinct identities.
+    # Explicitly preserve Channel S and Channel S UK as different identities.
     for idx, line in entries(lines):
-        if canonical_name(display_name(line)) != "channel s uk":
-            continue
-        a = attrs(line)
-        line = set_attr(line, "group-title", "Bangladesh")
-        line = set_attr(line, "tvg-id", "custom.channel.s.uk")
-        line = set_attr(line, "channel-id", "custom.channel.s.uk")
-        if not a.get("tvg-chno", "").strip():
-            taken = {
-                attrs(other).get("tvg-chno", "").strip()
-                for other_idx, other in entries(lines)
-                if other_idx != idx
-                and attrs(other).get("group-title", "").strip() not in PRIMARY_EXCLUDED
-            }
-            if "1001" not in taken:
+        if canonical_name(display_name(line)) == "channel s uk":
+            line = set_attr(line, "group-title", "Bangladesh")
+            line = set_attr(line, "tvg-id", "custom.channel.s.uk")
+            line = set_attr(line, "channel-id", "custom.channel.s.uk")
+            if not attrs(line).get("tvg-chno", "").strip():
                 line = set_attr(line, "tvg-chno", "1001")
-        lines[idx] = line
-        changes += 1
+            lines[idx] = line
 
-    # Ultimate TV is one canonical Indian music channel. Both current stream
-    # URLs belong to the same IPTV-org identity, so do not let one stream's
-    # stale Indian Movies grouping create a metadata conflict.
+    # Keep Ultimate TV consistently in Indian Music.
     for idx, line in entries(lines):
         a = attrs(line)
         cid = (a.get("tvg-id") or a.get("channel-id") or "").strip().casefold()
@@ -170,8 +135,9 @@ def repair(path):
             lines[idx] = set_attr(line, "group-title", "Indian Music")
             changes += 1
 
-    # Fill missing primary channel numbers with the lowest unused positive
-    # integers. Existing numbers are preserved exactly; Backup is excluded.
+    # Never assign primary numbers to Backup/Not Playing entries. Existing
+    # primary numbers remain untouched; only genuinely missing primary numbers
+    # receive the lowest unused positive integer.
     used = set()
     for _, line in entries(lines):
         a = attrs(line)
@@ -194,15 +160,10 @@ def repair(path):
         used.add(next_number)
         next_number += 1
         changes += 1
-        number_repairs += 1
 
-    if changes:
-        path.write_text("\n".join(lines) + "\n", encoding="utf-8")
-
-    print(f"{path}: changes={changes} collision_ids={collision_repairs} channel_numbers={number_repairs}")
-    return changes, collision_repairs, number_repairs
+    PLAYLIST.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"IPTV-Playlist.m3u quality repair: changes={changes}")
 
 
 if __name__ == "__main__":
-    for playlist in PLAYLISTS:
-        repair(playlist)
+    repair()
