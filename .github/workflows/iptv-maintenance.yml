@@ -71,7 +71,7 @@ jobs:
             python scripts/repair_playlist_logos.py
             python scripts/sort_playlists.py
             python scripts/apply_gemini_playlist_repairs.py
-            python scripts/final_playlist_hardening.py
+            python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
             if grep -Eiq 'group-title="(New Channels|New Backup|New|Not Playing)"' IPTV-Playlist.m3u; then
               echo "::error::Legacy playlist category detected after normalization."
               exit 1
