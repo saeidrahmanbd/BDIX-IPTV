@@ -55,7 +55,9 @@ def main():
   info=normalize(b[0]); a=attrs(info); n=name_of(info); url=url_of(b); low=url.casefold()
   if 'tvsen5.aynaott.com/tk2bndfsdfsdf/index.m3u8' in low: removed+=1; continue
   if re.search(r'^https?://(?:[^/]+\.)?dvltv\.cc(?::\d+)?/play(?:/|$)',url,re.I): removed+=1; continue
-  if re.search(r'https?://[^/]*vods?\d*\.[^/]+/',url,re.I) or re.search(r'/vod(?:/|$)',url,re.I): removed+=1; continue
+  # Explicitly user-restored stream URLs: retain despite the generic VOD-host filter.
+  restore_urls={'https://vods2.aynaott.com/gseriesdrama/tracks-v1a1/mono.ts.m3u8','https://vods2.aynaott.com/gseriesdrama/index.m3u8','https://vods2.aynaott.com/hindimovies/index.m3u8'}
+  if low not in restore_urls and (re.search(r'https?://[^/]*vods?\d*\.[^/]+/',url,re.I) or re.search(r'/vod(?:/|$)',url,re.I)): removed+=1; continue
   if re.search(r'[?&](?:token|auth)=(?:test|testpub)(?:&|$)',url,re.I): removed+=1; continue
   if re.search(r'https?://[^/@]+@[^/]+',url,re.I): removed+=1; continue
   if n.casefold()=='ntv (malyalam)': info=set_display(set_attr(info,'tvg-name','NTV (Malayalam)'),'NTV (Malayalam)'); changed+=1
