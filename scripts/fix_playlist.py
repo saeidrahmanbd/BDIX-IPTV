@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-"""Safe IPTV-Playlist.m3u fixer based on the supplied audit/fix design."""
-import argparse,csv,re,time,unicodedata,urllib.error,urllib.request
-from collections import defaultdict,Counter
+"""Safe IPTV-Playlist.m3u fixer. No duplicate stream URL is allowed in the public playlist."""
+import argparse,csv,re,time,unicodedata
+from collections import defaultdict
 from pathlib import Path
-from concurrent.futures import ThreadPoolExecutor
 
 BACKUP='Backup'
-UA='Mozilla/5.0 (Linux; Android 12) AppleWebKit/537.36 VLC/3.0.20'
 CRED=[
  re.compile(r'^https?://[^/]+/(?:live|movie|series)/[^/?]+/[^/?]+/\d+(?:\.\w+)?(?:\?|$)',re.I),
  re.compile(r'[?&](?:username|password|pass|pwd)=',re.I),
@@ -20,7 +18,8 @@ def norm(s):
  s=re.sub(r'\b(?:hd|uhd|fhd|sd)\b',' ',s)
  return re.sub(r'[^a-z0-9]','',s)
 
-def slug(s): return 'custom.'+'.'.join(re.findall(r'[a-z0-9]+',unicodedata.normalize('NFKD',s or '').encode('ascii','ignore').decode().lower()))
+def slug(s):
+ return 'custom.'+'.'.join(re.findall(r'[a-z0-9]+',unicodedata.normalize('NFKD',s or '').encode('ascii','ignore').decode().lower()))
 
 def parse(text):
  lines=text.replace('\r','').splitlines(); header=[]; entries=[]; cur=None; pending=[]; seen=False
@@ -67,7 +66,7 @@ def fix(entries,report):
   a=attrs(e['ext']); g=a.get('group-title',''); n=title(e['ext']) or a.get('tvg-name','')
   e['name']=n; e['group']=g
   if g!=BACKUP and a.get('tvg-id'): prim[norm(n)]=e
- owners=defaultdict(set); out=[]; seen=set(); private=[]; quarantine=[]; orphans=[]
+ owners=defaultdict(set); out=[]; seen={}; private=[]; quarantine=[]; orphans=[]
  for e in entries:
   a=attrs(e['ext']); n=e['name']; u=e['url']
   for k in ('tvg-id','channel-id'):
@@ -91,12 +90,17 @@ def fix(entries,report):
   if n.casefold()=='ntv (malyalam)': e['ext']=settitle(setv(e['ext'],'tvg-name','NTV (Malayalam)'),'NTV (Malayalam)'); report.append(f'line {e["line"]}: Malayalam spelling fixed')
   low=u.lower()
   if 'dfsdfsdf' in low or re.search(r'^https?://(?:[^/]+\.)?dvltv\.cc/play(?:/|$)',u,re.I): quarantine.append((e,'malformed/blocked endpoint')); continue
-  if expiry(u) and expiry(u)<time.time(): quarantine.append((e,'expired token')); continue
+  ex=expiry(u)
+  if ex and ex<time.time(): quarantine.append((e,'expired token')); continue
   if cred(u): private.append((e,'credential-bearing URL')); continue
   if n.casefold()=='zoom music' and ('dai.google.com' in low or 'doubleclick.net' in low): quarantine.append((e,'volatile ad-insertion URL')); continue
-  key=u.strip().lower()
-  if key and key in seen: quarantine.append((e,'duplicate stream URL')); continue
-  if key: seen.add(key)
+  # Absolute URL identity: scheme/host/path/query are normalized only for case;
+  # query parameters remain part of the URL. No two public entries may share it.
+  key=u.strip().casefold()
+  if key:
+   if key in seen:
+    quarantine.append((e,'duplicate stream URL; exact duplicate removed from public playlist')); continue
+   seen[key]=e
   out.append(e)
  return out,private,quarantine,orphans
 
@@ -110,12 +114,17 @@ def main():
  src=Path(args.input); out=Path(args.outdir); out.mkdir(parents=True,exist_ok=True); (out/'reports').mkdir(exist_ok=True)
  header,entries=parse(src.read_text(encoding='utf-8',errors='replace')); report=[]
  public,private,quarantine,orphans=fix(entries,report)
+ # Hard invariant: the public playlist contains zero duplicate URL strings.
+ urls=[e['url'].strip().casefold() for e in public if e['url'].strip()]
+ dupes=sorted({u for u in urls if urls.count(u)>1})
+ if dupes:
+  raise RuntimeError(f'Public playlist still contains {len(dupes)} duplicate URLs')
  (out/f'{src.stem}.fixed.m3u').write_text(render(header,public),encoding='utf-8')
  if private: (out/f'{src.stem}.private.m3u').write_text(render(header,[e for e,_ in private]),encoding='utf-8')
  if quarantine: (out/f'{src.stem}.quarantine.m3u').write_text(render(header,[e for e,_ in quarantine]),encoding='utf-8')
  with (out/'reports'/'orphans.csv').open('w',newline='',encoding='utf-8') as f:
   w=csv.writer(f); w.writerow(['line','name','tvg_id','url']); [w.writerow([e['line'],e['name'],attrs(e['ext']).get('tvg-id',''),e['url']]) for e in orphans]
- (out/'reports'/'fix-report.md').write_text('# IPTV playlist fix report\n\n'+'\n'.join('- '+x for x in report)+f'\n\nInput: {len(entries)} entries\nPublic: {len(public)}\nPrivate: {len(private)}\nQuarantine: {len(quarantine)}\nOrphans: {len(orphans)}\n',encoding='utf-8')
- print(f'Input={len(entries)} Public={len(public)} Private={len(private)} Quarantine={len(quarantine)} Orphans={len(orphans)}')
+ (out/'reports'/'fix-report.md').write_text('# IPTV playlist fix report\n\n'+'\n'.join('- '+x for x in report)+f'\n\nInput: {len(entries)} entries\nPublic: {len(public)}\nPrivate: {len(private)}\nQuarantine: {len(quarantine)}\nOrphans: {len(orphans)}\nDuplicate public URLs: 0\n',encoding='utf-8')
+ print(f'Input={len(entries)} Public={len(public)} Private={len(private)} Quarantine={len(quarantine)} Orphans={len(orphans)} DuplicatePublicURLs=0')
 
 if __name__=='__main__': main()
