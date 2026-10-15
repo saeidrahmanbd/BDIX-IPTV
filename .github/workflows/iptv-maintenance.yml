@@ -24,6 +24,8 @@ on:
       - scripts/build_identity_index.py
       - scripts/stream_health.py
       - scripts/stream_risk_review.py
+      - scripts/clean_iptv_persistent_backups.py
+      - scripts/report_iptv_fragile_streams.py
       - scripts/pre_publish_gate.py
       - scripts/record_maintenance_history.py
       - scripts/generate_dashboard.py
@@ -81,6 +83,17 @@ jobs:
             if grep -Eiq 'group-title="(New Channels|New Backup|New|Not Playing)"' IPTV-Playlist.m3u; then echo '::error::Legacy playlist category detected after normalization.'; exit 1; fi
             python scripts/migrate_external_logos_fixed.py
             python scripts/generate_logo_authenticity_manifest.py
+
+            # First health pass supplies current failure state to the safe
+            # persistent-backup cleanup. Only redundant Backup streams are
+            # eligible; primary streams are never removed by this cleanup.
+            python scripts/stream_health.py
+            python scripts/clean_iptv_persistent_backups.py
+            python scripts/report_iptv_fragile_streams.py
+
+            # Rebuild EPG after backup/identity cleanup so coverage reflects the
+            # actual IPTV-Playlist.m3u that will be published. M3U4U remains an
+            # optional private source through the existing Actions secret.
             python scripts/epg_coverage.py
             python scripts/generate_epg.py
             test -s epg/epg.xml
@@ -133,7 +146,6 @@ jobs:
             git cat-file blob :epg/epg.xml > /tmp/bdix-epg-staged.xml
             grep -q '<programme ' /tmp/bdix-epg-staged.xml
             echo "Staged EPG sha256: $(sha256sum /tmp/bdix-epg-staged.xml | awk '{print $1}')"
-            # Hard publication invariant: no duplicate stream URL may exist in IPTV-Playlist.m3u.
             python -c 'from pathlib import Path; from collections import Counter; p=Path("IPTV-Playlist.m3u"); urls=[s.casefold() for s in (x.strip() for x in p.read_text(encoding="utf-8",errors="replace").splitlines()) if s.startswith(("http://","https://"))]; d=[u for u,n in Counter(urls).items() if n>1]; print(f"::error::Duplicate stream URLs remain: {len(d)} unique URLs are repeated.") if d else print(f"URL uniqueness check passed: {len(urls)} stream URLs, 0 duplicates."); raise SystemExit(1) if d else None'
             if git diff --cached --quiet; then echo 'No maintenance changes to publish.'; exit 0; fi
             git commit -m 'Run IPTV playlist maintenance'
