@@ -8,33 +8,34 @@ Generated from the current playlist and latest available stream-health report. T
 - Signed/token-query endpoints: **9**
 - Xtream-style credential paths (credentials redacted): **8**
 - Proxy/worker-host routes: **41** (1 primary, 40 Backup)
-- /api/play/ relay routes: **20**
+- /api/play/ relay routes: **19**
 
 ## Latest Stream-Health Snapshot
 
 | Metric | Count |
 |---|---:|
-| Streams tested | 1043 |
-| Reachable | 1021 |
-| Failed this check | 22 |
+| Streams tested | 1035 |
+| Reachable | 1008 |
+| Failed this check | 27 |
 | Persistent failures (3+ consecutive) | 11 |
 | HTTP 401/403 (auth) | 5 |
-| HTTP 404 (not found) | 13 |
-| HTTP 5xx (server) | 3 |
+| HTTP 404 (not found) | 7 |
+| HTTP 5xx (server) | 4 |
+| Timeout | 10 |
 
 ### Persistent failures
 
-- **Channel 16** — Backup — consecutive failures: **8** — HTTP 404
-- **Dangal 2** — Backup — consecutive failures: **8** — HTTP 404
-- **Dangal 2** — Backup — consecutive failures: **8** — HTTP 404
-- **Disney Channel India** — Backup — consecutive failures: **72** — HTTP 403
-- **Kalaignar Murasu** — Backup — consecutive failures: **6** — HTTP 404
-- **Assam Talks** — Indian Entertainment — consecutive failures: **206** — HTTP 403
-- **Kalaignar Murasu** — Indian Entertainment — consecutive failures: **8** — HTTP 504
-- **Cook & Bake** — International — consecutive failures: **12** — HTTP 504
-- **HBO** — International — consecutive failures: **194** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **12** — HTTP 403
-- **Teen Nick** — Kids — consecutive failures: **72** — HTTP 403
+- **Channel 16** — Backup — consecutive failures: **9** — HTTP 404
+- **Disney Channel India** — Backup — consecutive failures: **73** — HTTP 403
+- **G TV** — Backup — consecutive failures: **3** — TLS
+- **Goldmines Movies** — Backup — consecutive failures: **3** — HTTP 404
+- **Kalaignar Murasu** — Backup — consecutive failures: **7** — HTTP 404
+- **Assam Talks** — Indian Entertainment — consecutive failures: **207** — HTTP 403
+- **Kalaignar Murasu** — Indian Entertainment — consecutive failures: **9** — HTTP 504
+- **Cook & Bake** — International — consecutive failures: **13** — HTTP 504
+- **HBO** — International — consecutive failures: **195** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **13** — HTTP 403
+- **Teen Nick** — Kids — consecutive failures: **73** — HTTP 403
 
 ## /streamtest/ Endpoints
 
@@ -137,15 +138,14 @@ Worker routes are relayed endpoints, not direct broadcaster sources. The Sananda
 | Star Gold Select | Indian Movies | homair-tv-production.up.railway.app | /api/play/ |
 | Star Utsav Movies | Indian Movies | homair-tv-production.up.railway.app | /api/play/ |
 | Star Utsav | Indian Entertainment | homair-tv-production.up.railway.app | /api/play/ |
-| B4U Movies | Backup | homair-tv-production.up.railway.app | /api/play/ |
-| B4U Movies | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | BTV Chattogram | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | BTV National | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | BTV News | Backup | homair-tv-production.up.railway.app | /api/play/ |
-| Colors Cineplex | Backup | homair-tv-production.up.railway.app | /api/play/ |
+| Colors Cineplex [UK] | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | Desh TV | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | HBO | Backup | homair-tv-production.up.railway.app | /api/play/ |
-| Hum Masala | Backup | homair-tv-production.up.railway.app | /api/play/ |
+| HUM Masala | Backup | homair-tv-production.up.railway.app | /api/play/ |
+| Manoranjan Grand | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | Nick | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | Nick Jr | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | Sonic | Backup | homair-tv-production.up.railway.app | /api/play/ |
