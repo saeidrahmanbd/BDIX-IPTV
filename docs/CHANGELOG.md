@@ -61,12 +61,5 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 
 ## 2026-10-15
 
-- 🗑️ **3 channel(s) removed**
-- 🖼️ **13 logo reference(s) corrected**
-- 🧹 **1 duplicate stream occurrence(s) removed**
-
-### Removed channels
-- G Series Drama
-- Hindi Movie Classic 24
-- Toonami Aftermath Movie
+- No meaningful playlist changes detected.
 
