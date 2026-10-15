@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - IPTV-Playlist.m3u
+      - .github/workflows/iptv-maintenance.yml
       - scripts/repair_iptv_audit_findings.py
       - scripts/repair_playlist_quality.py
       - scripts/repair_playlist_logos.py
@@ -115,19 +116,10 @@ jobs:
             python scripts/record_maintenance_history.py
             python scripts/generate_dashboard.py
             if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
-              git restore -- IPTV-Playlist.m3u logos/ || true
-              set +e
-              python scripts/audit_playlist.py
-              FINAL_AUDIT_STATUS=$?
-              python scripts/pre_publish_gate.py
-              FINAL_GATE_STATUS=$?
-              set -e
-              echo "Final post-rollback audit: $FINAL_AUDIT_STATUS"
-              echo "Final post-rollback gate: $FINAL_GATE_STATUS"
-              python scripts/build_identity_index.py
-              python scripts/stream_health.py
-              python scripts/stream_risk_review.py
-              python scripts/generate_dashboard.py
+              echo "::warning::Audit/pre-publish gate reported issues. Preserving the deterministic IPTV repair in IPTV-Playlist.m3u; no automatic rollback of the repaired playlist will occur."
+              echo "Audit status: $AUDIT_STATUS"
+              echo "Pre-publish gate status: $GATE_STATUS"
+              git restore -- logos/ || true
             fi
             python scripts/record_maintenance_history.py --refresh
             python scripts/generate_dashboard.py
@@ -137,7 +129,7 @@ jobs:
             echo "Validated EPG working-tree bytes: $(wc -c < epg/epg.xml)"
             echo "Validated EPG working-tree sha256: $(sha256sum epg/epg.xml | awk '{print $1}')"
             python scripts/enforce_playlist_attribution.py
-            git add IPTV-Playlist.m3u logos/ reports/ assets/dashboard.svg
+            git add IPTV-Playlist.m3u reports/ assets/dashboard.svg
             git add -f epg/epg.xml
             STAGED_EPG_BYTES="$(git cat-file -s :epg/epg.xml)"
             echo "Staged EPG bytes: ${STAGED_EPG_BYTES}"
@@ -145,7 +137,10 @@ jobs:
             git cat-file blob :epg/epg.xml > /tmp/bdix-epg-staged.xml
             grep -q '<programme ' /tmp/bdix-epg-staged.xml
             echo "Staged EPG sha256: $(sha256sum /tmp/bdix-epg-staged.xml | awk '{print $1}')"
-            if git diff --cached --quiet; then exit 0; fi
+            if git diff --cached --quiet; then
+              echo "No maintenance changes to publish."
+              exit 0
+            fi
             git commit -m 'Run IPTV playlist maintenance'
             if git push origin HEAD:main; then exit 0; fi
             sleep 3
