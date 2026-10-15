@@ -6,6 +6,8 @@ on:
     paths:
       - BDIX-Playlist.m3u
       - scripts/bdix_playlist_update.py
+      - scripts/sort_playlists.py
+      - scripts/enforce_playlist_attribution.py
   schedule:
     - cron: '47 2 * * *'
   workflow_dispatch:
@@ -32,11 +34,11 @@ jobs:
       - name: Run BDIX Playlist Update
         run: python3 scripts/bdix_playlist_update.py
 
-      - name: Sort maintained playlists
-        run: python3 scripts/sort_playlists.py
+      - name: Sort maintained playlist
+        run: python3 scripts/sort_playlists.py BDIX-Playlist.m3u
 
       - name: Enforce protected playlist attribution
-        run: python3 scripts/enforce_playlist_attribution.py
+        run: python3 scripts/enforce_playlist_attribution.py BDIX-Playlist.m3u
 
       - name: Commit BDIX maintenance results
         shell: bash
@@ -53,13 +55,13 @@ jobs:
           for attempt in 1 2 3; do
             git fetch origin main
             if ! git rebase origin/main; then
-              echo "::warning::Concurrent maintenance changed shared reports; regenerating from latest main."
+              echo "::warning::Concurrent maintenance changed shared reports; regenerating BDIX results from latest main."
               git rebase --abort || true
               git reset --hard origin/main
               python3 scripts/bdix_playlist_update.py
-              python3 scripts/sort_playlists.py
-              python3 scripts/enforce_playlist_attribution.py
-              git add BDIX-Playlist.m3u IPTV-Playlist.m3u reports/bdix-playlist-audit.md reports/bdix-stream-health.md reports/bdix-maintenance-history.json
+              python3 scripts/sort_playlists.py BDIX-Playlist.m3u
+              python3 scripts/enforce_playlist_attribution.py BDIX-Playlist.m3u
+              git add BDIX-Playlist.m3u reports/bdix-playlist-audit.md reports/bdix-stream-health.md reports/bdix-maintenance-history.json
               if git diff --cached --quiet; then
                 echo "Latest main already contains all BDIX maintenance results."
                 exit 0
