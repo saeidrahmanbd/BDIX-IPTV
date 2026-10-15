@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-15T11:05:23.765064+00:00**
+Generated: **2026-10-15T11:16:17.507077+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -13,7 +13,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
-- Protected primary-entry changes: **14**
+- Protected primary-entry changes: **0**
 - Logo exceptions: **0**
 - Logo references checked: **1020**
 - Duplicate primary identities: **0**
@@ -868,17 +868,4 @@ None.
 
 ## Protected Primary Entries
 
-- **custom.sony.max.2** — http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/125795.ts: primary entry removed or changed
-- **stargoldthrills.in@sd** — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/773735.ts: primary entry removed or changed
-- **custom.sonic.bangla** — http://bosstv.click:8080/live/18012689/77561563/92412.ts: primary entry removed or changed
-- **astrocricket.my** — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/2494.ts: primary entry removed or changed
-- **custom.bein.sports.1** — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6123/index.m3u8: primary entry removed or changed
-- **beinsports3.qa** — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6124/index.m3u8: primary entry removed or changed
-- **beinsports6.qa** — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6127/index.m3u8: primary entry removed or changed
-- **beinsports7.qa** — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/6128/index.m3u8: primary entry removed or changed
-- **foxsports501hd.au** — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/4748.ts: primary entry removed or changed
-- **skysportsnfl.uk** — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9155/index.m3u8: primary entry removed or changed
-- **skysportscricket.ie** — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9258/index.m3u8: primary entry removed or changed
-- **skysportsfootball.ie** — http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9289/index.m3u8: primary entry removed or changed
-- **sonysportsten3.in** — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98863.ts: primary entry removed or changed
-- **tensports.pk** — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98.ts: primary entry removed or changed
+No protected primary-entry changes detected.

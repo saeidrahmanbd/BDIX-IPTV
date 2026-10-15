@@ -15,82 +15,81 @@ Generated from the current playlist and latest available stream-health report. T
 | Metric | Count |
 |---|---:|
 | Streams tested | 1020 |
-| Reachable | 952 |
-| Failed this check | 68 |
-| Persistent failures (3+ consecutive) | 66 |
-| HTTP 401/403 (auth) | 5 |
-| HTTP 404 (not found) | 6 |
-| HTTP 5xx (server) | 5 |
-| Timeout | 52 |
+| Reachable | 954 |
+| Failed this check | 66 |
+| Persistent failures (3+ consecutive) | 65 |
+| HTTP 401/403 (auth) | 6 |
+| HTTP 404 (not found) | 5 |
+| HTTP 5xx (server) | 4 |
+| Timeout | 51 |
 
 ### Persistent failures
 
-- **ATN Bangla UK** — Backup — consecutive failures: **5** — Timeout
-- **Amar Bangla Digital** — Backup — consecutive failures: **5** — Timeout
-- **Ananda TV** — Backup — consecutive failures: **6** — Timeout
-- **Ananda TV** — Backup — consecutive failures: **10** — Timeout
-- **Channel 1** — Backup — consecutive failures: **6** — Timeout
-- **Channel 1** — Backup — consecutive failures: **6** — Timeout
-- **Channel 52** — Backup — consecutive failures: **5** — HTTP 404
+- **ATN Bangla UK** — Backup — consecutive failures: **6** — Timeout
+- **Amar Bangla Digital** — Backup — consecutive failures: **6** — Timeout
+- **Ananda TV** — Backup — consecutive failures: **7** — Timeout
+- **Ananda TV** — Backup — consecutive failures: **11** — Timeout
+- **Channel 1** — Backup — consecutive failures: **7** — Timeout
+- **Channel 1** — Backup — consecutive failures: **7** — Timeout
+- **Channel 52** — Backup — consecutive failures: **6** — HTTP 404
+- **Channel S** — Backup — consecutive failures: **7** — Timeout
 - **Channel S** — Backup — consecutive failures: **6** — Timeout
-- **Channel S** — Backup — consecutive failures: **5** — Timeout
-- **Channel S** — Backup — consecutive failures: **5** — Timeout
 - **Channel S** — Backup — consecutive failures: **6** — Timeout
-- **Deen TV** — Backup — consecutive failures: **5** — Timeout
-- **Desh TV** — Backup — consecutive failures: **6** — Timeout
-- **Discover Pakistan** — Backup — consecutive failures: **5** — Timeout
-- **Disney Channel India** — Backup — consecutive failures: **82** — HTTP 403
-- **Ekhon TV** — Backup — consecutive failures: **6** — Timeout
-- **Ekushey TV** — Backup — consecutive failures: **6** — Timeout
-- **G TV** — Backup — consecutive failures: **6** — Timeout
-- **G TV** — Backup — consecutive failures: **5** — Timeout
+- **Channel S** — Backup — consecutive failures: **7** — Timeout
+- **Deen TV** — Backup — consecutive failures: **6** — Timeout
+- **Desh TV** — Backup — consecutive failures: **7** — Timeout
+- **Discover Pakistan** — Backup — consecutive failures: **6** — Timeout
+- **Disney Channel India** — Backup — consecutive failures: **83** — HTTP 403
+- **Ekhon TV** — Backup — consecutive failures: **7** — Timeout
+- **Ekushey TV** — Backup — consecutive failures: **7** — Timeout
 - **G TV** — Backup — consecutive failures: **7** — Timeout
 - **G TV** — Backup — consecutive failures: **6** — Timeout
-- **Global TV** — Backup — consecutive failures: **6** — Timeout
-- **Goldmines Movies** — Backup — consecutive failures: **3** — HTTP 404
-- **Green TV** — Backup — consecutive failures: **5** — Timeout
-- **Green TV** — Backup — consecutive failures: **5** — Timeout
-- **Green TV** — Backup — consecutive failures: **5** — Timeout
-- **Green TV** — Backup — consecutive failures: **5** — HTTP 404
-- **Jago News 24** — Backup — consecutive failures: **5** — Timeout
-- **Jago News 24** — Backup — consecutive failures: **5** — Timeout
-- **Medina Live** — Backup — consecutive failures: **6** — Timeout
-- **Movie Bangla** — Backup — consecutive failures: **6** — Timeout
-- **Movie Bangla** — Backup — consecutive failures: **6** — Timeout
+- **G TV** — Backup — consecutive failures: **8** — Timeout
+- **G TV** — Backup — consecutive failures: **7** — Timeout
+- **Global TV** — Backup — consecutive failures: **7** — Timeout
+- **Green TV** — Backup — consecutive failures: **6** — Timeout
+- **Green TV** — Backup — consecutive failures: **6** — Timeout
+- **Green TV** — Backup — consecutive failures: **6** — Timeout
+- **Green TV** — Backup — consecutive failures: **6** — HTTP 404
+- **Jago News 24** — Backup — consecutive failures: **6** — Timeout
+- **Jago News 24** — Backup — consecutive failures: **6** — HTTP 523
+- **Medina Live** — Backup — consecutive failures: **7** — Timeout
+- **Movie Bangla** — Backup — consecutive failures: **7** — Timeout
+- **Movie Bangla** — Backup — consecutive failures: **7** — Timeout
+- **My TV** — Backup — consecutive failures: **7** — Timeout
+- **My TV** — Backup — consecutive failures: **7** — Timeout
 - **My TV** — Backup — consecutive failures: **6** — Timeout
-- **My TV** — Backup — consecutive failures: **6** — Timeout
-- **My TV** — Backup — consecutive failures: **5** — Timeout
-- **NTV Europe** — Backup — consecutive failures: **5** — Timeout
-- **RTV** — Backup — consecutive failures: **6** — Timeout
-- **SA TV** — Backup — consecutive failures: **6** — Timeout
-- **SA TV** — Backup — consecutive failures: **6** — Timeout
-- **ATN Bangla UK** — Bangladesh — consecutive failures: **5** — Timeout
-- **Ananda TV** — Bangladesh — consecutive failures: **6** — Timeout
-- **Channel 16** — Bangladesh — consecutive failures: **18** — Timeout
-- **Channel S** — Bangladesh — consecutive failures: **5** — Timeout
-- **Channel S UK** — Bangladesh — consecutive failures: **5** — Timeout
-- **G TV** — Bangladesh — consecutive failures: **5** — HTTP 523
-- **Green TV** — Bangladesh — consecutive failures: **6** — Timeout
-- **Jago News 24** — Bangladesh — consecutive failures: **5** — Timeout
-- **Jonmobhumi TV** — Bangladesh — consecutive failures: **5** — HTTP 404
-- **NRB TV** — Bangladesh — consecutive failures: **5** — Timeout
-- **NTV Europe** — Bangladesh — consecutive failures: **5** — Timeout
-- **Time Television** — Bangladesh — consecutive failures: **5** — Timeout
-- **Amar Bangla** — Indian Bangla — consecutive failures: **5** — Timeout
-- **Channel 52** — Indian Bangla — consecutive failures: **5** — HTTP 404
-- **Assam Talks** — Indian Entertainment — consecutive failures: **216** — HTTP 403
-- **Oli TV** — Indian Entertainment — consecutive failures: **10** — Timeout
-- **Suriyan TV** — Indian Entertainment — consecutive failures: **10** — HTTP 523
-- **K Cine** — Indian Movies — consecutive failures: **7** — Timeout
-- **Afrobeats** — International — consecutive failures: **7** — HTTP 404
-- **Cook & Bake** — International — consecutive failures: **22** — HTTP 504
-- **HBO** — International — consecutive failures: **204** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **22** — HTTP 403
-- **iON TV UK** — International — consecutive failures: **5** — Timeout
-- **Teen Nick** — Kids — consecutive failures: **82** — HTTP 403
-- **Iqra Bangla** — Religious — consecutive failures: **5** — Timeout
-- **Islamic TV** — Religious — consecutive failures: **6** — Timeout
-- **Makkah Live** — Religious — consecutive failures: **6** — Timeout
+- **NTV Europe** — Backup — consecutive failures: **6** — Timeout
+- **RTV** — Backup — consecutive failures: **7** — Timeout
+- **SA TV** — Backup — consecutive failures: **7** — Timeout
+- **SA TV** — Backup — consecutive failures: **7** — Timeout
+- **ATN Bangla UK** — Bangladesh — consecutive failures: **6** — Timeout
+- **Ananda TV** — Bangladesh — consecutive failures: **7** — Timeout
+- **Channel 16** — Bangladesh — consecutive failures: **19** — Timeout
+- **Channel S** — Bangladesh — consecutive failures: **6** — Timeout
+- **Channel S UK** — Bangladesh — consecutive failures: **6** — Timeout
+- **G TV** — Bangladesh — consecutive failures: **6** — HTTP 523
+- **Green TV** — Bangladesh — consecutive failures: **7** — Timeout
+- **Jago News 24** — Bangladesh — consecutive failures: **6** — Timeout
+- **Jonmobhumi TV** — Bangladesh — consecutive failures: **6** — HTTP 404
+- **NRB TV** — Bangladesh — consecutive failures: **6** — Timeout
+- **NTV Europe** — Bangladesh — consecutive failures: **6** — Timeout
+- **Time Television** — Bangladesh — consecutive failures: **6** — Timeout
+- **Amar Bangla** — Indian Bangla — consecutive failures: **6** — Timeout
+- **Channel 52** — Indian Bangla — consecutive failures: **6** — HTTP 404
+- **Assam Talks** — Indian Entertainment — consecutive failures: **217** — HTTP 403
+- **Oli TV** — Indian Entertainment — consecutive failures: **11** — Timeout
+- **Suriyan TV** — Indian Entertainment — consecutive failures: **11** — HTTP 523
+- **K Cine** — Indian Movies — consecutive failures: **8** — Timeout
+- **Afrobeats** — International — consecutive failures: **8** — HTTP 404
+- **Cook & Bake** — International — consecutive failures: **23** — HTTP 504
+- **HBO** — International — consecutive failures: **205** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **23** — HTTP 403
+- **iON TV UK** — International — consecutive failures: **6** — Timeout
+- **Teen Nick** — Kids — consecutive failures: **83** — HTTP 403
+- **Iqra Bangla** — Religious — consecutive failures: **6** — Timeout
+- **Islamic TV** — Religious — consecutive failures: **7** — Timeout
+- **Makkah Live** — Religious — consecutive failures: **7** — Timeout
 
 ## /streamtest/ Endpoints
 

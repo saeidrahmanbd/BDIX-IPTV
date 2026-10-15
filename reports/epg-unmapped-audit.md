@@ -1,6 +1,6 @@
 # Strict Unmapped EPG Audit
 
-Generated: **2026-10-15T11:05:22+00:00**
+Generated: **2026-10-15T11:16:15+00:00**
 
 Only exact normalized display-name matches or exact matches after removing a recognized territory/language suffix are listed below. Every candidate has current/future schedule rows in a configured feed, but candidates remain review-only and are never automatically applied.
 Bangladesh-group channels are not name-matched here. Their domestic schedules require exact ID/explicit alias evidence; a similar Indian or foreign channel is not acceptable.
@@ -36,7 +36,7 @@ Bangladesh-group channels are not name-matched here. Their domestic schedules re
 | International | MBC Drama USA | MBCDramaUSA.us | mbcdrama | MBC.Drama.ae | EXACT_AFTER_REGION_SUFFIX | 90 | https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz | MANUAL_REVIEW_ONLY |
 | International | MovieSphere UK | MovieSphere.us@UK | moviesphere | Moviesphere.au | EXACT_AFTER_REGION_SUFFIX | 76 | https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz | MANUAL_REVIEW_ONLY |
 | International | MovieSphere UK | MovieSphere.us@UK | moviesphere | USBD17000117B | EXACT_AFTER_REGION_SUFFIX | 4 | https://i.mjh.nz/SamsungTVPlus/us.xml | MANUAL_REVIEW_ONLY |
-| International | MovieSphere UK | MovieSphere.us@UK | moviesphere | plex.tv.MOVIESPHERE.plex | EXACT_AFTER_REGION_SUFFIX | 41 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
+| International | MovieSphere UK | MovieSphere.us@UK | moviesphere | plex.tv.MOVIESPHERE.plex | EXACT_AFTER_REGION_SUFFIX | 40 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
 | International | MyTime Movie Network BR | MyTimeMovieNetwork.br@SD | mytimemovienetwork | USBC3900018K6 | EXACT_AFTER_REGION_SUFFIX | 5 | https://i.mjh.nz/SamsungTVPlus/us.xml | MANUAL_REVIEW_ONLY |
 | International | MyTime Movie Network BR | MyTimeMovieNetwork.br@SD | mytimemovienetwork | plex.tv.MyTime.Movie.Network.plex | EXACT_AFTER_REGION_SUFFIX | 57 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
 | International | MyTime Movie Network East | MyTimeMovieNetworkEast.us | mytimemovienetwork | USBC3900018K6 | EXACT_AFTER_REGION_SUFFIX | 5 | https://i.mjh.nz/SamsungTVPlus/us.xml | MANUAL_REVIEW_ONLY |
