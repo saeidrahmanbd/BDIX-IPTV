@@ -1,29 +1,30 @@
 # Playlist Audit
-Generated: **2026-10-15T06:05:49.729605+00:00**
+Generated: **2026-10-15T06:33:30.071658+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
 - Playlist entries: **1043**
-- Unique channel IDs: **573**
+- Unique channel IDs: **640**
 - IDs with multiple streams: **147**
 - Duplicate stream URLs: **0**
-- Metadata conflicts: **2**
-- Same-name / different-ID collisions: **77**
+- Metadata conflicts: **0**
+- Same-name / different-ID collisions: **80**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **53**
+- Logo exceptions: **1**
 - Logo references checked: **1043**
-- Duplicate primary identities: **1**
+- Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
-- Primary entries missing channel numbers: **57**
+- Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **0**
-- Alphabetical ordering issues: **3**
+- Category block-order issues: **12**
+- Alphabetical ordering issues: **9**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
+- Embedded Xtream-style credential paths (redacted): **8**
 
 ## Duplicate IDs
 
@@ -152,7 +153,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Channel I — Backup — https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/tracks-v1a1/mono.ts.m3u8
 ### channels.uk (5 streams)
 - Channel S — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8
-- Channel S UK — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8
+- Channel S UK — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8
 - Channel S — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channels.stream/index.m3u8
 - Channel S — Backup — https://app.ncare.live/live-orgin/channels.stream/live-orgin/channels.stream/chunks.m3u8
 - Channel S — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-s-1/index.m3u8
@@ -256,7 +257,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Dhoom Music Bangla — Indian Bangla — https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8
 - Dhoom Music Bangla — Backup — https://cdn.pishow.tv/ott/live/1456/master.m3u8
 ### durontotv.bd (2 streams)
-- Duronto TV — Backup — http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/433.ts
+- Duronto TV — Backup — http://rgkkw.live:8080/live/[REDACTED]/[REDACTED]/433.ts
 - Duronto TV — Backup — https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8
 ### e24.in (2 streams)
 - E24 — Indian Music — https://amg13643-amg13643c2-amgplt0016.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg13643-amg13643c2-amgplt0016/playlist.m3u8
@@ -574,7 +575,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - U Bangla — Indian Bangla — https://stream.ottlive.co.in/ubangla/index.m3u8
 - U Bangla — Backup — https://stream.ottlive.co.in/ubangla/tracks-v1a1/mono.m3u8
 ### ultimatetv.in@sd (2 streams)
-- Ultimate TV — Indian Movies — https://mumbai-edge.smartplaytv.in/utv/index.m3u8
+- Ultimate TV — Backup — https://mumbai-edge.smartplaytv.in/utv/index.m3u8
 - Ultimate TV — Indian Music — https://stream.ottlive.co.in/utvtamil/index.m3u8
 ### vanithatv.in@sd (2 streams)
 - Vanitha TV — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3VANITHA/index.m3u8
@@ -613,7 +614,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-- **channels.uk** in **Bangladesh** — Channel S, Channel S UK
+None.
 
 ## Primary Channel-Number Collisions
 
@@ -625,9 +626,26 @@ None.
 
 ## Ordering
 
-Category block order: OK.
+- category block **Bangladesh** — out of canonical block order
+- category block **Indian Bangla** — out of canonical block order
+- category block **Indian Movies** — out of canonical block order
+- category block **Indian Movies** — out of canonical block order
+- category block **Indian Music** — out of canonical block order
+- category block **Indian Entertainment** — out of canonical block order
+- category block **Pakistani** — out of canonical block order
+- category block **International** — out of canonical block order
+- category block **Documentary & Wildlife** — out of canonical block order
+- category block **Kids** — out of canonical block order
+- category block **Religious** — out of canonical block order
+- category block **Sports** — out of canonical block order
 - **Bangladesh** — **Channel 9** appears after **Channel 24**
+- **Backup** — **&TV** appears after **Ultimate TV**
+- **Backup** — **7S Music** appears after **&TV**
+- **Bangladesh** — **Channel 9** appears after **Channel 24**
+- **Backup** — **&TV** appears after **Ultimate TV**
+- **Backup** — **7S Music** appears after **&TV**
 - **International** — **4ever Cinema** appears after **24 Hour Free Movies**
+- **Backup** — **&TV** appears after **Ultimate TV**
 - **Backup** — **7S Music** appears after **&TV**
 
 ## Suspicious URLs
@@ -646,14 +664,24 @@ None.
 - **Darshana TV** — Backup — https://yuppparoriglin.akamaized.net/181224/smil:darshanatv.smil/playlist.m3u8?hdnts=[REDACTED]
 - **Studio Yuva** — Backup — https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=[REDACTED]
 
+## Embedded Xtream-Style Credential Paths (redacted)
+
+- **Sony Max 2 [US]** — Indian Movies — http://fortv.cc:8080/live/[REDACTED]/[REDACTED]/125795.ts
+- **Star Gold Thrills** — Indian Movies — http://rgkkw.live:8080/live/[REDACTED]/[REDACTED]/773735.ts
+- **Sonic Bangla** — Kids — http://bosstv.click:8080/live/[REDACTED]/[REDACTED]/92412.ts
+- **Astro Cricbuzz** — Sports — http://rgkkw.live:8080/live/[REDACTED]/[REDACTED]/2494.ts
+- **FOX Cricket 501** — Sports — http://rgkkw.live:8080/live/[REDACTED]/[REDACTED]/4748.ts
+- **Sony Sports Ten 3** — Sports — http://rgkkw.live:8080/live/[REDACTED]/[REDACTED]/98863.ts
+- **Ten Sports** — Sports — http://rgkkw.live:8080/live/[REDACTED]/[REDACTED]/98.ts
+- **Duronto TV** — Backup — http://rgkkw.live:8080/live/[REDACTED]/[REDACTED]/433.ts
+
 ## Review Queue Name Consistency
 
 None.
 
 ## Metadata Conflicts
 
-- **channels.uk** — names: channel s, channel s uk; groups: Bangladesh; countries: 
-- **ultimatetv.in@sd** — names: ultimate tv; groups: Indian Movies, Indian Music; countries: 
+None.
 
 ## Cross-Country Backup Collisions
 
@@ -692,6 +720,7 @@ None.
 - **ekushey tv** → , ekusheytv.bd
 - **food food** → , foodfood.in@sd
 - **food network** → , custom.food.network
+- **g series drama** → , custom.gseriesdrama
 - **g tv** → , gazitv.bd
 - **global tv** → , globaltv.bd
 - **goldmines** → , goldmines.in@sd
@@ -718,6 +747,7 @@ None.
 - **outdoor channel** → , outdoorchannel.us
 - **pardesi tv** → , pardesitv.ca
 - **powertürk tv** → , powerturktv.tr
+- **probashi tv** → , custom.probashitv
 - **quran tv** → , qurantv.iq
 - **real wild** → , realwild.uk
 - **retro music tv** → , retromusictv.cz
@@ -731,6 +761,7 @@ None.
 - **srk** → , custom.srk
 - **star movies select** → , starmoviesselect.in@hd
 - **the walking dead universe** → , thewalkingdeaduniverse.us
+- **tlc** → , custom.tlc
 - **trace uk** → , traceuk.uk
 - **trace urban** → , traceurban.fr
 - **travelxp english** → , custom.travelxp.english
@@ -741,68 +772,16 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **990**
-- missing: **53**
+- Healthy/local references: **1042**
+- missing: **0**
 - broken-local: **0**
 - external: **0**
 - non-png: **0**
-- invalid-dimensions: **0**
+- invalid-dimensions: **1**
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
-- missing — Rajdhani TV [] — 
-- missing — TBN24 [] — 
-- missing — ZB Cinema [] — 
-- missing — K Cine [] — 
-- missing — Saga Music Haryanvi [] — 
-- missing — Global Punjab [] — 
-- missing — See TV [] — 
-- missing — Waseb TV [] — 
-- missing — 1Mus [] — 
-- missing — Afrobeats [] — 
-- missing — American Horrors [] — 
-- missing — AMG TV Classic [] — 
-- missing — Arabica TV [] — 
-- missing — Arirang [] — 
-- missing — Blues TV [] — 
-- missing — Classic Movies [] — 
-- missing — CMC TV [] — 
-- missing — Cook & Bake [] — 
-- missing — Dance TV [] — 
-- missing — Digital Fashion [] — 
-- missing — Fashion One [] — 
-- missing — Fashion TV [] — 
-- missing — Groove [] — 
-- missing — iON TV UK [] — 
-- missing — Kronehit [] — 
-- missing — Mad [] — 
-- missing — MBC 1 [] — 
-- missing — MBC 4 [] — 
-- missing — Movie Dome Family [] — 
-- missing — Paramount Network [] — 
-- missing — Qvc Uk [] — 
-- missing — Saudi TV [] — 
-- missing — Sony One: The Blacklist (FR) [] — 
-- missing — Stingray Remember the 80s [] — 
-- missing — Stingray Today's KPOP [] — 
-- missing — Teleritmo [] — 
-- missing — Tipping Point [] — 
-- missing — Toonami Aftermath Movie [] — 
-- missing — Trace Latina [] — 
-- missing — Tunes 6 [] — 
-- missing — Vevo '70s & '80s [] — 
-- missing — Vevo Pop [] — 
-- missing — Young Bollywood [] — 
-- missing — Love Nature [] — 
-- missing — Mayday: Air Disaster [] — 
-- missing — PBS Arts [] — 
-- missing — Survivor [] — 
-- missing — WaterBear [] — 
-- missing — Wheel World [] — 
-- missing — Witness to Justice [] — 
-- missing — Al-Zahra TV Turkic [] — 
-- missing — Dua Channel [] — 
-- missing — EMAN TV [] — 
+- invalid-dimensions — Classic Movies [custom.classicmovies] — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/classic-movies-27994c39.png
 
 ## Protected Primary Entries
 

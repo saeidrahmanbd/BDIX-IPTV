@@ -1,87 +1,56 @@
 # Stream Health Report
 
-Generated: **2026-10-15T06:06:33+00:00**
+Generated: **2026-10-15T06:33:48+00:00**
 
 Non-destructive connectivity check. A successful HTTP response confirms reachability of the stream endpoint, not guaranteed video/audio playback.
 
 ## Summary
 
 - Streams tested: **1043**
-- Reachable: **990**
-- Failed this check: **53**
-- Persistent failures (3+ consecutive): **4**
-- Intermittent failures: **49**
-- Primary tested: **636**
-- Backup tested: **407**
+- Reachable: **1027**
+- Failed this check: **16**
+- Persistent failures (3+ consecutive): **10**
+- Intermittent failures: **6**
+- Primary tested: **634**
+- Backup tested: **409**
 
 ## Failure Classification
 
 - HTTP 401/403 (auth): **6**
-- HTTP 404 (not found): **11**
-- HTTP 5xx (server): **2**
-- Timeout: **34**
+- HTTP 404 (not found): **2**
+- HTTP 5xx (server): **7**
+- TLS: **1**
 ## Persistent Failures
 
-- **Disney Channel India** — Backup — consecutive failures: **62** — HTTP 403
-- **Assam Talks** — Indian Entertainment — consecutive failures: **196** — HTTP 403
-- **HBO** — International — consecutive failures: **184** — HTTP 403
-- **Teen Nick** — Kids — consecutive failures: **62** — HTTP 403
+- **Disney Channel India** — Backup — consecutive failures: **64** — HTTP 403
+- **Goldmines** — Backup — consecutive failures: **4** — HTTP 404
+- **Goldmines** — Backup — consecutive failures: **4** — HTTP 404
+- **SA TV** — Backup — consecutive failures: **4** — HTTP 500
+- **Shanson TV** — Backup — consecutive failures: **4** — HTTP 403
+- **Assam Talks** — Indian Entertainment — consecutive failures: **198** — HTTP 403
+- **Cook & Bake** — International — consecutive failures: **4** — HTTP 504
+- **HBO** — International — consecutive failures: **186** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **4** — HTTP 403
+- **Teen Nick** — Kids — consecutive failures: **64** — HTTP 403
 
 ## Failed This Check
 
-- **Ananda TV** — Backup — streak 2 — Timeout
-- **Balle Balle** — Backup — streak 1 — HTTP 404
-- **Channel 1** — Backup — streak 2 — Timeout
-- **Channel 1** — Backup — streak 2 — Timeout
-- **Channel 16** — Backup — streak 2 — Timeout
-- **Channel S** — Backup — streak 2 — Timeout
-- **Channel S** — Backup — streak 2 — Timeout
-- **Dangal** — Backup — streak 2 — HTTP 404
-- **Dangal 2** — Backup — streak 2 — HTTP 404
-- **Dangal 2** — Backup — streak 2 — HTTP 404
-- **Desh TV** — Backup — streak 2 — Timeout
-- **Disney Channel India** — Backup — streak 62 — HTTP 403
-- **Ekhon TV** — Backup — streak 2 — Timeout
-- **Ekushey TV** — Backup — streak 1 — Timeout
-- **Ekushey TV** — Backup — streak 2 — Timeout
-- **G TV** — Backup — streak 2 — Timeout
-- **G TV** — Backup — streak 2 — Timeout
-- **G TV** — Backup — streak 2 — Timeout
-- **Global TV** — Backup — streak 2 — Timeout
-- **Goldmines** — Backup — streak 2 — HTTP 404
-- **Goldmines** — Backup — streak 2 — HTTP 404
-- **Hum TV** — Backup — streak 1 — Timeout
-- **MH One Dil Se** — Backup — streak 1 — HTTP 404
-- **MH One Movies** — Backup — streak 2 — HTTP 404
-- **MH One Prime** — Backup — streak 1 — HTTP 404
-- **Manoranjan TV** — Backup — streak 2 — HTTP 404
-- **Medina Live** — Backup — streak 2 — Timeout
-- **Movie Bangla** — Backup — streak 2 — Timeout
-- **Movie Bangla** — Backup — streak 2 — Timeout
-- **My TV** — Backup — streak 2 — Timeout
-- **My TV** — Backup — streak 2 — Timeout
-- **RTV** — Backup — streak 2 — Timeout
-- **SA TV** — Backup — streak 2 — Timeout
-- **SA TV** — Backup — streak 2 — Timeout
-- **Shanson TV** — Backup — streak 2 — HTTP 403
-- **Suriyan TV** — Backup — streak 2 — Timeout
-- **Ananda TV** — Bangladesh — streak 2 — Timeout
-- **Green TV** — Bangladesh — streak 2 — Timeout
-- **Aaryaa TV** — Indian Entertainment — streak 1 — Timeout
-- **Assam Talks** — Indian Entertainment — streak 196 — HTTP 403
-- **NKR TV Kannada** — Indian Entertainment — streak 1 — Timeout
-- **Sana TV** — Indian Entertainment — streak 2 — HTTP 504
-- **Suriya TV** — Indian Entertainment — streak 1 — Timeout
-- **Vaanavil TV** — Indian Entertainment — streak 1 — Timeout
-- **MH One Movies** — Indian Movies — streak 2 — HTTP 404
-- **Punjabi Hits** — Indian Music — streak 2 — Timeout
-- **Ultimate TV** — Indian Music — streak 1 — Timeout
-- **Cook & Bake** — International — streak 2 — HTTP 504
-- **HBO** — International — streak 184 — HTTP 403
-- **Teleritmo** — International — streak 2 — HTTP 403
-- **Teen Nick** — Kids — streak 62 — HTTP 403
-- **Islamic TV** — Religious — streak 2 — Timeout
-- **Makkah Live** — Religious — streak 2 — Timeout
+- **Disney Channel India** — Backup — streak 64 — HTTP 403
+- **Ekushey TV** — Backup — streak 1 — HTTP 500
+- **G TV** — Backup — streak 1 — TLS
+- **Goldmines** — Backup — streak 4 — HTTP 404
+- **Goldmines** — Backup — streak 4 — HTTP 404
+- **Medina Live** — Backup — streak 1 — HTTP 500
+- **SA TV** — Backup — streak 1 — HTTP 500
+- **SA TV** — Backup — streak 4 — HTTP 500
+- **Shanson TV** — Backup — streak 4 — HTTP 403
+- **Assam Talks** — Indian Entertainment — streak 198 — HTTP 403
+- **Sooriyan TV** — Indian Entertainment — streak 2 — HTTP 502
+- **Cook & Bake** — International — streak 4 — HTTP 504
+- **HBO** — International — streak 186 — HTTP 403
+- **Teleritmo** — International — streak 4 — HTTP 403
+- **Teen Nick** — Kids — streak 64 — HTTP 403
+- **Tom and Jerry** — Kids — streak 1 — HTTP 502
 
 ## Near-Duplicate URL Families
 

@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-15T05:56:25.467604+00:00",
+  "generated_at_utc": "2026-10-15T06:26:48.356990+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -185,16 +185,6 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Channel S",
-      "tvg_id": "ChannelS.uk",
-      "channel_id": "ChannelS.uk",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Channel S UK",
       "tvg_id": "ChannelS.uk",
       "channel_id": "ChannelS.uk",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png",
@@ -575,8 +565,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "TBN24",
-      "tvg_id": "custom.tbn24",
-      "channel_id": "custom.tbn24",
+      "tvg_id": "TBN24.us",
+      "channel_id": "TBN24.us",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-tbn24-3b1ea93e1c.png",
       "status": "needs_review",
       "source_url": "",
@@ -2064,16 +2054,6 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Ultimate TV",
-      "tvg_id": "UltimateTV.in@SD",
-      "channel_id": "UltimateTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ultimate-tv.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "YRF Music",
       "tvg_id": "YRFMusic.in",
       "channel_id": "YRFMusic.in",
@@ -2685,8 +2665,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Global Punjab",
-      "tvg_id": "custom.globalpunjab",
-      "channel_id": "custom.globalpunjab",
+      "tvg_id": "GlobalPunjab.in",
+      "channel_id": "GlobalPunjab.in",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-global-punjab-7d78c04b06.png",
       "status": "needs_review",
       "source_url": "",
@@ -3525,8 +3505,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "HUM Masala",
-      "tvg_id": "HUMMasala.pk",
-      "channel_id": "HUMMasala.pk",
+      "tvg_id": "custom.hummasala",
+      "channel_id": "custom.hummasala",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-masala.png",
       "status": "needs_review",
       "source_url": "",
@@ -3617,10 +3597,10 @@
       "channel_name": "See TV",
       "tvg_id": "custom.seetv",
       "channel_id": "custom.seetv",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-see-tv.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/see-tv.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -3907,10 +3887,10 @@
       "channel_name": "Cook & Bake",
       "tvg_id": "custom.cookandbake",
       "channel_id": "custom.cookandbake",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-cook-bake.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cook-bake.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -3985,8 +3965,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Fashion One",
-      "tvg_id": "custom.fashionone",
-      "channel_id": "custom.fashionone",
+      "tvg_id": "FashionOne.uk",
+      "channel_id": "FashionOne.uk",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-fashion-one-1704632ca3.png",
       "status": "needs_review",
       "source_url": "",
@@ -4427,10 +4407,10 @@
       "channel_name": "Qvc Uk",
       "tvg_id": "custom.qvcuk",
       "channel_id": "custom.qvcuk",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-qvc-uk.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/qvc-uk.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -4497,10 +4477,10 @@
       "channel_name": "Saudi TV",
       "tvg_id": "custom.sauditv",
       "channel_id": "custom.sauditv",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-saudi-tv.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saudi-tv.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -4567,10 +4547,10 @@
       "channel_name": "Sony One: The Blacklist (FR)",
       "tvg_id": "custom.sonyonetheblacklist",
       "channel_id": "custom.sonyonetheblacklist",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-sony-one-the-blacklist-fr.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-one-the-blacklist-fr.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -4677,10 +4657,10 @@
       "channel_name": "Tipping Point",
       "tvg_id": "custom.tippingpoint",
       "channel_id": "custom.tippingpoint",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-tipping-point.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tipping-point.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -4775,8 +4755,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Tunes 6",
-      "tvg_id": "custom.tunes6",
-      "channel_id": "custom.tunes6",
+      "tvg_id": "Tunes6.in",
+      "channel_id": "Tunes6.in",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-tunes-6-86e66d6033.png",
       "status": "needs_review",
       "source_url": "",
@@ -4787,10 +4767,10 @@
       "channel_name": "Vevo '70s & '80s",
       "tvg_id": "custom.vevo70sand80s",
       "channel_id": "custom.vevo70sand80s",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-vevo-70s-80s.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vevo-70s-80s.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -4847,10 +4827,10 @@
       "channel_name": "Young Bollywood",
       "tvg_id": "custom.youngbollywood",
       "channel_id": "custom.youngbollywood",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-young-bollywood.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/young-bollywood.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -5217,10 +5197,10 @@
       "channel_name": "Mayday: Air Disaster",
       "tvg_id": "custom.maydayairdisaster",
       "channel_id": "custom.maydayairdisaster",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-mayday-air-disaster.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mayday-air-disaster.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -5297,10 +5277,10 @@
       "channel_name": "PBS Arts",
       "tvg_id": "custom.pbsarts",
       "channel_id": "custom.pbsarts",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-pbs-arts.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pbs-arts.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -5365,8 +5345,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Survivor",
-      "tvg_id": "custom.survivor",
-      "channel_id": "custom.survivor",
+      "tvg_id": "Survivor.us",
+      "channel_id": "Survivor.us",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-survivor-71b25cd64f.png",
       "status": "needs_review",
       "source_url": "",
@@ -5415,8 +5395,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "WaterBear",
-      "tvg_id": "custom.waterbear",
-      "channel_id": "custom.waterbear",
+      "tvg_id": "WaterBear.ch",
+      "channel_id": "WaterBear.ch",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-waterbear-45ac070716.png",
       "status": "needs_review",
       "source_url": "",
@@ -5427,10 +5407,10 @@
       "channel_name": "Wheel World",
       "tvg_id": "custom.wheelworld",
       "channel_id": "custom.wheelworld",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-wheel-world.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wheel-world.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -5467,10 +5447,10 @@
       "channel_name": "Witness to Justice",
       "tvg_id": "custom.witnesstojustice",
       "channel_id": "custom.witnesstojustice",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-witness-to-justice.png",
-      "status": "generated_fallback",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/witness-to-justice.png",
+      "status": "needs_review",
       "source_url": "",
-      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -5975,8 +5955,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "EMAN TV",
-      "tvg_id": "custom.emantv",
-      "channel_id": "custom.emantv",
+      "tvg_id": "EmanTv.iq",
+      "channel_id": "EmanTv.iq",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-eman-tv-482a6c2567.png",
       "status": "needs_review",
       "source_url": "",
@@ -7394,6 +7374,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Channel S UK",
+      "tvg_id": "ChannelS.uk",
+      "channel_id": "ChannelS.uk",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Choppertown",
       "tvg_id": "Choppertown.us",
       "channel_id": "Choppertown.us",
@@ -8505,8 +8495,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "HUM Masala",
-      "tvg_id": "HUMMasala.pk",
-      "channel_id": "HUMMasala.pk",
+      "tvg_id": "custom.hummasala",
+      "channel_id": "custom.hummasala",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-masala.png",
       "status": "needs_review",
       "source_url": "",
@@ -10168,6 +10158,16 @@
       "tvg_id": "UBangla.in",
       "channel_id": "UBangla.in",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/u-bangla.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Ultimate TV",
+      "tvg_id": "UltimateTV.in@SD",
+      "channel_id": "UltimateTV.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ultimate-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
