@@ -134,24 +134,7 @@ jobs:
             grep -q '<programme ' /tmp/bdix-epg-staged.xml
             echo "Staged EPG sha256: $(sha256sum /tmp/bdix-epg-staged.xml | awk '{print $1}')"
             # Hard publication invariant: no duplicate stream URL may exist in IPTV-Playlist.m3u.
-            python - <<'PY'
-            from pathlib import Path
-            from collections import Counter
-            p = Path('IPTV-Playlist.m3u')
-            urls = []
-            for line in p.read_text(encoding='utf-8', errors='replace').splitlines():
-                s = line.strip()
-                if s.startswith(('http://', 'https://')):
-                    urls.append(s.casefold())
-            counts = Counter(urls)
-            duplicates = [u for u, n in counts.items() if n > 1]
-            if duplicates:
-                print(f'::error::Duplicate stream URLs remain: {len(duplicates)} unique URLs are repeated.')
-                for u in duplicates[:20]:
-                    print(u)
-                raise SystemExit(1)
-            print(f'URL uniqueness check passed: {len(urls)} stream URLs, 0 duplicates.')
-            PY
+            python -c 'from pathlib import Path; from collections import Counter; p=Path("IPTV-Playlist.m3u"); urls=[s.casefold() for s in (x.strip() for x in p.read_text(encoding="utf-8",errors="replace").splitlines()) if s.startswith(("http://","https://"))]; d=[u for u,n in Counter(urls).items() if n>1]; print(f"::error::Duplicate stream URLs remain: {len(d)} unique URLs are repeated.") if d else print(f"URL uniqueness check passed: {len(urls)} stream URLs, 0 duplicates."); raise SystemExit(1) if d else None'
             if git diff --cached --quiet; then echo 'No maintenance changes to publish.'; exit 0; fi
             git commit -m 'Run IPTV playlist maintenance'
             if git push origin HEAD:main; then exit 0; fi
