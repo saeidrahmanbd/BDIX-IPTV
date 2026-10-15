@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-15T08:04:47.399717+00:00",
+  "generated_at_utc": "2026-10-15T08:14:56.217523+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -7,10 +7,10 @@
     "needs_review": "Authenticity is undocumented, or the logo is missing."
   },
   "counts_by_playlist": {
-    "IPTV-Playlist.m3u": 1037,
+    "IPTV-Playlist.m3u": 1035,
     "BDIX-Playlist.m3u": 139
   },
-  "entry_count": 1176,
+  "entry_count": 1174,
   "entries": [
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -4664,16 +4664,6 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Toonami Aftermath Movie",
-      "tvg_id": "custom.toonamiaftermathmovie",
-      "channel_id": "custom.toonamiaftermathmovie",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/toonami-aftermath-movie.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Totalmusic",
       "tvg_id": "Totalmusic.uk",
       "channel_id": "Totalmusic.uk",
@@ -8134,16 +8124,6 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Filamchi",
-      "tvg_id": "custom.filamchi",
-      "channel_id": "custom.filamchi",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Food Food",
       "tvg_id": "FoodFood.in@SD",
       "channel_id": "FoodFood.in@SD",
@@ -9684,6 +9664,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Sananda",
+      "tvg_id": "SanandaTV.in",
+      "channel_id": "SanandaTV.in",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-sananda-64faf3c524.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Sangeet Bangla",
       "tvg_id": "SangeetBangla.in@SD",
       "channel_id": "SangeetBangla.in@SD",
@@ -10008,16 +9998,6 @@
       "tvg_id": "StudioYuva.in",
       "channel_id": "StudioYuva.in",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/studio-yuva.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "SUn Bangla",
-      "tvg_id": "SanandaTV.in",
-      "channel_id": "SanandaTV.in",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-sananda-64faf3c524.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."

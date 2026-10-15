@@ -15,29 +15,26 @@ Generated from the current playlist and latest available stream-health report. T
 | Metric | Count |
 |---|---:|
 | Streams tested | 1043 |
-| Reachable | 1022 |
-| Failed this check | 21 |
-| Persistent failures (3+ consecutive) | 13 |
-| HTTP 401/403 (auth) | 6 |
-| HTTP 404 (not found) | 7 |
-| HTTP 5xx (server) | 6 |
-| Timeout | 2 |
+| Reachable | 1021 |
+| Failed this check | 22 |
+| Persistent failures (3+ consecutive) | 11 |
+| HTTP 401/403 (auth) | 5 |
+| HTTP 404 (not found) | 13 |
+| HTTP 5xx (server) | 3 |
 
 ### Persistent failures
 
-- **Channel 16** — Backup — consecutive failures: **6** — HTTP 404
-- **Dangal 2** — Backup — consecutive failures: **6** — HTTP 404
-- **Dangal 2** — Backup — consecutive failures: **6** — HTTP 404
-- **Disney Channel India** — Backup — consecutive failures: **70** — HTTP 403
-- **Kalaignar Murasu** — Backup — consecutive failures: **4** — HTTP 404
-- **Manoranjan TV** — Backup — consecutive failures: **6** — HTTP 404
-- **Shanson TV** — Backup — consecutive failures: **10** — HTTP 403
-- **Assam Talks** — Indian Entertainment — consecutive failures: **204** — HTTP 403
-- **Kalaignar Murasu** — Indian Entertainment — consecutive failures: **6** — HTTP 504
-- **Cook & Bake** — International — consecutive failures: **10** — HTTP 504
-- **HBO** — International — consecutive failures: **192** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **10** — HTTP 403
-- **Teen Nick** — Kids — consecutive failures: **70** — HTTP 403
+- **Channel 16** — Backup — consecutive failures: **8** — HTTP 404
+- **Dangal 2** — Backup — consecutive failures: **8** — HTTP 404
+- **Dangal 2** — Backup — consecutive failures: **8** — HTTP 404
+- **Disney Channel India** — Backup — consecutive failures: **72** — HTTP 403
+- **Kalaignar Murasu** — Backup — consecutive failures: **6** — HTTP 404
+- **Assam Talks** — Indian Entertainment — consecutive failures: **206** — HTTP 403
+- **Kalaignar Murasu** — Indian Entertainment — consecutive failures: **8** — HTTP 504
+- **Cook & Bake** — International — consecutive failures: **12** — HTTP 504
+- **HBO** — International — consecutive failures: **194** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **12** — HTTP 403
+- **Teen Nick** — Kids — consecutive failures: **72** — HTTP 403
 
 ## /streamtest/ Endpoints
 

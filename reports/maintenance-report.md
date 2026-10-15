@@ -1,6 +1,6 @@
 # IPTV Maintenance Report
 
-_Generated: **2026-10-15 08:14 UTC**_
+_Generated: **2026-10-15 08:24 UTC**_
 
 | Item | Result |
 |---|---:|
@@ -8,10 +8,10 @@ _Generated: **2026-10-15 08:14 UTC**_
 | Current channel IDs | **641** |
 | Backup streams | **408** |
 | Logo exceptions | **0** |
-| EPG mapping | **64.1%** |
-| EPG programme coverage | **60.5%** |
-| Health failures | **21** |
-| Persistent health failures | **13** |
+| EPG mapping | **64.2%** |
+| EPG programme coverage | **60.6%** |
+| Health failures | **22** |
+| Persistent health failures | **11** |
 | Audit blockers | **0** |
 | Pre-publish gate | **PASS** |
 

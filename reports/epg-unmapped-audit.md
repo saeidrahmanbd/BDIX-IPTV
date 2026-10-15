@@ -1,14 +1,14 @@
 # Strict Unmapped EPG Audit
 
-Generated: **2026-10-15T08:13:20+00:00**
+Generated: **2026-10-15T08:23:28+00:00**
 
 Only exact normalized display-name matches or exact matches after removing a recognized territory/language suffix are listed below. Every candidate has current/future schedule rows in a configured feed, but candidates remain review-only and are never automatically applied.
 Bangladesh-group channels are not name-matched here. Their domestic schedules require exact ID/explicit alias evidence; a similar Indian or foreign channel is not acceptable.
 
-- Unmapped active channel identities reviewed: **247**
+- Unmapped active channel identities reviewed: **246**
 - Unmapped identities with exact/region-normalized schedule candidates: **10**
 - Candidate rows: **30**
-- Unmapped identities without an exact schedule-backed candidate: **237**
+- Unmapped identities without an exact schedule-backed candidate: **236**
 
 ## Exact candidates for manual review
 
@@ -43,7 +43,7 @@ Bangladesh-group channels are not name-matched here. Their domestic schedules re
 | International | MyTime Movie Network East | MyTimeMovieNetworkEast.us | mytimemovienetwork | plex.tv.MyTime.Movie.Network.plex | EXACT_AFTER_REGION_SUFFIX | 59 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
 | International | XITE Hits UK | XITEHits.nl@UK | xitehits | USBD3300004RH | EXACT_AFTER_REGION_SUFFIX | 3 | https://i.mjh.nz/SamsungTVPlus/us.xml | MANUAL_REVIEW_ONLY |
 | International | XITE Hits UK | XITEHits.nl@UK | xitehits | plex.tv.XITE.Hits.plex | EXACT_AFTER_REGION_SUFFIX | 31 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
-| Religious | Madani TV | custom.madani.tv | madaniuk | MadaniChannel.uk | EXACT_AFTER_REGION_SUFFIX | 42 | https://www.open-epg.com/files/unitedkingdom.xml.gz | MANUAL_REVIEW_ONLY |
+| Religious | Madani TV | custom.madani.tv | madaniuk | MadaniChannel.uk | EXACT_AFTER_REGION_SUFFIX | 41 | https://www.open-epg.com/files/unitedkingdom.xml.gz | MANUAL_REVIEW_ONLY |
 
 ## Bangladesh-specific review
 

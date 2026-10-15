@@ -1323,13 +1323,6 @@
   <channel id="talkSPORT.uk@SD">
     <display-name>talkSPORT</display-name>
   </channel>
-  <programme start="20261015000400 +0000" stop="20261015021000 +0000" channel="24HourFreeMovies.us">
-    <title lang="en">Me and the Devil</title>
-    <desc lang="en">A dark story of madness, pain and love: A young man loses his girlfriend in a park after getting distracted for a short moment; A lonely girl obsessed with crime news and killers starts a trip into the world of evil; A serial killer keeps killing women in the city; and a man of great faith realizes that a dark power lurks waiting for more victims.</desc>
-    <date>2026</date>
-    <category lang="en">Movies</category>
-    <icon src="https://d15690s323oesy.cloudfront.net/file/thumbnail/e069a04f-b3c7-4885-9d5b-ec825b9d6b01.jpg" />
-  </programme>
   <programme start="20261015021000 +0000" stop="20261015041400 +0000" channel="24HourFreeMovies.us">
     <title lang="en">No More Lights in the Sky</title>
     <desc lang="en">This Science Fiction docudrama/mockumentary revolves around a dystopian future world and the possible consequences of today's actions. A young reporter highlights the issues a mind controlling drug has on the population and the moral. Starring Monty Jordan, Matt Long, Nadia Chloe Rose.</desc>
@@ -54038,17 +54031,6 @@ From TDECU Stadium in Houston.</desc>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800011-20261021235800/list/GreatMoviesIDoOrDieAKillerArrangement2102295987cbcf503b047908aae91b0a811c0af.jpg" />
   </programme>
-  <programme channel="GREATromance.uk" start="20261015004500 +0000" stop="20261015021500 +0000">
-    <title lang="en">A Shoe Addict's Christmas</title>
-    <desc lang="en">Ever since a painful Christmas Eve break-up, Noelle has avoided the holiday season. But will a Christmas spirit help her find love and happiness again by visiting Christmases past and future.</desc>
-    <date>2018</date>
-    <category lang="en">Movie</category>
-    <category lang="en">Romance</category>
-    <icon src="https://images.metadata.sky.com/pd-image/fd671abb-398b-45dc-a871-b8603790043e/16-9" />
-    <rating system="UK">
-      <value>U</value>
-    </rating>
-  </programme>
   <programme channel="GREATromance.uk" start="20261015021500 +0000" stop="20261015022500 +0000">
     <title lang="en">Good News on GREAT! Extra</title>
     <desc lang="en">Heartwarming good news stories from the UK and beyond.</desc>
@@ -62677,23 +62659,6 @@ From TDECU Stadium in Houston.</desc>
     <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/b1c09a0ae4255811fa3fbd954558c4fa.jpg?width=700" />
     <rating>
       <value>U</value>
-    </rating>
-  </programme>
-  <programme start="20261015065000 +0530" stop="20261015074000 +0530" channel="InvestigationDiscovery.in@SD">
-    <title>Betrayed</title>
-    <desc>Fictionalised first-person narratives are used to explore different cases of murder and betrayal at the hands of a loved one or friend.</desc>
-    <category>Documentary</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/797749e2841bbacae3e72705c3e76b4b.jpg?width=700" />
-    <credits>
-      <director>Yoram Astrakhan</director>
-      <actor>Mark Krenik</actor>
-      <actor>Harvey B. Jackson</actor>
-      <actor>Jeff Pride</actor>
-    </credits>
-    <episode-num system="onscreen">5</episode-num>
-    <rating>
-      <value>TV14</value>
     </rating>
   </programme>
   <programme start="20261015074000 +0530" stop="20261015080500 +0530" channel="InvestigationDiscovery.in@SD">
@@ -99824,13 +99789,6 @@ Bringing the best in television.</desc>
     <category lang="en">TV Show</category>
     <category lang="en">Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p29030724_b_h9_ab.jpg?lock=880x660" />
-  </programme>
-  <programme channel="Pop.uk" start="20261015015700 +0000" stop="20261015021100 +0000">
-    <title lang="en">Bakugan</title>
-    <desc lang="en">In the exciting reboot of the BAKUGAN franchise, the VESTROIAN galaxy is made up of six planets each home to a different species of Bakugan.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261015072700/list/ZEEPOPBakugan208744607dddfe11c75448691ea31cdf6f6bbb8.jpg" />
   </programme>
   <programme channel="Pop.uk" start="20261015021100 +0000" stop="20261015023700 +0000">
     <title lang="en">Shasha And Milo</title>
@@ -142097,11 +142055,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="TheJungleBook.in" start="20261015073300 +0530" stop="20261015074600 +0530">
-    <title lang="en">The Wishing Tree</title>
-    <desc lang="en">Akela has the wolves and Mowgli out on a training session</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acc4642aba28308b8a32f46/images/LANDSCAPE_169/9378_0bb56d54-8ccc-4ee8-8de6-f1f5a2cd9fc2.png" />
-  </programme>
   <programme channel="TheJungleBook.in" start="20261015074600 +0530" stop="20261015075900 +0530">
     <title lang="en">The Kite Flight</title>
     <desc lang="en">Hathi must escort the young female elephants to the secret Elephant’s Valley</desc>
@@ -143810,13 +143763,6 @@ Bringing the best in television.</desc>
     <rating>
       <value>TV-14</value>
     </rating>
-  </programme>
-  <programme channel="TinyPop.uk" start="20261015015600 +0000" stop="20261015020900 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261015072600/list/TinyPOPCareBearsUnlockTheMagic20569928e0edd7e9bf54678aeb5b3a51126ee1b.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261015020900 +0000" stop="20261015022200 +0000">
     <title lang="en">Care Bears: Unlock The Magic</title>
@@ -193142,17 +193088,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
       <value>AL</value>
     </rating>
   </programme>
-  <programme channel="custom.disney.jr" start="20261015015000 +0000" stop="20261015021500 +0000">
-    <title lang="en">Robogobo: Season 1</title>
-    <desc lang="en">Birthday Bandit, The/ Let's Hear It for Allie!:Booster saves a birthday. Allie saves the day.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/98e6b1e7-daa1-4953-81f0-36a4eb344be2/16-9" />
-    <episode-num system="onscreen">0</episode-num>
-    <rating system="UK">
-      <value>U</value>
-    </rating>
-  </programme>
   <programme channel="custom.disney.jr" start="20261015021500 +0000" stop="20261015023500 +0000">
     <title lang="en">Robogobo: Season 1</title>
     <desc lang="en">Birdbath Blizzard/ Wingo's Way:RoboGobo saves the birds. The Robo-Suits are stolen.</desc>
@@ -196090,36 +196025,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <category lang="en">News</category>
     <category lang="en">Investigation</category>
     <icon src="https://sat.tvhttps://www.sat.tv/wp-content/themes/twentytwenty-child/assets/img/prog-6201.svg" />
-  </programme>
-  <programme start="20261015073800 +0530" stop="20261015074100 +0530" channel="custom.duck.tv">
-    <title>Panni and Fanni</title>
-    <desc>Two happy fairies wave their wands and turn a boring shape into a pair of unique drawings.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/e0b4c6ae0e327b21f2d22680decb7777.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261015074100 +0530" stop="20261015074500 +0530" channel="custom.duck.tv">
-    <title>The World of Animals</title>
-    <desc>The presenter helps children learn about animals and understand the difference between domestic and wild animals.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f04243de7b0a9cd4db5720975fe264bd.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261015074500 +0530" stop="20261015074700 +0530" channel="custom.duck.tv">
-    <title>Beaver Family</title>
-    <desc>A family of beavers struggle to fend for themselves and try to survive each day while facing and overcoming several obstacles.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/c8bdff91c3efbbdc06177a924d7209c0.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
   </programme>
   <programme start="20261015074700 +0530" stop="20261015075000 +0530" channel="custom.duck.tv">
     <title>Didy Baby</title>
@@ -207206,23 +207111,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <icon src="https://images.metadata.sky.com/pd-image/216b99cd-43b2-4ca8-b122-51397a2214a7/16-9" />
     <episode-num system="xmltv_ns">3.10.</episode-num>
   </programme>
-  <programme channel="custom.hbo" start="20261015003500 +0000" stop="20261015021000 +0000">
-    <title lang="en">The Spongebob Movie: Sponge Out Of Water</title>
-    <desc lang="en">SpongeBob travels to our world to locate a burger recipe stolen by a pirate.</desc>
-    <credits>
-      <actor>Tom Kenny</actor>
-      <actor>Antonio Banderas</actor>
-      <actor>Bill Fagerbakke</actor>
-      <director>Paul Tibbitt</director>
-    </credits>
-    <date>2015</date>
-    <category lang="en">Movies</category>
-    <category lang="en">Family</category>
-    <icon src="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch115_160_115" />
-    <rating system="MPAA">
-      <value>PG</value>
-    </rating>
-  </programme>
   <programme channel="custom.hbo" start="20261015021000 +0000" stop="20261015035500 +0000">
     <title lang="en">London Fields</title>
     <desc lang="en">Nicola Six has a dark foreshadowing of her impending murder. But instead of trying to save herself, she seduces three different men - one of whom will be her killer.</desc>
@@ -207823,41 +207711,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <icon src="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch115_160_115" />
     <rating system="MPAA">
       <value>PG</value>
-    </rating>
-  </programme>
-  <programme channel="custom.hbo.2" start="20261015014500 +0000" stop="20261015021700 +0000">
-    <title lang="en">Youth</title>
-    <sub-title lang="en">The Holiday</sub-title>
-    <desc lang="en">Alex finds herself on a couple's holiday in Ibiza with her ex-husband, ex-fling, their new girlfriends and Ruari as her plus one.</desc>
-    <credits>
-      <actor>Sharon Horgan</actor>
-      <actor>Rupert Friend</actor>
-      <actor>Sharlene Whyte</actor>
-      <director>Jim O'Hanlon</director>
-    </credits>
-    <date>2026</date>
-    <category lang="en">Series</category>
-    <category lang="en">Comedy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p33860187_b_h8_aa.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S1 E5</episode-num>
-    <previously-shown />
-    <rating system="Canadian Parental Rating">
-      <value>14+</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVMA</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>A16</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>6</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>13+</value>
-    </rating>
-    <rating system="Dirección General de Radio, Televisión y Cinematografía">
-      <value>B15</value>
     </rating>
   </programme>
   <programme channel="custom.hbo.2" start="20261015021700 +0000" stop="20261015030500 +0000">
@@ -210597,16 +210450,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     </rating>
     <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
       <value>A16</value>
-    </rating>
-  </programme>
-  <programme start="20261015015000 +0000" stop="20261015021500 +0000" channel="custom.hgtv">
-    <title lang="en">Homes Gone Wild</title>
-    <sub-title lang="en">Wild Lies Inside</sub-title>
-    <desc lang="en">Jack tours a mountaintop gem in California that literally brings the outside in.</desc>
-    <icon src="https://www.fetchtv.com.au/v2/epg/program/74666/image/334x188" />
-    <episode-num system="onscreen">S1 E2</episode-num>
-    <rating system="AU">
-      <value>G</value>
     </rating>
   </programme>
   <programme start="20261015021500 +0000" stop="20261015024000 +0000" channel="custom.hgtv">
@@ -215387,11 +215230,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <category lang="en">Specialist</category>
     <category lang="en">Events</category>
   </programme>
-  <programme channel="custom.islam.tv" start="20261015020500 +0000" stop="20261015021000 +0000">
-    <title lang="en">Al Fatihah: Opening</title>
-    <desc lang="en">A serene and uplifting recitation of Surah Al-Fatihah, capturing its beauty, power, and timeless message of guidance, mercy, and spiritual awakening.</desc>
-    <category lang="en">News &amp; Documentary</category>
-  </programme>
   <programme channel="custom.islam.tv" start="20261015021000 +0000" stop="20261015023000 +0000">
     <title lang="en">Live Prayers from Makkah: Fajr</title>
     <desc lang="en">Join Islam Channel as we broadcast live Fajr prayers from Masjid al-Haram Makkah.</desc>
@@ -218922,15 +218760,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <rating>
       <value>TV-PG</value>
     </rating>
-  </programme>
-  <programme start="20261015023000 +0100" stop="20261015031500 +0100" channel="custom.mbc1">
-    <title lang="en">The Best Destiney</title>
-    <desc lang="en">Rakan and Noura arrange a fake, temporary marriage to escape their families' pressure and difficult circumstances, but their plan begins to unravel as complications arise between them and events take an unexpected turn. Gawdat Morgan.</desc>
-    <date>2026</date>
-    <category lang="en">Series</category>
-    <category lang="en">Romance</category>
-    <icon src="https://sat.tvhttps://www.sat.tv/wp-content/themes/twentytwenty-child/assets/img/prog-6203.svg" />
-    <episode-num system="onscreen">E8</episode-num>
   </programme>
   <programme start="20261015031500 +0100" stop="20261015040000 +0100" channel="custom.mbc1">
     <title lang="en">Magic Eye</title>
@@ -251179,15 +251008,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <rating>
       <value>TVG</value>
     </rating>
-  </programme>
-  <programme start="20261015001100 +0000" stop="20261015021400 +0000" channel="plex.tv.AMC.Thrillers.plex">
-    <title lang="en">Perpetrator</title>
-    <desc lang="en">Jonny Baptiste is sent to live with her estranged Aunt Hildie. On her 18th birthday, she experiences a family spell that redefines her, called Forevering. When several girls go missing at school, a feral Jonny hunts the perpetrator.</desc>
-    <date>2023</date>
-    <category lang="en">Horror</category>
-    <category lang="en">Movies</category>
-    <category lang="en">Adrenaline + Sci-Fi</category>
-    <icon src="https://metadata-static.plex.tv/0/gracenote/05ab0ee0d4436d9407d0f6d29fe31ee7.jpg" />
   </programme>
   <programme start="20261015021400 +0000" stop="20261015040900 +0000" channel="plex.tv.AMC.Thrillers.plex">
     <title lang="en">Birth/Rebirth</title>
