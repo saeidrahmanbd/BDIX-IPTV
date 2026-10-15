@@ -15,25 +15,25 @@ Generated from the current playlist and latest available stream-health report. T
 | Metric | Count |
 |---|---:|
 | Streams tested | 1043 |
-| Reachable | 1027 |
-| Failed this check | 16 |
-| Persistent failures (3+ consecutive) | 10 |
+| Reachable | 1023 |
+| Failed this check | 20 |
+| Persistent failures (3+ consecutive) | 9 |
 | HTTP 401/403 (auth) | 6 |
-| HTTP 404 (not found) | 2 |
-| HTTP 5xx (server) | 7 |
+| HTTP 404 (not found) | 8 |
+| HTTP 5xx (server) | 3 |
+| Timeout | 2 |
 
 ### Persistent failures
 
-- **Disney Channel India** — Backup — consecutive failures: **64** — HTTP 403
-- **Goldmines** — Backup — consecutive failures: **4** — HTTP 404
-- **Goldmines** — Backup — consecutive failures: **4** — HTTP 404
-- **SA TV** — Backup — consecutive failures: **4** — HTTP 500
-- **Shanson TV** — Backup — consecutive failures: **4** — HTTP 403
-- **Assam Talks** — Indian Entertainment — consecutive failures: **198** — HTTP 403
-- **Cook & Bake** — International — consecutive failures: **4** — HTTP 504
-- **HBO** — International — consecutive failures: **186** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **4** — HTTP 403
-- **Teen Nick** — Kids — consecutive failures: **64** — HTTP 403
+- **Disney Channel India** — Backup — consecutive failures: **66** — HTTP 403
+- **Goldmines** — Backup — consecutive failures: **6** — HTTP 404
+- **Goldmines** — Backup — consecutive failures: **6** — HTTP 404
+- **Shanson TV** — Backup — consecutive failures: **6** — HTTP 403
+- **Assam Talks** — Indian Entertainment — consecutive failures: **200** — HTTP 403
+- **Cook & Bake** — International — consecutive failures: **6** — HTTP 504
+- **HBO** — International — consecutive failures: **188** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **6** — HTTP 403
+- **Teen Nick** — Kids — consecutive failures: **66** — HTTP 403
 
 ## /streamtest/ Endpoints
 

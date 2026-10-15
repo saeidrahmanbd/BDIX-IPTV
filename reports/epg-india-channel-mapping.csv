@@ -20,6 +20,7 @@ Bangladesh,Channel 24,Channel24.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambigu
 Bangladesh,Channel 9,Channel9.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel I,ChannelI.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel S,ChannelS.uk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Bangladesh,Channel S UK,custom.channel.s.uk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,DBC News,DBCNews.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Deepto TV,DeeptoTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Desh TV,DeshTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -603,7 +604,7 @@ Kids,Tom and Jerry,TomAndJerry.do,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguo
 Kids,Tooku,Tooku.ru,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Toon Goggles,ToonGoggles.us,INBA4900026FJ,https://i.mjh.nz/SamsungTVPlus/in.xml | https://i.mjh.nz/SamsungTVPlus/us.xml | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | https://iptv-epg.org/files/epg-us.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Toon Goggles Junior,custom.toon.goggles.junior,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Kids,Toonami Aftermath East,custom.toonami.aftermath.east,ToonamiAftermath.us,https://iptv-epg.org/files/epg-us.xml.gz,MAPPED_ENDED,Auto-maintained; verify ambiguous/name matches manually.
+Kids,Toonami Aftermath East,custom.toonami.aftermath.east,ToonamiAftermath.us,https://iptv-epg.org/files/epg-us.xml.gz,MAPPED_ID_ONLY,Auto-maintained; verify ambiguous/name matches manually.
 Kids,WOW Kidz Hindi,WOWKidz.in@Hindi,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,WOW Kidz Tamil,custom.wow.kidz.tamil,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,WOW Kidz Telugu,WOWKidz.in@Telugu,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.

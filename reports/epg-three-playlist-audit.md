@@ -1,19 +1,19 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-10-15T06:33:08+00:00**
+Generated: **2026-10-15T07:18:24+00:00**
 
 This report measures the two M3U files currently published at the repository root. The historic filename epg-three-playlist-audit.md is retained for link compatibility; it does not mean a third playlist file exists.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1043 | 634 | 403 | 378 | 403 | 378 | 231 | OK |
+| IPTV-Playlist.m3u | 1043 | 635 | 403 | 378 | 403 | 378 | 232 | OK |
 | BDIX-Playlist.m3u | 139 | 131 | 75 | 75 | 75 | 75 | 56 | OK |
 
 ## Group coverage
 
 | Group | Active unique IDs | Mapped IDs | Current/future source schedules | No mapping |
 |---|---:|---:|---:|---:|
-| Bangladesh | 66 | 1 | 1 | 65 |
+| Bangladesh | 67 | 1 | 1 | 66 |
 | Documentary & Wildlife | 69 | 56 | 56 | 13 |
 | Indian Bangla | 46 | 34 | 32 | 12 |
 | Indian Entertainment | 141 | 121 | 115 | 20 |

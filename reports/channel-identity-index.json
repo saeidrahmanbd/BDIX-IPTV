@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-15T06:33:30+00:00",
+  "generated": "2026-10-15T07:18:53+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -928,8 +928,7 @@
     },
     "channels": {
       "names": [
-        "Channel S",
-        "Channel S UK"
+        "Channel S"
       ],
       "ids": [
         "channels.uk"
@@ -938,9 +937,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 5,
+      "streams": 4,
       "primary": 1,
-      "backup": 4
+      "backup": 3
     },
     "choppertown": {
       "names": [
@@ -1593,6 +1592,20 @@
       "streams": 1,
       "primary": 0,
       "backup": 1
+    },
+    "custom.channel.s": {
+      "names": [
+        "Channel S UK"
+      ],
+      "ids": [
+        "custom.channel.s.uk"
+      ],
+      "groups": [
+        "Bangladesh"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "custom.classicmovies": {
       "names": [

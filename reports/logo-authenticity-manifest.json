@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-15T06:26:48.356990+00:00",
+  "generated_at_utc": "2026-10-15T07:11:12.453867+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -187,6 +187,16 @@
       "channel_name": "Channel S",
       "tvg_id": "ChannelS.uk",
       "channel_id": "ChannelS.uk",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Channel S UK",
+      "tvg_id": "custom.channel.s.uk",
+      "channel_id": "custom.channel.s.uk",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png",
       "status": "needs_review",
       "source_url": "",
@@ -3857,7 +3867,7 @@
       "channel_name": "Classic Movies",
       "tvg_id": "custom.classicmovies",
       "channel_id": "custom.classicmovies",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/classic-movies-27994c39.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/classic-movies-channel-1d5f82d98a.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -7365,16 +7375,6 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Channel S",
-      "tvg_id": "ChannelS.uk",
-      "channel_id": "ChannelS.uk",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Channel S UK",
       "tvg_id": "ChannelS.uk",
       "channel_id": "ChannelS.uk",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png",

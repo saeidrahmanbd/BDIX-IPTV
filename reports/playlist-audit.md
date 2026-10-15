@@ -1,12 +1,12 @@
 # Playlist Audit
-Generated: **2026-10-15T06:33:30.071658+00:00**
+Generated: **2026-10-15T07:18:52.929612+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
 - Playlist entries: **1043**
-- Unique channel IDs: **640**
+- Unique channel IDs: **641**
 - IDs with multiple streams: **147**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -14,14 +14,14 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions: **1**
+- Logo exceptions: **0**
 - Logo references checked: **1043**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
-- Category block-order issues: **12**
-- Alphabetical ordering issues: **9**
+- Category block-order issues: **0**
+- Alphabetical ordering issues: **0**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **9**
 - Embedded Xtream-style credential paths (redacted): **8**
@@ -151,9 +151,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Channel I — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-i-hd-1/index.m3u8
 - Channel I — Backup — https://tvsen3.b-cdn.net/qUud8Nxs/index.m3u8
 - Channel I — Backup — https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/tracks-v1a1/mono.ts.m3u8
-### channels.uk (5 streams)
+### channels.uk (4 streams)
 - Channel S — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8
-- Channel S UK — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8
 - Channel S — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channels.stream/index.m3u8
 - Channel S — Backup — https://app.ncare.live/live-orgin/channels.stream/live-orgin/channels.stream/chunks.m3u8
 - Channel S — Backup — https://iptvlive.ahmed-bd-org.workers.dev/channel-s-1/index.m3u8
@@ -499,9 +498,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - RT Documentary — Backup — https://rt-rtd.rttv.com/dvr/rtdoc/playlist.m3u8
 ### rtv.bd (5 streams)
 - RTV — Bangladesh — https://tvsen5.aynaott.com/RtvHD/index.m3u8
-- RTV — Backup — http://tvsen5.aynascope.net/RtvHD/index.m3u8
 - RTV — Backup — http://116.204.149.16/rtvhd/index.m3u8
 - RTV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/rtv-sg.stream/index.m3u8
+- RTV — Backup — http://tvsen5.aynascope.net/RtvHD/index.m3u8
 - RTV — Backup — https://tvsen5.aynaott.com/ba47dHpDk3Se/index.m3u8
 ### rupasibangla.in@sd (3 streams)
 - Ruposhi Bangla — Indian Bangla — https://mumt05.tangotv.in/87NeALx2RUPASIBANGLA/index.m3u8
@@ -575,8 +574,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - U Bangla — Indian Bangla — https://stream.ottlive.co.in/ubangla/index.m3u8
 - U Bangla — Backup — https://stream.ottlive.co.in/ubangla/tracks-v1a1/mono.m3u8
 ### ultimatetv.in@sd (2 streams)
-- Ultimate TV — Backup — https://mumbai-edge.smartplaytv.in/utv/index.m3u8
 - Ultimate TV — Indian Music — https://stream.ottlive.co.in/utvtamil/index.m3u8
+- Ultimate TV — Backup — https://mumbai-edge.smartplaytv.in/utv/index.m3u8
 ### vanithatv.in@sd (2 streams)
 - Vanitha TV — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3VANITHA/index.m3u8
 - Vanitha TV — Backup — https://cdn.pishow.tv/ott/live/393/master.m3u8
@@ -626,27 +625,8 @@ None.
 
 ## Ordering
 
-- category block **Bangladesh** — out of canonical block order
-- category block **Indian Bangla** — out of canonical block order
-- category block **Indian Movies** — out of canonical block order
-- category block **Indian Movies** — out of canonical block order
-- category block **Indian Music** — out of canonical block order
-- category block **Indian Entertainment** — out of canonical block order
-- category block **Pakistani** — out of canonical block order
-- category block **International** — out of canonical block order
-- category block **Documentary & Wildlife** — out of canonical block order
-- category block **Kids** — out of canonical block order
-- category block **Religious** — out of canonical block order
-- category block **Sports** — out of canonical block order
-- **Bangladesh** — **Channel 9** appears after **Channel 24**
-- **Backup** — **&TV** appears after **Ultimate TV**
-- **Backup** — **7S Music** appears after **&TV**
-- **Bangladesh** — **Channel 9** appears after **Channel 24**
-- **Backup** — **&TV** appears after **Ultimate TV**
-- **Backup** — **7S Music** appears after **&TV**
-- **International** — **4ever Cinema** appears after **24 Hour Free Movies**
-- **Backup** — **&TV** appears after **Ultimate TV**
-- **Backup** — **7S Music** appears after **&TV**
+Category block order: OK.
+Alphabetical order: OK.
 
 ## Suspicious URLs
 
@@ -772,16 +752,15 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1042**
+- Healthy/local references: **1043**
 - missing: **0**
 - broken-local: **0**
 - external: **0**
 - non-png: **0**
-- invalid-dimensions: **1**
+- invalid-dimensions: **0**
 - corrupt-image: **0**
 - unvalidated-image: **0**
 - other: **0**
-- invalid-dimensions — Classic Movies [custom.classicmovies] — https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/classic-movies-27994c39.png
 
 ## Protected Primary Entries
 
