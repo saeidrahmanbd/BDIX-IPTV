@@ -64,6 +64,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             git clean -fd
+            cp BDIX-Playlist.m3u /tmp/bdix-playlist-protected.m3u
             cp epg/epg.xml /tmp/bdix-epg-previous.xml 2>/dev/null || true
             python scripts/repair_iptv_audit_findings.py
             python scripts/repair_playlist_quality.py
@@ -124,6 +125,7 @@ jobs:
             python scripts/record_maintenance_history.py --refresh
             python scripts/generate_dashboard.py
             cp /tmp/bdix-epg-publish.xml epg/epg.xml
+            cp /tmp/bdix-playlist-protected.m3u BDIX-Playlist.m3u
             test -s epg/epg.xml
             grep -q '<programme ' epg/epg.xml
             echo "Validated EPG working-tree bytes: $(wc -c < epg/epg.xml)"
