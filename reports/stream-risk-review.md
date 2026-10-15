@@ -15,26 +15,27 @@ Generated from the current playlist and latest available stream-health report. T
 | Metric | Count |
 |---|---:|
 | Streams tested | 1037 |
-| Reachable | 1019 |
-| Failed this check | 18 |
-| Persistent failures (3+ consecutive) | 10 |
+| Reachable | 1009 |
+| Failed this check | 28 |
+| Persistent failures (3+ consecutive) | 11 |
 | HTTP 401/403 (auth) | 6 |
-| HTTP 404 (not found) | 2 |
-| HTTP 5xx (server) | 9 |
-| Timeout | 1 |
+| HTTP 404 (not found) | 11 |
+| HTTP 5xx (server) | 5 |
+| Timeout | 5 |
 
 ### Persistent failures
 
-- **Ananda TV** — Backup — consecutive failures: **3** — HTTP 404
-- **Disney Channel India** — Backup — consecutive failures: **75** — HTTP 403
-- **Channel 16** — Bangladesh — consecutive failures: **11** — HTTP 500
-- **Assam Talks** — Indian Entertainment — consecutive failures: **209** — HTTP 403
-- **Oli TV** — Indian Entertainment — consecutive failures: **3** — Timeout
-- **Suriyan TV** — Indian Entertainment — consecutive failures: **3** — HTTP 523
-- **Cook & Bake** — International — consecutive failures: **15** — HTTP 504
-- **HBO** — International — consecutive failures: **197** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **15** — HTTP 403
-- **Teen Nick** — Kids — consecutive failures: **75** — HTTP 403
+- **Ananda TV** — Backup — consecutive failures: **4** — HTTP 404
+- **Disney Channel India** — Backup — consecutive failures: **76** — HTTP 403
+- **Shanson TV** — Backup — consecutive failures: **3** — HTTP 403
+- **Channel 16** — Bangladesh — consecutive failures: **12** — HTTP 404
+- **Assam Talks** — Indian Entertainment — consecutive failures: **210** — HTTP 403
+- **Oli TV** — Indian Entertainment — consecutive failures: **4** — Timeout
+- **Suriyan TV** — Indian Entertainment — consecutive failures: **4** — HTTP 523
+- **Cook & Bake** — International — consecutive failures: **16** — HTTP 504
+- **HBO** — International — consecutive failures: **198** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **16** — HTTP 403
+- **Teen Nick** — Kids — consecutive failures: **76** — HTTP 403
 
 ## /streamtest/ Endpoints
 
