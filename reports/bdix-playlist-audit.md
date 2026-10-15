@@ -1,23 +1,23 @@
 # BDIX Playlist Audit
 
-Generated: **2026-10-15T06:43:42+00:00**
+Generated: **2026-10-15T07:10:39+00:00**
 
 ## Summary
 
 - Playlist: **BDIX-Playlist.m3u**
-- Total entries: **0**
-- Unique stream URLs: **0**
-- Unique channel identities: **0**
+- Total entries: **139**
+- Unique stream URLs: **139**
+- Unique channel identities: **131**
 - Duplicate stream URLs: **0**
-- Duplicate channel identities: **0**
+- Duplicate channel identities: **8**
 - Missing channel IDs: **0**
 - Missing channel numbers: **0**
 - Missing logos: **0**
 - Malformed entries: **0**
 - Unknown categories: **0**
-- Streams tested: **0**
+- Streams tested: **139**
 - Reachable: **0**
-- Failed: **0**
+- Failed: **139**
 
 ## Protection Policy
 
@@ -26,18 +26,18 @@ Safe metadata repairs made: **0**
 
 ## Categories
 
-- Bangladesh: **0**
-- Indian Bangla: **0**
-- Indian Movies: **0**
-- Indian Music: **0**
-- Indian Entertainment: **0**
-- Pakistani: **0**
-- International: **0**
-- Documentary & Wildlife: **0**
-- Kids: **0**
-- Religious: **0**
-- Sports: **0**
-- Test: **0**
+- Bangladesh: **41**
+- Indian Bangla: **17**
+- Indian Movies: **8**
+- Indian Music: **8**
+- Indian Entertainment: **10**
+- Pakistani: **1**
+- International: **9**
+- Documentary & Wildlife: **9**
+- Kids: **5**
+- Religious: **5**
+- Sports: **18**
+- Test: **8**
 
 ## Duplicate Stream URLs
 
@@ -45,7 +45,14 @@ None.
 
 ## Duplicate Channel Identities
 
-None.
+- dbcnews.bd: Bangla Vision, DBC News
+- deshtv.bd: Bangla Vision, Desh TV
+- ekattortv.bd: Bangla Vision, Ekattor TV
+- jamunatv.bd: Jamuna TV
+- news24.bd: Bangla Vision, News 24
+- starplus.in@sd: Star Plus
+- tsports.bd: T Sports
+- zeebangla.in@hd: Zee Bangla
 
 ## Missing Metadata
 
