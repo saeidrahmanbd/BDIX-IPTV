@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-15T07:41:21.845279+00:00",
+  "generated_at_utc": "2026-10-15T08:04:47.399717+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -7,10 +7,10 @@
     "needs_review": "Authenticity is undocumented, or the logo is missing."
   },
   "counts_by_playlist": {
-    "IPTV-Playlist.m3u": 1043,
+    "IPTV-Playlist.m3u": 1037,
     "BDIX-Playlist.m3u": 139
   },
-  "entry_count": 1182,
+  "entry_count": 1176,
   "entries": [
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -58,6 +58,16 @@
       "tvg_id": "ATNNews.bd",
       "channel_id": "ATNNews.bd",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-atn-news-e0442addb4.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Baiscope TV",
+      "tvg_id": "custom.baiscope.tv",
+      "channel_id": "custom.baiscope.tv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/baiscope-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -298,16 +308,6 @@
       "tvg_id": "custom.enter.tv",
       "channel_id": "custom.enter.tv",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter-tv.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "G Series Drama",
-      "tvg_id": "custom.gseriesdrama",
-      "channel_id": "custom.gseriesdrama",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/g-series-drama.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -675,8 +675,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Channel 52",
-      "tvg_id": "staging.channel.52",
-      "channel_id": "staging.channel.52",
+      "tvg_id": "custom.channel.52",
+      "channel_id": "custom.channel.52",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-52.png",
       "status": "needs_review",
       "source_url": "",
@@ -1158,16 +1158,6 @@
       "tvg_id": "GoldminesMovies.in@SD",
       "channel_id": "GoldminesMovies.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines-movies.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Hindi Movie Classic 24",
-      "tvg_id": "new.hindi.movie.classic.24",
-      "channel_id": "new.hindi.movie.classic.24",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hindi-movie-classic-24.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -2165,19 +2155,9 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Assam Talks",
-      "tvg_id": "staging.assam.talks",
-      "channel_id": "staging.assam.talks",
+      "tvg_id": "custom.assam.talks",
+      "channel_id": "custom.assam.talks",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/assam-talks.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Baiscope TV",
-      "tvg_id": "custom.baiscope.tv",
-      "channel_id": "custom.baiscope.tv",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/baiscope-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -2874,7 +2854,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "NTV (Malyalam)",
+      "channel_name": "NTV (Malayalam)",
       "tvg_id": "custom.ntv.malayalam",
       "channel_id": "custom.ntv.malayalam",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png",
@@ -5995,8 +5975,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Islam TV",
-      "tvg_id": "staging.islam.tv",
-      "channel_id": "staging.islam.tv",
+      "tvg_id": "custom.islam.tv",
+      "channel_id": "custom.islam.tv",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/islam-tv.png",
       "status": "needs_review",
       "source_url": "",
@@ -6854,26 +6834,6 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "B4U Movies",
-      "tvg_id": "B4UMovies.in@India",
-      "channel_id": "B4UMovies.in@India",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "B4U Movies",
-      "tvg_id": "B4UMovies.in@India",
-      "channel_id": "B4UMovies.in@India",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "B4U Music",
       "tvg_id": "B4UMusic.in@India",
       "channel_id": "B4UMusic.in@India",
@@ -7155,8 +7115,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "BTV National",
-      "tvg_id": "custom.btvnational",
-      "channel_id": "custom.btvnational",
+      "tvg_id": "custom.btv.national",
+      "channel_id": "custom.btv.national",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-national-2db28e10.png",
       "status": "needs_review",
       "source_url": "",
@@ -7285,8 +7245,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Channel 52",
-      "tvg_id": "staging.channel.52",
-      "channel_id": "staging.channel.52",
+      "tvg_id": "custom.channel.52",
+      "channel_id": "custom.channel.52",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-52.png",
       "status": "needs_review",
       "source_url": "",
@@ -7764,16 +7724,6 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Deepto TV",
-      "tvg_id": "DeeptoTV.bd",
-      "channel_id": "DeeptoTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deepto-tv.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Deewana",
       "tvg_id": "DeewanaHD.in",
       "channel_id": "DeewanaHD.in",
@@ -7875,8 +7825,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Duronto TV",
-      "tvg_id": "custom.durontotv",
-      "channel_id": "custom.durontotv",
+      "tvg_id": "custom.duronto.tv",
+      "channel_id": "custom.duronto.tv",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-duronto-tv-2b3c7dd202.png",
       "status": "needs_review",
       "source_url": "",
@@ -7895,8 +7845,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Duronto TV",
-      "tvg_id": "custom.durontotv",
-      "channel_id": "custom.durontotv",
+      "tvg_id": "custom.duronto.tv",
+      "channel_id": "custom.duronto.tv",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-duronto-tv-2b3c7dd202.png",
       "status": "needs_review",
       "source_url": "",
@@ -8184,6 +8134,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Filamchi",
+      "tvg_id": "custom.filamchi",
+      "channel_id": "custom.filamchi",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Food Food",
       "tvg_id": "FoodFood.in@SD",
       "channel_id": "FoodFood.in@SD",
@@ -8198,16 +8158,6 @@
       "tvg_id": "custom.food.network",
       "channel_id": "custom.food.network",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/food-network.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "G Series Drama",
-      "tvg_id": "custom.gseriesdrama",
-      "channel_id": "custom.gseriesdrama",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/g-series-drama.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -8834,6 +8784,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Manoranjan Grand",
+      "tvg_id": "custom.manoranjan.grand",
+      "channel_id": "custom.manoranjan.grand",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-movies.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Manoranjan Movies",
       "tvg_id": "ManoranjanMovies.in@SD",
       "channel_id": "ManoranjanMovies.in@SD",
@@ -9265,8 +9225,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Nick Jr",
-      "tvg_id": "custom.nickjr",
-      "channel_id": "custom.nickjr",
+      "tvg_id": "custom.nick.jr",
+      "channel_id": "custom.nick.jr",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png",
       "status": "needs_review",
       "source_url": "",
@@ -9985,8 +9945,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Star Gold",
-      "tvg_id": "custom.stargold",
-      "channel_id": "custom.stargold",
+      "tvg_id": "custom.star.gold",
+      "channel_id": "custom.star.gold",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-star-gold-2d8d66200b.png",
       "status": "needs_review",
       "source_url": "",
@@ -10025,8 +9985,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Star Movies",
-      "tvg_id": "custom.starmovies",
-      "channel_id": "custom.starmovies",
+      "tvg_id": "custom.star.movies",
+      "channel_id": "custom.star.movies",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-movies-2087bb49.png",
       "status": "needs_review",
       "source_url": "",
@@ -10408,26 +10368,6 @@
       "tvg_id": "ZeeTV.in@SD",
       "channel_id": "ZeeTV.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Zoom Music",
-      "tvg_id": "custom.zoommusic",
-      "channel_id": "custom.zoommusic",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-music.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Zoom Music",
-      "tvg_id": "custom.zoommusic",
-      "channel_id": "custom.zoommusic",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-music.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."

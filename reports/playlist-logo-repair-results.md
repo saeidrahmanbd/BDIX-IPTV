@@ -1,6 +1,6 @@
 # Three-Playlist Logo Repair Results
 
-Run time: **2026-10-15 07:41 UTC**  
+Run time: **2026-10-15 08:04 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -10,14 +10,14 @@ Historical mapping index: loaded 336 historical name mappings
 | Playlist | Entries | References changed | Generated fallbacks | Missing after | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|
 | BDIX-Playlist.m3u | 139 | 0 | 0 | 0 | 0 | 0 |
-| IPTV-Playlist.m3u | 1043 | 2 | 2 | 0 | 0 | 0 |
+| IPTV-Playlist.m3u | 1037 | 2 | 2 | 0 | 0 | 0 |
 
 ## Repair log
 
 | Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
 |---|---:|---|---|---|---|---|---|
-| IPTV-Playlist.m3u | 787 | Cook & Bake | generated-fallback-cook-and-bake-00755d7b.svg | generated-fallback-cook-and-bake-00755d7b.svg | Generated channel-specific fallback | Original generated artwork; not an official broadcaster logo | fallback installed; exact clean original not found |
-| IPTV-Playlist.m3u | 963 | Vevo '70s & '80s | generated-fallback-vevo-70s-and-80s-34700aa0.svg | generated-fallback-vevo-70s-and-80s-34700aa0.svg | Generated channel-specific fallback | Original generated artwork; not an official broadcaster logo | fallback installed; exact clean original not found |
+| IPTV-Playlist.m3u | 783 | Cook & Bake | generated-fallback-cook-and-bake-00755d7b.svg | generated-fallback-cook-and-bake-00755d7b.svg | Generated channel-specific fallback | Original generated artwork; not an official broadcaster logo | fallback installed; exact clean original not found |
+| IPTV-Playlist.m3u | 959 | Vevo '70s & '80s | generated-fallback-vevo-70s-and-80s-34700aa0.svg | generated-fallback-vevo-70s-and-80s-34700aa0.svg | Generated channel-specific fallback | Original generated artwork; not an official broadcaster logo | fallback installed; exact clean original not found |
 
 ## Quality rule
 
