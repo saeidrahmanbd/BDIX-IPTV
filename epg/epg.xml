@@ -17310,16 +17310,6 @@ Join Hogi and Forest as they become doctors and heal their friends!</desc>
   <programme start="20261019230000 +0800" stop="20261019233000 +0800" channel="CGTNDocumentary.cn">
     <title lang="en">Humanities and Geography (?)</title>
   </programme>
-  <programme channel="CartoonNetwork.uk" start="20261015085000 +0530" stop="20261015092000 +0530">
-    <title lang="en">Larva Family</title>
-    <desc lang="en">Red and Yellow get a crash course in parenting when they take in a newborn caterpillar. They must learn to care for it.</desc>
-    <credits>
-      <producer>Kwang-Yong Kim</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p24501841_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="CartoonNetwork.uk" start="20261015092000 +0530" stop="20261015094000 +0530">
     <title lang="en">Larva</title>
     <desc lang="en">Two curious little worms explore the objects that they daily come across in their world which is located under the ground.</desc>
@@ -17624,15 +17614,6 @@ Join Hogi and Forest as they become doctors and heal their friends!</desc>
     <category lang="en">Children</category>
     <category lang="en">Animation</category>
     <icon src="https://dtil.tmsimg.com/assets/p24501841_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme start="20261015032200 +0000" stop="20261015034800 +0000" channel="Choppertown.us">
-    <category lang="en">Food + Home + Culture</category>
-    <date>2013</date>
-    <desc lang="en">S11 E7 — Sugardaddy Shakedown
-The team wonders what's up with Sonia as she wrestles with Lou's big secret.</desc>
-    <episode-num>S11 E7</episode-num>
-    <icon src="https://iptv-epg.org/images/R4LWUq0s9gJIU-eVvgw40r90-qXpr6QKtRIdfr0YHDFKtUFP8x_9ejq80NGHB6ap64BNzZJwVf2KM_ueP1HgWxE5qFSmGJsg6e-cOxMO26o3a6N9xkcunArrq8odV4e0yNCdpio6oc5g__RAFJdt1JdV_QR8XyeQybBdblIEwQ1zVH-0Dmcil6WaMhowL-Iu3lG5TPRwx-U1AbYP7OZb6Xzpy7hW" />
-    <title lang="en">Operation Repo</title>
   </programme>
   <programme start="20261015034800 +0000" stop="20261015041500 +0000" channel="Choppertown.us">
     <category lang="en">Food + Home + Culture</category>
@@ -24804,13 +24785,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category lang="en">Sport</category>
     <category lang="en">Talk Show</category>
     <icon src="https://dtil.tmsimg.com/assets/p28933290_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="DDAssam.in@SD" start="20261015090000 +0530" stop="20261015091500 +0530">
-    <title>Batori</title>
-    <desc>The host provides in-depth insights into the latest news, current affairs and key developments on a range of topics of national and global interest.</desc>
-    <category>News</category>
-    <category>News Bulletin</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28931046_b_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="DDAssam.in@SD" start="20261015091500 +0530" stop="20261015093000 +0530">
     <title>Jilmiliakomal Bali</title>
@@ -35047,14 +35021,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category lang="en">Sport</category>
     <icon src="https://dtil.tmsimg.com/assets/p27199374_b_h9_ab.jpg?lock=880x660" />
   </programme>
-  <programme channel="DDTamil.in@SD" start="20261015090500 +0530" stop="20261015092000 +0530">
-    <title lang="en">Naveena Maruthuvam</title>
-    <desc lang="en">This is TV Show - Entertainment Category.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p33466935_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E107</episode-num>
-  </programme>
   <programme channel="DDTamil.in@SD" start="20261015092000 +0530" stop="20261015093000 +0530">
     <title lang="en">Isaiyum Iraiarulum</title>
     <desc lang="en">The host sheds light on the grand celebration of the Panguni festival comprising sixty-three ceremonial rituals and a grand procession.</desc>
@@ -36449,10 +36415,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category lang="en">News</category>
     <category lang="en">News Bulletin</category>
     <icon src="https://dtil.tmsimg.com/assets/p29341237_b_h9_ab.jpg?lock=880x660" />
-  </programme>
-  <programme start="20261015030000 +0000" stop="20261015034500 +0000" channel="DDUttarPradesh.in@SD" catchup-id="100237586">
-    <title>Namaste UP</title>
-    <desc>The host presents the latest updates and stories of the day from across Uttar Pradesh.</desc>
   </programme>
   <programme start="20261015034500 +0000" stop="20261015040000 +0000" channel="DDUttarPradesh.in@SD" catchup-id="100237573">
     <title>Gumsuda</title>
@@ -44024,23 +43986,6 @@ Highlights of all the action from international cricket tournaments, where teams
     <category lang="en">Events/Festivals</category>
     <icon src="https://dtil.tmsimg.com/assets/p8354064_b_h9_ax.jpg?lock=880x660" />
     <episode-num system="onscreen">S10 E11</episode-num>
-  </programme>
-  <programme channel="DiscoveryKids.au" start="20261015085600 +0530" stop="20261015092300 +0530">
-    <title lang="en">Titoo</title>
-    <desc lang="en">Titoo causes a water crisis in his entire building after turning off the water pump. So, his parents tell him to ask before doing anything but soon get annoyed when he asks too many questions.</desc>
-    <credits>
-      <actor>Harsh Joshi</actor>
-      <director>Karun Raj Kalathil</director>
-      <director>Dheeraj Berry</director>
-      <producer>Anish Mehta</producer>
-      <producer>Manish Mehta</producer>
-      <producer>Devdatta D Waghmare</producer>
-      <producer>Devdatta Potnis</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26974808_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E7</episode-num>
   </programme>
   <programme channel="DiscoveryKids.au" start="20261015092300 +0530" stop="20261015093600 +0530">
     <title lang="en">Titoo</title>
@@ -53788,17 +53733,6 @@ From TDECU Stadium in Houston.</desc>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800011-20261021235800/list/GreatMoviesIDoOrDieAKillerArrangement2102295987cbcf503b047908aae91b0a811c0af.jpg" />
   </programme>
-  <programme channel="GREATromance.uk" start="20261015022500 +0000" stop="20261015035000 +0000">
-    <title lang="en">Christmas in the Highlands</title>
-    <desc lang="en">Fragrant Christmas romance with Brooke Burfitt and Dan Jeannotte. When her demanding boss sends her to Scotland to source a rare perfume, will a New York executive also find love in the air.</desc>
-    <date>2019</date>
-    <category lang="en">Movie</category>
-    <category lang="en">Romance</category>
-    <icon src="https://images.metadata.sky.com/pd-image/da4289ff-c393-4f11-8cca-aac817b83b3c/16-9" />
-    <rating system="UK">
-      <value>PG</value>
-    </rating>
-  </programme>
   <programme channel="GREATromance.uk" start="20261015035000 +0000" stop="20261015040000 +0000">
     <title lang="en">Good News on GREAT! Extra</title>
     <desc lang="en">Heartwarming good news stories from the UK and beyond.</desc>
@@ -56620,26 +56554,6 @@ From TDECU Stadium in Houston.</desc>
     <icon src="https://iptv-epg.org/images/AMG1CSBNz8zqSawV3gEWP8IWhWD00eOgKk7P44YN55swTqmLqW3IZSqObiV61cKPuNxrmeMZGRq_kpiQ1I06KwUVdBwrg1lZ3pjUEx1_3fdFrDou2rvephB-XBY" />
     <title lang="en">Movie</title>
   </programme>
-  <programme channel="GoldminesBollywood.in@SD" start="20261015064900 +0530" stop="20261015091800 +0530">
-    <title>Chandaal</title>
-    <desc>Indrajeet, an honest police inspector, gets framed for the murder of his family by a local don. However, things take a turn for the better when he falls for a journalist who proves his innocence.</desc>
-    <category>Film</category>
-    <category>Drama</category>
-    <date>1998</date>
-    <credits>
-      <director>T.L.V. Prasad</director>
-      <actor>Hemant Birje</actor>
-      <actor>Mithun Chakravarty</actor>
-      <actor>Govardhan Asrani</actor>
-      <actor>Avtar Gill</actor>
-      <actor>Puneet Issar</actor>
-      <actor>Rami Reddy</actor>
-      <actor>Jack Gaud</actor>
-      <actor>Pinky Chinoy</actor>
-      <producer>Rajiv Babbar</producer>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p10173631_b_h10_ac.jpg?lock=1280x720" />
-  </programme>
   <programme channel="GoldminesBollywood.in@SD" start="20261015091800 +0530" stop="20261015115300 +0530">
     <title>Angrakshak</title>
     <desc>A wealthy politician hires Ajay as a bodyguard for his daughter, Priya. However, when Priya gets kidnapped and a dead body is found, Ajay sets out to find the truth.</desc>
@@ -58722,15 +58636,6 @@ From TDECU Stadium in Houston.</desc>
     <rating system="US">
       <value>NR</value>
     </rating>
-  </programme>
-  <programme start="20261015085800 +0530" stop="20261015092100 +0530" channel="HistoryTV18.in@SD">
-    <title lang="en-GB">India: Marvels \u0026 Mysteries With William Dalrymple</title>
-    <sub-title lang="en-GB">Rani Udaymati and Mughal empress Noor Jahan are two powerful queens of India who built iconic structures that remarkably stood the test of time</sub-title>
-    <desc lang="en-GB">The host, William Dalrymple, travels across India to uncover previously unknown information about its ancient civilisation.</desc>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/c00da14301b904fbaf6fa455e2c66ae2.jpg" />
-    <episode-num system="onscreen">E5</episode-num>
-    <premiere />
   </programme>
   <programme start="20261015092100 +0530" stop="20261015100500 +0530" channel="HistoryTV18.in@SD">
     <title lang="en-GB">Storage Wars</title>
@@ -82365,12 +82270,6 @@ Victoria calls on "Catfish" to help her meet the man that she's been chatting wi
     <title lang="en">MAHAA MAX</title>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MAHAA_MAX/images/LANDSCAPE_169/LANDSCAPE_169_0fGb8fBk7_MAHAA-MAX_264x144.webp" />
   </programme>
-  <programme channel="ManoranjanMovies.in@SD" start="20261015090400 +0530" stop="20261015091500 +0530">
-    <title>Punjabi Hits</title>
-    <desc>A comprehensive compilation of Punjabi songs performed by prominent artists is played back to back to captivate the audience.</desc>
-    <category>Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p12007217_b_h8_aa.jpg?lock=1280x720" />
-  </programme>
   <programme channel="ManoranjanMovies.in@SD" start="20261015091500 +0530" stop="20261015121100 +0530">
     <title>Filler</title>
     <desc>Bringing the best in television.</desc>
@@ -87951,18 +87850,6 @@ Victoria calls on "Catfish" to help her meet the man that she's been chatting wi
     <icon src="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/US_USQT620324A_535726451_0_20231201T002359135Z_104.jpeg" />
     <rating>
       <value>TV-MA</value>
-    </rating>
-  </programme>
-  <programme start="20261015025600 +0000" stop="20261015034700 +0000" channel="Mythbusters.us">
-    <title lang="en">MythBusters</title>
-    <sub-title lang="en">Alaska Special</sub-title>
-    <desc lang="en">Alaska provides an ideal habitat to test some Alaskan anecdotes.</desc>
-    <date>2008</date>
-    <category lang="en">Explore</category>
-    <icon src="https://image.tmdb.org/t/p/original/h7jXOM5tWVr1GeuKbT0pSNYZJK2.jpg" />
-    <episode-num system="onscreen">S6 E1</episode-num>
-    <rating system="US">
-      <value>TV-PG</value>
     </rating>
   </programme>
   <programme start="20261015034700 +0000" stop="20261015043600 +0000" channel="Mythbusters.us">
@@ -96044,13 +95931,6 @@ Shalini lives in America but desires to relocate to India. Meanwhile, a girl fro
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p21135823_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="PTCPunjabi.in@SD" start="20261015090000 +0530" stop="20261015091500 +0530">
-    <title lang="en">Gurmat Gyan</title>
-    <desc lang="en">Famous gurus provide insight and knowledge from their daily teachings to help improve people's lives in many different ways.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p7945998_b_h9_ab.jpg?lock=880x660" />
-  </programme>
   <programme channel="PTCPunjabi.in@SD" start="20261015091500 +0530" stop="20261015093000 +0530">
     <title lang="en">Simran/Song</title>
     <desc lang="en">This is TV Show - Religious Category.</desc>
@@ -99085,13 +98965,6 @@ Bringing the best in television.</desc>
     <category lang="en">Children</category>
     <category lang="en">Animation</category>
     <icon src="https://dtil.tmsimg.com/assets/p13003425_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="PolimerTV.in@SD" start="20261015090000 +0530" stop="20261015092000 +0530">
-    <title lang="en">Tele Shopping / Cini Mini</title>
-    <desc lang="en">The host presents a wide variety of television products that customers can purchase from their homes; a compilation of interesting sequences and melodious songs from popular Tamil movies is presented.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29030724_b_h9_ab.jpg?lock=880x660" />
   </programme>
   <programme channel="PolimerTV.in@SD" start="20261015092000 +0530" stop="20261015094500 +0530">
     <title lang="en">Tele Shopping / Cinema Cinema</title>
@@ -107319,17 +107192,6 @@ Bringing the best in television.</desc>
     <category lang="en">Others</category>
     <icon src="https://dtil.tmsimg.com/assets/p28931985_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme start="20261015025400 +0000" stop="20261015035100 +0000" channel="RealWild.uk">
-    <title lang="en">Wild India</title>
-    <desc lang="en">Southern India's forests are home to the rare lion-tailed macaque and its unique habitat.</desc>
-    <date>1997</date>
-    <category lang="en">Explore</category>
-    <icon src="https://d11hei8e1dyf6i.cloudfront.net/RWILD/Default_Thumbnail.jpg" />
-    <episode-num system="onscreen">S1 E6</episode-num>
-    <rating system="US">
-      <value>NR</value>
-    </rating>
-  </programme>
   <programme start="20261015035100 +0000" stop="20261015053300 +0000" channel="RealWild.uk">
     <title lang="en">Migrating Birds</title>
     <desc lang="en">Migratory birds journey south each autumn, led by instinct and tracked by science on perilous routes.</desc>
@@ -108099,17 +107961,6 @@ Bringing the best in television.</desc>
     <date>2005</date>
     <category lang="en">Explore</category>
     <icon src="https://d11hei8e1dyf6i.cloudfront.net/RWILD/HEWORMS001EP001.jpg" />
-  </programme>
-  <programme start="20261015085900 +0530" stop="20261015091800 +0530" channel="RedBullTV.at@EUMENA">
-    <title lang="en-GB">Red Bull Stalen Ros</title>
-    <sub-title lang="en-GB">This wild water race tests speed, teamwork and balance as riders try to stay dry on a fun and tricky course</sub-title>
-    <desc lang="en-GB">Teams try to navigate a track over water which includes obstacles on their customised bicycles.</desc>
-    <credits>
-      <actor>Jan Versteegh</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/8d55cedc446bdaece51694fac799157c.jpg" />
-    <premiere />
   </programme>
   <programme start="20261015091800 +0530" stop="20261015104800 +0530" channel="RedBullTV.at@EUMENA">
     <title lang="en-GB">Here to Climb</title>
@@ -119458,34 +119309,6 @@ Bringing the best in television.</desc>
     <category lang="en">Comedy</category>
     <icon src="https://dtil.tmsimg.com/assets/p11899458_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E3323</episode-num>
-  </programme>
-  <programme channel="SonyKALHindi.us" start="20261015031600 +0000" stop="20261015034300 +0000">
-    <title lang="en">Baal Veer</title>
-    <desc lang="en">Following the magical adventures of Baal Veer in fairyland.</desc>
-    <credits>
-      <actor>Dev Joshi</actor>
-      <actor>Anushka Sen</actor>
-      <actor>Rudra Soni</actor>
-      <director>Sanjay Satvase</director>
-      <director>Kushal Awasthi</director>
-      <director>Ambare P Sachin</director>
-      <director>Amarpreet G.S. Chhabra</director>
-      <director>Vijay Saini</director>
-      <director>Nilesh Ambekar</director>
-    </credits>
-    <date>2012</date>
-    <category lang="en">Fantasy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p30034978_b_h10_aa.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
   </programme>
   <programme channel="SonyKALHindi.us" start="20261015034300 +0000" stop="20261015040700 +0000">
     <title lang="en">Baal Veer</title>
@@ -141823,11 +141646,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="TheJungleBook.in" start="20261015090400 +0530" stop="20261015091700 +0530">
-    <title lang="en">The phaos sty Trick</title>
-    <desc lang="en">The wolf pack want to make Mowgli an honorary of the pack but phao</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acc628c2c63e04ff6596ee3/images/LANDSCAPE_169/9368_dc46e662-3ec0-4b08-b5f2-fcca9afb6292.png" />
-  </programme>
   <programme channel="TheJungleBook.in" start="20261015091700 +0530" stop="20261015093000 +0530">
     <title lang="en">The Is That You, Kaa</title>
     <desc lang="en">When Kaa sheds his skin, Mowgli asks whether he can have it.</desc>
@@ -143501,13 +143319,6 @@ Bringing the best in television.</desc>
     <rating>
       <value>TV-14</value>
     </rating>
-  </programme>
-  <programme channel="TinyPop.uk" start="20261015033900 +0000" stop="20261015035200 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261015090900/list/TinyPOPCareBearsUnlockTheMagic20569924a63f65227564204873afc7e81adc304.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261015035200 +0000" stop="20261015040000 +0000">
     <title lang="en">Care Bears: Unlock The Magic</title>
@@ -177750,17 +177561,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261015085900 +0530" stop="20261015091800 +0530" channel="custom.bdix.redbulltv">
-    <title lang="en-GB">Red Bull Stalen Ros</title>
-    <sub-title lang="en-GB">This wild water race tests speed, teamwork and balance as riders try to stay dry on a fun and tricky course</sub-title>
-    <desc lang="en-GB">Teams try to navigate a track over water which includes obstacles on their customised bicycles.</desc>
-    <credits>
-      <actor>Jan Versteegh</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/8d55cedc446bdaece51694fac799157c.jpg" />
-    <premiere />
-  </programme>
   <programme start="20261015091800 +0530" stop="20261015104800 +0530" channel="custom.bdix.redbulltv">
     <title lang="en-GB">Here to Climb</title>
     <desc lang="en-GB">Sasha DiGiulian rises from child prodigy to a champion sport climber, as she ultimately makes her mark by taking her talents to the biggest walls on the planet with a series of bold, first female ascents.</desc>
@@ -188576,22 +188376,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <episode-num system="onscreen">E2</episode-num>
     <premiere />
   </programme>
-  <programme channel="custom.discovery.turbo" start="20261015083000 +0530" stop="20261015092000 +0530">
-    <title lang="en">Overhaulin'</title>
-    <desc lang="en">Tom's 1978 Pontiac Trans Am has seen better days. But can Chip Foose and his A-Team reinvigorate this tired classic and restore it to its former glories?</desc>
-    <credits>
-      <actor>Chip Foose</actor>
-      <actor>Christopher Jacobs</actor>
-      <actor>Arianny Celeste</actor>
-      <actor>Jessi Combs</actor>
-      <actor>Adrienne Janic</actor>
-      <director>Richard Valenzuela</director>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Education (Adult)</category>
-    <icon src="https://dtil.tmsimg.com/assets/p12169208_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S9 E4</episode-num>
-  </programme>
   <programme channel="custom.discovery.turbo" start="20261015092000 +0530" stop="20261015101000 +0530">
     <title lang="en">Fast N' Loud</title>
     <desc lang="en">The team works on a 2018 Jeep Wrangler - the second Jeep they're building for the Veterans Day auction. Meanwhile, Richard makes a deal on a '55 Crown Vic.</desc>
@@ -194480,28 +194264,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
       <value>AL</value>
     </rating>
   </programme>
-  <programme channel="custom.disney.jr" start="20261015034000 +0000" stop="20261015034500 +0000">
-    <title lang="en">Bluey</title>
-    <desc lang="en">Shops:Bluey's game of Shops can't start until they fix the rules.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/f0e1ef14-b157-45ef-8b49-22f98db1865a/16-9" />
-    <episode-num system="xmltv_ns">9..</episode-num>
-    <rating system="UK">
-      <value>U</value>
-    </rating>
-  </programme>
-  <programme channel="custom.disney.jr" start="20261015034500 +0000" stop="20261015035000 +0000">
-    <title lang="en">Bluey</title>
-    <desc lang="en">Wagon Ride:Bluey loses patience when Dad keeps stopping to chat.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/1d10f222-e56c-4f18-8365-0342b7d7b318/16-9" />
-    <episode-num system="xmltv_ns">9..</episode-num>
-    <rating system="UK">
-      <value>U</value>
-    </rating>
-  </programme>
   <programme channel="custom.disney.jr" start="20261015035000 +0000" stop="20261015035500 +0000">
     <title lang="en">Bluey</title>
     <desc lang="en">Taxi:With Bluey as a taxi driver, will Dad get to the airport.</desc>
@@ -197339,56 +197101,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <category lang="en">News</category>
     <category lang="en">Investigation</category>
     <icon src="https://sat.tvhttps://www.sat.tv/wp-content/themes/twentytwenty-child/assets/img/prog-6201.svg" />
-  </programme>
-  <programme start="20261015090800 +0530" stop="20261015091100 +0530" channel="custom.duck.tv">
-    <title>Vehicles</title>
-    <desc>A team of animated vehicles springs to life and assists in exploring different modes of travel. They help young children to improve their creativity and foster imaginative and developmental skills.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/6af111ddc9f125f817ee0e4108a8023a.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261015091100 +0530" stop="20261015091300 +0530" channel="custom.duck.tv">
-    <title>City Life</title>
-    <desc>A vibrant city, full of energy, offers countless opportunities for children to meet new people and explore exciting places. These unexpected encounters can help them to develop their social skills.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/d4bfe13d7180711e3fe1f236b81da173.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261015091300 +0530" stop="20261015091600 +0530" channel="custom.duck.tv">
-    <title>Animals</title>
-    <desc>Animals wander through the wilderness and explore their surroundings, making various sounds along the way. These auditory signals help children to improve their listening skills.</desc>
-    <category>Animals</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/9b7e6055a358ea3acf9a820275d70b94.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261015091600 +0530" stop="20261015091900 +0530" channel="custom.duck.tv">
-    <title>Listen to This</title>
-    <desc>A group of children fuses animal voices with the sound of musical instruments in an attempt to create a range of new melodies.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/630766eeed3ec65c0c6f098bf336b76d.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261015091900 +0530" stop="20261015092200 +0530" channel="custom.duck.tv">
-    <title>Mimo and Bobo</title>
-    <desc>When Mimo, the panda bear, and Bobo, the monkey, enter preschool, they learn useful lessons about friendship as well as moral values.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f7100646ff9cce813dad74448f69f4d6.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
   </programme>
   <programme start="20261015092200 +0530" stop="20261015092600 +0530" channel="custom.duck.tv">
     <title>Panni and Fanni</title>
@@ -213766,14 +213478,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <rating system="AU">
       <value>G</value>
     </rating>
-  </programme>
-  <programme channel="custom.history.tv" start="20261015085800 +0530" stop="20261015092100 +0530">
-    <title lang="en">India: Marvels &amp; Mysteries With William Dalrymple</title>
-    <desc lang="en">Rani Udaymati and Mughal empress Noor Jahan are two powerful queens of India who built iconic structures that remarkably stood the test of time.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">History</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28602409_b_h9_ab.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E5</episode-num>
   </programme>
   <programme channel="custom.history.tv" start="20261015092100 +0530" stop="20261015100500 +0530">
     <title lang="en">Storage Wars</title>
@@ -231604,51 +231308,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <icon src="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/US_USQT620324A_3192445697_3_20260715T020933384Z_46_imageprocessorclient-tvplus-linear-75df688c49-p5bj6.jpeg" />
     <rating>
       <value>TV-Y</value>
-    </rating>
-  </programme>
-  <programme channel="custom.teennick" start="20261015031800 +0000" stop="20261015034500 +0000">
-    <title lang="en">The Loud House</title>
-    <sub-title lang="en">Present Danger; Stressed for the Part</sub-title>
-    <desc lang="en">Dressed as David Steele, Lincoln is on the hunt for his stolen birthday present before it's destroyed; after landing a role in a Dairyland production, Luan must hide this news from Mrs. Bernardo, whom she beat out.</desc>
-    <credits>
-      <actor>Grant Palmer</actor>
-      <actor>Catherine Taber</actor>
-      <actor>Liliana Mumy</actor>
-    </credits>
-    <date>2022</date>
-    <category lang="en">Series</category>
-    <category lang="en">Animated</category>
-    <category lang="en">Children</category>
-    <category lang="en">Comedy</category>
-    <icon src="http://dtil.tmsimg.com/assets/p12753730_b_h8_cm.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S6 E1</episode-num>
-    <previously-shown />
-    <rating system="방송통신심의위원회">
-      <value>7</value>
-    </rating>
-    <rating system="Krajowa Rada Radiofonii i Telewizji">
-      <value>12</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>6</value>
-    </rating>
-    <rating system="Kijkwijzer">
-      <value>6</value>
-    </rating>
-    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
-      <value>K7</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>G</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>C8</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVY7</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>AL</value>
     </rating>
   </programme>
   <programme channel="custom.teennick" start="20261015034500 +0000" stop="20261015041200 +0000">

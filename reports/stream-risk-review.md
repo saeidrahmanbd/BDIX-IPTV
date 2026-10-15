@@ -15,27 +15,31 @@ Generated from the current playlist and latest available stream-health report. T
 | Metric | Count |
 |---|---:|
 | Streams tested | 1037 |
-| Reachable | 988 |
-| Failed this check | 49 |
-| Persistent failures (3+ consecutive) | 11 |
-| HTTP 401/403 (auth) | 6 |
-| HTTP 404 (not found) | 9 |
-| HTTP 5xx (server) | 3 |
-| Timeout | 31 |
+| Reachable | 969 |
+| Failed this check | 68 |
+| Persistent failures (3+ consecutive) | 15 |
+| HTTP 401/403 (auth) | 5 |
+| HTTP 404 (not found) | 8 |
+| HTTP 5xx (server) | 6 |
+| Timeout | 49 |
 
 ### Persistent failures
 
-- **Ananda TV** — Backup — consecutive failures: **5** — HTTP 404
-- **Disney Channel India** — Backup — consecutive failures: **77** — HTTP 403
-- **Shanson TV** — Backup — consecutive failures: **4** — HTTP 403
-- **Channel 16** — Bangladesh — consecutive failures: **13** — Timeout
-- **Assam Talks** — Indian Entertainment — consecutive failures: **211** — HTTP 403
-- **Oli TV** — Indian Entertainment — consecutive failures: **5** — Timeout
-- **Suriyan TV** — Indian Entertainment — consecutive failures: **5** — HTTP 523
-- **Cook & Bake** — International — consecutive failures: **17** — HTTP 504
-- **HBO** — International — consecutive failures: **199** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **17** — HTTP 403
-- **Teen Nick** — Kids — consecutive failures: **77** — HTTP 403
+- **Ananda TV** — Backup — consecutive failures: **6** — Timeout
+- **Disney Channel India** — Backup — consecutive failures: **78** — HTTP 403
+- **G TV** — Backup — consecutive failures: **3** — Timeout
+- **Goldmines** — Backup — consecutive failures: **3** — HTTP 404
+- **Goldmines** — Backup — consecutive failures: **3** — HTTP 404
+- **Channel 16** — Bangladesh — consecutive failures: **14** — Timeout
+- **Assam Talks** — Indian Entertainment — consecutive failures: **212** — HTTP 403
+- **Oli TV** — Indian Entertainment — consecutive failures: **6** — Timeout
+- **Suriyan TV** — Indian Entertainment — consecutive failures: **6** — HTTP 523
+- **K Cine** — Indian Movies — consecutive failures: **3** — Timeout
+- **Afrobeats** — International — consecutive failures: **3** — HTTP 404
+- **Cook & Bake** — International — consecutive failures: **18** — HTTP 504
+- **HBO** — International — consecutive failures: **200** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **18** — HTTP 403
+- **Teen Nick** — Kids — consecutive failures: **78** — HTTP 403
 
 ## /streamtest/ Endpoints
 

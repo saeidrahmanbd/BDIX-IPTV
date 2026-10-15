@@ -1,6 +1,6 @@
 # Strict Unmapped EPG Audit
 
-Generated: **2026-10-15T09:44:14+00:00**
+Generated: **2026-10-15T09:56:42+00:00**
 
 Only exact normalized display-name matches or exact matches after removing a recognized territory/language suffix are listed below. Every candidate has current/future schedule rows in a configured feed, but candidates remain review-only and are never automatically applied.
 Bangladesh-group channels are not name-matched here. Their domestic schedules require exact ID/explicit alias evidence; a similar Indian or foreign channel is not acceptable.
@@ -43,7 +43,7 @@ Bangladesh-group channels are not name-matched here. Their domestic schedules re
 | International | MyTime Movie Network East | MyTimeMovieNetworkEast.us | mytimemovienetwork | plex.tv.MyTime.Movie.Network.plex | EXACT_AFTER_REGION_SUFFIX | 58 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
 | International | XITE Hits UK | XITEHits.nl@UK | xitehits | USBD3300004RH | EXACT_AFTER_REGION_SUFFIX | 3 | https://i.mjh.nz/SamsungTVPlus/us.xml | MANUAL_REVIEW_ONLY |
 | International | XITE Hits UK | XITEHits.nl@UK | xitehits | plex.tv.XITE.Hits.plex | EXACT_AFTER_REGION_SUFFIX | 31 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
-| Religious | Madani TV | custom.madani.tv | madaniuk | MadaniChannel.uk | EXACT_AFTER_REGION_SUFFIX | 40 | https://www.open-epg.com/files/unitedkingdom.xml.gz | MANUAL_REVIEW_ONLY |
+| Religious | Madani TV | custom.madani.tv | madaniuk | MadaniChannel.uk | EXACT_AFTER_REGION_SUFFIX | 39 | https://www.open-epg.com/files/unitedkingdom.xml.gz | MANUAL_REVIEW_ONLY |
 
 ## Bangladesh-specific review
 
