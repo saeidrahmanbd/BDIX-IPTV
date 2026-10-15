@@ -51784,10 +51784,6 @@ Highlights of all the action from international cricket tournaments, where teams
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p25983828_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme start="20261015014600 +0000" stop="20261015031300 +0000" channel="FITE247.us@SD">
-    <desc lang="en">Senshi 10 Part 1.</desc>
-    <title lang="en">Senshi 10 Part 1</title>
-  </programme>
   <programme start="20261015031300 +0000" stop="20261015042100 +0000" channel="FITE247.us@SD">
     <desc lang="en">Senshi 10 Part 2.</desc>
     <title lang="en">Senshi 10 Part 2</title>
@@ -120057,26 +120053,6 @@ Bringing the best in television.</desc>
     <icon src="https://dtil.tmsimg.com/assets/p11899458_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E3323</episode-num>
   </programme>
-  <programme channel="SonyKALHindi.us" start="20261015025000 +0000" stop="20261015031600 +0000">
-    <title lang="en">Aladdin naam toh suna hoga</title>
-    <desc lang="en">Aladdin, a poor thief, stumbles upon a mysterious magical lamp which contains a Genie; however, he realizes that an evil sorcerer, Jafar, also covets the lamp in order to rule over Baghdad.</desc>
-    <credits>
-      <actor>Siddharth Nigam</actor>
-      <actor>Aamir Dalvi</actor>
-      <actor>Smita Bansal</actor>
-      <director>Kushal Jhavri</director>
-      <director>Maan Singh</director>
-      <director>Amandeep Singh</director>
-      <director>Kushal Awasthi</director>
-      <director>Vighnesh Kamble</director>
-      <director>Pooja Seth Hingorani</director>
-    </credits>
-    <date>2018</date>
-    <category lang="en">Fantasy</category>
-    <category lang="en">Drama</category>
-    <icon src="http://dtil.tmsimg.com/assets/p15839357_b_h8_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-  </programme>
   <programme channel="SonyKALHindi.us" start="20261015031600 +0000" stop="20261015034300 +0000">
     <title lang="en">Baal Veer</title>
     <desc lang="en">Following the magical adventures of Baal Veer in fairyland.</desc>
@@ -142486,11 +142462,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="TheJungleBook.in" start="20261015082500 +0530" stop="20261015083800 +0530">
-    <title lang="en">The Mowgli's Ghost</title>
-    <desc lang="en">The season of baby turtles hatching is near and Boo and Oo wish to see it.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acc628a2c63e04ff6596ee0/images/LANDSCAPE_169/9361_f7ceffca-291e-4d33-a963-cc17f27e83d3.png" />
-  </programme>
   <programme channel="TheJungleBook.in" start="20261015083800 +0530" stop="20261015085100 +0530">
     <title lang="en">The Ske Bite</title>
     <desc lang="en">It is the night of the Council of Wolves, but Akela is nowhere to be seen</desc>
@@ -144187,13 +144158,6 @@ Bringing the best in television.</desc>
     <rating>
       <value>TV-14</value>
     </rating>
-  </programme>
-  <programme channel="TinyPop.uk" start="20261015030000 +0000" stop="20261015031300 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261015083000/list/TinyPOPCareBearsUnlockTheMagic205699219b515b0d46a40f687e6589348bda36a.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261015031300 +0000" stop="20261015032600 +0000">
     <title lang="en">Care Bears: Unlock The Magic</title>
@@ -195369,17 +195333,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
       <value>AL</value>
     </rating>
   </programme>
-  <programme channel="custom.disney.jr" start="20261015030500 +0000" stop="20261015031500 +0000">
-    <title lang="en">Bluey</title>
-    <desc lang="en">The Claw:Mum and Dad create their own Magic Claw machine at home.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/5c3e4662-c353-4848-8264-caed1bec7bf7/16-9" />
-    <episode-num system="xmltv_ns">9..</episode-num>
-    <rating system="UK">
-      <value>U</value>
-    </rating>
-  </programme>
   <programme channel="custom.disney.jr" start="20261015031500 +0000" stop="20261015032000 +0000">
     <title lang="en">Bluey</title>
     <desc lang="en">Markets:Bluey must decide how to spend money from the Tooth Fairy.</desc>
@@ -198272,46 +198225,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <category lang="en">News</category>
     <category lang="en">Investigation</category>
     <icon src="https://sat.tvhttps://www.sat.tv/wp-content/themes/twentytwenty-child/assets/img/prog-6201.svg" />
-  </programme>
-  <programme start="20261015083600 +0530" stop="20261015083800 +0530" channel="custom.duck.tv">
-    <title>Beaver Family</title>
-    <desc>A family of beavers struggle to fend for themselves and try to survive each day while facing and overcoming several obstacles.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/c8bdff91c3efbbdc06177a924d7209c0.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261015083800 +0530" stop="20261015084200 +0530" channel="custom.duck.tv">
-    <title>The World of Animals</title>
-    <desc>The presenter helps children learn about animals and understand the difference between domestic and wild animals.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f04243de7b0a9cd4db5720975fe264bd.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261015084200 +0530" stop="20261015084400 +0530" channel="custom.duck.tv">
-    <title>Animals</title>
-    <desc>Animals wander through the wilderness and explore their surroundings, making various sounds along the way. These auditory signals help children to improve their listening skills.</desc>
-    <category>Animals</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/9b7e6055a358ea3acf9a820275d70b94.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261015084400 +0530" stop="20261015084700 +0530" channel="custom.duck.tv">
-    <title>Sunville</title>
-    <desc>In the charming village of Sunville, Mr. Goat and the others fill each day with exciting adventures. They bring joy and warmth through their interactions and helpful deeds.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f4694bb56437a39aa1c8dc5bfc414ce1.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
   </programme>
   <programme start="20261015084700 +0530" stop="20261015085100 +0530" channel="custom.duck.tv">
     <title>Raul</title>
@@ -222957,17 +222870,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p30041122_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E876</episode-num>
-  </programme>
-  <programme channel="custom.nat.geo.tv" start="20261015024500 +0000" stop="20261015031000 +0000">
-    <title lang="en">Food Factory</title>
-    <desc lang="en">Chocolate Eggs &amp; Hot Cross Buns: Outdo even the Easter Bunny's Easter knowledge with these insights into carrot-shaped lollies, chocolate eggs and hot cross buns. (S6, ep 12) 7+.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Science</category>
-    <icon src="https://images.metadata.sky.com/pd-image/a4a3d466-9f1e-4970-b233-47f2f38ad1f2/16-9" />
-    <episode-num system="xmltv_ns">5.11.</episode-num>
-    <rating system="UK">
-      <value>PG</value>
-    </rating>
   </programme>
   <programme channel="custom.nat.geo.tv" start="20261015031000 +0000" stop="20261015033500 +0000">
     <title lang="en">When Sharks Attack</title>
