@@ -4,7 +4,6 @@ on:
     branches: [main]
     paths:
       - IPTV-Playlist.m3u
-      - BDIX-Playlist.m3u
       - scripts/repair_iptv_audit_findings.py
       - scripts/repair_playlist_quality.py
       - scripts/repair_playlist_logos.py
@@ -27,6 +26,7 @@ on:
       - scripts/record_maintenance_history.py
       - scripts/generate_dashboard.py
       - scripts/enforce_playlist_attribution.py
+      - scripts/apply_gemini_playlist_repairs.py
       - reports/epg-india-channel-mapping.csv
   schedule:
     - cron: '17 2 * * *'
@@ -69,6 +69,7 @@ jobs:
             python scripts/normalize_metadata.py
             python scripts/repair_playlist_logos.py
             python scripts/sort_playlists.py
+            python scripts/apply_gemini_playlist_repairs.py
             python scripts/final_playlist_hardening.py
             if grep -Eiq 'group-title="(New Channels|New Backup|New|Not Playing)"' IPTV-Playlist.m3u; then
               echo "::error::Legacy playlist category detected after normalization."
@@ -136,7 +137,7 @@ jobs:
             echo "Validated EPG working-tree bytes: $(wc -c < epg/epg.xml)"
             echo "Validated EPG working-tree sha256: $(sha256sum epg/epg.xml | awk '{print $1}')"
             python scripts/enforce_playlist_attribution.py
-            git add IPTV-Playlist.m3u BDIX-Playlist.m3u logos/ reports/ assets/dashboard.svg
+            git add IPTV-Playlist.m3u logos/ reports/ assets/dashboard.svg
             git add -f epg/epg.xml
             STAGED_EPG_BYTES="$(git cat-file -s :epg/epg.xml)"
             echo "Staged EPG bytes: ${STAGED_EPG_BYTES}"
