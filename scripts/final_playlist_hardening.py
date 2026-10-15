@@ -66,7 +66,7 @@ def process(path):
   a=attrs(r[0]); g=a.get('group-title','').strip()
   if g in NON_NUMBERED and a.get('tvg-chno','').strip(): errors.append(f'numbered {g}: {a.get("tvg-name","")}')
   cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold()
-  if cid=='ultimatetv.in@sd' and g!='Indian Music': errors.append('Ultimate TV not in Indian Music')
+  if cid=='ultimatetv.in@sd' and g not in {'Indian Music','Backup'}: errors.append('Ultimate TV must be Indian Music primary or Backup alternate')
  if errors:
   raise SystemExit(f'{path}: '+ '; '.join(errors))
  path.write_text('\n'.join(pre+[x for r in rec for x in r])+'\n',encoding='utf-8')

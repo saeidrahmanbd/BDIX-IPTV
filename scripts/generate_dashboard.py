@@ -31,7 +31,7 @@ def main():
     # Parse the current overall-coverage format, with a fallback for older reports.
     total_match=re.search(r'Active unique playlist channel IDs audited:\s*\*\*(\d+)\*\*',g,re.I)
     mapping_match=re.search(r'IDs with an EPG source mapping:\s*\*\*(\d+)/(\d+) \(([\d.]+)%\)\*\*',g,re.I)
-    current_match=re.search(r'IDs with usable current/future (?:English programme data|source schedules \\(nonblank English titles\\)):\\s*\\*\\*(\\d+)/(\\d+) \\(([\\d.]+)%\\)\\*\\*',g,re.I)
+    current_match=re.search(r'IDs with usable current/future (?:English programme data|source schedules \(nonblank English titles\)):\s*\*\*(\d+)/(\d+) \(([\d.]+)%\)\*\*',g,re.I)
     missing_match=re.search(r'IDs with no EPG source mapping:\s*\*\*(\d+)\*\*',g,re.I)
     india=int(total_match.group(1)) if total_match else metric(g,"Active Indian channels audited")
     mapped=int(mapping_match.group(1)) if mapping_match else metric(g,"Channels with an EPG mapping")
