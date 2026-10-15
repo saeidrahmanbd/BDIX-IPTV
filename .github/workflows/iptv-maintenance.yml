@@ -5,6 +5,7 @@ on:
     paths:
       - IPTV-Playlist.m3u
       - .github/workflows/iptv-maintenance.yml
+      - scripts/fix_playlist.py
       - scripts/repair_iptv_audit_findings.py
       - scripts/repair_playlist_quality.py
       - scripts/repair_playlist_logos.py
@@ -66,6 +67,14 @@ jobs:
             git clean -fd
             cp BDIX-Playlist.m3u /tmp/bdix-playlist-protected.m3u
             cp epg/epg.xml /tmp/bdix-epg-previous.xml 2>/dev/null || true
+
+            # Claude-provided deterministic repair pass: produces a fixed public
+            # playlist plus private/quarantine review files without overwriting input.
+            rm -rf fixed_output
+            python scripts/fix_playlist.py IPTV-Playlist.m3u --outdir fixed_output
+            test -s fixed_output/IPTV-Playlist.fixed.m3u
+            cp fixed_output/IPTV-Playlist.fixed.m3u IPTV-Playlist.m3u
+
             python scripts/repair_iptv_audit_findings.py
             python scripts/repair_playlist_quality.py
             python scripts/normalize_metadata.py
