@@ -5,6 +5,7 @@ on:
     paths:
       - IPTV-Playlist.m3u
       - BDIX-Playlist.m3u
+      - scripts/repair_iptv_audit_findings.py
       - scripts/repair_playlist_quality.py
       - scripts/repair_playlist_logos.py
       - scripts/normalize_metadata.py
@@ -63,6 +64,7 @@ jobs:
             git reset --hard origin/main
             git clean -fd
             cp epg/epg.xml /tmp/bdix-epg-previous.xml 2>/dev/null || true
+            python scripts/repair_iptv_audit_findings.py
             python scripts/repair_playlist_quality.py
             python scripts/normalize_metadata.py
             python scripts/repair_playlist_logos.py
