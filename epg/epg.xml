@@ -1787,11 +1787,6 @@
     <category lang="en">Movies</category>
     <icon src="https://provider-static.plex.tv/epg/images/ott_channels/arts/24hrfreemovies_artwork_horizontal-v2.jpg" />
   </programme>
-  <programme channel="7SMusic.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Interactive Live New Hit Songs / Slot</title>
-    <desc lang="en">A live host interacts with viewers and plays their requested songs.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/PROGRAM/LIVETV_PROGRAM_7S_MUSIC_1313691_15OCT090000_15OCT093000/images/LANDSCAPE_169/1689853196000_7SMusic_InteractiveLiveNewHitSongsSlot_1313691.jpg" />
-  </programme>
   <programme channel="7SMusic.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Interactive Live New Hit Songs / Slot</title>
     <desc lang="en">A live host interacts with viewers and plays their requested songs.</desc>
@@ -2847,12 +2842,6 @@
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme channel="9XJhakaas.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Breakless Breakfast</title>
-    <desc lang="en">A compilation of the greatest foot-tapping hits from the music industry played back to back in order to entertain the audience.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29741303_b_h9_ab.jpg?lock=880x660" />
-  </programme>
   <programme channel="9XJhakaas.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Breakless Breakfast</title>
     <desc lang="en">A compilation of the greatest foot-tapping hits from the music industry played back to back in order to entertain the audience.</desc>
@@ -3140,12 +3129,6 @@
     <desc lang="en">A compilation of the greatest foot-tapping hits from the music industry played back to back in order to entertain the audience.</desc>
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p29741303_b_h9_ab.jpg?lock=880x660" />
-  </programme>
-  <programme channel="9XM.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">9xm Fit - Hits</title>
-    <desc lang="en">A curated collection of super hit Bollywood songs from popular movies is played back-to-back to kick-start your morning with energy.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29726546_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="9XM.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">9xm Fit - Hits</title>
@@ -4796,12 +4779,6 @@
     <desc lang="en">A comprehensive compilation of some of the hit songs composed by renowned artists and musicians is played back-to-back along with some popular jokes.</desc>
     <icon src="https://iptv-epg.org/images/eY2MiOkDLGUKUSgM3v4UNeTY_UjvG5X5BPTCV7IOo8FGzeSYekOilpqwsNR5Bn9-keVh5_TBk__F_vuBYPIvZHgxT-gs_wlI5fFikIIMfZCVY_sdDIMN90CdfEfIbQ" />
     <title lang="en">9XM Music Idhar Hai</title>
-  </programme>
-  <programme channel="9XTashan.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">9x Tashan Reelstar</title>
-    <desc lang="en">Talented dancers from every corner of the country share their performances to foot-tapping music, showcasing their skills to win the title.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29746800_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="9XTashan.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">9x Tashan Reelstar</title>
@@ -7590,13 +7567,6 @@
       <value>A16</value>
     </rating>
   </programme>
-  <programme start="20261015043000 +0100" stop="20261015050000 +0100" channel="ATNBanglaUK.uk">
-    <title>100 Haath Dure Thakun</title>
-    <desc>Bangladeshi Drama Serial</desc>
-    <rating>
-      <value>--</value>
-    </rating>
-  </programme>
   <programme start="20261015050000 +0100" stop="20261015053000 +0100" channel="ATNBanglaUK.uk">
     <title>Kobuliotnama</title>
     <desc>Bangla Drama Serial</desc>
@@ -10268,17 +10238,6 @@
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261015090000 +0530" stop="20261015093000 +0530" channel="AlJazeera.qa@English">
-    <title lang="en-GB">Business of War</title>
-    <sub-title lang="en-GB">Hind Hassan looks at the military tech that is changing the face of modern warfare: drones and AI</sub-title>
-    <desc lang="en-GB">Hind Hassan explores the US weapons industry - the largest of them all - tracing its impacts on American democracy and beyond.</desc>
-    <credits>
-      <actor>Hind Hassan</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/9a2ba4d7194a17b2c6319d4142d3eacf.jpg" />
-    <premiere />
-  </programme>
   <programme start="20261015093000 +0530" stop="20261015100000 +0530" channel="AlJazeera.qa@English">
     <title lang="en-GB">News</title>
     <sub-title lang="en-GB">Up-to-date news and analysis from around the world</sub-title>
@@ -11501,14 +11460,6 @@
     <episode-num system="onscreen">E316</episode-num>
     <premiere />
   </programme>
-  <programme start="20261015030000 +0100" stop="20261015050000 +0100" channel="AlQamarTV.ae">
-    <title lang="en">Day Break</title>
-    <desc lang="en">On a fateful day, Detective Brett Hopper returns home only to be arrested, accused of shooting the state attorney. He tries desperately to prove his innocence, only to wake up the next day and discover that the same fateful day is repeating itself. Soad Abd Allah, Abdel Rahman Alagel, Zahra Arafat, Ghazi Hussein, Ahmed Mosaad, Saed Bashir Al Hawary, Asmahan Tawfiq, Taye Diggs, Moon Bloodgood.</desc>
-    <date>2006</date>
-    <category lang="en">Series</category>
-    <category lang="en">Action</category>
-    <icon src="https://sat.tvhttps://www.sat.tv/wp-content/themes/twentytwenty-child/assets/img/prog-6203.svg" />
-  </programme>
   <programme start="20261015050000 +0100" stop="20261015060000 +0100" channel="AlQamarTV.ae">
     <title lang="en">Ali Kelay</title>
     <desc lang="en">With a noble heart and steady courage, Ali Kelay gives his fight winnings to charity and oversees his adoptive father's auto parts business, though his rise creates enemies in the market and ignites jealousy within his family. Ahmed Al Awady, Dorra Zarrouq.</desc>
@@ -12642,13 +12593,6 @@
     <category lang="en">Lifestyle</category>
     <icon src="https://sat.tvhttps://www.sat.tv/wp-content/themes/twentytwenty-child/assets/img/prog-6198.svg" />
   </programme>
-  <programme channel="AmritaTV.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Dhe Pinneem</title>
-    <desc lang="en">Life with Prakashan Paappadi and his family is lively, with simple daily events often creating humorous situations. Soon, arguments and misunderstandings result in stronger emotional bonds.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p32307966_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="AmritaTV.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Nila</title>
     <desc lang="en">This is TV Show - Entertainment Category.</desc>
@@ -13276,29 +13220,6 @@
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme channel="AndTV.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Bhabi ji Ghar Par Hai!</title>
-    <desc lang="en">A thief manages to rob Anita and Vibhuti while they are distracted by their mobile phones. Later, they visit the police station to file an official theft complaint with Happu Singh.</desc>
-    <credits>
-      <actor>Aasif Sheikh</actor>
-      <actor>Rohitash Gaud</actor>
-      <actor>Shubhangi Atre Poorey</actor>
-      <actor>Vidisha Srivastava</actor>
-      <actor>Saanand Verma</actor>
-      <actor>Yogesh Tripathi</actor>
-      <actor>Jeetu Gupta</actor>
-      <actor>Neha Pendse</actor>
-      <actor>Shubhangi Atre</actor>
-      <director>Shashank Bali</director>
-      <director>Harshad Pranav Pathak</director>
-      <producer>Binaifer Kohli</producer>
-      <producer>Sanjay Kohli</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Sitcom</category>
-    <icon src="https://dtil.tmsimg.com/assets/p14130628_b_h9_af.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E2236</episode-num>
   </programme>
   <programme channel="AndTV.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Bhabi ji Ghar Par Hai!</title>
@@ -16804,9 +16725,6 @@ Join Hogi and Forest as they become doctors and heal their friends!</desc>
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p29943258_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme start="20261015113000 +0800" stop="20261015120000 +0800" channel="CGTNDocumentary.cn">
-    <title lang="en">Living China (?)</title>
-  </programme>
   <programme start="20261015120000 +0800" stop="20261015130000 +0800" channel="CGTNDocumentary.cn">
     <title lang="en">Special Edition (?)</title>
   </programme>
@@ -20095,27 +20013,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
       <value>TV-G</value>
     </rating>
   </programme>
-  <programme channel="Colors.Bangla.in" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Shiv Shakti</title>
-    <desc lang="en">Kartikeya is left hapless when Andhakasura blinds him and the other devas. Later, after taking their powers, Andhakasura reveals that he plans to blind Lord Shiva at all costs.</desc>
-    <credits>
-      <actor>Ram Yashvardhan</actor>
-      <actor>Subha Rajput</actor>
-      <actor>Vishwajeet Pradhan</actor>
-      <actor>Tarun Khanna</actor>
-      <actor>Srikant Dwivedi</actor>
-      <actor>Nirbhay Wadhwa</actor>
-      <actor>Puneet Vashisht</actor>
-      <director>Muzammil Desai</director>
-      <director>Kamal Monga</director>
-      <producer>Siddharth Kumar Tewary</producer>
-      <producer>Gayatri Gill</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p24938228_b_h9_ao.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E538</episode-num>
-  </programme>
   <programme channel="Colors.Bangla.in" start="20261015093000 +0530" stop="20261015103000 +0530">
     <title lang="en">Sadhak Bamakhyapa</title>
     <desc lang="en">Severe illness strikes Satyananda as he coughs up blood during worship. Relieving the sufferer of his affliction through divine power, Bama suddenly finds his own body weakened.</desc>
@@ -20450,27 +20347,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p24938228_b_h9_ao.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E540</episode-num>
-  </programme>
-  <programme channel="Colors.in" start="20261015081500 +0530" stop="20261015093000 +0530">
-    <title lang="en">Bigg Boss</title>
-    <desc lang="en">Celebrity contestants live in an isolated house and perform assigned tasks, in order to win the cash prize, while also trying to avoid being eliminated.</desc>
-    <credits>
-      <actor>Salman Khan</actor>
-      <actor>Vijay Vikram Singh</actor>
-      <actor>Atul Kapoor</actor>
-      <director>Ankur Poddar</director>
-      <director>Deepak Dhar</director>
-      <director>Kapil Batra</director>
-      <director>Shounok Ghosh</director>
-      <director>Taranjiet Singh Namdhari</director>
-      <director>Abhiroop</director>
-      <producer>Deepak Dhar</producer>
-      <producer>Aman Sharma</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Reality - Talent</category>
-    <icon src="https://dtil.tmsimg.com/assets/p33987277_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S20 E39</episode-num>
   </programme>
   <programme channel="Colors.in" start="20261015093000 +0530" stop="20261015113000 +0530">
     <title lang="en">Laughter Chefs Unlimited Entertainment</title>
@@ -21512,7 +21388,7 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category lang="en">Thriller</category>
     <icon src="https://dtil.tmsimg.com/assets/p17057796_v_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="ColorsCineplexBollywood.in@SD" start="20261015083500 +0530" stop="20261015115500 +0530">
+  <programme channel="ColorsCineplexBollywood.in@SD" start="20261015080500 +0530" stop="20261015114200 +0530">
     <title>Zameen</title>
     <desc>When a few terrorists hijack an Indian aeroplane and demand their leader's release, ACP Jaydev and Colonel Ranvir Singh team up to punish the perpetrators and thwart their evil plans.</desc>
     <category>Film</category>
@@ -21531,7 +21407,7 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p88765_v_h10_aa.jpg?lock=1280x720" />
   </programme>
-  <programme channel="ColorsCineplexBollywood.in@SD" start="20261015115500 +0530" stop="20261015145000 +0530">
+  <programme channel="ColorsCineplexBollywood.in@SD" start="20261015114200 +0530" stop="20261015145000 +0530">
     <title>Maa Beti</title>
     <desc>After Savitri dies, her husband marries Laxmi, whose brother drives stepchildren Meenu and Khetan away. Years later, the now-destitute parents discover their lost children are still alive.</desc>
     <category>Film</category>
@@ -21569,7 +21445,7 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p9486715_v_h10_ab.jpg?lock=1280x720" />
   </programme>
-  <programme channel="ColorsCineplexBollywood.in@SD" start="20261015185000 +0530" stop="20261015221500 +0530">
+  <programme channel="ColorsCineplexBollywood.in@SD" start="20261015185000 +0530" stop="20261015222600 +0530">
     <title>Ghar Ghar Ki Kahani</title>
     <desc>Ram begins to suspect that his wife, Seeta, is having an affair with his brother, Amar. His doubts persist even after Amar gets married, creating problems within his family.</desc>
     <category>Film</category>
@@ -21588,7 +21464,7 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p12062403_v_h10_ab.jpg?lock=1280x720" />
   </programme>
-  <programme channel="ColorsCineplexBollywood.in@SD" start="20261015221500 +0530" stop="20261016013500 +0530">
+  <programme channel="ColorsCineplexBollywood.in@SD" start="20261015222600 +0530" stop="20261016013900 +0530">
     <title>Muqaddar Ka Faisla</title>
     <desc>A priest is framed and imprisoned for embezzlement and rape, which leaves his family in destitution. After his release, penniless and homeless, he sets out to seek revenge.</desc>
     <category>Film</category>
@@ -21608,7 +21484,7 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p154589_v_h10_ad.jpg?lock=1280x720" />
   </programme>
-  <programme channel="ColorsCineplexBollywood.in@SD" start="20261016013500 +0530" stop="20261016034000 +0530">
+  <programme channel="ColorsCineplexBollywood.in@SD" start="20261016013900 +0530" stop="20261016025900 +0530">
     <title>Bal Ganesh And Friends From Zeba V- 2018</title>
     <desc>Bal Ganesh and his devotees, Topi, Dhoti and Suit-Boot travel to the planet of Zeba, experiencing adventures and creating unforgettable memories.</desc>
     <category>Film</category>
@@ -21622,7 +21498,7 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p28067721_b_h8_ad.jpg?lock=1280x720" />
   </programme>
-  <programme channel="ColorsCineplexBollywood.in@SD" start="20261016034000 +0530" stop="20261016061500 +0530">
+  <programme channel="ColorsCineplexBollywood.in@SD" start="20261016025900 +0530" stop="20261016061500 +0530">
     <title>Krodhi</title>
     <desc>Vicky plans to marry Aarti, but his dreams are crushed when an incident causes her to lose her life. Fuelled by revenge, Vicky finds himself going down a dark path.</desc>
     <category>Film</category>
@@ -22600,18 +22476,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p28907508_b_h9_ab.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E1419</episode-num>
-  </programme>
-  <programme channel="ColorsKannada.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Raani</title>
-    <desc lang="en">Sarala surprises Sathya by sporting a lavish gold waist belt. Despite claims that Balakrishna offered it as a token of gratitude, Sathya takes the ornament back to Balakrishna.</desc>
-    <credits>
-      <actor>Chandana M Rao</actor>
-      <actor>Praveen Atharva</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p25470729_b_h9_ab.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E216</episode-num>
   </programme>
   <programme channel="ColorsKannada.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Pavithra Bandhana</title>
@@ -23940,14 +23804,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category lang="en">Drama</category>
     <icon src="https://epg-garcenote-assets.s3.amazonaws.com/dishtvd2h/resources/assets/thumbnails/programs/default/default_880x660.png" />
   </programme>
-  <programme channel="ColorsTamil.in@SD" start="20261015080000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Bigg Boss Tamil Unseen</title>
-    <desc lang="en">This is TV Show - Entertainment Category.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://epg-garcenote-assets.s3.amazonaws.com/dishtvd2h/resources/assets/thumbnails/programs/default/default_880x660.png" />
-    <episode-num system="onscreen">S10 E27</episode-num>
-  </programme>
   <programme channel="ColorsTamil.in@SD" start="20261015093000 +0530" stop="20261015123000 +0530">
     <title lang="en">Vezham</title>
     <desc lang="en">After narrowly escaping a serial killer who murders his girlfriend, Ashok spirals into a relentless quest for revenge, determined to uncover the identity of the mysterious murderer.</desc>
@@ -24418,13 +24274,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
       <value>NA</value>
     </rating>
   </programme>
-  <programme channel="DDArunPrabha.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Discussion On Scheme Based Programme</title>
-    <desc lang="en">The presenter holds a discussion to elaborate on programs based on schematic structures and facilitate an easier understanding.</desc>
-    <category lang="en">Sport</category>
-    <category lang="en">Talk Show</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28933290_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="DDArunPrabha.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Arunachal Halchal</title>
     <desc lang="en">The host presents information about the social, economic and political issues surrounding the state of Arunachal Pradesh.</desc>
@@ -24785,13 +24634,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category lang="en">Sport</category>
     <category lang="en">Talk Show</category>
     <icon src="https://dtil.tmsimg.com/assets/p28933290_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="DDAssam.in@SD" start="20261015091500 +0530" stop="20261015093000 +0530">
-    <title>Jilmiliakomal Bali</title>
-    <desc>Bringing the best in television.</desc>
-    <category>TV Show</category>
-    <category>Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28931830_b_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="DDAssam.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title>Taal</title>
@@ -26571,16 +26413,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <desc>A compilation of the greatest Hindustani classical and Carnatic melodies by some of the finest artists played back to back in order to entertain the audience.</desc>
     <category>Music</category>
   </programme>
-  <programme channel="DDChandana.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Krishi Darshana</title>
-    <desc lang="en">The host provides various agricultural-based information to help farmers learn about the latest technologies that can improve their farming experience.</desc>
-    <credits>
-      <actor>Dr U S Awasthi</actor>
-    </credits>
-    <category lang="en">News</category>
-    <category lang="en">News Bulletin</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29131108_b_h9_ad.jpg?lock=880x660" />
-  </programme>
   <programme channel="DDChandana.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Mareyada Manikya</title>
     <desc lang="en">Talented singers and musicians showcase their unmatched musical prowess with enchanting performances and entertain the audience.</desc>
@@ -27014,12 +26846,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category>Variety Show</category>
     <icon src="https://dtil.tmsimg.com/assets/p27265870_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme channel="DDGirnar.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Bhakti Sangeet</title>
-    <desc lang="en">A curated collection of devotional songs and hymns, connecting the soul to spirituality through the power of music and faith.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28931625_b_h9_ac.jpg?lock=880x660" />
-  </programme>
   <programme channel="DDGirnar.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Gammat Gulal</title>
     <desc lang="en">A professional comedian presents jokes and anecdotes along with various artists and the other popular stand-up comedians of Gujarat.</desc>
@@ -27398,13 +27224,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <desc lang="en">A curated collection of devotional songs and hymns, connecting the soul to spirituality through the power of music and faith.</desc>
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p28931625_b_h9_ac.jpg?lock=880x660" />
-  </programme>
-  <programme channel="DDGoa.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title>DD India News Hour</title>
-    <desc>he host presents latest updates and developments from across the globe pertaining to current affairs, the economy, business and more.</desc>
-    <category>News</category>
-    <category>News Bulletin</category>
-    <icon src="https://dtil.tmsimg.com/assets/p25410278_b_h8_ad.jpg?lock=1280x720" />
   </programme>
   <programme channel="DDGoa.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title>DD India News Hour</title>
@@ -29187,13 +29006,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category lang="en">News</category>
     <category lang="en">News Bulletin</category>
     <icon src="https://dtil.tmsimg.com/assets/p27890276_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="DDJharkhand.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title>Gaon Giraon</title>
-    <desc>The host invites experts to discuss various topics and issues related to gardening, tree preservation, animal husbandry and more.</desc>
-    <category>Sport</category>
-    <category>Talk Show</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28942959_b_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="DDJharkhand.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title>Campus</title>
@@ -31189,13 +31001,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category lang="en">News</category>
     <category lang="en">News Bulletin</category>
     <icon src="https://dtil.tmsimg.com/assets/p29032558_b_h9_ac.jpg?lock=880x660" />
-  </programme>
-  <programme channel="DDManipur.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title>Morning Manipuri News Bulletin</title>
-    <desc>The host presents a comprehensive and detailed coverage, elucidating on the latest news and developments from across the region.</desc>
-    <category>News</category>
-    <category>News Bulletin</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28936754_b_h8_aa.jpg?lock=1280x720" />
   </programme>
   <programme channel="DDManipur.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title>Play</title>
@@ -33284,14 +33089,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <icon src="https://dtil.tmsimg.com/assets/p33162803_b_h9_ab.jpg?lock=880x660" />
     <episode-num system="onscreen">S14 E100</episode-num>
   </programme>
-  <programme channel="DDOdia.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Edusat</title>
-    <desc lang="en">A subject-matter expert provides a comprehensive explanation of various concepts encompassing different topics and subjects in an easy-to-understand manner.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Education (Adult)</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28936316_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E21</episode-num>
-  </programme>
   <programme channel="DDOdia.in@SD" start="20261015093000 +0530" stop="20261015095900 +0530">
     <title lang="en">DDK, SBP Contribution</title>
     <desc lang="en">Bringing the best in television.</desc>
@@ -34296,13 +34093,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category lang="en">Others</category>
     <icon src="https://dtil.tmsimg.com/assets/p29120203_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="DDSahyadri.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Shabdanchya Vatevar</title>
-    <desc lang="en">Bringing the best in television.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p32633786_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="DDSahyadri.in@SD" start="20261015093000 +0530" stop="20261015103000 +0530">
     <title lang="en">Aarogya Sampada</title>
     <desc lang="en">A medical professional sheds light on common ailments whilst suggesting relevant treatments that help to maintain a healthy and balanced lifestyle.</desc>
@@ -34882,12 +34672,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category lang="en">Religious</category>
     <icon src="https://dtil.tmsimg.com/assets/p29249194_b_h9_af.jpg?lock=880x660" />
   </programme>
-  <programme channel="DDSports.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Day 5; Khelo India Winter Games Highlights</title>
-    <desc lang="en">This is Sport - Sport Category.</desc>
-    <category lang="en">Sport</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29310257_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="DDSports.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Day- 8; Khelo India University Games</title>
     <desc lang="en">A national level multi-sport competition organised by Sports Authority of India for athletes from universities across India to compete.</desc>
@@ -35020,14 +34804,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <desc lang="en">Bringing the best in television.</desc>
     <category lang="en">Sport</category>
     <icon src="https://dtil.tmsimg.com/assets/p27199374_b_h9_ab.jpg?lock=880x660" />
-  </programme>
-  <programme channel="DDTamil.in@SD" start="20261015092000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Isaiyum Iraiarulum</title>
-    <desc lang="en">The host sheds light on the grand celebration of the Panguni festival comprising sixty-three ceremonial rituals and a grand procession.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p32766112_b_h9_ab.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E77</episode-num>
   </programme>
   <programme channel="DDTamil.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Kanaga Sabhai</title>
@@ -35453,13 +35229,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <desc lang="en">Gifted singers and musicians deliver mesmerising performances of harmonious songs, beautifully composed to honour the Almighty.</desc>
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p29122080_b_h9_ac.jpg?lock=880x660" />
-  </programme>
-  <programme channel="DDTripura.in@SD" start="20261015080000 +0530" stop="20261015093000 +0530">
-    <title>Youth Programme</title>
-    <desc>Bringing the best in television.</desc>
-    <category>Documentary</category>
-    <category>Others</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28942355_b_h8_ab.jpg?lock=1280x720" />
   </programme>
   <programme channel="DDTripura.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title>Literary Programme</title>
@@ -36094,13 +35863,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category>News Bulletin</category>
     <icon src="https://dtil.tmsimg.com/assets/p28949699_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme channel="DDUrdu.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Khabarnama</title>
-    <desc lang="en">The host provides a comprehensive and detailed coverage, elucidating on the latest news and developments from across the region.</desc>
-    <category lang="en">News</category>
-    <category lang="en">News Bulletin</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29341237_b_h9_ab.jpg?lock=880x660" />
-  </programme>
   <programme channel="DDUrdu.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Hamare Dastkar</title>
     <desc lang="en">Skilled artisans showcase intricate craftsmanship, preserving traditional art forms while sharing the cultural and historical significance of their work.</desc>
@@ -36416,13 +36178,13 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category lang="en">News Bulletin</category>
     <icon src="https://dtil.tmsimg.com/assets/p29341237_b_h9_ab.jpg?lock=880x660" />
   </programme>
-  <programme start="20261015034500 +0000" stop="20261015040000 +0000" channel="DDUttarPradesh.in@SD" catchup-id="100237573">
+  <programme start="20261015090000 +0530" stop="20261015094500 +0530" channel="DDUttarPradesh.in@SD" catchup-id="100409588">
+    <title>Namaste UP</title>
+    <desc>The host presents the latest updates and stories of the day from across Uttar Pradesh.</desc>
+  </programme>
+  <programme start="20261015094500 +0530" stop="20261015100000 +0530" channel="DDUttarPradesh.in@SD" catchup-id="100409580">
     <title>Gumsuda</title>
     <desc>The host gives details of missing people and the contact information of their families.</desc>
-  </programme>
-  <programme start="20261015040000 +0000" stop="20261015043000 +0000" channel="DDUttarPradesh.in@SD" catchup-id="100237571">
-    <title>Safar Geeton Ka</title>
-    <desc>A compilation of some of the best songs sung by popular music artists and singers.</desc>
   </programme>
   <programme start="20261015043000 +0000" stop="20261015050000 +0000" channel="DDUttarPradesh.in@SD" catchup-id="100237590">
     <title>Samachar</title>
@@ -36667,10 +36429,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
   <programme start="20261016173000 +0000" stop="20261016183000 +0000" channel="DDUttarPradesh.in@SD" catchup-id="100278878">
     <title>Golden Hits</title>
     <desc>A comprehensive compilation of famous old melodies from popular Kollywood movies.</desc>
-  </programme>
-  <programme start="20261015033000 +0000" stop="20261015040000 +0000" channel="DDUttarakhand.in@SD" catchup-id="100237754">
-    <title>Khas Mulaqat</title>
-    <desc>The host converses with various people from all walks of life on various topics.</desc>
   </programme>
   <programme start="20261015040000 +0000" stop="20261015043000 +0000" channel="DDUttarakhand.in@SD" catchup-id="100237747">
     <title>Geet Sangeet/ Lok Sangeet</title>
@@ -37261,16 +37019,6 @@ Sonia and Lou face an angry doctor, a furious athlete, and a minister's van repo
     <category lang="en">Film</category>
     <category lang="en">Action</category>
     <icon src="https://dtil.tmsimg.com/assets/p10503143_v_h9_ag.jpg?lock=880x660" />
-  </programme>
-  <programme start="20261015030000 +0000" stop="20261015040000 +0000" channel="DUPWCHD">
-    <category lang="en">Cricket</category>
-    <category lang="en">Series</category>
-    <category>Sports</category>
-    <desc lang="en">Australia Champions vs. England Champions
-From Sharjah Cricket Stadium in Sharjah, Ash Shariqah, United Arab Emirates.</desc>
-    <icon src="https://iptv-epg.org/images/cDY4veI5cQug5tDOthr83TVwudbYoznVisTi5D1DNkUnSrGFdo7ZqMuN_I2UqiIwx1msltd9b0rFeHNfMfyZyvYCCuEyV1iOJ4z4ABC7yyM" />
-    <previously-shown />
-    <title lang="en">World Championship of Legends Cricket</title>
   </programme>
   <programme start="20261015040000 +0000" stop="20261015050000 +0000" channel="DUPWCHD">
     <category lang="en">Cricket</category>
@@ -39001,13 +38749,6 @@ Highlights of all the action from international cricket tournaments, where teams
     <category lang="en">Crime</category>
     <icon src="https://dtil.tmsimg.com/assets/p9780964_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="DangalTV.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Kaisi Teri Dillagi</title>
-    <desc lang="en">Kajri is sold off to a corrupt man when Akash rescues her and transforms her into Kajal. He becomes intensely infatuated with her, but in an unexpected twist, he hands her over to his best friend.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p33535070_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="DangalTV.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Pati Brahmachari</title>
     <desc lang="en">Fate brings an ambitious girl face-to-face with a man who vows to remain a celibate and wields considerable influence in the neighbourhood.</desc>
@@ -39383,14 +39124,6 @@ Highlights of all the action from international cricket tournaments, where teams
     <category lang="en">TV Show</category>
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p33535070_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="DarshanaTV.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Signature</title>
-    <desc lang="en">This is TV Show - Entertainment Category.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p32216328_b_h9_ab.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E21</episode-num>
   </programme>
   <programme channel="DarshanaTV.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Jander Oil</title>
@@ -40537,16 +40270,6 @@ Highlights of all the action from international cricket tournaments, where teams
       <value>--</value>
     </rating>
   </programme>
-  <programme start="20261015090000 +0530" stop="20261015093000 +0530" channel="DesiChannel.in">
-    <title>Songs</title>
-    <desc>A comprehensive compilation of catchy, popular and entertaining songs by various artists and bands from around the world.</desc>
-    <category>Music</category>
-    <language>Punjabi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/74477043ac2656cb8370c23b980d38b7.jpg?width=700" />
-    <rating>
-      <value>TVG</value>
-    </rating>
-  </programme>
   <programme start="20261015093000 +0530" stop="20261015100000 +0530" channel="DesiChannel.in">
     <title>Songs</title>
     <desc>A comprehensive compilation of catchy, popular and entertaining songs by various artists and bands from around the world.</desc>
@@ -41315,16 +41038,6 @@ Highlights of all the action from international cricket tournaments, where teams
     <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/74477043ac2656cb8370c23b980d38b7.jpg?width=700" />
     <rating>
       <value>TVG</value>
-    </rating>
-  </programme>
-  <programme start="20261015090000 +0530" stop="20261015093000 +0530" channel="DhoolTV.in@SD">
-    <title>Rewind</title>
-    <desc>Rewind</desc>
-    <category>Interview</category>
-    <language>Tamil</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/456ade9032327d28e9c666fb3fbad907.jpg?width=700" />
-    <rating>
-      <value>U</value>
     </rating>
   </programme>
   <programme start="20261015093000 +0530" stop="20261015100000 +0530" channel="DhoolTV.in@SD">
@@ -42096,12 +41809,6 @@ Highlights of all the action from international cricket tournaments, where teams
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme channel="DhoomMusic.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Muzik</title>
-    <desc lang="en">A comprehensive compilation of various popular songs written and composed by renowned artists and musicians is played back to back.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28425936_b_h9_ab.jpg?lock=880x660" />
   </programme>
   <programme channel="DhoomMusic.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Muzik</title>
@@ -43546,16 +43253,6 @@ Highlights of all the action from international cricket tournaments, where teams
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/1a945db34709481a601e0bcba74c1bcb.jpg" />
     <episode-num system="onscreen">E2</episode-num>
     <premiere />
-  </programme>
-  <programme channel="DiscoveryChannel.in@SD" start="20261015090300 +0530" stop="20261015092900 +0530">
-    <title lang="en">Man vs. Wild</title>
-    <desc lang="en">The host tackles some of the most gruelling trials, while navigating remote global terrains and sharing essential survival tactics.</desc>
-    <credits>
-      <actor>Bear Grylls</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Adventure</category>
-    <icon src="https://dtil.tmsimg.com/assets/p185311_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="DiscoveryChannel.in@SD" start="20261015092900 +0530" stop="20261015102200 +0530">
     <title lang="en">Shipping Wars</title>
@@ -46907,18 +46604,6 @@ Highlights of all the action from international cricket tournaments, where teams
     <desc>Program information is not yet available</desc>
     <icon src="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/IN_USQO570425A_3515603070_0_20260923T094513307Z_1_imageprocessorclient-tvplus-linear-6b56cc9f55-6psn6.png" />
   </programme>
-  <programme channel="ESPN.us" start="20261015030000 +0000" stop="20261015040000 +0000">
-    <title lang="en">Live: SportsCenter With Scott Van Pelt</title>
-    <desc lang="en">SVP's up at midnight and bringing his unique perspective on games people play to "SportsCenter" viewers. The hourlong, late-night show is driven by the host's self-deprecating wit and passion for sports, with featured elements, including Van Pelt's nightly "1 Big Thing" commentary and a weekly look back at the moments that drove bettors wild in "Bad Beats." The show also delivers what "SportsCenter" fans are used to -- news and highlights, guests and interviews -- but in a different, fast-paced and insightful way.</desc>
-    <credits>
-      <actor>Scott Van Pelt</actor>
-    </credits>
-    <date>2017</date>
-    <category lang="en">News</category>
-    <category lang="en">Sports talk</category>
-    <icon src="http://dtil.tmsimg.com/assets/p13816005_b_h8_ag.jpg?w=960&amp;h=540" />
-    <premiere lang="en" />
-  </programme>
   <programme channel="ESPN.us" start="20261015040000 +0000" stop="20261015050000 +0000">
     <title lang="en">Live: SportsCenter</title>
     <desc lang="en">The latest news, highlights and inside information from every corner of the sports world is presented each day on "SportsCenter," ESPN's first-ever program when the network debuted in September of 1979. The flagship series airs an evening edition and a brand new midnight show each weekday before the stage is cleared for a live "SportsCenter" morning block that emphasizes fast-paced, highlights-driven reports and what's new on social media platforms.</desc>
@@ -48177,10 +47862,6 @@ Highlights of all the action from international cricket tournaments, where teams
     <desc>Bringing the best in television.</desc>
     <category>TV Show</category>
     <category>Religious</category>
-  </programme>
-  <programme start="20261015090000 +0530" stop="20261015093000 +0530" channel="EkamraBharatOdia.in@SD" catchup-id="100232799">
-    <title>Sakala Khabar</title>
-    <desc>The host presents the latest news, current affairs and developments on a range of topics.</desc>
   </programme>
   <programme start="20261015093000 +0530" stop="20261015100000 +0530" channel="EkamraBharatOdia.in@SD" catchup-id="100232807">
     <title>Abhula Smruti</title>
@@ -51933,13 +51614,6 @@ Highlights of all the action from international cricket tournaments, where teams
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme start="20261015030000 +0000" stop="20261015040000 +0000" channel="FoxSports1.us">
-    <category lang="en">Sports</category>
-    <desc lang="en">Highlights, analysis and a wrap-up of today's MLB action.</desc>
-    <icon src="https://iptv-epg.org/images/5upgu513XeiAbdGo9e2IG2PvrWinhCu-skJqLajCaHPKB8DaDai1NBabhBn7Gj_mJNK9yApCHX-qSwUqteddo6c3oQFUpFL5HC0I5p38DXs" />
-    <title lang="en">MLB on FS1 Postgame</title>
-    <live />
-  </programme>
   <programme start="20261015040000 +0000" stop="20261015050000 +0000" channel="FoxSports1.us">
     <category lang="en">Sports</category>
     <desc lang="en">Highlights, analysis and a wrap-up of today's MLB action.</desc>
@@ -52844,13 +52518,6 @@ From TDECU Stadium in Houston.</desc>
     <title lang="en">The Herd With Colin Cowherd</title>
     <live />
   </programme>
-  <programme channel="GREATmovies.uk" start="20261015022200 +0000" stop="20261015040000 +0000">
-    <title lang="en">Rage At Dawn</title>
-    <desc lang="en">1955 Classic western with Randolph Scott and Forrest Tucker. When the notorious Reno Brothers start rampaging through the west, a special agent is sent to bring them to justice.</desc>
-    <category>Film</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800011-20261015075200/list/GreatMoviesRageAtDawn2111727a9ec25ccf91c45ec98029fed3269185e.jpg" />
-  </programme>
   <programme channel="GREATmovies.uk" start="20261015040000 +0000" stop="20261015053500 +0000">
     <title lang="en">Panhandle</title>
     <desc lang="en">1948 Western starring Rod Cameron. A former Texas marshal is determined to prove a powerful casino owner is behind his brother's murder.</desc>
@@ -53732,16 +53399,6 @@ From TDECU Stadium in Houston.</desc>
     <category>Film</category>
     <language>English</language>
     <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800011-20261021235800/list/GreatMoviesIDoOrDieAKillerArrangement2102295987cbcf503b047908aae91b0a811c0af.jpg" />
-  </programme>
-  <programme channel="GREATromance.uk" start="20261015035000 +0000" stop="20261015040000 +0000">
-    <title lang="en">Good News on GREAT! Extra</title>
-    <desc lang="en">Heartwarming good news stories from the UK and beyond.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Showbiz</category>
-    <icon src="https://images.metadata.sky.com/pd-image/287510f4-1914-4f8d-b48a-af583ac867ee/16-9" />
-    <rating system="UK">
-      <value>PG</value>
-    </rating>
   </programme>
   <programme channel="GREATromance.uk" start="20261015040000 +0000" stop="20261015043000 +0000">
     <title lang="en">Teleshopping</title>
@@ -54982,16 +54639,6 @@ From TDECU Stadium in Houston.</desc>
   <programme start="20261016180000 +0000" stop="20261016183000 +0000" channel="GangaurTV.in@SD" catchup-id="100280624">
     <title>Naya Gana</title>
     <desc>A compilation of some of the latest songs is played back to back.</desc>
-  </programme>
-  <programme start="20261015030100 +0000" stop="20261015040000 +0000" channel="Getfactual.us">
-    <title lang="en">In the Footsteps of Jesus</title>
-    <desc lang="en">For the past 2000 years, he has remained the most famous character of History. Described as a leader, as a feminist, an anarchist, a healer. But today, what do we really know about Jesus?</desc>
-    <date>2025</date>
-    <category lang="en">Explore</category>
-    <icon src="https://img.static-ottera.com/prod/run/video/thumbnails/widescreen/3840x2160/themysteriesofthebible_s01_thumbnail_widescreen.jpg" />
-    <rating system="US">
-      <value>M/12</value>
-    </rating>
   </programme>
   <programme start="20261015040000 +0000" stop="20261015045800 +0000" channel="Getfactual.us">
     <title lang="en">Doggerland</title>
@@ -60591,20 +60238,6 @@ From TDECU Stadium in Houston.</desc>
     <desc>Shark Dive TV showcases Bottom-Dwelling Sharks and does a Deeper Dive analyzing how Sharks Breathe, Wobbegong Sharks and Caribbean Reef Sharks.</desc>
     <icon src="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/IN_USQO570425A_1250843898_0_20250501T010235934Z_66_imageprocessorclient-tvplus-linear-b76dd9bbb-55jld.jpeg" />
   </programme>
-  <programme start="20261015082600 +0530" stop="20261015092500 +0530" channel="InTravel.in@HD">
-    <title>Road Less Traveled</title>
-    <desc>Jonathan Legg travels the world in search of exotic and unique experiences.</desc>
-    <category>Outdoors</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/c928004171f82148b32218f1d941106f.jpg?width=700" />
-    <credits>
-      <actor>Jonathan Legg</actor>
-    </credits>
-    <episode-num system="onscreen">6</episode-num>
-    <rating>
-      <value>TVG</value>
-    </rating>
-  </programme>
   <programme start="20261015092500 +0530" stop="20261015102200 +0530" channel="InTravel.in@HD">
     <title>Weekend Breaks with Gregg Wallace</title>
     <desc>Gregg heads to the German capital for a three-day trip; he gets to the heart of Berlin's food scene and gets involved in the beer culture; between meals he explores the city's often turbulent past and indulges his love of the musical Cabaret!</desc>
@@ -61590,16 +61223,6 @@ From TDECU Stadium in Houston.</desc>
     <sub-title>Magnificent Mixtures</sub-title>
     <desc>In this week's experiments we mix up some fireworks made from tin foil, whip up a stinky polymer, and try out an alchemy staple - turning lead into gold.</desc>
     <icon src="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/IN_USQO570425A_1578916904_0_20250627T094227261Z_59_imageprocessorclient-tvplus-linear-95576dcd4-hb74w.jpeg" />
-  </programme>
-  <programme start="20261015090000 +0530" stop="20261015093000 +0530" channel="Insync.in">
-    <title>Insync Lounge</title>
-    <desc>Bringing the best in television.</desc>
-    <category>Music</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/1295452de606ff8d734bc7071b42f81a.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
   </programme>
   <programme start="20261015093000 +0530" stop="20261015100000 +0530" channel="Insync.in">
     <title>Insync Lounge</title>
@@ -64160,13 +63783,6 @@ From TDECU Stadium in Houston.</desc>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme channel="Jonack.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title>Maharani</title>
-    <desc>Bringing the best in television.</desc>
-    <category>TV Show</category>
-    <category>Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p32702547_b_h8_aa.jpg?lock=1280x720" />
-  </programme>
   <programme channel="Jonack.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title>Raagini</title>
     <desc>Ragini, a college fresher, finds herself in trouble when someone leaks a scandalous video CD, forcing her to confront unexpected dangers within her campus.</desc>
@@ -66688,14 +66304,6 @@ From TDECU Stadium in Houston.</desc>
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p33458481_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="KalaignarTV.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Azhagi</title>
-    <desc lang="en">Sundari, a widow, raises her three children, Natraj, Mathi and Surya with love and support amidst several hardships. But, things turn bad in the family when Natraj gets married to a rich girl.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p8890913_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E852</episode-num>
-  </programme>
   <programme channel="KalaignarTV.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Katrathu Samayal</title>
     <desc lang="en">The host presents a wide range of delicious recipes, demonstrates their preparation and shares useful culinary tips with the viewers.</desc>
@@ -66979,16 +66587,6 @@ From TDECU Stadium in Houston.</desc>
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p8890913_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E853</episode-num>
-  </programme>
-  <programme start="20261015090000 +0530" stop="20261015093000 +0530" channel="KappaTV.in@ALT1">
-    <title>The Comedy Grid</title>
-    <desc>Bringing the best in television.</desc>
-    <category>Musical</category>
-    <language>Malayalam</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/5f144488c25f14c53d7bac62443c99f9.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
   </programme>
   <programme start="20261015093000 +0530" stop="20261015093500 +0530" channel="KappaTV.in@ALT1">
     <title>Footloose</title>
@@ -68774,19 +68372,6 @@ From TDECU Stadium in Houston.</desc>
     <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/8778032f75fa46c3a6baa2f7f5c40f14.jpg?width=700" />
     <rating>
       <value>U</value>
-    </rating>
-  </programme>
-  <programme channel="KnowledgeNetwork.ca" start="20261015030000 +0000" stop="20261015040000 +0000">
-    <title lang="en">Ben Fogle's Race for the Nile</title>
-    <desc lang="en">Ben and Dwayne explore the complex history and challenges of this quest, facing their own perils before finally arriving at the source of the Nile.</desc>
-    <date>2026</date>
-    <icon src="http://dtil.tmsimg.com/assets/p33951921_b_h8_aa.jpg?w=960&amp;h=540" />
-    <premiere lang="en" />
-    <rating system="Canadian Parental Rating">
-      <value>PG</value>
-    </rating>
-    <rating system="USA Parental Rating">
-      <value>TVPG</value>
     </rating>
   </programme>
   <programme channel="KnowledgeNetwork.ca" start="20261015040000 +0000" stop="20261015050000 +0000">
@@ -74313,15 +73898,6 @@ From TDECU Stadium in Houston.</desc>
     <category lang="en">Thriller</category>
     <icon src="https://sat.tvhttps://www.sat.tv/wp-content/themes/twentytwenty-child/assets/img/prog-6199.svg" />
   </programme>
-  <programme start="20261015040000 +0100" stop="20261015050000 +0100" channel="MBCPlusDrama.sa@SD">
-    <title lang="en">Lost In Someone's Love</title>
-    <desc lang="en">Sai Joshi dreams of joining the Nagpur Medical College and becoming a doctor one day, but her steps are hindered when her family forces her to marry an IPS officer who is in love with another woman, so they make a secret deal that comforts both of them. Ayesha Singh, Neil Bhatt, Aishwarya Sharma Bhatt, Sanjivani Amit Takkar, Kishori Shahane, Jaydeep Sen, Rajesh Chawla.</desc>
-    <date>2020</date>
-    <category lang="en">Series</category>
-    <category lang="en">Romance</category>
-    <icon src="https://sat.tv/wp-content/themes/twentytwenty-child/data_lineups/nilesat/images2/epg-1331156.jpg" />
-    <episode-num system="onscreen">E348</episode-num>
-  </programme>
   <programme start="20261015050000 +0100" stop="20261015060000 +0100" channel="MBCPlusDrama.sa@SD">
     <title lang="en">Newton's Cradle</title>
     <desc lang="en">After much insistence, Hana travels to the United States in the hope of giving birth to her son there so that he can obtain American citizenship, unaware that her desperate attempts would reflect on her marriage with an ominous disaster. Mona Zaki, Mohamed Mamdouh, Sayyed Ragab, Aicha Ben Ahmed, Mayan Al Sayed, Tamer Mohsen, Tamer Mohsen.</desc>
@@ -75406,16 +74982,6 @@ From TDECU Stadium in Houston.</desc>
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p9486837_v_h10_aa.jpg?lock=1280x720" />
   </programme>
-  <programme start="20261015090000 +0530" stop="20261015093000 +0530" channel="MKSix.in">
-    <title>Puthupada Comedy</title>
-    <desc>A comprehensive compilation of the best funny scenes from various Tamil movies featuring legendary actors and actresses.</desc>
-    <category>Comedy</category>
-    <language>Tamil</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/2275f6bf3ae8e82e0a055fbcdce8bdd6.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261015093000 +0530" stop="20261015100000 +0530" channel="MKSix.in">
     <title>Nachunu Nagaichuvai</title>
     <desc>The host presents a curated compilation of comedy scenes and clips from some of the most hilarious and popular Tamil movies.</desc>
@@ -76205,24 +75771,6 @@ From TDECU Stadium in Houston.</desc>
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme start="20261015033000 +0000" stop="20261015040000 +0000" channel="MTV2.us">
-    <category lang="en">Sitcom</category>
-    <category lang="en">Series</category>
-    <credits>
-      <actor>Jamie Foxx</actor>
-      <actor>Garrett Morris</actor>
-      <actor>Ellia English</actor>
-      <actor>Garcelle Beauvais-Nilon</actor>
-      <actor>Christopher Duncan</actor>
-    </credits>
-    <date>1997</date>
-    <desc lang="en">S02 E03 — The Employee Formerly Known as Prince
-Jamie (Jamie Foxx) tricks Fancy (Garcelle Beauvais) into agreeing to marry a new hotel employee (guest star Clifton Powell) who turns out to be an African royal.</desc>
-    <episode-num>S02 E03</episode-num>
-    <icon src="https://iptv-epg.org/images/Nh-dvk-hmxEY0agKLMRPSbXXh2Sk10XEUQNXAQ7DezS3KvZfjqXghKRSLxY_zuKT7imr5jaj8cZEhML7tO4lywEBDQPZ2OhtENyT8bVNxFQ" />
-    <previously-shown />
-    <title lang="en">The Jamie Foxx Show</title>
   </programme>
   <programme start="20261015040000 +0000" stop="20261015043000 +0000" channel="MTV2.us">
     <category lang="en">Sitcom</category>
@@ -79610,17 +79158,6 @@ Victoria calls on "Catfish" to help her meet the man that she's been chatting wi
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261015033000 +0000" stop="20261015040000 +0000" channel="MadeInHollywood.us@SD">
-    <title lang="en">Thrills and Chills Spotlight</title>
-    <desc lang="en">Interviews with the cast and filmmakers of Final Destination: Bloodlines, I Know What You Did Last Summer, Vicious, The Man in My Basement, and The Thursday Murder Club.</desc>
-    <date>2025</date>
-    <category lang="en">Daytime TV + Games</category>
-    <icon src="https://dki01q1l7yn3y.cloudfront.net/thumbnails-platform-prod/assets/cs::content::episodemeta/48051-50099/98884028-default_v1.png" />
-    <episode-num system="onscreen">S1 E1</episode-num>
-    <rating system="US">
-      <value>TV-PG</value>
-    </rating>
-  </programme>
   <programme start="20261015040000 +0000" stop="20261015043000 +0000" channel="MadeInHollywood.us@SD">
     <title lang="en">Made in Hollywood</title>
     <sub-title lang="en">The Uprising, Onslaught, Runner, Black Zombie</sub-title>
@@ -81746,16 +81283,6 @@ Victoria calls on "Catfish" to help her meet the man that she's been chatting wi
       <value>TV-PG</value>
     </rating>
   </programme>
-  <programme start="20261015090000 +0530" stop="20261015093000 +0530" channel="MadhimugamTV.in">
-    <title>Songs</title>
-    <desc>A comprehensive compilation of catchy, popular and entertaining songs by various artists and bands from around the world, is played back-to-back.</desc>
-    <category>Music</category>
-    <language>Tamil</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/1c7c2a4ad2a76c81a1b7934d9979cea4.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261015093000 +0530" stop="20261015100000 +0530" channel="MadhimugamTV.in">
     <title>Then Saral</title>
     <desc>The host presents a comprehensive compilation of melodious classic songs performed by various artists.</desc>
@@ -83357,19 +82884,6 @@ Victoria calls on "Catfish" to help her meet the man that she's been chatting wi
     <desc lang="en">Bringing the best in television.</desc>
     <icon src="https://iptv-epg.org/images/E3NAkvQF2TDVsXXQEixR3a4uVQxF2SZPxDIsTczUgBbQ-vBl2gETwB43ADljtBlthOtjh-DEE_FSO9xYGUGFC5oL1igpfq7S2M4cqAJpFqk51K3XdlDv2owsmFOydA" />
     <title lang="en">Chotu Dada</title>
-  </programme>
-  <programme channel="MazhavilManorama.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Super Kanmani</title>
-    <desc lang="en">Rejected by most of her family and community since infancy due to a birth defect, Kanmani aspires to become a fashion designer and support her father.</desc>
-    <credits>
-      <actor>Anjana Appukuttan</actor>
-      <actor>Saniya Babu</actor>
-      <actor>Akin Vijayan</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28406469_b_h9_ac.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E627</episode-num>
   </programme>
   <programme channel="MazhavilManorama.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Ottashikharam</title>
@@ -89256,25 +88770,6 @@ Victoria calls on "Catfish" to help her meet the man that she's been chatting wi
       <value>NA</value>
     </rating>
   </programme>
-  <programme channel="NHLNetwork.us" start="20261015033000 +0000" stop="20261015040000 +0000">
-    <title lang="en">Live: On the Fly</title>
-    <desc lang="en">Recapping all the night's exciting action from around the National Hockey League, with highlights, analysis, interviews and more.</desc>
-    <credits>
-      <actor>Jamie Hersch</actor>
-      <actor>Alexa Datt</actor>
-      <actor>Kelly Nash</actor>
-    </credits>
-    <date>2016</date>
-    <category lang="en">Hockey</category>
-    <icon src="http://dtil.tmsimg.com/assets/p817411_b_h10_ad.jpg?w=960&amp;h=540" />
-    <premiere lang="en" />
-    <rating system="USA Parental Rating">
-      <value>TVPG</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>PG</value>
-    </rating>
-  </programme>
   <programme channel="NHLNetwork.us" start="20261015040000 +0000" stop="20261015043000 +0000">
     <title lang="en">On the Fly</title>
     <desc lang="en">Recapping all the night's exciting action from around the National Hockey League, with highlights, analysis, interviews and more.</desc>
@@ -91339,27 +90834,6 @@ Victoria calls on "Catfish" to help her meet the man that she's been chatting wi
     <category lang="en">Factual Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p10195074_b_h9_bi.jpg?lock=880x660" />
   </programme>
-  <programme channel="NickJr.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Peppa Pig</title>
-    <desc lang="en">A curious, naive, yet friendly little pig navigates through her life with her friends and family.</desc>
-    <credits>
-      <actor>John Sparkes</actor>
-      <actor>Amelie Bea Smith</actor>
-      <actor>Richard Ridings</actor>
-      <actor>Morwenna Banks</actor>
-      <actor>Oliver May</actor>
-      <actor>Meg Hall</actor>
-      <actor>Tallulah Conabeare</actor>
-      <director>Phil Hall</director>
-      <director>Joris van Hulzen</director>
-      <director>Mark Baker</director>
-      <director>Neville Astley</director>
-      <producer>Julian Nott</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p274928_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="NickJr.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Peppa Pig</title>
     <desc lang="en">A curious, naive, yet friendly little pig navigates through her life with her friends and family.</desc>
@@ -91698,21 +91172,6 @@ Victoria calls on "Catfish" to help her meet the man that she's been chatting wi
     <category lang="en">Children</category>
     <category lang="en">Animation</category>
     <icon src="https://dtil.tmsimg.com/assets/p274928_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="Nickelodeon.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Motu Patlu</title>
-    <desc lang="en">Best friends Motu and Patlu live in Furfuri Nagar. When they land in the most hilarious situations, Motu is the one who generally creates problems, while Patlu tries to solve them.</desc>
-    <credits>
-      <actor>Ben Bledsoe</actor>
-      <actor>Darren Capozzi</actor>
-      <actor>Alexandra Ryan</actor>
-      <actor>Suhas Kadav</actor>
-      <director>Suhas Kadav</director>
-      <producer>Anish Mehta</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p10967910_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="Nickelodeon.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Motu Patlu</title>
@@ -93086,17 +92545,6 @@ Shalini lives in America but desires to relocate to India. Meanwhile, a girl fro
     <desc lang="en">A religious leader sheds light on the teachings of the Almighty and encourages followers to take the path of spirituality.</desc>
     <icon src="https://iptv-epg.org/images/97SnnmYl1odiTFoJ6nhtHT2GDgYUPT7g1OE_wh5M48f_H7mtnioBlmC8qxMab-su0VnSQgG6RHYUUVBObX3IHyAcppXYKn0007g8I3hTzmBD6rI-Y-tlW7s51vPFOg" />
     <title lang="en">Dharam Katha</title>
-  </programme>
-  <programme channel="OutdoorChannel.us" start="20261015033000 +0000" stop="20261015040000 +0000">
-    <title lang="en">Handguns</title>
-    <sub-title lang="en">Ringing Steel</sub-title>
-    <desc lang="en">Steel targets provide immediate visual and auditory feedback, making them an excellent resource for handgun training.</desc>
-    <date>2026</date>
-    <category lang="en">Series</category>
-    <category lang="en">Shooting</category>
-    <icon src="http://dtil.tmsimg.com/assets/p3505551_b_h8_ac.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S15 E3</episode-num>
-    <previously-shown />
   </programme>
   <programme channel="OutdoorChannel.us" start="20261015040000 +0000" stop="20261015043000 +0000">
     <title lang="en">Shooting USA</title>
@@ -95931,13 +95379,6 @@ Shalini lives in America but desires to relocate to India. Meanwhile, a girl fro
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p21135823_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="PTCPunjabi.in@SD" start="20261015091500 +0530" stop="20261015093000 +0530">
-    <title lang="en">Simran/Song</title>
-    <desc lang="en">This is TV Show - Religious Category.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Religious</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27640836_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="PTCPunjabi.in@SD" start="20261015093000 +0530" stop="20261015110000 +0530">
     <title lang="en">PTC Comedy Hours</title>
     <desc lang="en">Bringing the best in entertainment.</desc>
@@ -96085,13 +95526,6 @@ Shalini lives in America but desires to relocate to India. Meanwhile, a girl fro
     <category lang="en">TV Show</category>
     <category lang="en">Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p7945998_b_h9_ab.jpg?lock=880x660" />
-  </programme>
-  <programme channel="PTCPunjabiGold.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Sales Tele Shop Slot</title>
-    <desc lang="en">The host presents a wide variety of products sold by reputable brands that customers can purchase from the comfort of their homes.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Consumer</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29356943_b_h9_ab.jpg?lock=880x660" />
   </programme>
   <programme channel="PTCPunjabiGold.in@SD" start="20261015093000 +0530" stop="20261015123000 +0530">
     <title lang="en">Bhai Taru Singh</title>
@@ -98373,23 +97807,6 @@ Bringing the best in television.</desc>
     <title lang="en">Pocket Films</title>
     <icon src="https://xstreamcp-assets-msp.streamready.in/assets/RUNNTV/LIVECHANNEL/67ed3b4b9555833db945e388/images/LANDSCAPE_169/1a68c432-a3a5-4ed2-95fc-704837122d60.png" />
   </programme>
-  <programme channel="Pogo.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Chhota Bheem</title>
-    <desc lang="en">Bheem is an extremely brave, strong and intelligent young boy. He often manages to solve everyone's problems which endears him to the townspeople of Dholakpur.</desc>
-    <credits>
-      <actor>Vatsal Dubey</actor>
-      <actor>Julie Tejwani</actor>
-      <actor>Rupa Bhimani</actor>
-      <actor>Sabina Malik Mausam</actor>
-      <actor>Rajesh Kava</actor>
-      <actor>Prince Patel</actor>
-      <director>Rajiv Chilaka</director>
-      <producer>Rajiv Chilaka</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p13003425_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="Pogo.in@SD" start="20261015093000 +0530" stop="20261015103000 +0530">
     <title lang="en">Chhota Bheem</title>
     <desc lang="en">Bheem is an extremely brave, strong and intelligent young boy. He often manages to solve everyone's problems which endears him to the townspeople of Dholakpur.</desc>
@@ -99161,20 +98578,6 @@ Bringing the best in television.</desc>
     <category lang="en">TV Show</category>
     <category lang="en">Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p29030724_b_h9_ab.jpg?lock=880x660" />
-  </programme>
-  <programme channel="Pop.uk" start="20261015032900 +0000" stop="20261015035500 +0000">
-    <title lang="en">Shasha And Milo</title>
-    <desc lang="en">Shasha the cat and Milo the boy discover their heroic shapeshifting destiny.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261015085900/list/ZEEPOPShashaAndMilo2056737590032430bf3448bbe7e6b6de80d406c.jpg" />
-  </programme>
-  <programme channel="Pop.uk" start="20261015035500 +0000" stop="20261015040000 +0000">
-    <title lang="en">Numb Chucks</title>
-    <desc lang="en">Dilweed and Fungus go to meet Woodchuck Morris at a mall signing! Then, the Chucks have Crispin over for a sleepover party, but his Dad's security team turn the house into a fortress.</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800007-20261015092500/list/ZEEPOPNumbChucks215146728213337c40441ec9debd08d0eedf900.jpg" />
   </programme>
   <programme channel="Pop.uk" start="20261015040000 +0000" stop="20261015042000 +0000">
     <title lang="en">Numb Chucks</title>
@@ -103960,13 +103363,6 @@ Bringing the best in television.</desc>
       <value>NA</value>
     </rating>
   </programme>
-  <programme channel="PuthuyugamTV.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Yugam Connect</title>
-    <desc lang="en">The host talks at length about the importance of women's health and provides delicious and healthy recipes packed with nutritions.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Cooking</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28635142_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="PuthuyugamTV.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Sponsored Program</title>
     <desc lang="en">Bringing the best in television.</desc>
@@ -104717,23 +104113,6 @@ Bringing the best in television.</desc>
       <value>Family</value>
     </rating>
   </programme>
-  <programme channel="RajDigitalPlus.in@SD" start="20261015070000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Melangottu Thalikattu</title>
-    <desc lang="en">Lovers Ramu and Mutthama vow to marry each other despite opposition from her father. But his relationship with her is in jeopardy when she mistakes his platonic friendship with a woman.</desc>
-    <credits>
-      <actor>Ramarajan</actor>
-      <actor>Saranya Ponvannan</actor>
-      <actor>Lalitha Kumari</actor>
-      <actor>Vinu Chakravarthy</actor>
-      <actor>S. S. Chandran</actor>
-      <actor>Chinni Jayanth</actor>
-      <actor>Pandiyan</actor>
-      <director>K. Dheenathayalan</director>
-    </credits>
-    <category lang="en">Film</category>
-    <category lang="en">Romance</category>
-    <icon src="https://dtil.tmsimg.com/assets/p30324903_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="RajDigitalPlus.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Slot</title>
     <desc lang="en">Bringing the best in television.</desc>
@@ -104890,16 +104269,6 @@ Bringing the best in television.</desc>
     <category lang="en">Film</category>
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p26153908_v_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme start="20261015090000 +0530" stop="20261015093000 +0530" channel="RajMusicTelugu.in@SD">
-    <title>Kotha Kotha Ga</title>
-    <desc>A comprehensive compilation of popular songs from some of the recently released Tollywood movies. It is the ultimate destination for Tollywood music lovers.</desc>
-    <category>Musical</category>
-    <language>Telugu</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/e12ef4cb9cda6daa8b692a686e02fef2.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
   </programme>
   <programme start="20261015093000 +0530" stop="20261015100000 +0530" channel="RajMusicTelugu.in@SD">
     <title>Multiplex</title>
@@ -105633,13 +105002,6 @@ Bringing the best in television.</desc>
     <category lang="en">Game Show</category>
     <icon src="https://dtil.tmsimg.com/assets/p29065062_b_h9_ab.jpg?lock=880x660" />
   </programme>
-  <programme channel="RajMusixMalayalam.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Gananjali</title>
-    <desc lang="en">A comprehensive compilation featuring religious songs and devotional hymns recorded by various artists is played back-to-back.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Religious</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29050013_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="RajMusixMalayalam.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Amoolya Ragangal</title>
     <desc lang="en">Bringing the best in television.</desc>
@@ -106056,12 +105418,6 @@ Bringing the best in television.</desc>
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p29681526_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="RajMusixTelugu.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Kotha Kotha Ga</title>
-    <desc lang="en">A comprehensive compilation of popular songs from some of the recently released Tollywood movies. It is the ultimate destination for Tollywood music lovers.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29439727_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="RajMusixTelugu.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Multiplex</title>
     <desc lang="en">Bringing the best in television.</desc>
@@ -106308,12 +105664,6 @@ Bringing the best in television.</desc>
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p29439727_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="RajTV.in@SD" start="20261015083000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Manathai Varudiya Paadalgal</title>
-    <desc lang="en">A comprehensive compilation of some of the most popular songs from different genres composed by renowned musicians from the industry.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p10041756_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="RajTV.in@SD" start="20261015093000 +0530" stop="20261015123000 +0530">
     <title lang="en">Kaadhali</title>
     <desc lang="en">Deivanai is an innocent rural girl who has carried a flame for her childhood sweetheart, Gopal, all her life. However, when Gopal leaves for college he falls in love with a fellow student.</desc>
@@ -106501,12 +105851,6 @@ Bringing the best in television.</desc>
     <desc lang="en">A comprehensive compilation of some of the most popular songs from different genres composed by renowned musicians from the industry.</desc>
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p10041756_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="Ramdhenu.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Beat Box 1</title>
-    <desc lang="en">A comprehensive compilation of popular Assamese songs, performed by various musicians and singers, is played back-to-back.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28941465_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="Ramdhenu.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Beat Box 1</title>
@@ -106802,13 +106146,6 @@ Bringing the best in television.</desc>
     <desc lang="en">Vaishalee, an Assamese actress, presents a countdown of the biggest hit songs from movies in Assam's film industry and reports the latest news.</desc>
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p28941489_b_h9_ab.jpg?lock=880x660" />
-  </programme>
-  <programme channel="Rang.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Surujmukhi</title>
-    <desc lang="en">Bringing the best in television.</desc>
-    <category lang="en">Documentary</category>
-    <category lang="en">Others</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28931985_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="Rang.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Alaka Ragini</title>
@@ -109245,13 +108582,6 @@ Bringing the best in television.</desc>
     <episode-num system="onscreen">E4</episode-num>
     <premiere />
   </programme>
-  <programme channel="Rengoni.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Ahir Baibhabi</title>
-    <desc lang="en">Bringing the best in television.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p31606543_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="Rengoni.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Ramdhenu</title>
     <desc lang="en">Various renowned artists including Akash Lahan, Sristi Sarma, Kristi Sarma and Mrinal Jyoti Mahanta perform the Radha-Krishna dance.</desc>
@@ -109844,27 +109174,6 @@ Bringing the best in television.</desc>
     <icon src="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/US_USQT620324A_1010034344_0_20250317T074049099Z_36_imageprocessorclient-tvplus-linear-b76dd9bbb-lwhf2.jpeg" />
     <rating>
       <value>NA</value>
-    </rating>
-  </programme>
-  <programme start="20261015070000 +0530" stop="20261015093000 +0530" channel="RojaMovies.in@SD">
-    <title>Chinna Gounder</title>
-    <desc>The village head is a man who sticks to honesty while making judgements. However, when he falls prey to a conspiracy, he bravely fights to ensure that justice prevails in his village.</desc>
-    <category>Drama</category>
-    <language>Tamil</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/32d32ce0db3748ed26593b6cba0d95f1.jpg?width=700" />
-    <credits>
-      <actor>Vijayakanth</actor>
-      <actor>Sukanya</actor>
-      <actor>Salim Ghouse</actor>
-      <actor>Aachi Manorama</actor>
-      <actor>Sathyapriya</actor>
-      <actor>Meera</actor>
-      <actor>Goundamani</actor>
-      <actor>Senthil</actor>
-      <actor>Vadivelu</actor>
-    </credits>
-    <rating>
-      <value>U</value>
     </rating>
   </programme>
   <programme start="20261015093000 +0530" stop="20261015120000 +0530" channel="RojaMovies.in@SD">
@@ -111026,13 +110335,6 @@ Bringing the best in television.</desc>
     <category lang="en">Cricket</category>
     <icon src="https://dtil.tmsimg.com/assets/p8509066_b_h9_ab.jpg?lock=880x660" />
   </programme>
-  <programme channel="SONY SPORTS TEN 2 HD.in" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">AS Roma - Real Madrid; UEFA Champions League Highlights</title>
-    <desc lang="en">Highlights and analysis of memorable moments and key plays executed by Europe's top football clubs at the UEFA Champions League.</desc>
-    <category lang="en">Sport</category>
-    <category lang="en">Football</category>
-    <icon src="https://dtil.tmsimg.com/assets/p969763_b_h9_ar.jpg?lock=880x660" />
-  </programme>
   <programme channel="SONY SPORTS TEN 2 HD.in" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">LASK vs. Liverpool F.C; UEFA Champions League Highlights</title>
     <desc lang="en">Highlights and analysis of memorable moments and key plays executed by Europe's top football clubs at the UEFA Champions League.</desc>
@@ -111164,13 +110466,6 @@ Bringing the best in television.</desc>
     <category lang="en">Sport</category>
     <category lang="en">Football</category>
     <icon src="https://dtil.tmsimg.com/assets/p7942039_b_h9_eb.jpg?lock=880x660" />
-  </programme>
-  <programme channel="SafariTV.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Location Hunt</title>
-    <desc lang="en">Filmmakers share their experiences regarding the search for ideal locations for their movies and the various challenges they face.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29031335_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="SafariTV.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Animal Kingdom</title>
@@ -114008,14 +113303,6 @@ Bringing the best in television.</desc>
     </credits>
     <icon src="https://dtil.tmsimg.com/assets/p19166131_b_h10_aa.jpg?lock=1280x720" />
   </programme>
-  <programme channel="ShemarooMarathiBana.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Gajar Maulicha Kirtanacha Powerdose</title>
-    <desc lang="en">Social educators deliver a discourse to apprise devotees of appropriate measures to several social issues, through humour.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p31700532_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E43</episode-num>
-  </programme>
   <programme channel="ShemarooMarathiBana.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Gajar Maulicha</title>
     <desc lang="en">Renowned spiritual orators from Maharashtra share sacred tales with Lord Vitthala's devotees, praising the divine through soulful musical narration and song.</desc>
@@ -115001,13 +114288,6 @@ Bringing the best in television.</desc>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme channel="SiriKannada.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title>Touring Talkies</title>
-    <desc>Popular Tamil author and orator Indra Soundar Rajan talks about the life and contribution of Chandrashekarendra Saraswati, the 68th Jagadguru of the Kanchi Kamakoti Peetham.</desc>
-    <category>TV Show</category>
-    <category>Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p13041936_b_h8_aa.jpg?lock=1280x720" />
-  </programme>
   <programme channel="SiriKannada.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title>Matte Mayamruga</title>
     <desc>This is TV Show - Religious Category</desc>
@@ -115622,13 +114902,6 @@ Bringing the best in television.</desc>
     <category>Variety Show</category>
     <icon src="https://dtil.tmsimg.com/assets/p3492431_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme channel="SiriKannadaAllTime.in" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Touring Talkies</title>
-    <desc lang="en">Popular Tamil author and orator Indra Soundar Rajan talks about the life and contribution of Chandrashekarendra Saraswati, the 68th Jagadguru of the Kanchi Kamakoti Peetham.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p13041936_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="SiriKannadaAllTime.in" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Matte Mayamruga</title>
     <desc lang="en">This is TV Show - Religious Category.</desc>
@@ -116242,11 +115515,6 @@ Bringing the best in television.</desc>
     <category>TV Show</category>
     <category>Comedy</category>
     <icon src="https://dtil.tmsimg.com/assets/p20727317_b_h8_ab.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="SkySportsCricket.ie" start="20261015030000 +0000" stop="20261015040000 +0000">
-    <title>Women's Big Bash League</title>
-    <sub-title>Perth Scorchers v Melbourne Stars 09.12</sub-title>
-    <desc>Perth Scorchers v Melbourne Stars. Highlights of the 2025 Knockout play-off match at WACA Ground in Perth</desc>
   </programme>
   <programme channel="SkySportsCricket.ie" start="20261015040000 +0000" stop="20261015050000 +0000">
     <title>Women's Big Bash League</title>
@@ -117128,13 +116396,6 @@ Bringing the best in television.</desc>
     <sub-title lang="en">Derby County v Stoke City in the Championship</sub-title>
     <desc lang="en">Derby County v Stoke City in the Championship.</desc>
     <icon src="https://tv.assets.pressassociation.io/fcba923a-c341-5afa-919f-8ea154488aed.jpg" />
-  </programme>
-  <programme channel="SkySportsNFL.uk" start="20261015030000 +0000" stop="20261015040000 +0000">
-    <title lang="en">NFL Highlights</title>
-    <sub-title lang="en">Atlanta Falcons @ New Orleans Saints 05.10 60mins</sub-title>
-    <desc lang="en">New Orleans Saints v Atlanta Falcons.</desc>
-    <category lang="en">Sport</category>
-    <icon src="https://tv.assets.pressassociation.io/6fd5e7ce-a5ff-5898-b0c0-a3e9c65783c3.jpg" />
   </programme>
   <programme channel="SkySportsNFL.uk" start="20261015040000 +0000" stop="20261015050000 +0000">
     <title lang="en">NFL Highlights</title>
@@ -124670,32 +123931,6 @@ Bringing the best in television.</desc>
     <category lang="en">Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p809737_b_h9_ar.jpg?lock=880x660" />
   </programme>
-  <programme channel="SonySAB.in@HD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Kyunki Papa Kehte Hain</title>
-    <desc lang="en">Pawan lovingly protects his four younger siblings after sudden parental loss, despite severe financial struggle. Furthermore, strict relatives force traditional values upon these resilient children.</desc>
-    <credits>
-      <actor>Raj Anadkat</actor>
-      <actor>Divya Sharma</actor>
-      <actor>Lavish Chouhan</actor>
-      <actor>Asmi Deo</actor>
-      <actor>Kavish Khunger</actor>
-      <actor>Amit B Soni</actor>
-      <actor>Shreya Jha</actor>
-      <actor>Rajesh Balwani</actor>
-      <actor>Purvi Mehta</actor>
-      <actor>Moheet Chauhan</actor>
-      <actor>Hetvi Sharma</actor>
-      <actor>Bhavisha</actor>
-      <actor>Archana Dani</actor>
-      <director>Dharmessh Mehta</director>
-      <producer>Yash A Patnaik</producer>
-      <producer>Mamta Yash Patnaik</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Comedy</category>
-    <icon src="https://dtil.tmsimg.com/assets/p34126806_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E20</episode-num>
-  </programme>
   <programme channel="SonySAB.in@HD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Hastinapur Ke Veer</title>
     <desc lang="en">Five noble brothers unite in a righteous war against greed and corruption.</desc>
@@ -126750,27 +125985,6 @@ Bringing the best in television.</desc>
     <category lang="en">Film</category>
     <category lang="en">Romance</category>
     <icon src="https://dtil.tmsimg.com/assets/p28673271_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="SonyYay.in@SD" start="20261015091900 +0530" stop="20261015092600 +0530">
-    <title lang="en">Shin Chan</title>
-    <desc lang="en">A five-year-old boy, has many misadventures due to his peculiar antics, while his parents and tutors try to discipline him.</desc>
-    <credits>
-      <actor>Tanja Geke</actor>
-      <actor>Bernhard Völger</actor>
-      <actor>Bernd Schramm</actor>
-      <actor>Cathlen Gawlich</actor>
-      <actor>Christin Marquitan</actor>
-      <actor>Detlef Bierstedt</actor>
-      <actor>Susanne Geier</actor>
-      <actor>Anja Rybiczka</actor>
-      <actor>Arianne Borbach</actor>
-      <actor>Eva-Maria Werth</actor>
-      <director>Mitsuru Hongo</director>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26316173_b_h9_ae.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E47</episode-num>
   </programme>
   <programme channel="SonyYay.in@SD" start="20261015092600 +0530" stop="20261015093300 +0530">
     <title lang="en">Shin Chan</title>
@@ -129538,20 +128752,6 @@ Bringing the best in television.</desc>
     <category lang="en">Action</category>
     <icon src="https://dtil.tmsimg.com/assets/p25470012_v_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="Star.Jalsha.in" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Gangaa</title>
-    <desc lang="en">The legislator demands the arrest of Pulkit, yet Gangaa accepts blame for Saloni's abduction to shield him. Subsequently, Saloni defends her allies.</desc>
-    <credits>
-      <actor>Hiya Mukherjee</actor>
-      <actor>Saheb Bhattacharya</actor>
-      <actor>Kaushambi Chakraborty</actor>
-      <actor>Ahona Banerjee</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p33318319_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E218</episode-num>
-  </programme>
   <programme channel="Star.Jalsha.in" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Ashirbad</title>
     <desc lang="en">Mallar promises to help Meghla when she resolves to run away. Later, he encourages her to choose herself after she starts doubting her decision.</desc>
@@ -132094,27 +131294,6 @@ Bringing the best in television.</desc>
     <category lang="en">Action</category>
     <icon src="https://dtil.tmsimg.com/assets/p29550362_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="StarPlus.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Anupamaa</title>
-    <desc lang="en">Prem earns Ranvijay's support when he pushes him to expand his business to Salgonda. In the meantime, Pakhi ignites a feud with Mahi after announcing Ishani's marriage to Ranvijay.</desc>
-    <credits>
-      <actor>Rupali Ganguly</actor>
-      <actor>Sudhanshu Pandey</actor>
-      <actor>Madalsa Sharma</actor>
-      <actor>Gaurav Sharma</actor>
-      <actor>Chandni Bhagwanani</actor>
-      <actor>Gaurav Khanna</actor>
-      <actor>Alpana Buch</actor>
-      <director>Romesh Kalra</director>
-      <producer>Rajan Shahi</producer>
-      <producer>Deepa Sahi</producer>
-      <producer>Vivek Jain</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p18094069_b_h9_ae.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E2171</episode-num>
-  </programme>
   <programme channel="StarPlus.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Kyunki Saas Bhi Kabhi Bahu Thi</title>
     <desc lang="en">Tulsi and Mihir Virani navigate the ensuing challenges that emerge in their family which has endured a lengthy passage of time.</desc>
@@ -132694,22 +131873,6 @@ Bringing the best in television.</desc>
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p18094069_b_h9_ae.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E2172</episode-num>
-  </programme>
-  <programme channel="StarPravah.in@HD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Bai Tuza Ashirwad</title>
-    <desc lang="en">Yashodhan gets worried about Namita's future mother-in-law treating her like a servant. Later, Namita is asked about her past relationships.</desc>
-    <credits>
-      <actor>Akshata Anita Pramod</actor>
-      <actor>Arnav Varier</actor>
-      <actor>Sunil Tavadey</actor>
-      <director>Vinod Lavekar</director>
-      <director>Pushkar Rasam</director>
-      <producer>Vishal Anil Upasani</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p32972936_b_h9_ac.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E170</episode-num>
   </programme>
   <programme channel="StarPravah.in@HD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Marathi Medium</title>
@@ -133550,13 +132713,6 @@ Bringing the best in television.</desc>
     <icon src="https://dtil.tmsimg.com/assets/p32972936_b_h9_ac.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E171</episode-num>
   </programme>
-  <programme channel="StarSports1.in@HD" start="20261015091500 +0530" stop="20261015093000 +0530">
-    <title lang="en">4th T20: India vs West Indies; T20 Cricket</title>
-    <desc lang="en">Professional players from different cricketing teams play in the Twenty20 format, competing against each other to win the match.</desc>
-    <category lang="en">Sport</category>
-    <category lang="en">Cricket</category>
-    <icon src="https://dtil.tmsimg.com/assets/p8414564_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="StarSports1.in@HD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Australia v India: 1st ODI; One-Day International Cricket</title>
     <desc lang="en">An extensive and thorough coverage of one-day cricket matches contested by various international teams from across the globe.</desc>
@@ -133997,13 +133153,6 @@ Bringing the best in television.</desc>
     <category lang="en">Cricket</category>
     <icon src="https://dtil.tmsimg.com/assets/p8414564_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="StarSports1Hindi.in@HD" start="20261015091500 +0530" stop="20261015093000 +0530">
-    <title lang="en">4th T20: India vs West Indies; T20 Cricket</title>
-    <desc lang="en">Professional players from different cricketing teams play in the Twenty20 format, competing against each other to win the match.</desc>
-    <category lang="en">Sport</category>
-    <category lang="en">Cricket</category>
-    <icon src="https://dtil.tmsimg.com/assets/p8414564_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="StarSports1Hindi.in@HD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Australia v India: 1st ODI; One-Day International Cricket</title>
     <desc lang="en">An extensive and thorough coverage of one-day cricket matches contested by various international teams from across the globe.</desc>
@@ -134435,13 +133584,6 @@ Bringing the best in television.</desc>
     <category lang="en">Sport</category>
     <category lang="en">Cricket</category>
     <icon src="https://dtil.tmsimg.com/assets/p8414564_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="StarSports3.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">ICC Mens T20 WC 2024: USA vs Pakistan - 11th Match; Cricket Highlights</title>
-    <desc lang="en">Highlights of a cricket match wherein teams compete against each other in order to emerge victorious and win the coveted title.</desc>
-    <category lang="en">Sport</category>
-    <category lang="en">Cricket</category>
-    <icon src="https://dtil.tmsimg.com/assets/p223336_b_h9_af.jpg?lock=880x660" />
   </programme>
   <programme channel="StarSports3.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">ICC CWC Highlights</title>
@@ -134916,13 +134058,6 @@ Bringing the best in television.</desc>
     <category lang="en">Sport</category>
     <category lang="en">Cricket</category>
     <icon src="https://dtil.tmsimg.com/assets/p8509066_b_h9_ab.jpg?lock=880x660" />
-  </programme>
-  <programme channel="StarSportsSelect1.in@SD" start="20261015091500 +0530" stop="20261015093000 +0530">
-    <title lang="en">Premier League Highlights</title>
-    <desc lang="en">Highlights of the Premier League matches, where professional football teams compete against each other to win the championship title.</desc>
-    <category lang="en">News</category>
-    <category lang="en">Magazine Programme</category>
-    <icon src="https://dtil.tmsimg.com/assets/p18771049_b_h9_af.jpg?lock=880x660" />
   </programme>
   <programme channel="StarSportsSelect1.in@SD" start="20261015093000 +0530" stop="20261015094500 +0530">
     <title lang="en">Premier League Highlights</title>
@@ -135452,16 +134587,6 @@ Bringing the best in television.</desc>
     <icon src="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/US_USQT620324A_2530598877_1_20260211T153909158Z_81_imageprocessorclient-tvplus-linear-584c967455-w6td4.jpeg" />
     <rating>
       <value>NA</value>
-    </rating>
-  </programme>
-  <programme start="20261015053000 +0530" stop="20261015093000 +0530" channel="StingrayTheSpa.ca">
-    <title>Stingray The Spa</title>
-    <desc>Calm your soul, soothe your body, and inspire your mind with purely instrumental electro-acoustic music.</desc>
-    <category>Special</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/4edc3a66655a2e6ed09d8d58ca8a1747.jpg?width=700" />
-    <rating>
-      <value>U</value>
     </rating>
   </programme>
   <programme start="20261015093000 +0530" stop="20261015133000 +0530" channel="StingrayTheSpa.ca">
@@ -139361,16 +138486,6 @@ Bringing the best in television.</desc>
     <category>Entertainment</category>
     <icon src="https://dtil.tmsimg.com/assets/p32553488_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme start="20261015090000 +0530" stop="20261015093000 +0530" channel="TamilanTV.in">
-    <title>Salangai Oli</title>
-    <desc>Bringing the best in television.</desc>
-    <category>Art</category>
-    <language>Tamil</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/f78526e24e3dfe6cbf7db5cb1ba7c34f.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261015093000 +0530" stop="20261015103000 +0530" channel="TamilanTV.in">
     <title>Arasiyal Aragam</title>
     <desc>The host delivers a comprehensive breakdown of the latest news and updates pertaining to political issues across the country.</desc>
@@ -139825,12 +138940,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="TarangMusic.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Best Of Antara</title>
-    <desc lang="en">A comprehensive compilation of some of the most famous songs performed by a renowned Odia artist is played to enthrall the listeners.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28833022_b_h9_ac.jpg?lock=880x660" />
-  </programme>
   <programme channel="TarangMusic.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Ollywood Chhunka</title>
     <desc lang="en">A collection of the biggest musical hits from Ollywood cinema is played back-to-back, offering continuous entertainment for the audience.</desc>
@@ -140116,14 +139225,6 @@ Bringing the best in television.</desc>
     <desc lang="en">This is Music - Music Category.</desc>
     <category lang="en">Music</category>
     <icon src="https://dtil.tmsimg.com/assets/p33023409_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="TarangTV.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Bada Bohu Samparka Ra Nua Kahani</title>
-    <desc lang="en">Bhoomi, a young woman, gets married to Akash, the eldest son, and the heir of the Routray family's small sweet shop business.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28935071_b_h9_ad.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E636</episode-num>
   </programme>
   <programme channel="TarangTV.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">A Mana Manena</title>
@@ -141645,11 +140746,6 @@ Bringing the best in television.</desc>
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme channel="TheJungleBook.in" start="20261015091700 +0530" stop="20261015093000 +0530">
-    <title lang="en">The Is That You, Kaa</title>
-    <desc lang="en">When Kaa sheds his skin, Mowgli asks whether he can have it.</desc>
-    <icon src="https://xstreamcp-assets-msp.streamready.in/assets/SWIFTTV/PROGRAM/6acc628c2c63e04ff6596ee4/images/LANDSCAPE_169/9295_746767e1-800c-41b5-9171-e967deb215ef.png" />
   </programme>
   <programme channel="TheJungleBook.in" start="20261015093000 +0530" stop="20261015094300 +0530">
     <title lang="en">The Monkey Queen</title>
@@ -143319,13 +142415,6 @@ Bringing the best in television.</desc>
     <rating>
       <value>TV-14</value>
     </rating>
-  </programme>
-  <programme channel="TinyPop.uk" start="20261015035200 +0000" stop="20261015040000 +0000">
-    <title lang="en">Care Bears: Unlock The Magic</title>
-    <desc lang="en">Through friendship, courage and a little belly badge magic, the Care Bears continue their missions!</desc>
-    <category>Kids</category>
-    <language>English</language>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_677,h_381,c_scale,f_webp,q_auto:eco/resources/0-10-CHN-802800009-20261015092200/list/TinyPOPCareBearsUnlockTheMagic2056992ca306438dbf240f5b3b8c6ff5f003009.jpg" />
   </programme>
   <programme channel="TinyPop.uk" start="20261015040000 +0000" stop="20261015040500 +0000">
     <title lang="en">Care Bears: Unlock The Magic</title>
@@ -150316,16 +149405,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261015090000 +0530" stop="20261015093000 +0530" channel="UBangla.in">
-    <title>News</title>
-    <desc>The host presents the latest news stories and developments surrounding various socio-economic and political issues around the globe.</desc>
-    <category>News</category>
-    <language>Bengali</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/a4f9ac8588dcc1e1b9e9290abe662ab4.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261015093000 +0530" stop="20261015100000 +0530" channel="UBangla.in">
     <title>Jelar Janala</title>
     <desc>The host collates and presents the most recent news and updates from all the districts in West Bengal that caters to the interests of the people.</desc>
@@ -151583,16 +150662,6 @@ Bringing the best in television.</desc>
     <desc>When a raid of the famous military base Area 51, an alien warrior uses a power glitch to escape captivity.</desc>
     <icon src="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/US_USQT620324A_643290388_14_20250104T132045873Z_98_imageprocessorclient-tvplus-linear-5dc4fd45f6-jwswd.jpeg" />
   </programme>
-  <programme start="20261015090000 +0530" stop="20261015093000 +0530" channel="VaanavilTV.in@SD">
-    <title>CineTrendz</title>
-    <desc>The host presents a comprehensive and detailed coverage of the latest news regarding cinema and the film industry.</desc>
-    <category>Entertainment</category>
-    <language>Tamil</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/d5050e762238bead12145b9d969a17ad.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261015093000 +0530" stop="20261015100000 +0530" channel="VaanavilTV.in@SD">
     <title>Fresh Hits</title>
     <desc>A comprehensive compilation of the latest songs which are performed by various musicians and singers is played back-to-back.</desc>
@@ -152695,13 +151764,6 @@ Bringing the best in television.</desc>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
   </programme>
-  <programme channel="VasanthTV.in@SD" start="20261015080000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Thenaruvi</title>
-    <desc lang="en">A comprehensive collection featuring pleasant and melodious songs from popular Tamil films of the classic era is played non-stop.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29042914_b_h9_ac.jpg?lock=880x660" />
-  </programme>
   <programme channel="VasanthTV.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Music Show</title>
     <desc lang="en">Talented artists sing traditional and devotional songs, showcasing their cultural heritage and vocal prowess through soulful performances.</desc>
@@ -153340,12 +152402,6 @@ Bringing the best in television.</desc>
     <title>No Data</title>
     <desc>https://iptv-epg.org/help</desc>
     <icon src="https://iptv-epg.org/images/pk65exgZRia1zyr7s4YcyRO7F2TiMUhgiwLmULl7h5EH7iD92IFnB98qrplev4JIcSM_A6B0QEcW" />
-  </programme>
-  <programme channel="VissaTV.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Kotha Ragam</title>
-    <desc lang="en">A comprehensive compilation of melodious songs composed and sung by talented artists is played back-to-back to enthral the audience.</desc>
-    <category lang="en">Music</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29192484_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="VissaTV.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Multiplex</title>
@@ -154251,17 +153307,6 @@ Bringing the best in television.</desc>
     <category lang="en-GB">Family</category>
     <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/0200059e2b86cf16c668323c190c7ab3.jpg" />
     <premiere />
-  </programme>
-  <programme channel="WildTV.ca@SD" start="20261015033000 +0000" stop="20261015040000 +0000">
-    <title lang="en">Bloodline Adventures TV</title>
-    <sub-title lang="en">Hook's Revenge</sub-title>
-    <desc lang="en">The crew heads back to Costa Rica, to settle the score with the year before when we got robbed of more than just big fish; this time we are determined to bring in some records!</desc>
-    <date>2026</date>
-    <category lang="en">Series</category>
-    <category lang="en">Hunting</category>
-    <icon src="http://dtil.tmsimg.com/assets/p32746717_b_h8_aa.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S1 E3</episode-num>
-    <previously-shown />
   </programme>
   <programme channel="WildTV.ca@SD" start="20261015040000 +0000" stop="20261015043000 +0000">
     <title lang="en">Elusive Wildlife</title>
@@ -157657,12 +156702,6 @@ Bringing the best in television.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="Zee24Ghanta.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Khabor Saradin</title>
-    <desc lang="en">Stay in the loop with Ghanta for the latest Bengali news! Get breaking updates, exclusive reports, and all the buzz from Kolkata-your go-to source for Bangla khobor!</desc>
-    <category lang="en">News</category>
-    <icon src="https://akamaividz2.zee5.com/image/upload/w_502,h_282,c_scale,f_webp,q_auto:eco/resources//list/24GHANTAKhaborSaradin1791107bbebdc70968149409c436915ad998399.jpg" />
-  </programme>
   <programme channel="Zee24Ghanta.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Khabor Saradin</title>
     <desc lang="en">Stay in the loop with Ghanta for the latest Bengali news! Get breaking updates, exclusive reports, and all the buzz from Kolkata-your go-to source for Bangla khobor!</desc>
@@ -158872,25 +157911,6 @@ Bringing the best in television.</desc>
     <category lang="en">Film</category>
     <category lang="en">Thriller</category>
     <icon src="https://dtil.tmsimg.com/assets/p16881359_v_h9_ab.jpg?lock=880x660" />
-  </programme>
-  <programme channel="ZeeBangla.in@HD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Saat Paake Bandha</title>
-    <desc lang="en">Dushtu, a sweet but misunderstood girl, worries if her life partner will accept her the way she is. She marries Raja, who tries to keep her happy and satisfied.</desc>
-    <credits>
-      <actor>Oindrila Sen</actor>
-      <actor>Vikram Chatterjee</actor>
-      <actor>Vivaan Ghosh</actor>
-      <actor>Rita Koiral</actor>
-      <actor>Parthasarathi Deb</actor>
-      <actor>Baisakhi Marjit</actor>
-      <director>Bijoy Maji</director>
-      <producer>Rajiv Mehra</producer>
-      <producer>Susanta Das</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p27205739_b_h9_af.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E210</episode-num>
   </programme>
   <programme channel="ZeeBangla.in@HD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Sundorboner Baghini</title>
@@ -160212,14 +159232,6 @@ Bringing the best in television.</desc>
     <category lang="en">Thriller</category>
     <icon src="https://dtil.tmsimg.com/assets/p19046196_v_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="ZeeKannada.in@SD" start="20261015080000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Maharshi Vaani</title>
-    <desc lang="en">Shri Maharishi Ananda Guruji explores the spiritual side of the human race. He also renders solutions to the queries raised by the callers.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Astrology</category>
-    <icon src="https://dtil.tmsimg.com/assets/p29233140_b_h9_ab.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E4210</episode-num>
-  </programme>
   <programme channel="ZeeKannada.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Karna</title>
     <desc lang="en">A talented male gynaecologist defies gender roles like balancing household chores and family duties, while standing strong against a patriarchal father and scheming relatives.</desc>
@@ -160638,14 +159650,6 @@ Bringing the best in television.</desc>
     <category lang="en">Astrology</category>
     <icon src="https://dtil.tmsimg.com/assets/p29233140_b_h9_ab.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E4211</episode-num>
-  </programme>
-  <programme channel="ZeeMarathi.in@HD" start="20261015083000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Home Minister</title>
-    <desc lang="en">The host visits homemakers from across Maharashtra and challenges them to a series of fun games and gives them a chance to complete all the tasks and win the grand prize.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Game Show</category>
-    <icon src="https://dtil.tmsimg.com/assets/p32089469_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E41</episode-num>
   </programme>
   <programme channel="ZeeMarathi.in@HD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Sanai Chaughade</title>
@@ -161253,24 +160257,6 @@ Bringing the best in television.</desc>
     <category lang="en">Game Show</category>
     <icon src="https://dtil.tmsimg.com/assets/p32089469_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E42</episode-num>
-  </programme>
-  <programme channel="ZeeTV.in@SD" start="20261015083000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Lakshmi Nivas</title>
-    <desc lang="en">Lakshmi abandons her affluent roots to build a selfless life with Shriniwas. Decades on, the couple work tirelessly to secure their own house and fund a grand wedding for their daughter.</desc>
-    <credits>
-      <actor>Rajendra Chawla</actor>
-      <actor>Riya Munjal</actor>
-      <actor>Akshita Mudgal</actor>
-      <actor>Priom Gujjar</actor>
-      <actor>Raghav Tiwari</actor>
-      <actor>Manasi Joshi Roy</actor>
-      <director>Jaladh. K. Sharma</director>
-      <director>Pawan Kumar Marut</director>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p32205890_b_h9_ab.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E273</episode-num>
   </programme>
   <programme channel="ZeeTV.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Dilon Ki Ram Leela</title>
@@ -161992,19 +160978,6 @@ Bringing the best in television.</desc>
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p32205890_b_h9_ab.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E274</episode-num>
-  </programme>
-  <programme channel="ZeeTamil.in@SD" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Parijadam</title>
-    <desc lang="en">After losing her parents and hearing in a tragic accident, Isai is forced to marry Vishal when her aunt Rukmini manipulates her horoscope to meet Subadra's strict astrological beliefs.</desc>
-    <credits>
-      <actor>Rakshit</actor>
-      <actor>Swathi</actor>
-      <actor>Alya Manasa</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p31143416_b_h9_aa.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E166</episode-num>
   </programme>
   <programme channel="ZeeTamil.in@SD" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Annamalai Kudumbam</title>
@@ -164273,11 +163246,6 @@ Bringing the best in television.</desc>
       <value>NR</value>
     </rating>
   </programme>
-  <programme channel="beINSports6.qa" start="20261015000000 +0000" stop="20261015040000 +0000">
-    <title lang="en">Stay tuned for the next broadcast</title>
-    <category lang="en">Sports Category</category>
-    <icon src="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch646_160_115" />
-  </programme>
   <programme channel="beINSports6.qa" start="20261015040000 +0000" stop="20261015080000 +0000">
     <title lang="en">Stay tuned for the next broadcast</title>
     <category lang="en">Sports Category</category>
@@ -164357,17 +163325,6 @@ Bringing the best in television.</desc>
     <title lang="en">Stay tuned for the next broadcast</title>
     <category lang="en">Sports Category</category>
     <icon src="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch646_160_115" />
-  </programme>
-  <programme start="20261015090000 +0530" stop="20261015093000 +0530" channel="custom.aljazeera.english">
-    <title lang="en-GB">Business of War</title>
-    <sub-title lang="en-GB">Hind Hassan looks at the military tech that is changing the face of modern warfare: drones and AI</sub-title>
-    <desc lang="en-GB">Hind Hassan explores the US weapons industry - the largest of them all - tracing its impacts on American democracy and beyond.</desc>
-    <credits>
-      <actor>Hind Hassan</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/9a2ba4d7194a17b2c6319d4142d3eacf.jpg" />
-    <premiere />
   </programme>
   <programme start="20261015093000 +0530" stop="20261015100000 +0530" channel="custom.aljazeera.english">
     <title lang="en-GB">News</title>
@@ -165630,13 +164587,6 @@ Bringing the best in television.</desc>
     <rating>
       <value>TV-PG</value>
     </rating>
-  </programme>
-  <programme channel="custom.arirang" start="20261015033000 +0000" stop="20261015040000 +0000">
-    <title lang="en">Beauty On And Off</title>
-    <desc lang="en">This is a growth-focused show that follows two people who are inexperienced with beauty as they try out various products and search for their own must-have items.</desc>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Lifestyles</category>
-    <icon src="https://images.metadata.sky.com/pd-image/ad4a28fd-ed29-4b9e-a45d-c6fdeddf8f52/16-9" />
   </programme>
   <programme channel="custom.arirang" start="20261015040000 +0000" stop="20261015050000 +0000">
     <title lang="en">Simply K-Pop Gateway To Korea</title>
@@ -168321,13 +167271,6 @@ Sreedevi marks a major order for her business, but must master riding a moped. L
     <icon src="https://iptv-epg.org/images/4-7xhFDgZNpr2h1Taya69J-4FyrwRQTQtV-NARkv-1OUBI-VwZjjz1pSeSHffOZLPDHkps6EJF8Tr7pnMOGWghjHyfb5-QeDQQWFB0w-Z9bTJgmlzP_fbeRda8mEKQ" />
     <title lang="en">Santhwanam 2</title>
   </programme>
-  <programme channel="custom.assam.talks" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title>Morning Prime</title>
-    <desc>The host sheds light on the latest developments and updates on various socio-economic and political issues across the nation.</desc>
-    <category>News</category>
-    <category>News Bulletin</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28727543_b_h8_aa.jpg?lock=1280x720" />
-  </programme>
   <programme channel="custom.assam.talks" start="20261015093000 +0530" stop="20261015110000 +0530">
     <title>Morning Prime</title>
     <desc>The host sheds light on the latest developments and updates on various socio-economic and political issues across the nation.</desc>
@@ -169152,22 +168095,6 @@ Sreedevi marks a major order for her business, but must master riding a moped. L
     <category>TV Show</category>
     <category>Consumer</category>
     <icon src="https://dtil.tmsimg.com/assets/p22352387_b_h10_ab.jpg?lock=1280x720" />
-  </programme>
-  <programme channel="custom.axs" start="20261015030000 +0000" stop="20261015040000 +0000">
-    <title lang="en">TNA Wrestling: Legends</title>
-    <sub-title lang="en">Jersey Shore/Sports Celebrities</sub-title>
-    <desc lang="en">A look back at the icons of TNA wrestling.</desc>
-    <date>2015</date>
-    <category lang="en">Series</category>
-    <category lang="en">Pro wrestling</category>
-    <icon src="http://dtil.tmsimg.com/assets/p11273451_b_h10_ab.jpg?w=960&amp;h=540" />
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TV14</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>14+</value>
-    </rating>
   </programme>
   <programme channel="custom.axs" start="20261015040000 +0000" stop="20261015050000 +0000">
     <title lang="en">TNA Unfinished Business</title>
@@ -173019,13 +171946,6 @@ Sreedevi marks a major order for her business, but must master riding a moped. L
     <icon src="https://iptv-epg.org/images/2iAH_EbqJJF12Hgpjk6-gs3yUXrNH9ISb5gx7v9jtt6yXUUQZC5_dpEvmeyGr55tXLcDHmEWGrVgCbcyxnVsKHxKOJ3rzeYSDuBmHPvd3QdwFpBrddqOixvCUQS-iA" />
     <title lang="en">Naa Bollei Noy</title>
   </programme>
-  <programme channel="custom.bdix.aakashaath" start="20261015070000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Good Morning Aakash</title>
-    <desc lang="en">The host engages in conversation with various artistes and musicians as the artists shed light on their skills by performing.</desc>
-    <category lang="en">TV Show</category>
-    <category lang="en">Entertainment</category>
-    <icon src="https://dtil.tmsimg.com/assets/p26769646_b_h9_ab.jpg?lock=880x660" />
-  </programme>
   <programme channel="custom.bdix.aakashaath" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Nader Nimai</title>
     <desc lang="en">Nimai, a young boy, grows up to become Sri Chaitanya Mahaprabhu, a saint, who devotes his whole life to preaching that love is the supreme religion.</desc>
@@ -173321,13 +172241,6 @@ Sreedevi marks a major order for her business, but must master riding a moped. L
     <desc lang="en">This is Music - Music Category.</desc>
     <category lang="en">Music</category>
     <icon src="https://epg-garcenote-assets.s3.amazonaws.com/dishtvd2h/resources/assets/thumbnails/programs/default/default_880x660.png" />
-  </programme>
-  <programme channel="custom.bdix.abpananda" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Ananda Sakal</title>
-    <desc lang="en">The host presents the latest news updates and significant developments pertaining to various pressing issues across the country.</desc>
-    <category lang="en">News</category>
-    <category lang="en">News Bulletin</category>
-    <icon src="https://dtil.tmsimg.com/assets/p9283523_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="custom.bdix.abpananda" start="20261015093000 +0530" stop="20261015094000 +0530">
     <title lang="en">Ananda Sakal</title>
@@ -173713,16 +172626,6 @@ Sreedevi marks a major order for her business, but must master riding a moped. L
     <category lang="en">News</category>
     <category lang="en">News Bulletin</category>
     <icon src="https://dtil.tmsimg.com/assets/p9283523_b_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme start="20261015090000 +0530" stop="20261015093000 +0530" channel="custom.bdix.banglajago">
-    <title>Banglar Sokal Live</title>
-    <desc>The host presents information about the social, economic and political issues of the day and provides updates on current events, live.</desc>
-    <category>News</category>
-    <language>Bengali</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/d6e224ac01408650c7899e7b6b6cd798.jpg?width=700" />
-    <rating>
-      <value>U</value>
-    </rating>
   </programme>
   <programme start="20261015093000 +0530" stop="20261015100000 +0530" channel="custom.bdix.banglajago">
     <title>Ent / Sports</title>
@@ -174484,16 +173387,6 @@ Sreedevi marks a major order for her business, but must master riding a moped. L
       <value>U</value>
     </rating>
   </programme>
-  <programme channel="custom.bdix.cnninternationla" start="20261015083000 +0530" stop="20261015093000 +0530">
-    <title>CNN News Night</title>
-    <desc>Host Abby Phillip provides deeper insights into some of the biggest news stories that are of national and international significance.</desc>
-    <category>News</category>
-    <category>News Bulletin</category>
-    <credits>
-      <actor>Abby Phillip</actor>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p25850185_b_h10_ac.jpg?lock=1280x720" />
-  </programme>
   <programme channel="custom.bdix.cnninternationla" start="20261015093000 +0530" stop="20261015110000 +0530">
     <title>CNN Newsroom</title>
     <desc>The host presents the latest news stories, updates and developments on major issues and events in the US and around the world.</desc>
@@ -175130,14 +174023,6 @@ Sreedevi marks a major order for her business, but must master riding a moped. L
     <category>News Bulletin</category>
     <icon src="https://dtil.tmsimg.com/assets/p16195017_b_h8_aa.jpg?lock=1280x720" />
   </programme>
-  <programme start="20261015083000 +0530" stop="20261015093000 +0530" channel="custom.bdix.eurosport">
-    <title lang="en-GB">Test Cricket</title>
-    <desc lang="en-GB">Professional cricket teams from around the world compete against each other to emerge victorious in various Test matches.</desc>
-    <category lang="en-GB">180</category>
-    <category lang="en-GB">181</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/61ea879209b2ee682eeee346c89d7fc2.jpg" />
-    <premiere />
-  </programme>
   <programme start="20261015093000 +0530" stop="20261015103000 +0530" channel="custom.bdix.eurosport">
     <title lang="en-GB">IMPACT in 60</title>
     <desc lang="en-GB">The filmmaker highlights some of the most memorable matches, wrestlers, championships, factions and more from the 18-year history of Impact Wrestling.</desc>
@@ -175712,13 +174597,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <episode-num>S3 E25</episode-num>
     <icon src="https://iptv-epg.org/images/o_lOeWibC3V_fN8FUl4Ht4Vby2_g2ZZy8EdHP99QJHG86z5N5Z137TIZSqbJaMZa7AHO_Hs-GCYVM0knl9gChcKNpeSJFOu6q651xL7wye-lhlNMioxZjnIdCW-oXA" />
     <title lang="en">WWE LFG</title>
-  </programme>
-  <programme start="20261015090000 +0530" stop="20261015093000 +0530" channel="custom.bdix.ndtv24x7">
-    <title lang="en-GB">News</title>
-    <desc lang="en-GB">The host presents a compilation of the latest updates and developments pertaining to politics, sports, social and economic news.</desc>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/9714400633732621fdf62d8fc920d8c3.jpg" />
-    <premiere />
   </programme>
   <programme start="20261015093000 +0530" stop="20261015100000 +0530" channel="custom.bdix.ndtv24x7">
     <title lang="en-GB">News</title>
@@ -178844,22 +177722,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <episode-num system="onscreen">E4</episode-num>
     <premiere />
   </programme>
-  <programme start="20261015080000 +0530" stop="20261015093000 +0530" channel="custom.bdix.sony">
-    <title>Kaun Banega Crorepati</title>
-    <desc>Host Amitabh Bachchan asks a series of questions to several contestants to test their general knowledge and give them a chance to win a cash prize.</desc>
-    <category>Game show</category>
-    <language>Hindi</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/742f021866e4d708672b606b3ed01b6d.jpg?width=700" />
-    <credits>
-      <director>Arun Sheshkumar</director>
-      <director>Rahul Verma</director>
-      <actor>Amitabh Bachchan</actor>
-    </credits>
-    <episode-num system="onscreen">48</episode-num>
-    <rating>
-      <value>U</value>
-    </rating>
-  </programme>
   <programme start="20261015093000 +0530" stop="20261015103000 +0530" channel="custom.bdix.sony">
     <title>Indian Game Show With Bharti And Harssh</title>
     <desc>Celebrity guests compete in a series of high-energy challenges to win exciting prizes, while hosts Bharti Singh and Haarsh Limbachiyaa engage in playful banter with them.</desc>
@@ -180340,18 +179202,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <title>Foul Play</title>
     <desc>The Hand of God, cheating or genius?</desc>
     <icon src="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/IN_USQO570425A_1918580338_5_20250909T151622683Z_79_imageprocessorclient-tvplus-linear-d7c8c765b-rgpdm.jpeg" />
-  </programme>
-  <programme start="20261015090000 +0530" stop="20261015093000 +0530" channel="custom.bdix.travelxp">
-    <title lang="en-GB">Costa Rica Calling</title>
-    <sub-title lang="en-GB">Genevieve travels to the Manuel Antonio region of Costa Rica. There, her quest for wildlife leads her from rainforest to ocean</sub-title>
-    <desc lang="en-GB">The host visits various tourist spots and popular adventure destinations in Costa Rica, a rain forested Central American country, to explore its rich culture.</desc>
-    <credits>
-      <actor>Genevieve Sexton</actor>
-    </credits>
-    <category lang="en-GB">178</category>
-    <icon src="http://jiotv.catchup.cdn.jio.com/dare_images/shows/epgdata/e20ab041dce1b1e09636318017404582.jpg" />
-    <episode-num system="onscreen">E9</episode-num>
-    <premiere />
   </programme>
   <programme start="20261015093000 +0530" stop="20261015100000 +0530" channel="custom.bdix.travelxp">
     <title lang="en-GB">Bucket List</title>
@@ -186739,16 +185589,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
       <value>NA</value>
     </rating>
   </programme>
-  <programme channel="custom.discovery" start="20261015090300 +0530" stop="20261015092900 +0530">
-    <title lang="en">Man vs. Wild</title>
-    <desc lang="en">The host tackles some of the most gruelling trials, while navigating remote global terrains and sharing essential survival tactics.</desc>
-    <credits>
-      <actor>Bear Grylls</actor>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Adventure</category>
-    <icon src="https://dtil.tmsimg.com/assets/p185311_b_h9_aa.jpg?lock=880x660" />
-  </programme>
   <programme channel="custom.discovery" start="20261015092900 +0530" stop="20261015102200 +0530">
     <title lang="en">Shipping Wars</title>
     <desc lang="en">Independent shippers compete with each other to transport unconventional items that other carriers find unfeasible to ship.</desc>
@@ -188824,41 +187664,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <category lang="en">Education (Adult)</category>
     <icon src="https://dtil.tmsimg.com/assets/p12169208_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S9 E3</episode-num>
-  </programme>
-  <programme channel="custom.discoveryfamily" start="20261015030000 +0000" stop="20261015040000 +0000">
-    <title lang="en">Cupcake Wars</title>
-    <sub-title lang="en">Annie the Musical</sub-title>
-    <desc lang="en">Four bakers fight for the chance to have their cupcakes featured at the center of a party celebrating the revival of "Annie The Musical.".</desc>
-    <credits>
-      <actor>Justin Willman</actor>
-      <actor>Candace Nelson</actor>
-      <actor>Florian Bellanger</actor>
-    </credits>
-    <date>2013</date>
-    <category lang="en">Series</category>
-    <category lang="en">Cooking</category>
-    <category lang="en">Competition Reality</category>
-    <icon src="http://dtil.tmsimg.com/assets/p10117724_b_h10_ac.jpg?w=960&amp;h=540" />
-    <episode-num system="onscreen">S9 E5</episode-num>
-    <previously-shown />
-    <rating system="USA Parental Rating">
-      <value>TVG</value>
-    </rating>
-    <rating system="Canadian Parental Rating">
-      <value>G</value>
-    </rating>
-    <rating system="Régie du cinéma">
-      <value>G</value>
-    </rating>
-    <rating system="Australian Classification Board">
-      <value>PG</value>
-    </rating>
-    <rating system="Departamento de Justiça, Classificação, Títulos e Qualificação">
-      <value>L</value>
-    </rating>
-    <rating system="Freiwillige Selbstkontrolle der Filmwirtschaft">
-      <value>0</value>
-    </rating>
   </programme>
   <programme channel="custom.discoveryfamily" start="20261015040000 +0000" stop="20261015050000 +0000">
     <title lang="en">Cupcake Wars</title>
@@ -194264,28 +193069,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
       <value>AL</value>
     </rating>
   </programme>
-  <programme channel="custom.disney.jr" start="20261015035000 +0000" stop="20261015035500 +0000">
-    <title lang="en">Bluey</title>
-    <desc lang="en">Taxi:With Bluey as a taxi driver, will Dad get to the airport.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/7bfc7935-206b-4a45-bbab-3a94c90b1b11/16-9" />
-    <episode-num system="xmltv_ns">9..</episode-num>
-    <rating system="UK">
-      <value>U</value>
-    </rating>
-  </programme>
-  <programme channel="custom.disney.jr" start="20261015035500 +0000" stop="20261015040000 +0000">
-    <title lang="en">Bluey</title>
-    <desc lang="en">The Beach:Bluey follows Mum along the beach on a first solo adventure.</desc>
-    <category lang="en">Children</category>
-    <category lang="en">Under 5</category>
-    <icon src="https://images.metadata.sky.com/pd-image/aebd5a69-a694-4bf7-a9d0-c75c7635ab13/16-9" />
-    <episode-num system="xmltv_ns">9..</episode-num>
-    <rating system="UK">
-      <value>U</value>
-    </rating>
-  </programme>
   <programme channel="custom.disney.jr" start="20261015040000 +0000" stop="20261015040500 +0000">
     <title lang="en">Bluey</title>
     <desc lang="en">Pirates:Bluey and Bingo play Pirates on the hammock swing.</desc>
@@ -196768,14 +195551,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
       <value>U</value>
     </rating>
   </programme>
-  <programme start="20261015030000 +0100" stop="20261015050000 +0100" channel="custom.duachannel">
-    <title lang="en">Day Break</title>
-    <desc lang="en">On a fateful day, Detective Brett Hopper returns home only to be arrested, accused of shooting the state attorney. He tries desperately to prove his innocence, only to wake up the next day and discover that the same fateful day is repeating itself. Soad Abd Allah, Abdel Rahman Alagel, Zahra Arafat, Ghazi Hussein, Ahmed Mosaad, Saed Bashir Al Hawary, Asmahan Tawfiq, Taye Diggs, Moon Bloodgood.</desc>
-    <date>2006</date>
-    <category lang="en">Series</category>
-    <category lang="en">Action</category>
-    <icon src="https://sat.tvhttps://www.sat.tv/wp-content/themes/twentytwenty-child/assets/img/prog-6203.svg" />
-  </programme>
   <programme start="20261015050000 +0100" stop="20261015060000 +0100" channel="custom.duachannel">
     <title lang="en">Ali Kelay</title>
     <desc lang="en">With a noble heart and steady courage, Ali Kelay gives his fight winnings to charity and oversees his adoptive father's auto parts business, though his rise creates enemies in the market and ignites jealousy within his family. Ahmed Al Awady, Dorra Zarrouq.</desc>
@@ -197101,26 +195876,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <category lang="en">News</category>
     <category lang="en">Investigation</category>
     <icon src="https://sat.tvhttps://www.sat.tv/wp-content/themes/twentytwenty-child/assets/img/prog-6201.svg" />
-  </programme>
-  <programme start="20261015092200 +0530" stop="20261015092600 +0530" channel="custom.duck.tv">
-    <title>Panni and Fanni</title>
-    <desc>Two happy fairies wave their wands and turn a boring shape into a pair of unique drawings.</desc>
-    <category>Animated</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/e0b4c6ae0e327b21f2d22680decb7777.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
-  </programme>
-  <programme start="20261015092600 +0530" stop="20261015092900 +0530" channel="custom.duck.tv">
-    <title>Didy Baby</title>
-    <desc>Little baby animals overcome the different obstacles they face everyday by helping each other and encourage children to do the same.</desc>
-    <category>Children</category>
-    <language>English</language>
-    <icon src="https://jiotvimages.cdn.jio.com/dare_images/shows/epgdata/994980d9030c79a0e59fef498478945f.jpg?width=700" />
-    <rating>
-      <value>TVY</value>
-    </rating>
   </programme>
   <programme start="20261015092900 +0530" stop="20261015093200 +0530" channel="custom.duck.tv">
     <title>Safari</title>
@@ -206620,10 +205375,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p28803841_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme start="20261015033000 +0000" stop="20261015040000 +0000" channel="custom.fashiontv" catchup-id="100240649">
-    <title>The Kardashians</title>
-    <desc>.</desc>
-  </programme>
   <programme start="20261015040000 +0000" stop="20261015043000 +0000" channel="custom.fashiontv" catchup-id="100240673">
     <title>The Kardashians</title>
     <desc>.</desc>
@@ -206931,12 +205682,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
   <programme start="20261016180000 +0000" stop="20261016183000 +0000" channel="custom.fashiontv" catchup-id="100280463">
     <title>Top Models</title>
     <desc>Runway appearances, exclusive interviews, photo shoots and more from the most famous models.</desc>
-  </programme>
-  <programme channel="custom.food.network" start="20261015033000 +0000" stop="20261015040000 +0000">
-    <title lang="en">Teleshopping</title>
-    <desc lang="en">Teleshopping.</desc>
-    <category lang="en">Specialist</category>
-    <category lang="en">Shopping</category>
   </programme>
   <programme channel="custom.food.network" start="20261015040000 +0000" stop="20261015043000 +0000">
     <title lang="en">Teleshopping</title>
@@ -207829,23 +206574,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <category lang="en">Cooking</category>
     <icon src="https://images.metadata.sky.com/pd-image/216b99cd-43b2-4ca8-b122-51397a2214a7/16-9" />
     <episode-num system="xmltv_ns">3.10.</episode-num>
-  </programme>
-  <programme channel="custom.hbo" start="20261015021000 +0000" stop="20261015035500 +0000">
-    <title lang="en">London Fields</title>
-    <desc lang="en">Nicola Six has a dark foreshadowing of her impending murder. But instead of trying to save herself, she seduces three different men - one of whom will be her killer.</desc>
-    <credits>
-      <actor>Amber Heard</actor>
-      <actor>Jason Isaacs</actor>
-      <actor>Cara Delevingne</actor>
-      <director>Matthew Cullen</director>
-    </credits>
-    <date>2018</date>
-    <category lang="en">Movies</category>
-    <category lang="en">Comedy</category>
-    <icon src="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch115_160_115" />
-    <rating system="MPAA">
-      <value>M</value>
-    </rating>
   </programme>
   <programme channel="custom.hbo" start="20261015035500 +0000" stop="20261015052000 +0000">
     <title lang="en">Teen Titans Go! To The Movies</title>
@@ -211149,16 +209877,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
       <value>A16</value>
     </rating>
   </programme>
-  <programme start="20261015033000 +0000" stop="20261015035500 +0000" channel="custom.hgtv">
-    <title lang="en">House Hunters International</title>
-    <sub-title lang="en">Embracing A New Life In London</sub-title>
-    <desc lang="en">A couple with a new perspective on life after she beat cancer is living every moment to the fullest with a fresh start in London.</desc>
-    <icon src="https://www.fetchtv.com.au/v2/epg/program/44047/image/334x188" />
-    <episode-num system="onscreen">S132 E5</episode-num>
-    <rating system="AU">
-      <value>G</value>
-    </rating>
-  </programme>
   <programme start="20261015035500 +0000" stop="20261015042000 +0000" channel="custom.hgtv">
     <title lang="en">House Hunters</title>
     <sub-title lang="en">Bound For Apollo Beach</sub-title>
@@ -214114,13 +212832,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
       <value>NA</value>
     </rating>
   </programme>
-  <programme channel="custom.hummasala" start="20261015030300 +0000" stop="20261015040000 +0000">
-    <title lang="en">News Bulletin Live</title>
-    <desc lang="en">Coverage on important topics of politics, law and order, justice, economy, weather, sports, international developments, science, and other important topics in the society.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">News</category>
-    <icon src="https://images.metadata.sky.com/pd-image/2f65f861-7285-4f2a-a0ef-405a5ebf8edc/16-9" />
-  </programme>
   <programme channel="custom.hummasala" start="20261015040000 +0000" stop="20261015040300 +0000">
     <title lang="en">Headline News</title>
     <desc lang="en">Coverage on important topics of politics, law and order, justice, economy, weather, sports, international developments, science, and other important topics in the society.</desc>
@@ -215269,12 +213980,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <category lang="en">News</category>
     <icon src="https://images.metadata.sky.com/pd-image/fbdf61d8-e654-4ddb-ab9b-0c7282ddb292/16-9" />
   </programme>
-  <programme channel="custom.iontvuk" start="20261015010000 +0000" stop="20261015040000 +0000">
-    <title lang="en">Movie Time</title>
-    <desc lang="en">Full length popular Bangla movie, featuring legendary actor/actress from Bangla movie industry.</desc>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Comedy</category>
-  </programme>
   <programme channel="custom.iontvuk" start="20261015040000 +0000" stop="20261015045000 +0000">
     <title lang="en">Quran Recitation</title>
     <desc lang="en">Reading from holy book of Quran.</desc>
@@ -215874,12 +214579,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <desc lang="en">Dedicated fundraising show for popular charity organisations.</desc>
     <category lang="en">Specialist</category>
     <category lang="en">Events</category>
-  </programme>
-  <programme channel="custom.islam.tv" start="20261015033000 +0000" stop="20261015040000 +0000">
-    <title lang="en">Quran Recitation</title>
-    <desc lang="en">Beautiful excerpts from the Quran addressing particular issues.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Religion</category>
   </programme>
   <programme channel="custom.islam.tv" start="20261015040000 +0000" stop="20261015043000 +0000">
     <title lang="en">Duas and Supplications</title>
@@ -216984,13 +215683,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <rating>
       <value>NA</value>
     </rating>
-  </programme>
-  <programme channel="custom.kolkatatv" start="20261015085700 +0530" stop="20261015093000 +0530">
-    <title lang="en">HDL + Sangbad Saradin</title>
-    <desc lang="en">The host presents the latest news updates from various fronts and provides a detailed report on matters concerning the state and the nation.</desc>
-    <category lang="en">News</category>
-    <category lang="en">News Bulletin</category>
-    <icon src="https://dtil.tmsimg.com/assets/p28935395_b_h9_ab.jpg?lock=880x660" />
   </programme>
   <programme channel="custom.kolkatatv" start="20261015093000 +0530" stop="20261015093200 +0530">
     <title lang="en">Amar Sahar</title>
@@ -221564,18 +220256,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <icon src="https://dtil.tmsimg.com/assets/p30041122_b_h9_aa.jpg?lock=880x660" />
     <episode-num system="onscreen">S1 E876</episode-num>
   </programme>
-  <programme channel="custom.nat.geo.tv" start="20261015033500 +0000" stop="20261015040000 +0000">
-    <title lang="en">When Sharks Attack</title>
-    <sub-title lang="en">Fear In Fire Island</sub-title>
-    <desc lang="en">New Smyrna Beach in Florida has the most recorded shark attacks in the world. What is it that attracts sharks to this coastline? (S6, ep 9) 12+.</desc>
-    <category lang="en">News &amp; Documentary</category>
-    <category lang="en">Nature</category>
-    <icon src="https://images.metadata.sky.com/pd-image/79f7673e-ca48-4ac8-a2fc-688ca28a231b/16-9" />
-    <episode-num system="xmltv_ns">4.2.</episode-num>
-    <rating system="UK">
-      <value>12</value>
-    </rating>
-  </programme>
   <programme channel="custom.nat.geo.tv" start="20261015060000 +0000" stop="20261015070000 +0000">
     <title lang="en">Cruise TV With LoveitBookit</title>
     <desc lang="en">Your one-stop-shop for all things cruise; bringing you the hottest destinations, ground-breaking ships and the latest deals to ensure your next cruise is your greatest one.</desc>
@@ -222432,27 +221112,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <title>Arabian Inferno</title>
     <desc>Discover a land brimming with more than 170 species of reptiles.</desc>
     <icon src="https://tvpnlogopus.samsungcloud.tv/platform/image/contents/vc/00/LINEAR/IN_USQO570425A_2665661864_0_20260315T152458539Z_1_imageprocessorclient-tvplus-linear-584c967455-fwhrz.jpeg" />
-  </programme>
-  <programme channel="custom.nick.jr" start="20261015090000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Peppa Pig</title>
-    <desc lang="en">A curious, naive, yet friendly little pig navigates through her life with her friends and family.</desc>
-    <credits>
-      <actor>John Sparkes</actor>
-      <actor>Amelie Bea Smith</actor>
-      <actor>Richard Ridings</actor>
-      <actor>Morwenna Banks</actor>
-      <actor>Oliver May</actor>
-      <actor>Meg Hall</actor>
-      <actor>Tallulah Conabeare</actor>
-      <director>Phil Hall</director>
-      <director>Joris van Hulzen</director>
-      <director>Mark Baker</director>
-      <director>Neville Astley</director>
-      <producer>Julian Nott</producer>
-    </credits>
-    <category lang="en">Children</category>
-    <category lang="en">Animation</category>
-    <icon src="https://dtil.tmsimg.com/assets/p274928_b_h9_aa.jpg?lock=880x660" />
   </programme>
   <programme channel="custom.nick.jr" start="20261015093000 +0530" stop="20261015100000 +0530">
     <title lang="en">Peppa Pig</title>
@@ -225223,10 +223882,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
       <value>6.0/10</value>
     </star-rating>
   </programme>
-  <programme start="20261015030000 +0000" stop="20261015040000 +0000" channel="custom.qvcuk">
-    <title>New Season Fashion</title>
-    <desc>Feel inspired with our New Season Fashion show featuring White Stuff! Discover their unique prints and versatile pieces, perfect for transitioning into the new season.</desc>
-  </programme>
   <programme start="20261015040000 +0000" stop="20261015050000 +0000" channel="custom.qvcuk">
     <title>New Season Fashion</title>
     <desc>Feel inspired with our New Season Fashion show featuring White Stuff! Discover their unique prints and versatile pieces, perfect for transitioning into the new season.</desc>
@@ -226832,12 +225487,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <rating>
       <value>U</value>
     </rating>
-  </programme>
-  <programme start="20261015043000 +0100" stop="20261015050000 +0100" channel="custom.sauditv">
-    <title lang="en">Advisory Opinions</title>
-    <desc lang="en">Religion Religion scholars answer people's inquiries from a religious perspective. And spot the light on the new phenomenon in society and how should we treat it. Sheikh Salih Al Fawzan.</desc>
-    <category lang="en">Show</category>
-    <icon src="https://sat.tvhttps://www.sat.tv/wp-content/themes/twentytwenty-child/assets/img/prog-6204.svg" />
   </programme>
   <programme start="20261015050000 +0100" stop="20261015054000 +0100" channel="custom.sauditv">
     <title lang="en">My Smart Daughter</title>
@@ -228880,15 +227529,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <category lang="en">Action</category>
     <icon src="https://dtil.tmsimg.com/assets/p29550362_b_h9_aa.jpg?lock=880x660" />
   </programme>
-  <programme channel="custom.star.vijay" start="20261015080000 +0530" stop="20261015093000 +0530">
-    <title>Sound Party</title>
-    <desc>Host Kuraishi welcomes stars from Vijay TV for a playful competition where husbands take an early lead. However, Myna steps up to deliver a fierce challenge for her team.</desc>
-    <category>Music</category>
-    <credits>
-      <actor>Kuraishi</actor>
-    </credits>
-    <icon src="https://dtil.tmsimg.com/assets/p19236120_b_h8_ab.jpg?lock=1280x720" />
-  </programme>
   <programme channel="custom.star.vijay" start="20261015093000 +0530" stop="20261015103000 +0530">
     <title>Bigg Boss Tamil</title>
     <desc>Contestants live in an isolated house and perform assigned tasks to win the cash prize while trying to avoid elimination.</desc>
@@ -230657,33 +229297,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <category lang="en">Film</category>
     <category lang="en">Drama</category>
     <icon src="https://dtil.tmsimg.com/assets/p14136445_v_h9_aa.jpg?lock=880x660" />
-  </programme>
-  <programme channel="custom.starutsav" start="20261015065000 +0530" stop="20261015093000 +0530">
-    <title lang="en">Pandya Store</title>
-    <desc lang="en">After Janardhan arrives at the wedding to create trouble, the Pandya brothers stand united against him. Later, Rishita protects all by threatening Janardhan.</desc>
-    <credits>
-      <actor>Kanwar Dhillon</actor>
-      <actor>Alice Kaushik</actor>
-      <actor>Akshay Kharodia</actor>
-      <actor>Simran Budharup</actor>
-      <actor>Mohit Parmar</actor>
-      <actor>Kruttika Desai</actor>
-      <actor>Priyanshi Yadav</actor>
-      <actor>Rohit Chandel</actor>
-      <actor>Sahil Uppal</actor>
-      <actor>Roshan Kapoor</actor>
-      <actor>Harsh Mehta</actor>
-      <actor>Ankur Nayyar</actor>
-      <actor>Ananya Khare</actor>
-      <director>Arshad Khan</director>
-      <director>Pradeep Yadav</director>
-      <producer>Comall Sunjoy Waddhwa</producer>
-      <producer>Sunjoy Waddhwa</producer>
-    </credits>
-    <category lang="en">TV Show</category>
-    <category lang="en">Drama</category>
-    <icon src="https://dtil.tmsimg.com/assets/p19382793_b_h9_ab.jpg?lock=880x660" />
-    <episode-num system="onscreen">S1 E64</episode-num>
   </programme>
   <programme channel="custom.starutsav" start="20261015093000 +0530" stop="20261015110000 +0530">
     <title lang="en">Udne Ki Aasha</title>
@@ -240480,16 +239093,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
       <value>NA</value>
     </rating>
   </programme>
-  <programme channel="custom.travelxp.english" start="20261015033000 +0000" stop="20261015040000 +0000">
-    <title lang="en">City Breaks</title>
-    <desc lang="en">From iconic sights like Prague Castle to offbeat attractions like the Strahov Monastic Brewery, Catriona Strachan discovers different sides to Prague.</desc>
-    <category lang="en">Entertainment</category>
-    <category lang="en">Travel</category>
-    <icon src="https://images.metadata.sky.com/pd-image/92d9dcfb-6d4c-4887-b3b6-6a87e77f83bf/16-9" />
-    <rating system="UK">
-      <value>U</value>
-    </rating>
-  </programme>
   <programme channel="custom.travelxp.english" start="20261015040000 +0000" stop="20261015043000 +0000">
     <title lang="en">World Spas</title>
     <desc lang="en">At Maya Ubud Spa Resort, Jamie Srubis tries different spa treatments that induce the same tranquility which Bali does.</desc>
@@ -242229,10 +240832,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <rating>
       <value>TV-14</value>
     </rating>
-  </programme>
-  <programme start="20261015030300 +0000" stop="20261015040000 +0000" channel="custom.world.war.tv">
-    <title>Iconic Combat Machines</title>
-    <desc>E8The Leopard 2 is probably the best all-around Main Battle Tank today, combining great mobility, a superior gun and excellent protection.</desc>
   </programme>
   <programme start="20261015040000 +0000" stop="20261015050100 +0000" channel="custom.world.war.tv">
     <title>Iconic Combat Machines</title>
@@ -252787,19 +251386,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <category lang="en">Adrenaline + Sci-Fi</category>
     <icon src="https://metadata-static.plex.tv/b/gracenote/b35cfff5f957f6a7a540de5cba8cb7db.jpg" />
   </programme>
-  <programme start="20261015021000 +0000" stop="20261015040000 +0000" channel="plex.tv.Action.Hollywood.Movies.plex">
-    <title lang="en">Beast with a Gun</title>
-    <desc lang="en">A killer breaks out of prison to seek vengeance on people who got him there.</desc>
-    <date>1977</date>
-    <category lang="en">Action</category>
-    <category lang="en">Drama</category>
-    <category lang="en">Crime</category>
-    <category lang="en">Thriller</category>
-    <icon src="https://metadata-static.plex.tv/c/gracenote/c15783fb87d8b60a9f8aea816befde56.jpg" />
-    <rating system="US">
-      <value>PG</value>
-    </rating>
-  </programme>
   <programme start="20261015040000 +0000" stop="20261015055000 +0000" channel="plex.tv.Action.Hollywood.Movies.plex">
     <title lang="en">The Deadly Companions</title>
     <desc lang="en">An ex-army officer accidentally kills a woman's son and tries to make up for it by escorting the funeral procession through dangerous Indian territory.</desc>
@@ -253317,11 +251903,6 @@ An inside look at what it truly takes to become a part of the WWE.</desc>
     <rating system="US">
       <value>PG</value>
     </rating>
-  </programme>
-  <programme channel="talkSPORT.uk@SD" start="20261015000000 +0000" stop="20261015040000 +0000">
-    <title lang="en">Extra Time with Paul Ross</title>
-    <desc lang="en">The perfect excuse to stay up late. Call the show on 03717 22 33 44 (Calls charged at national rate) or text 81089 (50p + charges).</desc>
-    <category lang="en">Music &amp; Radio</category>
   </programme>
   <programme channel="talkSPORT.uk@SD" start="20261015040000 +0000" stop="20261015050000 +0000">
     <title lang="en">Early Sports Breakfast with Laura Kirk Francis</title>
