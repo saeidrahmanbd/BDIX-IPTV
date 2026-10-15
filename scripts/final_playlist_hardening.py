@@ -41,8 +41,8 @@ def process(path):
  order=PLAYLIST_ORDERS[path.name]; rank={x:i for i,x in enumerate(order)}
  pre,rec=parse(path)
  for r in rec:
-  a=attrs(r[0]); cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold()
-  if cid=='ultimatetv.in@sd': r[0]=set_attr(r[0],'group-title','Indian Music')
+  a=attrs(r[0]); cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold(); g=a.get('group-title','').strip()
+  if cid=='ultimatetv.in@sd' and g!='Backup': r[0]=set_attr(r[0],'group-title','Indian Music')
  def rkey(r):
   a=attrs(r[0]); g=a.get('group-title','').strip(); n=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip()
   u=next((x.strip() for x in r[1:] if x.strip().startswith(('http://','https://'))),'')

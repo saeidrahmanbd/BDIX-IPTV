@@ -48,6 +48,13 @@ IDS={
   "Star Sports Select 1": "StarSportsSelect1.in@SD",
   "Star Sports Select 2": "StarSportsSelect2.in@SD",
   "T Sports": "TSports.bd",
+  "TBN24": "TBN24.us",
+  "Global Punjab": "GlobalPunjab.in",
+  "Fashion One": "FashionOne.uk",
+  "Tunes 6": "Tunes6.in",
+  "Survivor": "Survivor.us",
+  "WaterBear": "WaterBear.ch",
+  "EMAN TV": "EmanTv.iq",
   "UNITE8.1": "custom.unite8.1"
 }
 LOGOS={

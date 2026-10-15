@@ -76,7 +76,13 @@ def normalized_name(name):
     return re.sub(r"\s*\[[^]]+\]\s*$", "", name).strip().lower()
 
 def redact_url(url):
-    """Redact credential-like query values in reports without changing the playlist."""
+    """Redact query tokens and Xtream-style path credentials in audit output."""
+    url = re.sub(
+        r'(/live/)[^/?#]+/[^/?#]+/([^/?#]+\.ts)(?=$|[?#])',
+        r'\1[REDACTED]/[REDACTED]/\2',
+        url,
+        flags=re.I,
+    )
     return re.sub(
         r'([?&](?:token|sig|signature|jwt|session|key|authorization|hdnts)=[^&\s]+)',
         lambda m: m.group(1).split("=", 1)[0] + "=[REDACTED]",
@@ -250,9 +256,13 @@ primary_chno_collisions = {
 
 suspicious_urls = []
 signed_urls = []
+xtream_credential_paths = []
 for info, url in entries:
     if re.search(r"[?&](?:token|sig|signature|jwt|session|key|authorization)=[^&]+", url, re.I) or re.search(r"[?&]hdnts=[^&]+", url, re.I):
         signed_urls.append((display_name(info), attrs(info).get("group-title", "").strip(), url))
+    # Informational, not automatically blocking: some providers put credentials in Xtream paths.
+    if re.search(r"/live/[^/?#]+/[^/?#]+/[^/?#]+\.ts(?:[?#]|$)", url, re.I):
+        xtream_credential_paths.append((display_name(info), attrs(info).get("group-title", "").strip(), url))
     if re.search(r"[?&](token|auth)=(?:test|testpub)(?:&|$)", url, re.I):
         suspicious_urls.append((display_name(info), "test credential", url))
     elif re.search(r"https?://[^/@]+@[^/]+", url, re.I):
@@ -435,6 +445,7 @@ lines = [
     f"- Alphabetical ordering issues: **{len(alphabetical_order_issues)}**",
     f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**",
     f"- Signed/tokenized stream URLs: **{len(signed_urls)}**",
+    f"- Embedded Xtream-style credential paths (redacted): **{len(xtream_credential_paths)}**",
     "",
     "## Duplicate IDs",
     "",
@@ -490,6 +501,13 @@ else:
 lines += ["", "## Signed / Tokenized Stream URLs", ""]
 if signed_urls:
     for name, group, url in signed_urls:
+        lines.append(f"- **{name}** — {group or 'Uncategorized'} — {redact_url(url)}")
+else:
+    lines.append("None.")
+
+lines += ["", "## Embedded Xtream-Style Credential Paths (redacted)", ""]
+if xtream_credential_paths:
+    for name, group, url in xtream_credential_paths:
         lines.append(f"- **{name}** — {group or 'Uncategorized'} — {redact_url(url)}")
 else:
     lines.append("None.")
