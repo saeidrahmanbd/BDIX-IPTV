@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """Safe IPTV-Playlist.m3u fixer.
 
-Stream URL risk is reported, not used as an automatic deletion rule.
-Duplicate public stream URLs remain a hard error: only the later duplicate is removed.
+Stream URL risk is reported, not used as an automatic deletion rule, except
+for explicitly disallowed Google ad-insertion URLs. Duplicate public stream
+URLs remain a hard error: only the later duplicate is removed.
 """
 import argparse,csv,re,unicodedata
-from collections import defaultdict
 from pathlib import Path
 
 BACKUP='Backup'
-EXP=re.compile(r'[?&~=](?:e|exp|expires)=(\d{10})\b',re.I)
 
 def norm(s):
  s=unicodedata.normalize('NFKD',s or '').encode('ascii','ignore').decode().lower()
@@ -54,15 +53,13 @@ def settitle(ext,v):
 def delattr(ext,k): return re.sub(r'\s+'+re.escape(k)+r'="[^"]*"','',ext,count=1)
 
 def risk_flags(url):
- flags=[]
- low=url.casefold()
+ flags=[]; low=url.casefold()
  if re.search(r'[?&~=](?:e|exp|expires)=\d{10}\b',url,re.I): flags.append('token/expiry parameter')
  if re.search(r'\b(?:username|password|pass|pwd)=',url,re.I) or re.search(r'/iptv/[A-Za-z0-9]{10,}/\d+/',url,re.I): flags.append('credential/account-bound pattern')
  if 'workers.dev' in low: flags.append('worker/proxy URL')
  if 'railway.app' in low: flags.append('proxy URL')
  if re.match(r'https?://\d{1,3}(?:\.\d{1,3}){3}(?::\d+)?(?:/|$)',url,re.I): flags.append('IP-origin URL')
  if url.startswith('http://'): flags.append('HTTP URL')
- if 'dai.google.com' in low or 'doubleclick.net' in low: flags.append('ad-insertion URL')
  return flags
 
 def fix(entries,report):
@@ -71,9 +68,9 @@ def fix(entries,report):
   a=attrs(e['ext']); g=a.get('group-title',''); n=title(e['ext']) or a.get('tvg-name','')
   e['name']=n; e['group']=g
   if g!=BACKUP and a.get('tvg-id'): prim[norm(n)]=e
- out=[]; seen={}; quarantine=[]; orphans=[]; risks=[]
+ out=[]; seen=set(); quarantine=[]; orphans=[]; risks=[]
  for e in entries:
-  a=attrs(e['ext']); n=e['name']; u=e['url']
+  a=attrs(e['ext']); n=e['name']; u=e['url']; low=u.casefold()
   for k in ('tvg-id','channel-id'):
    v=a.get(k,'')
    if v.startswith('staging.'):
@@ -91,18 +88,17 @@ def fix(entries,report):
   a=attrs(e['ext'])
   if a.get('tvg-country','').upper()=='UK': e['ext']=setv(e['ext'],'tvg-country','GB'); report.append(f'line {e["line"]}: UK -> GB')
   if n.casefold()=='ntv (malyalam)': e['ext']=settitle(setv(e['ext'],'tvg-name','NTV (Malayalam)'),'NTV (Malayalam)'); report.append(f'line {e["line"]}: Malayalam spelling fixed')
-  low=u.casefold()
-  # Confirmed invalid/non-channel endpoints only.
-  if 'dfsdfsdf' in low or re.search(r'^https?://(?:[^/]+\.)?dvltv\.cc/play(?:/|$)',u,re.I): quarantine.append((e,'confirmed malformed/blocked endpoint')); continue
-  # Keep valid token/proxy/account/IP/HTTP streams. Report them for visibility only.
+  if 'dai.google.com' in low or 'doubleclick.net' in low:
+   quarantine.append((e,'Google ad-insertion URL')); report.append(f'line {e["line"]}: Google ad-insertion URL quarantined'); continue
+  if 'dfsdfsdf' in low or re.search(r'^https?://(?:[^/]+\.)?dvltv\.cc/play(?:/|$)',u,re.I):
+   quarantine.append((e,'confirmed malformed/blocked endpoint')); continue
   rf=risk_flags(u)
   if rf: risks.append((e['line'],n,', '.join(rf)))
-  # Exact URL uniqueness is mandatory; query strings remain part of URL identity.
   key=u.strip().casefold()
   if key:
    if key in seen:
     quarantine.append((e,'duplicate stream URL; later duplicate removed from public playlist')); continue
-   seen[key]=e
+   seen.add(key)
   out.append(e)
  return out,quarantine,orphans,risks
 
@@ -125,6 +121,6 @@ def main():
   w=csv.writer(f); w.writerow(['line','name','tvg_id','url']); [w.writerow([e['line'],e['name'],attrs(e['ext']).get('tvg-id',''),e['url']]) for e in orphans]
  with (out/'reports'/'stream-risk.csv').open('w',newline='',encoding='utf-8') as f:
   w=csv.writer(f); w.writerow(['line','channel','risk']); w.writerows(risks)
- (out/'reports'/'fix-report.md').write_text('# IPTV playlist fix report\n\n'+'\n'.join('- '+x for x in report)+f'\n\nInput: {len(entries)} entries\nPublic: {len(public)}\nQuarantine: {len(quarantine)}\nOrphans: {len(orphans)}\nRisk-flagged: {len(risks)}\nDuplicate public URLs: 0\n\nRisk-flagged URLs are retained in the public playlist; they are not automatic deletion criteria.\n',encoding='utf-8')
+ (out/'reports'/'fix-report.md').write_text('# IPTV playlist fix report\n\n'+'\n'.join('- '+x for x in report)+f'\n\nInput: {len(entries)} entries\nPublic: {len(public)}\nQuarantine: {len(quarantine)}\nOrphans: {len(orphans)}\nRisk-flagged: {len(risks)}\nDuplicate public URLs: 0\n\nRisk-flagged URLs are retained in the public playlist; Google ad-insertion URLs are explicitly quarantined.\n',encoding='utf-8')
  print(f'Input={len(entries)} Public={len(public)} Quarantine={len(quarantine)} Orphans={len(orphans)} RiskFlagged={len(risks)} DuplicatePublicURLs=0')
 if __name__=='__main__': main()
