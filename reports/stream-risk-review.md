@@ -7,35 +7,33 @@ Generated from the current playlist and latest available stream-health report. T
 - /streamtest/ endpoints: **9**
 - Signed/token-query endpoints: **9**
 - Xtream-style credential paths (credentials redacted): **8**
-- Proxy/worker-host routes: **41** (1 primary, 40 Backup)
+- Proxy/worker-host routes: **41** (2 primary, 39 Backup)
 - /api/play/ relay routes: **19**
 
 ## Latest Stream-Health Snapshot
 
 | Metric | Count |
 |---|---:|
-| Streams tested | 1035 |
-| Reachable | 1008 |
-| Failed this check | 27 |
-| Persistent failures (3+ consecutive) | 11 |
-| HTTP 401/403 (auth) | 5 |
-| HTTP 404 (not found) | 7 |
-| HTTP 5xx (server) | 4 |
-| Timeout | 10 |
+| Streams tested | 1037 |
+| Reachable | 1017 |
+| Failed this check | 20 |
+| Persistent failures (3+ consecutive) | 9 |
+| HTTP 401/403 (auth) | 6 |
+| HTTP 404 (not found) | 8 |
+| HTTP 5xx (server) | 5 |
+| Timeout | 1 |
 
 ### Persistent failures
 
-- **Channel 16** — Backup — consecutive failures: **9** — HTTP 404
-- **Disney Channel India** — Backup — consecutive failures: **73** — HTTP 403
-- **G TV** — Backup — consecutive failures: **3** — TLS
-- **Goldmines Movies** — Backup — consecutive failures: **3** — HTTP 404
-- **Kalaignar Murasu** — Backup — consecutive failures: **7** — HTTP 404
-- **Assam Talks** — Indian Entertainment — consecutive failures: **207** — HTTP 403
-- **Kalaignar Murasu** — Indian Entertainment — consecutive failures: **9** — HTTP 504
-- **Cook & Bake** — International — consecutive failures: **13** — HTTP 504
-- **HBO** — International — consecutive failures: **195** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **13** — HTTP 403
-- **Teen Nick** — Kids — consecutive failures: **73** — HTTP 403
+- **Disney Channel India** — Backup — consecutive failures: **74** — HTTP 403
+- **Kalaignar Murasu** — Backup — consecutive failures: **8** — HTTP 404
+- **Channel 16** — Bangladesh — consecutive failures: **10** — HTTP 404
+- **Assam Talks** — Indian Entertainment — consecutive failures: **208** — HTTP 403
+- **Kalaignar Murasu** — Indian Entertainment — consecutive failures: **10** — HTTP 504
+- **Cook & Bake** — International — consecutive failures: **14** — HTTP 504
+- **HBO** — International — consecutive failures: **196** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **14** — HTTP 403
+- **Teen Nick** — Kids — consecutive failures: **74** — HTTP 403
 
 ## /streamtest/ Endpoints
 
@@ -59,12 +57,12 @@ Query values are omitted because they may be expiring signatures or access token
 |---|---|---|---|
 | ETV Cinema | Indian Movies | yupplivegcpusa.yuppcdn.net | hdnts |
 | Colors Super | Indian Entertainment | d1rc86nwwc9fag.cloudfront.net | hdnts |
+| Darshana TV | Indian Entertainment | yuppparoriglin.akamaized.net | hdnts |
 | Zee Kannada | Indian Entertainment | yuppnimresmum.akamaized.net | hdnts |
 | Songdew TV | International | yuppnimrestreammum.akamaized.net | hdnts |
 | WOW Kidz Hindi | Kids | yuppparoriglin.akamaized.net | hdnts |
 | WOW Kidz Tamil | Kids | yuppparoriglin.akamaized.net | hdnts |
 | WOW Kidz Telugu | Kids | yuppparoriglin.akamaized.net | hdnts |
-| Darshana TV | Backup | yuppparoriglin.akamaized.net | hdnts |
 | Studio Yuva | Backup | d2gvyg6lvauoko.cloudfront.net | hdnts |
 
 ## Xtream-Style Credential Paths
@@ -88,6 +86,7 @@ Worker routes are relayed endpoints, not direct broadcaster sources. The Sananda
 
 | Channel | Group | Host |
 |---|---|---|
+| Channel 16 | Bangladesh | iptvlive.ahmed-bd-org.workers.dev |
 | Sananda | Indian Bangla | iptvlive.ahmed-bd-org.workers.dev |
 | ATN Bangla | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | ATN News | Backup | iptv-proxy.ahmed-bd-org.workers.dev |
@@ -98,7 +97,6 @@ Worker routes are relayed endpoints, not direct broadcaster sources. The Sananda
 | Bhojpuri Cinema | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Boishakhi TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Boishakhi TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
-| Channel 16 | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Channel 24 | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Channel I | Backup | iptv-proxy.ahmed-bd-org.workers.dev |
 | Channel I | Backup | iptvlive.ahmed-bd-org.workers.dev |
@@ -134,25 +132,25 @@ Worker routes are relayed endpoints, not direct broadcaster sources. The Sananda
 
 | Channel | Group | Host | Route type |
 |---|---|---|---|
+| BTV National | Bangladesh | homair-tv-production.up.railway.app | /api/play/ |
 | BTV World | Bangladesh | homair-tv-production.up.railway.app | /api/play/ |
+| Star Gold | Indian Movies | homair-tv-production.up.railway.app | /api/play/ |
 | Star Gold Select | Indian Movies | homair-tv-production.up.railway.app | /api/play/ |
+| Star Movies | Indian Movies | homair-tv-production.up.railway.app | /api/play/ |
 | Star Utsav Movies | Indian Movies | homair-tv-production.up.railway.app | /api/play/ |
+| Manoranjan Grand | Indian Entertainment | homair-tv-production.up.railway.app | /api/play/ |
+| Star Bharat | Indian Entertainment | homair-tv-production.up.railway.app | /api/play/ |
 | Star Utsav | Indian Entertainment | homair-tv-production.up.railway.app | /api/play/ |
+| Nick | Kids | homair-tv-production.up.railway.app | /api/play/ |
+| Nick Jr | Kids | homair-tv-production.up.railway.app | /api/play/ |
+| Sonic | Kids | homair-tv-production.up.railway.app | /api/play/ |
+| Super Hungama | Kids | homair-tv-production.up.railway.app | /api/play/ |
 | BTV Chattogram | Backup | homair-tv-production.up.railway.app | /api/play/ |
-| BTV National | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | BTV News | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | Colors Cineplex [UK] | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | Desh TV | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | HBO | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | HUM Masala | Backup | homair-tv-production.up.railway.app | /api/play/ |
-| Manoranjan Grand | Backup | homair-tv-production.up.railway.app | /api/play/ |
-| Nick | Backup | homair-tv-production.up.railway.app | /api/play/ |
-| Nick Jr | Backup | homair-tv-production.up.railway.app | /api/play/ |
-| Sonic | Backup | homair-tv-production.up.railway.app | /api/play/ |
-| Star Bharat | Backup | homair-tv-production.up.railway.app | /api/play/ |
-| Star Gold | Backup | homair-tv-production.up.railway.app | /api/play/ |
-| Star Movies | Backup | homair-tv-production.up.railway.app | /api/play/ |
-| Super Hungama | Backup | homair-tv-production.up.railway.app | /api/play/ |
 
 ## Recommendations
 

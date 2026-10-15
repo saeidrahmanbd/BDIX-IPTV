@@ -1,21 +1,21 @@
 # Playlist Audit
-Generated: **2026-10-15T08:37:55.533819+00:00**
+Generated: **2026-10-15T09:12:39.098093+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1035**
-- Unique channel IDs: **651**
+- Playlist entries: **1037**
+- Unique channel IDs: **652**
 - IDs with multiple streams: **195**
-- Duplicate stream URLs: **1**
+- Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
-- Same-name / different-ID collisions: **1**
+- Same-name / different-ID collisions: **0**
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
-- Protected primary-entry changes: **6**
+- Protected primary-entry changes: **0**
 - Logo exceptions: **0**
-- Logo references checked: **1035**
+- Logo references checked: **1037**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
@@ -226,9 +226,6 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Colors Cineplex [UK] — Indian Movies — https://d1rc86nwwc9fag.cloudfront.net/260723/smil:rishteycineplexukdev.smil/chunklist_b1928000.m3u8
 - Colors Cineplex [UK] — Backup — https://homair-tv-production.up.railway.app/api/play/COLORS%20CINEPLEX%20HD.m3u8
 - Colors Cineplex [UK] — Backup — https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/gb/YuppTV/ColorsCineplexUK.m3u8
-### custom.duronto.tv (2 streams)
-- Duronto TV — Backup — https://tvsen5.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.fmp4.m3u8
-- Duronto TV — Backup — https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/tracks-v1a1/mono.ts.m3u8
 ### custom.enter.tv (3 streams)
 - Enter TV — Bangladesh — https://live1.entertv.com.bd/entertv/tracks-v1a1/mono.m3u8
 - Enter TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/enter-tv-1/index.m3u8
@@ -239,6 +236,9 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### custom.food.network (2 streams)
 - Food Network — Documentary & Wildlife — https://tvsen3.aynaott.com/7hm4TfVp/index.m3u8
 - Food Network — Backup — https://tvsen6.aynaott.com/foodnetwork/index.m3u8
+### custom.gseriesdrama (2 streams)
+- G Series Drama — Bangladesh — https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8
+- G Series Drama — Backup — https://vods2.aynaott.com/gseriesDrama/index.m3u8
 ### custom.hbo (2 streams)
 - HBO — International — https://tvsen7.aynaott.com/hbo/index.m3u8
 - HBO — Backup — https://homair-tv-production.up.railway.app/api/play/HBO.m3u8
@@ -344,9 +344,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### disneychannel.in@hd (2 streams)
 - Disney Channel India — Kids — http://181.119.215.61:8000/play/a0g1/index.m3u8
 - Disney Channel India — Backup — https://tvsen7.aynaott.com/disney/index.m3u8
-### durontotv.bd (2 streams)
+### durontotv.bd (4 streams)
+- Duronto TV — Bangladesh — https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8
 - Duronto TV — Backup — http://rgkkw.live:8080/live/[REDACTED]/[REDACTED]/433.ts
-- Duronto TV — Backup — https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8
+- Duronto TV — Backup — https://tvsen5.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.fmp4.m3u8
+- Duronto TV — Backup — https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/tracks-v1a1/mono.ts.m3u8
 ### e24.in (2 streams)
 - E24 — Indian Music — https://amg13643-amg13643c2-amgplt0016.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg13643-amg13643c2-amgplt0016/playlist.m3u8
 - E24 — Backup — https://mumt04.tangotv.in/m18aqlK4E24/index.m3u8
@@ -493,14 +495,13 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ### legochannel.us@sd (2 streams)
 - Lego Channel — Kids — https://dltiqboxjw21d.cloudfront.net/index.m3u8
 - Lego Channel — Backup — https://dltiqboxjw21d.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-evri8jwgwmxus/index.m3u8
-### maasrangatv.bd (9 streams)
+### maasrangatv.bd (8 streams)
 - Maasranga TV — Bangladesh — https://mtv.sunplex.live/MAASRANGA/index.m3u8
 - Maasranga TV — Backup — http://116.204.149.16/maasranga/index.m3u8
 - Maasranga TV — Backup — http://116.204.149.16/maasranga/tracks-v1a1/mono.m3u8
 - Maasranga TV — Backup — http://tvsen5.aynascope.net/maasrangatv/tracks-a1/mono.ts.m3u8
 - Maasranga TV — Backup — https://mtv.sunplex.live/MAASRANGA/tracks-v1a1/mono.m3u8
 - Maasranga TV — Backup — https://tvsen5.aynaott.com/maasrangatv/index.m3u8
-- Maasranga TV — Backup — https://tvsen5.aynascope.net/maasrangatv/index.m3u8
 - Maasranga TV — Backup — https://tvsen5.aynascope.net/maasrangatv/index.m3u8
 - Maasranga TV — Backup — https://tvsen6.aynaott.com/maasrangatv/index.m3u8
 ### madhimugamtv.in (2 streams)
@@ -828,12 +829,12 @@ None.
 
 - **ETV Cinema** — Indian Movies — https://yupplivegcpusa.yuppcdn.net/100823/smil:etvcinema.smil/playlist.m3u8?hdnts=[REDACTED]
 - **Colors Super** — Indian Entertainment — https://d1rc86nwwc9fag.cloudfront.net/260723/smil:colorssuper1.smil/playlist.m3u8?hdnts=[REDACTED]
+- **Darshana TV** — Indian Entertainment — https://yuppparoriglin.akamaized.net/181224/smil:darshanatv.smil/playlist.m3u8?hdnts=[REDACTED]
 - **Zee Kannada** — Indian Entertainment — https://yuppnimresmum.akamaized.net/28072023/smil:zeekannadahd.smil/playlist.m3u8?hdnts=[REDACTED]
 - **Songdew TV** — International — https://yuppnimrestreammum.akamaized.net/181224/smil:songdewtv.smil/playlist.m3u8?hdnts=[REDACTED]
 - **WOW Kidz Hindi** — Kids — https://yuppparoriglin.akamaized.net/181224/smil:wowkidzhindi.smil/playlist.m3u8?hdnts=[REDACTED]
 - **WOW Kidz Tamil** — Kids — https://yuppparoriglin.akamaized.net/181224/smil:wowkidztam.smil/playlist.m3u8?hdnts=[REDACTED]
 - **WOW Kidz Telugu** — Kids — https://yuppparoriglin.akamaized.net/181224/smil:wowkidztelgu.smil/playlist.m3u8?hdnts=[REDACTED]
-- **Darshana TV** — Backup — https://yuppparoriglin.akamaized.net/181224/smil:darshanatv.smil/playlist.m3u8?hdnts=[REDACTED]
 - **Studio Yuva** — Backup — https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=[REDACTED]
 
 ## Embedded Xtream-Style Credential Paths (redacted)
@@ -861,11 +862,11 @@ None.
 
 ## Same-Name / Different-ID Collisions
 
-- **duronto tv** → custom.duronto.tv, durontotv.bd
+None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1035**
+- Healthy/local references: **1037**
 - missing: **0**
 - broken-local: **0**
 - external: **0**
@@ -877,9 +878,4 @@ None.
 
 ## Protected Primary Entries
 
-- **custom.gseriesdrama** — https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8: primary entry removed or changed
-- **staging.channel.52** — https://tvsen6.aynaott.com/channel52/index.m3u8: primary entry removed or changed
-- **new.hindi.movie.classic.24** — https://vods2.aynaott.com/hindimovies/index.m3u8: primary entry removed or changed
-- **staging.assam.talks** — https://tvsen7.aynaott.com/AssamTalks/index.m3u8: primary entry removed or changed
-- **custom.toonamiaftermathmovie** — http://api.toonamiaftermath.com:3000/movies/playlist.m3u8: primary entry removed or changed
-- **staging.islam.tv** — https://tvsen1.aynaott.com/bB3A5dyq/index.m3u8: primary entry removed or changed
+No protected primary-entry changes detected.

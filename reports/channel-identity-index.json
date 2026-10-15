@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-15T08:37:55+00:00",
+  "generated": "2026-10-15T09:12:39+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -692,11 +692,11 @@
         "bbcnews.uk"
       ],
       "groups": [
-        "Backup"
+        "International"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "beinsports3": {
       "names": [
@@ -1038,11 +1038,11 @@
         "colors.in"
       ],
       "groups": [
-        "Backup"
+        "Indian Entertainment"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "colors.bangla": {
       "names": [
@@ -1266,11 +1266,11 @@
         "custom.aljazeera.english"
       ],
       "groups": [
-        "Backup"
+        "International"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "custom.alzahratvturkic": {
       "names": [
@@ -1565,11 +1565,11 @@
         "custom.btv.national"
       ],
       "groups": [
-        "Backup"
+        "Bangladesh"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "custom.btv.news": {
       "names": [
@@ -1637,11 +1637,11 @@
         "custom.channel.16"
       ],
       "groups": [
-        "Backup"
+        "Bangladesh"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "custom.channel.52": {
       "names": [
@@ -1849,11 +1849,11 @@
         "custom.discovery"
       ],
       "groups": [
-        "Backup"
+        "Documentary & Wildlife"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "custom.discovery.science": {
       "names": [
@@ -1980,20 +1980,6 @@
       "streams": 1,
       "primary": 1,
       "backup": 0
-    },
-    "custom.duronto": {
-      "names": [
-        "Duronto TV"
-      ],
-      "ids": [
-        "custom.duronto.tv"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 2,
-      "primary": 0,
-      "backup": 2
     },
     "custom.ekamra.cinema": {
       "names": [
@@ -2179,6 +2165,21 @@
       "streams": 1,
       "primary": 1,
       "backup": 0
+    },
+    "custom.gseriesdrama": {
+      "names": [
+        "G Series Drama"
+      ],
+      "ids": [
+        "custom.gseriesdrama"
+      ],
+      "groups": [
+        "Backup",
+        "Bangladesh"
+      ],
+      "streams": 2,
+      "primary": 1,
+      "backup": 1
     },
     "custom.hbo": {
       "names": [
@@ -2499,11 +2500,11 @@
         "custom.manoranjan.grand"
       ],
       "groups": [
-        "Backup"
+        "Indian Entertainment"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "custom.maydayairdisaster": {
       "names": [
@@ -2627,11 +2628,11 @@
         "custom.nick.jr"
       ],
       "groups": [
-        "Backup"
+        "Kids"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "custom.ntv.malayalam": {
       "names": [
@@ -2951,11 +2952,11 @@
         "custom.star.gold"
       ],
       "groups": [
-        "Backup"
+        "Indian Movies"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "custom.star.movies": {
       "names": [
@@ -2965,11 +2966,11 @@
         "custom.star.movies"
       ],
       "groups": [
-        "Backup"
+        "Indian Movies"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "custom.star.vijay": {
       "names": [
@@ -3474,11 +3475,11 @@
         "darshanatv.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Indian Entertainment"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "dbcnews": {
       "names": [
@@ -4150,11 +4151,12 @@
         "durontotv.bd"
       ],
       "groups": [
-        "Backup"
+        "Backup",
+        "Bangladesh"
       ],
-      "streams": 2,
-      "primary": 0,
-      "backup": 2
+      "streams": 4,
+      "primary": 1,
+      "backup": 3
     },
     "dwnews": {
       "names": [
@@ -4164,11 +4166,11 @@
         "dwnews.de"
       ],
       "groups": [
-        "Backup"
+        "International"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "e24": {
       "names": [
@@ -5519,9 +5521,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 9,
+      "streams": 8,
       "primary": 1,
-      "backup": 8
+      "backup": 7
     },
     "madeinhollywood": {
       "names": [
@@ -6194,6 +6196,20 @@
       "primary": 1,
       "backup": 0
     },
+    "new.hindi.movie.classic.24": {
+      "names": [
+        "Hindi Movie Classic 24"
+      ],
+      "ids": [
+        "new.hindi.movie.classic.24"
+      ],
+      "groups": [
+        "Indian Movies"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "news21banglatv": {
       "names": [
         "News 21"
@@ -6304,11 +6320,11 @@
         "nickelodeon.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Kids"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "nkrtvkannada": {
       "names": [
@@ -7691,11 +7707,11 @@
         "sonic.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Kids"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "sony.aath": {
       "names": [
@@ -8019,11 +8035,11 @@
         "starbharat.in"
       ],
       "groups": [
-        "Backup"
+        "Indian Entertainment"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "stargold2": {
       "names": [
@@ -8301,11 +8317,11 @@
         "superhungama.in@sd"
       ],
       "groups": [
-        "Backup"
+        "Kids"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "suriyantv": {
       "names": [
@@ -9035,11 +9051,11 @@
         "zbcartoon.in"
       ],
       "groups": [
-        "Backup"
+        "Kids"
       ],
       "streams": 1,
-      "primary": 0,
-      "backup": 1
+      "primary": 1,
+      "backup": 0
     },
     "zee24ghanta": {
       "names": [
