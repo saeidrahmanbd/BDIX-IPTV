@@ -34,7 +34,7 @@ def main():
             continue
         checked += 1
         text = worker.read_text(encoding="utf-8")
-        pattern = re.compile(r'const EPG_ID_MAP\\s*=\\s*\\{.*?\\};', re.S)
+        pattern = re.compile(r'const EPG_ID_MAP\s*=\s*\{.*?\};', re.S)
         if not pattern.search(text):
             # Current Workers use the published XMLTV and pass the playlist
             # tvg-id through as epg_channel_id. No static alias map is needed.
@@ -52,7 +52,7 @@ def main():
 
         replacement = "const EPG_ID_MAP = " + json.dumps(
             dict(sorted(mapping.items())), ensure_ascii=False, separators=(",", ":")
-        ) + ";\\n"
+        ) + ";\n"
         new_text = pattern.sub(replacement, text, count=1)
         if new_text != text:
             worker.write_text(new_text, encoding="utf-8")
