@@ -1,13 +1,13 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-10-14T14:44:14+00:00**
+Generated: **2026-10-15T04:00:12+00:00**
 
 This report measures the two M3U files currently published at the repository root. The historic filename epg-three-playlist-audit.md is retained for link compatibility; it does not mean a third playlist file exists.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 940 | 592 | 384 | 356 | 384 | 356 | 208 | OK |
-| BDIX-Playlist.m3u | 139 | 131 | 74 | 74 | 74 | 74 | 57 | OK |
+| IPTV-Playlist.m3u | 940 | 592 | 384 | 355 | 384 | 347 | 208 | OK |
+| BDIX-Playlist.m3u | 139 | 131 | 74 | 74 | 74 | 70 | 57 | OK |
 
 ## Group coverage
 
@@ -15,15 +15,15 @@ This report measures the two M3U files currently published at the repository roo
 |---|---:|---:|---:|---:|
 | Bangladesh | 64 | 1 | 1 | 63 |
 | Documentary & Wildlife | 62 | 51 | 51 | 11 |
-| Indian Bangla | 45 | 33 | 32 | 12 |
+| Indian Bangla | 45 | 33 | 31 | 12 |
 | Indian Entertainment | 142 | 122 | 116 | 20 |
 | Indian Movies | 60 | 51 | 49 | 9 |
 | Indian Music | 51 | 45 | 42 | 6 |
 | International | 102 | 49 | 38 | 53 |
-| Kids | 46 | 29 | 28 | 17 |
+| Kids | 46 | 29 | 27 | 17 |
 | Pakistani | 15 | 3 | 3 | 12 |
 | Religious | 18 | 7 | 5 | 11 |
-| Sports | 42 | 31 | 29 | 11 |
+| Sports | 42 | 31 | 30 | 11 |
 
 ## Interpretation
 
