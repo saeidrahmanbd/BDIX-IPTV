@@ -74,6 +74,7 @@ GENERIC_ASSETS = {name.casefold() for name in GENERIC_ASSETS}
 LOCAL_OVERRIDES = {
     "global tv": "unused/global-tv-1080p-5ffc043912.png",
     "channel 1": "channel-1.png",
+    "classic movies": "unused/classic-movies-channel-1d5f82d98a.png",
 }
 
 # Exact, source-attributed fallback URLs for unresolved channels. These are

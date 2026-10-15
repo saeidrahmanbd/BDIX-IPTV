@@ -76,7 +76,13 @@ def normalized_name(name):
     return re.sub(r"\s*\[[^]]+\]\s*$", "", name).strip().lower()
 
 def redact_url(url):
-    """Redact query tokens and Xtream-style path credentials in audit output."""
+    """Redact query tokens, Xtream paths, and dvltv opaque route tokens from audit output."""
+    url = re.sub(
+        r'(^https?://(?:www\.)?dvltv\.cc(?::\d+)?/play/)[^/?#]+',
+        r'\1[REDACTED]',
+        url,
+        flags=re.I,
+    )
     url = re.sub(
         r'(/live/)[^/?#]+/[^/?#]+/([^/?#]+\.ts)(?=$|[?#])',
         r'\1[REDACTED]/[REDACTED]/\2',
@@ -269,6 +275,8 @@ for info, url in entries:
         suspicious_urls.append((display_name(info), "URL userinfo", url))
     elif re.search(r"[?&]hdnts=$", url, re.I):
         suspicious_urls.append((display_name(info), "empty hdnts", url))
+    if re.search(r"^https?://(?:[^/]+\.)?dvltv\.cc(?::\d+)?/play(?:/|$)", url, re.I):
+        suspicious_urls.append((display_name(info), "blocked dvltv.cc/play route", url))
 
 metadata_conflicts = []
 for cid, items in sorted(by_id.items()):

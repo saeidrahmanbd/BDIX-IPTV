@@ -55,6 +55,7 @@ IDS={
   "Survivor": "Survivor.us",
   "WaterBear": "WaterBear.ch",
   "EMAN TV": "EmanTv.iq",
+  "Channel S UK": "custom.channel.s.uk",
   "UNITE8.1": "custom.unite8.1"
 }
 LOGOS={
