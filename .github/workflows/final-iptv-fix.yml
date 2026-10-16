@@ -1,0 +1,71 @@
+name: Final IPTV Playlist Fix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - IPTV-Playlist.m3u
+      - scripts/final_iptv_playlist_fixes.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: final-iptv-fix
+  cancel-in-progress: false
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    if: ${{ !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Final IPTV playlist fix')) }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Protect BDIX playlist
+        run: cp BDIX-Playlist.m3u /tmp/BDIX-Playlist.protected.m3u
+
+      - name: Apply safe IPTV fixes
+        run: python scripts/final_iptv_playlist_fixes.py
+
+      - name: Run existing metadata normalization
+        run: python scripts/normalize_metadata.py
+
+      - name: Run existing logo repair
+        run: python scripts/repair_playlist_logos.py
+
+      - name: Sort playlist categories and entries
+        run: python scripts/sort_playlists.py IPTV-Playlist.m3u
+
+      - name: Run final hardening
+        run: python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
+
+      - name: Verify BDIX playlist was not modified
+        run: cmp -s BDIX-Playlist.m3u /tmp/BDIX-Playlist.protected.m3u
+
+      - name: Run audit and EPG coverage
+        run: |
+          python scripts/audit_playlist.py
+          python scripts/build_identity_index.py
+          python scripts/epg_coverage.py
+          python scripts.pre_publish_gate.py 2>/dev/null || true
+        shell: bash
+
+      - name: Commit fixes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add IPTV-Playlist.m3u reports/ assets/dashboard.svg
+          if git diff --cached --quiet; then
+            echo 'No additional playlist changes required.'
+            exit 0
+          fi
+          git commit -m 'Final IPTV playlist fix'
+          git push origin HEAD:main
