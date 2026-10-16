@@ -7,6 +7,7 @@ on:
       - IPTV-Playlist.m3u
       - scripts/final_iptv_playlist_fixes.py
       - scripts/audit_playlist.py
+      - .github/workflows/final-iptv-fix.yml
   workflow_dispatch:
 
 permissions:
