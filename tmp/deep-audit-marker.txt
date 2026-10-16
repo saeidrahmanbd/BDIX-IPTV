@@ -1,0 +1,1 @@
+Deep audit initiated; deterministic fixes must not be blocked by the publication workflow.
