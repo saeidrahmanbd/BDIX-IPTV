@@ -55,8 +55,7 @@ jobs:
           python scripts/audit_playlist.py
           python scripts/build_identity_index.py
           python scripts/epg_coverage.py
-          python scripts.pre_publish_gate.py 2>/dev/null || true
-        shell: bash
+          python scripts/pre_publish_gate.py || true
 
       - name: Commit fixes
         run: |
