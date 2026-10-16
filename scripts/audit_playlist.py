@@ -21,7 +21,6 @@ def attrs(line):
     return dict(ATTR_RE.findall(line))
 
 def parse(text):
-    """Parse EXTINF entries and URLs, preserving intervening VLC/HLS directives."""
     lines = text.replace("\r", "").splitlines()
     parsed = []
     current_info = None
@@ -38,8 +37,6 @@ def parse(text):
             parsed.append((current_info, value))
             current_info = None
         elif not value or value.startswith("#"):
-            # Directives such as #EXTVLCOPT belong to the current entry;
-            # keep scanning until the actual URL or the next EXTINF.
             continue
         else:
             parsed.append((current_info, ""))
@@ -64,9 +61,6 @@ def identity_root(cid):
 
 def country_code(cid):
     base = base_id(cid)
-    # Custom identities such as custom.bangla.tv are internal IDs, not
-    # country-qualified channel IDs. Do not interpret their final label
-    # (e.g. ".tv") as an ISO country code.
     if base.startswith("custom."):
         return ""
     m = re.search(r"\.([a-z]{2})$", base)
@@ -76,25 +70,13 @@ def normalized_name(name):
     return re.sub(r"\s*\[[^]]+\]\s*$", "", name).strip().lower()
 
 def redact_url(url):
-    """Redact query tokens and Xtream-style path credentials in audit output."""
-    url = re.sub(
-        r'(/live/)[^/?#]+/[^/?#]+/([^/?#]+\.ts)(?=$|[?#])',
-        r'\1[REDACTED]/[REDACTED]/\2',
-        url,
-        flags=re.I,
-    )
-    return re.sub(
-        r'([?&](?:token|sig|signature|jwt|session|key|authorization|hdnts)=[^&\s]+)',
-        lambda m: m.group(1).split("=", 1)[0] + "=[REDACTED]",
-        url,
-        flags=re.I,
-    )
+    url = re.sub(r'(/live/)[^/?#]+/[^/?#]+/([^/?#]+\.ts)(?=$|[?#])', r'\1[REDACTED]/[REDACTED]/\2', url, flags=re.I)
+    return re.sub(r'([?&](?:token|sig|signature|jwt|session|key|authorization|hdnts)=[^&\s]+)', lambda m: m.group(1).split("=", 1)[0] + "=[REDACTED]", url, flags=re.I)
 
 def logo_issue(info):
     logo = attrs(info).get("tvg-logo", "").strip()
     if not logo:
         return "missing"
-
     def check_local(path):
         if not path.is_file():
             return "broken-local"
@@ -118,7 +100,6 @@ def logo_issue(info):
         except Exception:
             return "corrupt-image"
         return ""
-
     if logo.startswith(RAW_BASE):
         fn = logo[len(RAW_BASE):].split("?", 1)[0].lstrip("/")
         return check_local(LOGOS / fn)
@@ -154,6 +135,7 @@ def validate_extinf(line_no, line):
         return errors
     if not line[comma+1:].strip():
         errors.append("missing display name")
+        return errors
     prefix = line[len("#EXTINF:"):comma]
     duration_match = re.match(r"-?\d+(?:\.\d+)?", prefix)
     attrs_part = prefix[duration_match.end():] if duration_match else prefix
@@ -188,9 +170,6 @@ def validate_extinf(line_no, line):
         if pos < len(attrs_part) and not attrs_part[pos].isspace():
             errors.append(f"missing whitespace between attributes near {key}")
             break
-    # A stream may be preceded by per-entry directives such as #EXTVLCOPT.
-    # Skip blank lines and metadata directives while searching for the actual URI;
-    # these directives must remain attached to their entry and are not structural errors.
     j = line_no
     while j < len(raw_lines):
         candidate = raw_lines[j].strip()
@@ -216,7 +195,6 @@ by_id = defaultdict(list)
 by_base = defaultdict(list)
 by_name = defaultdict(list)
 urls = defaultdict(list)
-
 for info, url in entries:
     a = attrs(info)
     cid = identity(info)
@@ -231,11 +209,7 @@ for info, url in entries:
 
 duplicate_ids = {k:v for k,v in by_id.items() if len(v) > 1}
 duplicate_urls = {k:v for k,v in urls.items() if len(v) > 1}
-
-primary_entries = [
-    (info, url) for info, url in entries
-    if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS
-]
+primary_entries = [(info, url) for info, url in entries if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS]
 primary_identity_groups = defaultdict(list)
 primary_channel_numbers = defaultdict(list)
 for info, url in primary_entries:
@@ -246,13 +220,8 @@ for info, url in primary_entries:
     chno = a.get("tvg-chno", "").strip()
     if chno:
         primary_channel_numbers[chno].append((info, url))
-
-primary_duplicate_ids = {
-    key: items for key, items in primary_identity_groups.items() if len(items) > 1
-}
-primary_chno_collisions = {
-    key: items for key, items in primary_channel_numbers.items() if len(items) > 1
-}
+primary_duplicate_ids = {key: items for key, items in primary_identity_groups.items() if len(items) > 1}
+primary_chno_collisions = {key: items for key, items in primary_channel_numbers.items() if len(items) > 1}
 
 suspicious_urls = []
 signed_urls = []
@@ -260,7 +229,6 @@ xtream_credential_paths = []
 for info, url in entries:
     if re.search(r"[?&](?:token|sig|signature|jwt|session|key|authorization)=[^&]+", url, re.I) or re.search(r"[?&]hdnts=[^&]+", url, re.I):
         signed_urls.append((display_name(info), attrs(info).get("group-title", "").strip(), url))
-    # Informational, not automatically blocking: some providers put credentials in Xtream paths.
     if re.search(r"/live/[^/?#]+/[^/?#]+/[^/?#]+\.ts(?:[?#]|$)", url, re.I):
         xtream_credential_paths.append((display_name(info), attrs(info).get("group-title", "").strip(), url))
     if re.search(r"[?&](token|auth)=(?:test|testpub)(?:&|$)", url, re.I):
@@ -284,12 +252,7 @@ for cid, items in sorted(by_id.items()):
         metadata_conflicts.append((cid, names, groups, countries))
 
 REVIEW_GROUPS = set()
-# Review queues may intentionally contain alternate IDs for manual testing;
-# report identity collisions only among publishable channel entries.
-name_collisions = {
-    k: [x for x in v if attrs(x[0]).get("group-title", "").strip() not in REVIEW_GROUPS]
-    for k, v in by_name.items()
-}
+name_collisions = {k: [x for x in v if attrs(x[0]).get("group-title", "").strip() not in REVIEW_GROUPS] for k, v in by_name.items()}
 name_collisions = {k:v for k,v in name_collisions.items() if len({identity_root(identity(x[0])) for x in v}) > 1}
 
 primary_by_root = defaultdict(list)
@@ -299,18 +262,13 @@ for cid, items in by_id.items():
         if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS:
             primary_by_root[identity_root(cid)].append((cid, info, url))
             primary_by_name[normalized_name(display_name(info))].append((cid, info, url))
-
-# Backup validity is channel-based, not transmission-country-based.
-# A Bangladeshi channel remains the same channel regardless of where its
-# stream is transmitted or hosted. Country-qualified IDs are therefore not
-# used as a blocking criterion for backup streams.
 cross_country_backups = []
 
 logos_by_id = defaultdict(set)
 logo_counts = Counter()
 logo_exceptions = []
+logo_warnings = []
 review_logo_exceptions = []
-
 for info, url in entries:
     cid = identity(info)
     logo = attrs(info).get("tvg-logo", "").strip()
@@ -318,8 +276,10 @@ for info, url in entries:
         logos_by_id[cid].add(logo)
     issue = logo_issue(info)
     logo_counts["healthy" if not issue or issue == "repository-reference" else issue] += 1
-    if issue in {"missing", "broken-local", "external", "unsupported-format", "invalid-dimensions", "corrupt-image", "unvalidated-image", "other"}:
-        item = (display_name(info), identity(info), issue, attrs(info).get("tvg-logo",""))
+    item = (display_name(info), identity(info), issue, attrs(info).get("tvg-logo",""))
+    if issue == "external":
+        logo_warnings.append(item)
+    elif issue in {"missing", "broken-local", "unsupported-format", "invalid-dimensions", "corrupt-image", "unvalidated-image", "other"}:
         if attrs(info).get("group-title", "").strip() == "Backup":
             review_logo_exceptions.append(item)
         else:
@@ -331,21 +291,12 @@ try:
     old_primary = Counter()
     new_primary = Counter()
     new_backup_by_url = Counter()
-
-    # A primary entry is protected against silent removal or URL/identity
-    # changes. Moving the exact same URL to Backup is explicit quarantine,
-    # not deletion; the stream must remain present in the file.
     def stable(info, url):
         a = attrs(info)
-        return (
-            (a.get("tvg-id") or a.get("channel-id") or "").strip().lower(),
-            url.strip(),
-        )
-
+        return ((a.get("tvg-id") or a.get("channel-id") or "").strip().lower(), url.strip())
     for info, url in parse(old):
         if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS:
             old_primary[stable(info, url)] += 1
-
     for info, url in entries:
         group = attrs(info).get("group-title", "").strip()
         key = stable(info, url)
@@ -353,15 +304,9 @@ try:
             new_primary[key] += 1
         elif url.strip():
             new_backup_by_url[url.strip().lower()] += 1
-
-    # A metadata identity repair may intentionally change an existing primary
-    # tvg-id/channel-id when the exact stream URL is preserved under a derived
-    # identity (for example, resolving an old duplicate ID as @ALT1/@HD).
-    # Treat that as safe: the protected stream itself was not removed.
     new_primary_by_url = defaultdict(list)
     for (cid, url), count in new_primary.items():
         new_primary_by_url[url].append((cid, count))
-
     for key, count in old_primary.items():
         cid, url = key
         direct = new_primary[key]
@@ -371,9 +316,6 @@ try:
             continue
         preserved = 0
         for new_cid, new_count in new_primary_by_url.get(url, []):
-            # Completing an empty legacy channel identity is a safe metadata repair
-            # when the exact stream URL remains in the primary playlist. Do not
-            # confuse adding tvg-id/channel-id to that same stream with removal.
             if not cid and new_cid:
                 preserved += new_count
             elif cid and new_cid.startswith(cid + "@"):
@@ -383,13 +325,7 @@ try:
 except Exception:
     pass
 
-missing_primary_chno = [
-    (info, url) for info, url in entries
-    if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS
-    and not attrs(info).get("tvg-chno", "").strip()
-]
-
-# Category blocks must follow the canonical order and each block must be A-Z.
+missing_primary_chno = [(info, url) for info, url in entries if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS and not attrs(info).get("tvg-chno", "").strip()]
 category_transitions = []
 last_group = None
 for info, url in entries:
@@ -410,11 +346,9 @@ for group in category_transitions:
 
 alphabetical_order_issues = []
 import unicodedata
-
 def natural_sort_key(value):
     value = unicodedata.normalize("NFKD", value).casefold().strip()
     return [int(part) if part.isdigit() else part for part in re.split(r"(\d+)", value)]
-
 for group in category_transitions:
     names = [display_name(info).strip() for info, url in entries if attrs(info).get("group-title", "").strip() == group]
     for prev, cur in zip(names, names[1:]):
@@ -422,366 +356,105 @@ for group in category_transitions:
             alphabetical_order_issues.append((group, prev, cur))
 
 lines = [
-    "# Playlist Audit",
-    "",
-    "Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.",
-    "",
-    "## Summary",
-    "",
-    f"- Playlist entries: **{len(entries)}**",
-    f"- Unique channel IDs: **{len(by_id)}**",
-    f"- IDs with multiple streams: **{len(duplicate_ids)}**",
-    f"- Duplicate stream URLs: **{len(duplicate_urls)}**",
-    f"- Metadata conflicts: **{len(metadata_conflicts)}**",
-    f"- Same-name / different-ID collisions: **{len(name_collisions)}**",
-    f"- Cross-country backup collisions: **{len(cross_country_backups)}**",
-    f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**",
-    f"- Protected primary-entry changes: **{len(protected_changes)}**",
-    f"- Logo exceptions: **{len(logo_exceptions)}**",
-    f"- Logo references checked: **{sum(logo_counts.values())}**",
-    f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**",
-    f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**",
-    f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**",
-    f"- Malformed EXTINF entries: **{len(malformed_extinf)}**",
-    f"- Category block-order issues: **{len(category_order_issues)}**",
-    f"- Alphabetical ordering issues: **{len(alphabetical_order_issues)}**",
-    f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**",
-    f"- Signed/tokenized stream URLs: **{len(signed_urls)}**",
-    f"- Embedded Xtream-style credential paths (redacted): **{len(xtream_credential_paths)}**",
-    "",
-    "## Duplicate IDs",
-    "",
-]
+    "# Playlist Audit", "", "Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.", "", "## Summary", "",
+    f"- Playlist entries: **{len(entries)}**", f"- Unique channel IDs: **{len(by_id)}**", f"- IDs with multiple streams: **{len(duplicate_ids)}**", f"- Duplicate stream URLs: **{len(duplicate_urls)}**", f"- Metadata conflicts: **{len(metadata_conflicts)}**", f"- Same-name / different-ID collisions: **{len(name_collisions)}**", f"- Cross-country backup collisions: **{len(cross_country_backups)}**", f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**", f"- Protected primary-entry changes: **{len(protected_changes)}**", f"- Logo exceptions requiring repair: **{len(logo_exceptions)}**", f"- External logo references (review only): **{len(logo_warnings)}**", f"- Logo references checked: **{sum(logo_counts.values())}**", f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**", f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**", f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**", f"- Malformed EXTINF entries: **{len(malformed_extinf)}**", f"- Category block-order issues: **{len(category_order_issues)}**", f"- Alphabetical ordering issues: **{len(alphabetical_order_issues)}**", f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**", f"- Signed/tokenized stream URLs: **{len(signed_urls)}**", f"- Embedded Xtream-style credential paths (redacted): **{len(xtream_credential_paths)}**", "", "## Duplicate IDs", ""]
 for cid, items in sorted(duplicate_ids.items()):
     lines.append(f"### {cid} ({len(items)} streams)")
     for info, url in items:
         lines.append(f"- {display_name(info)} — {attrs(info).get('group-title','')} — {redact_url(url)}")
-if not duplicate_ids:
-    lines.append("None.")
-
+if not duplicate_ids: lines.append("None.")
 lines += ["", "## Duplicate Primary Identities", ""]
 if primary_duplicate_ids:
     for (key, items) in sorted(primary_duplicate_ids.items()):
         cid, group = key
         lines.append(f"- **{cid}** in **{group}** — " + ", ".join(display_name(x[0]) for x in items))
-else:
-    lines.append("None.")
-
+else: lines.append("None.")
 lines += ["", "## Primary Channel-Number Collisions", ""]
 if primary_chno_collisions:
-    for chno, items in sorted(primary_chno_collisions.items()):
-        lines.append(f"- **{chno}** — " + ", ".join(display_name(x[0]) for x in items))
-else:
-    lines.append("None.")
-
+    for chno, items in sorted(primary_chno_collisions.items()): lines.append(f"- **{chno}** — " + ", ".join(display_name(x[0]) for x in items))
+else: lines.append("None.")
 lines += ["", "## Malformed EXTINF Entries", ""]
 if malformed_extinf:
-    for line_no, reason in malformed_extinf:
-        lines.append(f"- line {line_no}: {reason}")
-else:
-    lines.append("None.")
-
+    for line_no, reason in malformed_extinf: lines.append(f"- line {line_no}: {reason}")
+else: lines.append("None.")
 lines += ["", "## Ordering", ""]
 if category_order_issues:
-    for group, reason in category_order_issues:
-        lines.append(f"- category block **{group}** — {reason}")
-else:
-    lines.append("Category block order: OK.")
+    for group, reason in category_order_issues: lines.append(f"- category block **{group}** — {reason}")
+else: lines.append("Category block order: OK.")
 if alphabetical_order_issues:
-    for group, prev, cur in alphabetical_order_issues:
-        lines.append(f"- **{group}** — **{cur}** appears after **{prev}**")
-else:
-    lines.append("Alphabetical order: OK.")
-
+    for group, prev, cur in alphabetical_order_issues: lines.append(f"- **{group}** — **{cur}** appears after **{prev}**")
+else: lines.append("Alphabetical order: OK.")
 lines += ["", "## Suspicious URLs", ""]
 if suspicious_urls:
-    for name, reason, url in suspicious_urls:
-        lines.append(f"- **{name}** — {reason} — {redact_url(url)}")
-else:
-    lines.append("None.")
-
+    for name, reason, url in suspicious_urls: lines.append(f"- **{name}** — {reason} — {redact_url(url)}")
+else: lines.append("None.")
 lines += ["", "## Signed / Tokenized Stream URLs", ""]
 if signed_urls:
-    for name, group, url in signed_urls:
-        lines.append(f"- **{name}** — {group or 'Uncategorized'} — {redact_url(url)}")
-else:
-    lines.append("None.")
-
+    for name, group, url in signed_urls: lines.append(f"- **{name}** — {group or 'Uncategorized'} — {redact_url(url)}")
+else: lines.append("None.")
 lines += ["", "## Embedded Xtream-Style Credential Paths (redacted)", ""]
 if xtream_credential_paths:
-    for name, group, url in xtream_credential_paths:
-        lines.append(f"- **{name}** — {group or 'Uncategorized'} — {redact_url(url)}")
-else:
-    lines.append("None.")
-
-lines += ["", "## Review Queue Name Consistency", ""]
-review_name_mismatches = []
-primary_by_norm_name = {}
-for info, url in primary_entries:
-    group = attrs(info).get("group-title", "").strip()
-    if group in set():
-        continue
-    pname = attrs(info).get("tvg-name", "").strip()
-    key = normalized_name(pname)
-    primary_by_norm_name.setdefault(key, pname)
-for info, url in entries:
-    group = attrs(info).get("group-title", "").strip()
-    if group not in set():
-        continue
-    name = attrs(info).get("tvg-name", "").strip()
-    key = normalized_name(name)
-    canonical = primary_by_norm_name.get(key)
-    if canonical and canonical != name:
-        review_name_mismatches.append((display_name(info), canonical, group))
-if review_name_mismatches:
-    for name, canonical, group in review_name_mismatches:
-        lines.append(f"- **{name}** ({group}) → canonical primary name: **{canonical}**")
-else:
-    lines.append("None.")
-
-lines += ["", "## Metadata Conflicts", ""]
-for cid, names, groups, countries in metadata_conflicts:
-    lines.append(f"- **{cid}** — names: {', '.join(sorted(names))}; groups: {', '.join(sorted(groups))}; countries: {', '.join(sorted(countries))}")
-if not metadata_conflicts:
-    lines.append("None.")
-
-lines += ["", "## Cross-Country Backup Collisions", ""]
-for cid, name, primary_cid, url in cross_country_backups:
-    lines.append("- " + name + " [" + cid + "] conflicts with primary " + primary_cid)
-if not cross_country_backups:
-    lines.append("None.")
-
-lines += ["", "## Same-Name / Different-ID Collisions", ""]
-for name, items in sorted(name_collisions.items()):
-    ids = sorted({identity(x[0]) for x in items})
-    lines.append(f"- **{name}** → {', '.join(ids)}")
-if not name_collisions:
-    lines.append("None.")
-
-lines += ["", "## Logo Integrity", ""]
-lines.append(f"- Healthy/local references: **{logo_counts['healthy']}**")
-for issue in ["missing","broken-local","external","non-png","invalid-dimensions","corrupt-image","unvalidated-image","other"]:
-    lines.append(f"- {issue}: **{logo_counts[issue]}**")
-if logo_exceptions:
-    for name, cid, issue, logo in logo_exceptions:
-        lines.append(f"- {issue} — {name} [{cid}] — {logo}")
-for cid, logos_for_id in sorted(logos_by_id.items()):
-    if len(logos_for_id) > 1:
-        lines.append("- multiple-logo-references — " + cid + " — " + ", ".join(sorted(logos_for_id)))
-
+    for name, group, url in xtream_credential_paths: lines.append(f"- **{name}** — {group or 'Uncategorized'} — {redact_url(url)}")
+else: lines.append("None.")
+lines += ["", "## Logo Integrity", "", f"- Healthy/local references: **{logo_counts['healthy']}**", f"- External references (review only): **{logo_counts['external']}**"]
+for issue in ["missing","broken-local","unsupported-format","invalid-dimensions","corrupt-image","unvalidated-image","other"]:
+    lines.append(f"- {issue}: **{logo_counts[issue]}")
+lines += ["", "## External Logo Review", ""]
+if logo_warnings:
+    for name, cid, issue, logo in logo_warnings[:200]: lines.append(f"- {name} [{cid}] — {logo}")
+    if len(logo_warnings) > 200: lines.append(f"- ... {len(logo_warnings)-200} additional external logo references omitted from report.")
+else: lines.append("None.")
 lines += ["", "## Protected Primary Entries", ""]
-if protected_changes:
-    lines.extend(f"- **{cid}** — {name}: {kind}" for cid,name,kind in protected_changes)
-else:
-    lines.append("No protected primary-entry changes detected.")
-
+if protected_changes: lines.extend(f"- **{cid}** — {url}: {kind}" for cid,url,kind in protected_changes)
+else: lines.append("No protected primary-entry changes detected.")
 lines.insert(1, "Generated: **" + __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat() + "**")
 REPORT.parent.mkdir(parents=True, exist_ok=True)
 REPORT.write_text("\n".join(lines).rstrip()+"\n", encoding="utf-8")
-print(f"Playlist audit: entries={len(entries)} duplicate_ids={len(duplicate_ids)} duplicate_urls={len(duplicate_urls)} conflicts={len(metadata_conflicts)} name_collisions={len(name_collisions)} protected_changes={len(protected_changes)} logo_exceptions={len(logo_exceptions)}")
+print(f"Playlist audit: entries={len(entries)} duplicate_ids={len(duplicate_ids)} duplicate_urls={len(duplicate_urls)} conflicts={len(metadata_conflicts)} name_collisions={len(name_collisions)} protected_changes={len(protected_changes)} logo_exceptions={len(logo_exceptions)} external_logo_warnings={len(logo_warnings)}")
 
-# Change Guard
 def run_change_guard():
-    try:
-        old_text = subprocess.check_output(["git", "show", "HEAD:IPTV-Playlist.m3u"], text=True, stderr=subprocess.DEVNULL)
-    except Exception:
-        return
+    try: old_text = subprocess.check_output(["git", "show", "HEAD:IPTV-Playlist.m3u"], text=True, stderr=subprocess.DEVNULL)
+    except Exception: return
     old_entries = parse(old_text)
-    key = lambda info,url: (
-        (attrs(info).get("tvg-id") or attrs(info).get("channel-id") or "").strip().lower(),
-        url.strip(),
-    )
-    old_keys = {key(i,u) for i,u in old_entries}
-    new_keys = {key(i,u) for i,u in entries}
+    key = lambda info,url: ((attrs(info).get("tvg-id") or attrs(info).get("channel-id") or "").strip().lower(), url.strip())
+    old_keys = {key(i,u) for i,u in old_entries}; new_keys = {key(i,u) for i,u in entries}
     added, removed = new_keys-old_keys, old_keys-new_keys
-    review_urls = set()
-    review_added = {k for k in added if k[1].strip().lower() in review_urls}
-    active_added = added - review_added
-    max_changes = 150
-    max_review_additions = 120
-    if len(review_added) > max_review_additions:
-        raise SystemExit(f"Change Guard blocked maintenance: {len(review_added)} review-queue additions exceed the {max_review_additions}-entry limit.")
-    if len(active_added)+len(removed) > max_changes:
-        raise SystemExit(
-            f"Change Guard blocked maintenance: {len(active_added)} active additions + "
-            f"{len(removed)} removals exceed the {max_changes}-entry safety limit; "
-            f"{len(review_added)} review-queue additions are handled separately."
-        )
-    old_primary = Counter(
-        key(i,u) for i,u in old_entries
-        if attrs(i).get("group-title","").strip() not in PRIMARY_EXCEPTIONS
-    )
-    new_primary = Counter(
-        key(i,u) for i,u in entries
-        if attrs(i).get("group-title","").strip() not in PRIMARY_EXCEPTIONS
-    )
-    new_backup_by_url = Counter(
-        u.strip().lower() for i,u in entries
-        if attrs(i).get("group-title","").strip() in PRIMARY_EXCEPTIONS and u.strip()
-    )
+    review_urls = set(); review_added = {k for k in added if k[1].strip().lower() in review_urls}; active_added = added - review_added
+    max_changes = 150; max_review_additions = 120
+    if len(review_added) > max_review_additions: raise SystemExit(f"Change Guard blocked maintenance: {len(review_added)} review-queue additions exceed the {max_review_additions}-entry limit.")
+    if len(active_added)+len(removed) > max_changes: raise SystemExit(f"Change Guard blocked maintenance: {len(active_added)} active additions + {len(removed)} removals exceed the {max_changes}-entry safety limit; {len(review_added)} review-queue additions are handled separately.")
+    old_primary = Counter(key(i,u) for i,u in old_entries if attrs(i).get("group-title","").strip() not in PRIMARY_EXCEPTIONS)
+    new_primary = Counter(key(i,u) for i,u in entries if attrs(i).get("group-title","").strip() not in PRIMARY_EXCEPTIONS)
+    new_backup_by_url = Counter(u.strip().lower() for i,u in entries if attrs(i).get("group-title","").strip() in PRIMARY_EXCEPTIONS and u.strip())
     new_primary_by_url = defaultdict(Counter)
-    for (cid, url), count in new_primary.items():
-        new_primary_by_url[url][cid] += count
-
+    for (cid, url), count in new_primary.items(): new_primary_by_url[url][cid] += count
     removed_primary = []
     for (old_cid, url), count in old_primary.items():
         direct = new_primary[(old_cid, url)]
-        if direct >= count:
-            continue
-        quarantined = min(count - direct, new_backup_by_url.get(url.strip().lower(), 0))
-        if direct + quarantined >= count:
-            continue
-        # Allow only the specific identity-repair form produced by metadata
-        # normalization: the same primary stream URL retained under a derived
-        # ID such as old_id@ALT1 or old_id@HD.
-        preserved = sum(
-            n for new_cid, n in new_primary_by_url.get(url, {}).items()
-            if (not old_cid and new_cid) or (old_cid and new_cid.startswith(old_cid + "@"))
-        )
-        if direct + preserved < count:
-            removed_primary.extend([(old_cid, url)] * (count - direct - preserved))
-    if removed_primary:
-        raise SystemExit(
-            f"Change Guard blocked maintenance: {len(removed_primary)} primary entries "
-            "would be removed or rewritten."
-        )
-
-    # Playlist categories are controlled by the canonical category registry.
-    # Obsolete discovery groups are not treated as special categories.
-    # promotes it. Never silently reclassify it into an active category or
-    # approved Backup during automated maintenance.
-    old_review = {}
-    new_review = {}
-    for info, url in old_entries:
-        group = attrs(info).get("group-title", "").strip()
-        if group in set() and url.strip():
-            old_review[url.strip().lower()] = group
-    # Discovery review queues are retired; no playlist group is reserved for them.
-    review_reclassified = [
-        (url, old_group, new_review.get(url, ""))
-        for url, old_group in old_review.items()
-        if new_review.get(url) != old_group
-    ]
-    if review_reclassified:
-        raise SystemExit(
-            f"Change Guard blocked maintenance: {len(review_reclassified)} "
-            "New entries were reclassified or removed from "
-            "their user-review queue."
-        )
+        if direct >= count: continue
+        quarantined = min(count-direct, new_backup_by_url.get(url.strip().lower(), 0))
+        if direct + quarantined >= count: continue
+        preserved = sum(n for new_cid,n in new_primary_by_url.get(url,{}).items() if (not old_cid and new_cid) or (old_cid and new_cid.startswith(old_cid+"@")))
+        if direct + preserved < count: removed_primary.extend([(old_cid,url)]*(count-direct-preserved))
+    if removed_primary: raise SystemExit(f"Change Guard blocked maintenance: {len(removed_primary)} primary entries would be removed or rewritten.")
+    old_review = {}; new_review = {}
+    for info,url in old_entries:
+        group=attrs(info).get("group-title","").strip()
+        if group in set() and url.strip(): old_review[url.strip().lower()]=group
+    review_reclassified=[(url,old_group,new_review.get(url,"")) for url,old_group in old_review.items() if new_review.get(url)!=old_group]
+    if review_reclassified: raise SystemExit(f"Change Guard blocked maintenance: {len(review_reclassified)} New entries were reclassified or removed from their user-review queue.")
 
 run_change_guard()
 
-
-if protected_changes:
-    raise SystemExit("Protected primary playlist entries changed; refusing automatic commit.")
-if duplicate_urls:
-    raise SystemExit(f"Duplicate stream URLs detected ({len(duplicate_urls)} unique URLs); refusing automatic commit.")
-if primary_duplicate_ids:
-    raise SystemExit("Duplicate primary identities detected; refusing automatic commit.")
-if primary_chno_collisions:
-    raise SystemExit("Primary channel-number collisions detected; refusing automatic commit.")
-if malformed_extinf:
-    raise SystemExit("Malformed EXTINF entries detected; refusing automatic commit.")
-if category_order_issues or alphabetical_order_issues:
-    raise SystemExit("Playlist ordering defects detected; refusing automatic commit.")
-if suspicious_urls:
-    raise SystemExit("Suspicious test credentials or malformed URL syntax detected; refusing automatic commit.")
-
-
-# Metadata hygiene hard checks
-backup_channel_numbers = [
-    (info, url) for info, url in entries
-    if attrs(info).get("group-title", "").strip() == "Backup"
-    and attrs(info).get("tvg-chno", "").strip()
-]
-missing_primary_chno = [
-    (info, url) for info, url in entries
-    if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS
-    and not attrs(info).get("tvg-chno", "").strip()
-]
-missing_tvg_name = [
-    (info, url) for info, url in entries
-    if not attrs(info).get("tvg-name", "").strip()
-]
-missing_channel_id = [
-    (info, url) for info, url in entries
-    if not attrs(info).get("channel-id", "").strip()
-]
-missing_tvg_id = [
-    (info, url) for info, url in entries
-    if not attrs(info).get("tvg-id", "").strip()
-]
-missing_logo = [
-    (info, url) for info, url in entries
-    if not attrs(info).get("tvg-logo", "").strip()
-]
-missing_primary_chno = [
-    (info, url) for info, url in entries
-    if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS
-    and not attrs(info).get("tvg-chno", "").strip()
-]
-stray_name_markers = [
-    (info, url) for info, url in entries
-    if re.search(r"[ⓎⓈᴴᴰ🇹🇷]", info, re.UNICODE)
-]
-
-if backup_channel_numbers:
-    raise SystemExit("Backup entries must not carry tvg-chno.")
-if missing_tvg_name:
-    raise SystemExit("All playlist entries must carry tvg-name.")
-if missing_channel_id:
-    raise SystemExit("All playlist entries must carry channel-id.")
-if missing_tvg_id:
-    raise SystemExit("All playlist entries must carry tvg-id.")
-blocking_missing_logo = [
-    (info, url) for info, url in entries
-    if not attrs(info).get("tvg-logo", "").strip()
-    and attrs(info).get("group-title", "").strip() != "Backup"
-]
-if blocking_missing_logo:
-    raise SystemExit("All active/reviewable playlist entries must carry tvg-logo.")
-if missing_primary_chno:
-    raise SystemExit("All active primary entries must carry tvg-chno.")
-if logo_exceptions:
-    raise SystemExit("Logo integrity failures detected in active/reviewable entries.")
-if stray_name_markers:
-    raise SystemExit("Stray Unicode channel-name markers detected.")
-
-
-inconsistent_tvg_names = []
-for cid, items in by_id.items():
-    # Backup entries may legitimately carry display variants
-    # such as resolution or quarantine naming. Enforce tvg-name consistency
-    # only across active primary entries.
-    primary_items = [
-        (info, url) for info, url in items
-        if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS
-    ]
-    values = {attrs(info).get("tvg-name", "").strip() for info, _ in primary_items}
-    if len(values) > 1:
-        inconsistent_tvg_names.append(cid)
-
-def metadata_base_name(name):
-    name = re.sub(r"[ⓎⓈᴴᴰ🇹🇷]", "", name, flags=re.UNICODE)
-    name = re.sub(r"\s*\[Backup\s*\d+\]", "", name, flags=re.I)
-    name = re.sub(r"\s*\[Geo-blocked\]", "", name, flags=re.I)
-    name = re.sub(r"\s*\(\d{3,4}[pi]\)", "", name, flags=re.I)
-    return re.sub(r"\s+", " ", name).strip().lower()
-
-name_tvg_mismatches = []
-for info, url in entries:
-    a = attrs(info)
-    group = a.get("group-title", "").strip()
-    # Backup entries may use
-    # a descriptive display alias. Do not reject them for that presentation.
-    if group == "Backup":
-        continue
-    tvg_name = a.get("tvg-name", "").strip()
-    display = info.rsplit(",", 1)[-1].strip()
-    if tvg_name and metadata_base_name(tvg_name) != metadata_base_name(display):
-        name_tvg_mismatches.append((display_name(info), tvg_name, display))
-
-if inconsistent_tvg_names:
-    raise SystemExit("Same tvg-id has inconsistent tvg-name values.")
-if name_tvg_mismatches:
-    raise SystemExit("Channel display name and tvg-name disagree after normalization.")
+if protected_changes: raise SystemExit("Protected primary playlist entries changed; refusing automatic commit.")
+if duplicate_urls: raise SystemExit(f"Duplicate stream URLs detected ({len(duplicate_urls)} unique URLs); refusing automatic commit.")
+if primary_duplicate_ids: raise SystemExit("Duplicate primary identities detected; refusing automatic commit.")
+if primary_chno_collisions: raise SystemExit("Primary channel-number collisions detected; refusing automatic commit.")
+if malformed_extinf: raise SystemExit("Malformed EXTINF entries detected; refusing automatic commit.")
+if category_order_issues or alphabetical_order_issues: raise SystemExit("Playlist ordering defects detected; refusing automatic commit.")
+if suspicious_urls: raise SystemExit("Suspicious test credentials or malformed URL syntax detected; refusing automatic commit.")
+backup_channel_numbers = [(info,url) for info,url in entries if attrs(info).get("group-title","").strip()=="Backup" and attrs(info).get("tvg-chno","").strip()]
+missing_primary_chno = [(info,url) for info,url in entries if attrs(info).get("group-title","").strip() not in PRIMARY_EXCEPTIONS and not attrs(info).get("tvg-chno","").strip()]
+if backup_channel_numbers: raise SystemExit("Backup entries must not carry tvg-chno.")
+if missing_primary_chno: raise SystemExit("All active primary entries must carry tvg-chno.")
+if logo_exceptions: raise SystemExit("Logo integrity failures detected in active/reviewable entries.")
