@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Final safe fixes for IPTV-Playlist.m3u only.
+"""Final deterministic fixes for IPTV-Playlist.m3u only.
 
 This pass deliberately does NOT test, replace, or remove stream URLs.
 It fixes deterministic metadata/identity/number/logo issues and leaves
@@ -16,11 +16,17 @@ ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 LOGO_MAP = {
     "ATN News": "atn-news.png",
     "Bangla TV": "bangla-tv.png",
+    "BTV News": "btv-news.png",
     "Duronto TV": "duronto-tv.png",
     "Ekushey TV": "ekushey-tv.png",
+    "Green TV": "green-tv.png",
+    "Mohona TV": "mohona-tv.png",
+    "Nagorik TV": "nagorik-tv.png",
+    "Sananda": "sananda.png",
+    "TBN24": "tbn24.png",
 }
 
-# Numbers above this range are treated as obvious legacy/import anomalies.
+# Explicit legacy/import numbering anomalies identified by the audit.
 # We do not renumber normal existing primary numbers.
 ANOMALOUS_NUMBERS = {1001, 1115, 1116, 1120}
 
@@ -49,10 +55,6 @@ def split_display(s):
         elif ch == ',' and not quoted:
             return s[:i], s[i + 1:].strip()
     return s, ""
-
-
-def set_display(s, name):
-    return split_display(s)[0] + "," + name
 
 
 def name_of(info):
@@ -99,15 +101,17 @@ def main():
         name = name_of(info)
         group = a.get("group-title", "").strip()
 
-        # Canonicalize the BTV National identity used by the IPTV playlist.
+        # Canonicalize the BTV National identity. This is an identity-only
+        # change; the exact stream URL is preserved.
         if name.casefold() == "btv national" and a.get("tvg-id") == "custom.btv.national":
             info = set_attr(info, "tvg-id", "BTVNational.bd")
             info = set_attr(info, "channel-id", "BTVNational.bd")
             changed += 1
 
-        # Remove the known obsolete NVision-generated logo references when a
-        # verified canonical local asset exists in the repository.
-        if name in LOGO_MAP and ("nvisionbd-verified-" in a.get("tvg-logo", "").casefold()):
+        # Replace known legacy NVision-generated logo references when a
+        # canonical local asset exists in the repository.
+        logo = a.get("tvg-logo", "")
+        if name in LOGO_MAP and "nvisionbd-verified-" in logo.casefold():
             info = set_attr(info, "tvg-logo", RAW + LOGO_MAP[name])
             changed += 1
 
@@ -116,8 +120,7 @@ def main():
             info = remove_attr(info, "tvg-chno")
             changed += 1
 
-        # Replace only clearly anomalous legacy/import numbers. The next pass
-        # assigns the lowest unused positive primary number.
+        # Replace only the four explicitly identified legacy/import numbers.
         n = a.get("tvg-chno", "").strip()
         if group not in NO_NUMBER and n.isdigit() and int(n) in ANOMALOUS_NUMBERS:
             info = remove_attr(info, "tvg-chno")
@@ -138,8 +141,8 @@ def main():
         kept.append(block)
     blocks = kept
 
-    # Assign only the anomalous/missing primary numbers, without disturbing
-    # existing valid numbering.
+    # Assign only numbers removed above, using the lowest unused positive
+    # primary number. Existing valid numbers are never renumbered.
     used = set()
     for block in blocks:
         a = attrs(block[0])
@@ -154,9 +157,7 @@ def main():
         a = attrs(info)
         group = a.get("group-title", "").strip()
         n = a.get("tvg-chno", "").strip()
-        if group in NO_NUMBER:
-            continue
-        if n.isdigit() and int(n) > 0:
+        if group in NO_NUMBER or (n.isdigit() and int(n) > 0):
             continue
         while next_number in used:
             next_number += 1
@@ -165,13 +166,9 @@ def main():
         next_number += 1
         changed += 1
 
-    output = []
-    for line in pre:
-        if line.strip():
-            output.append(line)
+    output = [line for line in pre if line.strip()]
     for block in blocks:
         output.extend(block)
-
     P.write_text("\n".join(output).rstrip() + "\n", encoding="utf-8")
     print(f"Final IPTV fixes: changed={changed}, duplicate_streams_removed={removed_duplicates}, entries={len(blocks)}")
 
