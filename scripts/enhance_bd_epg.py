@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Merge verified Bangladesh EPG coverage from the FreeEPG Bangladesh feed."""
+"""Merge verified Bangladesh EPG coverage when a live public feed is available."""
 from collections import defaultdict
 from pathlib import Path
 import gzip
 import io
 import re
+import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
 
@@ -46,11 +47,16 @@ def fetch_source():
         SOURCE,
         headers={"User-Agent": "BDIX-IPTV-Bangladesh-EPG/1.0", "Accept": "application/gzip,application/xml,*/*"},
     )
-    with urllib.request.urlopen(req, timeout=45) as response:
-        data = response.read()
+    try:
+        with urllib.request.urlopen(req, timeout=45) as response:
+            data = response.read()
+    except urllib.error.HTTPError as exc:
+        if exc.code == 404:
+            return None, "404 Not Found"
+        raise
     if data[:2] == b"\x1f\x8b":
         data = gzip.decompress(data)
-    return ET.parse(io.BytesIO(data)).getroot()
+    return ET.parse(io.BytesIO(data)).getroot(), None
 
 
 def channel_names(elem):
@@ -59,6 +65,24 @@ def channel_names(elem):
         for x in elem.findall("display-name")
         if (x.text or "").strip()
     ]
+
+
+def write_report(wanted_count, matches, added_channels, added_programmes, source_status=None):
+    REPORT.parent.mkdir(parents=True, exist_ok=True)
+    lines = [
+        "# Bangladesh EPG Enhancement",
+        "",
+        f"Source: `{SOURCE}`",
+        "",
+        f"- Bangladesh playlist identities reviewed: **{wanted_count}**",
+        f"- Verified source matches: **{matches}**",
+        f"- New guide channel identities added: **{added_channels}**",
+        f"- Programme rows added: **{added_programmes}**",
+    ]
+    if source_status:
+        lines += ["", f"- Source status: **{source_status}**", "- No Bangladesh EPG mappings were fabricated or guessed."]
+    lines += ["", "Only exact Bangladesh-feed tvg-id matches or unique exact normalized channel-name matches are accepted."]
+    REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def main():
@@ -70,7 +94,12 @@ def main():
         print("Bangladesh EPG enhancement: no Bangladesh channels found")
         return
 
-    source_root = fetch_source()
+    source_root, source_error = fetch_source()
+    if source_root is None:
+        write_report(len(wanted), 0, 0, 0, source_error)
+        print(f"Bangladesh EPG enhancement: source unavailable ({source_error}); no mappings changed")
+        return
+
     source_channels = {}
     source_name_index = defaultdict(list)
     for channel in source_root.findall("channel"):
@@ -150,23 +179,7 @@ def main():
     except AttributeError:
         pass
     tree.write(GUIDE, encoding="utf-8", xml_declaration=True)
-
-    REPORT.parent.mkdir(parents=True, exist_ok=True)
-    REPORT.write_text(
-        "\n".join([
-            "# Bangladesh EPG Enhancement",
-            "",
-            f"Source: `{SOURCE}`",
-            "",
-            f"- Bangladesh playlist identities reviewed: **{len(wanted)}**",
-            f"- Verified source matches: **{len(matches)}**",
-            f"- New guide channel identities added: **{added_channels}**",
-            f"- Programme rows added: **{added_programmes}**",
-            "",
-            "Only exact Bangladesh-feed tvg-id matches or unique exact normalized channel-name matches were accepted.",
-        ]) + "\n",
-        encoding="utf-8",
-    )
+    write_report(len(wanted), len(matches), added_channels, added_programmes)
     print(f"Bangladesh EPG enhancement: matched={len(matches)}/{len(wanted)}, added_channels={added_channels}, added_programmes={added_programmes}")
 
 
