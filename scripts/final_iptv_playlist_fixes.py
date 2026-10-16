@@ -2,33 +2,26 @@
 """Final deterministic fixes for IPTV-Playlist.m3u only.
 
 This pass deliberately does NOT test, replace, or remove stream URLs.
-It fixes deterministic metadata/identity/number/logo issues and leaves
+It fixes deterministic metadata/identity/number issues and leaves
 BDIX-Playlist.m3u untouched.
 """
 from pathlib import Path
 import re
 
 P = Path("IPTV-Playlist.m3u")
-RAW = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 NO_NUMBER = {"Backup", "New Backup", "Not Playing"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
-LOGO_MAP = {
-    "ATN News": "atn-news.png",
-    "Bangla TV": "bangla-tv.png",
-    "BTV News": "btv-news.png",
-    "Duronto TV": "duronto-tv.png",
-    "Ekushey TV": "ekushey-tv.png",
-    "Green TV": "green-tv.png",
-    "Mohona TV": "mohona-tv.png",
-    "Nagorik TV": "nagorik-tv.png",
-    "Sananda": "sananda.png",
-    "TBN24": "tbn24.png",
-}
-
-# Explicit legacy/import numbering anomalies identified by the audit.
-# We do not renumber normal existing primary numbers.
+# These are the four specific legacy/import numbers identified by the deep
+# audit. They are replaced with the first four unused numbers after the normal
+# Bangladesh primary block. We do not renumber otherwise-valid entries.
 ANOMALOUS_NUMBERS = {1001, 1115, 1116, 1120}
+EXPLICIT_NUMBER_FIXES = {
+    "btv national": 39,
+    "channel 16": 40,
+    "duronto tv": 41,
+    "channel s uk": 42,
+}
 
 
 def attrs(s):
@@ -94,37 +87,43 @@ def main():
     changed = 0
     removed_duplicates = 0
 
-    # First pass: deterministic metadata corrections only.
+    # First pass: deterministic metadata and identity corrections only.
     for block in blocks:
         info = block[0]
         a = attrs(info)
         name = name_of(info)
+        key = name.casefold()
         group = a.get("group-title", "").strip()
 
-        # Canonicalize the BTV National identity. This is an identity-only
-        # change; the exact stream URL is preserved.
-        if name.casefold() == "btv national" and a.get("tvg-id") == "custom.btv.national":
-            info = set_attr(info, "tvg-id", "BTVNational.bd")
-            info = set_attr(info, "channel-id", "BTVNational.bd")
-            changed += 1
-
-        # Replace known legacy NVision-generated logo references when a
-        # canonical local asset exists in the repository.
-        logo = a.get("tvg-logo", "")
-        if name in LOGO_MAP and "nvisionbd-verified-" in logo.casefold():
-            info = set_attr(info, "tvg-logo", RAW + LOGO_MAP[name])
-            changed += 1
+        # Canonicalize BTV National identity while preserving its exact stream.
+        if key == "btv national":
+            if a.get("tvg-id") != "BTVNational.bd":
+                info = set_attr(info, "tvg-id", "BTVNational.bd")
+                changed += 1
+            if a.get("channel-id") != "BTVNational.bd":
+                info = set_attr(info, "channel-id", "BTVNational.bd")
+                changed += 1
 
         # Backup/review groups never receive primary channel numbers.
         if group in NO_NUMBER and a.get("tvg-chno"):
             info = remove_attr(info, "tvg-chno")
             changed += 1
 
-        # Replace only the four explicitly identified legacy/import numbers.
-        n = a.get("tvg-chno", "").strip()
-        if group not in NO_NUMBER and n.isdigit() and int(n) in ANOMALOUS_NUMBERS:
-            info = remove_attr(info, "tvg-chno")
-            changed += 1
+        # Apply the four explicit numbering corrections. These names are
+        # intentionally mapped rather than assigning numbers based on file
+        # position, so future playlist sorting cannot change their identity.
+        if group not in NO_NUMBER and key in EXPLICIT_NUMBER_FIXES:
+            desired = str(EXPLICIT_NUMBER_FIXES[key])
+            if a.get("tvg-chno") != desired:
+                info = set_attr(info, "tvg-chno", desired)
+                changed += 1
+        else:
+            # Remove only the previously identified anomalous/import numbers;
+            # valid existing numbering remains untouched.
+            n = a.get("tvg-chno", "").strip()
+            if group not in NO_NUMBER and n.isdigit() and int(n) in ANOMALOUS_NUMBERS:
+                info = remove_attr(info, "tvg-chno")
+                changed += 1
 
         block[0] = info
 
@@ -140,31 +139,6 @@ def main():
             seen.add(url)
         kept.append(block)
     blocks = kept
-
-    # Assign only numbers removed above, using the lowest unused positive
-    # primary number. Existing valid numbers are never renumbered.
-    used = set()
-    for block in blocks:
-        a = attrs(block[0])
-        group = a.get("group-title", "").strip()
-        n = a.get("tvg-chno", "").strip()
-        if group not in NO_NUMBER and n.isdigit() and int(n) > 0:
-            used.add(int(n))
-
-    next_number = 1
-    for block in blocks:
-        info = block[0]
-        a = attrs(info)
-        group = a.get("group-title", "").strip()
-        n = a.get("tvg-chno", "").strip()
-        if group in NO_NUMBER or (n.isdigit() and int(n) > 0):
-            continue
-        while next_number in used:
-            next_number += 1
-        block[0] = set_attr(info, "tvg-chno", str(next_number))
-        used.add(next_number)
-        next_number += 1
-        changed += 1
 
     output = [line for line in pre if line.strip()]
     for block in blocks:
