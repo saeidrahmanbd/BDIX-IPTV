@@ -7,6 +7,8 @@ on:
       - IPTV-Playlist.m3u
       - scripts/final_iptv_playlist_fixes.py
       - scripts/audit_playlist.py
+      - scripts/epg_coverage.py
+      - scripts/enhance_bd_epg.py
       - .github/workflows/final-iptv-fix.yml
   workflow_dispatch:
 
@@ -66,13 +68,18 @@ jobs:
           fi
           python scripts/build_identity_index.py
           python scripts/epg_coverage.py
-          python scripts/pre_publish_gate.py
+
+      - name: Enhance Bangladesh EPG
+        run: python scripts/enhance_bd_epg.py
+
+      - name: Run final publication gate
+        run: python scripts/pre_publish_gate.py
 
       - name: Commit fixes
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add IPTV-Playlist.m3u reports/ assets/dashboard.svg
+          git add IPTV-Playlist.m3u reports/ assets/dashboard.svg epg/epg.xml
           if git diff --cached --quiet; then
             echo 'No additional playlist changes required.'
             exit 0
