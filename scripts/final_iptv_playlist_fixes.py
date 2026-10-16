@@ -6,7 +6,6 @@ P = Path("IPTV-Playlist.m3u")
 NO_NUMBER = {"Backup", "New Backup", "Not Playing"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 ANOMALOUS_NUMBERS = {1001, 1115, 1116, 1120}
-EXPLICIT_NUMBER_FIXES = {"btv national": 39, "channel 16": 40}
 
 def attrs(s): return dict(ATTR_RE.findall(s))
 def set_attr(s, key, value):
@@ -50,10 +49,10 @@ def main():
             if a.get("channel-id") != "BTVNational.bd": info = set_attr(info, "channel-id", "BTVNational.bd"); changed += 1
         if group in NO_NUMBER and a.get("tvg-chno"):
             info = remove_attr(info, "tvg-chno"); changed += 1
-        if group not in NO_NUMBER and key in EXPLICIT_NUMBER_FIXES:
-            desired = str(EXPLICIT_NUMBER_FIXES[key])
-            if a.get("tvg-chno") != desired: info = set_attr(info, "tvg-chno", desired); changed += 1
         elif group not in NO_NUMBER and a.get("tvg-chno", "").isdigit() and int(a["tvg-chno"]) in ANOMALOUS_NUMBERS:
+            # Clear known legacy/out-of-range values. The allocation pass below
+            # assigns the lowest genuinely unused primary number, so we never
+            # force a number that is already occupied by another channel.
             info = remove_attr(info, "tvg-chno"); changed += 1
         block[0] = info
     seen = set(); kept = []
