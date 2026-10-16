@@ -1,6 +1,6 @@
 # Three-Playlist Logo Repair Results
 
-Run time: **2026-10-16 16:11 UTC**  
+Run time: **2026-10-16 16:15 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -10,26 +10,31 @@ Historical mapping index: loaded 336 historical name mappings
 | Playlist | Entries | References changed | Generated fallbacks | Missing after | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|
 | BDIX-Playlist.m3u | 139 | 0 | 0 | 0 | 0 | 0 |
-| IPTV-Playlist.m3u | 1020 | 14 | 0 | 0 | 0 | 0 |
+| IPTV-Playlist.m3u | 1020 | 19 | 0 | 0 | 0 | 0 |
 
 ## Repair log
 
 | Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
 |---|---:|---|---|---|---|---|---|
-| IPTV-Playlist.m3u | 34 | BTV News | btv-news.png | nvisionbd-verified-btv-news-33c61f1708.jpg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 81 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 712 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1197 | Tom and Jerry | tom-and-jerry.png | nvisionbd-verified-tom-and-jerry-927bd66719.jpg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| IPTV-Playlist.m3u | 1440 | BTV News | btv-news.png | nvisionbd-verified-btv-news-33c61f1708.jpg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1678 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1680 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1682 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 1684 | Green TV | green-tv.png | nvisionbd-verified-green-tv-fa848f9d71.jpg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 2046 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 2048 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 2050 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 2052 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
-| IPTV-Playlist.m3u | 2054 | Zee TV | zee-tv.png | nvisionbd-verified-zee-tv-2fb6673cf7.svg | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 16 | ATN News | atn-news.png | nvisionbd-verified-atn-news-e0442addb4.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 20 | Bangla TV | bangla-tv.png | nvisionbd-verified-bangla-tv-9e5f3366c8.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 65 | Duronto TV | duronto-tv.png | nvisionbd-verified-duronto-tv-2b3c7dd202.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 71 | Ekushey TV | ekushey-tv.png | nvisionbd-verified-ekushey-tv-d9479035b4.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 1365 | ATN News | atn-news.png | nvisionbd-verified-atn-news-e0442addb4.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1367 | ATN News | atn-news.png | nvisionbd-verified-atn-news-e0442addb4.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1369 | ATN News | atn-news.png | nvisionbd-verified-atn-news-e0442addb4.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1371 | ATN News | atn-news.png | nvisionbd-verified-atn-news-e0442addb4.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1395 | Bangla TV | bangla-tv.png | nvisionbd-verified-bangla-tv-9e5f3366c8.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1397 | Bangla TV | bangla-tv.png | nvisionbd-verified-bangla-tv-9e5f3366c8.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1399 | Bangla TV | bangla-tv.png | nvisionbd-verified-bangla-tv-9e5f3366c8.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1572 | Duronto TV | duronto-tv.png | nvisionbd-verified-duronto-tv-2b3c7dd202.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1574 | Duronto TV | duronto-tv.png | nvisionbd-verified-duronto-tv-2b3c7dd202.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1588 | Ekushey TV | ekushey-tv.png | nvisionbd-verified-ekushey-tv-d9479035b4.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1590 | Ekushey TV | ekushey-tv.png | nvisionbd-verified-ekushey-tv-d9479035b4.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1592 | Ekushey TV | ekushey-tv.png | nvisionbd-verified-ekushey-tv-d9479035b4.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1594 | Ekushey TV | ekushey-tv.png | nvisionbd-verified-ekushey-tv-d9479035b4.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1596 | Ekushey TV | ekushey-tv.png | nvisionbd-verified-ekushey-tv-d9479035b4.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 1598 | Ekushey TV | ekushey-tv.png | nvisionbd-verified-ekushey-tv-d9479035b4.png | Reused repaired exact-name logo |  | replaced |
 
 ## Quality rule
 

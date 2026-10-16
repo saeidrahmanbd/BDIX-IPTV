@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-15T11:44:44+00:00",
+  "generated": "2026-10-16T16:15:34+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -815,6 +815,20 @@
       "primary": 1,
       "backup": 2
     },
+    "btvnational": {
+      "names": [
+        "BTV National"
+      ],
+      "ids": [
+        "btvnational.bd"
+      ],
+      "groups": [
+        "Bangladesh"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "cartoonnetwork": {
       "names": [
         "Cartoon Network"
@@ -1482,20 +1496,6 @@
       ],
       "groups": [
         "Documentary & Wildlife"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "custom.btv.national": {
-      "names": [
-        "BTV National"
-      ],
-      "ids": [
-        "custom.btv.national"
-      ],
-      "groups": [
-        "Bangladesh"
       ],
       "streams": 1,
       "primary": 1,
