@@ -198,5 +198,20 @@
     "status": "third_party_verified",
     "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/willow-us.png",
     "notes": "Local self-contained SVG wrapper around the identified logo asset from the public TV Logos catalogue; no remote asset fetch occurs when the playlist player loads the local repository file."
+  },
+  "IPTV-Playlist.m3u|custom.picture.hd|& Picture|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-picture-hd.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/india/and-pictures-hd-in.png",
+    "notes": "Local self-contained SVG wrapper around the identified logo asset from the public TV Logos catalogue; no remote asset fetch occurs when the playlist player loads the local repository file."
+  },
+  "IPTV-Playlist.m3u|custom.euro.sports.hd|Euro Sports|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-euro-sports-hd.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+  },
+  "IPTV-Playlist.m3u|custom.willow.hd|Willow|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-willow.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/willow-us.png",
+    "notes": "Local self-contained SVG wrapper around the identified logo asset from the public TV Logos catalogue; no remote asset fetch occurs when the playlist player loads the local repository file."
   }
 }
