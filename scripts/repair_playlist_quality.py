@@ -9,7 +9,7 @@ import unicodedata
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
-PRIMARY_EXCLUDED = {"Backup", "New Backup", "Not Playing"}
+PRIMARY_EXCLUDED = {"Backup", "Not Playing"}
 
 COLLISION_IDS = {
     "action hollywood movies": "plex.tv.action.hollywood.movies.plex",

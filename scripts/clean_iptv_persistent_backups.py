@@ -1,13 +1,8 @@
 #!/usr/bin/env python3
-"""Remove only persistently failed, redundant Backup streams from IPTV-Playlist.
+"""Report persistently failed redundant Backup streams without deleting URLs.
 
-Safety rules:
-- IPTV-Playlist.m3u only.
-- Never remove a primary stream.
-- Only consider Backup entries with >=3 consecutive failures in the health history.
-- Keep the failed backup when it is the only stream for its identity.
-- Keep at least one non-persistently-failed stream for the same identity/name.
-- Never modify BDIX-Playlist.m3u.
+The playlist owner reviews stream status manually. This script only reports
+candidates; it never edits IPTV-Playlist.m3u or BDIX-Playlist.m3u.
 """
 from pathlib import Path
 import json,re
@@ -63,15 +58,9 @@ def main():
   if alternatives:
    remove_urls.add(u)
 
- if not remove_urls:
-  print('Persistent backup cleanup: 0 removals')
-  return
- out=[]
- for b,a,u in rows:
-  if u in remove_urls:
-   continue
-  out.append(b)
- PLAYLIST.write_text('\n'.join(pre+[x for b in out for x in b]).rstrip()+'\n',encoding='utf-8')
- print(f'Persistent backup cleanup: removed={len(remove_urls)} remaining={len(out)}')
+ if remove_urls:
+  print(f'Persistent backup review: {len(remove_urls)} redundant/failed Backup candidate(s); no stream URLs removed.')
+ else:
+  print('Persistent backup review: no candidates; no stream URLs removed.')
 
 if __name__=='__main__': main()

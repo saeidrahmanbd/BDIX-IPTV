@@ -13,7 +13,7 @@ P = Path("IPTV-Playlist.m3u")
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 RAW_LOGO = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 BACKUP = "Backup"
-NO_NUMBER = {"Backup", "New Backup", "Not Playing"}
+NO_NUMBER = {"Backup", "Not Playing"}
 
 
 def attrs(s):
