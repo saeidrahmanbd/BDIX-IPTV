@@ -7,52 +7,50 @@ Generated from the current playlist and latest available stream-health report. T
 - /streamtest/ endpoints: **11**
 - Signed/token-query endpoints: **11**
 - Xtream-style credential paths (credentials redacted): **0**
-- Proxy/worker-host routes: **38** (2 primary, 36 Backup)
+- Proxy/worker-host routes: **41** (2 primary, 39 Backup)
 - /api/play/ relay routes: **15**
 
 ## Latest Stream-Health Snapshot
 
 | Metric | Count |
 |---|---:|
-| Streams tested | 1060 |
-| Reachable | 1029 |
-| Failed this check | 31 |
-| Persistent failures (3+ consecutive) | 28 |
-| HTTP 401/403 (auth) | 10 |
-| HTTP 404 (not found) | 18 |
-| HTTP 5xx (server) | 2 |
-| Timeout | 1 |
+| Streams tested | 1094 |
+| Reachable | 1033 |
+| Failed this check | 61 |
+| Persistent failures (3+ consecutive) | 26 |
+| HTTP 401/403 (auth) | 12 |
+| HTTP 404 (not found) | 20 |
+| HTTP 5xx (server) | 3 |
+| Timeout | 26 |
 
 ### Persistent failures
 
-- **7X Punjabi** — Backup — consecutive failures: **8** — HTTP 404
-- **CBN TV USA** — Backup — consecutive failures: **8** — HTTP 404
-- **Channel 52** — Backup — consecutive failures: **15** — HTTP 404
-- **Channel S** — Backup — consecutive failures: **16** — HTTP 404
-- **Channel S** — Backup — consecutive failures: **15** — HTTP 404
-- **Channel S** — Backup — consecutive failures: **15** — HTTP 404
-- **Channel S** — Backup — consecutive failures: **16** — HTTP 404
-- **Dangal 2** — Backup — consecutive failures: **4** — HTTP 404
-- **Dangal 2** — Backup — consecutive failures: **4** — HTTP 404
-- **Desh TV** — Backup — consecutive failures: **3** — HTTP 404
-- **Green TV** — Backup — consecutive failures: **16** — HTTP 404
-- **Green TV** — Backup — consecutive failures: **15** — HTTP 404
-- **Green TV** — Backup — consecutive failures: **15** — HTTP 404
-- **Green TV** — Backup — consecutive failures: **15** — HTTP 404
-- **Green TV** — Backup — consecutive failures: **15** — HTTP 404
-- **Assam Talks** — Indian Entertainment — consecutive failures: **226** — HTTP 403
-- **Star Gold** — Indian Movies — consecutive failures: **4** — HTTP 404
-- **CMAC TV** — International — consecutive failures: **8** — HTTP 403
-- **Cook & Bake** — International — consecutive failures: **32** — HTTP 504
-- **HBO** — International — consecutive failures: **214** — HTTP 403
-- **Lifetime** — International — consecutive failures: **8** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **32** — HTTP 403
-- **Nick** — Kids — consecutive failures: **4** — Timeout
-- **Teen Nick** — Kids — consecutive failures: **92** — HTTP 403
-- **Jalwa TV** — Pakistani — consecutive failures: **3** — HTTP 404
-- **Star Sports 2** — Sports — consecutive failures: **8** — HTTP 403
-- **T Sports** — Sports — consecutive failures: **8** — HTTP 403
-- **Willow TV** — Sports — consecutive failures: **8** — HTTP 403
+- **7X Punjabi** — Backup — consecutive failures: **10** — HTTP 404
+- **CBN TV USA** — Backup — consecutive failures: **10** — HTTP 404
+- **Channel 52** — Backup — consecutive failures: **17** — HTTP 404
+- **Channel S** — Backup — consecutive failures: **18** — Timeout
+- **Channel S** — Backup — consecutive failures: **17** — HTTP 404
+- **Channel S** — Backup — consecutive failures: **17** — HTTP 404
+- **Channel S** — Backup — consecutive failures: **18** — Timeout
+- **Desh TV** — Backup — consecutive failures: **5** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **18** — Timeout
+- **Green TV** — Backup — consecutive failures: **17** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **17** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **17** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **17** — HTTP 404
+- **Assam Talks** — Indian Entertainment — consecutive failures: **228** — HTTP 403
+- **Star Gold** — Indian Movies — consecutive failures: **6** — HTTP 404
+- **CMAC TV** — International — consecutive failures: **10** — HTTP 403
+- **Cook & Bake** — International — consecutive failures: **34** — HTTP 504
+- **HBO** — International — consecutive failures: **216** — HTTP 403
+- **Lifetime** — International — consecutive failures: **10** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **34** — HTTP 403
+- **Nick** — Kids — consecutive failures: **6** — Timeout
+- **Teen Nick** — Kids — consecutive failures: **94** — HTTP 403
+- **Jalwa TV** — Pakistani — consecutive failures: **5** — HTTP 404
+- **Star Sports 2** — Sports — consecutive failures: **10** — HTTP 403
+- **T Sports** — Sports — consecutive failures: **10** — HTTP 403
+- **Willow TV** — Sports — consecutive failures: **10** — HTTP 403
 
 ## /streamtest/ Endpoints
 
@@ -125,18 +123,21 @@ Worker routes are relayed endpoints, not direct broadcaster sources. The Sananda
 | Enter10 Bangla | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Enter TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Epic Music | Backup | iptvlive.ahmed-bd-org.workers.dev |
+| G TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Jago News 24 | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Jamuna TV | Backup | iptv-proxy.ahmed-bd-org.workers.dev |
 | Jamuna TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | ME TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | ME TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | ME TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
+| Movie Bangla | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | News 24 | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | News 24 | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | NTV | Backup | iptv-proxy.ahmed-bd-org.workers.dev |
 | NTV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | PTC Music | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Rongeen TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
+| SA TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | SA TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Somoy TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Zee Bangla | Backup | iptvlive.ahmed-bd-org.workers.dev |

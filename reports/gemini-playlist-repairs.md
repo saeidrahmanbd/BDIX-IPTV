@@ -1,8 +1,8 @@
 # Final IPTV Playlist Repair
 
-- Entries retained: **1060**
+- Entries retained: **1094**
 - Clearly malformed/blocked entries removed: **0**
-- Backup metadata records canonicalized: **378**
+- Backup metadata records canonicalized: **412**
 - Duplicate backup URLs removed: **0**
 - Safe HTTP→HTTPS upgrades: **0**
 - Primary channel numbers repaired: **0**
