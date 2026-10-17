@@ -130,7 +130,7 @@ def repair():
         line = set_attr(line, "tvg-language", "ben")
         line = set_attr(line, "tvg-country", "GB")
         if group in PRIMARY_EXCLUDED:
-            line = re.sub(r'\\s+tvg-chno="[^"]*"', "", line, count=1)
+            line = re.sub(r'\s+tvg-chno="[^"]*"', "", line, count=1)
         else:
             line = set_attr(line, "group-title", "Bangladesh")
         lines[idx] = line
