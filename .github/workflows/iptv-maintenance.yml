@@ -80,7 +80,7 @@ jobs:
             python scripts/sort_playlists.py IPTV-Playlist.m3u
             python scripts/apply_gemini_playlist_repairs.py
             python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
-            if grep -Eiq 'group-title="(New Channels|New Backup|New|Not Playing)"' IPTV-Playlist.m3u; then echo '::error::Legacy playlist category detected after normalization.'; exit 1; fi
+            if grep -Eiq 'group-title="(New Channels|New Backup|New)"' IPTV-Playlist.m3u; then echo '::error::Forbidden staging playlist category detected after normalization.'; exit 1; fi
             python scripts/migrate_external_logos_fixed.py
             python scripts/generate_logo_authenticity_manifest.py
 
