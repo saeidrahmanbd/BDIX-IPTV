@@ -7,7 +7,6 @@ and is consumed by generate_epg.py; it is not committed as a second public EPG.
 from pathlib import Path
 import shutil
 import subprocess
-import sys
 
 REPO = "https://github.com/iptv-org/epg.git"
 WORK = Path("/tmp/iptv-org-epg")
@@ -33,7 +32,8 @@ def main():
         f"--sites={','.join(SITES)}",
         f"--output={OUTPUT}",
         "--lang=en",
-    , cwd=WORK)
+        cwd=WORK,
+    )
 
     if not OUTPUT.is_file() or OUTPUT.stat().st_size == 0:
         raise SystemExit("iptv-org EPG generation produced no guide")
@@ -41,7 +41,4 @@ def main():
 
 
 if __name__ == "__main__":
-    try:
-        main()
-    except subprocess.CalledProcessError as exc:
-        raise SystemExit(exc.returncode or 1)
+    main()
