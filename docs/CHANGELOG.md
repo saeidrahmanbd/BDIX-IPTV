@@ -65,23 +65,5 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 
 ## 2026-10-17
 
-- 🗑️ **14 channel(s) removed**
-- 🔄 **3 backup stream(s) updated**
-- 📡 **4 stream(s) replaced**
-
-### Removed channels
-- Friends TV
-- Hindi Movies
-- Zoom Music
-- American Horrors
-- Blues TV
-- Classic Movies
-- Metro TV (Honduras)
-- Stingray Remember the 80s
-- Totalmusic 80s
-- Vevo '70s & '80s
-- Motu Patlu
-- Super Hungama
-- Islamic TV
-- Wipeout Xtra
+- 🖼️ **18 logo reference(s) corrected**
 
