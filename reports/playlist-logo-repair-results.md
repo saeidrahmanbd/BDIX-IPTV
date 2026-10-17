@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-10-17 08:02 UTC**  
+Run time: **2026-10-17 09:25 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -43,7 +43,7 @@ Historical mapping index: loaded 336 historical name mappings
 | IPTV-Playlist.m3u | 1037 | Deadly Women | deadly-women.png | generated-fallback-deadly-women.svg | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 | IPTV-Playlist.m3u | 1063 | Highway Thru Hell | highway-thru-hell.png | generated-fallback-highway-thru-hell.svg | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 | IPTV-Playlist.m3u | 1141 | Wild Planet | wild-planet.png | generated-fallback-wild-planet-143e841a.svg | Generated channel-specific fallback | Original generated artwork; not an official broadcaster logo | fallback installed; exact clean original not found |
-| IPTV-Playlist.m3u | 1161 | Cartoon Network UK | cartoon-network-uk.png | nvisionbd-verified-cartoon-network-uk-dea066a08f.png | [IPTV-org exact ID: CartoonNetwork.uk](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 1161 | Cartoon Network UK | cartoon-network-uk.png | nvisionbd-verified-cartoon-network-uk-fa14df2c6d.png | [IPTV-org exact ID: CartoonNetwork.uk](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
 | IPTV-Playlist.m3u | 1183 | KidDo MATIX | kiddo-matix.png | generated-fallback-kiddo-matix-220c5dd6.svg | Generated channel-specific fallback | Original generated artwork; not an official broadcaster logo | fallback installed; exact clean original not found |
 | IPTV-Playlist.m3u | 1187 | MINI | mini.png | generated-fallback-mini.svg | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 | IPTV-Playlist.m3u | 1203 | Powerkids Kartoon Channel | powerkids-kartoon-channel.png | generated-fallback-powerkids-kartoon-channel-e5e4fe98.svg | Generated channel-specific fallback | Original generated artwork; not an official broadcaster logo | fallback installed; exact clean original not found |
