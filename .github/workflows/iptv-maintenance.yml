@@ -146,7 +146,7 @@ jobs:
             git cat-file blob :epg/epg.xml > /tmp/bdix-epg-staged.xml
             grep -q '<programme ' /tmp/bdix-epg-staged.xml
             echo "Staged EPG sha256: $(sha256sum /tmp/bdix-epg-staged.xml | awk '{print $1}')"
-            python -c 'from pathlib import Path; from collections import Counter; p=Path("IPTV-Playlist.m3u"); urls=[s.casefold() for s in (x.strip() for x in p.read_text(encoding="utf-8",errors="replace").splitlines()) if s.startswith(("http://","https://"))]; d=[u for u,n in Counter(urls).items() if n>1]; print(f"::error::Duplicate stream URLs remain: {len(d)} unique URLs are repeated.") if d else print(f"URL uniqueness check passed: {len(urls)} stream URLs, 0 duplicates."); raise SystemExit(1) if d else None'
+            python -c 'from pathlib import Path; from collections import Counter; p=Path("IPTV-Playlist.m3u"); urls=[s.casefold() for s in (x.strip() for x in p.read_text(encoding="utf-8",errors="replace").splitlines()) if s.startswith(("http://","https://"))]; d=[u for u,n in Counter(urls).items() if n>1]; print(f"::error::Duplicate stream URLs remain: {len(d)} unique URLs are repeated.") if d else print(f"URL uniqueness check passed: {len(urls)} stream URLs, 0 duplicates."); raise SystemExit(1 if d else 0)'
             if git diff --cached --quiet; then echo 'No maintenance changes to publish.'; exit 0; fi
             git commit -m 'Run IPTV playlist maintenance'
             if git push origin HEAD:main; then exit 0; fi
