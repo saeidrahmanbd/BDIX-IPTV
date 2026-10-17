@@ -2,9 +2,9 @@
 """Final policy/structure repair for IPTV-Playlist.m3u only.
 
 This pass is deliberately conservative: it changes metadata/group structure,
-removes exact duplicate URLs and orphan Backup records, and preserves the
-known required movie/drama records. It never changes a stream URL merely
-because a live probe fails.
+removes exact duplicate URLs, and preserves orphan Backup records for manual
+review instead of deleting them. It preserves known required movie/drama records
+and never changes a stream URL merely because a live probe fails.
 """
 from pathlib import Path
 import re
