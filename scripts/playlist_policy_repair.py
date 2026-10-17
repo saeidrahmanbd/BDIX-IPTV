@@ -114,7 +114,7 @@ def main():
     pre, blocks = parse(P.read_text(encoding="utf-8-sig"))
     changed = 0
     removed_duplicate = 0
-    removed_orphan = 0
+    orphan_backups_preserved = 0
     removed_malformed = 0
 
     seen_urls = set()
@@ -168,8 +168,9 @@ def main():
             ids = {x.strip().casefold() for x in (a.get("tvg-id", ""), a.get("channel-id", "")) if x.strip()}
             name_key = norm_name(display_name(info))
             if not (ids & primary_ids) and name_key not in primary_names:
-                removed_orphan += 1
-                continue
+                # Orphan detection is advisory only: a backup-only stream may be
+                # a future candidate. Preserve its record and URL for manual review.
+                orphan_backups_preserved += 1
         out.append(block)
     blocks = out
 
@@ -198,7 +199,7 @@ def main():
     P.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
     print(
         f"Playlist policy repair: changed={changed}, duplicate_urls_removed={removed_duplicate}, "
-        f"orphan_backups_removed={removed_orphan}, malformed_records_removed={removed_malformed}, "
+        f"orphan_backups_preserved={orphan_backups_preserved}, malformed_records_removed={removed_malformed}, "
         f"required_records_restored={added_required}, entries={len(blocks)}"
     )
 
