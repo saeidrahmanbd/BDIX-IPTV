@@ -761,25 +761,11 @@ def main():
                 changed += 1
                 report_rows.append((playlist, line_number, channel, basename, new_file, source_name, source_page, license_name + ((" — " + license_url) if license_url else ""), "replaced"))
             else:
-                # Never substitute an unrelated broadcaster asset. If exact source
-                # lookups fail, add unique channel-labelled artwork as an explicitly
-                # unofficial fallback and mark it in the provenance manifest.
-                fallback_file = make_generated_fallback(channel, attrs.get("group-title", ""))
-                if fallback_file:
-                    fixes_cache[key] = fallback_file
-                    line = set_logo(line, raw_url(fallback_file))
-                    changed += 1
-                    fallback_count += 1
-                    report_rows.append((playlist, line_number, channel, basename, fallback_file,
-                                        "Generated channel-specific fallback", "",
-                                        "Original generated artwork; not an official broadcaster logo",
-                                        "fallback installed; exact clean original not found"))
-                else:
-                    unresolved += 1
-                    if flagged:
-                        line = set_logo(line, "")
-                    report_rows.append((playlist, line_number, channel, basename, "", "none", "", "",
-                                        "No exact clean logo or fallback could be produced; left blank"))
+                # Do not invent substitute artwork. Preserve the current entry for
+                # review and mark it unresolved until a verified channel logo is found.
+                unresolved += 1
+                report_rows.append((playlist, line_number, channel, basename, "", "none", "", "",
+                                    "No exact clean original found; no fallback generated"))
             output.append(line)
 
         new_text = "\n".join(output).rstrip() + "\n"
@@ -828,8 +814,8 @@ def main():
         )
     report += ["", "## Quality rule", "",
                "- Exact, clean local assets are searched first; then curated, source-attributed external logo URLs are downloaded and validated.",
-               "- When no exact clean original is found, a distinct channel-labelled fallback is installed; generated fallbacks are explicitly marked as unofficial in the authenticity manifest.",
-               "- Contaminated or mismatched source files are never reused as fallbacks; the generated art does not imitate a broadcaster's official mark.",
+               "- When no exact clean original is found, no substitute artwork is generated; the entry is flagged unresolved for verified/manual correction.",
+               "- Contaminated, mismatched, placeholder, generic, and generated-fallback assets are never assigned to tvg-logo.",
                "- Original playlist entries, channel metadata, categories, and stream URLs are preserved.", ""]
     REPORT.write_text("\n".join(report), encoding="utf-8")
     print(json.dumps({"summary": summary, "iptv_org": iptv_status, "history": history_status}, ensure_ascii=False))
