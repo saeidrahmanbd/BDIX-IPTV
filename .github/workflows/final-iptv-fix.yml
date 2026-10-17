@@ -24,7 +24,7 @@ jobs:
   fix:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    if: ${{ !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Final IPTV playlist fix')) }}
+    if: ${{ !startsWith(github.event.head_commit.message, 'Repair IPTV metadata and local logos only; leave stream URLs unchanged') && !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Final IPTV playlist fix')) }}
     steps:
       - uses: actions/checkout@v7
         with:

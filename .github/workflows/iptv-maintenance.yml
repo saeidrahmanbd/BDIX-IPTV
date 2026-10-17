@@ -43,7 +43,7 @@ concurrency:
   queue: max
 jobs:
   maintain:
-    if: ${{ !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance')) }}
+    if: ${{ !startsWith(github.event.head_commit.message, 'Repair IPTV metadata and local logos only; leave stream URLs unchanged') && !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance')) }}
     runs-on: ubuntu-latest
     timeout-minutes: 35
     env:
