@@ -3,7 +3,7 @@
 from pathlib import Path
 import re, sys, unicodedata
 
-CATEGORY_ORDER=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","New Channels","New Backup","Not Playing"]
+CATEGORY_ORDER=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","Not Playing"]
 RANK={name:i for i,name in enumerate(CATEGORY_ORDER)}
 ATTR=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
