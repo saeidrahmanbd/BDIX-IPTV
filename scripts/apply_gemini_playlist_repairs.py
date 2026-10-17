@@ -13,7 +13,7 @@ from collections import defaultdict
 P = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/gemini-playlist-repairs.md")
 RAW = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
-CATEGORIES = ["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup"]
+CATEGORIES = ["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","Not Playing"]
 
 ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 

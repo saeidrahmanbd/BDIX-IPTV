@@ -117,15 +117,23 @@ def repair():
             lines[idx] = line
             changes += 1
 
-    # Explicitly preserve Channel S and Channel S UK as different identities.
+    # Keep Channel S and Channel S UK as different identities.
+    # Only primary Channel S UK records belong in Bangladesh. Alternate
+    # streams already in Backup/Not Playing stay there and never receive a
+    # primary channel number simply because their display name matches.
     for idx, line in entries(lines):
-        if canonical_name(display_name(line)) == "channel s uk":
+        if canonical_name(display_name(line)) != "channel s uk":
+            continue
+        group = attrs(line).get("group-title", "").strip()
+        line = set_attr(line, "tvg-id", "custom.channel.s.uk")
+        line = set_attr(line, "channel-id", "custom.channel.s.uk")
+        line = set_attr(line, "tvg-language", "ben")
+        line = set_attr(line, "tvg-country", "GB")
+        if group in PRIMARY_EXCLUDED:
+            line = re.sub(r'\\s+tvg-chno="[^"]*"', "", line, count=1)
+        else:
             line = set_attr(line, "group-title", "Bangladesh")
-            line = set_attr(line, "tvg-id", "custom.channel.s.uk")
-            line = set_attr(line, "channel-id", "custom.channel.s.uk")
-            if not attrs(line).get("tvg-chno", "").strip():
-                line = set_attr(line, "tvg-chno", "1001")
-            lines[idx] = line
+        lines[idx] = line
 
     # Keep Ultimate TV consistently in Indian Music.
     for idx, line in entries(lines):

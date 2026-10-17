@@ -70,7 +70,7 @@ def process(path):
   if g in NON_NUMBERED and a.get('tvg-chno','').strip(): errors.append(f'numbered {g}: {a.get("tvg-name","")}')
   cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold()
   name=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip().casefold()
-  if name=='channel s uk' and (g!='Bangladesh' or cid!='custom.channel.s.uk'): errors.append('Channel S UK must have a distinct primary identity in Bangladesh')
+  if name=='channel s uk' and (g not in {'Bangladesh','Backup'} or cid!='custom.channel.s.uk'): errors.append('Channel S UK must retain its distinct identity in Bangladesh/Backup')
   if cid=='ultimatetv.in@sd' and g not in {'Indian Music','Backup'}: errors.append('Ultimate TV must be Indian Music primary or Backup alternate')
  if errors:
   raise SystemExit(f'{path}: '+ '; '.join(errors))
