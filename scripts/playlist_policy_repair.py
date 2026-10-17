@@ -1,0 +1,188 @@
+#!/usr/bin/env python3
+"""Final policy/structure repair for IPTV-Playlist.m3u only.
+
+This pass is deliberately conservative: it changes metadata/group structure,
+removes exact duplicate URLs and orphan Backup records, but never changes a
+stream URL merely because a live probe fails.
+"""
+from pathlib import Path
+import re
+import unicodedata
+
+P = Path("IPTV-Playlist.m3u")
+ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
+ORDER = [
+    "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
+    "Indian Entertainment", "Pakistani", "International",
+    "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup",
+    "New Channels", "New Backup", "Not Playing",
+]
+NO_NUMBER = {"Backup", "New Backup", "Not Playing"}
+BACKUP = "Backup"
+
+
+def attrs(s):
+    return dict(ATTR_RE.findall(s))
+
+
+def set_attr(s, key, value):
+    p = re.compile(rf'{re.escape(key)}="[^"]*"')
+    if p.search(s):
+        return p.sub(f'{key}="{value}"', s, count=1)
+    return s.replace("#EXTINF:-1 ", f'#EXTINF:-1 {key}="{value}" ', 1)
+
+
+def remove_attr(s, key):
+    return re.sub(rf'\s+{re.escape(key)}="[^"]*"', "", s, count=1)
+
+
+def display_name(info):
+    a = attrs(info)
+    return (a.get("tvg-name") or info.rsplit(",", 1)[-1]).strip()
+
+
+def norm_name(value):
+    s = unicodedata.normalize("NFKD", str(value or "")).casefold()
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    s = re.sub(r"\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|360p)\b", " ", s)
+    return re.sub(r"[^a-z0-9]+", "", s)
+
+
+def url_of(block):
+    for line in block[1:]:
+        u = line.strip()
+        if u.startswith(("http://", "https://")):
+            return u
+    return ""
+
+
+def parse(text):
+    pre, blocks, cur = [], [], None
+    for line in text.replace("\r", "").splitlines():
+        if line.startswith("#EXTINF:"):
+            if cur is not None:
+                blocks.append(cur)
+            cur = [line]
+        elif cur is None:
+            pre.append(line)
+        else:
+            cur.append(line)
+    if cur is not None:
+        blocks.append(cur)
+    return pre, blocks
+
+
+def repair_category_registry(pre):
+    canonical = '#PLAYLIST-STUDIO-CATEGORIES:["' + '", "'.join(ORDER) + '"]'
+    out = [x for x in pre if not x.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
+    insert_at = 0
+    for i, line in enumerate(out):
+        if line.startswith("#EXTM3U"):
+            insert_at = i + 1
+            break
+    out.insert(insert_at, canonical)
+    return out
+
+
+def main():
+    if not P.exists():
+        raise SystemExit("IPTV-Playlist.m3u not found")
+
+    pre, blocks = parse(P.read_text(encoding="utf-8-sig"))
+    changed = 0
+    removed_duplicate = 0
+    removed_orphan = 0
+    removed_malformed = 0
+
+    # First normalize group metadata and remove exact duplicate stream URLs.
+    seen_urls = set()
+    kept = []
+    for block in blocks:
+        info = block[0]
+        a = attrs(info)
+        group = a.get("group-title", "").strip()
+        url = url_of(block)
+
+        if not url:
+            removed_malformed += 1
+            continue
+
+        if group not in ORDER:
+            info = set_attr(info, "group-title", "Not Playing")
+            group = "Not Playing"
+            changed += 1
+
+        if group in NO_NUMBER and attrs(info).get("tvg-chno"):
+            info = remove_attr(info, "tvg-chno")
+            changed += 1
+
+        key = url.casefold()
+        if key in seen_urls:
+            removed_duplicate += 1
+            continue
+        seen_urls.add(key)
+
+        block[0] = info
+        kept.append(block)
+    blocks = kept
+
+    # A Backup entry is only valid when the same channel has a primary record.
+    # Match by identity first and normalized name second so alternate IDs are
+    # still accepted when the displayed channel is clearly the same.
+    primary_ids = set()
+    primary_names = set()
+    for block in blocks:
+        a = attrs(block[0])
+        if a.get("group-title", "").strip() in NO_NUMBER:
+            continue
+        for cid in (a.get("tvg-id", ""), a.get("channel-id", "")):
+            if cid.strip():
+                primary_ids.add(cid.strip().casefold())
+        primary_names.add(norm_name(display_name(block[0])))
+
+    out = []
+    for block in blocks:
+        info = block[0]
+        a = attrs(info)
+        group = a.get("group-title", "").strip()
+        if group == BACKUP:
+            ids = {x.strip().casefold() for x in (a.get("tvg-id", ""), a.get("channel-id", "")) if x.strip()}
+            name_key = norm_name(display_name(info))
+            if not (ids & primary_ids) and name_key not in primary_names:
+                removed_orphan += 1
+                continue
+        out.append(block)
+    blocks = out
+
+    # Ensure all non-numbered groups remain non-numbered, even if later
+    # normalization/sorting scripts add a channel number.
+    for block in blocks:
+        info = block[0]
+        if attrs(info).get("group-title", "").strip() in NO_NUMBER and attrs(info).get("tvg-chno"):
+            block[0] = remove_attr(info, "tvg-chno")
+            changed += 1
+
+    # Canonical group order + A-Z within each group.
+    rank = {name: i for i, name in enumerate(ORDER)}
+    def natural(value):
+        s = unicodedata.normalize("NFKD", str(value or "")).casefold().strip()
+        return tuple(int(x) if x.isdigit() else x for x in re.split(r"(\d+)", s))
+    blocks.sort(key=lambda b: (
+        rank.get(attrs(b[0]).get("group-title", "").strip(), len(rank)),
+        natural(display_name(b[0])),
+        url_of(b).casefold(),
+    ))
+
+    pre = repair_category_registry(pre)
+    lines = list(pre)
+    for block in blocks:
+        lines.extend(block)
+    P.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    print(
+        f"Playlist policy repair: changed={changed}, duplicate_urls_removed={removed_duplicate}, "
+        f"orphan_backups_removed={removed_orphan}, malformed_records_removed={removed_malformed}, entries={len(blocks)}"
+    )
+
+
+if __name__ == "__main__":
+    main()
