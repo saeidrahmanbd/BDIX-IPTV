@@ -1,66 +1,11 @@
 #!/usr/bin/env python3
-"""Report persistently failed redundant Backup streams without deleting URLs.
+"""Disabled legacy cleanup guard.
 
-The playlist owner reviews stream status manually. This script only reports
-candidates; it never edits IPTV-Playlist.m3u or BDIX-Playlist.m3u.
+Stream-health results are advisory only because the playlist owner tests channels
+manually. This script is intentionally non-destructive and never edits a playlist.
 """
-from pathlib import Path
-import json,re
-
-PLAYLIST=Path('IPTV-Playlist.m3u')
-HISTORY=Path('reports/stream-health-history.json')
-ATTR=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
-
-def attrs(s): return dict(ATTR.findall(s))
-def name(s):
- a=attrs(s); return (a.get('tvg-name') or s.rsplit(',',1)[-1]).strip().casefold()
-def url(block):
- for x in block[1:]:
-  x=x.strip()
-  if x.startswith(('http://','https://')): return x
- return ''
-def parse(text):
- pre=[]; blocks=[]; cur=None
- for line in text.replace('\r','').splitlines():
-  if line.startswith('#EXTINF:'):
-   if cur is not None: blocks.append(cur)
-   cur=[line]
-  elif cur is None: pre.append(line)
-  else: cur.append(line)
- if cur is not None: blocks.append(cur)
- return pre,blocks
-
 def main():
- if not PLAYLIST.exists() or not HISTORY.exists():
-  print('No IPTV playlist or health history; nothing removed.'); return
- try: history=json.loads(HISTORY.read_text(encoding='utf-8'))
- except Exception:
-  print('Invalid health history; nothing removed.'); return
- pre,blocks=parse(PLAYLIST.read_text(encoding='utf-8-sig'))
- rows=[]
- for b in blocks:
-  a=attrs(b[0]); rows.append((b,a,url(b)))
- persistent={u for u,h in history.items() if isinstance(h,dict) and int(h.get('consecutive_failures',0))>=3}
- # Determine usable alternatives by identity first, then by display name.
- groups={}
- for b,a,u in rows:
-  ident=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold()
-  key=('id',ident) if ident else ('name',name(b[0]))
-  groups.setdefault(key,[]).append((b,a,u))
- remove_urls=set()
- for b,a,u in rows:
-  if a.get('group-title','').strip()!='Backup' or not u or u not in persistent:
-   continue
-  ident=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold()
-  key=('id',ident) if ident else ('name',name(b[0]))
-  peers=groups.get(key,[])
-  alternatives=[x for x in peers if x[2] and x[2]!=u and x[2] not in persistent]
-  if alternatives:
-   remove_urls.add(u)
+    print("Automatic health-based deletion is disabled. No channels were removed or reclassified; review reports/stream-health.md manually.")
 
- if remove_urls:
-  print(f'Persistent backup review: {len(remove_urls)} redundant/failed Backup candidate(s); no stream URLs removed.')
- else:
-  print('Persistent backup review: no candidates; no stream URLs removed.')
-
-if __name__=='__main__': main()
+if __name__ == "__main__":
+    main()

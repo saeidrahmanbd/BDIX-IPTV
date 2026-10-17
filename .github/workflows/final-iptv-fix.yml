@@ -1,30 +1,20 @@
-name: Final IPTV Playlist Fix
+name: Manual IPTV Playlist Fix (Fallback)
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - IPTV-Playlist.m3u
-      - scripts/final_iptv_playlist_fixes.py
-      - scripts/playlist_policy_repair.py
-      - scripts/audit_playlist.py
-      - scripts/epg_coverage.py
-      - scripts/enhance_bd_epg.py
-      - .github/workflows/final-iptv-fix.yml
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: final-iptv-fix
+  group: bdix-iptv-main-writer
   cancel-in-progress: false
+  queue: max
 
 jobs:
   fix:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    if: ${{ !startsWith(github.event.head_commit.message, 'Repair IPTV metadata and local logos only; leave stream URLs unchanged') && !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Final IPTV playlist fix')) }}
     steps:
       - uses: actions/checkout@v7
         with:

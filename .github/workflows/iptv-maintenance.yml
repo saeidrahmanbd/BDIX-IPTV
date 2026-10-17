@@ -24,7 +24,6 @@ on:
       - scripts/build_identity_index.py
       - scripts/stream_health.py
       - scripts/stream_risk_review.py
-      - scripts/clean_iptv_persistent_backups.py
       - scripts/report_iptv_fragile_streams.py
       - scripts/pre_publish_gate.py
       - scripts/record_maintenance_history.py
@@ -84,11 +83,9 @@ jobs:
             python scripts/migrate_external_logos_fixed.py
             python scripts/generate_logo_authenticity_manifest.py
 
-            # First health pass supplies current failure state to the safe
-            # persistent-backup cleanup. Only redundant Backup streams are
-            # eligible; primary streams are never removed by this cleanup.
+            # Stream health is advisory only. The playlist owner reviews results
+            # manually; failures never trigger automatic channel deletion/reclassification.
             python scripts/stream_health.py
-            python scripts/clean_iptv_persistent_backups.py
             python scripts/report_iptv_fragile_streams.py
 
             # Rebuild EPG after backup/identity cleanup so coverage reflects the
