@@ -73,6 +73,12 @@ LOCAL_OVERRIDES = {
     "global tv": "unused/global-tv-1080p-5ffc043912.png",
     "channel 1": "channel-1.png",
     "classic movies": "unused/classic-movies-channel-1d5f82d98a.png",
+    "bollygold": "nh-bollygold-dbedeff9.png",
+    "manoranjan grand": "manoranjan-grand.png",
+    "btv news": "nvisionbd-verified-btv-news-33c61f1708.jpg",
+    "zee tv": "nvisionbd-verified-zee-tv-2fb6673cf7.svg",
+    "tom and jerry": "nvisionbd-verified-tom-and-jerry-927bd66719.jpg",
+    "green tv": "nvisionbd-verified-green-tv-fa848f9d71.jpg",
 }
 
 # Exact, source-attributed fallback URLs for unresolved channels. These are
