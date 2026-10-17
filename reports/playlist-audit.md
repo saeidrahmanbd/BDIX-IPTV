@@ -1,11 +1,11 @@
 # Playlist Audit
-Generated: **2026-10-17T06:18:34.206944+00:00**
+Generated: **2026-10-17T06:31:44.831842+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1061**
+- Playlist entries: **1060**
 - Unique channel IDs: **675**
 - IDs with multiple streams: **217**
 - Duplicate stream URLs: **0**
@@ -16,7 +16,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **0**
 - External logo references (review only): **0**
-- Logo references checked: **1061**
+- Logo references checked: **1060**
 - Duplicate primary identities: **1**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
@@ -729,9 +729,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - SA TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-2/index.m3u8
 - SA TV — Backup — https://j6nfugukcl.gpcdn.net/tile_5/master.m3u8
 - SA TV — Backup — https://tvsen6.aynaott.com/rELXiuUXqbgzPb06Npom/index.m3u8
-### shansontv.ru (3 streams)
+### shansontv.ru (2 streams)
 - Shanson TV — International — http://catchup.videoline.ru/shanson/index.m3u8
-- Shanson TV — Backup — http://hls-shansontv.cdnvideo.ru/shansontv/shansontv-sd.smil/playlist.m3u8
 - Shanson TV — Backup — https://streaming.thestream.cyou/live/7009.m3u8
 ### shemaroobollywood.us (2 streams)
 - Shemaroo Bollywood — Indian Movies — https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8
@@ -891,7 +890,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1061**
+- Healthy/local references: **1060**
 - External references (review only): **0**
 - missing: **0
 - broken-local: **0

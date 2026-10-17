@@ -14,44 +14,40 @@ Generated from the current playlist and latest available stream-health report. T
 
 | Metric | Count |
 |---|---:|
-| Streams tested | 1061 |
-| Reachable | 1032 |
-| Failed this check | 29 |
-| Persistent failures (3+ consecutive) | 27 |
-| HTTP 401/403 (auth) | 10 |
-| HTTP 404 (not found) | 11 |
+| Streams tested | 1060 |
+| Reachable | 1025 |
+| Failed this check | 35 |
+| Persistent failures (3+ consecutive) | 23 |
+| HTTP 401/403 (auth) | 11 |
+| HTTP 404 (not found) | 22 |
 | HTTP 5xx (server) | 1 |
-| Timeout | 7 |
+| Timeout | 1 |
 
 ### Persistent failures
 
-- **7X Punjabi** — Backup — consecutive failures: **4** — HTTP 404
-- **CBN TV USA** — Backup — consecutive failures: **4** — HTTP 404
-- **Channel 52** — Backup — consecutive failures: **11** — HTTP 404
-- **Channel S** — Backup — consecutive failures: **12** — Timeout
-- **Channel S** — Backup — consecutive failures: **11** — HTTP 404
-- **Channel S** — Backup — consecutive failures: **11** — HTTP 404
-- **Channel S** — Backup — consecutive failures: **12** — Timeout
-- **Green TV** — Backup — consecutive failures: **12** — Timeout
-- **Green TV** — Backup — consecutive failures: **11** — HTTP 404
-- **Green TV** — Backup — consecutive failures: **11** — HTTP 404
-- **Green TV** — Backup — consecutive failures: **11** — HTTP 404
-- **Green TV** — Backup — consecutive failures: **11** — HTTP 404
-- **Ananda TV** — Bangladesh — consecutive failures: **12** — Timeout
-- **Channel 16** — Bangladesh — consecutive failures: **24** — Timeout
-- **Assam Talks** — Indian Entertainment — consecutive failures: **222** — HTTP 403
-- **Oli TV** — Indian Entertainment — consecutive failures: **16** — HTTP 404
-- **CMAC TV** — International — consecutive failures: **4** — HTTP 403
-- **Cook & Bake** — International — consecutive failures: **28** — HTTP 504
-- **HBO** — International — consecutive failures: **210** — HTTP 403
-- **Lifetime** — International — consecutive failures: **4** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **28** — HTTP 403
-- **Teen Nick** — Kids — consecutive failures: **88** — HTTP 403
-- **Makkah Live** — Religious — consecutive failures: **12** — Timeout
-- **PTV** — Sports — consecutive failures: **4** — Timeout
-- **Star Sports 2** — Sports — consecutive failures: **4** — HTTP 403
-- **T Sports** — Sports — consecutive failures: **4** — HTTP 403
-- **Willow TV** — Sports — consecutive failures: **4** — HTTP 403
+- **7X Punjabi** — Backup — consecutive failures: **6** — HTTP 404
+- **CBN TV USA** — Backup — consecutive failures: **6** — HTTP 404
+- **Channel 52** — Backup — consecutive failures: **13** — HTTP 404
+- **Channel S** — Backup — consecutive failures: **14** — HTTP 404
+- **Channel S** — Backup — consecutive failures: **13** — HTTP 404
+- **Channel S** — Backup — consecutive failures: **13** — HTTP 404
+- **Channel S** — Backup — consecutive failures: **14** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **14** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **13** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **13** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **13** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **13** — HTTP 404
+- **Assam Talks** — Indian Entertainment — consecutive failures: **224** — HTTP 403
+- **Oli TV** — Indian Entertainment — consecutive failures: **18** — HTTP 404
+- **CMAC TV** — International — consecutive failures: **6** — HTTP 403
+- **Cook & Bake** — International — consecutive failures: **30** — HTTP 504
+- **HBO** — International — consecutive failures: **212** — HTTP 403
+- **Lifetime** — International — consecutive failures: **6** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **30** — HTTP 403
+- **Teen Nick** — Kids — consecutive failures: **90** — HTTP 403
+- **Star Sports 2** — Sports — consecutive failures: **6** — HTTP 403
+- **T Sports** — Sports — consecutive failures: **6** — HTTP 403
+- **Willow TV** — Sports — consecutive failures: **6** — HTTP 403
 
 ## /streamtest/ Endpoints
 

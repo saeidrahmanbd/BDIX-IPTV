@@ -1,10 +1,10 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-10-17T06:19:05+00:00**
+Generated: **2026-10-17T06:32:11+00:00**
 
 Status: **BLOCK**
 
-- Current entries: **1061**
+- Current entries: **1060**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -14,7 +14,7 @@ Status: **BLOCK**
 - Duplicate primary channel numbers: **0**
 - Primary entries missing tvg-chno: **0**
 - Entries added this run: **0**
-- Entries removed this run: **13**
+- Entries removed this run: **1**
 - Entries modified this run: **0
 
 ## Change Summary
@@ -24,7 +24,7 @@ Status: **BLOCK**
 4. Never silently delete protected Backup entries.
 5. Never publish duplicate or missing primary channel numbers.
 Added: none
-Removed: http://tvsen5.aynascope.net/wm9lv2rjzgt6/index.m3u8, http://tvsen5.aynascope.net/atnbangla/index.m3u8, https://tvsen6.aynaott.com/bahrainsports2/index.m3u8, https://tvsen7.aynaott.com/espn/index.m3u8, https://tvsen3.aynaott.com/5cgfpvgp/index.m3u8, https://tvsen6.aynaott.com/wef2vj67njeygdqqnfb9/index.m3u8, http://tvsen5.aynascope.net/maasrangatv/tracks-a1/mono.ts.m3u8, https://tvsen5.aynascope.net/maasrangatv/index.m3u8, https://stream.logichost.in/ntv/live/chunklist_w1420234415.m3u8, http://tvsen5.aynascope.net/rtvhd/index.m3u8, https://tvsen5.aynascope.net/somoytv/mono.m3u8, http://103.151.60.162:2122/play/a01q/index.m3u8, http://103.151.60.162:2122/play/a01u/index.m3u8
+Removed: http://hls-shansontv.cdnvideo.ru/shansontv/shansontv-sd.smil/playlist.m3u8
 Modified metadata entries: 0
 Quarantined primary streams: none
 Intentionally removed known-bad primary streams: none

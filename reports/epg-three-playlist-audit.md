@@ -1,12 +1,12 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-10-17T06:18:33+00:00**
+Generated: **2026-10-17T06:31:44+00:00**
 
 This report measures the two M3U files currently published at the repository root. The historic filename epg-three-playlist-audit.md is retained for link compatibility; it does not mean a third playlist file exists.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1061 | 667 | 434 | 408 | 434 | 408 | 233 | OK |
+| IPTV-Playlist.m3u | 1060 | 667 | 434 | 408 | 434 | 408 | 233 | OK |
 | BDIX-Playlist.m3u | 139 | 131 | 75 | 74 | 75 | 74 | 56 | OK |
 
 ## Group coverage

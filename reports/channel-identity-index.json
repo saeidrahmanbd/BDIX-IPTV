@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-17T06:18:34+00:00",
+  "generated": "2026-10-17T06:31:44+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -7945,9 +7945,9 @@
         "Backup",
         "International"
       ],
-      "streams": 3,
+      "streams": 2,
       "primary": 1,
-      "backup": 2
+      "backup": 1
     },
     "shemaroobollywood": {
       "names": [
