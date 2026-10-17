@@ -16,9 +16,9 @@ ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup",
-    "New Channels", "New Backup", "Not Playing",
+    "Not Playing",
 ]
-NO_NUMBER = {"Backup", "New Backup", "Not Playing"}
+NO_NUMBER = {"Backup", "Not Playing"}
 BACKUP = "Backup"
 REQUIRED_RECORDS = [
     [
@@ -117,7 +117,6 @@ def main():
     removed_orphan = 0
     removed_malformed = 0
 
-    # Normalize group metadata and remove exact duplicate stream URLs.
     seen_urls = set()
     kept = []
     for block in blocks:
@@ -149,9 +148,6 @@ def main():
         kept.append(block)
     blocks = kept
 
-    # A Backup entry is only valid when the same channel has a primary record.
-    # Match by identity first and normalized name second so alternate IDs are
-    # still accepted when the displayed channel is clearly the same.
     primary_ids = set()
     primary_names = set()
     for block in blocks:
@@ -177,18 +173,14 @@ def main():
         out.append(block)
     blocks = out
 
-    # Ensure known required records survive any legacy cleanup pass that may
-    # have incorrectly treated their source paths as VOD.
     added_required = ensure_required_records(blocks)
 
-    # Ensure all non-numbered groups remain non-numbered.
     for block in blocks:
         info = block[0]
         if attrs(info).get("group-title", "").strip() in NO_NUMBER and attrs(info).get("tvg-chno"):
             block[0] = remove_attr(info, "tvg-chno")
             changed += 1
 
-    # Canonical group order + A-Z within each group.
     rank = {name: i for i, name in enumerate(ORDER)}
     def natural(value):
         s = unicodedata.normalize("NFKD", str(value or "")).casefold().strip()
