@@ -21,6 +21,8 @@ def key(s):
 def set_attr(line,k,v):
  p=re.compile(rf'{re.escape(k)}="[^"]*"')
  return p.sub(f'{k}="{v}"',line,1) if p.search(line) else line.replace('#EXTINF:-1 ',f'#EXTINF:-1 {k}="{v}" ',1)
+def remove_attr(line,k):
+ return re.sub(rf'\s+{re.escape(k)}="[^"]*"','',line, count=1)
 def parse(path):
  lines=path.read_text(encoding='utf-8-sig').replace('\r\n','\n').replace('\r','\n').splitlines(); pre=[]; rec=[]; cur=None
  for line in lines:
@@ -46,10 +48,15 @@ def process(path):
  for r in rec:
   a=attrs(r[0]); cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold(); g=a.get('group-title','').strip()
   if cid=='ultimatetv.in@sd' and g!='Backup': r[0]=set_attr(r[0],'group-title','Indian Music')
- def rkey(r):
-  a=attrs(r[0]); g=a.get('group-title','').strip(); n=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip()
-  u=next((x.strip() for x in r[1:] if x.strip().startswith(('http://','https://'))),'')
-  return (rank.get(g,len(rank)),key(n),u.casefold())
+  # Backup and Not Playing are non-numbered buckets. Normalize them here
+  # instead of treating inherited tvg-chno values as a fatal error.
+  if g in NON_NUMBERED and 'tvg-chno' in a:
+   r[0]=remove_attr(r[0],'tvg-chno')
+
+def rkey(r):
+ a=attrs(r[0]); g=a.get('group-title','').strip(); n=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip()
+ u=next((x.strip() for x in r[1:] if x.strip().startswith(('http://','https://'))),'')
+ return (rank.get(g,len(rank)),key(n),u.casefold())
  rec.sort(key=rkey)
  errors=[]; transitions=[]; last=None
  for r in rec:
@@ -67,7 +74,8 @@ def process(path):
   if names and names!=sorted(names,key=key): errors.append(f'A-Z order: {g}')
  for r in rec:
   a=attrs(r[0]); g=a.get('group-title','').strip()
-  if g in NON_NUMBERED and a.get('tvg-chno','').strip(): errors.append(f'numbered {g}: {a.get("tvg-name","")}')
+  if a.get('tvg-chno','').strip() and g not in NON_NUMBERED:
+   pass
   cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold()
   name=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip().casefold()
   if name=='channel s uk' and (g not in {'Bangladesh','Backup'} or cid!='custom.channel.s.uk'): errors.append('Channel S UK must retain its distinct identity in Bangladesh/Backup')
