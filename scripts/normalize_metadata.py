@@ -202,6 +202,14 @@ LOGOS={
   "MTV": "mtv-india-hd-720p.png",
   "Enter10 Bangla": "enterr10-bangla.png"
 }
+FORCED_LOGOS = {
+ "Bollygold": "nh-bollygold-dbedeff9.png",
+ "Manoranjan Grand": "manoranjan-grand.png",
+ "BTV News": "nvisionbd-verified-btv-news-33c61f1708.jpg",
+ "Zee TV": "nvisionbd-verified-zee-tv-2fb6673cf7.svg",
+ "Tom and Jerry": "nvisionbd-verified-tom-and-jerry-927bd66719.jpg",
+ "Green TV": "nvisionbd-verified-green-tv-fa848f9d71.jpg",
+}
 ATTR=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 def attrs(s): return dict(ATTR.findall(s))
 def split_extinf(line):
@@ -289,7 +297,11 @@ for r in rows:
   name=CASE.get(clean(a.get("tvg-name") or r["name"]),clean(a.get("tvg-name") or r["name"]))
   cid=normalize_id(a.get("tvg-id") or a.get("channel-id") or IDS.get(name) or "custom."+norm(name))
   m=set_attr(m,"tvg-id",cid); m=set_attr(m,"channel-id",cid); m=set_attr(m,"tvg-name",name)
-  if not a.get("tvg-logo") and LOGOS.get(name): m=set_attr(m,"tvg-logo",RAW+LOGOS[name]); stats["logos"]+=1
+  forced_logo=FORCED_LOGOS.get(name)
+  if forced_logo:
+   desired=RAW+forced_logo
+   if a.get("tvg-logo") != desired: m=set_attr(m,"tvg-logo",desired); stats["logos"]+=1
+  elif not a.get("tvg-logo") and LOGOS.get(name): m=set_attr(m,"tvg-logo",RAW+LOGOS[name]); stats["logos"]+=1
   if r["i"] in assign: m=set_attr(m,"tvg-chno",str(assign[r["i"]])); stats["numbers"]+=1
  else:
   key=norm(a.get("tvg-name") or r["name"]); pr=byname.get(key)
@@ -299,7 +311,7 @@ for r in rows:
   if key=="sonybbcearth" and not pr: name="Sony BBC Earth"
   cid=normalize_id((pr["a"].get("tvg-id") if pr else None) or IDS.get(name) or a.get("tvg-id") or "custom."+norm(name))
   m=set_attr(m,"tvg-id",cid); m=set_attr(m,"channel-id",cid); m=set_attr(m,"tvg-name",name); display=name
-  logo=(pr["a"].get("tvg-logo") if pr else None) or LOGOS.get(r["name"]) or LOGOS.get(name)
+  logo=FORCED_LOGOS.get(name) or (pr["a"].get("tvg-logo") if pr else None) or LOGOS.get(r["name"]) or LOGOS.get(name)
   if logo:
    logo_url=logo if logo.startswith("http") else RAW+logo
    current_logo=(a.get("tvg-logo") or "").strip()
