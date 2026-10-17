@@ -6,7 +6,6 @@ on:
     paths:
       - IPTV-Playlist.m3u
       - scripts/final_iptv_playlist_fixes.py
-      - scripts/repair_iptv_deep_audit.py
       - scripts/playlist_policy_repair.py
       - scripts/audit_playlist.py
       - scripts/epg_coverage.py
@@ -43,9 +42,6 @@ jobs:
 
       - name: Apply safe IPTV fixes
         run: python scripts/final_iptv_playlist_fixes.py
-
-      - name: Run deep IPTV audit repair
-        run: python scripts/repair_iptv_deep_audit.py
 
       - name: Run existing metadata normalization
         run: python scripts/normalize_metadata.py
