@@ -17,6 +17,8 @@ on:
       - scripts/check_epg_config.py
       - scripts/epg_coverage.py
       - scripts/generate_epg.py
+      - scripts/run_generate_epg.py
+      - scripts/fetch_iptv_org_epg.py
       - scripts/official_epg_sources.py
       - scripts/epg_publish_gate.py
       - scripts/sync_epg_worker_map.py
@@ -44,7 +46,7 @@ jobs:
   maintain:
     if: ${{ !startsWith(github.event.head_commit.message, 'Repair IPTV metadata and local logos only; leave stream URLs unchanged') && !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance')) }}
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 45
     env:
       M3U4U_XMLTV_URL: ${{ secrets.M3U4U_XMLTV_URL }}
     steps:
@@ -52,6 +54,8 @@ jobs:
         with: {fetch-depth: 0}
       - uses: actions/setup-python@v7
         with: {python-version: '3.12'}
+      - uses: actions/setup-node@v4
+        with: {node-version: '20'}
       - name: Install dependencies
         run: python -m pip install --disable-pip-version-check pillow cairosvg
       - name: Validate EPG configuration
@@ -91,8 +95,11 @@ jobs:
             # Rebuild EPG after backup/identity cleanup so coverage reflects the
             # actual IPTV-Playlist.m3u that will be published. M3U4U remains an
             # optional private source through the existing Actions secret.
+            # iptv-org/epg is used as an additional build-time source for
+            # targeted Indian providers; its guide is not published separately.
             python scripts/epg_coverage.py
-            python scripts/generate_epg.py
+            python scripts/fetch_iptv_org_epg.py
+            python scripts/run_generate_epg.py
             test -s epg/epg.xml
             grep -q '<programme ' epg/epg.xml
             cp epg/epg.xml /tmp/bdix-epg-generated.xml
