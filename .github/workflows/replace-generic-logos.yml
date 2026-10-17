@@ -20,6 +20,7 @@ concurrency:
 
 jobs:
   replace:
+    if: ${{ !startsWith(github.event.head_commit.message, 'Repair IPTV metadata and local logos only; leave stream URLs unchanged') }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
