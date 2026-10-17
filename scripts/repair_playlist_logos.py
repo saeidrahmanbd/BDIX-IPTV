@@ -73,6 +73,8 @@ LOCAL_OVERRIDES = {
     "global tv": "unused/global-tv-1080p-5ffc043912.png",
     "channel 1": "channel-1.png",
     "classic movies": "unused/classic-movies-channel-1d5f82d98a.png",
+}
+FORCED_CHANNEL_LOGOS = {
     "bollygold": "nh-bollygold-dbedeff9.png",
     "manoranjan grand": "manoranjan-grand.png",
     "btv news": "nvisionbd-verified-btv-news-33c61f1708.jpg",
@@ -714,19 +716,21 @@ def main():
                 continue
             entries += 1
             attrs, label = parse_extinf(line)
+            channel = label or attrs.get("tvg-name", "")
+            key = norm_key(channel)
             current = (attrs.get("tvg-logo") or "").strip()
             basename = Path(urllib.parse.urlparse(current).path).name.casefold() if current else ""
             missing = not current
             broken = not is_valid_local_logo_reference(current)
-            flagged = broken or basename in BAD_ASSETS or basename in GENERIC_ASSETS or bool(re.search(r"(?:placeholder|generated-fallback|generic-logo)", basename))
+            forced_logo = FORCED_CHANNEL_LOGOS.get(key)
+            forced_wrong = bool(forced_logo and basename != forced_logo.casefold())
+            flagged = broken or basename in BAD_ASSETS or basename in GENERIC_ASSETS or bool(re.search(r"(?:placeholder|generated-fallback|generic-logo)", basename)) or forced_wrong
             if not (missing or flagged):
                 output.append(line)
                 continue
 
-            channel = label or attrs.get("tvg-name", "")
-            key = norm_key(channel)
-            new_file = fixes_cache.get(key)
-            source_name = "Reused repaired exact-name logo"
+            new_file = prepare_local_asset(LOGOS / forced_logo) if forced_logo else fixes_cache.get(key)
+            source_name = "Forced verified local logo" if forced_logo and new_file else "Reused repaired exact-name logo"
             source_page = ""
             license_name = ""
             license_url = ""
