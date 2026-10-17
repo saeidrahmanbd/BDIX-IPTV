@@ -125,10 +125,30 @@ jobs:
             python scripts/pre_publish_gate.py
             GATE_STATUS=$?
             set -e
+
+            # The pre-publish gate is a repair trigger, not a dead end.
+            # Give the deterministic correction scripts one additional pass when
+            # the gate finds repairable metadata/logo problems. Not Playing and
+            # Backup remain protected, and stream-health failures remain advisory.
+            if [ "$GATE_STATUS" -ne 0 ]; then
+              echo '::warning::Pre-publish gate found issues; running automatic correction pass before failing.'
+              python scripts/repair_iptv_audit_findings.py || true
+              python scripts/repair_playlist_quality.py || true
+              python scripts/normalize_metadata.py || true
+              python scripts/repair_playlist_logos.py || true
+              python scripts/sort_playlists.py IPTV-Playlist.m3u || true
+              python scripts/final_playlist_hardening.py IPTV-Playlist.m3u || true
+              python scripts/migrate_external_logos_fixed.py || true
+              python scripts/generate_logo_authenticity_manifest.py || true
+              python scripts/audit_playlist.py || true
+              python scripts/pre_publish_gate.py
+              GATE_STATUS=$?
+            fi
+
             python scripts/record_maintenance_history.py
             python scripts/generate_dashboard.py
             if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
-              echo '::warning::Audit/pre-publish gate reported issues. Preserving the deterministic IPTV repair in IPTV-Playlist.m3u; no automatic rollback of the repaired playlist will occur.'
+              echo '::warning::Audit/pre-publish gate still reports issues after the automatic correction pass. Preserving the deterministic IPTV repair in IPTV-Playlist.m3u; no automatic rollback of the repaired playlist will occur.'
               echo "Audit status: $AUDIT_STATUS"
               echo "Pre-publish gate status: $GATE_STATUS"
               git restore -- logos/ || true
