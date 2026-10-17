@@ -2,8 +2,9 @@
 """Final policy/structure repair for IPTV-Playlist.m3u only.
 
 This pass is deliberately conservative: it changes metadata/group structure,
-removes exact duplicate URLs and orphan Backup records, but never changes a
-stream URL merely because a live probe fails.
+removes exact duplicate URLs and orphan Backup records, and preserves the
+known required movie/drama records. It never changes a stream URL merely
+because a live probe fails.
 """
 from pathlib import Path
 import re
@@ -19,6 +20,16 @@ ORDER = [
 ]
 NO_NUMBER = {"Backup", "New Backup", "Not Playing"}
 BACKUP = "Backup"
+REQUIRED_RECORDS = [
+    [
+        '#EXTINF:-1 channel-id="custom.gseriesdrama" tvg-id="custom.gseriesdrama" tvg-chno="23" tvg-name="G Series Drama" group-title="Bangladesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/g-series-drama.png",G Series Drama',
+        "https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8",
+    ],
+    [
+        '#EXTINF:-1 tvg-chno="1095" tvg-id="new.hindi.movie.classic.24" channel-id="new.hindi.movie.classic.24" tvg-name="Hindi Movie Classic 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hindi-movie-classic-24.png" group-title="Indian Movies",Hindi Movie Classic 24',
+        "https://vods2.aynaott.com/hindimovies/index.m3u8",
+    ],
+]
 
 
 def attrs(s):
@@ -84,6 +95,18 @@ def repair_category_registry(pre):
     return out
 
 
+def ensure_required_records(blocks):
+    urls = {url_of(b).strip().casefold() for b in blocks if url_of(b).strip()}
+    added = 0
+    for record in REQUIRED_RECORDS:
+        url = record[1].casefold()
+        if url not in urls:
+            blocks.append(list(record))
+            urls.add(url)
+            added += 1
+    return added
+
+
 def main():
     if not P.exists():
         raise SystemExit("IPTV-Playlist.m3u not found")
@@ -94,7 +117,7 @@ def main():
     removed_orphan = 0
     removed_malformed = 0
 
-    # First normalize group metadata and remove exact duplicate stream URLs.
+    # Normalize group metadata and remove exact duplicate stream URLs.
     seen_urls = set()
     kept = []
     for block in blocks:
@@ -154,8 +177,11 @@ def main():
         out.append(block)
     blocks = out
 
-    # Ensure all non-numbered groups remain non-numbered, even if later
-    # normalization/sorting scripts add a channel number.
+    # Ensure known required records survive any legacy cleanup pass that may
+    # have incorrectly treated their source paths as VOD.
+    added_required = ensure_required_records(blocks)
+
+    # Ensure all non-numbered groups remain non-numbered.
     for block in blocks:
         info = block[0]
         if attrs(info).get("group-title", "").strip() in NO_NUMBER and attrs(info).get("tvg-chno"):
@@ -180,7 +206,8 @@ def main():
     P.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
     print(
         f"Playlist policy repair: changed={changed}, duplicate_urls_removed={removed_duplicate}, "
-        f"orphan_backups_removed={removed_orphan}, malformed_records_removed={removed_malformed}, entries={len(blocks)}"
+        f"orphan_backups_removed={removed_orphan}, malformed_records_removed={removed_malformed}, "
+        f"required_records_restored={added_required}, entries={len(blocks)}"
     )
 
 
