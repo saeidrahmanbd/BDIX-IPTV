@@ -1280,7 +1280,7 @@ https://cdn-globecast.akamaized.net/live/eds/saudi_sunnah/hls_roku/index.m3u8
 https://dzkyvlfyge.erbvr.com/PeaceTvBangla/tracks-v3a1/mono.m3u8
 #EXTINF:-1 tvg-id="QuranTV.iq" tvg-name="Quran TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-tv.png" tvg-chno="989" channel-id="QuranTV.iq" group-title="Religious",Quran TV
 https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/sharjahtvquranpublish/shqurantv_source/chunks.m3u8
-#EXTINF:-1 tvg-id="custom.a.sports.hd" tvg-name="A Sports HD" tvg-logo="https://i.postimg.cc/W1z5BGPZ/20240823_024712.png" tvg-chno="1131" channel-id="custom.a.sports.hd" group-title="Sports",A Sports HD
+#EXTINF:-1 tvg-id="custom.a.sports.hd" tvg-name="A Sports HD" tvg-logo="" tvg-chno="1131" channel-id="custom.a.sports.hd" group-title="Sports",A Sports HD
 https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="BahrainSports2.bh@SD" tvg-name="Bahrain Sports 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bahrain-sports-2.png" tvg-chno="992" channel-id="BahrainSports2.bh@SD" group-title="Sports",Bahrain Sports 2
 https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8
@@ -1292,7 +1292,7 @@ https://streams2.sofast.tv/ptnr-yupptv/title-cricketgold/v1/master/611d79b11b77e
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8
 #EXTINF:-1 tvg-id="ESPN.us" tvg-name="ESPN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn.png" tvg-chno="1000" channel-id="ESPN.us" group-title="Sports",ESPN
 http://181.78.197.59:8000/play/a07z/index.m3u8
-#EXTINF:-1 tvg-id="custom.euro.sports.hd" tvg-name="Euro Sports HD" tvg-logo="https://i.postimg.cc/pXx765TQ/20240823_024350.png" tvg-chno="1132" channel-id="custom.euro.sports.hd" group-title="Sports",Euro Sports HD
+#EXTINF:-1 tvg-id="custom.euro.sports.hd" tvg-name="Euro Sports HD" tvg-logo="" tvg-chno="1132" channel-id="custom.euro.sports.hd" group-title="Sports",Euro Sports HD
 https://drk6xq0vhn.gpcdn.net/live/euro_sports_hd_abr/index.m3u8
 #EXTINF:-1 tvg-id="FITE247.us@SD" tvg-name="FITE 24/7" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fite-24-7.png" tvg-chno="1002" channel-id="FITE247.us@SD" group-title="Sports",FITE 24/7
 https://d3d85c7qkywguj.cloudfront.net/scheduler/scheduleMaster/263.m3u8
@@ -1302,7 +1302,7 @@ http://85.237.89.160:9590/usa-s/FOX-SPORTS-1/index.m3u8
 https://streams2.sofast.tv/sofastplayout/WiseM3U8_1/master.m3u8
 #EXTINF:-1 tvg-id="custom.marquee.sports.network" tvg-name="Marquee Sports Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/marquee-sports-network.png" tvg-chno="1166" channel-id="custom.marquee.sports.network" group-title="Sports",Marquee Sports Network
 https://tvsen6.aynaott.com/MarqueeSportsNetwork/index.m3u8
-#EXTINF:-1 tvg-id="custom.mundial" tvg-name="Mundial" tvg-logo="https://i.imgur.com/jVBfQNj.png" tvg-chno="1133" channel-id="custom.mundial" group-title="Sports",Mundial
+#EXTINF:-1 tvg-id="custom.mundial" tvg-name="Mundial" tvg-logo="" tvg-chno="1133" channel-id="custom.mundial" group-title="Sports",Mundial
 https://s2.bufaloweb.com/bufalo9/tracks-v4a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="custom.nfl.network" tvg-name="NFL Network" tvg-chno="1174" channel-id="custom.nfl.network" group-title="Sports",NFL Network
 https://tvsen6.aynaott.com/nfl/index.m3u8
@@ -1340,7 +1340,7 @@ https://mycoffeetime.net/play/tSDRdsaoGGQ2qYgRPDEe9q-qMIzoahbJArH3W3vOiEaB97nXMp
 https://af7a8b4e.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfdGFsa1NQT1JUX0hMUw/playlist.m3u8
 #EXTINF:-1 tvg-id="WildTV.ca@SD" tvg-name="Wild TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wild-tv.png" tvg-chno="1043" channel-id="WildTV.ca@SD" group-title="Sports",Wild TV
 https://dfhsahpa45kk2.cloudfront.net/scheduler/scheduleMaster/476.m3u8
-#EXTINF:-1 tvg-id="custom.willow.hd" tvg-name="Willow HD" tvg-logo="https://i.postimg.cc/HntSg3xw/20240823_024624.png" tvg-chno="1140" channel-id="custom.willow.hd" group-title="Sports",Willow HD
+#EXTINF:-1 tvg-id="custom.willow.hd" tvg-name="Willow HD" tvg-logo="" tvg-chno="1140" channel-id="custom.willow.hd" group-title="Sports",Willow HD
 https://tvsen5.aynaott.com/willowhd/index.m3u8
 #EXTINF:-1 tvg-id="custom.willow.tv" tvg-name="Willow TV" tvg-chno="1184" channel-id="custom.willow.tv" group-title="Sports",Willow TV
 https://tvsen7.aynaott.com/rEBp38Ax/index.m3u8
@@ -1360,7 +1360,7 @@ https://mumt03.tangotv.in/Dsly5z3H9XJALWA/index.m3u8
 https://wiselp.wiseplayout.com/9XM/HD1080/HD1080.m3u8
 #EXTINF:-1 tvg-id="9XM.in@SD" tvg-name="9XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9xm.png" channel-id="9XM.in@SD" group-title="Backup",9XM
 https://wiselp.wiseplayout.com/9XM/master.m3u8
-#EXTINF:-1 tvg-id="custom.a.sports.hd" tvg-name="A Sports HD" tvg-logo="https://i.postimg.cc/W1z5BGPZ/20240823_024712.png" channel-id="custom.a.sports.hd" group-title="Backup",A Sports HD
+#EXTINF:-1 tvg-id="custom.a.sports.hd" tvg-name="A Sports HD" tvg-logo="" channel-id="custom.a.sports.hd" group-title="Backup",A Sports HD
 https://playztv-apps.pages.dev/a-sports/index.m3u8
 #EXTINF:-1 tvg-id="AakaashAath.in@SD" tvg-name="Aakaash Aath" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aakaash-aath.png" channel-id="AakaashAath.in@SD" tvg-language="ben" tvg-country="IN" group-title="Backup",Aakaash Aath
 https://mumt03.tangotv.in/Dsly5z3HAAKASHAATH/tracks-v1a1/mono.m3u8
