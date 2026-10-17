@@ -8,11 +8,11 @@ from pathlib import Path
 import re, sys, unicodedata
 
 PLAYLIST_ORDERS={
-    'IPTV-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Backup','New Channels','New Backup','Not Playing'],
-    'BDIX-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Backup','New Channels','New Backup','Not Playing','Test'],
+    'IPTV-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Backup','Not Playing'],
+    'BDIX-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Backup','Not Playing','Test'],
 }
 ATTR=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
-NON_NUMBERED={'Backup','New Backup','Not Playing'}
+NON_NUMBERED={'Backup','Not Playing'}
 
 def attrs(s): return dict(ATTR.findall(s))
 def key(s):
@@ -35,7 +35,6 @@ def process(path):
  if not path.is_file(): return
  order=PLAYLIST_ORDERS[path.name]; rank={x:i for i,x in enumerate(order)}
  pre,rec=parse(path)
- # Remove exact duplicate stream URLs while preserving the first occurrence.
  seen=set(); unique=[]
  for r in rec:
   u=next((x.strip() for x in r[1:] if x.strip().startswith(('http://','https://'))),'')
