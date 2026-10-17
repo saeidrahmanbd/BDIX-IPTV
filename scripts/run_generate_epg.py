@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Run the normal EPG generator with the build-time iptv-org guide prepended."""
 from pathlib import Path
-
+import subprocess
 import generate_epg
 
 LOCAL_GUIDE = Path("/tmp/iptv-org-guide.xml")
@@ -10,6 +10,8 @@ LOCAL_GUIDE = Path("/tmp/iptv-org-guide.xml")
 def main():
     if not LOCAL_GUIDE.is_file() or LOCAL_GUIDE.stat().st_size == 0:
         raise SystemExit("Missing /tmp/iptv-org-guide.xml; run fetch_iptv_org_epg.py first")
+
+    subprocess.run(["python", "scripts/augment_epg_mapping_from_iptv_org.py"], check=True)
 
     original_sources = list(generate_epg.SOURCES)
     original_fetch = generate_epg.fetch
