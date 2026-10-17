@@ -48,15 +48,14 @@ def process(path):
  for r in rec:
   a=attrs(r[0]); cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold(); g=a.get('group-title','').strip()
   if cid=='ultimatetv.in@sd' and g!='Backup': r[0]=set_attr(r[0],'group-title','Indian Music')
-  # Backup and Not Playing are non-numbered buckets. Normalize them here
-  # instead of treating inherited tvg-chno values as a fatal error.
+  # Backup and Not Playing are non-numbered buckets. Remove inherited
+  # channel numbers instead of failing the maintenance run on valid records.
   if g in NON_NUMBERED and 'tvg-chno' in a:
    r[0]=remove_attr(r[0],'tvg-chno')
-
-def rkey(r):
- a=attrs(r[0]); g=a.get('group-title','').strip(); n=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip()
- u=next((x.strip() for x in r[1:] if x.strip().startswith(('http://','https://'))),'')
- return (rank.get(g,len(rank)),key(n),u.casefold())
+ def rkey(r):
+  a=attrs(r[0]); g=a.get('group-title','').strip(); n=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip()
+  u=next((x.strip() for x in r[1:] if x.strip().startswith(('http://','https://'))),'')
+  return (rank.get(g,len(rank)),key(n),u.casefold())
  rec.sort(key=rkey)
  errors=[]; transitions=[]; last=None
  for r in rec:
@@ -74,8 +73,6 @@ def rkey(r):
   if names and names!=sorted(names,key=key): errors.append(f'A-Z order: {g}')
  for r in rec:
   a=attrs(r[0]); g=a.get('group-title','').strip()
-  if a.get('tvg-chno','').strip() and g not in NON_NUMBERED:
-   pass
   cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold()
   name=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip().casefold()
   if name=='channel s uk' and (g not in {'Bangladesh','Backup'} or cid!='custom.channel.s.uk'): errors.append('Channel S UK must retain its distinct identity in Bangladesh/Backup')
