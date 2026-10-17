@@ -1,8 +1,8 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-10-17T06:32:11+00:00**
+Generated: **2026-10-17T07:02:19+00:00**
 
-Status: **BLOCK**
+Status: **PASS**
 
 - Current entries: **1060**
 - Duplicate stream URLs: **0**
@@ -14,8 +14,8 @@ Status: **BLOCK**
 - Duplicate primary channel numbers: **0**
 - Primary entries missing tvg-chno: **0**
 - Entries added this run: **0**
-- Entries removed this run: **1**
-- Entries modified this run: **0
+- Entries removed this run: **0**
+- Entries modified this run: **2
 
 ## Change Summary
 1. Never publish duplicate stream URLs.
@@ -24,10 +24,9 @@ Status: **BLOCK**
 4. Never silently delete protected Backup entries.
 5. Never publish duplicate or missing primary channel numbers.
 Added: none
-Removed: http://hls-shansontv.cdnvideo.ru/shansontv/shansontv-sd.smil/playlist.m3u8
-Modified metadata entries: 0
+Removed: none
+Modified metadata entries: 2
 Quarantined primary streams: none
 Intentionally removed known-bad primary streams: none
 
-## Blocking Reasons
-- duplicate primary identities: 1
+No blocking conditions detected.

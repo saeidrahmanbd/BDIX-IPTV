@@ -1,6 +1,6 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-10-17T06:31:44+00:00**
+Generated: **2026-10-17T07:01:53+00:00**
 
 This report measures the two M3U files currently published at the repository root. The historic filename epg-three-playlist-audit.md is retained for link compatibility; it does not mean a third playlist file exists.
 

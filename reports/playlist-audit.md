@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-17T06:31:44.831842+00:00**
+Generated: **2026-10-17T07:01:53.949573+00:00**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -17,11 +17,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Logo exceptions requiring repair: **0**
 - External logo references (review only): **0**
 - Logo references checked: **1060**
-- Duplicate primary identities: **1**
+- Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
+- Category registry issues: **0**
 - Alphabetical ordering issues: **0**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **11**
@@ -29,6 +30,10 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate IDs
 
+
+## Category Registry
+
+Canonical registry matches the permanent IPTV category order.
 ### 7smusic.in@sd (2 streams)
 - 7S Music — Indian Music — https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8
 - 7S Music — Backup — https://cdn.pishow.tv/ott/live/1257/master.m3u8
@@ -239,8 +244,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Channel 1 — Backup — https://stream.ottplus.live/live/channel_1_hd_abr/live/channel_1_hd_720/chunks.m3u8
 ### custom.channel.s.uk (3 streams)
 - Channel S UK — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8
-- Channel S UK — Bangladesh — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/chsukoff.stream/live-orgin/chsukoff.stream/chunks.m3u8
-- Channel S UK — Bangladesh — https://box.bbaria.net:8083/ChannelS/video.m3u8
+- Channel S UK — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/chsukoff.stream/live-orgin/chsukoff.stream/chunks.m3u8
+- Channel S UK — Backup — https://box.bbaria.net:8083/ChannelS/video.m3u8
 ### custom.colors.cineplex (3 streams)
 - Colors Cineplex [UK] — Indian Movies — https://d1rc86nwwc9fag.cloudfront.net/260723/smil:rishteycineplexukdev.smil/chunklist_b1928000.m3u8
 - Colors Cineplex [UK] — Backup — https://homair-tv-production.up.railway.app/api/play/COLORS%20CINEPLEX%20HD.m3u8
@@ -851,7 +856,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate Primary Identities
 
-- **custom.channel.s.uk** in **Bangladesh** — Channel S UK, Channel S UK, Channel S UK
+None.
 
 ## Primary Channel-Number Collisions
 
@@ -892,13 +897,13 @@ None.
 
 - Healthy/local references: **1060**
 - External references (review only): **0**
-- missing: **0
-- broken-local: **0
-- unsupported-format: **0
-- invalid-dimensions: **0
-- corrupt-image: **0
-- unvalidated-image: **0
-- other: **0
+- missing: **0**
+- broken-local: **0**
+- unsupported-format: **0**
+- invalid-dimensions: **0**
+- corrupt-image: **0**
+- unvalidated-image: **0**
+- other: **0**
 
 ## External Logo Review
 
