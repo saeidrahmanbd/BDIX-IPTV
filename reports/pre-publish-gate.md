@@ -1,6 +1,6 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-10-17T07:32:21+00:00**
+Generated: **2026-10-17T07:41:53+00:00**
 
 Status: **PASS**
 
@@ -15,7 +15,7 @@ Status: **PASS**
 - Primary entries missing tvg-chno: **0**
 - Entries added this run: **0**
 - Entries removed this run: **0**
-- Entries modified this run: **1
+- Entries modified this run: **0
 
 ## Change Summary
 1. Never publish duplicate stream URLs.
@@ -25,7 +25,7 @@ Status: **PASS**
 5. Never publish duplicate or missing primary channel numbers.
 Added: none
 Removed: none
-Modified metadata entries: 1
+Modified metadata entries: 0
 Quarantined primary streams: none
 Intentionally removed known-bad primary streams: none
 

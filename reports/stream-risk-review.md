@@ -15,42 +15,49 @@ Generated from the current playlist and latest available stream-health report. T
 | Metric | Count |
 |---|---:|
 | Streams tested | 1094 |
-| Reachable | 1033 |
-| Failed this check | 61 |
-| Persistent failures (3+ consecutive) | 26 |
-| HTTP 401/403 (auth) | 12 |
-| HTTP 404 (not found) | 20 |
-| HTTP 5xx (server) | 3 |
-| Timeout | 26 |
+| Reachable | 1058 |
+| Failed this check | 36 |
+| Persistent failures (3+ consecutive) | 33 |
+| HTTP 401/403 (auth) | 11 |
+| HTTP 404 (not found) | 18 |
+| HTTP 5xx (server) | 5 |
+| Timeout | 1 |
 
 ### Persistent failures
 
-- **7X Punjabi** — Backup — consecutive failures: **10** — HTTP 404
-- **CBN TV USA** — Backup — consecutive failures: **10** — HTTP 404
-- **Channel 52** — Backup — consecutive failures: **17** — HTTP 404
-- **Channel S** — Backup — consecutive failures: **18** — Timeout
-- **Channel S** — Backup — consecutive failures: **17** — HTTP 404
-- **Channel S** — Backup — consecutive failures: **17** — HTTP 404
-- **Channel S** — Backup — consecutive failures: **18** — Timeout
-- **Desh TV** — Backup — consecutive failures: **5** — HTTP 404
-- **Green TV** — Backup — consecutive failures: **18** — Timeout
-- **Green TV** — Backup — consecutive failures: **17** — HTTP 404
-- **Green TV** — Backup — consecutive failures: **17** — HTTP 404
-- **Green TV** — Backup — consecutive failures: **17** — HTTP 404
-- **Green TV** — Backup — consecutive failures: **17** — HTTP 404
-- **Assam Talks** — Indian Entertainment — consecutive failures: **228** — HTTP 403
-- **Star Gold** — Indian Movies — consecutive failures: **6** — HTTP 404
-- **CMAC TV** — International — consecutive failures: **10** — HTTP 403
-- **Cook & Bake** — International — consecutive failures: **34** — HTTP 504
-- **HBO** — International — consecutive failures: **216** — HTTP 403
-- **Lifetime** — International — consecutive failures: **10** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **34** — HTTP 403
-- **Nick** — Kids — consecutive failures: **6** — Timeout
-- **Teen Nick** — Kids — consecutive failures: **94** — HTTP 403
-- **Jalwa TV** — Pakistani — consecutive failures: **5** — HTTP 404
-- **Star Sports 2** — Sports — consecutive failures: **10** — HTTP 403
-- **T Sports** — Sports — consecutive failures: **10** — HTTP 403
-- **Willow TV** — Sports — consecutive failures: **10** — HTTP 403
+- **7X Punjabi** — Backup — consecutive failures: **12** — HTTP 404
+- **CBN TV USA** — Backup — consecutive failures: **12** — HTTP 404
+- **Channel 52** — Backup — consecutive failures: **19** — HTTP 404
+- **Channel S** — Backup — consecutive failures: **20** — HTTP 500
+- **Channel S** — Backup — consecutive failures: **19** — HTTP 404
+- **Channel S** — Backup — consecutive failures: **19** — HTTP 404
+- **Channel S** — Backup — consecutive failures: **20** — HTTP 404
+- **Desh TV** — Backup — consecutive failures: **7** — HTTP 404
+- **Disney Channel India** — Backup — consecutive failures: **4** — HTTP 403
+- **ESPN** — Backup — consecutive failures: **4** — HTTP 403
+- **G TV** — Backup — consecutive failures: **4** — HTTP 500
+- **G TV** — Backup — consecutive failures: **4** — HTTP 404
+- **G TV** — Backup — consecutive failures: **4** — TLS
+- **G TV** — Backup — consecutive failures: **4** — HTTP 500
+- **Goldmines Movies** — Backup — consecutive failures: **4** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **20** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **19** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **19** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **19** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **19** — HTTP 404
+- **Assam Talks** — Indian Entertainment — consecutive failures: **230** — HTTP 403
+- **Star Gold** — Indian Movies — consecutive failures: **8** — HTTP 404
+- **CMAC TV** — International — consecutive failures: **12** — HTTP 403
+- **Cook & Bake** — International — consecutive failures: **36** — HTTP 504
+- **HBO** — International — consecutive failures: **218** — HTTP 403
+- **Lifetime** — International — consecutive failures: **12** — HTTP 403
+- **NASHE Music** — International — consecutive failures: **3** — HTTP 404
+- **Teleritmo** — International — consecutive failures: **36** — HTTP 403
+- **Nick** — Kids — consecutive failures: **8** — Timeout
+- **Teen Nick** — Kids — consecutive failures: **96** — HTTP 403
+- **Star Sports 2** — Sports — consecutive failures: **12** — HTTP 403
+- **T Sports** — Sports — consecutive failures: **12** — HTTP 403
+- **Willow TV** — Sports — consecutive failures: **12** — HTTP 403
 
 ## /streamtest/ Endpoints
 
