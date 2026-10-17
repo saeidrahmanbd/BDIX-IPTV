@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Audit playlist identity, metadata, duplicate IDs, and local logo integrity."""
+import json
 import re
 import subprocess
 from collections import defaultdict, Counter
 from pathlib import Path
+from urllib.parse import unquote
 try:
     from PIL import Image
 except ImportError:
@@ -14,8 +16,8 @@ REPORT = Path("reports/playlist-audit.md")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
-PRIMARY_EXCEPTIONS = {"Backup"}
-CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup"]
+PRIMARY_EXCEPTIONS = {"Backup", "Not Playing"}
+CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "Not Playing"]
 
 def attrs(line):
     return dict(ATTR_RE.findall(line))
@@ -78,41 +80,59 @@ def logo_issue(info):
     if not logo:
         return "missing"
     def check_local(path):
-        if not path.is_file():
+        try:
+            root = LOGOS.resolve()
+            resolved = path.resolve()
+            if resolved != root and root not in resolved.parents:
+                return "other"
+        except Exception:
             return "broken-local"
-        if path.suffix.lower() == ".svg":
+        if not resolved.is_file():
+            return "broken-local"
+        if resolved.suffix.lower() == ".svg":
             try:
-                if "<svg" not in path.read_text(encoding="utf-8", errors="ignore")[:10000].lower():
+                if "<svg" not in resolved.read_text(encoding="utf-8", errors="ignore")[:10000].lower():
                     return "corrupt-svg"
             except Exception:
                 return "corrupt-svg"
             return ""
-        if path.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp", ".avif"}:
+        if resolved.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp", ".avif"}:
             return "unsupported-format"
         if Image is None:
             return "unvalidated-image"
         try:
-            with Image.open(path) as im:
+            with Image.open(resolved) as im:
                 im.verify()
-            with Image.open(path) as im:
+            with Image.open(resolved) as im:
                 if im.width < 16 or im.height < 16:
                     return "invalid-dimensions"
         except Exception:
             return "corrupt-image"
         return ""
     if logo.startswith(RAW_BASE):
-        fn = logo[len(RAW_BASE):].split("?", 1)[0].lstrip("/")
+        fn = unquote(logo[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
         return check_local(LOGOS / fn)
     if logo.startswith("logos/"):
-        return check_local(Path(logo))
-    if "raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV" in logo:
-        return "repository-reference"
+        return check_local(Path(unquote(logo)))
     if logo.startswith(("http://", "https://")):
         return "external"
     return "other"
 
 entries = parse(PLAYLIST.read_text(encoding="utf-8-sig"))
 raw_lines = PLAYLIST.read_text(encoding="utf-8-sig").replace("\r","").splitlines()
+category_registry_issues = []
+registry_lines = [line for line in raw_lines if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
+if len(registry_lines) != 1:
+    category_registry_issues.append(f"expected exactly one category registry, found {len(registry_lines)}")
+else:
+    try:
+        actual_registry = json.loads(registry_lines[0].split(":", 1)[1])
+        if actual_registry != CATEGORY_ORDER:
+            category_registry_issues.append("registry does not match canonical category order")
+        if any(value in actual_registry for value in ("New Channels", "New Backup")):
+            category_registry_issues.append("forbidden staging category registered")
+    except Exception as exc:
+        category_registry_issues.append("registry is not valid JSON: " + str(exc)[:100])
 malformed_extinf = []
 
 def validate_extinf(line_no, line):
@@ -275,15 +295,13 @@ for info, url in entries:
     if cid and logo:
         logos_by_id[cid].add(logo)
     issue = logo_issue(info)
-    logo_counts["healthy" if not issue or issue == "repository-reference" else issue] += 1
+    logo_counts["healthy" if not issue else issue] += 1
     item = (display_name(info), identity(info), issue, attrs(info).get("tvg-logo",""))
     if issue == "external":
         logo_warnings.append(item)
     elif issue in {"missing", "broken-local", "unsupported-format", "invalid-dimensions", "corrupt-image", "unvalidated-image", "other"}:
-        if attrs(info).get("group-title", "").strip() == "Backup":
-            review_logo_exceptions.append(item)
-        else:
-            logo_exceptions.append(item)
+        # Every entry, including Backup and Not Playing, must use a valid local logo.
+        logo_exceptions.append(item)
 
 protected_changes = []
 try:
@@ -357,7 +375,12 @@ for group in category_transitions:
 
 lines = [
     "# Playlist Audit", "", "Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.", "", "## Summary", "",
-    f"- Playlist entries: **{len(entries)}**", f"- Unique channel IDs: **{len(by_id)}**", f"- IDs with multiple streams: **{len(duplicate_ids)}**", f"- Duplicate stream URLs: **{len(duplicate_urls)}**", f"- Metadata conflicts: **{len(metadata_conflicts)}**", f"- Same-name / different-ID collisions: **{len(name_collisions)}**", f"- Cross-country backup collisions: **{len(cross_country_backups)}**", f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**", f"- Protected primary-entry changes: **{len(protected_changes)}**", f"- Logo exceptions requiring repair: **{len(logo_exceptions)}**", f"- External logo references (review only): **{len(logo_warnings)}**", f"- Logo references checked: **{sum(logo_counts.values())}**", f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**", f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**", f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**", f"- Malformed EXTINF entries: **{len(malformed_extinf)}**", f"- Category block-order issues: **{len(category_order_issues)}**", f"- Alphabetical ordering issues: **{len(alphabetical_order_issues)}**", f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**", f"- Signed/tokenized stream URLs: **{len(signed_urls)}**", f"- Embedded Xtream-style credential paths (redacted): **{len(xtream_credential_paths)}**", "", "## Duplicate IDs", ""]
+    f"- Playlist entries: **{len(entries)}**", f"- Unique channel IDs: **{len(by_id)}**", f"- IDs with multiple streams: **{len(duplicate_ids)}**", f"- Duplicate stream URLs: **{len(duplicate_urls)}**", f"- Metadata conflicts: **{len(metadata_conflicts)}**", f"- Same-name / different-ID collisions: **{len(name_collisions)}**", f"- Cross-country backup collisions: **{len(cross_country_backups)}**", f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**", f"- Protected primary-entry changes: **{len(protected_changes)}**", f"- Logo exceptions requiring repair: **{len(logo_exceptions)}**", f"- External logo references (review only): **{len(logo_warnings)}**", f"- Logo references checked: **{sum(logo_counts.values())}**", f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**", f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**", f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**", f"- Malformed EXTINF entries: **{len(malformed_extinf)}**", f"- Category block-order issues: **{len(category_order_issues)}**", f"- Category registry issues: **{len(category_registry_issues)}**", f"- Alphabetical ordering issues: **{len(alphabetical_order_issues)}**", f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**", f"- Signed/tokenized stream URLs: **{len(signed_urls)}**", f"- Embedded Xtream-style credential paths (redacted): **{len(xtream_credential_paths)}**", "", "## Duplicate IDs", ""]
+lines += ["", "## Category Registry", ""]
+if category_registry_issues:
+    lines.extend("- " + issue for issue in category_registry_issues)
+else:
+    lines.append("Canonical registry matches the permanent IPTV category order.")
 for cid, items in sorted(duplicate_ids.items()):
     lines.append(f"### {cid} ({len(items)} streams)")
     for info, url in items:
@@ -398,7 +421,7 @@ if xtream_credential_paths:
 else: lines.append("None.")
 lines += ["", "## Logo Integrity", "", f"- Healthy/local references: **{logo_counts['healthy']}**", f"- External references (review only): **{logo_counts['external']}**"]
 for issue in ["missing","broken-local","unsupported-format","invalid-dimensions","corrupt-image","unvalidated-image","other"]:
-    lines.append(f"- {issue}: **{logo_counts[issue]}")
+    lines.append(f"- {issue}: **{logo_counts[issue]}**")
 lines += ["", "## External Logo Review", ""]
 if logo_warnings:
     for name, cid, issue, logo in logo_warnings[:200]: lines.append(f"- {name} [{cid}] — {logo}")

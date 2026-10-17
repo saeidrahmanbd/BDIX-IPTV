@@ -4,7 +4,7 @@ import re,subprocess,sys
 from datetime import datetime,timezone
 from collections import Counter,defaultdict
 from pathlib import Path
-P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md"); EXCLUDE={"Backup"}
+P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md"); EXCLUDE={"Backup","Not Playing"}
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
 def attrs(s): return dict(ATTR.findall(s))
 def parse(text):

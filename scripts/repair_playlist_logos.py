@@ -21,11 +21,9 @@ import logo_source_catalog as source
 ROOT = Path(".")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
-PLAYLISTS = [
-    "BDIX-Playlist.m3u",
-    "IPTV-Playlist.m3u",
-]
+PLAYLISTS = ["IPTV-Playlist.m3u"]
 REPORT = Path("reports/playlist-logo-repair-results.md")
+REGISTRY_PATH = Path("reports/logo-source-registry.json")
 
 # The following files were visually inspected and found contaminated, generic,
 # or mismatched. A bad file is never reused, even if its filename is an exact
@@ -522,6 +520,50 @@ def raw_url(filename):
     return RAW_BASE + urllib.parse.quote(filename)
 
 
+def is_valid_local_logo_reference(value):
+    value = (value or "").strip()
+    if not value:
+        return False
+    if value.startswith(RAW_BASE):
+        rel = urllib.parse.unquote(value[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
+        candidate = LOGOS / rel
+    elif value.startswith("logos/"):
+        candidate = Path(urllib.parse.unquote(value))
+    else:
+        return False
+    try:
+        candidate = candidate.resolve()
+        candidate.relative_to(LOGOS.resolve())
+    except Exception:
+        return False
+    return candidate.is_file() and file_is_valid(candidate)
+
+
+def find_registered_logo(playlist_name, meta, channel):
+    try:
+        registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8")) if REGISTRY_PATH.exists() else {}
+    except Exception:
+        return None
+    channel_id = (meta.get("tvg-id") or meta.get("channel-id") or "").strip().casefold()
+    options = []
+    for key, value in registry.items():
+        parts = key.split("|", 3)
+        if len(parts) != 4 or parts[0] != playlist_name:
+            continue
+        if channel_id and parts[1].strip().casefold() != channel_id:
+            continue
+        if not is_valid_local_logo_reference(parts[3]):
+            continue
+        name_score = 0 if norm_key(parts[2]) == norm_key(channel) else 1
+        fallback_score = 1 if value.get("status") == "generated_fallback" else 0
+        options.append((name_score, fallback_score, parts[3]))
+    if not options:
+        return None
+    options.sort()
+    rel = urllib.parse.unquote(options[0][2][len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0])
+    return prepare_local_asset(LOGOS / rel)
+
+
 def make_generated_fallback(channel, category):
     """Create a unique, clearly tracked fallback only after source lookup fails.
 
@@ -669,7 +711,8 @@ def main():
             current = (attrs.get("tvg-logo") or "").strip()
             basename = Path(urllib.parse.urlparse(current).path).name.casefold() if current else ""
             missing = not current
-            flagged = basename in BAD_ASSETS or basename in GENERIC_ASSETS or bool(re.search(r"(?:placeholder|generated-fallback|generic-logo)", basename))
+            broken = not is_valid_local_logo_reference(current)
+            flagged = broken or basename in BAD_ASSETS or basename in GENERIC_ASSETS or bool(re.search(r"(?:placeholder|generated-fallback|generic-logo)", basename))
             if not (missing or flagged):
                 output.append(line)
                 continue
@@ -681,6 +724,15 @@ def main():
             source_page = ""
             license_name = ""
             license_url = ""
+
+            if not new_file:
+                try:
+                    new_file = find_registered_logo(playlist, attrs, channel)
+                    if new_file:
+                        source_name = "Local asset from existing provenance registry"
+                        source_page = "https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos"
+                except Exception as exc:
+                    report_rows.append((playlist, line_number, channel, basename, "", "local registry lookup", "", "", "Registry lookup failed: " + str(exc)[:120]))
 
             if not new_file:
                 try:
@@ -741,7 +793,7 @@ def main():
             meta, _ = parse_extinf(item)
             logo = (meta.get("tvg-logo") or "").strip()
             name = Path(urllib.parse.urlparse(logo).path).name.casefold() if logo else ""
-            if not logo:
+            if not logo or not is_valid_local_logo_reference(logo):
                 missing_after += 1
             if name in BAD_ASSETS or name in GENERIC_ASSETS or bool(re.search(r"(?:placeholder|generic-logo)", name)):
                 flagged_after += 1
@@ -754,7 +806,7 @@ def main():
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     report = [
-        "# Three-Playlist Logo Repair Results", "",
+        "# IPTV Playlist Logo Repair Results", "",
         f"Run time: **{now}**  ",
         f"Repository-first local logo search completed before external lookup.  ",
         f"IPTV-org data: {iptv_status}  ",
