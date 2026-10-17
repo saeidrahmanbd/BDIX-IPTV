@@ -29,10 +29,6 @@ def set_attr(line, key, value):
     return line + f' {key}="{value}"'
 
 
-def remove_attr(line, key):
-    return re.sub(rf'\s+{re.escape(key)}="[^"]*"', "", line, count=1)
-
-
 def main():
     lines = P.read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
     changed = []
@@ -68,7 +64,6 @@ def main():
         "Not Playing",
     ]
     rank = {name: i for i, name in enumerate(order)}
-
     blocks, pre, cur = [], [], None
     for line in lines:
         if line.startswith("#EXTINF:"):
@@ -98,3 +93,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+# one-time trigger marker
