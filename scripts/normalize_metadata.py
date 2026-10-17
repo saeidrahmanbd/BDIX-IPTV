@@ -202,7 +202,14 @@ LOGOS={
   "MTV": "mtv-india-hd-720p.png",
   "Enter10 Bangla": "enterr10-bangla.png"
 }
-FORCED_LOGOS = {"Bollygold": "nh-bollygold-dbedeff9.png", "Manoranjan Grand": "manoranjan-grand.png"}
+FORCED_LOGOS = {
+ "Bollygold": "nh-bollygold-dbedeff9.png",
+ "Manoranjan Grand": "manoranjan-grand.png",
+ "BTV News": "nvisionbd-verified-btv-news-33c61f1708.jpg",
+ "Zee TV": "nvisionbd-verified-zee-tv-2fb6673cf7.svg",
+ "Tom and Jerry": "nvisionbd-verified-tom-and-jerry-927bd66719.jpg",
+ "Green TV": "nvisionbd-verified-green-tv-fa848f9d71.jpg",
+}
 ATTR=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 def attrs(s): return dict(ATTR.findall(s))
 def split_extinf(line):
