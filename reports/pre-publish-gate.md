@@ -1,21 +1,21 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-10-17T06:08:43+00:00**
+Generated: **2026-10-17T06:19:05+00:00**
 
 Status: **BLOCK**
 
-- Current entries: **1074**
+- Current entries: **1061**
 - Duplicate stream URLs: **0**
-- Primary streams removed: **4**
-- Primary streams intentionally removed as known bad: **1**
-- Primary streams quarantined: **25**
+- Primary streams removed: **0**
+- Primary streams intentionally removed as known bad: **0**
+- Primary streams quarantined: **0**
 - Review entries reclassified: **0**
 - Review entries deleted: **0**
 - Duplicate primary channel numbers: **0**
 - Primary entries missing tvg-chno: **0**
 - Entries added this run: **0**
-- Entries removed this run: **21**
-- Entries modified this run: **36
+- Entries removed this run: **13**
+- Entries modified this run: **0
 
 ## Change Summary
 1. Never publish duplicate stream URLs.
@@ -24,11 +24,10 @@ Status: **BLOCK**
 4. Never silently delete protected Backup entries.
 5. Never publish duplicate or missing primary channel numbers.
 Added: none
-Removed: http://app24.jagobd.com.bd/c3vydmvyx8rpbeu9mi8xny8ymfdeehgcfrgzq6ntagdeoaefzbf92ywxizto0u0ezn1izmyfvcedsefedekinkvn3ptomdfsewrtaw51aiphnpti2/anandatv.stream/tracks-v1a1/mono.m3u8, http://app24.jagobd.com.bd/c3vydmvyx8rpbeu9mi8xny8ymfdeehgcfrgzq6ntagdeoaefzbf92ywxizto0u0ezn1izmyfvcedsefedekinkvn3ptomdfsewrtaw51aiphnpti2/channel1bd.stream/playlist.m3u8, http://app24.jagobd.com.bd/c3vydmvyx8rpbeu9mi8xny8ymfdeehgcfrgzq6ntagdeoaefzbf92ywxizto0u0ezn1izmyfvcedsefedekinkvn3ptomdfsewrtaw51aiphnpti2/channel1bd.stream/tracks-v1a1/mono.m3u8, http://app24.jagobd.com.bd/c3vydmvyx8rpbeu9mi8xny8ymfdeehgcfrgzq6ntagdeoaefzbf92ywxizto0u0ezn1izmyfvcedsefedekinkvn3ptomdfsewrtaw51aiphnpti2/deshtv.stream/index.m3u8, https://tvsen7.aynaott.com/disney/index.m3u8, http://app24.jagobd.com.bd/c3vydmvyx8rpbeu9mi8xny8ymfdeehgcfrgzq6ntagdeoaefzbf92ywxizto0u0ezn1izmyfvcedsefedekinkvn3ptomdfsewrtaw51aiphnpti2/globaltv.stream/index.m3u8, http://app24.jagobd.com.bd/c3vydmvyx8rpbeu9mi8xny8ymfdeehgcfrgzq6ntagdeoaefzbf92ywxizto0u0ezn1izmyfvcedsefedekinkvn3ptomdfsewrtaw51aiphnpti2/ekusheytv-8-org.stream/index.m3u8, http://app24.jagobd.com.bd/c3vydmvyx8rpbeu9mi8xny8ymfdeehgcfrgzq6ntagdeoaefzbf92ywxizto0u0ezn1izmyfvcedsefedekinkvn3ptomdfsewrtaw51aiphnpti2/global-tv.stream/playlist.m3u8, http://app24.jagobd.com.bd/c3vydmvyx8rpbeu9mi8xny8ymfdeehgcfrgzq6ntagdeoaefzbf92ywxizto0u0ezn1izmyfvcedsefedekinkvn3ptomdfsewrtaw51aiphnpti2/madina.stream/playlist.m3u8, http://app24.jagobd.com.bd/c3vydmvyx8rpbeu9mi8xny8ymfdeehgcfrgzq6ntagdeoaefzbf92ywxizto0u0ezn1izmyfvcedsefedekinkvn3ptomdfsewrtaw51aiphnpti2/moviebanglalink2.stream/tracks-v1a1/mono.m3u8, https://iptvlive.ahmed-bd-org.workers.dev/movie-bangla-1/index.m3u8, http://app24.jagobd.com.bd/c3vydmvyx8rpbeu9mi8xny8ymfdeehgcfrgzq6ntagdeoaefzbf92ywxizto0u0ezn1izmyfvcedsefedekinkvn3ptomdfsewrtaw51aiphnpti2/mytv-up-off.stream/index.m3u8, http://app24.jagobd.com.bd/c3vydmvyx8rpbeu9mi8xny8ymfdeehgcfrgzq6ntagdeoaefzbf92ywxizto0u0ezn1izmyfvcedsefedekinkvn3ptomdfsewrtaw51aiphnpti2/mytv-up-off.stream/tracks-v1a1/mono.m3u8, http://app24.jagobd.com.bd/c3vydmvyx8rpbeu9mi8xny8ymfdeehgcfrgzq6ntagdeoaefzbf92ywxizto0u0ezn1izmyfvcedsefedekinkvn3ptomdfsewrtaw51aiphnpti2/rtv-sg.stream/index.m3u8, http://app24.jagobd.com.bd/c3vydmvyx8rpbeu9mi8xny8ymfdeehgcfrgzq6ntagdeoaefzbf92ywxizto0u0ezn1izmyfvcedsefedekinkvn3ptomdfsewrtaw51aiphnpti2/satvoff5666.stream/playlist.m3u8, https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-1/index.m3u8, https://tvsen5.aynaott.com/tk2bndfsdfsdf/index.m3u8, http://app24.jagobd.com.bd/c3vydmvyx8rpbeu9mi8xny8ymfdeehgcfrgzq6ntagdeoaefzbf92ywxizto0u0ezn1izmyfvcedsefedekinkvn3ptomdfsewrtaw51aiphnpti2/gazibdz.stream/tracks-v1a1/mono.m3u8, https://app24.jagobd.com.bd/c3vydmvyx8rpbeu9mi8xny8ymfdeehgcfrgzq6ntagdeoaefzbf92ywxizto0u0ezn1izmyfvcedsefedekinkvn3ptomdfsewrtaw51aiphnpti2/gazibdz.stream/playlist.m3u8, https://iptvlive.ahmed-bd-org.workers.dev/g-tv-1/index.m3u8 ...
-Modified metadata entries: 36
-Quarantined primary streams: 7X Punjabi -> Backup, Aakaash Aath -> Backup, Bangla Cinema -> Backup, CBN TV USA -> Backup, Channel 24 -> Backup, Channel 52 -> Backup, Channel S -> Backup, Channel S -> Backup, Channel S -> Backup, Channel S -> Backup, Dangal -> Backup, Dhoom Music Bangla -> Backup, G TV -> Backup, Goldmines Movies -> Backup, Green TV -> Backup, Green TV -> Backup, Green TV -> Backup, Green TV -> Backup, Green TV -> Backup, Independent TV -> Backup ...
-Intentionally removed known-bad primary streams: Deepto TV
+Removed: http://tvsen5.aynascope.net/wm9lv2rjzgt6/index.m3u8, http://tvsen5.aynascope.net/atnbangla/index.m3u8, https://tvsen6.aynaott.com/bahrainsports2/index.m3u8, https://tvsen7.aynaott.com/espn/index.m3u8, https://tvsen3.aynaott.com/5cgfpvgp/index.m3u8, https://tvsen6.aynaott.com/wef2vj67njeygdqqnfb9/index.m3u8, http://tvsen5.aynascope.net/maasrangatv/tracks-a1/mono.ts.m3u8, https://tvsen5.aynascope.net/maasrangatv/index.m3u8, https://stream.logichost.in/ntv/live/chunklist_w1420234415.m3u8, http://tvsen5.aynascope.net/rtvhd/index.m3u8, https://tvsen5.aynascope.net/somoytv/mono.m3u8, http://103.151.60.162:2122/play/a01q/index.m3u8, http://103.151.60.162:2122/play/a01u/index.m3u8
+Modified metadata entries: 0
+Quarantined primary streams: none
+Intentionally removed known-bad primary streams: none
 
 ## Blocking Reasons
-- unapproved primary streams removed: 4
 - duplicate primary identities: 1

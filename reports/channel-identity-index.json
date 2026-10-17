@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-17T06:08:07+00:00",
+  "generated": "2026-10-17T06:18:34+00:00",
   "channels": {
     "24hourfreemovies": {
       "names": [
@@ -156,9 +156,9 @@
         "Backup",
         "Indian Bangla"
       ],
-      "streams": 6,
+      "streams": 5,
       "primary": 1,
-      "backup": 5
+      "backup": 4
     },
     "aamarbangla": {
       "names": [
@@ -404,9 +404,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 5,
+      "streams": 4,
       "primary": 1,
-      "backup": 4
+      "backup": 3
     },
     "atnbanglauk": {
       "names": [
@@ -547,12 +547,11 @@
         "bahrainsports2.bh@sd"
       ],
       "groups": [
-        "Backup",
         "Sports"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "balleballe": {
       "names": [
@@ -2976,20 +2975,6 @@
       "primary": 1,
       "backup": 0
     },
-    "custom.ntv.malayalam": {
-      "names": [
-        "NTV (Malayalam)"
-      ],
-      "ids": [
-        "custom.ntv.malayalam"
-      ],
-      "groups": [
-        "Backup"
-      ],
-      "streams": 1,
-      "primary": 0,
-      "backup": 1
-    },
     "custom.paramountnetwork": {
       "names": [
         "Paramount Network"
@@ -4916,12 +4901,11 @@
         "espn.us"
       ],
       "groups": [
-        "Backup",
         "Sports"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "etvbeats": {
       "names": [
@@ -5292,9 +5276,9 @@
         "Backup",
         "Indian Movies"
       ],
-      "streams": 4,
+      "streams": 3,
       "primary": 1,
-      "backup": 3
+      "backup": 2
     },
     "gracenetwork": {
       "names": [
@@ -5481,9 +5465,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 3,
+      "streams": 2,
       "primary": 1,
-      "backup": 2
+      "backup": 1
     },
     "infast": {
       "names": [
@@ -5998,9 +5982,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 8,
+      "streams": 6,
       "primary": 1,
-      "backup": 7
+      "backup": 5
     },
     "madeinhollywood": {
       "names": [
@@ -7787,9 +7771,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 7,
+      "streams": 6,
       "primary": 1,
-      "backup": 6
+      "backup": 5
     },
     "rupasibangla": {
       "names": [
@@ -8119,9 +8103,9 @@
         "Backup",
         "Bangladesh"
       ],
-      "streams": 6,
+      "streams": 5,
       "primary": 1,
-      "backup": 5
+      "backup": 4
     },
     "songdewtv": {
       "names": [
@@ -8317,12 +8301,11 @@
         "sonysab.in@hd"
       ],
       "groups": [
-        "Backup",
         "Indian Entertainment"
       ],
-      "streams": 2,
+      "streams": 1,
       "primary": 1,
-      "backup": 1
+      "backup": 0
     },
     "sonysportsten1": {
       "names": [
@@ -9555,9 +9538,9 @@
         "Backup",
         "Indian Entertainment"
       ],
-      "streams": 5,
+      "streams": 4,
       "primary": 1,
-      "backup": 4
+      "backup": 3
     },
     "zoomoo": {
       "names": [
