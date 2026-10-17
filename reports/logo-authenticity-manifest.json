@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-15T11:36:37.476049+00:00",
+  "generated_at_utc": "2026-10-17T06:01:23.627633+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -7,10 +7,10 @@
     "needs_review": "Authenticity is undocumented, or the logo is missing."
   },
   "counts_by_playlist": {
-    "IPTV-Playlist.m3u": 1020,
+    "IPTV-Playlist.m3u": 1094,
     "BDIX-Playlist.m3u": 139
   },
-  "entry_count": 1159,
+  "entry_count": 1233,
   "entries": [
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -135,8 +135,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "BTV National",
-      "tvg_id": "custom.btv.national",
-      "channel_id": "custom.btv.national",
+      "tvg_id": "BTVNational.bd",
+      "channel_id": "BTVNational.bd",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-national-2db28e10.png",
       "status": "needs_review",
       "source_url": "",
@@ -148,16 +148,6 @@
       "tvg_id": "custom.btv.news",
       "channel_id": "custom.btv.news",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-news.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "BTV World",
-      "tvg_id": "custom.btvworld",
-      "channel_id": "custom.btvworld",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-world.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -214,9 +204,19 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Channel S",
-      "tvg_id": "ChannelS.uk",
-      "channel_id": "ChannelS.uk",
+      "channel_name": "Channel S UK",
+      "tvg_id": "custom.channel.s.uk",
+      "channel_id": "custom.channel.s.uk",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Channel S UK",
+      "tvg_id": "custom.channel.s.uk",
+      "channel_id": "custom.channel.s.uk",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png",
       "status": "needs_review",
       "source_url": "",
@@ -368,16 +368,6 @@
       "tvg_id": "GlobalTV.bd",
       "channel_id": "GlobalTV.bd",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/global-tv-1080p-5ffc043912.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Green TV",
-      "tvg_id": "GreenTV.bd",
-      "channel_id": "GreenTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/green-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -654,16 +644,6 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Aamar Bangla",
-      "tvg_id": "AamarBangla.in@SD",
-      "channel_id": "AamarBangla.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Amar Bangla",
       "tvg_id": "AamarBangla.in",
       "channel_id": "AamarBangla.in",
@@ -684,10 +664,10 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Bangla Cinema",
-      "tvg_id": "custom.banglacinema",
-      "channel_id": "custom.banglacinema",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bangla-cinema.png",
+      "channel_name": "Bangla Jago TV",
+      "tvg_id": "custom.bangla.jago.tv",
+      "channel_id": "custom.bangla.jago.tv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bangla-jago.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -708,16 +688,6 @@
       "tvg_id": "BHI.Channel.in",
       "channel_id": "BHI.Channel.in",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bhi-channel.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Channel 52",
-      "tvg_id": "custom.channel.52",
-      "channel_id": "custom.channel.52",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-52.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -768,26 +738,6 @@
       "tvg_id": "custom.enter10.bangla",
       "channel_id": "custom.enter10.bangla",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Enterr10 Bangla",
-      "tvg_id": "Enterr10Bangla.in@SD",
-      "channel_id": "Enterr10Bangla.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Friends TV",
-      "tvg_id": "FriendsTV.in@SD",
-      "channel_id": "FriendsTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/friends-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -964,16 +914,6 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Star Bangla",
-      "tvg_id": "custom.starbangla",
-      "channel_id": "custom.starbangla",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-bangla.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Star Jalsha",
       "tvg_id": "Star.Jalsha.in",
       "channel_id": "Star.Jalsha.in",
@@ -984,10 +924,30 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Sun Bangla",
+      "tvg_id": "custom.sun.bangla",
+      "channel_id": "custom.sun.bangla",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-bangla.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Tara TV",
       "tvg_id": "custom.taratv",
       "channel_id": "custom.taratv",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tara-tv.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "TV9 Bangla",
+      "tvg_id": "custom.tv9.bangla",
+      "channel_id": "custom.tv9.bangla",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-tv9-bangla-4c591a017a.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -1034,10 +994,20 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Zee Bangla Cinema",
-      "tvg_id": "ZeeBanglaCinema.in@SD",
-      "channel_id": "ZeeBanglaCinema.in@SD",
+      "channel_name": "Zee Bangla Sonar",
+      "tvg_id": "ZeeBanglaSonar.in@SD",
+      "channel_id": "ZeeBanglaSonar.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "& Picture",
+      "tvg_id": "custom.picture.hd",
+      "channel_id": "custom.picture.hd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/picture.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -1071,6 +1041,16 @@
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Bollywood 4U",
+      "tvg_id": "custom.bollywood.4u",
+      "channel_id": "custom.bollywood.4u",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-bollywood-4u.png",
+      "status": "generated_fallback",
+      "source_url": "",
+      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -1214,16 +1194,6 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Hindi Movies",
-      "tvg_id": "custom.hindi.movies",
-      "channel_id": "custom.hindi.movies",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hindi-movies.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "K Cine",
       "tvg_id": "custom.kcine",
       "channel_id": "custom.kcine",
@@ -1304,16 +1274,6 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Movies Now",
-      "tvg_id": "MoviesNow.in@SD",
-      "channel_id": "MoviesNow.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-now-hd.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "NH BollyFlix",
       "tvg_id": "NHBollyFlix.in",
       "channel_id": "NHBollyFlix.in",
@@ -1328,16 +1288,6 @@
       "tvg_id": "NHTamilGold.in",
       "channel_id": "NHTamilGold.in",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nh-tamil-gold.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Oscar Movies Bhojpuri",
-      "tvg_id": "OscarMoviesBhojpuri.in@SD",
-      "channel_id": "OscarMoviesBhojpuri.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/oscar-movies-bhojpuri.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -1628,16 +1578,6 @@
       "tvg_id": "7SMusic.in@SD",
       "channel_id": "7SMusic.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "7X Punjabi",
-      "tvg_id": "custom.7x.punjabi",
-      "channel_id": "custom.7x.punjabi",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7x-punjabi.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -2124,10 +2064,10 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Zoom Music",
-      "tvg_id": "custom.zoommusic",
-      "channel_id": "custom.zoommusic",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-music.png",
+      "channel_name": "Zoom",
+      "tvg_id": "custom.zoom",
+      "channel_id": "custom.zoom",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -2141,6 +2081,26 @@
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Aaj Tak",
+      "tvg_id": "custom.aaj.tak.hd",
+      "channel_id": "custom.aaj.tak.hd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aaj-tak-hd.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Aap Ki Adalat",
+      "tvg_id": "custom.aap.ki.adalat",
+      "channel_id": "custom.aap.ki.adalat",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-aap-ki-adalat.png",
+      "status": "generated_fallback",
+      "source_url": "",
+      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -2504,6 +2464,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "DD Mizoram",
+      "tvg_id": "custom.dd.mizoram",
+      "channel_id": "custom.dd.mizoram",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-dd-mizoram-697957b72d.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "DD Nagaland",
       "tvg_id": "DDNagaland.in@SD",
       "channel_id": "DDNagaland.in@SD",
@@ -2734,6 +2704,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "GNT",
+      "tvg_id": "custom.gnt",
+      "channel_id": "custom.gnt",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gnt.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Hi Dost!",
       "tvg_id": "HiDost.in@SD",
       "channel_id": "HiDost.in@SD",
@@ -2934,16 +2914,6 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "NTV (Malayalam)",
-      "tvg_id": "custom.ntv.malayalam",
-      "channel_id": "custom.ntv.malayalam",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Odisha TV",
       "tvg_id": "OdishaTV.in@SD",
       "channel_id": "OdishaTV.in@SD",
@@ -2968,6 +2938,16 @@
       "tvg_id": "OnePaschima.in@SD",
       "channel_id": "OnePaschima.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/one-paschima.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Pardesi TV",
+      "tvg_id": "PardesiTV.ca",
+      "channel_id": "PardesiTV.ca",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pardesi-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -3744,6 +3724,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "AccuWeather",
+      "tvg_id": "custom.accuweather",
+      "channel_id": "custom.accuweather",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/accuweather.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Action Hollywood Movies",
       "tvg_id": "plex.tv.Action.Hollywood.Movies.plex",
       "channel_id": "plex.tv.Action.Hollywood.Movies.plex",
@@ -3798,16 +3788,6 @@
       "tvg_id": "custom.america.s.got.talent",
       "channel_id": "custom.america.s.got.talent",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/america-s-got-talent.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "American Horrors",
-      "tvg_id": "custom.americanhorrors",
-      "channel_id": "custom.americanhorrors",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/american-horrors-95025c0d.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -3914,20 +3894,20 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Blues TV",
-      "tvg_id": "custom.bluestv",
-      "channel_id": "custom.bluestv",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/blues-tv.png",
+      "channel_name": "Bloomberg TV",
+      "tvg_id": "custom.bloomberg.tv",
+      "channel_id": "custom.bloomberg.tv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bloomberg-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "CBN TV USA",
-      "tvg_id": "custom.cbn.tv.usa",
-      "channel_id": "custom.cbn.tv.usa",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cbn-tv-usa.png",
+      "channel_name": "CBS TV",
+      "tvg_id": "custom.cbs.tv",
+      "channel_id": "custom.cbs.tv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cbs-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -3954,13 +3934,13 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Classic Movies",
-      "tvg_id": "custom.classicmovies",
-      "channel_id": "custom.classicmovies",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/classic-movies-channel-1d5f82d98a.png",
-      "status": "needs_review",
+      "channel_name": "CMAC TV",
+      "tvg_id": "custom.cmac.tv",
+      "channel_id": "custom.cmac.tv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-cmac-tv.png",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -3984,10 +3964,50 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "CNBC TV",
+      "tvg_id": "custom.cnbc.tv",
+      "channel_id": "custom.cnbc.tv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cnbc-tv.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "CNN",
+      "tvg_id": "custom.cnn",
+      "channel_id": "custom.cnn",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cnn.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Comedy Central",
+      "tvg_id": "custom.comedy.central",
+      "channel_id": "custom.comedy.central",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/comedy-central.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Cook & Bake",
       "tvg_id": "custom.cookandbake",
       "channel_id": "custom.cookandbake",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cook-bake.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "CP24",
+      "tvg_id": "custom.cp24",
+      "channel_id": "custom.cp24",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cp24.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -4114,6 +4134,36 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Fox 5",
+      "tvg_id": "custom.fox.5",
+      "channel_id": "custom.fox.5",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-fox-5.png",
+      "status": "generated_fallback",
+      "source_url": "",
+      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Fox News",
+      "tvg_id": "custom.fox.news",
+      "channel_id": "custom.fox.news",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fox-news.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "FX TV",
+      "tvg_id": "custom.fx.tv",
+      "channel_id": "custom.fx.tv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fx-tv.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Gravitas Movies",
       "tvg_id": "GravitasMovies.us",
       "channel_id": "GravitasMovies.us",
@@ -4174,6 +4224,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Icon Film Channel",
+      "tvg_id": "custom.icon.film.channel",
+      "channel_id": "custom.icon.film.channel",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-icon-film-channel.png",
+      "status": "generated_fallback",
+      "source_url": "",
+      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "iFilm English",
       "tvg_id": "iFilmEnglish.ir",
       "channel_id": "iFilmEnglish.ir",
@@ -4198,6 +4258,26 @@
       "tvg_id": "custom.kronehit",
       "channel_id": "custom.kronehit",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-kronehit.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "LAFF TV",
+      "tvg_id": "custom.laff.tv",
+      "channel_id": "custom.laff.tv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/laff-tv.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Lifetime",
+      "tvg_id": "custom.lifetime",
+      "channel_id": "custom.lifetime",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lifetime.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -4294,10 +4374,10 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Metro TV (Honduras)",
-      "tvg_id": "MetroTV.hn",
-      "channel_id": "MetroTV.hn",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/metro-tv-honduras.png",
+      "channel_name": "MN+",
+      "tvg_id": "custom.mn.plus",
+      "channel_id": "custom.mn.plus",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mn.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -4308,6 +4388,16 @@
       "tvg_id": "custom.moviedomefamily",
       "channel_id": "custom.moviedomefamily",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movie-dome-family.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Movies Now",
+      "tvg_id": "MoviesNow.in@SD",
+      "channel_id": "MoviesNow.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-now-hd.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -4358,6 +4448,16 @@
       "tvg_id": "MovieSphere.us@UK",
       "channel_id": "MovieSphere.us@UK",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/moviesphere-uk.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "MSNBC",
+      "tvg_id": "custom.msnbc",
+      "channel_id": "custom.msnbc",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/msnbc.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -4474,13 +4574,13 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Pardesi TV",
-      "tvg_id": "PardesiTV.ca",
-      "channel_id": "PardesiTV.ca",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pardesi-tv.png",
-      "status": "needs_review",
+      "channel_name": "Pix 11",
+      "tvg_id": "custom.pix.11",
+      "channel_id": "custom.pix.11",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-pix-11.png",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -4491,6 +4591,16 @@
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Popflix",
+      "tvg_id": "custom.popflix",
+      "channel_id": "custom.popflix",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-popflix.png",
+      "status": "generated_fallback",
+      "source_url": "",
+      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -4684,16 +4794,6 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Stingray Remember the 80s",
-      "tvg_id": "custom.stingrayrememberthe80s",
-      "channel_id": "custom.stingrayrememberthe80s",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/stingray-remember-the-80s.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Stingray Rock Alternative",
       "tvg_id": "StingrayRockAlternative.ca",
       "channel_id": "StingrayRockAlternative.ca",
@@ -4744,6 +4844,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "TBS",
+      "tvg_id": "custom.tbs",
+      "channel_id": "custom.tbs",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tbs.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Teleritmo",
       "tvg_id": "custom.teleritmo",
       "channel_id": "custom.teleritmo",
@@ -4788,16 +4898,6 @@
       "tvg_id": "Totalmusic.uk",
       "channel_id": "Totalmusic.uk",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/totalmusic-1080p-4921970701.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Totalmusic 80s",
-      "tvg_id": "Totalmusic80s.uk",
-      "channel_id": "Totalmusic80s.uk",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/totalmusic-80s-1080p-4c7ec66995.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -4864,10 +4964,10 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Vevo '70s & '80s",
-      "tvg_id": "custom.vevo70sand80s",
-      "channel_id": "custom.vevo70sand80s",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vevo-70s-80s.png",
+      "channel_name": "USA TV",
+      "tvg_id": "custom.usa.tv",
+      "channel_id": "custom.usa.tv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/usa-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -4934,13 +5034,13 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "YTV",
-      "tvg_id": "custom.ytv",
-      "channel_id": "custom.ytv",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ytv.png",
-      "status": "needs_review",
+      "channel_name": "60 Days In",
+      "tvg_id": "custom.60.days.in",
+      "channel_id": "custom.60.days.in",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-60-days-in.png",
+      "status": "generated_fallback",
       "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -4951,6 +5051,16 @@
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Alone",
+      "tvg_id": "custom.alone",
+      "channel_id": "custom.alone",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-alone.png",
+      "status": "generated_fallback",
+      "source_url": "",
+      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -5024,6 +5134,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Cooking Channel",
+      "tvg_id": "custom.cooking.channel",
+      "channel_id": "custom.cooking.channel",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cooking-channel.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Crime & Justice",
       "tvg_id": "custom.crime.justice",
       "channel_id": "custom.crime.justice",
@@ -5038,6 +5158,16 @@
       "tvg_id": "custom.crime.scene.tv",
       "channel_id": "custom.crime.scene.tv",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/crime-scene-tv.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Deadly Women",
+      "tvg_id": "custom.deadly.women",
+      "channel_id": "custom.deadly.women",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-deadly-women-31fc86abfc.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -5161,6 +5291,16 @@
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Highway Thru Hell",
+      "tvg_id": "custom.highway.thru.hell",
+      "channel_id": "custom.highway.thru.hell",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-highway-thru-hell.png",
+      "status": "generated_fallback",
+      "source_url": "",
+      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -5348,6 +5488,16 @@
       "tvg_id": "custom.nat.geo.tv",
       "channel_id": "custom.nat.geo.tv",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Nat Geo Wild",
+      "tvg_id": "NationalGeographicWild.in@SD",
+      "channel_id": "NationalGeographicWild.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -5625,6 +5775,16 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Cartoon Network",
+      "tvg_id": "custom.cartoon.network.hd",
+      "channel_id": "custom.cartoon.network.hd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network-hd.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Cartoon Network",
       "tvg_id": "CartoonNetwork.uk",
       "channel_id": "CartoonNetwork.uk",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network.png",
@@ -5754,20 +5914,20 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "MINI",
+      "tvg_id": "custom.mini",
+      "channel_id": "custom.mini",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-mini.png",
+      "status": "generated_fallback",
+      "source_url": "",
+      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Moonbug Kids",
       "tvg_id": "MoonbugKids.uk",
       "channel_id": "MoonbugKids.uk",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/moonbug-kids.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Motu Patlu",
-      "tvg_id": "custom.motu.patlu",
-      "channel_id": "custom.motu.patlu",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/motu-patlu.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -5894,16 +6054,6 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Super Hungama",
-      "tvg_id": "SuperHungama.in@SD",
-      "channel_id": "SuperHungama.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/super-hungama.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Teen Nick",
       "tvg_id": "custom.teennick",
       "channel_id": "custom.teennick",
@@ -5984,6 +6134,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "TVC Arabic Kids",
+      "tvg_id": "custom.tvc.arabic.kids",
+      "channel_id": "custom.tvc.arabic.kids",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-tvc-arabic-kids.png",
+      "status": "generated_fallback",
+      "source_url": "",
+      "reason": "Original generated artwork marked UNOFFICIAL ARTWORK; not a broadcaster logo."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "WOW Kidz Hindi",
       "tvg_id": "WOWKidz.in@Hindi",
       "channel_id": "WOWKidz.in@Hindi",
@@ -6014,6 +6174,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "YTV",
+      "tvg_id": "custom.xtv",
+      "channel_id": "custom.xtv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ytv.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "ZB Cartoon",
       "tvg_id": "ZBCartoon.in",
       "channel_id": "ZBCartoon.in",
@@ -6024,7 +6194,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "ZooMoo",
+      "channel_name": "Zoo Moo",
       "tvg_id": "ZooMoo.sg",
       "channel_id": "ZooMoo.sg",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoomoo.png",
@@ -6145,8 +6315,8 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Islamic TV",
-      "tvg_id": "IslamicTV.bd",
-      "channel_id": "IslamicTV.bd",
+      "tvg_id": "custom.islamic.tv",
+      "channel_id": "custom.islamic.tv",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/islamic-tv.png",
       "status": "needs_review",
       "source_url": "",
@@ -6214,6 +6384,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "A Sports",
+      "tvg_id": "custom.a.sports.hd",
+      "channel_id": "custom.a.sports.hd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-a-sports-65a3e1d8fd.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Bahrain Sports 2",
       "tvg_id": "BahrainSports2.bh@SD",
       "channel_id": "BahrainSports2.bh@SD",
@@ -6264,6 +6444,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Euro Sports",
+      "tvg_id": "custom.euro.sports.hd",
+      "channel_id": "custom.euro.sports.hd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/euro-sports-hd.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "FITE 24/7",
       "tvg_id": "FITE247.us@SD",
       "channel_id": "FITE247.us@SD",
@@ -6288,6 +6478,36 @@
       "tvg_id": "GoalTV.in",
       "channel_id": "GoalTV.in",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goal-tv-237cfbed.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Marquee Sports Network",
+      "tvg_id": "custom.marquee.sports.network",
+      "channel_id": "custom.marquee.sports.network",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/marquee-sports-network.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Mundial",
+      "tvg_id": "custom.mundial",
+      "channel_id": "custom.mundial",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mundial.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "NFL Network",
+      "tvg_id": "custom.nfl.network",
+      "channel_id": "custom.nfl.network",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nfl-network.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -6324,6 +6544,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "PTV",
+      "tvg_id": "custom.ptv",
+      "channel_id": "custom.ptv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ptv-sports.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Red Bull TV",
       "tvg_id": "RedBullTV.at@EUMENA",
       "channel_id": "RedBullTV.at@EUMENA",
@@ -6344,6 +6574,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Sony Ten 2",
+      "tvg_id": "custom.sony.ten.2",
+      "channel_id": "custom.sony.ten.2",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-ten-2.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Sony Ten 5",
       "tvg_id": "custom.sony.ten.5",
       "channel_id": "custom.sony.ten.5",
@@ -6354,10 +6594,70 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Sports First TV",
+      "tvg_id": "custom.sports.first.tv",
+      "channel_id": "custom.sports.first.tv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sports-first-tv.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Star Sports 1",
+      "tvg_id": "custom.star.sports.1",
+      "channel_id": "custom.star.sports.1",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-1.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Star Sports 1 Hindi",
       "tvg_id": "StarSports1Hindi.in@HD",
       "channel_id": "StarSports1Hindi.in@HD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-1-hindi.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Star Sports 2",
+      "tvg_id": "custom.star.sports.2",
+      "channel_id": "custom.star.sports.2",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-2.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Star Sports Select 1",
+      "tvg_id": "custom.star.sports.select.1",
+      "channel_id": "custom.star.sports.select.1",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-select-1.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Star Sports Select 2",
+      "tvg_id": "custom.star.sports.select.2",
+      "channel_id": "custom.star.sports.select.2",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-select-2.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "T Sports",
+      "tvg_id": "custom.t.sports.hd",
+      "channel_id": "custom.t.sports.hd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/t-sports.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -6384,10 +6684,20 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Wipeout Xtra",
-      "tvg_id": "WipeoutXtra.uk",
-      "channel_id": "WipeoutXtra.uk",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wipeout-xtra-powered-by-banijay-efac5b76.png",
+      "channel_name": "Willow",
+      "tvg_id": "custom.willow.hd",
+      "channel_id": "custom.willow.hd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/willow.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Willow TV",
+      "tvg_id": "custom.willow.tv",
+      "channel_id": "custom.willow.tv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/willow-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -6398,6 +6708,16 @@
       "tvg_id": "7SMusic.in@SD",
       "channel_id": "7SMusic.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "7X Punjabi",
+      "tvg_id": "custom.7x.punjabi",
+      "channel_id": "custom.7x.punjabi",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7x-punjabi.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -6474,6 +6794,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "A Sports",
+      "tvg_id": "custom.a.sports.hd",
+      "channel_id": "custom.a.sports.hd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-a-sports-65a3e1d8fd.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Aakaash Aath",
       "tvg_id": "AakaashAath.in@SD",
       "channel_id": "AakaashAath.in@SD",
@@ -6534,10 +6864,30 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Action Hollywood Movies",
+      "tvg_id": "plex.tv.Action.Hollywood.Movies.plex",
+      "channel_id": "plex.tv.Action.Hollywood.Movies.plex",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/action-hollywood-movies.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Al Quran Al Kareem TV",
       "tvg_id": "AlQuranAlKareemTV.sa",
       "channel_id": "AlQuranAlKareemTV.sa",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/al-quran-al-kareem-tv.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Amar Bangla",
+      "tvg_id": "AamarBangla.in",
+      "channel_id": "AamarBangla.in",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amar-bangla.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -6904,6 +7254,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Bahrain Sports 2",
+      "tvg_id": "BahrainSports2.bh@SD",
+      "channel_id": "BahrainSports2.bh@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bahrain-sports-2.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Balle Balle",
       "tvg_id": "BalleBalle.in@SD",
       "channel_id": "BalleBalle.in@SD",
@@ -6918,6 +7278,16 @@
       "tvg_id": "BalleBalle.in@SD",
       "channel_id": "BalleBalle.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/balle-balle.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Bangla Cinema",
+      "tvg_id": "custom.banglacinema",
+      "channel_id": "custom.banglacinema",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bangla-cinema.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -6998,6 +7368,36 @@
       "tvg_id": "BarazaMusicTV.gr",
       "channel_id": "BarazaMusicTV.gr",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/baraza-music-tv.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "BBC Earth",
+      "tvg_id": "BBCEarth.ca",
+      "channel_id": "BBCEarth.ca",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-earth.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "BBC Earth",
+      "tvg_id": "BBCEarth.ca",
+      "channel_id": "BBCEarth.ca",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-earth.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "beIN SPORTS XTRA",
+      "tvg_id": "beINSPORTSXTRA.us",
+      "channel_id": "beINSPORTSXTRA.us",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-xtra.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -7144,10 +7544,30 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "BTV News",
-      "tvg_id": "custom.btv.news",
-      "channel_id": "custom.btv.news",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-news.png",
+      "channel_name": "BTV National",
+      "tvg_id": "BTVNational.bd",
+      "channel_id": "BTVNational.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/btv-national-2db28e10.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Cartoon Network",
+      "tvg_id": "custom.cartoon.network.hd",
+      "channel_id": "custom.cartoon.network.hd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cartoon-network-hd.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "CBN TV USA",
+      "tvg_id": "custom.cbn.tv.usa",
+      "channel_id": "custom.cbn.tv.usa",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cbn-tv-usa.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -7364,10 +7784,20 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Colors Bangla",
-      "tvg_id": "Colors.Bangla.in",
-      "channel_id": "Colors.Bangla.in",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png",
+      "channel_name": "Colors",
+      "tvg_id": "Colors.in",
+      "channel_id": "Colors.in",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-colors-3cfc323d7c.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Colors",
+      "tvg_id": "Colors.in",
+      "channel_id": "Colors.in",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-colors-3cfc323d7c.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -7404,10 +7834,10 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Colors Bangla Cinema",
-      "tvg_id": "ColorsBanglaCinema.in@SD",
-      "channel_id": "ColorsBanglaCinema.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-cinema.png",
+      "channel_name": "Colors Bangla",
+      "tvg_id": "Colors.Bangla.in",
+      "channel_id": "Colors.Bangla.in",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -7458,6 +7888,26 @@
       "tvg_id": "ColorsTamil.in@SD",
       "channel_id": "ColorsTamil.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-tamil.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Cricket Gold",
+      "tvg_id": "CricketGold.au@SD",
+      "channel_id": "CricketGold.au@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cricket-gold.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Cricket Gold",
+      "tvg_id": "CricketGold.au@SD",
+      "channel_id": "CricketGold.au@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cricket-gold.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -7654,6 +8104,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "DD Madhya Pradesh",
+      "tvg_id": "DDMadhyaPradesh.in@SD",
+      "channel_id": "DDMadhyaPradesh.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-madhya-pradesh.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "DD National",
       "tvg_id": "DDNational.in@SD",
       "channel_id": "DDNational.in@SD",
@@ -7668,6 +8128,16 @@
       "tvg_id": "DDOdia.in@SD",
       "channel_id": "DDOdia.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-odia.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "DD Rajasthan",
+      "tvg_id": "DDRajasthan.in@SD",
+      "channel_id": "DDRajasthan.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-rajasthan.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -7778,6 +8248,16 @@
       "tvg_id": "DiscoverPakistan.pk@SD",
       "channel_id": "DiscoverPakistan.pk@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discover-pakistan.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Discovery Kids",
+      "tvg_id": "DiscoveryKids.au",
+      "channel_id": "DiscoveryKids.au",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-kids.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -7934,10 +8414,60 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Enter TV",
-      "tvg_id": "custom.enter.tv",
-      "channel_id": "custom.enter.tv",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter-tv.png",
+      "channel_name": "Enter10 Bangla",
+      "tvg_id": "custom.enter10.bangla",
+      "channel_id": "custom.enter10.bangla",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Enter10 Bangla",
+      "tvg_id": "custom.enter10.bangla",
+      "channel_id": "custom.enter10.bangla",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Enter10 Bangla",
+      "tvg_id": "custom.enter10.bangla",
+      "channel_id": "custom.enter10.bangla",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Enter10 Bangla",
+      "tvg_id": "custom.enter10.bangla",
+      "channel_id": "custom.enter10.bangla",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Enter10 Bangla",
+      "tvg_id": "custom.enter10.bangla",
+      "channel_id": "custom.enter10.bangla",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Enter10 Bangla",
+      "tvg_id": "custom.enter10.bangla",
+      "channel_id": "custom.enter10.bangla",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -7954,50 +8484,10 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Enterr10 Bangla",
-      "tvg_id": "Enterr10Bangla.in@SD",
-      "channel_id": "Enterr10Bangla.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Enterr10 Bangla",
-      "tvg_id": "Enterr10Bangla.in@SD",
-      "channel_id": "Enterr10Bangla.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Enterr10 Bangla",
-      "tvg_id": "Enterr10Bangla.in@SD",
-      "channel_id": "Enterr10Bangla.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Enterr10 Bangla",
-      "tvg_id": "Enterr10Bangla.in@SD",
-      "channel_id": "Enterr10Bangla.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Enterr10 Bangla",
-      "tvg_id": "Enterr10Bangla.in@SD",
-      "channel_id": "Enterr10Bangla.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enterr10-bangla.png",
+      "channel_name": "Enter TV",
+      "tvg_id": "custom.enter.tv",
+      "channel_id": "custom.enter.tv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -8058,6 +8548,16 @@
       "tvg_id": "EpicMusic.in@SD",
       "channel_id": "EpicMusic.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-music.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "ESPN",
+      "tvg_id": "ESPN.us",
+      "channel_id": "ESPN.us",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/espn.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -8144,10 +8644,10 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Global TV",
-      "tvg_id": "GlobalTV.bd",
-      "channel_id": "GlobalTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/global-tv-1080p-5ffc043912.png",
+      "channel_name": "G TV",
+      "tvg_id": "GaziTV.bd",
+      "channel_id": "GaziTV.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/g-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -8174,20 +8674,10 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Goldmines",
-      "tvg_id": "Goldmines.in@SD",
-      "channel_id": "Goldmines.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Goldmines",
-      "tvg_id": "Goldmines.in@SD",
-      "channel_id": "Goldmines.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines.png",
+      "channel_name": "Global TV",
+      "tvg_id": "GlobalTV.bd",
+      "channel_id": "GlobalTV.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/global-tv-1080p-5ffc043912.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -8364,6 +8854,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Green TV",
+      "tvg_id": "GreenTV.bd",
+      "channel_id": "GreenTV.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/green-tv.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "HBO",
       "tvg_id": "custom.hbo",
       "channel_id": "custom.hbo",
@@ -8374,20 +8874,30 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "History TV18",
-      "tvg_id": "HistoryTV18.in@SD",
-      "channel_id": "HistoryTV18.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history-tv18.png",
+      "channel_name": "HBO",
+      "tvg_id": "custom.hbo",
+      "channel_id": "custom.hbo",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hbo.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "HUM Masala",
-      "tvg_id": "custom.hummasala",
-      "channel_id": "custom.hummasala",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-masala.png",
+      "channel_name": "History Hit",
+      "tvg_id": "HistoryHit.uk",
+      "channel_id": "HistoryHit.uk",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history-hit.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "History TV18",
+      "tvg_id": "HistoryTV18.in@SD",
+      "channel_id": "HistoryTV18.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history-tv18.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -8484,6 +8994,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Iqra Bangla",
+      "tvg_id": "IqraBangla.uk",
+      "channel_id": "IqraBangla.uk",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/iqra-bangla.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Jago News 24",
       "tvg_id": "JagoNews24.bd",
       "channel_id": "JagoNews24.bd",
@@ -8498,6 +9018,16 @@
       "tvg_id": "JagoNews24.bd",
       "channel_id": "JagoNews24.bd",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jago-news-24.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Jalsha Bangla BD",
+      "tvg_id": "custom.jalsha.bangla.bd",
+      "channel_id": "custom.jalsha.bangla.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -8974,10 +9504,10 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "My TV",
-      "tvg_id": "MyTV.bd",
-      "channel_id": "MyTV.bd",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/my-tv.png",
+      "channel_name": "Music India",
+      "tvg_id": "MusicIndia.in@SD",
+      "channel_id": "MusicIndia.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/music-india.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -9018,6 +9548,26 @@
       "tvg_id": "MyTV.bd",
       "channel_id": "MyTV.bd",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/my-tv.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "My TV",
+      "tvg_id": "MyTV.bd",
+      "channel_id": "MyTV.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/my-tv.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Mystery TV",
+      "tvg_id": "MysteryTV.us",
+      "channel_id": "MysteryTV.us",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mystery-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -9038,6 +9588,36 @@
       "tvg_id": "custom.nat.geo.tv",
       "channel_id": "custom.nat.geo.tv",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Nat Geo TV",
+      "tvg_id": "custom.nat.geo.tv",
+      "channel_id": "custom.nat.geo.tv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Nature Time",
+      "tvg_id": "custom.nature.time",
+      "channel_id": "custom.nature.time",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/naturetime.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "News 24",
+      "tvg_id": "News24.bd",
+      "channel_id": "News24.bd",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/news-24.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -9194,10 +9774,30 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "NTV (Malayalam)",
+      "tvg_id": "custom.ntv.malayalam",
+      "channel_id": "custom.ntv.malayalam",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "NTV Europe",
       "tvg_id": "NTVEurope.bd",
       "channel_id": "NTVEurope.bd",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv-europe.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Oscar Movies Bhojpuri",
+      "tvg_id": "OscarMoviesBhojpuri.in@SD",
+      "channel_id": "OscarMoviesBhojpuri.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/oscar-movies-bhojpuri.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -9254,6 +9854,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Pogo",
+      "tvg_id": "Pogo.in@SD",
+      "channel_id": "Pogo.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pogo.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "PowerTürk TV",
       "tvg_id": "PowerTurkTV.tr",
       "channel_id": "PowerTurkTV.tr",
@@ -9288,6 +9898,16 @@
       "tvg_id": "PTCPunjabi.in@SD",
       "channel_id": "PTCPunjabi.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ptc-punjabi.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "PTV",
+      "tvg_id": "custom.ptv",
+      "channel_id": "custom.ptv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ptv-sports.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -9348,6 +9968,16 @@
       "tvg_id": "RPlusGold.in@SD",
       "channel_id": "RPlusGold.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus-gold.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Rajdhani TV",
+      "tvg_id": "custom.rajdhanitv",
+      "channel_id": "custom.rajdhanitv",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rajdhani-tv.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -9514,6 +10144,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Ruposhi Bangla",
+      "tvg_id": "RupasiBangla.in@SD",
+      "channel_id": "RupasiBangla.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ruposhi-bangla.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "SA TV",
       "tvg_id": "SATV.bd",
       "channel_id": "SATV.bd",
@@ -9584,6 +10224,16 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Sananda",
+      "tvg_id": "SanandaTV.in",
+      "channel_id": "SanandaTV.in",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-sananda-64faf3c524.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Sangeet Bangla",
       "tvg_id": "SangeetBangla.in@SD",
       "channel_id": "SangeetBangla.in@SD",
@@ -9598,6 +10248,26 @@
       "tvg_id": "SangeetBangla.in@SD",
       "channel_id": "SangeetBangla.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sangeet-bangla.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Sangeet Bangla",
+      "tvg_id": "SangeetBangla.in@SD",
+      "channel_id": "SangeetBangla.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sangeet-bangla.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Sangeet Bhojpuri",
+      "tvg_id": "SangeetBhojpuri.in@SD",
+      "channel_id": "SangeetBhojpuri.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sangeet-bhojpuri.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -9764,16 +10434,6 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Sony Entertainment TV",
-      "tvg_id": "SonyEntertainmentTelevision.in@SD",
-      "channel_id": "SonyEntertainmentTelevision.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-entertainment-tv.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
       "channel_name": "Sony Max",
       "tvg_id": "SonyMax.in@SD",
       "channel_id": "SonyMax.in@SD",
@@ -9804,10 +10464,20 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Sony SAB",
-      "tvg_id": "SonySAB.in@HD",
-      "channel_id": "SonySAB.in@HD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sab.png",
+      "channel_name": "Sony Ten 2",
+      "tvg_id": "custom.sony.ten.2",
+      "channel_id": "custom.sony.ten.2",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-ten-2.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Sony Ten 5",
+      "tvg_id": "custom.sony.ten.5",
+      "channel_id": "custom.sony.ten.5",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-ten-5.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -9824,10 +10494,30 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Star Jalsha",
-      "tvg_id": "Star.Jalsha.in",
-      "channel_id": "Star.Jalsha.in",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png",
+      "channel_name": "Star Bangla",
+      "tvg_id": "custom.starbangla",
+      "channel_id": "custom.starbangla",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-bangla.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Star Bharat",
+      "tvg_id": "StarBharat.in",
+      "channel_id": "StarBharat.in",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-bharat.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Star Gold",
+      "tvg_id": "custom.star.gold",
+      "channel_id": "custom.star.gold",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-star-gold-2d8d66200b.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -9848,6 +10538,16 @@
       "tvg_id": "Star.Jalsha.in",
       "channel_id": "Star.Jalsha.in",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Star Movies",
+      "tvg_id": "custom.star.movies",
+      "channel_id": "custom.star.movies",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-movies-2087bb49.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -9858,6 +10558,26 @@
       "tvg_id": "StarMoviesSelect.in@HD",
       "channel_id": "StarMoviesSelect.in@HD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-movies-select-37627406.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Star Plus",
+      "tvg_id": "StarPlus.in@SD",
+      "channel_id": "StarPlus.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-star-plus-17496c1826.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Star Sports Select 1",
+      "tvg_id": "custom.star.sports.select.1",
+      "channel_id": "custom.star.sports.select.1",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-select-1.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -9884,20 +10604,30 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "The Walking Dead Universe",
-      "tvg_id": "TheWalkingDeadUniverse.us",
-      "channel_id": "TheWalkingDeadUniverse.us",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-walking-dead-universe-1080p-5755c61da2.png",
+      "channel_name": "talkSPORT",
+      "tvg_id": "talkSPORT.uk@SD",
+      "channel_id": "talkSPORT.uk@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/talksport.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Thikana",
-      "tvg_id": "ThikanaTV.us",
-      "channel_id": "ThikanaTV.us",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/thikana.png",
+      "channel_name": "The Movie Club",
+      "tvg_id": "TheMovieClub.in@HD",
+      "channel_id": "TheMovieClub.in@HD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-movie-club.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "The Walking Dead Universe",
+      "tvg_id": "TheWalkingDeadUniverse.us",
+      "channel_id": "TheWalkingDeadUniverse.us",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-walking-dead-universe-1080p-5755c61da2.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -9928,6 +10658,16 @@
       "tvg_id": "TraceUrban.fr",
       "channel_id": "TraceUrban.fr",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trace-urban-1080p-52524ff192.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Travelxp English",
+      "tvg_id": "custom.travelxp.english",
+      "channel_id": "custom.travelxp.english",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travelxp-english.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
@@ -10094,9 +10834,19 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Zee Bangla Cinema",
-      "tvg_id": "ZeeBanglaCinema.in@SD",
-      "channel_id": "ZeeBanglaCinema.in@SD",
+      "channel_name": "Zee Bangla Sonar",
+      "tvg_id": "ZeeBanglaSonar.in@SD",
+      "channel_id": "ZeeBanglaSonar.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png",
+      "status": "needs_review",
+      "source_url": "",
+      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "channel_name": "Zee Bangla Sonar",
+      "tvg_id": "ZeeBanglaSonar.in@SD",
+      "channel_id": "ZeeBanglaSonar.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png",
       "status": "needs_review",
       "source_url": "",
@@ -10194,20 +10944,10 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Zee TV",
-      "tvg_id": "ZeeTV.in@SD",
-      "channel_id": "ZeeTV.in@SD",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.png",
-      "status": "needs_review",
-      "source_url": "",
-      "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."
-    },
-    {
-      "playlist": "IPTV-Playlist.m3u",
-      "channel_name": "Zoom Music",
-      "tvg_id": "custom.zoommusic",
-      "channel_id": "custom.zoommusic",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-music.png",
+      "channel_name": "Zoo Moo",
+      "tvg_id": "ZooMoo.sg",
+      "channel_id": "ZooMoo.sg",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoomoo.png",
       "status": "needs_review",
       "source_url": "",
       "reason": "No explicit provenance record confirms this image as an authentic broadcaster asset."

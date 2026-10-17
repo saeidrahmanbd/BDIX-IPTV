@@ -4,92 +4,46 @@ Generated from the current playlist and latest available stream-health report. T
 
 ## Summary
 
-- /streamtest/ endpoints: **9**
-- Signed/token-query endpoints: **9**
+- /streamtest/ endpoints: **11**
+- Signed/token-query endpoints: **11**
 - Xtream-style credential paths (credentials redacted): **0**
-- Proxy/worker-host routes: **41** (2 primary, 39 Backup)
-- /api/play/ relay routes: **19**
+- Proxy/worker-host routes: **38** (2 primary, 36 Backup)
+- /api/play/ relay routes: **15**
 
 ## Latest Stream-Health Snapshot
 
 | Metric | Count |
 |---|---:|
-| Streams tested | 1020 |
-| Reachable | 954 |
-| Failed this check | 66 |
-| Persistent failures (3+ consecutive) | 65 |
-| HTTP 401/403 (auth) | 5 |
-| HTTP 404 (not found) | 6 |
-| HTTP 5xx (server) | 3 |
-| Timeout | 52 |
+| Streams tested | 1074 |
+| Reachable | 1030 |
+| Failed this check | 44 |
+| Persistent failures (3+ consecutive) | 19 |
+| HTTP 401/403 (auth) | 10 |
+| HTTP 404 (not found) | 20 |
+| HTTP 5xx (server) | 1 |
+| Timeout | 13 |
 
 ### Persistent failures
 
-- **ATN Bangla UK** — Backup — consecutive failures: **7** — Timeout
-- **Amar Bangla Digital** — Backup — consecutive failures: **7** — Timeout
-- **Ananda TV** — Backup — consecutive failures: **8** — Timeout
-- **Ananda TV** — Backup — consecutive failures: **12** — Timeout
-- **Channel 1** — Backup — consecutive failures: **8** — Timeout
-- **Channel 1** — Backup — consecutive failures: **8** — Timeout
-- **Channel 52** — Backup — consecutive failures: **7** — HTTP 404
-- **Channel S** — Backup — consecutive failures: **8** — Timeout
-- **Channel S** — Backup — consecutive failures: **7** — Timeout
-- **Channel S** — Backup — consecutive failures: **7** — Timeout
-- **Channel S** — Backup — consecutive failures: **8** — Timeout
-- **Deen TV** — Backup — consecutive failures: **7** — Timeout
-- **Desh TV** — Backup — consecutive failures: **8** — Timeout
-- **Discover Pakistan** — Backup — consecutive failures: **7** — Timeout
-- **Disney Channel India** — Backup — consecutive failures: **84** — HTTP 403
-- **Ekhon TV** — Backup — consecutive failures: **8** — Timeout
-- **Ekushey TV** — Backup — consecutive failures: **8** — Timeout
-- **G TV** — Backup — consecutive failures: **8** — Timeout
-- **G TV** — Backup — consecutive failures: **7** — Timeout
-- **G TV** — Backup — consecutive failures: **9** — Timeout
-- **G TV** — Backup — consecutive failures: **8** — Timeout
-- **Global TV** — Backup — consecutive failures: **8** — Timeout
-- **Green TV** — Backup — consecutive failures: **7** — Timeout
-- **Green TV** — Backup — consecutive failures: **7** — Timeout
-- **Green TV** — Backup — consecutive failures: **7** — HTTP 523
-- **Green TV** — Backup — consecutive failures: **7** — HTTP 404
-- **Jago News 24** — Backup — consecutive failures: **7** — Timeout
-- **Jago News 24** — Backup — consecutive failures: **7** — Timeout
-- **Medina Live** — Backup — consecutive failures: **8** — Timeout
-- **Movie Bangla** — Backup — consecutive failures: **8** — Timeout
-- **Movie Bangla** — Backup — consecutive failures: **8** — Timeout
-- **My TV** — Backup — consecutive failures: **8** — Timeout
-- **My TV** — Backup — consecutive failures: **8** — Timeout
-- **My TV** — Backup — consecutive failures: **7** — Timeout
-- **NTV Europe** — Backup — consecutive failures: **7** — Timeout
-- **RTV** — Backup — consecutive failures: **8** — Timeout
-- **SA TV** — Backup — consecutive failures: **8** — Timeout
-- **SA TV** — Backup — consecutive failures: **8** — Timeout
-- **ATN Bangla UK** — Bangladesh — consecutive failures: **7** — Timeout
-- **Ananda TV** — Bangladesh — consecutive failures: **8** — Timeout
-- **Channel 16** — Bangladesh — consecutive failures: **20** — Timeout
-- **Channel S** — Bangladesh — consecutive failures: **7** — Timeout
-- **Channel S UK** — Bangladesh — consecutive failures: **7** — Timeout
-- **G TV** — Bangladesh — consecutive failures: **7** — Timeout
-- **Green TV** — Bangladesh — consecutive failures: **8** — Timeout
-- **Jago News 24** — Bangladesh — consecutive failures: **7** — Timeout
-- **Jonmobhumi TV** — Bangladesh — consecutive failures: **7** — HTTP 404
-- **NRB TV** — Bangladesh — consecutive failures: **7** — Timeout
-- **NTV Europe** — Bangladesh — consecutive failures: **7** — Timeout
-- **Time Television** — Bangladesh — consecutive failures: **7** — Timeout
-- **Amar Bangla** — Indian Bangla — consecutive failures: **7** — Timeout
-- **Channel 52** — Indian Bangla — consecutive failures: **7** — HTTP 404
-- **Assam Talks** — Indian Entertainment — consecutive failures: **218** — HTTP 403
-- **Oli TV** — Indian Entertainment — consecutive failures: **12** — Timeout
-- **Suriyan TV** — Indian Entertainment — consecutive failures: **12** — HTTP 523
-- **K Cine** — Indian Movies — consecutive failures: **9** — Timeout
-- **Afrobeats** — International — consecutive failures: **9** — HTTP 404
-- **Cook & Bake** — International — consecutive failures: **24** — HTTP 504
-- **HBO** — International — consecutive failures: **206** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **24** — HTTP 403
-- **iON TV UK** — International — consecutive failures: **7** — Timeout
-- **Teen Nick** — Kids — consecutive failures: **84** — HTTP 403
-- **Iqra Bangla** — Religious — consecutive failures: **7** — Timeout
-- **Islamic TV** — Religious — consecutive failures: **8** — Timeout
-- **Makkah Live** — Religious — consecutive failures: **8** — Timeout
+- **Channel 52** — Backup — consecutive failures: **9** — HTTP 404
+- **Channel S** — Backup — consecutive failures: **10** — Timeout
+- **Channel S** — Backup — consecutive failures: **9** — HTTP 404
+- **Channel S** — Backup — consecutive failures: **9** — HTTP 404
+- **Channel S** — Backup — consecutive failures: **10** — Timeout
+- **Green TV** — Backup — consecutive failures: **10** — Timeout
+- **Green TV** — Backup — consecutive failures: **9** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **9** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **9** — HTTP 404
+- **Green TV** — Backup — consecutive failures: **9** — HTTP 404
+- **Ananda TV** — Bangladesh — consecutive failures: **10** — Timeout
+- **Channel 16** — Bangladesh — consecutive failures: **22** — Timeout
+- **Assam Talks** — Indian Entertainment — consecutive failures: **220** — HTTP 403
+- **Oli TV** — Indian Entertainment — consecutive failures: **14** — HTTP 404
+- **Cook & Bake** — International — consecutive failures: **26** — HTTP 504
+- **HBO** — International — consecutive failures: **208** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **26** — HTTP 403
+- **Teen Nick** — Kids — consecutive failures: **86** — HTTP 403
+- **Makkah Live** — Religious — consecutive failures: **10** — Timeout
 
 ## /streamtest/ Endpoints
 
@@ -100,8 +54,10 @@ Generated from the current playlist and latest available stream-health report. T
 | Paighan TV | Pakistani | cdn4.mjunoon.tv:8087 | /streamtest/107M/chunks.m3u8 |
 | See TV | Pakistani | vodzong.mjunoon.tv:8087 | /streamtest/SeeTV-156/playlist.m3u8 |
 | Waseb TV | Pakistani | vodzong.mjunoon.tv:8087 | /streamtest/WASEB-130/playlist.m3u8 |
+| MINI | Kids | vodzong.mjunoon.tv:8087 | /streamtest/disckids-157-1/playlist.m3u8 |
 | 8XM | Backup | vodzong.mjunoon.tv:8087 | /streamtest/8XM-131/playlist.m3u8 |
 | Animal Planet | Backup | vodzong.mjunoon.tv:8087 | /streamtest/Animal-Planet-158-3/playlist.m3u8 |
+| Cartoon Network | Backup | vodzong.mjunoon.tv:8087 | /streamtest/cartoon-network-87/playlist.m3u8 |
 | Hum TV | Backup | cdn4.mjunoon.tv:8087 | /streamtest/82M/chunks.m3u8 |
 | Jalwa TV | Backup | vodzong.mjunoon.tv:8087 | /streamtest/JalwaTV-135/live/135M/chunks.m3u8 |
 
@@ -119,6 +75,8 @@ Query values are omitted because they may be expiring signatures or access token
 | WOW Kidz Hindi | Kids | yuppparoriglin.akamaized.net | hdnts |
 | WOW Kidz Tamil | Kids | yuppparoriglin.akamaized.net | hdnts |
 | WOW Kidz Telugu | Kids | yuppparoriglin.akamaized.net | hdnts |
+| Colors | Backup | 103.114.11.37:8081 | token |
+| Star Gold | Backup | 103.114.11.37:8081 | token |
 | Studio Yuva | Backup | d2gvyg6lvauoko.cloudfront.net | hdnts |
 
 ## Xtream-Style Credential Paths
@@ -155,24 +113,21 @@ Worker routes are relayed endpoints, not direct broadcaster sources. The Sananda
 | DBC News | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | DBC News | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | DD Bangla | Backup | iptvlive.ahmed-bd-org.workers.dev |
+| Enter10 Bangla | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Enter TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
-| Enterr10 Bangla | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Epic Music | Backup | iptvlive.ahmed-bd-org.workers.dev |
-| G TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Jago News 24 | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Jamuna TV | Backup | iptv-proxy.ahmed-bd-org.workers.dev |
 | Jamuna TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | ME TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | ME TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | ME TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
-| Movie Bangla | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | News 24 | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | News 24 | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | NTV | Backup | iptv-proxy.ahmed-bd-org.workers.dev |
 | NTV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | PTC Music | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Rongeen TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
-| SA TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | SA TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Somoy TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Zee Bangla | Backup | iptvlive.ahmed-bd-org.workers.dev |
@@ -182,7 +137,6 @@ Worker routes are relayed endpoints, not direct broadcaster sources. The Sananda
 | Channel | Group | Host | Route type |
 |---|---|---|---|
 | BTV National | Bangladesh | homair-tv-production.up.railway.app | /api/play/ |
-| BTV World | Bangladesh | homair-tv-production.up.railway.app | /api/play/ |
 | Star Gold | Indian Movies | homair-tv-production.up.railway.app | /api/play/ |
 | Star Gold Select | Indian Movies | homair-tv-production.up.railway.app | /api/play/ |
 | Star Movies | Indian Movies | homair-tv-production.up.railway.app | /api/play/ |
@@ -193,13 +147,10 @@ Worker routes are relayed endpoints, not direct broadcaster sources. The Sananda
 | Nick | Kids | homair-tv-production.up.railway.app | /api/play/ |
 | Nick Jr | Kids | homair-tv-production.up.railway.app | /api/play/ |
 | Sonic | Kids | homair-tv-production.up.railway.app | /api/play/ |
-| Super Hungama | Kids | homair-tv-production.up.railway.app | /api/play/ |
 | BTV Chattogram | Backup | homair-tv-production.up.railway.app | /api/play/ |
-| BTV News | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | Colors Cineplex [UK] | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | Desh TV | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | HBO | Backup | homair-tv-production.up.railway.app | /api/play/ |
-| HUM Masala | Backup | homair-tv-production.up.railway.app | /api/play/ |
 
 ## Recommendations
 
