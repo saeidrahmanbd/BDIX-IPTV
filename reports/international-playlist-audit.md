@@ -3,7 +3,7 @@
 - Entries: 434
 - Exact duplicate URLs removed: 0
 - Malformed entries removed: 0
-- Backup entries migrated: 70
+- Backup entries migrated: 68
 - Remaining true orphan backups: 0
 - Logos repaired to repository-local assets: 0
 - Logos recovered using external/iptv-org sources: 0
