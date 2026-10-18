@@ -64,6 +64,9 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+users.noreply.github.com'
           git add International-Playlist.m3u reports/international-playlist-audit.md
+          if compgen -G 'logos/international-*' > /dev/null; then
+            git add logos/international-*
+          fi
           if git diff --cached --quiet; then
             echo 'No International playlist changes to publish.'
             exit 0
