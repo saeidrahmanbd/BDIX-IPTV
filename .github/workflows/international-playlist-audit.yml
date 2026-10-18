@@ -6,6 +6,7 @@ on:
     paths:
       - International-Playlist.m3u
       - scripts/repair_international_playlist.py
+      - logos/international/**
       - .github/workflows/international-playlist-audit.yml
   workflow_dispatch:
 
