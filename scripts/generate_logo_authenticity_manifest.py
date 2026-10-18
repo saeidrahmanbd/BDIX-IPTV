@@ -2,6 +2,7 @@
 """Build a logo provenance manifest for all maintained playlists."""
 import json
 import re
+import subprocess
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -62,6 +63,15 @@ def main():
     for item in records:
         tally[item["status"]] = tally.get(item["status"], 0) + 1
     print(f"Wrote {OUT}: {len(records)} playlist entries; statuses={tally}")
+    # Logo migration creates/replaces repository assets. Stage them here so the
+    # maintenance workflow actually publishes the repaired files; otherwise the
+    # later git add only captures playlist/report changes and leaves new PNGs
+    # uncommitted, which causes the next gate to report missing local logo files.
+    try:
+        subprocess.run(["git", "add", "logos/"], check=True)
+        print("Staged repaired logo assets: logos/")
+    except Exception as exc:
+        print(f"Warning: could not stage logo assets automatically: {exc}")
 
 if __name__ == "__main__":
     main()
