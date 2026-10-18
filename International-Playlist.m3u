@@ -19,7 +19,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/606162.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/76180.ts
 #EXTINF:-1 tvg-name="Channel-S" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png" group-title="Bangla",Channel-S
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809084.ts
-#EXTINF:-1 tvg-id="colorsbanglahd.in" tvg-name="Colors Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png" group-title="Bangla",Colors Bangla
+#EXTINF:-1 tvg-id="colorsbanglahd.in" tvg-name="Colors Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla-hd.png" group-title="Bangla",Colors Bangla
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/76179.ts
 #EXTINF:-1 tvg-name="DD Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-bangla.png" group-title="Bangla",DD Bangla
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/808807.ts
@@ -41,7 +41,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/78938.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510486.ts
 #EXTINF:-1 tvg-name="Time Television" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/time-television.png" group-title="Bangla",Time Television
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/78976.ts
-#EXTINF:-1 tvg-id="zeebanglahd.in" tvg-name="Zee Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla.png" group-title="Bangla",Zee Bangla
+#EXTINF:-1 tvg-id="zeebanglahd.in" tvg-name="Zee Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-hd.png" group-title="Bangla",Zee Bangla
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72258.ts
 #EXTINF:-1 tvg-name="9X JALWA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jalwa.png" group-title="Indian",9X JALWA
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/53379
@@ -77,15 +77,15 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72155.ts
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/53363
 #EXTINF:-1 tvg-name="B4U Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png" group-title="Indian",B4U Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020718.ts
-#EXTINF:-1 tvg-id="bigmagic.in" tvg-name="Big Magic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/big-magic.png" group-title="Indian",Big Magic
+#EXTINF:-1 tvg-id="bigmagic.in" tvg-name="Big Magic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/big-magic-576p.png" group-title="Indian",Big Magic
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72173.ts
-#EXTINF:-1 tvg-name="Colors Cineplex" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-cineplex.png" group-title="Indian",Colors Cineplex
+#EXTINF:-1 tvg-name="Colors Cineplex" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-cineplex-hd-1080p.png" group-title="Indian",Colors Cineplex
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020166.ts
 #EXTINF:-1 tvg-name="Colors Cineplex Bollywood" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-cineplex-bollywood.png" group-title="Indian",Colors Cineplex Bollywood
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/993321.ts
 #EXTINF:-1 tvg-id="colorsgujarati.in" tvg-name="Colors Gujarati" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-gujarati-cinema-576p.png" group-title="Indian",Colors Gujarati
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34674.ts
-#EXTINF:-1 tvg-name="Colors Infinity" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-infinity.png" group-title="Indian",Colors Infinity
+#EXTINF:-1 tvg-name="Colors Infinity" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-infinity-hd-1080p.png" group-title="Indian",Colors Infinity
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020168.ts
 #EXTINF:-1 tvg-name="Colors Kannada Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-kannada.png" group-title="Indian",Colors Kannada Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019651.ts
@@ -107,7 +107,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72182.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72195.ts
 #EXTINF:-1 tvg-id="epic.in" tvg-name="Epic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-music.png" group-title="Indian",Epic
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72196.ts
-#EXTINF:-1 tvg-id="etvhd.in" tvg-name="ETV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-plus.png" group-title="Indian",ETV
+#EXTINF:-1 tvg-id="etvhd.in" tvg-name="ETV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-plus-hd-1080p.png" group-title="Indian",ETV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34443.ts
 #EXTINF:-1 tvg-name="ETV Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-cinema.png" group-title="Indian",ETV Cinema
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020218.ts
@@ -117,13 +117,13 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34444.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/551755.ts
 #EXTINF:-1 tvg-name="Flowers TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Indian",Flowers TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1084440.ts
-#EXTINF:-1 tvg-name="Gemini Movies" group-title="Indian",Gemini Movies
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-geminimovies.png" tvg-name="Gemini Movies" group-title="Indian",Gemini Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019591.ts
 #EXTINF:-1 tvg-id="geminimovieshd.in" tvg-name="Gemini Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-geminimovies.png" group-title="Indian",Gemini Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34441.ts
 #EXTINF:-1 tvg-name="Gemini Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-geminimovies.png" group-title="Indian",Gemini Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/551757.ts
-#EXTINF:-1 tvg-name="Gemini Music" group-title="Indian",Gemini Music
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-geminimusic.png" tvg-name="Gemini Music" group-title="Indian",Gemini Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019592.ts
 #EXTINF:-1 tvg-id="geminimusic.in" tvg-name="Gemini Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-geminimusic.png" group-title="Indian",Gemini Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/150355.ts
@@ -171,7 +171,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019607.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/150356.ts
 #EXTINF:-1 tvg-id="rajmusix.in" tvg-name="Raj Musix" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/raj-musix-tamil.png" group-title="Indian",Raj Musix
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72114.ts
-#EXTINF:-1 tvg-name="Romedy Now" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/romedy-now.png" group-title="Indian",Romedy Now
+#EXTINF:-1 tvg-name="Romedy Now" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/romedy-now.jpeg" group-title="Indian",Romedy Now
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020235.ts
 #EXTINF:-1 tvg-id="sangeetmarathi.in" tvg-name="Sangeet Marathi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sangeet-marathi.png" group-title="Indian",Sangeet Marathi
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34535.ts
@@ -199,9 +199,9 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020182.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72143.ts
 #EXTINF:-1 tvg-name="Star Pravah" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-pravah.png" group-title="Indian",Star Pravah
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1121268.ts
-#EXTINF:-1 tvg-name="Star Suvarna" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-suvarna-hd.png" group-title="Indian",Star Suvarna
+#EXTINF:-1 tvg-name="Star Suvarna" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-suvarna-576p.png" group-title="Indian",Star Suvarna
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34543.ts
-#EXTINF:-1 tvg-name="Star Utsav" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-utsav.png" group-title="Indian",Star Utsav
+#EXTINF:-1 tvg-name="Star Utsav" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-utsav-576p.png" group-title="Indian",Star Utsav
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019859.ts
 #EXTINF:-1 tvg-id="starvijay.in" tvg-name="Star Vijay" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-vijay-576p.png" group-title="Indian",Star Vijay
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72120.ts
@@ -209,7 +209,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72120.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019880.ts
 #EXTINF:-1 tvg-id="sunmusic.in" tvg-name="Sun Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-music.png" group-title="Indian",Sun Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72123.ts
-#EXTINF:-1 tvg-name="Suntv" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-tv.png" group-title="Indian",Suntv
+#EXTINF:-1 tvg-name="Suntv" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-tv-hd-1080p.png" group-title="Indian",Suntv
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/808902.ts
 #EXTINF:-1 tvg-id="suryamovies.in" tvg-name="Surya Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Indian",Surya Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34734.ts
@@ -221,9 +221,9 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34733.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1021515.ts
 #EXTINF:-1 tvg-name="Tarang Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tarang-music.png" group-title="Indian",Tarang Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/343364.ts
-#EXTINF:-1 tvg-id="tarangtv.in" tvg-name="Tarang TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tarang-tv.png" group-title="Indian",Tarang TV
+#EXTINF:-1 tvg-id="tarangtv.in" tvg-name="Tarang TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tarang-tv-720p.png" group-title="Indian",Tarang TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1021516.ts
-#EXTINF:-1 tvg-id="tarangtv.in" tvg-name="Tarang TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tarang-tv.png" group-title="Indian",Tarang TV
+#EXTINF:-1 tvg-id="tarangtv.in" tvg-name="Tarang TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tarang-tv-720p.png" group-title="Indian",Tarang TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/149511.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/udaya-movies.png" tvg-name="Udaya Movies" group-title="Indian",Udaya Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019696.ts
@@ -239,15 +239,15 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020193.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72246.ts
 #EXTINF:-1 tvg-name="Zee Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema.png" group-title="Indian",Zee Cinema
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020198.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinemalu-hd.png" tvg-name="Zee Cinemalu" group-title="Indian",Zee Cinemalu
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinemalu-hd-1080p.png" tvg-name="Zee Cinemalu" group-title="Indian",Zee Cinemalu
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019634.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinemalu-hd.png" tvg-name="Zee Cinemalu" group-title="Indian",Zee Cinemalu
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinemalu-hd-1080p.png" tvg-name="Zee Cinemalu" group-title="Indian",Zee Cinemalu
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019635.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinemalu-hd.png" tvg-name="Zee Cinemalu" group-title="Indian",Zee Cinemalu
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinemalu-hd-1080p.png" tvg-name="Zee Cinemalu" group-title="Indian",Zee Cinemalu
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019636.ts
-#EXTINF:-1 tvg-id="zeecinemaluhd.in" tvg-name="Zee Cinemalu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinemalu-hd.png" group-title="Indian",Zee Cinemalu
+#EXTINF:-1 tvg-id="zeecinemaluhd.in" tvg-name="Zee Cinemalu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinemalu-hd-1080p.png" group-title="Indian",Zee Cinemalu
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34427.ts
-#EXTINF:-1 tvg-name="Zee Cinemalu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinemalu-hd.png" group-title="Indian",Zee Cinemalu
+#EXTINF:-1 tvg-name="Zee Cinemalu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinemalu-hd-1080p.png" group-title="Indian",Zee Cinemalu
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/551765.ts
 #EXTINF:-1 tvg-name="Zee Classic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Indian",Zee Classic
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020201.ts
@@ -261,7 +261,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63882.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/175114.ts
 #EXTINF:-1 tvg-id="zeetamil.in" tvg-name="Zee Tamil" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tamil.png" group-title="Indian",Zee Tamil
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72132.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-telugu.png" tvg-name="Zee Telugu" group-title="Indian",Zee Telugu
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-telugu-hd-720p.png" tvg-name="Zee Telugu" group-title="Indian",Zee Telugu
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019638.ts
 #EXTINF:-1 tvg-name="Zee Thirai" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Indian",Zee Thirai
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510441.ts
@@ -371,11 +371,11 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46706.ts
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/13214.ts
 #EXTINF:-1 tvg-id="epixhits.us" tvg-name="Epix Hits" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-epixhits.png" group-title="International",Epix Hits
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/12744.ts
-#EXTINF:-1 tvg-id="film4.uk" tvg-name="Film 4" group-title="International",Film 4
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/film4.png" tvg-id="film4.uk" tvg-name="Film 4" group-title="International",Film 4
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/53702.ts
-#EXTINF:-1 tvg-id="fusetv.us" tvg-name="Fuse" group-title="International",Fuse
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/fuse.png" tvg-id="fusetv.us" tvg-name="Fuse" group-title="International",Fuse
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46701.ts
-#EXTINF:-1 tvg-id="fxm.us" tvg-name="FXM" tvg-logo="https://lamac.org/wp-content/uploads/2020/04/Group-63@2x.png" group-title="International",FXM
+#EXTINF:-1 tvg-id="fxm.us" tvg-name="FXM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/fxm.png" group-title="International",FXM
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/10260.ts
 #EXTINF:-1 tvg-id="gacfamily.us" tvg-name="Great American Country" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="International",Great American Country
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/17640.ts
@@ -389,7 +389,7 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9266.ts
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9265.ts
 #EXTINF:-1 tvg-id="lifetimenetwork.us" tvg-name="Lifetime Movie" tvg-logo="https://juicetv.app/channellogo/lmn2.png" group-title="International",Lifetime Movie
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/2208.ts
-#EXTINF:-1 tvg-id="lifetimemovies.us" tvg-name="Lifetime Movies" tvg-logo="https://findvectorlogo.com/wp-content/uploads/2020/01/lifetime-movies-vector-logo.png" group-title="International",Lifetime Movies
+#EXTINF:-1 tvg-id="lifetimemovies.us" tvg-name="Lifetime Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/lifetimemovies.png" group-title="International",Lifetime Movies
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/20863.ts
 #EXTINF:-1 tvg-id="movieplex.us" tvg-name="MoviePlex" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-movieplex.jpg" group-title="International",MoviePlex
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/1829.ts
@@ -693,7 +693,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393402.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1463865.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" tvg-name="Vivid TV Europe" group-title="Adult",Vivid TV Europe
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315913.ts
-#EXTINF:-1 tvg-name="Vixen" group-title="Adult",Vixen
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/vixen.png" tvg-name="Vixen" group-title="Adult",Vixen
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315914.ts
 #EXTINF:-1 tvg-name="XXX: BABES TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",XXX: BABES TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73821
@@ -763,7 +763,7 @@ http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73854
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73818
 #EXTINF:-1 tvg-name="XXX: XY MAX" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",XXX: XY MAX
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73823
-#EXTINF:-1 tvg-name="&TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv.png" group-title="Backup",&TV
+#EXTINF:-1 tvg-name="&TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Backup",&TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/53373
 #EXTINF:-1 tvg-name="And Explorer" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xplor.png" group-title="Backup",And Explorer
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809017.ts
@@ -827,17 +827,17 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/47349.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72257.ts
 #EXTINF:-1 tvg-id="NTV-IN" tvg-name="NTV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png" group-title="Backup",NTV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/76181.ts
-#EXTINF:-1 tvg-name="Saudi Sunnah" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saudi-sunnah.png" group-title="Backup",Saudi Sunnah
+#EXTINF:-1 tvg-name="Saudi Sunnah" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saudi-sunnah-hd.svg" group-title="Backup",Saudi Sunnah
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/618929.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="SET Max" group-title="Backup",SET Max
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/125814.ts
 #EXTINF:-1 tvg-id="sonysabhd.in" tvg-name="Sony SAB" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sab.png" group-title="Backup",Sony SAB
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72150.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-yay.png" tvg-name="Sony Yay" group-title="Backup",Sony Yay
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-yay-1080p.png" tvg-name="Sony Yay" group-title="Backup",Sony Yay
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019612.ts
-#EXTINF:-1 tvg-name="Sony Yay" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-yay.png" group-title="Backup",Sony Yay
+#EXTINF:-1 tvg-name="Sony Yay" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-yay-1080p.png" group-title="Backup",Sony Yay
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510464.ts
-#EXTINF:-1 tvg-id="sonyyay.in" tvg-name="Sony Yay" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-yay.png" group-title="Backup",Sony Yay
+#EXTINF:-1 tvg-id="sonyyay.in" tvg-name="Sony Yay" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-yay-1080p.png" group-title="Backup",Sony Yay
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72153.ts
 #EXTINF:-1 tvg-name="Star Gold Select" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-select.png" group-title="Backup",Star Gold Select
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020180.ts
@@ -865,7 +865,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63159.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019695.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/vh1-720p-dc47af6a4c.png" tvg-id="vh1.us" tvg-name="VH1" group-title="Backup",VH1
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46705.ts
-#EXTINF:-1 tvg-id="zeemarathihd.in" tvg-name="Zee Marathi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-marathi.png" group-title="Backup",Zee Marathi
+#EXTINF:-1 tvg-id="zeemarathihd.in" tvg-name="Zee Marathi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-marathi-hd-720p.png" group-title="Backup",Zee Marathi
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34532.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/zee-talkies.png" tvg-name="Zee Talkies" group-title="Backup",Zee Talkies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019557.ts
