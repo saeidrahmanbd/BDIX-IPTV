@@ -6,6 +6,7 @@ on:
     paths:
       - International-Playlist.m3u
       - scripts/repair_international_playlist.py
+      - scripts/classify_international_backups.py
       - logos/international/**
       - .github/workflows/international-playlist-audit.yml
   workflow_dispatch:
@@ -33,6 +34,9 @@ jobs:
       - name: Audit and repair International playlist
         run: python scripts/repair_international_playlist.py
 
+      - name: Classify remaining orphan backups
+        run: python scripts/classify_international_backups.py
+
       - name: Validate playlist integrity
         shell: bash
         run: |
@@ -48,14 +52,20 @@ jobs:
           urls=[x.strip().casefold() for x in lines if x.strip().startswith(('http://','https://'))]
           dup=[u for u,n in Counter(urls).items() if n>1]
           forbidden=[]
+          backups=[]
           for line in lines:
-              if line.startswith('#EXTINF:') and re.search(r'group-title="(?:New Channels|New Backup|New)"',line,re.I):
-                  forbidden.append(line)
+              if line.startswith('#EXTINF:'):
+                  if re.search(r'group-title="(?:New Channels|New Backup|New)"',line,re.I):
+                      forbidden.append(line)
+                  if re.search(r'group-title="Backup"',line,re.I):
+                      backups.append(line)
           if dup:
               raise SystemExit(f'Duplicate stream URLs remain: {len(dup)}')
           if forbidden:
               raise SystemExit(f'Forbidden staging categories remain: {len(forbidden)}')
-          print(f'Integrity OK: {len(urls)} stream URLs, 0 duplicate URLs, 0 forbidden staging categories')
+          if backups:
+              raise SystemExit(f'Unclassified Backup entries remain: {len(backups)}')
+          print(f'Integrity OK: {len(urls)} stream URLs, 0 duplicate URLs, 0 forbidden staging categories, 0 Backup entries')
           PY
 
       - name: Publish repaired International playlist
@@ -72,5 +82,5 @@ jobs:
             echo 'No International playlist changes to publish.'
             exit 0
           fi
-          git commit -m 'Audit and repair International playlist'
+          git commit -m 'Classify and rearrange International orphan backups'
           git push origin HEAD:main
