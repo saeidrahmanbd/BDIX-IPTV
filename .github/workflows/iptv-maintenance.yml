@@ -72,6 +72,29 @@ jobs:
             git clean -fd
             cp BDIX-Playlist.m3u /tmp/bdix-playlist-protected.m3u
             cp epg/epg.xml /tmp/bdix-epg-previous.xml 2>/dev/null || true
+
+            # Snapshot Backup/Not Playing before ANY maintenance script runs.
+            # These are owner-review queues and must survive maintenance byte-for-byte.
+            python - <<'PY'
+            from pathlib import Path
+            import re
+            p=Path('IPTV-Playlist.m3u')
+            lines=p.read_text(encoding='utf-8-sig').replace('\r','').splitlines()
+            protected=[]
+            for i,line in enumerate(lines):
+                if not line.startswith('#EXTINF:'):
+                    continue
+                m=re.search(r'group-title="([^"]*)"',line)
+                if not m or m.group(1).strip() not in {'Backup','Not Playing'}:
+                    continue
+                j=i+1
+                while j<len(lines) and not lines[j].strip(): j+=1
+                if j<len(lines) and lines[j].strip().lower().startswith(('http://','https://')):
+                    protected.append(line+'\n'+lines[j].strip())
+            Path('/tmp/iptv-protected-review.m3u').write_text('\n'.join(protected)+'\n',encoding='utf-8')
+            print(f'Protected review snapshot: {len(protected)} entries')
+            PY
+
             rm -rf fixed_output
             python scripts/fix_playlist.py IPTV-Playlist.m3u --outdir fixed_output
             test -s fixed_output/IPTV-Playlist.fixed.m3u
@@ -84,19 +107,98 @@ jobs:
             python scripts/apply_gemini_playlist_repairs.py
             python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
             if grep -Eiq 'group-title="(New Channels|New Backup|New)"' IPTV-Playlist.m3u; then echo '::error::Forbidden staging playlist category detected after normalization.'; exit 1; fi
+
+            # Force known contaminated/generic local logos back through the resolver.
+            # The existing resolver correctly repairs missing references, but previously
+            # treated a bad-but-existing local file as healthy. Blank only the known-bad
+            # asset reference; migrate_external_logos_fixed.py then applies its verified
+            # ID/name/catalogue sources and stores the replacement locally.
+            python - <<'PY'
+            from pathlib import Path
+            import re
+            BAD={
+              'atn-news.png','a-sports-5485adff.png','a-sports-hd.png','bein-sports-3.png',
+              'bangla-tv.png','btv-news.png','colors.png','duronto-tv.png','duronto-tv-1ad55c95.png',
+              'ekushey-tv.png','global-tv.png','green-tv.png','mohona-tv.png','nagorik-tv.png',
+              'nagorik.png','nick-bangla.png','sananda-tv.png','sananda.png','star-gold-select.png',
+              'star-gold.png','star-plus.png','zee-tv.png','tom-and-jerry.png','arirang-tv.png'
+            }
+            p=Path('IPTV-Playlist.m3u')
+            lines=p.read_text(encoding='utf-8-sig').replace('\r','').splitlines()
+            changed=0
+            out=[]
+            for line in lines:
+                if line.startswith('#EXTINF:'):
+                    m=re.search(r'tvg-logo="([^"]*)"',line)
+                    if m:
+                        fn=Path(m.group(1).split('?',1)[0].split('#',1)[0]).name.casefold()
+                        if fn in BAD:
+                            line=line[:m.start(1)]+line[m.end(1):]
+                            changed+=1
+                out.append(line)
+            p.write_text('\n'.join(out).rstrip()+'\n',encoding='utf-8')
+            print(f'Known-bad local logo references invalidated: {changed}')
+            PY
             python scripts/migrate_external_logos_fixed.py
             python scripts/generate_logo_authenticity_manifest.py
+
+            # Restore every protected Backup/Not Playing entry that any repair script
+            # removed or reclassified. Matching is by exact stream URL. If a URL exists
+            # in the working playlist under another group, replace that entry with the
+            # original protected record instead of creating a duplicate.
+            python - <<'PY'
+            from pathlib import Path
+            import re
+            snap=Path('/tmp/iptv-protected-review.m3u')
+            p=Path('IPTV-Playlist.m3u')
+            if snap.exists():
+                def parse_blocks(text):
+                    lines=text.replace('\r','').splitlines(); blocks=[]; i=0
+                    while i<len(lines):
+                        if lines[i].startswith('#EXTINF:'):
+                            j=i+1
+                            while j<len(lines) and not lines[j].strip(): j+=1
+                            if j<len(lines) and lines[j].strip().lower().startswith(('http://','https://')):
+                                blocks.append((lines[i],lines[j].strip()))
+                                i=j+1; continue
+                        i+=1
+                    return blocks
+                protected=parse_blocks(snap.read_text(encoding='utf-8'))
+                current=p.read_text(encoding='utf-8-sig').replace('\r','').splitlines()
+                urls={u.casefold() for _,u in protected}
+                out=[]; removed=0; i=0
+                while i<len(current):
+                    if current[i].startswith('#EXTINF:'):
+                        j=i+1
+                        while j<len(current) and not current[j].strip(): j+=1
+                        if j<len(current) and current[j].strip().lower().startswith(('http://','https://')) and current[j].strip().casefold() in urls:
+                            removed+=1; i=j+1; continue
+                    out.append(current[i]); i+=1
+                restored=0
+                for info,url in protected:
+                    group=re.search(r'group-title="([^"]*)"',info)
+                    group=group.group(1).strip() if group else ''
+                    insert_at=None
+                    for k,line in enumerate(out):
+                        if line.startswith('#EXTINF:'):
+                            gm=re.search(r'group-title="([^"]*)"',line)
+                            if gm and gm.group(1).strip()==group:
+                                j=k+1
+                                while j<len(out) and not out[j].strip(): j+=1
+                                if j<len(out) and out[j].strip().lower().startswith(('http://','https://')): insert_at=j+1
+                    block=[info,url]
+                    if insert_at is None: out.extend(block)
+                    else: out[insert_at:insert_at]=block
+                    restored+=1
+                p.write_text('\n'.join(out).rstrip()+'\n',encoding='utf-8')
+                print(f'Protected review entries restored: {restored}; conflicting copies removed: {removed}')
+            PY
 
             # Stream health is advisory only. The playlist owner reviews results
             # manually; failures never trigger automatic channel deletion/reclassification.
             python scripts/stream_health.py
             python scripts/report_iptv_fragile_streams.py
 
-            # Rebuild EPG after backup/identity cleanup so coverage reflects the
-            # actual IPTV-Playlist.m3u that will be published. M3U4U remains an
-            # optional private source through the existing Actions secret.
-            # iptv-org/epg is used as an additional build-time source for
-            # targeted Indian providers; its guide is not published separately.
             python scripts/epg_coverage.py
             python scripts/fetch_iptv_org_epg.py
             python scripts/run_generate_epg.py
@@ -126,10 +228,9 @@ jobs:
             GATE_STATUS=$?
             set -e
 
-            # The pre-publish gate is a repair trigger, not a dead end.
-            # Give the deterministic correction scripts one additional pass when
-            # the gate finds repairable metadata/logo problems. Not Playing and
-            # Backup remain protected, and stream-health failures remain advisory.
+            # A gate failure is now followed by a second deterministic repair pass.
+            # Protected queues are restored again after that pass, before the gate is
+            # evaluated for the final time.
             if [ "$GATE_STATUS" -ne 0 ]; then
               echo '::warning::Pre-publish gate found issues; running automatic correction pass before failing.'
               python scripts/repair_iptv_audit_findings.py || true
@@ -138,8 +239,41 @@ jobs:
               python scripts/repair_playlist_logos.py || true
               python scripts/sort_playlists.py IPTV-Playlist.m3u || true
               python scripts/final_playlist_hardening.py IPTV-Playlist.m3u || true
+              python - <<'PY'
+              from pathlib import Path
+              import re
+              BAD={'atn-news.png','a-sports-5485adff.png','a-sports-hd.png','bein-sports-3.png','bangla-tv.png','btv-news.png','colors.png','duronto-tv.png','duronto-tv-1ad55c95.png','ekushey-tv.png','global-tv.png','green-tv.png','mohona-tv.png','nagorik-tv.png','nagorik.png','nick-bangla.png','sananda-tv.png','sananda.png','star-gold-select.png','star-gold.png','star-plus.png','zee-tv.png','tom-and-jerry.png','arirang-tv.png'}
+              p=Path('IPTV-Playlist.m3u'); lines=p.read_text(encoding='utf-8-sig').replace('\r','').splitlines(); out=[]; changed=0
+              for line in lines:
+                  if line.startswith('#EXTINF:'):
+                      m=re.search(r'tvg-logo="([^"]*)"',line)
+                      if m and Path(m.group(1).split('?',1)[0].split('#',1)[0]).name.casefold() in BAD:
+                          line=line[:m.start(1)]+line[m.end(1):]; changed+=1
+                  out.append(line)
+              p.write_text('\n'.join(out).rstrip()+'\n',encoding='utf-8'); print(f'Known-bad references invalidated on correction pass: {changed}')
+              PY
               python scripts/migrate_external_logos_fixed.py || true
               python scripts/generate_logo_authenticity_manifest.py || true
+              python - <<'PY'
+              from pathlib import Path
+              import re
+              snap=Path('/tmp/iptv-protected-review.m3u'); p=Path('IPTV-Playlist.m3u')
+              if snap.exists():
+                  def blocks(text):
+                      ls=text.replace('\r','').splitlines(); out=[]; i=0
+                      while i<len(ls):
+                          if ls[i].startswith('#EXTINF:'):
+                              j=i+1
+                              while j<len(ls) and not ls[j].strip(): j+=1
+                              if j<len(ls) and ls[j].strip().lower().startswith(('http://','https://')): out.append((ls[i],ls[j].strip())); i=j+1; continue
+                          i+=1
+                      return out
+                  prot=blocks(snap.read_text(encoding='utf-8')); urls={u.casefold() for _,u in prot}; cur=blocks(p.read_text(encoding='utf-8-sig'))
+                  kept=[b for b in cur if b[1].casefold() not in urls]; cur_urls={u.casefold() for _,u in kept}
+                  kept.extend([b for b in prot if b[1].casefold() not in cur_urls])
+                  p.write_text('#EXTM3U\n'+'\n'.join(i+'\n'+u for i,u in kept)+'\n',encoding='utf-8')
+                  print(f'Protected review queue final restore: {len(prot)} entries')
+              PY
               python scripts/audit_playlist.py || true
               python scripts/pre_publish_gate.py
               GATE_STATUS=$?
