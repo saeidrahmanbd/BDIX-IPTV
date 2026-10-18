@@ -18,23 +18,34 @@ def blocks(text):
         i+=1
     return result
 
+def attrs(info):
+    return dict(re.findall(r'([\w-]+)="([^"]*)"', info))
+
+def identity(info):
+    a=attrs(info)
+    return ((a.get('tvg-id') or a.get('channel-id') or '').strip().casefold(), a.get('tvg-name','').strip().casefold())
+
 def group_of(info):
-    m=re.search(r'group-title="([^"]*)"',info)
-    return m.group(1).strip() if m else ''
+    return attrs(info).get('group-title','').strip()
 
 def restore():
     if not SNAPSHOT.is_file() or not PLAYLIST.is_file(): return
     protected=blocks(SNAPSHOT.read_text(encoding='utf-8'))
     if not protected: return
     protected_urls={u.casefold() for _,u in protected}
+    protected_ids={identity(info) for info,_ in protected}
     current=PLAYLIST.read_text(encoding='utf-8-sig').replace('\r','').splitlines()
     cleaned=[]; i=0; removed=0
     while i<len(current):
         if current[i].startswith('#EXTINF:'):
             j=i+1
             while j<len(current) and not current[j].strip(): j+=1
-            if j<len(current) and current[j].strip().lower().startswith(('http://','https://')) and current[j].strip().casefold() in protected_urls:
-                removed+=1; i=j+1; continue
+            if j<len(current) and current[j].strip().lower().startswith(('http://','https://')):
+                url=current[j].strip()
+                current_id=identity(current[i])
+                same_identity=current_id in protected_ids and current_id != ('','')
+                if url.casefold() in protected_urls or same_identity:
+                    removed+=1; i=j+1; continue
         cleaned.append(current[i]); i+=1
     restored=0
     for info,url in protected:
