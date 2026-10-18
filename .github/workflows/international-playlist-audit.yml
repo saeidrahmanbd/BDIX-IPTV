@@ -34,7 +34,7 @@ jobs:
       - name: Audit and repair International playlist
         run: python scripts/repair_international_playlist.py
 
-      - name: Classify remaining orphan backups
+      - name: Reconcile primary and Backup entries
         run: python scripts/classify_international_backups.py
 
       - name: Validate playlist integrity
@@ -46,32 +46,50 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           from collections import Counter
-          import re
+          import re, unicodedata
           p=Path('International-Playlist.m3u')
           lines=p.read_text(encoding='utf-8-sig').splitlines()
           urls=[x.strip().casefold() for x in lines if x.strip().startswith(('http://','https://'))]
           dup=[u for u,n in Counter(urls).items() if n>1]
-          forbidden=[]
-          backups=[]
-          backup_re=re.compile(r'group-title\s*=\s*(?:"Backup"|\'Backup\'|Backup)(?=\s|,|$)',re.I)
           staging_re=re.compile(r'group-title\s*=\s*(?:"(?:New Channels|New Backup|New)"|\'(?:New Channels|New Backup|New)\'|(?:New Channels|New Backup|New))(?=\s|,|$)',re.I)
+          info_re=re.compile(r'([A-Za-z0-9_-]+)=(?:"([^"]*)"|\'([^\']*)\'|([^\s,]+))')
+          def attrs(s):
+              out={}
+              for m in info_re.finditer(s): out[m.group(1)]=next(v for v in m.groups()[1:] if v is not None)
+              return out
+          def norm(s):
+              s=unicodedata.normalize('NFKD',str(s or '')).casefold(); s=''.join(c for c in s if not unicodedata.combining(c))
+              s=re.sub(r'\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|plus)\b',' ',s)
+              return re.sub(r'[^a-z0-9]+','',s)
+          blocks=[]; cur=None
           for line in lines:
-              if not line.startswith('#EXTINF:'):
-                  continue
-              if staging_re.search(line):
-                  forbidden.append(line)
-              if backup_re.search(line):
-                  backups.append(line)
+              if line.startswith('#EXTINF:'):
+                  if cur is not None: blocks.append(cur)
+                  cur=[line]
+              elif cur is not None: cur.append(line)
+          if cur is not None: blocks.append(cur)
+          primary_keys={}
+          duplicate_primaries=[]
+          backup_count=0
+          for b in blocks:
+              a=attrs(b[0]); group=a.get('group-title','').strip().casefold()
+              if group=='backup': backup_count+=1; continue
+              if staging_re.search(b[0]):
+                  raise SystemExit('Forbidden staging category remains: '+b[0])
+              tid=a.get('tvg-id','').strip().casefold(); cid=a.get('channel-id','').strip().casefold()
+              name=norm(a.get('tvg-name') or b[0].rsplit(',',1)[-1])
+              key=('id',tid or cid) if (tid or cid) else ('name',name)
+              if key in primary_keys:
+                  duplicate_primaries.append((key,b[0]))
+              else:
+                  primary_keys[key]=b[0]
           if dup:
               raise SystemExit(f'Duplicate stream URLs remain: {len(dup)}')
-          if forbidden:
-              raise SystemExit(f'Forbidden staging categories remain: {len(forbidden)}')
-          if backups:
-              print('Unclassified Backup records:')
-              for line in backups:
-                  print(line)
-              raise SystemExit(f'Unclassified Backup entries remain: {len(backups)}')
-          print(f'Integrity OK: {len(urls)} stream URLs, 0 duplicate URLs, 0 forbidden staging categories, 0 Backup entries')
+          if duplicate_primaries:
+              print('Duplicate primary records:')
+              for key,line in duplicate_primaries: print(key,line)
+              raise SystemExit(f'Duplicate primary channels remain: {len(duplicate_primaries)}')
+          print(f'Integrity OK: {len(urls)} stream URLs, 0 duplicate URLs, 0 duplicate primaries, {backup_count} intentional Backup entries, 0 forbidden staging categories')
           PY
 
       - name: Publish repaired International playlist
@@ -88,5 +106,5 @@ jobs:
             echo 'No International playlist changes to publish.'
             exit 0
           fi
-          git commit -m 'Classify and rearrange International orphan backups'
+          git commit -m 'Reconcile International primary and Backup channels'
           git push origin HEAD:main
