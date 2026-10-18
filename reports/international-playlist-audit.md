@@ -5,7 +5,7 @@
 - Malformed entries removed: 0
 - Backup entries migrated: 0
 - Remaining true orphan backups: 53
-- Logos repaired to repository-local assets: 4
+- Logos repaired to repository-local assets: 0
 - Logos recovered using external/iptv-org sources: 0
 - Entries still without a safe local logo: 0
 - Stream URLs changed: 0
