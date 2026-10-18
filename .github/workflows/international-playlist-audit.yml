@@ -53,17 +53,23 @@ jobs:
           dup=[u for u,n in Counter(urls).items() if n>1]
           forbidden=[]
           backups=[]
+          backup_re=re.compile(r'group-title\s*=\s*(?:"Backup"|\'Backup\'|Backup)(?=\s|,|$)',re.I)
+          staging_re=re.compile(r'group-title\s*=\s*(?:"(?:New Channels|New Backup|New)"|\'(?:New Channels|New Backup|New)\'|(?:New Channels|New Backup|New))(?=\s|,|$)',re.I)
           for line in lines:
-              if line.startswith('#EXTINF:'):
-                  if re.search(r'group-title="(?:New Channels|New Backup|New)"',line,re.I):
-                      forbidden.append(line)
-                  if re.search(r'group-title="Backup"',line,re.I):
-                      backups.append(line)
+              if not line.startswith('#EXTINF:'):
+                  continue
+              if staging_re.search(line):
+                  forbidden.append(line)
+              if backup_re.search(line):
+                  backups.append(line)
           if dup:
               raise SystemExit(f'Duplicate stream URLs remain: {len(dup)}')
           if forbidden:
               raise SystemExit(f'Forbidden staging categories remain: {len(forbidden)}')
           if backups:
+              print('Unclassified Backup records:')
+              for line in backups:
+                  print(line)
               raise SystemExit(f'Unclassified Backup entries remain: {len(backups)}')
           print(f'Integrity OK: {len(urls)} stream URLs, 0 duplicate URLs, 0 forbidden staging categories, 0 Backup entries')
           PY
