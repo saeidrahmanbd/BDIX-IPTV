@@ -3,7 +3,7 @@
 #PLAYLIST-STUDIO-NAME:"International-Playlist"
 #EXTINF:-1 tvg-name="Aakaash Aath" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aakaash-aath.png" group-title="Bangla",Aakaash Aath
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/808975.ts
-#EXTINF:-1 tvg-id="aakashaath.in" tvg-name="Aakaash Bangla" tvg-logo="https://go4.pw/ASIA/BANGLA/AAKAASH-BANGLA.png" group-title="Bangla",Aakaash Bangla
+#EXTINF:-1 tvg-id="aakashaath.in" tvg-name="Aakaash Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bangla-plus.png" group-title="Bangla",Aakaash Bangla
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/78939.ts
 #EXTINF:-1 tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" group-title="Bangla",Ananda TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/79006.ts
@@ -11,6 +11,8 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/79006.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72262.ts
 #EXTINF:-1 tvg-name="ATN Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png" group-title="Bangla",ATN Bangla
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/76197.ts
+#EXTINF:-1 tvg-name="ATN Bangla UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png" group-title="Bangla",ATN Bangla UK
+http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72255.ts
 #EXTINF:-1 tvg-name="Bangla TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bangla-tv.png" group-title="Bangla",Bangla TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/606162.ts
 #EXTINF:-1 tvg-name="Channel S" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png" group-title="Bangla",Channel S
@@ -23,7 +25,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/76179.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/808807.ts
 #EXTINF:-1 tvg-name="Enter 10 Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png" group-title="Bangla",Enter 10 Bangla
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510484.ts
-#EXTINF:-1 tvg-id="etvhd.in" tvg-name="ETV Bangla" tvg-logo="https://go4.pw/ASIA/INDIAN/ETVHD.png" group-title="Bangla",ETV Bangla
+#EXTINF:-1 tvg-id="etvhd.in" tvg-name="ETV Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bangla-plus.png" group-title="Bangla",ETV Bangla
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/78955.ts
 #EXTINF:-1 tvg-id="jalshamovieshd.in" tvg-name="Jalsha Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalsha-movies-hd.png" group-title="Bangla",Jalsha Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/78937.ts
@@ -57,7 +59,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809074.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809077.ts
 #EXTINF:-1 tvg-name="& PICTURES" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/pictures.png" group-title="Indian",& PICTURES
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/53371
-#EXTINF:-1 tvg-name="&Flix" tvg-logo="https://go4.pw/ASIA/INDIA/FLIX.png" group-title="Indian",&Flix
+#EXTINF:-1 tvg-name="&Flix" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bflix-movies-576p.png" group-title="Indian",&Flix
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809078.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asianet-576p.png" tvg-name="Asia Net" group-title="Indian",Asia Net
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1126364.ts
@@ -65,7 +67,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1126364.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/364793.ts
 #EXTINF:-1 tvg-id="asianetmovies.in" tvg-name="Asianet Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asianet-movies.png" group-title="Indian",Asianet Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34747.ts
-#EXTINF:-1 tvg-id="asianetplus.in" tvg-name="Asianet Plus" tvg-logo="https://go4.pw/ASIA/ASIANET.png" group-title="Indian",Asianet Plus
+#EXTINF:-1 tvg-id="asianetplus.in" tvg-name="Asianet Plus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asianet-576p.png" group-title="Indian",Asianet Plus
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34746.ts
 #EXTINF:-1 tvg-name="B4U Kadak" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-kadak.png" group-title="Indian",B4U Kadak
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020204.ts
@@ -81,29 +83,31 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72173.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020166.ts
 #EXTINF:-1 tvg-name="Colors Cineplex Bollywood" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-cineplex-bollywood.png" group-title="Indian",Colors Cineplex Bollywood
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/993321.ts
-#EXTINF:-1 tvg-id="colorsgujarati.in" tvg-name="Colors Gujarati" tvg-logo="https://go4.pw/ASIA/INDIA/COLORS.png" group-title="Indian",Colors Gujarati
+#EXTINF:-1 tvg-id="colorsgujarati.in" tvg-name="Colors Gujarati" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-gujarati-cinema-576p.png" group-title="Indian",Colors Gujarati
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34674.ts
 #EXTINF:-1 tvg-name="Colors Infinity" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-infinity.png" group-title="Indian",Colors Infinity
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020168.ts
-#EXTINF:-1 tvg-name="Colors Kannada Movies" tvg-logo="https://go4.pw/ASIA/KANNADA/COLORS.png" group-title="Indian",Colors Kannada Movies
+#EXTINF:-1 tvg-name="Colors Kannada Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-kannada.png" group-title="Indian",Colors Kannada Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019651.ts
-#EXTINF:-1 tvg-id="colorskannadacinema.in" tvg-name="Colors Kannada Movies" tvg-logo="https://go4.pw/ASIA/KANNADA/COLORS.png" group-title="Indian",Colors Kannada Movies
+#EXTINF:-1 tvg-id="colorskannadacinema.in" tvg-name="Colors Kannada Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-kannada.png" group-title="Indian",Colors Kannada Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34550.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-marathi.png" tvg-name="Colors Marathi" group-title="Indian",Colors Marathi
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019526.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-rishtey.png" tvg-name="Colors Rishtey" group-title="Indian",Colors Rishtey
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/125806.ts
+#EXTINF:-1 tvg-id="colorsrishtey.in" tvg-name="Colors Rishtey TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-rishtey.png" group-title="Indian",Colors Rishtey TV
+http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72511.ts
 #EXTINF:-1 tvg-id="colorstamilhd.in" tvg-name="Colors Tamil" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-tamil.png" group-title="Indian",Colors Tamil
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72101.ts
 #EXTINF:-1 tvg-name="Dangal" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dangal.png" group-title="Indian",Dangal
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510511.ts
 #EXTINF:-1 tvg-id="ddbihar.in" tvg-name="DD Bharati" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-bharati.png" group-title="Indian",DD Bharati
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72182.ts
-#EXTINF:-1 tvg-id="enterr10.in" tvg-name="Enter 10 Movies" tvg-logo="https://go4.pw/ASIA/INDIAN/ENTER10MOVIES.png" group-title="Indian",Enter 10 Movies
+#EXTINF:-1 tvg-id="enterr10.in" tvg-name="Enter 10 Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Indian",Enter 10 Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72195.ts
-#EXTINF:-1 tvg-id="epic.in" tvg-name="Epic" tvg-logo="https://go4.pw/India/EPIC.png" group-title="Indian",Epic
+#EXTINF:-1 tvg-id="epic.in" tvg-name="Epic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-music.png" group-title="Indian",Epic
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72196.ts
-#EXTINF:-1 tvg-id="etvhd.in" tvg-name="ETV" tvg-logo="https://go4.pw/ASIA/INDIAN/ETVHD.png" group-title="Indian",ETV
+#EXTINF:-1 tvg-id="etvhd.in" tvg-name="ETV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-plus.png" group-title="Indian",ETV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34443.ts
 #EXTINF:-1 tvg-name="ETV Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-cinema.png" group-title="Indian",ETV Cinema
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020218.ts
@@ -111,21 +115,21 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020218.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34444.ts
 #EXTINF:-1 tvg-name="ETV Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-cinema.png" group-title="Indian",ETV Cinema
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/551755.ts
-#EXTINF:-1 tvg-name="Flowers TV" tvg-logo="https://go4.pw/ASIA/FLOWERS.png" group-title="Indian",Flowers TV
+#EXTINF:-1 tvg-name="Flowers TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Indian",Flowers TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1084440.ts
 #EXTINF:-1 tvg-name="Gemini Movies" group-title="Indian",Gemini Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019591.ts
-#EXTINF:-1 tvg-id="geminimovieshd.in" tvg-name="Gemini Movies" tvg-logo="https://go4.pw/ASIA/INDIAN/GEMINIMOVIESHD.png" group-title="Indian",Gemini Movies
+#EXTINF:-1 tvg-id="geminimovieshd.in" tvg-name="Gemini Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-geminimovies.png" group-title="Indian",Gemini Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34441.ts
-#EXTINF:-1 tvg-name="Gemini Movies" tvg-logo="https://go4.pw/ASIA/INDIAN/GEMINIMOVIESHD.png" group-title="Indian",Gemini Movies
+#EXTINF:-1 tvg-name="Gemini Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-geminimovies.png" group-title="Indian",Gemini Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/551757.ts
 #EXTINF:-1 tvg-name="Gemini Music" group-title="Indian",Gemini Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019592.ts
-#EXTINF:-1 tvg-id="geminimusic.in" tvg-name="Gemini Music" tvg-logo="https://go4.pw/ASIA/TELEGU/GEMINIMUSIC.png" group-title="Indian",Gemini Music
+#EXTINF:-1 tvg-id="geminimusic.in" tvg-name="Gemini Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-geminimusic.png" group-title="Indian",Gemini Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/150355.ts
-#EXTINF:-1 tvg-name="Gemini TV" group-title="Indian",Gemini TV
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" tvg-name="Gemini TV" group-title="Indian",Gemini TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019593.ts
-#EXTINF:-1 tvg-id="jmovie.in" tvg-name="J Movies" tvg-logo="https://go4.pw/ASIA/INDIA/J_MOVIES.png" group-title="Indian",J Movies
+#EXTINF:-1 tvg-id="jmovie.in" tvg-name="J Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-jmovies.png" group-title="Indian",J Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510438.ts
 #EXTINF:-1 tvg-id="jayamax.in" tvg-name="Jaya Max" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jaya-max.png" group-title="Indian",Jaya Max
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/975938.ts
@@ -133,19 +137,19 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/975938.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72108.ts
 #EXTINF:-1 tvg-id="kairalitv.in" tvg-name="Kairali TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kairali-tv.png" group-title="Indian",Kairali TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34743.ts
-#EXTINF:-1 tvg-id="kalaignartv.in" tvg-name="Kalaignar TV" tvg-logo="https://go4.pw/ASIA/INDIA/KALAIGNAR_TV_HD.png" group-title="Indian",Kalaignar TV
+#EXTINF:-1 tvg-id="kalaignartv.in" tvg-name="Kalaignar TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kalaignar-tv-82de1b8f.png" group-title="Indian",Kalaignar TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510425.ts
 #EXTINF:-1 tvg-id="kappatv.in" tvg-name="Kappa TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kappa-tv.png" group-title="Indian",Kappa TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/285816.ts
-#EXTINF:-1 tvg-name="KTV" tvg-logo="https://go4.pw/ASIA/INDIA/KTV.png" group-title="Indian",KTV
+#EXTINF:-1 tvg-name="KTV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Indian",KTV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510529.ts
-#EXTINF:-1 tvg-id="ktvhd.in" tvg-name="KTV" tvg-logo="https://go4.pw/ASIA/TAMIL/KTVHD.png" group-title="Indian",KTV
+#EXTINF:-1 tvg-id="ktvhd.in" tvg-name="KTV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Indian",KTV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72109.ts
-#EXTINF:-1 tvg-name="Maa Gold" group-title="Indian",Maa Gold
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa-gold-576p.png" tvg-name="Maa Gold" group-title="Indian",Maa Gold
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019601.ts
-#EXTINF:-1 tvg-name="Maa Movies" tvg-logo="https://go4.pw/ASIA/TELEGU/MAAMOVIESHD.png" group-title="Indian",Maa Movies
+#EXTINF:-1 tvg-name="Maa Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa-movies.png" group-title="Indian",Maa Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020224.ts
-#EXTINF:-1 tvg-id="maamovieshd.in" tvg-name="Maa Movies" tvg-logo="https://go4.pw/ASIA/TELEGU/MAAMOVIESHD.png" group-title="Indian",Maa Movies
+#EXTINF:-1 tvg-id="maamovieshd.in" tvg-name="Maa Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa-movies.png" group-title="Indian",Maa Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34438.ts
 #EXTINF:-1 tvg-name="MH1 Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-1-music.png" group-title="Indian",MH1 Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1091276.ts
@@ -155,13 +159,17 @@ http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/53367
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1097946.ts
 #EXTINF:-1 tvg-name="PTC Punjabi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ptc-punjabi.png" group-title="Indian",PTC Punjabi
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510531.ts
-#EXTINF:-1 tvg-id="rajmusix.in" tvg-name="Raj Music" tvg-logo="https://go4.pw/ASIA/RAJM.png" group-title="Indian",Raj Music
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/raj-music-telugu.png" tvg-name="Raj Music" group-title="Indian",Raj Music
+http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019676.ts
+#EXTINF:-1 tvg-id="rajmusixkannada.in" tvg-name="Raj Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/raj-music-telugu.png" group-title="Indian",Raj Music
+http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34545.ts
+#EXTINF:-1 tvg-id="rajmusix.in" tvg-name="Raj Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/raj-music-telugu.png" group-title="Indian",Raj Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34738.ts
-#EXTINF:-1 tvg-name="Raj Musix" group-title="Indian",Raj Musix
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/raj-musix-tamil.png" tvg-name="Raj Musix" group-title="Indian",Raj Musix
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019607.ts
-#EXTINF:-1 tvg-id="rajmusix.in" tvg-name="Raj Musix" tvg-logo="https://go4.pw/ASIA/TELEGU/raj-musix.png" group-title="Indian",Raj Musix
+#EXTINF:-1 tvg-id="rajmusix.in" tvg-name="Raj Musix" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/raj-musix-tamil.png" group-title="Indian",Raj Musix
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/150356.ts
-#EXTINF:-1 tvg-id="rajmusix.in" tvg-name="Raj Musix" tvg-logo="https://go4.pw/ASIA/TAMIL/RAJMUSIX.png" group-title="Indian",Raj Musix
+#EXTINF:-1 tvg-id="rajmusix.in" tvg-name="Raj Musix" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/raj-musix-tamil.png" group-title="Indian",Raj Musix
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72114.ts
 #EXTINF:-1 tvg-name="Romedy Now" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/romedy-now.png" group-title="Indian",Romedy Now
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020235.ts
@@ -185,7 +193,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020175.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020177.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa.png" tvg-name="Star Maa" group-title="Indian",Star Maa
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019613.ts
-#EXTINF:-1 tvg-name="Star Movies" tvg-logo="https://go4.pw/PORTUGAL/2.png" group-title="Indian",Star Movies
+#EXTINF:-1 tvg-name="Star Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-plus.png" group-title="Indian",Star Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020182.ts
 #EXTINF:-1 tvg-id="starplushd.in" tvg-name="Star Plus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-plus.png" group-title="Indian",Star Plus
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72143.ts
@@ -203,11 +211,11 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019880.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72123.ts
 #EXTINF:-1 tvg-name="Suntv" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-tv.png" group-title="Indian",Suntv
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/808902.ts
-#EXTINF:-1 tvg-id="suryamovies.in" tvg-name="Surya Movies" tvg-logo="https://go4.pw/ASIA/INDIAN/Surya-Movies.png" group-title="Indian",Surya Movies
+#EXTINF:-1 tvg-id="suryamovies.in" tvg-name="Surya Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Indian",Surya Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34734.ts
-#EXTINF:-1 tvg-id="suryamusic.in" tvg-name="Surya Music" tvg-logo="https://go4.pw/AFRICA/MUSIC/SURYAMUSIC.png" group-title="Indian",Surya Music
+#EXTINF:-1 tvg-id="suryamusic.in" tvg-name="Surya Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Indian",Surya Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63880.ts
-#EXTINF:-1 tvg-id="suryahd.in" tvg-name="Surya TV" tvg-logo="https://go4.pw/ASIA/INDIAN/surya-tvhd.png" group-title="Indian",Surya TV
+#EXTINF:-1 tvg-id="suryahd.in" tvg-name="Surya TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus-tv.png" group-title="Indian",Surya TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34733.ts
 #EXTINF:-1 tvg-id="tarangmusic.in" tvg-name="Tarang Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tarang-music.png" group-title="Indian",Tarang Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1021515.ts
@@ -221,13 +229,13 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/149511.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019696.ts
 #EXTINF:-1 tvg-name="Udaya Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/udaya-movies.png" group-title="Indian",Udaya Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510509.ts
-#EXTINF:-1 tvg-name="Udaya Music" group-title="Indian",Udaya Music
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="Udaya Music" group-title="Indian",Udaya Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019697.ts
-#EXTINF:-1 tvg-name="Udaya Music" tvg-logo="https://go4.pw/ASIA/INDIA/UDAYA_MUSIC.png" group-title="Indian",Udaya Music
+#EXTINF:-1 tvg-name="Udaya Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Indian",Udaya Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510507.ts
 #EXTINF:-1 tvg-name="Zee Action" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-action.png" group-title="Indian",Zee Action
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020193.ts
-#EXTINF:-1 tvg-id="zeeanmolcinema.in" tvg-name="Zee Anmol Cinema" tvg-logo="https://go4.pw/ASIA/INDIAN/ZEEANMOLCINEMA.png" group-title="Indian",Zee Anmol Cinema
+#EXTINF:-1 tvg-id="zeeanmolcinema.in" tvg-name="Zee Anmol Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-anmol.png" group-title="Indian",Zee Anmol Cinema
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72246.ts
 #EXTINF:-1 tvg-name="Zee Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema.png" group-title="Indian",Zee Cinema
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020198.ts
@@ -241,21 +249,21 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019636.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34427.ts
 #EXTINF:-1 tvg-name="Zee Cinemalu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinemalu-hd.png" group-title="Indian",Zee Cinemalu
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/551765.ts
-#EXTINF:-1 tvg-name="Zee Classic" tvg-logo="https://go4.pw/ASIA/INDIA/Zeeclassic.png" group-title="Indian",Zee Classic
+#EXTINF:-1 tvg-name="Zee Classic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Indian",Zee Classic
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020201.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-kannada.png" tvg-name="Zee Kannada" group-title="Indian",Zee Kannada
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019698.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-kannada.png" tvg-name="Zee Kannada" group-title="Indian",Zee Kannada
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019699.ts
-#EXTINF:-1 tvg-id="zeekeralamhd.in" tvg-name="Zee Keralam" tvg-logo="https://go4.pw/ASIA/INDIAN/Zee-KeralamHD.png" group-title="Indian",Zee Keralam
+#EXTINF:-1 tvg-id="zeekeralamhd.in" tvg-name="Zee Keralam" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Indian",Zee Keralam
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63882.ts
-#EXTINF:-1 tvg-id="zpunjabhrhp.in" tvg-name="Zee Punjabi" tvg-logo="https://go4.pw/ASIA/PUMJABI/Zee_PunjabI.png" group-title="Indian",Zee Punjabi
+#EXTINF:-1 tvg-id="zpunjabhrhp.in" tvg-name="Zee Punjabi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Indian",Zee Punjabi
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/175114.ts
 #EXTINF:-1 tvg-id="zeetamil.in" tvg-name="Zee Tamil" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tamil.png" group-title="Indian",Zee Tamil
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72132.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-telugu.png" tvg-name="Zee Telugu" group-title="Indian",Zee Telugu
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019638.ts
-#EXTINF:-1 tvg-name="Zee Thirai" tvg-logo="https://go4.pw/ASIA/INDIA/ZEE_THIRAI.png" group-title="Indian",Zee Thirai
+#EXTINF:-1 tvg-name="Zee Thirai" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Indian",Zee Thirai
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510441.ts
 #EXTINF:-1 tvg-name="Zee TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv.png" group-title="Indian",Zee TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020703.ts
@@ -263,7 +271,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020703.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72137.ts
 #EXTINF:-1 tvg-id="zoom.in" tvg-name="Zoom TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png" group-title="Indian",Zoom TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72160.ts
-#EXTINF:-1 tvg-name="5AAB TV" tvg-logo="https://docdog.top/logo/countries/india/5aabtv.png" group-title="Pakistani",5AAB TV
+#EXTINF:-1 tvg-name="5AAB TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Pakistani",5AAB TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/53376
 #EXTINF:-1 tvg-name="8XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png" group-title="Pakistani",8XM
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/68919.ts
@@ -277,46 +285,48 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63200.ts
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23591
 #EXTINF:-1 tvg-name="Apna Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/apna-channel.png" group-title="Pakistani",Apna Channel
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63196.ts
-#EXTINF:-1 tvg-name="ARY Digital" tvg-logo="https://go4.pw//ASIA/PAKISTAN/UK ARY DIGITAL.png" group-title="Pakistani",ARY Digital
+#EXTINF:-1 tvg-name="ARY Digital" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Pakistani",ARY Digital
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809109.ts
-#EXTINF:-1 tvg-name="ARY FAMILY" tvg-logo="https://docdog.top/logo/countries/pakistan/aryfamily.png" group-title="Pakistani",ARY FAMILY
+#EXTINF:-1 tvg-name="ARY FAMILY" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Pakistani",ARY FAMILY
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23594
-#EXTINF:-1 tvg-name="ARY Family" tvg-logo="https://go4.pw/ASIA/PAKISTAN/ARY.png" group-title="Pakistani",ARY Family
+#EXTINF:-1 tvg-name="ARY Family" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Pakistani",ARY Family
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63220.ts
-#EXTINF:-1 tvg-name="ARY MUSIC" tvg-logo="https://docdog.top/logo/countries/pakistan/ARYMUSIC.png" group-title="Pakistani",ARY MUSIC
+#EXTINF:-1 tvg-name="ARY MUSIC" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Pakistani",ARY MUSIC
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23581
-#EXTINF:-1 tvg-id="arymusik.pk" tvg-name="ARY Music" tvg-logo="https://go4.pw/ASIA/PAKISTAN/ARY.png" group-title="Pakistani",ARY Music
+#EXTINF:-1 tvg-id="arymusik.pk" tvg-name="ARY Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Pakistani",ARY Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63193.ts
-#EXTINF:-1 tvg-name="Atv Entertainment" tvg-logo="https://go4.pw/ASIA/PAKISTAN/ATV.png" group-title="Pakistani",Atv Entertainment
+#EXTINF:-1 tvg-name="Atv Entertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus-tv.png" group-title="Pakistani",Atv Entertainment
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63188.ts
 #EXTINF:-1 tvg-name="AVT Khyber" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/avt-khyber.png" group-title="Pakistani",AVT Khyber
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63187.ts
-#EXTINF:-1 tvg-name="AVT KHYBER TV" tvg-logo="https://docdog.top/logo/countries/pakistan/AVTKHYBERTV.png" group-title="Pakistani",AVT KHYBER TV
+#EXTINF:-1 tvg-name="AVT KHYBER TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/avt-khyber.png" group-title="Pakistani",AVT KHYBER TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23601
-#EXTINF:-1 tvg-name="AWAZ TV" tvg-logo="https://docdog.top/logo/countries/pakistan/AWAZTV.jpg" group-title="Pakistani",AWAZ TV
+#EXTINF:-1 tvg-name="AWAZ TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Pakistani",AWAZ TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23603
 #EXTINF:-1 tvg-name="BOL ENTERTAINMENT" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bol-entertainment.png" group-title="Pakistani",BOL ENTERTAINMENT
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23604
 #EXTINF:-1 tvg-name="Bol Entertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bol-entertainment.png" group-title="Pakistani",Bol Entertainment
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63184.ts
-#EXTINF:-1 tvg-name="City 42" tvg-logo="https://go4.pw/ASIA/PAKISTAN/CITY42.png" group-title="Pakistani",City 42
+#EXTINF:-1 tvg-name="City 42" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-city42.png" group-title="Pakistani",City 42
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63178.ts
 #EXTINF:-1 tvg-name="Express Entertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/express-entertainment.png" group-title="Pakistani",Express Entertainment
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63171.ts
-#EXTINF:-1 tvg-name="Geo Entertainment" tvg-logo="https://go4.pw/ASIA/PAKISTAN/GEO.png" group-title="Pakistani",Geo Entertainment
+#EXTINF:-1 tvg-name="Geo Entertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Pakistani",Geo Entertainment
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63166.ts
 #EXTINF:-1 tvg-id="GeoKahani.pk" tvg-name="Geo Kahani" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/geo-kahani.png" group-title="Pakistani",Geo Kahani
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63227.ts
-#EXTINF:-1 tvg-name="Geo Super" tvg-logo="https://go4.pw/ASIA/PAKISTAN/GEO.png" group-title="Pakistani",Geo Super
+#EXTINF:-1 tvg-name="Geo Super" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Pakistani",Geo Super
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1388028.ts
-#EXTINF:-1 tvg-id="GeoTez.pk" tvg-name="Geo Tezz" tvg-logo="https://go4.pw/ASIA/PAKISTAN/GEO.png" group-title="Pakistani",Geo Tezz
+#EXTINF:-1 tvg-id="GeoTez.pk" tvg-name="Geo Tezz" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-geotezz.png" group-title="Pakistani",Geo Tezz
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63163.ts
-#EXTINF:-1 tvg-id="GeoTV.pk" tvg-name="Geo TV" tvg-logo="https://go4.pw/ASIA/PAKISTAN/GEO-TV.png" group-title="Pakistani",Geo TV
+#EXTINF:-1 tvg-id="GeoTV.pk" tvg-name="Geo TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Pakistani",Geo TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63229.ts
-#EXTINF:-1 tvg-name="Green Ent" tvg-logo="https://go4.pw//ASIA/PAKISTAN/GREEN ENT HD.png" group-title="Pakistani",Green Ent
+#EXTINF:-1 tvg-name="Green Ent" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Pakistani",Green Ent
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809111.ts
 #EXTINF:-1 tvg-name="Hum Masala" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-masala.png" group-title="Pakistani",Hum Masala
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63225.ts
+#EXTINF:-1 tvg-name="HUM MASALA TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-masala.png" group-title="Pakistani",HUM MASALA TV
+http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23631
 #EXTINF:-1 tvg-name="HUM SITARAY" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-sitaray.png" group-title="Pakistani",HUM SITARAY
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23633
 #EXTINF:-1 tvg-id="humsitaray.pk" tvg-name="Hum Sitaray" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-sitaray.png" group-title="Pakistani",Hum Sitaray
@@ -325,41 +335,41 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63157.ts
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23634
 #EXTINF:-1 tvg-id="humtveurope.uk" tvg-name="Hum TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-tv.png" group-title="Pakistani",Hum TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63226.ts
-#EXTINF:-1 tvg-name="JALWA MUSIC" tvg-logo="https://docdog.top/logo/countries/pakistan/JALWAMUSIC.jpg" group-title="Pakistani",JALWA MUSIC
+#EXTINF:-1 tvg-name="JALWA MUSIC" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalwa.png" group-title="Pakistani",JALWA MUSIC
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23638
 #EXTINF:-1 tvg-name="JOO MUSIC" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/joo-music.png" group-title="Pakistani",JOO MUSIC
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23582
 #EXTINF:-1 tvg-name="Kay 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kay2.png" group-title="Pakistani",Kay 2
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63151.ts
-#EXTINF:-1 tvg-name="Lahore Rang" tvg-logo="https://go4.pw/ASIA/PAKISTAN/LAHROERANG.png" group-title="Pakistani",Lahore Rang
+#EXTINF:-1 tvg-name="Lahore Rang" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rang.png" group-title="Pakistani",Lahore Rang
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63144.ts
-#EXTINF:-1 tvg-name="PTV GLOBAL" tvg-logo="https://docdog.top/logo/countries/pakistan/ptvglobal.png" group-title="Pakistani",PTV GLOBAL
+#EXTINF:-1 tvg-name="PTV GLOBAL" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/ptv.png" group-title="Pakistani",PTV GLOBAL
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23662
-#EXTINF:-1 tvg-id="ptvhome.pk" tvg-name="PTV Home" tvg-logo="https://go4.pw/ASIA/PAKISTAN/PTV.png" group-title="Pakistani",PTV Home
+#EXTINF:-1 tvg-id="ptvhome.pk" tvg-name="PTV Home" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/ptv.png" group-title="Pakistani",PTV Home
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63129.ts
-#EXTINF:-1 tvg-id="ptvworld.pk" tvg-name="PTV World" tvg-logo="https://go4.pw/ASIA/PAKISTAN/PTV.png" group-title="Pakistani",PTV World
+#EXTINF:-1 tvg-id="ptvworld.pk" tvg-name="PTV World" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/ptv.png" group-title="Pakistani",PTV World
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63124.ts
-#EXTINF:-1 tvg-id="tvone.us" tvg-name="TV One" tvg-logo="https://www.kindpng.com/picc/m/335-3354292_tvone-logo-logo-tv-one-2019-hd-png.png" group-title="Pakistani",TV One
+#EXTINF:-1 tvg-id="tvone.us" tvg-name="TV One" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Pakistani",TV One
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/20868.ts
-#EXTINF:-1 tvg-id="tvone.pk" tvg-name="TV One" tvg-logo="https://go4.pw/INDONESIA/" group-title="Pakistani",TV One
+#EXTINF:-1 tvg-id="tvone.pk" tvg-name="TV One" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Pakistani",TV One
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63109.ts
-#EXTINF:-1 tvg-id="urdu1.pk" tvg-name="Urdu 1" tvg-logo="https://go4.pw/ASIA/PAKISTAN/URDU1.png" group-title="Pakistani",Urdu 1
+#EXTINF:-1 tvg-id="urdu1.pk" tvg-name="Urdu 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Pakistani",Urdu 1
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63108.ts
-#EXTINF:-1 tvg-name="WASEEB TV" tvg-logo="https://docdog.top/logo/countries/pakistan/download.png" group-title="Pakistani",WASEEB TV
+#EXTINF:-1 tvg-name="WASEEB TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Pakistani",WASEEB TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23684
-#EXTINF:-1 tvg-id="actionmaxpacific.us" tvg-name="ActionMAX" group-title="International",ActionMAX
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-id="actionmaxpacific.us" tvg-name="ActionMAX" group-title="International",ActionMAX
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/21013.ts
-#EXTINF:-1 tvg-id="amcplus.us" tvg-name="AMC Thrillers" group-title="International",AMC Thrillers
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amc.png" tvg-id="amcplus.us" tvg-name="AMC Thrillers" group-title="International",AMC Thrillers
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/66243.ts
-#EXTINF:-1 tvg-id="cinemax.us" tvg-name="Cinemax" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f0/611-cinemax.png" group-title="International",Cinemax
+#EXTINF:-1 tvg-id="cinemax.us" tvg-name="Cinemax" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="International",Cinemax
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/13380.ts
-#EXTINF:-1 tvg-id="cmt.us" tvg-name="CMT" tvg-logo="https://www.vippng.com/png/detail/66-665473_cmt-logo-cmt-network-logo-png.png" group-title="International",CMT
+#EXTINF:-1 tvg-id="cmt.us" tvg-name="CMT" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/cmtv-720p-5bf23d265d.png" group-title="International",CMT
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/10476.ts
-#EXTINF:-1 tvg-id="cmt.us" tvg-name="CMT" group-title="International",CMT
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/cmtv-720p-5bf23d265d.png" tvg-id="cmt.us" tvg-name="CMT" group-title="International",CMT
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46706.ts
-#EXTINF:-1 tvg-id="epix.us" tvg-name="Epix" tvg-logo="https://seeklogo.com/images/E/epix-entertainment-llc-logo-98DC100C56-seeklogo.com.png" group-title="International",Epix
+#EXTINF:-1 tvg-id="epix.us" tvg-name="Epix" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epix-tv.png" group-title="International",Epix
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/13214.ts
-#EXTINF:-1 tvg-id="epixhits.us" tvg-name="Epix Hits" tvg-logo="https://sc.dish.com/shared/images/station-logos/EPIXH.PNG" group-title="International",Epix Hits
+#EXTINF:-1 tvg-id="epixhits.us" tvg-name="Epix Hits" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-epixhits.png" group-title="International",Epix Hits
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/12744.ts
 #EXTINF:-1 tvg-id="film4.uk" tvg-name="Film 4" group-title="International",Film 4
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/53702.ts
@@ -367,45 +377,47 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/53702.ts
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46701.ts
 #EXTINF:-1 tvg-id="fxm.us" tvg-name="FXM" tvg-logo="https://lamac.org/wp-content/uploads/2020/04/Group-63@2x.png" group-title="International",FXM
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/10260.ts
-#EXTINF:-1 tvg-id="gacfamily.us" tvg-name="Great American Country" tvg-logo="https://www.prizestakes.com/wp-content/uploads/2018/08/47-471x320.png" group-title="International",Great American Country
+#EXTINF:-1 tvg-id="gacfamily.us" tvg-name="Great American Country" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="International",Great American Country
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/17640.ts
-#EXTINF:-1 tvg-id="independentfilmchannel.us" tvg-name="h_256,w_256,f_auto,q_auto:eco/v1412745090/blg54azaoqz0cj3at5zd.png" group-title="International",Ifc" group-title="International",h_256,w_256,f_auto,q_auto:eco/v1412745090/blg54azaoqz0cj3at5zd.png" group-title="International",Ifc
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-id="independentfilmchannel.us" tvg-name="h_256,w_256,f_auto,q_auto:eco/v1412745090/blg54azaoqz0cj3at5zd.png" group-title="International",Ifc" group-title="International",h_256,w_256,f_auto,q_auto:eco/v1412745090/blg54azaoqz0cj3at5zd.png" group-title="International",Ifc
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9272.ts
-#EXTINF:-1 tvg-id="hallmarkmoviesmysteries.us" tvg-name="Hallmark Movies & Mysteries" tvg-logo="https://p.kindpng.com/picc/s/196-1969955_hallmark-movies-and-mysteries-channel-logo-hd-png.png" group-title="International",Hallmark Movies & Mysteries
+#EXTINF:-1 tvg-id="hallmarkmoviesmysteries.us" tvg-name="Hallmark Movies & Mysteries" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="International",Hallmark Movies & Mysteries
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/10289.ts
-#EXTINF:-1 tvg-id="hbosignature.us" tvg-name="HBO Signature" tvg-logo="https://logodix.com/logo/1111252.png" group-title="International",HBO Signature
+#EXTINF:-1 tvg-id="hbosignature.us" tvg-name="HBO Signature" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hbo.png" group-title="International",HBO Signature
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9266.ts
-#EXTINF:-1 tvg-id="hbozone.us" tvg-name="HBO Zone" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/6a/HBO_Zone_logo.png" group-title="International",HBO Zone
+#EXTINF:-1 tvg-id="hbozone.us" tvg-name="HBO Zone" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hbo.png" group-title="International",HBO Zone
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9265.ts
+#EXTINF:-1 tvg-id="lifetimenetwork.us" tvg-name="Lifetime Movie" tvg-logo="https://juicetv.app/channellogo/lmn2.png" group-title="International",Lifetime Movie
+http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/2208.ts
 #EXTINF:-1 tvg-id="lifetimemovies.us" tvg-name="Lifetime Movies" tvg-logo="https://findvectorlogo.com/wp-content/uploads/2020/01/lifetime-movies-vector-logo.png" group-title="International",Lifetime Movies
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/20863.ts
-#EXTINF:-1 tvg-id="movieplex.us" tvg-name="MoviePlex" tvg-logo="https://p.kindpng.com/picc/s/329-3296935_showtime-extreme-logo-hd-png-download.png" group-title="International",MoviePlex
+#EXTINF:-1 tvg-id="movieplex.us" tvg-name="MoviePlex" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-movieplex.jpg" group-title="International",MoviePlex
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/1829.ts
-#EXTINF:-1 tvg-id="mtv2.us" tvg-name="MTV2" tvg-logo="https://www.bellmedia.ca/wp-content/uploads/2014/02/tv_mtv2-1-490x490.png" group-title="International",MTV2
+#EXTINF:-1 tvg-id="mtv2.us" tvg-name="MTV2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mtv.png" group-title="International",MTV2
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9308.ts
-#EXTINF:-1 tvg-id="mtv.classic.gb" tvg-name="MTV Classic" group-title="International",MTV Classic
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mtv.png" tvg-id="mtv.classic.gb" tvg-name="MTV Classic" group-title="International",MTV Classic
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/53734.ts
-#EXTINF:-1 tvg-name="PINK FASHION" tvg-logo="https://docdog.top/logo/countries/exyu/pinkfashion.png" group-title="International",PINK FASHION
+#EXTINF:-1 tvg-name="PINK FASHION" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="International",PINK FASHION
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/51800
-#EXTINF:-1 tvg-id="showtime.us" tvg-name="Showtime East" group-title="International",Showtime East
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-id="showtime.us" tvg-name="Showtime East" group-title="International",Showtime East
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46214.ts
-#EXTINF:-1 tvg-id="showtimeextreme.us" tvg-name="Showtime Extreme" tvg-logo="https://s4827.pcdn.co/wp-content/uploads/2015/06/Showtime-sho-logo.png" group-title="International",Showtime Extreme
+#EXTINF:-1 tvg-id="showtimeextreme.us" tvg-name="Showtime Extreme" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="International",Showtime Extreme
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/13220.ts
-#EXTINF:-1 tvg-id="skyaction.uk" tvg-name="Sky Cinema Action" group-title="International",Sky Cinema Action
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-id="skyaction.uk" tvg-name="Sky Cinema Action" group-title="International",Sky Cinema Action
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/35254.ts
-#EXTINF:-1 tvg-id="skydrama.uk" tvg-name="Sky Cinema Drama" group-title="International",Sky Cinema Drama
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mad.png" tvg-id="skydrama.uk" tvg-name="Sky Cinema Drama" group-title="International",Sky Cinema Drama
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/35251.ts
-#EXTINF:-1 tvg-id="skyfamily.uk" tvg-name="Sky Cinema Family" group-title="International",Sky Cinema Family
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-id="skyfamily.uk" tvg-name="Sky Cinema Family" group-title="International",Sky Cinema Family
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/53699.ts
-#EXTINF:-1 tvg-id="skypremiere.uk" tvg-name="Sky Cinema Premier" group-title="International",Sky Cinema Premier
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-id="skypremiere.uk" tvg-name="Sky Cinema Premier" group-title="International",Sky Cinema Premier
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/35256.ts
-#EXTINF:-1 tvg-id="skyscifihorror.uk" tvg-name="Sky Cinema Scifi & Horror" group-title="International",Sky Cinema Scifi & Horror
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-id="skyscifihorror.uk" tvg-name="Sky Cinema Scifi & Horror" group-title="International",Sky Cinema Scifi & Horror
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/35248.ts
-#EXTINF:-1 tvg-id="sony.us" tvg-name="Sony Movies" tvg-logo="https://d24j9r7lck9cin.cloudfront.net/l/o/1/1374.1569972429.png" group-title="International",Sony Movies
+#EXTINF:-1 tvg-id="sony.us" tvg-name="Sony Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-movies-563051ab.png" group-title="International",Sony Movies
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/2214.ts
-#EXTINF:-1 tvg-id="turnerclassicmovies.us" tvg-name="Turner Classic Movies" group-title="International",Turner Classic Movies
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-id="turnerclassicmovies.us" tvg-name="Turner Classic Movies" group-title="International",Turner Classic Movies
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/66242.ts
-#EXTINF:-1 tvg-id="americanheroeschannel.us" tvg-name="American Heroes Channel" group-title="Documentary & Wildlife",American Heroes Channel
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-id="americanheroeschannel.us" tvg-name="American Heroes Channel" group-title="Documentary & Wildlife",American Heroes Channel
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/10456.ts
 #EXTINF:-1 tvg-name="And Xplor" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-xplor-hd.svg" group-title="Documentary & Wildlife",And Xplor
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809016.ts
@@ -415,51 +427,51 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/17870.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63170.ts
 #EXTINF:-1 tvg-id="animalplanethd.in" tvg-name="Animal Planet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png" group-title="Documentary & Wildlife",Animal Planet
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72168.ts
-#EXTINF:-1 tvg-name="Animal Planet Gujarati" tvg-logo="https://go4.pw/EUROPE/GERMANY/AnimalPlanet.png" group-title="Documentary & Wildlife",Animal Planet Gujarati
+#EXTINF:-1 tvg-name="Animal Planet Gujarati" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png" group-title="Documentary & Wildlife",Animal Planet Gujarati
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809044.ts
-#EXTINF:-1 tvg-name="Animal Planet Telugu" tvg-logo="https://lo1.in/ind/animplte.png" group-title="Documentary & Wildlife",Animal Planet Telugu
+#EXTINF:-1 tvg-name="Animal Planet Telugu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png" group-title="Documentary & Wildlife",Animal Planet Telugu
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/539493.ts
-#EXTINF:-1 tvg-name="Animal Planet Telugu" tvg-logo="https://go4.pw/EUROPE/GERMANY/AnimalPlanet.png" group-title="Documentary & Wildlife",Animal Planet Telugu
+#EXTINF:-1 tvg-name="Animal Planet Telugu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png" group-title="Documentary & Wildlife",Animal Planet Telugu
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809022.ts
-#EXTINF:-1 tvg-id="blaze.uk" tvg-name="Blaze" group-title="Documentary & Wildlife",Blaze
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-id="blaze.uk" tvg-name="Blaze" group-title="Documentary & Wildlife",Blaze
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/53754.ts
-#EXTINF:-1 tvg-id="cookingchannel.us" tvg-name="Cooking Channel" tvg-logo="https://kodi.tv/sites/default/files/styles/medium_crop/public/addon_assets/plugin.video.cook/icon/icon.png" group-title="Documentary & Wildlife",Cooking Channel
+#EXTINF:-1 tvg-id="cookingchannel.us" tvg-name="Cooking Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-cooking-channel.svg" group-title="Documentary & Wildlife",Cooking Channel
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9229.ts
-#EXTINF:-1 tvg-id="destinationamerica.us" tvg-name="Destination America" tvg-logo="https://fontmeme.com/images/destination-america-new-logo.png" group-title="Documentary & Wildlife",Destination America
+#EXTINF:-1 tvg-id="destinationamerica.us" tvg-name="Destination America" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Documentary & Wildlife",Destination America
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/14222.ts
 #EXTINF:-1 tvg-id="discovery.in" tvg-name="Discovery" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png" group-title="Documentary & Wildlife",Discovery
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510493.ts
-#EXTINF:-1 tvg-id="discoverychannel.us" tvg-name="Discovery Channel" group-title="Documentary & Wildlife",Discovery Channel
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png" tvg-id="discoverychannel.us" tvg-name="Discovery Channel" group-title="Documentary & Wildlife",Discovery Channel
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46720.ts
-#EXTINF:-1 tvg-id="discoverychannel.us" tvg-name="Discovery Channel East" tvg-logo="https://logodix.com/logo/997920.png" group-title="Documentary & Wildlife",Discovery Channel East
+#EXTINF:-1 tvg-id="discoverychannel.us" tvg-name="Discovery Channel East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png" group-title="Documentary & Wildlife",Discovery Channel East
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9811.ts
-#EXTINF:-1 tvg-id="discoverylife.us" tvg-name="Discovery Life" tvg-logo="https://logodix.com/logo/997920.png" group-title="Documentary & Wildlife",Discovery Life
+#EXTINF:-1 tvg-id="discoverylife.us" tvg-name="Discovery Life" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png" group-title="Documentary & Wildlife",Discovery Life
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9861.ts
 #EXTINF:-1 tvg-id="discoveryscience.us" tvg-name="Discovery Science" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-science.png" group-title="Documentary & Wildlife",Discovery Science
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/20866.ts
 #EXTINF:-1 tvg-name="Discovery Turbo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-turbo.png" group-title="Documentary & Wildlife",Discovery Turbo
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/808980.ts
-#EXTINF:-1 tvg-id="discoveryvelocity.us" tvg-name="Discovery Velocity" group-title="Documentary & Wildlife",Discovery Velocity
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png" tvg-id="discoveryvelocity.us" tvg-name="Discovery Velocity" group-title="Documentary & Wildlife",Discovery Velocity
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46212.ts
-#EXTINF:-1 tvg-name="Discovery World" tvg-logo="https://go4.pw/ASIA/TELEGU/DISCOVERYWORLDHD.png" group-title="Documentary & Wildlife",Discovery World
+#EXTINF:-1 tvg-name="Discovery World" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png" group-title="Documentary & Wildlife",Discovery World
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34445.ts
-#EXTINF:-1 tvg-name="Discovery World" tvg-logo="https://go4.pw/ASIA/TELEGU/DISCOVERYWORLDHD.png" group-title="Documentary & Wildlife",Discovery World
+#EXTINF:-1 tvg-name="Discovery World" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png" group-title="Documentary & Wildlife",Discovery World
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/551754.ts
-#EXTINF:-1 tvg-id="discovery.in" tvg-name="Discovery World" tvg-logo="https://go4.pw/ASIA/INDIAN/DISCOVERYJEETHD.png" group-title="Documentary & Wildlife",Discovery World
+#EXTINF:-1 tvg-id="discovery.in" tvg-name="Discovery World" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png" group-title="Documentary & Wildlife",Discovery World
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72191.ts
-#EXTINF:-1 tvg-id="discoverychannel.us" tvg-name="Disney Channel East" tvg-logo="https://logodix.com/logo/619307.png" group-title="Documentary & Wildlife",Disney Channel East
+#EXTINF:-1 tvg-id="discoverychannel.us" tvg-name="Disney Channel East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Documentary & Wildlife",Disney Channel East
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/2206.ts
 #EXTINF:-1 tvg-name="Food Food" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/food-food.png" group-title="Documentary & Wildlife",Food Food
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1155473.ts
 #EXTINF:-1 tvg-id="foodnetwork.us" tvg-name="Food Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/food-network.png" group-title="Documentary & Wildlife",Food Network
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/7323.ts
-#EXTINF:-1 tvg-id="travel.us" tvg-name="h_364,q_50,w_520/v1/clients/chattanooga/Travel_Channel_2019_Logo_41ccc6dd-cc39-4ff9-93a7-a75ca7b509f4.png" group-title="Documentary & Wildlife",Travel Channel East" group-title="International",h_364,q_50,w_520/v1/clients/chattanooga/Travel_Channel_2019_Logo_41ccc6dd-cc39-4ff9-93a7-a75ca7b509f4.png" group-title="Documentary & Wildlife",Travel Channel East
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-channel.png" tvg-id="travel.us" tvg-name="h_364,q_50,w_520/v1/clients/chattanooga/Travel_Channel_2019_Logo_41ccc6dd-cc39-4ff9-93a7-a75ca7b509f4.png" group-title="Documentary & Wildlife",Travel Channel East" group-title="International",h_364,q_50,w_520/v1/clients/chattanooga/Travel_Channel_2019_Logo_41ccc6dd-cc39-4ff9-93a7-a75ca7b509f4.png" group-title="Documentary & Wildlife",Travel Channel East
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9315.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hgtv.png" tvg-id="hgtv.us" tvg-name="HGTV" group-title="Documentary & Wildlife",HGTV
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46717.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history.png" tvg-id="historychannel.us" tvg-name="history" group-title="Documentary & Wildlife",history
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46724.ts
-#EXTINF:-1 tvg-id="historychannel.us" tvg-name="History Channel" tvg-logo="https://i.pinimg.com/originals/f0/f5/85/f0f5853626e544b66b851b80af88ef9a.png" group-title="Documentary & Wildlife",History Channel
+#EXTINF:-1 tvg-id="historychannel.us" tvg-name="History Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history.png" group-title="Documentary & Wildlife",History Channel
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/15017.ts
 #EXTINF:-1 tvg-id="historytv18hd.in" tvg-name="History TV18" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history-tv18.png" group-title="Documentary & Wildlife",History TV18
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72106.ts
@@ -471,17 +483,19 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019596.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019597.ts
 #EXTINF:-1 tvg-name="History TV 18" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history-tv18.png" group-title="Documentary & Wildlife",History TV 18
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/808811.ts
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/investigation-discovery.png" tvg-id="investigationdiscovery.us" tvg-name="ID Investigation Discovery" group-title="Documentary & Wildlife",ID Investigation Discovery
+http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46810.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/investigation-discovery.png" tvg-id="investigationdiscovery.uk" tvg-name="Investigation Discovery" group-title="Documentary & Wildlife",Investigation Discovery
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/53687.ts
-#EXTINF:-1 tvg-id="lawandcrime.us" tvg-name="Law & Crime" group-title="Documentary & Wildlife",Law & Crime
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-id="lawandcrime.us" tvg-name="Law & Crime" group-title="Documentary & Wildlife",Law & Crime
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/328196.ts
-#EXTINF:-1 tvg-id="militaryhistory.us" tvg-name="Military History" group-title="Documentary & Wildlife",Military History
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history.png" tvg-id="militaryhistory.us" tvg-name="Military History" group-title="Documentary & Wildlife",Military History
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/134832.ts
-#EXTINF:-1 tvg-id="motortrend.us" tvg-name="MotorTrend" tvg-logo="https://www.affaritaliani.it/static/upl2018_restyle/moto/motortrend-logo1.PNG" group-title="Documentary & Wildlife",MotorTrend
+#EXTINF:-1 tvg-id="motortrend.us" tvg-name="MotorTrend" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Documentary & Wildlife",MotorTrend
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/10399.ts
-#EXTINF:-1 tvg-name="Nat Geo" group-title="Documentary & Wildlife",Nat Geo
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png" tvg-name="Nat Geo" group-title="Documentary & Wildlife",Nat Geo
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019604.ts
-#EXTINF:-1 tvg-id="nationalgeographicchannel.in" tvg-name="Nat Geo" tvg-logo="https://go4.pw/ASIA/BENGALI/NATGEOWILDHDD.png" group-title="Documentary & Wildlife",Nat Geo
+#EXTINF:-1 tvg-id="nationalgeographicchannel.in" tvg-name="Nat Geo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png" group-title="Documentary & Wildlife",Nat Geo
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34729.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png" tvg-id="national.geographic.wild.gb" tvg-name="Nat Geo Wild" group-title="Documentary & Wildlife",Nat Geo Wild
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/53693.ts
@@ -495,7 +509,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72111.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72219.ts
 #EXTINF:-1 tvg-name="Nat Geo Wild" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png" group-title="Documentary & Wildlife",Nat Geo Wild
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/808783.ts
-#EXTINF:-1 tvg-name="Nat Geo Wild Telugu" tvg-logo="https://go4.pw/EUROPE/ITALY/NATGEOWILD-1.png" group-title="Documentary & Wildlife",Nat Geo Wild Telugu
+#EXTINF:-1 tvg-name="Nat Geo Wild Telugu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png" group-title="Documentary & Wildlife",Nat Geo Wild Telugu
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809024.ts
 #EXTINF:-1 tvg-id="outdoorchannel.us" tvg-name="Outdoor Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/outdoor-channel.png" group-title="Documentary & Wildlife",Outdoor Channel
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9244.ts
@@ -503,59 +517,59 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9244.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34736.ts
 #EXTINF:-1 tvg-id="safaritv.in" tvg-name="Safari TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/safari-tv.png" group-title="Documentary & Wildlife",Safari TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/418616.ts
-#EXTINF:-1 tvg-id="smithsonianchannel.us" tvg-name="Smithsonian Channel" group-title="Documentary & Wildlife",Smithsonian Channel
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-id="smithsonianchannel.us" tvg-name="Smithsonian Channel" group-title="Documentary & Wildlife",Smithsonian Channel
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/31150.ts
 #EXTINF:-1 tvg-id="sonybbcearthhd.in" tvg-name="Sony BBC Earth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-bbc-earth.png" group-title="Documentary & Wildlife",Sony BBC Earth
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34434.ts
 #EXTINF:-1 tvg-name="Sony BBC Earth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-bbc-earth.png" group-title="Documentary & Wildlife",Sony BBC Earth
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510469.ts
-#EXTINF:-1 tvg-id="truecrimenetwork.us" tvg-name="True Crime Network" group-title="Documentary & Wildlife",True Crime Network
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" tvg-id="truecrimenetwork.us" tvg-name="True Crime Network" group-title="Documentary & Wildlife",True Crime Network
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/121130.ts
-#EXTINF:-1 tvg-id="worldfishingnetwork.us" tvg-name="World Fishing Network" tvg-logo="https://upload.wikimedia.org/wikipedia/en/9/90/World_Fishing_Network.png" group-title="Documentary & Wildlife",World Fishing Network
+#EXTINF:-1 tvg-id="worldfishingnetwork.us" tvg-name="World Fishing Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Documentary & Wildlife",World Fishing Network
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/10477.ts
-#EXTINF:-1 tvg-name="Ahlulbayt TV" tvg-logo="https://go4.pw//ASIA/PAKISTAN/UK AHLULBAYT TV.png" group-title="Religious",Ahlulbayt TV
+#EXTINF:-1 tvg-name="Ahlulbayt TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Religious",Ahlulbayt TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/916846.ts
-#EXTINF:-1 tvg-name="Hidayat TV" tvg-logo="https://go4.pw/ASIA/PAKISTAN/hidayat-tv.png" group-title="Religious",Hidayat TV
+#EXTINF:-1 tvg-name="Hidayat TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Religious",Hidayat TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/148602.ts
-#EXTINF:-1 tvg-name="Huda TV" tvg-logo="https://go4.pw/ARABE/HUDA_TV.png" group-title="Religious",Huda TV
+#EXTINF:-1 tvg-name="Huda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus-tv.png" group-title="Religious",Huda TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/905639.ts
-#EXTINF:-1 tvg-name="Iqra TV" tvg-logo="https://go4.pw/ASIA/PAKISTAN/IQRATV.png" group-title="Religious",Iqra TV
+#EXTINF:-1 tvg-name="Iqra TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus-tv.png" group-title="Religious",Iqra TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63215.ts
-#EXTINF:-1 tvg-name="IQRA TV UK" tvg-logo="https://docdog.top/logo/countries/pakistan/IQRATVUK.jpg" group-title="Religious",IQRA TV UK
+#EXTINF:-1 tvg-name="IQRA TV UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus-tv.png" group-title="Religious",IQRA TV UK
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23636
-#EXTINF:-1 tvg-name="Islam Channel" tvg-logo="https://go4.pw/ASIA/PAKISTAN/uk-islam.png" group-title="Religious",Islam Channel
+#EXTINF:-1 tvg-name="Islam Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amc.png" group-title="Religious",Islam Channel
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63214.ts
-#EXTINF:-1 tvg-name="ISLAM TV URDU" tvg-logo="https://docdog.top/logo/countries/pakistan/islamtvurdu.png" group-title="Religious",ISLAM TV URDU
+#EXTINF:-1 tvg-name="ISLAM TV URDU" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/islam-tv.png" group-title="Religious",ISLAM TV URDU
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23637
-#EXTINF:-1 tvg-name="MADANI CHANNEL" tvg-logo="https://docdog.top/logo/countries/pakistan/madanichannel.png" group-title="Religious",MADANI CHANNEL
+#EXTINF:-1 tvg-name="MADANI CHANNEL" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/madani-channel-urdu.png" group-title="Religious",MADANI CHANNEL
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23649
-#EXTINF:-1 tvg-name="Madani Channel" tvg-logo="https://go4.pw/ASIA/PAKISTAN/MADANICHANNEL.png" group-title="Religious",Madani Channel
+#EXTINF:-1 tvg-name="Madani Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/madani-channel-urdu.png" group-title="Religious",Madani Channel
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63212.ts
-#EXTINF:-1 tvg-name="Mecca TV" tvg-logo="https://go4.pw/ARABE/mecca.png" group-title="Religious",Mecca TV
+#EXTINF:-1 tvg-name="Mecca TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus-tv.png" group-title="Religious",Mecca TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/878.ts
-#EXTINF:-1 tvg-name="Noor TV" tvg-logo="https://go4.pw/ASIA/PAKISTAN/NOORTV.png" group-title="Religious",Noor TV
+#EXTINF:-1 tvg-name="Noor TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rtv.png" group-title="Religious",Noor TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63217.ts
-#EXTINF:-1 tvg-name="Peace TV" tvg-logo="https://go4.pw/ALBANIA/PEACE TV.png" group-title="Religious",Peace TV
+#EXTINF:-1 tvg-name="Peace TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-plus-hd-1080p.png" group-title="Religious",Peace TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63211.ts
 #EXTINF:-1 tvg-name="Peace TV Urdu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/peace-tv-urdu.png" group-title="Religious",Peace TV Urdu
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63210.ts
-#EXTINF:-1 tvg-name="Quran - أحمد علي العجمي Ahmad bin Ali Al-Ajmi" tvg-logo="https://go4.pw/ARABE/QURAN.png" group-title="Religious",Quran - أحمد علي العجمي Ahmad bin Ali Al-Ajmi
+#EXTINF:-1 tvg-name="Quran - أحمد علي العجمي Ahmad bin Ali Al-Ajmi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran.png" group-title="Religious",Quran - أحمد علي العجمي Ahmad bin Ali Al-Ajmi
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/909124.ts
-#EXTINF:-1 tvg-name="Quran - سعد الغامدي Saad Al-Ghamdi" tvg-logo="https://go4.pw/ARABE/QURAN.png" group-title="Religious",Quran - سعد الغامدي Saad Al-Ghamdi
+#EXTINF:-1 tvg-name="Quran - سعد الغامدي Saad Al-Ghamdi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran.png" group-title="Religious",Quran - سعد الغامدي Saad Al-Ghamdi
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/909132.ts
-#EXTINF:-1 tvg-name="Quran - سعود الشريم Saud Al Shuraim" tvg-logo="https://go4.pw/ARABE/QURAN.png" group-title="Religious",Quran - سعود الشريم Saud Al Shuraim
+#EXTINF:-1 tvg-name="Quran - سعود الشريم Saud Al Shuraim" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran.png" group-title="Religious",Quran - سعود الشريم Saud Al Shuraim
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/909133.ts
-#EXTINF:-1 tvg-name="Quran - عبد الرحمان السديس Abdul Rahman Al-Sudais" tvg-logo="https://go4.pw/ARABE/QURAN.png" group-title="Religious",Quran - عبد الرحمان السديس Abdul Rahman Al-Sudais
+#EXTINF:-1 tvg-name="Quran - عبد الرحمان السديس Abdul Rahman Al-Sudais" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran.png" group-title="Religious",Quran - عبد الرحمان السديس Abdul Rahman Al-Sudais
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/909134.ts
-#EXTINF:-1 tvg-name="Quran - علي الحذيفي Ali Al Huthaify" tvg-logo="https://go4.pw/ARABE/QURAN.png" group-title="Religious",Quran - علي الحذيفي Ali Al Huthaify
+#EXTINF:-1 tvg-name="Quran - علي الحذيفي Ali Al Huthaify" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran.png" group-title="Religious",Quran - علي الحذيفي Ali Al Huthaify
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/909137.ts
-#EXTINF:-1 tvg-name="Quran - علي جابر Ali Jaber" tvg-logo="https://go4.pw/ARABE/QURAN.png" group-title="Religious",Quran - علي جابر Ali Jaber
+#EXTINF:-1 tvg-name="Quran - علي جابر Ali Jaber" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran.png" group-title="Religious",Quran - علي جابر Ali Jaber
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/909138.ts
-#EXTINF:-1 tvg-name="Quran - ماهر المعيقلي Maher Al Meaqli" tvg-logo="https://go4.pw/ARABE/QURAN.png" group-title="Religious",Quran - ماهر المعيقلي Maher Al Meaqli
+#EXTINF:-1 tvg-name="Quran - ماهر المعيقلي Maher Al Meaqli" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran.png" group-title="Religious",Quran - ماهر المعيقلي Maher Al Meaqli
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/909142.ts
-#EXTINF:-1 tvg-name="Quran - مشاري العفاسي Mishary Alafasi" tvg-logo="https://go4.pw/ARABE/QURAN.png" group-title="Religious",Quran - مشاري العفاسي Mishary Alafasi
+#EXTINF:-1 tvg-name="Quran - مشاري العفاسي Mishary Alafasi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran.png" group-title="Religious",Quran - مشاري العفاسي Mishary Alafasi
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/909144.ts
-#EXTINF:-1 tvg-name="Quran - ياسر الدوسري Yasser Al-Dosari" tvg-logo="https://go4.pw/ARABE/QURAN.png" group-title="Religious",Quran - ياسر الدوسري Yasser Al-Dosari
+#EXTINF:-1 tvg-name="Quran - ياسر الدوسري Yasser Al-Dosari" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran.png" group-title="Religious",Quran - ياسر الدوسري Yasser Al-Dosari
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/909146.ts
 #EXTINF:-1 tvg-name="Quran TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-tv.png" group-title="Religious",Quran TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/618915.ts
@@ -563,243 +577,233 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/618915.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63120.ts
 #EXTINF:-1 tvg-name="Saudi Quran" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/saudi-quran.png" group-title="Religious",Saudi Quran
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/886.ts
-#EXTINF:-1 tvg-name="Adult Tiny4K 1" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Adult Tiny4K 1
+#EXTINF:-1 tvg-name="Adult Tiny4K 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",Adult Tiny4K 1
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393413.ts
-#EXTINF:-1 tvg-name="Alba 2" group-title="Adult",Alba 2
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="Alba 2" group-title="Adult",Alba 2
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315851.ts
-#EXTINF:-1 tvg-name="Alba 3" group-title="Adult",Alba 3
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="Alba 3" group-title="Adult",Alba 3
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315852.ts
-#EXTINF:-1 tvg-name="Alba 4" group-title="Adult",Alba 4
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="Alba 4" group-title="Adult",Alba 4
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315853.ts
-#EXTINF:-1 tvg-name="Alba XXX HD2" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Alba XXX HD2
+#EXTINF:-1 tvg-name="Alba XXX HD2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",Alba XXX HD2
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1463821.ts
-#EXTINF:-1 tvg-name="Anal" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Anal
+#EXTINF:-1 tvg-name="Anal" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",Anal
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393414.ts
-#EXTINF:-1 tvg-name="Asian" group-title="Adult",Asian
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" tvg-name="Asian" group-title="Adult",Asian
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315855.ts
-#EXTINF:-1 tvg-name="Babes TV" group-title="Adult",Babes TV
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" tvg-name="Babes TV" group-title="Adult",Babes TV
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315856.ts
-#EXTINF:-1 tvg-name="Babes TV Russia" group-title="Adult",Babes TV Russia
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" tvg-name="Babes TV Russia" group-title="Adult",Babes TV Russia
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315857.ts
-#EXTINF:-1 tvg-name="Bang U" group-title="Adult",Bang U
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="Bang U" group-title="Adult",Bang U
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315858.ts
 #EXTINF:-1 tvg-name="Blonde" group-title="Adult",Blonde
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315862.ts
-#EXTINF:-1 tvg-name="Brunette" group-title="Adult",Brunette
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" tvg-name="Brunette" group-title="Adult",Brunette
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315865.ts
-#EXTINF:-1 tvg-name="Compilation" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Compilation
+#EXTINF:-1 tvg-name="Compilation" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",Compilation
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393429.ts
 #EXTINF:-1 tvg-name="Cuckold" group-title="Adult",Cuckold
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315867.ts
-#EXTINF:-1 tvg-name="Dusk" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Dusk
+#EXTINF:-1 tvg-name="Dusk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-dusk.png" group-title="Adult",Dusk
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393434.ts
-#EXTINF:-1 tvg-name="Erotic 1 LA2" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Erotic 1 LA2
+#EXTINF:-1 tvg-name="Erotic 1 LA2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",Erotic 1 LA2
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1463935.ts
-#EXTINF:-1 tvg-name="Erotic 2 LA4" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Erotic 2 LA4
+#EXTINF:-1 tvg-name="Erotic 2 LA4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",Erotic 2 LA4
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1463936.ts
-#EXTINF:-1 tvg-name="Erotic 2 LA6" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Erotic 2 LA6
+#EXTINF:-1 tvg-name="Erotic 2 LA6" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",Erotic 2 LA6
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1463937.ts
-#EXTINF:-1 tvg-name="Evil Angel" group-title="Adult",Evil Angel
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="Evil Angel" group-title="Adult",Evil Angel
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315868.ts
-#EXTINF:-1 tvg-name="Exxxotica TV" group-title="Adult",Exxxotica TV
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus-tv.png" tvg-name="Exxxotica TV" group-title="Adult",Exxxotica TV
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315869.ts
-#EXTINF:-1 tvg-name="Fap TV 5" group-title="Adult",Fap TV 5
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/ptv.png" tvg-name="Fap TV 5" group-title="Adult",Fap TV 5
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315874.ts
-#EXTINF:-1 tvg-name="Fap TV 6" group-title="Adult",Fap TV 6
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/ptv.png" tvg-name="Fap TV 6" group-title="Adult",Fap TV 6
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315875.ts
-#EXTINF:-1 tvg-name="Gangbang" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Gangbang
+#EXTINF:-1 tvg-name="Gangbang" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",Gangbang
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393449.ts
-#EXTINF:-1 tvg-name="Gotmylf" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Gotmylf
+#EXTINF:-1 tvg-name="Gotmylf" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-gotmylf.png" group-title="Adult",Gotmylf
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393508.ts
-#EXTINF:-1 tvg-name="Jasmin.Tv" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Jasmin.Tv
+#EXTINF:-1 tvg-name="Jasmin.Tv" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png" group-title="Adult",Jasmin.Tv
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393455.ts
-#EXTINF:-1 tvg-name="Latina" group-title="Adult",Latina
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="Latina" group-title="Adult",Latina
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315884.ts
-#EXTINF:-1 tvg-name="Leo TV" group-title="Adult",Leo TV
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" tvg-name="Leo TV" group-title="Adult",Leo TV
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315885.ts
-#EXTINF:-1 tvg-name="Live Cams" group-title="Adult",Live Cams
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="Live Cams" group-title="Adult",Live Cams
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315887.ts
-#EXTINF:-1 tvg-name="Milf" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Milf
+#EXTINF:-1 tvg-name="Milf" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/raj-musix-tamil-f5ea3667.png" group-title="Adult",Milf
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393458.ts
-#EXTINF:-1 tvg-name="N1 Play Adult Club Seventeen 1" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",N1 Play Adult Club Seventeen 1
+#EXTINF:-1 tvg-name="N1 Play Adult Club Seventeen 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",N1 Play Adult Club Seventeen 1
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393464.ts
-#EXTINF:-1 tvg-name="N1 Play Adult Czech Bitch" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",N1 Play Adult Czech Bitch
+#EXTINF:-1 tvg-name="N1 Play Adult Czech Bitch" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",N1 Play Adult Czech Bitch
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393465.ts
-#EXTINF:-1 tvg-name="N1 Play Adult Dancing Bear" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",N1 Play Adult Dancing Bear
+#EXTINF:-1 tvg-name="N1 Play Adult Dancing Bear" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",N1 Play Adult Dancing Bear
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393466.ts
-#EXTINF:-1 tvg-name="Passiexxx" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Passiexxx
+#EXTINF:-1 tvg-name="Passiexxx" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",Passiexxx
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393480.ts
-#EXTINF:-1 tvg-name="Penthouse After Midnight" group-title="Adult",Penthouse After Midnight
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="Penthouse After Midnight" group-title="Adult",Penthouse After Midnight
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315889.ts
-#EXTINF:-1 tvg-name="Penthouse Black" group-title="Adult",Penthouse Black
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="Penthouse Black" group-title="Adult",Penthouse Black
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315890.ts
-#EXTINF:-1 tvg-name="Penthouse Gold" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Penthouse Gold
+#EXTINF:-1 tvg-name="Penthouse Gold" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-penthousegold.png" group-title="Adult",Penthouse Gold
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393482.ts
-#EXTINF:-1 tvg-name="Penthouse Naughty Nights" group-title="Adult",Penthouse Naughty Nights
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="Penthouse Naughty Nights" group-title="Adult",Penthouse Naughty Nights
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315892.ts
-#EXTINF:-1 tvg-name="Penthouse Passion" group-title="Adult",Penthouse Passion
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="Penthouse Passion" group-title="Adult",Penthouse Passion
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315893.ts
-#EXTINF:-1 tvg-name="Penthouse Reality TV" group-title="Adult",Penthouse Reality TV
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ytv.png" tvg-name="Penthouse Reality TV" group-title="Adult",Penthouse Reality TV
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315894.ts
-#EXTINF:-1 tvg-name="Penthouse TV" group-title="Adult",Penthouse TV
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-plus-hd-1080p.png" tvg-name="Penthouse TV" group-title="Adult",Penthouse TV
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315895.ts
-#EXTINF:-1 tvg-name="Pink Erotic 1" group-title="Adult",Pink Erotic 1
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" tvg-name="Pink Erotic 1" group-title="Adult",Pink Erotic 1
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315896.ts
-#EXTINF:-1 tvg-name="Pink Erotic 2" group-title="Adult",Pink Erotic 2
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" tvg-name="Pink Erotic 2" group-title="Adult",Pink Erotic 2
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315897.ts
-#EXTINF:-1 tvg-name="Pink Erotic 3" group-title="Adult",Pink Erotic 3
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" tvg-name="Pink Erotic 3" group-title="Adult",Pink Erotic 3
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315898.ts
-#EXTINF:-1 tvg-name="Pink Erotic 5" group-title="Adult",Pink Erotic 5
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" tvg-name="Pink Erotic 5" group-title="Adult",Pink Erotic 5
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315900.ts
-#EXTINF:-1 tvg-name="Pink Erotic 7" group-title="Adult",Pink Erotic 7
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" tvg-name="Pink Erotic 7" group-title="Adult",Pink Erotic 7
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315902.ts
-#EXTINF:-1 tvg-name="Pink Erotic 8" group-title="Adult",Pink Erotic 8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" tvg-name="Pink Erotic 8" group-title="Adult",Pink Erotic 8
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315903.ts
-#EXTINF:-1 tvg-name="Pornhub Cuckold" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Pornhub Cuckold
+#EXTINF:-1 tvg-name="Pornhub Cuckold" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Adult",Pornhub Cuckold
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393412.ts
-#EXTINF:-1 tvg-name="Private LA4" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Private LA4
+#EXTINF:-1 tvg-name="Private LA4" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",Private LA4
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1463860.ts
-#EXTINF:-1 tvg-name="Private TV" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Private TV
+#EXTINF:-1 tvg-name="Private TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-plus-hd-1080p.png" group-title="Adult",Private TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393479.ts
-#EXTINF:-1 tvg-name="Pure Babes" group-title="Adult",Pure Babes
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="Pure Babes" group-title="Adult",Pure Babes
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315906.ts
-#EXTINF:-1 tvg-name="Redlight" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Redlight
+#EXTINF:-1 tvg-name="Redlight" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Adult",Redlight
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393489.ts
-#EXTINF:-1 tvg-name="Vip 21 Sextury" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Vip 21 Sextury
+#EXTINF:-1 tvg-name="Vip 21 Sextury" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Adult",Vip 21 Sextury
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393394.ts
-#EXTINF:-1 tvg-name="Vip Live Cams Adult TV" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Vip Live Cams Adult TV
+#EXTINF:-1 tvg-name="Vip Live Cams Adult TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",Vip Live Cams Adult TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393395.ts
-#EXTINF:-1 tvg-name="Vip Mycamtv Squirt" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Vip Mycamtv Squirt
+#EXTINF:-1 tvg-name="Vip Mycamtv Squirt" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mtv.png" group-title="Adult",Vip Mycamtv Squirt
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1463813.ts
-#EXTINF:-1 tvg-name="Vip Pink Erotic 3" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Vip Pink Erotic 3
+#EXTINF:-1 tvg-name="Vip Pink Erotic 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Adult",Vip Pink Erotic 3
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1463815.ts
-#EXTINF:-1 tvg-name="Vip Pov" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Vip Pov
+#EXTINF:-1 tvg-name="Vip Pov" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-vippov.png" group-title="Adult",Vip Pov
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393402.ts
-#EXTINF:-1 tvg-name="Visit-X" tvg-logo="https://go4.pw/ADULT.png" group-title="Adult",Visit-X
+#EXTINF:-1 tvg-name="Visit-X" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-visitx.png" group-title="Adult",Visit-X
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1463865.ts
-#EXTINF:-1 tvg-name="Vivid TV Europe" group-title="Adult",Vivid TV Europe
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" tvg-name="Vivid TV Europe" group-title="Adult",Vivid TV Europe
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315913.ts
 #EXTINF:-1 tvg-name="Vixen" group-title="Adult",Vixen
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315914.ts
-#EXTINF:-1 tvg-name="XXX: BABES TV" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: BABES TV
+#EXTINF:-1 tvg-name="XXX: BABES TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",XXX: BABES TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73821
-#EXTINF:-1 tvg-name="XXX: BLUE HUSTLER" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: BLUE HUSTLER
+#EXTINF:-1 tvg-name="XXX: BLUE HUSTLER" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Adult",XXX: BLUE HUSTLER
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73817
-#EXTINF:-1 tvg-name="XXX: CENTO X CENTO TV" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: CENTO X CENTO TV
+#EXTINF:-1 tvg-name="XXX: CENTO X CENTO TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",XXX: CENTO X CENTO TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/74005
-#EXTINF:-1 tvg-name="XXX: DAUGHTER SWAP" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: DAUGHTER SWAP
+#EXTINF:-1 tvg-name="XXX: DAUGHTER SWAP" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",XXX: DAUGHTER SWAP
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73853
-#EXTINF:-1 tvg-name="XXX: DAY WITH A PORNSTAR" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: DAY WITH A PORNSTAR
+#EXTINF:-1 tvg-name="XXX: DAY WITH A PORNSTAR" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-plus.png" group-title="Adult",XXX: DAY WITH A PORNSTAR
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73851
-#EXTINF:-1 tvg-name="XXX: DDF NETWORK" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: DDF NETWORK
+#EXTINF:-1 tvg-name="XXX: DDF NETWORK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Adult",XXX: DDF NETWORK
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73852
-#EXTINF:-1 tvg-name="XXX: DORCEL TV" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: DORCEL TV
+#EXTINF:-1 tvg-name="XXX: DORCEL TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",XXX: DORCEL TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73819
-#EXTINF:-1 tvg-name="XXX: DORCEL XXX" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: DORCEL XXX
+#EXTINF:-1 tvg-name="XXX: DORCEL XXX" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Adult",XXX: DORCEL XXX
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73820
-#EXTINF:-1 tvg-name="XXX: ERO X" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: ERO X
+#EXTINF:-1 tvg-name="XXX: ERO X" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Adult",XXX: ERO X
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73872
-#EXTINF:-1 tvg-name="XXX: ERO XXX" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: ERO XXX
+#EXTINF:-1 tvg-name="XXX: ERO XXX" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Adult",XXX: ERO XXX
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73989
-#EXTINF:-1 tvg-name="XXX: FAKE TAXI" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: FAKE TAXI
+#EXTINF:-1 tvg-name="XXX: FAKE TAXI" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",XXX: FAKE TAXI
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73858
-#EXTINF:-1 tvg-name="XXX: FAMILY HOOKUPS" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: FAMILY HOOKUPS
+#EXTINF:-1 tvg-name="XXX: FAMILY HOOKUPS" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",XXX: FAMILY HOOKUPS
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73856
-#EXTINF:-1 tvg-name="XXX: FAMILY STROKES" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: FAMILY STROKES
+#EXTINF:-1 tvg-name="XXX: FAMILY STROKES" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",XXX: FAMILY STROKES
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73857
-#EXTINF:-1 tvg-name="XXX: HUSTLER" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: HUSTLER
+#EXTINF:-1 tvg-name="XXX: HUSTLER" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Adult",XXX: HUSTLER
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73816
-#EXTINF:-1 tvg-name="XXX: MCTV ANAL" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: MCTV ANAL
+#EXTINF:-1 tvg-name="XXX: MCTV ANAL" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",XXX: MCTV ANAL
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73824
-#EXTINF:-1 tvg-name="XXX: MCTV BIG ASS" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: MCTV BIG ASS
+#EXTINF:-1 tvg-name="XXX: MCTV BIG ASS" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",XXX: MCTV BIG ASS
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73826
-#EXTINF:-1 tvg-name="XXX: MCTV BIG DICK" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: MCTV BIG DICK
+#EXTINF:-1 tvg-name="XXX: MCTV BIG DICK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",XXX: MCTV BIG DICK
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73827
-#EXTINF:-1 tvg-name="XXX: MCTV BIG TITS" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: MCTV BIG TITS
+#EXTINF:-1 tvg-name="XXX: MCTV BIG TITS" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",XXX: MCTV BIG TITS
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73828
-#EXTINF:-1 tvg-name="XXX: MCTV CUCKOLD" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: MCTV CUCKOLD
+#EXTINF:-1 tvg-name="XXX: MCTV CUCKOLD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",XXX: MCTV CUCKOLD
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73833
-#EXTINF:-1 tvg-name="XXX: MCTV FETISH" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: MCTV FETISH
+#EXTINF:-1 tvg-name="XXX: MCTV FETISH" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",XXX: MCTV FETISH
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73834
-#EXTINF:-1 tvg-name="XXX: MCTV GANGBANG" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: MCTV GANGBANG
+#EXTINF:-1 tvg-name="XXX: MCTV GANGBANG" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",XXX: MCTV GANGBANG
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73835
-#EXTINF:-1 tvg-name="XXX: MCTV GAY" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: MCTV GAY
+#EXTINF:-1 tvg-name="XXX: MCTV GAY" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",XXX: MCTV GAY
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73836
-#EXTINF:-1 tvg-name="XXX: MCTV MILF" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: MCTV MILF
+#EXTINF:-1 tvg-name="XXX: MCTV MILF" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",XXX: MCTV MILF
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73842
-#EXTINF:-1 tvg-name="XXX: MCTV PORNSTAR" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: MCTV PORNSTAR
+#EXTINF:-1 tvg-name="XXX: MCTV PORNSTAR" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-plus.png" group-title="Adult",XXX: MCTV PORNSTAR
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73843
-#EXTINF:-1 tvg-name="XXX: MCTV ROUGH" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: MCTV ROUGH
+#EXTINF:-1 tvg-name="XXX: MCTV ROUGH" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",XXX: MCTV ROUGH
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73845
-#EXTINF:-1 tvg-name="XXX: MCTV RUSSIAN" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: MCTV RUSSIAN
+#EXTINF:-1 tvg-name="XXX: MCTV RUSSIAN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",XXX: MCTV RUSSIAN
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73846
-#EXTINF:-1 tvg-name="XXX: MEIDEN VAN HOLLAND HARD" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: MEIDEN VAN HOLLAND HARD
+#EXTINF:-1 tvg-name="XXX: MEIDEN VAN HOLLAND HARD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",XXX: MEIDEN VAN HOLLAND HARD
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/74004
-#EXTINF:-1 tvg-name="XXX: PUBLIC AGENT" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: PUBLIC AGENT
+#EXTINF:-1 tvg-name="XXX: PUBLIC AGENT" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",XXX: PUBLIC AGENT
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73855
-#EXTINF:-1 tvg-name="XXX: ROUGE TV" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: ROUGE TV
+#EXTINF:-1 tvg-name="XXX: ROUGE TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-plus-hd-1080p.png" group-title="Adult",XXX: ROUGE TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73991
-#EXTINF:-1 tvg-name="XXX: RUSSIAN NIGHT" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: RUSSIAN NIGHT
+#EXTINF:-1 tvg-name="XXX: RUSSIAN NIGHT" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",XXX: RUSSIAN NIGHT
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73822
-#EXTINF:-1 tvg-name="XXX: SUPER ONE" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: SUPER ONE
+#EXTINF:-1 tvg-name="XXX: SUPER ONE" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Adult",XXX: SUPER ONE
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73896
-#EXTINF:-1 tvg-name="XXX: TRUE AMATEURS" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: TRUE AMATEURS
+#EXTINF:-1 tvg-name="XXX: TRUE AMATEURS" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",XXX: TRUE AMATEURS
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73854
-#EXTINF:-1 tvg-name="XXX: VIVID RED" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: VIVID RED
+#EXTINF:-1 tvg-name="XXX: VIVID RED" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Adult",XXX: VIVID RED
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73818
-#EXTINF:-1 tvg-name="XXX: XY MAX" tvg-logo="https://docdog.top/logo/countries/xxx/adult.png" group-title="Adult",XXX: XY MAX
+#EXTINF:-1 tvg-name="XXX: XY MAX" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",XXX: XY MAX
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73823
 #EXTINF:-1 tvg-name="&TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv.png" group-title="Backup",&TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/53373
-#EXTINF:-1 tvg-name="And Explorer" tvg-logo="https://go4.pw/India/&explorer.png" group-title="Backup",And Explorer
+#EXTINF:-1 tvg-name="And Explorer" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xplor.png" group-title="Backup",And Explorer
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809017.ts
 #EXTINF:-1 tvg-id="andtvhd.in" tvg-name="And TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/and-tv.png" group-title="Backup",And TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/174906.ts
-#EXTINF:-1 tvg-name="Asian Sony Max 2" group-title="Backup",Asian Sony Max 2
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max-2.png" tvg-name="Asian Sony Max 2" group-title="Backup",Asian Sony Max 2
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/125795.ts
-#EXTINF:-1 tvg-name="ATN Bangla UK" tvg-logo="https://go4.pw/ASIA/BANGLA/ATNBANGLA.png" group-title="Backup",ATN Bangla UK
-http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72255.ts
-#EXTINF:-1 tvg-name="ATN Bangla USA" tvg-logo="https://go4.pw/ASIA/BANGLA/ATNBANGLA.png" group-title="Backup",ATN Bangla USA
+#EXTINF:-1 tvg-name="ATN Bangla USA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png" group-title="Backup",ATN Bangla USA
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/78978.ts
-#EXTINF:-1 tvg-id="babytvhd.in" tvg-name="Baby TV Hdi" tvg-logo="https://go4.pw/ASIA/INDIAN/BABYTVHDi.png" group-title="Backup",Baby TV Hdi
+#EXTINF:-1 tvg-id="babytvhd.in" tvg-name="Baby TV Hdi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ytv.png" group-title="Backup",Baby TV Hdi
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72172.ts
 #EXTINF:-1 tvg-name="Channel 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png" group-title="Backup",Channel 24
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809041.ts
 #EXTINF:-1 tvg-name="Colors" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors.png" group-title="Backup",Colors
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/808857.ts
-#EXTINF:-1 tvg-id="colorsrishtey.in" tvg-name="Colors Rishtey TV" tvg-logo="https://go4.pw/ASIA/INDIA/ColorsRisthey.png" group-title="Backup",Colors Rishtey TV
-http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72511.ts
 #EXTINF:-1 tvg-id="ddindia.in" tvg-name="DD India" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-india.png" group-title="Backup",DD India
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72184.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-family.png" tvg-id="discoveryfamilia.us" tvg-name="Discovery Family" group-title="Backup",Discovery Family
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/57347.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-jr.png" tvg-id="disneyjunior.us" tvg-name="Disney Jr" group-title="Backup",Disney Jr
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/41960.ts
-#EXTINF:-1 tvg-id="disneychannel.us" tvg-name="Disney XD" group-title="Backup",Disney XD
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/disney-xd-576p-010b4670bf.png" tvg-id="disneychannel.us" tvg-name="Disney XD" group-title="Backup",Disney XD
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/75621.ts
-#EXTINF:-1 tvg-id="vh1.us" tvg-name="h_256,w_256,f_auto,q_auto:eco/v1413371145/ziqmu9l76bjxx9rz9qat.png" group-title="Backup",VH1" group-title="International",h_256,w_256,f_auto,q_auto:eco/v1413371145/ziqmu9l76bjxx9rz9qat.png" group-title="Backup",VH1
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-id="vh1.us" tvg-name="h_256,w_256,f_auto,q_auto:eco/v1413371145/ziqmu9l76bjxx9rz9qat.png" group-title="Backup",VH1" group-title="International",h_256,w_256,f_auto,q_auto:eco/v1413371145/ziqmu9l76bjxx9rz9qat.png" group-title="Backup",VH1
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/7404.ts
 #EXTINF:-1 tvg-id="hbo.us" tvg-name="HBO" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hbo.png" group-title="Backup",HBO
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9264.ts
-#EXTINF:-1 tvg-id="hbo.us" tvg-name="HBO East" group-title="Backup",HBO East
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hbo.png" tvg-id="hbo.us" tvg-name="HBO East" group-title="Backup",HBO East
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46713.ts
-#EXTINF:-1 tvg-name="History 18 Telugu" tvg-logo="https://go4.pw/ASIA/TELEGU/HISTORY18TELUGUHD.png" group-title="Backup",History 18 Telugu
+#EXTINF:-1 tvg-name="History 18 Telugu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history.png" group-title="Backup",History 18 Telugu
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/551759.ts
-#EXTINF:-1 tvg-name="HUM MASALA TV" tvg-logo="https://docdog.top/logo/countries/pakistan/HUMMASALATV.jpg" group-title="Backup",HUM MASALA TV
-http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23631
-#EXTINF:-1 tvg-id="investigationdiscovery.us" tvg-name="ID Investigation Discovery" group-title="Backup",ID Investigation Discovery
-http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46810.ts
-#EXTINF:-1 tvg-name="KTN TV" tvg-logo="https://go4.pw/ASIA/PAKISTAN/KTN-ENTERTAINMENT.png" group-title="Backup",KTN TV
+#EXTINF:-1 tvg-name="KTN TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png" group-title="Backup",KTN TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63146.ts
-#EXTINF:-1 tvg-id="ktv.in" tvg-name="KTV India" tvg-logo="https://go4.pw/ASIA/MALAYSIA/ktv.png" group-title="Backup",KTV India
+#EXTINF:-1 tvg-id="ktv.in" tvg-name="KTV India" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Backup",KTV India
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1091270.ts
-#EXTINF:-1 tvg-id="lifetimenetwork.us" tvg-name="Lifetime Movie" tvg-logo="https://juicetv.app/channellogo/lmn2.png" group-title="Backup",Lifetime Movie
-http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/2208.ts
-#EXTINF:-1 tvg-name="Madani TV Bangla" tvg-logo="https://go4.pw/ASIA/INDIA/MADANI-TV-BANGLA.png" group-title="Backup",Madani TV Bangla
+#EXTINF:-1 tvg-name="Madani TV Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/madani-tv.png" group-title="Backup",Madani TV Bangla
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809026.ts
-#EXTINF:-1 tvg-id="mazhavilmanoramahd.in" tvg-name="Mazavil Manorama" tvg-logo="https://go4.pw/ASIA/MANORAMA.png" group-title="Backup",Mazavil Manorama
+#EXTINF:-1 tvg-id="mazhavilmanoramahd.in" tvg-name="Mazavil Manorama" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Backup",Mazavil Manorama
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34740.ts
-#EXTINF:-1 tvg-id="mtvhdplus.in" tvg-name="MTV Plus" tvg-logo="https://go4.pw/ASIA/INDIA/Mtv.png" group-title="Backup",MTV Plus
+#EXTINF:-1 tvg-id="mtvhdplus.in" tvg-name="MTV Plus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mtv.png" group-title="Backup",MTV Plus
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72216.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png" tvg-id="natgeo.us" tvg-name="National Geographic" group-title="Backup",National Geographic
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46722.ts
@@ -813,23 +817,19 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/551218.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72220.ts
 #EXTINF:-1 tvg-id="nick.in" tvg-name="Nick" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick.png" group-title="Backup",Nick
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510421.ts
-#EXTINF:-1 tvg-id="nickjr.us" tvg-name="Nick JR East" tvg-logo="https://seeklogo.com/images/N/nick-jr-logo-DC18CDB75D-seeklogo.com.png" group-title="Backup",Nick JR East
+#EXTINF:-1 tvg-id="nickjr.us" tvg-name="Nick JR East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png" group-title="Backup",Nick JR East
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9807.ts
-#EXTINF:-1 tvg-id="nickhdplus.in" tvg-name="Nick Plus" tvg-logo="https://go4.pw/ASIA/INDIAN/NICKPLUSHD.png" group-title="Backup",Nick Plus
+#EXTINF:-1 tvg-id="nickhdplus.in" tvg-name="Nick Plus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick.png" group-title="Backup",Nick Plus
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72232.ts
-#EXTINF:-1 tvg-id="nickelodeon.ca" tvg-name="Nickelodeon" group-title="Backup",Nickelodeon
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick.png" tvg-id="nickelodeon.ca" tvg-name="Nickelodeon" group-title="Backup",Nickelodeon
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/47349.ts
 #EXTINF:-1 tvg-id="NTV-IN" tvg-name="NTV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png" group-title="Backup",NTV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72257.ts
 #EXTINF:-1 tvg-id="NTV-IN" tvg-name="NTV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png" group-title="Backup",NTV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/76181.ts
-#EXTINF:-1 tvg-name="Raj Music" group-title="Backup",Raj Music
-http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019676.ts
-#EXTINF:-1 tvg-id="rajmusixkannada.in" tvg-name="Raj Music" tvg-logo="https://go4.pw/ASIA/KANNADA/RAJMUSIC.png" group-title="Backup",Raj Music
-http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34545.ts
 #EXTINF:-1 tvg-name="Saudi Sunnah" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saudi-sunnah.png" group-title="Backup",Saudi Sunnah
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/618929.ts
-#EXTINF:-1 tvg-name="SET Max" group-title="Backup",SET Max
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="SET Max" group-title="Backup",SET Max
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/125814.ts
 #EXTINF:-1 tvg-id="sonysabhd.in" tvg-name="Sony SAB" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sab.png" group-title="Backup",Sony SAB
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72150.ts
@@ -851,19 +851,19 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34433.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019616.ts
 #EXTINF:-1 tvg-name="Star Maa Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa-movies.png" group-title="Backup",Star Maa Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/551217.ts
-#EXTINF:-1 tvg-name="Takbeer" tvg-logo="https://go4.pw/ASIA/PAKISTAN/TAKBEERTV.png" group-title="Backup",Takbeer
+#EXTINF:-1 tvg-name="Takbeer" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Backup",Takbeer
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63219.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tlc.png" tvg-id="tlc.us" tvg-name="TLC" group-title="Backup",TLC
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46691.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tlc.png" tvg-id="tlc.us" tvg-name="TLC" group-title="Backup",TLC
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/47703.ts
-#EXTINF:-1 tvg-id="tlc.us" tvg-name="TLC East" tvg-logo="https://logos.xmltv.se/en.tlc.discovery.dk.png" group-title="Backup",TLC East
+#EXTINF:-1 tvg-id="tlc.us" tvg-name="TLC East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tlc.png" group-title="Backup",TLC East
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/12734.ts
-#EXTINF:-1 tvg-name="TLC World" tvg-logo="https://go4.pw/ASIA/PAKISTAN/TLCHDWORLD.png" group-title="Backup",TLC World
+#EXTINF:-1 tvg-name="TLC World" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tlc.png" group-title="Backup",TLC World
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63159.ts
-#EXTINF:-1 tvg-name="Udaya" group-title="Backup",Udaya
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="Udaya" group-title="Backup",Udaya
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019695.ts
-#EXTINF:-1 tvg-id="vh1.us" tvg-name="VH1" group-title="Backup",VH1
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/vh1-720p-dc47af6a4c.png" tvg-id="vh1.us" tvg-name="VH1" group-title="Backup",VH1
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46705.ts
 #EXTINF:-1 tvg-id="zeemarathihd.in" tvg-name="Zee Marathi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-marathi.png" group-title="Backup",Zee Marathi
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34532.ts
