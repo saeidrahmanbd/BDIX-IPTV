@@ -6,9 +6,9 @@ Rules:
 2. If a primary already exists, its Backup copy stays Backup.
 3. If multiple primary copies of the same channel exist, keep one primary and move
    the extras to Backup.
-4. Channel identity is primarily the normalized channel name. An explicit ID is
-   used only as a tie-breaker when the name is missing. This prevents bad/shared
-   tvg-ids from merging genuinely different channels such as Discovery and Disney.
+4. Channel identity is the normalized channel name. tvg-id/channel-id are only a
+   fallback when the channel name is missing; they must never merge differently
+   named channels because IPTV sources often reuse IDs.
 """
 from pathlib import Path
 import re, unicodedata, subprocess
@@ -39,7 +39,9 @@ def set_group(s, value):
 def norm(s):
     s=unicodedata.normalize('NFKD',str(s or '')).casefold()
     s=''.join(c for c in s if not unicodedata.combining(c))
-    s=re.sub(r'\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|plus)\b',' ',s)
+    # Remove only technical quality suffixes. Keep semantic words such as "Plus"
+    # because "Nick" and "Nick Plus", for example, are different channels.
+    s=re.sub(r'\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p)\b',' ',s)
     return re.sub(r'[^a-z0-9]+','',s)
 
 def name_of(info):
