@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 """Reconcile International primary/Backup entries without contaminating primary groups.
 
-Rule: an orphan Backup is promoted only when no corresponding primary exists.
-If a primary already exists, the Backup stays Backup. If multiple primary copies
-of the same channel exist, keep one primary and move the extras to Backup.
+Rules:
+1. A Backup is promoted only when its corresponding primary is genuinely absent.
+2. If a primary already exists, its Backup copy stays Backup.
+3. If multiple primary copies of the same channel exist, keep one primary and move
+   the extras to Backup.
+4. Channel identity is primarily the normalized channel name. An explicit ID is
+   used only as a tie-breaker when the name is missing. This prevents bad/shared
+   tvg-ids from merging genuinely different channels such as Discovery and Disney.
 """
 from pathlib import Path
 import re, unicodedata, subprocess
@@ -24,8 +29,7 @@ ID_GROUP = {'natgeo.us':'International','nationalgeographicchannelhd.in':'Indian
 
 def attrs(s):
     out={}
-    for m in ATTR_RE.finditer(s):
-        out[m.group(1)] = next(v for v in m.groups()[1:] if v is not None)
+    for m in ATTR_RE.finditer(s): out[m.group(1)] = next(v for v in m.groups()[1:] if v is not None)
     return out
 
 def set_group(s, value):
@@ -41,23 +45,17 @@ def norm(s):
 def name_of(info):
     a=attrs(info); return (a.get('tvg-name') or info.rsplit(',',1)[-1]).strip()
 
-def url_of(block):
-    return next((x.strip() for x in block[1:] if x.strip().startswith(('http://','https://'))),'')
-
+def url_of(block): return next((x.strip() for x in block[1:] if x.strip().startswith(('http://','https://'))),'')
 def group_of(info): return attrs(info).get('group-title','').strip()
 def is_backup(info): return group_of(info).casefold()=='backup'
 
 def channel_key(info):
-    """Return a conservative identity key.
+    n=norm(name_of(info))
+    if n: return ('name', n)
+    a=attrs(info); ident=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold()
+    return ('id', ident) if ident else ('empty','')
 
-    IDs are authoritative. For records without IDs, normalized name is used.
-    A name-only record can also match an ID record with the same normalized name
-    through the secondary name index, but two different explicit IDs never merge.
-    """
-    a=attrs(info)
-    ids=[a.get('tvg-id','').strip().casefold(), a.get('channel-id','').strip().casefold()]
-    ids=[x for x in ids if x]
-    return ('id', ids[0]) if ids else ('name', norm(name_of(info)))
+def same_channel(a_info,b_info): return channel_key(a_info)==channel_key(b_info)
 
 def classify(info):
     a=attrs(info)
@@ -85,88 +83,42 @@ def parse(text):
     return pre,blocks
 
 def baseline_backup_urls():
-    try:
-        text=subprocess.check_output(['git','show',f'{BASELINE_REF}:International-Playlist.m3u'],text=True,stderr=subprocess.DEVNULL)
-    except Exception:
-        return set()
+    try: text=subprocess.check_output(['git','show',f'{BASELINE_REF}:International-Playlist.m3u'],text=True,stderr=subprocess.DEVNULL)
+    except Exception: return set()
     _, blocks=parse(text)
     return {url_of(b).casefold() for b in blocks if url_of(b) and is_backup(b[0])}
-
-def same_channel(a_info,b_info):
-    aa=attrs(a_info); bb=attrs(b_info)
-    aid={aa.get('tvg-id','').strip().casefold(),aa.get('channel-id','').strip().casefold()}- {''}
-    bid={bb.get('tvg-id','').strip().casefold(),bb.get('channel-id','').strip().casefold()}- {''}
-    if aid & bid: return True
-    # Only use name matching when at least one side lacks an explicit ID.
-    if aid and bid and aid != {''} and bid != {''}:
-        return False
-    return bool(norm(name_of(a_info)) and norm(name_of(a_info)) == norm(name_of(b_info)))
 
 def main():
     pre,blocks=parse(PLAYLIST.read_text(encoding='utf-8-sig'))
     baseline=baseline_backup_urls()
-    restored=0; promoted=0; kept_backup=0; moved_duplicate=0
+    restored=promoted=kept_backup=moved_duplicate=0
 
-    # Restore the known pre-classification Backup records first. This repairs the
-    # accidental mass-promotion introduced by the earlier classification pass.
+    # Restore every known pre-classification Backup record before considering promotion.
     for b in blocks:
-        u=url_of(b).casefold()
-        if u in baseline:
-            if not is_backup(b[0]):
-                b[0]=set_group(b[0],'Backup'); restored+=1
-            else:
-                kept_backup+=1
+        if url_of(b).casefold() in baseline and not is_backup(b[0]):
+            b[0]=set_group(b[0],'Backup'); restored+=1
 
-    # Promote only a Backup whose corresponding primary is genuinely absent.
-    # If several backups represent the same channel, promote only one.
+    # Promote only a known orphan Backup when no primary with the same channel identity exists.
     primaries=[b for b in blocks if not is_backup(b[0])]
-    promoted_urls=set()
     for b in blocks:
-        if not is_backup(b[0]):
-            continue
-        if baseline and url_of(b).casefold() not in baseline:
-            # Preserve pre-existing Backup entries; they are not orphan candidates.
-            continue
-        matches=[p for p in primaries if same_channel(p[0],b[0])]
-        if matches:
-            continue
-        key=channel_key(b[0])
-        if key[1] and any(channel_key(p[0])==key for p in primaries):
-            continue
-        b[0]=set_group(b[0],classify(b[0]))
-        primaries.append(b); promoted+=1; promoted_urls.add(url_of(b).casefold())
+        if not is_backup(b[0]): continue
+        if baseline and url_of(b).casefold() not in baseline: continue
+        if any(same_channel(p[0],b[0]) for p in primaries):
+            kept_backup+=1; continue
+        b[0]=set_group(b[0],classify(b[0])); primaries.append(b); promoted+=1
 
-    # Collapse duplicate primary copies. Prefer an original primary over a promoted
-    # orphan, then prefer a record with an explicit tvg-id/channel-id.
-    by_name={}
+    # Keep exactly one primary per normalized channel name; every extra becomes Backup.
+    by_key={}
     for b in blocks:
-        if is_backup(b[0]): continue
-        by_name.setdefault(norm(name_of(b[0])),[]).append(b)
-    for name, group in by_name.items():
-        if not name or len(group)<2: continue
-        # Split groups when multiple explicit IDs disagree.
-        explicit={x for b in group for x in (attrs(b[0]).get('tvg-id','').strip().casefold(),attrs(b[0]).get('channel-id','').strip().casefold()) if x}
-        subgroups=[]
-        if len(explicit)>1:
-            for b in group:
-                ids={attrs(b[0]).get('tvg-id','').strip().casefold(),attrs(b[0]).get('channel-id','').strip().casefold()}-{''}
-                placed=False
-                for sg in subgroups:
-                    sg_ids={x for bb in sg for x in (attrs(bb[0]).get('tvg-id','').strip().casefold(),attrs(bb[0]).get('channel-id','').strip().casefold()) if x}
-                    if not ids or not sg_ids or ids & sg_ids:
-                        sg.append(b); placed=True; break
-                if not placed: subgroups.append([b])
-        else:
-            subgroups=[group]
-        for sg in subgroups:
-            if len(sg)<2: continue
-            def score(b):
-                a=attrs(b[0]); u=url_of(b).casefold()
-                return (u not in baseline, bool(a.get('tvg-id') or a.get('channel-id')))
-            sg_sorted=sorted(sg,key=score,reverse=True)
-            keep=sg_sorted[0]
-            for extra in sg_sorted[1:]:
-                extra[0]=set_group(extra[0],'Backup'); moved_duplicate+=1
+        if not is_backup(b[0]): by_key.setdefault(channel_key(b[0]),[]).append(b)
+    for key,group in by_key.items():
+        if len(group)<2: continue
+        def score(b):
+            a=attrs(b[0]); u=url_of(b).casefold()
+            return (u not in baseline, bool(a.get('tvg-id') or a.get('channel-id')))
+        ordered=sorted(group,key=score,reverse=True)
+        for extra in ordered[1:]:
+            extra[0]=set_group(extra[0],'Backup'); moved_duplicate+=1
 
     rank={x:i for i,x in enumerate(ORDER)}
     def natural(s): return tuple(int(x) if x.isdigit() else x for x in re.split(r'(\d+)',s.casefold()))
