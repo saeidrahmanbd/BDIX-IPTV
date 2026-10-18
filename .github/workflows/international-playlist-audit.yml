@@ -59,7 +59,8 @@ jobs:
               return out
           def norm(s):
               s=unicodedata.normalize('NFKD',str(s or '')).casefold(); s=''.join(c for c in s if not unicodedata.combining(c))
-              s=re.sub(r'\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|plus)\b',' ',s)
+              # Keep semantic channel words such as Plus; remove only technical quality markers.
+              s=re.sub(r'\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p)\b',' ',s)
               return re.sub(r'[^a-z0-9]+','',s)
           blocks=[]; cur=None
           for line in lines:
@@ -77,8 +78,8 @@ jobs:
               if staging_re.search(b[0]):
                   raise SystemExit('Forbidden staging category remains: '+b[0])
               name=norm(a.get('tvg-name') or b[0].rsplit(',',1)[-1])
-              # Primary identity is the normalized channel name. Do not use tvg-id
-              # alone because IPTV sources sometimes reuse one ID for different channels.
+              # Primary identity is the normalized channel name. tvg-id/channel-id are only
+              # a fallback when the channel name is missing; reused IDs never merge named channels.
               key=('name',name) if name else ('id',(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold())
               if key in primary_keys:
                   duplicate_primaries.append((key,b[0]))
