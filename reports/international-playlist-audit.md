@@ -5,9 +5,9 @@
 - Malformed entries removed: 0
 - Backup entries migrated: 0
 - Remaining true orphan backups: 53
-- Logos repaired to repository-local assets: 31
+- Logos repaired to repository-local assets: 4
 - Logos recovered using external/iptv-org sources: 0
-- Entries still without a safe local logo: 2
+- Entries still without a safe local logo: 0
 - Stream URLs changed: 0
 
 ## Remaining orphan backups
@@ -66,5 +66,3 @@
 53. **Zee Talkies** | tvg-id: `-` | channel-id: `-` | URL: `http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019557.ts`
 
 ## Unresolved logos
-1. **Blonde** | tvg-id: `-` | channel-id: `-` | URL: `http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315862.ts`
-2. **Cuckold** | tvg-id: `-` | channel-id: `-` | URL: `http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315867.ts`
