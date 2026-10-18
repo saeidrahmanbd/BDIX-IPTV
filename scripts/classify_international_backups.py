@@ -5,9 +5,8 @@ import re, unicodedata
 
 PLAYLIST = Path('International-Playlist.m3u')
 ORDER = ['Bangla','Indian','Pakistani','International','Documentary & Wildlife','Religious','Adult','Backup']
-ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
+ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)=(?:"([^"]*)"|\'([^\']*)\'|([^\s,]+))')
 
-# Exact user-requested/obvious classifications for the remaining orphan backups.
 INDIAN = {
     'tv', 'andexplorer', 'andtv', 'asiansonymax2', 'colors', 'ddindia',
     'history18telugu', 'ktvindia', 'mazhavilmanorama', 'mtvplus', 'setmax',
@@ -23,8 +22,6 @@ RELIGIOUS = {'saudisunnah', 'takbeer'}
 DOCUMENTARY = {'nationalgeographic', 'tlc', 'tlceast', 'tlcworld'}
 INTERNATIONAL = {'vh1', 'hbo', 'hboeast', 'ktntv'}
 
-# ID-specific rules prevent mixed National Geographic feeds from being put
-# in the wrong country group.
 ID_GROUP = {
     'natgeo.us': 'International',
     'nationalgeographicchannelhd.in': 'Indian',
@@ -38,15 +35,18 @@ ID_GROUP = {
     'nickhdplus.in': 'Kids',
     'nickelodeon.ca': 'Kids',
     'sonyyay.in': 'Kids',
-    'NTV-IN'.casefold(): 'Bangla',
+    'ntv-in': 'Bangla',
     'vh1.us': 'International',
 }
 
 def attrs(s):
-    return dict(ATTR_RE.findall(s))
+    out = {}
+    for m in ATTR_RE.finditer(s):
+        out[m.group(1)] = next(v for v in m.groups()[1:] if v is not None)
+    return out
 
 def set_attr(s, key, value):
-    p = re.compile(rf'{re.escape(key)}="[^"]*"')
+    p = re.compile(rf'{re.escape(key)}\s*=\s*(?:"[^"]*"|\'[^\']*\'|[^\s,]+)', re.I)
     if p.search(s):
         return p.sub(f'{key}="{value}"', s, 1)
     return s.replace('#EXTINF:-1 ', f'#EXTINF:-1 {key}="{value}" ', 1)
@@ -61,6 +61,12 @@ def name_of(info):
     a = attrs(info)
     return (a.get('tvg-name') or info.rsplit(',', 1)[-1]).strip()
 
+def is_backup(info):
+    a = attrs(info)
+    if a.get('group-title', '').strip().casefold() == 'backup':
+        return True
+    return bool(re.search(r'group-title\s*=\s*(?:"Backup"|\'Backup\'|Backup)(?=\s|,|$)', info, re.I))
+
 def classify(info):
     a = attrs(info)
     for key in ('tvg-id', 'channel-id'):
@@ -74,8 +80,6 @@ def classify(info):
     if n in RELIGIOUS: return 'Religious'
     if n in DOCUMENTARY: return 'Documentary & Wildlife'
     if n in INTERNATIONAL: return 'International'
-    # Deliberate fallback for an otherwise unmatched orphan: do not leave
-    # it in Backup; retain it in the broad International group for review.
     return 'International'
 
 def parse(text):
@@ -100,8 +104,7 @@ def main():
     moved = 0
     breakdown = {}
     for b in blocks:
-        a = attrs(b[0])
-        if a.get('group-title','').strip() != 'Backup':
+        if not is_backup(b[0]):
             continue
         target = classify(b[0])
         b[0] = set_attr(b[0], 'group-title', target)
@@ -117,5 +120,4 @@ def main():
     PLAYLIST.write_text('\n'.join(lines).rstrip() + '\n', encoding='utf-8')
     print('Manual orphan classification:', moved, breakdown)
 
-if __name__ == '__main__':
-    main()
+if __name__ == '__main__': main()
