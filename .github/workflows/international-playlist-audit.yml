@@ -76,9 +76,10 @@ jobs:
               if group=='backup': backup_count+=1; continue
               if staging_re.search(b[0]):
                   raise SystemExit('Forbidden staging category remains: '+b[0])
-              tid=a.get('tvg-id','').strip().casefold(); cid=a.get('channel-id','').strip().casefold()
               name=norm(a.get('tvg-name') or b[0].rsplit(',',1)[-1])
-              key=('id',tid or cid) if (tid or cid) else ('name',name)
+              # Primary identity is the normalized channel name. Do not use tvg-id
+              # alone because IPTV sources sometimes reuse one ID for different channels.
+              key=('name',name) if name else ('id',(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold())
               if key in primary_keys:
                   duplicate_primaries.append((key,b[0]))
               else:
