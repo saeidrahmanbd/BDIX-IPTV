@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180">
   <rect width="320" height="180" rx="12" fill="#ffffff"/>
-  <image href="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" x="8" y="5" width="304" height="142" preserveAspectRatio="xMidYMid meet"/>
+  <image href="star-jalsha.png" x="8" y="5" width="304" height="142" preserveAspectRatio="xMidYMid meet"/>
   <rect x="0" y="145" width="320" height="35" rx="0" fill="#7a1748"/>
   <text x="160" y="168" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="700" fill="#ffffff" letter-spacing="1">BANGLA BD</text>
 </svg>
