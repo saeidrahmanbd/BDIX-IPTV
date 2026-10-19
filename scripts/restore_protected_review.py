@@ -33,8 +33,13 @@ def restore():
     protected=blocks(SNAPSHOT.read_text(encoding='utf-8'))
     if not protected: return
     protected_urls={u.casefold() for _,u in protected}
-    protected_ids={identity(info) for info,_ in protected}
-    current=PLAYLIST.read_text(encoding='utf-8-sig').replace('\r','').splitlines()
+    current_text=PLAYLIST.read_text(encoding='utf-8-sig').replace('\r','')
+    current_records=blocks(current_text)
+    # Retain the repaired metadata of an exact URL when reclassifying it into its
+    # protected review group. Do not drop a different stream merely because its
+    # channel identity matches a Backup/Not Playing entry.
+    repaired_info_by_url={u.casefold(): info for info,u in current_records}
+    current=current_text.splitlines()
     cleaned=[]; i=0; removed=0
     while i<len(current):
         if current[i].startswith('#EXTINF:'):
@@ -42,14 +47,21 @@ def restore():
             while j<len(current) and not current[j].strip(): j+=1
             if j<len(current) and current[j].strip().lower().startswith(('http://','https://')):
                 url=current[j].strip()
-                current_id=identity(current[i])
-                same_identity=current_id in protected_ids and current_id != ('','')
-                if url.casefold() in protected_urls or same_identity:
+                if url.casefold() in protected_urls:
                     removed+=1; i=j+1; continue
         cleaned.append(current[i]); i+=1
     restored=0
-    for info,url in protected:
-        group=group_of(info); insert_at=None; i=0
+    for snapshot_info,url in protected:
+        group=group_of(snapshot_info)
+        # Use corrected metadata from the exact same URL if a maintenance step
+        # processed it. Preserve the protected category and strip primary numbering.
+        info=repaired_info_by_url.get(url.casefold(), snapshot_info)
+        info=re.sub(r'\\s+tvg-chno="[^"]*"', '', info)
+        if re.search(r'group-title="[^"]*"', info):
+            info=re.sub(r'group-title="[^"]*"', f'group-title="{group}"', info, count=1)
+        else:
+            info=info.replace('#EXTINF:-1 ', f'#EXTINF:-1 group-title="{group}" ', 1)
+        insert_at=None; i=0
         while i<len(cleaned):
             if cleaned[i].startswith('#EXTINF:') and group_of(cleaned[i])==group:
                 j=i+1
