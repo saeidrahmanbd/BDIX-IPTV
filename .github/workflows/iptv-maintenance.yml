@@ -46,7 +46,7 @@ concurrency:
   queue: max
 jobs:
   maintain:
-    if: ${{ !(github.actor == 'github-actions[bot]' && (startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance') || startsWith(github.event.head_commit.message, 'Add conservative playlist removal guard') || startsWith(github.event.head_commit.message, 'Add hard playlist preservation gates') || startsWith(github.event.head_commit.message, 'Refine preservation guard to protect stream URLs') || startsWith(github.event.head_commit.message, 'Harden protected queue byte-for-byte preservation'))) && !startsWith(github.event.head_commit.message, 'Repair IPTV metadata and local logos only; leave stream URLs unchanged') }}
+    if: ${{ !(github.actor == 'github-actions[bot]' && (startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance') || startsWith(github.event.head_commit.message, 'Add conservative playlist removal guard') || startsWith(github.event.head_commit.message, 'Add hard playlist preservation gates') || startsWith(github.event.head_commit.message, 'Refine preservation guard to protect stream URLs') || startsWith(github.event.head_commit.message, 'Harden protected queue byte-for-byte preservation') || startsWith(github.event.head_commit.message, 'Harden IPTV maintenance safety'))) && !startsWith(github.event.head_commit.message, 'Repair IPTV metadata and local logos only; leave stream URLs unchanged') }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
@@ -60,6 +60,8 @@ jobs:
         with: {node-version: '20'}
       - name: Install dependencies
         run: python -m pip install --disable-pip-version-check pillow cairosvg
+      - name: Validate maintenance safety helpers
+        run: python -m py_compile scripts/maintenance_helpers.py
       - name: Validate EPG configuration
         run: python scripts/check_epg_config.py
       - name: Run maintenance
@@ -99,9 +101,9 @@ jobs:
             python scripts/generate_logo_authenticity_manifest.py
             python scripts/restore_protected_review.py
 
-            # HARD REMOVAL GUARD #1: this is the first point after all playlist
-            # repair scripts. Any unique pre-existing stream URL that disappeared
-            # or changed blocks the run and is written to a report.
+            # HARD REMOVAL GUARD #1: after all playlist repair scripts, no existing
+            # stream URL may disappear. Duplicate URLs are reported only; they are
+            # never automatically deleted.
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
 
             # Stream health is advisory only. The playlist owner reviews results manually;
@@ -138,8 +140,8 @@ jobs:
             GATE_STATUS=$?
             set -e
 
-            # The gate is a repair trigger, not a dead end. Repeat deterministic
-            # metadata/logo repair, then restore the protected review queues again.
+            # The gate is a repair trigger, not a deletion trigger. Repeat only
+            # deterministic metadata/logo repair, then restore the protected queues.
             if [ "$GATE_STATUS" -ne 0 ]; then
               echo '::warning::Pre-publish gate found issues; running automatic correction pass before failing.'
               python scripts/repair_iptv_audit_findings.py || true
@@ -165,7 +167,7 @@ jobs:
             python scripts/record_maintenance_history.py
             python scripts/generate_dashboard.py
             if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
-              echo '::warning::Audit/pre-publish gate still reports issues after the automatic correction pass. Preserving the deterministic IPTV repair in IPTV-Playlist.m3u; no automatic rollback of the repaired playlist will occur.'
+              echo '::warning::Audit/pre-publish gate still reports issues after the automatic correction pass. The playlist remains publishable only if the removal guard passes; unresolved audit issues are preserved for review.'
               echo "Audit status: $AUDIT_STATUS"
               echo "Pre-publish gate status: $GATE_STATUS"
               git restore -- logos/ || true
@@ -194,3 +196,17 @@ jobs:
             sleep 3
           done
           exit 1
+      - name: Upload maintenance safety reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: iptv-maintenance-safety-${{ github.run_number }}
+          path: |
+            reports/proposed-removals.md
+            reports/playlist-audit.md
+            reports/pre-publish-gate.md
+            reports/stream-health.md
+            reports/stream-risk-review.md
+            reports/fix-report.md
+          if-no-files-found: warn
+          retention-days: 14
