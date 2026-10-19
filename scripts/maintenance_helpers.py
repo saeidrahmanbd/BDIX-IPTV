@@ -6,7 +6,7 @@ The maintenance workflow is intentionally conservative:
 - Backup/Not Playing entries are protected byte-for-byte;
 - stream-health failures are advisory only;
 - removals are reported and blocked unless they are provable exact-URL duplicates;
-- metadata repair is allowed only when the underlying stream URL survives.
+- metadata repair is allowed when the underlying stream URL survives.
 """
 from __future__ import annotations
 
@@ -62,10 +62,13 @@ def _parse(text: str) -> list[tuple[str, str]]:
     return result
 
 
-def _stable(info: str, url: str) -> tuple[str, str]:
-    a = _attrs(info)
-    cid = (a.get("tvg-id") or a.get("channel-id") or "").strip().casefold()
-    return cid, url.strip().casefold()
+def _stable(info: str, url: str) -> str:
+    """Preservation identity is the exact stream URL, not metadata.
+
+    This deliberately permits tvg-id, channel name, logo, country and group
+    metadata to be repaired while requiring the existing stream URL to survive.
+    """
+    return url.strip().casefold()
 
 
 def _group(info: str) -> str:
@@ -88,7 +91,7 @@ def snapshot_protected() -> None:
 
 
 def snapshot_playlist() -> None:
-    """Save the complete pre-maintenance playlist identity/URL inventory."""
+    """Save the complete pre-maintenance stream-URL inventory."""
     entries = _parse(PLAYLIST.read_text(encoding="utf-8-sig"))
     baseline = []
     for info, url in entries:
@@ -97,8 +100,8 @@ def snapshot_playlist() -> None:
             "info": info,
             "url": url,
             "group": _group(info),
-            "stable": list(_stable(info, url)),
-            "name": a.get("tvg-name", ""),
+            "stable": _stable(info, url),
+            "name": a.get("tvg-name", "") or info.rsplit(",", 1)[-1].strip(),
         })
     BASELINE.write_text(json.dumps(baseline, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Playlist safety baseline: {len(baseline)} entries")
@@ -128,37 +131,31 @@ def _write_removal_report(removals: list[dict], duplicate_allowed: list[dict]) -
 
 
 def verify_no_unauthorized_removals() -> int:
-    """Block publication if maintenance removed existing entries.
-
-    The only permitted automatic removal is a later copy of an *exactly identical*
-    stream URL. Backup/Not Playing are always byte-for-byte protected. Health
-    failures, metadata differences, group changes and logo changes are never
-    deletion reasons.
-    """
+    """Block publication if maintenance removed existing stream URLs."""
     if not BASELINE.exists():
         print("ERROR: playlist safety baseline is missing", file=sys.stderr)
         return 2
 
     baseline = json.loads(BASELINE.read_text(encoding="utf-8"))
     current = _parse(PLAYLIST.read_text(encoding="utf-8-sig"))
+    baseline_counts = Counter(item["stable"] for item in baseline)
     current_counts = Counter(_stable(info, url) for info, url in current)
-    baseline_counts = Counter(tuple(item["stable"]) for item in baseline)
-    baseline_url_counts = Counter(item["stable"][1] for item in baseline if item["stable"][1])
-    current_url_counts = Counter(url.strip().casefold() for _, url in current if url.strip())
+    baseline_url_counts = baseline_counts
+    current_url_counts = current_counts
 
     removals: list[dict] = []
     duplicate_allowed: list[dict] = []
     for item in baseline:
-        key = tuple(item["stable"])
-        if baseline_counts[key] <= current_counts[key]:
+        url = item["stable"]
+        if not url or baseline_counts[url] <= current_counts[url]:
             continue
-        missing = baseline_counts[key] - current_counts[key]
+        missing = baseline_counts[url] - current_counts[url]
         for _ in range(missing):
             removals.append({
-                "name": item["name"] or item["info"].rsplit(",", 1)[-1].strip(),
+                "name": item["name"],
                 "group": item["group"],
                 "url": item["url"],
-                "reason": "existing entry disappeared or its stream URL changed",
+                "reason": "existing stream URL disappeared or changed",
             })
 
     remaining_blocked = []
@@ -184,7 +181,7 @@ def verify_no_unauthorized_removals() -> int:
         print(f"Change Guard BLOCKED: {len(protected_removed)} Backup/Not Playing entries would be removed.", file=sys.stderr)
         return 1
     if remaining_blocked:
-        print(f"Change Guard BLOCKED: {len(remaining_blocked)} non-duplicate existing entries would be removed.", file=sys.stderr)
+        print(f"Change Guard BLOCKED: {len(remaining_blocked)} non-duplicate existing stream URLs would be removed.", file=sys.stderr)
         return 1
     if len(duplicate_allowed) > allowed_duplicate_limit:
         print(
@@ -205,7 +202,7 @@ def verify_no_unauthorized_removals() -> int:
         return 1
 
     print(
-        f"Change Guard passed: {len(removals)} existing entries proposed; "
+        f"Change Guard passed: {len(removals)} existing stream URLs proposed; "
         f"{len(duplicate_allowed)} are exact-URL duplicates and {len(remaining_blocked)} are unauthorized removals."
     )
     return 0
