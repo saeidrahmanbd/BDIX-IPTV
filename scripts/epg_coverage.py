@@ -49,6 +49,8 @@ EPG_ALIASES = {
     "custom.bdix.cnninternationla": ["157679"],
     "custom.toonami.aftermath.east": ["ToonamiAftermath.us"],
     "DocumentaryPlus": ["plex.tv.Documentary+.plex"],
+    # Reuses the prior mapped EPG identity for the same channel after ID normalization.
+    "custom.nick.bangla": ["jtv1341"],
 }
 
 EPG_LOCKS = {
