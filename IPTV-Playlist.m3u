@@ -18,7 +18,7 @@ https://tvsen6.aynaott.com/da6WMXAk/index.m3u8
 http://116.204.149.16/banglatv/index.m3u8
 #EXTINF:-1 tvg-id="BanglaVision.bd" tvg-name="Bangla Vision" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/banglavision.png" tvg-chno="6" channel-id="BanglaVision.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Bangla Vision
 https://tvsen5.aynaott.com/banglavision/index.m3u8
-#EXTINF:-1 tvg-id="ATNBanglaUK.uk" tvg-name="ATN Bangla UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla-uk.svg" tvg-chno="7" channel-id="ATNBanglaUK.uk" tvg-language="ben" tvg-country="GB" group-title="Bangladesh",ATN Bangla UK
+#EXTINF:-1 tvg-id="ATNBanglaUK.uk" tvg-name="ATN Bangla UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla-uk.jpg" tvg-chno="7" channel-id="ATNBanglaUK.uk" tvg-language="ben" tvg-country="GB" group-title="Bangladesh",ATN Bangla UK
 https://app.ncare.live/live-orgin/atnbanglauk-off.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.bengali.beats" tvg-name="Bengali Beats" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bengali-beats.png" tvg-chno="8" channel-id="custom.bengali.beats" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Bengali Beats
 https://live20.bozztv.com/giatvplayout7/giatv-209587/tracks-v1a1/mono.ts.m3u8
@@ -104,7 +104,7 @@ https://tvsen6.aynaott.com/cdgr3tw6WoG7JyRnLbi0/index.m3u8
 https://homair-tv-production.up.railway.app/api/play/BTV%20HD.m3u8
 #EXTINF:-1 tvg-id="custom.channel.16" tvg-name="Channel 16" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-16.png" tvg-chno="133" channel-id="custom.channel.16" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Channel 16
 https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8
-#EXTINF:-1 tvg-id="custom.channel.s.uk" tvg-name="Channel S UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s-uk.svg" tvg-chno="134" channel-id="custom.channel.s.uk" tvg-language="ben" tvg-country="GB" group-title="Bangladesh",Channel S UK
+#EXTINF:-1 tvg-id="custom.channel.s.uk" tvg-name="Channel S UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s-uk.jpg" tvg-chno="134" channel-id="custom.channel.s.uk" tvg-language="ben" tvg-country="GB" group-title="Bangladesh",Channel S UK
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="DurontoTV.bd" tvg-name="Duronto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-duronto-tv-2b3c7dd202.png" tvg-chno="135" channel-id="DurontoTV.bd" tvg-language="ben" tvg-country="BD" group-title="Bangladesh",Duronto TV
 http://103.135.253.32:8080/DORONTU-TV/index.m3u8
@@ -150,7 +150,7 @@ https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_360p/chunks.m3u8
 #EXTINF:-1 tvg-id="custom.jalsha.bangla.bd" tvg-name="Jalsha Bangla BD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalsha-bangla-bd.svg" tvg-chno="1061" channel-id="custom.jalsha.bangla.bd" group-title="Indian Bangla" tvg-country="BD" tvg-language="ben",Jalsha Bangla BD
 https://dish.porosh.com.bd/hls/jalshabangla.m3u8
-#EXTINF:-1 tvg-id="Star.Jalsha.Movies.in" tvg-name="Jalsha Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalsha-movies.svg" tvg-chno="88" channel-id="Star.Jalsha.Movies.in" group-title="Indian Bangla" tvg-country="IN" tvg-language="ben",Jalsha Movies
+#EXTINF:-1 tvg-id="Star.Jalsha.Movies.in" tvg-name="Jalsha Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalsha-movies.png" tvg-chno="88" channel-id="Star.Jalsha.Movies.in" group-title="Indian Bangla" tvg-country="IN" tvg-language="ben",Jalsha Movies
 https://box.bbaria.net:8083/Jalsha_Movie/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="Star.Jalsha.Movies.HD.in" tvg-name="Jalsha Movies HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalsha-movies-hd.png" tvg-chno="93" channel-id="Star.Jalsha.Movies.HD.in" group-title="Indian Bangla" tvg-country="IN" tvg-language="ben",Jalsha Movies HD
 http://103.151.60.162:2122/play/a00x/index.m3u8
@@ -1039,7 +1039,7 @@ https://amg01131-tracetv-tracelatina-klowdtv-v10em.amagi.tv/playlist/amg01131-tr
 https://channels.trace.plus/Traceprod/UK_FAST_hd/index.m3u8
 #EXTINF:-1 tvg-id="TraceUrban.fr" tvg-name="Trace Urban" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trace-urban-1080p-52524ff192.png" tvg-chno="733" channel-id="TraceUrban.fr" tvg-language="fra;eng;por" tvg-country="FR" group-title="International",Trace Urban
 https://channels.trace.plus/Traceprod/URBAN_AFRIC_FR_hd/index.m3u8
-#EXTINF:-1 tvg-id="custom.trt.m.zik" tvg-name="TRT Müzik" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trt-muzik.svg" channel-id="custom.trt.m.zik" group-title="International",TRT Müzik
+#EXTINF:-1 tvg-id="custom.trt.m.zik" tvg-name="TRT Müzik" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/trt-muzik.png" channel-id="custom.trt.m.zik" group-title="International",TRT Müzik
 https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="Tunes6.in" tvg-name="Tunes 6" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-tunes-6-86e66d6033.png" tvg-chno="761" channel-id="Tunes6.in" group-title="International",Tunes 6
 https://stream.d6-pro.com/tunes6music/live/video.m3u8
@@ -1489,7 +1489,7 @@ https://iptvlive.ahmed-bd-org.workers.dev/atn-bangla-1/index.m3u8
 https://tvsen5.aynaott.com/P3y2URgG7LDe/index.m3u8
 #EXTINF:-1 tvg-id="ATNBangla.bd" tvg-name="ATN Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png" channel-id="ATNBangla.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",ATN Bangla
 https://tvsen5.aynaott.com/P3y2URgG7LDe/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="ATNBanglaUK.uk" tvg-name="ATN Bangla UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla-uk.svg" channel-id="ATNBanglaUK.uk" tvg-language="ben" tvg-country="GB" group-title="Backup",ATN Bangla UK
+#EXTINF:-1 tvg-id="ATNBanglaUK.uk" tvg-name="ATN Bangla UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla-uk.jpg" channel-id="ATNBanglaUK.uk" tvg-language="ben" tvg-country="GB" group-title="Backup",ATN Bangla UK
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnbanglauk-off.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="ATNNews.bd" tvg-name="ATN News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-atn-news-e0442addb4.png" channel-id="ATNNews.bd" tvg-language="ben" tvg-country="BD" group-title="Backup",ATN News
 https://iptv-proxy.ahmed-bd-org.workers.dev/atn-news/index.m3u8
@@ -1614,9 +1614,9 @@ https://iptvlive.ahmed-bd-org.workers.dev/channel-i-hd-1/index.m3u8
 https://tvsen3.b-cdn.net/qUud8Nxs/index.m3u8
 #EXTINF:-1 tvg-id="ChannelI.bd" tvg-name="Channel I" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-i.png" channel-id="ChannelI.bd" tvg-language="ben" tvg-country="BD" group-title="Backup",Channel I
 https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="custom.channel.s.uk" tvg-name="Channel S UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s-uk.svg" channel-id="custom.channel.s.uk" tvg-language="ben" tvg-country="GB" group-title="Backup",Channel S UK
+#EXTINF:-1 tvg-id="custom.channel.s.uk" tvg-name="Channel S UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s-uk.jpg" channel-id="custom.channel.s.uk" tvg-language="ben" tvg-country="GB" group-title="Backup",Channel S UK
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/chsukoff.stream/live-orgin/chsukoff.stream/chunks.m3u8
-#EXTINF:-1 tvg-id="custom.channel.s.uk" tvg-name="Channel S UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s-uk.svg" channel-id="custom.channel.s.uk" tvg-language="ben" tvg-country="GB" group-title="Backup",Channel S UK
+#EXTINF:-1 tvg-id="custom.channel.s.uk" tvg-name="Channel S UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s-uk.jpg" channel-id="custom.channel.s.uk" tvg-language="ben" tvg-country="GB" group-title="Backup",Channel S UK
 https://box.bbaria.net:8083/ChannelS/video.m3u8
 #EXTINF:-1 tvg-id="Choppertown.us" tvg-name="Choppertown" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/choppertown.png" channel-id="Choppertown.us" group-title="Backup",Choppertown
 https://linear-11.frequency.stream/dist/glewedtv/11/hls/master/playlist.m3u8
