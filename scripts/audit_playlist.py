@@ -436,37 +436,104 @@ REPORT.write_text("\n".join(lines).rstrip()+"\n", encoding="utf-8")
 print(f"Playlist audit: entries={len(entries)} duplicate_ids={len(duplicate_ids)} duplicate_urls={len(duplicate_urls)} conflicts={len(metadata_conflicts)} name_collisions={len(name_collisions)} protected_changes={len(protected_changes)} logo_exceptions={len(logo_exceptions)} external_logo_warnings={len(logo_warnings)}")
 
 def run_change_guard():
-    try: old_text = subprocess.check_output(["git", "show", "HEAD:IPTV-Playlist.m3u"], text=True, stderr=subprocess.DEVNULL)
-    except Exception: return
-    old_entries = parse(old_text)
-    key = lambda info,url: ((attrs(info).get("tvg-id") or attrs(info).get("channel-id") or "").strip().lower(), url.strip())
-    old_keys = {key(i,u) for i,u in old_entries}; new_keys = {key(i,u) for i,u in entries}
-    added, removed = new_keys-old_keys, old_keys-new_keys
-    review_urls = set(); review_added = {k for k in added if k[1].strip().lower() in review_urls}; active_added = added - review_added
-    max_changes = 150; max_review_additions = 120
-    if len(review_added) > max_review_additions: raise SystemExit(f"Change Guard blocked maintenance: {len(review_added)} review-queue additions exceed the {max_review_additions}-entry limit.")
-    if len(active_added)+len(removed) > max_changes: raise SystemExit(f"Change Guard blocked maintenance: {len(active_added)} active additions + {len(removed)} removals exceed the {max_changes}-entry safety limit; {len(review_added)} review-queue additions are handled separately.")
-    old_primary = Counter(key(i,u) for i,u in old_entries if attrs(i).get("group-title","").strip() not in PRIMARY_EXCEPTIONS)
-    new_primary = Counter(key(i,u) for i,u in entries if attrs(i).get("group-title","").strip() not in PRIMARY_EXCEPTIONS)
-    new_backup_by_url = Counter(u.strip().lower() for i,u in entries if attrs(i).get("group-title","").strip() in PRIMARY_EXCEPTIONS and u.strip())
-    new_primary_by_url = defaultdict(Counter)
-    for (cid, url), count in new_primary.items(): new_primary_by_url[url][cid] += count
-    removed_primary = []
-    for (old_cid, url), count in old_primary.items():
-        direct = new_primary[(old_cid, url)]
-        if direct >= count: continue
-        quarantined = min(count-direct, new_backup_by_url.get(url.strip().lower(), 0))
-        if direct + quarantined >= count: continue
-        preserved = sum(n for new_cid,n in new_primary_by_url.get(url,{}).items() if (not old_cid and new_cid) or (old_cid and new_cid.startswith(old_cid+"@")))
-        if direct + preserved < count: removed_primary.extend([(old_cid,url)]*(count-direct-preserved))
-    if removed_primary: raise SystemExit(f"Change Guard blocked maintenance: {len(removed_primary)} primary entries would be removed or rewritten.")
-    old_review = {}; new_review = {}
-    for info,url in old_entries:
-        group=attrs(info).get("group-title","").strip()
-        if group in set() and url.strip(): old_review[url.strip().lower()]=group
-    review_reclassified=[(url,old_group,new_review.get(url,"")) for url,old_group in old_review.items() if new_review.get(url)!=old_group]
-    if review_reclassified: raise SystemExit(f"Change Guard blocked maintenance: {len(review_reclassified)} New entries were reclassified or removed from their user-review queue.")
+    """Guard real stream URL changes; never count an ID rewrite as a new/deleted stream."""
+    try:
+        old_text = subprocess.check_output(["git", "show", "HEAD:IPTV-Playlist.m3u"], text=True, encoding="utf-8")
+    except Exception:
+        return
 
+    old_entries = parse(old_text)
+    new_entries = entries
+
+    def norm_url(url):
+        return url.strip().casefold()
+
+    old_by_url = defaultdict(list)
+    new_by_url = defaultdict(list)
+    for info, url in old_entries:
+        if url.strip():
+            old_by_url[norm_url(url)].append((info, url))
+    for info, url in new_entries:
+        if url.strip():
+            new_by_url[norm_url(url)].append((info, url))
+
+    old_urls, new_urls = set(old_by_url), set(new_by_url)
+    added_urls = new_urls - old_urls
+    removed_urls = old_urls - new_urls
+
+    def groups_for(index, url):
+        return {attrs(info).get("group-title", "").strip() for info, _ in index.get(url, [])}
+
+    review_added = {
+        url for url in added_urls
+        if groups_for(new_by_url, url) and groups_for(new_by_url, url).issubset(PRIMARY_EXCEPTIONS)
+    }
+    active_added = added_urls - review_added
+
+    old_review = {
+        url: groups_for(old_by_url, url) & PRIMARY_EXCEPTIONS
+        for url in old_urls if groups_for(old_by_url, url) & PRIMARY_EXCEPTIONS
+    }
+    new_review = {
+        url: groups_for(new_by_url, url) & PRIMARY_EXCEPTIONS
+        for url in new_urls if groups_for(new_by_url, url) & PRIMARY_EXCEPTIONS
+    }
+    review_deleted = sorted(url for url in old_review if url not in new_review)
+    review_reclassified = sorted(
+        url for url in (set(old_review) & set(new_review))
+        if old_review[url] != new_review[url]
+    )
+
+    old_keys = {
+        ((attrs(info).get("tvg-id") or attrs(info).get("channel-id") or "").strip().lower(), url.strip())
+        for info, url in old_entries if url.strip()
+    }
+    new_keys = {
+        ((attrs(info).get("tvg-id") or attrs(info).get("channel-id") or "").strip().lower(), url.strip())
+        for info, url in new_entries if url.strip()
+    }
+    key_added, key_removed = new_keys - old_keys, old_keys - new_keys
+    identity_rekeys = {
+        url for url in (old_urls & new_urls)
+        if {((attrs(info).get("tvg-id") or attrs(info).get("channel-id") or "").strip().lower())
+            for info, _ in old_by_url[url]}
+        != {((attrs(info).get("tvg-id") or attrs(info).get("channel-id") or "").strip().lower())
+            for info, _ in new_by_url[url]}
+    }
+
+    print(
+        f"Change Guard URL-level delta: active_additions={len(active_added)} "
+        f"review_additions={len(review_added)} stream_URL_removals={len(removed_urls)}"
+    )
+    print(
+        f"Identity-key diagnostics: additions={len(key_added)} removals={len(key_removed)} "
+        f"existing_URL_identity_rewrites={len(identity_rekeys)} "
+        f"(key changes on an existing URL are not counted as new/deleted streams)"
+    )
+
+    max_changes = 150
+    max_review_additions = 120
+    if len(review_added) > max_review_additions:
+        raise SystemExit(
+            f"Change Guard blocked maintenance: {len(review_added)} review-queue URL additions "
+            f"exceed the {max_review_additions}-entry limit."
+        )
+    if len(active_added) + len(removed_urls) > max_changes:
+        raise SystemExit(
+            f"Change Guard blocked maintenance: {len(active_added)} active stream URL additions + "
+            f"{len(removed_urls)} stream URL removals exceed the {max_changes}-entry safety limit; "
+            f"{len(review_added)} review-queue URL additions are handled separately."
+        )
+    if review_deleted:
+        raise SystemExit(
+            f"Change Guard blocked maintenance: {len(review_deleted)} protected Backup/Not Playing URLs "
+            "would be removed or promoted out of their review queue."
+        )
+    if review_reclassified:
+        raise SystemExit(
+            f"Change Guard blocked maintenance: {len(review_reclassified)} protected review URLs "
+            "would change between Backup and Not Playing."
+        )
 run_change_guard()
 
 if protected_changes: raise SystemExit("Protected primary playlist entries changed; refusing automatic commit.")
