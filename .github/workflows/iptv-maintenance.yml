@@ -75,8 +75,9 @@ jobs:
             cp BDIX-Playlist.m3u /tmp/bdix-playlist-protected.m3u
             cp epg/epg.xml /tmp/bdix-epg-previous.xml 2>/dev/null || true
 
-            # Snapshot Backup/Not Playing before ANY maintenance script runs.
-            # These are owner-review queues and must survive maintenance byte-for-byte.
+            # HARD SAFETY BASELINES. Existing entries and the owner-review queues
+            # are recorded before ANY maintenance script is allowed to touch them.
+            python scripts/maintenance_helpers.py snapshot-playlist
             python scripts/maintenance_helpers.py snapshot
 
             rm -rf fixed_output
@@ -93,13 +94,15 @@ jobs:
             if grep -Eiq 'group-title="(New Channels|New Backup|New)"' IPTV-Playlist.m3u; then echo '::error::Forbidden staging playlist category detected after normalization.'; exit 1; fi
 
             # Force known contaminated/generic local logos back through the resolver.
-            # The existing resolver repairs missing references, but previously treated
-            # a bad-but-existing local file as healthy. Blank only known-bad references;
-            # the resolver then uses its verified ID/name/catalogue sources.
             python scripts/maintenance_helpers.py invalidate-bad-logos
             python scripts/migrate_external_logos_fixed.py
             python scripts/generate_logo_authenticity_manifest.py
             python scripts/restore_protected_review.py
+
+            # HARD REMOVAL GUARD #1: this is the first point after all playlist
+            # repair scripts. Any unique pre-existing entry that disappeared or
+            # changed stream URL blocks the run and is written to a report.
+            python scripts/maintenance_helpers.py verify-no-unauthorized-removals
 
             # Stream health is advisory only. The playlist owner reviews results manually;
             # failures never trigger automatic channel deletion/reclassification.
@@ -153,6 +156,11 @@ jobs:
               python scripts/pre_publish_gate.py
               GATE_STATUS=$?
             fi
+
+            # HARD REMOVAL GUARD #2: correction scripts are not trusted to delete
+            # existing channels. Re-check the original baseline immediately before
+            # anything can be staged or committed.
+            python scripts/maintenance_helpers.py verify-no-unauthorized-removals
 
             python scripts/record_maintenance_history.py
             python scripts/generate_dashboard.py
