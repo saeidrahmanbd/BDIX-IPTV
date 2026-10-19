@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""Safety helpers for the IPTV maintenance workflow.
+"""Conservative safety helpers for IPTV playlist maintenance.
 
-The maintenance workflow is intentionally conservative:
-- existing stream URLs are protected;
-- Backup/Not Playing entries are protected byte-for-byte;
-- stream-health failures are advisory only;
-- removals are reported and blocked unless they are provable exact-URL duplicates;
-- metadata repair is allowed when the underlying stream URL survives.
+Policy:
+- Existing stream URLs are never automatically deleted.
+- Backup and Not Playing entries are immutable during maintenance.
+- Stream-health failures are advisory only.
+- Metadata repair may change names/IDs/groups/logos, but an existing stream URL
+  must survive.
+- Exact duplicate URLs are detected and reported, never automatically deleted.
+- Every proposed removal is written to reports/proposed-removals.md.
 """
 from __future__ import annotations
 
@@ -23,12 +25,12 @@ REMOVAL_REPORT = Path("reports/proposed-removals.md")
 PROTECTED_GROUPS = {"Backup", "Not Playing"}
 
 BAD_LOGOS = {
-    'atn-news.png','a-sports-5485adff.png','a-sports-hd.png','bein-sports-3.png',
-    'bangla-tv.png','btv-news.png','colors.png','duronto-tv.png',
-    'duronto-tv-1ad55c95.png','ekushey-tv.png','global-tv.png','green-tv.png',
-    'mohona-tv.png','nagorik-tv.png','nagorik.png','nick-bangla.png',
-    'sananda-tv.png','sananda.png','star-gold-select.png','star-gold.png',
-    'star-plus.png','zee-tv.png','tom-and-jerry.png','arirang-tv.png',
+    "atn-news.png", "a-sports-5485adff.png", "a-sports-hd.png", "bein-sports-3.png",
+    "bangla-tv.png", "btv-news.png", "colors.png", "duronto-tv.png",
+    "duronto-tv-1ad55c95.png", "ekushey-tv.png", "global-tv.png", "green-tv.png",
+    "mohona-tv.png", "nagorik-tv.png", "nagorik.png", "nick-bangla.png",
+    "sananda-tv.png", "sananda.png", "star-gold-select.png", "star-gold.png",
+    "star-plus.png", "zee-tv.png", "tom-and-jerry.png", "arirang-tv.png",
 }
 
 
@@ -36,38 +38,54 @@ def _attrs(ext: str) -> dict[str, str]:
     return dict(re.findall(r'([A-Za-z0-9_-]+)="([^"]*)"', ext))
 
 
-def _parse(text: str) -> list[tuple[str, str]]:
+def _parse_blocks(text: str) -> list[dict[str, object]]:
+    """Parse complete EXTINF blocks without discarding intervening directives."""
     lines = text.replace("\r", "").splitlines()
-    result: list[tuple[str, str]] = []
-    current = None
+    blocks: list[dict[str, object]] = []
+    current: list[str] | None = None
+    current_url: str | None = None
+
+    def finish() -> None:
+        nonlocal current, current_url
+        if current is None:
+            return
+        blocks.append({
+            "lines": list(current),
+            "info": current[0],
+            "url": current_url or "",
+        })
+        current = None
+        current_url = None
+
     for line in lines:
         if line.startswith("#EXTINF:"):
-            if current is not None:
-                result.append((current, ""))
-            current = line
+            finish()
+            current = [line]
             continue
+
         if current is None:
             continue
-        s = line.strip()
-        if s.startswith(("http://", "https://")):
-            result.append((current, s))
-            current = None
-        elif not s or s.startswith("#"):
-            continue
-        else:
-            result.append((current, ""))
-            current = None
-    if current is not None:
-        result.append((current, ""))
-    return result
+
+        current.append(line)
+        stripped = line.strip()
+        if stripped.startswith(("http://", "https://")):
+            current_url = stripped
+            finish()
+
+    finish()
+    return blocks
+
+
+def _parse(text: str) -> list[tuple[str, str]]:
+    """Compatibility representation used by existing callers."""
+    return [
+        (str(block["info"]), str(block["url"]))
+        for block in _parse_blocks(text)
+    ]
 
 
 def _stable(info: str, url: str) -> str:
-    """Preservation identity is the exact stream URL, not metadata.
-
-    This deliberately permits tvg-id, channel name, logo, country and group
-    metadata to be repaired while requiring the existing stream URL to survive.
-    """
+    """Use the stream URL as preservation identity, not mutable metadata."""
     return url.strip().casefold()
 
 
@@ -75,153 +93,209 @@ def _group(info: str) -> str:
     return _attrs(info).get("group-title", "").strip()
 
 
-def _protected_text(entries: list[tuple[str, str]]) -> str:
+def _name(info: str) -> str:
+    a = _attrs(info)
+    return (a.get("tvg-name", "") or info.rsplit(",", 1)[-1]).strip()
+
+
+def _protected_blocks(text: str) -> list[dict[str, object]]:
+    return [
+        block
+        for block in _parse_blocks(text)
+        if _group(str(block["info"])) in PROTECTED_GROUPS
+    ]
+
+
+def _protected_text(text: str) -> str:
+    """Return protected blocks exactly as they appeared, preserving directives."""
+    blocks = _protected_blocks(text)
+    if not blocks:
+        return ""
     return "\n".join(
-        info + "\n" + url
-        for info, url in entries
-        if _group(info) in PROTECTED_GROUPS
+        "\n".join(str(line) for line in block["lines"])
+        for block in blocks
     ) + "\n"
 
 
 def snapshot_protected() -> None:
-    entries = _parse(PLAYLIST.read_text(encoding="utf-8-sig"))
-    PROTECTED_SNAPSHOT.write_text(_protected_text(entries), encoding="utf-8")
-    count = sum(_group(i) in PROTECTED_GROUPS for i, _ in entries)
-    print(f"Protected review snapshot: {count} entries")
+    text = PLAYLIST.read_text(encoding="utf-8-sig")
+    PROTECTED_SNAPSHOT.write_text(_protected_text(text), encoding="utf-8")
+    print(f"Protected review snapshot: {len(_protected_blocks(text))} complete entries")
 
 
 def snapshot_playlist() -> None:
-    """Save the complete pre-maintenance stream-URL inventory."""
-    entries = _parse(PLAYLIST.read_text(encoding="utf-8-sig"))
-    baseline = []
-    for info, url in entries:
-        a = _attrs(info)
+    """Save the complete pre-maintenance stream URL inventory."""
+    text = PLAYLIST.read_text(encoding="utf-8-sig")
+    baseline: list[dict[str, str]] = []
+
+    for block in _parse_blocks(text):
+        info = str(block["info"])
+        url = str(block["url"])
         baseline.append({
             "info": info,
             "url": url,
             "group": _group(info),
             "stable": _stable(info, url),
-            "name": a.get("tvg-name", "") or info.rsplit(",", 1)[-1].strip(),
+            "name": _name(info),
         })
-    BASELINE.write_text(json.dumps(baseline, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Playlist safety baseline: {len(baseline)} entries")
+
+    BASELINE.write_text(
+        json.dumps(baseline, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    print(f"Playlist safety baseline: {len(baseline)} complete entries")
 
 
-def _write_removal_report(removals: list[dict], duplicate_allowed: list[dict]) -> None:
+def _write_removal_report(removals: list[dict[str, str]]) -> None:
     REMOVAL_REPORT.parent.mkdir(parents=True, exist_ok=True)
+
     lines = [
         "# Proposed Playlist Removals",
         "",
-        "This report is generated before publication. Existing entries are never silently deleted.",
+        "This report is generated before publication.",
+        "Existing entries are never automatically deleted by this guard.",
         "",
         f"- Proposed removals: **{len(removals)}**",
-        f"- Exact-URL duplicate removals potentially allowed: **{len(duplicate_allowed)}**",
-        f"- Non-duplicate removals blocked: **{len(removals) - len(duplicate_allowed)}**",
+        f"- Automatic deletions authorized: **0**",
         "",
     ]
+
     if removals:
         lines += ["## Entries proposed for removal", ""]
         for item in removals:
             lines.append(
-                f"- `{item['name']}` — group=`{item['group']}` — reason=`{item['reason']}` — URL=`{item['url']}`"
+                f"- `{item['name']}` — group=`{item['group']}` — "
+                f"reason=`{item['reason']}` — URL=`{item['url']}`"
             )
     else:
-        lines += ["No existing entries were removed.", ""]
+        lines += ["No existing stream URLs disappeared.", ""]
+
     REMOVAL_REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def verify_no_unauthorized_removals() -> int:
-    """Block publication if maintenance removed existing stream URLs."""
+    """Block publication whenever an existing stream URL disappears."""
     if not BASELINE.exists():
         print("ERROR: playlist safety baseline is missing", file=sys.stderr)
         return 2
 
     baseline = json.loads(BASELINE.read_text(encoding="utf-8"))
-    current = _parse(PLAYLIST.read_text(encoding="utf-8-sig"))
-    baseline_counts = Counter(item["stable"] for item in baseline)
-    current_counts = Counter(_stable(info, url) for info, url in current)
-    baseline_url_counts = baseline_counts
-    current_url_counts = current_counts
+    current_text = PLAYLIST.read_text(encoding="utf-8-sig")
+    current = _parse_blocks(current_text)
 
-    removals: list[dict] = []
-    duplicate_allowed: list[dict] = []
+    baseline_counts = Counter(str(item["stable"]) for item in baseline if item["stable"])
+    current_counts = Counter(
+        _stable(str(block["info"]), str(block["url"]))
+        for block in current
+        if str(block["url"]).strip()
+    )
+
+    removals: list[dict[str, str]] = []
+
     for item in baseline:
-        url = item["stable"]
-        if not url or baseline_counts[url] <= current_counts[url]:
+        stable = str(item["stable"])
+        if not stable:
             continue
-        missing = baseline_counts[url] - current_counts[url]
-        for _ in range(missing):
+
+        missing = baseline_counts[stable] - current_counts[stable]
+        for _ in range(max(0, missing)):
             removals.append({
-                "name": item["name"],
-                "group": item["group"],
-                "url": item["url"],
+                "name": str(item["name"]),
+                "group": str(item["group"]),
+                "url": str(item["url"]),
                 "reason": "existing stream URL disappeared or changed",
             })
 
-    remaining_blocked = []
-    for item in removals:
-        url = item["url"].strip().casefold()
-        if (
-            item["group"] not in PROTECTED_GROUPS
-            and url
-            and baseline_url_counts[url] > current_url_counts[url]
-            and baseline_url_counts[url] > 1
-            and current_url_counts[url] >= 1
-        ):
-            item["reason"] = "exact duplicate stream URL; one duplicate may be removed"
-            duplicate_allowed.append(item)
+    _write_removal_report(removals)
+
+    if removals:
+        protected_removed = [
+            item for item in removals
+            if item["group"] in PROTECTED_GROUPS
+        ]
+        duplicate_urls = Counter(
+            str(item["url"]).strip().casefold()
+            for item in baseline
+            if str(item["url"]).strip()
+        )
+        current_urls = Counter(
+            _stable(str(block["info"]), str(block["url"]))
+            for block in current
+            if str(block["url"]).strip()
+        )
+        duplicate_candidates = [
+            item for item in removals
+            if duplicate_urls[item["url"].strip().casefold()] > 1
+            and current_urls[item["url"].strip().casefold()] >= 1
+            and item["group"] not in PROTECTED_GROUPS
+        ]
+
+        if protected_removed:
+            print(
+                f"Change Guard BLOCKED: {len(protected_removed)} "
+                "Backup/Not Playing entries would be removed.",
+                file=sys.stderr,
+            )
         else:
-            remaining_blocked.append(item)
+            print(
+                f"Change Guard BLOCKED: {len(removals)} existing stream URLs "
+                "would be removed. No automatic deletion is authorized.",
+                file=sys.stderr,
+            )
 
-    _write_removal_report(removals, duplicate_allowed)
-
-    protected_removed = [x for x in removals if x["group"] in PROTECTED_GROUPS]
-    allowed_duplicate_limit = 10
-    if protected_removed:
-        print(f"Change Guard BLOCKED: {len(protected_removed)} Backup/Not Playing entries would be removed.", file=sys.stderr)
-        return 1
-    if remaining_blocked:
-        print(f"Change Guard BLOCKED: {len(remaining_blocked)} non-duplicate existing stream URLs would be removed.", file=sys.stderr)
-        return 1
-    if len(duplicate_allowed) > allowed_duplicate_limit:
         print(
-            f"Change Guard BLOCKED: {len(duplicate_allowed)} exact-URL duplicates exceed the {allowed_duplicate_limit}-entry safety limit.",
+            f"Diagnostic: {len(duplicate_candidates)} proposed removals are "
+            "exact-URL duplicate candidates; they are report-only.",
             file=sys.stderr,
         )
         return 1
 
-    current_protected = _protected_text(current)
-    expected_protected = PROTECTED_SNAPSHOT.read_text(encoding="utf-8") if PROTECTED_SNAPSHOT.exists() else ""
+    current_protected = _protected_text(current_text)
+    expected_protected = (
+        PROTECTED_SNAPSHOT.read_text(encoding="utf-8")
+        if PROTECTED_SNAPSHOT.exists()
+        else ""
+    )
+
     if current_protected != expected_protected:
-        REMOVAL_REPORT.write_text(
-            REMOVAL_REPORT.read_text(encoding="utf-8")
-            + "\n**BLOCKED:** Backup/Not Playing content changed byte-for-byte.\n",
-            encoding="utf-8",
+        with REMOVAL_REPORT.open("a", encoding="utf-8") as handle:
+            handle.write(
+                "\n**BLOCKED:** Backup/Not Playing content changed "
+                "byte-for-byte.\n"
+            )
+        print(
+            "Change Guard BLOCKED: Backup/Not Playing content is not "
+            "byte-for-byte identical to the maintenance snapshot.",
+            file=sys.stderr,
         )
-        print("Change Guard BLOCKED: Backup/Not Playing is not byte-for-byte identical.", file=sys.stderr)
         return 1
 
     print(
-        f"Change Guard passed: {len(removals)} existing stream URLs proposed; "
-        f"{len(duplicate_allowed)} are exact-URL duplicates and {len(remaining_blocked)} are unauthorized removals."
+        "Change Guard passed: no existing stream URL disappeared; "
+        "Backup/Not Playing content is unchanged."
     )
     return 0
 
 
 def invalidate_bad_logos(message: str) -> None:
+    """Remove only known-bad logo references; never touch stream URLs."""
     p = PLAYLIST
     lines = p.read_text(encoding="utf-8-sig").replace("\r", "").splitlines()
-    out = []
+    out: list[str] = []
     changed = 0
+
     for line in lines:
         if line.startswith("#EXTINF:"):
-            m = re.search(r'tvg-logo="([^"]*)"', line)
-            if m:
-                logo = Path(m.group(1).split("?", 1)[0].split("#", 1)[0]).name.casefold()
+            match = re.search(r'tvg-logo="([^"]*)"', line)
+            if match:
+                logo = Path(
+                    match.group(1).split("?", 1)[0].split("#", 1)[0]
+                ).name.casefold()
                 if logo in BAD_LOGOS:
-                    line = line[:m.start(1)] + line[m.end(1):]
+                    line = line[:match.start(1)] + line[match.end(1):]
                     changed += 1
         out.append(line)
+
     p.write_text("\n".join(out).rstrip() + "\n", encoding="utf-8")
     print(f"{message}: {changed}")
 
@@ -229,11 +303,15 @@ def invalidate_bad_logos(message: str) -> None:
 def main() -> int:
     if len(sys.argv) != 2:
         print(
-            "Usage: maintenance_helpers.py snapshot|snapshot-playlist|verify-no-unauthorized-removals|invalidate-bad-logos|invalidate-bad-logos-correction",
+            "Usage: maintenance_helpers.py "
+            "snapshot|snapshot-playlist|verify-no-unauthorized-removals|"
+            "invalidate-bad-logos|invalidate-bad-logos-correction",
             file=sys.stderr,
         )
         return 2
+
     command = sys.argv[1]
+
     if command == "snapshot":
         snapshot_protected()
         return 0
@@ -248,6 +326,7 @@ def main() -> int:
     if command == "invalidate-bad-logos-correction":
         invalidate_bad_logos("Known-bad references invalidated on correction pass")
         return 0
+
     print(f"Unknown command: {command}", file=sys.stderr)
     return 2
 
