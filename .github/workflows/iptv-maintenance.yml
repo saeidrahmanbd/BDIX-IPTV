@@ -46,7 +46,7 @@ concurrency:
   queue: max
 jobs:
   maintain:
-    if: ${{ !startsWith(github.event.head_commit.message, 'Repair IPTV metadata and local logos only; leave stream URLs unchanged') && !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance')) }}
+    if: ${{ !(github.actor == 'github-actions[bot]' && (startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance') || startsWith(github.event.head_commit.message, 'Add conservative playlist removal guard') || startsWith(github.event.head_commit.message, 'Add hard playlist preservation gates') || startsWith(github.event.head_commit.message, 'Refine preservation guard to protect stream URLs'))) && !startsWith(github.event.head_commit.message, 'Repair IPTV metadata and local logos only; leave stream URLs unchanged') }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
@@ -100,8 +100,8 @@ jobs:
             python scripts/restore_protected_review.py
 
             # HARD REMOVAL GUARD #1: this is the first point after all playlist
-            # repair scripts. Any unique pre-existing entry that disappeared or
-            # changed stream URL blocks the run and is written to a report.
+            # repair scripts. Any unique pre-existing stream URL that disappeared
+            # or changed blocks the run and is written to a report.
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
 
             # Stream health is advisory only. The playlist owner reviews results manually;
