@@ -1,0 +1,83 @@
+name: One-Time Local Logo Migration
+
+on:
+  push:
+    paths:
+      - .github/workflows/one-time-logo-migration.yml
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Install image dependencies
+        run: python -m pip install --disable-pip-version-check pillow cairosvg
+
+      - name: Snapshot playlist URLs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib
+          p = Path('IPTV-Playlist.m3u')
+          lines = p.read_text(encoding='utf-8', errors='replace').splitlines()
+          urls = [x.strip() for x in lines if x.strip().startswith(('http://','https://'))]
+          Path('/tmp/stream-urls.sha256').write_text(hashlib.sha256(('\n'.join(urls)+'\n').encode()).hexdigest())
+          Path('/tmp/stream-urls.count').write_text(str(len(urls)))
+          PY
+
+      - name: Migrate external and broken logos
+        run: python scripts/migrate_external_logos_fixed.py
+
+      - name: Validate local logo migration and stream preservation
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, re
+          p = Path('IPTV-Playlist.m3u')
+          lines = p.read_text(encoding='utf-8', errors='replace').splitlines()
+          urls = [x.strip() for x in lines if x.strip().startswith(('http://','https://'))]
+          before_sha = Path('/tmp/stream-urls.sha256').read_text().strip()
+          before_count = int(Path('/tmp/stream-urls.count').read_text().strip())
+          after_sha = hashlib.sha256(('\n'.join(urls)+'\n').encode()).hexdigest()
+          if len(urls) != before_count or after_sha != before_sha:
+              raise SystemExit('STREAM URL SAFETY FAILURE: logo migration changed the stream URL set or order.')
+          prefix = 'https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/'
+          external=[]; missing=[]
+          for i,line in enumerate(lines,1):
+              if not line.startswith('#EXTINF'): continue
+              m=re.search(r'tvg-logo="([^"]*)"', line)
+              if not m or not m.group(1):
+                  missing.append((i,line))
+              elif not m.group(1).startswith(prefix):
+                  external.append((i,m.group(1),line))
+              else:
+                  rel=m.group(1)[len(prefix):]
+                  if not (Path('logos')/rel).is_file():
+                      missing.append((i,line))
+          print(f'Entries: {sum(x.startswith("#EXTINF") for x in lines)}')
+          print(f'External logos remaining: {len(external)}')
+          print(f'Missing/broken logos remaining: {len(missing)}')
+          if external or missing:
+              for item in (external+missing)[:100]: print(item)
+              raise SystemExit('LOCAL LOGO MIGRATION INCOMPLETE')
+          PY
+
+      - name: Commit migration
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add IPTV-Playlist.m3u logos/
+          git diff --cached --quiet && { echo 'No logo migration changes.'; exit 0; }
+          git commit -m 'Complete local logo migration'
+          git push origin HEAD:main
