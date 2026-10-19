@@ -79,14 +79,14 @@ def _protected_text(entries: list[tuple[str, str]]) -> str:
     return "\n".join(
         info + "\n" + url
         for info, url in entries
-        if _group(info) in PROTECTED_GROUPS and url
+        if _group(info) in PROTECTED_GROUPS
     ) + "\n"
 
 
 def snapshot_protected() -> None:
     entries = _parse(PLAYLIST.read_text(encoding="utf-8-sig"))
     PROTECTED_SNAPSHOT.write_text(_protected_text(entries), encoding="utf-8")
-    count = sum(_group(i) in PROTECTED_GROUPS and bool(u) for i, u in entries)
+    count = sum(_group(i) in PROTECTED_GROUPS for i, _ in entries)
     print(f"Protected review snapshot: {count} entries")
 
 
