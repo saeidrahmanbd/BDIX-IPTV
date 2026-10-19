@@ -1,0 +1,160 @@
+name: One-Time Conservative Playlist Repair
+
+on:
+  push:
+    paths:
+      - .github/workflows/one-time-conservative-playlist-repair.yml
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Conservative metadata repair
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, re
+          from collections import defaultdict
+
+          p = Path('IPTV-Playlist.m3u')
+          text = p.read_text(encoding='utf-8-sig').replace('\r','')
+          before_lines = text.splitlines()
+          before_urls = [x.strip() for x in before_lines if x.strip().startswith(('http://','https://'))]
+          before_sha = hashlib.sha256(('\n'.join(before_urls)+'\n').encode()).hexdigest()
+
+          ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
+          def attrs(line): return dict(ATTR.findall(line))
+          def split_extinf(line):
+              q=False
+              for i,ch in enumerate(line):
+                  if ch=='"': q=not q
+                  elif ch==',' and not q: return line[:i],line[i+1:]
+              return line,''
+          def set_attr(line,key,value):
+              pat=re.compile(rf'{re.escape(key)}="[^"]*"')
+              if pat.search(line): return pat.sub(f'{key}="{value}"',line,1)
+              return line.replace('#EXTINF:-1 ',f'#EXTINF:-1 {key}="{value}" ',1)
+          def del_attr(line,key):
+              return re.sub(rf'\s*{re.escape(key)}="[^"]*"','',line)
+          def slug(name):
+              s=re.sub(r'[^a-z0-9]+','.',str(name or '').lower()).strip('.')
+              return re.sub(r'\.+','.',s)[:70] or 'channel'
+          def norm(name):
+              return re.sub(r'[^a-z0-9]+','',str(name or '').lower())
+
+          # Parse channel records without changing stream lines or their order.
+          lines=before_lines[:]
+          records=[]
+          for i,line in enumerate(lines):
+              if line.startswith('#EXTINF:'):
+                  j=i+1
+                  while j<len(lines) and not lines[j].strip(): j+=1
+                  records.append({'i':i,'url_i':j if j<len(lines) else None,'line':line,'a':attrs(line),'name':split_extinf(line)[1].strip()})
+
+          primaries={}
+          for r in records:
+              if r['a'].get('group-title','').strip() in {'Backup','Not Playing'}: continue
+              key=norm(r['a'].get('tvg-name') or r['name'])
+              if key and key not in primaries: primaries[key]=r
+
+          changed=0
+          ids_added=0
+          names_added=0
+          backup_numbers_removed=0
+          safe_https=0
+
+          # Only fill missing identity metadata. Existing IDs are never overwritten.
+          for r in records:
+              a=r['a']; line=r['line']; group=a.get('group-title','').strip()
+              display=r['name']
+              if not a.get('tvg-name'):
+                  line=set_attr(line,'tvg-name',display)
+                  names_added+=1
+                  changed+=1
+                  a=attrs(line)
+              if not a.get('tvg-id') and a.get('channel-id'):
+                  line=set_attr(line,'tvg-id',a['channel-id']); ids_added+=1; changed+=1
+              elif not a.get('channel-id') and a.get('tvg-id'):
+                  line=set_attr(line,'channel-id',a['tvg-id']); ids_added+=1; changed+=1
+              elif not a.get('tvg-id') and not a.get('channel-id'):
+                  # For a missing ID, inherit the primary ID when an exact normalized
+                  # channel name matches. Otherwise create a stable custom ID.
+                  key=norm(a.get('tvg-name') or display)
+                  primary=primaries.get(key)
+                  if primary:
+                      pa=primary['a']; cid=pa.get('tvg-id') or pa.get('channel-id')
+                  else:
+                      cid='custom.'+slug(a.get('tvg-name') or display)
+                  line=set_attr(line,'tvg-id',cid)
+                  line=set_attr(line,'channel-id',cid)
+                  ids_added+=2
+                  changed+=1
+              # Backup entries must not consume primary channel numbers.
+              if group=='Backup' and 'tvg-chno' in a:
+                  line=del_attr(line,'tvg-chno'); backup_numbers_removed+=1; changed+=1
+              lines[r['i']]=line
+
+          # Safe HTTP->HTTPS only when the exact HTTPS URL already exists elsewhere.
+          current_urls=[x.strip() for x in lines if x.strip().startswith(('http://','https://'))]
+          https={u.lower() for u in current_urls if u.lower().startswith('https://')}
+          for r in records:
+              if r['url_i'] is None: continue
+              u=lines[r['url_i']].strip()
+              if u.lower().startswith('http://'):
+                  candidate='https://'+u[7:]
+                  if candidate.lower() in https:
+                      lines[r['url_i']]=candidate
+                      safe_https+=1
+
+          after_urls=[x.strip() for x in lines if x.strip().startswith(('http://','https://'))]
+          after_sha=hashlib.sha256(('\n'.join(after_urls)+'\n').encode()).hexdigest()
+          if len(after_urls)!=len(before_urls) or after_sha!=before_sha:
+              raise SystemExit('SAFETY FAILURE: stream URL count/order changed')
+
+          p.write_text('\n'.join(lines)+'\n',encoding='utf-8')
+          print(f'Entries: {sum(x.startswith("#EXTINF:") for x in lines)}')
+          print(f'IDs added/repaired: {ids_added}')
+          print(f'Missing tvg-name repaired: {names_added}')
+          print(f'Backup tvg-chno removed: {backup_numbers_removed}')
+          print(f'Safe HTTP->HTTPS upgrades: {safe_https}')
+          print('Stream URL set/order: PRESERVED')
+          PY
+
+      - name: Validate playlist structure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('IPTV-Playlist.m3u')
+          lines=p.read_text(encoding='utf-8').splitlines()
+          assert lines and lines[0].startswith('#EXTM3U'), 'Missing #EXTM3U header'
+          entries=0
+          missing_id=[]
+          for i,line in enumerate(lines):
+              if not line.startswith('#EXTINF:'): continue
+              entries+=1
+              m=dict(re.findall(r'([A-Za-z0-9_-]+)="([^"]*)"',line))
+              if not (m.get('tvg-id') or m.get('channel-id')): missing_id.append((i+1,line))
+          print(f'Entries: {entries}')
+          print(f'Entries still missing both IDs: {len(missing_id)}')
+          if missing_id:
+              print(*missing_id[:20],sep='\n')
+              raise SystemExit('Metadata validation failed')
+          PY
+
+      - name: Commit repair
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add IPTV-Playlist.m3u
+          git diff --cached --quiet && { echo 'No changes needed.'; exit 0; }
+          git commit -m 'Conservative IPTV metadata repair'
+          git push origin HEAD:main
