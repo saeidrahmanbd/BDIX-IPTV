@@ -82,10 +82,14 @@ jobs:
             python scripts/maintenance_helpers.py snapshot-playlist
             python scripts/maintenance_helpers.py snapshot
 
+            # IMPORTANT: do not run fix_playlist.py here. The historical fixer can
+            # quarantine/remove existing stream records (including duplicates and
+            # known-bad endpoints). That conflicts with the zero-automatic-deletion
+            # policy. Metadata/logo repair scripts below remain enabled, while the
+            # removal guard decides whether the final playlist is publishable.
             rm -rf fixed_output
-            python scripts/fix_playlist.py IPTV-Playlist.m3u --outdir fixed_output
-            test -s fixed_output/IPTV-Playlist.fixed.m3u
-            cp fixed_output/IPTV-Playlist.fixed.m3u IPTV-Playlist.m3u
+            echo 'Non-destructive maintenance mode: fix_playlist.py skipped.'
+
             python scripts/repair_iptv_audit_findings.py
             python scripts/repair_playlist_quality.py
             python scripts/normalize_metadata.py
