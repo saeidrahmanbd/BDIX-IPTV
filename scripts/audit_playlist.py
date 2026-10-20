@@ -236,7 +236,9 @@ for info, url in primary_entries:
     a = attrs(info)
     cid = identity(info)
     if cid:
-        primary_identity_groups[(cid, a.get("group-title", "").strip())].append((info, url))
+        # A channel identity may have only one primary record globally; an ID
+        # repeated in a different category is still a primary-identity collision.
+        primary_identity_groups[cid].append((info, url))
     chno = a.get("tvg-chno", "").strip()
     if chno:
         primary_channel_numbers[chno].append((info, url))
@@ -306,40 +308,18 @@ for info, url in entries:
 protected_changes = []
 try:
     old = subprocess.check_output(["git", "show", "HEAD:IPTV-Playlist.m3u"], text=True, stderr=subprocess.DEVNULL)
-    old_primary = Counter()
-    new_primary = Counter()
-    new_backup_by_url = Counter()
-    def stable(info, url):
-        a = attrs(info)
-        return ((a.get("tvg-id") or a.get("channel-id") or "").strip().lower(), url.strip())
-    for info, url in parse(old):
-        if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS:
-            old_primary[stable(info, url)] += 1
-    for info, url in entries:
-        group = attrs(info).get("group-title", "").strip()
-        key = stable(info, url)
-        if group not in PRIMARY_EXCEPTIONS:
-            new_primary[key] += 1
-        elif url.strip():
-            new_backup_by_url[url.strip().lower()] += 1
-    new_primary_by_url = defaultdict(list)
-    for (cid, url), count in new_primary.items():
-        new_primary_by_url[url].append((cid, count))
-    for key, count in old_primary.items():
-        cid, url = key
-        direct = new_primary[key]
-        if direct >= count:
-            continue
-        if direct + new_backup_by_url[url.strip().lower()] >= count:
-            continue
-        preserved = 0
-        for new_cid, new_count in new_primary_by_url.get(url, []):
-            if not cid and new_cid:
-                preserved += new_count
-            elif cid and new_cid.startswith(cid + "@"):
-                preserved += new_count
-        if direct + preserved < count:
-            protected_changes.append((cid, url, "primary entry removed or changed"))
+    old_primary_urls = Counter(
+        url.strip().casefold()
+        for info, url in parse(old)
+        if url.strip() and attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS
+    )
+    current_urls = Counter(url.strip().casefold() for info, url in entries if url.strip())
+    # Metadata/ID/logo corrections may legitimately rewrite EXTINF. A primary
+    # stream is protected by its URL; the separate review-queue guard protects
+    # Backup/Not Playing records and their original category.
+    for url, count in old_primary_urls.items():
+        if current_urls[url] < count:
+            protected_changes.append(("", url, "primary stream URL removed"))
 except Exception:
     pass
 
@@ -368,7 +348,20 @@ def natural_sort_key(value):
     value = unicodedata.normalize("NFKD", value).casefold().strip()
     return [int(part) if part.isdigit() else part for part in re.split(r"(\d+)", value)]
 for group in category_transitions:
-    names = [display_name(info).strip() for info, url in entries if attrs(info).get("group-title", "").strip() == group]
+    group_entries = [(info, url) for info, url in entries if attrs(info).get("group-title", "").strip() == group]
+    if group == "Bangladesh":
+        # The Bangladesh group is intentionally ordered by tvg-chno, not A–Z.
+        numbered = []
+        for info, url in group_entries:
+            chno = attrs(info).get("tvg-chno", "").strip()
+            if not chno.isdigit():
+                continue
+            numbered.append((int(chno), display_name(info).strip()))
+        for (prev_no, prev_name), (cur_no, cur_name) in zip(numbered, numbered[1:]):
+            if cur_no < prev_no:
+                alphabetical_order_issues.append((group, f"{prev_no} — {prev_name}", f"{cur_no} — {cur_name}"))
+        continue
+    names = [display_name(info).strip() for info, url in group_entries]
     for prev, cur in zip(names, names[1:]):
         if natural_sort_key(cur) < natural_sort_key(prev):
             alphabetical_order_issues.append((group, prev, cur))
@@ -388,9 +381,12 @@ for cid, items in sorted(duplicate_ids.items()):
 if not duplicate_ids: lines.append("None.")
 lines += ["", "## Duplicate Primary Identities", ""]
 if primary_duplicate_ids:
-    for (key, items) in sorted(primary_duplicate_ids.items()):
-        cid, group = key
-        lines.append(f"- **{cid}** in **{group}** — " + ", ".join(display_name(x[0]) for x in items))
+    for cid, items in sorted(primary_duplicate_ids.items()):
+        details = []
+        for info, url in items:
+            group = attrs(info).get("group-title", "").strip()
+            details.append(f"{display_name(info)} [{group}] — {redact_url(url)}")
+        lines.append(f"- **{cid}** — " + "; ".join(details))
 else: lines.append("None.")
 lines += ["", "## Primary Channel-Number Collisions", ""]
 if primary_chno_collisions:
@@ -436,36 +432,33 @@ REPORT.write_text("\n".join(lines).rstrip()+"\n", encoding="utf-8")
 print(f"Playlist audit: entries={len(entries)} duplicate_ids={len(duplicate_ids)} duplicate_urls={len(duplicate_urls)} conflicts={len(metadata_conflicts)} name_collisions={len(name_collisions)} protected_changes={len(protected_changes)} logo_exceptions={len(logo_exceptions)} external_logo_warnings={len(logo_warnings)}")
 
 def run_change_guard():
-    try: old_text = subprocess.check_output(["git", "show", "HEAD:IPTV-Playlist.m3u"], text=True, stderr=subprocess.DEVNULL)
-    except Exception: return
+    try:
+        old_text = subprocess.check_output(
+            ["git", "show", "HEAD:IPTV-Playlist.m3u"],
+            text=True,
+            stderr=subprocess.DEVNULL,
+        )
+    except Exception:
+        return
+
     old_entries = parse(old_text)
-    key = lambda info,url: ((attrs(info).get("tvg-id") or attrs(info).get("channel-id") or "").strip().lower(), url.strip())
-    old_keys = {key(i,u) for i,u in old_entries}; new_keys = {key(i,u) for i,u in entries}
-    added, removed = new_keys-old_keys, old_keys-new_keys
-    review_urls = set(); review_added = {k for k in added if k[1].strip().lower() in review_urls}; active_added = added - review_added
-    max_changes = 150; max_review_additions = 120
-    if len(review_added) > max_review_additions: raise SystemExit(f"Change Guard blocked maintenance: {len(review_added)} review-queue additions exceed the {max_review_additions}-entry limit.")
-    if len(active_added)+len(removed) > max_changes: raise SystemExit(f"Change Guard blocked maintenance: {len(active_added)} active additions + {len(removed)} removals exceed the {max_changes}-entry safety limit; {len(review_added)} review-queue additions are handled separately.")
-    old_primary = Counter(key(i,u) for i,u in old_entries if attrs(i).get("group-title","").strip() not in PRIMARY_EXCEPTIONS)
-    new_primary = Counter(key(i,u) for i,u in entries if attrs(i).get("group-title","").strip() not in PRIMARY_EXCEPTIONS)
-    new_backup_by_url = Counter(u.strip().lower() for i,u in entries if attrs(i).get("group-title","").strip() in PRIMARY_EXCEPTIONS and u.strip())
-    new_primary_by_url = defaultdict(Counter)
-    for (cid, url), count in new_primary.items(): new_primary_by_url[url][cid] += count
-    removed_primary = []
-    for (old_cid, url), count in old_primary.items():
-        direct = new_primary[(old_cid, url)]
-        if direct >= count: continue
-        quarantined = min(count-direct, new_backup_by_url.get(url.strip().lower(), 0))
-        if direct + quarantined >= count: continue
-        preserved = sum(n for new_cid,n in new_primary_by_url.get(url,{}).items() if (not old_cid and new_cid) or (old_cid and new_cid.startswith(old_cid+"@")))
-        if direct + preserved < count: removed_primary.extend([(old_cid,url)]*(count-direct-preserved))
-    if removed_primary: raise SystemExit(f"Change Guard blocked maintenance: {len(removed_primary)} primary entries would be removed or rewritten.")
-    old_review = {}; new_review = {}
-    for info,url in old_entries:
-        group=attrs(info).get("group-title","").strip()
-        if group in set() and url.strip(): old_review[url.strip().lower()]=group
-    review_reclassified=[(url,old_group,new_review.get(url,"")) for url,old_group in old_review.items() if new_review.get(url)!=old_group]
-    if review_reclassified: raise SystemExit(f"Change Guard blocked maintenance: {len(review_reclassified)} New entries were reclassified or removed from their user-review queue.")
+    old_urls = Counter(url.strip().casefold() for _, url in old_entries if url.strip())
+    new_urls = Counter(url.strip().casefold() for _, url in entries if url.strip())
+    removed = sum(max(0, count - new_urls[url]) for url, count in old_urls.items())
+    if removed:
+        raise SystemExit(
+            f"Change Guard blocked maintenance: {removed} existing stream URL occurrence(s) "
+            "would disappear. Existing streams are never automatically deleted."
+        )
+
+    # Keep a bounded-change guard on newly introduced URLs without treating
+    # metadata-only EXTINF repairs as removals/additions.
+    added = sum(max(0, count - old_urls[url]) for url, count in new_urls.items())
+    if added > 150:
+        raise SystemExit(
+            f"Change Guard blocked maintenance: {added} new stream URL occurrence(s) "
+            "exceed the 150-entry review limit."
+        )
 
 run_change_guard()
 

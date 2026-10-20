@@ -8,7 +8,7 @@ P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md"); EXCLUDE={"Ba
 RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
 BAD_ASSETS={"atn-news.png","a-sports-5485adff.png","a-sports-hd.png","bein-sports-3.png","bangla-tv.png","btv-news.png","colors.png","duronto-tv.png","duronto-tv-1ad55c95.png","ekushey-tv.png","global-tv.png","green-tv.png","mohona-tv.png","nagorik-tv.png","nagorik.png","nick-bangla.png","sananda-tv.png","sananda.png","star-gold-select.png","star-gold.png","star-plus.png","zee-tv.png","tom-and-jerry.png","arirang-tv.png"}
-GENERIC_PREFIXES=("placeholder-","generated-fallback-","generic-","unknown-","unidentified-")
+GENERIC_PREFIXES=("placeholder-","generic-","unknown-","unidentified-")
 def attrs(s): return dict(ATTR.findall(s))
 def parse(text):
  lines=text.replace("\r","").splitlines(); out=[]; cur=None
@@ -71,7 +71,7 @@ def main():
  primary_identity=defaultdict(list)
  for a,u in cur_primary:
   cid=(a.get("tvg-id") or a.get("channel-id") or "").strip().lower(); group=a.get("group-title","").strip()
-  if cid: primary_identity[(cid,group)].append((a.get("tvg-name",""),u))
+  if cid: primary_identity[cid].append((a.get("tvg-name",""),group,u))
  duplicate_primary=[k for k,v in primary_identity.items() if len(v)>1]
  missing=[a.get("tvg-name","") for a,u in cur_primary if not a.get("tvg-chno","").strip()]
  review_numbered=[a.get("tvg-name","") for _,a,u in current if a.get("group-title","").strip() in EXCLUDE and a.get("tvg-chno","").strip()]

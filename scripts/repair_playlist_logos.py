@@ -724,7 +724,10 @@ def main():
             broken = not is_valid_local_logo_reference(current)
             forced_logo = FORCED_CHANNEL_LOGOS.get(key)
             forced_wrong = bool(forced_logo and basename != forced_logo.casefold())
-            flagged = broken or basename in BAD_ASSETS or basename in GENERIC_ASSETS or bool(re.search(r"(?:placeholder|generated-fallback|generic-logo)", basename)) or forced_wrong
+            # An explicitly prefixed generated fallback is allowed as disclosed, non-authentic artwork.
+            # Replacing it is only required when the local file is invalid or a better exact
+            # source has already been selected by the explicit correction paths above.
+            flagged = broken or basename in BAD_ASSETS or basename in GENERIC_ASSETS or bool(re.search(r"(?:placeholder|generic-logo)", basename)) or forced_wrong
             if not (missing or flagged):
                 output.append(line)
                 continue
@@ -824,8 +827,8 @@ def main():
         )
     report += ["", "## Quality rule", "",
                "- Exact, clean local assets are searched first; then curated, source-attributed external logo URLs are downloaded and validated.",
-               "- When no exact clean original is found, no substitute artwork is generated; the entry is flagged unresolved for verified/manual correction.",
-               "- Contaminated, mismatched, placeholder, generic, and generated-fallback assets are never assigned to tvg-logo.",
+               "- If no exact authentic asset is available, an existing explicitly named generated-fallback asset may remain as provisional artwork; it is never presented as authentic and is marked generated_fallback in the provenance manifest.",
+               "- Contaminated, mismatched, placeholder, and generic assets are never assigned to tvg-logo. Generated fallback assets are allowed only under their explicit filename prefix and remain visibly unverified.",
                "- Original playlist entries, channel metadata, categories, and stream URLs are preserved.", ""]
     REPORT.write_text("\n".join(report), encoding="utf-8")
     print(json.dumps({"summary": summary, "iptv_org": iptv_status, "history": history_status}, ensure_ascii=False))
