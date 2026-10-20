@@ -55,6 +55,7 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE):
         "reports/pre-publish-gate.md": "Source playlist SHA-256",
         "reports/epg-coverage.md": "IPTV-Playlist.m3u SHA-256",
         "reports/epg-three-playlist-audit.md": "IPTV-Playlist.m3u SHA-256",
+        "reports/iptv-metadata-backfill.md": "After playlist SHA-256",
     }
     for relative, marker in markdown_reports.items():
         path = root / relative
