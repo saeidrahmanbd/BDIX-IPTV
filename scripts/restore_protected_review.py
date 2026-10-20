@@ -12,6 +12,7 @@ import json
 import sys
 from pathlib import Path
 import re
+from collections import Counter
 
 SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
 BASELINE = Path("/tmp/iptv-playlist-baseline.json")
@@ -79,6 +80,7 @@ def restore() -> None:
     snapshot_urls = [url_of(record).casefold() for record in snapshot_records]
     if any(not url for url in snapshot_urls) or len(snapshot_urls) != len(set(snapshot_urls)):
         raise SystemExit("ERROR: protected snapshot contains a missing or duplicate URL; refusing restore.")
+    protected_occurrences_to_restore = Counter(snapshot_urls)
 
     # A stream URL must identify one baseline entry unambiguously. If it did not,
     # do not guess which identity or category should be restored.
@@ -110,9 +112,15 @@ def restore() -> None:
         current_group = group_of(record[0])
         original = baseline_by_url.get(key)
 
-        if original and original["group"] in PROTECTED:
-            # Do not trust an edited/reclassified copy of a protected stream.
-            # The exact original copy is restored below from the protected snapshot.
+        if (
+            original
+            and original["group"] in PROTECTED
+            and protected_occurrences_to_restore[key] > 0
+        ):
+            # Replace exactly one working-tree copy with the exact protected snapshot.
+            # If a script created extra copies of this URL, keep those extra blocks too;
+            # duplicate-URL and protected-queue gates will then block publication.
+            protected_occurrences_to_restore[key] -= 1
             restored_from_queue += 1
             continue
 
