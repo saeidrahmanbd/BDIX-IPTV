@@ -2,7 +2,7 @@
 """Final deterministic playlist hardening.
 
 Hardens one explicitly selected playlist at a time. Stream URLs are never
-changed, but exact duplicate stream URLs are removed deterministically.
+changed or removed; exact duplicate URLs block the run for manual review.
 """
 from pathlib import Path
 import re, sys, unicodedata
