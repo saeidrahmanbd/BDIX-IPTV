@@ -55,6 +55,7 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE):
         "reports/pre-publish-gate.md": "Source playlist SHA-256",
         "reports/epg-coverage.md": "IPTV-Playlist.m3u SHA-256",
         "reports/epg-three-playlist-audit.md": "IPTV-Playlist.m3u SHA-256",
+        "reports/epg-unmapped-audit.md": "IPTV-Playlist.m3u SHA-256",
         "reports/iptv-metadata-backfill.md": "After playlist SHA-256",
     }
     for relative, marker in markdown_reports.items():
@@ -111,7 +112,7 @@ def main():
         print("REPORT_STALE:", error)
     if errors:
         return 1
-    print("Report freshness check passed: audit, EPG coverage, pre-publish gate, and logo manifest match the current IPTV-Playlist.m3u.")
+    print("Report freshness check passed: playlist audit, EPG coverage/unmapped reports, pre-publish gate, metadata backfill, and logo manifest match the current IPTV-Playlist.m3u.")
     return 0
 
 

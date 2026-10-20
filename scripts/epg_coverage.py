@@ -467,6 +467,11 @@ def main():
         "Official Bangladeshi broadcaster pages expose program or video listings, but no dependable public, current XMLTV feed for the domestic channel set was verified in this pass. No schedule is fabricated from stale static schedules or unrelated foreign channels.",
         "",
     ]
+    audit_fingerprints = [
+        f"- {path.name} SHA-256: **{hashlib.sha256(path.read_bytes()).hexdigest()}**"
+        for path in PLAYLISTS if path.exists()
+    ]
+    audit_lines += ["", "## Source Playlist Fingerprints", "", *audit_fingerprints, ""]
     audit_path.write_text("\n".join(audit_lines) + "\n", encoding="utf-8")
 
     MAPPING.parent.mkdir(parents=True,exist_ok=True)

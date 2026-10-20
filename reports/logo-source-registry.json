@@ -213,5 +213,10 @@
     "status": "third_party_verified",
     "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/willow-us.png",
     "notes": "Local self-contained SVG wrapper around the identified logo asset from the public TV Logos catalogue; no remote asset fetch occurs when the playlist player loads the local repository file."
+  },
+  "IPTV-Playlist.m3u|custom.classic.movies|Classic Movies|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/classic-movies-27994c39.png": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Explicitly marked unofficial fallback artwork; no exact official broadcaster logo has been verified. The original local filename is retained for playlist-reference compatibility."
   }
 }

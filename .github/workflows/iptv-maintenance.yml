@@ -16,6 +16,7 @@ on:
       - scripts/migrate_external_logos_fixed.py
       - scripts/restore_protected_review.py
       - scripts/generate_logo_authenticity_manifest.py
+      - reports/logo-source-registry.json
       - scripts/check_epg_config.py
       - scripts/epg_coverage.py
       - scripts/generate_epg.py
@@ -27,6 +28,7 @@ on:
       - scripts/iptv_metadata_backfill.py
       - tests/test_metadata_backfill.py
       - tests/test_report_freshness.py
+      - tests/test_logo_authenticity_manifest.py
       - scripts/sync_epg_worker_map.py
       - scripts/audit_playlist.py
       - scripts/build_identity_index.py
@@ -84,6 +86,7 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_report_freshness.py'
           python -m unittest discover -s tests -p 'test_metadata_backfill.py'
+          python -m unittest discover -s tests -p 'test_logo_authenticity_manifest.py'
       - name: Validate EPG configuration
         run: python scripts/check_epg_config.py
       - name: Run maintenance
