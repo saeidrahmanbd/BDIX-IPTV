@@ -34,6 +34,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install logo validation dependencies
+        run: python -m pip install --disable-pip-version-check pillow cairosvg
+
       - name: Configure Git
         run: |
           git config user.name 'github-actions[bot]'
@@ -50,10 +53,6 @@ jobs:
             git reset --hard origin/main
             git clean -fd
 
-            # Report synchronization is deliberately separate from publication
-            # gating. Audit/gate scripts MUST still write their current reports
-            # when they detect existing defects (for example logo defects).
-            # Their non-zero exit status must not prevent synchronization.
             run_reporter() {
               local label="$1"
               shift
@@ -74,10 +73,6 @@ jobs:
             run_reporter "EPG coverage" python scripts/epg_coverage.py
             run_reporter "Logo authenticity manifest" python scripts/generate_logo_authenticity_manifest.py
             run_reporter "Dashboard" python scripts/generate_dashboard.py
-
-            # Freshness validation is informational here too: the purpose of
-            # this workflow is to synchronize generated artifacts, not to turn
-            # an existing playlist defect into a failed report publication.
             run_reporter "Report freshness validation" python scripts/validate_report_freshness.py
 
             git add reports/ assets/dashboard.svg
@@ -89,8 +84,6 @@ jobs:
             git commit -m 'Synchronize IPTV generated reports'
             base_sha="$(git rev-parse HEAD^1)"
 
-            # Compare-and-swap publication. If main moved, discard this generated
-            # commit and regenerate all reports from the new main snapshot.
             if git push --force-with-lease="refs/heads/main:${base_sha}" origin HEAD:main; then
               echo 'Synchronized reports published successfully.'
               exit 0
