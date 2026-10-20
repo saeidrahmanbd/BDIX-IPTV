@@ -17,6 +17,7 @@ on:
       - scripts/migrate_external_logos_fixed.py
       - scripts/restore_protected_review.py
       - scripts/generate_logo_authenticity_manifest.py
+      - scripts/generate_logo_repair_summary.py
       - scripts/logo_source_catalog.py
       - reports/logo-source-registry.json
       - scripts/check_epg_config.py
@@ -84,6 +85,7 @@ jobs:
             scripts/repair_playlist_quality.py \
             scripts/repair_playlist_logos.py \
             scripts/generate_logo_authenticity_manifest.py \
+            scripts/generate_logo_repair_summary.py \
             scripts/logo_asset_naming.py \
             scripts/generate_logo_provenance_review.py \
             scripts/generate_metadata_normalization_report.py \
@@ -141,6 +143,7 @@ jobs:
             python scripts/maintenance_helpers.py invalidate-bad-logos
             python scripts/migrate_external_logos_fixed.py
             python scripts/generate_logo_authenticity_manifest.py
+            python scripts/generate_logo_repair_summary.py
             python scripts/restore_protected_review.py
 
             python scripts/iptv_metadata_backfill.py
@@ -190,6 +193,7 @@ jobs:
               python scripts/maintenance_helpers.py invalidate-bad-logos-correction
               python scripts/migrate_external_logos_fixed.py || true
               python scripts/generate_logo_authenticity_manifest.py || true
+              python scripts/generate_logo_repair_summary.py || true
               python scripts/restore_protected_review.py
               set +e
               python scripts/audit_playlist.py
@@ -212,6 +216,7 @@ jobs:
             python scripts/record_maintenance_history.py
             python scripts/epg_coverage.py
             python scripts/generate_logo_authenticity_manifest.py
+            python scripts/generate_logo_repair_summary.py
             python scripts/generate_logo_provenance_review.py
             python scripts/generate_metadata_normalization_report.py
             python scripts/report_iptv_fragile_streams.py
