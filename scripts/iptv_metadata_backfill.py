@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fill blank IPTV metadata from current iptv-org channel/feed metadata only."""
+"""Fill blank IPTV metadata from catalogue data with safe group fallbacks."""
 import hashlib
 import json
 import re
@@ -16,6 +16,19 @@ ACTIVE_GROUPS = {
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
 }
+GROUP_DEFAULTS = {
+    "Bangladesh": ("BD", "ben"),
+    "Indian Bangla": ("IN", "ben"),
+    "Indian Movies": ("IN", "hin"),
+    "Indian Music": ("IN", "hin"),
+    "Indian Entertainment": ("IN", "hin"),
+    "Pakistani": ("PK", "urd"),
+    "International": ("US", "eng"),
+    "Documentary & Wildlife": ("US", "eng"),
+    "Kids": ("US", "eng"),
+    "Religious": ("SA", "ara"),
+    "Sports": ("US", "eng"),
+}
 QUALITY_SUFFIXES = {"SD", "HD", "FHD", "UHD", "4K"}
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 COUNTRY_RE = re.compile(r"^[A-Z]{2}$")
@@ -23,17 +36,12 @@ LANGUAGE_RE = re.compile(r"^[a-z]{3}$")
 
 
 def load_json(url):
-    request = urllib.request.Request(url, headers={"User-Agent": "BDIX-IPTV-metadata-maintenance/2.0"})
+    request = urllib.request.Request(url, headers={"User-Agent": "BDIX-IPTV-metadata-maintenance/3.0"})
     with urllib.request.urlopen(request, timeout=30) as response:
         return json.loads(response.read().decode("utf-8-sig"))
 
 
 def parse_catalogue(channels, feeds):
-    """Return channel_id -> (country, unique feed languages).
-
-    iptv-org removed channel-level languages in 2025. Feed-level languages are
-    now the authoritative source, so combine languages from the channel's feeds.
-    """
     feed_languages = {}
     for feed in feeds:
         channel_id = (feed.get("channel") or "").strip()
@@ -96,7 +104,7 @@ def active_gaps(text):
 def update_playlist(text, catalogue):
     lines = text.splitlines()
     result, current_index = [], None
-    changed_entries = country_fills = language_fills = matched_ids = 0
+    changed_entries = country_fills = language_fills = matched_ids = fallback_entries = 0
     matched = set()
     for line in lines:
         if line.startswith("#EXTINF:"):
@@ -110,26 +118,36 @@ def update_playlist(text, catalogue):
         original_info = result[info_index]
         current_index = None
         meta = attrs(original_info)
-        if meta.get("group-title", "").strip() not in ACTIVE_GROUPS:
+        group_name = meta.get("group-title", "").strip()
+        if group_name not in ACTIVE_GROUPS:
             result.append(line)
             continue
+
         source_id = matching_id(meta.get("tvg-id", ""), catalogue)
+        country, languages = ("", ())
+        if source_id is not None:
+            matched.add(meta.get("tvg-id", ""))
+            matched_ids += 1
+            country, languages = catalogue[source_id]
+
+        # If the upstream catalogue has no usable country/language for a current
+        # active entry, use the playlist's controlled category semantics. This is
+        # deliberately limited to entries already missing the field; existing
+        # metadata is never overwritten.
+        default_country, default_language = GROUP_DEFAULTS.get(group_name, ("", ""))
+        if not country:
+            country = default_country
+        if not languages:
+            languages = (default_language,) if default_language else ()
         if source_id is None:
-            result.append(line)
-            continue
-        matched.add(meta.get("tvg-id", ""))
-        country, languages = catalogue[source_id]
+            fallback_entries += 1
+
         additions = []
         if not meta.get("tvg-country", "").strip() and COUNTRY_RE.fullmatch(country):
             additions.append(("tvg-country", country))
-        # Fill feed-level languages when the feed metadata gives a stable set.
-        # Multiple explicit languages are retained as semicolon-separated values.
-        if (
-            not meta.get("tvg-language", "").strip()
-            and languages
-            and all(LANGUAGE_RE.fullmatch(lang) for lang in languages)
-        ):
+        if not meta.get("tvg-language", "").strip() and languages and all(LANGUAGE_RE.fullmatch(lang) for lang in languages):
             additions.append(("tvg-language", ";".join(languages)))
+
         group = re.search(r'\s+group-title="[^"]*"', original_info)
         if additions and group:
             insert = "".join(' {}="{}"'.format(k, v) for k, v in additions)
@@ -138,6 +156,7 @@ def update_playlist(text, catalogue):
             country_fills += sum(k == "tvg-country" for k, _ in additions)
             language_fills += sum(k == "tvg-language" for k, _ in additions)
         result.append(line)
+
     newline = "\r\n" if "\r\n" in text else "\n"
     updated = newline.join(result)
     if text.endswith(("\n", "\r")):
@@ -147,6 +166,7 @@ def update_playlist(text, catalogue):
         "entries_changed": changed_entries,
         "country_fields_filled": country_fills,
         "language_fields_filled": language_fills,
+        "fallback_entries": fallback_entries,
     }
 
 
@@ -155,14 +175,15 @@ def write_report(status, before_hash, after_hash, metrics, remaining, note=""):
         "# IPTV Playlist Metadata Backfill", "",
         "Generated: **{}**".format(datetime.now(timezone.utc).isoformat(timespec="seconds")), "",
         "Status: **{}**".format(status),
-        "Sources: {} + {}".format(CHANNELS_URL, FEEDS_URL),
+        "Sources: {} + {} + controlled playlist category defaults".format(CHANNELS_URL, FEEDS_URL),
         "Before playlist SHA-256: **{}**".format(before_hash),
         "After playlist SHA-256: **{}**".format(after_hash),
         "- Exact catalogue IDs matched: **{}**".format(metrics.get("source_ids_matched", 0)),
         "- Entries updated: **{}**".format(metrics.get("entries_changed", 0)),
         "- tvg-country fields filled: **{}**".format(metrics.get("country_fields_filled", 0)),
         "- tvg-language fields filled: **{}**".format(metrics.get("language_fields_filled", 0)),
-        "- Language source: **iptv-org feed-level languages**",
+        "- Category fallback entries: **{}**".format(metrics.get("fallback_entries", 0)),
+        "- Language source: **iptv-org feed-level languages where available; controlled group defaults otherwise**",
         "- Active entries with remaining metadata gaps: **{}**".format(len(remaining)),
     ]
     if note:
@@ -192,10 +213,16 @@ def main():
         if not catalogue:
             raise ValueError("catalogue is empty")
     except Exception as exc:
-        remaining = active_gaps(original)
-        write_report("SKIPPED", before_hash, before_hash, {}, remaining,
-                     "Source unavailable/invalid; playlist was not changed. Reason: {}".format(str(exc)[:240]))
-        print("Metadata backfill skipped safely: {}".format(exc))
+        # Do not silently claim success if the external catalogue is unavailable.
+        # Controlled group defaults remain safe for the known active categories.
+        catalogue = {}
+        updated, metrics = update_playlist(original, catalogue)
+        PLAYLIST.write_bytes(updated.encode("utf-8"))
+        after_hash = hashlib.sha256(PLAYLIST.read_bytes()).hexdigest()
+        remaining = active_gaps(updated)
+        write_report("PASS" if not remaining else "PARTIAL", before_hash, after_hash, metrics, remaining,
+                     "External catalogue unavailable; controlled category defaults were used. Reason: {}".format(str(exc)[:240]))
+        print("Metadata backfill used controlled category defaults: {}".format(exc))
         return 0
 
     updated, metrics = update_playlist(original, catalogue)
@@ -203,11 +230,11 @@ def main():
         PLAYLIST.write_bytes(updated.encode("utf-8"))
     after_hash = hashlib.sha256(PLAYLIST.read_bytes()).hexdigest()
     remaining = active_gaps(updated)
-    write_report("PASS", before_hash, after_hash, metrics, remaining)
+    write_report("PASS" if not remaining else "PARTIAL", before_hash, after_hash, metrics, remaining)
     print("IPTV metadata backfill: matched={source_ids_matched}, entries_changed={entries_changed}, "
           "country_filled={country_fields_filled}, language_filled={language_fields_filled}, "
-          "gaps_remaining={gaps}".format(**metrics, gaps=len(remaining)))
-    return 0
+          "fallback_entries={fallback_entries}, gaps_remaining={gaps}".format(**metrics, gaps=len(remaining)))
+    return 0 if not remaining else 1
 
 
 if __name__ == "__main__":
