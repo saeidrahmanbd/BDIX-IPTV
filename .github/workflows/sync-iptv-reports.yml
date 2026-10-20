@@ -14,6 +14,7 @@ on:
       - scripts/pre_publish_gate.py
       - scripts/epg_coverage.py
       - scripts/run_epg_coverage.py
+      - scripts/apply_epg_language_priority.py
       - scripts/generate_logo_authenticity_manifest.py
       - scripts/generate_logo_repair_summary.py
       - scripts/generate_dashboard.py
@@ -82,6 +83,11 @@ jobs:
             git clean -fd
             cp epg/epg.xml /tmp/previous-epg.xml 2>/dev/null || true
 
+            # Keep the generator self-healing: enforce the EPG title-selection
+            # policy before every generation, then commit the patched generator
+            # together with the synchronized reports.
+            python scripts/apply_epg_language_priority.py
+
             # Report generators are strict: a generator failure stops publication.
             # Only audit/gate commands are allowed to return a blocking status because
             # their reports are deliberately published for diagnosis.
@@ -128,7 +134,7 @@ jobs:
             # playlist that is about to be published. This is a hard gate.
             python scripts/validate_report_freshness.py --mode generated
 
-            git add reports/ assets/dashboard.svg epg/epg.xml
+            git add reports/ assets/dashboard.svg epg/epg.xml scripts/generate_epg.py scripts/apply_epg_language_priority.py .github/workflows/sync-iptv-reports.yml
             if git diff --cached --quiet; then
               echo 'Reports and EPG are already synchronized with the current playlist.'
               exit 0
