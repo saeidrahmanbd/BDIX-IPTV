@@ -7,11 +7,12 @@ on:
     paths:
       - IPTV-Playlist.m3u
       - .github/workflows/sync-iptv-reports.yml
-      - scripts/epg_coverage.py
       - scripts/audit_playlist.py
       - scripts/pre_publish_gate.py
+      - scripts/epg_coverage.py
       - scripts/generate_logo_authenticity_manifest.py
       - scripts/generate_dashboard.py
+      - scripts/generate_metadata_backfill_report.py
       - scripts/validate_report_freshness.py
 
 permissions:
@@ -45,58 +46,14 @@ jobs:
           for attempt in 1 2 3 4 5; do
             echo "=== Synchronization attempt ${attempt}/5 ==="
 
-            # Never rebase a generated report commit. Start from the latest main,
-            # generate against that exact playlist, then push that exact result.
+            # Always regenerate from a complete, current main. Never rebase
+            # generated report commits and never merge report files.
             git fetch --prune origin main
             git reset --hard origin/main
             git clean -fd
 
-            python - <<'PY'
-            from pathlib import Path
-            import hashlib
-            import re
-            from datetime import datetime, timezone
-
-            p = Path('IPTV-Playlist.m3u')
-            text = p.read_text(encoding='utf-8')
-            digest = hashlib.sha256(p.read_bytes()).hexdigest()
-            active = {'Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports'}
-            attr = re.compile(r'([\w-]+)="([^"]*)"')
-            gaps = []
-            current = None
-            for line in text.splitlines():
-                if line.startswith('#EXTINF:'):
-                    current = line
-                elif current is not None and line.strip().startswith(('http://','https://')):
-                    a = dict(attr.findall(current))
-                    current = None
-                    if a.get('group-title','').strip() in active:
-                        missing = []
-                        if not a.get('tvg-country','').strip(): missing.append('tvg-country')
-                        if not a.get('tvg-language','').strip(): missing.append('tvg-language')
-                        if missing:
-                            gaps.append((a.get('group-title',''), a.get('tvg-name',''), a.get('tvg-id',''), ', '.join(missing)))
-
-            lines = [
-                '# IPTV Playlist Metadata Backfill', '',
-                f'Generated: **{datetime.now(timezone.utc).isoformat(timespec="seconds")}**', '',
-                'Status: **PASS**' if not gaps else 'Status: **REVIEW**',
-                'Source: **current IPTV-Playlist.m3u**',
-                f'After playlist SHA-256: **{digest}**',
-                f'- Active entries with remaining metadata gaps: **{len(gaps)}**',
-                '- This synchronization report is read-only; it does not modify IPTV-Playlist.m3u.', '',
-                '## Remaining active metadata gaps', '',
-                '| Group | Channel | tvg-id | Missing fields |',
-                '|---|---|---|---|'
-            ]
-            if gaps:
-                lines.extend(f'| {g} | {n} | {i} | {m} |' for g,n,i,m in gaps)
-            else:
-                lines.append('| — | — | — | none |')
-            Path('reports').mkdir(exist_ok=True)
-            Path('reports/iptv-metadata-backfill.md').write_text('\n'.join(lines)+'\n', encoding='utf-8')
-            PY
-
+            # This generator is deliberately read-only: it never edits the playlist.
+            python scripts/generate_metadata_backfill_report.py
             python scripts/audit_playlist.py
             python scripts/pre_publish_gate.py
             python scripts/epg_coverage.py
@@ -110,28 +67,23 @@ jobs:
               exit 0
             fi
 
+            # Create the generated commit locally. Its parent is the exact main
+            # snapshot used to generate every report.
             git commit -m 'Synchronize IPTV generated reports'
-
-            # Push only if main is still exactly the commit we generated from.
-            # If another workflow changed main, discard this generated commit and
-            # regenerate everything from the new main instead of creating conflicts.
             base_sha="$(git rev-parse HEAD^1)"
-            remote_sha="$(git ls-remote origin refs/heads/main | awk '{print $1}')"
-            if [[ "$base_sha" != "$remote_sha" ]]; then
-              echo "main changed during generation ($base_sha -> $remote_sha); regenerating from latest main"
-              git reset --hard "$remote_sha"
-              sleep 2
-              continue
-            fi
 
-            if git push origin HEAD:main; then
+            # Compare-and-swap push: if main moved, this push MUST fail rather
+            # than merging/rebasing generated reports. We then discard the local
+            # commit and regenerate from the new main.
+            if git push --force-with-lease="refs/heads/main:${base_sha}" origin HEAD:main; then
               echo 'Synchronized reports published successfully.'
               exit 0
             fi
 
-            echo 'Push raced with another main update; regenerating from latest main.'
+            echo 'main changed before publication; discarding generated commit and regenerating.'
             git fetch --prune origin main
             git reset --hard origin/main
+            git clean -fd
             sleep 2
           done
 
