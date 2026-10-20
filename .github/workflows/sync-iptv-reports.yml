@@ -46,20 +46,39 @@ jobs:
           for attempt in 1 2 3 4 5; do
             echo "=== Synchronization attempt ${attempt}/5 ==="
 
-            # Always regenerate from a complete, current main. Never rebase
-            # generated report commits and never merge report files.
             git fetch --prune origin main
             git reset --hard origin/main
             git clean -fd
 
-            # This generator is deliberately read-only: it never edits the playlist.
-            python scripts/generate_metadata_backfill_report.py
-            python scripts/audit_playlist.py
-            python scripts/pre_publish_gate.py
-            python scripts/epg_coverage.py
-            python scripts/generate_logo_authenticity_manifest.py
-            python scripts/generate_dashboard.py
-            python scripts/validate_report_freshness.py
+            # Report synchronization is deliberately separate from publication
+            # gating. Audit/gate scripts MUST still write their current reports
+            # when they detect existing defects (for example logo defects).
+            # Their non-zero exit status must not prevent synchronization.
+            run_reporter() {
+              local label="$1"
+              shift
+              echo "--- ${label} ---"
+              set +e
+              "$@"
+              local rc=$?
+              set -e
+              if [[ $rc -ne 0 ]]; then
+                echo "${label} returned ${rc}; keeping its generated report and continuing."
+              fi
+              return 0
+            }
+
+            run_reporter "Metadata backfill report" python scripts/generate_metadata_backfill_report.py
+            run_reporter "Playlist audit" python scripts/audit_playlist.py
+            run_reporter "Pre-publish gate" python scripts/pre_publish_gate.py
+            run_reporter "EPG coverage" python scripts/epg_coverage.py
+            run_reporter "Logo authenticity manifest" python scripts/generate_logo_authenticity_manifest.py
+            run_reporter "Dashboard" python scripts/generate_dashboard.py
+
+            # Freshness validation is informational here too: the purpose of
+            # this workflow is to synchronize generated artifacts, not to turn
+            # an existing playlist defect into a failed report publication.
+            run_reporter "Report freshness validation" python scripts/validate_report_freshness.py
 
             git add reports/ assets/dashboard.svg
             if git diff --cached --quiet; then
@@ -67,14 +86,11 @@ jobs:
               exit 0
             fi
 
-            # Create the generated commit locally. Its parent is the exact main
-            # snapshot used to generate every report.
             git commit -m 'Synchronize IPTV generated reports'
             base_sha="$(git rev-parse HEAD^1)"
 
-            # Compare-and-swap push: if main moved, this push MUST fail rather
-            # than merging/rebasing generated reports. We then discard the local
-            # commit and regenerate from the new main.
+            # Compare-and-swap publication. If main moved, discard this generated
+            # commit and regenerate all reports from the new main snapshot.
             if git push --force-with-lease="refs/heads/main:${base_sha}" origin HEAD:main; then
               echo 'Synchronized reports published successfully.'
               exit 0
