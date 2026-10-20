@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""Fill blank IPTV metadata from exact iptv-org channel IDs only."""
-import csv
+"""Fill blank IPTV metadata from current iptv-org channel/feed metadata only."""
 import hashlib
-import io
+import json
 import re
 import urllib.request
 from datetime import datetime, timezone
@@ -10,7 +9,8 @@ from pathlib import Path
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/iptv-metadata-backfill.md")
-SOURCE_URL = "https://raw.githubusercontent.com/iptv-org/database/master/data/channels.csv"
+CHANNELS_URL = "https://iptv-org.github.io/api/channels.json"
+FEEDS_URL = "https://iptv-org.github.io/api/feeds.json"
 ACTIVE_GROUPS = {
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
@@ -22,27 +22,39 @@ COUNTRY_RE = re.compile(r"^[A-Z]{2}$")
 LANGUAGE_RE = re.compile(r"^[a-z]{3}$")
 
 
-def parse_catalogue(text):
-    reader = csv.DictReader(io.StringIO(text))
-    required = {"id", "country"}
-    if not reader.fieldnames or not required.issubset(set(reader.fieldnames)):
-        raise ValueError("catalogue is missing id/country columns")
-    has_languages = "languages" in reader.fieldnames
-    by_id, ambiguous = {}, set()
-    for row in reader:
+def load_json(url):
+    request = urllib.request.Request(url, headers={"User-Agent": "BDIX-IPTV-metadata-maintenance/2.0"})
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return json.loads(response.read().decode("utf-8-sig"))
+
+
+def parse_catalogue(channels, feeds):
+    """Return channel_id -> (country, unique feed languages).
+
+    iptv-org removed channel-level languages in 2025. Feed-level languages are
+    now the authoritative source, so combine languages from the channel's feeds.
+    """
+    feed_languages = {}
+    for feed in feeds:
+        channel_id = (feed.get("channel") or "").strip()
+        if not channel_id:
+            continue
+        langs = tuple(sorted({
+            x.strip().lower() for x in (feed.get("languages") or [])
+            if isinstance(x, str) and LANGUAGE_RE.fullmatch(x.strip().lower())
+        }))
+        if langs:
+            feed_languages.setdefault(channel_id, set()).update(langs)
+
+    catalogue = {}
+    for row in channels:
         channel_id = (row.get("id") or "").strip()
         if not channel_id:
             continue
         country = (row.get("country") or "").strip().upper()
-        languages = tuple(x.strip().lower() for x in (row.get("languages") or "").split(";") if x.strip()) if has_languages else ()
-        value = (country, languages)
-        if channel_id in by_id and by_id[channel_id] != value:
-            ambiguous.add(channel_id)
-        else:
-            by_id[channel_id] = value
-    for channel_id in ambiguous:
-        by_id.pop(channel_id, None)
-    return by_id
+        languages = tuple(sorted(feed_languages.get(channel_id, set())))
+        catalogue[channel_id] = (country, languages)
+    return catalogue
 
 
 def matching_id(tvg_id, catalogue):
@@ -110,13 +122,14 @@ def update_playlist(text, catalogue):
         additions = []
         if not meta.get("tvg-country", "").strip() and COUNTRY_RE.fullmatch(country):
             additions.append(("tvg-country", country))
-        # Only populate a single language; multi-language values remain for review.
+        # Fill feed-level languages when the feed metadata gives a stable set.
+        # Multiple explicit languages are retained as semicolon-separated values.
         if (
             not meta.get("tvg-language", "").strip()
-            and len(languages) == 1
-            and LANGUAGE_RE.fullmatch(languages[0])
+            and languages
+            and all(LANGUAGE_RE.fullmatch(lang) for lang in languages)
         ):
-            additions.append(("tvg-language", languages[0]))
+            additions.append(("tvg-language", ";".join(languages)))
         group = re.search(r'\s+group-title="[^"]*"', original_info)
         if additions and group:
             insert = "".join(' {}="{}"'.format(k, v) for k, v in additions)
@@ -139,24 +152,17 @@ def update_playlist(text, catalogue):
 
 def write_report(status, before_hash, after_hash, metrics, remaining, note=""):
     lines = [
-        "# IPTV Playlist Metadata Backfill",
-        "",
-        "Generated: **{}**".format(datetime.now(timezone.utc).isoformat(timespec="seconds")),
-        "",
+        "# IPTV Playlist Metadata Backfill", "",
+        "Generated: **{}**".format(datetime.now(timezone.utc).isoformat(timespec="seconds")), "",
         "Status: **{}**".format(status),
-        "Source catalogue: {}".format(SOURCE_URL),
+        "Sources: {} + {}".format(CHANNELS_URL, FEEDS_URL),
         "Before playlist SHA-256: **{}**".format(before_hash),
         "After playlist SHA-256: **{}**".format(after_hash),
         "- Exact catalogue IDs matched: **{}**".format(metrics.get("source_ids_matched", 0)),
         "- Entries updated: **{}**".format(metrics.get("entries_changed", 0)),
         "- tvg-country fields filled: **{}**".format(metrics.get("country_fields_filled", 0)),
         "- tvg-language fields filled: **{}**".format(metrics.get("language_fields_filled", 0)),
-        "- Language column in source catalogue: **{}**".format(
-            "available" if metrics.get("language_source_field_available") is True
-            else "not provided" if metrics.get("language_source_field_available") is False
-            else "not checked"
-        ),
-        "- tvg-language is only filled from a unique, explicit language value; no language is inferred from country, category, or URL.",
+        "- Language source: **iptv-org feed-level languages**",
         "- Active entries with remaining metadata gaps: **{}**".format(len(remaining)),
     ]
     if note:
@@ -177,13 +183,12 @@ def main():
     raw = PLAYLIST.read_bytes()
     original = raw.decode("utf-8")
     before_hash = hashlib.sha256(raw).hexdigest()
-    request = urllib.request.Request(SOURCE_URL, headers={"User-Agent": "BDIX-IPTV-metadata-maintenance/1.0"})
     try:
-        with urllib.request.urlopen(request, timeout=20) as response:
-            source_text = response.read().decode("utf-8-sig")
-        catalogue = parse_catalogue(source_text)
-        fieldnames = csv.DictReader(io.StringIO(source_text)).fieldnames or []
-        language_source_available = "languages" in fieldnames
+        channels = load_json(CHANNELS_URL)
+        feeds = load_json(FEEDS_URL)
+        if not isinstance(channels, list) or not isinstance(feeds, list):
+            raise ValueError("iptv-org API response is not a list")
+        catalogue = parse_catalogue(channels, feeds)
         if not catalogue:
             raise ValueError("catalogue is empty")
     except Exception as exc:
@@ -194,7 +199,6 @@ def main():
         return 0
 
     updated, metrics = update_playlist(original, catalogue)
-    metrics["language_source_field_available"] = language_source_available
     if updated != original:
         PLAYLIST.write_bytes(updated.encode("utf-8"))
     after_hash = hashlib.sha256(PLAYLIST.read_bytes()).hexdigest()
