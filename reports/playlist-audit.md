@@ -1,16 +1,16 @@
 # Playlist Audit
-Generated: **2026-10-20T09:36:49.996607+00:00**
-Audited playlist revision: `87538cb14a100c41a0a602829bd1bd3440bc5407`
-Playlist SHA-256: `e940a1908069ecbb8d849b5e04e02a42e977587d2c46aefb40c5af7d4f7f62af`
-Source playlist SHA-256: **e940a1908069ecbb8d849b5e04e02a42e977587d2c46aefb40c5af7d4f7f62af**
+Generated: **2026-10-20T09:40:20.127710+00:00**
+Audited playlist revision: `dbdfb10351c9399d754539a34b534436e61469d9`
+Playlist SHA-256: `51bbf8657e9faff27ac2fa8765e7398fd0b8731fd24bef3c43369535264d6fc4`
+Source playlist SHA-256: **51bbf8657e9faff27ac2fa8765e7398fd0b8731fd24bef3c43369535264d6fc4**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1105**
-- Unique channel IDs: **676**
-- IDs with multiple streams: **230**
+- Playlist entries: **1092**
+- Unique channel IDs: **664**
+- IDs with multiple streams: **229**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
@@ -19,12 +19,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **0**
 - External logo references (review only): **0**
-- Logo references checked: **1105**
+- Logo references checked: **1092**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
-- Primary entries missing tvg-country: **276**
-- Primary entries missing tvg-language: **276**
+- Primary entries missing tvg-country: **265**
+- Primary entries missing tvg-language: **265**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Category registry issues: **0**
@@ -37,8 +37,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ## Primary Metadata Completeness
 
 Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.
-- Active primary entries missing tvg-country: **276**
-- Active primary entries missing tvg-language: **276**
+- Active primary entries missing tvg-country: **265**
+- Active primary entries missing tvg-language: **265**
 
 | Group | Missing tvg-country | Missing tvg-language |
 |---|---:|---:|
@@ -46,7 +46,7 @@ Missing country/language values are informational, not a reason to delete, recla
 | Indian Entertainment | 25 | 25 |
 | Indian Movies | 12 | 12 |
 | Indian Music | 9 | 9 |
-| International | 77 | 77 |
+| International | 66 | 66 |
 | Kids | 42 | 42 |
 | Religious | 15 | 15 |
 | Sports | 21 | 21 |
@@ -163,9 +163,6 @@ Canonical registry matches the permanent IPTV category order.
 - Bangla Vision — Backup — https://tvsen5.aynaott.com/banglavision/tracks-v1a1/mono.ts.m3u8
 - Bangla Vision — Backup — https://tvsen5.aynaott.com/tgUzpPc9r6xw/index.m3u8
 - Bangla Vision — Backup — https://tvsen5.aynaott.com/tgUzpPc9r6xw/tracks-v1a1/mono.ts.m3u8
-### barazamusictv.gr (2 streams)
-- Baraza Music TV — International — https://eco.streams.ovh:8081/barazatv/index.m3u8
-- Baraza Music TV — Backup — https://rtmp.streams.ovh:1936/barazarelax/barazazararelax/barazarelax/playlist.m3u8
 ### bbcearth.ca (3 streams)
 - BBC Earth — Documentary & Wildlife — https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist.m3u8
 - BBC Earth — Backup — https://amg00793-bbcstudios-amg00793c3-lg-us-2528.playouts.now.amagi.tv/playlist/amg00793-bbcstudios-bbcearta-lgus/playlist.m3u8
@@ -988,7 +985,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1105**
+- Healthy/local references: **1092**
 - External references (review only): **0**
 - missing: **0**
 - broken-local: **0**
