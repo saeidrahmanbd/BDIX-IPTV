@@ -40,6 +40,7 @@ permissions:
 concurrency:
   group: bdix-iptv-main-writer
   cancel-in-progress: false
+  queue: max
 
 jobs:
   sync:

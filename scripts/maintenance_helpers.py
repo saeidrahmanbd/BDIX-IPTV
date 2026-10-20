@@ -18,21 +18,13 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+from logo_asset_naming import is_blocked_logo_basename
+
 PLAYLIST = Path("IPTV-Playlist.m3u")
 BASELINE = Path("/tmp/iptv-playlist-baseline.json")
 PROTECTED_SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
 REMOVAL_REPORT = Path("reports/proposed-removals.md")
 PROTECTED_GROUPS = {"Backup", "Not Playing"}
-
-BAD_LOGOS = {
-    "atn-news.png", "a-sports-5485adff.png", "a-sports-hd.png", "bein-sports-3.png",
-    "bangla-tv.png", "btv-news.png", "colors.png", "duronto-tv.png",
-    "duronto-tv-1ad55c95.png", "ekushey-tv.png", "global-tv.png", "green-tv.png",
-    "mohona-tv.png", "nagorik-tv.png", "nagorik.png", "nick-bangla.png",
-    "sananda-tv.png", "sananda.png", "star-gold-select.png", "star-gold.png",
-    "star-plus.png", "zee-tv.png", "tom-and-jerry.png", "arirang-tv.png",
-}
-
 
 def _attrs(ext: str) -> dict[str, str]:
     return dict(re.findall(r'([A-Za-z0-9_-]+)="([^"]*)"', ext))
@@ -291,7 +283,7 @@ def invalidate_bad_logos(message: str) -> None:
                 logo = Path(
                     match.group(1).split("?", 1)[0].split("#", 1)[0]
                 ).name.casefold()
-                if logo in BAD_LOGOS:
+                if is_blocked_logo_basename(logo):
                     line = line[:match.start(1)] + line[match.end(1):]
                     changed += 1
         out.append(line)
