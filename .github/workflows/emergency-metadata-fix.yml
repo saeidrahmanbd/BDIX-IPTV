@@ -22,138 +22,71 @@ jobs:
         run: |
           from pathlib import Path
           import re
-
-          path = Path('IPTV-Playlist.m3u')
-          text = path.read_text(encoding='utf-8')
-          active = {
-              'Bangladesh','Indian Bangla','Indian Movies','Indian Music',
-              'Indian Entertainment','Pakistani','International',
-              'Documentary & Wildlife','Kids','Religious','Sports'
-          }
-          country_from_id = {
-              'bd':'BD','in':'IN','pk':'PK','us':'US','uk':'GB','gb':'GB',
-              'ca':'CA','au':'AU','nz':'NZ','sg':'SG','my':'MY','ae':'AE',
-              'sa':'SA','qa':'QA','bh':'BH','kw':'KW','om':'OM','jp':'JP',
-              'kr':'KR','cn':'CN','hk':'HK','tw':'TW','th':'TH','id':'ID',
-              'ph':'PH','de':'DE','fr':'FR','es':'ES','it':'IT','nl':'NL',
-              'be':'BE','ch':'CH','at':'AT','ie':'IE','za':'ZA','ng':'NG',
-              'ke':'KE','gh':'GH','eg':'EG','tr':'TR','ru':'RU','ua':'UA',
-              'br':'BR','mx':'MX','ar':'AR','cl':'CL','co':'CO','pe':'PE',
-              'np':'NP','lk':'LK','mu':'MU'
-          }
-          group_country = {
-              'Bangladesh':'BD', 'Indian Bangla':'IN', 'Indian Movies':'IN',
-              'Indian Music':'IN', 'Indian Entertainment':'IN', 'Pakistani':'PK'
-          }
-          group_language = {
-              'Bangladesh':'ben', 'Indian Bangla':'ben', 'Indian Movies':'hin',
-              'Indian Music':'hin', 'Indian Entertainment':'hin', 'Pakistani':'urd',
-              'International':'eng', 'Documentary & Wildlife':'eng', 'Kids':'eng',
-              'Religious':'ara', 'Sports':'eng'
-          }
-          special_language = {
-              '7S Music':'hin', '9X Jalwa':'hin', '9XM':'hin', 'Aakaash Aath':'ben',
-              'Animal Planet':'eng', 'Discovery':'eng', 'National Geographic':'eng',
-              'Nick':'eng', 'Nickelodeon':'eng', 'Cartoon Network':'eng',
-              'Disney':'eng', 'Al Jazeera':'ara', 'Quran':'ara', 'Madinah':'ara',
-              'Madani':'ara', 'Saudi':'ara', 'Pakistan':'urd', 'Urdu':'urd'
-          }
-          language_country = {'ben':'BD','hin':'IN','urd':'PK','ara':'SA','eng':'US'}
-          special_country = {
-              'BBC':'GB','CNN':'US','CNBC':'US','Bloomberg':'US','Sky News':'GB',
-              'Al Jazeera':'QA','France 24':'FR','DW':'DE','TRT':'TR',
-              'NHK':'JP','CNA':'SG','CGTN':'CN','Euronews':'GB',
-              'National Geographic':'US','Discovery':'US','Animal Planet':'US',
-              'Nickelodeon':'US','Cartoon Network':'US','Disney':'US',
-              'Sony':'IN','Star Plus':'IN','Star Jalsha':'IN','Zee':'IN',
-              'Colors':'IN','Sun TV':'IN','Sony Aath':'IN','Aakaash Aath':'IN',
-              'B4U':'IN','9XM':'IN','9X':'IN','Zing':'IN','Music India':'IN'
-          }
-          attr_re = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
-          lines = text.splitlines()
-          changed = country = language = 0
-          i = 0
-          while i < len(lines):
-              if not lines[i].startswith('#EXTINF:') or i + 1 >= len(lines) or not lines[i+1].lstrip().startswith(('http://','https://')):
-                  i += 1
-                  continue
-              line = lines[i]
-              attrs = dict(attr_re.findall(line))
-              group = attrs.get('group-title','').strip()
-              if group not in active:
-                  i += 2
-                  continue
-              name = attrs.get('tvg-name','').strip()
-              tvg_id = attrs.get('tvg-id','').strip().lower()
-              suffix = re.search(r'\.([a-z]{2})(?:@[^.\s]+)?$', tvg_id)
-              cc = country_from_id.get(suffix.group(1)) if suffix else None
-              cc = cc or group_country.get(group)
-              lowname = name.lower()
-              if not cc:
-                  for key, value in special_country.items():
-                      if key.lower() in lowname:
-                          cc = value
-                          break
-              lang = None
-              for key, value in special_language.items():
-                  if key.lower() in lowname:
-                      lang = value
-                      break
-              if not lang:
-                  lang = group_language.get(group)
-              if cc == 'PK' and group in {'Sports','Kids','Religious','International'}:
-                  if lang == 'eng': lang = 'urd'
-              if cc in {'BD','GB','CA'} and group == 'Religious' and any(x in lowname for x in ['quran','madani','islam','islamic']):
-                  lang = 'ara' if 'quran' in lowname else 'ben'
-              cc = cc or language_country.get(lang)
-              additions = []
-              if not attrs.get('tvg-country','').strip() and cc:
-                  additions.append(f'tvg-country="{cc}"')
-                  country += 1
-              if not attrs.get('tvg-language','').strip() and lang:
-                  additions.append(f'tvg-language="{lang}"')
-                  language += 1
+          p=Path('IPTV-Playlist.m3u'); lines=p.read_text(encoding='utf-8').splitlines()
+          active={'Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports'}
+          ccid={'bd':'BD','in':'IN','pk':'PK','us':'US','uk':'GB','gb':'GB','ca':'CA','au':'AU','nz':'NZ','sg':'SG','my':'MY','ae':'AE','sa':'SA','qa':'QA','bh':'BH','kw':'KW','om':'OM','jp':'JP','kr':'KR','cn':'CN','hk':'HK','tw':'TW','th':'TH','id':'ID','ph':'PH','de':'DE','fr':'FR','es':'ES','it':'IT','nl':'NL','be':'BE','ch':'CH','at':'AT','ie':'IE','za':'ZA','ng':'NG','ke':'KE','gh':'GH','eg':'EG','tr':'TR','ru':'RU','ua':'UA','br':'BR','mx':'MX','ar':'AR','cl':'CL','co':'CO','pe':'PE','np':'NP','lk':'LK','mu':'MU'}
+          gc={'Bangladesh':'BD','Indian Bangla':'IN','Indian Movies':'IN','Indian Music':'IN','Indian Entertainment':'IN','Pakistani':'PK'}
+          gl={'Bangladesh':'ben','Indian Bangla':'ben','Indian Movies':'hin','Indian Music':'hin','Indian Entertainment':'hin','Pakistani':'urd','International':'eng','Documentary & Wildlife':'eng','Kids':'eng','Religious':'ara','Sports':'eng'}
+          lc={'ben':'BD','hin':'IN','urd':'PK','ara':'SA','eng':'US'}
+          lang_special={'7S Music':'hin','9X Jalwa':'hin','9XM':'hin','Aakaash Aath':'ben','Animal Planet':'eng','Discovery':'eng','National Geographic':'eng','Nick':'eng','Nickelodeon':'eng','Cartoon Network':'eng','Disney':'eng','Al Jazeera':'ara','Quran':'ara','Madinah':'ara','Madani':'ara','Saudi':'ara','Pakistan':'urd','Urdu':'urd'}
+          country_special={'BBC':'GB','CNN':'US','CNBC':'US','Bloomberg':'US','Sky News':'GB','Al Jazeera':'QA','France 24':'FR','DW':'DE','TRT':'TR','NHK':'JP','CNA':'SG','CGTN':'CN','Euronews':'GB','National Geographic':'US','Discovery':'US','Animal Planet':'US','Nickelodeon':'US','Cartoon Network':'US','Disney':'US','Sony':'IN','Star Plus':'IN','Star Jalsha':'IN','Zee':'IN','Colors':'IN','Sun TV':'IN','Sony Aath':'IN','Aakaash Aath':'IN','B4U':'IN','9XM':'IN','9X':'IN','Zing':'IN','Music India':'IN'}
+          ar=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
+          changed=country=language=0; i=0
+          while i<len(lines):
+              if not lines[i].startswith('#EXTINF:'): i+=1; continue
+              start=i; j=i+1
+              while j<len(lines) and not lines[j].lstrip().startswith(('http://','https://')) and not lines[j].startswith('#EXTINF:'): j+=1
+              if j>=len(lines) or lines[j].startswith('#EXTINF:'): i+=1; continue
+              a=dict(ar.findall(lines[start])); g=a.get('group-title','').strip()
+              if g not in active: i=j+1; continue
+              name=a.get('tvg-name','').strip(); low=name.lower(); tid=a.get('tvg-id','').strip().lower()
+              m=re.search(r'\.([a-z]{2})(?:@[^.\s]+)?$',tid); c=ccid.get(m.group(1)) if m else None
+              c=c or gc.get(g)
+              if not c:
+                  for k,v in country_special.items():
+                      if k.lower() in low: c=v; break
+              l=None
+              for k,v in lang_special.items():
+                  if k.lower() in low: l=v; break
+              l=l or gl.get(g)
+              c=c or lc.get(l)
+              additions=[]
+              if not a.get('tvg-country','').strip() and c: additions.append(f'tvg-country="{c}"'); country+=1
+              if not a.get('tvg-language','').strip() and l: additions.append(f'tvg-language="{l}"'); language+=1
               if additions:
-                  m = re.search(r'\s+group-title="[^"]*"', line)
-                  if m:
-                      line = line[:m.start()] + ' ' + ' '.join(additions) + line[m.start():]
-                      lines[i] = line
-                      changed += 1
-              i += 2
-
-          path.write_text('\n'.join(lines) + ('\n' if text.endswith(('\n','\r')) else ''), encoding='utf-8')
+                  pos=re.search(r'\s+group-title="[^"]*"',lines[start])
+                  if pos: lines[start]=lines[start][:pos.start()]+' '+' '.join(additions)+lines[start][pos.start():]
+                  else: lines[start]=lines[start].replace('#EXTINF:-1','#EXTINF:-1 '+' '.join(additions),1)
+                  changed+=1
+              i=j+1
+          p.write_text('\n'.join(lines)+'\n',encoding='utf-8')
           print(f'Changed entries: {changed}; country filled: {country}; language filled: {language}')
-
-          remaining = []
-          current = None
+          remaining=[]; cur=None
           for line in lines:
-              if line.startswith('#EXTINF:'):
-                  current = line
-              elif current is not None and line.lstrip().startswith(('http://','https://')):
-                  a = dict(attr_re.findall(current))
-                  if a.get('group-title','').strip() in active and (not a.get('tvg-country','').strip() or not a.get('tvg-language','').strip()):
-                      remaining.append(a.get('tvg-name',''))
-                  current = None
-          print(f'Remaining active metadata gaps: {len(remaining)}')
-          if remaining:
-              raise SystemExit('Metadata backfill incomplete')
+              if line.startswith('#EXTINF:'): cur=line
+              elif cur is not None and line.lstrip().startswith(('http://','https://')):
+                  a=dict(ar.findall(cur))
+                  if a.get('group-title','').strip() in active and (not a.get('tvg-country','').strip() or not a.get('tvg-language','').strip()): remaining.append(a.get('tvg-name',''))
+                  cur=None
+          print('Remaining active metadata gaps:',len(remaining),remaining[:20])
+          if remaining: raise SystemExit('Metadata backfill incomplete')
       - name: Regenerate current reports
         run: |
           python scripts/epg_coverage.py
           python scripts/pre_publish_gate.py || true
           python scripts/generate_dashboard.py || true
           python scripts/validate_report_freshness.py || true
-      - name: Commit metadata fix
+      - name: Commit metadata and reports
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add IPTV-Playlist.m3u reports/ assets/dashboard.svg
           git diff --cached --quiet && exit 0
-          git commit -m 'Fix IPTV country and language metadata'
+          git commit -m 'Fix IPTV metadata and refresh reports'
           git push origin HEAD:main
       - name: Remove one-shot workflow
         if: success()
         run: |
           git rm .github/workflows/emergency-metadata-fix.yml
-          git commit -m 'Remove emergency metadata fix workflow'
+          git commit -m 'Remove one-shot metadata fix workflow'
           git push origin HEAD:main
