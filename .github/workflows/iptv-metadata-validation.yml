@@ -70,11 +70,11 @@ jobs:
             scripts/generate_dashboard.py \
             scripts/epg_coverage.py \
             scripts/generate_epg.py \
-            scripts/epg_publish_gate.py
-            scripts/logo_asset_naming.py
-            scripts/generate_logo_provenance_review.py
-            scripts/generate_metadata_normalization_report.py
-            scripts/report_iptv_fragile_streams.py
+            scripts/epg_publish_gate.py \
+            scripts/logo_asset_naming.py \
+            scripts/generate_logo_provenance_review.py \
+            scripts/generate_metadata_normalization_report.py \
+            scripts/report_iptv_fragile_streams.py \
             scripts/stream_risk_review.py
       - name: Test exact-ID metadata backfill
         run: python -m unittest discover -s tests -p "test_metadata_backfill.py"
