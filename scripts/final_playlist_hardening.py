@@ -37,14 +37,14 @@ def process(path):
  if not path.is_file(): return
  order=PLAYLIST_ORDERS[path.name]; rank={x:i for i,x in enumerate(order)}
  pre,rec=parse(path)
- seen=set(); unique=[]
+ seen=set(); duplicate_urls=[]
  for r in rec:
   u=next((x.strip() for x in r[1:] if x.strip().startswith(('http://','https://'))),'')
   k=u.casefold()
-  if k and k in seen: continue
+  if k and k in seen: duplicate_urls.append(u)
   if k: seen.add(k)
-  unique.append(r)
- rec=unique
+ if duplicate_urls:
+  raise SystemExit(f'{path}: {len(duplicate_urls)} duplicate stream URL occurrences; refusing to delete any entry.')
  for r in rec:
   a=attrs(r[0]); cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold(); g=a.get('group-title','').strip()
   if cid=='ultimatetv.in@sd' and g!='Backup': r[0]=set_attr(r[0],'group-title','Indian Music')
@@ -55,6 +55,10 @@ def process(path):
  def rkey(r):
   a=attrs(r[0]); g=a.get('group-title','').strip(); n=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip()
   u=next((x.strip() for x in r[1:] if x.strip().startswith(('http://','https://'))),'')
+  if g == 'Bangladesh':
+   raw=a.get('tvg-chno','').strip()
+   number=int(raw) if raw.isdigit() else 10**12
+   return (rank.get(g,len(rank)),number,key(n),u.casefold())
   return (rank.get(g,len(rank)),key(n),u.casefold())
  rec.sort(key=rkey)
  errors=[]; transitions=[]; last=None
@@ -69,8 +73,15 @@ def process(path):
   last_i=max(last_i,i)
  if any(transitions.count(g)>1 for g in set(transitions)): errors.append('split category block')
  for g in order:
-  names=[(attrs(r[0]).get('tvg-name') or r[0].rsplit(',',1)[-1]).strip() for r in rec if attrs(r[0]).get('group-title','').strip()==g]
-  if names and names!=sorted(names,key=key): errors.append(f'A-Z order: {g}')
+  group_records=[r for r in rec if attrs(r[0]).get('group-title','').strip()==g]
+  if not group_records: continue
+  if g == 'Bangladesh':
+   numbers=[int(attrs(r[0]).get('tvg-chno','')) for r in group_records if attrs(r[0]).get('tvg-chno','').strip().isdigit()]
+   if len(numbers)!=len(group_records) or numbers!=sorted(numbers):
+    errors.append('channel-number order/coverage: Bangladesh')
+  else:
+   names=[(attrs(r[0]).get('tvg-name') or r[0].rsplit(',',1)[-1]).strip() for r in group_records]
+   if names!=sorted(names,key=key): errors.append(f'A-Z order: {g}')
  for r in rec:
   a=attrs(r[0]); g=a.get('group-title','').strip()
   cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold()
