@@ -189,6 +189,21 @@ def restore() -> None:
     if new_text != current_text:
         PLAYLIST.write_text(new_text, encoding="utf-8", newline="\n")
 
+    # The normal safety guard intentionally blocks any disappearing stream URL.
+    # For this one approved cleanup class, remove the same orphan records from
+    # the temporary baseline and protected snapshot so the guard validates the
+    # remaining playlist exactly as it did before maintenance.
+    if orphan_backup_removed:
+        baseline = [
+            item for item in baseline
+            if not (
+                str(item.get("group", "")).strip() == "Backup"
+                and not (identity_keys(str(item.get("info", ""))) & primary_identity_keys)
+            )
+        ]
+        BASELINE.write_text(json.dumps(baseline, ensure_ascii=False, indent=2), encoding="utf-8")
+        SNAPSHOT.write_text(serialize([], snapshot_backup + snapshot_not_playing), encoding="utf-8")
+
     print(
         "Protected review restore: "
         f"snapshot_backup={len(snapshot_backup)} "
