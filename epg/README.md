@@ -25,7 +25,7 @@ The personalized M3U4U XML and XMLTV (GZ) endpoints are alternate formats of the
 
 To enable it, open the repository's **Settings → Secrets and variables → Actions → New repository secret**, set the name to `M3U4U_XMLTV_URL`, and use the HTTPS version of the supplied compressed endpoint as its value. The scripts validate the host/path before using it, and mask the endpoint in generated mapping and source-status reports. If the secret is absent or invalid, maintenance continues with the existing public sources.
 
-M3U4U schedules are considered alongside existing feeds; they do not replace them. Matching stays subject to exact channel IDs/aliases for Bangladesh services and the existing English-title/time-window checks. The sample feed contains non-English schedules (including Hindi, Telugu, Hungarian, and Dutch entries), which must not be treated as English coverage. Automated retrieval and public redistribution rights for programme data still need to be confirmed before public schedule publication.
+M3U4U schedules are considered alongside existing feeds; they do not replace them. Matching stays subject to exact channel IDs/aliases for Bangladesh services and the existing allowed-language (English/Bengali) title and time-window checks. The sample feed contains non-English schedules (including Hindi, Telugu, Hungarian, and Dutch entries), which must not be treated as English coverage. Automated retrieval and public redistribution rights for programme data still need to be confirmed before public schedule publication.
 
 ## Mapping safeguards
 

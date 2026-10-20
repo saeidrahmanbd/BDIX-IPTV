@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build a conservative, source-attributed logo provenance manifest."""
+import hashlib
 import json
 import re
 import subprocess
@@ -59,13 +60,14 @@ def provenance_for(registry, playlist, meta, name, logo):
 
 def main():
     registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8")) if REGISTRY_PATH.exists() else {}
-    records, counts = [], {}
+    records, counts, source_hashes = [], {}, {}
 
     for playlist in PLAYLISTS:
         path = Path(playlist)
         if not path.exists():
             continue
 
+        source_hashes[playlist] = hashlib.sha256(path.read_bytes()).hexdigest()
         total = 0
         for line_number, line in enumerate(path.read_text(encoding="utf-8-sig").splitlines(), 1):
             if not line.startswith("#EXTINF"):
@@ -77,9 +79,12 @@ def main():
             source, registry_match = provenance_for(registry, playlist, meta, name, logo)
 
             filename = Path(logo.split("?", 1)[0].split("#", 1)[0]).name.casefold()
-            if filename.startswith("generated-fallback-"):
+            if source.get("status") == "generated_fallback" or filename.startswith("generated-fallback-"):
                 status = "generated_fallback"
-                reason = "Explicitly labelled local fallback artwork; it is not an official broadcaster logo."
+                reason = source.get(
+                    "notes",
+                    "Explicitly labelled local fallback artwork; it is not an official broadcaster logo.",
+                )
             elif source.get("status") in {"official_verified", "third_party_verified"} and source.get("source_url"):
                 status = source["status"]
                 note = source.get("notes", "Source recorded in provenance registry.")
@@ -122,6 +127,7 @@ def main():
             "needs_review": "Authenticity is undocumented, the source is ambiguous, or the logo is missing."
         },
         "counts_by_playlist": counts,
+        "source_sha256_by_playlist": source_hashes,
         "status_counts": tally,
         "status_counts_by_playlist": tally_by_playlist,
         "entry_count": len(records),

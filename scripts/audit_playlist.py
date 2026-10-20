@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Audit playlist identity, metadata, duplicate IDs, and local logo integrity."""
+import hashlib
 import json
 import re
 import subprocess
@@ -324,6 +325,16 @@ except Exception:
     pass
 
 missing_primary_chno = [(info, url) for info, url in entries if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS and not attrs(info).get("tvg-chno", "").strip()]
+missing_primary_country = [(info, url) for info, url in primary_entries if not attrs(info).get("tvg-country", "").strip()]
+missing_primary_language = [(info, url) for info, url in primary_entries if not attrs(info).get("tvg-language", "").strip()]
+metadata_gaps_by_group = defaultdict(Counter)
+for info, url in primary_entries:
+    a = attrs(info)
+    group = a.get("group-title", "").strip() or "Uncategorized"
+    if not a.get("tvg-country", "").strip():
+        metadata_gaps_by_group[group]["tvg-country"] += 1
+    if not a.get("tvg-language", "").strip():
+        metadata_gaps_by_group[group]["tvg-language"] += 1
 category_transitions = []
 last_group = None
 for info, url in entries:
@@ -368,7 +379,15 @@ for group in category_transitions:
 
 lines = [
     "# Playlist Audit", "", "Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.", "", "## Summary", "",
-    f"- Playlist entries: **{len(entries)}**", f"- Unique channel IDs: **{len(by_id)}**", f"- IDs with multiple streams: **{len(duplicate_ids)}**", f"- Duplicate stream URLs: **{len(duplicate_urls)}**", f"- Metadata conflicts: **{len(metadata_conflicts)}**", f"- Same-name / different-ID collisions: **{len(name_collisions)}**", f"- Cross-country backup collisions: **{len(cross_country_backups)}**", f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**", f"- Protected primary-entry changes: **{len(protected_changes)}**", f"- Logo exceptions requiring repair: **{len(logo_exceptions)}**", f"- External logo references (review only): **{len(logo_warnings)}**", f"- Logo references checked: **{sum(logo_counts.values())}**", f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**", f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**", f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**", f"- Malformed EXTINF entries: **{len(malformed_extinf)}**", f"- Category block-order issues: **{len(category_order_issues)}**", f"- Category registry issues: **{len(category_registry_issues)}**", f"- Alphabetical ordering issues: **{len(alphabetical_order_issues)}**", f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**", f"- Signed/tokenized stream URLs: **{len(signed_urls)}**", f"- Embedded Xtream-style credential paths (redacted): **{len(xtream_credential_paths)}**", "", "## Duplicate IDs", ""]
+    f"- Playlist entries: **{len(entries)}**", f"- Unique channel IDs: **{len(by_id)}**", f"- IDs with multiple streams: **{len(duplicate_ids)}**", f"- Duplicate stream URLs: **{len(duplicate_urls)}**", f"- Metadata conflicts: **{len(metadata_conflicts)}**", f"- Same-name / different-ID collisions: **{len(name_collisions)}**", f"- Cross-country backup collisions: **{len(cross_country_backups)}**", f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**", f"- Protected primary-entry changes: **{len(protected_changes)}**", f"- Logo exceptions requiring repair: **{len(logo_exceptions)}**", f"- External logo references (review only): **{len(logo_warnings)}**", f"- Logo references checked: **{sum(logo_counts.values())}**", f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**", f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**", f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**", f"- Primary entries missing tvg-country: **{len(missing_primary_country)}**", f"- Primary entries missing tvg-language: **{len(missing_primary_language)}**", f"- Malformed EXTINF entries: **{len(malformed_extinf)}**", f"- Category block-order issues: **{len(category_order_issues)}**", f"- Category registry issues: **{len(category_registry_issues)}**", f"- Alphabetical ordering issues: **{len(alphabetical_order_issues)}**", f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**", f"- Signed/tokenized stream URLs: **{len(signed_urls)}**", f"- Embedded Xtream-style credential paths (redacted): **{len(xtream_credential_paths)}**", "", "## Duplicate IDs", ""]
+lines += ["", "## Primary Metadata Completeness", "",
+    "Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.",
+    f"- Active primary entries missing tvg-country: **{len(missing_primary_country)}**",
+    f"- Active primary entries missing tvg-language: **{len(missing_primary_language)}**",
+    "", "| Group | Missing tvg-country | Missing tvg-language |", "|---|---:|---:|"]
+for group in sorted(metadata_gaps_by_group):
+    gap = metadata_gaps_by_group[group]
+    lines.append(f"| {group} | {gap['tvg-country']} | {gap['tvg-language']} |")
 lines += ["", "## Category Registry", ""]
 if category_registry_issues:
     lines.extend("- " + issue for issue in category_registry_issues)
@@ -427,6 +446,7 @@ lines += ["", "## Protected Primary Entries", ""]
 if protected_changes: lines.extend(f"- **{cid}** — {url}: {kind}" for cid,url,kind in protected_changes)
 else: lines.append("No protected primary-entry changes detected.")
 lines.insert(1, "Generated: **" + __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat() + "**")
+lines.insert(2, "Source playlist SHA-256: **" + hashlib.sha256(PLAYLIST.read_bytes()).hexdigest() + "**")
 REPORT.parent.mkdir(parents=True, exist_ok=True)
 REPORT.write_text("\n".join(lines).rstrip()+"\n", encoding="utf-8")
 print(f"Playlist audit: entries={len(entries)} duplicate_ids={len(duplicate_ids)} duplicate_urls={len(duplicate_urls)} conflicts={len(metadata_conflicts)} name_collisions={len(name_collisions)} protected_changes={len(protected_changes)} logo_exceptions={len(logo_exceptions)} external_logo_warnings={len(logo_warnings)}")

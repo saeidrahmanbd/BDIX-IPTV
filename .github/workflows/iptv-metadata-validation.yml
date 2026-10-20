@@ -1,0 +1,62 @@
+name: IPTV Metadata and EPG Validation
+
+on:
+  pull_request:
+    paths:
+      - scripts/iptv_metadata_backfill.py
+      - scripts/validate_report_freshness.py
+      - scripts/audit_playlist.py
+      - scripts/pre_publish_gate.py
+      - scripts/generate_dashboard.py
+      - scripts/epg_coverage.py
+      - scripts/generate_epg.py
+      - scripts/epg_publish_gate.py
+      - tests/test_metadata_backfill.py
+      - tests/test_report_freshness.py
+      - tests/test_language_policy.py
+      - .github/workflows/iptv-metadata-validation.yml
+  push:
+    branches:
+      - fix/iptv-playlist-metadata-epg-freshness
+    paths:
+      - scripts/iptv_metadata_backfill.py
+      - scripts/validate_report_freshness.py
+      - scripts/audit_playlist.py
+      - scripts/pre_publish_gate.py
+      - scripts/generate_dashboard.py
+      - scripts/epg_coverage.py
+      - scripts/generate_epg.py
+      - scripts/epg_publish_gate.py
+      - tests/test_metadata_backfill.py
+      - tests/test_report_freshness.py
+      - tests/test_language_policy.py
+      - .github/workflows/iptv-metadata-validation.yml
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Compile changed Python tools
+        run: |
+          python -m py_compile \
+            scripts/iptv_metadata_backfill.py \
+            scripts/validate_report_freshness.py \
+            scripts/audit_playlist.py \
+            scripts/pre_publish_gate.py \
+            scripts/generate_dashboard.py \
+            scripts/epg_coverage.py \
+            scripts/generate_epg.py \
+            scripts/epg_publish_gate.py
+      - name: Test exact-ID metadata backfill
+        run: python -m unittest discover -s tests -p "test_metadata_backfill.py"
+      - name: Test report freshness and fingerprints
+        run: python -m unittest discover -s tests -p "test_report_freshness.py"
+      - name: Test English/Bengali EPG text policy
+        run: python -m unittest discover -s tests -p "test_language_policy.py"
