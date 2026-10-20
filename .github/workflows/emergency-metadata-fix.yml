@@ -58,8 +58,18 @@ jobs:
               'Disney':'eng', 'Al Jazeera':'ara', 'Quran':'ara', 'Madinah':'ara',
               'Madani':'ara', 'Saudi':'ara', 'Pakistan':'urd', 'Urdu':'urd'
           }
+          language_country = {'ben':'BD','hin':'IN','urd':'PK','ara':'SA','eng':'US'}
+          special_country = {
+              'BBC':'GB','CNN':'US','CNBC':'US','Bloomberg':'US','Sky News':'GB',
+              'Al Jazeera':'QA','France 24':'FR','DW':'DE','TRT':'TR',
+              'NHK':'JP','CNA':'SG','CGTN':'CN','Euronews':'GB',
+              'National Geographic':'US','Discovery':'US','Animal Planet':'US',
+              'Nickelodeon':'US','Cartoon Network':'US','Disney':'US',
+              'Sony':'IN','Star Plus':'IN','Star Jalsha':'IN','Zee':'IN',
+              'Colors':'IN','Sun TV':'IN','Sony Aath':'IN','Aakaash Aath':'IN',
+              'B4U':'IN','9XM':'IN','9X':'IN','Zing':'IN','Music India':'IN'
+          }
           attr_re = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
-          ext = re.compile(r'^(#EXTINF:.*?)(,.*)$')
           lines = text.splitlines()
           changed = country = language = 0
           i = 0
@@ -78,18 +88,24 @@ jobs:
               suffix = re.search(r'\.([a-z]{2})(?:@[^.\s]+)?$', tvg_id)
               cc = country_from_id.get(suffix.group(1)) if suffix else None
               cc = cc or group_country.get(group)
+              lowname = name.lower()
+              if not cc:
+                  for key, value in special_country.items():
+                      if key.lower() in lowname:
+                          cc = value
+                          break
               lang = None
               for key, value in special_language.items():
-                  if key.lower() in name.lower():
+                  if key.lower() in lowname:
                       lang = value
                       break
               if not lang:
                   lang = group_language.get(group)
-              # Stronger country-specific overrides for broad groups.
               if cc == 'PK' and group in {'Sports','Kids','Religious','International'}:
                   if lang == 'eng': lang = 'urd'
-              if cc in {'BD','GB','CA'} and group == 'Religious' and any(x in name.lower() for x in ['quran','madani','islam','islamic']):
-                  lang = 'ara' if 'quran' in name.lower() else 'ben'
+              if cc in {'BD','GB','CA'} and group == 'Religious' and any(x in lowname for x in ['quran','madani','islam','islamic']):
+                  lang = 'ara' if 'quran' in lowname else 'ben'
+              cc = cc or language_country.get(lang)
               additions = []
               if not attrs.get('tvg-country','').strip() and cc:
                   additions.append(f'tvg-country="{cc}"')
@@ -108,7 +124,6 @@ jobs:
           path.write_text('\n'.join(lines) + ('\n' if text.endswith(('\n','\r')) else ''), encoding='utf-8')
           print(f'Changed entries: {changed}; country filled: {country}; language filled: {language}')
 
-          # Hard fail if active entries still have either required field blank.
           remaining = []
           current = None
           for line in lines:
