@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-20T10:07:47.649Z",
+  "generated_at_utc": "2026-10-20T13:16:22.811737+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -11,7 +11,7 @@
     "BDIX-Playlist.m3u": 139
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "8ab16c68853a7015159b38b26792c3c677331f583c4d7cb58b809e175bfc153e",
+    "IPTV-Playlist.m3u": "ee851e7cc4586db6af2ed6053089b2b6847adfba5ccf91fd7f69e56f36d0b819",
     "BDIX-Playlist.m3u": "b119c1b2cb35778f42345430829ffcd4787b2dc77210c99ba8d6bdefeb7ef531"
   },
   "status_counts": {

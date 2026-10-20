@@ -1,8 +1,6 @@
 # Playlist Audit
-Generated: **2026-10-20T09:48:47.620004+00:00**
-Audited playlist revision: `8cc2ff6381b4b8dfffb450fff758ef92164132df`
-Playlist SHA-256: `8ab16c68853a7015159b38b26792c3c677331f583c4d7cb58b809e175bfc153e`
-Source playlist SHA-256: **8ab16c68853a7015159b38b26792c3c677331f583c4d7cb58b809e175bfc153e**
+Generated: **2026-10-20T13:13:28.254175+00:00**
+Source playlist SHA-256: **ee851e7cc4586db6af2ed6053089b2b6847adfba5ccf91fd7f69e56f36d0b819**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -17,14 +15,14 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions requiring repair: **0**
+- Logo exceptions requiring repair: **1057**
 - External logo references (review only): **0**
 - Logo references checked: **1088**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
-- Primary entries missing tvg-country: **264**
-- Primary entries missing tvg-language: **264**
+- Primary entries missing tvg-country: **0**
+- Primary entries missing tvg-language: **0**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Category registry issues: **0**
@@ -37,19 +35,11 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ## Primary Metadata Completeness
 
 Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.
-- Active primary entries missing tvg-country: **264**
-- Active primary entries missing tvg-language: **264**
+- Active primary entries missing tvg-country: **0**
+- Active primary entries missing tvg-language: **0**
 
 | Group | Missing tvg-country | Missing tvg-language |
 |---|---:|---:|
-| Documentary & Wildlife | 75 | 75 |
-| Indian Entertainment | 24 | 24 |
-| Indian Movies | 12 | 12 |
-| Indian Music | 9 | 9 |
-| International | 66 | 66 |
-| Kids | 42 | 42 |
-| Religious | 15 | 15 |
-| Sports | 21 | 21 |
 
 ## Category Registry
 
@@ -984,14 +974,14 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1088**
+- Healthy/local references: **31**
 - External references (review only): **0**
 - missing: **0**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**
 - corrupt-image: **0**
-- unvalidated-image: **0**
+- unvalidated-image: **1057**
 - other: **0**
 
 ## External Logo Review
