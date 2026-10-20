@@ -33,79 +33,107 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Refresh metadata report without modifying playlist
-        shell: python
-        run: |
-          from pathlib import Path
-          import hashlib
-          import re
-          from datetime import datetime, timezone
-
-          p = Path('IPTV-Playlist.m3u')
-          text = p.read_text(encoding='utf-8')
-          digest = hashlib.sha256(p.read_bytes()).hexdigest()
-          active = {'Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports'}
-          attr = re.compile(r'([\w-]+)="([^"]*)"')
-          gaps = []
-          current = None
-          for line in text.splitlines():
-              if line.startswith('#EXTINF:'):
-                  current = line
-              elif current is not None and line.strip().startswith(('http://','https://')):
-                  a = dict(attr.findall(current))
-                  current = None
-                  if a.get('group-title','').strip() in active:
-                      missing = []
-                      if not a.get('tvg-country','').strip(): missing.append('tvg-country')
-                      if not a.get('tvg-language','').strip(): missing.append('tvg-language')
-                      if missing:
-                          gaps.append((a.get('group-title',''), a.get('tvg-name',''), a.get('tvg-id',''), ', '.join(missing)))
-
-          lines = [
-              '# IPTV Playlist Metadata Backfill', '',
-              f'Generated: **{datetime.now(timezone.utc).isoformat(timespec="seconds")}**', '',
-              'Status: **PASS**' if not gaps else 'Status: **REVIEW**',
-              'Source: **current IPTV-Playlist.m3u**',
-              f'After playlist SHA-256: **{digest}**',
-              f'- Active entries with remaining metadata gaps: **{len(gaps)}**',
-              '- This synchronization report is read-only; it does not modify IPTV-Playlist.m3u.', '',
-              '## Remaining active metadata gaps', '',
-              '| Group | Channel | tvg-id | Missing fields |',
-              '|---|---|---|---|'
-          ]
-          if gaps:
-              lines.extend(f'| {g} | {n} | {i} | {m} |' for g,n,i,m in gaps)
-          else:
-              lines.append('| — | — | — | none |')
-          Path('reports').mkdir(exist_ok=True)
-          Path('reports/iptv-metadata-backfill.md').write_text('\n'.join(lines)+'\n', encoding='utf-8')
-
-      - name: Regenerate playlist and EPG reports
-        run: |
-          python scripts/audit_playlist.py || true
-          python scripts/pre_publish_gate.py || true
-          python scripts/epg_coverage.py
-          python scripts/generate_logo_authenticity_manifest.py
-          python scripts/generate_dashboard.py
-
-      - name: Validate report synchronization
-        run: python scripts/validate_report_freshness.py
-
-      - name: Commit synchronized reports
+      - name: Configure Git
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/ assets/dashboard.svg
-          if git diff --cached --quiet; then
-            echo 'Reports are already synchronized with the current playlist.'
-            exit 0
-          fi
-          git commit -m 'Synchronize IPTV generated reports'
-          for attempt in 1 2 3; do
-            git fetch origin main
-            git rebase origin/main && git push origin HEAD:main && exit 0
-            git rebase --abort || true
-            sleep 3
+
+      - name: Generate and publish synchronized reports
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3 4 5; do
+            echo "=== Synchronization attempt ${attempt}/5 ==="
+
+            # Never rebase a generated report commit. Start from the latest main,
+            # generate against that exact playlist, then push that exact result.
+            git fetch --prune origin main
+            git reset --hard origin/main
+            git clean -fd
+
+            python - <<'PY'
+            from pathlib import Path
+            import hashlib
+            import re
+            from datetime import datetime, timezone
+
+            p = Path('IPTV-Playlist.m3u')
+            text = p.read_text(encoding='utf-8')
+            digest = hashlib.sha256(p.read_bytes()).hexdigest()
+            active = {'Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports'}
+            attr = re.compile(r'([\w-]+)="([^"]*)"')
+            gaps = []
+            current = None
+            for line in text.splitlines():
+                if line.startswith('#EXTINF:'):
+                    current = line
+                elif current is not None and line.strip().startswith(('http://','https://')):
+                    a = dict(attr.findall(current))
+                    current = None
+                    if a.get('group-title','').strip() in active:
+                        missing = []
+                        if not a.get('tvg-country','').strip(): missing.append('tvg-country')
+                        if not a.get('tvg-language','').strip(): missing.append('tvg-language')
+                        if missing:
+                            gaps.append((a.get('group-title',''), a.get('tvg-name',''), a.get('tvg-id',''), ', '.join(missing)))
+
+            lines = [
+                '# IPTV Playlist Metadata Backfill', '',
+                f'Generated: **{datetime.now(timezone.utc).isoformat(timespec="seconds")}**', '',
+                'Status: **PASS**' if not gaps else 'Status: **REVIEW**',
+                'Source: **current IPTV-Playlist.m3u**',
+                f'After playlist SHA-256: **{digest}**',
+                f'- Active entries with remaining metadata gaps: **{len(gaps)}**',
+                '- This synchronization report is read-only; it does not modify IPTV-Playlist.m3u.', '',
+                '## Remaining active metadata gaps', '',
+                '| Group | Channel | tvg-id | Missing fields |',
+                '|---|---|---|---|'
+            ]
+            if gaps:
+                lines.extend(f'| {g} | {n} | {i} | {m} |' for g,n,i,m in gaps)
+            else:
+                lines.append('| — | — | — | none |')
+            Path('reports').mkdir(exist_ok=True)
+            Path('reports/iptv-metadata-backfill.md').write_text('\n'.join(lines)+'\n', encoding='utf-8')
+            PY
+
+            python scripts/audit_playlist.py
+            python scripts/pre_publish_gate.py
+            python scripts/epg_coverage.py
+            python scripts/generate_logo_authenticity_manifest.py
+            python scripts/generate_dashboard.py
+            python scripts/validate_report_freshness.py
+
+            git add reports/ assets/dashboard.svg
+            if git diff --cached --quiet; then
+              echo 'Reports are already synchronized with the current playlist.'
+              exit 0
+            fi
+
+            git commit -m 'Synchronize IPTV generated reports'
+
+            # Push only if main is still exactly the commit we generated from.
+            # If another workflow changed main, discard this generated commit and
+            # regenerate everything from the new main instead of creating conflicts.
+            base_sha="$(git rev-parse HEAD^1)"
+            remote_sha="$(git ls-remote origin refs/heads/main | awk '{print $1}')"
+            if [[ "$base_sha" != "$remote_sha" ]]; then
+              echo "main changed during generation ($base_sha -> $remote_sha); regenerating from latest main"
+              git reset --hard "$remote_sha"
+              sleep 2
+              continue
+            fi
+
+            if git push origin HEAD:main; then
+              echo 'Synchronized reports published successfully.'
+              exit 0
+            fi
+
+            echo 'Push raced with another main update; regenerating from latest main.'
+            git fetch --prune origin main
+            git reset --hard origin/main
+            sleep 2
           done
-          echo '::error::Unable to publish synchronized reports after 3 attempts.'
+
+          echo '::error::Unable to publish synchronized reports after 5 clean regeneration attempts.'
           exit 1
