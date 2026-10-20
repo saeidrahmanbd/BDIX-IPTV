@@ -7,7 +7,6 @@ on:
     paths:
       - IPTV-Playlist.m3u
       - .github/workflows/sync-iptv-reports.yml
-      - scripts/iptv_metadata_backfill.py
       - scripts/epg_coverage.py
       - scripts/audit_playlist.py
       - scripts/pre_publish_gate.py
@@ -34,8 +33,52 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Regenerate metadata report
-        run: python scripts/iptv_metadata_backfill.py
+      - name: Refresh metadata report without modifying playlist
+        shell: python
+        run: |
+          from pathlib import Path
+          import hashlib
+          import re
+          from datetime import datetime, timezone
+
+          p = Path('IPTV-Playlist.m3u')
+          text = p.read_text(encoding='utf-8')
+          digest = hashlib.sha256(p.read_bytes()).hexdigest()
+          active = {'Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports'}
+          attr = re.compile(r'([\w-]+)="([^"]*)"')
+          gaps = []
+          current = None
+          for line in text.splitlines():
+              if line.startswith('#EXTINF:'):
+                  current = line
+              elif current is not None and line.strip().startswith(('http://','https://')):
+                  a = dict(attr.findall(current))
+                  current = None
+                  if a.get('group-title','').strip() in active:
+                      missing = []
+                      if not a.get('tvg-country','').strip(): missing.append('tvg-country')
+                      if not a.get('tvg-language','').strip(): missing.append('tvg-language')
+                      if missing:
+                          gaps.append((a.get('group-title',''), a.get('tvg-name',''), a.get('tvg-id',''), ', '.join(missing)))
+
+          lines = [
+              '# IPTV Playlist Metadata Backfill', '',
+              f'Generated: **{datetime.now(timezone.utc).isoformat(timespec="seconds")}**', '',
+              'Status: **PASS**' if not gaps else 'Status: **REVIEW**',
+              'Source: **current IPTV-Playlist.m3u**',
+              f'After playlist SHA-256: **{digest}**',
+              f'- Active entries with remaining metadata gaps: **{len(gaps)}**',
+              '- This synchronization report is read-only; it does not modify IPTV-Playlist.m3u.', '',
+              '## Remaining active metadata gaps', '',
+              '| Group | Channel | tvg-id | Missing fields |',
+              '|---|---|---|---|'
+          ]
+          if gaps:
+              lines.extend(f'| {g} | {n} | {i} | {m} |' for g,n,i,m in gaps)
+          else:
+              lines.append('| — | — | — | none |')
+          Path('reports').mkdir(exist_ok=True)
+          Path('reports/iptv-metadata-backfill.md').write_text('\n'.join(lines)+'\n', encoding='utf-8')
 
       - name: Regenerate playlist and EPG reports
         run: |
