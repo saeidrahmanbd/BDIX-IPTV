@@ -5,6 +5,7 @@ import subprocess
 import generate_epg
 
 LOCAL_GUIDE = Path("/tmp/iptv-org-guide.xml")
+FREEEPG_BD = "https://free-epg.de/api/epg/bd.xml.gz"
 
 
 def main():
@@ -22,7 +23,15 @@ def main():
         return original_fetch(url)
 
     try:
-        generate_epg.SOURCES[:] = ["file:///tmp/iptv-org-guide.xml"] + original_sources
+        # FreeEPG currently publishes a Bangladesh feed containing a useful
+        # domestic channel set (e.g. Ananda TV, ATN Bangla, Bangla Vision,
+        # Boishakhi TV, DBC News, Ekhon TV, Ekushey TV, Gazi TV, Green TV,
+        # Maasranga TV, Matribhumi TV, NTV and RTV). Keep it ahead of the
+        # generic international sources so exact BD tvg-id matches are preferred.
+        generate_epg.SOURCES[:] = [
+            "file:///tmp/iptv-org-guide.xml",
+            FREEEPG_BD,
+        ] + original_sources
         generate_epg.fetch = fetch_with_local
         generate_epg.main()
     finally:
