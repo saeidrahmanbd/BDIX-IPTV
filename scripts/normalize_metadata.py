@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Normalize IPTV metadata safely; preserve every stream and review queue."""
 from pathlib import Path
+import hashlib
+from datetime import datetime, timezone
 import re
 import json
 import unicodedata
@@ -353,5 +355,6 @@ def record_url(rec):
 records.sort(key=lambda rec:(CATEGORY_RANK.get(group_of(rec),len(CATEGORY_RANK)),natural_sort_key(record_display(rec)),record_url(rec)))
 lines=preamble+[line for rec in records for line in rec]
 P.write_text("\n".join(lines)+"\n",encoding="utf-8")
-R.write_text("# Playlist Metadata Normalization\n\n"+f"- Entries processed: **{len(rows)}**\n- Primary channel numbers added: **{stats['numbers']}**\n- Logo references repaired: **{stats['logos']}**\n- Backup/review entries normalized: **{stats['backups']}**\n",encoding="utf-8")
+digest=hashlib.sha256(P.read_bytes()).hexdigest()
+R.write_text("# Playlist Metadata Normalization\n\n"+f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**\nSource playlist SHA-256: **{digest}**\n\n"+f"- Entries processed: **{len(rows)}**\n- Primary channel numbers added: **{stats['numbers']}**\n- Logo references repaired: **{stats['logos']}**\n- Backup/review entries normalized: **{stats['backups']}**\n",encoding="utf-8")
 print(f"Normalization: entries={len(rows)} numbers={stats['numbers']} logos={stats['logos']} backup_entries={stats['backups']}")

@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Report fragile playlist URL patterns without leaking credentials or mutating routes."""
+import hashlib
 import re
+from datetime import datetime, timezone
 from collections import Counter, defaultdict
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -63,6 +65,8 @@ def main():
 
     lines = [
         "# Stream Risk Review", "",
+        f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",
+        f"IPTV-Playlist.m3u SHA-256: **{hashlib.sha256(PLAYLIST.read_bytes()).hexdigest()}**", "",
         "Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.", "",
         "## Summary", "",
         f"- /streamtest/ endpoints: **{len(streamtest)}**",
