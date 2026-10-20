@@ -90,12 +90,11 @@ jobs:
             rm -rf fixed_output
             echo 'Non-destructive maintenance mode: fix_playlist.py skipped.'
 
-            python scripts/repair_iptv_audit_findings.py
+            # Destructive legacy repair scripts are deliberately excluded from scheduled maintenance.
             python scripts/repair_playlist_quality.py
             python scripts/normalize_metadata.py
             python scripts/repair_playlist_logos.py
             python scripts/sort_playlists.py IPTV-Playlist.m3u
-            python scripts/apply_gemini_playlist_repairs.py
             python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
             if grep -Eiq 'group-title="(New Channels|New Backup|New)"' IPTV-Playlist.m3u; then echo '::error::Forbidden staging playlist category detected after normalization.'; exit 1; fi
 
@@ -148,7 +147,6 @@ jobs:
             # deterministic metadata/logo repair, then restore the protected queues.
             if [ "$GATE_STATUS" -ne 0 ]; then
               echo '::warning::Pre-publish gate found issues; running automatic correction pass before failing.'
-              python scripts/repair_iptv_audit_findings.py || true
               python scripts/repair_playlist_quality.py || true
               python scripts/normalize_metadata.py || true
               python scripts/repair_playlist_logos.py || true
