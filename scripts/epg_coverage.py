@@ -225,7 +225,7 @@ def _script_allowed(char):
 
 
 def is_english_text_element(elem):
-    """Match the generator's English-title policy when measuring EPG coverage."""
+    """Match the generator's allowed-language-title policy when measuring EPG coverage."""
     text = (elem.text or "").strip()
     if not text:
         return True
@@ -490,14 +490,14 @@ def main():
         "",
         f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",
         "",
-        "This report audits active unique channel identities across the playlist files in the repository. A source mapping is not counted as usable current/future coverage unless it has a valid programme interval and acceptable English-title data within the generator's -6-hour/+7-day window.",
+        "This report audits active unique channel identities across the playlist files in the repository. A source mapping is not counted as usable current/future coverage unless it has a valid programme interval and acceptable allowed-language-title data within the generator's -6-hour/+7-day window.",
         f"The XMLTV guide is published at **{EPG_PUBLISHED_PATH.as_posix()}**. The published guide uses the playlist's tvg-id as the XMLTV channel ID, not the upstream provider's source ID.",
         "",
         "## Overall Coverage",
         "",
         f"- Active unique playlist channel IDs audited: **{total_active}**",
         f"- IDs with an EPG source mapping: **{total_mapped}/{total_active} ({round(100*total_mapped/total_active,1) if total_active else 0}%)**",
-        f"- IDs with usable current/future source schedules (nonblank English titles): **{total_live}/{total_active} ({round(100*total_live/total_active,1) if total_active else 0}%)**",
+        f"- IDs with usable current/future source schedules (nonblank allowed-language titles): **{total_live}/{total_active} ({round(100*total_live/total_active,1) if total_active else 0}%)**",
         f"- IDs with no EPG source mapping: **{total_unmapped}**",
         "",
         "## Coverage by Playlist Group",
@@ -512,7 +512,7 @@ def main():
     lines += ["", "## Source Status", ""]
     for src, status, ids, future, programmes, error in source_status:
         lines.append(
-            f"- **{status}** — {src} — {ids} channel IDs; {future} IDs with usable current/future programmes; {programmes} eligible English-title programme rows in the guide window"
+            f"- **{status}** — {src} — {ids} channel IDs; {future} IDs with usable current/future programmes; {programmes} eligible allowed-language-title programme rows in the guide window"
             + (f"; {error}" if error else "")
         )
 
@@ -665,7 +665,7 @@ def main():
         "## Interpretation",
         "",
         "- Mapped IDs means a playlist identity was connected to a source XMLTV ID.",
-        "- Current/future source schedules means source data contains eligible English-title programmes inside the generator's -6-hour/+7-day window.",
+        "- Current/future source schedules means source data contains eligible allowed-language-title programmes inside the generator's -6-hour/+7-day window.",
         "- IDs in published guide and IDs with published schedules are verified against XMLTV using the playlist's tvg-id identities; these counts are not source-provider IDs.",
         "- Domestic Bangladesh channels are not fuzzy-matched to similarly named Indian or foreign services. They remain unmapped until a trustworthy listing source or an exact explicit mapping can be verified.",
         "",
