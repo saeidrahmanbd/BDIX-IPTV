@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Build and continuously improve EPG mappings from public XMLTV sources."""
-import csv, gzip, io, json, os, re, unicodedata, urllib.request
+import csv, gzip, hashlib, io, json, os, re, unicodedata, urllib.request
 from urllib.parse import urlparse
 import xml.etree.ElementTree as ET
 from official_epg_sources import (
@@ -624,6 +624,11 @@ def main():
     lines += ["", "## Playlist EPG Headers", "", "| Playlist | Header status |", "|---|---|"]
     for path, status in header_results:
         lines.append(f"| {path.as_posix()} | {status} |")
+    source_fingerprints = [
+        f"- {path.name} SHA-256: **{hashlib.sha256(path.read_bytes()).hexdigest()}**"
+        for path in PLAYLISTS if path.exists()
+    ]
+    lines += ["", "## Source Playlist Fingerprints", "", *source_fingerprints, ""]
     REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
     mapping_by_id = {r["tvg_id"]: r for r in rows if r["tvg_id"]}
@@ -668,6 +673,7 @@ def main():
     if guide_error:
         report_lines += ["## Published XMLTV validation", "", "ERROR: " + guide_error, ""]
     THREE_PLAYLIST_REPORT.parent.mkdir(parents=True, exist_ok=True)
+    report_lines += ["", "## Source Playlist Fingerprints", "", *source_fingerprints, ""]
     THREE_PLAYLIST_REPORT.write_text("\n".join(report_lines), encoding="utf-8")
 
 if __name__=="__main__": main()
