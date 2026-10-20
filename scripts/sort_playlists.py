@@ -12,6 +12,11 @@ def natural_key(value):
  return tuple(int(p) if p.isdigit() else p for p in re.split(r"(\d+)",value))
 def record_key(record):
  info=record[0]; a=dict(ATTR.findall(info)); name=(a.get("tvg-name") or info.rsplit(",",1)[-1]).strip(); group=a.get("group-title","").strip(); url=next((x.strip() for x in record[1:] if x.strip().startswith(("http://","https://"))),"")
+ # Bangladesh is intentionally channel-number ordered, not alphabetical.
+ if group == "Bangladesh":
+  raw=a.get("tvg-chno","").strip()
+  number=int(raw) if raw.isdigit() else 10**12
+  return (RANK.get(group,len(RANK)),number,natural_key(name),url.casefold())
  return (RANK.get(group,len(RANK)),natural_key(name),url.casefold())
 def sort_playlist(path):
  if not path.is_file(): raise SystemExit(f"Playlist not found: {path}")
