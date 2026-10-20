@@ -1,11 +1,42 @@
 #!/usr/bin/env python3
-"""Run the normal EPG generator with the build-time iptv-org guide prepended."""
+"""Run the EPG generator with build-time guides and a shared, non-destructive text policy.
+
+The core generator is intentionally reused. This runner patches two historical
+bottlenecks before invoking it:
+1. XMLTV titles are not restricted to English/Bengali scripts; valid Hindi,
+   Tamil, Telugu, Arabic, etc. schedules are legitimate for their channels.
+2. Every mapped source ID is retained, including multiple provider IDs for the
+   same playlist identity. The old Indian-Bangla special case discarded all but
+   the first source ID.
+"""
 from pathlib import Path
 import subprocess
 import generate_epg
 
 LOCAL_GUIDE = Path("/tmp/iptv-org-guide.xml")
 FREEEPG_BD = "https://free-epg.de/api/epg/bd.xml.gz"
+
+
+def allow_valid_xmltv_text(elem):
+    """Allow any non-empty XMLTV visible text; language is channel/source specific."""
+    return bool((elem.text or "").strip())
+
+
+def load_mapping_all_sources():
+    """Load every approved source ID mapped to each playlist tvg-id."""
+    reverse = {}
+    if not generate_epg.MAPPING.exists():
+        return reverse
+    import csv
+    with generate_epg.MAPPING.open(encoding="utf-8-sig", newline="") as fh:
+        for row in csv.DictReader(fh):
+            target = row.get("tvg_id", "").strip()
+            if not target:
+                continue
+            for source_id in (x.strip() for x in row.get("epg_id", "").split("|")):
+                if source_id:
+                    reverse.setdefault(source_id, set()).add(target)
+    return {source_id: sorted(targets) for source_id, targets in reverse.items()}
 
 
 def main():
@@ -16,6 +47,8 @@ def main():
 
     original_sources = list(generate_epg.SOURCES)
     original_fetch = generate_epg.fetch
+    original_policy = generate_epg.is_english_text_element
+    original_loader = generate_epg.load_mapping
 
     def fetch_with_local(url):
         if url.startswith("file://"):
@@ -23,19 +56,18 @@ def main():
         return original_fetch(url)
 
     try:
-        # FreeEPG currently publishes a Bangladesh feed containing a useful
-        # domestic channel set (e.g. Ananda TV, ATN Bangla, Bangla Vision,
-        # Boishakhi TV, DBC News, Ekhon TV, Ekushey TV, Gazi TV, Green TV,
-        # Maasranga TV, Matribhumi TV, NTV and RTV). Keep it ahead of the
-        # generic international sources so exact BD tvg-id matches are preferred.
         generate_epg.SOURCES[:] = [
             "file:///tmp/iptv-org-guide.xml",
             FREEEPG_BD,
         ] + original_sources
         generate_epg.fetch = fetch_with_local
+        generate_epg.is_english_text_element = allow_valid_xmltv_text
+        generate_epg.load_mapping = load_mapping_all_sources
         generate_epg.main()
     finally:
         generate_epg.fetch = original_fetch
+        generate_epg.is_english_text_element = original_policy
+        generate_epg.load_mapping = original_loader
         generate_epg.SOURCES[:] = original_sources
 
 
