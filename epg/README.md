@@ -11,7 +11,7 @@ The generator writes `epg/epg.xml`. Both playlist headers should reference this 
 
 `https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml`
 
-Coverage reports are written to `reports/epg-coverage.md` and `reports/epg-three-playlist-audit.md` (the latter filename is retained for compatibility, but its contents cover the two published playlists). Identity-to-source mappings live in `reports/epg-india-channel-mapping.csv`.
+Coverage reports are written to `reports/epg-coverage.md` and `reports/epg-three-playlist-audit.md` (the latter filename is retained for compatibility, but its contents cover the two published playlists). The overall totals in `epg-coverage.md` aggregate active unique IDs across both published playlists; use the per-playlist row in `epg-three-playlist-audit.md` for `IPTV-Playlist.m3u`-only coverage. The XMLTV guide itself is shared. Identity-to-source mappings live in `reports/epg-india-channel-mapping.csv`.
 
 ## Sources
 
