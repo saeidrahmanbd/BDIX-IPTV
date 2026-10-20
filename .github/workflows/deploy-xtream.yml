@@ -123,8 +123,19 @@ jobs:
           except urllib.error.HTTPError as error:
               playback_status = error.code
               location = error.headers.get("Location", "")
-          target_host = urllib.parse.urlsplit(location).hostname if location else None
-          print(f"BDIX playback route: HTTP {playback_status}; redirected_to_upstream={bool(location)}; upstream_host={target_host or 'none'}")
-          if playback_status != 302 or location != expected_source:
+          actual_parts = urllib.parse.urlsplit(location)
+          expected_parts = urllib.parse.urlsplit(expected_source)
+          def effective_port(parts):
+              return parts.port or (80 if parts.scheme.lower() == "http" else 443 if parts.scheme.lower() == "https" else None)
+          redirect_matches = (
+              actual_parts.scheme.lower() == expected_parts.scheme.lower()
+              and (actual_parts.hostname or "").lower() == (expected_parts.hostname or "").lower()
+              and effective_port(actual_parts) == effective_port(expected_parts)
+              and actual_parts.path == expected_parts.path
+              and actual_parts.query == expected_parts.query
+          )
+          target_host = actual_parts.hostname
+          print(f"BDIX playback route: HTTP {playback_status}; destination_matches_source={redirect_matches}; upstream_host={target_host or 'none'}")
+          if playback_status != 302 or not redirect_matches:
               raise SystemExit("BDIX playback endpoint did not redirect to the original direct source")
           PY
