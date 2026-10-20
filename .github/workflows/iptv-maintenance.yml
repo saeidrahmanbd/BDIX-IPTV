@@ -71,26 +71,26 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --disable-pip-version-check pillow cairosvg
       - name: Validate maintenance safety helpers
-        run: >-
-          python -m py_compile
-          scripts/maintenance_helpers.py
-          scripts/restore_protected_review.py
-          scripts/audit_playlist.py
-          scripts/pre_publish_gate.py
-          scripts/sort_playlists.py
-          scripts/final_playlist_hardening.py
-          scripts/repair_playlist_quality.py
-          scripts/repair_playlist_logos.py
-          scripts/generate_logo_authenticity_manifest.py
-          scripts/logo_asset_naming.py
-          scripts/generate_logo_provenance_review.py
-          scripts/generate_metadata_normalization_report.py
-          scripts/report_iptv_fragile_streams.py
-          scripts/stream_risk_review.py
-          scripts/validate_report_freshness.py
-          scripts/iptv_metadata_backfill.py
-          scripts/epg_coverage.py
-          scripts/generate_epg.py
+        run: |
+          python -m py_compile \
+            scripts/maintenance_helpers.py \
+            scripts/restore_protected_review.py \
+            scripts/audit_playlist.py \
+            scripts/pre_publish_gate.py \
+            scripts/sort_playlists.py \
+            scripts/final_playlist_hardening.py \
+            scripts/repair_playlist_quality.py \
+            scripts/repair_playlist_logos.py \
+            scripts/generate_logo_authenticity_manifest.py \
+            scripts/logo_asset_naming.py \
+            scripts/generate_logo_provenance_review.py \
+            scripts/generate_metadata_normalization_report.py \
+            scripts/report_iptv_fragile_streams.py \
+            scripts/stream_risk_review.py \
+            scripts/validate_report_freshness.py \
+            scripts/iptv_metadata_backfill.py \
+            scripts/epg_coverage.py \
+            scripts/generate_epg.py
       - name: Run playlist metadata and report freshness tests
         run: |
           python -m unittest discover -s tests -p 'test_report_freshness.py'
