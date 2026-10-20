@@ -1,14 +1,14 @@
 # Playlist Audit
-Generated: **2026-10-20T09:46:43.921897+00:00**
-Audited playlist revision: `c8dd5e44c9f652f4f526df8320fa8231691a00ce`
-Playlist SHA-256: `2d8e5b89536b298a7b263c2010681396a79484659787d54f870b460ac3f1f2b8`
-Source playlist SHA-256: **2d8e5b89536b298a7b263c2010681396a79484659787d54f870b460ac3f1f2b8**
+Generated: **2026-10-20T09:48:47.620004+00:00**
+Audited playlist revision: `8cc2ff6381b4b8dfffb450fff758ef92164132df`
+Playlist SHA-256: `8ab16c68853a7015159b38b26792c3c677331f583c4d7cb58b809e175bfc153e`
+Source playlist SHA-256: **8ab16c68853a7015159b38b26792c3c677331f583c4d7cb58b809e175bfc153e**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1089**
+- Playlist entries: **1088**
 - Unique channel IDs: **661**
 - IDs with multiple streams: **229**
 - Duplicate stream URLs: **0**
@@ -19,7 +19,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **0**
 - External logo references (review only): **0**
-- Logo references checked: **1089**
+- Logo references checked: **1088**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
@@ -460,11 +460,10 @@ Canonical registry matches the permanent IPTV category order.
 - Ekhon TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/globaltv.stream/index.m3u8
 - Ekhon TV — Backup — https://stream.ottplus.live/live/ekhon_tv_abr/index.m3u8
 - Ekhon TV — Backup — https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8
-### ekusheytv.bd (8 streams)
+### ekusheytv.bd (7 streams)
 - Ekushey TV — Bangladesh — https://tvsen5.aynaott.com/SyQuXz8sC3TB/index.m3u8
 - Ekushey TV — Backup — http://210.4.72.204/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
 - Ekushey TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ekusheytv-8-org.stream/index.m3u8
-- Ekushey TV — Backup — http://ekusheyserver.com/etvlivesn.m3u8
 - Ekushey TV — Backup — https://ekusheyserver.com/etvlivesn.m3u8
 - Ekushey TV — Backup — https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream2.m3u8
 - Ekushey TV — Backup — https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
@@ -985,7 +984,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1089**
+- Healthy/local references: **1088**
 - External references (review only): **0**
 - missing: **0**
 - broken-local: **0**
