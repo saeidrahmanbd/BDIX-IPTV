@@ -100,8 +100,11 @@ jobs:
             python scripts/run_generate_epg.py
             test -s epg/epg.xml
             grep -q '<programme ' epg/epg.xml
+            set +e
             python scripts/epg_publish_gate.py
-            if [ $? -ne 0 ]; then
+            EPG_GATE_STATUS=$?
+            set -e
+            if [ "$EPG_GATE_STATUS" -ne 0 ]; then
               echo '::warning::EPG publish gate blocked the new guide; restoring the previous known-good guide.'
               if [ -s /tmp/previous-epg.xml ] && grep -q '<programme ' /tmp/previous-epg.xml; then
                 cp /tmp/previous-epg.xml epg/epg.xml
