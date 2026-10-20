@@ -751,8 +751,6 @@ http://cdn11.live247stream.com/tag/tv/playlist.m3u8
 https://vodzong.mjunoon.tv:8087/streamtest/WASEB-130/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.1mus" tvg-name="1Mus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1mus.png" tvg-chno="475" channel-id="custom.1mus" group-title="International",1Mus
 http://hz1.teleport.cc/HLS/HD.m3u8
-#EXTINF:-1 tvg-id="24HourFreeMovies.us" tvg-name="24 Hour Free Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/24-hour-free-movies-720p-2a4fdea7cd.png" tvg-chno="708" channel-id="24HourFreeMovies.us" tvg-language="eng" tvg-country="US" group-title="International",24 Hour Free Movies
-https://d1j2u714xk898n.cloudfront.net/scheduler/scheduleMaster/145.m3u8
 #EXTINF:-1 tvg-id="plex.tv.Action.Hollywood.Movies.plex" tvg-name="Action Hollywood Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/action-hollywood-movies.png" tvg-chno="711" channel-id="plex.tv.Action.Hollywood.Movies.plex" group-title="International",Action Hollywood Movies
 https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.afrobeats" tvg-name="Afrobeats" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/afrobeats.png" tvg-chno="713" channel-id="custom.afrobeats" group-title="International",Afrobeats
@@ -773,14 +771,10 @@ https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/ch
 https://familyhls.avatv.live/hls/stream.m3u8
 #EXTINF:-1 tvg-chno="47" tvg-id="custom.ava.series" tvg-name="AVA SERIES" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ava-series.png" channel-id="custom.ava.series" group-title="International",AVA SERIES
 https://avaserieshls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="AXNBlack.us@Poland" tvg-name="AXN Black Poland" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/axn-black-poland.png" tvg-chno="715" channel-id="AXNBlack.us@Poland" group-title="International",AXN Black Poland
-http://185.227.34.179:8080/axn-black/index.m3u8
 #EXTINF:-1 tvg-id="custom.axs" tvg-name="AXS" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/axs.png" tvg-chno="704" channel-id="custom.axs" group-title="International",AXS
 https://tvsen3.aynaott.com/P2fJzfsg/index.m3u8
 #EXTINF:-1 tvg-id="BangBangTV" tvg-name="Bang Bang TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bang-bang-tv.png" tvg-chno="719" channel-id="BangBangTV" group-title="International",Bang Bang TV
 https://streams.sofast.tv/ptnr-yupptv/title-BANG-BANG-TV-ENG_yupptv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/6a98fce2-bf4c-4bfb-91f4-c43851bb3801/manifest.m3u8
-#EXTINF:-1 tvg-id="BarazaMusicTV.gr" tvg-name="Baraza Music TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/baraza-music-tv.png" tvg-chno="721" channel-id="BarazaMusicTV.gr" group-title="International",Baraza Music TV
-https://eco.streams.ovh:8081/barazatv/index.m3u8
 #EXTINF:-1 tvg-id="BBCDrama.uk" tvg-name="BBC Drama" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-drama-1080p-b8c15d1482.png" tvg-chno="726" channel-id="BBCDrama.uk" tvg-language="fra;spa;eng" tvg-country="GB" group-title="International",BBC Drama
 https://amg00793-amg00793c40-rakuten-es-5444.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="BBCNews.uk" tvg-name="BBC News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bbc-news.png" tvg-chno="1114" channel-id="BBCNews.uk" group-title="International" tvg-country="GB" tvg-language="eng",BBC News
@@ -795,10 +789,6 @@ https://gsn-cinevault-westerns-2-us.roku.wurl.tv/playlist.m3u8
 https://circle-roku.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-chno="58" tvg-id="custom.classic.movies" tvg-name="Classic Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/classic-movies-27994c39.png" channel-id="custom.classic.movies" group-title="International",Classic Movies
 https://30a-tv.com/feeds/pzaz/30atvmovies.m3u8
-#EXTINF:-1 tvg-id="custom.cmctv" tvg-name="CMC TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cmc-tv.png" tvg-chno="735" channel-id="custom.cmctv" group-title="International",CMC TV
-https://stream.cmctv.hr:49998/cmc/live.m3u8
-#EXTINF:-1 tvg-id="CMCUSACountryMusicChannel.us@SD" tvg-name="CMC-USA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cmc-usa-country-music-channel-720p-8a071853aa.png" tvg-chno="729" channel-id="CMCUSACountryMusicChannel.us@SD" group-title="International",CMC-USA
-https://hwlive.streamingmediahosting.com/14215-live/0_obd393sh/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.cnbc.tv" tvg-name="CNBC TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-cnbc.svg" tvg-chno="1152" channel-id="custom.cnbc.tv" group-title="International" tvg-country="US" tvg-language="eng",CNBC TV
 https://tvsen6.aynaott.com/cnbc/index.m3u8
 #EXTINF:-1 tvg-id="custom.cnn" tvg-name="CNN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-cnn.svg" tvg-chno="1153" channel-id="custom.cnn" group-title="International" tvg-country="US" tvg-language="eng",CNN
@@ -807,32 +797,24 @@ https://tvsen6.aynaott.com/cnn/index.m3u8
 https://tvsen3.aynaott.com/5fUWDMxZ/index.m3u8
 #EXTINF:-1 tvg-id="custom.cookandbake" tvg-name="Cook & Bake" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cook-bake.png" tvg-chno="741" channel-id="custom.cookandbake" group-title="International",Cook & Bake
 https://cc-swbj49v56imaw.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-swbj49v56imaw/OTM/OTM_Cooking-SCTE_SAMSUNG/playlist.m3u8
-#EXTINF:-1 tvg-chno="61" tvg-id="custom.cowboy.movie.channel" tvg-name="Cowboy Movie Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cowboy-movie-channel.png" channel-id="custom.cowboy.movie.channel" group-title="International",Cowboy Movie Channel
-https://streams2.sofast.tv/sofastplayout/32eb332e-f644-46e5-ad91-e55ad80d14f7_0_HLS/master.m3u8
 #EXTINF:-1 tvg-id="custom.dancetv" tvg-name="Dance TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dance-tv.png" tvg-chno="743" channel-id="custom.dancetv" group-title="International",Dance TV
 https://m1b2.worldcast.tv/dancetelevisionone/2/dancetelevisionone.m3u8
 #EXTINF:-1 tvg-id="custom.digitalfashion" tvg-name="Digital Fashion" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/digital-fashion.png" tvg-chno="744" channel-id="custom.digitalfashion" group-title="International",Digital Fashion
 http://115.187.41.216:8080/hls/digitalfashion/index.m3u8
 #EXTINF:-1 tvg-id="DWNews.de" tvg-name="DW News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dw-news.png" tvg-chno="1121" channel-id="DWNews.de" group-title="International" tvg-country="DE" tvg-language="eng",DW News
 https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream02/streamPlaylist.m3u8
-#EXTINF:-1 tvg-id="custom.epix.tv" tvg-name="EPIX TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epix-tv.png" tvg-chno="86" channel-id="custom.epix.tv" group-title="International",EPIX TV
-https://tvsen3.aynaott.com/Ah3tLAfA/index.m3u8
 #EXTINF:-1 tvg-id="custom.fashiontv" tvg-name="Fashion TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-fashion-tv.png" tvg-chno="746" channel-id="custom.fashiontv" group-title="International",Fashion TV
 https://ftv1.b-cdn.net/bfdbb576-83f7-11f0-9f89-0200170e3e04_1000028043_HLS/manifest.m3u8
 #EXTINF:-1 tvg-id="custom.fon.music" tvg-name="FON Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fon-music.png" tvg-chno="1071" channel-id="custom.fon.music" group-title="International",FON Music
 https://tntm.mediacdn.ru/cdn/tntmusic/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.fox.news" tvg-name="Fox News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-fox-news.svg" tvg-chno="1158" channel-id="custom.fox.news" group-title="International" tvg-country="US" tvg-language="eng",Fox News
 https://tvsen6.aynaott.com/foxnews/index.m3u8
-#EXTINF:-1 tvg-id="custom.fx.tv" tvg-name="FX TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-fx-tv.png" tvg-chno="1159" channel-id="custom.fx.tv" group-title="International",FX TV
-https://tvsen3.aynaott.com/jTqkTE8W/index.m3u8
 #EXTINF:-1 tvg-id="GravitasMovies.us" tvg-name="Gravitas Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gravitas-movies-1080p-0311d486e7.png" tvg-chno="76" channel-id="GravitasMovies.us" tvg-language="eng" tvg-country="US" group-title="International",Gravitas Movies
 https://d6dg3ebeih71x.cloudfront.net/Gravitas_Movies.m3u8
 #EXTINF:-1 tvg-id="GREATmovies.uk" tvg-name="GREAT! movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/great-movies-1080p-9cc0399e3e.png" tvg-chno="723" channel-id="GREATmovies.uk" tvg-language="eng" tvg-country="GB" group-title="International",GREAT! movies
 https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/playlist/amg01753-narrativeentert-greatmovies-samsunguk/playlist.m3u8
 #EXTINF:-1 tvg-id="GREATromance.uk" tvg-name="GREAT! romance" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/great-romance-1080p-7315cca1df.png" tvg-chno="77" channel-id="GREATromance.uk" tvg-language="eng" tvg-country="GB" group-title="International",GREAT! romance
 https://amg01753-narrativeentert-greatchristmas-samsunguk-8atls.amagi.tv/playlist/amg01753-narrativeentert-greatchristmas-samsunguk/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.groove" tvg-name="Groove" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/groove.png" tvg-chno="126" channel-id="custom.groove" group-title="International",Groove
-http://web.onair-radio.eu:1935/groovytv/groovytv/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.hbo" tvg-name="HBO" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hbo.png" tvg-chno="95" channel-id="custom.hbo" group-title="International",HBO
 https://tvsen7.aynaott.com/hbo/index.m3u8
 #EXTINF:-1 tvg-id="custom.hbo.2" tvg-name="HBO 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hbo-2.png" tvg-chno="101" channel-id="custom.hbo.2" group-title="International",HBO 2
@@ -853,8 +835,6 @@ https://tvsen7.aynaott.com/lifetime/index.m3u8
 https://streams2.sofast.tv/ptnr-yupptv/title-LOL-TV-ENG_yupptv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/fc63d5fd-b50e-4d3e-abdf-697d9b6cbf70/manifest.m3u8
 #EXTINF:-1 tvg-chno="67" tvg-id="custom.m20.music" tvg-name="M20 Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/m20-music.png" channel-id="custom.m20.music" group-title="International",M20 Music
 https://streamcdne2-4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S62628868/uhdWBlkC1AoO/chunklist_b1064000.m3u8
-#EXTINF:-1 tvg-id="custom.mad" tvg-name="Mad" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mad.png" tvg-chno="753" channel-id="custom.mad" group-title="International",Mad
-http://web.onair-radio.eu:1935/Alpha-Host/Alpha-Host/playlist.m3u8
 #EXTINF:-1 tvg-id="MadeInHollywood.us@SD" tvg-name="Made in Hollywood" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/made-in-hollywood.png" tvg-chno="742" channel-id="MadeInHollywood.us@SD" group-title="International",Made in Hollywood
 https://connection3-ent-nz.samsung.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.mbc1" tvg-name="MBC 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-mbc-1-17d0806967.png" tvg-chno="756" channel-id="custom.mbc1" group-title="International",MBC 1
@@ -867,8 +847,6 @@ https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-drama-usa/ea2f5db904aff22
 https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-plus-drama/e37251ec2aac8f6c98f75cd0fa37cd28/index.m3u8
 #EXTINF:-1 tvg-id="MeiAhMovieChannel.hk" tvg-name="Mei Ah Movie Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mei-ah-movie-channel.png" tvg-chno="751" channel-id="MeiAhMovieChannel.hk" tvg-language="zho" tvg-country="HK" group-title="International",Mei Ah Movie Channel
 http://103.172.187.30:12000/stream/mytv/null-2/master.m3u8
-#EXTINF:-1 tvg-id="custom.mn.plus" tvg-name="MN+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mn.png" tvg-chno="1195" channel-id="custom.mn.plus" group-title="International",MN+
-http://103.135.253.32:8080/MN-PLUS/index.m3u8
 #EXTINF:-1 tvg-id="custom.moviedomefamily" tvg-name="Movie Dome Family" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movie-dome-family.png" tvg-chno="127" channel-id="custom.moviedomefamily" group-title="International",Movie Dome Family
 https://amg00771-kochfilmsgerman-moviedomefamily-tcl-tpicw.amagi.tv/playlist/amg00771-kochfilmsgerman-moviedomefamily-tcl/playlist.m3u8
 #EXTINF:-1 tvg-id="MoviesNow.in@SD" tvg-name="Movies Now" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-now-hd.png" tvg-chno="100" channel-id="MoviesNow.in@SD" group-title="International",Movies Now
@@ -881,16 +859,12 @@ https://aegis-cloudfront-1.tubi.video/8b127a5b-3054-4f39-93a2-1c4aab9ef5ff/playl
 https://tvsen6.aynaott.com/msnbc/index.m3u8
 #EXTINF:-1 tvg-id="MTV2.us" tvg-name="MTV2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mtv2-720p-5734b74578.png" tvg-chno="759" channel-id="MTV2.us" tvg-language="eng;spa" tvg-country="US" group-title="International",MTV2
 http://198.58.104.90:8989/mtv2/index.m3u8
-#EXTINF:-1 tvg-id="Boni-Records.com.us" tvg-name="Music Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/music-channel-21d02d561c.png" tvg-chno="768" channel-id="Boni-Records.com.us" tvg-country="US" tvg-language="eng" group-title="International",Music Channel
-http://media.boni-records.com/index.m3u8
 #EXTINF:-1 tvg-id="MyCinema.us" tvg-name="My Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/my-cinema.png" tvg-chno="770" channel-id="MyCinema.us" group-title="International",My Cinema
 https://mytime-tcl.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="MyTimeMovieNetwork.uk@SD" tvg-name="Mytime Movie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie.png" tvg-chno="772" channel-id="MyTimeMovieNetwork.uk@SD" group-title="International",Mytime Movie
 https://mytimeuk-rakuten-samsung.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="MyTimeMovieNetwork.br" tvg-name="MyTime Movie Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network.png" tvg-chno="81" channel-id="MyTimeMovieNetwork.br" tvg-language="por" tvg-country="BR" group-title="International",MyTime Movie Network
 https://appletree-mytime-samsungbrazil.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="MyTimeMovieNetwork.br@SD" tvg-name="MyTime Movie Network BR" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network-br.png" tvg-chno="773" channel-id="MyTimeMovieNetwork.br@SD" group-title="International",MyTime Movie Network BR
-https://appletree-mytime-samsungbrazil.amagi.tv/playlist360p.m3u8
 #EXTINF:-1 tvg-id="MyTimeMovieNetworkEast.us" tvg-name="MyTime Movie Network East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mytime-movie-network-east.png" tvg-chno="775" channel-id="MyTimeMovieNetworkEast.us" tvg-language="eng" tvg-country="US" group-title="International",MyTime Movie Network East
 https://appletree-mytimeau-samsung.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-chno="79" tvg-id="custom.now.70s" tvg-name="NOW 70s" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/now-70s.png" channel-id="custom.now.70s" group-title="International",NOW 70s
