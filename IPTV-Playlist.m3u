@@ -1615,8 +1615,6 @@ http://210.4.72.204/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
 #EXTINF:-1 tvg-id="EkusheyTV.bd" tvg-name="Ekushey TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-ekushey-tv-d9479035b4.png" channel-id="EkusheyTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Ekushey TV
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ekusheytv-8-org.stream/index.m3u8
 #EXTINF:-1 tvg-id="EkusheyTV.bd" tvg-name="Ekushey TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-ekushey-tv-d9479035b4.png" channel-id="EkusheyTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Ekushey TV
-http://ekusheyserver.com/etvlivesn.m3u8
-#EXTINF:-1 tvg-id="EkusheyTV.bd" tvg-name="Ekushey TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-ekushey-tv-d9479035b4.png" channel-id="EkusheyTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Ekushey TV
 https://ekusheyserver.com/etvlivesn.m3u8
 #EXTINF:-1 tvg-id="EkusheyTV.bd" tvg-name="Ekushey TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-ekushey-tv-d9479035b4.png" channel-id="EkusheyTV.bd" tvg-country="BD" tvg-language="ben" group-title="Backup",Ekushey TV
 https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream2.m3u8
