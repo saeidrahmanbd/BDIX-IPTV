@@ -24,16 +24,17 @@ LANGUAGE_RE = re.compile(r"^[a-z]{3}$")
 
 def parse_catalogue(text):
     reader = csv.DictReader(io.StringIO(text))
-    required = {"id", "country", "languages"}
+    required = {"id", "country"}
     if not reader.fieldnames or not required.issubset(set(reader.fieldnames)):
-        raise ValueError("catalogue is missing id/country/languages columns")
+        raise ValueError("catalogue is missing id/country columns")
+    has_languages = "languages" in reader.fieldnames
     by_id, ambiguous = {}, set()
     for row in reader:
         channel_id = (row.get("id") or "").strip()
         if not channel_id:
             continue
         country = (row.get("country") or "").strip().upper()
-        languages = tuple(x.strip().lower() for x in (row.get("languages") or "").split(";") if x.strip())
+        languages = tuple(x.strip().lower() for x in (row.get("languages") or "").split(";") if x.strip()) if has_languages else ()
         value = (country, languages)
         if channel_id in by_id and by_id[channel_id] != value:
             ambiguous.add(channel_id)
@@ -149,6 +150,12 @@ def write_report(status, before_hash, after_hash, metrics, remaining, note=""):
         "- Entries updated: **{}**".format(metrics.get("entries_changed", 0)),
         "- tvg-country fields filled: **{}**".format(metrics.get("country_fields_filled", 0)),
         "- tvg-language fields filled: **{}**".format(metrics.get("language_fields_filled", 0)),
+        "- Language column in source catalogue: **{}**".format(
+            "available" if metrics.get("language_source_field_available") is True
+            else "not provided" if metrics.get("language_source_field_available") is False
+            else "not checked"
+        ),
+        "- tvg-language is only filled from a unique, explicit language value; no language is inferred from country, category, or URL.",
         "- Active entries with remaining metadata gaps: **{}**".format(len(remaining)),
     ]
     if note:
@@ -172,7 +179,10 @@ def main():
     request = urllib.request.Request(SOURCE_URL, headers={"User-Agent": "BDIX-IPTV-metadata-maintenance/1.0"})
     try:
         with urllib.request.urlopen(request, timeout=20) as response:
-            catalogue = parse_catalogue(response.read().decode("utf-8-sig"))
+            source_text = response.read().decode("utf-8-sig")
+        catalogue = parse_catalogue(source_text)
+        fieldnames = csv.DictReader(io.StringIO(source_text)).fieldnames or []
+        language_source_available = "languages" in fieldnames
         if not catalogue:
             raise ValueError("catalogue is empty")
     except Exception as exc:
@@ -183,6 +193,7 @@ def main():
         return 0
 
     updated, metrics = update_playlist(original, catalogue)
+    metrics["language_source_field_available"] = language_source_available
     if updated != original:
         PLAYLIST.write_bytes(updated.encode("utf-8"))
     after_hash = hashlib.sha256(PLAYLIST.read_bytes()).hexdigest()
