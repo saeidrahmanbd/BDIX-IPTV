@@ -28,6 +28,7 @@ on:
       - scripts/iptv_metadata_backfill.py
       - tests/test_metadata_backfill.py
       - tests/test_report_freshness.py
+      - tests/test_maintenance_report_order.py
       - tests/test_logo_authenticity_manifest.py
       - scripts/sync_epg_worker_map.py
       - scripts/audit_playlist.py
@@ -85,6 +86,7 @@ jobs:
       - name: Run playlist metadata and report freshness tests
         run: |
           python -m unittest discover -s tests -p 'test_report_freshness.py'
+          python -m unittest discover -s tests -p 'test_maintenance_report_order.py'
           python -m unittest discover -s tests -p 'test_metadata_backfill.py'
           python -m unittest discover -s tests -p 'test_logo_authenticity_manifest.py'
       - name: Validate EPG configuration
@@ -197,6 +199,18 @@ jobs:
             # existing channels. Re-check the original baseline immediately before
             # anything can be staged or committed.
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
+
+            # Correction scripts can change metadata/logo lines after the first backfill.
+            # Refresh its fingerprint against the final playlist, then regenerate every
+            # fingerprinted report and rerun the final structural/publication gates.
+            python scripts/iptv_metadata_backfill.py
+            python scripts/maintenance_helpers.py verify-no-unauthorized-removals
+            set +e
+            python scripts/audit_playlist.py
+            AUDIT_STATUS=$?
+            python scripts/pre_publish_gate.py
+            GATE_STATUS=$?
+            set -e
 
             python scripts/record_maintenance_history.py
             # Regenerate shared EPG reports and logo provenance after the final
