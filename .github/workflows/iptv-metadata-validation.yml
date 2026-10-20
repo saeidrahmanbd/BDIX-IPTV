@@ -11,6 +11,14 @@ on:
       - scripts/epg_coverage.py
       - scripts/generate_epg.py
       - scripts/epg_publish_gate.py
+      - scripts/logo_asset_naming.py
+      - scripts/generate_logo_provenance_review.py
+      - scripts/generate_metadata_normalization_report.py
+      - scripts/report_iptv_fragile_streams.py
+      - scripts/stream_risk_review.py
+      - tests/test_logo_asset_naming.py
+      - tests/test_logo_provenance_review.py
+      - tests/test_iptv_fragile_streams.py
       - tests/test_metadata_backfill.py
       - tests/test_report_freshness.py
       - tests/test_language_policy.py
@@ -28,6 +36,14 @@ on:
       - scripts/epg_coverage.py
       - scripts/generate_epg.py
       - scripts/epg_publish_gate.py
+      - scripts/logo_asset_naming.py
+      - scripts/generate_logo_provenance_review.py
+      - scripts/generate_metadata_normalization_report.py
+      - scripts/report_iptv_fragile_streams.py
+      - scripts/stream_risk_review.py
+      - tests/test_logo_asset_naming.py
+      - tests/test_logo_provenance_review.py
+      - tests/test_iptv_fragile_streams.py
       - tests/test_metadata_backfill.py
       - tests/test_report_freshness.py
       - tests/test_language_policy.py
@@ -54,10 +70,21 @@ jobs:
             scripts/generate_dashboard.py \
             scripts/epg_coverage.py \
             scripts/generate_epg.py \
-            scripts/epg_publish_gate.py
+            scripts/epg_publish_gate.py \
+            scripts/logo_asset_naming.py \
+            scripts/generate_logo_provenance_review.py \
+            scripts/generate_metadata_normalization_report.py \
+            scripts/report_iptv_fragile_streams.py \
+            scripts/stream_risk_review.py
       - name: Test exact-ID metadata backfill
         run: python -m unittest discover -s tests -p "test_metadata_backfill.py"
       - name: Test report freshness and fingerprints
         run: python -m unittest discover -s tests -p "test_report_freshness.py"
       - name: Test English/Bengali EPG text policy
         run: python -m unittest discover -s tests -p "test_language_policy.py"
+      - name: Test logo asset safety and provenance queue
+        run: |
+          python -m unittest discover -s tests -p "test_logo_asset_naming.py"
+          python -m unittest discover -s tests -p "test_logo_provenance_review.py"
+      - name: Test sensitive URL redaction
+        run: python -m unittest discover -s tests -p "test_iptv_fragile_streams.py"

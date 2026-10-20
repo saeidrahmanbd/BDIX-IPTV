@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import re,html,json
+import hashlib,re,html,json
 from collections import Counter
 from datetime import datetime,timezone
 from pathlib import Path
@@ -55,12 +55,15 @@ def main():
         mapct=float(mapping_match.group(3)) if mapping_match else (round(mapped*100/india,1) if india else 0)
         epg_scope="combined EPG report fallback (IPTV-only row unavailable)"
     now=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    source_sha=hashlib.sha256(PLAYLIST.read_bytes()).hexdigest()
     try: hist=json.loads(HISTORY.read_text(encoding="utf-8")); hist=hist[-30:] if isinstance(hist,list) else []
     except Exception: hist=[]
     prev=hist[-2] if len(hist)>=2 else {}; cur=hist[-1] if hist else {}
     md=f"""# Update Report
 
 _Last generated: **{now}**_
+
+Source playlist SHA-256: **{source_sha}**
 
 | Metric | Current |
 |---|---:|
@@ -133,6 +136,8 @@ Historical records are retained in reports/maintenance-history.json.
     OUT_MAINT.write_text(f"""# IPTV Maintenance Report
 
 _Generated: **{now}**_
+
+Source playlist SHA-256: **{source_sha}**
 
 | Item | Result |
 |---|---:|

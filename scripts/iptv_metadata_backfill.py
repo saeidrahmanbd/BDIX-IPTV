@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Fill blank IPTV metadata from catalogue data with safe group fallbacks."""
+import csv
 import hashlib
+import io
 import json
 import re
 import urllib.request
@@ -41,7 +43,31 @@ def load_json(url):
         return json.loads(response.read().decode("utf-8-sig"))
 
 
-def parse_catalogue(channels, feeds):
+def parse_catalogue(channels, feeds=None):
+    """Build the exact-ID catalogue from iptv-org JSON, with legacy CSV fixture support.
+
+    Production callers pass the upstream channel and feed lists. The single-argument
+    CSV form is kept for the maintenance tests and older callers; it does not affect
+    the production feed-derived language rules.
+    """
+    if isinstance(channels, str):
+        catalogue = {}
+        reader = csv.DictReader(io.StringIO(channels))
+        for row in reader:
+            channel_id = (row.get("id") or row.get("channel") or "").strip()
+            if not channel_id:
+                continue
+            country = (row.get("country") or "").strip().upper()
+            raw_languages = row.get("languages") or row.get("language") or ""
+            languages = tuple(sorted({
+                value.strip().lower()
+                for value in re.split(r"[;,|]", raw_languages)
+                if LANGUAGE_RE.fullmatch(value.strip().lower())
+            }))
+            catalogue[channel_id] = (country, languages)
+        return catalogue
+
+    feeds = feeds or []
     feed_languages = {}
     for feed in feeds:
         channel_id = (feed.get("channel") or "").strip()

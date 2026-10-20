@@ -2,6 +2,7 @@
 """Resolve missing/external channel logos and store them as local PNG files."""
 import io, json, re, urllib.request, hashlib
 from pathlib import Path
+from logo_asset_naming import is_blocked_logo_basename, safe_logo_filename
 from urllib.parse import urlsplit
 from PIL import Image, ImageDraw, ImageFont
 try:
@@ -214,7 +215,7 @@ for line in lines:
     if not line.startswith("#EXTINF"): continue
     metadata = attrs(line)
     logo = metadata.get("tvg-logo", "").strip()
-    if logo and not is_generic_logo(logo) and not is_generated_placeholder(logo) and is_local(logo) and logo.lower().endswith(".png"):
+    if logo and not is_generic_logo(logo) and not is_generated_placeholder(logo) and not is_blocked_logo_basename(Path(urlsplit(logo).path).name) and is_local(logo) and logo.lower().endswith(".png"):
         channel_id = exact_id(metadata)
         title = metadata.get("tvg-name") or line.rsplit(",", 1)[-1].strip()
         filename = logo[len(RAW_BASE):].split("?", 1)[0] if logo.startswith(RAW_BASE) else Path(logo).name
@@ -261,7 +262,7 @@ for line in lines:
     base_title = clean_name(title)
     channel_id = exact_id(metadata)
     # Remove the known common placeholder logo instead of copying/downloading it.
-    if is_generic_logo(logo) or is_generated_placeholder(logo):
+    if is_generic_logo(logo) or is_generated_placeholder(logo) or is_blocked_logo_basename(Path(urlsplit(logo).path).name):
         line = force_local(line, "")
         metadata = attrs(line)
         logo = ""
@@ -269,7 +270,7 @@ for line in lines:
 
     # Explicit ID overrides are authoritative and run before any existing-logo shortcut.
     if mapped_logo:
-        filename = f"{safe_name(title)}.png"
+        filename = safe_logo_filename(title)
         target = LOGOS / filename
         replacement = RAW_BASE + filename
         try:
@@ -296,7 +297,7 @@ for line in lines:
                 except Exception:
                     pass
             # Broken/missing local reference: fall through to ID/name/catalogue repair.
-        filename = f"{safe_name(title)}.png"
+        filename = safe_logo_filename(title)
         target = LOGOS / filename
         replacement = RAW_BASE + filename
         try:
@@ -329,7 +330,7 @@ for line in lines:
     # Convert a valid current external image into a repository-hosted PNG.
     # This makes previously external tvg-logo URLs local and auditable.
     if logo and not is_local(logo) and not is_generic_logo(logo):
-        filename = f"{safe_name(title)}.png"
+        filename = safe_logo_filename(title)
         target = LOGOS / filename
         replacement = RAW_BASE + filename
         try:
@@ -352,7 +353,7 @@ for line in lines:
 
     fallback = FALLBACK_LOGOS.get(base_title)
     if fallback:
-        filename = f"{safe_name(title)}.png"
+        filename = safe_logo_filename(title)
         target = LOGOS / filename
         replacement = RAW_BASE + filename
         try:
@@ -381,7 +382,7 @@ for line in lines:
         cid = str(candidate.get("id","")).lower()
         logo_item = logo_by_channel.get(cid)
         if logo_item and logo_item[1].get("url"):
-            filename = f"{safe_name(title)}.png"
+            filename = safe_logo_filename(title)
             target = LOGOS / filename
             replacement = RAW_BASE + filename
             try:

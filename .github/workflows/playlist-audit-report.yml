@@ -18,8 +18,9 @@ permissions:
 # Separate from playlist maintenance: reports must update even when playlist
 # validation fails. This workflow only commits reports/playlist-audit.md.
 concurrency:
-  group: playlist-audit-report-sync
+  group: bdix-iptv-main-writer
   cancel-in-progress: false
+  queue: max
 
 jobs:
   audit:

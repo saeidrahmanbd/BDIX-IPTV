@@ -1,4 +1,6 @@
-# IPTV Playlist Logo Repair Results
+# IPTV Playlist Logo Repair Results — Historical Snapshot
+
+> Historical results from 2026-10-17 for a 1,094-entry playlist. This is not a current audit. Use reports/logo-authenticity-manifest.json and reports/logo-provenance-review.md for current source-attribution status.
 
 Run time: **2026-10-17 09:25 UTC**  
 Repository-first local logo search completed before external lookup.  

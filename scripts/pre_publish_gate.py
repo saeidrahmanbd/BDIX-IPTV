@@ -5,11 +5,10 @@ import re,subprocess,sys
 from datetime import datetime,timezone
 from collections import Counter,defaultdict
 from pathlib import Path
+from logo_asset_naming import is_blocked_logo_basename
 P=Path("IPTV-Playlist.m3u"); R=Path("reports/pre-publish-gate.md"); EXCLUDE={"Backup","Not Playing"}
 RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
-BAD_ASSETS={"atn-news.png","a-sports-5485adff.png","a-sports-hd.png","bein-sports-3.png","bangla-tv.png","btv-news.png","colors.png","duronto-tv.png","duronto-tv-1ad55c95.png","ekushey-tv.png","global-tv.png","green-tv.png","mohona-tv.png","nagorik-tv.png","nagorik.png","nick-bangla.png","sananda-tv.png","sananda.png","star-gold-select.png","star-gold.png","star-plus.png","zee-tv.png","tom-and-jerry.png","arirang-tv.png"}
-GENERIC_PREFIXES=("placeholder-","generic-","unknown-","unidentified-")
 def attrs(s): return dict(ATTR.findall(s))
 def parse(text):
  lines=text.replace("\r","").splitlines(); out=[]; cur=None
@@ -27,7 +26,7 @@ def logo_audit(entries):
   if not logo: missing.append(name); continue
   if not logo.startswith(RAW_BASE): external.append(name)
   filename=Path(logo.split("?",1)[0]).name.casefold()
-  if filename in BAD_ASSETS or filename.startswith(GENERIC_PREFIXES): bad.append(name)
+  if is_blocked_logo_basename(filename): bad.append((name, a.get("group-title", ""), filename))
  return missing,external,bad
 def review_state(entries):
  """Index protected review entries by exact URL, preserving category and identity."""
@@ -104,8 +103,15 @@ def main():
  lines=["# Pre-Publish Safety Gate","",f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",f"Source playlist SHA-256: **{hashlib.sha256(P.read_bytes()).hexdigest()}**","",f"Status: **{status}**","",f"- Current entries: **{len(current)}**",f"- Duplicate stream URLs: **{len(dup_urls)}**",f"- Primary streams removed: **{len(removed)}**",f"- Primary streams intentionally removed as known bad: **{len(approved_removed)}**",f"- Primary streams quarantined: **{len(quarantined)}**",f"- Review entries reclassified: **{len(review_reclassified)}**",f"- Review entries promoted: **{len(review_promoted)}**",f"- Review entries deleted: **{len(review_removed)}**",f"- Duplicate primary channel numbers: **{len(chno_dupes)}**",f"- Primary entries missing tvg-chno: **{len(missing)}**",f"- Numbered review entries: **{len(review_numbered)}**",f"- Missing logos: **{len(logo_missing)}**",f"- External logo URLs: **{len(logo_external)}**",f"- Incorrect/placeholder/generic logos: **{len(logo_bad)}**",f"- Missing referenced local logo files: **{len(logo_missing_files)}**",f"- Entries added this run: **{len(added)}**",f"- Entries removed this run: **{len(removed_all)}**",f"- Entries modified this run: **{len(modified)}**","","## Protected-queue policy","Backup and Not Playing are review queues. Existing entries are protected by exact stream URL. A maintenance run must not silently delete, promote, or reclassify them.","","## Blocking Reasons"]
  if issues: lines.extend(["- "+x for x in issues])
  else: lines.append("No blocking conditions detected.")
+ lines += ["", "## Blocked logo references", "", "| Channel | Group | Blocked filename |", "|---|---|---|"]
+ if logo_bad:
+  clean=lambda value: str(value).replace("|","\\|").replace(chr(10)," ")
+  lines += [f"| {clean(name)} | {clean(group)} | {clean(filename)} |" for name,group,filename in logo_bad]
+ else:
+  lines.append("| — | — | none |")
  R.parent.mkdir(parents=True,exist_ok=True); R.write_text("\n".join(lines)+"\n",encoding="utf-8")
  print("Pre-publish gate:",status)
  for issue in issues: print("Pre-publish blocking reason:",issue)
+ for name,group,filename in logo_bad: print(f"Blocked logo reference: {name} [{group}] -> {filename}")
  if issues: sys.exit(1)
 if __name__=="__main__": main()

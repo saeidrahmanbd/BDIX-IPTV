@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Non-destructive HTTP/HLS stream health probe with persistent failure history."""
-import concurrent.futures, json, re, time
+import concurrent.futures, hashlib, json, re, time
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -14,7 +14,7 @@ REPORT=Path("reports/stream-health.md")
 HISTORY=Path("reports/stream-health-history.json")
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
 GROUP_EXCLUDE=set()
-SENSITIVE_QUERY={"token","sig","signature","jwt","session","key","authorization","hdnts","expires","e"}
+SENSITIVE_QUERY={"token","access_token","refresh_token","sig","signature","jwt","session","key","api_key","apikey","authorization","auth","client_secret","hdnts","expires","e","username","user","password","passwd","pass"}
 
 def attrs(s): return dict(ATTR.findall(s))
 def canonical_url(url):
@@ -22,7 +22,22 @@ def canonical_url(url):
     netloc=host + (f":{port}" if port and not ((p.scheme.lower()=="http" and port==80) or (p.scheme.lower()=="https" and port==443)) else "")
     pairs=[(k.lower(),v) for k,v in parse_qsl(p.query,keep_blank_values=True) if k.lower() not in SENSITIVE_QUERY]
     query="&".join(f"{k}={v}" for k,v in sorted(pairs))
-    return urlunsplit((p.scheme.lower(),netloc,p.path.rstrip("/") or "/",query,""))
+    path_parts=p.path.split("/")
+    lower_parts=[x.casefold() for x in path_parts]
+    for i,segment in enumerate(lower_parts):
+        if segment in {"live","movie","series","timeshift"} and i+3<len(path_parts):
+            path_parts[i+1]="REDACTED"; path_parts[i+2]="REDACTED"
+    safe_path="/".join(path_parts).rstrip("/") or "/"
+    return urlunsplit((p.scheme.lower(),netloc,safe_path,query,""))
+def stream_url_inventory_sha256(path=PLAYLIST):
+    """Hash sorted exact stream URLs without exposing them in the report."""
+    urls=sorted(
+        line.strip()
+        for line in Path(path).read_text(encoding="utf-8-sig").splitlines()
+        if line.strip().startswith(("http://","https://"))
+    )
+    return hashlib.sha256("\n".join(urls).encode("utf-8")).hexdigest()
+
 def parse():
     lines=PLAYLIST.read_text(encoding="utf-8-sig").splitlines()
     rows=[]; cur=None
@@ -110,7 +125,7 @@ def main():
     families={}
     for r in results: families.setdefault(canonical_url(r["url"]),set()).add(r["url"])
     near_duplicates={k:v for k,v in families.items() if len(v)>1}
-    lines=["# Stream Health Report","",f"Generated: **{now}**","",
+    lines=["# Stream Health Report","",f"Generated: **{now}**",f"Stream URL inventory SHA-256: **{stream_url_inventory_sha256()}**","",
            "Non-destructive connectivity check. A successful HTTP response confirms reachability of the stream endpoint, not guaranteed video/audio playback.","",
            "## Summary","",f"- Streams tested: **{len(results)}**",f"- Reachable: **{ok}**",f"- Failed this check: **{fail}**",
            f"- Persistent failures (3+ consecutive): **{len(persistent)}**",f"- Intermittent failures: **{len(intermittent)}**",
@@ -132,7 +147,6 @@ def main():
     else: lines.append("None.")
     lines += ["","## Policy","","- Health failures never delete or reclassify streams automatically.",
               "- Backup streams remain protected even after repeated failures.",
-              "- Persistent failures are reported for review; they are never automatic deletion candidates.",
               "- Persistent failures are reported for review; they are never automatic deletion candidates."]
     REPORT.parent.mkdir(parents=True,exist_ok=True); REPORT.write_text("\n".join(lines)+"\n",encoding="utf-8")
     print(f"Stream health: tested={len(results)} ok={ok} failed={fail} persistent={len(persistent)}")

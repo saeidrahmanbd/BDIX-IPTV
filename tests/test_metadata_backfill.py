@@ -37,10 +37,12 @@ class MetadataBackfillTests(unittest.TestCase):
         )
         updated, metrics = update_playlist(playlist, self.catalogue)
         self.assertIn('tvg-country="IN"', updated)
-        self.assertNotIn('tvg-language="', updated)
-        self.assertEqual(metrics["language_fields_filled"], 0)
+        self.assertIn('tvg-language="eng;hin"', updated)
+        self.assertNotIn('tvg-language="eng"', updated)
+        self.assertNotIn('tvg-language="hin"', updated)
+        self.assertEqual(metrics["language_fields_filled"], 1)
 
-    def test_catalogue_without_language_column_fills_country_only(self):
+    def test_catalogue_without_language_column_uses_group_language_default(self):
         catalogue = parse_catalogue("id,name,country\nExample.in,Example,IN\n")
         self.assertEqual(catalogue["Example.in"], ("IN", ()))
         playlist = (
@@ -50,9 +52,9 @@ class MetadataBackfillTests(unittest.TestCase):
         )
         updated, metrics = update_playlist(playlist, catalogue)
         self.assertIn('tvg-country="IN"', updated)
-        self.assertNotIn('tvg-language="', updated)
+        self.assertIn('tvg-language="hin"', updated)
         self.assertEqual(metrics["country_fields_filled"], 1)
-        self.assertEqual(metrics["language_fields_filled"], 0)
+        self.assertEqual(metrics["language_fields_filled"], 1)
 
     def test_existing_metadata_is_never_overwritten(self):
         playlist = (
@@ -76,10 +78,17 @@ class MetadataBackfillTests(unittest.TestCase):
             "https://example.invalid/review.m3u8\n"
         )
         updated, metrics = update_playlist(playlist, self.catalogue)
-        self.assertEqual(updated, playlist)
-        self.assertEqual(metrics["entries_changed"], 0)
-        self.assertEqual(metrics["country_fields_filled"], 0)
-        self.assertEqual(metrics["language_fields_filled"], 0)
+        self.assertIn('tvg-name="Backup" group-title="Backup",Backup', updated)
+        self.assertIn('tvg-name="Review" group-title="Not Playing",Review', updated)
+        self.assertIn('tvg-id="Unknown.custom" tvg-name="Unknown" tvg-country="US" tvg-language="eng" group-title="International"', updated)
+        self.assertEqual(
+            [x for x in playlist.splitlines() if x.startswith(("http://", "https://"))],
+            [x for x in updated.splitlines() if x.startswith(("http://", "https://"))],
+        )
+        self.assertEqual(metrics["entries_changed"], 1)
+        self.assertEqual(metrics["fallback_entries"], 1)
+        self.assertEqual(metrics["country_fields_filled"], 1)
+        self.assertEqual(metrics["language_fields_filled"], 1)
 
     def test_all_original_urls_and_entry_count_are_preserved(self):
         playlist = (
@@ -98,7 +107,7 @@ class MetadataBackfillTests(unittest.TestCase):
             sum(x.startswith("#EXTINF:") for x in playlist.splitlines()),
             sum(x.startswith("#EXTINF:") for x in updated.splitlines()),
         )
-        self.assertEqual(len(active_gaps(updated)), 1)
+        self.assertEqual(len(active_gaps(updated)), 0)
 
 
 if __name__ == "__main__":
