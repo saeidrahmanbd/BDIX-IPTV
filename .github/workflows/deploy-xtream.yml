@@ -104,4 +104,27 @@ jobs:
           print(f"BDIX streams: HTTP {status}; count={len(streams) if isinstance(streams, list) else 0}")
           if status != 200 or not isinstance(streams, list) or not streams:
               raise SystemExit("BDIX returned no live streams for category_id=0")
+          # Verify real playback routing without downloading the video body.
+          import urllib.error
+          stream_id = streams[0].get("stream_id")
+          expected_source = streams[0].get("direct_source")
+          if not stream_id or not expected_source:
+              raise SystemExit("BDIX stream payload lacks stream_id or direct_source")
+          playback_url = f"https://{host}/live/{urllib.parse.quote(creds['username'], safe='')}/{urllib.parse.quote(creds['password'], safe='')}/{stream_id}.ts"
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self, req, fp, code, msg, headers, newurl):
+                  return None
+          opener = urllib.request.build_opener(NoRedirect)
+          req = urllib.request.Request(playback_url, headers={"User-Agent": "Mozilla/5.0"})
+          try:
+              with opener.open(req, timeout=30) as response:
+                  playback_status = response.status
+                  location = response.headers.get("Location", "")
+          except urllib.error.HTTPError as error:
+              playback_status = error.code
+              location = error.headers.get("Location", "")
+          target_host = urllib.parse.urlsplit(location).hostname if location else None
+          print(f"BDIX playback route: HTTP {playback_status}; redirected_to_upstream={bool(location)}; upstream_host={target_host or 'none'}")
+          if playback_status != 302 or location != expected_source:
+              raise SystemExit("BDIX playback endpoint did not redirect to the original direct source")
           PY
