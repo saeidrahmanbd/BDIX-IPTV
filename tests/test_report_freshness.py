@@ -44,6 +44,7 @@ class ReportFreshnessTests(unittest.TestCase):
             "metadata-normalization.md": f"Generated: **{self.timestamp}**\nSource playlist SHA-256: **{one}**\n",
             "Update Report.md": f"_Last generated: **{self.timestamp}**_\n\nSource playlist SHA-256: **{one}**\n",
             "maintenance-report.md": f"_Generated: **{self.timestamp}**_\n\nSource playlist SHA-256: **{one}**\n",
+            "playlist-logo-repair-results.md": f"Generated: **{self.timestamp}**\nSource playlist SHA-256: **{one}**\n",
             "stream-health.md": f"Generated: **{self.timestamp}**\nStream URL inventory SHA-256: **{stream_url_inventory_sha256(self.root / 'IPTV-Playlist.m3u')}**\n",
         }
         for name, content in reports.items():
