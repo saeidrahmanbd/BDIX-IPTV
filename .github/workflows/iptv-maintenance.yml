@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - IPTV-Playlist.m3u
+      - logos/**
       - .github/workflows/iptv-maintenance.yml
       - scripts/maintenance_helpers.py
       - scripts/fix_playlist.py
@@ -16,6 +17,7 @@ on:
       - scripts/migrate_external_logos_fixed.py
       - scripts/restore_protected_review.py
       - scripts/generate_logo_authenticity_manifest.py
+      - scripts/logo_source_catalog.py
       - reports/logo-source-registry.json
       - scripts/check_epg_config.py
       - scripts/epg_coverage.py
@@ -107,11 +109,6 @@ jobs:
         run: |
           set -euo pipefail
 
-          # Runs queued against an old workflow definition must not execute its
-          # obsolete maintenance steps after a newer workflow has reached main.
-          # Compare the workflow blob from the triggering commit with the current
-          # main workflow. This does not skip a run merely because helper scripts
-          # or reports changed: those are refreshed from current main below.
           git fetch origin main
           EVENT_WORKFLOW_BLOB="$(git rev-parse "${GITHUB_SHA}:.github/workflows/iptv-maintenance.yml")"
           CURRENT_WORKFLOW_BLOB="$(git rev-parse "FETCH_HEAD:.github/workflows/iptv-maintenance.yml")"
@@ -129,20 +126,11 @@ jobs:
             cp BDIX-Playlist.m3u /tmp/bdix-playlist-protected.m3u
             cp epg/epg.xml /tmp/bdix-epg-previous.xml 2>/dev/null || true
 
-            # HARD SAFETY BASELINES. Existing entries and the owner-review queues
-            # are recorded before ANY maintenance script is allowed to touch them.
             python scripts/maintenance_helpers.py snapshot-playlist
             python scripts/maintenance_helpers.py snapshot
-
-            # IMPORTANT: do not run fix_playlist.py here. The historical fixer can
-            # quarantine/remove existing stream records (including duplicates and
-            # known-bad endpoints). That conflicts with the zero-automatic-deletion
-            # policy. Metadata/logo repair scripts below remain enabled, while the
-            # removal guard decides whether the final playlist is publishable.
             rm -rf fixed_output
             echo 'Non-destructive maintenance mode: fix_playlist.py skipped.'
 
-            # Destructive legacy repair scripts are deliberately excluded from scheduled maintenance.
             python scripts/repair_playlist_quality.py
             python scripts/normalize_metadata.py
             python scripts/repair_playlist_logos.py
@@ -150,23 +138,14 @@ jobs:
             python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
             if grep -Eiq 'group-title="(New Channels|New Backup|New)"' IPTV-Playlist.m3u; then echo '::error::Forbidden staging playlist category detected after normalization.'; exit 1; fi
 
-            # Force known contaminated/generic local logos back through the resolver.
             python scripts/maintenance_helpers.py invalidate-bad-logos
             python scripts/migrate_external_logos_fixed.py
             python scripts/generate_logo_authenticity_manifest.py
             python scripts/restore_protected_review.py
 
-            # Fill only blank metadata from exact catalogue IDs; never infer from group/URL.
-            # The script reports remaining ambiguous entries and preserves all stream URLs.
             python scripts/iptv_metadata_backfill.py
-
-            # HARD REMOVAL GUARD #1: after all playlist repair scripts, no existing
-            # stream URL may disappear. Duplicate URLs are reported only; they are
-            # never automatically deleted.
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
 
-            # Stream health is advisory only. The playlist owner reviews results manually;
-            # failures never trigger automatic channel deletion/reclassification.
             python scripts/stream_health.py
             python scripts/report_iptv_fragile_streams.py
 
@@ -183,7 +162,9 @@ jobs:
             if [ "$EPG_GATE_STATUS" -ne 0 ]; then
               echo '::warning::EPG publish gate blocked this generated guide; retaining the previous known-good epg/epg.xml.'
               if [ -s /tmp/bdix-epg-previous.xml ] && grep -q '<programme ' /tmp/bdix-epg-previous.xml; then cp /tmp/bdix-epg-previous.xml epg/epg.xml; else echo '::error::No valid previous EPG is available after a publish-gate failure.'; exit 1; fi
-            else echo 'EPG publish gate passed; accepting newly generated guide.'; fi
+            else
+              echo 'EPG publish gate passed; accepting newly generated guide.'
+            fi
             cp epg/epg.xml /tmp/bdix-epg-publish.xml
             python scripts/sync_epg_worker_map.py
             python scripts/epg_coverage.py
@@ -199,8 +180,6 @@ jobs:
             GATE_STATUS=$?
             set -e
 
-            # The gate is a repair trigger, not a deletion trigger. Repeat only
-            # deterministic metadata/logo repair, then restore the protected queues.
             if [ "$GATE_STATUS" -ne 0 ]; then
               echo '::warning::Pre-publish gate found issues; running automatic correction pass before failing.'
               python scripts/repair_playlist_quality.py || true
@@ -220,14 +199,7 @@ jobs:
               set -e
             fi
 
-            # HARD REMOVAL GUARD #2: correction scripts are not trusted to delete
-            # existing channels. Re-check the original baseline immediately before
-            # anything can be staged or committed.
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
-
-            # Correction scripts can change metadata/logo lines after the first backfill.
-            # Refresh its fingerprint against the final playlist, then regenerate every
-            # fingerprinted report and rerun the final structural/publication gates.
             python scripts/iptv_metadata_backfill.py
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
             set +e
@@ -238,14 +210,13 @@ jobs:
             set -e
 
             python scripts/record_maintenance_history.py
-            # Regenerate shared EPG reports and logo provenance after the final
-            # possible playlist correction, then block publishing stale reports.
             python scripts/epg_coverage.py
             python scripts/generate_logo_authenticity_manifest.py
             python scripts/generate_logo_provenance_review.py
             python scripts/generate_metadata_normalization_report.py
             python scripts/report_iptv_fragile_streams.py
             python scripts/stream_risk_review.py
+            python scripts/stream_health.py
             python scripts/generate_dashboard.py
             python scripts/validate_report_freshness.py
             if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
