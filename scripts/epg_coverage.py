@@ -211,16 +211,29 @@ def parse_playlist():
                 cur = None
     return sorted(combined.values(), key=lambda x: (x["group"], x["name"].lower(), x["tvg_id"]))
 
+# Guide text policy: English (Latin script) or Bengali (Bengali script) only.
+# Any other language tag or script is rejected. Keep identical in epg_coverage.py,
+# generate_epg.py and epg_publish_gate.py (tests/test_language_policy.py checks this).
+ALLOWED_LANGS = {"en", "eng", "bn", "ben"}
+ALLOWED_LANG_PREFIXES = ("en-", "en_", "bn-", "bn_")
+ALLOWED_SCRIPTS = ("LATIN", "BENGALI")
+
+
+def _script_allowed(char):
+    name = unicodedata.name(char, "")
+    return any(s in name for s in ALLOWED_SCRIPTS)
+
+
 def is_english_text_element(elem):
     """Match the generator's English-title policy when measuring EPG coverage."""
     text = (elem.text or "").strip()
     if not text:
         return True
     lang = (elem.attrib.get("{http://www.w3.org/XML/1998/namespace}lang") or elem.attrib.get("lang") or "").strip().lower()
-    if lang and not (lang == "en" or lang == "eng" or lang.startswith("en-") or lang.startswith("en_")):
+    if lang and not (lang in ALLOWED_LANGS or lang.startswith(ALLOWED_LANG_PREFIXES)):
         return False
     for char in text:
-        if unicodedata.category(char).startswith("L") and "LATIN" not in unicodedata.name(char, ""):
+        if unicodedata.category(char).startswith("L") and not _script_allowed(char):
             return False
     return True
 
