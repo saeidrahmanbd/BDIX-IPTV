@@ -4,7 +4,7 @@ from collections import Counter
 from datetime import datetime,timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-PLAYLIST=ROOT/"IPTV-Playlist.m3u"; AUDIT=ROOT/"reports/playlist-audit.md"; EPG=ROOT/"reports/epg-coverage.md"; HEALTH=ROOT/"reports/stream-health.md"; GATE=ROOT/"reports/pre-publish-gate.md"
+PLAYLIST=ROOT/"IPTV-Playlist.m3u"; AUDIT=ROOT/"reports/playlist-audit.md"; EPG=ROOT/"reports/epg-coverage.md"; EPG_DETAIL=ROOT/"reports/epg-three-playlist-audit.md"; HEALTH=ROOT/"reports/stream-health.md"; GATE=ROOT/"reports/pre-publish-gate.md"
 OUT_MD=ROOT/"reports/Update Report.md"; OUT_SVG=ROOT/"assets/dashboard.svg"; OUT_MAINT=ROOT/"reports/maintenance-report.md"; HISTORY=ROOT/"reports/maintenance-history.json"
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
 def metric(text,label):
@@ -19,7 +19,7 @@ def parse():
         elif cur and line.strip().startswith(("http://","https://")): rows.append(cur|{"url":line.strip()}); cur=None
     return rows
 def main():
-    e=parse(); a=read(AUDIT); g=read(EPG); h=read(HEALTH); gate=read(GATE)
+    e=parse(); a=read(AUDIT); g=read(EPG); egd=read(EPG_DETAIL); h=read(HEALTH); gate=read(GATE)
     gm=re.search(r'Status:\s*\*\*(PASS|BLOCK)\*\*',gate); gate_status=gm.group(1) if gm else "UNKNOWN"
     groups=Counter(x.get("group-title","") for x in e)
     active_groups={"Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports"}
@@ -33,12 +33,27 @@ def main():
     mapping_match=re.search(r'IDs with an EPG source mapping:\s*\*\*(\d+)/(\d+) \(([\d.]+)%\)\*\*',g,re.I)
     current_match=re.search(r'IDs with usable current/future (?:English programme data|source schedules \(nonblank English titles\)):\s*\*\*(\d+)/(\d+) \(([\d.]+)%\)\*\*',g,re.I)
     missing_match=re.search(r'IDs with no EPG source mapping:\s*\*\*(\d+)\*\*',g,re.I)
-    india=int(total_match.group(1)) if total_match else metric(g,"Active Indian channels audited")
-    mapped=int(mapping_match.group(1)) if mapping_match else metric(g,"Channels with an EPG mapping")
-    missing=int(missing_match.group(1)) if missing_match else metric(g,"No guide mapping found")
-    live=int(current_match.group(1)) if current_match else 0
-    livepct=float(current_match.group(3)) if current_match else 0.0
-    mapct=float(mapping_match.group(3)) if mapping_match else (round(mapped*100/india,1) if india else 0)
+    # Prefer the IPTV-Playlist.m3u row from the detailed EPG audit. The top-level
+    # EPG report contains combined metrics and must not be presented as IPTV-only.
+    iptv_row=re.search(r'^\\|\\s*IPTV-Playlist\\.m3u\\s*\\|\\s*(\\d+)\\s*\\|\\s*(\\d+)\\s*\\|\\s*(\\d+)\\s*\\|\\s*(\\d+)\\s*\\|\\s*(\\d+)\\s*\\|\\s*(\\d+)\\s*\\|\\s*(\\d+)\\s*\\|',egd,re.M)
+    if iptv_row:
+        india=int(iptv_row.group(2))
+        mapped=int(iptv_row.group(3))
+        source_live=int(iptv_row.group(4))
+        present=int(iptv_row.group(5))
+        live=int(iptv_row.group(6))
+        missing=int(iptv_row.group(7))
+        mapct=round(mapped*100/india,1) if india else 0.0
+        livepct=round(live*100/india,1) if india else 0.0
+        epg_scope="IPTV-Playlist.m3u published-guide row"
+    else:
+        india=int(total_match.group(1)) if total_match else metric(g,"Active Indian channels audited")
+        mapped=int(mapping_match.group(1)) if mapping_match else metric(g,"Channels with an EPG mapping")
+        missing=int(missing_match.group(1)) if missing_match else metric(g,"No guide mapping found")
+        live=int(current_match.group(1)) if current_match else 0
+        livepct=float(current_match.group(3)) if current_match else 0.0
+        mapct=float(mapping_match.group(3)) if mapping_match else (round(mapped*100/india,1) if india else 0)
+        epg_scope="combined EPG report fallback (IPTV-only row unavailable)"
     now=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     try: hist=json.loads(HISTORY.read_text(encoding="utf-8")); hist=hist[-30:] if isinstance(hist,list) else []
     except Exception: hist=[]
@@ -89,6 +104,7 @@ _Last generated: **{now}**_
 - Mapped: **{mapped} ({mapct}%)**
 - Current/future programme coverage: **{live}/{india} ({livepct}%)**
 - No mapping: **{missing}**
+- EPG metric scope: **{epg_scope}**
 - Publication remains subject to source-policy approval.
 
 ## Freshness
