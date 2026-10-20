@@ -25,6 +25,9 @@ on:
       - scripts/official_epg_sources.py
       - scripts/epg_publish_gate.py
       - scripts/validate_report_freshness.py
+      - scripts/logo_asset_naming.py
+      - scripts/generate_logo_provenance_review.py
+      - scripts/generate_metadata_normalization_report.py
       - scripts/iptv_metadata_backfill.py
       - tests/test_metadata_backfill.py
       - tests/test_report_freshness.py
@@ -79,6 +82,11 @@ jobs:
           scripts/repair_playlist_quality.py
           scripts/repair_playlist_logos.py
           scripts/generate_logo_authenticity_manifest.py
+          scripts/logo_asset_naming.py
+          scripts/generate_logo_provenance_review.py
+          scripts/generate_metadata_normalization_report.py
+          scripts/report_iptv_fragile_streams.py
+          scripts/stream_risk_review.py
           scripts/validate_report_freshness.py
           scripts/iptv_metadata_backfill.py
           scripts/epg_coverage.py
@@ -89,6 +97,9 @@ jobs:
           python -m unittest discover -s tests -p 'test_maintenance_report_order.py'
           python -m unittest discover -s tests -p 'test_metadata_backfill.py'
           python -m unittest discover -s tests -p 'test_logo_authenticity_manifest.py'
+          python -m unittest discover -s tests -p 'test_logo_asset_naming.py'
+          python -m unittest discover -s tests -p 'test_logo_provenance_review.py'
+          python -m unittest discover -s tests -p 'test_iptv_fragile_streams.py'
       - name: Validate EPG configuration
         run: python scripts/check_epg_config.py
       - name: Run maintenance
@@ -231,8 +242,12 @@ jobs:
             # possible playlist correction, then block publishing stale reports.
             python scripts/epg_coverage.py
             python scripts/generate_logo_authenticity_manifest.py
-            python scripts/validate_report_freshness.py
+            python scripts/generate_logo_provenance_review.py
+            python scripts/generate_metadata_normalization_report.py
+            python scripts/report_iptv_fragile_streams.py
+            python scripts/stream_risk_review.py
             python scripts/generate_dashboard.py
+            python scripts/validate_report_freshness.py
             if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
               echo "::error::Audit or pre-publish gate still reports blocking issues after the correction pass."
               echo "Audit status: $AUDIT_STATUS"
