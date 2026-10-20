@@ -31,7 +31,7 @@ def main():
     # Parse the current overall-coverage format, with a fallback for older reports.
     total_match=re.search(r'Active unique playlist channel IDs audited:\s*\*\*(\d+)\*\*',g,re.I)
     mapping_match=re.search(r'IDs with an EPG source mapping:\s*\*\*(\d+)/(\d+) \(([\d.]+)%\)\*\*',g,re.I)
-    current_match=re.search(r'IDs with usable current/future (?:English programme data|source schedules \(nonblank English titles\)):\s*\*\*(\d+)/(\d+) \(([\d.]+)%\)\*\*',g,re.I)
+    current_match=re.search(r'IDs with usable current/future (?:English programme data|source schedules \(nonblank (?:English|allowed-language) titles\)):\s*\*\*(\d+)/(\d+) \(([\d.]+)%\)\*',g,re.I)
     missing_match=re.search(r'IDs with no EPG source mapping:\s*\*\*(\d+)\*\*',g,re.I)
     # Prefer the IPTV-Playlist.m3u row from the detailed EPG audit. The top-level
     # EPG report contains combined metrics and must not be presented as IPTV-only.
