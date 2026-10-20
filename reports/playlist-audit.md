@@ -1,15 +1,15 @@
 # Playlist Audit
-Generated: **2026-10-20T09:40:20.127710+00:00**
-Audited playlist revision: `dbdfb10351c9399d754539a34b534436e61469d9`
-Playlist SHA-256: `51bbf8657e9faff27ac2fa8765e7398fd0b8731fd24bef3c43369535264d6fc4`
-Source playlist SHA-256: **51bbf8657e9faff27ac2fa8765e7398fd0b8731fd24bef3c43369535264d6fc4**
+Generated: **2026-10-20T09:46:43.921897+00:00**
+Audited playlist revision: `c8dd5e44c9f652f4f526df8320fa8231691a00ce`
+Playlist SHA-256: `2d8e5b89536b298a7b263c2010681396a79484659787d54f870b460ac3f1f2b8`
+Source playlist SHA-256: **2d8e5b89536b298a7b263c2010681396a79484659787d54f870b460ac3f1f2b8**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1092**
-- Unique channel IDs: **664**
+- Playlist entries: **1089**
+- Unique channel IDs: **661**
 - IDs with multiple streams: **229**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -19,12 +19,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **0**
 - External logo references (review only): **0**
-- Logo references checked: **1092**
+- Logo references checked: **1089**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
-- Primary entries missing tvg-country: **265**
-- Primary entries missing tvg-language: **265**
+- Primary entries missing tvg-country: **264**
+- Primary entries missing tvg-language: **264**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Category registry issues: **0**
@@ -37,13 +37,13 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ## Primary Metadata Completeness
 
 Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.
-- Active primary entries missing tvg-country: **265**
-- Active primary entries missing tvg-language: **265**
+- Active primary entries missing tvg-country: **264**
+- Active primary entries missing tvg-language: **264**
 
 | Group | Missing tvg-country | Missing tvg-language |
 |---|---:|---:|
 | Documentary & Wildlife | 75 | 75 |
-| Indian Entertainment | 25 | 25 |
+| Indian Entertainment | 24 | 24 |
 | Indian Movies | 12 | 12 |
 | Indian Music | 9 | 9 |
 | International | 66 | 66 |
@@ -985,7 +985,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1092**
+- Healthy/local references: **1089**
 - External references (review only): **0**
 - missing: **0**
 - broken-local: **0**
