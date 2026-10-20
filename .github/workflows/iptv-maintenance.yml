@@ -23,6 +23,8 @@ on:
       - scripts/fetch_iptv_org_epg.py
       - scripts/official_epg_sources.py
       - scripts/epg_publish_gate.py
+      - scripts/validate_report_freshness.py
+      - tests/test_report_freshness.py
       - scripts/sync_epg_worker_map.py
       - scripts/audit_playlist.py
       - scripts/build_identity_index.py
@@ -72,8 +74,11 @@ jobs:
           scripts/repair_playlist_quality.py
           scripts/repair_playlist_logos.py
           scripts/generate_logo_authenticity_manifest.py
+          scripts/validate_report_freshness.py
           scripts/epg_coverage.py
           scripts/generate_epg.py
+      - name: Validate report freshness tests
+        run: python -m unittest discover -s tests -p 'test_report_freshness.py'
       - name: Validate EPG configuration
         run: python scripts/check_epg_config.py
       - name: Run maintenance
@@ -182,6 +187,11 @@ jobs:
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
 
             python scripts/record_maintenance_history.py
+            # Regenerate shared EPG reports and logo provenance after the final
+            # possible playlist correction, then block publishing stale reports.
+            python scripts/epg_coverage.py
+            python scripts/generate_logo_authenticity_manifest.py
+            python scripts/validate_report_freshness.py
             python scripts/generate_dashboard.py
             if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
               echo "::error::Audit or pre-publish gate still reports blocking issues after the correction pass."
