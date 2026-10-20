@@ -173,9 +173,8 @@ def playlist_groups():
     return groups
 
 
-# The published programme guide is English-only for every channel.
-# Reject non-English language-tagged text and text containing non-Latin scripts;
-# do not silently display Hindi, Bengali, Arabic, Cyrillic, etc. as English.
+# The published guide accepts English (Latin script) or Bengali (Bengali script).
+# Reject unsupported language tags/scripts such as Hindi, Arabic, Cyrillic, and Han.
 import unicodedata
 
 TEXT_FIELDS = {"title", "sub-title", "desc"}
@@ -542,9 +541,9 @@ def main():
                 title = (title_elem.text or "").strip() if title_elem is not None else ""
                 children = clone_children(elem)
                 for target in targets:
-                    # English-only policy applies to every channel, not just
-                    # Indian Bangla. Reject non-English titles and text fields;
-                    # other providers may still supply an English alternative.
+                    # The allowed-language policy applies to every channel, not just
+                    # Indian Bangla. Reject unsupported titles and text fields;
+                    # other providers may still supply an English/Bengali alternative.
                     if (
                         title_elem is None
                         or not (title_elem.text or "").strip()
@@ -554,7 +553,7 @@ def main():
                     safe_children = []
                     for child in children:
                         if child.tag in TEXT_FIELDS and not is_english_text_element(child):
-                            # Drop non-English subtitle/description fields.
+                            # Drop unsupported-language subtitle/description fields.
                             continue
                         safe_children.append(ET.fromstring(ET.tostring(child, encoding="utf-8")))
                     attrs = dict(elem.attrib)
