@@ -1,5 +1,5 @@
 # Playlist Audit
-Generated: **2026-10-20T13:13:28.254175+00:00**
+Generated: **2026-10-20T13:35:01.192856+00:00**
 Source playlist SHA-256: **ee851e7cc4586db6af2ed6053089b2b6847adfba5ccf91fd7f69e56f36d0b819**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.

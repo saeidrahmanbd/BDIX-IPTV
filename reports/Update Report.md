@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-10-20 13:16 UTC**_
+_Last generated: **2026-10-20 13:39 UTC**_
 
 | Metric | Current |
 |---|---:|
@@ -19,7 +19,7 @@ _Last generated: **2026-10-20 13:16 UTC**_
 | Near-Duplicate URL Families | **0** |
 | Audit Blocking Issues | **0** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-20T13:13:28+00:00** |
+| Pre-Publish Gate Generated | **2026-10-20T13:35:01+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -52,10 +52,10 @@ _Last generated: **2026-10-20 13:16 UTC**_
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-20T13:13:28.254175+00:00** |
-| EPG coverage | **2026-10-20T13:16:21+00:00** |
+| Playlist audit | **2026-10-20T13:35:01.192856+00:00** |
+| EPG coverage | **2026-10-20T13:39:00+00:00** |
 | Stream health | **2026-10-17T10:01:04+00:00** |
-| Pre-publish gate | **2026-10-20T13:13:28+00:00** |
+| Pre-publish gate | **2026-10-20T13:35:01+00:00** |
 
 ## Maintenance History
 - Records retained: **30**
