@@ -67,3 +67,32 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 
 - No meaningful playlist changes detected.
 
+## 2026-10-20
+
+- 🗑️ **49 channel(s) removed**
+- 🔄 **1 backup stream(s) updated**
+- 🖼️ **47 logo reference(s) corrected**
+- 📡 **3 stream(s) replaced**
+
+### Removed channels
+- Aap Ki Adalat
+- Kalika TV
+- Kite Victers
+- 4ever Cinema
+- 4ever Drama
+- 4ever Music
+- 24 Hour Free Movies
+- AXN Black Poland
+- CMAC TV
+- CMC TV
+- CMC-USA
+- CP24
+- EBS Cinema
+- EBS Musika
+- Enter-Film
+- EPIX TV
+- EU Music
+- FilmUA Live
+- Fox 5
+- FX TV
+
