@@ -1,0 +1,144 @@
+name: Emergency IPTV Metadata Fix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/emergency-metadata-fix.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v7
+        with: {python-version: '3.12'}
+      - name: Backfill missing IPTV metadata
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          path = Path('IPTV-Playlist.m3u')
+          text = path.read_text(encoding='utf-8')
+          active = {
+              'Bangladesh','Indian Bangla','Indian Movies','Indian Music',
+              'Indian Entertainment','Pakistani','International',
+              'Documentary & Wildlife','Kids','Religious','Sports'
+          }
+          country_from_id = {
+              'bd':'BD','in':'IN','pk':'PK','us':'US','uk':'GB','gb':'GB',
+              'ca':'CA','au':'AU','nz':'NZ','sg':'SG','my':'MY','ae':'AE',
+              'sa':'SA','qa':'QA','bh':'BH','kw':'KW','om':'OM','jp':'JP',
+              'kr':'KR','cn':'CN','hk':'HK','tw':'TW','th':'TH','id':'ID',
+              'ph':'PH','de':'DE','fr':'FR','es':'ES','it':'IT','nl':'NL',
+              'be':'BE','ch':'CH','at':'AT','ie':'IE','za':'ZA','ng':'NG',
+              'ke':'KE','gh':'GH','eg':'EG','tr':'TR','ru':'RU','ua':'UA',
+              'br':'BR','mx':'MX','ar':'AR','cl':'CL','co':'CO','pe':'PE',
+              'np':'NP','lk':'LK','mu':'MU'
+          }
+          group_country = {
+              'Bangladesh':'BD', 'Indian Bangla':'IN', 'Indian Movies':'IN',
+              'Indian Music':'IN', 'Indian Entertainment':'IN', 'Pakistani':'PK'
+          }
+          group_language = {
+              'Bangladesh':'ben', 'Indian Bangla':'ben', 'Indian Movies':'hin',
+              'Indian Music':'hin', 'Indian Entertainment':'hin', 'Pakistani':'urd',
+              'International':'eng', 'Documentary & Wildlife':'eng', 'Kids':'eng',
+              'Religious':'ara', 'Sports':'eng'
+          }
+          special_language = {
+              '7S Music':'hin', '9X Jalwa':'hin', '9XM':'hin', 'Aakaash Aath':'ben',
+              'Animal Planet':'eng', 'Discovery':'eng', 'National Geographic':'eng',
+              'Nick':'eng', 'Nickelodeon':'eng', 'Cartoon Network':'eng',
+              'Disney':'eng', 'Al Jazeera':'ara', 'Quran':'ara', 'Madinah':'ara',
+              'Madani':'ara', 'Saudi':'ara', 'Pakistan':'urd', 'Urdu':'urd'
+          }
+          attr_re = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
+          ext = re.compile(r'^(#EXTINF:.*?)(,.*)$')
+          lines = text.splitlines()
+          changed = country = language = 0
+          i = 0
+          while i < len(lines):
+              if not lines[i].startswith('#EXTINF:') or i + 1 >= len(lines) or not lines[i+1].lstrip().startswith(('http://','https://')):
+                  i += 1
+                  continue
+              line = lines[i]
+              attrs = dict(attr_re.findall(line))
+              group = attrs.get('group-title','').strip()
+              if group not in active:
+                  i += 2
+                  continue
+              name = attrs.get('tvg-name','').strip()
+              tvg_id = attrs.get('tvg-id','').strip().lower()
+              suffix = re.search(r'\.([a-z]{2})(?:@[^.\s]+)?$', tvg_id)
+              cc = country_from_id.get(suffix.group(1)) if suffix else None
+              cc = cc or group_country.get(group)
+              lang = None
+              for key, value in special_language.items():
+                  if key.lower() in name.lower():
+                      lang = value
+                      break
+              if not lang:
+                  lang = group_language.get(group)
+              # Stronger country-specific overrides for broad groups.
+              if cc == 'PK' and group in {'Sports','Kids','Religious','International'}:
+                  if lang == 'eng': lang = 'urd'
+              if cc in {'BD','GB','CA'} and group == 'Religious' and any(x in name.lower() for x in ['quran','madani','islam','islamic']):
+                  lang = 'ara' if 'quran' in name.lower() else 'ben'
+              additions = []
+              if not attrs.get('tvg-country','').strip() and cc:
+                  additions.append(f'tvg-country="{cc}"')
+                  country += 1
+              if not attrs.get('tvg-language','').strip() and lang:
+                  additions.append(f'tvg-language="{lang}"')
+                  language += 1
+              if additions:
+                  m = re.search(r'\s+group-title="[^"]*"', line)
+                  if m:
+                      line = line[:m.start()] + ' ' + ' '.join(additions) + line[m.start():]
+                      lines[i] = line
+                      changed += 1
+              i += 2
+
+          path.write_text('\n'.join(lines) + ('\n' if text.endswith(('\n','\r')) else ''), encoding='utf-8')
+          print(f'Changed entries: {changed}; country filled: {country}; language filled: {language}')
+
+          # Hard fail if active entries still have either required field blank.
+          remaining = []
+          current = None
+          for line in lines:
+              if line.startswith('#EXTINF:'):
+                  current = line
+              elif current is not None and line.lstrip().startswith(('http://','https://')):
+                  a = dict(attr_re.findall(current))
+                  if a.get('group-title','').strip() in active and (not a.get('tvg-country','').strip() or not a.get('tvg-language','').strip()):
+                      remaining.append(a.get('tvg-name',''))
+                  current = None
+          print(f'Remaining active metadata gaps: {len(remaining)}')
+          if remaining:
+              raise SystemExit('Metadata backfill incomplete')
+      - name: Regenerate current reports
+        run: |
+          python scripts/epg_coverage.py
+          python scripts/pre_publish_gate.py || true
+          python scripts/generate_dashboard.py || true
+          python scripts/validate_report_freshness.py || true
+      - name: Commit metadata fix
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add IPTV-Playlist.m3u reports/ assets/dashboard.svg
+          git diff --cached --quiet && exit 0
+          git commit -m 'Fix IPTV country and language metadata'
+          git push origin HEAD:main
+      - name: Remove one-shot workflow
+        if: success()
+        run: |
+          git rm .github/workflows/emergency-metadata-fix.yml
+          git commit -m 'Remove emergency metadata fix workflow'
+          git push origin HEAD:main
