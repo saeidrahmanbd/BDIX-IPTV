@@ -1,0 +1,68 @@
+name: Sync IPTV Reports
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - IPTV-Playlist.m3u
+      - .github/workflows/sync-iptv-reports.yml
+      - scripts/iptv_metadata_backfill.py
+      - scripts/epg_coverage.py
+      - scripts/audit_playlist.py
+      - scripts/pre_publish_gate.py
+      - scripts/generate_logo_authenticity_manifest.py
+      - scripts/generate_dashboard.py
+      - scripts/validate_report_freshness.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bdix-iptv-report-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Regenerate metadata report
+        run: python scripts/iptv_metadata_backfill.py
+
+      - name: Regenerate playlist and EPG reports
+        run: |
+          python scripts/audit_playlist.py || true
+          python scripts/pre_publish_gate.py || true
+          python scripts/epg_coverage.py
+          python scripts/generate_logo_authenticity_manifest.py
+          python scripts/generate_dashboard.py
+
+      - name: Validate report synchronization
+        run: python scripts/validate_report_freshness.py
+
+      - name: Commit synchronized reports
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/ assets/dashboard.svg
+          if git diff --cached --quiet; then
+            echo 'Reports are already synchronized with the current playlist.'
+            exit 0
+          fi
+          git commit -m 'Synchronize IPTV generated reports'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main && git push origin HEAD:main && exit 0
+            git rebase --abort || true
+            sleep 3
+          done
+          echo '::error::Unable to publish synchronized reports after 3 attempts.'
+          exit 1
