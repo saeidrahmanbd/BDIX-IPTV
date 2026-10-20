@@ -59,7 +59,7 @@ concurrency:
   queue: max
 jobs:
   maintain:
-    if: ${{ !(github.actor == 'github-actions[bot]' && (startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance') || startsWith(github.event.head_commit.message, 'Add conservative playlist removal guard') || startsWith(github.event.head_commit.message, 'Add hard playlist preservation gates') || startsWith(github.event.head_commit.message, 'Refine preservation guard to protect stream URLs') || startsWith(github.event.head_commit.message, 'Harden protected queue byte-for-byte preservation') || startsWith(github.event.head_commit.message, 'Harden IPTV maintenance safety') || startsWith(github.event.head_commit.message, 'Enforce zero automatic playlist deletion'))) && !startsWith(github.event.head_commit.message, 'Repair IPTV metadata and local logos only; leave stream URLs unchanged') }}
+    if: ${{ !(github.actor == 'github-actions[bot]' && (startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance') || startsWith(github.event.head_commit.message, 'Add conservative playlist removal guard') || startsWith(github.event.head_commit.message, 'Add hard playlist preservation gates') || startsWith(github.event.head_commit.message, 'Refine preservation guard to protect stream URLs') || startsWith(github.event.head_commit.message, 'Harden protected queue byte-for-byte preservation') || startsWith(github.event.head_commit.message, 'Harden IPTV maintenance safety') || startsWith(github.event.head_commit.message, 'Enforce zero automatic playlist deletion') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports and EPG'))) && !startsWith(github.event.head_commit.message, 'Repair IPTV metadata and local logos only; leave stream URLs unchanged') }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
@@ -110,7 +110,6 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-
           git fetch origin main
           EVENT_WORKFLOW_BLOB="$(git rev-parse "${GITHUB_SHA}:.github/workflows/iptv-maintenance.yml")"
           CURRENT_WORKFLOW_BLOB="$(git rev-parse "FETCH_HEAD:.github/workflows/iptv-maintenance.yml")"
@@ -118,7 +117,6 @@ jobs:
             echo "::notice::Skipping superseded queued IPTV maintenance run; a newer workflow definition is on main. No playlist files were changed."
             exit 0
           fi
-
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           for attempt in 1 2 3; do
@@ -127,31 +125,25 @@ jobs:
             git clean -fd
             cp BDIX-Playlist.m3u /tmp/bdix-playlist-protected.m3u
             cp epg/epg.xml /tmp/bdix-epg-previous.xml 2>/dev/null || true
-
             python scripts/maintenance_helpers.py snapshot-playlist
             python scripts/maintenance_helpers.py snapshot
             rm -rf fixed_output
             echo 'Non-destructive maintenance mode: fix_playlist.py skipped.'
-
             python scripts/repair_playlist_quality.py
             python scripts/normalize_metadata.py
             python scripts/repair_playlist_logos.py
             python scripts/sort_playlists.py IPTV-Playlist.m3u
             python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
             if grep -Eiq 'group-title="(New Channels|New Backup|New)"' IPTV-Playlist.m3u; then echo '::error::Forbidden staging playlist category detected after normalization.'; exit 1; fi
-
             python scripts/maintenance_helpers.py invalidate-bad-logos
             python scripts/migrate_external_logos_fixed.py
             python scripts/generate_logo_authenticity_manifest.py
             python scripts/generate_logo_repair_summary.py
             python scripts/restore_protected_review.py
-
             python scripts/iptv_metadata_backfill.py
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
-
             python scripts/stream_health.py
             python scripts/report_iptv_fragile_streams.py
-
             python scripts/epg_coverage.py
             python scripts/fetch_iptv_org_epg.py
             python scripts/run_generate_epg.py
@@ -182,7 +174,6 @@ jobs:
             python scripts/pre_publish_gate.py
             GATE_STATUS=$?
             set -e
-
             if [ "$GATE_STATUS" -ne 0 ]; then
               echo '::warning::Pre-publish gate found issues; running automatic correction pass before failing.'
               python scripts/repair_playlist_quality.py || true
@@ -202,7 +193,6 @@ jobs:
               GATE_STATUS=$?
               set -e
             fi
-
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
             python scripts/iptv_metadata_backfill.py
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
@@ -212,7 +202,6 @@ jobs:
             python scripts/pre_publish_gate.py
             GATE_STATUS=$?
             set -e
-
             python scripts/record_maintenance_history.py
             python scripts/epg_coverage.py
             python scripts/generate_logo_authenticity_manifest.py
@@ -264,7 +253,6 @@ jobs:
             reports/proposed-removals.md
             reports/iptv-metadata-backfill.md
             reports/playlist-audit.md
-            reports/pre-publish-gate.md
             reports/stream-health.md
             reports/stream-risk-review.md
             reports/fix-report.md
