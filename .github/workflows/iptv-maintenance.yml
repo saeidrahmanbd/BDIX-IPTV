@@ -24,6 +24,8 @@ on:
       - scripts/official_epg_sources.py
       - scripts/epg_publish_gate.py
       - scripts/validate_report_freshness.py
+      - scripts/iptv_metadata_backfill.py
+      - tests/test_metadata_backfill.py
       - tests/test_report_freshness.py
       - scripts/sync_epg_worker_map.py
       - scripts/audit_playlist.py
@@ -75,10 +77,13 @@ jobs:
           scripts/repair_playlist_logos.py
           scripts/generate_logo_authenticity_manifest.py
           scripts/validate_report_freshness.py
+          scripts/iptv_metadata_backfill.py
           scripts/epg_coverage.py
           scripts/generate_epg.py
-      - name: Validate report freshness tests
-        run: python -m unittest discover -s tests -p 'test_report_freshness.py'
+      - name: Run playlist metadata and report freshness tests
+        run: |
+          python -m unittest discover -s tests -p 'test_report_freshness.py'
+          python -m unittest discover -s tests -p 'test_metadata_backfill.py'
       - name: Validate EPG configuration
         run: python scripts/check_epg_config.py
       - name: Run maintenance
@@ -120,6 +125,10 @@ jobs:
             python scripts/migrate_external_logos_fixed.py
             python scripts/generate_logo_authenticity_manifest.py
             python scripts/restore_protected_review.py
+
+            # Fill only blank metadata from exact catalogue IDs; never infer from group/URL.
+            # The script reports remaining ambiguous entries and preserves all stream URLs.
+            python scripts/iptv_metadata_backfill.py
 
             # HARD REMOVAL GUARD #1: after all playlist repair scripts, no existing
             # stream URL may disappear. Duplicate URLs are reported only; they are
@@ -231,6 +240,7 @@ jobs:
           name: iptv-maintenance-safety-${{ github.run_number }}
           path: |
             reports/proposed-removals.md
+            reports/iptv-metadata-backfill.md
             reports/playlist-audit.md
             reports/pre-publish-gate.md
             reports/stream-health.md
