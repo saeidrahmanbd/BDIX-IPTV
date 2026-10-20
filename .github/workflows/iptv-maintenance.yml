@@ -27,6 +27,8 @@ on:
       - scripts/fetch_iptv_org_epg.py
       - scripts/official_epg_sources.py
       - scripts/epg_publish_gate.py
+      - scripts/epg_publish_gate_v2.py
+      - scripts/apply_epg_language_priority.py
       - scripts/validate_report_freshness.py
       - scripts/logo_asset_naming.py
       - scripts/generate_logo_provenance_review.py
@@ -104,6 +106,8 @@ jobs:
           python -m unittest discover -s tests -p 'test_logo_asset_naming.py'
           python -m unittest discover -s tests -p 'test_logo_provenance_review.py'
           python -m unittest discover -s tests -p 'test_iptv_fragile_streams.py'
+          python -m unittest discover -s tests -p 'test_language_policy.py'
+          python -m unittest discover -s tests -p 'test_epg_config.py'
       - name: Validate EPG configuration
         run: python scripts/check_epg_config.py
       - name: Run maintenance
@@ -151,7 +155,7 @@ jobs:
             grep -q '<programme ' epg/epg.xml
             cp epg/epg.xml /tmp/bdix-epg-generated.xml
             set +e
-            python scripts/epg_publish_gate.py
+            python scripts/epg_publish_gate_v2.py
             EPG_GATE_STATUS=$?
             set -e
             if [ "$EPG_GATE_STATUS" -ne 0 ]; then
