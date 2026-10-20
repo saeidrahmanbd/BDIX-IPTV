@@ -129,12 +129,11 @@ new = quality(NEW)
 if new["channels"] == 0 or new["programmes"] == 0:
     raise SystemExit("EPG gate BLOCK: generated guide has no usable channels/programmes")
 
-# Never publish the previous wrong-language behaviour again. English-only means
-# English language metadata (when specified) and Latin-script visible text in
-# programme titles, subtitles, and descriptions.
+# The guide accepts English (Latin script) or Bengali (Bengali script) text.
+# Explicit unsupported language tags/scripts are rejected in visible guide fields.
 if new["language_violations"] or new["title_violations"]:
     raise SystemExit(
-        "EPG gate BLOCK: English-only validation failed: "
+        "EPG gate BLOCK: allowed-language validation failed: "
         f'{new["language_violations"]} non-English text fields, '
         f'{new["title_violations"]} missing/blank programme titles'
     )
@@ -148,7 +147,7 @@ if OLD.exists():
             f'{old["channels"]} -> {new["channels"]}'
         )
 
-    # Schedule volume is secondary to the English-only and conflict-free rules.
+    # Schedule volume is secondary to the allowed-language and conflict-free rules.
     # A guide retaining at least 85% of programme volume passes when it has no
     # overlaps and placeholder titles remain a small fraction of the result.
     clean_volume_pass = (
@@ -158,7 +157,7 @@ if OLD.exists():
     )
     if clean_volume_pass:
         print(
-            "EPG gate PASS: English-only clean guide accepted "
+            "EPG gate PASS: allowed-language clean guide accepted "
             f'(channels={new["channels"]}, programmes={new["programmes"]}, '
             f'previous programmes={old["programmes"]}, '
             f'language violations={new["language_violations"]}, '
@@ -178,7 +177,7 @@ if OLD.exists():
 
     if quality_override:
         print(
-            "EPG gate PASS: English-only quality override accepted a smaller clean guide "
+            "EPG gate PASS: allowed-language quality override accepted a smaller clean guide "
             f'(channels {old["channels"]}->{new["channels"]}, '
             f'programmes {old["programmes"]}->{new["programmes"]}, '
             f'overlaps {old["overlaps"]}->{new["overlaps"]}, '
@@ -187,7 +186,7 @@ if OLD.exists():
         sys.exit(0)
 
     raise SystemExit(
-        "EPG gate BLOCK: new English-only guide failed retention/quality checks "
+        "EPG gate BLOCK: new allowed-language guide failed retention/quality checks "
         f'(channels {old["channels"]}->{new["channels"]}, '
         f'programmes {old["programmes"]}->{new["programmes"]}, '
         f'overlaps {old["overlaps"]}->{new["overlaps"]}, '
@@ -195,6 +194,6 @@ if OLD.exists():
     )
 
 print(
-    "EPG gate PASS: English-only guide accepted "
+    "EPG gate PASS: allowed-language guide accepted "
     f'(channels={new["channels"]}, programmes={new["programmes"]})'
 )
