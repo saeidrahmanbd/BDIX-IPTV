@@ -51,6 +51,10 @@ EPG_ALIASES = {
     "DocumentaryPlus": ["plex.tv.Documentary+.plex"],
     # Reuses the prior mapped EPG identity for the same channel after ID normalization.
     "custom.nick.bangla": ["jtv1341"],
+    # Verified against fresh dishtv/jiotv feeds (exact display name, current English rows).
+    "Hungama.in@SD": ["143150"],
+    "ZBMusic.in@HD": ["jtv3319"],
+    "ZBBhakti.in@HD": ["jtv3320"],
 }
 
 EPG_LOCKS = {
@@ -99,7 +103,6 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_BEIN1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
-    "https://www.rtvbd.tv/schedule.php",
     "https://hum.tv/schedule/",
 ]
 PRIVATE_SOURCE_ENV = "M3U4U_XMLTV_URL"

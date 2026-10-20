@@ -44,3 +44,7 @@ The DishTV channel catalogue maintained in [iptv-org/epg](https://github.com/ipt
 ## Programme-data permissions
 
 **Automated retrieval and public redistribution rights for the configured programme-data sources have not been established.** Public accessibility of a feed, an open-source generator licence, and catalogue identity evidence do not by themselves grant permission to republish programme schedules. Obtain provider terms or written permission that covers automated retrieval and public XMLTV redistribution, or switch to a properly licensed source before treating public publication as approved. Do not mark any source policy approval fields true without supporting evidence.
+
+## RTV Bangladesh
+
+RTV (`RTV.bd`) is not a configured source: automated retrieval permission has not been obtained from RTV, and its site's robots.txt appeared to disallow automated access. The adapter code remains in `scripts/official_epg_sources.py` but is not used. Do not re-enable it without written permission.
