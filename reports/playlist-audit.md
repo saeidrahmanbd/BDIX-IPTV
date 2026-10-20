@@ -1,16 +1,16 @@
 # Playlist Audit
-Generated: **2026-10-20T09:24:53.106829+00:00**
-Audited playlist revision: `cbf9eb9fbf037316cfe258d22ea80cbef94eb699`
-Playlist SHA-256: `03bb48321a86bb995929d6557628826c42a1c1ca5138f785ca023364e3acdbeb`
-Source playlist SHA-256: **03bb48321a86bb995929d6557628826c42a1c1ca5138f785ca023364e3acdbeb**
+Generated: **2026-10-20T09:36:49.996607+00:00**
+Audited playlist revision: `87538cb14a100c41a0a602829bd1bd3440bc5407`
+Playlist SHA-256: `e940a1908069ecbb8d849b5e04e02a42e977587d2c46aefb40c5af7d4f7f62af`
+Source playlist SHA-256: **e940a1908069ecbb8d849b5e04e02a42e977587d2c46aefb40c5af7d4f7f62af**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1139**
-- Unique channel IDs: **705**
-- IDs with multiple streams: **235**
+- Playlist entries: **1105**
+- Unique channel IDs: **676**
+- IDs with multiple streams: **230**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
@@ -19,12 +19,12 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **0**
 - External logo references (review only): **0**
-- Logo references checked: **1139**
+- Logo references checked: **1105**
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
-- Primary entries missing tvg-country: **292**
-- Primary entries missing tvg-language: **292**
+- Primary entries missing tvg-country: **276**
+- Primary entries missing tvg-language: **276**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Category registry issues: **0**
@@ -37,8 +37,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 ## Primary Metadata Completeness
 
 Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.
-- Active primary entries missing tvg-country: **292**
-- Active primary entries missing tvg-language: **292**
+- Active primary entries missing tvg-country: **276**
+- Active primary entries missing tvg-language: **276**
 
 | Group | Missing tvg-country | Missing tvg-language |
 |---|---:|---:|
@@ -46,7 +46,7 @@ Missing country/language values are informational, not a reason to delete, recla
 | Indian Entertainment | 25 | 25 |
 | Indian Movies | 12 | 12 |
 | Indian Music | 9 | 9 |
-| International | 93 | 93 |
+| International | 77 | 77 |
 | Kids | 42 | 42 |
 | Religious | 15 | 15 |
 | Sports | 21 | 21 |
@@ -251,18 +251,9 @@ Canonical registry matches the permanent IPTV category order.
 ### custom.a.sports.hd (2 streams)
 - A Sports — Sports — https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/tracks-v1a1/mono.ts.m3u8
 - A Sports — Backup — https://playztv-apps.pages.dev/a-sports/index.m3u8
-### custom.accuweather (2 streams)
-- AccuWeather — International — https://amg00684-accuweather-accuweather-plex-jbd2s.amagi.tv/playlist/amg00684-accuweather-accuweather-plex/playlist.m3u8
-- AccuWeather — Backup — https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00684-accuweather-accuweather-plex/playlist.m3u8?v=1
 ### custom.amar.bangla.digital (2 streams)
 - Amar Bangla Digital — Indian Bangla — http://115.187.41.216:8080/hls/amardigital/index.m3u8
 - Amar Bangla Digital — Backup — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/amardigital.stream/playlist.m3u8
-### custom.america.s.got.talent (2 streams)
-- America's Got Talent — International — https://jmp2.uk/stvp-GBBC2300002GG
-- America's Got Talent — Backup — https://d2mexh8isep4mf.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-wp08v1ibrni4i/AmericasGotTalent_GB.m3u8
-### custom.american.idol (2 streams)
-- American Idol — International — https://jmp2.uk/stvp-GBBC2300001X5
-- American Idol — Backup — https://d2yn8dyffvmgy.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-2mt12zhezzrsh/AmericanIdol_GB.m3u8
 ### custom.ary.q.tv (2 streams)
 - ARY Q TV — Religious — https://aryqtvm.aryzap.com/v1/0183ea2a0eec0b8ed5941a38bc76/0183ea2a4e470b8ed5aa4d793457/ARYQTVH264_1080p.m3u8
 - ARY Q TV — Backup — https://aryqtvm.aryzap.com/v1/0183ea2a0eec0b8ed5941a38bc76/0183ea2a4e470b8ed5aa4d793457/ARYQTVH264_720p.m3u8
@@ -498,9 +489,6 @@ Canonical registry matches the permanent IPTV category order.
 ### faktmarathi.in@sd (2 streams)
 - Fakt Marathi — Indian Entertainment — https://mumt07.tangotv.in/zHjX9OFlFAKTMARATHI/index.m3u8
 - Fakt Marathi — Backup — https://cdn.pishow.tv/ott/live/10002/master.m3u8
-### fashionone.uk (2 streams)
-- Fashion One — International — https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e2ee690051.smil/playlist.m3u8
-- FASHION ONE — Backup — https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2ee6997cb_1/playlist.m3u8
 ### foodfood.in@sd (2 streams)
 - Food Food — Documentary & Wildlife — https://mumt03.tangotv.in/Dsly5z3HFOODFOOD/index.m3u8
 - Food Food — Backup — https://tvsen3.aynaott.com/s2FwmdbM/index.m3u8
@@ -900,9 +888,6 @@ Canonical registry matches the permanent IPTV category order.
 ### themovieclub.in@hd (2 streams)
 - The Movie Club — Indian Movies — https://sis-global.prod.samsungtv.plus/v1/tvpprd/sc-mp2ar4ca425xo.m3u8
 - The Movie Club — Backup — https://d2tiq0lnb179mp.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gp7rpz72nscfl/TMC_IN.m3u8?ads.ads_cdn=cf&ads.cdn=cf&pb_type=pb-gp7rpz72nscfl_cloudfront
-### thewalkingdeaduniverse.us (2 streams)
-- The Walking Dead Universe — International — https://amc-twdfanexperience-1-us.xumo.wurl.tv/playlist.m3u8
-- The Walking Dead Universe — Backup — https://22985209144b4ff78289fbb19f55e93e.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Plex_TWDUniverseExperience/playlist.m3u8
 ### traceuk.uk (2 streams)
 - Trace UK — International — https://channels.trace.plus/Traceprod/UK_FAST_hd/index.m3u8
 - Trace UK — Backup — https://d2l4tng0wskzvn.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-i4w0aagbo260c/Trace_GB.m3u8
@@ -1003,7 +988,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1139**
+- Healthy/local references: **1105**
 - External references (review only): **0**
 - missing: **0**
 - broken-local: **0**
