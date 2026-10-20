@@ -26,6 +26,7 @@ class ReportFreshnessTests(unittest.TestCase):
             "pre-publish-gate.md": f"Generated: **2026-10-20T11:00:00+00:00**\nSource playlist SHA-256: **{digest}**\n",
             "epg-coverage.md": f"Generated: **2026-10-20T11:00:00+00:00**\n- IPTV-Playlist.m3u SHA-256: **{digest}**\n",
             "epg-three-playlist-audit.md": f"Generated: **2026-10-20T11:00:00+00:00**\n- IPTV-Playlist.m3u SHA-256: **{digest}**\n",
+            "iptv-metadata-backfill.md": f"Generated: **2026-10-20T11:00:00+00:00**\nAfter playlist SHA-256: **{digest}**\n",
         }
         for name, text in markdown_reports.items():
             (self.root / "reports" / name).write_text(text, encoding="utf-8")
