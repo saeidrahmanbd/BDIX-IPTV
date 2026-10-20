@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 PLAYLISTS = ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u"]
 OUT = Path("reports/logo-authenticity-manifest.json")
 REGISTRY_PATH = Path("reports/logo-source-registry.json")
-ATTR_RE = re.compile(r'([\\w-]+)="([^"]*)"')
+ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 
 
 def attrs(line):
@@ -129,7 +129,7 @@ def main():
     }
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    OUT.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {OUT}: {len(records)} entries; statuses={tally}")
 
     # Newly fetched assets must be staged with the matching playlist reference.
