@@ -431,8 +431,6 @@ https://d2esfk1pb9cdob.cloudfront.net/master.m3u8
 https://drk6xq0vhn.gpcdn.net/live/and_tv_hd_abr/index.m3u8
 #EXTINF:-1 tvg-id="custom.aaj.tak.hd" tvg-name="Aaj Tak" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aaj-tak-hd.png" tvg-chno="1143" channel-id="custom.aaj.tak.hd" group-title="Indian Entertainment" tvg-country="IN" tvg-language="hin",Aaj Tak
 https://aajtaklive-amd.akamaized.net/hls/live/2014416/aajtak/aajtaklive/live_720p/chunks.m3u8
-#EXTINF:-1 tvg-id="custom.aap.ki.adalat" tvg-name="Aap Ki Adalat" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-aap-ki-adalat.svg" tvg-chno="1144" channel-id="custom.aap.ki.adalat" group-title="Indian Entertainment" tvg-country="IN" tvg-language="hin",Aap Ki Adalat
-https://amg01550-indiatv-indiatv-aapkiadalat-mi-xiaomi-n5tuk.amagi.tv/ts-ap-s1-n1/playlist/amg01550-indiatv-indiatv-aapkiadalat-mi-xiaomi/playlist.m3u8
 #EXTINF:-1 tvg-id="AaryaaTV.in" tvg-name="Aaryaa TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aaryaa-tv.png" tvg-chno="421" channel-id="AaryaaTV.in" group-title="Indian Entertainment",Aaryaa TV
 https://stream.ottlive.co.in/aryatvtamil/index.m3u8
 #EXTINF:-1 tvg-id="AlankarTV.in@SD" tvg-name="Alankar TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/alankar-tv.png" tvg-chno="232" channel-id="AlankarTV.in@SD" group-title="Indian Entertainment",Alankar TV
@@ -567,12 +565,8 @@ https://streams.tangotv.in/KAIRALI/ORIGIN/index.m3u8
 https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/murasu_nim_https/050522/murasu/playlist.m3u8
 #EXTINF:-1 tvg-id="KalaignarTV.in@SD" tvg-name="Kalaignar TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kalaignar-tv-82de1b8f.png" tvg-chno="531" channel-id="KalaignarTV.in@SD" tvg-language="tam" tvg-country="IN" group-title="Indian Entertainment",Kalaignar TV
 https://segment.yuppcdn.net/240122/kalaignartv/playlist.m3u8
-#EXTINF:-1 tvg-id="KalikaTV.in@SD" tvg-name="Kalika TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kalika-tv.png" tvg-chno="338" channel-id="KalikaTV.in@SD" group-title="Indian Entertainment",Kalika TV
-http://server.applelive.in/kalikatv/kalikatv.m3u8
 #EXTINF:-1 tvg-id="KeralaVision.in@SD" tvg-name="Kerala Vision" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kerala-vision.png" tvg-chno="60" channel-id="KeralaVision.in@SD" group-title="Indian Entertainment" tvg-country="IN" tvg-language="mal",Kerala Vision
 https://mumt03.tangotv.in/Dsly5z3HKERALAVISION/index.m3u8
-#EXTINF:-1 tvg-id="KiteVicters.in@SD" tvg-name="Kite Victers" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kite-victers.png" tvg-chno="437" channel-id="KiteVicters.in@SD" tvg-language="mal" tvg-country="IN" group-title="Indian Entertainment",Kite Victers
-https://932y4x26ljv8-hls-live.5centscdn.com/victers/tv.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="MadhimugamTV.in" tvg-name="Madhimugam TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/madhimugam-tv-576p-80c57e3e48.png" tvg-chno="342" channel-id="MadhimugamTV.in" tvg-language="tam" tvg-country="IN" group-title="Indian Entertainment",Madhimugam TV
 https://cdn.pishow.tv/ott/live/1476/master.m3u8
 #EXTINF:-1 tvg-id="MahaaMax.in" tvg-name="Mahaa Max" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mahaa-max.png" tvg-chno="343" channel-id="MahaaMax.in" tvg-language="tel" tvg-country="IN" group-title="Indian Entertainment",Mahaa Max
