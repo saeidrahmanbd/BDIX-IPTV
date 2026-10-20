@@ -40,6 +40,20 @@ class MetadataBackfillTests(unittest.TestCase):
         self.assertNotIn('tvg-language="', updated)
         self.assertEqual(metrics["language_fields_filled"], 0)
 
+    def test_catalogue_without_language_column_fills_country_only(self):
+        catalogue = parse_catalogue("id,name,country\nExample.in,Example,IN\n")
+        self.assertEqual(catalogue["Example.in"], ("IN", ()))
+        playlist = (
+            "#EXTM3U\n"
+            '#EXTINF:-1 tvg-id="Example.in" tvg-name="Example" group-title="Indian Movies",Example\n'
+            "https://example.invalid/example.m3u8\n"
+        )
+        updated, metrics = update_playlist(playlist, catalogue)
+        self.assertIn('tvg-country="IN"', updated)
+        self.assertNotIn('tvg-language="', updated)
+        self.assertEqual(metrics["country_fields_filled"], 1)
+        self.assertEqual(metrics["language_fields_filled"], 0)
+
     def test_existing_metadata_is_never_overwritten(self):
         playlist = (
             "#EXTM3U\n"
