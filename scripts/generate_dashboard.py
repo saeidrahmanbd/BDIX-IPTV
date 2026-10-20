@@ -35,7 +35,7 @@ def main():
     missing_match=re.search(r'IDs with no EPG source mapping:\s*\*\*(\d+)\*\*',g,re.I)
     # Prefer the IPTV-Playlist.m3u row from the detailed EPG audit. The top-level
     # EPG report contains combined metrics and must not be presented as IPTV-only.
-    iptv_row=re.search(r'^\\|\\s*IPTV-Playlist\\.m3u\\s*\\|\\s*(\\d+)\\s*\\|\\s*(\\d+)\\s*\\|\\s*(\\d+)\\s*\\|\\s*(\\d+)\\s*\\|\\s*(\\d+)\\s*\\|\\s*(\\d+)\\s*\\|\\s*(\\d+)\\s*\\|',egd,re.M)
+    iptv_row=re.search(r'^\|\s*IPTV-Playlist\.m3u\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|',egd,re.M)
     if iptv_row:
         india=int(iptv_row.group(2))
         mapped=int(iptv_row.group(3))
