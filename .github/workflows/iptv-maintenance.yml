@@ -168,9 +168,12 @@ jobs:
               python scripts/migrate_external_logos_fixed.py || true
               python scripts/generate_logo_authenticity_manifest.py || true
               python scripts/restore_protected_review.py
-              python scripts/audit_playlist.py || true
+              set +e
+              python scripts/audit_playlist.py
+              AUDIT_STATUS=$?
               python scripts/pre_publish_gate.py
               GATE_STATUS=$?
+              set -e
             fi
 
             # HARD REMOVAL GUARD #2: correction scripts are not trusted to delete
@@ -181,10 +184,11 @@ jobs:
             python scripts/record_maintenance_history.py
             python scripts/generate_dashboard.py
             if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
-              echo '::warning::Audit/pre-publish gate still reports issues after the automatic correction pass. The playlist remains publishable only if the removal guard passes; unresolved audit issues are preserved for review.'
+              echo "::error::Audit or pre-publish gate still reports blocking issues after the correction pass."
               echo "Audit status: $AUDIT_STATUS"
               echo "Pre-publish gate status: $GATE_STATUS"
-              git restore -- logos/ || true
+              echo "The strict stream-preservation guard passed, but this playlist will not be published until validation is clean."
+              exit 1
             fi
             python scripts/record_maintenance_history.py --refresh
             python scripts/generate_dashboard.py
