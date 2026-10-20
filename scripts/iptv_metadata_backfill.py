@@ -94,7 +94,8 @@ def update_playlist(text, catalogue):
         if current_index is None or not line.strip().startswith(("http://", "https://")):
             result.append(line)
             continue
-        original_info = result[current_index]
+        info_index = current_index
+        original_info = result[info_index]
         current_index = None
         meta = attrs(original_info)
         if meta.get("group-title", "").strip() not in ACTIVE_GROUPS:
@@ -119,7 +120,7 @@ def update_playlist(text, catalogue):
         group = re.search(r'\s+group-title="[^"]*"', original_info)
         if additions and group:
             insert = "".join(' {}="{}"'.format(k, v) for k, v in additions)
-            result[current_index] = original_info[:group.start()] + insert + original_info[group.start():]
+            result[info_index] = original_info[:group.start()] + insert + original_info[group.start():]
             changed_entries += 1
             country_fills += sum(k == "tvg-country" for k, _ in additions)
             language_fills += sum(k == "tvg-language" for k, _ in additions)
