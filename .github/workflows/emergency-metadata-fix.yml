@@ -83,10 +83,14 @@ jobs:
           git add IPTV-Playlist.m3u reports/ assets/dashboard.svg
           git diff --cached --quiet && exit 0
           git commit -m 'Fix IPTV metadata and refresh reports'
+          git fetch origin main
+          git rebase origin/main
           git push origin HEAD:main
       - name: Remove one-shot workflow
         if: success()
         run: |
+          git fetch origin main
+          git rebase origin/main
           git rm .github/workflows/emergency-metadata-fix.yml
           git commit -m 'Remove one-shot metadata fix workflow'
           git push origin HEAD:main
