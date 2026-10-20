@@ -59,6 +59,13 @@ class ReportFreshnessTests(unittest.TestCase):
     def test_current_reports_match_both_playlists(self):
         self.assertEqual(check_reports(self.root, now=self.now), [])
 
+    def test_generated_mode_also_requires_current_stream_health(self):
+        self.assertEqual(check_reports(self.root, now=self.now, mode="generated"), [])
+        report = self.root / "reports" / "stream-health.md"
+        report.write_text(report.read_text(encoding="utf-8").replace(self.timestamp, "2026-10-17T08:00:00+00:00"), encoding="utf-8")
+        errors = check_reports(self.root, now=self.now, mode="generated")
+        self.assertTrue(any("stream-health.md: stale report" in item for item in errors))
+
     def test_playlist_change_invalidates_its_fingerprinted_reports(self):
         with (self.root / "IPTV-Playlist.m3u").open("a", encoding="utf-8") as stream:
             stream.write("# metadata-only change\n")
