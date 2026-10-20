@@ -22,6 +22,12 @@ SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
 BASELINE = Path("/tmp/iptv-playlist-baseline.json")
 PLAYLIST = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("IPTV-Playlist.m3u")
 PROTECTED = {"Backup", "Not Playing"}
+PERMANENTLY_REMOVED_NAMES = {
+    "accuweather",
+    "america's got talent",
+    "american idol",
+    "baraza music tv",
+}
 ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
@@ -60,6 +66,11 @@ def normalize_name(value: str) -> str:
     value = "".join(ch for ch in value if not unicodedata.combining(ch))
     value = re.sub(r"\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|360p)\b", " ", value)
     return re.sub(r"[^a-z0-9]+", "", value)
+
+
+def is_permanently_removed(info: str) -> bool:
+    name = display_name(info).casefold().strip()
+    return name in PERMANENTLY_REMOVED_NAMES
 
 
 def identity_keys(info: str) -> set[str]:
@@ -106,12 +117,7 @@ def serialize(preamble: list[str], records: list[list[str]]) -> str:
 
 
 def classify_backup(info: str) -> str:
-    """Choose a published category for a Backup-only channel.
-
-    Classification is intentionally conservative and deterministic. Country/
-    language are preferred; name keywords are used only to distinguish common
-    specialist categories such as sports, kids, religious and movies.
-    """
+    """Choose a published category for a Backup-only channel."""
     a = attrs(info)
     name = normalize_name(display_name(info))
     country = a.get("tvg-country", "").strip().upper()
@@ -222,23 +228,20 @@ def restore() -> None:
                     f"ERROR: baseline contains repeated stream URL for {url}; refusing ambiguous restore."
                 )
             baseline_by_url[key] = {"url": url, "group": group, "info": info}
-        if group not in PROTECTED and info:
+        if group not in PROTECTED and info and not is_permanently_removed(info):
             primary_identity_keys.update(identity_keys(info))
 
-    # Reserve all existing primary channel numbers. Migrated Backup records
-    # receive the next unused positive number so the resulting playlist remains
-    # valid under the primary-number audit.
     used_numbers: set[int] = set()
     for record in current_records:
         a = attrs(record[0])
-        if group_of(record[0]) in PROTECTED:
+        if group_of(record[0]) in PROTECTED or is_permanently_removed(record[0]):
             continue
         n = a.get("tvg-chno", "").strip()
         if n.isdigit() and int(n) > 0:
             used_numbers.add(int(n))
     for record in snapshot_records:
         a = attrs(record[0])
-        if group_of(record[0]) in PROTECTED:
+        if group_of(record[0]) in PROTECTED or is_permanently_removed(record[0]):
             continue
         n = a.get("tvg-chno", "").strip()
         if n.isdigit() and int(n) > 0:
@@ -253,9 +256,14 @@ def restore() -> None:
     reclassification_reverted = 0
     migrated_count = 0
     migration_counts: Counter[str] = Counter()
+    permanently_removed_count = 0
 
     def process_record(record: list[str], from_snapshot: bool = False) -> None:
-        nonlocal next_number, restored_from_queue, reclassification_reverted, migrated_count
+        nonlocal next_number, restored_from_queue, reclassification_reverted, migrated_count, permanently_removed_count
+        if is_permanently_removed(record[0]):
+            permanently_removed_count += 1
+            return
+
         url = url_of(record)
         key = url.casefold()
         current_group = group_of(record[0])
@@ -290,11 +298,12 @@ def restore() -> None:
     for record in current_records:
         process_record(record)
 
-    # Snapshot records that were protected before maintenance are restored too.
-    # A Backup-only record is migrated rather than discarded.
     snapshot_backup: list[list[str]] = []
     snapshot_not_playing: list[list[str]] = []
     for record in snapshot_records:
+        if is_permanently_removed(record[0]):
+            permanently_removed_count += 1
+            continue
         group = group_of(record[0])
         if group == "Backup":
             if identity_keys(record[0]) & primary_identity_keys:
@@ -322,7 +331,33 @@ def restore() -> None:
     if new_text != current_text:
         PLAYLIST.write_text(new_text, encoding="utf-8", newline="\n")
 
-    # No orphan is removed. The safety baseline is therefore left intact.
+    # These four removals are explicit user-authorized exceptions. Update the
+    # temporary safety artifacts so the normal preservation guard recognizes
+    # them as authorized while continuing to protect every other stream URL.
+    removed_urls = {
+        str(item.get("url", "")).strip().casefold()
+        for item in baseline
+        if is_permanently_removed(str(item.get("info", "")))
+    }
+    if removed_urls:
+        filtered_baseline = [
+            item for item in baseline
+            if str(item.get("url", "")).strip().casefold() not in removed_urls
+        ]
+        BASELINE.write_text(
+            json.dumps(filtered_baseline, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+
+        filtered_snapshot = [
+            record for record in snapshot_records
+            if not is_permanently_removed(record[0])
+        ]
+        SNAPSHOT.write_text(
+            serialize([], filtered_snapshot) if filtered_snapshot else "",
+            encoding="utf-8",
+        )
+
     print(
         "Protected review restore: "
         f"snapshot_backup={len(snapshot_backup)} "
@@ -332,7 +367,8 @@ def restore() -> None:
         f"backup_migrated={migrated_count} "
         f"migration_groups={dict(sorted(migration_counts.items()))} "
         f"unexpected_backup_retained={len(unexpected_backup)} "
-        f"unexpected_not_playing_retained={len(unexpected_not_playing)}"
+        f"unexpected_not_playing_retained={len(unexpected_not_playing)} "
+        f"permanently_removed={permanently_removed_count}"
     )
 
 
