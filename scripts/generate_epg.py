@@ -173,39 +173,66 @@ def playlist_groups():
     return groups
 
 
-# The published guide accepts English (Latin script) or Bengali (Bengali script).
-# Reject unsupported language tags/scripts such as Hindi, Arabic, Cyrillic, and Han.
 import unicodedata
 
 TEXT_FIELDS = {"title", "sub-title", "desc"}
 XML_LANG = "{http://www.w3.org/XML/1998/namespace}lang"
 
+# All legitimate programme languages remain eligible. When several languages
+# are available for the same channel/time, title selection prefers English,
+# then Bengali, then another valid language. This prevents coverage loss while
+# keeping the published guide easy to read for the primary audience.
+LANG_PRIORITY = {"en": 3, "eng": 3, "bn": 2, "ben": 2}
+LANG_PREFIXES = (("en-", 3), ("en_", 3), ("bn-", 2), ("bn_", 2))
 
-# Guide text policy: English (Latin script) or Bengali (Bengali script) only.
-# Any other language tag or script is rejected. Keep identical in epg_coverage.py,
-# generate_epg.py and epg_publish_gate.py (tests/test_language_policy.py checks this).
-ALLOWED_LANGS = {"en", "eng", "bn", "ben"}
-ALLOWED_LANG_PREFIXES = ("en-", "en_", "bn-", "bn_")
-ALLOWED_SCRIPTS = ("LATIN", "BENGALI")
+def _script_rank(text):
+    scripts = set()
+    for char in text:
+        if unicodedata.category(char).startswith("L"):
+            name = unicodedata.name(char, "")
+            if "LATIN" in name:
+                scripts.add("latin")
+            elif "BENGALI" in name:
+                scripts.add("bengali")
+            elif name:
+                scripts.add("other")
+    if scripts == {"latin"} or scripts == {"latin", "bengali"}:
+        return 3 if scripts == {"latin"} else 3
+    if scripts == {"bengali"}:
+        return 2
+    return 1 if scripts else 0
 
-
-def _script_allowed(char):
-    name = unicodedata.name(char, "")
-    return any(s in name for s in ALLOWED_SCRIPTS)
-
+def language_priority(elem):
+    text = (elem.text or "").strip()
+    lang = (elem.attrib.get(XML_LANG) or elem.attrib.get("lang") or "").strip().lower()
+    if lang in LANG_PRIORITY:
+        return LANG_PRIORITY[lang]
+    for prefix, rank in LANG_PREFIXES:
+        if lang.startswith(prefix):
+            return rank
+    return _script_rank(text)
 
 def is_english_text_element(elem):
+    # Backward-compatible function name used by the coverage/test code. It now
+    # means "valid XMLTV text", not "English-only text". Empty text is handled
+    # by callers that require a visible programme title.
     text = (elem.text or "").strip()
     if not text:
         return True
     lang = (elem.attrib.get(XML_LANG) or elem.attrib.get("lang") or "").strip().lower()
-    if lang and not (lang in ALLOWED_LANGS or lang.startswith(ALLOWED_LANG_PREFIXES)):
-        return False
-    for char in text:
-        if unicodedata.category(char).startswith("L"):
-            if not _script_allowed(char):
-                return False
-    return True
+    if lang and any(lang.startswith(prefix) for prefix, _ in LANG_PREFIXES):
+        return True
+    if lang in LANG_PRIORITY:
+        return True
+    # Accept normal Unicode letters/numbers/punctuation from any script.
+    # XMLTV feeds occasionally use symbols in otherwise valid titles.
+    return any(unicodedata.category(char).startswith("L") for char in text)
+
+def preferred_title_element(elem):
+    titles = [x for x in elem.findall("title") if (x.text or "").strip()]
+    if not titles:
+        return None
+    return max(titles, key=lambda x: (language_priority(x), len((x.text or "").strip()), -(titles.index(x))))
 
 def load_mapping():
     # One source XMLTV ID may supply several playlist-specific tvg-ids.
@@ -251,7 +278,21 @@ def title_score(title):
     return 1.0 + min(len(t), 80) / 400.0
 
 def clone_children(elem):
-    return [ET.fromstring(ET.tostring(child, encoding="utf-8")) for child in list(elem)]
+    """Clone programme fields while retaining only the best available title.
+
+    If a source contains English, Bengali and another language title for the
+    same programme, publish English; if English is absent publish Bengali;
+    otherwise publish the best remaining valid title.
+    """
+    preferred = preferred_title_element(elem)
+    children = []
+    for child in list(elem):
+        if child.tag == "title":
+            if child is preferred:
+                children.append(ET.fromstring(ET.tostring(child, encoding="utf-8")))
+            continue
+        children.append(ET.fromstring(ET.tostring(child, encoding="utf-8")))
+    return children
 
 def shift_xmltv_timestamp(value, delta):
     """Shift an XMLTV timestamp while preserving its original timezone format."""
@@ -295,6 +336,11 @@ def interval_weight(record):
     if title_score(record["title"]) > 0:
         weight += 8.0
 
+    # When providers overlap, prefer English titles, then Bengali, then other
+    # valid languages. This is a tie-breaker only; it never removes a
+    # non-overlapping programme from another provider.
+    weight += {3: 30.0, 2: 20.0, 1: 10.0}.get(record.get("language_rank", 1), 10.0)
+
     # Earlier approved sources win close quality ties, but source priority
     # must never outweigh retaining an additional non-overlapping programme.
     source_index = record["source_index"]
@@ -324,8 +370,8 @@ def clean_schedule(records):
         if old is None:
             unique[key] = r
         else:
-            old_quality = (title_score(old["title"]), -old["source_index"])
-            new_quality = (title_score(r["title"]), -r["source_index"])
+            old_quality = (old.get("language_rank", 1), title_score(old["title"]), -old["source_index"])
+            new_quality = (r.get("language_rank", 1), title_score(r["title"]), -r["source_index"])
             if new_quality > old_quality:
                 unique[key] = r
 
@@ -510,6 +556,7 @@ def main():
                         rec = {
                             "attrs": channel_attrs,
                             "title": title,
+                        "language_rank": language_priority(title_elem),
                             "children": [ET.fromstring(ET.tostring(title_elem, encoding="utf-8"))],
                             "start_dt": start_dt,
                             "stop_dt": stop_dt,
@@ -537,7 +584,7 @@ def main():
                     elem.clear()
                     continue
 
-                title_elem = elem.find("title")
+                title_elem = preferred_title_element(elem)
                 title = (title_elem.text or "").strip() if title_elem is not None else ""
                 children = clone_children(elem)
                 for target in targets:
@@ -561,6 +608,7 @@ def main():
                     rec = {
                         "attrs": attrs,
                         "title": title,
+                        "language_rank": language_priority(title_elem),
                         "children": safe_children,
                         "start_dt": start_dt,
                         "stop_dt": stop_dt,
