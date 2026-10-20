@@ -1,7 +1,8 @@
 # Playlist Audit
-Generated: **2026-10-20T08:31:14.176892+00:00**
-Audited playlist revision: `d7b7a645d14241cbb19389fe92d80f3e944b46cd`
+Generated: **2026-10-20T09:17:29.329503+00:00**
+Audited playlist revision: `6e12cc9c1f1f3ea2deb3e0d9624ba8c1b6d3c0a1`
 Playlist SHA-256: `03bb48321a86bb995929d6557628826c42a1c1ca5138f785ca023364e3acdbeb`
+Source playlist SHA-256: **03bb48321a86bb995929d6557628826c42a1c1ca5138f785ca023364e3acdbeb**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -22,6 +23,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
+- Primary entries missing tvg-country: **292**
+- Primary entries missing tvg-language: **292**
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Category registry issues: **0**
@@ -32,6 +35,23 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 
 ## Duplicate IDs
 
+
+## Primary Metadata Completeness
+
+Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.
+- Active primary entries missing tvg-country: **292**
+- Active primary entries missing tvg-language: **292**
+
+| Group | Missing tvg-country | Missing tvg-language |
+|---|---:|---:|
+| Documentary & Wildlife | 75 | 75 |
+| Indian Entertainment | 25 | 25 |
+| Indian Movies | 12 | 12 |
+| Indian Music | 9 | 9 |
+| International | 93 | 93 |
+| Kids | 42 | 42 |
+| Religious | 15 | 15 |
+| Sports | 21 | 21 |
 
 ## Category Registry
 
