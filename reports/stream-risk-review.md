@@ -1,5 +1,8 @@
 # Stream Risk Review
 
+Generated: **2026-10-20T15:17:05+00:00**
+IPTV-Playlist.m3u SHA-256: **ee851e7cc4586db6af2ed6053089b2b6847adfba5ccf91fd7f69e56f36d0b819**
+
 Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.
 
 ## Summary
@@ -7,8 +10,8 @@ Generated from the current playlist and latest available stream-health report. T
 - /streamtest/ endpoints: **11**
 - Signed/token-query endpoints: **11**
 - Xtream-style credential paths (credentials redacted): **0**
-- Proxy/worker-host routes: **41** (2 primary, 39 Backup)
-- /api/play/ relay routes: **15**
+- Proxy/worker-host routes: **41** (3 primary, 38 Backup)
+- /api/play/ relay routes: **13**
 
 ## Latest Stream-Health Snapshot
 
@@ -87,6 +90,7 @@ Query values are omitted because they may be expiring signatures or access token
 | Channel | Group | Host | Parameter names |
 |---|---|---|---|
 | ETV Cinema | Indian Movies | yupplivegcpusa.yuppcdn.net | hdnts |
+| Star Gold | Indian Movies | 103.114.11.37:8081 | token |
 | Colors Super | Indian Entertainment | d1rc86nwwc9fag.cloudfront.net | hdnts |
 | Darshana TV | Indian Entertainment | yuppparoriglin.akamaized.net | hdnts |
 | Zee Kannada | Indian Entertainment | yuppnimresmum.akamaized.net | hdnts |
@@ -95,7 +99,6 @@ Query values are omitted because they may be expiring signatures or access token
 | WOW Kidz Tamil | Kids | yuppparoriglin.akamaized.net | hdnts |
 | WOW Kidz Telugu | Kids | yuppparoriglin.akamaized.net | hdnts |
 | Colors | Backup | 103.114.11.37:8081 | token |
-| Star Gold | Backup | 103.114.11.37:8081 | token |
 | Studio Yuva | Backup | d2gvyg6lvauoko.cloudfront.net | hdnts |
 
 ## Xtream-Style Credential Paths
@@ -127,7 +130,6 @@ Worker routes are relayed endpoints, not direct broadcaster sources. The Sananda
 | Channel I | Backup | iptv-proxy.ahmed-bd-org.workers.dev |
 | Channel I | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Channel I | Backup | iptvlive.ahmed-bd-org.workers.dev |
-| Channel S | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | DBC News | Backup | iptv-proxy.ahmed-bd-org.workers.dev |
 | DBC News | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | DBC News | Backup | iptvlive.ahmed-bd-org.workers.dev |
@@ -153,26 +155,25 @@ Worker routes are relayed endpoints, not direct broadcaster sources. The Sananda
 | SA TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Somoy TV | Backup | iptvlive.ahmed-bd-org.workers.dev |
 | Zee Bangla | Backup | iptvlive.ahmed-bd-org.workers.dev |
+| Channel S | Not Playing | iptvlive.ahmed-bd-org.workers.dev |
 
 ## Hosted /api/play/ Relay Routes
 
 | Channel | Group | Host | Route type |
 |---|---|---|---|
 | BTV National | Bangladesh | homair-tv-production.up.railway.app | /api/play/ |
-| Star Gold | Indian Movies | homair-tv-production.up.railway.app | /api/play/ |
 | Star Gold Select | Indian Movies | homair-tv-production.up.railway.app | /api/play/ |
 | Star Movies | Indian Movies | homair-tv-production.up.railway.app | /api/play/ |
 | Star Utsav Movies | Indian Movies | homair-tv-production.up.railway.app | /api/play/ |
 | Manoranjan Grand | Indian Entertainment | homair-tv-production.up.railway.app | /api/play/ |
 | Star Bharat | Indian Entertainment | homair-tv-production.up.railway.app | /api/play/ |
 | Star Utsav | Indian Entertainment | homair-tv-production.up.railway.app | /api/play/ |
-| Nick | Kids | homair-tv-production.up.railway.app | /api/play/ |
-| Nick Jr | Kids | homair-tv-production.up.railway.app | /api/play/ |
-| Sonic | Kids | homair-tv-production.up.railway.app | /api/play/ |
 | BTV Chattogram | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | Colors Cineplex [UK] | Backup | homair-tv-production.up.railway.app | /api/play/ |
-| Desh TV | Backup | homair-tv-production.up.railway.app | /api/play/ |
 | HBO | Backup | homair-tv-production.up.railway.app | /api/play/ |
+| Desh TV | Not Playing | homair-tv-production.up.railway.app | /api/play/ |
+| Nick | Not Playing | homair-tv-production.up.railway.app | /api/play/ |
+| Star Gold | Not Playing | homair-tv-production.up.railway.app | /api/play/ |
 
 ## Recommendations
 

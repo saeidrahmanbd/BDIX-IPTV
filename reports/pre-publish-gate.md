@@ -1,6 +1,6 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-10-20T13:52:29+00:00**
+Generated: **2026-10-20T15:13:02+00:00**
 Source playlist SHA-256: **ee851e7cc4586db6af2ed6053089b2b6847adfba5ccf91fd7f69e56f36d0b819**
 
 Status: **PASS**
@@ -29,3 +29,9 @@ Backup and Not Playing are review queues. Existing entries are protected by exac
 
 ## Blocking Reasons
 No blocking conditions detected.
+
+## Blocked logo references
+
+| Channel | Group | Blocked filename |
+|---|---|---|
+| — | — | none |

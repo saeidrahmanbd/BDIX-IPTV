@@ -1,6 +1,6 @@
 # Strict Unmapped EPG Audit
 
-Generated: **2026-10-20T13:56:30+00:00**
+Generated: **2026-10-20T15:17:04+00:00**
 
 Only exact normalized display-name matches or exact matches after removing a recognized territory/language suffix are listed below. Every candidate has current/future schedule rows in a configured feed, but candidates remain review-only and are never automatically applied.
 Bangladesh-group channels are not name-matched here. Their domestic schedules require exact ID/explicit alias evidence; a similar Indian or foreign channel is not acceptable.
@@ -15,30 +15,30 @@ Bangladesh-group channels are not name-matched here. Their domestic schedules re
 | Group | Playlist channel | Playlist tvg-id | Candidate source name | Candidate EPG ID | Match type | Usable programme rows | Source feed(s) | Decision |
 |---|---|---|---|---|---|---:|---|---|
 | Documentary & Wildlife | Documentary+ USA | custom.documentary.usa | documentarycanada | Documentary.Canada.ca2 | EXACT_AFTER_REGION_SUFFIX | 18 | https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz | MANUAL_REVIEW_ONLY |
-| Documentary & Wildlife | Documentary+ USA | custom.documentary.usa | documentary | SWIFTTV_LIVECHANNEL_288 | EXACT_AFTER_REGION_SUFFIX | 56 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
+| Documentary & Wildlife | Documentary+ USA | custom.documentary.usa | documentary | SWIFTTV_LIVECHANNEL_288 | EXACT_AFTER_REGION_SUFFIX | 55 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
 | Documentary & Wildlife | Documentary+ USA | custom.documentary.usa | documentary | USAJ3504701A | EXACT_AFTER_REGION_SUFFIX | 4 | https://i.mjh.nz/SamsungTVPlus/us.xml | MANUAL_REVIEW_ONLY |
 | Documentary & Wildlife | Documentary+ USA | custom.documentary.usa | documentary | documentary.HD.ca2 | EXACT_AFTER_REGION_SUFFIX | 24 | https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz | MANUAL_REVIEW_ONLY |
-| Documentary & Wildlife | Documentary+ USA | custom.documentary.usa | documentary | plex.tv.Documentary+.plex | EXACT_AFTER_REGION_SUFFIX | 68 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | custom.colors.mena | colors | 158149 | EXACT_AFTER_REGION_SUFFIX | 91 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | custom.colors.mena | colors | COLORS.HD.uk | EXACT_AFTER_REGION_SUFFIX | 107 | https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | custom.colors.mena | colors | COLORS.hk | EXACT_AFTER_REGION_SUFFIX | 147 | https://epgshare01.online/epgshare01/epg_ripper_HK1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | custom.colors.mena | colorshindi | Colors.Hindi.HD.my | EXACT_AFTER_REGION_SUFFIX | 92 | https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | custom.colors.mena | colors | LIVETV_LIVETVCHANNEL_COLORS_HD | EXACT_AFTER_REGION_SUFFIX | 97 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Flowers US | custom.flowers.us | flowers | 143065 | EXACT_AFTER_REGION_SUFFIX | 95 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Flowers US | custom.flowers.us | flowers | FLOWERS.in | EXACT_AFTER_REGION_SUFFIX | 41 | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | MANUAL_REVIEW_ONLY |
+| Documentary & Wildlife | Documentary+ USA | custom.documentary.usa | documentary | plex.tv.Documentary+.plex | EXACT_AFTER_REGION_SUFFIX | 67 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | custom.colors.mena | colors | 158149 | EXACT_AFTER_REGION_SUFFIX | 87 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | custom.colors.mena | colors | COLORS.HD.uk | EXACT_AFTER_REGION_SUFFIX | 105 | https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | custom.colors.mena | colors | COLORS.hk | EXACT_AFTER_REGION_SUFFIX | 145 | https://epgshare01.online/epgshare01/epg_ripper_HK1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | custom.colors.mena | colorshindi | Colors.Hindi.HD.my | EXACT_AFTER_REGION_SUFFIX | 91 | https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | custom.colors.mena | colors | LIVETV_LIVETVCHANNEL_COLORS_HD | EXACT_AFTER_REGION_SUFFIX | 93 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Flowers US | custom.flowers.us | flowers | 143065 | EXACT_AFTER_REGION_SUFFIX | 92 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Flowers US | custom.flowers.us | flowers | FLOWERS.in | EXACT_AFTER_REGION_SUFFIX | 38 | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | MANUAL_REVIEW_ONLY |
 | Indian Entertainment | Flowers US | custom.flowers.us | flowers | LIVETV_LIVETVCHANNEL_FLOWERS_TV | EXACT_AFTER_REGION_SUFFIX | 90 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Flowers US | custom.flowers.us | flowers | ts10 | EXACT_AFTER_REGION_SUFFIX | 47 | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz<br>https://avkb.short.gy/epg.xml.gz<br>https://avkb.short.gy/tsepg.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | 143247 | EXACT_AFTER_REGION_SUFFIX | 31 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | KAIRALI.in | EXACT_AFTER_REGION_SUFFIX | 11 | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | LIVETV_LIVETVCHANNEL_KAIRALI_TV | EXACT_AFTER_REGION_SUFFIX | 36 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | jtv710 | EXACT_AFTER_REGION_SUFFIX | 17 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | ts25 | EXACT_AFTER_REGION_SUFFIX | 16 | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz<br>https://avkb.short.gy/epg.xml.gz<br>https://avkb.short.gy/tsepg.xml.gz | MANUAL_REVIEW_ONLY |
-| International | MBC Drama USA | MBCDramaUSA.us | mbcdrama | MBC.Drama.ae | EXACT_AFTER_REGION_SUFFIX | 88 | https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Flowers US | custom.flowers.us | flowers | ts10 | EXACT_AFTER_REGION_SUFFIX | 44 | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz<br>https://avkb.short.gy/epg.xml.gz<br>https://avkb.short.gy/tsepg.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | 143247 | EXACT_AFTER_REGION_SUFFIX | 30 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | KAIRALI.in | EXACT_AFTER_REGION_SUFFIX | 10 | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | LIVETV_LIVETVCHANNEL_KAIRALI_TV | EXACT_AFTER_REGION_SUFFIX | 35 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | jtv710 | EXACT_AFTER_REGION_SUFFIX | 16 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | ts25 | EXACT_AFTER_REGION_SUFFIX | 15 | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz<br>https://avkb.short.gy/epg.xml.gz<br>https://avkb.short.gy/tsepg.xml.gz | MANUAL_REVIEW_ONLY |
+| International | MBC Drama USA | MBCDramaUSA.us | mbcdrama | MBC.Drama.ae | EXACT_AFTER_REGION_SUFFIX | 86 | https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz | MANUAL_REVIEW_ONLY |
 | International | MyTime Movie Network East | MyTimeMovieNetworkEast.us | mytimemovienetwork | USBC3900018K6 | EXACT_AFTER_REGION_SUFFIX | 4 | https://i.mjh.nz/SamsungTVPlus/us.xml | MANUAL_REVIEW_ONLY |
 | International | MyTime Movie Network East | MyTimeMovieNetworkEast.us | mytimemovienetwork | plex.tv.MyTime.Movie.Network.plex | EXACT_AFTER_REGION_SUFFIX | 56 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
 | International | XITE Hits UK | XITEHits.nl@UK | xitehits | USBD3300004RH | EXACT_AFTER_REGION_SUFFIX | 3 | https://i.mjh.nz/SamsungTVPlus/us.xml | MANUAL_REVIEW_ONLY |
 | International | XITE Hits UK | XITEHits.nl@UK | xitehits | plex.tv.XITE.Hits.plex | EXACT_AFTER_REGION_SUFFIX | 29 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
-| Religious | Madani TV | custom.madani.tv | madaniuk | MadaniChannel.uk | EXACT_AFTER_REGION_SUFFIX | 62 | https://www.open-epg.com/files/unitedkingdom.xml.gz | MANUAL_REVIEW_ONLY |
+| Religious | Madani TV | custom.madani.tv | madaniuk | MadaniChannel.uk | EXACT_AFTER_REGION_SUFFIX | 60 | https://www.open-epg.com/files/unitedkingdom.xml.gz | MANUAL_REVIEW_ONLY |
 
 ## Bangladesh-specific review
 
