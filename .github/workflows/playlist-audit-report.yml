@@ -1,0 +1,106 @@
+name: Playlist Audit Report Sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - IPTV-Playlist.m3u
+      - scripts/audit_playlist.py
+      - logos/**
+      - .github/workflows/playlist-audit-report.yml
+  schedule:
+    - cron: '47 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Separate from playlist maintenance: reports must update even when playlist
+# validation fails. This workflow only commits reports/playlist-audit.md.
+concurrency:
+  group: playlist-audit-report-sync
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install audit dependency
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Generate and publish report independently of audit findings
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          # Retry against the latest main if another workflow pushes at the same
+          # time. The report commit never stages or edits the playlist.
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd
+
+            source_revision="$(git rev-parse HEAD)"
+            playlist_sha256="$(sha256sum IPTV-Playlist.m3u | awk '{print $1}')"
+
+            # Removing the old report ensures an audit crash cannot accidentally
+            # publish the previous report as if it were newly generated.
+            rm -f reports/playlist-audit.md
+            set +e
+            python scripts/audit_playlist.py
+            audit_status=$?
+            set -e
+
+            if [ ! -s reports/playlist-audit.md ]; then
+              echo '::error::Audit did not generate reports/playlist-audit.md; refusing to publish a stale report.'
+              exit 1
+            fi
+
+            SOURCE_REVISION="$source_revision" PLAYLIST_SHA256="$playlist_sha256" python - <<'PY'
+          import os
+          from pathlib import Path
+
+          report = Path("reports/playlist-audit.md")
+          lines = report.read_text(encoding="utf-8").splitlines()
+          if len(lines) < 2 or not lines[0].startswith("# Playlist Audit") or not lines[1].startswith("Generated:"):
+              raise SystemExit("Audit report header is missing or malformed.")
+          lines.insert(2, f"Audited playlist revision: `{os.environ['SOURCE_REVISION']}`")
+          lines.insert(3, f"Playlist SHA-256: `{os.environ['PLAYLIST_SHA256']}`")
+          report.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+          PY
+
+            if [ "$audit_status" -ne 0 ]; then
+              echo "::warning::Audit reported blocking findings (exit $audit_status). Publishing the generated report for visibility; this workflow does not publish playlist changes."
+            fi
+
+            git add reports/playlist-audit.md
+            if git diff --cached --quiet; then
+              echo 'Audit report is already synchronized; no commit required.'
+              exit 0
+            fi
+
+            git commit -m 'Refresh playlist audit report'
+            if git push origin HEAD:main; then
+              echo "Published audit for playlist revision $source_revision."
+              exit 0
+            fi
+
+            echo "::warning::main moved during report publication; retrying against latest main (attempt $attempt/3)."
+            sleep 2
+          done
+
+          echo '::error::Could not publish a report for the latest main revision after three attempts.'
+          exit 1
