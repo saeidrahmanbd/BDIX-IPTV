@@ -95,6 +95,20 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+
+          # Runs queued against an old workflow definition must not execute its
+          # obsolete maintenance steps after a newer workflow has reached main.
+          # Compare the workflow blob from the triggering commit with the current
+          # main workflow. This does not skip a run merely because helper scripts
+          # or reports changed: those are refreshed from current main below.
+          git fetch origin main
+          EVENT_WORKFLOW_BLOB="$(git rev-parse "${GITHUB_SHA}:.github/workflows/iptv-maintenance.yml")"
+          CURRENT_WORKFLOW_BLOB="$(git rev-parse "FETCH_HEAD:.github/workflows/iptv-maintenance.yml")"
+          if [[ "$EVENT_WORKFLOW_BLOB" != "$CURRENT_WORKFLOW_BLOB" ]]; then
+            echo "::notice::Skipping superseded queued IPTV maintenance run; a newer workflow definition is on main. No playlist files were changed."
+            exit 0
+          fi
+
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           for attempt in 1 2 3; do
