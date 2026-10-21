@@ -33,6 +33,8 @@ SOURCES = [
     "https://i.mjh.nz/SamsungTVPlus/in.xml",
     "https://i.mjh.nz/SamsungTVPlus/us.xml",
     "https://epg.pw/xmltv/epg_IN.xml",
+    "https://epg.pw/api/epg.xml?channel_id=9374",
+    "https://epg.pw/api/epg.xml?channel_id=12504",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml",
     "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml",
@@ -76,6 +78,33 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
     "https://hum.tv/schedule/",
 ]
+
+EPGPW_SOURCE_IDS = {
+    "https://epg.pw/api/epg.xml?channel_id=9374": "epgpw:9374",
+    "https://epg.pw/api/epg.xml?channel_id=12504": "epgpw:12504",
+}
+
+
+def normalize_epgpw_source(url, data):
+    """Normalize a dedicated EPG.PW XMLTV feed to its explicitly verified source ID."""
+    synthetic_id = EPGPW_SOURCE_IDS.get(url)
+    if not synthetic_id:
+        return data
+    root = ET.fromstring(data)
+    channel_ids = {channel.get("id", "").strip() for channel in root.findall("channel") if channel.get("id", "").strip()}
+    if len(channel_ids) != 1:
+        raise ValueError(f"Expected exactly one channel ID in dedicated EPG.PW feed; found {len(channel_ids)}")
+    original_id = next(iter(channel_ids))
+    matched = [p for p in root.findall("programme") if p.get("channel", "").strip() == original_id]
+    if not matched:
+        raise ValueError(f"Dedicated EPG.PW feed has no programme rows for channel ID {original_id}")
+    for channel in root.findall("channel"):
+        if channel.get("id", "").strip() == original_id:
+            channel.set("id", synthetic_id)
+    for programme in matched:
+        programme.set("channel", synthetic_id)
+    return ET.tostring(root, encoding="utf-8")
+
 
 PRIVATE_SOURCE_ENV = "M3U4U_XMLTV_URL"
 PRIVATE_SOURCE_LABEL = "M3U4U XMLTV (private Actions secret)"
@@ -205,11 +234,15 @@ def _script_rank(text):
 def language_priority(elem):
     text = (elem.text or "").strip()
     lang = (elem.attrib.get(XML_LANG) or elem.attrib.get("lang") or "").strip().lower()
-    if lang in LANG_PRIORITY:
-        return LANG_PRIORITY[lang]
-    for prefix, rank in LANG_PREFIXES:
-        if lang.startswith(prefix):
-            return rank
+    if lang:
+        if lang in LANG_PRIORITY:
+            return LANG_PRIORITY[lang]
+        for prefix, rank in LANG_PREFIXES:
+            if lang.startswith(prefix):
+                return rank
+        # A known non-English/non-Bengali tag stays eligible, but never outranks
+        # English or Bengali merely because its title uses Latin script.
+        return 1
     return _script_rank(text)
 
 def is_english_text_element(elem):
@@ -567,7 +600,7 @@ def main():
                         candidates.setdefault((target, source_index, source_id), []).append(rec)
                 continue
 
-            data = fetch(src)
+            data = normalize_epgpw_source(src, fetch(src))
             source_stats[src] = "OK"
             for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):
                 if elem.tag != "programme":
@@ -588,9 +621,8 @@ def main():
                 title = (title_elem.text or "").strip() if title_elem is not None else ""
                 children = clone_children(elem)
                 for target in targets:
-                    # The allowed-language policy applies to every channel, not just
-                    # Indian Bangla. Reject unsupported titles and text fields;
-                    # other providers may still supply an English/Bengali alternative.
+                    # Retain valid non-empty programme text in every script. When
+                    # titles overlap, the selected title ranks English > Bengali > other.
                     if (
                         title_elem is None
                         or not (title_elem.text or "").strip()
