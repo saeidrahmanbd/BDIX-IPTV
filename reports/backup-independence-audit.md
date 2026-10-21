@@ -5,14 +5,15 @@ Generated from the revised IPTV-Playlist.m3u on main on 2026-10-21. Endpoint pat
 ## Structural verification
 
 - Playlist entries: **1064**
-- Active primary entries: **626**
-- Backup entries: **417**
+- Active primary entries: **631**
+- Backup entries: **412**
 - Not Playing entries: **21**
-- Primary channel numbers: **1–626**, sequential and gap-free after category/A–Z sorting
+- Primary channel numbers: **1–631**, sequential and gap-free after category/A–Z sorting
 - Active entries missing country or language: **0**
-- Remaining entries with no country: **12**
-- Remaining entries with no language: **12**
+- Remaining entries with no country: **0**
+- Remaining entries with no language: **0**
 - Country/language fields backfilled from unambiguous primary identities: **135**
+- Previously blank metadata fields completed in this pass: **24 fields across 12 records**
 - Referenced logo files missing from logos/: **0**
 - Attribute presence patterns: **4**; actual attribute order is standardized, optional-field presence still varies
 
@@ -129,17 +130,19 @@ Generated from the revised IPTV-Playlist.m3u on main on 2026-10-21. Endpoint pat
 | WildEarth | wildearth-plex.amagi.tv | /masterR1080p.m3u8 | /master.m3u8 | same host only |
 | Zee Bangla | 103.151.60.162 | /play/a02p/index.m3u8 | /play/a011/index.m3u8 | same host only |
 
-## Backup channels without an active primary
+## Orphaned Backup migrations
 
-These were retained for manual stream/identity testing:
+All five previously identified Backup-only feeds were moved into their corresponding published groups without changing their stream URLs:
 
-| Channel | Endpoint host | Channel ID |
-|---|---|---|
-| 7X Punjabi | cdn2.in | custom.7x.punjabi |
-| Bangla Cinema | 103.151.60.162 | custom.banglacinema |
-| FASHION ONE | b01c02nl.mediatriple.net | fashionone.uk |
-| PTV Sports | 103.135.253.32 | ptvsports.pk |
-| Star Sports Select 1 | 103.135.253.32 | custom.star.sports.select.1 |
+| Channel | New group | Country / language | Notes |
+|---|---|---|---|
+| 7X Punjabi | Indian Music | IN / pan | Punjabi-language music |
+| Bangla Cinema | Indian Movies | IN / ben | Bengali-language cinema |
+| Fashion One | International | GB / eng | Name capitalization normalized |
+| PTV Sports | Pakistani | PK / urd | Existing metadata retained |
+| Star Sports Select 1 | Sports | IN / eng | Canonical EPG/channel ID set to `StarSportsSelect1.in@SD` |
+
+These are category migrations, not stream replacements. The five original URLs remain present exactly once, the five records are no longer in Backup, and active primary numbering was rebuilt from 1 through 631.
 
 ## Not Playing entries without primary or Backup match
 
@@ -164,9 +167,13 @@ Not Playing remains a review queue, not a published channel group:
 - channel-id remains beside tvg-id for Playlist Studio/repository compatibility; both EPG URL aliases remain in the header.
 - All referenced logo files exist. nvisionbd-verified prefixes, mixed JPG/PNG formats and local-logo names are not by themselves proof that the underlying image is wrong; these remain for visual/provenance review.
 - Similar but distinct IDs/feeds (MyTime regional variants, Willow/Willow TV, Suriya/Suriyan, Baallee/Balle Balle, Goldmines/Goldmines 2, Documentary+ variants and Makkah Live/Makkah TV) were not merged without proof they are identical.
-- Remaining blank metadata is confined to review records where no unambiguous primary supplied a value.
+- All 12 previously blank country/language records now have values. The unidentified Channel 52 is explicitly marked `ZZ/und` rather than assigned an invented station identity.
 - Tag TV and BSTV were retained because available evidence did not confidently establish these specific feeds as non-Islamic religious services.
 - Afarin TV remains in Kids: its broadcaster describes it as a Kurdish children's education service that also includes Islamic programming: https://afarin.tv/About4.
+
+## Non-Islamic religious-channel audit
+
+The permanent-removal policy already covers the seven confirmed non-Islamic religious identities previously found in this playlist: Grace Network, Joshua TV, King TV, Jeremiah TV, CBN TV USA, Dios Te Ve Kids and ZB Bhakti. No matching entry remains in the current playlist. The 22 entries remaining in the `Religious` group are Islamic religious services. TBN24, Tag TV and BSTV were not removed because the playlist entries available for those channels do not establish them as non-Islamic religious services.
 
 ## Verification
 
