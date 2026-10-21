@@ -1,6 +1,6 @@
 # Logo Provenance Review
 
-Generated: **2026-10-21T09:54:55+00:00**
+Generated: **2026-10-21T10:43:53+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 
