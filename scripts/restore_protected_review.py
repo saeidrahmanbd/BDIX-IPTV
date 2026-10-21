@@ -14,6 +14,7 @@ import sys
 import unicodedata
 from collections import Counter
 from pathlib import Path
+from urllib.parse import urlsplit
 
 SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
 BASELINE = Path("/tmp/iptv-playlist-baseline.json")
@@ -33,6 +34,13 @@ PERMANENTLY_REMOVED_NAMES = {
     "mini",
     "mundial",
     "tvc arabic kids",
+    "grace network",
+    "joshua tv",
+    "king tv",
+    "jeremiah tv",
+    "cbn tv usa",
+    "dios te ve kids",
+    "zb bhakti",
 }
 ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
@@ -81,6 +89,29 @@ def is_permanently_removed(info: str) -> bool:
     return name in {normalize_name(candidate) for candidate in PERMANENTLY_REMOVED_NAMES}
 
 
+def canonical_url_base(url: str) -> str:
+    parsed = urlsplit(str(url or "").strip())
+    if not parsed.netloc or not parsed.path:
+        return ""
+    path = parsed.path.casefold().rstrip("/")
+    path = re.sub(r"\.(?:m3u8?|mpd)$", "", path, flags=re.IGNORECASE)
+    return parsed.netloc.casefold() + path
+
+
+def is_authorized_duplicate_backup(info: str, url: str) -> bool:
+    if group_of(info) != "Backup" or normalize_name(display_name(info)) != "sparklemovies":
+        return False
+    return canonical_url_base(url) == (
+        "61fc4f1a40a342daa23f92141853b7b4.mediatailor.us-east-1.amazonaws.com"
+        "/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/"
+        "samsung-gb_sparklemovies/playlist"
+    )
+
+
+def is_authorized_removal(info: str, url: str) -> bool:
+    return is_permanently_removed(info) or is_authorized_duplicate_backup(info, url)
+
+
 def identity_keys(info: str) -> set[str]:
     a = attrs(info)
     keys = set()
@@ -120,8 +151,44 @@ def url_of(record: list[str]) -> str:
     )
 
 
+ATTRIBUTE_ORDER = (
+    "tvg-id", "tvg-name", "tvg-logo", "tvg-chno",
+    "channel-id", "tvg-country", "tvg-language", "group-title",
+)
+
+
+def canonical_extinf(info: str) -> str:
+    comma = -1
+    quoted = False
+    for index, char in enumerate(info):
+        if char == '"':
+            quoted = not quoted
+        elif char == ',' and not quoted:
+            comma = index
+            break
+    if comma < 0:
+        return info
+    head, display = info[:comma], info[comma:]
+    duration = re.match(r"^#EXTINF:\S+", head)
+    if not duration:
+        return info
+    pairs = list(re.finditer(r'([A-Za-z0-9_-]+)="([^"]*)"', head))
+    if not pairs:
+        return info
+    rank = {key: index for index, key in enumerate(ATTRIBUTE_ORDER)}
+    found = [(match.group(1), match.group(2), index) for index, match in enumerate(pairs)]
+    found.sort(key=lambda item: (rank.get(item[0], len(rank)), item[2]))
+    return duration.group(0) + " " + " ".join(
+        f'{key}="{value}"' for key, value, _ in found
+    ) + display
+
+
 def serialize(preamble: list[str], records: list[list[str]]) -> str:
-    return "\n".join(preamble + [line for record in records for line in record]).rstrip() + "\n"
+    flattened = []
+    for record in records:
+        for index, line in enumerate(record):
+            flattened.append(canonical_extinf(line) if index == 0 else line)
+    return "\n".join(preamble + flattened).rstrip() + "\n"
 
 
 def classify_backup(info: str) -> str:
@@ -218,6 +285,10 @@ def restore() -> None:
     if any(group_of(record[0]) not in PROTECTED for record in snapshot_records):
         raise SystemExit("ERROR: protected snapshot contains a non-protected group; refusing restore.")
 
+    snapshot_records = [
+        record for record in snapshot_records
+        if not is_authorized_removal(record[0], url_of(record))
+    ]
     snapshot_urls = [url_of(record).casefold() for record in snapshot_records]
     if any(not url for url in snapshot_urls) or len(snapshot_urls) != len(set(snapshot_urls)):
         raise SystemExit("ERROR: protected snapshot contains a missing or duplicate URL; refusing restore.")
@@ -236,20 +307,20 @@ def restore() -> None:
                     f"ERROR: baseline contains repeated stream URL for {url}; refusing ambiguous restore."
                 )
             baseline_by_url[key] = {"url": url, "group": group, "info": info}
-        if group not in PROTECTED and info and not is_permanently_removed(info):
+        if group not in PROTECTED and info and not is_authorized_removal(info, url):
             primary_identity_keys.update(identity_keys(info))
 
     used_numbers: set[int] = set()
     for record in current_records:
         a = attrs(record[0])
-        if group_of(record[0]) in PROTECTED or is_permanently_removed(record[0]):
+        if group_of(record[0]) in PROTECTED or is_authorized_removal(record[0], url_of(record)):
             continue
         n = a.get("tvg-chno", "").strip()
         if n.isdigit() and int(n) > 0:
             used_numbers.add(int(n))
     for record in snapshot_records:
         a = attrs(record[0])
-        if group_of(record[0]) in PROTECTED or is_permanently_removed(record[0]):
+        if group_of(record[0]) in PROTECTED or is_authorized_removal(record[0], url_of(record)):
             continue
         n = a.get("tvg-chno", "").strip()
         if n.isdigit() and int(n) > 0:
@@ -268,11 +339,10 @@ def restore() -> None:
 
     def process_record(record: list[str], from_snapshot: bool = False) -> None:
         nonlocal next_number, restored_from_queue, reclassification_reverted, migrated_count, permanently_removed_count
-        if is_permanently_removed(record[0]):
+        url = url_of(record)
+        if is_authorized_removal(record[0], url):
             permanently_removed_count += 1
             return
-
-        url = url_of(record)
         key = url.casefold()
         current_group = group_of(record[0])
         original = baseline_by_url.get(key)
@@ -302,7 +372,7 @@ def restore() -> None:
     snapshot_backup: list[list[str]] = []
     snapshot_not_playing: list[list[str]] = []
     for record in snapshot_records:
-        if is_permanently_removed(record[0]):
+        if is_authorized_removal(record[0], url_of(record)):
             permanently_removed_count += 1
             continue
         group = group_of(record[0])
@@ -329,14 +399,15 @@ def restore() -> None:
     # temporary safety artifacts by channel identity, while protecting every other
     # stream URL even if it happens to be shared by another record.
     has_authorized_removals = any(
-        is_permanently_removed(str(item.get("info", ""))) for item in baseline
-    ) or any(is_permanently_removed(record[0]) for record in snapshot_records)
+        is_authorized_removal(str(item.get("info", "")), str(item.get("url", "")))
+        for item in baseline
+    ) or any(is_authorized_removal(record[0], url_of(record)) for record in snapshot_records)
     if has_authorized_removals:
         # Filter only allowlisted channel identities, never their URLs. An unrelated
         # entry sharing a stream URL must not inherit the deletion authorization.
         filtered_baseline = [
             item for item in baseline
-            if not is_permanently_removed(str(item.get("info", "")))
+            if not is_authorized_removal(str(item.get("info", "")), str(item.get("url", "")))
         ]
         BASELINE.write_text(
             json.dumps(filtered_baseline, ensure_ascii=False, indent=2),
@@ -345,7 +416,7 @@ def restore() -> None:
 
         filtered_snapshot = [
             record for record in snapshot_records
-            if not is_permanently_removed(record[0])
+            if not is_authorized_removal(record[0], url_of(record))
         ]
         SNAPSHOT.write_text(
             serialize([], filtered_snapshot) if filtered_snapshot else "",

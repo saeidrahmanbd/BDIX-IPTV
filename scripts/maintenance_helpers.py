@@ -2,15 +2,15 @@
 """Conservative safety helpers for IPTV playlist maintenance.
 
 Policy:
-- A stream may disappear only when its exact normalized channel name is on the
-  explicit permanent-removal allowlist below.
-- Backup and Not Playing entries are immutable except for those exact allowlisted
-  names; other entries must survive byte-for-byte.
+- A stream may disappear only when its exact normalized channel name is in the
+  permanent-removal allowlist or it is the exact, independently verified duplicate
+  Backup record listed below.
+- Backup and Not Playing entries are protected except for those exact identities;
+  URL-based authorization never applies to a different channel.
+- EXTINF attribute reordering is normalized for comparison; values, URLs and the
+  existence of unrelated records remain protected.
 - Stream-health failures are advisory only.
-- Metadata repair may change names/IDs/groups/logos, but unrelated stream URLs
-  must survive.
-- Exact duplicate URLs are detected and reported, never automatically deleted.
-- Every unauthorized proposed removal is written to reports/proposed-removals.md.
+- Every unauthorized removal is written to reports/proposed-removals.md.
 """
 from __future__ import annotations
 
@@ -20,6 +20,7 @@ import sys
 import unicodedata
 from collections import Counter
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from logo_asset_naming import is_blocked_logo_basename
 
@@ -42,6 +43,13 @@ PERMANENTLY_REMOVED_NAMES = {
     "MINI",
     "Mundial",
     "TVC Arabic Kids",
+    "Grace Network",
+    "Joshua TV",
+    "King TV",
+    "Jeremiah TV",
+    "CBN TV USA",
+    "Dios Te Ve Kids",
+    "ZB Bhakti",
 }
 
 
@@ -60,6 +68,57 @@ def _canonical_channel_name(value: str) -> str:
 _PERMANENTLY_REMOVED_KEYS = {
     _canonical_channel_name(name) for name in PERMANENTLY_REMOVED_NAMES
 }
+AUTHORIZED_DUPLICATE_BACKUPS = {
+    (
+        _canonical_channel_name("Sparkle Movies"),
+        "61fc4f1a40a342daa23f92141853b7b4.mediatailor.us-east-1.amazonaws.com"
+        "/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/"
+        "samsung-gb_sparklemovies/playlist",
+    ),
+}
+
+
+ATTRIBUTE_ORDER = (
+    "tvg-id", "tvg-name", "tvg-logo", "tvg-chno",
+    "channel-id", "tvg-country", "tvg-language", "group-title",
+)
+
+
+def _canonical_extinf(info: str) -> str:
+    """Canonicalize attribute order while retaining every attribute value."""
+    comma = -1
+    quoted = False
+    for index, char in enumerate(info):
+        if char == '"':
+            quoted = not quoted
+        elif char == ',' and not quoted:
+            comma = index
+            break
+    if comma < 0:
+        return info
+    head, display = info[:comma], info[comma:]
+    duration = re.match(r"^#EXTINF:\S+", head)
+    if not duration:
+        return info
+    pairs = list(re.finditer(r'([A-Za-z0-9_-]+)="([^"]*)"', head))
+    if not pairs:
+        return info
+    rank = {key: index for index, key in enumerate(ATTRIBUTE_ORDER)}
+    found = [(match.group(1), match.group(2), index) for index, match in enumerate(pairs)]
+    found.sort(key=lambda item: (rank.get(item[0], len(rank)), item[2]))
+    return duration.group(0) + " " + " ".join(
+        f'{key}="{value}"' for key, value, _ in found
+    ) + display
+
+
+def _canonical_channel_url_base(url: str) -> str:
+    """Normalize transport/query/manifest suffixes for exact feed comparison."""
+    parsed = urlsplit(str(url or "").strip())
+    if not parsed.netloc or not parsed.path:
+        return ""
+    path = parsed.path.casefold().rstrip("/")
+    path = re.sub(r"\.(?:m3u8?|mpd)$", "", path, flags=re.IGNORECASE)
+    return parsed.netloc.casefold() + path
 
 
 def _attrs(ext: str) -> dict[str, str]:
@@ -130,26 +189,46 @@ def _is_permanently_removed(info: str) -> bool:
     return _canonical_channel_name(_name(info)) in _PERMANENTLY_REMOVED_KEYS
 
 
+def _is_authorized_duplicate_backup(info: str, url: str) -> bool:
+    if _group(info) != "Backup":
+        return False
+    key = (_canonical_channel_name(_name(info)), _canonical_channel_url_base(url))
+    return bool(key[1]) and key in AUTHORIZED_DUPLICATE_BACKUPS
+
+
+def _is_authorized_removal(info: str, url: str) -> bool:
+    return _is_permanently_removed(info) or _is_authorized_duplicate_backup(info, url)
+
+
 def _protected_blocks(text: str) -> list[dict[str, object]]:
     return [
         block
         for block in _parse_blocks(text)
         if (
             _group(str(block["info"])) in PROTECTED_GROUPS
-            and not _is_permanently_removed(str(block["info"]))
+            and not _is_authorized_removal(str(block["info"]), str(block["url"]))
         )
     ]
 
 
 def _protected_text(text: str) -> str:
-    """Return protected blocks exactly as they appeared, preserving directives."""
+    """Compare protected records independent of harmless ordering/attribute normalization."""
     blocks = _protected_blocks(text)
     if not blocks:
         return ""
-    return "\n".join(
-        "\n".join(str(line) for line in block["lines"])
-        for block in blocks
-    ) + "\n"
+    category_rank = {"Backup": 0, "Not Playing": 1}
+    blocks.sort(key=lambda block: (
+        category_rank.get(_group(str(block["info"])), 99),
+        _canonical_channel_name(_name(str(block["info"]))),
+        str(block["url"]).casefold(),
+    ))
+    serialized = []
+    for block in blocks:
+        lines = list(block["lines"])
+        if lines:
+            lines[0] = _canonical_extinf(str(lines[0]))
+        serialized.extend(lines)
+    return "\n".join(serialized) + "\n"
 
 
 def snapshot_protected() -> None:
@@ -188,11 +267,12 @@ def _write_removal_report(removals: list[dict[str, str]]) -> None:
         "# Proposed Playlist Removals",
         "",
         "This report is generated before publication.",
-        "Only exact normalized channel names in the permanent-removal allowlist may disappear.",
+        "Only exact normalized channel names in the permanent-removal allowlist and one exact query-only Sparkle Movies Backup duplicate are authorized removals.",
         "Every other existing stream is protected by this guard.",
         "",
         f"- Proposed unauthorized removals: **{len(removals)}**",
         f"- Exact-name permanent-removal allowlist entries: **{len(PERMANENTLY_REMOVED_NAMES)}**",
+        "- Independently verified duplicate Backup records authorized: **1**",
         "- Other automatic deletions authorized: **0**",
         "",
     ]
@@ -225,11 +305,11 @@ def verify_no_unauthorized_removals() -> int:
     # never inherits another channel's deletion authorization.
     baseline_guarded = [
         item for item in baseline
-        if not _is_permanently_removed(str(item.get("info", "")))
+        if not _is_authorized_removal(str(item.get("info", "")), str(item.get("url", "")))
     ]
     current_guarded = [
         block for block in current
-        if not _is_permanently_removed(str(block["info"]))
+        if not _is_authorized_removal(str(block["info"]), str(block["url"]))
     ]
     baseline_counts = Counter(
         str(item["stable"]) for item in baseline_guarded if item.get("stable")
@@ -241,20 +321,23 @@ def verify_no_unauthorized_removals() -> int:
     )
 
     removals: list[dict[str, str]] = []
+    remaining_current = current_counts.copy()
 
+    # Consume URL occurrences one at a time; repeated baseline URLs must not
+    # multiply the count of proposed removals.
     for item in baseline_guarded:
-        stable = str(item["stable"])
+        stable = str(item.get("stable", ""))
         if not stable:
             continue
-
-        missing = baseline_counts[stable] - current_counts[stable]
-        for _ in range(max(0, missing)):
-            removals.append({
-                "name": str(item["name"]),
-                "group": str(item["group"]),
-                "url": str(item["url"]),
-                "reason": "existing stream URL disappeared or changed",
-            })
+        if remaining_current[stable] > 0:
+            remaining_current[stable] -= 1
+            continue
+        removals.append({
+            "name": str(item["name"]),
+            "group": str(item["group"]),
+            "url": str(item["url"]),
+            "reason": "existing stream URL disappeared or changed",
+        })
 
     _write_removal_report(removals)
 
@@ -302,7 +385,7 @@ def verify_no_unauthorized_removals() -> int:
 
     authorized_still_present = [
         str(block["info"]) for block in current
-        if _is_permanently_removed(str(block["info"]))
+        if _is_authorized_removal(str(block["info"]), str(block["url"]))
     ]
     if authorized_still_present:
         names = sorted({_name(info) for info in authorized_still_present})
