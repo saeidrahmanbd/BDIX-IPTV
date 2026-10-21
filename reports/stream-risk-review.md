@@ -1,6 +1,6 @@
 # Stream Risk Review
 
-Generated: **2026-10-21T09:15:25+00:00**
+Generated: **2026-10-21T09:54:55+00:00**
 IPTV-Playlist.m3u SHA-256: **a4c0c292c6934c2dc987cd7800792dfa85f6cf7beb90a35faeac5becd2be0d82**
 
 Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.
@@ -18,53 +18,53 @@ Generated from the current playlist and latest available stream-health report. T
 | Metric | Count |
 |---|---:|
 | Streams tested | 1064 |
-| Reachable | 1008 |
-| Failed this check | 56 |
+| Reachable | 991 |
+| Failed this check | 73 |
 | Persistent failures (3+ consecutive) | 37 |
-| HTTP 401/403 (auth) | 14 |
-| HTTP 404 (not found) | 18 |
-| HTTP 5xx (server) | 15 |
-| Timeout | 5 |
+| HTTP 401/403 (auth) | 13 |
+| HTTP 404 (not found) | 25 |
+| HTTP 5xx (server) | 4 |
+| Timeout | 29 |
 
 ### Persistent failures
 
-- **BTV Chattogram** — Backup — consecutive failures: **3** — HTTP 404
-- **Bahrain Sports 2** — Backup — consecutive failures: **4** — HTTP 404
-- **Colors Cineplex [UK]** — Backup — consecutive failures: **3** — HTTP 404
-- **Disney Channel India** — Backup — consecutive failures: **13** — HTTP 403
-- **ESPN** — Backup — consecutive failures: **13** — HTTP 403
-- **HBO** — Backup — consecutive failures: **3** — HTTP 404
-- **MBC Bollywood** — Backup — consecutive failures: **3** — HTTP 403
-- **Madani TV** — Backup — consecutive failures: **3** — DNS
-- **Manoranjan TV** — Backup — consecutive failures: **5** — HTTP 404
-- **Movie Bangla** — Backup — consecutive failures: **5** — HTTP 500
-- **Music India** — Backup — consecutive failures: **3** — HTTP 500
-- **Sangeet Bangla** — Backup — consecutive failures: **3** — HTTP 500
-- **Sangeet Bhojpuri** — Backup — consecutive failures: **3** — HTTP 500
-- **Shanson TV** — Backup — consecutive failures: **9** — HTTP 403
-- **BTV National** — Bangladesh — consecutive failures: **3** — HTTP 404
-- **Terra Mater WILD English** — Documentary & Wildlife — consecutive failures: **3** — DNS
-- **Bangla Plus** — Indian Bangla — consecutive failures: **3** — HTTP 404
-- **Manoranjan Grand** — Indian Entertainment — consecutive failures: **3** — HTTP 404
-- **Star Bharat** — Indian Entertainment — consecutive failures: **3** — HTTP 404
-- **Star Utsav** — Indian Entertainment — consecutive failures: **3** — HTTP 404
-- **Bollywood Film** — Indian Movies — consecutive failures: **3** — HTTP 403
-- **Star Gold Select** — Indian Movies — consecutive failures: **3** — HTTP 404
-- **Star Movies** — Indian Movies — consecutive failures: **3** — HTTP 404
-- **Star Utsav Movies** — Indian Movies — consecutive failures: **3** — HTTP 404
-- **Cook & Bake** — International — consecutive failures: **45** — HTTP 504
-- **HBO** — International — consecutive failures: **227** — HTTP 403
-- **Lifetime** — International — consecutive failures: **21** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **45** — HTTP 403
-- **Teen Nick** — Kids — consecutive failures: **105** — HTTP 403
-- **Assam Talks** — Not Playing — consecutive failures: **239** — HTTP 403
-- **Desh TV** — Not Playing — consecutive failures: **16** — HTTP 404
-- **G TV** — Not Playing — consecutive failures: **13** — TLS
-- **Nick** — Not Playing — consecutive failures: **17** — HTTP 404
-- **Star Gold** — Not Playing — consecutive failures: **17** — HTTP 404
-- **Star Sports 2** — Sports — consecutive failures: **21** — HTTP 403
-- **T Sports** — Sports — consecutive failures: **21** — HTTP 403
-- **Willow TV** — Sports — consecutive failures: **21** — HTTP 403
+- **BTV Chattogram** — Backup — consecutive failures: **4** — HTTP 404
+- **Bahrain Sports 2** — Backup — consecutive failures: **5** — HTTP 404
+- **Colors Cineplex [UK]** — Backup — consecutive failures: **4** — HTTP 404
+- **Disney Channel India** — Backup — consecutive failures: **14** — HTTP 403
+- **ESPN** — Backup — consecutive failures: **14** — HTTP 403
+- **HBO** — Backup — consecutive failures: **4** — HTTP 404
+- **MBC Bollywood** — Backup — consecutive failures: **4** — HTTP 403
+- **Madani TV** — Backup — consecutive failures: **4** — DNS
+- **Manoranjan TV** — Backup — consecutive failures: **6** — HTTP 404
+- **Movie Bangla** — Backup — consecutive failures: **6** — Timeout
+- **Music India** — Backup — consecutive failures: **4** — HTTP 500
+- **Sangeet Bangla** — Backup — consecutive failures: **4** — HTTP 500
+- **Sangeet Bhojpuri** — Backup — consecutive failures: **4** — HTTP 500
+- **Shanson TV** — Backup — consecutive failures: **10** — HTTP 403
+- **BTV National** — Bangladesh — consecutive failures: **4** — HTTP 404
+- **Terra Mater WILD English** — Documentary & Wildlife — consecutive failures: **4** — DNS
+- **Bangla Plus** — Indian Bangla — consecutive failures: **4** — HTTP 404
+- **Manoranjan Grand** — Indian Entertainment — consecutive failures: **4** — HTTP 404
+- **Star Bharat** — Indian Entertainment — consecutive failures: **4** — HTTP 404
+- **Star Utsav** — Indian Entertainment — consecutive failures: **4** — HTTP 404
+- **Bollywood Film** — Indian Movies — consecutive failures: **4** — HTTP 403
+- **Star Gold Select** — Indian Movies — consecutive failures: **4** — HTTP 404
+- **Star Movies** — Indian Movies — consecutive failures: **4** — HTTP 404
+- **Star Utsav Movies** — Indian Movies — consecutive failures: **4** — HTTP 404
+- **Cook & Bake** — International — consecutive failures: **46** — HTTP 504
+- **HBO** — International — consecutive failures: **228** — HTTP 403
+- **Lifetime** — International — consecutive failures: **22** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **46** — HTTP 403
+- **Teen Nick** — Kids — consecutive failures: **106** — HTTP 403
+- **Assam Talks** — Not Playing — consecutive failures: **240** — HTTP 403
+- **Desh TV** — Not Playing — consecutive failures: **17** — HTTP 404
+- **G TV** — Not Playing — consecutive failures: **14** — Timeout
+- **Nick** — Not Playing — consecutive failures: **18** — HTTP 404
+- **Star Gold** — Not Playing — consecutive failures: **18** — HTTP 404
+- **Star Sports 2** — Sports — consecutive failures: **22** — HTTP 403
+- **T Sports** — Sports — consecutive failures: **22** — HTTP 403
+- **Willow TV** — Sports — consecutive failures: **22** — HTTP 403
 
 ## /streamtest/ Endpoints
 

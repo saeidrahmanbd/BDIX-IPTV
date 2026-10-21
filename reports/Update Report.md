@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-10-21 09:46 UTC**_
+_Last generated: **2026-10-21 10:28 UTC**_
 
 Source playlist SHA-256: **a4c0c292c6934c2dc987cd7800792dfa85f6cf7beb90a35faeac5becd2be0d82**
 
@@ -16,12 +16,12 @@ Source playlist SHA-256: **a4c0c292c6934c2dc987cd7800792dfa85f6cf7beb90a35faeac5
 | EPG Programme Coverage | **64.9%** |
 | EPG Mapping | **67.3%** |
 | Stream Health Tested | **1064** |
-| Stream Health Failures | **73** |
-| Persistent Failures | **37** |
+| Stream Health Failures | **63** |
+| Persistent Failures | **43** |
 | Near-Duplicate URL Families | **0** |
 | Audit Blocking Issues | **0** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-21T09:10:42+00:00** |
+| Pre-Publish Gate Generated | **2026-10-21T09:49:33+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -54,10 +54,10 @@ Source playlist SHA-256: **a4c0c292c6934c2dc987cd7800792dfa85f6cf7beb90a35faeac5
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-21T09:10:42.487270+00:00** |
-| EPG coverage | **2026-10-21T09:46:08+00:00** |
-| Stream health | **2026-10-21T09:16:07+00:00** |
-| Pre-publish gate | **2026-10-21T09:10:42+00:00** |
+| Playlist audit | **2026-10-21T09:49:33.372747+00:00** |
+| EPG coverage | **2026-10-21T10:28:18+00:00** |
+| Stream health | **2026-10-21T09:55:36+00:00** |
+| Pre-publish gate | **2026-10-21T09:49:33+00:00** |
 
 ## Maintenance History
 - Records retained: **30**

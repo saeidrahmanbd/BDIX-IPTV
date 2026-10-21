@@ -66,7 +66,7 @@ Bangladesh,Somoy TV,SomoyNewsTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambigu
 Bangladesh,Star News,custom.star.news,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,TBN24,TBN24.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Time Television,TimeTelevision.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Documentary & Wildlife,4K Travel,custom.4k.travel,4K.TRAVEL.TV.distro,https://epgshare01.online/epgshare01/epg_ripper_DISTROTV1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz,MAPPED_ENDED,Auto-maintained; verify ambiguous/name matches manually.
+Documentary & Wildlife,4K Travel,custom.4k.travel,4K.TRAVEL.TV.distro,https://epgshare01.online/epgshare01/epg_ripper_DISTROTV1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz,MAPPED_ID_ONLY,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Adventure Earth,custom.adventure.earth,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Alone,custom.alone,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Amazing Discoveries TV,custom.amazing.discoveries.tv,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
