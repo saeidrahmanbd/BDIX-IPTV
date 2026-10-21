@@ -9,16 +9,6 @@
     "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/india/and-pictures-hd-in.png",
     "notes": "Local self-contained SVG wrapper around the identified logo asset from the public TV Logos catalogue; no remote asset fetch occurs when the playlist player loads the local repository file."
   },
-  "IPTV-Playlist.m3u|custom.bollywood.4u|Bollywood 4U|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-bollywood-4u.svg": {
-    "status": "generated_fallback",
-    "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
-  },
-  "IPTV-Playlist.m3u|custom.aap.ki.adalat|Aap Ki Adalat|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-aap-ki-adalat.svg": {
-    "status": "generated_fallback",
-    "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
-  },
   "IPTV-Playlist.m3u|custom.dd.mizoram|DD Mizoram|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-dd-mizoram.svg": {
     "status": "generated_fallback",
     "source_url": "",
@@ -44,11 +34,6 @@
     "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/cbs-logo-white-us.png",
     "notes": "Local self-contained SVG wrapper around the identified logo asset from the public TV Logos catalogue; no remote asset fetch occurs when the playlist player loads the local repository file."
   },
-  "IPTV-Playlist.m3u|custom.cmac.tv|CMAC TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-cmac-tv.svg": {
-    "status": "generated_fallback",
-    "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
-  },
   "IPTV-Playlist.m3u|custom.cnbc.tv|CNBC TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-cnbc.svg": {
     "status": "third_party_verified",
     "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/cnbc-us.png",
@@ -69,11 +54,6 @@
     "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/cp24-ca.png",
     "notes": "Local self-contained SVG wrapper around the identified logo asset from the public TV Logos catalogue; no remote asset fetch occurs when the playlist player loads the local repository file."
   },
-  "IPTV-Playlist.m3u|custom.fox.5|Fox 5|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-fox-5.svg": {
-    "status": "generated_fallback",
-    "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
-  },
   "IPTV-Playlist.m3u|custom.fox.news|Fox News|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-fox-news.svg": {
     "status": "third_party_verified",
     "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/fox-news-us.png",
@@ -83,11 +63,6 @@
     "status": "third_party_verified",
     "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/fx-us.png",
     "notes": "Local self-contained SVG wrapper around the identified logo asset from the public TV Logos catalogue; no remote asset fetch occurs when the playlist player loads the local repository file."
-  },
-  "IPTV-Playlist.m3u|custom.icon.film.channel|Icon Film Channel|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-icon-film-channel.svg": {
-    "status": "generated_fallback",
-    "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
   },
   "IPTV-Playlist.m3u|custom.laff.tv|LAFF TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-laff.svg": {
     "status": "third_party_verified",
@@ -109,11 +84,6 @@
     "source_url": "",
     "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
   },
-  "IPTV-Playlist.m3u|custom.popflix|Popflix|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-popflix.svg": {
-    "status": "generated_fallback",
-    "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
-  },
   "IPTV-Playlist.m3u|custom.tbs|TBS|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-tbs.svg": {
     "status": "third_party_verified",
     "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/tbs-us.png",
@@ -124,11 +94,6 @@
     "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/usa-us.png",
     "notes": "Local self-contained SVG wrapper around the identified logo asset from the public TV Logos catalogue; no remote asset fetch occurs when the playlist player loads the local repository file."
   },
-  "IPTV-Playlist.m3u|custom.60.days.in|60 Days In|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-60-days-in.svg": {
-    "status": "generated_fallback",
-    "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
-  },
   "IPTV-Playlist.m3u|custom.alone|Alone|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-alone.svg": {
     "status": "generated_fallback",
     "source_url": "",
@@ -138,26 +103,6 @@
     "status": "third_party_verified",
     "source_url": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/cooking-channel-us.png",
     "notes": "Local self-contained SVG wrapper around the identified logo asset from the public TV Logos catalogue; no remote asset fetch occurs when the playlist player loads the local repository file."
-  },
-  "IPTV-Playlist.m3u|custom.deadly.women|Deadly Women|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-deadly-women.svg": {
-    "status": "generated_fallback",
-    "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
-  },
-  "IPTV-Playlist.m3u|custom.highway.thru.hell|Highway Thru Hell|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-highway-thru-hell.svg": {
-    "status": "generated_fallback",
-    "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
-  },
-  "IPTV-Playlist.m3u|custom.mini|MINI|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-mini.svg": {
-    "status": "generated_fallback",
-    "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
-  },
-  "IPTV-Playlist.m3u|custom.tvc.arabic.kids|TVC Arabic Kids|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-tvc-arabic-kids.svg": {
-    "status": "generated_fallback",
-    "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
   },
   "IPTV-Playlist.m3u|custom.xtv|YTV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-ytv.svg": {
     "status": "third_party_verified",
@@ -170,11 +115,6 @@
     "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
   },
   "IPTV-Playlist.m3u|custom.euro.sports.hd|Euro Sports HD|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-euro-sports-hd.svg": {
-    "status": "generated_fallback",
-    "source_url": "",
-    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
-  },
-  "IPTV-Playlist.m3u|custom.mundial|Mundial|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-mundial.svg": {
     "status": "generated_fallback",
     "source_url": "",
     "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."

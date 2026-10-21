@@ -212,8 +212,6 @@ https://amg00877-b4unew-amg00877c2-xiaomi-in-5489.playouts.now.amagi.tv/playlist
 https://live-bhojpuri.akamaized.net/liveabr/playlist.m3u8
 #EXTINF:-1 tvg-id="Bollygold.in@HD" tvg-name="Bollygold" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nh-bollygold-dbedeff9.png" tvg-chno="1209" channel-id="Bollygold.in@HD" tvg-country="IN" tvg-language="hin" group-title="Indian Movies",Bollygold
 https://jmp2.uk/stvp-IN4000600Q
-#EXTINF:-1 tvg-id="custom.bollywood.4u" tvg-name="Bollywood 4U" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-bollywood-4u.png" tvg-chno="1190" channel-id="custom.bollywood.4u" group-title="Indian Movies" tvg-country="IN" tvg-language="hin",Bollywood 4U
-https://streams2.sofast.tv/umaxx/v1/0196d96223231ea506ec2e7986613e/0196d96312d71ebd416a37ff7b3317/playlist.m3u8
 #EXTINF:-1 tvg-id="BollywoodFilm.in" tvg-name="Bollywood Film" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bollywood-film-61bc3ef1fe.png" tvg-chno="311" channel-id="BollywoodFilm.in" tvg-language="hin" tvg-country="IN" group-title="Indian Movies",Bollywood Film
 https://tvextra-hls.b-cdn.net/bollywoodfilm/bollywoodfilm.m3u8
 #EXTINF:-1 tvg-id="custom.colors.cineplex" tvg-name="Colors Cineplex [UK]" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-cineplex-uk.png" tvg-chno="314" channel-id="custom.colors.cineplex" tvg-country="IN" tvg-language="hin" group-title="Indian Movies",Colors Cineplex [UK]
@@ -813,8 +811,6 @@ https://amg01753-narrativeentert-greatchristmas-samsunguk-8atls.amagi.tv/playlis
 https://tvsen7.aynaott.com/hbo/index.m3u8
 #EXTINF:-1 tvg-id="custom.hbo.2" tvg-name="HBO 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hbo-2.png" tvg-chno="101" channel-id="custom.hbo.2" tvg-country="US" tvg-language="eng" group-title="International",HBO 2
 https://tvsen3.aynaott.com/u3NjUrny/index.m3u8
-#EXTINF:-1 tvg-id="custom.icon.film.channel" tvg-name="Icon Film Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-icon-film-channel.png" tvg-chno="1194" channel-id="custom.icon.film.channel" tvg-country="US" tvg-language="eng" group-title="International",Icon Film Channel
-https://09e3020901654256a51f2f2e9213765a.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/LG-gb_IconFilmChannelClassics/playlist.m3u8
 #EXTINF:-1 tvg-id="iFilmEnglish.ir" tvg-name="iFilm English" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ifilm-english-s-e5f0438e73.png" tvg-chno="739" channel-id="iFilmEnglish.ir" tvg-country="IR" tvg-language="eng" group-title="International",iFilm English
 https://live.presstv.co.uk/hls/ifilmen.m3u8
 #EXTINF:-1 tvg-id="custom.iontvuk" tvg-name="iON TV UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ion-tv-uk.png" tvg-chno="750" channel-id="custom.iontvuk" tvg-country="US" tvg-language="eng" group-title="International",iON TV UK
