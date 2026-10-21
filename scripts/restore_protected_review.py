@@ -88,6 +88,15 @@ AUTHORIZED_BACKUP_MIGRATIONS = {
     "fashionone": ("https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2ee6997cb_1/playlist.m3u8", "International"),
     "ptvsports": ("http://103.135.253.32:8080/PTV-SPORTS/tracks-v1a1/mono.m3u8", "Pakistani"),
     "starsportsselect1": ("http://103.135.253.32:8080/STAR-SPORTS-SELECT-1/index.m3u8", "Sports"),
+    "channel52": ("http://str24.l9574.com/503.stream/tracks-v1a1/mono.m3u8", "Bangladesh"),
+}
+AUTHORIZED_MIGRATION_SOURCE_GROUPS = {
+    "7xpunjabi": "Backup",
+    "banglacinema": "Backup",
+    "fashionone": "Backup",
+    "ptvsports": "Backup",
+    "starsportsselect1": "Backup",
+    "channel52": "Not Playing",
 }
 
 
@@ -383,8 +392,11 @@ def restore() -> None:
 
         if original and original["group"] in PROTECTED and protected_occurrences_to_restore[key] > 0:
             target_group = authorized_backup_migration_target(record[0], url)
+            migration_source = AUTHORIZED_MIGRATION_SOURCE_GROUPS.get(
+                normalize_name(display_name(record[0])), "Backup"
+            )
             if (
-                original["group"] == "Backup"
+                original["group"] == migration_source
                 and target_group
                 and current_group == target_group
             ):
@@ -422,11 +434,10 @@ def restore() -> None:
             permanently_removed_count += 1
             continue
         group = group_of(record[0])
+        if url_of(record).casefold() in migrated_urls:
+            # Do not restore a snapshot copy of any explicitly migrated record.
+            continue
         if group == "Backup":
-            # Do not restore the snapshot copy of a record migrated by the exact
-            # name + URL + target-group allowlist above.
-            if url_of(record).casefold() in migrated_urls:
-                continue
             # Every other Backup entry remains protected and is restored.
             snapshot_backup.append(record)
         elif group == "Not Playing":
