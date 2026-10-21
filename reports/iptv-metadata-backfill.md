@@ -1,6 +1,6 @@
 # IPTV Playlist Metadata Backfill
 
-Generated: **2026-10-21T08:36:11+00:00**
+Generated: **2026-10-21T09:10:41+00:00**
 
 Status: **PASS**
 Source: **current IPTV-Playlist.m3u**
