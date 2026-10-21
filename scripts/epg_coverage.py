@@ -55,6 +55,10 @@ EPG_ALIASES = {
     "Hungama.in@SD": ["143150"],
     "ZBMusic.in@HD": ["jtv3319"],
     "ZBBhakti.in@HD": ["jtv3320"],
+    # Verified against current JioTV/Dish TV source IDs for the same channels.
+    "custom.amar.bangla.digital": ["jtv1962"],
+    "custom.epic.bhojpuri.digital": ["157803", "jtv3384"],
+    "custom.picture.hd": ["And.Pictures.HD.in", "142638", "jtv185"],
 }
 
 EPG_LOCKS = {
@@ -315,6 +319,16 @@ def load_previous():
             if r.get("tvg_id"): out[r["tvg_id"]]=r
     return out
 
+def retained_mapping(is_bangladesh, old_epg, candidates):
+    """Keep prior IDs only when safe; prevent stale foreign guides for Bangladesh channels."""
+    old_epg = (old_epg or "").strip()
+    if is_bangladesh and old_epg:
+        prior = {x.strip() for x in old_epg.split("|") if x.strip()}
+        if not prior <= set(candidates):
+            return ""
+    return old_epg
+
+
 def main():
     channels=parse_playlist(); previous=load_previous(); source_data=[]; source_status=[]
     source_urls = configured_sources()
@@ -352,7 +366,7 @@ def main():
                     if cid not in hits: hits.append(cid)
                     total += counts.get(cid,0)
                     if cid in future: best_live.append(cid); live=True
-        old_epg=prev.get("epg_id","").strip()
+        old_epg=retained_mapping(is_bangladesh, prev.get("epg_id",""), candidates)
         if ch["group"]=="Indian Bangla": epg_id=(best_live[0] if best_live else (hits[0] if hits else old_epg))
         else: epg_id=(best_live[0] if best_live else (hits[0] if hits else old_epg))
         if live: status="MAPPED"

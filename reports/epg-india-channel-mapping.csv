@@ -16,7 +16,7 @@ Bangladesh,Bijoy TV,BijoyTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/
 Bangladesh,Boishakhi TV,BoishakhiTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel 1,custom.channel.1,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel 16,custom.channel.16,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Bangladesh,Channel 24,Channel24.bd,LIVETV_LIVETVCHANNEL_TV_24,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
+Bangladesh,Channel 24,Channel24.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel 9,Channel9.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel I,ChannelI.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel S,ChannelS.uk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -52,7 +52,7 @@ Bangladesh,NTV,NTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matc
 Bangladesh,NTV Europe,NTVEurope.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Nagorik TV,NagorikTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,News 21,News21BanglaTV.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Bangladesh,News 24,News24.bd,News24.in@SD,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
+Bangladesh,News 24,News24.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Nexus TV,NexusTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Probashi TV,custom.probashitv,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,RTV,RTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
