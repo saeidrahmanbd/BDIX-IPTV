@@ -6,6 +6,11 @@ P = Path("IPTV-Playlist.m3u")
 NO_NUMBER = {"Backup", "Not Playing"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 ANOMALOUS_NUMBERS = {1001, 1115, 1116, 1120}
+REMOVE_NAMES = {
+    "bollywood 4u", "aap ki adalat", "cmac tv", "fox 5", "icon film channel",
+    "pix11", "popflix", "60 days in", "deadly women", "highway thru hell",
+    "mini", "tvc arabic kids",
+}
 
 def attrs(s): return dict(ATTR_RE.findall(s))
 def set_attr(s, key, value):
@@ -41,10 +46,18 @@ def parse(text):
 def main():
     if not P.exists(): raise SystemExit("IPTV-Playlist.m3u not found")
     pre, blocks = parse(P.read_text(encoding="utf-8-sig"))
-    changed = 0; removed_duplicates = 0
+    changed = 0; removed_duplicates = 0; removed_named = []
+    kept_initial = []
     for block in blocks:
-        info = block[0]; a = attrs(info); name = name_of(info); key = name.casefold(); group = a.get("group-title", "").strip()
-        if key == "btv national":
+        info = block[0]; name = name_of(info); key = name.casefold()
+        if key in REMOVE_NAMES:
+            removed_named.append(name)
+            continue
+        kept_initial.append(block)
+    blocks = kept_initial
+    for block in blocks:
+        info = block[0]; a = attrs(info); name = name_of(info); group = a.get("group-title", "").strip()
+        if name.casefold() == "btv national":
             if a.get("tvg-id") != "BTVNational.bd": info = set_attr(info, "tvg-id", "BTVNational.bd"); changed += 1
             if a.get("channel-id") != "BTVNational.bd": info = set_attr(info, "channel-id", "BTVNational.bd"); changed += 1
         if group in NO_NUMBER and a.get("tvg-chno"):
@@ -72,6 +85,7 @@ def main():
     output = [line for line in pre if line.strip()]
     for block in blocks: output.extend(block)
     P.write_text("\n".join(output).rstrip() + "\n", encoding="utf-8")
-    print(f"Final IPTV fixes: changed={changed}, duplicate_streams_removed={removed_duplicates}, entries={len(blocks)}")
+    print(f"Final IPTV fixes: changed={changed}, duplicate_streams_removed={removed_duplicates}, named_channels_removed={len(removed_named)}, entries={len(blocks)}")
+    if removed_named: print("Removed channels: " + ", ".join(removed_named))
 
 if __name__ == "__main__": main()
