@@ -1,15 +1,15 @@
 # Playlist Audit
-Generated: **2026-10-21T06:29:23.005718+00:00**
-Audited playlist revision: `7463a33edf95ac2287742c69d9baadc1648c6548`
-Playlist SHA-256: `61199b5845086edf9deb98a51a4e794c6757999358847fa5c1ad1e43e9357a3e`
-Source playlist SHA-256: **61199b5845086edf9deb98a51a4e794c6757999358847fa5c1ad1e43e9357a3e**
+Generated: **2026-10-21T07:58:05.136600+00:00**
+Audited playlist revision: `32a0f3b5eda4c42f0059c25d3a1a8a6884d5c1bd`
+Playlist SHA-256: `a4c0c292c6934c2dc987cd7800792dfa85f6cf7beb90a35faeac5becd2be0d82`
+Source playlist SHA-256: **a4c0c292c6934c2dc987cd7800792dfa85f6cf7beb90a35faeac5becd2be0d82**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
 - Playlist entries: **1064**
-- Unique channel IDs: **638**
+- Unique channel IDs: **637**
 - IDs with multiple streams: **228**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -20,7 +20,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Logo exceptions requiring repair: **0**
 - External logo references (review only): **0**
 - Logo references checked: **1064**
-- Duplicate primary identities: **1**
+- Duplicate primary identities: **0**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Primary entries missing tvg-country: **0**
@@ -28,7 +28,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Category registry issues: **0**
-- Alphabetical ordering issues: **1**
+- Alphabetical ordering issues: **0**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **11**
 - Embedded Xtream-style credential paths (redacted): **0**
@@ -139,9 +139,10 @@ Canonical registry matches the permanent IPTV category order.
 ### bahrainsports2.bh@sd (2 streams)
 - Bahrain Sports 2 — Sports — https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8
 - Bahrain Sports 2 — Backup — https://tvsen6.aynaott.com/BahrainSports2/index.m3u8
-### balleballe.in@sd (3 streams)
+### balleballe.in@sd (4 streams)
 - Balle Balle — Indian Music — https://mcncdndigital.com/balleballetv/index.m3u8
 - Balle Balle — Backup — https://mcncdndigital.com/balleballetv/tracks-v1a1/mono.m3u8
+- Balle Balle — Backup — https://mcncdndigital.com/balleballetv/tracks-v1a1/mono.ts.m3u8
 - Balle Balle — Backup — https://streams.tangotv.in/BALLEBALLE/ORIGIN/index.m3u8
 ### banglatv.bd (5 streams)
 - Bangla TV — Bangladesh — http://116.204.149.16/banglatv/index.m3u8
@@ -351,7 +352,7 @@ Canonical registry matches the permanent IPTV category order.
 - Travelxp English — Backup — https://27c980761ff9437d929e64647afe183a.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RakutenTV-eu_TravelXP/playlist.m3u8
 ### custom.young.hollywood (2 streams)
 - Young Hollywood — International — https://amg00143-younghollywoodl-younghollywood-xiaomi-8k5gd.amagi.tv/playlist/amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8
-- Young Hollywood — International — https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8
+- Young Hollywood — Backup — https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8
 ### custom.zoom (2 streams)
 - Zoom — Indian Music — https://d2esfk1pb9cdob.cloudfront.net/master.m3u8
 - Zoom — Backup — https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
@@ -934,7 +935,7 @@ Canonical registry matches the permanent IPTV category order.
 
 ## Duplicate Primary Identities
 
-- **custom.young.hollywood** — Young Hollywood [International] — https://amg00143-younghollywoodl-younghollywood-xiaomi-8k5gd.amagi.tv/playlist/amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8; Young Hollywood [International] — https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8
+None.
 
 ## Primary Channel-Number Collisions
 
@@ -947,7 +948,7 @@ None.
 ## Ordering
 
 Category block order: OK.
-- **Backup** — **7S Music** appears after **&TV**
+Alphabetical order: OK.
 
 ## Suspicious URLs
 
