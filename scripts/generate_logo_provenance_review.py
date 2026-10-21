@@ -48,6 +48,31 @@ def build_report(manifest, playlist_hashes, generated_at=None, limit=40):
         lines.append(f"| {playlist} | {name} | {tvg_id} | {asset} | {reason} |")
     if not review:
         lines.append("| — | — | — | — | No undocumented provenance records. |")
+    # Surface one logo asset assigned to multiple distinct channel identities.
+    # This is a manual-review signal, not proof that the artwork is incorrect.
+    assets = {}
+    for entry in entries:
+        if entry.get("playlist") != "IPTV-Playlist.m3u":
+            continue
+        logo = Path(urlsplit(str(entry.get("logo", ""))).path).name.casefold()
+        identity = str(entry.get("tvg_id", "")).strip()
+        name = str(entry.get("channel_name", "")).strip()
+        if logo and identity:
+            item = assets.setdefault(logo, {})
+            item.setdefault(identity, set()).add(name or identity)
+    shared = [(asset, identities) for asset, identities in sorted(assets.items()) if len(identities) > 1]
+    lines += [
+        "", "## Shared logo assets across distinct channel identities", "",
+        "The same local file is referenced by more than one playlist tvg-id below. Review visually; shared artwork can be legitimate for related channel brands and is not automatically wrong.", "",
+        "| Local asset | Channel identity | tvg-id |",
+        "|---|---|---|",
+    ]
+    if shared:
+        for asset, identities in shared:
+            for identity, names in sorted(identities.items()):
+                lines.append(f"| {asset} | {', '.join(sorted(names))} | {identity} |")
+    else:
+        lines.append("| — | No cross-identity logo reuse detected | — |")
     lines += [
         "", "## Review policy", "",
         "- Do not mark an asset verified from channel-name similarity alone.",
