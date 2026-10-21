@@ -167,7 +167,7 @@ Not Playing remains a review queue, not a published channel group:
 - channel-id remains beside tvg-id for Playlist Studio/repository compatibility; both EPG URL aliases remain in the header.
 - All referenced logo files exist. nvisionbd-verified prefixes, mixed JPG/PNG formats and local-logo names are not by themselves proof that the underlying image is wrong; these remain for visual/provenance review.
 - Similar but distinct IDs/feeds (MyTime regional variants, Willow/Willow TV, Suriya/Suriyan, Baallee/Balle Balle, Goldmines/Goldmines 2, Documentary+ variants and Makkah Live/Makkah TV) were not merged without proof they are identical.
-- All 12 previously blank country/language records now have values. The unidentified Channel 52 is explicitly marked `ZZ/und` rather than assigned an invented station identity.
+- All 12 previously blank country/language records now have values. After manual stream verification, Channel 52 is identified as a Bangladeshi Bengali-language feed (`BD/ben`); it remains in Not Playing pending the user's review.
 - Tag TV and BSTV were retained because available evidence did not confidently establish these specific feeds as non-Islamic religious services.
 - Afarin TV remains in Kids: its broadcaster describes it as a Kurdish children's education service that also includes Islamic programming: https://afarin.tv/About4.
 
