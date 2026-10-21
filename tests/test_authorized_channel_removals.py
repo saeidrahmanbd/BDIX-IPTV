@@ -257,5 +257,87 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             self.assertIn('tvg-name="Keep Reviewing" group-title="Not Playing"', final)
             self.assertEqual(final.count('tvg-name="Channel 52"'), 1)
 
+
+    def test_authorized_primary_to_backup_migration_requires_exact_identity_url_and_source(self):
+        url = (
+            "https://cdn-ue1-prod.tsv2.amagi.tv/linear/"
+            "amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8"
+        )
+        info = channel("Young Hollywood", "Backup", url).splitlines()[0]
+        self.assertTrue(restore.is_authorized_primary_to_backup_migration(info, url, "International"))
+        self.assertFalse(restore.is_authorized_primary_to_backup_migration(info, url + "?changed=1", "International"))
+        self.assertFalse(restore.is_authorized_primary_to_backup_migration(info, url, "Pakistani"))
+        wrong_name = channel("Hollywood One", "Backup", url).splitlines()[0]
+        self.assertFalse(restore.is_authorized_primary_to_backup_migration(wrong_name, url, "International"))
+        wrong_group = info.replace('group-title="Backup"', 'group-title="Not Playing"')
+        self.assertFalse(restore.is_authorized_primary_to_backup_migration(wrong_group, url, "International"))
+
+    def test_restore_keeps_only_the_exact_authorized_young_hollywood_backup_migration(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist_path = root / "IPTV-Playlist.m3u"
+            snapshot = root / "protected.m3u"
+            baseline = root / "baseline.json"
+            main_url = (
+                "https://amg00143-younghollywoodl-younghollywood-xiaomi-8k5gd.amagi.tv/"
+                "playlist/amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8"
+            )
+            backup_url = (
+                "https://cdn-ue1-prod.tsv2.amagi.tv/linear/"
+                "amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8"
+            )
+            safe_backup_url = "https://example.invalid/safe-backup.m3u8"
+            safe_np_url = "https://example.invalid/not-playing.m3u8"
+            main_info = (
+                '#EXTINF:-1 tvg-id="custom.young.hollywood" tvg-name="Young Hollywood" '
+                'tvg-chno="471" group-title="International",Young Hollywood'
+            )
+            old_backup_info = (
+                '#EXTINF:-1 tvg-id="custom.young.hollywood" tvg-name="Young Hollywood" '
+                'tvg-chno="472" group-title="International",Young Hollywood'
+            )
+            new_backup_info = (
+                '#EXTINF:-1 tvg-id="custom.young.hollywood" tvg-name="Young Hollywood" '
+                'group-title="Backup",Young Hollywood'
+            )
+            safe_backup = channel("Safe Backup", "Backup", safe_backup_url).splitlines()
+            safe_np = channel("Review Stream", "Not Playing", safe_np_url).splitlines()
+            current = "\n".join([
+                "#EXTM3U",
+                main_info, main_url,
+                new_backup_info, backup_url,
+                *safe_backup, *safe_np,
+            ]) + "\n"
+            snapshot_text = "\n".join([*safe_backup, *safe_np]) + "\n"
+            baseline_records = [
+                {"info": main_info, "url": main_url, "group": "International"},
+                {"info": old_backup_info, "url": backup_url, "group": "International"},
+                {"info": safe_backup[0], "url": safe_backup_url, "group": "Backup"},
+                {"info": safe_np[0], "url": safe_np_url, "group": "Not Playing"},
+            ]
+            playlist_path.write_text(current, encoding="utf-8")
+            snapshot.write_text(snapshot_text, encoding="utf-8")
+            baseline.write_text(json.dumps(baseline_records), encoding="utf-8")
+            with (
+                patch.object(restore, "PLAYLIST", playlist_path),
+                patch.object(restore, "SNAPSHOT", snapshot),
+                patch.object(restore, "BASELINE", baseline),
+                redirect_stdout(io.StringIO()),
+            ):
+                restore.restore()
+            result = playlist_path.read_text(encoding="utf-8")
+            self.assertIn('tvg-id="custom.young.hollywood" tvg-name="Young Hollywood" tvg-chno="471" group-title="International"', result)
+            backup_records = [
+                line for line in result.splitlines()
+                if line.startswith("#EXTINF:") and 'group-title="Backup"' in line
+            ]
+            moved = [line for line in backup_records if 'tvg-id="custom.young.hollywood"' in line]
+            self.assertEqual(len(moved), 1)
+            self.assertNotIn("tvg-chno", moved[0])
+            self.assertEqual(result.count(main_url), 1)
+            self.assertEqual(result.count(backup_url), 1)
+            self.assertIn(safe_backup_url, result)
+            self.assertIn(safe_np_url, result)
+
 if __name__ == "__main__":
     unittest.main()

@@ -99,6 +99,31 @@ AUTHORIZED_MIGRATION_SOURCE_GROUPS = {
     "channel52": "Not Playing",
 }
 
+# An explicitly reviewed active-to-Backup move. This is intentionally narrow:
+# the normalized channel identity, original category, and exact URL must match.
+AUTHORIZED_PRIMARY_TO_BACKUP_MIGRATIONS = {
+    "younghollywood": (
+        "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8",
+        "International",
+    ),
+}
+
+
+def is_authorized_primary_to_backup_migration(
+    info: str, url: str, original_group: str
+) -> bool:
+    """Allow only a reviewed exact-URL migration from a primary group to Backup."""
+    key = normalize_name(display_name(info))
+    rule = AUTHORIZED_PRIMARY_TO_BACKUP_MIGRATIONS.get(key)
+    if not rule:
+        return False
+    expected_url, expected_source_group = rule
+    return (
+        group_of(info) == "Backup"
+        and original_group.strip() == expected_source_group
+        and str(url or "").strip().casefold() == expected_url.casefold()
+    )
+
 
 def authorized_backup_migration_target(info: str, url: str) -> str | None:
     """Return the target group only for an explicitly allowlisted name + exact URL."""
@@ -411,9 +436,12 @@ def restore() -> None:
                 return
 
         if original and current_group in PROTECTED and original["group"] not in PROTECTED:
-            record[0] = original["info"]
-            current_group = group_of(record[0])
-            reclassification_reverted += 1
+            if not is_authorized_primary_to_backup_migration(
+                record[0], url, original["group"]
+            ):
+                record[0] = original["info"]
+                current_group = group_of(record[0])
+                reclassification_reverted += 1
 
         if current_group == "Backup":
             # A current Backup record not represented in the snapshot stays in

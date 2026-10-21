@@ -951,8 +951,6 @@ https://d726x48n2pd5h.cloudfront.net/XITE_Hits.m3u8
 https://amg01243-xitenetworksint-hitsuk-samsunguk-mvovq.amagi.tv/playlist/amg01243-xitenetworksint-hitsuk-samsunguk/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.young.hollywood" tvg-name="Young Hollywood" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/young-hollywood.png" tvg-chno="471" channel-id="custom.young.hollywood" tvg-country="US" tvg-language="eng" group-title="International",Young Hollywood
 https://amg00143-younghollywoodl-younghollywood-xiaomi-8k5gd.amagi.tv/playlist/amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.young.hollywood" tvg-name="Young Hollywood" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/young-hollywood.png" tvg-chno="472" channel-id="custom.young.hollywood" tvg-country="US" tvg-language="eng" group-title="International",Young Hollywood
-https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.4k.travel" tvg-name="4K Travel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4k-travel.png" tvg-chno="473" channel-id="custom.4k.travel" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",4K Travel
 https://streams2.sofast.tv/sofastplayout/33c31ac4-51fa-46ae-afd0-0d1fe5e60a80_0_HLS/master.m3u8
 #EXTINF:-1 tvg-id="custom.adventure.earth" tvg-name="Adventure Earth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/adventure-earth.png" tvg-chno="474" channel-id="custom.adventure.earth" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",Adventure Earth
@@ -2058,6 +2056,8 @@ https://cdn.pishow.tv/ott/live/1271/master.m3u8
 https://wildearth-plex.amagi.tv/master.m3u8
 #EXTINF:-1 tvg-id="XITEHits.nl" tvg-name="XITE Hits" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xite-hits-1080p-bf41ee4788.png" channel-id="XITEHits.nl" tvg-country="NL" tvg-language="eng;deu;nld" group-title="Backup",XITE Hits
 https://amg01243-xitenetworksint-hitsuk-samsunguk-mvovq.amagi.tv/ts-eu-w1-n2/playlist/amg01243-xitenetworksint-hitsuk-samsunguk/playlist.m3u8
+#EXTINF:-1 tvg-id="custom.young.hollywood" tvg-name="Young Hollywood" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/young-hollywood.png" channel-id="custom.young.hollywood" tvg-country="US" tvg-language="eng" group-title="Backup",Young Hollywood
+https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8
 #EXTINF:-1 tvg-id="YRFMusic.in" tvg-name="YRF Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/yrf-music.png" channel-id="YRFMusic.in" tvg-country="IN" tvg-language="hin" group-title="Backup",YRF Music
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
 #EXTINF:-1 tvg-id="ZeeBangla.in@HD" tvg-name="Zee Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla.png" channel-id="ZeeBangla.in@HD" tvg-country="IN" tvg-language="ben" group-title="Backup",Zee Bangla
