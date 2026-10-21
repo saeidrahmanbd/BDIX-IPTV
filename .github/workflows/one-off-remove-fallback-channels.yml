@@ -1,0 +1,82 @@
+name: One-off Remove Unwanted Fallback Channels
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bdix-iptv-one-off-remove
+  cancel-in-progress: false
+
+jobs:
+  remove:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Apply exact channel removals
+        run: python scripts/final_iptv_playlist_fixes.py
+
+      - name: Verify only the requested channels were removed
+        shell: python
+        run: |
+          import subprocess, re
+          names = {
+              'bollywood 4u', 'aap ki adalat', 'cmac tv', 'fox 5',
+              'icon film channel', 'pix11', 'popflix', '60 days in',
+              'deadly women', 'highway thru hell', 'mini', 'tvc arabic kids'
+          }
+          before = subprocess.check_output(['git','show','HEAD:IPTV-Playlist.m3u'], text=True, encoding='utf-8')
+          after = open('IPTV-Playlist.m3u', encoding='utf-8').read()
+          def blocks(text):
+              out=[]; cur=[]
+              for line in text.splitlines():
+                  if line.startswith('#EXTINF:'):
+                      if cur: out.append(cur)
+                      cur=[line]
+                  elif cur: cur.append(line)
+              if cur: out.append(cur)
+              return out
+          def name(block):
+              m=re.search(r'tvg-name="([^"]*)"', block[0])
+              return (m.group(1) if m else block[0].split(',',1)[-1]).strip().casefold()
+          b={name(x) for x in blocks(before)}; a={name(x) for x in blocks(after)}
+          removed=b-a
+          unexpected=removed-names
+          missing=names-b
+          if unexpected or missing:
+              raise SystemExit(f'Guard failed: unexpected_removed={sorted(unexpected)} missing_targets={sorted(missing)}')
+          if names & a:
+              raise SystemExit('Guard failed: one or more requested channel names remain')
+          print(f'Verified exactly {len(removed)} requested channel identities removed.')
+
+      - name: Validate M3U structure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('IPTV-Playlist.m3u')
+          t=p.read_text(encoding='utf-8')
+          if not t.startswith('#EXTM3U'):
+              raise SystemExit('Missing #EXTM3U header')
+          entries=t.count('#EXTINF:')
+          urls=sum(1 for line in t.splitlines() if line.startswith(('http://','https://')))
+          if entries != urls:
+              raise SystemExit(f'Entry/URL mismatch: entries={entries}, urls={urls}')
+          print(f'Validated M3U structure: entries={entries}, urls={urls}')
+          PY
+
+      - name: Self-remove one-off workflow and commit playlist
+        run: |
+          rm -f .github/workflows/one-off-remove-fallback-channels.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A IPTV-Playlist.m3u .github/workflows/one-off-remove-fallback-channels.yml
+          git diff --cached --quiet && { echo 'No change produced.'; exit 1; }
+          git commit -m 'Remove unwanted fallback channels from IPTV playlist'
+          git push origin HEAD:main
