@@ -20,7 +20,9 @@ EPG_ALIASES = {
     "DDHimachalPradesh.in@SD": ["ts1217", "1217", "LIVETV_LIVETVCHANNEL_DD_SHIMLA"],
     "MTVIndia.in@SD": ["jtv248", "248"], "MusicMastii.in": ["jtv584", "584", "IN4#MASTII.in"],
     "KappaTV.in@ALT1": ["jtv786", "786", "377"], "IqraBangla.uk": ["3914"], "DeenTV.uk": ["1235"],
-    "ATNBanglaUK.uk": ["6753"], "TamilanTV.in": ["jtv2958", "2958"],
+    "ATNBanglaUK.uk": ["6753"],
+    "NTVEurope.bd": ["epgpw:9374"],
+    "custom.channel.s.uk": ["epgpw:12504"], "TamilanTV.in": ["jtv2958", "2958"],
     "SonyKALHindi.us": ["US1#Sony.KAL.us"], "custom.bdix.aakashaath": ["AakaashAath.in@SD"],
     "custom.bdix.abpananda": ["ABPAnanda.in@SD"], "custom.abp.ananda": ["ABPAnanda.in@SD"],
     "custom.bdix.9bangla": ["TV9Bangla.in@SD"], "custom.ctvn.akd.plus": ["CTVNAKDPlus.in@SD"],
@@ -109,6 +111,33 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
     "https://hum.tv/schedule/",
 ]
+EPGPW_SOURCE_IDS = {
+    "https://epg.pw/api/epg.xml?channel_id=9374": "epgpw:9374",
+    "https://epg.pw/api/epg.xml?channel_id=12504": "epgpw:12504",
+}
+
+
+def normalize_epgpw_source(url, data):
+    """Normalize a dedicated EPG.PW XMLTV feed to its explicitly verified source ID."""
+    synthetic_id = EPGPW_SOURCE_IDS.get(url)
+    if not synthetic_id:
+        return data
+    root = ET.fromstring(data)
+    channel_ids = {channel.get("id", "").strip() for channel in root.findall("channel") if channel.get("id", "").strip()}
+    if len(channel_ids) != 1:
+        raise ValueError(f"Expected exactly one channel ID in dedicated EPG.PW feed; found {len(channel_ids)}")
+    original_id = next(iter(channel_ids))
+    matched = [p for p in root.findall("programme") if p.get("channel", "").strip() == original_id]
+    if not matched:
+        raise ValueError(f"Dedicated EPG.PW feed has no programme rows for channel ID {original_id}")
+    for channel in root.findall("channel"):
+        if channel.get("id", "").strip() == original_id:
+            channel.set("id", synthetic_id)
+    for programme in matched:
+        programme.set("channel", synthetic_id)
+    return ET.tostring(root, encoding="utf-8")
+
+
 PRIVATE_SOURCE_ENV = "M3U4U_XMLTV_URL"
 PRIVATE_SOURCE_LABEL = "M3U4U XMLTV (private Actions secret)"
 
@@ -215,31 +244,49 @@ def parse_playlist():
                 cur = None
     return sorted(combined.values(), key=lambda x: (x["group"], x["name"].lower(), x["tvg_id"]))
 
-# Guide text policy: English (Latin script) or Bengali (Bengali script) only.
-# Any other language tag or script is rejected. Keep identical in epg_coverage.py,
-# generate_epg.py and epg_publish_gate.py (tests/test_language_policy.py checks this).
-ALLOWED_LANGS = {"en", "eng", "bn", "ben"}
-ALLOWED_LANG_PREFIXES = ("en-", "en_", "bn-", "bn_")
-ALLOWED_SCRIPTS = ("LATIN", "BENGALI")
+# All valid non-empty programme languages remain eligible. If multiple titles
+# represent the same programme, prefer English, then Bengali, then other languages.
+LANG_PRIORITY = {"en": 3, "eng": 3, "bn": 2, "ben": 2}
+LANG_PREFIXES = (("en-", 3), ("en_", 3), ("bn-", 2), ("bn_", 2))
 
 
-def _script_allowed(char):
-    name = unicodedata.name(char, "")
-    return any(s in name for s in ALLOWED_SCRIPTS)
+def _script_rank(text):
+    scripts = set()
+    for char in text:
+        if unicodedata.category(char).startswith("L"):
+            name = unicodedata.name(char, "")
+            if "LATIN" in name:
+                scripts.add("latin")
+            elif "BENGALI" in name:
+                scripts.add("bengali")
+            elif name:
+                scripts.add("other")
+    if scripts == {"latin"} or scripts == {"latin", "bengali"}:
+        return 3
+    if scripts == {"bengali"}:
+        return 2
+    return 1 if scripts else 0
+
+
+def language_priority(elem):
+    text = (elem.text or "").strip()
+    lang = (elem.attrib.get("{http://www.w3.org/XML/1998/namespace}lang") or elem.attrib.get("lang") or "").strip().lower()
+    if lang:
+        if lang in LANG_PRIORITY:
+            return LANG_PRIORITY[lang]
+        for prefix, rank in LANG_PREFIXES:
+            if lang.startswith(prefix):
+                return rank
+        return 1
+    return _script_rank(text)
 
 
 def is_english_text_element(elem):
-    """Match the generator's allowed-language policy when measuring EPG coverage."""
+    """Compatibility name: accept non-empty titles in any valid script/language."""
     text = (elem.text or "").strip()
     if not text:
         return True
-    lang = (elem.attrib.get("{http://www.w3.org/XML/1998/namespace}lang") or elem.attrib.get("lang") or "").strip().lower()
-    if lang and not (lang in ALLOWED_LANGS or lang.startswith(ALLOWED_LANG_PREFIXES)):
-        return False
-    for char in text:
-        if unicodedata.category(char).startswith("L") and not _script_allowed(char):
-            return False
-    return True
+    return any(unicodedata.category(char).startswith("L") for char in text)
 
 
 def fetch_source(url):
@@ -278,6 +325,7 @@ def fetch_source(url):
         data = r.read()
     if url.endswith(".gz") or data[:2] == b"\x1f\x8b":
         data = gzip.decompress(data)
+    data = normalize_epgpw_source(url, data)
     ids = set()
     future = set()
     counts = defaultdict(int)
@@ -477,8 +525,8 @@ def main():
         "## Bangladesh-specific review",
         "",
         f"- Bangladesh-group IDs without a mapping: **{sum(1 for row in unmapped_rows if row['group'].strip() == 'Bangladesh')}**",
-        "The configured diaspora guide from nasimali/epg-auto uses numeric Sky channel IDs with generic display names such as Channel 3914; this audit does not infer channel-to-SID identity from list ordering. Only the explicitly verified IDs already configured for Iqra Bangla, ATN Bangla UK, and Deen TV are used.",
-        "Official Bangladeshi broadcaster pages expose program or video listings, but no dependable public, current XMLTV feed for the domestic channel set was verified in this pass. No schedule is fabricated from stale static schedules or unrelated foreign channels.",
+        "The nasimali/epg-auto diaspora guide uses numeric Sky channel IDs with generic display names such as Channel 3914; channel identity is never inferred from list ordering. Explicit sources are used for Iqra Bangla, ATN Bangla UK, NTV Europe, Channel S UK, and Deen TV. These mappings do not imply a general domestic Bangladesh EPG source.",
+        "No dependable public, current XMLTV feed for the domestic Bangladesh channel set was verified. NTV Europe and Channel S UK use dedicated UK diaspora channel feeds; the remaining domestic channels stay unmapped until a trustworthy exact-ID schedule source is verified. No schedule is fabricated from stale static schedules or unrelated foreign channels.",
         "",
     ]
     audit_fingerprints = [
@@ -509,7 +557,7 @@ def main():
         "",
         f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",
         "",
-        "This report audits active unique channel identities across the playlist files in the repository. A source mapping is not counted as usable current/future coverage unless it has a valid programme interval and acceptable English/Bengali title data within the generator's -6-hour/+7-day window.",
+        "This report audits active unique channel identities across the playlist files in the repository. A source mapping is not counted as usable current/future coverage unless it has a valid programme interval and valid non-empty multilingual title data within the generator's -6-hour/+7-day window; English titles rank first, then Bengali, then other valid languages.",
         f"The XMLTV guide is published at **{EPG_PUBLISHED_PATH.as_posix()}**. The published guide uses the playlist's tvg-id as the XMLTV channel ID, not the upstream provider's source ID.",
         "",
         "## Overall Coverage",

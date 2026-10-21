@@ -33,20 +33,11 @@ def _script_allowed(char):
 
 
 def is_english_text_element(elem):
-    """Require English language tags and Latin-script text for visible guide fields."""
+    """Compatibility name: accept visible text in any valid script/language."""
     text = (elem.text or "").strip()
     if not text:
         return True
-    lang = (elem.attrib.get(XML_LANG) or elem.attrib.get("lang") or "").strip().lower()
-    if lang and not (
-        lang in ALLOWED_LANGS or lang.startswith(ALLOWED_LANG_PREFIXES)
-    ):
-        return False
-    for char in text:
-        if unicodedata.category(char).startswith("L"):
-            if not _script_allowed(char):
-                return False
-    return True
+    return any(unicodedata.category(char).startswith("L") for char in text)
 
 def parse(path):
     if not path.exists() or path.stat().st_size == 0:
@@ -129,12 +120,12 @@ new = quality(NEW)
 if new["channels"] == 0 or new["programmes"] == 0:
     raise SystemExit("EPG gate BLOCK: generated guide has no usable channels/programmes")
 
-# The guide accepts English (Latin script) or Bengali (Bengali script) text.
-# Explicit unsupported language tags/scripts are rejected in visible guide fields.
+# The guide accepts valid non-empty multilingual text. The active selector
+# prefers English titles, then Bengali, then other valid languages.
 if new["language_violations"] or new["title_violations"]:
     raise SystemExit(
-        "EPG gate BLOCK: allowed-language validation failed: "
-        f'{new["language_violations"]} non-English text fields, '
+        "EPG gate BLOCK: multilingual text validation failed: "
+        f'{new["language_violations"]} invalid text fields, '
         f'{new["title_violations"]} missing/blank programme titles'
     )
 
@@ -157,7 +148,7 @@ if OLD.exists():
     )
     if clean_volume_pass:
         print(
-            "EPG gate PASS: allowed-language clean guide accepted "
+            "EPG gate PASS: multilingual clean guide accepted "
             f'(channels={new["channels"]}, programmes={new["programmes"]}, '
             f'previous programmes={old["programmes"]}, '
             f'language violations={new["language_violations"]}, '
@@ -177,7 +168,7 @@ if OLD.exists():
 
     if quality_override:
         print(
-            "EPG gate PASS: allowed-language quality override accepted a smaller clean guide "
+            "EPG gate PASS: multilingual quality override accepted a smaller clean guide "
             f'(channels {old["channels"]}->{new["channels"]}, '
             f'programmes {old["programmes"]}->{new["programmes"]}, '
             f'overlaps {old["overlaps"]}->{new["overlaps"]}, '
@@ -186,7 +177,7 @@ if OLD.exists():
         sys.exit(0)
 
     raise SystemExit(
-        "EPG gate BLOCK: new allowed-language guide failed retention/quality checks "
+        "EPG gate BLOCK: new multilingual guide failed retention/quality checks "
         f'(channels {old["channels"]}->{new["channels"]}, '
         f'programmes {old["programmes"]}->{new["programmes"]}, '
         f'overlaps {old["overlaps"]}->{new["overlaps"]}, '
@@ -194,6 +185,6 @@ if OLD.exists():
     )
 
 print(
-    "EPG gate PASS: allowed-language guide accepted "
+    "EPG gate PASS: multilingual guide accepted "
     f'(channels={new["channels"]}, programmes={new["programmes"]})'
 )

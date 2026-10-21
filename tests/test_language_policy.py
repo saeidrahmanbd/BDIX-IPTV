@@ -5,6 +5,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 import generate_epg
+import epg_coverage
 
 XML_LANG = "{http://www.w3.org/XML/1998/namespace}lang"
 
@@ -23,6 +24,7 @@ class LanguagePolicyTests(unittest.TestCase):
             ("Evening News", None),
             ("Evening News", "en"),
             ("Evening News", "en-GB"),
+            ("Noticias", "es"),
             ("সন্ধ্যার খবর", "bn"),
             ("संध्या समाचार", "hi"),
             ("செய்திகள்", "ta"),
@@ -34,14 +36,19 @@ class LanguagePolicyTests(unittest.TestCase):
         for text, lang in cases:
             with self.subTest(text=text, lang=lang):
                 self.assertTrue(generate_epg.is_english_text_element(el(text, lang)))
+                self.assertTrue(epg_coverage.is_english_text_element(el(text, lang)))
 
     def test_empty_text_is_allowed_by_text_policy(self):
         self.assertTrue(generate_epg.is_english_text_element(el("", "fr")))
 
     def test_language_priority(self):
         self.assertEqual(generate_epg.language_priority(el("Evening News", "en")), 3)
+        self.assertEqual(generate_epg.language_priority(el("Evening News", "en-GB")), 3)
+        self.assertEqual(generate_epg.language_priority(el("Noticias", "es")), 1)
+        self.assertEqual(epg_coverage.language_priority(el("Noticias", "es")), 1)
         self.assertEqual(generate_epg.language_priority(el("সন্ধ্যার খবর", "bn")), 2)
         self.assertEqual(generate_epg.language_priority(el("संध्या समाचार", "hi")), 1)
+        self.assertEqual(epg_coverage.language_priority(el("संध्या समाचार", "hi")), 1)
         self.assertEqual(generate_epg.language_priority(el("Evening News")), 3)
         self.assertEqual(generate_epg.language_priority(el("সন্ধ্যার খবর")), 2)
 
