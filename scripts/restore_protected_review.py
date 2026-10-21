@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Restore protected review queues without changing unrelated queue entries.
+"""Restore protected review queues while allowing narrowly authorized migrations.
 
-Backup and Not Playing records are restored byte-for-byte from the snapshot,
-except for channel names explicitly approved for permanent removal below.
-Backup-only records are never silently promoted into published categories;
-unrelated stream URLs and review entries remain protected.
+Backup and Not Playing records are restored from the snapshot, except for exact,
+allowlisted channel removals and exact-URL Backup-to-primary migrations. Every other
+protected stream and review entry remains protected.
 """
 from __future__ import annotations
 
@@ -80,6 +79,29 @@ def normalize_name(value: str) -> str:
     value = "".join(ch for ch in value if not unicodedata.combining(ch))
     value = re.sub(r"\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|360p)\b", " ", value)
     return re.sub(r"[^a-z0-9]+", "", value)
+
+AUTHORIZED_BACKUP_MIGRATIONS = {
+    # Channel identity AND exact stream URL are required; a changed endpoint is
+    # not automatically promoted.
+    "7xpunjabi": ("https://cdn2.in/7xPunjabihls/live.m3u8", "Indian Music"),
+    "banglacinema": ("http://103.151.60.162:2122/play/a02m/index.m3u8", "Indian Movies"),
+    "fashionone": ("https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2ee6997cb_1/playlist.m3u8", "International"),
+    "ptvsports": ("http://103.135.253.32:8080/PTV-SPORTS/tracks-v1a1/mono.m3u8", "Pakistani"),
+    "starsportsselect1": ("http://103.135.253.32:8080/STAR-SPORTS-SELECT-1/index.m3u8", "Sports"),
+}
+
+
+def authorized_backup_migration_target(info: str, url: str) -> str | None:
+    """Return the target group only for an explicitly allowlisted name + exact URL."""
+    key = normalize_name(display_name(info))
+    rule = AUTHORIZED_BACKUP_MIGRATIONS.get(key)
+    if not rule:
+        return None
+    expected_url, target_group = rule
+    if str(url or "").strip().casefold() != expected_url.casefold():
+        return None
+    return target_group
+
 
 
 def is_permanently_removed(info: str) -> bool:
@@ -197,6 +219,17 @@ def classify_backup(info: str) -> str:
     name = normalize_name(display_name(info))
     country = a.get("tvg-country", "").strip().upper()
     language = a.get("tvg-language", "").strip().casefold()
+
+    # Explicit destinations for reviewed orphaned streams.
+    explicit_group = {
+        "7xpunjabi": "Indian Music",
+        "banglacinema": "Indian Movies",
+        "fashionone": "International",
+        "ptvsports": "Pakistani",
+        "starsportsselect1": "Sports",
+    }.get(name)
+    if explicit_group:
+        return explicit_group
 
     sports = (
         "sport", "sports", "espn", "star sports", "ten sports", "tsports",
@@ -335,6 +368,7 @@ def restore() -> None:
     reclassification_reverted = 0
     migrated_count = 0
     migration_counts: Counter[str] = Counter()
+    migrated_urls: set[str] = set()
     permanently_removed_count = 0
 
     def process_record(record: list[str], from_snapshot: bool = False) -> None:
@@ -348,9 +382,21 @@ def restore() -> None:
         original = baseline_by_url.get(key)
 
         if original and original["group"] in PROTECTED and protected_occurrences_to_restore[key] > 0:
-            protected_occurrences_to_restore[key] -= 1
-            restored_from_queue += 1
-            return
+            target_group = authorized_backup_migration_target(record[0], url)
+            if (
+                original["group"] == "Backup"
+                and target_group
+                and current_group == target_group
+            ):
+                # Keep only a reviewed exact-identity migration out of Backup.
+                protected_occurrences_to_restore[key] -= 1
+                migrated_urls.add(key)
+                migrated_count += 1
+                migration_counts[current_group] += 1
+            else:
+                protected_occurrences_to_restore[key] -= 1
+                restored_from_queue += 1
+                return
 
         if original and current_group in PROTECTED and original["group"] not in PROTECTED:
             record[0] = original["info"]
@@ -377,8 +423,11 @@ def restore() -> None:
             continue
         group = group_of(record[0])
         if group == "Backup":
-            # Restore every unrelated Backup entry byte-for-byte; moving any
-            # entry out of this protected queue would violate the safety guard.
+            # Do not restore the snapshot copy of a record migrated by the exact
+            # name + URL + target-group allowlist above.
+            if url_of(record).casefold() in migrated_urls:
+                continue
+            # Every other Backup entry remains protected and is restored.
             snapshot_backup.append(record)
         elif group == "Not Playing":
             snapshot_not_playing.append(record)
