@@ -36,6 +36,7 @@ on:
       - scripts/iptv_metadata_backfill.py
       - tests/test_metadata_backfill.py
       - tests/test_report_freshness.py
+      - tests/test_authorized_channel_removals.py
       - tests/test_maintenance_report_order.py
       - tests/test_logo_authenticity_manifest.py
       - scripts/sync_epg_worker_map.py
@@ -100,6 +101,7 @@ jobs:
       - name: Run playlist metadata and report freshness tests
         run: |
           python -m unittest discover -s tests -p 'test_report_freshness.py'
+          python -m unittest discover -s tests -p 'test_authorized_channel_removals.py'
           python -m unittest discover -s tests -p 'test_maintenance_report_order.py'
           python -m unittest discover -s tests -p 'test_metadata_backfill.py'
           python -m unittest discover -s tests -p 'test_logo_authenticity_manifest.py'

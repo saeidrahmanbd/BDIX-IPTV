@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
-"""Restore review queues and migrate Backup-only channels into real categories.
+"""Restore protected review queues without changing unrelated queue entries.
 
-The protected snapshot is never used as a reason to delete Backup records.
-Backup/Not Playing records that still belong in those queues are restored
-byte-for-byte. A Backup record with no matching primary identity is treated as
-an intentional promotion candidate: it is classified into the corresponding
-published category, receives a unique primary channel number, and is retained
-in the playlist. Stream URLs are never changed merely because a live probe
-fails.
+Backup and Not Playing records are restored byte-for-byte from the snapshot,
+except for channel names explicitly approved for permanent removal below.
+Backup-only records are never silently promoted into published categories;
+unrelated stream URLs and review entries remain protected.
 """
 from __future__ import annotations
 
@@ -27,6 +24,15 @@ PERMANENTLY_REMOVED_NAMES = {
     "america's got talent",
     "american idol",
     "baraza music tv",
+    "oscar movies bhojpuri",
+    "the walking dead universe",
+    "popflix",
+    "60 days in",
+    "deadly women",
+    "highway thru hell",
+    "mini",
+    "mundial",
+    "tvc arabic kids",
 }
 ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
@@ -69,8 +75,10 @@ def normalize_name(value: str) -> str:
 
 
 def is_permanently_removed(info: str) -> bool:
-    name = display_name(info).casefold().strip()
-    return name in PERMANENTLY_REMOVED_NAMES
+    # Normalize punctuation and quality suffixes so harmless name variants cannot
+    # reintroduce a channel that is explicitly authorized for permanent removal.
+    name = normalize_name(display_name(info))
+    return name in {normalize_name(candidate) for candidate in PERMANENTLY_REMOVED_NAMES}
 
 
 def identity_keys(info: str) -> set[str]:
@@ -280,16 +288,9 @@ def restore() -> None:
             reclassification_reverted += 1
 
         if current_group == "Backup":
-            if identity_keys(record[0]) & primary_identity_keys:
-                unexpected_backup.append(record)
-            else:
-                new_group = classify_backup(record[0])
-                record[0] = set_attr(record[0], "group-title", new_group)
-                record[0] = remove_attr(record[0], "tvg-chno")
-                record[0], next_number = assign_primary_number(record[0], used_numbers, next_number)
-                migrated_backup.append(record)
-                migrated_count += 1
-                migration_counts[new_group] += 1
+            # A current Backup record not represented in the snapshot stays in
+            # the review queue; routine maintenance must not promote it.
+            unexpected_backup.append(record)
         elif current_group == "Not Playing":
             unexpected_not_playing.append(record)
         else:
@@ -306,16 +307,9 @@ def restore() -> None:
             continue
         group = group_of(record[0])
         if group == "Backup":
-            if identity_keys(record[0]) & primary_identity_keys:
-                snapshot_backup.append(record)
-            else:
-                new_group = classify_backup(record[0])
-                record[0] = set_attr(record[0], "group-title", new_group)
-                record[0] = remove_attr(record[0], "tvg-chno")
-                record[0], next_number = assign_primary_number(record[0], used_numbers, next_number)
-                migrated_backup.append(record)
-                migrated_count += 1
-                migration_counts[new_group] += 1
+            # Restore every unrelated Backup entry byte-for-byte; moving any
+            # entry out of this protected queue would violate the safety guard.
+            snapshot_backup.append(record)
         elif group == "Not Playing":
             snapshot_not_playing.append(record)
 
@@ -331,18 +325,18 @@ def restore() -> None:
     if new_text != current_text:
         PLAYLIST.write_text(new_text, encoding="utf-8", newline="\n")
 
-    # These four removals are explicit user-authorized exceptions. Update the
-    # temporary safety artifacts so the normal preservation guard recognizes
-    # them as authorized while continuing to protect every other stream URL.
-    removed_urls = {
-        str(item.get("url", "")).strip().casefold()
-        for item in baseline
-        if is_permanently_removed(str(item.get("info", "")))
-    }
-    if removed_urls:
+    # These allowlisted removals are explicit user-authorized exceptions. Update
+    # temporary safety artifacts by channel identity, while protecting every other
+    # stream URL even if it happens to be shared by another record.
+    has_authorized_removals = any(
+        is_permanently_removed(str(item.get("info", ""))) for item in baseline
+    ) or any(is_permanently_removed(record[0]) for record in snapshot_records)
+    if has_authorized_removals:
+        # Filter only allowlisted channel identities, never their URLs. An unrelated
+        # entry sharing a stream URL must not inherit the deletion authorization.
         filtered_baseline = [
             item for item in baseline
-            if str(item.get("url", "")).strip().casefold() not in removed_urls
+            if not is_permanently_removed(str(item.get("info", "")))
         ]
         BASELINE.write_text(
             json.dumps(filtered_baseline, ensure_ascii=False, indent=2),

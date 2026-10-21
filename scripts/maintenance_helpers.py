@@ -2,19 +2,22 @@
 """Conservative safety helpers for IPTV playlist maintenance.
 
 Policy:
-- Existing stream URLs are never automatically deleted.
-- Backup and Not Playing entries are immutable during maintenance.
+- A stream may disappear only when its exact normalized channel name is on the
+  explicit permanent-removal allowlist below.
+- Backup and Not Playing entries are immutable except for those exact allowlisted
+  names; other entries must survive byte-for-byte.
 - Stream-health failures are advisory only.
-- Metadata repair may change names/IDs/groups/logos, but an existing stream URL
+- Metadata repair may change names/IDs/groups/logos, but unrelated stream URLs
   must survive.
 - Exact duplicate URLs are detected and reported, never automatically deleted.
-- Every proposed removal is written to reports/proposed-removals.md.
+- Every unauthorized proposed removal is written to reports/proposed-removals.md.
 """
 from __future__ import annotations
 
 import json
 import re
 import sys
+import unicodedata
 from collections import Counter
 from pathlib import Path
 
@@ -25,6 +28,39 @@ BASELINE = Path("/tmp/iptv-playlist-baseline.json")
 PROTECTED_SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
 REMOVAL_REPORT = Path("reports/proposed-removals.md")
 PROTECTED_GROUPS = {"Backup", "Not Playing"}
+PERMANENTLY_REMOVED_NAMES = {
+    "AccuWeather",
+    "America's Got Talent",
+    "American Idol",
+    "Baraza Music TV",
+    "Oscar Movies Bhojpuri",
+    "The Walking Dead Universe",
+    "Popflix",
+    "60 Days In",
+    "Deadly Women",
+    "Highway Thru Hell",
+    "MINI",
+    "Mundial",
+    "TVC Arabic Kids",
+}
+
+
+def _canonical_channel_name(value: str) -> str:
+    """Normalize display names for exact allowlist matching only."""
+    value = unicodedata.normalize("NFKD", str(value or "")).casefold()
+    value = "".join(ch for ch in value if not unicodedata.combining(ch))
+    value = re.sub(
+        r"\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|360p)\b",
+        " ",
+        value,
+    )
+    return re.sub(r"[^a-z0-9]+", "", value)
+
+
+_PERMANENTLY_REMOVED_KEYS = {
+    _canonical_channel_name(name) for name in PERMANENTLY_REMOVED_NAMES
+}
+
 
 def _attrs(ext: str) -> dict[str, str]:
     return dict(re.findall(r'([A-Za-z0-9_-]+)="([^"]*)"', ext))
@@ -90,11 +126,18 @@ def _name(info: str) -> str:
     return (a.get("tvg-name", "") or info.rsplit(",", 1)[-1]).strip()
 
 
+def _is_permanently_removed(info: str) -> bool:
+    return _canonical_channel_name(_name(info)) in _PERMANENTLY_REMOVED_KEYS
+
+
 def _protected_blocks(text: str) -> list[dict[str, object]]:
     return [
         block
         for block in _parse_blocks(text)
-        if _group(str(block["info"])) in PROTECTED_GROUPS
+        if (
+            _group(str(block["info"])) in PROTECTED_GROUPS
+            and not _is_permanently_removed(str(block["info"]))
+        )
     ]
 
 
@@ -145,10 +188,12 @@ def _write_removal_report(removals: list[dict[str, str]]) -> None:
         "# Proposed Playlist Removals",
         "",
         "This report is generated before publication.",
-        "Existing entries are never automatically deleted by this guard.",
+        "Only exact normalized channel names in the permanent-removal allowlist may disappear.",
+        "Every other existing stream is protected by this guard.",
         "",
-        f"- Proposed removals: **{len(removals)}**",
-        f"- Automatic deletions authorized: **0**",
+        f"- Proposed unauthorized removals: **{len(removals)}**",
+        f"- Exact-name permanent-removal allowlist entries: **{len(PERMANENTLY_REMOVED_NAMES)}**",
+        "- Other automatic deletions authorized: **0**",
         "",
     ]
 
@@ -175,16 +220,29 @@ def verify_no_unauthorized_removals() -> int:
     current_text = PLAYLIST.read_text(encoding="utf-8-sig")
     current = _parse_blocks(current_text)
 
-    baseline_counts = Counter(str(item["stable"]) for item in baseline if item["stable"])
+    # Exclude only exact channel identities from the explicit allowlist. This is
+    # deliberately name-based, not URL-based: an unrelated record sharing a URL
+    # never inherits another channel's deletion authorization.
+    baseline_guarded = [
+        item for item in baseline
+        if not _is_permanently_removed(str(item.get("info", "")))
+    ]
+    current_guarded = [
+        block for block in current
+        if not _is_permanently_removed(str(block["info"]))
+    ]
+    baseline_counts = Counter(
+        str(item["stable"]) for item in baseline_guarded if item.get("stable")
+    )
     current_counts = Counter(
         _stable(str(block["info"]), str(block["url"]))
-        for block in current
+        for block in current_guarded
         if str(block["url"]).strip()
     )
 
     removals: list[dict[str, str]] = []
 
-    for item in baseline:
+    for item in baseline_guarded:
         stable = str(item["stable"])
         if not stable:
             continue
@@ -238,6 +296,19 @@ def verify_no_unauthorized_removals() -> int:
         print(
             f"Diagnostic: {len(duplicate_candidates)} proposed removals are "
             "exact-URL duplicate candidates; they are report-only.",
+            file=sys.stderr,
+        )
+        return 1
+
+    authorized_still_present = [
+        str(block["info"]) for block in current
+        if _is_permanently_removed(str(block["info"]))
+    ]
+    if authorized_still_present:
+        names = sorted({_name(info) for info in authorized_still_present})
+        print(
+            "Change Guard BLOCKED: permanent-removal entries still present: "
+            + ", ".join(names),
             file=sys.stderr,
         )
         return 1
