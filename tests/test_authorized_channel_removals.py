@@ -179,6 +179,7 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             ("FASHION ONE", "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2ee6997cb_1/playlist.m3u8", "International"),
             ("PTV Sports", "http://103.135.253.32:8080/PTV-SPORTS/tracks-v1a1/mono.m3u8", "Pakistani"),
             ("Star Sports Select 1", "http://103.135.253.32:8080/STAR-SPORTS-SELECT-1/index.m3u8", "Sports"),
+            ("Channel 52", "http://str24.l9574.com/503.stream/tracks-v1a1/mono.m3u8", "Bangladesh"),
         ]
         for name, url, target in cases:
             info = channel(name, "Backup", url).splitlines()[0]
@@ -219,6 +220,42 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             self.assertIn('tvg-name="7X Punjabi" group-title="Indian Music"', final)
             self.assertIn('tvg-name="Safe Backup" group-title="Backup"', final)
             self.assertEqual(final.count('tvg-name="7X Punjabi"'), 1)
+
+
+    def test_restore_preserves_explicit_not_playing_to_bangladesh_migration(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist = root / "IPTV-Playlist.m3u"
+            snapshot = root / "protected.m3u"
+            baseline = root / "baseline.json"
+            migrated_url = "http://str24.l9574.com/503.stream/tracks-v1a1/mono.m3u8"
+            safe_url = "https://example.invalid/safe-not-playing.m3u8"
+            old_channel52 = channel("Channel 52", "Not Playing", migrated_url).splitlines()
+            safe_review = channel("Keep Reviewing", "Not Playing", safe_url).splitlines()
+            current_channel52 = channel("Channel 52", "Bangladesh", migrated_url).splitlines()
+            current_safe = channel("Keep Reviewing", "Not Playing", safe_url).splitlines()
+
+            playlist.write_text("#EXTM3U\\n" + "\\n".join(current_channel52 + current_safe) + "\\n", encoding="utf-8")
+            snapshot.write_text("\\n".join(old_channel52 + safe_review) + "\\n", encoding="utf-8")
+            baseline.write_text(json.dumps([
+                {"info": old_channel52[0], "url": migrated_url, "group": "Not Playing", "stable": migrated_url, "name": "Channel 52"},
+                {"info": safe_review[0], "url": safe_url, "group": "Not Playing", "stable": safe_url, "name": "Keep Reviewing"},
+            ]), encoding="utf-8")
+
+            with (
+                patch.object(restore, "PLAYLIST", playlist),
+                patch.object(restore, "SNAPSHOT", snapshot),
+                patch.object(restore, "BASELINE", baseline),
+                redirect_stdout(io.StringIO()),
+            ):
+                restore.restore()
+
+            final = playlist.read_text(encoding="utf-8")
+            self.assertEqual(final.count(migrated_url), 1)
+            self.assertEqual(final.count(safe_url), 1)
+            self.assertIn('tvg-name="Channel 52" group-title="Bangladesh"', final)
+            self.assertIn('tvg-name="Keep Reviewing" group-title="Not Playing"', final)
+            self.assertEqual(final.count('tvg-name="Channel 52"'), 1)
 
 if __name__ == "__main__":
     unittest.main()
