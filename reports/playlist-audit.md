@@ -1,14 +1,14 @@
 # Playlist Audit
-Generated: **2026-10-21T00:04:48.662924+00:00**
-Source playlist SHA-256: **ee851e7cc4586db6af2ed6053089b2b6847adfba5ccf91fd7f69e56f36d0b819**
+Generated: **2026-10-21T05:13:32.901523+00:00**
+Source playlist SHA-256: **61199b5845086edf9deb98a51a4e794c6757999358847fa5c1ad1e43e9357a3e**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
 ## Summary
 
-- Playlist entries: **1088**
-- Unique channel IDs: **661**
-- IDs with multiple streams: **229**
+- Playlist entries: **1064**
+- Unique channel IDs: **638**
+- IDs with multiple streams: **228**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
 - Same-name / different-ID collisions: **0**
@@ -17,8 +17,8 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **0**
 - External logo references (review only): **0**
-- Logo references checked: **1088**
-- Duplicate primary identities: **0**
+- Logo references checked: **1064**
+- Duplicate primary identities: **1**
 - Primary channel-number collisions: **0**
 - Primary entries missing channel numbers: **0**
 - Primary entries missing tvg-country: **0**
@@ -26,7 +26,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Malformed EXTINF entries: **0**
 - Category block-order issues: **0**
 - Category registry issues: **0**
-- Alphabetical ordering issues: **0**
+- Alphabetical ordering issues: **1**
 - Suspicious URL credentials/syntax: **0**
 - Signed/tokenized stream URLs: **11**
 - Embedded Xtream-style credential paths (redacted): **0**
@@ -283,7 +283,7 @@ Canonical registry matches the permanent IPTV category order.
 - Epic Bhojpuri Digital — Indian Movies — https://cc-8hy4a26pz2uos.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-8hy4a26pz2uos/playlist.m3u8
 - Epic Bhojpuri Digital — Backup — https://cc-8hy4a26pz2uos.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-8hy4a26pz2uos/45b71b91-51a1-4cfd-a422-c7f32efbf377/3.m3u8
 ### custom.food.network (2 streams)
-- Food Network — Documentary & Wildlife — https://tvsen3.aynaott.com/7hm4TfVp/index.m3u8
+- Food Network — International — https://tvsen3.aynaott.com/7hm4TfVp/index.m3u8
 - Food Network — Backup — https://tvsen6.aynaott.com/foodnetwork/index.m3u8
 ### custom.gseriesdrama (2 streams)
 - G Series Drama — Bangladesh — https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8
@@ -302,7 +302,7 @@ Canonical registry matches the permanent IPTV category order.
 - Kronehit — International — https://bitcdn-kronehit.bitmovin.com/v2/hls/playlist.m3u8
 - Kronehit — Backup — http://bitcdn-kronehit.bitmovin.com/v2/hls/chunklist_b3128000.m3u8
 ### custom.lovenature (2 streams)
-- Love nature — Documentary & Wildlife — https://cdn1.logichost.in/ajmantv/live/playlist.m3u8
+- Love Nature — Documentary & Wildlife — https://cdn1.logichost.in/ajmantv/live/playlist.m3u8
 - Love Nature — Backup — http://27.124.71.27/Love_Nature/index.m3u8
 ### custom.madani.tv (2 streams)
 - Madani TV — Religious — https://tvsen3.aynaott.com/z24qLsqV/index.m3u8
@@ -339,9 +339,6 @@ Canonical registry matches the permanent IPTV category order.
 ### custom.star.movies (2 streams)
 - Star Movies — Indian Movies — https://homair-tv-production.up.railway.app/api/play/STAR%20MOVIES%20HD.m3u8
 - Star Movies — Backup — http://103.135.253.32:8080/STAR-MOVIES/index.m3u8
-### custom.star.sports.select.1 (2 streams)
-- Star Sports Select 1 — Backup — http://103.135.253.32:8080/STAR-SPORTS-SELECT-1/index.m3u8
-- Star Sports Select 1 — Not Playing — https://flussonic.defineatoz.com/starsportsselect1/tracks-v1/mono.m3u8
 ### custom.tlc (2 streams)
 - TLC — International — https://tvsen3.aynaott.com/EJagkNL2/index.m3u8
 - TLC — Backup — https://tvsen6.aynaott.com/tlc_hd/index.m3u8
@@ -350,6 +347,9 @@ Canonical registry matches the permanent IPTV category order.
 - Travelxp English — Backup — http://103.151.60.162:2122/play/a01s/index.m3u8
 - Travelxp English — Backup — http://stream.mcquack.net/451/index.m3u8
 - Travelxp English — Backup — https://27c980761ff9437d929e64647afe183a.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RakutenTV-eu_TravelXP/playlist.m3u8
+### custom.young.hollywood (2 streams)
+- Young Hollywood — International — https://amg00143-younghollywoodl-younghollywood-xiaomi-8k5gd.amagi.tv/playlist/amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8
+- Young Hollywood — International — https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8
 ### custom.zoom (2 streams)
 - Zoom — Indian Music — https://d2esfk1pb9cdob.cloudfront.net/master.m3u8
 - Zoom — Backup — https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
@@ -476,7 +476,7 @@ Canonical registry matches the permanent IPTV category order.
 - Fakt Marathi — Indian Entertainment — https://mumt07.tangotv.in/zHjX9OFlFAKTMARATHI/index.m3u8
 - Fakt Marathi — Backup — https://cdn.pishow.tv/ott/live/10002/master.m3u8
 ### foodfood.in@sd (2 streams)
-- Food Food — Documentary & Wildlife — https://mumt03.tangotv.in/Dsly5z3HFOODFOOD/index.m3u8
+- Food Food — Indian Entertainment — https://mumt03.tangotv.in/Dsly5z3HFOODFOOD/index.m3u8
 - Food Food — Backup — https://tvsen3.aynaott.com/s2FwmdbM/index.m3u8
 ### gazitv.bd (6 streams)
 - G TV — Bangladesh — http://103.135.253.32:8080/Gazi-TV/index.m3u8
@@ -485,9 +485,6 @@ Canonical registry matches the permanent IPTV category order.
 - G TV — Backup — https://app.ncare.live/live-orgin/gazibdz.stream/live-orgin/gazibdz.stream/chunks.m3u8
 - G TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/g-tv-1/index.m3u8
 - G TV — Not Playing — https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/gazibdz.stream/playlist.m3u8
-### gbaj400042t1 (2 streams)
-- Sparkle Movies — International — https://61fc4f1a40a342daa23f92141853b7b4.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Samsung-gb_SparkleMovies/playlist.m3u8
-- Sparkle Movies — Backup — https://61fc4f1a40a342daa23f92141853b7b4.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/Samsung-gb_SparkleMovies/playlist.m3u8?ads.wurl_channel=1019&ads.wurl_name=SparkleMovies&ads.coppa=0&ads.psid=%7BPSID%7D&ads.targetopt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D
 ### globaltv.bd (4 streams)
 - Global TV — Bangladesh — https://stream.ottplus.live/live/global_tv_abr/index.m3u8
 - Global TV — Backup — http://116.204.149.16/globaltv/tracks-v1a1/mono.m3u8
@@ -517,11 +514,11 @@ Canonical registry matches the permanent IPTV category order.
 - Gravitas Movies — International — https://d6dg3ebeih71x.cloudfront.net/Gravitas_Movies.m3u8
 - Gravitas Movies — Backup — https://d6dg3ebeih71x.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-jx9exbvh3yi8u/Gravitas_Movies.m3u8
 ### greatmovies.uk (2 streams)
-- GREAT! movies — International — https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/playlist/amg01753-narrativeentert-greatmovies-samsunguk/playlist.m3u8
-- GREAT! movies — Backup — https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-greatmovies-samsunguk/playlist.m3u8
+- GREAT! Movies — International — https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/playlist/amg01753-narrativeentert-greatmovies-samsunguk/playlist.m3u8
+- GREAT! Movies — Backup — https://amg01753-narrativeentert-greatmovies-samsunguk-7z6eh.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-greatmovies-samsunguk/playlist.m3u8
 ### greatromance.uk (2 streams)
-- GREAT! romance — International — https://amg01753-narrativeentert-greatchristmas-samsunguk-8atls.amagi.tv/playlist/amg01753-narrativeentert-greatchristmas-samsunguk/playlist.m3u8
-- GREAT! romance — Backup — https://amg01753-narrativeentert-greatchristmas-samsunguk-8atls.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-greatchristmas-samsunguk/playlist.m3u8
+- GREAT! Romance — International — https://amg01753-narrativeentert-greatchristmas-samsunguk-8atls.amagi.tv/playlist/amg01753-narrativeentert-greatchristmas-samsunguk/playlist.m3u8
+- GREAT! Romance — Backup — https://amg01753-narrativeentert-greatchristmas-samsunguk-8atls.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-greatchristmas-samsunguk/playlist.m3u8
 ### greentv.bd (3 streams)
 - Green TV — Bangladesh — https://tvsen6.aynaott.com/cLuA3hJR/index.m3u8
 - Green TV — Backup — http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/greentv.stream/index.m3u8
@@ -567,9 +564,6 @@ Canonical registry matches the permanent IPTV category order.
 - Jamuna TV — Backup — https://iptv-proxy.ahmed-bd-org.workers.dev/jamuna-tv/index.m3u8
 - Jamuna TV — Backup — https://iptvlive.ahmed-bd-org.workers.dev/jamuna-tv-1/index.m3u8
 - Jamuna TV — Backup — https://stream.ottplus.live/live/jamuna_tv_abr/index.m3u8
-### jeremiahtv.pk@sd (2 streams)
-- Jeremiah TV — Pakistani — https://x.streamablecloud.com/stream/hls/jeremiahtv/1_2/index.m3u8
-- Jeremiah TV — Backup — https://x.streamablecloud.com/stream/hls/jeremiahtv/index.m3u8
 ### kairalitv.in@sd (2 streams)
 - Kairali TV — Indian Entertainment — https://streams.tangotv.in/KAIRALI/ORIGIN/index.m3u8
 - Kairali TV — Backup — https://mumt01.tangotv.in/O5aw8Zn3KAIRALI/index.m3u8
@@ -826,7 +820,7 @@ Canonical registry matches the permanent IPTV category order.
 - Somoy TV — Backup — https://tvsen5.aynascope.net/somoytv/mono.m3u8
 - Somoy TV — Backup — https://tvsen6.aynaott.com/4XcqdovJzbbC9WdJA9gk/index.m3u8
 ### sony.aath.in (2 streams)
-- Sony Aath — Backup — https://stream.ottplus.live/live/sony_aath_abr/index.m3u8
+- Sony Aath — Indian Bangla — https://stream.ottplus.live/live/sony_aath_abr/index.m3u8
 - Sony Aath — Not Playing — https://drk6xq0vhn.gpcdn.net/live/sony_aath_abr/index.m3u8
 ### sonyentertainmenttelevision.in@sd (5 streams)
 - Sony Entertainment TV — Indian Entertainment — https://drk6xq0vhn.gpcdn.net/live/sony_ent_hd_abr/index.m3u8
@@ -862,6 +856,9 @@ Canonical registry matches the permanent IPTV category order.
 ### starplus.in@sd (2 streams)
 - Star Plus — Indian Entertainment — http://103.114.11.37:8081/Star-Plus-HD/index.m3u8
 - Star Plus — Backup — http://103.151.60.162:2122/play/a0fo/index.m3u8
+### starsportsselect1.in@sd (2 streams)
+- Star Sports Select 1 — Sports — http://103.135.253.32:8080/STAR-SPORTS-SELECT-1/index.m3u8
+- Star Sports Select 1 — Not Playing — https://flussonic.defineatoz.com/starsportsselect1/tracks-v1/mono.m3u8
 ### studioyuva.in (2 streams)
 - Studio Yuva — Indian Entertainment — https://mumt01.tangotv.in/O5aw8Zn3STUDIOYUVA/index.m3u8
 - Studio Yuva — Backup — https://d2gvyg6lvauoko.cloudfront.net/230226/studioyuva/playlist.m3u8?hdnts=[REDACTED]
@@ -935,7 +932,7 @@ Canonical registry matches the permanent IPTV category order.
 
 ## Duplicate Primary Identities
 
-None.
+- **custom.young.hollywood** — Young Hollywood [International] — https://amg00143-younghollywoodl-younghollywood-xiaomi-8k5gd.amagi.tv/playlist/amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8; Young Hollywood [International] — https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8
 
 ## Primary Channel-Number Collisions
 
@@ -948,7 +945,7 @@ None.
 ## Ordering
 
 Category block order: OK.
-Alphabetical order: OK.
+- **Backup** — **7S Music** appears after **&TV**
 
 ## Suspicious URLs
 
@@ -974,7 +971,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1088**
+- Healthy/local references: **1064**
 - External references (review only): **0**
 - missing: **0**
 - broken-local: **0**

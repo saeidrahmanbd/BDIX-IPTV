@@ -1,13 +1,13 @@
 # Stream Risk Review
 
-Generated: **2026-10-21T00:08:43+00:00**
-IPTV-Playlist.m3u SHA-256: **ee851e7cc4586db6af2ed6053089b2b6847adfba5ccf91fd7f69e56f36d0b819**
+Generated: **2026-10-21T05:16:38+00:00**
+IPTV-Playlist.m3u SHA-256: **61199b5845086edf9deb98a51a4e794c6757999358847fa5c1ad1e43e9357a3e**
 
 Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.
 
 ## Summary
 
-- /streamtest/ endpoints: **11**
+- /streamtest/ endpoints: **10**
 - Signed/token-query endpoints: **11**
 - Xtream-style credential paths (credentials redacted): **0**
 - Proxy/worker-host routes: **41** (3 primary, 38 Backup)
@@ -17,55 +17,60 @@ Generated from the current playlist and latest available stream-health report. T
 
 | Metric | Count |
 |---|---:|
-| Streams tested | 1094 |
-| Reachable | 1032 |
-| Failed this check | 62 |
-| Persistent failures (3+ consecutive) | 38 |
-| HTTP 401/403 (auth) | 12 |
-| HTTP 404 (not found) | 13 |
-| HTTP 5xx (server) | 2 |
-| Timeout | 35 |
+| Streams tested | 1088 |
+| Reachable | 1015 |
+| Failed this check | 73 |
+| Persistent failures (3+ consecutive) | 43 |
+| HTTP 401/403 (auth) | 13 |
+| HTTP 404 (not found) | 29 |
+| HTTP 5xx (server) | 5 |
+| Timeout | 24 |
 
 ### Persistent failures
 
-- **ATN Bangla** — Backup — consecutive failures: **3** — Timeout
-- **Aakaash Aath** — Backup — consecutive failures: **3** — Timeout
-- **CBN TV USA** — Backup — consecutive failures: **18** — HTTP 404
-- **Channel 52** — Backup — consecutive failures: **25** — HTTP 404
-- **Channel S** — Backup — consecutive failures: **26** — Timeout
-- **Channel S** — Backup — consecutive failures: **25** — HTTP 404
-- **Channel S** — Backup — consecutive failures: **25** — HTTP 404
-- **Channel S** — Backup — consecutive failures: **26** — Timeout
-- **Desh TV** — Backup — consecutive failures: **13** — HTTP 404
-- **Disney Channel India** — Backup — consecutive failures: **10** — HTTP 403
-- **ESPN** — Backup — consecutive failures: **10** — HTTP 403
-- **G TV** — Backup — consecutive failures: **10** — Timeout
-- **G TV** — Backup — consecutive failures: **10** — Timeout
-- **G TV** — Backup — consecutive failures: **10** — Timeout
-- **Green TV** — Backup — consecutive failures: **26** — Timeout
-- **Green TV** — Backup — consecutive failures: **25** — HTTP 404
-- **Green TV** — Backup — consecutive failures: **25** — HTTP 500
-- **Green TV** — Backup — consecutive failures: **25** — HTTP 404
-- **Green TV** — Backup — consecutive failures: **25** — HTTP 404
-- **Maasranga TV** — Backup — consecutive failures: **3** — Timeout
-- **Maasranga TV** — Backup — consecutive failures: **3** — Timeout
+- **Ananda TV** — Backup — consecutive failures: **3** — Timeout
+- **Channel 1** — Backup — consecutive failures: **3** — Timeout
+- **Channel 1** — Backup — consecutive failures: **3** — Timeout
+- **Desh TV** — Backup — consecutive failures: **3** — Timeout
+- **Disney Channel India** — Backup — consecutive failures: **11** — HTTP 403
+- **ESPN** — Backup — consecutive failures: **11** — HTTP 403
+- **Ekhon TV** — Backup — consecutive failures: **3** — Timeout
+- **Ekushey TV** — Backup — consecutive failures: **3** — Timeout
+- **G TV** — Backup — consecutive failures: **11** — Timeout
+- **G TV** — Backup — consecutive failures: **11** — Timeout
+- **Global TV** — Backup — consecutive failures: **3** — Timeout
+- **Green TV** — Backup — consecutive failures: **27** — Timeout
+- **Manoranjan TV** — Backup — consecutive failures: **3** — HTTP 404
+- **Medina Live** — Backup — consecutive failures: **3** — Timeout
+- **Movie Bangla** — Backup — consecutive failures: **3** — Timeout
+- **Movie Bangla** — Backup — consecutive failures: **3** — Timeout
+- **My TV** — Backup — consecutive failures: **3** — Timeout
+- **My TV** — Backup — consecutive failures: **3** — Timeout
 - **RTV** — Backup — consecutive failures: **3** — Timeout
-- **Shanson TV** — Backup — consecutive failures: **6** — HTTP 403
-- **Somoy TV** — Backup — consecutive failures: **3** — Timeout
-- **Ananda TV** — Bangladesh — consecutive failures: **3** — Timeout
-- **Assam Talks** — Indian Entertainment — consecutive failures: **236** — HTTP 403
-- **Star Gold** — Indian Movies — consecutive failures: **14** — HTTP 404
-- **CMAC TV** — International — consecutive failures: **18** — HTTP 403
-- **Cook & Bake** — International — consecutive failures: **42** — HTTP 504
-- **HBO** — International — consecutive failures: **224** — HTTP 403
-- **Lifetime** — International — consecutive failures: **18** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **42** — HTTP 403
-- **Nick** — Kids — consecutive failures: **14** — Timeout
-- **Teen Nick** — Kids — consecutive failures: **102** — HTTP 403
-- **PTV** — Sports — consecutive failures: **3** — Timeout
-- **Star Sports 2** — Sports — consecutive failures: **18** — HTTP 403
-- **T Sports** — Sports — consecutive failures: **18** — HTTP 403
-- **Willow TV** — Sports — consecutive failures: **18** — HTTP 403
+- **SA TV** — Backup — consecutive failures: **3** — Timeout
+- **SA TV** — Backup — consecutive failures: **3** — Timeout
+- **Shanson TV** — Backup — consecutive failures: **7** — HTTP 403
+- **Ananda TV** — Bangladesh — consecutive failures: **4** — Timeout
+- **Channel 16** — Bangladesh — consecutive failures: **3** — Timeout
+- **Cook & Bake** — International — consecutive failures: **43** — HTTP 504
+- **HBO** — International — consecutive failures: **225** — HTTP 403
+- **Lifetime** — International — consecutive failures: **19** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **43** — HTTP 403
+- **Teen Nick** — Kids — consecutive failures: **103** — HTTP 403
+- **Assam Talks** — Not Playing — consecutive failures: **237** — HTTP 403
+- **CBN TV USA** — Not Playing — consecutive failures: **19** — HTTP 404
+- **Channel S** — Not Playing — consecutive failures: **27** — Timeout
+- **Channel S** — Not Playing — consecutive failures: **26** — HTTP 404
+- **Channel S** — Not Playing — consecutive failures: **26** — HTTP 404
+- **Channel S** — Not Playing — consecutive failures: **27** — Timeout
+- **Desh TV** — Not Playing — consecutive failures: **14** — HTTP 404
+- **G TV** — Not Playing — consecutive failures: **11** — Timeout
+- **Nick** — Not Playing — consecutive failures: **15** — HTTP 404
+- **Star Gold** — Not Playing — consecutive failures: **15** — HTTP 404
+- **Makkah Live** — Religious — consecutive failures: **3** — Timeout
+- **Star Sports 2** — Sports — consecutive failures: **19** — HTTP 403
+- **T Sports** — Sports — consecutive failures: **19** — HTTP 403
+- **Willow TV** — Sports — consecutive failures: **19** — HTTP 403
 
 ## /streamtest/ Endpoints
 
@@ -76,7 +81,6 @@ Generated from the current playlist and latest available stream-health report. T
 | Paighan TV | Pakistani | cdn4.mjunoon.tv:8087 | /streamtest/107M/chunks.m3u8 |
 | See TV | Pakistani | vodzong.mjunoon.tv:8087 | /streamtest/SeeTV-156/playlist.m3u8 |
 | Waseb TV | Pakistani | vodzong.mjunoon.tv:8087 | /streamtest/WASEB-130/playlist.m3u8 |
-| MINI | Kids | vodzong.mjunoon.tv:8087 | /streamtest/disckids-157-1/playlist.m3u8 |
 | 8XM | Backup | vodzong.mjunoon.tv:8087 | /streamtest/8XM-131/playlist.m3u8 |
 | Animal Planet | Backup | vodzong.mjunoon.tv:8087 | /streamtest/Animal-Planet-158-3/playlist.m3u8 |
 | Cartoon Network | Backup | vodzong.mjunoon.tv:8087 | /streamtest/cartoon-network-87/playlist.m3u8 |

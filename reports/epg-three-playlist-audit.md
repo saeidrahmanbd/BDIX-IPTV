@@ -1,29 +1,29 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-10-21T00:38:55+00:00**
+Generated: **2026-10-21T05:49:07+00:00**
 
 This report measures the two M3U files currently published at the repository root. The historic filename epg-three-playlist-audit.md is retained for link compatibility; it does not mean a third playlist file exists.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1088 | 639 | 422 | 401 | 422 | 392 | 217 | OK |
-| BDIX-Playlist.m3u | 139 | 131 | 78 | 74 | 78 | 73 | 53 | OK |
+| IPTV-Playlist.m3u | 1064 | 631 | 422 | 404 | 424 | 406 | 209 | OK |
+| BDIX-Playlist.m3u | 139 | 131 | 76 | 74 | 78 | 76 | 55 | OK |
 
 ## Group coverage
 
 | Group | Active unique IDs | Mapped IDs | Current/future source schedules | No mapping |
 |---|---:|---:|---:|---:|
-| Bangladesh | 66 | 3 | 1 | 63 |
-| Documentary & Wildlife | 84 | 66 | 64 | 18 |
-| Indian Bangla | 44 | 34 | 33 | 10 |
-| Indian Entertainment | 142 | 123 | 116 | 19 |
-| Indian Movies | 63 | 51 | 49 | 12 |
-| Indian Music | 53 | 47 | 44 | 6 |
-| International | 107 | 62 | 60 | 45 |
-| Kids | 48 | 32 | 32 | 16 |
-| Pakistani | 18 | 3 | 3 | 15 |
-| Religious | 26 | 10 | 9 | 16 |
-| Sports | 41 | 29 | 26 | 12 |
+| Bangladesh | 67 | 1 | 1 | 66 |
+| Documentary & Wildlife | 77 | 61 | 60 | 16 |
+| Indian Bangla | 44 | 35 | 34 | 9 |
+| Indian Entertainment | 143 | 124 | 117 | 19 |
+| Indian Movies | 63 | 52 | 51 | 11 |
+| Indian Music | 54 | 47 | 44 | 7 |
+| International | 109 | 67 | 64 | 42 |
+| Kids | 46 | 31 | 31 | 15 |
+| Pakistani | 15 | 3 | 3 | 12 |
+| Religious | 25 | 9 | 8 | 16 |
+| Sports | 38 | 28 | 25 | 10 |
 
 ## Interpretation
 
@@ -35,5 +35,5 @@ This report measures the two M3U files currently published at the repository roo
 
 ## Source Playlist Fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **ee851e7cc4586db6af2ed6053089b2b6847adfba5ccf91fd7f69e56f36d0b819**
-- BDIX-Playlist.m3u SHA-256: **b119c1b2cb35778f42345430829ffcd4787b2dc77210c99ba8d6bdefeb7ef531**
+- IPTV-Playlist.m3u SHA-256: **61199b5845086edf9deb98a51a4e794c6757999358847fa5c1ad1e43e9357a3e**
+- BDIX-Playlist.m3u SHA-256: **2011915336e80d0c10f93cd9f3b08e3515477ff900c143413645f91ee02d86d0**

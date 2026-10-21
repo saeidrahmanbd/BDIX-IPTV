@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-10-21T00:04:48+00:00**
-Source playlist SHA-256: **ee851e7cc4586db6af2ed6053089b2b6847adfba5ccf91fd7f69e56f36d0b819**
+Generated: **2026-10-21T05:13:32+00:00**
+Source playlist SHA-256: **61199b5845086edf9deb98a51a4e794c6757999358847fa5c1ad1e43e9357a3e**
 
-Status: **PASS**
+Status: **BLOCK**
 
-- Current entries: **1088**
+- Current entries: **1064**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -28,7 +28,7 @@ Status: **PASS**
 Backup and Not Playing are review queues. Existing entries are protected by exact stream URL. A maintenance run must not silently delete, promote, or reclassify them.
 
 ## Blocking Reasons
-No blocking conditions detected.
+- duplicate primary identities: 1
 
 ## Blocked logo references
 

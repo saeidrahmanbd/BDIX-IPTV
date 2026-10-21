@@ -1,24 +1,24 @@
 # Logo Provenance Review
 
-Generated: **2026-10-21T00:08:43+00:00**
+Generated: **2026-10-21T05:16:38+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **ee851e7cc4586db6af2ed6053089b2b6847adfba5ccf91fd7f69e56f36d0b819**
-- BDIX-Playlist.m3u SHA-256: **b119c1b2cb35778f42345430829ffcd4787b2dc77210c99ba8d6bdefeb7ef531**
+- IPTV-Playlist.m3u SHA-256: **61199b5845086edf9deb98a51a4e794c6757999358847fa5c1ad1e43e9357a3e**
+- BDIX-Playlist.m3u SHA-256: **2011915336e80d0c10f93cd9f3b08e3515477ff900c143413645f91ee02d86d0**
 
 ## Provenance status by playlist
 
 | Playlist | Official verified | Third-party verified | Unofficial fallback | Needs review |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 0 | 12 | 13 | 1063 |
+| IPTV-Playlist.m3u | 0 | 11 | 4 | 1049 |
 | BDIX-Playlist.m3u | 0 | 0 | 0 | 139 |
 
 ## First items requiring source attribution
 
-Showing up to 40 of 1202 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
+Showing up to 40 of 1188 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
 
 | Playlist | Channel | tvg-id | Local asset | Why it needs review |
 |---|---|---|---|---|
