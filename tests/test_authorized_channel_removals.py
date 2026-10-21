@@ -69,7 +69,7 @@ def remove_named_record(text, name):
 
 
 class AuthorizedChannelRemovalTests(unittest.TestCase):
-    def test_allowlists_cover_exactly_the_thirteen_requested_names(self):
+    def test_allowlists_cover_all_explicitly_approved_channel_identities(self):
         expected = {guard._canonical_channel_name(name) for name in TARGET_NAMES}
         self.assertEqual(
             {guard._canonical_channel_name(name) for name in guard.PERMANENTLY_REMOVED_NAMES},
