@@ -1,0 +1,44 @@
+name: Normalize Active SVG Logos
+on:
+  push:
+    branches: [main]
+    paths:
+      - IPTV-Playlist.m3u
+      - BDIX-Playlist.m3u
+      - logos/**
+      - scripts/normalize_active_svg_logos.py
+      - .github/workflows/normalize-active-svg-logos.yml
+permissions:
+  contents: write
+concurrency:
+  group: bdix-iptv-logo-normalizer
+  cancel-in-progress: false
+jobs:
+  normalize:
+    if: ${{ !startsWith(github.event.head_commit.message, 'Normalize active SVG logos') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install image conversion dependencies
+        run: python -m pip install --disable-pip-version-check pillow cairosvg
+      - name: Normalize active SVG logos and replace verified fallbacks
+        run: python scripts/normalize_active_svg_logos.py
+      - name: Validate logo references
+        run: |
+          python -m py_compile scripts/normalize_active_svg_logos.py
+          python scripts/audit_playlist.py
+          python scripts/pre_publish_gate.py
+      - name: Commit logo normalization
+        run: |
+          if git diff --quiet -- IPTV-Playlist.m3u BDIX-Playlist.m3u logos; then
+            echo 'No logo changes required.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add IPTV-Playlist.m3u BDIX-Playlist.m3u logos
+          git commit -m 'Normalize active SVG logos'
+          git push origin main
