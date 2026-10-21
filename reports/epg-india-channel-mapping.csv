@@ -21,7 +21,7 @@ Bangladesh,Channel 52,custom.channel.52,,,NO_GUIDE_HIT,Auto-maintained; verify a
 Bangladesh,Channel 9,Channel9.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel I,ChannelI.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel S,ChannelS.uk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Bangladesh,Channel S UK,custom.channel.s.uk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Bangladesh,Channel S UK,custom.channel.s.uk,epgpw:12504,https://epg.pw/api/epg.xml?channel_id=12504,MAPPED,Explicit channel-specific UK diaspora guide; publication remains subject to source-policy approval.
 Bangladesh,DBC News,DBCNews.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Deepto TV,DeeptoTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Desh TV,DeshTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -50,7 +50,7 @@ Bangladesh,Movie Bangla,MovieBangla.bd,,,NO_GUIDE_HIT,Auto-maintained; verify am
 Bangladesh,My TV,MyTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,NRB TV,NRBTV.ca,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,NTV,NTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Bangladesh,NTV Europe,NTVEurope.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Bangladesh,NTV Europe,NTVEurope.bd,epgpw:9374,https://epg.pw/api/epg.xml?channel_id=9374,MAPPED,Explicit channel-specific UK diaspora guide; publication remains subject to source-policy approval.
 Bangladesh,Nagorik TV,NagorikTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,News 21,News21BanglaTV.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,News 24,News24.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.

@@ -1,7 +1,11 @@
-import ast, re, unittest
+import ast, re, unittest, sys
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+import epg_coverage
+
 COV = (ROOT / "scripts" / "epg_coverage.py").read_text(encoding="utf-8")
 GEN = (ROOT / "scripts" / "generate_epg.py").read_text(encoding="utf-8")
 
@@ -76,5 +80,26 @@ class VerifiedAliasTests(unittest.TestCase):
         pl = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig")
         for tid in ("custom.amar.bangla.digital", "custom.epic.bhojpuri.digital", "custom.picture.hd"):
             self.assertIn(f'tvg-id="{tid}"', pl)
+    def test_epgpw_sources_and_locks_are_explicit_and_synchronized(self):
+        coverage_sources = literal(COV, "SOURCES")
+        generator_sources = literal(GEN, "SOURCES")
+        coverage_ids = literal(COV, "EPGPW_SOURCE_IDS")
+        generator_ids = literal(GEN, "EPGPW_SOURCE_IDS")
+        self.assertEqual(coverage_ids, generator_ids)
+        self.assertTrue(set(coverage_ids).issubset(set(coverage_sources)))
+        locks = literal(COV, "EPG_LOCKS")
+        self.assertEqual(locks["NTVEurope.bd"], ["epgpw:9374"])
+        self.assertEqual(locks["custom.channel.s.uk"], ["epgpw:12504"])
+
+    def test_epgpw_normalization_rewrites_only_the_explicit_feed_channel(self):
+        xml = b'<tv><channel id="source-id"><display-name>NTV</display-name></channel><programme channel="source-id" start="20261021070000 +0000" stop="20261021073000 +0000"><title>NTV Europe News</title></programme></tv>'
+        url = "https://epg.pw/api/epg.xml?channel_id=9374"
+        normalized = ET.fromstring(epg_coverage.normalize_epgpw_source(url, xml))
+        self.assertEqual(normalized.find("channel").get("id"), "epgpw:9374")
+        self.assertEqual(normalized.find("programme").get("channel"), "epgpw:9374")
+        untouched = epg_coverage.normalize_epgpw_source("https://example.invalid/guide.xml", xml)
+        self.assertEqual(untouched, xml)
+
+
 if __name__ == "__main__":
     unittest.main()
