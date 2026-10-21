@@ -19,25 +19,13 @@ TEXT_FIELDS = {"title", "sub-title", "desc"}
 XML_LANG = "{http://www.w3.org/XML/1998/namespace}lang"
 
 
-# Guide text policy: English (Latin script) or Bengali (Bengali script) only.
-# Any other language tag or script is rejected. Keep identical in epg_coverage.py,
-# generate_epg.py and epg_publish_gate.py (tests/test_language_policy.py checks this).
-ALLOWED_LANGS = {"en", "eng", "bn", "ben"}
-ALLOWED_LANG_PREFIXES = ("en-", "en_", "bn-", "bn_")
-ALLOWED_SCRIPTS = ("LATIN", "BENGALI")
-
-
-def _script_allowed(char):
-    name = unicodedata.name(char, "")
-    return any(s in name for s in ALLOWED_SCRIPTS)
-
-
 def is_english_text_element(elem):
     """Compatibility name: accept visible text in any valid script/language."""
     text = (elem.text or "").strip()
     if not text:
         return True
     return any(unicodedata.category(char).startswith("L") for char in text)
+
 
 def parse(path):
     if not path.exists() or path.stat().st_size == 0:

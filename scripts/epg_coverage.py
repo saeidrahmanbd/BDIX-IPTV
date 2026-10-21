@@ -564,7 +564,7 @@ def main():
         "",
         f"- Active unique playlist channel IDs audited: **{total_active}**",
         f"- IDs with an EPG source mapping: **{total_mapped}/{total_active} ({round(100*total_mapped/total_active,1) if total_active else 0}%)**",
-        f"- IDs with usable current/future source schedules (nonblank allowed-language titles): **{total_live}/{total_active} ({round(100*total_live/total_active,1) if total_active else 0}%)**",
+        f"- IDs with usable current/future source schedules (nonblank multilingual titles (English preferred, then Bengali, then other valid languages)): **{total_live}/{total_active} ({round(100*total_live/total_active,1) if total_active else 0}%)**",
         f"- IDs with no EPG source mapping: **{total_unmapped}**",
         "",
         "## Coverage by Playlist Group",
@@ -579,7 +579,7 @@ def main():
     lines += ["", "## Source Status", ""]
     for src, status, ids, future, programmes, error in source_status:
         lines.append(
-            f"- **{status}** — {src} — {ids} channel IDs; {future} IDs with usable current/future programmes; {programmes} eligible programme rows with allowed-language titles in the guide window"
+            f"- **{status}** — {src} — {ids} channel IDs; {future} IDs with usable current/future programmes; {programmes} eligible programme rows with valid non-empty titles in any language in the guide window"
             + (f"; {error}" if error else "")
         )
 
@@ -732,7 +732,7 @@ def main():
         "## Interpretation",
         "",
         "- Mapped IDs means a playlist identity was connected to a source XMLTV ID.",
-        "- Current/future source schedules means source data contains eligible programmes with allowed-language titles inside the generator's -6-hour/+7-day window.",
+        "- Current/future source schedules means source data contains eligible programmes with valid non-empty titles in any language inside the generator's -6-hour/+7-day window; overlapping title variants are selected English first, Bengali second, then other valid languages.",
         "- IDs in published guide and IDs with published schedules are verified against XMLTV using the playlist's tvg-id identities; these counts are not source-provider IDs.",
         "- Domestic Bangladesh channels are not fuzzy-matched to similarly named Indian or foreign services. They remain unmapped until a trustworthy listing source or an exact explicit mapping can be verified.",
         "",
