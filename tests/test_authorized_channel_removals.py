@@ -1,6 +1,7 @@
 """Tests for narrowly scoped permanent channel removals and queue protection."""
-from contextlib import redirect_stderr
+from contextlib import redirect_stderr, redirect_stdout
 import io
+import json
 import re
 from pathlib import Path
 import sys
@@ -169,6 +170,55 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             self.assertEqual(nums, [1, 2])
             backup = next(line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Backup"' in line)
             self.assertNotIn("tvg-chno", backup)
+
+
+    def test_authorized_backup_migration_requires_exact_channel_and_url(self):
+        cases = [
+            ("7X Punjabi", "https://cdn2.in/7xPunjabihls/live.m3u8", "Indian Music"),
+            ("Bangla Cinema", "http://103.151.60.162:2122/play/a02m/index.m3u8", "Indian Movies"),
+            ("FASHION ONE", "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2ee6997cb_1/playlist.m3u8", "International"),
+            ("PTV Sports", "http://103.135.253.32:8080/PTV-SPORTS/tracks-v1a1/mono.m3u8", "Pakistani"),
+            ("Star Sports Select 1", "http://103.135.253.32:8080/STAR-SPORTS-SELECT-1/index.m3u8", "Sports"),
+        ]
+        for name, url, target in cases:
+            info = channel(name, "Backup", url).splitlines()[0]
+            self.assertEqual(restore.authorized_backup_migration_target(info, url), target, name)
+            self.assertIsNone(restore.authorized_backup_migration_target(info, url + "?changed=1"), name)
+
+    def test_restore_keeps_exactly_authorized_backup_migration_and_other_queue(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist = root / "IPTV-Playlist.m3u"
+            snapshot = root / "protected.m3u"
+            baseline = root / "baseline.json"
+            migrated_url = "https://cdn2.in/7xPunjabihls/live.m3u8"
+            safe_url = "https://example.invalid/safe-backup.m3u8"
+            old_migrated = channel("7X Punjabi", "Backup", migrated_url).splitlines()
+            safe_backup = channel("Safe Backup", "Backup", safe_url).splitlines()
+            current_migrated = channel("7X Punjabi", "Indian Music", migrated_url).splitlines()
+            current_safe = channel("Safe Backup", "Backup", safe_url).splitlines()
+
+            playlist.write_text("#EXTM3U\n" + "\n".join(current_migrated + current_safe) + "\n", encoding="utf-8")
+            snapshot.write_text("\n".join(old_migrated + safe_backup) + "\n", encoding="utf-8")
+            baseline.write_text(json.dumps([
+                {"info": old_migrated[0], "url": migrated_url, "group": "Backup", "stable": migrated_url, "name": "7X Punjabi"},
+                {"info": safe_backup[0], "url": safe_url, "group": "Backup", "stable": safe_url, "name": "Safe Backup"},
+            ]), encoding="utf-8")
+
+            with (
+                patch.object(restore, "PLAYLIST", playlist),
+                patch.object(restore, "SNAPSHOT", snapshot),
+                patch.object(restore, "BASELINE", baseline),
+                redirect_stdout(io.StringIO()),
+            ):
+                restore.restore()
+
+            final = playlist.read_text(encoding="utf-8")
+            self.assertEqual(final.count(migrated_url), 1)
+            self.assertEqual(final.count(safe_url), 1)
+            self.assertIn('tvg-name="7X Punjabi" group-title="Indian Music"', final)
+            self.assertIn('tvg-name="Safe Backup" group-title="Backup"', final)
+            self.assertEqual(final.count('tvg-name="7X Punjabi"'), 1)
 
 if __name__ == "__main__":
     unittest.main()
