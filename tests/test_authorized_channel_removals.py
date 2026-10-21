@@ -235,8 +235,8 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             current_channel52 = channel("Channel 52", "Bangladesh", migrated_url).splitlines()
             current_safe = channel("Keep Reviewing", "Not Playing", safe_url).splitlines()
 
-            playlist.write_text("#EXTM3U\\n" + "\\n".join(current_channel52 + current_safe) + "\\n", encoding="utf-8")
-            snapshot.write_text("\\n".join(old_channel52 + safe_review) + "\\n", encoding="utf-8")
+            playlist.write_text("#EXTM3U\n" + "\n".join(current_channel52 + current_safe) + "\n", encoding="utf-8")
+            snapshot.write_text("\n".join(old_channel52 + safe_review) + "\n", encoding="utf-8")
             baseline.write_text(json.dumps([
                 {"info": old_channel52[0], "url": migrated_url, "group": "Not Playing", "stable": migrated_url, "name": "Channel 52"},
                 {"info": safe_review[0], "url": safe_url, "group": "Not Playing", "stable": safe_url, "name": "Keep Reviewing"},

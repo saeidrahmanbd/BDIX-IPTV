@@ -41,7 +41,6 @@ EPG_ALIASES = {
     "skysportspremiereleague.uk": ["SkySportsPremierLeague.uk", "SkySp.PL.HD.uk", "SkySp.PL.uk"],
 
     # Verified identities found in existing source feeds during the strict unmapped audit.
-    "AamarBangla.in@SD": ["jtv1962"],
     "custom.travelxp.english": ["Travelxp.uk"],
     "custom.wild.flix.hindi": ["IN460000585"],
     "custom.world.war.tv": ["WorldWarTV.uk"],
@@ -56,7 +55,6 @@ EPG_ALIASES = {
     # Verified against fresh dishtv/jiotv feeds (exact display name, current English rows).
     "Hungama.in@SD": ["143150"],
     "ZBMusic.in@HD": ["jtv3319"],
-    "ZBBhakti.in@HD": ["jtv3320"],
     # Verified against current JioTV/Dish TV source IDs for the same channels.
     "custom.amar.bangla.digital": ["jtv1962"],
     "custom.epic.bhojpuri.digital": ["157803", "jtv3384"],
@@ -78,6 +76,8 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz", "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz", "https://iptv-epg.org/files/epg-in.xml.gz",
     "https://i.mjh.nz/SamsungTVPlus/in.xml", "https://i.mjh.nz/SamsungTVPlus/us.xml", "https://epg.pw/xmltv/epg_IN.xml",
+    "https://epg.pw/api/epg.xml?channel_id=9374",
+    "https://epg.pw/api/epg.xml?channel_id=12504",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml", "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml", "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml", "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml",

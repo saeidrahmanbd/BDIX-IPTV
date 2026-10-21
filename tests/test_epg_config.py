@@ -30,7 +30,7 @@ class EpgConfigTests(unittest.TestCase):
         al = literal(COV, "EPG_ALIASES")
         self.assertEqual(al["Hungama.in@SD"], ["143150"])
         self.assertEqual(al["ZBMusic.in@HD"], ["jtv3319"])
-        self.assertEqual(al["ZBBhakti.in@HD"], ["jtv3320"])
+        self.assertNotIn("ZBBhakti.in@HD", al)
 
     def test_no_bangladesh_alias_to_foreign_ids(self):
         for key, ids in literal(COV, "EPG_ALIASES").items():
@@ -39,8 +39,9 @@ class EpgConfigTests(unittest.TestCase):
 
     def test_alias_ids_exist_in_playlist(self):
         pl = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig")
-        for tid in ("Hungama.in@SD", "ZBMusic.in@HD", "ZBBhakti.in@HD"):
+        for tid in ("Hungama.in@SD", "ZBMusic.in@HD"):
             self.assertIn(f'tvg-id="{tid}"', pl)
+        self.assertNotIn('tvg-id="ZBBhakti.in@HD"', pl)
 
 
 class BangladeshRetentionTests(unittest.TestCase):
@@ -72,7 +73,7 @@ class VerifiedAliasTests(unittest.TestCase):
     def test_new_verified_aliases(self):
         al = literal(COV, "EPG_ALIASES")
         self.assertEqual(al["custom.amar.bangla.digital"], ["jtv1962"])
-        self.assertEqual(al["AamarBangla.in@SD"], ["jtv1962"])
+        self.assertNotIn("AamarBangla.in@SD", al)
         self.assertIn("jtv3384", al["custom.epic.bhojpuri.digital"])
         self.assertIn("And.Pictures.HD.in", al["custom.picture.hd"])
 
