@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-10-20 15:17 UTC**_
+_Last generated: **2026-10-21 00:38 UTC**_
 
 Source playlist SHA-256: **ee851e7cc4586db6af2ed6053089b2b6847adfba5ccf91fd7f69e56f36d0b819**
 
@@ -13,15 +13,15 @@ Source playlist SHA-256: **ee851e7cc4586db6af2ed6053089b2b6847adfba5ccf91fd7f69e
 | India | **289** |
 | Backup Streams | **426** |
 | Local Logos | **100.0%** |
-| EPG Programme Coverage | **6.4%** |
-| EPG Mapping | **65.7%** |
-| Stream Health Tested | **1094** |
-| Stream Health Failures | **62** |
-| Persistent Failures | **38** |
+| EPG Programme Coverage | **61.3%** |
+| EPG Mapping | **66.0%** |
+| Stream Health Tested | **1088** |
+| Stream Health Failures | **73** |
+| Persistent Failures | **43** |
 | Near-Duplicate URL Families | **0** |
 | Audit Blocking Issues | **0** |
 | Pre-Publish Gate | **PASS** |
-| Pre-Publish Gate Generated | **2026-10-20T15:13:02+00:00** |
+| Pre-Publish Gate Generated | **2026-10-21T00:04:48+00:00** |
 
 ## Quality Controls
 - Duplicate stream URLs: **0**
@@ -45,19 +45,19 @@ Source playlist SHA-256: **ee851e7cc4586db6af2ed6053089b2b6847adfba5ccf91fd7f69e
 
 ## EPG
 - Active channel IDs audited: **639**
-- Mapped: **420 (65.7%)**
-- Current/future programme coverage: **41/639 (6.4%)**
-- No mapping: **219**
+- Mapped: **422 (66.0%)**
+- Current/future programme coverage: **392/639 (61.3%)**
+- No mapping: **217**
 - EPG metric scope: **IPTV-Playlist.m3u published-guide row**
 - Publication remains subject to source-policy approval.
 
 ## Freshness
 | Report | Last generated |
 |---|---|
-| Playlist audit | **2026-10-20T15:13:02.310955+00:00** |
-| EPG coverage | **2026-10-20T15:17:04+00:00** |
-| Stream health | **2026-10-17T10:01:04+00:00** |
-| Pre-publish gate | **2026-10-20T15:13:02+00:00** |
+| Playlist audit | **2026-10-21T00:04:48.662924+00:00** |
+| EPG coverage | **2026-10-21T00:38:54+00:00** |
+| Stream health | **2026-10-21T00:09:23+00:00** |
+| Pre-publish gate | **2026-10-21T00:04:48+00:00** |
 
 ## Maintenance History
 - Records retained: **30**

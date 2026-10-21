@@ -1,6 +1,6 @@
 # Stream Risk Review
 
-Generated: **2026-10-20T15:17:05+00:00**
+Generated: **2026-10-21T00:08:43+00:00**
 IPTV-Playlist.m3u SHA-256: **ee851e7cc4586db6af2ed6053089b2b6847adfba5ccf91fd7f69e56f36d0b819**
 
 Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.
