@@ -25,7 +25,7 @@ Generated from the revised IPTV-Playlist.m3u on main on 2026-10-21. Endpoint pat
 - Promoted Sony Aath's existing Backup stream to Indian Bangla with IN/ben metadata; its stream URL was left unchanged.
 - Renumbered active primary entries sequentially in category order and natural A–Z within categories; Backup and Not Playing are unnumbered.
 - Standardized EXTINF attribute order while keeping channel-id and both URL-tvg/x-tvg-url header aliases for compatibility.
-- Backfilled missing country/language values only when a unique matching primary identity supplied an unambiguous value; unmatched review-only records remain blank rather than guessed.
+- Backfilled country/language from confirmed channel identity where possible; the still-unidentified Channel 52 is explicitly marked `ZZ/und` rather than assigned a guessed identity.
 - Corrected high-confidence metadata: Asianet (Malayalam), DD Goa (Konkani), DD Sahyadri (Marathi), Kairali Arabia (Malayalam), Food Food (Hindi), TRT Müzik (Turkish), Kronehit (Austria/German), Arirang (South Korea), MBC 1/MBC 4 (Arabic), Wild Flix Hindi and XXTreme Jobs Hindi (India/Hindi), and Afarin TV (Iraq/Kurdish).
 - Corrected the stream/name mismatch Young Bollywood to Young Hollywood and used the existing young-hollywood.png logo.
 - Normalized title case for Love Nature, JTV Classic, Get Factual, Bahrain Quran, GREAT! Movies and GREAT! Romance.
