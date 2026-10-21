@@ -21,8 +21,7 @@ EPG_ALIASES = {
     "MTVIndia.in@SD": ["jtv248", "248"], "MusicMastii.in": ["jtv584", "584", "IN4#MASTII.in"],
     "KappaTV.in@ALT1": ["jtv786", "786", "377"], "IqraBangla.uk": ["3914"], "DeenTV.uk": ["1235"],
     "ATNBanglaUK.uk": ["6753"],
-    "NTVEurope.bd": ["epgpw:9374"],
-    "custom.channel.s.uk": ["epgpw:12504"], "TamilanTV.in": ["jtv2958", "2958"],
+    "TamilanTV.in": ["jtv2958", "2958"],
     "SonyKALHindi.us": ["US1#Sony.KAL.us"], "custom.bdix.aakashaath": ["AakaashAath.in@SD"],
     "custom.bdix.abpananda": ["ABPAnanda.in@SD"], "custom.abp.ananda": ["ABPAnanda.in@SD"],
     "custom.bdix.9bangla": ["TV9Bangla.in@SD"], "custom.ctvn.akd.plus": ["CTVNAKDPlus.in@SD"],
@@ -68,6 +67,8 @@ EPG_LOCKS = {
     # ATN Bangla UK is a distinct UK service. This narrow lock does not affect
     # ATNBangla.bd or any other domestic Bangladesh identity.
     "ATNBanglaUK.uk": ["6753"],
+    "NTVEurope.bd": ["epgpw:9374"],
+    "custom.channel.s.uk": ["epgpw:12504"],
 }
 
 REPORT = Path("reports/epg-coverage.md")
