@@ -43,15 +43,15 @@ permissions:
   contents: write
 
 concurrency:
-  group: bdix-iptv-main-writer
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
-  queue: max
 
 env:
   M3U4U_XMLTV_URL: ${{ secrets.M3U4U_XMLTV_URL }}
 
 jobs:
   sync:
+    if: ${{ !(github.actor == 'github-actions[bot]' && github.event_name == 'push' && (startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports and EPG') || startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance'))) }}
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -75,6 +75,13 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          git fetch --prune origin main
+          EVENT_WORKFLOW_BLOB="$(git rev-parse "${GITHUB_SHA}:.github/workflows/sync-iptv-reports.yml")"
+          CURRENT_WORKFLOW_BLOB="$(git rev-parse "FETCH_HEAD:.github/workflows/sync-iptv-reports.yml")"
+          if [[ "$EVENT_WORKFLOW_BLOB" != "$CURRENT_WORKFLOW_BLOB" ]]; then
+            echo "::notice::Skipping superseded queued report-sync run; newer workflow YAML is on main."
+            exit 0
+          fi
           for attempt in 1 2 3 4 5; do
             echo "=== Synchronization attempt ${attempt}/5 ==="
 

@@ -18,9 +18,8 @@ permissions:
 # Separate from playlist maintenance: reports must update even when playlist
 # validation fails. This workflow only commits reports/playlist-audit.md.
 concurrency:
-  group: bdix-iptv-main-writer
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
-  queue: max
 
 jobs:
   audit:
@@ -46,6 +45,13 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin main
+          EVENT_WORKFLOW_BLOB="$(git rev-parse "${GITHUB_SHA}:.github/workflows/playlist-audit-report.yml")"
+          CURRENT_WORKFLOW_BLOB="$(git rev-parse "FETCH_HEAD:.github/workflows/playlist-audit-report.yml")"
+          if [[ "$EVENT_WORKFLOW_BLOB" != "$CURRENT_WORKFLOW_BLOB" ]]; then
+            echo "::notice::Skipping superseded queued audit run; newer workflow YAML is on main."
+            exit 0
+          fi
 
           # Retry against the latest main if another workflow pushes at the same
           # time. The report commit never stages or edits the playlist.
