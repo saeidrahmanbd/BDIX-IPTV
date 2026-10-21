@@ -1,13 +1,13 @@
 # Logo Provenance Review
 
-Generated: **2026-10-21T05:16:38+00:00**
+Generated: **2026-10-21T08:39:28+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **61199b5845086edf9deb98a51a4e794c6757999358847fa5c1ad1e43e9357a3e**
-- BDIX-Playlist.m3u SHA-256: **2011915336e80d0c10f93cd9f3b08e3515477ff900c143413645f91ee02d86d0**
+- IPTV-Playlist.m3u SHA-256: **a4c0c292c6934c2dc987cd7800792dfa85f6cf7beb90a35faeac5becd2be0d82**
+- BDIX-Playlist.m3u SHA-256: **9027e1a976113e360f03ee51c0c9cd5952ca25c2a53d88f63310b32f0dcd5b8d**
 
 ## Provenance status by playlist
 
@@ -62,6 +62,15 @@ Showing up to 40 of 1188 items. The complete inventory, including all status rea
 | BDIX-Playlist.m3u | Colors Bangla | Colors.Bangla.in | colors-bangla.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | BDIX-Playlist.m3u | Colors Bangla Cinema | ColorsBanglaCinema.in@SD | colors-bangla-cinema.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
 | BDIX-Playlist.m3u | Colors Cineplex | ColorsCineplex.in@SD | colors-cineplex.png | No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof. |
+
+## Shared logo assets across distinct channel identities
+
+The same local file is referenced by more than one playlist tvg-id below. Review visually; shared artwork can be legitimate for related channel brands and is not automatically wrong.
+
+| Local asset | Channel identity | tvg-id |
+|---|---|---|
+| goldmines.png | Goldmines | Goldmines.in@SD |
+| goldmines.png | Goldmines 2 | Goldmines2.in@SD |
 
 ## Review policy
 

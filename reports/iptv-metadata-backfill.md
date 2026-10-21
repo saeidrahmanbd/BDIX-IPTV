@@ -1,10 +1,10 @@
 # IPTV Playlist Metadata Backfill
 
-Generated: **2026-10-21T05:13:32+00:00**
+Generated: **2026-10-21T08:36:11+00:00**
 
 Status: **PASS**
 Source: **current IPTV-Playlist.m3u**
-Playlist SHA-256: **61199b5845086edf9deb98a51a4e794c6757999358847fa5c1ad1e43e9357a3e**
+Playlist SHA-256: **a4c0c292c6934c2dc987cd7800792dfa85f6cf7beb90a35faeac5becd2be0d82**
 - Active entries with remaining metadata gaps: **0**
 - This report is read-only and does not modify IPTV-Playlist.m3u.
 
