@@ -6,6 +6,8 @@ on:
       - IPTV-Playlist.m3u
       - BDIX-Playlist.m3u
       - International-Playlist.m3u
+      - BDIX-Playlist.m3u
+      - International-Playlist.m3u
       - logos/**
       - .github/workflows/iptv-maintenance.yml
       - scripts/maintenance_helpers.py
@@ -64,7 +66,7 @@ permissions:
   contents: write
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   maintain:
     if: ${{ !(github.actor == 'github-actions[bot]' && (startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance') || startsWith(github.event.head_commit.message, 'Add conservative playlist removal guard') || startsWith(github.event.head_commit.message, 'Add hard playlist preservation gates') || startsWith(github.event.head_commit.message, 'Refine preservation guard to protect stream URLs') || startsWith(github.event.head_commit.message, 'Harden protected queue byte-for-byte preservation') || startsWith(github.event.head_commit.message, 'Harden IPTV maintenance safety') || startsWith(github.event.head_commit.message, 'Enforce zero automatic playlist deletion') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports and EPG'))) && !startsWith(github.event.head_commit.message, 'Repair IPTV metadata and local logos only; leave stream URLs unchanged') }}
