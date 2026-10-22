@@ -25,7 +25,6 @@ on:
       - reports/logo-source-registry.json
       - scripts/check_epg_config.py
       - scripts/epg_coverage.py
-      - scripts/generate_epg.py
       - scripts/run_generate_epg.py
       - scripts/fetch_iptv_org_epg.py
       - scripts/official_epg_sources.py
