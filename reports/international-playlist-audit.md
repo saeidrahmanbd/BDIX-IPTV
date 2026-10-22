@@ -1,11 +1,12 @@
 # International Playlist Audit
 
 - Entries: 923
+- Missing tvg-id values backfilled from exact, unambiguous primary-playlist names: 105
 - Exact duplicate URLs removed: 0
 - Malformed entries removed: 0
 - Backup entries migrated: 133
 - Remaining true orphan backups: 0
-- Logos repaired to repository-local assets: 4
+- Logos repaired to repository-local assets: 0
 - Logos recovered using external/iptv-org sources: 0
 - Entries still without a safe local logo: 10
 - Stream URLs changed: 0
