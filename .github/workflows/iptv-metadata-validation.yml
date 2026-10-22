@@ -60,6 +60,8 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
+      - name: Install pytest
+        run: python -m pip install --upgrade pytest
       - name: Compile changed Python tools
         run: |
           python -m py_compile \
@@ -88,3 +90,5 @@ jobs:
           python -m unittest discover -s tests -p "test_logo_provenance_review.py"
       - name: Test sensitive URL redaction
         run: python -m unittest discover -s tests -p "test_iptv_fragile_streams.py"
+      - name: Run full pytest suite
+        run: pytest -q tests
