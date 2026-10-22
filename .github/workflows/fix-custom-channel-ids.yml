@@ -25,6 +25,7 @@ jobs:
           from pathlib import Path
           import re
           import unicodedata
+          import hashlib
 
           playlist = Path('IPTV-Playlist.m3u')
           lines = playlist.read_text(encoding='utf-8-sig').replace('\r', '').splitlines()
@@ -53,13 +54,13 @@ jobs:
                       escaped = False
               return line, ''
 
-          # Stable, deterministic ID form: <normalized channel name>.<ISO country>
-          # Examples: Channel S UK -> ChannelS.uk, Channel 52 -> Channel52.bd,
-          # Rajdhani TV -> RajdhaniTV.bd, Love Nature -> LoveNature.ca.
+          # Stable, deterministic ID form: <normalized channel name>.<country>.
+          # The same old custom ID always receives the same new ID, including
+          # its Backup/alternate occurrences, so channel identity is preserved.
           country_alias = {
               'GB': 'uk', 'UK': 'uk', 'US': 'us', 'CA': 'ca', 'IN': 'in',
               'BD': 'bd', 'PK': 'pk', 'AU': 'au', 'NZ': 'nz', 'AE': 'ae',
-              'SA': 'sa', 'QA': 'qa', 'SG': 'sg', 'MY': 'my', 'AT': 'at',
+              'SA': 'sa', 'QA': 'qa', 'BH': 'bh', 'SG': 'sg', 'MY': 'my', 'AT': 'at',
               'DE': 'de', 'FR': 'fr', 'IT': 'it', 'ES': 'es', 'PT': 'pt',
               'NL': 'nl', 'BE': 'be', 'CH': 'ch', 'SE': 'se', 'NO': 'no',
               'DK': 'dk', 'FI': 'fi', 'IE': 'ie', 'TR': 'tr', 'JP': 'jp',
@@ -67,9 +68,6 @@ jobs:
               'ZA': 'za', 'NG': 'ng', 'GH': 'gh', 'KE': 'ke', 'LK': 'lk',
               'NP': 'np', 'BT': 'bt', 'MV': 'mv', 'IL': 'il', 'RU': 'ru',
           }
-
-          quality_words = {'hd', 'sd', 'fhd', 'uhd', '4k', '1080p', '720p', '576p', '480p', '360p'}
-          country_words = {'uk', 'usa', 'us', 'india', 'bd', 'bangladesh', 'pakistan', 'pk', 'canada', 'ca'}
 
           def slug(name):
               s = unicodedata.normalize('NFKD', name or '').encode('ascii', 'ignore').decode().strip()
@@ -94,63 +92,76 @@ jobs:
           if current:
               records.append(current)
 
-          # Existing non-custom IDs are reserved so a generated ID cannot collide
-          # with an established primary identity.
+          # Reserve every established non-custom identity.
           reserved = set()
           for rec in records:
               a = attrs(rec[0])
-              if not a.get('tvg-id', '').strip().lower().startswith('custom.'):
-                  cid = a.get('tvg-id', '').strip()
-                  if cid:
-                      reserved.add(cid.casefold())
+              cid = a.get('tvg-id', '').strip()
+              if cid and not cid.lower().startswith('custom.'):
+                  reserved.add(cid.casefold())
 
-          aliases = {}
-          generated = {}
-          changed = []
+          # Collect one representative per old custom ID. This prevents the
+          # same channel from receiving @ALT1, @ALT1@ALT1, etc. across duplicates.
+          representatives = {}
           for rec in records:
               a = attrs(rec[0])
               old = a.get('tvg-id', '').strip()
-              if not old.lower().startswith('custom.'):
+              if not old.lower().startswith('custom.') or old in representatives:
                   continue
               _, display = split_display(rec[0])
               name = (a.get('tvg-name') or display).strip()
               country = country_alias.get((a.get('tvg-country') or '').strip().upper())
-              if not country or country in {'zz', 'und'}:
-                  continue
+              if country in {'zz', 'und'}:
+                  country = None
+              representatives[old] = (name, country)
+
+          aliases = {}
+          used_new = set(reserved)
+          unresolved = []
+
+          for old, (name, country) in representatives.items():
               base = slug(name)
-              if not base:
+              if not base or not country:
+                  unresolved.append(old)
                   continue
-              new = f'{base}.{country}'
-              # Preserve distinct HD variants when the base identity already exists.
-              if new.casefold() in reserved:
-                  if re.search(r'\bHD\b', name, re.I):
-                      new = f'{base}.{country}@HD'
-                  elif re.search(r'\b(?:UK|USA|US|CANADA)\b', name, re.I):
-                      new = f'{base}.{country}'
-                  else:
-                      new = f'{base}.{country}@ALT1'
-              while new.casefold() in reserved and new.casefold() != old.casefold():
-                  new += '@ALT1'
-              reserved.add(new.casefold())
-              generated[old] = new
+              candidate = f'{base}.{country}'
+              key = candidate.casefold()
+              if key in used_new:
+                  # Stable suffix based on the old ID; never mutate repeatedly.
+                  suffix = hashlib.sha1(old.encode('utf-8')).hexdigest()[:6]
+                  candidate = f'{base}.{country}@{suffix}'
+                  key = candidate.casefold()
+                  n = 1
+                  while key in used_new:
+                      candidate = f'{base}.{country}@{suffix}{n}'
+                      key = candidate.casefold()
+                      n += 1
+              used_new.add(key)
+              aliases[old] = candidate
+
+          changed = []
+          for rec in records:
+              a = attrs(rec[0])
+              old = a.get('tvg-id', '').strip()
+              new = aliases.get(old)
+              if not new:
+                  continue
+              _, display = split_display(rec[0])
               rec[0] = set_attr(rec[0], 'tvg-id', new)
               rec[0] = set_attr(rec[0], 'channel-id', new)
-              aliases[old] = new
-              changed.append((name, old, new))
+              changed.append((a.get('tvg-name') or display, old, new))
+
+          if unresolved:
+              raise SystemExit('Unresolved custom IDs: ' + ', '.join(sorted(unresolved)))
 
           if not changed:
               print('No custom IDs required conversion.')
           else:
-              out = []
-              for rec in records:
-                  out.extend(rec)
-              # Reconstruct the playlist while preserving all preamble comments.
-              preamble = []
+              out = [line for rec in records for line in rec]
               first_ext = next((i for i, x in enumerate(lines) if x.startswith('#EXTINF:')), len(lines))
-              preamble = lines[:first_ext]
-              playlist.write_text('\n'.join(preamble + out) + '\n', encoding='utf-8')
+              playlist.write_text('\n'.join(lines[:first_ext] + out) + '\n', encoding='utf-8')
 
-              # Keep exact-ID EPG mappings compatible with the renamed playlist IDs.
+              # Keep exact-ID EPG mappings compatible with renamed playlist IDs.
               for path in [Path('scripts/epg_coverage.py'), Path('scripts/generate_epg.py'), Path('scripts/run_epg_coverage.py')]:
                   if not path.exists():
                       continue
@@ -161,9 +172,9 @@ jobs:
                   if text != original:
                       path.write_text(text, encoding='utf-8')
 
-              print(f'Converted {len(changed)} custom IDs:')
-              for name, old, new in changed:
-                  print(f'  {name}: {old} -> {new}')
+              print(f'Converted {len(aliases)} unique custom IDs across {len(changed)} playlist entries.')
+              for old, new in sorted(aliases.items()):
+                  print(f'  {old} -> {new}')
 
       - name: Validate playlist and IDs
         shell: bash
