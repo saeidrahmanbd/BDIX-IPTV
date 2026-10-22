@@ -7,6 +7,7 @@ on:
       - scripts/backfill_cross_playlist_metadata.py
       - scripts/repair_logo_asset_technical_quality.py
       - scripts/repair_playlist_logos.py
+      - scripts/repair_international_playlist.py
       - scripts/validate_report_freshness.py
       - IPTV-Playlist.m3u
       - BDIX-Playlist.m3u
@@ -29,6 +30,7 @@ on:
       - tests/test_cross_playlist_metadata.py
       - tests/test_epg_parallel_fetch.py
       - tests/test_logo_asset_technical_quality.py
+      - tests/test_international_identity_backfill.py
       - tests/test_report_freshness.py
       - tests/test_language_policy.py
       - .github/workflows/iptv-maintenance.yml
@@ -86,6 +88,7 @@ jobs:
             scripts/backfill_cross_playlist_metadata.py \
             scripts/repair_logo_asset_technical_quality.py \
             scripts/repair_playlist_logos.py \
+            scripts/repair_international_playlist.py \
             scripts/validate_report_freshness.py \
             scripts/audit_playlist.py \
             scripts/pre_publish_gate.py \
