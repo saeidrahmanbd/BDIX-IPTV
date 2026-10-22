@@ -1,12 +1,12 @@
 # International Playlist Audit
 
-- Entries: 1149
+- Entries: 1147
 - Missing tvg-id values backfilled from exact, unambiguous primary-playlist names: 0
 - Exact duplicate URLs removed: 0
 - Malformed entries removed: 0
-- Backup entries migrated: 192
+- Backup entries migrated: 180
 - Remaining true orphan backups: 6
-- Logos repaired to repository-local assets: 18
+- Logos repaired to repository-local assets: 550
 - Logos recovered using external/iptv-org sources: 0
 - Entries still without a safe local logo: 47
 - Stream URLs changed: 0
@@ -20,26 +20,26 @@
 6. **Музыка 1 International** | tvg-id: `Kino1International.ru` | channel-id: `Kino1International.ru` | URL: `https://kino-1.catcast.tv/content/37745/index.m3u8`
 
 ## Unresolved logos
-1. **CGTN Docment** | tvg-id: `custom.cgtn-docment` | channel-id: `custom.cgtn-docment` | URL: `https://english-livebkali.cgtn.com/live/doccgtn_1.m3u8`
-2. **24/7 XXX 1** | tvg-id: `custom.24-7-xxx-1` | channel-id: `custom.24-7-xxx-1` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791439.ts`
-3. **24/7 XXX 10** | tvg-id: `custom.24-7-xxx-10` | channel-id: `custom.24-7-xxx-10` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791441.ts`
-4. **24/7 XXX 2** | tvg-id: `custom.24-7-xxx-2` | channel-id: `custom.24-7-xxx-2` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791442.ts`
-5. **24/7 XXX 3** | tvg-id: `custom.24-7-xxx-3` | channel-id: `custom.24-7-xxx-3` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791443.ts`
-6. **24/7 XXX 4** | tvg-id: `custom.24-7-xxx-4` | channel-id: `custom.24-7-xxx-4` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791444.ts`
-7. **24/7 XXX 5** | tvg-id: `custom.24-7-xxx-5` | channel-id: `custom.24-7-xxx-5` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791445.ts`
-8. **24/7 XXX 6** | tvg-id: `custom.24-7-xxx-6` | channel-id: `custom.24-7-xxx-6` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791446.ts`
-9. **24/7 XXX 7** | tvg-id: `custom.24-7-xxx-7` | channel-id: `custom.24-7-xxx-7` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791447.ts`
-10. **24/7 XXX 8** | tvg-id: `custom.24-7-xxx-8` | channel-id: `custom.24-7-xxx-8` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791448.ts`
-11. **24/7 XXX BBW** | tvg-id: `custom.24-7-xxx-bbw` | channel-id: `custom.24-7-xxx-bbw` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791480.ts`
-12. **24/7 XXX BDSM** | tvg-id: `custom.24-7-xxx-bdsm` | channel-id: `custom.24-7-xxx-bdsm` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791481.ts`
-13. **24/7 XXX Big Tits** | tvg-id: `custom.24-7-xxx-big-tits` | channel-id: `custom.24-7-xxx-big-tits` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791483.ts`
-14. **24/7 XXX Ebony** | tvg-id: `custom.24-7-xxx-ebony` | channel-id: `custom.24-7-xxx-ebony` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791496.ts`
-15. **24/7 XXX Kelly Divine** | tvg-id: `custom.24-7-xxx-kelly-divine` | channel-id: `custom.24-7-xxx-kelly-divine` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791521.ts`
-16. **24/7 XXX London Keyes** | tvg-id: `custom.24-7-xxx-london-keyes` | channel-id: `custom.24-7-xxx-london-keyes` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791525.ts`
-17. **24/7 XXX Milfs** | tvg-id: `custom.24-7-xxx-milfs` | channel-id: `custom.24-7-xxx-milfs` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791530.ts`
-18. **24/7 XXX Milfs Stepmom** | tvg-id: `custom.24-7-xxx-milfs-stepmom` | channel-id: `custom.24-7-xxx-milfs-stepmom` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791438.ts`
-19. **24/7 XXX Nicole Doshi** | tvg-id: `custom.24-7-xxx-nicole-doshi` | channel-id: `custom.24-7-xxx-nicole-doshi` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791535.ts`
-20. **24/7 XXX POV** | tvg-id: `custom.24-7-xxx-pov` | channel-id: `custom.24-7-xxx-pov` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791543.ts`
+1. **24/7 XXX 1** | tvg-id: `custom.24-7-xxx-1` | channel-id: `custom.24-7-xxx-1` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791439.ts`
+2. **24/7 XXX 10** | tvg-id: `custom.24-7-xxx-10` | channel-id: `custom.24-7-xxx-10` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791441.ts`
+3. **24/7 XXX 2** | tvg-id: `custom.24-7-xxx-2` | channel-id: `custom.24-7-xxx-2` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791442.ts`
+4. **24/7 XXX 3** | tvg-id: `custom.24-7-xxx-3` | channel-id: `custom.24-7-xxx-3` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791443.ts`
+5. **24/7 XXX 4** | tvg-id: `custom.24-7-xxx-4` | channel-id: `custom.24-7-xxx-4` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791444.ts`
+6. **24/7 XXX 5** | tvg-id: `custom.24-7-xxx-5` | channel-id: `custom.24-7-xxx-5` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791445.ts`
+7. **24/7 XXX 6** | tvg-id: `custom.24-7-xxx-6` | channel-id: `custom.24-7-xxx-6` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791446.ts`
+8. **24/7 XXX 7** | tvg-id: `custom.24-7-xxx-7` | channel-id: `custom.24-7-xxx-7` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791447.ts`
+9. **24/7 XXX 8** | tvg-id: `custom.24-7-xxx-8` | channel-id: `custom.24-7-xxx-8` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791448.ts`
+10. **24/7 XXX BBW** | tvg-id: `custom.24-7-xxx-bbw` | channel-id: `custom.24-7-xxx-bbw` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791480.ts`
+11. **24/7 XXX BDSM** | tvg-id: `custom.24-7-xxx-bdsm` | channel-id: `custom.24-7-xxx-bdsm` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791481.ts`
+12. **24/7 XXX Big Tits** | tvg-id: `custom.24-7-xxx-big-tits` | channel-id: `custom.24-7-xxx-big-tits` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791483.ts`
+13. **24/7 XXX Ebony** | tvg-id: `custom.24-7-xxx-ebony` | channel-id: `custom.24-7-xxx-ebony` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791496.ts`
+14. **24/7 XXX Kelly Divine** | tvg-id: `custom.24-7-xxx-kelly-divine` | channel-id: `custom.24-7-xxx-kelly-divine` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791521.ts`
+15. **24/7 XXX London Keyes** | tvg-id: `custom.24-7-xxx-london-keyes` | channel-id: `custom.24-7-xxx-london-keyes` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791525.ts`
+16. **24/7 XXX Milfs** | tvg-id: `custom.24-7-xxx-milfs` | channel-id: `custom.24-7-xxx-milfs` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791530.ts`
+17. **24/7 XXX Milfs Stepmom** | tvg-id: `custom.24-7-xxx-milfs-stepmom` | channel-id: `custom.24-7-xxx-milfs-stepmom` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791438.ts`
+18. **24/7 XXX Nicole Doshi** | tvg-id: `custom.24-7-xxx-nicole-doshi` | channel-id: `custom.24-7-xxx-nicole-doshi` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791535.ts`
+19. **24/7 XXX POV** | tvg-id: `custom.24-7-xxx-pov` | channel-id: `custom.24-7-xxx-pov` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791543.ts`
+20. **Milf** | tvg-id: `custom.milf` | channel-id: `custom.milf` | URL: `http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393458.ts`
 21. **Xxx Big Dick** | tvg-id: `custom.xxx-big-dick` | channel-id: `custom.xxx-big-dick` | URL: `http://play.iptvxxx.net/bigdick.m3u8`
 22. **Xxx Big Tits** | tvg-id: `custom.xxx-big-tits` | channel-id: `custom.xxx-big-tits` | URL: `http://play.iptvxxx.net/bigtits.m3u8`
 23. **Xxx Blowjob** | tvg-id: `custom.xxx-blowjob` | channel-id: `custom.xxx-blowjob` | URL: `http://play.iptvxxx.net/blowjob.m3u8`
@@ -71,6 +71,6 @@
 
 ## Primary/Backup reconciliation
 - Known pre-classification backups restored to Backup: 47
-- Genuine orphan backups promoted because no primary existed: 26
-- Existing backups retained because a primary exists: 21
-- Duplicate primary copies moved to Backup: 171
+- Genuine orphan backups promoted because no primary existed: 25
+- Existing backups retained because a primary exists: 22
+- Duplicate primary copies moved to Backup: 172
