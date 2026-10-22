@@ -5,6 +5,7 @@ Policy: search this repository's /logos tree first (including /logos/unused),
 then use exact channel/ID matches from curated sources, IPTV-org, or Wikimedia
 Commons. Never invent a broadcaster logo or use an unrelated lookalike.
 """
+import argparse
 from pathlib import Path
 from datetime import datetime, timezone
 import hashlib
@@ -170,6 +171,20 @@ EXTRA_DIRECT_HINTS = {
         "page": "https://iptv-org.github.io/channels/om/AlistiqamaTV",
         "license": "Station logo from IPTV-org channel listing",
         "license_url": "https://iptv-org.github.io/channels/om/AlistiqamaTV",
+    },
+    "Alone": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alone_(Leftfield_Pictures_TV_series)_logo.svg",
+        "format": "SVG",
+        "page": "https://commons.wikimedia.org/wiki/File:Alone_(Leftfield_Pictures_TV_series)_logo.svg",
+        "license": "The official Alone series logo, identified on Wikimedia Commons with source attribution to history.com; this is show branding, not a separate channel-network logo.",
+        "license_url": "https://www.history.com/shows/alone",
+    },
+    "Zainabia Channel": {
+        "url": "https://shialivetv.com/shialive/assets/img/t3bepyRDu65zIkcaQB2Q_3_small.png",
+        "format": "PNG",
+        "page": "https://shialivetv.com/play.php?ch=Al-Kawthar+TV&t=0",
+        "license": "Exact Zainabia Channel mark shown in a third-party channel listing; the channel identity is independently corroborated by its official website.",
+        "license_url": "https://www.zainabiachannel.co.in/",
     },
     "Cafe Film": {
         "url": "https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/CafeFilm.ir.png",
@@ -503,8 +518,12 @@ def candidate_for(channel, attrs, iptv_indexes, history_index):
     return None, ""
 
 
-def download_exact_asset(channel, candidate):
-    """Fetch and validate exact source bytes, then store them locally."""
+def download_exact_asset(channel, candidate, canonical_name=False):
+    """Fetch and validate exact source bytes, then store them locally.
+
+    The optional canonical-name mode is used for one-off replacement of explicitly
+    labelled fallback assets; it avoids adding a process prefix to normal filenames.
+    """
     url = candidate.get("url", "")
     if not url.startswith(("https://", "http://")):
         raise ValueError("source URL is missing or not HTTP(S)")
@@ -515,9 +534,12 @@ def download_exact_asset(channel, candidate):
     ext = source.extension_for(mime, fmt, url)
     slug = source.slug(channel)
     digest = hashlib.sha256(raw).hexdigest()[:10]
-    filename = f"nvisionbd-verified-{slug}-{digest}{ext}"
+    filename = f"{slug}{ext}" if canonical_name else f"nvisionbd-verified-{slug}-{digest}{ext}"
     dest = LOGOS / filename
-    if not dest.exists():
+    if dest.exists():
+        if hashlib.sha256(dest.read_bytes()).digest() != hashlib.sha256(raw).digest():
+            raise ValueError(f"canonical logo filename already exists with different bytes: {filename}")
+    else:
         dest.write_bytes(raw)
     if not file_is_valid(dest):
         raise ValueError("downloaded image failed local validation")
@@ -678,6 +700,13 @@ def make_generated_fallback(channel, category):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--fallback-only",
+        action="store_true",
+        help="repair only active explicitly named generated-fallback logo references",
+    )
+    args = parser.parse_args()
     LOGOS.mkdir(parents=True, exist_ok=True)
     try:
         iptv_indexes = source.load_iptv_org_indexes()
@@ -700,6 +729,7 @@ def main():
 
     fixes_cache = {}
     report_rows = []
+    registry_updates = {}
     summary = {}
     for playlist in PLAYLISTS:
         path = Path(playlist)
@@ -722,12 +752,21 @@ def main():
             basename = Path(urllib.parse.urlparse(current).path).name.casefold() if current else ""
             missing = not current
             broken = not is_valid_local_logo_reference(current)
+            group_name = (attrs.get("group-title") or "").strip().casefold()
+            is_review_entry = group_name in {"backup", "not playing", "not playing...", "not playing…"}
+            is_generated_fallback = basename.startswith("generated-fallback-")
+            if args.fallback_only and (not is_generated_fallback or is_review_entry):
+                output.append(line)
+                continue
             forced_logo = FORCED_CHANNEL_LOGOS.get(key)
             forced_wrong = bool(forced_logo and basename != forced_logo.casefold())
-            # An explicitly prefixed generated fallback is allowed as disclosed, non-authentic artwork.
-            # Replacing it is only required when the local file is invalid or a better exact
-            # source has already been selected by the explicit correction paths above.
-            flagged = broken or basename in BAD_ASSETS or basename in GENERIC_ASSETS or bool(re.search(r"(?:placeholder|generic-logo)", basename)) or forced_wrong
+            # A fallback is disclosed as unofficial, but active fallbacks now enter an
+            # exact-source replacement attempt. Review queues remain manually managed.
+            flagged = (
+                broken or basename in BAD_ASSETS or basename in GENERIC_ASSETS
+                or bool(re.search(r"(?:placeholder|generic-logo)", basename))
+                or forced_wrong or (is_generated_fallback and not is_review_entry)
+            )
             if not (missing or flagged):
                 output.append(line)
                 continue
@@ -737,8 +776,9 @@ def main():
             source_page = ""
             license_name = ""
             license_url = ""
+            candidate_metadata = None
 
-            if not new_file:
+            if not new_file and not is_generated_fallback:
                 try:
                     new_file = find_registered_logo(playlist, attrs, channel)
                     if new_file:
@@ -760,17 +800,30 @@ def main():
                 try:
                     candidate, source_name = candidate_for(channel, attrs, iptv_indexes, history_index)
                     if candidate:
+                        candidate_metadata = dict(candidate)
                         source_page = candidate.get("page", "")
                         license_name = candidate.get("license", "")
                         license_url = candidate.get("license_url", "")
-                        new_file = download_exact_asset(channel, candidate)
+                        new_file = download_exact_asset(channel, candidate, canonical_name=args.fallback_only)
                 except Exception as exc:
                     report_rows.append((playlist, line_number, channel, basename, "", source_name or "external lookup", "", "", "Download/validation failed: " + str(exc)[:150]))
                     new_file = None
 
             if new_file:
                 fixes_cache[key] = new_file
-                line = set_logo(line, raw_url(new_file))
+                logo_reference = raw_url(new_file)
+                line = set_logo(line, logo_reference)
+                if candidate_metadata:
+                    channel_id = (attrs.get("tvg-id") or attrs.get("channel-id") or "").strip()
+                    attribution = candidate_metadata.get("license", "").strip()
+                    source_page = candidate_metadata.get("page", "").strip()
+                    source_asset = candidate_metadata.get("url", "").strip() or source_page
+                    note_parts = [part for part in (source_name, attribution, ("Source page: " + source_page) if source_page else "") if part]
+                    registry_updates[f"{playlist}|{channel_id}|{channel}|{logo_reference}"] = {
+                        "status": "third_party_verified",
+                        "source_url": source_asset,
+                        "notes": " ".join(note_parts),
+                    }
                 changed += 1
                 report_rows.append((playlist, line_number, channel, basename, new_file, source_name, source_page, license_name + ((" — " + license_url) if license_url else ""), "replaced"))
             else:
@@ -801,6 +854,15 @@ def main():
             "flagged_after": flagged_after, "generated_fallbacks": fallback_count,
             "unresolved": unresolved,
         }
+
+    if registry_updates:
+        try:
+            registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8")) if REGISTRY_PATH.exists() else {}
+        except Exception:
+            registry = {}
+        registry.update(registry_updates)
+        REGISTRY_PATH.parent.mkdir(parents=True, exist_ok=True)
+        REGISTRY_PATH.write_text(json.dumps(registry, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
