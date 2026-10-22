@@ -24,8 +24,23 @@ class EpgConfigTests(unittest.TestCase):
         self.assertEqual(len(a), len(set(a)))
 
     def test_generator_covers_all_three_published_playlists(self):
-        generator_paths = literal(GEN, "PLAYLISTS")
-        self.assertEqual([p.name for p in generator_paths], ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u"])
+        tree = ast.parse(GEN)
+        playlists = next(
+            node.value
+            for node in ast.walk(tree)
+            if isinstance(node, ast.Assign)
+            and any(isinstance(target, ast.Name) and target.id == "PLAYLISTS" for target in node.targets)
+        )
+        paths = [
+            elt.args[0].value
+            for elt in playlists.elts
+            if isinstance(elt, ast.Call)
+            and isinstance(elt.func, ast.Name)
+            and elt.func.id == "Path"
+            and elt.args
+            and isinstance(elt.args[0], ast.Constant)
+        ]
+        self.assertEqual(paths, ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u"])
 
     def test_rtv_not_configured(self):
         self.assertFalse([u for u in literal(COV, "SOURCES") if "rtvbd.tv" in u])
