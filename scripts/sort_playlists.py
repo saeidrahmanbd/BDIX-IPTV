@@ -8,11 +8,11 @@ import unicodedata
 CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
-    "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup",
-    "Not Playing",
+    "Documentary & Wildlife", "Kids", "Religious", "Sports",
+    "New Channels", "New Backup", "Backup", "Not Playing",
 ]
 RANK = {name: index for index, name in enumerate(CATEGORY_ORDER)}
-NON_NUMBERED = {"Backup", "Not Playing"}
+NON_NUMBERED = {"Backup", "Not Playing", "New Channels", "New Backup"}
 ATTRIBUTE_ORDER = (
     "tvg-id", "tvg-name", "tvg-logo", "tvg-chno",
     "channel-id", "tvg-country", "tvg-language", "group-title",
@@ -40,7 +40,6 @@ def split_head_display(info):
 
 
 def canonical_extinf(info):
-    """Use stable attribute order without changing channel names or values."""
     head, display = split_head_display(info)
     duration = re.match(r"^#EXTINF:\S+", head)
     if not duration:
@@ -51,9 +50,7 @@ def canonical_extinf(info):
     rank = {key: index for index, key in enumerate(ATTRIBUTE_ORDER)}
     pairs = [(match.group(1), match.group(2), index) for index, match in enumerate(matches)]
     pairs.sort(key=lambda item: (rank.get(item[0], len(rank)), item[2]))
-    return duration.group(0) + " " + " ".join(
-        f'{key}="{value}"' for key, value, _ in pairs
-    ) + display
+    return duration.group(0) + " " + " ".join(f'{key}="{value}"' for key, value, _ in pairs) + display
 
 
 def set_attr(info, key, value):
@@ -76,20 +73,13 @@ def record_name(record):
 
 
 def record_url(record):
-    return next(
-        (line.strip() for line in record[1:] if line.strip().startswith(("http://", "https://"))),
-        "",
-    )
+    return next((line.strip() for line in record[1:] if line.strip().startswith(("http://", "https://"))), "")
 
 
 def record_key(record):
     a = attrs(record[0])
     group = a.get("group-title", "").strip()
-    return (
-        RANK.get(group, len(RANK)),
-        natural_key(record_name(record)),
-        record_url(record).casefold(),
-    )
+    return (RANK.get(group, len(RANK)), natural_key(record_name(record)), record_url(record).casefold())
 
 
 def sort_playlist(path):
@@ -118,20 +108,12 @@ def sort_playlist(path):
         if path.name == "IPTV-Playlist.m3u":
             if group in NON_NUMBERED:
                 record[0] = remove_attr(record[0], "tvg-chno")
-            else:
+            elif group not in {"Sports"}:
                 record[0] = set_attr(record[0], "tvg-chno", str(next_number))
                 next_number += 1
-        elif group in NON_NUMBERED:
-            record[0] = remove_attr(record[0], "tvg-chno")
-
     path.write_text("\n".join(preamble + [line for record in records for line in record]) + "\n", encoding="utf-8")
-    print(f"SORTED {path}: {len(records)} records; " + (
-        f"renumbered primary entries 1–{next_number - 1}" if path.name == "IPTV-Playlist.m3u"
-        else "preserved existing primary numbering"
-    ))
 
 
-if __name__ == "__main__":
-    paths = sys.argv[1:] or ["IPTV-Playlist.m3u"]
-    for name in paths:
-        sort_playlist(Path(name))
+paths = sys.argv[1:] or ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u"]
+for raw in paths:
+    sort_playlist(Path(raw))
