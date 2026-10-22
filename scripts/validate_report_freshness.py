@@ -8,7 +8,7 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-PLAYLIST_NAMES = ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u")
+PLAYLIST_NAMES = ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u")
 MAX_REPORT_AGE = timedelta(hours=48)
 SINGLE_PLAYLIST_REPORTS = {
     "reports/playlist-audit.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256", "Playlist SHA-256")),

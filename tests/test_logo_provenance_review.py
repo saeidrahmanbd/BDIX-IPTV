@@ -12,6 +12,7 @@ class LogoProvenanceReviewTests(unittest.TestCase):
             "status_counts_by_playlist": {
                 "IPTV-Playlist.m3u": {"needs_review": 2, "generated_fallback": 1, "third_party_verified": 3, "official_verified": 0},
                 "BDIX-Playlist.m3u": {"needs_review": 4, "generated_fallback": 0, "third_party_verified": 0, "official_verified": 0},
+                "International-Playlist.m3u": {"needs_review": 0, "generated_fallback": 0, "third_party_verified": 0, "official_verified": 0},
             },
             "entries": [
                 {"playlist": "IPTV-Playlist.m3u", "channel_name": "Sample TV", "tvg_id": "sample.tv", "logo": "https://example.invalid/logos/sample.png", "status": "needs_review", "reason": "No exact source record."},
@@ -20,7 +21,7 @@ class LogoProvenanceReviewTests(unittest.TestCase):
                 {"playlist": "IPTV-Playlist.m3u", "channel_name": "Goldmines 2", "tvg_id": "Goldmines2.in@SD", "logo": "https://example.invalid/logos/goldmines.png", "status": "needs_review", "reason": "Source not documented."},
             ],
         }
-        report = build_report(manifest, {"IPTV-Playlist.m3u": "a" * 64, "BDIX-Playlist.m3u": "b" * 64}, "2026-10-20T12:00:00+00:00")
+        report = build_report(manifest, {"IPTV-Playlist.m3u": "a" * 64, "BDIX-Playlist.m3u": "b" * 64, "International-Playlist.m3u": "c" * 64}, "2026-10-20T12:00:00+00:00")
         self.assertIn("does not by itself prove the logo is wrong", report)
         self.assertIn("unofficial fallback artwork", report)
         self.assertIn("a" * 64, report)

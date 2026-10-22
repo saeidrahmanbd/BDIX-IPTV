@@ -17,12 +17,14 @@ on:
       - scripts/migrate_external_logos_fixed.py
       - scripts/restore_protected_review.py
       - scripts/generate_logo_authenticity_manifest.py
+      - scripts/generate_logo_provenance_review.py
+      - scripts/validate_report_freshness.py
+      - scripts/generate_epg.py
       - scripts/generate_logo_repair_summary.py
       - scripts/logo_source_catalog.py
       - reports/logo-source-registry.json
       - scripts/check_epg_config.py
       - scripts/epg_coverage.py
-      - scripts/generate_epg.py
       - scripts/run_generate_epg.py
       - scripts/fetch_iptv_org_epg.py
       - scripts/official_epg_sources.py

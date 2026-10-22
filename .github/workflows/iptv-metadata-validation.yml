@@ -21,6 +21,7 @@ on:
       - tests/test_iptv_fragile_streams.py
       - tests/test_metadata_backfill.py
       - tests/test_report_freshness.py
+      - tests/test_epg_config.py
       - tests/test_language_policy.py
       - .github/workflows/iptv-maintenance.yml
       - .github/workflows/iptv-metadata-validation.yml

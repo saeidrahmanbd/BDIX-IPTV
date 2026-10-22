@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlsplit
 
-PLAYLISTS = ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u")
+PLAYLISTS = ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u")
 MANIFEST = Path("reports/logo-authenticity-manifest.json")
 OUT = Path("reports/logo-provenance-review.md")
 
