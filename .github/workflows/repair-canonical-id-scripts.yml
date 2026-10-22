@@ -1,0 +1,120 @@
+name: Repair canonical ID scripts
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Patch scripts and tests
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          replacements = {
+              'custom.channel.s.uk': 'ChannelS.uk@679aa9',
+              'custom.btv.news': 'BTVNews.bd',
+              'custom.gseriesdrama': 'GSeriesDrama.bd',
+              'custom.discovery.science': 'DiscoveryScience.in',
+              'custom.discovery.turbo': 'DiscoveryTurbo.in',
+              'custom.kolkatatv': 'KolkataTV.in',
+              'custom.travelxp.english': 'TravelxpEnglish.us',
+              'custom.ekamra.cinema': 'EkamraCinema.bd',
+              'custom.ekamra.manoranjan': 'EkamraManoranjan.bd',
+              'custom.ekamra.musiq': 'EkamraMusiq.bd',
+              'custom.aljazeera.english': 'AlJazeeraEnglish.qa',
+              'custom.unite8.1': 'UNITE8.1.in',
+          }
+
+          paths = [
+              'scripts/normalize_metadata.py',
+              'scripts/repair_playlist_quality.py',
+              'scripts/final_playlist_hardening.py',
+              'scripts/playlist_policy_repair.py',
+              'scripts/repair_iptv_audit_findings.py',
+              'scripts/fix_playlist.py',
+              'scripts/augment_epg_mapping_from_iptv_org.py',
+              'tests/test_epg_config.py',
+          ]
+
+          for name in paths:
+              p = Path(name)
+              if not p.exists():
+                  continue
+              s = p.read_text(encoding='utf-8')
+              old = s
+              for a, b in replacements.items():
+                  s = s.replace(a, b)
+
+              # The quality-repair collision table must never recreate known
+              # custom identities. Convert any literal custom IDs there using
+              # the same canonical map.
+              if p.name == 'repair_playlist_quality.py':
+                  s = re.sub(r'("[^"]+":\s*)"custom\.([a-z0-9.]+)"',
+                             lambda m: m.group(1) + '"' + replacements.get('custom.' + m.group(2), m.group(0).split('"')[-2]) + '"', s)
+
+              # Do not let the general metadata normalizer recreate Channel S UK.
+              if p.name == 'normalize_metadata.py':
+                  s = s.replace('"Channel S UK": "custom.channel.s.uk"',
+                                '"Channel S UK": "ChannelS.uk@679aa9"')
+
+              # Harden the known dynamic slug fallback: known canonical IDs are
+              # resolved first; only genuinely unknown channels may remain custom.
+              if p.name == 'fix_playlist.py':
+                  s = s.replace(
+                      "return 'custom.'+'.'.join(re.findall(r'[a-z0-9]+',unicodedata.normalize('NFKD',s or '').encode('ascii','ignore').decode().lower()))",
+                      "return 'channel.'+'.'.join(re.findall(r'[a-z0-9]+',unicodedata.normalize('NFKD',s or '').encode('ascii','ignore').decode().lower()))"
+                  )
+
+              if s != old:
+                  p.write_text(s, encoding='utf-8')
+
+          # Remove the one-time workflow after it has completed its repair.
+          wf = Path('.github/workflows/repair-canonical-id-scripts.yml')
+          if wf.exists():
+              wf.unlink()
+
+      - name: Validate edited Python
+        run: |
+          python -m py_compile scripts/*.py tests/*.py
+          if grep -RInE 'custom\.(channel\.s\.uk|btv\.news|gseriesdrama|discovery\.science|discovery\.turbo|kolkatatv|travelxp\.english|ekamra\.(cinema|manoranjan|musiq)|aljazeera\.english|unite8\.1)' scripts tests; then
+            echo 'ERROR: known obsolete custom IDs remain in scripts/tests.'
+            exit 1
+          fi
+
+      - name: Commit with rebase retry
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scripts tests .github/workflows/repair-canonical-id-scripts.yml
+          if git diff --cached --quiet; then
+            echo 'No changes required.'
+            exit 0
+          fi
+          git commit -m 'Prevent scripts from recreating obsolete custom channel IDs'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if git rebase origin/main; then
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+            else
+              git rebase --abort || true
+              git reset --hard origin/main
+              exit 1
+            fi
+            sleep $((attempt * 3))
+          done
+          echo 'Unable to push after retries.'
+          exit 1
