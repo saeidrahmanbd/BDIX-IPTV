@@ -27,6 +27,9 @@ BAD_WORDS = {
 BAD_HOSTS = ("proxy", "proxied", "cors", "localhost", "workers.dev", "worker.dev", "pages.dev")
 BAD_QUERY_KEYS = {"token", "auth", "authorization", "hdnts", "sig", "signature", "expires", "session", "jwt", "key"}
 QUALITY = {"uhd", "fhd", "hd", "sd", "4k", "1080p", "720p", "576p", "480p", "360p", "240p"}
+COUNTRY_CODE = {"Bangladesh": "bd", "India": "in"}
+BAD_RE = re.compile(r"(?<![a-z0-9])(?:" + "|".join(re.escape(w) for w in sorted(BAD_WORDS)) + r")(?![a-z0-9])")
+ID_CC_RE = re.compile(r"\.([a-z]{2})(?:@|$)")
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
 
@@ -48,7 +51,7 @@ def norm(value: str) -> str:
     value = unicodedata.normalize("NFKC", value or "").casefold().replace("_", " ")
     value = re.sub(r"\[[^]]*\]|\([^)]*\)", " ", value)
     value = " ".join(x for x in value.split() if x not in QUALITY)
-    return "".join(c for c in value if c.isalnum() or unicodedata.category(c).startswith("L"))
+    return "".join(c for c in value if c.isalnum() or unicodedata.category(c)[0] in "LMN")
 
 
 def base_id(value: str) -> str:
@@ -74,12 +77,15 @@ def parse(text: str):
 
 
 def acceptable(country: str, a: dict[str, str], name: str, url: str) -> bool:
-    if country not in {"Bangladesh", "India"}:
+    if country not in COUNTRY_CODE:
+        return False
+    m = ID_CC_RE.search((a.get("tvg-id") or a.get("channel-id") or "").strip().casefold())
+    if not m or m.group(1) != COUNTRY_CODE[country]:
         return False
     p = urlparse(url)
     if p.scheme not in {"http", "https"} or not p.netloc or p.fragment:
         return False
-    if any(word in " ".join((name, a.get("tvg-id", ""), a.get("group-title", ""))).casefold() for word in BAD_WORDS):
+    if BAD_RE.search(" ".join((name, a.get("tvg-id", ""), a.get("group-title", ""))).casefold()):
         return False
     if any(x in p.netloc.casefold() for x in BAD_HOSTS):
         return False
@@ -88,13 +94,14 @@ def acceptable(country: str, a: dict[str, str], name: str, url: str) -> bool:
     return p.path.casefold().endswith((".m3u8", ".m3u", ".ts")) and "vod" not in p.path.casefold() and "catchup" not in p.path.casefold()
 
 
-def extinf(a: dict[str, str], name: str, group: str) -> str | None:
+def extinf(a: dict[str, str], name: str, group: str, country: str) -> str | None:
     cid = (a.get("tvg-id") or a.get("channel-id") or "").strip()
     if not cid:
         return None
     fields = [f'tvg-id="{cid}"', f'tvg-name="{name}"']
     if a.get("tvg-logo", "").strip():
         fields.append(f'tvg-logo="{a["tvg-logo"].strip()}"')
+    fields.append(f'tvg-country="{COUNTRY_CODE[country].upper()}"')
     fields.append(f'channel-id="{a.get("channel-id", cid).strip()}"')
     fields.append(f'group-title="{group}"')
     return "#EXTINF:-1 " + " ".join(fields) + "," + name
@@ -140,18 +147,17 @@ def main() -> int:
             if cid:
                 planned_ids.add(cid)
 
-    # Conservative queue limits per run; future runs can continue discovering more.
     new_channels = new_channels[:40]
     new_backups = new_backups[:80]
 
     lines = original.replace("\r", "").splitlines()
     additions = []
-    for _, a, name, url in new_channels:
-        info = extinf(a, name, "New Channels")
+    for country, a, name, url in new_channels:
+        info = extinf(a, name, "New Channels", country)
         if info:
             additions.extend([info, url])
-    for _, a, name, url in new_backups:
-        info = extinf(a, name, "New Backup")
+    for country, a, name, url in new_backups:
+        info = extinf(a, name, "New Backup", country)
         if info:
             additions.extend([info, url])
 
@@ -165,7 +171,7 @@ def main() -> int:
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     report = [
         "# Channel Discovery", "",
-        f"- Sources: Bangladesh + India iptv-org country feeds",
+        "- Sources: Bangladesh + India iptv-org country feeds",
         f"- New channels: **{len(new_channels)}**",
         f"- New backups: **{len(new_backups)}**",
         f"- Rejected candidates: **{rejected}**", "",
