@@ -72,14 +72,14 @@ class BangladeshRetentionTests(unittest.TestCase):
 class VerifiedAliasTests(unittest.TestCase):
     def test_new_verified_aliases(self):
         al = literal(COV, "EPG_ALIASES")
-        self.assertEqual(al["custom.amar.bangla.digital"], ["jtv1962"])
+        self.assertEqual(al["AmarBanglaDigital.in"], ["jtv1962"])
         self.assertNotIn("AamarBangla.in@SD", al)
-        self.assertIn("jtv3384", al["custom.epic.bhojpuri.digital"])
-        self.assertIn("And.Pictures.HD.in", al["custom.picture.hd"])
+        self.assertIn("jtv3384", al["EpicBhojpuriDigital.in"])
+        self.assertIn("And.Pictures.HD.in", al["Picture.in"])
 
     def test_new_alias_ids_exist_in_playlist(self):
         pl = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig")
-        for tid in ("custom.amar.bangla.digital", "custom.epic.bhojpuri.digital", "custom.picture.hd"):
+        for tid in ("AmarBanglaDigital.in", "EpicBhojpuriDigital.in", "Picture.in"):
             self.assertIn(f'tvg-id="{tid}"', pl)
     def test_epgpw_sources_and_locks_are_explicit_and_synchronized(self):
         coverage_sources = literal(COV, "SOURCES")
@@ -90,7 +90,7 @@ class VerifiedAliasTests(unittest.TestCase):
         self.assertTrue(set(coverage_ids).issubset(set(coverage_sources)))
         locks = literal(COV, "EPG_LOCKS")
         self.assertEqual(locks["NTVEurope.bd"], ["epgpw:9374"])
-        self.assertEqual(locks["custom.channel.s.uk"], ["epgpw:12504"])
+        self.assertEqual(locks["ChannelS.uk@679aa9"], ["epgpw:12504"])
 
     def test_epgpw_normalization_rewrites_only_the_explicit_feed_channel(self):
         xml = b'<tv><channel id="source-id"><display-name>NTV</display-name></channel><programme channel="source-id" start="20261021070000 +0000" stop="20261021073000 +0000"><title>NTV Europe News</title></programme></tv>'
