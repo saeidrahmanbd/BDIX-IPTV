@@ -50,7 +50,6 @@ EPG_ALIASES = {
     "ToonamiAftermathEast.us": ["ToonamiAftermath.us"],
     "DocumentaryPlus": ["plex.tv.Documentary+.plex"],
     # Reuses the prior mapped EPG identity for the same channel after ID normalization.
-    "NickBangla.bd": ["jtv1341"],
     # Verified against fresh dishtv/jiotv feeds (exact display name, current English rows).
     "Hungama.in@SD": ["143150"],
     "ZBMusic.in@HD": ["jtv3319"],
@@ -194,7 +193,7 @@ def parse_stamp(value):
         return dt.astimezone(timezone.utc)
     except ValueError: return None
 
-PLAYLISTS = [Path("IPTV-Playlist.m3u"), Path("BDIX-Playlist.m3u")]
+PLAYLISTS = [Path("IPTV-Playlist.m3u"), Path("BDIX-Playlist.m3u"), Path("International-Playlist.m3u")]
 INACTIVE_GROUPS = {"Backup", "Test", "Not Playing"}
 
 def playlist_records(path):
