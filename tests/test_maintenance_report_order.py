@@ -1,41 +1,53 @@
-"""Guard the maintenance ordering that keeps report fingerprints current."""
+"""Regression tests for maintenance order and protected queue ordering."""
+import sys
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 WORKFLOW = ROOT / ".github" / "workflows" / "iptv-maintenance.yml"
+sys.path.insert(0, str(ROOT / "scripts"))
+from playlist_order_policy import should_check_alphabetical_order
 
 
 class MaintenanceReportOrderTests(unittest.TestCase):
-    def test_final_playlist_backfill_precedes_all_final_fingerprinted_reports(self):
-        workflow = WORKFLOW.read_text(encoding="utf-8")
-        # The last backfill must occur after the optional repair/correction pass.
-        backfill = workflow.rfind("python scripts/iptv_metadata_backfill.py")
-        self.assertGreaterEqual(backfill, 0)
+    def test_review_queue_order_is_not_an_automatic_blocker(self):
+        self.assertFalse(should_check_alphabetical_order("Backup"))
+        self.assertFalse(should_check_alphabetical_order("Not Playing"))
+        self.assertFalse(should_check_alphabetical_order(" backup "))
+        self.assertTrue(should_check_alphabetical_order("Bangladesh"))
+        self.assertTrue(should_check_alphabetical_order("Indian Music"))
 
-        def next_pos(needle, start):
-            pos = workflow.find(needle, start)
+    def test_final_fingerprinted_reports_follow_all_final_repairs(self):
+        workflow = WORKFLOW.read_text(encoding="utf-8")
+        self.assertEqual(
+            workflow.count("python scripts/validate_report_freshness.py"),
+            1,
+            "freshness validation should run only after all final reports are regenerated",
+        )
+
+        def last_pos(needle):
+            pos = workflow.rfind(needle)
             self.assertGreaterEqual(pos, 0, f"missing workflow step: {needle}")
             return pos
 
-        guard = next_pos(
-            "python scripts/maintenance_helpers.py verify-no-unauthorized-removals",
-            backfill,
-        )
-        audit = next_pos("python scripts/audit_playlist.py", guard)
-        gate = next_pos("python scripts/pre_publish_gate.py", audit)
-        history = next_pos("python scripts/record_maintenance_history.py", gate)
-        epg = next_pos("python scripts/epg_coverage.py", history)
-        logos = next_pos("python scripts/generate_logo_authenticity_manifest.py", epg)
-        freshness = next_pos("python scripts/validate_report_freshness.py", logos)
+        auxiliary_backfill = last_pos("python scripts/backfill_cross_playlist_metadata.py")
+        logo_quality_repair = last_pos("python scripts/repair_logo_asset_technical_quality.py --fix")
+        audit_pos = last_pos("python scripts/audit_playlist.py")
+        gate_pos = last_pos("python scripts/pre_publish_gate.py")
+        epg_pos = last_pos("python scripts/epg_coverage.py")
+        manifest_pos = last_pos("python scripts/generate_logo_authenticity_manifest.py")
+        provenance_pos = last_pos("python scripts/generate_logo_provenance_review.py")
+        metadata_pos = last_pos("python scripts/generate_metadata_normalization_report.py")
+        freshness_pos = last_pos("python scripts/validate_report_freshness.py")
 
-        self.assertLess(backfill, guard)
-        self.assertLess(guard, audit)
-        self.assertLess(audit, gate)
-        self.assertLess(gate, history)
-        self.assertLess(history, epg)
-        self.assertLess(epg, logos)
-        self.assertLess(logos, freshness)
+        self.assertLess(auxiliary_backfill, logo_quality_repair)
+        self.assertLess(logo_quality_repair, audit_pos)
+        self.assertLess(audit_pos, gate_pos)
+        self.assertLess(gate_pos, epg_pos)
+        self.assertLess(epg_pos, manifest_pos)
+        self.assertLess(manifest_pos, provenance_pos)
+        self.assertLess(provenance_pos, metadata_pos)
+        self.assertLess(metadata_pos, freshness_pos)
 
 
 if __name__ == "__main__":

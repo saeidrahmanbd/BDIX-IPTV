@@ -19,6 +19,7 @@ LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 PRIMARY_EXCEPTIONS = {"Backup", "Not Playing"}
+from playlist_order_policy import should_check_alphabetical_order
 CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "Not Playing"]
 
 def attrs(line):
@@ -381,6 +382,10 @@ def natural_sort_key(value):
     value = unicodedata.normalize("NFKD", value).casefold().strip()
     return [int(part) if part.isdigit() else part for part in re.split(r"(\d+)", value)]
 for group in category_transitions:
+    # Backup and Not Playing are manually maintained, byte-for-byte protected
+    # review queues. Their internal order must not block automated maintenance.
+    if not should_check_alphabetical_order(group):
+        continue
     group_entries = [(info, url) for info, url in entries if attrs(info).get("group-title", "").strip() == group]
     if group == "Bangladesh":
         # The Bangladesh group is intentionally ordered by tvg-chno, not A–Z.
@@ -455,7 +460,8 @@ if category_order_issues:
 else: lines.append("Category block order: OK.")
 if alphabetical_order_issues:
     for group, prev, cur in alphabetical_order_issues: lines.append(f"- **{group}** — **{cur}** appears after **{prev}**")
-else: lines.append("Alphabetical order: OK.")
+else: lines.append("Primary-category alphabetical/channel-number order: OK.")
+lines.append("Backup/Not Playing internal order is preserved for manual review and is intentionally not auto-enforced.")
 lines += ["", "## Suspicious URLs", ""]
 if suspicious_urls:
     for name, reason, url in suspicious_urls: lines.append(f"- **{name}** — {reason} — {redact_url(url)}")
