@@ -8,7 +8,7 @@ PLAYLIST=Path('International-Playlist.m3u'); LOGOS=Path('logos')
 REFERENCE_PLAYLISTS=(Path('IPTV-Playlist.m3u'),Path('BDIX-Playlist.m3u'))
 RAW_BASE='https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/'
 IPTV_LOGOS='https://iptv-org.github.io/api/logos.json'; IPTV_CHANNELS='https://iptv-org.github.io/api/channels.json'
-ORDER=['Bangla','Indian','Pakistani','International','Documentary & Wildlife','Religious','Adult','Backup']; NO_NUMBER={'Backup','Not Playing'}
+ORDER=['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Adult','Sports','Backup','New Channels','New Backup','Not Playing']; NO_NUMBER={'Backup','New Backup','Not Playing'}
 ATTR_RE=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 BAD={x.casefold() for x in ('generated-fallback-btv-news.png','generated-fallback-channel-1.png','generated-fallback-channel-16.png','generated-fallback-channel-52.png','placeholder-btv-news.png','placeholder-channel-1.png','placeholder-channel-16.png','placeholder-channel-52.png')}
 
@@ -87,10 +87,14 @@ def safe_local(name):
  candidates=[]
  for p in LOGOS.rglob('*'):
   if not p.is_file() or p.suffix.lower() not in {'.png','.jpg','.jpeg','.webp','.svg'} or p.name.casefold() in BAD: continue
+  rel={x.casefold() for x in p.relative_to(LOGOS).parts}
+  if 'unused' in rel or p.stem.casefold().startswith('generated-fallback-'): continue
   stem=norm(p.stem)
-  if stem==target:candidates.append((0,0,p))
-  elif stem and (stem in target or target in stem):candidates.append((1,abs(len(stem)-len(target)),p))
- return sorted(candidates,key=lambda x:(x[0],x[1],str(x[2])))[0][2] if candidates else None
+  if not stem: continue
+  # Exact identity and channel-name containment are safe; broad fuzzy matches are not.
+  score=3 if stem==target else (1 if stem in target or target in stem else 0)
+  if score:candidates.append((score,abs(len(stem)-len(target)),str(p),p))
+ return sorted(candidates,key=lambda x:(-x[0],x[1],x[2]))[0][3] if candidates else None
 
 def download(src,name):
  try:
@@ -104,9 +108,44 @@ def download(src,name):
   p=LOGOS/'international'/f'{norm(name) or "channel"}{ext}'; p.parent.mkdir(parents=True,exist_ok=True); p.write_bytes(data); return p
  except Exception:return None
 
+PLACEHOLDER_LOGOS={
+ 'a-plus.png':{'aplus'}, 'a-plus-tv.png':{'aplustv'}, 'tv-plus.png':{'tvplus'},
+ 'r-plus.png':{'rplus','rplusgold'}, 'etv-plus-hd-1080p.png':{'etvplus','etvplushd'},
+ 'king-tv.png':{'kingtv'}, 'oli-tv.png':{'olitv'}, 'mad.png':{'madtv'},
+ 'sa-tv.png':{'satv'}, 'ndtv.png':{'ndtv','ndtv24x7','ndtvprofit','ndtvgoodtimes'},
+ 'ntv.png':{'ntv','ntveurope'}, 'hbo.png':{'hbo','hbo2','hboeast','hbozone'},
+ 'star-plus.png':{'starplus'}, 'ytv.png':{'ytv'}, 'bangla-plus.png':{'banglaplus'}
+}
+def bad_current_logo(name,old):
+ if not old:return True
+ parsed=urllib.parse.urlparse(old)
+ path=urllib.parse.unquote(parsed.path or '')
+ if '/unused/' in path.casefold():return True
+ base=Path(path).name.casefold()
+ if base in PLACEHOLDER_LOGOS and norm(name) not in PLACEHOLDER_LOGOS[base]:return True
+ if old.startswith(RAW_BASE):
+  rel=path.split('/logos/',1)[-1] if '/logos/' in path else ''
+  if not rel or not (LOGOS/rel).is_file():return True
+  if any(part.casefold()=='unused' for part in Path(rel).parts):return True
+  return False
+ # External image URLs are localized when they appear to be actual image assets.
+ return False
+
 def repair_logo(info,org):
- a=attrs(info); name=name_of(info); old=a.get('tvg-logo','').strip(); p=safe_local(name)
- if not p and old.startswith(('http://','https://')):p=download(old,name)
+ a=attrs(info); name=name_of(info); old=a.get('tvg-logo','').strip()
+ p=safe_local(name)
+ if p:
+  desired=RAW_BASE+str(p.relative_to(LOGOS)).replace('\\\\','/')
+  return set_attr(info,'tvg-logo',desired),old!=desired
+ if old and not old.startswith(RAW_BASE) and old.startswith(('http://','https://')):
+  parsed=urllib.parse.urlparse(old);base=Path(parsed.path).name.casefold()
+  if base not in PLACEHOLDER_LOGOS:
+   p=download(old,name)
+   if p:
+    desired=RAW_BASE+str(p.relative_to(LOGOS)).replace('\\\\','/')
+    return set_attr(info,'tvg-logo',desired),True
+ if old and old.startswith(RAW_BASE) and not bad_current_logo(name,old):
+  return info,False
  if not p:
   candidates=[]
   for k in ('tvg-id','channel-id'):
@@ -117,9 +156,12 @@ def repair_logo(info,org):
   for src in candidates:
    p=download(src,name)
    if p:break
- if not p:return info,False
- desired=RAW_BASE+str(p.relative_to(LOGOS)).replace('\\','/')
- return set_attr(info,'tvg-logo',desired),old!=desired
+ if p:
+  desired=RAW_BASE+str(p.relative_to(LOGOS)).replace('\\\\','/')
+  return set_attr(info,'tvg-logo',desired),True
+ if old and bad_current_logo(name,old):
+  return remove_attr(info,'tvg-logo'),True
+ return info,False
 
 def fuzzy_group(name,by_name):
  k=norm(name); scored=[]
@@ -130,6 +172,23 @@ def fuzzy_group(name,by_name):
  scored.sort(reverse=True)
  return scored[0][1] if scored and (len(scored)==1 or scored[0][0]-scored[1][0]>=.03) else None
 
+def classify_primary_group(info,current):
+ a=attrs(info); name=name_of(info); country=a.get('tvg-country','ZZ').upper()
+ language=(a.get('tvg-language','und').split(';')[0] or 'und').lower()
+ n=norm(name)
+ kids={'babysharktv','bantulthegreat','cartoonnetwork','discoverykids','discoveryfamily','disneychannel','disneyj r','disneyjr','doraemontv','ducktv','epickidsdigital','kartoonchannel','kiddomatix','legochannel','moonbugkids','mrbeananimated','nickbangla','pogo','pbskids','pop','powerkidskartoonchannel','smurftv','strawberryshortcake','teennick','teletubbies','tinypop','tomandjerry','toonamiaftermatheast','toongoggles','toongogglesjunior','zoomoo','wowkidzhindi','wowkidztoamil','wowkidzteolugu','zbcartoon','tooku'}
+ if n in kids or re.search(r'baby shark|cartoon network|discovery kids|disney|doraemon|duck tv|epic kids|kartoon|kiddo matix|lego channel|moonbug|mr bean animated|nick bangla|pogo|pbs kids|powerkids|smurf tv|strawberry shortcake|teen.?nick|teletubbies|tiny pop|tom and jerry|toonami|toongoggles|zoomoo|wow kidz|zb cartoon|tooku',name,re.I):return 'Kids'
+ if re.search(r'national geographic|cgtn documentary|smithsonian channel|destination america|american heroes channel|law & crime|motortrend|world fishing network|true crime network|love nature',name,re.I):return 'Documentary & Wildlife'
+ if current.casefold()=='bangla' or country=='BD':return 'Bangladesh'
+ if country=='PK':return 'Pakistani'
+ if country=='IN':
+  if language=='ben':return 'Indian Bangla'
+  if re.search(r'music|musix|9xm|9x jalwa|9x jhakaas|9x tashan|7s music|mtv|vh1|stingray|xite|v2beat|now rock|now 70s|now 80s|trace urban|totalmusic|cmt\\b|axs tv',name,re.I):return 'Indian Music'
+  if re.search(r'movie|movies|cinema|cineplex|film|pictures|sony max|\\bmax 2\\b|\\bpix\\b|the movie club|zee action|pitaara|gravitas',name,re.I):return 'Indian Movies'
+  return 'Indian Entertainment'
+ if current.casefold()=='indian':return 'Indian Entertainment'
+ return 'International'
+
 def main():
  if not PLAYLIST.exists():raise SystemExit('International-Playlist.m3u not found')
  pre,blocks=parse(PLAYLIST.read_text(encoding='utf-8-sig')); seen=set(); kept=[]; duplicate=malformed=ids_backfilled=0
@@ -139,6 +198,8 @@ def main():
   if not u:malformed+=1;continue
   if u.casefold() in seen:duplicate+=1;continue
   seen.add(u.casefold()); info=b[0]; a=attrs(info); g=a.get('group-title','').strip()
+  if g.casefold() in {'bangla','indian','international'}:
+   info=set_attr(info,'group-title',classify_primary_group(info,g));g=attrs(info).get('group-title','International')
   if g not in ORDER:info=set_attr(info,'group-title','International');g='International'
   info,id_added=backfill_exact_tvg_id(info,g,id_by_name)
   ids_backfilled+=int(id_added)

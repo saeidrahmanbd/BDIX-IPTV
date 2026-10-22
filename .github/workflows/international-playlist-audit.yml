@@ -49,15 +49,22 @@ jobs:
           lines = p.read_text(encoding='utf-8-sig').splitlines()
 
           category_order = [
-              'Bangla',
-              'Indian',
+              'Bangladesh',
+              'Indian Bangla',
+              'Indian Movies',
+              'Indian Music',
+              'Indian Entertainment',
               'Pakistani',
               'International',
               'Documentary & Wildlife',
-              'Religious',
               'Kids',
+              'Religious',
               'Adult',
+              'Sports',
               'Backup',
+              'New Channels',
+              'New Backup',
+              'Not Playing',
           ]
           order = {name.casefold(): i for i, name in enumerate(category_order)}
           header = '#PLAYLIST-STUDIO-CATEGORIES:' + str(category_order).replace("'", '"')
@@ -182,7 +189,7 @@ jobs:
               raise SystemExit(f'Duplicate primary channels remain: {len(duplicate_primaries)}')
           if any('ATN Bangla USA' in b for b in blocks):
               raise SystemExit('ATN Bangla USA remains in playlist')
-          expected=['Bangla','Indian','Pakistani','International','Documentary & Wildlife','Religious','Kids','Adult','Backup']
+          expected=['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Adult','Sports','Backup','New Channels','New Backup','Not Playing']
           actual=[]
           for b in blocks:
               g=attrs(b[0]).get('group-title','').strip()

@@ -14,7 +14,7 @@ from pathlib import Path
 import re, unicodedata, subprocess
 
 PLAYLIST = Path('International-Playlist.m3u')
-ORDER = ['Bangla','Indian','Pakistani','International','Documentary & Wildlife','Religious','Adult','Kids','Backup']
+ORDER = ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Adult','Sports','Backup','New Channels','New Backup','Not Playing']
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)=(?:"([^"]*)"|\'([^\']*)\'|([^\s,]+))')
 GROUP_RE = re.compile(r'\s+group-title\s*=\s*(?:"[^"]*"|\'[^\']*\'|[^\s,]+)', re.I)
 BASELINE_REF = '68b3f7cd'
@@ -61,16 +61,24 @@ def same_channel(a_info,b_info): return channel_key(a_info)==channel_key(b_info)
 
 def classify(info):
     a=attrs(info)
-    for key in ('tvg-id','channel-id'):
-        ident=a.get(key,'').strip().casefold()
-        if ident in ID_GROUP: return ID_GROUP[ident]
-    n=norm(name_of(info))
-    if n in INDIAN:return 'Indian'
-    if n in BANGLA:return 'Bangla'
-    if n in KIDS:return 'Kids'
-    if n in RELIGIOUS:return 'Religious'
-    if n in DOCUMENTARY:return 'Documentary & Wildlife'
-    if n in INTERNATIONAL:return 'International'
+    name=name_of(info)
+    n=norm(name)
+    country=a.get('tvg-country','ZZ').upper()
+    language=(a.get('tvg-language','und').split(';')[0] or 'und').lower()
+    if re.search(r'baby shark|cartoon network|discovery kids|disney|doraemon|duck tv|epic kids|kartoon|kiddo matix|lego channel|moonbug|mr bean animated|nick bangla|pogo|pbs kids|powerkids|smurf tv|strawberry shortcake|teen.?nick|teletubbies|tiny pop|tom and jerry|toonami|toongoggles|zoomoo|wow kidz|zb cartoon|tooku',name,re.I):
+        return 'Kids'
+    if re.search(r'national geographic|cgtn documentary|smithsonian channel|destination america|american heroes channel|law & crime|motortrend|world fishing network|true crime network|love nature',name,re.I):
+        return 'Documentary & Wildlife'
+    if country=='BD': return 'Bangladesh'
+    if country=='PK': return 'Pakistani'
+    if country=='IN':
+        if language=='ben': return 'Indian Bangla'
+        if re.search(r'music|musix|9xm|9x jalwa|9x jhakaas|9x tashan|7s music|mtv|vh1|stingray|xite|v2beat|now rock|now 70s|now 80s|trace urban|totalmusic|cmt\\b|axs tv',name,re.I):
+            return 'Indian Music'
+        if re.search(r'movie|movies|cinema|cineplex|film|pictures|sony max|\\bmax 2\\b|\\bpix\\b|the movie club|zee action|pitaara|gravitas',name,re.I):
+            return 'Indian Movies'
+        return 'Indian Entertainment'
+    if n in {'sports','espn','star sports','fox sports','sky sports'}: return 'Sports'
     return 'International'
 
 def parse(text):
