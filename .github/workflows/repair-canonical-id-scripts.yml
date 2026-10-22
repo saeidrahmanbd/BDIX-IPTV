@@ -10,6 +10,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: repair-canonical-id-scripts
+  cancel-in-progress: true
+
 jobs:
   repair:
     runs-on: ubuntu-latest
@@ -45,7 +49,6 @@ jobs:
               'scripts/final_playlist_hardening.py',
               'scripts/playlist_policy_repair.py',
               'scripts/repair_iptv_audit_findings.py',
-              'scripts/fix_playlist.py',
               'scripts/augment_epg_mapping_from_iptv_org.py',
               'tests/test_epg_config.py',
           ]
@@ -63,18 +66,12 @@ jobs:
                   def repl(m):
                       old_id = 'custom.' + m.group(2)
                       new_id = replacements.get(old_id)
-                      return m.group(1) + '"' + (new_id or m.group(2)) + '"'
+                      return m.group(1) + '"' + new_id + '"' if new_id else m.group(0)
                   s = re.sub(r'("[^"]+":\s*)"custom\.([a-z0-9.]+)"', repl, s)
 
               if p.name == 'normalize_metadata.py':
                   s = s.replace('"Channel S UK": "custom.channel.s.uk"',
                                 '"Channel S UK": "ChannelS.uk@679aa9"')
-
-              if p.name == 'fix_playlist.py':
-                  s = s.replace(
-                      "return 'custom.'+'.'.join(re.findall(r'[a-z0-9]+',unicodedata.normalize('NFKD',s or '').encode('ascii','ignore').decode().lower()))",
-                      "return 'channel.'+'.'.join(re.findall(r'[a-z0-9]+',unicodedata.normalize('NFKD',s or '').encode('ascii','ignore').decode().lower()))"
-                  )
 
               if s != old:
                   p.write_text(s, encoding='utf-8')
