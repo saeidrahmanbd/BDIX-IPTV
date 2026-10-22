@@ -100,46 +100,261 @@ LOGOS={
   "Star Sports Select 1": "star-sports-select-1.png",
   "Star Sports Select 2": "star-sports-select-2.png",
   "T Sports": "t-sports.png",
-  "TBN24": "tbn24.png",
-  "Global Punjab": "global-punjab.png",
-  "Fashion One": "fashion-one.png",
-  "Tunes 6": "tunes-6.png",
-  "Survivor": "survivor.png",
-  "WaterBear": "waterbear.png",
-  "EMAN TV": "eman-tv.png",
-  "Channel S UK": "channel-s-uk.jpg",
+  "UNITE8.1": "unite8-1.svg",
+  "9XM": "9xm.png",
+  "A.SPORTS.": "a-sports-5485adff.png",
+  "Ananda TV": "ananda-tv.png",
+  "ANIMAL PLANET": "animal-planet.png",
+  "ANIMAL.PLANET.": "animal-planet.png",
+  "Asian TV": "asian-tv.png",
+  "ATN Music": "atn-music.png",
+  "ATN.BANGLA.": "atn-bangla.png",
+  "ATN.NEWS.": "atn-news.png",
+  "B4U Kadak": "b4u-kadak.png",
+  "BBC.Earth.": "bbc-earth.png",
+  "Boishakhi TV": "boishakhi-tv.png",
+  "BTV National": "btv-national-2db28e10.png",
+  "Cartoon Network": "cartoon-network.png",
+  "CARTOON NETWORK": "cartoon-network.png",
+  "CHANNEL.I.": "channel-i.png",
+  "Colors": "colors.png",
+  "Colors Bangla": "colors-bangla.png",
+  "Colors Bangla Cinema": "colors-bangla-cinema.png",
+  "COLORS.BANGLA.": "colors-bangla.png",
+  "COLORS.BANGLA.CINEMA": "colors-bangla-cinema.png",
+  "COLORS.CINEPLEX.": "colors-cineplex.png",
+  "DBC.NEWS.": "dbc-news.png",
+  "Deepto TV": "deepto-tv.png",
+  "DISCOVERY": "discovery.png",
+  "DISCOVERY.": "discovery.png",
+  "Duronto TV": "duronto-tv.png",
+  "EKATTOR.TV.": "ekattor-tv.png",
+  "Ekhon TV": "ekhon-tv.png",
+  "ENTER 10 BANGLA": "enterr10-bangla.png",
+  "Enter10 Bangla": "enterr10-bangla.png",
+  "ENTER10.BANGLA": "enterr10-bangla.png",
+  "EURO SPORT HD": "euro-sport-hd.png",
+  "G TV": "g-tv.png",
+  "Green TV": "green-tv.png",
+  "History TV18": "history.png",
+  "INDEPENDENT.TV": "independent-tv.png",
+  "Jalsha Movies": "jalsha-movies-hd.png",
+  "Jalsha Movies HD": "jalsha-movies-hd.png",
+  "JALSHA MOVIES": "jalsha-movies-hd.png",
+  "JALSHA.MOVIES.": "jalsha-movies-hd.png",
+  "JAMUNA.TV": "jamuna-tv.png",
+  "Maasranga TV": "maasranga-tv.png",
+  "MADANI.TV.": "madani-tv.png",
+  "Nagorik TV": "nagorik-tv.png",
+  "NAGORIK.TV.": "nagorik-tv.png",
+  "NATGEO.WILD.": "nat-geo-wild.png",
+  "National Geographic": "national-geographic.png",
+  "NATIONAL GEOGRAPHIC": "national-geographic.png",
+  "NEWS.24": "news-24.png",
+  "NTV": "ntv.png",
+  "PEACE.TV.BANGLA.": "peace-tv-bangla.png",
+  "Pishow Stream 10007": "pishow-stream-10007.svg",
+  "POGO": "pogo.png",
+  "SANGEET BANGLA": "sangeet-bangla.png",
+  "SANGEET.BANGLA": "sangeet-bangla.png",
+  "Somoy TV": "somoy-tv.png",
+  "SOMOY.TV.": "somoy-tv.png",
+  "Sony AATH": "sony-aath.png",
+  "SONY AATH": "sony-aath.png",
+  "Sony Entertainment TV": "sony-entertainment-tv.png",
+  "Sony Sports Ten 3": "sony-sports-ten-3-8653ef22.png",
+  "Sony Ten 2": "sony-ten-2.png",
+  "SONY YAY": "sony-yay.png",
+  "SONY.BBC.EARTH.": "sony-bbc-earth.png",
+  "SONY.MAX.": "sony-max.png",
+  "SONY.YAY": "sony-yay.png",
+  "Star Gold 2": "star-gold-2.png",
+  "Star Jalsha": "star-jalsha.png",
+  "STAR JALSHA": "star-jalsha.png",
+  "Star Movies": "star-movies-2087bb49.png",
+  "Star Movies Select": "star-movies-select-37627406.png",
+  "Star Sports 2 HD": "star-sports-2.png",
+  "STAR.GOLD.": "star-gold.png",
+  "STAR.JALSHA.": "star-jalsha.png",
+  "STAR.MOVIES.": "star-movies-2087bb49.png",
+  "STAR.PLUS.": "star-plus.png",
+  "Stingray Stream 101": "stingray-stream-101.svg",
+  "Stingray Stream 137": "stingray-stream-137.svg",
+  "SUN.BANGLA.": "sun-bangla.png",
+  "TLC.": "tlc.png",
+  "Travelxp Hindi": "travel-xp.png",
+  "Zee Bangla": "zee-bangla.png",
+  "ZEE BANGLA": "zee-bangla.png",
+  "Zee Bangla Cinema": "zee-bangla-cinema.png",
+  "Zee Cinema": "zee-cinema.png",
+  "ZEE.BANGLA.": "zee-bangla.png",
+  "ZEE.CINEMA.": "zee-cinema.png",
+  "ZEE.TV.": "zee-tv.png",
+  "Zoom Music": "zoom-music.png",
+  "Zoom TV": "zoom-tv.png",
+  "Zee TV": "zee-tv.png",
+  "Sun Bangla": "sun-bangla.png",
+  "Deshe Bideshe": "deshe-bideshe.png",
+  "Colors MENA": "colors-mena.png",
+  "Colors Infinity": "colors-infinity.png",
+  "Discovery Science": "discovery-science.png",
+  "Discovery Turbo": "discovery-turbo.png",
+  "HISTORY TV": "history.png",
+  "Nat Geo TV": "national-geographic.png",
+  "MTV": "mtv-india-hd-720p.png",
+  "Enter10 Bangla": "enterr10-bangla.png"
 }
-
-ATTR_RE=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
-def attrs(s): return dict(ATTR_RE.findall(s))
-def set_attr(s,k,v):
+FORCED_LOGOS = {
+ "Bollygold": "nh-bollygold-dbedeff9.png",
+ "Manoranjan Grand": "manoranjan-grand.png",
+ "BTV News": "nvisionbd-verified-btv-news-33c61f1708.jpg",
+ "Zee TV": "nvisionbd-verified-zee-tv-2fb6673cf7.svg",
+ "Tom and Jerry": "nvisionbd-verified-tom-and-jerry-927bd66719.jpg",
+ "Green TV": "nvisionbd-verified-green-tv-fa848f9d71.jpg",
+}
+ATTR=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
+def attrs(s): return dict(ATTR.findall(s))
+def split_extinf(line):
+    """Split EXTINF metadata from display text without breaking commas in quoted attributes."""
+    in_quote = False
+    escaped = False
+    for i, ch in enumerate(line):
+        if ch == '"' and not escaped:
+            in_quote = not in_quote
+        elif ch == "," and not in_quote:
+            return line[:i], line[i + 1:]
+        escaped = (ch == "\\") and not escaped
+        if ch != "\\": escaped = False
+    return line, ""
+def norm(s):
+ s=str(s or "").lower()
+ s=re.sub(r"\[[^]]*\]|\([^)]*\)"," ",s)
+ # Jalsha Movies and Jalsha Movies HD are distinct primary channels with
+ # different programming. Do not collapse the HD channel into the base name.
+ raw_value=re.sub(r"[^a-z0-9]+","",s.replace("&","and"))
+ if raw_value == "jalshamovieshd": return raw_value
+ s=re.sub(r"\b(?:uhd|fhd|hd|sd|4k|1080p|720p|576p|480p|360p)\b"," ",s,flags=re.I)
+ value=re.sub(r"[^a-z0-9]+","",s.replace("&","and"))
+ aliases={"ekhonetv":"ekhontv","rocktv":"suriyantv","suriyantvtamil":"suriyantv"}
+ return aliases.get(value,value)
+def clean(s):
+ s=re.sub(r"\s+"," ",re.sub(r"[._]+"," ",str(s or ""))).strip()
+ # Preserve the channel name suffix for the separate Jalsha Movies HD service.
+ if re.fullmatch(r"jalsha\s+movies\s+hd",s,flags=re.I): return "Jalsha Movies HD"
+ s=re.sub(r"\s*\(\s*(?:\d{3,4}p|UHD|FHD|HD\+?|SD)\s*\)\s*$","",s,flags=re.I)
+ s=re.sub(r"\s+(?:\d{3,4}p|UHD|FHD|HD\+?|SD)\s*$","",s,flags=re.I)
+ return s.strip()
+CASE={"ATN BANGLA UK":"ATN Bangla UK","SUN BANGLA":"Sun Bangla","Ekhone TV":"Ekhon TV","EKHONE TV":"Ekhon TV","Ekattor Tv":"Ekattor TV","Sony MAX":"Sony Max","Sony AATH":"Sony Aath","Sony Entertainment Television":"Sony Entertainment TV","Love nature":"Love Nature","Jtv Classic":"JTV Classic","Get factual":"Get Factual"}
+def normalize_id(cid):
+ return re.sub(r"@SD(?=@ALT1$)","",str(cid or ""),flags=re.I)
+def set_attr(m,k,v):
  p=re.compile(rf'{re.escape(k)}="[^"]*"')
- return p.sub(f'{k}="{v}"',s,1) if p.search(s) else s.replace('#EXTINF:-1 ',f'#EXTINF:-1 {k}="{v}" ',1)
-def norm(s): return re.sub(r'\s+',' ',unicodedata.normalize('NFKC',str(s or '')).strip()).casefold()
-def parse(lines):
- out=[]; cur=[]
- for line in lines:
-  if line.startswith('#EXTINF:'):
-   if cur: out.append(cur)
-   cur=[line]
-  elif cur: cur.append(line)
-  else: out.append([line])
- if cur: out.append(cur)
- return out
+ return p.sub(f'{k}="{v}"',m,1) if p.search(m) else m.replace("#EXTINF:-1 ",f'#EXTINF:-1 {k}="{v}" ',1)
+lines=P.read_text(encoding="utf-8-sig").replace("\r","").splitlines()
+# Preserve the Playlist Studio category registry.  It is part of the playlist
+# contract and must survive every maintenance normalization pass, including
+# Canonical categories retained by the playlist.
+CATEGORY_REGISTRY=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports","Backup","Not Playing"]
+category_line="#PLAYLIST-STUDIO-CATEGORIES:"+json.dumps(CATEGORY_REGISTRY,ensure_ascii=False)
+# Remove only blank lines and other legacy Studio directives; the canonical
+# category registry is restored immediately below.
+lines=[l for l in lines if l.strip() and not (l.startswith("#PLAYLIST-STUDIO-") and not l.startswith("#PLAYLIST-STUDIO-CATEGORIES:"))]
+lines=[l for l in lines if not l.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
+# Standard M3U consumers expect the global #EXTM3U line first; keep its
+# url-tvg/x-tvg-url attributes intact, then preserve Studio's category registry.
+m3u_index=next((i for i,line in enumerate(lines) if line.startswith("#EXTM3U")),None)
+if m3u_index is not None:
+ m3u_header=lines.pop(m3u_index)
+ # Non-EXTM3U preamble comments remain present, but follow the real playlist header.
+ lines=[m3u_header,category_line]+lines
+else:
+ lines.insert(0,category_line)
+rows=[]
+for i,l in enumerate(lines):
+ if l.startswith("#EXTINF:"):
+  a=attrs(l); _, display = split_extinf(l); rows.append({"i":i,"line":l,"a":a,"name":display.strip()})
+primary=[r for r in rows if r["a"].get("group-title","").strip() not in EXCLUDE]
+byname={}
+for r in primary: byname.setdefault(norm(r["a"].get("tvg-name") or r["name"]),r)
+used={int(r["a"]["tvg-chno"]) for r in primary if r["a"].get("tvg-chno","").isdigit() and int(r["a"]["tvg-chno"])>0}
+missing=[r for r in primary if not r["a"].get("tvg-chno","").isdigit()]
+assign={}
+for r in missing:
+ prev=0; nxt=10**9
+ for x in reversed([x for x in primary if x["i"]<r["i"]]):
+  if x["a"].get("tvg-chno","").isdigit(): prev=int(x["a"]["tvg-chno"]); break
+ for x in [x for x in primary if x["i"]>r["i"]]:
+  if x["a"].get("tvg-chno","").isdigit(): nxt=int(x["a"]["tvg-chno"]); break
+ c=next((n for n in range(max(1,prev+1),nxt) if n not in used),None)
+ if c is None:
+  mid=(prev+nxt)/2; pool=[n for n in range(1,max(2000,nxt+500)) if n not in used]; c=min(pool,key=lambda n:(abs(n-mid),n))
+ assign[r["i"]]=c; used.add(c)
+for r in missing:
+ if r["name"]=="Desh TV": assign[r["i"]]=30
+ if r["name"]=="Sony Max": assign[r["i"]]=384
+stats={"numbers":0,"logos":0,"backups":0}
+for r in rows:
+ a=r["a"]; g=a.get("group-title","").strip(); m,_ = split_extinf(r["line"]); display=r["name"]
+ if g not in EXCLUDE:
+  name=CASE.get(clean(a.get("tvg-name") or r["name"]),clean(a.get("tvg-name") or r["name"]))
+  cid=normalize_id(a.get("tvg-id") or a.get("channel-id") or IDS.get(name) or "custom."+norm(name))
+  m=set_attr(m,"tvg-id",cid); m=set_attr(m,"channel-id",cid); m=set_attr(m,"tvg-name",name)
+  forced_logo=FORCED_LOGOS.get(name)
+  if forced_logo:
+   desired=RAW+forced_logo
+   if a.get("tvg-logo") != desired: m=set_attr(m,"tvg-logo",desired); stats["logos"]+=1
+  elif not a.get("tvg-logo") and LOGOS.get(name): m=set_attr(m,"tvg-logo",RAW+LOGOS[name]); stats["logos"]+=1
+  if r["i"] in assign: m=set_attr(m,"tvg-chno",str(assign[r["i"]])); stats["numbers"]+=1
+ else:
+  key=norm(a.get("tvg-name") or r["name"]); pr=byname.get(key)
+  if not pr and key=="jalshamovies": pr=byname.get(norm("Jalsha Movies HD"))
+  name=CASE.get(clean((pr["a"].get("tvg-name") or pr["name"]) if pr else (a.get("tvg-name") or r["name"])),clean((pr["a"].get("tvg-name") or pr["name"]) if pr else (a.get("tvg-name") or r["name"])))
+  if key=="natgeowild" and not pr: name="Nat Geo Wild"
+  if key=="sonybbcearth" and not pr: name="Sony BBC Earth"
+  cid=normalize_id((pr["a"].get("tvg-id") if pr else None) or IDS.get(name) or a.get("tvg-id") or "custom."+norm(name))
+  m=set_attr(m,"tvg-id",cid); m=set_attr(m,"channel-id",cid); m=set_attr(m,"tvg-name",name); display=name
+  logo=FORCED_LOGOS.get(name) or (pr["a"].get("tvg-logo") if pr else None) or LOGOS.get(r["name"]) or LOGOS.get(name)
+  if logo:
+   logo_url=logo if logo.startswith("http") else RAW+logo
+   current_logo=(a.get("tvg-logo") or "").strip()
+   if not current_logo or (pr and current_logo != logo_url):
+    m=set_attr(m,"tvg-logo",logo_url); stats["logos"]+=1
+  m=re.sub(r'\s*tvg-chno="[^"]*"',"",m); stats["backups"]+=1
+ lines[r["i"]]=f"{m},{name}"
 
-def main():
- if not P.exists(): return
- lines=P.read_text(encoding='utf-8-sig').replace('\r','').splitlines(); records=parse(lines); changed=0
- for r in records:
-  if not r or not r[0].startswith('#EXTINF:'): continue
-  a=attrs(r[0]); name=a.get('tvg-name') or r[0].rsplit(',',1)[-1]
-  target=IDS.get(name) or IDS.get(next((k for k in IDS if norm(k)==norm(name)),''))
-  if target and (a.get('tvg-id','').strip().lower().startswith('custom.') or not a.get('tvg-id','').strip()):
-   r[0]=set_attr(r[0],'tvg-id',target); r[0]=set_attr(r[0],'channel-id',target); changed+=1
-  logo=LOGOS.get(name) or LOGOS.get(next((k for k in LOGOS if norm(k)==norm(name)),''))
-  if logo and (not a.get('tvg-logo','').strip() or 'raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/' not in a.get('tvg-logo','')):
-   r[0]=set_attr(r[0],'tvg-logo',RAW+logo); changed+=1
- P.write_text('\n'.join(x for r in records for x in r)+'\n',encoding='utf-8')
- print(f'Normalized IPTV metadata: changes={changed}')
-
-if __name__=='__main__': main()
+# Keep the stable playlist section order required by the playlist contract:
+# normal categories first, then Backup, then Backup.
+preamble=[]
+records=[]
+cur=None
+for line in lines:
+ if line.startswith("#EXTINF:"):
+  if cur is not None: records.append(cur)
+  cur=[line]
+ elif cur is not None:
+  cur.append(line)
+ else:
+  preamble.append(line)
+if cur is not None: records.append(cur)
+def group_of(rec):
+ return re.search(r'group-title="([^"]+)"', rec[0]).group(1) if re.search(r'group-title="([^"]+)"', rec[0]) else ""
+review_groups=set()
+backup_records=[r for r in records if group_of(r)=="Backup"]
+review_records=[r for r in records if group_of(r) in review_groups]
+normal_records=[r for r in records if group_of(r) not in {"Backup"} and group_of(r) not in review_groups]
+records=normal_records+backup_records+review_records
+CATEGORY_RANK={name:i for i,name in enumerate(CATEGORY_REGISTRY)}
+def natural_sort_key(value):
+ value=unicodedata.normalize("NFKD",str(value or "")).casefold().strip()
+ return [int(part) if part.isdigit() else part for part in re.split(r"(\d+)",value)]
+def record_display(rec):
+ _,display=split_extinf(rec[0])
+ return display.strip()
+def record_url(rec):
+ return next((line.strip() for line in rec[1:] if line.strip().startswith(("http://","https://"))), "")
+records.sort(key=lambda rec:(CATEGORY_RANK.get(group_of(rec),len(CATEGORY_RANK)),natural_sort_key(record_display(rec)),record_url(rec)))
+lines=preamble+[line for rec in records for line in rec]
+P.write_text("\n".join(lines)+"\n",encoding="utf-8")
+digest=hashlib.sha256(P.read_bytes()).hexdigest()
+R.write_text("# Playlist Metadata Normalization\n\n"+f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**\nSource playlist SHA-256: **{digest}**\n\n"+f"- Entries processed: **{len(rows)}**\n- Primary channel numbers added: **{stats['numbers']}**\n- Logo references repaired: **{stats['logos']}**\n- Backup/review entries normalized: **{stats['backups']}**\n",encoding="utf-8")
+print(f"Normalization: entries={len(rows)} numbers={stats['numbers']} logos={stats['logos']} backup_entries={stats['backups']}")
