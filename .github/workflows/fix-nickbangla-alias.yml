@@ -33,9 +33,11 @@ jobs:
           PY
           rm -f tmp/pr19-nickbangla-fix.txt
 
-      - name: Run EPG configuration tests
-        run: |
-          python -m pytest -q tests/test_epg_config.py
+      - name: Install pytest
+        run: python -m pip install pytest
+
+      - name: Run full pytest suite
+        run: python -m pytest -q tests
 
       - name: Commit exact fix
         shell: bash
