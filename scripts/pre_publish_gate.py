@@ -26,7 +26,10 @@ def logo_audit(entries):
   if not logo: missing.append(name); continue
   if not logo.startswith(RAW_BASE): external.append(name)
   filename=Path(logo.split("?",1)[0]).name.casefold()
-  if is_blocked_logo_basename(filename): bad.append((name, a.get("group-title", ""), filename))
+  group=a.get("group-title", "").strip()
+  if group not in EXCLUDE and filename.startswith("generated-fallback-"):
+   bad.append((name, group, filename))
+  elif is_blocked_logo_basename(filename): bad.append((name, group, filename))
  return missing,external,bad
 def review_state(entries):
  """Index protected review entries by exact URL, preserving category and identity."""
