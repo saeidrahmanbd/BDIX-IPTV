@@ -1,6 +1,10 @@
 name: Repair canonical ID scripts
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/repair-canonical-id-scripts.yml'
   workflow_dispatch:
 
 permissions:
@@ -55,20 +59,17 @@ jobs:
               for a, b in replacements.items():
                   s = s.replace(a, b)
 
-              # The quality-repair collision table must never recreate known
-              # custom identities. Convert any literal custom IDs there using
-              # the same canonical map.
               if p.name == 'repair_playlist_quality.py':
-                  s = re.sub(r'("[^"]+":\s*)"custom\.([a-z0-9.]+)"',
-                             lambda m: m.group(1) + '"' + replacements.get('custom.' + m.group(2), m.group(0).split('"')[-2]) + '"', s)
+                  def repl(m):
+                      old_id = 'custom.' + m.group(2)
+                      new_id = replacements.get(old_id)
+                      return m.group(1) + '"' + (new_id or m.group(2)) + '"'
+                  s = re.sub(r'("[^"]+":\s*)"custom\.([a-z0-9.]+)"', repl, s)
 
-              # Do not let the general metadata normalizer recreate Channel S UK.
               if p.name == 'normalize_metadata.py':
                   s = s.replace('"Channel S UK": "custom.channel.s.uk"',
                                 '"Channel S UK": "ChannelS.uk@679aa9"')
 
-              # Harden the known dynamic slug fallback: known canonical IDs are
-              # resolved first; only genuinely unknown channels may remain custom.
               if p.name == 'fix_playlist.py':
                   s = s.replace(
                       "return 'custom.'+'.'.join(re.findall(r'[a-z0-9]+',unicodedata.normalize('NFKD',s or '').encode('ascii','ignore').decode().lower()))",
@@ -78,7 +79,6 @@ jobs:
               if s != old:
                   p.write_text(s, encoding='utf-8')
 
-          # Remove the one-time workflow after it has completed its repair.
           wf = Path('.github/workflows/repair-canonical-id-scripts.yml')
           if wf.exists():
               wf.unlink()
