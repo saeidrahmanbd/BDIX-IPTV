@@ -24,18 +24,26 @@ jobs:
           fetch-depth: 0
           ref: main
 
-      - name: Run only when the restore script was introduced or changed
+      - name: Decide whether this is the requested rebuild trigger
+        id: gate
         shell: bash
         run: |
           set -euo pipefail
           SHA='${{ github.event.workflow_run.head_sha }}'
-          if ! git diff-tree --no-commit-id --name-only -r "$SHA" | grep -qx 'scripts/conservative_international_restore.py'; then
-            echo 'Restore script was not part of the triggering commit; nothing to do.'
-            exit 0
+          if git diff-tree --no-commit-id --name-only -r "$SHA" | grep -qx 'scripts/conservative_international_restore.py'; then
+            echo 'run=yes' >> "$GITHUB_OUTPUT"
+          elif git diff-tree --no-commit-id --name-only -r "$SHA" | grep -qx 'logos/international/conservative-restore-trigger.txt'; then
+            echo 'run=yes' >> "$GITHUB_OUTPUT"
+          else
+            echo 'run=no' >> "$GITHUB_OUTPUT"
           fi
-          python3 scripts/conservative_international_restore.py
+
+      - name: Rebuild conservatively
+        if: steps.gate.outputs.run == 'yes'
+        run: python3 scripts/conservative_international_restore.py
 
       - name: Validate playlist
+        if: steps.gate.outputs.run == 'yes'
         shell: bash
         run: |
           set -euo pipefail
@@ -44,7 +52,6 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           from collections import Counter
-          import re
           p=Path('International-Playlist.m3u')
           lines=p.read_text(encoding='utf-8-sig').splitlines()
           urls=[x.strip().casefold() for x in lines if x.strip().startswith(('http://','https://'))]
@@ -54,6 +61,7 @@ jobs:
           PY
 
       - name: Publish conservative rebuild
+        if: steps.gate.outputs.run == 'yes'
         shell: bash
         run: |
           set -euo pipefail
