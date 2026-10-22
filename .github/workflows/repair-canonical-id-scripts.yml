@@ -14,6 +14,9 @@ concurrency:
   group: repair-canonical-id-scripts
   cancel-in-progress: true
 
+env:
+  PYTHONDONTWRITEBYTECODE: '1'
+
 jobs:
   repair:
     runs-on: ubuntu-latest
@@ -76,10 +79,6 @@ jobs:
               if s != old:
                   p.write_text(s, encoding='utf-8')
 
-          wf = Path('.github/workflows/repair-canonical-id-scripts.yml')
-          if wf.exists():
-              wf.unlink()
-
       - name: Validate edited Python
         run: |
           python -m py_compile scripts/*.py tests/*.py
@@ -87,6 +86,7 @@ jobs:
             echo 'ERROR: known obsolete custom IDs remain in scripts/tests.'
             exit 1
           fi
+          find scripts tests -type d -name __pycache__ -prune -exec rm -rf {} +
 
       - name: Commit with rebase retry
         shell: bash
@@ -94,12 +94,12 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add scripts tests .github/workflows/repair-canonical-id-scripts.yml
+          git add scripts tests
           if git diff --cached --quiet; then
             echo 'No changes required.'
             exit 0
           fi
-          git commit -m 'Prevent scripts from recreating obsolete custom channel IDs'
+          git commit -m 'Prevent scripts from recreating obsolete custom channel IDs [skip ci]'
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if git rebase origin/main; then
