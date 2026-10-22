@@ -1,0 +1,177 @@
+name: Apply verified playlist audit fixes
+
+on:
+  push:
+    branches:
+      - fix/playlist-audit-report-epg-metadata-2026-10-22
+    paths-ignore:
+      - IPTV-Playlist.m3u
+      - BDIX-Playlist.m3u
+      - International-Playlist.m3u
+      - epg/epg.xml
+      - reports/**
+      - logos/**
+      - assets/dashboard.svg
+      - .github/workflows/apply-verified-audit-fixes.yml
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install test and image dependencies
+        run: python -m pip install --upgrade pytest pillow
+
+      - name: Compile and test the repair tools
+        run: |
+          set -euo pipefail
+          python -m py_compile \
+            scripts/audit_playlist.py \
+            scripts/backfill_cross_playlist_metadata.py \
+            scripts/epg_coverage.py \
+            scripts/generate_logo_authenticity_manifest.py \
+            scripts/generate_logo_provenance_review.py \
+            scripts/iptv_metadata_backfill.py \
+            scripts/pre_publish_gate.py \
+            scripts/repair_logo_asset_technical_quality.py \
+            scripts/repair_playlist_logos.py \
+            scripts/validate_report_freshness.py
+          python -m pytest -q tests
+
+      - name: Snapshot exact stream URLs and protected queues
+        run: |
+          python - <<'PY'
+          import json, re
+          from pathlib import Path
+          paths = ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u"]
+          review_groups = {"backup", "not playing", "not playing...", "not playing…"}
+          state = {}
+          for name in paths:
+              lines = Path(name).read_text(encoding="utf-8-sig").splitlines()
+              urls, review = [], []
+              current = None
+              for line in lines:
+                  if line.startswith("#EXTINF:"):
+                      current = line
+                  elif current is not None and line.strip().startswith(("http://", "https://")):
+                      urls.append(line.strip())
+                      m = re.search(r'group-title="([^"]*)"', current)
+                      group = (m.group(1) if m else "").strip().casefold()
+                      if group in review_groups:
+                          review.append([current, line.strip()])
+                      current = None
+              state[name] = {"urls": urls, "protected_review_entries": review}
+          Path("/tmp/playlist-safety-baseline.json").write_text(json.dumps(state), encoding="utf-8")
+          PY
+
+      - name: Repair active fallback logos where exact sources exist
+        run: python scripts/repair_playlist_logos.py --fallback-only
+
+      - name: Repair misleading image formats and oversized logo assets
+        run: python scripts/repair_logo_asset_technical_quality.py --fix
+
+      - name: Fill only unambiguous secondary-playlist country/language gaps
+        run: python scripts/backfill_cross_playlist_metadata.py
+
+      - name: Regenerate the shared EPG guide conservatively
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp epg/epg.xml /tmp/bdix-epg-previous.xml
+          if python scripts/fetch_iptv_org_epg.py && python scripts/run_generate_epg.py \
+              && test -s epg/epg.xml && grep -q '<programme ' epg/epg.xml; then
+            cp epg/epg.xml /tmp/bdix-epg-generated.xml
+            set +e
+            python scripts/epg_publish_gate_v2.py
+            gate_status=$?
+            set -e
+            if [ "$gate_status" -eq 0 ]; then
+              echo "EPG gate passed; retaining the generated guide."
+            else
+              echo "::warning::EPG gate blocked the generated guide; restoring the previous known-good guide."
+              cp /tmp/bdix-epg-previous.xml epg/epg.xml
+            fi
+          else
+            echo "::warning::EPG source refresh/generation failed; restoring the previous guide."
+            cp /tmp/bdix-epg-previous.xml epg/epg.xml
+          fi
+          test -s epg/epg.xml
+          grep -q '<programme ' epg/epg.xml
+
+      - name: Refresh playlist, metadata, logo, and EPG reports
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/iptv_metadata_backfill.py
+          python scripts/repair_logo_asset_technical_quality.py --fix
+          python scripts/audit_playlist.py || true
+          python scripts/build_identity_index.py
+          python scripts/pre_publish_gate.py || echo "::warning::Pre-publish gate still has unresolved blockers; report will state this explicitly."
+          python scripts/epg_coverage.py
+          python scripts/generate_logo_authenticity_manifest.py
+          python scripts/generate_logo_repair_summary.py
+          python scripts/generate_logo_provenance_review.py
+          python scripts/generate_metadata_normalization_report.py
+          python scripts/report_iptv_fragile_streams.py
+          python scripts/stream_risk_review.py
+          python scripts/record_maintenance_history.py --refresh
+          python scripts/generate_dashboard.py
+
+      - name: Verify stream and review-queue preservation
+        run: |
+          python - <<'PY'
+          import json, re, sys
+          from pathlib import Path
+          baseline = json.loads(Path("/tmp/playlist-safety-baseline.json").read_text(encoding="utf-8"))
+          review_groups = {"backup", "not playing", "not playing...", "not playing…"}
+          errors = []
+          for name, before in baseline.items():
+              lines = Path(name).read_text(encoding="utf-8-sig").splitlines()
+              urls, review = [], []
+              current = None
+              for line in lines:
+                  if line.startswith("#EXTINF:"):
+                      current = line
+                  elif current is not None and line.strip().startswith(("http://", "https://")):
+                      urls.append(line.strip())
+                      m = re.search(r'group-title="([^"]*)"', current)
+                      group = (m.group(1) if m else "").strip().casefold()
+                      if group in review_groups:
+                          review.append([current, line.strip()])
+                      current = None
+              if urls != before["urls"]:
+                  errors.append(f"{name}: stream URL inventory/order changed")
+              if review != before["protected_review_entries"]:
+                  errors.append(f"{name}: Backup/Not Playing entries changed")
+          if errors:
+              print("\n".join(errors))
+              raise SystemExit(1)
+          print("Safety checks passed: exact stream URLs/order and Backup/Not Playing entries preserved.")
+          PY
+
+      - name: Validate generated report fingerprints
+        run: python scripts/validate_report_freshness.py --mode generated
+
+      - name: Commit repaired assets, metadata, guide and reports; remove temporary workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add IPTV-Playlist.m3u BDIX-Playlist.m3u International-Playlist.m3u
+          git add reports/ logos/ assets/dashboard.svg
+          git add -f epg/epg.xml
+          git rm .github/workflows/apply-verified-audit-fixes.yml
+          if git diff --cached --quiet; then
+            echo "No changes staged."
+            exit 0
+          fi
+          git commit -m "Apply validated playlist audit fixes and remove temporary workflow"
+          git push
