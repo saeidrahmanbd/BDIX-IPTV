@@ -8,7 +8,7 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-PLAYLIST_NAMES = ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u")
+PLAYLIST_NAMES = ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u")
 MAX_REPORT_AGE = timedelta(hours=48)
 SINGLE_PLAYLIST_REPORTS = {
     "reports/playlist-audit.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256", "Playlist SHA-256")),
@@ -23,6 +23,7 @@ SINGLE_PLAYLIST_REPORTS = {
 }
 SHARED_EPG_REPORTS = ("reports/epg-coverage.md", "reports/epg-three-playlist-audit.md", "reports/epg-unmapped-audit.md")
 PROVENANCE_REPORT = "reports/logo-provenance-review.md"
+CROSS_PLAYLIST_METADATA_REPORT = "reports/cross-playlist-metadata-backfill.md"
 STREAM_HEALTH_REPORT = "reports/stream-health.md"
 
 
@@ -93,7 +94,7 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
         hashes[name] = sha256(path)
 
     errors = []
-    report_paths = list(SINGLE_PLAYLIST_REPORTS) + list(SHARED_EPG_REPORTS) + [PROVENANCE_REPORT]
+    report_paths = list(SINGLE_PLAYLIST_REPORTS) + list(SHARED_EPG_REPORTS) + [PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT]
     report_paths.append(STREAM_HEALTH_REPORT)
 
     for relative in report_paths:
@@ -110,7 +111,7 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
                 errors.append(f"{relative}: missing {playlist_name} SHA-256 fingerprint")
             elif actual != hashes[playlist_name]:
                 errors.append(f"{relative}: fingerprint does not match current {playlist_name}")
-        elif relative in SHARED_EPG_REPORTS or relative == PROVENANCE_REPORT:
+        elif relative in SHARED_EPG_REPORTS or relative in {PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT}:
             for playlist_name in PLAYLIST_NAMES:
                 actual = read_fingerprint(text, (f"{playlist_name} SHA-256",))
                 if actual is None:
