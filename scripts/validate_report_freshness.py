@@ -95,11 +95,7 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
 
     errors = []
     report_paths = list(SINGLE_PLAYLIST_REPORTS) + list(SHARED_EPG_REPORTS) + [PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT]
-    # "generated" validates report-sync products only. Stream health is deliberately
-    # excluded because it requires real-world stream checks that are not part of
-    # metadata/logo/report generation and is manually monitored separately.
-    if mode == "all":
-        report_paths.append(STREAM_HEALTH_REPORT)
+    report_paths.append(STREAM_HEALTH_REPORT)
 
     for relative in report_paths:
         path = root / relative
@@ -147,16 +143,15 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
             elif now - generated > max_age:
                 errors.append("reports/logo-authenticity-manifest.json: stale manifest (older than 48 hours)")
 
-    if mode == "all":
-        health_path = root / STREAM_HEALTH_REPORT
-        if health_path.is_file():
-            health_text = health_path.read_text(encoding="utf-8", errors="replace")
-            expected = stream_url_inventory_sha256(root / PLAYLIST_NAMES[0])
-            actual = read_fingerprint(health_text, ("Stream URL inventory SHA-256",))
-            if actual is None:
-                errors.append(f"{STREAM_HEALTH_REPORT}: missing stream URL inventory SHA-256")
-            elif actual != expected:
-                errors.append(f"{STREAM_HEALTH_REPORT}: stream URL inventory fingerprint does not match current playlist")
+    health_path = root / STREAM_HEALTH_REPORT
+    if health_path.is_file():
+        health_text = health_path.read_text(encoding="utf-8", errors="replace")
+        expected = stream_url_inventory_sha256(root / PLAYLIST_NAMES[0])
+        actual = read_fingerprint(health_text, ("Stream URL inventory SHA-256",))
+        if actual is None:
+            errors.append(f"{STREAM_HEALTH_REPORT}: missing stream URL inventory SHA-256")
+        elif actual != expected:
+            errors.append(f"{STREAM_HEALTH_REPORT}: stream URL inventory fingerprint does not match current playlist")
     return errors
 
 
