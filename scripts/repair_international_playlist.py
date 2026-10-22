@@ -81,9 +81,43 @@ def build_iptv_org():
   if cid not in best or score<best[cid][0]: best[cid]=(score,u)
  return best,ids_by_name
 
+MANUAL_LOGOS={
+ 'Star Movies':'star-movies-2087bb49.png',
+ 'ETV':'etv-telugu.png',
+ 'ARY Music':'ary-music-ce70dce4.png',
+ 'ATV Entertainment':'atv.png',
+ 'Geo Super':'nvisionbd-official-pk-geo-super.png',
+ 'FX TV':'nvisionbd-official-fx-tv.png',
+ 'Kronehit':'nvisionbd-official-kronehit.png',
+ 'Laff TV':'nvisionbd-official-laff-tv.png',
+ 'NOW Rock':'now-rock-1080p-033d8aedc8.png',
+ 'Totalmusic':'totalmusic-1080p-4921970701.png',
+ 'Madina Live':'nvisionbd-official-madina-live.png',
+ 'Iqra TV':'iqraa-tv.png',
+ 'Iqra TV UK':'iqraa-tv.png',
+ 'Peace TV':'peace-tv-english.png',
+ 'Nat Geo TV':'national-geographic.png',
+ 'National Geographic':'national-geographic.png',
+ 'CGTN Documentary':'cgtn-documentary.png',
+ 'Dangal TV':'dangal.png',
+ 'Zee Talkies':'zee-talkies.png',
+ 'V2BEAT':'v2beat.png',
+ 'XITE Hits':'xite-hits-1080p-bf41ee4788.png',
+ 'XITE Hits UK':'xite-hits-uk-1080p-bf41ee4788.png',
+ 'Gravitas Movies':'gravitas-movies-1080p-0311d486e7.png',
+ 'Shanson TV':'shanson-tv-576p-3c01614e19.png',
+ 'Zoom':'zoom-tv.png',
+ 'Shemaroo Bollywood':'shemaroo-bollywood.png',
+}
 def safe_local(name):
  target=norm(name)
  if not target:return None
+ # Prefer explicit, reviewed identity mappings before matching filenames.
+ manual=MANUAL_LOGOS.get(name)
+ if manual:
+  p=LOGOS/manual
+  if p.is_file() and 'unused' not in {x.casefold() for x in p.relative_to(LOGOS).parts}:
+   return p
  candidates=[]
  for p in LOGOS.rglob('*'):
   if not p.is_file() or p.suffix.lower() not in {'.png','.jpg','.jpeg','.webp','.svg'} or p.name.casefold() in BAD: continue
@@ -91,10 +125,9 @@ def safe_local(name):
   if 'unused' in rel or p.stem.casefold().startswith('generated-fallback-'): continue
   stem=norm(p.stem)
   if not stem: continue
-  # Exact identity and channel-name containment are safe; broad fuzzy matches are not.
-  score=3 if stem==target else (1 if stem in target or target in stem else 0)
-  if score:candidates.append((score,abs(len(stem)-len(target)),str(p),p))
- return sorted(candidates,key=lambda x:(-x[0],x[1],x[2]))[0][3] if candidates else None
+  # Only exact normalized identities are safe. Substring matching can map unrelated logos (e.g. TV icons).
+  if stem==target:candidates.append((abs(len(stem)-len(target)),str(p),p))
+ return sorted(candidates,key=lambda x:(x[0],x[1]))[0][2] if candidates else None
 
 def download(src,name):
  try:
