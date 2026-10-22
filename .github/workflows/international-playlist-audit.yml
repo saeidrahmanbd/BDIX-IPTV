@@ -115,10 +115,10 @@ jobs:
 
           out = []
           # Keep the standard playlist header and studio metadata.
-          out.append('#EXTM3U')
+          out.append('#EXTM3U url-tvg="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml" x-tvg-url="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"')
           out.append(header)
           for line in prefix:
-              if line.strip() and line.strip() != '#EXTM3U':
+              if line.strip() and not line.strip().startswith('#EXTM3U'):
                   out.append(line)
           for _, _, _, b in kept:
               out.extend(b)
