@@ -12,7 +12,6 @@ on:
       - reports/**
       - logos/**
       - assets/dashboard.svg
-      - .github/workflows/apply-verified-audit-fixes.yml
 
 permissions:
   contents: write
