@@ -1,11 +1,11 @@
 # International Playlist Audit
 
-- Entries: 958
+- Entries: 881
 - Exact duplicate URLs removed: 0
 - Malformed entries removed: 0
-- Backup entries migrated: 127
+- Backup entries migrated: 130
 - Remaining true orphan backups: 0
-- Logos repaired to repository-local assets: 460
+- Logos repaired to repository-local assets: 0
 - Logos recovered using external/iptv-org sources: 0
 - Entries still without a safe local logo: 10
 - Stream URLs changed: 0
@@ -17,10 +17,10 @@
 2. **Movies! KPVM-LD** | tvg-id: `-` | channel-id: `-` | URL: `https://2-fss-2.streamhoster.com/pl_120/206858-4412962-1/playlist.m3u8`
 3. **Zylo Emotion' L** | tvg-id: `-` | channel-id: `-` | URL: `https://rakutenaa-zylo-emotional-rakuten-r1zkm.amagi.tv/playlist/rakutenAA-zylo-emotional-rakuten/playlist.m3u8`
 4. **CGTN Docment** | tvg-id: `-` | channel-id: `-` | URL: `https://english-livebkali.cgtn.com/live/doccgtn_1.m3u8`
-5. **XXX Big Dick** | tvg-id: `-` | channel-id: `-` | URL: `http://play.iptvxxx.net/bigdick.m3u8`
-6. **XXX Big Tits** | tvg-id: `-` | channel-id: `-` | URL: `http://play.iptvxxx.net/bigtits.m3u8`
-7. **XXX Blowjob** | tvg-id: `-` | channel-id: `-` | URL: `http://play.iptvxxx.net/blowjob.m3u8`
-8. **XXX Fetish** | tvg-id: `-` | channel-id: `-` | URL: `http://play.iptvxxx.net/fetish.m3u8`
+5. **Xxx Big Dick** | tvg-id: `-` | channel-id: `-` | URL: `http://play.iptvxxx.net/bigdick.m3u8`
+6. **Xxx Big Tits** | tvg-id: `-` | channel-id: `-` | URL: `http://play.iptvxxx.net/bigtits.m3u8`
+7. **Xxx Blowjob** | tvg-id: `-` | channel-id: `-` | URL: `http://play.iptvxxx.net/blowjob.m3u8`
+8. **Xxx Fetish** | tvg-id: `-` | channel-id: `-` | URL: `http://play.iptvxxx.net/fetish.m3u8`
 9. **Xxx Milf** | tvg-id: `-` | channel-id: `-` | URL: `http://play.iptvxxx.net/milf.m3u8`
 10. **Xxx Pov** | tvg-id: `-` | channel-id: `-` | URL: `http://play.iptvxxx.net/pov.m3u8`
 
