@@ -358,7 +358,7 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9265.ts
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9272.ts
 #EXTINF:-1 group-title="International" tvg-name="KTN TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png",KTN TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63146.ts
-#EXTINF:-1 tvg-id="lifetimenetwork.us" tvg-name="Lifetime Movie" tvg-logo="https://juicetv.app/channellogo/lmn2.png" group-title="International",Lifetime Movie
+#EXTINF:-1 tvg-id="lifetimenetwork.us" tvg-name="Lifetime Movie" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lifetimemovies.png" group-title="International",Lifetime Movie
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/2208.ts
 #EXTINF:-1 tvg-id="lifetimemovies.us" tvg-name="Lifetime Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lifetimemovies.png" group-title="International",Lifetime Movies
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/20863.ts
@@ -660,7 +660,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393402.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1463865.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" tvg-name="Vivid TV Europe" group-title="Adult",Vivid TV Europe
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315913.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/vixen.png" tvg-name="Vixen" group-title="Adult",Vixen
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vixen.svg" tvg-name="Vixen" group-title="Adult",Vixen
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315914.ts
 #EXTINF:-1 tvg-name="XXX: BABES TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Adult",XXX: BABES TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73821
