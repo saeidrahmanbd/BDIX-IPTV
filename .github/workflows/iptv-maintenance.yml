@@ -50,6 +50,8 @@ on:
       - tests/test_logo_authenticity_manifest.py
       - scripts/sync_epg_worker_map.py
       - scripts/audit_playlist.py
+      - scripts/playlist_order_policy.py
+      - tests/test_logo_repair_source_hints.py
       - scripts/build_identity_index.py
       - scripts/stream_health.py
       - scripts/stream_risk_review.py
@@ -94,6 +96,7 @@ jobs:
             scripts/maintenance_helpers.py \
             scripts/restore_protected_review.py \
             scripts/audit_playlist.py \
+            scripts/playlist_order_policy.py \
             scripts/pre_publish_gate.py \
             scripts/sort_playlists.py \
             scripts/final_playlist_hardening.py \
@@ -119,6 +122,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_logo_authenticity_manifest.py'
           python -m unittest discover -s tests -p 'test_logo_asset_naming.py'
           python -m unittest discover -s tests -p 'test_logo_provenance_review.py'
+          python -m unittest discover -s tests -p 'test_logo_repair_source_hints.py'
           python -m unittest discover -s tests -p 'test_iptv_fragile_streams.py'
           python -m unittest discover -s tests -p 'test_language_policy.py'
           python -m unittest discover -s tests -p 'test_epg_config.py'
@@ -231,7 +235,6 @@ jobs:
             python scripts/stream_risk_review.py
             python scripts/stream_health.py
             python scripts/generate_dashboard.py
-            python scripts/validate_report_freshness.py
             if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
               echo "::error::Audit or pre-publish gate still reports blocking issues after the correction pass."
               echo "Audit status: $AUDIT_STATUS"
