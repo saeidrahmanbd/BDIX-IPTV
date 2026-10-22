@@ -1,19 +1,23 @@
 # International Playlist Audit
 
-- Entries: 1208
+- Entries: 1149
 - Missing tvg-id values backfilled from exact, unambiguous primary-playlist names: 0
 - Exact duplicate URLs removed: 0
 - Malformed entries removed: 0
-- Backup entries migrated: 195
-- Remaining true orphan backups: 2
-- Logos repaired to repository-local assets: 546
+- Backup entries migrated: 192
+- Remaining true orphan backups: 6
+- Logos repaired to repository-local assets: 18
 - Logos recovered using external/iptv-org sources: 0
 - Entries still without a safe local logo: 47
 - Stream URLs changed: 0
 
 ## Remaining orphan backups
-1. **Probashi TV** | tvg-id: `ProbashiTV.bd` | channel-id: `ProbashiTV.bd` | URL: `http://158.69.24.53:8080/probashi_tv/tracks-v1a1/mono.m3u8`
-2. **Stingray Hit List** | tvg-id: `StingrayHitList.ca` | channel-id: `StingrayHitList.ca` | URL: `https://d39g1vxj2ef6in.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/master.m3u8?ads.xumo_channelId=88883054`
+1. **KTV** | tvg-id: `ktvhd.in` | channel-id: `ktvhd.in` | URL: `http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72109.ts`
+2. **Maa Movies** | tvg-id: `maamovieshd.in` | channel-id: `maamovieshd.in` | URL: `http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34438.ts`
+3. **Probashi TV** | tvg-id: `ProbashiTV.bd` | channel-id: `ProbashiTV.bd` | URL: `http://158.69.24.53:8080/probashi_tv/tracks-v1a1/mono.m3u8`
+4. **Stingray Hit List** | tvg-id: `StingrayHitList.ca` | channel-id: `StingrayHitList.ca` | URL: `https://d39g1vxj2ef6in.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/master.m3u8?ads.xumo_channelId=88883054`
+5. **Udaya Music** | tvg-id: `SunUdayaMusic.in` | channel-id: `SunUdayaMusic.in` | URL: `http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510507.ts`
+6. **Музыка 1 International** | tvg-id: `Kino1International.ru` | channel-id: `Kino1International.ru` | URL: `https://kino-1.catcast.tv/content/37745/index.m3u8`
 
 ## Unresolved logos
 1. **CGTN Docment** | tvg-id: `custom.cgtn-docment` | channel-id: `custom.cgtn-docment` | URL: `https://english-livebkali.cgtn.com/live/doccgtn_1.m3u8`
@@ -39,16 +43,16 @@
 21. **Xxx Big Dick** | tvg-id: `custom.xxx-big-dick` | channel-id: `custom.xxx-big-dick` | URL: `http://play.iptvxxx.net/bigdick.m3u8`
 22. **Xxx Big Tits** | tvg-id: `custom.xxx-big-tits` | channel-id: `custom.xxx-big-tits` | URL: `http://play.iptvxxx.net/bigtits.m3u8`
 23. **Xxx Blowjob** | tvg-id: `custom.xxx-blowjob` | channel-id: `custom.xxx-blowjob` | URL: `http://play.iptvxxx.net/blowjob.m3u8`
-24. **Xxx: Cum 4K UHD** | tvg-id: `custom.xxx-cum-4k-uhd` | channel-id: `custom.xxx-cum-4k-uhd` | URL: `http://dejatedemamadas.neospaxy.top:8080/0176373462111/gcm6isz6sn5i/73892`
-25. **Xxx: Dusk** | tvg-id: `custom.xxx-dusk` | channel-id: `custom.xxx-dusk` | URL: `http://dejatedemamadas.neospaxy.top:8080/0176373462111/gcm6isz6sn5i/73902`
-26. **XXX: Evolved Fights** | tvg-id: `custom.xxx-evolved-fights` | channel-id: `custom.xxx-evolved-fights` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791770.ts`
-27. **Xxx Fetish** | tvg-id: `custom.xxx-fetish` | channel-id: `custom.xxx-fetish` | URL: `http://play.iptvxxx.net/fetish.m3u8`
-28. **XXX: Hookup Hotshot** | tvg-id: `custom.xxx-hookup-hotshot` | channel-id: `custom.xxx-hookup-hotshot` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791777.ts`
-29. **XXX: Hot Guys Fuck** | tvg-id: `custom.xxx-hot-guys-fuck` | channel-id: `custom.xxx-hot-guys-fuck` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791778.ts`
-30. **Xxx Milf** | tvg-id: `custom.xxx-milf` | channel-id: `custom.xxx-milf` | URL: `http://play.iptvxxx.net/milf.m3u8`
-31. **Xxx: Penthouse Gold** | tvg-id: `custom.xxx-penthouse-gold` | channel-id: `custom.xxx-penthouse-gold` | URL: `http://dejatedemamadas.neospaxy.top:8080/0176373462111/gcm6isz6sn5i/73895`
-32. **Xxx: Penthouse Quickies** | tvg-id: `custom.xxx-penthouse-quickies` | channel-id: `custom.xxx-penthouse-quickies` | URL: `http://dejatedemamadas.neospaxy.top:8080/0176373462111/gcm6isz6sn5i/73894`
-33. **Xxx Pov** | tvg-id: `custom.xxx-pov` | channel-id: `custom.xxx-pov` | URL: `http://play.iptvxxx.net/pov.m3u8`
+24. **Xxx Fetish** | tvg-id: `custom.xxx-fetish` | channel-id: `custom.xxx-fetish` | URL: `http://play.iptvxxx.net/fetish.m3u8`
+25. **Xxx Milf** | tvg-id: `custom.xxx-milf` | channel-id: `custom.xxx-milf` | URL: `http://play.iptvxxx.net/milf.m3u8`
+26. **Xxx Pov** | tvg-id: `custom.xxx-pov` | channel-id: `custom.xxx-pov` | URL: `http://play.iptvxxx.net/pov.m3u8`
+27. **Xxx: Cum 4K UHD** | tvg-id: `custom.xxx-cum-4k-uhd` | channel-id: `custom.xxx-cum-4k-uhd` | URL: `http://dejatedemamadas.neospaxy.top:8080/0176373462111/gcm6isz6sn5i/73892`
+28. **Xxx: Dusk** | tvg-id: `custom.xxx-dusk` | channel-id: `custom.xxx-dusk` | URL: `http://dejatedemamadas.neospaxy.top:8080/0176373462111/gcm6isz6sn5i/73902`
+29. **XXX: Evolved Fights** | tvg-id: `custom.xxx-evolved-fights` | channel-id: `custom.xxx-evolved-fights` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791770.ts`
+30. **XXX: Hookup Hotshot** | tvg-id: `custom.xxx-hookup-hotshot` | channel-id: `custom.xxx-hookup-hotshot` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791777.ts`
+31. **XXX: Hot Guys Fuck** | tvg-id: `custom.xxx-hot-guys-fuck` | channel-id: `custom.xxx-hot-guys-fuck` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791778.ts`
+32. **Xxx: Penthouse Gold** | tvg-id: `custom.xxx-penthouse-gold` | channel-id: `custom.xxx-penthouse-gold` | URL: `http://dejatedemamadas.neospaxy.top:8080/0176373462111/gcm6isz6sn5i/73895`
+33. **Xxx: Penthouse Quickies** | tvg-id: `custom.xxx-penthouse-quickies` | channel-id: `custom.xxx-penthouse-quickies` | URL: `http://dejatedemamadas.neospaxy.top:8080/0176373462111/gcm6isz6sn5i/73894`
 34. **Xxx: Sexto Senso** | tvg-id: `custom.xxx-sexto-senso` | channel-id: `custom.xxx-sexto-senso` | URL: `http://dejatedemamadas.neospaxy.top:8080/0176373462111/gcm6isz6sn5i/73888`
 35. **XXX: Sexto Sento** | tvg-id: `custom.xxx-sexto-sento` | channel-id: `custom.xxx-sexto-sento` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791803.ts`
 36. **Xxx: Sexy Hot** | tvg-id: `custom.xxx-sexy-hot` | channel-id: `custom.xxx-sexy-hot` | URL: `http://dejatedemamadas.neospaxy.top:8080/0176373462111/gcm6isz6sn5i/74000`
@@ -66,7 +70,7 @@
 
 
 ## Primary/Backup reconciliation
-- Known pre-classification backups restored to Backup: 51
-- Genuine orphan backups promoted because no primary existed: 30
+- Known pre-classification backups restored to Backup: 47
+- Genuine orphan backups promoted because no primary existed: 26
 - Existing backups retained because a primary exists: 21
-- Duplicate primary copies moved to Backup: 175
+- Duplicate primary copies moved to Backup: 171
