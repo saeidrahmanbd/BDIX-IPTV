@@ -778,7 +778,7 @@ def main():
             license_url = ""
             candidate_metadata = None
 
-            if not new_file and not (args.fallback_only and is_generated_fallback):
+            if not new_file and not is_generated_fallback:
                 try:
                     new_file = find_registered_logo(playlist, attrs, channel)
                     if new_file:
