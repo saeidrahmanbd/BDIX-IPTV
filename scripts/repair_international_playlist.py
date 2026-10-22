@@ -5,6 +5,7 @@ import json,re,unicodedata,urllib.request,urllib.parse
 from difflib import SequenceMatcher
 
 PLAYLIST=Path('International-Playlist.m3u'); LOGOS=Path('logos')
+REFERENCE_PLAYLISTS=(Path('IPTV-Playlist.m3u'),Path('BDIX-Playlist.m3u'))
 RAW_BASE='https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/'
 IPTV_LOGOS='https://iptv-org.github.io/api/logos.json'; IPTV_CHANNELS='https://iptv-org.github.io/api/channels.json'
 ORDER=['Bangla','Indian','Pakistani','International','Documentary & Wildlife','Religious','Adult','Backup']; NO_NUMBER={'Backup','Not Playing'}
@@ -22,6 +23,32 @@ def norm(s):
  s=re.sub(r'\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|plus)\b',' ',s)
  return re.sub(r'[^a-z0-9]+','',s)
 def url_of(b): return next((x.strip() for x in b[1:] if x.strip().startswith(('http://','https://'))),'')
+def exact_name_key(value):
+ value=unicodedata.normalize('NFKC',str(value or '')).casefold().strip()
+ return re.sub(r'\\s+',' ',value)
+def build_primary_id_index(texts=None):
+ # Reuse an ID only when the exact displayed name maps to one ID across
+ # both existing primary playlists. No suffix stripping or fuzzy matching.
+ if texts is None:
+  texts=[p.read_text(encoding='utf-8-sig') for p in REFERENCE_PLAYLISTS if p.is_file()]
+ ids_by_name={}
+ excluded={'backup','not playing','not playing...','not playing…','test'}
+ for text in texts:
+  _,rows=parse(text)
+  for block in rows:
+   info=block[0]; a=attrs(info)
+   if a.get('group-title','').strip().casefold() in excluded: continue
+   cid=(a.get('tvg-id') or '').strip()
+   key=exact_name_key(name_of(info))
+   if cid and key: ids_by_name.setdefault(key,set()).add(cid)
+ return {name:next(iter(ids)) for name,ids in ids_by_name.items() if len(ids)==1}
+def backfill_exact_tvg_id(info,group,id_by_name):
+ a=attrs(info)
+ if a.get('tvg-id','').strip() or str(group or '').strip().casefold() in {'backup','not playing','test'}:
+  return info,False
+ cid=id_by_name.get(exact_name_key(name_of(info)),'')
+ if not cid: return info,False
+ return set_attr(info,'tvg-id',cid),True
 def parse(text):
  pre=[]; blocks=[]; cur=None
  for line in text.replace('\r','').splitlines():
@@ -105,13 +132,16 @@ def fuzzy_group(name,by_name):
 
 def main():
  if not PLAYLIST.exists():raise SystemExit('International-Playlist.m3u not found')
- pre,blocks=parse(PLAYLIST.read_text(encoding='utf-8-sig')); seen=set(); kept=[]; duplicate=malformed=0
+ pre,blocks=parse(PLAYLIST.read_text(encoding='utf-8-sig')); seen=set(); kept=[]; duplicate=malformed=ids_backfilled=0
+ id_by_name=build_primary_id_index()
  for b in blocks:
   u=url_of(b)
   if not u:malformed+=1;continue
   if u.casefold() in seen:duplicate+=1;continue
   seen.add(u.casefold()); info=b[0]; a=attrs(info); g=a.get('group-title','').strip()
   if g not in ORDER:info=set_attr(info,'group-title','International');g='International'
+  info,id_added=backfill_exact_tvg_id(info,g,id_by_name)
+  ids_backfilled+=int(id_added)
   if g in NO_NUMBER and attrs(info).get('tvg-chno'):info=remove_attr(info,'tvg-chno')
   b[0]=info;kept.append(b)
  blocks=kept
@@ -149,9 +179,9 @@ def main():
  idx=next((i+1 for i,x in enumerate(pre) if x.startswith('#EXTM3U')),0);pre.insert(idx,canonical);lines=pre[:]
  for b in blocks:lines.extend(b)
  PLAYLIST.write_text('\n'.join(lines).rstrip()+'\n',encoding='utf-8')
- out=[f'# International Playlist Audit','',f'- Entries: {len(blocks)}',f'- Exact duplicate URLs removed: {duplicate}',f'- Malformed entries removed: {malformed}',f'- Backup entries migrated: {migrated}',f'- Remaining true orphan backups: {orphan}',f'- Logos repaired to repository-local assets: {repaired}',f'- Logos recovered using external/iptv-org sources: {downloaded}',f'- Entries still without a safe local logo: {unresolved}','- Stream URLs changed: 0','', '## Remaining orphan backups']
+ out=[f'# International Playlist Audit','',f'- Entries: {len(blocks)}',f'- Missing tvg-id values backfilled from exact, unambiguous primary-playlist names: {ids_backfilled}',f'- Exact duplicate URLs removed: {duplicate}',f'- Malformed entries removed: {malformed}',f'- Backup entries migrated: {migrated}',f'- Remaining true orphan backups: {orphan}',f'- Logos repaired to repository-local assets: {repaired}',f'- Logos recovered using external/iptv-org sources: {downloaded}',f'- Entries still without a safe local logo: {unresolved}','- Stream URLs changed: 0','', '## Remaining orphan backups']
  out += [f'{i}. **{n}** | tvg-id: `{tid or "-"}` | channel-id: `{cid or "-"}` | URL: `{u}`' for i,(n,tid,cid,u) in enumerate(orphan_rows,1)]
  out += ['', '## Unresolved logos']+[f'{i}. **{n}** | tvg-id: `{tid or "-"}` | channel-id: `{cid or "-"}` | URL: `{u}`' for i,(n,tid,cid,u) in enumerate(unresolved_rows,1)]
  Path('reports').mkdir(exist_ok=True);Path('reports/international-playlist-audit.md').write_text('\n'.join(out)+'\n',encoding='utf-8')
- print(f'International audit: entries={len(blocks)} duplicate_urls_removed={duplicate} malformed_removed={malformed} backups_migrated={migrated} orphan_backups={orphan} logos_repaired={repaired} logos_external={downloaded} logos_unresolved={unresolved}')
+ print(f'International audit: entries={len(blocks)} tvg_ids_backfilled={ids_backfilled} duplicate_urls_removed={duplicate} malformed_removed={malformed} backups_migrated={migrated} orphan_backups={orphan} logos_repaired={repaired} logos_external={downloaded} logos_unresolved={unresolved}')
 if __name__=='__main__':main()
