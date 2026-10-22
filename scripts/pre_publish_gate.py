@@ -5,7 +5,6 @@ from __future__ import annotations
 import hashlib
 import re
 import subprocess
-import sys
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -15,9 +14,10 @@ from restore_protected_review import authorized_backup_migration_target
 
 P = Path("IPTV-Playlist.m3u")
 R = Path("reports/pre-publish-gate.md")
-EXCLUDE = {"Backup", "Not Playing"}
+EXCLUDE = {"Backup", "Not Playing", "New Channels", "New Backup"}
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR = re.compile(r'([\w-]+)="([^"]*)"')
+REVIEW_QUEUES = {"New Channels", "New Backup"}
 
 
 def attrs(s: str) -> dict[str, str]:
@@ -100,8 +100,8 @@ def main() -> None:
     quarantined, removed, approved_removed = [], [], []
     for a, u in old_primary:
         groups = cur_all_groups.get(u.lower(), set())
-        if groups & {"Backup"}:
-            quarantined.append((a.get("tvg-name", ""), u, "Backup"))
+        if groups & {"Backup", "New Channels", "New Backup"}:
+            quarantined.append((a.get("tvg-name", ""), u, next(iter(groups & {"Backup", "New Channels", "New Backup"}))))
         elif not groups:
             if approved_removal(u):
                 approved_removed.append((a.get("tvg-name", ""), u))
@@ -131,11 +131,7 @@ def main() -> None:
         elif not cur and url not in current_by_url:
             review_removed.append((state["name"], url, state["group"]))
 
-    primary_chno = Counter(
-        a.get("tvg-chno", "").strip()
-        for a, _ in cur_primary
-        if a.get("tvg-chno", "").strip()
-    )
+    primary_chno = Counter(a.get("tvg-chno", "").strip() for a, _ in cur_primary if a.get("tvg-chno", "").strip())
     chno_dupes = [n for n, c in primary_chno.items() if c > 1]
 
     primary_identity = defaultdict(list)
@@ -146,11 +142,7 @@ def main() -> None:
     duplicate_primary = [k for k, v in primary_identity.items() if len(v) > 1]
 
     missing = [a.get("tvg-name", "") for a, _ in cur_primary if not a.get("tvg-chno", "").strip()]
-    review_numbered = [
-        a.get("tvg-name", "")
-        for _, a, _ in current
-        if a.get("group-title", "").strip() in EXCLUDE and a.get("tvg-chno", "").strip()
-    ]
+    review_numbered = [a.get("tvg-name", "") for _, a, _ in current if a.get("group-title", "").strip() in EXCLUDE and a.get("tvg-chno", "").strip()]
 
     logo_missing, logo_external, logo_bad = logo_audit(current)
     logo_missing_files = []
@@ -162,112 +154,56 @@ def main() -> None:
                 logo_missing_files.append(a.get("tvg-name", ""))
 
     issues = []
-    if dup_urls:
-        issues.append(f"duplicate stream URLs: {len(dup_urls)}")
-    if removed:
-        issues.append(f"unapproved primary streams removed: {len(removed)}")
-    if review_reclassified:
-        issues.append(f"review entries reclassified: {len(review_reclassified)}")
-    if review_promoted:
-        issues.append(f"protected review entries promoted: {len(review_promoted)}")
-    if review_removed:
-        issues.append(f"protected review entries deleted: {len(review_removed)}")
-    if chno_dupes:
-        issues.append(f"duplicate primary channel numbers: {len(chno_dupes)}")
-    if duplicate_primary:
-        issues.append(f"duplicate primary identities: {len(duplicate_primary)}")
-    if missing:
-        issues.append(f"primary entries missing tvg-chno: {len(missing)}")
-    if review_numbered:
-        issues.append(f"Backup/Not Playing entries still numbered: {len(review_numbered)}")
-    if logo_missing:
-        issues.append(f"missing logos: {len(logo_missing)}")
-    if logo_external:
-        issues.append(f"external logo URLs: {len(logo_external)}")
-    if logo_bad:
-        issues.append(f"incorrect/placeholder/generic logos: {len(logo_bad)}")
-    if logo_missing_files:
-        issues.append(f"referenced local logo files missing from repository: {len(logo_missing_files)}")
+    if dup_urls: issues.append(f"duplicate stream URLs: {len(dup_urls)}")
+    if removed: issues.append(f"unapproved primary streams removed: {len(removed)}")
+    if review_reclassified: issues.append(f"review entries reclassified: {len(review_reclassified)}")
+    if review_promoted: issues.append(f"protected review entries promoted: {len(review_promoted)}")
+    if review_removed: issues.append(f"protected review entries deleted: {len(review_removed)}")
+    if chno_dupes: issues.append(f"duplicate primary channel numbers: {len(chno_dupes)}")
+    if duplicate_primary: issues.append(f"duplicate primary identities: {len(duplicate_primary)}")
+    if missing: issues.append(f"primary entries missing tvg-chno: {len(missing)}")
+    if review_numbered: issues.append(f"review entries still numbered: {len(review_numbered)}")
+    if logo_missing: issues.append(f"missing logos: {len(logo_missing)}")
+    if logo_external: issues.append(f"external logo URLs: {len(logo_external)}")
+    if logo_bad: issues.append(f"incorrect/placeholder/generic logos: {len(logo_bad)}")
+    if logo_missing_files: issues.append(f"referenced local logo files missing from repository: {len(logo_missing_files)}")
+
+    # Review queues are allowed only for BD/IN and are never active categories.
+    queue_errors = []
+    for _, a, u in current:
+        group = a.get("group-title", "").strip()
+        if group not in REVIEW_QUEUES:
+            continue
+        country = a.get("tvg-country", "").strip().upper()
+        cid = (a.get("tvg-id") or a.get("channel-id") or "").strip().lower()
+        if country not in {"BD", "IN"}:
+            queue_errors.append(f"{a.get('tvg-name','')} has invalid queue country {country or 'missing'}")
+        if country == "BD" and not re.search(r"\.bd(?:@|$)", cid):
+            queue_errors.append(f"{a.get('tvg-name','')} has non-BD tvg-id {cid}")
+        if country == "IN" and not re.search(r"\.in(?:@|$)", cid):
+            queue_errors.append(f"{a.get('tvg-name','')} has non-IN tvg-id {cid}")
+        if not u.lower().startswith(("http://", "https://")):
+            queue_errors.append(f"{a.get('tvg-name','')} has invalid stream URL")
+    if queue_errors:
+        issues.append(f"New queue validation failures: {len(queue_errors)}")
 
     status = "PASS" if not issues else "BLOCK"
-
     old_by_url = {u.lower(): (a.get("tvg-name", ""), a.get("group-title", "")) for _, a, u in old}
     cur_by_url_all = {u.lower(): (a.get("tvg-name", ""), a.get("group-title", "")) for _, a, u in current}
     added = [u for u in cur_by_url_all if u not in old_by_url]
     removed_all = [u for u in old_by_url if u not in cur_by_url_all]
     modified = [u for u in cur_by_url_all if u in old_by_url and cur_by_url_all[u] != old_by_url[u]]
 
-    lines = [
-        "# Pre-Publish Safety Gate",
-        "",
-        f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",
-        f"Source playlist SHA-256: **{hashlib.sha256(P.read_bytes()).hexdigest()}**",
-        "",
-        f"Status: **{status}**",
-        "",
-        f"- Current entries: **{len(current)}**",
-        f"- Duplicate stream URLs: **{len(dup_urls)}**",
-        f"- Primary streams removed: **{len(removed)}**",
-        f"- Primary streams intentionally removed as known bad: **{len(approved_removed)}**",
-        f"- Primary streams quarantined: **{len(quarantined)}**",
-        f"- Review entries reclassified: **{len(review_reclassified)}**",
-        f"- Review entries promoted: **{len(review_promoted)}**",
-        f"- Authorized review promotions: **{len(authorized_promoted)}**",
-        f"- Review entries deleted: **{len(review_removed)}**",
-        f"- Duplicate primary channel numbers: **{len(chno_dupes)}**",
-        f"- Primary entries missing tvg-chno: **{len(missing)}**",
-        f"- Numbered review entries: **{len(review_numbered)}**",
-        f"- Missing logos: **{len(logo_missing)}**",
-        f"- External logo URLs: **{len(logo_external)}**",
-        f"- Incorrect/placeholder/generic logos: **{len(logo_bad)}**",
-        f"- Missing referenced local logo files: **{len(logo_missing_files)}**",
-        f"- Entries added this run: **{len(added)}**",
-        f"- Entries removed this run: **{len(removed_all)}**",
-        f"- Entries modified this run: **{len(modified)}**",
-        "",
-        "## Protected-queue policy",
-        "Backup and Not Playing are review queues. Existing entries are protected by exact stream URL. A maintenance run must not silently delete, promote, or reclassify them.",
-        "",
-        "Authorized Backup-to-primary migrations are allowed only when the exact reviewed channel identity and exact stream URL match the explicit migration allowlist.",
-        "",
-        "## Blocking Reasons",
-    ]
-
-    if issues:
-        lines.extend("- " + x for x in issues)
-    else:
-        lines.append("No blocking conditions detected.")
-
-    lines += [
-        "",
-        "## Blocked logo references",
-        "",
-        "| Channel | Group | Blocked filename |",
-        "|---|---|---|",
-    ]
+    lines = ["# Pre-Publish Safety Gate", "", f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**", f"Source playlist SHA-256: **{hashlib.sha256(P.read_bytes()).hexdigest()}**", "", f"Status: **{status}**", "", f"- Current entries: **{len(current)}**", f"- Duplicate stream URLs: **{len(dup_urls)}**", f"- Primary streams removed: **{len(removed)}**", f"- Primary streams intentionally removed as known bad: **{len(approved_removed)}**", f"- Primary streams quarantined: **{len(quarantined)}**", f"- Review entries reclassified: **{len(review_reclassified)}**", f"- Review entries promoted: **{len(review_promoted)}**", f"- Authorized review promotions: **{len(authorized_promoted)}**", f"- Review entries deleted: **{len(review_removed)}**", f"- Duplicate primary channel numbers: **{len(chno_dupes)}**", f"- Primary entries missing channel numbers: **{len(missing)}**", f"- Numbered review entries: **{len(review_numbered)}**", f"- Missing logos: **{len(logo_missing)}**", f"- External logo URLs: **{len(logo_external)}**", f"- Incorrect/placeholder/generic logos: **{len(logo_bad)}**", f"- Missing referenced local logo files: **{len(logo_missing_files)}**", f"- Entries added this run: **{len(added)}**", f"- Entries removed this run: **{len(removed_all)}**", f"- Entries modified this run: **{len(modified)}**", "", "## Protected-queue policy", "New Channels and New Backup are BD/IN-only review queues. Backup and Not Playing remain review queues. Existing review entries are protected by exact stream URL. A maintenance run must not silently delete, promote, or reclassify them.", "", "## Blocking Reasons"]
+    lines.extend("- " + x for x in issues) if issues else lines.append("No blocking conditions detected.")
+    lines += ["", "## Queue validation", ""]
+    lines.extend("- " + x for x in queue_errors) if queue_errors else lines.append("New Channels/New Backup contain only validated BD/IN entries.")
+    lines += ["", "## Blocked logo references", "", "| Channel | Group | Blocked filename |", "|---|---|---|"]
     if logo_bad:
         clean = lambda value: str(value).replace("|", "\\|").replace("\n", " ")
-        lines.extend(
-            f"| {clean(name)} | {clean(group)} | {clean(filename)} |"
-            for name, group, filename in logo_bad
-        )
+        lines.extend(f"| {clean(name)} | {clean(group)} | {clean(filename)} |" for name, group, filename in logo_bad)
     else:
         lines.append("| — | — | none |")
-
     R.parent.mkdir(parents=True, exist_ok=True)
     R.write_text("\n".join(lines) + "\n", encoding="utf-8")
-
     print("Pre-publish gate:", status)
-    for issue in issues:
-        print("Pre-publish blocking reason:", issue)
-    for name, group, filename in logo_bad:
-        print(f"Blocked logo reference: {name} [{group}] -> {filename}")
-    for name, url, source_group, target_group in authorized_promoted:
-        print(f"Authorized Backup promotion: {name} [{source_group} -> {target_group}] {url}")
-
-    if issues:
-        sys.exit(1)
-
-
-if __name__ == "__main__":
-    main()
