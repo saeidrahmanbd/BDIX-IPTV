@@ -20,32 +20,25 @@ jobs:
         shell: python
         run: |
           from pathlib import Path
-          import re
 
           source = 'https://free-epg.de/api/epg/bd.xml.gz'
-          targets = [
-              Path('scripts/epg_coverage.py'),
-              Path('scripts/generate_epg.py'),
-          ]
           anchor = 'https://iptv-epg.org/files/epg-in.xml.gz'
-          for path in targets:
+          for path in (Path('scripts/epg_coverage.py'), Path('scripts/generate_epg.py')):
               text = path.read_text(encoding='utf-8')
               if source not in text:
-                  pattern = rf'(?m)^(\s*["\']{re.escape(anchor)}["\'],\s*)$'
-                  replacement = rf'\1\n    "{source}",'
-                  text, count = re.subn(pattern, replacement, text, count=1)
-                  if count != 1:
+                  needle = f'"{anchor}",'
+                  if needle not in text:
                       raise SystemExit(f'Anchor not found in {path}')
+                  text = text.replace(needle, needle + f'\n    "{source}",', 1)
                   path.write_text(text, encoding='utf-8')
 
           path = Path('scripts/run_epg_coverage.py')
           text = path.read_text(encoding='utf-8')
           if source not in text:
-              pattern = r'(?m)^(\s*["\']https://www\.free-epg\.de/api/epg/us\.xml\.gz["\'],\s*)$'
-              replacement = rf'\1\n    "{source}",'
-              text, count = re.subn(pattern, replacement, text, count=1)
-              if count != 1:
+              needle = '"https://www.free-epg.de/api/epg/us.xml.gz",'
+              if needle not in text:
                   raise SystemExit(f'Additional-source anchor not found in {path}')
+              text = text.replace(needle, needle + f'\n    "{source}",', 1)
               path.write_text(text, encoding='utf-8')
 
       - name: Rebuild EPG coverage and guide
@@ -56,8 +49,7 @@ jobs:
 
       - name: Validate generated guide
         shell: bash
-        run: |
-          test -s epg/epg.xml
+        run: test -s epg/epg.xml
 
       - name: Remove one-time fixer
         shell: bash
