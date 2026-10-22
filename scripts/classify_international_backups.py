@@ -73,9 +73,9 @@ def classify(info):
     if country=='PK': return 'Pakistani'
     if country=='IN':
         if language=='ben': return 'Indian Bangla'
-        if re.search(r'music|musix|9xm|9x jalwa|9x jhakaas|9x tashan|7s music|mtv|vh1|stingray|xite|v2beat|now rock|now 70s|now 80s|trace urban|totalmusic|cmt\\b|axs tv',name,re.I):
+        if re.search(r'music|musix|9xm|9x jalwa|9x jhakaas|9x tashan|7s music|mtv|vh1|stingray|xite|v2beat|now rock|now 70s|now 80s|trace urban|totalmusic|cmt\b|axs tv',name,re.I):
             return 'Indian Music'
-        if re.search(r'movie|movies|cinema|cineplex|film|pictures|sony max|\\bmax 2\\b|\\bpix\\b|the movie club|zee action|pitaara|gravitas',name,re.I):
+        if re.search(r'movie|movies|cinema|cineplex|film|pictures|sony max|\bmax 2\b|\bpix\b|the movie club|zee action|pitaara|gravitas',name,re.I):
             return 'Indian Movies'
         return 'Indian Entertainment'
     if n in {'sports','espn','star sports','fox sports','sky sports'}: return 'Sports'
@@ -101,34 +101,26 @@ def baseline_backup_urls():
 def main():
     pre,blocks=parse(PLAYLIST.read_text(encoding='utf-8-sig'))
     baseline=baseline_backup_urls()
-    restored=promoted=kept_backup=moved_duplicate=0
+    restored=moved_duplicate=0
 
-    # Restore every known pre-classification Backup record before considering promotion.
+    # Restore historical Backup URLs first. Existing Backup rows remain manual-review entries.
     for b in blocks:
         if url_of(b).casefold() in baseline and not is_backup(b[0]):
-            b[0]=set_group(b[0],'Backup'); restored+=1
+            b[0]=set_group(b[0],'Backup')
+            restored+=1
 
-    # Promote only a known orphan Backup when no primary with the same channel identity exists.
-    primaries=[b for b in blocks if not is_backup(b[0])]
-    for b in blocks:
-        if not is_backup(b[0]): continue
-        if baseline and url_of(b).casefold() not in baseline: continue
-        if any(same_channel(p[0],b[0]) for p in primaries):
-            kept_backup+=1; continue
-        b[0]=set_group(b[0],classify(b[0])); primaries.append(b); promoted+=1
-
-    # Keep exactly one primary per normalized channel name; every extra becomes Backup.
+    # Do not promote Backup entries based on metadata or stream status.
+    # If active groups contain same-name duplicate primaries, preserve alternates as Backup.
     by_key={}
     for b in blocks:
-        if not is_backup(b[0]): by_key.setdefault(channel_key(b[0]),[]).append(b)
+        if not is_backup(b[0]):
+            by_key.setdefault(channel_key(b[0]),[]).append(b)
     for key,group in by_key.items():
         if len(group)<2: continue
-        def score(b):
-            a=attrs(b[0]); u=url_of(b).casefold()
-            return (u not in baseline, bool(a.get('tvg-id') or a.get('channel-id')))
-        ordered=sorted(group,key=score,reverse=True)
+        ordered=sorted(group,key=lambda b:(bool(attrs(b[0]).get('tvg-id') or attrs(b[0]).get('channel-id')),url_of(b).casefold()),reverse=True)
         for extra in ordered[1:]:
-            extra[0]=set_group(extra[0],'Backup'); moved_duplicate+=1
+            extra[0]=set_group(extra[0],'Backup')
+            moved_duplicate+=1
 
     rank={x:i for i,x in enumerate(ORDER)}
     def natural(s): return tuple(int(x) if x.isdigit() else x for x in re.split(r'(\d+)',s.casefold()))
@@ -139,11 +131,10 @@ def main():
 
     report=Path('reports/international-playlist-audit.md')
     with report.open('a',encoding='utf-8') as f:
-        f.write('\n\n## Primary/Backup reconciliation\n')
-        f.write(f'- Known pre-classification backups restored to Backup: {restored}\n')
-        f.write(f'- Genuine orphan backups promoted because no primary existed: {promoted}\n')
-        f.write(f'- Existing backups retained because a primary exists: {kept_backup}\n')
-        f.write(f'- Duplicate primary copies moved to Backup: {moved_duplicate}\n')
-    print(f'Primary/Backup reconciliation: restored={restored} promoted={promoted} retained_backup={kept_backup} duplicate_primaries_to_backup={moved_duplicate}')
-
+        f.write('\n\n## Backup preservation\n')
+        f.write(f'- Historical Backup URLs restored to Backup: {restored}\n')
+        f.write('- Backup rows are not automatically promoted or migrated.\n')
+        f.write(f'- Duplicate primary copies moved to Backup for uniqueness: {moved_duplicate}\n')
+    print(f'Backup preservation: restored={restored} primary_duplicates_to_backup={moved_duplicate}; existing Backup rows retained')
+ 
 if __name__=='__main__': main()

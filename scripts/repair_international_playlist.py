@@ -135,14 +135,14 @@ def repair_logo(info,org):
  a=attrs(info); name=name_of(info); old=a.get('tvg-logo','').strip()
  p=safe_local(name)
  if p:
-  desired=RAW_BASE+str(p.relative_to(LOGOS)).replace('\\\\','/')
+  desired=RAW_BASE+str(p.relative_to(LOGOS))
   return set_attr(info,'tvg-logo',desired),old!=desired
  if old and not old.startswith(RAW_BASE) and old.startswith(('http://','https://')):
   parsed=urllib.parse.urlparse(old);base=Path(parsed.path).name.casefold()
   if base not in PLACEHOLDER_LOGOS:
    p=download(old,name)
    if p:
-    desired=RAW_BASE+str(p.relative_to(LOGOS)).replace('\\\\','/')
+    desired=RAW_BASE+str(p.relative_to(LOGOS))
     return set_attr(info,'tvg-logo',desired),True
  if old and old.startswith(RAW_BASE) and not bad_current_logo(name,old):
   return info,False
@@ -157,7 +157,7 @@ def repair_logo(info,org):
    p=download(src,name)
    if p:break
  if p:
-  desired=RAW_BASE+str(p.relative_to(LOGOS)).replace('\\\\','/')
+  desired=RAW_BASE+str(p.relative_to(LOGOS))
   return set_attr(info,'tvg-logo',desired),True
  if old and bad_current_logo(name,old):
   return remove_attr(info,'tvg-logo'),True
@@ -183,8 +183,8 @@ def classify_primary_group(info,current):
  if country=='PK':return 'Pakistani'
  if country=='IN':
   if language=='ben':return 'Indian Bangla'
-  if re.search(r'music|musix|9xm|9x jalwa|9x jhakaas|9x tashan|7s music|mtv|vh1|stingray|xite|v2beat|now rock|now 70s|now 80s|trace urban|totalmusic|cmt\\b|axs tv',name,re.I):return 'Indian Music'
-  if re.search(r'movie|movies|cinema|cineplex|film|pictures|sony max|\\bmax 2\\b|\\bpix\\b|the movie club|zee action|pitaara|gravitas',name,re.I):return 'Indian Movies'
+  if re.search(r'music|musix|9xm|9x jalwa|9x jhakaas|9x tashan|7s music|mtv|vh1|stingray|xite|v2beat|now rock|now 70s|now 80s|trace urban|totalmusic|cmt\b|axs tv',name,re.I):return 'Indian Music'
+  if re.search(r'movie|movies|cinema|cineplex|film|pictures|sony max|\bmax 2\b|\bpix\b|the movie club|zee action|pitaara|gravitas',name,re.I):return 'Indian Movies'
   return 'Indian Entertainment'
  if current.casefold()=='indian':return 'Indian Entertainment'
  return 'International'
@@ -206,28 +206,8 @@ def main():
   if g in NO_NUMBER and attrs(info).get('tvg-chno'):info=remove_attr(info,'tvg-chno')
   b[0]=info;kept.append(b)
  blocks=kept
- by_id={};by_name={}
- for b in blocks:
-  a=attrs(b[0]);g=a.get('group-title','').strip()
-  if g=='Backup':continue
-  n=norm(name_of(b[0]));
-  if n:by_name.setdefault(n,set()).add(g)
-  for k in ('tvg-id','channel-id'):
-   v=a.get(k,'').strip().casefold()
-   if v:by_id.setdefault(v,set()).add(g)
- migrated=orphan=0; orphan_rows=[]
- for b in blocks:
-  a=attrs(b[0])
-  if a.get('group-title','').strip()!='Backup':continue
-  targets=[]
-  for k in ('tvg-id','channel-id'):
-   v=a.get(k,'').strip().casefold()
-   if v and v in by_id:targets += list(by_id[v])
-  if not targets:targets += list(by_name.get(norm(name_of(b[0])),set()))
-  targets=[x for x in set(targets) if x!='Backup']
-  target=targets[0] if len(targets)==1 else fuzzy_group(name_of(b[0]),{k:next(iter(v)) for k,v in by_name.items()})
-  if target:b[0]=set_attr(b[0],'group-title',target);migrated+=1
-  else:orphan+=1;orphan_rows.append((name_of(b[0]),a.get('tvg-id',''),a.get('channel-id',''),url_of(b)))
+ backup_retained=sum(1 for b in blocks if attrs(b[0]).get('group-title','').strip()=='Backup')
+ migrated=0;orphan=0;orphan_rows=[]
  org=build_iptv_org();repaired=unresolved=downloaded=0; unresolved_rows=[]
  for b in blocks:
   old=attrs(b[0]).get('tvg-logo','');new,did=repair_logo(b[0],org)
@@ -240,9 +220,9 @@ def main():
  idx=next((i+1 for i,x in enumerate(pre) if x.startswith('#EXTM3U')),0);pre.insert(idx,canonical);lines=pre[:]
  for b in blocks:lines.extend(b)
  PLAYLIST.write_text('\n'.join(lines).rstrip()+'\n',encoding='utf-8')
- out=[f'# International Playlist Audit','',f'- Entries: {len(blocks)}',f'- Missing tvg-id values backfilled from exact, unambiguous primary-playlist names: {ids_backfilled}',f'- Exact duplicate URLs removed: {duplicate}',f'- Malformed entries removed: {malformed}',f'- Backup entries migrated: {migrated}',f'- Remaining true orphan backups: {orphan}',f'- Logos repaired to repository-local assets: {repaired}',f'- Logos recovered using external/iptv-org sources: {downloaded}',f'- Entries still without a safe local logo: {unresolved}','- Stream URLs changed: 0','', '## Remaining orphan backups']
+ out=[f'# International Playlist Audit','',f'- Entries: {len(blocks)}',f'- Missing tvg-id values backfilled from exact, unambiguous primary-playlist names: {ids_backfilled}',f'- Exact duplicate URLs removed: {duplicate}',f'- Malformed entries removed: {malformed}',f'- Backup entries retained unchanged: {backup_retained}',f'- Automatic Backup promotion/migration: disabled',f'- Logos repaired to repository-local assets: {repaired}',f'- Logos recovered using external/iptv-org sources: {downloaded}',f'- Entries still without a safe local logo: {unresolved}','- Stream URLs changed: 0','', '## Backup policy\\n- Existing Backup entries are retained for manual review.']
  out += [f'{i}. **{n}** | tvg-id: `{tid or "-"}` | channel-id: `{cid or "-"}` | URL: `{u}`' for i,(n,tid,cid,u) in enumerate(orphan_rows,1)]
  out += ['', '## Unresolved logos']+[f'{i}. **{n}** | tvg-id: `{tid or "-"}` | channel-id: `{cid or "-"}` | URL: `{u}`' for i,(n,tid,cid,u) in enumerate(unresolved_rows,1)]
  Path('reports').mkdir(exist_ok=True);Path('reports/international-playlist-audit.md').write_text('\n'.join(out)+'\n',encoding='utf-8')
- print(f'International audit: entries={len(blocks)} tvg_ids_backfilled={ids_backfilled} duplicate_urls_removed={duplicate} malformed_removed={malformed} backups_migrated={migrated} orphan_backups={orphan} logos_repaired={repaired} logos_external={downloaded} logos_unresolved={unresolved}')
+ print(f'International audit: entries={len(blocks)} tvg_ids_backfilled={ids_backfilled} duplicate_urls_removed={duplicate} malformed_removed={malformed} backups_retained={backup_retained} logos_repaired={repaired} logos_external={downloaded} logos_unresolved={unresolved}')
 if __name__=='__main__':main()
