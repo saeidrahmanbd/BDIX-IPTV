@@ -113,7 +113,8 @@ def main():
     # If active groups contain same-name duplicate primaries, preserve alternates as Backup.
     by_key={}
     for b in blocks:
-        if not is_backup(b[0]):
+        grp=attrs(b[0]).get('group-title','').strip().casefold()
+        if not is_backup(b[0]) and grp != 'adult':
             by_key.setdefault(channel_key(b[0]),[]).append(b)
     for key,group in by_key.items():
         if len(group)<2: continue

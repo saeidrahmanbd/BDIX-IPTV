@@ -175,6 +175,9 @@ jobs:
               if group=='backup': backup_count+=1; continue
               if staging_re.search(b[0]):
                   raise SystemExit('Forbidden staging category remains: '+b[0])
+              if group=='adult':
+                  # Adult providers can expose multiple distinct URLs for the same title; retain these for manual review.
+                  continue
               name=norm(a.get('tvg-name') or b[0].rsplit(',',1)[-1])
               key=('name',name) if name else ('id',(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold())
               if key in primary_keys:
@@ -197,7 +200,7 @@ jobs:
           positions={g:i for i,g in enumerate(expected)}
           if any(positions.get(actual[i], 999) > positions.get(actual[i+1], 999) for i in range(len(actual)-1)):
               raise SystemExit('Playlist categories are not in the required order: '+str(actual))
-          print(f'Integrity OK: {len(urls)} stream URLs, 0 duplicate URLs, 0 duplicate primaries, {backup_count} Backup entries, 0 forbidden staging categories')
+          print(f'Integrity OK: {len(urls)} stream URLs, 0 duplicate URLs, 0 duplicate primaries outside Adult, Adult same-title streams retained for manual review, {backup_count} Backup entries, 0 forbidden staging categories')
           PY
 
       - name: Publish repaired International playlist

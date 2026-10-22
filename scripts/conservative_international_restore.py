@@ -9,8 +9,18 @@ from pathlib import Path
 import re, subprocess, unicodedata
 
 PLAYLIST = Path('International-Playlist.m3u')
-BASE = '3f15d0a480b8f9e47c5febd4b2905e520e77dd85'
+BASE = '86da6b7f3183a62a0fd5355ae2cf7da0a68d8bae'
 ORDER = ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Adult','Sports','Backup','New Channels','New Backup','Not Playing']
+RESTORE_CHANNELS = {
+    '24hourfreemovies': {'name':'24 Hour Free Movies','logo':'24-hour-free-movies-720p-2a4fdea7cd.png','id':'custom.24-hour-free-movies','country':'US','language':'eng'},
+    'aflam': {'name':'Aflam','logo':'nvisionbd-aflam.png','id':'custom.aflam','country':'SA','language':'ara'},
+    'axs': {'name':'AXS TV','logo':'axs.png','id':'AXSTV.us','country':'US','language':'eng'},
+    'moviesphereau': {'name':'MovieSphere AU','logo':'moviesphere-au-1080p-1b23bc91d7.png','id':'custom.moviesphere-au','country':'AU','language':'eng'},
+    'moviesphereuk': {'name':'MovieSphere UK','logo':'moviesphere-uk.png','id':'custom.moviesphere-uk','country':'GB','language':'eng'},
+    'arabicatv': {'name':'Arabica TV','logo':'arabica-tv.png','id':'custom.arabica-tv','country':'LB','language':'ara'},
+    'cctv11': {'name':'CCTV-11','logo':'cctv-11.png','id':'CCTV11.cn','country':'CN','language':'zho'},
+}
+
 
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
@@ -65,7 +75,7 @@ def normalize_adult(info):
     new=old
     # Remove technical/generic prefixes, but preserve meaningful brands such as
     # PORNBOX, STARS EXCLUSIVE and VERIFIED AMATEURS.
-    new=re.sub(r'^\s*(?:24/7\s+)?XXX\s*[-:|]?\s*','',new,flags=re.I)
+    new=re.sub(r'^\s*(?:(?:24/7)\s+)?(?:adult\s+)?(?:xxx)\s*[-:|]?\s*','',new,flags=re.I)
     new=re.sub(r'^\s*(?:HD|FHD|UHD|SD|4K|1080P|720P|576P|480P)\s*[-:|]?\s*','',new,flags=re.I)
     new=re.sub(r'^\s*(?:ADULT|ADULT CHANNEL)\s*[-:|]?\s*','',new,flags=re.I)
     new=re.sub(r'\s{2,}',' ',new).strip(' -:|')
@@ -81,12 +91,18 @@ def main():
     pre,current=parse(PLAYLIST.read_text(encoding='utf-8-sig'))
     base_pre,base_blocks=parse(git_base_playlist())
     existing={url_of(b).casefold() for b in current if url_of(b)}
+    existing_names={norm(name_of(b[0])) for b in current}
     restored=0
     for b in base_blocks:
         a=attrs(b[0]); g=a.get('group-title','').strip().casefold(); u=url_of(b)
         if g != 'international' or not u: continue
-        if u.casefold() not in existing:
-            current.append(b); existing.add(u.casefold()); restored += 1
+        spec=RESTORE_CHANNELS.get(norm(name_of(b[0])))
+        if not spec or norm(spec['name']) in existing_names or u.casefold() in existing: continue
+        logo=LOGOS/spec['logo']
+        if not logo.is_file() or 'unused' in {x.casefold() for x in logo.relative_to(LOGOS).parts}: continue
+        info=f'#EXTINF:-1 group-title="International" tvg-id="{spec["id"]}" tvg-name="{spec["name"]}" tvg-logo="{RAW_BASE+spec["logo"]}" channel-id="{spec["id"]}" tvg-country="{spec["country"]}" tvg-language="{spec["language"]}",{spec["name"]}'
+        new_block=list(b); new_block[0]=info
+        current.append(new_block); existing.add(u.casefold()); existing_names.add(norm(spec['name'])); restored += 1
 
     # Deduplicate only Adult URLs; leave other groups untouched.
     seen_adult=set(); kept=[]; adult_dups=0; adult_renamed=0; moved={}
