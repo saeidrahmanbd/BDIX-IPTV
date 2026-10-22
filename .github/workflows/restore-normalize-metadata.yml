@@ -17,6 +17,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
           git checkout 676aff2adff507e75a3e5f5029e0d16007b6729f -- scripts/normalize_metadata.py
           python - <<'PY'
           from pathlib import Path
