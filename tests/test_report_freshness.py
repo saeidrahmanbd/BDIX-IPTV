@@ -62,7 +62,7 @@ class ReportFreshnessTests(unittest.TestCase):
     def tearDown(self):
         self.temp.cleanup()
 
-    def test_current_reports_match_both_playlists(self):
+    def test_current_reports_match_all_three_playlists(self):
         self.assertEqual(check_reports(self.root, now=self.now), [])
 
     def test_generated_mode_also_requires_current_stream_health(self):
