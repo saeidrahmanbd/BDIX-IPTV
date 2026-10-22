@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: playlist-review-queue-${{ github.ref }}
+  group: IPTV Playlist Update-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -74,7 +74,7 @@ jobs:
             echo 'No new Bangladesh/India candidates found.'
             exit 0
           fi
-          git commit -m 'Discovery: add BD/India review candidates to New Channels/New Backup'
+          git commit -m 'Run IPTV playlist maintenance: import new BD/India review candidates'
           for attempt in 1 2 3; do
             if git push origin HEAD:main; then exit 0; fi
             git pull --rebase origin main || { git rebase --abort || true; echo '::error::Rebase conflict; candidates not pushed.'; exit 1; }
