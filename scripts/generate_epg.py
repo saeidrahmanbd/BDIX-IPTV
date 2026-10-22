@@ -19,6 +19,7 @@ from official_epg_sources import (
 PLAYLISTS = [
     Path("IPTV-Playlist.m3u"),
     Path("BDIX-Playlist.m3u"),
+    Path("International-Playlist.m3u"),
 ]
 INACTIVE_GROUPS = {"Backup", "Test", "Not Playing"}
 MAPPING = Path("reports/epg-india-channel-mapping.csv")
