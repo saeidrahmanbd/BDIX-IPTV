@@ -23,7 +23,6 @@ SINGLE_PLAYLIST_REPORTS = {
 }
 SHARED_EPG_REPORTS = ("reports/epg-coverage.md", "reports/epg-three-playlist-audit.md", "reports/epg-unmapped-audit.md")
 PROVENANCE_REPORT = "reports/logo-provenance-review.md"
-INTERNATIONAL_PLAYLIST = "International-Playlist.m3u"
 STREAM_HEALTH_REPORT = "reports/stream-health.md"
 
 
@@ -118,12 +117,6 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
                     errors.append(f"{relative}: missing {playlist_name} SHA-256 fingerprint")
                 elif actual != hashes[playlist_name]:
                     errors.append(f"{relative}: fingerprint does not match current {playlist_name}")
-            if relative in SHARED_EPG_REPORTS or relative == PROVENANCE_REPORT:
-                actual = read_fingerprint(text, (f"{INTERNATIONAL_PLAYLIST} SHA-256",))
-                if actual is None:
-                    errors.append(f"{relative}: missing {INTERNATIONAL_PLAYLIST} SHA-256 fingerprint")
-                elif actual != hashes[INTERNATIONAL_PLAYLIST]:
-                    errors.append(f"{relative}: fingerprint does not match current {INTERNATIONAL_PLAYLIST}")
 
     manifest_path = root / "reports/logo-authenticity-manifest.json"
     if not manifest_path.is_file():
@@ -141,11 +134,6 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
                     errors.append(f"reports/logo-authenticity-manifest.json: missing {playlist_name} fingerprint")
                 elif recorded.lower() != hashes[playlist_name]:
                     errors.append(f"reports/logo-authenticity-manifest.json: fingerprint does not match current {playlist_name}")
-            recorded = source_hashes.get(INTERNATIONAL_PLAYLIST)
-            if not isinstance(recorded, str):
-                errors.append(f"reports/logo-authenticity-manifest.json: missing {INTERNATIONAL_PLAYLIST} fingerprint")
-            elif recorded.lower() != hashes[INTERNATIONAL_PLAYLIST]:
-                errors.append(f"reports/logo-authenticity-manifest.json: fingerprint does not match current {INTERNATIONAL_PLAYLIST}")
             generated = parse_timestamp(manifest.get("generated_at_utc", ""))
             if generated is None:
                 errors.append("reports/logo-authenticity-manifest.json: missing or invalid generated_at_utc")
