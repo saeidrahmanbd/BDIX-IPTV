@@ -4,7 +4,13 @@ on:
   pull_request:
     paths:
       - scripts/iptv_metadata_backfill.py
+      - scripts/backfill_cross_playlist_metadata.py
+      - scripts/repair_logo_asset_technical_quality.py
+      - scripts/repair_playlist_logos.py
       - scripts/validate_report_freshness.py
+      - IPTV-Playlist.m3u
+      - BDIX-Playlist.m3u
+      - International-Playlist.m3u
       - scripts/audit_playlist.py
       - scripts/pre_publish_gate.py
       - scripts/generate_dashboard.py
@@ -20,17 +26,27 @@ on:
       - tests/test_logo_provenance_review.py
       - tests/test_iptv_fragile_streams.py
       - tests/test_metadata_backfill.py
+      - tests/test_cross_playlist_metadata.py
+      - tests/test_epg_parallel_fetch.py
+      - tests/test_logo_asset_technical_quality.py
       - tests/test_report_freshness.py
-      - tests/test_epg_config.py
       - tests/test_language_policy.py
       - .github/workflows/iptv-maintenance.yml
       - .github/workflows/iptv-metadata-validation.yml
   push:
     branches:
       - fix/iptv-playlist-metadata-epg-freshness
+      - fix/playlist-audit-report-epg-metadata-2026-10-22
+      - fix/playlist-audit-bounded-epg-fetch-2026-10-22
     paths:
       - scripts/iptv_metadata_backfill.py
+      - scripts/backfill_cross_playlist_metadata.py
+      - scripts/repair_logo_asset_technical_quality.py
+      - scripts/repair_playlist_logos.py
       - scripts/validate_report_freshness.py
+      - IPTV-Playlist.m3u
+      - BDIX-Playlist.m3u
+      - International-Playlist.m3u
       - scripts/audit_playlist.py
       - scripts/pre_publish_gate.py
       - scripts/generate_dashboard.py
@@ -61,12 +77,15 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
-      - name: Install pytest
-        run: python -m pip install --upgrade pytest
+      - name: Install test dependencies
+        run: python -m pip install --upgrade pytest pillow
       - name: Compile changed Python tools
         run: |
           python -m py_compile \
             scripts/iptv_metadata_backfill.py \
+            scripts/backfill_cross_playlist_metadata.py \
+            scripts/repair_logo_asset_technical_quality.py \
+            scripts/repair_playlist_logos.py \
             scripts/validate_report_freshness.py \
             scripts/audit_playlist.py \
             scripts/pre_publish_gate.py \
@@ -91,5 +110,6 @@ jobs:
           python -m unittest discover -s tests -p "test_logo_provenance_review.py"
       - name: Test sensitive URL redaction
         run: python -m unittest discover -s tests -p "test_iptv_fragile_streams.py"
+
       - name: Run full pytest suite
-        run: pytest -q tests
+        run: python -m pytest -q tests

@@ -4,6 +4,7 @@ import hashlib
 import json
 import re
 import subprocess
+import unicodedata
 from collections import defaultdict, Counter
 from pathlib import Path
 from urllib.parse import unquote
@@ -71,6 +72,13 @@ def country_code(cid):
 
 def normalized_name(name):
     return re.sub(r"\s*\[[^]]+\]\s*$", "", name).strip().lower()
+
+def near_duplicate_name(name):
+    """Normalize common HD/SD/TV qualifiers for review-only near-duplicate detection."""
+    value = unicodedata.normalize("NFKD", str(name or "")).casefold()
+    value = re.sub(r"\[[^]]*\]|\([^)]*\)", " ", value)
+    value = re.sub(r"\b(hd|sd|uhd|fhd|4k|tv|channel)\b", " ", value)
+    return re.sub(r"[^a-z0-9]+", "", value)
 
 def redact_url(url):
     url = re.sub(r'(/live/)[^/?#]+/[^/?#]+/([^/?#]+\.ts)(?=$|[?#])', r'\1[REDACTED]/[REDACTED]/\2', url, flags=re.I)
@@ -285,6 +293,21 @@ for cid, items in by_id.items():
         if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS:
             primary_by_root[identity_root(cid)].append((cid, info, url))
             primary_by_name[normalized_name(display_name(info))].append((cid, info, url))
+
+# Near-duplicate names are warnings only: different IDs can represent
+# distinct legitimate feeds or HD/SD variants and must not be merged automatically.
+near_name_index = defaultdict(list)
+for info, url in primary_entries:
+    cid = identity(info)
+    key = near_duplicate_name(display_name(info))
+    if key:
+        near_name_index[key].append((cid, info, url))
+near_duplicate_name_groups = {
+    key: items
+    for key, items in near_name_index.items()
+    if len({cid for cid, _, _ in items if cid}) > 1
+    and len({display_name(info).strip().casefold() for _, info, _ in items}) > 1
+}
 cross_country_backups = []
 
 logos_by_id = defaultdict(set)
@@ -354,7 +377,6 @@ for group in category_transitions:
     last_index = max(last_index, index)
 
 alphabetical_order_issues = []
-import unicodedata
 def natural_sort_key(value):
     value = unicodedata.normalize("NFKD", value).casefold().strip()
     return [int(part) if part.isdigit() else part for part in re.split(r"(\d+)", value)]
@@ -379,7 +401,7 @@ for group in category_transitions:
 
 lines = [
     "# Playlist Audit", "", "Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.", "", "## Summary", "",
-    f"- Playlist entries: **{len(entries)}**", f"- Unique channel IDs: **{len(by_id)}**", f"- IDs with multiple streams: **{len(duplicate_ids)}**", f"- Duplicate stream URLs: **{len(duplicate_urls)}**", f"- Metadata conflicts: **{len(metadata_conflicts)}**", f"- Same-name / different-ID collisions: **{len(name_collisions)}**", f"- Cross-country backup collisions: **{len(cross_country_backups)}**", f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**", f"- Protected primary-entry changes: **{len(protected_changes)}**", f"- Logo exceptions requiring repair: **{len(logo_exceptions)}**", f"- External logo references (review only): **{len(logo_warnings)}**", f"- Logo references checked: **{sum(logo_counts.values())}**", f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**", f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**", f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**", f"- Primary entries missing tvg-country: **{len(missing_primary_country)}**", f"- Primary entries missing tvg-language: **{len(missing_primary_language)}**", f"- Malformed EXTINF entries: **{len(malformed_extinf)}**", f"- Category block-order issues: **{len(category_order_issues)}**", f"- Category registry issues: **{len(category_registry_issues)}**", f"- Alphabetical ordering issues: **{len(alphabetical_order_issues)}**", f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**", f"- Signed/tokenized stream URLs: **{len(signed_urls)}**", f"- Embedded Xtream-style credential paths (redacted): **{len(xtream_credential_paths)}**", ""]
+    f"- Playlist entries: **{len(entries)}**", f"- Unique channel IDs: **{len(by_id)}**", f"- IDs with multiple streams: **{len(duplicate_ids)}**", f"- Duplicate stream URLs: **{len(duplicate_urls)}**", f"- Metadata conflicts: **{len(metadata_conflicts)}**", f"- Same-name / different-ID collisions: **{len(name_collisions)}**", f"- Cross-country backup collisions: **{len(cross_country_backups)}**", f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**", f"- Protected primary-entry changes: **{len(protected_changes)}**", f"- Logo exceptions requiring repair: **{len(logo_exceptions)}**", f"- External logo references (review only): **{len(logo_warnings)}**", f"- Logo references checked: **{sum(logo_counts.values())}**", f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**", f"- Potential near-duplicate primary name groups (review only): **{len(near_duplicate_name_groups)}**", f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**", f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**", f"- Primary entries missing tvg-country: **{len(missing_primary_country)}**", f"- Primary entries missing tvg-language: **{len(missing_primary_language)}**", f"- Malformed EXTINF entries: **{len(malformed_extinf)}**", f"- Category block-order issues: **{len(category_order_issues)}**", f"- Category registry issues: **{len(category_registry_issues)}**", f"- Alphabetical ordering issues: **{len(alphabetical_order_issues)}**", f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**", f"- Signed/tokenized stream URLs: **{len(signed_urls)}**", f"- Embedded Xtream-style credential paths (redacted): **{len(xtream_credential_paths)}**", ""]
 lines += ["", "## Primary Metadata Completeness", "",
     "Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.",
     f"- Active primary entries missing tvg-country: **{len(missing_primary_country)}**",
@@ -408,6 +430,17 @@ if primary_duplicate_ids:
             details.append(f"{display_name(info)} [{group}] — {redact_url(url)}")
         lines.append(f"- **{cid}** — " + "; ".join(details))
 else: lines.append("None.")
+lines += ["", "## Potential Near-Duplicate Primary Names (Review Only)", ""]
+if near_duplicate_name_groups:
+    for key, items in sorted(near_duplicate_name_groups.items()):
+        details = []
+        for cid, info, url in sorted(items, key=lambda item: (display_name(item[1]).casefold(), item[0])):
+            details.append(f"{display_name(info)} [{cid}] ({attrs(info).get('group-title', '').strip()})")
+        lines.append("- " + "; ".join(details))
+    lines.append("")
+    lines.append("These are review suggestions only. The audit does not merge identities, change channel order, or remove streams.")
+else:
+    lines.append("None.")
 lines += ["", "## Primary Channel-Number Collisions", ""]
 if primary_chno_collisions:
     for chno, items in sorted(primary_chno_collisions.items()): lines.append(f"- **{chno}** — " + ", ".join(display_name(x[0]) for x in items))

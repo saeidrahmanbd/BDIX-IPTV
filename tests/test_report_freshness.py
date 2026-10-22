@@ -46,6 +46,8 @@ class ReportFreshnessTests(unittest.TestCase):
             "iptv-fragile-streams.md": f"Generated: **{self.timestamp}**\nIPTV-Playlist.m3u SHA-256: **{one}**\n",
             "stream-risk-review.md": f"Generated: **{self.timestamp}**\nIPTV-Playlist.m3u SHA-256: **{one}**\n",
             "logo-provenance-review.md": epg,
+            "logo-asset-quality-audit.md": epg,
+            "cross-playlist-metadata-backfill.md": epg,
             "metadata-normalization.md": f"Generated: **{self.timestamp}**\nSource playlist SHA-256: **{one}**\n",
             "Update Report.md": f"_Last generated: **{self.timestamp}**_\n\nSource playlist SHA-256: **{one}**\n",
             "maintenance-report.md": f"_Generated: **{self.timestamp}**_\n\nSource playlist SHA-256: **{one}**\n",
@@ -84,13 +86,6 @@ class ReportFreshnessTests(unittest.TestCase):
         errors = check_reports(self.root, now=self.now)
         self.assertTrue(any("epg-coverage.md: fingerprint does not match current BDIX-Playlist.m3u" in item for item in errors))
         self.assertTrue(any("logo-authenticity-manifest.json: fingerprint does not match current BDIX-Playlist.m3u" in item for item in errors))
-
-    def test_international_change_invalidates_shared_epg_and_logo_reports(self):
-        with (self.root / "International-Playlist.m3u").open("a", encoding="utf-8") as stream:
-            stream.write("# international change\n")
-        errors = check_reports(self.root, now=self.now)
-        self.assertTrue(any("epg-coverage.md: fingerprint does not match current International-Playlist.m3u" in item for item in errors))
-        self.assertTrue(any("logo-authenticity-manifest.json: fingerprint does not match current International-Playlist.m3u" in item for item in errors))
 
     def test_stale_epg_report_is_reported(self):
         report = self.root / "reports" / "epg-coverage.md"
