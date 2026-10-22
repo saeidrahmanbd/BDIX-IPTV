@@ -133,6 +133,8 @@ def bad_current_logo(name,old):
 
 def repair_logo(info,org):
  a=attrs(info); name=name_of(info); old=a.get('tvg-logo','').strip()
+ if a.get('group-title','').strip().casefold() in {'adult','backup','new backup','not playing'}:
+  return info,False
  p=safe_local(name)
  if p:
   desired=RAW_BASE+str(p.relative_to(LOGOS))
@@ -220,7 +222,7 @@ def main():
  idx=next((i+1 for i,x in enumerate(pre) if x.startswith('#EXTM3U')),0);pre.insert(idx,canonical);lines=pre[:]
  for b in blocks:lines.extend(b)
  PLAYLIST.write_text('\n'.join(lines).rstrip()+'\n',encoding='utf-8')
- out=[f'# International Playlist Audit','',f'- Entries: {len(blocks)}',f'- Missing tvg-id values backfilled from exact, unambiguous primary-playlist names: {ids_backfilled}',f'- Exact duplicate URLs removed: {duplicate}',f'- Malformed entries removed: {malformed}',f'- Backup entries retained unchanged: {backup_retained}',f'- Automatic Backup promotion/migration: disabled',f'- Logos repaired to repository-local assets: {repaired}',f'- Logos recovered using external/iptv-org sources: {downloaded}',f'- Entries still without a safe local logo: {unresolved}','- Stream URLs changed: 0','', '## Backup policy\\n- Existing Backup entries are retained for manual review.']
+ out=[f'# International Playlist Audit','',f'- Entries: {len(blocks)}',f'- Missing tvg-id values backfilled from exact, unambiguous primary-playlist names: {ids_backfilled}',f'- Exact duplicate URLs removed: {duplicate}',f'- Malformed entries removed: {malformed}',f'- Backup entries retained unchanged: {backup_retained}',f'- Automatic Backup promotion/migration: disabled',f'- Logos repaired to repository-local assets: {repaired}',f'- Logos recovered using external/iptv-org sources: {downloaded}',f'- Entries still without a safe local logo: {unresolved}','- Stream URLs changed: 0','', '## Backup policy\n- Existing Backup entries are retained for manual review.']
  out += [f'{i}. **{n}** | tvg-id: `{tid or "-"}` | channel-id: `{cid or "-"}` | URL: `{u}`' for i,(n,tid,cid,u) in enumerate(orphan_rows,1)]
  out += ['', '## Unresolved logos']+[f'{i}. **{n}** | tvg-id: `{tid or "-"}` | channel-id: `{cid or "-"}` | URL: `{u}`' for i,(n,tid,cid,u) in enumerate(unresolved_rows,1)]
  Path('reports').mkdir(exist_ok=True);Path('reports/international-playlist-audit.md').write_text('\n'.join(out)+'\n',encoding='utf-8')
