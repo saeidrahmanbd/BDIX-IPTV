@@ -24,15 +24,20 @@ class ReportFreshnessTests(unittest.TestCase):
             "#EXTM3U\n#EXTINF:-1 tvg-id=\"bdix.sample\",BDIX Sample\nhttps://bdix.example.invalid/live.m3u8\n",
             encoding="utf-8",
         )
+        (self.root / "International-Playlist.m3u").write_text(
+            "#EXTM3U\n#EXTINF:-1 tvg-id=\"intl.sample\",International Sample\nhttps://intl.example.invalid/live.m3u8\n",
+            encoding="utf-8",
+        )
         self.hashes = {
             name: hashlib.sha256((self.root / name).read_bytes()).hexdigest()
-            for name in ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u")
+            for name in ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u")
         }
         report_dir = self.root / "reports"
         report_dir.mkdir()
         one = self.hashes["IPTV-Playlist.m3u"]
         two = self.hashes["BDIX-Playlist.m3u"]
-        epg = f"Generated: **{self.timestamp}**\n- IPTV-Playlist.m3u SHA-256: **{one}**\n- BDIX-Playlist.m3u SHA-256: **{two}**\n"
+        three = self.hashes["International-Playlist.m3u"]
+        epg = f"Generated: **{self.timestamp}**\n- IPTV-Playlist.m3u SHA-256: **{one}**\n- BDIX-Playlist.m3u SHA-256: **{two}**\n- International-Playlist.m3u SHA-256: **{three}**\n"
         reports = {
             "playlist-audit.md": f"Generated: **{self.timestamp}**\nSource playlist SHA-256: **{one}**\n",
             "pre-publish-gate.md": f"Generated: **{self.timestamp}**\nSource playlist SHA-256: **{one}**\n",
@@ -79,6 +84,13 @@ class ReportFreshnessTests(unittest.TestCase):
         errors = check_reports(self.root, now=self.now)
         self.assertTrue(any("epg-coverage.md: fingerprint does not match current BDIX-Playlist.m3u" in item for item in errors))
         self.assertTrue(any("logo-authenticity-manifest.json: fingerprint does not match current BDIX-Playlist.m3u" in item for item in errors))
+
+    def test_international_change_invalidates_shared_epg_and_logo_reports(self):
+        with (self.root / "International-Playlist.m3u").open("a", encoding="utf-8") as stream:
+            stream.write("# international change\\n")
+        errors = check_reports(self.root, now=self.now)
+        self.assertTrue(any("epg-coverage.md: fingerprint does not match current International-Playlist.m3u" in item for item in errors))
+        self.assertTrue(any("logo-authenticity-manifest.json: fingerprint does not match current International-Playlist.m3u" in item for item in errors))
 
     def test_stale_epg_report_is_reported(self):
         report = self.root / "reports" / "epg-coverage.md"
