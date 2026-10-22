@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">My IPTV Playlist Project on GitHub</title>
+<desc id="desc">A visual overview of the IPTV, BDIX and International playlist collection, focused on metadata, EPG coverage, local logos and ongoing playlist audits.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07152f"/><stop offset=".53" stop-color="#101c3d"/><stop offset="1" stop-color="#07111f"/></linearGradient>
+  <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#50e3ff"/><stop offset="1" stop-color="#247bff"/></linearGradient>
+  <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4be7b0"/><stop offset="1" stop-color="#149c80"/></linearGradient>
+  <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c69bff"/><stop offset="1" stop-color="#7954ff"/></linearGradient>
+  <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffd76e"/><stop offset="1" stop-color="#ffab39"/></linearGradient>
+  <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M38 0H0V38" fill="none" stroke="#7ea8dd" stroke-opacity=".08" stroke-width="1"/></pattern>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity=".32"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<rect width="1600" height="900" fill="url(#grid)"/>
+<circle cx="1350" cy="125" r="270" fill="#2176ff" opacity=".08"/>
+<circle cx="1480" cy="720" r="240" fill="#16d6ae" opacity=".06"/>
+<path d="M0 700 C250 610 420 810 690 726 S1140 620 1600 700" fill="none" stroke="#4ee7ff" stroke-opacity=".1" stroke-width="2"/>
+<g transform="translate(82 60)">
+  <rect width="312" height="42" rx="21" fill="#15284b" stroke="#38537e"/>
+  <circle cx="23" cy="21" r="6" fill="#54e7b2"/>
+  <text x="42" y="27" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="2.2" fill="#c6d7f4">PERSONAL GITHUB PROJECT</text>
+</g>
+<g transform="translate(82 150)">
+  <text x="0" y="0" font-family="Arial,Helvetica,sans-serif" font-size="66" font-weight="800" fill="#ffffff">My IPTV Playlist</text>
+  <text x="0" y="76" font-family="Arial,Helvetica,sans-serif" font-size="66" font-weight="800" fill="url(#cyan)">Project</text>
+  <text x="2" y="126" font-family="Arial,Helvetica,sans-serif" font-size="23" fill="#b8c8e6">Organizing channels. Improving metadata. Maintaining a better guide.</text>
+</g>
+<g transform="translate(82 340)" filter="url(#shadow)">
+  <rect width="445" height="154" rx="22" fill="#102440" stroke="#2a89a9" stroke-width="1.7"/>
+  <rect x="0" y="0" width="9" height="154" rx="4.5" fill="url(#green)"/>
+  <rect x="28" y="27" width="52" height="62" rx="9" fill="#153e40" stroke="#4be7b0"/>
+  <path d="M43 43h19l9 9v22H43z" fill="none" stroke="#7df2c9" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M62 43v10h9" fill="none" stroke="#7df2c9" stroke-width="2.5"/>
+  <text x="92" y="53" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" fill="#ffffff">IPTV-Playlist.m3u</text>
+  <text x="92" y="82" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#a8c5e4">Main channel collection</text>
+  <rect x="28" y="110" width="178" height="25" rx="12.5" fill="#174b48"/>
+  <text x="42" y="128" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#83f2ce">CORE PLAYLIST</text>
+</g>
+<g transform="translate(82 516)" filter="url(#shadow)">
+  <rect width="445" height="154" rx="22" fill="#102440" stroke="#2779ee" stroke-width="1.7"/>
+  <rect x="0" y="0" width="9" height="154" rx="4.5" fill="url(#cyan)"/>
+  <rect x="28" y="27" width="52" height="62" rx="9" fill="#183b6b" stroke="#55bcff"/>
+  <path d="M43 43h19l9 9v22H43z" fill="none" stroke="#9cdaff" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M62 43v10h9" fill="none" stroke="#9cdaff" stroke-width="2.5"/>
+  <text x="92" y="53" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" fill="#ffffff">BDIX-Playlist.m3u</text>
+  <text x="92" y="82" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#a8c5e4">BDIX channel collection</text>
+  <rect x="28" y="110" width="178" height="25" rx="12.5" fill="#163f70"/>
+  <text x="42" y="128" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#9edcff">BDIX STREAMS</text>
+</g>
+<g transform="translate(82 692)" filter="url(#shadow)">
+  <rect width="445" height="154" rx="22" fill="#102440" stroke="#9061eb" stroke-width="1.7"/>
+  <rect x="0" y="0" width="9" height="154" rx="4.5" fill="url(#violet)"/>
+  <rect x="28" y="27" width="52" height="62" rx="9" fill="#35265e" stroke="#c0a0ff"/>
+  <path d="M43 43h19l9 9v22H43z" fill="none" stroke="#dccaff" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M62 43v10h9" fill="none" stroke="#dccaff" stroke-width="2.5"/>
+  <text x="92" y="53" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#ffffff">International-Playlist.m3u</text>
+  <text x="92" y="82" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#a8c5e4">International channel collection</text>
+  <rect x="28" y="110" width="215" height="25" rx="12.5" fill="#3c2c69"/>
+  <text x="42" y="128" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#d7c4ff">GLOBAL CHANNELS</text>
+</g>
+<g transform="translate(600 307)">
+  <text x="0" y="0" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" letter-spacing="2.5" fill="#76c9ff">WHAT I WORK ON</text>
+  <g transform="translate(0 28)">
+    <rect width="430" height="80" rx="16" fill="#111f3b" stroke="#2d466e"/>
+    <circle cx="40" cy="40" r="22" fill="#163a52"/><path d="M28 41l8 8 16-18" fill="none" stroke="#5be6b6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="78" y="35" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#fff">Channel structure &amp; sorting</text>
+    <text x="78" y="59" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#9fb3d3">Consistent categories and clean organization</text>
+  </g>
+  <g transform="translate(0 124)">
+    <rect width="430" height="80" rx="16" fill="#111f3b" stroke="#2d466e"/>
+    <circle cx="40" cy="40" r="22" fill="#45351b"/><path d="M30 32h20M30 40h20M30 48h13" fill="none" stroke="#ffd36e" stroke-width="3.5" stroke-linecap="round"/>
+    <text x="78" y="35" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#fff">Metadata consistency</text>
+    <text x="78" y="59" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#9fb3d3">Channel identity, language, country and IDs</text>
+  </g>
+  <g transform="translate(0 220)">
+    <rect width="430" height="80" rx="16" fill="#111f3b" stroke="#2d466e"/>
+    <circle cx="40" cy="40" r="22" fill="#173d4d"/><rect x="28" y="28" width="24" height="24" rx="3" fill="none" stroke="#61d6ff" stroke-width="2.5"/><path d="M28 35h24M34 24v8M46 24v8M34 41h4M42 41h4M34 46h4" stroke="#61d6ff" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="78" y="35" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#fff">EPG mapping &amp; coverage</text>
+    <text x="78" y="59" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#9fb3d3">Programme guide quality and safe source mappings</text>
+  </g>
+  <g transform="translate(0 316)">
+    <rect width="430" height="80" rx="16" fill="#111f3b" stroke="#2d466e"/>
+    <circle cx="40" cy="40" r="22" fill="#38214b"/><rect x="28" y="31" width="24" height="19" rx="3" fill="none" stroke="#dca3ff" stroke-width="2.5"/><circle cx="40" cy="40" r="4" fill="none" stroke="#dca3ff" stroke-width="2.5"/><path d="M33 28h14" stroke="#dca3ff" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="78" y="35" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#fff">Local logo integrity</text>
+    <text x="78" y="59" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#9fb3d3">Authenticity, provenance and image quality review</text>
+  </g>
+  <g transform="translate(0 412)">
+    <rect width="430" height="80" rx="16" fill="#111f3b" stroke="#2d466e"/>
+    <circle cx="40" cy="40" r="22" fill="#4b2a24"/><path d="M40 26l4 8 9 1-6 6 2 9-9-4-8 4 2-9-7-6 9-1z" fill="none" stroke="#ffb081" stroke-width="2.5" stroke-linejoin="round"/>
+    <text x="78" y="35" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#fff">Regular audits &amp; fixes</text>
+    <text x="78" y="59" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#9fb3d3">Testing changes and protecting existing stream URLs</text>
+  </g>
+</g>
+<g transform="translate(1100 330)">
+  <rect width="420" height="340" rx="24" fill="#0b1629" stroke="#334a6e" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="0" y="0" width="420" height="50" rx="24" fill="#172742"/>
+  <rect x="0" y="26" width="420" height="24" fill="#172742"/>
+  <circle cx="28" cy="25" r="6" fill="#ff6b7a"/><circle cx="49" cy="25" r="6" fill="#ffca66"/><circle cx="70" cy="25" r="6" fill="#5be6b6"/>
+  <text x="98" y="31" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#d6e5ff">BDIX-IPTV / MAINTENANCE</text>
+  <g font-family="Consolas,Menlo,monospace" font-size="15">
+    <text x="26" y="94" fill="#6be6bc">$ audit_playlist</text>
+    <text x="26" y="132" fill="#a9bce0">✓ channel identities checked</text>
+    <text x="26" y="170" fill="#a9bce0">✓ metadata fields reviewed</text>
+    <text x="26" y="208" fill="#a9bce0">✓ local logo references checked</text>
+    <text x="26" y="246" fill="#a9bce0">✓ EPG mappings reviewed</text>
+    <text x="26" y="284" fill="#a9bce0">✓ reports and tests updated</text>
+  </g>
+  <rect x="24" y="304" width="372" height="22" rx="11" fill="#123a37"/>
+  <text x="39" y="320" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#74efc8">CONTINUOUS IMPROVEMENT</text>
+</g>
+<g transform="translate(600 835)">
+  <text x="0" y="0" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#91aacd">PROJECT REPOSITORY</text>
+  <text x="0" y="30" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#f2f7ff">github.com/saeidrahmanbd/BDIX-IPTV</text>
+  <rect x="580" y="-35" width="340" height="55" rx="27" fill="url(#amber)"/>
+  <text x="750" y="0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="800" fill="#162039">BETTER PLAYLISTS, BUILT CAREFULLY</text>
+</g>
+</svg>
