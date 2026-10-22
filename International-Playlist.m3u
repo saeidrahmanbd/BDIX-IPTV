@@ -1,5 +1,6 @@
-#EXTM3U url-tvg="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml" x-tvg-url="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"
+#EXTM3U
 #PLAYLIST-STUDIO-CATEGORIES:["Bangla", "Indian", "Pakistani", "International", "Documentary & Wildlife", "Religious", "Kids", "Adult", "Backup"]
+#EXTM3U url-tvg="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml" x-tvg-url="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"
 #PLAYLIST-STUDIO-NAME:"International-Playlist"
 #EXTINF:-1 tvg-id="AakaashAath.in@SD" tvg-name="Aakaash Aath" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aakaash-aath.png" group-title="Bangla",Aakaash Aath
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/808975.ts
@@ -9,7 +10,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/78939.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/79006.ts
 #EXTINF:-1 tvg-name="ATN Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png" group-title="Bangla",ATN Bangla
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72262.ts
-#EXTINF:-1 tvg-id="ATNBanglaUK.uk" tvg-name="ATN Bangla UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png" group-title="Bangla",ATN Bangla UK
+#EXTINF:-1 tvg-id="ATNBanglaUK.uk" tvg-name="ATN Bangla UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla-uk.jpg" group-title="Bangla",ATN Bangla UK
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72255.ts
 #EXTINF:-1 tvg-name="Bangla TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bangla-tv.png" group-title="Bangla",Bangla TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/606162.ts
@@ -45,8 +46,8 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510486.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/78976.ts
 #EXTINF:-1 tvg-id="ZeeBangla.in@HD" tvg-name="Zee Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-hd.png" group-title="Bangla",Zee Bangla
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72258.ts
-#EXTINF:-1 tvg-id="9XJalwa.in" tvg-name="9X Jalwa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jalwa.png" group-title="Indian",9X Jalwa
-http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72157.ts
+#EXTINF:-1 tvg-id="9XJalwa.in" group-title="Indian" tvg-name="9X JALWA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jalwa.png",9X JALWA
+http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/53379
 #EXTINF:-1 tvg-id="9XJhakaas.in@SD" tvg-name="9X JHAKAAS" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jhakaas.png" group-title="Indian",9X JHAKAAS
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/53380
 #EXTINF:-1 tvg-id="9XM.in@SD" tvg-name="9XM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9xm.png" group-title="Indian",9XM
@@ -73,7 +74,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72155.ts
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/53363
 #EXTINF:-1 tvg-id="bigmagic.in" tvg-name="Big Magic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/big-magic-576p.png" group-title="Indian",Big Magic
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72173.ts
-#EXTINF:-1 tvg-id="Colors.in" group-title="Indian" tvg-name="Colors" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors.png",Colors
+#EXTINF:-1 group-title="Indian" tvg-id="Colors.in" tvg-name="Colors" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors.png",Colors
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/808857.ts
 #EXTINF:-1 tvg-id="ColorsCineplex.in@SD" tvg-name="Colors Cineplex" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-cineplex-hd-1080p.png" group-title="Indian",Colors Cineplex
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020166.ts
@@ -105,8 +106,8 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72195.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72196.ts
 #EXTINF:-1 tvg-id="etvhd.in" tvg-name="ETV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-plus-hd-1080p.png" group-title="Indian",ETV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34443.ts
-#EXTINF:-1 tvg-id="ETVCinema.in" tvg-name="ETV Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-cinema.png" group-title="Indian",ETV Cinema
-http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34444.ts
+#EXTINF:-1 tvg-id="ETVCinema.in" group-title="Indian" tvg-name="ETV Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-cinema.png",ETV Cinema
+http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020218.ts
 #EXTINF:-1 tvg-name="&Flix" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bflix-movies-576p.png" group-title="Indian",&Flix
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809078.ts
 #EXTINF:-1 tvg-name="Flowers TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png" group-title="Indian",Flowers TV
@@ -179,13 +180,13 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/741639.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020175.ts
 #EXTINF:-1 tvg-id="StarGold2.in@HD" tvg-name="Star Gold 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-2.png" group-title="Indian",Star Gold 2
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020177.ts
-#EXTINF:-1 tvg-id="custom.stargoldselect" group-title="Indian" tvg-name="Star Gold Select" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-select.png",Star Gold Select
+#EXTINF:-1 group-title="Indian" tvg-id="custom.stargoldselect" tvg-name="Star Gold Select" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-select.png",Star Gold Select
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020180.ts
 #EXTINF:-1 tvg-id="StarMaa.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa.png" tvg-name="Star Maa" group-title="Indian",Star Maa
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019613.ts
 #EXTINF:-1 group-title="Indian" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa-gold-576p.png" tvg-name="Star Maa Gold",Star Maa Gold
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019614.ts
-#EXTINF:-1 tvg-id="StarMaaMovies.in@SD" group-title="Indian" tvg-name="Star Maa Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa-movies.png",Star Maa Movies
+#EXTINF:-1 group-title="Indian" tvg-id="StarMaaMovies.in@SD" tvg-name="Star Maa Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa-movies.png",Star Maa Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019616.ts
 #EXTINF:-1 tvg-name="Star Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-plus.png" group-title="Indian",Star Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020182.ts
@@ -199,8 +200,8 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34543.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019859.ts
 #EXTINF:-1 tvg-id="custom.star.vijay" tvg-name="Star Vijay" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-vijay-576p.png" group-title="Indian",Star Vijay
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72120.ts
-#EXTINF:-1 tvg-id="SunMusic.in@SD" tvg-name="Sun Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-music.png" group-title="Indian",Sun Music
-http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72123.ts
+#EXTINF:-1 tvg-id="SunMusic.in@SD" group-title="Indian" tvg-name="Sun Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-music.png",Sun Music
+http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019880.ts
 #EXTINF:-1 tvg-name="Suntv" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-tv-hd-1080p.png" group-title="Indian",Suntv
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/808902.ts
 #EXTINF:-1 tvg-id="suryamovies.in" tvg-name="Surya Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Indian",Surya Movies
@@ -213,7 +214,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34733.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1021515.ts
 #EXTINF:-1 tvg-id="TarangTV.in@SD" tvg-name="Tarang TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tarang-tv-720p.png" group-title="Indian",Tarang TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1021516.ts
-#EXTINF:-1 tvg-id="AndTV.in@SD" group-title="Indian" tvg-name="&TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png",&TV
+#EXTINF:-1 group-title="Indian" tvg-id="AndTV.in@SD" tvg-name="&TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-plus.png",&TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/53373
 #EXTINF:-1 group-title="Indian" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-name="Udaya",Udaya
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019695.ts
@@ -343,10 +344,6 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46701.ts
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/10260.ts
 #EXTINF:-1 tvg-id="gacfamily.us" tvg-name="Great American Country" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="International",Great American Country
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/17640.ts
-#EXTINF:-1 tvg-id="independentfilmchannel.us" tvg-name="Ifc" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="International",Ifc
-http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9272.ts
-#EXTINF:-1 tvg-id="vh1.us" tvg-name="VH1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="International",VH1
-http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/7404.ts
 #EXTINF:-1 tvg-id="hallmarkmoviesmysteries.us" tvg-name="Hallmark Movies & Mysteries" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="International",Hallmark Movies & Mysteries
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/10289.ts
 #EXTINF:-1 group-title="International" tvg-id="custom.hbo" tvg-name="HBO" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hbo.png",HBO
@@ -357,6 +354,8 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46713.ts
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9266.ts
 #EXTINF:-1 tvg-id="hbozone.us" tvg-name="HBO Zone" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hbo.png" group-title="International",HBO Zone
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9265.ts
+#EXTINF:-1 tvg-id="independentfilmchannel.us" tvg-name="Ifc" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/ifc.png" group-title="International",Ifc
+http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9272.ts
 #EXTINF:-1 group-title="International" tvg-name="KTN TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png",KTN TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63146.ts
 #EXTINF:-1 tvg-id="lifetimenetwork.us" tvg-name="Lifetime Movie" tvg-logo="https://juicetv.app/channellogo/lmn2.png" group-title="International",Lifetime Movie
@@ -395,7 +394,7 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/2214.ts
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46691.ts
 #EXTINF:-1 group-title="International" tvg-id="tlc.us" tvg-name="TLC East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tlc.png",TLC East
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/12734.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-id="turnerclassicmovies.us" tvg-name="Turner Classic Movies" group-title="International",Turner Classic Movies
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/classic-movies.png" tvg-id="turnerclassicmovies.us" tvg-name="Turner Classic Movies" group-title="International",Turner Classic Movies
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/66242.ts
 #EXTINF:-1 group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/vh1-720p-dc47af6a4c.png" tvg-id="vh1.us" tvg-name="VH1",VH1
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46705.ts
@@ -411,7 +410,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809044.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/539493.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-id="blaze.uk" tvg-name="Blaze" group-title="Documentary & Wildlife",Blaze
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/53754.ts
-#EXTINF:-1 tvg-id="custom.cooking.channel" tvg-name="Cooking Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-cooking-channel.svg" group-title="Documentary & Wildlife",Cooking Channel
+#EXTINF:-1 tvg-id="custom.cooking.channel" tvg-name="Cooking Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-cooking-channel.png" group-title="Documentary & Wildlife",Cooking Channel
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9229.ts
 #EXTINF:-1 tvg-id="destinationamerica.us" tvg-name="Destination America" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Documentary & Wildlife",Destination America
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/14222.ts
@@ -437,8 +436,6 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/2206.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1155473.ts
 #EXTINF:-1 tvg-id="custom.food.network" tvg-name="Food Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/food-network.png" group-title="Documentary & Wildlife",Food Network
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/7323.ts
-#EXTINF:-1 tvg-id="travel.us" tvg-name="Travel Channel East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-channel.png" group-title="Documentary & Wildlife",Travel Channel East
-http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9315.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hgtv.png" tvg-id="custom.hgtv" tvg-name="HGTV" group-title="Documentary & Wildlife",HGTV
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46717.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history.png" tvg-id="custom.history.tv" tvg-name="history" group-title="Documentary & Wildlife",history
@@ -473,6 +470,8 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/31150.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34434.ts
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-name="TLC World" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tlc.png",TLC World
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63159.ts
+#EXTINF:-1 tvg-id="travel.us" tvg-name="Travel Channel East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-channel.png" group-title="Documentary & Wildlife",Travel Channel East
+http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9315.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" tvg-id="truecrimenetwork.us" tvg-name="True Crime Network" group-title="Documentary & Wildlife",True Crime Network
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/121130.ts
 #EXTINF:-1 tvg-id="worldfishingnetwork.us" tvg-name="World Fishing Network" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" group-title="Documentary & Wildlife",World Fishing Network
@@ -543,7 +542,7 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/47349.ts
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9807.ts
 #EXTINF:-1 group-title="Kids" tvg-id="nickhdplus.in" tvg-name="Nick Plus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick.png",Nick Plus
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72232.ts
-#EXTINF:-1 tvg-id="SonyYay.in@SD" group-title="Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-yay-1080p.png" tvg-name="Sony Yay",Sony Yay
+#EXTINF:-1 group-title="Kids" tvg-id="SonyYay.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-yay-1080p.png" tvg-name="Sony Yay",Sony Yay
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019612.ts
 #EXTINF:-1 tvg-name="Adult Tiny4K 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",Adult Tiny4K 1
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1393413.ts
@@ -731,15 +730,15 @@ http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73854
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73818
 #EXTINF:-1 tvg-name="XXX: XY MAX" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Adult",XXX: XY MAX
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/73823
-#EXTINF:-1 tvg-id="9XJalwa.in" group-title="Backup" tvg-name="9X JALWA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jalwa.png",9X JALWA
-http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/53379
-#EXTINF:-1 tvg-id="9XJhakaas.in@SD" group-title="Backup" tvg-name="9X Jhakaas" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jhakaas.png",9X Jhakaas
+#EXTINF:-1 group-title="Backup" tvg-id="9XJalwa.in" tvg-name="9X Jalwa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jalwa.png",9X Jalwa
+http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72157.ts
+#EXTINF:-1 group-title="Backup" tvg-id="9XJhakaas.in@SD" tvg-name="9X Jhakaas" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jhakaas.png",9X Jhakaas
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510494.ts
-#EXTINF:-1 tvg-id="9XTashan.in@SD" group-title="Backup" tvg-name="9X Tashan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-tashan.png",9X Tashan
+#EXTINF:-1 group-title="Backup" tvg-id="9XTashan.in@SD" tvg-name="9X Tashan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-tashan.png",9X Tashan
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809074.ts
 #EXTINF:-1 group-title="Backup" tvg-name="Aaj Entertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aaj-entertainment.png",Aaj Entertainment
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63200.ts
-#EXTINF:-1 tvg-id="AnimalPlanet.in@SD" group-title="Backup" tvg-name="Animal Planet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png",Animal Planet
+#EXTINF:-1 group-title="Backup" tvg-id="AnimalPlanet.in@SD" tvg-name="Animal Planet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png",Animal Planet
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63170.ts
 #EXTINF:-1 group-title="Backup" tvg-id="AnimalPlanet.in@SD" tvg-name="Animal Planet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png",Animal Planet
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72168.ts
@@ -751,11 +750,11 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63196.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63220.ts
 #EXTINF:-1 group-title="Backup" tvg-name="ARY MUSIC" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png",ARY MUSIC
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23581
-#EXTINF:-1 tvg-id="custom.asianet" group-title="Backup" tvg-name="Asianet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asianet-576p.png",Asianet
+#EXTINF:-1 group-title="Backup" tvg-id="custom.asianet" tvg-name="Asianet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asianet-576p.png",Asianet
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/364793.ts
 #EXTINF:-1 group-title="Backup" tvg-name="ATN Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png",ATN Bangla
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/76197.ts
-#EXTINF:-1 tvg-id="B4UMusic.in@India" group-title="Backup" tvg-name="B4U Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png",B4U Music
+#EXTINF:-1 group-title="Backup" tvg-id="B4UMusic.in@India" tvg-name="B4U Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-music.png",B4U Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020718.ts
 #EXTINF:-1 group-title="Backup" tvg-name="Bol Entertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bol-entertainment.png",Bol Entertainment
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63184.ts
@@ -769,9 +768,9 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019651.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34445.ts
 #EXTINF:-1 group-title="Backup" tvg-name="Discovery World" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png",Discovery World
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/551754.ts
-#EXTINF:-1 tvg-id="ETVCinema.in" group-title="Backup" tvg-name="ETV Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-cinema.png",ETV Cinema
-http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020218.ts
-#EXTINF:-1 tvg-id="ETVCinema.in" group-title="Backup" tvg-name="ETV Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-cinema.png",ETV Cinema
+#EXTINF:-1 group-title="Backup" tvg-id="ETVCinema.in" tvg-name="ETV Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-cinema.png",ETV Cinema
+http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34444.ts
+#EXTINF:-1 group-title="Backup" tvg-id="ETVCinema.in" tvg-name="ETV Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-cinema.png",ETV Cinema
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/551755.ts
 #EXTINF:-1 group-title="Backup" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-geminimovies.png" tvg-name="Gemini Movies",Gemini Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019591.ts
@@ -799,7 +798,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1020224.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63212.ts
 #EXTINF:-1 group-title="Backup" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png" tvg-name="Nat Geo",Nat Geo
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019604.ts
-#EXTINF:-1 tvg-id="NationalGeographicWild.in@SD" group-title="Backup" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png" tvg-name="Nat Geo Wild",Nat Geo Wild
+#EXTINF:-1 group-title="Backup" tvg-id="NationalGeographicWild.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png" tvg-name="Nat Geo Wild",Nat Geo Wild
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019605.ts
 #EXTINF:-1 group-title="Backup" tvg-id="NationalGeographicWild.in@SD" tvg-name="Nat Geo Wild" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png",Nat Geo Wild
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510419.ts
@@ -807,7 +806,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510419.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72111.ts
 #EXTINF:-1 group-title="Backup" tvg-id="NationalGeographicWild.in@SD" tvg-name="Nat Geo Wild" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png",Nat Geo Wild
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72219.ts
-#EXTINF:-1 tvg-id="NationalGeographicWild.in@SD" group-title="Backup" tvg-name="Nat Geo Wild" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png",Nat Geo Wild
+#EXTINF:-1 group-title="Backup" tvg-id="NationalGeographicWild.in@SD" tvg-name="Nat Geo Wild" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png",Nat Geo Wild
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/808783.ts
 #EXTINF:-1 group-title="Backup" tvg-id="natgeo.us" tvg-name="National Geographic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png",National Geographic
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9277.ts
@@ -833,7 +832,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72114.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/418616.ts
 #EXTINF:-1 group-title="Backup" tvg-name="Sony BBC Earth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-bbc-earth.png",Sony BBC Earth
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510469.ts
-#EXTINF:-1 tvg-id="SonyYay.in@SD" group-title="Backup" tvg-name="Sony Yay" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-yay-1080p.png",Sony Yay
+#EXTINF:-1 group-title="Backup" tvg-id="SonyYay.in@SD" tvg-name="Sony Yay" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-yay-1080p.png",Sony Yay
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510464.ts
 #EXTINF:-1 group-title="Backup" tvg-id="SonyYay.in@SD" tvg-name="Sony Yay" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-yay-1080p.png",Sony Yay
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72153.ts
@@ -841,11 +840,11 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72153.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019615.ts
 #EXTINF:-1 group-title="Backup" tvg-name="Star Maa Gold" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa-gold-576p.png",Star Maa Gold
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34433.ts
-#EXTINF:-1 tvg-id="StarMaaMovies.in@SD" group-title="Backup" tvg-name="Star Maa Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa-movies.png",Star Maa Movies
+#EXTINF:-1 group-title="Backup" tvg-id="StarMaaMovies.in@SD" tvg-name="Star Maa Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa-movies.png",Star Maa Movies
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/551217.ts
-#EXTINF:-1 tvg-id="SunMusic.in@SD" group-title="Backup" tvg-name="Sun Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-music.png",Sun Music
-http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019880.ts
-#EXTINF:-1 tvg-id="TarangMusic.in@SD" group-title="Backup" tvg-name="Tarang Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tarang-music.png",Tarang Music
+#EXTINF:-1 group-title="Backup" tvg-id="SunMusic.in@SD" tvg-name="Sun Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-music.png",Sun Music
+http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72123.ts
+#EXTINF:-1 group-title="Backup" tvg-id="TarangMusic.in@SD" tvg-name="Tarang Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tarang-music.png",Tarang Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/343364.ts
 #EXTINF:-1 group-title="Backup" tvg-id="TarangTV.in@SD" tvg-name="Tarang TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tarang-tv-720p.png",Tarang TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/149511.ts
@@ -857,6 +856,8 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63109.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510509.ts
 #EXTINF:-1 group-title="Backup" tvg-name="Udaya Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png",Udaya Music
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510507.ts
+#EXTINF:-1 group-title="Backup" tvg-id="vh1.us" tvg-name="VH1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/vh1-720p-dc47af6a4c.png",VH1
+http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/7404.ts
 #EXTINF:-1 group-title="Backup" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinemalu-hd-1080p.png" tvg-name="Zee Cinemalu",Zee Cinemalu
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019634.ts
 #EXTINF:-1 group-title="Backup" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinemalu-hd-1080p.png" tvg-name="Zee Cinemalu",Zee Cinemalu
@@ -865,5 +866,5 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019635.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019636.ts
 #EXTINF:-1 group-title="Backup" tvg-name="Zee Cinemalu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinemalu-hd-1080p.png",Zee Cinemalu
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/551765.ts
-#EXTINF:-1 tvg-id="ZeeKannada.in@SD" group-title="Backup" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-kannada.png" tvg-name="Zee Kannada",Zee Kannada
+#EXTINF:-1 group-title="Backup" tvg-id="ZeeKannada.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-kannada.png" tvg-name="Zee Kannada",Zee Kannada
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019699.ts
