@@ -1,6 +1,8 @@
 # Playlist Audit
-Generated: **2026-10-21T10:38:36.907188+00:00**
-Source playlist SHA-256: **a4c0c292c6934c2dc987cd7800792dfa85f6cf7beb90a35faeac5becd2be0d82**
+Generated: **2026-10-22T03:45:02.603636+00:00**
+Audited playlist revision: `f1f9261deea5f838911bf3cde25da24ffb49feef`
+Playlist SHA-256: `eb363a4bc8015a7f249905f6c1a6481ca41f9e8f988f34253b409a6b01234c54`
+Source playlist SHA-256: **eb363a4bc8015a7f249905f6c1a6481ca41f9e8f988f34253b409a6b01234c54**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -15,7 +17,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions requiring repair: **0**
+- Logo exceptions requiring repair: **3**
 - External logo references (review only): **0**
 - Logo references checked: **1064**
 - Duplicate primary identities: **0**
@@ -972,10 +974,10 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1064**
+- Healthy/local references: **1061**
 - External references (review only): **0**
 - missing: **0**
-- broken-local: **0**
+- broken-local: **3**
 - unsupported-format: **0**
 - invalid-dimensions: **0**
 - corrupt-image: **0**
