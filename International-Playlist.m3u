@@ -336,11 +336,11 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/10476.ts
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/13214.ts
 #EXTINF:-1 tvg-id="epixhits.us" tvg-name="Epix Hits" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international-epixhits.png" group-title="International",Epix Hits
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/12744.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/film4.png" tvg-id="film4.uk" tvg-name="Film 4" group-title="International",Film 4
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/film4.png" tvg-id="film4.uk" tvg-name="Film 4" group-title="International",Film 4
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/53702.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/fuse.png" tvg-id="fusetv.us" tvg-name="Fuse" group-title="International",Fuse
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fuse.png" tvg-id="fusetv.us" tvg-name="Fuse" group-title="International",Fuse
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46701.ts
-#EXTINF:-1 tvg-id="fxm.us" tvg-name="FXM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/fxm.png" group-title="International",FXM
+#EXTINF:-1 tvg-id="fxm.us" tvg-name="FXM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fxm.png" group-title="International",FXM
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/10260.ts
 #EXTINF:-1 tvg-id="gacfamily.us" tvg-name="Great American Country" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="International",Great American Country
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/17640.ts
@@ -354,13 +354,13 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46713.ts
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9266.ts
 #EXTINF:-1 tvg-id="hbozone.us" tvg-name="HBO Zone" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hbo.png" group-title="International",HBO Zone
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9265.ts
-#EXTINF:-1 tvg-id="independentfilmchannel.us" tvg-name="Ifc" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/ifc.png" group-title="International",Ifc
+#EXTINF:-1 tvg-id="independentfilmchannel.us" tvg-name="Ifc" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ifc.png" group-title="International",Ifc
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9272.ts
 #EXTINF:-1 group-title="International" tvg-name="KTN TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ntv.png",KTN TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63146.ts
 #EXTINF:-1 tvg-id="lifetimenetwork.us" tvg-name="Lifetime Movie" tvg-logo="https://juicetv.app/channellogo/lmn2.png" group-title="International",Lifetime Movie
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/2208.ts
-#EXTINF:-1 tvg-id="lifetimemovies.us" tvg-name="Lifetime Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/lifetimemovies.png" group-title="International",Lifetime Movies
+#EXTINF:-1 tvg-id="lifetimemovies.us" tvg-name="Lifetime Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lifetimemovies.png" group-title="International",Lifetime Movies
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/20863.ts
 #EXTINF:-1 group-title="International" tvg-id="mazhavilmanoramahd.in" tvg-name="Mazavil Manorama" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png",Mazavil Manorama
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34740.ts
@@ -396,7 +396,7 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46691.ts
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/12734.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/classic-movies.png" tvg-id="turnerclassicmovies.us" tvg-name="Turner Classic Movies" group-title="International",Turner Classic Movies
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/66242.ts
-#EXTINF:-1 group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/vh1-720p-dc47af6a4c.png" tvg-id="vh1.us" tvg-name="VH1",VH1
+#EXTINF:-1 group-title="International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vh1.png" tvg-id="vh1.us" tvg-name="VH1",VH1
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46705.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-id="americanheroeschannel.us" tvg-name="American Heroes Channel" group-title="Documentary & Wildlife",American Heroes Channel
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/10456.ts
@@ -430,7 +430,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/808980.ts
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46212.ts
 #EXTINF:-1 tvg-id="discovery.in" tvg-name="Discovery World" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png" group-title="Documentary & Wildlife",Discovery World
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72191.ts
-#EXTINF:-1 tvg-id="disneychannel.us" tvg-name="Disney Channel East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" group-title="Documentary & Wildlife",Disney Channel East
+#EXTINF:-1 tvg-id="disneychannel.us" tvg-name="Disney Channel East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-east.png" group-title="International",Disney Channel East
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/2206.ts
 #EXTINF:-1 tvg-id="FoodFood.in@SD" tvg-name="Food Food" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/food-food.png" group-title="Documentary & Wildlife",Food Food
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1155473.ts
@@ -532,7 +532,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72172.ts
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/57347.ts
 #EXTINF:-1 group-title="Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-jr.png" tvg-id="custom.disney.jr" tvg-name="Disney Jr",Disney Jr
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/41960.ts
-#EXTINF:-1 group-title="Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/disney-xd-576p-010b4670bf.png" tvg-id="disneychannel.us" tvg-name="Disney XD",Disney XD
+#EXTINF:-1 group-title="Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-xd.png" tvg-id="DisneyXD.us" tvg-name="Disney XD",Disney XD
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/75621.ts
 #EXTINF:-1 group-title="Kids" tvg-id="nick.in" tvg-name="Nick" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick.png",Nick
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510421.ts
