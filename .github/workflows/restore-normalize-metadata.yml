@@ -1,0 +1,34 @@
+name: Restore normalize_metadata safely
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/restore-normalize-metadata.yml
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Restore previous full implementation and canonical Channel S UK ID
+        shell: bash
+        run: |
+          set -euo pipefail
+          git checkout 676aff2adff507e75a3e5f5029e0d16007b6729f -- scripts/normalize_metadata.py
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('scripts/normalize_metadata.py')
+          s=p.read_text(encoding='utf-8')
+          s=s.replace('"Channel S UK": "custom.channel.s.uk"', '"Channel S UK": "ChannelS.uk@679aa9"')
+          p.write_text(s, encoding='utf-8')
+          PY
+          python -m py_compile scripts/normalize_metadata.py
+          rm .github/workflows/restore-normalize-metadata.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scripts/normalize_metadata.py .github/workflows/restore-normalize-metadata.yml
+          git commit -m 'Restore full metadata normalizer and canonical Channel S UK ID'
+          git push origin main
