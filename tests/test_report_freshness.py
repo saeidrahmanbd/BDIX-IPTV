@@ -87,7 +87,7 @@ class ReportFreshnessTests(unittest.TestCase):
 
     def test_international_change_invalidates_shared_epg_and_logo_reports(self):
         with (self.root / "International-Playlist.m3u").open("a", encoding="utf-8") as stream:
-            stream.write("# international change\\n")
+            stream.write("# international change\n")
         errors = check_reports(self.root, now=self.now)
         self.assertTrue(any("epg-coverage.md: fingerprint does not match current International-Playlist.m3u" in item for item in errors))
         self.assertTrue(any("logo-authenticity-manifest.json: fingerprint does not match current International-Playlist.m3u" in item for item in errors))
