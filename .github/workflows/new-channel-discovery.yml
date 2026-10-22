@@ -37,6 +37,8 @@ jobs:
         run: |
           python scripts/normalize_metadata.py
           python scripts/repair_playlist_logos.py
+      - name: Enable review-queue audit policy
+        run: python scripts/enable_review_queue_audit.py
       - name: Validate review queues
         run: |
           python - <<'PY'
@@ -69,7 +71,7 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add IPTV-Playlist.m3u reports/channel-discovery.md logos/ reports/metadata-normalization.md reports/playlist-logo-repair-results.md
+          git add IPTV-Playlist.m3u reports/channel-discovery.md logos/ reports/metadata-normalization.md reports/playlist-logo-repair-results.md scripts/audit_playlist.py scripts/enable_review_queue_audit.py
           if git diff --cached --quiet; then
             echo 'No new Bangladesh/India candidates found.'
             exit 0
