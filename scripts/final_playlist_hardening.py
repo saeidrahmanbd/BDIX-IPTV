@@ -8,11 +8,12 @@ from pathlib import Path
 import re, sys, unicodedata
 
 PLAYLIST_ORDERS={
-    'IPTV-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Backup','Not Playing'],
+    'IPTV-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','New Channels','New Backup','Backup','Not Playing'],
     'BDIX-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Backup','Not Playing','Test'],
 }
 ATTR=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
-NON_NUMBERED={'Backup','Not Playing'}
+NON_NUMBERED={'Backup','Not Playing','New Channels','New Backup'}
+REVIEW_GROUPS={'New Channels','New Backup'}
 
 def attrs(s): return dict(ATTR.findall(s))
 def key(s):
@@ -77,7 +78,7 @@ def process(path):
    numbers=[int(attrs(r[0]).get('tvg-chno','')) for r in group_records if attrs(r[0]).get('tvg-chno','').strip().isdigit()]
    if len(numbers)!=len(group_records) or numbers!=sorted(numbers):
     errors.append('channel-number order/coverage: Bangladesh')
-  else:
+  elif g not in REVIEW_GROUPS:
    names=[(attrs(r[0]).get('tvg-name') or r[0].rsplit(',',1)[-1]).strip() for r in group_records]
    if names!=sorted(names,key=key): errors.append(f'A-Z order: {g}')
  for r in rec:
