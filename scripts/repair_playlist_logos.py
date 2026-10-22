@@ -173,10 +173,10 @@ EXTRA_DIRECT_HINTS = {
         "license_url": "https://iptv-org.github.io/channels/om/AlistiqamaTV",
     },
     "Alone": {
-        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alone_(Leftfield_Pictures_TV_series)_logo.svg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Alone_%28Leftfield_Pictures_TV_series%29_logo.svg",
         "format": "SVG",
         "page": "https://commons.wikimedia.org/wiki/File:Alone_(Leftfield_Pictures_TV_series)_logo.svg",
-        "license": "The official Alone series logo, identified on Wikimedia Commons with source attribution to history.com; this is show branding, not a separate channel-network logo.",
+        "license": "Official Alone series logo from Wikimedia Commons; sourced to the HISTORY show page. The live feed is the A+E Networks Alone channel, so the series wordmark matches the branded channel.",
         "license_url": "https://www.history.com/shows/alone",
     },
     "Zainabia Channel": {
