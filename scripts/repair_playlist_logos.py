@@ -729,6 +729,7 @@ def main():
 
     fixes_cache = {}
     report_rows = []
+    registry_updates = {}
     summary = {}
     for playlist in PLAYLISTS:
         path = Path(playlist)
@@ -775,6 +776,7 @@ def main():
             source_page = ""
             license_name = ""
             license_url = ""
+            candidate_metadata = None
 
             if not new_file and not (args.fallback_only and is_generated_fallback):
                 try:
@@ -798,6 +800,7 @@ def main():
                 try:
                     candidate, source_name = candidate_for(channel, attrs, iptv_indexes, history_index)
                     if candidate:
+                        candidate_metadata = dict(candidate)
                         source_page = candidate.get("page", "")
                         license_name = candidate.get("license", "")
                         license_url = candidate.get("license_url", "")
@@ -808,7 +811,19 @@ def main():
 
             if new_file:
                 fixes_cache[key] = new_file
-                line = set_logo(line, raw_url(new_file))
+                logo_reference = raw_url(new_file)
+                line = set_logo(line, logo_reference)
+                if candidate_metadata:
+                    channel_id = (attrs.get("tvg-id") or attrs.get("channel-id") or "").strip()
+                    attribution = candidate_metadata.get("license", "").strip()
+                    source_page = candidate_metadata.get("page", "").strip()
+                    source_asset = candidate_metadata.get("url", "").strip() or source_page
+                    note_parts = [part for part in (source_name, attribution, ("Source page: " + source_page) if source_page else "") if part]
+                    registry_updates[f"{playlist}|{channel_id}|{channel}|{logo_reference}"] = {
+                        "status": "third_party_verified",
+                        "source_url": source_asset,
+                        "notes": " ".join(note_parts),
+                    }
                 changed += 1
                 report_rows.append((playlist, line_number, channel, basename, new_file, source_name, source_page, license_name + ((" — " + license_url) if license_url else ""), "replaced"))
             else:
@@ -839,6 +854,15 @@ def main():
             "flagged_after": flagged_after, "generated_fallbacks": fallback_count,
             "unresolved": unresolved,
         }
+
+    if registry_updates:
+        try:
+            registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8")) if REGISTRY_PATH.exists() else {}
+        except Exception:
+            registry = {}
+        registry.update(registry_updates)
+        REGISTRY_PATH.parent.mkdir(parents=True, exist_ok=True)
+        REGISTRY_PATH.write_text(json.dumps(registry, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
