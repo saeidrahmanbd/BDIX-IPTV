@@ -50,7 +50,6 @@ EPG_ALIASES = {
     "ToonamiAftermathEast.us": ["ToonamiAftermath.us"],
     "DocumentaryPlus": ["plex.tv.Documentary+.plex"],
     # Reuses the prior mapped EPG identity for the same channel after ID normalization.
-    "NickBangla.bd": ["jtv1341"],
     # Verified against fresh dishtv/jiotv feeds (exact display name, current English rows).
     "Hungama.in@SD": ["143150"],
     "ZBMusic.in@HD": ["jtv3319"],
