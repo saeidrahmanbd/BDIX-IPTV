@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: new-channel-discovery-${{ github.ref }}
+  group: playlist-review-queue-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -24,6 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
@@ -43,24 +44,24 @@ jobs:
           from pathlib import Path
           p=Path('IPTV-Playlist.m3u')
           text=p.read_text(encoding='utf-8', errors='replace')
-          allowed={'Bangladesh','India'}
           blocked={'New Channels','New Backup'}
-          rows=[]
           current=None
           for line in text.splitlines():
               if line.startswith('#EXTINF:'):
                   current=line
-              elif current and line.strip().startswith(('http://','https://')):
+              elif current and line.strip().lower().startswith(('http://','https://')):
                   a=dict(re.findall(r'([A-Za-z0-9_-]+)="([^"]*)"',current))
                   g=a.get('group-title','')
                   if g in blocked:
                       country=a.get('tvg-country','').upper()
+                      cid=(a.get('tvg-id') or a.get('channel-id') or '').lower()
                       if country not in {'BD','IN'}:
                           raise SystemExit(f'Queue entry is not Bangladesh/India: {current}')
-                      if not line.strip().lower().startswith(('http://','https://')):
-                          raise SystemExit('Invalid queue URL')
+                      suffix='.bd' if country=='BD' else '.in'
+                      if not re.search(re.escape(suffix)+r'(?:@|$)',cid):
+                          raise SystemExit(f'Queue entry has mismatched country ID: {current}')
                   current=None
-          print('New Channels/New Backup country gate passed.')
+          print('New Channels/New Backup country and ID gate passed.')
           PY
       - name: Commit discovered candidates
         shell: bash
@@ -73,5 +74,10 @@ jobs:
             echo 'No new Bangladesh/India candidates found.'
             exit 0
           fi
-          git commit -m 'Run IPTV playlist maintenance: import new BD/India review candidates'
-          git push origin HEAD:main
+          git commit -m 'Discovery: add BD/India review candidates to New Channels/New Backup'
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main || { git rebase --abort || true; echo '::error::Rebase conflict; candidates not pushed.'; exit 1; }
+          done
+          echo '::error::Push failed after 3 attempts.'
+          exit 1
