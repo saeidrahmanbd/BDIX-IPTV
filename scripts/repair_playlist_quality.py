@@ -16,19 +16,19 @@ COLLISION_IDS = {
     "amc": "amc.us",
     "b4u movies": "b4umovies.in@india",
     "btv chattogram": "btvchattogram.bd",
-    "btv news": "custom.btv.news",
+    "btv news": "BTVNews.bd",
     "colors cineplex": "colorscineplex.in@sd",
     "dangal 2": "dangal2.in@sd",
     "desh tv": "deshtv.bd",
     "discovery kids": "discoverykids.au",
-    "discovery science": "custom.discovery.science",
-    "discovery turbo": "custom.discovery.turbo",
+    "discovery science": "DiscoveryScience.in",
+    "discovery turbo": "DiscoveryTurbo.in",
     "disney channel india": "disneychannel.in@hd",
     "food food": "foodfood.in@sd",
-    "hbo": "custom.hbo",
+    "hbo": "HBO.us",
     "history tv18": "historytv18.in@sd",
     "investigation discovery": "investigationdiscovery.in@sd",
-    "kolkata tv": "custom.kolkatatv",
+    "kolkata tv": "KolkataTV.in",
     "movie bangla": "moviebangla.bd",
     "movies now": "moviesnow.in@sd",
     "nexus tv": "nexustv.bd",
@@ -42,7 +42,7 @@ COLLISION_IDS = {
     "sony max": "sonymax.in@sd",
     "sony sab": "sonysab.in@hd",
     "star movies select": "starmoviesselect.in@hd",
-    "travelxp english": "custom.travelxp.english",
+    "travelxp english": "TravelxpEnglish.us",
     "zee action": "zeeaction.in",
     "zee bangla cinema": "zeebanglacinema.in@sd",
     "zee bollywood": "zeebollywood.in@sd",
@@ -117,7 +117,8 @@ def repair():
             lines[idx] = line
             changes += 1
 
-    # Keep Channel S and Channel S UK as different identities.
+    # Keep Channel S and Channel S UK as different identities. Channel S UK is
+    # now canonicalized as ChannelS.uk@679aa9; never recreate a custom.* ID.
     # Only primary Channel S UK records belong in Bangladesh. Alternate
     # streams already in Backup/Not Playing stay there and never receive a
     # primary channel number simply because their display name matches.
@@ -125,8 +126,8 @@ def repair():
         if canonical_name(display_name(line)) != "channel s uk":
             continue
         group = attrs(line).get("group-title", "").strip()
-        line = set_attr(line, "tvg-id", "custom.channel.s.uk")
-        line = set_attr(line, "channel-id", "custom.channel.s.uk")
+        line = set_attr(line, "tvg-id", "ChannelS.uk@679aa9")
+        line = set_attr(line, "channel-id", "ChannelS.uk@679aa9")
         line = set_attr(line, "tvg-language", "ben")
         line = set_attr(line, "tvg-country", "GB")
         if group in PRIMARY_EXCLUDED:
