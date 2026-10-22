@@ -17,6 +17,9 @@ on:
       - scripts/migrate_external_logos_fixed.py
       - scripts/restore_protected_review.py
       - scripts/generate_logo_authenticity_manifest.py
+      - scripts/generate_logo_provenance_review.py
+      - scripts/validate_report_freshness.py
+      - scripts/generate_epg.py
       - scripts/generate_logo_repair_summary.py
       - scripts/logo_source_catalog.py
       - reports/logo-source-registry.json
