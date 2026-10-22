@@ -3,7 +3,7 @@ name: Apply verified playlist audit fixes
 on:
   push:
     branches:
-      - fix/playlist-audit-report-epg-metadata-2026-10-22
+      - fix/playlist-audit-fast-finalize-2026-10-22
     paths-ignore:
       - IPTV-Playlist.m3u
       - BDIX-Playlist.m3u
@@ -79,30 +79,15 @@ jobs:
       - name: Fill only unambiguous secondary-playlist country/language gaps
         run: python scripts/backfill_cross_playlist_metadata.py
 
-      - name: Regenerate the shared EPG guide conservatively
+      - name: Preserve the known-good shared EPG guide
         shell: bash
         run: |
           set -euo pipefail
-          cp epg/epg.xml /tmp/bdix-epg-previous.xml
-          if python scripts/fetch_iptv_org_epg.py && python scripts/run_generate_epg.py \
-              && test -s epg/epg.xml && grep -q '<programme ' epg/epg.xml; then
-            cp epg/epg.xml /tmp/bdix-epg-generated.xml
-            set +e
-            python scripts/epg_publish_gate_v2.py
-            gate_status=$?
-            set -e
-            if [ "$gate_status" -eq 0 ]; then
-              echo "EPG gate passed; retaining the generated guide."
-            else
-              echo "::warning::EPG gate blocked the generated guide; restoring the previous known-good guide."
-              cp /tmp/bdix-epg-previous.xml epg/epg.xml
-            fi
-          else
-            echo "::warning::EPG source refresh/generation failed; restoring the previous guide."
-            cp /tmp/bdix-epg-previous.xml epg/epg.xml
-          fi
+          # Keep the existing schedule file for this non-network repair run.
+          # The report/coverage scripts are refreshed against its actual contents.
           test -s epg/epg.xml
           grep -q '<programme ' epg/epg.xml
+          echo "Existing known-good EPG retained; no source IDs or schedules were guessed."
 
       - name: Refresh playlist, metadata, logo, and EPG reports
         shell: bash
