@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlsplit
 
-PLAYLISTS = ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u")
+PLAYLISTS = ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u")
 MANIFEST = Path("reports/logo-authenticity-manifest.json")
 OUT = Path("reports/logo-provenance-review.md")
 
@@ -18,7 +18,8 @@ def build_report(manifest, playlist_hashes, generated_at=None, limit=40):
     lines = [
         "# Logo Provenance Review", "",
         f"Generated: **{generated_at}**", "",
-        "This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.", "",
+        "This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.",
+        "Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.", "",
         "## Source playlist fingerprints", "",
     ]
     for playlist in PLAYLISTS:
