@@ -74,6 +74,7 @@ EPG_LOCKS = {
 REPORT = Path("reports/epg-coverage.md")
 THREE_PLAYLIST_REPORT = Path("reports/epg-three-playlist-audit.md")
 SOURCES = [
+    "https://free-epg.de/api/epg/bd.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz", "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz", "https://iptv-epg.org/files/epg-in.xml.gz",
     "https://i.mjh.nz/SamsungTVPlus/in.xml", "https://i.mjh.nz/SamsungTVPlus/us.xml", "https://epg.pw/xmltv/epg_IN.xml",

@@ -4,6 +4,7 @@ import epg_coverage
 import augment_epg_mapping_from_additional_sources
 
 ADDITIONAL_SOURCES = [
+    "https://free-epg.de/api/epg/bd.xml.gz",
     "https://epg.lat/files/in.xml.gz",
     "https://epg.lat/files/us.xml.gz",
     "https://www.free-epg.de/api/epg/in.xml.gz",
