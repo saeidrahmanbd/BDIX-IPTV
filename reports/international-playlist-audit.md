@@ -4,20 +4,14 @@
 - Missing tvg-id values backfilled from exact, unambiguous primary-playlist names: 0
 - Exact duplicate URLs removed: 0
 - Malformed entries removed: 0
-- Backup entries migrated: 180
-- Remaining true orphan backups: 6
-- Logos repaired to repository-local assets: 550
+- Backup entries retained unchanged: 200
+- Automatic Backup promotion/migration: disabled
+- Logos repaired to repository-local assets: 0
 - Logos recovered using external/iptv-org sources: 0
 - Entries still without a safe local logo: 47
 - Stream URLs changed: 0
 
-## Remaining orphan backups
-1. **KTV** | tvg-id: `ktvhd.in` | channel-id: `ktvhd.in` | URL: `http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72109.ts`
-2. **Maa Movies** | tvg-id: `maamovieshd.in` | channel-id: `maamovieshd.in` | URL: `http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34438.ts`
-3. **Probashi TV** | tvg-id: `ProbashiTV.bd` | channel-id: `ProbashiTV.bd` | URL: `http://158.69.24.53:8080/probashi_tv/tracks-v1a1/mono.m3u8`
-4. **Stingray Hit List** | tvg-id: `StingrayHitList.ca` | channel-id: `StingrayHitList.ca` | URL: `https://d39g1vxj2ef6in.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/master.m3u8?ads.xumo_channelId=88883054`
-5. **Udaya Music** | tvg-id: `SunUdayaMusic.in` | channel-id: `SunUdayaMusic.in` | URL: `http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510507.ts`
-6. **Музыка 1 International** | tvg-id: `Kino1International.ru` | channel-id: `Kino1International.ru` | URL: `https://kino-1.catcast.tv/content/37745/index.m3u8`
+## Backup policy\n- Existing Backup entries are retained for manual review.
 
 ## Unresolved logos
 1. **24/7 XXX 1** | tvg-id: `custom.24-7-xxx-1` | channel-id: `custom.24-7-xxx-1` | URL: `http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791439.ts`
@@ -69,8 +63,7 @@
 47. **Xxx: Xy Mix HD** | tvg-id: `custom.xxx-xy-mix-hd` | channel-id: `custom.xxx-xy-mix-hd` | URL: `http://dejatedemamadas.neospaxy.top:8080/0176373462111/gcm6isz6sn5i/74003`
 
 
-## Primary/Backup reconciliation
-- Known pre-classification backups restored to Backup: 47
-- Genuine orphan backups promoted because no primary existed: 25
-- Existing backups retained because a primary exists: 22
-- Duplicate primary copies moved to Backup: 172
+## Backup preservation
+- Historical Backup URLs restored to Backup: 25
+- Backup rows are not automatically promoted or migrated.
+- Duplicate primary copies moved to Backup for uniqueness: 0
