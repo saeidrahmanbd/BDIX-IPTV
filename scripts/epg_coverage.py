@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build and continuously improve EPG mappings from public XMLTV sources."""
 import csv, gzip, hashlib, io, json, os, re, unicodedata, urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import urlparse
 import xml.etree.ElementTree as ET
 from official_epg_sources import (
@@ -15,6 +16,10 @@ PLAYLIST = Path("IPTV-Playlist.m3u")
 MAPPING = Path("reports/epg-india-channel-mapping.csv")
 EPG_PUBLIC_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"
 EPG_PUBLISHED_PATH = Path("epg/epg.xml")
+
+# Bound source-fetch latency while allowing healthy feeds to finish concurrently.
+SOURCE_FETCH_TIMEOUT_SECONDS = 20
+SOURCE_FETCH_WORKERS = 8
 
 EPG_ALIASES = {
     "DDHimachalPradesh.in@SD": ["ts1217", "1217", "LIVETV_LIVETVCHANNEL_DD_SHIMLA"],
@@ -193,7 +198,7 @@ def parse_stamp(value):
         return dt.astimezone(timezone.utc)
     except ValueError: return None
 
-PLAYLISTS = [Path("IPTV-Playlist.m3u"), Path("BDIX-Playlist.m3u")]
+PLAYLISTS = [Path("IPTV-Playlist.m3u"), Path("BDIX-Playlist.m3u"), Path("International-Playlist.m3u")]
 INACTIVE_GROUPS = {"Backup", "Test", "Not Playing"}
 
 def playlist_records(path):
@@ -322,7 +327,7 @@ def fetch_source(url):
         return ids, future, counts, names
 
     req = urllib.request.Request(url, headers={"User-Agent": "BDIX-IPTV-EPG-Maintenance/4.0", "Accept": "application/xml,text/xml,application/gzip,*/*"})
-    with urllib.request.urlopen(req, timeout=45) as r:
+    with urllib.request.urlopen(req, timeout=SOURCE_FETCH_TIMEOUT_SECONDS) as r:
         data = r.read()
     if url.endswith(".gz") or data[:2] == b"\x1f\x8b":
         data = gzip.decompress(data)
@@ -360,6 +365,36 @@ def fetch_source(url):
             elem.clear()
     return ids, future, counts, names
 
+
+def fetch_all_sources(source_urls, max_workers=SOURCE_FETCH_WORKERS):
+    """Fetch source feeds concurrently and return results in configured order."""
+    urls = list(source_urls)
+    if not urls:
+        return [], []
+
+    results = {}
+    workers = max(1, min(int(max_workers), len(urls)))
+    with ThreadPoolExecutor(max_workers=workers, thread_name_prefix="epg-source") as pool:
+        futures = {pool.submit(fetch_source, src): src for src in urls}
+        for future in as_completed(futures):
+            src = futures[future]
+            try:
+                data = future.result()
+                ids, future_ids, counts, names = data
+                status = (
+                    source_label(src), "OK", len(ids), len(future_ids),
+                    sum(counts.values()), "",
+                )
+            except Exception as exc:
+                data = (set(), set(), defaultdict(int), defaultdict(set))
+                status = (source_label(src), "FAILED", 0, 0, 0, source_error(src, exc))
+            results[src] = (data, status)
+
+    return (
+        [results[src][0] for src in urls],
+        [results[src][1] for src in urls],
+    )
+
 def load_previous():
     out={}
     if not MAPPING.exists(): return out
@@ -381,11 +416,7 @@ def retained_mapping(is_bangladesh, old_epg, candidates):
 def main():
     channels=parse_playlist(); previous=load_previous(); source_data=[]; source_status=[]
     source_urls = configured_sources()
-    for src in source_urls:
-        try:
-            data=fetch_source(src); source_data.append(data); ids,future,counts,names=data; source_status.append((source_label(src),"OK",len(ids),len(future),sum(counts.values()),""))
-        except Exception as exc:
-            source_data.append((set(),set(),defaultdict(int),defaultdict(set))); source_status.append((source_label(src),"FAILED",0,0,0,source_error(src, exc)))
+    source_data, source_status = fetch_all_sources(source_urls)
     rows=[]
     for ch in channels:
         candidates=[]; prev=previous.get(ch["tvg_id"],{}); locked_ids=EPG_LOCKS.get(ch["tvg_id"]); is_bangladesh=(ch["group"].strip()=="Bangladesh" or bool(re.search(r"\.bd(?:@|$)", ch["tvg_id"], re.I)))
