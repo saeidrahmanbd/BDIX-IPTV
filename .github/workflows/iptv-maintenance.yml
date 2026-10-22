@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - IPTV-Playlist.m3u
+      - BDIX-Playlist.m3u
+      - International-Playlist.m3u
       - logos/**
       - .github/workflows/iptv-maintenance.yml
       - scripts/maintenance_helpers.py
@@ -11,20 +13,20 @@ on:
       - scripts/repair_iptv_audit_findings.py
       - scripts/repair_playlist_quality.py
       - scripts/repair_playlist_logos.py
+      - scripts/backfill_cross_playlist_metadata.py
+      - scripts/repair_logo_asset_technical_quality.py
       - scripts/normalize_metadata.py
       - scripts/sort_playlists.py
       - scripts/final_playlist_hardening.py
       - scripts/migrate_external_logos_fixed.py
       - scripts/restore_protected_review.py
       - scripts/generate_logo_authenticity_manifest.py
-      - scripts/generate_logo_provenance_review.py
-      - scripts/validate_report_freshness.py
-      - scripts/generate_epg.py
       - scripts/generate_logo_repair_summary.py
       - scripts/logo_source_catalog.py
       - reports/logo-source-registry.json
       - scripts/check_epg_config.py
       - scripts/epg_coverage.py
+      - scripts/generate_epg.py
       - scripts/run_generate_epg.py
       - scripts/fetch_iptv_org_epg.py
       - scripts/official_epg_sources.py
@@ -37,6 +39,8 @@ on:
       - scripts/generate_metadata_normalization_report.py
       - scripts/iptv_metadata_backfill.py
       - tests/test_metadata_backfill.py
+      - tests/test_cross_playlist_metadata.py
+      - tests/test_logo_asset_technical_quality.py
       - tests/test_report_freshness.py
       - tests/test_authorized_channel_removals.py
       - tests/test_maintenance_report_order.py
@@ -144,6 +148,7 @@ jobs:
             if grep -Eiq 'group-title="(New Channels|New Backup|New)"' IPTV-Playlist.m3u; then echo '::error::Forbidden staging playlist category detected after normalization.'; exit 1; fi
             python scripts/maintenance_helpers.py invalidate-bad-logos
             python scripts/migrate_external_logos_fixed.py
+            python scripts/repair_logo_asset_technical_quality.py --fix
             python scripts/generate_logo_authenticity_manifest.py
             python scripts/generate_logo_repair_summary.py
             python scripts/restore_protected_review.py
@@ -231,12 +236,25 @@ jobs:
             python scripts/generate_dashboard.py
             cp /tmp/bdix-epg-publish.xml epg/epg.xml
             cp /tmp/bdix-playlist-protected.m3u BDIX-Playlist.m3u
+            # Explicitly permitted metadata-only repair for auxiliary playlists.
+            # The backfill script verifies stream URL inventories remain unchanged.
+            python scripts/backfill_cross_playlist_metadata.py
+            python scripts/repair_logo_asset_technical_quality.py --fix
+            python scripts/audit_playlist.py
+            python scripts/pre_publish_gate.py
+            python scripts/epg_coverage.py
+            python scripts/generate_logo_authenticity_manifest.py
+            python scripts/generate_logo_repair_summary.py
+            python scripts/generate_logo_provenance_review.py
+            python scripts/generate_metadata_normalization_report.py
+            python scripts/generate_dashboard.py
+            python scripts/validate_report_freshness.py
             test -s epg/epg.xml
             grep -q '<programme ' epg/epg.xml
             echo "Validated EPG working-tree bytes: $(wc -c < epg/epg.xml)"
             echo "Validated EPG working-tree sha256: $(sha256sum epg/epg.xml | awk '{print $1}')"
             python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
-            git add IPTV-Playlist.m3u reports/ assets/dashboard.svg
+            git add IPTV-Playlist.m3u BDIX-Playlist.m3u International-Playlist.m3u reports/ logos/ assets/dashboard.svg
             git add -f epg/epg.xml
             STAGED_EPG_BYTES="$(git cat-file -s :epg/epg.xml)"
             echo "Staged EPG bytes: ${STAGED_EPG_BYTES}"
