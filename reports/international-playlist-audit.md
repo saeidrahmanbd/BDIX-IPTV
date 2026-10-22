@@ -1,11 +1,11 @@
 # International Playlist Audit
 
-- Entries: 881
+- Entries: 923
 - Exact duplicate URLs removed: 0
 - Malformed entries removed: 0
-- Backup entries migrated: 130
+- Backup entries migrated: 133
 - Remaining true orphan backups: 0
-- Logos repaired to repository-local assets: 0
+- Logos repaired to repository-local assets: 4
 - Logos recovered using external/iptv-org sources: 0
 - Entries still without a safe local logo: 10
 - Stream URLs changed: 0
@@ -27,6 +27,6 @@
 
 ## Primary/Backup reconciliation
 - Known pre-classification backups restored to Backup: 52
-- Genuine orphan backups promoted because no primary existed: 35
-- Existing backups retained because a primary exists: 17
+- Genuine orphan backups promoted because no primary existed: 32
+- Existing backups retained because a primary exists: 20
 - Duplicate primary copies moved to Backup: 113
