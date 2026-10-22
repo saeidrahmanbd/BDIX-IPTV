@@ -114,6 +114,12 @@ def sort_playlist(path):
     path.write_text("\n".join(preamble + [line for record in records for line in record]) + "\n", encoding="utf-8")
 
 
-paths = sys.argv[1:] or ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u"]
-for raw in paths:
-    sort_playlist(Path(raw))
+def main(argv=None):
+    """CLI entry point; safe to import from tests without executing sorting."""
+    paths = argv if argv is not None else (sys.argv[1:] or ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u"])
+    for raw in paths:
+        sort_playlist(Path(raw))
+
+
+if __name__ == "__main__":
+    main()
