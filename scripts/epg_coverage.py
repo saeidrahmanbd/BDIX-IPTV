@@ -33,31 +33,31 @@ EPG_ALIASES = {
     "new.and.pictures.hd": ["Andpictures.in@HD", "And.Pictures.Tv.Channel.Today.in2"], "SouthStation.in": ["SouthStation.in@HD"],
     "custom.epic": ["EpicTV.in@SD"], "custom.isai.aruvi.tv": ["IsaiAruvi.in@SD"], "custom.the.q": ["TheQIndia.us@SD"],
     "Star Gold Romance.in": ["StarGoldRomance.in@SD", "Star.Gold.Romance.Tv.Channel.Today.in2"],
-    "Enterr10 Bangla.in": ["ENTER10.BANGLA.in", "Enterr10Bangla.in"], "custom.colors.infinity": ["ColorsInfinity.in@HD", "ColorsInfinity.in@SD"],
-    "custom.enter10.bangla": ["Enterr10Bangla.in@SD"], "tntsports1.uk": ["TNTSport1.uk", "TNTSports1.uk", "tntsports1.uk"],
+    "Enterr10 Bangla.in": ["ENTER10.BANGLA.in", "Enterr10Bangla.in"], "ColorsInfinity.in": ["ColorsInfinity.in@HD", "ColorsInfinity.in@SD"],
+    "Enter10Bangla.in": ["Enterr10Bangla.in@SD"], "tntsports1.uk": ["TNTSport1.uk", "TNTSports1.uk", "tntsports1.uk"],
     "tntsports2.uk": ["TNTSport2.uk", "TNTSports2.uk", "tntsports2.uk"], "tntsports3.uk": ["TNTSport3.uk", "TNTSports3.uk", "tntsports3.uk"],
     "tntsports4.uk": ["TNTSport4.uk", "TNTSports4.uk", "tntsports4.uk"], "skysportsmainevent.uk": ["SkySportsMainEvent.uk", "SkySpMainEvHD.uk", "SkySpMainEv.uk"],
     "skysportspremiereleague.uk": ["SkySportsPremierLeague.uk", "SkySp.PL.HD.uk", "SkySp.PL.uk"],
 
     # Verified identities found in existing source feeds during the strict unmapped audit.
-    "custom.travelxp.english": ["Travelxp.uk"],
-    "custom.wild.flix.hindi": ["IN460000585"],
-    "custom.world.war.tv": ["WorldWarTV.uk"],
-    "custom.xxtreme.jobs.hindi": ["IN46000011Q"],
+    "TravelxpEnglish.us": ["Travelxp.uk"],
+    "WildFlixHindi.in": ["IN460000585"],
+    "WorldWarTV.us": ["WorldWarTV.uk"],
+    "XXTremeJobsHindi.in": ["IN46000011Q"],
     "custom.sony.max.2": ["143801", "LIVETV_LIVETVCHANNEL_SONY_MAX_2", "jtv483"],
     "MovieSphere.us@AU": ["Moviesphere.au"],
     "custom.bdix.cnninternationla": ["157679"],
-    "custom.toonami.aftermath.east": ["ToonamiAftermath.us"],
+    "ToonamiAftermathEast.us": ["ToonamiAftermath.us"],
     "DocumentaryPlus": ["plex.tv.Documentary+.plex"],
     # Reuses the prior mapped EPG identity for the same channel after ID normalization.
-    "custom.nick.bangla": ["jtv1341"],
+    "NickBangla.bd": ["jtv1341"],
     # Verified against fresh dishtv/jiotv feeds (exact display name, current English rows).
     "Hungama.in@SD": ["143150"],
     "ZBMusic.in@HD": ["jtv3319"],
     # Verified against current JioTV/Dish TV source IDs for the same channels.
-    "custom.amar.bangla.digital": ["jtv1962"],
-    "custom.epic.bhojpuri.digital": ["157803", "jtv3384"],
-    "custom.picture.hd": ["And.Pictures.HD.in", "142638", "jtv185"],
+    "AmarBanglaDigital.in": ["jtv1962"],
+    "EpicBhojpuriDigital.in": ["157803", "jtv3384"],
+    "Picture.in": ["And.Pictures.HD.in", "142638", "jtv185"],
 }
 
 EPG_LOCKS = {
@@ -68,7 +68,7 @@ EPG_LOCKS = {
     # ATNBangla.bd or any other domestic Bangladesh identity.
     "ATNBanglaUK.uk": ["6753"],
     "NTVEurope.bd": ["epgpw:9374"],
-    "custom.channel.s.uk": ["epgpw:12504"],
+    "ChannelS.uk@679aa9": ["epgpw:12504"],
 }
 
 REPORT = Path("reports/epg-coverage.md")
