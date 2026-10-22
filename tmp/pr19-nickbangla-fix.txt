@@ -1,1 +1,1 @@
-Temporary marker for branch commit sequencing; safe to remove in a subsequent commit.
+Temporary trigger for the one-shot maintenance fix; this file is deleted by the workflow.
