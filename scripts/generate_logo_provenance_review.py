@@ -18,7 +18,8 @@ def build_report(manifest, playlist_hashes, generated_at=None, limit=40):
     lines = [
         "# Logo Provenance Review", "",
         f"Generated: **{generated_at}**", "",
-        "This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.", "",
+        "This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.",
+        "Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.", "",
         "## Source playlist fingerprints", "",
     ]
     for playlist in PLAYLISTS:
@@ -30,6 +31,15 @@ def build_report(manifest, playlist_hashes, generated_at=None, limit=40):
             f"| {playlist} | {status.get('official_verified', 0)} | {status.get('third_party_verified', 0)} | "
             f"{status.get('generated_fallback', 0)} | {status.get('needs_review', 0)} |"
         )
+    provenance_review_count = sum(1 for item in entries if item.get("status") == "needs_review")
+    fallback_count = sum(1 for item in entries if item.get("status") == "generated_fallback")
+    lines += [
+        "", "## Overall provenance status", "",
+        f"- Status: **{'REVIEW REQUIRED' if provenance_review_count or fallback_count else 'ATTRIBUTION COMPLETE'}**",
+        f"- Logos needing attribution review: **{provenance_review_count}**",
+        f"- Unofficial fallback logos: **{fallback_count}**",
+        "- needs_review is unresolved provenance, not proof that an image is incorrect; it must not be presented as a provenance pass.",
+    ]
     review = sorted(
         (entry for entry in entries if entry.get("status") == "needs_review"),
         key=lambda item: (item.get("playlist", ""), item.get("channel_name", "").casefold(), item.get("tvg_id", "")),
