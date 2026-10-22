@@ -21,7 +21,7 @@ SINGLE_PLAYLIST_REPORTS = {
     "reports/maintenance-report.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256",)),
     "reports/playlist-logo-repair-results.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256",)),
 }
-SHARED_EPG_REPORTS = ("reports/epg-coverage.md", "reports/epg-three-playlist-audit.md", "reports/epg-unmapped-audit.md")
+SHARED_EPG_REPORTS = ("reports/epg-coverage.md", "reports/epg-three-playlist-audit.md", "reports/epg-unmapped-audit.md", "reports/logo-asset-quality-audit.md")
 PROVENANCE_REPORT = "reports/logo-provenance-review.md"
 CROSS_PLAYLIST_METADATA_REPORT = "reports/cross-playlist-metadata-backfill.md"
 STREAM_HEALTH_REPORT = "reports/stream-health.md"
