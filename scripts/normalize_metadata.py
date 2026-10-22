@@ -13,18 +13,18 @@ IDS={
   "Jalsha Movies HD": "Star.Jalsha.Movies.HD.in",
   "Desh TV": "DeshTV.bd",
   "&pictures": "AndPictures.in@SD",
-  "Ekamra Cinema": "custom.ekamra.cinema",
-  "Ekamra Manoranjan": "custom.ekamra.manoranjan",
+  "Ekamra Cinema": "EkamraCinema.bd",
+  "Ekamra Manoranjan": "EkamraManoranjan.bd",
   "Sony Max": "SonyMax.in@SD",
   "Xplor": "AndxplorHD.in",
-  "Ekamra Musiq": "custom.ekamra.musiq",
+  "Ekamra Musiq": "EkamraMusiq.bd",
   "Raj Music Telugu": "RajMusicTelugu.in@SD",
   "Zing": "Zing.in@SD",
   "HUM Masala": "HUMMasala.pk",
   "MTV India": "MTVIndia.in@SD",
   "Star Bharat": "StarBharat.in",
   "&Privé HD": "AndpriveHD.in",
-  "Al Jazeera": "custom.aljazeera.english",
+  "Al Jazeera": "AlJazeeraEnglish.qa",
   "AXN": "AXN.in@SD",
   "BBC News": "BBCNews.uk",
   "DW News": "DWNews.de",
@@ -58,7 +58,7 @@ IDS={
   "WaterBear": "WaterBear.ch",
   "EMAN TV": "EmanTv.iq",
   "Channel S UK": "ChannelS.uk@679aa9",
-  "UNITE8.1": "custom.unite8.1"
+  "UNITE8.1": "UNITE8.1.in"
 }
 LOGOS={
   "Desh TV": "desh-tv.png",

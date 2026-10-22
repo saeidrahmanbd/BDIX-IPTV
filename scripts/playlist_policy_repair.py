@@ -22,7 +22,7 @@ NO_NUMBER = {"Backup", "Not Playing"}
 BACKUP = "Backup"
 REQUIRED_RECORDS = [
     [
-        '#EXTINF:-1 channel-id="custom.gseriesdrama" tvg-id="custom.gseriesdrama" tvg-chno="23" tvg-name="G Series Drama" group-title="Bangladesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/g-series-drama.png",G Series Drama',
+        '#EXTINF:-1 channel-id="GSeriesDrama.bd" tvg-id="GSeriesDrama.bd" tvg-chno="23" tvg-name="G Series Drama" group-title="Bangladesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/g-series-drama.png",G Series Drama',
         "https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8",
     ],
     [
