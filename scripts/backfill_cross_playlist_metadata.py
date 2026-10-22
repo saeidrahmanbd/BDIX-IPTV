@@ -240,6 +240,9 @@ def main():
     lines = [
         "# Cross-Playlist Metadata Backfill", "",
         f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**", "",
+        "## Source playlist fingerprints", "",
+        *[f"- {path.name} SHA-256: **{summary[path.name]['sha256']}**" for path in PLAYLISTS],
+        "",
         "Only missing tvg-country and tvg-language values were filled. Source evidence was an exact tvg-id match or an unambiguous exact tvg-name match. Unknown or ambiguous values remain blank.",
         "The script does not modify tvg-id, tvg-name, tvg-logo, tvg-chno, group-title, stream URLs, or Backup/Not Playing entries.", "",
         "## Playlist results", "",
