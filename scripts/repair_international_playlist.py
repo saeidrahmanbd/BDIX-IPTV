@@ -25,7 +25,7 @@ def norm(s):
 def url_of(b): return next((x.strip() for x in b[1:] if x.strip().startswith(('http://','https://'))),'')
 def exact_name_key(value):
  value=unicodedata.normalize('NFKC',str(value or '')).casefold().strip()
- return re.sub(r'\\s+',' ',value)
+ return re.sub(r'\s+',' ',value)
 def build_primary_id_index(texts=None):
  # Reuse an ID only when the exact displayed name maps to one ID across
  # both existing primary playlists. No suffix stripping or fuzzy matching.
