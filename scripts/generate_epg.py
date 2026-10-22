@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Generate a playlist-aligned, conflict-free XMLTV guide from approved public EPG sources."""
 import bisect
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import csv
 import gzip
 import io
@@ -24,6 +25,10 @@ PLAYLISTS = [
 INACTIVE_GROUPS = {"Backup", "Test", "Not Playing"}
 MAPPING = Path("reports/epg-india-channel-mapping.csv")
 OUTPUT = Path("epg/epg.xml")
+
+# Bound the worst-case wait for a batch of remote XMLTV feeds.
+SOURCE_FETCH_TIMEOUT_SECONDS = 20
+SOURCE_FETCH_WORKERS = 8
 
 SOURCES = [
     "https://free-epg.de/api/epg/bd.xml.gz",
@@ -160,11 +165,41 @@ def fetch(url):
             "Accept": "application/gzip,application/xml,*/*",
         },
     )
-    with urllib.request.urlopen(req, timeout=45) as r:
+    with urllib.request.urlopen(req, timeout=SOURCE_FETCH_TIMEOUT_SECONDS) as r:
         data = r.read()
     if data[:2] == b"\x1f\x8b" or url.endswith(".gz"):
         data = gzip.decompress(data)
     return data
+
+def fetch_xmltv_sources_concurrently(source_urls, max_workers=SOURCE_FETCH_WORKERS):
+    """Fetch ordinary XMLTV feeds concurrently, preserving per-URL results and errors.
+
+    The caller still processes the returned dictionaries in the configured source
+    order, so source-priority tie-breaking and generated schedule ordering do not
+    depend on thread completion order. HUM TV / RTV use dedicated schedule
+    parsers and are intentionally excluded from generic XMLTV retrieval.
+    """
+    urls = [
+        url for url in source_urls
+        if url not in (HUM_TV_SOURCE, RTV_SOURCE)
+    ]
+    if not urls:
+        return {}, {}
+
+    workers = max(1, min(int(max_workers), len(urls)))
+    payloads = {}
+    errors = {}
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {pool.submit(fetch, url): url for url in urls}
+        for future in as_completed(futures):
+            url = futures[future]
+            try:
+                payloads[url] = future.result()
+            except Exception as exc:
+                # Isolate one bad feed; other sources remain available.
+                errors[url] = exc
+    return payloads, errors
+
 
 def playlist_channels():
     """Include primary channel IDs from all three playlists, keeping main-list names first."""
@@ -553,6 +588,16 @@ def main():
     candidates = {}
     source_stats = {}
     source_urls = configured_sources()
+    fetchable_count = sum(src not in (HUM_TV_SOURCE, RTV_SOURCE) for src in source_urls)
+    print(
+        f"EPG source fetch: {fetchable_count} XMLTV feeds, "
+        f"max_workers={SOURCE_FETCH_WORKERS}, timeout={SOURCE_FETCH_TIMEOUT_SECONDS}s"
+    )
+    source_payloads, source_errors = fetch_xmltv_sources_concurrently(source_urls)
+    print(
+        f"EPG source fetch complete: {len(source_payloads)} succeeded, "
+        f"{len(source_errors)} failed"
+    )
     for source_index, src in enumerate(source_urls):
         try:
             if src in (HUM_TV_SOURCE, RTV_SOURCE):
@@ -602,7 +647,11 @@ def main():
                         candidates.setdefault((target, source_index, source_id), []).append(rec)
                 continue
 
-            data = normalize_epgpw_source(src, fetch(src))
+            if src in source_errors:
+                raise RuntimeError(f"bounded source fetch failed: {source_errors[src]}")
+            if src not in source_payloads:
+                raise RuntimeError("source fetch returned no payload")
+            data = normalize_epgpw_source(src, source_payloads[src])
             source_stats[src] = "OK"
             for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):
                 if elem.tag != "programme":
