@@ -48,8 +48,6 @@ def process(path):
  for r in rec:
   a=attrs(r[0]); cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold(); g=a.get('group-title','').strip()
   if cid=='ultimatetv.in@sd' and g!='Backup': r[0]=set_attr(r[0],'group-title','Indian Music')
-  # Backup and Not Playing are non-numbered buckets. Remove inherited
-  # channel numbers instead of failing the maintenance run on valid records.
   if g in NON_NUMBERED and 'tvg-chno' in a:
    r[0]=remove_attr(r[0],'tvg-chno')
  def rkey(r):
@@ -86,7 +84,7 @@ def process(path):
   a=attrs(r[0]); g=a.get('group-title','').strip()
   cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold()
   name=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip().casefold()
-  if name=='channel s uk' and (g not in {'Bangladesh','Backup'} or cid!='custom.channel.s.uk'): errors.append('Channel S UK must retain its distinct identity in Bangladesh/Backup')
+  if name=='channel s uk' and (g not in {'Bangladesh','Backup'} or cid!='channels.uk@679aa9'): errors.append('Channel S UK must retain its canonical identity in Bangladesh/Backup')
   if cid=='ultimatetv.in@sd' and g not in {'Indian Music','Backup'}: errors.append('Ultimate TV must be Indian Music primary or Backup alternate')
  if errors:
   raise SystemExit(f'{path}: '+ '; '.join(errors))
