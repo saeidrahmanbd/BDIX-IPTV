@@ -1,8 +1,8 @@
 # Playlist Audit
-Generated: **2026-10-22T03:45:02.603636+00:00**
-Audited playlist revision: `f1f9261deea5f838911bf3cde25da24ffb49feef`
-Playlist SHA-256: `eb363a4bc8015a7f249905f6c1a6481ca41f9e8f988f34253b409a6b01234c54`
-Source playlist SHA-256: **eb363a4bc8015a7f249905f6c1a6481ca41f9e8f988f34253b409a6b01234c54**
+Generated: **2026-10-22T03:58:50.379509+00:00**
+Audited playlist revision: `7919fd76c9fa8ce52b200b31c15af3f0812d2da1`
+Playlist SHA-256: `addec3a4a8d31ba16ccc35375c378a3faf26983e635c0bf1615d979f1d73b4e7`
+Source playlist SHA-256: **addec3a4a8d31ba16ccc35375c378a3faf26983e635c0bf1615d979f1d73b4e7**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 
@@ -17,7 +17,7 @@ Non-destructive audit of channel identity, metadata consistency, duplicate ident
 - Cross-country backup collisions: **0**
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
-- Logo exceptions requiring repair: **3**
+- Logo exceptions requiring repair: **0**
 - External logo references (review only): **0**
 - Logo references checked: **1064**
 - Duplicate primary identities: **0**
@@ -974,10 +974,10 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1061**
+- Healthy/local references: **1064**
 - External references (review only): **0**
 - missing: **0**
-- broken-local: **3**
+- broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**
 - corrupt-image: **0**
