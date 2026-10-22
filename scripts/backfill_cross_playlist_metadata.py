@@ -128,9 +128,9 @@ def backfill_text(text, by_id, by_name):
         "ambiguous_or_unknown": 0,
     }
     current_index = None
-    for line in lines:
+    for index, line in enumerate(lines):
         if line.startswith("#EXTINF:"):
-            current_index = len(updated[:0]) if False else lines.index(line)
+            current_index = index
             continue
         if current_index is None or not line.strip().startswith(("http://", "https://")):
             continue
