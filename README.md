@@ -43,6 +43,22 @@ A curated IPTV playlist focused on **🇧🇩 Bangladeshi channels, 🇮🇳 Ind
 |:---:|:---:|:---:|:---:|
 | Consistent names, groups & IDs | Hosted in the repository | Practical fallbacks per channel | Coverage monitored |
 
+## 📺 Choose a Playlist
+
+| Playlist | Best for | Open |
+|---|---|---|
+| **IPTV-Playlist.m3u** | Main curated channel collection | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) |
+| **BDIX-Playlist.m3u** | BDIX channel collection | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u) |
+| **International-Playlist.m3u** | International channel collection | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) |
+
+<p align="center">
+  <a href="assets/iptv-project-showcase-2026-10-22.svg">
+    <img src="assets/iptv-project-showcase-2026-10-22.svg" alt="BDIX-IPTV project showcase: three playlists, organized categories, metadata, EPG and logo audits" width="100%">
+  </a>
+</p>
+
+> ⭐ **Find this project useful?** Star the repository to save it for later and help other IPTV users discover it. Follow [@saeidrahmanbd](https://github.com/saeidrahmanbd) for project updates.
+
 ---
 
 ## 🚀 Quick Start
