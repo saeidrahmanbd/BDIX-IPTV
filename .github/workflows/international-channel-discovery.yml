@@ -1,10 +1,6 @@
 name: International Channel Discovery
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - scripts/discover_international_channels.py
   schedule:
     - cron: '23 3 * * *' # 09:23 Asia/Dhaka (UTC+6)
   workflow_dispatch:
