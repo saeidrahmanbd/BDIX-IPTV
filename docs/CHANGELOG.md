@@ -98,28 +98,5 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 
 ## 2026-10-23
 
-- 🗑️ **55 channel(s) removed**
-- 🖼️ **9 logo reference(s) corrected**
-
-### Removed channels
-- 4TV News
-- 9 Plus News
-- 22Scope News
-- 24 News
-- Aadinath TV
-- Aagaaz Times
-- Aaj Ki Khabar
-- Aaseervatham TV
-- Aastha
-- Aastha Gujarati
-- Aastha Kannada
-- Aastha Prime 1
-- Aastha Tamil
-- Aastha Telugu
-- ABN Andhra Jyoti
-- ABP Ananda
-- ABP Asmita
-- ABP Ganga
-- ABP Majha
-- ABP News
+- No meaningful playlist changes detected.
 
