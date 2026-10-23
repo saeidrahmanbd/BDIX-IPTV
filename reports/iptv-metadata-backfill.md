@@ -1,12 +1,18 @@
 # IPTV Playlist Metadata Backfill
 
-Generated: **2026-10-21T10:38:36+00:00**
+Generated: **2026-10-23T08:34:36+00:00**
 
 Status: **PASS**
-Source: **current IPTV-Playlist.m3u**
-Playlist SHA-256: **a4c0c292c6934c2dc987cd7800792dfa85f6cf7beb90a35faeac5becd2be0d82**
+Sources: https://iptv-org.github.io/api/channels.json + https://iptv-org.github.io/api/feeds.json + controlled playlist category defaults
+Before playlist SHA-256: **0ce6e1a9799733fae3febaa075d00c8c19a71f5ec225525a6559bbdcdc7ad3d5**
+After playlist SHA-256: **0ce6e1a9799733fae3febaa075d00c8c19a71f5ec225525a6559bbdcdc7ad3d5**
+- Exact catalogue IDs matched: **465**
+- Entries updated: **0**
+- tvg-country fields filled: **0**
+- tvg-language fields filled: **0**
+- Category fallback entries: **171**
+- Language source: **iptv-org feed-level languages where available; controlled group defaults otherwise**
 - Active entries with remaining metadata gaps: **0**
-- This report is read-only and does not modify IPTV-Playlist.m3u.
 
 ## Remaining active metadata gaps
 
