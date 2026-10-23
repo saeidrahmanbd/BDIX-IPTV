@@ -96,3 +96,26 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 - Fox 5
 - FX TV
 
+## 2026-10-23
+
+- 🗑️ **16 channel(s) removed**
+- 🖼️ **6 logo reference(s) corrected**
+
+### Removed channels
+- Bollywood 4U
+- Grace Network
+- Jeremiah TV
+- Joshua TV
+- King TV
+- Icon Film Channel
+- Popflix
+- 60 Days In
+- Deadly Women
+- Highway Thru Hell
+- Dios Te Ve Kids
+- MINI
+- ZB Bhakti
+- Mundial
+- CBN TV USA
+- TVC Arabic Kids
+
