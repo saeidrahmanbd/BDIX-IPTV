@@ -169,7 +169,7 @@ Automated maintenance covers:
 1. 🚫 Duplicate stream URLs are not allowed.
 2. 🔐 Existing primary streams are protected from silent removal.
 3. 💾 Backup streams are not automatically deleted because of health failures.
-4. 🧭 Discovery queues are retired; only approved playlist categories are maintained.
+4. 🧭 `New Channels` and `New Backup` are active review queues used by discovery and validation; they are not retired categories.
 5. 🔍 Health failures become review candidates rather than automatic deletion decisions.
 6. 📊 Dashboard figures are generated from the current playlist and reports.
 7. 📝 Maintenance runs record quality metrics.
