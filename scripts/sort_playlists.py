@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Canonicalize and sort the selected playlist by category and natural A–Z name."""
+"""Canonicalize and sort playlists by category and natural A–Z name."""
 from pathlib import Path
 import re
 import sys
@@ -13,6 +13,12 @@ CATEGORY_ORDER = [
 ]
 RANK = {name: index for index, name in enumerate(CATEGORY_ORDER)}
 NON_NUMBERED = {"Backup", "Not Playing", "New Channels", "New Backup"}
+INTERNATIONAL_FIXED = [
+    "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
+    "Indian Entertainment", "Pakistani",
+]
+INTERNATIONAL_TAIL = ["International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup"]
+INTERNATIONAL_LEGACY = {"new channels", "new backup", "not playing", "international movies", "international music"}
 ATTRIBUTE_ORDER = (
     "tvg-id", "tvg-name", "tvg-logo", "tvg-chno",
     "channel-id", "tvg-country", "tvg-language", "group-title",
@@ -76,9 +82,28 @@ def record_url(record):
     return next((line.strip() for line in record[1:] if line.strip().startswith(("http://", "https://"))), "")
 
 
-def record_key(record):
+def international_rank(records):
+    """Return ranks with dynamic country groups between fixed and tail groups."""
+    existing_groups = {attrs(record[0]).get("group-title", "").strip() for record in records}
+    country_groups = sorted(
+        group for group in existing_groups
+        if group and group.casefold() not in INTERNATIONAL_LEGACY
+        and group not in INTERNATIONAL_FIXED
+        and group not in INTERNATIONAL_TAIL
+    )
+    ordered = INTERNATIONAL_FIXED + country_groups + INTERNATIONAL_TAIL
+    return {name: index for index, name in enumerate(ordered)}
+
+
+def record_key(record, path_name, intl_rank=None):
     a = attrs(record[0])
     group = a.get("group-title", "").strip()
+    if path_name == "International-Playlist.m3u" and intl_rank is not None:
+        rank = intl_rank
+        # Legacy staging groups are normalized to International by the
+        # discovery workflow; keep them adjacent if an old record remains.
+        group_key = "International" if group.casefold() in INTERNATIONAL_LEGACY else group
+        return (rank.get(group_key, len(rank)), natural_key(record_name(record)), record_url(record).casefold())
     return (RANK.get(group, len(RANK)), natural_key(record_name(record)), record_url(record).casefold())
 
 
@@ -100,7 +125,8 @@ def sort_playlist(path):
     if current is not None:
         records.append(current)
 
-    records.sort(key=record_key)
+    intl_rank = international_rank(records) if path.name == "International-Playlist.m3u" else None
+    records.sort(key=lambda record: record_key(record, path.name, intl_rank))
     next_number = 1
     for record in records:
         record[0] = canonical_extinf(record[0])
