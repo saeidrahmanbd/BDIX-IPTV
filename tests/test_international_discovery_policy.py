@@ -50,8 +50,17 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         group, reason, country = self.classify("Sunnah TV", "Religious", "SA", "SunnahTV.sa")
         self.assertEqual((group, reason, country), ("Religious", None, "SA"))
 
+    def test_known_islamic_religious_network_is_allowed(self):
+        group, reason, country = self.classify("MTA International", "Religious", "GB", "MTAInternational.uk")
+        self.assertEqual((group, reason, country), ("Religious", None, "GB"))
+
     def test_non_islamic_religious_channel_is_rejected(self):
         group, reason, country = self.classify("Gospel TV", "Religious", "US", "GospelTV.us")
+        self.assertIsNone(group)
+        self.assertEqual(reason, "non-Islamic religious channel")
+
+    def test_hindu_religious_channel_is_rejected_even_if_general(self):
+        group, reason, country = self.classify("Dharma TV", "General", "IN", "DharmaTV.in")
         self.assertIsNone(group)
         self.assertEqual(reason, "non-Islamic religious channel")
 
