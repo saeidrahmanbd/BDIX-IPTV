@@ -6,8 +6,6 @@ on:
       - scripts/iptv_metadata_backfill.py
       - scripts/backfill_cross_playlist_metadata.py
       - scripts/repair_logo_asset_technical_quality.py
-      - scripts/repair_playlist_logos.py
-      - scripts/repair_international_playlist.py
       - scripts/fetch_iptv_org_epg.py
       - scripts/validate_report_freshness.py
       - IPTV-Playlist.m3u
@@ -22,7 +20,7 @@ on:
       - scripts/epg_publish_gate.py
       - scripts/logo_asset_naming.py
       - scripts/generate_logo_provenance_review.py
-      - scripts/repair_playlist_logos.py
+      - scripts/generate_logo_repair_summary.py
       - scripts/generate_metadata_normalization_report.py
       - scripts/report_iptv_fragile_streams.py
       - scripts/stream_risk_review.py
@@ -50,7 +48,6 @@ on:
       - scripts/iptv_metadata_backfill.py
       - scripts/backfill_cross_playlist_metadata.py
       - scripts/repair_logo_asset_technical_quality.py
-      - scripts/repair_playlist_logos.py
       - scripts/validate_report_freshness.py
       - IPTV-Playlist.m3u
       - BDIX-Playlist.m3u
@@ -64,7 +61,7 @@ on:
       - scripts/epg_publish_gate.py
       - scripts/logo_asset_naming.py
       - scripts/generate_logo_provenance_review.py
-      - scripts/repair_playlist_logos.py
+      - scripts/generate_logo_repair_summary.py
       - scripts/generate_metadata_normalization_report.py
       - scripts/report_iptv_fragile_streams.py
       - scripts/stream_risk_review.py
@@ -72,7 +69,7 @@ on:
       - tests/test_logo_provenance_review.py
       - tests/test_iptv_fragile_streams.py
       - tests/test_metadata_backfill.py
-      - tests/test_report_freshness.py
+      - tests/test_cross_playlist_metadata.py
       - tests/test_maintenance_report_order.py
       - tests/test_logo_repair_source_hints.py
       - tests/test_language_policy.py
@@ -97,8 +94,6 @@ jobs:
             scripts/iptv_metadata_backfill.py \
             scripts/backfill_cross_playlist_metadata.py \
             scripts/repair_logo_asset_technical_quality.py \
-            scripts/repair_playlist_logos.py \
-            scripts/repair_international_playlist.py \
             scripts/fetch_iptv_org_epg.py \
             scripts/validate_report_freshness.py \
             scripts/audit_playlist.py \
@@ -109,6 +104,7 @@ jobs:
             scripts/epg_publish_gate.py \
             scripts/logo_asset_naming.py \
             scripts/generate_logo_provenance_review.py \
+            scripts/generate_logo_repair_summary.py \
             scripts/generate_metadata_normalization_report.py \
             scripts/report_iptv_fragile_streams.py \
             scripts/stream_risk_review.py
