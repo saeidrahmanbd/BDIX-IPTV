@@ -11,12 +11,18 @@ BDIX-IPTV provides optional Xtream-compatible access to the curated playlists th
 
 The workers read the public raw playlist URLs configured in their respective `wrangler.toml` files and expose Xtream-style endpoints for compatible IPTV clients.
 
+## Source tree
+
+- [`xtream-main/`](../xtream-main/) — main IPTV worker source and configuration
+- [`xtream-bdix/`](../xtream-bdix/) — BDIX worker source and configuration
+- [`xtream/`](./) — this documentation and gateway policy
+
 ## Security
 
 - Xtream credentials are supplied through deployment secrets; do not commit usernames or passwords.
 - Do not place real credentials in this repository or in example configuration files.
-- The workers do not make stream URLs public beyond the playlist data they are configured to serve.
-- Review the repository's stream-risk and audit reports before enabling a deployment.
+- The workers are downstream consumers of the published playlist data.
+- Review the repository's [stream-risk review](../reports/stream-risk-review.md), [stream-health report](../reports/stream-health.md), and [pre-publish gate](../reports/pre-publish-gate.md) before enabling a deployment.
 
 ## Deployment
 
@@ -30,4 +36,4 @@ After deployment, use the worker's documented Xtream base URL with a compatible 
 
 ## Maintenance
 
-The Xtream workers are downstream consumers of the curated playlists. Playlist discovery, metadata normalization, local-logo enforcement, EPG generation, stream health checks, and publish gates are maintained by the main repository workflows.
+The Xtream workers are downstream consumers of the curated playlists. Playlist discovery, metadata normalization, local-logo enforcement, EPG generation, stream health checks, backup-independence review, and publish gates are maintained by the main repository workflows.
