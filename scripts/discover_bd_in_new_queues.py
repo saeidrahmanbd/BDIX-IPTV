@@ -37,6 +37,17 @@ INDIA_FORBIDDEN_WORDS = {
     "quran", "hindu", "hinduism", "sanatan", "sikh", "gurbani", "gurubani",
     "church", "temple", "mosque", "masjid", "sermons", "sermon", "prayer",
 }
+INDIA_FORBIDDEN_BRANDS = re.compile(
+    r"\b(?:aad(?:i|ee)nath|aaseervatham|aastha|sadhna|sanskar|jinvani|satsang|jagran|"
+    r"bhagwat|aradhana|prarthana|divya|peace\s*tv|shubh\s*tv|aagaaz\s+times|"
+    r"aaj\s+ki\s+khabar|abp(?:\s+(?:ananda|asmita|ganga|majha|news))?|"
+    r"abn\s+andhra\s+jyoti|aaj\s+tak|times\s+now|india\s+today|news18|"
+    r"ndtv\s+profit|ndtv\s+24x7|republic(?:\s+bharat|\s+tv)?|news\s+nation|"
+    r"sudarshan\s+news|tv9(?:\s+\w+)?|zee\s+news|"
+    r"cnbc(?:\s+awaaz|\s+bajar|\s+tv18(?:\s+prime)?)?|dd\s+news|dd\s+sports|"
+    r"et\s+now|mirror\s+now|bharat\s+samachar|pratidin\s+time|amrit\s+gurbani)\b",
+    re.IGNORECASE,
+)
 BAD_HOSTS = ("proxy", "proxied", "cors", "localhost", "workers.dev", "worker.dev", "pages.dev")
 BAD_QUERY_KEYS = {"token", "auth", "authorization", "hdnts", "sig", "signature", "expires", "session", "jwt", "key"}
 QUALITY = {"uhd", "fhd", "hd", "sd", "4k", "1080p", "720p", "576p", "480p", "360p", "240p"}
@@ -93,10 +104,12 @@ def india_forbidden(a: dict[str, str], name: str) -> str | None:
     group = a.get("group-title", "").strip().casefold()
     if group in INDIA_FORBIDDEN_GROUPS:
         return f"India {group} channel is prohibited"
-    # Match category terms as standalone words to avoid false positives such as 'Sporting Goods'.
+    # Match category terms as standalone words to avoid false positives.
     for word in INDIA_FORBIDDEN_WORDS:
         if re.search(r"(?<![\w])" + re.escape(word) + r"(?![\w])", values, re.UNICODE):
             return f"India {word} channel is prohibited"
+    if INDIA_FORBIDDEN_BRANDS.search(values):
+        return "Indian News, Sports or Religious channel is prohibited (known brand/category)"
     return None
 
 
@@ -136,6 +149,45 @@ def acceptable(country: str, a: dict[str, str], name: str, url: str, reference=N
     return evaluate(country, a, name, url, reference)[0] is not None
 
 
+def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
+    """Remove prohibited Indian News/Sports/Religious rows already in review queues."""
+    lines = text.replace("\r", "").splitlines()
+    first = next((i for i, line in enumerate(lines) if line.startswith("#EXTINF:")), len(lines))
+    prefix = lines[:first]
+    blocks = []
+    if first < len(lines):
+        start = first
+        for i in range(first + 1, len(lines)):
+            if lines[i].startswith("#EXTINF:"):
+                blocks.append(lines[start:i])
+                start = i
+        blocks.append(lines[start:])
+    kept, removed = [], []
+    for block in blocks:
+        extinf_line = next((line for line in block if line.startswith("#EXTINF:")), "")
+        if not extinf_line:
+            kept.extend(block)
+            continue
+        a = attrs(extinf_line)
+        group = a.get("group-title", "").strip()
+        _, display = split_extinf(extinf_line)
+        name = (a.get("tvg-name") or display).strip()
+        ids = [a.get("tvg-id", ""), a.get("channel-id", "")]
+        id_says_india = False
+        for value in ids:
+            match = ID_CC_RE.search(value.casefold())
+            if match and match.group(1) == "in":
+                id_says_india = True
+                break
+        country_says_india = a.get("tvg-country", "").strip().upper() == "IN"
+        if group in {"New Channels", "New Backup"} and (country_says_india or id_says_india) and india_forbidden(a, name):
+            removed.append(name or "(unnamed)")
+            continue
+        kept.extend(block)
+    result = "\n".join(prefix + kept).rstrip() + "\n"
+    return result, removed
+
+
 def extinf(a: dict[str, str], name: str, group: str, country: str) -> str | None:
     cid = (a.get("tvg-id") or a.get("channel-id") or "").strip()
     if not cid or country not in COUNTRY_CODE or a.get("tvg-country", "").strip().upper() != COUNTRY_CODE[country].upper():
@@ -144,6 +196,8 @@ def extinf(a: dict[str, str], name: str, group: str, country: str) -> str | None
     if a.get("tvg-logo", "").strip():
         fields.append(f'tvg-logo="{a["tvg-logo"].strip()}"')
     fields.append(f'tvg-country="{COUNTRY_CODE[country].upper()}"')
+    if a.get("tvg-language", "").strip():
+        fields.append(f'tvg-language="{a["tvg-language"].strip()}"')
     fields.append(f'channel-id="{a.get("channel-id", cid).strip()}"')
     fields.append(f'group-title="{group}"')
     return "#EXTINF:-1 " + " ".join(fields) + "," + name
@@ -151,6 +205,10 @@ def extinf(a: dict[str, str], name: str, group: str, country: str) -> str | None
 
 def main() -> int:
     original = PLAYLIST.read_text(encoding="utf-8-sig")
+    original, purged = purge_forbidden_existing_queue_rows(original)
+    if purged:
+        PLAYLIST.write_text(original, encoding="utf-8")
+        print(f"Removed {len(purged)} prohibited Indian review-queue rows before discovery.")
     entries = parse(original)
     existing_urls = {u.casefold() for _, _, u in entries}
     existing_names = {norm(n) for _, n, _ in entries}
@@ -219,6 +277,7 @@ def main() -> int:
         "# Channel Discovery", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
         "- **STRICT POLICY: Indian News, Sports and Religious channels are prohibited and must never enter New Channels or New Backup.**",
+        f"- Existing prohibited Indian queue rows removed: **{len(purged)}**",
         f"- New channels: **{len(new_channels)}**",
         f"- New backups: **{len(new_backups)}**",
         f"- Rejected/held candidates: **{rejected}**",
@@ -230,8 +289,11 @@ def main() -> int:
     report.extend(f"- {name} ({country}) — {url}" for country, _, name, url in new_channels)
     report += ["", "## New Backups", ""]
     report.extend(f"- {name} ({country}) — {url}" for country, _, name, url in new_backups)
+    if purged:
+        report += ["", "## Existing prohibited Indian queue rows removed", ""]
+        report.extend(f"- {name}" for name in sorted(purged, key=norm))
     REPORT.write_text("\n".join(report) + "\n", encoding="utf-8")
-    print(f"Discovery: {len(new_channels)} new channels, {len(new_backups)} new backups, {rejected} rejected.")
+    print(f"Discovery: {len(new_channels)} new channels, {len(new_backups)} new backups, {rejected} rejected; purged {len(purged)} existing prohibited Indian review-queue rows.")
     return 0
 
 
