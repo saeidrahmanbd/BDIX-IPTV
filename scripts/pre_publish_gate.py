@@ -211,3 +211,15 @@ def main() -> None:
     R.parent.mkdir(parents=True, exist_ok=True)
     R.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("Pre-publish gate:", status)
+    for issue in issues:
+        print(f"::error::Pre-publish gate blocking reason: {issue}")
+    for name, group, filename in logo_bad[:20]:
+        print(f"::warning::Blocked logo reference: {name} [{group}] -> {filename}")
+    for error in queue_errors[:20]:
+        print(f"::error::Review queue: {error}")
+    if issues:
+        raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()
