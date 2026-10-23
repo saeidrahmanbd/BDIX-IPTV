@@ -15,8 +15,9 @@ on:
 permissions:
   contents: write
 
+# All workflows that can write a playlist or shared generated reports use the same queue.
 concurrency:
-  group: bdix-iptv-main-writer
+  group: iptv-playlist-main-writer
   cancel-in-progress: false
   queue: max
 
