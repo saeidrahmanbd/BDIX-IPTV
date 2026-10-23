@@ -9,143 +9,79 @@ CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "New Channels", "New Backup", "Backup", "Not Playing",
+    "New Channels", "New Backup", "Backup",
 ]
 RANK = {name: index for index, name in enumerate(CATEGORY_ORDER)}
-NON_NUMBERED = {"Backup", "Not Playing", "New Channels", "New Backup"}
+NON_NUMBERED = {"Backup", "New Channels", "New Backup"}
 INTERNATIONAL_FIXED = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani",
 ]
-INTERNATIONAL_TAIL = ["International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup"]
-INTERNATIONAL_LEGACY = {"new channels", "new backup", "not playing", "international movies", "international music"}
+INTERNATIONAL_TAIL = ["International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "New Channels", "New Backup", "Backup"]
+INTERNATIONAL_LEGACY = {"not playing", "international movies", "international music"}
 ATTRIBUTE_ORDER = (
     "tvg-id", "tvg-name", "tvg-logo", "tvg-chno",
     "channel-id", "tvg-country", "tvg-language", "group-title",
 )
 ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
-
 def natural_key(value):
     value = unicodedata.normalize("NFKD", str(value or "")).casefold().strip()
     return tuple(int(part) if part.isdigit() else part for part in re.split(r"(\d+)", value))
-
-
-def attrs(info):
-    return dict(ATTR.findall(info))
-
-
+def attrs(info): return dict(ATTR.findall(info))
 def split_head_display(info):
-    quoted = False
-    for index, char in enumerate(info):
-        if char == '"':
-            quoted = not quoted
-        elif char == "," and not quoted:
-            return info[:index], info[index:]
-    return info, ""
-
-
+    quoted=False
+    for index,char in enumerate(info):
+        if char=='"': quoted=not quoted
+        elif char=="," and not quoted: return info[:index],info[index:]
+    return info,""
 def canonical_extinf(info):
-    head, display = split_head_display(info)
-    duration = re.match(r"^#EXTINF:\S+", head)
-    if not duration:
-        return info
-    matches = list(ATTR.finditer(head))
-    if not matches:
-        return info
-    rank = {key: index for index, key in enumerate(ATTRIBUTE_ORDER)}
-    pairs = [(match.group(1), match.group(2), index) for index, match in enumerate(matches)]
-    pairs.sort(key=lambda item: (rank.get(item[0], len(rank)), item[2]))
-    return duration.group(0) + " " + " ".join(f'{key}="{value}"' for key, value, _ in pairs) + display
-
-
-def set_attr(info, key, value):
-    pattern = re.compile(rf'{re.escape(key)}="[^"]*"')
-    if pattern.search(info):
-        return pattern.sub(f'{key}="{value}"', info, count=1)
-    return re.sub(r"^(#EXTINF:\S+)", rf'\1 {key}="{value}"', info, count=1)
-
-
-def remove_attr(info, key):
-    return re.sub(rf'\s+{re.escape(key)}="[^"]*"', "", info, count=1)
-
-
+    head,display=split_head_display(info); duration=re.match(r"^#EXTINF:\S+",head)
+    if not duration:return info
+    matches=list(ATTR.finditer(head))
+    if not matches:return info
+    rank={key:index for index,key in enumerate(ATTRIBUTE_ORDER)}
+    pairs=[(m.group(1),m.group(2),i) for i,m in enumerate(matches)]; pairs.sort(key=lambda x:(rank.get(x[0],len(rank)),x[2]))
+    return duration.group(0)+" "+" ".join(f'{k}="{v}"' for k,v,_ in pairs)+display
+def set_attr(info,key,value):
+    pattern=re.compile(rf'{re.escape(key)}="[^"]*"')
+    return pattern.sub(f'{key}="{value}"',info,count=1) if pattern.search(info) else re.sub(r"^(#EXTINF:\S+)",rf'\1 {key}="{value}"',info,count=1)
+def remove_attr(info,key): return re.sub(rf'\s+{re.escape(key)}="[^"]*"',"",info,count=1)
 def record_name(record):
-    a = attrs(record[0])
-    if a.get("tvg-name", "").strip():
-        return a["tvg-name"].strip()
-    _, display = split_head_display(record[0])
-    return display.lstrip(",").strip()
-
-
-def record_url(record):
-    return next((line.strip() for line in record[1:] if line.strip().startswith(("http://", "https://"))), "")
-
-
+    a=attrs(record[0])
+    if a.get("tvg-name","").strip():return a["tvg-name"].strip()
+    _,display=split_head_display(record[0]); return display.lstrip(",").strip()
+def record_url(record): return next((line.strip() for line in record[1:] if line.strip().startswith(("http://","https://"))),"")
 def international_rank(records):
-    """Return ranks with dynamic country groups between fixed and tail groups."""
-    existing_groups = {attrs(record[0]).get("group-title", "").strip() for record in records}
-    country_groups = sorted(
-        group for group in existing_groups
-        if group and group.casefold() not in INTERNATIONAL_LEGACY
-        and group not in INTERNATIONAL_FIXED
-        and group not in INTERNATIONAL_TAIL
-    )
-    ordered = INTERNATIONAL_FIXED + country_groups + INTERNATIONAL_TAIL
-    return {name: index for index, name in enumerate(ordered)}
-
-
-def record_key(record, path_name, intl_rank=None):
-    a = attrs(record[0])
-    group = a.get("group-title", "").strip()
-    if path_name == "International-Playlist.m3u" and intl_rank is not None:
-        rank = intl_rank
-        # Legacy staging groups are normalized to International by the
-        # discovery workflow; keep them adjacent if an old record remains.
-        group_key = "International" if group.casefold() in INTERNATIONAL_LEGACY else group
-        return (rank.get(group_key, len(rank)), natural_key(record_name(record)), record_url(record).casefold())
-    return (RANK.get(group, len(RANK)), natural_key(record_name(record)), record_url(record).casefold())
-
-
+    existing_groups={attrs(record[0]).get("group-title","").strip() for record in records}
+    country_groups=sorted(group for group in existing_groups if group and group.casefold() not in INTERNATIONAL_LEGACY and group not in INTERNATIONAL_FIXED and group not in INTERNATIONAL_TAIL)
+    ordered=INTERNATIONAL_FIXED+country_groups+INTERNATIONAL_TAIL
+    return {name:index for index,name in enumerate(ordered)}
+def record_key(record,path_name,intl_rank=None):
+    a=attrs(record[0]); group=a.get("group-title","").strip()
+    if path_name=="International-Playlist.m3u" and intl_rank is not None:
+        group_key="International" if group.casefold() in INTERNATIONAL_LEGACY else group
+        return (intl_rank.get(group_key,len(intl_rank)),natural_key(record_name(record)),record_url(record).casefold())
+    return (RANK.get(group,len(RANK)),natural_key(record_name(record)),record_url(record).casefold())
 def sort_playlist(path):
-    if not path.is_file():
-        raise SystemExit(f"Playlist not found: {path}")
-    lines = path.read_text(encoding="utf-8-sig").replace("\r\n", "\n").replace("\r", "\n").splitlines()
-    preamble, records = [], []
-    current = None
+    if not path.is_file():raise SystemExit(f"Playlist not found: {path}")
+    lines=path.read_text(encoding="utf-8-sig").replace("\r\n","\n").replace("\r","\n").splitlines(); preamble=[]; records=[]; current=None
     for line in lines:
         if line.startswith("#EXTINF:"):
-            if current is not None:
-                records.append(current)
-            current = [line]
-        elif current is None:
-            preamble.append(line)
-        else:
-            current.append(line)
-    if current is not None:
-        records.append(current)
-
-    intl_rank = international_rank(records) if path.name == "International-Playlist.m3u" else None
-    records.sort(key=lambda record: record_key(record, path.name, intl_rank))
-    next_number = 1
+            if current is not None:records.append(current)
+            current=[line]
+        elif current is None:preamble.append(line)
+        else:current.append(line)
+    if current is not None:records.append(current)
+    intl_rank=international_rank(records) if path.name=="International-Playlist.m3u" else None
+    records.sort(key=lambda record:record_key(record,path.name,intl_rank)); next_number=1
     for record in records:
-        record[0] = canonical_extinf(record[0])
-        group = attrs(record[0]).get("group-title", "").strip()
-        if path.name == "IPTV-Playlist.m3u":
-            if group in NON_NUMBERED:
-                record[0] = remove_attr(record[0], "tvg-chno")
-            elif group not in {"Sports"}:
-                record[0] = set_attr(record[0], "tvg-chno", str(next_number))
-                next_number += 1
-    path.write_text("\n".join(preamble + [line for record in records for line in record]) + "\n", encoding="utf-8")
-
-
+        record[0]=canonical_extinf(record[0]); group=attrs(record[0]).get("group-title","").strip()
+        if path.name=="IPTV-Playlist.m3u":
+            if group in NON_NUMBERED:record[0]=remove_attr(record[0],"tvg-chno")
+            elif group not in {"Sports"}:record[0]=set_attr(record[0],"tvg-chno",str(next_number)); next_number+=1
+    path.write_text("\n".join(preamble+[line for record in records for line in record])+"\n",encoding="utf-8")
 def main(argv=None):
-    """CLI entry point; safe to import from tests without executing sorting."""
-    paths = argv if argv is not None else (sys.argv[1:] or ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u"])
-    for raw in paths:
-        sort_playlist(Path(raw))
-
-
-if __name__ == "__main__":
-    main()
+    paths=argv if argv is not None else (sys.argv[1:] or ["IPTV-Playlist.m3u","BDIX-Playlist.m3u","International-Playlist.m3u"])
+    for raw in paths:sort_playlist(Path(raw))
+if __name__=="__main__":main()
