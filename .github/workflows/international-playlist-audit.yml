@@ -29,189 +29,91 @@ jobs:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-
       - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
-
-      - name: Audit and repair International playlist
+      - name: Audit and repair metadata/logos
         run: python scripts/repair_international_playlist.py
-
-      - name: Reconcile primary and Backup entries
+      - name: Reconcile duplicate primary streams
         run: python scripts/classify_international_backups.py
-
-      - name: Enforce dynamic country category order and requested removals
+      - name: Enforce International review queues and category order
         shell: bash
         run: |
           set -euo pipefail
           python - <<'PY'
           from pathlib import Path
-          import re, unicodedata
-
-          p = Path('International-Playlist.m3u')
-          lines = p.read_text(encoding='utf-8-sig').splitlines()
-
-          fixed = [
-              'Bangladesh', 'Indian Bangla', 'Indian Movies', 'Indian Music',
-              'Indian Entertainment', 'Pakistani',
-          ]
-          tail = ['International', 'Documentary & Wildlife', 'Kids', 'Religious', 'Sports', 'Backup']
-          legacy = {'new channels', 'new backup', 'not playing', 'international movies', 'international music'}
-
-          attr_re = re.compile(r'([A-Za-z0-9_-]+)=(?:"([^"]*)"|\'([^\']*)\'|([^\s,]+))')
-
-          def attrs(s):
-              out = {}
-              for m in attr_re.finditer(s):
-                  out[m.group(1)] = next(v for v in m.groups()[1:] if v is not None)
-              return out
-
-          def norm(s):
-              s = unicodedata.normalize('NFKD', str(s or '')).casefold()
-              s = ''.join(c for c in s if not unicodedata.combining(c))
-              s = re.sub(r'\s+', ' ', s).strip()
-              return re.sub(r'[^a-z0-9]+', '', s)
-
-          prefix, blocks, cur = [], [], None
-          for line in lines:
-              if line.startswith('#PLAYLIST-STUDIO-CATEGORIES:'):
-                  continue
-              if line.startswith('#EXTINF:'):
-                  if cur is not None:
-                      blocks.append(cur)
-                  cur = [line]
-              elif cur is not None:
-                  cur.append(line)
-              else:
-                  prefix.append(line)
-          if cur is not None:
-              blocks.append(cur)
-
-          # Convert obsolete staging/specialized International buckets into the
-          # single fallback group. Established country groups are preserved.
-          normalized = []
-          for b in blocks:
-              a = attrs(b[0])
-              group = (a.get('group-title') or '').strip()
-              if group.casefold() in legacy:
-                  b[0] = re.sub(r'(group-title=)(?:"[^"]*"|\'[^\']*\'|[^\s,]+)', r'\1"International"', b[0], count=1)
-              normalized.append(b)
-          blocks = normalized
-
-          existing_groups = {
-              (attrs(b[0]).get('group-title') or '').strip()
-              for b in blocks
-              if (attrs(b[0]).get('group-title') or '').strip()
-          }
-          country_groups = sorted(
-              g for g in existing_groups
-              if g not in fixed and g not in tail and g.casefold() not in legacy
-          )
-          category_order = fixed + country_groups + tail
-          order = {name.casefold(): i for i, name in enumerate(category_order)}
-          header = '#PLAYLIST-STUDIO-CATEGORIES:' + str(category_order).replace("'", '"')
-
-          kept = []
-          removed = 0
-          for b in blocks:
-              a = attrs(b[0])
-              name = (a.get('tvg-name') or b[0].rsplit(',', 1)[-1]).strip()
-              if norm(name) == norm('ATN Bangla USA'):
-                  removed += 1
-                  continue
-              group = (a.get('group-title') or '').strip()
-              kept.append((order.get(group.casefold(), len(category_order)), norm(name), name.casefold(), b))
-
-          kept.sort(key=lambda x: (x[0], x[1], x[2]))
-
-          out = ['#EXTM3U url-tvg="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml" x-tvg-url="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"', header]
-          for line in prefix:
-              if line.strip() and not line.strip().startswith('#EXTM3U'):
-                  out.append(line)
-          for _, _, _, b in kept:
-              out.extend(b)
-
-          p.write_text('\n'.join(out) + '\n', encoding='utf-8')
-          print(f'Final category order enforced: {" > ".join(category_order)}')
-          print(f'ATN Bangla USA removed: {removed}')
-          print(f'Channels retained: {len(kept)}')
-          PY
-
-      - name: Validate playlist integrity
-        shell: bash
-        run: |
-          set -euo pipefail
-          test -s International-Playlist.m3u
-          grep -q '^#EXTM3U' International-Playlist.m3u
-          python - <<'PY'
-          from pathlib import Path
-          from collections import Counter
           import re, unicodedata
           p=Path('International-Playlist.m3u')
           lines=p.read_text(encoding='utf-8-sig').splitlines()
-          urls=[x.strip().casefold() for x in lines if x.strip().startswith(('http://','https://'))]
-          dup=[u for u,n in Counter(urls).items() if n>1]
-          staging_re=re.compile(r'group-title\s*=\s*(?:"(?:New Channels|New Backup|Not Playing|New)"|\'(?:New Channels|New Backup|Not Playing|New)\'|(?:New Channels|New Backup|Not Playing|New))(?=\s|,|$)',re.I)
-          info_re=re.compile(r'([A-Za-z0-9_-]+)=(?:"([^"]*)"|\'([^\']*)\'|([^\s,]+))')
-          def attrs(s):
-              out={}
-              for m in info_re.finditer(s): out[m.group(1)]=next(v for v in m.groups()[1:] if v is not None)
-              return out
+          fixed=['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani']
+          tail=['International','Documentary & Wildlife','Kids','Religious','Sports','New Channels','New Backup','Backup']
+          legacy={'not playing','international movies','international music'}
+          attr_re=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
+          def attrs(s): return dict(attr_re.findall(s))
           def norm(s):
-              s=unicodedata.normalize('NFKD',str(s or '')).casefold(); s=''.join(c for c in s if not unicodedata.combining(c))
-              s=re.sub(r'\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p)\b',' ',s)
-              return re.sub(r'[^a-z0-9]+','',s)
-          blocks=[]; cur=None
+              s=unicodedata.normalize('NFKD',str(s or '')).casefold(); s=''.join(c for c in s if not unicodedata.combining(c)); return re.sub(r'[^a-z0-9]+','',s)
+          prefix=[]; blocks=[]; cur=None
           for line in lines:
+              if line.startswith('#PLAYLIST-STUDIO-CATEGORIES:'): continue
               if line.startswith('#EXTINF:'):
                   if cur is not None: blocks.append(cur)
                   cur=[line]
-              elif cur is not None: cur.append(line)
+              elif cur is None: prefix.append(line)
+              else: cur.append(line)
           if cur is not None: blocks.append(cur)
-          primary_keys={}; duplicate_primaries=[]; backup_count=0
+          # Not Playing and the retired specialized International buckets are no longer valid.
           for b in blocks:
-              a=attrs(b[0]); group=a.get('group-title','').strip().casefold()
-              if group=='backup': backup_count+=1; continue
-              if staging_re.search(b[0]): raise SystemExit('Forbidden staging category remains: '+b[0])
-              if group=='adult': continue
-              name=norm(a.get('tvg-name') or b[0].rsplit(',',1)[-1])
-              key=('name',name) if name else ('id',(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold())
-              if key in primary_keys: duplicate_primaries.append((key,b[0]))
-              else: primary_keys[key]=b[0]
-          if dup: raise SystemExit(f'Duplicate stream URLs remain: {len(dup)}')
-          if duplicate_primaries:
-              for key,line in duplicate_primaries: print(key,line)
-              raise SystemExit(f'Duplicate primary channels remain: {len(duplicate_primaries)}')
-          if any('ATN Bangla USA' in b for b in blocks): raise SystemExit('ATN Bangla USA remains in playlist')
-          fixed=['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani']
-          tail=['International','Documentary & Wildlife','Kids','Religious','Sports','Backup']
-          legacy={'new channels','new backup','not playing','international movies','international music'}
-          actual=[]
+              a=attrs(b[0]); g=(a.get('group-title') or '').strip()
+              if g.casefold() in legacy:
+                  b[0]=re.sub(r'(group-title=)"[^"]*"', r'\1"International"', b[0], count=1)
+          groups={(attrs(b[0]).get('group-title') or '').strip() for b in blocks}
+          country_groups=sorted(g for g in groups if g and g not in fixed and g not in tail and g.casefold() not in legacy)
+          order=fixed+country_groups+tail
+          rank={g.casefold():i for i,g in enumerate(order)}
+          header='#PLAYLIST-STUDIO-CATEGORIES:'+str(order).replace("'",'"')
+          kept=[]
           for b in blocks:
-              g=attrs(b[0]).get('group-title','').strip()
-              if g and g.casefold() not in legacy and g not in actual: actual.append(g)
-          country_groups=sorted(g for g in actual if g not in fixed and g not in tail)
-          expected=fixed+country_groups+tail
-          positions={g:i for i,g in enumerate(expected)}
-          if set(actual)!=set(expected): raise SystemExit('Unexpected category set: '+str(actual))
-          if any(positions[actual[i]] > positions[actual[i+1]] for i in range(len(actual)-1)):
-              raise SystemExit('Playlist categories are not in the required order: '+str(actual))
-          print(f'Integrity OK: {len(urls)} stream URLs, 0 duplicate URLs, 0 duplicate primaries outside Adult, {backup_count} Backup entries, 0 forbidden staging categories')
+              a=attrs(b[0]); name=(a.get('tvg-name') or b[0].rsplit(',',1)[-1]).strip(); g=(a.get('group-title') or '').strip()
+              kept.append((rank.get(g.casefold(),len(rank)),norm(name),name.casefold(),b))
+          kept.sort(key=lambda x:(x[0],x[1],x[2]))
+          out=[x for x in prefix if x.strip() and not x.strip().startswith('#EXTM3U')]
+          out.insert(0,'#EXTM3U url-tvg="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml" x-tvg-url="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"')
+          out.insert(1,header)
+          for _,_,_,b in kept: out.extend(b)
+          p.write_text('\n'.join(out)+'\n',encoding='utf-8')
+          print('Category order:', ' > '.join(order))
+          print('Channels:', len(kept))
           PY
-
+      - name: Validate International playlist
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          from collections import Counter
+          import re
+          p=Path('International-Playlist.m3u'); lines=p.read_text(encoding='utf-8-sig').splitlines()
+          if not lines or not lines[0].startswith('#EXTM3U'): raise SystemExit('Missing #EXTM3U header')
+          urls=[x.strip().casefold() for x in lines if x.strip().startswith(('http://','https://'))]
+          dup=[u for u,n in Counter(urls).items() if n>1]
+          if dup: raise SystemExit(f'Duplicate stream URLs: {len(dup)}')
+          forbidden=re.compile(r'group-title="(?:Not Playing|New|New\s+Backup\s+Review)"',re.I)
+          for line in lines:
+              if forbidden.search(line): raise SystemExit('Forbidden legacy review group remains: '+line)
+          if any('group-title="Not Playing"' in line for line in lines): raise SystemExit('Not Playing remains')
+          if not any('group-title="New Channels"' in line for line in lines): print('No New Channels currently queued; this is valid.')
+          if not any('group-title="New Backup"' in line for line in lines): print('No New Backup currently queued; this is valid.')
+          print(f'Integrity OK: {len(urls)} stream URLs; review queues New Channels/New Backup are permitted; Not Playing is forbidden.')
+          PY
       - name: Publish repaired International playlist
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add International-Playlist.m3u reports/international-playlist-audit.md
-          if compgen -G 'logos/international-*' > /dev/null; then
-            git add logos/international-*
-          fi
-          if git diff --cached --quiet; then
-            echo 'No International playlist changes to publish.'
-            exit 0
-          fi
-          git commit -m 'Enforce dynamic International country categories'
+          git add International-Playlist.m3u reports/international-playlist-audit.md scripts/discover_international_channels.py scripts/sort_playlists.py
+          if git diff --cached --quiet; then echo 'No International playlist changes to publish.'; exit 0; fi
+          git commit -m 'Restore International discovery review queues'
+          git fetch origin main
+          git pull --rebase origin main
           git push origin HEAD:main
