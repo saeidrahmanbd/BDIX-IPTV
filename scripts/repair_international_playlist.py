@@ -8,7 +8,7 @@ PLAYLIST=Path('International-Playlist.m3u'); LOGOS=Path('logos')
 REFERENCE_PLAYLISTS=(Path('IPTV-Playlist.m3u'),Path('BDIX-Playlist.m3u'))
 RAW_BASE='https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/'
 IPTV_LOGOS='https://iptv-org.github.io/api/logos.json'; IPTV_CHANNELS='https://iptv-org.github.io/api/channels.json'
-ORDER=['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Adult','Sports','Backup','New Channels','New Backup','Not Playing']; NO_NUMBER={'Backup','New Backup','Not Playing'}
+ORDER=['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International Movies','International Music','International','Documentary & Wildlife','Kids','Religious','Adult','Sports','Backup','New Channels','New Backup','Not Playing']; NO_NUMBER={'Backup','New Backup','Not Playing'}
 ATTR_RE=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 BAD={x.casefold() for x in ('generated-fallback-btv-news.png','generated-fallback-channel-1.png','generated-fallback-channel-16.png','generated-fallback-channel-52.png','placeholder-btv-news.png','placeholder-channel-1.png','placeholder-channel-16.png','placeholder-channel-52.png')}
 
