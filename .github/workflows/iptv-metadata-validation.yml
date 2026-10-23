@@ -3,6 +3,7 @@ name: IPTV Metadata and EPG Validation
 on:
   pull_request:
     paths:
+      - scripts/validate_workflow_references.py
       - scripts/iptv_metadata_backfill.py
       - scripts/backfill_cross_playlist_metadata.py
       - scripts/repair_logo_asset_technical_quality.py
@@ -45,6 +46,7 @@ on:
       - fix/playlist-audit-report-epg-metadata-2026-10-22
       - fix/playlist-audit-bounded-epg-fetch-2026-10-22
     paths:
+      - scripts/validate_workflow_references.py
       - scripts/iptv_metadata_backfill.py
       - scripts/backfill_cross_playlist_metadata.py
       - scripts/repair_logo_asset_technical_quality.py
@@ -88,9 +90,12 @@ jobs:
           python-version: "3.12"
       - name: Install test dependencies
         run: python -m pip install --upgrade pytest pillow
+      - name: Validate workflow script references
+        run: python scripts/validate_workflow_references.py
       - name: Compile changed Python tools
         run: |
           python -m py_compile \
+            scripts/validate_workflow_references.py \
             scripts/iptv_metadata_backfill.py \
             scripts/backfill_cross_playlist_metadata.py \
             scripts/repair_logo_asset_technical_quality.py \
