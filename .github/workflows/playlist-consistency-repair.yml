@@ -1,0 +1,63 @@
+name: Playlist Consistency Repair
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/reconcile_playlist_consistency.py
+      - .github/workflows/playlist-consistency-repair.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# This is a playlist writer and must share the same serialization queue as
+# maintenance, discovery, and audit writers.
+concurrency:
+  group: iptv-playlist-main-writer
+  cancel-in-progress: false
+  queue: max
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Repair metadata and review-queue consistency
+        run: python scripts/reconcile_playlist_consistency.py
+      - name: Validate the repaired playlist
+        run: |
+          python -m py_compile scripts/reconcile_playlist_consistency.py
+          python scripts/audit_playlist.py
+          python scripts/pre_publish_gate.py
+      - name: Regenerate reports
+        run: |
+          python scripts/build_identity_index.py
+          python scripts/stream_health.py
+          python scripts/stream_risk_review.py
+          python scripts/epg_coverage.py
+          python scripts/generate_logo_authenticity_manifest.py
+          python scripts/generate_logo_repair_summary.py
+          python scripts/generate_logo_provenance_review.py
+          python scripts/generate_metadata_normalization_report.py
+          python scripts/generate_dashboard.py
+          python scripts/validate_report_freshness.py
+      - name: Publish repair
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add IPTV-Playlist.m3u reports/ assets/dashboard.svg
+          if git diff --cached --quiet; then
+            echo 'No consistency repair changes required.'
+            exit 0
+          fi
+          git commit -m 'Repair playlist metadata and review queue consistency'
+          git push origin HEAD:main
