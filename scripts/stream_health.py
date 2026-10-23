@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Non-destructive HTTP/HLS stream health probe with persistent failure history."""
-import concurrent.futures, hashlib, json, re, time
+import concurrent.futures, hashlib, json, re, time, os
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -13,6 +13,7 @@ PLAYLIST=Path("IPTV-Playlist.m3u")
 REPORT=Path("reports/stream-health.md")
 HISTORY=Path("reports/stream-health-history.json")
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
+REVIEW_GROUPS={"New Channels","New Backup","Not Playing"}
 GROUP_EXCLUDE=set()
 SENSITIVE_QUERY={"token","access_token","refresh_token","sig","signature","jwt","session","key","api_key","apikey","authorization","auth","client_secret","hdnts","expires","e","username","user","password","passwd","pass"}
 
@@ -30,56 +31,39 @@ def canonical_url(url):
     safe_path="/".join(path_parts).rstrip("/") or "/"
     return urlunsplit((p.scheme.lower(),netloc,safe_path,query,""))
 def stream_url_inventory_sha256(path=PLAYLIST):
-    """Hash sorted exact stream URLs without exposing them in the report."""
-    urls=sorted(
-        line.strip()
-        for line in Path(path).read_text(encoding="utf-8-sig").splitlines()
-        if line.strip().startswith(("http://","https://"))
-    )
+    urls=sorted(line.strip() for line in Path(path).read_text(encoding="utf-8-sig").splitlines() if line.strip().startswith(("http://","https://")))
     return hashlib.sha256("\n".join(urls).encode("utf-8")).hexdigest()
-
 def parse():
-    lines=PLAYLIST.read_text(encoding="utf-8-sig").splitlines()
-    rows=[]; cur=None
+    lines=PLAYLIST.read_text(encoding="utf-8-sig").splitlines(); rows=[]; cur=None
     for line in lines:
         if line.startswith("#EXTINF:"):
             cur=attrs(line); cur["_display"]=(cur.get("tvg-name") or line.rsplit(",",1)[-1]).strip()
         elif cur and line.strip().startswith(("http://","https://")):
             rows.append((cur,line.strip())); cur=None
     return rows
-
 def probe(item):
-    a,url=item
-    started=time.monotonic()
+    a,url=item; started=time.monotonic()
     try:
         req=Request(url,headers={"User-Agent":"BDIX-IPTV-HealthCheck/1.0","Accept":"*/*","Range":"bytes=0-4095"})
         with urlopen(req,timeout=15) as r:
-            data=r.read(4096)
-            status=getattr(r,"status",200)
-            ctype=r.headers.get("Content-Type","")
-        latency=round((time.monotonic()-started)*1000)
-        ok=status < 400 and len(data)>0
+            data=r.read(4096); status=getattr(r,"status",200); ctype=r.headers.get("Content-Type","")
+        latency=round((time.monotonic()-started)*1000); ok=status < 400 and len(data)>0
         return {"ok":ok,"status":status,"latency_ms":latency,"bytes":len(data),"content_type":ctype,"error":""}
     except HTTPError as e:
         return {"ok":False,"status":e.code,"latency_ms":round((time.monotonic()-started)*1000),"bytes":0,"content_type":"","error":f"HTTP {e.code}"}
     except URLError as e:
         reason=e.reason
-        if isinstance(reason, socket.gaierror):
-            kind="DNS"
-        elif isinstance(reason, ssl.SSLError):
-            kind="TLS"
-        elif isinstance(reason, (TimeoutError, socket.timeout)):
-            kind="Timeout"
-        elif isinstance(reason, (ConnectionError, ConnectionResetError, ConnectionRefusedError)):
-            kind="Connection"
-        else:
-            kind="Network"
+        if isinstance(reason, socket.gaierror): kind="DNS"
+        elif isinstance(reason, ssl.SSLError): kind="TLS"
+        elif isinstance(reason,(TimeoutError,socket.timeout)): kind="Timeout"
+        elif isinstance(reason,(ConnectionError,ConnectionResetError,ConnectionRefusedError)): kind="Connection"
+        else: kind="Network"
         return {"ok":False,"status":0,"latency_ms":round((time.monotonic()-started)*1000),"bytes":0,"content_type":"","error":kind}
-    except (TimeoutError, socket.timeout):
+    except (TimeoutError,socket.timeout):
         return {"ok":False,"status":0,"latency_ms":round((time.monotonic()-started)*1000),"bytes":0,"content_type":"","error":"Timeout"}
     except ssl.SSLError:
         return {"ok":False,"status":0,"latency_ms":round((time.monotonic()-started)*1000),"bytes":0,"content_type":"","error":"TLS"}
-    except Exception as e:
+    except Exception:
         return {"ok":False,"status":0,"latency_ms":round((time.monotonic()-started)*1000),"bytes":0,"content_type":"","error":"Other"}
 
 def main():
@@ -89,8 +73,7 @@ def main():
     with concurrent.futures.ThreadPoolExecutor(max_workers=32) as ex:
         futs=[ex.submit(probe,(a,u)) for a,u in targets]
         for (a,u),f in zip(targets,futs):
-            r=f.result()
-            results.append({"id":(a.get("tvg-id") or a.get("channel-id") or "").strip().lower(),"name":a.get("_display",""),"group":a.get("group-title","").strip(),"url":u,**r})
+            r=f.result(); results.append({"id":(a.get("tvg-id") or a.get("channel-id") or "").strip().lower(),"name":a.get("_display",""),"group":a.get("group-title","").strip(),"url":u,**r})
     now=datetime.now(timezone.utc).isoformat(timespec="seconds")
     previous={}
     if HISTORY.exists():
@@ -98,57 +81,30 @@ def main():
         except Exception: previous={}
     if not isinstance(previous,dict): previous={}
     for r in results:
-        h=previous.get(r["url"],{"checks":0,"successes":0,"failures":0,"consecutive_failures":0})
-        h["checks"]+=1
-        if r["ok"]:
-            h["successes"]+=1; h["consecutive_failures"]=0; h["last_ok"]=now
-        else:
-            h["failures"]+=1; h["consecutive_failures"]=h.get("consecutive_failures",0)+1; h["last_failure"]=now
-        h["last_status"]=r["status"]; h["last_latency_ms"]=r["latency_ms"]
-        previous[r["url"]]=h
-        r["consecutive_failures"]=h["consecutive_failures"]
-        r["success_rate"]=round(h["successes"]/h["checks"]*100,1)
-    HISTORY.parent.mkdir(parents=True,exist_ok=True)
-    HISTORY.write_text(json.dumps({r["url"]:previous[r["url"]] for r in results},indent=2)+"\n",encoding="utf-8")
+        h=previous.get(r["url"],{"checks":0,"successes":0,"failures":0,"consecutive_failures":0}); h["checks"]+=1
+        if r["ok"]: h["successes"]+=1; h["consecutive_failures"]=0; h["last_ok"]=now
+        else: h["failures"]+=1; h["consecutive_failures"]=h.get("consecutive_failures",0)+1; h["last_failure"]=now
+        h["last_status"]=r["status"]; h["last_latency_ms"]=r["latency_ms"]; previous[r["url"]]=h
+        r["consecutive_failures"]=h["consecutive_failures"]; r["success_rate"]=round(h["successes"]/h["checks"]*100,1)
+    HISTORY.parent.mkdir(parents=True,exist_ok=True); HISTORY.write_text(json.dumps({r["url"]:previous[r["url"]] for r in results},indent=2)+"\n",encoding="utf-8")
     ok=sum(r["ok"] for r in results); fail=len(results)-ok
-    failure_classes=Counter(
-        ("HTTP 401/403 (auth)" if r["status"] in {401,403} else
-         "HTTP 404 (not found)" if r["status"]==404 else
-         "HTTP 4xx (other)" if 400 <= r["status"] < 500 else
-         "HTTP 5xx (server)" if 500 <= r["status"] < 600 else
-         r["error"] or "Other")
-        for r in results if not r["ok"]
-    )
-    persistent=[r for r in results if r["consecutive_failures"]>=3]
-    intermittent=[r for r in results if not r["ok"] and r["consecutive_failures"]<3]
+    failure_classes=Counter(("HTTP 401/403 (access/auth)" if r["status"] in {401,403} else "HTTP 404 (not found)" if r["status"]==404 else "HTTP 4xx (other)" if 400<=r["status"]<500 else "HTTP 5xx (server)" if 500<=r["status"]<600 else r["error"] or "Other") for r in results if not r["ok"])
+    persistent=[r for r in results if r["consecutive_failures"]>=3]; intermittent=[r for r in results if not r["ok"] and r["consecutive_failures"]<3]
     groups=Counter(r["group"] for r in results)
+    primary_targets=[r for r in results if r["group"] not in {"Backup","New Channels","New Backup","Not Playing"}]
     families={}
     for r in results: families.setdefault(canonical_url(r["url"]),set()).add(r["url"])
     near_duplicates={k:v for k,v in families.items() if len(v)>1}
-    lines=["# Stream Health Report","",f"Generated: **{now}**",f"Stream URL inventory SHA-256: **{stream_url_inventory_sha256()}**","",
-           "Non-destructive connectivity check. A successful HTTP response confirms reachability of the stream endpoint, not guaranteed video/audio playback.","",
-           "## Summary","",f"- Streams tested: **{len(results)}**",f"- Reachable: **{ok}**",f"- Failed this check: **{fail}**",
-           f"- Persistent failures (3+ consecutive): **{len(persistent)}**",f"- Intermittent failures: **{len(intermittent)}**",
-           f"- Primary tested: **{sum(1 for r in results if r['group'] not in ('Backup',))}**",f"- Backup tested: **{groups.get('Backup',0)}**","",
-           "## Failure Classification","",
-           *[f"- {k}: **{v}**" for k,v in sorted(failure_classes.items())],
-           "## Persistent Failures",""]
-    if persistent:
-        lines += [f"- **{r['name']}** — {r['group']} — consecutive failures: **{r['consecutive_failures']}** — {r['error'] or r['status']}" for r in sorted(persistent,key=lambda x:(x["group"],x["name"]))]
-    else: lines.append("None.")
+    runner_context="GitHub-hosted ubuntu-latest runner" if os.getenv("GITHUB_ACTIONS")=="true" else "local/non-GitHub runner"
+    lines=["# Stream Health Report","",f"Generated: **{now}**",f"Stream URL inventory SHA-256: **{stream_url_inventory_sha256()}**","",f"Probe environment: **{runner_context}**.","A successful HTTP response confirms endpoint reachability, not guaranteed video/audio playback. HTTP 401/403 can reflect authentication, entitlement, or geographic restrictions; results from a GitHub-hosted runner should not be treated as proof of Bangladesh/India-local playback availability.","","## Summary","",f"- Streams tested: **{len(results)}**",f"- Reachable: **{ok}**",f"- Failed this check: **{fail}**",f"- Persistent failures (3+ consecutive): **{len(persistent)}**",f"- Intermittent failures: **{len(intermittent)}**",f"- Primary tested: **{len(primary_targets)}**",f"- Backup tested: **{groups.get('Backup',0)}**",f"- Review-queue entries tested: **{sum(groups.get(g,0) for g in REVIEW_GROUPS)}**","","## Failure Classification",""]
+    lines += [f"- {k}: **{v}**" for k,v in sorted(failure_classes.items())]
+    lines += ["","## Persistent Failures",""]
+    lines += ([f"- **{r['name']}** — {r['group']} — consecutive failures: **{r['consecutive_failures']}** — {r['error'] or r['status']}" for r in sorted(persistent,key=lambda x:(x["group"],x["name"]))] if persistent else ["None."])
     lines += ["","## Failed This Check",""]
-    if fail:
-        lines += [f"- **{r['name']}** — {r['group']} — streak {r['consecutive_failures']} — {r['error'] or r['status']}" for r in sorted([x for x in results if not x["ok"]],key=lambda x:(x["group"],x["name"]))]
-    else: lines.append("None.")
+    lines += ([f"- **{r['name']}** — {r['group']} — streak {r['consecutive_failures']} — {r['error'] or r['status']}" for r in sorted([x for x in results if not x["ok"]],key=lambda x:(x["group"],x["name"]))] if fail else ["None."])
     lines += ["","## Near-Duplicate URL Families",""]
-    if near_duplicates:
-        for canonical,urls in sorted(near_duplicates.items()):
-            lines.append(f"- **{canonical}** — {len(urls)} URL variants; query/token differences are preserved and require review.")
-    else: lines.append("None.")
-    lines += ["","## Policy","","- Health failures never delete or reclassify streams automatically.",
-              "- Backup streams remain protected even after repeated failures.",
-              "- Persistent failures are reported for review; they are never automatic deletion candidates."]
+    lines += ([f"- **{canonical}** — {len(urls)} URL variants; query/token differences are preserved and require review." for canonical,urls in sorted(near_duplicates.items())] if near_duplicates else ["None."])
+    lines += ["","## Policy","","- Health failures never delete or reclassify streams automatically.","- Backup streams remain protected even after repeated failures.","- Persistent failures are reported for review; they are never automatic deletion candidates.","- A URL family is not automatically counted as independent redundancy merely because its path, rendition, or query string differs."]
     REPORT.parent.mkdir(parents=True,exist_ok=True); REPORT.write_text("\n".join(lines)+"\n",encoding="utf-8")
     print(f"Stream health: tested={len(results)} ok={ok} failed={fail} persistent={len(persistent)}")
-
 if __name__=="__main__": main()
