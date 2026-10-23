@@ -1,0 +1,110 @@
+name: International Channel Discovery
+
+on:
+  schedule:
+    - cron: '23 3 * * *' # 09:23 Asia/Dhaka (UTC+6)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Use the same main-branch writer queue as playlist maintenance and audit.
+concurrency:
+  group: iptv-playlist-main-writer
+  cancel-in-progress: false
+  queue: max
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Test International discovery exclusions
+        run: python -m unittest discover -s tests -p 'test_international_discovery_policy.py'
+      - name: Discover international channels and backups
+        run: python scripts/discover_international_channels.py
+      - name: Validate playlist structure
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from collections import Counter
+          from pathlib import Path
+          import re
+          p = Path("International-Playlist.m3u")
+          lines = p.read_text(encoding="utf-8-sig").splitlines()
+          if not lines or not lines[0].startswith("#EXTM3U"):
+              raise SystemExit("Missing #EXTM3U header")
+          blocks = []
+          current = None
+          for line in lines:
+              if line.startswith("#EXTINF:"):
+                  if current is not None:
+                      blocks.append(current)
+                  current = [line]
+              elif current is not None:
+                  current.append(line)
+          if current is not None:
+              blocks.append(current)
+          if not blocks:
+              raise SystemExit("Playlist contains no channel records")
+          urls = []
+          for block in blocks:
+              stream = next((x.strip() for x in block[1:] if x.strip().startswith(("http://", "https://"))), "")
+              if not stream:
+                  raise SystemExit("Entry has no stream URL: " + block[0])
+              urls.append(stream.casefold())
+          duplicates = [url for url, count in Counter(urls).items() if count > 1]
+          if duplicates:
+              raise SystemExit(f"Duplicate stream URLs detected: {len(duplicates)}")
+          external_logos = []
+          for block in blocks:
+              logo = re.search(r'tvg-logo="([^"]*)"', block[0])
+              if logo and not logo.group(1).startswith("https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"):
+                  external_logos.append(block[0])
+          if external_logos:
+              raise SystemExit(f"External logo references remain: {len(external_logos)}")
+          print(f"Playlist structure OK: {len(blocks)} entries, 0 missing stream URLs, 0 duplicate URLs, 0 external logo references. Playback was not tested.")
+          PY
+      - name: Commit new channels, report, and localized logos
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add International-Playlist.m3u reports/international-channel-discovery.md logos/international/
+          if git diff --cached --quiet; then
+            echo "No new International channels or backup streams to publish."
+            exit 0
+          fi
+          git commit -m 'Discover and add international channels'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git pull --rebase origin main; then
+              git rebase --abort || true
+              echo "::error::Concurrent playlist update caused a conflict; nothing was force-pushed."
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "::warning::Push failed; retrying after rebase."
+            sleep 3
+          done
+          echo "::error::Unable to publish discovery results after three attempts."
+          exit 1
+      - name: Upload discovery report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: international-channel-discovery-${{ github.run_number }}
+          path: reports/international-channel-discovery.md
+          if-no-files-found: warn
+          retention-days: 14
