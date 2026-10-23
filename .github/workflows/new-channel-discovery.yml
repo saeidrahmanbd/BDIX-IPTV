@@ -56,11 +56,16 @@ jobs:
             exit 0
           fi
           git commit -m 'Run IPTV playlist maintenance: import new BD/India review candidates'
+          # Generated-but-uncommitted files (other reports, logo scratch) would make
+          # `git pull --rebase` refuse to run; they are not part of this commit.
+          git reset --hard HEAD
+          git clean -fd
           for attempt in 1 2 3; do
             git fetch origin main
             if ! git pull --rebase origin main; then
+              git status --short | head -20
               git rebase --abort || true
-              echo '::error::Rebase conflict; candidates not pushed.'
+              echo '::error::Rebase failed; candidates not pushed.'
               exit 1
             fi
             if git push origin HEAD:main; then exit 0; fi
