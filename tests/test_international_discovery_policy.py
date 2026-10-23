@@ -2,6 +2,7 @@
 import sys
 import unittest
 from pathlib import Path
+from collections import Counter
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -20,12 +21,23 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         return discovery.policy_group(a, name)
 
     def test_movies_are_allowed_for_any_country(self):
-        group, reason, country = self.classify("Cinema World", "Movies", "US", "CinemaWorld.us")
-        self.assertEqual((group, reason, country), ("International Movies", None, "US"))
+        group, reason, country = self.classify("Cinema World", "Movies", "NP", "CinemaWorld.np")
+        self.assertEqual((group, reason, country), ("International", None, "NP"))
 
     def test_music_is_allowed_for_any_country(self):
-        group, reason, country = self.classify("World Music", "Music", "BR", "WorldMusic.br")
-        self.assertEqual((group, reason, country), ("International Music", None, "BR"))
+        group, reason, country = self.classify("World Music", "Music", "TH", "WorldMusic.th")
+        self.assertEqual((group, reason, country), ("International", None, "TH"))
+
+    def test_country_group_name_is_available(self):
+        self.assertEqual(discovery.country_group("NP"), "Nepal")
+        self.assertEqual(discovery.country_group("TH"), "Thailand")
+        self.assertEqual(discovery.country_group("JP"), "Japan")
+
+    def test_country_threshold_is_five(self):
+        self.assertEqual(discovery.COUNTRY_THRESHOLD, 5)
+
+    def test_existing_established_country_is_not_threshold_limited(self):
+        self.assertEqual(discovery.country_group("NP"), "Nepal")
 
     def test_bangladesh_news_is_allowed(self):
         group, reason, country = self.classify("Channel 24", "News", "BD", "Channel24.bd")
