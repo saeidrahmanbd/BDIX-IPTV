@@ -1,25 +1,145 @@
-# IPTV Playlist Logo Repair Results — Current Status
+# IPTV Playlist Logo Repair Results
 
-Generated: **2026-10-21T10:43:53+00:00**
-Source playlist SHA-256: **a4c0c292c6934c2dc987cd7800792dfa85f6cf7beb90a35faeac5becd2be0d82**
+Run time: **2026-10-23 02:01 UTC**  
+Repository-first local logo search completed before external lookup.  
+IPTV-org data: loaded  
+Historical mapping index: loaded 336 historical name mappings
 
-This is the current logo status. The 2026-10-17 repair history is preserved separately in `reports/playlist-logo-repair-history-2026-10-17.md`.
+## Results by playlist
 
-## Current results
+| Playlist | Entries | References changed | Generated fallbacks | Missing after | Known generic/contaminated refs after | Unresolved repair targets |
+|---|---:|---:|---:|---:|---:|---:|
+| IPTV-Playlist.m3u | 1178 | 116 | 0 | 3 | 0 | 4 |
 
-| Metric | Current |
-|---|---:|
-| Playlist entries | **1064** |
-| Officially verified | **0** |
-| Third-party verified | **11** |
-| Generated fallback | **4** |
-| Needs review | **1049** |
-| Missing logo references | **0** |
-| External/non-repository logo references | **0** |
+## Repair log
 
-## Policy
+| Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
+|---|---:|---|---|---|---|---|---|
+| IPTV-Playlist.m3u | 515 | DD Mizoram | generated-fallback-dd-mizoram.png | dd-mizoram.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 961 | Alone | generated-fallback-alone.png | nvisionbd-verified-alone-d27ee1736d.svg | [Exact external logo asset](https://commons.wikimedia.org/wiki/File:Alone_(Leftfield_Pictures_TV_series)_logo.svg) | Official Alone series logo from Wikimedia Commons; sourced to the HISTORY show page. The live feed is the A+E Networks Alone channel, so the series wordmark matches the branded channel. — https://www.history.com/shows/alone | replaced |
+| IPTV-Playlist.m3u | 1087 | Wild Planet | wild-planet.png | (none) | none |  | No exact clean original found; no fallback generated |
+| IPTV-Playlist.m3u | 1133 | KidDo MATIX | kiddo-matix.png | (none) | none |  | No exact clean original found; no fallback generated |
+| IPTV-Playlist.m3u | 1149 | Powerkids Kartoon Channel | powerkids-kartoon-channel.png | (none) | none |  | No exact clean original found; no fallback generated |
+| IPTV-Playlist.m3u | 1229 | Zainabia Channel | generated-fallback-zainabia-channel.png | (none) | Exact external logo asset |  | Download/validation failed: HTTP Error 500: Internal Server Error |
+| IPTV-Playlist.m3u | 1229 | Zainabia Channel | generated-fallback-zainabia-channel.png | (none) | none |  | No exact clean original found; no fallback generated |
+| IPTV-Playlist.m3u | 2139 | 4 SiDES TV | 4sites.png | nvisionbd-verified-4-sides-tv-6a436fa007.png | [IPTV-org exact ID: 4SiDESTV.in](https://jiotvimages.cdn.jio.com/dare_images/images/4sites.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2141 | 4TV News | 4_tv.png | nvisionbd-verified-4tv-news-f014126fe0.png | [IPTV-org exact ID: 4TVNews.in](https://jiotvimages.cdn.jio.com/dare_images/images/4_TV.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2143 | 9 Plus News | 9plusnews.png | nvisionbd-verified-9-plus-news-d6d66a5d9c.png | [IPTV-org exact ID: 9PlusNews.in](https://jiotvimages.cdn.jio.com/dare_images/images/9plusnews.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2145 | 9X Jhakaas | s90012_ld_h15_aa.png | 9x-jhakaas.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2147 | 9X Tashan | image.png | 9x-tashan.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2149 | 9XM | image.png | 9xm.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2151 | 10 TV | image.png | nvisionbd-verified-10-tv-6c9aa3e23f.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2153 | 22Scope News | 22scope_news.png | nvisionbd-verified-22scope-news-f139740d37.png | [IPTV-org exact ID: 22ScopeNews.in](https://jiotvimages.cdn.jio.com/dare_images/images/22Scope_News.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2155 | 24 News | 300x300_24news_202222_d63feca0-79ae-47ea-b75a-66c17d456f4c.png | nvisionbd-verified-24-news-f0dad024a8.png | [IPTV-org exact ID: 24News.in](https://sund-images.sunnxt.com/202222/300x300_24News_202222_d63feca0-79ae-47ea-b75a-66c17d456f4c.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2157 | 99TV | dza4gel.png | nvisionbd-verified-99tv-e8fc39ce2e.png | [IPTV-org exact ID: 99TV.in](https://i.imgur.com/dZA4gel.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2159 | &TV | logo_hd_image.png | and-tv.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2161 | &TV | logo_hd_image.png | and-tv.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2163 | Aadinath TV | image.png | nvisionbd-verified-aadinath-tv-57173dd39d.png | [IPTV-org exact ID: AadinathTV.in](https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Aadinath-TV-Transparent.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2165 | Aagaaz Times | aagaaztimes.png | nvisionbd-verified-aagaaz-times-8095e7bc22.png | [IPTV-org exact ID: AagaazTimes.in](https://jiotvimages.cdn.jio.com/dare_images/images/aagaaztimes.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2167 | Aaj Ki Khabar | 71q8sompwhl.png | nvisionbd-verified-aaj-ki-khabar-a0047ee407.png | [IPTV-org exact ID: AajKiKhabar.in](https://m.media-amazon.com/images/I/71q8sOMPwHL.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2169 | Aaj Tak | image.png | aaj-tak-hd.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2171 | Aaj Tak | image.png | aaj-tak-hd.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2173 | Aaseervatham TV | glfrys7.png | aaseervatham-tv-360p-c4dc8474a6.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2175 | Aastha | iqgrv92.png | nvisionbd-verified-aastha-b826b8748b.png | [IPTV-org exact ID: Aastha.in](https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Aastha.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2177 | Aastha Gujarati | aastha_tamil.png | nvisionbd-verified-aastha-gujarati-e418c1a77a.png | [IPTV-org exact ID: AasthaGujarati.in](https://jiotvimages.cdn.jio.com/dare_images/images/Aastha_Tamil.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2179 | Aastha Kannada | s158134_ld_h15_aa.png | nvisionbd-verified-aastha-kannada-777c73e2b8.png | [IPTV-org exact ID: AasthaKannada.in](https://dtil.tmsimg.com/assets/s158134_ld_h15_aa.png?lock=720x540) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2181 | Aastha Prime 1 | lywsmjs.png | nvisionbd-verified-aastha-prime-1-0ffee3410d.png | [IPTV-org exact ID: AasthaPrime1.in](https://i.imgur.com/LyWSMJS.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2183 | Aastha Tamil | yqk9ewf.png | nvisionbd-verified-aastha-tamil-99d00f3da6.png | [IPTV-org exact ID: AasthaTamil.in](https://i.imgur.com/YQK9ewf.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2185 | Aastha Telugu | s158136_ld_h15_aa.png | nvisionbd-verified-aastha-telugu-d6e3e3aa65.png | [IPTV-org exact ID: AasthaTelugu.in](https://dtil.tmsimg.com/assets/s158136_ld_h15_aa.png?lock=720x540) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2187 | ABN Andhra Jyoti | s142517_ld_h15_aa.png | nvisionbd-verified-abn-andhra-jyoti-7a1be56083.png | [IPTV-org exact ID: ABNAndhraJyoti.in](https://dtil.tmsimg.com/assets/s142517_ld_h15_aa.png?lock=720x540) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2189 | ABP Ananda | s142518_ld_h15_aa.png | abp-ananda.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2191 | ABP Asmita | 500px-abp_asmita_logo.svg.png | nvisionbd-verified-abp-asmita-b2db0a6b70.png | [IPTV-org exact ID: ABPAsmita.in](https://dtil.tmsimg.com/assets/s142519_ld_h15_aa.png?lock=720x540) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2193 | ABP Ganga | 500px-abp_ganga.svg.png | nvisionbd-verified-abp-ganga-6b9dc076c5.png | [IPTV-org exact ID: ABPGanga.in](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/ABP_Ganga.svg/500px-ABP_Ganga.svg.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2195 | ABP Majha | s142521_ld_h15_aa.png | nvisionbd-verified-abp-majha-999aa1167c.png | [IPTV-org exact ID: ABPMajha.in](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/ABP_Majha_logo.svg/500px-ABP_Majha_logo.svg.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2197 | ABP News | s158138_ld_h15_aa.png | abp-news.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2199 | Adhyatm TV | adhyatam_tv.png | adhyatm-tv-720p-2506efc675.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2201 | AKD Calcutta News | calcutta%20news.png | nvisionbd-verified-akd-calcutta-news-8301868c58.png | [IPTV-org exact ID: AKDCalcuttaNews.in](https://dtil.tmsimg.com/assets/GNLZZGG002EF87T.png?lock=720x540) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2203 | Akhon Kolkata | ekhonkolkata.png | nvisionbd-verified-akhon-kolkata-1141bd1c38.png | [IPTV-org exact ID: AkhonKolkata.in](https://jiotvimages.cdn.jio.com/dare_images/images/ekhonkolkata.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2205 | All Time Movies | u4inxhwmeuoabhoemqbpi6c9t4jb9ibmdvz3zt3lab9au_jvl32nl8xdpy-9cbjrj2lp69ovzg=s900-c-k-c0x00ffffff-no-rj | all-time-movies.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2207 | AmarUjala | ndq8lzp.png | nvisionbd-verified-amarujala-4ad8f84a24.png | [IPTV-org exact ID: AmarUjala.in](https://i.imgur.com/ndQ8LZp.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2209 | Amrit Gurbani | amritgurbani.png | nvisionbd-verified-amrit-gurbani-dca94d7ce5.png | [IPTV-org exact ID: AmritGurbani.in](https://papaji.freetvindia.com/media/Amritgurbani.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2211 | Anand Wari TV | anandvari.png | nvisionbd-verified-anand-wari-tv-a6ce79981f.png | [IPTV-org exact ID: AnandWariTV.in](https://papaji.freetvindia.com/media/channels/anandvari.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2213 | Ananda Barta | anand_barta.png | nvisionbd-verified-ananda-barta-1e104a057d.jpg | [IPTV-org exact ID: AnandaBarta.in](https://i.imgur.com/yWo4RaV.jpeg) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2215 | Ananda TV | jkbo7qe.png | ananda-tv.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2217 | Anandpur Live | anandpur_live.png | nvisionbd-verified-anandpur-live-9663f7cf38.png | [IPTV-org exact ID: AnandpurLive.in](https://papaji.freetvindia.com/media/Anandpur_Live.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2219 | ANB News | image.png | nvisionbd-verified-anb-news-b7d3381203.png | [IPTV-org exact ID: ANBNews.in](https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/ANB%20News.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2221 | Angel TV | qklegu7.png | nvisionbd-verified-angel-tv-a7e5cfebac.png | [IPTV-org exact ID: AngelTV.in](https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Angel-TV-hd-transparent.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2223 | Animal Planet (India) | image.png | nvisionbd-verified-animal-planet-india-464514a780.png | [IPTV-org exact ID: AnimalPlanet.in](https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/2018_Animal_Planet_logo.svg/960px-2018_Animal_Planet_logo.svg.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2225 | Animal Planet (India) | image.png | nvisionbd-verified-animal-planet-india-464514a780.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2227 | Anmol TV | gnlzzgg00260hws.png | nvisionbd-verified-anmol-tv-8dee2e0662.png | [IPTV-org exact ID: AnmolTV.in](https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/AnmolTV_Transparent_6e1b4782-0685-4ccd-bac0-436a0c0ea947.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2229 | Assam Talks | s142683_ld_h15_aa.png | assam-talks.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2231 | ATN Music | atnmusic.jpg | atn-music.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2233 | Colors | m8ucj0d.png | nvisionbd-verified-colors-3cfc323d7c.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2235 | Colors Bangla | image.png | colors-bangla.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2237 | Colors Bangla Cinema | image.png | colors-bangla-cinema.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2239 | Colors Cineplex | image.png | colors-cineplex.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2241 | Darshana TV | s142774_ld_h15_aa.png | darshana-tv.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2243 | DBC News | qbt6q4z.png | dbc-news.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2245 | DD India | s158251_ld_h15_aa.png | dd-india.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2247 | DD National | dd%20national.png | dd-national.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2249 | DD News | dd%20news%20hd.png | dd-news.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2251 | DD Sports | s158255_ld_h15_aa.png | dd-sports-fb997548.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2253 | DD Tamil | image.png | dd-tamil.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2255 | Discovery Science | s159107_ld_h15_aa.png | discovery-science.svg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2257 | Discovery Turbo (India) | image.png | nvisionbd-verified-discovery-turbo-india-40041f5fd0.png | [IPTV-org exact ID: DiscoveryTurbo.in](https://dtil.tmsimg.com/assets/s159108_ld_h15_aa.png?lock=720x540) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2259 | Disney Channel (India) | image.png | disney-channel-india.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2261 | Ekhon TV | trrdh6z.png | ekhon-tv.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2263 | Epic Bharat Digital | gnlzzgg0032bw6t.png | epic-bharat-digital.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2265 | ETV Cinema | s143026_ld_h15_aa.png | etv-cinema.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2267 | ETV Music | etvmusic12.png | etv-music.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2269 | Gazi TV | 2lzhiq6.png | gazi-tv.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2273 | Gyandarshan | image.png | gyandarshan.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2275 | History TV18 | s143132_ld_h15_aa.png | history-tv18.svg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2277 | Hosanna TV Global | vyoru1l.png | nvisionbd-verified-hosanna-tv-global-016e291e22.png | [IPTV-org exact ID: HosannaTV.in](https://i.imgur.com/VYorU1L.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2279 | Hosanna TV Hindi | vyoru1l.png | nvisionbd-verified-hosanna-tv-hindi-016e291e22.png | [IPTV-org exact ID: HosannaTV.in](https://i.imgur.com/VYorU1L.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2281 | Investigation Discovery (India) | image.png | nvisionbd-verified-investigation-discovery-india-810c402cdf.png | [IPTV-org exact ID: InvestigationDiscovery.in](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2283 | Jalsha Movies | 25ewjx2.png | jalsha-movies.svg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2285 | Jeevan TV | jeevan_tv.png | jeevan-tv.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2287 | Maasranga TV | uvzjmed.png | maasranga-tv.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2289 | Madani Channel Bangla | vijtvia.png | nvisionbd-verified-madani-channel-bangla-b138cb7f38.png | [IPTV-org exact ID: MadaniChannelBangla.bd](https://i.imgur.com/vIJTVia.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2291 | NAN TV | nan-tv-logo-02.png | nan-tv.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2293 | National Geographic Wild (India) | image.png | national-geographic-wild-india.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2295 | News 24 (India) | s90009_ld_h15_aa.png | nvisionbd-verified-news-24-india-3f564046c1.png | [IPTV-org exact ID: News24.in](https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/News%2024.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2297 | Nickelodeon (India) | image.png | nvisionbd-verified-nickelodeon-india-06524ae081.png | [IPTV-org exact ID: Nickelodeon.in](https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Nick.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2299 | Pogo | image.png | pogo.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2301 | Rajdhani TV | mbm2gpz.jpeg | rajdhani-tv.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2303 | Rengoni | s143722_ld_h15_aa.png | rengoni.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2305 | Rupashi Bangla TV | rupashi_bangla.png | rupashi-bangla-tv.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2307 | Sansad TV 2 | s143761_ld_h15_aa.png | sansad-tv-2.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2309 | Sony Aath | image.png | sony-aath.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2311 | Sony Entertainment TV | s157589_ld_h15_aa.png | sony-entertainment-tv.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2313 | Sony Max | s157590_ld_h15_aa.png | sony-max.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2315 | Sony Pal | s157973_ld_h15_aa.png | sony-pal.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2317 | Sony Sports Ten 1 | image.png | sony-sports-ten-1.svg | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2319 | Sony Yay! | s159100_ld_h15_aa.png | sony-yay.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2321 | Star Gold | xc460sj.png | nvisionbd-verified-star-gold-2d8d66200b.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2323 | Star Jalsha | ilufzr5.png | star-jalsha.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2325 | Star Movies (India) | image.png | nvisionbd-verified-star-movies-india-a25773197b.png | [IPTV-org exact ID: StarMovies.in](https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/STAR_Movies_logo.svg/960px-STAR_Movies_logo.svg.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2327 | Star Sports 2 | image.png | star-sports-2.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2329 | Star Sports 2 | image.png | star-sports-2.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2331 | Star Sports Select 1 | mh9tkpx.png | star-sports-select-1.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2333 | Star Sports Select 2 | ftrt73r.png | star-sports-select-2.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2335 | StarPlus (India) HD (1080i) | xwxny3l.png | nvisionbd-verified-starplus-india-hd-1080i-824fd0bcd6.png | [IPTV-org exact ID: StarPlus.in](https://dtil.tmsimg.com/assets/s143831_ld_h15_aa.png?lock=720x540) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2337 | Suriyan TV | suriyan-tv-logo_2000_x_1125_transpharent.png | suriyan-tv.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2339 | T Sports | 2jzlord.png | t-sports.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2341 | Times Now Navbharat | image.png | nvisionbd-verified-times-now-navbharat-be6e714868.png | [IPTV-org exact ID: TimesNowNavbharat.in](https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/NAV-BHARAT-HD-Transpatrnt.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2343 | TLC (India) | image.png | nvisionbd-verified-tlc-india-f0ce45623b.png | [IPTV-org exact ID: TLC.in](https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/TLC%20HD.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2345 | TLC (India) | image.png | nvisionbd-verified-tlc-india-f0ce45623b.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2347 | Travelxp 4K HDR (2160p) [Geo-blocked] | image.png | nvisionbd-verified-travelxp-4k-hdr-2160p-geo-blocked-60eb5cb61a.png | [IPTV-org exact ID: Travelxp.in](https://dtil.tmsimg.com/assets/s144014_ld_h15_aa.png?lock=720x540) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2349 | TV9 Bangla | image.png | nvisionbd-verified-tv9-bangla-4c591a017a.png | [IPTV-org exact ID: TV9Bangla.in](https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/TV9-Bangla1.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
+| IPTV-Playlist.m3u | 2351 | UTV Palakkad | logo.png | utv-palakkad.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2353 | Vokta TV | szagbcu.png | vokta-tv.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2355 | Zee 24 Ghanta | gnlzzgg0022kgxp.png | zee-24-ghanta.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2357 | Zee Bangla | logo_hd_image.png | zee-bangla.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2359 | Zee Bangla Sonar | gnlzzgg00287g7k.png | zee-bangla-sonar.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2361 | Zee Cinema | logo_hd_image.png | zee-cinema.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2363 | Zee Cinema | logo_hd_image.png | zee-cinema.png | Reused repaired exact-name logo |  | replaced |
+| IPTV-Playlist.m3u | 2365 | Zee Tamil | gnlzzgg00233wcl.png | zee-tamil.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
+| IPTV-Playlist.m3u | 2369 | Zoom (India) Nepal | image.png | nvisionbd-verified-zoom-india-nepal-27531244ca.png | [IPTV-org exact ID: Zoom.in](https://xstreamcp-assets-msp.streamready.in/assets/TIMESPLAY/LIVECHANNEL/6904ba4039f3b175376a61de/images/LOGO_HD/LOGO_HD_KN-eM9VvQ_ZoomTV1_1.png) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
 
-- Exact clean local assets are preferred over external references.
-- Generated fallback artwork is explicitly non-official and remains distinguishable from broadcaster branding.
-- Logo integrity and logo authenticity are separate checks: a readable image is not automatically an authentic broadcaster logo.
-- Playlist stream URLs are never deleted or reclassified by logo repair.
+## Quality rule
+
+- Exact, clean local assets are searched first; then curated, source-attributed external logo URLs are downloaded and validated.
+- If no exact authentic asset is available, an existing explicitly named generated-fallback asset may remain as provisional artwork; it is never presented as authentic and is marked generated_fallback in the provenance manifest.
+- Contaminated, mismatched, placeholder, and generic assets are never assigned to tvg-logo. Generated fallback assets are allowed only under their explicit filename prefix and remain visibly unverified.
+- Original playlist entries, channel metadata, categories, and stream URLs are preserved.

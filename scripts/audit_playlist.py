@@ -474,7 +474,7 @@ else: lines.append("Category block order: OK.")
 if alphabetical_order_issues:
     for group, prev, cur in alphabetical_order_issues: lines.append(f"- **{group}** — **{cur}** appears after **{prev}**")
 else: lines.append("Primary-category alphabetical/channel-number order: OK.")
-lines.append("Backup/Not Playing internal order is preserved for manual review and is intentionally not auto-enforced.")
+lines.append("Backup/Not Playing/New Channels/New Backup internal order is preserved for manual review and is intentionally not auto-enforced.")
 lines += ["", "## Suspicious URLs", ""]
 if suspicious_urls:
     for name, reason, url in suspicious_urls: lines.append(f"- **{name}** — {reason} — {redact_url(url)}")
