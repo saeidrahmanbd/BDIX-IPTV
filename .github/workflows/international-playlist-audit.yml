@@ -14,9 +14,12 @@ on:
 permissions:
   contents: write
 
+# International audit and the main IPTV maintenance job both write to main.
+# Keep them in the same queue so they never modify the repository concurrently.
 concurrency:
-  group: international-playlist-writer
+  group: iptv-playlist-main-writer
   cancel-in-progress: false
+  queue: max
 
 jobs:
   audit:
@@ -83,7 +86,6 @@ jobs:
               s = re.sub(r'\s+', ' ', s).strip()
               return re.sub(r'[^a-z0-9]+', '', s)
 
-          # Preserve playlist-level header lines while rebuilding all channel blocks.
           prefix = []
           blocks = []
           cur = None
@@ -106,22 +108,16 @@ jobs:
           for b in blocks:
               a = attrs(b[0])
               name = (a.get('tvg-name') or b[0].rsplit(',', 1)[-1]).strip()
-              # ATN Bangla USA duplicates the ATN Bangla UK programming and is explicitly removed.
               if norm(name) == norm('ATN Bangla USA'):
                   removed += 1
                   continue
               group = (a.get('group-title') or '').strip()
-              if group.casefold() not in order:
-                  # Keep unknown groups at the end rather than silently deleting channels.
-                  group_key = len(category_order)
-              else:
-                  group_key = order[group.casefold()]
+              group_key = order.get(group.casefold(), len(category_order))
               kept.append((group_key, norm(name), name.casefold(), b))
 
           kept.sort(key=lambda x: (x[0], x[1], x[2]))
 
           out = []
-          # Keep the standard playlist header and studio metadata.
           out.append('#EXTM3U url-tvg="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml" x-tvg-url="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"')
           out.append(header)
           for line in prefix:
@@ -167,31 +163,21 @@ jobs:
                   cur=[line]
               elif cur is not None: cur.append(line)
           if cur is not None: blocks.append(cur)
-          primary_keys={}
-          duplicate_primaries=[]
-          backup_count=0
+          primary_keys={}; duplicate_primaries=[]; backup_count=0
           for b in blocks:
               a=attrs(b[0]); group=a.get('group-title','').strip().casefold()
               if group=='backup': backup_count+=1; continue
-              if staging_re.search(b[0]):
-                  raise SystemExit('Forbidden staging category remains: '+b[0])
-              if group=='adult':
-                  # Adult providers can expose multiple distinct URLs for the same title; retain these for manual review.
-                  continue
+              if staging_re.search(b[0]): raise SystemExit('Forbidden staging category remains: '+b[0])
+              if group=='adult': continue
               name=norm(a.get('tvg-name') or b[0].rsplit(',',1)[-1])
               key=('name',name) if name else ('id',(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold())
-              if key in primary_keys:
-                  duplicate_primaries.append((key,b[0]))
-              else:
-                  primary_keys[key]=b[0]
-          if dup:
-              raise SystemExit(f'Duplicate stream URLs remain: {len(dup)}')
+              if key in primary_keys: duplicate_primaries.append((key,b[0]))
+              else: primary_keys[key]=b[0]
+          if dup: raise SystemExit(f'Duplicate stream URLs remain: {len(dup)}')
           if duplicate_primaries:
-              print('Duplicate primary records:')
               for key,line in duplicate_primaries: print(key,line)
               raise SystemExit(f'Duplicate primary channels remain: {len(duplicate_primaries)}')
-          if any('ATN Bangla USA' in b for b in blocks):
-              raise SystemExit('ATN Bangla USA remains in playlist')
+          if any('ATN Bangla USA' in b for b in blocks): raise SystemExit('ATN Bangla USA remains in playlist')
           expected=['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Adult','Sports','Backup','New Channels','New Backup','Not Playing']
           actual=[]
           for b in blocks:
@@ -200,7 +186,7 @@ jobs:
           positions={g:i for i,g in enumerate(expected)}
           if any(positions.get(actual[i], 999) > positions.get(actual[i+1], 999) for i in range(len(actual)-1)):
               raise SystemExit('Playlist categories are not in the required order: '+str(actual))
-          print(f'Integrity OK: {len(urls)} stream URLs, 0 duplicate URLs, 0 duplicate primaries outside Adult, Adult same-title streams retained for manual review, {backup_count} Backup entries, 0 forbidden staging categories')
+          print(f'Integrity OK: {len(urls)} stream URLs, 0 duplicate URLs, 0 duplicate primaries outside Adult, {backup_count} Backup entries, 0 forbidden staging categories')
           PY
 
       - name: Publish repaired International playlist
@@ -208,7 +194,7 @@ jobs:
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
-          git config user.email '41898282+users.noreply.github.com'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add International-Playlist.m3u reports/international-playlist-audit.md
           if compgen -G 'logos/international-*' > /dev/null; then
             git add logos/international-*
