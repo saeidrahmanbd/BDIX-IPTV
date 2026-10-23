@@ -58,6 +58,8 @@ jobs:
               'Indian Music',
               'Indian Entertainment',
               'Pakistani',
+              'International Movies',
+              'International Music',
               'International',
               'Documentary & Wildlife',
               'Kids',
@@ -178,7 +180,7 @@ jobs:
               for key,line in duplicate_primaries: print(key,line)
               raise SystemExit(f'Duplicate primary channels remain: {len(duplicate_primaries)}')
           if any('ATN Bangla USA' in b for b in blocks): raise SystemExit('ATN Bangla USA remains in playlist')
-          expected=['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Adult','Sports','Backup','New Channels','New Backup','Not Playing']
+          expected=['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International Movies','International Music','International','Documentary & Wildlife','Kids','Religious','Adult','Sports','Backup','New Channels','New Backup','Not Playing']
           actual=[]
           for b in blocks:
               g=attrs(b[0]).get('group-title','').strip()
