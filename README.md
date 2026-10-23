@@ -127,7 +127,7 @@ Other players (VLC, TiviMate, IPTV Smarters, Kodi, etc.) work the same way — a
   <a href="docs/PLAYLIST-STUDIO.md"><img src="https://img.shields.io/badge/📖%20Usage%20%26%20Build%20Guide-0969da?style=for-the-badge" alt="Usage guide"></a>
 </p>
 
-> **Build note:** the current v5.0.0 Build Kit filename contains `Debug22` because that is the published asset name. It is a build-package label, not a claim that the portable release itself is a debug build. Release integrity should be verified from the Playlist Studio release page; this repository does not currently publish a signing/checksum manifest for that asset.
+> **Build note:** the current v5.0.0 Build Kit filename contains `Debug22` because that is the published asset name; it does not mean the portable EXE is a debug build. Published SHA-256 digests are documented in [Playlist Studio v5.0.0 Release Integrity](docs/PLAYLIST-STUDIO-INTEGRITY.md) and in the official release metadata.
 
 ---
 
@@ -237,7 +237,7 @@ For collaboration, feedback, IPTV playlist issues, or project-related inquiries:
 <p align="center">
   <a href="mailto:saeidrahman.mkt@gmail.com"><img src="https://img.shields.io/badge/Email-saeidrahman.mkt@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
   <a href="https://github.com/saeidrahmanbd"><img src="https://img.shields.io/badge/GitHub-saeidrahmanbd-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-  <a href="https://www.facebook.com/saeidrahman.mkt"><img src="https://img.shields.io/badge/Facebook-Saeid%20Rahman-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook"></a>
+  <a href="https://www.facebook.com/saeidrahman.mkt"><img src="https://img.shields.io/badge/Facebook-Saeid%20Rahman-1877F2?style=for-the-badge&logo=facebook" alt="Facebook"></a>
 </p>
 
 ---
