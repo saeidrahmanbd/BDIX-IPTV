@@ -3,10 +3,6 @@ name: IPTV New Channel Discovery
 on:
   schedule:
     - cron: '47 2 * * *'
-  workflow_run:
-    workflows: ["IPTV Playlist Update"]
-    types: [completed]
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -20,15 +16,14 @@ concurrency:
 
 jobs:
   discover:
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: main
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
       - name: Install logo tools
