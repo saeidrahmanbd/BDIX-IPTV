@@ -1350,8 +1350,88 @@ https://server.livelegitpro.in:9899/anbnews/anbnews/index.m3u8
 https://janya-digimix.akamaized.net/vglive-sk-394914/india/ngrp:angelindia_all/playlist.m3u8
 #EXTINF:-1 tvg-id="AnmolTV.in@SD" tvg-name="Anmol TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-anmol-tv-8dee2e0662.png" tvg-country="IN" channel-id="AnmolTV.in@SD" group-title="New Channels",Anmol TV
 https://drk6xq0vhn.gpcdn.net/live/zee_anmol_abr/index.m3u8
+#EXTINF:-1 tvg-id="APN.in@SD" tvg-name="APN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-apn-8df69d7193.png" tvg-country="IN" channel-id="APN.in@SD" group-title="New Channels",APN
+https://mumt01.tangotv.in/O5aw8Zn3APN/index.m3u8
+#EXTINF:-1 tvg-id="AradanaTV.in@SD" tvg-name="Aradana TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aradana-tv-576p-5ebad635f9.png" tvg-country="IN" channel-id="AradanaTV.in@SD" group-title="New Channels",Aradana TV
+https://mumbai-edge.smartplaytv.in/AradanaTV/index.m3u8
+#EXTINF:-1 tvg-id="ArgusNews.in@SD" tvg-name="Argus News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-argus-news-62d9ca50e4.png" tvg-country="IN" channel-id="ArgusNews.in@SD" group-title="New Channels",Argus News
+https://mumt05.tangotv.in/87NeALx2ARGUSNEWS/index.m3u8
+#EXTINF:-1 tvg-id="ArputharYesuTV.in@SD" tvg-name="Arputhar Yesu TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-arputhar-yesu-tv-53e7a9e6ed.png" tvg-country="IN" channel-id="ArputharYesuTV.in@SD" group-title="New Channels",Arputhar Yesu TV
+https://account33.livebox.co.in/jesushelpshls/live.m3u8
+#EXTINF:-1 tvg-id="AryanTVNational.in@SD" tvg-name="Aryan TV National" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aryan-tv-national.png" tvg-country="IN" channel-id="AryanTVNational.in@SD" group-title="New Channels",Aryan TV National
+https://mumt04.tangotv.in/m18aqlK4ARYANTVNATIONAL/index.m3u8
+#EXTINF:-1 tvg-id="AshwaveegaNews24x7.in@SD" tvg-name="Ashwaveega News 24x7" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-ashwaveega-news-24x7-702f9e18d0.png" tvg-country="IN" channel-id="AshwaveegaNews24x7.in@SD" group-title="New Channels",Ashwaveega News 24x7
+https://mars.streambridge.cloud/sls/ashwaveega/playlist.m3u8
+#EXTINF:-1 tvg-id="AsianNews.in@SD" tvg-name="Asian News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-asian-news-8c363a5683.png" tvg-country="IN" channel-id="AsianNews.in@SD" group-title="New Channels",Asian News
+https://stream.ottlive.co.in/asiannews/index.m3u8
+#EXTINF:-1 tvg-id="AsianetMovies.in@SD" tvg-name="Asianet Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asianet-movies.png" tvg-country="IN" channel-id="AsianetMovies.in@SD" group-title="New Channels",Asianet Movies
+https://da86m1sqpm3o0.cloudfront.net/28072023/smil:asianetmovies.smil/chunklist_b1928000.m3u8
+#EXTINF:-1 tvg-id="AsianetNews.in@SD" tvg-name="Asianet News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-asianet-news-7a4ce2989d.png" tvg-country="IN" channel-id="AsianetNews.in@SD" group-title="New Channels",Asianet News
+https://amg13737-amg13737c1-amgplt0016.playout.now3.amagi.tv/playlist/amg13737-amg13737c1-amgplt0016/playlist.m3u8
+#EXTINF:-1 tvg-id="AsianetSuvarnaNews.in@SD" tvg-name="Asianet Suvarna News (1080p) [Not 24/7]" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-asianet-suvarna-news-1080p-not-24-7-452c4f9204.png" tvg-country="IN" channel-id="AsianetSuvarnaNews.in@SD" group-title="New Channels",Asianet Suvarna News (1080p) [Not 24/7]
+https://asianetnews.vgcdn.net/vglive-sk-335835/playlist.m3u8
+#EXTINF:-1 tvg-id="AsomLive24.in@SD" tvg-name="Asom Live 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-asom-live-24-533787c1d6.png" tvg-country="IN" channel-id="AsomLive24.in@SD" group-title="New Channels",Asom Live 24
+https://mumt06.tangotv.in/qYyB8fXVASHOMLIVE/index.m3u8
 #EXTINF:-1 tvg-id="ATNMusic.bd@SD" tvg-name="ATN Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-music.png" tvg-country="BD" channel-id="ATNMusic.bd@SD" group-title="New Channels",ATN Music
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="AwaazIndiaTV.in@SD" tvg-name="Awaaz India TV (720p) [Not 24/7]" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-awaaz-india-tv-720p-not-24-7-94aad4ee37.png" tvg-country="IN" channel-id="AwaazIndiaTV.in@SD" group-title="New Channels",Awaaz India TV (720p) [Not 24/7]
+https://awaazindia.livebox.co.in/AwaazIndaTVhls/Live.m3u8
+#EXTINF:-1 tvg-id="AwakeningTV.in@SD" tvg-name="Awakening TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-awakening-tv-f42bad0d9f.png" tvg-country="IN" channel-id="AwakeningTV.in@SD" group-title="New Channels",Awakening TV
+https://mumt03.tangotv.in/Dsly5z3HAWAKENINGTV/index.m3u8
+#EXTINF:-1 tvg-id="AyushTV.in@SD" tvg-name="Ayush TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ayush-tv.png" tvg-country="IN" channel-id="AyushTV.in@SD" group-title="New Channels",Ayush TV
+http://d1msejlow1t3l4.cloudfront.net/fta/ayushtv/playlist.m3u8
+#EXTINF:-1 tvg-id="B4UBhojpuri.in@SD" tvg-name="B4U Bhojpuri" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/b4u-bhojpuri.png" tvg-country="IN" channel-id="B4UBhojpuri.in@SD" group-title="New Channels",B4U Bhojpuri
+https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8
+#EXTINF:-1 tvg-id="BadaKhabar.in@SD" tvg-name="Bada Khabar" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-bada-khabar-08173c226b.png" tvg-country="IN" channel-id="BadaKhabar.in@SD" group-title="New Channels",Bada Khabar
+https://mumbai-edge.smartplaytv.in/BADAKHABAR/index.m3u8
+#EXTINF:-1 tvg-id="BansalNews.in@SD" tvg-name="Bansal News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-bansal-news-cd263c4d1f.png" tvg-country="IN" channel-id="BansalNews.in@SD" group-title="New Channels",Bansal News
+https://8yzmq2gbdvax-hls-live.wmncdn.net/bansalnewstv1/live1.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="BhagyamTV.in@SD" tvg-name="Bhagyam TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bhagyam-tv-1080p-132ad17dbe.png" tvg-country="IN" channel-id="BhagyamTV.in@SD" group-title="New Channels",Bhagyam TV
+https://ott.bhagyam.net/hls/bhagyamweb/index-1409148900-now.m3u8
+#EXTINF:-1 tvg-id="BhakthiSiri.in@SD" tvg-name="Bhakthi Siri" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-bhakthi-siri-e163f9f3ac.png" tvg-country="IN" channel-id="BhakthiSiri.in@SD" group-title="New Channels",Bhakthi Siri
+https://mumbai-edge.smartplaytv.in/Bhakthisiri/index.m3u8
+#EXTINF:-1 tvg-id="BhakthiTV.in@SD" tvg-name="Bhakthi TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-bhakthi-tv-40fb593b0a.jpg" tvg-country="IN" channel-id="BhakthiTV.in@SD" group-title="New Channels",Bhakthi TV
+https://cdn.pishow.tv/ott/live/397/master.m3u8
+#EXTINF:-1 tvg-id="BhaktiDhara.in@SD" tvg-name="Bhakti Dhara" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-bhakti-dhara-b76ba5f268.png" tvg-country="IN" channel-id="BhaktiDhara.in@SD" group-title="New Channels",Bhakti Dhara
+https://newsliveindia.com:4433/bhaktidhara/index.m3u8
+#EXTINF:-1 tvg-id="BhaktiSagar.in@SD" tvg-name="Bhakti Sagar" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-bhakti-sagar-9681ab0082.png" tvg-country="IN" channel-id="BhaktiSagar.in@SD" group-title="New Channels",Bhakti Sagar
+https://mumt05.tangotv.in/87NeALx2BHAKTISAGAR/index.m3u8
+#EXTINF:-1 tvg-id="Bharat24.in@SD" tvg-name="Bharat24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-bharat24-548858005c.png" tvg-country="IN" channel-id="Bharat24.in@SD" group-title="New Channels",Bharat24
+https://cdn.ottlive.co.in/bharat24/index.m3u8
+#EXTINF:-1 tvg-id="BharatExpress.in@SD" tvg-name="Bharat Express" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-bharat-express-fcfd70bbfc.png" tvg-country="IN" channel-id="BharatExpress.in@SD" group-title="New Channels",Bharat Express
+https://mumt07.tangotv.in/zHjX9OFlBHARATEXPRESS/index.m3u8
+#EXTINF:-1 tvg-id="BharatSamachar.in@SD" tvg-name="Bharat Samachar" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-bharat-samachar-aa6e095e80.jpg" tvg-country="IN" channel-id="BharatSamachar.in@SD" group-title="New Channels",Bharat Samachar
+https://mumt03.tangotv.in/Dsly5z3HBHARATSAMACHAR/index.m3u8
+#EXTINF:-1 tvg-id="BharatUpdate.in@SD" tvg-name="Bharat Update" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-bharat-update-8cc21df92d.png" tvg-country="IN" channel-id="BharatUpdate.in@SD" group-title="New Channels",Bharat Update
+https://cdn.pishow.tv/ott/live/339/master.m3u8
+#EXTINF:-1 tvg-id="BIGTV.in@SD" tvg-name="BIG TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-big-tv-e8a3c69872.png" tvg-country="IN" channel-id="BIGTV.in@SD" group-title="New Channels",BIG TV
+https://cdn.pishow.tv/ott/live/1059/master.m3u8
+#EXTINF:-1 tvg-id="BigTV24x7.in@SD" tvg-name="Big TV 24x7" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-big-tv-24x7-db386a5ff6.jpg" tvg-country="IN" channel-id="BigTV24x7.in@SD" group-title="New Channels",Big TV 24x7
+https://stream.ottlive.co.in/bigtvmalayalam/index.m3u8
+#EXTINF:-1 tvg-id="BRKNews.in@SD" tvg-name="BRK News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-brk-news-88e66fd167.png" tvg-country="IN" channel-id="BRKNews.in@SD" group-title="New Channels",BRK News
+https://mumbai-edge.smartplaytv.in/BRKNEWS/index.m3u8
+#EXTINF:-1 tvg-id="BTTV.in@SD" tvg-name="BT TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-bt-tv-652919e873.png" tvg-country="IN" channel-id="BTTV.in@SD" group-title="New Channels",BT TV
+https://feeds.intoday.in/bttv/itgd.m3u8
+#EXTINF:-1 tvg-id="BVG.in@SD" tvg-name="BVG" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bvg.png" tvg-country="IN" channel-id="BVG.in@SD" group-title="New Channels",BVG
+https://mumt05.tangotv.in/87NeALx2BVG/index.m3u8
+#EXTINF:-1 tvg-id="CalvaryTV.in@SD" tvg-name="Calvary TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/calvary-tv.png" tvg-country="IN" channel-id="CalvaryTV.in@SD" group-title="New Channels",Calvary TV
+https://cdn.pishow.tv/ott/live/963/master.m3u8
+#EXTINF:-1 tvg-id="Captain.in@SD" tvg-name="Captain" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/captain.png" tvg-country="IN" channel-id="Captain.in@SD" group-title="New Channels",Captain
+https://mumbai-edge.smartplaytv.in/captain/index.m3u8
+#EXTINF:-1 tvg-id="CCV.in@SD" tvg-name="CCV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ccv.png" tvg-country="IN" channel-id="CCV.in@SD" group-title="New Channels",CCV
+https://5a1178b42cc03.streamlock.net/8212/8212/playlist.m3u8
+#EXTINF:-1 tvg-id="ChannelDivya.in@SD" tvg-name="Channel Divya" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-channel-divya-f340e3f837.png" tvg-country="IN" channel-id="ChannelDivya.in@SD" group-title="New Channels",Channel Divya
+https://vg-pitaaratvlive.akamaized.net/v1/vglive-sk-906482/playlist.m3u8
+#EXTINF:-1 tvg-id="ChannelWIN.in@SD" tvg-name="Channel WIN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-channel-win-7f4bd841ad.png" tvg-country="IN" channel-id="ChannelWIN.in@SD" group-title="New Channels",Channel WIN
+https://cdn.pishow.tv/ott/live/229/master.m3u8
+#EXTINF:-1 tvg-id="ChardiklaGurbaaniTV.in@SD" tvg-name="Chardikla Gurbaani TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-chardikla-gurbaani-tv-bb198d0de0.png" tvg-country="IN" channel-id="ChardiklaGurbaaniTV.in@SD" group-title="New Channels",Chardikla Gurbaani TV
+https://chardikalatimestv.gigabitcdn.net/in-chardikala/chardikala-gurbani-tv/playlist.m3u8
+#EXTINF:-1 tvg-id="ChardiklaTimeTV.in@SD" tvg-name="Chardikla Time TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-chardikla-time-tv-ef26ddb2b5.png" tvg-country="IN" channel-id="ChardiklaTimeTV.in@SD" group-title="New Channels",Chardikla Time TV
+https://chardikalagurbanitv.gigabitcdn.net/in-chardikala/chardikala-timetv/playlist.m3u8
+#EXTINF:-1 tvg-id="ChardiklaTimeTVNorthAmerica.in@SD" tvg-name="Chardikla Time TV North America" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-chardikla-time-tv-north-america-ae519cd75e.jpg" tvg-country="IN" channel-id="ChardiklaTimeTVNorthAmerica.in@SD" group-title="New Channels",Chardikla Time TV North America
+https://chardikalanorthamerica.gigabitcdn.net/in-chardikala/chardikala-north-usa/playlist.m3u8
+#EXTINF:-1 tvg-id="ChhayaChitramTelugu.in@SD" tvg-name="Chhaya Chitram Telugu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-chhaya-chitram-telugu-7e1e93e465.png" tvg-country="IN" channel-id="ChhayaChitramTelugu.in@SD" group-title="New Channels",Chhaya Chitram Telugu
+https://samitaorigin.tangotv.in/CHHAYACHITRAMTELUGU/SAMITAORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="MadaniChannelBangla.bd@SD" tvg-name="Madani Channel Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-madani-channel-bangla-b138cb7f38.png" tvg-country="BD" channel-id="MadaniChannelBangla.bd@SD" group-title="New Channels",Madani Channel Bangla
 https://streaming.madanichannel.tv/static/streaming-playlists/hls/d3e49b76-ac06-4689-a641-9200445b647f/master.m3u8
 #EXTINF:-1 tvg-id="NANTV.bd@SD" tvg-name="NAN TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nan-tv.png" tvg-country="BD" channel-id="NANTV.bd@SD" group-title="New Channels",NAN TV
@@ -1398,6 +1478,8 @@ http://tvn3.chowdhury-shaheb.com/dbc/index.m3u8
 https://mumbai-edge.smartplaytv.in/DDIndia/index.m3u8
 #EXTINF:-1 tvg-id="DDNational.in@SD" tvg-name="DD National" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-national.png" tvg-country="IN" channel-id="DDNational.in@SD" group-title="New Backup",DD National
 https://cdn.pishow.tv/ott/live/11/master.m3u8
+#EXTINF:-1 tvg-id="DDNews.in@HD" tvg-name="DD News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-news.png" tvg-country="IN" channel-id="DDNews.in@HD" group-title="New Backup",DD News
+https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/0811cd8c37ca4c409d5385a6cd2fa18b/index.m3u8
 #EXTINF:-1 tvg-id="DDNews.in@SD" tvg-name="DD News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-news.png" tvg-country="IN" channel-id="DDNews.in@SD" group-title="New Backup",DD News
 https://mumbai-edge.smartplaytv.in/DDNews/index.m3u8
 #EXTINF:-1 tvg-id="DDSports.in@HD" tvg-name="DD Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-sports-fb997548.png" tvg-country="IN" channel-id="DDSports.in@HD" group-title="New Backup",DD Sports
@@ -1422,10 +1504,14 @@ https://mumbai-edge.smartplaytv.in/ETVABHIRUCHI/index.m3u8
 http://tvn1.chowdhury-shaheb.com/gazitv/index.m3u8
 #EXTINF:-1 tvg-id="GreenTV.bd@SD" tvg-name="Green TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-green-tv-fa848f9d71.jpg" tvg-country="BD" channel-id="GreenTV.bd@SD" group-title="New Backup",Green TV
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="Gyandarshan.in@SD" tvg-name="Gyandarshan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gyandarshan.png" tvg-country="IN" channel-id="Gyandarshan.in@SD" group-title="New Backup",Gyandarshan
+https://cdn.pishow.tv/ott/live/14/master.m3u8
 #EXTINF:-1 tvg-id="Gyandarshan.in@HD" tvg-name="Gyandarshan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gyandarshan.png" tvg-country="IN" channel-id="Gyandarshan.in@HD" group-title="New Backup",Gyandarshan
 https://mumt05.tangotv.in/87NeALx2GYANDARSHAN/index.m3u8
 #EXTINF:-1 tvg-id="HistoryTV18.in@SD" tvg-name="History TV18" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history-tv18.svg" tvg-country="IN" channel-id="HistoryTV18.in@SD" group-title="New Backup",History TV18
 http://103.151.60.162:2122/play/a00y/index.m3u8?hls
+#EXTINF:-1 tvg-id="HosannaTV.in@Tamil" tvg-name="Hosanna TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-hosanna-tv-016e291e22.png" tvg-country="IN" channel-id="HosannaTV.in@Tamil" group-title="New Backup",Hosanna TV
+https://asia.mslivestream.net/mslive/bfba54c5c96a6359e2da0ca35f4998af.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="HosannaTV.in@Global" tvg-name="Hosanna TV Global" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-hosanna-tv-global-016e291e22.png" tvg-country="IN" channel-id="HosannaTV.in@Global" group-title="New Backup",Hosanna TV Global
 https://ktismaservers.in:3349/live/hosannatvlive.m3u8
 #EXTINF:-1 tvg-id="HosannaTV.in@Hindi" tvg-name="Hosanna TV Hindi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-hosanna-tv-hindi-016e291e22.png" tvg-country="IN" channel-id="HosannaTV.in@Hindi" group-title="New Backup",Hosanna TV Hindi
@@ -1450,6 +1536,8 @@ http://103.151.60.162:2122/play/a01e/index.m3u8?hls
 https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8
 #EXTINF:-1 tvg-id="Rengoni.in@SD" tvg-name="Rengoni" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rengoni.png" tvg-country="IN" channel-id="Rengoni.in@SD" group-title="New Backup",Rengoni
 https://streams.tangotv.in/RENGONI/ORIGIN/index.m3u8
+#EXTINF:-1 tvg-id="SansadTV2.in@SD" tvg-name="Sansad TV 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sansad-tv-2.png" tvg-country="IN" channel-id="SansadTV2.in@SD" group-title="New Backup",Sansad TV 2
+https://cdn.pishow.tv/ott/live/39/master.m3u8
 #EXTINF:-1 tvg-id="SansadTV2.in@HD" tvg-name="Sansad TV 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sansad-tv-2.png" tvg-country="IN" channel-id="SansadTV2.in@HD" group-title="New Backup",Sansad TV 2
 https://d2lk5u59tns74c.cloudfront.net/out/v1/e4182054dce340da9e0ff38b6b3658a4/index.m3u8
 #EXTINF:-1 tvg-id="SonyAath.in@SD" tvg-name="Sony Aath" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-aath.png" tvg-country="IN" channel-id="SonyAath.in@SD" group-title="New Backup",Sony Aath
@@ -1460,6 +1548,8 @@ http://103.151.60.162:2122/play/a015/index.m3u8?hls
 http://103.185.24.134:3001/SonyMAX/index.m3u8
 #EXTINF:-1 tvg-id="SonyPal.in@SD" tvg-name="Sony Pal" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-pal.png" tvg-country="IN" channel-id="SonyPal.in@SD" group-title="New Backup",Sony Pal
 http://59.103.38.46:8000/play/a0ac/index.m3u8
+#EXTINF:-1 tvg-id="SonySportsTen1.in@SD" tvg-name="Sony Sports Ten 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-1.svg" tvg-country="IN" channel-id="SonySportsTen1.in@SD" group-title="New Backup",Sony Sports Ten 1
+http://103.151.60.162:2122/play/a01c/index.m3u8?hls
 #EXTINF:-1 tvg-id="SonySportsTen1.in@HD" tvg-name="Sony Sports Ten 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-1.svg" tvg-country="IN" channel-id="SonySportsTen1.in@HD" group-title="New Backup",Sony Sports Ten 1
 http://103.185.24.134:3001/SonyTenSports1/index.m3u8
 #EXTINF:-1 tvg-id="SonyYay.in@SD" tvg-name="Sony Yay!" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-yay.png" tvg-country="IN" channel-id="SonyYay.in@SD" group-title="New Backup",Sony Yay!
@@ -1484,12 +1574,16 @@ http://202.70.146.135:8000/play/a009/index.m3u8
 https://stream.sscloud7.com/live/suriyantv/index.m3u8
 #EXTINF:-1 tvg-id="TSports.bd@SD" tvg-name="T Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/t-sports.png" tvg-country="BD" channel-id="TSports.bd@SD" group-title="New Backup",T Sports
 https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8
+#EXTINF:-1 tvg-id="TimesNowNavbharat.in@SD" tvg-name="Times Now Navbharat" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-times-now-navbharat-be6e714868.png" tvg-country="IN" channel-id="TimesNowNavbharat.in@SD" group-title="New Backup",Times Now Navbharat
+https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/TimesNowNavbharat.m3u8
 #EXTINF:-1 tvg-id="TimesNowNavbharat.in@HD" tvg-name="Times Now Navbharat" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-times-now-navbharat-be6e714868.png" tvg-country="IN" channel-id="TimesNowNavbharat.in@HD" group-title="New Backup",Times Now Navbharat
 https://yupprestreamliveus.akamaized.net/v1/vglive-sk-717514/main.m3u8
 #EXTINF:-1 tvg-id="TLC.in@HD" tvg-name="TLC (India)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-tlc-india-f0ce45623b.png" tvg-country="IN" channel-id="TLC.in@HD" group-title="New Backup",TLC (India)
 https://drk6xq0vhn.gpcdn.net/live/tlc_hd_abr/index.m3u8
 #EXTINF:-1 tvg-id="TLC.in@SD" tvg-name="TLC (India)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-tlc-india-f0ce45623b.png" tvg-country="IN" channel-id="TLC.in@SD" group-title="New Backup",TLC (India)
 https://drk6xq0vhn.gpcdn.net/live/tlc_sd_abr/index.m3u8
+#EXTINF:-1 tvg-id="Travelxp.in@HD" tvg-name="Travelxp" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-travelxp-8185870314.png" tvg-country="IN" channel-id="Travelxp.in@HD" group-title="New Backup",Travelxp
+http://103.151.60.162:2122/play/a01s/index.m3u8?hls
 #EXTINF:-1 tvg-id="Travelxp.in@4KHDR" tvg-name="Travelxp 4K HDR (2160p) [Geo-blocked]" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-travelxp-4k-hdr-2160p-geo-blocked-60eb5cb61a.png" tvg-country="IN" channel-id="Travelxp.in@4KHDR" group-title="New Backup",Travelxp 4K HDR (2160p) [Geo-blocked]
 https://deltatesttatasky.akamaized.net/out/i/968284.m3u8
 #EXTINF:-1 tvg-id="TV9Bangla.in@SD" tvg-name="TV9 Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-tv9-bangla-4c591a017a.png" tvg-country="IN" channel-id="TV9Bangla.in@SD" group-title="New Backup",TV9 Bangla

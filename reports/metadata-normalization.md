@@ -1,9 +1,9 @@
 # Playlist Metadata Normalization
 
-Generated: **2026-10-23T02:00:59+00:00**
-Source playlist SHA-256: **475e034a7e67c0e7861fa7ecfde078ac8c36014f47f1ec8b6dde2f1b3274ec22**
+Generated: **2026-10-23T05:06:34+00:00**
+Source playlist SHA-256: **25bfcf3a154a524d8a642467917cee085bae824afbebe55de715da8bc282506d**
 
-- Entries processed: **1178**
-- Primary channel numbers added: **122**
-- Logo references repaired: **7**
+- Entries processed: **1225**
+- Primary channel numbers added: **163**
+- Logo references repaired: **0**
 - Backup/review entries normalized: **426**
