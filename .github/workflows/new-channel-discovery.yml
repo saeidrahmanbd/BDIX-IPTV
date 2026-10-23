@@ -12,9 +12,11 @@ on:
 permissions:
   contents: write
 
+# Same group as IPTV Playlist Update (maintenance): only one main-branch writer at a time.
 concurrency:
-  group: IPTV Playlist Update-${{ github.ref }}
-  cancel-in-progress: true
+  group: iptv-playlist-main-writer
+  cancel-in-progress: false
+  queue: max
 
 jobs:
   discover:
@@ -37,34 +39,11 @@ jobs:
         run: |
           python scripts/normalize_metadata.py
           python scripts/repair_playlist_logos.py
+          python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
       - name: Enable review-queue audit policy
         run: python scripts/enable_review_queue_audit.py
       - name: Validate review queues
-        run: |
-          python - <<'PY'
-          import re
-          from pathlib import Path
-          p=Path('IPTV-Playlist.m3u')
-          text=p.read_text(encoding='utf-8', errors='replace')
-          blocked={'New Channels','New Backup'}
-          current=None
-          for line in text.splitlines():
-              if line.startswith('#EXTINF:'):
-                  current=line
-              elif current and line.strip().lower().startswith(('http://','https://')):
-                  a=dict(re.findall(r'([A-Za-z0-9_-]+)="([^"]*)"',current))
-                  g=a.get('group-title','')
-                  if g in blocked:
-                      country=a.get('tvg-country','').upper()
-                      cid=(a.get('tvg-id') or a.get('channel-id') or '').lower()
-                      if country not in {'BD','IN'}:
-                          raise SystemExit(f'Queue entry is not Bangladesh/India: {current}')
-                      suffix='.bd' if country=='BD' else '.in'
-                      if not re.search(re.escape(suffix)+r'(?:@|$)',cid):
-                          raise SystemExit(f'Queue entry has mismatched country ID: {current}')
-                  current=None
-          print('New Channels/New Backup country and ID gate passed.')
-          PY
+        run: python scripts/country_verification.py validate IPTV-Playlist.m3u
       - name: Commit discovered candidates
         shell: bash
         run: |
@@ -78,8 +57,15 @@ jobs:
           fi
           git commit -m 'Run IPTV playlist maintenance: import new BD/India review candidates'
           for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git pull --rebase origin main; then
+              git rebase --abort || true
+              echo '::error::Rebase conflict; candidates not pushed.'
+              exit 1
+            fi
             if git push origin HEAD:main; then exit 0; fi
-            git pull --rebase origin main || { git rebase --abort || true; echo '::error::Rebase conflict; candidates not pushed.'; exit 1; }
+            echo "::warning::Push attempt ${attempt} failed; retrying after rebase."
+            sleep 3
           done
           echo '::error::Push failed after 3 attempts.'
           exit 1

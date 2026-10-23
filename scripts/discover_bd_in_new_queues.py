@@ -11,8 +11,11 @@ Rules:
 """
 from __future__ import annotations
 import json, re, unicodedata, urllib.request
+from collections import Counter
 from pathlib import Path
 from urllib.parse import parse_qsl, urlparse
+
+from country_verification import norm_name, reference_from_playlists, verify_country
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 REPORT = Path("reports/channel-discovery.md")
@@ -28,7 +31,9 @@ BAD_HOSTS = ("proxy", "proxied", "cors", "localhost", "workers.dev", "worker.dev
 BAD_QUERY_KEYS = {"token", "auth", "authorization", "hdnts", "sig", "signature", "expires", "session", "jwt", "key"}
 QUALITY = {"uhd", "fhd", "hd", "sd", "4k", "1080p", "720p", "576p", "480p", "360p", "240p"}
 COUNTRY_CODE = {"Bangladesh": "bd", "India": "in"}
-BAD_RE = re.compile(r"(?<![a-z0-9])(?:" + "|".join(re.escape(w) for w in sorted(BAD_WORDS)) + r")(?![a-z0-9])")
+OTHER_PLAYLISTS = (Path("BDIX-Playlist.m3u"), Path("International-Playlist.m3u"))
+# Whole-word match (Unicode-aware; "_" counts as a separator): "Latest News" must not match "test".
+BAD_RE = re.compile(r"(?<![^\W_])(?:" + "|".join(re.escape(w) for w in sorted(BAD_WORDS)) + r")(?![^\W_])")
 ID_CC_RE = re.compile(r"\.([a-z]{2})(?:@|$)")
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
@@ -48,10 +53,9 @@ def split_extinf(line: str) -> tuple[str, str]:
 
 
 def norm(value: str) -> str:
-    value = unicodedata.normalize("NFKC", value or "").casefold().replace("_", " ")
-    value = re.sub(r"\[[^]]*\]|\([^)]*\)", " ", value)
-    value = " ".join(x for x in value.split() if x not in QUALITY)
-    return "".join(c for c in value if c.isalnum() or unicodedata.category(c)[0] in "LMN")
+    # Letters, digits and combining marks (L/M/N) are preserved so Bengali/Hindi
+    # names differing only by vowel signs do not collide. Shared implementation.
+    return norm_name(value)
 
 
 def base_id(value: str) -> str:
@@ -76,28 +80,42 @@ def parse(text: str):
     return out
 
 
-def acceptable(country: str, a: dict[str, str], name: str, url: str) -> bool:
+def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=None):
+    """Return (normalized attrs | None, reason). Country must be verified BD/IN."""
     if country not in COUNTRY_CODE:
-        return False
-    m = ID_CC_RE.search((a.get("tvg-id") or a.get("channel-id") or "").strip().casefold())
-    if not m or m.group(1) != COUNTRY_CODE[country]:
-        return False
+        return None, "unknown source feed"
     p = urlparse(url)
     if p.scheme not in {"http", "https"} or not p.netloc or p.fragment:
-        return False
+        return None, "invalid stream URL"
     if BAD_RE.search(" ".join((name, a.get("tvg-id", ""), a.get("group-title", ""))).casefold()):
-        return False
+        return None, "bad word (vod/test/proxy/...)"
     if any(x in p.netloc.casefold() for x in BAD_HOSTS):
-        return False
+        return None, "proxy/worker host"
     if any(key.casefold() in BAD_QUERY_KEYS for key, _ in parse_qsl(p.query, keep_blank_values=True)):
-        return False
-    return p.path.casefold().endswith((".m3u8", ".m3u", ".ts")) and "vod" not in p.path.casefold() and "catchup" not in p.path.casefold()
+        return None, "tokenized URL"
+    if not (p.path.casefold().endswith((".m3u8", ".m3u", ".ts")) and "vod" not in p.path.casefold() and "catchup" not in p.path.casefold()):
+        return None, "unsupported stream path"
+    verdict = verify_country(a, name, reference, COUNTRY_CODE[country].upper())
+    if not verdict.ok:
+        return None, "country not verified: " + verdict.reason
+    # Normalize metadata from the verified evidence.
+    out = dict(a)
+    out["tvg-country"] = verdict.country
+    out["tvg-id"] = verdict.tvg_id
+    if not out.get("channel-id", "").strip() or not re.search(
+            r"\." + verdict.country.casefold() + r"(?:@|$)", out["channel-id"].casefold()):
+        out["channel-id"] = verdict.tvg_id
+    return out, ""
+
+
+def acceptable(country: str, a: dict[str, str], name: str, url: str, reference=None) -> bool:
+    return evaluate(country, a, name, url, reference)[0] is not None
 
 
 def extinf(a: dict[str, str], name: str, group: str, country: str) -> str | None:
     cid = (a.get("tvg-id") or a.get("channel-id") or "").strip()
-    if not cid:
-        return None
+    if not cid or country not in COUNTRY_CODE or a.get("tvg-country", "").strip().upper() != COUNTRY_CODE[country].upper():
+        return None  # never emit a queue row without a verified BD/IN country
     fields = [f'tvg-id="{cid}"', f'tvg-name="{name}"']
     if a.get("tvg-logo", "").strip():
         fields.append(f'tvg-logo="{a["tvg-logo"].strip()}"')
@@ -114,8 +132,10 @@ def main() -> int:
     existing_names = {norm(n) for _, n, _ in entries}
     existing_ids = {base_id(a.get("tvg-id") or a.get("channel-id")) for a, _, _ in entries if base_id(a.get("tvg-id") or a.get("channel-id"))}
 
+    reference = reference_from_playlists([PLAYLIST, *OTHER_PLAYLISTS])
     candidates = []
     rejected = 0
+    reasons: Counter = Counter()
     seen_source_urls = set(existing_urls)
     for country, source in SOURCES:
         try:
@@ -126,11 +146,13 @@ def main() -> int:
             continue
         for a, name, url in parse(text):
             key = url.casefold()
-            if acceptable(country, a, name, url) and key not in seen_source_urls:
-                candidates.append((country, a, name, url))
+            normalized, reason = evaluate(country, a, name, url, reference)
+            if normalized is not None and key not in seen_source_urls:
+                candidates.append((country, normalized, name, url))
                 seen_source_urls.add(key)
             else:
                 rejected += 1
+                reasons[reason or "duplicate stream URL"] += 1
 
     candidates.sort(key=lambda x: (x[0] != "Bangladesh", norm(x[2]), x[3]))
     new_channels, new_backups = [], []
@@ -174,7 +196,10 @@ def main() -> int:
         "- Sources: Bangladesh + India iptv-org country feeds",
         f"- New channels: **{len(new_channels)}**",
         f"- New backups: **{len(new_backups)}**",
-        f"- Rejected candidates: **{rejected}**", "",
+        f"- Rejected/held candidates: **{rejected}**",
+        "- Country policy: only candidates verified as BD/IN (valid `.bd`/`.in` id, or repository-mapping evidence when the id is missing/malformed) are queued; conflicting or unverifiable candidates are held.", "",
+        "## Rejection reasons", "",
+        *(f"- {r}: {n}" for r, n in sorted(reasons.items())), "",
         "## New Channels", "",
     ]
     report.extend(f"- {name} ({country}) — {url}" for country, _, name, url in new_channels)

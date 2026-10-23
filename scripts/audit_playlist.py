@@ -18,9 +18,11 @@ REPORT = Path("reports/playlist-audit.md")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
-PRIMARY_EXCEPTIONS = {"Backup", "Not Playing"}
+PRIMARY_EXCEPTIONS = {"Backup", "Not Playing", "New Channels", "New Backup"}
 from playlist_order_policy import should_check_alphabetical_order
-CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "Not Playing"]
+from country_verification import queue_errors as review_queue_country_errors, reference_from_playlists
+CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "New Channels", "New Backup", "Backup", "Not Playing"]
+REGISTRY_ORDER = [x for x in CATEGORY_ORDER if x not in {"New Channels", "New Backup"}]  # review queues are never registered
 
 def attrs(line):
     return dict(ATTR_RE.findall(line))
@@ -137,10 +139,12 @@ if len(registry_lines) != 1:
 else:
     try:
         actual_registry = json.loads(registry_lines[0].split(":", 1)[1])
-        if actual_registry != CATEGORY_ORDER:
+        if actual_registry != REGISTRY_ORDER:
             category_registry_issues.append("registry does not match canonical category order")
+        if any(value not in CATEGORY_ORDER for value in actual_registry):
+            category_registry_issues.append("registry contains an unknown category")
         if any(value in actual_registry for value in ("New Channels", "New Backup")):
-            category_registry_issues.append("forbidden staging category registered")
+            category_registry_issues.append("review queue categories must not be registered")
     except Exception as exc:
         category_registry_issues.append("registry is not valid JSON: " + str(exc)[:100])
 malformed_extinf = []
@@ -283,7 +287,7 @@ for cid, items in sorted(by_id.items()):
     if len(names) > 1 or len(groups) > 1 or len(countries) > 1:
         metadata_conflicts.append((cid, names, groups, countries))
 
-REVIEW_GROUPS = set()
+REVIEW_GROUPS = {"New Channels", "New Backup"}
 name_collisions = {k: [x for x in v if attrs(x[0]).get("group-title", "").strip() not in REVIEW_GROUPS] for k, v in by_name.items()}
 name_collisions = {k:v for k,v in name_collisions.items() if len({identity_root(identity(x[0])) for x in v}) > 1}
 
@@ -404,6 +408,10 @@ for group in category_transitions:
         if natural_sort_key(cur) < natural_sort_key(prev):
             alphabetical_order_issues.append((group, prev, cur))
 
+_reference = reference_from_playlists([PLAYLIST, Path("BDIX-Playlist.m3u"), Path("International-Playlist.m3u")])
+review_queue_country_issues = review_queue_country_errors(
+    [(attrs(info), display_name(info), url) for info, url in entries], _reference)
+
 lines = [
     "# Playlist Audit", "", "Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.", "", "## Summary", "",
     f"- Playlist entries: **{len(entries)}**", f"- Unique channel IDs: **{len(by_id)}**", f"- IDs with multiple streams: **{len(duplicate_ids)}**", f"- Duplicate stream URLs: **{len(duplicate_urls)}**", f"- Metadata conflicts: **{len(metadata_conflicts)}**", f"- Same-name / different-ID collisions: **{len(name_collisions)}**", f"- Cross-country backup collisions: **{len(cross_country_backups)}**", f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**", f"- Protected primary-entry changes: **{len(protected_changes)}**", f"- Logo exceptions requiring repair: **{len(logo_exceptions)}**", f"- External logo references (review only): **{len(logo_warnings)}**", f"- Logo references checked: **{sum(logo_counts.values())}**", f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**", f"- Potential near-duplicate primary name groups (review only): **{len(near_duplicate_name_groups)}**", f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**", f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**", f"- Primary entries missing tvg-country: **{len(missing_primary_country)}**", f"- Primary entries missing tvg-language: **{len(missing_primary_language)}**", f"- Malformed EXTINF entries: **{len(malformed_extinf)}**", f"- Category block-order issues: **{len(category_order_issues)}**", f"- Category registry issues: **{len(category_registry_issues)}**", f"- Alphabetical ordering issues: **{len(alphabetical_order_issues)}**", f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**", f"- Signed/tokenized stream URLs: **{len(signed_urls)}**", f"- Embedded Xtream-style credential paths (redacted): **{len(xtream_credential_paths)}**", ""]
@@ -415,6 +423,11 @@ lines += ["", "## Primary Metadata Completeness", "",
 for group in sorted(metadata_gaps_by_group):
     gap = metadata_gaps_by_group[group]
     lines.append(f"| {group} | {gap['tvg-country']} | {gap['tvg-language']} |")
+lines += ["", "## Review Queue Country Verification", ""]
+if review_queue_country_issues:
+    lines.extend("- " + issue for issue in review_queue_country_issues)
+else:
+    lines.append("New Channels/New Backup contain only entries verified as BD/IN.")
 lines += ["", "## Category Registry", ""]
 if category_registry_issues:
     lines.extend("- " + issue for issue in category_registry_issues)
@@ -533,4 +546,5 @@ backup_channel_numbers = [(info,url) for info,url in entries if attrs(info).get(
 missing_primary_chno = [(info,url) for info,url in entries if attrs(info).get("group-title","").strip() not in PRIMARY_EXCEPTIONS and not attrs(info).get("tvg-chno","").strip()]
 if backup_channel_numbers: raise SystemExit("Backup entries must not carry tvg-chno.")
 if missing_primary_chno: raise SystemExit("All active primary entries must carry tvg-chno.")
+if review_queue_country_issues: raise SystemExit("New Channels/New Backup contain entries not verified as BD/IN; refusing automatic commit.")
 if logo_exceptions: raise SystemExit("Logo integrity failures detected in active/reviewable entries.")

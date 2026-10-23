@@ -6,6 +6,7 @@ changed or removed; exact duplicate URLs block the run for manual review.
 """
 from pathlib import Path
 import re, sys, unicodedata
+from country_verification import reference_from_playlists, verify_country
 
 PLAYLIST_ORDERS={
     'IPTV-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','New Channels','New Backup','Backup','Not Playing'],
@@ -46,6 +47,15 @@ def process(path):
   if k: seen.add(k)
  if duplicate_urls:
   raise SystemExit(f'{path}: {len(duplicate_urls)} duplicate stream URL occurrences; refusing to delete any entry.')
+ # New Channels/New Backup may hold only candidates verified as BD/IN; normalize tvg-country, never delete.
+ reference=reference_from_playlists([path]); country_errors=[]
+ for r in rec:
+  a=attrs(r[0])
+  if a.get('group-title','').strip() in REVIEW_GROUPS:
+   v=verify_country(a,(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip(),reference)
+   if not v.ok: country_errors.append(f"review queue entry not verified as BD/IN: {(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip()} ({v.reason})")
+   elif a.get('tvg-country','').strip().upper()!=v.country: r[0]=set_attr(r[0],'tvg-country',v.country)
+ if country_errors: raise SystemExit(f'{path}: '+'; '.join(country_errors))
  for r in rec:
   a=attrs(r[0]); cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold(); g=a.get('group-title','').strip()
   if cid=='ultimatetv.in@sd' and g!='Backup': r[0]=set_attr(r[0],'group-title','Indian Music')

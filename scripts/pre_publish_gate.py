@@ -9,6 +9,7 @@ from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
+from country_verification import reference_from_playlists, verify_country
 from logo_asset_naming import is_blocked_logo_basename
 from restore_protected_review import authorized_backup_migration_target
 
@@ -170,18 +171,21 @@ def main() -> None:
 
     # Review queues are allowed only for BD/IN and are never active categories.
     queue_errors = []
+    country_reference = reference_from_playlists([P, Path("BDIX-Playlist.m3u"), Path("International-Playlist.m3u")])
     for _, a, u in current:
         group = a.get("group-title", "").strip()
         if group not in REVIEW_QUEUES:
             continue
         country = a.get("tvg-country", "").strip().upper()
-        cid = (a.get("tvg-id") or a.get("channel-id") or "").strip().lower()
         if country not in {"BD", "IN"}:
             queue_errors.append(f"{a.get('tvg-name','')} has invalid queue country {country or 'missing'}")
-        if country == "BD" and not re.search(r"\.bd(?:@|$)", cid):
-            queue_errors.append(f"{a.get('tvg-name','')} has non-BD tvg-id {cid}")
-        if country == "IN" and not re.search(r"\.in(?:@|$)", cid):
-            queue_errors.append(f"{a.get('tvg-name','')} has non-IN tvg-id {cid}")
+        else:
+            # tvg-id alone is not the classifier: verify with id + repository evidence.
+            verdict = verify_country(a, a.get("tvg-name", ""), country_reference)
+            if not verdict.ok:
+                queue_errors.append(f"{a.get('tvg-name','')} country not verified as BD/IN ({verdict.reason})")
+            elif verdict.country != country:
+                queue_errors.append(f"{a.get('tvg-name','')} tvg-country {country} conflicts with verified {verdict.country}")
         if not u.lower().startswith(("http://", "https://")):
             queue_errors.append(f"{a.get('tvg-name','')} has invalid stream URL")
     if queue_errors:

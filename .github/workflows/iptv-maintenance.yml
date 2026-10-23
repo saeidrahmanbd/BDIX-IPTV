@@ -21,6 +21,8 @@ on:
       - scripts/normalize_metadata.py
       - scripts/sort_playlists.py
       - scripts/final_playlist_hardening.py
+      - scripts/country_verification.py
+      - tests/test_country_verification.py
       - scripts/migrate_external_logos_fixed.py
       - scripts/restore_protected_review.py
       - scripts/generate_logo_authenticity_manifest.py
@@ -71,9 +73,11 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+# Shared with IPTV New Channel Discovery so the two main-branch writers never run simultaneously.
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  group: iptv-playlist-main-writer
+  cancel-in-progress: false
+  queue: max
 jobs:
   maintain:
     if: ${{ !(github.actor == 'github-actions[bot]' && (startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance') || startsWith(github.event.head_commit.message, 'Add conservative playlist removal guard') || startsWith(github.event.head_commit.message, 'Add hard playlist preservation gates') || startsWith(github.event.head_commit.message, 'Refine preservation guard to protect stream URLs') || startsWith(github.event.head_commit.message, 'Harden protected queue byte-for-byte preservation') || startsWith(github.event.head_commit.message, 'Harden IPTV maintenance safety') || startsWith(github.event.head_commit.message, 'Enforce zero automatic playlist deletion') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports and EPG'))) && !startsWith(github.event.head_commit.message, 'Repair IPTV metadata and local logos only; leave stream URLs unchanged') && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success') }}
@@ -100,6 +104,8 @@ jobs:
             scripts/pre_publish_gate.py \
             scripts/sort_playlists.py \
             scripts/final_playlist_hardening.py \
+            scripts/country_verification.py \
+            scripts/discover_bd_in_new_queues.py \
             scripts/repair_playlist_quality.py \
             scripts/repair_playlist_logos.py \
             scripts/generate_logo_authenticity_manifest.py \
@@ -126,6 +132,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_iptv_fragile_streams.py'
           python -m unittest discover -s tests -p 'test_language_policy.py'
           python -m unittest discover -s tests -p 'test_epg_config.py'
+          python -m unittest discover -s tests -p 'test_country_verification.py'
       - name: Validate EPG configuration
         run: python scripts/check_epg_config.py
       - name: Run maintenance
@@ -156,7 +163,9 @@ jobs:
             python scripts/repair_playlist_logos.py
             python scripts/sort_playlists.py IPTV-Playlist.m3u
             python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
-            if grep -Eiq 'group-title="(New Channels|New Backup|New)"' IPTV-Playlist.m3u; then echo '::error::Forbidden staging playlist category detected after normalization.'; exit 1; fi
+            if grep -Eiq 'group-title="New"' IPTV-Playlist.m3u; then echo '::error::Forbidden staging playlist category detected after normalization.'; exit 1; fi
+            # New Channels/New Backup are allowed only for entries verified as BD/IN.
+            python scripts/country_verification.py validate IPTV-Playlist.m3u
             python scripts/maintenance_helpers.py invalidate-bad-logos
             python scripts/migrate_external_logos_fixed.py
             python scripts/repair_logo_asset_technical_quality.py --fix
