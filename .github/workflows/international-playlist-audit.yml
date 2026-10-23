@@ -6,6 +6,8 @@ on:
     paths:
       - International-Playlist.m3u
       - scripts/repair_international_playlist.py
+      - scripts/discover_international_channels.py
+      - scripts/sort_playlists.py
       - scripts/classify_international_backups.py
       - logos/international/**
       - .github/workflows/international-playlist-audit.yml
@@ -14,8 +16,6 @@ on:
 permissions:
   contents: write
 
-# International audit and the main IPTV maintenance job both write to main.
-# Keep them in the same queue so they never modify the repository concurrently.
 concurrency:
   group: iptv-playlist-main-writer
   cancel-in-progress: false
@@ -40,7 +40,7 @@ jobs:
       - name: Reconcile primary and Backup entries
         run: python scripts/classify_international_backups.py
 
-      - name: Enforce final category order and requested removals
+      - name: Enforce dynamic country category order and requested removals
         shell: bash
         run: |
           set -euo pipefail
@@ -51,28 +51,12 @@ jobs:
           p = Path('International-Playlist.m3u')
           lines = p.read_text(encoding='utf-8-sig').splitlines()
 
-          category_order = [
-              'Bangladesh',
-              'Indian Bangla',
-              'Indian Movies',
-              'Indian Music',
-              'Indian Entertainment',
-              'Pakistani',
-              'International Movies',
-              'International Music',
-              'International',
-              'Documentary & Wildlife',
-              'Kids',
-              'Religious',
-              'Adult',
-              'Sports',
-              'Backup',
-              'New Channels',
-              'New Backup',
-              'Not Playing',
+          fixed = [
+              'Bangladesh', 'Indian Bangla', 'Indian Movies', 'Indian Music',
+              'Indian Entertainment', 'Pakistani',
           ]
-          order = {name.casefold(): i for i, name in enumerate(category_order)}
-          header = '#PLAYLIST-STUDIO-CATEGORIES:' + str(category_order).replace("'", '"')
+          tail = ['International', 'Documentary & Wildlife', 'Kids', 'Religious', 'Sports', 'Backup']
+          legacy = {'new channels', 'new backup', 'not playing', 'international movies', 'international music'}
 
           attr_re = re.compile(r'([A-Za-z0-9_-]+)=(?:"([^"]*)"|\'([^\']*)\'|([^\s,]+))')
 
@@ -88,9 +72,7 @@ jobs:
               s = re.sub(r'\s+', ' ', s).strip()
               return re.sub(r'[^a-z0-9]+', '', s)
 
-          prefix = []
-          blocks = []
-          cur = None
+          prefix, blocks, cur = [], [], None
           for line in lines:
               if line.startswith('#PLAYLIST-STUDIO-CATEGORIES:'):
                   continue
@@ -105,6 +87,30 @@ jobs:
           if cur is not None:
               blocks.append(cur)
 
+          # Convert obsolete staging/specialized International buckets into the
+          # single fallback group. Established country groups are preserved.
+          normalized = []
+          for b in blocks:
+              a = attrs(b[0])
+              group = (a.get('group-title') or '').strip()
+              if group.casefold() in legacy:
+                  b[0] = re.sub(r'(group-title=)(?:"[^"]*"|\'[^\']*\'|[^\s,]+)', r'\1"International"', b[0], count=1)
+              normalized.append(b)
+          blocks = normalized
+
+          existing_groups = {
+              (attrs(b[0]).get('group-title') or '').strip()
+              for b in blocks
+              if (attrs(b[0]).get('group-title') or '').strip()
+          }
+          country_groups = sorted(
+              g for g in existing_groups
+              if g not in fixed and g not in tail and g.casefold() not in legacy
+          )
+          category_order = fixed + country_groups + tail
+          order = {name.casefold(): i for i, name in enumerate(category_order)}
+          header = '#PLAYLIST-STUDIO-CATEGORIES:' + str(category_order).replace("'", '"')
+
           kept = []
           removed = 0
           for b in blocks:
@@ -114,14 +120,11 @@ jobs:
                   removed += 1
                   continue
               group = (a.get('group-title') or '').strip()
-              group_key = order.get(group.casefold(), len(category_order))
-              kept.append((group_key, norm(name), name.casefold(), b))
+              kept.append((order.get(group.casefold(), len(category_order)), norm(name), name.casefold(), b))
 
           kept.sort(key=lambda x: (x[0], x[1], x[2]))
 
-          out = []
-          out.append('#EXTM3U url-tvg="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml" x-tvg-url="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"')
-          out.append(header)
+          out = ['#EXTM3U url-tvg="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml" x-tvg-url="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"', header]
           for line in prefix:
               if line.strip() and not line.strip().startswith('#EXTM3U'):
                   out.append(line)
@@ -148,7 +151,7 @@ jobs:
           lines=p.read_text(encoding='utf-8-sig').splitlines()
           urls=[x.strip().casefold() for x in lines if x.strip().startswith(('http://','https://'))]
           dup=[u for u,n in Counter(urls).items() if n>1]
-          staging_re=re.compile(r'group-title\s*=\s*(?:"(?:New Channels|New Backup|New)"|\'(?:New Channels|New Backup|New)\'|(?:New Channels|New Backup|New))(?=\s|,|$)',re.I)
+          staging_re=re.compile(r'group-title\s*=\s*(?:"(?:New Channels|New Backup|Not Playing|New)"|\'(?:New Channels|New Backup|Not Playing|New)\'|(?:New Channels|New Backup|Not Playing|New))(?=\s|,|$)',re.I)
           info_re=re.compile(r'([A-Za-z0-9_-]+)=(?:"([^"]*)"|\'([^\']*)\'|([^\s,]+))')
           def attrs(s):
               out={}
@@ -180,13 +183,18 @@ jobs:
               for key,line in duplicate_primaries: print(key,line)
               raise SystemExit(f'Duplicate primary channels remain: {len(duplicate_primaries)}')
           if any('ATN Bangla USA' in b for b in blocks): raise SystemExit('ATN Bangla USA remains in playlist')
-          expected=['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International Movies','International Music','International','Documentary & Wildlife','Kids','Religious','Adult','Sports','Backup','New Channels','New Backup','Not Playing']
+          fixed=['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani']
+          tail=['International','Documentary & Wildlife','Kids','Religious','Sports','Backup']
+          legacy={'new channels','new backup','not playing','international movies','international music'}
           actual=[]
           for b in blocks:
               g=attrs(b[0]).get('group-title','').strip()
-              if g and g not in actual: actual.append(g)
+              if g and g.casefold() not in legacy and g not in actual: actual.append(g)
+          country_groups=sorted(g for g in actual if g not in fixed and g not in tail)
+          expected=fixed+country_groups+tail
           positions={g:i for i,g in enumerate(expected)}
-          if any(positions.get(actual[i], 999) > positions.get(actual[i+1], 999) for i in range(len(actual)-1)):
+          if set(actual)!=set(expected): raise SystemExit('Unexpected category set: '+str(actual))
+          if any(positions[actual[i]] > positions[actual[i+1]] for i in range(len(actual)-1)):
               raise SystemExit('Playlist categories are not in the required order: '+str(actual))
           print(f'Integrity OK: {len(urls)} stream URLs, 0 duplicate URLs, 0 duplicate primaries outside Adult, {backup_count} Backup entries, 0 forbidden staging categories')
           PY
@@ -205,5 +213,5 @@ jobs:
             echo 'No International playlist changes to publish.'
             exit 0
           fi
-          git commit -m 'Enforce International category order and remove duplicate ATN Bangla USA'
+          git commit -m 'Enforce dynamic International country categories'
           git push origin HEAD:main
