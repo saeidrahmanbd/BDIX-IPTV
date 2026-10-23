@@ -68,5 +68,5 @@
 
 ## Backup preservation
 - Historical Backup URLs restored to Backup: 0
-- Backup rows are not automatically promoted or migrated.
+- New Backup is a discovery review queue and is never promoted automatically.
 - Duplicate primary copies moved to Backup for uniqueness: 0
