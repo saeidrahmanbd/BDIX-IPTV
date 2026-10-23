@@ -67,7 +67,7 @@ RELIGIOUS_NAME_RE = re.compile(
     r"\b(?:religious|religion|christian|christ|gospel|bible|jesus|church|"
     r"catholic|hindu|hinduism|bhakti|bhakthi|sanatan|sikh|gurbani|jain|"
     r"buddh(?:a|ist|ism)?|temple|mandir|devotional|aarti|satsang|aastha|"
-    r"prarthana|darshan|worship|sermon|evangelical|zoroastrian|ministry|"
+    r"prarthana|darshan|worship|sermon|evangelical|zoroastrian|ministry|dharma|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|deity|"
     r"faith\s*tv|holy\s*mass|orthodox|shrine)\b",
     re.IGNORECASE,
 )
@@ -75,7 +75,7 @@ ISLAMIC_NAME_RE = re.compile(
     r"\b(?:islam|islamic|muslim|quran|koran|sunnah|sunna|mecca|makkah|"
     r"madina|madinah|medina|masjid|mosque|azan|adhan|ramadan|hajj|ummah|"
     r"allah|muhammad|mohammad|madani|iqra(?:a)?|peace\s*tv|kaaba|kabah|"
-    r"huda\s*tv|hidayat\s*tv|takbeer|ahlulbayt|quran\s*kareem|"
+    r"huda\s*tv|hidayat\s*tv|takbeer|ahlulbayt|mta\s*(?:international|world|1)|quran\s*kareem|"
     r"al\s*huda|saudi\s*quran|holy\s*quran)\b",
     re.IGNORECASE,
 )
