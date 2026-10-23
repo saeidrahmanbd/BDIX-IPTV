@@ -72,14 +72,16 @@ class DiscoveryTests(unittest.TestCase):
 
     def test_evaluate_normalizes_country_and_rejects_foreign(self):
         url = "https://cdn.example.com/live/index.m3u8"
-        a, why = disc.evaluate("India", {"tvg-id": "Latest News.in@SD"}, "Latest News", url)
+        a, why = disc.evaluate("India", {"tvg-id": "Star Utsav.in@SD"}, "Star Utsav", url)
         self.assertEqual(why, "")
         self.assertEqual(a["tvg-country"], "IN")
-        line = disc.extinf(a, "Latest News", "New Channels", "India")
+        line = disc.extinf(a, "Star Utsav", "New Channels", "India")
         self.assertIn('tvg-country="IN"', line)
-        self.assertIsNone(disc.evaluate("India", {"tvg-id": "Latest News.us"}, "Latest News", url)[0])
-        self.assertIsNone(disc.evaluate("India", {}, "Latest News", url)[0])
+        self.assertIsNone(disc.evaluate("India", {"tvg-id": "Star Utsav.us"}, "Star Utsav", url)[0])
+        self.assertIsNone(disc.evaluate("India", {}, "Star Utsav", url)[0])
         self.assertIsNone(disc.evaluate("Bangladesh", {"tvg-id": "X.in"}, "X", url)[0])
+        # Indian News is prohibited by repository policy, independent of country verification.
+        self.assertIsNone(disc.evaluate("India", {"tvg-id": "Latest News.in@SD"}, "Latest News", url)[0])
 
     def test_extinf_refuses_unverified_country(self):
         self.assertIsNone(disc.extinf({"tvg-id": "X.in"}, "X", "New Channels", "India"))
