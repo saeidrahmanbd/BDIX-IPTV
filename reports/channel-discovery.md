@@ -4,7 +4,7 @@
 - **STRICT POLICY: Indian News, Sports and Religious channels are prohibited and must never enter New Channels or New Backup.**
 - New channels: **40**
 - New backups: **0**
-- Rejected/held candidates: **726**
+- Rejected/held candidates: **766**
 - Country policy: only candidates verified as BD/IN (valid `.bd`/`.in` id, or repository-mapping evidence when the id is missing/malformed) are queued; conflicting or unverifiable candidates are held.
 
 ## Rejection reasons
@@ -14,53 +14,53 @@
 - India sports channel is prohibited: 19
 - country not verified: id carries a non-BD/IN country suffix: 25
 - country not verified: id country IN conflicts with BD source feed: 13
-- duplicate stream URL: 299
+- duplicate stream URL: 339
 - proxy/worker host: 1
 - tokenized URL: 9
 - unsupported stream path: 8
 
 ## New Channels
 
-- Chithiram (576p) (India) — https://cdn.pishow.tv/ott/live/1243/master.m3u8
-- CNBC Awaaz (1080p) (India) — https://n18syndication.akamaized.net/bpk-tv/CNBC_Awaaz_NW18_MOB/output01/master.m3u8
-- CNBC Bajar (1080p) (India) — https://n18syndication.akamaized.net/bpk-tv/CNBC_Bazaar_NW18_MOB/output01/master.m3u8
-- CNBC TV18 (1080p) (India) — https://n18syndication.akamaized.net/bpk-tv/CNBC_TV18_NW18_MOB/output01/index.m3u8
-- CNBC TV18 Prime HD (1080p) (India) — https://n18syndication.akamaized.net/bpk-tv/CNBC_Tv18_Prime_HD_NW18_MOB/output01/index.m3u8
-- CVR Health (576p) (India) — https://mumbai-edge.smartplaytv.in/CVRHealth/index.m3u8
-- DD Bihar (720p) (India) — https://cdn.pishow.tv/ott/live/35/master.m3u8
-- DD Kisan (1080p) (India) — https://mumbai-edge.smartplaytv.in/DDKisan/index.m3u8
-- Dhamaal (576p) [Geo-blocked] (India) — https://tvsen6.aynaott.com/F4Z6es8E/index.m3u8
-- Disha TV (396p) (India) — https://d1msejlow1t3l4.cloudfront.net/fta/dishatv/playlist.m3u8
-- Disney International HD (576p) (India) — http://103.151.60.162:2122/play/a018/index.m3u8?hls
-- Disney Junior (India) (576p) (India) — http://103.151.60.162:2122/play/a016/index.m3u8?hls
-- Epic TV Digital (1080p) (India) — https://cc-czbq30x55knit.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-czbq30x55knit/DIYC/PMSL/IN10/Epic_TV_IN_B/Epic_TV_IN_B.m3u8
-- ETV Bal Bharat (576p) (India) — http://103.185.24.134:3001/ETV-BAL-BHARAT/index.m3u8
-- ETV Life (1080p) (India) — https://mumbai-edge.smartplaytv.in/ETVLIFE/index.m3u8
-- ETV Plus HD (1080p) (India) — https://d12ee3o8yfkkhd.cloudfront.net/c6a4b411295f47f48c908d2ac0605bad/index.m3u8
-- ETV Telugu HD (1080p) (India) — https://mumbai-edge.smartplaytv.in/ETVHD/index.m3u8
-- E-Vidya 10 (576p) (India) — http://103.72.101.252:8080/live/411.m3u8
-- E-Vidya 11 (576p) (India) — http://103.72.101.252:8080/live/1410.m3u8
-- E-Vidya 12 (576p) (India) — http://103.72.101.252:8080/live/1532.m3u8
-- E-Vidya 4 (576p) (India) — http://103.72.101.252:8080/live/406.m3u8
-- E-Vidya 5 (576p) (India) — http://103.72.101.252:8080/live/407.m3u8
-- E-Vidya 6 (576p) (India) — http://103.72.101.252:8080/live/408.m3u8
-- E-Vidya 7 (576p) (India) — http://103.72.101.252:8080/live/404.m3u8
-- E-Vidya 8 (576p) (India) — http://103.72.101.252:8080/live/409.m3u8
-- E-Vidya 9 (576p) (India) — http://103.72.101.252:8080/live/410.m3u8
-- Fast1 (576p) (India) — https://cdn.pishow.tv/ott/live/10008/master.m3u8
-- Friends TV (1080p) (India) — https://server.playontv.in/friendstv/index.m3u8
-- GTC Punjabi (1080p) (India) — https://gtc-yupp.vgcdn.net/vglive-sk-254807/index.m3u8
-- HSTV (720p) (India) — https://live.castmaxcloud.com/live/hstv.m3u8
-- Hungama TV (576p) (India) — http://103.185.24.134:3001/HUNGAMA/index.m3u8
-- India Talkies (360p) (India) — https://samitaorigin.tangotv.in/INDIATALKIES/SAMITAORIGIN/index.m3u8
-- Jaihind TV (576p) (India) — https://mumt03.tangotv.in/Dsly5z3HJAIHIND/index.m3u8
-- Jan TV (576p) (India) — https://d1msejlow1t3l4.cloudfront.net/fta/jantv/playlist.m3u8
-- Jaya Plus (576p) (India) — https://mumbai-edge.smartplaytv.in/JayaPLus/index.m3u8
-- Kalika TV (576p) (India) — http://server.applelive.in/kalikatv/kalikatv.m3u8
-- Kaumudy TV (720p) (India) — https://oqgdrkxby4rm-hls-live.5centscdn.com/kaumudytv/live.stream/playlist.m3u8
-- KCL TV (720p) (India) — https://kcltv.livebox.co.in/kclhls/live.m3u8
-- Kite Victers (720p) [Not 24/7] (India) — https://932y4x26ljv8-hls-live.5centscdn.com/victers/tv.stream/playlist.m3u8
-- KTV Bangla (720p) (India) — https://server.livelegitpro.in:9899/tribetv/tribetv/index.m3u8
+- Maha Punjabi (India) — https://cdn.pishow.tv/ott/live/1521/master.m3u8
+- Makkal TV (576i) (India) — https://5k8q87azdy4v-hls-live.wmncdn.net/MAKKAL/271ddf829afeece44d8732757fba1a66.sdp/playlist.m3u8
+- Mango Mobile TV (1080p) (India) — https://amg01911-mangotv-amg01911c1-xiaomi-in-1270.playouts.now.amagi.tv/playlist/amg01911-mangomassmedia-mangotv-xiaomiin/playlist.m3u8
+- MBC TV (576p) (India) — https://mumbai-edge.smartplaytv.in/MBCTV/index.m3u8
+- Metro TV (India) (1080p) (India) — https://mercury.streambridge.link:8042/telugu/metrotv/index.m3u8
+- Movie Punjab (720p) (India) — https://samitaorigin.tangotv.in/MOVIEPUNJAB/SAMITAORIGIN/index.m3u8
+- Nandighosha TV (576p) (India) — https://mumt05.tangotv.in/87NeALx2NANDIGHOSHATV/index.m3u8
+- National Geographic (India) HD (1080p) (India) — http://103.185.24.134:3001/NATGEO-HD/index.m3u8
+- NDTV Good Times (1080p) (India) — https://amg01448-samsungin-ndtvgoodtimes-samsungin-ad-gp.amagi.tv/playlist/amg01448-samsungin-ndtvgoodtimes-samsungin/playlist.m3u8
+- NDTV Profit (1080p) (India) — https://ndtvprofit.akamaized.net/hls/live/2107404/ndtvprofit/chunklist_5.m3u8
+- Nepal 1 (576p) (India) — https://mumt05.tangotv.in/87NeALx2NEPAL1/index.m3u8
+- Network 10 (720p) (India) — https://mumbai-edge.smartplaytv.in/Network10/index.m3u8
+- NH BollyGold (1080p) (India) — https://0dc330e6408b4c3b9ac31fd37b121368.mediatailor.ap-south-1.amazonaws.com/v1/master/d367f9b863a7a04827f71ecab4cbeeb11f78a827/nh-bollygold-airtel/playlist.m3u8
+- Nick Jr. (India) (576p) (India) — http://103.185.24.134:3001/NICK-JR/index.m3u8
+- NTC TV (720p) (India) — https://galaxyott.live/hls/ntv.m3u8
+- Oscar Movies Bhojpuri (720p) (India) — https://cdn.pishow.tv/ott/live/233/master.m3u8
+- Pankh (360p) (India) — https://samitaorigin.tangotv.in/PANKH/SAMITAORIGIN/index.m3u8
+- Prarthana Bhawan TV (576p) (India) — https://mumt03.tangotv.in/Dsly5z3HPRATHANABHAWAN/index.m3u8
+- Pravasi Channel (1080p) (India) — https://m6gdavepdn93-hls-live.5centscdn.com/pravasi/d0dbe915091d400bd8ee7f27f0791303.sdp/playlist.m3u8
+- Punjabi Music HD (720p) (India) — https://samitaorigin.tangotv.in/PUNJABIMUSICHD/SAMITAORIGIN/index.m3u8
+- Punjabi TV (720p) (India) — https://samitaorigin.tangotv.in/PUNJABITV/SAMITAORIGIN/index.m3u8
+- Raftaar Media (576p) (India) — https://mumt04.tangotv.in/m18aqlK4RAFTAARMEDIA/index.m3u8
+- R Plus (768p) (India) — https://thelegitpro.in/pntv/rplusnews24x7/index.m3u8
+- Saam TV (India) — https://cdn.pishow.tv/ott/live/437/master.m3u8
+- Sai TV (576p) (India) — https://mumbai-edge.smartplaytv.in/SaiTV/index.m3u8
+- Sansad TV 1 HD (1080p) (India) — https://d2lk5u59tns74c.cloudfront.net/out/v1/fff8f20221d5456e8922e689d71dedc3/index.m3u8
+- Santvani Channel (576p) (India) — https://d1msejlow1t3l4.cloudfront.net/fta/santwani/playlist.m3u8
+- Sarv Dharm Sangam (576p) (India) — https://mumt01.tangotv.in/O5aw8Zn3SARAVDHARAMSANGAM/index.m3u8
+- Sharnam TV (576p) (India) — https://mumt06.tangotv.in/qYyB8fXVSHARNAMTV/index.m3u8
+- Shekinah TV (1080p) (India) — https://livetv.timeiptv.in/ShekinahNewsIndia/955ad3298db330b5ee880c2c9e6f23a0.sdp/playlist.m3u8
+- Shemaroo Filmi Gaane (1080p) (India) — https://prod-runn.cdn.runn.tv/shemaroo/stream/smrfgn/playlist.m3u8
+- Shubh TV (1080p) (India) — https://d2g1vdc6ozl2o8.cloudfront.net/out/v1/0a0dc7d7911b4fddbb4dfc963fdd4b9e/index.m3u8
+- Soneri Cinema (360p) (India) — https://samitaorigin.tangotv.in/SONERICINEMA/SAMITAORIGIN/index.m3u8
+- Sonic (576p) (India) — http://103.185.24.134:3001/SONIC/index.m3u8
+- Sony BBC Earth HD (1080p) (India) — http://103.185.24.134:3001/SONY-BBC/index.m3u8
+- Sony Max 1 (India) — http://27.116.22.53:5001/live/3418.m3u8
+- Star Kiran (576p) (India) — http://103.151.60.162:2122/play/a032/index.m3u8?hls
+- Sun Gemini (576p) (India) — http://ptuf.ridsys.in/riptv/live/GEMINI_TV/index.m3u8
+- Sun Surya HD (1080p) (India) — https://d3dt6rg724ecr3.cloudfront.net/SuryaTv/SuryaTV-HDR10-IN-index.m3u8
+- Sun TV HD (1080p) (India) — https://d2px1d6ssc60fw.cloudfront.net/SunTV/SunTV-HDR10-IN-index.m3u8
 
 ## New Backups
 
