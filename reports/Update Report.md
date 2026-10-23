@@ -39,7 +39,7 @@ Source playlist SHA-256: **0ce6e1a9799733fae3febaa075d00c8c19a71f5ec225525a6559b
 ## Safety & Automation
 - Stream health is non-destructive and keeps per-URL failure history.
 - Backup streams are never automatically deleted because of health failures.
-- Discovery queues are retired; only the approved canonical playlist categories are maintained.
+- `New Channels` and `New Backup` are active review queues used by discovery and validation; they are not retired categories.
 - Pre-publish gate status: **PASS**
 - Canonical channel identity index: reports/channel-identity-index.json
 
