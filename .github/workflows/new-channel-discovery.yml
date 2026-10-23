@@ -33,7 +33,8 @@ jobs:
       - name: Normalize discovered metadata and localize logos
         run: |
           python scripts/normalize_metadata.py
-          python scripts/repair_playlist_logos.py
+          python scripts/migrate_external_logos_fixed.py
+          python scripts/repair_logo_asset_technical_quality.py --fix
           python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
       - name: Enable review-queue audit policy
         run: python scripts/enable_review_queue_audit.py
@@ -51,8 +52,6 @@ jobs:
             exit 0
           fi
           git commit -m 'Maintain IPTV queues: enforce exclusions and import approved candidates'
-          # Generated-but-uncommitted files (other reports, logo scratch) would make
-          # `git pull --rebase` refuse to run; they are not part of this commit.
           git reset --hard HEAD
           git clean -fd
           for attempt in 1 2 3; do
