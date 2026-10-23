@@ -32,7 +32,7 @@ def main():
     mapping_match=re.search(r'IDs with an EPG source mapping:\s*\*\*(\d+)/(\d+) \(([\d.]+)%\)\*\*',g,re.I)
     current_match=re.search(r'IDs with usable current/future (?:English programme data|source schedules \(nonblank (?:English|allowed-language) titles\)):\s*\*\*(\d+)/(\d+) \(([\d.]+)%\)\*',g,re.I)
     missing_match=re.search(r'IDs with no EPG source mapping:\s*\*\*(\d+)\*\*',g,re.I)
-    iptv_row=re.search(r'^\|\s*IPTV-Playlist\.m3u\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|',egd,re.M)
+    iptv_row=re.search(r'^\|\s*IPTV-Playlist\.m3u\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|',egd,re.M)
     if iptv_row:
         india=int(iptv_row.group(2)); mapped=int(iptv_row.group(3)); source_live=int(iptv_row.group(4)); present=int(iptv_row.group(5)); live=int(iptv_row.group(6)); missing=int(iptv_row.group(7)); mapct=round(mapped*100/india,1) if india else 0.0; livepct=round(live*100/india,1) if india else 0.0; epg_scope="IPTV-Playlist.m3u published-guide row"
     else:
@@ -54,7 +54,7 @@ Source playlist SHA-256: **{source_sha}**
 | Active Primary Streams | **{primary_streams}** |
 | Bangladesh | **{groups.get("Bangladesh",0)}** |
 | India | **{sum(v for k,v in groups.items() if k.startswith("Indian "))}** |
-| Backup Streams | **{groups.get("Backup",0)}** |
+| Backup Stream Entries | **{groups.get("Backup",0)}** |
 | Local Logos | **{logos}%** |
 | EPG Programme Coverage | **{livepct}%** |
 | EPG Mapping | **{mapct}%** |
@@ -86,8 +86,14 @@ Source playlist SHA-256: **{source_sha}**
 - Pre-publish gate status: **{gate_status}**
 - Canonical channel identity index: reports/channel-identity-index.json
 
+## Counting Scope
+- **Active Channel Identities / Active Primary Streams** count only canonical playlist groups.
+- `New Channels`, `New Backup`, and `Not Playing` are review queues and are excluded from the active-primary count.
+- **EPG IDs audited** use the EPG report's published-guide scope and therefore do not have to equal the active-primary identity count.
+- **Backup Stream Entries** count playlist rows, not independent CDN/origin infrastructures. Backup independence is reviewed separately.
+
 ## EPG
-- Active channel IDs audited: **{india}**
+- EPG IDs audited: **{india}**
 - Mapped: **{mapped} ({mapct}%)**
 - Current/future programme coverage: **{live}/{india} ({livepct}%)**
 - No mapping: **{missing}**
@@ -111,8 +117,8 @@ Historical records are retained in reports/maintenance-history.json.
 """
     OUT_MD.write_text(md,encoding="utf-8")
     def t(x,y,s,size=15,b=False): return f'<text x="{x}" y="{y}" font-family="Arial,Helvetica,sans-serif" font-size="{size}px" font-weight="{"700" if b else "400"}" fill="#1f2937">{html.escape(str(s))}</text>'
+    cards=[("Streams",len(e)),("Channel Identities",active),("Bangladesh",groups.get("Bangladesh",0)),("India",sum(v for k,v in groups.items() if k.startswith("Indian "))),("Backup Entries",groups.get("Backup",0)),("Local Logos",f"{logos}%"),("EPG Coverage",f"{round(livepct)}%"),("Health Failures",hfail)]
     parts=['<svg xmlns="http://www.w3.org/2000/svg" width="980" height="650" viewBox="0 0 980 650">','<rect width="980" height="650" rx="24" fill="#f8fafc"/>','<rect width="980" height="92" rx="24" fill="#111827"/>',t(42,45,"BDIX-IPTV • PROJECT DASHBOARD",25,True),t(42,70,"Playlist • EPG • Metadata • Logos • Stream Health • Safety Gate",13)]
-    cards=[("Streams",len(e)),("Channel Identities",active),("Bangladesh",groups.get("Bangladesh",0)),("India",sum(v for k,v in groups.items() if k.startswith("Indian "))),("Backup Streams",groups.get("Backup",0)),("Local Logos",f"{logos}%"),("EPG Coverage",f"{round(livepct)}%"),("Health Failures",hfail)]
     for (lab,val),(x,y) in zip(cards,[(34,120),(268,120),(502,120),(736,120),(34,260),(268,260),(502,260),(736,260)]): parts += [f'<rect x="{x}" y="{y}" width="210" height="112" rx="18" fill="white" stroke="#e5e7eb"/>',t(x+18,y+34,lab,14),t(x+18,y+78,val,28,True)]
     parts += ['<rect x="34" y="400" width="912" height="190" rx="18" fill="white" stroke="#e5e7eb"/>',t(58,435,"Current quality status",18,True),t(58,470,f"Audit blocking issues: {issues}",15),t(58,498,f"Pre-publish gate: {gate_status}",15),t(58,526,f"Persistent health failures: {hpersist} • Near-duplicate URL families: {hnear}",15),t(58,554,f"Generated: {now}",13),'</svg>']
     OUT_SVG.write_text("".join(parts),encoding="utf-8")
@@ -125,8 +131,9 @@ Source playlist SHA-256: **{source_sha}**
 | Item | Result |
 |---|---:|
 | Current playlist streams | **{len(e)}** |
-| Current channel IDs | **{metric(a,"Unique channel IDs")}** |
-| Backup streams | **{groups.get("Backup",0)}** |
+| Active channel identities | **{active}** |
+| Backup stream entries | **{groups.get("Backup",0)}** |
+| EPG IDs audited | **{india}** |
 | Logo exceptions | **{metric(a,"Logo exceptions")}** |
 | EPG mapping | **{mapct}%** |
 | EPG programme coverage | **{livepct}%** |
@@ -139,7 +146,8 @@ Source playlist SHA-256: **{source_sha}**
 - Duplicate stream URLs are blocking.
 - Primary streams are protected from silent removal.
 - Backup streams are never deleted because of health failures.
-- Playlist maintenance follows the approved category structure.
+- New Channels and New Backup remain active discovery/review queues.
+- Backup counts do not imply independent CDN/origin redundancy.
 - Dashboard and reports are generated from the current playlist.
 """,encoding="utf-8")
 if __name__=="__main__": main()
