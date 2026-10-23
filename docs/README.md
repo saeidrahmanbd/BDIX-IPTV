@@ -3,6 +3,7 @@
 ## Playlist Studio
 
 - **[Playlist Studio 5.0](PLAYLIST-STUDIO.md)** — features, download, usage and build instructions
+- **[Playlist Studio v5.0.0 Release Integrity](PLAYLIST-STUDIO-INTEGRITY.md)** — published SHA-256 asset digests
 
 ## Playlist Project
 
@@ -28,6 +29,7 @@ The repository contains three maintained playlist surfaces, EPG resources, chann
 - [Download Center](DOWNLOADS.md)
 - [Changelog](CHANGELOG.md)
 - [Playlist Studio 5.0](PLAYLIST-STUDIO.md)
+- [Playlist Studio release integrity](PLAYLIST-STUDIO-INTEGRITY.md)
 - [Wiki Reference](WIKI.md)
 
 ### Repository Policies
