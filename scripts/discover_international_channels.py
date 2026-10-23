@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Discover a broad set of international channels without testing playback.
+"""Discover broad international channels without testing playback.
 
-This script only adds candidate entries. It never removes existing playlist
-entries and never performs HTTP requests to stream URLs. Source/logo requests
-are separate from playback validation.
+Country grouping is dynamic: a country gets its own group once at least five
+legitimate channels from that country are known, or immediately if that country
+group already exists. Existing staging groups are not used.
 """
 from __future__ import annotations
 
@@ -28,22 +28,31 @@ MAX_NEW_CHANNELS = 50
 MAX_NEW_BACKUPS = 40
 MAX_NEW_PER_GROUP = 14
 MAX_LOGO_BYTES = 2 * 1024 * 1024
+COUNTRY_THRESHOLD = 5
 
-ORDER = [
+FIXED_GROUPS = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
-    "Indian Entertainment", "Pakistani", "International Movies",
-    "International Music", "International", "Documentary & Wildlife",
-    "Kids", "Religious", "Adult", "Sports", "Backup", "New Channels",
-    "New Backup", "Not Playing",
+    "Indian Entertainment", "Pakistani",
 ]
-NO_LOGO = {
-    "default.png", "placeholder.png", "no-logo.png", "nologo.png",
-    "unknown.png", "blank.png", "generic.png", "favicon.png",
+TAIL_GROUPS = ["International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup"]
+LEGACY_STAGING_GROUPS = {"new channels", "new backup", "not playing", "international movies", "international music"}
+SPECIAL_GROUPS = set(FIXED_GROUPS + TAIL_GROUPS)
+
+# ISO-3166 alpha-2 -> readable playlist group name.
+COUNTRY_NAMES = {
+    "AD":"Andorra","AE":"United Arab Emirates","AF":"Afghanistan","AG":"Antigua and Barbuda","AI":"Anguilla","AL":"Albania","AM":"Armenia","AO":"Angola","AR":"Argentina","AS":"American Samoa","AT":"Austria","AU":"Australia","AW":"Aruba","AX":"Åland Islands","AZ":"Azerbaijan",
+    "BA":"Bosnia and Herzegovina","BB":"Barbados","BD":"Bangladesh","BE":"Belgium","BF":"Burkina Faso","BG":"Bulgaria","BH":"Bahrain","BI":"Burundi","BJ":"Benin","BL":"Saint Barthélemy","BM":"Bermuda","BN":"Brunei","BO":"Bolivia","BQ":"Caribbean Netherlands","BR":"Brazil","BS":"Bahamas","BT":"Bhutan","BV":"Bouvet Island","BW":"Botswana","BY":"Belarus","BZ":"Belize",
+    "CA":"Canada","CC":"Cocos Islands","CD":"Democratic Republic of the Congo","CF":"Central African Republic","CG":"Republic of the Congo","CH":"Switzerland","CI":"Côte d'Ivoire","CK":"Cook Islands","CL":"Chile","CM":"Cameroon","CN":"China","CO":"Colombia","CR":"Costa Rica","CU":"Cuba","CV":"Cape Verde","CW":"Curaçao","CX":"Christmas Island","CY":"Cyprus","CZ":"Czech Republic",
+    "DE":"Germany","DJ":"Djibouti","DK":"Denmark","DM":"Dominica","DO":"Dominican Republic","DZ":"Algeria","EC":"Ecuador","EE":"Estonia","EG":"Egypt","EH":"Western Sahara","ER":"Eritrea","ES":"Spain","ET":"Ethiopia",
+    "FI":"Finland","FJ":"Fiji","FK":"Falkland Islands","FM":"Micronesia","FO":"Faroe Islands","FR":"France","GA":"Gabon","GB":"United Kingdom","GD":"Grenada","GE":"Georgia","GF":"French Guiana","GG":"Guernsey","GH":"Ghana","GI":"Gibraltar","GL":"Greenland","GM":"Gambia","GN":"Guinea","GP":"Guadeloupe","GQ":"Equatorial Guinea","GR":"Greece","GS":"South Georgia and South Sandwich Islands","GT":"Guatemala","GU":"Guam","GW":"Guinea-Bissau","GY":"Guyana",
+    "HK":"Hong Kong","HM":"Heard Island and McDonald Islands","HN":"Honduras","HR":"Croatia","HT":"Haiti","HU":"Hungary","ID":"Indonesia","IE":"Ireland","IL":"Israel","IM":"Isle of Man","IN":"India","IO":"British Indian Ocean Territory","IQ":"Iraq","IR":"Iran","IS":"Iceland","IT":"Italy","JE":"Jersey","JM":"Jamaica","JO":"Jordan","JP":"Japan",
+    "KE":"Kenya","KG":"Kyrgyzstan","KH":"Cambodia","KI":"Kiribati","KM":"Comoros","KN":"Saint Kitts and Nevis","KP":"North Korea","KR":"South Korea","KW":"Kuwait","KY":"Cayman Islands","KZ":"Kazakhstan","LA":"Laos","LB":"Lebanon","LC":"Saint Lucia","LI":"Liechtenstein","LK":"Sri Lanka","LR":"Liberia","LS":"Lesotho","LT":"Lithuania","LU":"Luxembourg","LV":"Latvia","LY":"Libya",
+    "MA":"Morocco","MC":"Monaco","MD":"Moldova","ME":"Montenegro","MF":"Saint Martin","MG":"Madagascar","MH":"Marshall Islands","MK":"North Macedonia","ML":"Mali","MM":"Myanmar","MN":"Mongolia","MO":"Macao","MP":"Northern Mariana Islands","MQ":"Martinique","MR":"Mauritania","MS":"Montserrat","MT":"Malta","MU":"Mauritius","MV":"Maldives","MW":"Malawi","MX":"Mexico","MY":"Malaysia","MZ":"Mozambique",
+    "NA":"Namibia","NC":"New Caledonia","NE":"Niger","NF":"Norfolk Island","NG":"Nigeria","NI":"Nicaragua","NL":"Netherlands","NO":"Norway","NP":"Nepal","NR":"Nauru","NU":"Niue","NZ":"New Zealand","OM":"Oman","PA":"Panama","PE":"Peru","PF":"French Polynesia","PG":"Papua New Guinea","PH":"Philippines","PK":"Pakistan","PL":"Poland","PM":"Saint Pierre and Miquelon","PN":"Pitcairn","PR":"Puerto Rico","PS":"Palestine","PT":"Portugal","PW":"Palau","PY":"Paraguay",
+    "QA":"Qatar","RE":"Réunion","RO":"Romania","RS":"Serbia","RU":"Russia","RW":"Rwanda","SA":"Saudi Arabia","SB":"Solomon Islands","SC":"Seychelles","SD":"Sudan","SE":"Sweden","SG":"Singapore","SH":"Saint Helena","SI":"Slovenia","SJ":"Svalbard and Jan Mayen","SK":"Slovakia","SL":"Sierra Leone","SM":"San Marino","SN":"Senegal","SO":"Somalia","SR":"Suriname","SS":"South Sudan","ST":"São Tomé and Príncipe","SV":"El Salvador","SX":"Sint Maarten","SY":"Syria","SZ":"Eswatini",
+    "TC":"Turks and Caicos Islands","TD":"Chad","TF":"French Southern Territories","TG":"Togo","TH":"Thailand","TJ":"Tajikistan","TK":"Tokelau","TL":"Timor-Leste","TM":"Turkmenistan","TN":"Tunisia","TO":"Tonga","TR":"Turkey","TT":"Trinidad and Tobago","TV":"Tuvalu","TW":"Taiwan","TZ":"Tanzania","UA":"Ukraine","UG":"Uganda","UM":"United States Minor Outlying Islands","US":"United States","UY":"Uruguay","UZ":"Uzbekistan","VA":"Vatican City","VC":"Saint Vincent and the Grenadines","VE":"Venezuela","VG":"British Virgin Islands","VI":"U.S. Virgin Islands","VN":"Vietnam","VU":"Vanuatu","WF":"Wallis and Futuna","WS":"Samoa","YE":"Yemen","YT":"Mayotte","ZA":"South Africa","ZM":"Zambia","ZW":"Zimbabwe","XK":"Kosovo",
 }
-ISO_CODES = set("""
-AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT BV BW BY BZ
-CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW XK
-""".split())
+ISO_CODES = set(COUNTRY_NAMES)
 COUNTRY_ALIASES = {"UK": "GB", "EL": "GR"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 NEWS_GROUPS = {"news"}
@@ -53,46 +62,12 @@ KIDS_GROUPS = {"kids", "kid", "children", "childrens"}
 DOC_GROUPS = {"documentary", "documentaries", "wildlife", "nature"}
 SPORTS_GROUPS = {"sport", "sports"}
 RELIGIOUS_GROUPS = {"religious", "religion", "faith"}
-NEWS_NAME_RE = re.compile(
-    r"\b(?:news|newsmax|newsnation|headlines?|current affairs|newsroom|"
-    r"cnn|cnbc|bloomberg|reuters|euronews|france\s*24|al\s*jazeera|msnbc|"
-    r"fox\s*news|sky\s*news|bbc\s*(?:news|world)|abc\s*news|cbc\s*news|"
-    r"nbc\s*news|dw\s*news|rt\s*news|ndtv\s*(?:24x7|profit|india|world)|"
-    r"aaj\s*tak|times\s*now|news\s*18|news\s*nation|republic\s*(?:tv|bharat)|"
-    r"india\s*today|tv9\s*(?:bharatvarsh|news|telugu|kannada|marathi|gujarati)|"
-    r"dd\s*news|trt\s*world|tvp\s*world|new\s*china\s*tv)\b",
-    re.IGNORECASE,
-)
-RELIGIOUS_NAME_RE = re.compile(
-    r"\b(?:religious|religion|christian|christ|gospel|bible|jesus|church|"
-    r"catholic|hindu|hinduism|bhakti|bhakthi|sanatan|sikh|gurbani|jain|"
-    r"buddh(?:a|ist|ism)?|temple|mandir|devotional|aarti|satsang|aastha|"
-    r"prarthana|darshan|worship|sermon|evangelical|zoroastrian|ministry|dharma|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|deity|"
-    r"faith\s*tv|holy\s*mass|orthodox|shrine)\b",
-    re.IGNORECASE,
-)
-ISLAMIC_NAME_RE = re.compile(
-    r"\b(?:islam|islamic|muslim|quran|koran|sunnah|sunna|mecca|makkah|"
-    r"madina|madinah|medina|masjid|mosque|azan|adhan|ramadan|hajj|ummah|"
-    r"allah|muhammad|mohammad|madani|iqra(?:a)?|peace\s*tv|kaaba|kabah|"
-    r"huda\s*tv|hidayat\s*tv|takbeer|ahlulbayt|mta\s*(?:international|world|1)|quran\s*kareem|"
-    r"al\s*huda|saudi\s*quran|holy\s*quran)\b",
-    re.IGNORECASE,
-)
-BAD_NAME_RE = re.compile(
-    r"\b(?:vod|video\s*on\s*demand|catch[\s-]?up|test|demo|webcam|"
-    r"podcast|radio|timeshift|time\s*shift|ppv|pay\s*per\s*view|"
-    r"preview|sample|placeholder|coming\s*soon)\b",
-    re.IGNORECASE,
-)
-BAD_HOST_PARTS = (
-    "localhost", "workers.dev", "worker.dev", "pages.dev", "corsproxy",
-    "cors-proxy", "proxy.example", "streamproxy",
-)
-BAD_QUERY_KEYS = {
-    "token", "auth", "authorization", "password", "passwd", "pwd", "username",
-    "signature", "sig", "expires", "hdnts", "jwt", "session", "key",
-}
+NEWS_NAME_RE = re.compile(r"\b(?:news|newsmax|newsnation|headlines?|current affairs|newsroom|cnn|cnbc|bloomberg|reuters|euronews|france\s*24|al\s*jazeera|msnbc|fox\s*news|sky\s*news|bbc\s*(?:news|world)|abc\s*news|cbc\s*news|nbc\s*news|dw\s*news|rt\s*news|ndtv\s*(?:24x7|profit|india|world)|aaj\s*tak|times\s*now|news\s*18|news\s*nation|republic\s*(?:tv|bharat)|india\s*today|tv9\s*(?:bharatvarsh|news|telugu|kannada|marathi|gujarati)|dd\s*news|trt\s*world|tvp\s*world|new\s*china\s*tv)\b", re.IGNORECASE)
+RELIGIOUS_NAME_RE = re.compile(r"\b(?:religious|religion|christian|christ|gospel|bible|jesus|church|catholic|hindu|hinduism|bhakti|bhakthi|sanatan|sikh|gurbani|jain|buddh(?:a|ist|ism)?|temple|mandir|devotional|aarti|satsang|aastha|prarthana|darshan|worship|sermon|evangelical|zoroastrian|ministry|dharma|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|deity|faith\s*tv|holy\s*mass|orthodox|shrine)\b", re.IGNORECASE)
+ISLAMIC_NAME_RE = re.compile(r"\b(?:islam|islamic|muslim|quran|koran|sunnah|sunna|mecca|makkah|madina|madinah|medina|masjid|mosque|azan|adhan|ramadan|hajj|ummah|allah|muhammad|mohammad|madani|iqra(?:a)?|peace\s*tv|kaaba|kabah|huda\s*tv|hidayat\s*tv|takbeer|ahlulbayt|mta\s*(?:international|world|1)|quran\s*kareem|al\s*huda|saudi\s*quran|holy\s*quran)\b", re.IGNORECASE)
+BAD_NAME_RE = re.compile(r"\b(?:vod|video\s*on\s*demand|catch[\s-]?up|test|demo|webcam|podcast|radio|timeshift|time\s*shift|ppv|pay\s*per\s*view|preview|sample|placeholder|coming\s*soon)\b", re.IGNORECASE)
+BAD_HOST_PARTS = ("localhost", "workers.dev", "worker.dev", "pages.dev", "corsproxy", "cors-proxy", "proxy.example", "streamproxy")
+BAD_QUERY_KEYS = {"token", "auth", "authorization", "password", "passwd", "pwd", "username", "signature", "sig", "expires", "hdnts", "jwt", "session", "key"}
 
 
 def attrs(line: str) -> dict[str, str]:
@@ -133,20 +108,13 @@ def name_of(extinf: str) -> str:
 
 
 def url_of(block: list[str]) -> str:
-    return next(
-        (line.strip() for line in block[1:]
-         if line.strip().startswith(("http://", "https://"))),
-        "",
-    )
+    return next((line.strip() for line in block[1:] if line.strip().startswith(("http://", "https://"))), "")
 
 
 def norm(value: str) -> str:
     value = unicodedata.normalize("NFKD", str(value or "")).casefold()
     value = "".join(char for char in value if not unicodedata.combining(char))
-    value = re.sub(
-        r"\b(?:backup|uhd|fhd|hd|sd|4k|1080p|720p|576p|480p|360p)\b",
-        " ", value,
-    )
+    value = re.sub(r"\b(?:backup|uhd|fhd|hd|sd|4k|1080p|720p|576p|480p|360p)\b", " ", value)
     return "".join(char for char in value if char.isalnum())
 
 
@@ -178,16 +146,13 @@ def country_of(a: dict[str, str]) -> str:
 
 
 def policy_group(a: dict[str, str], name: str) -> tuple[str | None, str | None, str]:
-    """Return (playlist group or None, rejection reason or None, country code)."""
     country = country_of(a)
     groups = group_tokens(a.get("group-title", ""))
     text = " ".join((name, a.get("tvg-name", ""), a.get("tvg-id", ""))).strip()
-
     religious = bool(groups & RELIGIOUS_GROUPS) or bool(RELIGIOUS_NAME_RE.search(text))
     islamic = bool(ISLAMIC_NAME_RE.search(text))
     news_category = bool(groups & NEWS_GROUPS)
     named_news = bool(NEWS_NAME_RE.search(text))
-
     if religious and not islamic:
         return None, "non-Islamic religious channel", country
     if (news_category or named_news) and country != "BD":
@@ -196,41 +161,39 @@ def policy_group(a: dict[str, str], name: str) -> tuple[str | None, str | None, 
         return "Religious", None, country
     if news_category or named_news:
         return "Bangladesh", None, country
-
-    movies = bool(groups & MOVIE_GROUPS)
-    music = bool(groups & MUSIC_GROUPS)
-    if not movies and not music:
-        movies = bool(re.search(r"\b(?:movies?|cinema|films?)\b", name, re.IGNORECASE))
-        music = bool(re.search(r"\b(?:music|musix|musica|musique)\b", name, re.IGNORECASE))
-
     if groups & KIDS_GROUPS:
         return "Kids", None, country
     if groups & DOC_GROUPS:
         return "Documentary & Wildlife", None, country
     if groups & SPORTS_GROUPS:
         return "Sports", None, country
-
     if country == "BD":
         return "Bangladesh", None, country
     if country == "PK":
         return "Pakistani", None, country
     if country == "IN":
-        if movies:
+        if bool(groups & MOVIE_GROUPS) or re.search(r"\b(?:movies?|cinema|films?)\b", name, re.I):
             return "Indian Movies", None, country
-        if music:
+        if bool(groups & MUSIC_GROUPS) or re.search(r"\b(?:music|musix|musica|musique)\b", name, re.I):
             return "Indian Music", None, country
         language = (a.get("tvg-language") or "").casefold()
-        if any(code in {"ben", "bn"} for code in re.split(r"[;,|/\s]+", language)):
-            return "Indian Bangla", None, country
-        if re.search(r"\b(?:bangla|bengali)\b", name, re.IGNORECASE):
+        if any(code in {"ben", "bn"} for code in re.split(r"[;,|/\s]+", language)) or re.search(r"\b(?:bangla|bengali)\b", name, re.I):
             return "Indian Bangla", None, country
         return "Indian Entertainment", None, country
-
-    if movies:
-        return "International Movies", None, country
-    if music:
-        return "International Music", None, country
     return "International", None, country
+
+
+def country_group(country: str) -> str | None:
+    return COUNTRY_NAMES.get(country) if country in COUNTRY_NAMES else None
+
+
+def eligible_country_code(a: dict[str, str], name: str) -> str:
+    group, reason, country = policy_group(a, name)
+    if reason or country in {"ZZ", "BD", "IN", "PK"}:
+        return ""
+    if group in {"Religious", "Sports", "Kids", "Documentary & Wildlife"}:
+        return ""
+    return country if country_group(country) else ""
 
 
 def safe_stream_url(url: str) -> tuple[bool, str | None]:
@@ -266,7 +229,7 @@ def local_logo_for(name: str) -> Path | None:
         if not path.is_file() or path.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp", ".svg"}:
             continue
         relative_parts = {part.casefold() for part in path.relative_to(LOGOS).parts}
-        if "unused" in relative_parts or path.name.casefold() in NO_LOGO:
+        if "unused" in relative_parts or path.name.casefold() in {"default.png", "placeholder.png", "no-logo.png", "nologo.png", "unknown.png", "blank.png", "generic.png", "favicon.png"}:
             continue
         if path.stem.casefold().startswith("generated-fallback-"):
             continue
@@ -282,15 +245,10 @@ def download_logo(source_url: str, name: str) -> Path | None:
     if not source_url or not source_url.startswith(("http://", "https://")):
         return None
     parsed = urllib.parse.urlsplit(source_url)
-    if Path(urllib.parse.unquote(parsed.path)).name.casefold() in NO_LOGO:
-        return None
     if re.search(r"placeholder|generic|no[-_]?logo|unknown|blank|favicon", parsed.path, re.I):
         return None
     try:
-        request = urllib.request.Request(
-            source_url,
-            headers={"User-Agent": "BDIX-IPTV-International-Discovery/1.0"},
-        )
+        request = urllib.request.Request(source_url, headers={"User-Agent": "BDIX-IPTV-International-Discovery/1.0"})
         with urllib.request.urlopen(request, timeout=15) as response:
             data = response.read(MAX_LOGO_BYTES + 1)
             content_type = (response.headers.get("Content-Type") or "").split(";")[0].lower()
@@ -306,12 +264,7 @@ def download_logo(source_url: str, name: str) -> Path | None:
         elif left.startswith(b"<svg") or (left.startswith(b"<?xml") and b"<svg" in left[:1000]):
             extension = ".svg"
         else:
-            extension = {
-                "image/png": ".png",
-                "image/jpeg": ".jpg",
-                "image/webp": ".webp",
-                "image/svg+xml": ".svg",
-            }.get(content_type)
+            extension = {"image/png": ".png", "image/jpeg": ".jpg", "image/webp": ".webp", "image/svg+xml": ".svg"}.get(content_type)
         if extension is None:
             return None
         directory = LOGOS / "international"
@@ -333,9 +286,7 @@ def logo_uri(path: Path | None) -> str:
 
 def make_extinf(a: dict[str, str], name: str, group: str, country: str, logo: str) -> str:
     clean_name = " ".join(name.replace('"', "").replace("\r", " ").replace("\n", " ").split())
-    ident = (a.get("tvg-id") or a.get("channel-id") or "").strip()
-    if not ident:
-        ident = "custom.intl." + slug(clean_name).replace("-", ".")
+    ident = (a.get("tvg-id") or a.get("channel-id") or "").strip() or "custom.intl." + slug(clean_name).replace("-", ".")
     fields = [f'tvg-id="{ident}"', f'tvg-name="{clean_name}"']
     if logo and logo.startswith(RAW_BASE):
         fields.append(f'tvg-logo="{logo}"')
@@ -343,8 +294,7 @@ def make_extinf(a: dict[str, str], name: str, group: str, country: str, logo: st
     language = (a.get("tvg-language") or "").strip().replace('"', "")
     if language:
         fields.append(f'tvg-language="{language}"')
-    channel_id = (a.get("channel-id") or ident).replace('"', "").strip()
-    fields.append(f'channel-id="{channel_id}"')
+    fields.append(f'channel-id="{(a.get("channel-id") or ident).replace(chr(34), "").strip()}"')
     fields.append(f'group-title="{group}"')
     return "#EXTINF:-1 " + " ".join(fields) + "," + clean_name
 
@@ -357,8 +307,7 @@ def localize_candidate_logo(a: dict[str, str], name: str, fallback: str = "") ->
     existing = local_logo_for(name)
     if existing:
         return logo_uri(existing)
-    source_logo = (a.get("tvg-logo") or "").strip()
-    downloaded = download_logo(source_logo, name)
+    downloaded = download_logo((a.get("tvg-logo") or "").strip(), name)
     if downloaded:
         return logo_uri(downloaded)
     if fallback.startswith(RAW_BASE):
@@ -369,10 +318,7 @@ def localize_candidate_logo(a: dict[str, str], name: str, fallback: str = "") ->
 
 
 def fetch_source() -> str:
-    request = urllib.request.Request(
-        SOURCE_URL,
-        headers={"User-Agent": "BDIX-IPTV-International-Discovery/1.0"},
-    )
+    request = urllib.request.Request(SOURCE_URL, headers={"User-Agent": "BDIX-IPTV-International-Discovery/1.0"})
     with urllib.request.urlopen(request, timeout=90) as response:
         data = response.read(MAX_SOURCE_BYTES + 1)
     if not data or len(data) > MAX_SOURCE_BYTES:
@@ -402,13 +348,22 @@ def main() -> int:
 
     existing_urls = {url_of(block).casefold() for block in existing_blocks if url_of(block)}
     existing_names: dict[str, list[dict[str, str]]] = defaultdict(list)
+    existing_country_counts: Counter[str] = Counter()
+    established_groups: set[str] = set()
     for block in existing_blocks:
         if not block:
             continue
         a = attrs(block[0])
-        key = norm(name_of(block[0]))
-        if key and a.get("group-title", "").strip().casefold() != "adult":
+        name = name_of(block[0])
+        key = norm(name)
+        group = a.get("group-title", "").strip()
+        if key and group.casefold() not in LEGACY_STAGING_GROUPS:
             existing_names[key].append(a)
+        country = eligible_country_code(a, name)
+        if country:
+            existing_country_counts[country] += 1
+            if group.casefold() == COUNTRY_NAMES[country].casefold():
+                established_groups.add(country)
 
     candidates = []
     seen_source_urls: set[str] = set()
@@ -428,39 +383,28 @@ def main() -> int:
             continue
         allowed, reason = safe_stream_url(url)
         if not allowed:
-            rejected[reason or "invalid stream URL"] += 1
+            rejected[reason or "invalid URL"] += 1
             continue
         key_url = url.casefold()
-        if key_url in existing_urls:
-            rejected["stream URL already present"] += 1
-            continue
-        if key_url in seen_source_urls:
-            rejected["duplicate URL in source feed"] += 1
+        if key_url in existing_urls or key_url in seen_source_urls:
+            rejected["duplicate or existing stream URL"] += 1
             continue
         group, reason, country = policy_group(a, name)
         if group is None:
             rejected[reason or "policy exclusion"] += 1
             continue
         seen_source_urls.add(key_url)
-        candidates.append({
-            "attrs": a, "name": name, "url": url, "key": norm(name),
-            "group": group, "country": country, "directives": [
-                line for line in block[1:]
-                if line.strip().startswith("#EXTVLCOPT:") or line.strip().startswith("#KODIPROP:")
-            ],
-        })
+        candidates.append({"attrs": a, "name": name, "url": url, "key": norm(name), "group": group, "country": country, "directives": [line for line in block[1:] if line.strip().startswith("#EXTVLCOPT:") or line.strip().startswith("#KODIPROP:")]})
 
-    priority = {
-        "International Movies": 0, "International Music": 1, "International": 2,
-        "Sports": 3, "Documentary & Wildlife": 4, "Kids": 5, "Religious": 6,
-        "Pakistani": 7, "Indian Movies": 8, "Indian Music": 9,
-        "Indian Entertainment": 10, "Indian Bangla": 11, "Bangladesh": 12,
-    }
-    candidates.sort(key=lambda item: (
-        priority.get(item["group"], 99),
-        item["country"] in {"BD", "IN", "PK"},
-        norm(item["name"]), item["url"].casefold(),
-    ))
+    candidate_country_counts: Counter[str] = Counter()
+    for candidate in candidates:
+        code = eligible_country_code(candidate["attrs"], candidate["name"])
+        if code:
+            candidate_country_counts[code] += 1
+    country_counts = existing_country_counts + candidate_country_counts
+    established_countries = set(established_groups)
+    established_countries.update(code for code, count in country_counts.items() if count >= COUNTRY_THRESHOLD)
+    country_groups = {code: country_group(code) for code in established_countries if country_group(code)}
 
     planned_names = {key: values[:] for key, values in existing_names.items()}
     additions: list[list[str]] = []
@@ -468,120 +412,92 @@ def main() -> int:
     new_backup_rows = []
     per_group = Counter()
     for candidate in candidates:
-        name = candidate["name"]
-        key = candidate["key"]
+        name, key = candidate["name"], candidate["key"]
         if not key:
             rejected["unmatchable channel identity"] += 1
             continue
         is_backup = key in planned_names
-        if is_backup:
-            if len(new_backup_rows) >= MAX_NEW_BACKUPS:
-                rejected["backup limit reached for this run"] += 1
-                continue
+        if is_backup and len(new_backup_rows) >= MAX_NEW_BACKUPS:
+            rejected["backup limit reached for this run"] += 1
+            continue
+        if not is_backup and len(new_primary_rows) >= MAX_NEW_CHANNELS:
+            rejected["new-channel limit reached for this run"] += 1
+            continue
+        country = candidate["country"]
+        if country in country_groups and country not in {"BD", "IN", "PK"} and candidate["group"] not in {"Religious", "Sports", "Kids", "Documentary & Wildlife"}:
+            target_group = country_groups[country]
         else:
-            if len(new_primary_rows) >= MAX_NEW_CHANNELS:
-                rejected["new-channel limit reached for this run"] += 1
-                continue
-            if per_group[candidate["group"]] >= MAX_NEW_PER_GROUP:
-                rejected["per-category limit reached for this run"] += 1
-                continue
-
+            target_group = "Backup" if is_backup else candidate["group"]
+        if not is_backup and per_group[target_group] >= MAX_NEW_PER_GROUP:
+            rejected["per-group limit reached for this run"] += 1
+            continue
         canonical_attrs = planned_names[key][0] if is_backup and planned_names[key] else candidate["attrs"]
         canonical_name = (canonical_attrs.get("tvg-name") or name).strip() if is_backup else name
-        group = "Backup" if is_backup else candidate["group"]
-        canonical_country = country_of(canonical_attrs) if is_backup else candidate["country"]
-        if canonical_country == "ZZ":
-            canonical_country = candidate["country"]
+        canonical_country = country_of(canonical_attrs) if is_backup else country
         inherited_logo = (canonical_attrs.get("tvg-logo") or "").strip() if is_backup else ""
         logo = localize_candidate_logo(candidate["attrs"], canonical_name, inherited_logo)
-        extinf = make_extinf(canonical_attrs if is_backup else candidate["attrs"],
-                             canonical_name, group, canonical_country, logo)
-        row = [extinf, *candidate["directives"], candidate["url"]]
-        additions.append(row)
+        group = "Backup" if is_backup else target_group
+        extinf = make_extinf(canonical_attrs if is_backup else candidate["attrs"], canonical_name, group, canonical_country, logo)
+        additions.append([extinf, *candidate["directives"], candidate["url"]])
         if is_backup:
-            new_backup_rows.append({"name": canonical_name, "group": "Backup", "country": canonical_country})
+            new_backup_rows.append({"name": canonical_name, "country": canonical_country})
         else:
-            new_primary_rows.append({"name": name, "group": candidate["group"], "country": candidate["country"]})
-            per_group[candidate["group"]] += 1
+            new_primary_rows.append({"name": name, "group": target_group, "country": country})
+            per_group[target_group] += 1
             planned_names.setdefault(key, []).append(attrs(extinf))
 
-    if additions:
-        all_blocks = existing_blocks + additions
-        rank = {name: index for index, name in enumerate(ORDER)}
-        all_blocks.sort(key=lambda block: (
-            rank.get(attrs(block[0]).get("group-title", "").strip(), len(rank)),
-            natural_key(name_of(block[0])),
-            url_of(block).casefold(),
-        ))
-        updated_prefix = [line for line in prefix if not line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
-        header = '#PLAYLIST-STUDIO-CATEGORIES:' + str(ORDER).replace("'", '"')
-        extm3u_index = next((i + 1 for i, line in enumerate(updated_prefix) if line.startswith("#EXTM3U")), 0)
-        updated_prefix.insert(extm3u_index, header)
-        output = updated_prefix[:]
-        for block in all_blocks:
-            output.extend(block)
-        PLAYLIST.write_text("\n".join(output).rstrip() + "\n", encoding="utf-8")
-    else:
-        header = '#PLAYLIST-STUDIO-CATEGORIES:' + str(ORDER).replace("'", '"')
-        current = PLAYLIST.read_text(encoding="utf-8-sig")
-        if "#PLAYLIST-STUDIO-CATEGORIES:" not in current or header not in current:
-            lines = [line for line in current.replace("\r", "").splitlines()
-                     if not line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
-            extm3u_index = next((i + 1 for i, line in enumerate(lines) if line.startswith("#EXTM3U")), 0)
-            lines.insert(extm3u_index, header)
-            PLAYLIST.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    # Remove obsolete staging groups and migrate generic international entries
+    # into a country group once that country reaches five legitimate channels.
+    all_blocks = existing_blocks + additions
+    migrated = []
+    normalized = []
+    for block in all_blocks:
+        if not block:
+            continue
+        a = attrs(block[0])
+        name = name_of(block[0])
+        old_group = a.get("group-title", "").strip()
+        lower_group = old_group.casefold()
+        if lower_group in {"new channels", "new backup", "not playing"}:
+            a["group-title"] = "International"
+            lower_group = "international"
+        code = eligible_country_code(a, name)
+        if code in country_groups and lower_group in {"international", "international movies", "international music"}:
+            target = country_groups[code]
+            if old_group != target:
+                block[0] = make_extinf(a, name, target, code, a.get("tvg-logo", ""))
+                migrated.append({"name": name, "from": old_group or "(none)", "to": target})
+        normalized.append(block)
+
+    rank = {name: index for index, name in enumerate(FIXED_GROUPS)}
+    rank.update({name: index for index, name in enumerate(sorted(country_groups.values()), start=len(FIXED_GROUPS))})
+    rank.update({name: len(FIXED_GROUPS) + len(country_groups) + index for index, name in enumerate(TAIL_GROUPS)})
+    normalized.sort(key=lambda block: (rank.get(attrs(block[0]).get("group-title", "").strip(), len(rank)), natural_key(name_of(block[0])), url_of(block).casefold()))
+
+    updated_prefix = [line for line in prefix if not line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
+    dynamic_order = FIXED_GROUPS + sorted(country_groups.values()) + TAIL_GROUPS
+    header = '#PLAYLIST-STUDIO-CATEGORIES:' + str(dynamic_order).replace("'", '"')
+    extm3u_index = next((i + 1 for i, line in enumerate(updated_prefix) if line.startswith("#EXTM3U")), 0)
+    updated_prefix.insert(extm3u_index, header)
+    output = updated_prefix[:]
+    for block in normalized:
+        output.extend(block)
+    PLAYLIST.write_text("\n".join(output).rstrip() + "\n", encoding="utf-8")
 
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    report_lines = [
-        "# International Channel Discovery", "",
-        f"- Last scan with this report: {timestamp}",
-        "- Source: IPTV-org categorized worldwide channel index.",
-        "- Playback was not tested; stream checking remains a manual task.",
-        "- Existing channel metadata and stream URL lines were preserved; entries may be re-sorted to keep category order.",
-        f"- New primary channels added: {len(new_primary_rows)}",
-        f"- Additional streams added under Backup: {len(new_backup_rows)}",
-        f"- Candidates rejected or held: {sum(rejected.values())}",
-        "", "## New Channels", "",
-    ]
-    report_lines.extend(
-        f"- **{row['name']}** — {row['group']} — {row['country']}"
-        for row in new_primary_rows
-    )
+    report_lines = ["# International Channel Discovery", "", f"- Last scan: {timestamp}", "- Source: IPTV-org categorized worldwide channel index.", "- Playback was not tested.", f"- Country-group threshold: {COUNTRY_THRESHOLD} legitimate channels, or an already-established country group.", f"- New channels added: {len(new_primary_rows)}", f"- Backup streams added: {len(new_backup_rows)}", f"- Existing entries migrated into country groups: {len(migrated)}", f"- Country groups currently established: {', '.join(sorted(country_groups.values())) or 'none'}", "", "## New Channels", ""]
+    report_lines.extend(f"- **{row['name']}** — {row['group']} — {row['country']}" for row in new_primary_rows)
     report_lines += ["", "## New Backup Streams", ""]
     report_lines.extend(f"- **{row['name']}** — {row['country']}" for row in new_backup_rows)
-    report_lines += ["", "## Policy and filtering", ""]
+    report_lines += ["", "## Country-group migrations", ""]
+    report_lines.extend(f"- **{row['name']}**: `{row['from']}` → `{row['to']}`" for row in migrated)
+    report_lines += ["", "## Filtering", ""]
     report_lines.extend(f"- {reason}: {count}" for reason, count in sorted(rejected.items()))
-    if not new_primary_rows and not new_backup_rows:
-        report_lines += ["", "No new entries were added during this scan."]
-    report_text = "\n".join(report_lines) + "\n"
+    REPORT.parent.mkdir(parents=True, exist_ok=True)
+    REPORT.write_text("\n".join(report_lines) + "\n", encoding="utf-8")
 
-    if new_primary_rows or new_backup_rows or not REPORT.exists():
-        REPORT.parent.mkdir(parents=True, exist_ok=True)
-        REPORT.write_text(report_text, encoding="utf-8")
-
-    step_summary = [
-        "# International Channel Discovery", "",
-        f"- Source entries scanned: {len(source_blocks)}",
-        f"- New channels added: {len(new_primary_rows)}",
-        f"- Additional Backup streams added: {len(new_backup_rows)}",
-        f"- Candidates rejected or held: {sum(rejected.values())}",
-        "- Playback testing: not performed (manual by repository owner).",
-    ]
-    if new_primary_rows:
-        step_summary += ["", "## New Channels", ""]
-        step_summary.extend(f"- {row['name']} — {row['group']}" for row in new_primary_rows)
-    if new_backup_rows:
-        step_summary += ["", "## New Backup Streams", ""]
-        step_summary.extend(f"- {row['name']}" for row in new_backup_rows)
-    if rejected:
-        step_summary += ["", "## Policy / quality filter counts", ""]
-        step_summary.extend(f"- {reason}: {count}" for reason, count in sorted(rejected.items()))
-    write_step_summary("\n".join(step_summary))
-    print(
-        f"International discovery complete: scanned={len(source_blocks)} "
-        f"new_channels={len(new_primary_rows)} new_backups={len(new_backup_rows)} "
-        f"rejected={sum(rejected.values())}; playback checks were not performed."
-    )
+    write_step_summary("\n".join(["# International Channel Discovery", "", f"- New channels: {len(new_primary_rows)}", f"- Backup streams: {len(new_backup_rows)}", f"- Country-group migrations: {len(migrated)}", f"- Established country groups: {', '.join(sorted(country_groups.values())) or 'none'}", "- Playback testing: not performed."]))
+    print(f"International discovery complete: new={len(new_primary_rows)} backup={len(new_backup_rows)} migrated={len(migrated)} country_groups={len(country_groups)}")
     return 0
 
 
