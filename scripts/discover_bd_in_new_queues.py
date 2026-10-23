@@ -3,6 +3,7 @@
 
 Rules:
 - Only the Bangladesh and India country feeds are considered.
+- Indian News, Sports and Religious channels are STRICTLY PROHIBITED.
 - Existing stream URLs and normalized channel identities are never duplicated.
 - First unseen stream for a new identity -> New Channels.
 - Additional unseen streams for an existing/newly discovered identity -> New Backup.
@@ -27,12 +28,20 @@ BAD_WORDS = {
     "vod", "catchup", "catch-up", "test", "demo", "proxy", "proxied",
     "cors", "webcam", "radio", "podcast", "event", "ppv", "timeshift",
 }
+# HARD EXCLUSION: Indian News, Sports and Religious channels are never eligible.
+INDIA_FORBIDDEN_GROUPS = {"news", "sports", "religious"}
+INDIA_FORBIDDEN_WORDS = {
+    "news", "sport", "sports", "cricket", "football", "soccer", "tennis",
+    "religious", "religion", "devotional", "bhakti", "bhakthi", "spiritual",
+    "worship", "gospel", "christian", "christ", "islamic", "islam", "quran",
+    "quran", "hindu", "hinduism", "sanatan", "sikh", "gurbani", "gurubani",
+    "church", "temple", "mosque", "masjid", "sermons", "sermon", "prayer",
+}
 BAD_HOSTS = ("proxy", "proxied", "cors", "localhost", "workers.dev", "worker.dev", "pages.dev")
 BAD_QUERY_KEYS = {"token", "auth", "authorization", "hdnts", "sig", "signature", "expires", "session", "jwt", "key"}
 QUALITY = {"uhd", "fhd", "hd", "sd", "4k", "1080p", "720p", "576p", "480p", "360p", "240p"}
 COUNTRY_CODE = {"Bangladesh": "bd", "India": "in"}
 OTHER_PLAYLISTS = (Path("BDIX-Playlist.m3u"), Path("International-Playlist.m3u"))
-# Whole-word match (Unicode-aware; "_" counts as a separator): "Latest News" must not match "test".
 BAD_RE = re.compile(r"(?<![^\W_])(?:" + "|".join(re.escape(w) for w in sorted(BAD_WORDS)) + r")(?![^\W_])")
 ID_CC_RE = re.compile(r"\.([a-z]{2})(?:@|$)")
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
@@ -53,8 +62,6 @@ def split_extinf(line: str) -> tuple[str, str]:
 
 
 def norm(value: str) -> str:
-    # Letters, digits and combining marks (L/M/N) are preserved so Bengali/Hindi
-    # names differing only by vowel signs do not collide. Shared implementation.
     return norm_name(value)
 
 
@@ -80,10 +87,28 @@ def parse(text: str):
     return out
 
 
+def india_forbidden(a: dict[str, str], name: str) -> str | None:
+    """Hard reject Indian News, Sports and Religious channels."""
+    values = " ".join((name, a.get("tvg-name", ""), a.get("group-title", ""))).casefold()
+    group = a.get("group-title", "").strip().casefold()
+    if group in INDIA_FORBIDDEN_GROUPS:
+        return f"India {group} channel is prohibited"
+    # Match category terms as standalone words to avoid false positives such as 'Sporting Goods'.
+    for word in INDIA_FORBIDDEN_WORDS:
+        if re.search(r"(?<![\w])" + re.escape(word) + r"(?![\w])", values, re.UNICODE):
+            return f"India {word} channel is prohibited"
+    return None
+
+
 def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=None):
     """Return (normalized attrs | None, reason). Country must be verified BD/IN."""
     if country not in COUNTRY_CODE:
         return None, "unknown source feed"
+    # STRICT POLICY: no Indian News, Sports or Religious channels, under any circumstance.
+    if country == "India":
+        forbidden = india_forbidden(a, name)
+        if forbidden:
+            return None, forbidden
     p = urlparse(url)
     if p.scheme not in {"http", "https"} or not p.netloc or p.fragment:
         return None, "invalid stream URL"
@@ -98,7 +123,6 @@ def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=Non
     verdict = verify_country(a, name, reference, COUNTRY_CODE[country].upper())
     if not verdict.ok:
         return None, "country not verified: " + verdict.reason
-    # Normalize metadata from the verified evidence.
     out = dict(a)
     out["tvg-country"] = verdict.country
     out["tvg-id"] = verdict.tvg_id
@@ -115,7 +139,7 @@ def acceptable(country: str, a: dict[str, str], name: str, url: str, reference=N
 def extinf(a: dict[str, str], name: str, group: str, country: str) -> str | None:
     cid = (a.get("tvg-id") or a.get("channel-id") or "").strip()
     if not cid or country not in COUNTRY_CODE or a.get("tvg-country", "").strip().upper() != COUNTRY_CODE[country].upper():
-        return None  # never emit a queue row without a verified BD/IN country
+        return None
     fields = [f'tvg-id="{cid}"', f'tvg-name="{name}"']
     if a.get("tvg-logo", "").strip():
         fields.append(f'tvg-logo="{a["tvg-logo"].strip()}"')
@@ -194,6 +218,7 @@ def main() -> int:
     report = [
         "# Channel Discovery", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
+        "- **STRICT POLICY: Indian News, Sports and Religious channels are prohibited and must never enter New Channels or New Backup.**",
         f"- New channels: **{len(new_channels)}**",
         f"- New backups: **{len(new_backups)}**",
         f"- Rejected/held candidates: **{rejected}**",
