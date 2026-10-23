@@ -82,6 +82,7 @@ FORCED_CHANNEL_LOGOS = {
     "zee tv": "nvisionbd-verified-zee-tv-2fb6673cf7.svg",
     "tom and jerry": "nvisionbd-verified-tom-and-jerry-927bd66719.jpg",
     "green tv": "nvisionbd-verified-green-tv-fa848f9d71.jpg",
+    "zainabia channel": "zainabia-channel.png",  # user-supplied official channel logo
 }
 
 # Exact, source-attributed fallback URLs for unresolved channels. These are

@@ -1226,7 +1226,7 @@ https://dzkyvlfyge.erbvr.com/PeaceTvEnglish/index.m3u8
 https://dzkyvlfyge.erbvr.com/PeaceTvUrdu/index.m3u8
 #EXTINF:-1 tvg-id="QuranTV.iq" tvg-name="Quran TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-tv.png" tvg-chno="605" channel-id="QuranTV.iq" tvg-country="IQ" tvg-language="ara" group-title="Religious",Quran TV
 https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/sharjahtvquranpublish/shqurantv_source/chunks.m3u8
-#EXTINF:-1 tvg-id="ZainabiaChannel.sa" tvg-name="Zainabia Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-zainabia-channel.png" tvg-chno="606" channel-id="ZainabiaChannel.sa" tvg-country="SA" tvg-language="ara" group-title="Religious",Zainabia Channel
+#EXTINF:-1 tvg-id="ZainabiaChannel.sa" tvg-name="Zainabia Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zainabia-channel.png" tvg-chno="606" channel-id="ZainabiaChannel.sa" tvg-country="SA" tvg-language="ara" group-title="Religious",Zainabia Channel
 https://zainabia.livebox.co.in/ZainabiaChannelhls/channel.m3u8
 #EXTINF:-1 tvg-id="ASports.pk" tvg-name="A Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-a-sports-65a3e1d8fd.png" tvg-chno="637" channel-id="ASports.pk" tvg-country="PK" tvg-language="urd" group-title="Sports",A Sports
 https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/tracks-v1a1/mono.ts.m3u8
