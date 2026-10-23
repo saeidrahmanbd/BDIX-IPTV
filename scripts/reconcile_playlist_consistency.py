@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Conservatively repair playlist metadata and review-queue duplication.
+"""Conservatively repair cross-queue metadata consistency.
 
-Stream URLs are never changed. The pass only normalizes channel metadata,
-canonicalizes IDs when an established primary identity exists, and removes
-review entries that duplicate an already-established active or higher-priority
-review identity.
+The pass never changes stream URLs and never removes a canonical primary entry.
+It normalizes known channel-name variants, strips presentation-only source tags,
+canonicalizes review IDs when an established primary identity is unambiguous,
+and removes only duplicate review records that duplicate an established identity
+or a lower-priority review record.
 """
 from pathlib import Path
 import re
@@ -13,7 +14,7 @@ REVIEW={"New Channels","New Backup","Not Playing"}
 ACTIVE={"Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports"}
 REVIEW_PRIORITY={"New Channels":3,"New Backup":2,"Not Playing":1}
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
-RAW_TAG=re.compile(r"\s*(?:\[[^]]*(?:geo-blocked|geo blocked)[^]]*\]|\((?:\d{3,4}p|\d{3,4}i|UHD|FHD|HD|SD)\)|\s+(?:\d{3,4}p|\d{3,4}i))\s*$",re.I)
+RAW_TAG=re.compile(r"\s*(?:\[[^]]*(?:geo[- ]?blocked)[^]]*\]|\((?:\d{3,4}p|\d{3,4}i|UHD|FHD|HD|SD)\)|\s+(?:\d{3,4}p|\d{3,4}i))\s*$",re.I)
 ALIASES={"disney channel india":"Disney Channel India","disney channel (india)":"Disney Channel India","gazi tv":"G TV","g tv":"G TV","nick":"Nickelodeon (India)","nickelodeon (india)":"Nickelodeon (India)"}
 def attrs(line): return dict(ATTR.findall(line))
 def replace_attr(line,key,value): return re.compile(rf'{re.escape(key)}="[^"]*"').sub(f'{key}="{value}"',line,1)
@@ -37,7 +38,7 @@ def main():
         a=r["attrs"]; group=a.get("group-title","").strip(); old_name=a.get("tvg-name","").strip(); name=clean_name(old_name)
         if name!=old_name: r["info"]=replace_attr(r["info"],"tvg-name",name); changed+=1
         cid=(a.get("tvg-id") or a.get("channel-id") or "").strip(); canonical=canonical_id_for_name(name,active_ids)
-        if canonical and cid and group not in ACTIVE and cid.casefold()!=canonical.casefold():
+        if canonical and cid and group in REVIEW and cid.casefold()!=canonical.casefold():
             r["info"]=replace_attr(r["info"],"tvg-id",canonical)
             if 'channel-id="' in r["info"]: r["info"]=replace_attr(r["info"],"channel-id",canonical)
             changed+=1
@@ -47,10 +48,6 @@ def main():
                 removed.update({r["idx"],r["url_idx"]}); continue
             previous=review_seen.get(key)
             if previous:
-                # Keep the higher-priority queue entry. This removes legacy
-                # Not Playing duplicates when the same identity is already in
-                # New Backup/New Channels without touching distinct URLs for
-                # the same legitimate backup identity.
                 if REVIEW_PRIORITY.get(group,0)<=REVIEW_PRIORITY.get(previous,0):
                     removed.update({r["idx"],r["url_idx"]}); continue
             review_seen[key]=group
