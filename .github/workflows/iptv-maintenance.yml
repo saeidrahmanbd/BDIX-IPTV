@@ -9,13 +9,8 @@ on:
       - logos/**
       - .github/workflows/iptv-maintenance.yml
       - scripts/maintenance_helpers.py
-      - scripts/fix_playlist.py
-      - scripts/repair_iptv_audit_findings.py
-      - scripts/repair_international_playlist.py
       - scripts/classify_international_backups.py
       - .github/workflows/international-playlist-audit.yml
-      - scripts/repair_playlist_quality.py
-      - scripts/repair_playlist_logos.py
       - scripts/backfill_cross_playlist_metadata.py
       - scripts/repair_logo_asset_technical_quality.py
       - scripts/normalize_metadata.py
@@ -73,7 +68,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
-# Shared with IPTV New Channel Discovery so the two main-branch writers never run simultaneously.
+# Shared with all main-branch playlist writers so they never modify the repository concurrently.
 concurrency:
   group: iptv-playlist-main-writer
   cancel-in-progress: false
@@ -106,8 +101,6 @@ jobs:
             scripts/final_playlist_hardening.py \
             scripts/country_verification.py \
             scripts/discover_bd_in_new_queues.py \
-            scripts/repair_playlist_quality.py \
-            scripts/repair_playlist_logos.py \
             scripts/generate_logo_authenticity_manifest.py \
             scripts/generate_logo_repair_summary.py \
             scripts/logo_asset_naming.py \
@@ -157,14 +150,12 @@ jobs:
             python scripts/maintenance_helpers.py snapshot-playlist
             python scripts/maintenance_helpers.py snapshot
             rm -rf fixed_output
-            echo 'Non-destructive maintenance mode: fix_playlist.py skipped.'
-            python scripts/repair_playlist_quality.py
+            echo 'Non-destructive maintenance mode: legacy fix_playlist.py removed; using current repair/validation pipeline.'
             python scripts/normalize_metadata.py
-            python scripts/repair_playlist_logos.py
             python scripts/sort_playlists.py IPTV-Playlist.m3u
             python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
             if grep -Eiq 'group-title="New"' IPTV-Playlist.m3u; then echo '::error::Forbidden staging playlist category detected after normalization.'; exit 1; fi
-            # New Channels/New Backup are allowed only for entries verified as BD/IN.
+            # New Channels/New Backup are active review queues and are allowed only for entries verified as BD/IN.
             python scripts/country_verification.py validate IPTV-Playlist.m3u
             python scripts/maintenance_helpers.py invalidate-bad-logos
             python scripts/migrate_external_logos_fixed.py
@@ -208,13 +199,12 @@ jobs:
             set -e
             if [ "$GATE_STATUS" -ne 0 ]; then
               echo '::warning::Pre-publish gate found issues; running automatic correction pass before failing.'
-              python scripts/repair_playlist_quality.py || true
               python scripts/normalize_metadata.py || true
-              python scripts/repair_playlist_logos.py || true
               python scripts/sort_playlists.py IPTV-Playlist.m3u || true
               python scripts/final_playlist_hardening.py IPTV-Playlist.m3u || true
               python scripts/maintenance_helpers.py invalidate-bad-logos-correction
               python scripts/migrate_external_logos_fixed.py || true
+              python scripts/repair_logo_asset_technical_quality.py --fix || true
               python scripts/generate_logo_authenticity_manifest.py || true
               python scripts/generate_logo_repair_summary.py || true
               python scripts/restore_protected_review.py
