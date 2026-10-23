@@ -98,24 +98,28 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 
 ## 2026-10-23
 
-- 🗑️ **16 channel(s) removed**
-- 🖼️ **6 logo reference(s) corrected**
+- 🗑️ **55 channel(s) removed**
+- 🖼️ **9 logo reference(s) corrected**
 
 ### Removed channels
-- Bollywood 4U
-- Grace Network
-- Jeremiah TV
-- Joshua TV
-- King TV
-- Icon Film Channel
-- Popflix
-- 60 Days In
-- Deadly Women
-- Highway Thru Hell
-- Dios Te Ve Kids
-- MINI
-- ZB Bhakti
-- Mundial
-- CBN TV USA
-- TVC Arabic Kids
+- 4TV News
+- 9 Plus News
+- 22Scope News
+- 24 News
+- Aadinath TV
+- Aagaaz Times
+- Aaj Ki Khabar
+- Aaseervatham TV
+- Aastha
+- Aastha Gujarati
+- Aastha Kannada
+- Aastha Prime 1
+- Aastha Tamil
+- Aastha Telugu
+- ABN Andhra Jyoti
+- ABP Ananda
+- ABP Asmita
+- ABP Ganga
+- ABP Majha
+- ABP News
 
