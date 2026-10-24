@@ -263,7 +263,7 @@ def main():
  order=FIXED_ORDER+dynamic_groups+TAIL_ORDER
  rank={x:i for i,x in enumerate(order)}
  def natural(s):return tuple(int(x) if x.isdigit() else x for x in re.split(r'(\d+)',s.casefold()))
- blocks.sort(key=lambda b:(rank.get(attrs(b[0]).get('group-title',''),len(rank)),natural(name_of(b)),url_of(b).casefold()))
+ blocks.sort(key=lambda b:(rank.get(attrs(b[0]).get('group-title',''),len(rank)),natural(name_of(b[0])),url_of(b).casefold()))
  canonical='#PLAYLIST-STUDIO-CATEGORIES:'+json.dumps(order,ensure_ascii=False);pre=[x for x in pre if not x.startswith('#PLAYLIST-STUDIO-CATEGORIES:')]
  idx=next((i+1 for i,x in enumerate(pre) if x.startswith('#EXTM3U')),0);pre.insert(idx,canonical);lines=pre[:]
  for b in blocks:lines.extend(b)
