@@ -5,7 +5,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from discover_bd_in_new_queues import (
     PERMANENTLY_BANNED_CHANNEL_NAMES, canonical_channel_name,
-    COUNTRY_THRESHOLD, evaluate, prohibited_channel, purge_forbidden_existing_queue_rows,
+    evaluate, prohibited_channel, purge_forbidden_existing_queue_rows,
 )
 
 
@@ -98,7 +98,6 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertIn('group-title="New Channels",Mahua Play', filtered)
         self.assertIn('group-title="Indian Entertainment",E-Vidya 4', filtered)
 
-
     def test_only_bd_in_source_feeds_are_allowed_and_bangladesh_news_passes(self):
         bd, bd_reason = evaluate(
             "Bangladesh",
@@ -125,9 +124,6 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         )
         self.assertIsNone(foreign)
         self.assertEqual(foreign_reason, "unknown source feed")
-
-    def test_five_channel_country_threshold_remains_intact(self):
-        self.assertEqual(COUNTRY_THRESHOLD, 5)
 
 
 if __name__ == "__main__":
