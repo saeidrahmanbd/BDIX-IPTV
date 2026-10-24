@@ -1,0 +1,220 @@
+# International Channel Discovery
+
+- Last scan: 2026-10-24 05:36 UTC
+- Source: `https://iptv-org.github.io/iptv/index.category.m3u`
+- Source records parsed: 12014
+- Existing playlist records: 804
+- Exact source URLs already in playlist: 130
+- Duplicate URLs within source feed: 640
+- New eligible source records after URL/policy filtering: 9154
+- Country threshold: 5 unique legitimate primary identities.
+- New primary channels go to an established/threshold country group or content category; staging queues are not used.
+- New alternate streams go directly to Backup.
+- Existing country groups receive new primary channels directly.
+- Playback was not tested.
+- New primary channels: 50
+- Backup alternates: 50
+- Country migrations: 87
+
+## New primary channels
+
+- **3ABN Kids** — `United States` — US
+- **Animation+ (1080p) [Geo-blocked]** — `United States` — US
+- **Animax Asia India (1080p) [Geo-blocked]** — `Singapore` — SG
+- **Anime Vision (1080p)** — `Spain` — ES
+- **Anime Vision Classics (1080p)** — `Spain` — ES
+- **Anime x HIDIVE** — `United States` — US
+- **Aniplus Asia (720p)** — `Singapore` — SG
+- **Avatar (Germany)** — `Germany` — DE
+- **Avatar (Sweden)** — `Sweden` — SE
+- **BBC Four/CBeebies (720p)** — `United Kingdom` — GB
+- **BBC Three/CBBC (720p)** — `United Kingdom` — GB
+- **Botflix TV (1080p)** — `United States` — US
+- **Cartoon Classics** — `Poland` — PL
+- **Cartoon Network (India) (720p)** — `Indian Entertainment` — IN
+- **Cartoon Network (Pakistan)** — `Pakistani` — PK
+- **Cartoon Network (United States) (720p)** — `United States` — US
+- **Cartoon Network Arabic** — `United Arab Emirates` — AE
+- **Cartoon Network Asia (720p)** — `Singapore` — SG
+- **Cartoon Network CEE Czech Republic** — `United Kingdom` — GB
+- **Cartoon Network CEE Poland** — `United Kingdom` — GB
+- **Cartoon Network CEE Ukraine (576p)** — `United Kingdom` — GB
+- **Cartoon Network Latin America** — `United States` — US
+- **Cartoon Network Latin America Brazil (720p)** — `United States` — US
+- **Cartoon Network Latin America North Atlantic (1080p)** — `United States` — US
+- **Cartoon Network Latin America South Atlantic (1080p)** — `United States` — US
+- **Cartoon Network Latin America South Pacific (576p)** — `United States` — US
+- **Cartoonito Asia (720p)** — `Singapore` — SG
+- **Cartoonito Latin America (1080p)** — `United States` — US
+- **Comedy Central South Park** — `United States` — US
+- **Comedy Central South Park LatAm** — `United States` — US
+- **Crunchyroll (720p)** — `United States` — US
+- **Detective Conan** — `United States` — US
+- **Detective Conan France (720p)** — `United States` — US
+- **Detvora+ (1080p)** — `Russia` — RU
+- **Disney Channel Latin America (1080p)** — `Argentina` — AR
+- **Disney Channel Latin America Center (1080p)** — `Argentina` — AR
+- **Disney Channel Latin America Mexico (720p)** — `Argentina` — AR
+- **Disney Channel Latin America North (576p)** — `Argentina` — AR
+- **Disney Channel Latin America Panregional HD (1080p)** — `Argentina` — AR
+- **Disney Channel Latin America South** — `Argentina` — AR
+- **Disney Jr. (Turkiye) (1080p) [Geo-blocked]** — `Turkey` — TR
+- **Disney Jr. Latin America (1080p)** — `Argentina` — AR
+- **Disney Jr. Latin America North HD (1080p)** — `Argentina` — AR
+- **Disney Jr. Latin America South (1080p)** — `Argentina` — AR
+- **DreamWorks Channel Asia (1080p)** — `United States` — US
+- **Dreiko TV (720p) [Not 24/7]** — `International` — ZZ
+- **eSports Max TV** — `International` — ZZ
+- **Extrema Kids TV [Not 24/7]** — `International` — ZZ
+- **FAN (1080p)** — `Russia` — RU
+- **Geekdot (720p)** — `Brazil` — BR
+
+## Backup alternates
+
+- **Disney Jr. Latin America South (1080p)** — AR
+- **Mr Bean Animated** — GB
+- **Ekhon TV** — BD
+- **Cooking Channel** — US
+- **American Heroes Channel** — US
+- **CGTN Documentary** — CN
+- **Law & Crime** — US
+- **WildEarth** — ZA
+- **Aamar Bangla** — IN
+- **Amrita TV** — IN
+- **DD National** — IN
+- **DD National** — IN
+- **Fuse** — US
+- **Maasranga TV** — BD
+- **Mazhavil Manorama** — IN
+- **Mazhavil Manorama** — IN
+- **MTV2** — US
+- **22** — ZZ
+- **Bangla Vision** — BD
+- **Deen TV** — GB
+- **JonmoBhumi TV** — AU
+- **Latina** — PE
+- **MBC TV** — SA
+- **NTV** — BD
+- **Baby Shark TV** — US
+- **Disney Channel India** — IN
+- **Duck TV** — US
+- **Duck TV** — US
+- **Kartoon Channel!** — US
+- **Smurf TV** — US
+- **Teletubbies** — GB
+- **Tiny Pop** — GB
+- **Tom and Jerry** — ZZ
+- **ToonGoggles** — US
+- **Film 4** — GB
+- **HBO 2** — US
+- **Lifetime Movies** — US
+- **The Movie Club** — IN
+- **7S Music** — IN
+- **Balle Balle** — IN
+- **ETV Music** — IN
+- **Now 70s** — GB
+- **Now 80s** — GB
+- **DBC News** — BD
+- **Love Nature** — CA
+- **Love Nature** — CA
+- **Madani TV** — ID
+- **Peace TV Bangla** — AE
+- **Discovery Science** — US
+- **Destination America** — US
+
+## Country Migrations
+
+- **24 Hour Free Movies**: `International` → `United States`
+- **Action Hollywood Movies**: `International` → `United States`
+- **ADN TV+**: `International` → `France`
+- **Aflam**: `International` → `Saudi Arabia`
+- **Afrobeats**: `International` → `United States`
+- **AMC Thrillers**: `International` → `United States`
+- **AMC TV**: `International` → `United States`
+- **Arabica TV**: `International` → `Lebanon`
+- **AXN Asia Taiwan**: `International` → `Taiwan`
+- **AXN Black Poland**: `International` → `Poland`
+- **AXN Latin America**: `International` → `United States`
+- **AXS TV**: `International` → `United States`
+- **California Music Channel**: `International` → `United States`
+- **CBS TV**: `International` → `United States`
+- **CCTV-11**: `International` → `China`
+- **CMC TV**: `International` → `Croatia`
+- **CMT**: `International` → `United States`
+- **Comedy Central**: `International` → `United States`
+- **Cooking Channel**: `International` → `United States`
+- **Deshe Bideshe**: `International` → `Canada`
+- **Deshi TV**: `International` → `Canada`
+- **Epix**: `International` → `United States`
+- **Epix Hits**: `International` → `United States`
+- **EU Music**: `International` → `Ukraine`
+- **Film 4**: `International` → `United Kingdom`
+- **Flowers US**: `International` → `United States`
+- **Food Network**: `International` → `United States`
+- **Fuse**: `International` → `United States`
+- **FX TV**: `International` → `United States`
+- **FXM**: `International` → `United States`
+- **Gravitas Movies**: `International` → `United States`
+- **Guangxi Variety & Travel Channel**: `International` → `China`
+- **Hallmark Movies & More**: `International` → `United States`
+- **HBO**: `International` → `United States`
+- **HBO 2**: `International` → `United States`
+- **HBO Zone**: `International` → `United States`
+- **HGTV**: `International` → `United States`
+- **IFC**: `International` → `United States`
+- **Jhankar TV**: `International` → `Canada`
+- **JonmoBhumi TV**: `International` → `Australia`
+- **Kronehit**: `International` → `Austria`
+- **Laff TV**: `International` → `United States`
+- **Lifetime**: `International` → `United States`
+- **Lifetime Movies**: `International` → `United States`
+- **MBC Bollywood**: `International` → `United Arab Emirates`
+- **MBC TV**: `International` → `Saudi Arabia`
+- **MBC+ Drama**: `International` → `Saudi Arabia`
+- **Movieplex**: `International` → `United States`
+- **Movies Thriller**: `International` → `Saudi Arabia`
+- **MovieSphere AU**: `International` → `Australia`
+- **MovieSphere UK**: `International` → `United Kingdom`
+- **MTV2**: `International` → `United States`
+- **MTV Classic**: `International` → `United Kingdom`
+- **MTV Live**: `International` → `United States`
+- **MyTime Movie Network**: `International` → `Brazil`
+- **Now 70s**: `International` → `United Kingdom`
+- **Now 80s**: `International` → `United Kingdom`
+- **NOW Rock**: `International` → `United Kingdom`
+- **NRB TV**: `International` → `Canada`
+- **P2M TV**: `International` → `France`
+- **Qello Concerts by Stingray**: `International` → `Canada`
+- **RetroCrush**: `International` → `United States`
+- **Shanson TV**: `International` → `Russia`
+- **Sony Movies**: `International` → `United States`
+- **Sony One Favoris**: `International` → `France`
+- **Sony One Hits Action**: `International` → `France`
+- **Sony One Hits Comedie**: `International` → `France`
+- **Stingray Classic Rock**: `International` → `Canada`
+- **Stingray DJAZZ**: `International` → `Canada`
+- **Stingray Remember the 80s**: `International` → `Canada`
+- **Stingray Rock Alternative**: `International` → `Canada`
+- **TBS**: `International` → `United States`
+- **Thikana**: `International` → `United States`
+- **TLC**: `International` → `United States`
+- **Totalmusic**: `International` → `United Kingdom`
+- **Totalmusic 80s**: `International` → `United Kingdom`
+- **Totalmusic Concerts**: `International` → `United Kingdom`
+- **Trace Urban (Australia)**: `International` → `Australia`
+- **Turner Classic Movies**: `International` → `United States`
+- **V2BEAT**: `International` → `Italy`
+- **Whiplash Cinema**: `International` → `United States`
+- **XITE**: `International` → `Netherlands`
+- **XITE 90's Throwback**: `International` → `United States`
+- **XITE Hits**: `International` → `Netherlands`
+- **XITE Hits UK**: `International` → `United Kingdom`
+- **XITE Rock x Metal**: `International` → `Netherlands`
+- **YTV**: `International` → `United States`
+
+## Rejections
+
+- non-Bangladeshi or unverified-country news channel: 999
+- non-Islamic religious channel: 735
+- test/VOD/non-TV name: 237
+- unsafe or tokenized URL: 119
