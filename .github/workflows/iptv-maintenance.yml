@@ -11,7 +11,6 @@ on:
       - scripts/maintenance_helpers.py
       - scripts/reconcile_playlist_consistency.py
       - scripts/classify_international_backups.py
-      - .github/workflows/international-playlist-audit.yml
       - scripts/backfill_cross_playlist_metadata.py
       - scripts/repair_logo_asset_technical_quality.py
       - scripts/normalize_metadata.py
@@ -28,9 +27,7 @@ on:
       - scripts/check_epg_config.py
       - scripts/epg_coverage.py
       - scripts/generate_epg.py
-      - scripts/repair_international_playlist.py
       - scripts/discover_international_channels.py
-      - scripts/validate_international_playlist.py
       - requirements.txt
       - scripts/run_generate_epg.py
       - scripts/fetch_iptv_org_epg.py
@@ -63,21 +60,17 @@ on:
       - reports/epg-india-channel-mapping.csv
   schedule:
     - cron: '17 2 * * *'
-  workflow_run:
-    workflows: ["International Playlist Audit"]
-    types: [completed]
-    branches: [main]
   workflow_dispatch:
 permissions:
   contents: write
 # Shared with all main-branch playlist writers so they never modify the repository concurrently.
 concurrency:
-  group: iptv-playlist-main-writer
+  group: iptv-playlist-main-writer-v2
   cancel-in-progress: false
   queue: max
 jobs:
   maintain:
-    if: ${{ !(github.actor == 'github-actions[bot]' && (startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance') || startsWith(github.event.head_commit.message, 'Add conservative playlist removal guard') || startsWith(github.event.head_commit.message, 'Add hard playlist preservation gates') || startsWith(github.event.head_commit.message, 'Refine preservation guard to protect stream URLs') || startsWith(github.event.head_commit.message, 'Harden protected queue byte-for-byte preservation') || startsWith(github.event.head_commit.message, 'Harden IPTV maintenance safety') || startsWith(github.event.head_commit.message, 'Enforce zero automatic playlist deletion') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports and EPG'))) && !startsWith(github.event.head_commit.message, 'Repair IPTV metadata and local logos only; leave stream URLs unchanged') && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success') }}
+    if: ${{ !(github.actor == 'github-actions[bot]' && (startsWith(github.event.head_commit.message, 'Run IPTV playlist maintenance') || startsWith(github.event.head_commit.message, 'Add conservative playlist removal guard') || startsWith(github.event.head_commit.message, 'Add hard playlist preservation gates') || startsWith(github.event.head_commit.message, 'Refine preservation guard to protect stream URLs') || startsWith(github.event.head_commit.message, 'Harden protected queue byte-for-byte preservation') || startsWith(github.event.head_commit.message, 'Harden IPTV maintenance safety') || startsWith(github.event.head_commit.message, 'Enforce zero automatic playlist deletion') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports') || startsWith(github.event.head_commit.message, 'Synchronize IPTV generated reports and EPG'))) && !startsWith(github.event.head_commit.message, 'Repair IPTV metadata and local logos only; leave stream URLs unchanged') }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
