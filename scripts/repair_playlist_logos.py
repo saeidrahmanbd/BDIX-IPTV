@@ -22,7 +22,7 @@ import logo_source_catalog as source
 ROOT = Path(".")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
-PLAYLISTS = ["IPTV-Playlist.m3u"]
+PLAYLISTS = ["BD.IN-Playlist.m3u", "IPTV-Playlist.m3u", "International-Playlist.m3u"]
 REPORT = Path("reports/playlist-logo-repair-results.md")
 REGISTRY_PATH = Path("reports/logo-source-registry.json")
 
@@ -78,10 +78,6 @@ LOCAL_OVERRIDES = {
 FORCED_CHANNEL_LOGOS = {
     "bollygold": "nh-bollygold-dbedeff9.png",
     "manoranjan grand": "manoranjan-grand.png",
-    "btv news": "nvisionbd-verified-btv-news-33c61f1708.jpg",
-    "zee tv": "nvisionbd-verified-zee-tv-2fb6673cf7.svg",
-    "tom and jerry": "nvisionbd-verified-tom-and-jerry-927bd66719.jpg",
-    "green tv": "nvisionbd-verified-green-tv-fa848f9d71.jpg",
     "zainabia channel": "zainabia-channel.png",  # user-supplied official channel logo
 }
 
@@ -353,12 +349,9 @@ def file_is_valid(path):
 
 def asset_key(path):
     stem = path.stem.casefold()
-    if stem.startswith("nvisionbd-official-"):
-        stem = stem[len("nvisionbd-official-"):]
-    elif stem.startswith("nvisionbd-verified-"):
-        stem = stem[len("nvisionbd-verified-"):]
-    elif stem.startswith("nvisionbd-"):
-        # Other project-made marks are not trusted as broadcaster art.
+    # All Nvision-branded asset files are prohibited, including "official"
+    # and "verified" variants.
+    if stem.startswith("nvisionbd-"):
         return ""
     elif stem.startswith("verified-"):
         stem = stem[len("verified-"):]
@@ -406,7 +399,7 @@ def find_local_logo(channel):
         if not path.is_file() or path.suffix.lower() not in IMAGE_EXTS:
             continue
         lower = path.name.casefold()
-        if lower in BAD_ASSETS or lower in GENERIC_ASSETS:
+        if lower in BAD_ASSETS or lower in GENERIC_ASSETS or lower.startswith("nvisionbd-"):
             continue
         if lower.startswith(("placeholder-", "generated-fallback-", "generic-", "unknown-", "unidentified-")):
             continue
@@ -554,6 +547,10 @@ def raw_url(filename):
 def is_valid_local_logo_reference(value):
     value = (value or "").strip()
     if not value:
+        return False
+    basename = Path(urllib.parse.urlparse(value).path).name.casefold()
+    blocked_prefixes = ("nvisionbd-", "placeholder-", "generated-fallback-", "generic-", "unknown-", "unidentified-")
+    if basename.startswith(blocked_prefixes) or re.search(r"(?:placeholder|generic-logo)", basename) or basename in BAD_ASSETS or basename in GENERIC_ASSETS:
         return False
     if value.startswith(RAW_BASE):
         rel = urllib.parse.unquote(value[len(RAW_BASE):].split("?", 1)[0].split("#", 1)[0]).lstrip("/")
@@ -720,8 +717,11 @@ def main():
         # Keep only history entries with non-quarantined basenames.
         history_index = {
             key: value for key, value in history_index.items()
-            if Path(urllib.parse.urlparse(value.get("url", "")).path).name.casefold()
-            not in BAD_ASSETS | GENERIC_ASSETS
+            if (
+                Path(urllib.parse.urlparse(value.get("url", "")).path).name.casefold()
+                not in BAD_ASSETS | GENERIC_ASSETS
+                and not Path(urllib.parse.urlparse(value.get("url", "")).path).name.casefold().startswith("nvisionbd-")
+            )
         }
         history_status = f"loaded {len(history_index)} historical name mappings"
     except Exception as exc:
@@ -779,7 +779,7 @@ def main():
             license_url = ""
             candidate_metadata = None
 
-            if not new_file and not is_generated_fallback:
+            if not new_file:
                 try:
                     new_file = find_registered_logo(playlist, attrs, channel)
                     if new_file:
@@ -828,11 +828,21 @@ def main():
                 changed += 1
                 report_rows.append((playlist, line_number, channel, basename, new_file, source_name, source_page, license_name + ((" — " + license_url) if license_url else ""), "replaced"))
             else:
-                # Do not invent substitute artwork. Preserve the current entry for
-                # review and mark it unresolved until a verified channel logo is found.
+                # Do not invent substitute artwork. Remove unsafe references when
+                # no genuine replacement exists, and leave the channel for review.
                 unresolved += 1
-                report_rows.append((playlist, line_number, channel, basename, "", "none", "", "",
-                                    "No exact clean original found; no fallback generated"))
+                original_line = line
+                if current and (
+                    not is_valid_local_logo_reference(current)
+                    or basename in BAD_ASSETS | GENERIC_ASSETS
+                    or basename.startswith(("placeholder-", "generated-fallback-", "generic-", "unknown-", "unidentified-", "nvisionbd-"))
+                    or bool(re.search(r"(?:placeholder|generic-logo)", basename))
+                ):
+                    line = re.sub(r'\s+tvg-logo="[^"]*"', "", line, count=1)
+                    if line != original_line:
+                        changed += 1
+                result_note = "Unsafe logo reference removed" if line != original_line else "No exact clean original found; no fallback generated"
+                report_rows.append((playlist, line_number, channel, basename, "", "none", "", "", result_note))
             output.append(line)
 
         new_text = "\n".join(output).rstrip() + "\n"
@@ -848,7 +858,11 @@ def main():
             name = Path(urllib.parse.urlparse(logo).path).name.casefold() if logo else ""
             if not logo or not is_valid_local_logo_reference(logo):
                 missing_after += 1
-            if name in BAD_ASSETS or name in GENERIC_ASSETS or bool(re.search(r"(?:placeholder|generic-logo)", name)):
+            if (
+                name in BAD_ASSETS or name in GENERIC_ASSETS
+                or name.startswith(("nvisionbd-", "placeholder-", "generated-fallback-", "generic-", "unknown-", "unidentified-"))
+                or bool(re.search(r"(?:placeholder|generic-logo)", name))
+            ):
                 flagged_after += 1
         summary[playlist] = {
             "entries": entries, "changed": changed, "missing_after": missing_after,
@@ -891,7 +905,8 @@ def main():
     report += ["", "## Quality rule", "",
                "- Exact, clean local assets are searched first; then curated, source-attributed external logo URLs are downloaded and validated.",
                "- If no exact authentic asset is available, an existing explicitly named generated-fallback asset may remain as provisional artwork; it is never presented as authentic and is marked generated_fallback in the provenance manifest.",
-               "- Contaminated, mismatched, placeholder, and generic assets are never assigned to tvg-logo. Generated fallback assets are allowed only under their explicit filename prefix and remain visibly unverified.",
+               "- Contaminated, mismatched, placeholder, generic, and generated-fallback assets are never assigned to tvg-logo.",
+               "- Nvision-branded filenames are prohibited in all maintained playlists.",
                "- Original playlist entries, channel metadata, categories, and stream URLs are preserved.", ""]
     REPORT.write_text("\n".join(report), encoding="utf-8")
     print(json.dumps({"summary": summary, "iptv_org": iptv_status, "history": history_status}, ensure_ascii=False))
