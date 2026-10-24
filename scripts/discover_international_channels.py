@@ -123,13 +123,16 @@ def main():
    ident=(a.get("tvg-id") or a.get("channel-id") or key).strip().casefold()
    if ident:country_primary_ids[code].add(ident)
    if group.casefold()==country_group(code).casefold():established.add(code)
- candidates=[]; seen=set(); rejected=Counter()
+ candidates=[]; seen=set(); rejected=Counter(); exact_existing=0; exact_source_duplicates=0
  for b in source:
   a=attrs(b[0]); name=name_of(b); url=url_of(b)
   if not name:rejected["missing channel name"]+=1; continue
   if BAD_NAME_RE.search(name):rejected["test/VOD/non-TV name"]+=1; continue
   if not safe_url(url):rejected["unsafe or tokenized URL"]+=1; continue
-  if url.casefold() in existing_urls or url.casefold() in seen:continue
+  if url.casefold() in existing_urls:
+   exact_existing+=1; continue
+  if url.casefold() in seen:
+   exact_source_duplicates+=1; continue
   base,reason,code=policy(a,name)
   if base is None:rejected[reason]+=1; continue
   seen.add(url.casefold()); candidates.append((a,name,url,norm(name),base,code))
@@ -181,7 +184,7 @@ def main():
  header="#PLAYLIST-STUDIO-CATEGORIES:"+str(dynamic).replace("'",'"'); out=[x for x in prefix if not x.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]; idx=next((i+1 for i,x in enumerate(out) if x.startswith("#EXTM3U")),0); out.insert(idx,header)
  for b in normalized:out.extend(b)
  PLAYLIST.write_text("\n".join(out).rstrip()+"\n",encoding="utf-8")
- REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Country threshold: {COUNTRY_THRESHOLD} unique legitimate primary identities.","- New primary channels go to an established/threshold country group or content category; staging queues are not used.","- New alternate streams go directly to Backup.","- Existing country groups receive new primary channels directly.","- Playback was not tested.",f"- New primary channels: {len(new_rows)}",f"- Backup alternates: {len(backup_rows)}",f"- Country migrations: {len(migrated)}","","## New primary channels",""]
+ REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Source: `{SOURCE_URL}`",f"- Source records parsed: {len(source)}",f"- Existing playlist records: {len(existing)}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique legitimate primary identities.","- New primary channels go to an established/threshold country group or content category; staging queues are not used.","- New alternate streams go directly to Backup.","- Existing country groups receive new primary channels directly.","- Playback was not tested.",f"- New primary channels: {len(new_rows)}",f"- Backup alternates: {len(backup_rows)}",f"- Country migrations: {len(migrated)}","","## New primary channels",""]
  report += [f"- **{n}** — `{g}` — {c}" for n,g,c in new_rows]; report += ["","## Backup alternates",""]+[f"- **{n}** — {c}" for n,c in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
  print(f"International discovery complete: new={len(new_rows)} new_backup={len(backup_rows)} migrations={len(migrated)} country_groups={len(country_groups)}")
 if __name__=="__main__":raise SystemExit(main())
