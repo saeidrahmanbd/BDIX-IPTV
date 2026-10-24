@@ -12,8 +12,8 @@ LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 FIXED = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani"]
-TAIL = ["Adult", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "New Channels", "Backup"]
-FORBIDDEN = {"new backup", "not playing", "international movies", "international music", "test"}
+TAIL = ["International Movies", "International Music", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Backups", "New Channels", "New Backups"]
+FORBIDDEN = {"international", "backup", "new backup", "not playing", "test"}
 ATTRIBUTION = [
     "#=================================",
     "# Developed by: SAEID RAHMAN",
@@ -72,15 +72,19 @@ def main():
         name = (a.get("tvg-name") or info.rsplit(",", 1)[-1]).strip()
         group = a.get("group-title", "").strip()
         if group.casefold() in FORBIDDEN:
-            raise SystemExit(f"Forbidden staging/test group remains: {group!r} ({name}).")
+            raise SystemExit(f"Forbidden legacy/catch-all group remains: {group!r} ({name}).")
+        code = discovery.country_code(a)
+        if group.casefold() == "new channels" and code not in {"BD", "IN", "PK"}:
+            target, reason, _ = discovery.policy(a, name)
+            if target not in {"International Movies", "International Music"}:
+                raise SystemExit(f"Non-movie/music international channel in New Channels: {name!r} ({reason or target}).")
         if group and group not in group_set:
             group_set.add(group)
             groups_seen.append(group)
 
-        code = discovery.country_code(a)
         if code in discovery.ISO_CODES and discovery.counts_toward_country_group(group, code):
             identity = (a.get("tvg-id") or a.get("channel-id") or discovery.norm(name)).strip().casefold()
-            if identity and group.casefold() not in {"backup", "new backup", "not playing", "adult", "test"}:
+            if identity and group.casefold() not in {"backup", "backups", "new backup", "new backups", "not playing", "new channels", "adult", "test"}:
                 country_primary_ids[code].add(identity)
 
         stream_rows = [
@@ -124,6 +128,8 @@ def main():
                     f"it must have at least {discovery.COUNTRY_THRESHOLD} or be consolidated into New Channels."
                 )
 
+    if registry[-4:] != ["Adult", "Backups", "New Channels", "New Backups"]:
+        raise SystemExit("The last four categories must be Adult, Backups, New Channels, New Backups.")
     dynamic = sorted(group for group in group_set if group not in FIXED and group not in TAIL)
     expected_registry = FIXED + dynamic + TAIL
     if registry != expected_registry:
