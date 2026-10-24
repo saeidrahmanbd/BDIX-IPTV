@@ -1410,7 +1410,7 @@ https://cdn.pishow.tv/ott/live/10008/master.m3u8
 https://server.playontv.in/friendstv/index.m3u8
 #EXTINF:-1 tvg-id="GTCPunjabi.in@SD" tvg-name="GTC Punjabi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gtc-punjabi.png" channel-id="GTCPunjabi.in@SD" tvg-country="IN" group-title="New Channels",GTC Punjabi
 https://gtc-yupp.vgcdn.net/vglive-sk-254807/index.m3u8
-#EXTINF:-1 tvg-id="HSTV.in@SD" tvg-name="HSTV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-hstv.png" channel-id="HSTV.in@SD" tvg-country="IN" group-title="New Channels",HSTV
+#EXTINF:-1 tvg-id="HSTV.in@SD" tvg-name="HSTV" channel-id="HSTV.in@SD" tvg-country="IN" group-title="New Channels",HSTV
 https://live.castmaxcloud.com/live/hstv.m3u8
 #EXTINF:-1 tvg-id="HungamaTV.in@SD" tvg-name="Hungama TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-verified-hungama-tv-40b3369ce8.png" channel-id="HungamaTV.in@SD" tvg-country="IN" group-title="New Channels",Hungama TV
 http://103.185.24.134:3001/HUNGAMA/index.m3u8
