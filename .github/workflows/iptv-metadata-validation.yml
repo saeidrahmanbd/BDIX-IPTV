@@ -4,7 +4,7 @@ on:
   pull_request:
     paths:
       - scripts/validate_workflow_references.py
-      - requirements.txt
+      - docs/requirements.txt
       - scripts/iptv_metadata_backfill.py
       - scripts/backfill_cross_playlist_metadata.py
       - scripts/repair_logo_asset_technical_quality.py
@@ -71,6 +71,8 @@ on:
       - tests/test_iptv_fragile_streams.py
       - tests/test_metadata_backfill.py
       - tests/test_cross_playlist_metadata.py
+      - tests/test_logo_asset_technical_quality.py
+      - tests/test_report_freshness.py
       - tests/test_maintenance_report_order.py
       - tests/test_logo_repair_source_hints.py
       - tests/test_language_policy.py
@@ -88,7 +90,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install test dependencies
-        run: python -m pip install --disable-pip-version-check -r requirements.txt pytest
+        run: python -m pip install --disable-pip-version-check -r docs/requirements.txt pytest
       - name: Validate workflow script references
         run: python scripts/validate_workflow_references.py
       - name: Compile changed Python tools
