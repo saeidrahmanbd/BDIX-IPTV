@@ -106,9 +106,9 @@ def make_extinf(a,name,group,code,logo):
  fields.append(f'channel-id="{(a.get("channel-id") or ident).replace(chr(34),"")}"'); fields.append(f'group-title="{group}"'); return "#EXTINF:-1 "+" ".join(fields)+","+clean
 def natural_key(value):return tuple(int(x) if x.isdigit() else x.casefold() for x in re.split(r"(\d+)",value or ""))
 def category_registry(groups):
- fixed={g.casefold() for g in FIXED_GROUPS}; tail={g.casefold() for g in TAIL_GROUPS}
- present={g.strip() for g in groups if g and g.strip().casefold() not in fixed|tail}
- return FIXED_GROUPS+sorted(present,key=str.casefold)+TAIL_GROUPS
+ fixed=set(FIXED_GROUPS); tail=set(TAIL_GROUPS)
+ present={g.strip() for g in groups if g and g.strip() not in fixed|tail}
+ return FIXED_GROUPS+sorted(present)+TAIL_GROUPS
 def main():
  if not PLAYLIST.exists():raise SystemExit("International-Playlist.m3u not found; refusing to create it.")
  req=urllib.request.Request(SOURCE_URL,headers={"User-Agent":"BDIX-IPTV-International-Discovery/1.0"})
