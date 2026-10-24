@@ -8,7 +8,8 @@ PLAYLIST=Path('International-Playlist.m3u'); LOGOS=Path('logos')
 REFERENCE_PLAYLISTS=(Path('IPTV-Playlist.m3u'),Path('BDIX-Playlist.m3u'))
 RAW_BASE='https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/'
 IPTV_LOGOS='https://iptv-org.github.io/api/logos.json'; IPTV_CHANNELS='https://iptv-org.github.io/api/channels.json'
-ORDER=['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International Movies','International Music','International','Documentary & Wildlife','Kids','Religious','Adult','Sports','Backup','New Channels','New Backup','Not Playing']; NO_NUMBER={'Backup','New Backup','Not Playing'}
+FIXED_ORDER=['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani']
+TAIL_ORDER=['Adult','International','Documentary & Wildlife','Kids','Religious','Sports','Backup']; NO_NUMBER={'Backup'}
 ATTR_RE=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 BAD={x.casefold() for x in ('generated-fallback-btv-news.png','generated-fallback-channel-1.png','generated-fallback-channel-16.png','generated-fallback-channel-52.png','placeholder-btv-news.png','placeholder-channel-1.png','placeholder-channel-16.png','placeholder-channel-52.png')}
 
@@ -233,9 +234,16 @@ def main():
   if not u:malformed+=1;continue
   if u.casefold() in seen:duplicate+=1;continue
   seen.add(u.casefold()); info=b[0]; a=attrs(info); g=a.get('group-title','').strip()
-  if g.casefold() in {'bangla','indian','international'}:
+  gkey=g.casefold()
+  if gkey in {'new backup','not playing','test'}:
+   info=set_attr(info,'group-title','Backup');g='Backup'
+  elif gkey in {'new channels','international movies','international music'}:
+   info=set_attr(info,'group-title',classify_primary_group(info,'international'));g=attrs(info).get('group-title','International')
+  elif gkey in {'bangla','indian','international'}:
    info=set_attr(info,'group-title',classify_primary_group(info,g));g=attrs(info).get('group-title','International')
-  if g not in ORDER:info=set_attr(info,'group-title','International');g='International'
+  if not g:
+   info=set_attr(info,'group-title','International');g='International'
+  info,id_added=backfill_exact_tvg_id(info,g,id_by_name)
   info,id_added=backfill_exact_tvg_id(info,g,id_by_name)
   ids_backfilled+=int(id_added)
   if g in NO_NUMBER and attrs(info).get('tvg-chno'):info=remove_attr(info,'tvg-chno')
@@ -247,17 +255,23 @@ def main():
  for b in blocks:
   old=attrs(b[0]).get('tvg-logo','');new,did=repair_logo(b[0],org)
   if did:b[0]=new;repaired+=1;downloaded += int('iptv-org' in new)
-  if not attrs(b[0]).get('tvg-logo','').strip():unresolved+=1;unresolved_rows.append((name_of(b[0]),attrs(b[0]).get('tvg-id',''),attrs(b[0]).get('channel-id',''),url_of(b)))
- rank={x:i for i,x in enumerate(ORDER)}
+  if not attrs(b[0]).get('tvg-logo','').strip():
+   unresolved+=1
+   if attrs(b[0]).get('group-title','').strip().casefold()!='adult':
+    unresolved_rows.append((name_of(b[0]),attrs(b[0]).get('tvg-id',''),attrs(b[0]).get('channel-id','')))
+ present_groups={attrs(b[0]).get('group-title','').strip() for b in blocks}
+ dynamic_groups=sorted(g for g in present_groups if g and g not in FIXED_ORDER and g not in TAIL_ORDER)
+ order=FIXED_ORDER+dynamic_groups+TAIL_ORDER
+ rank={x:i for i,x in enumerate(order)}
  def natural(s):return tuple(int(x) if x.isdigit() else x for x in re.split(r'(\d+)',s.casefold()))
- blocks.sort(key=lambda b:(rank.get(attrs(b[0]).get('group-title',''),len(rank)),natural(name_of(b[0])),url_of(b).casefold()))
- canonical='#PLAYLIST-STUDIO-CATEGORIES:["'+'", "'.join(ORDER)+'"]';pre=[x for x in pre if not x.startswith('#PLAYLIST-STUDIO-CATEGORIES:')]
+ blocks.sort(key=lambda b:(rank.get(attrs(b[0]).get('group-title',''),len(rank)),natural(name_of(b)),url_of(b).casefold()))
+ canonical='#PLAYLIST-STUDIO-CATEGORIES:'+json.dumps(order,ensure_ascii=False);pre=[x for x in pre if not x.startswith('#PLAYLIST-STUDIO-CATEGORIES:')]
  idx=next((i+1 for i,x in enumerate(pre) if x.startswith('#EXTM3U')),0);pre.insert(idx,canonical);lines=pre[:]
  for b in blocks:lines.extend(b)
  PLAYLIST.write_text('\n'.join(lines).rstrip()+'\n',encoding='utf-8')
  out=[f'# International Playlist Audit','',f'- Entries: {len(blocks)}',f'- Missing tvg-id values backfilled from exact, unambiguous primary-playlist names: {ids_backfilled}',f'- Exact duplicate URLs removed: {duplicate}',f'- Malformed entries removed: {malformed}',f'- Backup entries retained unchanged: {backup_retained}',f'- Automatic Backup promotion/migration: disabled',f'- Logos repaired to repository-local assets: {repaired}',f'- Logos recovered using external/iptv-org sources: {downloaded}',f'- Entries still without a safe local logo: {unresolved}','- Stream URLs changed: 0','', '## Backup policy\n- Existing Backup entries are retained for manual review.']
- out += [f'{i}. **{n}** | tvg-id: `{tid or "-"}` | channel-id: `{cid or "-"}` | URL: `{u}`' for i,(n,tid,cid,u) in enumerate(orphan_rows,1)]
- out += ['', '## Unresolved logos']+[f'{i}. **{n}** | tvg-id: `{tid or "-"}` | channel-id: `{cid or "-"}` | URL: `{u}`' for i,(n,tid,cid,u) in enumerate(unresolved_rows,1)]
+ out += [f'{i}. **{n}** | tvg-id: `{tid or "-"}` | channel-id: `{cid or "-"}` | ' for i,(n,tid,cid,u) in enumerate(orphan_rows,1)]
+ out += ['', '## Unresolved logos', '', 'Stream URLs are intentionally omitted from this public report; Adult-category names are omitted from the detailed list.']+[f'{i}. **{n}** | tvg-id: `{tid or "-"}` | channel-id: `{cid or "-"}` | URL: `{u}`' for i,(n,tid,cid) in enumerate(unresolved_rows,1)]
  Path('reports').mkdir(exist_ok=True);Path('reports/international-playlist-audit.md').write_text('\n'.join(out)+'\n',encoding='utf-8')
  print(f'International audit: entries={len(blocks)} tvg_ids_backfilled={ids_backfilled} duplicate_urls_removed={duplicate} malformed_removed={malformed} backups_retained={backup_retained} logos_repaired={repaired} logos_external={downloaded} logos_unresolved={unresolved}')
 if __name__=='__main__':main()
