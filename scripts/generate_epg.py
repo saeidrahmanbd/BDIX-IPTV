@@ -202,7 +202,7 @@ def fetch_xmltv_sources_concurrently(source_urls, max_workers=SOURCE_FETCH_WORKE
 
 
 def playlist_channels():
-    """Include primary channel IDs from all three playlists, keeping main-list names first."""
+    """Include primary channel IDs from the three core maintained playlists, keeping main-list names first."""
     out = {}
     for playlist_path in PLAYLISTS:
         if not playlist_path.exists():
