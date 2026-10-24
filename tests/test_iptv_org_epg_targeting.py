@@ -8,7 +8,7 @@ from fetch_iptv_org_epg import active_playlist_ids, target_channel_ids, build_ta
 
 
 class TargetedIptvOrgEpgTests(unittest.TestCase):
-    def test_only_active_ids_from_three_playlists_are_targets(self):
+    def test_only_active_ids_from_three_core_playlists_are_targets(self):
         main = (
             '#EXTM3U\n'
             '#EXTINF:-1 tvg-id="BBCNews.uk" tvg-name="BBC News" group-title="International",BBC News\n'
