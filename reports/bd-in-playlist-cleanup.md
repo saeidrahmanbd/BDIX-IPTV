@@ -1,58 +1,46 @@
 # BD.IN-Playlist Organization Report
 
-- Source: BD.IN-Playlist.m3u (772 entries before cleanup).
-- Reference structure: IPTV-Playlist.m3u (category registry, canonical metadata and local logo assets).
-- Organized output: 626 entries — 362 primary channel identities and 264 alternative streams in Backup.
+- Original entries: 626.
+- Organized output: 626 entries — 362 primary channel identities and 264 alternative streams under Backup.
 - Unique stream URLs: 626; duplicate URLs remaining: 0.
-- Rejected candidates: 146.
+- Rejected source entries: 0.
 - Existing repository-local logos assigned: 500 of 626 entries.
-- Missing local logo assets: 119 unique identities; 95 safe HTTPS source images queued for localization.
-- No external logo URL or placeholder has been written into the playlist.
-- Country/language metadata is copied from the reference where available; otherwise inferred from source group, channel identity or host. Unverified country values are left blank rather than fabricated.
+- Unique channel identities with no matching local logo asset: 119; validated source candidates queued for localization: 0.
+- Metadata is copied from the curated IPTV playlist when a channel identity matches. Country/language fields are inferred only where there is sufficient evidence; unknown country is left blank.
 
-## Rules applied
+## Applied rules
 
-- Normalized channel display names and removed provider/quality decoration such as SkyM3U, [PAID], and trailing HD/FHD/SD tags.
-- Removed duplicate stream URLs after stripping non-functional URL fragments such as #skym3u.dev.
-- Kept one primary stream per channel identity; all alternative distinct streams are placed in Backup.
-- Reused matching canonical metadata and authentic local logos from IPTV-Playlist.m3u where available.
-- Excluded non-Bangladeshi news channels, Indian news/sports/religious channels, non-Islamic religious channels, radio/test/VOD candidates, proxy/worker hosts, and tokenized/signed URLs.
-- Used standard Playlist Studio groups, current category order, and alphabetized names within groups.
-- Preserved stream destinations except fragment removal; no channel was marked Not Playing without a stream test.
+- Removed provider labels and unnecessary decorations such as SkyM3U, [PAID], and trailing HD/FHD/SD tags.
+- Removed duplicate stream URLs after stripping URL fragments such as #skym3u.dev.
+- Kept exactly one primary stream for each normalized channel identity; alternative streams with unique URLs are in Backup.
+- Reused repository-local logos and matching tvg-id, channel-id, country, language and channel number metadata from IPTV-Playlist.m3u where available.
+- Excluded Indian news, sports and religious channels; excluded non-Islamic religious channels; excluded radio, test, VOD/catch-up, proxy/worker, and signed/tokenized stream candidates.
+- Used the IPTV-Playlist category registry, group order and alphabetical sorting.
+- No external logo URL or placeholder was written into BD.IN-Playlist.m3u. Missing logos are listed below and safe source images are queued for localization.
 
 ## Group counts
 
 | Group | Entries |
 |---|---:|
-| Bangladesh | 80 |
-| Indian Bangla | 46 |
-| Indian Movies | 23 |
+| Bangladesh | 83 |
+| Indian Bangla | 27 |
+| Indian Movies | 24 |
 | Indian Music | 12 |
-| Indian Entertainment | 25 |
-| Pakistani | 6 |
-| International | 74 |
-| Documentary & Wildlife | 19 |
-| Kids | 29 |
+| Indian Entertainment | 27 |
+| Pakistani | 7 |
+| International | 90 |
+| Documentary & Wildlife | 18 |
+| Kids | 26 |
 | Religious | 16 |
 | Sports | 32 |
 | Backup | 264 |
 
-## Rejection counts
+## Rejections
 
-| Reason | Entries |
+| Reason | Count |
 |---|---:|
-| duplicate stream URL | 80 |
-| Indian religious channel prohibited | 4 |
-| Indian sports channel prohibited | 12 |
-| non-Bangladesh news channel prohibited | 20 |
-| non-Islamic religious channel prohibited | 5 |
-| non-live/test/radio/VOD candidate | 1 |
-| proxy/worker/invalid host | 8 |
-| tokenized/signed stream URL | 8 |
-| unsupported stream format | 3 |
-| VOD/catch-up source | 5 |
 
-## Missing local logos after repository lookup
+## Missing local logos
 
 - ✦●✦ BANGLADESH ✦●✦
 - ✦●✦ IN BANGLA ✦●✦
@@ -174,6 +162,4 @@
 - Z Bangla WiFi
 - ZB Cartun TV
 
-## Automated logo localization
-
-The workflow reads reports/bd-in-logo-sources.json, downloads and validates 95 safe HTTPS images, converts valid images to PNG, stores them in logos/, and updates tvg-logo to local URLs. Unavailable or invalid sources remain missing; no generic or fake fallback logos are generated.
+The logo localization workflow uses reports/bd-in-logo-sources.json to download and validate 0 safe HTTPS image sources, convert valid images to PNG, and store them under logos/. It does not create generic fallback artwork.
