@@ -5,14 +5,15 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 import json
 import re
+import discover_international_channels as discovery
 
 PLAYLIST = Path("International-Playlist.m3u")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 FIXED = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani"]
-TAIL = ["Adult", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup"]
-FORBIDDEN = {"new channels", "new backup", "not playing", "international movies", "international music", "test"}
+TAIL = ["Adult", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "New Channels", "Backup"]
+FORBIDDEN = {"new backup", "not playing", "international movies", "international music", "test"}
 ATTRIBUTION = [
     "#=================================",
     "# Developed by: SAEID RAHMAN",
@@ -62,6 +63,9 @@ def main():
 
     urls, groups_seen, group_set = [], [], set()
     missing_logos, broken_logos = 0, []
+    country_primary_ids = {code: set() for code in discovery.ISO_CODES}
+    country_group_labels = {discovery.country_group(code).casefold(): code
+                            for code in discovery.ISO_CODES if code not in {"BD", "IN", "PK"}}
     for block in blocks:
         info = block[0]
         a = attrs(info)
@@ -72,6 +76,12 @@ def main():
         if group and group not in group_set:
             group_set.add(group)
             groups_seen.append(group)
+
+        code = discovery.country_code(a)
+        if code in discovery.ISO_CODES and discovery.counts_toward_country_group(group, code):
+            identity = (a.get("tvg-id") or a.get("channel-id") or discovery.norm(name)).strip().casefold()
+            if identity and group.casefold() not in {"backup", "new backup", "not playing", "adult", "test"}:
+                country_primary_ids[code].add(identity)
 
         stream_rows = [
             line.strip() for line in block[1:]
@@ -103,6 +113,16 @@ def main():
     if broken_logos:
         sample = "; ".join(f"{name}: {path}" for name, path in broken_logos[:5])
         raise SystemExit(f"Broken local logo references: {len(broken_logos)}. Examples: {sample}")
+
+    for group in sorted(group_set):
+        code = country_group_labels.get(group.casefold())
+        if code:
+            count = len(country_primary_ids[code])
+            if count < discovery.COUNTRY_THRESHOLD:
+                raise SystemExit(
+                    f"Country group {group!r} has only {count} general primary identities; "
+                    f"it must have at least {discovery.COUNTRY_THRESHOLD} or be consolidated into New Channels."
+                )
 
     dynamic = sorted(group for group in group_set if group not in FIXED and group not in TAIL)
     expected_registry = FIXED + dynamic + TAIL
