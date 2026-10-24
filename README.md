@@ -6,8 +6,8 @@
 <h1 align="center">📺 BDIX-IPTV</h1>
 
 <p align="center">
-  <b>Bangladesh, India & Selected International IPTV Collection</b><br>
-  Curated live TV · Normalized metadata · Local logos · Reviewed backups · EPG monitoring
+  <b>Bangladesh & India IPTV Hub — Selected International Channels</b><br>
+  Bangladesh & India-focused live TV · Selected international channels · Metadata, logo and EPG audits
 </p>
 
 <p align="center">
@@ -197,6 +197,7 @@ Automated maintenance covers:
 
 | Report | |
 |---|---|
+| 📊 [Project Dashboard](assets/dashboard.svg) | Generated playlist and maintenance summary |
 | 🧹 [Playlist Audit](reports/playlist-audit.md) | Duplicates, identity and metadata checks |
 | 📡 [Stream Health](reports/stream-health.md) | Endpoint availability monitoring and failure classification |
 | 🧩 [Backup Independence Audit](reports/backup-independence-audit.md) | Shared-host/origin and fallback-family review |
