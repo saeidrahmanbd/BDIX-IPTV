@@ -748,7 +748,7 @@ def main():
             continue
         original = path.read_text(encoding="utf-8-sig").replace("\r\n", "\n").replace("\r", "\n")
         lines = original.splitlines()
-        changed = unresolved = entries = fallback_count = 0
+        changed = unresolved = entries = fallback_count = adult_ignored = 0
         output = []
         for line_number, line in enumerate(lines, start=1):
             if not line.startswith("#EXTINF:"):
@@ -760,9 +760,15 @@ def main():
             key = norm_key(channel)
             current = (attrs.get("tvg-logo") or "").strip()
             basename = Path(urllib.parse.urlparse(current).path).name.casefold() if current else ""
+            group_name = (attrs.get("group-title") or "").strip().casefold()
+            # The user explicitly exempts Adult-group entries from logo repair.
+            # Preserve every Adult row byte-for-byte, including empty logo fields.
+            if playlist == "International-Playlist.m3u" and group_name == "adult":
+                adult_ignored += 1
+                output.append(line)
+                continue
             missing = not current
             broken = not is_valid_local_logo_reference(current)
-            group_name = (attrs.get("group-title") or "").strip().casefold()
             is_review_entry = group_name in {"backup", "not playing", "not playing...", "not playing…"}
             is_generated_fallback = basename.startswith("generated-fallback-")
             if args.fallback_only and (not is_generated_fallback or is_review_entry):
@@ -863,6 +869,8 @@ def main():
             if not item.startswith("#EXTINF:"):
                 continue
             meta, _ = parse_extinf(item)
+            if playlist == "International-Playlist.m3u" and (meta.get("group-title") or "").strip().casefold() == "adult":
+                continue
             logo = (meta.get("tvg-logo") or "").strip()
             name = Path(urllib.parse.urlparse(logo).path).name.casefold() if logo else ""
             if not logo or not is_valid_local_logo_reference(logo):
@@ -876,7 +884,7 @@ def main():
         summary[playlist] = {
             "entries": entries, "changed": changed, "missing_after": missing_after,
             "flagged_after": flagged_after, "generated_fallbacks": fallback_count,
-            "unresolved": unresolved,
+            "unresolved": unresolved, "adult_entries_skipped": adult_ignored,
         }
 
     if registry_updates:
@@ -897,11 +905,11 @@ def main():
         f"IPTV-org data: {iptv_status}  ",
         f"Historical mapping index: {history_status}", "",
         "## Results by playlist", "",
-        "| Playlist | Entries | References changed | Generated fallbacks | Missing after | Known generic/contaminated refs after | Unresolved repair targets |",
-        "|---|---:|---:|---:|---:|---:|---:|",
+        "| Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for name, data in summary.items():
-        report.append(f"| {name} | {data['entries']} | {data['changed']} | {data['generated_fallbacks']} | {data['missing_after']} | {data['flagged_after']} | {data['unresolved']} |")
+        report.append(f"| {name} | {data['entries']} | {data['changed']} | {data['generated_fallbacks']} | {data['missing_after']} | {data.get('adult_entries_skipped', 0)} | {data['flagged_after']} | {data['unresolved']} |")
     report += ["", "## Repair log", "",
                "| Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |",
                "|---|---:|---|---|---|---|---|---|"]
