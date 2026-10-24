@@ -501,6 +501,13 @@ def candidate_for(channel, attrs, iptv_indexes, history_index):
         source_name = item.pop("source", "Exact-name historical playlist logo mapping")
         return item, source_name
 
+    # The International playlist's Adult group includes many individual names
+    # and VOD-style titles, not established TV channels. Do not search Commons
+    # for profile pictures or unrelated artwork as substitutes for channel logos.
+    group_name = str(attrs.get("group-title", "")).strip().casefold()
+    if group_name in {"adult", "xxx", "adult movies"}:
+        return None, "No verified TV logo source for this Adult-group entry; Commons lookup skipped"
+
     try:
         item = source.commons_candidate(channel)
         if item:
