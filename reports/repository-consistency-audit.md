@@ -38,7 +38,7 @@ The validation failure at commit 226674d only reported validate_international_pl
 - **BDIX Test entries:** the misleading Test group and its repeated Bangla Vision label/logo remain a separate playlist-content cleanup item. This re-audit did not guess replacement identities.
 - **Asset inventory:** the repository has many unreferenced and duplicate logo files. They were not bulk-deleted because filenames alone cannot establish that an asset is unused by a restore workflow or historical playlist.
 - **Image file naming:** renamed the banner asset path to assets/Saeid Rahman.jpg by reusing the original Git blob, preserving the binary bytes exactly; updated the README reference.
-- **Action pinning:** workflows still use action version tags rather than immutable commit SHAs. Dependabot keeps those tags current, but it does not provide SHA pinning.
+- **Action pinning:** checkout v7, setup-python v7, setup-node v4, upload-artifact v4, and Wrangler Action v4 are pinned to reviewed commit SHAs. Dependabot surfaces future GitHub Actions updates; updates should pass validation before merging.
 - **Generated report timing:** audit, EPG, stream-health, logo, and Update Report files should be regenerated and reviewed together after the current maintenance run; values from different timestamps must not be compared as though they came from one snapshot.
 
 ## Counting rules
@@ -47,3 +47,4 @@ The validation failure at commit 226674d only reported validate_international_pl
 - EPG IDs audited use the scope stated by the relevant report; the combined three-playlist guide count is not the same metric as IPTV-only published-programme coverage.
 - Backup rows count URL references, not guaranteed independent origins/CDNs/renditions.
 - HTTP reachability is not proof of playback availability in Bangladesh or India.
+
