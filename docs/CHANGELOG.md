@@ -35,37 +35,9 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 ### Removed channels
 - Colors Gujarati Cinema
 
-## 2026-10-09
-
-- No meaningful playlist changes detected.
-
-## 2026-10-10
-
-- No meaningful playlist changes detected.
-
 ## 2026-10-11
 
 - 🖼️ **7 logo reference(s) corrected**
-
-## 2026-10-12
-
-- No meaningful playlist changes detected.
-
-## 2026-10-13
-
-- No meaningful playlist changes detected.
-
-## 2026-10-14
-
-- No meaningful playlist changes detected.
-
-## 2026-10-15
-
-- No meaningful playlist changes detected.
-
-## 2026-10-17
-
-- No meaningful playlist changes detected.
 
 ## 2026-10-20
 
@@ -95,8 +67,3 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 - FilmUA Live
 - Fox 5
 - FX TV
-
-## 2026-10-23
-
-- No meaningful playlist changes detected.
-
