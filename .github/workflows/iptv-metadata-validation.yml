@@ -18,7 +18,7 @@ on:
       - scripts/generate_dashboard.py
       - scripts/epg_coverage.py
       - scripts/generate_epg.py
-      - scripts/epg_publish_gate.py
+      - scripts/epg_publish_gate_v2.py
       - scripts/logo_asset_naming.py
       - scripts/generate_logo_provenance_review.py
       - scripts/generate_logo_repair_summary.py
@@ -42,9 +42,7 @@ on:
       - .github/workflows/iptv-metadata-validation.yml
   push:
     branches:
-      - fix/iptv-playlist-metadata-epg-freshness
-      - fix/playlist-audit-report-epg-metadata-2026-10-22
-      - fix/playlist-audit-bounded-epg-fetch-2026-10-22
+      - main
     paths:
       - scripts/validate_workflow_references.py
       - scripts/iptv_metadata_backfill.py
@@ -60,7 +58,7 @@ on:
       - scripts/generate_dashboard.py
       - scripts/epg_coverage.py
       - scripts/generate_epg.py
-      - scripts/epg_publish_gate.py
+      - scripts/epg_publish_gate_v2.py
       - scripts/logo_asset_naming.py
       - scripts/generate_logo_provenance_review.py
       - scripts/generate_logo_repair_summary.py
@@ -96,6 +94,8 @@ jobs:
         run: |
           python -m py_compile \
             scripts/validate_workflow_references.py \
+            scripts/reconcile_playlist_consistency.py \
+            scripts/validate_international_playlist.py \
             scripts/iptv_metadata_backfill.py \
             scripts/backfill_cross_playlist_metadata.py \
             scripts/repair_logo_asset_technical_quality.py \
@@ -106,7 +106,7 @@ jobs:
             scripts/generate_dashboard.py \
             scripts/epg_coverage.py \
             scripts/generate_epg.py \
-            scripts/epg_publish_gate.py \
+            scripts/epg_publish_gate_v2.py \
             scripts/logo_asset_naming.py \
             scripts/generate_logo_provenance_review.py \
             scripts/generate_logo_repair_summary.py \

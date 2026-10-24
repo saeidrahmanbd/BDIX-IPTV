@@ -9,12 +9,15 @@ on:
       - ".github/workflows/deploy-xtream.yml"
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   deploy-main:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Deploy main IPTV Xtream gateway
         uses: cloudflare/wrangler-action@v4
@@ -62,7 +65,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Deploy BDIX Xtream gateway
         uses: cloudflare/wrangler-action@v4

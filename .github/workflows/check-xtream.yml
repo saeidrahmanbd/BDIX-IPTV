@@ -5,6 +5,9 @@ on:
     - cron: "0 1 * * *" # 07:00 Asia/Dhaka (UTC+6)
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   check:
     runs-on: ubuntu-latest
