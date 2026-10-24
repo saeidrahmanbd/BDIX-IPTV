@@ -6,11 +6,10 @@ on:
     paths:
       - International-Playlist.m3u
       - scripts/repair_international_playlist.py
-      - scripts/discover_international_channels.py
-      - scripts/sort_playlists.py
-      - scripts/classify_international_backups.py
-      - logos/international/**
+      - scripts/validate_international_playlist.py
+      - scripts/enforce_playlist_attribution.py
       - .github/workflows/international-playlist-audit.yml
+      - logos/**
   workflow_dispatch:
 
 permissions:
@@ -24,96 +23,47 @@ concurrency:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v7
         with:
+          ref: main
           fetch-depth: 0
+
       - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
-      - name: Audit and repair metadata/logos
+
+      - name: Repair International metadata and local logos
         run: python scripts/repair_international_playlist.py
-      - name: Reconcile duplicate primary streams
-        run: python scripts/classify_international_backups.py
-      - name: Enforce International review queues and category order
-        shell: bash
-        run: |
-          set -euo pipefail
-          python - <<'PY'
-          from pathlib import Path
-          import re, unicodedata
-          p=Path('International-Playlist.m3u')
-          lines=p.read_text(encoding='utf-8-sig').splitlines()
-          fixed=['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani']
-          tail=['International','Documentary & Wildlife','Kids','Religious','Sports','New Channels','New Backup','Backup']
-          legacy={'not playing','international movies','international music'}
-          attr_re=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
-          def attrs(s): return dict(attr_re.findall(s))
-          def norm(s):
-              s=unicodedata.normalize('NFKD',str(s or '')).casefold(); s=''.join(c for c in s if not unicodedata.combining(c)); return re.sub(r'[^a-z0-9]+','',s)
-          prefix=[]; blocks=[]; cur=None
-          for line in lines:
-              if line.startswith('#PLAYLIST-STUDIO-CATEGORIES:'): continue
-              if line.startswith('#EXTINF:'):
-                  if cur is not None: blocks.append(cur)
-                  cur=[line]
-              elif cur is None: prefix.append(line)
-              else: cur.append(line)
-          if cur is not None: blocks.append(cur)
-          # Not Playing and the retired specialized International buckets are no longer valid.
-          for b in blocks:
-              a=attrs(b[0]); g=(a.get('group-title') or '').strip()
-              if g.casefold() in legacy:
-                  b[0]=re.sub(r'(group-title=)"[^"]*"', r'\1"International"', b[0], count=1)
-          groups={(attrs(b[0]).get('group-title') or '').strip() for b in blocks}
-          country_groups=sorted(g for g in groups if g and g not in fixed and g not in tail and g.casefold() not in legacy)
-          order=fixed+country_groups+tail
-          rank={g.casefold():i for i,g in enumerate(order)}
-          header='#PLAYLIST-STUDIO-CATEGORIES:'+str(order).replace("'",'"')
-          kept=[]
-          for b in blocks:
-              a=attrs(b[0]); name=(a.get('tvg-name') or b[0].rsplit(',',1)[-1]).strip(); g=(a.get('group-title') or '').strip()
-              kept.append((rank.get(g.casefold(),len(rank)),norm(name),name.casefold(),b))
-          kept.sort(key=lambda x:(x[0],x[1],x[2]))
-          out=[x for x in prefix if x.strip() and not x.strip().startswith('#EXTM3U')]
-          out.insert(0,'#EXTM3U url-tvg="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml" x-tvg-url="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"')
-          out.insert(1,header)
-          for _,_,_,b in kept: out.extend(b)
-          p.write_text('\n'.join(out)+'\n',encoding='utf-8')
-          print('Category order:', ' > '.join(order))
-          print('Channels:', len(kept))
-          PY
+
+      - name: Enforce attribution
+        run: python scripts/enforce_playlist_attribution.py International-Playlist.m3u
+
       - name: Validate International playlist
-        shell: bash
-        run: |
-          set -euo pipefail
-          python - <<'PY'
-          from pathlib import Path
-          from collections import Counter
-          import re
-          p=Path('International-Playlist.m3u'); lines=p.read_text(encoding='utf-8-sig').splitlines()
-          if not lines or not lines[0].startswith('#EXTM3U'): raise SystemExit('Missing #EXTM3U header')
-          urls=[x.strip().casefold() for x in lines if x.strip().startswith(('http://','https://'))]
-          dup=[u for u,n in Counter(urls).items() if n>1]
-          if dup: raise SystemExit(f'Duplicate stream URLs: {len(dup)}')
-          forbidden=re.compile(r'group-title="(?:Not Playing|New|New\s+Backup\s+Review)"',re.I)
-          for line in lines:
-              if forbidden.search(line): raise SystemExit('Forbidden legacy review group remains: '+line)
-          if any('group-title="Not Playing"' in line for line in lines): raise SystemExit('Not Playing remains')
-          if not any('group-title="New Channels"' in line for line in lines): print('No New Channels currently queued; this is valid.')
-          if not any('group-title="New Backup"' in line for line in lines): print('No New Backup currently queued; this is valid.')
-          print(f'Integrity OK: {len(urls)} stream URLs; review queues New Channels/New Backup are permitted; Not Playing is forbidden.')
-          PY
-      - name: Publish repaired International playlist
+        run: python scripts/validate_international_playlist.py
+
+      - name: Publish audit results and localized assets
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add International-Playlist.m3u reports/international-playlist-audit.md scripts/discover_international_channels.py scripts/sort_playlists.py
-          if git diff --cached --quiet; then echo 'No International playlist changes to publish.'; exit 0; fi
-          git commit -m 'Restore International discovery review queues'
-          git fetch origin main
-          git pull --rebase origin main
-          git push origin HEAD:main
+          git add International-Playlist.m3u reports/international-playlist-audit.md logos/
+          if git diff --cached --quiet; then
+            echo 'International playlist and asset metadata are already consistent.'
+            exit 0
+          fi
+          git commit -m 'Audit International playlist metadata and logos'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main; then
+              if git push origin HEAD:main; then exit 0; fi
+            else
+              git rebase --abort || true
+              echo '::error::Rebase conflict; refusing to force-push.'
+              exit 1
+            fi
+            sleep 3
+          done
+          exit 1
