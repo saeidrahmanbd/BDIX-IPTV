@@ -27,7 +27,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install logo tools
-        run: python -m pip install --disable-pip-version-check -r requirements.txt
+        run: python -m pip install --disable-pip-version-check -r docs/requirements.txt
       - name: Enforce queue exclusions and discover approved Bangladesh/India candidates
         run: python scripts/discover_bd_in_new_queues.py
       - name: Normalize discovered metadata and localize logos
