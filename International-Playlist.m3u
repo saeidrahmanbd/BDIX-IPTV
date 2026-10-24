@@ -173,7 +173,7 @@ http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23582
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/20868.ts
 #EXTINF:-1 group-title="Pakistani" tvg-id="custom.waseeb-tv" tvg-name="Waseeb TV" tvg-chno="247" channel-id="custom.waseeb-tv" tvg-country="PK" tvg-language="pan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/waseb-tv.png",Waseeb TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23684
-#EXTINF:-1 tvg-id="DisneyChannelLatinAmerica.ar@Panregional" tvg-name="Disney Channel Latin America (1080p)" tvg-country="AR" channel-id="DisneyChannelLatinAmerica.ar@Panregional" group-title="Argentina",Disney Channel Latin America (1080p)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/disneychannellatinamerica.svg" tvg-id="DisneyChannelLatinAmerica.ar@Panregional" tvg-name="Disney Channel Latin America (1080p)" tvg-country="AR" channel-id="DisneyChannelLatinAmerica.ar@Panregional" group-title="Argentina",Disney Channel Latin America (1080p)
 http://15.204.246.24:8080/DisneyHD/index.m3u8
 #EXTINF:-1 tvg-id="DisneyChannelLatinAmerica.ar@Center" tvg-name="Disney Channel Latin America Center (1080p)" tvg-country="AR" channel-id="DisneyChannelLatinAmerica.ar@Center" group-title="Argentina",Disney Channel Latin America Center (1080p)
 http://181.78.8.199:8000/play/a0dn/index.m3u8
@@ -276,7 +276,7 @@ https://amg02159-kcglobal-amg02159c1-samsung-in-521.playouts.now.amagi.tv/playli
 https://amg18481-amg18481c1-amgplt0352.playout.now3.amagi.tv/playlist/amg18481-amg18481c1-amgplt0352/playlist.m3u8
 #EXTINF:-1 tvg-id="CartoonNetworkAsia.sg@SD" tvg-name="Cartoon Network Asia (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cartoon-network-asia-720p.png" tvg-country="SG" channel-id="CartoonNetworkAsia.sg@SD" group-title="Singapore",Cartoon Network Asia (720p)
 https://cdn4.skygo.mn/live/disk1/Cartoon_Network/HLSv3-FTA/Cartoon_Network.m3u8
-#EXTINF:-1 tvg-id="CartoonitoAsia.sg@SD" tvg-name="Cartoonito Asia (720p)" tvg-country="SG" channel-id="CartoonitoAsia.sg@SD" group-title="Singapore",Cartoonito Asia (720p)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cartoonitoasia.png" tvg-id="CartoonitoAsia.sg@SD" tvg-name="Cartoonito Asia (720p)" tvg-country="SG" channel-id="CartoonitoAsia.sg@SD" group-title="Singapore",Cartoonito Asia (720p)
 http://cdn4.skygo.mn/live/disk1/Boomerang/HLSv3-FTA/Boomerang.m3u8
 #EXTINF:-1 tvg-id="AnimeVision.es@SD" tvg-name="Anime Vision (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/anime-vision-1080p.png" tvg-country="ES" channel-id="AnimeVision.es@SD" group-title="Spain",Anime Vision (1080p)
 https://d1ujfw1zyymzyd.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-a6fukwkbxmex8/live/fast-channel-animevision-64527ec0/fast-channel-animevision-64527ec0.m3u8
@@ -348,7 +348,7 @@ https://hls.botflix.tv/tv/index.m3u8
 https://cmc-cmctv-cineverse.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="CartoonNetwork.us@East" tvg-name="Cartoon Network (United States) (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cartoon-network-united-states-720p.png" tvg-country="US" channel-id="CartoonNetwork.us@East" group-title="United States",Cartoon Network (United States) (720p)
 http://tvsen7.aynascope.net/cartoonnetwork/index.m3u8
-#EXTINF:-1 tvg-id="CartoonNetworkLatinAmerica.us@SouthAtlanticHD" tvg-name="Cartoon Network Latin America" tvg-country="US" channel-id="CartoonNetworkLatinAmerica.us@SouthAtlanticHD" group-title="United States",Cartoon Network Latin America
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cartoonnetworklatinamerica.png" tvg-id="CartoonNetworkLatinAmerica.us@SouthAtlanticHD" tvg-name="Cartoon Network Latin America" tvg-country="US" channel-id="CartoonNetworkLatinAmerica.us@SouthAtlanticHD" group-title="United States",Cartoon Network Latin America
 https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/cartoonnetwork.stream/chunks.m3u8
 #EXTINF:-1 tvg-id="CartoonNetworkLatinAmerica.us@Brazil" tvg-name="Cartoon Network Latin America Brazil (720p)" tvg-country="US" channel-id="CartoonNetworkLatinAmerica.us@Brazil" group-title="United States",Cartoon Network Latin America Brazil (720p)
 http://45.162.64.114/CARTOON_NETWORK/index.m3u8
@@ -358,7 +358,7 @@ http://38.252.238.18:8000/play/a053/index.m3u8
 http://158.172.217.18:8000/play/a03a/index.m3u8
 #EXTINF:-1 tvg-id="CartoonNetworkLatinAmerica.us@SouthPacific" tvg-name="Cartoon Network Latin America South Pacific (576p)" tvg-country="US" channel-id="CartoonNetworkLatinAmerica.us@SouthPacific" group-title="United States",Cartoon Network Latin America South Pacific (576p)
 http://45.167.1.138:8000/play/a00w
-#EXTINF:-1 tvg-id="CartoonitoLatinAmerica.us@SD" tvg-name="Cartoonito Latin America (1080p)" tvg-country="US" channel-id="CartoonitoLatinAmerica.us@SD" group-title="United States",Cartoonito Latin America (1080p)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cartoonitolatinamerica.png" tvg-id="CartoonitoLatinAmerica.us@SD" tvg-name="Cartoonito Latin America (1080p)" tvg-country="US" channel-id="CartoonitoLatinAmerica.us@SD" group-title="United States",Cartoonito Latin America (1080p)
 http://45.173.12.70:8000/play/a0hh
 #EXTINF:-1 tvg-id="CBSTV.us" tvg-name="CBS TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cbs-tv.png" tvg-country="US" tvg-language="eng" channel-id="CBSTV.us" group-title="United States",CBS TV
 https://tvsen3.aynaott.com/34fJSjZP/index.m3u8
@@ -483,7 +483,7 @@ http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791460.ts
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791461.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.xxx-21-sextury" tvg-name="21 Sextury" tvg-chno="1046" channel-id="custom.xxx-21-sextury" tvg-country="ZZ" tvg-language="und",21 Sextury
 http://dejatedemamadas.neospaxy.top:8080/0176373462111/gcm6isz6sn5i/73891
-#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-adult-22" tvg-name="22" tvg-chno="667" channel-id="custom.24-7-xxx-adult-22" tvg-country="ZZ" tvg-language="und",22
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/22.png" group-title="Adult" tvg-id="custom.24-7-xxx-adult-22" tvg-name="22" tvg-chno="667" channel-id="custom.24-7-xxx-adult-22" tvg-country="ZZ" tvg-language="und",22
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791462.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-adult-23" tvg-name="23" tvg-chno="668" channel-id="custom.24-7-xxx-adult-23" tvg-country="ZZ" tvg-language="und",23
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791463.ts
@@ -759,9 +759,9 @@ http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791521.ts
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791522.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-kenzie-reeves" tvg-name="Kenzie Reeves" tvg-chno="725" channel-id="custom.24-7-xxx-kenzie-reeves" tvg-country="ZZ" tvg-language="und",Kenzie Reeves
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791523.ts
-#EXTINF:-1 group-title="Adult" tvg-id="Latina.pe" tvg-name="Latina" tvg-chno="809" channel-id="Latina.pe" tvg-country="PE" tvg-language="spa",Latina
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/latina.png" group-title="Adult" tvg-id="Latina.pe" tvg-name="Latina" tvg-chno="809" channel-id="Latina.pe" tvg-country="PE" tvg-language="spa",Latina
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315884.ts
-#EXTINF:-1 group-title="Adult" tvg-id="custom.xxx-latina" tvg-name="Latina" tvg-chno="1037" channel-id="custom.xxx-latina" tvg-country="ZZ" tvg-language="und",Latina
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/latina.png" group-title="Adult" tvg-id="custom.xxx-latina" tvg-name="Latina" tvg-chno="1037" channel-id="custom.xxx-latina" tvg-country="ZZ" tvg-language="und",Latina
 http://play.iptvxxx.net/latina.m3u8
 #EXTINF:-1 group-title="Adult" tvg-id="LEOTV.cz" tvg-name="LEO TV" tvg-chno="810" channel-id="LEOTV.cz" tvg-country="CZ" tvg-language="ces",LEO TV
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315885.ts
