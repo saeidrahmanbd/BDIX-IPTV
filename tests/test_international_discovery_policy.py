@@ -34,6 +34,10 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
     def test_known_islamic_network_is_allowed(self): self.assertEqual(self.classify('MTA International','Religious','GB','MTAInternational.uk'),('Religious',None,'GB'))
     def test_non_islamic_religious_channel_is_rejected(self):
         group,reason,country=self.classify('Gospel TV','Religious','US','GospelTV.us'); self.assertIsNone(group); self.assertEqual(reason,'non-Islamic religious channel')
+    def test_3abn_kids_is_rejected_even_in_kids_category(self):
+        group,reason,country=self.classify('3ABN Kids','Kids','US','3ABNKids.us@SD'); self.assertIsNone(group); self.assertEqual(reason,'non-Islamic religious channel')
+    def test_3abn_network_alias_is_rejected(self):
+        group,reason,country=self.classify('3ABN Latino','General','US','3ABNLatino.us'); self.assertIsNone(group); self.assertEqual(reason,'non-Islamic religious channel')
     def test_hindu_religious_channel_is_rejected(self):
         group,reason,country=self.classify('Dharma TV','General','IN','DharmaTV.in'); self.assertIsNone(group); self.assertEqual(reason,'non-Islamic religious channel')
     def test_religious_content_is_rejected_even_if_music(self):
