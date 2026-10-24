@@ -17,8 +17,8 @@ INTERNATIONAL_FIXED = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani",
 ]
-INTERNATIONAL_TAIL = ["International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "New Channels", "New Backup", "Backup"]
-INTERNATIONAL_LEGACY = {"not playing", "international movies", "international music"}
+INTERNATIONAL_TAIL = ["International Movies", "International Music", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Backups", "New Channels", "New Backups"]
+INTERNATIONAL_LEGACY = {"not playing", "international", "backup", "new backup"}
 ATTRIBUTE_ORDER = (
     "tvg-id", "tvg-name", "tvg-logo", "tvg-chno",
     "channel-id", "tvg-country", "tvg-language", "group-title",
@@ -60,7 +60,7 @@ def international_rank(records):
 def record_key(record,path_name,intl_rank=None):
     a=attrs(record[0]); group=a.get("group-title","").strip()
     if path_name=="International-Playlist.m3u" and intl_rank is not None:
-        group_key="International" if group.casefold() in INTERNATIONAL_LEGACY else group
+        group_key=group
         return (intl_rank.get(group_key,len(intl_rank)),natural_key(record_name(record)),record_url(record).casefold())
     return (RANK.get(group,len(RANK)),natural_key(record_name(record)),record_url(record).casefold())
 def sort_playlist(path):
