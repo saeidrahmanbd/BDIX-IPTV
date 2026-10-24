@@ -1,58 +1,49 @@
-# BD.IN-Playlist Fresh Audit Report — Follow-up Corrections
+# BD.IN-Playlist Fresh Audit Report
 
-- Base: current audited playlist `2d832b37d649aee58ce0006b2d8c44274b40a9f1`.
-- Final playlist: **461 entries**, with **262 primary identities** and **199 backups**.
+- Audit base: prior validated audit `52b3325`, preserving its category corrections and local edits.
+- Final playlist: **461 entries** — **262 primary identities**, **199 alternative streams in Backup**.
 - Duplicate stream URLs: **0**. Duplicate primary identities: **0**. External logo URLs: **0**.
-- Repository-local logos assigned: **417 / 461 entries**. Missing confident logo matches: **41**.
+- Local logo assignments: **417 / 461**; **41** identities still have no confidently matched local logo.
 
-## Targeted corrections
+## Focused final corrections
 
-- Normalized `Enter 10 Bangla` to `Enter10 Bangla` and placed it with Indian Bangla.
-- Merged `STAR JALSHA MOVIES` into the canonical `Jalsha Movies` identity.
-- Moved `Channel 52` to Bangladesh using the curated reference metadata.
-- Moved `& Pictures` and `KTV Tamil` to Indian Movies.
-- Moved `Sony One Hits` and `Shemaroo Josh` to Indian Music.
-- Moved `Gopal Bhar TV` to Kids.
-- Merged `Wild` into `Wild TV` under Documentary & Wildlife.
-- Preserved all unique alternative stream URLs under Backup; no external/placeholder logos were introduced.
+- Normalized `Enter 10 Bangla` to `Enter10 Bangla` and merged its distinct URL under the existing primary identity in Indian Bangla.
+- Merged `STAR JALSHA MOVIES` with `Jalsha Movies` under Indian Movies.
+- Corrected `Channel 52` to the Bangladesh group using reference metadata.
+- Moved `& Pictures` and `KTV Tamil` to Indian Movies; `Sony One Hits` and `Shemaroo Josh` to Indian Music.
+- Moved `Gopal Bhar TV` to Kids and merged `Wild` into `Wild TV` in Documentary & Wildlife.
+- Preserved all distinct alternative streams under Backup and used only verified repository-local logo files.
 
-## Final group counts
+## Group counts
 
 | Group | Entries |
 |---|---:|
 | Bangladesh | 53 |
-| Indian Bangla | 27 |
-| Indian Movies | 19 |
-| Indian Music | 15 |
+| Indian Bangla | 21 |
+| Indian Movies | 22 |
+| Indian Music | 18 |
 | Indian Entertainment | 17 |
-| Pakistani | 5 |
-| International | 45 |
-| Documentary & Wildlife | 18 |
-| Kids | 22 |
+| Pakistani | 4 |
+| International | 36 |
+| Documentary & Wildlife | 24 |
+| Kids | 26 |
 | Religious | 14 |
 | Sports | 27 |
 | Backup | 199 |
 
-## Additional group corrections
+## Other group corrections
 
 | Correction | Identities |
 |---|---:|
-| Kids → International | 4 |
-| Documentary & Wildlife → International | 4 |
-| Indian Movies → Indian Bangla | 3 |
-| Indian Music → Indian Bangla | 3 |
 | Indian Entertainment → Indian Movies | 2 |
 | Indian Bangla → Bangladesh | 1 |
 | International → Indian Bangla | 1 |
 | Indian Movies → Indian Music | 1 |
 | Indian Entertainment → Indian Music | 1 |
-| Documentary & Wildlife → Indian Entertainment | 1 |
-| Documentary & Wildlife → Pakistani | 1 |
-| Indian Entertainment → International | 1 |
 | International → Documentary & Wildlife | 1 |
 | International → Kids | 1 |
 
-## Remaining logo gaps
+## Remaining local logo gaps
 
 - Aakaash Bangla
 - Albania Music
