@@ -1,10 +1,11 @@
 # IPTV Channel Discovery
 
-Generated: **2026-10-24T13:32:01.423697+00:00**
+Generated: **2026-10-24T13:33:40.574702+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News, Sports, Kids and Religious channels are prohibited.**
 - Permanent denylist: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.
+- Country-group threshold: **5** legitimate primary identities
 - Existing prohibited review-queue rows removed: **0**
 - New channels: **0**
 - New backups: **0**
