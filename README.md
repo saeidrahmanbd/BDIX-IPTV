@@ -54,7 +54,7 @@ A curated IPTV collection focused on **🇧🇩 Bangladeshi channels, 🇮🇳 I
 | **International-Playlist.m3u** | International channel collection | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) |
 | **BD.IN-Playlist.m3u** | Additional Bangladesh & India collection, separate from the core playlists | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BD.IN-Playlist.m3u) |
 
-> **Automation scope:** `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `International-Playlist.m3u` remain covered by EPG and quality workflows; `BD.IN-Playlist.m3u` is outside that automated scope. Automatic new-channel discovery is restricted to verified Bangladesh/India candidates and excludes News, Sports, Kids and Religious channels from both countries. Automatic international channel discovery is disabled; the existing International playlist remains under metadata/logo validation.
+> **Automation scope:** `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `International-Playlist.m3u` remain covered by EPG and quality workflows; `BD.IN-Playlist.m3u` is outside that automated scope. Automatic new-channel discovery is restricted to verified Bangladesh/India candidates and excludes News, Sports, Kids and Religious channels from both countries. Automatic International channel discovery is active and accepts Movies/Music only; News, Sports, Kids, Documentary/Wildlife, Religious, General/Entertainment and all other non-Movie/Music categories are rejected. Existing canonical rows are preserved; only out-of-scope discovery queues and the generic International catch-all are policy-cleaned.
 
 <p align="center">
   <a href="assets/iptv-project-showcase-2026-10-22.svg">
