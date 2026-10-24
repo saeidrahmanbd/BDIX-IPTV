@@ -83,7 +83,7 @@ Automated maintenance covers stream and backup updates, metadata normalization, 
 6. Dashboard figures are generated from the current playlist and reports.
 7. Maintenance runs record quality metrics.
 8. Backup counts do not imply independent infrastructure.
-9. **Indian News, Sports and Religious channels are strictly prohibited from discovery queues.**
+9. **News, Sports, Kids and Religious channels from both Bangladesh and India are strictly prohibited from discovery queues. E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV are permanently denylisted.**
 
 ## Reports
 

@@ -192,7 +192,7 @@ Automated maintenance covers:
 8. 🔗 Backup counts do not imply independent infrastructure; CDN/origin/rendition families are audited separately.
 
 <p align="center">
-  <b><a href="reports/stream-health.md">→ Stream Health Report</a> · <a href="reports/iptv-playlist-audit.md">→ Playlist Audit</a> · <a href="reports/backup-independence-audit.md">→ Backup Independence Audit</a></b>
+  <b><a href="reports/stream-health.md">→ Stream Health Report</a> · <a href="reports/iptv-playlist-audit.md">→ IPTV Playlist Audit</a> · <a href="reports/backup-independence-audit.md">→ Backup Independence Audit</a></b>
 </p>
 
 ---
