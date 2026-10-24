@@ -10,6 +10,7 @@ class LogoAssetNamingTests(unittest.TestCase):
     def test_blocklist_is_shared_and_case_insensitive(self):
         self.assertTrue(is_blocked_logo_basename("logos/ATN-News.png"))
         self.assertTrue(is_blocked_logo_basename("https://example.invalid/logos/placeholder-bangla-tv.svg"))
+        self.assertTrue(is_blocked_logo_basename("https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-hstv.png"))
         self.assertFalse(is_blocked_logo_basename("ananda-tv.png"))
 
     def test_sanitized_filename_avoids_blocked_assets_and_prefixes(self):

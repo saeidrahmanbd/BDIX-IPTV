@@ -12,7 +12,7 @@ BAD_ASSETS = frozenset({
     "sananda-tv.png", "sananda.png", "star-gold-select.png", "star-gold.png",
     "star-plus.png", "zee-tv.png", "tom-and-jerry.png", "arirang-tv.png",
 })
-GENERIC_PREFIXES = ("placeholder-", "generic-", "unknown-", "unidentified-")
+GENERIC_PREFIXES = ("placeholder-", "generic-", "unknown-", "unidentified-", "generated-fallback-")
 
 
 def is_blocked_logo_basename(value):
