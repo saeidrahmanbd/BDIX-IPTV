@@ -70,5 +70,28 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 
 ## 2026-10-24
 
-- 🖼️ **1 logo reference(s) corrected**
+- 🗑️ **51 channel(s) removed**
+- 🖼️ **2 logo reference(s) corrected**
+
+### Removed channels
+- Epic Parivar
+- Terra Mater WILD English
+- Adhyatm TV
+- Akhon Kolkata
+- Anand Wari TV
+- Ananda Barta
+- Anandpur Live
+- Arputhar Yesu TV
+- Awaaz India TV (720p) [Not 24/7]
+- Awakening TV
+- Ayush TV
+- Bada Khabar
+- Bhagyam TV
+- Bharat Express
+- Bharat Update
+- Bharat24
+- Big TV 24x7
+- Chardikla Gurbaani TV
+- Chardikla Time TV
+- Chardikla Time TV North America
 
