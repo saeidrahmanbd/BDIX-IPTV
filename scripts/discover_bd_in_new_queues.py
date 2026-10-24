@@ -80,6 +80,9 @@ BAD_HOSTS = ("proxy", "proxied", "cors", "localhost", "workers.dev", "worker.dev
 BAD_QUERY_KEYS = {"token", "auth", "authorization", "hdnts", "sig", "signature", "expires", "session", "jwt", "key"}
 QUALITY = {"uhd", "fhd", "hd", "sd", "4k", "1080p", "720p", "576p", "480p", "360p", "240p"}
 COUNTRY_CODE = {"Bangladesh": "bd", "India": "in"}
+# Country-group threshold used by discovery-policy validation. A new country group
+# must not be created from fewer than five legitimate primary identities.
+COUNTRY_THRESHOLD = 5
 OTHER_PLAYLISTS = (Path("BDIX-Playlist.m3u"), Path("International-Playlist.m3u"))
 BAD_RE = re.compile(r"(?<![^\W_])(?:" + "|".join(re.escape(w) for w in sorted(BAD_WORDS)) + r")(?![^\W_])")
 ID_CC_RE = re.compile(r"\.([a-z]{2})(?:@|$)")
@@ -331,6 +334,7 @@ def main() -> int:
         "- Sources: Bangladesh + India iptv-org country feeds",
         "- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News, Sports, Kids and Religious channels are prohibited.**",
         "- Permanent denylist: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.",
+        f"- Country-group threshold: **{COUNTRY_THRESHOLD}** legitimate primary identities",
         f"- Existing prohibited review-queue rows removed: **{len(purged)}**",
         f"- New channels: **{len(new_channels)}**",
         f"- New backups: **{len(new_backups)}**",
