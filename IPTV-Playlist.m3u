@@ -845,7 +845,7 @@ https://30a-tv.com/feeds/pzaz/30atvmovies.m3u8
 https://tvsen6.aynaott.com/cnbc/index.m3u8
 #EXTINF:-1 tvg-id="CNN.us" tvg-name="CNN" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-cnn.png" tvg-chno="392" channel-id="CNN.us" tvg-country="US" tvg-language="eng" group-title="International",CNN
 https://tvsen6.aynaott.com/cnn/index.m3u8
-#EXTINF:-1 tvg-id="ComedyCentral.us" tvg-name="Comedy Central" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-comedy-central.svg" tvg-chno="393" channel-id="ComedyCentral.us" tvg-country="US" tvg-language="eng" group-title="International",Comedy Central
+#EXTINF:-1 tvg-id="ComedyCentral.us" tvg-name="Comedy Central" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/comedy-central.png" tvg-chno="393" channel-id="ComedyCentral.us" tvg-country="US" tvg-language="eng" group-title="International",Comedy Central
 https://tvsen3.aynaott.com/5fUWDMxZ/index.m3u8
 #EXTINF:-1 tvg-id="CookBake.us" tvg-name="Cook & Bake" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cook-bake.png" tvg-chno="394" channel-id="CookBake.us" tvg-country="US" tvg-language="eng" group-title="International",Cook & Bake
 https://cc-swbj49v56imaw.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-swbj49v56imaw/OTM/OTM_Cooking-SCTE_SAMSUNG/playlist.m3u8
@@ -883,7 +883,7 @@ https://tvsen3.aynaott.com/Ge23xfY5/index.m3u8
 https://app.ncare.live/live-orgin/iontvuk.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="Kronehit.at" tvg-name="Kronehit" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unused/kronehit-tv.png" tvg-chno="412" channel-id="Kronehit.at" tvg-country="AT" tvg-language="deu" group-title="International",Kronehit
 https://bitcdn-kronehit.bitmovin.com/v2/hls/playlist.m3u8
-#EXTINF:-1 tvg-id="LAFFTV.us" tvg-name="LAFF TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-laff.svg" tvg-chno="413" channel-id="LAFFTV.us" tvg-country="US" tvg-language="eng" group-title="International",LAFF TV
+#EXTINF:-1 tvg-id="LAFFTV.us" tvg-name="LAFF TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/laff-tv.png" tvg-chno="413" channel-id="LAFFTV.us" tvg-country="US" tvg-language="eng" group-title="International",LAFF TV
 https://tvsen3.aynaott.com/UC6a8nsf/index.m3u8
 #EXTINF:-1 tvg-id="Lifetime.us" tvg-name="Lifetime" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-lifetime.png" tvg-chno="414" channel-id="Lifetime.us" tvg-country="US" tvg-language="eng" group-title="International",Lifetime
 https://tvsen7.aynaott.com/lifetime/index.m3u8
@@ -1339,9 +1339,9 @@ https://flussonic.defineatoz.com/starsportsselect2sw/tracks-v1a1/mono.m3u8
 https://mycoffeetime.net/play/tSDRdsaoGGQ2qYgRPDEe9q-qMIzoahbJArH3W3vOiEaB97nXMpWmLb0Ts759Tjsp/m3u8
 #EXTINF:-1 tvg-id="talkSPORT.uk@SD" tvg-name="talkSPORT" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/talksport.png" tvg-chno="628" channel-id="talkSPORT.uk@SD" tvg-country="GB" tvg-language="eng" group-title="Sports",talkSPORT
 https://af7a8b4e.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfdGFsa1NQT1JUX0hMUw/playlist.m3u8
-#EXTINF:-1 tvg-id="Willow.us" tvg-name="Willow" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-willow.svg" tvg-chno="629" channel-id="Willow.us" tvg-country="US" tvg-language="eng" group-title="Sports",Willow
+#EXTINF:-1 tvg-id="Willow.us" tvg-name="Willow" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/willow.png" tvg-chno="629" channel-id="Willow.us" tvg-country="US" tvg-language="eng" group-title="Sports",Willow
 https://tvsen5.aynaott.com/willowhd/index.m3u8
-#EXTINF:-1 tvg-id="WillowTV.us" tvg-name="Willow TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-willow.svg" tvg-chno="630" channel-id="WillowTV.us" tvg-country="US" tvg-language="eng" group-title="Sports",Willow TV
+#EXTINF:-1 tvg-id="WillowTV.us" tvg-name="Willow TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/willow-tv.png" tvg-chno="630" channel-id="WillowTV.us" tvg-country="US" tvg-language="eng" group-title="Sports",Willow TV
 https://tvsen7.aynaott.com/rEBp38Ax/index.m3u8
 #EXTINF:-1 tvg-id="AlrightTV.in@SD" tvg-name="Alright! TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/alright-tv.png" tvg-country="IN" channel-id="AlrightTV.in@SD" tvg-language="und" group-title="New Channels",Alright! TV
 https://d3c7vdfq3tyeyw.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/rusk_media/v1/channel/ruskmedia/germane.m3u8
@@ -2466,5 +2466,4 @@ https://amg00862-amg00862c7-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-a
 #EXTINF:-1 tvg-id="ZeeSouthFlix.in@HD" tvg-name="Zee South Flix" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-south-flix.png" tvg-country="IN" channel-id="ZeeSouthFlix.in@HD" tvg-language="und" group-title="Not Playing",Zee South Flix
 https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
 #EXTINF:-1 tvg-id="ZeeTamil.in@SD" tvg-name="Zee Tamil" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tamil.png" channel-id="ZeeTamil.in@SD" tvg-country="IN" group-title="Not Playing" tvg-language="tam",Zee Tamil
-
 https://d2o8pibksxtln6.cloudfront.net/live/media/Zee_Tamil_HD/hls/Zee_Tamil_HD.m3u8
