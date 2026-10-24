@@ -69,7 +69,7 @@ Source playlist SHA-256: **{source_sha}**
 | Bangladesh | **{groups.get("Bangladesh",0)}** |
 | India | **{sum(v for k,v in groups.items() if k.startswith("Indian "))}** |
 | Backup Stream Entries | **{groups.get("Backup",0)}** |
-| Local Logos | **{logos}%** |
+| IPTV Local Logos | **{logos}%** |
 | IPTV EPG Programme Coverage | **{livepct}%** |
 | IPTV EPG Mapping | **{mapct}%** |
 | Stream Health Tested | **{htested}** |
@@ -133,7 +133,7 @@ Historical records are retained in reports/maintenance-history.json.
 """
     OUT_MD.write_text(md,encoding="utf-8")
     def t(x,y,s,size=15,b=False): return f'<text x="{x}" y="{y}" font-family="Arial,Helvetica,sans-serif" font-size="{size}px" font-weight="{"700" if b else "400"}" fill="#1f2937">{html.escape(str(s))}</text>'
-    cards=[("Streams",len(e)),("Channel Identities",active),("Bangladesh",groups.get("Bangladesh",0)),("India",sum(v for k,v in groups.items() if k.startswith("Indian "))),("Backup Entries",groups.get("Backup",0)),("Local Logos",f"{logos}%"),("IPTV EPG Coverage",f"{round(livepct)}%"),("Health Failures",hfail)]
+    cards=[("Streams",len(e)),("Channel Identities",active),("Bangladesh",groups.get("Bangladesh",0)),("India",sum(v for k,v in groups.items() if k.startswith("Indian "))),("Backup Entries",groups.get("Backup",0)),("IPTV Local Logos",f"{logos}%"),("IPTV EPG Coverage",f"{round(livepct)}%"),("Health Failures",hfail)]
     parts=['<svg xmlns="http://www.w3.org/2000/svg" width="980" height="650" viewBox="0 0 980 650">','<rect width="980" height="650" rx="24" fill="#f8fafc"/>','<rect width="980" height="92" rx="24" fill="#111827"/>',t(42,45,"BDIX-IPTV • PROJECT DASHBOARD",25,True),t(42,70,"Playlist • EPG • Metadata • Logos • Stream Health • Safety Gate",13)]
     for (lab,val),(x,y) in zip(cards,[(34,120),(268,120),(502,120),(736,120),(34,260),(268,260),(502,260),(736,260)]): parts += [f'<rect x="{x}" y="{y}" width="210" height="112" rx="18" fill="white" stroke="#e5e7eb"/>',t(x+18,y+34,lab,14),t(x+18,y+78,val,28,True)]
     parts += ['<rect x="34" y="400" width="912" height="190" rx="18" fill="white" stroke="#e5e7eb"/>',t(58,435,"Current quality status",18,True),t(58,470,f"Audit blocking issues: {issues}",15),t(58,498,f"Pre-publish gate: {gate_status}",15),t(58,526,f"Persistent health failures: {hpersist} • Near-duplicate URL families: {hnear}",15),t(58,554,f"Generated: {now}",13),'</svg>']
