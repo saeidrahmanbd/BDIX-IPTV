@@ -1,10 +1,15 @@
-name: BD.IN Playlist Logo Localization
+name: Playlist Logo Repair and Localization
 
 on:
   push:
     branches: [main]
     paths:
       - BD.IN-Playlist.m3u
+      - IPTV-Playlist.m3u
+      - International-Playlist.m3u
+      - scripts/repair_playlist_logos.py
+      - scripts/logo_source_catalog.py
+      - .github/workflows/bd-in-playlist-logo-localization.yml
       - reports/bd-in-logo-sources.json
   workflow_dispatch:
 
@@ -19,7 +24,7 @@ concurrency:
 jobs:
   localize:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     steps:
       - name: Checkout repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -32,23 +37,92 @@ jobs:
           python-version: "3.12"
       - name: Install image validation tools
         run: python -m pip install --disable-pip-version-check pillow cairosvg
+      - name: Capture protected playlist metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import re
+          from pathlib import Path
+          names = ["BD.IN-Playlist.m3u", "IPTV-Playlist.m3u", "International-Playlist.m3u"]
+          for name in names:
+              text = Path(name).read_text(encoding="utf-8-sig").replace("\r\n", "\n").replace("\r", "\n")
+              text = re.sub(r'\s+tvg-logo="[^"]*"', "", text)
+              Path("/tmp/" + name + ".nonlogo").write_text(text, encoding="utf-8")
+          PY
       - name: Localize and commit logos
         shell: bash
         run: |
           set -euo pipefail
-          if [[ "$(git log -1 --pretty=%s)" == "Localize and validate BD.IN playlist logos" ]]; then
-            echo "Skipping the localization bot's own follow-up push."
+          if [[ "$(git log -1 --pretty=%s)" == "Repair IPTV metadata and local logos only; leave stream URLs unchanged" ]]; then
+            echo "Skipping the logo repair bot's own follow-up push."
             exit 0
           fi
           python scripts/localize_bd_in_logos.py
-          git add BD.IN-Playlist.m3u logos/ reports/bd-in-logo-localization.md
+          python scripts/repair_playlist_logos.py
+          python - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+          from urllib.parse import unquote, urlparse
+
+          base = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
+          names = ["BD.IN-Playlist.m3u", "IPTV-Playlist.m3u", "International-Playlist.m3u"]
+          blocked = {
+              "atn-news.png", "a-sports-5485adff.png", "a-sports-hd.png", "bein-sports-3.png",
+              "bangla-tv.png", "btv-news.png", "colors.png", "duronto-tv.png",
+              "duronto-tv-1ad55c95.png", "ekushey-tv.png", "global-tv.png", "green-tv.png",
+              "mohona-tv.png", "nagorik-tv.png", "nagorik.png", "nick-bangla.png",
+              "sananda-tv.png", "sananda.png", "star-gold-select.png", "star-gold.png",
+              "star-plus.png", "zee-tv.png", "tom-and-jerry.png", "arirang-tv.png",
+          }
+          summaries = {}
+          for name in names:
+              current = Path(name).read_text(encoding="utf-8-sig").replace("\r\n", "\n").replace("\r", "\n")
+              normalized = re.sub(r'\s+tvg-logo="[^"]*"', "", current)
+              baseline = Path("/tmp/" + name + ".nonlogo").read_text(encoding="utf-8")
+              if normalized != baseline:
+                  raise SystemExit("Non-logo playlist content changed: " + name)
+              entries = [line for line in current.splitlines() if line.startswith("#EXTINF:")]
+              missing = external = nvision = broken = 0
+              for line in entries:
+                  m = re.search(r'tvg-logo="([^"]*)"', line)
+                  logo = m.group(1).strip() if m else ""
+                  if not logo:
+                      missing += 1
+                      continue
+                  if not logo.startswith(base):
+                      external += 1
+                      continue
+                  rel = unquote(urlparse(logo).path.split("/logos/", 1)[-1]).lstrip("/")
+                  asset = Path("logos") / rel
+                  filename = asset.name.casefold()
+                  if filename.startswith("nvisionbd-"):
+                      nvision += 1
+                  if (
+                      not asset.is_file()
+                      or filename in blocked
+                      or filename.startswith(("placeholder-", "generated-fallback-", "generic-", "unknown-", "unidentified-"))
+                      or re.search(r"(?:placeholder|generic-logo)", filename, re.I)
+                  ):
+                      broken += 1
+              summaries[name] = {
+                  "entries": len(entries), "missing_logo_metadata": missing,
+                  "nonrepository_logo_refs": external, "nvision_refs": nvision,
+                  "invalid_or_blocked_refs": broken,
+              }
+              if external or nvision or broken:
+                  raise SystemExit("Logo validation failed: " + name + " " + json.dumps(summaries[name]))
+          print(json.dumps(summaries, indent=2))
+          PY
+          git add BD.IN-Playlist.m3u IPTV-Playlist.m3u International-Playlist.m3u logos/ reports/bd-in-logo-localization.md reports/playlist-logo-repair-results.md reports/logo-source-registry.json
           if git diff --cached --quiet; then
             echo "No additional local logo changes."
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m "Localize and validate BD.IN playlist logos"
+          git commit -m "Repair IPTV metadata and local logos only; leave stream URLs unchanged"
           for attempt in 1 2 3; do
             git fetch origin main
             if ! git pull --rebase origin main; then
