@@ -1,5 +1,10 @@
 #EXTM3U url-tvg="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml" x-tvg-url="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"
-#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "Adult", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "New Channels", "New Backup", "Backup"]
+#=================================
+# Developed by: SAEID RAHMAN
+# Facebook: https://www.facebook.com/saeid.rahman.sr
+# Email: saeidrahman.mkt@gmail.com
+#=================================
+#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","Adult","International","Documentary & Wildlife","Kids","Religious","Sports","Backup"]
 #PLAYLIST-STUDIO-NAME:"BDIX-IPTV International Playlist"
 #EXTINF:-1 group-title="Bangladesh" tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="2" channel-id="AnandaTV.bd" tvg-country="BD" tvg-language="ben",Ananda TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/79006.ts
@@ -18,12 +23,12 @@ https://tvsen6.aynaott.com/N8Xbo5vdwVU6sF43RsW0/index.m3u8
 #EXTINF:-1 group-title="Bangladesh" tvg-id="BoishakhiTV.bd" tvg-name="Boishakhi TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/boishakhi-tv.png" tvg-chno="10" channel-id="BoishakhiTV.bd" tvg-country="BD" tvg-language="ben",Boishakhi TV
 #EXTVLCOPT:http-user-agent=DevM3U-Player
 https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8
+#EXTINF:-1 group-title="Bangladesh" tvg-id="Channel9.bd" tvg-name="Channel 9" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-9.png" tvg-chno="14" channel-id="Channel9.bd" tvg-country="BD" tvg-language="ben",Channel 9
+https://tvsen6.aynaott.com/kajlsd57jnzxyo/index.m3u8
 #EXTINF:-1 group-title="Bangladesh" tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png" tvg-chno="12" channel-id="Channel24.bd" tvg-country="BD" tvg-language="ben",Channel 24
 https://tvsen6.aynaott.com/YrVDF8gujkdh/index.m3u8
 #EXTINF:-1 group-title="Bangladesh" tvg-id="Channel52.bd" tvg-name="Channel 52" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-52.png" tvg-chno="13" channel-id="Channel52.bd" tvg-country="BD" tvg-language="ben",Channel 52
 http://str24.l9574.com/503.stream/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Bangladesh" tvg-id="Channel9.bd" tvg-name="Channel 9" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-9.png" tvg-chno="14" channel-id="Channel9.bd" tvg-country="BD" tvg-language="ben",Channel 9
-https://tvsen6.aynaott.com/kajlsd57jnzxyo/index.m3u8
 #EXTINF:-1 group-title="Bangladesh" tvg-id="ChannelI.bd" tvg-name="Channel I" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-i.png" tvg-chno="15" channel-id="ChannelI.bd" tvg-country="BD" tvg-language="ben",Channel I
 https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/index.m3u8
 #EXTINF:-1 group-title="Bangladesh" tvg-id="DBCNews.bd" tvg-name="DBC News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dbc-news.png" tvg-chno="17" channel-id="DBCNews.bd" tvg-country="BD" tvg-language="ben",DBC News
@@ -237,7 +242,7 @@ https://cc-8hy4a26pz2uos.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da6
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34443.ts
 #EXTINF:-1 group-title="Indian Entertainment" tvg-id="Andflix.in" tvg-name="&flix" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bflix-movies-576p.png" tvg-chno="73" channel-id="Andflix.in" tvg-country="IN" tvg-language="hin;eng;tam;tel",&flix
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809078.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/flowerstv.png" group-title="Indian Entertainment" tvg-id="FlowersTV.in" tvg-name="Flowers TV" tvg-chno="176" channel-id="FlowersTV.in" tvg-country="IN" tvg-language="mal",Flowers TV
+#EXTINF:-1 group-title="Indian Entertainment" tvg-id="FlowersTV.in" tvg-name="Flowers TV" tvg-chno="176" channel-id="FlowersTV.in" tvg-country="IN" tvg-language="mal",Flowers TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1084440.ts
 #EXTINF:-1 group-title="Indian Entertainment" tvg-id="FoodFood.in@SD" tvg-name="Food Food" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/food-food.png" tvg-chno="178" channel-id="FoodFood.in@SD" tvg-country="IN" tvg-language="hin",Food Food
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1155473.ts
@@ -335,7 +340,7 @@ http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23587
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/68922.ts
 #EXTINF:-1 group-title="Pakistani" tvg-id="ApnaChannel.pk" tvg-name="Apna Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/apna-channel.png" tvg-chno="215" channel-id="ApnaChannel.pk" tvg-country="PK" tvg-language="urd;eng",Apna Channel
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23591
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/arydigital.png" group-title="Pakistani" tvg-id="ARYDigital.pk" tvg-name="ARY Digital" tvg-chno="216" channel-id="ARYDigital.pk" tvg-country="PK" tvg-language="urd",ARY Digital
+#EXTINF:-1 group-title="Pakistani" tvg-id="ARYDigital.pk" tvg-name="ARY Digital" tvg-chno="216" channel-id="ARYDigital.pk" tvg-country="PK" tvg-language="urd",ARY Digital
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809109.ts
 #EXTINF:-1 group-title="Pakistani" tvg-id="custom.ary-family" tvg-name="ARY Family" tvg-chno="217" channel-id="custom.ary-family" tvg-country="PK" tvg-language="urd",ARY Family
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23594
@@ -367,7 +372,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1388028.ts
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63163.ts
 #EXTINF:-1 group-title="Pakistani" tvg-id="GeoTV.pk" tvg-name="Geo TV" tvg-chno="231" channel-id="GeoTV.pk" tvg-country="PK" tvg-language="urd",Geo TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63229.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/greenentertainment.png" group-title="Pakistani" tvg-id="custom.green-ent" tvg-name="Green Entertainment" tvg-chno="232" channel-id="custom.green-ent" tvg-country="PK" tvg-language="urd",Green Entertainment
+#EXTINF:-1 group-title="Pakistani" tvg-id="custom.green-ent" tvg-name="Green Entertainment" tvg-chno="232" channel-id="custom.green-ent" tvg-country="PK" tvg-language="urd",Green Entertainment
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809111.ts
 #EXTINF:-1 group-title="Pakistani" tvg-id="HUMMasala.pk" tvg-name="Hum Masala" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hum-masala.png" channel-id="HUMMasala.pk" tvg-country="PK" tvg-language="urd",Hum Masala
 http://38.101.217.46/HumMasala/index.m3u8
@@ -393,14 +398,30 @@ http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23662
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63129.ts
 #EXTINF:-1 group-title="Pakistani" tvg-id="ptvworld.pk" tvg-name="PTV World" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ptv-world.png" tvg-chno="244" channel-id="ptvworld.pk" tvg-country="PK" tvg-language="eng",PTV World
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63124.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/tvone.png" group-title="Pakistani" tvg-id="tvone.us" tvg-name="TV One" tvg-chno="245" channel-id="tvone.us" tvg-country="PK" tvg-language="urd",TV One
+#EXTINF:-1 group-title="Pakistani" tvg-id="tvone.us" tvg-name="TV One" tvg-chno="245" channel-id="tvone.us" tvg-country="PK" tvg-language="urd",TV One
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/20868.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/urdu1.png" group-title="Pakistani" tvg-id="urdu1.pk" tvg-name="Urdu 1" tvg-chno="246" channel-id="urdu1.pk" tvg-country="PK" tvg-language="urd",Urdu 1
+#EXTINF:-1 group-title="Pakistani" tvg-id="urdu1.pk" tvg-name="Urdu 1" tvg-chno="246" channel-id="urdu1.pk" tvg-country="PK" tvg-language="urd",Urdu 1
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63108.ts
 #EXTINF:-1 group-title="Pakistani" tvg-id="custom.waseeb-tv" tvg-name="Waseeb TV" tvg-chno="247" channel-id="custom.waseeb-tv" tvg-country="PK" tvg-language="pan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/waseb-tv.png",Waseeb TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23684
 #EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-1" tvg-name="1" tvg-chno="644" channel-id="custom.24-7-xxx-1" tvg-country="ZZ" tvg-language="und",1
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791439.ts
+#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-2" tvg-name="2" tvg-chno="647" channel-id="custom.24-7-xxx-2" tvg-country="ZZ" tvg-language="und",2
+http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791442.ts
+#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-3" tvg-name="3" tvg-chno="648" channel-id="custom.24-7-xxx-3" tvg-country="ZZ" tvg-language="und",3
+http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791443.ts
+#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-4" tvg-name="4" tvg-chno="649" channel-id="custom.24-7-xxx-4" tvg-country="ZZ" tvg-language="und",4
+http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791444.ts
+#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-5" tvg-name="5" tvg-chno="650" channel-id="custom.24-7-xxx-5" tvg-country="ZZ" tvg-language="und",5
+http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791445.ts
+#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-6" tvg-name="6" tvg-chno="651" channel-id="custom.24-7-xxx-6" tvg-country="ZZ" tvg-language="und",6
+http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791446.ts
+#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-7" tvg-name="7" tvg-chno="652" channel-id="custom.24-7-xxx-7" tvg-country="ZZ" tvg-language="und",7
+http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791447.ts
+#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-8" tvg-name="8" tvg-chno="653" channel-id="custom.24-7-xxx-8" tvg-country="ZZ" tvg-language="und",8
+http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791448.ts
+#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-9" tvg-name="9" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9.png" tvg-chno="654" channel-id="custom.24-7-xxx-9" tvg-country="ZZ" tvg-language="und",9
+http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791449.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-10" tvg-name="10" tvg-chno="646" channel-id="custom.24-7-xxx-10" tvg-country="ZZ" tvg-language="und",10
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791441.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-adult-11" tvg-name="11" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-chno="656" channel-id="custom.24-7-xxx-adult-11" tvg-country="ZZ" tvg-language="und",11
@@ -421,8 +442,6 @@ http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791457.ts
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791458.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-adult-19" tvg-name="19" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9.png" tvg-chno="664" channel-id="custom.24-7-xxx-adult-19" tvg-country="ZZ" tvg-language="und",19
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791459.ts
-#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-2" tvg-name="2" tvg-chno="647" channel-id="custom.24-7-xxx-2" tvg-country="ZZ" tvg-language="und",2
-http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791442.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-adult-20" tvg-name="20" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-chno="665" channel-id="custom.24-7-xxx-adult-20" tvg-country="ZZ" tvg-language="und",20
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791460.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-adult-21" tvg-name="21" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-chno="666" channel-id="custom.24-7-xxx-adult-21" tvg-country="ZZ" tvg-language="und",21
@@ -445,8 +464,6 @@ http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791466.ts
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791467.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-adult-xxx-29" tvg-name="29" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9.png" tvg-chno="639" channel-id="custom.24-7-adult-xxx-29" tvg-country="ZZ" tvg-language="und",29
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791433.ts
-#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-3" tvg-name="3" tvg-chno="648" channel-id="custom.24-7-xxx-3" tvg-country="ZZ" tvg-language="und",3
-http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791443.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-adult-xxx-30" tvg-name="30" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-chno="640" channel-id="custom.24-7-adult-xxx-30" tvg-country="ZZ" tvg-language="und",30
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791434.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-adult-xxx-31" tvg-name="31" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-chno="641" channel-id="custom.24-7-adult-xxx-31" tvg-country="ZZ" tvg-language="und",31
@@ -455,18 +472,6 @@ http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791435.ts
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791436.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-adult-xxx-33" tvg-name="33" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-chno="643" channel-id="custom.24-7-adult-xxx-33" tvg-country="ZZ" tvg-language="und",33
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791437.ts
-#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-4" tvg-name="4" tvg-chno="649" channel-id="custom.24-7-xxx-4" tvg-country="ZZ" tvg-language="und",4
-http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791444.ts
-#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-5" tvg-name="5" tvg-chno="650" channel-id="custom.24-7-xxx-5" tvg-country="ZZ" tvg-language="und",5
-http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791445.ts
-#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-6" tvg-name="6" tvg-chno="651" channel-id="custom.24-7-xxx-6" tvg-country="ZZ" tvg-language="und",6
-http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791446.ts
-#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-7" tvg-name="7" tvg-chno="652" channel-id="custom.24-7-xxx-7" tvg-country="ZZ" tvg-language="und",7
-http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791447.ts
-#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-8" tvg-name="8" tvg-chno="653" channel-id="custom.24-7-xxx-8" tvg-country="ZZ" tvg-language="und",8
-http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791448.ts
-#EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-9" tvg-name="9" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9.png" tvg-chno="654" channel-id="custom.24-7-xxx-9" tvg-country="ZZ" tvg-language="und",9
-http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791449.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-abella-danger" tvg-name="Abella Danger" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-chno="655" channel-id="custom.24-7-xxx-abella-danger" tvg-country="ZZ" tvg-language="und",Abella Danger
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791450.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.24-7-xxx-aj-applegate" tvg-name="AJ Applegate" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-chno="673" channel-id="custom.24-7-xxx-aj-applegate" tvg-country="ZZ" tvg-language="und",AJ Applegate
@@ -989,8 +994,6 @@ http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/315903.ts
 http://dejatedemamadas.neospaxy.top:8080/0176373462111/gcm6isz6sn5i/73998
 #EXTINF:-1 group-title="Adult" tvg-id="custom.xxx-playboy" tvg-name="Playboy" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-chno="1163" channel-id="custom.xxx-playboy" tvg-country="ZZ" tvg-language="und",Playboy
 http://dejatedemamadas.neospaxy.top:8080/0176373462111/gcm6isz6sn5i/73999
-#EXTINF:-1 group-title="Adult" tvg-id="custom.pornbox-1111-customs" tvg-name="PORNBOX: 1111 CUSTOMS" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" tvg-chno="858" channel-id="custom.pornbox-1111-customs" tvg-country="ZZ" tvg-language="und",PORNBOX: 1111 CUSTOMS
-http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791583.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.pornbox-4k-baeb" tvg-name="PORNBOX 4K: BAEB" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-chno="845" channel-id="custom.pornbox-4k-baeb" tvg-country="ZZ" tvg-language="und",PORNBOX 4K: BAEB
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791561.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.pornbox-4k-bbc-pie" tvg-name="PORNBOX 4K: BBC PIE" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" tvg-chno="846" channel-id="custom.pornbox-4k-bbc-pie" tvg-country="ZZ" tvg-language="und",PORNBOX 4K: BBC PIE
@@ -1011,6 +1014,8 @@ http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791568.ts
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791569.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.pornbox-4k-tiny-4k" tvg-name="PORNBOX 4K: TINY 4K" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" tvg-chno="854" channel-id="custom.pornbox-4k-tiny-4k" tvg-country="ZZ" tvg-language="und",PORNBOX 4K: TINY 4K
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791570.ts
+#EXTINF:-1 group-title="Adult" tvg-id="custom.pornbox-1111-customs" tvg-name="PORNBOX: 1111 CUSTOMS" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/r-plus.png" tvg-chno="858" channel-id="custom.pornbox-1111-customs" tvg-country="ZZ" tvg-language="und",PORNBOX: 1111 CUSTOMS
+http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791583.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.pornbox-adult-time" tvg-name="PORNBOX: ADULT TIME" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-chno="860" channel-id="custom.pornbox-adult-time" tvg-country="ZZ" tvg-language="und",PORNBOX: ADULT TIME
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791585.ts
 #EXTINF:-1 group-title="Adult" tvg-id="custom.pornbox-a-girl-knows" tvg-name="PORNBOX: A GIRL KNOWS" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-plus.png" tvg-chno="859" channel-id="custom.pornbox-a-girl-knows" tvg-country="ZZ" tvg-language="und",PORNBOX: A GIRL KNOWS
@@ -1631,7 +1636,7 @@ https://amg01243-xitenetworksint-hitsuk-samsunguk-mvovq.amagi.tv/playlist/amg012
 https://d198ro05q94rc4.cloudfront.net/XITE_Rock_On.m3u8
 #EXTINF:-1 group-title="International" tvg-id="YTV.us" tvg-name="YTV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ytv.png" tvg-chno="598" channel-id="YTV.us" tvg-country="US" tvg-language="eng",YTV
 https://tvsen3.aynaott.com/uYpFg3RV/index.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/americanheroeschannel.png" group-title="Documentary & Wildlife" tvg-id="americanheroeschannel.us" tvg-name="American Heroes Channel" tvg-chno="503" channel-id="americanheroeschannel.us" tvg-country="US" tvg-language="eng",American Heroes Channel
+#EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="americanheroeschannel.us" tvg-name="American Heroes Channel" tvg-chno="503" channel-id="americanheroeschannel.us" tvg-country="US" tvg-language="eng",American Heroes Channel
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/10456.ts
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="custom.and-xplor" tvg-name="and Xplor" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-xplor-hd.svg" tvg-chno="504" channel-id="custom.and-xplor" tvg-country="ZZ" tvg-language="und",and Xplor
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809016.ts
@@ -1641,11 +1646,11 @@ http://27.124.71.27/Animal_Planet/index.m3u8
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809044.ts
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="custom.animal-planet-telugu" tvg-name="Animal Planet Telugu" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/animal-planet.png" tvg-chno="507" channel-id="custom.animal-planet-telugu" tvg-country="ZZ" tvg-language="tel",Animal Planet Telugu
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/539493.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/blaze.png" group-title="Documentary & Wildlife" tvg-id="blaze.uk" tvg-name="Blaze" tvg-chno="508" channel-id="blaze.uk" tvg-country="GB" tvg-language="eng",Blaze
+#EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="blaze.uk" tvg-name="Blaze" tvg-chno="508" channel-id="blaze.uk" tvg-country="GB" tvg-language="eng",Blaze
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/53754.ts
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="custom.cgtn-docment" tvg-name="CGTN Documentary" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cgtn-documentary.png" tvg-chno="509" channel-id="custom.cgtn-docment" tvg-country="CN" tvg-language="eng",CGTN Documentary
 https://english-livebkali.cgtn.com/live/doccgtn_1.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/destinationamerica.png" group-title="Documentary & Wildlife" tvg-id="destinationamerica.us" tvg-name="Destination America" tvg-chno="510" channel-id="destinationamerica.us" tvg-country="US" tvg-language="eng",Destination America
+#EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="destinationamerica.us" tvg-name="Destination America" tvg-chno="510" channel-id="destinationamerica.us" tvg-country="US" tvg-language="eng",Destination America
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/14222.ts
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="custom.discovery" tvg-name="Discovery" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png" tvg-chno="511" channel-id="custom.discovery" tvg-country="US" tvg-language="eng",Discovery
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/510493.ts
@@ -1663,7 +1668,7 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/808980.ts
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46212.ts
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="DiscoveryWorld.us" tvg-name="Discovery World" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery.png" channel-id="DiscoveryWorld.us" tvg-country="US" tvg-language="spa",Discovery World
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34445.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/hbosignature.png" group-title="Documentary & Wildlife" tvg-id="hbosignature.us" tvg-name="HBO Signature" tvg-chno="327" channel-id="hbosignature.us" tvg-country="US" tvg-language="eng;spa",HBO Signature
+#EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="hbosignature.us" tvg-name="HBO Signature" tvg-chno="327" channel-id="hbosignature.us" tvg-country="US" tvg-language="eng;spa",HBO Signature
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9266.ts
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="custom.history" tvg-name="History" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history.png" tvg-chno="519" channel-id="custom.history" tvg-country="TV" tvg-language="und",History
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46724.ts
@@ -1678,13 +1683,13 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019596.ts
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/46810.ts
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="investigationdiscovery.uk" tvg-name="Investigation Discovery" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/investigation-discovery.png" tvg-chno="524" channel-id="investigationdiscovery.uk" tvg-country="IN" tvg-language="eng;hin",Investigation Discovery
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/53687.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/lawcrime.jpg" group-title="Documentary & Wildlife" tvg-id="lawandcrime.us" tvg-name="Law & Crime" tvg-chno="525" channel-id="lawandcrime.us" tvg-country="US" tvg-language="eng",Law & Crime
+#EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="lawandcrime.us" tvg-name="Law & Crime" tvg-chno="525" channel-id="lawandcrime.us" tvg-country="US" tvg-language="eng",Law & Crime
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/328196.ts
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="custom.love-natural" tvg-name="Love Nature" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/love-nature.png" tvg-chno="526" channel-id="custom.love-natural" tvg-country="CA" tvg-language="eng",Love Nature
 http://27.124.71.27/Love_Nature/index.m3u8
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="militaryhistory.us" tvg-name="Military History" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history.png" tvg-chno="528" channel-id="militaryhistory.us" tvg-country="US" tvg-language="eng",Military History
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/134832.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/motortrend.png" group-title="Documentary & Wildlife" tvg-id="motortrend.us" tvg-name="Motortrend" tvg-chno="529" channel-id="motortrend.us" tvg-country="US" tvg-language="eng",Motortrend
+#EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="motortrend.us" tvg-name="Motortrend" tvg-chno="529" channel-id="motortrend.us" tvg-country="US" tvg-language="eng",Motortrend
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/10399.ts
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="NationalGeographic.uk" tvg-name="Nat Geo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png" channel-id="NationalGeographic.uk" tvg-country="GB" tvg-language="eng",Nat Geo
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019604.ts
@@ -1702,13 +1707,13 @@ https://d3o593mz1glx8d.cloudfront.net/OuterSphere_US.m3u8
 https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-realwild-tcl/playlist.m3u8
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="SafariTV.in@SD" tvg-name="Safari TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/safari-tv.png" tvg-chno="538" channel-id="SafariTV.in@SD" tvg-country="IN" tvg-language="mal",Safari TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34736.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/smithsonianchannel.png" group-title="Documentary & Wildlife" tvg-id="smithsonianchannel.us" tvg-name="Smithsonian Channel" tvg-chno="539" channel-id="smithsonianchannel.us" tvg-country="US" tvg-language="eng",Smithsonian Channel
+#EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="smithsonianchannel.us" tvg-name="Smithsonian Channel" tvg-chno="539" channel-id="smithsonianchannel.us" tvg-country="US" tvg-language="eng",Smithsonian Channel
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/31150.ts
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="sonybbcearthhd.in" tvg-name="Sony BBC Earth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-bbc-earth.png" tvg-chno="540" channel-id="sonybbcearthhd.in" tvg-country="IN" tvg-language="eng;hin;tam;tel",Sony BBC Earth
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/34434.ts
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="StingrayNaturescape.ca" tvg-name="Stingray Naturescape" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/stingray-naturescape.png" tvg-chno="541" channel-id="StingrayNaturescape.ca" tvg-country="CA" tvg-language="eng;tur",Stingray Naturescape
 https://d39g1vxj2ef6in.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/master.m3u8?ads.xumo_channelId=88883056
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/tochkarf.png" group-title="Documentary & Wildlife" tvg-id="Tochkarf.ru" tvg-name="Tochka.rf" tvg-chno="458" channel-id="Tochkarf.ru" tvg-country="RU" tvg-language="rus",Tochka.rf
+#EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="Tochkarf.ru" tvg-name="Tochka.rf" tvg-chno="458" channel-id="Tochkarf.ru" tvg-country="RU" tvg-language="rus",Tochka.rf
 http://stream.mcquack.net/161/index.m3u8
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="TravelChannel.us" tvg-name="Travel Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-channel.png" tvg-chno="543" channel-id="TravelChannel.us" tvg-country="US" tvg-language="eng",Travel Channel
 https://tvsen3.aynaott.com/sFwCR6Fu/index.m3u8
@@ -1716,13 +1721,13 @@ https://tvsen3.aynaott.com/sFwCR6Fu/index.m3u8
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9315.ts
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="custom.bdix.travelxp" tvg-name="Travelxp" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travel-xp.png" tvg-chno="545" channel-id="custom.bdix.travelxp" tvg-country="IN" tvg-language="eng;hin;ben",Travelxp
 https://27c980761ff9437d929e64647afe183a.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RakutenTV-eu_TravelXP/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/truecrimenetwork.png" group-title="Documentary & Wildlife" tvg-id="truecrimenetwork.us" tvg-name="True Crime Network" tvg-chno="546" channel-id="truecrimenetwork.us" tvg-country="US" tvg-language="eng",True Crime Network
+#EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="truecrimenetwork.us" tvg-name="True Crime Network" tvg-chno="546" channel-id="truecrimenetwork.us" tvg-country="US" tvg-language="eng",True Crime Network
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/121130.ts
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="WildEarth.za" tvg-name="WildEarth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wildearth.png" tvg-chno="547" channel-id="WildEarth.za" tvg-country="ZA" tvg-language="eng",WildEarth
 https://wildearth-plex.amagi.tv/master.m3u8
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="WildTV.ca@SD" tvg-name="Wild TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/wild-tv.png" tvg-chno="548" channel-id="WildTV.ca@SD" tvg-country="CA" tvg-language="eng",Wild TV
 https://dfhsahpa45kk2.cloudfront.net/scheduler/scheduleMaster/476.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/worldfishingnetwork.png" group-title="Documentary & Wildlife" tvg-id="worldfishingnetwork.us" tvg-name="World Fishing Network" tvg-chno="549" channel-id="worldfishingnetwork.us" tvg-country="US" tvg-language="eng",World Fishing Network
+#EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="worldfishingnetwork.us" tvg-name="World Fishing Network" tvg-chno="549" channel-id="worldfishingnetwork.us" tvg-country="US" tvg-language="eng",World Fishing Network
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/10477.ts
 #EXTINF:-1 group-title="Documentary & Wildlife" tvg-id="WorldWarTV.us" tvg-name="World War TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/world-war-tv.png" tvg-chno="550" channel-id="WorldWarTV.us" tvg-country="US" tvg-language="eng",World War TV
 https://aenetworks-worldwartv-rakuten.amagi.tv/playlist.m3u8
@@ -1800,7 +1805,7 @@ https://yuppparoriglin.akamaized.net/181224/smil:wowkidztelgu.smil/playlist.m3u8
 https://server.zillarbarta.com/zbcatun/video.m3u8
 #EXTINF:-1 group-title="Kids" tvg-id="ZooMoo.sg" tvg-name="ZooMoo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoomoo.png" tvg-chno="600" channel-id="ZooMoo.sg" tvg-country="SG" tvg-language="eng",ZooMoo
 https://zoomoo-samsungau.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/ahlulbayttv.png" group-title="Religious" tvg-id="AhlulbaytTV.uk" tvg-name="Ahlulbayt TV" tvg-chno="601" channel-id="AhlulbaytTV.uk" tvg-country="GB" tvg-language="eng",Ahlulbayt TV
+#EXTINF:-1 group-title="Religious" tvg-id="AhlulbaytTV.uk" tvg-name="Ahlulbayt TV" tvg-chno="601" channel-id="AhlulbaytTV.uk" tvg-country="GB" tvg-language="eng",Ahlulbayt TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/916846.ts
 #EXTINF:-1 group-title="Religious" tvg-id="AlQamarTV.ae" tvg-name="Al Qamar" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/al-qamar.png" tvg-chno="602" channel-id="AlQamarTV.ae" tvg-country="AE" tvg-language="ara",Al Qamar
 https://streamer3.premio.link/alqamar/playlist.m3u8
@@ -1812,9 +1817,9 @@ http://m.live.net.sa:1935/live/sunnah/playlist.m3u8
 https://aryqtvm.aryzap.com/v1/0183ea2a0eec0b8ed5941a38bc76/0183ea2a4e470b8ed5aa4d793457/ARYQTVH264_1080p.m3u8
 #EXTINF:-1 group-title="Religious" tvg-id="DeenTV.uk" tvg-name="Deen TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deen-tv-576p.png" tvg-chno="606" channel-id="DeenTV.uk" tvg-country="GB" tvg-language="ben",Deen TV
 https://tvsen3.aynaott.com/TJcnZW3U/index.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/hidayattv.png" group-title="Religious" tvg-id="HidayatTV.uk" tvg-name="Hidayat TV" tvg-chno="607" channel-id="HidayatTV.uk" tvg-country="GB" tvg-language="urd",Hidayat TV
+#EXTINF:-1 group-title="Religious" tvg-id="HidayatTV.uk" tvg-name="Hidayat TV" tvg-chno="607" channel-id="HidayatTV.uk" tvg-country="GB" tvg-language="urd",Hidayat TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/148602.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/hudatv.png" group-title="Religious" tvg-id="HudaTV.eg" tvg-name="Huda TV" tvg-chno="608" channel-id="HudaTV.eg" tvg-country="EG" tvg-language="ara",Huda TV
+#EXTINF:-1 group-title="Religious" tvg-id="HudaTV.eg" tvg-name="Huda TV" tvg-chno="608" channel-id="HudaTV.eg" tvg-country="EG" tvg-language="ara",Huda TV
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/905639.ts
 #EXTINF:-1 group-title="Religious" tvg-id="IqraBangla.uk" tvg-name="Iqra Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/iqra-bangla.png" tvg-chno="609" channel-id="IqraBangla.uk" tvg-country="GB" tvg-language="ben",Iqra Bangla
 https://tvsen3.aynaott.com/EuEy5mBW/index.m3u8
@@ -1873,8 +1878,6 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/886.ts
 http://m.live.net.sa:1935/live/sunnah/chunklist.m3u8
 #EXTINF:-1 group-title="Backup" tvg-id="Kino1International.ru" tvg-name="Музыка 1 International" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/1-international.png" channel-id="Kino1International.ru" tvg-country="RU" tvg-language="rus",Музыка 1 International
 https://kino-1.catcast.tv/content/37745/index.m3u8
-#EXTINF:-1 group-title="Backup" tvg-id="custom.24-7-xxx-1-1i7lj" tvg-name="24/7 XXX 1" channel-id="custom.24-7-xxx-1-1i7lj" tvg-country="ZZ" tvg-language="und",24/7 XXX 1
-http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791440.ts
 #EXTINF:-1 group-title="Backup" tvg-id="9XJalwa.in" tvg-name="9X Jalwa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jalwa.png" channel-id="9XJalwa.in" tvg-country="IN" tvg-language="hin",9X Jalwa
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/72157.ts
 #EXTINF:-1 group-title="Backup" tvg-id="9XJalwa.in" tvg-name="9X Jalwa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jalwa.png" channel-id="9XJalwa.in" tvg-country="IN" tvg-language="hin",9X Jalwa
@@ -1887,6 +1890,8 @@ https://wiselp.wiseplayout.com/9XM/master.m3u8
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/809074.ts
 #EXTINF:-1 group-title="Backup" tvg-id="9XTashan.in@SD" tvg-name="9X Tashan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-tashan.png" channel-id="9XTashan.in@SD" tvg-country="IN" tvg-language="pan",9X Tashan
 https://wiselp.wiseplayout.com/9X_Tashan/master.m3u8
+#EXTINF:-1 group-title="Backup" tvg-id="custom.24-7-xxx-1-1i7lj" tvg-name="24/7 XXX 1" channel-id="custom.24-7-xxx-1-1i7lj" tvg-country="ZZ" tvg-language="und",24/7 XXX 1
+http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791440.ts
 #EXTINF:-1 group-title="Backup" tvg-id="AajEntertainment.pk" tvg-name="Aaj Entertainment" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aaj-entertainment.png" channel-id="AajEntertainment.pk" tvg-country="PK" tvg-language="urd",Aaj Entertainment
 http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/63200.ts
 #EXTINF:-1 group-title="Backup" tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" channel-id="AnandaTV.bd" tvg-country="BD" tvg-language="ben",Ananda TV
@@ -2327,4 +2332,3 @@ http://yolomax.pro/live/A1U3S8XPVM58B23/iHeFx423Ac/1019557.ts
 https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 #EXTINF:-1 group-title="Backup" tvg-id="Zoom.in" tvg-name="Zoom" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-tv.png" channel-id="Zoom.in" tvg-country="IN" tvg-language="hin",Zoom
 https://pubads.g.doubleclick.net/ssai/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
-
