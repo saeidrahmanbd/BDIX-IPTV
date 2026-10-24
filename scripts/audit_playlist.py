@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit playlist identity, metadata, duplicate IDs, and local logo integrity."""
+"""Generate the IPTV Playlist Audit report: identity, metadata, duplicate IDs, and local-logo integrity."""
 import hashlib
 import json
 import re
