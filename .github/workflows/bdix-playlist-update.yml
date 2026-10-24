@@ -17,7 +17,7 @@ permissions:
 
 # All workflows that can write a playlist or shared generated reports use the same queue.
 concurrency:
-  group: iptv-playlist-main-writer
+  group: iptv-playlist-main-writer-v2
   cancel-in-progress: false
   queue: max
 
