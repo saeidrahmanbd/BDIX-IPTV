@@ -52,10 +52,13 @@ A curated IPTV collection focused on **🇧🇩 Bangladeshi channels, 🇮🇳 I
 | **IPTV-Playlist.m3u** | Main curated channel collection | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) |
 | **BDIX-Playlist.m3u** | BDIX-focused channel collection | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u) |
 | **International-Playlist.m3u** | International channel collection | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) |
+| **BD.IN-Playlist.m3u** | Additional Bangladesh & India collection, separate from the core playlists | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BD.IN-Playlist.m3u) |
+
+> **Automation scope:** `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `International-Playlist.m3u` are the three core playlists currently covered by EPG and quality workflows. `BD.IN-Playlist.m3u` is the fourth, additional collection and is not yet included in that automated scope.
 
 <p align="center">
   <a href="assets/iptv-project-showcase-2026-10-22.svg">
-    <img src="assets/iptv-project-showcase-2026-10-22.svg" alt="BDIX-IPTV project showcase: three playlists, organized categories, metadata, EPG and logo audits" width="100%">
+    <img src="assets/iptv-project-showcase-2026-10-22.svg" alt="BDIX-IPTV project showcase: four playlist files, organized categories, metadata, EPG and logo audits" width="100%">
   </a>
 </p>
 
@@ -71,7 +74,7 @@ Copy the playlist URL below and paste it into **XCIPTV** or any M3U-compatible p
 https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u
 ```
 
-For the BDIX or International collections, use their URLs from the **Choose a Playlist** table above.
+For the BDIX, International, or BD.IN collection, use its URL from the **Choose a Playlist** table above.
 
 <p align="center">
   <a href="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u">
@@ -99,6 +102,7 @@ Other players (VLC, TiviMate, IPTV Smarters, Kodi, etc.) work the same way — a
 | 📺 | **[Main M3U Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)** | The primary curated playlist |
 | 📡 | **[BDIX M3U Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u)** | BDIX-focused playlist |
 | 🌍 | **[International M3U Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)** | International playlist |
+| 🌏 | **[BD.IN M3U Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BD.IN-Playlist.m3u)** | Additional Bangladesh & India collection |
 | 🖥️ | **[Playlist Studio v5.0](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.exe)** | Windows playlist manager, editor & player |
 | 🛠️ | **[Playlist Studio Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug22.zip)** | Windows build package |
 | 🔌 | **[Xtream Gateway](xtream/README.md)** | Xtream Gateway / XCIPTV documentation |
@@ -137,7 +141,7 @@ The repository is maintained with automated quality checks.
 
 | Area | Status | Details |
 |---|:---:|---|
-| 📺 Playlists | ✅ Curated & updated | Main, BDIX and International collections |
+| 📺 Playlists | ✅ Available | Four playlist files; automated maintenance covers the three core collections |
 | 🖼️ Logos | ✅ Local | Stored in the repository |
 | 📡 Stream Health | 🤖 Automated | Endpoint checks; failures become review candidates |
 | 📄 EPG | 📈 Monitored | Coverage is measured and published only when the gate allows it |
