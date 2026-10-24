@@ -1,5 +1,6 @@
 name: International Channel Discovery
 
+# Manual trigger requested: 2026-10-24 discovery refresh
 on:
   push:
     branches: [main]
