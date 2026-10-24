@@ -5,7 +5,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from discover_bd_in_new_queues import (
     PERMANENTLY_BANNED_CHANNEL_NAMES, canonical_channel_name,
-    prohibited_channel, purge_forbidden_existing_queue_rows,
+    COUNTRY_THRESHOLD, evaluate, prohibited_channel, purge_forbidden_existing_queue_rows,
 )
 
 
@@ -97,6 +97,37 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertIn('group-title="New Channels",Channel 24', filtered)
         self.assertIn('group-title="New Channels",Mahua Play', filtered)
         self.assertIn('group-title="Indian Entertainment",E-Vidya 4', filtered)
+
+
+    def test_only_bd_in_source_feeds_are_allowed_and_bangladesh_news_passes(self):
+        bd, bd_reason = evaluate(
+            "Bangladesh",
+            {"tvg-id": "Channel24.bd", "group-title": "News"},
+            "Channel 24",
+            "https://example.org/channel24.m3u8",
+        )
+        self.assertIsNotNone(bd, bd_reason)
+
+        india, india_reason = evaluate(
+            "India",
+            {"tvg-id": "AajTak.in", "group-title": "News"},
+            "Aaj Tak",
+            "https://example.org/aajtak.m3u8",
+        )
+        self.assertIsNone(india)
+        self.assertIn("Indian news", india_reason)
+
+        foreign, foreign_reason = evaluate(
+            "Nepal",
+            {"tvg-id": "ExampleNews.np", "group-title": "News"},
+            "Example News",
+            "https://example.org/news.m3u8",
+        )
+        self.assertIsNone(foreign)
+        self.assertEqual(foreign_reason, "unknown source feed")
+
+    def test_five_channel_country_threshold_remains_intact(self):
+        self.assertEqual(COUNTRY_THRESHOLD, 5)
 
 
 if __name__ == "__main__":
