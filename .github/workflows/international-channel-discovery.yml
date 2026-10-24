@@ -30,56 +30,19 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_international_discovery_policy.py'
       - name: Discover international channels and backups
         run: python scripts/discover_international_channels.py
-      - name: Validate playlist structure
-        shell: bash
-        run: |
-          set -euo pipefail
-          python - <<'PY'
-          from collections import Counter
-          from pathlib import Path
-          import re
-          p = Path("International-Playlist.m3u")
-          lines = p.read_text(encoding="utf-8-sig").splitlines()
-          if not lines or not lines[0].startswith("#EXTM3U"):
-              raise SystemExit("Missing #EXTM3U header")
-          blocks = []
-          current = None
-          for line in lines:
-              if line.startswith("#EXTINF:"):
-                  if current is not None:
-                      blocks.append(current)
-                  current = [line]
-              elif current is not None:
-                  current.append(line)
-          if current is not None:
-              blocks.append(current)
-          if not blocks:
-              raise SystemExit("Playlist contains no channel records")
-          urls = []
-          for block in blocks:
-              stream = next((x.strip() for x in block[1:] if x.strip().startswith(("http://", "https://"))), "")
-              if not stream:
-                  raise SystemExit("Entry has no stream URL: " + block[0])
-              urls.append(stream.casefold())
-          duplicates = [url for url, count in Counter(urls).items() if count > 1]
-          if duplicates:
-              raise SystemExit(f"Duplicate stream URLs detected: {len(duplicates)}")
-          external_logos = []
-          for block in blocks:
-              logo = re.search(r'tvg-logo="([^"]*)"', block[0])
-              if logo and not logo.group(1).startswith("https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"):
-                  external_logos.append(block[0])
-          if external_logos:
-              raise SystemExit(f"External logo references remain: {len(external_logos)}")
-          print(f"Playlist structure OK: {len(blocks)} entries, 0 missing stream URLs, 0 duplicate URLs, 0 external logo references. Playback was not tested.")
-          PY
+      - name: Enforce required playlist attribution
+        run: python scripts/enforce_playlist_attribution.py International-Playlist.m3u
+
+      - name: Validate International playlist and local logos
+        run: python scripts/validate_international_playlist.py
+
       - name: Commit new channels, report, and localized logos
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add International-Playlist.m3u reports/international-channel-discovery.md logos/international/
+          git add International-Playlist.m3u reports/international-channel-discovery.md logos/
           if git diff --cached --quiet; then
             echo "No new International channels or backup streams to publish."
             exit 0
