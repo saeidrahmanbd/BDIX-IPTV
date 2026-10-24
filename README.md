@@ -203,7 +203,7 @@ Automated maintenance covers:
 |---|---|
 | 📊 [Project Dashboard](assets/dashboard.svg) | Generated playlist and maintenance summary |
 | 🧹 [IPTV Playlist Audit](reports/iptv-playlist-audit.md) | Duplicates, identity and metadata checks |
-| 🆕 [IPTV Channel Discovery](reports/iptv-channel-discovery.md) | Verified Bangladesh/India discovery queue; excludes news, sports, kids and religious channels |
+| 🆕 [IPTV Channel Discovery](reports/iptv-channel-discovery.md) | Verified Bangladesh/India discovery queue; allows Bangladeshi news and prohibits Indian News, Sports, Kids and Religious channels |
 | 📡 [Stream Health](reports/stream-health.md) | Endpoint availability monitoring and failure classification |
 | 🧩 [Backup Independence Audit](reports/backup-independence-audit.md) | Shared-host/origin and fallback-family review |
 | 🛠️ [Maintenance Report](reports/maintenance-report.md) | Automated maintenance summary |
