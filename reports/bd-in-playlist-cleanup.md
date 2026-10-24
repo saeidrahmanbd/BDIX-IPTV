@@ -1,75 +1,69 @@
-# BD.IN-Playlist Fresh Audit Report — Metadata Validation
+# BD.IN-Playlist Fresh Audit Report — Logo Repository Search
 
-- Final entries: **461** — **262 primary channels** and **199 backup streams**.
-- Duplicate stream URLs: **0**. External logo URLs: **0**.
-- Repository-local logos assigned: **417 / 461**; **41** identities still need a confidently matched local logo.
+- Audit source: current playlist at `608789f258d1f50723ede6ce8a53b91b81b27074`.
+- Final playlist: **460 entries**, **261 primary channels**, **199 backups**.
+- Orphan backup entries: **0** (each backup resolves to a primary by normalized name or channel ID).
+- Duplicate stream URLs: **0**. Duplicate primary identities: **0**. Invalid/external logo URLs: **0**.
+- New repository logo matches applied to rows that previously had no logo: **18 rows**. Remaining unique primary identities without a reliable local logo: **22**.
 
-## Final metadata corrections
+## Existing local logos matched
 
-- Corrected KTV Tamil to KTV Bangla based on its existing KTV Bangla stream path and local KTV Bangla logo.
-- Corrected Nat Geo Bangla from the incorrect `PK` country code to `IN`, matching its India-Bangla stream path; aligned its ID with the corrected channel identity.
-- Set Discovery Bangla to `IN` based on its India-Bangla source path.
-- Renamed Sony One Hits to Sony One Hits Action based on its French Sony One Hits Action stream URL; classified it as International (`FR`) and removed any uncertain logo instead of assigning a wrong one.
-- Restored Shemaroo Josh to the reference playlist’s Indian Movies group and reused its existing local logo/EPG metadata.
-- Normalized IDs for ZB Cartoon TV, Gopal Bhar TV, and ITV Bangla where the previous ID was missing a country/contained the channel-name typo.
+| Channel | Logo asset |
+|---|---|
+| Amar Digital TV | `logos/amar-bangla-digital.png` |
+| AMC TV | `logos/amc.png` |
+| Dangal TV | `logos/dangal.png` |
+| Hindi Classic 24 | `logos/hindi-movie-classic-24.png` |
+| Rang TV | `logos/rang.png` |
+| Hum | `logos/hum-tv.png` |
+| HUM TV | `logos/hum-tv.png` |
+| DEEN TV UK | `logos/deen-tv-576p.png` |
+| South Indian Movies | `logos/south-movies.png` |
+| iON TV UK | `logos/ion-tv-uk.png` |
+| Sony One Hits Action | `logos/sony-one-hits-action.png` |
+| SRK TV | `logos/srk.png` |
+| Ten Cricket | `logos/nvisionbd-official-pk-ten-cricket.png` |
+| Willow Sports | `logos/us-willow-sports-hd.png` |
+| Willow Sports 2 | `logos/us-willow-sports-hd.png` |
+| ZB Cartoon TV | `logos/zb-cartoon.png` |
+| TSN 2 | `logos/nvisionbd-official-tsn-aq1.png` |
+| TSN 3 | `logos/nvisionbd-official-tsn-aq1.png` |
+| Red Bull TV | `logos/red-bull-tv.png` |
+| HUM TV | `logos/hum-tv.png` |
+| iON TV UK | `logos/ion-tv-uk.png` |
+| SRK TV | `logos/srk.png` |
 
-## Final group counts
+## Rule-based removal
 
-| Group | Entries |
-|---|---:|
-| Bangladesh | 53 |
-| Indian Bangla | 21 |
-| Indian Movies | 23 |
-| Indian Music | 16 |
-| Indian Entertainment | 17 |
-| Pakistani | 4 |
-| International | 37 |
-| Documentary & Wildlife | 24 |
-| Kids | 26 |
-| Religious | 14 |
-| Sports | 27 |
-| Backup | 199 |
+- Removed 1 row(s) labeled `NK` / referencing the Republic Bangla FAST playlist path. The stream path identifies an Indian news feed, which violates the repository's no-Indian-news rule; it was not assigned the unrelated `nk-tv-bangla.png` logo.
 
-## Remaining local logo gaps
+## Missing logos — no reliable asset match
 
 - Aakaash Bangla
 - Albania Music
-- Amar Digital TV
-- AMC TV
 - Bahrain Sports 1
 - beIN SPORTS 4
 - beIN SPORTS 5
 - Channel Europe
 - CNA
-- Dangal TV
-- DEEN TV UK
 - DTV
 - ETV Bangla
 - Fox 5
 - Gopal Bhar TV
-- Hindi Classic 24
 - HK Music TV
-- Hum
 - IBTV USA
-- iON TV
 - ISLAM CHANNEL
 - ITV Bangla
 - Korean TV
 - MINI
 - Nicktoons
-- NK
 - OAN
 - Pix 11
-- RADBULL TV
-- Rang TV
-- Sony One Hits Action
-- South Indian Movies
-- SRK Tv
-- Ten Cricket
-- TSN 2
-- TSN 3
 - TVC Arabic Kids
 - USA TV
-- Willow Sports
-- Willow Sports 2
-- ZB Cartoon TV
+
+## Repository search notes
+
+- Searched all **2999** image assets in `logos/`, including nested folders.
+- Exact logo assets under `logos/unused/` were deliberately not used. Logo matches were assigned only from active repository logo paths, not placeholders or generated fallback files.
+- Lookalike but different channels (for example Aakaash Aath vs Aakaash Bangla, Islam TV vs ISLAM CHANNEL, and Bahrain Sports 2 vs Bahrain Sports 1) were left unmatched to avoid incorrect logos.
