@@ -135,6 +135,10 @@ def main():
         s={"added":0,"review_backups":0,"removed":0,"backup_updated":0,"logos":0,"duplicates":0,"replaced":0,"new_names":[],"removed_names":[]}
     else:
         s=meaningful(prev,cur)
+    meaningful_change = any(s.get(key, 0) for key in ("added", "review_backups", "removed", "backup_updated", "logos", "duplicates", "replaced")) or bool(s.get("new_names")) or bool(s.get("removed_names"))
+    if not meaningful_change:
+        print("No meaningful playlist changes; changelog and changelog state left unchanged.")
+        return
     date=datetime.now(timezone.utc).strftime("%Y-%m-%d")
     lines=[f"# Changelog — {date}","",f"## {date}",""]
     if s["added"]: lines.append(f"- 🆕 **{s['added']} new channel(s) added to the approved playlist categories**")

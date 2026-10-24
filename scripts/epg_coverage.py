@@ -736,7 +736,7 @@ def main():
         "",
         f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",
         "",
-        "This report measures the two M3U files currently published at the repository root. The historic filename epg-three-playlist-audit.md is retained for link compatibility; it does not mean a third playlist file exists.",
+        "This report measures all three M3U playlists currently published at the repository root. The historic filename epg-three-playlist-audit.md is retained for link compatibility and covers all three playlists.",
         "",
         "| Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |",
         "|---|---:|---:|---:|---:|---:|---:|---:|---|",

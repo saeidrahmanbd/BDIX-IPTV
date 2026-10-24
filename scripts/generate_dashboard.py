@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import hashlib,re,html,json
-from collections import Counter
+from collections import Counter,defaultdict
 from datetime import datetime,timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -12,6 +12,11 @@ def metric(text,label):
 def read(p): return p.read_text(encoding="utf-8") if p.exists() else ""
 def timestamp(p):
     m=re.search(r'(?:Generated|Last generated):\s*\*\*([^*]+)\*\*',read(p),re.I); return m.group(1) if m else "not available"
+def normalized_identity_name(value):
+    value = re.sub(r"\s*(?:\[[^]]*(?:geo[- ]?blocked)[^]]*\]|\((?:\d{3,4}[pi]|UHD|FHD|HD|SD)\)|\s+(?:\d{3,4}[pi]))\s*$", "", str(value or "").strip(), flags=re.I)
+    value = re.sub(r"\s+", " ", value).strip()
+    aliases = {"disney channel (india)": "Disney Channel India", "disney channel india": "Disney Channel India", "gazi tv": "G TV", "g tv": "G TV", "nick": "Nickelodeon (India)", "nickelodeon (india)": "Nickelodeon (India)"}
+    return aliases.get(value.casefold(), value).casefold()
 def parse():
     lines=PLAYLIST.read_text(encoding="utf-8-sig").splitlines(); rows=[]; cur=None
     for line in lines:
@@ -26,13 +31,22 @@ def main():
     active=len({x.get("tvg-id") or x.get("channel-id") for x in e if x.get("group-title") in active_groups and (x.get("tvg-id") or x.get("channel-id"))})
     primary_streams=sum(1 for x in e if x.get("group-title") in active_groups)
     local=metric(a,"Healthy/local references"); logos=round(local*100/len(e),1) if e else 0
+    id_names=defaultdict(set); name_ids=defaultdict(set)
+    for x in e:
+        cid=(x.get("tvg-id") or x.get("channel-id") or "").strip().casefold()
+        name=normalized_identity_name(x.get("_name",""))
+        if cid and name:
+            id_names[cid].add(name)
+            name_ids[name].add(cid)
+    cross_queue_id_variants=sum(1 for names in id_names.values() if len(names)>1)
+    cross_queue_name_collisions=sum(1 for ids in name_ids.values() if len(ids)>1)
     issues=sum(metric(a,k) for k in ["Duplicate stream URLs","Metadata conflicts","Cross-country backup collisions","Protected primary-entry changes","Logo exceptions","Duplicate primary identities","Primary channel-number collisions","Primary entries missing channel numbers","Malformed EXTINF entries","Category block-order issues","Alphabetical ordering issues"])
     hfail=metric(h,"Failed this check"); hpersist=metric(h,"Persistent failures (3+ consecutive)"); htested=metric(h,"Streams tested"); hnear=metric(h,"Near-duplicate URL families")
     total_match=re.search(r'Active unique playlist channel IDs audited:\s*\*\*(\d+)\*\*',g,re.I)
     mapping_match=re.search(r'IDs with an EPG source mapping:\s*\*\*(\d+)/(\d+) \(([\d.]+)%\)\*\*',g,re.I)
     current_match=re.search(r'IDs with usable current/future (?:English programme data|source schedules \(nonblank (?:English|allowed-language) titles\)):\s*\*\*(\d+)/(\d+) \(([\d.]+)%\)\*',g,re.I)
     missing_match=re.search(r'IDs with no EPG source mapping:\s*\*\*(\d+)\*\*',g,re.I)
-    iptv_row=re.search(r'^\|\s*IPTV-Playlist\.m3u\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|',egd,re.M)
+    iptv_row=re.search(r'^\|\s*IPTV-Playlist\.m3u\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|',egd,re.M)
     if iptv_row:
         india=int(iptv_row.group(2)); mapped=int(iptv_row.group(3)); source_live=int(iptv_row.group(4)); present=int(iptv_row.group(5)); live=int(iptv_row.group(6)); missing=int(iptv_row.group(7)); mapct=round(mapped*100/india,1) if india else 0.0; livepct=round(live*100/india,1) if india else 0.0; epg_scope="IPTV-Playlist.m3u published-guide row"
     else:
@@ -56,8 +70,8 @@ Source playlist SHA-256: **{source_sha}**
 | India | **{sum(v for k,v in groups.items() if k.startswith("Indian "))}** |
 | Backup Stream Entries | **{groups.get("Backup",0)}** |
 | Local Logos | **{logos}%** |
-| EPG Programme Coverage | **{livepct}%** |
-| EPG Mapping | **{mapct}%** |
+| IPTV EPG Programme Coverage | **{livepct}%** |
+| IPTV EPG Mapping | **{mapct}%** |
 | Stream Health Tested | **{htested}** |
 | Stream Health Failures | **{hfail}** |
 | Persistent Failures | **{hpersist}** |
@@ -68,8 +82,10 @@ Source playlist SHA-256: **{source_sha}**
 
 ## Quality Controls
 - Duplicate stream URLs: **{metric(a,"Duplicate stream URLs")}**
-- Metadata conflicts: **{metric(a,"Metadata conflicts")}**
-- Same-name / different-ID collisions: **{metric(a,"Same-name / different-ID collisions")}**
+- Metadata conflicts (canonical primary scope): **{metric(a,"Metadata conflicts")}**
+- Same-name / different-ID collisions (canonical primary scope): **{metric(a,"Same-name / different-ID collisions")}**
+- Cross-queue metadata identity variants: **{cross_queue_id_variants}**
+- Cross-queue same-name / different-ID collisions: **{cross_queue_name_collisions}**
 - Duplicate primary identities: **{metric(a,"Duplicate primary identities")}**
 - Primary channel-number collisions: **{metric(a,"Primary channel-number collisions")}**
 - Primary entries missing channel numbers: **{metric(a,"Primary entries missing channel numbers")}**
@@ -117,7 +133,7 @@ Historical records are retained in reports/maintenance-history.json.
 """
     OUT_MD.write_text(md,encoding="utf-8")
     def t(x,y,s,size=15,b=False): return f'<text x="{x}" y="{y}" font-family="Arial,Helvetica,sans-serif" font-size="{size}px" font-weight="{"700" if b else "400"}" fill="#1f2937">{html.escape(str(s))}</text>'
-    cards=[("Streams",len(e)),("Channel Identities",active),("Bangladesh",groups.get("Bangladesh",0)),("India",sum(v for k,v in groups.items() if k.startswith("Indian "))),("Backup Entries",groups.get("Backup",0)),("Local Logos",f"{logos}%"),("EPG Coverage",f"{round(livepct)}%"),("Health Failures",hfail)]
+    cards=[("Streams",len(e)),("Channel Identities",active),("Bangladesh",groups.get("Bangladesh",0)),("India",sum(v for k,v in groups.items() if k.startswith("Indian "))),("Backup Entries",groups.get("Backup",0)),("Local Logos",f"{logos}%"),("IPTV EPG Coverage",f"{round(livepct)}%"),("Health Failures",hfail)]
     parts=['<svg xmlns="http://www.w3.org/2000/svg" width="980" height="650" viewBox="0 0 980 650">','<rect width="980" height="650" rx="24" fill="#f8fafc"/>','<rect width="980" height="92" rx="24" fill="#111827"/>',t(42,45,"BDIX-IPTV • PROJECT DASHBOARD",25,True),t(42,70,"Playlist • EPG • Metadata • Logos • Stream Health • Safety Gate",13)]
     for (lab,val),(x,y) in zip(cards,[(34,120),(268,120),(502,120),(736,120),(34,260),(268,260),(502,260),(736,260)]): parts += [f'<rect x="{x}" y="{y}" width="210" height="112" rx="18" fill="white" stroke="#e5e7eb"/>',t(x+18,y+34,lab,14),t(x+18,y+78,val,28,True)]
     parts += ['<rect x="34" y="400" width="912" height="190" rx="18" fill="white" stroke="#e5e7eb"/>',t(58,435,"Current quality status",18,True),t(58,470,f"Audit blocking issues: {issues}",15),t(58,498,f"Pre-publish gate: {gate_status}",15),t(58,526,f"Persistent health failures: {hpersist} • Near-duplicate URL families: {hnear}",15),t(58,554,f"Generated: {now}",13),'</svg>']
