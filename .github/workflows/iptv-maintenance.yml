@@ -139,6 +139,11 @@ jobs:
             echo "::notice::Skipping superseded queued IPTV maintenance run; a newer workflow definition is on main. No playlist files were changed."
             exit 0
           fi
+          CURRENT_MAIN_SHA="$(git rev-parse FETCH_HEAD)"
+          if [[ "${GITHUB_EVENT_NAME}" == "push" && "${GITHUB_SHA}" != "$CURRENT_MAIN_SHA" ]]; then
+            echo "::notice::Skipping stale push-triggered maintenance for ${GITHUB_SHA}; main has advanced to $CURRENT_MAIN_SHA. The newest queued run will maintain the current playlist."
+            exit 0
+          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           for attempt in 1 2 3; do
