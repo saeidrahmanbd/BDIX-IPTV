@@ -34,7 +34,7 @@ MOVIE_NAME_RE=re.compile(r"\b(?:movies?|cinema|films?|bollywood|aflam|moviespher
 MUSIC_NAME_RE=re.compile(r"\b(?:music|musix|musica|musique|tunes|xite|v2beat|trace\s*(?:urban|latina)|kronehit|cmc\s*tv|eu\s*music|ua\s*music|arabica\s*tv|epic\s*music|totalmusic|vevo|qello\s*concerts|mtv\s*(?:music|hits|80s|90s|live|classic|dance)|vh1\b|now\s*(?:70s|80s|rock)|4music|music\s*box|8xm|9xm|9x\s*(?:jalwa|jhakaas|tashan)|stingray\s*(?:classic|djazz|remember|today|hits)|zoom\s*music|star\s*music)\b",re.I)
 MOVIE_CATEGORY_PARTS={"movie","movies","cinema","film","films","bollywood","aflam","moviesphere","internationalmovies"}
 MUSIC_CATEGORY_PARTS={"music","musics","internationalmusic"}
-INTERNAL_QUEUE_GROUPS={"newchannels","newbackup","newbackups","notplaying","international"}
+INTERNAL_QUEUE_GROUPS={"newchannels","newbackup","newbackups","backup","backups","notplaying","test"}
 
 def attrs(line): return dict(ATTR_RE.findall(line))
 def name_of(block): return (attrs(block[0]).get("tvg-name") or block[0].rsplit(",",1)[-1]).strip()
@@ -62,7 +62,7 @@ def country_code(a):
   if code in ISO_CODES:return code
  return "ZZ"
 def country_group(code): return COUNTRY_NAMES.get(code,"")
-def policy(a,name):
+def policy(a,name,allow_legacy_group=False):
  code=country_code(a)
  group_text=(a.get("group-title") or "").strip().casefold()
  group_key=re.sub(r"[^a-z0-9]+","",group_text)
@@ -84,7 +84,7 @@ def policy(a,name):
  # When the source has a category, it must be explicitly a Movie or Music
  # category. General/Entertainment/unknown category labels are never overridden
  # by a name match. Queue labels are neutral and use the channel identity instead.
- source_category=bool(group_text) and group_key not in INTERNAL_QUEUE_GROUPS
+ source_category=bool(group_text) and group_key not in INTERNAL_QUEUE_GROUPS and not (allow_legacy_group and group_key=="international")
  if source_category and any(
      part not in MOVIE_CATEGORY_PARTS and part not in MUSIC_CATEGORY_PARTS
      for part in group_parts
@@ -235,7 +235,7 @@ def main():
   elif old_key in {"not playing","test"}:
    group="Backups"
   elif old_key in {"new channels","international"}:
-   base,reason,policy_code=policy(a,name)
+   base,reason,policy_code=policy(a,name,allow_legacy_group=(old_key=="international"))
    if base is None:
     filtered_existing.append((name,old,reason or "out of scope"))
     continue
