@@ -6,6 +6,11 @@
 
 M3U playlist compatible with XCIPTV and other compatible players.
 
+### Other playlist files
+
+- **[Download BDIX Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u)** — BDIX-focused collection
+- **[Download International Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)** — selected international channels
+
 ## 🖥️ Playlist Studio 5.0
 
 ### Portable Windows Application
