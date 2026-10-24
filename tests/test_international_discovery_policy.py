@@ -19,6 +19,22 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
     def test_country_group_name_is_available(self):
         self.assertEqual(discovery.country_group('NP'),'Nepal'); self.assertEqual(discovery.country_group('TH'),'Thailand'); self.assertEqual(discovery.country_group('JP'),'Japan')
     def test_country_threshold_is_five(self): self.assertEqual(discovery.COUNTRY_THRESHOLD,5)
+    def test_country_with_four_playlist_identities_does_not_get_a_group(self):
+        self.assertNotIn("AT", discovery.qualified_country_groups({"AT": {"a","b","c","d"}}))
+    def test_country_with_five_playlist_identities_gets_a_group(self):
+        self.assertIn("AT", discovery.qualified_country_groups({"AT": {"a","b","c","d","e"}}))
+    def test_country_can_qualify_from_existing_staged_and_new_primary_channels(self):
+        existing={"AT": {"a","b","c"}}
+        added={"AT": {"d","e"}}
+        self.assertIn("AT", discovery.qualified_country_groups(existing,added))
+    def test_under_threshold_general_channel_goes_to_new_channels(self):
+        self.assertEqual(discovery.primary_target("International","AT",set()),"New Channels")
+    def test_qualified_country_gets_its_own_group(self):
+        self.assertEqual(discovery.primary_target("International","AT",{"AT"}),"Austria")
+    def test_content_groups_do_not_accidentally_create_country_groups(self):
+        self.assertFalse(discovery.counts_toward_country_group("Kids","AT"))
+        self.assertTrue(discovery.counts_toward_country_group("New Channels","AT"))
+        self.assertTrue(discovery.counts_toward_country_group("International","AT"))
     def test_category_registry_only_lists_groups_present_in_playlist(self):
         groups=discovery.category_registry(["Bangladesh","United Kingdom","International","Backup"])
         self.assertEqual(groups,discovery.FIXED_GROUPS+["United Kingdom"]+discovery.TAIL_GROUPS)
