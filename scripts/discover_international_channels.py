@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
-"""Discover and organize International channels without playback testing.
+"""Discover International channels into established country/content groups.
 
-International discovery policy:
-- New primary channels first enter New Channels unless their country group is
-  already established.
-- New alternate streams enter New Backup.
-- When five or more legitimate primary channels from a country exist in total,
-  that country gets a dedicated group and qualifying primary entries are moved
-  there from International/New Channels.
+Policy:
+- New primary channels go directly to an established country group, a country
+  group meeting the five-unique-primary-identity threshold, or their content group.
+- New alternate feeds go directly to Backup.
+- International playlist staging queues are not published.
+- Country group thresholds count unique eligible primary identities, not URLs.
 - Non-Bangladeshi news and non-Islamic religious channels are rejected.
+- Movies and music from every country are allowed.
+- Playback is never tested by discovery.
+
 - Movies and music from every country are allowed.
 - Playback is never tested by this script.
 """
@@ -182,7 +184,7 @@ def main():
  header="#PLAYLIST-STUDIO-CATEGORIES:"+str(dynamic).replace("'",'"'); out=[x for x in prefix if not x.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]; idx=next((i+1 for i,x in enumerate(out) if x.startswith("#EXTM3U")),0); out.insert(idx,header)
  for b in normalized:out.extend(b)
  PLAYLIST.write_text("\n".join(out).rstrip()+"\n",encoding="utf-8")
- REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Country threshold: {COUNTRY_THRESHOLD} legitimate primary channels.","- New primary channels go to an established/threshold country group or content category; staging queues are not used.","- New alternate streams go directly to Backup.","- Existing country groups receive new primary channels directly.","- Playback was not tested.",f"- New primary channels: {len(new_rows)}",f"- Backup alternates: {len(backup_rows)}",f"- Country migrations: {len(migrated)}","","## New primary channels",""]
+ REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Country threshold: {COUNTRY_THRESHOLD} unique legitimate primary identities.","- New primary channels go to an established/threshold country group or content category; staging queues are not used.","- New alternate streams go directly to Backup.","- Existing country groups receive new primary channels directly.","- Playback was not tested.",f"- New primary channels: {len(new_rows)}",f"- Backup alternates: {len(backup_rows)}",f"- Country migrations: {len(migrated)}","","## New primary channels",""]
  report += [f"- **{n}** — `{g}` — {c}" for n,g,c in new_rows]; report += ["","## Backup alternates",""]+[f"- **{n}** — {c}" for n,c in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
  print(f"International discovery complete: new={len(new_rows)} new_backup={len(backup_rows)} migrations={len(migrated)} country_groups={len(country_groups)}")
 if __name__=="__main__":raise SystemExit(main())
