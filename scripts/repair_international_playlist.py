@@ -167,9 +167,20 @@ def bad_current_logo(name,old):
 
 def repair_logo(info,org):
  a=attrs(info); name=name_of(info); old=a.get('tvg-logo','').strip()
- if a.get('group-title','').strip().casefold() in {'adult','backup','new backup','not playing'}:
-  return info,False
+ group=a.get('group-title','').strip().casefold()
  p=safe_local(name)
+ # Adult and Backup entries may use only existing, exact-identity local artwork.
+ # Do not fetch new artwork for these protected queues, but don't skip safe local
+ # matches and never leave an external logo reference in the published playlist.
+ if group in {'adult','backup','new backup','not playing'}:
+  if p:
+   desired=RAW_BASE+str(p.relative_to(LOGOS))
+   return set_attr(info,'tvg-logo',desired),old!=desired
+  if old.startswith(RAW_BASE) and not bad_current_logo(name,old):
+   return info,False
+  if old:
+   return remove_attr(info,'tvg-logo'),True
+  return info,False
  if p:
   desired=RAW_BASE+str(p.relative_to(LOGOS))
   return set_attr(info,'tvg-logo',desired),old!=desired
@@ -198,7 +209,6 @@ def repair_logo(info,org):
  if old and bad_current_logo(name,old):
   return remove_attr(info,'tvg-logo'),True
  return info,False
-
 def fuzzy_group(name,by_name):
  k=norm(name); scored=[]
  if not k:return None
