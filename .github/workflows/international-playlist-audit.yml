@@ -16,7 +16,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: iptv-playlist-main-writer
+  group: iptv-international-playlist-audit
   cancel-in-progress: false
   queue: max
 
