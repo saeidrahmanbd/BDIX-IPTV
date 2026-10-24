@@ -70,28 +70,5 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 
 ## 2026-10-24
 
-- 🗑️ **750 channel(s) removed**
-- 🖼️ **3 logo reference(s) corrected**
-
-### Removed channels
-- Ananda TV
-- Asian TV
-- ATN Bangla
-- ATN Bangla UK
-- ATN News
-- Bangla TV
-- Bengali Beats
-- Bijoy TV
-- Boishakhi TV
-- BTV Chattogram
-- BTV National
-- BTV News
-- Channel 1
-- Channel 9
-- Channel 16
-- Channel 24
-- Channel 52
-- Channel I
-- Channel S UK
-- DBC News
+- 🖼️ **1 logo reference(s) corrected**
 
