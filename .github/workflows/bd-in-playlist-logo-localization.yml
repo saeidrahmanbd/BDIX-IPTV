@@ -84,8 +84,14 @@ jobs:
               if normalized != baseline:
                   raise SystemExit("Non-logo playlist content changed: " + name)
               entries = [line for line in current.splitlines() if line.startswith("#EXTINF:")]
-              missing = external = nvision = broken = 0
+              missing = external = nvision = broken = adult_ignored = 0
               for line in entries:
+                  meta = dict(re.findall(r'([\w-]+)="([^"]*)"', line))
+                  group = (meta.get("group-title") or "").strip().casefold()
+                  channel_id = (meta.get("tvg-id") or meta.get("channel-id") or "").strip().casefold()
+                  if name == "International-Playlist.m3u" and (group == "adult" or ".xxx" in channel_id):
+                      adult_ignored += 1
+                      continue
                   m = re.search(r'tvg-logo="([^"]*)"', line)
                   logo = m.group(1).strip() if m else ""
                   if not logo:
@@ -108,6 +114,7 @@ jobs:
                       broken += 1
               summaries[name] = {
                   "entries": len(entries), "missing_logo_metadata": missing,
+                  "adult_entries_ignored": adult_ignored,
                   "nonrepository_logo_refs": external, "nvision_refs": nvision,
                   "invalid_or_blocked_refs": broken,
               }

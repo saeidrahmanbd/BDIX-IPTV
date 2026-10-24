@@ -74,6 +74,9 @@ LOCAL_OVERRIDES = {
     "global tv": "unused/global-tv-1080p-5ffc043912.png",
     "channel 1": "channel-1.png",
     "classic movies": "unused/classic-movies-channel-1d5f82d98a.png",
+    "nickonline bob esponja": "international/nickonline-bob-esponja-720p-not-24-7.png",
+    "nickonline hd": "international/nickonline-hd-720p.png",
+    "allo cine": "international/allo-cine-1080p.jpg",
 }
 FORCED_CHANNEL_LOGOS = {
     "bollygold": "nh-bollygold-dbedeff9.png",
@@ -761,9 +764,12 @@ def main():
             current = (attrs.get("tvg-logo") or "").strip()
             basename = Path(urllib.parse.urlparse(current).path).name.casefold() if current else ""
             group_name = (attrs.get("group-title") or "").strip().casefold()
-            # The user explicitly exempts Adult-group entries from logo repair.
-            # Preserve every Adult row byte-for-byte, including empty logo fields.
-            if playlist == "International-Playlist.m3u" and group_name == "adult":
+            channel_id = (attrs.get("tvg-id") or attrs.get("channel-id") or "").strip().casefold()
+            # The user explicitly exempts Adult entries from logo repair. The
+            # custom.xxx identity also marks adult material when it sits in Backups.
+            # Preserve these rows byte-for-byte, including their logo attributes.
+            is_adult_entry = group_name == "adult" or ".xxx" in channel_id
+            if playlist == "International-Playlist.m3u" and is_adult_entry:
                 adult_ignored += 1
                 output.append(line)
                 continue
@@ -869,7 +875,9 @@ def main():
             if not item.startswith("#EXTINF:"):
                 continue
             meta, _ = parse_extinf(item)
-            if playlist == "International-Playlist.m3u" and (meta.get("group-title") or "").strip().casefold() == "adult":
+            meta_group = (meta.get("group-title") or "").strip().casefold()
+            meta_id = (meta.get("tvg-id") or meta.get("channel-id") or "").strip().casefold()
+            if playlist == "International-Playlist.m3u" and (meta_group == "adult" or ".xxx" in meta_id):
                 continue
             logo = (meta.get("tvg-logo") or "").strip()
             name = Path(urllib.parse.urlparse(logo).path).name.casefold() if logo else ""
