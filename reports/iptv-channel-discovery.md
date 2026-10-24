@@ -9,7 +9,7 @@ The immediately preceding discovery run reported 40 new channels and 23 new back
 ## Permanent policy
 
 - Only verified Bangladeshi and Indian channels are eligible for automatic discovery.
-- News, Sports, Kids and Religious channels are prohibited for both countries.
+- Bangladeshi news channels are allowed; Indian News, Sports, Kids and Religious channels are prohibited.
 - Permanently banned: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.
 - Existing playlist entries outside the discovery review queues are not automatically reclassified by this policy.
 
