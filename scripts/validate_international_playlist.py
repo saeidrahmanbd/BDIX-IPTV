@@ -74,10 +74,10 @@ def main():
         if group.casefold() in FORBIDDEN:
             raise SystemExit(f"Forbidden legacy/catch-all group remains: {group!r} ({name}).")
         code = discovery.country_code(a)
-        if group.casefold() == "new channels" and code not in {"BD", "IN", "PK"}:
+        if group.casefold() in {"new channels", "new backups"}:
             target, reason, _ = discovery.policy(a, name)
-            if target not in {"International Movies", "International Music"}:
-                raise SystemExit(f"Non-movie/music international channel in New Channels: {name!r} ({reason or target}).")
+            if target is None:
+                raise SystemExit(f"Prohibited non-movie/music channel in {group}: {name!r} ({reason or 'not Movies/Music'}).")
         if group and group not in group_set:
             group_set.add(group)
             groups_seen.append(group)
