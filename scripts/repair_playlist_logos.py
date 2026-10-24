@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Repair missing, generic and known-contaminated logos across the three playlists.
+"""Repair missing, generic and known-contaminated logos across the three core maintained playlists.
 
 Policy: search this repository's /logos tree first (including /logos/unused),
 then use exact channel/ID matches from curated sources, IPTV-org, or Wikimedia
