@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-10-24 10:37 UTC**  
+Run time: **2026-10-24 11:20 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -11,7 +11,7 @@ Historical mapping index: loaded 336 historical name mappings
 |---|---:|---:|---:|---:|---:|---:|---:|
 | BD.IN-Playlist.m3u | 460 | 0 | 0 | 22 | 0 | 0 | 22 |
 | IPTV-Playlist.m3u | 1231 | 0 | 0 | 2 | 0 | 0 | 2 |
-| International-Playlist.m3u | 1265 | 2 | 0 | 8 | 483 | 0 | 8 |
+| International-Playlist.m3u | 1265 | 1 | 0 | 7 | 483 | 0 | 7 |
 
 ## Repair log
 
@@ -47,21 +47,18 @@ Historical mapping index: loaded 336 historical name mappings
 | IPTV-Playlist.m3u | 2326 | HSTV | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
 | International-Playlist.m3u | 375 | Vyas Channel (576p) | (missing) | (none) | Public IPTV directory's exact Vyas Channel listing |  | Download/validation failed: source response is not a valid supported image |
 | International-Playlist.m3u | 375 | Vyas Channel (576p) | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| International-Playlist.m3u | 397 | Awaz TV | (missing) | awaz-tv-3dcd7a36dc.png | [Exact Awaz TV listing with AwazTVNetwork.pk identity](https://gist.github.com/imran3/d7c2652e8955f45278f85bc3290b5130) | Broadcaster logo served by a community playlist; reuse rights not specified | replaced |
-| International-Playlist.m3u | 473 | Laboral TV (360p) | (missing) | (none) | Laboral TV official stream site |  | Download/validation failed: <urlopen error [Errno -2] Name or service not known> |
+| International-Playlist.m3u | 473 | Laboral TV (360p) | (missing) | (none) | Laboral TV official stream site, fetched through an image proxy after DNS failure |  | Download/validation failed: HTTP Error 404: Not Found |
 | International-Playlist.m3u | 473 | Laboral TV (360p) | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| International-Playlist.m3u | 477 | NickOnline Bob Esponja (720p) [Not 24/7] | (missing) | (none) | IPTV-org exact ID: NickOnlineBobEsponja.br |  | Download/validation failed: source response is not a valid supported image |
+| International-Playlist.m3u | 477 | NickOnline Bob Esponja (720p) [Not 24/7] | (missing) | (none) | IPTV-org's exact NickOnline Bob Esponja stream listing |  | Download/validation failed: source response is not a valid supported image |
 | International-Playlist.m3u | 477 | NickOnline Bob Esponja (720p) [Not 24/7] | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| International-Playlist.m3u | 479 | NickOnline HD (720p) | (missing) | (none) | IPTV-org exact ID: NickOnline.br |  | Download/validation failed: source response is not a valid supported image |
+| International-Playlist.m3u | 479 | NickOnline HD (720p) | (missing) | (none) | Public IPTV's exact NickOnline stream listing |  | Download/validation failed: source response is not a valid supported image |
 | International-Playlist.m3u | 479 | NickOnline HD (720p) | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
 | International-Playlist.m3u | 516 | Xuzhou Economic Life Channel (1080p) | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| International-Playlist.m3u | 810 | DreamWorks Channel Asia (1080p) | (missing) | (none) | Wikimedia Commons channel logo asset |  | Download/validation failed: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai |
+| International-Playlist.m3u | 810 | DreamWorks Channel Asia (1080p) | (missing) | (none) | Wikimedia Commons channel logo asset at a supported thumbnail size |  | Download/validation failed: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai |
 | International-Playlist.m3u | 810 | DreamWorks Channel Asia (1080p) | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| International-Playlist.m3u | 985 | 30A TV Classic Movies (720p) | (missing) | (none) | Exact 30A TV Classic Movies logo used by published channel listings |  | Download/validation failed: HTTP Error 403: Forbidden |
+| International-Playlist.m3u | 985 | 30A TV Classic Movies (720p) | (missing) | (none) | Exact 30A TV Classic Movies logo from a published channel listing |  | Download/validation failed: HTTP Error 404: Not Found |
 | International-Playlist.m3u | 985 | 30A TV Classic Movies (720p) | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| International-Playlist.m3u | 1011 | Allo Cine (1080p) | (missing) | (none) | IPTV-org exact ID: AlloCine.cm |  | Download/validation failed: source response is not a valid supported image |
-| International-Playlist.m3u | 1011 | Allo Cine (1080p) | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| International-Playlist.m3u | 1039 | Armenia Premium (720p) | (missing) | armenia-premium-9b5936f400.png | [Exact Armenia Premium channel listing](https://gist.github.com/Hyperat0m/d33781da55beef57e91956f9e35b31b3) | Broadcaster logo served by a community playlist; reuse rights not specified | replaced |
+| International-Playlist.m3u | 1011 | Allo Cine (1080p) | (missing) | allo-cine-1080p.webp | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 
 ## Quality rule
 
