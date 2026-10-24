@@ -1,0 +1,63 @@
+name: BD.IN Playlist Logo Localization
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - BD.IN-Playlist.m3u
+      - reports/bd-in-logo-sources.json
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: iptv-playlist-main-writer-v2
+  cancel-in-progress: false
+  queue: max
+
+jobs:
+  localize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: "3.12"
+      - name: Install image validation tools
+        run: python -m pip install --disable-pip-version-check pillow cairosvg
+      - name: Localize and commit logos
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$(git log -1 --pretty=%s)" == "Localize and validate BD.IN playlist logos" ]]; then
+            echo "Skipping the localization bot's own follow-up push."
+            exit 0
+          fi
+          python scripts/localize_bd_in_logos.py
+          git add BD.IN-Playlist.m3u logos/ reports/bd-in-logo-localization.md
+          if git diff --cached --quiet; then
+            echo "No additional local logo changes."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "Localize and validate BD.IN playlist logos"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git pull --rebase origin main; then
+              git rebase --abort || true
+              echo "::error::Could not rebase logo localization commit."
+              exit 1
+            fi
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          echo "::error::Could not push localized logo assets after three attempts."
+          exit 1
