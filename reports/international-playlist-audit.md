@@ -1,14 +1,14 @@
 # International Playlist Audit
 
-- Entries: 903
+- Entries: 1064
 - Missing tvg-id values backfilled from exact, unambiguous primary-playlist names: 0
 - Exact duplicate URLs removed: 0
 - Malformed entries removed: 0
-- Backup entries retained for manual review: 119
-- Automatic promotion of alternate Backup streams to primary groups: disabled
-- Logos repaired to repository-local assets: 7
+- Backups retained for manual review: 125
+- Automatic promotion of alternate Backups streams to primary groups: disabled
+- Logos repaired to repository-local assets: 0
 - Logos recovered using external/iptv-org sources: 0
-- Entries still without a safe local logo: 467
+- Entries still without a safe local logo: 468
 - Stream URL strings rewritten: 0 (exact duplicate URL rows are counted separately)
 
 ## Backup policy
@@ -26,15 +26,16 @@ Stream URLs are intentionally omitted from this public report; Adult-category na
 7. **Disney Channel Latin America South** | tvg-id: `DisneyChannelLatinAmerica.ar@South` | channel-id: `DisneyChannelLatinAmerica.ar@South` | 
 8. **Disney Jr. Latin America North HD (1080p)** | tvg-id: `DisneyJrLatinAmerica.ar@NorthHD` | channel-id: `DisneyJrLatinAmerica.ar@NorthHD` | 
 9. **Disney Jr. Latin America South (1080p)** | tvg-id: `DisneyJrLatinAmerica.ar@South` | channel-id: `DisneyJrLatinAmerica.ar@South` | 
-10. **Disney Jr. (Turkiye) (1080p) [Geo-blocked]** | tvg-id: `DisneyJr.tr@SD` | channel-id: `DisneyJr.tr@SD` | 
-11. **Cartoon Network CEE Czech Republic** | tvg-id: `CartoonNetworkCEE.uk@CzechRepublic` | channel-id: `CartoonNetworkCEE.uk@CzechRepublic` | 
-12. **Cartoon Network CEE Poland** | tvg-id: `CartoonNetworkCEE.uk@Poland` | channel-id: `CartoonNetworkCEE.uk@Poland` | 
-13. **Cartoon Network CEE Ukraine (576p)** | tvg-id: `CartoonNetworkCEE.uk@Ukraine` | channel-id: `CartoonNetworkCEE.uk@Ukraine` | 
-14. **Cartoon Network Latin America Brazil (720p)** | tvg-id: `CartoonNetworkLatinAmerica.us@Brazil` | channel-id: `CartoonNetworkLatinAmerica.us@Brazil` | 
-15. **Cartoon Network Latin America North Atlantic (1080p)** | tvg-id: `CartoonNetworkLatinAmerica.us@NorthAtlantic` | channel-id: `CartoonNetworkLatinAmerica.us@NorthAtlantic` | 
-16. **Cartoon Network Latin America South Atlantic (1080p)** | tvg-id: `CartoonNetworkLatinAmerica.us@SouthAtlantic` | channel-id: `CartoonNetworkLatinAmerica.us@SouthAtlantic` | 
-17. **Cartoon Network Latin America South Pacific (576p)** | tvg-id: `CartoonNetworkLatinAmerica.us@SouthPacific` | channel-id: `CartoonNetworkLatinAmerica.us@SouthPacific` | 
-18. **DreamWorks Channel Asia (1080p)** | tvg-id: `DreamWorksChannelAsia.us@SD` | channel-id: `DreamWorksChannelAsia.us@SD` | 
-19. **Disney Jr. Latin America South (1080p)** | tvg-id: `DisneyJrLatinAmerica.ar@South` | channel-id: `DisneyJrLatinAmerica.ar@South` | 
-20. **Stingray Hit List** | tvg-id: `StingrayHitList.ca` | channel-id: `StingrayHitList.ca` | 
-21. **Tiny 4K UHD** | tvg-id: `custom.xxx-tiny-4k-uhd` | channel-id: `custom.xxx-tiny-4k-uhd` | 
+10. **Laboral TV (360p)** | tvg-id: `LaboralTV.br@SD` | channel-id: `LaboralTV.br@SD` | 
+11. **Xuzhou Economic Life Channel (1080p)** | tvg-id: `XuzhouEconomicLifeChannel.cn@SD` | channel-id: `XuzhouEconomicLifeChannel.cn@SD` | 
+12. **Cartoon Network CEE Czech Republic** | tvg-id: `CartoonNetworkCEE.uk@CzechRepublic` | channel-id: `CartoonNetworkCEE.uk@CzechRepublic` | 
+13. **Cartoon Network CEE Poland** | tvg-id: `CartoonNetworkCEE.uk@Poland` | channel-id: `CartoonNetworkCEE.uk@Poland` | 
+14. **Cartoon Network CEE Ukraine (576p)** | tvg-id: `CartoonNetworkCEE.uk@Ukraine` | channel-id: `CartoonNetworkCEE.uk@Ukraine` | 
+15. **Cartoon Network Latin America Brazil (720p)** | tvg-id: `CartoonNetworkLatinAmerica.us@Brazil` | channel-id: `CartoonNetworkLatinAmerica.us@Brazil` | 
+16. **Cartoon Network Latin America North Atlantic (1080p)** | tvg-id: `CartoonNetworkLatinAmerica.us@NorthAtlantic` | channel-id: `CartoonNetworkLatinAmerica.us@NorthAtlantic` | 
+17. **Cartoon Network Latin America South Atlantic (1080p)** | tvg-id: `CartoonNetworkLatinAmerica.us@SouthAtlantic` | channel-id: `CartoonNetworkLatinAmerica.us@SouthAtlantic` | 
+18. **Cartoon Network Latin America South Pacific (576p)** | tvg-id: `CartoonNetworkLatinAmerica.us@SouthPacific` | channel-id: `CartoonNetworkLatinAmerica.us@SouthPacific` | 
+19. **DreamWorks Channel Asia (1080p)** | tvg-id: `DreamWorksChannelAsia.us@SD` | channel-id: `DreamWorksChannelAsia.us@SD` | 
+20. **Disney Jr. Latin America South (1080p)** | tvg-id: `DisneyJrLatinAmerica.ar@South` | channel-id: `DisneyJrLatinAmerica.ar@South` | 
+21. **Stingray Hit List** | tvg-id: `StingrayHitList.ca` | channel-id: `StingrayHitList.ca` | 
+22. **Tiny 4K UHD** | tvg-id: `custom.xxx-tiny-4k-uhd` | channel-id: `custom.xxx-tiny-4k-uhd` | 
