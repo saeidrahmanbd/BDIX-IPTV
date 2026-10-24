@@ -1,1 +1,0 @@
-Conservative restore retrigger 2026-10-22: restore curated International candidates and normalize complete Adult prefixes.
