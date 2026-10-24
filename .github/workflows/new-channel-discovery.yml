@@ -2,7 +2,7 @@ name: IPTV New Channel Discovery
 
 # Manual trigger requested: 2026-10-24 discovery refresh
 # Force fresh discovery run: 2026-10-24 19:00 Asia/Dhaka
-# Retry after policy-test fix: 2026-10-24 19:30 Asia/Dhaka
+# Policy-test import mismatch resolved; trigger fresh discovery on current main
 on:
   push:
     branches: [main]
