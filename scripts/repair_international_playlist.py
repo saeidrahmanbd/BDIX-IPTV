@@ -244,7 +244,6 @@ def main():
   if not g:
    info=set_attr(info,'group-title','International');g='International'
   info,id_added=backfill_exact_tvg_id(info,g,id_by_name)
-  info,id_added=backfill_exact_tvg_id(info,g,id_by_name)
   ids_backfilled+=int(id_added)
   if g in NO_NUMBER and attrs(info).get('tvg-chno'):info=remove_attr(info,'tvg-chno')
   b[0]=info;kept.append(b)
@@ -271,7 +270,7 @@ def main():
  PLAYLIST.write_text('\n'.join(lines).rstrip()+'\n',encoding='utf-8')
  out=[f'# International Playlist Audit','',f'- Entries: {len(blocks)}',f'- Missing tvg-id values backfilled from exact, unambiguous primary-playlist names: {ids_backfilled}',f'- Exact duplicate URLs removed: {duplicate}',f'- Malformed entries removed: {malformed}',f'- Backup entries retained unchanged: {backup_retained}',f'- Automatic Backup promotion/migration: disabled',f'- Logos repaired to repository-local assets: {repaired}',f'- Logos recovered using external/iptv-org sources: {downloaded}',f'- Entries still without a safe local logo: {unresolved}','- Stream URLs changed: 0','', '## Backup policy\n- Existing Backup entries are retained for manual review.']
  out += [f'{i}. **{n}** | tvg-id: `{tid or "-"}` | channel-id: `{cid or "-"}` | ' for i,(n,tid,cid,u) in enumerate(orphan_rows,1)]
- out += ['', '## Unresolved logos', '', 'Stream URLs are intentionally omitted from this public report; Adult-category names are omitted from the detailed list.']+[f'{i}. **{n}** | tvg-id: `{tid or "-"}` | channel-id: `{cid or "-"}` | URL: `{u}`' for i,(n,tid,cid) in enumerate(unresolved_rows,1)]
+ out += ['', '## Unresolved logos', '', 'Stream URLs are intentionally omitted from this public report; Adult-category names are omitted from the detailed list.']+[f'{i}. **{n}** | tvg-id: `{tid or "-"}` | channel-id: `{cid or "-"}` | ' for i,(n,tid,cid) in enumerate(unresolved_rows,1)]
  Path('reports').mkdir(exist_ok=True);Path('reports/international-playlist-audit.md').write_text('\n'.join(out)+'\n',encoding='utf-8')
  print(f'International audit: entries={len(blocks)} tvg_ids_backfilled={ids_backfilled} duplicate_urls_removed={duplicate} malformed_removed={malformed} backups_retained={backup_retained} logos_repaired={repaired} logos_external={downloaded} logos_unresolved={unresolved}')
 if __name__=='__main__':main()
