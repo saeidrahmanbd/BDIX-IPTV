@@ -67,3 +67,8 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 - FilmUA Live
 - Fox 5
 - FX TV
+
+## 2026-10-24
+
+- 🖼️ **1 logo reference(s) corrected**
+
