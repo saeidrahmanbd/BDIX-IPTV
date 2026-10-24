@@ -74,9 +74,7 @@ LOCAL_OVERRIDES = {
     "global tv": "unused/global-tv-1080p-5ffc043912.png",
     "channel 1": "channel-1.png",
     "classic movies": "unused/classic-movies-channel-1d5f82d98a.png",
-    "nickonline bob esponja": "international/nickonline-bob-esponja-720p-not-24-7.png",
-    "nickonline hd": "international/nickonline-hd-720p.png",
-    "allo cine": "international/allo-cine-1080p.jpg",
+    "allo cine": "allo-cine-1080p.webp",
 }
 FORCED_CHANNEL_LOGOS = {
     "bollygold": "nh-bollygold-dbedeff9.png",
