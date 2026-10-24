@@ -1,0 +1,80 @@
+name: International Channel Discovery
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/international-channel-discovery.yml'
+      - 'scripts/discover_international_channels.py'
+      - 'scripts/validate_international_playlist.py'
+      - 'tests/test_international_discovery_policy.py'
+  schedule:
+    - cron: '23 3 * * *' # 09:23 Asia/Dhaka (UTC+6)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# All playlist writers share one queue to protect main-branch playlist updates.
+concurrency:
+  group: iptv-playlist-main-writer-v2
+  cancel-in-progress: false
+  queue: max
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: '3.12'
+      - name: Test strict International movie/music policy
+        run: python -m unittest discover -s tests -p 'test_international_discovery_policy.py'
+      - name: Compile discovery and validation scripts
+        run: python -m py_compile scripts/discover_international_channels.py scripts/validate_international_playlist.py
+      - name: Discover only Movies/Music channels and eligible backup streams
+        run: python scripts/discover_international_channels.py
+      - name: Enforce required playlist attribution
+        run: python scripts/enforce_playlist_attribution.py International-Playlist.m3u
+      - name: Validate International playlist and discovery queues
+        run: python scripts/validate_international_playlist.py
+      - name: Commit discovery changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add International-Playlist.m3u reports/international-channel-discovery.md logos/
+          if git diff --cached --quiet; then
+            echo "No International discovery changes to publish."
+            exit 0
+          fi
+          git commit -m 'Discover and add international channels'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git pull --rebase origin main; then
+              git rebase --abort || true
+              echo "::error::Rebase failed; International discovery changes were not pushed."
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "::warning::Push attempt \${attempt} failed; retrying after rebase."
+            sleep 3
+          done
+          echo "::error::Unable to publish International discovery after three attempts."
+          exit 1
+      - name: Upload discovery report
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: international-channel-discovery
+          path: reports/international-channel-discovery.md
+          if-no-files-found: warn
+          retention-days: 14
