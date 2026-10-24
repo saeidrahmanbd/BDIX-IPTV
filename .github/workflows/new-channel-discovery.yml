@@ -10,7 +10,7 @@ permissions:
 
 # Same group as IPTV Playlist Update (maintenance): only one main-branch writer at a time.
 concurrency:
-  group: iptv-playlist-main-writer
+  group: iptv-playlist-main-writer-v2
   cancel-in-progress: false
   queue: max
 
