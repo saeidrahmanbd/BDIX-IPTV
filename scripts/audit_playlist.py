@@ -287,6 +287,41 @@ for cid, items in sorted(by_id.items()):
     if len(names) > 1 or len(groups) > 1 or len(countries) > 1:
         metadata_conflicts.append((cid, names, groups, countries))
 
+def cross_queue_name_key(value):
+    value = unicodedata.normalize("NFKC", str(value or "")).casefold().strip()
+    value = re.sub(r"\s*(?:\[[^]]*(?:geo[- ]?blocked|geo blocked)[^]]*\]|\((?:\d{3,4}[pi]|UHD|FHD|HD\+?|SD)\)|\s+(?:\d{3,4}[pi]))\s*$", "", value, flags=re.I)
+    value = re.sub(r"\s+", " ", value).strip()
+    aliases = {
+        "disney channel (india)": "disney channel india",
+        "gazi tv": "g tv",
+        "nick": "nickelodeon (india)",
+    }
+    value = aliases.get(value, value)
+    return re.sub(r"[^a-z0-9]+", "", value)
+
+
+# Report label/ID variants across primary and review groups separately from
+# primary-only blocking metrics. This is diagnostic only: no IDs or URLs change.
+cross_id_names = defaultdict(list)
+cross_name_ids = defaultdict(list)
+for info, url in entries:
+    a = attrs(info)
+    cid = identity(info).casefold()
+    name = display_name(info).strip()
+    key = cross_queue_name_key(name)
+    group = a.get("group-title", "").strip() or "Uncategorized"
+    if cid and key:
+        cross_id_names[cid].append((name, group, key))
+        cross_name_ids[key].append((cid, name, group))
+cross_queue_metadata_variants = {
+    cid: rows for cid, rows in cross_id_names.items()
+    if len({key for _, _, key in rows}) > 1
+}
+cross_queue_name_id_collisions = {
+    key: rows for key, rows in cross_name_ids.items()
+    if len({cid for cid, _, _ in rows if cid}) > 1
+}
+
 REVIEW_GROUPS = {"New Channels", "New Backup"}
 name_collisions = {k: [x for x in v if attrs(x[0]).get("group-title", "").strip() not in REVIEW_GROUPS] for k, v in by_name.items()}
 name_collisions = {k:v for k,v in name_collisions.items() if len({identity_root(identity(x[0])) for x in v}) > 1}
@@ -413,8 +448,8 @@ review_queue_country_issues = review_queue_country_errors(
     [(attrs(info), display_name(info), url) for info, url in entries], _reference)
 
 lines = [
-    "# Playlist Audit", "", "Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.", "", "## Summary", "",
-    f"- Playlist entries: **{len(entries)}**", f"- Unique channel IDs: **{len(by_id)}**", f"- IDs with multiple streams: **{len(duplicate_ids)}**", f"- Duplicate stream URLs: **{len(duplicate_urls)}**", f"- Metadata conflicts: **{len(metadata_conflicts)}**", f"- Same-name / different-ID collisions: **{len(name_collisions)}**", f"- Cross-country backup collisions: **{len(cross_country_backups)}**", f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**", f"- Protected primary-entry changes: **{len(protected_changes)}**", f"- Logo exceptions requiring repair: **{len(logo_exceptions)}**", f"- External logo references (review only): **{len(logo_warnings)}**", f"- Logo references checked: **{sum(logo_counts.values())}**", f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**", f"- Potential near-duplicate primary name groups (review only): **{len(near_duplicate_name_groups)}**", f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**", f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**", f"- Primary entries missing tvg-country: **{len(missing_primary_country)}**", f"- Primary entries missing tvg-language: **{len(missing_primary_language)}**", f"- Malformed EXTINF entries: **{len(malformed_extinf)}**", f"- Category block-order issues: **{len(category_order_issues)}**", f"- Category registry issues: **{len(category_registry_issues)}**", f"- Alphabetical ordering issues: **{len(alphabetical_order_issues)}**", f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**", f"- Signed/tokenized stream URLs: **{len(signed_urls)}**", f"- Embedded Xtream-style credential paths (redacted): **{len(xtream_credential_paths)}**", ""]
+    "# Playlist Audit", "", "Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.", "Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.", "", "## Summary", "",
+    f"- Playlist entries: **{len(entries)}**", f"- Unique channel IDs: **{len(by_id)}**", f"- IDs with multiple streams: **{len(duplicate_ids)}**", f"- Duplicate stream URLs: **{len(duplicate_urls)}**", f"- Metadata conflicts: **{len(metadata_conflicts)}**", f"- Same-name / different-ID collisions: **{len(name_collisions)}**", f"- Cross-queue same-ID name variants (review): **{len(cross_queue_metadata_variants)}**", f"- Cross-queue normalized-name/different-ID groups (review): **{len(cross_queue_name_id_collisions)}**", f"- Cross-country backup collisions: **{len(cross_country_backups)}**", f"- IDs with multiple logo references: **{sum(1 for v in logos_by_id.values() if len(v) > 1)}**", f"- Protected primary-entry changes: **{len(protected_changes)}**", f"- Logo exceptions requiring repair: **{len(logo_exceptions)}**", f"- External logo references (review only): **{len(logo_warnings)}**", f"- Logo references checked: **{sum(logo_counts.values())}**", f"- Duplicate primary identities: **{len(primary_duplicate_ids)}**", f"- Potential near-duplicate primary name groups (review only): **{len(near_duplicate_name_groups)}**", f"- Primary channel-number collisions: **{len(primary_chno_collisions)}**", f"- Primary entries missing channel numbers: **{len(missing_primary_chno)}**", f"- Primary entries missing tvg-country: **{len(missing_primary_country)}**", f"- Primary entries missing tvg-language: **{len(missing_primary_language)}**", f"- Malformed EXTINF entries: **{len(malformed_extinf)}**", f"- Category block-order issues: **{len(category_order_issues)}**", f"- Category registry issues: **{len(category_registry_issues)}**", f"- Alphabetical ordering issues: **{len(alphabetical_order_issues)}**", f"- Suspicious URL credentials/syntax: **{len(suspicious_urls)}**", f"- Signed/tokenized stream URLs: **{len(signed_urls)}**", f"- Embedded Xtream-style credential paths (redacted): **{len(xtream_credential_paths)}**", ""]
 lines += ["", "## Primary Metadata Completeness", "",
     "Missing country/language values are informational, not a reason to delete, reclassify, or block otherwise valid channel entries. Only trusted exact-ID source metadata should be used to fill these fields.",
     f"- Active primary entries missing tvg-country: **{len(missing_primary_country)}**",
@@ -433,6 +468,21 @@ if category_registry_issues:
     lines.extend("- " + issue for issue in category_registry_issues)
 else:
     lines.append("Canonical registry matches the permanent IPTV category order.")
+lines += ["", "## Cross-Queue Identity Variants", "",
+    "These diagnostics include canonical and review groups. Name/ID differences can be legitimate; this section does not merge identities, remove entries, or print stream URLs.", ""]
+if cross_queue_metadata_variants:
+    for cid, rows in sorted(cross_queue_metadata_variants.items()):
+        variants = sorted({(name, group) for name, group, _ in rows})
+        lines.append(f"- Same ID {cid}: " + "; ".join(f"{name} [{group}]" for name, group in variants))
+else:
+    lines.append("No same-ID label variants found across groups.")
+lines.append("")
+if cross_queue_name_id_collisions:
+    for key, rows in sorted(cross_queue_name_id_collisions.items()):
+        variants = sorted({(cid, name, group) for cid, name, group in rows})
+        lines.append("- Same normalized name: " + "; ".join(f"{name} [{cid}] ({group})" for cid, name, group in variants))
+else:
+    lines.append("No normalized same-name/different-ID groups found across groups.")
 lines += ["", "## Duplicate IDs", ""]
 for cid, items in sorted(duplicate_ids.items()):
     lines.append(f"### {cid} ({len(items)} streams)")
