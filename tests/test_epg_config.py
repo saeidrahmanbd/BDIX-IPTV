@@ -23,7 +23,7 @@ class EpgConfigTests(unittest.TestCase):
         self.assertEqual(a, b)
         self.assertEqual(len(a), len(set(a)))
 
-    def test_generator_covers_all_three_published_playlists(self):
+    def test_generator_covers_all_three_core_playlists(self):
         tree = ast.parse(GEN)
         playlists = next(
             node.value
