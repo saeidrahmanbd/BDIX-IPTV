@@ -10,9 +10,6 @@ Policy:
 - Non-Bangladeshi news and non-Islamic religious channels are rejected.
 - Movies and music from every country are allowed.
 - Playback is never tested by discovery.
-
-- Movies and music from every country are allowed.
-- Playback is never tested by this script.
 """
 from __future__ import annotations
 import hashlib,re,unicodedata,urllib.parse,urllib.request
