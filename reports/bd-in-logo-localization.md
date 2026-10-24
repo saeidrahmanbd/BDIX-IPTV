@@ -1,7 +1,7 @@
 # BD.IN Playlist Logo Localization
 
-- Playlist entries scanned: **626**
-- Existing repository-local logo entries: **500**
+- Playlist entries scanned: **470**
+- Existing repository-local logo entries: **393**
 - Channel names localized in this run: **0**
 - New local logo files created: **0**
 - Playlist metadata lines changed: **0**
