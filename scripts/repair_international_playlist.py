@@ -110,7 +110,10 @@ MANUAL_LOGOS={
  'Zoom':'zoom-tv.png',
  'Shemaroo Bollywood':'shemaroo-bollywood.png',
 }
+_LOCAL_LOGO_INDEX = None
+
 def safe_local(name):
+ global _LOCAL_LOGO_INDEX
  target=norm(name)
  if not target:return None
  # Prefer explicit, reviewed identity mappings before matching filenames.
@@ -119,16 +122,21 @@ def safe_local(name):
   p=LOGOS/manual
   if p.is_file() and 'unused' not in {x.casefold() for x in p.relative_to(LOGOS).parts}:
    return p
- candidates=[]
- for p in LOGOS.rglob('*'):
-  if not p.is_file() or p.suffix.lower() not in {'.png','.jpg','.jpeg','.webp','.svg'} or p.name.casefold() in BAD: continue
-  rel={x.casefold() for x in p.relative_to(LOGOS).parts}
-  if 'unused' in rel or p.stem.casefold().startswith('generated-fallback-'): continue
-  stem=norm(p.stem)
-  if not stem: continue
-  # Only exact normalized identities are safe. Substring matching can map unrelated logos (e.g. TV icons).
-  if stem==target:candidates.append((abs(len(stem)-len(target)),str(p),p))
- return sorted(candidates,key=lambda x:(x[0],x[1]))[0][2] if candidates else None
+ # Index local artwork once; rescanning the complete logo tree per playlist
+ # entry made the audit unnecessarily slow after protected queues were included.
+ if _LOCAL_LOGO_INDEX is None:
+  index={}
+  if LOGOS.is_dir():
+   for p in LOGOS.rglob('*'):
+    if not p.is_file() or p.suffix.lower() not in {'.png','.jpg','.jpeg','.webp','.svg'} or p.name.casefold() in BAD: continue
+    rel={x.casefold() for x in p.relative_to(LOGOS).parts}
+    if 'unused' in rel or p.stem.casefold().startswith('generated-fallback-'): continue
+    stem=norm(p.stem)
+    if stem:index.setdefault(stem,[]).append(p)
+  _LOCAL_LOGO_INDEX=index
+ candidates=_LOCAL_LOGO_INDEX.get(target,[])
+ # Only exact normalized identities are safe. Substring matching can map unrelated logos.
+ return sorted(((abs(len(p.stem)-len(target)),str(p),p) for p in candidates),key=lambda x:(x[0],x[1]))[0][2] if candidates else None
 
 def download(src,name):
  try:
