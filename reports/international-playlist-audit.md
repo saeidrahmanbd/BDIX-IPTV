@@ -6,7 +6,7 @@
 - Malformed entries removed: 0
 - Backup entries retained for manual review: 225
 - Automatic promotion of alternate Backup streams to primary groups: disabled
-- Logos repaired to repository-local assets: 509
+- Logos repaired to repository-local assets: 26
 - Logos recovered using external/iptv-org sources: 0
 - Entries still without a safe local logo: 551
 - Stream URL strings rewritten: 0 (exact duplicate URL rows are counted separately)
