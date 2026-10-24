@@ -105,6 +105,10 @@ def make_extinf(a,name,group,code,logo):
  if a.get("tvg-language"):fields.append(f'tvg-language="{a["tvg-language"].replace(chr(34),"")}"')
  fields.append(f'channel-id="{(a.get("channel-id") or ident).replace(chr(34),"")}"'); fields.append(f'group-title="{group}"'); return "#EXTINF:-1 "+" ".join(fields)+","+clean
 def natural_key(value):return tuple(int(x) if x.isdigit() else x.casefold() for x in re.split(r"(\d+)",value or ""))
+def category_registry(groups):
+ fixed={g.casefold() for g in FIXED_GROUPS}; tail={g.casefold() for g in TAIL_GROUPS}
+ present={g.strip() for g in groups if g and g.strip().casefold() not in fixed|tail}
+ return FIXED_GROUPS+sorted(present,key=str.casefold)+TAIL_GROUPS
 def main():
  if not PLAYLIST.exists():raise SystemExit("International-Playlist.m3u not found; refusing to create it.")
  req=urllib.request.Request(SOURCE_URL,headers={"User-Agent":"BDIX-IPTV-International-Discovery/1.0"})
@@ -179,7 +183,7 @@ def main():
    b[0]=make_extinf(a,name,group,code,a.get("tvg-logo",""))
    migrated.append((name,old,group))
   normalized.append(b)
- dynamic=FIXED_GROUPS+sorted(country_group(c) for c in country_groups)+TAIL_GROUPS; rank={g.casefold():i for i,g in enumerate(dynamic)}
+ present_groups={attrs(b[0]).get("group-title","").strip() for b in normalized}; dynamic=category_registry(present_groups); rank={g.casefold():i for i,g in enumerate(dynamic)}
  normalized.sort(key=lambda b:(rank.get(attrs(b[0]).get("group-title","").strip().casefold(),len(rank)),natural_key(name_of(b)),url_of(b).casefold()))
  header="#PLAYLIST-STUDIO-CATEGORIES:"+str(dynamic).replace("'",'"'); out=[x for x in prefix if not x.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]; idx=next((i+1 for i,x in enumerate(out) if x.startswith("#EXTM3U")),0); out.insert(idx,header)
  for b in normalized:out.extend(b)
