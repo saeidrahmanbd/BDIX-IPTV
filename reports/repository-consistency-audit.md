@@ -37,7 +37,7 @@ The validation failure at commit 226674d only reported validate_international_pl
 - **EPG availability and rights:** Bangladesh guide coverage remains weak, and redistribution rights are not confirmed for every source. Technical mapping/coverage percentages are not a licensing approval.
 - **BDIX Test entries:** the misleading Test group and its repeated Bangla Vision label/logo remain a separate playlist-content cleanup item. This re-audit did not guess replacement identities.
 - **Asset inventory:** the repository has many unreferenced and duplicate logo files. They were not bulk-deleted because filenames alone cannot establish that an asset is unused by a restore workflow or historical playlist.
-- **Image file naming:** assets/Saeid Rahman.png has previously been reported as JPEG data under a .png name. This remains pending a binary-safe rename and reference update.
+- **Image file naming:** renamed the banner asset path to assets/Saeid Rahman.jpg by reusing the original Git blob, preserving the binary bytes exactly; updated the README reference.
 - **Action pinning:** workflows still use action version tags rather than immutable commit SHAs. Dependabot keeps those tags current, but it does not provide SHA pinning.
 - **Generated report timing:** audit, EPG, stream-health, logo, and Update Report files should be regenerated and reviewed together after the current maintenance run; values from different timestamps must not be compared as though they came from one snapshot.
 

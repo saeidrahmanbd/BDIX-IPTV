@@ -1,6 +1,6 @@
 <!-- BDIX-IPTV Banner -->
 <p align="center">
-  <img src="assets/Saeid%20Rahman.png" alt="BDIX-IPTV — Bangladesh, India & selected international IPTV collection" width="100%">
+  <img src="assets/Saeid%20Rahman.jpg" alt="BDIX-IPTV — Bangladesh, India & selected international IPTV collection" width="100%">
 </p>
 
 <h1 align="center">📺 BDIX-IPTV</h1>
