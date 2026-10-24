@@ -1,47 +1,34 @@
-# BD.IN-Playlist Fresh Audit Report
+# BD.IN-Playlist Fresh Audit Report — Metadata Validation
 
-- Audit base: prior validated audit `52b3325`, preserving its category corrections and local edits.
-- Final playlist: **461 entries** — **262 primary identities**, **199 alternative streams in Backup**.
-- Duplicate stream URLs: **0**. Duplicate primary identities: **0**. External logo URLs: **0**.
-- Local logo assignments: **417 / 461**; **41** identities still have no confidently matched local logo.
+- Final entries: **461** — **262 primary channels** and **199 backup streams**.
+- Duplicate stream URLs: **0**. External logo URLs: **0**.
+- Repository-local logos assigned: **417 / 461**; **41** identities still need a confidently matched local logo.
 
-## Focused final corrections
+## Final metadata corrections
 
-- Normalized `Enter 10 Bangla` to `Enter10 Bangla` and merged its distinct URL under the existing primary identity in Indian Bangla.
-- Merged `STAR JALSHA MOVIES` with `Jalsha Movies` under Indian Movies.
-- Corrected `Channel 52` to the Bangladesh group using reference metadata.
-- Moved `& Pictures` and `KTV Tamil` to Indian Movies; `Sony One Hits` and `Shemaroo Josh` to Indian Music.
-- Moved `Gopal Bhar TV` to Kids and merged `Wild` into `Wild TV` in Documentary & Wildlife.
-- Preserved all distinct alternative streams under Backup and used only verified repository-local logo files.
+- Corrected KTV Tamil to KTV Bangla based on its existing KTV Bangla stream path and local KTV Bangla logo.
+- Corrected Nat Geo Bangla from the incorrect `PK` country code to `IN`, matching its India-Bangla stream path; aligned its ID with the corrected channel identity.
+- Set Discovery Bangla to `IN` based on its India-Bangla source path.
+- Renamed Sony One Hits to Sony One Hits Action based on its French Sony One Hits Action stream URL; classified it as International (`FR`) and removed any uncertain logo instead of assigning a wrong one.
+- Restored Shemaroo Josh to the reference playlist’s Indian Movies group and reused its existing local logo/EPG metadata.
+- Normalized IDs for ZB Cartoon TV, Gopal Bhar TV, and ITV Bangla where the previous ID was missing a country/contained the channel-name typo.
 
-## Group counts
+## Final group counts
 
 | Group | Entries |
 |---|---:|
 | Bangladesh | 53 |
 | Indian Bangla | 21 |
-| Indian Movies | 22 |
-| Indian Music | 18 |
+| Indian Movies | 23 |
+| Indian Music | 16 |
 | Indian Entertainment | 17 |
 | Pakistani | 4 |
-| International | 36 |
+| International | 37 |
 | Documentary & Wildlife | 24 |
 | Kids | 26 |
 | Religious | 14 |
 | Sports | 27 |
 | Backup | 199 |
-
-## Other group corrections
-
-| Correction | Identities |
-|---|---:|
-| Indian Entertainment → Indian Movies | 2 |
-| Indian Bangla → Bangladesh | 1 |
-| International → Indian Bangla | 1 |
-| Indian Movies → Indian Music | 1 |
-| Indian Entertainment → Indian Music | 1 |
-| International → Documentary & Wildlife | 1 |
-| International → Kids | 1 |
 
 ## Remaining local logo gaps
 
@@ -75,7 +62,7 @@
 - Pix 11
 - RADBULL TV
 - Rang TV
-- Sony One Hits
+- Sony One Hits Action
 - South Indian Movies
 - SRK Tv
 - Ten Cricket
