@@ -19,6 +19,10 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
     def test_country_group_name_is_available(self):
         self.assertEqual(discovery.country_group('NP'),'Nepal'); self.assertEqual(discovery.country_group('TH'),'Thailand'); self.assertEqual(discovery.country_group('JP'),'Japan')
     def test_country_threshold_is_five(self): self.assertEqual(discovery.COUNTRY_THRESHOLD,5)
+    def test_category_registry_only_lists_groups_present_in_playlist(self):
+        groups=discovery.category_registry(["Bangladesh","United Kingdom","International","Backup"])
+        self.assertEqual(groups,discovery.FIXED_GROUPS+["United Kingdom"]+discovery.TAIL_GROUPS)
+
     def test_bangladesh_news_is_allowed(self): self.assertEqual(self.classify('Channel 24','News','BD','Channel24.bd'),('Bangladesh',None,'BD'))
     def test_foreign_news_is_rejected(self):
         group,reason,country=self.classify('World News','News','US','WorldNews.us'); self.assertIsNone(group); self.assertEqual(reason,'non-Bangladeshi or unverified-country news channel')
