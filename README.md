@@ -41,9 +41,9 @@ A curated IPTV collection focused on **🇧🇩 Bangladeshi channels, 🇮🇳 I
 
 > **Important:** backup entries are references to alternate stream URLs. Multiple URLs can share the same CDN, origin, rendition family, or delivery infrastructure, so a backup count is **not** a guarantee of independent redundancy.
 
-| 🧼 Metadata | 🖼️ Local Logos | 🔁 Backup References | 📡 EPG Monitoring |
+| 🧼 Metadata | 🖼️ Local Logo Assets | 🔁 Backup References | 📡 EPG Monitoring |
 |:---:|:---:|:---:|:---:|
-| Consistent names, groups & IDs | Hosted in the repository | Reviewed alternates; independence audited separately | Coverage measured, not guaranteed |
+| Consistent names, groups & IDs | Repository-local when assigned; missing coverage is reported separately | Reviewed alternates; independence audited separately | Coverage measured, not guaranteed |
 
 ## 📺 Choose a Playlist
 
@@ -199,6 +199,7 @@ Automated maintenance covers:
 |---|---|
 | 📊 [Project Dashboard](assets/dashboard.svg) | Generated playlist and maintenance summary |
 | 🧹 [Playlist Audit](reports/playlist-audit.md) | Duplicates, identity and metadata checks |
+| 🧭 [Repository Consistency Audit](reports/repository-consistency-audit.md) | Scope, workflow, report and documentation caveats |
 | 📡 [Stream Health](reports/stream-health.md) | Endpoint availability monitoring and failure classification |
 | 🧩 [Backup Independence Audit](reports/backup-independence-audit.md) | Shared-host/origin and fallback-family review |
 | 🛠️ [Maintenance Report](reports/maintenance-report.md) | Automated maintenance summary |
