@@ -21,8 +21,8 @@ PLAYLIST=Path("International-Playlist.m3u"); REPORT=Path("reports/international-
 SOURCE_URL="https://iptv-org.github.io/iptv/index.category.m3u"; RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 COUNTRY_THRESHOLD=5; MAX_NEW_CHANNELS=50; MAX_NEW_BACKUPS=50; MAX_NEW_PER_GROUP=25; MAX_SOURCE_BYTES=50*1024*1024; MAX_LOGO_BYTES=2*1024*1024
 FIXED_GROUPS=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani"]
-TAIL_GROUPS=["International","Documentary & Wildlife","Kids","Religious","Sports","New Channels","New Backup","Backup"]
-STAGING_GROUPS={"new channels","new backup"}; LEGACY_GROUPS={"not playing","international movies","international music"}
+TAIL_GROUPS=["Adult","International","Documentary & Wildlife","Kids","Religious","Sports","Backup"]
+STAGING_GROUPS=set(); LEGACY_GROUPS={"new channels","new backup","not playing","international movies","international music","test"}
 COUNTRY_NAMES={"BD":"Bangladesh","IN":"India","PK":"Pakistan","NP":"Nepal","TH":"Thailand","JP":"Japan","KR":"South Korea","ID":"Indonesia","MY":"Malaysia","PH":"Philippines","VN":"Vietnam","CN":"China","TW":"Taiwan","HK":"Hong Kong","SG":"Singapore","AU":"Australia","NZ":"New Zealand","GB":"United Kingdom","US":"United States","CA":"Canada","MX":"Mexico","BR":"Brazil","AR":"Argentina","CL":"Chile","CO":"Colombia","PE":"Peru","ES":"Spain","PT":"Portugal","FR":"France","DE":"Germany","IT":"Italy","NL":"Netherlands","BE":"Belgium","CH":"Switzerland","AT":"Austria","SE":"Sweden","NO":"Norway","DK":"Denmark","FI":"Finland","IS":"Iceland","IE":"Ireland","PL":"Poland","CZ":"Czech Republic","SK":"Slovakia","HU":"Hungary","RO":"Romania","BG":"Bulgaria","GR":"Greece","TR":"Turkey","RU":"Russia","UA":"Ukraine","IL":"Israel","AE":"United Arab Emirates","SA":"Saudi Arabia","QA":"Qatar","KW":"Kuwait","OM":"Oman","BH":"Bahrain","JO":"Jordan","LB":"Lebanon","EG":"Egypt","MA":"Morocco","DZ":"Algeria","TN":"Tunisia","ZA":"South Africa","NG":"Nigeria","KE":"Kenya","GH":"Ghana","TZ":"Tanzania","UG":"Uganda","ZW":"Zimbabwe","ET":"Ethiopia","LK":"Sri Lanka","MM":"Myanmar","KH":"Cambodia","LA":"Laos","MN":"Mongolia","KZ":"Kazakhstan","UZ":"Uzbekistan","AZ":"Azerbaijan","GE":"Georgia","AM":"Armenia","AL":"Albania","RS":"Serbia","HR":"Croatia","SI":"Slovenia","BA":"Bosnia and Herzegovina","ME":"Montenegro","MK":"North Macedonia","LT":"Lithuania","LV":"Latvia","EE":"Estonia","IR":"Iran","IQ":"Iraq","SY":"Syria","PS":"Palestine","FJ":"Fiji","WS":"Samoa","PG":"Papua New Guinea","BT":"Bhutan","MV":"Maldives"}
 ISO_CODES=set(COUNTRY_NAMES); ALIASES={"UK":"GB","EL":"GR"}; ATTR_RE=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 NEWS_GROUPS={"news"}; SPORTS_GROUPS={"sport","sports"}; DOC_GROUPS={"documentary","documentaries","wildlife","nature"}; KIDS_GROUPS={"kids","kid","children","childrens"}; RELIGIOUS_GROUPS={"religious","religion","faith"}; MOVIE_GROUPS={"movie","movies","cinema","film","films"}; MUSIC_GROUPS={"music","musics"}
@@ -113,13 +113,16 @@ def main():
  if not raw or len(raw)>MAX_SOURCE_BYTES:raise SystemExit("Source feed is empty or too large; playlist unchanged.")
  _,source=parse(raw.decode("utf-8-sig","replace")); prefix,existing=parse(PLAYLIST.read_text(encoding="utf-8-sig"))
  if not source:raise SystemExit("Source feed contains no channel records; playlist unchanged.")
- existing_urls={url_of(b).casefold() for b in existing if url_of(b)}; existing_primary=defaultdict(list); country_counts=Counter(); established=set()
+ existing_urls={url_of(b).casefold() for b in existing if url_of(b)}
+ existing_primary=defaultdict(list); country_primary_ids=defaultdict(set); established=set()
+ queue_or_nonprimary={"backup","new backup","not playing","new channels","adult","test"}
  for b in existing:
   a=attrs(b[0]); name=name_of(b); key=norm(name); group=a.get("group-title","").strip()
   if group.casefold() not in {"backup","new backup","not playing"} and key:existing_primary[key].append(a)
   code=country_code(a)
-  if code in ISO_CODES and group.casefold() not in {"backup","new backup","not playing"}:
-   country_counts[code]+=1
+  if code in ISO_CODES and group.casefold() not in queue_or_nonprimary:
+   ident=(a.get("tvg-id") or a.get("channel-id") or key).strip().casefold()
+   if ident:country_primary_ids[code].add(ident)
    if group.casefold()==country_group(code).casefold():established.add(code)
  candidates=[]; seen=set(); rejected=Counter()
  for b in source:
@@ -131,19 +134,27 @@ def main():
   base,reason,code=policy(a,name)
   if base is None:rejected[reason]+=1; continue
   seen.add(url.casefold()); candidates.append((a,name,url,norm(name),base,code))
- discovered_counts=Counter(code for _,_,_,_,_,code in candidates if code in ISO_CODES); totals=country_counts+discovered_counts
- country_groups=set(established)|{c for c,n in totals.items() if n>=COUNTRY_THRESHOLD}; country_groups={c for c in country_groups if country_group(c) and c not in {"BD","IN","PK"}}
+ discovered_primary_ids=defaultdict(set)
+ for a,name,url,key,base,code in candidates:
+  if code in ISO_CODES and key not in existing_primary:
+   ident=(a.get("tvg-id") or a.get("channel-id") or key).strip().casefold()
+   if ident:discovered_primary_ids[code].add(ident)
+ country_groups=set(established)
+ for code in set(country_primary_ids)|set(discovered_primary_ids):
+  if len(country_primary_ids.get(code,set())|discovered_primary_ids.get(code,set()))>=COUNTRY_THRESHOLD:
+   country_groups.add(code)
+ country_groups={c for c in country_groups if country_group(c) and c not in {"BD","IN","PK"}}
  additions=[]; new_rows=[]; backup_rows=[]; per_group=Counter(); planned={k:list(v) for k,v in existing_primary.items()}
  for a,name,url,key,base,code in candidates:
   if not key:continue
   is_backup=key in planned
   if is_backup:
    if len(backup_rows)>=MAX_NEW_BACKUPS:continue
-   target="New Backup"; canonical=planned[key][0]; cname=canonical.get("tvg-name",name).strip(); ccode=country_code(canonical)
+   target="Backup"; canonical=planned[key][0]; cname=canonical.get("tvg-name",name).strip(); ccode=country_code(canonical)
   else:
    if len(new_rows)>=MAX_NEW_CHANNELS:continue
-   target=country_group(code) if code in country_groups else "New Channels"
-   if target!="New Channels" and per_group[target]>=MAX_NEW_PER_GROUP:continue
+   target=country_group(code) if code in country_groups else base
+   if per_group[target]>=MAX_NEW_PER_GROUP:continue
    canonical=a; cname=name; ccode=code
   logo=local_logo(a,cname)
   if is_backup and canonical.get("tvg-logo","").startswith(RAW_BASE) and not logo:logo=canonical["tvg-logo"]
@@ -153,19 +164,25 @@ def main():
  all_blocks=existing+additions; migrated=[]; normalized=[]
  for b in all_blocks:
   a=attrs(b[0]); name=name_of(b); old=a.get("group-title","").strip(); group=old
-  if old.casefold() in LEGACY_GROUPS:group="International"
+  old_key=old.casefold()
   code=country_code(a)
-  if code in country_groups and old.casefold() in {"international","international movies","international music","new channels"}:
-   target=country_group(code)
-   if old.casefold()!=target.casefold():b[0]=make_extinf(a,name,target,code,a.get("tvg-logo","")); migrated.append((name,old,target))
-  elif group!=old:b[0]=make_extinf(a,name,group,code,a.get("tvg-logo",""))
+  if old_key in {"new backup","not playing","test"}:
+   group="Backup"
+  elif old_key in {"new channels","international movies","international music"}:
+   base,reason,policy_code=policy(a,name)
+   group=country_group(policy_code) if policy_code in country_groups else (base or "International")
+  elif code in country_groups and old_key=="international":
+   group=country_group(code)
+  if group!=old:
+   b[0]=make_extinf(a,name,group,code,a.get("tvg-logo",""))
+   migrated.append((name,old,group))
   normalized.append(b)
  dynamic=FIXED_GROUPS+sorted(country_group(c) for c in country_groups)+TAIL_GROUPS; rank={g.casefold():i for i,g in enumerate(dynamic)}
  normalized.sort(key=lambda b:(rank.get(attrs(b[0]).get("group-title","").strip().casefold(),len(rank)),natural_key(name_of(b)),url_of(b).casefold()))
  header="#PLAYLIST-STUDIO-CATEGORIES:"+str(dynamic).replace("'",'"'); out=[x for x in prefix if not x.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]; idx=next((i+1 for i,x in enumerate(out) if x.startswith("#EXTM3U")),0); out.insert(idx,header)
  for b in normalized:out.extend(b)
  PLAYLIST.write_text("\n".join(out).rstrip()+"\n",encoding="utf-8")
- REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Country threshold: {COUNTRY_THRESHOLD} legitimate primary channels.","- New primary channels go to New Channels unless their country group is established.","- New alternate streams go to New Backup.","- Existing country groups receive new primary channels directly.","- Playback was not tested.",f"- New channels: {len(new_rows)}",f"- New backup streams: {len(backup_rows)}",f"- Country migrations: {len(migrated)}","","## New Channels",""]
- report += [f"- **{n}** — `{g}` — {c}" for n,g,c in new_rows]; report += ["","## New Backup",""]+[f"- **{n}** — {c}" for n,c in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
+ REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Country threshold: {COUNTRY_THRESHOLD} legitimate primary channels.","- New primary channels go to an established/threshold country group or content category; staging queues are not used.","- New alternate streams go directly to Backup.","- Existing country groups receive new primary channels directly.","- Playback was not tested.",f"- New primary channels: {len(new_rows)}",f"- Backup alternates: {len(backup_rows)}",f"- Country migrations: {len(migrated)}","","## New primary channels",""]
+ report += [f"- **{n}** — `{g}` — {c}" for n,g,c in new_rows]; report += ["","## Backup alternates",""]+[f"- **{n}** — {c}" for n,c in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
  print(f"International discovery complete: new={len(new_rows)} new_backup={len(backup_rows)} migrations={len(migrated)} country_groups={len(country_groups)}")
 if __name__=="__main__":raise SystemExit(main())
