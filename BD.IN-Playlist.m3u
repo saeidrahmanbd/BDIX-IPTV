@@ -132,7 +132,7 @@ http://103.114.11.37:8081/Colors-bangla-cinema/index.m3u8
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/7ff57cc9046b4c188b51a0d506f36e7f/index_3.m3u8
 #EXTINF:-1 tvg-id="DhoomMusic.in@SD" tvg-name="Dhoom Music Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dhoom-music-bangla.png" tvg-chno="103" channel-id="DhoomMusic.in@SD" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Dhoom Music Bangla
 https://cdn.devm3u.top/server5/dhoom.m3u8
-#EXTINF:-1 tvg-id="DiscoveryBangla.in" tvg-name="Discovery Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-bangla.png" tvg-chno="177" channel-id="DiscoveryBangla.in" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Discovery Bangla
+#EXTINF:-1 tvg-id="DiscoveryBangla.in" tvg-name="Discovery Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-bangla.png" tvg-chno="177" channel-id="DiscoveryBangla.in" tvg-country="IN" tvg-language="ben" group-title="Documentary & Wildlife",Discovery Bangla
 https://tv.kbhub.online/AS-INDIA-BANGLA/IN-DISCOVERY-FHD-BANGLA.ts
 #EXTINF:-1 tvg-id="Enter10Bangla.in" tvg-name="Enter10 Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/enter10-bangla.png" tvg-chno="61" channel-id="Enter10Bangla.in" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Enter10 Bangla
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
@@ -144,7 +144,7 @@ https://tv.kbhub.online/AS-INDIA-BANGLA/IN-STAR-JALSHA-MOVIES-FHD.ts
 https://dbcanada.sonarbanglatv.com/jhankartv/jtv/index.m3u8
 #EXTINF:-1 tvg-id="KhushbooBangla.in@SD" tvg-name="Khushboo Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/khushboo-bangla.png" tvg-chno="66" channel-id="KhushbooBangla.in@SD" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Khushboo Bangla
 https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/index.m3u8
-#EXTINF:-1 tvg-id="NatGeoBangla.in" tvg-name="Nat Geo Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-nat-geo-bangla.png" tvg-chno="184" channel-id="NatGeoBangla.in" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Nat Geo Bangla
+#EXTINF:-1 tvg-id="NatGeoBangla.in" tvg-name="Nat Geo Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-nat-geo-bangla.png" tvg-chno="184" channel-id="NatGeoBangla.in" tvg-country="IN" tvg-language="ben" group-title="Documentary & Wildlife",Nat Geo Bangla
 https://tv.kbhub.online/AS-INDIA-BANGLA/IN-NAT-GEO-HD-BANGLA.ts
 #EXTINF:-1 tvg-id="Rang.in" tvg-name="Rang TV" tvg-chno="123" channel-id="Rang.in" tvg-country="IN" tvg-language="asm" group-title="Indian Entertainment",Rang TV
 https://tv.kbhub.online/AS-BANGLADESH/BD-RANG-TV-HD.ts
