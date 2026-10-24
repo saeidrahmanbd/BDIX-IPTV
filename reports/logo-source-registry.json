@@ -668,5 +668,15 @@
     "status": "third_party_verified",
     "source_url": "https://i.imgur.com/lgpIwId.png",
     "notes": "IPTV-org exact ID: StingrayHitList.ca IPTV-org public logo dataset Source page: https://i.imgur.com/lgpIwId.png"
+  },
+  "International-Playlist.m3u|custom.awaz-tv|Awaz TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/awaz-tv-3dcd7a36dc.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/FiUzzqb.png",
+    "notes": "Exact Awaz TV listing with AwazTVNetwork.pk identity Broadcaster logo served by a community playlist; reuse rights not specified Source page: https://gist.github.com/imran3/d7c2652e8955f45278f85bc3290b5130"
+  },
+  "International-Playlist.m3u|ArmeniaPremium.am@SD|Armenia Premium (720p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/armenia-premium-9b5936f400.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/IxOFvqz.png",
+    "notes": "Exact Armenia Premium channel listing Broadcaster logo served by a community playlist; reuse rights not specified Source page: https://gist.github.com/Hyperat0m/d33781da55beef57e91956f9e35b31b3"
   }
 }

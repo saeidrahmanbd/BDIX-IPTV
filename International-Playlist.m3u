@@ -394,7 +394,7 @@ http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23581
 http://115.42.65.142:9981/stream/channelid/299762256
 #EXTINF:-1 tvg-id="AVTKhyber.pk@SD" tvg-name="AVT Khyber (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/avt-khyber.png" tvg-country="PK" channel-id="AVTKhyber.pk@SD" tvg-language="und" group-title="Pakistani",AVT Khyber (1080p)
 http://115.42.65.142:9981/stream/channelid/1380586642
-#EXTINF:-1 group-title="Pakistani" tvg-id="custom.awaz-tv" tvg-name="Awaz TV" tvg-chno="222" channel-id="custom.awaz-tv" tvg-country="PK" tvg-language="snd",Awaz TV
+#EXTINF:-1 group-title="Pakistani" tvg-id="custom.awaz-tv" tvg-name="Awaz TV" tvg-chno="222" channel-id="custom.awaz-tv" tvg-country="PK" tvg-language="snd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/awaz-tv-3dcd7a36dc.png",Awaz TV
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23603
 #EXTINF:-1 tvg-id="BolEntertainment.pk@HD" tvg-name="Bol Entertainment HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bol-entertainment.png" tvg-country="PK" channel-id="BolEntertainment.pk@HD" tvg-language="und" group-title="Pakistani",Bol Entertainment HD
 https://vodzong.mjunoon.tv:8087/streamtest/Channel5-159-4/playlist.m3u8
@@ -1036,7 +1036,7 @@ http://31.148.48.15/Amedia_Premium_HD/index.m3u8
 http://107.167.7.162:8081/playlist/amhor/playlist.m3u8
 #EXTINF:-1 tvg-id="AneflixLive.us@HD" tvg-name="Aneflix Live (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/aneflix-live-720p.png" tvg-country="US" channel-id="AneflixLive.us@HD" tvg-language="und" group-title="International Movies",Aneflix Live (720p)
 https://stream-cdn-iad.vaughnsoft.net/play/live_a_neflix01.flv
-#EXTINF:-1 tvg-id="ArmeniaPremium.am@SD" tvg-name="Armenia Premium (720p)" tvg-country="AM" channel-id="ArmeniaPremium.am@SD" tvg-language="und" group-title="International Movies",Armenia Premium (720p)
+#EXTINF:-1 tvg-id="ArmeniaPremium.am@SD" tvg-name="Armenia Premium (720p)" tvg-country="AM" channel-id="ArmeniaPremium.am@SD" tvg-language="und" group-title="International Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/armenia-premium-9b5936f400.png",Armenia Premium (720p)
 http://stream.mcquack.net/123/index.m3u8
 #EXTINF:-1 tvg-id="AuroraMediaFilms.gt@SD" tvg-name="Aurora Media Films (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/aurora-media-films-720p.png" channel-id="AuroraMediaFilms.gt@SD" tvg-language="und" group-title="International Movies" tvg-country="GT",Aurora Media Films (720p)
 https://cdn.streamhispanatv.net:3417/live/auroramflive.m3u8
