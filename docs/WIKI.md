@@ -10,6 +10,7 @@ BDIX-IPTV is a curated IPTV playlist project focused on Bangladeshi channels, In
 - [Main IPTV playlist (M3U)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)
 - [BDIX playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u)
 - [International playlist (M3U)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)
+- [BD.IN playlist — Bangladesh & India](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BD.IN-Playlist.m3u)
 - [Download Center](docs/DOWNLOADS.md)
 - [Documentation index](docs/README.md)
 - [Xtream documentation](xtream/README.md)
@@ -28,8 +29,11 @@ BDIX-IPTV is a curated IPTV playlist project focused on Bangladeshi channels, In
 | IPTV-Playlist.m3u | Main curated playlist |
 | BDIX-Playlist.m3u | BDIX-focused playlist |
 | International-Playlist.m3u | Selected international channels, with country and content groupings |
+| BD.IN-Playlist.m3u | Additional Bangladesh & India collection, separate from the three core maintained playlists |
 
 Use the raw playlist links above to add a playlist to a compatible M3U/M3U8 player. Stream availability, provider requirements, and channel listings can change.
+
+> **Automation scope:** The shared EPG and core quality workflows currently audit the IPTV, BDIX, and International playlists. The additional `BD.IN-Playlist.m3u` file is listed for access but is not yet included in those automated checks.
 
 ## Playlist Studio
 
