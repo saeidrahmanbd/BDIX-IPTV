@@ -13,9 +13,14 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         if language:a['tvg-language']=language
         return discovery.policy(a,name)
     def test_movies_are_allowed_for_any_country(self):
-        self.assertEqual(self.classify('Cinema World','Movies','NP','CinemaWorld.np'),('International',None,'NP'))
+        self.assertEqual(self.classify('Cinema World','Movies','NP','CinemaWorld.np'),('International Movies',None,'NP'))
     def test_music_is_allowed_for_any_country(self):
-        self.assertEqual(self.classify('World Music','Music','TH','WorldMusic.th'),('International',None,'TH'))
+        self.assertEqual(self.classify('World Music','Music','TH','WorldMusic.th'),('International Music',None,'TH'))
+    def test_general_international_channel_is_rejected(self):
+        self.assertEqual(self.classify('Entertainment World','General','US','EntertainmentWorld.us'),(None,'international channel is not Movies or Music','US'))
+    def test_foreign_kids_sports_and_documentary_are_rejected_from_discovery(self):
+        for name,group in [('Cartoon World','Kids'),('World Sport','Sports'),('Nature World','Documentary')]:
+            self.assertEqual(self.classify(name,group,'US',name.replace(' ','')+'.us')[0],None)
     def test_country_group_name_is_available(self):
         self.assertEqual(discovery.country_group('NP'),'Nepal'); self.assertEqual(discovery.country_group('TH'),'Thailand'); self.assertEqual(discovery.country_group('JP'),'Japan')
     def test_country_threshold_is_five(self): self.assertEqual(discovery.COUNTRY_THRESHOLD,5)
@@ -27,16 +32,17 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         existing={"AT": {"a","b","c"}}
         added={"AT": {"d","e"}}
         self.assertIn("AT", discovery.qualified_country_groups(existing,added))
-    def test_under_threshold_general_channel_goes_to_new_channels(self):
-        self.assertEqual(discovery.primary_target("International","AT",set()),"New Channels")
-    def test_qualified_country_gets_its_own_group(self):
-        self.assertEqual(discovery.primary_target("International","AT",{"AT"}),"Austria")
+    def test_international_movie_does_not_become_a_country_group(self):
+        self.assertEqual(discovery.primary_target("International Movies","AT",{"AT"}),"International Movies")
+    def test_international_music_does_not_become_a_country_group(self):
+        self.assertEqual(discovery.primary_target("International Music","AT",{"AT"}),"International Music")
     def test_content_groups_do_not_accidentally_create_country_groups(self):
         self.assertFalse(discovery.counts_toward_country_group("Kids","AT"))
         self.assertTrue(discovery.counts_toward_country_group("New Channels","AT"))
-        self.assertTrue(discovery.counts_toward_country_group("International","AT"))
+        self.assertFalse(discovery.counts_toward_country_group("International","AT"))
+        self.assertFalse(discovery.counts_toward_country_group("International Movies","AT"))
     def test_category_registry_only_lists_groups_present_in_playlist(self):
-        groups=discovery.category_registry(["Bangladesh","United Kingdom","International","Backup"])
+        groups=discovery.category_registry(["Bangladesh","United Kingdom","International Movies","Backups"])
         self.assertEqual(groups,discovery.FIXED_GROUPS+["United Kingdom"]+discovery.TAIL_GROUPS)
 
     def test_bangladesh_news_is_allowed(self): self.assertEqual(self.classify('Channel 24','News','BD','Channel24.bd'),('Bangladesh',None,'BD'))
@@ -60,8 +66,8 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         group,reason,country=self.classify('Hindu Bhakti Music','Music','IN','BhaktiMusic.in'); self.assertIsNone(group); self.assertEqual(reason,'non-Islamic religious channel')
     def test_country_is_inferred_from_id_suffix(self):
         group,reason,country=self.classify('World News','News',None,'WorldNews.uk@HD'); self.assertIsNone(group); self.assertEqual(country,'GB')
-    def test_sports_and_documentaries_are_allowed(self):
-        self.assertEqual(self.classify('World Sport','Sports','US','WorldSport.us')[:2],('Sports',None)); self.assertEqual(self.classify('Nature World','Documentary','ZA','NatureWorld.za')[:2],('Documentary & Wildlife',None))
+    def test_country_specific_sports_and_documentaries_still_classify(self):
+        self.assertEqual(self.classify('World Sport','Sports','IN','WorldSport.in')[:2],('Sports',None)); self.assertEqual(self.classify('Nature World','Documentary','PK','NatureWorld.pk')[:2],('Documentary & Wildlife',None))
     def test_tokenized_urls_are_rejected_without_playback(self): self.assertEqual(discovery.safe_url('https://example.org/live.m3u8?token=abc'),False)
     def test_plain_stream_urls_are_accepted_by_syntax_only(self): self.assertEqual(discovery.safe_url('https://example.org/channel/index.m3u8'),True)
 if __name__=='__main__':unittest.main()
