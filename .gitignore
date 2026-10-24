@@ -1,0 +1,26 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Temporary/build/editor files
+tmp/
+.tmp/
+*.tmp
+*.log
+fixed_output/
+build/
+dist/
+.DS_Store
+Thumbs.db
+
+# epg/epg.xml intentionally remains tracked as the published XMLTV resource.
