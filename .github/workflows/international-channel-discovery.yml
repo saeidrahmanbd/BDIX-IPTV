@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/international-channel-discovery.yml'
       - 'scripts/discover_international_channels.py'
+      - 'scripts/validate_international_playlist.py'
       - 'tests/test_international_discovery_policy.py'
   schedule:
     - cron: '23 3 * * *' # 09:23 Asia/Dhaka (UTC+6)
