@@ -2,7 +2,7 @@ name: IPTV New Channel Discovery
 
 on:
   schedule:
-    - cron: '47 2 * * *'
+    - cron: '17 4 * * *' # 10:17 Asia/Dhaka; staggered from BDIX/maintenance schedules
   workflow_dispatch:
 
 permissions:
