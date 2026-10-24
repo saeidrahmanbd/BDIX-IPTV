@@ -146,7 +146,7 @@ https://dbcanada.sonarbanglatv.com/jhankartv/jtv/index.m3u8
 https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/index.m3u8
 #EXTINF:-1 tvg-id="NatGeoBangla.in" tvg-name="Nat Geo Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nvisionbd-official-nat-geo-bangla.png" tvg-chno="184" channel-id="NatGeoBangla.in" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Nat Geo Bangla
 https://tv.kbhub.online/AS-INDIA-BANGLA/IN-NAT-GEO-HD-BANGLA.ts
-#EXTINF:-1 tvg-id="RANGTV.bd" tvg-name="Rang TV" tvg-chno="123" channel-id="RANGTV.bd" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Rang TV
+#EXTINF:-1 tvg-id="Rang.in" tvg-name="Rang TV" tvg-chno="123" channel-id="Rang.in" tvg-country="IN" tvg-language="asm" group-title="Indian Entertainment",Rang TV
 https://tv.kbhub.online/AS-BANGLADESH/BD-RANG-TV-HD.ts
 #EXTINF:-1 tvg-id="RongeenTV.in@SD" tvg-name="Rongeen TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rongeen-tv.png" tvg-chno="67" channel-id="RongeenTV.in@SD" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Rongeen TV
 https://server.thelegitpro.in/rongeentv/rongeentv/index.m3u8
