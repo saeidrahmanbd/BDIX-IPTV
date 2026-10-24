@@ -4,7 +4,7 @@ from collections import Counter,defaultdict
 from datetime import datetime,timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-PLAYLIST=ROOT/"IPTV-Playlist.m3u"; AUDIT=ROOT/"reports/playlist-audit.md"; EPG=ROOT/"reports/epg-coverage.md"; EPG_DETAIL=ROOT/"reports/epg-three-playlist-audit.md"; HEALTH=ROOT/"reports/stream-health.md"; GATE=ROOT/"reports/pre-publish-gate.md"
+PLAYLIST=ROOT/"IPTV-Playlist.m3u"; AUDIT=ROOT/"reports/iptv-playlist-audit.md"; EPG=ROOT/"reports/epg-coverage.md"; EPG_DETAIL=ROOT/"reports/epg-three-playlist-audit.md"; HEALTH=ROOT/"reports/stream-health.md"; GATE=ROOT/"reports/pre-publish-gate.md"
 OUT_MD=ROOT/"reports/Update Report.md"; OUT_SVG=ROOT/"assets/dashboard.svg"; OUT_MAINT=ROOT/"reports/maintenance-report.md"; HISTORY=ROOT/"reports/maintenance-history.json"
 ATTR=re.compile(r'([\w-]+)="([^"]*)"')
 def metric(text,label):

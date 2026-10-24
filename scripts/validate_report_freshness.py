@@ -11,7 +11,7 @@ from pathlib import Path
 PLAYLIST_NAMES = ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u")
 MAX_REPORT_AGE = timedelta(hours=48)
 SINGLE_PLAYLIST_REPORTS = {
-    "reports/playlist-audit.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256", "Playlist SHA-256")),
+    "reports/iptv-playlist-audit.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256", "Playlist SHA-256")),
     "reports/pre-publish-gate.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256",)),
     "reports/iptv-metadata-backfill.md": ("IPTV-Playlist.m3u", ("After playlist SHA-256", "Playlist SHA-256", "Source playlist SHA-256")),
     "reports/iptv-fragile-streams.md": ("IPTV-Playlist.m3u", ("IPTV-Playlist.m3u SHA-256",)),

@@ -3,7 +3,7 @@
 
 Rules:
 - Only the Bangladesh and India country feeds are considered.
-- Indian News, Sports and Religious channels are STRICTLY PROHIBITED.
+- News, Sports, Kids and Religious channels from either country are permanently prohibited.
 - Existing stream URLs and normalized channel identities are never duplicated.
 - First unseen stream for a new identity -> New Channels.
 - Additional unseen streams for an existing/newly discovered identity -> New Backup.
@@ -13,13 +13,14 @@ Rules:
 from __future__ import annotations
 import json, re, unicodedata, urllib.request
 from collections import Counter
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import parse_qsl, urlparse
 
 from country_verification import norm_name, reference_from_playlists, verify_country
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
-REPORT = Path("reports/channel-discovery.md")
+REPORT = Path("reports/iptv-channel-discovery.md")
 SOURCES = (
     ("Bangladesh", "https://iptv-org.github.io/iptv/countries/bd.m3u"),
     ("India", "https://iptv-org.github.io/iptv/countries/in.m3u"),
@@ -28,24 +29,51 @@ BAD_WORDS = {
     "vod", "catchup", "catch-up", "test", "demo", "proxy", "proxied",
     "cors", "webcam", "radio", "podcast", "event", "ppv", "timeshift",
 }
-# HARD EXCLUSION: Indian News, Sports and Religious channels are never eligible.
-INDIA_FORBIDDEN_GROUPS = {"news", "sports", "religious"}
-INDIA_FORBIDDEN_WORDS = {
-    "news", "sport", "sports", "cricket", "football", "soccer", "tennis",
-    "religious", "religion", "devotional", "bhakti", "bhakthi", "spiritual",
-    "worship", "gospel", "christian", "christ", "islamic", "islam", "quran",
-    "quran", "hindu", "hinduism", "sanatan", "sikh", "gurbani", "gurubani",
-    "church", "temple", "mosque", "masjid", "sermons", "sermon", "prayer",
+# HARD EXCLUSION: News, Sports, Kids and Religious channels are prohibited for BOTH source countries.
+FORBIDDEN_CATEGORY_PATTERNS = {
+    "news": re.compile(r"\bnews\b", re.IGNORECASE),
+    "sports": re.compile(r"\b(?:sports?|cricket|football|soccer|tennis|racing)\b", re.IGNORECASE),
+    "kids": re.compile(r"\b(?:kids?|children|child|cartoons?|nursery|preschool|junior)\b", re.IGNORECASE),
+    "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|islamic|islam|quran|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|mosque|masjid|sermons?|prayer)\b", re.IGNORECASE),
 }
-INDIA_FORBIDDEN_BRANDS = re.compile(
-    r"\b(?:aad(?:i|ee)nath|aaseervatham|aastha|sadhna|sanskar|jinvani|satsang|jagran|"
+
+def canonical_channel_name(value: str) -> str:
+    value = re.sub(r"\([^)]*\)|\[[^]]*\]", " ", str(value or ""))
+    value = re.sub(r"\b(?:\d{3,4}p|uhd|fhd|hd|sd|4k)\b", " ", value, flags=re.IGNORECASE)
+    value = unicodedata.normalize("NFKD", value).casefold()
+    return re.sub(r"[^a-z0-9]+", " ", value).strip()
+
+PERMANENTLY_BANNED_CHANNEL_NAMES = {
+    canonical_channel_name(name) for name in (
+        "E-Vidya 10", "E-Vidya 11", "E-Vidya 12", "E-Vidya 4", "E-Vidya 5",
+        "E-Vidya 6", "E-Vidya 7", "E-Vidya 8", "E-Vidya 9", "Friends TV",
+    )
+}
+
+FORBIDDEN_WORDS = {
+    "news", "sport", "sports", "cricket", "football", "soccer", "tennis", "racing",
+    "religious", "religion", "devotional", "bhakti", "bhakthi", "spiritual", "worship",
+    "gospel", "christian", "christ", "islamic", "islam", "quran", "hindu", "hinduism",
+    "sanatan", "sikh", "gurbani", "gurubani", "church", "temple", "mosque", "masjid",
+    "sermons", "sermon", "prayer", "kid", "kids", "child", "children", "cartoon",
+    "cartoons", "nursery", "preschool", "junior",
+}
+FORBIDDEN_BRANDS = re.compile(
+    r"\b(?:"
+    r"aad(?:i|ee)nath|aaseervatham|aastha|sadhna|sanskar|jinvani|satsang|jagran|"
     r"bhagwat|aradhana|prarthana|divya|peace\s*tv|shubh\s*tv|aagaaz\s+times|"
     r"aaj\s+ki\s+khabar|abp(?:\s+(?:ananda|asmita|ganga|majha|news))?|"
     r"abn\s+andhra\s+jyoti|aaj\s+tak|times\s+now|india\s+today|news18|"
     r"ndtv\s+profit|ndtv\s+24x7|republic(?:\s+bharat|\s+tv)?|news\s+nation|"
     r"sudarshan\s+news|tv9(?:\s+\w+)?|zee\s+news|"
     r"cnbc(?:\s+awaaz|\s+bajar|\s+tv18(?:\s+prime)?)?|dd\s+news|dd\s+sports|"
-    r"et\s+now|mirror\s+now|bharat\s+samachar|pratidin\s+time|amrit\s+gurbani)\b",
+    r"et\s+now|mirror\s+now|bharat\s+samachar|pratidin\s+time|amrit\s+gurbani|"
+    r"sansad\s+tv(?:\s+[12])?|zee\s+business|"
+    r"disney(?:\s+(?:junior|channel|kids?))?|nickelodeon|nick\s*jr|cartoon\s+network|"
+    r"pogo|hungama|sony\s+yay|discovery\s+kids|etv\s+bal\s+bharat|"
+    r"green\s+gold(?:\s+tv)?|kite\s+victers|chutti\s+tv|wow\s+kidz|"
+    r"mh\s*one|sai\s+tv|darshana\s+tv|sarv\s+dharm\s+sangam"
+    r")\b",
     re.IGNORECASE,
 )
 BAD_HOSTS = ("proxy", "proxied", "cors", "localhost", "workers.dev", "worker.dev", "pages.dev")
@@ -98,18 +126,24 @@ def parse(text: str):
     return out
 
 
-def india_forbidden(a: dict[str, str], name: str) -> str | None:
-    """Hard reject Indian News, Sports and Religious channels."""
-    values = " ".join((name, a.get("tvg-name", ""), a.get("group-title", ""))).casefold()
-    group = a.get("group-title", "").strip().casefold()
-    if group in INDIA_FORBIDDEN_GROUPS:
-        return f"India {group} channel is prohibited"
-    # Match category terms as standalone words to avoid false positives.
-    for word in INDIA_FORBIDDEN_WORDS:
+def prohibited_channel(a: dict[str, str], name: str) -> str | None:
+    """Return a hard exclusion reason for candidates from either allowed country."""
+    for candidate in (name, a.get("tvg-name", "")):
+        if canonical_channel_name(candidate) in PERMANENTLY_BANNED_CHANNEL_NAMES:
+            return "permanently banned channel"
+    group = a.get("group-title", "").strip()
+    for category, pattern in FORBIDDEN_CATEGORY_PATTERNS.items():
+        if pattern.search(group):
+            return f"{category} channel is prohibited"
+    values = " ".join((name, a.get("tvg-name", ""), group, a.get("tvg-id", ""), a.get("channel-id", "")))
+    for category, pattern in FORBIDDEN_CATEGORY_PATTERNS.items():
+        if pattern.search(values):
+            return f"{category} channel is prohibited"
+    if FORBIDDEN_BRANDS.search(values):
+        return "known News, Sports, Kids or Religious brand/category is prohibited"
+    for word in FORBIDDEN_WORDS:
         if re.search(r"(?<![\w])" + re.escape(word) + r"(?![\w])", values, re.UNICODE):
-            return f"India {word} channel is prohibited"
-    if INDIA_FORBIDDEN_BRANDS.search(values):
-        return "Indian News, Sports or Religious channel is prohibited (known brand/category)"
+            return f"{word} channel is prohibited"
     return None
 
 
@@ -117,11 +151,10 @@ def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=Non
     """Return (normalized attrs | None, reason). Country must be verified BD/IN."""
     if country not in COUNTRY_CODE:
         return None, "unknown source feed"
-    # STRICT POLICY: no Indian News, Sports or Religious channels, under any circumstance.
-    if country == "India":
-        forbidden = india_forbidden(a, name)
-        if forbidden:
-            return None, forbidden
+    # HARD POLICY: News, Sports, Kids and Religious channels are prohibited in BOTH countries.
+    forbidden = prohibited_channel(a, name)
+    if forbidden:
+        return None, forbidden
     p = urlparse(url)
     if p.scheme not in {"http", "https"} or not p.netloc or p.fragment:
         return None, "invalid stream URL"
@@ -150,7 +183,7 @@ def acceptable(country: str, a: dict[str, str], name: str, url: str, reference=N
 
 
 def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
-    """Remove prohibited Indian News/Sports/Religious rows already in review queues."""
+    """Remove permanently banned channels and prohibited categories from review queues."""
     lines = text.replace("\r", "").splitlines()
     first = next((i for i, line in enumerate(lines) if line.startswith("#EXTINF:")), len(lines))
     prefix = lines[:first]
@@ -163,6 +196,7 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
                 start = i
         blocks.append(lines[start:])
     kept, removed = [], []
+    queue_groups = {"New Channels", "New Backup", "New Backups"}
     for block in blocks:
         extinf_line = next((line for line in block if line.startswith("#EXTINF:")), "")
         if not extinf_line:
@@ -172,17 +206,11 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
         group = a.get("group-title", "").strip()
         _, display = split_extinf(extinf_line)
         name = (a.get("tvg-name") or display).strip()
-        ids = [a.get("tvg-id", ""), a.get("channel-id", "")]
-        id_says_india = False
-        for value in ids:
-            match = ID_CC_RE.search(value.casefold())
-            if match and match.group(1) == "in":
-                id_says_india = True
-                break
-        country_says_india = a.get("tvg-country", "").strip().upper() == "IN"
-        if group in {"New Channels", "New Backup"} and (country_says_india or id_says_india) and india_forbidden(a, name):
-            removed.append(name or "(unnamed)")
-            continue
+        if group in queue_groups:
+            reason = prohibited_channel(a, name)
+            if reason:
+                removed.append(name or "(unnamed)")
+                continue
         kept.extend(block)
     result = "\n".join(prefix + kept).rstrip() + "\n"
     return result, removed
@@ -274,10 +302,12 @@ def main() -> int:
 
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     report = [
-        "# Channel Discovery", "",
+        "# IPTV Channel Discovery", "",
+        f"Generated: **{datetime.now(timezone.utc).isoformat()}**", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
-        "- **STRICT POLICY: Indian News, Sports and Religious channels are prohibited and must never enter New Channels or New Backup.**",
-        f"- Existing prohibited Indian queue rows removed: **{len(purged)}**",
+        "- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. News, Sports, Kids and Religious channels from both countries are prohibited.**",
+        "- Permanent denylist: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.",
+        f"- Existing prohibited review-queue rows removed: **{len(purged)}**",
         f"- New channels: **{len(new_channels)}**",
         f"- New backups: **{len(new_backups)}**",
         f"- Rejected/held candidates: **{rejected}**",
@@ -290,10 +320,10 @@ def main() -> int:
     report += ["", "## New Backups", ""]
     report.extend(f"- {name} ({country}) — {url}" for country, _, name, url in new_backups)
     if purged:
-        report += ["", "## Existing prohibited Indian queue rows removed", ""]
+        report += ["", "## Existing prohibited review-queue rows removed", ""]
         report.extend(f"- {name}" for name in sorted(purged, key=norm))
     REPORT.write_text("\n".join(report) + "\n", encoding="utf-8")
-    print(f"Discovery: {len(new_channels)} new channels, {len(new_backups)} new backups, {rejected} rejected; purged {len(purged)} existing prohibited Indian review-queue rows.")
+    print(f"Discovery: {len(new_channels)} new channels, {len(new_backups)} new backups, {rejected} rejected; purged {len(purged)} prohibited review-queue rows.")
     return 0
 
 

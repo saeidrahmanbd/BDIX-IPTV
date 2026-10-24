@@ -6,6 +6,8 @@ on:
       - scripts/validate_workflow_references.py
       - docs/requirements.txt
       - scripts/iptv_metadata_backfill.py
+      - scripts/discover_bd_in_new_queues.py
+      - tests/test_channel_discovery_policy.py
       - scripts/backfill_cross_playlist_metadata.py
       - scripts/repair_logo_asset_technical_quality.py
       - scripts/fetch_iptv_org_epg.py
@@ -41,43 +43,6 @@ on:
       - tests/test_language_policy.py
       - .github/workflows/iptv-maintenance.yml
       - .github/workflows/iptv-metadata-validation.yml
-  push:
-    branches:
-      - main
-    paths:
-      - scripts/validate_workflow_references.py
-      - scripts/iptv_metadata_backfill.py
-      - scripts/backfill_cross_playlist_metadata.py
-      - scripts/repair_logo_asset_technical_quality.py
-      - scripts/validate_report_freshness.py
-      - IPTV-Playlist.m3u
-      - BDIX-Playlist.m3u
-      - International-Playlist.m3u
-      - scripts/audit_playlist.py
-      - scripts/playlist_order_policy.py
-      - scripts/pre_publish_gate.py
-      - scripts/generate_dashboard.py
-      - scripts/epg_coverage.py
-      - scripts/generate_epg.py
-      - scripts/epg_publish_gate_v2.py
-      - scripts/logo_asset_naming.py
-      - scripts/generate_logo_provenance_review.py
-      - scripts/generate_logo_repair_summary.py
-      - scripts/generate_metadata_normalization_report.py
-      - scripts/report_iptv_fragile_streams.py
-      - scripts/stream_risk_review.py
-      - tests/test_logo_asset_naming.py
-      - tests/test_logo_provenance_review.py
-      - tests/test_iptv_fragile_streams.py
-      - tests/test_metadata_backfill.py
-      - tests/test_cross_playlist_metadata.py
-      - tests/test_logo_asset_technical_quality.py
-      - tests/test_report_freshness.py
-      - tests/test_maintenance_report_order.py
-      - tests/test_logo_repair_source_hints.py
-      - tests/test_language_policy.py
-      - .github/workflows/iptv-metadata-validation.yml
-
 permissions:
   contents: read
 

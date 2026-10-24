@@ -54,7 +54,7 @@ A curated IPTV collection focused on **🇧🇩 Bangladeshi channels, 🇮🇳 I
 | **International-Playlist.m3u** | International channel collection | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) |
 | **BD.IN-Playlist.m3u** | Additional Bangladesh & India collection, separate from the core playlists | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BD.IN-Playlist.m3u) |
 
-> **Automation scope:** `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `International-Playlist.m3u` are the three core playlists currently covered by EPG and quality workflows. `BD.IN-Playlist.m3u` is the fourth, additional collection and is not yet included in that automated scope.
+> **Automation scope:** `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `International-Playlist.m3u` remain covered by EPG and quality workflows; `BD.IN-Playlist.m3u` is outside that automated scope. Automatic new-channel discovery is restricted to verified Bangladesh/India candidates and excludes News, Sports, Kids and Religious channels from both countries. Automatic international channel discovery is disabled; the existing International playlist remains under metadata/logo validation.
 
 <p align="center">
   <a href="assets/iptv-project-showcase-2026-10-22.svg">
@@ -192,7 +192,7 @@ Automated maintenance covers:
 8. 🔗 Backup counts do not imply independent infrastructure; CDN/origin/rendition families are audited separately.
 
 <p align="center">
-  <b><a href="reports/stream-health.md">→ Stream Health Report</a> · <a href="reports/playlist-audit.md">→ Playlist Audit</a> · <a href="reports/backup-independence-audit.md">→ Backup Independence Audit</a></b>
+  <b><a href="reports/stream-health.md">→ Stream Health Report</a> · <a href="reports/iptv-playlist-audit.md">→ Playlist Audit</a> · <a href="reports/backup-independence-audit.md">→ Backup Independence Audit</a></b>
 </p>
 
 ---
@@ -202,8 +202,8 @@ Automated maintenance covers:
 | Report | |
 |---|---|
 | 📊 [Project Dashboard](assets/dashboard.svg) | Generated playlist and maintenance summary |
-| 🧹 [Playlist Audit](reports/playlist-audit.md) | Duplicates, identity and metadata checks |
-| 🧭 [Repository Consistency Audit](reports/repository-consistency-audit.md) | Scope, workflow, report and documentation caveats |
+| 🧹 [IPTV Playlist Audit](reports/iptv-playlist-audit.md) | Duplicates, identity and metadata checks |
+| 🆕 [IPTV Channel Discovery](reports/iptv-channel-discovery.md) | Verified Bangladesh/India discovery queue; excludes news, sports, kids and religious channels |
 | 📡 [Stream Health](reports/stream-health.md) | Endpoint availability monitoring and failure classification |
 | 🧩 [Backup Independence Audit](reports/backup-independence-audit.md) | Shared-host/origin and fallback-family review |
 | 🛠️ [Maintenance Report](reports/maintenance-report.md) | Automated maintenance summary |

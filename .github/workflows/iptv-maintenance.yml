@@ -27,7 +27,6 @@ on:
       - scripts/check_epg_config.py
       - scripts/epg_coverage.py
       - scripts/generate_epg.py
-      - scripts/discover_international_channels.py
       - docs/requirements.txt
       - scripts/run_generate_epg.py
       - scripts/fetch_iptv_org_epg.py
@@ -47,6 +46,8 @@ on:
       - tests/test_logo_authenticity_manifest.py
       - scripts/sync_epg_worker_map.py
       - scripts/audit_playlist.py
+      - scripts/discover_bd_in_new_queues.py
+      - tests/test_channel_discovery_policy.py
       - scripts/playlist_order_policy.py
       - tests/test_logo_repair_source_hints.py
       - scripts/build_identity_index.py
@@ -110,7 +111,6 @@ jobs:
             scripts/epg_coverage.py \
             scripts/generate_epg.py \
             scripts/repair_international_playlist.py \
-            scripts/discover_international_channels.py \
             scripts/validate_international_playlist.py
       - name: Run playlist metadata and report freshness tests
         run: |
@@ -294,9 +294,8 @@ jobs:
           path: |
             reports/proposed-removals.md
             reports/iptv-metadata-backfill.md
-            reports/playlist-audit.md
+            reports/iptv-playlist-audit.md
             reports/stream-health.md
             reports/stream-risk-review.md
-            reports/fix-report.md
           if-no-files-found: warn
           retention-days: 14

@@ -88,13 +88,12 @@ Automated maintenance covers stream and backup updates, metadata normalization, 
 ## Reports
 
 - [Project Dashboard](../assets/dashboard.svg)
-- [Playlist Audit](../reports/playlist-audit.md)
-- [Repository Consistency Audit](../reports/repository-consistency-audit.md)
+- [IPTV Playlist Audit](../reports/iptv-playlist-audit.md)
 - [Stream Health](../reports/stream-health.md)
 - [Backup Independence Audit](../reports/backup-independence-audit.md)
 - [Maintenance Report](../reports/maintenance-report.md)
 - [EPG Coverage](../reports/epg-coverage.md)
-- [Channel Discovery](../reports/channel-discovery.md)
+- [IPTV Channel Discovery](../reports/iptv-channel-discovery.md)
 - [Update Report](../reports/Update%20Report.md)
 - [Stream Risk Review](../reports/stream-risk-review.md)
 

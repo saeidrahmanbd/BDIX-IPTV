@@ -34,7 +34,8 @@ See the **[Playlist Studio documentation](PLAYLIST-STUDIO.md)** for build instru
 
 ## 📄 Reports
 
-- [Playlist Audit](../reports/playlist-audit.md)
+- [IPTV Playlist Audit](../reports/iptv-playlist-audit.md)
+- [IPTV Channel Discovery](../reports/iptv-channel-discovery.md) — Bangladesh/India candidates only; excludes News, Sports, Kids and Religious channels.
 - [Stream Health](../reports/stream-health.md)
 - [EPG Coverage](../reports/epg-coverage.md)
 - [Update Report](../reports/Update%20Report.md)

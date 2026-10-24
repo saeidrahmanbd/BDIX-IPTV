@@ -19,12 +19,12 @@ The repository contains four playlist files: three core maintained playlist surf
 - [Xtream Documentation](../xtream/README.md)
 - [Xtream Main Worker](../xtream-main/)
 - [Xtream BDIX Worker](../xtream-bdix/)
-- [Playlist Audit](../reports/playlist-audit.md)
+- [IPTV Playlist Audit](../reports/iptv-playlist-audit.md)
 - [Stream Health](../reports/stream-health.md)
 - [Backup Independence Audit](../reports/backup-independence-audit.md)
 - [Stream Risk Review](../reports/stream-risk-review.md)
 - [EPG Coverage](../reports/epg-coverage.md)
-- [Channel Discovery](../reports/channel-discovery.md)
+- [IPTV Channel Discovery](../reports/iptv-channel-discovery.md)
 - [Update Report](../reports/Update%20Report.md)
 
 ### Project Documentation

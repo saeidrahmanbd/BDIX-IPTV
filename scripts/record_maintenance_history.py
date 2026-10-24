@@ -8,7 +8,7 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-AUDIT_PATH = Path('reports/playlist-audit.md')
+AUDIT_PATH = Path('reports/iptv-playlist-audit.md')
 HEALTH_PATH = Path('reports/stream-health.md')
 HISTORY_PATH = Path('reports/maintenance-history.json')
 

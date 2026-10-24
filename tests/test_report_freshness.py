@@ -39,7 +39,7 @@ class ReportFreshnessTests(unittest.TestCase):
         three = self.hashes["International-Playlist.m3u"]
         epg = f"Generated: **{self.timestamp}**\n- IPTV-Playlist.m3u SHA-256: **{one}**\n- BDIX-Playlist.m3u SHA-256: **{two}**\n- International-Playlist.m3u SHA-256: **{three}**\n"
         reports = {
-            "playlist-audit.md": f"Generated: **{self.timestamp}**\nSource playlist SHA-256: **{one}**\n",
+            "iptv-playlist-audit.md": f"Generated: **{self.timestamp}**\nSource playlist SHA-256: **{one}**\n",
             "pre-publish-gate.md": f"Generated: **{self.timestamp}**\nSource playlist SHA-256: **{one}**\n",
             "epg-coverage.md": epg, "epg-three-playlist-audit.md": epg, "epg-unmapped-audit.md": epg,
             "iptv-metadata-backfill.md": f"Generated: **{self.timestamp}**\nPlaylist SHA-256: **{one}**\n",

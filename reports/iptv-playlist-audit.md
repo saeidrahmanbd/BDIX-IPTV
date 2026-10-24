@@ -1,4 +1,6 @@
-# Playlist Audit
+# IPTV Playlist Audit
+
+> Snapshot note: metrics below predate the current discovery-queue exclusions. The automated maintenance workflow will regenerate this audit against the current playlist revision.
 Generated: **2026-10-23T08:44:18.009168+00:00**
 Source playlist SHA-256: **0ce6e1a9799733fae3febaa075d00c8c19a71f5ec225525a6559bbdcdc7ad3d5**
 

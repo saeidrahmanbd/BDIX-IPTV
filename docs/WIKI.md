@@ -15,7 +15,7 @@ BDIX-IPTV is a curated IPTV playlist project focused on Bangladeshi channels, In
 - [Documentation index](docs/README.md)
 - [Xtream documentation](xtream/README.md)
 - [EPG coverage report](reports/epg-coverage.md)
-- [Playlist audit report](reports/playlist-audit.md)
+- [IPTV Playlist Audit report](reports/iptv-playlist-audit.md)
 - [Stream health report](reports/stream-health.md)
 - [Maintenance report](reports/maintenance-report.md)
 - [Update report](reports/Update%20Report.md)
