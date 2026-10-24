@@ -4,7 +4,7 @@ import io, json, re, urllib.request, hashlib
 from pathlib import Path
 from logo_asset_naming import is_blocked_logo_basename, safe_logo_filename
 from urllib.parse import urlsplit
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
 try:
     import cairosvg
 except ImportError:
@@ -56,6 +56,9 @@ FALLBACK_LOGOS = {
 # Exact playlist ID -> explicit logo source. Add only verified mappings here.
 # These are intentionally keyed by playlist identity, never by stream URL or display name.
 ID_LOGO_MAP = {
+    "vyaschannel.in@sd": "https://www.yupptv.com/seo_img/UGC_GEC_big.jpg",
+    "zeecineclassic.in@sd": "https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/IN21000014R_20260325T012324SQUARE.png",
+    "zeecomedynation.in@hd": "https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/IN2100002GD_20260325T012327SQUARE.png",
     "aamarbangla.in": "https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png",
     "local.1d6cdda4509e": "https://jiotvimages.cdn.jio.com/dare_images/images/Amar_Digital_TV.png",
     "colorsbangla.in": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-bangla.png",
@@ -144,42 +147,6 @@ def is_generated_placeholder(value):
         return Path(urlsplit(str(value or "")).path).name.lower().startswith("placeholder-")
     except Exception:
         return False
-def generate_placeholder_logo(label, target):
-    """Create a unique, explicitly non-official text logo only when no verified asset exists."""
-    digest = hashlib.sha256(str(label).casefold().encode("utf-8")).digest()
-    accent = (90 + digest[0] % 130, 70 + digest[1] % 140, 90 + digest[2] % 130, 255)
-    width, height = 800, 450
-    image = Image.new("RGBA", (width, height), (18, 24, 38, 255))
-    pixels = image.load()
-    for y in range(height):
-        mix = y / max(1, height - 1)
-        base = (int(15 + 18 * mix), int(23 + 10 * mix), int(38 + 22 * mix), 255)
-        for x in range(width):
-            pixels[x, y] = base
-    draw = ImageDraw.Draw(image)
-    draw.rounded_rectangle((28, 28, width-28, height-28), radius=36, outline=accent, width=5)
-    draw.rounded_rectangle((56, 56, 76, height-56), radius=10, fill=accent)
-    draw.ellipse((width-126, 64, width-74, 116), fill=accent)
-    words = re.sub(r"\s+", " ", str(label or "TV Channel")).strip().upper()
-    font_path = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-    font = None
-    for size in (58, 52, 46, 40, 34, 28):
-        try:
-            font = ImageFont.truetype(font_path, size)
-        except Exception:
-            font = ImageFont.load_default()
-        if draw.textbbox((0, 0), words, font=font)[2] <= width - 180:
-            break
-    bbox = draw.textbbox((0, 0), words, font=font)
-    x = max(95, (width - (bbox[2] - bbox[0])) // 2)
-    y = (height - (bbox[3] - bbox[1])) // 2 - bbox[1]
-    draw.text((x, y), words, font=font, fill=(248, 250, 252, 255), stroke_width=0)
-    try:
-        small = ImageFont.truetype(font_path, 16)
-    except Exception:
-        small = ImageFont.load_default()
-    draw.text((98, height-82), "UNOFFICIAL ARTWORK", font=small, fill=accent)
-    image.save(target, format="PNG", optimize=True)
 def fetch_bytes(url):
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(request, timeout=30) as response:
@@ -249,7 +216,6 @@ for item in logos:
 
 changed = downloaded = failed = resolved_from_existing = resolved_from_catalogue = resolved_from_fallback = converted_local = 0
 unresolved = []
-generated_placeholders = []
 output = []
 
 for line in lines:
@@ -396,23 +362,10 @@ for line in lines:
                 failed += 1
                 print(f"Catalogue logo failed: {title}: {exc}")
 
-    # No usable source matched. Use original fallback artwork that is visibly
-    # marked unofficial; the manifest never treats it as broadcaster branding.
-    filename = f"generated-fallback-{safe_name(title)}.png"
-    target = LOGOS / filename
-    replacement_logo = RAW_BASE + filename
-    try:
-        if not target.exists():
-            generate_placeholder_logo(title, target)
-            generated_placeholders.append(title)
-        output.append(force_local(line, replacement_logo))
-        changed += 1
-        continue
-    except Exception as exc:
-        failed += 1
-        output.append(force_local(line, ""))
-        unresolved.append(title)
-        print(f"FALLBACK ARTWORK FAILED; LEFT BLANK: {title}: {exc}")
+    # No verified asset matched. Keep the logo unset instead of publishing fabricated artwork.
+    output.append(force_local(line, ""))
+    unresolved.append(title)
+    continue
 
 new_text = "\n".join(output).rstrip() + "\n"
 if new_text != original:
@@ -427,4 +380,3 @@ print(f"Local non-PNG logos converted: {converted_local}")
 print(f"Logo downloads failed: {failed}")
 print(f"Still unresolved (no usable logo attached): {len(unresolved)}")
 for title in unresolved: print(f"UNRESOLVED: {title}")
-print(f"Clearly marked generated fallback artwork created: {len(generated_placeholders)}")
