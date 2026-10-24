@@ -8,11 +8,12 @@ on:
 permissions:
   contents: write
 
-# Use the same main-branch writer queue as playlist maintenance and audit.
+# Serialize only International discovery runs with each other. The script commits
+# safely by rebasing on main; sharing the global writer queue can leave discovery
+# waiting behind many unrelated playlist/EPG writers.
 concurrency:
-  group: iptv-playlist-main-writer-v2
+  group: international-channel-discovery-v1
   cancel-in-progress: false
-  queue: max
 
 jobs:
   discover:
@@ -28,6 +29,12 @@ jobs:
           python-version: '3.12'
       - name: Test International discovery exclusions
         run: python -m unittest discover -s tests -p 'test_international_discovery_policy.py'
+      - name: Show discovery input and expected output paths
+        run: |
+          set -euo pipefail
+          test -s International-Playlist.m3u
+          echo "Playlist records: $(grep -c '^#EXTINF:' International-Playlist.m3u || true)"
+          echo "Source: https://iptv-org.github.io/iptv/index.category.m3u"
       - name: Discover international channels and backups
         run: python scripts/discover_international_channels.py
       - name: Enforce required playlist attribution
