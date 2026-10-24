@@ -1,7 +1,8 @@
 # 📚 BDIX-IPTV Documentation
 
-## Playlist Studio
+## Project Overview
 
+- **[Project Overview](PROJECT-README.md)** — repository overview, playlists, maintenance and policies
 - **[Playlist Studio 5.0](PLAYLIST-STUDIO.md)** — features, download, usage and build instructions
 - **[Playlist Studio v5.0.0 Release Integrity](PLAYLIST-STUDIO-INTEGRITY.md)** — published SHA-256 asset digests
 
@@ -22,6 +23,7 @@ The repository contains three maintained playlist surfaces, EPG resources, chann
 - [Backup Independence Audit](../reports/backup-independence-audit.md)
 - [Stream Risk Review](../reports/stream-risk-review.md)
 - [EPG Coverage](../reports/epg-coverage.md)
+- [Channel Discovery](../reports/channel-discovery.md)
 - [Update Report](../reports/Update%20Report.md)
 
 ### Project Documentation
@@ -31,12 +33,14 @@ The repository contains three maintained playlist surfaces, EPG resources, chann
 - [Playlist Studio 5.0](PLAYLIST-STUDIO.md)
 - [Playlist Studio release integrity](PLAYLIST-STUDIO-INTEGRITY.md)
 - [Wiki Reference](WIKI.md)
+- [Project Overview](PROJECT-README.md)
 
 ### Repository Policies
 
-- [Contributing](../CONTRIBUTING.md)
-- [Security Policy](../SECURITY.md)
-- [License](../LICENSE)
+- [Contributing](CONTRIBUTING.md)
+- [Security Policy](SECURITY.md)
+- [License](LICENSE)
+- [Python requirements](requirements.txt)
 
 ### Releases
 
