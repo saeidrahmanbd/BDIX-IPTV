@@ -32,7 +32,7 @@ The validation failure at commit 226674d only reported validate_international_pl
 ## Remaining items needing review, not guessed fixes
 
 - **Logo provenance:** the provenance report has shown many unresolved source records. Local storage is not proof of authenticity or permission to redistribute. Do not claim that all logos are verified.
-- **Missing logo metadata:** the International playlist still has entries without logo attributes. No generic or unrelated artwork was substituted to make coverage appear complete.
+- **Missing logo metadata:** the latest direct inventory found 67 of 1,155 International entries without a logo attribute, with 0 broken local-logo paths and 0 external logo URLs. No generic or unrelated artwork was substituted to make coverage appear complete.
 - **Metadata gaps and ID variants:** missing language fields, same-name/different-ID variants, and country/language ambiguity need source-specific decisions. The new cross-queue counts are diagnostic signals; they are not authorization to merge distinct channels.
 - **EPG availability and rights:** Bangladesh guide coverage remains weak, and redistribution rights are not confirmed for every source. Technical mapping/coverage percentages are not a licensing approval.
 - **BDIX Test entries:** the misleading Test group and its repeated Bangla Vision label/logo remain a separate playlist-content cleanup item. This re-audit did not guess replacement identities.
