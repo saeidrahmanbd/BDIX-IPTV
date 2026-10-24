@@ -158,5 +158,515 @@
     "status": "generated_fallback",
     "source_url": "",
     "notes": "Explicitly marked unofficial fallback artwork; no exact official broadcaster logo has been verified. The original local filename is retained for playlist-reference compatibility."
+  },
+  "BD.IN-Playlist.m3u|ATNNews.bd|ATN News|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-news-e0442addb4.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/4qZQKjo.png",
+    "notes": "IPTV-org exact ID: ATNNews.bd IPTV-org public logo dataset Source page: https://i.imgur.com/4qZQKjo.png"
+  },
+  "BD.IN-Playlist.m3u|BanglaTV.bd|Bangla TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bangla-tv-9e5f3366c8.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/DLGjTfI.png",
+    "notes": "IPTV-org exact ID: BanglaTV.bd IPTV-org public logo dataset Source page: https://i.imgur.com/DLGjTfI.png"
+  },
+  "BD.IN-Playlist.m3u|ChannelEurope|Channel Europe|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-europe-c8db0338dc.png": {
+    "status": "third_party_verified",
+    "source_url": "https://www.jagobd.com/wp-content/uploads/2022/12/cheu.png",
+    "notes": "IPTV-org exact unique channel name: ChannelEurope.uk IPTV-org public logo dataset Source page: https://www.jagobd.com/wp-content/uploads/2022/12/cheu.png"
+  },
+  "BD.IN-Playlist.m3u|DurontoTV.bd|Duronto TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/duronto-tv-2b3c7dd202.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/gXsddRK.png",
+    "notes": "IPTV-org exact ID: DurontoTV.bd IPTV-org public logo dataset Source page: https://i.imgur.com/gXsddRK.png"
+  },
+  "BD.IN-Playlist.m3u|EkusheyTV.bd|Ekushey TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekushey-tv-d9479035b4.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/lRpkGHj.png",
+    "notes": "IPTV-org exact ID: EkusheyTV.bd IPTV-org public logo dataset Source page: https://i.imgur.com/lRpkGHj.png"
+  },
+  "BD.IN-Playlist.m3u|IBTVUSA.bd|IBTV USA|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ibtv-usa-38e82ba90e.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/6z7znwz.png",
+    "notes": "IPTV-org exact unique channel name: IBTVUSA.us IPTV-org public logo dataset Source page: https://i.imgur.com/6z7znwz.png"
+  },
+  "BD.IN-Playlist.m3u|MohonaTV.bd|Mohona TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mohona-tv-a1da8879e5.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/E6doEWH.png",
+    "notes": "IPTV-org exact ID: MohonaTV.bd IPTV-org public logo dataset Source page: https://i.imgur.com/E6doEWH.png"
+  },
+  "BD.IN-Playlist.m3u|NagorikTV.bd|Nagorik TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nagorik-tv-90b5d16aaf.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/aRDvQpl.png",
+    "notes": "IPTV-org exact ID: NagorikTV.bd IPTV-org public logo dataset Source page: https://i.imgur.com/aRDvQpl.png"
+  },
+  "BD.IN-Playlist.m3u|AAKAASHBANGLA|Aakaash Bangla|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aakaash-bangla-f052338626.webp": {
+    "status": "third_party_verified",
+    "source_url": "https://static.wikia.nocookie.net/logopedia/images/0/03/Aakash_Aath_3.jpeg",
+    "notes": "IPTV-org exact unique channel name: AakaashBangla.in IPTV-org public logo dataset Source page: https://static.wikia.nocookie.net/logopedia/images/0/03/Aakash_Aath_3.jpeg"
+  },
+  "BD.IN-Playlist.m3u|SanandaTV.in|Sananda|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sananda-64faf3c524.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Sananda_Logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "notes": "Wikimedia Commons exact-logo search CC BY-SA 4.0 Source page: https://commons.wikimedia.org/wiki/File:Sananda_Logo.png"
+  },
+  "BD.IN-Playlist.m3u|Colors.in|Colors|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/colors-3cfc323d7c.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/Colors_Transparent_16069908-8494-4eb4-bd40-5afca3969088.png",
+    "notes": "IPTV-org exact ID: Colors.in IPTV-org public logo dataset Source page: https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/Colors_Transparent_16069908-8494-4eb4-bd40-5afca3969088.png"
+  },
+  "BD.IN-Playlist.m3u|StarPlus.in@SD|Star Plus|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-plus-3a9c981f97.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dtil.tmsimg.com/assets/s143831_ld_h15_aa.png?lock=720x540",
+    "notes": "IPTV-org exact ID: StarPlus.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/s143831_ld_h15_aa.png?lock=720x540"
+  },
+  "BD.IN-Playlist.m3u|ZeeTV.in@SD|Zee TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-tv-2fb6673cf7.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Zee_TV_Logo_2025.svg",
+    "notes": "IPTV-org exact ID: ZeeTV.in IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/a/a2/Zee_TV_Logo_2025.svg"
+  },
+  "BD.IN-Playlist.m3u|ASports.pk|A Sports|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/a-sports-65a3e1d8fd.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/EVJuFRs.png",
+    "notes": "IPTV-org exact ID: ASports.pk IPTV-org public logo dataset Source page: https://i.imgur.com/EVJuFRs.png"
+  },
+  "BD.IN-Playlist.m3u|BeINSPORTS3|beIN SPORTS 3|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bein-sports-3-517e8a74a2.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/UYSMao3.png",
+    "notes": "IPTV-org exact unique channel name: beINSports3.qa IPTV-org public logo dataset Source page: https://i.imgur.com/UYSMao3.png"
+  },
+  "BD.IN-Playlist.m3u|FIFA|FIFA+|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fifa-plus-68fe723cf8.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg",
+    "notes": "IPTV-org exact unique channel name: FIFAPlus.uk IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/9/9c/FIFA%2B_%282025%29.svg"
+  },
+  "IPTV-Playlist.m3u|ChhayaChitramTelugu.in@SD|Chhaya Chitram Telugu|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/chhaya-chitram-telugu-7e1e93e465.png": {
+    "status": "third_party_verified",
+    "source_url": "https://papaji.freetvindia.com/media/channels/Chhaya_Chitram_Telugu.png",
+    "notes": "IPTV-org exact ID: ChhayaChitramTelugu.in IPTV-org public logo dataset Source page: https://papaji.freetvindia.com/media/channels/Chhaya_Chitram_Telugu.png"
+  },
+  "IPTV-Playlist.m3u|StarGold.in|Star Gold|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-96d25c42cb.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dtil.tmsimg.com/assets/s159131_ld_h15_aa.png?lock=720x540",
+    "notes": "IPTV-org exact ID: StarGold.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/s159131_ld_h15_aa.png?lock=720x540"
+  },
+  "IPTV-Playlist.m3u|PunjabiMusicHD.in@SD|Punjabi Music|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/punjabi-music-43b14c7be7.png": {
+    "status": "third_party_verified",
+    "source_url": "https://papaji.freetvindia.com/media/Punjabi_Music_HD.png",
+    "notes": "IPTV-org exact ID: PunjabiMusicHD.in IPTV-org public logo dataset Source page: https://papaji.freetvindia.com/media/Punjabi_Music_HD.png"
+  },
+  "IPTV-Playlist.m3u|Superhitz.in@SD|Superhitz|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/superhitz-079cde619f.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/aRNBvTU.png",
+    "notes": "IPTV-org exact ID: Superhitz.in IPTV-org public logo dataset Source page: https://i.imgur.com/aRNBvTU.png"
+  },
+  "IPTV-Playlist.m3u|4SiDESTV.in@SD|4 SiDES TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png": {
+    "status": "third_party_verified",
+    "source_url": "https://jiotvimages.cdn.jio.com/dare_images/images/4sites.png",
+    "notes": "IPTV-org exact ID: 4SiDESTV.in IPTV-org public logo dataset Source page: https://jiotvimages.cdn.jio.com/dare_images/images/4sites.png"
+  },
+  "IPTV-Playlist.m3u|GlobalPunjab.in|Global Punjab|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/global-punjab-7d78c04b06.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/WDLqcWW.png",
+    "notes": "IPTV-org exact ID: GlobalPunjab.in IPTV-org public logo dataset Source page: https://i.imgur.com/WDLqcWW.png"
+  },
+  "IPTV-Playlist.m3u|HosannaTV.in@Tamil|Hosanna TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hosanna-tv-016e291e22.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/VYorU1L.png",
+    "notes": "IPTV-org exact ID: HosannaTV.in IPTV-org public logo dataset Source page: https://i.imgur.com/VYorU1L.png"
+  },
+  "IPTV-Playlist.m3u|Pankh.in@SD|Pankh|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pankh-3411631a31.png": {
+    "status": "third_party_verified",
+    "source_url": "https://papaji.freetvindia.com/media/pankh.png",
+    "notes": "IPTV-org exact ID: Pankh.in IPTV-org public logo dataset Source page: https://papaji.freetvindia.com/media/pankh.png"
+  },
+  "IPTV-Playlist.m3u|PunjabiTV.in@SD|Punjabi TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/punjabi-tv-9b4d7425b3.png": {
+    "status": "third_party_verified",
+    "source_url": "https://papaji.freetvindia.com/media/PunjabiTV.png",
+    "notes": "IPTV-org exact ID: PunjabiTV.in IPTV-org public logo dataset Source page: https://papaji.freetvindia.com/media/PunjabiTV.png"
+  },
+  "IPTV-Playlist.m3u|SunGemini.in@SD|Sun Gemini|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-gemini-1a4fc59fb6.png": {
+    "status": "third_party_verified",
+    "source_url": "https://sund-images.sunnxt.com/194396/300x300_SunGemini_194396_22c18c1e-7eb9-4855-9c4e-12e109911559.png",
+    "notes": "IPTV-org exact ID: SunGemini.in IPTV-org public logo dataset Source page: https://sund-images.sunnxt.com/194396/300x300_SunGemini_194396_22c18c1e-7eb9-4855-9c4e-12e109911559.png"
+  },
+  "IPTV-Playlist.m3u|SunSurya.in@HD|Sun Surya|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-surya-fbd1ea35f7.png": {
+    "status": "third_party_verified",
+    "source_url": "https://sund-images.sunnxt.com/194398/300x300_SunSurya_194398_f62d9cbc-0fd2-4a49-9da4-1a0fe8521aaa.png",
+    "notes": "IPTV-org exact ID: SunSurya.in IPTV-org public logo dataset Source page: https://sund-images.sunnxt.com/194398/300x300_SunSurya_194398_f62d9cbc-0fd2-4a49-9da4-1a0fe8521aaa.png"
+  },
+  "IPTV-Playlist.m3u|ThendralTV.in@SD|Thendral TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/thendral-tv-ed9b933eb5.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/kQK80gB.png",
+    "notes": "IPTV-org exact ID: ThendralTV.in IPTV-org public logo dataset Source page: https://i.imgur.com/kQK80gB.png"
+  },
+  "IPTV-Playlist.m3u|UniqueTV.in@SD|Unique TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unique-tv-c64872bc2a.png": {
+    "status": "third_party_verified",
+    "source_url": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/UNIQUE-TV-logo_2000_X_1125_Transpharent.png",
+    "notes": "IPTV-org exact ID: UniqueTV.in IPTV-org public logo dataset Source page: https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/UNIQUE-TV-logo_2000_X_1125_Transpharent.png"
+  },
+  "IPTV-Playlist.m3u|Zingabad.in@SD|Zingabad|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zingabad-d05910f0bb.png": {
+    "status": "third_party_verified",
+    "source_url": "https://d229kpbsb5jevy.cloudfront.net/yupptvnew/content/common/logos/channel/logos/zingabad.png",
+    "notes": "IPTV-org exact ID: Zingabad.in IPTV-org public logo dataset Source page: https://d229kpbsb5jevy.cloudfront.net/yupptvnew/content/common/logos/channel/logos/zingabad.png"
+  },
+  "IPTV-Playlist.m3u|Tunes6.in|Tunes 6|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tunes-6-86e66d6033.png": {
+    "status": "third_party_verified",
+    "source_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Tunes_6.png",
+    "notes": "IPTV-org exact ID: Tunes6.in IPTV-org public logo dataset Source page: https://jiotvimages.cdn.jio.com/dare_images/images/Tunes_6.png"
+  },
+  "IPTV-Playlist.m3u|Survivor.us|Survivor|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/survivor-71b25cd64f.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/Zz9SgY8.png",
+    "notes": "IPTV-org exact ID: Survivor.us IPTV-org public logo dataset Source page: https://i.imgur.com/Zz9SgY8.png"
+  },
+  "IPTV-Playlist.m3u|WaterBear.ch|WaterBear|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/waterbear-45ac070716.png": {
+    "status": "third_party_verified",
+    "source_url": "https://framerusercontent.com/images/41VQQ7F0fYlp1MX1N4Ixog5QnPI.png",
+    "notes": "IPTV-org exact ID: WaterBear.ch IPTV-org public logo dataset Source page: https://framerusercontent.com/images/41VQQ7F0fYlp1MX1N4Ixog5QnPI.png"
+  },
+  "IPTV-Playlist.m3u|NickBangla.bd|Nick Bangla|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-bangla-26fef2ac19.png": {
+    "status": "third_party_verified",
+    "source_url": "https://otapp.store/uploads/tv_image/sm/nick-bangla.png",
+    "notes": "Exact external logo asset Channel-specific logo URL found in a public IPTV logo listing; original logo rights belong to broadcaster Source page: https://github.com/channeliptv0/IPTV/blob/f26247efa6b641fda8d6bb16f01f99f4948d8a3b/Master/Bangla.m3u"
+  },
+  "IPTV-Playlist.m3u|10TV.in@SD|10 TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/10-tv-6c9aa3e23f.png": {
+    "status": "third_party_verified",
+    "source_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_10TV/images/LOGO_HD/image.png",
+    "notes": "Exact external logo asset 10TV Telugu logo served by its live-TV asset CDN; channel identity matched to 10TV Telugu Source page: https://10tv.in/"
+  },
+  "IPTV-Playlist.m3u|99TV.in@SD|99TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/99tv-e8fc39ce2e.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/dZA4gel.png",
+    "notes": "IPTV-org exact ID: 99TV.in IPTV-org public logo dataset Source page: https://i.imgur.com/dZA4gel.png"
+  },
+  "IPTV-Playlist.m3u|AmarUjala.in@SD|AmarUjala|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/amarujala-4ad8f84a24.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/ndQ8LZp.png",
+    "notes": "IPTV-org exact ID: AmarUjala.in IPTV-org public logo dataset Source page: https://i.imgur.com/ndQ8LZp.png"
+  },
+  "IPTV-Playlist.m3u|AngelTV.in@India|Angel TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/angel-tv-a7e5cfebac.png": {
+    "status": "third_party_verified",
+    "source_url": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Angel-TV-hd-transparent.png",
+    "notes": "IPTV-org exact ID: AngelTV.in IPTV-org public logo dataset Source page: https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Angel-TV-hd-transparent.png"
+  },
+  "IPTV-Playlist.m3u|AsomLive24.in@SD|Asom Live 24|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asom-live-24-533787c1d6.png": {
+    "status": "third_party_verified",
+    "source_url": "https://papaji.freetvindia.com/media/channels/asom_live_24x7.png",
+    "notes": "IPTV-org exact ID: AsomLive24.in IPTV-org public logo dataset Source page: https://papaji.freetvindia.com/media/channels/asom_live_24x7.png"
+  },
+  "IPTV-Playlist.m3u|Dhamaal.in@SD|Dhamaal [Geo-blocked]|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dhamaal-geo-blocked-6c1fb8f527.png": {
+    "status": "third_party_verified",
+    "source_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Dhamaal_TV.png",
+    "notes": "IPTV-org exact ID: Dhamaal.in IPTV-org public logo dataset Source page: https://jiotvimages.cdn.jio.com/dare_images/images/Dhamaal_TV.png"
+  },
+  "IPTV-Playlist.m3u|ETVLife.in@SD|ETV Life|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/etv-life-743b66d370.png": {
+    "status": "third_party_verified",
+    "source_url": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/ETV_life-Logo_2000_X_1125_Transphrent.png",
+    "notes": "IPTV-org exact ID: ETVLife.in IPTV-org public logo dataset Source page: https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/ETV_life-Logo_2000_X_1125_Transphrent.png"
+  },
+  "IPTV-Playlist.m3u|HosannaTV.in@Hindi|Hosanna TV Hindi|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hosanna-tv-hindi-016e291e22.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/VYorU1L.png",
+    "notes": "IPTV-org exact ID: HosannaTV.in IPTV-org public logo dataset Source page: https://i.imgur.com/VYorU1L.png"
+  },
+  "IPTV-Playlist.m3u|StarGoldSelect.in|Star Gold Select|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-select-fa81030f74.png": {
+    "status": "third_party_verified",
+    "source_url": "https://dtil.tmsimg.com/assets/s143816_ld_h15_aa.png?lock=720x540",
+    "notes": "IPTV-org exact ID: StarGoldSelect.in IPTV-org public logo dataset Source page: https://dtil.tmsimg.com/assets/s143816_ld_h15_aa.png?lock=720x540"
+  },
+  "IPTV-Playlist.m3u|WinTV.in@SD|Win TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/win-tv-a92ce20718.png": {
+    "status": "third_party_verified",
+    "source_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Win_TV.png",
+    "notes": "IPTV-org exact ID: WinTV.in IPTV-org public logo dataset Source page: https://jiotvimages.cdn.jio.com/dare_images/images/Win_TV.png"
+  },
+  "International-Playlist.m3u|GreenTV.bd@SD|Green TV (1080p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/green-tv-fa848f9d71.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://www.jagobd.com/wp-content/uploads/2022/12/green-tv.jpg",
+    "notes": "IPTV-org exact ID: GreenTV.bd IPTV-org public logo dataset Source page: https://www.jagobd.com/wp-content/uploads/2022/12/green-tv.jpg"
+  },
+  "International-Playlist.m3u|custom.sananda-tv|Sananda TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sananda-tv-af0df4f34c.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiy-eN4aE_QgRNRcZmOezNCNMP1DJUolSnmxoSfA8ZSQ&s",
+    "notes": "Exact original tvg-logo URL from playlist history Historical source URL; reuse rights not specified Source page: https://github.com/saeidrahmanbd/BDIX-IPTV/blob/cde4fc51a5fe73858c167366ae5651b138433fb8/NVisionBD-Playlist.m3u"
+  },
+  "International-Playlist.m3u|custom.aflam|Aflam|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aflam-f98fdc113e.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/cTLj7Yt.png",
+    "notes": "IPTV-org exact unique channel name: Aflam.sa IPTV-org public logo dataset Source page: https://i.imgur.com/cTLj7Yt.png"
+  },
+  "International-Playlist.m3u|AfraFilm.ir@SD|Afra Film|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/afra-film-b18a7be433.png": {
+    "status": "third_party_verified",
+    "source_url": "https://afratv.com/images/Logo4.png",
+    "notes": "AFRA Film official page Broadcaster logo served on its official website Source page: https://afratv.com/AFRAFILM.html"
+  },
+  "International-Playlist.m3u|ExtremaKidsTV.cr@HD|Extrema Kids TV [Not 24/7]|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/extrema-kids-tv-not-24-7-0108df4648.png": {
+    "status": "third_party_verified",
+    "source_url": "https://www.vivalivetv.com/public/files/shows/0/1/3027-294x165-FFFFFF.jpg",
+    "notes": "IPTV-org exact ID: ExtremaKidsTV.cr IPTV-org public logo dataset Source page: https://www.vivalivetv.com/public/files/shows/0/1/3027-294x165-FFFFFF.jpg"
+  },
+  "International-Playlist.m3u|TomAndJerry.do|Tom and Jerry|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tom-and-jerry-927bd66719.jpg": {
+    "status": "third_party_verified",
+    "source_url": "https://gia.tv/streams/pptv/208314.jpg?1750373428",
+    "notes": "IPTV-org exact ID: TomAndJerry.do IPTV-org public logo dataset Source page: https://gia.tv/streams/pptv/208314.jpg?1750373428"
+  },
+  "International-Playlist.m3u|custom.bdix.madinalive|Madina Live|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/madina-live-f1fa36621a.png": {
+    "status": "third_party_verified",
+    "source_url": "https://images-na.ssl-images-amazon.com/images/I/71CywdrFaZL.png",
+    "notes": "Madina Live public playlist logo reference Station logo; reuse rights not specified Source page: https://cdn-globecast.akamaized.net/live/eds/saudi_sunnah/hls_roku/index.m3u8"
+  },
+  "International-Playlist.m3u|custom.24-7-xxx-adult-16|16|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/16-a308b78988.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/7tNDKHe.png",
+    "notes": "IPTV-org exact unique channel name: Channel16.ru IPTV-org public logo dataset Source page: https://i.imgur.com/7tNDKHe.png"
+  },
+  "International-Playlist.m3u|custom.24-7-xxx-adult-18|18|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/18-028b925b47.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/EBFXFnm.png",
+    "notes": "IPTV-org exact unique channel name: iCABLEChannel18.hk IPTV-org public logo dataset Source page: https://i.imgur.com/EBFXFnm.png"
+  },
+  "International-Playlist.m3u|custom.24-7-xxx-adult-20|20|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/20-f8dcbf71ba.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/20_Mediaset_2018.svg/960px-20_Mediaset_2018.svg.png",
+    "notes": "IPTV-org exact unique channel name: 20.it IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/20_Mediaset_2018.svg/960px-20_Mediaset_2018.svg.png"
+  },
+  "International-Playlist.m3u|custom.xxx-21-sextury|21 Sextury|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/21-sextury-63a03a393b.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/JlJPhKv.png",
+    "notes": "IPTV-org exact unique channel name: 21Sextury.us IPTV-org public logo dataset Source page: https://i.imgur.com/JlJPhKv.png"
+  },
+  "International-Playlist.m3u|custom.24-7-xxx-adult-23|23|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/23-6e806a20b7.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/LnAdduG.png",
+    "notes": "IPTV-org exact unique channel name: TVK23.rs IPTV-org public logo dataset Source page: https://i.imgur.com/LnAdduG.png"
+  },
+  "International-Playlist.m3u|custom.xxx-alba-xxx-hd1|Alba Xxx Hd1|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/alba-xxx-hd1-7e85684680.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/sbneYqq.png",
+    "notes": "IPTV-org exact unique channel name: AlbaXXXHD1.ru IPTV-org public logo dataset Source page: https://i.imgur.com/sbneYqq.png"
+  },
+  "International-Playlist.m3u|custom.xxx-alba-xxx-hd2|Alba Xxx Hd2|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/alba-xxx-hd2-7e85684680.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/sbneYqq.png",
+    "notes": "IPTV-org exact unique channel name: AlbaXXXHD2.ru IPTV-org public logo dataset Source page: https://i.imgur.com/sbneYqq.png"
+  },
+  "International-Playlist.m3u|custom.xxx-anal-mom|Anal Mom|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/anal-mom-79536c4555.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/osNYJR4.png",
+    "notes": "IPTV-org exact unique channel name: AnalMom.us IPTV-org public logo dataset Source page: https://i.imgur.com/osNYJR4.png"
+  },
+  "International-Playlist.m3u|custom.xxx-anal-teen-angels|Anal Teen Angels|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/anal-teen-angels-0cd9e4e431.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/QpvpNw9.png",
+    "notes": "IPTV-org exact unique channel name: AnalTeenAngels.uk IPTV-org public logo dataset Source page: https://i.imgur.com/QpvpNw9.png"
+  },
+  "International-Playlist.m3u|custom.24-7-xxx-ass-parade|Ass Parade|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ass-parade-d01c0b1b08.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/zZctS94.png",
+    "notes": "IPTV-org exact unique channel name: AssParade.us IPTV-org public logo dataset Source page: https://i.imgur.com/zZctS94.png"
+  },
+  "International-Playlist.m3u|custom.xxx-babes-tv|Babes Tv|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/babes-tv-f7abeef358.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/XK19a9v.png",
+    "notes": "IPTV-org exact unique channel name: BabesTV.us IPTV-org public logo dataset Source page: https://i.imgur.com/XK19a9v.png"
+  },
+  "International-Playlist.m3u|custom.xxx-bang-bus|Bang Bus|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bang-bus-d01c0b1b08.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/zZctS94.png",
+    "notes": "IPTV-org exact unique channel name: BangBus.us IPTV-org public logo dataset Source page: https://i.imgur.com/zZctS94.png"
+  },
+  "International-Playlist.m3u|BangU.us|Bang U|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bang-u-264a6064b5.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/8B2SrKW.png",
+    "notes": "IPTV-org exact ID: BangU.us IPTV-org public logo dataset Source page: https://i.imgur.com/8B2SrKW.png"
+  },
+  "International-Playlist.m3u|custom.24-7-xxx-bangbus|Bangbus|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/bangbus-d01c0b1b08.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/zZctS94.png",
+    "notes": "IPTV-org exact unique channel name: BangBus.us IPTV-org public logo dataset Source page: https://i.imgur.com/zZctS94.png"
+  },
+  "International-Playlist.m3u|custom.xxx-blue-hustler|Blue Hustler|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/blue-hustler-3ffbb511ff.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/G1YaX0Q.png",
+    "notes": "IPTV-org exact unique channel name: BlueHustler.nl IPTV-org public logo dataset Source page: https://i.imgur.com/G1YaX0Q.png"
+  },
+  "International-Playlist.m3u|custom.xxx-brand-new-amateurs|Brand New Amateurs|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/brand-new-amateurs-2a9d40f4b1.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/NWvlmDu.png",
+    "notes": "IPTV-org exact unique channel name: BrandNewAmateurs.us IPTV-org public logo dataset Source page: https://i.imgur.com/NWvlmDu.png"
+  },
+  "International-Playlist.m3u|custom.xxx-cento-x-cento-tv|Cento X Cento Tv|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cento-x-cento-tv-d0a4e416b1.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/5UyhsTc.png",
+    "notes": "IPTV-org exact unique channel name: CentoXCentoTV.it IPTV-org public logo dataset Source page: https://i.imgur.com/5UyhsTc.png"
+  },
+  "International-Playlist.m3u|custom.xxx-cum-perfection|Cum Perfection|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cum-perfection-7f09c5c614.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/RZ78nv2.png",
+    "notes": "IPTV-org exact unique channel name: CumPerfection.us IPTV-org public logo dataset Source page: https://i.imgur.com/RZ78nv2.png"
+  },
+  "International-Playlist.m3u|custom.xxx-dorcel-tv|Dorcel Tv|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dorcel-tv-31bb10ac59.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/RkzyjEd.png",
+    "notes": "IPTV-org exact unique channel name: DorcelTV.nl IPTV-org public logo dataset Source page: https://i.imgur.com/RkzyjEd.png"
+  },
+  "International-Playlist.m3u|custom.xxx-dorcel-xxx|Dorcel Xxx|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dorcel-xxx-2716706ff3.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/ZwMZEKZ.png",
+    "notes": "IPTV-org exact unique channel name: DorcelXXX.nl IPTV-org public logo dataset Source page: https://i.imgur.com/ZwMZEKZ.png"
+  },
+  "International-Playlist.m3u|custom.xxx-ero-x|ERO X|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ero-x-add848b938.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/B9Fz9Yr.png",
+    "notes": "IPTV-org exact unique channel name: EroX.nl IPTV-org public logo dataset Source page: https://i.imgur.com/B9Fz9Yr.png"
+  },
+  "International-Playlist.m3u|custom.xxx-ero-xxx|Ero Xxx|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ero-xxx-c79fc94f69.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/sc11PtR.png",
+    "notes": "IPTV-org exact unique channel name: EroXXX.nl IPTV-org public logo dataset Source page: https://i.imgur.com/sc11PtR.png"
+  },
+  "International-Playlist.m3u|custom.xxx-euro-girls-on-girls|Euro Girls On Girls|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/euro-girls-on-girls-5a8b8f4718.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/dUOU1OB.png",
+    "notes": "IPTV-org exact unique channel name: EuroGirlsonGirls.cz IPTV-org public logo dataset Source page: https://i.imgur.com/dUOU1OB.png"
+  },
+  "International-Playlist.m3u|custom.xxx-family-strokes|Family Strokes|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/family-strokes-cdaf97ec86.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/7PSxIq2.png",
+    "notes": "IPTV-org exact unique channel name: FamilyStrokes.us IPTV-org public logo dataset Source page: https://i.imgur.com/7PSxIq2.png"
+  },
+  "International-Playlist.m3u|custom.xxx-hustler|Hustler|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hustler-6e47feb99d.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/41Ej2io.png",
+    "notes": "IPTV-org exact unique channel name: HustlerHD.nl IPTV-org public logo dataset Source page: https://i.imgur.com/41Ej2io.png"
+  },
+  "International-Playlist.m3u|LEOTV.cz|LEO TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/leo-tv-bc74fabc68.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/gqMiEi0.png",
+    "notes": "IPTV-org exact ID: LEOTV.cz IPTV-org public logo dataset Source page: https://i.imgur.com/gqMiEi0.png"
+  },
+  "International-Playlist.m3u|custom.xxx-meiden-van-holland-hard|Meiden Van Holland Hard|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/meiden-van-holland-hard-e3b2bca40e.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/sAGXmsn.png",
+    "notes": "IPTV-org exact unique channel name: MeidenvanHollandHard.nl IPTV-org public logo dataset Source page: https://i.imgur.com/sAGXmsn.png"
+  },
+  "International-Playlist.m3u|custom.xxx-o-la-la|O LA LA|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/o-la-la-47f236ce93.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/klra5go.png",
+    "notes": "IPTV-org exact unique channel name: Olala.ru IPTV-org public logo dataset Source page: https://i.imgur.com/klra5go.png"
+  },
+  "International-Playlist.m3u|custom.xxx-passie-xxx|Passie Xxx|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/passie-xxx-adf28cea99.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/0tI5p44.png",
+    "notes": "IPTV-org exact unique channel name: PassieXXX.nl IPTV-org public logo dataset Source page: https://i.imgur.com/0tI5p44.png"
+  },
+  "International-Playlist.m3u|PenthouseAfterMidnight.us|Penthouse After Midnight|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/penthouse-after-midnight-0fe4f172f6.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/lharlRZ.png",
+    "notes": "IPTV-org exact ID: PenthouseAfterMidnight.us IPTV-org public logo dataset Source page: https://i.imgur.com/lharlRZ.png"
+  },
+  "International-Playlist.m3u|PenthouseBlack.us|Penthouse Black|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/penthouse-black-bb094a1c7b.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/eo7E8mR.png",
+    "notes": "IPTV-org exact ID: PenthouseBlack.us IPTV-org public logo dataset Source page: https://i.imgur.com/eo7E8mR.png"
+  },
+  "International-Playlist.m3u|PenthouseNaughtyNights.us|Penthouse Naughty Nights|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/penthouse-naughty-nights-bc6c04dbe0.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/GXa9Cie.png",
+    "notes": "IPTV-org exact ID: PenthouseNaughtyNights.us IPTV-org public logo dataset Source page: https://i.imgur.com/GXa9Cie.png"
+  },
+  "International-Playlist.m3u|custom.xxx-penthouse-quickies|Penthouse Quickies|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/penthouse-quickies-9b5936f400.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/gGbcFNA.png",
+    "notes": "IPTV-org exact unique channel name: PenthouseQuickies.us IPTV-org public logo dataset Source page: https://i.imgur.com/gGbcFNA.png"
+  },
+  "International-Playlist.m3u|custom.xxx-pink-o-tv|Pink O Tv|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pink-o-tv-81a775a11f.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/2m6mEte.png",
+    "notes": "IPTV-org exact unique channel name: PinkOTV.it IPTV-org public logo dataset Source page: https://i.imgur.com/2m6mEte.png"
+  },
+  "International-Playlist.m3u|custom.xxx-public-agent|Public Agent|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/public-agent-e3ec073d88.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/aXtvXR0.png",
+    "notes": "IPTV-org exact unique channel name: PublicAgent.ca IPTV-org public logo dataset Source page: https://i.imgur.com/aXtvXR0.png"
+  },
+  "International-Playlist.m3u|PureBabes.us|Pure Babes|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pure-babes-e6a9247e5e.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/JhOzTkP.png",
+    "notes": "IPTV-org exact ID: PureBabes.us IPTV-org public logo dataset Source page: https://i.imgur.com/JhOzTkP.png"
+  },
+  "International-Playlist.m3u|custom.24-7-xxx-reality-kings|Reality Kings|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/reality-kings-a1dc3f858f.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/B1ajPsR.png",
+    "notes": "IPTV-org exact unique channel name: RealityKingsHD.us IPTV-org public logo dataset Source page: https://i.imgur.com/B1ajPsR.png"
+  },
+  "International-Playlist.m3u|custom.xxx-redlight|Redlight|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/redlight-4ac377fd78.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/g0QF5IG.png",
+    "notes": "IPTV-org exact unique channel name: RedlightHD.nl IPTV-org public logo dataset Source page: https://i.imgur.com/g0QF5IG.png"
+  },
+  "International-Playlist.m3u|custom.xxx-rouge-tv|Rouge Tv|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rouge-tv-5bb327e21c.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/hx3exCH.png",
+    "notes": "IPTV-org exact unique channel name: RougeTV.ch IPTV-org public logo dataset Source page: https://i.imgur.com/hx3exCH.png"
+  },
+  "International-Playlist.m3u|custom.xxx-russian-night|Russian Night|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/russian-night-ff8fe66902.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/Q6xebjQ.png",
+    "notes": "IPTV-org exact unique channel name: Russiannight.ru IPTV-org public logo dataset Source page: https://i.imgur.com/Q6xebjQ.png"
+  },
+  "International-Playlist.m3u|custom.xxx-sexto-senso|Sexto Senso|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sexto-senso-3212528a94.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/eGILXWw.png",
+    "notes": "IPTV-org exact unique channel name: Sextosenso.it IPTV-org public logo dataset Source page: https://i.imgur.com/eGILXWw.png"
+  },
+  "International-Playlist.m3u|custom.xxx-sextreme|Sextreme|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sextreme-8098190881.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/jWsW2Rd.png",
+    "notes": "IPTV-org exact unique channel name: Sextreme.br IPTV-org public logo dataset Source page: https://i.imgur.com/jWsW2Rd.png"
+  },
+  "International-Playlist.m3u|custom.xxx-sexy-hot|Sexy Hot|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sexy-hot-92ef0131f3.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/Fs8xVoY.png",
+    "notes": "IPTV-org exact unique channel name: SexyHot.br IPTV-org public logo dataset Source page: https://i.imgur.com/Fs8xVoY.png"
+  },
+  "International-Playlist.m3u|custom.xxx-super-one|Super One|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/super-one-f1cb05c68b.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/T4PbWL6.png",
+    "notes": "IPTV-org exact unique channel name: SuperONE.hu IPTV-org public logo dataset Source page: https://i.imgur.com/T4PbWL6.png"
+  },
+  "International-Playlist.m3u|custom.xxx-vivid-red|Vivid Red|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vivid-red-4a65e121e9.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/RzKXbIc.png",
+    "notes": "IPTV-org exact unique channel name: VividRedHD.us IPTV-org public logo dataset Source page: https://i.imgur.com/RzKXbIc.png"
+  },
+  "International-Playlist.m3u|VividTVEurope.uk|Vivid TV Europe|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vivid-tv-europe-284f3c1ed8.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/gCTGykX.png",
+    "notes": "IPTV-org exact ID: VividTVEurope.uk IPTV-org public logo dataset Source page: https://i.imgur.com/gCTGykX.png"
+  },
+  "International-Playlist.m3u|custom.xxx-xxl|XXL|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xxl-523e0046fa.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/TEuLkeQ.png",
+    "notes": "IPTV-org exact unique channel name: XXL.fr IPTV-org public logo dataset Source page: https://i.imgur.com/TEuLkeQ.png"
+  },
+  "International-Playlist.m3u|custom.xxx-xy-max|Xy Max|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xy-max-9b5936f400.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/9bvDosD.png",
+    "notes": "IPTV-org exact unique channel name: XYmax.uk IPTV-org public logo dataset Source page: https://i.imgur.com/9bvDosD.png"
+  },
+  "International-Playlist.m3u|custom.xxx-xy-mix|XY Mix|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xy-mix-9b5936f400.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/0fNmatC.png",
+    "notes": "IPTV-org exact unique channel name: XYmix.uk IPTV-org public logo dataset Source page: https://i.imgur.com/0fNmatC.png"
+  },
+  "International-Playlist.m3u|custom.xxx-xy-plus|XY Plus|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xy-plus-9b5936f400.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/trSkQon.png",
+    "notes": "IPTV-org exact unique channel name: XYplus.uk IPTV-org public logo dataset Source page: https://i.imgur.com/trSkQon.png"
+  },
+  "International-Playlist.m3u|StingrayHitList.ca|Stingray Hit List|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/stingray-hit-list-47ab2ab591.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/lgpIwId.png",
+    "notes": "IPTV-org exact ID: StingrayHitList.ca IPTV-org public logo dataset Source page: https://i.imgur.com/lgpIwId.png"
   }
 }
