@@ -1,6 +1,6 @@
 # IPTV Channel Discovery
 
-Generated: **2026-10-24T13:33:40.574702+00:00**
+Generated: **2026-10-24T13:34:29.896174+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News, Sports, Kids and Religious channels are prohibited.**
