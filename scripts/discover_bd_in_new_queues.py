@@ -3,7 +3,7 @@
 
 Rules:
 - Only the Bangladesh and India country feeds are considered.
-- News, Sports, Kids and Religious channels from either country are permanently prohibited.
+- Bangladeshi news channels are allowed. Indian News, Sports, Kids and Religious channels are prohibited.
 - Existing stream URLs and normalized channel identities are never duplicated.
 - First unseen stream for a new identity -> New Channels.
 - Additional unseen streams for an existing/newly discovered identity -> New Backup.
@@ -29,7 +29,7 @@ BAD_WORDS = {
     "vod", "catchup", "catch-up", "test", "demo", "proxy", "proxied",
     "cors", "webcam", "radio", "podcast", "event", "ppv", "timeshift",
 }
-# HARD EXCLUSION: News, Sports, Kids and Religious channels are prohibited for BOTH source countries.
+# Hard exclusion applies to India only. Bangladesh news channels remain eligible.
 FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\bnews\b", re.IGNORECASE),
     "sports": re.compile(r"\b(?:sports?|cricket|football|soccer|tennis|racing)\b", re.IGNORECASE),
@@ -126,33 +126,57 @@ def parse(text: str):
     return out
 
 
-def prohibited_channel(a: dict[str, str], name: str) -> str | None:
-    """Return a hard exclusion reason for candidates from either allowed country."""
+def channel_country(a: dict[str, str], fallback: str | None = None) -> str | None:
+    """Resolve BD/IN from source context, tvg-country, or a recognized channel-ID suffix."""
+    if fallback:
+        value = fallback.strip().casefold()
+        if value in {"bangladesh", "bd"}:
+            return "BD"
+        if value in {"india", "in"}:
+            return "IN"
+    declared = (a.get("tvg-country") or "").strip().upper()
+    if declared in {"BD", "IN"}:
+        return declared
+    for key in ("tvg-id", "channel-id"):
+        match = ID_CC_RE.search((a.get(key) or "").strip().casefold())
+        if match and match.group(1) in {"bd", "in"}:
+            return match.group(1).upper()
+    return None
+
+
+def prohibited_channel(a: dict[str, str], name: str, country: str | None = None) -> str | None:
+    """Return a hard exclusion reason; topical bans apply only to Indian channels."""
     for candidate in (name, a.get("tvg-name", "")):
         if canonical_channel_name(candidate) in PERMANENTLY_BANNED_CHANNEL_NAMES:
             return "permanently banned channel"
+
+    resolved_country = channel_country(a, country)
+    # The user's country-specific rule: Bangladeshi news is permitted; the four
+    # topic exclusions apply to Indian candidates only.
+    if resolved_country != "IN":
+        return None
+
     group = a.get("group-title", "").strip()
     for category, pattern in FORBIDDEN_CATEGORY_PATTERNS.items():
         if pattern.search(group):
-            return f"{category} channel is prohibited"
+            return f"Indian {category} channel is prohibited"
     values = " ".join((name, a.get("tvg-name", ""), group, a.get("tvg-id", ""), a.get("channel-id", "")))
     for category, pattern in FORBIDDEN_CATEGORY_PATTERNS.items():
         if pattern.search(values):
-            return f"{category} channel is prohibited"
+            return f"Indian {category} channel is prohibited"
     if FORBIDDEN_BRANDS.search(values):
-        return "known News, Sports, Kids or Religious brand/category is prohibited"
+        return "known Indian News, Sports, Kids or Religious brand/category is prohibited"
     for word in FORBIDDEN_WORDS:
         if re.search(r"(?<![\w])" + re.escape(word) + r"(?![\w])", values, re.UNICODE):
-            return f"{word} channel is prohibited"
+            return f"Indian {word} channel is prohibited"
     return None
-
 
 def evaluate(country: str, a: dict[str, str], name: str, url: str, reference=None):
     """Return (normalized attrs | None, reason). Country must be verified BD/IN."""
     if country not in COUNTRY_CODE:
         return None, "unknown source feed"
-    # HARD POLICY: News, Sports, Kids and Religious channels are prohibited in BOTH countries.
-    forbidden = prohibited_channel(a, name)
+    # Bangladesh news is allowed; News/Sports/Kids/Religious exclusions are India-only.
+    forbidden = prohibited_channel(a, name, country)
     if forbidden:
         return None, forbidden
     p = urlparse(url)
@@ -305,7 +329,7 @@ def main() -> int:
         "# IPTV Channel Discovery", "",
         f"Generated: **{datetime.now(timezone.utc).isoformat()}**", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
-        "- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. News, Sports, Kids and Religious channels from both countries are prohibited.**",
+        "- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News, Sports, Kids and Religious channels are prohibited.**",
         "- Permanent denylist: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.",
         f"- Existing prohibited review-queue rows removed: **{len(purged)}**",
         f"- New channels: **{len(new_channels)}**",
