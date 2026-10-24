@@ -1,6 +1,7 @@
 name: International Channel Discovery
 
 # Manual trigger requested: 2026-10-24 discovery refresh
+# Force fresh discovery run: 2026-10-24 19:00 Asia/Dhaka
 on:
   push:
     branches: [main]
