@@ -10,7 +10,7 @@ permissions:
 
 # Use the same main-branch writer queue as playlist maintenance and audit.
 concurrency:
-  group: iptv-playlist-main-writer
+  group: iptv-playlist-main-writer-v2
   cancel-in-progress: false
   queue: max
 
