@@ -535,7 +535,9 @@ def download_exact_asset(channel, candidate, canonical_name=False):
     ext = source.extension_for(mime, fmt, url)
     slug = source.slug(channel)
     digest = hashlib.sha256(raw).hexdigest()[:10]
-    filename = f"{slug}{ext}" if canonical_name else f"nvisionbd-verified-{slug}-{digest}{ext}"
+    # Keep channel logos repository-local without adding the prohibited
+    # Nvision prefix. The digest prevents collisions between regional variants.
+    filename = f"{slug}{ext}" if canonical_name else f"{slug}-{digest}{ext}"
     dest = LOGOS / filename
     if dest.exists():
         if hashlib.sha256(dest.read_bytes()).digest() != hashlib.sha256(raw).digest():
