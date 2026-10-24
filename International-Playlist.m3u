@@ -1004,7 +1004,7 @@ https://jmp2.uk/plu-61b793ccf571b80007b7a610.m3u8
 https://jmp2.uk/plu-61b790b985706b00072cb797.m3u8
 #EXTINF:-1 tvg-id="AfghanNobelMovies.ca@SD" tvg-name="Afghan Nobel Movies (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/afghan-nobel-movies-720p.png" tvg-country="CA" channel-id="AfghanNobelMovies.ca@SD" tvg-language="und" group-title="International Movies",Afghan Nobel Movies (720p)
 https://live.relentlessinnovations.net:1936/afghannobel/afghannobel/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.aflam" tvg-name="Aflam" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/normalized/aflam.png" tvg-country="SA" tvg-language="ara" channel-id="custom.aflam" group-title="International Movies",Aflam
+#EXTINF:-1 tvg-id="custom.aflam" tvg-name="Aflam" tvg-logo="" tvg-country="SA" tvg-language="ara" channel-id="custom.aflam" group-title="International Movies",Aflam
 https://shd-amg-fast.edgenextcdn.net/tx001/playlist.m3u8
 #EXTINF:-1 tvg-id="AfraFilm.ir@SD" tvg-name="Afra Film" tvg-country="IR" channel-id="AfraFilm.ir@SD" tvg-language="und" group-title="International Movies",Afra Film
 https://afrafhls.wns.live/hls/stream.m3u8
@@ -1318,7 +1318,7 @@ http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23637
 http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23649
 #EXTINF:-1 group-title="Religious" tvg-id="MadaniTV.sa" tvg-name="Madani TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/madani-tv.png" tvg-chno="616" channel-id="MadaniTV.sa" tvg-country="ID" tvg-language="ind",Madani TV
 https://tvsen3.aynaott.com/z24qLsqV/index.m3u8
-#EXTINF:-1 group-title="Religious" tvg-id="custom.bdix.madinalive" tvg-name="Madina Live" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/normalized/madina-live.png" tvg-chno="617" channel-id="custom.bdix.madinalive" tvg-country="SA" tvg-language="ara",Madina Live
+#EXTINF:-1 group-title="Religious" tvg-id="custom.bdix.madinalive" tvg-name="Madina Live" tvg-logo="" tvg-chno="617" channel-id="custom.bdix.madinalive" tvg-country="SA" tvg-language="ara",Madina Live
 https://cdn-globecast.akamaized.net/live/eds/saudi_sunnah/hls_roku/index.m3u8
 #EXTINF:-1 group-title="Religious" tvg-id="PeaceTVBangla.ae" tvg-name="Peace TV Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/peace-tv-bangla.png" tvg-chno="621" channel-id="PeaceTVBangla.ae" tvg-country="AE" tvg-language="ben",Peace TV Bangla
 #EXTVLCOPT:http-user-agent=DevM3U-Player
