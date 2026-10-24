@@ -53,6 +53,8 @@ https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/tra
 https://mtv.sunplex.live/MAASRANGA/index.m3u8
 #EXTINF:-1 group-title="Bangladesh" tvg-id="MohonaTV.bd" tvg-name="Mohona TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mohona-tv.png" tvg-chno="33" channel-id="MohonaTV.bd" tvg-country="BD" tvg-language="ben",Mohona TV
 https://tvsen6.aynaott.com/AkyX5dunzju4cpo26dr7/index.m3u8
+#EXTINF:-1 tvg-id="MovieBangla.bd@SD" tvg-name="Movie Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movie-bangla.png" tvg-country="BD" channel-id="MovieBangla.bd@SD" group-title="Bangladesh",Movie Bangla
+http://alvetv.com/moviebanglatv/8080/index.m3u8
 #EXTINF:-1 group-title="Bangladesh" tvg-id="MyTV.bd" tvg-name="My TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/my-tv.png" tvg-chno="34" channel-id="MyTV.bd" tvg-country="BD" tvg-language="ben",My TV
 https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8
 #EXTINF:-1 group-title="Bangladesh" tvg-id="News24.bd" tvg-name="News 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/news-24.png" tvg-chno="35" channel-id="News24.bd" tvg-country="BD" tvg-language="ben",News 24
@@ -150,18 +152,66 @@ http://103.185.24.134:3001/JALSHA-MOVIES-HD/index.m3u8
 https://cdn.pishow.tv/ott/live/10007/master.m3u8
 #EXTINF:-1 tvg-id="MahuaPlay.in@SD" tvg-name="Mahua Play (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mahua-play.png" tvg-country="IN" channel-id="MahuaPlay.in@SD" group-title="Indian Movies",Mahua Play (1080p)
 https://cdn.ottlive.co.in/mahuaplay/index.m3u8
+#EXTINF:-1 tvg-id="ManoranjanGrand.in@SD" tvg-name="Manoranjan Grand (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/manoranjan-grand.png" tvg-country="IN" channel-id="ManoranjanGrand.in@SD" group-title="Indian Movies",Manoranjan Grand (720p)
+https://cdn.pishow.tv/ott/live/1011/master.m3u8
+#EXTINF:-1 tvg-id="ManoranjanMovies.in@SD" tvg-name="Manoranjan Movies (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/manoranjan-movies-576p.png" tvg-country="IN" channel-id="ManoranjanMovies.in@SD" group-title="Indian Movies",Manoranjan Movies (576p)
+https://mumt04.tangotv.in/m18aqlK4MANORANJANMOVIES/index.m3u8
+#EXTINF:-1 tvg-id="MHOneMovies.in@SD" tvg-name="MH One Movies (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one-movies.png" tvg-country="IN" channel-id="MHOneMovies.in@SD" group-title="Indian Movies",MH One Movies (576p)
+https://mumt03.tangotv.in/Dsly5z3HMHONEMOVIE/index.m3u8
+#EXTINF:-1 tvg-id="MoviePunjab.in@SD" tvg-name="Movie Punjab (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/movie-punjab-720p.png" tvg-country="IN" channel-id="MoviePunjab.in@SD" group-title="Indian Movies",Movie Punjab (720p)
+https://samitaorigin.tangotv.in/MOVIEPUNJAB/SAMITAORIGIN/index.m3u8
+#EXTINF:-1 tvg-id="MoviesNow.in@HD" tvg-name="Movies Now HD (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-now-hd.png" tvg-country="IN" channel-id="MoviesNow.in@HD" group-title="Indian Movies",Movies Now HD (1080p)
+http://103.151.60.162:2122/play/a02w/index.m3u8?hls
+#EXTINF:-1 tvg-id="NHBollyFlix.in@HD" tvg-name="NH BollyFlix (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nh-bollyflix.png" tvg-country="IN" channel-id="NHBollyFlix.in@HD" group-title="Indian Movies",NH BollyFlix (1080p)
+https://jmp2.uk/stvp-IN46000140Q
+#EXTINF:-1 tvg-id="NHBollyGold.in@HD" tvg-name="NH BollyGold (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/nh-bollygold-1080p.png" tvg-country="IN" channel-id="NHBollyGold.in@HD" group-title="Indian Movies",NH BollyGold (1080p)
+https://0dc330e6408b4c3b9ac31fd37b121368.mediatailor.ap-south-1.amazonaws.com/v1/master/d367f9b863a7a04827f71ecab4cbeeb11f78a827/nh-bollygold-airtel/playlist.m3u8
+#EXTINF:-1 tvg-id="NHTamilGold.in@HD" tvg-name="NH Tamil Gold (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nh-tamil-gold.png" tvg-country="IN" channel-id="NHTamilGold.in@HD" group-title="Indian Movies",NH Tamil Gold (1080p)
+https://d3arbp6l7f096k.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gv6wgpbb4mgwk/playlist.m3u8?ads.ads_cdn=cf&ads.app_domain=APP_DOMAIN&ads.cdn=cf
+#EXTINF:-1 tvg-id="OscarMoviesBhojpuri.in@SD" tvg-name="Oscar Movies Bhojpuri (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/oscar-movies-bhojpuri.png" tvg-country="IN" channel-id="OscarMoviesBhojpuri.in@SD" group-title="Indian Movies",Oscar Movies Bhojpuri (720p)
+https://cdn.pishow.tv/ott/live/233/master.m3u8
 #EXTINF:-1 group-title="Indian Movies" tvg-id="Pitaara.in" tvg-name="Pitaara" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pitaara-tv.png" tvg-chno="93" channel-id="Pitaara.in" tvg-country="IN" tvg-language="pan",Pitaara
 https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8
 #EXTINF:-1 group-title="Indian Movies" tvg-id="PocketFilms.in" tvg-name="Pocket Films" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pocket-films.png" tvg-chno="94" channel-id="PocketFilms.in" tvg-country="IN" tvg-language="hin",Pocket Films
 https://vglivessai.akamaized.net/sg/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/b8ada260-bb81-472b-b7c1-3a79213a84b8/e02a0ce5-6c42-4cca-bb53-e5cfecff74a9/0.m3u8
 #EXTINF:-1 group-title="Indian Movies" tvg-id="PublicMovies.in@SD" tvg-name="Public Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/public-movies.png" tvg-chno="95" channel-id="PublicMovies.in@SD" tvg-country="IN" tvg-language="kan",Public Movies
 https://mumt04.tangotv.in/m18aqlK4PUBLICMOVIES/index.m3u8
+#EXTINF:-1 tvg-id="PunjabiShorts.in@SD" tvg-name="Punjabi Shorts (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/punjabi-shorts.png" tvg-country="IN" channel-id="PunjabiShorts.in@SD" group-title="Indian Movies",Punjabi Shorts (1080p)
+https://vglivessai.akamaized.net/ptnr-yupptv/title-Punjabi_Shorts/in/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/27c3fd7a-b01f-4b00-ac03-557ac77acd47/index.m3u8
+#EXTINF:-1 tvg-id="RajDigitalPlus.in@SD" tvg-name="Raj Digital Plus (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/raj-digital-plus.png" tvg-country="IN" channel-id="RajDigitalPlus.in@SD" group-title="Indian Movies",Raj Digital Plus (1080p)
+https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RajTV_Digital_plus/master_1.m3u8
 #EXTINF:-1 group-title="Indian Movies" tvg-id="ShemarooBollywood.us" tvg-name="Shemaroo Bollywood" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shemaroo-bollywood.png" tvg-chno="97" channel-id="ShemarooBollywood.us" tvg-country="US" tvg-language="hin",Shemaroo Bollywood
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8
+#EXTINF:-1 tvg-id="ShemarooFilmiGaane.in@HD" tvg-name="Shemaroo Filmi Gaane (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/shemaroo-filmi-gaane-1080p.png" tvg-country="IN" channel-id="ShemarooFilmiGaane.in@HD" group-title="Indian Movies",Shemaroo Filmi Gaane (1080p)
+https://prod-runn.cdn.runn.tv/shemaroo/stream/smrfgn/playlist.m3u8
+#EXTINF:-1 tvg-id="ShemarooJosh.in@SD" tvg-name="Shemaroo Josh (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shemaroo-josh.png" tvg-country="IN" channel-id="ShemarooJosh.in@SD" group-title="Indian Movies",Shemaroo Josh (576p)
+https://mumt04.tangotv.in/m18aqlK4SHEMAROOJOSH/index.m3u8
 #EXTINF:-1 group-title="Indian Movies" tvg-id="ShubhCinemaTV.in" tvg-name="Shubh Cinema TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shubh-cinema-tv.png" tvg-chno="98" channel-id="ShubhCinemaTV.in" tvg-country="IN" tvg-language="hin",Shubh Cinema TV
 https://d393sxaxig6bax.cloudfront.net/out/v1/589cf2cf44bf42bb941e817a2240d62e/index.m3u8
+#EXTINF:-1 tvg-id="SonarBangla.in@SD" tvg-name="Sonar Bangla (360p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/sonar-bangla-360p.png" tvg-country="IN" channel-id="SonarBangla.in@SD" group-title="Indian Movies",Sonar Bangla (360p)
+https://samitaorigin.tangotv.in/SONARBANGLA/SAMITAORIGIN/index.m3u8
+#EXTINF:-1 tvg-id="SoneriCinema.in@SD" tvg-name="Soneri Cinema (360p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/soneri-cinema-360p.png" tvg-country="IN" channel-id="SoneriCinema.in@SD" group-title="Indian Movies",Soneri Cinema (360p)
+https://samitaorigin.tangotv.in/SONERICINEMA/SAMITAORIGIN/index.m3u8
+#EXTINF:-1 tvg-id="SonyMax1.in@SD" tvg-name="Sony Max 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/sony-max-1.png" tvg-country="IN" channel-id="SonyMax1.in@SD" group-title="Indian Movies",Sony Max 1
+http://27.116.22.53:5001/live/3418.m3u8
+#EXTINF:-1 tvg-id="SonyMax.in@SD" tvg-name="Sony Max (576p) [Geo-blocked]" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/sony-max-576p-geo-blocked.png" tvg-country="IN" channel-id="SonyMax.in@SD" group-title="Indian Movies",Sony Max (576p) [Geo-blocked]
+http://dksmedia.tv/play/live.php?mac=00:1A:79:B6:60:3D&stream=156013&extension=ts&play_token=slNi06NyY0
+#EXTINF:-1 tvg-id="SonyMax.in@HD" tvg-name="Sony Max HD (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-max.png" tvg-country="IN" channel-id="SonyMax.in@HD" group-title="Indian Movies",Sony Max HD (1080p)
+http://103.185.24.134:3001/SonyMAX/index.m3u8
+#EXTINF:-1 tvg-id="SonyPix.in@HD" tvg-name="Sony Pix HD (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-pix-hd.png" tvg-country="IN" channel-id="SonyPix.in@HD" group-title="Indian Movies",Sony Pix HD (1080p)
+http://103.151.60.162:2122/play/a01d/index.m3u8?hls
+#EXTINF:-1 tvg-id="StarGold2.in@HD" tvg-name="Star Gold 2 HD (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-2.png" tvg-country="IN" channel-id="StarGold2.in@HD" group-title="Indian Movies",Star Gold 2 HD (1080p)
+http://103.151.60.162:2122/play/a01v/index.m3u8?hls
+#EXTINF:-1 tvg-id="StarGold.in@HD" tvg-name="Star Gold HD (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold.png" tvg-country="IN" channel-id="StarGold.in@HD" group-title="Indian Movies",Star Gold HD (1080p)
+http://103.185.24.134:3001/Star-Gold/index.m3u8
 #EXTINF:-1 group-title="Indian Movies" tvg-id="StarMaaMovies.in@SD" tvg-name="Star Maa Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-maa-movies.png" tvg-chno="107" channel-id="StarMaaMovies.in@SD" tvg-country="IN" tvg-language="tel",Star Maa Movies
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:maamovies.smil/chunklist_b2628000.m3u8
+#EXTINF:-1 tvg-id="StarMovies.in@HD" tvg-name="Star Movies (India) HD (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/star-movies-india-hd-1080p.png" tvg-country="IN" channel-id="StarMovies.in@HD" group-title="Indian Movies",Star Movies (India) HD (1080p)
+http://103.185.24.134:3001/Star-Movies/index.m3u8
+#EXTINF:-1 tvg-id="StudioOnePlus.in@SD" tvg-name="Studio One + (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/studio-one.png" tvg-country="IN" channel-id="StudioOnePlus.in@SD" group-title="Indian Movies",Studio One + (720p)
+https://cdn.pishow.tv/ott/live/276/master.m3u8
+#EXTINF:-1 tvg-id="SuriyanTV.in@SD" tvg-name="Suriyan TV (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/suriyan-tv.png" tvg-country="IN" channel-id="SuriyanTV.in@SD" group-title="Indian Movies",Suriyan TV (576p)
+https://stream.sscloud7.com/live/suriyantv/index.m3u8
 #EXTINF:-1 group-title="Indian Movies" tvg-id="TheMovieClub.in@HD" tvg-name="The Movie Club" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-movie-club.png" tvg-chno="110" channel-id="TheMovieClub.in@HD" tvg-country="IN" tvg-language="hin",The Movie Club
 https://cc-r5hupcym5oehh.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-r5hupcym5oehh/SBUM/RunnTV/BollyFlix_IN/BollyFlix_IN.m3u8
 #EXTINF:-1 group-title="Indian Music" tvg-id="7SMusic.in@SD" tvg-name="7S Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" tvg-chno="120" channel-id="7SMusic.in@SD" tvg-country="IN" tvg-language="tam",7S Music
@@ -982,6 +1032,56 @@ http://170.83.49.66:8083/AMCHD/index.m3u8
 http://stream.mcquack.net/162/index.m3u8
 #EXTINF:-1 tvg-id="AmediaPremium.ru@SD" tvg-name="Amedia Premium (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/amedia-premium-720p.png" tvg-country="RU" channel-id="AmediaPremium.ru@SD" group-title="International Movies",Amedia Premium (720p)
 http://31.148.48.15/Amedia_Premium_HD/index.m3u8
+#EXTINF:-1 tvg-id="AmericanHorrors.us@SD" tvg-name="American Horrors (480p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/american-horrors-480p.png" tvg-country="US" channel-id="AmericanHorrors.us@SD" group-title="International Movies",American Horrors (480p)
+http://107.167.7.162:8081/playlist/amhor/playlist.m3u8
+#EXTINF:-1 tvg-id="AneflixLive.us@HD" tvg-name="Aneflix Live (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/aneflix-live-720p.png" tvg-country="US" channel-id="AneflixLive.us@HD" group-title="International Movies",Aneflix Live (720p)
+https://stream-cdn-iad.vaughnsoft.net/play/live_a_neflix01.flv
+#EXTINF:-1 tvg-id="ArmeniaPremium.am@SD" tvg-name="Armenia Premium (720p)" tvg-country="AM" channel-id="ArmeniaPremium.am@SD" group-title="International Movies",Armenia Premium (720p)
+http://stream.mcquack.net/123/index.m3u8
+#EXTINF:-1 tvg-id="AuroraMediaFilms.gt@SD" tvg-name="Aurora Media Films (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/aurora-media-films-720p.png" channel-id="AuroraMediaFilms.gt@SD" group-title="International Movies",Aurora Media Films (720p)
+https://cdn.streamhispanatv.net:3417/live/auroramflive.m3u8
+#EXTINF:-1 tvg-id="AVIRewind.us@SD" tvg-name="AVI Rewind (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/avi-rewind-1080p.png" tvg-country="US" channel-id="AVIRewind.us@SD" group-title="International Movies",AVI Rewind (1080p)
+http://45.70.201.81:8000/play/a010/index.m3u8
+#EXTINF:-1 tvg-id="AXN.br@SD" tvg-name="AXN (Brazil) (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-brazil-720p.png" tvg-country="BR" channel-id="AXN.br@SD" group-title="International Movies",AXN (Brazil) (720p)
+http://170.83.16.50/AXN/index.m3u8
+#EXTINF:-1 tvg-id="AXN.pt@SD" tvg-name="AXN (Portugal) (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-portugal-1080p.png" tvg-country="PT" channel-id="AXN.pt@SD" group-title="International Movies",AXN (Portugal) (1080p)
+http://188.115.15.121:8000/play/a02z
+#EXTINF:-1 tvg-id="AXNAdria.us@SD" tvg-name="AXN Adria" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-adria.png" tvg-country="US" channel-id="AXNAdria.us@SD" group-title="International Movies",AXN Adria
+http://5.57.74.130:8000/play/a0at/index.m3u8
+#EXTINF:-1 tvg-id="AXNAsia.sg@Taiwan" tvg-name="AXN Asia Taiwan (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-asia-taiwan-1080p.png" tvg-country="SG" channel-id="AXNAsia.sg@Taiwan" group-title="International Movies",AXN Asia Taiwan (1080p)
+http://125.227.210.55:4050/VideoInput/play.ts
+#EXTINF:-1 tvg-id="AXNBlack.us@Bulgary" tvg-name="AXN Black (United States) (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-black-united-states-576p.png" tvg-country="US" channel-id="AXNBlack.us@Bulgary" group-title="International Movies",AXN Black (United States) (576p)
+http://hls127.freeott.top:8080/BG_AXN_Black/video.m3u8
+#EXTINF:-1 tvg-id="AXNBlack.us@CzechRepublic" tvg-name="AXN Black (United States) Czech Republic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-black-united-states-czech-republic.png" tvg-country="US" channel-id="AXNBlack.us@CzechRepublic" group-title="International Movies",AXN Black (United States) Czech Republic
+http://88.212.15.17/live/test_black/playlist.m3u8
+#EXTINF:-1 tvg-id="AXNBlack.us@Hungary" tvg-name="AXN Black (United States) Hungary (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-black-united-states-hungary-576p.png" tvg-country="US" channel-id="AXNBlack.us@Hungary" group-title="International Movies",AXN Black (United States) Hungary (576p)
+http://141.94.193.53:80/axn_black/index.m3u8
+#EXTINF:-1 tvg-id="AXNBlack.us@Romania" tvg-name="AXN Black (United States) Romania" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-black-united-states-romania.png" tvg-country="US" channel-id="AXNBlack.us@Romania" group-title="International Movies",AXN Black (United States) Romania
+https://saruman1.tharen1.cfd/axyblack/usergenrxi6s93hs2.m3u8
+#EXTINF:-1 tvg-id="AXNCEE.es@Hungary" tvg-name="AXN CEE" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/axn-cee.png" tvg-country="ES" channel-id="AXNCEE.es@Hungary" group-title="International Movies",AXN CEE
+http://88.212.15.17/live/axn_hun/index.m3u8
+#EXTINF:-1 tvg-id="AXNCEE.es@Bulgary" tvg-name="AXN CEE Bulgary" tvg-country="ES" channel-id="AXNCEE.es@Bulgary" group-title="International Movies",AXN CEE Bulgary
+http://85.11.144.9:4222/AXN
+#EXTINF:-1 tvg-id="AXNCEE.es@CzechRepublic" tvg-name="AXN CEE Czech Republic" tvg-country="ES" channel-id="AXNCEE.es@CzechRepublic" group-title="International Movies",AXN CEE Czech Republic
+http://88.212.15.17/live/test_axn/playlist.m3u8
+#EXTINF:-1 tvg-id="AXNCEE.es@Romania" tvg-name="AXN CEE Romania" tvg-country="ES" channel-id="AXNCEE.es@Romania" group-title="International Movies",AXN CEE Romania
+https://cronos.mangora1.cfd/axy/usergend3h5jkc9rnd.m3u8
+#EXTINF:-1 tvg-id="AXNCrime.us@SD" tvg-name="AXN Crime" tvg-country="US" channel-id="AXNCrime.us@SD" group-title="International Movies",AXN Crime
+http://88.212.15.17/live/viasat_film/index.m3u8
+#EXTINF:-1 tvg-id="AXNLatinAmerica.us@Andes" tvg-name="AXN Latin America Andes (1080p)" tvg-country="US" channel-id="AXNLatinAmerica.us@Andes" group-title="International Movies",AXN Latin America Andes (1080p)
+http://181.78.8.199:8000/play/a0cu/index.m3u8
+#EXTINF:-1 tvg-id="AXNLatinAmerica.us@Mexico" tvg-name="AXN Latin America Mexico" tvg-country="US" channel-id="AXNLatinAmerica.us@Mexico" group-title="International Movies",AXN Latin America Mexico
+http://190.11.225.124:5000/live/axn_hd/playlist.m3u8
+#EXTINF:-1 tvg-id="AXNLatinAmerica.us@South" tvg-name="AXN Latin America South" tvg-country="US" channel-id="AXNLatinAmerica.us@South" group-title="International Movies",AXN Latin America South
+https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/axn.stream/chunks.m3u8
+#EXTINF:-1 tvg-id="AXNMovies.pt@SD" tvg-name="AXN Movies (Portugal) (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-movies-portugal-720p.png" tvg-country="PT" channel-id="AXNMovies.pt@SD" group-title="International Movies",AXN Movies (Portugal) (720p)
+http://50.7.120.34:8080/AXN_BLACK/index.m3u8
+#EXTINF:-1 tvg-id="AXNMovies.es@SD" tvg-name="AXN Movies (Spain)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-movies-spain.webp" tvg-country="ES" channel-id="AXNMovies.es@SD" group-title="International Movies",AXN Movies (Spain)
+https://cdn.stmify.com/zapitv/stream/AXN_MOVIES/axn_white.mpd
+#EXTINF:-1 tvg-id="AXNPoland.pl@SD" tvg-name="AXN Poland (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-poland-1080p.png" tvg-country="PL" channel-id="AXNPoland.pl@SD" group-title="International Movies",AXN Poland (1080p)
+http://92.114.85.87:8015/play/a00f/index.m3u8
+#EXTINF:-1 tvg-id="AXNWhite.pl@SD" tvg-name="AXN White (Poland) (576i)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-white-poland-576i.png" tvg-country="PL" channel-id="AXNWhite.pl@SD" group-title="International Movies",AXN White (Poland) (576i)
+http://92.114.85.87:8014/play/a004/index.m3u8
 #EXTINF:-1 tvg-id="CNDFilmDiscoveryChannel.cn@SD" tvg-name="CND Film Discovery Channel (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cnd-film-discovery-channel-576p.png" tvg-country="CN" channel-id="CNDFilmDiscoveryChannel.cn@SD" group-title="International Movies",CND Film Discovery Channel (576p)
 http://125.210.152.18:9090/live/FXZL_750.m3u8
 #EXTINF:-1 tvg-id="MoviesThriller.sa@SD" tvg-name="Movies Thriller" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/movies-thriller.png" tvg-country="SA" tvg-language="ara;eng" channel-id="MoviesThriller.sa@SD" group-title="International Movies",Movies Thriller
