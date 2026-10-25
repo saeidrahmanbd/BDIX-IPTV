@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-25T07:03:33.272526+00:00",
+  "generated_at_utc": "2026-10-25T07:11:28.227778+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -12,7 +12,7 @@
     "International-Playlist.m3u": 1416
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "c3650a47f988c5c533bf81f1ad77dbb31744159fcb704076e03a9d57d48e09cb",
+    "IPTV-Playlist.m3u": "3341241a8a0de609641bdbd11fc2f3ebb33d6d31550dd4bff7c3fe516d679652",
     "BDIX-Playlist.m3u": "9cc2eaa4f9209e4d1a2576f9953f47240c176f15a929c41c94b9394f62323d81",
     "International-Playlist.m3u": "7861575bd52c8179c4bd25410e1bda6017ca6ae67b16c35fc67d0a2698aeafff"
   },
