@@ -1,77 +1,78 @@
 # International Channel Discovery
 
-- Last scan: 2026-10-25 06:59 UTC
+- Last scan: 2026-10-25 08:32 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12025
-- Existing playlist records: 1366
-- Exact source URLs already in playlist: 873
-- Duplicate URLs within source feed: 79
-- New eligible source records after URL/policy filtering: 1138
+- Existing playlist records: 1416
+- Exact source URLs already in playlist: 926
+- Duplicate URLs within source feed: 78
+- New eligible source records after URL/policy filtering: 1088
 - Country threshold: 5 unique primary identities for any retained dynamic country group.
 - Automatic discovery is Movie/Music only for every country; News, Sports, Kids, Documentary/Wildlife, Religious, General/Entertainment and all other categories are rejected.
 - New alternate streams are staged in New Backups; curated alternates remain in Backups.
 - Out-of-scope entries are removed only from discovery queues or the legacy catch-all group.
 - Playback was not tested.
 - New primary channels: 50
-- New backup review entries: 1
+- New backup review entries: 2
 - Category migrations: 0
 - Out-of-scope queue/catch-all entries removed: 1
 
 ## New primary channels
 
-- **Cine Premium (1080p)** — `International Movies` — US
-- **Cine Retro by Pluto TV** — `International Movies` — DE
-- **Cine Romance by Pluto TV** — `International Movies` — DE
-- **Cine Romantico (720p)** — `International Movies` — US
-- **Cine Sci-Fi by Pluto TV** — `International Movies` — DE
-- **Cine Sony (720p)** — `International Movies` — US
-- **Cine Terror** — `International Movies` — US
-- **Cine Terror BR** — `International Movies` — US
-- **Cine Terror LatAm** — `International Movies` — US
-- **Cine Thrillers by Pluto TV** — `International Movies` — DE
-- **Cine Western (France) (1080p)** — `International Movies` — FR
-- **Cine Western (Spain) (1080p)** — `International Movies` — ES
-- **Cine Western by Pluto TV** — `International Movies` — DE
-- **Cine+** — `International Movies` — UA
-- **Cine+ Classic** — `International Movies` — FR
-- **Cine+ Frisson (1080p)** — `International Movies` — FR
-- **Cine+ Hit** — `International Movies` — UA
-- **Cine+ Legend** — `International Movies` — UA
-- **cine.box** — `International Movies` — BG
-- **Cinecanal (1080p)** — `International Movies` — US
-- **Cinecanal Pacific (1080p)** — `International Movies` — US
-- **Cinecanal South** — `International Movies` — US
-- **CineLatino (720p)** — `International Movies` — MX
-- **Cinema (Mongolia) (1080p)** — `International Movies` — MN
-- **Cinema (Russia) (576p)** — `International Movies` — RU
-- **Best of Dance TV (1080p)** — `International Music` — EE
-- **BIZ Music (1080p)** — `International Music` — UZ
-- **Black (1080p)** — `International Music` — UA
-- **BOKTV (720p) [Not 24/7]** — `International Music` — ZA
-- **Boom TV (1080p)** — `International Music` — RO
-- **BOX TV** — `International Music` — BG
-- **BTA TV (720p)** — `International Music` — ZZ
-- **Canal 3 KMK TV (720p)** — `International Music` — ZZ
-- **CCTV-15 (720p)** — `International Music` — CN
-- **CEACOM TV (1080p) [Not 24/7]** — `International Music` — ZZ
-- **Chamame TV** — `International Music` — AR
-- **Chocolate FM (720p)** — `International Music` — CL
-- **City TV (Bulgaria) (576p) [Not 24/7]** — `International Music` — BG
-- **CKNO-FM (616p)** — `International Music` — CA
-- **Claro Musica TV (1080p)** — `International Music` — CO
-- **Company TV (720p)** — `International Music` — IT
-- **Conecta TV (720p)** — `International Music` — MX
-- **Cool FM 98.9 (720p)** — `International Music` — ZZ
-- **Corazon TV** — `International Music` — ZZ
-- **Couleur 3 (720p)** — `International Music` — CH
-- **Cumbia Mix (720p)** — `International Music` — AR
-- **D Music (1280p) [Not 24/7]** — `International Music` — KH
-- **Dance FM (720p)** — `International Music` — CL
-- **Dance Television (1080p)** — `International Music` — NL
-- **Dance TV [Geo-blocked]** — `International Music` — AR
+- **Cinemaraton Plus (1080i)** — `International Movies` — RO
+- **CinemaWorld (720p)** — `International Movies` — MY
+- **Cinemax 2** — `International Movies` — CZ
+- **Cinemax (Czech Republic)** — `International Movies` — CZ
+- **Cinemax (United States) West (720p)** — `International Movies` — US
+- **Cinemax Asia (720p) [Geo-blocked]** — `International Movies` — SG
+- **Cinemax Asia HD (1080p)** — `International Movies` — SG
+- **Cinemax Classics (1080p)** — `International Movies` — US
+- **Cinemax Hits (1080p)** — `International Movies` — US
+- **Cinemax Latin America (720p)** — `International Movies` — US
+- **CineStar 1 Bulgaria** — `International Movies` — BG
+- **Cinevault 80s (720p)** — `International Movies` — US
+- **CineWow** — `International Movies` — RO
+- **City Eden KinoAction [Not 24/7]** — `International Movies` — RU
+- **City Eden KinoArt [Not 24/7]** — `International Movies` — RU
+- **City Eden KinoAsia [Not 24/7]** — `International Movies` — RU
+- **City Eden KinoDetektiv [Not 24/7]** — `International Movies` — RU
+- **City Eden KinoDrama [Not 24/7]** — `International Movies` — RU
+- **City Eden KinoFantastika [Not 24/7]** — `International Movies` — RU
+- **City Eden KinoKlassika [Not 24/7]** — `International Movies` — RU
+- **City Eden KinoKomediya [Not 24/7]** — `International Movies` — RU
+- **City Eden KinoMistika [Not 24/7]** — `International Movies` — RU
+- **City Eden KinoSemya [Not 24/7]** — `International Movies` — RU
+- **Claro Cinema (1080p)** — `International Movies` — MX
+- **Classic Cinema (240p) [Not 24/7]** — `International Movies` — US
+- **DanceTV Algorhythm (1080p)** — `International Music` — EE
+- **DanceTV Deep House District (1080p)** — `International Music` — EE
+- **DanceTV EDM Mainstage (1080p)** — `International Music` — EE
+- **DanceTV House Floor (1080p)** — `International Music` — EE
+- **DanceTV Minimal Tech (1080p)** — `International Music` — EE
+- **DanceTV Techno Warehouse (1080p)** — `International Music` — EE
+- **DBM TV (1080p)** — `International Music` — FR
+- **Deep House District (1080p)** — `International Music` — NL
+- **Deewana HD (540p)** — `Indian Music` — IN
+- **Dhamaal (576p) [Geo-blocked]** — `Indian Music` — IN
+- **Dhool TV (576p)** — `Indian Music` — IN
+- **Dhoom Music (720p)** — `Indian Music` — IN
+- **Disco Mix (576p)** — `International Music` — RO
+- **DM Sat (576p)** — `International Music` — RS
+- **Dream Turk (720p)** — `International Music` — TR
+- **DSTV (Bulgaria) (614p) [Not 24/7]** — `International Music` — BG
+- **E40 (1080p)** — `International Music` — ZZ
+- **El Sol Network TV (1080p)** — `International Music` — ZZ
+- **Ellinikos FM (720p)** — `International Music` — GR
+- **EMI TV** — `International Music` — RO
+- **EMI TV HD (1080i)** — `International Music` — RO
+- **ETV Beats (1080p)** — `Indian Music` — IN
+- **Euro Indie Music Chart TV (360p)** — `International Music` — IT
+- **Exa TV** — `International Music` — MX
+- **Fabulosa Estereo 100.5 FM (720p)** — `International Music` — ZZ
 
 ## Backup alternates
 
+- **Cinemax Latin America (720p)** — US
 - **Sony Max HD (1080p)** — IN
 
 ## Country Migrations
@@ -88,7 +89,7 @@
 - kids channel is prohibited: 357
 - news channel is prohibited: 1052
 - religious channel is prohibited: 786
-- source category is not Movies or Music: 6653
+- source category is not Movies or Music: 6651
 - sports channel is prohibited: 460
 - test/VOD/non-TV name: 239
 - unsafe or tokenized URL: 117
