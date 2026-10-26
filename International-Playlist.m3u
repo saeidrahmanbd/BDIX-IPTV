@@ -938,6 +938,8 @@ https://drk6xq0vhn.gpcdn.net/live/hum_tv_abr/index.m3u8
 https://cdn4.mjunoon.tv:8087/streamtest/135M/chunks.m3u8
 #EXTINF:-1 tvg-id="JooMusic.pk@SD" tvg-country="PK" group-title="Pakistani" tvg-name="JooMusic",JooMusic
 https://livecdn.live247stream.com/joomusic/tv/playlist.m3u8
+#EXTINF:-1 tvg-id="LollywoodHDTV.cd@SD" tvg-content="Movies" group-title="Pakistani" tvg-name="Lollywood HD TV",Lollywood HD TV
+https://stream.berosat.live/hls/lollywood-hd/lollywood-hd.m3u8
 #EXTINF:-1 tvg-id="PaighanTV.pk@SD" tvg-name="Paighan TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/paighan-tv.png" tvg-chno="367" channel-id="PaighanTV.pk@SD" tvg-country="PK" tvg-language="urd" group-title="Pakistani",Paighan TV
 https://cdn4.mjunoon.tv:8087/streamtest/107M/chunks.m3u8
 #EXTINF:-1 tvg-id="SeeTV.pk" tvg-name="See TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/see-tv.png" tvg-chno="368" channel-id="SeeTV.pk" tvg-country="PK" tvg-language="urd" group-title="Pakistani",See TV
@@ -2684,6 +2686,8 @@ https://hls.vantagetv.ee/vrock_stream/index.m3u8
 https://musichls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="4Kurd.fr@SD" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="4Kurd",4Kurd
 https://4kuhls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="AlloCine.cm@SD" tvg-content="Movies" group-title="France" tvg-name="Allo Cine",Allo Cine
+https://d1yl6bf4hrzbr0.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-5km3zs4zs9sp0/allo.m3u8
 #EXTINF:-1 tvg-id="CineNanar.fr@SD" tvg-country="FR" tvg-content="Movies" group-title="France" tvg-name="Cine Nanar",Cine Nanar
 https://zylo-cinenanar-rakuten.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="CineWestern.fr@SD" tvg-country="FR" tvg-content="Movies" group-title="France" tvg-name="Cine Western (France)",Cine Western (France)
@@ -3516,6 +3520,8 @@ https://cdn.global.elektamedia.com/live/c7eds/Totalmusic/SA_LIVE_hls_enc/master.
 https://cdn.global.elektamedia.com/live/c7eds/Totalmusic_80s/SA_LIVE_hls_enc/master.m3u8
 #EXTINF:-1 tvg-id="TotalmusicConcerts.uk" tvg-language="spa" channel-id="TotalmusicConcerts.uk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/totalmusic-concerts-1080p-6f4082ca94.png" tvg-country="GB" tvg-content="Music" group-title="United Kingdom" tvg-name="Totalmusic Concerts",Totalmusic Concerts
 https://cdn.global.elektamedia.com/live/c7eds/Totalmusic_Concerts/SA_LIVE_hls_enc/master.m3u8
+#EXTINF:-1 tvg-id="TraceUK.uk@HD" tvg-content="Music" group-title="United Kingdom" tvg-name="Trace UK",Trace UK
+https://channels.trace.plus/Traceprod/UK_FAST_hd/index.m3u8
 #EXTINF:-1 tvg-id="VantageMusic.ee@UK" tvg-country="GB" tvg-content="Music" group-title="United Kingdom" tvg-name="Vantage Music UK",Vantage Music UK
 https://hls.vantagetv.co.uk/vmusicuk_stream/index.m3u8
 #EXTINF:-1 tvg-id="Vevo70s80s.us" tvg-name="Vevo '70s & '80s" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vevo-70s-80s.png" tvg-chno="466" channel-id="Vevo70s80s.us" tvg-country="US" tvg-language="eng" group-title="United Kingdom",Vevo '70s & '80s
@@ -3810,8 +3816,6 @@ https://live.acwugtv.com/hls/stream.m3u8
 https://albportal.net/albkanalemusic.m3u8
 #EXTINF:-1 tvg-id="AlegriaTV.bo@SD" channel-id="AlegriaTV.bo@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/alegria-tv-720p.png" tvg-content="Music" group-title="New Channels" tvg-name="Alegria TV",Alegria TV
 https://lbgo.bozztv.com/ssh101/ssh101/confirmatv/playlist.m3u8
-#EXTINF:-1 tvg-id="AlloCine.cm@SD" tvg-content="Movies" group-title="New Channels" tvg-name="Allo Cine",Allo Cine
-https://d1yl6bf4hrzbr0.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-5km3zs4zs9sp0/allo.m3u8
 #EXTINF:-1 tvg-id="AMC.af@SD" channel-id="AMC.af@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/amc-afghanistan-1080p.png" tvg-content="Music" group-title="New Channels" tvg-name="AMC (Afghanistan)",AMC (Afghanistan)
 https://amchls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="AMusicChannel.ng@SD" channel-id="AMusicChannel.ng@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/amusic-channel-720p.png" tvg-country="NG" tvg-content="Music" group-title="New Channels" tvg-name="AMusic Channel",AMusic Channel
@@ -3902,8 +3906,6 @@ https://stream.eleden.com/livelax/ngrp:livelax_all/playlist.m3u8
 https://media.streambrothers.com:1936/8014/8014/playlist.m3u8
 #EXTINF:-1 tvg-id="LoLTV.in" tvg-name="LoL TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lol-tv.png" tvg-chno="415" channel-id="LoLTV.in" tvg-country="IN" tvg-language="eng" group-title="New Channels",LoL TV
 https://streams2.sofast.tv/ptnr-yupptv/title-LOL-TV-ENG_yupptv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/fc63d5fd-b50e-4d3e-abdf-697d9b6cbf70/manifest.m3u8
-#EXTINF:-1 tvg-id="LollywoodHDTV.cd@SD" tvg-content="Movies" group-title="New Channels" tvg-name="Lollywood HD TV",Lollywood HD TV
-https://stream.berosat.live/hls/lollywood-hd/lollywood-hd.m3u8
 #EXTINF:-1 tvg-id="LookThoongTV.la@SD" tvg-country="LA" tvg-content="Music" group-title="New Channels" tvg-name="Look Thoong TV",Look Thoong TV
 https://livefta.malimarcdn.com/ftaedge00/lookthoongtv.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="LRTKlasika.lt@SD" tvg-country="LT" tvg-content="Music" group-title="New Channels" tvg-name="LRT Klasika",LRT Klasika
@@ -4010,8 +4012,6 @@ https://stream.rtl.lu/data/live/tele/rtltodayradio/playlist.m3u8
 https://cdn.global.elektamedia.com/live/c7eds/Totalmusic_00s/SA_LIVE_hls_enc/master.m3u8
 #EXTINF:-1 tvg-id="TotalmusicDance.uk@HD" tvg-content="Music" group-title="New Channels" tvg-name="Totalmusic Dance",Totalmusic Dance
 https://cdn.global.elektamedia.com/live/c7eds/Totalmusic_Dance/SA_LIVE_hls_enc/master.m3u8
-#EXTINF:-1 tvg-id="TraceUK.uk@HD" tvg-content="Music" group-title="New Channels" tvg-name="Trace UK",Trace UK
-https://channels.trace.plus/Traceprod/UK_FAST_hd/index.m3u8
 #EXTINF:-1 tvg-id="TropiQ997FM.pa@SD" tvg-content="Music" group-title="New Channels" tvg-name="Tropi Q 99.7 FM",Tropi Q 99.7 FM
 https://www.streaming507.net:19360/videotropiq/videotropiq.m3u8
 #EXTINF:-1 tvg-id="TurkmenOwazy.tm@SD" tvg-content="Music" group-title="New Channels" tvg-name="Turkmen Owazy",Turkmen Owazy
