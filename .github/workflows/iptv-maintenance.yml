@@ -1,4 +1,5 @@
 name: IPTV Playlist Update
+# Fresh current-main retry to replace cancelled maintenance after the shared writer-queue fix (2026-10-26).
 on:
   push:
     branches: [main]
