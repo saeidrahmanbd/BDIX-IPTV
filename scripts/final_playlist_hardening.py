@@ -15,11 +15,26 @@ PLAYLIST_ORDERS={
 ATTR=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 NON_NUMBERED={'Backup','Not Playing','New Channels','New Backup'}
 REVIEW_GROUPS={'New Channels','New Backup'}
+PROHIBITED_RELIGIOUS_CHANNELS={
+    'angel tv',
+    'calvary tv',
+    'hosanna tv',
+    'prarthana tv',
+    'santvani channel',
+    'sharnam tv',
+    'aaj tak',
+    'gnt',
+    'network 10',
+}
 
 def attrs(s): return dict(ATTR.findall(s))
 def key(s):
  s=unicodedata.normalize('NFKD',str(s or '')).casefold().strip()
  return tuple(int(x) if x.isdigit() else x for x in re.split(r'(\d+)',s))
+def normalize_name(s):
+ s=unicodedata.normalize('NFKD',str(s or '')).casefold().strip()
+ s=re.sub(r'\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p|360p)\b',' ',s)
+ return re.sub(r'[^a-z0-9]+',' ',s).strip()
 def set_attr(line,k,v):
  p=re.compile(rf'{re.escape(k)}="[^"]*"')
  return p.sub(f'{k}="{v}"',line,1) if p.search(line) else line.replace('#EXTINF:-1 ',f'#EXTINF:-1 {k}="{v}" ',1)
@@ -39,6 +54,17 @@ def process(path):
  if not path.is_file(): return
  order=PLAYLIST_ORDERS[path.name]; rank={x:i for i,x in enumerate(order)}
  pre,rec=parse(path)
+ filtered=[]; removed=[]
+ for r in rec:
+  a=attrs(r[0]); name=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip()
+  if normalize_name(name) in PROHIBITED_RELIGIOUS_CHANNELS:
+   removed.append(name)
+  else:
+   filtered.append(r)
+ rec=filtered
+ if removed:
+  print(f'REMOVED PROHIBITED RELIGIOUS CHANNELS: {len(removed)}')
+  for name in removed: print(f'  - {name}')
  seen=set(); duplicate_urls=[]
  for r in rec:
   u=next((x.strip() for x in r[1:] if x.strip().startswith(('http://','https://'))),'')
