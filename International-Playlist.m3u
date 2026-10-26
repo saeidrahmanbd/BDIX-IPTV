@@ -5854,8 +5854,6 @@ https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8
 https://27c980761ff9437d929e64647afe183a.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RakutenTV-eu_TravelXP/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.xxx-true-anal" channel-id="custom.xxx-true-anal" tvg-language="und" group-title="Backup" tvg-name="True Anal",True Anal
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791809.ts
-#EXTINF:-1 tvg-id="Tunes6.in" tvg-name="Tunes 6" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tunes-6-86e66d6033.png" tvg-chno="465" channel-id="Tunes6.in" tvg-country="IN" tvg-language="eng" group-title="Backup",Tunes 6
-https://stream.d6-pro.com/tunes6music/live/video.m3u8
 #EXTINF:-1 tvg-id="TV9Bangla.in" tvg-name="TV9 Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv-9-bangla.png" tvg-chno="96" channel-id="TV9Bangla.in" tvg-country="IN" tvg-language="ben" group-title="Backup",TV9 Bangla
 https://amg01448-samsungin-tv9bangla-samsungin-9lgnh.amagi.tv/playlist/amg01448-samsungin-tv9bangla-samsungin/playlist.m3u8
 #EXTINF:-1 tvg-id="UBangla.in" tvg-name="U Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/u-bangla.png" channel-id="UBangla.in" tvg-country="IN" tvg-language="ben" group-title="Backup",U Bangla
