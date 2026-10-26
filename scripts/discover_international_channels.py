@@ -91,8 +91,9 @@ def policy(a,name,allow_legacy_group=False):
  ):
   return None,"source category is not Movies or Music",code
 
- movie_match=any(part in MOVIE_CATEGORY_PARTS for part in group_parts) or bool(MOVIE_NAME_RE.search(text))
- music_match=any(part in MUSIC_CATEGORY_PARTS for part in group_parts) or bool(MUSIC_NAME_RE.search(text))
+ content_hint=norm(str(a.get("tvg-content","")))
+ movie_match=any(part in MOVIE_CATEGORY_PARTS for part in group_parts) or bool(MOVIE_NAME_RE.search(text)) or content_hint in {"movie","movies","film","films"}
+ music_match=any(part in MUSIC_CATEGORY_PARTS for part in group_parts) or bool(MUSIC_NAME_RE.search(text)) or content_hint in {"music","musics"}
  if movie_match and music_match:
   return None,"ambiguous Movie/Music classification",code
  if not movie_match and not music_match:
@@ -133,12 +134,15 @@ def local_logo(a,name):
   if not p.exists():p.write_bytes(data)
   return RAW_BASE+str(p.relative_to(LOGOS)).replace("\\","/")
  except Exception:return ""
-def make_extinf(a,name,group,code,logo):
+def make_extinf(a,name,group,code,logo,content_kind=""):
  clean=" ".join(name.replace('"',"").split()); ident=(a.get("tvg-id") or a.get("channel-id") or "custom.intl."+slug(clean).replace("-",".")).strip(); fields=[f'tvg-id="{ident}"',f'tvg-name="{clean}"']
  if logo.startswith(RAW_BASE):fields.append(f'tvg-logo="{logo}"')
  if code and code!="ZZ":fields.append(f'tvg-country="{code}"')
  if a.get("tvg-language"):fields.append(f'tvg-language="{a["tvg-language"].replace(chr(34),"")}"')
- fields.append(f'channel-id="{(a.get("channel-id") or ident).replace(chr(34),"")}"'); fields.append(f'group-title="{group}"'); return "#EXTINF:-1 "+" ".join(fields)+","+clean
+ fields.append(f'channel-id="{(a.get("channel-id") or ident).replace(chr(34),"")}"'); fields.append(f'group-title="{group}"')
+ if content_kind in {"International Movies","movie","movies"}: fields.append('tvg-content="Movies"')
+ elif content_kind in {"International Music","music","musics"}: fields.append('tvg-content="Music"')
+ return "#EXTINF:-1 "+" ".join(fields)+","+clean
 def natural_key(value):return tuple(int(x) if x.isdigit() else x.casefold() for x in re.split(r"(\d+)",value or ""))
 def category_registry(groups):
  fixed=set(FIXED_GROUPS); tail=set(TAIL_GROUPS)
@@ -208,7 +212,7 @@ def main():
    canonical=a; cname=name; ccode=code
   logo=local_logo(a,cname)
   if is_backup and canonical.get("tvg-logo","").startswith(RAW_BASE) and not logo:logo=canonical["tvg-logo"]
-  additions.append([make_extinf(canonical,cname,target,ccode,logo),url])
+  additions.append([make_extinf(canonical,cname,target,ccode,logo,base),url])
   if is_backup:backup_rows.append((cname,ccode))
   else:
    new_rows.append((cname,target,ccode))
