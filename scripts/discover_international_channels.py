@@ -298,7 +298,7 @@ def main():
  for b in all_blocks:
   a=attrs(b[0]); name=name_of(b); old=a.get("group-title","").strip(); group=old
   old_key=old.casefold(); code=country_code(a); genre=""
-  if FASHION_RE.search(name):
+  if FASHION_RE.search(name) and old_key not in {"backup","backups","new backup","new backups"}:
    group="Fashion TV"
   elif old_key in {"backup","backups"}:
    group="Backup"
