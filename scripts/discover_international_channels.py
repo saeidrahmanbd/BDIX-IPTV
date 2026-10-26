@@ -16,7 +16,7 @@ PLAYLIST=Path("International-Playlist.m3u"); REPORT=Path("reports/international-
 SOURCE_URL="https://iptv-org.github.io/iptv/index.category.m3u"; RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 COUNTRY_THRESHOLD=5; MAX_NEW_CHANNELS=50; MAX_NEW_BACKUPS=50; MAX_NEW_PER_GROUP=25; MAX_SOURCE_BYTES=50*1024*1024; MAX_LOGO_BYTES=2*1024*1024
 FIXED_GROUPS=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani"]
-TAIL_GROUPS=["Documentary & Wildlife","Kids","Religious","Sports","Adult","Backups","New Channels","New Backups"]
+TAIL_GROUPS=["Fashion TV","Documentary & Wildlife","Kids","Religious","Sports","Adult","New Channels","New Backups","Backups"]
 STAGING_GROUPS=set(); LEGACY_GROUPS={"new channels","new backup","new backups","not playing","international","backup","international movies","international music","test"}
 COUNTRY_NAMES={"BD":"Bangladesh","IN":"India","PK":"Pakistan","NP":"Nepal","TH":"Thailand","JP":"Japan","KR":"South Korea","ID":"Indonesia","MY":"Malaysia","PH":"Philippines","VN":"Vietnam","CN":"China","TW":"Taiwan","HK":"Hong Kong","SG":"Singapore","AU":"Australia","NZ":"New Zealand","GB":"United Kingdom","US":"United States","CA":"Canada","MX":"Mexico","BR":"Brazil","AR":"Argentina","CL":"Chile","CO":"Colombia","PE":"Peru","ES":"Spain","PT":"Portugal","FR":"France","DE":"Germany","IT":"Italy","NL":"Netherlands","BE":"Belgium","CH":"Switzerland","AT":"Austria","SE":"Sweden","NO":"Norway","DK":"Denmark","FI":"Finland","IS":"Iceland","IE":"Ireland","PL":"Poland","CZ":"Czech Republic","SK":"Slovakia","HU":"Hungary","RO":"Romania","BG":"Bulgaria","GR":"Greece","TR":"Turkey","RU":"Russia","UA":"Ukraine","IL":"Israel","AE":"United Arab Emirates","SA":"Saudi Arabia","QA":"Qatar","KW":"Kuwait","OM":"Oman","BH":"Bahrain","JO":"Jordan","LB":"Lebanon","EG":"Egypt","MA":"Morocco","DZ":"Algeria","TN":"Tunisia","ZA":"South Africa","NG":"Nigeria","KE":"Kenya","GH":"Ghana","TZ":"Tanzania","UG":"Uganda","ZW":"Zimbabwe","ET":"Ethiopia","LK":"Sri Lanka","MM":"Myanmar","KH":"Cambodia","LA":"Laos","MN":"Mongolia","KZ":"Kazakhstan","UZ":"Uzbekistan","AZ":"Azerbaijan","GE":"Georgia","AM":"Armenia","AL":"Albania","RS":"Serbia","HR":"Croatia","SI":"Slovenia","BA":"Bosnia and Herzegovina","ME":"Montenegro","MK":"North Macedonia","LT":"Lithuania","LV":"Latvia","EE":"Estonia","IR":"Iran","IQ":"Iraq","SY":"Syria","PS":"Palestine","FJ":"Fiji","WS":"Samoa","PG":"Papua New Guinea","BT":"Bhutan","MV":"Maldives"}
 ISO_CODES=set(COUNTRY_NAMES); ALIASES={"UK":"GB","EL":"GR"}; ATTR_RE=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
@@ -29,6 +29,8 @@ BAD_NAME_RE=re.compile(r"\b(?:vod|video\s*on\s*demand|catch[\s-]?up|test|demo|we
 NEWS_BRAND_RE=re.compile(r"\b(?:channel\s*24|somoy(?:\s*tv)?|jamuna\s*tv|dbc\s*news|ekattor(?:\s*tv)?|atn\s*news|news\s*24|bangla\s*news\s*24|independent\s*tv|ntv\s*news|news\s*18|aaj\s*tak|times\s*now|republic\s*(?:tv|bharat)|india\s*today|dd\s*news)\b",re.I)
 KIDS_NAME_RE=re.compile(r"\b(?:kids?|children|cartoon(?:\s*network)?|baby\s*shark|disney\s*(?:junior|jr|channel)|nick(?:elodeon)?\s*(?:jr|junior)?|pogo|pbs\s*kids|toongoggles?|toonami|teletubbies|doraemon|discovery\s*kids|mr\s*bean\s*animated|strawberry\s*shortcake|smurf(?:s)?\s*tv|duck\s*tv|zoo\s*moo|yTV)\b",re.I)
 SPORTS_NAME_RE=re.compile(r"\b(?:sports?|espn|bein\s*sports|fox\s*sports|sky\s*sports|star\s*sports|sony\s*sports|ten\s*sports|willow|cricket)\b",re.I)
+FASHION_RE=re.compile(r"\bfashion\s*tv\b",re.I)
+GENERAL_OUT_OF_SCOPE_RE=re.compile(r"\b(servus\s*tv|star\s*channel|warner\s*(?:channel|tv)|persiana\s*(?:family|iranian|korea|plus)|nile\s*drama|mbc\s*\+?\s*drama|groovy\s*tv|mci\s*television|general\s*entertainment|variety\s*channel)\b",re.I)
 DOC_NAME_RE=re.compile(r"\b(?:documentar(?:y|ies)|wildlife|nature|discovery(?:\s*(?:channel|science|turbo|world|family|life))?|national\s*geographic|nat\s*geo|animal\s*planet|bbc\s*earth|history\s*(?:channel|tv)?|smithsonian|travel\s*channel|travelxp|love\s*nature|inwild|inwonder)\b",re.I)
 MOVIE_NAME_RE=re.compile(r"\b(?:movies?|cinema|films?|bollywood|aflam|moviesphere|cinevault|cineplex|gravitas\s*movies|24\s*hour\s*(?:free\s*)?movies|star\s*movies|zee\s*cinema|b4u\s*movies|jalsha\s*movies|hallmark\s*movies|film\s*4|filmrise\s*movies|mytime\s*movie|the\s*movie\s*club|hbo(?:\s*(?:2|signature|zone|family|hits|comedy|action))?|cinemax|starz|tcm|turner\s*classic\s*movies|ifc|sundance\s*tv)\b",re.I)
 MUSIC_NAME_RE=re.compile(r"\b(?:music|musix|musica|musique|tunes|xite|v2beat|trace\s*(?:urban|latina)|kronehit|cmc\s*tv|eu\s*music|ua\s*music|arabica\s*tv|epic\s*music|totalmusic|vevo|qello\s*concerts|mtv\s*(?:music|hits|80s|90s|live|classic|dance)|vh1\b|now\s*(?:70s|80s|rock)|4music|music\s*box|8xm|9xm|9x\s*(?:jalwa|jhakaas|tashan)|stingray\s*(?:classic|djazz|remember|today|hits)|zoom\s*music|star\s*music)\b",re.I)
@@ -68,6 +70,7 @@ def policy(a,name,allow_legacy_group=False):
  group_key=re.sub(r"[^a-z0-9]+","",group_text)
  group_parts=[re.sub(r"[^a-z0-9]+","",part) for part in re.split(r"[;,|/]+",group_text) if part.strip()]
  text=f"{name} {a.get('tvg-name','')} {a.get('tvg-id','')}"
+ if FASHION_RE.search(text) and group_key=="fashiontv": return "Fashion TV",None,code
 
  # Prohibited channel identities/content always take precedence over genre matches.
  if NEWS_NAME_RE.search(text) or NEWS_BRAND_RE.search(text) or "news" in group_parts:
@@ -80,6 +83,7 @@ def policy(a,name,allow_legacy_group=False):
   return None,"sports channel is prohibited",code
  if DOC_NAME_RE.search(text) or any(x in group_parts for x in {"documentary","documentaries","wildlife","nature"}):
   return None,"documentary/wildlife channel is prohibited",code
+ if GENERAL_OUT_OF_SCOPE_RE.search(text): return None,"general entertainment is not a dedicated Movie/Music channel",code
 
  # When the source has a category, it must be explicitly a Movie or Music
  # category. General/Entertainment/unknown category labels are never overridden

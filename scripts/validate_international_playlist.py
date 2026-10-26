@@ -12,8 +12,8 @@ LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 FIXED = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani"]
-TAIL = ["Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Backups", "New Channels", "New Backups"]
-FORBIDDEN = {"international", "backup", "new backup", "not playing", "test"}
+TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backups", "Backups"]
+FORBIDDEN = {"international", "international movies", "international music", "backup", "new backup", "not playing", "test"}
 ATTRIBUTION = [
     "#=================================",
     "# Developed by: SAEID RAHMAN",
@@ -74,7 +74,20 @@ def main():
         if group.casefold() in FORBIDDEN:
             raise SystemExit(f"Forbidden legacy/catch-all group remains: {group!r} ({name}).")
         code = discovery.country_code(a)
-        if group.casefold() in {"new channels", "new backups"}:
+        group_key = group.casefold()
+        if group_key == "fashion tv":
+            if not FASHION_RE.search(name):
+                raise SystemExit(f"Invalid Fashion TV exception entry: {name!r}.")
+        elif group_key in country_group_labels or group_key in {"pakistani", "new channels", "new backups"}:
+            content = (a.get("tvg-content") or "").strip().casefold()
+            if content not in {"movies", "music"}:
+                raise SystemExit(f"International entry is not tagged Movies/Music: {name!r} in {group!r}.")
+            policy_a = dict(a)
+            policy_a["group-title"] = "New Channels"
+            target, policy_reason, _ = discovery.policy(policy_a, name)
+            if target is None:
+                raise SystemExit(f"Out-of-scope International entry: {name!r} ({policy_reason or 'not Movies/Music'}).")
+        if group_key in {"new channels", "new backups"}:
             target, reason, _ = discovery.policy(a, name)
             if target is None:
                 raise SystemExit(f"Prohibited non-movie/music channel in {group}: {name!r} ({reason or 'not Movies/Music'}).")
@@ -128,8 +141,8 @@ def main():
                     f"it must have at least {discovery.COUNTRY_THRESHOLD} or be consolidated into New Channels."
                 )
 
-    if registry[-4:] != ["Adult", "Backups", "New Channels", "New Backups"]:
-        raise SystemExit("The last four categories must be Adult, Backups, New Channels, New Backups.")
+    if registry[-3:] != ["New Channels", "New Backups", "Backups"]:
+        raise SystemExit("The final categories must be New Channels, New Backups, Backups.")
     dynamic = sorted(group for group in group_set if group not in FIXED and group not in TAIL)
     expected_registry = FIXED + dynamic + TAIL
     if registry != expected_registry:
