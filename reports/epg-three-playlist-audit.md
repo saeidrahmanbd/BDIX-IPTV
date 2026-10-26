@@ -1,14 +1,14 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-10-26T05:30:51+00:00**
+Generated: **2026-10-26T06:42:03+00:00**
 
 This report measures the three maintained M3U playlists included in the automated EPG pipeline. The historic filename epg-three-playlist-audit.md is retained for link compatibility.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1131 | 664 | 447 | 424 | 447 | 385 | 217 | OK |
-| BDIX-Playlist.m3u | 139 | 131 | 76 | 72 | 76 | 67 | 55 | OK |
-| International-Playlist.m3u | 1467 | 1373 | 330 | 306 | 330 | 279 | 1043 | OK |
+| IPTV-Playlist.m3u | 1131 | 664 | 447 | 424 | 447 | 389 | 217 | OK |
+| BDIX-Playlist.m3u | 139 | 131 | 76 | 72 | 76 | 68 | 55 | OK |
+| International-Playlist.m3u | 1467 | 1373 | 330 | 306 | 330 | 282 | 1043 | OK |
 
 ## Group coverage
 

@@ -1,6 +1,6 @@
 # Strict Unmapped EPG Audit
 
-Generated: **2026-10-26T05:30:50+00:00**
+Generated: **2026-10-26T06:42:01+00:00**
 
 Only exact normalized display-name matches or exact matches after removing a recognized territory/language suffix are listed below. Every candidate has current/future schedule rows in a configured feed, but candidates remain review-only and are never automatically applied.
 Bangladesh-group channels are not name-matched here. Their domestic schedules require exact ID/explicit alias evidence; a similar Indian or foreign channel is not acceptable.
@@ -14,53 +14,53 @@ Bangladesh-group channels are not name-matched here. Their domestic schedules re
 
 | Group | Playlist channel | Playlist tvg-id | Candidate source name | Candidate EPG ID | Match type | Usable programme rows | Source feed(s) | Decision |
 |---|---|---|---|---|---|---:|---|---|
-| Backups | Nick Jr East | custom.nick-jr-east | nickjr | Nick.Jr..HD.pl | EXACT_AFTER_REGION_SUFFIX | 372 | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | MANUAL_REVIEW_ONLY |
-| Backups | Nick Jr East | custom.nick-jr-east | nickjr | Nick.Jr..HD.uk | EXACT_AFTER_REGION_SUFFIX | 322 | https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz | MANUAL_REVIEW_ONLY |
-| Backups | Nick Jr East | custom.nick-jr-east | nickjr | Nick.Jr..ch | EXACT_AFTER_REGION_SUFFIX | 398 | https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz | MANUAL_REVIEW_ONLY |
-| Backups | Nick Jr East | custom.nick-jr-east | nickjr | Nick.Jr..nl | EXACT_AFTER_REGION_SUFFIX | 321 | https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz | MANUAL_REVIEW_ONLY |
-| Backups | Nick Jr East | custom.nick-jr-east | nickjr | Nick.Jr..pl | EXACT_AFTER_REGION_SUFFIX | 375 | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | MANUAL_REVIEW_ONLY |
-| Documentary & Wildlife | Travel Channel East | travel.us | travel | Travel.Channel.HD.hu | EXACT_AFTER_REGION_SUFFIX | 75 | https://epgshare01.online/epgshare01/epg_ripper_HU1.xml.gz | MANUAL_REVIEW_ONLY |
-| Documentary & Wildlife | Travel Channel East | travel.us | travel | Travel.Channel.HD.pl | EXACT_AFTER_REGION_SUFFIX | 138 | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | MANUAL_REVIEW_ONLY |
-| Documentary & Wildlife | Travel Channel East | travel.us | travel | Travel.Channel.cz | EXACT_AFTER_REGION_SUFFIX | 75 | https://epgshare01.online/epgshare01/epg_ripper_CZ1.xml.gz | MANUAL_REVIEW_ONLY |
-| Documentary & Wildlife | Travel Channel East | travel.us | travel | Travel.Channel.pl | EXACT_AFTER_REGION_SUFFIX | 138 | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | MANUAL_REVIEW_ONLY |
-| Documentary & Wildlife | Travel Channel East | travel.us | travel | TravelChannel.au | EXACT_AFTER_REGION_SUFFIX | 191 | https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in | colors | COLORS.HD.uk | EXACT_AFTER_REGION_SUFFIX | 120 | https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in | colors | COLORS.hk | EXACT_AFTER_REGION_SUFFIX | 119 | https://epgshare01.online/epgshare01/epg_ripper_HK1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in | colors | Colors.HD.in | EXACT_AFTER_REGION_SUFFIX | 131 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Colors MENA | ColorsMENA.in | colors | Colors.SD.in | EXACT_AFTER_REGION_SUFFIX | 126 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | MANUAL_REVIEW_ONLY |
+| Backups | Nick Jr East | custom.nick-jr-east | nickjr | Nick.Jr..HD.pl | EXACT_AFTER_REGION_SUFFIX | 369 | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | MANUAL_REVIEW_ONLY |
+| Backups | Nick Jr East | custom.nick-jr-east | nickjr | Nick.Jr..HD.uk | EXACT_AFTER_REGION_SUFFIX | 315 | https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz | MANUAL_REVIEW_ONLY |
+| Backups | Nick Jr East | custom.nick-jr-east | nickjr | Nick.Jr..ch | EXACT_AFTER_REGION_SUFFIX | 395 | https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz | MANUAL_REVIEW_ONLY |
+| Backups | Nick Jr East | custom.nick-jr-east | nickjr | Nick.Jr..nl | EXACT_AFTER_REGION_SUFFIX | 320 | https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz | MANUAL_REVIEW_ONLY |
+| Backups | Nick Jr East | custom.nick-jr-east | nickjr | Nick.Jr..pl | EXACT_AFTER_REGION_SUFFIX | 372 | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | MANUAL_REVIEW_ONLY |
+| Documentary & Wildlife | Travel Channel East | travel.us | travel | Travel.Channel.HD.hu | EXACT_AFTER_REGION_SUFFIX | 74 | https://epgshare01.online/epgshare01/epg_ripper_HU1.xml.gz | MANUAL_REVIEW_ONLY |
+| Documentary & Wildlife | Travel Channel East | travel.us | travel | Travel.Channel.HD.pl | EXACT_AFTER_REGION_SUFFIX | 137 | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | MANUAL_REVIEW_ONLY |
+| Documentary & Wildlife | Travel Channel East | travel.us | travel | Travel.Channel.cz | EXACT_AFTER_REGION_SUFFIX | 74 | https://epgshare01.online/epgshare01/epg_ripper_CZ1.xml.gz | MANUAL_REVIEW_ONLY |
+| Documentary & Wildlife | Travel Channel East | travel.us | travel | Travel.Channel.pl | EXACT_AFTER_REGION_SUFFIX | 137 | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | MANUAL_REVIEW_ONLY |
+| Documentary & Wildlife | Travel Channel East | travel.us | travel | TravelChannel.au | EXACT_AFTER_REGION_SUFFIX | 188 | https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | ColorsMENA.in | colors | COLORS.HD.uk | EXACT_AFTER_REGION_SUFFIX | 119 | https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | ColorsMENA.in | colors | COLORS.hk | EXACT_AFTER_REGION_SUFFIX | 116 | https://epgshare01.online/epgshare01/epg_ripper_HK1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | ColorsMENA.in | colors | Colors.HD.in | EXACT_AFTER_REGION_SUFFIX | 128 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Colors MENA | ColorsMENA.in | colors | Colors.SD.in | EXACT_AFTER_REGION_SUFFIX | 123 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | MANUAL_REVIEW_ONLY |
 | Indian Entertainment | Colors MENA | ColorsMENA.in | colors | Colors.TV.nl | EXACT_AFTER_REGION_SUFFIX | 160 | https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz | MANUAL_REVIEW_ONLY |
 | Indian Entertainment | Flowers US | Flowers.us | flowers | LIVETV_LIVETVCHANNEL_FLOWERS_TV | EXACT_AFTER_REGION_SUFFIX | 112 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Flowers US | Flowers.us | flowers | ts10 | EXACT_AFTER_REGION_SUFFIX | 45 | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz<br>https://avkb.short.gy/epg.xml.gz<br>https://avkb.short.gy/tsepg.xml.gz | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Flowers US | Flowers.us | flowers | ts10 | EXACT_AFTER_REGION_SUFFIX | 43 | https://avkb.short.gy/epg.xml.gz<br>https://avkb.short.gy/tsepg.xml.gz | MANUAL_REVIEW_ONLY |
 | Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | LIVETV_LIVETVCHANNEL_KAIRALI_TV | EXACT_AFTER_REGION_SUFFIX | 44 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | jtv710 | EXACT_AFTER_REGION_SUFFIX | 29 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | MANUAL_REVIEW_ONLY |
-| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | ts25 | EXACT_AFTER_REGION_SUFFIX | 28 | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz<br>https://avkb.short.gy/epg.xml.gz<br>https://avkb.short.gy/tsepg.xml.gz | MANUAL_REVIEW_ONLY |
-| International | MBC Drama USA | MBCDramaUSA.us | mbcdrama | MBC.Drama.ae | EXACT_AFTER_REGION_SUFFIX | 73 | https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz | MANUAL_REVIEW_ONLY |
-| International | MyTime Movie Network East | MyTimeMovieNetworkEast.us | mytimemovienetwork | USBC3900018K6 | EXACT_AFTER_REGION_SUFFIX | 5 | https://i.mjh.nz/SamsungTVPlus/us.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | jtv710 | EXACT_AFTER_REGION_SUFFIX | 27 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | MANUAL_REVIEW_ONLY |
+| Indian Entertainment | Kairali Arabia | KairaliArabia.in | kairali | ts25 | EXACT_AFTER_REGION_SUFFIX | 26 | https://avkb.short.gy/epg.xml.gz<br>https://avkb.short.gy/tsepg.xml.gz | MANUAL_REVIEW_ONLY |
+| International | MBC Drama USA | MBCDramaUSA.us | mbcdrama | MBC.Drama.ae | EXACT_AFTER_REGION_SUFFIX | 72 | https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz | MANUAL_REVIEW_ONLY |
+| International | MyTime Movie Network East | MyTimeMovieNetworkEast.us | mytimemovienetwork | USBC3900018K6 | EXACT_AFTER_REGION_SUFFIX | 6 | https://i.mjh.nz/SamsungTVPlus/us.xml | MANUAL_REVIEW_ONLY |
 | International | MyTime Movie Network East | MyTimeMovieNetworkEast.us | mytimemovienetwork | plex.tv.MyTime.Movie.Network.plex | EXACT_AFTER_REGION_SUFFIX | 58 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
 | International | Trace UK | TraceUK.uk | trace | Trace.TV.de | EXACT_AFTER_REGION_SUFFIX | 34 | https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz | MANUAL_REVIEW_ONLY |
 | International | XITE Hits UK | XITEHits.nl@UK | xitehits | USBD3300004RH | EXACT_AFTER_REGION_SUFFIX | 3 | https://i.mjh.nz/SamsungTVPlus/us.xml | MANUAL_REVIEW_ONLY |
 | International | XITE Hits UK | XITEHits.nl@UK | xitehits | plex.tv.XITE.Hits.plex | EXACT_AFTER_REGION_SUFFIX | 31 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
-| International Movies | Cinemax (Czech Republic) | Cinemax.cz@Czechia | cinemax | CineMAX.ro | EXACT_AFTER_REGION_SUFFIX | 50 | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz | MANUAL_REVIEW_ONLY |
-| International Movies | Cinemax (Czech Republic) | Cinemax.cz@Czechia | cinemax | Cinemax.HD.pl | EXACT_AFTER_REGION_SUFFIX | 66 | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | MANUAL_REVIEW_ONLY |
-| International Movies | Cinemax (Czech Republic) | Cinemax.cz@Czechia | cinemax | Cinemax.HD.ro | EXACT_AFTER_REGION_SUFFIX | 50 | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz | MANUAL_REVIEW_ONLY |
+| International Movies | Cinemax (Czech Republic) | Cinemax.cz@Czechia | cinemax | CineMAX.ro | EXACT_AFTER_REGION_SUFFIX | 49 | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz | MANUAL_REVIEW_ONLY |
+| International Movies | Cinemax (Czech Republic) | Cinemax.cz@Czechia | cinemax | Cinemax.HD.pl | EXACT_AFTER_REGION_SUFFIX | 65 | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | MANUAL_REVIEW_ONLY |
+| International Movies | Cinemax (Czech Republic) | Cinemax.cz@Czechia | cinemax | Cinemax.HD.ro | EXACT_AFTER_REGION_SUFFIX | 49 | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz | MANUAL_REVIEW_ONLY |
 | International Movies | Cinemax (Czech Republic) | Cinemax.cz@Czechia | cinemax | Cinemax.br | EXACT_AFTER_REGION_SUFFIX | 48 | https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz | MANUAL_REVIEW_ONLY |
-| International Movies | Cinemax (Czech Republic) | Cinemax.cz@Czechia | cinemax | Cinemax.pl | EXACT_AFTER_REGION_SUFFIX | 66 | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | MANUAL_REVIEW_ONLY |
-| International Music | Trace Urban (Australia) | custom.trace-urban-australia | traceurban | TRACE.URBAN.HD.tr | EXACT_AFTER_REGION_SUFFIX | 30 | https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz | MANUAL_REVIEW_ONLY |
+| International Movies | Cinemax (Czech Republic) | Cinemax.cz@Czechia | cinemax | Cinemax.pl | EXACT_AFTER_REGION_SUFFIX | 65 | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | MANUAL_REVIEW_ONLY |
+| International Music | Trace Urban (Australia) | custom.trace-urban-australia | traceurban | TRACE.URBAN.HD.tr | EXACT_AFTER_REGION_SUFFIX | 29 | https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz | MANUAL_REVIEW_ONLY |
 | International Music | Trace Urban (Australia) | custom.trace-urban-australia | traceurban | Trace.Urban.HD.ro | EXACT_AFTER_REGION_SUFFIX | 34 | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz | MANUAL_REVIEW_ONLY |
-| International Music | Trace Urban (Australia) | custom.trace-urban-australia | traceurban | Trace.Urban.ch | EXACT_AFTER_REGION_SUFFIX | 62 | https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz | MANUAL_REVIEW_ONLY |
-| International Music | Trace Urban (Australia) | custom.trace-urban-australia | traceurban | Trace.Urban.fr | EXACT_AFTER_REGION_SUFFIX | 58 | https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz | MANUAL_REVIEW_ONLY |
+| International Music | Trace Urban (Australia) | custom.trace-urban-australia | traceurban | Trace.Urban.ch | EXACT_AFTER_REGION_SUFFIX | 61 | https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz | MANUAL_REVIEW_ONLY |
+| International Music | Trace Urban (Australia) | custom.trace-urban-australia | traceurban | Trace.Urban.fr | EXACT_AFTER_REGION_SUFFIX | 57 | https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz | MANUAL_REVIEW_ONLY |
 | International Music | Trace Urban (Australia) | custom.trace-urban-australia | traceurban | plex.tv.TRACE.Urban.plex | EXACT_AFTER_REGION_SUFFIX | 43 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
-| Kids | Nick Bangla | NickBangla.bd | nickbangla | Nick.Bangla.in | EXACT_NAME | 77 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | MANUAL_REVIEW_ONLY |
-| Kids | Nick Bangla | NickBangla.bd | nickbangla | jtv1341 | EXACT_NAME | 37 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | MANUAL_REVIEW_ONLY |
+| Kids | Nick Bangla | NickBangla.bd | nickbangla | Nick.Bangla.in | EXACT_NAME | 76 | https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | MANUAL_REVIEW_ONLY |
+| Kids | Nick Bangla | NickBangla.bd | nickbangla | jtv1341 | EXACT_NAME | 36 | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | MANUAL_REVIEW_ONLY |
 | Poland | AXN Black Poland | custom.axn-black-poland | axnblack | AXN.Black.ch | EXACT_AFTER_REGION_SUFFIX | 95 | https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz | MANUAL_REVIEW_ONLY |
-| Poland | AXN Black Poland | custom.axn-black-poland | axnblack | AXN.Black.cz | EXACT_AFTER_REGION_SUFFIX | 73 | https://epgshare01.online/epgshare01/epg_ripper_CZ1.xml.gz | MANUAL_REVIEW_ONLY |
+| Poland | AXN Black Poland | custom.axn-black-poland | axnblack | AXN.Black.cz | EXACT_AFTER_REGION_SUFFIX | 72 | https://epgshare01.online/epgshare01/epg_ripper_CZ1.xml.gz | MANUAL_REVIEW_ONLY |
 | Poland | AXN Black Poland | custom.axn-black-poland | axnblack | AXN.Black.de | EXACT_AFTER_REGION_SUFFIX | 94 | https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz | MANUAL_REVIEW_ONLY |
-| Poland | AXN Black Poland | custom.axn-black-poland | axnblack | AXN.Black.pl | EXACT_AFTER_REGION_SUFFIX | 97 | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | MANUAL_REVIEW_ONLY |
-| Poland | AXN Black Poland | custom.axn-black-poland | axnblack | AXN.Black.ro | EXACT_AFTER_REGION_SUFFIX | 89 | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz | MANUAL_REVIEW_ONLY |
-| Religious | Islam TV Urdu | custom.islam-tv-urdu | islamurduuk | IslamChannelUrdu.uk | EXACT_AFTER_REGION_SUFFIX | 92 | https://www.open-epg.com/files/unitedkingdom.xml.gz | MANUAL_REVIEW_ONLY |
-| Religious | Madani Channel | custom.madani-channel | madaniuk | MadaniChannel.uk | EXACT_AFTER_REGION_SUFFIX | 54 | https://www.open-epg.com/files/unitedkingdom.xml.gz | MANUAL_REVIEW_ONLY |
-| Religious | Madani TV | MadaniTV.sa | madaniuk | MadaniChannel.uk | EXACT_AFTER_REGION_SUFFIX | 54 | https://www.open-epg.com/files/unitedkingdom.xml.gz | MANUAL_REVIEW_ONLY |
-| United Kingdom | MovieSphere UK | custom.moviesphere-uk | moviesphere | Moviesphere.au | EXACT_AFTER_REGION_SUFFIX | 63 | https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz | MANUAL_REVIEW_ONLY |
+| Poland | AXN Black Poland | custom.axn-black-poland | axnblack | AXN.Black.pl | EXACT_AFTER_REGION_SUFFIX | 96 | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | MANUAL_REVIEW_ONLY |
+| Poland | AXN Black Poland | custom.axn-black-poland | axnblack | AXN.Black.ro | EXACT_AFTER_REGION_SUFFIX | 87 | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz | MANUAL_REVIEW_ONLY |
+| Religious | Islam TV Urdu | custom.islam-tv-urdu | islamurduuk | IslamChannelUrdu.uk | EXACT_AFTER_REGION_SUFFIX | 91 | https://www.open-epg.com/files/unitedkingdom.xml.gz | MANUAL_REVIEW_ONLY |
+| Religious | Madani Channel | custom.madani-channel | madaniuk | MadaniChannel.uk | EXACT_AFTER_REGION_SUFFIX | 53 | https://www.open-epg.com/files/unitedkingdom.xml.gz | MANUAL_REVIEW_ONLY |
+| Religious | Madani TV | MadaniTV.sa | madaniuk | MadaniChannel.uk | EXACT_AFTER_REGION_SUFFIX | 53 | https://www.open-epg.com/files/unitedkingdom.xml.gz | MANUAL_REVIEW_ONLY |
+| United Kingdom | MovieSphere UK | custom.moviesphere-uk | moviesphere | Moviesphere.au | EXACT_AFTER_REGION_SUFFIX | 62 | https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz | MANUAL_REVIEW_ONLY |
 | United Kingdom | MovieSphere UK | custom.moviesphere-uk | moviesphere | USBD17000117B | EXACT_AFTER_REGION_SUFFIX | 4 | https://i.mjh.nz/SamsungTVPlus/us.xml | MANUAL_REVIEW_ONLY |
 | United Kingdom | MovieSphere UK | custom.moviesphere-uk | moviesphere | plex.tv.MOVIESPHERE.plex | EXACT_AFTER_REGION_SUFFIX | 47 | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz | MANUAL_REVIEW_ONLY |
 
