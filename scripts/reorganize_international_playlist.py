@@ -11,7 +11,7 @@ PLAYLIST = Path("International-Playlist.m3u")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 FIXED = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani"]
-TAIL = ["Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "Backups", "New Channels", "New Backups"]
+TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backups", "Backups"]
 BACKUP_GROUPS = {"backup", "backups", "new backup", "new backups"}
 INDIAN_GROUPS = {"Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
@@ -24,6 +24,8 @@ DOC_RE = re.compile(r"\b(documentary|documentaries|wildlife|animal\s*planet|nat\
 KIDS_RE = re.compile(r"\b(kids?|children|cartoon|baby\s*shark|disney\s*(?:jr|junior|channel|xd)|nick(?:elodeon)?(?:\s*jr|\s*junior|\s*toons)?|pogo|pbs\s*kids|toongoggles?|toonami|teletubbies|doraemon|discovery\s*kids|mr\s*bean\s*animated|strawberry\s*shortcake|smurf(?:s)?\s*tv|duck\s*tv|zoo\s*moo|boomerang|spacetoon|kartoon|lego\s*channel|caillou|jungle\s*book|moonbug|retrocrush|pop\s*kids|tinypop|yugioh|yu-gi-oh|ebs\s*kids|trt\s*cocuk)\b", re.I)
 SPORTS_RE = re.compile(r"\b(sports?|football|soccer|basketball|tennis|cricket|golf|racing|motorsport|fight|boxing|wrestling|ufc|esports?|arena\s*sport|league|espn|fox\s*sports|bein\s*sport|sky\s*sports|eurosport|nba|nfl|nhl|mlb|fifa|olympic|horse\s*racing|willow|ten\s*sports|sony\s*sports|star\s*sports|sport\s*tv|sport1|setanta|sportitalia|motorvision|real\s*madrid\s*tv)\b", re.I)
 ADULT_RE = re.compile(r"\b(adult|xxx|porn|erotic|redlight|playboy|penthouse|hustler|brazzers|dorcel|blue\s*hustler|satisfaction|sexy|babes|private\s*tv|desire\s*tv|passion\s*tv|hot\s*adult)\b", re.I)
+FASHION_RE = re.compile(r"\bfashion\s*tv\b", re.I)
+GENERAL_OUT_OF_SCOPE_RE = re.compile(r"\b(servus\s*tv|star\s*channel|warner\s*(?:channel|tv)|persiana\s*(?:family|iranian|korea|plus)|nile\s*drama|mbc\s*\+?\s*drama|groovy\s*tv|mci\s*television|general\s*entertainment|variety\s*channel)\b", re.I)
 MANUAL_NEWS = {"rplus", "rplusnews", "rplusnews24x7"}
 MANUAL_COUNTRY = {"rajdhanitv": "BD", "sonimax": "IN", "sonimax2": "IN", "asiansonimax2": "IN", "shemaroobollywood": "IN"}
 MANUAL_GROUP = {"sonimax": "Indian Movies", "sonimax2": "Indian Movies", "asiansonimax2": "Indian Movies", "shemaroobollywood": "Indian Movies"}
@@ -137,6 +139,8 @@ def local_logo_path(logo):
     return path
 
 def infer_kind(name, group, a):
+    if re.match(r"FTV\.uz\b", str(a.get("tvg-id") or ""), re.I):
+        return "music"
     hint = (a.get("tvg-content") or "").strip().casefold()
     if hint in {"movie", "movies", "film", "films"}:
         return "movie"
@@ -169,6 +173,10 @@ def classify(a, name, group, country):
         return None, None, "non-Bangladesh news"
     if NON_ISLAM_RE.search(joined):
         return None, None, "non-Islamic religious"
+    if FASHION_RE.search(joined) or group_key == "fashion tv":
+        if FASHION_RE.search(joined):
+            return "Fashion TV", None, None
+        return None, None, "invalid Fashion TV exception group"
     if ISLAM_RE.search(joined) or (group == "Religious" and not NON_ISLAM_RE.search(joined)):
         return "Religious", None, None
     if ADULT_RE.search(joined) or group == "Adult":
@@ -179,6 +187,8 @@ def classify(a, name, group, country):
         return "Sports", None, None
     if DOC_RE.search(joined) or group == "Documentary & Wildlife":
         return "Documentary & Wildlife", None, None
+    if country not in {"BD", "IN"} and group not in {"Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult"} and GENERAL_OUT_OF_SCOPE_RE.search(joined):
+        return None, None, "general entertainment, not a dedicated Movie/Music channel"
     if key in MANUAL_GROUP:
         return MANUAL_GROUP[key], None, None
     if group_key in BACKUP_GROUPS:
