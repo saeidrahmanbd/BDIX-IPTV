@@ -27,6 +27,18 @@ def attrs(line):
     return dict(ATTR_RE.findall(line))
 
 
+def normalized_stream_url(url):
+    """Normalize scheme/host only; URL paths and queries are case-sensitive."""
+    parsed = urlsplit(url.strip())
+    return (
+        parsed.scheme.casefold(),
+        parsed.netloc.casefold(),
+        parsed.path,
+        parsed.query,
+        parsed.fragment,
+    )
+
+
 def main():
     if not PLAYLIST.is_file():
         raise SystemExit("International playlist is missing.")
@@ -106,7 +118,7 @@ def main():
         ]
         if len(stream_rows) != 1:
             raise SystemExit(f"Expected exactly one URL row for {name!r}; found {len(stream_rows)}.")
-        urls.append(stream_rows[0].casefold())
+        urls.append(normalized_stream_url(stream_rows[0]))
 
         logo = a.get("tvg-logo", "").strip()
         if not logo:
