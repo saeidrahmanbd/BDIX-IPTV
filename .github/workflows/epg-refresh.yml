@@ -83,7 +83,15 @@ jobs:
           python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md
 
           git add -f epg/epg.xml
-          git add reports/epg-india-channel-mapping.csv reports/epg-coverage.md reports/epg-three-playlist-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md
+          git add reports/epg-india-channel-mapping.csv reports/epg-coverage.md reports/epg-three-playlist-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
+          # EPG generation also updates tracked diagnostic reports. Stage any such
+          # updates so rebase never starts with a dirty tracked worktree.
+          git add -u -- reports
+          if ! git diff --quiet; then
+            echo 'ERROR: unstaged tracked changes remain after staging EPG outputs:'
+            git status --short
+            exit 1
+          fi
           if git diff --cached --quiet; then
             echo 'EPG output and coverage reports are unchanged.'
             exit 0
