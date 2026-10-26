@@ -11,6 +11,16 @@ from official_epg_sources import (
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from generate_epg import ALWAYS_DROP_GENERIC_TITLES, is_slot_placeholder, normalized_title
+
+
+def is_filler_title(text):
+    """Titles the generator never publishes ("No Data", "Movie", "Program @ 5:00 AM").
+
+    Coverage must not count these as schedule data, or the report overstates
+    what the published guide can actually show.
+    """
+    return normalized_title(text) in ALWAYS_DROP_GENERIC_TITLES or is_slot_placeholder(text)
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 MAPPING = Path("reports/epg-india-channel-mapping.csv")
@@ -383,6 +393,7 @@ def fetch_source(url):
                 cid and start and stop and stop > start
                 and start <= upper and stop >= lower
                 and title is not None and bool((title.text or "").strip())
+                and not is_filler_title(title.text)
                 and is_english_text_element(title)
             ):
                 counts[cid] += 1
@@ -680,6 +691,7 @@ def main():
                     cid and start and stop and stop > start
                     and start <= upper_guide and stop >= lower_guide
                     and title is not None and bool((title.text or "").strip())
+                    and not is_filler_title(title.text)
                     and is_english_text_element(title)
                 ):
                     guide_programmes += 1

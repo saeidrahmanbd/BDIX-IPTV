@@ -4,6 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 import generate_epg
+import epg_coverage
 
 
 def rows(*titles):
@@ -95,6 +96,16 @@ class FillerTitleTests(unittest.TestCase):
         removed = generate_epg.filter_generic_candidates(candidates, names)
         self.assertEqual(removed, 4)
         self.assertEqual([r["title"] for r in candidates["Ch.in"]], ["Live TV"])
+
+
+class CoverageFillerTests(unittest.TestCase):
+    def test_coverage_report_ignores_filler_titles(self):
+        for title in ("No Data", "Movie", "movies", "Program @ 5:00 AM"):
+            with self.subTest(title=title):
+                self.assertTrue(epg_coverage.is_filler_title(title))
+        for title in ("Evening News", "Live TV", "Programming Hour", "संध्या समाचार"):
+            with self.subTest(title=title):
+                self.assertFalse(epg_coverage.is_filler_title(title))
 
 
 if __name__ == "__main__":
