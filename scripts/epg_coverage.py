@@ -11,6 +11,16 @@ from official_epg_sources import (
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from generate_epg import ALWAYS_DROP_GENERIC_TITLES, is_slot_placeholder, normalized_title
+
+
+def is_filler_title(text):
+    """Titles the generator never publishes ("No Data", "Movie", "Program @ 5:00 AM").
+
+    Coverage must not count these as schedule data, or the report overstates
+    what the published guide can actually show.
+    """
+    return normalized_title(text) in ALWAYS_DROP_GENERIC_TITLES or is_slot_placeholder(text)
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 MAPPING = Path("reports/epg-india-channel-mapping.csv")
@@ -54,6 +64,30 @@ EPG_ALIASES = {
     # Same AU service: exact name match after region suffix, with 64 current
     # programme rows in epg_ripper_AU1 (2026-10-26 strict unmapped audit).
     "custom.moviesphere-au": ["Moviesphere.au"],
+
+    # Exact display-name matches (after stripping quality tags) in fresh India
+    # provider feeds that are already in SOURCES (airtel/jiotv/yupptv). Checked
+    # 2026-10-26 against the feed repo's current files: each ID had >=20
+    # programme rows in the next 7 days and sample titles matched the channel.
+    # All are Indian-service (.in) playlist IDs; none is a Bangladesh identity.
+    "NationalGeographic.in@SD": ["LIVETV_LIVETVCHANNEL_NATIONAL_GEOGRAPHIC_CHANNEL"],
+    "NationalGeographic.in@HD": ["LIVETV_LIVETVCHANNEL_NATIONAL_GEOGRAPHIC_CHANNEL_HD"],
+    "ColorsSuper.in@SD": ["LIVETV_LIVETVCHANNEL_COLORS_SUPER"],
+    "DarshanaTV.in@SD": ["3354"],
+    "ETVComedy.in@HD": ["jtv3561"],
+    "EpicBharat.in@Digital": ["jtv3383"],
+    "SuperHungama.in@SD": ["LIVETV_LIVETVCHANNEL_SUPER_HUNGAMA"],
+    "ZeeCineClassic.in@SD": ["ZEEFAST_LIVECHANNEL_5"],
+    "ZeeComedyNation.in@HD": ["ZEEFAST_LIVECHANNEL_4"],
+    "ZeeSouthFlix.in@HD": ["ZEEFAST_LIVECHANNEL_3"],
+    "JalshaMovies.in@HD": ["LIVETV_LIVETVCHANNEL_JALSHA_MOVIES_HD"],
+    "NHBollyFlix.in@HD": ["jtv3336"],
+    "PunjabiShorts.in@SD": ["jtv3471"],
+    "SonyPix.in@HD": ["LIVETV_LIVETVCHANNEL_SONY_PIX_HD"],
+    "StarMovies.in@HD": ["LIVETV_LIVETVCHANNEL_STAR_MOVIES_HD"],
+    "ThalaaTV.in@HD": ["6601"],
+    "TollyTV.in@HD": ["6613"],
+    "DisneyChannel.in@HD": ["LIVETV_LIVETVCHANNEL_DISNEY_CHANNEL_HD"],
     "custom.bdix.cnninternationla": ["157679"],
     "ToonamiAftermathEast.us": ["ToonamiAftermath.us"],
     "DocumentaryPlus": ["plex.tv.Documentary+.plex"],
@@ -359,6 +393,7 @@ def fetch_source(url):
                 cid and start and stop and stop > start
                 and start <= upper and stop >= lower
                 and title is not None and bool((title.text or "").strip())
+                and not is_filler_title(title.text)
                 and is_english_text_element(title)
             ):
                 counts[cid] += 1
@@ -656,6 +691,7 @@ def main():
                     cid and start and stop and stop > start
                     and start <= upper_guide and stop >= lower_guide
                     and title is not None and bool((title.text or "").strip())
+                    and not is_filler_title(title.text)
                     and is_english_text_element(title)
                 ):
                     guide_programmes += 1

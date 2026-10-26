@@ -4,6 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 import generate_epg
+import epg_coverage
 
 
 def rows(*titles):
@@ -15,6 +16,18 @@ class FillerTitleTests(unittest.TestCase):
         for title in ("No Data", "no information", "N/A", "None", "No Schedule Available"):
             with self.subTest(title=title):
                 self.assertEqual(generate_epg.title_score(title), 0)
+
+    def test_blank_slot_labels_are_placeholders(self):
+        for title in ("Program @ 5:00 AM", "programme @ 11:30 PM", "Show @ 9:00 PM"):
+            with self.subTest(title=title):
+                self.assertEqual(generate_epg.title_score(title), 0)
+        # Real titles that merely start with the same word are untouched.
+        self.assertGreater(generate_epg.title_score("Programming Hour"), 0)
+        self.assertGreater(generate_epg.title_score("Show Me the Money"), 0)
+
+        candidates = {"ch": rows("Program @ 5:00 AM", "Ayur Shakthi", "Program @ 6:00 AM")}
+        self.assertEqual(generate_epg.filter_generic_candidates(candidates), 2)
+        self.assertEqual([r["title"] for r in candidates["ch"]], ["Ayur Shakthi"])
 
     def test_placeholder_only_channel_is_dropped_entirely(self):
         candidates = {"filler": rows("No Data", "No Data"), "real": rows("Evening News")}
@@ -83,6 +96,16 @@ class FillerTitleTests(unittest.TestCase):
         removed = generate_epg.filter_generic_candidates(candidates, names)
         self.assertEqual(removed, 4)
         self.assertEqual([r["title"] for r in candidates["Ch.in"]], ["Live TV"])
+
+
+class CoverageFillerTests(unittest.TestCase):
+    def test_coverage_report_ignores_filler_titles(self):
+        for title in ("No Data", "Movie", "movies", "Program @ 5:00 AM"):
+            with self.subTest(title=title):
+                self.assertTrue(epg_coverage.is_filler_title(title))
+        for title in ("Evening News", "Live TV", "Programming Hour", "संध्या समाचार"):
+            with self.subTest(title=title):
+                self.assertFalse(epg_coverage.is_filler_title(title))
 
 
 if __name__ == "__main__":

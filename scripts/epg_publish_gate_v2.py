@@ -5,6 +5,7 @@ Unlike the legacy gate, this does not reject valid programme text because of
 language/script. It validates title presence, schedule intervals, conflicts,
 placeholder density, and sensible retention against the previous guide.
 """
+import re
 import sys
 import unicodedata
 from datetime import datetime, timezone
@@ -14,6 +15,8 @@ from pathlib import Path
 OLD = Path("/tmp/bdix-epg-previous.xml")
 NEW = Path("epg/epg.xml")
 GENERIC = {"movie", "movies", "program", "programme", "entertainment", "live", "live tv", "tba", "to be announced", "unknown", "schedule", "telecast", "show", "music", "test", "testing", "coming soon", "no data", "no information", "no info", "n/a", "none", "no title", "no program", "no programs", "no programme", "no programmes", "no schedule", "no schedule available", "not available", "program not available", "programme not available"}
+# Blank time slots labelled like "Program @ 5:00 AM" carry no programme information.
+SLOT_PLACEHOLDER_RE = re.compile(r"^(program|programme|show|slot)\s*@\s*\d")
 
 
 def parse(path):
@@ -71,7 +74,10 @@ def overlap_count(programmes):
 
 def quality(path):
     channels, programmes, title_violations = parse(path)
-    generic = sum(1 for _, _, _, title in programmes if title.strip().lower() in GENERIC)
+    generic = sum(
+        1 for _, _, _, title in programmes
+        if title.strip().lower() in GENERIC or SLOT_PLACEHOLDER_RE.match(title.strip().lower())
+    )
     return {
         "channels": len(channels),
         "programmes": len(programmes),

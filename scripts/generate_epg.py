@@ -357,9 +357,17 @@ def stamp(value):
 def normalized_title(title):
     return re.sub(r"\s+", " ", (title or "").strip().lower())
 
+# Some feeds (for example YuppTV) label blank time slots "Program @ 5:00 AM".
+SLOT_PLACEHOLDER_RE = re.compile(r"^(program|programme|show|slot)\s*@\s*\d")
+
+
+def is_slot_placeholder(title):
+    return bool(SLOT_PLACEHOLDER_RE.match(normalized_title(title)))
+
+
 def title_score(title):
     t = normalized_title(title)
-    if not t or t in GENERIC_TITLES or len(t) <= 2:
+    if not t or t in GENERIC_TITLES or len(t) <= 2 or is_slot_placeholder(t):
         return 0
     return 1.0 + min(len(t), 80) / 400.0
 
@@ -431,7 +439,7 @@ def filter_generic_candidates(by_target, channel_names=None):
         kept = []
         for record in records:
             title = normalized_title(record["title"])
-            if title in ALWAYS_DROP_GENERIC_TITLES:
+            if title in ALWAYS_DROP_GENERIC_TITLES or is_slot_placeholder(title):
                 removed += 1
                 continue
             if target in filled_targets and repeats_channel_name(
