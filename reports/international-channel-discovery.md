@@ -1,109 +1,183 @@
 # International Channel Discovery
 
-- Last scan: 2026-10-26 07:13 UTC
+- Last scan: 2026-10-26 12:27 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12032
-- Existing playlist records: 2208
-- Exact source URLs already in playlist: 1720
-- Duplicate URLs within source feed: 81
-- New eligible source records after URL/policy filtering: 639
+- Existing playlist records: 2907
+- Existing logo references localized/repaired: 0
+- Existing logo references removed because no safe local asset was available: 4
+- Exact source URLs already in playlist: 1890
+- Duplicate URLs within source feed: 73
+- New eligible source records after URL/policy filtering: 569
 - Country threshold: 5 unique primary identities for any retained dynamic country group.
 - Automatic discovery is Movie/Music only for every country; News, Sports, Kids, Documentary/Wildlife, Religious, General/Entertainment and all other categories are rejected.
-- New alternate streams are staged in New Backups; curated alternates remain in Backups.
-- Out-of-scope entries are removed only from discovery queues or the legacy catch-all group.
+- New alternate streams are staged in New Backup; curated alternates remain in Backup.
+- Out-of-scope discovery entries and noncompliant dynamic country-group rows are removed; identifiable Kids/Sports/Documentary & Wildlife/Religious/Adult entries are routed to their permitted groups.
 - Playback was not tested.
 - New primary channels: 50
-- New backup review entries: 15
-- Category migrations: 0
-- Out-of-scope queue/catch-all entries removed: 2
+- New backup review entries: 4
+- Category migrations: 40
+- Out-of-scope existing entries removed: 44
 
 ## New primary channels
 
-- **00s Replay** — `International Movies` — US
-- **4ever Cinema (1080p)** — `International Movies` — UA
-- **50 Cent Action (720p)** — `International Movies` — US
-- **70s Cinema** — `International Movies` — US
-- **80s Rewind** — `International Movies` — US
-- **90s Throwback** — `International Movies` — US
-- **312 Kino (406p)** — `International Movies` — ZZ
-- **&TV International (1080p)** — `Indian Movies` — IN
-- **+MaisUm (720p)** — `International Movies` — BR
-- **Adrenalina Pura TV (720p)** — `International Movies` — US
-- **Adrenalina Pura TV Brazil** — `International Movies` — US
-- **Afghan Nobel Movies (720p)** — `International Movies` — CA
-- **alpha Cinema (1080p)** — `International Movies` — RU
-- **AMC Europe Bulgary (576p)** — `International Movies` — GB
-- **AMC Europe Romania** — `International Movies` — GB
-- **AMC Latin America (1080p)** — `International Movies` — US
-- **Amedia Premium (720p)** — `International Movies` — RU
-- **Armenia Premium (720p)** — `International Movies` — AM
-- **AXN (Portugal) (1080p)** — `International Movies` — PT
-- **AXN Black (United States) (576p)** — `International Movies` — US
-- **AXN Black (United States) Romania** — `International Movies` — US
-- **AXN CEE Bulgary** — `International Movies` — ES
-- **AXN Latin America Mexico** — `International Movies` — US
-- **AXN Latin America South** — `International Movies` — US
-- **AXN Movies (Spain)** — `International Movies` — ES
-- **B4U Bhojpuri (1080p)** — `Indian Movies` — IN
-- **Battlestar Galactica** — `International Movies` — US
-- **ETV Cinema (396p)** — `Indian Movies` — IN
-- **ETV Cinema HD (1080p)** — `Indian Movies` — IN
-- **Filmax (576p)** — `Pakistani` — PK
-- **Filmazia (576p)** — `Pakistani` — PK
-- **Goldmines Movies (576p)** — `Indian Movies` — IN
-- **Indywood TV (720p)** — `Indian Movies` — IN
-- **Jalsha Movies HD (1080p)** — `Indian Movies` — IN
-- **NH BollyGold (1080p)** — `Indian Movies` — IN
-- **Shemaroo Filmi Gaane (1080p)** — `Indian Movies` — IN
-- **Star Gold HD (1080p)** — `Indian Movies` — IN
-- **Star Movies (India) HD (1080p)** — `Indian Movies` — IN
-- **Suriyan TV (576p)** — `Indian Movies` — IN
-- **Zee South Flix (1080p)** — `Indian Movies` — IN
-- **2TV (1080p)** — `International Music` — LT
-- **4ever Music (1080p)** — `International Music` — UA
-- **9X Jhakaas (1080p)** — `Indian Music` — IN
-- **Abdulmajeed Abdullah (1080p)** — `International Music` — SA
-- **ACW UG TV (480p)** — `International Music` — UG
-- **Alegria TV (720p)** — `International Music` — ZZ
-- **AMC (Afghanistan) (1080p)** — `International Music` — ZZ
-- **AMusic Channel (720p)** — `International Music` — NG
-- **Andina RTV (720p)** — `International Music` — PE
-- **Antenne Vorarlberg (720p) [Not 24/7]** — `International Music` — AT
+- **beIN Box Office 1** — `Turkey` — TR
+- **beIN Box Office 2** — `Turkey` — TR
+- **beIN Box Office 3** — `Turkey` — TR
+- **beIN Movies Stars** — `Turkey` — TR
+- **beIN Movies Turk** — `Turkey` — TR
+- **BET Cinema** — `United States` — US
+- **BET Comedy Movies** — `United States` — US
+- **BET Visionaries** — `United States` — US
+- **Blokbaster HD (1080p)** — `Russia` — RU
+- **Bollywood Classic Romania (576p)** — `Romania` — RO
+- **Bollywood Film** — `Romania` — RO
+- **Bolt (Russia) (576p)** — `Russia` — RU
+- **Bonanza** — `United States` — US
+- **Bonanza CA** — `United States` — US
+- **Bravo Farsi TV (360p)** — `Iran` — IR
+- **bTV Action** — `Bulgaria` — BG
+- **bTV Cinema** — `Bulgaria` — BG
+- **bTV Lady** — `Bulgaria` — BG
+- **Canal Cine Dios** — `Colombia` — CO
+- **Canal+ Action Europe (360p)** — `Netherlands` — NL
+- **Canal+ Action Europe Czechia** — `Netherlands` — NL
+- **Canal+ Action Europe Slovakia (720p)** — `Netherlands` — NL
+- **Canal+ Cinemas (720p)** — `France` — FR
+- **CCTV-6 [Geo-blocked]** — `China` — CN
+- **Celestial Movies (576i)** — `New Channels` — HK
+- **CHC Action (1080p)** — `China` — CN
+- **Cine34 [Geo-blocked]** — `Italy` — IT
+- **Cine34 HD (1080p)** — `Italy` — IT
+- **Cine 666 by Pluto TV** — `Germany` — DE
+- **Cine Action by Pluto TV** — `Germany` — DE
+- **Cine Adrenalina** — `United States` — US
+- **Cine Amor** — `United States` — US
+- **Cine by Pluto TV** — `Germany` — DE
+- **Cine Catastrophe by Pluto TV** — `Germany` — DE
+- **Cine d'Asie by Pluto TV** — `Germany` — DE
+- **Cine Familiar (1080p)** — `United States` — US
+- **Cine Hispano (1080p)** — `United States` — US
+- **Cine Horreur by Pluto TV** — `Germany` — DE
+- **Cine Premiere** — `United States` — US
+- **Cine Premium (1080p)** — `United States` — US
+- **Cine Retro by Pluto TV** — `Germany` — DE
+- **Cine Romance by Pluto TV** — `Germany` — DE
+- **Cine Sci-Fi by Pluto TV** — `Germany` — DE
+- **Cine Terror** — `United States` — US
+- **Cine Terror BR** — `United States` — US
+- **Cine Terror LatAm** — `United States` — US
+- **Cine Thrillers by Pluto TV** — `Germany` — DE
+- **Cine Western by Pluto TV** — `Germany` — DE
+- **Cine+ Classic** — `France` — FR
+- **Cine+ Frisson (1080p)** — `France` — FR
 
 ## Backup alternates
 
-- **&TV** — IN
-- **Colors Cineplex** — IN
-- **Dom kino Premium HD** — RU
-- **Dorama** — RU
-- **Kino TV HD** — RU
-- **Kinopokaz** — RU
-- **Lifetime Movies** — US
-- **Sony Max** — IN
-- **9X Tashan** — IN
-- **9XM** — IN
-- **ETV Music** — IN
-- **Now 70s** — GB
-- **Now 80s** — GB
-- **Qmusic** — NL
-- **Trace Brazuca HD** — FR
+- **GREAT! Movies** — GB
+- **GREAT! Romance** — GB
+- **Jalwa TV** — PK
+- **Vevo Pop** — US
 
 ## Country Migrations
 
+- **Los Angeles TV Radio**: `Brazil` → `New Channels`
+- **TopEstrada TV**: `Brazil` → `New Channels`
+- **TV Cidade**: `Brazil` → `New Channels`
+- **BTA TV**: `Bulgaria` → `New Channels`
+- **Boreal**: `Canada` → `New Channels`
+- **EBC Foreign Movie**: `China` → `New Channels`
+- **Mei Ah Movie Channel**: `China` → `New Channels`
+- **Mas23 TV**: `Colombia` → `New Channels`
+- **Allo Cine**: `France` → `New Channels`
+- **Fashion TV**: `France` → `Fashion TV`
+- **Movie Dome Family**: `Germany` → `United States`
+- **Navahang TV**: `Iran` → `New Channels`
+- **PMC**: `Iran` → `New Channels`
+- **PMC Royale**: `Iran` → `New Channels`
+- **Vevo '90s & '00s**: `Italy` → `United States`
+- **Metropoli Medios TV**: `Mexico` → `New Channels`
+- **Teleritmo**: `Mexico` → `United States`
+- **Canal 3 KMK TV**: `North Macedonia` → `New Channels`
+- **Folk Klub TV**: `North Macedonia` → `New Channels`
+- **Folk TV**: `North Macedonia` → `New Channels`
+- **Love TV**: `North Macedonia` → `New Channels`
+- **Sky Folk TV**: `North Macedonia` → `New Channels`
+- **Audiokiss**: `Romania` → `New Channels`
+- **Radio Colmenar 92.5 FM**: `Spain` → `New Channels`
+- **KN Music TV**: `Turkey` → `New Channels`
+- **UA Music**: `Ukraine` → `New Channels`
+- **Rakuten Movies**: `United Kingdom` → `United States`
+- **Sparkle Movies**: `United Kingdom` → `United States`
+- **Vevo '70s & '80s**: `United Kingdom` → `United States`
+- **Vevo Hip Hop & R&B**: `United Kingdom` → `United States`
+- **Star Movies HD**: `United States` → `New Channels`
+- **1Mus**: `New Channels` → `United States`
+- **M20 Music**: `New Channels` → `United States`
+- **Totalmusic 2000s**: `New Channels` → `United Kingdom`
+- **Totalmusic Dance**: `New Channels` → `United Kingdom`
+- **V2BEAT TV**: `New Channels` → `United Kingdom`
+- **Antenne Kaernten**: `Austria` → `New Channels`
+- **Antenne Steiermark**: `Austria` → `New Channels`
+- **Antenne Vorarlberg [ ]**: `Austria` → `New Channels`
+- **Kronehit**: `Austria` → `New Channels`
 
-## Removed out-of-scope existing queue/catch-all entries
+## Removed out-of-scope existing entries
 
-- **&TV** — `New Backups` — channel is not clearly Movies or Music
-- **Sony Max** — `New Backups` — channel is not clearly Movies or Music
+- **aur LIFE** — `Pakistani` — channel is not clearly Movies or Music
+- **BSTV** — `Pakistani` — channel is not clearly Movies or Music
+- **Discover Pakistan** — `Pakistani` — channel is not clearly Movies or Music
+- **Falak TV** — `Pakistani` — channel is not clearly Movies or Music
+- **HUM Masala** — `Pakistani` — channel is not clearly Movies or Music
+- **HUM Sitaray** — `Pakistani` — channel is not clearly Movies or Music
+- **Hum TV** — `Pakistani` — channel is not clearly Movies or Music
+- **Paighan TV** — `Pakistani` — channel is not clearly Movies or Music
+- **See TV** — `Pakistani` — channel is not clearly Movies or Music
+- **Tag TV** — `Pakistani` — channel is not clearly Movies or Music
+- **Waseb TV** — `Pakistani` — channel is not clearly Movies or Music
+- **ServusTV** — `Austria` — general entertainment is not a dedicated Movie/Music channel
+- **Star Channel (Chile)** — `Chile` — general entertainment is not a dedicated Movie/Music channel
+- **MCI Television** — `Colombia` — general entertainment is not a dedicated Movie/Music channel
+- **Star Channel (Colombia)** — `Colombia` — general entertainment is not a dedicated Movie/Music channel
+- **Warner Channel Colombia** — `Colombia` — general entertainment is not a dedicated Movie/Music channel
+- **Warner TV** — `Czech Republic` — general entertainment is not a dedicated Movie/Music channel
+- **Nile Drama** — `Egypt` — general entertainment is not a dedicated Movie/Music channel
+- **Persiana Family** — `France` — general entertainment is not a dedicated Movie/Music channel
+- **Persiana Iranian** — `France` — general entertainment is not a dedicated Movie/Music channel
+- **Persiana Korea** — `France` — general entertainment is not a dedicated Movie/Music channel
+- **Persiana Plus** — `France` — general entertainment is not a dedicated Movie/Music channel
+- **Groovy TV** — `Greece` — general entertainment is not a dedicated Movie/Music channel
+- **AVA Family** — `Iran` — channel is not clearly Movies or Music
+- **AVA Series** — `Iran` — channel is not clearly Movies or Music
+- **MBC+ Drama** — `Saudi Arabia` — general entertainment is not a dedicated Movie/Music channel
+- **Saudi TV** — `Saudi Arabia` — channel is not clearly Movies or Music
+- **BBC Drama** — `United Kingdom` — channel is not clearly Movies or Music
+- **iON TV UK** — `United Kingdom` — channel is not clearly Movies or Music
+- **Bloomberg TV** — `United States` — news channel is prohibited
+- **Circle** — `United States` — channel is not clearly Movies or Music
+- **CNBC TV** — `United States` — news channel is prohibited
+- **Cook & Bake** — `United States` — channel is not clearly Movies or Music
+- **Fashion One** — `United States` — channel is not clearly Movies or Music
+- **MBC Drama USA** — `United States` — general entertainment is not a dedicated Movie/Music channel
+- **MTV2** — `United States` — channel is not clearly Movies or Music
+- **Paramount Network** — `United States` — channel is not clearly Movies or Music
+- **Warner TV Asia** — `United States` — general entertainment is not a dedicated Movie/Music channel
+- **Arirang** — `New Channels` — channel is not clearly Movies or Music
+- **Aryan TV National** — `New Channels` — channel is not clearly Movies or Music
+- **Digital Fashion** — `New Channels` — channel is not clearly Movies or Music
+- **LoL TV** — `New Channels` — channel is not clearly Movies or Music
+- **MBC 1** — `New Channels` — channel is not clearly Movies or Music
+- **MBC 4** — `New Channels` — channel is not clearly Movies or Music
 
 ## Rejections
 
 - ambiguous Movie/Music classification: 2
-- documentary/wildlife channel is prohibited: 167
-- kids channel is prohibited: 256
-- news channel is prohibited: 1057
-- religious channel is prohibited: 787
-- source category is not Movies or Music: 6743
+- documentary/wildlife channel is prohibited: 163
+- general entertainment is not a dedicated Movie/Music channel: 15
+- kids channel is prohibited: 252
+- news channel is prohibited: 1042
+- religious channel is prohibited: 772
+- source category is not Movies or Music: 6674
 - sports channel is prohibited: 224
 - test/VOD/non-TV name: 239
 - unsafe or tokenized URL: 117
