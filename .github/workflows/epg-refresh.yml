@@ -32,6 +32,7 @@ permissions:
 concurrency:
   group: iptv-playlist-main-writer-v2
   cancel-in-progress: false
+  queue: max
 
 jobs:
   refresh:
