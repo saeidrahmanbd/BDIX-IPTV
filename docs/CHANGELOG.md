@@ -74,29 +74,17 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 
 ## 2026-10-26
 
-- 🗑️ **38 channel(s) removed**
-- 🖼️ **1 logo reference(s) corrected**
-- 📡 **2 stream(s) replaced**
+- 🗑️ **10 channel(s) removed**
 
 ### Removed channels
-- Food Network
-- Fox News
-- HBO 2
-- HGTV
-- TBS
-- TLC
-- Discovery Science
-- Discovery Turbo
-- HISTORY TV
-- Travel Channel
-- Discovery Family
-- Disney Channel India
-- Teen Nick
-- NFL Network
-- Willow
-- Willow TV
-- GTC Punjabi
-- Gyandarshan
-- VCV (720p) [Not 24/7]
-- Vyas Channel
+- Aaj Tak
+- Angel TV
+- Calvary TV
+- GNT
+- Hosanna TV
+- Network 10
+- Prarthana TV
+- Santvani Channel
+- Sharnam TV
+- Hosanna TV Hindi
 
