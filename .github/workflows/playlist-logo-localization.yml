@@ -10,7 +10,6 @@ on:
       - International-Playlist.m3u
       - scripts/repair_playlist_logos.py
       - scripts/logo_source_catalog.py
-      - .github/workflows/playlist-logo-localization.yml
       - reports/logo-source-registry.json
   workflow_dispatch:
 
@@ -33,6 +32,17 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
+      - name: Skip superseded queued logo localization run
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          EVENT_WORKFLOW_BLOB="$(git rev-parse "${GITHUB_SHA}:.github/workflows/playlist-logo-localization.yml")"
+          CURRENT_WORKFLOW_BLOB="$(git rev-parse "FETCH_HEAD:.github/workflows/playlist-logo-localization.yml")"
+          if [[ "$EVENT_WORKFLOW_BLOB" != "$CURRENT_WORKFLOW_BLOB" ]]; then
+            echo "::notice::Skipping superseded queued logo localization run; a newer workflow definition is on main. No playlist files were changed."
+            exit 0
+          fi
       - name: Set up Python
         uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
