@@ -32,8 +32,6 @@ BAD_WORDS = {
 # India News and non-Islamic Religious channels are prohibited; Indian Kids/Sports and Bangladesh news remain eligible.
 FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\bnews\b", re.IGNORECASE),
-    "sports": re.compile(r"\b(?:sports?|cricket|football|soccer|tennis|racing)\b", re.IGNORECASE),
-    "kids": re.compile(r"\b(?:kids?|children|child|cartoons?|nursery|preschool|junior)\b", re.IGNORECASE),
     "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|islamic|islam|quran|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|mosque|masjid|sermons?|prayer)\b", re.IGNORECASE),
 }
 
@@ -65,12 +63,12 @@ FORBIDDEN_BRANDS = re.compile(
     r"abn\s+andhra\s+jyoti|aaj\s+tak|times\s+now|india\s+today|news18|"
     r"ndtv\s+profit|ndtv\s+24x7|republic(?:\s+bharat|\s+tv)?|news\s+nation|"
     r"sudarshan\s+news|tv9(?:\s+\w+)?|zee\s+news|"
-    r"cnbc(?:\s+awaaz|\s+bajar|\s+tv18(?:\s+prime)?)?|dd\s+news|dd\s+sports|"
+    r"cnbc(?:\s+awaaz|\s+bajar|\s+tv18(?:\s+prime)?)?|dd\s+news|"
     r"et\s+now|mirror\s+now|bharat\s+samachar|pratidin\s+time|amrit\s+gurbani|"
     r"sansad\s+tv(?:\s+[12])?|zee\s+business|"
-    r"disney(?:\s+(?:junior|channel|kids?))?|nickelodeon|nick\s*jr|cartoon\s+network|"
-    r"pogo|hungama|sony\s+yay|discovery\s+kids|etv\s+bal\s+bharat|"
-    r"green\s+gold(?:\s+tv)?|kite\s+victers|chutti\s+tv|wow\s+kidz|"
+    r"disney\s+channel|"
+    r""
+    r""
     r"mh\s*one|sai\s+tv|darshana\s+tv|sarv\s+dharm\s+sangam"
     r")\b",
     re.IGNORECASE,
