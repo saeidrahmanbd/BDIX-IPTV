@@ -148,8 +148,7 @@ jobs:
           fi
           CURRENT_MAIN_SHA="$(git rev-parse FETCH_HEAD)"
           if [[ "${GITHUB_EVENT_NAME}" == "push" && "${GITHUB_SHA}" != "$CURRENT_MAIN_SHA" ]]; then
-            echo "::notice::Skipping stale push-triggered maintenance for ${GITHUB_SHA}; main has advanced to $CURRENT_MAIN_SHA. The newest queued run will maintain the current playlist."
-            exit 0
+            echo "::notice::Queued maintenance event ${GITHUB_SHA} is behind main at $CURRENT_MAIN_SHA. This serialized writer will reset to the latest main before maintenance."
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
