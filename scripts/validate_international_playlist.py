@@ -86,7 +86,7 @@ def main():
             policy_a["group-title"] = "New Channels"
             target, policy_reason, _ = discovery.policy(policy_a, name)
             if target is None:
-                raise SystemExit(f"Out-of-scope International entry: {name!r} ({policy_reason or \"not Movies/Music\"}).")
+                raise SystemExit(f"Out-of-scope International entry: {name!r} ({policy_reason or 'not Movies/Music'}).")
         if group_key in {"new channels", "new backups"}:
             target, reason, _ = discovery.policy(a, name)
             if target is None:
@@ -142,7 +142,7 @@ def main():
                 )
 
     if registry[-3:] != ["New Channels", "New Backups", "Backups"]:
-        raise SystemExit("The last four categories must be Adult, Backups, New Channels, New Backups.")
+        raise SystemExit("The final categories must be New Channels, New Backups, Backups.")
     dynamic = sorted(group for group in group_set if group not in FIXED and group not in TAIL)
     expected_registry = FIXED + dynamic + TAIL
     if registry != expected_registry:
