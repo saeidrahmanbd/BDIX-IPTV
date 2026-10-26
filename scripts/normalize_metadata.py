@@ -241,8 +241,11 @@ def clean(s):
  s=re.sub(r"\s+"," ",re.sub(r"[._]+"," ",str(s or ""))).strip()
  # Preserve the channel name suffix for the separate Jalsha Movies HD service.
  if re.fullmatch(r"jalsha\s+movies\s+hd",s,flags=re.I): return "Jalsha Movies HD"
- s=re.sub(r"\s*\(\s*(?:\d{3,4}p|UHD|FHD|HD\+?|SD)\s*\)\s*$","",s,flags=re.I)
- s=re.sub(r"\s+(?:\d{3,4}p|UHD|FHD|HD\+?|SD)\s*$","",s,flags=re.I)
+ # Drop source annotations first; otherwise a trailing geoblock label hides the
+ # resolution tag from the normalizer and causes the publication gate to fail.
+ s=re.sub(r"\s*\[(?:geo[\s-]?blocked)\]\s*$","",s,flags=re.I)
+ s=re.sub(r"\s*\(\s*(?:\d{3,4}p|\d{3,4}i|UHD|FHD|HD\+?|SD)\s*\)\s*$","",s,flags=re.I)
+ s=re.sub(r"\s+(?:\d{3,4}p|\d{3,4}i|4k(?:\s+hdr)?|uhd|fhd|hd\+?|sd)\s*$","",s,flags=re.I)
  return s.strip()
 CASE={"ATN BANGLA UK":"ATN Bangla UK","SUN BANGLA":"Sun Bangla","Ekhone TV":"Ekhon TV","EKHONE TV":"Ekhon TV","Ekattor Tv":"Ekattor TV","Sony MAX":"Sony Max","Sony AATH":"Sony Aath","Sony Entertainment Television":"Sony Entertainment TV","Love nature":"Love Nature","Jtv Classic":"JTV Classic","Get factual":"Get Factual"}
 def normalize_id(cid):
