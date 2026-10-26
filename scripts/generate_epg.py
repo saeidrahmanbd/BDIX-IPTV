@@ -31,7 +31,6 @@ SOURCE_FETCH_TIMEOUT_SECONDS = 20
 SOURCE_FETCH_WORKERS = 8
 
 SOURCES = [
-    "https://free-epg.de/api/epg/bd.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
@@ -155,6 +154,23 @@ GENERIC_TITLES = {
     "movie", "movies", "program", "programme", "entertainment", "live", "live tv",
     "tba", "to be announced", "unknown", "schedule", "telecast", "show",
     "music", "test", "testing", "coming soon",
+}
+
+# Empty-content fillers that some feeds emit instead of a programme title
+# (for example "No Data"). They carry no schedule information, so they are
+# never published, even when they are the only rows a channel has.
+PLACEHOLDER_TITLES = {
+    "no data", "no information", "no info", "n/a", "none", "no title",
+    "no program", "no programs", "no programme", "no programmes",
+    "no schedule", "no schedule available", "not available",
+    "program not available", "programme not available",
+}
+GENERIC_TITLES |= PLACEHOLDER_TITLES
+
+# Channels that genuinely broadcast a single show, where a programme title that
+# equals the channel name is real content rather than a feed filler.
+SINGLE_SHOW_CHANNEL_IDS = {
+    "Mythbusters.us", "AxMen.us", "StrawberryShortcake.us", "Teletubbies.uk",
 }
 
 def fetch(url):
@@ -350,14 +366,65 @@ def title_score(title):
 # These are catalogue labels, not individual programme titles. Even when they
 # are the only source rows for a channel, publishing them creates a misleading
 # repeating EPG (for example, "Movies, Movies, Movies").
-ALWAYS_DROP_GENERIC_TITLES = {"movie", "movies"}
+ALWAYS_DROP_GENERIC_TITLES = {"movie", "movies"} | PLACEHOLDER_TITLES
 
 
-def filter_generic_candidates(by_target):
-    """Remove placeholder titles and avoid treating Movies-only loops as a guide."""
+def channel_key(text):
+    """Compare names ignoring case, punctuation and quality tags like "(576p)"."""
+    return re.sub(r"[^a-z0-9]", "", re.sub(r"\(.*?\)", "", (text or "").lower()))
+
+
+# A channel is treated as name-filled only when at least this share of its
+# rows repeat its own name. Channels with varied schedules legitimately carry
+# a real programme that shares the channel's name (a "BBC News" bulletin on BBC
+# News), so a few matching rows must never be removed.
+NAME_FILLER_MIN_SHARE = 0.8
+
+
+def repeats_channel_name(title, channel_name):
+    """True when a programme title is just the channel's own name."""
+    name = channel_key(channel_name)
+    return bool(name) and channel_key(title) == name
+
+
+def name_filled_targets(by_target, channel_names):
+    """Targets whose schedule is (almost) entirely the channel name repeated.
+
+    Feeds sometimes fill a whole schedule with the channel name (for example
+    "Dhoom Music Bangla" on Dhoom Music Bangla). That is not schedule data.
+    Known single-show channels are exempt.
+    """
+    if not channel_names:
+        return set()
+    filled = set()
+    for target, records in by_target.items():
+        if not records or target in SINGLE_SHOW_CHANNEL_IDS:
+            continue
+        name = channel_names.get(target, "")
+        same = sum(1 for r in records if repeats_channel_name(r["title"], name))
+        if same / len(records) >= NAME_FILLER_MIN_SHARE:
+            filled.add(target)
+    return filled
+
+
+def filter_generic_candidates(by_target, channel_names=None):
+    """Remove placeholder titles and avoid treating Movies-only loops as a guide.
+
+    channel_names (optional) maps target ID -> display name and enables removal
+    of programme rows that only repeat the channel name on channels whose
+    schedule is almost entirely that name.
+    """
+    filled_targets = name_filled_targets(by_target, channel_names)
     named_targets = {
         target for target, records in by_target.items()
-        if any(title_score(record["title"]) > 0 for record in records)
+        if any(
+            title_score(record["title"]) > 0
+            and not (
+                target in filled_targets
+                and repeats_channel_name(record["title"], channel_names.get(target, ""))
+            )
+            for record in records
+        )
     }
     removed = 0
     for target, records in list(by_target.items()):
@@ -365,6 +432,11 @@ def filter_generic_candidates(by_target):
         for record in records:
             title = normalized_title(record["title"])
             if title in ALWAYS_DROP_GENERIC_TITLES:
+                removed += 1
+                continue
+            if target in filled_targets and repeats_channel_name(
+                record["title"], channel_names.get(target, "")
+            ):
                 removed += 1
                 continue
             if target in named_targets and title_score(record["title"]) <= 0:
@@ -740,7 +812,7 @@ def main():
 
     # Remove placeholder catalogue labels before interval selection. Generic-only
     # movie loops are discarded rather than advertised as real programme guides.
-    generic_removed = filter_generic_candidates(by_target)
+    generic_removed = filter_generic_candidates(by_target, channels)
 
     root = ET.Element("tv", {
         "generator-info-name": "BDIX-IPTV EPG",
