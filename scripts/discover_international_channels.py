@@ -12,11 +12,12 @@ import hashlib,re,unicodedata,urllib.parse,urllib.request
 from collections import Counter,defaultdict
 from datetime import datetime,timezone
 from pathlib import Path
+from logo_asset_naming import is_blocked_logo_basename
 PLAYLIST=Path("International-Playlist.m3u"); REPORT=Path("reports/international-channel-discovery.md"); LOGOS=Path("logos")
 SOURCE_URL="https://iptv-org.github.io/iptv/index.category.m3u"; RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 COUNTRY_THRESHOLD=5; MAX_NEW_CHANNELS=50; MAX_NEW_BACKUPS=50; MAX_NEW_PER_GROUP=25; MAX_SOURCE_BYTES=50*1024*1024; MAX_LOGO_BYTES=2*1024*1024
 FIXED_GROUPS=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani"]
-TAIL_GROUPS=["Fashion TV","Documentary & Wildlife","Kids","Religious","Sports","Adult","New Channels","New Backups","Backups"]
+TAIL_GROUPS=["Fashion TV","Documentary & Wildlife","Kids","Religious","Sports","Adult","New Channels","New Backup","Backup"]
 STAGING_GROUPS=set(); LEGACY_GROUPS={"new channels","new backup","new backups","not playing","international","backup","international movies","international music","test"}
 COUNTRY_NAMES={"BD":"Bangladesh","IN":"India","PK":"Pakistan","NP":"Nepal","TH":"Thailand","JP":"Japan","KR":"South Korea","ID":"Indonesia","MY":"Malaysia","PH":"Philippines","VN":"Vietnam","CN":"China","TW":"Taiwan","HK":"Hong Kong","SG":"Singapore","AU":"Australia","NZ":"New Zealand","GB":"United Kingdom","US":"United States","CA":"Canada","MX":"Mexico","BR":"Brazil","AR":"Argentina","CL":"Chile","CO":"Colombia","PE":"Peru","ES":"Spain","PT":"Portugal","FR":"France","DE":"Germany","IT":"Italy","NL":"Netherlands","BE":"Belgium","CH":"Switzerland","AT":"Austria","SE":"Sweden","NO":"Norway","DK":"Denmark","FI":"Finland","IS":"Iceland","IE":"Ireland","PL":"Poland","CZ":"Czech Republic","SK":"Slovakia","HU":"Hungary","RO":"Romania","BG":"Bulgaria","GR":"Greece","TR":"Turkey","RU":"Russia","UA":"Ukraine","IL":"Israel","AE":"United Arab Emirates","SA":"Saudi Arabia","QA":"Qatar","KW":"Kuwait","OM":"Oman","BH":"Bahrain","JO":"Jordan","LB":"Lebanon","EG":"Egypt","MA":"Morocco","DZ":"Algeria","TN":"Tunisia","ZA":"South Africa","NG":"Nigeria","KE":"Kenya","GH":"Ghana","TZ":"Tanzania","UG":"Uganda","ZW":"Zimbabwe","ET":"Ethiopia","LK":"Sri Lanka","MM":"Myanmar","KH":"Cambodia","LA":"Laos","MN":"Mongolia","KZ":"Kazakhstan","UZ":"Uzbekistan","AZ":"Azerbaijan","GE":"Georgia","AM":"Armenia","AL":"Albania","RS":"Serbia","HR":"Croatia","SI":"Slovenia","BA":"Bosnia and Herzegovina","ME":"Montenegro","MK":"North Macedonia","LT":"Lithuania","LV":"Latvia","EE":"Estonia","IR":"Iran","IQ":"Iraq","SY":"Syria","PS":"Palestine","FJ":"Fiji","WS":"Samoa","PG":"Papua New Guinea","BT":"Bhutan","MV":"Maldives"}
 ISO_CODES=set(COUNTRY_NAMES); ALIASES={"UK":"GB","EL":"GR"}; ATTR_RE=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
@@ -126,7 +127,7 @@ def slug(value):
 def local_logo(a,name):
  target=norm(name)
  for p in LOGOS.rglob("*") if LOGOS.exists() else []:
-  if p.is_file() and p.suffix.lower() in {".png",".jpg",".jpeg",".webp",".svg"} and "unused" not in p.parts and norm(p.stem)==target:return RAW_BASE+str(p.relative_to(LOGOS)).replace("\\","/")
+  if p.is_file() and p.suffix.lower() in {".png",".jpg",".jpeg",".webp",".svg"} and "unused" not in p.parts and not is_blocked_logo_basename(p.name) and norm(p.stem)==target:return RAW_BASE+str(p.relative_to(LOGOS)).replace("\\","/")
  source=(a.get("tvg-logo") or "").strip()
  if not source.startswith(("http://","https://")):return ""
  try:
@@ -138,6 +139,34 @@ def local_logo(a,name):
   if not p.exists():p.write_bytes(data)
   return RAW_BASE+str(p.relative_to(LOGOS)).replace("\\","/")
  except Exception:return ""
+
+def localize_existing_logo(a,name):
+ raw=(a.get("tvg-logo") or "").strip()
+ if not raw:return ""
+ # This legacy entry used a G-Series logo for a differently named stream; do not
+ # relabel the mismatched asset as an authentic Drama 24 logo.
+ if norm(name)=="drama24":return ""
+ if raw.startswith(RAW_BASE):
+  rel=urllib.parse.unquote(urllib.parse.urlsplit(raw).path.split("/main/logos/",1)[-1]).lstrip("/")
+  path=LOGOS/rel
+  if path.is_file() and "unused" not in path.parts and not is_blocked_logo_basename(path.name):return raw
+  clean=dict(a);clean.pop("tvg-logo",None)
+  return local_logo(clean,name)
+ if raw.startswith("logos/"):
+  rel=urllib.parse.unquote(raw.split("?",1)[0].split("#",1)[0])
+  path=Path(rel)
+  if path.is_file() and "unused" not in path.parts and not is_blocked_logo_basename(path.name):
+   return RAW_BASE+rel[len("logos/"):].replace("\\","/")
+  clean=dict(a);clean.pop("tvg-logo",None)
+  return local_logo(clean,name)
+ if raw.startswith(("http://","https://")):return local_logo(a,name)
+ return ""
+def set_logo_attr(line,logo):
+ line=re.sub(r'\s+tvg-logo="[^"]*"',"",line)
+ if not logo or not logo.startswith(RAW_BASE):return line
+ m=re.match(r"^(#EXTINF:-?\d+)(.*)$",line)
+ if not m:return line
+ return m.group(1)+f' tvg-logo="{logo}"'+m.group(2)
 def make_extinf(a,name,group,code,logo,content_kind=""):
  clean=" ".join(name.replace('"',"").split()); ident=(a.get("tvg-id") or a.get("channel-id") or "custom.intl."+slug(clean).replace("-",".")).strip(); fields=[f'tvg-id="{ident}"',f'tvg-name="{clean}"']
  if logo.startswith(RAW_BASE):fields.append(f'tvg-logo="{logo}"')
@@ -205,7 +234,7 @@ def main():
   is_backup=key in planned
   if is_backup:
    if len(backup_rows)>=MAX_NEW_BACKUPS:continue
-   target="New Backups"; canonical=planned[key][0]; cname=canonical.get("tvg-name",name).strip(); ccode=country_code(canonical)
+   target="New Backup"; canonical=planned[key][0]; cname=canonical.get("tvg-name",name).strip(); ccode=country_code(canonical)
   else:
    if len(new_rows)>=MAX_NEW_CHANNELS:continue
    target=primary_target(base,code,country_groups)
@@ -232,16 +261,18 @@ def main():
   a=attrs(b[0]); name=name_of(b); old=a.get("group-title","").strip(); group=old
   old_key=old.casefold()
   code=country_code(a)
-  if old_key in {"new backup","new backups"}:
+  if FASHION_RE.search(name):
+   group="Fashion TV"
+  elif old_key in {"new backup","new backups"}:
    base,reason,policy_code=policy(a,name)
    if base is None:
     filtered_existing.append((name,old,reason or "out of scope"))
     continue
-   group="New Backups"
+   group="New Backup"
   elif old_key in {"backup","backups"}:
-   group="Backups"
+   group="Backup"
   elif old_key in {"not playing","test"}:
-   group="Backups"
+   group="Backup"
   elif old_key in {"new channels","international"}:
    base,reason,policy_code=policy(a,name,allow_legacy_group=(old_key=="international"))
    if base is None:
@@ -269,12 +300,23 @@ def main():
    b[0]=make_extinf(a,name,group,code,a.get("tvg-logo",""))
    migrated.append((name,old,group))
   normalized.append(b)
+ logo_refs_repaired=0; logo_refs_removed=0
+ for b in normalized:
+  a=attrs(b[0]); name=name_of(b); old_logo=(a.get("tvg-logo") or "").strip()
+  if not old_logo:continue
+  new_logo=localize_existing_logo(a,name)
+  if new_logo!=old_logo:
+   b[0]=set_logo_attr(b[0],new_logo)
+   if new_logo:logo_refs_repaired+=1
+   else:logo_refs_removed+=1
  present_groups={attrs(b[0]).get("group-title","").strip() for b in normalized}; dynamic=category_registry(present_groups); rank={g.casefold():i for i,g in enumerate(dynamic)}
  normalized.sort(key=lambda b:(rank.get(attrs(b[0]).get("group-title","").strip().casefold(),len(rank)),natural_key(name_of(b)),url_of(b).casefold()))
  header="#PLAYLIST-STUDIO-CATEGORIES:"+str(dynamic).replace("'",'"'); out=[x for x in prefix if not x.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]; idx=next((i+1 for i,x in enumerate(out) if x.startswith("#EXTM3U")),0); out.insert(idx,header)
  for b in normalized:out.extend(b)
  PLAYLIST.write_text("\n".join(out).rstrip()+"\n",encoding="utf-8")
- REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Source: `{SOURCE_URL}`",f"- Source records parsed: {len(source)}",f"- Existing playlist records: {len(existing)}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for any retained dynamic country group.","- Automatic discovery is Movie/Music only for every country; News, Sports, Kids, Documentary/Wildlife, Religious, General/Entertainment and all other categories are rejected.","- New alternate streams are staged in New Backups; curated alternates remain in Backups.","- Out-of-scope entries are removed only from discovery queues or the legacy catch-all group.","- Playback was not tested.",f"- New primary channels: {len(new_rows)}",f"- New backup review entries: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Out-of-scope queue/catch-all entries removed: {len(filtered_existing)}","","## New primary channels",""]
+ REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Source: `{SOURCE_URL}`",f"- Source records parsed: {len(source)}",f"- Existing playlist records: {len(existing)}",
+  f"- Existing logo references localized/repaired: {logo_refs_repaired}",
+  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for any retained dynamic country group.","- Automatic discovery is Movie/Music only for every country; News, Sports, Kids, Documentary/Wildlife, Religious, General/Entertainment and all other categories are rejected.","- New alternate streams are staged in New Backup; curated alternates remain in Backup.","- Out-of-scope entries are removed only from discovery queues or the legacy catch-all group.","- Playback was not tested.",f"- New primary channels: {len(new_rows)}",f"- New backup review entries: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Out-of-scope queue/catch-all entries removed: {len(filtered_existing)}","","## New primary channels",""]
  report += [f"- **{n}** — `{g}` — {c}" for n,g,c in new_rows]; report += ["","## Backup alternates",""]+[f"- **{n}** — {c}" for n,c in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Removed out-of-scope existing queue/catch-all entries",""]+[f"- **{n}** — `{g}` — {reason}" for n,g,reason in filtered_existing]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
  # Show the final assigned group in the report, after promotions/consolidation.
  final_group_by_identity={}
