@@ -260,6 +260,7 @@ jobs:
             python scripts/backfill_cross_playlist_metadata.py
             python scripts/repair_logo_asset_technical_quality.py --fix
             python scripts/reconcile_playlist_consistency.py
+            python scripts/reorganize_international_playlist.py
             python scripts/enforce_playlist_attribution.py International-Playlist.m3u
             python scripts/validate_international_playlist.py
             python scripts/audit_playlist.py
