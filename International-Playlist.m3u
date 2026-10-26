@@ -62,7 +62,7 @@ https://dbcanada.sonarbanglatv.com/deshebideshe/dbtv/index.m3u8
 https://deshitv.deshitv24.net/live/myStream/playlist.m3u8
 #EXTINF:-1 tvg-id="DoyelTV.ca@SD" tvg-name="Doyel TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/doyel-tv.png" tvg-chno="27" channel-id="DoyelTV.ca@SD" tvg-country="CA" tvg-language="ben" group-title="Bangladesh",Doyel TV
 https://3d46w.doyeltv.com/memfs/aa3aa6f7-ec12-41a2-8183-a891e157bbf8.m3u8
-#EXTINF:-1 tvg-id="" group-title="Bangladesh",Drama 24
+#EXTINF:-1 tvg-id="" group-title="Bangladesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/16-a308b78988.png",Drama 24
 https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="EkattorTV.bd" channel-id="EkattorTV.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekattor-tv.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Ekattor TV",Ekattor TV
 https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8
@@ -78,7 +78,7 @@ https://app.ncare.live/live-orgin/gazibdz.stream/live-orgin/gazibdz.stream/chunk
 https://tvsen6.aynaott.com/y0q9eFAuquAtvTxRzUHq/index.m3u8
 #EXTINF:-1 tvg-id="GreenTV.bd@SD" tvg-country="BD" group-title="Bangladesh" tvg-name="Green TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/green-tv-fa848f9d71.jpg",Green TV
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="247000" group-title="Bangladesh",Independent TV
+#EXTINF:-1 tvg-id="247000" group-title="Bangladesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/independent-tv.png",Independent TV
 https://drk6xq0vhn.gpcdn.net/live/independent_tv_abr/live/independent_tv_720/chunks.m3u8
 #EXTINF:-1 tvg-id="JagoNews24.bd" channel-id="JagoNews24.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jago-news-24.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Jago News 24",Jago News 24
 https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8
@@ -2400,7 +2400,7 @@ https://freem3u.xyz/api/live/play.m3u8?vid=181
 https://freem3u.xyz/api/live/play.m3u8?vid=185
 #EXTINF:-1 tvg-id="VinhLongTV3.vn@SD" tvg-country="VN" tvg-content="Movies" group-title="Vietnam" tvg-name="Vinh Long TV 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vinh-long-tv-3-31bea4254b.png",Vinh Long TV 3
 https://dethich.pw/thvl3/index.m3u8
-#EXTINF:-1 tvg-id="FashionTV.us" tvg-name="Fashion TV" tvg-chno="400" channel-id="FashionTV.us" tvg-country="US" tvg-language="eng" group-title="Fashion TV",Fashion TV
+#EXTINF:-1 tvg-id="FashionTV.us" tvg-name="Fashion TV" tvg-chno="400" channel-id="FashionTV.us" tvg-country="US" tvg-language="eng" group-title="Fashion TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fashion-tv-aa7f9461cf.png",Fashion TV
 https://ftv1.b-cdn.net/bfdbb576-83f7-11f0-9f89-0200170e3e04_1000028043_HLS/manifest.m3u8
 #EXTINF:-1 tvg-id="Travel.us" tvg-name="4K Travel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4k-travel.png" tvg-chno="474" channel-id="Travel.us" tvg-country="US" tvg-language="eng" group-title="Documentary & Wildlife",4K Travel
 https://streams2.sofast.tv/sofastplayout/33c31ac4-51fa-46ae-afd0-0d1fe5e60a80_0_HLS/master.m3u8
@@ -3246,7 +3246,7 @@ https://cdn.pishow.tv/ott/live/229/master.m3u8
 https://cd198.anystream.uk:9092/iqapp/d33ntv/playlist.m3u8
 #EXTINF:-1 tvg-id="DuaChannel.sa" tvg-name="Dua Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dua-channel.png" tvg-chno="596" channel-id="DuaChannel.sa" tvg-country="SA" tvg-language="ara" group-title="Religious",Dua Channel
 https://newyork.zeuscdn724.com/H9/index.m3u8
-#EXTINF:-1 tvg-id="EmanTv.iq" tvg-name="EMAN TV" tvg-chno="597" channel-id="EmanTv.iq" tvg-country="IQ" tvg-language="ara" group-title="Religious",EMAN TV
+#EXTINF:-1 tvg-id="EmanTv.iq" tvg-name="EMAN TV" tvg-chno="597" channel-id="EmanTv.iq" tvg-country="IQ" tvg-language="ara" group-title="Religious" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/eman-tv-482a6c2567.png",EMAN TV
 https://avr.host247.net/live/emantv/playlist.m3u8
 #EXTINF:-1 tvg-id="IqraBangla.uk" tvg-name="Iqra Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/iqra-bangla.png" tvg-chno="598" channel-id="IqraBangla.uk" tvg-country="GB" tvg-language="ben" group-title="Religious",Iqra Bangla
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/iqrabanglatvoffice.stream/live-orgin/iqrabanglatvoffice.stream/chunks.m3u8
@@ -5322,7 +5322,7 @@ https://kikahls.akamaized.net/hls/live/2022690/livetvkika_ww/master.m3u8
 http://31.148.48.15/Kino_TV_HD/index.m3u8
 #EXTINF:-1 tvg-id="Kinopokaz.ru@SD" channel-id="Kinopokaz.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/kinopokaz.png" tvg-country="RU" group-title="Backup" tvg-name="Kinopokaz",Kinopokaz
 http://hls127.freeott.top:8080/Kinopokaz_HD/video.m3u8
-#EXTINF:-1 tvg-id="Kronehit.at" tvg-name="Kronehit" channel-id="Kronehit.at" tvg-country="AT" tvg-language="deu" group-title="Backup",Kronehit
+#EXTINF:-1 tvg-id="Kronehit.at" tvg-name="Kronehit" channel-id="Kronehit.at" tvg-country="AT" tvg-language="deu" group-title="Backup" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kronehit-777ac4e59e.png",Kronehit
 http://bitcdn-kronehit.bitmovin.com/v2/hls/chunklist_b3128000.m3u8
 #EXTINF:-1 tvg-id="custom.xxx-latina" channel-id="custom.xxx-latina" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/latina.png" group-title="Backup" tvg-name="Latina",Latina
 http://play.iptvxxx.net/latina.m3u8

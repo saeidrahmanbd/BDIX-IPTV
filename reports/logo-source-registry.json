@@ -5568,5 +5568,15 @@
     "status": "third_party_verified",
     "source_url": "https://i.imgur.com/S1SnpoA.png",
     "notes": "IPTV-org exact ID: MilitaryHistory.us IPTV-org public logo dataset Source page: https://i.imgur.com/S1SnpoA.png"
+  },
+  "International-Playlist.m3u|FashionTV.us|Fashion TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/fashion-tv-aa7f9461cf.png": {
+    "status": "third_party_verified",
+    "source_url": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/international/fashion-tv-int.png",
+    "notes": "Curated exact channel/region asset Source repository; license must be checked at source Source page: https://github.com/tv-logo/tv-logos/blob/main/countries/international/fashion-tv-int.png"
+  },
+  "International-Playlist.m3u|EmanTv.iq|EMAN TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/eman-tv-482a6c2567.png": {
+    "status": "third_party_verified",
+    "source_url": "https://i.imgur.com/QmgaPSi.png",
+    "notes": "IPTV-org exact ID: EmanTv.iq IPTV-org public logo dataset Source page: https://i.imgur.com/QmgaPSi.png"
   }
 }
