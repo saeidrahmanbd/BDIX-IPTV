@@ -1,0 +1,76 @@
+name: Fix International Duplicate URLs
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Remove duplicate stream URLs from International playlist
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          path = Path("International-Playlist.m3u")
+          lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
+          seen = set()
+          out = []
+          removed = []
+          i = 0
+          while i < len(lines):
+              line = lines[i]
+              if line.startswith("#EXTINF:") and i + 1 < len(lines):
+                  url = lines[i + 1].strip()
+                  if url.startswith(("http://", "https://")):
+                      key = url.lower()
+                      if key in seen:
+                          name_match = re.search(r'group-title="([^"]*)"', line)
+                          name = line.rsplit(",", 1)[-1].strip()
+                          removed.append((name, name_match.group(1) if name_match else "", url))
+                          i += 2
+                          continue
+                      seen.add(key)
+              out.append(line)
+              i += 1
+
+          if removed:
+              path.write_text("".join(out), encoding="utf-8")
+              print(f"Removed {len(removed)} duplicate stream record(s):")
+              for name, group, url in removed:
+                  print(f"- {name} [{group}] {url}")
+          else:
+              print("No duplicate stream URLs found.")
+
+      - name: Commit playlist fix
+        shell: bash
+        run: |
+          if git diff --quiet -- International-Playlist.m3u; then
+            echo "No playlist change required."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add International-Playlist.m3u
+          git commit -m "Remove duplicate International stream URLs"
+          git push
+
+      - name: Remove temporary workflow
+        if: success()
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm -f .github/workflows/fix-international-duplicate.yml
+          git commit -m "Remove temporary International duplicate fixer"
+          git push
