@@ -80,6 +80,7 @@ def classify(a,n,g):
  if P["doc"].search(full) or re.search(r"\b(?:documentary|wildlife)\b",gl):return "Documentary & Wildlife",None
  movie=bool(P["movie"].search(full) or re.search(r"\b(?:movies?|cinema|film|films)\b",gl));music=bool(P["music"].search(full) or re.search(r"\b(?:music|musics)\b",gl))
  if bd:return "Bangladesh",None
+ if c not in {"BD","IN"} and gl in {"indian bangla","indian movies","indian music","indian entertainment"}: return None,"non-core country cannot use India-only group"
  if c=="IN" or gl in {"indian bangla","indian movies","indian music","indian entertainment"}:
   if gl=="indian bangla" or re.search(r"\b(?:bengali|bangla)\b",f"{a.get('tvg-language','')} {n}",re.I):return "Indian Bangla",None
   if movie and music:return None,"ambiguous movie/music identity"
