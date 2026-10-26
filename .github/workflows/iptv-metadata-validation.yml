@@ -7,6 +7,8 @@ on:
       - docs/requirements.txt
       - scripts/iptv_metadata_backfill.py
       - scripts/discover_bd_in_new_queues.py
+      - scripts/discover_international_channels.py
+      - scripts/reorganize_international_playlist.py
       - tests/test_channel_discovery_policy.py
       - scripts/backfill_cross_playlist_metadata.py
       - scripts/repair_logo_asset_technical_quality.py
@@ -64,6 +66,8 @@ jobs:
             scripts/validate_workflow_references.py \
             scripts/reconcile_playlist_consistency.py \
             scripts/validate_international_playlist.py \
+            scripts/discover_international_channels.py \
+            scripts/reorganize_international_playlist.py \
             scripts/iptv_metadata_backfill.py \
             scripts/backfill_cross_playlist_metadata.py \
             scripts/repair_logo_asset_technical_quality.py \
