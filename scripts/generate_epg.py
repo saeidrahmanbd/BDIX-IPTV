@@ -152,7 +152,7 @@ CHANNEL_TIME_OFFSETS = {
 }
 
 GENERIC_TITLES = {
-    "movie", "program", "programme", "entertainment", "live", "live tv",
+    "movie", "movies", "program", "programme", "entertainment", "live", "live tv",
     "tba", "to be announced", "unknown", "schedule", "telecast", "show",
     "music", "test", "testing", "coming soon",
 }
@@ -346,6 +346,33 @@ def title_score(title):
     if not t or t in GENERIC_TITLES or len(t) <= 2:
         return 0
     return 1.0 + min(len(t), 80) / 400.0
+
+# These are catalogue labels, not individual programme titles. Even when they
+# are the only source rows for a channel, publishing them creates a misleading
+# repeating EPG (for example, "Movies, Movies, Movies").
+ALWAYS_DROP_GENERIC_TITLES = {"movie", "movies"}
+
+
+def filter_generic_candidates(by_target):
+    """Remove placeholder titles and avoid treating Movies-only loops as a guide."""
+    named_targets = {
+        target for target, records in by_target.items()
+        if any(title_score(record["title"]) > 0 for record in records)
+    }
+    removed = 0
+    for target, records in list(by_target.items()):
+        kept = []
+        for record in records:
+            title = normalized_title(record["title"])
+            if title in ALWAYS_DROP_GENERIC_TITLES:
+                removed += 1
+                continue
+            if target in named_targets and title_score(record["title"]) <= 0:
+                removed += 1
+                continue
+            kept.append(record)
+        by_target[target] = kept
+    return removed
 
 def clone_children(elem):
     """Clone programme fields while retaining only the best available title.
@@ -711,20 +738,9 @@ def main():
     for (target, source_index, source_id), records in candidates.items():
         by_target.setdefault(target, []).extend(records)
 
-    # Generic placeholders such as "Movie" are not useful programme metadata.
-    # Exclude them when the channel has any named schedule candidates. This
-    # prevents long filler blocks from hiding real listings while retaining a
-    # generic-only schedule as a last resort for channels with no better data.
-    named_targets = {
-        target for target, records in by_target.items()
-        if any(title_score(r["title"]) > 0 for r in records)
-    }
-    generic_removed = 0
-    for target in list(by_target):
-        if target in named_targets:
-            kept = [r for r in by_target[target] if title_score(r["title"]) > 0]
-            generic_removed += len(by_target[target]) - len(kept)
-            by_target[target] = kept
+    # Remove placeholder catalogue labels before interval selection. Generic-only
+    # movie loops are discarded rather than advertised as real programme guides.
+    generic_removed = filter_generic_candidates(by_target)
 
     root = ET.Element("tv", {
         "generator-info-name": "BDIX-IPTV EPG",
@@ -796,7 +812,7 @@ def main():
     print(f"EPG candidate pool: {raw_count} mapped programmes before cleanup")
     print(f"EPG cleanup: removed {removed_count} exact-duplicate/overlapping programmes")
     print(f"EPG cleanup: retained {generic_counts} generic-title programmes where no named schedule was available")
-    print(f"EPG cleanup: excluded {generic_removed} generic-title candidates on channels with named schedules")
+    print(f"EPG cleanup: excluded {generic_removed} generic-title placeholder candidates")
     print(f"EPG generated: {len(mapped_targets)} mapped channels, {final_count} programmes")
     if correction_count == 0:
         timing_audit.append("- No source offsets met the strict automatic-correction threshold.")

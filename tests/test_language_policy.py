@@ -38,6 +38,32 @@ class LanguagePolicyTests(unittest.TestCase):
                 self.assertTrue(generate_epg.is_english_text_element(el(text, lang)))
                 self.assertTrue(epg_coverage.is_english_text_element(el(text, lang)))
 
+    def test_movie_catalogue_placeholders_are_not_named_programmes(self):
+        self.assertEqual(generate_epg.title_score("Movies"), 0)
+        self.assertEqual(generate_epg.title_score("Movie"), 0)
+
+        candidates = {
+            "movies_only": [{"title": "Movies"}, {"title": "Movies"}],
+            "mixed": [
+                {"title": "Movies"},
+                {"title": "Live TV"},
+                {"title": "Evening News"},
+            ],
+            "proper_title": [{"title": "Movie Night"}],
+        }
+        removed = generate_epg.filter_generic_candidates(candidates)
+
+        self.assertEqual(removed, 4)
+        self.assertEqual(candidates["movies_only"], [])
+        self.assertEqual(
+            [row["title"] for row in candidates["mixed"]],
+            ["Evening News"],
+        )
+        self.assertEqual(
+            [row["title"] for row in candidates["proper_title"]],
+            ["Movie Night"],
+        )
+
     def test_empty_text_is_allowed_by_text_policy(self):
         self.assertTrue(generate_epg.is_english_text_element(el("", "fr")))
 

@@ -13,7 +13,7 @@ from pathlib import Path
 
 OLD = Path("/tmp/bdix-epg-previous.xml")
 NEW = Path("epg/epg.xml")
-GENERIC = {"movie", "program", "programme", "entertainment", "live", "live tv", "tba", "to be announced", "unknown", "schedule", "telecast", "show", "music", "test", "testing", "coming soon"}
+GENERIC = {"movie", "movies", "program", "programme", "entertainment", "live", "live tv", "tba", "to be announced", "unknown", "schedule", "telecast", "show", "music", "test", "testing", "coming soon"}
 
 
 def parse(path):
