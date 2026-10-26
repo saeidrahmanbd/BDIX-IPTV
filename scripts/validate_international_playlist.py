@@ -142,7 +142,7 @@ def main():
                 )
 
     if registry[-3:] != ["New Channels", "New Backup", "Backup"]:
-        raise SystemExit("The final categories must be New Channels, New Backups, Backups.")
+        raise SystemExit("The final categories must be New Channels, New Backup, Backup.")
     dynamic = sorted(group for group in group_set if group not in FIXED and group not in TAIL)
     expected_registry = FIXED + dynamic + TAIL
     if registry != expected_registry:
