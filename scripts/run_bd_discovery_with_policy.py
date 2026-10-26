@@ -2,7 +2,7 @@
 """Run BD/India discovery with the repository's explicit religious-content policy.
 
 Policy: Islamic religious channels are allowed; non-Islamic religious channels are prohibited.
-India News/Sports/Kids remain prohibited. Bangladesh News remains allowed.
+Indian News and non-Islamic religious channels remain prohibited; Indian Kids and Sports channels are allowed. Bangladesh News remains allowed.
 """
 import re
 import discover_bd_in_new_queues as d
@@ -25,7 +25,7 @@ def policy_prohibited(a, name, country=None):
         if reason in {
             'Indian religious channel is prohibited',
             'Indian islamic channel is prohibited',
-            'known Indian News, Sports, Kids or Religious brand/category is prohibited',
+            'known Indian News or Religious brand/category is prohibited',
         }:
             return None
     return reason
