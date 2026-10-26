@@ -144,7 +144,7 @@ def main():
             row["note"] = "Unique exact normalized display-name match with current/future schedules from iptv-org/epg."
 
     fieldnames = ["group", "channel", "tvg_id", "epg_id", "source", "status", "note"]
-    with MAPPING.open(encoding="utf-8", newline="") as fh:
+    with MAPPING.open("w", encoding="utf-8", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(rows)
