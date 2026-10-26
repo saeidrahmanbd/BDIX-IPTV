@@ -24,15 +24,11 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
                 self.assertIn(canonical_channel_name(name), PERMANENTLY_BANNED_CHANNEL_NAMES)
                 self.assertEqual(prohibited_channel({"tvg-name": name}, name), "permanently banned channel")
 
-    def test_indian_news_sports_kids_religious_categories_and_known_brands_are_rejected(self):
+    def test_indian_news_and_religious_are_rejected(self):
         examples = [
             ("Sample News Channel", "News"),
-            ("Sample Sports Channel", "Sports"),
-            ("Sample Kids Channel", "Kids"),
             ("Sample Religious Channel", "Religious"),
-            ("Kids TV", "Entertainment"),
             ("Sansad TV 2", "New Channels"),
-            ("Green Gold TV", "New Channels"),
             ("Sai TV", "New Channels"),
             ("Zee Business", "New Channels"),
         ]
@@ -40,6 +36,21 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             with self.subTest(name=name, group=group):
                 attrs = {"group-title": group, "tvg-country": "IN"}
                 self.assertIsNotNone(prohibited_channel(attrs, name))
+
+    def test_indian_kids_and_sports_are_allowed(self):
+        examples = [
+            ("Sports Bangla", "Sports"),
+            ("Kids TV", "Kids"),
+            ("Cartoon Network", "Entertainment"),
+            ("Green Gold TV", "Entertainment"),
+            ("Pogo", "Entertainment"),
+            ("DD Sports", "Entertainment"),
+        ]
+        for name, group in examples:
+            with self.subTest(name=name, group=group):
+                self.assertIsNone(prohibited_channel(
+                    {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"}, name
+                ))
 
     def test_bangladeshi_news_is_allowed(self):
         attrs = {"group-title": "News", "tvg-country": "BD", "tvg-id": "Channel24.bd"}
