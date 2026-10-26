@@ -76,7 +76,7 @@ def main():
         code = discovery.country_code(a)
         group_key = group.casefold()
         if group_key == "fashion tv":
-            if not FASHION_RE.search(name):
+            if not discovery.FASHION_RE.search(name):
                 raise SystemExit(f"Invalid Fashion TV exception entry: {name!r}.")
         elif group_key in country_group_labels or group_key in {"pakistani", "new channels", "new backup"}:
             content = (a.get("tvg-content") or "").strip().casefold()
