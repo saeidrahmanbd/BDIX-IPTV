@@ -34,7 +34,7 @@ FASHION_RE=re.compile(r"\bfashion\s*tv\b",re.I)
 GENERAL_OUT_OF_SCOPE_RE=re.compile(r"\b(servus\s*tv|star\s*channel|warner\s*(?:channel|tv)|persiana\s*(?:family|iranian|korea|plus)|nile\s*drama|mbc\s*\+?\s*drama|groovy\s*tv|mci\s*television|general\s*entertainment|variety\s*channel)\b",re.I)
 DOC_NAME_RE=re.compile(r"\b(?:documentar(?:y|ies)|wildlife|nature|discovery(?:\s*(?:channel|science|turbo|world|family|life))?|national\s*geographic|nat\s*geo|animal\s*planet|bbc\s*earth|history\s*(?:channel|tv)?|smithsonian|travel\s*channel|travelxp|love\s*nature|inwild|inwonder)\b",re.I)
 MOVIE_NAME_RE=re.compile(r"\b(?:movies?|cinema|films?|bollywood|aflam|moviesphere|cinevault|cineplex|gravitas\s*movies|24\s*hour\s*(?:free\s*)?movies|star\s*movies|zee\s*cinema|b4u\s*movies|jalsha\s*movies|hallmark\s*movies|film\s*4|filmrise\s*movies|mytime\s*movie|the\s*movie\s*club|hbo(?:\s*(?:2|signature|zone|family|hits|comedy|action))?|cinemax|starz|tcm|turner\s*classic\s*movies|ifc|sundance\s*tv)\b",re.I)
-MUSIC_NAME_RE=re.compile(r"\b(?:music|musix|musica|musique|tunes|xite|v2beat|trace\s*(?:urban|latina)|kronehit|cmc\s*tv|eu\s*music|ua\s*music|arabica\s*tv|epic\s*music|totalmusic|vevo|qello\s*concerts|mtv\s*(?:music|hits|80s|90s|live|classic|dance)|vh1\b|now\s*(?:70s|80s|rock)|4music|music\s*box|8xm|9xm|9x\s*(?:jalwa|jhakaas|tashan)|stingray\s*(?:classic|djazz|remember|today|hits)|zoom\s*music|star\s*music)\b",re.I)
+MUSIC_NAME_RE=re.compile(r"\b(?:music|musix|musica|musique|tunes|xite|v2beat|trace\s*(?:urban|latina)|kronehit|cmc\s*tv|eu\s*music|ua\s*music|arabica\s*tv|epic\s*music|totalmusic|vevo|qello\s*concerts|mtv\s*(?:music|hits|80s|90s|live|classic|dance)|vh1\b|now\s*(?:70s|80s|rock)|4music|music\s*box|8xm|9xm|9x\s*(?:jalwa|jhakaas|tashan)|jalwa\s*tv|joo\s*music|joomusic|stingray\s*(?:classic|djazz|remember|today|hits)|zoom\s*music|star\s*music)\b",re.I)
 MOVIE_CATEGORY_PARTS={"movie","movies","cinema","film","films","bollywood","aflam","moviesphere","internationalmovies"}
 MUSIC_CATEGORY_PARTS={"music","musics","internationalmusic"}
 INTERNAL_QUEUE_GROUPS={"newchannels","newbackup","newbackups","backup","backups","notplaying","test"}
@@ -173,9 +173,40 @@ def make_extinf(a,name,group,code,logo,content_kind=""):
  if code and code!="ZZ":fields.append(f'tvg-country="{code}"')
  if a.get("tvg-language"):fields.append(f'tvg-language="{a["tvg-language"].replace(chr(34),"")}"')
  fields.append(f'channel-id="{(a.get("channel-id") or ident).replace(chr(34),"")}"'); fields.append(f'group-title="{group}"')
- if content_kind in {"International Movies","movie","movies"}: fields.append('tvg-content="Movies"')
- elif content_kind in {"International Music","music","musics"}: fields.append('tvg-content="Music"')
+ genre=infer_genre(a,clean)
+ if content_kind in {"International Movies","Indian Movies","movie","movies","film","films"}:genre="Movies"
+ elif content_kind in {"International Music","Indian Music","music","musics"}:genre="Music"
+ if genre:fields.append(f'tvg-content="{genre}"')
  return "#EXTINF:-1 "+" ".join(fields)+","+clean
+
+def set_attr(line,key,value):
+ value=str(value or "").replace('"',"").strip()
+ pattern=re.compile(r'\\b'+re.escape(key)+r'="[^"]*"')
+ if pattern.search(line):return pattern.sub(lambda _:f'{key}="{value}"',line,count=1)
+ return re.sub(r'^(#EXTINF:-?\\d+)',lambda m:m.group(1)+f' {key}="{value}"',line,count=1)
+def set_content(line,genre):
+ if genre not in {"Movies","Music"}:return line
+ return set_attr(line,"tvg-content",genre)
+def infer_genre(a,name):
+ content=norm(str(a.get("tvg-content","")))
+ group_text=(a.get("group-title") or "").strip().casefold()
+ group_key=re.sub(r"[^a-z0-9]+","",group_text)
+ group_parts=[re.sub(r"[^a-z0-9]+","",part) for part in re.split(r"[;,|/]+",group_text) if part.strip()]
+ text=f"{name} {a.get('tvg-name','')} {a.get('tvg-id','')} {a.get('channel-id','')}"
+ movie=content in {"movie","movies","film","films"} or any(p in MOVIE_CATEGORY_PARTS for p in group_parts) or bool(MOVIE_NAME_RE.search(text))
+ music=content in {"music","musics"} or any(p in MUSIC_CATEGORY_PARTS for p in group_parts) or bool(MUSIC_NAME_RE.search(text))
+ if movie==music:return ""
+ return "Movies" if movie else "Music"
+def special_group(a,name):
+ text=f"{name} {a.get('tvg-name','')} {a.get('tvg-id','')} {a.get('channel-id','')}"
+ content=norm(str(a.get("tvg-content","")))
+ group=norm(str(a.get("group-title","")))
+ if content in {"adult","xxx","porn","adultentertainment"} or group=="adult":return "Adult"
+ if content in {"kids","kid","children","childrens","cartoon"} or KIDS_NAME_RE.search(text):return "Kids"
+ if content in {"sport","sports"} or SPORTS_NAME_RE.search(text):return "Sports"
+ if content in {"documentary","documentaries","wildlife","nature"} or DOC_NAME_RE.search(text):return "Documentary & Wildlife"
+ if content in {"religious","religion","faith","devotional"} or RELIGIOUS_RE.search(text) or ISLAMIC_RE.search(text):return "Religious"
+ return ""
 def natural_key(value):return tuple(int(x) if x.isdigit() else x.casefold() for x in re.split(r"(\d+)",value or ""))
 def category_registry(groups):
  fixed=set(FIXED_GROUPS); tail=set(TAIL_GROUPS)
@@ -193,10 +224,16 @@ def qualified_country_groups(existing_ids, added_ids=None):
    groups.add(code)
  return groups
 def primary_target(base,code,country_groups):
- # Keep the requested content categories regardless of country threshold.
- if base in {"International Movies","International Music"}:return base
+ # BD, IN and PK retain their established regional groups. Other countries
+ # only receive a dedicated group after the five-channel threshold is met.
+ if code=="BD":return "Bangladesh"
+ if code=="PK":return "Pakistani"
+ if code=="IN":
+  genre=infer_genre({},base)
+  if not genre:genre="Movies" if "movie" in str(base).casefold() else "Music"
+  return "Indian Movies" if genre=="Movies" else "Indian Music"
  if code in country_groups and country_group(code):return country_group(code)
- return "New Channels" if base=="International" else base
+ return "New Channels"
 def main():
  if not PLAYLIST.exists():raise SystemExit("International-Playlist.m3u not found; refusing to create it.")
  req=urllib.request.Request(SOURCE_URL,headers={"User-Agent":"BDIX-IPTV-International-Discovery/1.0"})
@@ -257,49 +294,69 @@ def main():
  # plus the entries selected for this run, never every eligible source-feed candidate.
  country_groups=qualified_country_groups(country_primary_ids,added_primary_ids)
  all_blocks=existing+additions; migrated=[]; normalized=[]; filtered_existing=[]
+ dynamic_group_to_code={country_group(code).casefold():code for code in ISO_CODES if code not in {"BD","IN","PK"}}
  for b in all_blocks:
   a=attrs(b[0]); name=name_of(b); old=a.get("group-title","").strip(); group=old
-  old_key=old.casefold()
-  code=country_code(a)
+  old_key=old.casefold(); code=country_code(a); genre=""
   if FASHION_RE.search(name):
    group="Fashion TV"
-  elif old_key in {"new backup","new backups"}:
-   base,reason,policy_code=policy(a,name)
-   if base is None:
-    filtered_existing.append((name,old,reason or "out of scope"))
-    continue
-   group="New Backup"
   elif old_key in {"backup","backups"}:
    group="Backup"
   elif old_key in {"not playing","test"}:
    group="Backup"
-  elif old_key in {"new channels","international"}:
-   base,reason,policy_code=policy(a,name,allow_legacy_group=(old_key=="international"))
-   if base is None:
-    filtered_existing.append((name,old,reason or "out of scope"))
+  elif old_key in {"new backup","new backups"}:
+   policy_a=dict(a); policy_a["group-title"]="New Channels"
+   base,reason,policy_code=policy(policy_a,name)
+   genre=infer_genre(policy_a,name)
+   if base is None or not genre:
+    filtered_existing.append((name,old,reason or "entry is not confidently classifiable as Movies/Music"))
     continue
-   if base in {"International Movies","International Music"}:
-    group=base
-   elif policy_code in country_groups:
-    group=country_group(policy_code)
-   elif old_key=="new channels":
-    group=primary_target(base,policy_code,country_groups)
-   else:
-    filtered_existing.append((name,old,"generic International group is not allowed"))
-    continue
-  elif old_key in {"international movies","international music"}:
-   # These explicit curated content groups are already in-scope.
-   group=old
-  elif code in ISO_CODES and code not in {"BD","IN","PK"} and old_key==country_group(code).casefold() and code not in country_groups:
-   base,reason,policy_code=policy(a,name)
-   if base is None:
-    filtered_existing.append((name,old,reason or "country group below threshold and channel outside movie/music scope"))
+   group="New Backup"
+  elif old_key in {"new channels","international","international movies","international music"}:
+   policy_a=dict(a); policy_a["group-title"]="New Channels"
+   base,reason,policy_code=policy(policy_a,name,allow_legacy_group=(old_key=="international"))
+   genre=infer_genre(policy_a,name)
+   if base is None or not genre:
+    filtered_existing.append((name,old,reason or "entry is not confidently classifiable as Movies/Music"))
     continue
    group=primary_target(base,policy_code,country_groups)
+  elif old_key=="pakistani" or old_key in dynamic_group_to_code:
+   policy_a=dict(a); policy_a["group-title"]="New Channels"
+   base,reason,policy_code=policy(policy_a,name)
+   genre=infer_genre(policy_a,name)
+   if base is None or not genre:
+    special=special_group(a,name)
+    if special:
+     group=special
+    else:
+     filtered_existing.append((name,old,reason or "country groups permit Movies/Music only"))
+     continue
+   elif old_key=="pakistani":
+    # Pakistan is a fixed country group, but every row there must still be
+    # explicitly and confidently identified as Movies or Music.
+    group="Pakistani"; genre=genre or infer_genre(policy_a,name)
+    if not a.get("tvg-country"):b[0]=set_attr(b[0],"tvg-country","PK")
+   else:
+    group=primary_target(base,policy_code,country_groups)
   if group!=old:
-   b[0]=make_extinf(a,name,group,code,a.get("tvg-logo",""))
+   b[0]=set_attr(b[0],"group-title",group)
    migrated.append((name,old,group))
+  if genre:
+   b[0]=set_content(b[0],genre)
   normalized.append(b)
+ # Recompute qualifying country groups from the cleaned playlist before publication.
+ cleaned_ids=defaultdict(set)
+ for b in normalized:
+  a=attrs(b[0]); name=name_of(b); group=a.get("group-title","").strip(); code=country_code(a)
+  if code in ISO_CODES and counts_toward_country_group(group,code):
+   ident=(a.get("tvg-id") or a.get("channel-id") or norm(name)).strip().casefold()
+   if ident:cleaned_ids[code].add(ident)
+ country_groups=qualified_country_groups(cleaned_ids)
+ for b in normalized:
+  a=attrs(b[0]); name=name_of(b); old=a.get("group-title","").strip(); code=country_code(a)
+  if old.casefold() in dynamic_group_to_code and code not in country_groups:
+   b[0]=set_attr(b[0],"group-title","New Channels")
+   migrated.append((name,old,"New Channels"))
  logo_refs_repaired=0; logo_refs_removed=0
  for b in normalized:
   a=attrs(b[0]); name=name_of(b); old_logo=(a.get("tvg-logo") or "").strip()
