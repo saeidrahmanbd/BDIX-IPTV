@@ -81,8 +81,17 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertEqual(discovery.COUNTRY_THRESHOLD, 5)
         self.assertNotIn("AT", discovery.qualified_country_groups({"AT": {"a", "b", "c", "d"}}))
         self.assertIn("AT", discovery.qualified_country_groups({"AT": {"a", "b", "c", "d", "e"}}))
-        self.assertEqual(discovery.primary_target("International Movies", "AT", {"AT"}), "International Movies")
-        self.assertEqual(discovery.primary_target("International Music", "AT", {"AT"}), "International Music")
+        # Routing changed in 2f5ee4f: a country that has reached the threshold
+        # gets its dedicated group; below it, channels wait in New Channels.
+        # BD, IN and PK always keep their established regional groups.
+        self.assertEqual(discovery.primary_target("International Movies", "AT", {"AT"}), "Austria")
+        self.assertEqual(discovery.primary_target("International Music", "AT", {"AT"}), "Austria")
+        self.assertEqual(discovery.primary_target("International Movies", "AT", set()), "New Channels")
+        self.assertEqual(discovery.primary_target("International Music", "DE", set()), "New Channels")
+        self.assertEqual(discovery.primary_target("International Movies", "BD", set()), "Bangladesh")
+        self.assertEqual(discovery.primary_target("International Music", "PK", set()), "Pakistani")
+        self.assertEqual(discovery.primary_target("International Movies", "IN", set()), "Indian Movies")
+        self.assertEqual(discovery.primary_target("International Music", "IN", set()), "Indian Music")
 
     def test_tokenized_urls_are_rejected_without_playback_testing(self):
         self.assertFalse(discovery.safe_url("https://example.org/live.m3u8?token=abc"))
