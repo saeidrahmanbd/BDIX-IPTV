@@ -62,7 +62,7 @@ https://dbcanada.sonarbanglatv.com/deshebideshe/dbtv/index.m3u8
 https://deshitv.deshitv24.net/live/myStream/playlist.m3u8
 #EXTINF:-1 tvg-id="DoyelTV.ca@SD" tvg-name="Doyel TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/doyel-tv.png" tvg-chno="27" channel-id="DoyelTV.ca@SD" tvg-country="CA" tvg-language="ben" group-title="Bangladesh",Doyel TV
 https://3d46w.doyeltv.com/memfs/aa3aa6f7-ec12-41a2-8183-a891e157bbf8.m3u8
-#EXTINF:-1 tvg-id="" group-title="Bangladesh",Drama 24
+#EXTINF:-1 tvg-id="" group-title="Bangladesh" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/16-a308b78988.png",Drama 24
 https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="EkattorTV.bd" channel-id="EkattorTV.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekattor-tv.png" tvg-country="BD" group-title="Bangladesh" tvg-name="Ekattor TV",Ekattor TV
 https://tvsen6.aynaott.com/EWDrV5QskgarZEUBb3pU/index.m3u8
@@ -938,7 +938,7 @@ https://streamyes.alsolnet.com/azaharesfm/live/playlist.m3u8
 https://videostream.shockmedia.com.ar:19360/beatsradio/beatsradio.m3u8
 #EXTINF:-1 tvg-id="ChamameTV.ar@SD" tvg-country="AR" tvg-content="Music" group-title="Argentina" tvg-name="Chamame TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/chamame-tv.png",Chamame TV
 https://srv4.zcast.com.br/chamametv/chamametv/playlist.m3u8
-#EXTINF:-1 tvg-id="CosmosTv.ar@HD" tvg-name="Cosmos Tv" tvg-country="AR" channel-id="CosmosTv.ar@HD" group-title="Argentina" tvg-content="Movies",Cosmos Tv
+#EXTINF:-1 tvg-id="CosmosTv.ar@HD" tvg-name="Cosmos Tv" tvg-country="AR" channel-id="CosmosTv.ar@HD" group-title="Argentina" tvg-content="Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cosmos-tv-7521381461.webp",Cosmos Tv
 https://tv.mediacp.eu:19360/cosmos/cosmos.m3u8
 #EXTINF:-1 tvg-id="CumbiaMix.ar@HD" tvg-country="AR" tvg-content="Music" group-title="Argentina" tvg-name="Cumbia Mix" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cumbia-mix-532fc42401.png",Cumbia Mix
 https://cloud.tvomix.com/CUMBIAMIX/index.m3u8
@@ -2716,7 +2716,7 @@ https://d1si3n1st4nkgb.cloudfront.net/10502/89001001/hls/master.m3u8?ads.xumo_ch
 http://27.124.71.27/Love_Nature/index.m3u8
 #EXTINF:-1 tvg-id="LoveNatureenEspanol.us@SD" tvg-country="US" group-title="Documentary & Wildlife" tvg-name="Love Nature en Espanol" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/love-nature-en-espanol-644d23ad51.png",Love Nature en Espanol
 https://bantel-cdn1.iptvperu.tv:1936/ZyphraCast/love-nature/chunks.m3u8
-#EXTINF:-1 tvg-id="LovePets.ca@US" tvg-country="CA" group-title="Documentary & Wildlife" tvg-name="Love Pets",Love Pets
+#EXTINF:-1 tvg-id="LovePets.ca@US" tvg-country="CA" group-title="Documentary & Wildlife" tvg-name="Love Pets" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/love-pets-6c2d3d9bf9.png",Love Pets
 https://amg01576-blueskyeenterta-lovepetsemea-samsungse-ctamh.amagi.tv/playlist/amg01576-blueskyeenterta-lovepetsemea-samsungse/playlist.m3u8
 #EXTINF:-1 tvg-id="LoveThePlanet.es@EN" tvg-country="ES" group-title="Documentary & Wildlife" tvg-name="Love The Planet" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/love-the-planet.png",Love The Planet
 https://amg01821-lovetvchannels-lovetheplanetuksamsung-samsunguk-apopw.amagi.tv/playlist/amg01821-lovetvchannels-lovetheplanetuksamsung-samsunguk/playlist.m3u8
@@ -4866,7 +4866,7 @@ http://45.163.139.42:8000/play/a03d/index.m3u8
 https://cloudvideo.servers10.com:8081/8198/index.m3u8
 #EXTINF:-1 tvg-id="VosyTV.ec@SD" tvg-content="Music" group-title="New Channels" tvg-name="Vos y TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vos-y-tv-d82c272b3d.png",Vos y TV
 https://cloud37.ecuatel.com/vostv/live/manifest.m3u8
-#EXTINF:-1 tvg-id="CosmosTv.ar@HD" tvg-name="Cosmos Tv" tvg-country="AR" channel-id="CosmosTv.ar@HD" group-title="New Backup" tvg-content="Movies",Cosmos Tv
+#EXTINF:-1 tvg-id="CosmosTv.ar@HD" tvg-name="Cosmos Tv" tvg-country="AR" channel-id="CosmosTv.ar@HD" group-title="New Backup" tvg-content="Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cosmos-tv-7521381461.webp",Cosmos Tv
 https://canaletaplus.com:3922/live/cosmoslive.m3u8
 #EXTINF:-1 tvg-id="GREATmovies.uk" tvg-name="GREAT! Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/great-movies.png" tvg-country="GB" tvg-language="eng" channel-id="GREATmovies.uk" group-title="New Backup" tvg-content="Movies",GREAT! Movies
 https://amg01753-narrativeuk-amg01753c3-lg-gb-1833.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-greatmovies-lggb/playlist.m3u8

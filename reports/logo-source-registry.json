@@ -5578,5 +5578,15 @@
     "status": "third_party_verified",
     "source_url": "https://i.imgur.com/QmgaPSi.png",
     "notes": "IPTV-org exact ID: EmanTv.iq IPTV-org public logo dataset Source page: https://i.imgur.com/QmgaPSi.png"
+  },
+  "International-Playlist.m3u|CosmosTv.ar@HD|Cosmos Tv|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cosmos-tv-7521381461.webp": {
+    "status": "third_party_verified",
+    "source_url": "https://cdn4.fmcosmos.com/s4/2025/11/03/fmcosmos/images/15/92/159284_a18e887e336fef3bc6b188314a173ce10cbe5157966e839517e2b0428d7aed46/xs.webp",
+    "notes": "IPTV-org exact ID: CosmosTv.ar IPTV-org public logo dataset Source page: https://cdn4.fmcosmos.com/s4/2025/11/03/fmcosmos/images/15/92/159284_a18e887e336fef3bc6b188314a173ce10cbe5157966e839517e2b0428d7aed46/xs.webp"
+  },
+  "International-Playlist.m3u|LovePets.ca@US|Love Pets|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/love-pets-6c2d3d9bf9.png": {
+    "status": "third_party_verified",
+    "source_url": "https://lovepetstv.com/wp-content/uploads/2022/12/LovePets_Logo_SecondaryColor.png",
+    "notes": "IPTV-org exact ID: LovePets.ca IPTV-org public logo dataset Source page: https://lovepetstv.com/wp-content/uploads/2022/12/LovePets_Logo_SecondaryColor.png"
   }
 }
