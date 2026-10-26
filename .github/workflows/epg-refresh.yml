@@ -1,4 +1,3 @@
-
 name: Refresh IPTV EPG
 
 on:
@@ -28,11 +27,10 @@ on:
 permissions:
   contents: write
 
-# Serialize EPG publication with every other main-branch playlist writer.
+# Serialize EPG publication with other main-branch playlist writers.
 concurrency:
   group: iptv-playlist-main-writer-v2
   cancel-in-progress: false
-  queue: max
 
 jobs:
   refresh:
