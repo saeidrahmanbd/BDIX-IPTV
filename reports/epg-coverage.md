@@ -1,6 +1,6 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-26T04:44:23+00:00**
+Generated: **2026-10-26T05:30:50+00:00**
 
 This report audits active unique channel identities across the three maintained playlists configured in the automated EPG pipeline. A source mapping is not counted as usable current/future coverage unless it has a valid programme interval and valid non-empty multilingual title data within the generator's -6-hour/+7-day window; English titles rank first, then Bengali, then other valid languages.
 The XMLTV guide is published at **epg/epg.xml**. The published guide uses the playlist's tvg-id as the XMLTV channel ID, not the upstream provider's source ID.
@@ -8,9 +8,9 @@ The XMLTV guide is published at **epg/epg.xml**. The published guide uses the pl
 ## Overall Coverage
 
 - Active unique playlist channel IDs audited: **1878**
-- IDs with an EPG source mapping: **677/1878 (36.0%)**
-- IDs with usable current/future source schedules (nonblank multilingual titles (English preferred, then Bengali, then other valid languages)): **632/1878 (33.7%)**
-- IDs with no EPG source mapping: **1201**
+- IDs with an EPG source mapping: **678/1878 (36.1%)**
+- IDs with usable current/future source schedules (nonblank multilingual titles (English preferred, then Bengali, then other valid languages)): **633/1878 (33.7%)**
+- IDs with no EPG source mapping: **1200**
 
 ## Coverage by Playlist Group
 
@@ -31,7 +31,7 @@ The XMLTV guide is published at **epg/epg.xml**. The published guide uses the pl
 | Indian Movies | 93 | 66 | 59 | 27 |
 | Indian Music | 61 | 49 | 46 | 12 |
 | International | 98 | 56 | 52 | 42 |
-| International Movies | 165 | 13 | 13 | 152 |
+| International Movies | 165 | 14 | 14 | 151 |
 | International Music | 90 | 5 | 5 | 85 |
 | Kids | 51 | 33 | 32 | 18 |
 | Pakistani | 41 | 6 | 6 | 35 |
@@ -47,56 +47,55 @@ The XMLTV guide is published at **epg/epg.xml**. The published guide uses the pl
 
 ## Source Status
 
-- **FAILED** — https://free-epg.de/api/epg/bd.xml.gz — 0 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window; HTTP Error 404: Not Found
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 713 IDs with usable current/future programmes; 73362 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz — 54 channel IDs; 2 IDs with usable current/future programmes; 21 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 21 IDs with usable current/future programmes; 2043 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-in.xml.gz — 419 channel IDs; 419 IDs with usable current/future programmes; 18563 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://i.mjh.nz/SamsungTVPlus/in.xml — 206 channel IDs; 203 IDs with usable current/future programmes; 2145 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://i.mjh.nz/SamsungTVPlus/us.xml — 588 channel IDs; 587 IDs with usable current/future programmes; 4943 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 713 IDs with usable current/future programmes; 97924 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz — 54 channel IDs; 11 IDs with usable current/future programmes; 110 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 21 IDs with usable current/future programmes; 2032 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-in.xml.gz — 419 channel IDs; 419 IDs with usable current/future programmes; 18388 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://i.mjh.nz/SamsungTVPlus/in.xml — 206 channel IDs; 203 IDs with usable current/future programmes; 2146 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://i.mjh.nz/SamsungTVPlus/us.xml — 588 channel IDs; 587 IDs with usable current/future programmes; 4957 eligible programme rows with valid non-empty titles in any language in the guide window
 - **OK** — https://epg.pw/xmltv/epg_IN.xml — 498 channel IDs; 21 IDs with usable current/future programmes; 2122 eligible programme rows with valid non-empty titles in any language in the guide window
 - **OK** — https://epg.pw/api/epg.xml?channel_id=9374 — 1 channel IDs; 1 IDs with usable current/future programmes; 88 eligible programme rows with valid non-empty titles in any language in the guide window
 - **OK** — https://epg.pw/api/epg.xml?channel_id=12504 — 1 channel IDs; 1 IDs with usable current/future programmes; 77 eligible programme rows with valid non-empty titles in any language in the guide window
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml — 692 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 715 IDs with usable current/future programmes; 39564 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 763 channel IDs; 762 IDs with usable current/future programmes; 80773 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1490 channel IDs; 1350 IDs with usable current/future programmes; 83273 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 282 channel IDs; 282 IDs with usable current/future programmes; 6137 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 119 channel IDs; 106 IDs with usable current/future programmes; 17248 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://avkb.short.gy/epg.xml.gz — 2273 channel IDs; 898 IDs with usable current/future programmes; 26018 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://avkb.short.gy/jioepg.xml.gz — 1226 channel IDs; 116 IDs with usable current/future programmes; 3878 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://avkb.short.gy/tsepg.xml.gz — 717 channel IDs; 715 IDs with usable current/future programmes; 39563 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 715 IDs with usable current/future programmes; 39180 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 763 channel IDs; 761 IDs with usable current/future programmes; 80773 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1490 channel IDs; 1350 IDs with usable current/future programmes; 82465 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 282 channel IDs; 282 IDs with usable current/future programmes; 5914 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 119 channel IDs; 106 IDs with usable current/future programmes; 24235 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://avkb.short.gy/epg.xml.gz — 2273 channel IDs; 898 IDs with usable current/future programmes; 25473 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://avkb.short.gy/jioepg.xml.gz — 1226 channel IDs; 116 IDs with usable current/future programmes; 3786 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://avkb.short.gy/tsepg.xml.gz — 717 channel IDs; 715 IDs with usable current/future programmes; 39180 eligible programme rows with valid non-empty titles in any language in the guide window
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_DISTROTV1.xml.gz — 90 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz — 690 channel IDs; 684 IDs with usable current/future programmes; 58385 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_RAKUTEN1.xml.gz — 1640 channel IDs; 1510 IDs with usable current/future programmes; 108934 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml — 11 channel IDs; 10 IDs with usable current/future programmes; 1597 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz — 486 channel IDs; 387 IDs with usable current/future programmes; 33154 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://www.open-epg.com/files/unitedkingdom.xml.gz — 562 channel IDs; 529 IDs with usable current/future programmes; 25405 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz — 769 channel IDs; 755 IDs with usable current/future programmes; 65501 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-us.xml.gz — 13031 channel IDs; 13004 IDs with usable current/future programmes; 875730 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz — 912 channel IDs; 836 IDs with usable current/future programmes; 76338 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz — 345 channel IDs; 277 IDs with usable current/future programmes; 36732 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz — 696 channel IDs; 695 IDs with usable current/future programmes; 46305 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz — 751 channel IDs; 729 IDs with usable current/future programmes; 68912 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_CZ1.xml.gz — 1087 channel IDs; 503 IDs with usable current/future programmes; 44154 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz — 266 channel IDs; 250 IDs with usable current/future programmes; 21408 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_DO1.xml.gz — 56 channel IDs; 53 IDs with usable current/future programmes; 2187 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz — 373 channel IDs; 339 IDs with usable current/future programmes; 17734 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz — 574 channel IDs; 530 IDs with usable current/future programmes; 41984 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_GR1.xml.gz — 321 channel IDs; 306 IDs with usable current/future programmes; 22352 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_HK1.xml.gz — 143 channel IDs; 133 IDs with usable current/future programmes; 11080 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_HU1.xml.gz — 193 channel IDs; 167 IDs with usable current/future programmes; 17211 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz — 195 channel IDs; 155 IDs with usable current/future programmes; 16252 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz — 163 channel IDs; 131 IDs with usable current/future programmes; 7265 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_MX1.xml.gz — 178 channel IDs; 167 IDs with usable current/future programmes; 13975 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz — 159 channel IDs; 156 IDs with usable current/future programmes; 17856 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz — 636 channel IDs; 585 IDs with usable current/future programmes; 91422 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz — 370 channel IDs; 356 IDs with usable current/future programmes; 37621 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_SA2.xml.gz — 31 channel IDs; 30 IDs with usable current/future programmes; 3481 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz — 178 channel IDs; 139 IDs with usable current/future programmes; 9952 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_BEIN1.xml.gz — 80 channel IDs; 72 IDs with usable current/future programmes; 2287 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz — 266 channel IDs; 106 IDs with usable current/future programmes; 13276 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz — 97 channel IDs; 92 IDs with usable current/future programmes; 9043 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz — 690 channel IDs; 684 IDs with usable current/future programmes; 76359 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_RAKUTEN1.xml.gz — 1640 channel IDs; 1510 IDs with usable current/future programmes; 145844 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml — 11 channel IDs; 10 IDs with usable current/future programmes; 1572 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz — 486 channel IDs; 387 IDs with usable current/future programmes; 32842 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://www.open-epg.com/files/unitedkingdom.xml.gz — 562 channel IDs; 529 IDs with usable current/future programmes; 25045 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz — 769 channel IDs; 755 IDs with usable current/future programmes; 64926 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-us.xml.gz — 13031 channel IDs; 13004 IDs with usable current/future programmes; 870189 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz — 912 channel IDs; 836 IDs with usable current/future programmes; 75635 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz — 345 channel IDs; 277 IDs with usable current/future programmes; 37665 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz — 696 channel IDs; 695 IDs with usable current/future programmes; 61264 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz — 751 channel IDs; 729 IDs with usable current/future programmes; 68249 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_CZ1.xml.gz — 1087 channel IDs; 502 IDs with usable current/future programmes; 43687 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz — 266 channel IDs; 251 IDs with usable current/future programmes; 22267 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_DO1.xml.gz — 56 channel IDs; 55 IDs with usable current/future programmes; 3800 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz — 373 channel IDs; 339 IDs with usable current/future programmes; 17469 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz — 574 channel IDs; 530 IDs with usable current/future programmes; 58171 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_GR1.xml.gz — 321 channel IDs; 306 IDs with usable current/future programmes; 22200 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_HK1.xml.gz — 143 channel IDs; 133 IDs with usable current/future programmes; 10966 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_HU1.xml.gz — 193 channel IDs; 167 IDs with usable current/future programmes; 17034 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz — 195 channel IDs; 155 IDs with usable current/future programmes; 16076 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz — 163 channel IDs; 131 IDs with usable current/future programmes; 10675 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_MX1.xml.gz — 178 channel IDs; 167 IDs with usable current/future programmes; 13839 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz — 159 channel IDs; 156 IDs with usable current/future programmes; 23241 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz — 636 channel IDs; 585 IDs with usable current/future programmes; 90783 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz — 370 channel IDs; 353 IDs with usable current/future programmes; 37297 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_SA2.xml.gz — 31 channel IDs; 30 IDs with usable current/future programmes; 3445 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz — 178 channel IDs; 139 IDs with usable current/future programmes; 13755 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_BEIN1.xml.gz — 80 channel IDs; 72 IDs with usable current/future programmes; 2233 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz — 266 channel IDs; 102 IDs with usable current/future programmes; 13027 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz — 97 channel IDs; 92 IDs with usable current/future programmes; 8963 eligible programme rows with valid non-empty titles in any language in the guide window
 - **OK** — https://hum.tv/schedule/ — 1 channel IDs; 1 IDs with usable current/future programmes; 21 eligible programme rows with valid non-empty titles in any language in the guide window
 - **OK** — M3U4U XMLTV (private Actions secret) — 201 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window
 
@@ -1018,7 +1017,6 @@ The table includes every active channel identity without usable current/future g
 | International Movies | City Eden KinoSemya [Not 24/7] | CityEdenKinoSemya.ru@HD | - | NO_GUIDE_HIT |
 | International Movies | Claro Cinema (1080p) | ClaroCinema.mx@SD | - | NO_GUIDE_HIT |
 | International Movies | CND Film Discovery Channel (576p) | CNDFilmDiscoveryChannel.cn@SD | - | NO_GUIDE_HIT |
-| International Movies | MovieSphere AU | custom.moviesphere-au | - | NO_GUIDE_HIT |
 | International Movies | Pluto TV Comedy Movies | PlutoTVComedyMovies.us@CA | - | NO_GUIDE_HIT |
 | International Movies | Pluto TV Retro Action Movies | PlutoTVRetroActionMovies.us@CA | - | NO_GUIDE_HIT |
 | International Movies | Rakuten TV Family Movies (1080p) | RakutenTVFamilyMovies.es@Spain | - | NO_GUIDE_HIT |
@@ -1355,30 +1353,30 @@ The table includes every active channel identity without usable current/future g
 
 ## Published Guide Validation
 
-- XMLTV channel IDs published: **677**
-- Active playlist IDs present in the published guide: **677/1878 (36.0%)**
-- Active playlist IDs with usable current/future programmes: **630/1878 (33.5%)**
-- Active playlist IDs with usable programmes anywhere in the guide window (-6h/+7d): **633/1878 (33.7%)**
-- Mapped playlist IDs present in the guide: **677/677 (100.0%)**
-- Mapped playlist IDs with usable current/future programmes: **630/677 (93.1%)**
-- Mapped playlist IDs with usable programmes anywhere in the guide window: **633/677 (93.5%)**
-- Eligible programme rows published in the guide window: **46990**
+- XMLTV channel IDs published: **678**
+- Active playlist IDs present in the published guide: **678/1878 (36.1%)**
+- Active playlist IDs with usable current/future programmes: **585/1878 (31.2%)**
+- Active playlist IDs with usable programmes anywhere in the guide window (-6h/+7d): **588/1878 (31.3%)**
+- Mapped playlist IDs present in the guide: **678/678 (100.0%)**
+- Mapped playlist IDs with usable current/future programmes: **585/678 (86.3%)**
+- Mapped playlist IDs with usable programmes anywhere in the guide window: **588/678 (86.7%)**
+- Eligible programme rows published in the guide window: **50701**
 - Mapped playlist IDs missing from the published XMLTV channel list: **0**
 - Missing mapped playlist IDs: none
-- Published mapped IDs without usable current/future programmes: **47**
-- IDs without usable current/future programmes: BBCDrama.uk, BabesTV.us, BanglaJagoTV.in, ColorsSuper.in@SD, DarshanaTV.in@SD, DisneyChannel.in@HD, ETVCinema.in, ETVCinema.in@HD, ETVCinema.in@SD, ETVComedy.in@HD, EkamraCinema.in, EkamraMusiq.in, FashionOne.uk, GlobalPunjab.in, JalshaMovies.in@HD, KalaignarMurasu.in, LEOTV.cz, MHOneDilSe.in@SD, MakkahTV.sa, ManoranjanGrand.in, ManoranjanGrand.in@SD, ManoranjanMovies.in@SD, ManoranjanPrime.in@SD, Mastiii.in@SD, NationalGeographic.in@HD, NationalGeographic.in@SD, OdishaTV.in@SD, OnePaschima.in@SD, PrarthanaTV.in@SD, PureBabes.us, SX3.es@SD, ShansonTV.ru, SkySportsCricket.ie, SonyEntertainmentTelevision.in@SD, SonyPix.in@HD, StarMovies.in@HD, SteelbirdMusic.in@SD, SuperHungama.in@SD, SuriyanTV.in@SD, TaraTV.in, Travel.us, custom.24-7-xxx-7, custom.bdix.banglajago, custom.bdix.cnninternationla, custom.xxx-babes-tv, custom.xxx-dusk, custom.xxx-true-amateurs
+- Published mapped IDs without usable current/future programmes: **93**
+- IDs without usable current/future programmes: 7XMusic.in@SD, AaryaaTV.in, B4UBhojpuri.in@SD, B4UKadak.in@SD, B4UMovies.in@India, BBCDrama.uk, BabesTV.us, BanglaJagoTV.in, BhojpuriCinema.in@SD, Captain.in@SD, ColorsSuper.in@SD, DarshanaTV.in@SD, DhoomMusic.in@SD, DishaTV.in@SD, DisneyChannel.in@HD, ETVCinema.in, ETVCinema.in@HD, ETVCinema.in@SD, ETVComedy.in@HD, EkamraCinema.in, EkamraMusiq.in, EpicMusic.in@SD, FashionOne.uk, Fast1.in@SD, GlobalPunjab.in, Goldmines.in@SD, GoldminesBollywood.in@SD, GoldminesMovies.in@SD, HosannaTV.in@Tamil, IsaiAruvi.in@SD, JalshaMovies.in@HD, KTVBangla.in@SD, KalaignarMurasu.in, LEOTV.cz, MHOneDilSe.in@SD, MakkahTV.sa, ManoranjanGrand.in, ManoranjanGrand.in@SD, ManoranjanMovies.in@SD, ManoranjanPrime.in@SD, Mastiii.in@SD, MetroTV.in@SD, NTCTV.in@SD, NationalGeographic.in@HD, NationalGeographic.in@SD, OdishaTV.in@SD, OnePaschima.in@SD, Only.Music.in, OscarMoviesBhojpuri.in@SD, PTCMusic.in@SD, PTCPunjabiGold.in@SD, PearTV.in@SD, PrarthanaTV.in@SD, PureBabes.us, RaftaarMedia.in@SD, SX3.es@SD, SangeetMarathi.in@SD, ShansonTV.ru, ShemarooUmang.in@SD, SiriKannadaAllTime.in (and 33 more)
 
 ## Source / Published Schedule Reconciliation
 
-- IDs with usable current/future source schedule data: **632/1878 (33.7%)**
-- IDs with usable current/future schedules in published XMLTV at report time: **630/1878 (33.5%)**
-- IDs with usable programmes in the published guide's common -6h/+7d window: **633/1878 (33.7%)**
-- Current/future source IDs without any usable published programme in that common window: **0**
-- Source-scheduled IDs without a usable published programme in the common window: none
+- IDs with usable current/future source schedule data: **633/1878 (33.7%)**
+- IDs with usable current/future schedules in published XMLTV at report time: **585/1878 (31.2%)**
+- IDs with usable programmes in the published guide's common -6h/+7d window: **588/1878 (31.3%)**
+- Current/future source IDs without any usable published programme in that common window: **46**
+- Source-scheduled IDs without a usable published programme in the common window: 7X Music (360p) (`7XMusic.in@SD`), Aaryaa TV (`AaryaaTV.in`), B4U Bhojpuri (1080p) (`B4UBhojpuri.in@SD`), B4U Kadak (`B4UKadak.in@SD`), B4U Movies (`B4UMovies.in@India`), Bhojpuri Cinema (`BhojpuriCinema.in@SD`), Captain (576p) (`Captain.in@SD`), Dhoom Music Bangla (`DhoomMusic.in@SD`), Disha TV (`DishaTV.in@SD`), Epic Music (`EpicMusic.in@SD`), Fast1 (`Fast1.in@SD`), Goldmines (`Goldmines.in@SD`), Goldmines Bollywood (`GoldminesBollywood.in@SD`), Goldmines Movies (`GoldminesMovies.in@SD`), Hosanna TV (`HosannaTV.in@Tamil`), Isai Aruvi (`IsaiAruvi.in@SD`), KTV Bangla (`KTVBangla.in@SD`), Metro TV (`MetroTV.in@SD`), NTC TV (`NTCTV.in@SD`), Only Music (`Only.Music.in`), Oscar Movies Bhojpuri (`OscarMoviesBhojpuri.in@SD`), PTC Music (`PTCMusic.in@SD`), PTC Punjabi Gold (`PTCPunjabiGold.in@SD`), Pear TV (`PearTV.in@SD`), Raftaar Media (`RaftaarMedia.in@SD`), Sangeet Marathi (`SangeetMarathi.in@SD`), Shemaroo Umang (`ShemarooUmang.in@SD`), Siri Kannada All Time (`SiriKannadaAllTime.in`), Sonar Bangla (`SonarBangla.in@SD`), Sony Max HD (1080p) (`SonyMax.in@HD`), Sony Max (`SonyMax.in@SD`), Sony WAH (`SonyWah.in@SD`), Spondon (`Spondon.in@SD`), Stingray Classic Rock (`StingrayClassicRock.ca`), Stingray Hit List (`StingrayHitList.ca`), Stingray Remember the 80s (`StingrayRememberthe80s.ca`), Stingray The Spa (`StingrayTheSpa.ca`), Stingray Today's KPOP (`StingrayTodaySKPOP.us`), Stingray Today's Latin Pop (`StingrayTodaysLatinPop.ca`), Suriya TV (`SuriyaTV.in`), Tabbar Hits (`TabbarHits.in`), Ultimate TV (`UltimateTV.in@SD`), WildEarth (`WildEarth.za`), ZB Cinema (`ZBCinema.in`), Zee Cinema (`ZeeCinema.in@HD`), Zee Cinema (576p) (`ZeeCinema.in@SD`)
 - IDs with an in-window published programme but no current/future source match at the later scan: **1**
 - In-window published IDs not counted source-current/future: IN: -HINDI- STAR SPORTS 1 HD (`Star Sports 1 Hindi HD.in`)
-- Source-current/future IDs whose published programme is no longer current by report time: **3**
-- Source-current/future IDs no longer current in the published guide: ETV Cinema (`ETVCinema.in`), ETV Cinema HD (1080p) (`ETVCinema.in@HD`), ETV Cinema (396p) (`ETVCinema.in@SD`)
+- Source-current/future IDs whose published programme is no longer current by report time: **49**
+- Source-current/future IDs no longer current in the published guide: 7X Music (360p) (`7XMusic.in@SD`), Aaryaa TV (`AaryaaTV.in`), B4U Bhojpuri (1080p) (`B4UBhojpuri.in@SD`), B4U Kadak (`B4UKadak.in@SD`), B4U Movies (`B4UMovies.in@India`), Bhojpuri Cinema (`BhojpuriCinema.in@SD`), Captain (576p) (`Captain.in@SD`), Dhoom Music Bangla (`DhoomMusic.in@SD`), Disha TV (`DishaTV.in@SD`), ETV Cinema (`ETVCinema.in`), ETV Cinema HD (1080p) (`ETVCinema.in@HD`), ETV Cinema (396p) (`ETVCinema.in@SD`), Epic Music (`EpicMusic.in@SD`), Fast1 (`Fast1.in@SD`), Goldmines (`Goldmines.in@SD`), Goldmines Bollywood (`GoldminesBollywood.in@SD`), Goldmines Movies (`GoldminesMovies.in@SD`), Hosanna TV (`HosannaTV.in@Tamil`), Isai Aruvi (`IsaiAruvi.in@SD`), KTV Bangla (`KTVBangla.in@SD`), Metro TV (`MetroTV.in@SD`), NTC TV (`NTCTV.in@SD`), Only Music (`Only.Music.in`), Oscar Movies Bhojpuri (`OscarMoviesBhojpuri.in@SD`), PTC Music (`PTCMusic.in@SD`), PTC Punjabi Gold (`PTCPunjabiGold.in@SD`), Pear TV (`PearTV.in@SD`), Raftaar Media (`RaftaarMedia.in@SD`), Sangeet Marathi (`SangeetMarathi.in@SD`), Shemaroo Umang (`ShemarooUmang.in@SD`), Siri Kannada All Time (`SiriKannadaAllTime.in`), Sonar Bangla (`SonarBangla.in@SD`), Sony Max HD (1080p) (`SonyMax.in@HD`), Sony Max (`SonyMax.in@SD`), Sony WAH (`SonyWah.in@SD`), Spondon (`Spondon.in@SD`), Stingray Classic Rock (`StingrayClassicRock.ca`), Stingray Hit List (`StingrayHitList.ca`), Stingray Remember the 80s (`StingrayRememberthe80s.ca`), Stingray The Spa (`StingrayTheSpa.ca`), Stingray Today's KPOP (`StingrayTodaySKPOP.us`), Stingray Today's Latin Pop (`StingrayTodaysLatinPop.ca`), Suriya TV (`SuriyaTV.in`), Tabbar Hits (`TabbarHits.in`), Ultimate TV (`UltimateTV.in@SD`), WildEarth (`WildEarth.za`), ZB Cinema (`ZBCinema.in`), Zee Cinema (`ZeeCinema.in@HD`), Zee Cinema (576p) (`ZeeCinema.in@SD`)
 - Published current/future IDs not counted source-current/future: **1**
 - Published current/future IDs not counted source-current/future: IN: -HINDI- STAR SPORTS 1 HD (`Star Sports 1 Hindi HD.in`)
 
@@ -1395,5 +1393,5 @@ The table includes every active channel identity without usable current/future g
 
 - IPTV-Playlist.m3u SHA-256: **f61c38a3e13388833cf721031d0214366fb87b3a98a555d00da52100ddc58955**
 - BDIX-Playlist.m3u SHA-256: **9cc2eaa4f9209e4d1a2576f9953f47240c176f15a929c41c94b9394f62323d81**
-- International-Playlist.m3u SHA-256: **17446f6124c8c2e5cbbfbae4bea0306774a8772949c684c2d53292e7e367fc25**
+- International-Playlist.m3u SHA-256: **c816bf5276e62bc79a85429f23827cebe89bfd4f3fff34a67573ba9859f172aa**
 
