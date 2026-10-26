@@ -10,9 +10,8 @@ M3U playlist compatible with XCIPTV and other compatible players.
 
 - **[Download BDIX Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u)** — BDIX-focused collection
 - **[Download International Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)** — selected international channels
-- **[Download BD.IN Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BD.IN-Playlist.m3u)** — additional Bangladesh & India collection
 
-> **Automation note:** The shared EPG and core quality workflows cover the main IPTV, BDIX, and International playlists. The BD.IN playlist is an additional fourth file and is not yet included in those automated checks.
+> **Automation note:** The shared EPG and core quality workflows cover all three published playlists: main IPTV, BDIX, and International.
 
 ## 🖥️ Playlist Studio 5.0
 

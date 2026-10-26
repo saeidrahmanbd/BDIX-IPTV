@@ -8,7 +8,7 @@ This directory contains repository-local artwork referenced by the published pla
 - Prefer a verifiable broadcaster or authorized source; record provenance where it can be established.
 - Do not point playlist entries at arbitrary external URLs. Use repository-local files.
 - Do not present generic or generated artwork as an authentic broadcaster logo. Mark any fallback as illustrative/unverified.
-- Do not delete unreferenced assets in bulk based on filename alone. Review all four playlist files, restore scripts, and Git history first.
+- Do not delete unreferenced assets in bulk based on filename alone. Review all three maintained playlist files, restore scripts, and Git history first.
 - Missing logos and unverified provenance should remain visible audit findings, not be hidden by assigning unrelated artwork.
 
 ## Current audits

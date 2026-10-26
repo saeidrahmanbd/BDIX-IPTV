@@ -22,7 +22,7 @@ import logo_source_catalog as source
 ROOT = Path(".")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
-PLAYLISTS = ["BD.IN-Playlist.m3u", "IPTV-Playlist.m3u", "International-Playlist.m3u"]
+PLAYLISTS = ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u"]
 REPORT = Path("reports/playlist-logo-repair-results.md")
 REGISTRY_PATH = Path("reports/logo-source-registry.json")
 

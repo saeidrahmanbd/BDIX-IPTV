@@ -8,14 +8,13 @@
 
 ## Playlist Project
 
-The repository contains four playlist files: three core maintained playlist surfaces plus the additional `BD.IN-Playlist.m3u` collection. EPG and core quality automation currently covers the three core playlists, not the BD.IN file.
+The repository maintains three playlist files: the main IPTV playlist, the BDIX playlist, and the International playlist. EPG and core quality automation covers all three.
 
 ### Main Resources
 
 - [Main IPTV Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)
 - [BDIX Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u)
 - [International Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)
-- [BD.IN Playlist — Bangladesh & India](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BD.IN-Playlist.m3u)
 - [Xtream Documentation](../xtream/README.md)
 - [Xtream Main Worker](../xtream-main/)
 - [Xtream BDIX Worker](../xtream-bdix/)

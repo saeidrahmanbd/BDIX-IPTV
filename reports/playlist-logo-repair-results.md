@@ -1,6 +1,7 @@
 # IPTV Playlist Logo Repair Results
 
 Run time: **2026-10-26 04:17 UTC**  
+This snapshot reflects the last completed repair run; the report will be refreshed for the current three-playlist scope by the next successful workflow run.  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -9,7 +10,6 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Entries | References changed | Generated fallbacks | Missing after (Adult excluded) | Adult entries skipped | Known generic/contaminated refs after | Unresolved repair targets |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| BD.IN-Playlist.m3u | 460 | 3 | 0 | 19 | 0 | 0 | 19 |
 | IPTV-Playlist.m3u | 1131 | 0 | 0 | 0 | 0 | 0 | 0 |
 | International-Playlist.m3u | 1467 | 7 | 0 | 16 | 483 | 0 | 16 |
 
@@ -17,28 +17,6 @@ Historical mapping index: loaded 336 historical name mappings
 
 | Playlist | Line | Channel | Previous logo | Replacement | Source | Attribution | Result |
 |---|---:|---|---|---|---|---|---|
-| BD.IN-Playlist.m3u | 55 | DTV | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 121 | Amar Digital TV | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 139 | Gopal Bhar TV | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 205 | South Indian Movies | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 295 | COOKING TV | (missing) | cooking-tv-85209bcadd.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| BD.IN-Playlist.m3u | 301 | Fox 5 | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 311 | HK Music TV | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 315 | iON TV | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 317 | ITV Bangla | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 319 | Korean TV | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 325 | MINI | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 331 | Pix 11 | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 335 | RADBULL TV | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 355 | USA TV | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 431 | NK | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 439 | Tom & Jerry TV | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 441 | TVC Arabic Kids | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 515 | Sports Fishing TV | (missing) | sports-fishing-tv-50d0f501d6.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| BD.IN-Playlist.m3u | 529 | Xtrem Sports | (missing) | xtrem-sports-1d0aff4f7e.png | [Exact clean asset found in repository /logos (including /unused)](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
-| BD.IN-Playlist.m3u | 735 | ETV Bangla | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 761 | ITV Bangla | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
-| BD.IN-Playlist.m3u | 901 | Tom & Jerry TV | (missing) | (none) | none |  | No exact clean original found; no fallback generated |
 | International-Playlist.m3u | 227 | Zee Cinema APAC (720p) | (missing) | zee-cinema-apac-efd7650d72.svg | [IPTV-org exact ID: ZeeCinema.in](https://upload.wikimedia.org/wikipedia/commons/9/92/Zee_Cinema_2025.svg) | IPTV-org public logo dataset — https://github.com/iptv-org/database | replaced |
 | International-Playlist.m3u | 409 | Vyas Channel (576p) | (missing) | (none) | Public IPTV directory's exact Vyas Channel listing |  | Download/validation failed: source response is not a valid supported image |
 | International-Playlist.m3u | 409 | Vyas Channel (576p) | (missing) | (none) | none |  | No exact clean original found; no fallback generated |

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
 <title id="title">My IPTV Playlist Project on GitHub</title>
-<desc id="desc">A visual overview of four repository playlist files: IPTV, BDIX, International, and the additional Bangladesh-and-India BD.IN collection. Automated EPG and quality workflows currently cover the three core playlists.</desc>
+<desc id="desc">A visual overview of the three maintained repository playlist files: IPTV, BDIX, and International. Automated EPG and quality workflows cover all three playlists.</desc>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07152f"/><stop offset=".53" stop-color="#101c3d"/><stop offset="1" stop-color="#07111f"/></linearGradient>
   <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#50e3ff"/><stop offset="1" stop-color="#247bff"/></linearGradient>
@@ -62,17 +62,6 @@
   <text x="42" y="96" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#d7c4ff">GLOBAL CHANNELS</text>
 </g>
 
-<g transform="translate(82 715)" filter="url(#shadow)">
-  <rect width="445" height="110" rx="22" fill="#102440" stroke="#e9ad50" stroke-width="1.7"/>
-  <rect x="0" y="0" width="9" height="110" rx="4.5" fill="url(#amber)"/>
-  <rect x="28" y="17" width="52" height="55" rx="9" fill="#4c3818" stroke="#e9ad50"/>
-  <path d="M43 31h19l9 9v21H43z" fill="none" stroke="#ffdf98" stroke-width="2.5" stroke-linejoin="round"/>
-  <path d="M62 31v10h9" fill="none" stroke="#ffdf98" stroke-width="2.5"/>
-  <text x="92" y="42" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#ffffff">BD.IN-Playlist.m3u</text>
-  <text x="92" y="68" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#a8c5e4">Additional Bangladesh & India collection</text>
-  <rect x="28" y="81" width="132" height="22" rx="11" fill="#55401c"/>
-  <text x="42" y="96" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#ffe09a">BD + INDIA</text>
-</g>
 
 <g transform="translate(600 307)">
   <text x="0" y="0" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" letter-spacing="2.5" fill="#76c9ff">WHAT I WORK ON</text>

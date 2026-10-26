@@ -2,7 +2,7 @@
 
 Generated: **2026-10-26T04:44:25+00:00**
 
-This report measures the three core M3U playlists included in the automated EPG pipeline. The repository also contains BD.IN-Playlist.m3u, which is outside this report's scope. The historic filename epg-three-playlist-audit.md is retained for link compatibility.
+This report measures the three maintained M3U playlists included in the automated EPG pipeline. The historic filename epg-three-playlist-audit.md is retained for link compatibility.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
