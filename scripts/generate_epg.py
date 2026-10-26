@@ -47,6 +47,9 @@ SOURCES = [
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml",
+    # Added at the owner's request with programme-data redistribution rights
+    # still unconfirmed (see epg/README.md "Programme-data permissions").
+    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/sundirectgo.xml",
     "https://avkb.short.gy/epg.xml.gz",
     "https://avkb.short.gy/jioepg.xml.gz",
     "https://avkb.short.gy/tsepg.xml.gz",
