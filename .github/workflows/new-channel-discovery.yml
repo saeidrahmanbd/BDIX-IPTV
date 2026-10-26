@@ -3,6 +3,7 @@ name: IPTV New Channel Discovery
 # Manual trigger requested: 2026-10-24 discovery refresh
 # Force fresh discovery run: 2026-10-24 19:00 Asia/Dhaka
 # Policy-test import mismatch resolved; trigger fresh discovery on current main
+# Fresh current-main retry after shared playlist-writer queue fix (2026-10-26).
 on:
   push:
     branches: [main]
