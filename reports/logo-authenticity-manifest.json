@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-26T09:39:04.729009+00:00",
+  "generated_at_utc": "2026-10-26T11:15:07.032466+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -7,22 +7,22 @@
     "needs_review": "Authenticity is undocumented, the source is ambiguous, or the logo is missing."
   },
   "counts_by_playlist": {
-    "IPTV-Playlist.m3u": 1154,
+    "IPTV-Playlist.m3u": 1178,
     "BDIX-Playlist.m3u": 139,
     "International-Playlist.m3u": 2907
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "0459dcfdf2027d65f5339ab9a806f4162aa43330b63ca9015a22897eb25f3b54",
+    "IPTV-Playlist.m3u": "1dd3f89da0460e34ec997e0c0f82f99e62ea93281891bfef5c6f78c48dcd1a12",
     "BDIX-Playlist.m3u": "9cc2eaa4f9209e4d1a2576f9953f47240c176f15a929c41c94b9394f62323d81",
     "International-Playlist.m3u": "4cc466ddf574c583a96113075f09ddd6d1dafa5d17da26bcd619c9624e239d7c"
   },
   "status_counts": {
-    "needs_review": 4170,
+    "needs_review": 4194,
     "third_party_verified": 30
   },
   "status_counts_by_playlist": {
     "IPTV-Playlist.m3u": {
-      "needs_review": 1124,
+      "needs_review": 1148,
       "third_party_verified": 30
     },
     "BDIX-Playlist.m3u": {
@@ -32,7 +32,7 @@
       "needs_review": 2907
     }
   },
-  "entry_count": 4200,
+  "entry_count": 4224,
   "entries": [
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -11978,8 +11978,8 @@
       "playlist": "IPTV-Playlist.m3u",
       "line": 1998,
       "channel_name": "Sun Bangla",
-      "tvg_id": "SunBangla.in",
-      "channel_id": "SunBangla.in",
+      "tvg_id": "EpicParivar.in@SD",
+      "channel_id": "EpicParivar.in@SD",
       "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sun-bangla.png",
       "status": "needs_review",
       "registry_match": "none",
@@ -13621,6 +13621,30 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 2272,
+      "channel_name": "DD Sports",
+      "tvg_id": "DDSports.in@HD",
+      "channel_id": "DDSports.in@HD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-sports-fb997548.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2274,
+      "channel_name": "Discovery Kids",
+      "tvg_id": "DiscoveryKids.in@SD",
+      "channel_id": "DiscoveryKids.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-kids.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2276,
       "channel_name": "Discovery Science",
       "tvg_id": "DiscoveryScience.in@SD",
       "channel_id": "DiscoveryScience.in@SD",
@@ -13632,7 +13656,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2274,
+      "line": 2278,
       "channel_name": "Discovery Turbo (India)",
       "tvg_id": "DiscoveryTurbo.in@SD",
       "channel_id": "DiscoveryTurbo.in@SD",
@@ -13644,7 +13668,31 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2276,
+      "line": 2280,
+      "channel_name": "Eurosport",
+      "tvg_id": "Eurosport.in@SD",
+      "channel_id": "Eurosport.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/eurosport.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2282,
+      "channel_name": "Green Gold TV",
+      "tvg_id": "GreenGoldTV.in@India",
+      "channel_id": "GreenGoldTV.in@India",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/green-gold-tv.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2284,
       "channel_name": "GTC Punjabi",
       "tvg_id": "GTCPunjabi.in@SD",
       "channel_id": "GTCPunjabi.in@SD",
@@ -13656,7 +13704,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2278,
+      "line": 2286,
       "channel_name": "Gyandarshan",
       "tvg_id": "Gyandarshan.in@SD",
       "channel_id": "Gyandarshan.in@SD",
@@ -13668,7 +13716,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2280,
+      "line": 2288,
       "channel_name": "Gyandarshan",
       "tvg_id": "Gyandarshan.in@HD",
       "channel_id": "Gyandarshan.in@HD",
@@ -13680,7 +13728,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2282,
+      "line": 2290,
       "channel_name": "History TV18 HD (1080p) [Geo-blocked]",
       "tvg_id": "HistoryTV18.in@HD",
       "channel_id": "HistoryTV18.in@HD",
@@ -13692,7 +13740,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2284,
+      "line": 2292,
       "channel_name": "HSTV",
       "tvg_id": "HSTV.in@SD",
       "channel_id": "HSTV.in@SD",
@@ -13704,7 +13752,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2286,
+      "line": 2294,
       "channel_name": "Investigation Discovery (India)",
       "tvg_id": "InvestigationDiscovery.in@SD",
       "channel_id": "InvestigationDiscovery.in@SD",
@@ -13716,7 +13764,31 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2288,
+      "line": 2296,
+      "channel_name": "Kabaddi 24x7",
+      "tvg_id": "Kabaddi24x7.in@SD",
+      "channel_id": "Kabaddi24x7.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kabaddi-24x7.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2298,
+      "channel_name": "Kite Victers (720p) [Not 24/7]",
+      "tvg_id": "KiteVicters.in@SD",
+      "channel_id": "KiteVicters.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kite-victers-720p-not-24-7.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2300,
       "channel_name": "NDTV Good Times",
       "tvg_id": "NDTVGoodTimes.in@SD",
       "channel_id": "NDTVGoodTimes.in@SD",
@@ -13728,7 +13800,127 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2290,
+      "line": 2302,
+      "channel_name": "Nick Jr (India)",
+      "tvg_id": "NickJr.in@SD",
+      "channel_id": "NickJr.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr-india.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2304,
+      "channel_name": "Nickelodeon (India)",
+      "tvg_id": "Nickelodeon.in@SD",
+      "channel_id": "Nickelodeon.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nickelodeon-india.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2306,
+      "channel_name": "Pogo",
+      "tvg_id": "Pogo.in@SD",
+      "channel_id": "Pogo.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pogo.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2308,
+      "channel_name": "Sonic",
+      "tvg_id": "Sonic.in@SD",
+      "channel_id": "Sonic.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sonic.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2310,
+      "channel_name": "Sony Sports Ten 1",
+      "tvg_id": "SonySportsTen1.in@SD",
+      "channel_id": "SonySportsTen1.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-1.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2312,
+      "channel_name": "Sony Sports Ten 1",
+      "tvg_id": "SonySportsTen1.in@HD",
+      "channel_id": "SonySportsTen1.in@HD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-1.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2314,
+      "channel_name": "Sony Sports Ten 2",
+      "tvg_id": "SonySportsTen2.in@SD",
+      "channel_id": "SonySportsTen2.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-2.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2316,
+      "channel_name": "Sony Sports Ten 3 Hindi",
+      "tvg_id": "SonySportsTen3Hindi.in@SD",
+      "channel_id": "SonySportsTen3Hindi.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-3-hindi.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2318,
+      "channel_name": "Sony Sports Ten 4 Kannada",
+      "tvg_id": "SonySportsTen4.in@Kannada",
+      "channel_id": "SonySportsTen4.in@Kannada",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-4-kannada.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2320,
+      "channel_name": "Sony Sports Ten 5",
+      "tvg_id": "SonySportsTen5.in@SD",
+      "channel_id": "SonySportsTen5.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-5.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2322,
       "channel_name": "Star Jalsha",
       "tvg_id": "StarJalsha.in@SD",
       "channel_id": "StarJalsha.in@SD",
@@ -13740,7 +13932,79 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2292,
+      "line": 2324,
+      "channel_name": "Star Sports 2",
+      "tvg_id": "StarSports2.in@SD",
+      "channel_id": "StarSports2.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-2.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2326,
+      "channel_name": "Star Sports 2",
+      "tvg_id": "StarSports2.in@HD",
+      "channel_id": "StarSports2.in@HD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-2.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2328,
+      "channel_name": "Star Sports 2 Hindi",
+      "tvg_id": "StarSports2Hindi.in@SD",
+      "channel_id": "StarSports2Hindi.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-2-hindi.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2330,
+      "channel_name": "Star Sports 3",
+      "tvg_id": "StarSports3.in@SD",
+      "channel_id": "StarSports3.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-3.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2332,
+      "channel_name": "Star Sports Select 1",
+      "tvg_id": "StarSportsSelect1.in@HD",
+      "channel_id": "StarSportsSelect1.in@HD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-select-1.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2334,
+      "channel_name": "Star Sports Select 2",
+      "tvg_id": "StarSportsSelect2.in@HD",
+      "channel_id": "StarSportsSelect2.in@HD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-select-2.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2336,
       "channel_name": "StarPlus (India)",
       "tvg_id": "StarPlus.in@HD",
       "channel_id": "StarPlus.in@HD",
@@ -13752,7 +14016,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2294,
+      "line": 2338,
       "channel_name": "T Sports",
       "tvg_id": "TSports.bd@SD",
       "channel_id": "TSports.bd@SD",
@@ -13764,7 +14028,19 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2296,
+      "line": 2340,
+      "channel_name": "Ten Cricket",
+      "tvg_id": "TenCricket.in@SD",
+      "channel_id": "TenCricket.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ten-cricket.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2342,
       "channel_name": "TLC (India)",
       "tvg_id": "TLC.in@HD",
       "channel_id": "TLC.in@HD",
@@ -13776,7 +14052,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2298,
+      "line": 2344,
       "channel_name": "TLC (India)",
       "tvg_id": "TLC.in@SD",
       "channel_id": "TLC.in@SD",
@@ -13788,7 +14064,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2300,
+      "line": 2346,
       "channel_name": "Travelxp 4K HDR (2160p) [Geo-blocked]",
       "tvg_id": "Travelxp.in@4KHDR",
       "channel_id": "Travelxp.in@4KHDR",
@@ -13800,7 +14076,19 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2302,
+      "line": 2348,
+      "channel_name": "Unite8 Sports 2",
+      "tvg_id": "Unite8Sports2.in@SD",
+      "channel_id": "Unite8Sports2.in@SD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unite8-sports-2.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2350,
       "channel_name": "VCV (720p) [Not 24/7]",
       "tvg_id": "VCV.in@SD",
       "channel_id": "VCV.in@SD",
@@ -13812,7 +14100,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2304,
+      "line": 2352,
       "channel_name": "Vokta TV",
       "tvg_id": "VoktaTV.bd@SD",
       "channel_id": "VoktaTV.bd@SD",
@@ -13824,7 +14112,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2306,
+      "line": 2354,
       "channel_name": "Vyas Channel",
       "tvg_id": "VyasChannel.in@SD",
       "channel_id": "VyasChannel.in@SD",
@@ -13836,7 +14124,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2308,
+      "line": 2356,
       "channel_name": "WeatherSpy (India)",
       "tvg_id": "WeatherSpy.in@SD",
       "channel_id": "WeatherSpy.in@SD",
@@ -13848,7 +14136,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2310,
+      "line": 2358,
       "channel_name": "Zee Bangla",
       "tvg_id": "ZeeBangla.in@SD",
       "channel_id": "ZeeBangla.in@SD",
@@ -13860,7 +14148,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2312,
+      "line": 2360,
       "channel_name": "Zee Cinema",
       "tvg_id": "ZeeCinema.in@HD",
       "channel_id": "ZeeCinema.in@HD",
@@ -13872,7 +14160,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2314,
+      "line": 2362,
       "channel_name": "Zodiak TV",
       "tvg_id": "ZodiakTV.in@SD",
       "channel_id": "ZodiakTV.in@SD",

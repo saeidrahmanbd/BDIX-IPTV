@@ -1,57 +1,56 @@
 # IPTV Channel Discovery
 
-Generated: **2026-10-26T09:38:40.023518+00:00**
+Generated: **2026-10-26T11:14:33.021006+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
-- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News, Sports, Kids and Religious channels are prohibited.**
+- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News and non-Islamic Religious channels are prohibited; Indian Kids and Sports channels are allowed.**
 - Permanent denylist: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.
 - Country-group threshold: **5** legitimate primary identities
 - Existing prohibited review-queue rows removed: **0**
-- New channels: **13**
-- New backups: **10**
-- Rejected/held candidates: **824**
+- New channels: **16**
+- New backups: **8**
+- Rejected/held candidates: **823**
 - Country policy: only candidates verified as BD/IN (valid `.bd`/`.in` id, or repository-mapping evidence when the id is missing/malformed) are queued; conflicting or unverifiable candidates are held.
 
 ## Rejection reasons
 
-- Indian kids channel is prohibited: 23
 - Indian news channel is prohibited: 261
-- Indian sports channel is prohibited: 19
-- country not verified: id carries a non-BD/IN country suffix: 26
+- country not verified: id carries a non-BD/IN country suffix: 27
 - country not verified: id country IN conflicts with BD source feed: 11
-- duplicate stream URL: 339
+- duplicate stream URL: 375
 - known Indian News, Sports, Kids or Religious brand/category is prohibited: 20
 - non-Islamic religious channel is prohibited: 102
 - permanently banned channel: 10
-- proxy/worker host: 1
-- tokenized URL: 6
+- proxy/worker host: 2
+- tokenized URL: 9
 - unsupported stream path: 6
 
 ## New Channels
 
-- Vokta TV (720p) (Bangladesh) — https://vokta.raytahost.com/live/voktatv/index.m3u8
-- AMN TV (576p) (India) — https://live.onecloudlive.in/amn/amntv/index.m3u8
-- Discovery Science (720p) (India) — https://drk6xq0vhn.gpcdn.net/live/discovery_science_abr/index.m3u8
-- Discovery Turbo (India) (720p) (India) — https://drk6xq0vhn.gpcdn.net/live/discovery_turbo_abr/index.m3u8
-- GTC Punjabi (1080p) (India) — https://gtc-yupp.vgcdn.net/vglive-sk-254807/index.m3u8
-- Gyandarshan (720p) (India) — https://cdn.pishow.tv/ott/live/14/master.m3u8
-- HSTV (720p) (India) — https://live.castmaxcloud.com/live/hstv.m3u8
-- NDTV Good Times (1080p) (India) — https://amg01448-samsungin-ndtvgoodtimes-samsungin-ad-gp.amagi.tv/playlist/amg01448-samsungin-ndtvgoodtimes-samsungin/playlist.m3u8
-- TLC (India) HD (720p) (India) — https://drk6xq0vhn.gpcdn.net/live/tlc_hd_abr/index.m3u8
-- VCV (720p) [Not 24/7] (India) — https://5a1178b42cc03.streamlock.net/8210/8210/playlist.m3u8
-- Vyas Channel (576p) (India) — https://playhls.media.nic.in/hls/live/vyas/vyas.m3u8
-- WeatherSpy (India) (India) — https://jukin-weatherspy-2-in.samsung.wurl.tv/playlist.m3u8
-- Zodiak TV (1080p) (India) — https://ranacable.duckdns.org/ZodiakTv/index.m3u8
+- Eurosport (720p) (India) — https://drk6xq0vhn.gpcdn.net/live/euro_sports_hd_abr/index.m3u8
+- Green Gold TV (1080p) (India) — https://cc-szrmqvu8zkg16.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-szrmqvu8zkg16/greengold/stream/grngld/playlist.m3u8
+- Kabaddi 24x7 (720p) (India) — https://samitaorigin.tangotv.in/KABADDI24X7/SAMITAORIGIN/index.m3u8
+- Kite Victers (720p) [Not 24/7] (India) — https://932y4x26ljv8-hls-live.5centscdn.com/victers/tv.stream/playlist.m3u8
+- Nickelodeon (India) (576p) (India) — http://103.185.24.134:3001/NICK/index.m3u8
+- Nick Jr. (India) (576p) (India) — http://103.185.24.134:3001/NICK-JR/index.m3u8
+- Sonic (576p) (India) — http://103.185.24.134:3001/SONIC/index.m3u8
+- Sony Sports Ten 1 (576p) (India) — http://103.151.60.162:2122/play/a01c/index.m3u8?hls
+- Sony Sports Ten 2 (576p) (India) — http://103.151.60.162:2122/play/a01b/index.m3u8?hls
+- Sony Sports Ten 3 Hindi (576p) (India) — http://103.151.60.162:2122/play/a01t/index.m3u8?hls
+- Sony Sports Ten 4 Kannada (576p) (India) — http://103.151.60.162:2122/play/a021/index.m3u8?hls
+- Sony Sports Ten 5 (576p) (India) — http://103.151.60.162:2122/play/a028/index.m3u8?hls
+- Star Sports 2 Hindi (720p) (India) — https://tvsen5.aynaott.com/cXPB2LKkErN9/index.m3u8
+- Star Sports 3 (576p) (India) — http://103.151.60.162:2122/play/a029/index.m3u8?hls
+- Ten Cricket (576p) (India) — http://103.151.60.162:2122/play/a0fj/index.m3u8?hls
+- Unite8 Sports 2 (576p) (India) — http://103.151.60.162:2122/play/a01m/index.m3u8?hls
 
 ## New Backups
 
-- T Sports (1080p) (Bangladesh) — https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8
-- Gyandarshan HD (576p) (India) — https://mumt05.tangotv.in/87NeALx2GYANDARSHAN/index.m3u8
-- History TV18 HD (1080p) [Geo-blocked] (India) — https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
-- Investigation Discovery (India) (720p) (India) — https://drk6xq0vhn.gpcdn.net/live/id_hd_abr/index.m3u8
-- Star Jalsha (576p) (India) — http://103.151.60.162:2122/play/a00w/index.m3u8?hls
-- StarPlus (India) HD (1080p) (India) — http://66.102.126.10:8000/play/a008/index.m3u8
-- TLC (India) (720p) (India) — https://drk6xq0vhn.gpcdn.net/live/tlc_sd_abr/index.m3u8
-- Travelxp 4K HDR (2160p) [Geo-blocked] (India) — https://deltatesttatasky.akamaized.net/out/i/968284.m3u8
-- Zee Bangla (576p) (India) — http://103.151.60.162:2122/play/a011/index.m3u8?hls
-- Zee Cinema HD (1080p) (India) — http://103.151.60.162:2122/play/a024/index.m3u8?hls
+- DD Sports HD (1080p) (India) — https://cdn.pishow.tv/ott/live/1161/master.m3u8
+- Discovery Kids (720p) (India) — https://drk6xq0vhn.gpcdn.net/live/discovery_kids_abr/index.m3u8
+- Pogo (576p) (India) — http://103.151.60.162:2122/play/a01e/index.m3u8?hls
+- Sony Sports Ten 1 HD (1080p) (India) — http://103.185.24.134:3001/SonyTenSports1/index.m3u8
+- Star Sports 2 (576p) (India) — http://103.151.60.162:2122/play/a00v/index.m3u8?hls
+- Star Sports 2 HD (720p) (India) — http://tvsen5.aynascope.net/cXPB2LKkErN9/index.m3u8
+- Star Sports Select 1 HD (1080p) (India) — http://103.151.60.162:2122/play/a026/index.m3u8?hls
+- Star Sports Select 2 HD (1080p) (India) — http://103.151.60.162:2122/play/a027/index.m3u8?hls
