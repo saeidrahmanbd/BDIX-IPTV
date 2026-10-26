@@ -3,7 +3,7 @@
 
 Rules:
 - Only the Bangladesh and India country feeds are considered.
-- Bangladeshi news channels are allowed. Indian News, Sports, Kids and Religious channels are prohibited.
+- Bangladeshi news channels are allowed. Indian News and non-Islamic Religious channels are prohibited; Indian Kids and Sports channels are allowed.
 - Existing stream URLs and normalized channel identities are never duplicated.
 - First unseen stream for a new identity -> New Channels.
 - Additional unseen streams for an existing/newly discovered identity -> New Backup.
@@ -29,7 +29,7 @@ BAD_WORDS = {
     "vod", "catchup", "catch-up", "test", "demo", "proxy", "proxied",
     "cors", "webcam", "radio", "podcast", "event", "ppv", "timeshift",
 }
-# Hard exclusion applies to India only. Bangladesh news channels remain eligible.
+# India News and non-Islamic Religious channels are prohibited; Indian Kids/Sports and Bangladesh news remain eligible.
 FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\bnews\b", re.IGNORECASE),
     "sports": re.compile(r"\b(?:sports?|cricket|football|soccer|tennis|racing)\b", re.IGNORECASE),
@@ -51,12 +51,11 @@ PERMANENTLY_BANNED_CHANNEL_NAMES = {
 }
 
 FORBIDDEN_WORDS = {
-    "news", "sport", "sports", "cricket", "football", "soccer", "tennis", "racing",
+    "news",
     "religious", "religion", "devotional", "bhakti", "bhakthi", "spiritual", "worship",
     "gospel", "christian", "christ", "islamic", "islam", "quran", "hindu", "hinduism",
     "sanatan", "sikh", "gurbani", "gurubani", "church", "temple", "mosque", "masjid",
-    "sermons", "sermon", "prayer", "kid", "kids", "child", "children", "cartoon",
-    "cartoons", "nursery", "preschool", "junior",
+    "sermons", "sermon", "prayer",
 }
 FORBIDDEN_BRANDS = re.compile(
     r"\b(?:"
@@ -332,7 +331,7 @@ def main() -> int:
         "# IPTV Channel Discovery", "",
         f"Generated: **{datetime.now(timezone.utc).isoformat()}**", "",
         "- Sources: Bangladesh + India iptv-org country feeds",
-        "- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News, Sports, Kids and Religious channels are prohibited.**",
+        "- **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News and non-Islamic Religious channels are prohibited; Indian Kids and Sports channels are allowed.**",
         "- Permanent denylist: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.",
         f"- Country-group threshold: **{COUNTRY_THRESHOLD}** legitimate primary identities",
         f"- Existing prohibited review-queue rows removed: **{len(purged)}**",
