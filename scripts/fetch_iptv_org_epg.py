@@ -146,35 +146,49 @@ def active_playlist_ids(playlist_texts):
 
 
 def target_channel_ids(playlist_texts, mapping_text="", explicit_mappings=None, locked_mappings=None):
-    """Return active IDs, existing mappings, and repository-approved IDs/aliases for active channels."""
+    """Target active identities that still lack a usable current schedule.
+
+    The upstream grabber requests three dates per catalogue row. Re-fetching every
+    already-covered channel causes the optional source to time out before returning
+    a guide, so only identities whose coverage status is not MAPPED are selected.
+    """
     active_ids = active_playlist_ids(playlist_texts)
-    result = set(active_ids)
+    mapping_rows = {}
     if mapping_text.strip():
         try:
-            rows = csv.DictReader(io.StringIO(mapping_text))
-            for row in rows:
+            for row in csv.DictReader(io.StringIO(mapping_text)):
                 target_id = (row.get("tvg_id") or "").strip()
-                if target_id not in active_ids:
-                    continue
-                for source_id in (item.strip() for item in (row.get("epg_id") or "").split("|")):
-                    if source_id:
-                        result.add(source_id)
+                if target_id in active_ids:
+                    mapping_rows[target_id] = row
         except (csv.Error, TypeError) as exc:
             print(f"Warning: could not fully read EPG mapping for targeted catalogue selection: {exc}")
-    locked_mappings = locked_mappings or {}
+
     explicit_mappings = explicit_mappings or {}
-    for target_id in active_ids:
+    locked_mappings = locked_mappings or {}
+    needs_schedule = {
+        target_id for target_id in active_ids
+        if (mapping_rows.get(target_id, {}).get("status") or "").strip().upper() != "MAPPED"
+    }
+    result = set()
+    for target_id in needs_schedule:
+        row = mapping_rows.get(target_id, {})
         if target_id in locked_mappings:
-            # Strict locks replace the playlist ID and all other aliases.
-            locked_ids = locked_mappings[target_id]
-            if target_id not in locked_ids:
-                result.discard(target_id)
-            source_ids = locked_ids
+            # Strict locks replace the playlist ID and all non-locked aliases.
+            source_ids = locked_mappings[target_id]
         else:
-            source_ids = explicit_mappings.get(target_id, [])
+            result.add(target_id)
+            source_ids = [
+                *(item.strip() for item in (row.get("epg_id") or "").split("|")),
+                *explicit_mappings.get(target_id, []),
+            ]
         for source_id in source_ids:
             if source_id:
                 result.add(source_id)
+
+    print(
+        f"iptv-org supplemental targets: {len(needs_schedule)} active identities "
+        f"need schedules; {len(result)} candidate XMLTV IDs selected."
+    )
     return result
 
 

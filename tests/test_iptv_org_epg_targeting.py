@@ -38,7 +38,7 @@ class TargetedIptvOrgEpgTests(unittest.TestCase):
         )
         mapping = (
             'group,channel,tvg_id,epg_id,source,status,note\n'
-            'International,BBC News,BBCNews.uk,bbc.news.xmltv|bbc.alt,source,MAPPED,\n'
+            'International,BBC News,BBCNews.uk,bbc.news.xmltv|bbc.alt,source,MAPPED_ID_ONLY,\n'
             'Backup,Backup Only,BackupOnly.uk,backup.xmltv,source,MAPPED,\n'
         )
         self.assertEqual(
@@ -119,6 +119,25 @@ class TargetedIptvOrgEpgTests(unittest.TestCase):
             ),
             {"543298"},
         )
+
+    def test_currently_covered_channels_are_not_re_fetched(self):
+        playlist = (
+            '#EXTINF:-1 tvg-id="Covered.in" tvg-name="Covered" group-title="Indian Entertainment",Covered\n'
+            'https://example.test/covered.m3u8\n'
+            '#EXTINF:-1 tvg-id="Missing.in" tvg-name="Missing" group-title="Indian Entertainment",Missing\n'
+            'https://example.test/missing.m3u8\n'
+        )
+        mapping = (
+            'group,channel,tvg_id,epg_id,source,status,note\n'
+            'Indian Entertainment,Covered,Covered.in,Covered.in@SD,feed,MAPPED,\n'
+            'Indian Entertainment,Missing,Missing.in,legacy.source.id,feed,MAPPED_ID_ONLY,\n'
+        )
+        explicit = {"Covered.in": ["Covered.in@HD"], "Missing.in": ["Missing.in@SD"]}
+        self.assertEqual(
+            target_channel_ids([playlist], mapping, explicit),
+            {"Missing.in", "legacy.source.id", "Missing.in@SD"},
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
