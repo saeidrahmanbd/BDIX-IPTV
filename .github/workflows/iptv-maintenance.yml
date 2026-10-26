@@ -115,6 +115,7 @@ jobs:
             scripts/fetch_iptv_org_epg.py \
             scripts/augment_epg_mapping_from_iptv_org.py \
             scripts/repair_international_playlist.py \
+            scripts/reorganize_international_playlist.py \
             scripts/validate_international_playlist.py
       - name: Run playlist metadata and report freshness tests
         run: |
@@ -260,6 +261,7 @@ jobs:
             python scripts/backfill_cross_playlist_metadata.py
             python scripts/repair_logo_asset_technical_quality.py --fix
             python scripts/reconcile_playlist_consistency.py
+            python scripts/reorganize_international_playlist.py
             python scripts/enforce_playlist_attribution.py International-Playlist.m3u
             python scripts/validate_international_playlist.py
             python scripts/audit_playlist.py
