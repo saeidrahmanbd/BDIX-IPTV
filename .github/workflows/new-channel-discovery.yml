@@ -20,8 +20,9 @@ permissions:
   contents: write
 
 # Same group as IPTV Playlist Update (maintenance): only one main-branch writer at a time.
+# Versioned writer queue isolates new runs from stale v2 runs already queued.
 concurrency:
-  group: iptv-playlist-main-writer-v2
+  group: iptv-playlist-main-writer-v3
   cancel-in-progress: false
   queue: max
 
