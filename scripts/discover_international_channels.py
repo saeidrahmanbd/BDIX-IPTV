@@ -181,9 +181,9 @@ def make_extinf(a,name,group,code,logo,content_kind=""):
 
 def set_attr(line,key,value):
  value=str(value or "").replace('"',"").strip()
- pattern=re.compile(r'\\b'+re.escape(key)+r'="[^"]*"')
+ pattern=re.compile(r'\b'+re.escape(key)+r'="[^"]*"')
  if pattern.search(line):return pattern.sub(lambda _:f'{key}="{value}"',line,count=1)
- return re.sub(r'^(#EXTINF:-?\\d+)',lambda m:m.group(1)+f' {key}="{value}"',line,count=1)
+ return re.sub(r'^(#EXTINF:-?\d+)',lambda m:m.group(1)+f' {key}="{value}"',line,count=1)
 def set_content(line,genre):
  if genre not in {"Movies","Music"}:return line
  return set_attr(line,"tvg-content",genre)
