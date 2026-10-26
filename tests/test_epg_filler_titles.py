@@ -16,6 +16,18 @@ class FillerTitleTests(unittest.TestCase):
             with self.subTest(title=title):
                 self.assertEqual(generate_epg.title_score(title), 0)
 
+    def test_blank_slot_labels_are_placeholders(self):
+        for title in ("Program @ 5:00 AM", "programme @ 11:30 PM", "Show @ 9:00 PM"):
+            with self.subTest(title=title):
+                self.assertEqual(generate_epg.title_score(title), 0)
+        # Real titles that merely start with the same word are untouched.
+        self.assertGreater(generate_epg.title_score("Programming Hour"), 0)
+        self.assertGreater(generate_epg.title_score("Show Me the Money"), 0)
+
+        candidates = {"ch": rows("Program @ 5:00 AM", "Ayur Shakthi", "Program @ 6:00 AM")}
+        self.assertEqual(generate_epg.filter_generic_candidates(candidates), 2)
+        self.assertEqual([r["title"] for r in candidates["ch"]], ["Ayur Shakthi"])
+
     def test_placeholder_only_channel_is_dropped_entirely(self):
         candidates = {"filler": rows("No Data", "No Data"), "real": rows("Evening News")}
         removed = generate_epg.filter_generic_candidates(candidates)

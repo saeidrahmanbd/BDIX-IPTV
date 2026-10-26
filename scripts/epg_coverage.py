@@ -54,6 +54,30 @@ EPG_ALIASES = {
     # Same AU service: exact name match after region suffix, with 64 current
     # programme rows in epg_ripper_AU1 (2026-10-26 strict unmapped audit).
     "custom.moviesphere-au": ["Moviesphere.au"],
+
+    # Exact display-name matches (after stripping quality tags) in fresh India
+    # provider feeds that are already in SOURCES (airtel/jiotv/yupptv). Checked
+    # 2026-10-26 against the feed repo's current files: each ID had >=20
+    # programme rows in the next 7 days and sample titles matched the channel.
+    # All are Indian-service (.in) playlist IDs; none is a Bangladesh identity.
+    "NationalGeographic.in@SD": ["LIVETV_LIVETVCHANNEL_NATIONAL_GEOGRAPHIC_CHANNEL"],
+    "NationalGeographic.in@HD": ["LIVETV_LIVETVCHANNEL_NATIONAL_GEOGRAPHIC_CHANNEL_HD"],
+    "ColorsSuper.in@SD": ["LIVETV_LIVETVCHANNEL_COLORS_SUPER"],
+    "DarshanaTV.in@SD": ["3354"],
+    "ETVComedy.in@HD": ["jtv3561"],
+    "EpicBharat.in@Digital": ["jtv3383"],
+    "SuperHungama.in@SD": ["LIVETV_LIVETVCHANNEL_SUPER_HUNGAMA"],
+    "ZeeCineClassic.in@SD": ["ZEEFAST_LIVECHANNEL_5"],
+    "ZeeComedyNation.in@HD": ["ZEEFAST_LIVECHANNEL_4"],
+    "ZeeSouthFlix.in@HD": ["ZEEFAST_LIVECHANNEL_3"],
+    "JalshaMovies.in@HD": ["LIVETV_LIVETVCHANNEL_JALSHA_MOVIES_HD"],
+    "NHBollyFlix.in@HD": ["jtv3336"],
+    "PunjabiShorts.in@SD": ["jtv3471"],
+    "SonyPix.in@HD": ["LIVETV_LIVETVCHANNEL_SONY_PIX_HD"],
+    "StarMovies.in@HD": ["LIVETV_LIVETVCHANNEL_STAR_MOVIES_HD"],
+    "ThalaaTV.in@HD": ["6601"],
+    "TollyTV.in@HD": ["6613"],
+    "DisneyChannel.in@HD": ["LIVETV_LIVETVCHANNEL_DISNEY_CHANNEL_HD"],
     "custom.bdix.cnninternationla": ["157679"],
     "ToonamiAftermathEast.us": ["ToonamiAftermath.us"],
     "DocumentaryPlus": ["plex.tv.Documentary+.plex"],
