@@ -678,5 +678,30 @@
     "status": "third_party_verified",
     "source_url": "https://i.imgur.com/IxOFvqz.png",
     "notes": "Exact Armenia Premium channel listing Broadcaster logo served by a community playlist; reuse rights not specified Source page: https://gist.github.com/Hyperat0m/d33781da55beef57e91956f9e35b31b3"
+  },
+  "International-Playlist.m3u|ZeeCinema.in@APAC|Zee Cinema APAC (720p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema-apac-efd7650d72.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Zee_Cinema_2025.svg",
+    "notes": "IPTV-org exact ID: ZeeCinema.in IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/9/92/Zee_Cinema_2025.svg"
+  },
+  "International-Playlist.m3u|CafeFilm.ir@SD|Cafe Film|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cafe-film-38f2518256.png": {
+    "status": "third_party_verified",
+    "source_url": "https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/CafeFilm.ir.png",
+    "notes": "Exact external logo asset Public IPTV logo repository; original logo rights belong to broadcaster Source page: https://github.com/shayanline/iptv-iran/blob/main/assets/logos/CafeFilm.ir.png"
+  },
+  "International-Playlist.m3u|Cine34.it@HD|Cine34 HD (1080p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cine34-6969b2509c.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cine34_logo.svg/960px-Cine34_logo.svg.png",
+    "notes": "IPTV-org exact ID: Cine34.it IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cine34_logo.svg/960px-Cine34_logo.svg.png"
+  },
+  "International-Playlist.m3u|CinemaxHits.us@East|Cinemax Hits (1080p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinemax-hits-d7aa5bbda6.svg": {
+    "status": "third_party_verified",
+    "source_url": "https://static.hbo.com/2025-09/Cinemax_Hits_Plex_Logo_bw.svg",
+    "notes": "IPTV-org exact ID: CinemaxHits.us IPTV-org public logo dataset Source page: https://static.hbo.com/2025-09/Cinemax_Hits_Plex_Logo_bw.svg"
+  },
+  "International-Playlist.m3u|CumbiaMix.ar@HD|Cumbia Mix (720p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cumbia-mix-532fc42401.png": {
+    "status": "third_party_verified",
+    "source_url": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6901dfd41a05195b77301d7b/b306e57e4_Logo-TV-C.png",
+    "notes": "IPTV-org exact ID: CumbiaMix.ar IPTV-org public logo dataset Source page: https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6901dfd41a05195b77301d7b/b306e57e4_Logo-TV-C.png"
   }
 }

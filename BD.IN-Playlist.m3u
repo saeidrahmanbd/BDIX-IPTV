@@ -292,7 +292,7 @@ https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m
 https://tvsen6.aynaott.com/cnn/index.m3u8
 #EXTINF:-1 tvg-id="ComedyCentral.us" tvg-name="Comedy Central" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-comedy-central.svg" tvg-chno="144" channel-id="ComedyCentral.us" tvg-country="US" tvg-language="eng" group-title="International",Comedy Central
 https://tvsen3.aynaott.com/5fUWDMxZ/index.m3u8
-#EXTINF:-1 tvg-id="COOKINGTV" tvg-name="COOKING TV" tvg-logo="" tvg-chno="145" channel-id="COOKINGTV" tvg-language="eng" tvg-country="ZZ" group-title="International",COOKING TV
+#EXTINF:-1 tvg-id="COOKINGTV" tvg-name="COOKING TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cooking-tv-85209bcadd.png" tvg-chno="145" channel-id="COOKINGTV" tvg-language="eng" tvg-country="ZZ" group-title="International",COOKING TV
 https://tvsen3.aynaott.com/s2FwmdbM/index.m3u8
 #EXTINF:-1 tvg-id="CP24.ca" tvg-name="CP 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cp24.png" tvg-chno="146" channel-id="CP24.ca" tvg-country="CA" tvg-language="eng" group-title="International",CP 24
 https://tvsen6.aynaott.com/cp24/index.m3u8
@@ -512,7 +512,7 @@ http://103.135.253.32:8080/PTV-SPORTS/tracks-v1a1/mono.m3u8
 http://2756d46c.akciatv.ru/iptv/7FRNF6CY9A9TG3/9289/index.m3u8
 #EXTINF:-1 tvg-id="SportsFirstTV.us" tvg-name="Sports First TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sports-first-tv.png" tvg-chno="254" channel-id="SportsFirstTV.us" tvg-country="US" tvg-language="eng" group-title="Sports",Sports First TV
 https://d4ddgdmj1cvnm.cloudfront.net/scheduler/scheduleMaster/409.m3u8
-#EXTINF:-1 tvg-id="SportsFishingTV" tvg-name="Sports Fishing TV" tvg-logo="" tvg-chno="255" channel-id="SportsFishingTV" tvg-language="eng" tvg-country="ZZ" group-title="Sports",Sports Fishing TV
+#EXTINF:-1 tvg-id="SportsFishingTV" tvg-name="Sports Fishing TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sports-fishing-tv-50d0f501d6.png" tvg-chno="255" channel-id="SportsFishingTV" tvg-language="eng" tvg-country="ZZ" group-title="Sports",Sports Fishing TV
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/eea68b79-bfe2-451e-a227-d637a5b9548a/manifest.m3u8
 #EXTINF:-1 tvg-id="TSports.bd" tvg-name="T Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/t-sports.png" tvg-chno="256" channel-id="TSports.bd" tvg-country="BD" tvg-language="ben" group-title="Sports",T Sports
 http://103.135.253.32:8080/T-SPORTS-FULL-HD/tracks-v1a1/mono.m3u8
@@ -526,7 +526,7 @@ http://103.135.253.32:8080/WILLOW-SPORTS/index.m3u8
 https://tvsen7.aynaott.com/Sports1/index.m3u8
 #EXTINF:-1 tvg-id="WillowTV.us" tvg-name="Willow TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/local-logo-willow.svg" tvg-chno="261" channel-id="WillowTV.us" tvg-country="US" tvg-language="eng" group-title="Sports",Willow TV
 https://tvsen7.aynaott.com/rEBp38Ax/index.m3u8
-#EXTINF:-1 tvg-id="XtremSports" tvg-name="Xtrem Sports" tvg-logo="" tvg-chno="262" channel-id="XtremSports" tvg-language="eng" tvg-country="ZZ" group-title="Sports",Xtrem Sports
+#EXTINF:-1 tvg-id="XtremSports" tvg-name="Xtrem Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/xtrem-sports-1d0aff4f7e.png" tvg-chno="262" channel-id="XtremSports" tvg-language="eng" tvg-country="ZZ" group-title="Sports",Xtrem Sports
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e0b81a5c-6ab5-48cd-aaa9-f82de4ab5bf9/manifest.m3u8
 #EXTINF:-1 tvg-id="9XJalwa.in" tvg-name="9X Jalwa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jalwa.png" channel-id="9XJalwa.in" tvg-country="IN" tvg-language="hin" group-title="Backup",9X Jalwa
 https://tv.kbhub.online/Music/9X-Jalwa.m3u8

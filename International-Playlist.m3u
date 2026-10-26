@@ -224,7 +224,7 @@ https://d3gnyty2vddhsg.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/13b5735d-52c3-4be0-853d-e0ec0127e708/manifest.m3u8
 #EXTINF:-1 tvg-id="ZeeCinema.in@SD" tvg-name="Zee Cinema (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema.png" tvg-country="IN" channel-id="ZeeCinema.in@SD" group-title="Indian Movies",Zee Cinema (576p)
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/NGCHD/default/NGCHD.m3u8
-#EXTINF:-1 tvg-id="ZeeCinema.in@APAC" tvg-name="Zee Cinema APAC (720p)" tvg-country="IN" channel-id="ZeeCinema.in@APAC" group-title="Indian Movies",Zee Cinema APAC (720p)
+#EXTINF:-1 tvg-id="ZeeCinema.in@APAC" tvg-name="Zee Cinema APAC (720p)" tvg-country="IN" channel-id="ZeeCinema.in@APAC" group-title="Indian Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cinema-apac-efd7650d72.svg",Zee Cinema APAC (720p)
 https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ZeeCinemaAPAC.m3u8
 #EXTINF:-1 tvg-id="ZeeSouthFlix.in@HD" tvg-name="Zee South Flix (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-south-flix.png" tvg-country="IN" channel-id="ZeeSouthFlix.in@HD" group-title="Indian Movies",Zee South Flix (1080p)
 https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
@@ -1166,7 +1166,7 @@ http://213.91.179.28:8000/play/a04n
 http://213.91.179.28:8000/play/a04i
 #EXTINF:-1 tvg-id="bTVLady.bg@SD" tvg-name="bTV Lady" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/btv-lady.png" tvg-country="BG" channel-id="bTVLady.bg@SD" group-title="International Movies",bTV Lady
 http://213.91.179.28:8000/play/a05i
-#EXTINF:-1 tvg-id="CafeFilm.ir@SD" tvg-name="Cafe Film" tvg-country="IR" channel-id="CafeFilm.ir@SD" group-title="International Movies",Cafe Film
+#EXTINF:-1 tvg-id="CafeFilm.ir@SD" tvg-name="Cafe Film" tvg-country="IR" channel-id="CafeFilm.ir@SD" group-title="International Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cafe-film-38f2518256.png",Cafe Film
 https://cafefhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="CanalCineDios.co@SD" tvg-name="Canal Cine Dios" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/canal-cine-dios.png" tvg-country="CO" channel-id="CanalCineDios.co@SD" group-title="International Movies",Canal Cine Dios
 https://canal.mediaserver.com.co/live/cinedios.m3u8
@@ -1192,7 +1192,7 @@ http://39.134.19.68/dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226465/index
 https://cc-hqw8u5r1nshjc.akamaized.net/scheduler/scheduleMaster/352.m3u8
 #EXTINF:-1 tvg-id="Cine34.it@SD" tvg-name="Cine34 [Geo-blocked]" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cine34-geo-blocked.png" tvg-country="IT" channel-id="Cine34.it@SD" group-title="International Movies",Cine34 [Geo-blocked]
 https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(b6)/index.m3u8
-#EXTINF:-1 tvg-id="Cine34.it@HD" tvg-name="Cine34 HD (1080p)" tvg-country="IT" channel-id="Cine34.it@HD" group-title="International Movies",Cine34 HD (1080p)
+#EXTINF:-1 tvg-id="Cine34.it@HD" tvg-name="Cine34 HD (1080p)" tvg-country="IT" channel-id="Cine34.it@HD" group-title="International Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cine34-6969b2509c.png",Cine34 HD (1080p)
 https://live02-seg.msf.cdn.mediaset.net/live/ch-b6/b6-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Cine666byPlutoTV.de@FR" tvg-name="Cine 666 by Pluto TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cine-666-by-pluto-tv.png" tvg-country="DE" channel-id="Cine666byPlutoTV.de@FR" group-title="International Movies",Cine 666 by Pluto TV
 https://jmp2.uk/plu-6823648580b2665220d9e69a.m3u8
@@ -1286,7 +1286,7 @@ https://tinyurl.com/44efw2rx
 http://125.227.210.55:1001/VideoInput/play.ts
 #EXTINF:-1 tvg-id="CinemaxClassics.us@East" tvg-name="Cinemax Classics (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cinemax-classics-1080p.png" tvg-country="US" channel-id="CinemaxClassics.us@East" group-title="International Movies",Cinemax Classics (1080p)
 http://23.237.104.106:8080/USA_5STARMAX/index.m3u8
-#EXTINF:-1 tvg-id="CinemaxHits.us@East" tvg-name="Cinemax Hits (1080p)" tvg-country="US" channel-id="CinemaxHits.us@East" group-title="International Movies",Cinemax Hits (1080p)
+#EXTINF:-1 tvg-id="CinemaxHits.us@East" tvg-name="Cinemax Hits (1080p)" tvg-country="US" channel-id="CinemaxHits.us@East" group-title="International Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cinemax-hits-d7aa5bbda6.svg",Cinemax Hits (1080p)
 http://23.237.104.106:8080/USA_MOREMAX/index.m3u8
 #EXTINF:-1 tvg-id="CinemaxLatinAmerica.us@SD" tvg-name="Cinemax Latin America (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/cinemax-latin-america-720p.png" tvg-country="US" channel-id="CinemaxLatinAmerica.us@SD" group-title="International Movies",Cinemax Latin America (720p)
 https://streaming.onnethn.com/CINEMAX/playlist.m3u8
@@ -1352,11 +1352,11 @@ https://rpn.bozztv.com/gusa/gusa-tvsNostalgiaMovies/index.m3u8
 https://rpn.bozztv.com/gusa/gusa-tvswesternmovies/index.m3u8
 #EXTINF:-1 tvg-id="2TV.lt@SD" tvg-name="2TV (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/2tv-1080p.png" tvg-country="LT" channel-id="2TV.lt@SD" group-title="International Music",2TV (1080p)
 https://lnk5511.bstrm.net/live/687e3ff1679c8d4d68fab6c5/hd/manifest.mpd
-#EXTINF:-1 tvg-id="4Music.fr@SD" tvg-name="4 Music" tvg-country="FR" channel-id="4Music.fr@SD" group-title="International Music",4 Music
+#EXTINF:-1 tvg-id="4Music.fr@SD" tvg-name="4 Music" tvg-country="FR" channel-id="4Music.fr@SD" group-title="International Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-music.png",4 Music
 https://musichls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="4everMusic.ua@SD" tvg-name="4ever Music (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/4ever-music-1080p.png" tvg-country="UA" channel-id="4everMusic.ua@SD" group-title="International Music",4ever Music (1080p)
 http://stream.mcquack.net/257/index.m3u8
-#EXTINF:-1 tvg-id="4Kurd.fr@SD" tvg-name="4Kurd" tvg-country="FR" channel-id="4Kurd.fr@SD" group-title="International Music",4Kurd
+#EXTINF:-1 tvg-id="4Kurd.fr@SD" tvg-name="4Kurd" tvg-country="FR" channel-id="4Kurd.fr@SD" group-title="International Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4kurd-fc0383f503.png",4Kurd
 https://4kuhls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="7RadioVisione.it@HD" tvg-name="7 RadioVisione (720p)" tvg-country="IT" channel-id="7RadioVisione.it@HD" group-title="International Music",7 RadioVisione (720p)
 https://stream10.xdevel.com/video1s976543-1932/stream/playlist.m3u8
@@ -1464,7 +1464,7 @@ https://live2.tensila.com/cool-v-1.arubara/hls/master.m3u8
 https://sistemastr.tropicalmoonmedia.com/live/7FFCFEC3978B68D1A2ED0A38DE96AF76/12.m3u8
 #EXTINF:-1 tvg-id="Couleur3.ch@SD" tvg-name="Couleur 3 (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/couleur-3-720p.png" tvg-country="CH" channel-id="Couleur3.ch@SD" group-title="International Music",Couleur 3 (720p)
 https://visualradio-rts-couleur3-d.akamaized.net/out/v1/6a1472634ad745f59a9e63ee8adbbc00/index.m3u8
-#EXTINF:-1 tvg-id="CumbiaMix.ar@HD" tvg-name="Cumbia Mix (720p)" tvg-country="AR" channel-id="CumbiaMix.ar@HD" group-title="International Music",Cumbia Mix (720p)
+#EXTINF:-1 tvg-id="CumbiaMix.ar@HD" tvg-name="Cumbia Mix (720p)" tvg-country="AR" channel-id="CumbiaMix.ar@HD" group-title="International Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cumbia-mix-532fc42401.png",Cumbia Mix (720p)
 https://cloud.tvomix.com/CUMBIAMIX/index.m3u8
 #EXTINF:-1 tvg-id="DMusic.kh@SD" tvg-name="D Music (1280p) [Not 24/7]" tvg-country="KH" channel-id="DMusic.kh@SD" group-title="International Music",D Music (1280p) [Not 24/7]
 http://43.252.18.195:5080/live/streams/WCVNews.playlist.m3u8
