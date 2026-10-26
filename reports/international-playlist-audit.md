@@ -1,23 +1,22 @@
-# International Playlist Organization Audit
+# International Playlist Movie/Music Audit
 
-- Entries before: 2271
-- Entries after: 2267
-- Names normalized: 183
-- Policy removals: 4
-- Additional streams placed in Backups: 6
-- Exact duplicate URLs skipped: 0
-- Invalid/external logos removed: 0
-- Removed resolution/quality suffixes and geoblocking/non-24/7 labels.
-- Rajdhani TV canonicalized under Bangladesh; Sony Max and Asian Sony Max 2 classified under Indian Movies.
-- Non-Bangladesh news and non-Islamic religious channels excluded.
-- Foreign movie/music channels grouped by country at five unique channel identities; smaller groups remain in New Channels with tvg-content Movies/Music.
-- Documentary & Wildlife, Kids, Sports, Adult, and Islamic Religious retain dedicated groups.
-- Stream URLs preserved as provided; live playback was not tested.
+- Entries before cleanup: 2267
+- Entries after cleanup: 2247
+- Fashion TV entries copied from main IPTV playlist: 1
+- Entries removed by scope/category rules: 21
+- Alternate streams retained in Backups: 121
+- Duplicate stream URLs skipped: 0
+- Resolution/geoblocking labels remaining: 0
+- Country-specific groups: 33
 
-## Removal summary
+International country groups and New Channels are limited to dedicated Movies or Music channels. Permitted Documentary & Wildlife, Kids, Sports, Adult, and Islamic Religious channels remain in their own groups. All Fashion TV entries from the main IPTV playlist are preserved in the dedicated Fashion TV exception group.
 
-- non-Islamic religious: 2
-- Pakistan non-movie/music: 2
+## Removal counts
+
+- not clearly Movie/Music: 1
+- non-Bangladesh news: 5
+- general entertainment, not a dedicated Movie/Music channel: 14
+- non-Islamic religious: 1
 
 ## Category counts
 
@@ -26,21 +25,20 @@
 - Indian Movies: 65
 - Indian Music: 52
 - Indian Entertainment: 176
-- Pakistani: 4
-- Argentina: 15
-- Austria: 5
+- Pakistani: 3
+- Argentina: 14
 - Brazil: 12
 - Bulgaria: 8
 - Canada: 30
-- Chile: 27
+- Chile: 23
 - China: 7
-- Colombia: 15
-- Czech Republic: 27
-- Egypt: 6
+- Colombia: 12
+- Czech Republic: 26
+- Egypt: 5
 - Estonia: 6
-- France: 45
-- Germany: 16
-- Greece: 10
+- France: 41
+- Germany: 15
+- Greece: 8
 - Hungary: 14
 - Iran: 12
 - Italy: 24
@@ -52,20 +50,21 @@
 - Portugal: 6
 - Romania: 36
 - Russia: 60
-- Saudi Arabia: 17
+- Saudi Arabia: 15
 - Serbia: 5
 - Spain: 17
 - Turkey: 13
 - Ukraine: 23
 - United Kingdom: 11
-- United States: 112
+- United States: 111
 - Uzbekistan: 5
 - Vietnam: 5
+- Fashion TV: 1
 - Documentary & Wildlife: 150
 - Kids: 211
-- Religious: 16
+- Religious: 17
 - Sports: 237
 - Adult: 359
 - Backups: 121
-- New Channels: 154
+- New Channels: 158
 - New Backups: 0
