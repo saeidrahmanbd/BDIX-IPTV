@@ -1,101 +1,121 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-26T06:42:01+00:00**
+Generated: **2026-10-26T08:06:06+00:00**
 
 This report audits active unique channel identities across the three maintained playlists configured in the automated EPG pipeline. A source mapping is not counted as usable current/future coverage unless it has a valid programme interval and valid non-empty multilingual title data within the generator's -6-hour/+7-day window; English titles rank first, then Bengali, then other valid languages.
 The XMLTV guide is published at **epg/epg.xml**. The published guide uses the playlist's tvg-id as the XMLTV channel ID, not the upstream provider's source ID.
 
 ## Overall Coverage
 
-- Active unique playlist channel IDs audited: **1878**
-- IDs with an EPG source mapping: **678/1878 (36.1%)**
-- IDs with usable current/future source schedules (nonblank multilingual titles (English preferred, then Bengali, then other valid languages)): **633/1878 (33.7%)**
-- IDs with no EPG source mapping: **1200**
+- Active unique playlist channel IDs audited: **2597**
+- IDs with an EPG source mapping: **973/2597 (37.5%)**
+- IDs with usable current/future source schedules (nonblank multilingual titles (English preferred, then Bengali, then other valid languages)): **918/2597 (35.3%)**
+- IDs with no EPG source mapping: **1624**
 
 ## Coverage by Playlist Group
 
 | Group | Active IDs | Mapped IDs | Current/future | No mapping |
 |---|---:|---:|---:|---:|
-| Adult | 482 | 40 | 33 | 442 |
-| Argentina | 13 | 0 | 0 | 13 |
-| Backups | 24 | 16 | 16 | 8 |
-| Bangladesh | 77 | 3 | 3 | 74 |
-| Brazil | 5 | 0 | 0 | 5 |
-| Canada | 2 | 2 | 2 | 0 |
-| China | 10 | 0 | 0 | 10 |
-| Documentary & Wildlife | 106 | 86 | 83 | 20 |
-| France | 6 | 1 | 1 | 5 |
-| Germany | 20 | 1 | 1 | 19 |
+| Adult | 359 | 13 | 9 | 346 |
+| Argentina | 15 | 0 | 0 | 15 |
+| Austria | 4 | 0 | 0 | 4 |
+| Backups | 55 | 27 | 26 | 28 |
+| Bangladesh | 81 | 3 | 3 | 78 |
+| Brazil | 11 | 2 | 2 | 9 |
+| Bulgaria | 8 | 1 | 1 | 7 |
+| Canada | 26 | 20 | 20 | 6 |
+| Chile | 27 | 1 | 1 | 26 |
+| China | 7 | 0 | 0 | 7 |
+| Colombia | 15 | 0 | 0 | 15 |
+| Czech Republic | 27 | 10 | 7 | 17 |
+| Documentary & Wildlife | 217 | 131 | 127 | 86 |
+| Egypt | 6 | 3 | 3 | 3 |
+| Estonia | 6 | 1 | 1 | 5 |
+| France | 45 | 8 | 8 | 37 |
+| Germany | 16 | 9 | 8 | 7 |
+| Greece | 10 | 2 | 2 | 8 |
+| Hungary | 14 | 6 | 6 | 8 |
 | Indian Bangla | 50 | 40 | 37 | 10 |
-| Indian Entertainment | 224 | 179 | 166 | 45 |
-| Indian Movies | 93 | 66 | 59 | 27 |
-| Indian Music | 61 | 49 | 46 | 12 |
+| Indian Entertainment | 230 | 191 | 180 | 39 |
+| Indian Movies | 93 | 70 | 65 | 23 |
+| Indian Music | 71 | 57 | 54 | 14 |
 | International | 98 | 56 | 52 | 42 |
-| International Movies | 165 | 14 | 14 | 151 |
-| International Music | 90 | 5 | 5 | 85 |
-| Kids | 51 | 33 | 32 | 18 |
-| Pakistani | 41 | 6 | 6 | 35 |
-| Poland | 5 | 1 | 1 | 4 |
-| Religious | 32 | 10 | 9 | 22 |
-| Romania | 5 | 3 | 3 | 2 |
-| Russia | 10 | 0 | 0 | 10 |
-| Spain | 5 | 2 | 1 | 3 |
-| Sports | 38 | 29 | 27 | 9 |
-| Sweden | 34 | 0 | 0 | 34 |
-| United Kingdom | 13 | 4 | 4 | 9 |
-| United States | 118 | 32 | 32 | 86 |
+| Iran | 12 | 3 | 3 | 9 |
+| Italy | 24 | 4 | 4 | 20 |
+| Kids | 226 | 93 | 88 | 133 |
+| Lebanon | 6 | 1 | 1 | 5 |
+| Mexico | 14 | 1 | 1 | 13 |
+| Netherlands | 14 | 4 | 4 | 10 |
+| New Channels | 153 | 11 | 11 | 142 |
+| Pakistani | 18 | 3 | 3 | 15 |
+| Peru | 14 | 0 | 0 | 14 |
+| Poland | 24 | 17 | 17 | 7 |
+| Portugal | 6 | 0 | 0 | 6 |
+| Religious | 36 | 11 | 10 | 25 |
+| Romania | 36 | 9 | 8 | 27 |
+| Russia | 60 | 7 | 4 | 53 |
+| Saudi Arabia | 15 | 3 | 3 | 12 |
+| Serbia | 5 | 1 | 1 | 4 |
+| Spain | 17 | 3 | 3 | 14 |
+| Sports | 267 | 112 | 107 | 155 |
+| Turkey | 13 | 0 | 0 | 13 |
+| Ukraine | 23 | 3 | 2 | 20 |
+| United Kingdom | 7 | 1 | 1 | 6 |
+| United States | 106 | 35 | 35 | 71 |
+| Uzbekistan | 5 | 0 | 0 | 5 |
+| Vietnam | 5 | 0 | 0 | 5 |
 
 ## Source Status
 
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 713 IDs with usable current/future programmes; 96308 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz — 54 channel IDs; 11 IDs with usable current/future programmes; 101 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 21 IDs with usable current/future programmes; 1991 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-in.xml.gz — 419 channel IDs; 419 IDs with usable current/future programmes; 17656 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://i.mjh.nz/SamsungTVPlus/in.xml — 206 channel IDs; 202 IDs with usable current/future programmes; 2141 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://i.mjh.nz/SamsungTVPlus/us.xml — 588 channel IDs; 587 IDs with usable current/future programmes; 4997 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epg.pw/xmltv/epg_IN.xml — 498 channel IDs; 21 IDs with usable current/future programmes; 2113 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epg.pw/api/epg.xml?channel_id=9374 — 1 channel IDs; 1 IDs with usable current/future programmes; 88 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epg.pw/api/epg.xml?channel_id=12504 — 1 channel IDs; 1 IDs with usable current/future programmes; 76 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 1166 channel IDs; 713 IDs with usable current/future programmes; 95016 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz — 54 channel IDs; 11 IDs with usable current/future programmes; 95 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 21 IDs with usable current/future programmes; 1964 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-in.xml.gz — 419 channel IDs; 419 IDs with usable current/future programmes; 17312 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://i.mjh.nz/SamsungTVPlus/in.xml — 206 channel IDs; 202 IDs with usable current/future programmes; 2139 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://i.mjh.nz/SamsungTVPlus/us.xml — 588 channel IDs; 587 IDs with usable current/future programmes; 5031 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epg.pw/xmltv/epg_IN.xml — 498 channel IDs; 21 IDs with usable current/future programmes; 2089 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epg.pw/api/epg.xml?channel_id=9374 — 1 channel IDs; 1 IDs with usable current/future programmes; 86 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epg.pw/api/epg.xml?channel_id=12504 — 1 channel IDs; 1 IDs with usable current/future programmes; 74 eligible programme rows with valid non-empty titles in any language in the guide window
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml — 692 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window
-- **FAILED** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 0 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window; HTTP Error 403: Forbidden
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 763 channel IDs; 760 IDs with usable current/future programmes; 80773 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1490 channel IDs; 1350 IDs with usable current/future programmes; 79606 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 282 channel IDs; 282 IDs with usable current/future programmes; 5232 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 119 channel IDs; 106 IDs with usable current/future programmes; 24034 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://avkb.short.gy/epg.xml.gz — 2273 channel IDs; 898 IDs with usable current/future programmes; 23625 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://avkb.short.gy/jioepg.xml.gz — 1226 channel IDs; 116 IDs with usable current/future programmes; 3506 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://avkb.short.gy/tsepg.xml.gz — 717 channel IDs; 715 IDs with usable current/future programmes; 37978 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 715 IDs with usable current/future programmes; 37008 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 763 channel IDs; 760 IDs with usable current/future programmes; 79372 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1490 channel IDs; 1350 IDs with usable current/future programmes; 77387 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 282 channel IDs; 282 IDs with usable current/future programmes; 14213 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 119 channel IDs; 106 IDs with usable current/future programmes; 23865 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://avkb.short.gy/epg.xml.gz — 2273 channel IDs; 898 IDs with usable current/future programmes; 22154 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://avkb.short.gy/jioepg.xml.gz — 1226 channel IDs; 116 IDs with usable current/future programmes; 3283 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://avkb.short.gy/tsepg.xml.gz — 717 channel IDs; 715 IDs with usable current/future programmes; 37008 eligible programme rows with valid non-empty titles in any language in the guide window
 - **OK** — https://epgshare01.online/epgshare01/epg_ripper_DISTROTV1.xml.gz — 90 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz — 690 channel IDs; 684 IDs with usable current/future programmes; 76268 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_RAKUTEN1.xml.gz — 1640 channel IDs; 1510 IDs with usable current/future programmes; 143722 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml — 11 channel IDs; 10 IDs with usable current/future programmes; 1559 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz — 486 channel IDs; 387 IDs with usable current/future programmes; 32310 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://www.open-epg.com/files/unitedkingdom.xml.gz — 562 channel IDs; 529 IDs with usable current/future programmes; 24363 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz — 769 channel IDs; 754 IDs with usable current/future programmes; 63909 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-us.xml.gz — 13031 channel IDs; 13004 IDs with usable current/future programmes; 865920 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz — 912 channel IDs; 836 IDs with usable current/future programmes; 74238 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz — 345 channel IDs; 277 IDs with usable current/future programmes; 37184 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz — 696 channel IDs; 695 IDs with usable current/future programmes; 60752 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz — 751 channel IDs; 729 IDs with usable current/future programmes; 67286 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_CZ1.xml.gz — 1087 channel IDs; 502 IDs with usable current/future programmes; 43058 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz — 266 channel IDs; 251 IDs with usable current/future programmes; 22209 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_DO1.xml.gz — 56 channel IDs; 55 IDs with usable current/future programmes; 3719 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz — 373 channel IDs; 339 IDs with usable current/future programmes; 17067 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz — 574 channel IDs; 529 IDs with usable current/future programmes; 57561 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_GR1.xml.gz — 321 channel IDs; 306 IDs with usable current/future programmes; 21897 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_HK1.xml.gz — 143 channel IDs; 133 IDs with usable current/future programmes; 10739 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_HU1.xml.gz — 193 channel IDs; 167 IDs with usable current/future programmes; 16759 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz — 195 channel IDs; 155 IDs with usable current/future programmes; 15787 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz — 163 channel IDs; 131 IDs with usable current/future programmes; 10488 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_MX1.xml.gz — 178 channel IDs; 167 IDs with usable current/future programmes; 13629 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz — 159 channel IDs; 156 IDs with usable current/future programmes; 23213 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz — 636 channel IDs; 585 IDs with usable current/future programmes; 89876 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz — 370 channel IDs; 353 IDs with usable current/future programmes; 36782 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_SA2.xml.gz — 31 channel IDs; 30 IDs with usable current/future programmes; 3370 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz — 178 channel IDs; 139 IDs with usable current/future programmes; 13560 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_BEIN1.xml.gz — 80 channel IDs; 72 IDs with usable current/future programmes; 2184 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz — 266 channel IDs; 97 IDs with usable current/future programmes; 12710 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz — 97 channel IDs; 92 IDs with usable current/future programmes; 8840 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz — 690 channel IDs; 684 IDs with usable current/future programmes; 75453 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_RAKUTEN1.xml.gz — 1640 channel IDs; 1510 IDs with usable current/future programmes; 141526 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml — 11 channel IDs; 10 IDs with usable current/future programmes; 1542 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz — 486 channel IDs; 387 IDs with usable current/future programmes; 31803 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://www.open-epg.com/files/unitedkingdom.xml.gz — 562 channel IDs; 529 IDs with usable current/future programmes; 23798 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz — 769 channel IDs; 754 IDs with usable current/future programmes; 63084 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-us.xml.gz — 13025 channel IDs; 13014 IDs with usable current/future programmes; 999580 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz — 912 channel IDs; 836 IDs with usable current/future programmes; 73104 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz — 345 channel IDs; 277 IDs with usable current/future programmes; 36668 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz — 696 channel IDs; 695 IDs with usable current/future programmes; 60412 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz — 751 channel IDs; 729 IDs with usable current/future programmes; 66240 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_CZ1.xml.gz — 1087 channel IDs; 501 IDs with usable current/future programmes; 42371 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz — 266 channel IDs; 251 IDs with usable current/future programmes; 21959 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_DO1.xml.gz — 56 channel IDs; 55 IDs with usable current/future programmes; 3642 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz — 373 channel IDs; 339 IDs with usable current/future programmes; 16653 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz — 574 channel IDs; 529 IDs with usable current/future programmes; 56864 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_GR1.xml.gz — 321 channel IDs; 306 IDs with usable current/future programmes; 21668 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_HK1.xml.gz — 143 channel IDs; 133 IDs with usable current/future programmes; 10538 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_HU1.xml.gz — 193 channel IDs; 167 IDs with usable current/future programmes; 16462 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz — 195 channel IDs; 155 IDs with usable current/future programmes; 15496 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz — 163 channel IDs; 131 IDs with usable current/future programmes; 10321 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_MX1.xml.gz — 178 channel IDs; 167 IDs with usable current/future programmes; 13413 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz — 159 channel IDs; 156 IDs with usable current/future programmes; 22980 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz — 636 channel IDs; 585 IDs with usable current/future programmes; 88944 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz — 370 channel IDs; 353 IDs with usable current/future programmes; 36299 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_SA2.xml.gz — 31 channel IDs; 30 IDs with usable current/future programmes; 3311 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz — 178 channel IDs; 139 IDs with usable current/future programmes; 13305 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_BEIN1.xml.gz — 80 channel IDs; 72 IDs with usable current/future programmes; 2119 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz — 266 channel IDs; 97 IDs with usable current/future programmes; 12348 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz — 97 channel IDs; 92 IDs with usable current/future programmes; 8709 eligible programme rows with valid non-empty titles in any language in the guide window
 - **OK** — https://hum.tv/schedule/ — 1 channel IDs; 1 IDs with usable current/future programmes; 21 eligible programme rows with valid non-empty titles in any language in the guide window
 - **OK** — M3U4U XMLTV (private Actions secret) — 201 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window
 
@@ -105,46 +125,15 @@ The table includes every active channel identity without usable current/future g
 
 | Group | Channel | Playlist ID | EPG source ID | Status |
 |---|---|---|---|---|
-| Adult | 7 | custom.24-7-xxx-7 | Channel.7.uk | MAPPED_ID_ONLY |
 | Adult | Babes TV | BabesTV.us | Babes.TV.cz | MAPPED_ID_ONLY |
-| Adult | Babes Tv | custom.xxx-babes-tv | Babes.TV.cz | MAPPED_ID_ONLY |
-| Adult | Dusk | custom.xxx-dusk | Dusk!.cz | MAPPED_ID_ONLY |
 | Adult | LEO TV | LEOTV.cz | Leo.cz | MAPPED_ID_ONLY |
+| Adult | Music Box Sexy | MusicBoxSexy.cz@SD | Music.Box.Sexy.cz | MAPPED_ID_ONLY |
 | Adult | Pure Babes | PureBabes.us | Pure.Babes.cz | MAPPED_ID_ONLY |
-| Adult | True Amateurs | custom.xxx-true-amateurs | True.Amateurs.cz | MAPPED_ID_ONLY |
-| Adult | 11 | custom.24-7-xxx-adult-11 | - | NO_GUIDE_HIT |
-| Adult | 12 | custom.24-7-xxx-adult-12 | - | NO_GUIDE_HIT |
-| Adult | 14 | custom.24-7-xxx-adult-14 | - | NO_GUIDE_HIT |
-| Adult | 15 | custom.24-7-xxx-adult-15 | - | NO_GUIDE_HIT |
-| Adult | 16 | custom.24-7-xxx-adult-16 | - | NO_GUIDE_HIT |
-| Adult | 17 | custom.24-7-xxx-adult-17 | - | NO_GUIDE_HIT |
-| Adult | 18 | custom.24-7-xxx-adult-18 | - | NO_GUIDE_HIT |
-| Adult | 19 | custom.24-7-xxx-adult-19 | - | NO_GUIDE_HIT |
-| Adult | 21 | custom.24-7-xxx-adult-21 | - | NO_GUIDE_HIT |
-| Adult | 21 Sextury | custom.xxx-21-sextury | - | NO_GUIDE_HIT |
-| Adult | 22 | custom.24-7-xxx-adult-22 | - | NO_GUIDE_HIT |
-| Adult | 23 | custom.24-7-xxx-adult-23 | - | NO_GUIDE_HIT |
-| Adult | 25 | custom.24-7-adult-xxx-25 | - | NO_GUIDE_HIT |
-| Adult | 26 | custom.24-7-xxx-adult-26 | - | NO_GUIDE_HIT |
-| Adult | 27 | custom.24-7-xxx-adult-27 | - | NO_GUIDE_HIT |
-| Adult | 28 | custom.24-7-xxx-adult-28 | - | NO_GUIDE_HIT |
-| Adult | 29 | custom.24-7-adult-xxx-29 | - | NO_GUIDE_HIT |
-| Adult | 31 | custom.24-7-adult-xxx-31 | - | NO_GUIDE_HIT |
-| Adult | 32 | custom.24-7-adult-xxx-32 | - | NO_GUIDE_HIT |
-| Adult | 9 | custom.24-7-xxx-9 | - | NO_GUIDE_HIT |
 | Adult | Abella Danger | custom.24-7-xxx-abella-danger | - | NO_GUIDE_HIT |
 | Adult | AJ Applegate | custom.24-7-xxx-aj-applegate | - | NO_GUIDE_HIT |
 | Adult | Alba 2 | custom.alba-2 | - | NO_GUIDE_HIT |
 | Adult | Alba 3 | custom.alba-3 | - | NO_GUIDE_HIT |
 | Adult | Alba 4 | custom.alba-4 | - | NO_GUIDE_HIT |
-| Adult | Alba Xxx 1 | custom.xxx-alba-xxx-1 | - | NO_GUIDE_HIT |
-| Adult | Alba Xxx 2 | custom.xxx-alba-xxx-2 | - | NO_GUIDE_HIT |
-| Adult | Alba Xxx 3 | custom.xxx-alba-xxx-3 | - | NO_GUIDE_HIT |
-| Adult | Alba Xxx 4 | custom.xxx-alba-xxx-4 | - | NO_GUIDE_HIT |
-| Adult | Alba Xxx 5 | custom.xxx-alba-xxx-5 | - | NO_GUIDE_HIT |
-| Adult | Alba Xxx 6 | custom.xxx-alba-xxx-6 | - | NO_GUIDE_HIT |
-| Adult | Alba Xxx Hd1 | custom.xxx-alba-xxx-hd1 | - | NO_GUIDE_HIT |
-| Adult | Alba Xxx Hd2 | custom.xxx-alba-xxx-hd2 | - | NO_GUIDE_HIT |
 | Adult | Alexis Texas | custom.24-7-xxx-alexis-texas | - | NO_GUIDE_HIT |
 | Adult | Alura Jenson | custom.24-7-xxx-alura-jenson | - | NO_GUIDE_HIT |
 | Adult | Amateur | custom.24-7-xxx-amateur | - | NO_GUIDE_HIT |
@@ -157,20 +146,14 @@ The table includes every active channel identity without usable current/future g
 | Adult | Ass Parade | custom.24-7-xxx-ass-parade | - | NO_GUIDE_HIT |
 | Adult | Ava Devine | custom.24-7-xxx-ava-devine | - | NO_GUIDE_HIT |
 | Adult | Babes TV Russia | custom.babes-tv-russia | - | NO_GUIDE_HIT |
-| Adult | Bang Bus | custom.xxx-bang-bus | - | NO_GUIDE_HIT |
-| Adult | Bangbros | custom.xxx-bangbros | - | NO_GUIDE_HIT |
 | Adult | Bangbus | custom.24-7-xxx-bangbus | - | NO_GUIDE_HIT |
 | Adult | BBC Big Ass | custom.24-7-xxx-bbc-big-ass | - | NO_GUIDE_HIT |
 | Adult | BBW | custom.24-7-xxx-bbw | - | NO_GUIDE_HIT |
 | Adult | BDSM | custom.24-7-xxx-bdsm | - | NO_GUIDE_HIT |
 | Adult | Big Ass | custom.24-7-xxx-big-ass | - | NO_GUIDE_HIT |
-| Adult | Big Ass | custom.xxx-big-ass | - | NO_GUIDE_HIT |
 | Adult | Big Dick | custom.xxx-big-dick | - | NO_GUIDE_HIT |
 | Adult | Big Tits | custom.24-7-xxx-big-tits | - | NO_GUIDE_HIT |
-| Adult | Big Tits | custom.xxx-big-tits | - | NO_GUIDE_HIT |
-| Adult | Blacked | custom.xxx-blacked | - | NO_GUIDE_HIT |
 | Adult | Blonde | custom.blonde | - | NO_GUIDE_HIT |
-| Adult | Blonde | custom.xxx-blonde | - | NO_GUIDE_HIT |
 | Adult | Blowjob | custom.xxx-blowjob | - | NO_GUIDE_HIT |
 | Adult | Brand New Amateurs | custom.xxx-brand-new-amateurs | - | NO_GUIDE_HIT |
 | Adult | Brazzers Extra | custom.xxx-brazzers-extra | - | NO_GUIDE_HIT |
@@ -181,41 +164,26 @@ The table includes every active channel identity without usable current/future g
 | Adult | Brazzzers 3 | custom.24-7-xxx-brazzzers-3 | - | NO_GUIDE_HIT |
 | Adult | Bridgette B | custom.24-7-xxx-bridgette-b | - | NO_GUIDE_HIT |
 | Adult | Brunette | custom.brunette | - | NO_GUIDE_HIT |
-| Adult | Brunette | custom.xxx-brunette | - | NO_GUIDE_HIT |
 | Adult | Casting Couch | custom.24-7-xxx-casting-couch | - | NO_GUIDE_HIT |
 | Adult | Cathy Heaven | custom.24-7-xxx-cathy-heaven | - | NO_GUIDE_HIT |
-| Adult | Cento X Cento Tv | custom.xxx-cento-x-cento-tv | - | NO_GUIDE_HIT |
 | Adult | Cherie Deville | custom.24-7-xxx-cherie-deville | - | NO_GUIDE_HIT |
 | Adult | Compilation | custom.xxx-compilation | - | NO_GUIDE_HIT |
 | Adult | Cuckold | custom.cuckold | - | NO_GUIDE_HIT |
-| Adult | Cuckold | custom.xxx-cuckold | - | NO_GUIDE_HIT |
-| Adult | Cum 4K UHD | custom.xxx-cum-4k-uhd | - | NO_GUIDE_HIT |
 | Adult | Cum Perfection | custom.xxx-cum-perfection | - | NO_GUIDE_HIT |
-| Adult | Daughter Swap | custom.xxx-daughter-swap | - | NO_GUIDE_HIT |
 | Adult | Day With A Pornstar | custom.xxx-day-with-a-pornstar | - | NO_GUIDE_HIT |
-| Adult | Ddf Network | custom.xxx-ddf-network | - | NO_GUIDE_HIT |
 | Adult | Dee Williams | custom.24-7-xxx-dee-williams | - | NO_GUIDE_HIT |
 | Adult | Dick Drainers | custom.24-7-xxx-dick-drainers | - | NO_GUIDE_HIT |
 | Adult | Dorcel Club | custom.xxx-dorcel-club | - | NO_GUIDE_HIT |
 | Adult | Ebony | custom.24-7-xxx-ebony | - | NO_GUIDE_HIT |
 | Adult | Elsa Jean | custom.24-7-xxx-elsa-jean | - | NO_GUIDE_HIT |
 | Adult | Ember Snow | custom.24-7-xxx-ember-snow | - | NO_GUIDE_HIT |
-| Adult | Erox XXX HD | custom.xxx-erox-xxx-hd | - | NO_GUIDE_HIT |
+| Adult | Erox XXX | custom.xxx-erox-xxx-hd | - | NO_GUIDE_HIT |
 | Adult | Euro Girls On Girls | custom.xxx-euro-girls-on-girls | - | NO_GUIDE_HIT |
 | Adult | Evil Angel | custom.24-7-xxx-evil-angel | - | NO_GUIDE_HIT |
-| Adult | Evil Angel | custom.evil-angel | - | NO_GUIDE_HIT |
-| Adult | Evil Angel HD | custom.xxx-evil-angel-hd | - | NO_GUIDE_HIT |
 | Adult | Evolved Fights | custom.xxx-evolved-fights | - | NO_GUIDE_HIT |
-| Adult | Extasy - Leo Tv | custom.xxx-extasy-leo-tv | - | NO_GUIDE_HIT |
 | Adult | Exxxotica TV | custom.exxxotica-tv | - | NO_GUIDE_HIT |
-| Adult | Exxxotica Tv | custom.xxx-exxxotica-tv | - | NO_GUIDE_HIT |
-| Adult | Fake Agent | custom.xxx-fake-agent | - | NO_GUIDE_HIT |
-| Adult | Fake Taxi | custom.xxx-fake-taxi | - | NO_GUIDE_HIT |
 | Adult | Fake Taxi 1 | custom.24-7-xxx-fake-taxi-1 | - | NO_GUIDE_HIT |
-| Adult | Fake Taxi 2 | custom.24-7-xxx-fake-taxi-2 | - | NO_GUIDE_HIT |
 | Adult | Fake Taxi 3 | custom.24-7-xxx-fake-taxi-3 | - | NO_GUIDE_HIT |
-| Adult | Family Hookups | custom.xxx-family-hookups | - | NO_GUIDE_HIT |
-| Adult | Family Strokes | custom.xxx-family-strokes | - | NO_GUIDE_HIT |
 | Adult | Fap TV 6 | custom.fap-tv-6 | - | NO_GUIDE_HIT |
 | Adult | Fetish | custom.xxx-fetish | - | NO_GUIDE_HIT |
 | Adult | FM Therapy 1 | custom.24-7-xxx-fm-therapy-1 | - | NO_GUIDE_HIT |
@@ -223,18 +191,14 @@ The table includes every active channel identity without usable current/future g
 | Adult | FM Therapy 3 | custom.24-7-xxx-fm-therapy-3 | - | NO_GUIDE_HIT |
 | Adult | FM Therapy 4 | custom.24-7-xxx-fm-therapy-4 | - | NO_GUIDE_HIT |
 | Adult | FM Therapy 5 | custom.24-7-xxx-fm-therapy-5 | - | NO_GUIDE_HIT |
-| Adult | French Lover Europe | custom.xxx-french-lover-europe | - | NO_GUIDE_HIT |
 | Adult | Gangbang | custom.xxx-gangbang | - | NO_GUIDE_HIT |
 | Adult | Gay 2 | custom.24-7-xxx-gay-2 | - | NO_GUIDE_HIT |
 | Adult | Gay 3 | custom.24-7-xxx-gay-3 | - | NO_GUIDE_HIT |
-| Adult | Gay Adult Tv | custom.xxx-gay-adult-tv | - | NO_GUIDE_HIT |
 | Adult | Gay Latin | custom.24-7-xxx-gay-latin | - | NO_GUIDE_HIT |
-| Adult | Glory Hole | custom.xxx-glory-hole | - | NO_GUIDE_HIT |
 | Adult | Gloryhole | custom.24-7-xxx-gloryhole | - | NO_GUIDE_HIT |
 | Adult | Group | custom.24-7-xxx-group | - | NO_GUIDE_HIT |
 | Adult | Group 2 | custom.24-7-xxx-group-2 | - | NO_GUIDE_HIT |
 | Adult | Hardcore | custom.24-7-xxx-hardcore | - | NO_GUIDE_HIT |
-| Adult | Hardcore | custom.xxx-hardcore | - | NO_GUIDE_HIT |
 | Adult | Hilary Scott | custom.24-7-xxx-hilary-scott | - | NO_GUIDE_HIT |
 | Adult | Holly Hendrix | custom.24-7-xxx-holly-hendrix | - | NO_GUIDE_HIT |
 | Adult | Hookup Hotshot | custom.xxx-hookup-hotshot | - | NO_GUIDE_HIT |
@@ -247,12 +211,9 @@ The table includes every active channel identity without usable current/future g
 | Adult | Kelsie Monroe | custom.24-7-xxx-kelsie-monroe | - | NO_GUIDE_HIT |
 | Adult | Kenzie Reeves | custom.24-7-xxx-kenzie-reeves | - | NO_GUIDE_HIT |
 | Adult | Latina | Latina.pe | - | NO_GUIDE_HIT |
-| Adult | Latina | custom.xxx-latina | - | NO_GUIDE_HIT |
 | Adult | Lesbian | custom.xxx-lesbian | - | NO_GUIDE_HIT |
 | Adult | Lisa Ann | custom.24-7-xxx-lisa-ann | - | NO_GUIDE_HIT |
-| Adult | Little Caprice | custom.xxx-little-caprice | - | NO_GUIDE_HIT |
 | Adult | Live Cams | custom.live-cams | - | NO_GUIDE_HIT |
-| Adult | Live Cams | custom.xxx-live-cams | - | NO_GUIDE_HIT |
 | Adult | London Keyes | custom.24-7-xxx-london-keyes | - | NO_GUIDE_HIT |
 | Adult | Luna Star | custom.24-7-xxx-luna-star | - | NO_GUIDE_HIT |
 | Adult | m3u.Com Anal | custom.adultm3u-com-anal | - | NO_GUIDE_HIT |
@@ -278,29 +239,12 @@ The table includes every active channel identity without usable current/future g
 | Adult | m3u.Com Russian | custom.adultm3u-com-russian | - | NO_GUIDE_HIT |
 | Adult | m3u.Com Threesome | custom.adultm3u-com-threesome | - | NO_GUIDE_HIT |
 | Adult | Mature | custom.24-7-xxx-mature | - | NO_GUIDE_HIT |
-| Adult | Mctv Anal | custom.xxx-mctv-anal | - | NO_GUIDE_HIT |
 | Adult | Mctv Big Dick | custom.xxx-mctv-big-dick | - | NO_GUIDE_HIT |
 | Adult | Mctv Big Tits | custom.xxx-mctv-big-tits | - | NO_GUIDE_HIT |
-| Adult | Mctv Blonde | custom.xxx-mctv-blonde | - | NO_GUIDE_HIT |
-| Adult | Mctv Blowjob | custom.xxx-mctv-blowjob | - | NO_GUIDE_HIT |
-| Adult | Mctv Brunette | custom.xxx-mctv-brunette | - | NO_GUIDE_HIT |
-| Adult | Mctv Compilation | custom.xxx-mctv-compilation | - | NO_GUIDE_HIT |
-| Adult | Mctv Cuckold | custom.xxx-mctv-cuckold | - | NO_GUIDE_HIT |
-| Adult | Mctv Fetish | custom.xxx-mctv-fetish | - | NO_GUIDE_HIT |
-| Adult | Mctv Gangbang | custom.xxx-mctv-gangbang | - | NO_GUIDE_HIT |
-| Adult | Mctv Gay | custom.xxx-mctv-gay | - | NO_GUIDE_HIT |
-| Adult | Mctv Hardcore | custom.xxx-mctv-hardcore | - | NO_GUIDE_HIT |
-| Adult | Mctv Milf | custom.xxx-mctv-milf | - | NO_GUIDE_HIT |
 | Adult | Mctv Pornstar | custom.xxx-mctv-pornstar | - | NO_GUIDE_HIT |
 | Adult | Mctv Rough | custom.xxx-mctv-rough | - | NO_GUIDE_HIT |
-| Adult | Mctv Russian | custom.xxx-mctv-russian | - | NO_GUIDE_HIT |
-| Adult | Mctv Threesome | custom.xxx-mctv-threesome | - | NO_GUIDE_HIT |
-| Adult | Mctv Woman | custom.xxx-mctv-woman | - | NO_GUIDE_HIT |
 | Adult | Mia Khalifa | custom.24-7-xxx-mia-khalifa | - | NO_GUIDE_HIT |
-| Adult | Mia Khalifa | custom.xxx-mia-khalifa | - | NO_GUIDE_HIT |
-| Adult | Miami Tv Jenny Live [Not 24/7] | custom.xxx-miami-tv-jenny-live-not-24-7 | - | NO_GUIDE_HIT |
 | Adult | Milf | custom.adultm3u-com-milf | - | NO_GUIDE_HIT |
-| Adult | Milf | custom.xxx-milf | - | NO_GUIDE_HIT |
 | Adult | Milfs | custom.24-7-xxx-milfs | - | NO_GUIDE_HIT |
 | Adult | Milfs Stepmom | custom.24-7-xxx-milfs-stepmom | - | NO_GUIDE_HIT |
 | Adult | Mom Lovers | custom.24-7-xxx-mom-lovers | - | NO_GUIDE_HIT |
@@ -308,7 +252,6 @@ The table includes every active channel identity without usable current/future g
 | Adult | My Dirty Maid | custom.24-7-xxx-my-dirty-maid | - | NO_GUIDE_HIT |
 | Adult | My FIrst Sex Teacher | custom.24-7-xxx-my-first-sex-teacher | - | NO_GUIDE_HIT |
 | Adult | My Friends Hot Mom | custom.24-7-xxx-my-friends-hot-mom | - | NO_GUIDE_HIT |
-| Adult | My Pervy Family | custom.xxx-my-pervy-family | - | NO_GUIDE_HIT |
 | Adult | MyCam TV Anal | MyCamTVAnal.cy | - | NO_GUIDE_HIT |
 | Adult | MyCam TV Blowjob | MyCamTVBlowjob.cy | - | NO_GUIDE_HIT |
 | Adult | MyCam TV MILF | MyCamTVMILF.cy | - | NO_GUIDE_HIT |
@@ -335,40 +278,30 @@ The table includes every active channel identity without usable current/future g
 | Adult | Penthouse Black | PenthouseBlack.us | - | NO_GUIDE_HIT |
 | Adult | Penthouse Naughty Nights | PenthouseNaughtyNights.us | - | NO_GUIDE_HIT |
 | Adult | Penthouse Passion | PenthousePassion.us | - | NO_GUIDE_HIT |
-| Adult | Penthouse Passion | custom.xxx-penthouse-passion | - | NO_GUIDE_HIT |
-| Adult | Penthouse Quickies | custom.xxx-penthouse-quickies | - | NO_GUIDE_HIT |
 | Adult | Penthouse Reality TV | PenthouseRealityTV.us | - | NO_GUIDE_HIT |
 | Adult | Penthouse TV | custom.penthouse-tv | - | NO_GUIDE_HIT |
 | Adult | Pink Erotic 1 | custom.pink-erotic-1 | - | NO_GUIDE_HIT |
-| Adult | Pink Erotic 1 | custom.xxx-pink-erotic-1 | - | NO_GUIDE_HIT |
-| Adult | Pink Erotic 2 | custom.pink-erotic-2 | - | NO_GUIDE_HIT |
 | Adult | Pink Erotic 2 | custom.xxx-pink-erotic-2 | - | NO_GUIDE_HIT |
-| Adult | Pink Erotic 3 | custom.pink-erotic-3 | - | NO_GUIDE_HIT |
 | Adult | Pink Erotic 3 | custom.xxx-pink-erotic-3 | - | NO_GUIDE_HIT |
 | Adult | Pink Erotic 4 | custom.xxx-pink-erotic-4 | - | NO_GUIDE_HIT |
-| Adult | Pink Erotic 5 | custom.pink-erotic-5 | - | NO_GUIDE_HIT |
 | Adult | Pink Erotic 5 | custom.xxx-pink-erotic-5 | - | NO_GUIDE_HIT |
 | Adult | Pink Erotic 6 | custom.xxx-pink-erotic-6 | - | NO_GUIDE_HIT |
-| Adult | Pink Erotic 7 | custom.pink-erotic-7 | - | NO_GUIDE_HIT |
 | Adult | Pink Erotic 7 | custom.xxx-pink-erotic-7 | - | NO_GUIDE_HIT |
-| Adult | Pink Erotic 8 | custom.pink-erotic-8 | - | NO_GUIDE_HIT |
 | Adult | Pink Erotic 8 | custom.xxx-pink-erotic-8 | - | NO_GUIDE_HIT |
-| Adult | Pink O Tv | custom.xxx-pink-o-tv | - | NO_GUIDE_HIT |
 | Adult | PORNBOX 4K: BAEB | custom.pornbox-4k-baeb | - | NO_GUIDE_HIT |
 | Adult | PORNBOX 4K: BBC PIE | custom.pornbox-4k-bbc-pie | - | NO_GUIDE_HIT |
-| Adult | PORNBOX 4K: CUM 4K | custom.pornbox-4k-cum-4k | - | NO_GUIDE_HIT |
+| Adult | PORNBOX 4K: CUM | custom.pornbox-4k-cum-4k | - | NO_GUIDE_HIT |
 | Adult | PORNBOX 4K: GIRL CUM | custom.pornbox-4k-girl-cum | - | NO_GUIDE_HIT |
 | Adult | PORNBOX 4K: JAYS POV | custom.pornbox-4k-jays-pov | - | NO_GUIDE_HIT |
 | Adult | PORNBOX 4K: LUBED PORN | custom.pornbox-4k-lubed-porn | - | NO_GUIDE_HIT |
 | Adult | PORNBOX 4K: NANNY SPY | custom.pornbox-4k-nanny-spy | - | NO_GUIDE_HIT |
 | Adult | PORNBOX 4K: SPANK MONSTER | custom.pornbox-4k-spank-monster | - | NO_GUIDE_HIT |
 | Adult | PORNBOX 4K: SPY FAM | custom.pornbox-4k-spy-fam | - | NO_GUIDE_HIT |
-| Adult | PORNBOX 4K: TINY 4K | custom.pornbox-4k-tiny-4k | - | NO_GUIDE_HIT |
+| Adult | PORNBOX 4K: TINY | custom.pornbox-4k-tiny-4k | - | NO_GUIDE_HIT |
 | Adult | PORNBOX GAY: BEEFCAKE HUNTER | custom.pornbox-gay-beefcake-hunter | - | NO_GUIDE_HIT |
 | Adult | PORNBOX GAY: BOY FUN | custom.pornbox-gay-boy-fun | - | NO_GUIDE_HIT |
 | Adult | PORNBOX GAY: MAN | custom.pornbox-gay-man | - | NO_GUIDE_HIT |
 | Adult | PORNBOX: 1111 CUSTOMS | custom.pornbox-1111-customs | - | NO_GUIDE_HIT |
-| Adult | PORNBOX: A GIRL KNOWS | custom.pornbox-a-girl-knows | - | NO_GUIDE_HIT |
 | Adult | PORNBOX: ADULT TIME | custom.pornbox-adult-time | - | NO_GUIDE_HIT |
 | Adult | PORNBOX: ALEX LEGEND | custom.pornbox-alex-legend | - | NO_GUIDE_HIT |
 | Adult | PORNBOX: ALL GROUP SEX | custom.pornbox-all-group-sex | - | NO_GUIDE_HIT |
@@ -469,23 +402,16 @@ The table includes every active channel identity without usable current/future g
 | Adult | PORNBOX: TWISTY | custom.pornbox-twisty | - | NO_GUIDE_HIT |
 | Adult | Pornstar | custom.xxx-pornstar | - | NO_GUIDE_HIT |
 | Adult | POV | custom.24-7-xxx-pov | - | NO_GUIDE_HIT |
-| Adult | POV | custom.xxx-pov | - | NO_GUIDE_HIT |
 | Adult | Princess Cum | custom.xxx-princess-cum | - | NO_GUIDE_HIT |
-| Adult | Public Agent | custom.xxx-public-agent | - | NO_GUIDE_HIT |
 | Adult | Pure Taboo | custom.24-7-xxx-pure-taboo | - | NO_GUIDE_HIT |
-| Adult | Puretaboo | custom.xxx-puretaboo | - | NO_GUIDE_HIT |
 | Adult | Rated | custom.24-7-xxx-rated | - | NO_GUIDE_HIT |
 | Adult | Rated 3 | custom.24-7-xxx-rated-3 | - | NO_GUIDE_HIT |
 | Adult | Real Wife Stories | custom.xxx-real-wife-stories | - | NO_GUIDE_HIT |
 | Adult | Riley Reid | custom.24-7-xxx-riley-reid | - | NO_GUIDE_HIT |
-| Adult | Rouge Tv | custom.xxx-rouge-tv | - | NO_GUIDE_HIT |
 | Adult | Rough | custom.xxx-rough | - | NO_GUIDE_HIT |
 | Adult | Russian | custom.xxx-russian | - | NO_GUIDE_HIT |
 | Adult | Russian Night | custom.xxx-russian-night | - | NO_GUIDE_HIT |
-| Adult | Sexto Senso | custom.xxx-sexto-senso | - | NO_GUIDE_HIT |
 | Adult | Sexto Sento | custom.xxx-sexto-sento | - | NO_GUIDE_HIT |
-| Adult | Sextreme | custom.xxx-sextreme | - | NO_GUIDE_HIT |
-| Adult | Sexy Hot | custom.xxx-sexy-hot | - | NO_GUIDE_HIT |
 | Adult | ShopLyfter | custom.24-7-xxx-shoplyfter | - | NO_GUIDE_HIT |
 | Adult | STARS EXCLUSIVE: ABELLA DANGER | custom.stars-exclusive-abella-danger | - | NO_GUIDE_HIT |
 | Adult | STARS EXCLUSIVE: ADRIANA CHECHIK | custom.stars-exclusive-adriana-chechik | - | NO_GUIDE_HIT |
@@ -513,13 +439,11 @@ The table includes every active channel identity without usable current/future g
 | Adult | STARS EXCLUSIVE: VALENTINA NAPPI | custom.stars-exclusive-valentina-nappi | - | NO_GUIDE_HIT |
 | Adult | Strap on | custom.24-7-xxx-strap-on | - | NO_GUIDE_HIT |
 | Adult | Swallowed | custom.24-7-xxx-swallowed | - | NO_GUIDE_HIT |
-| Adult | Taboo | custom.xxx-taboo | - | NO_GUIDE_HIT |
 | Adult | Teen Red TV | custom.xxx-teen-red-tv | - | NO_GUIDE_HIT |
 | Adult | Threesome | custom.xxx-threesome | - | NO_GUIDE_HIT |
-| Adult | Tiny 4k | custom.xxx-tiny-4k | - | NO_GUIDE_HIT |
+| Adult | Tiny | custom.xxx-tiny-4k | - | NO_GUIDE_HIT |
 | Adult | Trans | custom.24-7-xxx-trans | - | NO_GUIDE_HIT |
 | Adult | True Anal | custom.24-7-xxx-true-anal | - | NO_GUIDE_HIT |
-| Adult | True Anal | custom.xxx-true-anal | - | NO_GUIDE_HIT |
 | Adult | Uniform | custom.24-7-xxx-uniform | - | NO_GUIDE_HIT |
 | Adult | VERIFIED AMATEURS: BIGTITTYGOTHEGG | custom.verified-amateurs-bigtittygothegg | - | NO_GUIDE_HIT |
 | Adult | VERIFIED AMATEURS: CARLACUTE | custom.verified-amateurs-carlacute | - | NO_GUIDE_HIT |
@@ -550,36 +474,59 @@ The table includes every active channel identity without usable current/future g
 | Adult | Vivid TV Europe | VividTVEurope.uk | - | NO_GUIDE_HIT |
 | Adult | Vixen | custom.vixen | - | NO_GUIDE_HIT |
 | Adult | Wank It Now | custom.xxx-wank-it-now | - | NO_GUIDE_HIT |
-| Adult | XXL | custom.xxx-xxl | - | NO_GUIDE_HIT |
 | Adult | Xy Max | custom.xxx-xy-max | - | NO_GUIDE_HIT |
-| Adult | XY Mix | custom.xxx-xy-mix | - | NO_GUIDE_HIT |
-| Adult | XY Plus | custom.xxx-xy-plus | - | NO_GUIDE_HIT |
-| Argentina | Disney Channel Latin America (1080p) | DisneyChannelLatinAmerica.ar@Panregional | - | NO_GUIDE_HIT |
-| Argentina | Disney Channel Latin America Center (1080p) | DisneyChannelLatinAmerica.ar@Center | - | NO_GUIDE_HIT |
-| Argentina | Disney Channel Latin America Mexico (720p) | DisneyChannelLatinAmerica.ar@Mexico | - | NO_GUIDE_HIT |
-| Argentina | Disney Channel Latin America North (576p) | DisneyChannelLatinAmerica.ar@North | - | NO_GUIDE_HIT |
-| Argentina | Disney Channel Latin America Panregional HD (1080p) | DisneyChannelLatinAmerica.ar@PanregionalHD | - | NO_GUIDE_HIT |
-| Argentina | Disney Channel Latin America South | DisneyChannelLatinAmerica.ar@South | - | NO_GUIDE_HIT |
-| Argentina | Disney Jr. Latin America (1080p) | DisneyJrLatinAmerica.ar@North | - | NO_GUIDE_HIT |
-| Argentina | Disney Jr. Latin America North HD (1080p) | DisneyJrLatinAmerica.ar@NorthHD | - | NO_GUIDE_HIT |
-| Argentina | Disney Jr. Latin America South (1080p) | DisneyJrLatinAmerica.ar@South | - | NO_GUIDE_HIT |
-| Argentina | Garage TV Latin America | GarageTVLatinAmerica.ar@SD | - | NO_GUIDE_HIT |
-| Argentina | LAMIL35 TV (720p) | LAMIL35TV.ar@SD | - | NO_GUIDE_HIT |
-| Argentina | Plim Plim (1080p) | PlimPlim.ar@SD | - | NO_GUIDE_HIT |
-| Argentina | Xtrema Cartoons | XtremaCartoons.ar@SD | - | NO_GUIDE_HIT |
-| Backups | Asian Sony Max 2 | custom.asian-sony-max-2 | - | NO_GUIDE_HIT |
-| Backups | Nick Jr East | custom.nick-jr-east | - | NO_GUIDE_HIT |
-| Backups | Peace TV | custom.peace-tv-tw8cm | - | NO_GUIDE_HIT |
+| Argentina | Allegro | AllegroHD.ar@SD | - | NO_GUIDE_HIT |
+| Argentina | Azahares Radiovisual Multimedia | AzaharesRadiovisualMultimedia.ar@SD | - | NO_GUIDE_HIT |
+| Argentina | Beats Radio | BeatsRadio.ar@SD | - | NO_GUIDE_HIT |
+| Argentina | Chamame TV | ChamameTV.ar@SD | - | NO_GUIDE_HIT |
+| Argentina | Cumbia Mix | CumbiaMix.ar@HD | - | NO_GUIDE_HIT |
+| Argentina | La 100 | La100.ar@SD | - | NO_GUIDE_HIT |
+| Argentina | Mas FM | MasFM.ar@SD | - | NO_GUIDE_HIT |
+| Argentina | Quiero Musica en mi Idioma | QuieroMusicaenmiIdioma.ar@SD | - | NO_GUIDE_HIT |
+| Argentina | Radio Conexion Web TV | RadioConexionWebTV.ar@SD | - | NO_GUIDE_HIT |
+| Argentina | Radio Realpolitik | RadioRealpolitik.ar@SD | - | NO_GUIDE_HIT |
+| Argentina | Rock & Pop | RockPop.ar@SD | - | NO_GUIDE_HIT |
+| Argentina | X Level Media | XLevelMedia.ar@SD | - | NO_GUIDE_HIT |
+| Argentina | Xtrema Accion | XtremaAccion.ar@SD | - | NO_GUIDE_HIT |
+| Argentina | Xtrema Cine Clasico | XtremaCineClasico.ar@SD | - | NO_GUIDE_HIT |
+| Argentina | Xtrema Terror | XtremaTerror.ar@SD | - | NO_GUIDE_HIT |
+| Austria | Antenne Kaernten | AntenneKaernten.at@SD | - | NO_GUIDE_HIT |
+| Austria | Antenne Steiermark | AntenneSteiermark.at@SD | - | NO_GUIDE_HIT |
+| Austria | Antenne Vorarlberg [ ] | AntenneVorarlberg.at@SD | - | NO_GUIDE_HIT |
+| Austria | ServusTV | ServusTV.at@SD | - | NO_GUIDE_HIT |
+| Backups | Sony Entertainment Television | SonyEntertainmentTelevision.in@HD | Sony.Entertainment.Television.in | MAPPED_ID_ONLY |
+| Backups | Bang Bus | custom.xxx-bang-bus | - | NO_GUIDE_HIT |
+| Backups | Big Ass | custom.xxx-big-ass | - | NO_GUIDE_HIT |
+| Backups | Big Tits | custom.xxx-big-tits | - | NO_GUIDE_HIT |
+| Backups | Blonde | custom.xxx-blonde | - | NO_GUIDE_HIT |
+| Backups | Brunette | custom.xxx-brunette | - | NO_GUIDE_HIT |
+| Backups | Cinemax Latin America | CinemaxLatinAmerica.us@SD | - | NO_GUIDE_HIT |
+| Backups | Cuckold | custom.xxx-cuckold | - | NO_GUIDE_HIT |
+| Backups | Evil Angel | custom.evil-angel | - | NO_GUIDE_HIT |
+| Backups | Evil Angel | custom.xxx-evil-angel-hd | - | NO_GUIDE_HIT |
+| Backups | Glory Hole | custom.xxx-glory-hole | - | NO_GUIDE_HIT |
+| Backups | Hardcore | custom.xxx-hardcore | - | NO_GUIDE_HIT |
+| Backups | Latina | custom.xxx-latina | - | NO_GUIDE_HIT |
+| Backups | Live Cams | custom.xxx-live-cams | - | NO_GUIDE_HIT |
+| Backups | Mia Khalifa | custom.xxx-mia-khalifa | - | NO_GUIDE_HIT |
+| Backups | Milf | custom.xxx-milf | - | NO_GUIDE_HIT |
+| Backups | Nano | Nano.ru@SD | - | NO_GUIDE_HIT |
+| Backups | Pink Erotic 2 | custom.pink-erotic-2 | - | NO_GUIDE_HIT |
+| Backups | Pink Erotic 3 | custom.pink-erotic-3 | - | NO_GUIDE_HIT |
+| Backups | Pink Erotic 5 | custom.pink-erotic-5 | - | NO_GUIDE_HIT |
+| Backups | Pink Erotic 7 | custom.pink-erotic-7 | - | NO_GUIDE_HIT |
+| Backups | Pink Erotic 8 | custom.pink-erotic-8 | - | NO_GUIDE_HIT |
+| Backups | POV | custom.xxx-pov | - | NO_GUIDE_HIT |
 | Backups | Quran | custom.quran-brqze | - | NO_GUIDE_HIT |
 | Backups | Quran | custom.quran-w3y9b | - | NO_GUIDE_HIT |
-| Backups | Sananda TV | custom.sananda-tv-16g2i | - | NO_GUIDE_HIT |
-| Backups | Tiny 4K UHD | custom.xxx-tiny-4k-uhd | - | NO_GUIDE_HIT |
-| Backups | Музыка 1 International | Kino1International.ru | - | NO_GUIDE_HIT |
+| Backups | Rajdhani TV | RajdhaniTV.bd@SD | - | NO_GUIDE_HIT |
+| Backups | Smurf TV | SmurfTV.us@SD | - | NO_GUIDE_HIT |
+| Backups | True Anal | custom.xxx-true-anal | - | NO_GUIDE_HIT |
+| Backups | viju+ Sport | vijuPlusSport.ru@SD | - | NO_GUIDE_HIT |
 | Bangladesh | Ananda TV | AnandaTV.bd | - | NO_GUIDE_HIT |
-| Bangladesh | Ananda TV (480p) | AnandaTV.bd@SD | - | NO_GUIDE_HIT |
 | Bangladesh | Asian TV | AsianTV.bd | - | NO_GUIDE_HIT |
 | Bangladesh | ATN Bangla | ATNBangla.bd | - | NO_GUIDE_HIT |
-| Bangladesh | ATN Music (360p) | ATNMusic.bd@SD | - | NO_GUIDE_HIT |
+| Bangladesh | ATN Bangla | ATNBangla.bd@SD | - | NO_GUIDE_HIT |
 | Bangladesh | ATN News | ATNNews.bd | - | NO_GUIDE_HIT |
 | Bangladesh | Bangla TV | BanglaTV.bd | - | NO_GUIDE_HIT |
 | Bangladesh | Bangla Vision | BanglaVision.bd | - | NO_GUIDE_HIT |
@@ -617,7 +564,7 @@ The table includes every active channel identity without usable current/future g
 | Bangladesh | GAZI TV HD | custom.bdix.gazi | - | NO_GUIDE_HIT |
 | Bangladesh | Global TV | GlobalTV.bd | - | NO_GUIDE_HIT |
 | Bangladesh | Green TV | GreenTV.bd | - | NO_GUIDE_HIT |
-| Bangladesh | Green TV (1080p) | GreenTV.bd@SD | - | NO_GUIDE_HIT |
+| Bangladesh | Green TV | GreenTV.bd@SD | - | NO_GUIDE_HIT |
 | Bangladesh | Independent TV | IndependentTV.bd | - | NO_GUIDE_HIT |
 | Bangladesh | Jago News 24 | JagoNews24.bd | - | NO_GUIDE_HIT |
 | Bangladesh | Jalsha Bangla BD | JalshaBanglaBD.bd | - | NO_GUIDE_HIT |
@@ -625,20 +572,25 @@ The table includes every active channel identity without usable current/future g
 | Bangladesh | Jonmobhumi TV | JonmobhumiTV.bd | - | NO_GUIDE_HIT |
 | Bangladesh | Maasranga TV | MaasrangaTV.bd | - | NO_GUIDE_HIT |
 | Bangladesh | Matribhumi TV | MatribhumiTV.bd | - | NO_GUIDE_HIT |
+| Bangladesh | Matribhumi TV | MatribhumiTV.bd@HD | - | NO_GUIDE_HIT |
 | Bangladesh | ME TV | METV.bd | - | NO_GUIDE_HIT |
 | Bangladesh | Mohona TV | MohonaTV.bd | - | NO_GUIDE_HIT |
 | Bangladesh | Movie Bangla | MovieBangla.bd | - | NO_GUIDE_HIT |
 | Bangladesh | Movie Bangla | MovieBangla.bd@SD | - | NO_GUIDE_HIT |
 | Bangladesh | My TV | MyTV.bd | - | NO_GUIDE_HIT |
+| Bangladesh | My TV (Bangladesh) | MyTV.bd@SD | - | NO_GUIDE_HIT |
 | Bangladesh | Nagorik TV | NagorikTV.bd | - | NO_GUIDE_HIT |
 | Bangladesh | News 21 | News21BanglaTV.bd@SD | - | NO_GUIDE_HIT |
 | Bangladesh | News 24 | News24.bd | - | NO_GUIDE_HIT |
 | Bangladesh | Nexus TV | NexusTV.bd | - | NO_GUIDE_HIT |
+| Bangladesh | Nexus TV | NexusTV.bd@SD | - | NO_GUIDE_HIT |
 | Bangladesh | NRB TV | NRBTV.ca | - | NO_GUIDE_HIT |
 | Bangladesh | NTV | NTV-IN | - | NO_GUIDE_HIT |
 | Bangladesh | NTV | NTV.bd | - | NO_GUIDE_HIT |
 | Bangladesh | Rajdhani TV | RajdhaniTV.bd | - | NO_GUIDE_HIT |
+| Bangladesh | Rajdhani TV | custom.rajdhani | - | NO_GUIDE_HIT |
 | Bangladesh | RTV | RTV.bd | - | NO_GUIDE_HIT |
+| Bangladesh | RTV (Bangladesh) | RTV.bd@SD | - | NO_GUIDE_HIT |
 | Bangladesh | Rupashi Bangla TV | RupashiBanglaTV.bd@SD | - | NO_GUIDE_HIT |
 | Bangladesh | SA TV | SATV.bd | - | NO_GUIDE_HIT |
 | Bangladesh | SATV HD | custom.bdix.satv | - | NO_GUIDE_HIT |
@@ -649,68 +601,255 @@ The table includes every active channel identity without usable current/future g
 | Bangladesh | TBN24 | TBN24.us | - | NO_GUIDE_HIT |
 | Bangladesh | Thikana | ThikanaTV.us | - | NO_GUIDE_HIT |
 | Bangladesh | Time Television | TimeTelevision.us | - | NO_GUIDE_HIT |
-| Brazil | AWTV (1080p) [Geo-blocked] | AWTV.br@HD | - | NO_GUIDE_HIT |
-| Brazil | Geekdot (720p) | Geekdot.br@SD | - | NO_GUIDE_HIT |
-| Brazil | Laboral TV (360p) | LaboralTV.br@SD | - | NO_GUIDE_HIT |
-| Brazil | NickOnline Bob Esponja (720p) [Not 24/7] | NickOnlineBobEsponja.br@HD | - | NO_GUIDE_HIT |
-| Brazil | NickOnline HD (720p) | NickOnline.br@HD | - | NO_GUIDE_HIT |
-| China | CCTV-11 | CCTV11.cn | - | NO_GUIDE_HIT |
-| China | CCTV-2 (720p) | CCTV2.cn@SD | - | NO_GUIDE_HIT |
-| China | CGTN Global Biz (1080p) | CGTNGlobalBiz.cn@SD | - | NO_GUIDE_HIT |
-| China | Golden Eagle Cartoon (576p) | GoldenEagleCartoon.cn@SD | - | NO_GUIDE_HIT |
-| China | Guangxi Variety & Travel Channel | GuangxiVarietyTravelChannel.cn | - | NO_GUIDE_HIT |
-| China | Jiangxi Children's Channel | JiangxiChildrensChannel.cn@SD | - | NO_GUIDE_HIT |
-| China | Jiangxi Economy & Life Channel | JiangxiEconomyLifeChannel.cn@SD | - | NO_GUIDE_HIT |
-| China | Xi'an Business Information Channel (180p) [Not 24/7] | XianBusinessInformationChannel.cn@SD | - | NO_GUIDE_HIT |
-| China | Xuzhou Economic Life Channel (1080p) | XuzhouEconomicLifeChannel.cn@SD | - | NO_GUIDE_HIT |
-| China | You Man Cartoon Channel (576p) | YouManCartoonChannel.cn@SD | - | NO_GUIDE_HIT |
+| Brazil | +MaisUm | PlusMaisUm.br@HD | - | NO_GUIDE_HIT |
+| Brazil | Adrenalina Pura TV Brazil | AdrenalinaPuraTV.us@Brazil | - | NO_GUIDE_HIT |
+| Brazil | AMC Latin America Brazil | AMCLatinAmerica.us@Brazil | - | NO_GUIDE_HIT |
+| Brazil | CINDIE TV | CINDIETV.br@HD | - | NO_GUIDE_HIT |
+| Brazil | Classique TV | ClassiqueTV.br@SD | - | NO_GUIDE_HIT |
+| Brazil | KpopTV Play | KpopTVPlay.br@SD | - | NO_GUIDE_HIT |
+| Brazil | Lamore Rock Show WebTV | LamoreRockShowWebTV.br@SD | - | NO_GUIDE_HIT |
+| Brazil | MyTime Movie Network (Brazil) | MyTimeMovieNetwork.br@SD | - | NO_GUIDE_HIT |
+| Brazil | TikTok Radio Brasil | TikTokRadioBrasil.br@HD | - | NO_GUIDE_HIT |
+| Bulgaria | cine.box | cinebox.bg@SD | - | NO_GUIDE_HIT |
+| Bulgaria | City TV (Bulgaria) | CityTV.bg@SD | - | NO_GUIDE_HIT |
+| Bulgaria | DSTV (Bulgaria) | DSTV.bg@SD | - | NO_GUIDE_HIT |
+| Bulgaria | Magic TV (Bulgaria) | MagicTV.bg@SD | - | NO_GUIDE_HIT |
+| Bulgaria | Tiankov Folk | TiankovFolk.bg@SD | - | NO_GUIDE_HIT |
+| Bulgaria | Tiankov Orient Folk | TiankovOrientFolk.bg@SD | - | NO_GUIDE_HIT |
+| Bulgaria | TV1000 | TV1000.bg@SD | - | NO_GUIDE_HIT |
+| Canada | Afghan Nobel Movies | AfghanNobelMovies.ca@SD | - | NO_GUIDE_HIT |
+| Canada | CKNO-FM | CKNOFM.ca@SD | - | NO_GUIDE_HIT |
+| Canada | Pamir TV | PamirTV.ca@SD | - | NO_GUIDE_HIT |
+| Canada | Stingray Everything '80s | StingrayEverything80s.ca@SD | - | NO_GUIDE_HIT |
+| Canada | Stingray Holiday Hits | StingrayHolidayHits.ca@SD | - | NO_GUIDE_HIT |
+| Canada | Stingray TikTok Radio | StingrayTikTokRadio.ca@HD | - | NO_GUIDE_HIT |
+| Chile | 13 Festival | 13Festival.cl@SD | - | NO_GUIDE_HIT |
+| Chile | AE Radio TV | AERadioTV.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Chocolate FM | ChocolateFM.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Dance FM | DanceFM.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Genial TV | GenialTV.cl@SD | - | NO_GUIDE_HIT |
+| Chile | La Clave | LaClave.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Patagonia Radio TV | PatagoniaRadioTV.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Pauta | Pauta.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Radio Duna | RadioDuna.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Radio Edelweiss | RadioEdelweiss.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Radio La Serena TV | RadioLaSerenaTV.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Radio Pudahuel | RadioPudahuel.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Radio Suyai TV | RadioSuyaiTV.cl@HD | - | NO_GUIDE_HIT |
+| Chile | Radio Zona 90.3 | RadioZona903.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Retro Plus | RetroPlus.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Retro Plus 2 | RetroPlus2.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Retro Plus 3 | RetroPlus3.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Retromusica Television | RetromusicaTelevision.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Ritoque TV | RitoqueTV.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Sabor TV | SaborTV.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Sensacion Costa | SensacionCosta.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Solo Bailalo | SoloBailalo.cl@SD | - | NO_GUIDE_HIT |
+| Chile | Star Channel (Chile) | StarChannel.cl@SD | - | NO_GUIDE_HIT |
+| Chile | TCM Latin America Chile | TCMLatinAmerica.us@Chile | - | NO_GUIDE_HIT |
+| Chile | Teleangol Radio | TeleangolRadio.cl@SD | - | NO_GUIDE_HIT |
+| Chile | V Classic TV | VClassicTV.cl@SD | - | NO_GUIDE_HIT |
+| China | CCTV-11 | CCTV11.cn@SD | - | NO_GUIDE_HIT |
+| China | CCTV-15 | CCTV15.cn@SD | - | NO_GUIDE_HIT |
+| China | CCTV-6 | CCTV6.cn@HD | - | NO_GUIDE_HIT |
+| China | CCTV-Storm Music | CCTVStormMusic.cn@HD | - | NO_GUIDE_HIT |
+| China | CCTV-Storm Theater | CCTVStormTheater.cn@HD | - | NO_GUIDE_HIT |
+| China | CCTV-The First Theater | CCTVTheFirstTheater.cn@HD | - | NO_GUIDE_HIT |
+| China | Harbin Movie Channel | HarbinMovieChannel.cn@SD | - | NO_GUIDE_HIT |
+| Colombia | Buenisima Radio TV | BuenisimaRadioTV.co@SD | - | NO_GUIDE_HIT |
+| Colombia | Claro Musica TV | ClaroMusicaTV.co@SD | - | NO_GUIDE_HIT |
+| Colombia | Fiesta TV | FiestaTV.co@SD | - | NO_GUIDE_HIT |
+| Colombia | La Morada Radio TV | LaMoradaRadioTV.co@SD | - | NO_GUIDE_HIT |
+| Colombia | MasMusica FM | MasMusicaFM.co@SD | - | NO_GUIDE_HIT |
+| Colombia | MCI Television | MCITelevision.co@SD | - | NO_GUIDE_HIT |
+| Colombia | Parranda Vallenata | ParrandaVallenata.co@SD | - | NO_GUIDE_HIT |
+| Colombia | Radiola TV | RadiolaTV.co@SD | - | NO_GUIDE_HIT |
+| Colombia | Ranchenato TV | RanchenatoTV.co@SD | - | NO_GUIDE_HIT |
+| Colombia | Reyali | Reyali.co@SD | - | NO_GUIDE_HIT |
+| Colombia | Rumba TV | RumbaTV.co@SD | - | NO_GUIDE_HIT |
+| Colombia | Salsa Gorda Television | SalsaGordaTelevision.co@SD | - | NO_GUIDE_HIT |
+| Colombia | Star Channel (Colombia) | StarChannel.co@SD | - | NO_GUIDE_HIT |
+| Colombia | Supermusica TV | SupermusicaTV.co@SD | - | NO_GUIDE_HIT |
+| Colombia | Warner Channel Colombia | WarnerChannel.us@Colombia | - | NO_GUIDE_HIT |
+| Czech Republic | Music Box Classic | MusicBoxClassic.cz@SD | Music.Box.Classic.cz | MAPPED_ID_ONLY |
+| Czech Republic | Music Box Dance | MusicBoxDance.cz@SD | Music.Box.Dance.cz | MAPPED_ID_ONLY |
+| Czech Republic | Music Box Hits | MusicBoxHits.cz@SD | Music.Box.Hits.cz | MAPPED_ID_ONLY |
+| Czech Republic | AMC Europe Czech Republic | AMCEurope.uk@CzechRepublic | - | NO_GUIDE_HIT |
+| Czech Republic | AXN Black (United States) Czech Republic | AXNBlack.us@CzechRepublic | - | NO_GUIDE_HIT |
+| Czech Republic | AXN CEE Czech Republic | AXNCEE.es@CzechRepublic | - | NO_GUIDE_HIT |
+| Czech Republic | Cinemax (Czech Republic) | Cinemax.cz@Czechia | - | NO_GUIDE_HIT |
+| Czech Republic | Film+ (Czech Republic) | FilmPlus.cz@SD | - | NO_GUIDE_HIT |
+| Czech Republic | FILMBOX+ Comedy Czechia | FILMBOXPlusComedy.pl@Czechia | - | NO_GUIDE_HIT |
+| Czech Republic | FILMBOX+ Emotion Czechia | FILMBOXPlusEmotion.pl@Czechia | - | NO_GUIDE_HIT |
+| Czech Republic | FILMBOX+ Hits Czechia | FILMBOXPlusHits.pl@Czechia | - | NO_GUIDE_HIT |
+| Czech Republic | FILMBOX+ One Czechia | FILMBOXPlusOne.pl@Czechia | - | NO_GUIDE_HIT |
+| Czech Republic | Kino Barrandov | KinoBarrandov.cz@SD | - | NO_GUIDE_HIT |
+| Czech Republic | Ocko | Ocko.cz@SD | - | NO_GUIDE_HIT |
+| Czech Republic | Ocko Black | OckoBlack.cz@SD | - | NO_GUIDE_HIT |
+| Czech Republic | Ocko Expres | OckoExpres.cz@SD | - | NO_GUIDE_HIT |
+| Czech Republic | Ocko Gold | OckoGold.cz@SD | - | NO_GUIDE_HIT |
+| Czech Republic | Ocko Star | OckoStar.cz@SD | - | NO_GUIDE_HIT |
+| Czech Republic | Slager Muzika | SlagerMuzika.cz@SD | - | NO_GUIDE_HIT |
+| Czech Republic | Slager Original | SlagerOriginal.cz@SD | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | 4K Travel | Travel.us | 4K.TRAVEL.TV.distro | MAPPED_ID_ONLY |
-| Documentary & Wildlife | National Geographic (India) (576p) [Geo-blocked] | NationalGeographic.in@SD | NATIONAL.GEOGRAPHIC.in | MAPPED_ID_ONLY |
-| Documentary & Wildlife | National Geographic (India) HD (1080p) | NationalGeographic.in@HD | NATIONAL.GEOGRAPHIC.in | MAPPED_ID_ONLY |
+| Documentary & Wildlife | CCTV-9 | CCTV9.cn@SD | CCTV9.cz | MAPPED_ID_ONLY |
+| Documentary & Wildlife | China Travel | ChinaTravel.cn@SD | China.Travel.distro | MAPPED_ID_ONLY |
+| Documentary & Wildlife | Discovering China | DiscoveringChina.cn@SD | Discovering.China.distro | MAPPED_ID_ONLY |
+| Documentary & Wildlife | Adventure Earth | AdventureEarth.de@SD | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | Adventure Earth | AdventureEarth.us | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | Alone | Alone.us | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | AlternaTV | AlternaTV.ar@SD | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | Amazing Discoveries TV | AmazingDiscoveriesTV.in | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Animal Planet (Hungary) | AnimalPlanet.hu@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Animal Planet (Russia) | AnimalPlanet.ru@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Animal Planet (United States) | AnimalPlanet.us@East | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Animal Planet Latin America | AnimalPlanetLatinAmerica.us@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Arsenal | Arsenal.ru@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Atlas | Atlas.us@SD | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | Autentic Adventure Earth | AutenticAdventureEarth.us | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | Autentic History | AutenticHistory.de | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Autentic History | AutenticHistory.de@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | BBC Earth Czechia | BBCEarth.uk@Czechia | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | BBC Earth Hungary | BBCEarth.uk@Hungary | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | BBC Earth US | BBCEarth.uk@US | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Better Life Nature Channel | BetterLifeNatureChannel.us@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | CCTV-Weapon & Technology | CCTVWeaponTechnology.cn@HD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | City Eden KinoDok | CityEdenKinoDok.ru@HD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | ClickTV Chile | ClickTVChile.cl@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | CNA Originals | CNAOriginals.sg@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Deadly Women | DeadlyWomen.us@UK | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Discovery Asia Taiwan | DiscoveryAsiaTaiwan.tw@SD | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | DISCOVERY BANGLA | custom.bdix.discoverybangla | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Discovery Channel (United States) | DiscoveryChannel.us@East | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Discovery Channel Latin America | DiscoveryChannelLatinAmerica.us@Panregional | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Discovery Science Latin America | DiscoveryScienceLatinAmerica.us@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Discovery Theater Latin America | DiscoveryTheaterLatinAmerica.us@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Discovery Turbo (Italy) | DiscoveryTurbo.it@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Discovery Turbo Latin America | DiscoveryTurboLatinAmerica.us@Panregional | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | Discovery Velocity | discoveryvelocity.us | - | NO_GUIDE_HIT |
-| Documentary & Wildlife | DocuBay TV (1080p) | DocuBayTV.in@SD | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | Documentary+ 2 | Documentary2.us | - | NO_GUIDE_HIT |
-| Documentary & Wildlife | Epic Crimes (1080p) | EpicCrimes.in@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Documentary+ International | DocumentaryPlus.us@International | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Ecovision | Ecovision.do@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | History (Brazil) | History.br@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | History (Czech Republic) | History.cz@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | History (Hungary) | History.hu@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | History (United States) | History.us@East | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | History 2 Latin America | History2LatinAmerica.us@Panregional | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | History 2 Latin America Brazil | History2LatinAmerica.us@Brazil | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | History Asia | HistoryAsia.us@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | History Latin America | HistoryLatinAmerica.us@Panregional | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | Inside Crime | InsideCrime.us | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Into Crime | IntoCrime.fr@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Investigation Discovery (Czech Republic) | InvestigationDiscovery.cz@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Investigation Discovery (Hungary) | InvestigationDiscovery.hu@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Investigation Discovery (United States) | InvestigationDiscovery.us@East | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Investigation Discovery Latin America South | InvestigationDiscoveryLatinAmerica.us@South | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Italiana | Italiana.it@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Love Nature en Espanol | LoveNatureenEspanol.us@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | MRTV Farmer | MRTVFarmer.mm@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | MWD Documentary | MWDDocumentary.mm@SD | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | Mystery TV | MysteryTV.us | - | NO_GUIDE_HIT |
-| Documentary & Wildlife | National Geographic Wild (India) HD (1080p) | NationalGeographicWild.in@HD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Nano | Nano.ru@HD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | National Geographic (Croatia) | NationalGeographic.hr@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | National Geographic (Czech Republic) | NationalGeographic.cz@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | National Geographic (Mexico) | NationalGeographic.mx@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | National Geographic (United States) | NationalGeographic.us@East | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | National Geographic (United States) HD East | NationalGeographic.us@HDEast | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | National Geographic Wild (United States) HD East | NationalGeographicWild.us@HDEast | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | NatureTime AU | NatureTime.ca@AU | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | NatureTime France | NatureTime.ca@France | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | O'zbekiston Tarixi | OzbekistonTarixi.uz@SD | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | PBS Arts | PBSArts.us | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Persiana Docs | PersianaDocs.fr@HD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Persiana Travel | PersianaTravel.fr@SD | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | RT Documentary | RTDocumentary.ru | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | RT Documentary | RTDocumentary.ru@English | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | RT Documentary Russian | RTDocumentary.ru@Russian | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Smotrim 100% Fakty | Smotrim100Fakty.ru@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Terra Mater WILD | TerraMaterWILD.de@German | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | Tochka.rf | Tochkarf.ru | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Total Crime | TotalCrime.ca@CA | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | Travel Channel East | travel.us | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | TVS Hollywood History | TVSHollywoodHistory.us@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | UMSA TVU Internacional | UMSATVUInternacional.bo@HD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Viasat Nature (Ukraine) | ViasatNature.ua@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | viju Explore | vijuExplore.ru@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | viju History | vijuHistory.ru@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | viju+ Planet | vijuPlusPlanet.ru@HD | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | Watch Mojo | WatchMojo.us | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | WaterBear | WaterBear.ch | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | WaterBear | WaterBear.ch@SD | - | NO_GUIDE_HIT |
+| Documentary & Wildlife | Wedo Big Stories | WedoBigStories.ch@SD | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | Wild Planet | WildPlanet.us | - | NO_GUIDE_HIT |
-| France | Gong (1080p) | Gong.fr@SD | - | NO_GUIDE_HIT |
-| France | P2M TV | P2MTV.fr | - | NO_GUIDE_HIT |
-| France | Sony One Favoris | SonyOneFavoris.fr | - | NO_GUIDE_HIT |
-| France | Sony One Hits Action | SonyOneHitsAction.fr | - | NO_GUIDE_HIT |
-| France | Sony One Hits Comedie | SonyOneHitsComedie.fr | - | NO_GUIDE_HIT |
-| Germany | Avatar (Germany) | Avatar.de@GB | - | NO_GUIDE_HIT |
-| Germany | Cin Cin | CinCin.de@IT | - | NO_GUIDE_HIT |
-| Germany | Pluto TV Adult Animation | PlutoTVAdultAnimation.de@DACH | - | NO_GUIDE_HIT |
-| Germany | Pluto TV Animation | PlutoTVAnimation.de@GB | - | NO_GUIDE_HIT |
-| Germany | Pluto TV Motor (Germany) | PlutoTVMotor.de@ES | - | NO_GUIDE_HIT |
-| Germany | Pluto TV Retro Toons | PlutoTVRetroToons.de@FR | - | NO_GUIDE_HIT |
-| Germany | Pluto TV Retro Toons GB | PlutoTVRetroToons.de@GB | - | NO_GUIDE_HIT |
-| Germany | Pluto TV Star Trek: Animation | PlutoTVStarTrekAnimation.de@DACH | - | NO_GUIDE_HIT |
-| Germany | South Park (Germany) | SouthPark.de@ES | - | NO_GUIDE_HIT |
-| Germany | South Park (Germany) GB | SouthPark.de@GB | - | NO_GUIDE_HIT |
-| Germany | South Park (Germany) IT | SouthPark.de@IT | - | NO_GUIDE_HIT |
-| Germany | South Park Version Original | SouthParkVersionOriginal.de@ES | - | NO_GUIDE_HIT |
-| Germany | South Park: Butters Collection (Germany) | SouthParkButtersCollection.de@DACH | - | NO_GUIDE_HIT |
-| Germany | South Park: Cartman Collection (Germany) | SouthParkCartmanCollection.de@DACH | - | NO_GUIDE_HIT |
-| Germany | South Park: Kenny Collection (Germany) | SouthParkKennyCollection.de@DACH | - | NO_GUIDE_HIT |
-| Germany | South Park: Kyle Collection (Germany) | SouthParkKyleCollection.de@DACH | - | NO_GUIDE_HIT |
-| Germany | South Park: Original Version | SouthParkOriginalVersion.de@DACH | - | NO_GUIDE_HIT |
-| Germany | South Park: Stan Collection (Germany) | SouthParkStanCollection.de@DACH | - | NO_GUIDE_HIT |
-| Germany | Teenage Mutant Ninja Turtles (720p) | TeenageMutantNinjaTurtles.de@IT | - | NO_GUIDE_HIT |
+| Egypt | El Radio 9090 FM | ElRadio9090FM.eg@SD | - | NO_GUIDE_HIT |
+| Egypt | Mix Hollywood | MixHollywood.eg@SD | - | NO_GUIDE_HIT |
+| Egypt | NogoumFMTV | NogoumFMTV.eg@SD | - | NO_GUIDE_HIT |
+| Estonia | Best of Dance TV | BestofDanceTV.ee@SD | - | NO_GUIDE_HIT |
+| Estonia | DanceTV Algorhythm | DanceTVAlgorhythm.ee@SD | - | NO_GUIDE_HIT |
+| Estonia | DanceTV Deep House District | DanceTVDeepHouseDistrict.ee@SD | - | NO_GUIDE_HIT |
+| Estonia | DanceTV House Floor | DanceTVHouseFloor.ee@SD | - | NO_GUIDE_HIT |
+| Estonia | DanceTV Techno Warehouse | DanceTVTechnoWarehouse.ee@SD | - | NO_GUIDE_HIT |
+| France | 4 Music | 4Music.fr@SD | - | NO_GUIDE_HIT |
+| France | 4Kurd | 4Kurd.fr@SD | - | NO_GUIDE_HIT |
+| France | Cine Nanar | CineNanar.fr@SD | - | NO_GUIDE_HIT |
+| France | Cine Western (France) | CineWestern.fr@SD | - | NO_GUIDE_HIT |
+| France | DBM TV | DBMTV.fr@SD | - | NO_GUIDE_HIT |
+| France | Emotion L | EmotionL.fr@SD | - | NO_GUIDE_HIT |
+| France | Littoral FM TV | LittoralFMTV.fr@SD | - | NO_GUIDE_HIT |
+| France | P2M TV | P2MTV.fr@SD | - | NO_GUIDE_HIT |
+| France | Persiana Cinema | PersianaCinema.fr@SD | - | NO_GUIDE_HIT |
+| France | Persiana Family | PersianaFamily.fr@SD | - | NO_GUIDE_HIT |
+| France | Persiana Folk | PersianaFolk.fr@HD | - | NO_GUIDE_HIT |
+| France | Persiana Iranian | PersianaIranian.fr@SD | - | NO_GUIDE_HIT |
+| France | Persiana Korea | PersianaKorea.fr@SD | - | NO_GUIDE_HIT |
+| France | Persiana Nostalgia | PersianaNostalgia.fr@SD | - | NO_GUIDE_HIT |
+| France | Persiana Plus | PersianaPlus.fr@SD | - | NO_GUIDE_HIT |
+| France | Persiana Vibe | PersianaVibe.fr@HD | - | NO_GUIDE_HIT |
+| France | Qwest TV Jazz & Beyond | QwestTVJazzBeyond.fr@SD | - | NO_GUIDE_HIT |
+| France | ScreamIN | ScreamIN.fr@SD | - | NO_GUIDE_HIT |
+| France | Sony One Favoris | SonyOneFavoris.fr@HD | - | NO_GUIDE_HIT |
+| France | Sony One Hits Action | SonyOneHitsAction.fr@HD | - | NO_GUIDE_HIT |
+| France | Sony One Hits Comedie | SonyOneHitsComedie.fr@HD | - | NO_GUIDE_HIT |
+| France | TF1 Series Films | TF1SeriesFilms.fr@SD | - | NO_GUIDE_HIT |
+| France | Trace Afrikora | TraceAfrikora.fr@SD | - | NO_GUIDE_HIT |
+| France | Trace Ayiti | TraceAyiti.fr@SD | - | NO_GUIDE_HIT |
+| France | Trace Ivoire | TraceIvoire.fr@SD | - | NO_GUIDE_HIT |
+| France | Trace Jama | TraceJama.fr@SD | - | NO_GUIDE_HIT |
+| France | Trace Kitoko | TraceKitoko.fr@SD | - | NO_GUIDE_HIT |
+| France | Trace Mboa | TraceMboa.fr@SD | - | NO_GUIDE_HIT |
+| France | Trace Muzika | TraceMuzika.fr@SD | - | NO_GUIDE_HIT |
+| France | Trace Mziki | TraceMziki.fr@SD | - | NO_GUIDE_HIT |
+| France | Trace Naija | TraceNaija.fr@SD | - | NO_GUIDE_HIT |
+| France | Trace Ngoma | TraceNgoma.fr@SD | - | NO_GUIDE_HIT |
+| France | Trace Urban Africa Franco | TraceUrban.fr@AfricaFranco | - | NO_GUIDE_HIT |
+| France | Trace Urban Caribbean And Indian Ocean | TraceUrban.fr@CaribbeanAndIndianOcean | - | NO_GUIDE_HIT |
+| France | Trace Urban International | TraceUrban.fr@InternationalHD | - | NO_GUIDE_HIT |
+| France | Trace Urban Southern Africa | TraceUrban.fr@SouthernAfrica | - | NO_GUIDE_HIT |
+| France | Trace Vanilla Islands | TraceVanillaIslands.fr@SD | - | NO_GUIDE_HIT |
+| Germany | Deluxe Lounge | DeluxeLounge.de@SD | Deluxe.Lounge.HD.cz | MAPPED_ID_ONLY |
+| Germany | Bibel TV Musik | BibelTVMusik.de@SD | - | NO_GUIDE_HIT |
+| Germany | DASDING 90.8 | DASDING908.de@SD | - | NO_GUIDE_HIT |
+| Germany | Deluxe Dance | DeluxeDance.de@SD | - | NO_GUIDE_HIT |
+| Germany | Finest TV | FinestTV.de@SD | - | NO_GUIDE_HIT |
+| Germany | Lausitzwelle | Lausitzwelle.de@SD | - | NO_GUIDE_HIT |
+| Germany | TV Bozsike Hamburg | TVBozsikeHamburgHD.de@HD | - | NO_GUIDE_HIT |
+| Germany | XITE Hits Germany | XITEHits.nl@Germany | - | NO_GUIDE_HIT |
+| Greece | Baraza TV | BarazaTV.gr@SD | - | NO_GUIDE_HIT |
+| Greece | Baraza TV Deep House | BarazaTVDeepHouse.gr@SD | - | NO_GUIDE_HIT |
+| Greece | Baraza TV Relaxing | BarazaTVRelaxing.gr@SD | - | NO_GUIDE_HIT |
+| Greece | Ellinikos FM | EllinikosFM.gr@SD | - | NO_GUIDE_HIT |
+| Greece | Groovy TV | GroovyTV.gr@SD | - | NO_GUIDE_HIT |
+| Greece | Messatida TV | MessatidaTV.gr@SD | - | NO_GUIDE_HIT |
+| Greece | NRG 91 | NRG91.gr@SD | - | NO_GUIDE_HIT |
+| Greece | Play TV (Greece) | PlayTV.gr@SD | - | NO_GUIDE_HIT |
+| Hungary | AMC Europe Hungary | AMCEurope.uk@Hungary | - | NO_GUIDE_HIT |
+| Hungary | AXN Black (United States) Hungary | AXNBlack.us@Hungary | - | NO_GUIDE_HIT |
+| Hungary | AXN CEE | AXNCEE.es@Hungary | - | NO_GUIDE_HIT |
+| Hungary | Film+ (Hungary) | FilmPlus.hu@SD | - | NO_GUIDE_HIT |
+| Hungary | FILMBOX+ Emotion Hungary | FILMBOXPlusEmotion.pl@Hungary | - | NO_GUIDE_HIT |
+| Hungary | FILMBOX+ Hits Hungary | FILMBOXPlusHits.pl@Hungary | - | NO_GUIDE_HIT |
+| Hungary | Oxygen Music | OxygenMusic.hu@HD | - | NO_GUIDE_HIT |
+| Hungary | Slager TV | SlagerTV.hu@SD | - | NO_GUIDE_HIT |
 | Indian Bangla | BANGLA JAGO | custom.bdix.banglajago | Bangla.Jago.in | MAPPED_ID_ONLY |
 | Indian Bangla | Bangla Jago TV | BanglaJagoTV.in | Bangla.Jago.in | MAPPED_ID_ONLY |
 | Indian Bangla | Tara TV | TaraTV.in | Tara.TV.in | MAPPED_ID_ONLY |
@@ -724,9 +863,8 @@ The table includes every active channel identity without usable current/future g
 | Indian Bangla | Sananda TV | custom.sananda-tv | - | NO_GUIDE_HIT |
 | Indian Bangla | SNB Cinema | SNBCinema.in | - | NO_GUIDE_HIT |
 | Indian Bangla | Star Bangla | StarBangla.in | - | NO_GUIDE_HIT |
-| Indian Entertainment | Colors Super (396p) | ColorsSuper.in@SD | Colors.Super.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Darshana TV | DarshanaTV.in@SD | DARSHANA.in | MAPPED_ID_ONLY |
-| Indian Entertainment | ETV Comedy (1080p) | ETVComedy.in@HD | ETVComedy.in | MAPPED_ID_ONLY |
+| Indian Entertainment | Friends TV | FriendsTV.in@SD | Friends.TV.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Global Punjab | GlobalPunjab.in | Global.Punjab.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Kalaignar Murasu | KalaignarMurasu.in | MURASU.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Manoranjan Grand | ManoranjanGrand.in | Manoranjan.Grand.in | MAPPED_ID_ONLY |
@@ -734,37 +872,29 @@ The table includes every active channel identity without usable current/future g
 | Indian Entertainment | One Paschima | OnePaschima.in@SD | One.Paschima.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Prarthana TV | PrarthanaTV.in@SD | Prarthana.TV.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Sony Entertainment TV | SonyEntertainmentTelevision.in@SD | Sony.Entertainment.Television.in | MAPPED_ID_ONLY |
-| Indian Entertainment | Super Hungama (576p) | SuperHungama.in@SD | Super.Hungama.in | MAPPED_ID_ONLY |
 | Indian Entertainment | Suriyan TV | SuriyanTV.in@SD | ts1384 | MAPPED_ID_ONLY |
 | Indian Entertainment | Odisha TV | OdishaTV.in@SD | OdishaTV.in|OdishaTV.in@SD | MAPPED_NOT_CURRENTLY_FOUND |
-| Indian Entertainment | Asianet Middle East (576p) | AsianetMiddleEast.in@SD | - | NO_GUIDE_HIT |
+| Indian Entertainment | AMN TV | AMNTV.in@SD | - | NO_GUIDE_HIT |
+| Indian Entertainment | Asianet Middle East | AsianetMiddleEast.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Baiscope TV | BaiscopeTV.in | - | NO_GUIDE_HIT |
-| Indian Entertainment | BT TV (720p) | BTTV.in@SD | - | NO_GUIDE_HIT |
+| Indian Entertainment | BT TV | BTTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | C Malayalam TV | CMalayalamTV.ca@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | CCV | CCV.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Colors MENA | ColorsMENA.in | - | NO_GUIDE_HIT |
-| Indian Entertainment | Colors MENA HD (720p) | ColorsMENA.in@HD | - | NO_GUIDE_HIT |
-| Indian Entertainment | DD Mizoram (504p) | DDMizoram.in@SD | - | NO_GUIDE_HIT |
-| Indian Entertainment | E-Vidya 10 (576p) | EVidya10.in@SD | - | NO_GUIDE_HIT |
-| Indian Entertainment | E-Vidya 11 (576p) | EVidya11.in@SD | - | NO_GUIDE_HIT |
-| Indian Entertainment | E-Vidya 12 (576p) | EVidya12.in@SD | - | NO_GUIDE_HIT |
-| Indian Entertainment | E-Vidya 4 (576p) | EVidya4.in@SD | - | NO_GUIDE_HIT |
-| Indian Entertainment | E-Vidya 5 (576p) | EVidya5.in@SD | - | NO_GUIDE_HIT |
-| Indian Entertainment | E-Vidya 6 (576p) | EVidya6.in@SD | - | NO_GUIDE_HIT |
-| Indian Entertainment | E-Vidya 7 (576p) | EVidya7.in@SD | - | NO_GUIDE_HIT |
-| Indian Entertainment | E-Vidya 8 (576p) | EVidya8.in@SD | - | NO_GUIDE_HIT |
-| Indian Entertainment | E-Vidya 9 (576p) | EVidya9.in@SD | - | NO_GUIDE_HIT |
-| Indian Entertainment | Epic Bharat Digital (1080p) | EpicBharat.in@Digital | - | NO_GUIDE_HIT |
+| Indian Entertainment | Colors MENA | ColorsMENA.in@HD | - | NO_GUIDE_HIT |
+| Indian Entertainment | Colors Rishtey Americas | ColorsRishteyAmericas.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Flowers US | Flowers.us | - | NO_GUIDE_HIT |
-| Indian Entertainment | JTBS Classic | JTBSClassic.in@Main | - | NO_GUIDE_HIT |
 | Indian Entertainment | Kairali Arabia | KairaliArabia.in | - | NO_GUIDE_HIT |
+| Indian Entertainment | Kalaignar Murasu | KalaignarMurasu.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | KCL TV | KCLTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Kerala Vision | KeralaVision.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Maha Punjabi | MahaPunjabi.in@SD | - | NO_GUIDE_HIT |
-| Indian Entertainment | MediBizTV (720p) | MediBizTV.in@SD | - | NO_GUIDE_HIT |
+| Indian Entertainment | Marutam TV | MarutamTV.in@SD | - | NO_GUIDE_HIT |
+| Indian Entertainment | Mh 1 Prime | Mh1Prime.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | MH One Prime | Mh1Prime.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | MNTV (Tamil) | MarutamTV.in | - | NO_GUIDE_HIT |
 | Indian Entertainment | NKR TV Kannada | NKRTVKannada.in | - | NO_GUIDE_HIT |
+| Indian Entertainment | NKR TV Kannada | NKRTVKannada.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Oli TV | OliTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Pankh | Pankh.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Pardesi TV | PardesiTV.ca | - | NO_GUIDE_HIT |
@@ -772,65 +902,62 @@ The table includes every active channel identity without usable current/future g
 | Indian Entertainment | Pulari TV | PulariTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Punjabi TV | PunjabiTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Q TV | QTV.in | - | NO_GUIDE_HIT |
-| Indian Entertainment | Rajdhani | custom.rajdhani | - | NO_GUIDE_HIT |
 | Indian Entertainment | SADA TV | SADATV.in | - | NO_GUIDE_HIT |
-| Indian Entertainment | Sanskar TV (1080p) | SanskarTV.in@SD | - | NO_GUIDE_HIT |
+| Indian Entertainment | SADA TV | SADATV.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Sooriyan TV | SooriyanTV.ca@SD | - | NO_GUIDE_HIT |
+| Indian Entertainment | Star Vijay UK | StarVijay.in@UK | - | NO_GUIDE_HIT |
 | Indian Entertainment | Starnet | Starnet.in@SD | - | NO_GUIDE_HIT |
+| Indian Entertainment | Tamilan TV | TamilanTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Thendral TV | ThendralTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | UTV Palakkad | UTVPalakkad.in@SD | - | NO_GUIDE_HIT |
-| Indian Entertainment | Vyas Channel (576p) | VyasChannel.in@SD | - | NO_GUIDE_HIT |
-| Indian Entertainment | Zee Cine Classic (1080p) | ZeeCineClassic.in@SD | - | NO_GUIDE_HIT |
-| Indian Entertainment | Zee Comedy Nation (1080p) | ZeeComedyNation.in@HD | - | NO_GUIDE_HIT |
+| Indian Entertainment | VCV | VCV.in@SD | - | NO_GUIDE_HIT |
+| Indian Entertainment | WeatherSpy (India) | WeatherSpy.in@SD | - | NO_GUIDE_HIT |
+| Indian Entertainment | Zodiak TV | ZodiakTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Ekamra Cinema | EkamraCinema.in | Ekamra.Cinema.in | MAPPED_ID_ONLY |
-| Indian Movies | Jalsha Movies HD (1080p) | JalshaMovies.in@HD | JALSHA.MOVIES.in | MAPPED_ID_ONLY |
-| Indian Movies | Manoranjan Grand (720p) | ManoranjanGrand.in@SD | Manoranjan.Grand.in | MAPPED_ID_ONLY |
+| Indian Movies | Manoranjan Grand | ManoranjanGrand.in@SD | Manoranjan.Grand.in | MAPPED_ID_ONLY |
 | Indian Movies | Manoranjan Movies | ManoranjanMovies.in@SD | Manoranjan.Movies.in2 | MAPPED_ID_ONLY |
 | Indian Movies | MH One Dil Se | MHOneDilSe.in@SD | 143536 | MAPPED_ID_ONLY |
-| Indian Movies | Sony Pix HD (1080p) | SonyPix.in@HD | SONY.PIX.in | MAPPED_ID_ONLY |
-| Indian Movies | Star Movies (India) HD (1080p) | StarMovies.in@HD | Star.Movies.in | MAPPED_ID_ONLY |
-| Indian Movies | &TV International (1080p) | AndTV.in@International | - | NO_GUIDE_HIT |
-| Indian Movies | B4U Bhojpuri Plus (1080p) | B4UBhojpuri.in@Plus | - | NO_GUIDE_HIT |
+| Indian Movies | Star Movies (India) | StarMovies.in@HD | Star.Movies.in | MAPPED_ID_ONLY |
+| Indian Movies | &TV International | AndTV.in@International | - | NO_GUIDE_HIT |
+| Indian Movies | Asian Sony Max 2 | custom.asian-sony-max-2 | - | NO_GUIDE_HIT |
+| Indian Movies | B4U Bhojpuri Plus | B4UBhojpuri.in@Plus | - | NO_GUIDE_HIT |
 | Indian Movies | Chhaya Chitram Telugu | ChhayaChitramTelugu.in@SD | - | NO_GUIDE_HIT |
+| Indian Movies | Epic Bhojpuri Digital | EpicBhojpuri.in@Digital | - | NO_GUIDE_HIT |
 | Indian Movies | Goldmines 2 | Goldmines2.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Goldmines Action | GoldminesAction.in | - | NO_GUIDE_HIT |
-| Indian Movies | Goldmines Action (576p) | GoldminesAction.in@SD | - | NO_GUIDE_HIT |
+| Indian Movies | Goldmines Action | GoldminesAction.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Hindi Movie Classic 24 | new.hindi.movie.classic.24 | - | NO_GUIDE_HIT |
 | Indian Movies | India Talkies | IndiaTalkies.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Indywood TV | IndywoodTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | K Cine | KCine.in | - | NO_GUIDE_HIT |
+| Indian Movies | KCM India | KCM.sg@India | - | NO_GUIDE_HIT |
 | Indian Movies | Maha Movie | MahaMovie.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Mango | Mango.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | MH One Movies | MHOneMovies.in | - | NO_GUIDE_HIT |
-| Indian Movies | MH One Movies (576p) | MHOneMovies.in@SD | - | NO_GUIDE_HIT |
+| Indian Movies | MH One Movies | MHOneMovies.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Movie Punjab | MoviePunjab.in@SD | - | NO_GUIDE_HIT |
-| Indian Movies | NH BollyFlix (1080p) | NHBollyFlix.in@HD | - | NO_GUIDE_HIT |
-| Indian Movies | NH BollyGold (1080p) | NHBollyGold.in@HD | - | NO_GUIDE_HIT |
-| Indian Movies | NH Tamil Gold (1080p) | NHTamilGold.in@HD | - | NO_GUIDE_HIT |
-| Indian Movies | Punjabi Shorts (1080p) | PunjabiShorts.in@SD | - | NO_GUIDE_HIT |
-| Indian Movies | Shemaroo Filmi Gaane (1080p) | ShemarooFilmiGaane.in@HD | - | NO_GUIDE_HIT |
+| Indian Movies | Shemaroo Filmi Gaane | ShemarooFilmiGaane.in@HD | - | NO_GUIDE_HIT |
 | Indian Movies | Shubh Cinema TV | ShubhCinemaTV.in | - | NO_GUIDE_HIT |
 | Indian Movies | Soneri Cinema | SoneriCinema.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | South Movies | SouthMovies.in | - | NO_GUIDE_HIT |
-| Indian Movies | Thalaa TV (1080p) | ThalaaTV.in@HD | - | NO_GUIDE_HIT |
-| Indian Movies | Tolly TV (1080p) | TollyTV.in@HD | - | NO_GUIDE_HIT |
-| Indian Movies | Zee Cinema APAC (720p) | ZeeCinema.in@APAC | - | NO_GUIDE_HIT |
-| Indian Movies | Zee South Flix (1080p) | ZeeSouthFlix.in@HD | - | NO_GUIDE_HIT |
+| Indian Movies | Zee Cinema APAC | ZeeCinema.in@APAC | - | NO_GUIDE_HIT |
 | Indian Music | Ekamra Musiq | EkamraMusiq.in | Ekamra.Musiq.in | MAPPED_ID_ONLY |
 | Indian Music | Mastiii | Mastiii.in@SD | Mastiii.in | MAPPED_ID_ONLY |
 | Indian Music | Steelbird Music | SteelbirdMusic.in@SD | Steelbird.Music.in | MAPPED_ID_ONLY |
 | Indian Music | 7X Punjabi | 7XPunjabi.in | - | NO_GUIDE_HIT |
 | Indian Music | Andy Haryana | AndyHaryana.in@SD | - | NO_GUIDE_HIT |
 | Indian Music | Deewana | DeewanaHD.in | - | NO_GUIDE_HIT |
-| Indian Music | Deewana HD (540p) | DeewanaHD.in@SD | - | NO_GUIDE_HIT |
-| Indian Music | Dhamaal (576p) [Geo-blocked] | Dhamaal.in@SD | - | NO_GUIDE_HIT |
+| Indian Music | Deewana | DeewanaHD.in@SD | - | NO_GUIDE_HIT |
+| Indian Music | Epic Music Digital | EpicMusic.in@Digital | - | NO_GUIDE_HIT |
 | Indian Music | Hindi Hits | HindiHits.in | - | NO_GUIDE_HIT |
+| Indian Music | Hindi Hits | HindiHits.in@SD | - | NO_GUIDE_HIT |
 | Indian Music | Kalika TV | KalikaTV.in@SD | - | NO_GUIDE_HIT |
 | Indian Music | Punjabi Beats | PunjabiBeatsHD.in@HD | - | NO_GUIDE_HIT |
 | Indian Music | Punjabi Music | PunjabiMusicHD.in@SD | - | NO_GUIDE_HIT |
 | Indian Music | Rang Rangoli | RangRangoli.in | - | NO_GUIDE_HIT |
 | Indian Music | Superhitz | Superhitz.in@SD | - | NO_GUIDE_HIT |
 | Indian Music | YRF Music Nepal | YRFMusic.in@Nepal | - | NO_GUIDE_HIT |
+| Indian Music | Zoom (India) Nepal | Zoom.in@Nepal | - | NO_GUIDE_HIT |
 | International | BBC Drama | BBCDrama.uk | BBCDrama.au | MAPPED_ID_ONLY |
 | International | CNN INTERNATIONLA | custom.bdix.cnninternationla | 157679 | MAPPED_ID_ONLY |
 | International | Fashion One | FashionOne.uk | Fashion.One.cz | MAPPED_ID_ONLY |
@@ -877,300 +1004,385 @@ The table includes every active channel identity without usable current/future g
 | International | VTU | VTU.in@SD | - | NO_GUIDE_HIT |
 | International | XITE Hits UK | XITEHits.nl@UK | - | NO_GUIDE_HIT |
 | International | Young Hollywood | YoungHollywood.us | - | NO_GUIDE_HIT |
-| International Movies | +MaisUm (720p) | PlusMaisUm.br@HD | - | NO_GUIDE_HIT |
-| International Movies | 00s Replay | 00sReplay.us@SD | - | NO_GUIDE_HIT |
-| International Movies | 30A TV Classic Movies (720p) | 30ATVClassicMovies.us@SD | - | NO_GUIDE_HIT |
-| International Movies | 312 Kino (406p) | 312Kino.kg@SD | - | NO_GUIDE_HIT |
-| International Movies | 4ever Cinema (1080p) | 4everCinema.ua@SD | - | NO_GUIDE_HIT |
-| International Movies | 70s Cinema | 70sCinema.us@SD | - | NO_GUIDE_HIT |
-| International Movies | 80s Rewind | 80sRewind.us@SD | - | NO_GUIDE_HIT |
-| International Movies | 90s Throwback | 90sThrowback.us@SD | - | NO_GUIDE_HIT |
-| International Movies | Adrenalina Pura TV (720p) | AdrenalinaPuraTV.us@SD | - | NO_GUIDE_HIT |
-| International Movies | Adrenalina Pura TV Brazil | AdrenalinaPuraTV.us@Brazil | - | NO_GUIDE_HIT |
-| International Movies | Afghan Nobel Movies (720p) | AfghanNobelMovies.ca@SD | - | NO_GUIDE_HIT |
-| International Movies | Aflam | custom.aflam | - | NO_GUIDE_HIT |
-| International Movies | Afra Film | AfraFilm.ir@SD | - | NO_GUIDE_HIT |
-| International Movies | Allo Cine (1080p) | AlloCine.cm@SD | - | NO_GUIDE_HIT |
-| International Movies | alpha Cinema (1080p) | alphaCinema.ru@HD | - | NO_GUIDE_HIT |
-| International Movies | AlternaTV (720p) [Not 24/7] | AlternaTV.ar@SD | - | NO_GUIDE_HIT |
-| International Movies | AMC (United States) (720p) | AMC.us@EastHD | - | NO_GUIDE_HIT |
-| International Movies | AMC Europe Bulgary (576p) | AMCEurope.uk@Bulgary | - | NO_GUIDE_HIT |
-| International Movies | AMC Europe Czech Republic | AMCEurope.uk@CzechRepublic | - | NO_GUIDE_HIT |
-| International Movies | AMC Europe Hungary | AMCEurope.uk@Hungary | - | NO_GUIDE_HIT |
-| International Movies | AMC Europe Romania | AMCEurope.uk@Romania | - | NO_GUIDE_HIT |
-| International Movies | AMC Latin America (1080p) | AMCLatinAmerica.us@Panregional | - | NO_GUIDE_HIT |
-| International Movies | AMC Latin America Brazil (720p) | AMCLatinAmerica.us@Brazil | - | NO_GUIDE_HIT |
-| International Movies | Amedia Hit (1080p) | AmediaHit.ru@SD | - | NO_GUIDE_HIT |
-| International Movies | Amedia Premium (720p) | AmediaPremium.ru@SD | - | NO_GUIDE_HIT |
-| International Movies | American Horrors (480p) | AmericanHorrors.us@SD | - | NO_GUIDE_HIT |
-| International Movies | Aneflix Live (720p) | AneflixLive.us@HD | - | NO_GUIDE_HIT |
-| International Movies | Armenia Premium (720p) | ArmeniaPremium.am@SD | - | NO_GUIDE_HIT |
-| International Movies | Aurora Media Films (720p) | AuroraMediaFilms.gt@SD | - | NO_GUIDE_HIT |
-| International Movies | AVI Rewind (1080p) | AVIRewind.us@SD | - | NO_GUIDE_HIT |
-| International Movies | AXN (Portugal) (1080p) | AXN.pt@SD | - | NO_GUIDE_HIT |
-| International Movies | AXN Adria | AXNAdria.us@SD | - | NO_GUIDE_HIT |
-| International Movies | AXN Asia Taiwan (1080p) | AXNAsia.sg@Taiwan | - | NO_GUIDE_HIT |
-| International Movies | AXN Black (United States) (576p) | AXNBlack.us@Bulgary | - | NO_GUIDE_HIT |
-| International Movies | AXN Black (United States) Czech Republic | AXNBlack.us@CzechRepublic | - | NO_GUIDE_HIT |
-| International Movies | AXN Black (United States) Hungary (576p) | AXNBlack.us@Hungary | - | NO_GUIDE_HIT |
-| International Movies | AXN Black (United States) Romania | AXNBlack.us@Romania | - | NO_GUIDE_HIT |
-| International Movies | AXN CEE | AXNCEE.es@Hungary | - | NO_GUIDE_HIT |
-| International Movies | AXN CEE Bulgary | AXNCEE.es@Bulgary | - | NO_GUIDE_HIT |
-| International Movies | AXN CEE Czech Republic | AXNCEE.es@CzechRepublic | - | NO_GUIDE_HIT |
-| International Movies | AXN CEE Romania | AXNCEE.es@Romania | - | NO_GUIDE_HIT |
-| International Movies | AXN Crime | AXNCrime.us@SD | - | NO_GUIDE_HIT |
-| International Movies | AXN Latin America Andes (1080p) | AXNLatinAmerica.us@Andes | - | NO_GUIDE_HIT |
-| International Movies | AXN Latin America Mexico | AXNLatinAmerica.us@Mexico | - | NO_GUIDE_HIT |
-| International Movies | AXN Latin America South | AXNLatinAmerica.us@South | - | NO_GUIDE_HIT |
-| International Movies | AXN Movies (Portugal) (720p) | AXNMovies.pt@SD | - | NO_GUIDE_HIT |
-| International Movies | AXN Poland (1080p) | AXNPoland.pl@SD | - | NO_GUIDE_HIT |
-| International Movies | Az Cinema (1080p) | AzCinema.mx@SD | - | NO_GUIDE_HIT |
-| International Movies | Battlestar Galactica | BattlestarGalactica.us@SD | - | NO_GUIDE_HIT |
-| International Movies | beIN Box Office 1 | beINBoxOffice1.tr@SD | - | NO_GUIDE_HIT |
-| International Movies | beIN Box Office 2 | beINBoxOffice2.tr@SD | - | NO_GUIDE_HIT |
-| International Movies | beIN Box Office 3 | beINBoxOffice3.tr@SD | - | NO_GUIDE_HIT |
-| International Movies | beIN Movies Stars | beINMoviesStars.tr@SD | - | NO_GUIDE_HIT |
-| International Movies | beIN Movies Turk | beINMoviesTurk.tr@SD | - | NO_GUIDE_HIT |
-| International Movies | BET Cinema | BETCinema.us@SD | - | NO_GUIDE_HIT |
-| International Movies | BET Comedy Movies | BETComedyMovies.us@SD | - | NO_GUIDE_HIT |
-| International Movies | BET Visionaries | BETVisionaries.us@SD | - | NO_GUIDE_HIT |
-| International Movies | BIZ Cinema (1080p) | BIZCinema.uz@SD | - | NO_GUIDE_HIT |
-| International Movies | Blokbaster HD (1080p) | Blokbaster.ru@HD | - | NO_GUIDE_HIT |
-| International Movies | Bollywood HD (576p) | Bollywood.ru@HD | - | NO_GUIDE_HIT |
-| International Movies | Bollywood HD Russia (576p) | BollywoodHD.ro@Russia | - | NO_GUIDE_HIT |
-| International Movies | Bolt (Russia) (576p) | Bolt.ru@SD | - | NO_GUIDE_HIT |
-| International Movies | Bolt (Ukraine) (1080p) | Bolt.ua@SD | - | NO_GUIDE_HIT |
-| International Movies | Bonanza | Bonanza.us@SD | - | NO_GUIDE_HIT |
-| International Movies | Bonanza CA | Bonanza.us@CA | - | NO_GUIDE_HIT |
-| International Movies | Boreal (720p) [Not 24/7] | Boreal.do@SD | - | NO_GUIDE_HIT |
-| International Movies | Bravo Farsi TV (360p) | BravoFarsiTV.ir@SD | - | NO_GUIDE_HIT |
-| International Movies | bTV Action | bTVAction.bg@SD | - | NO_GUIDE_HIT |
-| International Movies | bTV Cinema | bTVCinema.bg@SD | - | NO_GUIDE_HIT |
-| International Movies | bTV Lady | bTVLady.bg@SD | - | NO_GUIDE_HIT |
-| International Movies | Cafe Film | CafeFilm.ir@SD | - | NO_GUIDE_HIT |
-| International Movies | Canal Cine Dios | CanalCineDios.co@SD | - | NO_GUIDE_HIT |
-| International Movies | Canal+ Action Europe (360p) | CanalPlusActionEurope.nl@Netherlands | - | NO_GUIDE_HIT |
-| International Movies | Canal+ Action Europe Czechia | CanalPlusActionEurope.nl@Czechia | - | NO_GUIDE_HIT |
-| International Movies | Canal+ Action Europe Slovakia (720p) | CanalPlusActionEurope.nl@Slovakia | - | NO_GUIDE_HIT |
-| International Movies | Canal+ Cinemas (720p) | CanalPlusCinemas.fr@SD | - | NO_GUIDE_HIT |
-| International Movies | CCTV-6 [Geo-blocked] | CCTV6.cn@SD | - | NO_GUIDE_HIT |
-| International Movies | CCTV-6 HD (1080p) | CCTV6.cn@HD | - | NO_GUIDE_HIT |
-| International Movies | Celestial Movies (576i) | CelestialMovies.hk@SD | - | NO_GUIDE_HIT |
-| International Movies | CHC Action (1080p) | CHCAction.cn@SD | - | NO_GUIDE_HIT |
-| International Movies | CINDIE TV (1080p) | CINDIETV.br@HD | - | NO_GUIDE_HIT |
-| International Movies | Cine 666 by Pluto TV | Cine666byPlutoTV.de@FR | - | NO_GUIDE_HIT |
-| International Movies | Cine Action by Pluto TV | CineActionbyPlutoTV.de@FR | - | NO_GUIDE_HIT |
-| International Movies | Cine Adrenalina | CineAdrenalina.us@SD | - | NO_GUIDE_HIT |
-| International Movies | Cine Amor | CineAmor.us@SD | - | NO_GUIDE_HIT |
-| International Movies | Cine by Pluto TV | CinebyPlutoTV.de@FR | - | NO_GUIDE_HIT |
-| International Movies | Cine Catastrophe by Pluto TV | CineCatastrophebyPlutoTV.de@FR | - | NO_GUIDE_HIT |
-| International Movies | Cine d'Asie by Pluto TV | CinedAsiebyPlutoTV.de@FR | - | NO_GUIDE_HIT |
-| International Movies | Cine Familiar (1080p) | CineFamiliar.us@SD | - | NO_GUIDE_HIT |
-| International Movies | Cine Hispano (1080p) | CineHispano.us@SD | - | NO_GUIDE_HIT |
-| International Movies | Cine Horreur by Pluto TV | CineHorreurbyPlutoTV.de@FR | - | NO_GUIDE_HIT |
-| International Movies | Cine Nanar (1080p) | CineNanar.fr@SD | - | NO_GUIDE_HIT |
-| International Movies | Cine Premiere | CinePremiere.us@SD | - | NO_GUIDE_HIT |
-| International Movies | Cine Premium (1080p) | CinePremium.us@SD | - | NO_GUIDE_HIT |
-| International Movies | Cine Retro by Pluto TV | CineRetrobyPlutoTV.de@FR | - | NO_GUIDE_HIT |
-| International Movies | Cine Romance by Pluto TV | CineRomancebyPlutoTV.de@FR | - | NO_GUIDE_HIT |
-| International Movies | Cine Romantico (720p) | CineRomantico.us@SD | - | NO_GUIDE_HIT |
-| International Movies | Cine Sci-Fi by Pluto TV | CineSciFibyPlutoTV.de@FR | - | NO_GUIDE_HIT |
-| International Movies | Cine Terror | CineTerror.us@US | - | NO_GUIDE_HIT |
-| International Movies | Cine Terror BR | CineTerror.us@BR | - | NO_GUIDE_HIT |
-| International Movies | Cine Terror LatAm | CineTerror.us@LatAm | - | NO_GUIDE_HIT |
-| International Movies | Cine Thrillers by Pluto TV | CineThrillersbyPlutoTV.de@FR | - | NO_GUIDE_HIT |
-| International Movies | Cine Western (France) (1080p) | CineWestern.fr@SD | - | NO_GUIDE_HIT |
-| International Movies | Cine Western by Pluto TV | CineWesternbyPlutoTV.de@FR | - | NO_GUIDE_HIT |
-| International Movies | Cine+ | CinePlus.ua@SD | - | NO_GUIDE_HIT |
-| International Movies | Cine+ Classic | CinePlusClassic.fr@SD | - | NO_GUIDE_HIT |
-| International Movies | Cine+ Frisson (1080p) | CinePlusFrisson.fr@SD | - | NO_GUIDE_HIT |
-| International Movies | Cine+ Hit | CinePlusHit.ua@SD | - | NO_GUIDE_HIT |
-| International Movies | Cine+ Legend | CinePlusLegend.ua@SD | - | NO_GUIDE_HIT |
-| International Movies | cine.box | cinebox.bg@SD | - | NO_GUIDE_HIT |
-| International Movies | Cinecanal (1080p) | Cinecanal.us@Panregional | - | NO_GUIDE_HIT |
-| International Movies | Cinecanal Pacific (1080p) | Cinecanal.us@Pacific | - | NO_GUIDE_HIT |
-| International Movies | Cinecanal South | Cinecanal.us@South | - | NO_GUIDE_HIT |
-| International Movies | CineLatino (720p) | CineLatino.mx@SD | - | NO_GUIDE_HIT |
-| International Movies | Cinema (Mongolia) (1080p) | Cinema.mn@SD | - | NO_GUIDE_HIT |
-| International Movies | Cinema (Russia) (576p) | Cinema.ru@SD | - | NO_GUIDE_HIT |
-| International Movies | Cinemaraton Plus (1080i) | CinemaratonPlus.ro@HD | - | NO_GUIDE_HIT |
-| International Movies | CinemaWorld (720p) | CinemaWorld.my@SD | - | NO_GUIDE_HIT |
-| International Movies | Cinemax (Czech Republic) | Cinemax.cz@Czechia | - | NO_GUIDE_HIT |
-| International Movies | Cinemax (United States) West (720p) | Cinemax.us@West | - | NO_GUIDE_HIT |
-| International Movies | Cinemax Asia (720p) [Geo-blocked] | CinemaxAsia.sg@SD | - | NO_GUIDE_HIT |
-| International Movies | Cinemax Asia HD (1080p) | CinemaxAsia.sg@HD | - | NO_GUIDE_HIT |
-| International Movies | Cinemax Classics (1080p) | CinemaxClassics.us@East | - | NO_GUIDE_HIT |
-| International Movies | Cinemax Hits (1080p) | CinemaxHits.us@East | - | NO_GUIDE_HIT |
-| International Movies | Cinemax Latin America (720p) | CinemaxLatinAmerica.us@SD | - | NO_GUIDE_HIT |
-| International Movies | CineStar 1 Bulgaria | CineStar1Bulgaria.bg@SD | - | NO_GUIDE_HIT |
-| International Movies | Cinevault 80s (720p) | Cinevault80s.us@SD | - | NO_GUIDE_HIT |
-| International Movies | CineWow | CineWow.ro@SD | - | NO_GUIDE_HIT |
-| International Movies | City Eden KinoAction [Not 24/7] | CityEdenKinoAction.ru@HD | - | NO_GUIDE_HIT |
-| International Movies | City Eden KinoArt [Not 24/7] | CityEdenKinoArt.ru@HD | - | NO_GUIDE_HIT |
-| International Movies | City Eden KinoAsia [Not 24/7] | CityEdenKinoAsia.ru@HD | - | NO_GUIDE_HIT |
-| International Movies | City Eden KinoDetektiv [Not 24/7] | CityEdenKinoDetektiv.ru@HD | - | NO_GUIDE_HIT |
-| International Movies | City Eden KinoDrama [Not 24/7] | CityEdenKinoDrama.ru@HD | - | NO_GUIDE_HIT |
-| International Movies | City Eden KinoFantastika [Not 24/7] | CityEdenKinoFantastika.ru@HD | - | NO_GUIDE_HIT |
-| International Movies | City Eden KinoKlassika [Not 24/7] | CityEdenKinoKlassika.ru@HD | - | NO_GUIDE_HIT |
-| International Movies | City Eden KinoKomediya [Not 24/7] | CityEdenKinoKomediya.ru@HD | - | NO_GUIDE_HIT |
-| International Movies | City Eden KinoMistika [Not 24/7] | CityEdenKinoMistika.ru@HD | - | NO_GUIDE_HIT |
-| International Movies | City Eden KinoSemya [Not 24/7] | CityEdenKinoSemya.ru@HD | - | NO_GUIDE_HIT |
-| International Movies | Claro Cinema (1080p) | ClaroCinema.mx@SD | - | NO_GUIDE_HIT |
-| International Movies | CND Film Discovery Channel (576p) | CNDFilmDiscoveryChannel.cn@SD | - | NO_GUIDE_HIT |
-| International Movies | Pluto TV Comedy Movies | PlutoTVComedyMovies.us@CA | - | NO_GUIDE_HIT |
-| International Movies | Pluto TV Retro Action Movies | PlutoTVRetroActionMovies.us@CA | - | NO_GUIDE_HIT |
-| International Movies | Rakuten TV Family Movies (1080p) | RakutenTVFamilyMovies.es@Spain | - | NO_GUIDE_HIT |
-| International Movies | Rakuten TV Family Movies Austria (720p) | RakutenTVFamilyMovies.es@Austria | - | NO_GUIDE_HIT |
-| International Movies | Rakuten TV Family Movies Finland (1080p) | RakutenTVFamilyMovies.es@Finland | - | NO_GUIDE_HIT |
-| International Movies | Rakuten TV Family Movies Germany (1080p) | RakutenTVFamilyMovies.es@Germany | - | NO_GUIDE_HIT |
-| International Movies | Rakuten TV Family Movies Italy (1080p) | RakutenTVFamilyMovies.es@Italy | - | NO_GUIDE_HIT |
-| International Movies | Rakuten TV Family Movies Switzerland (720p) | RakutenTVFamilyMovies.es@Switzerland | - | NO_GUIDE_HIT |
-| International Movies | TVS Classic Movies (288p) | TVSClassicMovies.us@SD | - | NO_GUIDE_HIT |
-| International Movies | TVS Nostalgia Movies (480p) | TVSNostalgiaMovies.us@SD | - | NO_GUIDE_HIT |
-| International Movies | TVS Western Movie (270p) | TVSWesternMovie.us@SD | - | NO_GUIDE_HIT |
-| International Music | 13 Festival (1080p) | 13Festival.cl@SD | - | NO_GUIDE_HIT |
-| International Music | 2TV (1080p) | 2TV.lt@SD | - | NO_GUIDE_HIT |
-| International Music | 360TuneBox (1080p) | 360TuneBox.nl@SD | - | NO_GUIDE_HIT |
-| International Music | 4 Music | 4Music.fr@SD | - | NO_GUIDE_HIT |
-| International Music | 4ever Music (1080p) | 4everMusic.ua@SD | - | NO_GUIDE_HIT |
-| International Music | 4Kurd | 4Kurd.fr@SD | - | NO_GUIDE_HIT |
-| International Music | 7 RadioVisione (720p) | 7RadioVisione.it@HD | - | NO_GUIDE_HIT |
-| International Music | 70-80 TV | 7080TV.it@SD | - | NO_GUIDE_HIT |
-| International Music | 88 Stereo (720p) [Not 24/7] | 88Stereo.cr@SD | - | NO_GUIDE_HIT |
-| International Music | 98.1 Pearl FM (720p) | 981PearlFM.sx@SD | - | NO_GUIDE_HIT |
-| International Music | A2i Music (720p) [Not 24/7] | A2iMusic.sn@SD | - | NO_GUIDE_HIT |
-| International Music | Abdulmajeed Abdullah (1080p) | AbdulmajeedAbdullah.sa@SD | - | NO_GUIDE_HIT |
-| International Music | ACW UG TV (480p) | ACWUGTV.ug@SD | - | NO_GUIDE_HIT |
-| International Music | AFN TV | AFNTV.ir@SD | - | NO_GUIDE_HIT |
-| International Music | Aghani Aghani TV (1080p) | AghaniAghaniTV.lb@SD | - | NO_GUIDE_HIT |
-| International Music | AlbKanale Music TV HD (1080p) | AlbKanaleMusicTV.al@HD | - | NO_GUIDE_HIT |
-| International Music | Alcance FM PLAY TV | AlcanceFMPLAYTV.py@SD | - | NO_GUIDE_HIT |
-| International Music | Alegria TV (720p) | AlegriaTV.bo@SD | - | NO_GUIDE_HIT |
-| International Music | Allegro HD (1080p) | AllegroHD.ar@SD | - | NO_GUIDE_HIT |
-| International Music | AMC (Afghanistan) (1080p) | AMC.af@SD | - | NO_GUIDE_HIT |
-| International Music | AMusic Channel (720p) | AMusicChannel.ng@SD | - | NO_GUIDE_HIT |
-| International Music | Andina RTV (720p) | AndinaRTV.pe@SD | - | NO_GUIDE_HIT |
-| International Music | Antenne Kaernten (720p) | AntenneKaernten.at@SD | - | NO_GUIDE_HIT |
-| International Music | Antenne Steiermark (720p) | AntenneSteiermark.at@SD | - | NO_GUIDE_HIT |
-| International Music | Antenne Vorarlberg (720p) [Not 24/7] | AntenneVorarlberg.at@SD | - | NO_GUIDE_HIT |
-| International Music | Arabica TV | custom.arabica-tv | - | NO_GUIDE_HIT |
-| International Music | Atomic Academy TV (480p) | AtomicAcademyTV.ro@SD | - | NO_GUIDE_HIT |
-| International Music | Atomic TV (360p) | AtomicTV.ro@SD | - | NO_GUIDE_HIT |
-| International Music | Audiokiss (1080p) | Audiokiss.bo@SD | - | NO_GUIDE_HIT |
-| International Music | Azahares Radiovisual Multimedia (720p) | AzaharesRadiovisualMultimedia.ar@SD | - | NO_GUIDE_HIT |
-| International Music | Bandamax (1080p) | Bandamax.mx@SD | - | NO_GUIDE_HIT |
-| International Music | Baraza TV (1080p) | BarazaTV.gr@SD | - | NO_GUIDE_HIT |
-| International Music | Baraza TV Deep House (720p) | BarazaTVDeepHouse.gr@SD | - | NO_GUIDE_HIT |
-| International Music | Baraza TV Relaxing (720p) | BarazaTVRelaxing.gr@SD | - | NO_GUIDE_HIT |
-| International Music | BEATTV (1080p) | BEATTV.nl@SD | - | NO_GUIDE_HIT |
-| International Music | Bel RTL (1080p) | BelRTL.be@SD | - | NO_GUIDE_HIT |
-| International Music | Best of Dance TV (1080p) | BestofDanceTV.ee@SD | - | NO_GUIDE_HIT |
-| International Music | BIZ Music (1080p) | BIZMusic.uz@SD | - | NO_GUIDE_HIT |
-| International Music | Black (1080p) | Black.ua@SD | - | NO_GUIDE_HIT |
-| International Music | BOKTV (720p) [Not 24/7] | BOKTV.za@SD | - | NO_GUIDE_HIT |
-| International Music | Boom TV (1080p) | BoomTV.ro@HD | - | NO_GUIDE_HIT |
-| International Music | BOX TV | BOXTV.bg@SD | - | NO_GUIDE_HIT |
-| International Music | BTA TV (720p) | BTATV.ve@SD | - | NO_GUIDE_HIT |
-| International Music | Canal 3 KMK TV (720p) | Canal3KMKTV.cr@SD | - | NO_GUIDE_HIT |
-| International Music | CCTV-15 (720p) | CCTV15.cn@SD | - | NO_GUIDE_HIT |
-| International Music | CEACOM TV (1080p) [Not 24/7] | CEACOMTV.bo@SD | - | NO_GUIDE_HIT |
-| International Music | Chamame TV | ChamameTV.ar@SD | - | NO_GUIDE_HIT |
-| International Music | Chocolate FM (720p) | ChocolateFM.cl@SD | - | NO_GUIDE_HIT |
-| International Music | City TV (Bulgaria) (576p) [Not 24/7] | CityTV.bg@SD | - | NO_GUIDE_HIT |
-| International Music | CKNO-FM (616p) | CKNOFM.ca@SD | - | NO_GUIDE_HIT |
-| International Music | Claro Musica TV (1080p) | ClaroMusicaTV.co@SD | - | NO_GUIDE_HIT |
-| International Music | Company TV (720p) | CompanyTV.it@SD | - | NO_GUIDE_HIT |
-| International Music | Conecta TV (720p) | ConectaTV.mx@SD | - | NO_GUIDE_HIT |
-| International Music | Cool FM 98.9 (720p) | CoolFM989.aw@SD | - | NO_GUIDE_HIT |
-| International Music | Corazon TV | CorazonTV.pa@SD | - | NO_GUIDE_HIT |
-| International Music | Couleur 3 (720p) | Couleur3.ch@SD | - | NO_GUIDE_HIT |
-| International Music | Cumbia Mix (720p) | CumbiaMix.ar@HD | - | NO_GUIDE_HIT |
-| International Music | D Music (1280p) [Not 24/7] | DMusic.kh@SD | - | NO_GUIDE_HIT |
-| International Music | Dance FM (720p) | DanceFM.cl@SD | - | NO_GUIDE_HIT |
-| International Music | Dance TV [Geo-blocked] | DanceTV.ar@SD | - | NO_GUIDE_HIT |
-| International Music | DanceTV Algorhythm (1080p) | DanceTVAlgorhythm.ee@SD | - | NO_GUIDE_HIT |
-| International Music | DanceTV Deep House District (1080p) | DanceTVDeepHouseDistrict.ee@SD | - | NO_GUIDE_HIT |
-| International Music | DanceTV EDM Mainstage (1080p) | DanceTVEDMMainstage.ee@SD | - | NO_GUIDE_HIT |
-| International Music | DanceTV House Floor (1080p) | DanceTVHouseFloor.ee@SD | - | NO_GUIDE_HIT |
-| International Music | DanceTV Minimal Tech (1080p) | DanceTVMinimalTech.ee@SD | - | NO_GUIDE_HIT |
-| International Music | DanceTV Techno Warehouse (1080p) | DanceTVTechnoWarehouse.ee@SD | - | NO_GUIDE_HIT |
-| International Music | DBM TV (1080p) | DBMTV.fr@SD | - | NO_GUIDE_HIT |
-| International Music | Deep House District (1080p) | DeepHouseDistrict.nl@SD | - | NO_GUIDE_HIT |
-| International Music | Disco Mix (576p) | DiscoMix.ro@SD | - | NO_GUIDE_HIT |
-| International Music | DM Sat (576p) | DMSat.rs@SD | - | NO_GUIDE_HIT |
-| International Music | Dream Turk (720p) | DreamTurk.tr@SD | - | NO_GUIDE_HIT |
-| International Music | DSTV (Bulgaria) (614p) [Not 24/7] | DSTV.bg@SD | - | NO_GUIDE_HIT |
-| International Music | E40 (1080p) | E40.py@SD | - | NO_GUIDE_HIT |
-| International Music | El Sol Network TV (1080p) | ElSolNetworkTV.ec@SD | - | NO_GUIDE_HIT |
-| International Music | Ellinikos FM (720p) | EllinikosFM.gr@SD | - | NO_GUIDE_HIT |
-| International Music | Epic Music Digital | custom.epic-music-digital | - | NO_GUIDE_HIT |
-| International Music | EU Music | EUMusic.ua | - | NO_GUIDE_HIT |
-| International Music | Euro Indie Music Chart TV (360p) | EuroIndieMusicChartTV.it@SD | - | NO_GUIDE_HIT |
-| International Music | Exa TV | ExaTV.mx@SD | - | NO_GUIDE_HIT |
-| International Music | Fabulosa Estereo 100.5 FM (720p) | FabulosaEstereo1005FM.pa@SD | - | NO_GUIDE_HIT |
-| International Music | Live Music | LiveMusic.us@SD | - | NO_GUIDE_HIT |
-| International Music | Trace Urban (Australia) | custom.trace-urban-australia | - | NO_GUIDE_HIT |
-| International Music | Ua Music | custom.ua-music | - | NO_GUIDE_HIT |
-| International Music | V2BEAT | custom.v2beat | - | NO_GUIDE_HIT |
-| International Music | ¡Viva Latino! (1080p) | VivaLatino.ua@SD | - | NO_GUIDE_HIT |
+| Iran | AFN TV | AFNTV.ir@SD | - | NO_GUIDE_HIT |
+| Iran | Afra Film | AfraFilm.ir@SD | - | NO_GUIDE_HIT |
+| Iran | Cafe Film | CafeFilm.ir@SD | - | NO_GUIDE_HIT |
+| Iran | iFilm 2 | iFilm2.ir@SD | - | NO_GUIDE_HIT |
+| Iran | iFilm English | iFilmEnglish.ir@SD | - | NO_GUIDE_HIT |
+| Iran | iFilm Persian | iFilmPersian.ir@SD | - | NO_GUIDE_HIT |
+| Iran | Meta Film TV | MetaFilmTV.ir@SD | - | NO_GUIDE_HIT |
+| Iran | SL 1 | SL1.ir@SD | - | NO_GUIDE_HIT |
+| Iran | SL 2 | SL2.ir@SD | - | NO_GUIDE_HIT |
+| Italy | 51 Radio TV | 51RadioTV.it@SD | - | NO_GUIDE_HIT |
+| Italy | 7 RadioVisione | 7RadioVisione.it@HD | - | NO_GUIDE_HIT |
+| Italy | 70-80 TV | 7080TV.it@SD | - | NO_GUIDE_HIT |
+| Italy | Company TV | CompanyTV.it@SD | - | NO_GUIDE_HIT |
+| Italy | Euro Indie Music Chart TV | EuroIndieMusicChartTV.it@SD | - | NO_GUIDE_HIT |
+| Italy | FM ITALIA | FMITALIA.it@SD | - | NO_GUIDE_HIT |
+| Italy | Kiss Kiss Napoli TV | KissKissNapoliTV.it@SD | - | NO_GUIDE_HIT |
+| Italy | Kiss Kiss TV | KissKissTV.it@SD | - | NO_GUIDE_HIT |
+| Italy | m2o TV | m2oTV.it@SD | - | NO_GUIDE_HIT |
+| Italy | Radio Bruno TV | RadioBrunoTV.it@SD | - | NO_GUIDE_HIT |
+| Italy | Radio Piter Pan TV | RadioPiterPanTV.it@SD | - | NO_GUIDE_HIT |
+| Italy | Radio Zeta | RadioZeta.it@SD | - | NO_GUIDE_HIT |
+| Italy | Rakuten TV Drama Movies Italy | RakutenTVDramaMovies.es@Italy | - | NO_GUIDE_HIT |
+| Italy | RTL 102.5 Best | RTL1025Best.it@SD | - | NO_GUIDE_HIT |
+| Italy | RTL 102.5 Bro&Sis | RTL1025BroSis.it@SD | - | NO_GUIDE_HIT |
+| Italy | RTL 102.5 Caliente | RTL1025Caliente.it@SD | - | NO_GUIDE_HIT |
+| Italy | RTL 102.5 Disco | RTL1025Disco.it@SD | - | NO_GUIDE_HIT |
+| Italy | RTL 102.5 Napule | RTL1025Napule.it@SD | - | NO_GUIDE_HIT |
+| Italy | RTL 102.5 Traffic | RTL1025Traffic.it@SD | - | NO_GUIDE_HIT |
+| Italy | V2BEAT | custom.v2beat | - | NO_GUIDE_HIT |
+| Kids | Atfal & Mawaheb TV | AtfalMawahebTV.sa@SD | Atfal.&.Mawaheb.ae | MAPPED_ID_ONLY |
 | Kids | Disney Channel India | DisneyChannel.in@HD | DISNEY.CHANNEL.in | MAPPED_ID_ONLY |
+| Kids | Gulli Girl | GulliGirl.ru@SD | Gulli.Girl.cz | MAPPED_ID_ONLY |
+| Kids | Nickelodeon (Brazil) | Nickelodeon.br@SD | Nickelodeon.br | MAPPED_ID_ONLY |
+| Kids | Taha TV | TahaTV.lb@SD | Taha.ae | MAPPED_ID_ONLY |
+| Kids | 13 Kids | 13Kids.cl@SD | - | NO_GUIDE_HIT |
 | Kids | ADN TV+ | ADNTVPlus.fr | - | NO_GUIDE_HIT |
+| Kids | ADO TV | ADOTV.bj@SD | - | NO_GUIDE_HIT |
+| Kids | Afarin Baxcha | AfarinBaxcha.iq@SD | - | NO_GUIDE_HIT |
 | Kids | Afarin TV | AfarinTV.iq | - | NO_GUIDE_HIT |
+| Kids | Afarin TV | AfarinTV.iq@SD | - | NO_GUIDE_HIT |
+| Kids | Akili Kids! | AkiliKids.ke@SD | - | NO_GUIDE_HIT |
+| Kids | Amou Yazid TV | AmouYazidTV.dz@SD | - | NO_GUIDE_HIT |
+| Kids | Aqlvoy | Aqlvoy.uz@SD | - | NO_GUIDE_HIT |
+| Kids | Baby Time | BabyTime.ru@SD | - | NO_GUIDE_HIT |
+| Kids | BabyFirst Spanish | BabyFirst.us@Spanish | - | NO_GUIDE_HIT |
+| Kids | Balapan | Balapan.kz@HD | - | NO_GUIDE_HIT |
+| Kids | Balapan International | BalapanInternational.kz@SD | - | NO_GUIDE_HIT |
 | Kids | Bantul the Great | BantulTheGreat.us | - | NO_GUIDE_HIT |
+| Kids | BeJoy.kids | BeJoykids.it@HD | - | NO_GUIDE_HIT |
+| Kids | Bolajon | Bolajon.uz@SD | - | NO_GUIDE_HIT |
+| Kids | Box Kids TV | BoxKidsTV.br@SD | - | NO_GUIDE_HIT |
+| Kids | Carousel +4 | Carousel.ru@Plus4 | - | NO_GUIDE_HIT |
+| Kids | Cartoon Network (Pakistan) | CartoonNetwork.pk@SD | - | NO_GUIDE_HIT |
+| Kids | Cartoon Network Arabic | CartoonNetworkArabic.ae@SD | - | NO_GUIDE_HIT |
+| Kids | Cartoon Network Asia | CartoonNetworkAsia.sg@SD | - | NO_GUIDE_HIT |
+| Kids | Cartoon Network CEE Czech Republic | CartoonNetworkCEE.uk@CzechRepublic | - | NO_GUIDE_HIT |
+| Kids | Cartoon Network CEE Poland | CartoonNetworkCEE.uk@Poland | - | NO_GUIDE_HIT |
+| Kids | Cartoon Network CEE Ukraine | CartoonNetworkCEE.uk@Ukraine | - | NO_GUIDE_HIT |
+| Kids | Cartoon Network Latin America Brazil | CartoonNetworkLatinAmerica.us@Brazil | - | NO_GUIDE_HIT |
+| Kids | Cartoon Network Latin America South Atlantic | CartoonNetworkLatinAmerica.us@SouthAtlantic | - | NO_GUIDE_HIT |
+| Kids | Cartoon Network Latin America South Pacific | CartoonNetworkLatinAmerica.us@SouthPacific | - | NO_GUIDE_HIT |
+| Kids | Cartoonito Asia | CartoonitoAsia.sg@SD | - | NO_GUIDE_HIT |
+| Kids | Cartoonito CEE Czechia | CartoonitoCEE.uk@Czechia | - | NO_GUIDE_HIT |
+| Kids | Cartoonito CEE Poland | CartoonitoCEE.uk@Poland | - | NO_GUIDE_HIT |
+| Kids | Cartoonito Latin America | CartoonitoLatinAmerica.us@SD | - | NO_GUIDE_HIT |
+| Kids | CBeebies (Poland) | CBeebies.pl@SD | - | NO_GUIDE_HIT |
+| Kids | CCTV-14 | CCTV14.cn@HD | - | NO_GUIDE_HIT |
+| Kids | Chikitoonz | Chikitoonz.pe@SD | - | NO_GUIDE_HIT |
+| Kids | Chinola TV | ChinolaTV.do@SD | - | NO_GUIDE_HIT |
+| Kids | Clan | Clan.es@SD | - | NO_GUIDE_HIT |
+| Kids | CT Decko | CTDecko.cz@SD | - | NO_GUIDE_HIT |
+| Kids | Detskiy | Detskiy.ru@SD | - | NO_GUIDE_HIT |
+| Kids | Discovery Kids Latin America | DiscoveryKidsLatinAmerica.us@Panregional | - | NO_GUIDE_HIT |
+| Kids | Discovery Kids Latin America Chile | DiscoveryKidsLatinAmerica.us@Chile | - | NO_GUIDE_HIT |
+| Kids | Discovery Kids Latin America Colombia | DiscoveryKidsLatinAmerica.us@Colombia | - | NO_GUIDE_HIT |
+| Kids | Discovery Kids Latin America Mexico | DiscoveryKidsLatinAmerica.us@Mexico | - | NO_GUIDE_HIT |
+| Kids | Disney Channel (Bulgaria) | DisneyChannel.bg@SD | - | NO_GUIDE_HIT |
+| Kids | Disney Channel Latin America Center | DisneyChannelLatinAmerica.ar@Center | - | NO_GUIDE_HIT |
+| Kids | Disney Channel Latin America Mexico | DisneyChannelLatinAmerica.ar@Mexico | - | NO_GUIDE_HIT |
+| Kids | Disney Channel Latin America North | DisneyChannelLatinAmerica.ar@North | - | NO_GUIDE_HIT |
+| Kids | Disney Channel Latin America Panregional | DisneyChannelLatinAmerica.ar@PanregionalHD | - | NO_GUIDE_HIT |
+| Kids | Disney Jr. Latin America | DisneyJrLatinAmerica.ar@North | - | NO_GUIDE_HIT |
+| Kids | Disney Jr. Latin America North | DisneyJrLatinAmerica.ar@NorthHD | - | NO_GUIDE_HIT |
+| Kids | Disney XD (United States) | DisneyXD.us@East | - | NO_GUIDE_HIT |
 | Kids | Doraemon TV | DoraemonTV.us | - | NO_GUIDE_HIT |
+| Kids | DumDum | DumDum.br@SD | - | NO_GUIDE_HIT |
+| Kids | Duronto TV | DurontoTV.bd@SD | - | NO_GUIDE_HIT |
+| Kids | EBS Kids | EBSKids.kr@SD | - | NO_GUIDE_HIT |
+| Kids | EKids | EKids.bg@SD | - | NO_GUIDE_HIT |
+| Kids | El Chavo TV | ElChavoTV.mx@HD | - | NO_GUIDE_HIT |
 | Kids | Epic Kids Digital | EpicKidsDigital.us | - | NO_GUIDE_HIT |
-| Kids | Extrema Kids TV [Not 24/7] | ExtremaKidsTV.cr@HD | - | NO_GUIDE_HIT |
+| Kids | ETV 2 | ETV2.ee@SD | - | NO_GUIDE_HIT |
+| Kids | Extrema Kids TV | ExtremaKidsTV.cr@HD | - | NO_GUIDE_HIT |
+| Kids | Groovia Kids | GrooviaKids.id@HD | - | NO_GUIDE_HIT |
+| Kids | Iunior TV | IuniorTV.it@SD | - | NO_GUIDE_HIT |
+| Kids | JapanimTV | JapanimTV.be@SD | - | NO_GUIDE_HIT |
+| Kids | JimJam Europe | JimJamEurope.uk@SD | - | NO_GUIDE_HIT |
+| Kids | Kapitan Fantastika | KapitanFantastika.ru@SD | - | NO_GUIDE_HIT |
+| Kids | Kuriakos Kids | KuriakosKids.pt@SD | - | NO_GUIDE_HIT |
+| Kids | Lale | Lale.ua@SD | - | NO_GUIDE_HIT |
 | Kids | Lego Channel | LegoChannel.us@SD | - | NO_GUIDE_HIT |
-| Kids | MAX Anime (1080p) | MAXAnime.ve@SD | - | NO_GUIDE_HIT |
+| Kids | Lucas & Friends | LucasFriends.us@SD | - | NO_GUIDE_HIT |
+| Kids | Mama | Mama.ru@SD | - | NO_GUIDE_HIT |
+| Kids | Maxcine Kids | MaxcineKids.us@HD | - | NO_GUIDE_HIT |
+| Kids | MBC 3 USA | MBC3USA.us@SD | - | NO_GUIDE_HIT |
+| Kids | MiMi TV | MiMiTV.uz@SD | - | NO_GUIDE_HIT |
+| Kids | Minika Cocuk | MinikaCocuk.tr@SD | - | NO_GUIDE_HIT |
+| Kids | Minimax (Pakistan) | Minimax.pk@SD | - | NO_GUIDE_HIT |
+| Kids | Minimax CEE | MinimaxCEE.cz@SD | - | NO_GUIDE_HIT |
 | Kids | Moonbug Kids | MoonbugKids.uk | - | NO_GUIDE_HIT |
+| Kids | Mr Bean Animated ES | MrBeanAnimated.uk@ES | - | NO_GUIDE_HIT |
+| Kids | Mr Bean Animated FR | MrBeanAnimated.uk@FR | - | NO_GUIDE_HIT |
 | Kids | Nick Bangla | NickBangla.bd | - | NO_GUIDE_HIT |
+| Kids | Nick Jr East | custom.nick-jr-east | - | NO_GUIDE_HIT |
+| Kids | Nick Jr. (Croatia) | NickJr.hr@SD | - | NO_GUIDE_HIT |
+| Kids | Nick Jr. (Russia) | NickJr.ru@SD | - | NO_GUIDE_HIT |
+| Kids | Nick Jr. (United States) | NickJr.us@East | - | NO_GUIDE_HIT |
+| Kids | Nick Jr. Latin America | NickJrLatinAmerica.us@Panregional | - | NO_GUIDE_HIT |
+| Kids | Nickelodeon (Croatia) | Nickelodeon.hr@SD | - | NO_GUIDE_HIT |
+| Kids | Nickelodeon (Germany) | Nickelodeon.de@SD | - | NO_GUIDE_HIT |
+| Kids | Nickelodeon (Russia) | Nickelodeon.ru@SD | - | NO_GUIDE_HIT |
+| Kids | Nickelodeon (United States) | Nickelodeon.us@East | - | NO_GUIDE_HIT |
+| Kids | Nickelodeon CIS | NickelodeonCIS.kz@SD | - | NO_GUIDE_HIT |
+| Kids | Nickelodeon Global | NickelodeonGlobal.uk@SD | - | NO_GUIDE_HIT |
+| Kids | NickOnline | NickOnline.br@HD | - | NO_GUIDE_HIT |
+| Kids | Nicktoons (United States) | Nicktoons.us@East | - | NO_GUIDE_HIT |
+| Kids | Nicktoons CIS | NicktoonsCIS.ru@SD | - | NO_GUIDE_HIT |
+| Kids | O! International | O.ru@International | - | NO_GUIDE_HIT |
+| Kids | ON Kids | ONKids.vn@SD | - | NO_GUIDE_HIT |
+| Kids | Pakapaka | Pakapaka.ar@SD | - | NO_GUIDE_HIT |
+| Kids | Peques TV | PequesTV.pe@SD | - | NO_GUIDE_HIT |
+| Kids | Persiana Junior | PersianaJunior.fr@SD | - | NO_GUIDE_HIT |
+| Kids | Plim Plim | PlimPlim.ar@SD | - | NO_GUIDE_HIT |
+| Kids | PLUSPLUS | PLUSPLUS.ua@SD | - | NO_GUIDE_HIT |
+| Kids | Pooya TV | PooyaTV.ir@SD | - | NO_GUIDE_HIT |
 | Kids | Powerkids Kartoon Channel | PowerkidsKartoonChannel.us | - | NO_GUIDE_HIT |
+| Kids | Reino Infantil | ReinoInfantil.mz@SD | - | NO_GUIDE_HIT |
+| Kids | Retro Cartoon | RetroCartoon.br@SD | - | NO_GUIDE_HIT |
+| Kids | Ryzhiy | Ryzhiy.ru@SD | - | NO_GUIDE_HIT |
+| Kids | Skwad Play | SkwadPlay.us@SD | - | NO_GUIDE_HIT |
+| Kids | Smotrim 100% Detskoe | Smotrim100Detskoe.ru@SD | - | NO_GUIDE_HIT |
 | Kids | Smurf TV | SmurfTV.us | - | NO_GUIDE_HIT |
+| Kids | Spacetoon Arabic | SpacetoonArabic.ae@SD | - | NO_GUIDE_HIT |
+| Kids | Spacetoon Turkey | SpacetoonTurkey.tr@SD | - | NO_GUIDE_HIT |
+| Kids | Starz Kids & Family | StarzKidsFamily.us@East | - | NO_GUIDE_HIT |
+| Kids | Super Simple Songs | SuperSimpleSongs.us@SD | - | NO_GUIDE_HIT |
+| Kids | Tamyr | Tamyr.ru@SD | - | NO_GUIDE_HIT |
+| Kids | Tiguerito TV | TigueritoTV.do@HD | - | NO_GUIDE_HIT |
 | Kids | Tom and Jerry | TomAndJerry.do | - | NO_GUIDE_HIT |
+| Kids | Tom And Jerry | TomAndJerry.do@HD | - | NO_GUIDE_HIT |
 | Kids | Tooku | Tooku.ru | - | NO_GUIDE_HIT |
 | Kids | Toon Goggles Junior | ToonGogglesJunior.us | - | NO_GUIDE_HIT |
+| Kids | Toonami Aftermath | ToonamiAftermath.us@East | - | NO_GUIDE_HIT |
+| Kids | Toonami Aftermath West | ToonamiAftermath.us@West | - | NO_GUIDE_HIT |
+| Kids | Tooncast SouthAmerica | Tooncast.us@SouthAmerica | - | NO_GUIDE_HIT |
+| Kids | TRT Cocuk | TRTCocuk.tr@SD | - | NO_GUIDE_HIT |
+| Kids | TRT Diyanet Cocuk | TRTDiyanetCocuk.tr@SD | - | NO_GUIDE_HIT |
+| Kids | TVCARiB Kids & Teens | TVCARiBKidsTeens.sx@SD | - | NO_GUIDE_HIT |
+| Kids | TVOKids | TVOKids.ca@SD | - | NO_GUIDE_HIT |
+| Kids | TVS Hi Tops | TVSHiTops.us@SD | - | NO_GUIDE_HIT |
+| Kids | V gostyakh u skazki | Vgostyakhuskazki.ru@SD | - | NO_GUIDE_HIT |
 | Kids | WOW Kidz Hindi | WOWKidz.in@Hindi | - | NO_GUIDE_HIT |
 | Kids | WOW Kidz Tamil | WOWKidzTamil.in | - | NO_GUIDE_HIT |
 | Kids | WOW Kidz Telugu | WOWKidz.in@Telugu | - | NO_GUIDE_HIT |
+| Kids | Xtrema Cartoons | XtremaCartoons.ar@SD | - | NO_GUIDE_HIT |
+| Kids | Yu-Gi-Oh! en espanol | YuGiOhenespanol.us@SD | - | NO_GUIDE_HIT |
+| Kids | Zoom (Israel) | Zoom.il@SD | - | NO_GUIDE_HIT |
+| Lebanon | Aghani Aghani TV | AghaniAghaniTV.lb@SD | - | NO_GUIDE_HIT |
+| Lebanon | Arabica TV | custom.arabica-tv | - | NO_GUIDE_HIT |
+| Lebanon | mfm | mfm.lb@HD | - | NO_GUIDE_HIT |
+| Lebanon | MTV Lebanon | MTVLebanon.lb@SD | - | NO_GUIDE_HIT |
+| Lebanon | OneFM | OneFM.lb@SD | - | NO_GUIDE_HIT |
+| Mexico | AXN Latin America Mexico | AXNLatinAmerica.us@Mexico | - | NO_GUIDE_HIT |
+| Mexico | Az Cinema | AzCinema.mx@SD | - | NO_GUIDE_HIT |
+| Mexico | Claro Cinema | ClaroCinema.mx@SD | - | NO_GUIDE_HIT |
+| Mexico | Conecta TV | ConectaTV.mx@SD | - | NO_GUIDE_HIT |
+| Mexico | De Pelicula Latin America | DePeliculaLatinAmerica.mx@SD | - | NO_GUIDE_HIT |
+| Mexico | De Pelicula Plus | DePeliculaPlus.mx@SD | - | NO_GUIDE_HIT |
+| Mexico | Exa TV | ExaTV.mx@SD | - | NO_GUIDE_HIT |
+| Mexico | Lobo TV | LoboTV.mx@SD | - | NO_GUIDE_HIT |
+| Mexico | MultiPremier | MultiPremier.mx@SD | - | NO_GUIDE_HIT |
+| Mexico | MyTime Movie Network (Mexico) | MyTimeMovieNetwork.mx@SD | - | NO_GUIDE_HIT |
+| Mexico | Popcorn Central | PopcornCentral.mx@SD | - | NO_GUIDE_HIT |
+| Mexico | TeleHit | TeleHit.mx@SD | - | NO_GUIDE_HIT |
+| Mexico | Vision Television | VisionTelevision.mx@SD | - | NO_GUIDE_HIT |
+| Netherlands | BEATTV | BEATTV.nl@SD | - | NO_GUIDE_HIT |
+| Netherlands | Deep House District | DeepHouseDistrict.nl@SD | - | NO_GUIDE_HIT |
+| Netherlands | FomixTV | FomixTV.nl@HD | - | NO_GUIDE_HIT |
+| Netherlands | Gigant FM | GigantFM.nl@SD | - | NO_GUIDE_HIT |
+| Netherlands | Hype Visual Radio | HypeVisualRadio.nl@SD | - | NO_GUIDE_HIT |
+| Netherlands | Qmusic | Qmusic.nl@SD | - | NO_GUIDE_HIT |
+| Netherlands | Radio JND | RadioJND.nl@SD | - | NO_GUIDE_HIT |
+| Netherlands | RadioNL TV | RadioNLTV.nl@SD | - | NO_GUIDE_HIT |
+| Netherlands | Salto Brasa Music | SaltoBrasaMusic.nl@SD | - | NO_GUIDE_HIT |
+| Netherlands | TMF | TMF.nl@HDFAST | - | NO_GUIDE_HIT |
+| New Channels | 2TV | 2TV.lt@SD | - | NO_GUIDE_HIT |
+| New Channels | 312 Kino | 312Kino.kg@SD | - | NO_GUIDE_HIT |
+| New Channels | 88 Stereo | 88Stereo.cr@SD | - | NO_GUIDE_HIT |
+| New Channels | 98.1 Pearl FM | 981PearlFM.sx@SD | - | NO_GUIDE_HIT |
+| New Channels | A2i Music | A2iMusic.sn@SD | - | NO_GUIDE_HIT |
+| New Channels | ACW UG TV | ACWUGTV.ug@SD | - | NO_GUIDE_HIT |
+| New Channels | AlbKanale Music TV | AlbKanaleMusicTV.al@HD | - | NO_GUIDE_HIT |
+| New Channels | Alcance FM PLAY TV | AlcanceFMPLAYTV.py@SD | - | NO_GUIDE_HIT |
+| New Channels | Alegria TV | AlegriaTV.bo@SD | - | NO_GUIDE_HIT |
+| New Channels | Allo Cine | AlloCine.cm@SD | - | NO_GUIDE_HIT |
+| New Channels | AMC (Afghanistan) | AMC.af@SD | - | NO_GUIDE_HIT |
+| New Channels | AMusic Channel | AMusicChannel.ng@SD | - | NO_GUIDE_HIT |
+| New Channels | Armenia Premium | ArmeniaPremium.am@SD | - | NO_GUIDE_HIT |
+| New Channels | Audiokiss | Audiokiss.bo@SD | - | NO_GUIDE_HIT |
+| New Channels | Aurora Media Films | AuroraMediaFilms.gt@SD | - | NO_GUIDE_HIT |
+| New Channels | AXN Asia Taiwan | AXNAsia.sg@Taiwan | - | NO_GUIDE_HIT |
+| New Channels | BOKTV | BOKTV.za@SD | - | NO_GUIDE_HIT |
+| New Channels | Boreal | Boreal.do@SD | - | NO_GUIDE_HIT |
+| New Channels | BTA TV | BTATV.ve@SD | - | NO_GUIDE_HIT |
+| New Channels | Canal 3 KMK TV | Canal3KMKTV.cr@SD | - | NO_GUIDE_HIT |
+| New Channels | Cinemax Asia | CinemaxAsia.sg@HD | - | NO_GUIDE_HIT |
+| New Channels | Cool FM 98.9 | CoolFM989.aw@SD | - | NO_GUIDE_HIT |
+| New Channels | Corazon TV | CorazonTV.pa@SD | - | NO_GUIDE_HIT |
+| New Channels | Dismar Radio TV | DismarRadioTV.py@SD | - | NO_GUIDE_HIT |
+| New Channels | E40 | E40.py@SD | - | NO_GUIDE_HIT |
+| New Channels | EBC Foreign Movie | EBCForeignMovie.tw@SD | - | NO_GUIDE_HIT |
+| New Channels | El Sol Network TV | ElSolNetworkTV.ec@SD | - | NO_GUIDE_HIT |
+| New Channels | Fabulosa Estereo 100.5 FM | FabulosaEstereo1005FM.pa@SD | - | NO_GUIDE_HIT |
+| New Channels | First Music Channel | FirstMusicChannel.by@SD | - | NO_GUIDE_HIT |
+| New Channels | FM Mundo | FMMundo.ec@SD | - | NO_GUIDE_HIT |
+| New Channels | Folk Klub TV | FolkKlubTV.au@SD | - | NO_GUIDE_HIT |
+| New Channels | Folk TV | FolkTV.mk@SD | - | NO_GUIDE_HIT |
+| New Channels | Fuego TV | FuegoTV.do@SD | - | NO_GUIDE_HIT |
+| New Channels | Fun Vision | FunVision.be@SD | - | NO_GUIDE_HIT |
+| New Channels | FUSION TV | FUSIONTV.mq@SD | - | NO_GUIDE_HIT |
+| New Channels | Gex TV | GexTV.cr@HD | - | NO_GUIDE_HIT |
+| New Channels | Gugak TV | GugakTV.kr@SD | - | NO_GUIDE_HIT |
+| New Channels | HBO Asia Taiwan | HBOAsia.sg@Taiwan | - | NO_GUIDE_HIT |
+| New Channels | Heart Radio Aruba | HeartRadioAruba.aw@SD | - | NO_GUIDE_HIT |
+| New Channels | HEi Now | HEiNow.py@SD | - | NO_GUIDE_HIT |
+| New Channels | Hit FM | HitFM.md@SD | - | NO_GUIDE_HIT |
+| New Channels | HMTV (Nigeria) | HMTV.ng@SD | - | NO_GUIDE_HIT |
+| New Channels | Identite Tele Caraibes | IdentiteTeleCaraibes.mq@SD | - | NO_GUIDE_HIT |
+| New Channels | Imagen FM 105.1 | ImagenFM1051.hn@SD | - | NO_GUIDE_HIT |
+| New Channels | Infinita TV | InfinitaTV.ec@SD | - | NO_GUIDE_HIT |
+| New Channels | INTV Australia | INTVAustralia.au@SD | - | NO_GUIDE_HIT |
+| New Channels | IQ Channel | IQChannel.cr@SD | - | NO_GUIDE_HIT |
+| New Channels | Isango TV | IsangoTV.rw@SD | - | NO_GUIDE_HIT |
+| New Channels | Itage TV | ItageTV.ng@SD | - | NO_GUIDE_HIT |
+| New Channels | Ivoire Channel | IvoireChannel.ci@SD | - | NO_GUIDE_HIT |
+| New Channels | Jordan Songs | JordanSongs.jo@SD | - | NO_GUIDE_HIT |
+| New Channels | JRTV Jarviradio | JRTVJarviradio.fi@SD | - | NO_GUIDE_HIT |
+| New Channels | K100 | K100.is@SD | - | NO_GUIDE_HIT |
+| New Channels | KandelaTV | KandelaTV.ve@SD | - | NO_GUIDE_HIT |
+| New Channels | Kayhan TV | KayhanTV.af@SD | - | NO_GUIDE_HIT |
+| New Channels | Klara | Klara.be@SD | - | NO_GUIDE_HIT |
+| New Channels | KN Music TV | KNMusicTV.az@SD | - | NO_GUIDE_HIT |
+| New Channels | La Elegida Television | LaElegidaTelevision.uy@SD | - | NO_GUIDE_HIT |
+| New Channels | La Top 102.9 | LaTop1029.hn@SD | - | NO_GUIDE_HIT |
+| New Channels | La Top 107.7 | LaTop1077.hn@SD | - | NO_GUIDE_HIT |
+| New Channels | La-X | LaX.pr@SD | - | NO_GUIDE_HIT |
+| New Channels | Live99FM | Live99FM.bq@SD | - | NO_GUIDE_HIT |
+| New Channels | Lollywood HD TV | LollywoodHDTV.cd@SD | - | NO_GUIDE_HIT |
+| New Channels | Look Thoong TV | LookThoongTV.la@SD | - | NO_GUIDE_HIT |
+| New Channels | Los Angeles TV Radio | LosAngelesTVRadio.py@SD | - | NO_GUIDE_HIT |
+| New Channels | Love TV | LoveTV.mk@SD | - | NO_GUIDE_HIT |
+| New Channels | LRT Klasika | LRTKlasika.lt@SD | - | NO_GUIDE_HIT |
+| New Channels | LRT Opus | LRTOpus.lt@SD | - | NO_GUIDE_HIT |
+| New Channels | Maah TV | MaahTV.my@SD | - | NO_GUIDE_HIT |
+| New Channels | Madras FM TV | MadrasFMTV.gp@SD | - | NO_GUIDE_HIT |
+| New Channels | Maimon TV Canal 3 | MaimonTVCanal3.do@SD | - | NO_GUIDE_HIT |
+| New Channels | Makao TV | MakaoTV.do@SD | - | NO_GUIDE_HIT |
+| New Channels | Mas23 TV | Mas23TV.pa@SD | - | NO_GUIDE_HIT |
+| New Channels | Mega Cine TV | MegaCineTV.do@HD | - | NO_GUIDE_HIT |
+| New Channels | MegaBox | MegaBox.ni@SD | - | NO_GUIDE_HIT |
+| New Channels | Mei Ah Movie Channel | MeiAhMovieChannel.hk@SD | - | NO_GUIDE_HIT |
+| New Channels | Metropoli Medios TV | MetropoliMediosTV.ec@SD | - | NO_GUIDE_HIT |
+| New Channels | Montones TV | MontonesTV.do@HD | - | NO_GUIDE_HIT |
+| New Channels | Mosaique FM | MosaiqueFM.tn@SD | - | NO_GUIDE_HIT |
+| New Channels | Muzangala TV | MuzangalaTV.ao@SD | - | NO_GUIDE_HIT |
+| New Channels | MWD Movies | MWDMovies.mm@SD | - | NO_GUIDE_HIT |
+| New Channels | My Cinema Europe | MyCinemaEurope.ch@SD | - | NO_GUIDE_HIT |
+| New Channels | Nande Portetepe TV | NandePortetepeTV.py@SD | - | NO_GUIDE_HIT |
+| New Channels | Navahang TV | NavahangTV.fi@SD | - | NO_GUIDE_HIT |
+| New Channels | Noroc TV | NorocTV.md@SD | - | NO_GUIDE_HIT |
+| New Channels | Pindin TV | PindinTV.pa@SD | - | NO_GUIDE_HIT |
+| New Channels | Planet 100.9 FM | Planet1009FM.pa@SD | - | NO_GUIDE_HIT |
+| New Channels | Play TV (Cameroon) | PlayTV.cm@SD | - | NO_GUIDE_HIT |
+| New Channels | PMC Royale | PMCRoyale.ae@SD | - | NO_GUIDE_HIT |
+| New Channels | Power 101.7 FM | Power1017FM.aw@SD | - | NO_GUIDE_HIT |
+| New Channels | Radio Bonita 106.7 | RadioBonita1067.ec@SD | - | NO_GUIDE_HIT |
+| New Channels | Radio Chisinau | RadioChisinau.md@SD | - | NO_GUIDE_HIT |
+| New Channels | Radio Colmenar 92.5 FM | RadioColmenar925FM.py@SD | - | NO_GUIDE_HIT |
+| New Channels | Radio Cuenca Estereo | RadioCuencaEstereo.ec@SD | - | NO_GUIDE_HIT |
+| New Channels | RADIO DISCOunt TV | RADIODISCOuntTV.ch@SD | - | NO_GUIDE_HIT |
+| New Channels | Radio Ideal | RadioIdeal.hn@SD | - | NO_GUIDE_HIT |
+| New Channels | Radio Moldova Muzical | RadioMoldovaMuzical.md@SD | - | NO_GUIDE_HIT |
+| New Channels | Radio Monumental TV | RadioMonumentalTV.ec@SD | - | NO_GUIDE_HIT |
+| New Channels | Radio San Cristobal 88.7 FM | RadioSanCristobal887FM.py@SD | - | NO_GUIDE_HIT |
+| New Channels | Radio SWH TV | RadioSWHTV.lv@SD | - | NO_GUIDE_HIT |
+| New Channels | Radio Tele Hit | RadioTeleHit.ht@SD | - | NO_GUIDE_HIT |
+| New Channels | RHT Guadeloupe | RHTGuadeloupe.gp@SD | - | NO_GUIDE_HIT |
+| New Channels | RTL Gold (Luxembourg) | RTLGold.lu@SD | - | NO_GUIDE_HIT |
+| New Channels | Scorch TV | ScorchTV.tt@SD | - | NO_GUIDE_HIT |
+| New Channels | ShowVen TV | ShowVenTV.ve@SD | - | NO_GUIDE_HIT |
+| New Channels | Siembra TV (Dominican Republic) | SiembraTV.do@SD | - | NO_GUIDE_HIT |
+| New Channels | Silk Way Cinema | SilkWayCinema.kz@SD | - | NO_GUIDE_HIT |
+| New Channels | Sky Folk TV | SkyFolkTV.mk@SD | - | NO_GUIDE_HIT |
+| New Channels | SOY Plancha TV | SOYPlanchaTV.cr@SD | - | NO_GUIDE_HIT |
+| New Channels | Star 101 FM | Star101FM.gu@SD | - | NO_GUIDE_HIT |
+| New Channels | StuBru | StuBru.be@SD | - | NO_GUIDE_HIT |
+| New Channels | Super Q Panama | SuperQPanama.pa@SD | - | NO_GUIDE_HIT |
+| New Channels | Tele Dominicana TV | TeleDominicanaTV.do@SD | - | NO_GUIDE_HIT |
+| New Channels | Tele Zoukla | TeleZoukla.mq@SD | - | NO_GUIDE_HIT |
+| New Channels | Tezaur TV | TezaurTV.md@SD | - | NO_GUIDE_HIT |
+| New Channels | Tjil TV | TjilTV.na@SD | - | NO_GUIDE_HIT |
+| New Channels | TMA | TMA.gp@SD | - | NO_GUIDE_HIT |
+| New Channels | Today Radio | TodayRadio.lu@SD | - | NO_GUIDE_HIT |
+| New Channels | TopEstrada TV | TopEstradaTV.mk@SD | - | NO_GUIDE_HIT |
+| New Channels | Topical Moon RD | TopicalMoonRD.do@HD | - | NO_GUIDE_HIT |
+| New Channels | Totalmusic 2000s | Totalmusic2000s.uk@HD | - | NO_GUIDE_HIT |
+| New Channels | Totalmusic Dance | TotalmusicDance.uk@HD | - | NO_GUIDE_HIT |
+| New Channels | Trace UK | TraceUK.uk@HD | - | NO_GUIDE_HIT |
+| New Channels | Tropi Q 99.7 FM | TropiQ997FM.pa@SD | - | NO_GUIDE_HIT |
+| New Channels | Tropical Moon Urban TV | TropicalMoonUrbanTV.pa@SD | - | NO_GUIDE_HIT |
+| New Channels | Turkmen Owazy | TurkmenOwazy.tm@SD | - | NO_GUIDE_HIT |
+| New Channels | TV Cidade | TVCidade.cv@SD | - | NO_GUIDE_HIT |
+| New Channels | TV Exitos | TVExitos.do@SD | - | NO_GUIDE_HIT |
+| New Channels | TVCARiB Cinema | TVCARiBCinema.sx@SD | - | NO_GUIDE_HIT |
+| New Channels | TVONE Nicaragua | TVONENicaragua.ni@SD | - | NO_GUIDE_HIT |
+| New Channels | Ua Music | custom.ua-music | - | NO_GUIDE_HIT |
+| New Channels | Urbano TV | UrbanoTV.cr@SD | - | NO_GUIDE_HIT |
+| New Channels | V2BEAT TV | V2BEATTV.uk@SD | - | NO_GUIDE_HIT |
+| New Channels | VAM TV | VAMTV.cw@SD | - | NO_GUIDE_HIT |
+| New Channels | Venus Media | VenusMedia.py@SD | - | NO_GUIDE_HIT |
+| New Channels | Video Tour Channel | VideoTourChannel.cr@SD | - | NO_GUIDE_HIT |
+| New Channels | Vintage Music | VintageMusic.cr@SD | - | NO_GUIDE_HIT |
+| New Channels | VM Latino | VMLatino.cr@SD | - | NO_GUIDE_HIT |
+| New Channels | VoiceOver Radio TV | VoiceOverRadioTV.cr@SD | - | NO_GUIDE_HIT |
+| New Channels | Vos y TV | VosyTV.ec@SD | - | NO_GUIDE_HIT |
+| New Channels | Wavez FM | WavezFM.aw@SD | - | NO_GUIDE_HIT |
+| New Channels | X 102.7 FM | X1027FM.aw@SD | - | NO_GUIDE_HIT |
 | Pakistani | 8XM | 8XM.pk@HD | - | NO_GUIDE_HIT |
 | Pakistani | 8XM | 8XM.pk@SD | - | NO_GUIDE_HIT |
-| Pakistani | A-Plus TV (576p) | APlusTV.pk@SD | - | NO_GUIDE_HIT |
-| Pakistani | Aaj Entertainment (1080p) | AajEntertainment.pk@SD | - | NO_GUIDE_HIT |
-| Pakistani | ARY Family | custom.ary-family | - | NO_GUIDE_HIT |
 | Pakistani | ARY Music | custom.ary-music-tumyo | - | NO_GUIDE_HIT |
-| Pakistani | ARY Musik (1080p) | ARYMusik.pk@SD | - | NO_GUIDE_HIT |
-| Pakistani | ATV (Pakistan) (1080p) | ATV.pk@SD | - | NO_GUIDE_HIT |
 | Pakistani | aur LIFE | aurLIFE.pk | - | NO_GUIDE_HIT |
-| Pakistani | AVT Khyber (1080p) | AVTKhyber.pk@SD | - | NO_GUIDE_HIT |
-| Pakistani | Awaz TV | custom.awaz-tv | - | NO_GUIDE_HIT |
-| Pakistani | Bol Entertainment HD | BolEntertainment.pk@HD | - | NO_GUIDE_HIT |
-| Pakistani | Cartoon Network (Pakistan) | CartoonNetwork.pk@SD | - | NO_GUIDE_HIT |
+| Pakistani | BS Film | BSFilm.pk@SD | - | NO_GUIDE_HIT |
 | Pakistani | Discover Pakistan | DiscoverPakistan.pk@SD | - | NO_GUIDE_HIT |
-| Pakistani | Discover Pakistan | custom.discover-pikstan | - | NO_GUIDE_HIT |
-| Pakistani | Express Entertainment (1080p) | ExpressEntertainment.pk@SD | - | NO_GUIDE_HIT |
 | Pakistani | Falak TV | FalakTV.pk@SD | - | NO_GUIDE_HIT |
-| Pakistani | Filmax (576p) | Filmax.pk@SD | - | NO_GUIDE_HIT |
-| Pakistani | Filmazia (576p) | Filmazia.pk@SD | - | NO_GUIDE_HIT |
-| Pakistani | HarPal Geo (360p) | HarPalGeo.pk@SD | - | NO_GUIDE_HIT |
 | Pakistani | HUM Sitaray | HUMSitaray.pk | - | NO_GUIDE_HIT |
-| Pakistani | Hum Sitaray World | custom.hum-sitery-world | - | NO_GUIDE_HIT |
 | Pakistani | Jalwa TV | JalwaTV.pk@SD | - | NO_GUIDE_HIT |
 | Pakistani | Joo Music | JooMusic.pk | - | NO_GUIDE_HIT |
-| Pakistani | LTN Family SD (576p) | LTNFamily.pk@SD | - | NO_GUIDE_HIT |
-| Pakistani | Masala TV (576p) | MasalaTV.pk@SD | - | NO_GUIDE_HIT |
-| Pakistani | Mehran TV (576p) | MehranTV.pk@SD | - | NO_GUIDE_HIT |
+| Pakistani | JooMusic | JooMusic.pk@SD | - | NO_GUIDE_HIT |
 | Pakistani | Paighan TV | PaighanTV.pk@SD | - | NO_GUIDE_HIT |
-| Pakistani | Pashto 1 (1080p) | Pashto1.pk@SD | - | NO_GUIDE_HIT |
-| Pakistani | Play Entertainment (576p) | PlayEntertainment.pk@SD | - | NO_GUIDE_HIT |
-| Pakistani | SAB TV (1080p) | SABTV.pk@SD | - | NO_GUIDE_HIT |
 | Pakistani | See TV | SeeTV.pk | - | NO_GUIDE_HIT |
 | Pakistani | Tag TV | TagTV.pk | - | NO_GUIDE_HIT |
 | Pakistani | Waseb TV | WasebTV.pk | - | NO_GUIDE_HIT |
-| Pakistani | Waseeb TV | custom.waseeb-tv | - | NO_GUIDE_HIT |
-| Poland | AXN Black Poland | custom.axn-black-poland | - | NO_GUIDE_HIT |
-| Poland | Teletoon+ HD (1080i) | TeletoonPlus.pl@HD | - | NO_GUIDE_HIT |
-| Poland | Telewizja Biznesowa (1080p) | TelewizjaBiznesowa.pl@SD | - | NO_GUIDE_HIT |
-| Poland | wedotv Auta (480p) | wedotvAuta.pl@FAST | - | NO_GUIDE_HIT |
+| Peru | Andina RTV | AndinaRTV.pe@SD | - | NO_GUIDE_HIT |
+| Peru | Karibena | Karibena.pe@SD | - | NO_GUIDE_HIT |
+| Peru | La Fabulosa TV | LaFabulosaTV.pe@SD | - | NO_GUIDE_HIT |
+| Peru | Miel TV | MielTV.pe@SD | - | NO_GUIDE_HIT |
+| Peru | Millenium 109 FM | Millenium109FM.pe@SD | - | NO_GUIDE_HIT |
+| Peru | Radio Chalaca | RadioChalaca.pe@SD | - | NO_GUIDE_HIT |
+| Peru | Radio Master | RadioMaster.pe@HD | - | NO_GUIDE_HIT |
+| Peru | Radio Onda Digital | RadioOndaDigital.pe@SD | - | NO_GUIDE_HIT |
+| Peru | Radio Rumba TV | RadioRumbaTV.pe@SD | - | NO_GUIDE_HIT |
+| Peru | Radio Tropical | RadioTropical.pe@SD | - | NO_GUIDE_HIT |
+| Peru | RumbaMix TV | RumbaMixTV.pe@SD | - | NO_GUIDE_HIT |
+| Peru | Turbo Mix Radio TV | TurboMixRadioTV.pe@SD | - | NO_GUIDE_HIT |
+| Peru | TV Peruanisima | TVPeruanisima.pe@SD | - | NO_GUIDE_HIT |
+| Peru | TVUNO | TVUNO.pe@SD | - | NO_GUIDE_HIT |
+| Poland | AXN Black (United States) Poland | AXNBlack.us@Poland | - | NO_GUIDE_HIT |
+| Poland | AXN Poland | AXNPoland.pl@SD | - | NO_GUIDE_HIT |
+| Poland | FILMBOX+ Comedy Magyar | FILMBOXPlusComedy.pl@Magyar | - | NO_GUIDE_HIT |
+| Poland | FILMBOX+ Festival Poland | FILMBOXPlusFestival.pl@Poland | - | NO_GUIDE_HIT |
+| Poland | FILMBOX+ Love & Crime Magyar | FILMBOXPlusLoveCrime.pl@Magyar | - | NO_GUIDE_HIT |
+| Poland | FILMBOX+ One Magyar | FILMBOXPlusOne.pl@Magyar | - | NO_GUIDE_HIT |
+| Poland | Radio RAM | RadioRAM.pl@HD | - | NO_GUIDE_HIT |
+| Portugal | AXN (Portugal) | AXN.pt@SD | - | NO_GUIDE_HIT |
+| Portugal | AXN Movies (Portugal) | AXNMovies.pt@SD | - | NO_GUIDE_HIT |
+| Portugal | Kuriakos Cine | KuriakosCine.pt@SD | - | NO_GUIDE_HIT |
+| Portugal | Kuriakos Music | KuriakosMusic.pt@SD | - | NO_GUIDE_HIT |
+| Portugal | ON FM | ONFM.pt@SD | - | NO_GUIDE_HIT |
+| Portugal | RFPtv | RFPtv.pt@SD | - | NO_GUIDE_HIT |
 | Religious | Makkah TV | MakkahTV.sa | Makkah.TV.ae | MAPPED_ID_ONLY |
 | Religious | Al Quran Al Kareem TV | AlQuranAlKareemTV.sa | - | NO_GUIDE_HIT |
 | Religious | Al Quran Radio | custom.al-quran-radio | - | NO_GUIDE_HIT |
@@ -1187,196 +1399,438 @@ The table includes every active channel identity without usable current/future g
 | Religious | Makkah Live | MakkahLive.sa | - | NO_GUIDE_HIT |
 | Religious | Makkah Live | custom.makkah.live | - | NO_GUIDE_HIT |
 | Religious | Medina Live | MedinaLive.bd | - | NO_GUIDE_HIT |
+| Religious | Peace TV | custom.peace-tv-tw8cm | - | NO_GUIDE_HIT |
 | Religious | Peace TV Bangla | PeaceTVBangla.ae | - | NO_GUIDE_HIT |
 | Religious | Peace TV English | PeaceTVEnglish.ae | - | NO_GUIDE_HIT |
 | Religious | Peace TV Urdu | PeaceTVUrdu.pk | - | NO_GUIDE_HIT |
+| Religious | Q TV | QTV.in@SD | - | NO_GUIDE_HIT |
 | Religious | Quran | custom.quran | - | NO_GUIDE_HIT |
 | Religious | Quran TV | QuranTV.iq | - | NO_GUIDE_HIT |
+| Religious | Sunna TV | SunnaTV.ng@SD | - | NO_GUIDE_HIT |
 | Religious | Sunnah TV | custom.sunnah-tv | - | NO_GUIDE_HIT |
 | Religious | Zainabia Channel | ZainabiaChannel.sa | - | NO_GUIDE_HIT |
-| Romania | Aleph Business (1280p) | AlephBusiness.ro@SD | - | NO_GUIDE_HIT |
-| Romania | Bollywood Classic Romania (576p) | BollywoodClassic.ro@Romania | - | NO_GUIDE_HIT |
-| Russia | Auto Plus (576p) | AutoPlus.ru@SD | - | NO_GUIDE_HIT |
-| Russia | Avto24 (576p) | Avto24.ru@SD | - | NO_GUIDE_HIT |
-| Russia | BRIDGE Classic (576p) | BRIDGEClassic.ru@SD | - | NO_GUIDE_HIT |
-| Russia | City Eden AutoGid [Not 24/7] | CityEdenAutoGid.ru@HD | - | NO_GUIDE_HIT |
-| Russia | Detvora+ (1080p) | DetvoraPlus.ru@HD | - | NO_GUIDE_HIT |
-| Russia | Drive (576i) | Drive.ru@SD | - | NO_GUIDE_HIT |
-| Russia | FAN (1080p) | FAN.ru@SD | - | NO_GUIDE_HIT |
-| Russia | Pro Business (720p) | ProBusiness.ru@SD | - | NO_GUIDE_HIT |
-| Russia | RBK-TV (576p) | RBKTV.ru@SD | - | NO_GUIDE_HIT |
-| Russia | Solnce (576p) | Solnce.ru@SD | - | NO_GUIDE_HIT |
-| Spain | SX3 (1080p) [Geo-blocked] | SX3.es@SD | SX3.es | MAPPED_ID_ONLY |
-| Spain | 3Cat Plats bruts (1080p) | 3CatPlatsbruts.es@SD | - | NO_GUIDE_HIT |
-| Spain | Anime Vision (1080p) | AnimeVision.es@SD | - | NO_GUIDE_HIT |
-| Spain | Anime Vision Classics (1080p) | AnimeVisionClassics.es@SD | - | NO_GUIDE_HIT |
+| Romania | Nostalgia TV | NostalgiaTV.ro@HD | Nostalgia.TV.ro | MAPPED_ENDED |
+| Romania | AMC Europe Romania | AMCEurope.uk@Romania | - | NO_GUIDE_HIT |
+| Romania | Atomic Academy TV | AtomicAcademyTV.ro@SD | - | NO_GUIDE_HIT |
+| Romania | Atomic TV | AtomicTV.ro@SD | - | NO_GUIDE_HIT |
+| Romania | AXN Black (United States) Romania | AXNBlack.us@Romania | - | NO_GUIDE_HIT |
+| Romania | AXN CEE Romania | AXNCEE.es@Romania | - | NO_GUIDE_HIT |
+| Romania | Boom TV | BoomTV.ro@HD | - | NO_GUIDE_HIT |
+| Romania | Cinemaraton Plus | CinemaratonPlus.ro@HD | - | NO_GUIDE_HIT |
+| Romania | CineWow | CineWow.ro@SD | - | NO_GUIDE_HIT |
+| Romania | FILMBOX+ Comedy Romania | FILMBOXPlusComedy.pl@Romania | - | NO_GUIDE_HIT |
+| Romania | FILMBOX+ Hits Romania | FILMBOXPlusHits.pl@Romania | - | NO_GUIDE_HIT |
+| Romania | FILMBOX+ Love & Crime Romania | FILMBOXPlusLoveCrime.pl@Romania | - | NO_GUIDE_HIT |
+| Romania | FILMBOX+ One Romania | FILMBOXPlusOne.pl@Romania | - | NO_GUIDE_HIT |
+| Romania | Halloween Non Stop | HalloweenNonStop.ro@SD | - | NO_GUIDE_HIT |
+| Romania | Impact TV (Romania) | ImpactTV.ro@HD | - | NO_GUIDE_HIT |
+| Romania | Impact TV 2 | ImpactTV2.ro@HD | - | NO_GUIDE_HIT |
+| Romania | Impact TV Dance | ImpactTVDance.ro@SD | - | NO_GUIDE_HIT |
+| Romania | Impact TV Manele | ImpactTVManele.ro@SD | - | NO_GUIDE_HIT |
+| Romania | Radio Fx Net | RadioFxNet.ro@HD | - | NO_GUIDE_HIT |
+| Romania | Radio Romania Iasi | RadioRomaniaIasi.ro@SD | - | NO_GUIDE_HIT |
+| Romania | Radio Romania Oltenia-Craiova | RadioRomaniaOlteniaCraiova.ro@SD | - | NO_GUIDE_HIT |
+| Romania | Radio Romania Targu Mures | RadioRomaniaTarguMures.ro@SD | - | NO_GUIDE_HIT |
+| Romania | Super TV (Romania) | SuperTV.ro@SD | - | NO_GUIDE_HIT |
+| Romania | Tele7music | Tele7music.ro@SD | - | NO_GUIDE_HIT |
+| Romania | Tequila Music TV | TequilaMusicTV.ro@SD | - | NO_GUIDE_HIT |
+| Romania | Traditional TV | TraditionalTV.ro@SD | - | NO_GUIDE_HIT |
+| Romania | TV AS | TVAS.ro@SD | - | NO_GUIDE_HIT |
+| Romania | Viasat Kino Romania | ViasatKino.ua@Romania | - | NO_GUIDE_HIT |
+| Russia | Dom kino Premium | DomkinoPremium.ru@HD | Dom.Kino.Premium.cz | MAPPED_ID_ONLY |
+| Russia | Shanson TV | ShansonTV.ru@SD | Shanson.TV.cz | MAPPED_ID_ONLY |
+| Russia | VIVA Russia | VIVARussia.ru@SD | Viva.Russia.cz | MAPPED_ID_ONLY |
+| Russia | 1HD Music Television | 1HDMusicTelevision.ru@HD | - | NO_GUIDE_HIT |
+| Russia | alpha Cinema | alphaCinema.ru@HD | - | NO_GUIDE_HIT |
+| Russia | Amedia Hit | AmediaHit.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Amedia Premium | AmediaPremium.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Bollywood HD Russia | BollywoodHD.ro@Russia | - | NO_GUIDE_HIT |
+| Russia | BRIDGE | BRIDGE.ru@SD | - | NO_GUIDE_HIT |
+| Russia | BRIDGE Rock | BRIDGERock.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Cinema (Russia) | Cinema.ru@SD | - | NO_GUIDE_HIT |
+| Russia | City Eden Birma Play | CityEdenBirmaPlay.ru@HD | - | NO_GUIDE_HIT |
+| Russia | City Eden Classic Music | CityEdenClassicMusic.ru@HD | - | NO_GUIDE_HIT |
+| Russia | City Eden KinoArt | CityEdenKinoArt.ru@HD | - | NO_GUIDE_HIT |
+| Russia | City Eden KinoDetektiv | CityEdenKinoDetektiv.ru@HD | - | NO_GUIDE_HIT |
+| Russia | City Eden KinoDrama | CityEdenKinoDrama.ru@HD | - | NO_GUIDE_HIT |
+| Russia | City Eden KinoFantastika | CityEdenKinoFantastika.ru@HD | - | NO_GUIDE_HIT |
+| Russia | City Eden KinoKlassika | CityEdenKinoKlassika.ru@HD | - | NO_GUIDE_HIT |
+| Russia | City Eden KinoKomediya | CityEdenKinoKomediya.ru@HD | - | NO_GUIDE_HIT |
+| Russia | City Eden KinoMistika | CityEdenKinoMistika.ru@HD | - | NO_GUIDE_HIT |
+| Russia | City Eden Play | CityEdenPlay.ru@HD | - | NO_GUIDE_HIT |
+| Russia | City Eden Sirtaki TV | CityEdenSirtakiTV.ru@HD | - | NO_GUIDE_HIT |
+| Russia | Classic Music | ClassicMusic.ru@SD | - | NO_GUIDE_HIT |
+| Russia | DanceHits80 | DanceHits80.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Dorama | Dorama.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Europa Plus TV Belarus | EuropaPlusTV.ru@Belarus | - | NO_GUIDE_HIT |
+| Russia | FON Music | FONMusic.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Horoshee Kino | HorosheeKino.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Illusion+ | IllusionPlus.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Indiyskoye Kino | IndiyskoyeKino.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Kino 1 (Russia) | Kino1.ru@International | - | NO_GUIDE_HIT |
+| Russia | KinoHit | KinoHit.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Kinomix | Kinomix.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Kinopokaz | Kinopokaz.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Kinopremyera | Kinopremyera.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Kinosemja | Kinosemja.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Kinosvidanie | Kinosvidanie.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Live Music Channel | LiveMusicChannel.ru@HD | - | NO_GUIDE_HIT |
+| Russia | Maidan | Maidan.ru@SD | - | NO_GUIDE_HIT |
+| Russia | MTV Volgograd | MTVVolgograd.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Muzyka 1 | Muzyka1.ru@International | - | NO_GUIDE_HIT |
+| Russia | Muzyka Kino | MuzykaKino.ru@International | - | NO_GUIDE_HIT |
+| Russia | Muzyka Live | MuzykaLive.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Nash Kinopokaz | NashKinopokaz.ru@HD | - | NO_GUIDE_HIT |
+| Russia | Nashe Novoe Kino | NasheNovoeKino.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Premialnoe | Premialnoe.ru@HD | - | NO_GUIDE_HIT |
+| Russia | Radio Shanson | RadioShanson.ru@SD | - | NO_GUIDE_HIT |
+| Russia | RU.TV | RUTV.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Russkiy Bestseller | RusskiyBestseller.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Smotrim 100% Klassika | Smotrim100Klassika.ru@SD | - | NO_GUIDE_HIT |
+| Russia | SONGTV Russia | SONGTVRussia.ru@SD | - | NO_GUIDE_HIT |
+| Russia | START Air | STARTAir.ru@SD | - | NO_GUIDE_HIT |
+| Russia | Strana FM | StranaFM.ru@SD | - | NO_GUIDE_HIT |
+| Russia | TV 21 | TV21.ru@SD | - | NO_GUIDE_HIT |
+| Russia | viju TV1000 novella | vijuTV1000novella.ru@HD | - | NO_GUIDE_HIT |
+| Russia | viju+ Megahit | vijuPlusMegahit.ru@HD | - | NO_GUIDE_HIT |
+| Saudi Arabia | Abdulmajeed Abdullah | AbdulmajeedAbdullah.sa@SD | - | NO_GUIDE_HIT |
+| Saudi Arabia | Aflam | custom.aflam | - | NO_GUIDE_HIT |
+| Saudi Arabia | Fairuz | Fairuz.sa@HD | - | NO_GUIDE_HIT |
+| Saudi Arabia | Jeddah Radio | JeddahRadio.sa@SD | - | NO_GUIDE_HIT |
+| Saudi Arabia | Majid Al Mohandis | MajidAlMohandis.sa@SD | - | NO_GUIDE_HIT |
+| Saudi Arabia | MBC Loud | MBCLoud.sa@SD | - | NO_GUIDE_HIT |
+| Saudi Arabia | MBC Mood | MBCMood.sa@HD | - | NO_GUIDE_HIT |
+| Saudi Arabia | Movies Action | MoviesAction.sa@SD | - | NO_GUIDE_HIT |
+| Saudi Arabia | Nidae AlIslam Radio | NidaeAlIslamRadio.sa@SD | - | NO_GUIDE_HIT |
+| Saudi Arabia | Panorama FM | PanoramaFM.sa@SD | - | NO_GUIDE_HIT |
+| Saudi Arabia | Rabeh Saqer | RabehSaqer.sa@HD | - | NO_GUIDE_HIT |
+| Saudi Arabia | Tarab | Tarab.sa@SD | - | NO_GUIDE_HIT |
+| Serbia | Radio Hit FM TV | RadioHitFMTV.rs@SD | - | NO_GUIDE_HIT |
+| Serbia | Radio Karolina TV | RadioKarolinaTV.rs@SD | - | NO_GUIDE_HIT |
+| Serbia | Radio Lola TV | RadioLolaTV.rs@SD | - | NO_GUIDE_HIT |
+| Serbia | TDI Radio TV | TDIRadioTV.rs@SD | - | NO_GUIDE_HIT |
+| Spain | Activa TV | ActivaTV.es@SD | - | NO_GUIDE_HIT |
+| Spain | AXN CEE Bulgary | AXNCEE.es@Bulgary | - | NO_GUIDE_HIT |
+| Spain | Cadena Elite | CadenaElite.es@SD | - | NO_GUIDE_HIT |
+| Spain | LiraTV | LiraTV.es@SD | - | NO_GUIDE_HIT |
+| Spain | Music TV Granada | MusicTVGranada.es@SD | - | NO_GUIDE_HIT |
+| Spain | MyTime Movie Network (Spain) | MyTimeMovieNetwork.es@SD | - | NO_GUIDE_HIT |
+| Spain | POP World TV | POPWorldTV.es@SD | - | NO_GUIDE_HIT |
+| Spain | Radio Carnaval TV | RadioCarnavalTV.es@SD | - | NO_GUIDE_HIT |
+| Spain | Rakuten TV Comedy Movies | RakutenTVComedyMovies.es@Spain | - | NO_GUIDE_HIT |
+| Spain | RTV Vida | RTVVida.es@SD | - | NO_GUIDE_HIT |
+| Spain | Sol Musica | SolMusica.es@SD | - | NO_GUIDE_HIT |
+| Spain | SpektraTV | SpektraTV.es@SD | - | NO_GUIDE_HIT |
+| Spain | TVOMIX | TVOMIX.es@HD | - | NO_GUIDE_HIT |
+| Spain | XPTV1 | XPTV1.es@SD | - | NO_GUIDE_HIT |
+| Sports | Arena Sport 1 | ArenaSport1.sk@SD | Arena.Sport.1.cz | MAPPED_ID_ONLY |
+| Sports | Arena Sport 2 | ArenaSport2.sk@SD | Arena.Sport.2.cz | MAPPED_ID_ONLY |
 | Sports | Sky Sports Cricket | SkySportsCricket.ie | SkySportsCricket.ie | MAPPED_ID_ONLY |
+| Sports | Sporty TV | SportyTV.cz@SD | Sporty.TV.cz | MAPPED_ID_ONLY |
 | Sports | IN: -HINDI- STAR SPORTS 1 HD | Star Sports 1 Hindi HD.in | StarSports1HindiHD.in | MAPPED_NOT_CURRENTLY_FOUND |
+| Sports | 30A Golf Kingdom | 30AGolfKingdom.us@SD | - | NO_GUIDE_HIT |
 | Sports | A Sports | ASports.pk | - | NO_GUIDE_HIT |
+| Sports | Al Iraqia Sport | AlIraqiaSport.iq@SD | - | NO_GUIDE_HIT |
+| Sports | Arena Sport 1 Premium (Serbia) | ArenaSport1Premium.rs@SD | - | NO_GUIDE_HIT |
+| Sports | Arena Sport 1 Premium (Slovenia) | ArenaSport1Premium.si@SD | - | NO_GUIDE_HIT |
+| Sports | Arena Sport Premium M1 | ArenaSportPremiumM1.mk@SD | - | NO_GUIDE_HIT |
+| Sports | Arena Sport Premium M2 | ArenaSportPremiumM2.mk@SD | - | NO_GUIDE_HIT |
+| Sports | Arena Sport Premium M3 | ArenaSportPremiumM3.mk@SD | - | NO_GUIDE_HIT |
+| Sports | Arena4 | Arena4.hu@SD | - | NO_GUIDE_HIT |
+| Sports | AS3 Sport TV | AS3SportTV.ve@SD | - | NO_GUIDE_HIT |
+| Sports | Astrahan.Ru Sport | AstrahanRuSport.ru@SD | - | NO_GUIDE_HIT |
+| Sports | ATG Live | ATGLive.se@SD | - | NO_GUIDE_HIT |
+| Sports | AyM Sports | AyMSports.mx@SD | - | NO_GUIDE_HIT |
+| Sports | Bahrain Sports 1 | BahrainSports1.bh@SD | - | NO_GUIDE_HIT |
 | Sports | Bahrain Sports 2 | BahrainSports2.bh@SD | - | NO_GUIDE_HIT |
+| Sports | BEK Sports West | BEKSports.us@West | - | NO_GUIDE_HIT |
+| Sports | Belarus-5 | Belarus5.by@HD | - | NO_GUIDE_HIT |
+| Sports | Canal Showsport | CanalShowsport.ar@SD | - | NO_GUIDE_HIT |
+| Sports | Canal+ Sport 2 SK | CanalPlusSport2SK.sk@SD | - | NO_GUIDE_HIT |
+| Sports | Canal+ Sport 3 SK | CanalPlusSport3SK.sk@SD | - | NO_GUIDE_HIT |
+| Sports | Canal+ Sport 4 SK | CanalPlusSport4SK.sk@SD | - | NO_GUIDE_HIT |
+| Sports | Canal+ Sport 5 SK | CanalPlusSport5SK.sk@SD | - | NO_GUIDE_HIT |
+| Sports | Canal+ Sport 6 SK | CanalPlusSport6SK.sk@SD | - | NO_GUIDE_HIT |
+| Sports | Canal+ Sport 7 SK | CanalPlusSport7SK.sk@SD | - | NO_GUIDE_HIT |
+| Sports | Canal+ Sport 8 SK | CanalPlusSport8SK.sk@SD | - | NO_GUIDE_HIT |
+| Sports | Canal+ Sport SK | CanalPlusSportSK.sk@SD | - | NO_GUIDE_HIT |
+| Sports | CazeTV | CazeTV.br@SD | - | NO_GUIDE_HIT |
+| Sports | CCTV-Billiards | CCTVBilliards.cn@HD | - | NO_GUIDE_HIT |
+| Sports | CCTV-Golf & Tennis | CCTVGolfTennis.cn@HD | - | NO_GUIDE_HIT |
+| Sports | CCTV-Storm Football | CCTVStormFootball.cn@HD | - | NO_GUIDE_HIT |
+| Sports | CDN Deportes | CDNDeportes.do@SD | - | NO_GUIDE_HIT |
+| Sports | Claro Sports | ClaroSports.mx@SD | - | NO_GUIDE_HIT |
+| Sports | Colimdo TV | ColimdoTV.do@SD | - | NO_GUIDE_HIT |
+| Sports | CRTV (Chile) | CRTV.cl@SD | - | NO_GUIDE_HIT |
+| Sports | CRTV Sports and Entertainment | CRTVSportsandEntertainment.cm@SD | - | NO_GUIDE_HIT |
+| Sports | CT Sport | CTSport.cz@SD | - | NO_GUIDE_HIT |
+| Sports | DeporTV | DeporTV.ar@SD | - | NO_GUIDE_HIT |
+| Sports | ESPN 2 Latin America | ESPN2LatinAmerica.us@South | - | NO_GUIDE_HIT |
+| Sports | ESPN 3 Latin America | ESPN3LatinAmerica.us@South | - | NO_GUIDE_HIT |
+| Sports | ESPN 4 Latin America | ESPN4LatinAmerica.us@South | - | NO_GUIDE_HIT |
+| Sports | ESPN 5 Latin America | ESPN5LatinAmerica.us@South | - | NO_GUIDE_HIT |
+| Sports | ESPN 6 Latin America | ESPN6LatinAmerica.us@SD | - | NO_GUIDE_HIT |
+| Sports | ESPN 7 Latin America | ESPN7LatinAmerica.us@SD | - | NO_GUIDE_HIT |
+| Sports | ESPN Latin America | ESPNLatinAmerica.us@South | - | NO_GUIDE_HIT |
+| Sports | ESPN Latin America Colombia | ESPNLatinAmerica.us@Colombia | - | NO_GUIDE_HIT |
+| Sports | ESPN Latin America Mexico | ESPNLatinAmerica.us@Mexico | - | NO_GUIDE_HIT |
+| Sports | ESPN Premium (Argentina) | ESPNPremium.ar@HD | - | NO_GUIDE_HIT |
 | Sports | eSports Max TV | eSportsMaxTV.ve@SD | - | NO_GUIDE_HIT |
+| Sports | Eurosport 1 Hungary | Eurosport1.fr@Hungary | - | NO_GUIDE_HIT |
+| Sports | Eurosport 2 Hungary | Eurosport2.fr@Hungary | - | NO_GUIDE_HIT |
+| Sports | Eurosport 4K Czechia | Eurosport4KCzechia.cz@UHD | - | NO_GUIDE_HIT |
+| Sports | FIFA+ French | FIFAPlus.uk@French | - | NO_GUIDE_HIT |
+| Sports | FIFA+ German | FIFAPlus.uk@German | - | NO_GUIDE_HIT |
+| Sports | FIFA+ Hispanic America | FIFAPlus.uk@HispanicAmerica | - | NO_GUIDE_HIT |
+| Sports | FIFA+ Italy | FIFAPlus.uk@Italy | - | NO_GUIDE_HIT |
+| Sports | FIFA+ Portuguese | FIFAPlus.uk@Portuguese | - | NO_GUIDE_HIT |
+| Sports | FIFA+ Spain | FIFAPlus.uk@Spain | - | NO_GUIDE_HIT |
+| Sports | FIFA+ United States | FIFAPlus.uk@UnitedStates | - | NO_GUIDE_HIT |
+| Sports | FIFA+ Women | FIFAPlusWomen.uk@English | - | NO_GUIDE_HIT |
+| Sports | FightBox Poland | FightBox.nl@Poland | - | NO_GUIDE_HIT |
+| Sports | Formula 1 AntenaPlay | Formula1AntenaPlay.ro@SD | - | NO_GUIDE_HIT |
+| Sports | FTV (Bolivia) | FTV.bo@SD | - | NO_GUIDE_HIT |
+| Sports | FUEL TV AU | FUELTV.pt@AU | - | NO_GUIDE_HIT |
+| Sports | Futbol TV | FutbolTV.uz@HD | - | NO_GUIDE_HIT |
+| Sports | FUTV | FUTV.cr@SD | - | NO_GUIDE_HIT |
+| Sports | Glory Kickboxing Poland | GloryKickboxing.us@Poland | - | NO_GUIDE_HIT |
+| Sports | Go3 Sport 1 | Go3Sport1.ee@SD | - | NO_GUIDE_HIT |
 | Sports | Goal TV | GoalTV.in | - | NO_GUIDE_HIT |
+| Sports | HTSpor TV | HTSporTV.tr@SD | - | NO_GUIDE_HIT |
+| Sports | HTV Sports | HTVSports.vn@SD | - | NO_GUIDE_HIT |
+| Sports | Kabaddi 24x7 | Kabaddi24x7.in@SD | - | NO_GUIDE_HIT |
+| Sports | KTV Sport | KTVSport.kw@SD | - | NO_GUIDE_HIT |
+| Sports | KTV Sport Plus | KTVSportPlus.kw@SD | - | NO_GUIDE_HIT |
+| Sports | L1 Max | L1Max.pe@SD | - | NO_GUIDE_HIT |
+| Sports | Lacrosse TV | LacrosseTV.us@SD | - | NO_GUIDE_HIT |
+| Sports | LRT Plius | LRTPlius.lt@SD | - | NO_GUIDE_HIT |
+| Sports | M Sports | MSports.pk@SD | - | NO_GUIDE_HIT |
+| Sports | MadeinBO TV | MadeinBOTV.it@SD | - | NO_GUIDE_HIT |
+| Sports | Maincast Cybersport | MaincastCybersport.ua@SD | - | NO_GUIDE_HIT |
+| Sports | Maincast Sport | MaincastSport.ua@SD | - | NO_GUIDE_HIT |
+| Sports | Match! Boets | MatchBoets.ru@SD | - | NO_GUIDE_HIT |
+| Sports | Match! Ultra | MatchUltra.ru@4K | - | NO_GUIDE_HIT |
+| Sports | Meridiano TV | MeridianoTV.ve@SD | - | NO_GUIDE_HIT |
+| Sports | MMA-TV.com | MMATVcom.ru@SD | - | NO_GUIDE_HIT |
+| Sports | MNB Sport | MNBSport.mn@SD | - | NO_GUIDE_HIT |
+| Sports | Monterrico TV | MonterricoTV.pe@SD | - | NO_GUIDE_HIT |
+| Sports | MRTV Sports | MRTVSports.mm@SD | - | NO_GUIDE_HIT |
+| Sports | NHL AntenaPlay | NHLAntenaPlay.ro@SD | - | NO_GUIDE_HIT |
+| Sports | Okko Futbol | OkkoFutbol.ru@SD | - | NO_GUIDE_HIT |
+| Sports | Oman Sports TV | OmanSportsTV.om@SD | - | NO_GUIDE_HIT |
+| Sports | Ovacion TV | OvacionTV.pe@SD | - | NO_GUIDE_HIT |
+| Sports | Persiana Fight | PersianaFight.fr@HD | - | NO_GUIDE_HIT |
 | Sports | PK Sports | PKSports.pk@SD | - | NO_GUIDE_HIT |
 | Sports | PK: GEO SUPER | custom.bdix.geosuper | - | NO_GUIDE_HIT |
+| Sports | Prima Sport Czechia | PrimaSportCzechia.cz@SD | - | NO_GUIDE_HIT |
+| Sports | Prime (Syria) | Prime.sy@HD | - | NO_GUIDE_HIT |
 | Sports | PTV Sports | PTVSports.pk | - | NO_GUIDE_HIT |
+| Sports | RACER International | RACERInternational.pl@FAST | - | NO_GUIDE_HIT |
+| Sports | Rally TV | RallyTV.us@SD | - | NO_GUIDE_HIT |
+| Sports | Real Madrid TV English | RealMadridTVEnglish.es@SD | - | NO_GUIDE_HIT |
+| Sports | Realitatea Sportiva | RealitateaSportiva.ro@SD | - | NO_GUIDE_HIT |
+| Sports | Red Bull TV AU | RedBullTV.at@AU | - | NO_GUIDE_HIT |
+| Sports | Red Bull TV BR | RedBullTV.at@BR | - | NO_GUIDE_HIT |
+| Sports | Red Bull TV DE | RedBullTV.at@DE | - | NO_GUIDE_HIT |
+| Sports | Red Bull TV ES | RedBullTV.at@ES | - | NO_GUIDE_HIT |
+| Sports | Red Bull TV UK | RedBullTV.at@UK | - | NO_GUIDE_HIT |
+| Sports | Red Bull TV US | RedBullTV.at@US | - | NO_GUIDE_HIT |
+| Sports | Russian Extreme Ultra | RussianExtremeUltra.ru@SD | - | NO_GUIDE_HIT |
+| Sports | Setanta Sports 2 Eurasia | SetantaSports2Eurasia.ie@SD | - | NO_GUIDE_HIT |
+| Sports | Spiler 1 | Spiler1.hu@SD | - | NO_GUIDE_HIT |
+| Sports | Spiler 2 | Spiler2.hu@SD | - | NO_GUIDE_HIT |
+| Sports | Sport (Slovakia) | Sport.sk@SD | - | NO_GUIDE_HIT |
+| Sports | Sport 1 (Ukraine) | Sport1.ua@SD | - | NO_GUIDE_HIT |
+| Sports | Sport 1 Baltic | Sport1Baltic.ua@SD | - | NO_GUIDE_HIT |
+| Sports | Sport 3 | Sport3.ua@SD | - | NO_GUIDE_HIT |
+| Sports | Sport 4 | Sport4.ua@SD | - | NO_GUIDE_HIT |
+| Sports | Sport TV | SportTV.by@SD | - | NO_GUIDE_HIT |
+| Sports | Sportivnyy | Sportivnyy.ru@SD | - | NO_GUIDE_HIT |
+| Sports | Sports Television | SportsTelevision.kp@HD | - | NO_GUIDE_HIT |
+| Sports | Sqala TV | SqalaTV.pe@SD | - | NO_GUIDE_HIT |
+| Sports | Strongman | Strongman.us@Germany | - | NO_GUIDE_HIT |
+| Sports | Strongman Champions League | StrongmanChampionsLeague.uk@SD | - | NO_GUIDE_HIT |
+| Sports | Strongman UK | Strongman.us@UK | - | NO_GUIDE_HIT |
+| Sports | Suspilne. Sport | SuspilneSport.ua@SD | - | NO_GUIDE_HIT |
+| Sports | Swerve Sports | SwerveSports.us@SD | - | NO_GUIDE_HIT |
 | Sports | T Sports | TSports.bd | - | NO_GUIDE_HIT |
+| Sports | T Sports 7 | TSports7.th@SD | - | NO_GUIDE_HIT |
+| Sports | Teletrak TV | TeletrakTV.cl@SD | - | NO_GUIDE_HIT |
+| Sports | Ten Cricket | TenCricket.in@SD | - | NO_GUIDE_HIT |
 | Sports | Ten Sports | TenSports.pk | - | NO_GUIDE_HIT |
-| Sweden | Avatar (Sweden) | Avatar.se@DK | - | NO_GUIDE_HIT |
-| Sweden | Becker (Sweden) | Becker.se@SE | - | NO_GUIDE_HIT |
-| Sweden | Becker (Sweden) DK | Becker.se@DK | - | NO_GUIDE_HIT |
-| Sweden | Becker (Sweden) NO | Becker.se@NO | - | NO_GUIDE_HIT |
-| Sweden | Pluto TV Motor (Sweden) | PlutoTVMotor.se@SE | - | NO_GUIDE_HIT |
-| Sweden | Pluto TV Motor (Sweden) DK | PlutoTVMotor.se@DK | - | NO_GUIDE_HIT |
-| Sweden | Pluto TV Motor (Sweden) NO | PlutoTVMotor.se@NO | - | NO_GUIDE_HIT |
-| Sweden | South Park (Sweden) | SouthPark.se@SE | - | NO_GUIDE_HIT |
-| Sweden | South Park (Sweden) DK | SouthPark.se@DK | - | NO_GUIDE_HIT |
-| Sweden | South Park (Sweden) NO | SouthPark.se@NO | - | NO_GUIDE_HIT |
-| Sweden | South Park Armageddon | SouthParkArmageddon.se@SE | - | NO_GUIDE_HIT |
-| Sweden | South Park Armageddon DK | SouthParkArmageddon.se@DK | - | NO_GUIDE_HIT |
-| Sweden | South Park Armageddon NO | SouthParkArmageddon.se@NO | - | NO_GUIDE_HIT |
-| Sweden | South Park Rockin' Out | SouthParkRockinOut.se@SE | - | NO_GUIDE_HIT |
-| Sweden | South Park Rockin' Out DK | SouthParkRockinOut.se@DK | - | NO_GUIDE_HIT |
-| Sweden | South Park Rockin' Out NO | SouthParkRockinOut.se@NO | - | NO_GUIDE_HIT |
-| Sweden | South Park: Butters Collection (Sweden) | SouthParkButtersCollection.se@SE | - | NO_GUIDE_HIT |
-| Sweden | South Park: Butters Collection (Sweden) DK | SouthParkButtersCollection.se@DK | - | NO_GUIDE_HIT |
-| Sweden | South Park: Butters Collection (Sweden) NO | SouthParkButtersCollection.se@NO | - | NO_GUIDE_HIT |
-| Sweden | South Park: Cartman Collection (Sweden) | SouthParkCartmanCollection.se@SE | - | NO_GUIDE_HIT |
-| Sweden | South Park: Cartman Collection (Sweden) DK | SouthParkCartmanCollection.se@DK | - | NO_GUIDE_HIT |
-| Sweden | South Park: Cartman Collection (Sweden) NO | SouthParkCartmanCollection.se@NO | - | NO_GUIDE_HIT |
-| Sweden | South Park: Into the Stars | SouthParkIntotheStars.se@SE | - | NO_GUIDE_HIT |
-| Sweden | South Park: Into the Stars DK | SouthParkIntotheStars.se@DK | - | NO_GUIDE_HIT |
-| Sweden | South Park: Into the Stars NO | SouthParkIntotheStars.se@NO | - | NO_GUIDE_HIT |
-| Sweden | South Park: Kenny Collection (Sweden) | SouthParkKennyCollection.se@SE | - | NO_GUIDE_HIT |
-| Sweden | South Park: Kenny Collection (Sweden) DK | SouthParkKennyCollection.se@DK | - | NO_GUIDE_HIT |
-| Sweden | South Park: Kenny Collection (Sweden) NO | SouthParkKennyCollection.se@NO | - | NO_GUIDE_HIT |
-| Sweden | South Park: Kyle Collection (Sweden) | SouthParkKyleCollection.se@SE | - | NO_GUIDE_HIT |
-| Sweden | South Park: Kyle Collection (Sweden) DK | SouthParkKyleCollection.se@DK | - | NO_GUIDE_HIT |
-| Sweden | South Park: Kyle Collection (Sweden) NO | SouthParkKyleCollection.se@NO | - | NO_GUIDE_HIT |
-| Sweden | South Park: Stan Collection (Sweden) | SouthParkStanCollection.se@SE | - | NO_GUIDE_HIT |
-| Sweden | South Park: Stan Collection (Sweden) DK | SouthParkStanCollection.se@DK | - | NO_GUIDE_HIT |
-| Sweden | South Park: Stan Collection (Sweden) NO | SouthParkStanCollection.se@NO | - | NO_GUIDE_HIT |
-| United Kingdom | Cartoon Network CEE Czech Republic | CartoonNetworkCEE.uk@CzechRepublic | - | NO_GUIDE_HIT |
-| United Kingdom | Cartoon Network CEE Poland | CartoonNetworkCEE.uk@Poland | - | NO_GUIDE_HIT |
-| United Kingdom | Cartoon Network CEE Ukraine (576p) | CartoonNetworkCEE.uk@Ukraine | - | NO_GUIDE_HIT |
+| Sports | Tigo Sports (Honduras) | TigoSports.hn@SD | - | NO_GUIDE_HIT |
+| Sports | Tigo Sports (Paraguay) | TigoSports.py@SD | - | NO_GUIDE_HIT |
+| Sports | TJK TV | TJKTV.tr@SD | - | NO_GUIDE_HIT |
+| Sports | TR Sport | TRSport.it@SD | - | NO_GUIDE_HIT |
+| Sports | Trace Sport Stars Russia | TraceSportStars.fr@Russia | - | NO_GUIDE_HIT |
+| Sports | TSN The Ocho | TSNTheOcho.ca@SD | - | NO_GUIDE_HIT |
+| Sports | Turf Movil | TurfMovil.cl@SD | - | NO_GUIDE_HIT |
+| Sports | Turkmenistan Sport | TurkmenistanSport.tm@SD | - | NO_GUIDE_HIT |
+| Sports | TVS Bowling Network | TVSBowlingNetwork.us@SD | - | NO_GUIDE_HIT |
+| Sports | TVS Boxing | TVSBoxing.us@SD | - | NO_GUIDE_HIT |
+| Sports | TVS Classic Sports | TVSClassicSports.us@SD | - | NO_GUIDE_HIT |
+| Sports | TVS Sports | TVSSports.us@SD | - | NO_GUIDE_HIT |
+| Sports | TVS Sports Bureau | TVSSportsBureau.us@SD | - | NO_GUIDE_HIT |
+| Sports | TVS Turbo | TVSTurbo.us@SD | - | NO_GUIDE_HIT |
+| Sports | TVS Women Sports | TVSWomenSports.us@SD | - | NO_GUIDE_HIT |
+| Sports | TyC Sports | TyCSports.ar@SD | - | NO_GUIDE_HIT |
+| Sports | TyC Sports USA | TyCSportsUSA.ar@SD | - | NO_GUIDE_HIT |
+| Sports | viju+ Sport | vijuPlusSport.ru@HD | - | NO_GUIDE_HIT |
+| Sports | Vinh Long TV 4 | VinhLongTV4.vn@SD | - | NO_GUIDE_HIT |
+| Sports | Voyo Sport 1 | VoyoSport1.ro@HD | - | NO_GUIDE_HIT |
+| Sports | Win Sports | WinSports.co@SD | - | NO_GUIDE_HIT |
+| Sports | Win+ Futbol | WinPlusFutbol.co@SD | - | NO_GUIDE_HIT |
+| Sports | World of Freesports | WorldofFreesports.de@SD | - | NO_GUIDE_HIT |
+| Sports | World Poker Tour Poland | WorldPokerTour.us@Poland | - | NO_GUIDE_HIT |
+| Sports | World Poker Tour UK | WorldPokerTour.us@UK | - | NO_GUIDE_HIT |
+| Turkey | Dream Turk | DreamTurk.tr@SD | - | NO_GUIDE_HIT |
+| Turkey | Grand Cinema | GrandCinema.tr@SD | - | NO_GUIDE_HIT |
+| Turkey | Med Muzik | MedMuzik.tr@SD | - | NO_GUIDE_HIT |
+| Turkey | Number 1 Ask | Number1Ask.tr@SD | - | NO_GUIDE_HIT |
+| Turkey | Number 1 Damar | Number1Damar.tr@SD | - | NO_GUIDE_HIT |
+| Turkey | Number 1 Dance | Number1Dance.tr@SD | - | NO_GUIDE_HIT |
+| Turkey | Number 1 TV | Number1TV.tr@SD | - | NO_GUIDE_HIT |
+| Turkey | Power Dance | PowerDance.tr@SD | - | NO_GUIDE_HIT |
+| Turkey | Power Love | PowerLove.tr@SD | - | NO_GUIDE_HIT |
+| Turkey | PowerTurk Akustik | PowerTurkAkustik.tr@SD | - | NO_GUIDE_HIT |
+| Turkey | PowerTurk Slow | PowerTurkSlow.tr@SD | - | NO_GUIDE_HIT |
+| Turkey | PowerTurk Taptaze | PowerTurkTaptaze.tr@SD | - | NO_GUIDE_HIT |
+| Turkey | TRT Muzik | TRTMuzik.tr@SD | - | NO_GUIDE_HIT |
+| Ukraine | Muzvar | Muzvar.ua@SD | Muzvar.cz | MAPPED_ENDED |
+| Ukraine | 4ever Cinema | 4everCinema.ua@SD | - | NO_GUIDE_HIT |
+| Ukraine | 4ever Music | 4everMusic.ua@SD | - | NO_GUIDE_HIT |
+| Ukraine | Black | Black.ua@SD | - | NO_GUIDE_HIT |
+| Ukraine | Bolt (Ukraine) | Bolt.ua@SD | - | NO_GUIDE_HIT |
+| Ukraine | Cine+ | CinePlus.ua@SD | - | NO_GUIDE_HIT |
+| Ukraine | Cine+ Hit | CinePlusHit.ua@SD | - | NO_GUIDE_HIT |
+| Ukraine | Cine+ Legend | CinePlusLegend.ua@SD | - | NO_GUIDE_HIT |
+| Ukraine | EU Music | EUMusic.ua | - | NO_GUIDE_HIT |
+| Ukraine | FilmUA Live | FilmUALive.ua@SD | - | NO_GUIDE_HIT |
+| Ukraine | InRating TV | InRatingTV.ua@SD | - | NO_GUIDE_HIT |
+| Ukraine | Kino 1 (Ukraine) | Kino1.ua@SD | - | NO_GUIDE_HIT |
+| Ukraine | M2 (Ukraine) | M2.ua@SD | - | NO_GUIDE_HIT |
+| Ukraine | Megogo Music | MegogoMusic.ua@SD | - | NO_GUIDE_HIT |
+| Ukraine | Music Box Polska Ukraine | MusicBoxPolska.pl@Ukraine | - | NO_GUIDE_HIT |
+| Ukraine | NASHE Music | NASHEMusic.ua@SD | - | NO_GUIDE_HIT |
+| Ukraine | Viasat Kino Balkan | ViasatKino.ua@Balkan | - | NO_GUIDE_HIT |
+| Ukraine | Viasat Kino Comedy | ViasatKinoComedy.ua@SD | - | NO_GUIDE_HIT |
+| Ukraine | Viasat Kino World | ViasatKinoWorld.ua@SD | - | NO_GUIDE_HIT |
+| Ukraine | Viasat Serial | ViasatSerial.ua@HD | - | NO_GUIDE_HIT |
+| Ukraine | ¡Viva Latino! | VivaLatino.ua@SD | - | NO_GUIDE_HIT |
+| United Kingdom | AMC Europe Bulgary | AMCEurope.uk@Bulgary | - | NO_GUIDE_HIT |
+| United Kingdom | Clubbing TV UK | ClubbingTV.us@UK | - | NO_GUIDE_HIT |
 | United Kingdom | MovieSphere UK | custom.moviesphere-uk | - | NO_GUIDE_HIT |
-| United Kingdom | Mr Bean Animated ES (1080p) | MrBeanAnimated.uk@ES | - | NO_GUIDE_HIT |
-| United Kingdom | Mr Bean Animated FR (1080p) | MrBeanAnimated.uk@FR | - | NO_GUIDE_HIT |
-| United Kingdom | Top Gear (720p) | TopGear.uk@SD | - | NO_GUIDE_HIT |
 | United Kingdom | Totalmusic 80s | Totalmusic80s.uk | - | NO_GUIDE_HIT |
 | United Kingdom | Totalmusic Concerts | TotalmusicConcerts.uk | - | NO_GUIDE_HIT |
-| United States | 30A Investment Pitch (720p) | 30AInvestmentPitch.us@SD | - | NO_GUIDE_HIT |
-| United States | 30A We Love Cars (720p) | 30AWeLoveCars.us@SD | - | NO_GUIDE_HIT |
-| United States | Ameritrade (1080p) [Not 24/7] | Ameritrade.us@SD | - | NO_GUIDE_HIT |
-| United States | Animation+ (1080p) [Geo-blocked] | AnimationPlus.us@SD | - | NO_GUIDE_HIT |
-| United States | ARTFLIX Movie Classics (720p) | ARTFLIXMovieClassics.us@SD | - | NO_GUIDE_HIT |
-| United States | AXN Latin America | AXNLatinAmerica.us | - | NO_GUIDE_HIT |
-| United States | Beverly Hillbillies | BeverlyHillbillies.us@US | - | NO_GUIDE_HIT |
-| United States | Botflix TV (1080p) | BotflixTV.us@HD | - | NO_GUIDE_HIT |
-| United States | Business Rockstars (720p) | BusinessRockstars.us@SD | - | NO_GUIDE_HIT |
+| United Kingdom | Vantage Music UK | VantageMusic.ee@UK | - | NO_GUIDE_HIT |
+| United States | 00s Replay | 00sReplay.us@SD | - | NO_GUIDE_HIT |
+| United States | 30A TV Classic Movies | 30ATVClassicMovies.us@SD | - | NO_GUIDE_HIT |
+| United States | 70s Cinema | 70sCinema.us@SD | - | NO_GUIDE_HIT |
+| United States | 80s Rewind | 80sRewind.us@SD | - | NO_GUIDE_HIT |
+| United States | 90s Throwback | 90sThrowback.us@SD | - | NO_GUIDE_HIT |
+| United States | ACE Country Radio KPVM-LD | ACECountryRadio.us@KPVMLD | - | NO_GUIDE_HIT |
+| United States | Adrenalina Pura TV | AdrenalinaPuraTV.us@SD | - | NO_GUIDE_HIT |
+| United States | AMC (United States) | AMC.us@EastHD | - | NO_GUIDE_HIT |
+| United States | AMC Latin America | AMCLatinAmerica.us@Panregional | - | NO_GUIDE_HIT |
+| United States | AMC Series Latin America | AMCSeriesLatinAmerica.us@Panregional | - | NO_GUIDE_HIT |
+| United States | American Horrors | AmericanHorrors.us@SD | - | NO_GUIDE_HIT |
+| United States | Aneflix Live | AneflixLive.us@HD | - | NO_GUIDE_HIT |
+| United States | ARTFLIX Movie Classics | ARTFLIXMovieClassics.us@SD | - | NO_GUIDE_HIT |
+| United States | Avang TV | AvangTV.us@SD | - | NO_GUIDE_HIT |
+| United States | AVI Rewind | AVIRewind.us@SD | - | NO_GUIDE_HIT |
+| United States | AXN Adria | AXNAdria.us@SD | - | NO_GUIDE_HIT |
+| United States | AXN Black (United States) | AXNBlack.us@Bulgary | - | NO_GUIDE_HIT |
+| United States | AXN Crime | AXNCrime.us@SD | - | NO_GUIDE_HIT |
+| United States | AXN Latin America | AXNLatinAmerica.us@CentralAmerica | - | NO_GUIDE_HIT |
+| United States | AXN Latin America Andes | AXNLatinAmerica.us@Andes | - | NO_GUIDE_HIT |
+| United States | AXN Latin America South | AXNLatinAmerica.us@South | - | NO_GUIDE_HIT |
+| United States | Battlestar Galactica | BattlestarGalactica.us@SD | - | NO_GUIDE_HIT |
+| United States | Botflix Radioo | BotflixRadioo.us@HD | - | NO_GUIDE_HIT |
+| United States | BPX TV Radio | BPXTVRadio.us@SD | - | NO_GUIDE_HIT |
 | United States | California Music Channel | CaliforniaMusicChannel.us | - | NO_GUIDE_HIT |
-| United States | Cartoon Network (United States) (720p) | CartoonNetwork.us@East | - | NO_GUIDE_HIT |
-| United States | Cartoon Network Latin America | CartoonNetworkLatinAmerica.us@SouthAtlanticHD | - | NO_GUIDE_HIT |
-| United States | Cartoon Network Latin America Brazil (720p) | CartoonNetworkLatinAmerica.us@Brazil | - | NO_GUIDE_HIT |
-| United States | Cartoon Network Latin America North Atlantic (1080p) | CartoonNetworkLatinAmerica.us@NorthAtlantic | - | NO_GUIDE_HIT |
-| United States | Cartoon Network Latin America South Atlantic (1080p) | CartoonNetworkLatinAmerica.us@SouthAtlantic | - | NO_GUIDE_HIT |
-| United States | Cartoon Network Latin America South Pacific (576p) | CartoonNetworkLatinAmerica.us@SouthPacific | - | NO_GUIDE_HIT |
-| United States | Cartoonito Latin America (1080p) | CartoonitoLatinAmerica.us@SD | - | NO_GUIDE_HIT |
-| United States | CBS TV | CBSTV.us | - | NO_GUIDE_HIT |
-| United States | Classic TV Crime Drama | ClassicTVCrimeDrama.us@SD | - | NO_GUIDE_HIT |
-| United States | Classic TV Drama | ClassicTVDrama.us@SD | - | NO_GUIDE_HIT |
-| United States | Classic TV: Families | ClassicTVFamilies.us@US | - | NO_GUIDE_HIT |
-| United States | Comedy Central South Park | ComedyCentralSouthPark.us@BR | - | NO_GUIDE_HIT |
-| United States | Comedy Central South Park LatAm | ComedyCentralSouthPark.us@LatAm | - | NO_GUIDE_HIT |
-| United States | Detective Conan | DetectiveConan.us@Spain | - | NO_GUIDE_HIT |
-| United States | Detective Conan France (720p) | DetectiveConan.us@France | - | NO_GUIDE_HIT |
-| United States | Discovery Turbo Latin America (1080p) | DiscoveryTurboLatinAmerica.us@Panregional | - | NO_GUIDE_HIT |
-| United States | DreamWorks Channel Asia (1080p) | DreamWorksChannelAsia.us@SD | - | NO_GUIDE_HIT |
-| United States | EntrepreneurTV (720p) | EntrepreneurTV.us@SD | - | NO_GUIDE_HIT |
+| United States | Cinecanal Pacific | Cinecanal.us@Pacific | - | NO_GUIDE_HIT |
+| United States | Cinemax (United States) West | Cinemax.us@West | - | NO_GUIDE_HIT |
+| United States | Cinemax Latin America | CinemaxLatinAmerica.us@HD | - | NO_GUIDE_HIT |
+| United States | CMC-USA Country Music Channel | CMCUSACountryMusicChannel.us@SD | - | NO_GUIDE_HIT |
+| United States | De Pelicula US | DePeliculaUS.us@SD | - | NO_GUIDE_HIT |
+| United States | EBS Cinema | EBSCinema.us@SD | - | NO_GUIDE_HIT |
+| United States | EBS Musika | EBSMusika.us@SD | - | NO_GUIDE_HIT |
 | United States | Epix | epix.us | - | NO_GUIDE_HIT |
 | United States | Epix Hits | epixhits.us | - | NO_GUIDE_HIT |
-| United States | Fierro a Fondo TV (1080p) | FierroaFondoTV.us@SD | - | NO_GUIDE_HIT |
-| United States | Fox Business Network (576p) | FoxBusinessNetwork.us@SD | - | NO_GUIDE_HIT |
-| United States | Fun Roads (720p) | FunRoads.us@SD | - | NO_GUIDE_HIT |
 | United States | FXM | fxm.us | - | NO_GUIDE_HIT |
-| United States | KidOO (1080p) [Geo-blocked] | KidOO.us@SD | - | NO_GUIDE_HIT |
-| United States | Las Tortugas Ninja (720p) | LasTortugasNinja.us@LatAm | - | NO_GUIDE_HIT |
+| United States | HBO 2 Latin America | HBO2LatinAmerica.us@HD | - | NO_GUIDE_HIT |
+| United States | HBO Family Latin America | HBOFamilyLatinAmerica.us@SD | - | NO_GUIDE_HIT |
+| United States | HBO Latin America | HBOLatinAmerica.us@SD | - | NO_GUIDE_HIT |
+| United States | High Vision TV | HighVisionTV.us@SD | - | NO_GUIDE_HIT |
+| United States | HTV | HTV.us@SD | - | NO_GUIDE_HIT |
 | United States | Lifetime Movies | lifetimemovies.us | - | NO_GUIDE_HIT |
-| United States | MCN6 Music Channel (1080p) [Not 24/7] | MCN6MusicChannel.us@SD | - | NO_GUIDE_HIT |
-| United States | Naruto (1080p) | Naruto.us@US | - | NO_GUIDE_HIT |
-| United States | Naruto Brazil | Naruto.us@Brazil | - | NO_GUIDE_HIT |
-| United States | Naruto en espanol | Narutoenespanol.us@SD | - | NO_GUIDE_HIT |
-| United States | Naruto Germany (720p) | Naruto.us@Germany | - | NO_GUIDE_HIT |
-| United States | Naruto Shippuden | NarutoShippuden.us@LatAm | - | NO_GUIDE_HIT |
-| United States | Nickelodeon Pluto TV (720p) | NickelodeonPlutoTV.us@SD | - | NO_GUIDE_HIT |
-| United States | One Piece | OnePiece.us@US | - | NO_GUIDE_HIT |
-| United States | One Piece BR | OnePiece.us@BR | - | NO_GUIDE_HIT |
-| United States | One Piece CA | OnePiece.us@CA | - | NO_GUIDE_HIT |
-| United States | One Piece FR | OnePiece.us@FR | - | NO_GUIDE_HIT |
-| United States | One Piece LatAm | OnePiece.us@LatAm | - | NO_GUIDE_HIT |
-| United States | One Piece Spain | OnePiece.us@Spain | - | NO_GUIDE_HIT |
-| United States | Placid (1080p) [Not 24/7] | Placid.us@EastHD | - | NO_GUIDE_HIT |
-| United States | Pluto TV Anime | PlutoTVAnime.us@US | - | NO_GUIDE_HIT |
-| United States | Pluto TV Anime Acao | PlutoTVAnimeAcao.us@BR | - | NO_GUIDE_HIT |
-| United States | Pluto TV Anime BR | PlutoTVAnime.us@BR | - | NO_GUIDE_HIT |
-| United States | Pluto TV Anime CA | PlutoTVAnime.us@CA | - | NO_GUIDE_HIT |
-| United States | Pluto TV Anime LatAm | PlutoTVAnime.us@LatAm | - | NO_GUIDE_HIT |
-| United States | Pluto TV Anime Movies | PlutoTVAnimeMovies.us@SD | - | NO_GUIDE_HIT |
-| United States | Pluto TV Cars | PlutoTVCars.us@SD | - | NO_GUIDE_HIT |
-| United States | Pluto TV Cars CA | PlutoTVCars.us@CA | - | NO_GUIDE_HIT |
-| United States | Pluto TV Turbo | PlutoTVTurbo.us@BR | - | NO_GUIDE_HIT |
-| United States | PowerNation TV (1080p) | PowerNationTV.us@SD | - | NO_GUIDE_HIT |
-| United States | REV'N Action (720p) [Geo-blocked] | REVNAction.us@SD | - | NO_GUIDE_HIT |
-| United States | Schwab Network (1080p) | SchwabNetwork.us@SD | - | NO_GUIDE_HIT |
-| United States | Sonic TV (720p) | SonicTV.us@SD | - | NO_GUIDE_HIT |
+| United States | Maxcine | Maxcine.us@HD | - | NO_GUIDE_HIT |
+| United States | Maxcine 2 | Maxcine2.us@HD | - | NO_GUIDE_HIT |
+| United States | Maxcine Comedy | MaxcineComedy.us@HD | - | NO_GUIDE_HIT |
+| United States | Maxcine Family | MaxcineFamily.us@HD | - | NO_GUIDE_HIT |
+| United States | Mega Extreno | MegaExtrenoHD.us@HD | - | NO_GUIDE_HIT |
+| United States | Metaleitor TV | MetaleitorTV.us@SD | - | NO_GUIDE_HIT |
+| United States | Mi Musica Reggaeton | MiMusicaReggaeton.us@SD | - | NO_GUIDE_HIT |
+| United States | Mi Musica Romantica | MiMusicaRomantica.us@SD | - | NO_GUIDE_HIT |
+| United States | Mi Musica Salsa | MiMusicaSalsa.us@SD | - | NO_GUIDE_HIT |
+| United States | Movies! KPVM-LD | Movies.us@KPVMLD | - | NO_GUIDE_HIT |
+| United States | MovieSphere Gold WFXT | MovieSphereGold.us@WFXT | - | NO_GUIDE_HIT |
+| United States | MTV (United States) | MTV.us@East | - | NO_GUIDE_HIT |
+| United States | RJTV | RJTV.us@SD | - | NO_GUIDE_HIT |
+| United States | Runtime Espanol | RuntimeEspanol.us@SD | - | NO_GUIDE_HIT |
 | United States | Sony Movies | sony.us | - | NO_GUIDE_HIT |
-| United States | South Park (United States) | SouthPark.us@CA | - | NO_GUIDE_HIT |
-| United States | South Park En Francais | SouthParkEnFrancais.us@CA | - | NO_GUIDE_HIT |
-| United States | South Park: Cartman Collection (United States) | SouthParkCartmanCollection.us@CA | - | NO_GUIDE_HIT |
-| United States | South Park: Colecao Cartman | SouthParkColecaoCartman.us@BR | - | NO_GUIDE_HIT |
-| United States | South Park: Colecao Kenny | SouthParkColecaoKenny.us@BR | - | NO_GUIDE_HIT |
-| United States | South Park: Colecao Kyle | SouthParkColecaoKyle.us@BR | - | NO_GUIDE_HIT |
-| United States | South Park: Colecao Stan | SouthParkColecaoStan.us@BR | - | NO_GUIDE_HIT |
-| United States | South Park: Coleccion Cartman | SouthParkColeccionCartman.us@LatAm | - | NO_GUIDE_HIT |
-| United States | South Park: Coleccion Kenny | SouthParkColeccionKenny.us@LatAm | - | NO_GUIDE_HIT |
-| United States | South Park: Coleccion Kyle | SouthParkColeccionKyle.us@LatAm | - | NO_GUIDE_HIT |
-| United States | South Park: Coleccion Stan | SouthParkColeccionStan.us@LatAm | - | NO_GUIDE_HIT |
-| United States | South Park: Kenny Collection (United States) | SouthParkKennyCollection.us@CA | - | NO_GUIDE_HIT |
-| United States | South Park: Kyle Collection (United States) | SouthParkKyleCollection.us@CA | - | NO_GUIDE_HIT |
-| United States | South Park: Stan Collection (United States) | SouthParkStanCollection.us@CA | - | NO_GUIDE_HIT |
-| United States | South Park: Welcome to Canada! | SouthParkWelcometoCanada.us@CA | - | NO_GUIDE_HIT |
-| United States | Tokusato | Tokusato.us@Brazil | - | NO_GUIDE_HIT |
-| United States | Toonami Aftermath West (480p) | ToonamiAftermath.us@West | - | NO_GUIDE_HIT |
-| United States | Tooncast (1080p) | Tooncast.us@SD | - | NO_GUIDE_HIT |
-| United States | Tooncast SouthAmerica (480p) | Tooncast.us@SouthAmerica | - | NO_GUIDE_HIT |
+| United States | Starz West | Starz.us@West | - | NO_GUIDE_HIT |
+| United States | Stingray Greatest Holiday Hits | StingrayGreatestHolidayHits.us@SD | - | NO_GUIDE_HIT |
+| United States | Stryk TV | StrykTV.us@HD | - | NO_GUIDE_HIT |
+| United States | TCM Latin America South | TCMLatinAmerica.us@South | - | NO_GUIDE_HIT |
+| United States | TVS Classic Movies | TVSClassicMovies.us@SD | - | NO_GUIDE_HIT |
+| United States | TVS Drive In Movie | TVSDriveInMovie.us@SD | - | NO_GUIDE_HIT |
+| United States | TVS Music Network | TVSMusicNetwork.us@SD | - | NO_GUIDE_HIT |
+| United States | TVS Nostalgia Movies | TVSNostalgiaMovies.us@SD | - | NO_GUIDE_HIT |
+| United States | TVS Western Movie | TVSWesternMovie.us@SD | - | NO_GUIDE_HIT |
+| United States | Universal Cinema | UniversalCinema.us@SD | - | NO_GUIDE_HIT |
+| United States | Video Mix TV | VideoMixTV.us@SD | - | NO_GUIDE_HIT |
+| United States | Warner TV Asia | WarnerTVAsia.us@SD | - | NO_GUIDE_HIT |
 | United States | Whiplash Cinema | WhiplashCinema.us | - | NO_GUIDE_HIT |
-| United States | Yu-Gi-Oh! (1080p) | YuGiOh.us@SD | - | NO_GUIDE_HIT |
+| United States | WVCU-LP | WVCULP.us@SD | - | NO_GUIDE_HIT |
+| United States | Young Hollywood | YoungHollywood.us@SD | - | NO_GUIDE_HIT |
+| Uzbekistan | BIZ Cinema | BIZCinema.uz@SD | - | NO_GUIDE_HIT |
+| Uzbekistan | BIZ Music | BIZMusic.uz@SD | - | NO_GUIDE_HIT |
+| Uzbekistan | FTV (Uzbekistan) | FTV.uz@SD | - | NO_GUIDE_HIT |
+| Uzbekistan | Kinoteatr | Kinoteatr.uz@SD | - | NO_GUIDE_HIT |
+| Uzbekistan | Muz TV Uzbekistan | MuzTVUzbekistan.uz@SD | - | NO_GUIDE_HIT |
+| Vietnam | HTVC Movies | HTVCMovies.vn@SD | - | NO_GUIDE_HIT |
+| Vietnam | ON Cine | ONCine.vn@SD | - | NO_GUIDE_HIT |
+| Vietnam | ON Movies | ONMovies.vn@SD | - | NO_GUIDE_HIT |
+| Vietnam | ON Music | ONMusic.vn@SD | - | NO_GUIDE_HIT |
+| Vietnam | Vinh Long TV 3 | VinhLongTV3.vn@SD | - | NO_GUIDE_HIT |
 
 ## Published Guide Validation
 
-- XMLTV channel IDs published: **678**
-- Active playlist IDs present in the published guide: **678/1878 (36.1%)**
-- Active playlist IDs with usable current/future programmes: **590/1878 (31.4%)**
-- Active playlist IDs with usable programmes anywhere in the guide window (-6h/+7d): **590/1878 (31.4%)**
-- Mapped playlist IDs present in the guide: **678/678 (100.0%)**
-- Mapped playlist IDs with usable current/future programmes: **590/678 (87.0%)**
-- Mapped playlist IDs with usable programmes anywhere in the guide window: **590/678 (87.0%)**
-- Eligible programme rows published in the guide window: **51487**
+- XMLTV channel IDs published: **973**
+- Active playlist IDs present in the published guide: **973/2597 (37.5%)**
+- Active playlist IDs with usable current/future programmes: **848/2597 (32.7%)**
+- Active playlist IDs with usable programmes anywhere in the guide window (-6h/+7d): **851/2597 (32.8%)**
+- Mapped playlist IDs present in the guide: **973/973 (100.0%)**
+- Mapped playlist IDs with usable current/future programmes: **848/973 (87.2%)**
+- Mapped playlist IDs with usable programmes anywhere in the guide window: **851/973 (87.5%)**
+- Eligible programme rows published in the guide window: **66782**
 - Mapped playlist IDs missing from the published XMLTV channel list: **0**
 - Missing mapped playlist IDs: none
-- Published mapped IDs without usable current/future programmes: **88**
-- IDs without usable current/future programmes: 7XMusic.in@SD, AaryaaTV.in, B4UBhojpuri.in@SD, B4UKadak.in@SD, B4UMovies.in@India, BBCDrama.uk, BabesTV.us, BanglaJagoTV.in, BhojpuriCinema.in@SD, Captain.in@SD, ColorsSuper.in@SD, DarshanaTV.in@SD, DhoomMusic.in@SD, DishaTV.in@SD, DisneyChannel.in@HD, ETVCinema.in, ETVCinema.in@HD, ETVCinema.in@SD, ETVComedy.in@HD, EkamraCinema.in, EkamraMusiq.in, EpicMusic.in@SD, FashionOne.uk, Fast1.in@SD, GlobalPunjab.in, Goldmines.in@SD, GoldminesBollywood.in@SD, GoldminesMovies.in@SD, HosannaTV.in@Tamil, IsaiAruvi.in@SD, JalshaMovies.in@HD, KTVBangla.in@SD, KalaignarMurasu.in, LEOTV.cz, MHOneDilSe.in@SD, MakkahTV.sa, ManoranjanGrand.in, ManoranjanGrand.in@SD, ManoranjanMovies.in@SD, ManoranjanPrime.in@SD, Mastiii.in@SD, MetroTV.in@SD, NTCTV.in@SD, NationalGeographic.in@HD, NationalGeographic.in@SD, OnePaschima.in@SD, Only.Music.in, OscarMoviesBhojpuri.in@SD, PTCMusic.in@SD, PTCPunjabiGold.in@SD, PearTV.in@SD, PrarthanaTV.in@SD, PureBabes.us, RaftaarMedia.in@SD, SX3.es@SD, SangeetMarathi.in@SD, ShansonTV.ru, ShemarooUmang.in@SD, SiriKannadaAllTime.in, SkySportsCricket.ie (and 28 more)
+- Published mapped IDs without usable current/future programmes: **125**
+- IDs without usable current/future programmes: 7XMusic.in@SD, AaryaaTV.in, AaryaaTV.in@SD, AmericanNinjaWarrior.us@SD, ArenaSport1.sk@SD, ArenaSport2.sk@SD, AtfalMawahebTV.sa@SD, B4UBhojpuri.in@SD, B4UKadak.in@SD, B4UMovies.in@India, BBCDrama.uk, BabesTV.us, BanglaJagoTV.in, BhojpuriCinema.in@SD, CCTV9.cn@SD, Caillou.fr@SD, ChinaTravel.cn@SD, DarshanaTV.in@SD, DeluxeLounge.de@SD, DhoomMusic.in@SD, DiscoveringChina.cn@SD, DishaTV.in@SD, DisneyChannel.in@HD, DomkinoPremium.ru@HD, ETVCinema.in, ETVCinema.in@HD, ETVCinema.in@SD, EkamraCinema.in, EkamraMusiq.in, EpicMusic.in@SD, FashionOne.uk, Fast1.in@SD, FriendsTV.in@SD, GlobalPunjab.in, Goldmines.in@SD, GoldminesBollywood.in@SD, GoldminesMovies.in@SD, GulliGirl.ru@SD, HosannaTV.in@Tamil, IsaiAruvi.in@SD, KTVBangla.in@SD, KalaignarMurasu.in, LEOTV.cz, MHOneDilSe.in@SD, MakkahTV.sa, ManoranjanGrand.in, ManoranjanGrand.in@SD, ManoranjanMovies.in@SD, ManoranjanPrime.in@SD, Mastiii.in@SD, MetroTV.in@SD, MusicBoxClassic.cz@SD, MusicBoxDance.cz@SD, MusicBoxHits.cz@SD, MusicBoxSexy.cz@SD, Muzvar.ua@SD, NTCTV.in@SD, Nickelodeon.br@SD, NostalgiaTV.ro@HD, OnePaschima.in@SD (and 65 more)
 
 ## Source / Published Schedule Reconciliation
 
-- IDs with usable current/future source schedule data: **633/1878 (33.7%)**
-- IDs with usable current/future schedules in published XMLTV at report time: **590/1878 (31.4%)**
-- IDs with usable programmes in the published guide's common -6h/+7d window: **590/1878 (31.4%)**
-- Current/future source IDs without any usable published programme in that common window: **46**
-- Source-scheduled IDs without a usable published programme in the common window: 7X Music (360p) (`7XMusic.in@SD`), Aaryaa TV (`AaryaaTV.in`), B4U Bhojpuri (1080p) (`B4UBhojpuri.in@SD`), B4U Kadak (`B4UKadak.in@SD`), B4U Movies (`B4UMovies.in@India`), Bhojpuri Cinema (`BhojpuriCinema.in@SD`), Captain (576p) (`Captain.in@SD`), Dhoom Music Bangla (`DhoomMusic.in@SD`), Disha TV (`DishaTV.in@SD`), ETV Cinema (`ETVCinema.in`), ETV Cinema HD (1080p) (`ETVCinema.in@HD`), ETV Cinema (396p) (`ETVCinema.in@SD`), Epic Music (`EpicMusic.in@SD`), Fast1 (`Fast1.in@SD`), Goldmines (`Goldmines.in@SD`), Goldmines Bollywood (`GoldminesBollywood.in@SD`), Goldmines Movies (`GoldminesMovies.in@SD`), Hosanna TV (`HosannaTV.in@Tamil`), Isai Aruvi (`IsaiAruvi.in@SD`), KTV Bangla (`KTVBangla.in@SD`), Metro TV (`MetroTV.in@SD`), NTC TV (`NTCTV.in@SD`), Only Music (`Only.Music.in`), Oscar Movies Bhojpuri (`OscarMoviesBhojpuri.in@SD`), PTC Music (`PTCMusic.in@SD`), PTC Punjabi Gold (`PTCPunjabiGold.in@SD`), Pear TV (`PearTV.in@SD`), Raftaar Media (`RaftaarMedia.in@SD`), Sangeet Marathi (`SangeetMarathi.in@SD`), Shemaroo Umang (`ShemarooUmang.in@SD`), Siri Kannada All Time (`SiriKannadaAllTime.in`), Sonar Bangla (`SonarBangla.in@SD`), Spondon (`Spondon.in@SD`), Stingray Classic Rock (`StingrayClassicRock.ca`), Stingray Hit List (`StingrayHitList.ca`), Stingray Remember the 80s (`StingrayRememberthe80s.ca`), Stingray The Spa (`StingrayTheSpa.ca`), Stingray Today's KPOP (`StingrayTodaySKPOP.us`), Stingray Today's Latin Pop (`StingrayTodaysLatinPop.ca`), Suriya TV (`SuriyaTV.in`), Tabbar Hits (`TabbarHits.in`), Ultimate TV (`UltimateTV.in@SD`), WildEarth (`WildEarth.za`), ZB Cinema (`ZBCinema.in`), Zee Cinema (`ZeeCinema.in@HD`), Zee Cinema (576p) (`ZeeCinema.in@SD`)
-- IDs with an in-window published programme but no current/future source match at the later scan: **3**
-- In-window published IDs not counted source-current/future: Odisha TV (`OdishaTV.in@SD`), Sony Entertainment TV (`SonyEntertainmentTelevision.in@SD`), IN: -HINDI- STAR SPORTS 1 HD (`Star Sports 1 Hindi HD.in`)
-- Source-current/future IDs whose published programme is no longer current by report time: **46**
-- Source-current/future IDs no longer current in the published guide: 7X Music (360p) (`7XMusic.in@SD`), Aaryaa TV (`AaryaaTV.in`), B4U Bhojpuri (1080p) (`B4UBhojpuri.in@SD`), B4U Kadak (`B4UKadak.in@SD`), B4U Movies (`B4UMovies.in@India`), Bhojpuri Cinema (`BhojpuriCinema.in@SD`), Captain (576p) (`Captain.in@SD`), Dhoom Music Bangla (`DhoomMusic.in@SD`), Disha TV (`DishaTV.in@SD`), ETV Cinema (`ETVCinema.in`), ETV Cinema HD (1080p) (`ETVCinema.in@HD`), ETV Cinema (396p) (`ETVCinema.in@SD`), Epic Music (`EpicMusic.in@SD`), Fast1 (`Fast1.in@SD`), Goldmines (`Goldmines.in@SD`), Goldmines Bollywood (`GoldminesBollywood.in@SD`), Goldmines Movies (`GoldminesMovies.in@SD`), Hosanna TV (`HosannaTV.in@Tamil`), Isai Aruvi (`IsaiAruvi.in@SD`), KTV Bangla (`KTVBangla.in@SD`), Metro TV (`MetroTV.in@SD`), NTC TV (`NTCTV.in@SD`), Only Music (`Only.Music.in`), Oscar Movies Bhojpuri (`OscarMoviesBhojpuri.in@SD`), PTC Music (`PTCMusic.in@SD`), PTC Punjabi Gold (`PTCPunjabiGold.in@SD`), Pear TV (`PearTV.in@SD`), Raftaar Media (`RaftaarMedia.in@SD`), Sangeet Marathi (`SangeetMarathi.in@SD`), Shemaroo Umang (`ShemarooUmang.in@SD`), Siri Kannada All Time (`SiriKannadaAllTime.in`), Sonar Bangla (`SonarBangla.in@SD`), Spondon (`Spondon.in@SD`), Stingray Classic Rock (`StingrayClassicRock.ca`), Stingray Hit List (`StingrayHitList.ca`), Stingray Remember the 80s (`StingrayRememberthe80s.ca`), Stingray The Spa (`StingrayTheSpa.ca`), Stingray Today's KPOP (`StingrayTodaySKPOP.us`), Stingray Today's Latin Pop (`StingrayTodaysLatinPop.ca`), Suriya TV (`SuriyaTV.in`), Tabbar Hits (`TabbarHits.in`), Ultimate TV (`UltimateTV.in@SD`), WildEarth (`WildEarth.za`), ZB Cinema (`ZBCinema.in`), Zee Cinema (`ZeeCinema.in@HD`), Zee Cinema (576p) (`ZeeCinema.in@SD`)
+- IDs with usable current/future source schedule data: **918/2597 (35.3%)**
+- IDs with usable current/future schedules in published XMLTV at report time: **848/2597 (32.7%)**
+- IDs with usable programmes in the published guide's common -6h/+7d window: **851/2597 (32.8%)**
+- Current/future source IDs without any usable published programme in that common window: **72**
+- Source-scheduled IDs without a usable published programme in the common window: 7X Music (`7XMusic.in@SD`), Aaryaa TV (`AaryaaTV.in`), Aaryaa TV (`AaryaaTV.in@SD`), American Ninja Warrior (`AmericanNinjaWarrior.us@SD`), B4U Bhojpuri (`B4UBhojpuri.in@SD`), B4U Kadak (`B4UKadak.in@SD`), B4U Movies (`B4UMovies.in@India`), Bhojpuri Cinema (`BhojpuriCinema.in@SD`), Caillou (`Caillou.fr@SD`), Dhoom Music Bangla (`DhoomMusic.in@SD`), Disha TV (`DishaTV.in@SD`), ETV Cinema (`ETVCinema.in`), ETV Cinema (`ETVCinema.in@HD`), ETV Cinema (`ETVCinema.in@SD`), Epic Music (`EpicMusic.in@SD`), Fast1 (`Fast1.in@SD`), Goldmines (`Goldmines.in@SD`), Goldmines Bollywood (`GoldminesBollywood.in@SD`), Goldmines Movies (`GoldminesMovies.in@SD`), Hosanna TV (`HosannaTV.in@Tamil`), Isai Aruvi (`IsaiAruvi.in@SD`), KTV Bangla (`KTVBangla.in@SD`), Metro TV (`MetroTV.in@SD`), NTC TV (`NTCTV.in@SD`), Only Music (`Only.Music.in`), Oscar Movies Bhojpuri (`OscarMoviesBhojpuri.in@SD`), PTC Music (`PTCMusic.in@SD`), PTC Punjabi Gold (`PTCPunjabiGold.in@SD`), Pear TV (`PearTV.in@SD`), Qwest TV (`QwestTV.fr@SD`), Raftaar Media (`RaftaarMedia.in@SD`), Sai TV (`SaiTV.in@SD`), Sangeet Marathi (`SangeetMarathi.in@SD`), Shemaroo Umang (`ShemarooUmang.in@SD`), Siri Kannada All Time (`SiriKannadaAllTime.in`), Siri Kannada All Time (`SiriKannadaAllTime.in@SD`), Sonar Bangla (`SonarBangla.in@SD`), Sony Max (`SonyMax.in@SD`), Sony WAH (`SonyWah.in@SD`), Spondon (`Spondon.in@SD`), Stingray Classic Rock (`StingrayClassicRock.ca`), Stingray Easy Listening (`StingrayEasyListening.ca@SD`), Stingray Flashback 70's (`StingrayFlashback70s.ca@SD`), Stingray Hit List (`StingrayHitList.ca`), Stingray Hit List (`StingrayHitList.ca@SD`), Stingray Hot Country (`StingrayHotCountry.ca@SD`), Stingray Jukebox Oldies (`StingrayJukeboxOldies.ca@SD`), Stingray Nothin' But 90s (`StingrayNothinBut90s.ca@SD`), Stingray Pop Adult (`StingrayPopAdult.ca@SD`), Stingray Remember the 80s (`StingrayRememberthe80s.ca`), Stingray Romance Latino (`StingrayRomanceLatino.ca@SD`), Stingray Smooth Jazz (`StingraySmoothJazz.ca@SD`), Stingray Soul Storm (`StingraySoulStorm.ca@SD`), Stingray The Spa (`StingrayTheSpa.ca`), Stingray The Spa (`StingrayTheSpa.ca@SD`), Stingray Today's KPOP (`StingrayTodaySKPOP.us`), Stingray Today's K-Pop (`StingrayTodaysKPop.ca@SD`), Stingray Today's Latin Pop (`StingrayTodaysLatinPop.ca`), Stingray Today's Latin Pop (`StingrayTodaysLatinPop.ca@SD`), Suriya TV (`SuriyaTV.in`), Suriya TV (`SuriyaTV.in@SD`), Tabbar Hits (`TabbarHits.in`), Tabbar Hits (`TabbarHits.in@SD`), Teledeporte (`Teledeporte.es@SD`), Teletubbies (`Teletubbies.uk@SD`), Ultimate TV (`UltimateTV.in@SD`), WildEarth (`WildEarth.za`), World Poker Tour (`WorldPokerTour.us@US`), Yu-Gi-Oh! (`YuGiOh.us@SD`), ZB Cinema (`ZBCinema.in`), Zee Cinema (`ZeeCinema.in@HD`), Zee Cinema (`ZeeCinema.in@SD`)
+- IDs with an in-window published programme but no current/future source match at the later scan: **5**
+- In-window published IDs not counted source-current/future: Muzvar (`Muzvar.ua@SD`), Nostalgia TV (`NostalgiaTV.ro@HD`), Odisha TV (`OdishaTV.in@SD`), Sony Entertainment TV (`SonyEntertainmentTelevision.in@SD`), IN: -HINDI- STAR SPORTS 1 HD (`Star Sports 1 Hindi HD.in`)
+- Source-current/future IDs whose published programme is no longer current by report time: **73**
+- Source-current/future IDs no longer current in the published guide: 7X Music (`7XMusic.in@SD`), Aaryaa TV (`AaryaaTV.in`), Aaryaa TV (`AaryaaTV.in@SD`), American Ninja Warrior (`AmericanNinjaWarrior.us@SD`), B4U Bhojpuri (`B4UBhojpuri.in@SD`), B4U Kadak (`B4UKadak.in@SD`), B4U Movies (`B4UMovies.in@India`), Bhojpuri Cinema (`BhojpuriCinema.in@SD`), Caillou (`Caillou.fr@SD`), Dhoom Music Bangla (`DhoomMusic.in@SD`), Disha TV (`DishaTV.in@SD`), ETV Cinema (`ETVCinema.in`), ETV Cinema (`ETVCinema.in@HD`), ETV Cinema (`ETVCinema.in@SD`), Epic Music (`EpicMusic.in@SD`), Fast1 (`Fast1.in@SD`), Goldmines (`Goldmines.in@SD`), Goldmines Bollywood (`GoldminesBollywood.in@SD`), Goldmines Movies (`GoldminesMovies.in@SD`), Hosanna TV (`HosannaTV.in@Tamil`), Isai Aruvi (`IsaiAruvi.in@SD`), KTV Bangla (`KTVBangla.in@SD`), Metro TV (`MetroTV.in@SD`), NTC TV (`NTCTV.in@SD`), Only Music (`Only.Music.in`), Oscar Movies Bhojpuri (`OscarMoviesBhojpuri.in@SD`), PTC Music (`PTCMusic.in@SD`), PTC Punjabi Gold (`PTCPunjabiGold.in@SD`), Pear TV (`PearTV.in@SD`), Public Movies (`PublicMovies.in@SD`), Qwest TV (`QwestTV.fr@SD`), Raftaar Media (`RaftaarMedia.in@SD`), Sai TV (`SaiTV.in@SD`), Sangeet Marathi (`SangeetMarathi.in@SD`), Shemaroo Umang (`ShemarooUmang.in@SD`), Siri Kannada All Time (`SiriKannadaAllTime.in`), Siri Kannada All Time (`SiriKannadaAllTime.in@SD`), Sonar Bangla (`SonarBangla.in@SD`), Sony Max (`SonyMax.in@SD`), Sony WAH (`SonyWah.in@SD`), Spondon (`Spondon.in@SD`), Stingray Classic Rock (`StingrayClassicRock.ca`), Stingray Easy Listening (`StingrayEasyListening.ca@SD`), Stingray Flashback 70's (`StingrayFlashback70s.ca@SD`), Stingray Hit List (`StingrayHitList.ca`), Stingray Hit List (`StingrayHitList.ca@SD`), Stingray Hot Country (`StingrayHotCountry.ca@SD`), Stingray Jukebox Oldies (`StingrayJukeboxOldies.ca@SD`), Stingray Nothin' But 90s (`StingrayNothinBut90s.ca@SD`), Stingray Pop Adult (`StingrayPopAdult.ca@SD`), Stingray Remember the 80s (`StingrayRememberthe80s.ca`), Stingray Romance Latino (`StingrayRomanceLatino.ca@SD`), Stingray Smooth Jazz (`StingraySmoothJazz.ca@SD`), Stingray Soul Storm (`StingraySoulStorm.ca@SD`), Stingray The Spa (`StingrayTheSpa.ca`), Stingray The Spa (`StingrayTheSpa.ca@SD`), Stingray Today's KPOP (`StingrayTodaySKPOP.us`), Stingray Today's K-Pop (`StingrayTodaysKPop.ca@SD`), Stingray Today's Latin Pop (`StingrayTodaysLatinPop.ca`), Stingray Today's Latin Pop (`StingrayTodaysLatinPop.ca@SD`), Suriya TV (`SuriyaTV.in`), Suriya TV (`SuriyaTV.in@SD`), Tabbar Hits (`TabbarHits.in`), Tabbar Hits (`TabbarHits.in@SD`), Teledeporte (`Teledeporte.es@SD`), Teletubbies (`Teletubbies.uk@SD`), Ultimate TV (`UltimateTV.in@SD`), WildEarth (`WildEarth.za`), World Poker Tour (`WorldPokerTour.us@US`), Yu-Gi-Oh! (`YuGiOh.us@SD`), ZB Cinema (`ZBCinema.in`), Zee Cinema (`ZeeCinema.in@HD`), Zee Cinema (`ZeeCinema.in@SD`)
 - Published current/future IDs not counted source-current/future: **3**
 - Published current/future IDs not counted source-current/future: Odisha TV (`OdishaTV.in@SD`), Sony Entertainment TV (`SonyEntertainmentTelevision.in@SD`), IN: -HINDI- STAR SPORTS 1 HD (`Star Sports 1 Hindi HD.in`)
 
@@ -1393,5 +1847,5 @@ The table includes every active channel identity without usable current/future g
 
 - IPTV-Playlist.m3u SHA-256: **f61c38a3e13388833cf721031d0214366fb87b3a98a555d00da52100ddc58955**
 - BDIX-Playlist.m3u SHA-256: **9cc2eaa4f9209e4d1a2576f9953f47240c176f15a929c41c94b9394f62323d81**
-- International-Playlist.m3u SHA-256: **c816bf5276e62bc79a85429f23827cebe89bfd4f3fff34a67573ba9859f172aa**
+- International-Playlist.m3u SHA-256: **6ff1b8bad3c63f6105d36898a05997bf51f85b565c0ba7609e7ae6c180f115f6**
 
