@@ -377,6 +377,7 @@ Austria,Antenne Kaernten,AntenneKaernten.at@SD,,,NO_GUIDE_HIT,Auto-maintained; v
 Austria,Antenne Steiermark,AntenneSteiermark.at@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Austria,Antenne Vorarlberg [ ],AntenneVorarlberg.at@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Austria,ServusTV,ServusTV.at@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+BANGLA MUSIC,MUSIC BANGLA,MUSICBANGLA,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Backups,Baby Shark TV,BabySharkTV.us@SD,IN4900012F9,https://i.mjh.nz/SamsungTVPlus/in.xml | https://i.mjh.nz/SamsungTVPlus/us.xml | https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Backups,Bang Bus,custom.xxx-bang-bus,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Backups,Big Ass,custom.xxx-big-ass,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -453,6 +454,7 @@ Bangladesh,Channel 1,Channel1.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguou
 Bangladesh,Channel 1,custom.channel.1,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel 16,Channel16.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel 24,Channel24.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Bangladesh,Channel 24 HD,94000,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel 52,Channel52.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel 9,Channel9.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Channel I,ChannelI.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -476,6 +478,7 @@ Bangladesh,GAZI TV HD,custom.bdix.gazi,,,NO_GUIDE_HIT,Auto-maintained; verify am
 Bangladesh,Global TV,GlobalTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Green TV,GreenTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Green TV,GreenTV.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Bangladesh,Independent TV,247000,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Independent TV,IndependentTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Jago News 24,JagoNews24.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Jalsha Bangla BD,JalshaBanglaBD.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -934,6 +937,7 @@ Greece,Messatida TV,MessatidaTV.gr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify amb
 Greece,NRG 91,NRG91.gr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Greece,Panik TV,PanikTV.gr@SD,Panik.TV.gr,https://epgshare01.online/epgshare01/epg_ripper_GR1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Greece,Play TV (Greece),PlayTV.gr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+HINDI,ENT | Dangal TV,DangalTV.in,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Hungary,AMC Europe Hungary,AMCEurope.uk@Hungary,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Hungary,AXN Black (United States) Hungary,AXNBlack.us@Hungary,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Hungary,AXN CEE,AXNCEE.es@Hungary,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -948,6 +952,7 @@ Hungary,Moziverzum,Moziverzum.hu@SD,Moziverzum.hu,https://epgshare01.online/epgs
 Hungary,Muzsika TV,MuzsikaTV.hu@SD,Muzsika.TV.cz,https://epgshare01.online/epgshare01/epg_ripper_CZ1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_HU1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Hungary,Oxygen Music,OxygenMusic.hu@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Hungary,Slager TV,SlagerTV.hu@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+ISLAMIC,Islamic TV,223000,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Indian Bangla,AAKASH AATH,custom.bdix.aakashaath,AakaashAath.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml.gz | https://epg.pw/xmltv/epg_IN.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/jioepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Bangla,ABP ANANDA,custom.bdix.abpananda,ABP.Ananda.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml.gz | https://i.mjh.nz/SamsungTVPlus/in.xml | https://epg.pw/xmltv/epg_IN.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/jioepg.xml.gz | https://avkb.short.gy/tsepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Bangla,Aakaash Aath,AakaashAath.in@SD,AakaashAath.in,https://iptv-epg.org/files/epg-in.xml.gz | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/tsepg.xml.gz | M3U4U XMLTV (private Actions secret),MAPPED,Auto-maintained; verify ambiguous/name matches manually.

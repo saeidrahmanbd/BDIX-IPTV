@@ -1,6 +1,6 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-10-26T08:06:07+00:00**
+Generated: **2026-10-26T09:09:57+00:00**
 
 This report measures the three maintained M3U playlists included in the automated EPG pipeline. The historic filename epg-three-playlist-audit.md is retained for link compatibility.
 
@@ -8,7 +8,7 @@ This report measures the three maintained M3U playlists included in the automate
 |---|---:|---:|---:|---:|---:|---:|---:|---|
 | IPTV-Playlist.m3u | 1131 | 664 | 447 | 424 | 447 | 386 | 217 | OK |
 | BDIX-Playlist.m3u | 139 | 131 | 76 | 72 | 76 | 67 | 55 | OK |
-| International-Playlist.m3u | 2267 | 2208 | 730 | 691 | 730 | 630 | 1478 | OK |
+| International-Playlist.m3u | 2966 | 2405 | 848 | 800 | 848 | 737 | 1557 | OK |
 
 ## Group coverage
 
@@ -17,8 +17,9 @@ This report measures the three maintained M3U playlists included in the automate
 | Adult | 359 | 13 | 9 | 346 |
 | Argentina | 15 | 0 | 0 | 15 |
 | Austria | 4 | 0 | 0 | 4 |
+| BANGLA MUSIC | 1 | 0 | 0 | 1 |
 | Backups | 55 | 27 | 26 | 28 |
-| Bangladesh | 81 | 3 | 3 | 78 |
+| Bangladesh | 83 | 3 | 3 | 80 |
 | Brazil | 11 | 2 | 2 | 9 |
 | Bulgaria | 8 | 1 | 1 | 7 |
 | Canada | 26 | 20 | 20 | 6 |
@@ -32,7 +33,9 @@ This report measures the three maintained M3U playlists included in the automate
 | France | 45 | 8 | 8 | 37 |
 | Germany | 16 | 9 | 8 | 7 |
 | Greece | 10 | 2 | 2 | 8 |
+| HINDI | 1 | 0 | 0 | 1 |
 | Hungary | 14 | 6 | 6 | 8 |
+| ISLAMIC | 1 | 0 | 0 | 1 |
 | Indian Bangla | 50 | 40 | 37 | 10 |
 | Indian Entertainment | 230 | 191 | 180 | 39 |
 | Indian Movies | 93 | 70 | 65 | 23 |
@@ -75,4 +78,4 @@ This report measures the three maintained M3U playlists included in the automate
 
 - IPTV-Playlist.m3u SHA-256: **f61c38a3e13388833cf721031d0214366fb87b3a98a555d00da52100ddc58955**
 - BDIX-Playlist.m3u SHA-256: **9cc2eaa4f9209e4d1a2576f9953f47240c176f15a929c41c94b9394f62323d81**
-- International-Playlist.m3u SHA-256: **6ff1b8bad3c63f6105d36898a05997bf51f85b565c0ba7609e7ae6c180f115f6**
+- International-Playlist.m3u SHA-256: **7f4f4d837228541697cf071df5eeb86f09eee09e003135c506e6b0eb75b90973**
