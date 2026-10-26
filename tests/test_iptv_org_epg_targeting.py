@@ -68,6 +68,42 @@ class TargetedIptvOrgEpgTests(unittest.TestCase):
         self.assertEqual(root.tag, "channels")
         self.assertEqual(root.findall("channel"), [])
 
+    def test_explicit_aliases_are_targeted_only_for_active_playlist_ids(self):
+        playlist = (
+            '#EXTINF:-1 tvg-id="Star.Jalsha.in" tvg-name="Star Jalsha" group-title="Indian Bangla",Star Jalsha\n'
+            'https://example.test/star.m3u8\n'
+            '#EXTINF:-1 tvg-id="BackupOnly.in" tvg-name="Backup Only" group-title="Backups",Backup Only\n'
+            'https://example.test/backup.m3u8\n'
+        )
+        explicit = {
+            "Star.Jalsha.in": ["StarJalsha.in@SD"],
+            "BackupOnly.in": ["BackupOnly.in@SD"],
+        }
+        self.assertEqual(
+            target_channel_ids([playlist], "", explicit),
+            {"Star.Jalsha.in", "StarJalsha.in@SD"},
+        )
+
+    def test_sky_catalogue_rows_require_a_normalized_name_match(self):
+        catalogue = '''<channels>
+  <channel site="sky.com" site_id="GB#1" lang="en" xmltv_id="SanskarTV.in@SD">Sanskar</channel>
+  <channel site="sky.com" site_id="GB#2" lang="en" xmltv_id="MasalaTV.pk@SD">HUM News</channel>
+  <channel site="sky.com" site_id="GB#3" lang="en" xmltv_id="MasalaTV.pk@SD">Masala TV</channel>
+</channels>'''
+        generated = build_target_channels_xml(
+            [catalogue],
+            {"SanskarTV.in@SD", "MasalaTV.pk@SD"},
+            {
+                "SanskarTV.in@SD": {"sanskar"},
+                "MasalaTV.pk@SD": {"masala"},
+            },
+        )
+        root = ET.fromstring(generated)
+        pairs = [(channel.attrib["site_id"], channel.attrib["xmltv_id"]) for channel in root.findall("channel")]
+        self.assertEqual(
+            pairs,
+            [("GB#1", "SanskarTV.in@SD"), ("GB#3", "MasalaTV.pk@SD")],
+        )
 
 if __name__ == "__main__":
     unittest.main()

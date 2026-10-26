@@ -7,6 +7,7 @@ to an active playlist identity or its approved mapping are scraped. This source
 is supplemental: failures produce a valid empty guide so other XMLTV providers
 can still supply schedules.
 """
+import ast
 import csv
 import io
 import re
@@ -25,15 +26,85 @@ PLAYLISTS = (
     Path("International-Playlist.m3u"),
 )
 MAPPING = Path("reports/epg-india-channel-mapping.csv")
-SITES = ("dishtv.in", "tataplay.com", "airtelxstream.in", "zee5.com")
+SITES = ("dishtv.in", "tataplay.com", "airtelxstream.in", "zee5.com", "sky.com")
+# Keep the source set targeted: these sources have stable XMLTV identities. sky.com
+# supplements exact UK/diaspora IDs; its rows receive an additional name-consistency check.
 INACTIVE_GROUPS = {
-    "backup", "not playing", "not playing...", "not playing…",
-    "not playing (review)", "test", "new", "new channels", "new backup",
+    "backup", "backups", "not playing", "not playing...", "not playing…",
+    "not playing (review)", "test", "new", "new channels", "new backup", "new backups",
 }
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 SCRAPE_TIMEOUT_SECONDS = 180
 SCRAPE_REQUEST_TIMEOUT_MS = 15000
 SCRAPE_MAX_CONNECTIONS = 8
+ROOT = Path(__file__).resolve().parent.parent
+IDENTITY_CONFIG = ROOT / "scripts" / "epg_coverage.py"
+
+
+def load_explicit_epg_mappings():
+    """Load repository-curated EPG aliases and identity locks without executing the coverage script."""
+    if not IDENTITY_CONFIG.is_file():
+        return {}
+    tree = ast.parse(IDENTITY_CONFIG.read_text(encoding="utf-8"), filename=str(IDENTITY_CONFIG))
+    values = {}
+    for node in tree.body:
+        if not isinstance(node, ast.Assign):
+            continue
+        for target in node.targets:
+            if isinstance(target, ast.Name) and target.id in {"EPG_ALIASES", "EPG_LOCKS"}:
+                values[target.id] = ast.literal_eval(node.value)
+    explicit = {key: list(value) for key, value in values.get("EPG_ALIASES", {}).items()}
+    # A lock is authoritative for that playlist identity and supersedes its aliases.
+    explicit.update({key: list(value) for key, value in values.get("EPG_LOCKS", {}).items()})
+    return explicit
+
+
+def normalize_channel_name(value):
+    """Normalize display labels only for the conservative sky.com name guard."""
+    value = str(value or "").casefold()
+    value = re.sub(r"\b(?:\d{3,4}p|50fps|60fps)\b", " ", value)
+    value = re.sub(r"\b(?:hd|sd|uhd|fhd|tv|channel)\b", " ", value)
+    return re.sub(r"[^a-z0-9]+", "", value)
+
+
+def active_playlist_name_index(playlist_texts, mapping_text="", explicit_mappings=None):
+    """Map active playlist and approved alternate IDs to their normalized display names."""
+    names_by_id = {}
+    active_names = {}
+    for text in playlist_texts:
+        current = None
+        for line in text.splitlines():
+            if line.startswith("#EXTINF:"):
+                current = dict(ATTR_RE.findall(line))
+                continue
+            if current is not None and line.strip().startswith(("http://", "https://")):
+                group = current.get("group-title", "").strip().casefold()
+                tvg_id = current.get("tvg-id", "").strip()
+                if tvg_id and group not in INACTIVE_GROUPS:
+                    label = (current.get("tvg-name") or line.rsplit(",", 1)[-1]).strip()
+                    key = normalize_channel_name(label)
+                    if key:
+                        active_names.setdefault(tvg_id, set()).add(key)
+                        names_by_id.setdefault(tvg_id, set()).add(key)
+                current = None
+    if mapping_text.strip():
+        try:
+            for row in csv.DictReader(io.StringIO(mapping_text)):
+                target_id = (row.get("tvg_id") or "").strip()
+                if target_id not in active_names:
+                    continue
+                for source_id in (item.strip() for item in (row.get("epg_id") or "").split("|")):
+                    if source_id:
+                        names_by_id.setdefault(source_id, set()).update(active_names[target_id])
+        except (csv.Error, TypeError) as exc:
+            print(f"Warning: could not fully read EPG mapping names: {exc}")
+    for target_id, source_ids in (explicit_mappings or {}).items():
+        if target_id not in active_names:
+            continue
+        for source_id in source_ids:
+            if source_id:
+                names_by_id.setdefault(source_id, set()).update(active_names[target_id])
+    return names_by_id
 
 
 def run(*args, cwd=None, timeout=None):
@@ -60,29 +131,33 @@ def active_playlist_ids(playlist_texts):
     return result
 
 
-def target_channel_ids(playlist_texts, mapping_text=""):
-    """Return active playlist IDs plus approved source IDs already mapped to them."""
+def target_channel_ids(playlist_texts, mapping_text="", explicit_mappings=None):
+    """Return active IDs, existing mappings, and repository-approved IDs/aliases for active channels."""
     active_ids = active_playlist_ids(playlist_texts)
     result = set(active_ids)
-    if not mapping_text.strip():
-        return result
-    try:
-        rows = csv.DictReader(io.StringIO(mapping_text))
-        for row in rows:
-            target_id = (row.get("tvg_id") or "").strip()
-            if target_id not in active_ids:
-                continue
-            for source_id in (item.strip() for item in (row.get("epg_id") or "").split("|")):
-                if source_id:
-                    result.add(source_id)
-    except (csv.Error, TypeError) as exc:
-        print(f"Warning: could not fully read EPG mapping for targeted catalogue selection: {exc}")
+    if mapping_text.strip():
+        try:
+            rows = csv.DictReader(io.StringIO(mapping_text))
+            for row in rows:
+                target_id = (row.get("tvg_id") or "").strip()
+                if target_id not in active_ids:
+                    continue
+                for source_id in (item.strip() for item in (row.get("epg_id") or "").split("|")):
+                    if source_id:
+                        result.add(source_id)
+        except (csv.Error, TypeError) as exc:
+            print(f"Warning: could not fully read EPG mapping for targeted catalogue selection: {exc}")
+    for target_id in active_ids:
+        for source_id in (explicit_mappings or {}).get(target_id, []):
+            if source_id:
+                result.add(source_id)
     return result
 
 
-def build_target_channels_xml(catalogue_texts, target_ids):
-    """Merge only exact target xmltv_id rows into a custom iptv-org channels list."""
+def build_target_channels_xml(catalogue_texts, target_ids, target_names_by_id=None):
+    """Merge exact target IDs; additionally require exact normalized names for sky.com rows."""
     root = ET.Element("channels")
+    target_names_by_id = target_names_by_id or {}
     seen = set()
     for text in catalogue_texts:
         try:
@@ -94,6 +169,13 @@ def build_target_channels_xml(catalogue_texts, target_ids):
             xmltv_id = (channel.attrib.get("xmltv_id") or "").strip()
             if not xmltv_id or xmltv_id not in target_ids:
                 continue
+            # Require the extra source's label to identify the same channel; exact
+            # XMLTV IDs alone are not enough when a provider catalogue is mislabeled.
+            if channel.attrib.get("site", "") == "sky.com":
+                source_name = normalize_channel_name(channel.text or "")
+                expected_names = target_names_by_id.get(xmltv_id, set())
+                if not expected_names or source_name not in expected_names:
+                    continue
             key = (
                 channel.attrib.get("site", ""),
                 channel.attrib.get("site_id", ""),
@@ -126,7 +208,16 @@ def read_active_targets():
             continue
         playlist_texts.append(path.read_text(encoding="utf-8-sig"))
     mapping_text = MAPPING.read_text(encoding="utf-8-sig") if MAPPING.is_file() else ""
-    return target_channel_ids(playlist_texts, mapping_text)
+    return target_channel_ids(playlist_texts, mapping_text, load_explicit_epg_mappings())
+
+
+def read_active_target_names():
+    playlist_texts = []
+    for path in PLAYLISTS:
+        if path.is_file():
+            playlist_texts.append(path.read_text(encoding="utf-8-sig"))
+    mapping_text = MAPPING.read_text(encoding="utf-8-sig") if MAPPING.is_file() else ""
+    return active_playlist_name_index(playlist_texts, mapping_text, load_explicit_epg_mappings())
 
 
 def selected_catalogue_texts():
@@ -142,6 +233,7 @@ def selected_catalogue_texts():
 
 def main():
     targets = read_active_targets()
+    target_names_by_id = read_active_target_names()
     if not targets:
         write_empty_guide("no active tvg-ids found across the published playlists")
         return
@@ -158,7 +250,7 @@ def main():
         run("npm", "ci", "--no-audit", "--no-fund", cwd=WORK, timeout=240)
 
         catalogue_texts = selected_catalogue_texts()
-        target_xml = build_target_channels_xml(catalogue_texts, targets)
+        target_xml = build_target_channels_xml(catalogue_texts, targets, target_names_by_id)
         TARGET_CHANNELS.write_text(target_xml + "\n", encoding="utf-8")
         selected_count = len(ET.fromstring(target_xml).findall("channel"))
         print(
