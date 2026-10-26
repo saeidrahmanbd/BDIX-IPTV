@@ -15,7 +15,8 @@ import generate_epg
 import augment_epg_mapping_from_additional_sources
 
 LOCAL_GUIDE = Path("/tmp/iptv-org-guide.xml")
-FREEEPG_BD = "https://free-epg.de/api/epg/bd.xml.gz"
+# free-epg.de/api/epg/bd.xml.gz was removed: it returned HTTP 404 in the
+# 2026-10-26 coverage run and no other Bangladesh feed has been verified.
 
 # These are the additional sources supplied during the October 20 EPG repair.
 # The India feeds are also used by the mapping-discovery helper; the US feeds
@@ -75,7 +76,6 @@ def main():
         generate_epg.SOURCES[:] = list(dict.fromkeys(
             [
                 "file:///tmp/iptv-org-guide.xml",
-                FREEEPG_BD,
                 *ADDITIONAL_SOURCES,
             ] + original_sources
         ))

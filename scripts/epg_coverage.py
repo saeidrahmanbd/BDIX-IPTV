@@ -51,6 +51,9 @@ EPG_ALIASES = {
     "XXTremeJobsHindi.in": ["IN46000011Q"],
     "custom.sony.max.2": ["143801", "LIVETV_LIVETVCHANNEL_SONY_MAX_2", "jtv483"],
     "MovieSphere.us@AU": ["Moviesphere.au"],
+    # Same AU service: exact name match after region suffix, with 64 current
+    # programme rows in epg_ripper_AU1 (2026-10-26 strict unmapped audit).
+    "custom.moviesphere-au": ["Moviesphere.au"],
     "custom.bdix.cnninternationla": ["157679"],
     "ToonamiAftermathEast.us": ["ToonamiAftermath.us"],
     "DocumentaryPlus": ["plex.tv.Documentary+.plex"],
@@ -78,7 +81,6 @@ EPG_LOCKS = {
 REPORT = Path("reports/epg-coverage.md")
 THREE_PLAYLIST_REPORT = Path("reports/epg-three-playlist-audit.md")
 SOURCES = [
-    "https://free-epg.de/api/epg/bd.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz", "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz", "https://iptv-epg.org/files/epg-in.xml.gz",
     "https://i.mjh.nz/SamsungTVPlus/in.xml", "https://i.mjh.nz/SamsungTVPlus/us.xml", "https://epg.pw/xmltv/epg_IN.xml",
