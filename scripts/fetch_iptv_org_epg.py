@@ -59,6 +59,20 @@ def load_explicit_epg_mappings():
     return explicit
 
 
+def load_locked_epg_mappings():
+    """Return strict source-ID locks separately so the source fetcher cannot bypass them."""
+    if not IDENTITY_CONFIG.is_file():
+        return {}
+    tree = ast.parse(IDENTITY_CONFIG.read_text(encoding="utf-8"), filename=str(IDENTITY_CONFIG))
+    for node in tree.body:
+        if not isinstance(node, ast.Assign):
+            continue
+        for target in node.targets:
+            if isinstance(target, ast.Name) and target.id == "EPG_LOCKS":
+                return ast.literal_eval(node.value)
+    return {}
+
+
 def normalize_channel_name(value):
     """Normalize display labels only for the conservative sky.com name guard."""
     value = str(value or "").casefold()
@@ -131,7 +145,7 @@ def active_playlist_ids(playlist_texts):
     return result
 
 
-def target_channel_ids(playlist_texts, mapping_text="", explicit_mappings=None):
+def target_channel_ids(playlist_texts, mapping_text="", explicit_mappings=None, locked_mappings=None):
     """Return active IDs, existing mappings, and repository-approved IDs/aliases for active channels."""
     active_ids = active_playlist_ids(playlist_texts)
     result = set(active_ids)
@@ -147,8 +161,18 @@ def target_channel_ids(playlist_texts, mapping_text="", explicit_mappings=None):
                         result.add(source_id)
         except (csv.Error, TypeError) as exc:
             print(f"Warning: could not fully read EPG mapping for targeted catalogue selection: {exc}")
+    locked_mappings = locked_mappings or {}
+    explicit_mappings = explicit_mappings or {}
     for target_id in active_ids:
-        for source_id in (explicit_mappings or {}).get(target_id, []):
+        if target_id in locked_mappings:
+            # Strict locks replace the playlist ID and all other aliases.
+            locked_ids = locked_mappings[target_id]
+            if target_id not in locked_ids:
+                result.discard(target_id)
+            source_ids = locked_ids
+        else:
+            source_ids = explicit_mappings.get(target_id, [])
+        for source_id in source_ids:
             if source_id:
                 result.add(source_id)
     return result
@@ -208,7 +232,12 @@ def read_active_targets():
             continue
         playlist_texts.append(path.read_text(encoding="utf-8-sig"))
     mapping_text = MAPPING.read_text(encoding="utf-8-sig") if MAPPING.is_file() else ""
-    return target_channel_ids(playlist_texts, mapping_text, load_explicit_epg_mappings())
+    return target_channel_ids(
+        playlist_texts,
+        mapping_text,
+        load_explicit_epg_mappings(),
+        load_locked_epg_mappings(),
+    )
 
 
 def read_active_target_names():

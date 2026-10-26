@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from fetch_iptv_org_epg import INACTIVE_GROUPS, load_explicit_epg_mappings
+from fetch_iptv_org_epg import INACTIVE_GROUPS, load_explicit_epg_mappings, load_locked_epg_mappings
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 MAPPING = Path("reports/epg-india-channel-mapping.csv")
@@ -106,6 +106,7 @@ def main():
     channels = playlist_channels()
     names, scheduled_ids = guide_data()
     explicit_mappings = load_explicit_epg_mappings()
+    locked_mappings = load_locked_epg_mappings()
     with MAPPING.open(encoding="utf-8-sig", newline="") as fh:
         rows = list(csv.DictReader(fh))
     by_id = {row.get("tvg_id", "").strip(): row for row in rows if row.get("tvg_id", "").strip()}
@@ -118,7 +119,11 @@ def main():
             continue
 
         # Exact playlist IDs or curated aliases/locks take priority over name matching.
-        approved_ids = [tvg_id, *explicit_mappings.get(tvg_id, [])]
+        approved_ids = (
+            locked_mappings[tvg_id]
+            if tvg_id in locked_mappings
+            else [tvg_id, *explicit_mappings.get(tvg_id, [])]
+        )
         usable_ids = [source_id for source_id in dict.fromkeys(approved_ids) if source_id in scheduled_ids]
         if usable_ids:
             if append_verified_ids(row, usable_ids):

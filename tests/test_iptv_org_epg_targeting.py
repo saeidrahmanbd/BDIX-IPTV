@@ -105,5 +105,20 @@ class TargetedIptvOrgEpgTests(unittest.TestCase):
             [("GB#1", "SanskarTV.in@SD"), ("GB#3", "MasalaTV.pk@SD")],
         )
 
+    def test_strict_epg_locks_replace_the_playlist_id(self):
+        playlist = (
+            '#EXTINF:-1 tvg-id="ColorsCineplex.in@SD" tvg-name="Colors Cineplex" group-title="Indian Movies",Colors Cineplex\n'
+            'https://example.test/colors.m3u8\n'
+        )
+        self.assertEqual(
+            target_channel_ids(
+                [playlist],
+                "",
+                {"ColorsCineplex.in@SD": ["543298"]},
+                {"ColorsCineplex.in@SD": ["543298"]},
+            ),
+            {"543298"},
+        )
+
 if __name__ == "__main__":
     unittest.main()
