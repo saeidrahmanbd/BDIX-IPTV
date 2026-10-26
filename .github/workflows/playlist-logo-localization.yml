@@ -5,12 +5,8 @@ on:
   push:
     branches: [main]
     paths:
-      - IPTV-Playlist.m3u
-      - BDIX-Playlist.m3u
-      - International-Playlist.m3u
       - scripts/repair_playlist_logos.py
       - scripts/logo_source_catalog.py
-      - reports/logo-source-registry.json
   workflow_dispatch:
 
 permissions:
@@ -66,10 +62,6 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if [[ "$(git log -1 --pretty=%s)" == "Repair playlist logos only; leave stream URLs unchanged" ]]; then
-            echo "Skipping the logo repair bot's own follow-up push."
-            exit 0
-          fi
           python scripts/repair_playlist_logos.py
           python - <<'PY'
           import json

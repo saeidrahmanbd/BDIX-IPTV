@@ -19,11 +19,13 @@ PROHIBITED_RELIGIOUS_CHANNELS={
     'angel tv',
     'calvary tv',
     'hosanna tv',
+    'hosanna tv hindi',
     'prarthana tv',
     'santvani channel',
     'sharnam tv',
     'aaj tak',
     'gnt',
+    'good news today',
     'network 10',
 }
 
@@ -128,8 +130,12 @@ def process(path):
  path.write_text('\n'.join(pre+[x for r in rec for x in r])+'\n',encoding='utf-8')
  print(f'HARDENED {path}: {len(rec)} records')
 
-paths=sys.argv[1:] or list(PLAYLIST_ORDERS)
-for name in paths:
- p=Path(name)
- if p.name not in PLAYLIST_ORDERS: raise SystemExit(f'Unsupported playlist: {p}')
- process(p)
+def main():
+ paths=sys.argv[1:] or list(PLAYLIST_ORDERS)
+ for name in paths:
+  p=Path(name)
+  if p.name not in PLAYLIST_ORDERS: raise SystemExit(f'Unsupported playlist: {p}')
+  process(p)
+
+if __name__ == "__main__":
+ main()

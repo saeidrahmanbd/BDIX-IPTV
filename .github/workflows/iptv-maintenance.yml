@@ -4,11 +4,11 @@ name: IPTV Playlist Update
 on:
   push:
     branches: [main]
+    # Ignore generated logo assets/reports and EPG mapping reports to prevent redundant maintenance runs.
     paths:
       - IPTV-Playlist.m3u
       - BDIX-Playlist.m3u
       - International-Playlist.m3u
-      - logos/**
       - .github/workflows/iptv-maintenance.yml
       - scripts/maintenance_helpers.py
       - scripts/reconcile_playlist_consistency.py
@@ -24,8 +24,6 @@ on:
       - scripts/restore_protected_review.py
       - scripts/generate_logo_authenticity_manifest.py
       - scripts/generate_logo_repair_summary.py
-      - scripts/logo_source_catalog.py
-      - reports/logo-source-registry.json
       - scripts/check_epg_config.py
       - scripts/epg_coverage.py
       - scripts/generate_epg.py
@@ -62,7 +60,6 @@ on:
       - scripts/record_maintenance_history.py
       - scripts/generate_dashboard.py
       - scripts/enforce_playlist_attribution.py
-      - reports/epg-india-channel-mapping.csv
   schedule:
     - cron: '17 2 * * *'
   workflow_dispatch:

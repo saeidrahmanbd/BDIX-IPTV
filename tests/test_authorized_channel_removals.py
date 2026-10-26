@@ -15,6 +15,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import maintenance_helpers as guard
 import restore_protected_review as restore
 import sort_playlists as sorter
+import final_playlist_hardening as hardening
 
 
 TARGET_NAMES = {
@@ -38,6 +39,17 @@ TARGET_NAMES = {
     "CBN TV USA",
     "Dios Te Ve Kids",
     "ZB Bhakti",
+    "Aaj Tak",
+    "GNT",
+    "Good News Today",
+    "Network 10",
+    "Angel TV",
+    "Calvary TV",
+    "Hosanna TV",
+    "Hosanna TV Hindi",
+    "Prarthana TV",
+    "Santvani Channel",
+    "Sharnam TV",
 }
 
 
@@ -83,6 +95,17 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             info = channel(name, "Backup", "https://example.invalid/stream.m3u8").splitlines()[0]
             self.assertTrue(guard._is_permanently_removed(info), name)
             self.assertTrue(restore.is_permanently_removed(info), name)
+
+    def test_new_prohibited_channel_names_are_enforced_by_hardening(self):
+        prohibited_names = {
+            "Aaj Tak", "GNT", "Good News Today", "Network 10",
+            "Angel TV", "Calvary TV", "Hosanna TV", "Hosanna TV Hindi",
+            "Prarthana TV", "Santvani Channel", "Sharnam TV",
+        }
+        self.assertEqual(
+            {hardening.normalize_name(name) for name in prohibited_names},
+            hardening.PROHIBITED_RELIGIOUS_CHANNELS,
+        )
 
     def _run_guard(self, removed_names):
         with tempfile.TemporaryDirectory() as tmp:

@@ -40,6 +40,17 @@ PERMANENTLY_REMOVED_NAMES = {
     "cbn tv usa",
     "dios te ve kids",
     "zb bhakti",
+    "aaj tak",
+    "gnt",
+    "good news today",
+    "network 10",
+    "angel tv",
+    "calvary tv",
+    "hosanna tv",
+    "hosanna tv hindi",
+    "prarthana tv",
+    "santvani channel",
+    "sharnam tv",
 }
 ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",

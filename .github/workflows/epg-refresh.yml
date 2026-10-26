@@ -1,25 +1,7 @@
 name: Refresh IPTV EPG
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - IPTV-Playlist.m3u
-      - BDIX-Playlist.m3u
-      - International-Playlist.m3u
-      - scripts/epg_coverage.py
-      - scripts/generate_epg.py
-      - scripts/run_generate_epg.py
-      - scripts/fetch_iptv_org_epg.py
-      - scripts/augment_epg_mapping_from_additional_sources.py
-      - scripts/augment_epg_mapping_from_iptv_org.py
-      - scripts/epg_publish_gate_v2.py
-      - scripts/official_epg_sources.py
-      - scripts/check_epg_config.py
-      - scripts/validate_epg_freshness.py
-      - reports/epg-india-channel-mapping.csv
-      - docs/requirements.txt
-      - tests/test_iptv_org_epg_targeting.py
+  # Main IPTV maintenance refreshes EPG after playlist changes; this workflow is scheduled/manual only.
   schedule:
     - cron: '47 23 * * *' # 05:47 Asia/Dhaka
   workflow_dispatch:

@@ -50,6 +50,17 @@ PERMANENTLY_REMOVED_NAMES = {
     "CBN TV USA",
     "Dios Te Ve Kids",
     "ZB Bhakti",
+    "Aaj Tak",
+    "GNT",
+    "Good News Today",
+    "Network 10",
+    "Angel TV",
+    "Calvary TV",
+    "Hosanna TV",
+    "Hosanna TV Hindi",
+    "Prarthana TV",
+    "Santvani Channel",
+    "Sharnam TV",
 }
 
 
