@@ -1,33 +1,49 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-10-23T08:52:50+00:00**
+Generated: **2026-10-26T03:33:11+00:00**
 
-This report measures the two M3U files currently published at the repository root. The historic filename epg-three-playlist-audit.md is retained for link compatibility; it does not mean a third playlist file exists.
+This report measures the three core M3U playlists included in the automated EPG pipeline. The repository also contains BD.IN-Playlist.m3u, which is outside this report's scope. The historic filename epg-three-playlist-audit.md is retained for link compatibility.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1265 | 815 | 559 | 530 | 321 | 172 | 256 | OK |
-| BDIX-Playlist.m3u | 139 | 131 | 76 | 74 | 76 | 30 | 55 | OK |
-| International-Playlist.m3u | 1155 | 928 | 301 | 283 | 126 | 61 | 627 | OK |
+| IPTV-Playlist.m3u | 1234 | 694 | 466 | 442 | 466 | 437 | 228 | OK |
+| BDIX-Playlist.m3u | 139 | 131 | 76 | 72 | 76 | 72 | 55 | OK |
+| International-Playlist.m3u | 1467 | 1373 | 329 | 305 | 329 | 300 | 1044 | OK |
 
 ## Group coverage
 
 | Group | Active unique IDs | Mapped IDs | Current/future source schedules | No mapping |
 |---|---:|---:|---:|---:|
-| Adult | 519 | 49 | 39 | 470 |
-| Bangladesh | 71 | 3 | 3 | 68 |
-| Documentary & Wildlife | 107 | 87 | 86 | 20 |
-| Indian Bangla | 48 | 38 | 37 | 10 |
-| Indian Entertainment | 166 | 146 | 138 | 20 |
-| Indian Movies | 72 | 61 | 59 | 11 |
-| Indian Music | 56 | 49 | 46 | 7 |
-| International | 166 | 97 | 93 | 69 |
-| Kids | 47 | 31 | 30 | 16 |
-| New Backup | 59 | 44 | 43 | 15 |
-| New Channels | 120 | 85 | 80 | 35 |
-| Pakistani | 46 | 8 | 7 | 38 |
-| Religious | 51 | 17 | 12 | 34 |
-| Sports | 40 | 31 | 28 | 9 |
+| Adult | 482 | 40 | 33 | 442 |
+| Argentina | 13 | 0 | 0 | 13 |
+| Backups | 24 | 16 | 16 | 8 |
+| Bangladesh | 76 | 3 | 3 | 73 |
+| Brazil | 5 | 0 | 0 | 5 |
+| Canada | 2 | 2 | 2 | 0 |
+| China | 10 | 0 | 0 | 10 |
+| Documentary & Wildlife | 106 | 86 | 83 | 20 |
+| France | 6 | 1 | 1 | 5 |
+| Germany | 20 | 1 | 1 | 19 |
+| Indian Bangla | 49 | 38 | 35 | 11 |
+| Indian Entertainment | 208 | 163 | 150 | 45 |
+| Indian Movies | 91 | 65 | 58 | 26 |
+| Indian Music | 58 | 47 | 44 | 11 |
+| International | 109 | 68 | 64 | 41 |
+| International Movies | 165 | 13 | 13 | 152 |
+| International Music | 90 | 5 | 5 | 85 |
+| Kids | 52 | 34 | 33 | 18 |
+| New Backup | 9 | 5 | 5 | 4 |
+| New Channels | 16 | 10 | 10 | 6 |
+| Pakistani | 41 | 6 | 6 | 35 |
+| Poland | 5 | 1 | 1 | 4 |
+| Religious | 31 | 9 | 8 | 22 |
+| Romania | 5 | 3 | 3 | 2 |
+| Russia | 10 | 0 | 0 | 10 |
+| Spain | 5 | 2 | 1 | 3 |
+| Sports | 41 | 31 | 29 | 10 |
+| Sweden | 34 | 0 | 0 | 34 |
+| United Kingdom | 13 | 4 | 4 | 9 |
+| United States | 110 | 25 | 25 | 85 |
 
 ## Interpretation
 
@@ -39,6 +55,6 @@ This report measures the two M3U files currently published at the repository roo
 
 ## Source Playlist Fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **0ce6e1a9799733fae3febaa075d00c8c19a71f5ec225525a6559bbdcdc7ad3d5**
+- IPTV-Playlist.m3u SHA-256: **fdaef8ff41c34e946df4c34a7e1b999b4ebc216a613c0003f7bc2563791654bb**
 - BDIX-Playlist.m3u SHA-256: **9cc2eaa4f9209e4d1a2576f9953f47240c176f15a929c41c94b9394f62323d81**
-- International-Playlist.m3u SHA-256: **dedc725ba5eccdb5619232a12750cd1b3397122ca4627d5c7a1da58c18c3537c**
+- International-Playlist.m3u SHA-256: **17446f6124c8c2e5cbbfbae4bea0306774a8772949c684c2d53292e7e367fc25**

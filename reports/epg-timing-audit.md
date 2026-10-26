@@ -4,8 +4,6 @@ Automatic corrections require repeated cross-source title and duration matches, 
 
 ## Detected corrections
 
-- **DD Sahyadri** (DDSahyadri.in@SD): source ID DDSahyadri.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
-- **DD Yadagiri** (DDYadagiri.in@SD): source ID DDYadagiri.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
-- **Zee Cinemalu** (ZeeCinemalu.in): source ID ZeeCinemalu.in from https://www.open-epg.com/files/india.xml.gz shifted by -5.5 hours after repeated cross-source agreement.
+- No source offsets met the strict automatic-correction threshold.
 
-Detected source-ID corrections: **3**
+Detected source-ID corrections: **0**
