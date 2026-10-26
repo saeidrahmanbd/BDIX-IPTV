@@ -4,8 +4,6 @@ Automatic corrections require repeated cross-source title and duration matches, 
 
 ## Detected corrections
 
-- **Sirippoli TV** (SirippoliTV.in@SD): source ID ts611 from https://avkb.short.gy/epg.xml.gz shifted by +24 hours after repeated cross-source agreement.
-- **ETV** (custom.etv-yddbw): source ID ts359 from https://avkb.short.gy/epg.xml.gz shifted by +24 hours after repeated cross-source agreement.
-- **Investigation Discovery** (investigationdiscovery.uk): source ID ts1276 from https://avkb.short.gy/epg.xml.gz shifted by +24 hours after repeated cross-source agreement.
+- No source offsets met the strict automatic-correction threshold.
 
-Detected source-ID corrections: **3**
+Detected source-ID corrections: **0**
