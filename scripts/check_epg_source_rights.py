@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail closed unless every EPG data source has documented public redistribution rights.
+"""Audit public EPG source rights and support the explicit owner review override.
 
 This checks XMLTV feeds, HTML schedule sites, the supplemental source repository,
 and the optional private feed configured in GitHub Actions. It never prints secrets.
