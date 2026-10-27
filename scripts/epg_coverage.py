@@ -112,26 +112,36 @@ EPG_LOCKS = {
     # ATN Bangla UK is a distinct UK service. This narrow lock does not affect
     # ATNBangla.bd or any other domestic Bangladesh identity.
     "ATNBanglaUK.uk": ["6753"],
-    "NTVEurope.bd": ["epgpw:9374"],
-    "ChannelS.uk@679aa9": ["epgpw:12504"],
 }
 
 REPORT = Path("reports/epg-coverage.md")
 THREE_PLAYLIST_REPORT = Path("reports/epg-three-playlist-audit.md")
 SOURCES = [
-    "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz", "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
-    "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz", "https://iptv-epg.org/files/epg-in.xml.gz",
-    "https://i.mjh.nz/SamsungTVPlus/in.xml", "https://i.mjh.nz/SamsungTVPlus/us.xml", "https://epg.pw/xmltv/epg_IN.xml",
-    "https://epg.pw/api/epg.xml?channel_id=9374",
-    "https://epg.pw/api/epg.xml?channel_id=12504",
-    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml", "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
-    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml", "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml",
-    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml", "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml",
-    "https://avkb.short.gy/epg.xml.gz", "https://avkb.short.gy/jioepg.xml.gz", "https://avkb.short.gy/tsepg.xml.gz",
-    "https://epgshare01.online/epgshare01/epg_ripper_DISTROTV1.xml.gz", "https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
+    "https://iptv-epg.org/files/epg-in.xml.gz",
+    # Samsung TV Plus schedules for India and the US; useful for matching FAST channels.
+    "https://i.mjh.nz/SamsungTVPlus/in.xml",
+    "https://i.mjh.nz/SamsungTVPlus/us.xml",
+    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml",
+    "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
+    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml",
+    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml",
+    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml",
+    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml",
+    "https://avkb.short.gy/epg.xml.gz",
+    "https://avkb.short.gy/jioepg.xml.gz",
+    "https://avkb.short.gy/tsepg.xml.gz",
+    # Targeted FAST-channel guides avoid the oversized all-sources mega-feed.
+    "https://epgshare01.online/epgshare01/epg_ripper_DISTROTV1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_RAKUTEN1.xml.gz",
-    "https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml", "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
-    "https://www.open-epg.com/files/unitedkingdom.xml.gz", "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz", "https://iptv-epg.org/files/epg-us.xml.gz",
+    "https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml",
+    "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
+    "https://www.open-epg.com/files/unitedkingdom.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
+    "https://iptv-epg.org/files/epg-us.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz",
@@ -156,32 +166,8 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
     "https://hum.tv/schedule/",
+    "https://www.rtvbd.tv/schedule.php",
 ]
-EPGPW_SOURCE_IDS = {
-    "https://epg.pw/api/epg.xml?channel_id=9374": "epgpw:9374",
-    "https://epg.pw/api/epg.xml?channel_id=12504": "epgpw:12504",
-}
-
-
-def normalize_epgpw_source(url, data):
-    """Normalize a dedicated EPG.PW XMLTV feed to its explicitly verified source ID."""
-    synthetic_id = EPGPW_SOURCE_IDS.get(url)
-    if not synthetic_id:
-        return data
-    root = ET.fromstring(data)
-    channel_ids = {channel.get("id", "").strip() for channel in root.findall("channel") if channel.get("id", "").strip()}
-    if len(channel_ids) != 1:
-        raise ValueError(f"Expected exactly one channel ID in dedicated EPG.PW feed; found {len(channel_ids)}")
-    original_id = next(iter(channel_ids))
-    matched = [p for p in root.findall("programme") if p.get("channel", "").strip() == original_id]
-    if not matched:
-        raise ValueError(f"Dedicated EPG.PW feed has no programme rows for channel ID {original_id}")
-    for channel in root.findall("channel"):
-        if channel.get("id", "").strip() == original_id:
-            channel.set("id", synthetic_id)
-    for programme in matched:
-        programme.set("channel", synthetic_id)
-    return ET.tostring(root, encoding="utf-8")
 
 
 PRIVATE_SOURCE_ENV = "M3U4U_XMLTV_URL"
@@ -371,7 +357,6 @@ def fetch_source(url):
         data = r.read()
     if url.endswith(".gz") or data[:2] == b"\x1f\x8b":
         data = gzip.decompress(data)
-    data = normalize_epgpw_source(url, data)
     ids = set()
     future = set()
     counts = defaultdict(int)
