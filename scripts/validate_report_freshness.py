@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import os
 import re
 import sys
 from datetime import datetime, timedelta, timezone
@@ -21,7 +22,8 @@ SINGLE_PLAYLIST_REPORTS = {
     "reports/maintenance-report.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256",)),
     "reports/playlist-logo-repair-results.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256",)),
 }
-SHARED_EPG_REPORTS = ("reports/epg-coverage.md", "reports/epg-three-playlist-audit.md", "reports/epg-unmapped-audit.md", "reports/logo-asset-quality-audit.md")
+SHARED_EPG_REPORTS = ("reports/epg-coverage.md", "reports/epg-three-playlist-audit.md", "reports/epg-unmapped-audit.md")
+SHARED_PLAYLIST_REPORTS = ("reports/logo-asset-quality-audit.md",)
 TIMESTAMP_ONLY_REPORTS = ("reports/epg-publish-freshness.md",)
 PROVENANCE_REPORT = "reports/logo-provenance-review.md"
 CROSS_PLAYLIST_METADATA_REPORT = "reports/cross-playlist-metadata-backfill.md"
@@ -81,7 +83,7 @@ def check_timestamp(relative: str, text: str, now, max_age, errors):
         errors.append(f"{relative}: stale report (older than {max_age.total_seconds() / 3600:g} hours)")
 
 
-def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode="all"):
+def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode="all", epg_publication_approved=None):
     """Return errors. all checks active outputs and health; generated checks report-sync outputs."""
     root = Path(root)
     now = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
@@ -95,7 +97,11 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
         hashes[name] = sha256(path)
 
     errors = []
-    report_paths = list(SINGLE_PLAYLIST_REPORTS) + list(SHARED_EPG_REPORTS) + list(TIMESTAMP_ONLY_REPORTS) + [PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT]
+    if epg_publication_approved is None:
+        epg_publication_approved = os.environ.get("EPG_REDISTRIBUTION_APPROVED", "").strip().lower() == "true"
+    report_paths = list(SINGLE_PLAYLIST_REPORTS) + list(SHARED_PLAYLIST_REPORTS) + [PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT]
+    if epg_publication_approved:
+        report_paths += list(SHARED_EPG_REPORTS) + list(TIMESTAMP_ONLY_REPORTS)
     report_paths.append(STREAM_HEALTH_REPORT)
 
     for relative in report_paths:
@@ -112,7 +118,7 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
                 errors.append(f"{relative}: missing {playlist_name} SHA-256 fingerprint")
             elif actual != hashes[playlist_name]:
                 errors.append(f"{relative}: fingerprint does not match current {playlist_name}")
-        elif relative in SHARED_EPG_REPORTS or relative in {PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT}:
+        elif relative in SHARED_EPG_REPORTS or relative in SHARED_PLAYLIST_REPORTS or relative in {PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT}:
             for playlist_name in PLAYLIST_NAMES:
                 actual = read_fingerprint(text, (f"{playlist_name} SHA-256",))
                 if actual is None:

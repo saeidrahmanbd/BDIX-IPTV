@@ -6,8 +6,8 @@
 <h1 align="center">📺 BDIX-IPTV</h1>
 
 <p align="center">
-  <b>Bangladesh & India IPTV Hub — Selected International Channels</b><br>
-  Bangladesh & India-focused live TV · Selected international channels · Metadata, logo and EPG audits
+  <b>Bangladesh & India IPTV Hub — Worldwide Channel Collections</b><br>
+  Bangladesh and India collections, worldwide movie/music country groups, and separately classified thematic channels
 </p>
 
 <p align="center">
@@ -20,7 +20,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Format-M3U%20%2F%20M3U8-6f42c1?style=flat-square" alt="Format">
   <img src="https://img.shields.io/badge/Works%20with-XCIPTV-00b4d8?style=flat-square" alt="XCIPTV">
-  <img src="https://img.shields.io/badge/EPG-Coverage%20Monitored-orange?style=flat-square" alt="EPG coverage monitored">
+  <img src="https://img.shields.io/badge/EPG-Publication%20Disabled-grey?style=flat-square" alt="EPG publication disabled pending redistribution rights">
   <a href="https://github.com/saeidrahmanbd/BDIX-IPTV/actions/workflows/iptv-maintenance.yml"><img src="https://github.com/saeidrahmanbd/BDIX-IPTV/actions/workflows/iptv-maintenance.yml/badge.svg" alt="IPTV Playlist Update workflow status"></a>
 </p>
 
@@ -37,13 +37,13 @@
 
 ## ✨ Overview
 
-A curated IPTV collection focused on **🇧🇩 Bangladeshi channels, 🇮🇳 Indian channels, and selected international content** — organized for clean browsing, consistent channel identity, local logos, reviewed backup references, and transparent health/EPG reporting.
+A curated IPTV project with separate Bangladesh/India collections and a worldwide playlist. International country groups are restricted to movie and music channels; dedicated Kids, Sports, Documentary & Wildlife, Religious and Adult groups remain separate, and Fashion TV is an explicit exception.
 
 > **Important:** backup entries are references to alternate stream URLs. Multiple URLs can share the same CDN, origin, rendition family, or delivery infrastructure, so a backup count is **not** a guarantee of independent redundancy.
 
-| 🧼 Metadata | 🖼️ Local Logo Assets | 🔁 Backup References | 📡 EPG Monitoring |
+| 🧼 Metadata | 🖼️ Local Logo Assets | 🔁 Backup References | 📄 EPG Publication Status |
 |:---:|:---:|:---:|:---:|
-| Consistent names, groups & IDs | Repository-local when assigned; missing coverage is reported separately | Reviewed alternates; independence audited separately | Coverage measured, not guaranteed |
+| Consistent names, groups & IDs | Repository-local when assigned; missing coverage is reported separately | Reviewed alternates; independence audited separately | Public guide disabled pending rights review |
 
 ## 📺 Choose a Playlist
 
@@ -51,11 +51,11 @@ A curated IPTV collection focused on **🇧🇩 Bangladeshi channels, 🇮🇳 I
 |---|---|---|
 | **IPTV-Playlist.m3u** | Main curated channel collection | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) |
 | **BDIX-Playlist.m3u** | BDIX-focused channel collection | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u) |
-| **International-Playlist.m3u** | International channel collection | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) |
+| **International-Playlist.m3u** | Worldwide movie/music country groups, with dedicated thematic categories kept separate | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) |
 
-> **Automation scope:** EPG and quality-audit workflows inspect `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `International-Playlist.m3u`; stream-health coverage varies by workflow and runner. Automatic Bangladesh/India discovery permits Bangladeshi news and Indian Kids/Sports, while rejecting Indian News and non-Islamic religious content. Islamic religious channels are allowed. International discovery is restricted to movie/music candidates, with the explicitly preserved Fashion TV exception. Existing canonical rows are protected from automatic removals.
+> **Automation scope:** quality audits inspect all three playlists, but stream-health coverage varies by workflow. Indian Kids/Sports and Islamic religious channels are allowed in discovery; Indian News and non-Islamic religious content are excluded. Public XMLTV/EPG publication is disabled because programme-data redistribution rights remain unconfirmed. International country groups contain movie/music channels, with dedicated thematic groups and the Fashion TV exception kept separate.
 
-> **Content and EPG scope:** `International-Playlist.m3u` contains a separate `Adult` category. The EPG mapping registry includes rows across all maintained playlist groups (including `Adult`); despite its legacy filename, it is not India-only. The combined EPG coverage report measures all three playlists, while EPG figures in the Update Report are IPTV-playlist-only when a current per-playlist row is available.
+> **Content and EPG scope:** `International-Playlist.m3u` includes separate thematic groups. The all-playlist mapping file is `reports/epg-channel-mapping.csv` and excludes Adult-group entries. The public guide has been removed until redistribution rights are confirmed; no historical percentage should be treated as current published coverage.
 
 <p align="center">
   <a href="assets/iptv-project-showcase.svg">
@@ -106,7 +106,7 @@ Other players (VLC, TiviMate, IPTV Smarters, Kodi, etc.) work the same way — a
 | 🖥️ | **[Playlist Studio v5.0](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.exe)** | Windows playlist manager, editor & player |
 | 🛠️ | **[Playlist Studio Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug22.zip)** | Windows build package |
 | 🔌 | **[Xtream Gateway](xtream/README.md)** | Xtream Gateway / XCIPTV documentation |
-| 📄 | **[EPG Coverage](reports/epg-coverage.md)** | EPG status and coverage |
+| 📄 | **[EPG Publication Status](reports/epg-coverage.md)** | Public guide disabled pending redistribution-rights approval |
 | 📚 | **[Documentation](docs/README.md)** | Guides and project information |
 
 <p align="center">
@@ -144,7 +144,7 @@ The repository is maintained with automated quality checks.
 | 📺 Playlists | ✅ Available | Three maintained playlist files; check each report for its actual playlist scope and generated timestamp |
 | 🖼️ Logos | 🧾 Reviewed | Local assets are used where assigned; authenticity and missing-logo coverage still require review |
 | 📡 Stream Health | 🤖 Automated | Endpoint checks; failures become review candidates |
-| 📄 EPG | 📈 Monitored | Coverage is measured and published only when the gate allows it |
+| 📄 EPG | ⏸️ Disabled | Guide withheld pending source redistribution-rights approval |
 | 🧹 Playlist Audit | 🤖 Automated | Duplicates, identity, metadata and logo checks |
 | 📝 Maintenance Reports | 🤖 Automated | Quality metrics on maintenance runs |
 
@@ -187,7 +187,7 @@ Automated maintenance covers:
 3. 💾 Backup streams are not automatically deleted because of health failures.
 4. 🧭 `New Channels` and `New Backup` are active review queues used by discovery and validation; they are not retired categories.
 5. 🔍 Health failures become review candidates rather than automatic deletion decisions.
-6. 📊 Dashboard figures are generated snapshots; verify report timestamps and source playlist fingerprints before treating the values as current.
+6. 📊 Dashboard figures are generated snapshots; verify report timestamps and source playlist fingerprints before treating values as current. Public EPG coverage is intentionally not reported while source redistribution rights are pending.
 7. 📝 Maintenance runs record quality metrics.
 8. 🔗 Backup counts do not imply independent infrastructure; CDN/origin/rendition families are audited separately.
 
@@ -199,17 +199,17 @@ Automated maintenance covers:
 
 ## 📈 Reports
 
-> **Freshness note:** reports and the SVG dashboard are generated snapshots, not live status pages. Check each report's `Generated` timestamp and any source SHA-256 it provides; where a fingerprint is absent, compare the reported playlist counts with the current files. Several snapshots generated on 2026-10-23 predate subsequent playlist changes and are marked historical until regenerated successfully.
+> **Freshness note:** reports and the SVG dashboard are generated snapshots, not live status pages. Check each report's `Generated` timestamp and any source SHA-256 it provides. Public EPG publication is disabled pending source redistribution-rights review, so historical coverage percentages are intentionally withheld.
 
 | Report | |
 |---|---|
-| 📊 [Project Dashboard snapshot](assets/dashboard.svg) | Historical visual snapshot; values can lag behind current playlists |
+| 📊 [Project Dashboard](assets/dashboard.svg) | Playlist inventory snapshot and EPG publication status |
 | 🧹 [IPTV Playlist Audit](reports/iptv-playlist-audit.md) | Duplicates, identity and metadata checks |
 | 🆕 [IPTV Channel Discovery](reports/iptv-channel-discovery.md) | Bangladesh/India discovery queue; Indian Kids/Sports allowed, Indian News and non-Islamic religious content prohibited |
 | 📡 [Stream Health](reports/stream-health.md) | Endpoint availability monitoring and failure classification |
 | 🧩 [Backup Independence Audit](reports/backup-independence-audit.md) | Shared-host/origin and fallback-family review |
 | 🛠️ [Maintenance Report](reports/maintenance-report.md) | Automated maintenance summary |
-| 📄 [EPG Coverage](reports/epg-coverage.md) | Combined programme-guide coverage across all three maintained playlists |
+| 📄 [EPG Publication Status](reports/epg-coverage.md) | Public guide disabled pending redistribution-rights approval |
 | 🆕 [Update Report](reports/Update%20Report.md) | Generated snapshot; verify its timestamp and source fingerprint before treating metrics as current |
 | ⚠️ [Stream Risk Review](reports/stream-risk-review.md) | Fragile, signed/tokenized and higher-risk stream references |
 

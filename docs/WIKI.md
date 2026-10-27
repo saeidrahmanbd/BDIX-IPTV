@@ -1,112 +1,48 @@
-# BDIX-IPTV Wiki
+# Operational Wiki
 
-**Maintainer:** Saeid Rahman  
-**Repository:** [saeidrahmanbd/BDIX-IPTV](https://github.com/saeidrahmanbd/BDIX-IPTV)
+The root [README.md](../README.md) is the canonical project overview, playlist catalogue, quick-start guide, and current status page. This Wiki retains operational policies and links rather than duplicating that overview.
 
-BDIX-IPTV is a curated IPTV playlist project focused on Bangladeshi channels, Indian channels, and selected international content. It maintains M3U playlists, channel logos, EPG resources, Xtream-related documentation, quality reports, and supporting automation.
+## Playlist and discovery policy
 
-## Quick Links
+- Three maintained playlists: [IPTV](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u), [BDIX](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u), and [International](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u).
+- International country groups are for movie/music channels. Documentary & Wildlife, Kids, Sports, Religious, Adult, and the explicit Fashion TV exception remain in dedicated groups.
+- Discovery queues are restricted to verified Bangladesh/India candidates. Bangladeshi news is allowed; Indian News and non-Islamic religious channels are prohibited; Indian Kids/Sports and Islamic religious channels are allowed.
+- **Permanent denylist:** E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.
+- Country groups for discovery candidates are created only when there are at least five legitimate primary channel identities for that country; smaller sets remain in the review queue.
+- `New Channels`, `New Backup`, `Backup` and `Not Playing` have separate purposes. The Xtream workers exclude `Test`, `Not Playing`, and the new discovery queues from service output.
 
-- [Main IPTV playlist (M3U)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)
-- [BDIX playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u)
-- [International playlist (M3U)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)
-- [Download Center](DOWNLOADS.md)
-- [Documentation index](README.md)
-- [Xtream documentation](../xtream/README.md)
-- [EPG coverage report](../reports/epg-coverage.md)
-- [IPTV Playlist Audit report](../reports/iptv-playlist-audit.md)
-- [Stream health report](../reports/stream-health.md)
+## Metadata and logos
+
+Keep `tvg-id`, `tvg-name`, `tvg-logo`, group, channel number and displayed name consistent. Do not fabricate channel IDs or attach an image just because its filename resembles a name. Use a repository-local logo only when the asset is a reasonable match; if identity cannot be verified, leave it for review.
+
+The all-playlist EPG mapping registry is `reports/epg-channel-mapping.csv`. Adult-group rows are excluded from the public mapping report so that it does not publish named-performer inventory.
+
+## EPG publication
+
+**Public XMLTV publication is disabled pending redistribution-rights review.** The former `epg/epg.xml` file was removed; no maintained playlist advertises it, and both Xtream `xmltv.php` endpoints return HTTP 410 while rights remain unconfirmed. Historical EPG metrics are not current coverage claims.
+
+See [EPG status and re-enable checklist](../epg/README.md) and [EPG Publication Status](../reports/epg-coverage.md). Do not re-enable source retrieval or public serving until permission is recorded for every active source and the repository owner explicitly approves it.
+
+## Operations and reports
+
+Reports are snapshots, not live status pages. Check the generated timestamp and source fingerprint before relying on them.
+
+- [IPTV playlist audit](../reports/iptv-playlist-audit.md)
+- [Stream health](../reports/stream-health.md)
+- [Backup independence](../reports/backup-independence-audit.md)
 - [Maintenance report](../reports/maintenance-report.md)
 - [Update report](../reports/Update%20Report.md)
-- [GitHub Issues](https://github.com/saeidrahmanbd/BDIX-IPTV/issues)
-- [Playlist Studio releases](https://github.com/saeidrahmanbd/Playlist-Studio/releases)
+- [Stream risk review](../reports/stream-risk-review.md)
+- [Project dashboard](../assets/dashboard.svg)
 
-## Playlists
+For a missing programme guide, check whether EPG publication is enabled first, then verify the channel's ID and permission-approved schedule source. A correctly formatted ID is not proof that any schedule source exists.
 
-| Playlist | Use |
-|---|---|
-| IPTV-Playlist.m3u | Main curated playlist |
-| BDIX-Playlist.m3u | BDIX-focused playlist |
-| International-Playlist.m3u | Selected international channels, with country and content groupings |
+## Related documentation
 
-Use the raw playlist links above to add a playlist to a compatible M3U/M3U8 player. Stream availability, provider requirements, and channel listings can change.
-
-> **Automation scope:** EPG and several quality audits cover all three published playlists, but stream-health checks differ in scope and depend on the GitHub runner's network location. Check each report's generated timestamp, source playlist fingerprint, and limitations before treating its results as current.
-
-## Playlist Studio
-
-[Playlist Studio 5.0](https://github.com/saeidrahmanbd/Playlist-Studio) is a separate, general-purpose Windows playlist manager, editor, and player. It supports M3U/M3U8 playlist workflows, channel/category organization, metadata editing, stream scanning, built-in playback, compatible Xtream Codes and Stalker Portal/MAC connections, and GitHub integration.
-
-- [Download portable Windows application](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.exe)
-- [Download Windows Build Kit — Debug22](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug22.zip)
+- [Downloads](DOWNLOADS.md)
 - [Playlist Studio guide](PLAYLIST-STUDIO.md)
+- [Xtream Gateway](../xtream/README.md)
+- [Contributing](CONTRIBUTING.md)
+- [Security policy](SECURITY.md)
 
-The portable application is intended for regular use. The Build Kit is for users who want to build the program themselves; consult its included Readme.txt for requirements and steps.
-
-## EPG and Channel Metadata
-
-The project tracks EPG mapping and coverage in its report files. A mapped channel should use an appropriate, verified channel identifier; mapping coverage is not the same as confirming that every programme entry is available or accurate.
-
-When maintaining playlists, check channel names, IDs, numbers, categories, logo references, and EPG identifiers together. Keep programme-guide presentation in English where the relevant source data or processing workflow allows it; do not claim a translation is complete unless it has been verified.
-
-## Logo Policy
-
-- Check the repository's `logos/` directory before sourcing a replacement externally.
-- Prefer an authentic broadcaster-provided logo that matches the channel and its current or known branding.
-- Store approved local logo assets in the repository and use repository-hosted URLs in playlist entries.
-- Do not treat a generic placeholder as an authentic broadcaster logo. If an exact authentic asset cannot be verified, clearly identify fallback artwork as generated or illustrative.
-- Review both the image and its source/identity before replacing a logo reference.
-
-## Maintenance and Automation
-
-Automation supports routine stream checks, playlist metadata audits, EPG coverage analysis, logo integrity checks, and maintenance reporting. Reports should reflect the current files and run, not stale results.
-
-Protection principles:
-1. Do not silently delete primary curated entries.
-2. Treat health failures as review candidates; do not remove backup streams solely because a check failed.
-3. Detect duplicate stream URLs and identity conflicts before making edits.
-4. Keep channel metadata consistent and changes traceable.
-5. Avoid adding channels that violate the project's explicit category and eligibility rules.
-6. Preserve playlist attribution headers exactly in every playlist and in every workflow that writes or regenerates a playlist.
-
-## Required Playlist Attribution
-
-The following attribution block must appear at the top of every playlist and must not be changed or removed by automation:
-
-```text
-#=================================
-# Developed by: SAEID RAHMAN
-# Facebook: https://www.facebook.com/saeid.rahman.sr
-# Email: saeidrahman.mkt@gmail.com
-#=================================
-```
-
-Any workflow that creates, rewrites, merges, sorts, repairs, or regenerates playlist content must preserve this block exactly.
-
-## Reports
-
-Reports are generated snapshots, not live status pages. Treat a report as current only when its generating workflow has completed successfully against the latest relevant playlist revision and its source fingerprint (when supplied) or reported playlist counts match that revision. Some 2026-10-23 reports are historical snapshots.
-
-## Troubleshooting
-
-- **Playlist will not load:** confirm that the player supports M3U/M3U8 and that you used the raw playlist URL.
-- **A channel does not play:** the stream may be down, geo-restricted, provider-authenticated, or no longer valid. Check the latest stream-health report.
-- **Logo is missing or incorrect:** inspect the playlist's `tvg-logo` reference, then check `logos/` and the logo audit report.
-- **Programme guide is missing:** check the channel's `tvg-id` and the EPG coverage report. A correct ID cannot guarantee the source currently supplies schedule data.
-- **Build Kit issue:** consult `Readme.txt` included in the downloaded package and use the current release asset.
-
-## Responsible Use
-
-This repository provides playlist references and related metadata; it does not itself host television programming. Use only streams and services you are authorized to access, and comply with applicable laws and service terms. Availability and programme information may change without notice.
-
-## Contact and Contributions
-
-Report a broken stream, incorrect metadata, missing logo, or other project issue through [GitHub Issues](https://github.com/saeidrahmanbd/BDIX-IPTV/issues). Include the playlist name, channel name, relevant URL or identifier, and a concise description when possible.
-
-- [GitHub profile](https://github.com/saeidrahmanbd)
-- [Facebook](https://www.facebook.com/saeid.rahman.sr)
-- Email: saeidrahman.mkt@gmail.com
-
----
-
-**Maintainer:** SAEID RAHMAN
+Report broken streams, wrong metadata or missing/incorrect logos via [GitHub Issues](https://github.com/saeidrahmanbd/BDIX-IPTV/issues). Do not include credentials, private tokens or private provider URLs in public issues.

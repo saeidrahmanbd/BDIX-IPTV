@@ -36,12 +36,9 @@ Supported Xtream-style endpoints are documented in [Xtream Gateway](../../xtream
 
 ## 📡 EPG
 
-The repository maintains an EPG coverage report and source configuration.
+**Do not configure an XMLTV URL for this repository at present.** Public guide publication is disabled while source redistribution rights are being confirmed. The old `epg/epg.xml` guide has been removed, and Xtream `xmltv.php` endpoints return HTTP 410.
 
-See:
-
-- [EPG Coverage Report](../../reports/epg-coverage.md)
-- [EPG directory](../../epg/README.md)
+See the [EPG publication status and re-enable checklist](../../epg/README.md) and the [current EPG status report](../../reports/epg-coverage.md).
 
 ## 🖥️ Playlist Studio
 

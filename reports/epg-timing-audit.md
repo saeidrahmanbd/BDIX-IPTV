@@ -1,9 +1,9 @@
 # EPG Timing Audit
 
-Automatic corrections require repeated cross-source title and duration matches, at least four consistent matches, >=75% agreement, at least three source IDs, and a displacement of two hours or more.
+Generated: **2026-10-27**
 
-## Detected corrections
+## Status: SUSPENDED — guide publication disabled
 
-- No source offsets met the strict automatic-correction threshold.
+Public redistribution permission has not been confirmed for every schedule source. Timing and programme-window metrics from previous guide builds are historical and are not presented as current coverage.
 
-Detected source-ID corrections: **0**
+See `epg/README.md` for the rights-review checklist. Do not restore a guide URL, generate a public guide, or re-enable XMLTV serving until each active source has documented redistribution permission and `EPG_REDISTRIBUTION_APPROVED=true` is deliberately set.

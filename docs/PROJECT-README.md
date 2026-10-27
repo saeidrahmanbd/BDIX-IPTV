@@ -1,21 +1,17 @@
-# BDIX-IPTV Project Guide
+# Project overview
 
-This legacy project overview is kept as a short entry point. The repository-root [README](../README.md) is the canonical project overview and policy reference; use the dedicated pages below for more specific needs.
+The repository's canonical project overview, playlist list, usage instructions, status, download entry points and current policies live in the root [README.md](../README.md).
 
-## Quick links
+This document is retained as a compatibility link for older bookmarks. It intentionally avoids copying the README so that policy and status are maintained in one place.
 
-- [Canonical project overview, playlist links, automation scope and reports](../README.md)
+## Direct references
+
+- [Choose and use a playlist](../README.md#-choose-a-playlist)
+- [Quick start](../README.md#-quick-start)
 - [Download Center](DOWNLOADS.md)
-- [Detailed Wiki and maintenance policies](WIKI.md)
+- [Operational wiki](WIKI.md)
 - [Xtream Gateway documentation](../xtream/README.md)
-- [EPG setup and scope](../epg/README.md)
-- [Playlist Studio guide](PLAYLIST-STUDIO.md)
-- [GitHub Releases](https://github.com/saeidrahmanbd/BDIX-IPTV/releases)
+- [Repository security policy](SECURITY.md)
+- [Contributing guide](CONTRIBUTING.md)
 
-## Maintained playlists
-
-- [IPTV-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)
-- [BDIX-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u)
-- [International-Playlist.m3u](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)
-
-Check each generated report's timestamp and source fingerprint before relying on its values. Combined EPG coverage spans all three maintained playlists; EPG values in the Update Report use the IPTV-only row when available.
+**EPG status:** public programme-guide publication is disabled pending confirmation of redistribution rights. See [EPG publication status](../epg/README.md).

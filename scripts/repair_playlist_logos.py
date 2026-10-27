@@ -15,6 +15,7 @@ import re
 import shutil
 import time
 import unicodedata
+import urllib.error
 import urllib.parse
 
 import logo_source_catalog as source
@@ -343,7 +344,7 @@ def file_is_valid(path):
             return "<svg" in text.lower() and "CHANNEL MARK" not in text.upper() and "<script" not in text.lower()
         if suffix == ".avif":
             return b"ftypavif" in raw[:40] or b"ftypavis" in raw[:40]
-    except Exception:
+    except OSError:
         return False
     return False
 
@@ -473,7 +474,8 @@ def candidate_for(channel, attrs, iptv_indexes, history_index):
         page_url, allow_og = page_hint
         try:
             image_url = source.find_page_logo(page_url, allow_og_image=allow_og)
-        except Exception:
+        except (OSError, ValueError, TimeoutError, urllib.error.URLError, json.JSONDecodeError) as exc:
+            print(f"Page-logo lookup failed for {channel}: {type(exc).__name__}: {exc}")
             image_url = None
         if image_url:
             return {
@@ -515,8 +517,8 @@ def candidate_for(channel, attrs, iptv_indexes, history_index):
             item = dict(item)
             source_name = "Wikimedia Commons exact-logo search"
             return item, source_name
-    except Exception:
-        pass
+    except (OSError, ValueError, TimeoutError, urllib.error.URLError, json.JSONDecodeError) as exc:
+        print(f"Commons-logo lookup failed for {channel}: {type(exc).__name__}: {exc}")
     return None, ""
 
 
@@ -572,7 +574,7 @@ def is_valid_local_logo_reference(value):
     try:
         candidate = candidate.resolve()
         candidate.relative_to(LOGOS.resolve())
-    except Exception:
+    except (OSError, RuntimeError, ValueError):
         return False
     return candidate.is_file() and file_is_valid(candidate)
 
@@ -580,7 +582,7 @@ def is_valid_local_logo_reference(value):
 def find_registered_logo(playlist_name, meta, channel):
     try:
         registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8")) if REGISTRY_PATH.exists() else {}
-    except Exception:
+    except (OSError, UnicodeError, json.JSONDecodeError):
         return None
     channel_id = (meta.get("tvg-id") or meta.get("channel-id") or "").strip().casefold()
     options = []
@@ -896,7 +898,7 @@ def main():
     if registry_updates:
         try:
             registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8")) if REGISTRY_PATH.exists() else {}
-        except Exception:
+        except (OSError, UnicodeError, json.JSONDecodeError):
             registry = {}
         registry.update(registry_updates)
         REGISTRY_PATH.parent.mkdir(parents=True, exist_ok=True)

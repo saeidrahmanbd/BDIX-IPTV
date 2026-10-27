@@ -84,14 +84,14 @@ class ReportFreshnessTests(unittest.TestCase):
     def test_bdix_change_invalidates_shared_epg_and_logo_reports(self):
         with (self.root / "BDIX-Playlist.m3u").open("a", encoding="utf-8") as stream:
             stream.write("# change\n")
-        errors = check_reports(self.root, now=self.now)
+        errors = check_reports(self.root, now=self.now, epg_publication_approved=True)
         self.assertTrue(any("epg-coverage.md: fingerprint does not match current BDIX-Playlist.m3u" in item for item in errors))
         self.assertTrue(any("logo-authenticity-manifest.json: fingerprint does not match current BDIX-Playlist.m3u" in item for item in errors))
 
     def test_stale_epg_report_is_reported(self):
         report = self.root / "reports" / "epg-coverage.md"
         report.write_text(report.read_text(encoding="utf-8").replace(self.timestamp, "2026-10-17T08:00:00+00:00"), encoding="utf-8")
-        errors = check_reports(self.root, now=self.now)
+        errors = check_reports(self.root, now=self.now, epg_publication_approved=True)
         self.assertTrue(any("epg-coverage.md: stale report" in item for item in errors))
 
     def test_metadata_read_only_report_marker_is_accepted(self):

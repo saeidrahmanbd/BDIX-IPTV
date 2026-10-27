@@ -21,6 +21,20 @@ class LogoAssetTechnicalQualityTests(unittest.TestCase):
             with Image.open(path) as image:
                 self.assertEqual(image.format, "PNG")
 
+    def test_large_raster_is_reencoded_and_reduced_to_byte_budget(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "large.png"
+            Image.effect_noise((1200, 1200), 100).convert("L").save(path, format="PNG", optimize=False)
+            before_size = path.stat().st_size
+            self.assertGreater(before_size, 128 * 1024)
+            result = repair_one(path, fix=True, max_dimension=1600, max_bytes=128 * 1024)
+            self.assertTrue(result["compressed"])
+            self.assertLessEqual(path.stat().st_size, 128 * 1024)
+            with Image.open(path) as image:
+                self.assertEqual(image.format, "PNG")
+                self.assertGreater(image.width, 0)
+                self.assertGreater(image.height, 0)
+
     def test_oversized_image_is_resized_without_changing_extension(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "oversized.png"

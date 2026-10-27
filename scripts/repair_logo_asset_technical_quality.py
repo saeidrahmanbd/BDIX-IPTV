@@ -22,6 +22,7 @@ PLAYLISTS = ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m
 REPORT = Path("reports/logo-asset-quality-audit.md")
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 DEFAULT_MAX_DIMENSION = 1600
+DEFAULT_MAX_BYTES = 500 * 1024
 EXPECTED_FORMAT = {
     ".png": "PNG",
     ".jpg": "JPEG",
@@ -79,19 +80,31 @@ def _save_image(image, path, fmt):
         raise ValueError(f"unsupported encoder: {fmt}")
 
 
-def repair_one(path, fix=False, max_dimension=DEFAULT_MAX_DIMENSION):
-    """Return a technical assessment and optionally apply safe format/size repairs."""
+def repair_one(path, fix=False, max_dimension=DEFAULT_MAX_DIMENSION, max_bytes=DEFAULT_MAX_BYTES):
+    """Assess an image and optionally repair format, dimensions, or excessive byte size."""
     path = Path(path)
+    try:
+        size_before = path.stat().st_size
+    except OSError as exc:
+        size_before = 0
+        return {"path": path.as_posix(), "format_before": "", "format_expected": EXPECTED_FORMAT.get(path.suffix.lower(), ""),
+                "width_before": 0, "height_before": 0, "format_mismatch": False, "oversized": False,
+                "large": False, "format_repaired": False, "resized": False, "compressed": False,
+                "bytes_before": 0, "bytes_after": 0, "error": str(exc)}
     result = {
-        "path": str(path.as_posix()),
+        "path": path.as_posix(),
         "format_before": "",
         "format_expected": EXPECTED_FORMAT.get(path.suffix.lower(), ""),
         "width_before": 0,
         "height_before": 0,
         "format_mismatch": False,
         "oversized": False,
+        "large": size_before > max_bytes,
         "format_repaired": False,
         "resized": False,
+        "compressed": False,
+        "bytes_before": size_before,
+        "bytes_after": size_before,
         "error": "",
     }
     if path.suffix.lower() == ".svg":
@@ -104,6 +117,7 @@ def repair_one(path, fix=False, max_dimension=DEFAULT_MAX_DIMENSION):
         return result
     if path.suffix.lower() not in EXPECTED_FORMAT:
         return result
+
     try:
         with Image.open(path) as source:
             source.load()
@@ -119,57 +133,78 @@ def repair_one(path, fix=False, max_dimension=DEFAULT_MAX_DIMENSION):
             target_fmt = result["format_expected"]
             needs_format = result["format_mismatch"]
             needs_resize = result["oversized"]
-            if not fix or not (needs_format or needs_resize):
+            needs_compress = size_before > max_bytes
+            if not fix or not (needs_format or needs_resize or needs_compress):
                 return result
-            # Never alter the extension. Re-encode to that extension's actual format.
-            # If the expected format is JPEG and non-opaque transparency exists, report
-            # the mismatch instead of silently flattening or discarding it.
+
             working = ImageOps.exif_transpose(source.copy())
             if needs_resize:
                 ratio = max_dimension / max(working.size)
-                new_size = (max(1, round(working.width * ratio)), max(1, round(working.height * ratio)))
+                new_size = (
+                    max(1, round(working.width * ratio)),
+                    max(1, round(working.height * ratio)),
+                )
                 working = working.resize(new_size, Image.Resampling.LANCZOS)
-                result["resized"] = True
-            if needs_format:
+
+            # First try a high-quality, same-size re-encode. If the file remains
+            # above the byte budget, shrink in small steps until it fits or the
+            # image is already too small to downscale responsibly.
+            original_size = size_before
+            candidate = working
+            accepted = False
+            output_format = target_fmt or fmt
+            for attempt in range(12):
+                temp_path = None
                 try:
-                    _save_to = target_fmt
-                    with tempfile.NamedTemporaryFile(prefix=path.stem + "-", suffix=path.suffix, dir=path.parent, delete=False) as tmp:
+                    with tempfile.NamedTemporaryFile(
+                        prefix=path.stem + "-", suffix=path.suffix, dir=path.parent, delete=False
+                    ) as tmp:
                         temp_path = Path(tmp.name)
-                    try:
-                        _save_image(working, temp_path, _save_to)
-                        with Image.open(temp_path) as check:
-                            check.load()
-                            if (check.format or "").upper() != target_fmt:
-                                raise ValueError(f"encoder wrote {check.format}, expected {target_fmt}")
-                        temp_path.replace(path)
-                        result["format_repaired"] = True
-                    finally:
-                        if temp_path.exists():
-                            temp_path.unlink()
-                except Exception as exc:
-                    result["error"] = str(exc)
-                    return result
-            elif needs_resize:
-                try:
-                    with tempfile.NamedTemporaryFile(prefix=path.stem + "-", suffix=path.suffix, dir=path.parent, delete=False) as tmp:
-                        temp_path = Path(tmp.name)
-                    try:
-                        _save_image(working, temp_path, fmt or target_fmt)
-                        with Image.open(temp_path) as check:
-                            check.load()
-                        temp_path.replace(path)
-                    finally:
-                        if temp_path.exists():
-                            temp_path.unlink()
-                except Exception as exc:
-                    result["error"] = str(exc)
-                    return result
+                    _save_image(candidate, temp_path, output_format)
+                    with Image.open(temp_path) as check:
+                        check.load()
+                        if (check.format or "").upper() != output_format:
+                            raise ValueError(f"encoder wrote {check.format}, expected {output_format}")
+                    output_size = temp_path.stat().st_size
+                    force_repair = needs_format or needs_resize
+                    smaller = output_size < original_size
+                    within_budget = output_size <= max_bytes
+                    last_attempt = attempt == 11 or min(candidate.size) <= 96
+                    if force_repair or smaller or within_budget:
+                        if within_budget or not needs_compress or last_attempt:
+                            temp_path.replace(path)
+                            result["format_repaired"] = needs_format
+                            result["resized"] = needs_resize or candidate.size != source.size
+                            result["compressed"] = output_size < original_size
+                            result["bytes_after"] = output_size
+                            accepted = True
+                            break
+                finally:
+                    if temp_path is not None and temp_path.exists():
+                        temp_path.unlink()
+
+                if attempt == 11 or min(candidate.size) <= 96:
+                    break
+                ratio = min(0.90, max(0.70, (max_bytes / max(1, output_size)) ** 0.5 * 0.95))
+                new_size = (
+                    max(1, round(candidate.width * ratio)),
+                    max(1, round(candidate.height * ratio)),
+                )
+                if new_size == candidate.size:
+                    break
+                candidate = candidate.resize(new_size, Image.Resampling.LANCZOS)
+
+            if needs_compress and not accepted and result["bytes_after"] > max_bytes:
+                result["error"] = f"could not reduce asset below {max_bytes} bytes without excessive downscaling"
+
             with Image.open(path) as check:
                 check.load()
                 result["width_after"], result["height_after"] = check.size
                 result["format_after"] = (check.format or "").upper()
                 result["format_mismatch"] = result["format_after"] != target_fmt
                 result["oversized"] = max(check.size) > max_dimension
+                result["bytes_after"] = path.stat().st_size
+                result["large"] = result["bytes_after"] > max_bytes
     except Exception as exc:
         result["error"] = str(exc)
     return result
@@ -202,23 +237,27 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--fix", action="store_true", help="apply safe extension and dimension repairs")
     parser.add_argument("--max-dimension", type=int, default=DEFAULT_MAX_DIMENSION)
+    parser.add_argument("--max-bytes", type=int, default=DEFAULT_MAX_BYTES, help="target maximum file size for raster assets; oversized files are re-encoded and downscaled cautiously")
     args = parser.parse_args()
     if args.max_dimension < 256:
         raise SystemExit("--max-dimension must be at least 256 pixels")
+    if args.max_bytes < 64 * 1024:
+        raise SystemExit("--max-bytes must be at least 65536 bytes")
     if not LOGOS.is_dir():
         raise SystemExit("logos directory is missing")
 
     logo_files = sorted(path for path in LOGOS.rglob("*") if path.is_file())
-    first_pass = [repair_one(path, fix=args.fix, max_dimension=args.max_dimension) for path in logo_files]
+    first_pass = [repair_one(path, fix=args.fix, max_dimension=args.max_dimension, max_bytes=args.max_bytes) for path in logo_files]
     refs, active_refs = playlist_logo_refs()
     # Reassess assets after a possible repair, so the final issues section reflects disk state.
-    final = [repair_one(path, fix=False, max_dimension=args.max_dimension) for path in logo_files]
+    final = [repair_one(path, fix=False, max_dimension=args.max_dimension, max_bytes=args.max_bytes) for path in logo_files]
     file_by_name = defaultdict(list)
     for path in logo_files:
         file_by_name[path.name].append(path)
 
     mismatches = [item for item in final if item["format_mismatch"]]
     oversized = [item for item in final if item["oversized"]]
+    large_assets = [item for item in final if item["bytes_before"] > args.max_bytes]
     small = [item for item in final if item["width_before"] and min(item["width_before"], item["height_before"]) < 64]
     errors = [item for item in final if item["error"]]
     duplicate_assets = defaultdict(list)
@@ -245,7 +284,7 @@ def main():
             if logo and name and clean_asset_stem(logo) != slug(name):
                 naming_mismatches.append((playlist, name, logo, meta.get("group-title", "").strip()))
 
-    changed = [item for item in first_pass if item["format_repaired"] or item["resized"]]
+    changed = [item for item in first_pass if item["format_repaired"] or item["resized"] or item["compressed"]]
     lines = [
         "# Logo Asset Technical Quality Audit", "",
         f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**", "",
@@ -261,6 +300,7 @@ def main():
         f"- Safe repairs applied this run: **{len(changed)}**" if args.fix else f"- Safe repairs applied this run: **0 (read-only mode)**",
         f"- File-format/extension mismatches remaining: **{len(mismatches)}**",
         f"- Raster assets still oversized (max side > {args.max_dimension}px): **{len(oversized)}**",
+        f"- Raster assets over {args.max_bytes} bytes: **{len(large_assets)}**",
         f"- Raster/SVG assets with short side under 64 px: **{len(small)}**",
         f"- Exact-byte duplicate asset clusters: **{len(duplicate_groups)}**",
         f"- Playlist references whose asset stem differs from the normalized channel name: **{len(naming_mismatches)}**",
@@ -276,7 +316,7 @@ def main():
             after_format = item.get("format_after", item.get("format_before", ""))
             after_width = item.get("width_after", item["width_before"])
             after_height = item.get("height_after", item["height_before"])
-            action = ", ".join(name for flag, name in ((item["format_repaired"], "re-encoded to match extension"), (item["resized"], "downscaled")) if flag)
+            action = ", ".join(name for flag, name in ((item["format_repaired"], "re-encoded to match extension"), (item["resized"], "downscaled"), (item["compressed"], "re-encoded/compressed")) if flag)
             lines.append(f"| {path.name} | {item['format_before']} | {after_format} | {item['width_before']}×{item['height_before']} | {after_width}×{after_height} | {action} |")
     else:
         lines.append("| — | — | — | — | — | none |")
@@ -298,6 +338,12 @@ def main():
     detail_table(
         "Remaining oversized assets",
         oversized,
+        ["Asset", "Dimensions", "Bytes", "Active reference"],
+        lambda item: [Path(item["path"]).name, f'{item["width_before"]}×{item["height_before"]}', Path(item["path"]).stat().st_size, "yes" if Path(item["path"]).name in active_refs else "no"],
+    )
+    detail_table(
+        "Remaining large assets",
+        large_assets,
         ["Asset", "Dimensions", "Bytes", "Active reference"],
         lambda item: [Path(item["path"]).name, f'{item["width_before"]}×{item["height_before"]}', Path(item["path"]).stat().st_size, "yes" if Path(item["path"]).name in active_refs else "no"],
     )

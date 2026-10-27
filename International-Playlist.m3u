@@ -1,4 +1,4 @@
-#EXTM3U url-tvg="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml" x-tvg-url="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"
+#EXTM3U
 #=================================
 # Developed by: SAEID RAHMAN
 # Facebook: https://www.facebook.com/saeid.rahman.sr
@@ -4694,7 +4694,7 @@ http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791716.ts
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791717.ts
 #EXTINF:-1 tvg-id="custom.stars-exclusive-valentina-nappi" channel-id="custom.stars-exclusive-valentina-nappi" tvg-language="und" group-title="Adult" tvg-name="STARS EXCLUSIVE: VALENTINA NAPPI",STARS EXCLUSIVE: VALENTINA NAPPI
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791718.ts
-#EXTINF:-1 tvg-id="StingrayPopAdult.ca@SD" tvg-country="CA" group-title="Adult" tvg-name="Stingray Pop Adult",Stingray Pop Adult
+#EXTINF:-1 tvg-id="StingrayPopAdult.ca@SD" tvg-country="CA" group-title="Adult" tvg-name="Stingray Pop Adult" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/stingray-pop-adult.png",Stingray Pop Adult
 https://lotus.stingray.com/manifest/ose-104ads-montreal/samsungtvplus/master.m3u8
 #EXTINF:-1 tvg-id="custom.24-7-xxx-strap-on" channel-id="custom.24-7-xxx-strap-on" tvg-language="und" group-title="Adult" tvg-name="Strap on",Strap on
 http://dgda92.com:80/live/RodrigoVivas/BQFVZK8HAc/791554.ts

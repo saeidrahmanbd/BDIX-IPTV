@@ -23,4 +23,5 @@ dist/
 .DS_Store
 Thumbs.db
 
-# epg/epg.xml intentionally remains tracked as the published XMLTV resource.
+# Public XMLTV publication is disabled pending documented source redistribution rights.
+epg/epg.xml

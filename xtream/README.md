@@ -21,12 +21,16 @@ The workers read the public raw playlist URLs configured in their respective `wr
 
 The `assets/relay/` directory contains an optional Docker Compose / Nginx relay example. It is separate from the hosted Cloudflare Workers and is not used by the standard Xtream deployment. Review `assets/relay/docker-compose.yml`, `assets/relay/nginx.conf`, and `assets/relay/config/` before use. Keep real upstream credentials in deployment secrets or local environment files; never commit them or expose private upstreams publicly.
 
+## Programme guide
+
+The public XMLTV feed is **disabled pending confirmed redistribution rights**. Both workers' `xmltv.php` endpoints return HTTP 410 while that decision is unresolved. Do not enable or publish an EPG URL until all active source feeds have documented redistribution approval.
+
 ## Security
 
 - Xtream credentials are supplied through deployment secrets; do not commit usernames or passwords.
 - Do not place real credentials in this repository or in example configuration files.
 - The workers are downstream consumers of the published playlist data.
-- Review the repository's [stream-risk review](../reports/stream-risk-review.md), [stream-health report](../reports/stream-health.md), and [pre-publish gate](../reports/pre-publish-gate.md) before enabling a deployment. These are generated snapshots: verify the report timestamp and source playlist fingerprint; a historical `PASS` does not certify the current playlist.
+- Review reports only after checking their timestamps and source fingerprints. The pre-publish gate is a generated snapshot, not a live authorization signal.
 
 ## Deployment
 
@@ -40,4 +44,4 @@ After deployment, use the worker's documented Xtream base URL with a compatible 
 
 ## Maintenance
 
-The Xtream workers are downstream consumers of the curated playlists. Playlist discovery, metadata normalization, local-logo enforcement, EPG generation, stream health checks, backup-independence review, and publish gates are maintained by the main repository workflows.
+The Xtream workers are downstream consumers of the curated playlists. Playlist discovery, metadata normalization, local-logo enforcement, stream-health checks, backup-independence review, and publish gates are maintained by repository workflows. Public EPG generation and serving are disabled until redistribution permission is documented.

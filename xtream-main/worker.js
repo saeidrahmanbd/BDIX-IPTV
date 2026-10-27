@@ -1,21 +1,238 @@
 const PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u";
-const EPG_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml";
 const INACTIVE = new Set(["Test", "Not Playing", "New Backup", "New Channels"]);
 const CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "New Channels", "New Backup", "Not Playing"];
 const CATEGORY_RANK = new Map(CATEGORY_ORDER.map((name, i) => [name, i]));
-const CORS_HEADERS = {"access-control-allow-origin":"*","access-control-allow-methods":"GET, HEAD, OPTIONS","access-control-allow-headers":"Content-Type, Authorization","access-control-max-age":"86400"};
-function json(data,status=200){return new Response(JSON.stringify(data),{status,headers:{...CORS_HEADERS,"content-type":"application/json; charset=utf-8","cache-control":"no-store"}})}
-function xml(data,status=200){return new Response(data,{status,headers:{...CORS_HEADERS,"content-type":"application/xml; charset=utf-8","cache-control":"no-store"}})}
-function text(data,status=200,type="text/plain; charset=utf-8"){return new Response(data,{status,headers:{...CORS_HEADERS,"content-type":type,"cache-control":"no-store"}})}
-function attrs(line){const out={};const re=/([A-Za-z0-9_-]+)="([^"]*)"/g;let m;while((m=re.exec(line)))out[m[1]]=m[2];return out}
-function stableId(s){let h=2166136261;for(const c of `${s.tvgId}|${s.url}`){h^=c.charCodeAt(0);h=Math.imul(h,16777619)}return(Math.abs(h>>>0)%899999999)+100000000}
-function parseM3U(data){const out=[];let cur=null;for(const raw of data.split(/\r?\n/)){const line=raw.trim();if(line.startsWith("#EXTINF:")){const a=attrs(line),i=line.indexOf(",");cur={tvgId:(a["tvg-id"]||"").trim(),name:(a["tvg-name"]||(i>=0?line.slice(i+1):"")).trim(),logo:(a["tvg-logo"]||"").trim(),group:(a["group-title"]||"Uncategorized").trim(),chno:(a["tvg-chno"]||"").trim()}}else if(cur&&/^https?:\/\//i.test(line)){if(!INACTIVE.has(cur.group)){const s={...cur,url:line};s.id=stableId(s);out.push(s)}cur=null}}return out}
-async function playlist(env){const source=env.PLAYLIST_URL||PLAYLIST_URL;const r=await fetch(source,{headers:{"User-Agent":"BDIX-IPTV-Xtream/6.3"}});if(!r.ok)throw Error(`Playlist HTTP ${r.status}`);const streams=parseM3U(await r.text());if(!streams.length)throw Error("Playlist contains no active streams");return streams}
-function constantTimeEqual(a,b){a=String(a);b=String(b);let diff=a.length^b.length;const length=Math.max(a.length,b.length);for(let i=0;i<length;i++)diff|=(a.charCodeAt(i)||0)^(b.charCodeAt(i)||0);return diff===0}
-function auth(url,env){const expectedUser=String(env.XTREAM_USERNAME||"").trim(),expectedPass=String(env.XTREAM_PASSWORD||"");const suppliedUser=(url.searchParams.get("username")||"").trim(),suppliedPass=url.searchParams.get("password")||"";return Boolean(expectedUser&&expectedPass)&&constantTimeEqual(suppliedUser,expectedUser)&&constantTimeEqual(suppliedPass,expectedPass)}
-function userInfo(url,ok){return{username:url.searchParams.get("username")||"",message:"",auth:ok?1:0,status:ok?"Active":"Disabled",exp_date:null,is_trial:"0",active_cons:"0",created_at:String(Math.floor(Date.now()/1000)),max_connections:"10",allowed_output_formats:["m3u8","ts"]}}
-function serverInfo(url){const now=new Date();return{url:url.hostname,port:"443",https_port:"443",server_protocol:"https",protocol:"https",rtmp_port:"",timezone:"Asia/Dhaka",timestamp_now:Math.floor(now.getTime()/1000),time_now:now.toISOString().replace("T"," ").replace("Z","")}}
-function categories(streams){const present=[...new Set(streams.map(s=>s.group))];present.sort((a,b)=>(CATEGORY_RANK.get(a)??CATEGORY_ORDER.length)-(CATEGORY_RANK.get(b)??CATEGORY_ORDER.length)||a.localeCompare(b));return present.map((name,i)=>({category_id:String(i+1),category_name:name,parent_id:0}))}
-function streamPayload(s,categoryId){return{num:Number(s.chno)||0,name:s.name,stream_type:"live",stream_id:s.id,stream_icon:s.logo,epg_channel_id:s.tvgId,category_id:String(categoryId),tv_archive:0,direct_source:s.url,custom_sid:"",tv_archive_duration:0,tvg_id:s.tvgId,tvg_name:s.name,container_extension:"ts",added:String(Math.floor(Date.now()/1000)),is_adult:0,rating:"0",rating_5based:0}}
-function allCategories(id){if(id==null)return true;const v=String(id).trim().toLowerCase();return v===""||v==="0"||v==="-1"||v==="all"||v==="all_categories"}
-export default{async fetch(request,env){if(request.method==="OPTIONS")return new Response(null,{status:204,headers:CORS_HEADERS});const u=new URL(request.url),p=u.pathname;if(p==="/health"){try{const s=await playlist(env);return json({ok:true,playlist:env.PLAYLIST_URL||PLAYLIST_URL,streams:s.length})}catch(e){return json({ok:false,error:String(e)},502)}}if(p==="/epg-health"){try{const r=await fetch(EPG_URL),b=await r.text();return json({ok:r.ok,bytes:b.length,channels:(b.match(/<channel\b/g)||[]).length,programmes:(b.match(/<programme\b/g)||[]).length})}catch(e){return json({ok:false,error:String(e)},502)}}if(p==="/xmltv.php"){if(!auth(u,env))return json({user_info:userInfo(u,false)},401);const r=await fetch(EPG_URL);return xml(await r.text(),r.status)}if(p==="/player_api.php"){const ok=auth(u,env),info={user_info:userInfo(u,ok),server_info:serverInfo(u)};if(!ok)return json(info);try{const streams=await playlist(env),c=categories(streams),byName=new Map(c.map(x=>[x.category_name,x.category_id]));const action=(u.searchParams.get("action")||"").toLowerCase();if(action==="get_live_categories")return json(c);if(action==="get_live_streams"){const id=u.searchParams.get("category_id");const selected=allCategories(id)?streams:streams.filter(s=>String(byName.get(s.group))===String(id));const list=selected.map(s=>streamPayload(s,byName.get(s.group)||"0"));return json(list)}return json(info)}catch(e){return json({error:String(e)},502)}}if(p==="/get.php"){if(!auth(u,env))return text("Unauthorized",401);try{const streams=await playlist(env),lines=["#EXTM3U"];for(const s of streams)lines.push(`#EXTINF:-1 tvg-id="${s.tvgId}" tvg-name="${s.name.replaceAll('"','&quot;')}" tvg-logo="${s.logo}" group-title="${s.group}" tvg-chno="${s.chno}",${s.name}`,`${u.origin}/live/${encodeURIComponent(env.XTREAM_USERNAME)}/${encodeURIComponent(env.XTREAM_PASSWORD)}/${s.id}.ts`);return text(lines.join("\n")+"\n",200,"audio/x-mpegurl; charset=utf-8")}catch(e){return text(String(e),502)}}const m=p.match(/^\/live\/([^/]+)\/([^/]+)\/(\d+)\.(?:ts|m3u8)$/i);if(m){const q=new URL(request.url);q.searchParams.set("username",decodeURIComponent(m[1]));q.searchParams.set("password",decodeURIComponent(m[2]));if(!auth(q,env))return text("Unauthorized",401);try{const s=(await playlist(env)).find(x=>x.id===Number(m[3]));if(!s)return text("Stream not found",404);const upstream=await fetch(s.url,{headers:{"User-Agent":"BDIX-IPTV-Xtream/6.3"}});const headers=new Headers(upstream.headers);for(const [name,value] of Object.entries(CORS_HEADERS))headers.set(name,value);headers.set("cache-control","no-store");headers.set("referrer-policy","no-referrer");return new Response(upstream.body,{status:upstream.status,statusText:upstream.statusText,headers})}catch(e){return text(String(e),502)}}return json({ok:true,service:"BDIX-IPTV Xtream Main",endpoints:["player_api.php","get.php","xmltv.php","live/<username>/<password>/<stream_id>.ts"]})}};
+const CORS_HEADERS = {
+  "access-control-allow-origin":"*","access-control-allow-methods":"GET, HEAD, OPTIONS","access-control-allow-headers":"Content-Type, Authorization","access-control-max-age":"86400"
+}
+;
+function json(data,status=200){
+  return new Response(JSON.stringify(data),{
+    status,headers:{
+      ...CORS_HEADERS,"content-type":"application/json; charset=utf-8","cache-control":"no-store"
+    }
+  }
+  )
+}
+function xml(data,status=200){
+  return new Response(data,{
+    status,headers:{
+      ...CORS_HEADERS,"content-type":"application/xml; charset=utf-8","cache-control":"no-store"
+    }
+  }
+  )
+}
+function text(data,status=200,type="text/plain; charset=utf-8"){
+  return new Response(data,{
+    status,headers:{
+      ...CORS_HEADERS,"content-type":type,"cache-control":"no-store"
+    }
+  }
+  )
+}
+function attrs(line){
+  const out={
+  }
+  ;
+  const re=/([A-Za-z0-9_-]+)="([^"]*)"/g;
+  let m;
+  while((m=re.exec(line)))out[m[1]]=m[2];
+  return out
+}
+function stableId(s){
+  let h=2166136261;
+  for(const c of `${s.tvgId}|${s.url}`){
+    h^=c.charCodeAt(0);
+    h=Math.imul(h,16777619)
+  }
+  return(Math.abs(h>>>0)%899999999)+100000000
+}
+function parseM3U(data){
+  const out=[];
+  let cur=null;
+  for(const raw of data.split(/\r?\n/)){
+    const line=raw.trim();
+    if(line.startsWith("#EXTINF:")){
+      const a=attrs(line),i=line.indexOf(",");
+      cur={
+        tvgId:(a["tvg-id"]||"").trim(),name:(a["tvg-name"]||(i>=0?line.slice(i+1):"")).trim(),logo:(a["tvg-logo"]||"").trim(),group:(a["group-title"]||"Uncategorized").trim(),chno:(a["tvg-chno"]||"").trim()
+      }
+    }
+    else if(cur&&/^https?:\/\//i.test(line)){
+      if(!INACTIVE.has(cur.group)){
+        const s={
+          ...cur,url:line
+        }
+        ;
+        s.id=stableId(s);
+        out.push(s)
+      }
+      cur=null
+    }
+  }
+  return out
+}
+async function playlist(env){
+  const source=env.PLAYLIST_URL||PLAYLIST_URL;
+  const r=await fetch(source,{
+    headers:{
+      "User-Agent":"BDIX-IPTV-Xtream/6.3"
+    }
+  }
+  );
+  if(!r.ok)throw Error(`Playlist HTTP ${r.status}`);
+  const streams=parseM3U(await r.text());
+  if(!streams.length)throw Error("Playlist contains no active streams");
+  return streams
+}
+function constantTimeEqual(a,b){
+  a=String(a);
+  b=String(b);
+  let diff=a.length^b.length;
+  const length=Math.max(a.length,b.length);
+  for(let i=0;
+  i<length;
+  i++)diff|=(a.charCodeAt(i)||0)^(b.charCodeAt(i)||0);
+  return diff===0
+}
+function auth(url,env){
+  const expectedUser=String(env.XTREAM_USERNAME||"").trim(),expectedPass=String(env.XTREAM_PASSWORD||"");
+  const suppliedUser=(url.searchParams.get("username")||"").trim(),suppliedPass=url.searchParams.get("password")||"";
+  return Boolean(expectedUser&&expectedPass)&&constantTimeEqual(suppliedUser,expectedUser)&&constantTimeEqual(suppliedPass,expectedPass)
+}
+function userInfo(url,ok){
+  return{
+    username:url.searchParams.get("username")||"",message:"",auth:ok?1:0,status:ok?"Active":"Disabled",exp_date:null,is_trial:"0",active_cons:"0",created_at:String(Math.floor(Date.now()/1000)),max_connections:"10",allowed_output_formats:["m3u8","ts"]
+  }
+}
+function serverInfo(url){
+  const now=new Date();
+  return{
+    url:url.hostname,port:"443",https_port:"443",server_protocol:"https",protocol:"https",rtmp_port:"",timezone:"Asia/Dhaka",timestamp_now:Math.floor(now.getTime()/1000),time_now:now.toISOString().replace("T"," ").replace("Z","")
+  }
+}
+function categories(streams){
+  const present=[...new Set(streams.map(s=>s.group))];
+  present.sort((a,b)=>(CATEGORY_RANK.get(a)??CATEGORY_ORDER.length)-(CATEGORY_RANK.get(b)??CATEGORY_ORDER.length)||a.localeCompare(b));
+  return present.map((name,i)=>({
+    category_id:String(i+1),category_name:name,parent_id:0
+  }
+  ))
+}
+function streamPayload(s,categoryId){
+  return{
+    num:Number(s.chno)||0,name:s.name,stream_type:"live",stream_id:s.id,stream_icon:s.logo,epg_channel_id:s.tvgId,category_id:String(categoryId),tv_archive:0,direct_source:s.url,custom_sid:"",tv_archive_duration:0,tvg_id:s.tvgId,tvg_name:s.name,container_extension:"ts",added:String(Math.floor(Date.now()/1000)),is_adult:0,rating:"0",rating_5based:0
+  }
+}
+function allCategories(id){
+  if(id==null)return true;
+  const v=String(id).trim().toLowerCase();
+  return v===""||v==="0"||v==="-1"||v==="all"||v==="all_categories"
+}
+export default{
+  async fetch(request,env){
+    if(request.method==="OPTIONS")return new Response(null,{
+      status:204,headers:CORS_HEADERS
+    }
+    );
+    const u=new URL(request.url),p=u.pathname;
+    if(p==="/health"){
+      try{
+        const s=await playlist(env);
+        return json({
+          ok:true,playlist:env.PLAYLIST_URL||PLAYLIST_URL,streams:s.length
+        }
+        )
+      }
+      catch(e){
+        return json({
+          ok:false,error:String(e)
+        }
+        ,502)
+      }
+    }
+    if(p==="/epg-health"){
+      try{
+        const r=await fetch(EPG_URL),b=await r.text();
+        return json({
+          ok:r.ok,bytes:b.length,channels:(b.match(/<channel\b/g)||[]).length,programmes:(b.match(/<programme\b/g)||[]).length
+        }
+        )
+      }
+      catch(e){
+        return json({
+          ok:false,error:String(e)
+        }
+        ,502)
+      }
+    }
+    if(p==="/xmltv.php"){
+      if(!auth(u,env))return json({
+        user_info:userInfo(u,false)
+      }
+      ,401);
+      return xml("Programme guide disabled pending verified redistribution rights.",410)
+    }
+    if(p==="/player_api.php"){
+      const ok=auth(u,env),info={
+        user_info:userInfo(u,ok),server_info:serverInfo(u)
+      }
+      ;
+      if(!ok)return json(info);
+      try{
+        const streams=await playlist(env),c=categories(streams),byName=new Map(c.map(x=>[x.category_name,x.category_id]));
+        const action=(u.searchParams.get("action")||"").toLowerCase();
+        if(action==="get_live_categories")return json(c);
+        if(action==="get_live_streams"){
+          const id=u.searchParams.get("category_id");
+          const selected=allCategories(id)?streams:streams.filter(s=>String(byName.get(s.group))===String(id));
+          const list=selected.map(s=>streamPayload(s,byName.get(s.group)||"0"));
+          return json(list)
+        }
+        return json(info)
+      }
+      catch(e){
+        return json({
+          error:String(e)
+        }
+        ,502)
+      }
+    }
+    if(p==="/get.php"){
+      if(!auth(u,env))return text("Unauthorized",401);
+      try{
+        const streams=await playlist(env),lines=["#EXTM3U"];
+        for(const s of streams)lines.push(`#EXTINF:-1 tvg-id="${s.tvgId}" tvg-name="${s.name.replaceAll('"','&quot;')}" tvg-logo="${s.logo}" group-title="${s.group}" tvg-chno="${s.chno}",${s.name}`,`${u.origin}/live/${encodeURIComponent(env.XTREAM_USERNAME)}/${encodeURIComponent(env.XTREAM_PASSWORD)}/${s.id}.ts`);
+        return text(lines.join("\n")+"\n",200,"audio/x-mpegurl; charset=utf-8")
+      }
+      catch(e){
+        return text(String(e),502)
+      }
+    }
+    const m=p.match(/^\/live\/([^/]+)\/([^/]+)\/(\d+)\.(?:ts|m3u8)$/i);
+    if(m){
+      const q=new URL(request.url);
+      q.searchParams.set("username",decodeURIComponent(m[1]));
+      q.searchParams.set("password",decodeURIComponent(m[2]));
+      if(!auth(q,env))return text("Unauthorized",401);
+      try{
+        const s=(await playlist(env)).find(x=>x.id===Number(m[3]));
+        if(!s)return text("Stream not found",404);
+        return new Response(null,{
+          status:302,headers:{
+            ...CORS_HEADERS,"Location":s.url,"Cache-Control":"no-store","Referrer-Policy":"no-referrer"
+          }
+        }
+        )
+      }
+      catch(e){
+        return text(String(e),502)
+      }
+    }
+    return json({
+      ok:true,service:"BDIX-IPTV Xtream Main",endpoints:["player_api.php","get.php","live/<username>/<password>/<stream_id>.ts"]
+    }
+    )
+  }
+}
+;
