@@ -42,9 +42,9 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
         self.assertEqual(missing_names, [])
         self.assertEqual(empty_logos, [])
 
-    def test_bdix_test_rows_are_quarantined_and_known_names_corrected(self):
+    def test_bdix_review_rows_are_removed_and_known_names_corrected(self):
         rows = playlist_rows(ROOT / "BDIX-Playlist.m3u")
-        self.assertFalse([row for row in rows if row["attrs"].get("group-title") == "Test"])
+        self.assertFalse([row for row in rows if row["attrs"].get("group-title") in {"Test", "Not Playing"}])
         expected = {
             "DBCNews.bd": "DBC News",
             "DeshTV.bd": "Desh TV",
@@ -56,7 +56,7 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
             with self.subTest(channel_id=channel_id):
                 self.assertIn(channel_id, indexed)
                 self.assertEqual(indexed[channel_id]["attrs"].get("tvg-name"), name)
-                self.assertEqual(indexed[channel_id]["attrs"].get("group-title"), "Not Playing")
+                self.assertEqual(indexed[channel_id]["attrs"].get("group-title"), "Bangladesh")
 
     def test_both_workers_fail_closed_for_xmltv_and_use_redirects(self):
         for name in ("xtream-main", "xtream-bdix"):
