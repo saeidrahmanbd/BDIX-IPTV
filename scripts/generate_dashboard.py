@@ -199,9 +199,9 @@ Source playlist SHA-256: **{source_sha}**
 | Current playlist streams | **{len(e)}** |
 | Active channel identities | **{active}** |
 | Backup stream entries | **{groups.get("Backup",0)}** |
-| EPG IDs audited | **{india if epg_current else "STALE / UNKNOWN"}** |
+| EPG IDs audited | **{india if epg_current else "DISABLED — rights pending"}** |
 | Logo exceptions | **{metric(a,"Logo exceptions") if audit_current else "STALE / UNKNOWN"}** |
-| EPG mapping | **{"%.1f%%" % mapct if epg_current else "STALE / UNKNOWN"}** |
+| EPG mapping | **{"%.1f%%" % mapct if epg_current else "DISABLED — rights pending"}** |
 | EPG programme coverage | **{epg_coverage_card}** |
 | Health failures | **{health_fail_value}** |
 | Persistent health failures | **{health_persist_value}** |
