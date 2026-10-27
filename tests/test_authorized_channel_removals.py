@@ -196,14 +196,14 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             nums = [int(re.search(r'tvg-chno="(\d+)"', line).group(1)) for line in primary]
             self.assertEqual(nums, [1, 2])
             sport = next(line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Sports"' in line)
-            self.assertEqual(re.search(r'tvg-chno="(\\d+)"', sport).group(1), "3")
+            self.assertEqual(re.search(r'tvg-chno="(\d+)"', sport).group(1), "3")
             primary_numbers = [
-                int(re.search(r'tvg-chno="(\\d+)"', line).group(1))
+                int(re.search(r'tvg-chno="(\d+)"', line).group(1))
                 for line in content.splitlines()
                 if line.startswith("#EXTINF:")
                 and 'group-title="' in line
                 and not any(f'group-title="{group}"' in line for group in {"Backup", "New Channels", "New Backup", "Not Playing"})
-                and re.search(r'tvg-chno="(\\d+)"', line)
+                and re.search(r'tvg-chno="(\d+)"', line)
             ]
             self.assertEqual(primary_numbers, [1, 2, 3])
             backup = next(line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Backup"' in line)
