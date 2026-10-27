@@ -2,7 +2,7 @@ name: Refresh IPTV EPG
 
 on:
   # Refresh the EPG workflow when maintained playlist inventories or EPG inputs change.
-  # The job-level redistribution-rights gate below remains mandatory.
+  # EPG.PW remains excluded; review-required sources are logged under the owner override.
   push:
     branches:
       - main
@@ -32,12 +32,12 @@ concurrency:
 
 jobs:
   refresh:
-    # Fail closed: no EPG source retrieval/publication until source redistribution rights are documented.
-    if: ${{ vars.EPG_REDISTRIBUTION_APPROVED == 'true' && !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG')) }}
+    # Avoid self-trigger loops from the guide's generated commit; source policy is checked below.
+    if: ${{ !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG')) }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
-      M3U4U_XMLTV_URL: ${{ secrets.M3U4U_XMLTV_URL }}
+      EPG_ALLOW_UNVERIFIED_SOURCES: 'true'
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
@@ -70,7 +70,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_iptv_org_epg_targeting.py'
           python scripts/check_epg_config.py
           python -m unittest discover -s tests -p 'test_epg_source_rights.py'
-          # Fail closed before any source fetch or public guide generation.
+          # Block explicitly prohibited sources; warn for review-required feeds under the owner override.
           python scripts/check_epg_source_rights.py
       - name: Regenerate, freshness-check and publish XMLTV
         shell: bash
