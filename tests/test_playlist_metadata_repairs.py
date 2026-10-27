@@ -34,6 +34,18 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
         self.assertGreater(len(rows), 1000)
         self.assertFalse([row for row in rows if row["attrs"].get("tvg-logo") == ""])
 
+    def test_international_backup_groups_use_the_singular_playlist_contract(self):
+        rows = playlist_rows(ROOT / "International-Playlist.m3u")
+        legacy = [row for row in rows if row["attrs"].get("group-title", "").casefold() in {"backups", "new backups"}]
+        self.assertEqual(legacy, [])
+
+        organizer = (ROOT / "scripts/reorganize_international_playlist.py").read_text(encoding="utf-8")
+        self.assertRegex(organizer, r'TAIL\\s*=\\s*\\[.*?"New Backup",\\s*"Backup"\\]')
+        self.assertIn('else "Backup")', organizer)
+        self.assertNotIn('target = "Backups"', organizer)
+        self.assertNotIn('emit(row, "Backups"', organizer)
+        self.assertNotIn('emit(row, "New Backups"', organizer)
+
     def test_international_playlist_names_are_present_and_empty_logos_removed(self):
         rows = playlist_rows(ROOT / "International-Playlist.m3u")
         self.assertGreater(len(rows), 2000)

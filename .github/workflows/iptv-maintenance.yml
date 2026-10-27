@@ -46,6 +46,9 @@ on:
       - scripts/record_maintenance_history.py
       - scripts/generate_dashboard.py
       - scripts/enforce_playlist_attribution.py
+      - scripts/reorganize_international_playlist.py
+      - scripts/validate_international_playlist.py
+      - tests/test_playlist_metadata_repairs.py
   schedule:
     - cron: '17 2 * * *'
   workflow_dispatch:
@@ -100,6 +103,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_pre_publish_gate_logo_paths.py'
           python -m unittest discover -s tests -p 'test_authorized_channel_removals.py'
           python -m unittest discover -s tests -p 'test_maintenance_report_order.py'
+          python -m unittest discover -s tests -p 'test_playlist_metadata_repairs.py'
           python -m unittest discover -s tests -p 'test_metadata_backfill.py'
           python -m unittest discover -s tests -p 'test_logo_authenticity_manifest.py'
           python -m unittest discover -s tests -p 'test_logo_asset_naming.py'

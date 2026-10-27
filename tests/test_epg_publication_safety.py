@@ -33,7 +33,7 @@ class EPGPublicationSafetyTests(unittest.TestCase):
         self.assertIn("python scripts/fetch_iptv_org_epg.py", refresh)
         self.assertIn("python scripts/run_generate_epg.py", refresh)
         self.assertIn("git add -f epg/epg.xml", refresh)
-        self.assertIn("EPG_ALLOW_UNVERIFIED_SOURCES: 'true'", maintenance)
+        self.assertNotIn("EPG_ALLOW_UNVERIFIED_SOURCES", maintenance)
         self.assertNotIn("M3U4U_XMLTV_URL", refresh)
         self.assertNotIn("M3U4U_XMLTV_URL", maintenance)
         self.assertNotIn("python scripts/epg_coverage.py", maintenance)

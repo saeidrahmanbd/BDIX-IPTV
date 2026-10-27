@@ -11,7 +11,7 @@ PLAYLIST = Path("International-Playlist.m3u")
 LOGOS = Path("logos")
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 FIXED = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani"]
-TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backups", "Backups"]
+TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backup", "Backup"]
 BACKUP_GROUPS = {"backup", "backups", "new backup", "new backups"}
 INDIAN_GROUPS = {"Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
@@ -192,7 +192,7 @@ def classify(a, name, group, country):
     if key in MANUAL_GROUP:
         return MANUAL_GROUP[key], None, None
     if group_key in BACKUP_GROUPS:
-        return ("New Backups" if group_key in {"new backup", "new backups"} else "Backups"), infer_kind(name, group, a), None
+        return ("New Backup" if group_key in {"new backup", "new backups"} else "Backup"), infer_kind(name, group, a), None
     if country == "BD" or group == "Bangladesh":
         return "Bangladesh", None, None
     if country == "IN" or group in INDIAN_GROUPS:
@@ -317,16 +317,16 @@ def main():
             return
         target = group
         ident = (row["country"], row["key"])
-        if not as_backup and group != "New Backups":
+        if not as_backup and group != "New Backup":
             if ident in seen_channels:
-                target = "Backups"
-                removed["duplicate channel stream moved to Backups"] += 1
+                target = "Backup"
+                removed["duplicate channel stream moved to Backup"] += 1
             else:
                 seen_channels.add(ident)
         seen_urls.add(url_key)
         content_kind = row.get("content_kind") or row.get("kind")
         ext = set_extinf(row["block"], row["name"], target, row["country"], content_kind,
-                         row["keep_logo"], is_queue=target in {"New Channels", "New Backups"})
+                         row["keep_logo"], is_queue=target in {"New Channels", "New Backup"})
         extras = list(row["extras"])
         for option, value in row["options"].items():
             directive = f"#EXTVLCOPT:{option}={value}"
@@ -341,11 +341,11 @@ def main():
         match = identity_primary.get((row["country"], row["key"]))
         if match:
             row["content_kind"] = match.get("content_kind") or match.get("kind")
-            emit(row, "Backups", as_backup=True)
-        elif row["group"] == "New Backups" and row.get("kind"):
-            emit(row, "New Backups", as_backup=True)
+            emit(row, "Backup", as_backup=True)
+        elif row["group"] == "New Backup" and row.get("kind"):
+            emit(row, "New Backup", as_backup=True)
         elif row["country"] in {"BD", "IN"} or row["group"] in {"Religious", "Adult", "Kids", "Sports", "Documentary & Wildlife"} or row.get("kind"):
-            emit(row, "Backups", as_backup=True)
+            emit(row, "Backup", as_backup=True)
         else:
             removed["orphan backup outside policy"] += 1
 
@@ -381,7 +381,7 @@ def main():
             raise SystemExit(f"Name was not normalized: {name}")
         if a.get("tvg-logo") and local_logo_path(a["tvg-logo"]) is None:
             raise SystemExit(f"Invalid or external logo reference: {name}")
-        if group.casefold() in {"new channels", "new backups"} and (a.get("tvg-content") or "").casefold() not in {"movies", "movie", "music"}:
+        if group.casefold() in {"new channels", "new backup"} and (a.get("tvg-content") or "").casefold() not in {"movies", "movie", "music"}:
             raise SystemExit(f"Review queue entry lacks validated movie/music classification: {name}")
         final_urls.append(url.casefold())
         group_counts[group] += 1
@@ -398,7 +398,7 @@ def main():
         f"- Malformed HTTP options moved into VLC directives: {malformed_options}",
         f"- Invalid/external logo references removed: {invalid_logos}",
         f"- Exact duplicate URLs omitted: {removed['exact duplicate URL']}",
-        f"- Additional same-channel streams moved to Backups: {removed['duplicate channel stream moved to Backups']}",
+        f"- Additional same-channel streams moved to Backup: {removed['duplicate channel stream moved to Backup']}",
         "- News outside Bangladesh and non-Islamic religious channels are excluded.",
         "- Foreign movie/music services are placed under country names after at least five unique primary channels; smaller/unknown countries remain in New Channels with tvg-content tags.",
         "- Retained stream URLs are preserved; playback/availability was not tested.", "",
@@ -411,7 +411,7 @@ def main():
     print(json.dumps({"before": len(blocks), "after": len(final_blocks), "removed": dict(removed),
                       "normalized_names": names_normalized, "malformed_http_options_moved": malformed_options,
                       "duplicate_urls": removed["exact duplicate URL"],
-                      "duplicate_channels_moved_to_backups": removed["duplicate channel stream moved to Backups"],
+                      "duplicate_channels_moved_to_backup": removed["duplicate channel stream moved to Backup"],
                       "groups": dict(group_counts)}, ensure_ascii=False))
 
 if __name__ == "__main__":

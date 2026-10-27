@@ -323,10 +323,12 @@ for r in rows:
    if not current_logo or (pr and current_logo != logo_url):
     m=set_attr(m,"tvg-logo",logo_url); stats["logos"]+=1
   m=re.sub(r'\s*tvg-chno="[^"]*"',"",m); stats["backups"]+=1
+ # Do not publish empty logo attributes when no verified local asset is available.
+ m=re.sub(r'\s+tvg-logo=""(?=\s|$)', "", m)
  lines[r["i"]]=f"{m},{name}"
 
 # Keep the stable playlist section order required by the playlist contract:
-# normal categories first, then Backup, then Backup.
+# normal categories first, followed by the New Backup and Backup review queues.
 preamble=[]
 records=[]
 cur=None
