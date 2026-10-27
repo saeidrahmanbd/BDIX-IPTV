@@ -16,6 +16,7 @@ import maintenance_helpers as guard
 import restore_protected_review as restore
 import sort_playlists as sorter
 import final_playlist_hardening as hardening
+import restore_protected_review as removal_policy
 
 
 TARGET_NAMES = {
@@ -141,6 +142,37 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
 
     def test_unrelated_protected_deletion_still_fails_guard(self):
         self.assertEqual(self._run_guard(["AccuWeather", "Reliable Backup"]), 1)
+
+    def test_audit_allows_exact_authorized_removal_but_still_blocks_unrelated_removal(self):
+        allowed_url = "https://example.invalid/aaj-tak.m3u8"
+        protected_url = "https://example.invalid/channel-one.m3u8"
+        allowed = channel("Aaj Tak", "Indian Entertainment", allowed_url).splitlines()[0]
+        protected = channel("Channel One", "Bangladesh", protected_url).splitlines()[0]
+        old_entries = [(allowed, allowed_url), (protected, protected_url)]
+        primary_exceptions = {"Backup", "Not Playing", "New Channels", "New Backup"}
+
+        # Removing a channel explicitly covered by the current policy allowlist
+        # must not be mistaken for an unauthorized stream deletion by the audit.
+        only_protected = [(protected, protected_url)]
+        self.assertEqual(
+            removal_policy.count_unapproved_removed_url_occurrences(old_entries, only_protected),
+            0,
+        )
+        self.assertEqual(
+            removal_policy.protected_primary_url_changes(old_entries, only_protected, primary_exceptions),
+            [],
+        )
+
+        # The same guard must still stop an unrelated primary URL from disappearing.
+        only_allowed = [(allowed, allowed_url)]
+        self.assertEqual(
+            removal_policy.count_unapproved_removed_url_occurrences(old_entries, only_allowed),
+            1,
+        )
+        self.assertEqual(
+            removal_policy.protected_primary_url_changes(old_entries, only_allowed, primary_exceptions),
+            [("", protected_url, "primary stream URL removed")],
+        )
 
     def test_reintroduced_allowlisted_channel_is_blocked(self):
         self.assertEqual(self._run_guard([]), 1)

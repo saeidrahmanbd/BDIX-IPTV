@@ -21,6 +21,7 @@ ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 PRIMARY_EXCEPTIONS = {"Backup", "Not Playing", "New Channels", "New Backup"}
 from playlist_order_policy import should_check_alphabetical_order
 from country_verification import queue_errors as review_queue_country_errors, reference_from_playlists
+from restore_protected_review import count_unapproved_removed_url_occurrences, protected_primary_url_changes
 CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "New Channels", "New Backup", "Backup", "Not Playing"]
 REGISTRY_ORDER = [x for x in CATEGORY_ORDER if x not in {"New Channels", "New Backup"}]  # review queues are never registered
 
@@ -378,18 +379,12 @@ for info, url in entries:
 protected_changes = []
 try:
     old = subprocess.check_output(["git", "show", "HEAD:IPTV-Playlist.m3u"], text=True, stderr=subprocess.DEVNULL)
-    old_primary_urls = Counter(
-        url.strip().casefold()
-        for info, url in parse(old)
-        if url.strip() and attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS
+    # Exact, explicitly allowlisted channel removals are authorized by the same
+    # policy used by protected-queue restoration. Every other primary URL remains
+    # protected, including rows whose other metadata has changed.
+    protected_changes = protected_primary_url_changes(
+        parse(old), entries, PRIMARY_EXCEPTIONS
     )
-    current_urls = Counter(url.strip().casefold() for info, url in entries if url.strip())
-    # Metadata/ID/logo corrections may legitimately rewrite EXTINF. A primary
-    # stream is protected by its URL; the separate review-queue guard protects
-    # Backup/Not Playing records and their original category.
-    for url, count in old_primary_urls.items():
-        if current_urls[url] < count:
-            protected_changes.append(("", url, "primary stream URL removed"))
 except (subprocess.CalledProcessError, OSError, UnicodeError):
     # A scratch checkout or shallow/missing HEAD revision cannot provide this
     # historical comparison; the current playlist is still audited below.
@@ -579,9 +574,11 @@ def run_change_guard():
         return
 
     old_entries = parse(old_text)
+    # Use the allowlist-aware removal count, but retain the complete prior URL
+    # inventory for the separate additions limit.
     old_urls = Counter(url.strip().casefold() for _, url in old_entries if url.strip())
     new_urls = Counter(url.strip().casefold() for _, url in entries if url.strip())
-    removed = sum(max(0, count - new_urls[url]) for url, count in old_urls.items())
+    removed = count_unapproved_removed_url_occurrences(old_entries, entries)
     if removed:
         raise SystemExit(
             f"Change Guard blocked maintenance: {removed} existing stream URL occurrence(s) "

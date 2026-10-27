@@ -180,6 +180,43 @@ def is_authorized_duplicate_backup(info: str, url: str) -> bool:
 def is_authorized_removal(info: str, url: str) -> bool:
     return is_permanently_removed(info) or is_authorized_duplicate_backup(info, url)
 
+def count_unapproved_removed_url_occurrences(old_entries, current_entries) -> int:
+    """Count missing URL occurrences, excluding only exact authorized removals."""
+    old_urls = Counter(
+        url.strip().casefold()
+        for info, url in old_entries
+        if url.strip() and not is_authorized_removal(info, url)
+    )
+    current_urls = Counter(
+        url.strip().casefold()
+        for _, url in current_entries
+        if url.strip()
+    )
+    return sum(max(0, count - current_urls[url]) for url, count in old_urls.items())
+
+
+def protected_primary_url_changes(old_entries, current_entries, primary_exceptions):
+    """Return unexpected missing primary URLs in the audit's established report format."""
+    old_primary_urls = Counter(
+        url.strip().casefold()
+        for info, url in old_entries
+        if (
+            url.strip()
+            and attrs(info).get("group-title", "").strip() not in primary_exceptions
+            and not is_authorized_removal(info, url)
+        )
+    )
+    current_urls = Counter(
+        url.strip().casefold()
+        for _, url in current_entries
+        if url.strip()
+    )
+    return [
+        ("", url, "primary stream URL removed")
+        for url, count in old_primary_urls.items()
+        if current_urls[url] < count
+    ]
+
 
 def identity_keys(info: str) -> set[str]:
     a = attrs(info)
