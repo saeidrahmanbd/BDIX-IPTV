@@ -12,6 +12,7 @@ on:
       - 'epg/source-rights-register.csv'
       - 'scripts/*epg*.py'
       - 'scripts/official_epg_sources.py'
+      - 'scripts/generate_dashboard.py'
       - 'tests/test_epg_publication_safety.py'
       - 'docs/requirements.txt'
   schedule:
@@ -58,7 +59,7 @@ jobs:
       - name: Validate EPG configuration and policy
         run: |
           set -euo pipefail
-          python -m py_compile scripts/epg_coverage.py scripts/generate_epg.py scripts/run_generate_epg.py scripts/fetch_iptv_org_epg.py scripts/augment_epg_mapping_from_iptv_org.py scripts/epg_publish_gate_v2.py scripts/validate_epg_freshness.py scripts/epg_refresh_needed.py scripts/check_epg_source_rights.py
+          python -m py_compile scripts/epg_coverage.py scripts/generate_epg.py scripts/run_generate_epg.py scripts/fetch_iptv_org_epg.py scripts/augment_epg_mapping_from_iptv_org.py scripts/epg_publish_gate_v2.py scripts/validate_epg_freshness.py scripts/epg_refresh_needed.py scripts/check_epg_source_rights.py scripts/generate_dashboard.py
           python -m unittest discover -s tests -p 'test_epg_refresh_needed.py'
           python -m unittest discover -s tests -p 'test_epg_config.py'
           python -m unittest discover -s tests -p 'test_language_policy.py'
@@ -118,8 +119,10 @@ jobs:
 
           python scripts/epg_coverage.py
           python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md || true
+          python scripts/generate_dashboard.py
 
           git add -f epg/epg.xml
+          git add assets/dashboard.svg
           git add reports/epg-channel-mapping.csv reports/epg-coverage.md reports/epg-three-playlist-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
           git add -u -- reports
 
@@ -130,14 +133,14 @@ jobs:
           fi
 
           if git diff --cached --quiet; then
-            echo 'EPG output and coverage reports are unchanged.'
+            echo 'EPG output, dashboard and coverage reports are unchanged.'
             exit 0
           fi
 
           if [ "$CANDIDATE_OK" = true ]; then
-            COMMIT_MESSAGE='Refresh IPTV EPG and coverage reports'
+            COMMIT_MESSAGE='Refresh IPTV EPG, coverage reports and dashboard'
           else
-            COMMIT_MESSAGE='Restore last known-good IPTV EPG and refresh diagnostics'
+            COMMIT_MESSAGE='Restore last known-good IPTV EPG and refresh dashboard diagnostics'
           fi
           git commit -m "$COMMIT_MESSAGE"
 
