@@ -17,12 +17,11 @@ The workflow runs daily at 10:17 Asia/Dhaka and on changes to maintained playlis
 
 ## Source policy
 
-- EPG.PW sources remain excluded from the active source pipeline and their historical mappings are not reused.
-- A personalized M3U4U XMLTV URL is not passed into the public build, so a private endpoint is not published unintentionally.
+- No useful EPG provider is categorically excluded by name. Candidate sources are evaluated through the source-rights register and runtime quality checks.
+- A personalized M3U4U XMLTV URL may be supplied through the GitHub Actions secret and is never printed or committed to the repository.
 - `epg/source-rights-register.csv` remains the source-by-source audit trail. Most upstream feeds are still `REVIEW_REQUIRED`; that status has **not** been changed to `APPROVED`.
 - To restore service as requested, the scheduled workflow uses `EPG_ALLOW_UNVERIFIED_SOURCES=true`. It logs the unresolved review count and still blocks any active source explicitly marked `PROHIBITED`. This override is not a claim that upstream redistribution permissions have been verified.
-
-EPG.PW's published terms restrict copying, publishing and retransmitting site content unless expressly allowed: [EPG.PW terms](https://epg.pw/terms.html). Those feeds must not be re-added without written permission.
+- Sources with explicit redistribution restrictions are not automatically published merely because they are useful for discovery; the repository should record their status and use only what the applicable rights permit.
 
 ## Coverage improvements
 
