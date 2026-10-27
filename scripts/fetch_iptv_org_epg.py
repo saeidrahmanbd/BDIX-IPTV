@@ -25,7 +25,7 @@ PLAYLISTS = (
     Path("BDIX-Playlist.m3u"),
     Path("International-Playlist.m3u"),
 )
-MAPPING = Path("reports/epg-india-channel-mapping.csv")
+MAPPING = Path("reports/epg-channel-mapping.csv")
 SITES = ("dishtv.in", "tataplay.com", "airtelxstream.in", "zee5.com", "sky.com")
 # Keep the source set targeted: these sources have stable XMLTV identities. sky.com
 # supplements exact UK/diaspora IDs; its rows receive an additional name-consistency check.

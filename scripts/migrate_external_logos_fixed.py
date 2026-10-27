@@ -145,7 +145,7 @@ def is_generic_logo(value):
 def is_generated_placeholder(value):
     try:
         return Path(urlsplit(str(value or "")).path).name.lower().startswith("placeholder-")
-    except Exception:
+    except (TypeError, ValueError):
         return False
 def fetch_bytes(url):
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -156,7 +156,7 @@ def download_png(url, target):
     try:
         Image.open(io.BytesIO(data)).convert("RGBA").save(target, format="PNG", optimize=True)
         return
-    except Exception:
+    except (OSError, ValueError):
         if cairosvg is None: raise
         if data.lstrip().startswith(b"<svg") or "svg" in content_type.lower() or url.lower().split("?")[0].endswith(".svg"):
             png = cairosvg.svg2png(bytestring=data, output_width=1000)
@@ -260,7 +260,7 @@ for line in lines:
                         im.verify()
                     output.append(line)
                     continue
-                except Exception:
+                except (OSError, ValueError):
                     pass
             # Broken/missing local reference: fall through to ID/name/catalogue repair.
         filename = safe_logo_filename(title)
@@ -303,7 +303,7 @@ for line in lines:
             if target.exists():
                 try:
                     with Image.open(target) as im: im.verify()
-                except Exception:
+                except (OSError, ValueError):
                     target.unlink(missing_ok=True)
             if not target.exists():
                 download_png(logo, target); downloaded += 1

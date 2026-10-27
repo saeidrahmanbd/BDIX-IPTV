@@ -97,7 +97,7 @@ def logo_issue(info):
             resolved = path.resolve()
             if resolved != root and root not in resolved.parents:
                 return "other"
-        except Exception:
+        except (OSError, RuntimeError, ValueError):
             return "broken-local"
         if not resolved.is_file():
             return "broken-local"
@@ -105,7 +105,7 @@ def logo_issue(info):
             try:
                 if "<svg" not in resolved.read_text(encoding="utf-8", errors="ignore")[:10000].lower():
                     return "corrupt-svg"
-            except Exception:
+            except (OSError, UnicodeError):
                 return "corrupt-svg"
             return ""
         if resolved.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp", ".avif"}:
@@ -118,7 +118,7 @@ def logo_issue(info):
             with Image.open(resolved) as im:
                 if im.width < 16 or im.height < 16:
                     return "invalid-dimensions"
-        except Exception:
+        except (OSError, ValueError, Image.DecompressionBombError):
             return "corrupt-image"
         return ""
     if logo.startswith(RAW_BASE):
@@ -391,6 +391,8 @@ try:
         if current_urls[url] < count:
             protected_changes.append(("", url, "primary stream URL removed"))
 except (subprocess.CalledProcessError, OSError, UnicodeError):
+    # A scratch checkout or shallow/missing HEAD revision cannot provide this
+    # historical comparison; the current playlist is still audited below.
     pass
 
 missing_primary_chno = [(info, url) for info, url in entries if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS and not attrs(info).get("tvg-chno", "").strip()]
@@ -572,7 +574,8 @@ def run_change_guard():
             text=True,
             stderr=subprocess.DEVNULL,
         )
-    except Exception:
+    except (subprocess.CalledProcessError, OSError, UnicodeError):
+        # No historical playlist is available; skip only the change guard.
         return
 
     old_entries = parse(old_text)

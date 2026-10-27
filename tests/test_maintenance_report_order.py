@@ -1,4 +1,4 @@
-"""Regression tests for maintenance order and protected queue ordering."""
+"""Regression tests for maintenance order and disabled public EPG publication."""
 import sys
 import unittest
 from pathlib import Path
@@ -17,25 +17,17 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertTrue(should_check_alphabetical_order("Bangladesh"))
         self.assertTrue(should_check_alphabetical_order("Indian Music"))
 
-    def test_epg_build_follows_final_playlist_mutations_and_no_early_scheduled_refresh(self):
+    def test_public_epg_generation_is_disabled_until_rights_are_approved(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
-        run_pos = workflow.rfind("python scripts/run_generate_epg.py")
-        self.assertGreaterEqual(run_pos, 0)
-        for mutation in (
-            "python scripts/backfill_cross_playlist_metadata.py",
-            "python scripts/reconcile_playlist_consistency.py",
-            "python scripts/reorganize_international_playlist.py",
-            "python scripts/enforce_playlist_attribution.py International-Playlist.m3u",
-            "python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u",
-        ):
-            self.assertLess(workflow.rfind(mutation), run_pos, f"EPG build must follow {mutation}")
-        self.assertLess(run_pos, workflow.rfind("python scripts/validate_report_freshness.py"))
-        self.assertEqual(workflow.count("python scripts/run_generate_epg.py"), 1)
+        self.assertIn("EPG_REDISTRIBUTION_APPROVED", workflow)
+        self.assertNotIn("python scripts/run_generate_epg.py", workflow)
+        self.assertNotIn("python scripts/epg_coverage.py", workflow)
+        self.assertNotIn("python scripts/fetch_iptv_org_epg.py", workflow)
+        self.assertNotIn("git add -f epg/epg.xml", workflow)
 
         refresh = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
+        self.assertIn("vars.EPG_REDISTRIBUTION_APPROVED == 'true'", refresh)
         self.assertIn("workflow_dispatch:", refresh)
-        self.assertIn("cron: '17 4 * * *'", refresh, "the fallback should run at 10:17 Dhaka, after scheduled maintenance")
-        self.assertIn("epg_refresh_needed.py --max-age-hours 8", refresh, "the fallback must skip redundant generation when the guide is fresh")
 
     def test_final_fingerprinted_reports_follow_all_final_repairs(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
@@ -54,7 +46,6 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         logo_quality_repair = last_pos("python scripts/repair_logo_asset_technical_quality.py --fix")
         audit_pos = last_pos("python scripts/audit_playlist.py")
         gate_pos = last_pos("python scripts/pre_publish_gate.py")
-        epg_pos = last_pos("python scripts/epg_coverage.py")
         manifest_pos = last_pos("python scripts/generate_logo_authenticity_manifest.py")
         provenance_pos = last_pos("python scripts/generate_logo_provenance_review.py")
         metadata_pos = last_pos("python scripts/generate_metadata_normalization_report.py")
@@ -63,8 +54,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertLess(auxiliary_backfill, logo_quality_repair)
         self.assertLess(logo_quality_repair, audit_pos)
         self.assertLess(audit_pos, gate_pos)
-        self.assertLess(gate_pos, epg_pos)
-        self.assertLess(epg_pos, manifest_pos)
+        self.assertLess(gate_pos, manifest_pos)
         self.assertLess(manifest_pos, provenance_pos)
         self.assertLess(provenance_pos, metadata_pos)
         self.assertLess(metadata_pos, freshness_pos)

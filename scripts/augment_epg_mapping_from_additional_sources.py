@@ -14,7 +14,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
-MAPPING = Path("reports/epg-india-channel-mapping.csv")
+MAPPING = Path("reports/epg-channel-mapping.csv")
 
 # New sources supplied for this repair. US feeds are intentionally omitted here;
 # they are useful for the generator but should not create India mappings.

@@ -9,9 +9,9 @@ M3U playlist compatible with XCIPTV and other compatible players.
 ### Other playlist files
 
 - **[Download BDIX Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u)** — BDIX-focused collection
-- **[Download International Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)** — selected international channels
+- **[Download International Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)** — worldwide playlist; movie/music country groups with dedicated thematic groups
 
-> **Automation note:** The shared EPG and core quality workflows cover all three published playlists: main IPTV, BDIX, and International.
+> **EPG notice:** Public XMLTV publication is disabled until redistribution rights are confirmed for every source. No playlist currently advertises the repository's old EPG URL.
 
 ## 🖥️ Playlist Studio 5.0
 
@@ -34,7 +34,7 @@ See the **[Playlist Studio documentation](PLAYLIST-STUDIO.md)** for build instru
 ## 📄 Reports
 
 - [IPTV Playlist Audit](../reports/iptv-playlist-audit.md)
-- [IPTV Channel Discovery](../reports/iptv-channel-discovery.md) — Bangladesh/India candidates only; excludes News, Sports, Kids and Religious channels.
+- [IPTV Channel Discovery](../reports/iptv-channel-discovery.md) — Bangladesh/India candidates; Indian Kids/Sports and Islamic religious channels are allowed; Indian News and non-Islamic religious channels are excluded.
 - [Stream Health](../reports/stream-health.md)
 - [EPG Coverage](../reports/epg-coverage.md)
 - [Update Report](../reports/Update%20Report.md)

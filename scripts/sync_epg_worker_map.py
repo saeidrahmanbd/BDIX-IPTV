@@ -3,7 +3,7 @@
 import csv, json, re
 from pathlib import Path
 
-CSV = Path("reports/epg-india-channel-mapping.csv")
+CSV = Path("reports/epg-channel-mapping.csv")
 WORKERS = [
     Path("xtream-main/worker.js"),
     Path("xtream-bdix/worker.js"),

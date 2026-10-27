@@ -9,7 +9,7 @@ from pathlib import Path
 from fetch_iptv_org_epg import INACTIVE_GROUPS, load_explicit_epg_mappings, load_locked_epg_mappings
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
-MAPPING = Path("reports/epg-india-channel-mapping.csv")
+MAPPING = Path("reports/epg-channel-mapping.csv")
 GUIDE = Path("/tmp/iptv-org-guide.xml")
 
 

@@ -23,7 +23,7 @@ def is_filler_title(text):
     return normalized_title(text) in ALWAYS_DROP_GENERIC_TITLES or is_slot_placeholder(text)
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
-MAPPING = Path("reports/epg-india-channel-mapping.csv")
+MAPPING = Path("reports/epg-channel-mapping.csv")
 EPG_PUBLIC_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"
 EPG_PUBLISHED_PATH = Path("epg/epg.xml")
 
@@ -127,7 +127,6 @@ SOURCES = [
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml", "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml", "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml", "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml",
-    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/sundirectgo.xml",
     "https://avkb.short.gy/epg.xml.gz", "https://avkb.short.gy/jioepg.xml.gz", "https://avkb.short.gy/tsepg.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_DISTROTV1.xml.gz", "https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_RAKUTEN1.xml.gz",
@@ -612,7 +611,7 @@ def main():
 
     MAPPING.parent.mkdir(parents=True,exist_ok=True)
     with MAPPING.open("w",encoding="utf-8",newline="") as fh:
-        w=csv.DictWriter(fh,fieldnames=["group","channel","tvg_id","epg_id","source","status","note"]); w.writeheader(); w.writerows(sorted(rows,key=lambda r:(r["group"],r["channel"])))
+        w=csv.DictWriter(fh,fieldnames=["group","channel","tvg_id","epg_id","source","status","note"]); w.writeheader(); w.writerows(sorted((r for r in rows if r["group"].strip() != "Adult"),key=lambda r:(r["group"],r["channel"])))
 
     group_summary = defaultdict(lambda: {"active": 0, "mapped": 0, "live": 0, "unmapped": 0})
     for row in rows:

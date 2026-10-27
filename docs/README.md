@@ -22,7 +22,7 @@ The repository maintains three playlist files: the main IPTV playlist, the BDIX 
 - [Stream Health](../reports/stream-health.md)
 - [Backup Independence Audit](../reports/backup-independence-audit.md)
 - [Stream Risk Review](../reports/stream-risk-review.md)
-- [EPG Coverage](../reports/epg-coverage.md)
+- [EPG Publication Status](../reports/epg-coverage.md) — public XMLTV is disabled pending redistribution-rights approval
 - [IPTV Channel Discovery](../reports/iptv-channel-discovery.md)
 - [Update Report](../reports/Update%20Report.md)
 

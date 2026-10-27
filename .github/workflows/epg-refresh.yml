@@ -5,22 +5,6 @@ on:
   schedule:
     - cron: '17 4 * * *' # 10:17 Asia/Dhaka, two hours after scheduled maintenance
   workflow_dispatch:
-  # Refresh the guide whenever the maintained channel inventory or EPG inputs change.
-  # Generated XMLTV/reports are excluded to prevent publication loops.
-  push:
-    branches:
-      - main
-    paths:
-      - 'IPTV-Playlist.m3u'
-      - 'BDIX-Playlist.m3u'
-      - 'International-Playlist.m3u'
-      - 'reports/epg-india-channel-mapping.csv'
-      - 'scripts/*epg*.py'
-      - 'scripts/official_epg_sources.py'
-      - 'scripts/augment_epg_mapping_from_additional_sources.py'
-      - 'scripts/check_epg_config.py'
-      - 'docs/requirements.txt'
-      - '.github/workflows/epg-refresh.yml'
 
 permissions:
   contents: write
@@ -34,7 +18,8 @@ concurrency:
 
 jobs:
   refresh:
-    if: ${{ !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG')) }}
+    # Fail closed: no EPG source retrieval/publication until source redistribution rights are documented.
+    if: ${{ vars.EPG_REDISTRIBUTION_APPROVED == 'true' && !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG')) }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
@@ -89,7 +74,7 @@ jobs:
           python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md
 
           git add -f epg/epg.xml
-          git add reports/epg-india-channel-mapping.csv reports/epg-coverage.md reports/epg-three-playlist-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
+          git add reports/epg-channel-mapping.csv reports/epg-coverage.md reports/epg-three-playlist-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
           # EPG generation also updates tracked diagnostic reports. Stage any such
           # updates so rebase never starts with a dirty tracked worktree.
           git add -u -- reports

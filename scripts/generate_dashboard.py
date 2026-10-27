@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import hashlib,re,html,json
+import hashlib,re,html,json,os
 from collections import Counter,defaultdict
 from datetime import datetime,timezone
 from pathlib import Path
@@ -45,7 +45,7 @@ def main():
     audit_current=report_source_sha(a)==source_sha
     gate_current=report_source_sha(gate)==source_sha
     health_current=report_url_inventory_sha(h)==url_inventory_sha(PLAYLIST.read_text(encoding="utf-8-sig"))
-    epg_current=True
+    epg_current=os.environ.get("EPG_REDISTRIBUTION_APPROVED", "").strip().lower()=="true"
     for playlist_name, playlist_path in (
         ("IPTV-Playlist.m3u", ROOT/"IPTV-Playlist.m3u"),
         ("BDIX-Playlist.m3u", ROOT/"BDIX-Playlist.m3u"),
@@ -95,13 +95,13 @@ def main():
     else:
         india=int(total_match.group(1)) if total_match else metric(g,"Active Indian channels audited"); mapped=int(mapping_match.group(1)) if mapping_match else metric(g,"Channels with an EPG mapping"); missing=int(missing_match.group(1)) if missing_match else metric(g,"No guide mapping found"); live=int(current_match.group(1)) if current_match else 0; livepct=float(current_match.group(3)) if current_match else 0.0; mapct=float(mapping_match.group(3)) if mapping_match else (round(mapped*100/india,1) if india else 0); epg_scope="combined EPG report fallback (IPTV-only row unavailable)"
     now=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    epg_map_value=f"{mapped} ({mapct}%)" if epg_current else f"STALE / UNKNOWN (last saved: {mapped}/{india}, {mapct}%)"
-    epg_live_value=f"{live}/{india} ({livepct}%)" if epg_current else f"STALE / UNKNOWN (last saved: {live}/{india}, {livepct}%)"
-    epg_coverage_card=f"{round(livepct)}%" if epg_current else "STALE"
+    epg_map_value=f"{mapped} ({mapct}%)" if epg_current else "DISABLED — redistribution rights pending"
+    epg_live_value=f"{live}/{india} ({livepct}%)" if epg_current else "DISABLED — redistribution rights pending"
+    epg_coverage_card=f"{round(livepct)}%" if epg_current else "DISABLED"
     audit_freshness="CURRENT" if audit_current else "STALE"
     gate_freshness="CURRENT" if gate_current else "STALE"
     health_freshness="CURRENT" if health_current else "STALE"
-    epg_freshness="CURRENT" if epg_current else "STALE"
+    epg_freshness="CURRENT" if epg_current else "DISABLED — rights pending"
     try: hist=json.loads(HISTORY.read_text(encoding="utf-8")); hist=hist[-30:] if isinstance(hist,list) else []
     except (OSError, UnicodeError, json.JSONDecodeError): hist=[]
     prev=hist[-2] if len(hist)>=2 else {}; cur=hist[-1] if hist else {}
@@ -121,7 +121,7 @@ Source playlist SHA-256: **{source_sha}**
 | Backup Stream Entries | **{groups.get("Backup",0)}** |
 | IPTV Local Logos | **{logos_value}** |
 | IPTV EPG Programme Coverage | **{epg_coverage_card}** |
-| IPTV EPG Mapping | **{"%.1f%%" % mapct if epg_current else "STALE"}** |
+| IPTV EPG Mapping | **{"%.1f%%" % mapct if epg_current else "DISABLED"}** |
 | Stream Health Tested | **{health_tested_value}** |
 | Stream Health Failures | **{health_fail_value}** |
 | Persistent Failures | **{health_persist_value}** |
@@ -155,16 +155,16 @@ Source playlist SHA-256: **{source_sha}**
 ## Counting Scope
 - **Active Channel Identities / Active Primary Streams** count only canonical playlist groups.
 - `New Channels`, `New Backup`, and `Not Playing` are review queues and are excluded from the active-primary count.
-- **EPG IDs audited** use the EPG report's published-guide scope and therefore do not have to equal the active-primary identity count.
+- EPG identity coverage is reported only after redistribution rights are approved and the guide is regenerated.
 - **Backup Stream Entries** count playlist rows, not independent CDN/origin infrastructures. Backup independence is reviewed separately.
 
 ## EPG
-- EPG IDs audited: **{india if epg_current else "STALE / UNKNOWN (last saved: "+str(india)+")"}**
+- EPG IDs audited: **{india if epg_current else "DISABLED"}**
 - Mapped: **{epg_map_value}**
 - Current/future programme coverage: **{epg_live_value}**
-- No mapping: **{missing if epg_current else "STALE / UNKNOWN (last saved: "+str(missing)+")"}**
-- EPG metric scope: **{epg_scope + (" (verified against all three current playlist inventories)" if epg_current else " (stale report inventory mismatch)") }**
-- Publication remains subject to source-policy approval.
+- No mapping: **{missing if epg_current else "DISABLED"}**
+- EPG metric scope: **{epg_scope + (" (verified against all three current playlist inventories)" if epg_current else " (public EPG disabled pending redistribution rights)") }**
+- Public programme-guide publication is disabled unless `EPG_REDISTRIBUTION_APPROVED=true` and each source redistribution permission is documented.
 
 ## Freshness
 | Report | Last generated | Input freshness |
@@ -199,9 +199,9 @@ Source playlist SHA-256: **{source_sha}**
 | Current playlist streams | **{len(e)}** |
 | Active channel identities | **{active}** |
 | Backup stream entries | **{groups.get("Backup",0)}** |
-| EPG IDs audited | **{india if epg_current else "STALE / UNKNOWN"}** |
+| EPG IDs audited | **{india if epg_current else "DISABLED — rights pending"}** |
 | Logo exceptions | **{metric(a,"Logo exceptions") if audit_current else "STALE / UNKNOWN"}** |
-| EPG mapping | **{"%.1f%%" % mapct if epg_current else "STALE / UNKNOWN"}** |
+| EPG mapping | **{"%.1f%%" % mapct if epg_current else "DISABLED — rights pending"}** |
 | EPG programme coverage | **{epg_coverage_card}** |
 | Health failures | **{health_fail_value}** |
 | Persistent health failures | **{health_persist_value}** |
