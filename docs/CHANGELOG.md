@@ -4,6 +4,19 @@
 
 Playlist updates across `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `International-Playlist.m3u` are recorded here automatically.
 
+<!-- playlist-changelog:IPTV-Playlist.m3u -->
+### 2026-10-27 — `IPTV-Playlist.m3u`
+
+- New channel identities: **1**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **1 / 0**
+- Backup URL updates: **0**
+- Logo reference changes: **0**
+- Replaced channel identities: **0**
+- Duplicate URL occurrences removed: **0**
+
+Added channel identities (up to 10):
+- Disney Channel (India)
 ## [5.0.0] — Playlist Studio
 
 ### Added
@@ -91,4 +104,3 @@ For the primary application release, see **[Playlist Studio v5.0](https://github
 - Santvani Channel
 - Sharnam TV
 - Hosanna TV Hindi
-
