@@ -81,7 +81,6 @@ jobs:
             scripts/sort_playlists.py \
             scripts/final_playlist_hardening.py \
             scripts/country_verification.py \
-            scripts/discover_in_new_queues.py \
             scripts/generate_logo_authenticity_manifest.py \
             scripts/generate_logo_repair_summary.py \
             scripts/logo_asset_naming.py \
