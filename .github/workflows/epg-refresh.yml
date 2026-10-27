@@ -5,6 +5,22 @@ on:
   schedule:
     - cron: '17 4 * * *' # 10:17 Asia/Dhaka, two hours after scheduled maintenance
   workflow_dispatch:
+  # Refresh the guide whenever the maintained channel inventory or EPG inputs change.
+  # Generated XMLTV/reports are excluded to prevent publication loops.
+  push:
+    branches:
+      - main
+    paths:
+      - 'IPTV-Playlist.m3u'
+      - 'BDIX-Playlist.m3u'
+      - 'International-Playlist.m3u'
+      - 'reports/epg-india-channel-mapping.csv'
+      - 'scripts/*epg*.py'
+      - 'scripts/official_epg_sources.py'
+      - 'scripts/augment_epg_mapping_from_additional_sources.py'
+      - 'scripts/check_epg_config.py'
+      - 'docs/requirements.txt'
+      - '.github/workflows/epg-refresh.yml'
 
 permissions:
   contents: write
