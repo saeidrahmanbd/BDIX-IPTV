@@ -5728,5 +5728,25 @@
     "status": "needs_review",
     "source_url": "https://github.com/shayanline/iptv-iran/blob/main/assets/logos/GEMPixel.tr.png",
     "notes": "Exact channel name and matching tvg-id family found in the public shayanline/iptv-iran playlist; original broadcaster licensing has not been independently verified."
+  },
+  "International-Playlist.m3u|ICCplus.us@SD|ICC plus (1080p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/icc-plus.png": {
+    "status": "needs_review",
+    "source_url": "https://github.com/shayanline/iptv-iran/blob/main/assets/logos/ICCplus.us.png",
+    "notes": "Exact channel name and matching tvg-id family found in the public shayanline/iptv-iran playlist; original broadcaster licensing has not been independently verified."
+  },
+  "International-Playlist.m3u|PMCRoyale.ae@SD|PMC Royale|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pmc-royale.png": {
+    "status": "needs_review",
+    "source_url": "https://github.com/shayanline/iptv-iran/blob/main/assets/logos/PMCRoyale.ae.png",
+    "notes": "Exact channel name and matching tvg-id family found in the public shayanline/iptv-iran playlist; original broadcaster licensing has not been independently verified."
+  },
+  "International-Playlist.m3u|PersianaDocs.fr@HD|Persiana Docs|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/persiana-docs.png": {
+    "status": "needs_review",
+    "source_url": "https://github.com/shayanline/iptv-iran/blob/main/assets/logos/PersianaDocs.fr.png",
+    "notes": "Exact channel name and matching tvg-id family found in the public shayanline/iptv-iran playlist; original broadcaster licensing has not been independently verified."
+  },
+  "International-Playlist.m3u|PersianaFight.fr@HD|Persiana Fight|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/persiana-fight.png": {
+    "status": "needs_review",
+    "source_url": "https://github.com/shayanline/iptv-iran/blob/main/assets/logos/PersianaFight.fr.png",
+    "notes": "Exact channel name and matching tvg-id family found in the public shayanline/iptv-iran playlist; original broadcaster licensing has not been independently verified."
   }
 }
