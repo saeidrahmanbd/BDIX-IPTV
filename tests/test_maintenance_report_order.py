@@ -34,7 +34,8 @@ class MaintenanceReportOrderTests(unittest.TestCase):
 
         refresh = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
         self.assertIn("workflow_dispatch:", refresh)
-        self.assertNotIn("schedule:", refresh, "the EPG workflow must not run before the daily playlist maintenance")
+        self.assertIn("cron: '17 4 * * *'", refresh, "the fallback should run at 10:17 Dhaka, after scheduled maintenance")
+        self.assertIn("epg_refresh_needed.py --max-age-hours 8", refresh, "the fallback must skip redundant generation when the guide is fresh")
 
     def test_final_fingerprinted_reports_follow_all_final_repairs(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
