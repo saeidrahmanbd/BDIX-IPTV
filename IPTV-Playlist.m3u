@@ -1323,6 +1323,8 @@ https://live.onecloudlive.in/amn/amntv/index.m3u8
 https://drk6xq0vhn.gpcdn.net/live/discovery_science_abr/index.m3u8
 #EXTINF:-1 tvg-id="DiscoveryTurbo.in@SD" tvg-name="Discovery Turbo (India)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-turbo-india.png" tvg-country="IN" channel-id="DiscoveryTurbo.in@SD" group-title="New Channels",Discovery Turbo (India)
 https://drk6xq0vhn.gpcdn.net/live/discovery_turbo_abr/index.m3u8
+#EXTINF:-1 tvg-id="DisneyChannel.in@HD" tvg-name="Disney Channel (India)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-india.png" tvg-country="IN" channel-id="DisneyChannel.in@HD" group-title="New Channels",Disney Channel (India)
+http://66.102.126.10:8000/play/a013/index.m3u8
 #EXTINF:-1 tvg-id="Eurosport.in@SD" tvg-name="Eurosport" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/eurosport.png" tvg-country="IN" channel-id="Eurosport.in@SD" group-title="New Channels",Eurosport
 https://drk6xq0vhn.gpcdn.net/live/euro_sports_hd_abr/index.m3u8
 #EXTINF:-1 tvg-id="GreenGoldTV.in@India" tvg-name="Green Gold TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/green-gold-tv.png" tvg-country="IN" channel-id="GreenGoldTV.in@India" group-title="New Channels",Green Gold TV

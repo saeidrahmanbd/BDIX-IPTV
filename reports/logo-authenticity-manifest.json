@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-27T03:06:01.576101+00:00",
+  "generated_at_utc": "2026-10-27T03:17:36.381090+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -7,22 +7,22 @@
     "needs_review": "Authenticity is undocumented, the source is ambiguous, or the logo is missing."
   },
   "counts_by_playlist": {
-    "IPTV-Playlist.m3u": 1172,
+    "IPTV-Playlist.m3u": 1173,
     "BDIX-Playlist.m3u": 139,
     "International-Playlist.m3u": 3017
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "3b7afcfc662123ecbbd349d05da309c5c3e0739b7a731c7271ea2bd59cf8ec59",
+    "IPTV-Playlist.m3u": "7afa4e665c6e60bc7a54b730670e1ea74a7aba99d8b07ed900c6c6ff89ed5e3b",
     "BDIX-Playlist.m3u": "2c5d5d89f98d92eb6a2f7439b3fe3edaabe13c6fb4f8c6f438f7bdc7c7dbf9d0",
     "International-Playlist.m3u": "25a33bbcfa987872ec9d8d5195ba9c5017ba4a79370c2a94be2171b8fe8ef42a"
   },
   "status_counts": {
-    "needs_review": 3313,
+    "needs_review": 3314,
     "third_party_verified": 1015
   },
   "status_counts_by_playlist": {
     "IPTV-Playlist.m3u": {
-      "needs_review": 1146,
+      "needs_review": 1147,
       "third_party_verified": 26
     },
     "BDIX-Playlist.m3u": {
@@ -34,7 +34,7 @@
       "third_party_verified": 987
     }
   },
-  "entry_count": 4328,
+  "entry_count": 4329,
   "entries": [
     {
       "playlist": "IPTV-Playlist.m3u",
@@ -13563,6 +13563,18 @@
     {
       "playlist": "IPTV-Playlist.m3u",
       "line": 2262,
+      "channel_name": "Disney Channel (India)",
+      "tvg_id": "DisneyChannel.in@HD",
+      "channel_id": "DisneyChannel.in@HD",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/disney-channel-india.png",
+      "status": "needs_review",
+      "registry_match": "none",
+      "source_url": "",
+      "reason": "No unambiguous provenance record matches this exact logo asset; a similar channel name alone is not proof."
+    },
+    {
+      "playlist": "IPTV-Playlist.m3u",
+      "line": 2264,
       "channel_name": "Eurosport",
       "tvg_id": "Eurosport.in@SD",
       "channel_id": "Eurosport.in@SD",
@@ -13574,7 +13586,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2264,
+      "line": 2266,
       "channel_name": "Green Gold TV",
       "tvg_id": "GreenGoldTV.in@India",
       "channel_id": "GreenGoldTV.in@India",
@@ -13586,7 +13598,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2266,
+      "line": 2268,
       "channel_name": "GTC Punjabi",
       "tvg_id": "GTCPunjabi.in@SD",
       "channel_id": "GTCPunjabi.in@SD",
@@ -13598,7 +13610,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2268,
+      "line": 2270,
       "channel_name": "Gyandarshan",
       "tvg_id": "Gyandarshan.in@SD",
       "channel_id": "Gyandarshan.in@SD",
@@ -13610,7 +13622,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2270,
+      "line": 2272,
       "channel_name": "Gyandarshan",
       "tvg_id": "Gyandarshan.in@HD",
       "channel_id": "Gyandarshan.in@HD",
@@ -13622,7 +13634,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2272,
+      "line": 2274,
       "channel_name": "History TV18",
       "tvg_id": "HistoryTV18.in@HD",
       "channel_id": "HistoryTV18.in@HD",
@@ -13634,7 +13646,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2274,
+      "line": 2276,
       "channel_name": "HSTV",
       "tvg_id": "HSTV.in@SD",
       "channel_id": "HSTV.in@SD",
@@ -13646,7 +13658,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2276,
+      "line": 2278,
       "channel_name": "Investigation Discovery (India)",
       "tvg_id": "InvestigationDiscovery.in@SD",
       "channel_id": "InvestigationDiscovery.in@SD",
@@ -13658,7 +13670,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2278,
+      "line": 2280,
       "channel_name": "Kabaddi 24x7",
       "tvg_id": "Kabaddi24x7.in@SD",
       "channel_id": "Kabaddi24x7.in@SD",
@@ -13670,7 +13682,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2280,
+      "line": 2282,
       "channel_name": "Kite Victers (720p) [Not 24/7]",
       "tvg_id": "KiteVicters.in@SD",
       "channel_id": "KiteVicters.in@SD",
@@ -13682,7 +13694,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2282,
+      "line": 2284,
       "channel_name": "NDTV Good Times",
       "tvg_id": "NDTVGoodTimes.in@SD",
       "channel_id": "NDTVGoodTimes.in@SD",
@@ -13694,7 +13706,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2284,
+      "line": 2286,
       "channel_name": "Network 10",
       "tvg_id": "Network10.in@SD",
       "channel_id": "Network10.in@SD",
@@ -13706,7 +13718,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2286,
+      "line": 2288,
       "channel_name": "Nick Jr (India)",
       "tvg_id": "NickJr.in@SD",
       "channel_id": "NickJr.in@SD",
@@ -13718,7 +13730,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2288,
+      "line": 2290,
       "channel_name": "Nickelodeon (India)",
       "tvg_id": "Nickelodeon.in@SD",
       "channel_id": "Nickelodeon.in@SD",
@@ -13730,7 +13742,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2290,
+      "line": 2292,
       "channel_name": "Pogo",
       "tvg_id": "Pogo.in@SD",
       "channel_id": "Pogo.in@SD",
@@ -13742,7 +13754,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2292,
+      "line": 2294,
       "channel_name": "Santvani Channel",
       "tvg_id": "SantvaniChannel.in@SD",
       "channel_id": "SantvaniChannel.in@SD",
@@ -13754,7 +13766,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2294,
+      "line": 2296,
       "channel_name": "Sharnam TV",
       "tvg_id": "SharnamTV.in@SD",
       "channel_id": "SharnamTV.in@SD",
@@ -13766,7 +13778,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2296,
+      "line": 2298,
       "channel_name": "Sonic",
       "tvg_id": "Sonic.in@SD",
       "channel_id": "Sonic.in@SD",
@@ -13778,7 +13790,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2298,
+      "line": 2300,
       "channel_name": "Sony Sports Ten 1",
       "tvg_id": "SonySportsTen1.in@SD",
       "channel_id": "SonySportsTen1.in@SD",
@@ -13790,7 +13802,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2300,
+      "line": 2302,
       "channel_name": "Sony Sports Ten 1",
       "tvg_id": "SonySportsTen1.in@HD",
       "channel_id": "SonySportsTen1.in@HD",
@@ -13802,7 +13814,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2302,
+      "line": 2304,
       "channel_name": "Sony Sports Ten 2",
       "tvg_id": "SonySportsTen2.in@SD",
       "channel_id": "SonySportsTen2.in@SD",
@@ -13814,7 +13826,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2304,
+      "line": 2306,
       "channel_name": "Sony Sports Ten 3 Hindi",
       "tvg_id": "SonySportsTen3Hindi.in@SD",
       "channel_id": "SonySportsTen3Hindi.in@SD",
@@ -13826,7 +13838,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2306,
+      "line": 2308,
       "channel_name": "Sony Sports Ten 4 Kannada",
       "tvg_id": "SonySportsTen4.in@Kannada",
       "channel_id": "SonySportsTen4.in@Kannada",
@@ -13838,7 +13850,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2308,
+      "line": 2310,
       "channel_name": "Sony Sports Ten 5",
       "tvg_id": "SonySportsTen5.in@SD",
       "channel_id": "SonySportsTen5.in@SD",
@@ -13850,7 +13862,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2310,
+      "line": 2312,
       "channel_name": "Star Jalsha",
       "tvg_id": "StarJalsha.in@SD",
       "channel_id": "StarJalsha.in@SD",
@@ -13862,7 +13874,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2312,
+      "line": 2314,
       "channel_name": "Star Sports 2",
       "tvg_id": "StarSports2.in@SD",
       "channel_id": "StarSports2.in@SD",
@@ -13874,7 +13886,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2314,
+      "line": 2316,
       "channel_name": "Star Sports 2",
       "tvg_id": "StarSports2.in@HD",
       "channel_id": "StarSports2.in@HD",
@@ -13886,7 +13898,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2316,
+      "line": 2318,
       "channel_name": "Star Sports 2 Hindi",
       "tvg_id": "StarSports2Hindi.in@SD",
       "channel_id": "StarSports2Hindi.in@SD",
@@ -13898,7 +13910,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2318,
+      "line": 2320,
       "channel_name": "Star Sports 3",
       "tvg_id": "StarSports3.in@SD",
       "channel_id": "StarSports3.in@SD",
@@ -13910,7 +13922,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2320,
+      "line": 2322,
       "channel_name": "Star Sports Select 1",
       "tvg_id": "StarSportsSelect1.in@HD",
       "channel_id": "StarSportsSelect1.in@HD",
@@ -13922,7 +13934,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2322,
+      "line": 2324,
       "channel_name": "Star Sports Select 2",
       "tvg_id": "StarSportsSelect2.in@HD",
       "channel_id": "StarSportsSelect2.in@HD",
@@ -13934,7 +13946,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2324,
+      "line": 2326,
       "channel_name": "StarPlus (India)",
       "tvg_id": "StarPlus.in@HD",
       "channel_id": "StarPlus.in@HD",
@@ -13946,7 +13958,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2326,
+      "line": 2328,
       "channel_name": "T Sports",
       "tvg_id": "TSports.bd@SD",
       "channel_id": "TSports.bd@SD",
@@ -13958,7 +13970,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2328,
+      "line": 2330,
       "channel_name": "Ten Cricket",
       "tvg_id": "TenCricket.in@SD",
       "channel_id": "TenCricket.in@SD",
@@ -13970,7 +13982,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2330,
+      "line": 2332,
       "channel_name": "TLC (India)",
       "tvg_id": "TLC.in@HD",
       "channel_id": "TLC.in@HD",
@@ -13982,7 +13994,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2332,
+      "line": 2334,
       "channel_name": "TLC (India)",
       "tvg_id": "TLC.in@SD",
       "channel_id": "TLC.in@SD",
@@ -13994,7 +14006,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2334,
+      "line": 2336,
       "channel_name": "Travelxp",
       "tvg_id": "Travelxp.in@4KHDR",
       "channel_id": "Travelxp.in@4KHDR",
@@ -14006,7 +14018,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2336,
+      "line": 2338,
       "channel_name": "Unite8 Sports 2",
       "tvg_id": "Unite8Sports2.in@SD",
       "channel_id": "Unite8Sports2.in@SD",
@@ -14018,7 +14030,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2338,
+      "line": 2340,
       "channel_name": "VCV (720p) [Not 24/7]",
       "tvg_id": "VCV.in@SD",
       "channel_id": "VCV.in@SD",
@@ -14030,7 +14042,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2340,
+      "line": 2342,
       "channel_name": "Vokta TV",
       "tvg_id": "VoktaTV.bd@SD",
       "channel_id": "VoktaTV.bd@SD",
@@ -14042,7 +14054,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2342,
+      "line": 2344,
       "channel_name": "Vyas Channel",
       "tvg_id": "VyasChannel.in@SD",
       "channel_id": "VyasChannel.in@SD",
@@ -14054,7 +14066,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2344,
+      "line": 2346,
       "channel_name": "WeatherSpy (India)",
       "tvg_id": "WeatherSpy.in@SD",
       "channel_id": "WeatherSpy.in@SD",
@@ -14066,7 +14078,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2346,
+      "line": 2348,
       "channel_name": "Zee Bangla",
       "tvg_id": "ZeeBangla.in@SD",
       "channel_id": "ZeeBangla.in@SD",
@@ -14078,7 +14090,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2348,
+      "line": 2350,
       "channel_name": "Zee Cinema",
       "tvg_id": "ZeeCinema.in@HD",
       "channel_id": "ZeeCinema.in@HD",
@@ -14090,7 +14102,7 @@
     },
     {
       "playlist": "IPTV-Playlist.m3u",
-      "line": 2350,
+      "line": 2352,
       "channel_name": "Zodiak TV",
       "tvg_id": "ZodiakTV.in@SD",
       "channel_id": "ZodiakTV.in@SD",
