@@ -184,6 +184,10 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                 "https://example.invalid/backup.m3u8",
                 '#EXTINF:-1 tvg-chno="4" tvg-name="Alpha" group-title="Bangladesh",Alpha',
                 "https://example.invalid/alpha.m3u8",
+                '#EXTINF:-1 tvg-name="Sport One" group-title="Sports" tvg-chno="1",Sport One',
+                "https://example.invalid/sport-one.m3u8",
+                '#EXTINF:-1 tvg-name="Quiet Review" group-title="Not Playing" tvg-chno="3",Quiet Review',
+                "https://example.invalid/quiet-review.m3u8",
             ]) + "\n", encoding="utf-8")
             sorter.sort_playlist(path)
             content = path.read_text(encoding="utf-8")
@@ -191,8 +195,21 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             primary = [line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Bangladesh"' in line]
             nums = [int(re.search(r'tvg-chno="(\d+)"', line).group(1)) for line in primary]
             self.assertEqual(nums, [1, 2])
+            sport = next(line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Sports"' in line)
+            self.assertEqual(re.search(r'tvg-chno="(\\d+)"', sport).group(1), "3")
+            primary_numbers = [
+                int(re.search(r'tvg-chno="(\\d+)"', line).group(1))
+                for line in content.splitlines()
+                if line.startswith("#EXTINF:")
+                and 'group-title="' in line
+                and not any(f'group-title="{group}"' in line for group in {"Backup", "New Channels", "New Backup", "Not Playing"})
+                and re.search(r'tvg-chno="(\\d+)"', line)
+            ]
+            self.assertEqual(primary_numbers, [1, 2, 3])
             backup = next(line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Backup"' in line)
             self.assertNotIn("tvg-chno", backup)
+            not_playing = next(line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Not Playing"' in line)
+            self.assertNotIn("tvg-chno", not_playing)
 
 
     def test_authorized_backup_migration_requires_exact_channel_and_url(self):
