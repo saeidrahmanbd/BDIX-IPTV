@@ -18,6 +18,8 @@ from urllib.parse import urlsplit
 SNAPSHOT = Path("/tmp/iptv-protected-review.m3u")
 BASELINE = Path("/tmp/iptv-playlist-baseline.json")
 PLAYLIST = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("IPTV-Playlist.m3u")
+LOGOS = Path("logos")
+RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 PROTECTED = {"Backup", "Not Playing"}
 PERMANENTLY_REMOVED_NAMES = {
     "accuweather",
@@ -347,6 +349,50 @@ def assign_primary_number(info: str, used: set[int], next_number: int) -> tuple[
     return info, next_number + 1
 
 
+
+def merge_safe_local_logo_repairs(
+    current_records: list[list[str]],
+    snapshot_records: list[list[str]],
+    baseline: list[dict[str, str]],
+) -> int:
+    """Retain only an existing local-logo repair when a protected row's old asset is missing.
+
+    The channel identity, group, and stream URL are not modified. External and
+    placeholder logos are never accepted by this exception.
+    """
+    current_by_url: dict[str, list[str]] = {}
+    for record in current_records:
+        url = url_of(record).casefold()
+        if url and group_of(record[0]) in PROTECTED:
+            current_by_url.setdefault(url, record)
+
+    repairs = 0
+    for record in snapshot_records:
+        url = url_of(record).casefold()
+        candidate = current_by_url.get(url)
+        if not candidate or group_of(candidate[0]) != group_of(record[0]):
+            continue
+        old_logo = attrs(record[0]).get("tvg-logo", "").strip()
+        new_logo = attrs(candidate[0]).get("tvg-logo", "").strip()
+        if not old_logo.startswith(RAW_BASE) or not new_logo.startswith(RAW_BASE):
+            continue
+        old_filename = Path(urlsplit(old_logo.split("?", 1)[0]).path).name
+        new_filename = Path(urlsplit(new_logo.split("?", 1)[0]).path).name
+        if not old_filename or (LOGOS / old_filename).is_file():
+            continue
+        if not new_filename or new_logo == old_logo or not (LOGOS / new_filename).is_file():
+            continue
+
+        record[0] = set_attr(record[0], "tvg-logo", new_logo)
+        for item in baseline:
+            if (
+                str(item.get("url", "")).strip().casefold() == url
+                and str(item.get("group", "")).strip() == group_of(record[0])
+            ):
+                item["info"] = set_attr(str(item.get("info", "")), "tvg-logo", new_logo)
+        repairs += 1
+    return repairs
+
 def restore() -> None:
     if not SNAPSHOT.is_file() or not BASELINE.is_file():
         raise SystemExit(
@@ -367,6 +413,7 @@ def restore() -> None:
         record for record in snapshot_records
         if not is_authorized_removal(record[0], url_of(record))
     ]
+    repaired_protected_logos = merge_safe_local_logo_repairs(current_records, snapshot_records, baseline)
     snapshot_urls = [url_of(record).casefold() for record in snapshot_records]
     if any(not url for url in snapshot_urls) or len(snapshot_urls) != len(set(snapshot_urls)):
         raise SystemExit("ERROR: protected snapshot contains a missing or duplicate URL; refusing restore.")
@@ -501,26 +548,27 @@ def restore() -> None:
         is_authorized_removal(str(item.get("info", "")), str(item.get("url", "")))
         for item in baseline
     ) or any(is_authorized_removal(record[0], url_of(record)) for record in snapshot_records)
-    if has_authorized_removals:
-        # Filter only allowlisted channel identities, never their URLs. An unrelated
-        # entry sharing a stream URL must not inherit the deletion authorization.
-        filtered_baseline = [
+    # Persist safe logo-only metadata repairs to both safety references.
+    filtered_baseline = (
+        [
             item for item in baseline
             if not is_authorized_removal(str(item.get("info", "")), str(item.get("url", "")))
-        ]
-        BASELINE.write_text(
-            json.dumps(filtered_baseline, ensure_ascii=False, indent=2),
-            encoding="utf-8",
-        )
-
-        filtered_snapshot = [
+        ] if has_authorized_removals else baseline
+    )
+    filtered_snapshot = (
+        [
             record for record in snapshot_records
             if not is_authorized_removal(record[0], url_of(record))
-        ]
-        SNAPSHOT.write_text(
-            serialize([], filtered_snapshot) if filtered_snapshot else "",
-            encoding="utf-8",
-        )
+        ] if has_authorized_removals else snapshot_records
+    )
+    BASELINE.write_text(
+        json.dumps(filtered_baseline, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    SNAPSHOT.write_text(
+        serialize([], filtered_snapshot) if filtered_snapshot else "",
+        encoding="utf-8",
+    )
 
     print(
         "Protected review restore: "
@@ -532,7 +580,8 @@ def restore() -> None:
         f"migration_groups={dict(sorted(migration_counts.items()))} "
         f"unexpected_backup_retained={len(unexpected_backup)} "
         f"unexpected_not_playing_retained={len(unexpected_not_playing)} "
-        f"permanently_removed={permanently_removed_count}"
+        f"permanently_removed={permanently_removed_count} "
+        f"verified_protected_logo_repairs={repaired_protected_logos}"
     )
 
 

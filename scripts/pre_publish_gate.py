@@ -80,12 +80,16 @@ def main():
         if cid and group not in {"New Channels","New Backup","Not Playing"}: metadata_by_id[cid].append((name,group,u))
     metadata_conflicts={cid:items for cid,items in metadata_by_id.items() if len({x[0].casefold() for x in items})>1}
     raw_name_issues=[(a.get("tvg-name",""),a.get("group-title","")) for _,a,_ in current if RAW_NAME_TAG.search(a.get("tvg-name","").strip())]
-    logo_missing,logo_missing_review,logo_external,logo_bad=logo_audit(current); logo_missing_files=[]
+    logo_missing,logo_missing_review,logo_external,logo_bad=logo_audit(current); logo_missing_files=[]; logo_missing_file_details=[]
     for _,a,_ in current:
         logo=a.get("tvg-logo","").strip()
         if logo.startswith(RAW_BASE):
             fn=Path(logo.split("?",1)[0]).name
-            if not (Path("logos")/fn).is_file(): logo_missing_files.append(a.get("tvg-name",""))
+            if not (Path("logos")/fn).is_file():
+                name=a.get("tvg-name","")
+                group=a.get("group-title","")
+                logo_missing_files.append(name)
+                logo_missing_file_details.append((name,group,fn))
     issues=[]
     if dup_urls: issues.append(f"duplicate stream URLs: {len(dup_urls)}")
     if removed: issues.append(f"unapproved primary streams removed: {len(removed)}")
@@ -128,6 +132,11 @@ def main():
     lines += ["","## Raw name tags",""]
     lines.extend(f"- **{n}** — {g}" for n,g in raw_name_issues) if raw_name_issues else lines.append("None.")
     lines += ["","## Queue validation",""]; lines.extend("- "+x for x in queue_errors) if queue_errors else lines.append("New Channels/New Backup contain only validated BD/IN entries.")
+    lines += ["","## Missing local logo files","","| Channel | Group | Referenced filename |","|---|---|---|"]
+    if logo_missing_file_details:
+        clean=lambda value:str(value).replace("|","\\|").replace("\\n"," ")
+        lines.extend(f"| {clean(name)} | {clean(group)} | {clean(filename)} |" for name,group,filename in logo_missing_file_details)
+    else: lines.append("| — | — | none |")
     lines += ["","## Blocked logo references","","| Channel | Group | Blocked filename |","|---|---|---|"]
     if logo_bad:
         clean=lambda value:str(value).replace("|","\\|").replace("\n"," "); lines.extend(f"| {clean(name)} | {clean(group)} | {clean(filename)} |" for name,group,filename in logo_bad)
@@ -136,6 +145,7 @@ def main():
     print("Pre-publish gate:",status)
     for issue in issues: print(f"::error::Pre-publish gate blocking reason: {issue}")
     for name,group,filename in logo_bad[:20]: print(f"::warning::Blocked logo reference: {name} [{group}] -> {filename}")
+    for name,group,filename in logo_missing_file_details[:50]: print(f"::error::Missing local logo file: {name} [{group}] -> logos/{filename}")
     for error in queue_errors[:20]: print(f"::error::Review queue: {error}")
     if issues: raise SystemExit(1)
 if __name__=="__main__": main()

@@ -304,5 +304,6 @@ jobs:
             reports/iptv-playlist-audit.md
             reports/stream-health.md
             reports/stream-risk-review.md
+            reports/pre-publish-gate.md
           if-no-files-found: warn
           retention-days: 14

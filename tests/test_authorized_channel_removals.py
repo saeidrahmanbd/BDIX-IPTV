@@ -184,6 +184,10 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
                 "https://example.invalid/backup.m3u8",
                 '#EXTINF:-1 tvg-chno="4" tvg-name="Alpha" group-title="Bangladesh",Alpha',
                 "https://example.invalid/alpha.m3u8",
+                '#EXTINF:-1 tvg-name="Sport One" group-title="Sports" tvg-chno="1",Sport One',
+                "https://example.invalid/sport-one.m3u8",
+                '#EXTINF:-1 tvg-name="Quiet Review" group-title="Not Playing" tvg-chno="3",Quiet Review',
+                "https://example.invalid/quiet-review.m3u8",
             ]) + "\n", encoding="utf-8")
             sorter.sort_playlist(path)
             content = path.read_text(encoding="utf-8")
@@ -191,9 +195,57 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             primary = [line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Bangladesh"' in line]
             nums = [int(re.search(r'tvg-chno="(\d+)"', line).group(1)) for line in primary]
             self.assertEqual(nums, [1, 2])
+            sport = next(line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Sports"' in line)
+            self.assertEqual(re.search(r'tvg-chno="(\\d+)"', sport).group(1), "3")
+            primary_numbers = [
+                int(re.search(r'tvg-chno="(\\d+)"', line).group(1))
+                for line in content.splitlines()
+                if line.startswith("#EXTINF:")
+                and 'group-title="' in line
+                and not any(f'group-title="{group}"' in line for group in {"Backup", "New Channels", "New Backup", "Not Playing"})
+                and re.search(r'tvg-chno="(\\d+)"', line)
+            ]
+            self.assertEqual(primary_numbers, [1, 2, 3])
             backup = next(line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Backup"' in line)
             self.assertNotIn("tvg-chno", backup)
+            not_playing = next(line for line in content.splitlines() if line.startswith("#EXTINF:") and 'group-title="Not Playing"' in line)
+            self.assertNotIn("tvg-chno", not_playing)
 
+
+    def test_restore_repairs_missing_local_logo_in_protected_queue_only(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist = root / "IPTV-Playlist.m3u"
+            snapshot = root / "protected.m3u"
+            baseline = root / "baseline.json"
+            logos = root / "logos"
+            logos.mkdir()
+            (logos / "reliable-backup.png").write_bytes(b"local verified fixture")
+            url = "https://example.invalid/reliable-backup.m3u8"
+            old_logo = restore.RAW_BASE + "missing-reliable-backup.webp"
+            new_logo = restore.RAW_BASE + "reliable-backup.png"
+            old_info = f'#EXTINF:-1 tvg-name="Reliable Backup" tvg-logo="{old_logo}" group-title="Backup",Reliable Backup'
+            current_info = old_info.replace(old_logo, new_logo)
+            playlist.write_text("#EXTM3U\n" + current_info + "\n" + url + "\n", encoding="utf-8")
+            snapshot.write_text(old_info + "\n" + url + "\n", encoding="utf-8")
+            baseline.write_text(json.dumps([{
+                "info": old_info, "url": url, "group": "Backup",
+                "stable": url, "name": "Reliable Backup",
+            }]), encoding="utf-8")
+            with (
+                patch.object(restore, "PLAYLIST", playlist),
+                patch.object(restore, "SNAPSHOT", snapshot),
+                patch.object(restore, "BASELINE", baseline),
+                patch.object(restore, "LOGOS", logos),
+                redirect_stdout(io.StringIO()),
+            ):
+                restore.restore()
+            final = playlist.read_text(encoding="utf-8")
+            self.assertEqual(final.count(url), 1)
+            self.assertIn(new_logo, final)
+            self.assertNotIn(old_logo, final)
+            self.assertIn(new_logo, snapshot.read_text(encoding="utf-8"))
+            self.assertIn(new_logo, json.loads(baseline.read_text(encoding="utf-8"))[0]["info"])
 
     def test_authorized_backup_migration_requires_exact_channel_and_url(self):
         cases = [
