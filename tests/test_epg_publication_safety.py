@@ -51,7 +51,7 @@ class EPGPublicationSafetyTests(unittest.TestCase):
         ):
             with self.subTest(report=relative):
                 text = (ROOT / relative).read_text(encoding="utf-8")
-                self.assertIn("disabled", text.casefold())
+                self.assertTrue(any(marker in text.casefold() for marker in ("pending", "refresh required", "not yet published")))
                 self.assertNotIn("34.8%", text)
                 self.assertNotIn("978/2658", text)
 
