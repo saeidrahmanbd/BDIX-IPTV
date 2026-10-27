@@ -44,7 +44,6 @@ def required_source_keys(env=None):
     required.update(discovery_urls)
     required.update("site:" + domain for domain in site_names)
     required.add(REPOSITORY_KEY)
-    # The URL itself must never be emitted in diagnostics; only the secret key is recorded.
     if str(env.get("M3U4U_XMLTV_URL", "")).strip():
         required.add(PRIVATE_KEY)
     return required
@@ -121,7 +120,7 @@ def policy_errors(env=None, registry_path=REGISTER):
 
 
 def require_approved_sources(context="EPG source access"):
-    """Check source policy; permit an explicit owner override for review-required feeds."""
+    """Check source policy; permit an explicit owner review override for review-required feeds."""
     errors = policy_errors()
     if not errors:
         print(f"{context}: PASS — every active source has documented redistribution permission.")
@@ -148,8 +147,8 @@ def require_approved_sources(context="EPG source access"):
             f"{len(errors)} source-rights review item(s) remain open."
         )
         print(
-            "EPG.PW sources remain excluded. Review epg/source-rights-register.csv; "
-            "the override is not a claim that upstream permissions have been verified."
+            "No useful EPG source is categorically excluded by this override. "
+            "Review epg/source-rights-register.csv before changing a source to APPROVED."
         )
         return True
 
