@@ -799,6 +799,7 @@ def main():
             license_name = ""
             license_url = ""
             candidate_metadata = None
+            generated_fallback = False
 
             if not new_file:
                 try:
@@ -831,12 +832,26 @@ def main():
                     report_rows.append((playlist, line_number, channel, basename, "", source_name or "external lookup", "", "", "Download/validation failed: " + str(exc)[:150]))
                     new_file = None
 
+            # Only for International entries, use explicitly labelled, channel-specific
+            # fallback art after exact/local/attributable source lookup fails. Adult
+            # rows were excluded above; fallback art is not represented as official.
+            if not new_file and playlist == "International-Playlist.m3u" and not is_adult_entry:
+                fallback_file = make_generated_fallback(channel, attrs.get("group-title", ""))
+                if fallback_file:
+                    new_file = fallback_file
+                    generated_fallback = True
+                    fallback_count += 1
+                    source_name = "Generated fallback artwork (unofficial; no exact logo source found)"
+                    source_page = ""
+                    license_name = "Unofficial generated fallback art; not a broadcaster-original logo"
+                    license_url = ""
+
             if new_file:
                 fixes_cache[key] = new_file
                 logo_reference = raw_url(new_file)
                 line = set_logo(line, logo_reference)
+                channel_id = (attrs.get("tvg-id") or attrs.get("channel-id") or "").strip()
                 if candidate_metadata:
-                    channel_id = (attrs.get("tvg-id") or attrs.get("channel-id") or "").strip()
                     attribution = candidate_metadata.get("license", "").strip()
                     source_page = candidate_metadata.get("page", "").strip()
                     source_asset = candidate_metadata.get("url", "").strip() or source_page
@@ -845,6 +860,12 @@ def main():
                         "status": "third_party_verified",
                         "source_url": source_asset,
                         "notes": " ".join(note_parts),
+                    }
+                elif generated_fallback:
+                    registry_updates[f"{playlist}|{channel_id}|{channel}|{logo_reference}"] = {
+                        "status": "generated_fallback",
+                        "source_url": "",
+                        "notes": "Unofficial fallback artwork generated after exact local and attributable online logo lookup failed; not an official broadcaster logo.",
                     }
                 changed += 1
                 report_rows.append((playlist, line_number, channel, basename, new_file, source_name, source_page, license_name + ((" — " + license_url) if license_url else ""), "replaced"))
@@ -862,7 +883,7 @@ def main():
                     line = re.sub(r'\s+tvg-logo="[^"]*"', "", line, count=1)
                     if line != original_line:
                         changed += 1
-                result_note = "Unsafe logo reference removed" if line != original_line else "No exact clean original found; no fallback generated"
+                result_note = "Unsafe logo reference removed" if line != original_line else "No exact clean original or generated fallback available"
                 report_rows.append((playlist, line_number, channel, basename, "", "none", "", "", result_note))
             output.append(line)
 
