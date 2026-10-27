@@ -9,6 +9,7 @@ ACTIVE = {"Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "India
 REVIEW_PRIORITY = {"New Channels": 3, "New Backup": 2, "Not Playing": 1}
 REVIEW = set(REVIEW_PRIORITY)
 ATTR = re.compile(r'([\w-]+)="([^"]*)"')
+ID_COUNTRY_RE = re.compile(r"\.([a-z]{2})(?:@|$)", re.I)
 RAW_TAG = re.compile(r"\s*(?:\[[^]]*(?:geo[- ]?blocked)[^]]*\]|\((?:\d{3,4}[pi]|UHD|FHD|HD\+?|SD)\)|\s+(?:\d{3,4}[pi]))\s*$", re.I)
 ALIASES = {"disney channel india": "Disney Channel India", "disney channel (india)": "Disney Channel India", "gazi tv": "G TV", "g tv": "G TV", "nick": "Nickelodeon (India)", "nickelodeon (india)": "Nickelodeon (India)"}
 
@@ -41,6 +42,12 @@ def clean_name(value):
 
 def identity_key(value):
     return clean_name(value).casefold()
+
+
+def id_country(value):
+    """Return the country suffix encoded in a channel ID, if present."""
+    match = ID_COUNTRY_RE.search((value or "").strip())
+    return match.group(1).upper() if match else None
 
 def main():
     original = P.read_text(encoding="utf-8-sig")
@@ -87,10 +94,27 @@ def main():
         cid = (a.get("tvg-id") or a.get("channel-id") or "").strip()
         canonical = canonical_ids.get(identity_key(clean_tvg_name))
         if group in REVIEW and canonical and cid and cid.casefold() != canonical.casefold():
-            info = set_attr(info, "tvg-id", canonical)
-            if 'channel-id="' in info:
-                info = set_attr(info, "channel-id", canonical)
-            changed += 1
+            current_country = id_country(cid)
+            canonical_country = id_country(canonical)
+            declared_country = a.get("tvg-country", "").strip().upper()
+            country_conflict = (
+                (current_country is not None and current_country != canonical_country)
+                or (
+                    declared_country
+                    and canonical_country
+                    and declared_country != canonical_country
+                )
+            )
+            if country_conflict:
+                print(
+                    f"Country-preserving metadata repair: kept {cid} for "
+                    f"{clean_tvg_name}; canonical ID {canonical} has conflicting country evidence."
+                )
+            else:
+                info = set_attr(info, "tvg-id", canonical)
+                if 'channel-id="' in info:
+                    info = set_attr(info, "channel-id", canonical)
+                changed += 1
         url_key = row["url"].casefold()
         if group in REVIEW and url_key in active_urls:
             removed_lines.update({row["info_idx"], row["url_idx"]})

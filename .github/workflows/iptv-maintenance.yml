@@ -28,6 +28,7 @@ on:
       - scripts/iptv_metadata_backfill.py
       - tests/test_metadata_backfill.py
       - tests/test_cross_playlist_metadata.py
+      - tests/test_reconcile_playlist_consistency.py
       - tests/test_logo_asset_technical_quality.py
       - tests/test_report_freshness.py
       - tests/test_authorized_channel_removals.py
@@ -105,6 +106,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_maintenance_report_order.py'
           python -m unittest discover -s tests -p 'test_playlist_metadata_repairs.py'
           python -m unittest discover -s tests -p 'test_metadata_backfill.py'
+          python -m unittest discover -s tests -p 'test_reconcile_playlist_consistency.py'
           python -m unittest discover -s tests -p 'test_logo_authenticity_manifest.py'
           python -m unittest discover -s tests -p 'test_logo_asset_naming.py'
           python -m unittest discover -s tests -p 'test_logo_provenance_review.py'
