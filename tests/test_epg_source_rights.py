@@ -1,5 +1,7 @@
+import os
 import sys
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -38,10 +40,15 @@ class EPGSourceRightsTests(unittest.TestCase):
         ):
             self.assertEqual(register[key]["status"], "PROHIBITED")
 
-    def test_unapproved_current_sources_fail_closed(self):
+    def test_unapproved_sources_need_explicit_owner_override(self):
         errors = rights.policy_errors(env={})
         self.assertTrue(errors)
         self.assertTrue(any("Not approved for public redistribution" in e for e in errors))
+        with patch.dict(os.environ, {"EPG_ALLOW_UNVERIFIED_SOURCES": ""}):
+            with self.assertRaises(SystemExit):
+                rights.require_approved_sources("test default")
+        with patch.dict(os.environ, {"EPG_ALLOW_UNVERIFIED_SOURCES": "true"}):
+            self.assertTrue(rights.require_approved_sources("test override"))
 
     def test_private_feed_requires_a_rights_entry_when_configured(self):
         required = rights.required_source_keys({"M3U4U_XMLTV_URL": "https://m3u4u.com/epg/PRIVATE"})

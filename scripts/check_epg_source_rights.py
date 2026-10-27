@@ -121,23 +121,50 @@ def policy_errors(env=None, registry_path=REGISTER):
 
 
 def require_approved_sources(context="EPG source access"):
-    """Raise before fetching, mapping or generating any data from unapproved sources."""
+    """Check source policy; permit an explicit owner override for review-required feeds."""
     errors = policy_errors()
-    if errors:
-        print(f"{context}: BLOCKED by source-rights policy ({len(errors)} issue(s))")
-        for error in errors:
-            print("- " + error)
-        print("Resolve source permissions; do not set EPG_REDISTRIBUTION_APPROVED=true until the register passes.")
-        raise SystemExit(1)
-    return True
+    if not errors:
+        print(f"{context}: PASS — every active source has documented redistribution permission.")
+        return True
+
+    if os.environ.get("EPG_ALLOW_UNVERIFIED_SOURCES", "").strip().lower() == "true":
+        try:
+            required = required_source_keys()
+            records = read_register()
+        except (OSError, ValueError, SyntaxError) as exc:
+            print(f"{context}: BLOCKED — source register/configuration error: {exc}")
+            raise SystemExit(1)
+        prohibited = [
+            key for key in sorted(required)
+            if records.get(key, {}).get("status", "").upper() == "PROHIBITED"
+        ]
+        if prohibited:
+            print(f"{context}: BLOCKED — explicitly prohibited source(s) are active.")
+            for key in prohibited:
+                print("- " + key)
+            raise SystemExit(1)
+        print(
+            f"{context}: WARNING — continuing under EPG_ALLOW_UNVERIFIED_SOURCES=true; "
+            f"{len(errors)} source-rights review item(s) remain open."
+        )
+        print(
+            "EPG.PW sources remain excluded. Review epg/source-rights-register.csv; "
+            "the override is not a claim that upstream permissions have been verified."
+        )
+        return True
+
+    print(f"{context}: BLOCKED by source-rights policy ({len(errors)} issue(s))")
+    for error in errors:
+        print("- " + error)
+    print("Set EPG_ALLOW_UNVERIFIED_SOURCES=true only when the repository owner explicitly chooses to publish review-required, non-prohibited sources.")
+    raise SystemExit(1)
 
 
 def main():
     try:
-        require_approved_sources("EPG source-rights gate")
+        require_approved_sources("EPG source-rights audit")
     except SystemExit as exc:
         return int(exc.code or 1)
-    print("EPG source-rights gate: PASS — every active source has documented permission.")
     return 0
 
 
