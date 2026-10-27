@@ -4,6 +4,8 @@ Generated: **2026-10-27T08:24:12+00:00**
 
 Non-destructive connectivity test. Health failures never delete or reclassify BDIX streams.
 
+> **Interpretation limit:** 0/139 reachable means none passed from the workflow's GitHub-hosted runner during this run; it is not proof that every stream is unavailable from every network or player. HTTP status codes can help triage individual URLs, but re-check questionable entries from the intended playback network before treating them as dead.
+
 - Unique streams tested: **139**
 - Reachable: **0**
 - Failed: **139**

@@ -1,5 +1,8 @@
 # IPTV Maintenance Report
 
+> ⚠️ **STALE SNAPSHOT — NOT LIVE STATUS.** Generated 2026-10-23 for an older playlist fingerprint. The counts and PASS result below do not certify the current repository state; regenerate this report before relying on them.
+
+
 _Generated: **2026-10-23 08:52 UTC**_
 
 Source playlist SHA-256: **0ce6e1a9799733fae3febaa075d00c8c19a71f5ec225525a6559bbdcdc7ad3d5**

@@ -10,14 +10,14 @@ BDIX-IPTV is a curated IPTV playlist project focused on Bangladeshi channels, In
 - [Main IPTV playlist (M3U)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)
 - [BDIX playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u)
 - [International playlist (M3U)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)
-- [Download Center](docs/DOWNLOADS.md)
-- [Documentation index](docs/README.md)
-- [Xtream documentation](xtream/README.md)
-- [EPG coverage report](reports/epg-coverage.md)
-- [IPTV Playlist Audit report](reports/iptv-playlist-audit.md)
-- [Stream health report](reports/stream-health.md)
-- [Maintenance report](reports/maintenance-report.md)
-- [Update report](reports/Update%20Report.md)
+- [Download Center](DOWNLOADS.md)
+- [Documentation index](README.md)
+- [Xtream documentation](../xtream/README.md)
+- [EPG coverage report](../reports/epg-coverage.md)
+- [IPTV Playlist Audit report](../reports/iptv-playlist-audit.md)
+- [Stream health report](../reports/stream-health.md)
+- [Maintenance report](../reports/maintenance-report.md)
+- [Update report](../reports/Update%20Report.md)
 - [GitHub Issues](https://github.com/saeidrahmanbd/BDIX-IPTV/issues)
 - [Playlist Studio releases](https://github.com/saeidrahmanbd/Playlist-Studio/releases)
 
@@ -31,7 +31,7 @@ BDIX-IPTV is a curated IPTV playlist project focused on Bangladeshi channels, In
 
 Use the raw playlist links above to add a playlist to a compatible M3U/M3U8 player. Stream availability, provider requirements, and channel listings can change.
 
-> **Automation scope:** The shared EPG and core quality workflows audit all three published playlists: IPTV, BDIX, and International.
+> **Automation scope:** EPG and several quality audits cover all three published playlists, but stream-health checks differ in scope and depend on the GitHub runner's network location. Check each report's generated timestamp, source playlist fingerprint, and limitations before treating its results as current.
 
 ## Playlist Studio
 
@@ -39,7 +39,7 @@ Use the raw playlist links above to add a playlist to a compatible M3U/M3U8 play
 
 - [Download portable Windows application](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.exe)
 - [Download Windows Build Kit — Debug22](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug22.zip)
-- [Playlist Studio guide](docs/PLAYLIST-STUDIO.md)
+- [Playlist Studio guide](PLAYLIST-STUDIO.md)
 
 The portable application is intended for regular use. The Build Kit is for users who want to build the program themselves; consult its included Readme.txt for requirements and steps.
 
@@ -85,7 +85,7 @@ Any workflow that creates, rewrites, merges, sorts, repairs, or regenerates play
 
 ## Reports
 
-Use the linked reports for the latest available status of playlist quality, stream health, EPG coverage, and maintenance runs. A report should be considered current only after its generating workflow has completed successfully against the latest relevant playlist revision.
+Reports are generated snapshots, not live status pages. Treat a report as current only when its generating workflow has completed successfully against the latest relevant playlist revision and its source fingerprint (when supplied) or reported playlist counts match that revision. Some 2026-10-23 reports are historical snapshots.
 
 ## Troubleshooting
 

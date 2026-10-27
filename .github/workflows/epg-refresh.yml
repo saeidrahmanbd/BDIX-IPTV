@@ -87,9 +87,25 @@ jobs:
             exit 0
           fi
           git commit -m 'Refresh IPTV EPG and coverage reports'
-          git fetch origin main
-          git rebase origin/main
-          git push origin HEAD:main
+          # Another workflow may advance main after this run starts. Re-fetch,
+          # rebase, and retry the push rather than failing on a transient race.
+          # If generated reports conflict with newer outputs, stop safely rather
+          # than force-pushing stale EPG data over the newer main branch.
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "::error::EPG outputs conflicted with newer main content; no force-push attempted."
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "::warning::EPG push attempt ${attempt} failed; retrying after refreshing main."
+            sleep 3
+          done
+          echo "::error::Could not publish EPG after 3 attempts."
+          exit 1
       - name: Upload EPG freshness diagnostic
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2

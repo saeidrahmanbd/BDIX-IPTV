@@ -32,7 +32,7 @@ Password: YOUR_XTREAM_PASSWORD
 
 Do not replace the placeholders with real credentials in this repository.
 
-Supported Xtream-style endpoints are documented in [Xtream Gateway](../xtream/README.md).
+Supported Xtream-style endpoints are documented in [Xtream Gateway](../../xtream/README.md).
 
 ## 📡 EPG
 
@@ -40,12 +40,12 @@ The repository maintains an EPG coverage report and source configuration.
 
 See:
 
-- [EPG Coverage Report](../reports/epg-coverage.md)
-- [EPG directory](../epg/README.md)
+- [EPG Coverage Report](../../reports/epg-coverage.md)
+- [EPG directory](../../epg/README.md)
 
 ## 🖥️ Playlist Studio
 
-For playlist editing and management, download the latest Windows portable release from the [Playlist Studio releases](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/latest).
+For playlist editing and management, download the latest Windows portable release from the [Playlist Studio releases](https://github.com/saeidrahmanbd/Playlist-Studio/releases/latest).
 
 ## 🔐 Recommended practice
 

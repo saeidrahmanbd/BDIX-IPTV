@@ -1,5 +1,9 @@
 # Changelog
 
+## [Unreleased]
+
+Playlist updates across `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `International-Playlist.m3u` are recorded here automatically.
+
 ## [5.0.0] — Playlist Studio
 
 ### Added
