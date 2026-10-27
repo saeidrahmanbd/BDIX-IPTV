@@ -24,6 +24,14 @@ class XtreamWorkerPolicyTests(unittest.TestCase):
                 self.assertTrue({"Test", "Not Playing", "New Backup", "New Channels"} <= groups)
                 self.assertIn("if(!INACTIVE.has(cur.group))", source)
 
+    def test_both_workers_support_cors_preflight_and_comparison_helper(self):
+        for name in ("xtream-main", "xtream-bdix"):
+            with self.subTest(worker=name):
+                source = self.read_worker(name)
+                self.assertIn('"access-control-allow-origin":"*"', source)
+                self.assertIn('request.method==="OPTIONS"', source)
+                self.assertIn("function constantTimeEqual(a,b)", source)
+
     def test_both_workers_use_order_independent_stream_ids(self):
         for name in ("xtream-main", "xtream-bdix"):
             with self.subTest(worker=name):
