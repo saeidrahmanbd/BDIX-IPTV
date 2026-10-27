@@ -25,6 +25,9 @@ on:
       - scripts/generate_logo_authenticity_manifest.py
       - scripts/generate_logo_repair_summary.py
       - scripts/check_epg_config.py
+      - scripts/check_epg_source_rights.py
+      - tests/test_epg_source_rights.py
+      - epg/source-rights-register.csv
       - scripts/epg_coverage.py
       - scripts/generate_epg.py
       - docs/requirements.txt
@@ -134,6 +137,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_iptv_fragile_streams.py'
           python -m unittest discover -s tests -p 'test_language_policy.py'
           python -m unittest discover -s tests -p 'test_epg_config.py'
+          python -m unittest discover -s tests -p 'test_epg_source_rights.py'
           python -m unittest discover -s tests -p 'test_iptv_org_epg_targeting.py'
           python -m unittest discover -s tests -p 'test_country_verification.py'
       - name: Validate EPG configuration
