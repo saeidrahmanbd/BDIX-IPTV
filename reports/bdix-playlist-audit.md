@@ -1,23 +1,23 @@
 # BDIX Playlist Audit
 
-Generated: **2026-10-27T08:24:12+00:00**
+Generated: **2026-10-27T10:18:23+00:00**
 
 ## Summary
 
 - Playlist: **BDIX-Playlist.m3u**
-- Total entries: **139**
-- Unique stream URLs: **139**
+- Total entries: **131**
+- Unique stream URLs: **131**
 - Unique channel identities: **131**
 - Duplicate stream URLs: **0**
-- Duplicate channel identities: **8**
+- Duplicate channel identities: **0**
 - Missing channel IDs: **0**
 - Missing channel numbers: **0**
 - Missing logos: **0**
 - Malformed entries: **0**
 - Unknown categories: **0**
-- Streams tested: **139**
+- Streams tested: **131**
 - Reachable: **0**
-- Failed: **139**
+- Failed: **131**
 
 ## Protection Policy
 
@@ -37,7 +37,6 @@ Safe metadata repairs made: **0**
 - Kids: **5**
 - Religious: **5**
 - Sports: **18**
-- Test: **8**
 
 ## Duplicate Stream URLs
 
@@ -45,14 +44,7 @@ None.
 
 ## Duplicate Channel Identities
 
-- dbcnews.bd: Bangla Vision, DBC News
-- deshtv.bd: Bangla Vision, Desh TV
-- ekattortv.bd: Bangla Vision, Ekattor TV
-- jamunatv.bd: Jamuna TV
-- news24.bd: Bangla Vision, News 24
-- starplus.in@sd: Star Plus
-- tsports.bd: T Sports
-- zeebangla.in@hd: Zee Bangla
+None.
 
 ## Missing Metadata
 
