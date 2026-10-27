@@ -4,7 +4,8 @@ name: IPTV Playlist Update
 on:
   push:
     branches: [main]
-    # Ignore generated logo assets/reports and EPG mapping reports to prevent redundant maintenance runs.
+    # Playlist maintenance is intentionally NOT triggered by EPG-only source, mapping,
+    # generator, or EPG test changes. The dedicated Refresh IPTV EPG workflow owns those.
     paths:
       - IPTV-Playlist.m3u
       - BDIX-Playlist.m3u
@@ -24,19 +25,7 @@ on:
       - scripts/restore_protected_review.py
       - scripts/generate_logo_authenticity_manifest.py
       - scripts/generate_logo_repair_summary.py
-      - scripts/check_epg_config.py
-      - scripts/check_epg_source_rights.py
-      - tests/test_epg_source_rights.py
-      - epg/source-rights-register.csv
-      - scripts/epg_coverage.py
-      - scripts/generate_epg.py
       - docs/requirements.txt
-      - scripts/run_generate_epg.py
-      - scripts/fetch_iptv_org_epg.py
-      - scripts/augment_epg_mapping_from_iptv_org.py
-      - tests/test_iptv_org_epg_targeting.py
-      - scripts/official_epg_sources.py
-      - scripts/epg_publish_gate_v2.py
       - scripts/validate_report_freshness.py
       - scripts/logo_asset_naming.py
       - scripts/generate_logo_provenance_review.py
@@ -49,7 +38,6 @@ on:
       - tests/test_authorized_channel_removals.py
       - tests/test_maintenance_report_order.py
       - tests/test_logo_authenticity_manifest.py
-      - scripts/sync_epg_worker_map.py
       - scripts/audit_playlist.py
       - scripts/discover_bd_in_new_queues.py
       - tests/test_channel_discovery_policy.py
@@ -104,7 +92,7 @@ jobs:
             scripts/sort_playlists.py \
             scripts/final_playlist_hardening.py \
             scripts/country_verification.py \
-            scripts/discover_bd_in_new_queues.py \
+            scripts/discover_in_new_queues.py \
             scripts/generate_logo_authenticity_manifest.py \
             scripts/generate_logo_repair_summary.py \
             scripts/logo_asset_naming.py \
@@ -252,7 +240,7 @@ jobs:
 
             # Public XMLTV generation is handled by the dedicated Refresh IPTV EPG workflow.
             # This maintenance job does not run a duplicate programme-data fetch or publish pass;
-            # unresolved upstream source-rights reviews remain recorded in epg/source-rights-register.csv.
+            # EPG source/mapping changes are intentionally outside this workflow's push trigger.
             python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
             python scripts/audit_playlist.py
             python scripts/pre_publish_gate.py
