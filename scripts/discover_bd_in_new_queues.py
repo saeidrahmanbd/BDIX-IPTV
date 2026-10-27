@@ -32,7 +32,7 @@ BAD_WORDS = {
 # India News and non-Islamic Religious channels are prohibited; Indian Kids/Sports and Bangladesh news remain eligible.
 FORBIDDEN_CATEGORY_PATTERNS = {
     "news": re.compile(r"\bnews\b", re.IGNORECASE),
-    "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|islamic|islam|quran|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|mosque|masjid|sermons?|prayer)\b", re.IGNORECASE),
+    "religious": re.compile(r"\b(?:religious|religion|devotional|bhakti|bhakthi|spiritual|worship|gospel|christian|christ|hindu|hinduism|sanatan|sikh|gurbani|gurubani|church|temple|sermons?|prayer)\b", re.IGNORECASE),
 }
 
 def canonical_channel_name(value: str) -> str:
@@ -48,17 +48,16 @@ PERMANENTLY_BANNED_CHANNEL_NAMES = {
     )
 }
 
-FORBIDDEN_WORDS = {
-    "news",
-    "religious", "religion", "devotional", "bhakti", "bhakthi", "spiritual", "worship",
-    "gospel", "christian", "christ", "islamic", "islam", "quran", "hindu", "hinduism",
-    "sanatan", "sikh", "gurbani", "gurubani", "church", "temple", "mosque", "masjid",
-    "sermons", "sermon", "prayer",
-}
+FORBIDDEN_WORDS = {"news"}
+ISLAMIC_ALLOWED_MARKERS = re.compile(
+    r"\b(?:islamic|islam|muslim|qur['’]?an|madani|peace\s*tv|huda|noor|deen|ummah|"
+    r"makkah|mecca|madina|al\s*furqan|sunnah)\b",
+    re.IGNORECASE,
+)
 FORBIDDEN_BRANDS = re.compile(
     r"\b(?:"
     r"aad(?:i|ee)nath|aaseervatham|aastha|sadhna|sanskar|jinvani|satsang|jagran|"
-    r"bhagwat|aradhana|prarthana|divya|peace\s*tv|shubh\s*tv|aagaaz\s+times|"
+    r"bhagwat|aradhana|prarthana|divya|shubh\s*tv|aagaaz\s+times|"
     r"aaj\s+ki\s+khabar|abp(?:\s+(?:ananda|asmita|ganga|majha|news))?|"
     r"abn\s+andhra\s+jyoti|aaj\s+tak|times\s+now|india\s+today|news18|"
     r"ndtv\s+profit|ndtv\s+24x7|republic(?:\s+bharat|\s+tv)?|news\s+nation|"
@@ -66,7 +65,7 @@ FORBIDDEN_BRANDS = re.compile(
     r"cnbc(?:\s+awaaz|\s+bajar|\s+tv18(?:\s+prime)?)?|dd\s+news|"
     r"et\s+now|mirror\s+now|bharat\s+samachar|pratidin\s+time|amrit\s+gurbani|"
     r"sansad\s+tv(?:\s+[12])?|zee\s+business|"
-    r"disney\s+channel|"
+    
     r""
     r""
     r"mh\s*one|sai\s+tv|darshana\s+tv|sarv\s+dharm\s+sangam"
@@ -145,27 +144,29 @@ def channel_country(a: dict[str, str], fallback: str | None = None) -> str | Non
 
 
 def prohibited_channel(a: dict[str, str], name: str, country: str | None = None) -> str | None:
-    """Return a hard exclusion reason; topical bans apply only to Indian channels."""
+    """Apply the current India-only exclusions while allowing Islamic and kids channels."""
     for candidate in (name, a.get("tvg-name", "")):
         if canonical_channel_name(candidate) in PERMANENTLY_BANNED_CHANNEL_NAMES:
             return "permanently banned channel"
 
     resolved_country = channel_country(a, country)
-    # The user's country-specific rule: Bangladeshi news is permitted; the four
-    # topic exclusions apply to Indian candidates only.
+    # Bangladesh has no news/sports/kids/religious topical exclusion.
     if resolved_country != "IN":
         return None
 
     group = a.get("group-title", "").strip()
-    for category, pattern in FORBIDDEN_CATEGORY_PATTERNS.items():
-        if pattern.search(group):
-            return f"Indian {category} channel is prohibited"
     values = " ".join((name, a.get("tvg-name", ""), group, a.get("tvg-id", ""), a.get("channel-id", "")))
+    islamic_channel = bool(ISLAMIC_ALLOWED_MARKERS.search(values))
+
     for category, pattern in FORBIDDEN_CATEGORY_PATTERNS.items():
-        if pattern.search(values):
+        if pattern.search(group) or pattern.search(values):
+            if category == "religious" and islamic_channel:
+                continue
+            if category == "religious":
+                return "Indian non-Islamic religious channel is prohibited"
             return f"Indian {category} channel is prohibited"
     if FORBIDDEN_BRANDS.search(values):
-        return "known Indian News, Sports, Kids or Religious brand/category is prohibited"
+        return "known Indian News or non-Islamic religious brand/category is prohibited"
     for word in FORBIDDEN_WORDS:
         if re.search(r"(?<![\w])" + re.escape(word) + r"(?![\w])", values, re.UNICODE):
             return f"Indian {word} channel is prohibited"
