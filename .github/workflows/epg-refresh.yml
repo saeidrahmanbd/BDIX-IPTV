@@ -41,6 +41,16 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
+      - name: Skip superseded queued EPG refresh
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          CURRENT_MAIN_SHA="$(git rev-parse FETCH_HEAD)"
+          if [[ "${GITHUB_EVENT_NAME}" == "push" && "${GITHUB_SHA}" != "$CURRENT_MAIN_SHA" ]]; then
+            echo "::notice::Skipping superseded queued EPG refresh; a newer main-branch commit contains the latest playlist inventory."
+            exit 0
+          fi
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
           python-version: '3.12'
