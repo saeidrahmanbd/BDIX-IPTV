@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results
 
-Run time: **2026-10-27 11:40 UTC**  
+Run time: **2026-10-27 11:49 UTC**  
 Repository-first local logo search completed before external lookup.  
 IPTV-org data: loaded  
 Historical mapping index: loaded 336 historical name mappings
@@ -11,7 +11,7 @@ Historical mapping index: loaded 336 historical name mappings
 |---|---:|---:|---:|---:|---:|---:|---:|
 | IPTV-Playlist.m3u | 1169 | 0 | 0 | 2 | 0 | 0 | 2 |
 | BDIX-Playlist.m3u | 131 | 0 | 0 | 0 | 0 | 0 | 0 |
-| International-Playlist.m3u | 3117 | 1 | 0 | 29 | 381 | 0 | 29 |
+| International-Playlist.m3u | 3117 | 0 | 0 | 29 | 381 | 0 | 29 |
 
 ## Repair log
 
@@ -34,7 +34,7 @@ Historical mapping index: loaded 336 historical name mappings
 | International-Playlist.m3u | 1441 | Pluto TV Christmas tutto l'anno | (missing) | (none) | IPTV-org exact ID: PlutoTVChristmastuttolanno.de |  | Download/validation failed: HTTP Error 404: Not Found |
 | International-Playlist.m3u | 1441 | Pluto TV Christmas tutto l'anno | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 1561 | NewFlix | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 1569 | 7 RadioVisione | (missing) | (none) | IPTV-org exact ID: 7RadioVisione.it |  | Download/validation failed: HTTP Error 404: Not Found |
+| International-Playlist.m3u | 1569 | 7 RadioVisione | (missing) | (none) | IPTV-org exact ID: 7RadioVisione.it |  | Download/validation failed: HTTP Error 522: <none> |
 | International-Playlist.m3u | 1569 | 7 RadioVisione | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 2083 | Abdulmajeed Abdullah | (missing) | (none) | IPTV-org exact ID: AbdulmajeedAbdullah.sa |  | Download/validation failed: HTTP Error 403: Forbidden |
 | International-Playlist.m3u | 2083 | Abdulmajeed Abdullah | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
@@ -64,7 +64,6 @@ Historical mapping index: loaded 336 historical name mappings
 | International-Playlist.m3u | 3847 | FloRacing | (missing) | (none) | IPTV-org exact ID: FloRacing.us |  | Download/validation failed: HTTP Error 403: Forbidden |
 | International-Playlist.m3u | 3847 | FloRacing | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
 | International-Playlist.m3u | 4127 | TVS Sports Bureau | (missing) | (none) | none |  | No exact authentic logo source; logo left missing for manual review |
-| International-Playlist.m3u | 5613 | Global TV | (missing) | verified-global-tv-1080p-5ffc043912-095e7dad7b.png | [Local asset from existing provenance registry](https://github.com/saeidrahmanbd/BDIX-IPTV/tree/main/logos) |  | replaced |
 
 ## Quality rule
 
