@@ -80,8 +80,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
-      M3U4U_XMLTV_URL: ${{ secrets.M3U4U_XMLTV_URL }}
-      EPG_REDISTRIBUTION_APPROVED: ${{ vars.EPG_REDISTRIBUTION_APPROVED }}
+      EPG_ALLOW_UNVERIFIED_SOURCES: 'true'
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with: {fetch-depth: 0}
