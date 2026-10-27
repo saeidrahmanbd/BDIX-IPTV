@@ -1,5 +1,7 @@
 # EPG Audit — Published Playlists
 
+> ⚠️ **STALE PER-PLAYLIST SNAPSHOT.** The stream-entry counts below do not match the current maintained playlists. Refresh the EPG pipeline before treating mapped-ID and programme-coverage values as current.
+
 Generated: **2026-10-27T02:48:46+00:00**
 
 This report measures the three maintained M3U playlists included in the automated EPG pipeline. The historic filename epg-three-playlist-audit.md is retained for link compatibility.
