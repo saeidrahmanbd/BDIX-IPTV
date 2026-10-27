@@ -16,6 +16,9 @@ on:
       - scripts/backfill_cross_playlist_metadata.py
       - scripts/repair_logo_asset_technical_quality.py
       - scripts/fetch_iptv_org_epg.py
+      - scripts/epg_refresh_needed.py
+      - .github/workflows/epg-refresh.yml
+      - tests/test_epg_refresh_needed.py
       - scripts/validate_report_freshness.py
       - IPTV-Playlist.m3u
       - BDIX-Playlist.m3u
@@ -77,6 +80,7 @@ jobs:
             scripts/backfill_cross_playlist_metadata.py \
             scripts/repair_logo_asset_technical_quality.py \
             scripts/fetch_iptv_org_epg.py \
+            scripts/epg_refresh_needed.py \
             scripts/validate_report_freshness.py \
             scripts/audit_playlist.py \
             scripts/pre_publish_gate.py \
