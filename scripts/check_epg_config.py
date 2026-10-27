@@ -15,7 +15,7 @@ def assignments(path):
         if not isinstance(node, ast.Assign):
             continue
         for target in node.targets:
-            if isinstance(target, ast.Name) and target.id in {"SOURCES", "EPG_ALIASES", "EPG_LOCKS", "EPGPW_SOURCE_IDS"}:
+            if isinstance(target, ast.Name) and target.id in {"SOURCES", "EPG_ALIASES", "EPG_LOCKS"}:
                 found[target.id] = node.value
     return found
 
@@ -40,7 +40,7 @@ def main():
     coverage = assignments(COVERAGE)
     generator = assignments(GENERATOR)
     for label, values in (("coverage", coverage), ("generator", generator)):
-        for required in ("SOURCES", "EPGPW_SOURCE_IDS"):
+        for required in ("SOURCES"):
             if required not in values:
                 raise SystemExit(f"ERROR: {required} is missing from {label} script")
 
@@ -58,15 +58,6 @@ def main():
             f"Only coverage={only_coverage}; only generator={only_generator}"
         )
 
-    coverage_epgpw = literal(coverage["EPGPW_SOURCE_IDS"], "coverage EPGPW_SOURCE_IDS")
-    generator_epgpw = literal(generator["EPGPW_SOURCE_IDS"], "generator EPGPW_SOURCE_IDS")
-    if coverage_epgpw != generator_epgpw:
-        raise SystemExit("ERROR: EPG.PW source ID maps differ between coverage and generator")
-    if not set(coverage_epgpw).issubset(set(coverage_sources)):
-        raise SystemExit("ERROR: an EPGPW_SOURCE_IDS URL is missing from SOURCES")
-    if len(set(coverage_epgpw.values())) != len(coverage_epgpw):
-        raise SystemExit("ERROR: EPGPW_SOURCE_IDS must use unique synthetic source IDs")
-
     for name in ("EPG_ALIASES", "EPG_LOCKS"):
         if name not in coverage:
             raise SystemExit(f"ERROR: {name} is missing from epg_coverage.py")
@@ -80,8 +71,7 @@ def main():
 
     print(
         "EPG configuration check passed: "
-        f"{len(coverage_sources)} synchronized sources, "
-        f"{len(coverage_epgpw)} dedicated EPG.PW source IDs, "
+        f"{len(coverage_sources)} synchronized source feeds, "
         f"{len(literal(coverage['EPG_ALIASES'], 'EPG_ALIASES'))} unique aliases, "
         f"{len(literal(coverage['EPG_LOCKS'], 'EPG_LOCKS'))} unique locks."
     )
