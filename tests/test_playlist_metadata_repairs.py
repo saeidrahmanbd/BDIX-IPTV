@@ -66,7 +66,7 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
                 self.assertNotIn("epg/epg.xml", source)
                 self.assertRegex(source, r'if\s*\(p\s*===\s*"/xmltv\.php"\)')
                 self.assertRegex(source, r'Programme guide disabled pending verified redistribution rights')
-                self.assertRegex(source, r'status:\s*410')
+                self.assertRegex(source, r'xml\("Programme guide disabled pending verified redistribution rights\.",410\)')
                 self.assertRegex(source, r'status:\s*302[^}]*Location:\s*s\.url')
                 self.assertNotRegex(source, r'fetch\(s\.url')
                 self.assertIn("function constantTimeEqual", source)
