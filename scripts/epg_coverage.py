@@ -430,10 +430,19 @@ def load_previous():
     return out
 
 def retained_mapping(is_bangladesh, old_epg, candidates):
-    """Keep prior IDs only when safe; prevent stale foreign guides for Bangladesh channels."""
-    old_epg = (old_epg or "").strip()
-    if is_bangladesh and old_epg:
-        prior = {x.strip() for x in old_epg.split("|") if x.strip()}
+    """Retain safe mappings; drop legacy EPG.PW IDs and stale foreign Bangladesh mappings."""
+    # These IDs came from feeds that are not authorized for public redistribution.
+    # Filter them during migration so old CSV rows cannot silently reactivate them.
+    prior_ids = [
+        value.strip()
+        for value in (old_epg or "").split("|")
+        if value.strip() and not value.strip().casefold().startswith("epgpw:")
+    ]
+    old_epg = " | ".join(prior_ids)
+    if not old_epg:
+        return ""
+    if is_bangladesh:
+        prior = set(prior_ids)
         if not prior <= set(candidates):
             return ""
     return old_epg
