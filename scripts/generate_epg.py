@@ -38,9 +38,6 @@ SOURCES = [
     # Samsung TV Plus schedules for India and the US; useful for matching FAST channels.
     "https://i.mjh.nz/SamsungTVPlus/in.xml",
     "https://i.mjh.nz/SamsungTVPlus/us.xml",
-    "https://epg.pw/xmltv/epg_IN.xml",
-    "https://epg.pw/api/epg.xml?channel_id=9374",
-    "https://epg.pw/api/epg.xml?channel_id=12504",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml",
     "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml",
@@ -83,33 +80,9 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
     "https://hum.tv/schedule/",
+    "https://www.rtvbd.tv/schedule.php",
 ]
 
-EPGPW_SOURCE_IDS = {
-    "https://epg.pw/api/epg.xml?channel_id=9374": "epgpw:9374",
-    "https://epg.pw/api/epg.xml?channel_id=12504": "epgpw:12504",
-}
-
-
-def normalize_epgpw_source(url, data):
-    """Normalize a dedicated EPG.PW XMLTV feed to its explicitly verified source ID."""
-    synthetic_id = EPGPW_SOURCE_IDS.get(url)
-    if not synthetic_id:
-        return data
-    root = ET.fromstring(data)
-    channel_ids = {channel.get("id", "").strip() for channel in root.findall("channel") if channel.get("id", "").strip()}
-    if len(channel_ids) != 1:
-        raise ValueError(f"Expected exactly one channel ID in dedicated EPG.PW feed; found {len(channel_ids)}")
-    original_id = next(iter(channel_ids))
-    matched = [p for p in root.findall("programme") if p.get("channel", "").strip() == original_id]
-    if not matched:
-        raise ValueError(f"Dedicated EPG.PW feed has no programme rows for channel ID {original_id}")
-    for channel in root.findall("channel"):
-        if channel.get("id", "").strip() == original_id:
-            channel.set("id", synthetic_id)
-    for programme in matched:
-        programme.set("channel", synthetic_id)
-    return ET.tostring(root, encoding="utf-8")
 
 
 PRIVATE_SOURCE_ENV = "M3U4U_XMLTV_URL"
@@ -758,7 +731,6 @@ def main():
                 raise RuntimeError(f"bounded source fetch failed: {source_errors[src]}")
             if src not in source_payloads:
                 raise RuntimeError("source fetch returned no payload")
-            data = normalize_epgpw_source(src, source_payloads[src])
             source_stats[src] = "OK"
             for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):
                 if elem.tag != "programme":
