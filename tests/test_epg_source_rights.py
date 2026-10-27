@@ -14,6 +14,19 @@ class EPGSourceRightsTests(unittest.TestCase):
         self.assertTrue(required.issubset(set(register)))
         self.assertIn(rights.REPOSITORY_KEY, required)
 
+    def test_runtime_supplemental_sources_are_in_rights_register(self):
+        required = rights.required_source_keys({})
+        register = rights.read_register()
+        for url in (
+            "https://epg.lat/files/in.xml.gz",
+            "https://epg.lat/files/us.xml.gz",
+            "https://www.free-epg.de/api/epg/in.xml.gz",
+            "https://www.free-epg.de/api/epg/us.xml.gz",
+            "https://www.open-epg.com/files/india.xml.gz",
+        ):
+            self.assertIn(url, required)
+            self.assertIn(url, register)
+
     def test_restricted_epg_pw_feeds_are_not_active(self):
         required = rights.required_source_keys({})
         self.assertFalse(any("epg.pw/" in key for key in required))
@@ -43,6 +56,8 @@ class EPGSourceRightsTests(unittest.TestCase):
         }
         self.assertEqual(rights.approved_row_errors("example", row), [])
         row["rights_scope"] = "Rights not confirmed"
+        self.assertTrue(rights.approved_row_errors("example", row))
+        row["rights_scope"] = "Personal use only; no public redistribution allowed"
         self.assertTrue(rights.approved_row_errors("example", row))
 
 
