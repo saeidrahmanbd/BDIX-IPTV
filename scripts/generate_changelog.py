@@ -1,20 +1,31 @@
 #!/usr/bin/env python3
-"""Generate a meaningful, non-destructive IPTV changelog from the previous playlist state."""
-import re, subprocess
+"""Generate a non-destructive changelog for all maintained playlist files."""
+from __future__ import annotations
+
+import json
+import re
+import subprocess
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
-import json
 
-ROOT=Path(__file__).resolve().parents[1]
-PLAYLIST=ROOT/"IPTV-Playlist.m3u"
-STATE=ROOT/"reports/changelog-state.json"
-DOC_CHANGELOG=ROOT/"docs/CHANGELOG.md"
-ATTR_RE=re.compile(r'([\w-]+)="([^"]*)"')
+ROOT = Path(__file__).resolve().parents[1]
+PLAYLISTS = (
+    "IPTV-Playlist.m3u",
+    "BDIX-Playlist.m3u",
+    "International-Playlist.m3u",
+)
+STATE = ROOT / "reports/changelog-state.json"
+DOC_CHANGELOG = ROOT / "docs/CHANGELOG.md"
+ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
+BACKUP_GROUPS = {"backup", "new backup"}
 
-def attrs(s): return dict(ATTR_RE.findall(s))
 
-def split_extinf(line):
+def attrs(line: str) -> dict[str, str]:
+    return dict(ATTR_RE.findall(line))
+
+
+def split_extinf(line: str) -> tuple[str, str]:
     in_quote = False
     escaped = False
     for i, ch in enumerate(line):
@@ -22,156 +33,239 @@ def split_extinf(line):
             in_quote = not in_quote
         elif ch == "," and not in_quote:
             return line[:i], line[i + 1:]
-        escaped = (ch == "\\") and not escaped
-        if ch != "\\": escaped = False
+        escaped = ch == "\\" and not escaped
+        if ch != "\\":
+            escaped = False
     return line, ""
 
-def parse(text):
-    lines=text.replace("\r","").splitlines()
-    out=[]; i=0
-    while i<len(lines):
-        if lines[i].startswith("#EXTINF:"):
-            a=attrs(lines[i])
-            url=lines[i+1].strip() if i+1<len(lines) else ""
-            if url.startswith(("http://","https://")):
-                out.append({
-                    "id":(a.get("tvg-id") or a.get("channel-id") or "").strip(),
-                    "name":(a.get("tvg-name") or split_extinf(lines[i])[1]).strip(),
-                    "group":a.get("group-title","").strip(),
-                    "logo":a.get("tvg-logo","").strip(),
-                    "url":url
-                })
-            i+=1
-        i+=1
-    return out
 
-def current_playlist_commit():
+def parse(text: str) -> list[dict[str, str]]:
+    lines = text.replace("\r", "").splitlines()
+    rows: list[dict[str, str]] = []
+    for i, line in enumerate(lines):
+        if not line.startswith("#EXTINF:"):
+            continue
+        j = i + 1
+        while j < len(lines) and not lines[j].strip():
+            j += 1
+        if j >= len(lines):
+            continue
+        url = lines[j].strip()
+        if not url.startswith(("http://", "https://")):
+            continue
+        prefix, display_name = split_extinf(line)
+        metadata = attrs(prefix)
+        rows.append({
+            "id": (metadata.get("tvg-id") or metadata.get("channel-id") or "").strip(),
+            "name": (metadata.get("tvg-name") or display_name).strip(),
+            "group": (metadata.get("group-title") or "").strip(),
+            "logo": (metadata.get("tvg-logo") or "").strip(),
+            "url": url,
+        })
+    return rows
+
+
+def identity(row: dict[str, str]) -> str:
+    value = row["id"].casefold().strip()
+    return value or row["name"].casefold().strip()
+
+
+def git_text(*args: str) -> str:
+    return subprocess.check_output(
+        ["git", *args], cwd=ROOT, text=True, stderr=subprocess.DEVNULL
+    ).strip()
+
+
+def current_playlist_commit(path: str) -> str:
     try:
-        return subprocess.check_output(
-            ["git","log","-1","--format=%H","--","IPTV-Playlist.m3u"],
-            cwd=ROOT,text=True,stderr=subprocess.DEVNULL
-        ).strip()
-    except Exception:
+        return git_text("log", "-1", "--format=%H", "--", path)
+    except (subprocess.CalledProcessError, OSError):
         return ""
 
-def previous_playlist(current_commit):
+
+def playlist_at_commit(commit: str, path: str) -> str | None:
     try:
-        old_commit=""
-        if STATE.is_file():
-            old_commit=json.loads(STATE.read_text(encoding="utf-8")).get("playlist_commit","")
-        if not old_commit:
-            commits=subprocess.check_output(
-                ["git","log","--format=%H","--","IPTV-Playlist.m3u"],
-                cwd=ROOT,text=True,stderr=subprocess.DEVNULL
-            ).splitlines()
-            if len(commits)>1:
-                old_commit=commits[1]
-        if not old_commit or old_commit==current_commit:
-            return ""
-        return subprocess.check_output(
-            ["git","show",f"{old_commit}:IPTV-Playlist.m3u"],
-            cwd=ROOT,text=True,stderr=subprocess.DEVNULL
+        return git_text("show", f"{commit}:{path}")
+    except (subprocess.CalledProcessError, OSError):
+        return None
+
+
+def compare(previous: str, current: str) -> dict[str, object]:
+    old = parse(previous)
+    new = parse(current)
+    old_urls = {row["url"] for row in old}
+    new_urls = {row["url"] for row in new}
+    added = [row for row in new if row["url"] not in old_urls]
+    removed = [row for row in old if row["url"] not in new_urls]
+
+    old_ids = {identity(row) for row in old if identity(row)}
+    new_ids = {identity(row) for row in new if identity(row)}
+    added_channels = [
+        row for row in added
+        if identity(row) and identity(row) not in old_ids
+        and row["group"].casefold() not in BACKUP_GROUPS
+    ]
+    removed_channels = [
+        row for row in removed
+        if identity(row) and identity(row) not in new_ids
+        and row["group"].casefold() not in BACKUP_GROUPS
+    ]
+
+    old_logo = {(identity(row), row["url"]): row["logo"] for row in old}
+    new_logo = {(identity(row), row["url"]): row["logo"] for row in new}
+    logo_changes = sum(
+        1 for key, value in new_logo.items()
+        if key in old_logo and old_logo[key] != value
+    )
+    replaced_ids = {
+        identity(row) for row in added if identity(row)
+    } & {
+        identity(row) for row in removed if identity(row)
+    }
+    backup_updates = sum(
+        1 for row in added
+        if row["group"].casefold() in BACKUP_GROUPS
+        and any(
+            old_row["url"] in {item["url"] for item in removed}
+            and identity(old_row) == identity(row)
+            and old_row["group"].casefold() in BACKUP_GROUPS
+            for old_row in old
         )
-    except Exception:
-        return ""
+    )
+    duplicate_urls_removed = max(
+        0, (len(old) - len(old_urls)) - (len(new) - len(new_urls))
+    )
 
-def meaningful(prev,cur):
-    if not prev:
-        return {"added":len(parse(cur)),"removed":0,"backup_updated":0,"logos":0,"duplicates":0,"replaced":0,"new_names":[],"removed_names":[]}
-
-    old=parse(prev); new=parse(PLAYLIST.read_text(encoding="utf-8-sig"))
-    old_urls={x["url"] for x in old}; new_urls={x["url"] for x in new}
-    old_by_id=defaultdict(list); new_by_id=defaultdict(list)
-    for x in old: old_by_id[x["id"].lower()].append(x)
-    for x in new: new_by_id[x["id"].lower()].append(x)
-
-    added=[x for x in new if x["url"] not in old_urls]
-    removed=[x for x in old if x["url"] not in new_urls]
-
-    new_channels=[]
-    removed_channels=[x for x in removed if x["group"] != "Backup" and x["id"].lower() not in {y["id"].lower() for y in new}]
-
-    backup_updated=0
-    for x in added:
-        if x["group"]=="Backup" and any(y["id"].lower()==x["id"].lower() and y["group"]=="Backup" for y in removed):
-            backup_updated+=1
-
-    replaced=0
-    for x in added:
-        if any(y["id"].lower()==x["id"].lower() and y["url"]!=x["url"] for y in removed):
-            replaced+=1
-
-    logo_changes=0
-    old_map={(x["id"].lower(),x["url"]):x["logo"] for x in old}
-    new_map={(x["id"].lower(),x["url"]):x["logo"] for x in new}
-    for k,v in new_map.items():
-        if k in old_map and old_map[k]!=v: logo_changes+=1
-
-    duplicate_old=len(old_urls)-len(old)
-    duplicate_new=len(new_urls)-len(new)
-
-    review_backups=[]
     return {
-        "added":len(new_channels),
-        "review_backups":len(review_backups),
-        "removed":len(removed_channels),
-        "backup_updated":backup_updated,
-        "logos":logo_changes,
-        "duplicates":max(0,duplicate_old-duplicate_new),
-        "replaced":replaced,
-        "new_names":[x["name"] for x in new_channels[:20]],
-        "removed_names":[x["name"] for x in removed_channels[:20]]
+        "added_urls": len(added),
+        "removed_urls": len(removed),
+        "added_channels": len(added_channels),
+        "removed_channels": len(removed_channels),
+        "backup_updates": backup_updates,
+        "logo_changes": logo_changes,
+        "replaced_identities": len(replaced_ids),
+        "duplicate_urls_removed": duplicate_urls_removed,
+        "added_names": list(dict.fromkeys(row["name"] for row in added_channels if row["name"]))[:10],
+        "removed_names": list(dict.fromkeys(row["name"] for row in removed_channels if row["name"]))[:10],
     }
 
-def main():
-    cur=PLAYLIST.read_text(encoding="utf-8-sig")
-    current_commit=current_playlist_commit()
-    prev=previous_playlist(current_commit)
-    state_commit=""
-    if STATE.is_file():
-        try: state_commit=json.loads(STATE.read_text(encoding="utf-8")).get("playlist_commit","")
-        except Exception: state_commit=""
-    if not prev and state_commit==current_commit:
-        s={"added":0,"review_backups":0,"removed":0,"backup_updated":0,"logos":0,"duplicates":0,"replaced":0,"new_names":[],"removed_names":[]}
+
+def has_changes(summary: dict[str, object]) -> bool:
+    return any(
+        int(summary.get(key, 0))
+        for key in (
+            "added_urls", "removed_urls", "added_channels", "removed_channels",
+            "backup_updates", "logo_changes", "replaced_identities",
+            "duplicate_urls_removed",
+        )
+    )
+
+
+def render_entry(date: str, playlist: str, summary: dict[str, object]) -> str:
+    marker = f"<!-- playlist-changelog:{playlist} -->"
+    lines = [
+        marker,
+        f"### {date} — `{playlist}`",
+        "",
+        f"- New channel identities: **{summary['added_channels']}**",
+        f"- Channel identities removed: **{summary['removed_channels']}**",
+        f"- Stream URLs added / removed: **{summary['added_urls']} / {summary['removed_urls']}**",
+        f"- Backup URL updates: **{summary['backup_updates']}**",
+        f"- Logo reference changes: **{summary['logo_changes']}**",
+        f"- Replaced channel identities: **{summary['replaced_identities']}**",
+        f"- Duplicate URL occurrences removed: **{summary['duplicate_urls_removed']}**",
+    ]
+    if summary["added_names"]:
+        lines.extend(["", "Added channel identities (up to 10):"])
+        lines.extend(f"- {name}" for name in summary["added_names"])
+    if summary["removed_names"]:
+        lines.extend(["", "Removed channel identities (up to 10):"])
+        lines.extend(f"- {name}" for name in summary["removed_names"])
+    return "\n".join(lines)
+
+
+def insert_unreleased(existing: str, entries: list[tuple[str, str]]) -> str:
+    if "## [Unreleased]" not in existing:
+        lines = existing.splitlines()
+        if lines and lines[0].startswith("# "):
+            lines[1:1] = ["", "## [Unreleased]", ""]
+            existing = "\n".join(lines).rstrip() + "\n"
+        else:
+            existing = "# Changelog\n\n## [Unreleased]\n\n" + existing.lstrip()
+
+    marker_header = "## [Unreleased]"
+    start = existing.index(marker_header)
+    content_start = start + len(marker_header)
+    next_h2 = re.search(r"(?m)^## (?!\[Unreleased\]).*$", existing[content_start:])
+    end = content_start + next_h2.start() if next_h2 else len(existing)
+    prefix, body, suffix = existing[:content_start], existing[content_start:end], existing[end:]
+
+    for marker, entry in entries:
+        if marker in body:
+            marker_pos = body.index(marker)
+            next_marker = re.search(r"(?m)^<!-- playlist-changelog:", body[marker_pos + len(marker):])
+            stop = marker_pos + len(marker) + next_marker.start() if next_marker else len(body)
+            body = body[:marker_pos] + entry + "\n\n" + body[stop:].lstrip("\n")
+        else:
+            body = body.rstrip() + "\n\n" + entry + "\n"
+
+    return prefix + body + suffix
+
+
+def main() -> None:
+    try:
+        state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.is_file() else {}
+    except (json.JSONDecodeError, OSError):
+        state = {}
+
+    stored = state.get("playlists", {})
+    if not isinstance(stored, dict):
+        stored = {}
+    entries: list[tuple[str, str]] = []
+    new_state: dict[str, object] = {"schema_version": 2, "playlists": {}}
+    date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+    for playlist in PLAYLISTS:
+        path = ROOT / playlist
+        if not path.is_file():
+            continue
+        current = path.read_text(encoding="utf-8-sig")
+        current_commit = current_playlist_commit(playlist)
+        if not current_commit:
+            continue
+
+        saved = stored.get(playlist, {})
+        previous_commit = saved.get("commit", "") if isinstance(saved, dict) else ""
+        if not previous_commit and playlist == "IPTV-Playlist.m3u":
+            # Read the original single-playlist state format during migration.
+            previous_commit = str(state.get("playlist_commit", "") or "")
+
+        previous = playlist_at_commit(previous_commit, playlist) if previous_commit else None
+        if previous is not None and previous_commit != current_commit:
+            summary = compare(previous, current)
+            if has_changes(summary):
+                entry = render_entry(date, playlist, summary)
+                entries.append((f"<!-- playlist-changelog:{playlist} -->", entry))
+
+        new_state["playlists"][playlist] = {"commit": current_commit}
+
+    state_changed = new_state != {
+        "schema_version": state.get("schema_version"),
+        "playlists": stored,
+    }
+    if entries:
+        existing = DOC_CHANGELOG.read_text(encoding="utf-8") if DOC_CHANGELOG.exists() else "# Changelog\n"
+        updated = insert_unreleased(existing, entries)
+        DOC_CHANGELOG.write_text(updated.rstrip() + "\n", encoding="utf-8")
+        print(f"Updated changelog for {len(entries)} playlist(s).")
     else:
-        s=meaningful(prev,cur)
-    meaningful_change = any(s.get(key, 0) for key in ("added", "review_backups", "removed", "backup_updated", "logos", "duplicates", "replaced")) or bool(s.get("new_names")) or bool(s.get("removed_names"))
-    if not meaningful_change:
-        print("No meaningful playlist changes; changelog and changelog state left unchanged.")
-        return
-    date=datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    lines=[f"# Changelog — {date}","",f"## {date}",""]
-    if s["added"]: lines.append(f"- 🆕 **{s['added']} new channel(s) added to the approved playlist categories**")
-    if s.get("review_backups"): lines.append(f"- 🔁 **{s['review_backups']} backup stream(s) added to Backup**")
-    if s["removed"]: lines.append(f"- 🗑️ **{s['removed']} channel(s) removed**")
-    if s["backup_updated"]: lines.append(f"- 🔄 **{s['backup_updated']} backup stream(s) updated**")
-    if s["logos"]: lines.append(f"- 🖼️ **{s['logos']} logo reference(s) corrected**")
-    if s["duplicates"]: lines.append(f"- 🧹 **{s['duplicates']} duplicate stream occurrence(s) removed**")
-    if s["replaced"]: lines.append(f"- 📡 **{s['replaced']} stream(s) replaced**")
-    if len(lines)==4: lines.append("- No meaningful playlist changes detected.")
-    if s["new_names"]:
-        lines += ["","### New channels"]
-        lines += [f"- {x}" for x in s["new_names"]]
-    if s["removed_names"]:
-        lines += ["","### Removed channels"]
-        lines += [f"- {x}" for x in s["removed_names"]]
-    lines += ["","_Generated automatically from the repository playlist diff._",""]
+        print("No meaningful playlist changes detected.")
 
-    STATE.parent.mkdir(parents=True,exist_ok=True)
-    STATE.write_text(json.dumps({"playlist_commit":current_commit,"generated":datetime.now(timezone.utc).isoformat()},indent=2)+"\n",encoding="utf-8")
+    if state_changed:
+        new_state["generated"] = datetime.now(timezone.utc).isoformat()
+        STATE.write_text(json.dumps(new_state, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        print("Updated per-playlist changelog state.")
 
-    existing=DOC_CHANGELOG.read_text(encoding="utf-8") if DOC_CHANGELOG.exists() else "# BDIX-IPTV Changelog\n\n"
-    entry="\n".join(lines[2:-2])
-    marker=f"## {date}"
-    if marker in existing:
-        prefix, rest = existing.split(marker, 1)
-        next_match=re.search(r"\n## \d{4}-\d{2}-\d{2}\n", rest)
-        suffix = rest[next_match.start():] if next_match else ""
-        existing = prefix.rstrip()+"\n\n"+entry+"\n"+suffix.lstrip("\n")
-    else:
-        existing = existing.rstrip()+"\n\n"+entry+"\n"
-    DOC_CHANGELOG.write_text(existing,encoding="utf-8")
 
-    print("\n".join(lines))
-
-if __name__=="__main__": main()
+if __name__ == "__main__":
+    main()
