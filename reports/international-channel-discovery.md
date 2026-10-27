@@ -1,14 +1,14 @@
 # International Channel Discovery
 
-- Last scan: 2026-10-27 09:11 UTC
+- Last scan: 2026-10-27 10:41 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12032
-- Existing playlist records: 3017
+- Existing playlist records: 3067
 - Existing logo references localized/repaired: 0
-- Existing logo references removed because no safe local asset was available: 0
-- Exact source URLs already in playlist: 2030
-- Duplicate URLs within source feed: 59
-- New eligible source records after URL/policy filtering: 414
+- Existing logo references removed because no safe local asset was available: 1
+- Exact source URLs already in playlist: 2088
+- Duplicate URLs within source feed: 51
+- New eligible source records after URL/policy filtering: 364
 - Country threshold: 5 unique primary identities for any retained dynamic country group.
 - Automatic discovery is Movie/Music only for every country; News, Sports, Kids, Documentary/Wildlife, Religious, General/Entertainment and all other categories are rejected.
 - New alternate streams are staged in New Backup; curated alternates remain in Backup.
@@ -16,84 +16,68 @@
 - Playback was not tested.
 - New primary channels: 50
 - New backup review entries: 0
-- Category migrations: 17
+- Category migrations: 1
 - Out-of-scope existing entries removed: 0
 
 ## New primary channels
 
-- **Nashe Lubimoe Kino (576p)** — `Russia` — RU
-- **Nashe Lubimoe Kino Ukraine (1080p)** — `Ukraine` — UA
-- **Nashe muzhskoe HD (1080p)** — `Russia` — RU
-- **NEW K.MOVIES (1080p)** — `United States` — US
-- **NewFlix** — `Iran` — IR
-- **Next HD (480p)** — `New Channels` — ZZ
-- **Nolly Africa (1080p)** — `United Kingdom` — GB
-- **NonStop Kung Fu** — `New Channels` — SE
-- **NonStop Kung Fu DK** — `New Channels` — SE
-- **NonStop Kung Fu NO** — `New Channels` — SE
-- **Orbita Chile TV (1080p)** — `Chile` — CL
-- **OSN Movies Action (1080p)** — `New Channels` — AE
-- **Ostrosyuzhetnoye HD (1080p)** — `Russia` — RU
-- **Pantalla Clasica EC (512p) [Not 24/7]** — `New Channels` — ZZ
-- **Paramount Movie Channel** — `United States` — US
-- **Paramount+ Picks** — `United States` — US
-- **Patriot (720p)** — `Russia` — RU
-- **Persiana Latino** — `France` — FR
-- **Pluto Classic Movie Westerns** — `United States` — US
-- **Pluto TV 90's Classics** — `Germany` — DE
-- **Pluto TV A La Mexicana** — `United States` — US
-- **Pluto TV Action (Sweden)** — `New Channels` — SE
-- **Pluto TV Action (Sweden) DK** — `New Channels` — SE
-- **Pluto TV Action (Sweden) NO** — `New Channels` — SE
-- **Pluto TV Action (United States)** — `United States` — US
-- **Pluto TV Action Movies** — `United States` — US
-- **Pluto TV Alberto Sordi** — `Germany` — DE
-- **Pluto TV Bang Bang** — `United States` — US
-- **Pluto TV Bud & Terence (Germany)** — `Germany` — DE
-- **Pluto TV Bud & Terence (Sweden)** — `New Channels` — SE
-- **Pluto TV Bud & Terence (Sweden) DK** — `New Channels` — SE
-- **Pluto TV Bud & Terence (Sweden) NO** — `New Channels` — SE
-- **Pluto TV Catastrofes** — `Germany` — DE
-- **Pluto TV Christmas tutto l'anno** — `Germany` — DE
-- **Pluto TV Cine Accion** — `United States` — US
-- **Pluto TV Cine Clasico** — `United States` — US
-- **Pluto TV Cine Classicos** — `United States` — US
-- **Pluto TV Cine Comedia (Germany)** — `Germany` — DE
-- **Pluto TV Cine Comedia (United States)** — `United States` — US
-- **Pluto TV Cine Comedia (United States) BR** — `United States` — US
-- **Pluto TV Cine Comedia (United States) LatAm** — `United States` — US
-- **Pluto TV Cine Comedia Romantica** — `United States` — US
-- **Pluto TV Cine Crime** — `United States` — US
-- **Pluto TV Cine Crimen** — `United States` — US
-- **Pluto TV Cine de autor** — `Germany` — DE
-- **Pluto TV Cine Drama** — `United States` — US
-- **Pluto TV Cine Drama LatAm** — `United States` — US
-- **Pluto TV Cine Estelar** — `United States` — US
-- **Pluto TV Cine Familia** — `United States` — US
-- **Pluto TV Cine Familia LatAm** — `United States` — US
+- **Pluto TV Cine Inspiracao** — `United States` — US
+- **Pluto TV Cine Inspirador** — `United States` — US
+- **Pluto TV Cine Romance** — `United States` — US
+- **Pluto TV Cine Romance LatAm** — `United States` — US
+- **Pluto TV Cine Romantico** — `Germany` — DE
+- **Pluto TV Cine Sucessos** — `United States` — US
+- **Pluto TV Cine Suspenso** — `United States` — US
+- **Pluto TV Cinema Italiano** — `Germany` — DE
+- **Pluto TV Cinema Orientale** — `Germany` — DE
+- **Pluto TV Comedias Romanticas** — `Germany` — DE
+- **Pluto TV Comedies Cultes** — `Germany` — DE
+- **Pluto TV Comedy Movies** — `United States` — US
+- **Pluto TV Crime Drama** — `United States` — US
+- **Pluto TV Crime Drama CA** — `United States` — US
+- **Pluto TV Crime Movies** — `United States` — US
+- **Pluto TV Cult Films (Germany)** — `Germany` — DE
+- **Pluto TV Cult Films (United States)** — `United States` — US
+- **Pluto TV Danske klassikere** — `Sweden` — SE
+- **Pluto TV Drama** — `United States` — US
+- **Pluto TV Drama Movies** — `United States` — US
+- **Pluto TV Estrellas de Accion** — `United States` — US
+- **Pluto TV Family Movie Club** — `Germany` — DE
+- **Pluto TV Fantasy & Horror** — `Germany` — DE
+- **Pluto TV Ferne Galaxien** — `Germany` — DE
+- **Pluto TV Ficcao Cientifica** — `United States` — US
+- **Pluto TV Film (Germany)** — `Germany` — DE
+- **Pluto TV Film (Sweden)** — `Sweden` — SE
+- **Pluto TV Film (Sweden) DK** — `Sweden` — SE
+- **Pluto TV Film (Sweden) NO** — `Sweden` — SE
+- **Pluto TV Film Ancora Piu Romantici** — `Germany` — DE
+- **Pluto TV Film Azione** — `Germany` — DE
+- **Pluto TV Film Commedia** — `Germany` — DE
+- **Pluto TV Film Romantici** — `Germany` — DE
+- **Pluto TV Film Storici** — `Germany` — DE
+- **Pluto TV Film Thriller** — `Germany` — DE
+- **Pluto TV Filmes Acao** — `United States` — US
+- **Pluto TV Filmes Aventura** — `United States` — US
+- **Pluto TV Filmes de Luta** — `United States` — US
+- **Pluto TV Filmes Nacionais** — `United States` — US
+- **Pluto TV Franchise Favorites** — `United States` — US
+- **Pluto TV Haialarm** — `Germany` — DE
+- **Pluto TV Harlequin** — `Sweden` — SE
+- **Pluto TV Harlequin DK** — `Sweden` — SE
+- **Pluto TV Harlequin NO** — `Sweden` — SE
+- **Pluto TV Horror (Sweden)** — `Sweden` — SE
+- **Pluto TV Horror (Sweden) DK** — `Sweden` — SE
+- **Pluto TV Horror (Sweden) NO** — `Sweden` — SE
+- **Pluto TV Horror (United States)** — `United States` — US
+- **Pluto TV Horror (United States) CA** — `United States` — US
+- **Pluto TV Humor (Sweden)** — `Sweden` — SE
 
 ## Backup alternates
 
 
 ## Country Migrations
 
-- **MBC Bollywood**: `New Channels` → `United Arab Emirates`
-- **MBC FM**: `New Channels` → `United Arab Emirates`
-- **Merry Christmas from Viafree**: `New Channels` → `Sweden`
-- **Merry Christmas from Viafree DK**: `New Channels` → `Sweden`
-- **Merry Christmas from Viafree NO**: `New Channels` → `Sweden`
-- **PMC**: `New Channels` → `United Arab Emirates`
-- **PMC Royale**: `New Channels` → `United Arab Emirates`
-- **NonStop Kung Fu**: `New Channels` → `Sweden`
-- **NonStop Kung Fu DK**: `New Channels` → `Sweden`
-- **NonStop Kung Fu NO**: `New Channels` → `Sweden`
-- **OSN Movies Action (1080p)**: `New Channels` → `United Arab Emirates`
-- **Pluto TV Action (Sweden)**: `New Channels` → `Sweden`
-- **Pluto TV Action (Sweden) DK**: `New Channels` → `Sweden`
-- **Pluto TV Action (Sweden) NO**: `New Channels` → `Sweden`
-- **Pluto TV Bud & Terence (Sweden)**: `New Channels` → `Sweden`
-- **Pluto TV Bud & Terence (Sweden) DK**: `New Channels` → `Sweden`
-- **Pluto TV Bud & Terence (Sweden) NO**: `New Channels` → `Sweden`
+- **Star Movies HD**: `New Channels` → `Indian Movies`
 
 ## Removed out-of-scope existing entries
 
