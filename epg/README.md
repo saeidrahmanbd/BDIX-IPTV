@@ -2,11 +2,16 @@
 
 ## Current status
 
-**The public EPG refresh pipeline is enabled; the first successful publication is still pending.** The expected output is `epg/epg.xml`, published at:
+**The public guide is published, but it is currently a last-known-good fallback and coverage is limited.** `epg/epg.xml` is available at:
 
 `https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml`
 
-All three maintained playlists and both Xtream workers reference this same URL. The guide file is currently absent, so the raw URL will return 404 until **Refresh IPTV EPG** successfully generates, validates, and commits a non-empty XMLTV guide. Source-fetch or quality-gate failures must be resolved before calling the service functional.
+All three maintained playlists and both Xtream workers reference this same URL. The file was restored on 2026-10-27 (commit `cbf5ec0`) after the refresh workflow's fresh candidate did not pass its gates, so it may contain older snapshot data (a few overlapping or duplicate programmes and channel entries with no programmes) until a refresh completes successfully.
+
+Known coverage limits at the time of this update (see `reports/epg-coverage.md` for current figures):
+
+- About 35% of active playlist channel IDs have a usable current/future schedule.
+- Most Bangladeshi domestic channels (for example NTV, Jamuna, Somoy, Channel 24, Ekattor, Independent, ATN, DBC, T Sports) have no schedule source in the pipeline. They are deliberately not mapped to similarly named foreign channels.
 
 The workflow runs daily at 10:17 Asia/Dhaka and on changes to maintained playlists or EPG inputs. It rebuilds source-to-channel mappings, merges candidate XMLTV feeds, applies freshness and quality checks, and publishes the XMLTV file plus coverage reports.
 
@@ -35,10 +40,10 @@ The additional feeds are candidates, not guaranteed matches. Use reports generat
 - [Source-rights register](source-rights-register.csv)
 - [Current mapping snapshot](../reports/epg-channel-mapping.csv)
 - [Coverage report](../reports/epg-coverage.md)
-- [Target public XMLTV URL](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml) (available after the first successful refresh)
+- [Target public XMLTV URL](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml)
 
 ## Troubleshooting
 
-If the XMLTV URL returns 404, the first refresh has not yet published a guide or a prior run failed before commit. Open workflow runs and inspect source-fetch and quality-gate logs, then rerun **Refresh IPTV EPG**. If a worker returns 503 for `/xmltv.php`, check the raw XMLTV URL first.
+If the XMLTV URL returns 404, the guide file was removed or a run failed before commit; the refresh workflow restores the last known-good guide when its candidate fails the quality gates. Open workflow runs and inspect source-fetch and quality-gate logs, then rerun **Refresh IPTV EPG**. If a worker returns 503 for `/xmltv.php`, check the raw XMLTV URL first.
 
 Do not commit Xtream credentials, private feed URLs, usernames, passwords, session tokens, or other provider secrets into the repository.
