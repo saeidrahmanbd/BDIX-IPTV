@@ -45,6 +45,7 @@ class ReportFreshnessTests(unittest.TestCase):
             "iptv-metadata-backfill.md": f"Generated: **{self.timestamp}**\nPlaylist SHA-256: **{one}**\n",
             "iptv-fragile-streams.md": f"Generated: **{self.timestamp}**\nIPTV-Playlist.m3u SHA-256: **{one}**\n",
             "stream-risk-review.md": f"Generated: **{self.timestamp}**\nIPTV-Playlist.m3u SHA-256: **{one}**\n",
+            "epg-publish-freshness.md": f"Checked: **{self.timestamp}**\nStatus: **PASS**\n",
             "logo-provenance-review.md": epg,
             "logo-asset-quality-audit.md": epg,
             "cross-playlist-metadata-backfill.md": epg,
