@@ -667,6 +667,10 @@ def infer_source_offsets(records):
 
 
 def main():
+    # Never generate a public XMLTV candidate from feeds without explicit redistribution approval.
+    from check_epg_source_rights import require_approved_sources
+    require_approved_sources("EPG XMLTV generation")
+
     channels = playlist_channels()
     groups = playlist_groups()
     reverse = load_mapping()
