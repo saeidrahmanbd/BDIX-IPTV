@@ -44,11 +44,28 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             ("Green Gold TV", "Entertainment"),
             ("Pogo", "Entertainment"),
             ("DD Sports", "Entertainment"),
+            ("Disney Channel", "Kids"),
         ]
         for name, group in examples:
             with self.subTest(name=name, group=group):
                 self.assertIsNone(prohibited_channel(
                     {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"}, name
+                ))
+
+
+    def test_indian_islamic_religious_channels_are_allowed(self):
+        examples = [
+            ("Madani TV", "Religious"),
+            ("Peace TV", "Religious"),
+            ("Quran TV", "Religious"),
+            ("Islam Channel", "Religious"),
+            ("Al Huda", "Religious"),
+        ]
+        for name, group in examples:
+            with self.subTest(name=name, group=group):
+                self.assertIsNone(prohibited_channel(
+                    {"group-title": group, "tvg-country": "IN", "tvg-id": "SampleChannel.in"},
+                    name,
                 ))
 
     def test_bangladeshi_news_is_allowed(self):
