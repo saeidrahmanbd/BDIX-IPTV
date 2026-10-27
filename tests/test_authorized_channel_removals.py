@@ -212,6 +212,41 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             self.assertNotIn("tvg-chno", not_playing)
 
 
+    def test_restore_repairs_missing_local_logo_in_protected_queue_only(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist = root / "IPTV-Playlist.m3u"
+            snapshot = root / "protected.m3u"
+            baseline = root / "baseline.json"
+            logos = root / "logos"
+            logos.mkdir()
+            (logos / "reliable-backup.png").write_bytes(b"local verified fixture")
+            url = "https://example.invalid/reliable-backup.m3u8"
+            old_logo = restore.RAW_BASE + "missing-reliable-backup.webp"
+            new_logo = restore.RAW_BASE + "reliable-backup.png"
+            old_info = f'#EXTINF:-1 tvg-name="Reliable Backup" tvg-logo="{old_logo}" group-title="Backup",Reliable Backup'
+            current_info = old_info.replace(old_logo, new_logo)
+            playlist.write_text("#EXTM3U\\n" + current_info + "\\n" + url + "\\n", encoding="utf-8")
+            snapshot.write_text(old_info + "\\n" + url + "\\n", encoding="utf-8")
+            baseline.write_text(json.dumps([{
+                "info": old_info, "url": url, "group": "Backup",
+                "stable": url, "name": "Reliable Backup",
+            }]), encoding="utf-8")
+            with (
+                patch.object(restore, "PLAYLIST", playlist),
+                patch.object(restore, "SNAPSHOT", snapshot),
+                patch.object(restore, "BASELINE", baseline),
+                patch.object(restore, "LOGOS", logos),
+                redirect_stdout(io.StringIO()),
+            ):
+                restore.restore()
+            final = playlist.read_text(encoding="utf-8")
+            self.assertEqual(final.count(url), 1)
+            self.assertIn(new_logo, final)
+            self.assertNotIn(old_logo, final)
+            self.assertIn(new_logo, snapshot.read_text(encoding="utf-8"))
+            self.assertIn(new_logo, json.loads(baseline.read_text(encoding="utf-8"))[0]["info"])
+
     def test_authorized_backup_migration_requires_exact_channel_and_url(self):
         cases = [
             ("7X Punjabi", "https://cdn2.in/7xPunjabihls/live.m3u8", "Indian Music"),
