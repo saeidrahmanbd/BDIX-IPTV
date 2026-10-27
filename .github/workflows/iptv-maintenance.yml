@@ -4,12 +4,10 @@ name: IPTV Playlist Update
 on:
   push:
     branches: [main]
-    # Playlist maintenance is intentionally NOT triggered by EPG-only source, mapping,
-    # generator, or EPG test changes. The dedicated Refresh IPTV EPG workflow owns those.
+    # Playlist maintenance is intentionally triggered by its own maintenance tools,
+    # not by playlist files or specialized discovery/logo workflows. Those workflows
+    # own their generated playlist commits; EPG owns playlist-driven guide refreshes.
     paths:
-      - IPTV-Playlist.m3u
-      - BDIX-Playlist.m3u
-      - International-Playlist.m3u
       - .github/workflows/iptv-maintenance.yml
       - scripts/maintenance_helpers.py
       - scripts/reconcile_playlist_consistency.py
@@ -39,7 +37,6 @@ on:
       - tests/test_maintenance_report_order.py
       - tests/test_logo_authenticity_manifest.py
       - scripts/audit_playlist.py
-      - scripts/discover_bd_in_new_queues.py
       - tests/test_channel_discovery_policy.py
       - scripts/playlist_order_policy.py
       - tests/test_logo_repair_source_hints.py
@@ -159,7 +156,6 @@ jobs:
             python scripts/sort_playlists.py IPTV-Playlist.m3u
             python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
             if grep -Eiq 'group-title="New"' IPTV-Playlist.m3u; then echo '::error::Forbidden staging playlist category detected after normalization.'; exit 1; fi
-            # New Channels/New Backup are active review queues and are allowed only for entries verified as BD/IN.
             python scripts/country_verification.py validate IPTV-Playlist.m3u
             python scripts/maintenance_helpers.py invalidate-bad-logos
             python scripts/migrate_external_logos_fixed.py
@@ -229,18 +225,12 @@ jobs:
             python scripts/record_maintenance_history.py --refresh
             python scripts/generate_dashboard.py
             cp /tmp/bdix-playlist-protected.m3u BDIX-Playlist.m3u
-            # Explicitly permitted metadata-only repair for auxiliary playlists.
-            # The backfill script verifies stream URL inventories remain unchanged.
             python scripts/backfill_cross_playlist_metadata.py
             python scripts/repair_logo_asset_technical_quality.py --fix
             python scripts/reconcile_playlist_consistency.py
             python scripts/reorganize_international_playlist.py
             python scripts/enforce_playlist_attribution.py International-Playlist.m3u
             python scripts/validate_international_playlist.py
-
-            # Public XMLTV generation is handled by the dedicated Refresh IPTV EPG workflow.
-            # This maintenance job does not run a duplicate programme-data fetch or publish pass;
-            # EPG source/mapping changes are intentionally outside this workflow's push trigger.
             python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
             python scripts/audit_playlist.py
             python scripts/pre_publish_gate.py
@@ -260,7 +250,7 @@ jobs:
           exit 1
       - name: Upload maintenance safety reports
         if: always()
-        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: iptv-maintenance-safety-${{ github.run_number }}
           path: |
