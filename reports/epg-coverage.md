@@ -1,14 +1,24 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-27**
+Updated: **2026-10-27**
 
-## Status: BLOCKED — public programme-guide publication is disabled
+## Status: BLOCKED — public guide publication is not authorized yet
 
-Redistribution rights have not been confirmed for every configured programme-data source. The former public XMLTV guide was removed from this repository, and playlists no longer reference it. This report intentionally does not publish legacy coverage percentages, per-channel mapping details, or source-feed schedule counts while publication is disabled.
+The public XMLTV file `epg/epg.xml` is not published. The source inventory still lacks documented public-redistribution approval for every active source. Historical mapping counts are not presented as current coverage.
 
 - Public guide: **not published**
-- EPG redistribution approval: **not confirmed**
-- Coverage percentage: **not reported while publication is disabled**
-- Mapping statistics from previous runs: **historical and not current**
- 
-See `epg/README.md` for the rights-review checklist. Do not restore a guide URL, generate a public guide, or re-enable XMLTV serving until each active source has documented redistribution permission and `EPG_REDISTRIBUTION_APPROVED=true` is deliberately set.
+- Redistribution approval: **not confirmed**
+- Current published coverage percentage: **not available**
+- Previous mapping statistics: **historical diagnostics only**
+
+## Pipeline changes prepared
+
+- The generator and mapping scanner now share a synchronized source list.
+- EPG.PW feeds, which do not have established re-hosting permission, were removed from the active configuration.
+- The official RTV schedule parser is included as a candidate source for exact `RTV.bd` mapping. Actual new coverage must be measured by a successful, authorized refresh; no improvement percentage is claimed yet.
+- Legacy `epgpw:` mapping IDs are removed during the next refresh.
+- A source-level rights register and fail-closed checker now cover active XMLTV feeds, schedule-site scrapers, the supplemental source repository and any configured private feed.
+
+See [`epg/README.md`](../epg/README.md) and [`epg/source-rights-register.csv`](../epg/source-rights-register.csv) for the exact status and re-enable checklist.
+
+**Do not set `EPG_REDISTRIBUTION_APPROVED=true` until every active source is explicitly approved for public redistribution.** A successful technical fetch or a channel-ID match does not grant those rights.
