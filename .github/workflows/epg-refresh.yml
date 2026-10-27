@@ -21,7 +21,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: iptv-epg-writer-v4
+  group: iptv-epg-writer-v5
   cancel-in-progress: true
 
 jobs:
@@ -94,7 +94,13 @@ jobs:
           # The candidate is never allowed to destroy an existing published guide
           # merely because an upstream feed is broken.
           python scripts/epg_coverage.py
-          python scripts/fetch_iptv_org_epg.py
+          # The iptv-org scraper is supplemental; do not let its npm install or
+          # catalogue scraping block the main XMLTV feeds indefinitely.
+          if ! timeout 180s python scripts/fetch_iptv_org_epg.py; then
+            echo "::warning::Optional iptv-org guide timed out or failed; proceeding with the configured XMLTV feeds."
+            printf '%s\n' '<?xml version="1.0" encoding="UTF-8"?>' '<tv generator-info-name="BDIX-IPTV optional iptv-org guide unavailable"></tv>' > /tmp/iptv-org-guide.xml
+          fi
+          test -s /tmp/iptv-org-guide.xml
           python scripts/run_generate_epg.py
           test -s epg/epg.xml
           grep -q '<programme ' epg/epg.xml
