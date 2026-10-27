@@ -135,7 +135,7 @@ Source playlist SHA-256: **{source_sha}**
 | Backup Stream Entries | **{groups.get("Backup",0)}** |
 | IPTV Local Logos | **{logos_value}** |
 | IPTV EPG Programme Coverage | **{epg_coverage_card}** |
-| IPTV EPG Mapping | **{"%.1f%%" % mapct if epg_current else "DISABLED"}** |
+| IPTV EPG Mapping | **{"%.1f%%" % mapct if epg_current else "PENDING"}** |
 | Stream Health Tested | **{health_tested_value}** |
 | Stream Health Failures | **{health_fail_value}** |
 | Persistent Failures | **{health_persist_value}** |
@@ -173,10 +173,10 @@ Source playlist SHA-256: **{source_sha}**
 - **Backup Stream Entries** count playlist rows, not independent CDN/origin infrastructures. Backup independence is reviewed separately.
 
 ## EPG
-- EPG IDs audited: **{india if epg_current else "DISABLED"}**
+- EPG IDs audited: **{india if epg_current else "PENDING — guide not current"}**
 - Mapped: **{epg_map_value}**
 - Current/future programme coverage: **{epg_live_value}**
-- No mapping: **{missing if epg_current else "DISABLED"}**
+- No mapping: **{missing if epg_current else "PENDING — guide not current"}**
 - EPG metric scope: **{epg_scope + (" (verified against all three current playlist inventories)" if epg_current else " (awaiting a valid, fresh published guide)") }**
 - Upstream source-rights reviews remain unresolved; technical guide validation does not itself establish redistribution permission. See `epg/source-rights-register.csv`.
 
