@@ -83,6 +83,9 @@ def source_channels(data):
 
 
 def main():
+    from check_epg_source_rights import require_approved_sources
+    require_approved_sources("EPG mapping augmentation")
+
     if not PLAYLIST.exists() or not MAPPING.exists():
         print("Additional EPG mapping skipped: playlist or mapping file is missing.")
         return
