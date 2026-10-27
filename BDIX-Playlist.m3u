@@ -5,7 +5,7 @@
 # Email: saeidrahman.mkt@gmail.com
 #=================================
 #PLAYLIST-STUDIO-NAME:"BDIX-Playlist"
-#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Test"]
+#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Not Playing"]
 #EXTINF:-1 tvg-id="AnandaTV.bd" tvg-name="Ananda TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ananda-tv.png" tvg-chno="1" channel-id="AnandaTV.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh" xui-id="393",Ananda TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h--ZmKHl8pVTZucnNBlNFCY
 #EXTINF:-1 tvg-id="AsianTV.bd" tvg-name="Asian TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" tvg-chno="60" channel-id="AsianTV.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh" xui-id="387",Asian TV
@@ -268,19 +268,19 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h3gLsr4pXr53C_Ha9NkcB1w
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5YpvjhOm0Mx3nSSzAbC0e8
 #EXTINF:-1 tvg-id="DUPWCHD" tvg-name="US: WILLOW SPORTS HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/us-willow-sports-hd.png" tvg-chno="987" channel-id="DUPWCHD" group-title="Sports" xui-id="435",US: WILLOW SPORTS HD
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h7G6zFWjtRP7-p-r4gz_RJw
-#EXTINF:-1 tvg-id="DeshTV.bd" tvg-name="Bangla Vision" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/banglavision.png" tvg-chno="9002" channel-id="DeshTV.bd" tvg-country="BD" tvg-language="ben" group-title="Test" xui-id="180692",Bangla Vision
+#EXTINF:-1 tvg-id="DeshTV.bd" tvg-name="Desh TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/desh-tv.png" channel-id="DeshTV.bd" tvg-country="BD" tvg-language="ben" group-title="Not Playing" xui-id="180692",Desh TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h0EAkQOueiiCZTbLETkVKTc
-#EXTINF:-1 tvg-id="DBCNews.bd" tvg-name="Bangla Vision" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/banglavision.png" tvg-chno="9001" channel-id="DBCNews.bd" tvg-country="BD" tvg-language="ben" group-title="Test" xui-id="180691",Bangla Vision
+#EXTINF:-1 tvg-id="DBCNews.bd" tvg-name="DBC News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dbc-news.png" channel-id="DBCNews.bd" tvg-country="BD" tvg-language="ben" group-title="Not Playing" xui-id="180691",DBC News
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hwKGioRgBBM_T2ZY3xq5V88
-#EXTINF:-1 tvg-id="EkattorTV.bd" tvg-name="Bangla Vision" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/banglavision.png" tvg-chno="9003" channel-id="EkattorTV.bd" tvg-country="BD" tvg-language="ben" group-title="Test" xui-id="180693",Bangla Vision
+#EXTINF:-1 tvg-id="EkattorTV.bd" tvg-name="Ekattor TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ekattor-tv.png" channel-id="EkattorTV.bd" tvg-country="BD" tvg-language="ben" group-title="Not Playing" xui-id="180693",Ekattor TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hxEWuc54O2yLyNM8DUK1ZDQ
-#EXTINF:-1 tvg-id="News24.bd" tvg-name="Bangla Vision" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/banglavision.png" tvg-chno="9005" channel-id="News24.bd" tvg-country="BD" tvg-language="ben" group-title="Test" xui-id="180690",Bangla Vision
+#EXTINF:-1 tvg-id="News24.bd" tvg-name="News 24" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/news-24.png" channel-id="News24.bd" tvg-country="BD" tvg-language="ben" group-title="Not Playing" xui-id="180690",News 24
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hy0cW31faNC_qsapRrurR9k
-#EXTINF:-1 tvg-id="JamunaTV.bd" tvg-name="Jamuna TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jamuna-tv.png" tvg-chno="9004" channel-id="JamunaTV.bd.alt2" tvg-country="BD" tvg-language="ben" group-title="Test" xui-id="18816",Jamuna TV
+#EXTINF:-1 tvg-id="JamunaTV.bd" tvg-name="Jamuna TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/jamuna-tv.png" channel-id="JamunaTV.bd.alt2" tvg-country="BD" tvg-language="ben" group-title="Not Playing" xui-id="18816",Jamuna TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h-Xm6s-o-nOQZF4Zk2wUQYY
-#EXTINF:-1 tvg-id="StarPlus.in@SD" tvg-name="Star Plus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-plus-3a9c981f97.png" tvg-chno="9007" channel-id="StarPlus.in@SD.alt1" tvg-country="IN" tvg-language="hin" group-title="Test" xui-id="473",Star Plus
+#EXTINF:-1 tvg-id="StarPlus.in@SD" tvg-name="Star Plus" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-plus-3a9c981f97.png" channel-id="StarPlus.in@SD.alt1" tvg-country="IN" tvg-language="hin" group-title="Not Playing" xui-id="473",Star Plus
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hwmu9Ab7aOz-zzAofxVfRJY
-#EXTINF:-1 tvg-id="TSports.bd" tvg-name="T Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/t-sports.png" tvg-chno="9008" channel-id="TSports.bd.alt1" tvg-country="BD" tvg-language="ben" group-title="Test" xui-id="409",T Sports
+#EXTINF:-1 tvg-id="TSports.bd" tvg-name="T Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/t-sports.png" channel-id="TSports.bd.alt1" tvg-country="BD" tvg-language="ben" group-title="Not Playing" xui-id="409",T Sports
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h2Z43Y-5YC3Rn1M5srhtdyc
-#EXTINF:-1 tvg-id="ZeeBangla.in@HD" tvg-name="Zee Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla.png" tvg-chno="9006" channel-id="ZeeBangla.in@HD" tvg-country="IN" tvg-language="ben" group-title="Test" xui-id="2329",Zee Bangla
+#EXTINF:-1 tvg-id="ZeeBangla.in@HD" tvg-name="Zee Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla.png" channel-id="ZeeBangla.in@HD" tvg-country="IN" tvg-language="ben" group-title="Not Playing" xui-id="2329",Zee Bangla
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h3jFPPTCVGq1jXsPhYq-pn4
