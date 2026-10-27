@@ -2,11 +2,11 @@
 
 ## Current status
 
-**The public EPG refresh pipeline is enabled again.** Its output is `epg/epg.xml`, published at:
+**The public EPG refresh pipeline is enabled; the first successful publication is still pending.** The expected output is `epg/epg.xml`, published at:
 
 `https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml`
 
-All three maintained playlists and both Xtream workers now reference this same guide. The first usable guide will be available after the **Refresh IPTV EPG** workflow completes successfully; if source retrieval or quality gates fail, the URL may remain unavailable until a successful run.
+All three maintained playlists and both Xtream workers reference this same URL. The guide file is currently absent, so the raw URL will return 404 until **Refresh IPTV EPG** successfully generates, validates, and commits a non-empty XMLTV guide. Source-fetch or quality-gate failures must be resolved before calling the service functional.
 
 The workflow runs daily at 10:17 Asia/Dhaka and on changes to maintained playlists or EPG inputs. It rebuilds source-to-channel mappings, merges candidate XMLTV feeds, applies freshness and quality checks, and publishes the XMLTV file plus coverage reports.
 
@@ -35,7 +35,7 @@ The additional feeds are candidates, not guaranteed matches. Use reports generat
 - [Source-rights register](source-rights-register.csv)
 - [Current mapping snapshot](../reports/epg-channel-mapping.csv)
 - [Coverage report](../reports/epg-coverage.md)
-- [Published XMLTV guide](epg.xml)
+- [Target public XMLTV URL](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml) (available after the first successful refresh)
 
 ## Troubleshooting
 
