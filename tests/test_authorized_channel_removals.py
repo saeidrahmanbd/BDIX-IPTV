@@ -226,8 +226,8 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             new_logo = restore.RAW_BASE + "reliable-backup.png"
             old_info = f'#EXTINF:-1 tvg-name="Reliable Backup" tvg-logo="{old_logo}" group-title="Backup",Reliable Backup'
             current_info = old_info.replace(old_logo, new_logo)
-            playlist.write_text("#EXTM3U\\n" + current_info + "\\n" + url + "\\n", encoding="utf-8")
-            snapshot.write_text(old_info + "\\n" + url + "\\n", encoding="utf-8")
+            playlist.write_text("#EXTM3U\n" + current_info + "\n" + url + "\n", encoding="utf-8")
+            snapshot.write_text(old_info + "\n" + url + "\n", encoding="utf-8")
             baseline.write_text(json.dumps([{
                 "info": old_info, "url": url, "group": "Backup",
                 "stable": url, "name": "Reliable Backup",
