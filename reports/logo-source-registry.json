@@ -5748,5 +5748,10 @@
     "status": "needs_review",
     "source_url": "https://github.com/shayanline/iptv-iran/blob/main/assets/logos/PersianaFight.fr.png",
     "notes": "Exact channel name and matching tvg-id family found in the public shayanline/iptv-iran playlist; original broadcaster licensing has not been independently verified."
+  },
+  "International-Playlist.m3u|MAX4.hu@SD|MAX4 (1080p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/max4-000468aee1.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Max4_logo.png/960px-Max4_logo.png",
+    "notes": "IPTV-org exact ID: MAX4.hu IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Max4_logo.png/960px-Max4_logo.png"
   }
 }

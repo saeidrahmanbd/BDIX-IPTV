@@ -1488,7 +1488,7 @@ http://88.212.15.50/live/test_filmbox_extra_hd_hun_atk_1200/playlist.m3u8
 http://88.212.7.14/live/fb_premium_hungary/index.m3u8
 #EXTINF:-1 tvg-id="MagyarMoziTV.hu@SD" tvg-country="HU" tvg-content="Movies" group-title="Hungary" tvg-name="Magyar Mozi TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/magyar-mozi-tv-7fab31c3b8.png",Magyar Mozi TV
 http://88.212.7.14/live/mozi/index.m3u8
-#EXTINF:-1 tvg-id="MAX4.hu@SD" tvg-name="MAX4 (1080p)" tvg-country="HU" channel-id="MAX4.hu@SD" group-title="Hungary" tvg-content="Movies",MAX4 (1080p)
+#EXTINF:-1 tvg-id="MAX4.hu@SD" tvg-name="MAX4 (1080p)" tvg-country="HU" channel-id="MAX4.hu@SD" group-title="Hungary" tvg-content="Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/max4-000468aee1.png",MAX4 (1080p)
 http://141.94.193.53:80/MAX4_HD/index.m3u8
 #EXTINF:-1 tvg-id="MoziPlus.hu@SD" tvg-country="HU" tvg-content="Movies" group-title="Hungary" tvg-name="Mozi+" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mozi-plus-9b6769aa9f.png",Mozi+
 http://88.212.7.14/live/mozi_plusz/index.m3u8
@@ -3358,7 +3358,7 @@ http://198.58.104.90:8989/nickelodeon/index.m3u8
 https://stream8.cinerama.uz/1500/playlist.m3u8
 #EXTINF:-1 tvg-id="NickelodeonGlobal.uk@SD" group-title="Kids" tvg-name="Nickelodeon Global" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nickelodeon-global-f61cbaf1ed.png",Nickelodeon Global
 http://103.151.60.162:2122/play/a017/index.m3u8?hls
-#EXTINF:-1 tvg-id="NickOnline.br@HD" tvg-country="BR" group-title="Kids" tvg-name="NickOnline" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/nickonline-hd-720p.png",NickOnline
+#EXTINF:-1 tvg-id="NickOnline.br@HD" tvg-country="BR" group-title="Kids" tvg-name="NickOnline",NickOnline
 https://x1colegal.com/hls/stream.m3u8
 #EXTINF:-1 tvg-id="Nicktoons.cz@SD" tvg-country="CZ" group-title="Kids" tvg-name="Nicktoons (Czech Republic)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nicktoons-czech-republic-8af9304b51.png",Nicktoons (Czech Republic)
 http://88.212.15.50/live/test_nicktoons/playlist.m3u8
