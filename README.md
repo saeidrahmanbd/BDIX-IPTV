@@ -197,7 +197,7 @@ Automated maintenance covers:
 
 ## 📈 Reports
 
-> **Freshness note:** reports and the SVG dashboard are generated snapshots, not live status pages. Check each report's `Generated` timestamp and source playlist SHA-256. Several snapshots generated on 2026-10-23 predate subsequent playlist changes and are marked historical until regenerated successfully.
+> **Freshness note:** reports and the SVG dashboard are generated snapshots, not live status pages. Check each report's `Generated` timestamp and any source SHA-256 it provides; where a fingerprint is absent, compare the reported playlist counts with the current files. Several snapshots generated on 2026-10-23 predate subsequent playlist changes and are marked historical until regenerated successfully.
 
 | Report | |
 |---|---|
