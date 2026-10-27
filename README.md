@@ -159,7 +159,7 @@ Automated workflows generate playlist audits, maintenance summaries and stream-h
 
 ### EPG status
 
-Public XMLTV/EPG publication is disabled while redistribution rights for programme data are reviewed. A public guide will remain unavailable until the relevant rights are confirmed.
+Public XMLTV/EPG publication remains disabled pending documented redistribution rights for every active source. The mapping pipeline now includes the official RTV schedule parser and removes restricted legacy EPG.PW feeds. See the [source-rights register](epg/source-rights-register.csv), [EPG status and re-enable steps](epg/README.md), and [coverage report](reports/epg-coverage.md).
 
 ---
 
