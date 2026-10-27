@@ -6,6 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import discover_international_channels as discovery
+import reorganize_international_playlist as reorg
 
 
 class InternationalDiscoveryPolicyTests(unittest.TestCase):
@@ -30,6 +31,26 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertEqual(self.classify("V2BEAT", "Music", "IN", "V2BEAT.in")[0], "Indian Music")
         self.assertEqual(self.classify("Cinema Bangla", "Movies", "BD", "CinemaBangla.bd")[0], "Bangladesh")
         self.assertEqual(self.classify("World Music", "Music", "PK", "WorldMusic.pk")[0], "Pakistani")
+
+    def test_pakistani_movie_music_entries_keep_content_tag_for_validator(self):
+        source = (
+            '#EXTINF:-1 tvg-id="8xm.pk@sd" tvg-name="8XM" '
+            'group-title="Pakistani",8XM'
+        )
+        attrs = reorg.attrs(source)
+        group, kind, reason = reorg.classify(attrs, "8XM", "Pakistani", "PK")
+        self.assertEqual((group, kind, reason), ("Pakistani", "music", None))
+
+        rendered = reorg.set_extinf(
+            [source, "https://example.invalid/8xm.m3u8"],
+            "8XM",
+            group,
+            "PK",
+            kind,
+            keep_logo=True,
+        )
+        self.assertIn('tvg-content="Music"', rendered)
+        self.assertIn('group-title="Pakistani"', rendered)
 
     def test_general_entertainment_or_other_source_categories_are_rejected_even_with_movie_music_names(self):
         for group in ("General", "Entertainment", "Variety", "Series", "Lifestyle", "Education", "International"):

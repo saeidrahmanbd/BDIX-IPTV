@@ -223,7 +223,9 @@ def set_extinf(block, name, group, country, content_kind, keep_logo, is_queue=Fa
         fields.append(f'tvg-logo="{original}"')
     if country in discovery.ISO_CODES:
         fields.append(f'tvg-country="{country}"')
-    if content_kind and (is_queue or group not in FIXED + TAIL):
+    # The Pakistani primary group, like country-specific movie/music queues,
+    # is restricted to dedicated Movies/Music channels; retain its content tag.
+    if content_kind and (is_queue or group == "Pakistani" or group not in FIXED + TAIL):
         tag = "Movies" if content_kind == "movie" else "Music"
         fields.append(f'tvg-content="{tag}"')
     fields.append(f'group-title="{group}"')
