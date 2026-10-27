@@ -93,6 +93,7 @@ jobs:
             scripts/maintenance_helpers.py \
             scripts/reconcile_playlist_consistency.py \
             scripts/epg_publish_gate_v2.py \
+            scripts/validate_epg_freshness.py \
             scripts/restore_protected_review.py \
             scripts/audit_playlist.py \
             scripts/playlist_order_policy.py \
@@ -121,6 +122,7 @@ jobs:
       - name: Run playlist metadata and report freshness tests
         run: |
           python -m unittest discover -s tests -p 'test_report_freshness.py'
+          python -m unittest discover -s tests -p 'test_pre_publish_gate_logo_paths.py'
           python -m unittest discover -s tests -p 'test_authorized_channel_removals.py'
           python -m unittest discover -s tests -p 'test_maintenance_report_order.py'
           python -m unittest discover -s tests -p 'test_metadata_backfill.py'
@@ -178,25 +180,6 @@ jobs:
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
             python scripts/stream_health.py
             python scripts/report_iptv_fragile_streams.py
-            python scripts/epg_coverage.py
-            python scripts/fetch_iptv_org_epg.py
-            python scripts/run_generate_epg.py
-            test -s epg/epg.xml
-            grep -q '<programme ' epg/epg.xml
-            cp epg/epg.xml /tmp/bdix-epg-generated.xml
-            set +e
-            python scripts/epg_publish_gate_v2.py
-            EPG_GATE_STATUS=$?
-            set -e
-            if [ "$EPG_GATE_STATUS" -ne 0 ]; then
-              echo '::warning::EPG publish gate blocked this generated guide; retaining the previous known-good epg/epg.xml.'
-              if [ -s /tmp/bdix-epg-previous.xml ] && grep -q '<programme ' /tmp/bdix-epg-previous.xml; then cp /tmp/bdix-epg-previous.xml epg/epg.xml; else echo '::error::No valid previous EPG is available after a publish-gate failure.'; exit 1; fi
-            else
-              echo 'EPG publish gate passed; accepting newly generated guide.'
-            fi
-            cp epg/epg.xml /tmp/bdix-epg-publish.xml
-            python scripts/sync_epg_worker_map.py
-            python scripts/epg_coverage.py
             set +e
             python scripts/audit_playlist.py
             AUDIT_STATUS=$?
@@ -254,7 +237,6 @@ jobs:
             fi
             python scripts/record_maintenance_history.py --refresh
             python scripts/generate_dashboard.py
-            cp /tmp/bdix-epg-publish.xml epg/epg.xml
             cp /tmp/bdix-playlist-protected.m3u BDIX-Playlist.m3u
             # Explicitly permitted metadata-only repair for auxiliary playlists.
             # The backfill script verifies stream URL inventories remain unchanged.
@@ -264,6 +246,38 @@ jobs:
             python scripts/reorganize_international_playlist.py
             python scripts/enforce_playlist_attribution.py International-Playlist.m3u
             python scripts/validate_international_playlist.py
+
+            # Build the shared EPG only after every playlist's final metadata and ordering changes.
+            python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
+            python scripts/epg_coverage.py
+            python scripts/fetch_iptv_org_epg.py
+            python scripts/run_generate_epg.py
+            test -s epg/epg.xml
+            grep -q '<programme ' epg/epg.xml
+            cp epg/epg.xml /tmp/bdix-epg-generated.xml
+            set +e
+            python scripts/epg_publish_gate_v2.py
+            EPG_GATE_STATUS=$?
+            python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md
+            EPG_FRESHNESS_STATUS=$?
+            if [ "$EPG_FRESHNESS_STATUS" -ne 0 ]; then EPG_GATE_STATUS=1; fi
+            set -e
+            if [ "$EPG_GATE_STATUS" -ne 0 ]; then
+              echo '::warning::EPG quality/freshness gate blocked this generated guide; retaining the previous known-good epg/epg.xml.'
+              if [ -s /tmp/bdix-epg-previous.xml ] && grep -q '<programme ' /tmp/bdix-epg-previous.xml; then
+                cp /tmp/bdix-epg-previous.xml epg/epg.xml
+                python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md || true
+              else
+                echo '::error::No valid previous EPG is available after a publish-gate failure.'
+                exit 1
+              fi
+            else
+              echo 'EPG quality and freshness gates passed; accepting newly generated guide.'
+            fi
+            cp epg/epg.xml /tmp/bdix-epg-publish.xml
+            python scripts/sync_epg_worker_map.py
+            python scripts/epg_coverage.py
+
             python scripts/audit_playlist.py
             python scripts/pre_publish_gate.py
             python scripts/epg_coverage.py
@@ -277,7 +291,6 @@ jobs:
             grep -q '<programme ' epg/epg.xml
             echo "Validated EPG working-tree bytes: $(wc -c < epg/epg.xml)"
             echo "Validated EPG working-tree sha256: $(sha256sum epg/epg.xml | awk '{print $1}')"
-            python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
             git add IPTV-Playlist.m3u BDIX-Playlist.m3u International-Playlist.m3u reports/ logos/ assets/dashboard.svg
             git add -f epg/epg.xml
             STAGED_EPG_BYTES="$(git cat-file -s :epg/epg.xml)"

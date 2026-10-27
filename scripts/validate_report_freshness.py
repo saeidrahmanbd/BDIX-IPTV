@@ -22,6 +22,7 @@ SINGLE_PLAYLIST_REPORTS = {
     "reports/playlist-logo-repair-results.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256",)),
 }
 SHARED_EPG_REPORTS = ("reports/epg-coverage.md", "reports/epg-three-playlist-audit.md", "reports/epg-unmapped-audit.md", "reports/logo-asset-quality-audit.md")
+TIMESTAMP_ONLY_REPORTS = ("reports/epg-publish-freshness.md",)
 PROVENANCE_REPORT = "reports/logo-provenance-review.md"
 CROSS_PLAYLIST_METADATA_REPORT = "reports/cross-playlist-metadata-backfill.md"
 STREAM_HEALTH_REPORT = "reports/stream-health.md"
@@ -57,7 +58,7 @@ def parse_timestamp(value: str):
 
 
 def report_timestamp(text: str):
-    match = re.search(r"(?im)^_?(?:Generated|Last generated):\s*\*\*([^*]+)\*\*", text)
+    match = re.search(r"(?im)^_?(?:Generated|Last generated|Checked):\s*\*\*([^*]+)\*\*", text)
     return parse_timestamp(match.group(1)) if match else None
 
 
@@ -94,7 +95,7 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
         hashes[name] = sha256(path)
 
     errors = []
-    report_paths = list(SINGLE_PLAYLIST_REPORTS) + list(SHARED_EPG_REPORTS) + [PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT]
+    report_paths = list(SINGLE_PLAYLIST_REPORTS) + list(SHARED_EPG_REPORTS) + list(TIMESTAMP_ONLY_REPORTS) + [PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT]
     report_paths.append(STREAM_HEALTH_REPORT)
 
     for relative in report_paths:

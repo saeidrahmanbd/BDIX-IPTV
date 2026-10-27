@@ -5,6 +5,7 @@ import hashlib,re,subprocess
 from collections import Counter,defaultdict
 from datetime import datetime,timezone
 from pathlib import Path
+from urllib.parse import unquote, urlsplit
 from country_verification import reference_from_playlists,verify_country
 from logo_asset_naming import is_blocked_logo_basename
 from restore_protected_review import authorized_backup_migration_target, is_authorized_removal
@@ -19,6 +20,35 @@ def parse(text):
         if line.startswith("#EXTINF:"): cur=(line,attrs(line))
         elif cur and line.strip().startswith(("http://","https://")): out.append((cur[0],cur[1],line.strip())); cur=None
     return out
+def referenced_logo_relative_path(logo):
+    """Return a safe repository-relative asset path, preserving nested logo folders."""
+    if not logo.startswith(RAW_BASE):
+        return None
+    raw_path = urlsplit(logo).path
+    marker = "/main/logos/"
+    if marker not in raw_path:
+        return None
+    relative = unquote(raw_path.split(marker, 1)[1]).lstrip("/")
+    if not relative:
+        return None
+    candidate = Path(relative)
+    if candidate.is_absolute() or ".." in candidate.parts:
+        return None
+    return candidate
+
+
+def referenced_logo_file(logo, logos_root=Path("logos")):
+    """Resolve a logo URL under logos_root without permitting path traversal."""
+    relative = referenced_logo_relative_path(logo)
+    if relative is None:
+        return None
+    root = Path(logos_root).resolve()
+    target = (root / relative).resolve()
+    if target == root or root not in target.parents:
+        return None
+    return target
+
+
 def approved_removal(url):
     u=url.lower(); return bool(re.search(r'https?://[^/]*vods?\d*\.[^/]+/',u) or re.search(r'/vod(?:/|$)',u) or 'api.toonamiaftermath.com:3000/movies/' in u or 'dvltv.cc/play/' in u or 'tvsen5.aynaott.com/tk2bndfsdfsdf/' in u)
 def logo_audit(entries):
@@ -84,12 +114,14 @@ def main():
     for _,a,_ in current:
         logo=a.get("tvg-logo","").strip()
         if logo.startswith(RAW_BASE):
-            fn=Path(logo.split("?",1)[0]).name
-            if not (Path("logos")/fn).is_file():
+            relative=referenced_logo_relative_path(logo)
+            logo_file=referenced_logo_file(logo)
+            if relative is None or logo_file is None or not logo_file.is_file():
                 name=a.get("tvg-name","")
                 group=a.get("group-title","")
+                report_path=relative.as_posix() if relative is not None else Path(urlsplit(logo).path).name
                 logo_missing_files.append(name)
-                logo_missing_file_details.append((name,group,fn))
+                logo_missing_file_details.append((name,group,report_path))
     issues=[]
     if dup_urls: issues.append(f"duplicate stream URLs: {len(dup_urls)}")
     if removed: issues.append(f"unapproved primary streams removed: {len(removed)}")
