@@ -11,7 +11,7 @@ from official_epg_sources import (
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
-from generate_epg import ALWAYS_DROP_GENERIC_TITLES, is_slot_placeholder, normalized_title
+from generate_epg import ALWAYS_DROP_GENERIC_TITLES, is_slot_placeholder, normalized_title, sources_with_mapped_channels
 
 
 def is_filler_title(text):
@@ -478,7 +478,10 @@ def main():
     require_approved_sources("EPG mapping and coverage discovery")
 
     channels=parse_playlist(); previous=load_previous(); source_data=[]; source_status=[]
-    source_urls = configured_sources()
+    # Use the existing mapping snapshot to avoid parsing feeds that cannot
+    # currently contribute a matched source ID. New channel/source discovery is
+    # still handled by the targeted supplemental and iptv-org augmentation steps.
+    source_urls = sources_with_mapped_channels(configured_sources())
     source_data, source_status = fetch_all_sources(source_urls)
     rows=[]
     for ch in channels:
