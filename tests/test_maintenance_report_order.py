@@ -1,4 +1,4 @@
-"""Regression tests for maintenance order and enabled public EPG refresh."""
+"""Regression tests for maintenance order and workflow ownership boundaries."""
 import sys
 import unittest
 from pathlib import Path
@@ -17,9 +17,10 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertTrue(should_check_alphabetical_order("Bangladesh"))
         self.assertTrue(should_check_alphabetical_order("Indian Music"))
 
-    def test_public_epg_generation_is_enabled_with_explicit_owner_override(self):
+    def test_public_epg_generation_is_owned_by_epg_refresh_workflow(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
-        self.assertIn("EPG_ALLOW_UNVERIFIED_SOURCES", workflow)
+        # Playlist maintenance must not own or duplicate EPG generation.
+        self.assertNotIn("EPG_ALLOW_UNVERIFIED_SOURCES", workflow)
         self.assertNotIn("M3U4U_XMLTV_URL", workflow)
         self.assertNotIn("python scripts/run_generate_epg.py", workflow)
         self.assertNotIn("python scripts/epg_coverage.py", workflow)
@@ -27,6 +28,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertNotIn("git add -f epg/epg.xml", workflow)
 
         refresh = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
+        # The dedicated EPG workflow owns the public guide and its source policy.
         self.assertNotIn("vars.EPG_REDISTRIBUTION_APPROVED == 'true'", refresh)
         self.assertIn("EPG_ALLOW_UNVERIFIED_SOURCES: 'true'", refresh)
         self.assertIn("python scripts/run_generate_epg.py", refresh)
