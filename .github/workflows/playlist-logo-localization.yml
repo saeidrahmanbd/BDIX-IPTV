@@ -44,6 +44,11 @@ jobs:
             echo "::notice::Skipping superseded queued logo localization run; a newer workflow definition is on main. No playlist files were changed."
             exit 0
           fi
+          CURRENT_MAIN_SHA="$(git rev-parse FETCH_HEAD)"
+          if [[ "${GITHUB_EVENT_NAME}" == "push" && "${GITHUB_SHA}" != "$CURRENT_MAIN_SHA" ]]; then
+            echo "::notice::Skipping superseded queued logo localization run; a newer commit on main contains the current playlist inventory. No playlist files were changed."
+            exit 0
+          fi
       - name: Set up Python
         uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
