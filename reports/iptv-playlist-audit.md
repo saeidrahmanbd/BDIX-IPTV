@@ -1,6 +1,6 @@
 # IPTV Playlist Audit
 
-> Snapshot note: metrics below predate the current discovery-queue exclusions. The automated maintenance workflow will regenerate this audit against the current playlist revision.
+> ⚠️ **STALE SNAPSHOT — NOT CURRENT AUDIT RESULTS.** Generated 2026-10-23 against an older playlist fingerprint (1,265 entries). The automated workflow must regenerate this report against the current revision before its counts can be relied upon.
 Generated: **2026-10-23T08:44:18.009168+00:00**
 Source playlist SHA-256: **0ce6e1a9799733fae3febaa075d00c8c19a71f5ec225525a6559bbdcdc7ad3d5**
 
