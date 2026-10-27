@@ -275,6 +275,9 @@ def selected_catalogue_texts():
 
 
 def main():
+    from check_epg_source_rights import require_approved_sources
+    require_approved_sources("IPTV-EPG supplemental fetch")
+
     targets = read_active_targets()
     target_names_by_id = read_active_target_names()
     if not targets:
