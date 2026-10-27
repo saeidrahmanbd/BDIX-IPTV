@@ -1,9 +1,7 @@
 name: Refresh IPTV EPG
 
 on:
-  # Main IPTV maintenance refreshes EPG after playlist changes; this workflow is scheduled/manual only.
-  schedule:
-    - cron: '47 23 * * *' # 05:47 Asia/Dhaka
+  # Manual recovery only. The daily maintenance job now builds EPG after final playlist updates.
   workflow_dispatch:
 
 permissions:
