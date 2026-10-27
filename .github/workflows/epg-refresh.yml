@@ -1,6 +1,19 @@
 name: Refresh IPTV EPG
 
 on:
+  # Refresh the EPG workflow when maintained playlist inventories or EPG inputs change.
+  # The job-level redistribution-rights gate below remains mandatory.
+  push:
+    branches:
+      - main
+    paths:
+      - 'IPTV-Playlist.m3u'
+      - 'BDIX-Playlist.m3u'
+      - 'International-Playlist.m3u'
+      - 'reports/epg-channel-mapping.csv'
+      - 'scripts/*epg*.py'
+      - 'scripts/official_epg_sources.py'
+      - 'docs/requirements.txt'
   # Run after daily maintenance; the freshness guard skips duplicate work if maintenance succeeded.
   schedule:
     - cron: '17 4 * * *' # 10:17 Asia/Dhaka, two hours after scheduled maintenance
