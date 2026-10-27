@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="980" height="470" viewBox="0 0 980 470" role="img" aria-labelledby="title desc">
 <title id="title">BDIX-IPTV Project Dashboard</title>
-<desc id="desc">Current playlist inventory and EPG publication status. Public programme-guide publication is disabled pending confirmation of redistribution rights.</desc>
+<desc id="desc">Current playlist inventory and EPG publication status. EPG refresh is enabled; first validated guide publication is pending.</desc>
 <rect width="980" height="470" rx="22" fill="#f8fafc"/>
 <rect width="980" height="100" rx="22" fill="#111827"/>
 <text x="38" y="44" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#ffffff">BDIX-IPTV · PROJECT DASHBOARD</text>
@@ -17,12 +17,12 @@
   <text x="516" y="203" font-size="31" font-weight="700">3,067</text>
   <rect x="728" y="126" width="220" height="105" rx="16" fill="#fff7ed" stroke="#fdba74"/>
   <text x="748" y="159" font-size="14" fill="#9a3412">Public EPG</text>
-  <text x="748" y="200" font-size="23" font-weight="700" fill="#9a3412">Disabled</text>
+  <text x="748" y="200" font-size="23" font-weight="700" fill="#9a3412">Pending</text>
   <rect x="32" y="254" width="916" height="142" rx="16" fill="#ffffff" stroke="#d1d5db"/>
   <text x="54" y="287" font-size="18" font-weight="700">Programme-guide publication status</text>
-  <text x="54" y="319" font-size="15">Redistribution rights have not been confirmed for every source feed.</text>
+  <text x="54" y="319" font-size="15">The guide file is awaiting a successful fresh generation and validation.</text>
   <text x="54" y="344" font-size="15">The public XMLTV file was removed and playlist headers no longer reference it.</text>
-  <text x="54" y="369" font-size="15">Historical EPG coverage percentages are intentionally withheld until rights review and a new approved run.</text>
+  <text x="54" y="369" font-size="15">Current coverage is withheld until the generated XMLTV guide passes freshness and quality checks.</text>
   <text x="32" y="435" font-size="12" fill="#6b7280">Playlist counts are an inventory snapshot, not a claim that streams are reachable or that guide data is licensed.</text>
 </g>
 </svg>
