@@ -24,7 +24,7 @@ Aruba,Wavez FM,WavezFM.aw@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/na
 Aruba,X 102.7 FM,X1027FM.aw@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,ATN Bangla,ATNBangla.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,ATN Bangla,ATNBangla.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Bangladesh,ATN Bangla UK,ATNBanglaUK.uk,6753,https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Bangladesh,ATN Bangla UK,ATNBanglaUK.uk,6753,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,ATN News,ATNNews.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Ananda TV,AnandaTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bangladesh,Asian TV,AsianTV.bd,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -571,6 +571,24 @@ Germany,Pluto TV Film Romantici,PlutoTVFilmRomantici.de@IT,,,NO_GUIDE_HIT,Auto-m
 Germany,Pluto TV Film Storici,PlutoTVFilmStorici.de@IT,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Germany,Pluto TV Film Thriller,PlutoTVFilmThriller.de@IT,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Germany,Pluto TV Haialarm,PlutoTVHaialarm.de@DACH,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Invasion Alien,PlutoTVInvasionAlien.de@ES,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Kult Comedies,PlutoTVKultComedies.de@DACH,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Kultfilme,PlutoTVKultfilme.de@DACH,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Legami Letali,PlutoTVLegamiLetali.de@IT,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Movies,PlutoTVMovies.de@DACH,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Movies GB,PlutoTVMovies.de@GB,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Notti di Passione,PlutoTVNottidiPassione.de@IT,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Notti di Sangue,PlutoTVNottidiSangue.de@IT,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Notti di Terrore,PlutoTVNottidiTerrore.de@IT,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Psycho,PlutoTVPsycho.de@ES,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Serie Sci-Fi,PlutoTVSerieSciFi.de@IT,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Star Trek (Germany),PlutoTVStarTrek.de@DACH,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Toto,PlutoTVToto.de@IT,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Weihnachten im Sommer,PlutoTVWeihnachtenimSommer.de@DACH,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Western,PlutoTVWestern.de@DACH,WesternTV.pluto,https://iptv-epg.org/files/epg-us.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Western ES,PlutoTVWestern.de@ES,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Western IT,PlutoTVWestern.de@IT,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,Pluto TV Westerns (Germany),PlutoTVWesterns.de@GB,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Germany,TV Bozsike Hamburg,TVBozsikeHamburgHD.de@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Germany,Volksmusik TV,VolksmusikTV.de@SD,VolksmusikTV.de,https://iptv-epg.org/files/epg-de.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Germany,XITE Hits Germany,XITEHits.nl@Germany,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -927,7 +945,7 @@ Indian Movies,Movie Punjab,MoviePunjab.in@SD,,,NO_GUIDE_HIT,Auto-maintained; ver
 Indian Movies,Movies Now,MoviesNow.in@HD,MOVIES.NOW.in,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/jioepg.xml.gz | https://avkb.short.gy/tsepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,NH BollyFlix,NHBollyFlix.in,IN46000140Q,https://i.mjh.nz/SamsungTVPlus/in.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/jioepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,NH BollyFlix,NHBollyFlix.in@HD,IN46000140Q,https://i.mjh.nz/SamsungTVPlus/in.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/jioepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-Indian Movies,NH BollyGold,NHBollyGold.in@HD,RUNNTV_LIVECHANNEL_39,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/jioepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Indian Movies,NH BollyGold,NHBollyGold.in@HD,jtv3338,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/jioepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,NH Tamil Gold,NHTamilGold.in,IN400061DB,https://i.mjh.nz/SamsungTVPlus/in.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,NH Tamil Gold,NHTamilGold.in@HD,IN400061DB,https://i.mjh.nz/SamsungTVPlus/in.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Indian Movies,Oscar Movies Bhojpuri,OscarMoviesBhojpuri.in@SD,OscarMoviesBhojpuri.in,https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz | https://iptv-epg.org/files/epg-in.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/tsepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -1730,10 +1748,10 @@ Religious,Al Sunnah TV,custom.al-sunnah-tv,,,NO_GUIDE_HIT,Auto-maintained; verif
 Religious,Al-Zahra TV Turkic,AlZahraTVTurkic.sa,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Religious,Bahrain Quran,BahrainQuran.bh,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Religious,Channel WIN,ChannelWIN.in@SD,Channel.Win.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://iptv-epg.org/files/epg-in.xml.gz | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/jioepg.xml.gz | https://avkb.short.gy/tsepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-Religious,Deen TV,DeenTV.uk,DeenTV.uk,https://iptv-epg.org/files/epg-gb.xml.gz | https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml | https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz | https://www.open-epg.com/files/unitedkingdom.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Religious,Deen TV,DeenTV.uk,DeenTV.uk,https://iptv-epg.org/files/epg-gb.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz | https://www.open-epg.com/files/unitedkingdom.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Religious,Dua Channel,DuaChannel.sa,Dua.Channel.ae,https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Religious,EMAN TV,EmanTv.iq,EmanChannel.uk,https://iptv-epg.org/files/epg-gb.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz | https://www.open-epg.com/files/unitedkingdom.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-Religious,Iqra Bangla,IqraBangla.uk,3914,https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml | https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Religious,Iqra Bangla,IqraBangla.uk,IQRA.BANGLA.uk,https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Religious,Iqraa TV,IqraaTV,Iqraa.TV.fr,https://iptv-epg.org/files/epg-fr.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Religious,Islam TV Urdu,custom.islam-tv-urdu,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Religious,Islamic TV,223000,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -2200,6 +2218,23 @@ Sweden,Pluto TV Horror (Sweden),PlutoTVHorror.se@SE,,,NO_GUIDE_HIT,Auto-maintain
 Sweden,Pluto TV Horror (Sweden) DK,PlutoTVHorror.se@DK,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Sweden,Pluto TV Horror (Sweden) NO,PlutoTVHorror.se@NO,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Sweden,Pluto TV Humor (Sweden),PlutoTVHumor.se@DK,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV John Wayne,PlutoTVJohnWayne.se@SE,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV John Wayne DK,PlutoTVJohnWayne.se@DK,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV John Wayne NO,PlutoTVJohnWayne.se@NO,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV Komedi,PlutoTVKomedi.se@SE,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV Komedie,PlutoTVKomedie.se@NO,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV Kultfilm,PlutoTVKultfilm.se@DK,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV Kultfilmer,PlutoTVKultfilmer.se@SE,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV Kultfilmer NO,PlutoTVKultfilmer.se@NO,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV Paranormal (Sweden),PlutoTVParanormal.se@SE,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV Paranormal (Sweden) DK,PlutoTVParanormal.se@DK,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV Romantik,PlutoTVRomantik.se@SE,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV Romantik DK,PlutoTVRomantik.se@DK,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV Romantikk,PlutoTVRomantikk.se@NO,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV Sci-Fi (Sweden),PlutoTVSciFi.se@SE,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV Sci-Fi (Sweden) DK,PlutoTVSciFi.se@DK,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV Sci-Fi (Sweden) NO,PlutoTVSciFi.se@NO,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Sweden,Pluto TV Star Trek (Sweden),PlutoTVStarTrek.se@DK,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Turkey,Dream Turk,DreamTurk.tr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Turkey,GEM Pixel,GEMPixel.tr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Turkey,Grand Cinema,GrandCinema.tr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -2422,6 +2457,21 @@ United States,Pluto TV Filmes de Luta,PlutoTVFilmesdeLuta.us@BR,,,NO_GUIDE_HIT,A
 United States,Pluto TV Franchise Favorites,PlutoTVFranchiseFavorites.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,Pluto TV Horror (United States),PlutoTVHorror.us@US,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,Pluto TV Horror (United States) CA,PlutoTVHorror.us@CA,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,Pluto TV Icons,PlutoTVIcons.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,Pluto TV Netmovies,PlutoTVNetmovies.us@BR,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,Pluto TV Nuestro Cine,PlutoTVNuestroCine.us@LatAm,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,Pluto TV Reaction,PlutoTVReaction.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,Pluto TV Retro Action Movies,PlutoTVRetroActionMovies.us@CA,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,Pluto TV Romance,PlutoTVRomance.us@US,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,Pluto TV Sci-Fi (United States),PlutoTVSciFi.us@US,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,Pluto TV Sci-Fi (United States) CA,PlutoTVSciFi.us@CA,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,Pluto TV Sci-Fi (United States) LatAm,PlutoTVSciFi.us@LatAm,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,Pluto TV Spotlight,PlutoTVSpotlight.us@SD,PlutoTVSpotlight.us,https://iptv-epg.org/files/epg-us.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+United States,Pluto TV Staff Picks,PlutoTVStaffPicks.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,Pluto TV Terror,PlutoTVTerror.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,Pluto TV Terror Trash,PlutoTVTerrorTrash.us@BR,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,Pluto TV Thrillers,PlutoTVThrillers.us@US,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,Pluto TV Trending Now,PlutoTVTrendingNow.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,RJTV,RJTV.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,Runtime Espanol,RuntimeEspanol.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,SYFY,SYFY.us@East,Syfy.HD.us2,https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
