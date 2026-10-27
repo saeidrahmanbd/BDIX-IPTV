@@ -250,8 +250,9 @@ jobs:
             python scripts/enforce_playlist_attribution.py International-Playlist.m3u
             python scripts/validate_international_playlist.py
 
-            # Public XMLTV publication is intentionally disabled until every source's redistribution rights are documented.
-            # Do not fetch programme data or re-add epg/epg.xml while EPG_REDISTRIBUTION_APPROVED is unset/false.
+            # Public XMLTV generation is handled by the dedicated Refresh IPTV EPG workflow.
+            # This maintenance job does not run a duplicate programme-data fetch or publish pass;
+            # unresolved upstream source-rights reviews remain recorded in epg/source-rights-register.csv.
             python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
             python scripts/audit_playlist.py
             python scripts/pre_publish_gate.py
