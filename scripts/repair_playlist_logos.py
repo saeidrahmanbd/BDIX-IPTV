@@ -55,6 +55,7 @@ BAD_ASSETS = {
     "zee-tv.png",
     "tom-and-jerry.png",
     "arirang-tv.png",  # KBS WORLD wordmark under an Arirang filename.
+    "16-a308b78988.png",  # Provenance maps this image to Channel16.ru; it was reused on unrelated channels.
 }
 GENERIC_ASSETS = {
     "generated-fallback-btv-news.png",
@@ -325,6 +326,25 @@ def clean_channel(value):
 
 def norm_key(value):
     return source.norm(clean_channel(value))
+
+
+ADULT_BACKUP_CHANNEL_NAMES = (
+    "Evil Angel", "Pink Erotic 2", "Pink Erotic 3", "Pink Erotic 5", "Pink Erotic 7", "Pink Erotic 8",
+)
+ADULT_BACKUP_CHANNEL_KEYS = {norm_key(name) for name in ADULT_BACKUP_CHANNEL_NAMES}
+
+
+def is_adult_playlist_entry(playlist, group_name, channel_id, channel_key):
+    """Identify all adult entries in the International playlist, including mislabeled backup rows."""
+    if playlist != "International-Playlist.m3u":
+        return False
+    group_key = str(group_name or "").strip().casefold()
+    id_key = str(channel_id or "").strip().casefold()
+    return (
+        group_key in {"adult", "xxx", "adult movies"}
+        or ".xxx" in id_key
+        or str(channel_key or "").casefold() in ADULT_BACKUP_CHANNEL_KEYS
+    )
 
 
 def file_is_valid(path):
@@ -768,8 +788,8 @@ def main():
             # The user explicitly exempts Adult entries from logo repair. The
             # custom.xxx identity also marks adult material when it sits in Backups.
             # Preserve these rows byte-for-byte, including their logo attributes.
-            is_adult_entry = group_name == "adult" or ".xxx" in channel_id
-            if playlist == "International-Playlist.m3u" and is_adult_entry:
+            is_adult_entry = is_adult_playlist_entry(playlist, group_name, channel_id, key)
+            if is_adult_entry:
                 adult_ignored += 1
                 output.append(line)
                 continue
@@ -895,10 +915,11 @@ def main():
         for item in output:
             if not item.startswith("#EXTINF:"):
                 continue
-            meta, _ = parse_extinf(item)
+            meta, meta_label = parse_extinf(item)
             meta_group = (meta.get("group-title") or "").strip().casefold()
             meta_id = (meta.get("tvg-id") or meta.get("channel-id") or "").strip().casefold()
-            if playlist == "International-Playlist.m3u" and (meta_group == "adult" or ".xxx" in meta_id):
+            meta_key = norm_key(meta_label or meta.get("tvg-name", ""))
+            if is_adult_playlist_entry(playlist, meta_group, meta_id, meta_key):
                 continue
             logo = (meta.get("tvg-logo") or "").strip()
             name = Path(urllib.parse.urlparse(logo).path).name.casefold() if logo else ""

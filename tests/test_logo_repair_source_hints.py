@@ -22,6 +22,23 @@ class LogoRepairSourceTests(unittest.TestCase):
         self.assertIn("zainabiachannel.co.in", hint["license_url"])
         self.assertIn("shialivetv.com", hint["url"])
 
+    def test_channel16_ru_asset_is_quarantined_from_general_reuse(self):
+        self.assertIn("16-a308b78988.png", logo_repair.BAD_ASSETS)
+
+    def test_adult_backup_channels_are_exempt_from_logo_repair(self):
+        for name in ("Evil Angel", "Pink Erotic 2", "Pink Erotic 3", "Pink Erotic 5", "Pink Erotic 7", "Pink Erotic 8"):
+            with self.subTest(channel=name):
+                self.assertTrue(
+                    logo_repair.is_adult_playlist_entry(
+                        "International-Playlist.m3u", "Backup", "custom." + logo_repair.norm_key(name), logo_repair.norm_key(name)
+                    )
+                )
+        self.assertFalse(
+            logo_repair.is_adult_playlist_entry(
+                "International-Playlist.m3u", "Backup", "custom.news", logo_repair.norm_key("MBC Mood")
+            )
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

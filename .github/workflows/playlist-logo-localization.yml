@@ -77,7 +77,10 @@ jobs:
           python - <<'PY'
           import json
           import re
+          import sys
           from pathlib import Path
+          sys.path.insert(0, "scripts")
+          import repair_playlist_logos as logo_repair
           from urllib.parse import unquote, urlparse
 
           registry_path = Path("reports/logo-source-registry.json")
@@ -92,6 +95,7 @@ jobs:
               "sananda-tv.png", "sananda.png", "star-gold-select.png", "star-gold.png",
               "star-plus.png", "zee-tv.png", "tom-and-jerry.png", "arirang-tv.png",
           }
+          blocked.update(logo_repair.BAD_ASSETS | logo_repair.GENERIC_ASSETS)
           summaries = {}
           for name in names:
               current = Path(name).read_text(encoding="utf-8-sig").replace("\r\n", "\n").replace("\r", "\n")
@@ -105,7 +109,9 @@ jobs:
                   meta = dict(re.findall(r'([\w-]+)="([^"]*)"', line))
                   group = (meta.get("group-title") or "").strip().casefold()
                   channel_id = (meta.get("tvg-id") or meta.get("channel-id") or "").strip().casefold()
-                  if name == "International-Playlist.m3u" and (group == "adult" or ".xxx" in channel_id):
+                  label = line.rsplit(",", 1)[-1].strip() if "," in line else (meta.get("tvg-name") or "").strip()
+                  channel_key = logo_repair.norm_key(label)
+                  if logo_repair.is_adult_playlist_entry(name, group, channel_id, channel_key):
                       adult_ignored += 1
                       continue
                   m = re.search(r'tvg-logo="([^"]*)"', line)
