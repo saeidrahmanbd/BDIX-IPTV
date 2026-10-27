@@ -4,10 +4,11 @@ name: Playlist Logo Repair and Localization
 on:
   push:
     branches: [main]
+    # Playlist changes are handled by the owning discovery/maintenance workflows.
+    # This workflow is intentionally triggered by its own repair tooling only,
+    # preventing a logo-repair commit from recursively spawning another logo run.
     paths:
-      - IPTV-Playlist.m3u
-      - BDIX-Playlist.m3u
-      - International-Playlist.m3u
+      - .github/workflows/playlist-logo-localization.yml
       - scripts/repair_playlist_logos.py
       - scripts/logo_source_catalog.py
   workflow_dispatch:
@@ -23,13 +24,11 @@ concurrency:
 
 jobs:
   localize:
-    # Playlist edits trigger localization. Skip only the workflow's own bot commit to prevent a loop.
-    if: ${{ !(github.event_name == 'push' && github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Repair playlist logos only; leave stream URLs unchanged')) }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
       - name: Checkout repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           ref: main
           fetch-depth: 0
@@ -50,7 +49,7 @@ jobs:
             exit 0
           fi
       - name: Set up Python
-        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
           python-version: "3.12"
       - name: Install image validation tools
