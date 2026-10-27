@@ -73,12 +73,15 @@ jobs:
         run: |
           set -euo pipefail
           python scripts/repair_playlist_logos.py
+          python scripts/generate_logo_authenticity_manifest.py
           python - <<'PY'
           import json
           import re
           from pathlib import Path
           from urllib.parse import unquote, urlparse
 
+          registry_path = Path("reports/logo-source-registry.json")
+          registry = json.loads(registry_path.read_text(encoding="utf-8")) if registry_path.is_file() else {}
           base = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
           names = ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u"]
           blocked = {
@@ -118,10 +121,22 @@ jobs:
                   filename = asset.name.casefold()
                   if filename.startswith("nvisionbd-"):
                       nvision += 1
+                  channel_id_original = (meta.get("tvg-id") or meta.get("channel-id") or "").strip()
+                  channel_name = (meta.get("tvg-name") or line.rsplit(",", 1)[-1]).strip()
+                  registry_key = f"{name}|{channel_id_original}|{channel_name}|{logo}"
+                  provenance = registry.get(registry_key, {})
+                  is_generated_fallback = filename.startswith("generated-fallback-")
+                  fallback_is_disclosed = (
+                      is_generated_fallback
+                      and provenance.get("status") == "generated_fallback"
+                      and "unofficial fallback" in provenance.get("notes", "").casefold()
+                      and "not an official broadcaster logo" in provenance.get("notes", "").casefold()
+                  )
                   if (
                       not asset.is_file()
                       or filename in blocked
-                      or filename.startswith(("placeholder-", "generated-fallback-", "generic-", "unknown-", "unidentified-"))
+                      or filename.startswith(("placeholder-", "generic-", "unknown-", "unidentified-"))
+                      or (is_generated_fallback and not fallback_is_disclosed)
                       or re.search(r"(?:placeholder|generic-logo)", filename, re.I)
                   ):
                       broken += 1
@@ -135,7 +150,7 @@ jobs:
                   raise SystemExit("Logo validation failed: " + name + " " + json.dumps(summaries[name]))
           print(json.dumps(summaries, indent=2))
           PY
-          git add IPTV-Playlist.m3u BDIX-Playlist.m3u International-Playlist.m3u logos/ reports/playlist-logo-repair-results.md reports/logo-source-registry.json
+          git add IPTV-Playlist.m3u BDIX-Playlist.m3u International-Playlist.m3u logos/ reports/playlist-logo-repair-results.md reports/logo-source-registry.json reports/logo-authenticity-manifest.json
           if git diff --cached --quiet; then
             echo "No additional local logo changes."
             exit 0
