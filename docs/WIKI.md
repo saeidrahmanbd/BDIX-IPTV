@@ -85,7 +85,7 @@ Any workflow that creates, rewrites, merges, sorts, repairs, or regenerates play
 
 ## Reports
 
-Reports are generated snapshots, not live status pages. Treat a report as current only when its generating workflow has completed successfully against the latest relevant playlist revision and its source fingerprint matches that revision. Some 2026-10-23 reports are historical snapshots.
+Reports are generated snapshots, not live status pages. Treat a report as current only when its generating workflow has completed successfully against the latest relevant playlist revision and its source fingerprint (when supplied) or reported playlist counts match that revision. Some 2026-10-23 reports are historical snapshots.
 
 ## Troubleshooting
 
