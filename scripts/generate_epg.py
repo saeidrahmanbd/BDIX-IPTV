@@ -77,7 +77,6 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_DISTROTV1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_RAKUTEN1.xml.gz",
-    "https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml",
     "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
     "https://www.open-epg.com/files/unitedkingdom.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
