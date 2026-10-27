@@ -137,6 +137,48 @@ def configured_sources():
     return sources
 
 
+def sources_with_mapped_channels(source_urls):
+    """Skip feeds that have no current mapped source IDs; retain local/official adapters.
+
+    Coverage discovery runs immediately before generation and records which source
+    feeds actually matched a playlist identity in the mapping CSV. Parsing large
+    global feeds that have no mapped IDs wastes time and can stall publication.
+    If the mapping snapshot cannot be read, fall back to all configured sources
+    rather than silently shrinking the guide.
+    """
+    source_urls = list(source_urls)
+    if not MAPPING.is_file():
+        print("EPG source pruning skipped: mapping CSV is missing.")
+        return source_urls
+    try:
+        mapped_sources = set()
+        with MAPPING.open(encoding="utf-8-sig", newline="") as handle:
+            for row in csv.DictReader(handle):
+                for source in (part.strip() for part in (row.get("source") or "").split("|")):
+                    if source:
+                        mapped_sources.add(source)
+    except (OSError, csv.Error, UnicodeError) as exc:
+        print(f"EPG source pruning skipped: cannot read mapping CSV ({exc}).")
+        return source_urls
+
+    selected = [
+        source for source in source_urls
+        if source in mapped_sources
+        or source in (HUM_TV_SOURCE, RTV_SOURCE)
+        or source.startswith("file://")
+    ]
+    # A completely empty hit set is not evidence that no source can help.
+    # Keep the configured list and let the regular quality gate decide.
+    if not selected:
+        print("EPG source pruning skipped: no mapped source URLs found.")
+        return source_urls
+    print(
+        f"EPG source pruning: using {len(selected)} of {len(source_urls)} configured feeds "
+        "with current mapping hits (plus local/official adapters)."
+    )
+    return selected
+
+
 def source_label(src):
     if src == os.environ.get(PRIVATE_SOURCE_ENV, "").strip():
         return PRIVATE_SOURCE_LABEL
@@ -697,8 +739,8 @@ def main():
     # schedule simply because it appeared earlier in SOURCES.
     candidates = {}
     source_stats = {}
-    source_urls = configured_sources()
-    fetchable_count = sum(src not in (HUM_TV_SOURCE, RTV_SOURCE) for src in source_urls)
+    source_urls = sources_with_mapped_channels(configured_sources())
+    fetchable_count = sum(src not in (HUM_TV_SOURCE, RTV_SOURCE) and not src.startswith("file://") for src in source_urls)
     print(
         f"EPG source fetch: {fetchable_count} XMLTV feeds, "
         f"max_workers={SOURCE_FETCH_WORKERS}, timeout={SOURCE_FETCH_TIMEOUT_SECONDS}s"
