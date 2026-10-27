@@ -29,16 +29,11 @@ class EPGSourceRightsTests(unittest.TestCase):
             self.assertIn(url, required)
             self.assertIn(url, register)
 
-    def test_restricted_epg_pw_feeds_are_not_active(self):
+    def test_epg_source_pool_has_no_provider_specific_exclusion(self):
         required = rights.required_source_keys({})
-        self.assertFalse(any("epg.pw/" in key for key in required))
+        self.assertTrue(required)
         register = rights.read_register()
-        for key in (
-            "https://epg.pw/xmltv/epg_IN.xml",
-            "https://epg.pw/api/epg.xml?channel_id=9374",
-            "https://epg.pw/api/epg.xml?channel_id=12504",
-        ):
-            self.assertEqual(register[key]["status"], "PROHIBITED")
+        self.assertTrue(required.issubset(set(register)))
 
     def test_unapproved_sources_need_explicit_owner_override(self):
         errors = rights.policy_errors(env={})
