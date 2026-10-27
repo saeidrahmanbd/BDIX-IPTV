@@ -1,5 +1,7 @@
 # Stream Risk Review
 
+> ⚠️ **HISTORICAL SNAPSHOT — NOT CURRENT STREAM STATUS.** Generated 2026-10-23 from an older 1,265-entry playlist and older stream-health results. Re-run the risk review before relying on its inventory or failure counts.
+
 Generated: **2026-10-23T08:43:14+00:00**
 IPTV-Playlist.m3u SHA-256: **0ce6e1a9799733fae3febaa075d00c8c19a71f5ec225525a6559bbdcdc7ad3d5**
 
