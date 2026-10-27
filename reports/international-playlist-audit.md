@@ -1,5 +1,7 @@
 # International Playlist Organization Audit
 
+> ⚠️ **HISTORICAL AUDIT SNAPSHOT — NOT CURRENT INVENTORY.** The reported 2,267 entries predate the current International playlist, whose entry count and categories have since changed. Re-run the organization audit against the current playlist before relying on these counts or category conclusions.
+
 - Entries before: 2271
 - Entries after: 2267
 - Names normalized: 183
