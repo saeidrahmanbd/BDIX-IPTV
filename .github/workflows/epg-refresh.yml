@@ -23,7 +23,6 @@ permissions:
 concurrency:
   group: iptv-epg-writer-v2
   cancel-in-progress: true
-  queue: max
 
 jobs:
   refresh:
