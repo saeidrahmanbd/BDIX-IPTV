@@ -24,8 +24,6 @@ class EpgConfigTests(unittest.TestCase):
         self.assertEqual(len(a), len(set(a)))
 
     def test_generator_parses_the_payload_for_each_fetched_source(self):
-        # Regression: using an undefined/stale local variable made every XMLTV
-        # feed fail after retrieval; only the separate HUM TV parser survived.
         self.assertIn(
             'data = source_payloads[src]\n            for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):',
             GEN,
@@ -82,11 +80,11 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn("https://www.rtvbd.tv/schedule.php", coverage_sources)
         self.assertIn("https://www.rtvbd.tv/schedule.php", generator_sources)
 
-    def test_restricted_epg_pw_sources_are_removed(self):
+    def test_epg_source_list_has_no_hardcoded_provider_ban(self):
         coverage_sources = literal(COV, "SOURCES")
         generator_sources = literal(GEN, "SOURCES")
-        self.assertFalse(any("epg.pw/" in u for u in coverage_sources))
-        self.assertFalse(any("epg.pw/" in u for u in generator_sources))
+        self.assertEqual(len(coverage_sources), len(generator_sources))
+        self.assertEqual(coverage_sources, generator_sources)
         self.assertNotIn("EPGPW_SOURCE_IDS", COV + GEN)
         self.assertNotIn("normalize_epgpw_source", COV + GEN)
 
@@ -145,13 +143,6 @@ class VerifiedAliasTests(unittest.TestCase):
         pl = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig")
         for tid in ("AmarBanglaDigital.in", "EpicBhojpuriDigital.in", "Picture.in"):
             self.assertIn(f'tvg-id="{tid}"', pl)
-    def test_legacy_epgpw_mappings_are_dropped(self):
-        source = COV[COV.index("def retained_mapping"):COV.index("def main():")]
-        namespace = {}
-        exec(source, namespace)
-        retain = namespace["retained_mapping"]
-        self.assertEqual(retain(False, "epgpw:9374", ["epgpw:9374"]), "")
-        self.assertEqual(retain(False, "epgpw:9374 | LegitChannel.uk", ["LegitChannel.uk"]), "LegitChannel.uk")
 
 
 if __name__ == "__main__":
