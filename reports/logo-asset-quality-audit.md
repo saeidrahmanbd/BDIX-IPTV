@@ -1,5 +1,7 @@
 # Logo Asset Technical Quality Audit
 
+> ⚠️ **STALE SNAPSHOT — NOT CURRENT ASSET INVENTORY.** Generated 2026-10-23 against playlist fingerprints that predate subsequent playlist updates. Regenerate before relying on reference counts or cleanup candidates.
+
 Generated: **2026-10-23T08:44:17+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
