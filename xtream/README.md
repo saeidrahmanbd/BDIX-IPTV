@@ -23,7 +23,11 @@ The `assets/relay/` directory contains an optional Docker Compose / Nginx relay 
 
 ## Programme guide
 
-The public XMLTV feed is **disabled pending confirmed redistribution rights**. Both workers' `xmltv.php` endpoints return HTTP 410 while that decision is unresolved. Do not enable or publish an EPG URL until all active source feeds have documented redistribution approval.
+Both workers expose authenticated `/xmltv.php` endpoints backed by the same public XMLTV file:
+
+`https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml`
+
+The endpoints stream the published guide and return HTTP 503 if the guide is temporarily unavailable. The initial guide becomes usable after the **Refresh IPTV EPG** workflow successfully publishes it. EPG.PW is excluded and private M3U4U endpoints are not included in the public build. Review-required upstream sources remain identified in the [source-rights register](../epg/source-rights-register.csv); the workflow's explicit owner override is documented in [EPG status and maintenance](../epg/README.md).
 
 ## Security
 
@@ -44,4 +48,4 @@ After deployment, use the worker's documented Xtream base URL with a compatible 
 
 ## Maintenance
 
-The Xtream workers are downstream consumers of the curated playlists. Playlist discovery, metadata normalization, local-logo enforcement, stream-health checks, backup-independence review, and publish gates are maintained by repository workflows. Public EPG generation and serving are disabled until redistribution permission is documented.
+The Xtream workers are downstream consumers of the curated playlists. Playlist discovery, metadata normalization, local-logo enforcement, stream-health checks, backup-independence review, and publish gates are maintained by repository workflows. Public EPG generation and serving are re-enabled; source-rights review items remain documented.

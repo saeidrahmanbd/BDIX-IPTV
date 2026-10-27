@@ -36,7 +36,7 @@ Supported Xtream-style endpoints are documented in [Xtream Gateway](../../xtream
 
 ## 📡 EPG
 
-**Do not configure an XMLTV URL for this repository at present.** Public guide publication is disabled while source redistribution rights are being confirmed. The old `epg/epg.xml` guide has been removed, and Xtream `xmltv.php` endpoints return HTTP 410.
+The public XMLTV URL has been restored: `https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml`. It becomes usable after the refresh workflow successfully publishes the guide. Xtream `xmltv.php` endpoints serve this same file and return HTTP 503 if it is unavailable.
 
 See the [EPG publication status and re-enable checklist](../../epg/README.md) and the [current EPG status report](../../reports/epg-coverage.md).
 

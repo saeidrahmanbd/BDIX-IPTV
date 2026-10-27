@@ -1,55 +1,44 @@
-# EPG data: rights review and publication gate
+# Public EPG status and maintenance
 
 ## Current status
 
-**Public XMLTV publication remains disabled.** The previous `epg/epg.xml` file was removed because public redistribution permission is not documented for the full set of programme-data sources. Public accessibility, a free personal-use feed, or an open-source fetcher does not itself grant permission to re-host the underlying listings in a public guide.
+**The public EPG refresh pipeline is enabled again.** Its output is `epg/epg.xml`, published at:
 
-The old EPG.PW feeds have been removed from the active source pipeline. The EPG.PW terms restrict copying or distributing site content unless expressly allowed: [EPG.PW terms](https://epg.pw/terms.html). Do not restore those feeds without explicit written permission for public redistribution.
+`https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml`
 
-## What has been improved
+All three maintained playlists and both Xtream workers now reference this same guide. The first usable guide will be available after the **Refresh IPTV EPG** workflow completes successfully; if source retrieval or quality gates fail, the URL may remain unavailable until a successful run.
 
-- Coverage and generation now use the same source list across all three maintained playlists.
-- Twenty-five additional IPTV-EPG.org country-feed candidates were added for Argentina, Bulgaria, Brazil, Canada, Chile, Colombia, Czechia, Germany, Spain, France, Greece, Hong Kong, Hungary, Italy, Mexico, the Netherlands, Peru, Poland, Portugal, Romania, Russia, Serbia, Sweden, Turkey and the United Kingdom. These expand source candidates, not verified live coverage, until a rights-cleared refresh confirms current matching programmes.
-- The existing official RTV schedule parser is now included in the candidate mapping/generation source list. It can map the exact `RTV.bd` channel identity when current schedule rows are available; the next approved refresh must verify actual coverage.
-- Legacy `epgpw:` mapping IDs are discarded during the next mapping refresh, so a stale mapping cannot quietly resurrect a removed feed.
-- A source-by-source register is maintained in [`source-rights-register.csv`](source-rights-register.csv).
-- `scripts/check_epg_source_rights.py` and its tests enforce a fail-closed rule: every active XMLTV feed, scraped schedule website, supplemental source repository, and configured private feed must have explicit approval before public guide generation can run.
+The workflow runs daily at 10:17 Asia/Dhaka and on changes to maintained playlists or EPG inputs. It rebuilds source-to-channel mappings, merges candidate XMLTV feeds, applies freshness and quality checks, and publishes the XMLTV file plus coverage reports.
 
-## Why it is not switched on yet
+## Source policy
 
-The current register marks active sources as `REVIEW_REQUIRED` until there is evidence allowing public redistribution. A feed that can be downloaded or pasted into a personal IPTV player is not automatically licensed for public re-hosting. The targeted `iptv-org/epg` workflow also aggregates third-party schedule sources, so the repository's software licence alone cannot clear every underlying programme feed.
+- EPG.PW sources remain excluded from the active source pipeline and their historical mappings are not reused.
+- A personalized M3U4U XMLTV URL is not passed into the public build, so a private endpoint is not published unintentionally.
+- `epg/source-rights-register.csv` remains the source-by-source audit trail. Most upstream feeds are still `REVIEW_REQUIRED`; that status has **not** been changed to `APPROVED`.
+- To restore service as requested, the scheduled workflow uses `EPG_ALLOW_UNVERIFIED_SOURCES=true`. It logs the unresolved review count and still blocks any active source explicitly marked `PROHIBITED`. This override is not a claim that upstream redistribution permissions have been verified.
 
-The register's `APPROVED` status requires all of the following for each active source:
+EPG.PW's published terms restrict copying, publishing and retransmitting site content unless expressly allowed: [EPG.PW terms](https://epg.pw/terms.html). Those feeds must not be re-added without written permission.
 
-1. An evidence URL to explicit source terms or written permission.
-2. A review date.
-3. A positive description of the permitted scope, specifically including retrieval, transformation and **public redistribution** of schedule data.
-4. Removal from the active pipeline if the source is prohibited or its terms do not cover the intended use.
+## Coverage improvements
 
-The source-rights checker must pass before setting the repository Actions variable `EPG_REDISTRIBUTION_APPROVED=true`. Do not set that variable while active sources remain unapproved. The guide must then pass the XMLTV structure, programme-title, time-window, provenance and quality gates before publication.
+- Generator and coverage discovery share the same candidate source list across all three playlists.
+- Twenty-five additional IPTV-EPG.org country feeds were added for international matching (Argentina, Bulgaria, Brazil, Canada, Chile, Colombia, Czechia, Germany, Spain, France, Greece, Hong Kong, Hungary, Italy, Mexico, the Netherlands, Peru, Poland, Portugal, Romania, Russia, Serbia, Sweden, Turkey and the United Kingdom).
+- The official RTV schedule parser is included as a candidate for the exact `RTV.bd` channel identity.
+- The guide filters placeholder programme titles and applies overlap and freshness checks before publication.
+- Bangladesh channels are not mapped to similarly named foreign services merely to inflate coverage.
 
-## Current coverage versus mapping
+The additional feeds are candidates, not guaranteed matches. Use reports generated by a successful refresh to assess actual channel/programme coverage; historical mapping totals are not current live coverage.
 
-The technical mapping registry is `reports/epg-channel-mapping.csv`. It is a historical/diagnostic snapshot, not evidence that a current public guide exists. A channel ID match is not usable coverage unless the current feed has valid programme intervals and real, non-placeholder titles. Do not report old mapping percentages as current coverage while the pipeline is blocked.
+## Useful links
 
-There is no verified general-purpose public XMLTV source for the domestic Bangladesh channel set. The newly configured RTV schedule is one useful official-site candidate, not a substitute for full Bangladesh coverage. Other domestic channels should remain unmapped unless an exact channel-specific guide is found and its terms permit the intended use. Never map a Bangladeshi service to a similarly named Indian or foreign channel just to inflate percentages.
+- [Refresh IPTV EPG workflow](../.github/workflows/epg-refresh.yml)
+- [Source-rights register](source-rights-register.csv)
+- [Current mapping snapshot](../reports/epg-channel-mapping.csv)
+- [Coverage report](../reports/epg-coverage.md)
+- [Published XMLTV guide](epg.xml)
 
-## How to re-enable safely
+## Troubleshooting
 
-1. Review [the source rights register](source-rights-register.csv) and the actual terms or written permission for each feed and scraper site.
-2. Remove sources without suitable rights, or record explicit permission and mark them `APPROVED` with evidence.
-3. Run:
-   ```bash
-   python scripts/check_epg_config.py
-   python -m unittest discover -s tests -p 'test_epg_config.py'
-   python -m unittest discover -s tests -p 'test_epg_source_rights.py'
-   python scripts/check_epg_source_rights.py
-   ```
-4. Once the rights checker passes, deliberately set the repository Actions variable `EPG_REDISTRIBUTION_APPROVED=true` and run the **Refresh IPTV EPG** workflow.
-5. Verify `reports/epg-coverage.md`, `reports/epg-publish-freshness.md` and the generated guide before re-adding the EPG URL to playlist headers or enabling the Xtream XMLTV endpoints.
+If the XMLTV URL returns 404, the first refresh has not yet published a guide or a prior run failed before commit. Open workflow runs and inspect source-fetch and quality-gate logs, then rerun **Refresh IPTV EPG**. If a worker returns 503 for `/xmltv.php`, check the raw XMLTV URL first.
 
-Until these checks pass, the public guide stays unavailable and the Xtream `xmltv.php` endpoints remain disabled.
-
-## Privacy and credentials
-
-Never commit personalized M3U4U endpoint URLs, usernames, passwords, session tokens or other private provider credentials. Keep any private endpoint in the GitHub Actions secret `M3U4U_XMLTV_URL`; the checker records only the secret's key name, never its value. Its data must have explicit public-redistribution permission too.
+Do not commit Xtream credentials, private feed URLs, usernames, passwords, session tokens, or other provider secrets into the repository.

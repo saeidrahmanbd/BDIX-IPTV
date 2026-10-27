@@ -73,9 +73,7 @@ For another collection, copy its URL from the Playlists table. In your player, c
 
 ## 🗓️ EPG
 
-Public XMLTV/EPG publication is **currently suspended**. The `epg/epg.xml` file is not published, so the former raw URL is not a working guide. The refresh workflow deliberately blocks publication until public-redistribution permission is documented for every active source and the rights checker passes.
-
-The mapping and validation tools remain in the repository, but there is no current public XMLTV URL to configure in an IPTV player. The two Xtream `xmltv.php` endpoints are also disabled while this is unresolved. See the [source-rights register](epg/source-rights-register.csv), [EPG documentation](epg/README.md) and [coverage report](reports/epg-coverage.md).
+Public XMLTV/EPG refresh has been re-enabled. The target guide is [epg/epg.xml](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml); the raw URL serves a fresh guide after the automated refresh succeeds. All three maintained playlists advertise the guide URL, and both Xtream workers' `xmltv.php` endpoints are restored in source. EPG.PW remains excluded, private M3U4U URLs are not included in the public build, and the source-rights register transparently lists unresolved upstream reviews. See the [EPG status page](epg/README.md), [source-rights register](epg/source-rights-register.csv) and [coverage report](reports/epg-coverage.md).
 
 ## 🖼️ Repository Showcase
 

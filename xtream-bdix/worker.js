@@ -1,4 +1,5 @@
 const PLAYLIST_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u";
+const EPG_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml";
 const CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup", "New Channels", "New Backup", "Not Playing"];
 const CATEGORY_RANK = new Map(CATEGORY_ORDER.map((name, i) => [name, i]));
 const CORS_HEADERS = {
@@ -154,7 +155,25 @@ export default{
         user_info:userInfo(u,false)
       }
       ,401);
-      return xml("Programme guide disabled pending verified redistribution rights.",410)
+      try {
+        const guide = await fetch(EPG_URL, {
+          headers: { "Accept": "application/xml,text/xml,*/*" },
+          cf: { cacheTtl: 300, cacheEverything: true }
+        });
+        if (!guide.ok || !guide.body) {
+          return xml("Programme guide temporarily unavailable.", 503);
+        }
+        return new Response(guide.body, {
+          status: 200,
+          headers: {
+            ...CORS_HEADERS,
+            "content-type": "application/xml; charset=utf-8",
+            "cache-control": "public, max-age=300"
+          }
+        });
+      } catch (error) {
+        return xml("Programme guide temporarily unavailable.", 503);
+      }
     }
     if(p==="/player_api.php"){
       const ok=auth(u,env),info={
@@ -182,7 +201,7 @@ export default{
     if(p==="/get.php"){
       if(!auth(u,env))return text("Unauthorized",401);
       try{
-        const streams=await playlist(env),lines=["#EXTM3U"];
+        const streams=await playlist(env),lines=["#EXTM3U url-tvg=\"" + EPG_URL + "\" x-tvg-url=\"" + EPG_URL + "\""];
         for(const s of streams)lines.push(`#EXTINF:-1 tvg-id="${s.tvgId}" tvg-name="${s.name.replaceAll('"','&quot;')}" tvg-logo="${s.logo}" group-title="${s.group}" tvg-chno="${s.chno}",${s.name}`,`${u.origin}/live/${encodeURIComponent(env.XTREAM_USERNAME)}/${encodeURIComponent(env.XTREAM_PASSWORD)}/${s.id}.ts`);
         return text(lines.join("\n")+"\n",200,"audio/x-mpegurl; charset=utf-8")
       }
@@ -211,7 +230,7 @@ export default{
       }
     }
     return json({
-      ok:true,service:"BDIX-IPTV Xtream BDIX",endpoints:["player_api.php","get.php","live/<username>/<password>/<stream_id>.ts"]
+      ok:true,service:"BDIX-IPTV Xtream BDIX",endpoints:["player_api.php","get.php","xmltv.php","live/<username>/<password>/<stream_id>.ts"]
     }
     )
   }

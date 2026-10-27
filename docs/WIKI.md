@@ -19,9 +19,9 @@ The all-playlist EPG mapping registry is `reports/epg-channel-mapping.csv`. Adul
 
 ## EPG publication
 
-**Public XMLTV publication is disabled pending redistribution-rights review.** The former `epg/epg.xml` file was removed; no maintained playlist advertises it, and both Xtream `xmltv.php` endpoints return HTTP 410 while rights remain unconfirmed. Historical EPG metrics are not current coverage claims.
+The public XMLTV refresh pipeline is enabled again. The guide is published to `epg/epg.xml` after the scheduled workflow passes source-fetch, freshness and quality checks. The three playlist headers advertise the public raw XMLTV URL, and both Xtream `xmltv.php` handlers fetch that same guide. EPG.PW remains excluded, the personalized M3U4U endpoint is not included in the public build, and unresolved upstream source reviews remain documented in the [source-rights register](../epg/source-rights-register.csv).
 
-See [EPG status and re-enable checklist](../epg/README.md) and [EPG Publication Status](../reports/epg-coverage.md). Do not re-enable source retrieval or public serving until permission is recorded for every active source and the repository owner explicitly approves it.
+See [EPG status and maintenance](../epg/README.md) and the [coverage report](../reports/epg-coverage.md).
 
 ## Operations and reports
 

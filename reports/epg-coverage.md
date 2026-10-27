@@ -1,25 +1,23 @@
 # EPG Coverage & Mapping Report
 
-Updated: **2026-10-27**
+Updated: **2026-10-27** (status note; live coverage is recalculated by the next successful EPG refresh)
 
-## Status: BLOCKED — public guide publication is not authorized yet
+## Status: PIPELINE ENABLED — REFRESH REQUIRED
 
-The public XMLTV file `epg/epg.xml` is not published. The source inventory still lacks documented public-redistribution approval for every active source. Historical mapping counts are not presented as current coverage.
+The refresh workflow is enabled again. It will rebuild and publish `epg/epg.xml` at the public raw URL after source-fetch, freshness and quality checks succeed.
 
-- Public guide: **not published**
-- Redistribution approval: **not confirmed**
-- Current published coverage percentage: **not available**
-- Previous mapping statistics: **historical diagnostics only**
+- Public guide: [epg.xml](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml)
+- Automatic refresh: daily at 10:17 Asia/Dhaka and on relevant playlist/EPG input changes
+- Current published-guide coverage: **not verified in this status note**
+- Rights register: unresolved source reviews remain visible in [source-rights-register.csv](../epg/source-rights-register.csv)
 
-## Pipeline changes prepared
+## Source and mapping improvements
 
-- The generator and mapping scanner now share a synchronized source list.
-- EPG.PW feeds, which do not have established re-hosting permission, were removed from the active configuration.
-- The official RTV schedule parser is included as a candidate source for exact `RTV.bd` mapping. Actual new coverage must be measured by a successful, authorized refresh; no improvement percentage is claimed yet.
-- Twenty-five additional IPTV-EPG.org country feeds have been registered as candidates for international channel matching. They remain blocked from public redistribution until each source is cleared.
-- Legacy `epgpw:` mapping IDs are removed during the next refresh.
-- A source-level rights register and fail-closed checker now cover active XMLTV feeds, schedule-site scrapers, the supplemental source repository and any configured private feed.
+- Candidate sources are synchronized between generation and mapping discovery.
+- Explicitly prohibited EPG.PW feeds are not active.
+- A personalized M3U4U feed is not passed into the public build.
+- The official RTV schedule parser is included for possible exact `RTV.bd` matching.
+- Twenty-five extra IPTV-EPG.org country feeds are configured as international candidates.
+- The generator filters placeholder titles and runs publication freshness/quality gates before committing the guide.
 
-See [`epg/README.md`](../epg/README.md) and [`epg/source-rights-register.csv`](../epg/source-rights-register.csv) for the exact status and re-enable checklist.
-
-**Do not set `EPG_REDISTRIBUTION_APPROVED=true` until every active source is explicitly approved for public redistribution.** A successful technical fetch or a channel-ID match does not grant those rights.
+This is a status note rather than a live coverage measurement until a successful refresh replaces it. Do not infer current programme coverage from historical mapping totals.
