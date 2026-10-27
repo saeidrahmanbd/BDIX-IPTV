@@ -1,10 +1,8 @@
 import ast, re, unittest, sys
-import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-import epg_coverage
 
 COV = (ROOT / "scripts" / "epg_coverage.py").read_text(encoding="utf-8")
 GEN = (ROOT / "scripts" / "generate_epg.py").read_text(encoding="utf-8")
@@ -42,8 +40,19 @@ class EpgConfigTests(unittest.TestCase):
         ]
         self.assertEqual(paths, ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u"])
 
-    def test_rtv_not_configured(self):
-        self.assertFalse([u for u in literal(COV, "SOURCES") if "rtvbd.tv" in u])
+    def test_rtv_official_schedule_source_is_configured(self):
+        coverage_sources = literal(COV, "SOURCES")
+        generator_sources = literal(GEN, "SOURCES")
+        self.assertIn("https://www.rtvbd.tv/schedule.php", coverage_sources)
+        self.assertIn("https://www.rtvbd.tv/schedule.php", generator_sources)
+
+    def test_restricted_epg_pw_sources_are_removed(self):
+        coverage_sources = literal(COV, "SOURCES")
+        generator_sources = literal(GEN, "SOURCES")
+        self.assertFalse(any("epg.pw/" in u for u in coverage_sources))
+        self.assertFalse(any("epg.pw/" in u for u in generator_sources))
+        self.assertNotIn("EPGPW_SOURCE_IDS", COV + GEN)
+        self.assertNotIn("normalize_epgpw_source", COV + GEN)
 
     def test_new_aliases(self):
         al = literal(COV, "EPG_ALIASES")
@@ -100,25 +109,13 @@ class VerifiedAliasTests(unittest.TestCase):
         pl = (ROOT / "IPTV-Playlist.m3u").read_text(encoding="utf-8-sig")
         for tid in ("AmarBanglaDigital.in", "EpicBhojpuriDigital.in", "Picture.in"):
             self.assertIn(f'tvg-id="{tid}"', pl)
-    def test_epgpw_sources_and_locks_are_explicit_and_synchronized(self):
-        coverage_sources = literal(COV, "SOURCES")
-        generator_sources = literal(GEN, "SOURCES")
-        coverage_ids = literal(COV, "EPGPW_SOURCE_IDS")
-        generator_ids = literal(GEN, "EPGPW_SOURCE_IDS")
-        self.assertEqual(coverage_ids, generator_ids)
-        self.assertTrue(set(coverage_ids).issubset(set(coverage_sources)))
-        locks = literal(COV, "EPG_LOCKS")
-        self.assertEqual(locks["NTVEurope.bd"], ["epgpw:9374"])
-        self.assertEqual(locks["ChannelS.uk@679aa9"], ["epgpw:12504"])
-
-    def test_epgpw_normalization_rewrites_only_the_explicit_feed_channel(self):
-        xml = b'<tv><channel id="source-id"><display-name>NTV</display-name></channel><programme channel="source-id" start="20261021070000 +0000" stop="20261021073000 +0000"><title>NTV Europe News</title></programme></tv>'
-        url = "https://epg.pw/api/epg.xml?channel_id=9374"
-        normalized = ET.fromstring(epg_coverage.normalize_epgpw_source(url, xml))
-        self.assertEqual(normalized.find("channel").get("id"), "epgpw:9374")
-        self.assertEqual(normalized.find("programme").get("channel"), "epgpw:9374")
-        untouched = epg_coverage.normalize_epgpw_source("https://example.invalid/guide.xml", xml)
-        self.assertEqual(untouched, xml)
+    def test_legacy_epgpw_mappings_are_dropped(self):
+        source = COV[COV.index("def retained_mapping"):COV.index("def main():")]
+        namespace = {}
+        exec(source, namespace)
+        retain = namespace["retained_mapping"]
+        self.assertEqual(retain(False, "epgpw:9374", ["epgpw:9374"]), "")
+        self.assertEqual(retain(False, "epgpw:9374 | LegitChannel.uk", ["LegitChannel.uk"]), "LegitChannel.uk")
 
 
 if __name__ == "__main__":
