@@ -9,6 +9,7 @@ The old EPG.PW feeds have been removed from the active source pipeline. The EPG.
 ## What has been improved
 
 - Coverage and generation now use the same source list across all three maintained playlists.
+- Twenty-five additional IPTV-EPG.org country-feed candidates were added for Argentina, Bulgaria, Brazil, Canada, Chile, Colombia, Czechia, Germany, Spain, France, Greece, Hong Kong, Hungary, Italy, Mexico, the Netherlands, Peru, Poland, Portugal, Romania, Russia, Serbia, Sweden, Turkey and the United Kingdom. These expand source candidates, not verified live coverage, until a rights-cleared refresh confirms current matching programmes.
 - The existing official RTV schedule parser is now included in the candidate mapping/generation source list. It can map the exact `RTV.bd` channel identity when current schedule rows are available; the next approved refresh must verify actual coverage.
 - Legacy `epgpw:` mapping IDs are discarded during the next mapping refresh, so a stale mapping cannot quietly resurrect a removed feed.
 - A source-by-source register is maintained in [`source-rights-register.csv`](source-rights-register.csv).
