@@ -1,4 +1,4 @@
-"""Regression tests for maintenance order and disabled public EPG publication."""
+"""Regression tests for maintenance order and enabled public EPG refresh."""
 import sys
 import unittest
 from pathlib import Path
@@ -17,16 +17,22 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertTrue(should_check_alphabetical_order("Bangladesh"))
         self.assertTrue(should_check_alphabetical_order("Indian Music"))
 
-    def test_public_epg_generation_is_disabled_until_rights_are_approved(self):
+    def test_public_epg_generation_is_enabled_with_explicit_owner_override(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
-        self.assertIn("EPG_REDISTRIBUTION_APPROVED", workflow)
+        self.assertIn("EPG_ALLOW_UNVERIFIED_SOURCES", workflow)
+        self.assertNotIn("M3U4U_XMLTV_URL", workflow)
         self.assertNotIn("python scripts/run_generate_epg.py", workflow)
         self.assertNotIn("python scripts/epg_coverage.py", workflow)
         self.assertNotIn("python scripts/fetch_iptv_org_epg.py", workflow)
         self.assertNotIn("git add -f epg/epg.xml", workflow)
 
         refresh = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
-        self.assertIn("vars.EPG_REDISTRIBUTION_APPROVED == 'true'", refresh)
+        self.assertNotIn("vars.EPG_REDISTRIBUTION_APPROVED == 'true'", refresh)
+        self.assertIn("EPG_ALLOW_UNVERIFIED_SOURCES: 'true'", refresh)
+        self.assertIn("python scripts/run_generate_epg.py", refresh)
+        self.assertIn("python scripts/epg_coverage.py", refresh)
+        self.assertIn("python scripts/fetch_iptv_org_epg.py", refresh)
+        self.assertIn("git add -f epg/epg.xml", refresh)
         self.assertIn("workflow_dispatch:", refresh)
 
     def test_final_fingerprinted_reports_follow_all_final_repairs(self):
