@@ -1,9 +1,9 @@
 # EPG Timing Audit
 
-Generated: **2026-10-27**
+Automatic corrections require repeated cross-source title and duration matches, at least four consistent matches, >=75% agreement, at least three source IDs, and a displacement of two hours or more.
 
-## Status: PENDING — no published guide to audit yet
+## Detected corrections
 
-The refresh workflow is enabled, but `epg/epg.xml` is not yet available on the current branch. No timing, programme-window, or retention metric is being presented as current until a successful run publishes and validates the guide.
+- No source offsets met the strict automatic-correction threshold.
 
-This note is replaced by the next successful EPG timing audit. Check the Refresh IPTV EPG workflow if publication does not complete.
+Detected source-ID corrections: **0**

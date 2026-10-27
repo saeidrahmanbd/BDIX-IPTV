@@ -1,9 +1,18 @@
 # EPG Publish Freshness Check
 
-Generated: **2026-10-27**
+Checked: **2026-10-27T13:32:27+00:00**
+Guide path: epg/epg.xml
 
-## Status: PENDING — first successful EPG refresh required
+- Valid titled programmes: **61125**
+- Programmes in current window: **49762 (81.4%)**
+- Channel IDs with programmes in current window: **822**
+- Programmes airing at check time: **718** across **718** channel IDs
+- Window: **2026-10-27T07:32:27+00:00** to **2026-11-03T13:32:27+00:00**
+- Invalid programme intervals: **0**
+- Missing programme titles: **0**
 
-The refresh pipeline is enabled, but `epg/epg.xml` is not present in the current `main` branch. A freshness PASS cannot be asserted until a non-empty XMLTV guide is generated, validated, and committed. This is a pending status note, not a successful freshness check.
+Thresholds: at least 70% of valid programmes must overlap the current window, with at least 1,000 in-window programmes across at least 50 channel IDs.
 
-The next **Refresh IPTV EPG** run should replace this note with measured freshness and quality results. If the guide is still missing afterward, inspect that workflow's source-fetch and publication-gate logs.
+Status: **PASS**
+
+The guide contains substantial current/future schedule data and is eligible for publication.
