@@ -21,7 +21,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: iptv-epg-writer-v1
+  group: iptv-epg-writer-v2
   cancel-in-progress: true
   queue: max
 
