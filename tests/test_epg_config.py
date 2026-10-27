@@ -21,6 +21,14 @@ class EpgConfigTests(unittest.TestCase):
         self.assertEqual(a, b)
         self.assertEqual(len(a), len(set(a)))
 
+    def test_generator_parses_the_payload_for_each_fetched_source(self):
+        # Regression: using an undefined/stale local variable made every XMLTV
+        # feed fail after retrieval; only the separate HUM TV parser survived.
+        self.assertIn(
+            'data = source_payloads[src]\n            for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):',
+            GEN,
+        )
+
     def test_generator_covers_all_three_core_playlists(self):
         tree = ast.parse(GEN)
         playlists = next(
