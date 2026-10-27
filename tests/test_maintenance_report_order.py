@@ -17,6 +17,25 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertTrue(should_check_alphabetical_order("Bangladesh"))
         self.assertTrue(should_check_alphabetical_order("Indian Music"))
 
+    def test_epg_build_follows_final_playlist_mutations_and_no_early_scheduled_refresh(self):
+        workflow = WORKFLOW.read_text(encoding="utf-8")
+        run_pos = workflow.rfind("python scripts/run_generate_epg.py")
+        self.assertGreaterEqual(run_pos, 0)
+        for mutation in (
+            "python scripts/backfill_cross_playlist_metadata.py",
+            "python scripts/reconcile_playlist_consistency.py",
+            "python scripts/reorganize_international_playlist.py",
+            "python scripts/enforce_playlist_attribution.py International-Playlist.m3u",
+            "python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u",
+        ):
+            self.assertLess(workflow.rfind(mutation), run_pos, f"EPG build must follow {mutation}")
+        self.assertLess(run_pos, workflow.rfind("python scripts/validate_report_freshness.py"))
+        self.assertEqual(workflow.count("python scripts/run_generate_epg.py"), 1)
+
+        refresh = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
+        self.assertIn("workflow_dispatch:", refresh)
+        self.assertNotIn("schedule:", refresh, "the EPG workflow must not run before the daily playlist maintenance")
+
     def test_final_fingerprinted_reports_follow_all_final_repairs(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")
         self.assertEqual(
