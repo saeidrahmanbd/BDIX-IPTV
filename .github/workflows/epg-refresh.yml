@@ -22,7 +22,7 @@ permissions:
 
 concurrency:
   group: iptv-epg-writer-v1
-  cancel-in-progress: false
+  cancel-in-progress: true
   queue: max
 
 jobs:
@@ -33,7 +33,6 @@ jobs:
     env:
       EPG_ALLOW_UNVERIFIED_SOURCES: 'true'
       NODE_VERSION: '22'
-      LAST_GOOD_EPG_COMMIT: '852a33d70d3caa6682602077724b097cfed15d1a'
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -81,17 +80,15 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           mkdir -p reports epg
 
-          # Preserve the currently published guide. If main has no guide, recover
-          # the last known-good generated guide before attempting a new build.
+          # Keep a fallback only if the current branch already has a published guide.
+          # Do not restore pre-removal snapshots: they may contain schedules from feeds
+          # that have since been explicitly excluded from the active source pipeline.
+          HAVE_PUBLISHED_FALLBACK=false
           if [ -s epg/epg.xml ]; then
             cp epg/epg.xml /tmp/bdix-epg-previous.xml
-          else
-            git show "${LAST_GOOD_EPG_COMMIT}:epg/epg.xml" > /tmp/bdix-epg-previous.xml
-            cp /tmp/bdix-epg-previous.xml epg/epg.xml
-            echo '::notice::Recovered the last known-good EPG snapshot because main was missing epg/epg.xml.'
+            cp /tmp/bdix-epg-previous.xml /tmp/bdix-epg-published-fallback.xml
+            HAVE_PUBLISHED_FALLBACK=true
           fi
-
-          cp /tmp/bdix-epg-previous.xml /tmp/bdix-epg-published-fallback.xml
 
           # Build the new candidate. The candidate is never allowed to destroy
           # the last good public guide merely because an upstream feed is broken.
@@ -111,8 +108,13 @@ jobs:
           fi
 
           if [ "$CANDIDATE_OK" != true ]; then
-            cp /tmp/bdix-epg-published-fallback.xml epg/epg.xml
-            python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md || true
+            if [ "$HAVE_PUBLISHED_FALLBACK" = true ]; then
+              cp /tmp/bdix-epg-published-fallback.xml epg/epg.xml
+              python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md || true
+            else
+              echo "::error::No previously published guide exists and the candidate failed quality gates; refusing to publish an invalid guide."
+              exit 1
+            fi
           fi
 
           # Coverage is always computed against the guide that will actually be published.
