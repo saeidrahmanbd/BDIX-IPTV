@@ -8,7 +8,7 @@ The refresh workflow is enabled again. It will rebuild and publish `epg/epg.xml`
 
 - Public guide: [epg.xml](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml)
 - Automatic refresh: daily at 10:17 Asia/Dhaka and on relevant playlist/EPG input changes
-- Current published-guide coverage: **not verified in this status note**
+- Current published-guide coverage: measurement **disabled until the first successful XMLTV refresh**; current programme counts are not verified yet
 - Rights register: unresolved source reviews remain visible in [source-rights-register.csv](../epg/source-rights-register.csv)
 
 ## Source and mapping improvements
