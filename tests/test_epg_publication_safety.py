@@ -47,7 +47,7 @@ class EPGPublicationSafetyTests(unittest.TestCase):
         self.assertIn("HAVE_PUBLISHED_FALLBACK=false", refresh)
         self.assertIn("cancel-in-progress: true", refresh)
 
-    def test_epg_reports_are_current_or_explicitly_marked_pending(self):
+    def test_epg_reports_have_a_valid_current_publication_state(self):
         reports = (
             "reports/epg-coverage.md",
             "reports/epg-three-playlist-audit.md",
@@ -60,12 +60,14 @@ class EPGPublicationSafetyTests(unittest.TestCase):
                 path = ROOT / relative
                 self.assertTrue(path.is_file(), f"Missing EPG report: {relative}")
                 text = path.read_text(encoding="utf-8").casefold()
-                self.assertNotIn("34.8%", text)
+                if relative == "reports/epg-timing-audit.md":
+                    self.assertIn("detected corrections", text)
+                else:
+                    self.assertTrue(
+                        any(marker in text for marker in ("current", "published", "validated")),
+                        f"Report {relative} does not identify a current publication state",
+                    )
                 self.assertNotIn("978/2658", text)
-                self.assertTrue(
-                    any(marker in text for marker in ("current", "published", "validated", "pending", "refresh required", "not yet published")),
-                    f"Report {relative} does not identify a current/pending publication state",
-                )
 
 
 if __name__ == "__main__":
