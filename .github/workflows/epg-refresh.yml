@@ -1,11 +1,8 @@
 name: Refresh IPTV EPG
 
 on:
-  # Refresh the EPG workflow when maintained playlist inventories or EPG inputs change.
-  # EPG.PW remains excluded; review-required sources are logged under the owner override.
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
       - 'IPTV-Playlist.m3u'
       - 'BDIX-Playlist.m3u'
@@ -16,16 +13,13 @@ on:
       - 'scripts/*epg*.py'
       - 'scripts/official_epg_sources.py'
       - 'docs/requirements.txt'
-      - '.github/workflows/epg-refresh.yml'
-  # Run after daily maintenance; the freshness guard skips duplicate work if maintenance succeeded.
   schedule:
-    - cron: '17 4 * * *' # 10:17 Asia/Dhaka, two hours after scheduled maintenance
+    - cron: '17 4 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
-# Isolate EPG generation from the playlist-writer queue; freshness and rebase guards protect against races.
 concurrency:
   group: iptv-epg-writer-v1
   cancel-in-progress: false
@@ -33,14 +27,15 @@ concurrency:
 
 jobs:
   refresh:
-    # Avoid self-trigger loops from the guide's generated commit; source policy is checked below.
     if: ${{ !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG')) }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
       EPG_ALLOW_UNVERIFIED_SOURCES: 'true'
+      NODE_VERSION: '22'
+      LAST_GOOD_EPG_COMMIT: '852a33d70d3caa6682602077724b097cfed15d1a'
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           fetch-depth: 0
       - name: Skip superseded queued EPG refresh
@@ -53,12 +48,12 @@ jobs:
             echo "::notice::Skipping superseded queued EPG refresh; a newer main-branch commit contains the latest playlist inventory."
             exit 0
           fi
-      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
           python-version: '3.12'
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
         with:
-          node-version: '20'
+          node-version: '22'
       - name: Install Python dependencies
         run: python -m pip install --disable-pip-version-check -r docs/requirements.txt
       - name: Validate EPG configuration and policy
@@ -72,9 +67,8 @@ jobs:
           python scripts/check_epg_config.py
           python -m unittest discover -s tests -p 'test_epg_source_rights.py'
           python -m unittest discover -s tests -p 'test_epg_publication_safety.py'
-          # Block explicitly prohibited sources; warn for review-required feeds under the owner override.
           python scripts/check_epg_source_rights.py
-      - name: Regenerate, freshness-check and publish XMLTV
+      - name: Regenerate, validate and publish XMLTV
         shell: bash
         run: |
           set -euo pipefail
@@ -82,45 +76,71 @@ jobs:
             echo '::notice::The daily maintenance job already published a fresh EPG for the current playlists; skipping duplicate generation.'
             exit 0
           fi
+
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          mkdir -p reports
-          if [ -s epg/epg.xml ]; then cp epg/epg.xml /tmp/bdix-epg-previous.xml; fi
+          mkdir -p reports epg
 
-          # Refresh source-to-playlist mappings, then build a targeted iptv-org guide.
+          # Preserve the currently published guide. If main has no guide, recover
+          # the last known-good generated guide before attempting a new build.
+          if [ -s epg/epg.xml ]; then
+            cp epg/epg.xml /tmp/bdix-epg-previous.xml
+          else
+            git show "${LAST_GOOD_EPG_COMMIT}:epg/epg.xml" > /tmp/bdix-epg-previous.xml
+            cp /tmp/bdix-epg-previous.xml epg/epg.xml
+            echo '::notice::Recovered the last known-good EPG snapshot because main was missing epg/epg.xml.'
+          fi
+
+          cp /tmp/bdix-epg-previous.xml /tmp/bdix-epg-published-fallback.xml
+
+          # Build the new candidate. The candidate is never allowed to destroy
+          # the last good public guide merely because an upstream feed is broken.
           python scripts/epg_coverage.py
           python scripts/fetch_iptv_org_epg.py
           python scripts/run_generate_epg.py
           test -s epg/epg.xml
           grep -q '<programme ' epg/epg.xml
 
-          # Do not publish a guide that contains mostly expired programme rows.
-          python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md
-          python scripts/epg_publish_gate_v2.py
+          CANDIDATE_OK=true
+          if ! python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md; then
+            CANDIDATE_OK=false
+            echo '::warning::New EPG candidate failed freshness validation; retaining the last known-good public guide.'
+          elif ! python scripts/epg_publish_gate_v2.py; then
+            CANDIDATE_OK=false
+            echo '::warning::New EPG candidate failed publication gates; retaining the last known-good public guide.'
+          fi
 
-          # Recompute published-guide coverage against the new XMLTV, then check freshness again.
+          if [ "$CANDIDATE_OK" != true ]; then
+            cp /tmp/bdix-epg-published-fallback.xml epg/epg.xml
+            python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md || true
+          fi
+
+          # Coverage is always computed against the guide that will actually be published.
           python scripts/epg_coverage.py
-          python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md
+          python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md || true
 
           git add -f epg/epg.xml
           git add reports/epg-channel-mapping.csv reports/epg-coverage.md reports/epg-three-playlist-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
-          # EPG generation also updates tracked diagnostic reports. Stage any such
-          # updates so rebase never starts with a dirty tracked worktree.
           git add -u -- reports
+
           if ! git diff --quiet; then
             echo 'ERROR: unstaged tracked changes remain after staging EPG outputs:'
             git status --short
             exit 1
           fi
+
           if git diff --cached --quiet; then
             echo 'EPG output and coverage reports are unchanged.'
             exit 0
           fi
-          git commit -m 'Refresh IPTV EPG and coverage reports'
-          # Another workflow may advance main after this run starts. Re-fetch,
-          # rebase, and retry the push rather than failing on a transient race.
-          # If generated reports conflict with newer outputs, stop safely rather
-          # than force-pushing stale EPG data over the newer main branch.
+
+          if [ "$CANDIDATE_OK" = true ]; then
+            COMMIT_MESSAGE='Refresh IPTV EPG and coverage reports'
+          else
+            COMMIT_MESSAGE='Restore last known-good IPTV EPG and refresh diagnostics'
+          fi
+          git commit -m "$COMMIT_MESSAGE"
+
           for attempt in 1 2 3; do
             git fetch origin main
             if ! git rebase origin/main; then
@@ -134,11 +154,11 @@ jobs:
             echo "::warning::EPG push attempt ${attempt} failed; retrying after refreshing main."
             sleep 3
           done
-          echo "::error::Could not publish EPG after 3 attempts."
+          echo '::error::Could not publish EPG after 3 attempts.'
           exit 1
       - name: Upload EPG freshness diagnostic
         if: always()
-        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: epg-freshness-${{ github.run_number }}
           path: reports/epg-publish-freshness.md
