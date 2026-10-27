@@ -40,7 +40,7 @@ def main():
     coverage = assignments(COVERAGE)
     generator = assignments(GENERATOR)
     for label, values in (("coverage", coverage), ("generator", generator)):
-        for required in ("SOURCES"):
+        for required in ("SOURCES",):
             if required not in values:
                 raise SystemExit(f"ERROR: {required} is missing from {label} script")
 
