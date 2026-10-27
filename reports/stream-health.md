@@ -1,5 +1,8 @@
 # Stream Health Report
 
+> ⚠️ **HISTORICAL STREAM-HEALTH SNAPSHOT.** Generated 2026-10-23 and tested 1,265 endpoints from an older inventory. It does not establish current health coverage for all three playlists; see the report timestamp and scope before drawing conclusions.
+
+
 Generated: **2026-10-23T08:43:58+00:00**
 Stream URL inventory SHA-256: **c790e7de8af83563007707264521481bd575bc9e8741459136fd2b3c5e2117d6**
 
