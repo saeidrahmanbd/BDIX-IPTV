@@ -1,7 +1,9 @@
 name: Refresh IPTV EPG
 
 on:
-  # Manual recovery only. The daily maintenance job now builds EPG after final playlist updates.
+  # Run after daily maintenance; the freshness guard skips duplicate work if maintenance succeeded.
+  schedule:
+    - cron: '17 4 * * *' # 10:17 Asia/Dhaka, two hours after scheduled maintenance
   workflow_dispatch:
 
 permissions:
@@ -36,7 +38,8 @@ jobs:
       - name: Validate EPG configuration and policy
         run: |
           set -euo pipefail
-          python -m py_compile scripts/epg_coverage.py scripts/generate_epg.py scripts/run_generate_epg.py scripts/fetch_iptv_org_epg.py scripts/augment_epg_mapping_from_iptv_org.py scripts/epg_publish_gate_v2.py scripts/validate_epg_freshness.py
+          python -m py_compile scripts/epg_coverage.py scripts/generate_epg.py scripts/run_generate_epg.py scripts/fetch_iptv_org_epg.py scripts/augment_epg_mapping_from_iptv_org.py scripts/epg_publish_gate_v2.py scripts/validate_epg_freshness.py scripts/epg_refresh_needed.py
+          python -m unittest discover -s tests -p 'test_epg_refresh_needed.py'
           python -m unittest discover -s tests -p 'test_epg_config.py'
           python -m unittest discover -s tests -p 'test_language_policy.py'
           python -m unittest discover -s tests -p 'test_iptv_org_epg_targeting.py'
@@ -45,6 +48,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          if python scripts/epg_refresh_needed.py --max-age-hours 8; then
+            echo '::notice::The daily maintenance job already published a fresh EPG for the current playlists; skipping duplicate generation.'
+            exit 0
+          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           mkdir -p reports
