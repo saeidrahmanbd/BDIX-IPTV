@@ -55,6 +55,8 @@ A curated IPTV collection focused on **🇧🇩 Bangladeshi channels, 🇮🇳 I
 
 > **Automation scope:** EPG and quality-audit workflows inspect `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `International-Playlist.m3u`; stream-health coverage varies by workflow and runner. Automatic Bangladesh/India discovery permits Bangladeshi news and Indian Kids/Sports, while rejecting Indian News and non-Islamic religious content. Islamic religious channels are allowed. International discovery is restricted to movie/music candidates, with the explicitly preserved Fashion TV exception. Existing canonical rows are protected from automatic removals.
 
+> **Content and EPG scope:** `International-Playlist.m3u` contains a separate `Adult` category. The EPG mapping registry includes rows across all maintained playlist groups (including `Adult`); despite its legacy filename, it is not India-only. The combined EPG coverage report measures all three playlists, while EPG figures in the Update Report are IPTV-playlist-only when a current per-playlist row is available.
+
 <p align="center">
   <a href="assets/iptv-project-showcase-2026-10-22.svg">
     <img src="assets/iptv-project-showcase-2026-10-22.svg" alt="BDIX-IPTV project showcase: three maintained playlist files, organized categories, metadata, EPG and logo audits" width="100%">
@@ -147,7 +149,7 @@ The repository is maintained with automated quality checks.
 | 📝 Maintenance Reports | 🤖 Automated | Quality metrics on maintenance runs |
 
 <p align="center">
-  <b><a href="reports/Update%20Report.md">→ Latest saved Update Report snapshot</a></b>
+  <b><a href="reports/Update%20Report.md">→ Update Report snapshot (check timestamp and source fingerprint)</a></b>
 </p>
 
 ---
@@ -207,8 +209,8 @@ Automated maintenance covers:
 | 📡 [Stream Health](reports/stream-health.md) | Endpoint availability monitoring and failure classification |
 | 🧩 [Backup Independence Audit](reports/backup-independence-audit.md) | Shared-host/origin and fallback-family review |
 | 🛠️ [Maintenance Report](reports/maintenance-report.md) | Automated maintenance summary |
-| 📄 [EPG Coverage](reports/epg-coverage.md) | Programme guide coverage |
-| 🆕 [Update Report](reports/Update%20Report.md) | Latest playlist changes and quality metrics |
+| 📄 [EPG Coverage](reports/epg-coverage.md) | Combined programme-guide coverage across all three maintained playlists |
+| 🆕 [Update Report](reports/Update%20Report.md) | Generated snapshot; verify its timestamp and source fingerprint before treating metrics as current |
 | ⚠️ [Stream Risk Review](reports/stream-risk-review.md) | Fragile, signed/tokenized and higher-risk stream references |
 
 📚 For Playlist Studio and project information, see the **[Documentation](docs/README.md)**.
