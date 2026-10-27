@@ -4,10 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - BDIX-Playlist.m3u
       - scripts/bdix_playlist_update.py
-      - scripts/sort_playlists.py
-      - scripts/enforce_playlist_attribution.py
+      - .github/workflows/bdix-playlist-update.yml
   schedule:
     - cron: '47 2 * * *'
   workflow_dispatch:
@@ -29,7 +27,7 @@ jobs:
     timeout-minutes: 35
     steps:
       - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           fetch-depth: 0
 
