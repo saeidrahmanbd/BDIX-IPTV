@@ -75,6 +75,9 @@ def main():
     cross_queue_name_collisions=sum(1 for ids in name_ids.values() if len(ids)>1)
     issues=sum(metric(a,k) for k in ["Duplicate stream URLs","Metadata conflicts","Cross-country backup collisions","Protected primary-entry changes","Logo exceptions","Duplicate primary identities","Primary channel-number collisions","Primary entries missing channel numbers","Malformed EXTINF entries","Category block-order issues","Alphabetical ordering issues"]) if audit_current else None
     issues_value=issues if issues is not None else "STALE / UNKNOWN"
+    def audit_metric(label):
+        value=metric(a,label)
+        return value if audit_current else f"STALE / UNKNOWN (last saved: {value})"
     hfail=metric(h,"Failed this check") if health_current else None
     hpersist=metric(h,"Persistent failures (3+ consecutive)") if health_current else None
     htested=metric(h,"Streams tested") if health_current else None
@@ -128,19 +131,19 @@ Source playlist SHA-256: **{source_sha}**
 | Pre-Publish Gate Generated | **{timestamp(GATE)}** |
 
 ## Quality Controls{" " if audit_current else " (STALE / UNKNOWN — saved audit values shown for reference)"}
-- Duplicate stream URLs: **{metric(a,"Duplicate stream URLs")}**
-- Metadata conflicts (canonical primary scope): **{metric(a,"Metadata conflicts")}**
-- Same-name / different-ID collisions (canonical primary scope): **{metric(a,"Same-name / different-ID collisions")}**
+- Duplicate stream URLs: **{audit_metric("Duplicate stream URLs")}**
+- Metadata conflicts (canonical primary scope): **{audit_metric("Metadata conflicts")}**
+- Same-name / different-ID collisions (canonical primary scope): **{audit_metric("Same-name / different-ID collisions")}**
 - Cross-queue metadata identity variants: **{cross_queue_id_variants}**
 - Cross-queue same-name / different-ID collisions: **{cross_queue_name_collisions}**
-- Duplicate primary identities: **{metric(a,"Duplicate primary identities")}**
-- Primary channel-number collisions: **{metric(a,"Primary channel-number collisions")}**
-- Primary entries missing channel numbers: **{metric(a,"Primary entries missing channel numbers")}**
-- Logo exceptions: **{metric(a,"Logo exceptions")}**
-- Malformed EXTINF entries: **{metric(a,"Malformed EXTINF entries")}**
-- Category block-order issues: **{metric(a,"Category block-order issues")}**
-- Alphabetical ordering issues: **{metric(a,"Alphabetical ordering issues")}**
-- Signed/tokenized URLs: **{metric(a,"Signed/tokenized stream URLs")}**
+- Duplicate primary identities: **{audit_metric("Duplicate primary identities")}**
+- Primary channel-number collisions: **{audit_metric("Primary channel-number collisions")}**
+- Primary entries missing channel numbers: **{audit_metric("Primary entries missing channel numbers")}**
+- Logo exceptions: **{audit_metric("Logo exceptions")}**
+- Malformed EXTINF entries: **{audit_metric("Malformed EXTINF entries")}**
+- Category block-order issues: **{audit_metric("Category block-order issues")}**
+- Alphabetical ordering issues: **{audit_metric("Alphabetical ordering issues")}**
+- Signed/tokenized URLs: **{audit_metric("Signed/tokenized stream URLs")}**
 
 ## Safety & Automation
 - Stream health is non-destructive and keeps per-URL failure history.
