@@ -72,14 +72,35 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if python scripts/epg_refresh_needed.py --max-age-hours 8; then
-            echo '::notice::The daily maintenance job already published a fresh EPG for the current playlists; skipping duplicate generation.'
-            exit 0
-          fi
-
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           mkdir -p reports epg
+
+          if python scripts/epg_refresh_needed.py --max-age-hours 8; then
+            echo '::notice::A fresh EPG already exists for the current playlists; refreshing dashboard and maintenance snapshots without rebuilding XMLTV.'
+            python scripts/generate_dashboard.py
+            git add assets/dashboard.svg 'reports/Update Report.md' reports/maintenance-report.md
+            if git diff --cached --quiet; then
+              echo 'EPG and dashboard snapshots are already current.'
+              exit 0
+            fi
+            git commit -m 'Refresh EPG dashboard snapshots'
+            for attempt in 1 2 3; do
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort || true
+                echo '::error::Dashboard snapshot conflicted with newer main content; no force-push attempted.'
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              echo "::warning::Dashboard push attempt ${attempt} failed; retrying after refreshing main."
+              sleep 3
+            done
+            echo '::error::Could not publish dashboard snapshots after 3 attempts.'
+            exit 1
+          fi
 
           HAVE_PUBLISHED_FALLBACK=false
           if [ -s epg/epg.xml ]; then
@@ -90,7 +111,7 @@ jobs:
 
           python scripts/epg_coverage.py
           if ! timeout 180s python scripts/fetch_iptv_org_epg.py; then
-            echo "::warning::Optional iptv-org guide timed out or failed; proceeding with the configured XMLTV feeds."
+            echo '::warning::Optional iptv-org guide timed out or failed; proceeding with the configured XMLTV feeds.'
             printf '%s\n' '<?xml version="1.0" encoding="UTF-8"?>' '<tv generator-info-name="BDIX-IPTV optional iptv-org guide unavailable"></tv>' > /tmp/iptv-org-guide.xml
           fi
           test -s /tmp/iptv-org-guide.xml
@@ -112,7 +133,7 @@ jobs:
               cp /tmp/bdix-epg-published-fallback.xml epg/epg.xml
               python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md || true
             else
-              echo "::error::No previously published guide exists and the candidate failed quality gates; refusing to publish an invalid guide."
+              echo '::error::No previously published guide exists and the candidate failed quality gates; refusing to publish an invalid guide.'
               exit 1
             fi
           fi
@@ -122,7 +143,7 @@ jobs:
           python scripts/generate_dashboard.py
 
           git add -f epg/epg.xml
-          git add assets/dashboard.svg
+          git add assets/dashboard.svg 'reports/Update Report.md' reports/maintenance-report.md
           git add reports/epg-channel-mapping.csv reports/epg-coverage.md reports/epg-three-playlist-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
           git add -u -- reports
 
@@ -148,7 +169,7 @@ jobs:
             git fetch origin main
             if ! git rebase origin/main; then
               git rebase --abort || true
-              echo "::error::EPG outputs conflicted with newer main content; no force-push attempted."
+              echo '::error::EPG outputs conflicted with newer main content; no force-push attempted.'
               exit 1
             fi
             if git push origin HEAD:main; then
