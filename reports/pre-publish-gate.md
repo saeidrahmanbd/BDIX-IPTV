@@ -1,5 +1,8 @@
 # Pre-Publish Safety Gate
 
+> ⚠️ **STALE SNAPSHOT — DO NOT TREAT THIS PASS AS CURRENT.** Generated 2026-10-23 against an older playlist revision. The playlist has since changed; rerun the safety gate against the current revision before relying on any result.
+
+
 Generated: **2026-10-23T08:44:18+00:00**
 Source playlist SHA-256: **0ce6e1a9799733fae3febaa075d00c8c19a71f5ec225525a6559bbdcdc7ad3d5**
 
