@@ -23,7 +23,7 @@ class DashboardFreshnessTests(unittest.TestCase):
             path.write_text(playlist, encoding="utf-8")
             self.assertEqual(url_inventory_sha(playlist), stream_url_inventory_sha256(path))
 
-    def test_playlist_count_includes_rows_but_excludes_review_ids(self):
+    def test_playlist_count_excludes_only_backup_test_and_not_playing_ids(self):
         playlist = (
             "#EXTM3U\n"
             '#EXTINF:-1 tvg-id="A.bd" group-title="Bangladesh",A\n'
@@ -38,7 +38,7 @@ class DashboardFreshnessTests(unittest.TestCase):
             path.write_text(playlist, encoding="utf-8")
             rows = parse(path)
             self.assertEqual(len(rows), 3)
-            self.assertEqual(playlist_counts(path), (3, 1))
+            self.assertEqual(playlist_counts(path), (3, 2))
 
 
 if __name__ == "__main__":
