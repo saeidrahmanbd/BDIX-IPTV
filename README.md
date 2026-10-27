@@ -1,6 +1,6 @@
 <!-- BDIX-IPTV Banner -->
 <p align="center">
-  <img src="assets/Saeid%20Rahman.jpg" alt="BDIX-IPTV — Bangladesh, India & selected international IPTV collection" width="100%">
+  <img src="assets/bdix-iptv-banner.jpg" alt="BDIX-IPTV — Bangladesh, India & selected international IPTV collection" width="100%">
 </p>
 
 <h1 align="center">📺 BDIX-IPTV</h1>
@@ -58,8 +58,8 @@ A curated IPTV collection focused on **🇧🇩 Bangladeshi channels, 🇮🇳 I
 > **Content and EPG scope:** `International-Playlist.m3u` contains a separate `Adult` category. The EPG mapping registry includes rows across all maintained playlist groups (including `Adult`); despite its legacy filename, it is not India-only. The combined EPG coverage report measures all three playlists, while EPG figures in the Update Report are IPTV-playlist-only when a current per-playlist row is available.
 
 <p align="center">
-  <a href="assets/iptv-project-showcase-2026-10-22.svg">
-    <img src="assets/iptv-project-showcase-2026-10-22.svg" alt="BDIX-IPTV project showcase: three maintained playlist files, organized categories, metadata, EPG and logo audits" width="100%">
+  <a href="assets/iptv-project-showcase.svg">
+    <img src="assets/iptv-project-showcase.svg" alt="BDIX-IPTV project showcase: three maintained playlist files, organized categories, metadata, EPG and logo audits" width="100%">
   </a>
 </p>
 
@@ -117,7 +117,7 @@ Other players (VLC, TiviMate, IPTV Smarters, Kodi, etc.) work the same way — a
 
 ## 🖥️ Playlist Studio
 
-![Playlist Studio 5.0](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/assets/Playlist%20Studio%205.0.png)
+![Playlist Studio 5.0](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/assets/playlist-studio-5.png)
 
 [**Playlist Studio 5.0**](https://github.com/saeidrahmanbd/Playlist-Studio) is a separate, portable Windows playlist manager, editor and player.
 

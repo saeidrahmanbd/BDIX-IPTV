@@ -103,7 +103,7 @@ def main():
     health_freshness="CURRENT" if health_current else "STALE"
     epg_freshness="CURRENT" if epg_current else "STALE"
     try: hist=json.loads(HISTORY.read_text(encoding="utf-8")); hist=hist[-30:] if isinstance(hist,list) else []
-    except Exception: hist=[]
+    except (OSError, UnicodeError, json.JSONDecodeError): hist=[]
     prev=hist[-2] if len(hist)>=2 else {}; cur=hist[-1] if hist else {}
     md=f"""# Update Report
 

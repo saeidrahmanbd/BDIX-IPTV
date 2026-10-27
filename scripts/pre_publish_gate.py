@@ -72,7 +72,7 @@ def review_state(entries):
 def main():
     current=parse(P.read_text(encoding="utf-8-sig"))
     try: old=parse(subprocess.check_output(["git","show","HEAD:IPTV-Playlist.m3u"],text=True))
-    except Exception: old=[]
+    except (subprocess.CalledProcessError, OSError, UnicodeError): old=[]
     cur_urls=Counter(u.lower() for _,_,u in current); dup_urls=[u for u,n in cur_urls.items() if n>1]
     cur_primary=[(a,u) for _,a,u in current if a.get("group-title","").strip() not in EXCLUDE]
     old_primary=[(info,a,u) for info,a,u in old if a.get("group-title","").strip() not in EXCLUDE]

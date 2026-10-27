@@ -17,6 +17,10 @@ The workers read the public raw playlist URLs configured in their respective `wr
 - [`xtream-bdix/`](../xtream-bdix/) — BDIX worker source and configuration
 - [`xtream/`](./) — this documentation and gateway policy
 
+## Optional relay example
+
+The `assets/relay/` directory contains an optional Docker Compose / Nginx relay example. It is separate from the hosted Cloudflare Workers and is not used by the standard Xtream deployment. Review `assets/relay/docker-compose.yml`, `assets/relay/nginx.conf`, and `assets/relay/config/` before use. Keep real upstream credentials in deployment secrets or local environment files; never commit them or expose private upstreams publicly.
+
 ## Security
 
 - Xtream credentials are supplied through deployment secrets; do not commit usernames or passwords.

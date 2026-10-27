@@ -258,7 +258,7 @@ https://cc-8hy4a26pz2uos.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da6
 https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_CINEMA_H264_cloud_in/index.m3u8
 #EXTINF:-1 tvg-id="Goldmines.in@SD" tvg-country="IN" group-title="Indian Movies" tvg-name="Goldmines" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines.png",Goldmines
 https://streams.tangotv.in/GOLDMINES/ORIGIN/index.m3u8
-#EXTINF:-1 tvg-id="Goldmines2.in@SD" tvg-country="IN" group-title="Indian Movies" tvg-name="Goldmines 2",Goldmines 2
+#EXTINF:-1 tvg-id="Goldmines2.in@SD" tvg-country="IN" group-title="Indian Movies" tvg-name="Goldmines 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines.png",Goldmines 2
 https://mumt03.tangotv.in/Dsly5z3HGOLDMINES2/index.m3u8
 #EXTINF:-1 tvg-id="GoldminesAction.in@SD" tvg-country="IN" group-title="Indian Movies" tvg-name="Goldmines Action" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines-action.png",Goldmines Action
 https://mumt03.tangotv.in/Dsly5z3HGOLDMINESACTION/index.m3u8
@@ -356,7 +356,7 @@ https://stream.sscloud7.com/live/suriyantv/index.m3u8
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2069c593-3c07-4d62-9d44-746be5c3a5d6/manifest.m3u8
 #EXTINF:-1 tvg-id="TheMovieClub.in@HD" channel-id="TheMovieClub.in@HD" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-movie-club.png" tvg-country="IN" group-title="Indian Movies" tvg-name="The Movie Club",The Movie Club
 https://cc-r5hupcym5oehh.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-r5hupcym5oehh/SBUM/RunnTV/BollyFlix_IN/BollyFlix_IN.m3u8
-#EXTINF:-1 tvg-id="TheMovieClub.in@Plus2" tvg-country="IN" group-title="Indian Movies" tvg-name="The Movie Club +2",The Movie Club +2
+#EXTINF:-1 tvg-id="TheMovieClub.in@Plus2" tvg-country="IN" group-title="Indian Movies" tvg-name="The Movie Club +2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/the-movie-club-2.png",The Movie Club +2
 https://d3gnyty2vddhsg.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ytipwjqub3kf8/TMC2_IN.m3u8?ads.ads_cdn=cf&ads.cdn=cf
 #EXTINF:-1 tvg-id="TollyTV.in@HD" tvg-country="IN" group-title="Indian Movies" tvg-name="Tolly TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tolly-tv.png",Tolly TV
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/13b5735d-52c3-4be0-853d-e0ec0127e708/manifest.m3u8
@@ -720,7 +720,7 @@ https://mmtv-vglivessai.akamaized.net/v1/master/673630b269b766886555eebfddd4f27f
 https://meialai.iptelevishion.com/meialai/2/index.m3u8
 #EXTINF:-1 tvg-id="MetroTV.in@SD" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Metro TV (India)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/metro-tv-india-0625d4e893.png",Metro TV (India)
 https://mercury.streambridge.link:8042/telugu/metrotv/index.m3u8
-#EXTINF:-1 tvg-id="Mh1Prime.in@SD" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Mh 1 Prime",Mh 1 Prime
+#EXTINF:-1 tvg-id="Mh1Prime.in@SD" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Mh 1 Prime" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh1-prime.png",Mh 1 Prime
 https://streams.tangotv.in/MHONE/ORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="MHOne.in@SD" tvg-country="IN" group-title="Indian Entertainment" tvg-name="MH One" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mh-one.png",MH One
 https://samitaorigin.tangotv.in/MHONE/SAMITAORIGIN/index.m3u8
@@ -3358,7 +3358,7 @@ http://198.58.104.90:8989/nickelodeon/index.m3u8
 https://stream8.cinerama.uz/1500/playlist.m3u8
 #EXTINF:-1 tvg-id="NickelodeonGlobal.uk@SD" group-title="Kids" tvg-name="Nickelodeon Global" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nickelodeon-global-f61cbaf1ed.png",Nickelodeon Global
 http://103.151.60.162:2122/play/a017/index.m3u8?hls
-#EXTINF:-1 tvg-id="NickOnline.br@HD" tvg-country="BR" group-title="Kids" tvg-name="NickOnline",NickOnline
+#EXTINF:-1 tvg-id="NickOnline.br@HD" tvg-country="BR" group-title="Kids" tvg-name="NickOnline" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/nickonline-hd-720p.png",NickOnline
 https://x1colegal.com/hls/stream.m3u8
 #EXTINF:-1 tvg-id="Nicktoons.cz@SD" tvg-country="CZ" group-title="Kids" tvg-name="Nicktoons (Czech Republic)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nicktoons-czech-republic-8af9304b51.png",Nicktoons (Czech Republic)
 http://88.212.15.50/live/test_nicktoons/playlist.m3u8

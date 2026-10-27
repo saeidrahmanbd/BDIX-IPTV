@@ -46,7 +46,7 @@ See **`Readme.txt`** inside the build kit for detailed instructions.
 
 ## Program Glimpse
 
-![Playlist Studio 5.0](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/assets/Playlist%20Studio%205.0.png)
+![Playlist Studio 5.0](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/assets/playlist-studio-5.png)
 
 ## Release
 

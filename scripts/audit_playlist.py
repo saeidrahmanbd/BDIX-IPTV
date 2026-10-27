@@ -390,7 +390,7 @@ try:
     for url, count in old_primary_urls.items():
         if current_urls[url] < count:
             protected_changes.append(("", url, "primary stream URL removed"))
-except Exception:
+except (subprocess.CalledProcessError, OSError, UnicodeError):
     pass
 
 missing_primary_chno = [(info, url) for info, url in entries if attrs(info).get("group-title", "").strip() not in PRIMARY_EXCEPTIONS and not attrs(info).get("tvg-chno", "").strip()]
