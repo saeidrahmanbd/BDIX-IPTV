@@ -22,7 +22,7 @@ The workers read the public raw playlist URLs configured in their respective `wr
 - Xtream credentials are supplied through deployment secrets; do not commit usernames or passwords.
 - Do not place real credentials in this repository or in example configuration files.
 - The workers are downstream consumers of the published playlist data.
-- Review the repository's [stream-risk review](../reports/stream-risk-review.md), [stream-health report](../reports/stream-health.md), and [pre-publish gate](../reports/pre-publish-gate.md) before enabling a deployment.
+- Review the repository's [stream-risk review](../reports/stream-risk-review.md), [stream-health report](../reports/stream-health.md), and [pre-publish gate](../reports/pre-publish-gate.md) before enabling a deployment. These are generated snapshots: verify the report timestamp and source playlist fingerprint; a historical `PASS` does not certify the current playlist.
 
 ## Deployment
 
