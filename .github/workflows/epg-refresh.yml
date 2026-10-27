@@ -21,7 +21,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: iptv-epg-writer-v3
+  group: iptv-epg-writer-v4
   cancel-in-progress: true
 
 jobs:
