@@ -147,7 +147,7 @@ def require_approved_sources(context="EPG source access"):
             f"{len(errors)} source-rights review item(s) remain open."
         )
         print(
-            "No useful EPG source is categorically excluded by this override. "
+            "Useful EPG sources are not categorically excluded by this override. "
             "Review epg/source-rights-register.csv before changing a source to APPROVED."
         )
         return True
