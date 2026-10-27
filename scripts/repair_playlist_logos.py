@@ -333,6 +333,11 @@ ADULT_BACKUP_CHANNEL_NAMES = (
 )
 ADULT_BACKUP_CHANNEL_KEYS = {norm_key(name) for name in ADULT_BACKUP_CHANNEL_NAMES}
 
+# Do not assign generated artwork as a playlist logo by default. The user prefers
+# genuine broadcaster logos; when no verified logo is found, leave it unresolved
+# and report it rather than making an unofficial image look like broadcaster art.
+ALLOW_GENERATED_FALLBACKS = False
+
 
 def is_adult_playlist_entry(playlist, group_name, channel_id, channel_key):
     """Identify all adult entries in the International playlist, including mislabeled backup rows."""
@@ -859,7 +864,7 @@ def main():
             # Only for International entries, use explicitly labelled, channel-specific
             # fallback art after exact/local/attributable source lookup fails. Adult
             # rows were excluded above; fallback art is not represented as official.
-            if not new_file and playlist == "International-Playlist.m3u" and not is_adult_entry:
+            if ALLOW_GENERATED_FALLBACKS and not new_file and playlist == "International-Playlist.m3u" and not is_adult_entry:
                 fallback_file = make_generated_fallback(channel, attrs.get("group-title", ""))
                 if fallback_file:
                     new_file = fallback_file
@@ -907,7 +912,7 @@ def main():
                     line = re.sub(r'\s+tvg-logo="[^"]*"', "", line, count=1)
                     if line != original_line:
                         changed += 1
-                result_note = "Unsafe logo reference removed" if line != original_line else "No exact clean original or generated fallback available"
+                result_note = "Unsafe logo reference removed" if line != original_line else "No exact authentic logo source; logo left missing for manual review"
                 report_rows.append((playlist, line_number, channel, basename, "", "none", "", "", result_note))
             output.append(line)
 
@@ -975,7 +980,7 @@ def main():
         )
     report += ["", "## Quality rule", "",
                "- Exact, clean local assets are searched first; then curated, source-attributed external logo URLs are downloaded and validated.",
-               "- If no exact authentic asset is available, an existing explicitly named generated-fallback asset may remain as provisional artwork; it is never presented as authentic and is marked generated_fallback in the provenance manifest.",
+               "- If no exact authentic asset is available, leave the logo missing and flag the entry for manual review; generated artwork is disabled by default.",
                "- Contaminated, mismatched, placeholder, generic, and generated-fallback assets are never assigned to tvg-logo.",
                "- Nvision-branded filenames are prohibited in all maintained playlists.",
                "- Original playlist entries, channel metadata, categories, and stream URLs are preserved.", ""]

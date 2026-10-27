@@ -25,6 +25,9 @@ class LogoRepairSourceTests(unittest.TestCase):
     def test_channel16_ru_asset_is_quarantined_from_general_reuse(self):
         self.assertIn("16-a308b78988.png", logo_repair.BAD_ASSETS)
 
+    def test_generated_fallback_art_is_disabled_by_default(self):
+        self.assertFalse(logo_repair.ALLOW_GENERATED_FALLBACKS)
+
     def test_adult_backup_channels_are_exempt_from_logo_repair(self):
         for name in ("Evil Angel", "Pink Erotic 2", "Pink Erotic 3", "Pink Erotic 5", "Pink Erotic 7", "Pink Erotic 8"):
             with self.subTest(channel=name):
