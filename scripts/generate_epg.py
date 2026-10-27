@@ -762,6 +762,10 @@ def main():
             if src not in source_payloads:
                 raise RuntimeError("source fetch returned no payload")
             source_stats[src] = "OK"
+            # Parse the payload fetched for this specific source. Using an
+            # undefined/stale data variable silently failed every XMLTV feed
+            # while leaving only the custom HUM TV scraper in the final guide.
+            data = source_payloads[src]
             for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):
                 if elem.tag != "programme":
                     continue
