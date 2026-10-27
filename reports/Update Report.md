@@ -1,5 +1,8 @@
 # Update Report
 
+> ⚠️ **STALE SNAPSHOT — NOT LIVE STATUS.** Generated 2026-10-23 for an older playlist fingerprint and reports 1,265 entries. The current playlist has changed; rerun the generating workflow before relying on these metrics.
+
+
 _Last generated: **2026-10-23 08:52 UTC**_
 
 Source playlist SHA-256: **0ce6e1a9799733fae3febaa075d00c8c19a71f5ec225525a6559bbdcdc7ad3d5**
