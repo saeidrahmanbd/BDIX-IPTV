@@ -37,9 +37,7 @@
 
 ## ✨ Overview
 
-A curated IPTV project with separate Bangladesh/India collections and a worldwide playlist. International country groups are restricted to movie and music channels; dedicated Kids, Sports, Documentary & Wildlife, Religious and Adult groups remain separate, and Fashion TV is an explicit exception.
-
-> **Important:** backup entries are references to alternate stream URLs. Multiple URLs can share the same CDN, origin, rendition family, or delivery infrastructure, so a backup count is **not** a guarantee of independent redundancy.
+A curated IPTV project with separate Bangladesh/India collections and a worldwide playlist. 
 
 | 🧼 Metadata | 🖼️ Local Logo Assets | 🔁 Backup References | 📄 EPG Publication Status |
 |:---:|:---:|:---:|:---:|
