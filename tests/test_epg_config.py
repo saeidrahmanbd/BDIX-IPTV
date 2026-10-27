@@ -1,8 +1,10 @@
-import ast, re, unittest, sys
+import ast, csv, re, tempfile, unittest, sys
+from unittest.mock import patch
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+import generate_epg
 
 COV = (ROOT / "scripts" / "epg_coverage.py").read_text(encoding="utf-8")
 GEN = (ROOT / "scripts" / "generate_epg.py").read_text(encoding="utf-8")
@@ -27,6 +29,32 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn(
             'data = source_payloads[src]\n            for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):',
             GEN,
+        )
+
+    def test_generator_skips_feeds_without_current_mapped_source_ids(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            mapping = Path(tmp) / "mapping.csv"
+            with mapping.open("w", encoding="utf-8", newline="") as handle:
+                writer = csv.DictWriter(
+                    handle,
+                    fieldnames=["group", "channel", "tvg_id", "epg_id", "source", "status", "note"],
+                )
+                writer.writeheader()
+                writer.writerow({
+                    "group": "Indian Entertainment", "channel": "Demo",
+                    "tvg_id": "Demo.in", "epg_id": "feed-a-id",
+                    "source": "feed-a | feed-b", "status": "MAPPED", "note": "",
+                })
+            configured = [
+                "feed-a", "feed-b", "feed-c", "file:///tmp/iptv-org-guide.xml",
+                generate_epg.HUM_TV_SOURCE, generate_epg.RTV_SOURCE,
+            ]
+            with patch.object(generate_epg, "MAPPING", mapping):
+                selected = generate_epg.sources_with_mapped_channels(configured)
+        self.assertEqual(
+            selected,
+            ["feed-a", "feed-b", "file:///tmp/iptv-org-guide.xml",
+             generate_epg.HUM_TV_SOURCE, generate_epg.RTV_SOURCE],
         )
 
     def test_generator_covers_all_three_core_playlists(self):
