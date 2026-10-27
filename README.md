@@ -53,7 +53,7 @@ A curated IPTV collection focused on **🇧🇩 Bangladeshi channels, 🇮🇳 I
 | **BDIX-Playlist.m3u** | BDIX-focused channel collection | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u) |
 | **International-Playlist.m3u** | International channel collection | [Open M3U](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) |
 
-> **Automation scope:** EPG and quality workflows cover `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `International-Playlist.m3u`. Automatic new-channel discovery is restricted to verified Bangladesh/India candidates. Bangladeshi news channels are allowed; Indian News, Sports, Kids and Religious channels are prohibited. Automatic International channel discovery is active and accepts Movies/Music only; News, Sports, Kids, Documentary/Wildlife, Religious, General/Entertainment and all other non-Movie/Music categories are rejected. Existing canonical rows are preserved; only out-of-scope discovery queues and the generic International catch-all are policy-cleaned.
+> **Automation scope:** EPG and quality-audit workflows inspect `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `International-Playlist.m3u`; stream-health coverage varies by workflow and runner. Automatic Bangladesh/India discovery permits Bangladeshi news and Indian Kids/Sports, while rejecting Indian News and non-Islamic religious content. Islamic religious channels are allowed. International discovery is restricted to movie/music candidates, with the explicitly preserved Fashion TV exception. Existing canonical rows are protected from automatic removals.
 
 <p align="center">
   <a href="assets/iptv-project-showcase-2026-10-22.svg">
@@ -139,15 +139,15 @@ The repository is maintained with automated quality checks.
 
 | Area | Status | Details |
 |---|:---:|---|
-| 📺 Playlists | ✅ Available | Three maintained playlist files; all are covered by automated maintenance |
-| 🖼️ Logos | ✅ Local | Stored in the repository |
+| 📺 Playlists | ✅ Available | Three maintained playlist files; check each report for its actual playlist scope and generated timestamp |
+| 🖼️ Logos | 🧾 Reviewed | Local assets are used where assigned; authenticity and missing-logo coverage still require review |
 | 📡 Stream Health | 🤖 Automated | Endpoint checks; failures become review candidates |
 | 📄 EPG | 📈 Monitored | Coverage is measured and published only when the gate allows it |
 | 🧹 Playlist Audit | 🤖 Automated | Duplicates, identity, metadata and logo checks |
 | 📝 Maintenance Reports | 🤖 Automated | Quality metrics on maintenance runs |
 
 <p align="center">
-  <b><a href="reports/Update%20Report.md">→ Live Update Report</a></b>
+  <b><a href="reports/Update%20Report.md">→ Latest saved Update Report snapshot</a></b>
 </p>
 
 ---
@@ -185,7 +185,7 @@ Automated maintenance covers:
 3. 💾 Backup streams are not automatically deleted because of health failures.
 4. 🧭 `New Channels` and `New Backup` are active review queues used by discovery and validation; they are not retired categories.
 5. 🔍 Health failures become review candidates rather than automatic deletion decisions.
-6. 📊 Dashboard figures are generated from the current playlist and reports.
+6. 📊 Dashboard figures are generated snapshots; verify report timestamps and source playlist fingerprints before treating the values as current.
 7. 📝 Maintenance runs record quality metrics.
 8. 🔗 Backup counts do not imply independent infrastructure; CDN/origin/rendition families are audited separately.
 
@@ -197,11 +197,13 @@ Automated maintenance covers:
 
 ## 📈 Reports
 
+> **Freshness note:** reports and the SVG dashboard are generated snapshots, not live status pages. Check each report's `Generated` timestamp and source playlist SHA-256. Several snapshots generated on 2026-10-23 predate subsequent playlist changes and are marked historical until regenerated successfully.
+
 | Report | |
 |---|---|
-| 📊 [Project Dashboard](assets/dashboard.svg) | Generated playlist and maintenance summary |
+| 📊 [Project Dashboard snapshot](assets/dashboard.svg) | Historical visual snapshot; values can lag behind current playlists |
 | 🧹 [IPTV Playlist Audit](reports/iptv-playlist-audit.md) | Duplicates, identity and metadata checks |
-| 🆕 [IPTV Channel Discovery](reports/iptv-channel-discovery.md) | Verified Bangladesh/India discovery queue; allows Bangladeshi news and prohibits Indian News, Sports, Kids and Religious channels |
+| 🆕 [IPTV Channel Discovery](reports/iptv-channel-discovery.md) | Bangladesh/India discovery queue; Indian Kids/Sports allowed, Indian News and non-Islamic religious content prohibited |
 | 📡 [Stream Health](reports/stream-health.md) | Endpoint availability monitoring and failure classification |
 | 🧩 [Backup Independence Audit](reports/backup-independence-audit.md) | Shared-host/origin and fallback-family review |
 | 🛠️ [Maintenance Report](reports/maintenance-report.md) | Automated maintenance summary |
@@ -241,10 +243,14 @@ For collaboration, feedback, IPTV playlist issues, or project-related inquiries:
 <p align="center">
   <a href="mailto:saeidrahman.mkt@gmail.com"><img src="https://img.shields.io/badge/Email-saeidrahman.mkt@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
   <a href="https://github.com/saeidrahmanbd"><img src="https://img.shields.io/badge/GitHub-saeidrahmanbd-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-  <a href="https://www.facebook.com/saeidrahman.mkt"><img src="https://img.shields.io/badge/Facebook-Saeid%20Rahman-1877F2?style=for-the-badge&logo=facebook" alt="Facebook"></a>
+  <a href="https://www.facebook.com/saeid.rahman.sr"><img src="https://img.shields.io/badge/Facebook-Saeid%20Rahman-1877F2?style=for-the-badge&logo=facebook" alt="Facebook"></a>
 </p>
 
 ---
+
+## 📄 License
+
+The repository's original code and documentation are licensed under the [MIT License](LICENSE), to the extent owned by the maintainer. The license does **not** relicense third-party broadcaster logos, names, trademarks, programme data, stream endpoints, or other third-party content; those remain subject to their respective owners' rights and terms. Many logo assets are still under authenticity review, so local storage does not imply official verification.
 
 ## ⚠️ Disclaimer
 
