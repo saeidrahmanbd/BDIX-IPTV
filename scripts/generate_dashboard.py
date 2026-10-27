@@ -20,7 +20,7 @@ def report_url_inventory_sha(text):
     return m.group(1).lower() if m else ""
 def url_inventory_sha(text):
     urls=sorted(line.strip() for line in text.splitlines() if line.strip().startswith(("http://","https://")))
-    return hashlib.sha256("\\n".join(urls).encode("utf-8")).hexdigest()
+    return hashlib.sha256("\n".join(urls).encode("utf-8")).hexdigest()
 REVIEW_GROUPS={"backup","backups","new backup","new backups","new channels","not playing","test"}
 def normalized_identity_name(value):
     value = re.sub(r"\s*(?:\[[^]]*(?:geo[- ]?blocked)[^]]*\]|\((?:\d{3,4}[pi]|UHD|FHD|HD|SD)\)|\s+(?:\d{3,4}[pi]))\s*$", "", str(value or "").strip(), flags=re.I)
@@ -51,7 +51,7 @@ def main():
         ("BDIX-Playlist.m3u", ROOT/"BDIX-Playlist.m3u"),
         ("International-Playlist.m3u", ROOT/"International-Playlist.m3u"),
     ):
-        row=re.search(r'^\\|\\s*'+re.escape(playlist_name)+r'\\s*\\|\\s*(\\d+)\\s*\\|\\s*(\\d+)\\s*\\|',egd,re.M)
+        row=re.search(r'^\|\s*'+re.escape(playlist_name)+r'\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|',egd,re.M)
         current_rows,current_ids=playlist_counts(playlist_path)
         if not row or (int(row.group(1)),int(row.group(2)))!=(current_rows,current_ids):
             epg_current=False
@@ -181,7 +181,7 @@ Historical records are retained in reports/maintenance-history.json.
     OUT_MD.write_text(md,encoding="utf-8")
     def t(x,y,s,size=15,b=False): return f'<text x="{x}" y="{y}" font-family="Arial,Helvetica,sans-serif" font-size="{size}px" font-weight="{"700" if b else "400"}" fill="#1f2937">{html.escape(str(s))}</text>'
     cards=[("Streams",len(e)),("Channel Identities",active),("Bangladesh",groups.get("Bangladesh",0)),("India",sum(v for k,v in groups.items() if k.startswith("Indian "))),("Backup Entries",groups.get("Backup",0)),("IPTV Local Logos",logos_value),("IPTV EPG Coverage",epg_coverage_card),("Health Failures",health_fail_value)]
-    parts=['<svg xmlns="http://www.w3.org/2000/svg" width="980" height="650" viewBox="0 0 980 650">','<rect width="980" height="650" rx="24" fill="#f8fafc"/>','<rect width="980" height="92" rx="24" fill="#111827"/>',t(42,45,"BDIX-IPTV • PROJECT DASHBOARD",25,True),t(42,70,"Playlist • EPG • Metadata • Logos • Stream Health • Safety Gate",13)]
+    parts=['<svg xmlns="http://www.w3.org/2000/svg" width="980" height="650" viewBox="0 0 980 650">','<rect width="980" height="650" rx="24" fill="#f8fafc"/>','<rect width="980" height="92" rx="24" fill="#111827"/>',t(42,45,"BDIX-IPTV • PROJECT DASHBOARD",25,True),t(42,70,"Freshness checked • stale metrics labelled",13)]
     for (lab,val),(x,y) in zip(cards,[(34,120),(268,120),(502,120),(736,120),(34,260),(268,260),(502,260),(736,260)]): parts += [f'<rect x="{x}" y="{y}" width="210" height="112" rx="18" fill="white" stroke="#e5e7eb"/>',t(x+18,y+34,lab,14),t(x+18,y+78,val,28,True)]
     parts += ['<rect x="34" y="400" width="912" height="190" rx="18" fill="white" stroke="#e5e7eb"/>',t(58,435,"Current quality status",18,True),t(58,470,f"Audit blocking issues: {issues_value}",15),t(58,498,f"Pre-publish gate: {gate_status}",15),t(58,526,f"Health failures: {health_fail_value} • persistent: {health_persist_value}",15),t(58,554,f"Generated: {now}",13),'</svg>']
     OUT_SVG.write_text("".join(parts),encoding="utf-8")
