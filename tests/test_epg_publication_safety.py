@@ -41,6 +41,14 @@ class EPGPublicationSafetyTests(unittest.TestCase):
         self.assertNotIn("python scripts/run_generate_epg.py", maintenance)
         self.assertNotIn("git add -f epg/epg.xml", maintenance)
 
+    def test_refresh_does_not_restore_a_legacy_guide_snapshot(self):
+        refresh = (ROOT / ".github/workflows/epg-refresh.yml").read_text(encoding="utf-8")
+        # The last pre-suspension guide may contain data from feeds that were
+        # explicitly removed; only preserve a guide already present on main.
+        self.assertNotIn("LAST_GOOD_EPG_COMMIT", refresh)
+        self.assertIn("HAVE_PUBLISHED_FALLBACK=false", refresh)
+        self.assertIn("cancel-in-progress: true", refresh)
+
     def test_epg_reports_do_not_publish_old_coverage_percentages(self):
         for relative in (
             "reports/epg-coverage.md",
