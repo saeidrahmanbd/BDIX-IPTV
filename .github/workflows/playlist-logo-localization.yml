@@ -128,7 +128,7 @@ jobs:
                   if filename.startswith("nvisionbd-"):
                       nvision += 1
                   channel_id_original = (meta.get("tvg-id") or meta.get("channel-id") or "").strip()
-                  channel_name = (meta.get("tvg-name") or line.rsplit(",", 1)[-1]).strip()
+                  channel_name = line.rsplit(",", 1)[-1].strip()
                   registry_key = f"{name}|{channel_id_original}|{channel_name}|{logo}"
                   provenance = registry.get(registry_key, {})
                   is_generated_fallback = filename.startswith("generated-fallback-")

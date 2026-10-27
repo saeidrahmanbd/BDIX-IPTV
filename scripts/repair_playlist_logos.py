@@ -607,6 +607,10 @@ def find_registered_logo(playlist_name, meta, channel):
     channel_id = (meta.get("tvg-id") or meta.get("channel-id") or "").strip().casefold()
     options = []
     for key, value in registry.items():
+        # Generated fallback art is never treated as a verified source match;
+        # keep searching for an authentic logo on later repair runs.
+        if value.get("status") == "generated_fallback":
+            continue
         parts = key.split("|", 3)
         if len(parts) != 4 or parts[0] != playlist_name:
             continue

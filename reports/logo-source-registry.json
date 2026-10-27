@@ -5588,5 +5588,180 @@
     "status": "third_party_verified",
     "source_url": "https://lovepetstv.com/wp-content/uploads/2022/12/LovePets_Logo_SecondaryColor.png",
     "notes": "IPTV-org exact ID: LovePets.ca IPTV-org public logo dataset Source page: https://lovepetstv.com/wp-content/uploads/2022/12/LovePets_Logo_SecondaryColor.png"
+  },
+  "International-Playlist.m3u|custom.bdix.drama-24|Drama 24|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-drama-24-c485af99.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|CINDIETV.br@HD|CINDIE TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-cindie-tv-69ad9a99.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|cinebox.bg@SD|cine.box|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-cine-box-c91cbe2a.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|Diema.bg@SD|Diema|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-diema-4527dda2.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|DanceFM.cl@SD|Dance FM|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-dance-fm-e666b10b.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|DanceTVAlgorhythm.ee@SD|DanceTV Algorhythm|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-dancetv-algorhythm-e7026f86.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|PersianaFolk.fr@HD|Persiana Folk|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-persiana-folk-8a3c2b52.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|PersianaVibe.fr@HD|Persiana Vibe|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-persiana-vibe-7490d902.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|PlutoTVChristmastuttolanno.de@IT|Pluto TV Christmas tutto l'anno|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-pluto-tv-christmas-tutto-l-anno-27940ba1.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|MAX4.hu@SD|MAX4 (1080p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-max4-d2e63057.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|GoldStar.ir@SD|Gold Star|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-gold-star-97616b27.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|HomePlus.ir@SD|HomePlus|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-homeplus-0ea9b361.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|MetaFilmTV.ir@SD|Meta Film TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-meta-film-tv-2fcaa486.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|NewFlix.ir@SD|NewFlix|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-newflix-367f028b.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|7RadioVisione.it@HD|7 RadioVisione|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-7-radiovisione-9d87f5a9.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|AbdulmajeedAbdullah.sa@SD|Abdulmajeed Abdullah|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-abdulmajeed-abdullah-bd4a4a90.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|MBCMood.sa@HD|MBC Mood|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-mbc-mood-2de1041a.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|Tarab.sa@SD|Tarab|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-tarab-818e4a29.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|GEMPixel.tr@SD|GEM Pixel|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-gem-pixel-8966768b.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|PMCRoyale.ae@SD|PMC Royale|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-pmc-royale-3a13eb94.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|Totalmusic2000s.uk@HD|Totalmusic 2000s|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-totalmusic-2000s-7cd1919d.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|30ATVClassicMovies.us@SD|30A TV Classic Movies|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-30a-tv-classic-movies-0c032970.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|ICCplus.us@SD|ICC plus (1080p)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-icc-plus-ae9a5b24.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|PlutoTVCineEstelar.us@LatAm|Pluto TV Cine Estelar|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-pluto-tv-cine-estelar-f35b0ce5.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|PlutoTVCineFamilia.us@BR|Pluto TV Cine Familia|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-pluto-tv-cine-familia-16e4beba.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|PlutoTVCineFamilia.us@LatAm|Pluto TV Cine Familia LatAm|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-pluto-tv-cine-familia-latam-080b7cc4.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|TVSMusicNetwork.us@SD|TVS Music Network|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-tvs-music-network-13ed8e8b.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|HTVCMovies.vn@SD|HTVC Movies|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-htvc-movies-ee4903a3.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|PersianaDocs.fr@HD|Persiana Docs|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-persiana-docs-5cebbf0e.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|Chikitoonz.pe@SD|Chikitoonz|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-chikitoonz-5ebaa78d.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|EKids.bg@SD|EKids|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-ekids-4b5995bd.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|CRTV.cl@SD|CRTV (Chile)|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-crtv-chile-39fe9159.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|FloRacing.us@HD|FloRacing|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-floracing-a067ae40.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|PersianaFight.fr@HD|Persiana Fight|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-persiana-fight-c3bb9d16.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
+  },
+  "International-Playlist.m3u|TVSSportsBureau.us@SD|TVS Sports Bureau|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-tvs-sports-bureau-f2fcfad1.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Unofficial fallback artwork; explicitly labelled UNOFFICIAL FALLBACK ART. This is not an official broadcaster logo, and no exact verified original could be found."
   }
 }
