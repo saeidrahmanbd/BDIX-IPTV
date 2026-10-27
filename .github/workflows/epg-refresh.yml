@@ -89,8 +89,10 @@ jobs:
             HAVE_PUBLISHED_FALLBACK=true
           fi
 
-          # Build the new candidate. The candidate is never allowed to destroy
-          # the last good public guide merely because an upstream feed is broken.
+          # Build the new candidate. Source pruning in generate_epg.py restricts
+          # parsing to feeds with current mapped IDs plus local/official adapters.
+          # The candidate is never allowed to destroy an existing published guide
+          # merely because an upstream feed is broken.
           python scripts/epg_coverage.py
           python scripts/fetch_iptv_org_epg.py
           python scripts/run_generate_epg.py
