@@ -11,7 +11,7 @@ M3U playlist compatible with XCIPTV and other compatible players.
 - **[Download BDIX Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u)** — BDIX-focused collection
 - **[Download International Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)** — worldwide playlist; movie/music country groups with dedicated thematic groups
 
-> **EPG notice:** Public XMLTV publication is disabled until redistribution rights are confirmed for every source. No playlist currently advertises the repository's old EPG URL.
+> **EPG status:** The XMLTV refresh pipeline is enabled. The maintained playlists advertise the repository guide URL, but programme data is available only after a non-empty `epg/epg.xml` passes validation and is committed. EPG.PW sources remain excluded, private M3U4U URLs are not published, and unresolved upstream source reviews are documented in the [source-rights register](../epg/source-rights-register.csv). See the [EPG status report](../reports/epg-coverage.md).
 
 ## 🖥️ Playlist Studio 5.0
 
