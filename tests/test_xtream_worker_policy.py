@@ -22,7 +22,7 @@ class XtreamWorkerPolicyTests(unittest.TestCase):
                 self.assertIsNotNone(match, "worker must declare inactive/review-only groups")
                 groups = set(re.findall(r'"([^"]+)"', match.group(1)))
                 self.assertTrue({"Test", "Not Playing", "New Backup", "New Channels"} <= groups)
-                self.assertIn("if(!INACTIVE.has(cur.group))", source)
+                self.assertRegex(source, r"if\(!INACTIVE\.has\((?:cur|current)\.group\)\)")
 
     def test_both_workers_support_cors_preflight_and_comparison_helper(self):
         for name in ("xtream-main", "xtream-bdix"):
