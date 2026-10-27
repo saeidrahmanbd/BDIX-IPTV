@@ -16,6 +16,7 @@ on:
       - 'scripts/*epg*.py'
       - 'scripts/official_epg_sources.py'
       - 'docs/requirements.txt'
+      - '.github/workflows/epg-refresh.yml'
   # Run after daily maintenance; the freshness guard skips duplicate work if maintenance succeeded.
   schedule:
     - cron: '17 4 * * *' # 10:17 Asia/Dhaka, two hours after scheduled maintenance
@@ -70,6 +71,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_iptv_org_epg_targeting.py'
           python scripts/check_epg_config.py
           python -m unittest discover -s tests -p 'test_epg_source_rights.py'
+          python -m unittest discover -s tests -p 'test_epg_publication_safety.py'
           # Block explicitly prohibited sources; warn for review-required feeds under the owner override.
           python scripts/check_epg_source_rights.py
       - name: Regenerate, freshness-check and publish XMLTV
