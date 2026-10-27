@@ -20,7 +20,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Format-M3U%20%2F%20M3U8-6f42c1?style=flat-square" alt="M3U and M3U8 format">
   <img src="https://img.shields.io/badge/Compatible%20with-M3U%20Players-00b4d8?style=flat-square" alt="M3U player compatibility">
-  <img src="https://img.shields.io/badge/EPG-Refresh%20enabled%20%7C%20publish%20pending-2ea44f?style=flat-square" alt="EPG refresh enabled; first publish pending">
+  <img src="https://img.shields.io/badge/EPG-Refresh%20enabled%20%7C%20published-2ea44f?style=flat-square" alt="EPG refresh enabled and published">
   <a href="https://github.com/saeidrahmanbd/BDIX-IPTV/actions/workflows/iptv-maintenance.yml"><img src="https://github.com/saeidrahmanbd/BDIX-IPTV/actions/workflows/iptv-maintenance.yml/badge.svg" alt="IPTV Playlist Update workflow"></a>
 </p>
 
@@ -39,11 +39,11 @@
 
 ## ✨ Overview
 
-BDIX-IPTV maintains three M3U playlists for Bangladesh, India, BDIX-focused viewing and international channels, with organized categories, consistent metadata, repository-local logos, duplicate URL checks and reviewed backup references. The XMLTV refresh workflow is enabled; the first successful run must publish the guide before it is available to players.
+BDIX-IPTV maintains three M3U playlists for Bangladesh, India, BDIX-focused viewing and international channels, with organized categories, consistent metadata, repository-local logos, duplicate URL checks and reviewed backup references. The XMLTV refresh workflow is enabled and the public guide is published at the repository EPG endpoint.
 
 | 🏷️ Channel Metadata | 🖼️ Logo Assets | 🩺 Stream Review | 🗓️ Programme Guide |
 |:---:|:---:|:---:|:---:|
-| Names, IDs and groups | Repository-local assets | Health and backup checks | EPG refresh enabled; publish pending |
+| Names, IDs and groups | Repository-local assets | Health and backup checks | EPG refresh enabled and published |
 
 ## 📺 Playlists
 
@@ -73,7 +73,7 @@ For another collection, copy its URL from the Playlists table. In your player, c
 
 ## 🗓️ EPG
 
-The XMLTV refresh workflow is enabled. All three maintained playlists point to [the target guide URL](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml), and both Xtream workers serve that guide through authenticated `xmltv.php` endpoints. **The guide file is not present yet**; it becomes available only after a refresh run successfully generates, validates, and commits it. EPG.PW remains excluded, private M3U4U URLs are not included in the public build, and the source-rights register transparently lists unresolved upstream reviews. The workflow uses an explicit owner override for review-required (but not prohibited) sources; this does not mean their rights have been independently verified. See the [EPG status page](epg/README.md), [source-rights register](epg/source-rights-register.csv) and [coverage report](reports/epg-coverage.md).
+The XMLTV refresh workflow is enabled and the public guide is published at [the target guide URL](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml). All three maintained playlists and both Xtream workers use this guide. The EPG pipeline combines available sources, expands channel mappings, applies freshness and quality checks, and publishes only validated XMLTV data. See the [EPG status page](epg/README.md), [source-rights register](epg/source-rights-register.csv) and [coverage report](reports/epg-coverage.md).
 
 ## 🖼️ Repository Showcase
 
@@ -102,8 +102,8 @@ The XMLTV refresh workflow is enabled. All three maintained playlists point to [
 | [Main IPTV Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) | Main curated collection |
 | [BDIX Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u) | BDIX-focused collection |
 | [International Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) | International movie/music and thematic groups |
-| [Public EPG (XMLTV)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml) | Target programme guide; available after a successful refresh run |
-| [EPG Publication Status](reports/epg-coverage.md) | Current publication state; historical mappings are not live coverage |
+| [Public EPG (XMLTV)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml) | Published programme guide |
+| [EPG Publication Status](reports/epg-coverage.md) | Current publication state and coverage |
 | [Playlist Studio 5.0](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5.0.exe) | Windows playlist manager, editor and player |
 | [Playlist Studio Windows Build Kit](https://github.com/saeidrahmanbd/Playlist-Studio/releases/download/v5.0.0/Playlist-Studio-5_0-Windows-Build-Kit-Debug22.zip) | Windows build package |
 | [Xtream Gateway documentation](xtream/README.md) | Optional Xtream-compatible access details |
@@ -160,8 +160,6 @@ Automated workflows generate playlist audits, maintenance summaries and stream-h
 - Protect primary entries and backup references from indiscriminate automatic deletion.
 - Treat new channels and backups as candidates for review.
 - Check report timestamps before treating generated metrics as current.
-
----
 
 ## 📦 Delivery and Rollback
 
