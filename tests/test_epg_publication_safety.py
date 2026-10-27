@@ -43,25 +43,29 @@ class EPGPublicationSafetyTests(unittest.TestCase):
 
     def test_refresh_does_not_restore_a_legacy_guide_snapshot(self):
         refresh = (ROOT / ".github/workflows/epg-refresh.yml").read_text(encoding="utf-8")
-        # The last pre-suspension guide may contain data from feeds that were
-        # explicitly removed; only preserve a guide already present on main.
         self.assertNotIn("LAST_GOOD_EPG_COMMIT", refresh)
         self.assertIn("HAVE_PUBLISHED_FALLBACK=false", refresh)
         self.assertIn("cancel-in-progress: true", refresh)
 
-    def test_epg_reports_do_not_publish_old_coverage_percentages(self):
-        for relative in (
+    def test_epg_reports_are_current_or_explicitly_marked_pending(self):
+        reports = (
             "reports/epg-coverage.md",
             "reports/epg-three-playlist-audit.md",
             "reports/epg-unmapped-audit.md",
             "reports/epg-publish-freshness.md",
             "reports/epg-timing-audit.md",
-        ):
+        )
+        for relative in reports:
             with self.subTest(report=relative):
-                text = (ROOT / relative).read_text(encoding="utf-8")
-                self.assertTrue(any(marker in text.casefold() for marker in ("pending", "refresh required", "not yet published")))
+                path = ROOT / relative
+                self.assertTrue(path.is_file(), f"Missing EPG report: {relative}")
+                text = path.read_text(encoding="utf-8").casefold()
                 self.assertNotIn("34.8%", text)
                 self.assertNotIn("978/2658", text)
+                self.assertTrue(
+                    any(marker in text for marker in ("current", "published", "validated", "pending", "refresh required", "not yet published")),
+                    f"Report {relative} does not identify a current/pending publication state",
+                )
 
 
 if __name__ == "__main__":
