@@ -1,5 +1,7 @@
 # Strict Unmapped EPG Audit
 
+> ⚠️ **STALE REVIEW QUEUE SNAPSHOT.** This list and its counts were generated for an earlier EPG source inventory on 2026-10-27. Refresh the EPG pipeline before treating these candidates or totals as current.
+
 Generated: **2026-10-27T02:48:44+00:00**
 
 Only exact normalized display-name matches or exact matches after removing a recognized territory/language suffix are listed below. Every candidate has current/future schedule rows in a configured feed, but candidates remain review-only and are never automatically applied.

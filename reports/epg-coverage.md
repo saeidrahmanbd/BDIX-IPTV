@@ -1,5 +1,7 @@
 # EPG Coverage & Mapping Report
 
+> ⚠️ **STALE AGAINST CURRENT PLAYLIST INVENTORY.** This report was generated on 2026-10-27, but subsequent playlist edits changed entry counts. The percentages below describe the saved EPG run, not verified coverage for the current playlist files. Refresh the EPG pipeline and compare all three source fingerprints before relying on the totals.
+
 Generated: **2026-10-27T02:48:44+00:00**
 
 This report audits active unique channel identities across the three maintained playlists configured in the automated EPG pipeline. A source mapping is not counted as usable current/future coverage unless it has a valid programme interval and valid non-empty multilingual title data within the generator's -6-hour/+7-day window; English titles rank first, then Bengali, then other valid languages.
