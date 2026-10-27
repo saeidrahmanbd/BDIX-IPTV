@@ -1,7 +1,9 @@
 # Playlist Metadata Normalization
 
-## Status: Refresh pending
+Generated: **2026-10-27T14:34:49+00:00**
+Source playlist SHA-256: **8356a510302553498362285e2b270640cd8d8f4ff173d03b89777cbd66ba35b9**
 
-The previous report processed 1,173 entries from an older playlist fingerprint and is not a current result. The next successful maintenance run will regenerate exact-ID metadata normalization statistics against the current playlists.
-
-The automated EPG refresh workflow is enabled. This metadata report does not certify live programme coverage; check `reports/epg-coverage.md` and `reports/epg-publish-freshness.md` for the current generated-guide status. Upstream source-rights reviews remain unresolved and documented in `epg/source-rights-register.csv`.
+- Entries processed: **1173**
+- Primary channel numbers added: **52**
+- Logo references repaired: **12**
+- Backup/review entries normalized: **465**
