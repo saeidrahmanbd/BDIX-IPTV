@@ -40,7 +40,7 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
         self.assertEqual(legacy, [])
 
         organizer = (ROOT / "scripts/reorganize_international_playlist.py").read_text(encoding="utf-8")
-        self.assertRegex(organizer, r'TAIL\\s*=\\s*\\[.*?"New Backup",\\s*"Backup"\\]')
+        self.assertIn('TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backup", "Backup"]', organizer)
         self.assertIn('else "Backup")', organizer)
         self.assertNotIn('target = "Backups"', organizer)
         self.assertNotIn('emit(row, "Backups"', organizer)
