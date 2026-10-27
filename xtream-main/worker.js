@@ -151,21 +151,6 @@ export default{
         ,502)
       }
     }
-    if(p==="/epg-health"){
-      try{
-        const r=await fetch(EPG_URL),b=await r.text();
-        return json({
-          ok:r.ok,bytes:b.length,channels:(b.match(/<channel\b/g)||[]).length,programmes:(b.match(/<programme\b/g)||[]).length
-        }
-        )
-      }
-      catch(e){
-        return json({
-          ok:false,error:String(e)
-        }
-        ,502)
-      }
-    }
     if(p==="/xmltv.php"){
       if(!auth(u,env))return json({
         user_info:userInfo(u,false)
