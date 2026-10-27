@@ -5708,5 +5708,25 @@
     "status": "needs_review",
     "source_url": "",
     "notes": "Reused the repository-local logo for this exact tvg-id and channel name from IPTV-Playlist.m3u; original source attribution is not registered here, so provenance remains marked for review."
+  },
+  "International-Playlist.m3u|HomePlus.ir@SD|HomePlus|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/homeplus.png": {
+    "status": "needs_review",
+    "source_url": "https://github.com/shayanline/iptv-iran/blob/main/assets/logos/HomePlus.ir.png",
+    "notes": "Exact channel name and matching tvg-id family found in the public shayanline/iptv-iran playlist; original broadcaster licensing has not been independently verified."
+  },
+  "International-Playlist.m3u|MetaFilmTV.ir@SD|Meta Film TV|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/meta-film-tv.png": {
+    "status": "needs_review",
+    "source_url": "https://github.com/shayanline/iptv-iran/blob/main/assets/logos/MetaFilmTV.ir.png",
+    "notes": "Exact channel name and matching tvg-id family found in the public shayanline/iptv-iran playlist; original broadcaster licensing has not been independently verified."
+  },
+  "International-Playlist.m3u|GoldStar.ir@SD|Gold Star|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gold-star.png": {
+    "status": "needs_review",
+    "source_url": "https://github.com/shayanline/iptv-iran/blob/main/assets/logos/GoldStar.ir.png",
+    "notes": "Exact channel name and matching tvg-id family found in the public shayanline/iptv-iran playlist; original broadcaster licensing has not been independently verified."
+  },
+  "International-Playlist.m3u|GEMPixel.tr@SD|GEM Pixel|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gem-pixel.png": {
+    "status": "needs_review",
+    "source_url": "https://github.com/shayanline/iptv-iran/blob/main/assets/logos/GEMPixel.tr.png",
+    "notes": "Exact channel name and matching tvg-id family found in the public shayanline/iptv-iran playlist; original broadcaster licensing has not been independently verified."
   }
 }

@@ -1508,9 +1508,9 @@ https://afrafhls.wns.live/hls/stream.m3u8
 https://bravoohls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="CafeFilm.ir@SD" tvg-country="IR" tvg-content="Movies" group-title="Iran" tvg-name="Cafe Film" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cafe-film-38f2518256.png",Cafe Film
 https://cafefhls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="GoldStar.ir@SD" tvg-country="IR" tvg-content="Movies" group-title="Iran" tvg-name="Gold Star",Gold Star
+#EXTINF:-1 tvg-id="GoldStar.ir@SD" tvg-country="IR" tvg-content="Movies" group-title="Iran" tvg-name="Gold Star" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gold-star.png",Gold Star
 https://moviethls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="HomePlus.ir@SD" tvg-name="HomePlus" tvg-country="IR" channel-id="HomePlus.ir@SD" group-title="Iran" tvg-content="Movies",HomePlus
+#EXTINF:-1 tvg-id="HomePlus.ir@SD" tvg-name="HomePlus" tvg-country="IR" channel-id="HomePlus.ir@SD" group-title="Iran" tvg-content="Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/homeplus.png",HomePlus
 https://homeplushls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="iFilm2.ir@SD" tvg-country="IR" tvg-content="Movies" group-title="Iran" tvg-name="iFilm 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ifilm-2-c56209a0df.png",iFilm 2
 https://live.presstv.co.uk/hls/ifilm2.m3u8
@@ -1520,7 +1520,7 @@ https://live.presstv.co.uk/hls/ifilmar.m3u8
 https://live.presstv.co.uk/hls/ifilmen.m3u8
 #EXTINF:-1 tvg-id="iFilmPersian.ir@SD" tvg-country="IR" tvg-content="Movies" group-title="Iran" tvg-name="iFilm Persian" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ifilm-persian-ec5dbb3a2a.png",iFilm Persian
 https://live.presstv.co.uk/hls/ifilmfa.m3u8
-#EXTINF:-1 tvg-id="MetaFilmTV.ir@SD" tvg-country="IR" tvg-content="Movies" group-title="Iran" tvg-name="Meta Film TV",Meta Film TV
+#EXTINF:-1 tvg-id="MetaFilmTV.ir@SD" tvg-country="IR" tvg-content="Movies" group-title="Iran" tvg-name="Meta Film TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/meta-film-tv.png",Meta Film TV
 https://metafilmhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="NewFlix.ir@SD" tvg-name="NewFlix" tvg-country="IR" channel-id="NewFlix.ir@SD" group-title="Iran" tvg-content="Movies",NewFlix
 https://newfhls.wns.live/hls/stream.m3u8
@@ -2156,7 +2156,7 @@ https://nord.ayakkabiparti.lol/bsaction1/index.m3u8
 https://nord.ayakkabiparti.lol/bsturk/index.m3u8
 #EXTINF:-1 tvg-id="DreamTurk.tr@SD" tvg-country="TR" tvg-content="Music" group-title="Turkey" tvg-name="Dream Turk" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dream-turk-720p.png",Dream Turk
 https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8
-#EXTINF:-1 tvg-id="GEMPixel.tr@SD" tvg-name="GEM Pixel" tvg-country="TR" channel-id="GEMPixel.tr@SD" group-title="Turkey" tvg-content="Movies",GEM Pixel
+#EXTINF:-1 tvg-id="GEMPixel.tr@SD" tvg-name="GEM Pixel" tvg-country="TR" channel-id="GEMPixel.tr@SD" group-title="Turkey" tvg-content="Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gem-pixel.png",GEM Pixel
 https://glserver1.tamashaland.com/live/aBCH96886YznRbGOiqTnnQ__/stream_0.m3u8
 #EXTINF:-1 tvg-id="GrandCinema.tr@SD" tvg-country="TR" tvg-content="Movies" group-title="Turkey" tvg-name="Grand Cinema" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/grand-cinema.png",Grand Cinema
 https://gcinemahls.wns.live/hls/stream.m3u8
