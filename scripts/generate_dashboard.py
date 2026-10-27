@@ -21,7 +21,7 @@ def report_url_inventory_sha(text):
 def url_inventory_sha(text):
     urls=sorted(line.strip() for line in text.splitlines() if line.strip().startswith(("http://","https://")))
     return hashlib.sha256("\n".join(urls).encode("utf-8")).hexdigest()
-REVIEW_GROUPS={"backup","backups","new backup","new backups","new channels","not playing","test"}
+REVIEW_GROUPS={"backup","not playing","test"}
 def normalized_identity_name(value):
     value = re.sub(r"\s*(?:\[[^]]*(?:geo[- ]?blocked)[^]]*\]|\((?:\d{3,4}[pi]|UHD|FHD|HD|SD)\)|\s+(?:\d{3,4}[pi]))\s*$", "", str(value or "").strip(), flags=re.I)
     value = re.sub(r"\s+", " ", value).strip()
