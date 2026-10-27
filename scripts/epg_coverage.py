@@ -475,6 +475,9 @@ def retained_mapping(is_bangladesh, old_epg, candidates):
 
 
 def main():
+    from check_epg_source_rights import require_approved_sources
+    require_approved_sources("EPG mapping and coverage discovery")
+
     channels=parse_playlist(); previous=load_previous(); source_data=[]; source_status=[]
     source_urls = configured_sources()
     source_data, source_status = fetch_all_sources(source_urls)
