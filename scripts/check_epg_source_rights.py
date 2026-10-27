@@ -14,6 +14,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 GENERATOR = ROOT / "scripts" / "generate_epg.py"
 SUPPLEMENT = ROOT / "scripts" / "fetch_iptv_org_epg.py"
+RUNNER = ROOT / "scripts" / "run_generate_epg.py"
+MAPPING_AUGMENT = ROOT / "scripts" / "augment_epg_mapping_from_additional_sources.py"
 REGISTER = ROOT / "epg" / "source-rights-register.csv"
 REPOSITORY_KEY = "repository:https://github.com/iptv-org/epg"
 PRIVATE_KEY = "secret:M3U4U_XMLTV_URL"
@@ -33,9 +35,13 @@ def required_source_keys(env=None):
     env = os.environ if env is None else env
     urls = assignment(GENERATOR, "SOURCES")
     site_names = assignment(SUPPLEMENT, "SITES")
+    runner_urls = assignment(RUNNER, "ADDITIONAL_SOURCES")
+    discovery_urls = assignment(MAPPING_AUGMENT, "SOURCES")
     if len(urls) != len(set(urls)):
         raise ValueError("Duplicate URLs in scripts/generate_epg.py SOURCES")
     required = set(urls)
+    required.update(runner_urls)
+    required.update(discovery_urls)
     required.update("site:" + domain for domain in site_names)
     required.add(REPOSITORY_KEY)
     # The URL itself must never be emitted in diagnostics; only the secret key is recorded.
@@ -77,8 +83,20 @@ def approved_row_errors(key, row):
         date.fromisoformat(reviewed)
     except ValueError:
         errors.append(f"{key}: APPROVED requires reviewed_on in YYYY-MM-DD format")
-    if not scope or any(word in scope.casefold() for word in ("not confirmed", "not established", "unconfirmed")):
-        errors.append(f"{key}: APPROVED requires an explicit, affirmative redistribution scope")
+    normalized_scope = scope.casefold()
+    positive_permission = any(
+        word in normalized_scope
+        for word in ("permitted", "allowed", "authorized", "authorised", "granted", "licensed", "licenced")
+    )
+    affirmative_scope = "public" in normalized_scope and "redistribut" in normalized_scope and positive_permission
+    negative_scope = any(
+        word in normalized_scope
+        for word in ("not confirmed", "not established", "unconfirmed", "not permitted", "prohibited", "personal use only", "no redistribution")
+    )
+    if not affirmative_scope or negative_scope:
+        errors.append(
+            f"{key}: APPROVED requires evidence of explicit permission for public redistribution"
+        )
     return errors
 
 
@@ -102,14 +120,23 @@ def policy_errors(env=None, registry_path=REGISTER):
     return errors
 
 
-def main():
+def require_approved_sources(context="EPG source access"):
+    """Raise before fetching, mapping or generating any data from unapproved sources."""
     errors = policy_errors()
     if errors:
-        print("EPG source-rights gate: BLOCKED")
+        print(f"{context}: BLOCKED by source-rights policy ({len(errors)} issue(s))")
         for error in errors:
             print("- " + error)
-        print("Resolve the source rights, then set EPG_REDISTRIBUTION_APPROVED=true deliberately.")
-        return 1
+        print("Resolve source permissions; do not set EPG_REDISTRIBUTION_APPROVED=true until the register passes.")
+        raise SystemExit(1)
+    return True
+
+
+def main():
+    try:
+        require_approved_sources("EPG source-rights gate")
+    except SystemExit as exc:
+        return int(exc.code or 1)
     print("EPG source-rights gate: PASS — every active source has documented permission.")
     return 0
 
