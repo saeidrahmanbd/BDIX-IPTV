@@ -9,10 +9,10 @@ CATEGORY_ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
     "Documentary & Wildlife", "Kids", "Religious", "Sports",
-    "New Channels", "New Backup", "Backup",
+    "New Channels", "New Backup", "Backup", "Not Playing",
 ]
 RANK = {name: index for index, name in enumerate(CATEGORY_ORDER)}
-NON_NUMBERED = {"Backup", "New Channels", "New Backup"}
+NON_NUMBERED = {"Backup", "Not Playing", "New Channels", "New Backup"}
 INTERNATIONAL_FIXED = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani",
@@ -79,7 +79,7 @@ def sort_playlist(path):
         record[0]=canonical_extinf(record[0]); group=attrs(record[0]).get("group-title","").strip()
         if path.name=="IPTV-Playlist.m3u":
             if group in NON_NUMBERED:record[0]=remove_attr(record[0],"tvg-chno")
-            elif group not in {"Sports"}:record[0]=set_attr(record[0],"tvg-chno",str(next_number)); next_number+=1
+            else:record[0]=set_attr(record[0],"tvg-chno",str(next_number)); next_number+=1
     path.write_text("\n".join(preamble+[line for record in records for line in record])+"\n",encoding="utf-8")
 def main(argv=None):
     paths=argv if argv is not None else (sys.argv[1:] or ["IPTV-Playlist.m3u","BDIX-Playlist.m3u","International-Playlist.m3u"])
