@@ -1,5 +1,7 @@
 # International Playlist Movie/Music Audit
 
+> ⚠️ **HISTORICAL SUBSET AUDIT — NOT A FULL CURRENT PLAYLIST COUNT.** The 454-entry figure describes an earlier movie/music cleanup pass, not the current complete International playlist. Re-run against the current policy and playlist before treating these numbers as live status.
+
 - Entries before cleanup: 456
 - Entries after cleanup: 454
 - Fashion TV entries preserved from IPTV-Playlist.m3u: 1
