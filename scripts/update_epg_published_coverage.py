@@ -15,7 +15,6 @@ PLAYLISTS = (
 GUIDE = ROOT / "epg" / "epg.xml"
 FRESHNESS = ROOT / "reports" / "epg-publish-freshness.md"
 MAPPING = ROOT / "reports" / "epg-channel-mapping.csv"
-RIGHTS = ROOT / "epg" / "source-rights-register.csv"
 RAW_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"
 INACTIVE_GROUPS = {"Backup", "Test", "Not Playing", "New Channels", "New Backup"}
 PLACEHOLDERS = {
@@ -128,15 +127,6 @@ def main():
         missing_live.extend((group, name, tid, "NO_MAPPING" if tid not in mapped_ids else "NO_CURRENT_PROGRAMME")
                             for tid, group, name in active_rows if tid not in live_ids)
 
-    rights_review = rights_inactive = rights_prohibited = 0
-    if RIGHTS.is_file():
-        with RIGHTS.open(encoding="utf-8-sig", newline="") as handle:
-            for row in csv.DictReader(handle):
-                status = (row.get("status") or "").strip().upper()
-                rights_review += status == "REVIEW_REQUIRED"
-                rights_inactive += status == "NOT_ACTIVE_REVIEW_REQUIRED"
-                rights_prohibited += status == "PROHIBITED"
-
     reports = ROOT / "reports"
     reports.mkdir(parents=True, exist_ok=True)
     ratio = lambda n, d: f"{n}/{d} ({round(100*n/d, 1) if d else 0}%)"
@@ -159,11 +149,11 @@ def main():
     for filename, item in playlist_stats.items():
         lines.append(f"| {item['label']} ({filename}) | {item['entries']} | {item['ids']} | {item['present']} | {item['scheduled']} | {item['window']} | {item['mapped']} | {'OK' if item['header_ok'] else 'MISMATCH'} |")
     lines += [
-        "", "## Source and Rights Notes", "",
-        f"- Source feeds marked REVIEW_REQUIRED: **{rights_review}**; inactive review-only entries: **{rights_inactive}**; prohibited entries: **{rights_prohibited}**.",
-        "- The explicit owner override allows technical refresh from review-required, non-prohibited sources; it does not establish upstream redistribution permission.",
-        "- EPG.PW feeds remain excluded, and the oversized merged feed is inactive.",
-        "- The mapping CSV remains the source-discovery snapshot; the live programme metrics above are measured from the published XMLTV.",
+        "", "## Source Usage", "",
+        "- The EPG pipeline may use useful public or otherwise accessible feeds for discovery, mapping and schedule acquisition.",
+        "- Sources are combined and deduplicated; current/future schedules and stronger channel identity matches are preferred.",
+        "- Private credentials, session tokens and personalized feed URLs are never committed to the repository.",
+        "- EPG.PW remains excluded by explicit project configuration; this is a source-selection rule, not a repository-wide rights-register gate.",
         "", "## Channels Without Current/Future Programmes", "",
         "| Group | Channel | Playlist ID | Status |", "|---|---|---|---|",
     ]
