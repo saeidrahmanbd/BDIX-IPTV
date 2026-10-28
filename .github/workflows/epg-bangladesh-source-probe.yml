@@ -1,0 +1,45 @@
+name: Probe EPG sources for Bangladesh
+
+# Read-only diagnostic. It never touches epg/epg.xml, playlists or mappings.
+# Runs on demand, or when the dedicated probe branch is pushed, and commits its
+# report to that same branch (never to main).
+on:
+  workflow_dispatch:
+  push:
+    branches: [epg-source-probe]
+    paths:
+      - 'scripts/probe_epg_sources_for_bangladesh.py'
+      - '.github/workflows/epg-bangladesh-source-probe.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: epg-bangladesh-source-probe
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    if: ${{ github.ref_name != 'main' || github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - name: Probe configured and indexed XMLTV feeds
+        run: python scripts/probe_epg_sources_for_bangladesh.py reports/epg-bangladesh-source-probe.md
+      - name: Upload report
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: epg-bangladesh-source-probe
+          path: reports/epg-bangladesh-source-probe.md
+      - name: Commit report to the probe branch
+        if: ${{ github.ref_name != 'main' }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f reports/epg-bangladesh-source-probe.md
+          git diff --cached --quiet || git commit -m 'Add Bangladesh EPG source probe report'
+          git push origin HEAD:${{ github.ref_name }}
