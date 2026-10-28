@@ -25,7 +25,7 @@ class EPGRefreshNeededTests(unittest.TestCase):
         report = "Generated: **" + timestamp + "**\n" + "".join(
             f"- {name} SHA-256: **{self.hashes[name]}**\n" for name in PLAYLIST_NAMES
         )
-        for name in ("epg-coverage.md", "epg-three-playlist-audit.md"):
+        for name in ("epg-coverage.md", "epg-three-playlist-audit.md", "epg-unmapped-audit.md"):
             (reports / name).write_text(report, encoding="utf-8")
         (reports / "epg-publish-freshness.md").write_text(
             f"Checked: **{timestamp}**\nStatus: **PASS**\n", encoding="utf-8"
