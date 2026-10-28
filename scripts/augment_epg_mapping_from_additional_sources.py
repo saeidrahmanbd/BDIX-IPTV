@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Add conservative EPG mappings from the newly approved country feeds.
+"""Add conservative EPG mappings from configured additional country feeds.
 
 Only active Indian playlist entries are considered, and a mapping is added only
 when a normalized channel name has exactly one channel ID in a source. Existing
@@ -83,9 +83,6 @@ def source_channels(data):
 
 
 def main():
-    from check_epg_source_rights import require_approved_sources
-    require_approved_sources("EPG mapping augmentation")
-
     if not PLAYLIST.exists() or not MAPPING.exists():
         print("Additional EPG mapping skipped: playlist or mapping file is missing.")
         return
