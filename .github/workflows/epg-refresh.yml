@@ -11,6 +11,9 @@ on:
       - 'reports/epg-channel-mapping.csv'
       - 'scripts/*epg*.py'
       - 'scripts/official_epg_sources.py'
+      - 'scripts/validate_report_freshness.py'
+      - 'tests/test_epg_source_rights.py'
+      - 'tests/test_report_freshness.py'
       - 'scripts/generate_dashboard.py'
       - 'tests/test_epg_publication_safety.py'
       - 'docs/requirements.txt'
@@ -57,7 +60,7 @@ jobs:
       - name: Validate EPG configuration and quality rules
         run: |
           set -euo pipefail
-          python -m py_compile scripts/epg_coverage.py scripts/generate_epg.py scripts/run_generate_epg.py scripts/fetch_iptv_org_epg.py scripts/augment_epg_mapping_from_additional_sources.py scripts/augment_epg_mapping_from_iptv_org.py scripts/epg_publish_gate_v2.py scripts/validate_epg_freshness.py scripts/epg_refresh_needed.py scripts/check_epg_source_rights.py scripts/generate_dashboard.py
+          python -m py_compile scripts/epg_coverage.py scripts/generate_epg.py scripts/run_generate_epg.py scripts/fetch_iptv_org_epg.py scripts/augment_epg_mapping_from_additional_sources.py scripts/augment_epg_mapping_from_iptv_org.py scripts/update_epg_published_coverage.py scripts/epg_publish_gate_v2.py scripts/validate_epg_freshness.py scripts/validate_report_freshness.py scripts/epg_refresh_needed.py scripts/check_epg_source_rights.py scripts/generate_dashboard.py
           python -m unittest discover -s tests -p 'test_epg_refresh_needed.py'
           python -m unittest discover -s tests -p 'test_epg_config.py'
           python -m unittest discover -s tests -p 'test_language_policy.py'
