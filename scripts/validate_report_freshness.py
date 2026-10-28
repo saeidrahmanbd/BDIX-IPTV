@@ -3,7 +3,6 @@
 import argparse
 import hashlib
 import json
-import os
 import re
 import sys
 from datetime import datetime, timedelta, timezone
@@ -84,7 +83,7 @@ def check_timestamp(relative: str, text: str, now, max_age, errors):
 
 
 def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode="all", epg_publication_approved=None):
-    """Return errors. all checks active outputs and health; generated checks report-sync outputs."""
+    """Return freshness errors; EPG reports are always checked regardless of legacy flags."""
     root = Path(root)
     now = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
     if mode not in {"all", "generated"}:
@@ -97,11 +96,15 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
         hashes[name] = sha256(path)
 
     errors = []
-    if epg_publication_approved is None:
-        epg_publication_approved = os.environ.get("EPG_REDISTRIBUTION_APPROVED", "").strip().lower() == "true"
-    report_paths = list(SINGLE_PLAYLIST_REPORTS) + list(SHARED_PLAYLIST_REPORTS) + [PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT]
-    if epg_publication_approved:
-        report_paths += list(SHARED_EPG_REPORTS) + list(TIMESTAMP_ONLY_REPORTS)
+    # Keep the parameter for compatibility with old callers, but do not let a
+    # redistribution flag hide EPG report freshness or fingerprint failures.
+    report_paths = (
+        list(SINGLE_PLAYLIST_REPORTS)
+        + list(SHARED_PLAYLIST_REPORTS)
+        + [PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT]
+        + list(SHARED_EPG_REPORTS)
+        + list(TIMESTAMP_ONLY_REPORTS)
+    )
     report_paths.append(STREAM_HEALTH_REPORT)
 
     for relative in report_paths:
