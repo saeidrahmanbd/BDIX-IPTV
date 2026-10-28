@@ -1,139 +1,128 @@
 # EPG Coverage & Mapping Report
 
-Generated: **2026-10-28T10:57:34+00:00**
+Generated: **2026-10-28T11:40:27+00:00**
 
 This report audits active unique channel identities across the three maintained playlists configured in the automated EPG pipeline. A source mapping is not counted as usable current/future coverage unless it has a valid programme interval and valid non-empty multilingual title data within the generator's -6-hour/+7-day window; English titles rank first, then Bengali, then other valid languages.
 The XMLTV guide is published at **epg/epg.xml**. The published guide uses the playlist's tvg-id as the XMLTV channel ID, not the upstream provider's source ID.
 
 ## Overall Coverage
 
-- Active unique playlist channel IDs audited: **2919**
-- IDs with an EPG source mapping: **1034/2919 (35.4%)**
-- IDs with usable current/future source schedules (nonblank multilingual titles (English preferred, then Bengali, then other valid languages)): **981/2919 (33.6%)**
-- IDs with no EPG source mapping: **1885**
+- Active unique playlist channel IDs audited: **2923**
+- IDs with an EPG source mapping: **1030/2923 (35.2%)**
+- IDs with usable current/future source schedules (nonblank multilingual titles (English preferred, then Bengali, then other valid languages)): **856/2923 (29.3%)**
+- IDs with no EPG source mapping: **1893**
 
 ## Coverage by Playlist Group
 
 | Group | Active IDs | Mapped IDs | Current/future | No mapping |
 |---|---:|---:|---:|---:|
-| Adult | 359 | 13 | 11 | 346 |
+| Adult | 359 | 6 | 6 | 353 |
 | Argentina | 17 | 1 | 1 | 16 |
 | Aruba | 6 | 0 | 0 | 6 |
 | Bangladesh | 87 | 1 | 0 | 86 |
 | Brazil | 12 | 2 | 2 | 10 |
 | Bulgaria | 15 | 7 | 5 | 8 |
-| Canada | 26 | 20 | 20 | 6 |
-| Chile | 27 | 1 | 1 | 26 |
+| Canada | 26 | 20 | 16 | 6 |
+| Chile | 27 | 1 | 0 | 26 |
 | China | 14 | 0 | 0 | 14 |
 | Colombia | 13 | 1 | 1 | 12 |
-| Czech Republic | 26 | 9 | 9 | 17 |
-| Documentary & Wildlife | 217 | 137 | 132 | 80 |
+| Czech Republic | 26 | 9 | 3 | 17 |
+| Documentary & Wildlife | 217 | 137 | 103 | 80 |
 | Dominican Republic | 7 | 0 | 0 | 7 |
-| Egypt | 5 | 2 | 2 | 3 |
-| Estonia | 6 | 1 | 1 | 5 |
-| France | 45 | 9 | 9 | 36 |
-| Germany | 74 | 11 | 11 | 63 |
+| Egypt | 5 | 2 | 0 | 3 |
+| Estonia | 6 | 1 | 0 | 5 |
+| France | 45 | 9 | 7 | 36 |
+| Germany | 74 | 11 | 9 | 63 |
 | Greece | 9 | 2 | 2 | 7 |
-| Hungary | 16 | 8 | 8 | 8 |
-| Indian Bangla | 50 | 40 | 36 | 10 |
-| Indian Entertainment | 227 | 190 | 178 | 37 |
-| Indian Movies | 93 | 70 | 68 | 23 |
+| Hungary | 16 | 8 | 6 | 8 |
+| Indian Bangla | 50 | 40 | 34 | 10 |
+| Indian Entertainment | 227 | 190 | 177 | 37 |
+| Indian Movies | 92 | 69 | 66 | 23 |
 | Indian Music | 72 | 59 | 56 | 13 |
-| International | 98 | 56 | 53 | 42 |
-| Iran | 15 | 3 | 3 | 12 |
+| International | 98 | 56 | 46 | 42 |
+| Iran | 15 | 3 | 2 | 12 |
 | Italy | 26 | 6 | 6 | 20 |
-| Kids | 226 | 96 | 90 | 130 |
+| Kids | 226 | 96 | 76 | 130 |
 | Lebanon | 6 | 1 | 1 | 5 |
 | Mexico | 19 | 6 | 5 | 13 |
 | Netherlands | 21 | 8 | 8 | 13 |
-| New Backup | 15 | 14 | 14 | 1 |
-| New Channels | 176 | 28 | 28 | 148 |
+| New Backup | 20 | 17 | 17 | 3 |
+| New Channels | 177 | 29 | 26 | 148 |
 | Pakistani | 21 | 3 | 3 | 18 |
 | Paraguay | 6 | 0 | 0 | 6 |
 | Peru | 14 | 0 | 0 | 14 |
-| Poland | 33 | 17 | 17 | 16 |
+| Poland | 33 | 17 | 13 | 16 |
 | Portugal | 7 | 3 | 3 | 4 |
-| Religious | 37 | 11 | 10 | 26 |
+| Religious | 36 | 11 | 6 | 25 |
 | Romania | 40 | 12 | 12 | 28 |
 | Russia | 90 | 16 | 13 | 74 |
-| Saudi Arabia | 15 | 3 | 3 | 12 |
-| Serbia | 5 | 1 | 1 | 4 |
-| Spain | 41 | 4 | 4 | 37 |
-| Sports | 258 | 113 | 107 | 145 |
+| Saudi Arabia | 15 | 3 | 1 | 12 |
+| Serbia | 5 | 1 | 0 | 4 |
+| Spain | 41 | 4 | 1 | 37 |
+| Sports | 258 | 113 | 92 | 145 |
 | Sweden | 43 | 0 | 0 | 43 |
 | Turkey | 20 | 1 | 0 | 19 |
-| Ukraine | 30 | 3 | 3 | 27 |
-| United Arab Emirates | 4 | 2 | 2 | 2 |
-| United Kingdom | 12 | 2 | 2 | 10 |
-| United States | 208 | 41 | 40 | 167 |
+| Ukraine | 30 | 3 | 0 | 27 |
+| United Arab Emirates | 4 | 2 | 1 | 2 |
+| United Kingdom | 12 | 2 | 1 | 10 |
+| United States | 208 | 41 | 29 | 167 |
 | Uzbekistan | 5 | 0 | 0 | 5 |
 | Vietnam | 5 | 0 | 0 | 5 |
 
 ## Source Status
 
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 946 channel IDs; 709 IDs with usable current/future programmes; 90436 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz — 54 channel IDs; 5 IDs with usable current/future programmes; 48 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 557 channel IDs; 513 IDs with usable current/future programmes; 19827 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-in.xml.gz — 419 channel IDs; 268 IDs with usable current/future programmes; 53236 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-ar.xml.gz — 185 channel IDs; 138 IDs with usable current/future programmes; 18059 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-bg.xml.gz — 116 channel IDs; 101 IDs with usable current/future programmes; 13565 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-br.xml.gz — 182 channel IDs; 138 IDs with usable current/future programmes; 24051 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-ca.xml.gz — 808 channel IDs; 804 IDs with usable current/future programmes; 112293 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-cl.xml.gz — 184 channel IDs; 21 IDs with usable current/future programmes; 824 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-co.xml.gz — 180 channel IDs; 139 IDs with usable current/future programmes; 19685 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-cz.xml.gz — 261 channel IDs; 222 IDs with usable current/future programmes; 50220 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-de.xml.gz — 439 channel IDs; 382 IDs with usable current/future programmes; 57965 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-es.xml.gz — 300 channel IDs; 277 IDs with usable current/future programmes; 31665 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-fr.xml.gz — 485 channel IDs; 378 IDs with usable current/future programmes; 40207 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-gr.xml.gz — 177 channel IDs; 163 IDs with usable current/future programmes; 14384 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-hu.xml.gz — 152 channel IDs; 131 IDs with usable current/future programmes; 28363 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-it.xml.gz — 306 channel IDs; 264 IDs with usable current/future programmes; 31420 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-mx.xml.gz — 175 channel IDs; 138 IDs with usable current/future programmes; 16244 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-nl.xml.gz — 184 channel IDs; 154 IDs with usable current/future programmes; 37535 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-pl.xml.gz — 447 channel IDs; 404 IDs with usable current/future programmes; 84713 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-pt.xml.gz — 195 channel IDs; 146 IDs with usable current/future programmes; 29166 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-ro.xml.gz — 282 channel IDs; 256 IDs with usable current/future programmes; 41405 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-ru.xml.gz — 223 channel IDs; 197 IDs with usable current/future programmes; 34058 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-se.xml.gz — 95 channel IDs; 80 IDs with usable current/future programmes; 15419 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-tr.xml.gz — 108 channel IDs; 81 IDs with usable current/future programmes; 18119 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-gb.xml.gz — 933 channel IDs; 877 IDs with usable current/future programmes; 88288 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz — 946 channel IDs; 709 IDs with usable current/future programmes; 89982 eligible programme rows with valid non-empty titles in any language in the guide window
+- **FAILED** — https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz — 0 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window; The read operation timed out
+- **FAILED** — https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz — 0 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window; The read operation timed out
+- **OK** — https://iptv-epg.org/files/epg-in.xml.gz — 419 channel IDs; 268 IDs with usable current/future programmes; 53046 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-bg.xml.gz — 116 channel IDs; 101 IDs with usable current/future programmes; 13470 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-br.xml.gz — 182 channel IDs; 138 IDs with usable current/future programmes; 23938 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-cl.xml.gz — 184 channel IDs; 20 IDs with usable current/future programmes; 798 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-co.xml.gz — 180 channel IDs; 139 IDs with usable current/future programmes; 19577 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-de.xml.gz — 439 channel IDs; 382 IDs with usable current/future programmes; 57609 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-es.xml.gz — 300 channel IDs; 277 IDs with usable current/future programmes; 31437 eligible programme rows with valid non-empty titles in any language in the guide window
+- **FAILED** — https://iptv-epg.org/files/epg-gr.xml.gz — 0 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window; The read operation timed out
+- **OK** — https://iptv-epg.org/files/epg-hu.xml.gz — 152 channel IDs; 131 IDs with usable current/future programmes; 28191 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-it.xml.gz — 306 channel IDs; 264 IDs with usable current/future programmes; 31247 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-mx.xml.gz — 175 channel IDs; 138 IDs with usable current/future programmes; 16150 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-nl.xml.gz — 184 channel IDs; 154 IDs with usable current/future programmes; 37345 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-pl.xml.gz — 447 channel IDs; 404 IDs with usable current/future programmes; 84191 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-pt.xml.gz — 195 channel IDs; 146 IDs with usable current/future programmes; 29027 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-ro.xml.gz — 282 channel IDs; 256 IDs with usable current/future programmes; 41130 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-ru.xml.gz — 223 channel IDs; 197 IDs with usable current/future programmes; 33861 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-se.xml.gz — 95 channel IDs; 80 IDs with usable current/future programmes; 15342 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-tr.xml.gz — 108 channel IDs; 81 IDs with usable current/future programmes; 18019 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-gb.xml.gz — 933 channel IDs; 877 IDs with usable current/future programmes; 87899 eligible programme rows with valid non-empty titles in any language in the guide window
 - **OK** — https://i.mjh.nz/SamsungTVPlus/in.xml — 206 channel IDs; 200 IDs with usable current/future programmes; 2100 eligible programme rows with valid non-empty titles in any language in the guide window
 - **OK** — https://i.mjh.nz/SamsungTVPlus/us.xml — 588 channel IDs; 585 IDs with usable current/future programmes; 5028 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml — 692 channel IDs; 616 IDs with usable current/future programmes; 53981 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 697 IDs with usable current/future programmes; 35601 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 760 channel IDs; 754 IDs with usable current/future programmes; 75753 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1490 channel IDs; 1345 IDs with usable current/future programmes; 69632 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml — 692 channel IDs; 616 IDs with usable current/future programmes; 53547 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz — 717 channel IDs; 697 IDs with usable current/future programmes; 35145 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml — 760 channel IDs; 754 IDs with usable current/future programmes; 75192 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml — 1490 channel IDs; 1345 IDs with usable current/future programmes; 68851 eligible programme rows with valid non-empty titles in any language in the guide window
 - **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml — 282 channel IDs; 243 IDs with usable current/future programmes; 6799 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 119 channel IDs; 106 IDs with usable current/future programmes; 22794 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://avkb.short.gy/epg.xml.gz — 1597 channel IDs; 275 IDs with usable current/future programmes; 5506 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://avkb.short.gy/jioepg.xml.gz — 1200 channel IDs; 248 IDs with usable current/future programmes; 4624 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://avkb.short.gy/tsepg.xml.gz — 717 channel IDs; 697 IDs with usable current/future programmes; 35595 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_DISTROTV1.xml.gz — 90 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz — 690 channel IDs; 684 IDs with usable current/future programmes; 73149 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz — 486 channel IDs; 387 IDs with usable current/future programmes; 30464 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://www.open-epg.com/files/unitedkingdom.xml.gz — 566 channel IDs; 540 IDs with usable current/future programmes; 28260 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz — 785 channel IDs; 767 IDs with usable current/future programmes; 62685 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://iptv-epg.org/files/epg-us.xml.gz — 13001 channel IDs; 12379 IDs with usable current/future programmes; 951250 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz — 912 channel IDs; 826 IDs with usable current/future programmes; 88444 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz — 345 channel IDs; 276 IDs with usable current/future programmes; 42789 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz — 696 channel IDs; 695 IDs with usable current/future programmes; 59196 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz — 751 channel IDs; 730 IDs with usable current/future programmes; 64670 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_CZ1.xml.gz — 1087 channel IDs; 540 IDs with usable current/future programmes; 43698 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz — 266 channel IDs; 251 IDs with usable current/future programmes; 21221 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz — 373 channel IDs; 340 IDs with usable current/future programmes; 15860 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz — 574 channel IDs; 532 IDs with usable current/future programmes; 55153 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_GR1.xml.gz — 321 channel IDs; 301 IDs with usable current/future programmes; 20528 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_HK1.xml.gz — 143 channel IDs; 133 IDs with usable current/future programmes; 13579 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_HU1.xml.gz — 193 channel IDs; 166 IDs with usable current/future programmes; 15726 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz — 195 channel IDs; 151 IDs with usable current/future programmes; 14802 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz — 163 channel IDs; 132 IDs with usable current/future programmes; 9802 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_MX1.xml.gz — 178 channel IDs; 168 IDs with usable current/future programmes; 12955 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz — 159 channel IDs; 156 IDs with usable current/future programmes; 22134 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz — 636 channel IDs; 584 IDs with usable current/future programmes; 84571 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz — 370 channel IDs; 354 IDs with usable current/future programmes; 35110 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz — 178 channel IDs; 141 IDs with usable current/future programmes; 12461 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz — 266 channel IDs; 231 IDs with usable current/future programmes; 31477 eligible programme rows with valid non-empty titles in any language in the guide window
-- **OK** — https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz — 97 channel IDs; 92 IDs with usable current/future programmes; 8333 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml — 119 channel IDs; 106 IDs with usable current/future programmes; 22711 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://avkb.short.gy/epg.xml.gz — 1597 channel IDs; 275 IDs with usable current/future programmes; 5325 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://avkb.short.gy/jioepg.xml.gz — 1200 channel IDs; 248 IDs with usable current/future programmes; 4492 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://avkb.short.gy/tsepg.xml.gz — 717 channel IDs; 697 IDs with usable current/future programmes; 35140 eligible programme rows with valid non-empty titles in any language in the guide window
+- **FAILED** — https://epgshare01.online/epgshare01/epg_ripper_DISTROTV1.xml.gz — 0 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window; The read operation timed out
+- **FAILED** — https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz — 0 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window; The read operation timed out
+- **OK** — https://www.open-epg.com/files/unitedkingdom.xml.gz — 566 channel IDs; 540 IDs with usable current/future programmes; 27855 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://iptv-epg.org/files/epg-us.xml.gz — 13001 channel IDs; 12377 IDs with usable current/future programmes; 951262 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz — 345 channel IDs; 276 IDs with usable current/future programmes; 42565 eligible programme rows with valid non-empty titles in any language in the guide window
+- **FAILED** — https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz — 0 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window; The read operation timed out
+- **FAILED** — https://epgshare01.online/epgshare01/epg_ripper_CZ1.xml.gz — 0 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window; The read operation timed out
+- **FAILED** — https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz — 0 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window; The read operation timed out
+- **FAILED** — https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz — 0 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window; The read operation timed out
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz — 574 channel IDs; 532 IDs with usable current/future programmes; 54587 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_GR1.xml.gz — 321 channel IDs; 301 IDs with usable current/future programmes; 20366 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz — 195 channel IDs; 151 IDs with usable current/future programmes; 14624 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz — 163 channel IDs; 132 IDs with usable current/future programmes; 9715 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_MX1.xml.gz — 178 channel IDs; 168 IDs with usable current/future programmes; 12843 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz — 159 channel IDs; 156 IDs with usable current/future programmes; 21944 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz — 636 channel IDs; 584 IDs with usable current/future programmes; 83858 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz — 370 channel IDs; 354 IDs with usable current/future programmes; 34750 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz — 178 channel IDs; 141 IDs with usable current/future programmes; 12327 eligible programme rows with valid non-empty titles in any language in the guide window
+- **OK** — https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz — 266 channel IDs; 231 IDs with usable current/future programmes; 31284 eligible programme rows with valid non-empty titles in any language in the guide window
 - **OK** — https://hum.tv/schedule/ — 1 channel IDs; 1 IDs with usable current/future programmes; 21 eligible programme rows with valid non-empty titles in any language in the guide window
 - **FAILED** — https://www.rtvbd.tv/schedule.php — 0 channel IDs; 0 IDs with usable current/future programmes; 0 eligible programme rows with valid non-empty titles in any language in the guide window; <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>
 
@@ -143,8 +132,6 @@ The table includes every active channel identity without usable current/future g
 
 | Group | Channel | Playlist ID | EPG source ID | Status |
 |---|---|---|---|---|
-| Adult | Babes TV | BabesTV.us | Babes.TV.cz | MAPPED_ID_ONLY |
-| Adult | Pure Babes | PureBabes.us | Pure.Babes.cz | MAPPED_ID_ONLY |
 | Adult | Abella Danger | custom.24-7-xxx-abella-danger | - | NO_GUIDE_HIT |
 | Adult | AJ Applegate | custom.24-7-xxx-aj-applegate | - | NO_GUIDE_HIT |
 | Adult | Alba 2 | custom.alba-2 | - | NO_GUIDE_HIT |
@@ -161,7 +148,9 @@ The table includes every active channel identity without usable current/future g
 | Adult | AsiaN | AsiaN.kr | - | NO_GUIDE_HIT |
 | Adult | Ass Parade | custom.24-7-xxx-ass-parade | - | NO_GUIDE_HIT |
 | Adult | Ava Devine | custom.24-7-xxx-ava-devine | - | NO_GUIDE_HIT |
+| Adult | Babes TV | BabesTV.us | - | NO_GUIDE_HIT |
 | Adult | Babes TV Russia | custom.babes-tv-russia | - | NO_GUIDE_HIT |
+| Adult | Bang U | BangU.us | - | NO_GUIDE_HIT |
 | Adult | Bangbus | custom.24-7-xxx-bangbus | - | NO_GUIDE_HIT |
 | Adult | BBC Big Ass | custom.24-7-xxx-bbc-big-ass | - | NO_GUIDE_HIT |
 | Adult | BBW | custom.24-7-xxx-bbw | - | NO_GUIDE_HIT |
@@ -227,6 +216,7 @@ The table includes every active channel identity without usable current/future g
 | Adult | Kelsie Monroe | custom.24-7-xxx-kelsie-monroe | - | NO_GUIDE_HIT |
 | Adult | Kenzie Reeves | custom.24-7-xxx-kenzie-reeves | - | NO_GUIDE_HIT |
 | Adult | Latina | Latina.pe | - | NO_GUIDE_HIT |
+| Adult | LEO TV | LEOTV.cz | - | NO_GUIDE_HIT |
 | Adult | Lesbian | custom.xxx-lesbian | - | NO_GUIDE_HIT |
 | Adult | Lisa Ann | custom.24-7-xxx-lisa-ann | - | NO_GUIDE_HIT |
 | Adult | Live Cams | custom.live-cams | - | NO_GUIDE_HIT |
@@ -264,6 +254,7 @@ The table includes every active channel identity without usable current/future g
 | Adult | Milfs | custom.24-7-xxx-milfs | - | NO_GUIDE_HIT |
 | Adult | Milfs Stepmom | custom.24-7-xxx-milfs-stepmom | - | NO_GUIDE_HIT |
 | Adult | Mom Lovers | custom.24-7-xxx-mom-lovers | - | NO_GUIDE_HIT |
+| Adult | Music Box Sexy | MusicBoxSexy.cz@SD | - | NO_GUIDE_HIT |
 | Adult | My Daughter's Hot Friend | custom.xxx-my-daughter-s-hot-friend | - | NO_GUIDE_HIT |
 | Adult | My Dirty Maid | custom.24-7-xxx-my-dirty-maid | - | NO_GUIDE_HIT |
 | Adult | My FIrst Sex Teacher | custom.24-7-xxx-my-first-sex-teacher | - | NO_GUIDE_HIT |
@@ -419,6 +410,7 @@ The table includes every active channel identity without usable current/future g
 | Adult | Pornstar | custom.xxx-pornstar | - | NO_GUIDE_HIT |
 | Adult | POV | custom.24-7-xxx-pov | - | NO_GUIDE_HIT |
 | Adult | Princess Cum | custom.xxx-princess-cum | - | NO_GUIDE_HIT |
+| Adult | Pure Babes | PureBabes.us | - | NO_GUIDE_HIT |
 | Adult | Pure Taboo | custom.24-7-xxx-pure-taboo | - | NO_GUIDE_HIT |
 | Adult | Rated | custom.24-7-xxx-rated | - | NO_GUIDE_HIT |
 | Adult | Rated 3 | custom.24-7-xxx-rated-3 | - | NO_GUIDE_HIT |
@@ -453,7 +445,9 @@ The table includes every active channel identity without usable current/future g
 | Adult | STARS EXCLUSIVE: RILEY REID | custom.stars-exclusive-riley-reid | - | NO_GUIDE_HIT |
 | Adult | STARS EXCLUSIVE: UMA JOLIE | custom.stars-exclusive-uma-jolie | - | NO_GUIDE_HIT |
 | Adult | STARS EXCLUSIVE: VALENTINA NAPPI | custom.stars-exclusive-valentina-nappi | - | NO_GUIDE_HIT |
+| Adult | Stingray Pop Adult | StingrayPopAdult.ca@SD | - | NO_GUIDE_HIT |
 | Adult | Strap on | custom.24-7-xxx-strap-on | - | NO_GUIDE_HIT |
+| Adult | Super One | custom.xxx-super-one | - | NO_GUIDE_HIT |
 | Adult | Swallowed | custom.24-7-xxx-swallowed | - | NO_GUIDE_HIT |
 | Adult | Teen Red TV | custom.xxx-teen-red-tv | - | NO_GUIDE_HIT |
 | Adult | Threesome | custom.xxx-threesome | - | NO_GUIDE_HIT |
@@ -620,12 +614,17 @@ The table includes every active channel identity without usable current/future g
 | Bulgaria | Tiankov Folk | TiankovFolk.bg@SD | - | NO_GUIDE_HIT |
 | Bulgaria | Tiankov Orient Folk | TiankovOrientFolk.bg@SD | - | NO_GUIDE_HIT |
 | Bulgaria | TV1000 | TV1000.bg@SD | - | NO_GUIDE_HIT |
+| Canada | HBO East | HBO1.ca | HBO1.ca | MAPPED_NOT_CURRENTLY_FOUND |
+| Canada | Stingray Hit List | StingrayHitList.ca | StingrayHitList.ca | MAPPED_NOT_CURRENTLY_FOUND |
+| Canada | Stingray Karaoke | StingrayKaraoke.ca@SD | plex.tv.Stingray.Karaoke.plex | MAPPED_NOT_CURRENTLY_FOUND |
+| Canada | Stingray Soul Storm | StingraySoulStorm.ca@SD | plex.tv.Stingray.Soul.Storm.plex | MAPPED_NOT_CURRENTLY_FOUND |
 | Canada | Afghan Nobel Movies | AfghanNobelMovies.ca@SD | - | NO_GUIDE_HIT |
 | Canada | CKNO-FM | CKNOFM.ca@SD | - | NO_GUIDE_HIT |
 | Canada | Pamir TV | PamirTV.ca@SD | - | NO_GUIDE_HIT |
 | Canada | Stingray Everything '80s | StingrayEverything80s.ca@SD | - | NO_GUIDE_HIT |
 | Canada | Stingray Holiday Hits | StingrayHolidayHits.ca@SD | - | NO_GUIDE_HIT |
 | Canada | Stingray TikTok Radio | StingrayTikTokRadio.ca@HD | - | NO_GUIDE_HIT |
+| Chile | Rewind TV | RewindTV.cl@SD | Rewind.HD.us2 | MAPPED_NOT_CURRENTLY_FOUND |
 | Chile | 13 Festival | 13Festival.cl@SD | - | NO_GUIDE_HIT |
 | Chile | AE Radio TV | AERadioTV.cl@SD | - | NO_GUIDE_HIT |
 | Chile | Chocolate FM | ChocolateFM.cl@SD | - | NO_GUIDE_HIT |
@@ -678,6 +677,12 @@ The table includes every active channel identity without usable current/future g
 | Colombia | Reyali | Reyali.co@SD | - | NO_GUIDE_HIT |
 | Colombia | Salsa Gorda Television | SalsaGordaTelevision.co@SD | - | NO_GUIDE_HIT |
 | Colombia | Supermusica TV | SupermusicaTV.co@SD | - | NO_GUIDE_HIT |
+| Czech Republic | FILMBOX+ Love & Crime | FILMBOXPlusLoveCrime.pl@Czechia | Filmbox+.love&crime.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Czech Republic | HBO (Czech Republic) | HBO.cz@SD | HBO.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Czech Republic | Music Box Classic | MusicBoxClassic.cz@SD | Music.Box.Classic.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Czech Republic | Music Box Dance | MusicBoxDance.cz@SD | Music.Box.Dance.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Czech Republic | Music Box Hits | MusicBoxHits.cz@SD | Music.Box.Hits.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Czech Republic | Retro Music TV | RetroMusicTV.cz@SD | Retro.Music.cz | MAPPED_NOT_CURRENTLY_FOUND |
 | Czech Republic | AMC Europe Czech Republic | AMCEurope.uk@CzechRepublic | - | NO_GUIDE_HIT |
 | Czech Republic | AXN Black (United States) Czech Republic | AXNBlack.us@CzechRepublic | - | NO_GUIDE_HIT |
 | Czech Republic | AXN CEE Czech Republic | AXNCEE.es@CzechRepublic | - | NO_GUIDE_HIT |
@@ -695,11 +700,40 @@ The table includes every active channel identity without usable current/future g
 | Czech Republic | Ocko Star | OckoStar.cz@SD | - | NO_GUIDE_HIT |
 | Czech Republic | Slager Muzika | SlagerMuzika.cz@SD | - | NO_GUIDE_HIT |
 | Czech Republic | Slager Original | SlagerOriginal.cz@SD | - | NO_GUIDE_HIT |
-| Documentary & Wildlife | 4K Travel | Travel.us | 4K.TRAVEL.TV.distro | MAPPED_ID_ONLY |
-| Documentary & Wildlife | CCTV-9 | CCTV9.cn@SD | CCTV9.cz | MAPPED_ID_ONLY |
-| Documentary & Wildlife | China Travel | ChinaTravel.cn@SD | China.Travel.distro | MAPPED_ID_ONLY |
-| Documentary & Wildlife | Discovering China | DiscoveringChina.cn@SD | Discovering.China.distro | MAPPED_ID_ONLY |
+| Documentary & Wildlife | History Hit | HistoryHit.uk | HistoryHit.uk | MAPPED_ID_ONLY |
+| Documentary & Wildlife | History Hit | HistoryHit.uk@SD | HistoryHit.uk | MAPPED_ID_ONLY |
+| Documentary & Wildlife | Real Wild | RealWild.uk | RealWild.uk | MAPPED_ID_ONLY |
 | Documentary & Wildlife | RT Documentary | RTDocumentary.ru | RTDocumentary.ru | MAPPED_ID_ONLY |
+| Documentary & Wildlife | Smithsonian Channel | smithsonianchannel.us | Smithsonian.Channel.my | MAPPED_ID_ONLY |
+| Documentary & Wildlife | 4K Travel | Travel.us | 4K.TRAVEL.TV.distro | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Animal Planet (Czech Republic) | AnimalPlanet.cz@SD | Animal.Planet.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Asharq Discovery | AsharqDiscovery.sa@SD | Asharq.Discovery.HD.ae | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Asharq Documentary | AsharqDocumentary.sa@SD | Asharq.Documentary.HD.ae | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | CCTV-9 | CCTV9.cn@SD | CCTV9.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | China Travel | ChinaTravel.cn@SD | China.Travel.distro | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Cooking Channel | custom.cooking.channel | Cooking.Channel.HD.us2 | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Crime & Justice | CrimeJustice.us | plex.tv.Crime.&.Justice.plex | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Discovering China | DiscoveringChina.cn@SD | Discovering.China.distro | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Discovery Channel (Czech Republic) | DiscoveryChannel.cz@SD | Discovery.Channel.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Discovery Family | custom.discoveryfamily | Discovery.Family.Channel.HD.us2 | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Documentary+ International | DocumentaryPlus | plex.tv.Documentary+.plex | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Dvojka | Dvojka.sk@SD | Dvojka.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Food Network (Czech Republic) | FoodNetwork.cz@SD | Food.Network.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Get.factual | Getfactual.us@UK | plex.tv.Get.Factual.plex | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | HBO Signature | hbosignature.us | HBO.Signature.HD.us2 | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Knowledge Network | KnowledgeNetwork.ca | KnowledgeNetwork.ca | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Love The Planet | LoveThePlanet.es@EN | Love.The.Planet.es | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Love the Planet | LoveThePlanet.us | Love.The.Planet.es | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Military History | militaryhistory.us | Military.History.Channel.us2 | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | National Geographic (Czech Republic) | NationalGeographic.cz@SD | NATIONALGEOGRAPHIC.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | National Geographic Wild (Czech Republic) | NationalGeographicWild.cz@SD | National.Geographic.Wild.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Robot Wars by Mech+ | RobotWarsByMech.us | plex.tv.Robot.Wars.by.Mech+.plex | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Spektrum (Czech Republic) | Spektrum.cz@SD | Spektrum.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Total Crime | TotalCrime.ca@CA | Total.Crime.us2 | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Viasat Explore (Czech Republic) | ViasatExplore.cz@SD | Viasat.Explore.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Viasat History (Czech Republic) | ViasatHistory.cz@SD | Viasat.History.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Viasat Nature (Czech Republic) | ViasatNature.cz@SD | Viasat.Nature.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Documentary & Wildlife | Wild TV | WildTV.ca@SD | Wild.TV.HD.cz | MAPPED_NOT_CURRENTLY_FOUND |
 | Documentary & Wildlife | Adventure Earth | AdventureEarth.de@SD | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | Adventure Earth | AdventureEarth.us | - | NO_GUIDE_HIT |
 | Documentary & Wildlife | Alone | Alone.us | - | NO_GUIDE_HIT |
@@ -787,14 +821,19 @@ The table includes every active channel identity without usable current/future g
 | Dominican Republic | Topical Moon RD | TopicalMoonRD.do@HD | - | NO_GUIDE_HIT |
 | Dominican Republic | Tropical Moon Urban TV | TropicalMoonUrbanTV.pa@SD | - | NO_GUIDE_HIT |
 | Dominican Republic | TV Exitos | TVExitos.do@SD | - | NO_GUIDE_HIT |
+| Egypt | Mazzika | Mazzika.eg@SD | Mazzika.ae | MAPPED_NOT_CURRENTLY_FOUND |
+| Egypt | Rotana Cinema Egypt | RotanaCinemaEgypt.eg@SD | Rotana.Cinema.Egypt.ae | MAPPED_NOT_CURRENTLY_FOUND |
 | Egypt | El Radio 9090 FM | ElRadio9090FM.eg@SD | - | NO_GUIDE_HIT |
 | Egypt | Mix Hollywood | MixHollywood.eg@SD | - | NO_GUIDE_HIT |
 | Egypt | NogoumFMTV | NogoumFMTV.eg@SD | - | NO_GUIDE_HIT |
+| Estonia | Vantage Rock | VantageRock.ee@HD | Vantage.Rock.cz | MAPPED_NOT_CURRENTLY_FOUND |
 | Estonia | Best of Dance TV | BestofDanceTV.ee@SD | - | NO_GUIDE_HIT |
 | Estonia | DanceTV Algorhythm | DanceTVAlgorhythm.ee@SD | - | NO_GUIDE_HIT |
 | Estonia | DanceTV Deep House District | DanceTVDeepHouseDistrict.ee@SD | - | NO_GUIDE_HIT |
 | Estonia | DanceTV House Floor | DanceTVHouseFloor.ee@SD | - | NO_GUIDE_HIT |
 | Estonia | DanceTV Techno Warehouse | DanceTVTechnoWarehouse.ee@SD | - | NO_GUIDE_HIT |
+| France | TF1 Series Films | TF1SeriesFilms.fr@SD | TF1Series-Films.fr | MAPPED_NOT_CURRENTLY_FOUND |
+| France | Trace Brazuca | TraceBrazuca.fr@HD | plex.tv.TRACE.Brazuca.plex | MAPPED_NOT_CURRENTLY_FOUND |
 | France | 4 Music | 4Music.fr@SD | - | NO_GUIDE_HIT |
 | France | 4Kurd | 4Kurd.fr@SD | - | NO_GUIDE_HIT |
 | France | Canal+ Cinemas (720p) | CanalPlusCinemas.fr@SD | - | NO_GUIDE_HIT |
@@ -831,6 +870,8 @@ The table includes every active channel identity without usable current/future g
 | France | Trace Urban International | TraceUrban.fr@InternationalHD | - | NO_GUIDE_HIT |
 | France | Trace Urban Southern Africa | TraceUrban.fr@SouthernAfrica | - | NO_GUIDE_HIT |
 | France | Trace Vanilla Islands | TraceVanillaIslands.fr@SD | - | NO_GUIDE_HIT |
+| Germany | DMF | DMF.de@SD | DMF.ch | MAPPED_NOT_CURRENTLY_FOUND |
+| Germany | Grjngo Western Movies | GrjngoWesternMovies.de@SD | plex.tv.Grjngo.-.Western.Movies.plex | MAPPED_NOT_CURRENTLY_FOUND |
 | Germany | Bibel TV Musik | BibelTVMusik.de@SD | - | NO_GUIDE_HIT |
 | Germany | Cine 666 by Pluto TV | Cine666byPlutoTV.de@FR | - | NO_GUIDE_HIT |
 | Germany | Cine Action by Pluto TV | CineActionbyPlutoTV.de@FR | - | NO_GUIDE_HIT |
@@ -901,6 +942,8 @@ The table includes every active channel identity without usable current/future g
 | Greece | Messatida TV | MessatidaTV.gr@SD | - | NO_GUIDE_HIT |
 | Greece | NRG 91 | NRG91.gr@SD | - | NO_GUIDE_HIT |
 | Greece | Play TV (Greece) | PlayTV.gr@SD | - | NO_GUIDE_HIT |
+| Hungary | Magyar Mozi TV | MagyarMoziTV.hu@SD | Magyar.Mozi.TV.hu | MAPPED_NOT_CURRENTLY_FOUND |
+| Hungary | MAX4 (1080p) | MAX4.hu@SD | Max4.hu | MAPPED_NOT_CURRENTLY_FOUND |
 | Hungary | AMC Europe Hungary | AMCEurope.uk@Hungary | - | NO_GUIDE_HIT |
 | Hungary | AXN Black (United States) Hungary | AXNBlack.us@Hungary | - | NO_GUIDE_HIT |
 | Hungary | AXN CEE | AXNCEE.es@Hungary | - | NO_GUIDE_HIT |
@@ -911,6 +954,8 @@ The table includes every active channel identity without usable current/future g
 | Hungary | Oxygen Music | OxygenMusic.hu@HD | - | NO_GUIDE_HIT |
 | Indian Bangla | BANGLA JAGO | custom.bdix.banglajago | Bangla.Jago.in | MAPPED_ID_ONLY |
 | Indian Bangla | Bangla Jago TV | BanglaJagoTV.in | Bangla.Jago.in | MAPPED_ID_ONLY |
+| Indian Bangla | ENTER 10 BANGLA | Enterr10 Bangla.in | Enterr10Bangla.in | MAPPED_ID_ONLY |
+| Indian Bangla | Enter10 Bangla | Enter10Bangla.in | Enterr10Bangla.in | MAPPED_ID_ONLY |
 | Indian Bangla | Tara TV | TaraTV.in | Tara.TV.in | MAPPED_ID_ONLY |
 | Indian Bangla | ZB Cinema | ZBCinema.in | jtv3322 | MAPPED_ID_ONLY |
 | Indian Bangla | Bangla Cinema | BanglaCinema.in | - | NO_GUIDE_HIT |
@@ -934,6 +979,7 @@ The table includes every active channel identity without usable current/future g
 | Indian Entertainment | Odisha TV | OdishaTV.in@SD | OdishaTV.in | OdishaTV.in@SD | MAPPED_NOT_CURRENTLY_FOUND |
 | Indian Entertainment | Prarthana TV | PrarthanaTV.in@SD | Prarthana.TV.in | MAPPED_NOT_CURRENTLY_FOUND |
 | Indian Entertainment | Sony Entertainment TV | SonyEntertainmentTelevision.in@SD | Sony.Entertainment.Television.in | SonyEntertainmentTelevision.in@SD | MAPPED_NOT_CURRENTLY_FOUND |
+| Indian Entertainment | Sony KAL | SonyKALHindi.us | Sony.KAL.us2 | MAPPED_NOT_CURRENTLY_FOUND |
 | Indian Entertainment | Suriyan TV | SuriyanTV.in@SD | ts1384 | MAPPED_NOT_CURRENTLY_FOUND |
 | Indian Entertainment | Asianet Middle East | AsianetMiddleEast.in@SD | - | NO_GUIDE_HIT |
 | Indian Entertainment | Baiscope TV | BaiscopeTV.in | - | NO_GUIDE_HIT |
@@ -974,6 +1020,7 @@ The table includes every active channel identity without usable current/future g
 | Indian Entertainment | UTV Palakkad | UTVPalakkad.in@SD | - | NO_GUIDE_HIT |
 | Indian Movies | Ekamra Cinema | EkamraCinema.in | Ekamra.Cinema.in | MAPPED_ID_ONLY |
 | Indian Movies | Goldmines Movies | GoldminesMovies.in@SD | 142881 | MAPPED_ID_ONLY |
+| Indian Movies | MBC Bollywood | MBCBollywood.ae | MBC.Bollywood.ae | MAPPED_NOT_CURRENTLY_FOUND |
 | Indian Movies | &TV International | AndTV.in@International | - | NO_GUIDE_HIT |
 | Indian Movies | Asian Sony Max 2 | custom.asian-sony-max-2 | - | NO_GUIDE_HIT |
 | Indian Movies | B4U Bhojpuri Plus | B4UBhojpuri.in@Plus | - | NO_GUIDE_HIT |
@@ -1013,9 +1060,16 @@ The table includes every active channel identity without usable current/future g
 | Indian Music | Superhitz | Superhitz.in@SD | - | NO_GUIDE_HIT |
 | Indian Music | YRF Music Nepal | YRFMusic.in@Nepal | - | NO_GUIDE_HIT |
 | Indian Music | Zoom (India) Nepal | Zoom.in@Nepal | - | NO_GUIDE_HIT |
+| International | Action Hollywood Movies | plex.tv.Action.Hollywood.Movies.plex | ActionHollywoodMovies.au | MAPPED_ID_ONLY |
 | International | BBC Drama | BBCDrama.uk | BBCDrama.au | MAPPED_ID_ONLY |
-| International | Fashion One | FashionOne.uk | Fashion.One.cz | MAPPED_ID_ONLY |
-| International | Shanson TV | ShansonTV.ru | Shanson.TV.cz | MAPPED_ID_ONLY |
+| International | AMC Thrillers | plex.tv.AMC.Thrillers.plex | plex.tv.AMC.Thrillers.plex | MAPPED_NOT_CURRENTLY_FOUND |
+| International | Fashion One | FashionOne.uk | Fashion.One.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| International | MBC 1 | MBC1.sa | MBC.1.ae | MAPPED_NOT_CURRENTLY_FOUND |
+| International | MBC 4 | MBC4.sa | MBC.4.ae | MAPPED_NOT_CURRENTLY_FOUND |
+| International | MBC+ Drama | MBCPlusDrama.sa@SD | MBC.Drama.ae | MAPPED_NOT_CURRENTLY_FOUND |
+| International | Retro Music TV | RetroMusicTV.cz | Retro.Music.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| International | Saudi TV | SaudiTV.sa | Saudi.HD.ae | MAPPED_NOT_CURRENTLY_FOUND |
+| International | Shanson TV | ShansonTV.ru | Shanson.TV.cz | MAPPED_NOT_CURRENTLY_FOUND |
 | International | 1Mus | 1Mus.us | - | NO_GUIDE_HIT |
 | International | Afrobeats | Afrobeats.us | - | NO_GUIDE_HIT |
 | International | AMG TV Classic | AMGTVClassic.us | - | NO_GUIDE_HIT |
@@ -1058,6 +1112,7 @@ The table includes every active channel identity without usable current/future g
 | International | VTU | VTU.in@SD | - | NO_GUIDE_HIT |
 | International | XITE Hits UK | XITEHits.nl@UK | - | NO_GUIDE_HIT |
 | International | Young Hollywood | YoungHollywood.us | - | NO_GUIDE_HIT |
+| Iran | iFilm Arabic | iFilmArabic.ir@SD | iFilm.Arabic.ae | MAPPED_NOT_CURRENTLY_FOUND |
 | Iran | AFN TV | AFNTV.ir@SD | - | NO_GUIDE_HIT |
 | Iran | Afra Film | AfraFilm.ir@SD | - | NO_GUIDE_HIT |
 | Iran | Bravo Farsi TV (360p) | BravoFarsiTV.ir@SD | - | NO_GUIDE_HIT |
@@ -1090,12 +1145,26 @@ The table includes every active channel identity without usable current/future g
 | Italy | RTL 102.5 Napule | RTL1025Napule.it@SD | - | NO_GUIDE_HIT |
 | Italy | RTL 102.5 Traffic | RTL1025Traffic.it@SD | - | NO_GUIDE_HIT |
 | Italy | V2BEAT | custom.v2beat | - | NO_GUIDE_HIT |
-| Kids | Atfal & Mawaheb TV | AtfalMawahebTV.sa@SD | Atfal.&.Mawaheb.ae | MAPPED_ID_ONLY |
 | Kids | EKids | EKids.bg@SD | EKids.bg | MAPPED_ID_ONLY |
 | Kids | Nick Jr. (Russia) | NickJr.ru@SD | NickJr.ru | MAPPED_ID_ONLY |
-| Kids | Nickelodeon (Brazil) | Nickelodeon.br@SD | Nickelodeon.br | MAPPED_ID_ONLY |
 | Kids | Nickelodeon (Russia) | Nickelodeon.ru@SD | Nickelodeon.ru | MAPPED_ID_ONLY |
-| Kids | Taha TV | TahaTV.lb@SD | Taha.ae | MAPPED_ID_ONLY |
+| Kids | Atfal & Mawaheb TV | AtfalMawahebTV.sa@SD | Atfal.&.Mawaheb.ae | MAPPED_NOT_CURRENTLY_FOUND |
+| Kids | BabyFirst | BabyFirst.us@US | BabyFirst.TV.us2 | MAPPED_NOT_CURRENTLY_FOUND |
+| Kids | Bravo! Kids TV | BravoKidsTV.hr@SD | Bravo!.Kids.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Kids | Camp Spoopy | CampSpoopy.us@SD | plex.tv.Camp.Spoopy.plex | MAPPED_NOT_CURRENTLY_FOUND |
+| Kids | Disney Channel (Czech Republic) | DisneyChannel.cz@SD | Disney.Channel.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Kids | Disney Jr | DisneyJr.us | Disney.Jr.HD.uk | MAPPED_NOT_CURRENTLY_FOUND |
+| Kids | Disney Junior (Czech Republic) | DisneyJunior.cz@SD | Disney.Junior.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Kids | KidsFlix | KidsFlix.us@SD | plex.tv.KidsFlix.plex | MAPPED_NOT_CURRENTLY_FOUND |
+| Kids | Kolyokklub | Kolyokklub.hu@SD | Kolyokklub.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Kids | Nick Jr. (Czech Republic) | NickJr.cz@SD | Nick.Jr..cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Kids | Nickelodeon (Brazil) | Nickelodeon.br@SD | Nickelodeon.br | MAPPED_NOT_CURRENTLY_FOUND |
+| Kids | Nickelodeon (Czech Republic) | Nickelodeon.cz@SD | Nickelodeon.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Kids | Nicktoons (Czech Republic) | Nicktoons.cz@SD | Nicktoons.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Kids | Niki Junior | NikiJunior.ua@SD | Niki.Junior.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Kids | Pakapaka | Pakapaka.ar@SD | Pakapaka.ar | MAPPED_NOT_CURRENTLY_FOUND |
+| Kids | Pixel TV | PixelTV.ua@SD | Pixel.ch | MAPPED_NOT_CURRENTLY_FOUND |
+| Kids | Taha TV | TahaTV.lb@SD | Taha.ae | MAPPED_NOT_CURRENTLY_FOUND |
 | Kids | 13 Kids | 13Kids.cl@SD | - | NO_GUIDE_HIT |
 | Kids | ADN TV+ | ADNTVPlus.fr | - | NO_GUIDE_HIT |
 | Kids | ADO TV | ADOTV.bj@SD | - | NO_GUIDE_HIT |
@@ -1258,7 +1327,12 @@ The table includes every active channel identity without usable current/future g
 | Netherlands | RadioNL TV | RadioNLTV.nl@SD | - | NO_GUIDE_HIT |
 | Netherlands | Salto Brasa Music | SaltoBrasaMusic.nl@SD | - | NO_GUIDE_HIT |
 | Netherlands | TMF | TMF.nl@HDFAST | - | NO_GUIDE_HIT |
+| New Backup | GTC Punjabi US | GTCPunjabi.in@US | - | NO_GUIDE_HIT |
+| New Backup | Q TV | QTV.in@SD | - | NO_GUIDE_HIT |
 | New Backup | T Sports | TSports.bd@SD | - | NO_GUIDE_HIT |
+| New Channels | Falastini TV | FalastiniTV.ps@SD | Falastini.TV.ae | MAPPED_NOT_CURRENTLY_FOUND |
+| New Channels | Klape i Tambure TV | KlapeiTambureTV.hr@SD | Klape.i.Tambure.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| New Channels | Tarima TV | TarimaTV.do@HD | plex.tv.Tarima.TV.plex | MAPPED_NOT_CURRENTLY_FOUND |
 | New Channels | 2TV | 2TV.lt@SD | - | NO_GUIDE_HIT |
 | New Channels | 312 Kino | 312Kino.kg@SD | - | NO_GUIDE_HIT |
 | New Channels | 88 Stereo | 88Stereo.cr@SD | - | NO_GUIDE_HIT |
@@ -1445,6 +1519,10 @@ The table includes every active channel identity without usable current/future g
 | Peru | Turbo Mix Radio TV | TurboMixRadioTV.pe@SD | - | NO_GUIDE_HIT |
 | Peru | TV Peruanisima | TVPeruanisima.pe@SD | - | NO_GUIDE_HIT |
 | Peru | TVUNO | TVUNO.pe@SD | - | NO_GUIDE_HIT |
+| Poland | FILMBOX+ Comedy | FILMBOXPlusComedy.pl@Poland | Filmbox+.comedy.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Poland | FILMBOX+ Emotion | FILMBOXPlusEmotion.pl@Poland | Filmbox+.emotion.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Poland | FILMBOX+ Festival | FILMBOXPlusFestival.pl@SD | Filmbox+.festival.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Poland | FILMBOX+ Hits | FILMBOXPlusHits.pl@Poland | Filmbox+.hits.cz | MAPPED_NOT_CURRENTLY_FOUND |
 | Poland | AXN Black (United States) Poland | AXNBlack.us@Poland | - | NO_GUIDE_HIT |
 | Poland | AXN Poland | AXNPoland.pl@SD | - | NO_GUIDE_HIT |
 | Poland | FILMBOX+ Comedy Magyar | FILMBOXPlusComedy.pl@Magyar | - | NO_GUIDE_HIT |
@@ -1465,7 +1543,11 @@ The table includes every active channel identity without usable current/future g
 | Portugal | Kuriakos Music | KuriakosMusic.pt@SD | - | NO_GUIDE_HIT |
 | Portugal | ON FM | ONFM.pt@SD | - | NO_GUIDE_HIT |
 | Portugal | RFPtv | RFPtv.pt@SD | - | NO_GUIDE_HIT |
-| Religious | Makkah TV | MakkahTV.sa | Makkah.TV.ae | MAPPED_ID_ONLY |
+| Religious | Al Istiqama | AlistiqamaTV.om | Alistiqama.TV.ae | MAPPED_NOT_CURRENTLY_FOUND |
+| Religious | Al Qamar | AlQamarTV.ae | Al.Qamar.TV.ae | MAPPED_NOT_CURRENTLY_FOUND |
+| Religious | Dua Channel | DuaChannel.sa | Dua.Channel.ae | MAPPED_NOT_CURRENTLY_FOUND |
+| Religious | Iqra Bangla | IqraBangla.uk | IQRA.BANGLA.uk | MAPPED_NOT_CURRENTLY_FOUND |
+| Religious | Makkah TV | MakkahTV.sa | Makkah.TV.ae | MAPPED_NOT_CURRENTLY_FOUND |
 | Religious | Al Quran Al Kareem TV | AlQuranAlKareemTV.sa | - | NO_GUIDE_HIT |
 | Religious | Al Quran Radio | custom.al-quran-radio | - | NO_GUIDE_HIT |
 | Religious | Al Sunnah TV | custom.al-sunnah-tv | - | NO_GUIDE_HIT |
@@ -1486,7 +1568,6 @@ The table includes every active channel identity without usable current/future g
 | Religious | Peace TV Bangla | PeaceTVBangla.ae | - | NO_GUIDE_HIT |
 | Religious | Peace TV English | PeaceTVEnglish.ae | - | NO_GUIDE_HIT |
 | Religious | Peace TV Urdu | PeaceTVUrdu.pk | - | NO_GUIDE_HIT |
-| Religious | Q TV | QTV.in@SD | - | NO_GUIDE_HIT |
 | Religious | Quran | custom.quran | - | NO_GUIDE_HIT |
 | Religious | Quran TV | QuranTV.iq | - | NO_GUIDE_HIT |
 | Religious | Sunna TV | SunnaTV.ng@SD | - | NO_GUIDE_HIT |
@@ -1520,9 +1601,9 @@ The table includes every active channel identity without usable current/future g
 | Romania | Traditional TV | TraditionalTV.ro@SD | - | NO_GUIDE_HIT |
 | Romania | TV AS | TVAS.ro@SD | - | NO_GUIDE_HIT |
 | Romania | Viasat Kino Romania | ViasatKino.ua@Romania | - | NO_GUIDE_HIT |
-| Russia | Dom kino Premium | DomkinoPremium.ru@HD | Dom.Kino.Premium.cz | MAPPED_ID_ONLY |
-| Russia | Shanson TV | ShansonTV.ru@SD | Shanson.TV.cz | MAPPED_ID_ONLY |
-| Russia | VIVA Russia | VIVARussia.ru@SD | Viva.Russia.cz | MAPPED_ID_ONLY |
+| Russia | Dom kino Premium | DomkinoPremium.ru@HD | Dom.Kino.Premium.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Russia | Shanson TV | ShansonTV.ru@SD | Shanson.TV.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Russia | VIVA Russia | VIVARussia.ru@SD | Viva.Russia.cz | MAPPED_NOT_CURRENTLY_FOUND |
 | Russia | 1HD Music Television | 1HDMusicTelevision.ru@HD | - | NO_GUIDE_HIT |
 | Russia | alpha Cinema | alphaCinema.ru@HD | - | NO_GUIDE_HIT |
 | Russia | Blokbaster HD (1080p) | Blokbaster.ru@HD | - | NO_GUIDE_HIT |
@@ -1597,6 +1678,8 @@ The table includes every active channel identity without usable current/future g
 | Russia | TV 21 | TV21.ru@SD | - | NO_GUIDE_HIT |
 | Russia | viju TV1000 novella | vijuTV1000novella.ru@HD | - | NO_GUIDE_HIT |
 | Russia | viju+ Megahit | vijuPlusMegahit.ru@HD | - | NO_GUIDE_HIT |
+| Saudi Arabia | Rotana Cinema KSA | RotanaCinemaKSA.sa@SD | Rotana.Cinema.KSA.ae | MAPPED_NOT_CURRENTLY_FOUND |
+| Saudi Arabia | Rotana Khalijia | RotanaKhalijia.sa@SD | Rotana.Khalijia.ae | MAPPED_NOT_CURRENTLY_FOUND |
 | Saudi Arabia | Abdulmajeed Abdullah | AbdulmajeedAbdullah.sa@SD | - | NO_GUIDE_HIT |
 | Saudi Arabia | Aflam | custom.aflam | - | NO_GUIDE_HIT |
 | Saudi Arabia | Fairuz | Fairuz.sa@HD | - | NO_GUIDE_HIT |
@@ -1609,10 +1692,14 @@ The table includes every active channel identity without usable current/future g
 | Saudi Arabia | Panorama FM | PanoramaFM.sa@SD | - | NO_GUIDE_HIT |
 | Saudi Arabia | Rabeh Saqer | RabehSaqer.sa@HD | - | NO_GUIDE_HIT |
 | Saudi Arabia | Tarab | Tarab.sa@SD | - | NO_GUIDE_HIT |
+| Serbia | ZICO TV | ZICOTV.rs@SD | Zico.TV.ch | MAPPED_NOT_CURRENTLY_FOUND |
 | Serbia | Radio Hit FM TV | RadioHitFMTV.rs@SD | - | NO_GUIDE_HIT |
 | Serbia | Radio Karolina TV | RadioKarolinaTV.rs@SD | - | NO_GUIDE_HIT |
 | Serbia | Radio Lola TV | RadioLolaTV.rs@SD | - | NO_GUIDE_HIT |
 | Serbia | TDI Radio TV | TDIRadioTV.rs@SD | - | NO_GUIDE_HIT |
+| Spain | AXN Movies (Spain) | AXNMovies.es@SD | AXN.Movies.es | MAPPED_NOT_CURRENTLY_FOUND |
+| Spain | Cine Friki | CineFriki.es@SD | Cine.Friki.es | MAPPED_NOT_CURRENTLY_FOUND |
+| Spain | Cine Western (Spain) | CineWestern.es@SD | Cine.Western.es | MAPPED_NOT_CURRENTLY_FOUND |
 | Spain | Activa TV | ActivaTV.es@SD | - | NO_GUIDE_HIT |
 | Spain | AXN CEE Bulgary | AXNCEE.es@Bulgary | - | NO_GUIDE_HIT |
 | Spain | Cadena Elite | CadenaElite.es@SD | - | NO_GUIDE_HIT |
@@ -1650,12 +1737,27 @@ The table includes every active channel identity without usable current/future g
 | Spain | SpektraTV | SpektraTV.es@SD | - | NO_GUIDE_HIT |
 | Spain | TVOMIX | TVOMIX.es@HD | - | NO_GUIDE_HIT |
 | Spain | XPTV1 | XPTV1.es@SD | - | NO_GUIDE_HIT |
-| Sports | Arena Sport 1 | ArenaSport1.sk@SD | ARENASPORT1.cz | MAPPED_ID_ONLY |
-| Sports | Arena Sport 2 | ArenaSport2.sk@SD | ARENASPORT2.cz | MAPPED_ID_ONLY |
-| Sports | Sporty TV | SportyTV.cz@SD | SPORTYTV.cz | MAPPED_ID_ONLY |
+| Sports | FTF Sports | FTFSports.us@SD | FTFSports.us | MAPPED_ID_ONLY |
 | Sports | Win Sports | WinSports.co@SD | WinSports.co | MAPPED_ID_ONLY |
 | Sports | World of Freesports | WorldofFreesports.de@SD | WorldofFreesports.de | MAPPED_ID_ONLY |
+| Sports | WWE Network | WWENetwork.us@SD | WWE.Network.my | MAPPED_ID_ONLY |
+| Sports | Arena Sport 1 | ArenaSport1.sk@SD | Arena.Sport.1.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Sports | Arena Sport 2 | ArenaSport2.sk@SD | Arena.Sport.2.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Sports | ESPN Premium (Argentina) | ESPNPremium.ar@HD | ESPNPremium.ar | MAPPED_NOT_CURRENTLY_FOUND |
+| Sports | Game+ | GamePlus.ca@SD | Game.TV.ch | MAPPED_NOT_CURRENTLY_FOUND |
 | Sports | IN: -HINDI- STAR SPORTS 1 HD | Star Sports 1 Hindi HD.in | StarSports1HindiHD.in | MAPPED_NOT_CURRENTLY_FOUND |
+| Sports | ITV Deportes | ITVDeportes.mx@SD | plex.tv.ITV.Deportes.plex | MAPPED_NOT_CURRENTLY_FOUND |
+| Sports | Jordan Sport | JordanSport.jo@SD | Jordan.Sport.HD.ae | MAPPED_NOT_CURRENTLY_FOUND |
+| Sports | Marquee Sports Network | MarqueeSportsNetwork.us | Marquee.Sports.Network.HD.us2 | MAPPED_NOT_CURRENTLY_FOUND |
+| Sports | Match4 | Match4.hu@SD | Match.4.hu | MAPPED_NOT_CURRENTLY_FOUND |
+| Sports | Right Now TV | RightNowTV.us@SD | Right.Now.TV.us2 | MAPPED_NOT_CURRENTLY_FOUND |
+| Sports | Sky Sports Football | SkySportsFootball.ie | Sky.Sports.Football.HD.uk | MAPPED_NOT_CURRENTLY_FOUND |
+| Sports | Sky Sports NFL | SkySportsNFL.uk@SD | Sky.Sports.NFL.uk | MAPPED_NOT_CURRENTLY_FOUND |
+| Sports | Sport2 | Sport2.cz@SD | Sport2.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Sports | Sports First TV | SportsFirstTV.us | Sports.First.ae | MAPPED_NOT_CURRENTLY_FOUND |
+| Sports | Sporty TV | SportyTV.cz@SD | Sporty.TV.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Sports | TSN The Ocho | TSNTheOcho.ca@SD | TSNTheOcho.ca | MAPPED_NOT_CURRENTLY_FOUND |
+| Sports | TyC Sports | TyCSports.ar@SD | TyCSports.ar | MAPPED_NOT_CURRENTLY_FOUND |
 | Sports | 30A Golf Kingdom | 30AGolfKingdom.us@SD | - | NO_GUIDE_HIT |
 | Sports | A Sports | ASports.pk | - | NO_GUIDE_HIT |
 | Sports | Al Iraqia Sport | AlIraqiaSport.iq@SD | - | NO_GUIDE_HIT |
@@ -1864,6 +1966,9 @@ The table includes every active channel identity without usable current/future g
 | Turkey | PowerTurk Slow | PowerTurkSlow.tr@SD | - | NO_GUIDE_HIT |
 | Turkey | PowerTurk Taptaze | PowerTurkTaptaze.tr@SD | - | NO_GUIDE_HIT |
 | Turkey | TRT Muzik | TRTMuzik.tr@SD | - | NO_GUIDE_HIT |
+| Ukraine | Enter-Film | EnterFilm.ua@SD | Enter-Film.ch | MAPPED_NOT_CURRENTLY_FOUND |
+| Ukraine | Happy Radio TV | HappyRadioTV.ua@HD | Happy.Radio.cz | MAPPED_NOT_CURRENTLY_FOUND |
+| Ukraine | Muzvar | Muzvar.ua@SD | Muzvar.cz | MAPPED_NOT_CURRENTLY_FOUND |
 | Ukraine | 4ever Cinema | 4everCinema.ua@SD | - | NO_GUIDE_HIT |
 | Ukraine | 4ever Music | 4everMusic.ua@SD | - | NO_GUIDE_HIT |
 | Ukraine | Black | Black.ua@SD | - | NO_GUIDE_HIT |
@@ -1891,8 +1996,10 @@ The table includes every active channel identity without usable current/future g
 | Ukraine | Viasat Kino World | ViasatKinoWorld.ua@SD | - | NO_GUIDE_HIT |
 | Ukraine | Viasat Serial | ViasatSerial.ua@HD | - | NO_GUIDE_HIT |
 | Ukraine | ¡Viva Latino! | VivaLatino.ua@SD | - | NO_GUIDE_HIT |
+| United Arab Emirates | MBC FM | MBCFM.ae@SD | MBC.FM.ae | MAPPED_NOT_CURRENTLY_FOUND |
 | United Arab Emirates | OSN Movies Action (1080p) | OSNMoviesAction.ae@SD | - | NO_GUIDE_HIT |
 | United Arab Emirates | PMC Royale | PMCRoyale.ae@SD | - | NO_GUIDE_HIT |
+| United Kingdom | MTV Classic | mtv.classic.gb | MTV.Classic.us2 | MAPPED_NOT_CURRENTLY_FOUND |
 | United Kingdom | AMC Europe Bulgary | AMCEurope.uk@Bulgary | - | NO_GUIDE_HIT |
 | United Kingdom | Clubbing TV UK | ClubbingTV.us@UK | - | NO_GUIDE_HIT |
 | United Kingdom | MovieSphere UK | custom.moviesphere-uk | - | NO_GUIDE_HIT |
@@ -1903,7 +2010,18 @@ The table includes every active channel identity without usable current/future g
 | United Kingdom | Trace UK | TraceUK.uk@HD | - | NO_GUIDE_HIT |
 | United Kingdom | V2BEAT TV | V2BEATTV.uk@SD | - | NO_GUIDE_HIT |
 | United Kingdom | Vantage Music UK | VantageMusic.ee@UK | - | NO_GUIDE_HIT |
+| United States | MTV Live | custom.mtv-live | MTV.Live.gr | MAPPED_ID_ONLY |
 | United States | Pluto TV Cine Crimen | PlutoTVCineCrimen.us@LatAm | CineCrimen.pluto | MAPPED_ID_ONLY |
+| United States | 24 Hour Free Movies | custom.24-hour-free-movies | plex.tv.24.Hour.Free.Movies.plex | MAPPED_NOT_CURRENTLY_FOUND |
+| United States | Cinemax Classics | CinemaxClassics.us@East | Cinemax.Classics.us2 | MAPPED_NOT_CURRENTLY_FOUND |
+| United States | Cinemax Hits | CinemaxHits.us@East | Cinemax.Hits.us2 | MAPPED_NOT_CURRENTLY_FOUND |
+| United States | CMT | CMT.us@East | CMT.HD.us2 | MAPPED_NOT_CURRENTLY_FOUND |
+| United States | Fuse | fusetv.us | Fuse.HD.us2 | MAPPED_NOT_CURRENTLY_FOUND |
+| United States | HBO Zone | hbozone.us | HBO.Zone.HD.us2 | MAPPED_NOT_CURRENTLY_FOUND |
+| United States | IFC | independentfilmchannel.us | IFC.HD.us2 | MAPPED_NOT_CURRENTLY_FOUND |
+| United States | MBC America | MBCAmerica.us@SD | MBC.America.us2 | MAPPED_NOT_CURRENTLY_FOUND |
+| United States | Starz Comedy | StarzComedy.us@East | Starz.Comedy.HD.us2 | MAPPED_NOT_CURRENTLY_FOUND |
+| United States | Turner Classic Movies | turnerclassicmovies.us | Turner.Classic.Movies.HD.us2 | MAPPED_NOT_CURRENTLY_FOUND |
 | United States | 00s Replay | 00sReplay.us@SD | - | NO_GUIDE_HIT |
 | United States | 30A TV Classic Movies | 30ATVClassicMovies.us@SD | - | NO_GUIDE_HIT |
 | United States | 70s Cinema | 70sCinema.us@SD | - | NO_GUIDE_HIT |
@@ -2084,32 +2202,32 @@ The table includes every active channel identity without usable current/future g
 
 ## Published Guide Validation
 
-- XMLTV channel IDs published: **1021**
-- Active playlist IDs present in the published guide: **1021/2919 (35.0%)**
-- Active playlist IDs with usable current/future programmes: **922/2919 (31.6%)**
-- Active playlist IDs with usable programmes anywhere in the guide window (-6h/+7d): **924/2919 (31.7%)**
-- Mapped playlist IDs present in the guide: **1021/1034 (98.7%)**
-- Mapped playlist IDs with usable current/future programmes: **922/1034 (89.2%)**
-- Mapped playlist IDs with usable programmes anywhere in the guide window: **924/1034 (89.4%)**
-- Eligible programme rows published in the guide window: **85466**
-- Mapped playlist IDs missing from the published XMLTV channel list: **13**
-- Missing mapped playlist IDs: BabesTV.us, BangU.us, LEOTV.cz, MusicBoxSexy.cz@SD, PureBabes.us, StingrayPopAdult.ca@SD, custom.24-7-xxx-metro, custom.24-7-xxx-reality-kings, custom.xxx-brazzers-europe, custom.xxx-ero-xxx, custom.xxx-hustler, custom.xxx-super-one, custom.xxx-vivid-red
-- Published mapped IDs without usable current/future programmes: **99**
-- IDs without usable current/future programmes: 4SiDESTV.in@SD, 7XMusic.in@SD, ATNBanglaUK.uk, AaryaaTV.in, AaryaaTV.in@SD, AmericanNinjaWarrior.us@SD, ArenaSport1.sk@SD, ArenaSport2.sk@SD, AtfalMawahebTV.sa@SD, BBCDrama.uk, BSTV.pk@SD, BanglaJagoTV.in, CCTV9.cn@SD, Caillou.fr@SD, ChinaTravel.cn@SD, DhoomMusic.in@SD, DiscoveringChina.cn@SD, DishaTV.in@SD, DomkinoPremium.ru@HD, EKids.bg@SD, EkamraBharatOdia.in@SD, EkamraCinema.in, EkamraManoranjan.in, EkamraMusiq.in, EpicMusic.in@SD, FashionOne.uk, Fast1.in@SD, FriendsTV.in@SD, GlobalPunjab.in, Goldmines.in@SD, HosannaTV.in@Tamil, KTVBangla.in@SD, MagicTV.bg@SD, MakkahTV.sa, ManoranjanPrime.in@SD, Mastiii.in@SD, MetroTV.in@SD, MovieSmartTurk.tr@SD, MovieStar.bg@SD, MultiPremier.mx@SD, NTCTV.in@SD, NickJr.ru@SD, Nickelodeon.br@SD, Nickelodeon.ru@SD, OnePaschima.in@SD, Only.Music.in, PTCPunjabiGold.in@SD, PlutoTVCineCrimen.us@LatAm, PrarthanaTV.in@SD, QwestTV.fr@SD, RTDocumentary.ru, RaftaarMedia.in@SD, RealMadridTV.es@SD, SaiTV.in@SD, SangeetMarathi.in@SD, ShansonTV.ru, ShansonTV.ru@SD, ShemarooUmang.in@SD, SonarBangla.in@SD, Spondon.in@SD (and 39 more)
+- XMLTV channel IDs published: **1024**
+- Active playlist IDs present in the published guide: **1024/2923 (35.0%)**
+- Active playlist IDs with usable current/future programmes: **469/2923 (16.0%)**
+- Active playlist IDs with usable programmes anywhere in the guide window (-6h/+7d): **470/2923 (16.1%)**
+- Mapped playlist IDs present in the guide: **1024/1030 (99.4%)**
+- Mapped playlist IDs with usable current/future programmes: **469/1030 (45.5%)**
+- Mapped playlist IDs with usable programmes anywhere in the guide window: **470/1030 (45.6%)**
+- Eligible programme rows published in the guide window: **42312**
+- Mapped playlist IDs missing from the published XMLTV channel list: **6**
+- Missing mapped playlist IDs: custom.24-7-xxx-metro, custom.24-7-xxx-reality-kings, custom.xxx-brazzers-europe, custom.xxx-ero-xxx, custom.xxx-hustler, custom.xxx-vivid-red
+- Published mapped IDs without usable current/future programmes: **555**
+- IDs without usable current/future programmes: 10TV.in@SD, 360TuneBox.nl@SD, 4SiDESTV.in@SD, 7XMusic.in@SD, 99TV.in@SD, 9XJalwa.in, 9XJhakaas.in@SD, 9XTashan.in@SD, ATNBanglaUK.uk, AXN.br@SD, AXNMovies.es@SD, AamarBangla.in, AaryaaTV.in, AaryaaTV.in@SD, Action24.gr@SD, AlJazeera.qa, AlJazeera.qa@English, AlQamarTV.ae, AlankarTV.in@SD, AlistiqamaTV.om, AmericanNinjaWarrior.us@SD, AmritaTV.in@SD, AnandTV.in@SD, AndTV.in@SD, Andpictures.in, AndxplorHD.in@HD, AngelTV.in@India, AnimalPlanet.cz@SD, AnimalPlanet.in@SD, AnmolTV.in@SD, ArenaSport1.sk@SD, ArenaSport2.sk@SD, AsharqDiscovery.sa@SD, AsharqDocumentary.sa@SD, AsianetMovies.in@SD, AssamTalks.in, AtfalMawahebTV.sa@SD, AyushTV.in@SD, B4UMusic.in@India, BBCDrama.uk, BHI.Channel.in, BIGTV.in@SD, BSTV.pk@SD, BVG.in@SD, BabyFirst.us@US, BalleBalle.in@SD, BanglaJagoTV.in, BhojpuriCinema.in@SD, Bollywood.ru@HD, BravoKidsTV.hr@SD, CCTV9.cn@SD, CGTNDocumentary.cn, CMCTV.hr, CMT.us@East, CNBCTV.us, CNN.us, CVRHealth.in@SD, Caillou.fr@SD, CalvaryTV.in@SD, CampSpoopy.us@SD (and 495 more)
 
 ## Source / Published Schedule Reconciliation
 
-- IDs with usable current/future source schedule data: **981/2919 (33.6%)**
-- IDs with usable current/future schedules in published XMLTV at report time: **922/2919 (31.6%)**
-- IDs with usable programmes in the published guide's common -6h/+7d window: **924/2919 (31.7%)**
-- Current/future source IDs without any usable published programme in that common window: **61**
-- Source-scheduled IDs without a usable published programme in the common window: 4 SiDES TV (`4SiDESTV.in@SD`), 7X Music (`7XMusic.in@SD`), Aaryaa TV (`AaryaaTV.in`), Aaryaa TV (`AaryaaTV.in@SD`), American Ninja Warrior (`AmericanNinjaWarrior.us@SD`), BSTV (`BSTV.pk@SD`), Bang U (`BangU.us`), Caillou (`Caillou.fr@SD`), Dhoom Music Bangla (`DhoomMusic.in@SD`), Disha TV (`DishaTV.in@SD`), Epic Music (`EpicMusic.in@SD`), Fast1 (`Fast1.in@SD`), Goldmines (`Goldmines.in@SD`), Hosanna TV (`HosannaTV.in@Tamil`), KTV Bangla (`KTVBangla.in@SD`), LEO TV (`LEOTV.cz`), Metro TV (`MetroTV.in@SD`), Music Box Sexy (`MusicBoxSexy.cz@SD`), NTC TV (`NTCTV.in@SD`), Only Music (`Only.Music.in`), PTC Punjabi Gold (`PTCPunjabiGold.in@SD`), Qwest TV (`QwestTV.fr@SD`), Raftaar Media (`RaftaarMedia.in@SD`), Sai TV (`SaiTV.in@SD`), Sangeet Marathi (`SangeetMarathi.in@SD`), Sonar Bangla (`SonarBangla.in@SD`), Spondon (`Spondon.in@SD`), Stingray Classic Rock (`StingrayClassicRock.ca`), Stingray Easy Listening (`StingrayEasyListening.ca@SD`), Stingray Flashback 70's (`StingrayFlashback70s.ca@SD`), Stingray Hit List (`StingrayHitList.ca`), Stingray Hot Country (`StingrayHotCountry.ca@SD`), Stingray Jukebox Oldies (`StingrayJukeboxOldies.ca@SD`), Stingray Nothin' But 90s (`StingrayNothinBut90s.ca@SD`), Stingray Pop Adult (`StingrayPopAdult.ca@SD`), Stingray Remember the 80s (`StingrayRememberthe80s.ca`), Stingray Romance Latino (`StingrayRomanceLatino.ca@SD`), Stingray Smooth Jazz (`StingraySmoothJazz.ca@SD`), Stingray Soul Storm (`StingraySoulStorm.ca@SD`), Stingray The Spa (`StingrayTheSpa.ca`), Stingray The Spa (`StingrayTheSpa.ca@SD`), Stingray Today's KPOP (`StingrayTodaySKPOP.us`), Stingray Today's K-Pop (`StingrayTodaysKPop.ca@SD`), Stingray Today's Latin Pop (`StingrayTodaysLatinPop.ca`), Stingray Today's Latin Pop (`StingrayTodaysLatinPop.ca@SD`), Suriya TV (`SuriyaTV.in`), Suriya TV (`SuriyaTV.in@SD`), Tabbar Hits (`TabbarHits.in`), Tabbar Hits (`TabbarHits.in@SD`), Teletubbies (`Teletubbies.uk@SD`), Ultimate TV (`UltimateTV.in@SD`), WildEarth (`WildEarth.za`), World Poker Tour (`WorldPokerTour.us@US`), Yu-Gi-Oh! (`YuGiOh.us@SD`), Metro (`custom.24-7-xxx-metro`), Reality Kings (`custom.24-7-xxx-reality-kings`), Brazzers Europe (`custom.xxx-brazzers-europe`), Ero Xxx (`custom.xxx-ero-xxx`), Hustler (`custom.xxx-hustler`), Super One (`custom.xxx-super-one`), Vivid Red (`custom.xxx-vivid-red`)
-- IDs with an in-window published programme but no current/future source match at the later scan: **4**
-- In-window published IDs not counted source-current/future: Goldmines Movies (`GoldminesMovies.in@SD`), Kalaignar Murasu (`KalaignarMurasu.in`), Odisha TV (`OdishaTV.in@SD`), Sony Entertainment TV (`SonyEntertainmentTelevision.in@SD`)
-- Source-current/future IDs whose published programme is no longer current by report time: **63**
-- Source-current/future IDs no longer current in the published guide: 4 SiDES TV (`4SiDESTV.in@SD`), 7X Music (`7XMusic.in@SD`), Aaryaa TV (`AaryaaTV.in`), Aaryaa TV (`AaryaaTV.in@SD`), American Ninja Warrior (`AmericanNinjaWarrior.us@SD`), BSTV (`BSTV.pk@SD`), Bang U (`BangU.us`), Caillou (`Caillou.fr@SD`), Dhoom Music Bangla (`DhoomMusic.in@SD`), Disha TV (`DishaTV.in@SD`), Epic Music (`EpicMusic.in@SD`), Fast1 (`Fast1.in@SD`), Goldmines (`Goldmines.in@SD`), Hosanna TV (`HosannaTV.in@Tamil`), KTV Bangla (`KTVBangla.in@SD`), LEO TV (`LEOTV.cz`), Metro TV (`MetroTV.in@SD`), Music Box Sexy (`MusicBoxSexy.cz@SD`), NTC TV (`NTCTV.in@SD`), Only Music (`Only.Music.in`), PTC Punjabi Gold (`PTCPunjabiGold.in@SD`), Qwest TV (`QwestTV.fr@SD`), Raftaar Media (`RaftaarMedia.in@SD`), Real Madrid TV (`RealMadridTV.es@SD`), Sai TV (`SaiTV.in@SD`), Sangeet Marathi (`SangeetMarathi.in@SD`), Sonar Bangla (`SonarBangla.in@SD`), Spondon (`Spondon.in@SD`), Stingray Classic Rock (`StingrayClassicRock.ca`), Stingray Easy Listening (`StingrayEasyListening.ca@SD`), Stingray Flashback 70's (`StingrayFlashback70s.ca@SD`), Stingray Hit List (`StingrayHitList.ca`), Stingray Hot Country (`StingrayHotCountry.ca@SD`), Stingray Jukebox Oldies (`StingrayJukeboxOldies.ca@SD`), Stingray Nothin' But 90s (`StingrayNothinBut90s.ca@SD`), Stingray Pop Adult (`StingrayPopAdult.ca@SD`), Stingray Remember the 80s (`StingrayRememberthe80s.ca`), Stingray Romance Latino (`StingrayRomanceLatino.ca@SD`), Stingray Smooth Jazz (`StingraySmoothJazz.ca@SD`), Stingray Soul Storm (`StingraySoulStorm.ca@SD`), Stingray The Spa (`StingrayTheSpa.ca`), Stingray The Spa (`StingrayTheSpa.ca@SD`), Stingray Today's KPOP (`StingrayTodaySKPOP.us`), Stingray Today's K-Pop (`StingrayTodaysKPop.ca@SD`), Stingray Today's Latin Pop (`StingrayTodaysLatinPop.ca`), Stingray Today's Latin Pop (`StingrayTodaysLatinPop.ca@SD`), Suriya TV (`SuriyaTV.in`), Suriya TV (`SuriyaTV.in@SD`), Tabbar Hits (`TabbarHits.in`), Tabbar Hits (`TabbarHits.in@SD`), Teledeporte (`Teledeporte.es@SD`), Teletubbies (`Teletubbies.uk@SD`), Ultimate TV (`UltimateTV.in@SD`), WildEarth (`WildEarth.za`), World Poker Tour (`WorldPokerTour.us@US`), Yu-Gi-Oh! (`YuGiOh.us@SD`), Metro (`custom.24-7-xxx-metro`), Reality Kings (`custom.24-7-xxx-reality-kings`), Brazzers Europe (`custom.xxx-brazzers-europe`), Ero Xxx (`custom.xxx-ero-xxx`), Hustler (`custom.xxx-hustler`), Super One (`custom.xxx-super-one`), Vivid Red (`custom.xxx-vivid-red`)
-- Published current/future IDs not counted source-current/future: **4**
-- Published current/future IDs not counted source-current/future: Goldmines Movies (`GoldminesMovies.in@SD`), Kalaignar Murasu (`KalaignarMurasu.in`), Odisha TV (`OdishaTV.in@SD`), Sony Entertainment TV (`SonyEntertainmentTelevision.in@SD`)
+- IDs with usable current/future source schedule data: **856/2923 (29.3%)**
+- IDs with usable current/future schedules in published XMLTV at report time: **469/2923 (16.0%)**
+- IDs with usable programmes in the published guide's common -6h/+7d window: **470/2923 (16.1%)**
+- Current/future source IDs without any usable published programme in that common window: **395**
+- Source-scheduled IDs without a usable published programme in the common window: 10 TV (`10TV.in@SD`), 360TuneBox (`360TuneBox.nl@SD`), 4 SiDES TV (`4SiDESTV.in@SD`), 7X Music (`7XMusic.in@SD`), 99TV (`99TV.in@SD`), 9X Jalwa (`9XJalwa.in`), 9X Jhakaas (`9XJhakaas.in@SD`), 9X Tashan (`9XTashan.in@SD`), AXN (Brazil) (`AXN.br@SD`), Amar Bangla (`AamarBangla.in`), Aaryaa TV (`AaryaaTV.in`), Aaryaa TV (`AaryaaTV.in@SD`), Action 24 (`Action24.gr@SD`), Al Jazeera (`AlJazeera.qa`), Al Jazeera (`AlJazeera.qa@English`), Alankar TV (`AlankarTV.in@SD`), American Ninja Warrior (`AmericanNinjaWarrior.us@SD`), Amrita TV (`AmritaTV.in@SD`), Anand TV (`AnandTV.in@SD`), &TV (`AndTV.in@SD`), &pictures (`Andpictures.in`), &xplor (`AndxplorHD.in@HD`), Angel TV (`AngelTV.in@India`), Animal Planet (`AnimalPlanet.in@SD`), Anmol TV (`AnmolTV.in@SD`), Asianet Movies (`AsianetMovies.in@SD`), Assam Talks (`AssamTalks.in`), Ayush TV (`AyushTV.in@SD`), B4U Music (`B4UMusic.in@India`), BHI Channel (`BHI.Channel.in`), BIG TV (`BIGTV.in@SD`), BSTV (`BSTV.pk@SD`), BVG (`BVG.in@SD`), Balle Balle (`BalleBalle.in@SD`), Bhojpuri Cinema (`BhojpuriCinema.in@SD`), Bollywood (`Bollywood.ru@HD`), CGTN Documentary (`CGTNDocumentary.cn`), CMC TV (`CMCTV.hr`), CNBC TV (`CNBCTV.us`), CNN (`CNN.us`), CVR Health (`CVRHealth.in@SD`), Caillou (`Caillou.fr@SD`), Calvary TV (`CalvaryTV.in@SD`), Cartoon Network UK (`CartoonNetwork.uk`), Cartoon Network (`CartoonNetwork.us`), Cartoonito (`Cartoonito.it@HD`), Channel WIN (`ChannelWIN.in@SD`), Cinemax 2 (`Cinemax2.cz@Czechia`), Classic Cinema (`ClassicCinema.us@SD`), Colors Bangla (`Colors.Bangla.in`), Colors (`Colors.in`), Colors (`Colors.in@HD`), Colors Bangla Cinema (`ColorsBanglaCinema.in@SD`), Colors Cineplex (`ColorsCineplex.in@SD`), Colors Cineplex Bollywood (`ColorsCineplexBollywood.in@SD`), Colors Cineplex Superhits (`ColorsCineplexSuperhits.in@SD`), Colors Gujarati (`ColorsGujarati.in@SD`), Colors Infinity (`ColorsInfinity.in`), Colors Kannada (`ColorsKannada.in@HD`), Colors Kannada (`ColorsKannada.in@SD`), Colors Marathi (`ColorsMarathi.in@HD`), Colors Marathi (`ColorsMarathi.in@SD`), Colors Super (`ColorsSuper.in`), Colors Super (`ColorsSuper.in@SD`), Colors Tamil (`ColorsTamil.in@HD`), Colors Tamil (`ColorsTamil.in@SD`), DD Arun Prabha (`DDArunPrabha.in@SD`), DD Bangla (`DDBangla.in@SD`), DD Bharati (`DDBharati.in@SD`), DD Chandana (`DDChandana.in@SD`), DD Girnar (`DDGirnar.in@SD`), DD India (`DDIndia.in@SD`), DD Kashir (`DDKashir.in@SD`), DD Kisan (`DDKisan.in@SD`), DD Madhya Pradesh (`DDMadhyaPradesh.in@SD`), DD Malayalam (`DDMalayalam.in@SD`), DD National (`DDNational.in@SD`), DD Odia (`DDOdia.in@SD`), DD Punjabi (`DDPunjabi.in@SD`), DD Rajasthan (`DDRajasthan.in@SD`), DD Sahyadri (`DDSahyadri.in@SD`), DD Saptagiri (`DDSaptagiri.in@SD`), DD Sports (`DDSports.in@HD`), DD Sports (`DDSports.in@SD`), DD Tamil (`DDTamil.in@HD`), DD Tamil (`DDTamil.in@SD`), DD Urdu (`DDUrdu.in@SD`), DD Uttar Pradesh (`DDUttarPradesh.in@SD`), DD Yadagiri (`DDYadagiri.in@SD`), Dangal 2 (`Dangal2.in@SD`), Dangal TV (`DangalTV.in`), Dangal (`DangalTV.in@SD`), Darshana TV (`DarshanaTV.in@SD`), Desi Channel (`DesiChannel.in`), Desi Channel (`DesiChannel.in@SD`), Dhoom Music Bangla (`DhoomMusic.in@SD`), Diema (`Diema.bg@SD`), Discovery (`Discovery.us`), Discovery (`DiscoveryChannel.in@SD`), Discovery Channel (`DiscoveryChannel.us`), Discovery Kids (`DiscoveryKids.au`), Discovery Kids (`DiscoveryKids.in@SD`), Discovery Turbo (India) (`DiscoveryTurbo.in@SD`), Discovery World (`DiscoveryWorld.us@LatinAmerica`), Disha TV (`DishaTV.in@SD`), DISNEY JUNIOR (`Disney Junior.in`), Disney Channel (Bulgaria) (`DisneyChannel.bg@SD`), Disney Channel (India) (`DisneyChannel.in@HD`), Disney Junior (`DisneyJunior.in@SD`), DocuBox (`DocuBox.nl@SD`), ESPN (Brazil) (`ESPN.br@SD`), ESPN 4 (Brazil) (`ESPN4.br@SD`), ETV Cinema (`ETVCinema.in`), ETV Cinema (`ETVCinema.in@HD`), Epic Music (`EpicMusic.in@SD`), Sun Bangla (`EpicParivar.in@SD`), FUEL TV (`FUELTV.pt@EMEA`), Fakt Marathi (`FaktMarathi.in@SD`), Fast1 (`Fast1.in@SD`), Fast&FunBox (`FastFunBox.nl@SD`), FightBox (`FightBox.nl@HD`), GNT (`GNT.in`), Gangaur TV (`GangaurTV.in@SD`), Get Factual (`Getfactual.us`), Goldmines (`Goldmines.in@SD`), HBO 2 (`HBO2.cz@SD`), HBO 3 (`HBO3.cz@SD`), Hi Dost! (`HiDost.in@SD`), History Channel (`History.hu`), History TV18 (`HistoryTV18.in@HD`), History TV18 (`HistoryTV18.in@SD`), Horse TV (`HorseTV.it@SD`), Hosanna TV (`HosannaTV.in@Tamil`), Hungama (`Hungama.in@SD`), Hungama TV (`HungamaTV.in@SD`), Insync (`Insync.in`), Insync (`Insync.in@SD`), Inter TV (Italy) (`InterTV.it@SD`), Isai Aruvi (`IsaiAruvi.in@SD`), Jaihind TV (`JaihindTV.in@SD`), Jalsha Movies (`JalshaMovies.in@HD`), Jan TV (`JanTV.in@SD`), Jeevan TV (`JeevanTV.in@SD`), Jonack (`Jonack.in@SD`), KTV Bangla (`KTVBangla.in@SD`), Kairali TV (`KairaliTV.in@SD`), Kairali We (`KairaliWe.in@SD`), Kalaignar TV (`KalaignarTV.in@SD`), Kaumudy TV (`KaumudyTV.in@SD`), Kino Nova (`KinoNova.bg@SD`), Kite Victers (720p) [Not 24/7] (`KiteVicters.in@SD`), Kolkata TV (`KolkataTV.in`), Love Nature (`LoveNature.us`), MH One (`MHOne.in@SD`), MK Six (`MKSix.in`), MK Six (`MKSix.in@SD`), MN+ (`MNPlus.mn@SD`), Mon Bangla (`MONTVBangla.in`), Made in Hollywood (`MadeInHollywood.us@SD`), Madhimugam TV (`MadhimugamTV.in`), Mahaa Max (`MahaaMax.in`), Mahaa Max (`MahaaMax.in@SD`), Mahua Play (`MahuaPlay.in@SD`), Makkal TV (`MakkalTV.in@SD`), Mazhavil Manorama (`MazhavilManorama.in@SD`), Metro TV (`MetroTV.in@SD`), MH One Music (`Mh1Music.in@SD`), Milan TV (`MilanTV.it@SD`), Motorvision (`Motorvision.de@SD`), Movies Now (`MoviesNow.in@HD`), Movies Now (`MoviesNow.in@SD`), Music India (`MusicIndia.in@SD`), Mythbusters (`Mythbusters.us`), NTC TV (`NTCTV.in@SD`), Nandighosha TV (`NandighoshaTV.in@SD`), Nat Geo Wild (`NationalGeographicWild.in@SD`), Nepal 1 (`Nepal1.in@SD`), Network 10 (`Network10.in@SD`), Nick Jr (India) (`NickJr.in@SD`), Nick Jr. (Italy) (`NickJr.it@SD`), Only Music (`Only.Music.in`), PTC Chakde (`PTCChakde.in@SD`), PTC Music (`PTCMusic.in@SD`), PTC Punjabi (`PTCPunjabi.in@HD`), PTC Punjabi (`PTCPunjabi.in@SD`), PTC Punjabi Gold (`PTCPunjabiGold.in@SD`), Panik TV (`PanikTV.gr@SD`), Peppers TV (`PeppersTV.in@SD`), & Picture (`Picture.in`), Pitaara (`Pitaara.in`), Pitaara TV (`Pitaara.in@SD`), Pocket Films (`PocketFilms.in`), Pogo (`Pogo.in@SD`), Polimer TV (`PolimerTV.in@SD`), Popular Science (`PopularScience.us`), Public Music (`PublicMusic.in@SD`), Punjabi Hits (`PunjabiHits.in`), Punjabi Hits (`PunjabiHits.in@SD`), Puthuyugam TV (`PuthuyugamTV.in@SD`), Qwest TV (`QwestTV.fr@SD`), R Plus (`RPlus.in@SD`), Radiofreccia (`Radiofreccia.it@SD`), Raftaar Media (`RaftaarMedia.in@SD`), Raj Digital Plus (`RajDigitalPlus.in@SD`), Raj Music Telugu (`RajMusicTelugu.in@SD`), Raj Musix Kannada (`RajMusixKannada.in@SD`), Raj Musix Malayalam (`RajMusixMalayalam.in@SD`), Raj Musix Tamil (`RajMusixTamil.in@SD`), Raj Musix Telugu (`RajMusixTelugu.in@SD`), Raj TV (`RajTV.in@SD`), Ramdhenu (`Ramdhenu.in@SD`), Rang (`Rang.in@SD`), Red Bull TV (`RedBullTV.at@EUMENA`), Rengoni (`Rengoni.in@SD`), Rongeen TV (`RongeenTV.in@SD`), Ruposhi Bangla (`RupasiBangla.in@SD`), IN: SONY SPORTS TEN 1 HD (`SONY SPORTS TEN 1 HD.in`), IN: SONY SPORTS TEN 2 HD (`SONY SPORTS TEN 2 HD.in`), Saam TV (`SaamTV.in@SD`), Safari TV (`SafariTV.in@SD`), Saga Music (`SagaMusic.in`), Saga Music Haryanvi (`SagaMusicHaryanvi.in`), Sai TV (`SaiTV.in@SD`), Sangeet Bangla (`SangeetBangla.in@SD`), Sangeet Bhojpuri (`SangeetBhojpuri.in@SD`), Sangeet Marathi (`SangeetMarathi.in@SD`), Sansad TV 1 (`SansadTV1.in@HD`), Sansad TV 2 (`SansadTV2.in@SD`), Santvani Channel (`SantvaniChannel.in@SD`), Sharnam TV (`SharnamTV.in@SD`), Shemaroo Bollywood (`ShemarooBollywood.us`), Shemaroo Marathi Bana (`ShemarooMarathiBana.in@SD`), Shemaroo TV (`ShemarooTV.in@SD`), Shiksha TV (`ShikshaTV.in@SD`), Shubh TV (`ShubhTV.in@SD`), Siri Kannada (`SiriKannada.in@SD`), Siri Kannada All Time (`SiriKannadaAllTime.in`), Siri Kannada All Time (`SiriKannadaAllTime.in@SD`), Sky Racing 1 (`SkyRacing1.au@SD`), Sonar Bangla (`SonarBangla.in@SD`), Songdew TV (`SongdewTV.in@SD`), Sony Aath (`Sony.Aath.in`), SONY AATH kids (`SonyAath.in@SD`), Sony Max (`SonyMax.in@SD`), Sony Max 2 (`SonyMax2.in@SD`), Sony PAL (`SonyPal.in@SD`), Sony PIX (`SonyPix.in`), Sony Pix (`SonyPix.in@HD`), Sony SAB (`SonySAB.in@HD`), Sony Sports Ten 1 (`SonySportsTen1.in@HD`), Sony Sports Ten 1 (`SonySportsTen1.in@SD`), Sony Sports Ten 2 (`SonySportsTen2.in@SD`), Sony Sports Ten 3 (`SonySportsTen3.in`), Sony Sports Ten 5 (`SonySportsTen5.in@SD`), Sony WAH (`SonyWah.in@SD`), Sony Yay (`SonyYay.in@SD`), Spondon (`Spondon.in@SD`), Sportitalia (`Sportitalia.it@SD`), STAR GOLD ROMANCE (`Star Gold Romance.in`), Jalsha Movies HD (`Star.Jalsha.Movies.HD.in`), Jalsha Movies (`Star.Jalsha.Movies.in`), Star Jalsha (`Star.Jalsha.in`), Star Bharat (`StarBharat.in`), Star Cinema (`StarCinema.ru@SD`), Star Family (`StarFamily.ru@SD`), Star Gold (`StarGold.in`), Star Gold (`StarGold.in@HD`), Star Gold 2 (`StarGold2.in@HD`), Star Jalsha (`StarJalsha.in@SD`), Star Maa (`StarMaa.in@HD`), Star Maa (`StarMaa.in@SD`), Star Maa Movies (`StarMaaMovies.in@SD`), StarPlus (India) (`StarPlus.in@HD`), Star Plus (`StarPlus.in@SD`), Star Pravah (`StarPravah.in@HD`), Star Sports 1 (`StarSports1.in`), Star Sports 1 (`StarSports1.in@HD`), Star Sports 1 Hindi (`StarSports1Hindi.in@HD`), Star Sports 2 (`StarSports2.in`), Star Sports 2 (`StarSports2.in@HD`), Star Sports 2 (`StarSports2.in@SD`), Star Sports 2 Hindi (`StarSports2Hindi.in@SD`), Star Sports 2 Telugu (`StarSports2Telugu.in@HD`), Star Sports 3 (`StarSports3.in@SD`), Star Sports Select 1 (`StarSportsSelect1.in@HD`), Star Sports Select 1 (`StarSportsSelect1.in@SD`), Star Sports Select 2 (`StarSportsSelect2.in`), Star Sports Select 2 (`StarSportsSelect2.in@HD`), Stingray Classic Rock (`StingrayClassicRock.ca`), Stingray Easy Listening (`StingrayEasyListening.ca@SD`), Stingray Flashback 70's (`StingrayFlashback70s.ca@SD`), Stingray Hot Country (`StingrayHotCountry.ca@SD`), Stingray Jukebox Oldies (`StingrayJukeboxOldies.ca@SD`), Stingray Nothin' But 90s (`StingrayNothinBut90s.ca@SD`), Stingray Remember the 80s (`StingrayRememberthe80s.ca`), Stingray Romance Latino (`StingrayRomanceLatino.ca@SD`), Stingray Smooth Jazz (`StingraySmoothJazz.ca@SD`), Stingray The Spa (`StingrayTheSpa.ca`), Stingray The Spa (`StingrayTheSpa.ca@SD`), Stingray Today's KPOP (`StingrayTodaySKPOP.us`), Stingray Today's K-Pop (`StingrayTodaysKPop.ca@SD`), Stingray Today's Latin Pop (`StingrayTodaysLatinPop.ca`), Stingray Today's Latin Pop (`StingrayTodaysLatinPop.ca@SD`), Studio One + (`StudioOnePlus.in@SD`), Sun Music (`SunMusic.in@SD`), Sun TV (`SunTV.in@HD`), Suriya TV (`SuriyaTV.in`), Suriya TV (`SuriyaTV.in@SD`), Swerve Combat (`SwerveCombat.us@SD`), TV9 Bangla (`TV9Bangla.in`), Taaza TV (`TaazaTV.in@SD`), Tabbar Hits (`TabbarHits.in`), Tabbar Hits (`TabbarHits.in@SD`), Tarang Music (`TarangMusic.in@SD`), Tarang TV (`TarangTV.in@SD`), Tehzeeb TV (`TehzeebTV.in@SD`), Telecine Action (`TelecineAction.br@SD`), Teledeporte (`Teledeporte.es@SD`), Teletubbies (`Teletubbies.uk@SD`), Tennis Channel (`TennisChannel.us@SD`), Tennis Channel 2 (`TennisChannel2.us@SD`), Thanthi One (`ThanthiOne.in`), Thanthi One (`ThanthiOne.in@SD`), The Voice (`TheVoice.bg@SD`), Tooncast (`Tooncast.us@SD`), Total TV Haryana (`TotalTVHaryana.in@SD`), Trace Latina (`TraceLatina.fr@SD`), Trace Latina (`TraceLatina.us`), Travelxp (`Travelxp.in@4KHDR`), Travelxp (`Travelxp.in@HD`), Tunes 6 (`Tunes6.in`), Tunes 6 (`Tunes6.in@SD`), U Bangla (`UBangla.in`), U Bangla (`UBangla.in@SD`), Ultimate TV (`UltimateTV.in@SD`), Unbeaten (`Unbeaten.us@SD`), Unique TV (`UniqueTV.in@SD`), Vaanavil TV (`VaanavilTV.in@SD`), Vanitha TV (`VanithaTV.in@SD`), Vasanth TV (`VasanthTV.in@SD`), Vendhar TV (`VendharTV.in@SD`), Vision (`Vision.in@SD`), Vissa TV (`VissaTV.in@SD`), WildEarth (`WildEarth.za`), Wonder (`Wonder.us`), World Poker Tour (`WorldPokerTour.us@US`), Wu Tang Collection (`WuTangCollection.us@SD`), YRF Music (`YRFMusic.in`), Yu-Gi-Oh! (`YuGiOh.us@SD`), Zee 24 Ghanta (`Zee24Ghanta.in@SD`), Zee Action (`ZeeAction.in`), Zee Bangla (`ZeeBangla.in@HD`), Zee Bangla (`ZeeBangla.in@SD`), Zee Bangla Sonar (`ZeeBanglaSonar.in@SD`), Zee Bollywood (`ZeeBollywood.in@SD`), Zee Business (`ZeeBusiness.in@SD`), Zee Cinema (`ZeeCinema.in@HD`), Zee Kannada (`ZeeKannada.in@HD`), Zee Kannada (`ZeeKannada.in@SD`), Zee Marathi (`ZeeMarathi.in@HD`), Zee TV (`ZeeTV.in@SD`), Zee Tamil (`ZeeTamil.in@HD`), Zee Tamil (`ZeeTamil.in@SD`), Zee Telugu (`ZeeTelugu.in@HD`), Zing (`Zing.in@SD`), Zoom (`Zoom.in`), Zoom (India) (`Zoom.in@SD`), bTV Action (`bTVAction.bg@SD`), bTV Cinema (`bTVCinema.bg@SD`), Metro (`custom.24-7-xxx-metro`), Reality Kings (`custom.24-7-xxx-reality-kings`), TV 9 BANGLA (`custom.bdix.9bangla`), AAKASH AATH (`custom.bdix.aakashaath`), ABP ANANDA (`custom.bdix.abpananda`), Big Magic (`custom.bdix.big-magic`), NDTV 24x7 (`custom.bdix.ndtv24x7`), NICK BANGLA (`custom.bdix.nickbangla`), Red Bull TV (`custom.bdix.redbulltv`), TRACE LATINA (`custom.bdix.tracelatina`), TRAVEL XP HD (`custom.bdix.travelxp`), CGTN Documentary (`custom.cgtn-docment`), ETV (`custom.etv-yddbw`), HBO (`custom.hbo`), History (`custom.history`), Love Nature (`custom.love-natural`), MovieSphere AU (`custom.moviesphere-au`), Rengoni TV (`custom.rengoni-tv`), Sun Bangla (`custom.sun-bangla-k1d4w`), Brazzers Europe (`custom.xxx-brazzers-europe`), Ero Xxx (`custom.xxx-ero-xxx`), Hustler (`custom.xxx-hustler`), Vivid Red (`custom.xxx-vivid-red`), ducktv PLUS (`ducktvPLUS.sk@SD`), Kappa TV (`kappatv.in`), National Geographic (`natgeo.us`)
+- IDs with an in-window published programme but no current/future source match at the later scan: **9**
+- In-window published IDs not counted source-current/future: DMF (`DMF.de@SD`), Enter-Film (`EnterFilm.ua@SD`), Game+ (`GamePlus.ca@SD`), Goldmines Movies (`GoldminesMovies.in@SD`), Kalaignar Murasu (`KalaignarMurasu.in`), Odisha TV (`OdishaTV.in@SD`), Pixel TV (`PixelTV.ua@SD`), Sony Entertainment TV (`SonyEntertainmentTelevision.in@SD`), ZICO TV (`ZICOTV.rs@SD`)
+- Source-current/future IDs whose published programme is no longer current by report time: **396**
+- Source-current/future IDs no longer current in the published guide: 10 TV (`10TV.in@SD`), 360TuneBox (`360TuneBox.nl@SD`), 4 SiDES TV (`4SiDESTV.in@SD`), 7X Music (`7XMusic.in@SD`), 99TV (`99TV.in@SD`), 9X Jalwa (`9XJalwa.in`), 9X Jhakaas (`9XJhakaas.in@SD`), 9X Tashan (`9XTashan.in@SD`), AXN (Brazil) (`AXN.br@SD`), Amar Bangla (`AamarBangla.in`), Aaryaa TV (`AaryaaTV.in`), Aaryaa TV (`AaryaaTV.in@SD`), Action 24 (`Action24.gr@SD`), Al Jazeera (`AlJazeera.qa`), Al Jazeera (`AlJazeera.qa@English`), Alankar TV (`AlankarTV.in@SD`), American Ninja Warrior (`AmericanNinjaWarrior.us@SD`), Amrita TV (`AmritaTV.in@SD`), Anand TV (`AnandTV.in@SD`), &TV (`AndTV.in@SD`), &pictures (`Andpictures.in`), &xplor (`AndxplorHD.in@HD`), Angel TV (`AngelTV.in@India`), Animal Planet (`AnimalPlanet.in@SD`), Anmol TV (`AnmolTV.in@SD`), Asianet Movies (`AsianetMovies.in@SD`), Assam Talks (`AssamTalks.in`), Ayush TV (`AyushTV.in@SD`), B4U Music (`B4UMusic.in@India`), BHI Channel (`BHI.Channel.in`), BIG TV (`BIGTV.in@SD`), BSTV (`BSTV.pk@SD`), BVG (`BVG.in@SD`), Balle Balle (`BalleBalle.in@SD`), Bhojpuri Cinema (`BhojpuriCinema.in@SD`), Bollywood (`Bollywood.ru@HD`), CGTN Documentary (`CGTNDocumentary.cn`), CMC TV (`CMCTV.hr`), CNBC TV (`CNBCTV.us`), CNN (`CNN.us`), CVR Health (`CVRHealth.in@SD`), Caillou (`Caillou.fr@SD`), Calvary TV (`CalvaryTV.in@SD`), Cartoon Network UK (`CartoonNetwork.uk`), Cartoon Network (`CartoonNetwork.us`), Cartoonito (`Cartoonito.it@HD`), Channel WIN (`ChannelWIN.in@SD`), Cinemax 2 (`Cinemax2.cz@Czechia`), Classic Cinema (`ClassicCinema.us@SD`), Colors Bangla (`Colors.Bangla.in`), Colors (`Colors.in`), Colors (`Colors.in@HD`), Colors Bangla Cinema (`ColorsBanglaCinema.in@SD`), Colors Cineplex (`ColorsCineplex.in@SD`), Colors Cineplex Bollywood (`ColorsCineplexBollywood.in@SD`), Colors Cineplex Superhits (`ColorsCineplexSuperhits.in@SD`), Colors Gujarati (`ColorsGujarati.in@SD`), Colors Infinity (`ColorsInfinity.in`), Colors Kannada (`ColorsKannada.in@HD`), Colors Kannada (`ColorsKannada.in@SD`), Colors Marathi (`ColorsMarathi.in@HD`), Colors Marathi (`ColorsMarathi.in@SD`), Colors Super (`ColorsSuper.in`), Colors Super (`ColorsSuper.in@SD`), Colors Tamil (`ColorsTamil.in@HD`), Colors Tamil (`ColorsTamil.in@SD`), DD Arun Prabha (`DDArunPrabha.in@SD`), DD Bangla (`DDBangla.in@SD`), DD Bharati (`DDBharati.in@SD`), DD Chandana (`DDChandana.in@SD`), DD Girnar (`DDGirnar.in@SD`), DD India (`DDIndia.in@SD`), DD Kashir (`DDKashir.in@SD`), DD Kisan (`DDKisan.in@SD`), DD Madhya Pradesh (`DDMadhyaPradesh.in@SD`), DD Malayalam (`DDMalayalam.in@SD`), DD National (`DDNational.in@SD`), DD Odia (`DDOdia.in@SD`), DD Punjabi (`DDPunjabi.in@SD`), DD Rajasthan (`DDRajasthan.in@SD`), DD Sahyadri (`DDSahyadri.in@SD`), DD Saptagiri (`DDSaptagiri.in@SD`), DD Sports (`DDSports.in@HD`), DD Sports (`DDSports.in@SD`), DD Tamil (`DDTamil.in@HD`), DD Tamil (`DDTamil.in@SD`), DD Urdu (`DDUrdu.in@SD`), DD Uttar Pradesh (`DDUttarPradesh.in@SD`), DD Yadagiri (`DDYadagiri.in@SD`), Dangal 2 (`Dangal2.in@SD`), Dangal TV (`DangalTV.in`), Dangal (`DangalTV.in@SD`), Darshana TV (`DarshanaTV.in@SD`), Desi Channel (`DesiChannel.in`), Desi Channel (`DesiChannel.in@SD`), Dhoom Music Bangla (`DhoomMusic.in@SD`), Diema (`Diema.bg@SD`), Discovery (`Discovery.us`), Discovery (`DiscoveryChannel.in@SD`), Discovery Channel (`DiscoveryChannel.us`), Discovery Kids (`DiscoveryKids.au`), Discovery Kids (`DiscoveryKids.in@SD`), Discovery Turbo (India) (`DiscoveryTurbo.in@SD`), Discovery World (`DiscoveryWorld.us@LatinAmerica`), Disha TV (`DishaTV.in@SD`), DISNEY JUNIOR (`Disney Junior.in`), Disney Channel (Bulgaria) (`DisneyChannel.bg@SD`), Disney Channel (India) (`DisneyChannel.in@HD`), Disney Junior (`DisneyJunior.in@SD`), DocuBox (`DocuBox.nl@SD`), ESPN (Brazil) (`ESPN.br@SD`), ESPN 4 (Brazil) (`ESPN4.br@SD`), ETV Cinema (`ETVCinema.in`), ETV Cinema (`ETVCinema.in@HD`), Epic Music (`EpicMusic.in@SD`), Sun Bangla (`EpicParivar.in@SD`), FUEL TV (`FUELTV.pt@EMEA`), Fakt Marathi (`FaktMarathi.in@SD`), Fast1 (`Fast1.in@SD`), Fast&FunBox (`FastFunBox.nl@SD`), FightBox (`FightBox.nl@HD`), GNT (`GNT.in`), Gangaur TV (`GangaurTV.in@SD`), Get Factual (`Getfactual.us`), Goldmines (`Goldmines.in@SD`), HBO 2 (`HBO2.cz@SD`), HBO 3 (`HBO3.cz@SD`), Hi Dost! (`HiDost.in@SD`), History Channel (`History.hu`), History TV18 (`HistoryTV18.in@HD`), History TV18 (`HistoryTV18.in@SD`), Horse TV (`HorseTV.it@SD`), Hosanna TV (`HosannaTV.in@Tamil`), Hungama (`Hungama.in@SD`), Hungama TV (`HungamaTV.in@SD`), Insync (`Insync.in`), Insync (`Insync.in@SD`), Inter TV (Italy) (`InterTV.it@SD`), Isai Aruvi (`IsaiAruvi.in@SD`), Jaihind TV (`JaihindTV.in@SD`), Jalsha Movies (`JalshaMovies.in@HD`), Jan TV (`JanTV.in@SD`), Jeevan TV (`JeevanTV.in@SD`), Jonack (`Jonack.in@SD`), KTV Bangla (`KTVBangla.in@SD`), Kairali TV (`KairaliTV.in@SD`), Kairali We (`KairaliWe.in@SD`), Kalaignar TV (`KalaignarTV.in@SD`), Kaumudy TV (`KaumudyTV.in@SD`), Kino Nova (`KinoNova.bg@SD`), Kite Victers (720p) [Not 24/7] (`KiteVicters.in@SD`), Kolkata TV (`KolkataTV.in`), Love Nature (`LoveNature.us`), MH One (`MHOne.in@SD`), MK Six (`MKSix.in`), MK Six (`MKSix.in@SD`), MN+ (`MNPlus.mn@SD`), Mon Bangla (`MONTVBangla.in`), Made in Hollywood (`MadeInHollywood.us@SD`), Madhimugam TV (`MadhimugamTV.in`), Mahaa Max (`MahaaMax.in`), Mahaa Max (`MahaaMax.in@SD`), Mahua Play (`MahuaPlay.in@SD`), Makkal TV (`MakkalTV.in@SD`), Mazhavil Manorama (`MazhavilManorama.in@SD`), Metro TV (`MetroTV.in@SD`), MH One Music (`Mh1Music.in@SD`), Milan TV (`MilanTV.it@SD`), Motorvision (`Motorvision.de@SD`), Movies Now (`MoviesNow.in@HD`), Movies Now (`MoviesNow.in@SD`), Music India (`MusicIndia.in@SD`), Mythbusters (`Mythbusters.us`), NTC TV (`NTCTV.in@SD`), Nandighosha TV (`NandighoshaTV.in@SD`), Nat Geo Wild (`NationalGeographicWild.in@SD`), Nepal 1 (`Nepal1.in@SD`), Network 10 (`Network10.in@SD`), Nick Jr (India) (`NickJr.in@SD`), Nick Jr. (Italy) (`NickJr.it@SD`), Only Music (`Only.Music.in`), PTC Chakde (`PTCChakde.in@SD`), PTC Music (`PTCMusic.in@SD`), PTC Punjabi (`PTCPunjabi.in@HD`), PTC Punjabi (`PTCPunjabi.in@SD`), PTC Punjabi Gold (`PTCPunjabiGold.in@SD`), Panik TV (`PanikTV.gr@SD`), Peppers TV (`PeppersTV.in@SD`), & Picture (`Picture.in`), Pitaara (`Pitaara.in`), Pitaara TV (`Pitaara.in@SD`), Pocket Films (`PocketFilms.in`), Pogo (`Pogo.in@SD`), Polimer TV (`PolimerTV.in@SD`), Popular Science (`PopularScience.us`), Public Music (`PublicMusic.in@SD`), Punjabi Hits (`PunjabiHits.in`), Punjabi Hits (`PunjabiHits.in@SD`), Puthuyugam TV (`PuthuyugamTV.in@SD`), Qwest TV (`QwestTV.fr@SD`), R Plus (`RPlus.in@SD`), Radiofreccia (`Radiofreccia.it@SD`), Raftaar Media (`RaftaarMedia.in@SD`), Raj Digital Plus (`RajDigitalPlus.in@SD`), Raj Music Telugu (`RajMusicTelugu.in@SD`), Raj Musix Kannada (`RajMusixKannada.in@SD`), Raj Musix Malayalam (`RajMusixMalayalam.in@SD`), Raj Musix Tamil (`RajMusixTamil.in@SD`), Raj Musix Telugu (`RajMusixTelugu.in@SD`), Raj TV (`RajTV.in@SD`), Ramdhenu (`Ramdhenu.in@SD`), Rang (`Rang.in@SD`), Real Madrid TV (`RealMadridTV.es@SD`), Red Bull TV (`RedBullTV.at@EUMENA`), Rengoni (`Rengoni.in@SD`), Rongeen TV (`RongeenTV.in@SD`), Ruposhi Bangla (`RupasiBangla.in@SD`), IN: SONY SPORTS TEN 1 HD (`SONY SPORTS TEN 1 HD.in`), IN: SONY SPORTS TEN 2 HD (`SONY SPORTS TEN 2 HD.in`), Saam TV (`SaamTV.in@SD`), Safari TV (`SafariTV.in@SD`), Saga Music (`SagaMusic.in`), Saga Music Haryanvi (`SagaMusicHaryanvi.in`), Sai TV (`SaiTV.in@SD`), Sangeet Bangla (`SangeetBangla.in@SD`), Sangeet Bhojpuri (`SangeetBhojpuri.in@SD`), Sangeet Marathi (`SangeetMarathi.in@SD`), Sansad TV 1 (`SansadTV1.in@HD`), Sansad TV 2 (`SansadTV2.in@SD`), Santvani Channel (`SantvaniChannel.in@SD`), Sharnam TV (`SharnamTV.in@SD`), Shemaroo Bollywood (`ShemarooBollywood.us`), Shemaroo Marathi Bana (`ShemarooMarathiBana.in@SD`), Shemaroo TV (`ShemarooTV.in@SD`), Shiksha TV (`ShikshaTV.in@SD`), Shubh TV (`ShubhTV.in@SD`), Siri Kannada (`SiriKannada.in@SD`), Siri Kannada All Time (`SiriKannadaAllTime.in`), Siri Kannada All Time (`SiriKannadaAllTime.in@SD`), Sky Racing 1 (`SkyRacing1.au@SD`), Sonar Bangla (`SonarBangla.in@SD`), Songdew TV (`SongdewTV.in@SD`), Sony Aath (`Sony.Aath.in`), SONY AATH kids (`SonyAath.in@SD`), Sony Max (`SonyMax.in@SD`), Sony Max 2 (`SonyMax2.in@SD`), Sony PAL (`SonyPal.in@SD`), Sony PIX (`SonyPix.in`), Sony Pix (`SonyPix.in@HD`), Sony SAB (`SonySAB.in@HD`), Sony Sports Ten 1 (`SonySportsTen1.in@HD`), Sony Sports Ten 1 (`SonySportsTen1.in@SD`), Sony Sports Ten 2 (`SonySportsTen2.in@SD`), Sony Sports Ten 3 (`SonySportsTen3.in`), Sony Sports Ten 5 (`SonySportsTen5.in@SD`), Sony WAH (`SonyWah.in@SD`), Sony Yay (`SonyYay.in@SD`), Spondon (`Spondon.in@SD`), Sportitalia (`Sportitalia.it@SD`), STAR GOLD ROMANCE (`Star Gold Romance.in`), Jalsha Movies HD (`Star.Jalsha.Movies.HD.in`), Jalsha Movies (`Star.Jalsha.Movies.in`), Star Jalsha (`Star.Jalsha.in`), Star Bharat (`StarBharat.in`), Star Cinema (`StarCinema.ru@SD`), Star Family (`StarFamily.ru@SD`), Star Gold (`StarGold.in`), Star Gold (`StarGold.in@HD`), Star Gold 2 (`StarGold2.in@HD`), Star Jalsha (`StarJalsha.in@SD`), Star Maa (`StarMaa.in@HD`), Star Maa (`StarMaa.in@SD`), Star Maa Movies (`StarMaaMovies.in@SD`), StarPlus (India) (`StarPlus.in@HD`), Star Plus (`StarPlus.in@SD`), Star Pravah (`StarPravah.in@HD`), Star Sports 1 (`StarSports1.in`), Star Sports 1 (`StarSports1.in@HD`), Star Sports 1 Hindi (`StarSports1Hindi.in@HD`), Star Sports 2 (`StarSports2.in`), Star Sports 2 (`StarSports2.in@HD`), Star Sports 2 (`StarSports2.in@SD`), Star Sports 2 Hindi (`StarSports2Hindi.in@SD`), Star Sports 2 Telugu (`StarSports2Telugu.in@HD`), Star Sports 3 (`StarSports3.in@SD`), Star Sports Select 1 (`StarSportsSelect1.in@HD`), Star Sports Select 1 (`StarSportsSelect1.in@SD`), Star Sports Select 2 (`StarSportsSelect2.in`), Star Sports Select 2 (`StarSportsSelect2.in@HD`), Stingray Classic Rock (`StingrayClassicRock.ca`), Stingray Easy Listening (`StingrayEasyListening.ca@SD`), Stingray Flashback 70's (`StingrayFlashback70s.ca@SD`), Stingray Hot Country (`StingrayHotCountry.ca@SD`), Stingray Jukebox Oldies (`StingrayJukeboxOldies.ca@SD`), Stingray Nothin' But 90s (`StingrayNothinBut90s.ca@SD`), Stingray Remember the 80s (`StingrayRememberthe80s.ca`), Stingray Romance Latino (`StingrayRomanceLatino.ca@SD`), Stingray Smooth Jazz (`StingraySmoothJazz.ca@SD`), Stingray The Spa (`StingrayTheSpa.ca`), Stingray The Spa (`StingrayTheSpa.ca@SD`), Stingray Today's KPOP (`StingrayTodaySKPOP.us`), Stingray Today's K-Pop (`StingrayTodaysKPop.ca@SD`), Stingray Today's Latin Pop (`StingrayTodaysLatinPop.ca`), Stingray Today's Latin Pop (`StingrayTodaysLatinPop.ca@SD`), Studio One + (`StudioOnePlus.in@SD`), Sun Music (`SunMusic.in@SD`), Sun TV (`SunTV.in@HD`), Suriya TV (`SuriyaTV.in`), Suriya TV (`SuriyaTV.in@SD`), Swerve Combat (`SwerveCombat.us@SD`), TV9 Bangla (`TV9Bangla.in`), Taaza TV (`TaazaTV.in@SD`), Tabbar Hits (`TabbarHits.in`), Tabbar Hits (`TabbarHits.in@SD`), Tarang Music (`TarangMusic.in@SD`), Tarang TV (`TarangTV.in@SD`), Tehzeeb TV (`TehzeebTV.in@SD`), Telecine Action (`TelecineAction.br@SD`), Teledeporte (`Teledeporte.es@SD`), Teletubbies (`Teletubbies.uk@SD`), Tennis Channel (`TennisChannel.us@SD`), Tennis Channel 2 (`TennisChannel2.us@SD`), Thanthi One (`ThanthiOne.in`), Thanthi One (`ThanthiOne.in@SD`), The Voice (`TheVoice.bg@SD`), Tooncast (`Tooncast.us@SD`), Total TV Haryana (`TotalTVHaryana.in@SD`), Trace Latina (`TraceLatina.fr@SD`), Trace Latina (`TraceLatina.us`), Travelxp (`Travelxp.in@4KHDR`), Travelxp (`Travelxp.in@HD`), Tunes 6 (`Tunes6.in`), Tunes 6 (`Tunes6.in@SD`), U Bangla (`UBangla.in`), U Bangla (`UBangla.in@SD`), Ultimate TV (`UltimateTV.in@SD`), Unbeaten (`Unbeaten.us@SD`), Unique TV (`UniqueTV.in@SD`), Vaanavil TV (`VaanavilTV.in@SD`), Vanitha TV (`VanithaTV.in@SD`), Vasanth TV (`VasanthTV.in@SD`), Vendhar TV (`VendharTV.in@SD`), Vision (`Vision.in@SD`), Vissa TV (`VissaTV.in@SD`), WildEarth (`WildEarth.za`), Wonder (`Wonder.us`), World Poker Tour (`WorldPokerTour.us@US`), Wu Tang Collection (`WuTangCollection.us@SD`), YRF Music (`YRFMusic.in`), Yu-Gi-Oh! (`YuGiOh.us@SD`), Zee 24 Ghanta (`Zee24Ghanta.in@SD`), Zee Action (`ZeeAction.in`), Zee Bangla (`ZeeBangla.in@HD`), Zee Bangla (`ZeeBangla.in@SD`), Zee Bangla Sonar (`ZeeBanglaSonar.in@SD`), Zee Bollywood (`ZeeBollywood.in@SD`), Zee Business (`ZeeBusiness.in@SD`), Zee Cinema (`ZeeCinema.in@HD`), Zee Kannada (`ZeeKannada.in@HD`), Zee Kannada (`ZeeKannada.in@SD`), Zee Marathi (`ZeeMarathi.in@HD`), Zee TV (`ZeeTV.in@SD`), Zee Tamil (`ZeeTamil.in@HD`), Zee Tamil (`ZeeTamil.in@SD`), Zee Telugu (`ZeeTelugu.in@HD`), Zing (`Zing.in@SD`), Zoom (`Zoom.in`), Zoom (India) (`Zoom.in@SD`), bTV Action (`bTVAction.bg@SD`), bTV Cinema (`bTVCinema.bg@SD`), Metro (`custom.24-7-xxx-metro`), Reality Kings (`custom.24-7-xxx-reality-kings`), TV 9 BANGLA (`custom.bdix.9bangla`), AAKASH AATH (`custom.bdix.aakashaath`), ABP ANANDA (`custom.bdix.abpananda`), Big Magic (`custom.bdix.big-magic`), NDTV 24x7 (`custom.bdix.ndtv24x7`), NICK BANGLA (`custom.bdix.nickbangla`), Red Bull TV (`custom.bdix.redbulltv`), TRACE LATINA (`custom.bdix.tracelatina`), TRAVEL XP HD (`custom.bdix.travelxp`), CGTN Documentary (`custom.cgtn-docment`), ETV (`custom.etv-yddbw`), HBO (`custom.hbo`), History (`custom.history`), Love Nature (`custom.love-natural`), MovieSphere AU (`custom.moviesphere-au`), Rengoni TV (`custom.rengoni-tv`), Sun Bangla (`custom.sun-bangla-k1d4w`), Brazzers Europe (`custom.xxx-brazzers-europe`), Ero Xxx (`custom.xxx-ero-xxx`), Hustler (`custom.xxx-hustler`), Vivid Red (`custom.xxx-vivid-red`), ducktv PLUS (`ducktvPLUS.sk@SD`), Kappa TV (`kappatv.in`), National Geographic (`natgeo.us`)
+- Published current/future IDs not counted source-current/future: **9**
+- Published current/future IDs not counted source-current/future: DMF (`DMF.de@SD`), Enter-Film (`EnterFilm.ua@SD`), Game+ (`GamePlus.ca@SD`), Goldmines Movies (`GoldminesMovies.in@SD`), Kalaignar Murasu (`KalaignarMurasu.in`), Odisha TV (`OdishaTV.in@SD`), Pixel TV (`PixelTV.ua@SD`), Sony Entertainment TV (`SonyEntertainmentTelevision.in@SD`), ZICO TV (`ZICOTV.rs@SD`)
 
 
 ## Playlist EPG Headers
@@ -2122,7 +2240,7 @@ The table includes every active channel identity without usable current/future g
 
 ## Source Playlist Fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **faee9d0d61b69ea2136a0baffe887415e579273713dc58d4fcc1e62184161c1d**
+- IPTV-Playlist.m3u SHA-256: **fabbd4dfb8fa0eca77679a7a872c21ef8813bb7f49556db6fe3ab18c4c07b697**
 - BDIX-Playlist.m3u SHA-256: **596c7c069bed399dc8e5029090b788b7421ac82a315c5ac55b8caf1b82ff529d**
 - International-Playlist.m3u SHA-256: **a300f65b5f0b5568475a09e5dd3a68eb749d22812aaa9a09034ebee9a7a2d1ce**
 
