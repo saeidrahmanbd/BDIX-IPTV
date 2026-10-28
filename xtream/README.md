@@ -27,7 +27,7 @@ Both workers expose authenticated `/xmltv.php` endpoints backed by the same publ
 
 `https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml`
 
-The endpoints stream the published guide and return HTTP 503 if the guide is temporarily unavailable. The guide becomes usable after the **Refresh IPTV EPG** workflow successfully publishes it. The EPG pipeline may combine useful public or otherwise accessible upstream feeds, including third-party XMLTV sources, for channel discovery, mapping and schedule acquisition. Private M3U4U credentials or personalized URLs are kept out of the public build.
+The endpoints stream the published guide and return HTTP 503 if the guide is temporarily unavailable. The guide becomes usable after the **Refresh IPTV EPG** workflow successfully publishes it. The EPG pipeline combines configured public or otherwise accessible upstream feeds for channel discovery, mapping and schedule acquisition. Private M3U4U credentials or personalized URLs are kept out of the public build. Source-review metadata is advisory and does not block generation or publication; XMLTV freshness and quality checks remain active.
 
 ## Security
 
