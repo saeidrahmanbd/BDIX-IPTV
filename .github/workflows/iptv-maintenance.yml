@@ -226,6 +226,12 @@ jobs:
             python scripts/restore_protected_review.py
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
 
+            # Refresh reports whose fingerprints depend on the final playlist bytes.
+            # These scripts must run after the last logo repair and protected-review restoration.
+            python scripts/iptv_metadata_backfill.py
+            python scripts/backfill_cross_playlist_metadata.py
+            python scripts/repair_logo_asset_technical_quality.py
+
             # Validate and regenerate every fingerprinted report from the final playlist state.
             set +e
             python scripts/audit_playlist.py
