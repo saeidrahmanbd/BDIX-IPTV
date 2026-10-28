@@ -81,7 +81,7 @@ def guide_data():
 
 
 def append_verified_ids(row, candidate_ids):
-    """Append approved source IDs only when the fetched guide has real current/future programmes."""
+    """Append verified source IDs only when the fetched guide has real current/future programmes."""
     existing = [value.strip() for value in (row.get("epg_id") or "").split("|") if value.strip()]
     additions = [value for value in dict.fromkeys(candidate_ids) if value and value not in existing]
     if not additions:
