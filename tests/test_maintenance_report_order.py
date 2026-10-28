@@ -31,6 +31,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         # The dedicated EPG workflow owns the public guide and its source policy.
         self.assertNotIn("vars.EPG_REDISTRIBUTION_APPROVED == 'true'", refresh)
         self.assertNotIn("EPG_ALLOW_UNVERIFIED_SOURCES", refresh)
+        self.assertIn("python scripts/validate_report_freshness.py --mode epg", refresh)
         self.assertIn("python scripts/run_generate_epg.py", refresh)
         self.assertIn("python scripts/epg_coverage.py", refresh)
         self.assertIn("python scripts/fetch_iptv_org_epg.py", refresh)
@@ -44,6 +45,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
             1,
             "freshness validation should run only after all final reports are regenerated",
         )
+        self.assertIn("python scripts/validate_report_freshness.py --mode generated", workflow)
 
         def last_pos(needle):
             pos = workflow.rfind(needle)
