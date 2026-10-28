@@ -110,8 +110,6 @@ SOURCES = [
     "https://www.rtvbd.tv/schedule.php",
 ]
 
-
-
 PRIVATE_SOURCE_ENV = "M3U4U_XMLTV_URL"
 PRIVATE_SOURCE_LABEL = "M3U4U XMLTV (private Actions secret)"
 
@@ -128,10 +126,7 @@ def configured_sources():
         or (parsed.hostname or "").lower() not in {"m3u4u.com", "www.m3u4u.com"}
         or not parsed.path.startswith(("/epg/", "/xml/"))
     ):
-        print(
-            f"Ignoring {PRIVATE_SOURCE_ENV}: use an HTTPS M3U4U XMLTV endpoint; "
-            "the configured URL is not printed."
-        )
+        print(f"Ignoring {PRIVATE_SOURCE_ENV}: use an HTTPS M3U4U XMLTV endpoint; the configured URL is not printed.")
         return sources
     if private_url not in sources:
         sources.append(private_url)
@@ -139,14 +134,7 @@ def configured_sources():
 
 
 def sources_with_mapped_channels(source_urls):
-    """Skip feeds that have no current mapped source IDs; retain local/official adapters.
-
-    Coverage discovery runs immediately before generation and records which source
-    feeds actually matched a playlist identity in the mapping CSV. Parsing large
-    global feeds that have no mapped IDs wastes time and can stall publication.
-    If the mapping snapshot cannot be read, fall back to all configured sources
-    rather than silently shrinking the guide.
-    """
+    """Skip feeds with no current mapped source IDs, retaining local/official adapters."""
     source_urls = list(source_urls)
     if not MAPPING.is_file():
         print("EPG source pruning skipped: mapping CSV is missing.")
@@ -161,22 +149,11 @@ def sources_with_mapped_channels(source_urls):
     except (OSError, csv.Error, UnicodeError) as exc:
         print(f"EPG source pruning skipped: cannot read mapping CSV ({exc}).")
         return source_urls
-
-    selected = [
-        source for source in source_urls
-        if source in mapped_sources
-        or source in (HUM_TV_SOURCE, RTV_SOURCE)
-        or source.startswith("file://")
-    ]
-    # A completely empty hit set is not evidence that no source can help.
-    # Keep the configured list and let the regular quality gate decide.
+    selected = [source for source in source_urls if source in mapped_sources or source in (HUM_TV_SOURCE, RTV_SOURCE) or source.startswith("file://")]
     if not selected:
         print("EPG source pruning skipped: no mapped source URLs found.")
         return source_urls
-    print(
-        f"EPG source pruning: using {len(selected)} of {len(source_urls)} configured feeds "
-        "with current mapping hits (plus local/official adapters)."
-    )
+    print(f"EPG source pruning: using {len(selected)} of {len(source_urls)} configured feeds with current mapping hits (plus local/official adapters).")
     return selected
 
 
@@ -185,9 +162,6 @@ def source_label(src):
         return PRIVATE_SOURCE_LABEL
     return src
 
-
-# Per-channel broadcast-delay corrections, in hours.
-# Colors Cineplex's upstream guide is 2 hours behind the live stream.
 CHANNEL_TIME_OFFSETS = {
     "ColorsCineplex.in@SD": timedelta(hours=2),
 }
@@ -197,10 +171,6 @@ GENERIC_TITLES = {
     "tba", "to be announced", "unknown", "schedule", "telecast", "show",
     "music", "test", "testing", "coming soon",
 }
-
-# Empty-content fillers that some feeds emit instead of a programme title
-# (for example "No Data"). They carry no schedule information, so they are
-# never published, even when they are the only rows a channel has.
 PLACEHOLDER_TITLES = {
     "no data", "no information", "no info", "n/a", "none", "no title",
     "no program", "no programs", "no programme", "no programmes",
@@ -208,42 +178,23 @@ PLACEHOLDER_TITLES = {
     "program not available", "programme not available",
 }
 GENERIC_TITLES |= PLACEHOLDER_TITLES
+SINGLE_SHOW_CHANNEL_IDS = {"Mythbusters.us", "AxMen.us", "StrawberryShortcake.us", "Teletubbies.uk"}
 
-# Channels that genuinely broadcast a single show, where a programme title that
-# equals the channel name is real content rather than a feed filler.
-SINGLE_SHOW_CHANNEL_IDS = {
-    "Mythbusters.us", "AxMen.us", "StrawberryShortcake.us", "Teletubbies.uk",
-}
 
 def fetch(url):
-    req = urllib.request.Request(
-        url,
-        headers={
-            "User-Agent": "BDIX-IPTV-EPG/1.0",
-            "Accept": "application/gzip,application/xml,*/*",
-        },
-    )
+    req = urllib.request.Request(url, headers={"User-Agent": "BDIX-IPTV-EPG/1.0", "Accept": "application/gzip,application/xml,*/*"})
     with urllib.request.urlopen(req, timeout=SOURCE_FETCH_TIMEOUT_SECONDS) as r:
         data = r.read()
     if data[:2] == b"\x1f\x8b" or url.endswith(".gz"):
         data = gzip.decompress(data)
     return data
 
-def fetch_xmltv_sources_concurrently(source_urls, max_workers=SOURCE_FETCH_WORKERS):
-    """Fetch ordinary XMLTV feeds concurrently, preserving per-URL results and errors.
 
-    The caller still processes the returned dictionaries in the configured source
-    order, so source-priority tie-breaking and generated schedule ordering do not
-    depend on thread completion order. HUM TV / RTV use dedicated schedule
-    parsers and are intentionally excluded from generic XMLTV retrieval.
-    """
-    urls = [
-        url for url in source_urls
-        if url not in (HUM_TV_SOURCE, RTV_SOURCE)
-    ]
+def fetch_xmltv_sources_concurrently(source_urls, max_workers=SOURCE_FETCH_WORKERS):
+    """Fetch ordinary XMLTV feeds concurrently, preserving per-URL results and errors."""
+    urls = [url for url in source_urls if url not in (HUM_TV_SOURCE, RTV_SOURCE)]
     if not urls:
         return {}, {}
-
     workers = max(1, min(int(max_workers), len(urls)))
     payloads = {}
     errors = {}
@@ -254,9 +205,534 @@ def fetch_xmltv_sources_concurrently(source_urls, max_workers=SOURCE_FETCH_WORKE
             try:
                 payloads[url] = future.result()
             except Exception as exc:
-                # Isolate one bad feed; other sources remain available.
                 errors[url] = exc
     return payloads, errors
 
 
 def playlist_channels():
+    """Include primary channel IDs from the three core maintained playlists, keeping main-list names first."""
+    out = {}
+    for playlist_path in PLAYLISTS:
+        if not playlist_path.exists():
+            continue
+        for line in playlist_path.read_text(encoding="utf-8-sig").splitlines():
+            if not line.startswith("#EXTINF:"):
+                continue
+            attrs = {}
+            for m in re.finditer(r'([\w-]+)="([^"]*)"', line):
+                attrs[m[1]] = m[2]
+            group = attrs.get("group-title", "").strip()
+            tvg_id = attrs.get("tvg-id", "").strip()
+            name = attrs.get("tvg-name", "").strip() or line.rsplit(",", 1)[-1].strip()
+            if tvg_id and group not in INACTIVE_GROUPS:
+                out.setdefault(tvg_id, name)
+    return out
+
+
+def playlist_groups():
+    """Return the first active group for each playlist identity."""
+    groups = {}
+    for playlist_path in PLAYLISTS:
+        if not playlist_path.exists():
+            continue
+        for line in playlist_path.read_text(encoding="utf-8-sig").splitlines():
+            if not line.startswith("#EXTINF:"):
+                continue
+            attrs = {}
+            for m in re.finditer(r'([\w-]+)="([^"]*)"', line):
+                attrs[m[1]] = m[2]
+            group = attrs.get("group-title", "").strip()
+            tvg_id = attrs.get("tvg-id", "").strip()
+            if tvg_id and group not in INACTIVE_GROUPS:
+                groups.setdefault(tvg_id, group)
+    return groups
+
+import unicodedata
+TEXT_FIELDS = {"title", "sub-title", "desc"}
+XML_LANG = "{http://www.w3.org/XML/1998/namespace}lang"
+LANG_PRIORITY = {"en": 3, "eng": 3, "bn": 2, "ben": 2}
+LANG_PREFIXES = (("en-", 3), ("en_", 3), ("bn-", 2), ("bn_", 2))
+
+
+def _script_rank(text):
+    scripts = set()
+    for char in text:
+        if unicodedata.category(char).startswith("L"):
+            name = unicodedata.name(char, "")
+            if "LATIN" in name:
+                scripts.add("latin")
+            elif "BENGALI" in name:
+                scripts.add("bengali")
+            elif name:
+                scripts.add("other")
+    if scripts == {"latin"} or scripts == {"latin", "bengali"}:
+        return 3
+    if scripts == {"bengali"}:
+        return 2
+    return 1 if scripts else 0
+
+
+def language_priority(elem):
+    text = (elem.text or "").strip()
+    lang = (elem.attrib.get(XML_LANG) or elem.attrib.get("lang") or "").strip().lower()
+    if lang:
+        if lang in LANG_PRIORITY:
+            return LANG_PRIORITY[lang]
+        for prefix, rank in LANG_PREFIXES:
+            if lang.startswith(prefix):
+                return rank
+        return 1
+    return _script_rank(text)
+
+
+def is_english_text_element(elem):
+    text = (elem.text or "").strip()
+    if not text:
+        return True
+    lang = (elem.attrib.get(XML_LANG) or elem.attrib.get("lang") or "").strip().lower()
+    if lang and any(lang.startswith(prefix) for prefix, _ in LANG_PREFIXES):
+        return True
+    if lang in LANG_PRIORITY:
+        return True
+    return any(unicodedata.category(char).startswith("L") for char in text)
+
+
+def preferred_title_element(elem):
+    titles = [x for x in elem.findall("title") if (x.text or "").strip()]
+    if not titles:
+        return None
+    return max(titles, key=lambda x: (language_priority(x), len((x.text or "").strip()), -(titles.index(x))))
+
+
+def load_mapping():
+    reverse = {}
+    if not MAPPING.exists():
+        return reverse
+    with MAPPING.open(encoding="utf-8-sig", newline="") as fh:
+        for row in csv.DictReader(fh):
+            target = row.get("tvg_id", "").strip()
+            if not target:
+                continue
+            ids = [x.strip() for x in row.get("epg_id", "").split("|") if x.strip()]
+            if row.get("group", "").strip() == "Indian Bangla":
+                ids = ids[:1]
+            for source_id in ids:
+                reverse.setdefault(source_id, set()).add(target)
+    return {source_id: sorted(targets) for source_id, targets in reverse.items()}
+
+
+def stamp(value):
+    try:
+        raw = str(value).strip()
+        if len(raw) < 14:
+            return None
+        dt = datetime.strptime(raw[:14], "%Y%m%d%H%M%S")
+        if len(raw) >= 20 and raw[15] in "+-":
+            sign = 1 if raw[15] == "+" else -1
+            hh = int(raw[16:18])
+            mm = int(raw[18:20])
+            dt = dt.replace(tzinfo=timezone(sign * timedelta(hours=hh, minutes=mm)))
+        else:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+    except Exception:
+        return None
+
+
+def normalized_title(title):
+    return re.sub(r"\s+", " ", (title or "").strip().lower())
+
+SLOT_PLACEHOLDER_RE = re.compile(r"^(program|programme|show|slot)\s*@\s*\d")
+
+
+def is_slot_placeholder(title):
+    return bool(SLOT_PLACEHOLDER_RE.match(normalized_title(title)))
+
+
+def title_score(title):
+    t = normalized_title(title)
+    if not t or t in GENERIC_TITLES or len(t) <= 2 or is_slot_placeholder(t):
+        return 0
+    return 1.0 + min(len(t), 80) / 400.0
+
+ALWAYS_DROP_GENERIC_TITLES = {"movie", "movies"} | PLACEHOLDER_TITLES
+
+
+def channel_key(text):
+    return re.sub(r"[^a-z0-9]", "", re.sub(r"\(.*?\)", "", (text or "").lower()))
+
+NAME_FILLER_MIN_SHARE = 0.8
+
+
+def repeats_channel_name(title, channel_name):
+    name = channel_key(channel_name)
+    return bool(name) and channel_key(title) == name
+
+
+def name_filled_targets(by_target, channel_names):
+    if not channel_names:
+        return set()
+    filled = set()
+    for target, records in by_target.items():
+        if not records or target in SINGLE_SHOW_CHANNEL_IDS:
+            continue
+        name = channel_names.get(target, "")
+        same = sum(1 for r in records if repeats_channel_name(r["title"], name))
+        if same / len(records) >= NAME_FILLER_MIN_SHARE:
+            filled.add(target)
+    return filled
+
+
+def filter_generic_candidates(by_target, channel_names=None):
+    filled_targets = name_filled_targets(by_target, channel_names)
+    named_targets = {
+        target for target, records in by_target.items()
+        if any(title_score(record["title"]) > 0 and not (target in filled_targets and repeats_channel_name(record["title"], channel_names.get(target, ""))) for record in records)
+    }
+    removed = 0
+    for target, records in list(by_target.items()):
+        kept = []
+        for record in records:
+            title = normalized_title(record["title"])
+            if title in ALWAYS_DROP_GENERIC_TITLES or is_slot_placeholder(title):
+                removed += 1
+                continue
+            if target in filled_targets and repeats_channel_name(record["title"], channel_names.get(target, "")):
+                removed += 1
+                continue
+            if target in named_targets and title_score(record["title"]) <= 0:
+                removed += 1
+                continue
+            kept.append(record)
+        by_target[target] = kept
+    return removed
+
+
+def clone_children(elem):
+    preferred = preferred_title_element(elem)
+    children = []
+    for child in list(elem):
+        if child.tag == "title":
+            if child is preferred:
+                children.append(ET.fromstring(ET.tostring(child, encoding="utf-8")))
+            continue
+        children.append(ET.fromstring(ET.tostring(child, encoding="utf-8")))
+    return children
+
+
+def shift_xmltv_timestamp(value, delta):
+    raw = (value or "").strip()
+    if not raw or not delta:
+        return raw
+    try:
+        base = raw[:14]
+        suffix = raw[14:].strip()
+        dt = datetime.strptime(base, "%Y%m%d%H%M%S")
+        if suffix and re.fullmatch(r"[+-]\d{4}", suffix):
+            sign = 1 if suffix[0] == "+" else -1
+            hh = int(suffix[1:3])
+            mm = int(suffix[3:5])
+            tz = timezone(sign * timedelta(hours=hh, minutes=mm))
+            dt = dt.replace(tzinfo=tz) + delta
+            return dt.strftime("%Y%m%d%H%M%S") + " " + suffix
+        dt = dt + delta
+        return dt.strftime("%Y%m%d%H%M%S") + ((" " + suffix) if suffix else "")
+    except Exception:
+        return raw
+
+
+def interval_weight(record):
+    start = record["start_dt"]
+    stop = record["stop_dt"]
+    duration = (stop - start).total_seconds() if stop else 0
+    hours = duration / 3600.0 if duration > 0 else 0
+    weight = 100.0
+    if title_score(record["title"]) > 0:
+        weight += 8.0
+    weight += {3: 30.0, 2: 20.0, 1: 10.0}.get(record.get("language_rank", 1), 10.0)
+    source_index = record["source_index"]
+    weight += max(0.0, (len(SOURCES) - source_index) / len(SOURCES)) * 3.0
+    if 0.25 <= hours <= 8:
+        weight += 1.0
+    elif hours > 12:
+        weight -= min(5.0, (hours - 12) * 0.25)
+    return max(1.0, weight)
+
+
+def clean_schedule(records):
+    unique = {}
+    for r in records:
+        if not r["stop_dt"] or r["stop_dt"] <= r["start_dt"]:
+            continue
+        key = (r["start_dt"], r["stop_dt"], normalized_title(r["title"]))
+        old = unique.get(key)
+        if old is None:
+            unique[key] = r
+        else:
+            old_quality = (old.get("language_rank", 1), title_score(old["title"]), -old["source_index"])
+            new_quality = (r.get("language_rank", 1), title_score(r["title"]), -r["source_index"])
+            if new_quality > old_quality:
+                unique[key] = r
+    items = sorted(unique.values(), key=lambda r: (r["stop_dt"], r["start_dt"], normalized_title(r["title"])))
+    if not items:
+        return []
+    stops = [r["stop_dt"] for r in items]
+    prev = [bisect.bisect_right(stops, r["start_dt"]) - 1 for r in items]
+    dp_score = [0.0] * (len(items) + 1)
+    dp_count = [0] * (len(items) + 1)
+    take = [False] * len(items)
+    for i, r in enumerate(items, start=1):
+        skip_score = dp_score[i - 1]
+        skip_count = dp_count[i - 1]
+        j = prev[i - 1] + 1
+        take_score = dp_score[j] + interval_weight(r)
+        take_count = dp_count[j] + 1
+        if (take_score > skip_score + 1e-9) or (abs(take_score - skip_score) <= 1e-9 and take_count > skip_count):
+            dp_score[i] = take_score
+            dp_count[i] = take_count
+            take[i - 1] = True
+        else:
+            dp_score[i] = skip_score
+            dp_count[i] = skip_count
+    chosen = []
+    i = len(items)
+    while i > 0:
+        if take[i - 1]:
+            chosen.append(items[i - 1])
+            i = prev[i - 1] + 1
+        else:
+            i -= 1
+    chosen.reverse()
+    return chosen
+
+
+def infer_source_offsets(records):
+    signatures = {}
+    for r in records:
+        start, stop = r.get("start_dt"), r.get("stop_dt")
+        title = normalized_title(r.get("title"))
+        if not start or not stop or stop <= start or title_score(title) == 0:
+            continue
+        duration_bin = round((stop - start).total_seconds() / 300)
+        key = (title, duration_bin)
+        signatures.setdefault(key, {}).setdefault((r["source_index"], r["source_id"]), []).append(r)
+    proposals = {}
+    for source_map in signatures.values():
+        unique = {source_key: rows[0] for source_key, rows in source_map.items() if len(rows) == 1}
+        if len(unique) < 3:
+            continue
+        ordered = sorted(unique.items(), key=lambda item: item[1]["start_dt"])
+        clusters = []
+        for item in ordered:
+            start = item[1]["start_dt"]
+            if not clusters or (start - clusters[-1][-1][1]["start_dt"]).total_seconds() > 600:
+                clusters.append([item])
+            else:
+                clusters[-1].append(item)
+        if len(clusters) < 2:
+            continue
+        consensus = max(clusters, key=len)
+        if len(consensus) < 2:
+            continue
+        consensus_sources = {item[0] for item in consensus}
+        consensus_start = sorted(item[1]["start_dt"] for item in consensus)[len(consensus) // 2]
+        for cluster in clusters:
+            if cluster is consensus or len(cluster) != 1:
+                continue
+            source_key, record = cluster[0]
+            if source_key in consensus_sources:
+                continue
+            delta = consensus_start - record["start_dt"]
+            minutes = round(delta.total_seconds() / 300) * 5
+            if abs(minutes) >= 120:
+                proposals.setdefault(source_key, []).append(minutes)
+    corrections = {}
+    for source_key, minutes_list in proposals.items():
+        buckets = {}
+        for minutes in minutes_list:
+            buckets[minutes] = buckets.get(minutes, 0) + 1
+        best_minutes, best_count = max(buckets.items(), key=lambda item: item[1])
+        if best_count >= 4 and best_count / len(minutes_list) >= 0.75:
+            corrections[source_key] = timedelta(minutes=best_minutes)
+    return corrections
+
+
+def main():
+    channels = playlist_channels()
+    groups = playlist_groups()
+    reverse = load_mapping()
+    print(f"EPG generator inputs: active playlist IDs={len(channels)}; source-to-playlist mapping IDs={len(reverse)}; mapping file={MAPPING}; exists={MAPPING.exists()}")
+    if not channels:
+        raise SystemExit("No active playlist channel IDs found in the three playlists")
+    if not reverse:
+        raise SystemExit("EPG mapping registry has no source IDs; inspect reports/epg-channel-mapping.csv generated by epg_coverage.py")
+    mapped_targets = {}
+    for source_id, targets in reverse.items():
+        for target in targets:
+            if target in channels:
+                mapped_targets.setdefault(target, set()).add(source_id)
+    if not mapped_targets:
+        raise SystemExit("No mapped playlist channels found in EPG mapping")
+    now = datetime.now(timezone.utc)
+    lower = now - timedelta(hours=6)
+    upper = now + timedelta(days=7)
+    candidates = {}
+    source_stats = {}
+    source_urls = sources_with_mapped_channels(configured_sources())
+    fetchable_count = sum(src not in (HUM_TV_SOURCE, RTV_SOURCE) and not src.startswith("file://") for src in source_urls)
+    print(f"EPG source fetch: {fetchable_count} XMLTV feeds, max_workers={SOURCE_FETCH_WORKERS}, timeout={SOURCE_FETCH_TIMEOUT_SECONDS}s")
+    source_payloads, source_errors = fetch_xmltv_sources_concurrently(source_urls)
+    print(f"EPG source fetch complete: {len(source_payloads)} succeeded, {len(source_errors)} failed")
+    for source_index, src in enumerate(source_urls):
+        try:
+            if src in (HUM_TV_SOURCE, RTV_SOURCE):
+                if src == HUM_TV_SOURCE:
+                    schedule_id, schedule_fetch, schedule_label = (HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes, "HUM TV")
+                else:
+                    schedule_id, schedule_fetch, schedule_label = (RTV_CHANNEL_ID, fetch_rtv_programmes, "RTV")
+                schedule_targets = [target for target in reverse.get(schedule_id, []) if target in mapped_targets]
+                if not schedule_targets:
+                    source_stats[src] = f"SKIPPED: no active exact {schedule_label} mapping"
+                    continue
+                schedule_programmes = schedule_fetch(now)
+                source_stats[src] = f"OK: {len(schedule_programmes)} timed official slots"
+                for programme in schedule_programmes:
+                    source_id = programme["channel_id"]
+                    title = programme["title"]
+                    start_dt = programme["start_dt"]
+                    stop_dt = programme["stop_dt"]
+                    attrs = {"channel": schedule_id, "start": start_dt.strftime("%Y%m%d%H%M%S %z"), "stop": stop_dt.strftime("%Y%m%d%H%M%S %z")}
+                    title_elem = ET.Element("title")
+                    title_elem.text = title
+                    for target in schedule_targets:
+                        channel_attrs = dict(attrs)
+                        channel_attrs["channel"] = target
+                        rec = {
+                            "attrs": channel_attrs,
+                            "title": title,
+                            "language_rank": language_priority(title_elem),
+                            "children": [ET.fromstring(ET.tostring(title_elem, encoding="utf-8"))],
+                            "start_dt": start_dt,
+                            "stop_dt": stop_dt,
+                            "source_index": source_index,
+                            "source": src,
+                            "source_id": source_id,
+                        }
+                        candidates.setdefault((target, source_index, source_id), []).append(rec)
+                continue
+            if src in source_errors:
+                raise RuntimeError(f"bounded source fetch failed: {source_errors[src]}")
+            if src not in source_payloads:
+                raise RuntimeError("source fetch returned no payload")
+            source_stats[src] = "OK"
+            data = source_payloads[src]
+            for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):
+                if elem.tag != "programme":
+                    continue
+                source_id = elem.attrib.get("channel", "").strip()
+                targets = [target for target in reverse.get(source_id, []) if target in mapped_targets]
+                if not targets:
+                    elem.clear()
+                    continue
+                start_dt = stamp(elem.attrib.get("start", ""))
+                stop_dt = stamp(elem.attrib.get("stop", "")) if elem.attrib.get("stop") else None
+                if not start_dt or start_dt > upper or (stop_dt and stop_dt < lower):
+                    elem.clear()
+                    continue
+                title_elem = preferred_title_element(elem)
+                title = (title_elem.text or "").strip() if title_elem is not None else ""
+                children = clone_children(elem)
+                for target in targets:
+                    if title_elem is None or not (title_elem.text or "").strip() or not is_english_text_element(title_elem):
+                        continue
+                    safe_children = []
+                    for child in children:
+                        if child.tag in TEXT_FIELDS and not is_english_text_element(child):
+                            continue
+                        safe_children.append(ET.fromstring(ET.tostring(child, encoding="utf-8")))
+                    attrs = dict(elem.attrib)
+                    attrs["channel"] = target
+                    rec = {
+                        "attrs": attrs,
+                        "title": title,
+                        "language_rank": language_priority(title_elem),
+                        "children": safe_children,
+                        "start_dt": start_dt,
+                        "stop_dt": stop_dt,
+                        "source_index": source_index,
+                        "source": src,
+                        "source_id": source_id,
+                    }
+                    candidates.setdefault((target, source_index, source_id), []).append(rec)
+                elem.clear()
+        except Exception as exc:
+            source_stats[src] = f"FAILED: {exc}"
+    by_target = {}
+    for (target, source_index, source_id), records in candidates.items():
+        by_target.setdefault(target, []).extend(records)
+    generic_removed = filter_generic_candidates(by_target, channels)
+    root = ET.Element("tv", {"generator-info-name": "BDIX-IPTV EPG", "generator-info-url": "https://github.com/saeidrahmanbd/BDIX-IPTV"})
+    for target in sorted(mapped_targets):
+        ch = ET.SubElement(root, "channel", {"id": target})
+        ET.SubElement(ch, "display-name").text = channels[target]
+    final_count = 0
+    raw_count = 0
+    removed_count = 0
+    generic_counts = 0
+    timing_audit = [
+        "# EPG Timing Audit",
+        "",
+        "Automatic corrections require repeated cross-source title and duration matches, at least four consistent matches, >=75% agreement, at least three source IDs, and a displacement of two hours or more.",
+        "",
+        "## Detected corrections",
+        "",
+    ]
+    correction_count = 0
+    for target in sorted(mapped_targets):
+        records = by_target.get(target, [])
+        corrections = infer_source_offsets(records)
+        for source_key, delta in corrections.items():
+            source_index, source_id = source_key
+            matching = [r for r in records if r["source_index"] == source_index and r["source_id"] == source_id]
+            for r in matching:
+                r["start_dt"] = r["start_dt"] + delta
+                if r["stop_dt"]:
+                    r["stop_dt"] = r["stop_dt"] + delta
+                r["source_offset"] = delta
+            correction_count += 1
+            timing_audit.append("- **{}** ({}): source ID {} from {} shifted by {:+g} hours after repeated cross-source agreement.".format(channels[target], target, source_id, source_label(source_urls[source_index]), delta.total_seconds() / 3600))
+        cleaned = clean_schedule(records)
+        raw_count += len(records)
+        removed_count += len(records) - len(cleaned)
+        generic_counts += sum(1 for r in cleaned if title_score(r["title"]) == 0)
+        channel_offset = CHANNEL_TIME_OFFSETS.get(target, timedelta(0))
+        for r in cleaned:
+            attrs = dict(r["attrs"])
+            total_offset = channel_offset + r.get("source_offset", timedelta(0))
+            if total_offset:
+                attrs["start"] = shift_xmltv_timestamp(attrs.get("start", ""), total_offset)
+                if attrs.get("stop"):
+                    attrs["stop"] = shift_xmltv_timestamp(attrs.get("stop", ""), total_offset)
+            p = ET.Element("programme", attrs)
+            for child in r["children"]:
+                p.append(ET.fromstring(ET.tostring(child, encoding="utf-8")))
+            root.append(p)
+            final_count += 1
+        print(f"  {target}: candidates {len(records)}, clean {len(cleaned)}, removed {len(records) - len(cleaned)}")
+    if final_count == 0:
+        raise SystemExit("No current/future programmes were generated; refusing to publish empty guide")
+    print(f"EPG candidate pool: {raw_count} mapped programmes before cleanup")
+    print(f"EPG cleanup: removed {removed_count} exact-duplicate/overlapping programmes")
+    print(f"EPG cleanup: retained {generic_counts} generic-title programmes where no named schedule was available")
+    print(f"EPG cleanup: excluded {generic_removed} generic-title placeholder candidates")
+    print(f"EPG generated: {len(mapped_targets)} mapped channels, {final_count} programmes")
+    if correction_count == 0:
+        timing_audit.append("- No source offsets met the strict automatic-correction threshold.")
+    timing_audit.extend(["", f"Detected source-ID corrections: **{correction_count}**", ""])
+    Path("reports").mkdir(parents=True, exist_ok=True)
+    Path("reports/epg-timing-audit.md").write_text("\n".join(timing_audit), encoding="utf-8")
+    ET.indent(root, space="  ")
+    OUTPUT.write_bytes(b'<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(root, encoding="utf-8"))
+
+if __name__ == "__main__":
+    main()
