@@ -30,7 +30,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         refresh = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
         # The dedicated EPG workflow owns the public guide and its source policy.
         self.assertNotIn("vars.EPG_REDISTRIBUTION_APPROVED == 'true'", refresh)
-        self.assertIn("EPG_ALLOW_UNVERIFIED_SOURCES: 'true'", refresh)
+        self.assertNotIn("EPG_ALLOW_UNVERIFIED_SOURCES", refresh)
         self.assertIn("python scripts/run_generate_epg.py", refresh)
         self.assertIn("python scripts/epg_coverage.py", refresh)
         self.assertIn("python scripts/fetch_iptv_org_epg.py", refresh)
