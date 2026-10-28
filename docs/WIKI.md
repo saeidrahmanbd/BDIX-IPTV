@@ -19,7 +19,7 @@ The all-playlist EPG mapping registry is `reports/epg-channel-mapping.csv`. Adul
 
 ## EPG publication
 
-The public XMLTV refresh pipeline is enabled again. The guide is published to `epg/epg.xml` after the scheduled workflow passes source-fetch, freshness and quality checks. The three playlist headers advertise the public raw XMLTV URL, and both Xtream `xmltv.php` handlers fetch that same guide. EPG.PW remains excluded, the personalized M3U4U endpoint is not included in the public build, and unresolved upstream source reviews remain documented in the [source-rights register](../epg/source-rights-register.csv).
+The public XMLTV refresh pipeline is enabled. The guide is published to `epg/epg.xml` after the scheduled workflow passes source-fetch, freshness and quality checks. The three playlist headers advertise the public raw XMLTV URL, and both Xtream `xmltv.php` handlers fetch that same guide. The EPG pipeline can combine useful public or otherwise accessible sources, including third-party feeds, for discovery, mapping and schedule acquisition. Private credentials and personalized feed URLs are kept out of the repository.
 
 See [EPG status and maintenance](../epg/README.md) and the [coverage report](../reports/epg-coverage.md).
 
@@ -35,7 +35,7 @@ Reports are snapshots, not live status pages. Check the generated timestamp and 
 - [Stream risk review](../reports/stream-risk-review.md)
 - [Project dashboard](../assets/dashboard.svg)
 
-For a missing programme guide, check whether EPG publication is enabled first, then verify the channel's ID and permission-approved schedule source. A correctly formatted ID is not proof that any schedule source exists.
+For a missing programme guide, check whether EPG publication is enabled first, then verify the channel's ID and an available matching schedule source. A correctly formatted ID is not proof that any schedule source exists.
 
 ## Related documentation
 
