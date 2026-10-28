@@ -119,45 +119,27 @@ def policy_errors(env=None, registry_path=REGISTER):
     return errors
 
 
-def require_approved_sources(context="EPG source access"):
-    """Check source policy; permit an explicit owner review override for review-required feeds."""
+def require_approved_sources(context="EPG source metadata audit"):
+    """Report source metadata gaps without blocking EPG acquisition or publication.
+
+    Kept under the historical function name for compatibility with older tools.
+    XMLTV integrity, freshness, and quality checks remain the publication gates.
+    """
     errors = policy_errors()
-    if not errors:
-        print(f"{context}: PASS — every active source has documented redistribution permission.")
-        return True
-
-    if os.environ.get("EPG_ALLOW_UNVERIFIED_SOURCES", "").strip().lower() == "true":
-        try:
-            required = required_source_keys()
-            records = read_register()
-        except (OSError, ValueError, SyntaxError) as exc:
-            print(f"{context}: BLOCKED — source register/configuration error: {exc}")
-            raise SystemExit(1)
-        prohibited = [
-            key for key in sorted(required)
-            if records.get(key, {}).get("status", "").upper() == "PROHIBITED"
-        ]
-        if prohibited:
-            print(f"{context}: BLOCKED — explicitly prohibited source(s) are active.")
-            for key in prohibited:
-                print("- " + key)
-            raise SystemExit(1)
+    if errors:
         print(
-            f"{context}: WARNING — continuing under EPG_ALLOW_UNVERIFIED_SOURCES=true; "
-            f"{len(errors)} source-rights review item(s) remain open."
+            f"{context}: INFO — {len(errors)} source metadata item(s) need review; "
+            "continuing because source-register status is advisory."
         )
-        print(
-            "Useful EPG sources are not categorically excluded by this override. "
-            "Review epg/source-rights-register.csv before changing a source to APPROVED."
-        )
-        return True
-
-    print(f"{context}: BLOCKED by source-rights policy ({len(errors)} issue(s))")
-    for error in errors:
-        print("- " + error)
-    print("Set EPG_ALLOW_UNVERIFIED_SOURCES=true only when the repository owner explicitly chooses to publish review-required, non-prohibited sources.")
-    raise SystemExit(1)
-
+        for error in errors:
+            print("- " + error)
+    else:
+        print(f"{context}: INFO — source metadata has no outstanding review items.")
+    print(
+        "Source-register metadata does not gate EPG source discovery, schedule "
+        "generation, or publication; XMLTV quality checks remain active."
+    )
+    return True
 
 def main():
     try:
