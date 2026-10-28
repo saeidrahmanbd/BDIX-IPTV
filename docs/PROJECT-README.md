@@ -14,4 +14,4 @@ This document is retained as a compatibility link for older bookmarks. It intent
 - [Repository security policy](SECURITY.md)
 - [Contributing guide](CONTRIBUTING.md)
 
-**EPG status:** automated XMLTV refresh is enabled. The public guide is available only after a successful generation, freshness check, quality gate, and commit. Current source-rights reviews remain documented in the [EPG status page](../epg/README.md) and [source-rights register](../epg/source-rights-register.csv).
+**EPG status:** automated XMLTV refresh is enabled. The public guide is available only after a successful generation, freshness check, quality gate, and commit. See the [EPG status page](../epg/README.md) and current [coverage report](../reports/epg-coverage.md).
