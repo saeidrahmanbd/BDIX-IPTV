@@ -97,6 +97,10 @@ jobs:
             scripts/repair_international_playlist.py \
             scripts/reorganize_international_playlist.py \
             scripts/validate_international_playlist.py
+      # Let the existing normalizer remove repairable empty logo fields before preflight tests.
+      # The maintenance block starts from origin/main and runs the full normalization pipeline again.
+      - name: Normalize repairable IPTV metadata before validation tests
+        run: python scripts/normalize_metadata.py
       - name: Run playlist metadata and report freshness tests
         run: |
           python -m unittest discover -s tests -p 'test_report_freshness.py'
