@@ -28,7 +28,7 @@ The workflow runs automatically on the daily schedule and when relevant playlist
 
 The objective is **maximum practical EPG coverage**. Useful EPG/XMLTV sources are not categorically excluded merely because they are third-party.
 
-The pipeline may use public or otherwise accessible upstream feeds for discovery, channel mapping, and schedule acquisition, including EPG.PW, M3U4U, iptv-org/epg and other public sources when a usable feed is available. Sources are combined and deduplicated, and the strongest current schedule is preferred for each channel. Private credentials, session tokens, and personalized feed URLs are never committed to the repository or exposed in logs.
+The pipeline may use public or otherwise accessible upstream feeds for discovery, channel mapping, and schedule acquisition, including EPG.PW, M3U4U, iptv-org/epg and other public sources when a usable feed is available. Sources are combined and deduplicated, and the strongest current schedule is preferred for each channel. Private credentials, session tokens, and personalized feed URLs are never committed to the repository or exposed in logs. The optional source-review register is advisory: it is not a prerequisite for generation, mapping, reporting, or publication. Its status does not itself grant upstream permission; technical publication gates continue to validate XMLTV structure, schedule quality, freshness, and coverage.
 
 ## Coverage and Mapping
 
