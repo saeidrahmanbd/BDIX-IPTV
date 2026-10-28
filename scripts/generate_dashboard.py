@@ -47,9 +47,7 @@ def main():
     audit_current=report_source_sha(a)==source_sha
     gate_current=report_source_sha(gate)==source_sha
     health_current=report_url_inventory_sha(h)==url_inventory_sha(PLAYLIST.read_text(encoding="utf-8-sig"))
-    # Base the dashboard on the published artefact, not the legacy rights flag.
-    # The owner override is EPG_ALLOW_UNVERIFIED_SOURCES; it does not prove
-    # upstream redistribution rights, but an actual guide can still be audited.
+    # Base EPG dashboard metrics on the published artefact, not source-register metadata.
     epg_current=False
     freshness_text=read(EPG_FRESHNESS)
     freshness_pass=bool(re.search(r"(?im)^Status:\s*\*\*PASS\*\*\s*$", freshness_text))
@@ -178,7 +176,7 @@ Source playlist SHA-256: **{source_sha}**
 - Current/future programme coverage: **{epg_live_value}**
 - No mapping: **{missing if epg_current else "PENDING — guide not current"}**
 - EPG metric scope: **{epg_scope + (" (verified against all three current playlist inventories)" if epg_current else " (awaiting a valid, fresh published guide)") }**
-- Upstream source-rights reviews remain unresolved; technical guide validation does not itself establish redistribution permission. See `epg/source-rights-register.csv`.
+- Programme coverage and freshness are measured from the published XMLTV; technical validation checks data integrity, not upstream licensing.
 
 ## Freshness
 | Report | Last generated | Input freshness |
