@@ -236,7 +236,7 @@ jobs:
             python scripts/generate_metadata_normalization_report.py
             python scripts/generate_dashboard.py
             python scripts/record_maintenance_history.py --refresh
-            python scripts/validate_report_freshness.py
+            python scripts/validate_report_freshness.py --mode generated
             if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
               echo "::error::Final audit or pre-publish gate reports blocking issues."
               echo "Audit status: $AUDIT_STATUS"
