@@ -94,6 +94,15 @@ class ReportFreshnessTests(unittest.TestCase):
         errors = check_reports(self.root, now=self.now, epg_publication_approved=True)
         self.assertTrue(any("epg-coverage.md: stale report" in item for item in errors))
 
+    def test_epg_mode_checks_reports_without_legacy_approval_flag(self):
+        errors = check_reports(self.root, now=self.now, mode="epg", epg_publication_approved=False)
+        self.assertEqual(errors, [])
+        report = self.root / "reports" / "epg-unmapped-audit.md"
+        report.write_text(report.read_text(encoding="utf-8").replace(self.timestamp, "2026-10-17T08:00:00+00:00"), encoding="utf-8")
+        errors = check_reports(self.root, now=self.now, mode="epg", epg_publication_approved=False)
+        self.assertTrue(any("epg-unmapped-audit.md: stale report" in item for item in errors))
+        self.assertFalse(any("logo-authenticity-manifest.json" in item for item in errors))
+
     def test_metadata_read_only_report_marker_is_accepted(self):
         report = self.root / "reports" / "iptv-metadata-backfill.md"
         report.write_text(f"Generated: **{self.timestamp}**\nPlaylist SHA-256: **{self.hashes['IPTV-Playlist.m3u']}**\n", encoding="utf-8")
