@@ -83,10 +83,14 @@ def check_timestamp(relative: str, text: str, now, max_age, errors):
 
 
 def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode="all", epg_publication_approved=None):
-    """Return freshness errors; EPG reports are always checked regardless of legacy flags."""
+    """Return freshness errors for all, playlist-maintenance, or EPG-only reports.
+
+    The legacy epg_publication_approved argument is accepted for compatibility
+    but ignored; it must never hide EPG freshness or fingerprint failures.
+    """
     root = Path(root)
     now = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
-    if mode not in {"all", "generated"}:
+    if mode not in {"all", "generated", "epg"}:
         return [f"Unknown freshness validation mode: {mode}"]
     hashes = {}
     for name in PLAYLIST_NAMES:
@@ -96,16 +100,18 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
         hashes[name] = sha256(path)
 
     errors = []
-    # Keep the parameter for compatibility with old callers, but do not let a
-    # redistribution flag hide EPG report freshness or fingerprint failures.
-    report_paths = (
+    generated_paths = (
         list(SINGLE_PLAYLIST_REPORTS)
         + list(SHARED_PLAYLIST_REPORTS)
-        + [PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT]
-        + list(SHARED_EPG_REPORTS)
-        + list(TIMESTAMP_ONLY_REPORTS)
+        + [PROVENANCE_REPORT, CROSS_PLAYLIST_METADATA_REPORT, STREAM_HEALTH_REPORT]
     )
-    report_paths.append(STREAM_HEALTH_REPORT)
+    epg_paths = list(SHARED_EPG_REPORTS) + list(TIMESTAMP_ONLY_REPORTS)
+    # The playlist workflow checks only reports it owns; the EPG workflow
+    # explicitly validates the shared EPG reports after it regenerates them.
+    # "all" always includes EPG reports, independent of any legacy approval flag.
+    report_paths = generated_paths + epg_paths if mode == "all" else (
+        epg_paths if mode == "epg" else generated_paths
+    )
 
     for relative in report_paths:
         path = root / relative
@@ -129,45 +135,46 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
                 elif actual != hashes[playlist_name]:
                     errors.append(f"{relative}: fingerprint does not match current {playlist_name}")
 
-    manifest_path = root / "reports/logo-authenticity-manifest.json"
-    if not manifest_path.is_file():
-        errors.append("reports/logo-authenticity-manifest.json: missing")
-    else:
-        try:
-            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError) as exc:
-            errors.append(f"reports/logo-authenticity-manifest.json: invalid JSON ({exc})")
+    if mode != "epg":
+        manifest_path = root / "reports/logo-authenticity-manifest.json"
+        if not manifest_path.is_file():
+            errors.append("reports/logo-authenticity-manifest.json: missing")
         else:
-            source_hashes = manifest.get("source_sha256_by_playlist", {})
-            for playlist_name in PLAYLIST_NAMES:
-                recorded = source_hashes.get(playlist_name)
-                if not isinstance(recorded, str):
-                    errors.append(f"reports/logo-authenticity-manifest.json: missing {playlist_name} fingerprint")
-                elif recorded.lower() != hashes[playlist_name]:
-                    errors.append(f"reports/logo-authenticity-manifest.json: fingerprint does not match current {playlist_name}")
-            generated = parse_timestamp(manifest.get("generated_at_utc", ""))
-            if generated is None:
-                errors.append("reports/logo-authenticity-manifest.json: missing or invalid generated_at_utc")
-            elif generated > now + timedelta(minutes=5):
-                errors.append("reports/logo-authenticity-manifest.json: generated timestamp is in the future")
-            elif now - generated > max_age:
-                errors.append("reports/logo-authenticity-manifest.json: stale manifest (older than 48 hours)")
+            try:
+                manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError) as exc:
+                errors.append(f"reports/logo-authenticity-manifest.json: invalid JSON ({exc})")
+            else:
+                source_hashes = manifest.get("source_sha256_by_playlist", {})
+                for playlist_name in PLAYLIST_NAMES:
+                    recorded = source_hashes.get(playlist_name)
+                    if not isinstance(recorded, str):
+                        errors.append(f"reports/logo-authenticity-manifest.json: missing {playlist_name} fingerprint")
+                    elif recorded.lower() != hashes[playlist_name]:
+                        errors.append(f"reports/logo-authenticity-manifest.json: fingerprint does not match current {playlist_name}")
+                generated = parse_timestamp(manifest.get("generated_at_utc", ""))
+                if generated is None:
+                    errors.append("reports/logo-authenticity-manifest.json: missing or invalid generated_at_utc")
+                elif generated > now + timedelta(minutes=5):
+                    errors.append("reports/logo-authenticity-manifest.json: generated timestamp is in the future")
+                elif now - generated > max_age:
+                    errors.append("reports/logo-authenticity-manifest.json: stale manifest (older than 48 hours)")
 
-    health_path = root / STREAM_HEALTH_REPORT
-    if health_path.is_file():
-        health_text = health_path.read_text(encoding="utf-8", errors="replace")
-        expected = stream_url_inventory_sha256(root / PLAYLIST_NAMES[0])
-        actual = read_fingerprint(health_text, ("Stream URL inventory SHA-256",))
-        if actual is None:
-            errors.append(f"{STREAM_HEALTH_REPORT}: missing stream URL inventory SHA-256")
-        elif actual != expected:
-            errors.append(f"{STREAM_HEALTH_REPORT}: stream URL inventory fingerprint does not match current playlist")
+        health_path = root / STREAM_HEALTH_REPORT
+        if health_path.is_file():
+            health_text = health_path.read_text(encoding="utf-8", errors="replace")
+            expected = stream_url_inventory_sha256(root / PLAYLIST_NAMES[0])
+            actual = read_fingerprint(health_text, ("Stream URL inventory SHA-256",))
+            if actual is None:
+                errors.append(f"{STREAM_HEALTH_REPORT}: missing stream URL inventory SHA-256")
+            elif actual != expected:
+                errors.append(f"{STREAM_HEALTH_REPORT}: stream URL inventory fingerprint does not match current playlist")
     return errors
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--mode", choices=("all", "generated"), default="all")
+    parser.add_argument("--mode", choices=("all", "generated", "epg"), default="all")
     args = parser.parse_args()
     errors = check_reports(mode=args.mode)
     for error in errors:
