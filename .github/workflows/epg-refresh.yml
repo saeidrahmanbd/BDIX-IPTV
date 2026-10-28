@@ -77,6 +77,7 @@ jobs:
           if python scripts/epg_refresh_needed.py --max-age-hours 8; then
             echo '::notice::A fresh EPG already exists for the current playlists; refreshing dashboard and maintenance snapshots without rebuilding XMLTV.'
             python scripts/generate_dashboard.py
+            python scripts/validate_report_freshness.py --mode epg
             git add assets/dashboard.svg 'reports/Update Report.md' reports/maintenance-report.md
             if git diff --cached --quiet; then
               echo 'EPG and dashboard snapshots are already current.'
@@ -139,6 +140,7 @@ jobs:
           python scripts/epg_coverage.py
           python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md || true
           python scripts/generate_dashboard.py
+          python scripts/validate_report_freshness.py --mode epg
 
           git add -f epg/epg.xml
           git add assets/dashboard.svg 'reports/Update Report.md' reports/maintenance-report.md
