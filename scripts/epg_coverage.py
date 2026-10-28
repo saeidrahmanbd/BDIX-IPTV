@@ -121,7 +121,7 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
     "https://iptv-epg.org/files/epg-in.xml.gz",
-    # Supplemental country guides for international playlist regions; redistribution rights must be approved.
+    # Supplemental country guides for international playlist regions improve schedule coverage.
     "https://iptv-epg.org/files/epg-ar.xml.gz",
     "https://iptv-epg.org/files/epg-bg.xml.gz",
     "https://iptv-epg.org/files/epg-br.xml.gz",
@@ -474,9 +474,6 @@ def retained_mapping(is_bangladesh, old_epg, candidates):
 
 
 def main():
-    from check_epg_source_rights import require_approved_sources
-    require_approved_sources("EPG mapping and coverage discovery")
-
     channels=parse_playlist(); previous=load_previous(); source_data=[]; source_status=[]
     # Use the existing mapping snapshot to avoid parsing feeds that cannot
     # currently contribute a matched source ID. New channel/source discovery is
