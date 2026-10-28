@@ -2,7 +2,7 @@
 
 ## Overview
 
-This directory contains the repository's public XMLTV programme guide and the supporting mapping, source, validation, and coverage data used to maintain it.
+This directory contains the repository's public XMLTV programme guide and the supporting mapping, validation, and coverage data used to maintain it.
 
 **Public XMLTV:**
 
@@ -16,8 +16,8 @@ The EPG workflow:
 
 1. Reads the current channel inventory from the maintained playlists.
 2. Discovers and refreshes channel-to-EPG mappings.
-3. Collects schedules from available EPG/XMLTV sources.
-4. Combines and deduplicates programme data.
+3. Collects schedules from useful accessible EPG/XMLTV sources.
+4. Combines and deduplicates programme data, preferring stronger/current matches.
 5. Validates channel IDs, programme titles, intervals, freshness, and coverage.
 6. Publishes `epg/epg.xml` and updates the related reports when the result passes the publication gates.
 7. Preserves the last known-good guide when a new candidate is empty, degraded, or otherwise fails validation.
@@ -26,32 +26,31 @@ The workflow runs automatically on the daily schedule and when relevant playlist
 
 ## Source Policy
 
-The objective is **maximum practical EPG coverage**. Useful EPG/XMLTV sources are not categorically excluded by provider name.
+The objective is **maximum practical EPG coverage**. Useful EPG/XMLTV sources are not categorically excluded merely because they are third-party.
 
-Sources may be used for discovery, mapping, schedule acquisition, or publication according to their accessibility and applicable usage or redistribution conditions. Sources explicitly marked `PROHIBITED` are not used. Unresolved sources remain visible in the source-rights register and are handled according to the repository's runtime policy.
-
-Personalized or credential-bearing feed URLs must be supplied through GitHub Actions secrets and must never be committed to the repository or exposed in logs.
+The pipeline may use public or otherwise accessible upstream feeds for discovery, channel mapping, and schedule acquisition. Sources are combined and deduplicated, and the strongest current schedule is preferred for each channel. EPG.PW remains excluded by explicit project configuration. Private credentials, session tokens, and personalized feed URLs are never committed to the repository or exposed in logs.
 
 ## Coverage and Mapping
 
 EPG coverage is continuously improved by:
 
-- Expanding channel mappings across all maintained playlists.
+- Expanding channel mappings across all maintained playlists, with priority for Bangladesh and high-use Indian channels.
 - Using multiple useful XMLTV/EPG sources rather than relying on a single provider.
 - Matching by stable channel IDs and validated channel identities and aliases.
 - Preferring current and future programme schedules.
 - Deduplicating overlapping schedules from multiple sources.
 - Rejecting placeholder, invalid, or clearly mismatched programme data.
-- Avoiding false matches merely to increase coverage.
+- Avoiding false matches merely to increase the coverage percentage.
 
 Current coverage should always be taken from the latest generated reports rather than historical mapping totals.
 
 ## Files and Reports
 
 - [`epg.xml`](epg.xml) — published XMLTV guide.
-- [`source-rights-register.csv`](source-rights-register.csv) — source-by-source usage and rights status.
 - [`epg-channel-mapping.csv`](../reports/epg-channel-mapping.csv) — current channel-to-EPG mapping data.
 - [`epg-coverage.md`](../reports/epg-coverage.md) — current coverage and publication metrics.
+- [`epg-three-playlist-audit.md`](../reports/epg-three-playlist-audit.md) — published-guide audit across all three playlists.
+- [`epg-publish-freshness.md`](../reports/epg-publish-freshness.md) — guide freshness and publication validation.
 - [`epg-refresh.yml`](../.github/workflows/epg-refresh.yml) — EPG refresh workflow.
 
 ## Validation and Publication
