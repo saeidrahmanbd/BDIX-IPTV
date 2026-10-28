@@ -10,7 +10,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 PLAYLIST_NAMES = ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u")
-COVERAGE_REPORTS = ("reports/epg-coverage.md", "reports/epg-three-playlist-audit.md")
+COVERAGE_REPORTS = ("reports/epg-coverage.md", "reports/epg-three-playlist-audit.md", "reports/epg-unmapped-audit.md")
 FRESHNESS_REPORT = "reports/epg-publish-freshness.md"
 GUIDE = "epg/epg.xml"
 TIMESTAMP_RE = re.compile(r"(?im)^_?(?:Generated|Last generated|Checked):\s*\*\*([^*]+)\*\*")
