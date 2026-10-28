@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-10-27 16:41 UTC**_
+_Last generated: **2026-10-28 03:21 UTC**_
 
 Source playlist SHA-256: **faee9d0d61b69ea2136a0baffe887415e579273713dc58d4fcc1e62184161c1d**
 
@@ -57,13 +57,13 @@ Source playlist SHA-256: **faee9d0d61b69ea2136a0baffe887415e579273713dc58d4fcc1e
 - Current/future programme coverage: **PENDING — no current validated guide**
 - No mapping: **PENDING — guide not current**
 - EPG metric scope: **IPTV-Playlist.m3u published-guide row (awaiting a valid, fresh published guide)**
-- Upstream source-rights reviews remain unresolved; technical guide validation does not itself establish redistribution permission. See `epg/source-rights-register.csv`.
+- Programme coverage and freshness are measured from the published XMLTV; technical validation checks data integrity, not upstream licensing.
 
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
 | Playlist audit | **not available** | **STALE** |
-| EPG coverage / three-playlist inventory | **2026-10-27T15:35:13+00:00** | **PENDING — guide missing or freshness not PASS** |
+| EPG coverage / three-playlist inventory | **2026-10-28T03:21:20+00:00** | **PENDING — guide missing or freshness not PASS** |
 | Stream health | **not available** | **STALE** |
 | Pre-publish gate | **not available** | **STALE** |
 
