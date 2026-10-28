@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Refresh public EPG coverage reports from the XMLTV artefact without refetching feeds."""
 import csv
+import hashlib
 import re
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
@@ -129,6 +130,11 @@ def main():
 
     reports = ROOT / "reports"
     reports.mkdir(parents=True, exist_ok=True)
+    source_fingerprints = [
+        f"- {filename} SHA-256: **{hashlib.sha256((ROOT / filename).read_bytes()).hexdigest()}**"
+        for filename, _label in PLAYLISTS
+        if (ROOT / filename).is_file()
+    ]
     ratio = lambda n, d: f"{n}/{d} ({round(100*n/d, 1) if d else 0}%)"
     lines = [
         "# EPG Coverage & Mapping Report", "",
@@ -161,7 +167,11 @@ def main():
         lines.append(f"| {group} | {name} | {tid} | {status} |")
     if len(missing_live) > 200:
         lines.append(f"_Only the first 200 of {len(missing_live)} IDs are listed._")
-    lines += ["", f"- Programme window: **{lower.isoformat(timespec='minutes')} to {upper.isoformat(timespec='minutes')}**", "- Freshness validation: **PASS**.", ""]
+    lines += [
+        "", f"- Programme window: **{lower.isoformat(timespec='minutes')} to {upper.isoformat(timespec='minutes')}**",
+        "- Freshness validation: **PASS**.", "", "## Source Playlist Fingerprints", "",
+        *source_fingerprints, "",
+    ]
     (reports / "epg-coverage.md").write_text("\n".join(lines), encoding="utf-8")
 
     audit = [
@@ -172,7 +182,10 @@ def main():
     ]
     for filename, item in playlist_stats.items():
         audit.append(f"| {item['label']} ({filename}) | {item['entries']} | {item['ids']} | {item['present']} | {item['scheduled']} | {item['window']} | {item['mapped']} | {'OK' if item['header_ok'] else 'MISMATCH'} |")
-    audit += ["", f"XMLTV channels: **{len(guide_channels)}**; eligible in-window programme rows: **{eligible_window}**; current/future rows: **{eligible_live}**.", ""]
+    audit += [
+        "", f"XMLTV channels: **{len(guide_channels)}**; eligible in-window programme rows: **{eligible_window}**; current/future rows: **{eligible_live}**.",
+        "", "## Source Playlist Fingerprints", "", *source_fingerprints, "",
+    ]
     (reports / "epg-three-playlist-audit.md").write_text("\n".join(audit), encoding="utf-8")
 
     unmapped = [
@@ -188,7 +201,7 @@ def main():
         unmapped.append(f"| {group} | {name} | {tid} | {status} |")
     if len(missing_live) > 200:
         unmapped.append(f"_Only the first 200 of {len(missing_live)} IDs are listed._")
-    unmapped += [""]
+    unmapped += ["", "## Source Playlist Fingerprints", "", *source_fingerprints, ""]
     (reports / "epg-unmapped-audit.md").write_text("\n".join(unmapped), encoding="utf-8")
 
     timing = [
