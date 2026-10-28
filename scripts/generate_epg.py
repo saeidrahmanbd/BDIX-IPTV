@@ -558,7 +558,7 @@ def interval_weight(record):
     # non-overlapping programme from another provider.
     weight += {3: 30.0, 2: 20.0, 1: 10.0}.get(record.get("language_rank", 1), 10.0)
 
-    # Earlier approved sources win close quality ties, but source priority
+    # Earlier configured feeds win close quality ties, but source priority
     # must never outweigh retaining an additional non-overlapping programme.
     source_index = record["source_index"]
     weight += max(0.0, (len(SOURCES) - source_index) / len(SOURCES)) * 3.0
