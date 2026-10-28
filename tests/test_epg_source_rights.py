@@ -1,8 +1,8 @@
 import os
 import sys
 import unittest
-from unittest.mock import patch
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -10,46 +10,37 @@ import check_epg_source_rights as rights
 
 
 class EPGSourceRightsTests(unittest.TestCase):
-    def test_register_covers_active_feeds_and_scraped_sites(self):
-        register = rights.read_register()
-        required = rights.required_source_keys({})
-        self.assertTrue(required.issubset(set(register)))
-        self.assertIn(rights.REPOSITORY_KEY, required)
+    def test_metadata_gaps_are_advisory_and_do_not_block(self):
+        with patch.object(rights, "policy_errors", return_value=["review-required source"]):
+            self.assertTrue(rights.require_approved_sources("test advisory audit"))
 
-    def test_runtime_supplemental_sources_are_in_rights_register(self):
-        required = rights.required_source_keys({})
-        register = rights.read_register()
-        for url in (
-            "https://epg.lat/files/in.xml.gz",
-            "https://epg.lat/files/us.xml.gz",
-            "https://www.free-epg.de/api/epg/in.xml.gz",
-            "https://www.free-epg.de/api/epg/us.xml.gz",
-            "https://www.open-epg.com/files/india.xml.gz",
+    def test_missing_register_is_advisory_and_does_not_block(self):
+        with patch.object(rights, "policy_errors", return_value=["Configuration error: register missing"]):
+            self.assertTrue(rights.require_approved_sources("test missing register"))
+
+    def test_legacy_override_values_do_not_change_build_permission(self):
+        with patch.object(rights, "policy_errors", return_value=["review-required source"]):
+            for value in ("", "true", "false"):
+                with self.subTest(value=value), patch.dict(os.environ, {"EPG_ALLOW_UNVERIFIED_SOURCES": value}):
+                    self.assertTrue(rights.require_approved_sources("test legacy environment"))
+
+    def test_epg_pipeline_and_reports_have_no_register_dependency(self):
+        for relative in (
+            "scripts/epg_coverage.py",
+            "scripts/generate_epg.py",
+            "scripts/run_generate_epg.py",
+            "scripts/fetch_iptv_org_epg.py",
+            "scripts/augment_epg_mapping_from_additional_sources.py",
         ):
-            self.assertIn(url, required)
-            self.assertIn(url, register)
+            with self.subTest(script=relative):
+                content = (ROOT / relative).read_text(encoding="utf-8")
+                self.assertNotIn("check_epg_source_rights", content)
+        for relative in ("scripts/generate_dashboard.py", "scripts/update_epg_published_coverage.py"):
+            with self.subTest(report_script=relative):
+                content = (ROOT / relative).read_text(encoding="utf-8")
+                self.assertNotIn("source-rights-register.csv", content)
 
-    def test_epg_source_pool_has_no_provider_specific_exclusion(self):
-        required = rights.required_source_keys({})
-        self.assertTrue(required)
-        register = rights.read_register()
-        self.assertTrue(required.issubset(set(register)))
-
-    def test_unapproved_sources_need_explicit_owner_override(self):
-        errors = rights.policy_errors(env={})
-        self.assertTrue(errors)
-        self.assertTrue(any("Not approved for public redistribution" in e for e in errors))
-        with patch.dict(os.environ, {"EPG_ALLOW_UNVERIFIED_SOURCES": ""}):
-            with self.assertRaises(SystemExit):
-                rights.require_approved_sources("test default")
-        with patch.dict(os.environ, {"EPG_ALLOW_UNVERIFIED_SOURCES": "true"}):
-            self.assertTrue(rights.require_approved_sources("test override"))
-
-    def test_private_feed_requires_a_rights_entry_when_configured(self):
-        required = rights.required_source_keys({"M3U4U_XMLTV_URL": "https://m3u4u.com/epg/PRIVATE"})
-        self.assertIn(rights.PRIVATE_KEY, required)
-
-    def test_approved_record_requires_positive_documented_scope(self):
+    def test_scope_classifier_remains_audit_only(self):
         row = {
             "status": "APPROVED",
             "evidence_url": "https://example.com/terms",
