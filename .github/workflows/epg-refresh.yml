@@ -65,6 +65,7 @@ jobs:
           python scripts/check_epg_config.py
           python -m unittest discover -s tests -p 'test_epg_publication_safety.py'
           python -m unittest discover -s tests -p 'test_epg_source_rights.py'
+          python -m unittest discover -s tests -p 'test_report_freshness.py'
       - name: Regenerate, validate and publish XMLTV
         shell: bash
         run: |
