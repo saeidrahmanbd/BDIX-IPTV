@@ -1333,7 +1333,7 @@ https://cc-szrmqvu8zkg16.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da6
 https://gtc-yupp.vgcdn.net/vglive-sk-254807/index.m3u8
 #EXTINF:-1 tvg-id="Gyandarshan.in@SD" tvg-name="Gyandarshan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gyandarshan.png" tvg-country="IN" channel-id="Gyandarshan.in@SD" group-title="New Channels",Gyandarshan
 https://cdn.pishow.tv/ott/live/14/master.m3u8
-#EXTINF:-1 tvg-id="HSTV.in@SD" tvg-name="HSTV" tvg-country="IN" channel-id="HSTV.in@SD" group-title="New Channels",HSTV
+#EXTINF:-1 tvg-id="HSTV.in@SD" tvg-name="HSTV" tvg-country="IN" channel-id="HSTV.in@SD" group-title="New Channels" tvg-logo="",HSTV
 https://live.castmaxcloud.com/live/hstv.m3u8
 #EXTINF:-1 tvg-id="Kabaddi24x7.in@SD" tvg-name="Kabaddi 24x7" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kabaddi-24x7.png" tvg-country="IN" channel-id="Kabaddi24x7.in@SD" group-title="New Channels",Kabaddi 24x7
 https://samitaorigin.tangotv.in/KABADDI24X7/SAMITAORIGIN/index.m3u8
@@ -1345,6 +1345,8 @@ https://amg01448-samsungin-ndtvgoodtimes-samsungin-ad-gp.amagi.tv/playlist/amg01
 http://103.185.24.134:3001/NICK-JR/index.m3u8
 #EXTINF:-1 tvg-id="Nickelodeon.in@SD" tvg-name="Nickelodeon (India)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nickelodeon-india.png" tvg-country="IN" channel-id="Nickelodeon.in@SD" group-title="New Channels",Nickelodeon (India)
 http://103.185.24.134:3001/NICK/index.m3u8
+#EXTINF:-1 tvg-id="ShikshaTV.in@SD" tvg-name="Shiksha TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shiksha-tv.png" tvg-country="IN" channel-id="ShikshaTV.in@SD" group-title="New Channels",Shiksha TV
+http://103.89.46.106:8080/hls/shikshatvhd/index.m3u8
 #EXTINF:-1 tvg-id="Sonic.in@SD" tvg-name="Sonic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sonic.png" tvg-country="IN" channel-id="Sonic.in@SD" group-title="New Channels",Sonic
 http://103.185.24.134:3001/SONIC/index.m3u8
 #EXTINF:-1 tvg-id="SonySportsTen1.in@SD" tvg-name="Sony Sports Ten 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-1.png" tvg-country="IN" channel-id="SonySportsTen1.in@SD" group-title="New Channels",Sony Sports Ten 1
@@ -1371,28 +1373,42 @@ http://103.151.60.162:2122/play/a01m/index.m3u8?hls
 https://5a1178b42cc03.streamlock.net/8210/8210/playlist.m3u8
 #EXTINF:-1 tvg-id="VoktaTV.bd@SD" tvg-name="Vokta TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vokta-tv.png" tvg-country="BD" channel-id="VoktaTV.bd@SD" group-title="New Channels",Vokta TV
 https://vokta.raytahost.com/live/voktatv/index.m3u8
-#EXTINF:-1 tvg-id="VyasChannel.in@SD" tvg-name="Vyas Channel" tvg-country="IN" channel-id="VyasChannel.in@SD" group-title="New Channels",Vyas Channel
+#EXTINF:-1 tvg-id="VyasChannel.in@SD" tvg-name="Vyas Channel" tvg-country="IN" channel-id="VyasChannel.in@SD" group-title="New Channels" tvg-logo="",Vyas Channel
 https://playhls.media.nic.in/hls/live/vyas/vyas.m3u8
 #EXTINF:-1 tvg-id="WeatherSpy.in@SD" tvg-name="WeatherSpy (India)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/weatherspy-india.png" tvg-country="IN" channel-id="WeatherSpy.in@SD" group-title="New Channels",WeatherSpy (India)
 https://jukin-weatherspy-2-in.samsung.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="ZodiakTV.in@SD" tvg-name="Zodiak TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zodiak-tv.png" tvg-country="IN" channel-id="ZodiakTV.in@SD" group-title="New Channels",Zodiak TV
 https://ranacable.duckdns.org/ZodiakTv/index.m3u8
+#EXTINF:-1 tvg-id="BalleBalle.in@SD" tvg-name="Balle Balle" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/balle-balle.png" tvg-country="IN" channel-id="BalleBalle.in@SD" group-title="New Backup",Balle Balle
+https://mcncdndigital.com/worldpunjabitv/index.m3u8
 #EXTINF:-1 tvg-id="DDSports.in@HD" tvg-name="DD Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-sports-fb997548.png" tvg-country="IN" channel-id="DDSports.in@HD" group-title="New Backup",DD Sports
 https://cdn.pishow.tv/ott/live/1161/master.m3u8
 #EXTINF:-1 tvg-id="DiscoveryKids.in@SD" tvg-name="Discovery Kids" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/discovery-kids.png" tvg-country="IN" channel-id="DiscoveryKids.in@SD" group-title="New Backup",Discovery Kids
 https://drk6xq0vhn.gpcdn.net/live/discovery_kids_abr/index.m3u8
+#EXTINF:-1 tvg-id="GTCPunjabi.in@UK" tvg-name="GTC Punjabi UK" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gtc-punjabi-uk.png" tvg-country="IN" channel-id="GTCPunjabi.in@UK" group-title="New Backup",GTC Punjabi UK
+https://neotv.ottlive.co.in/gtcpunjabiuk/index.m3u8
+#EXTINF:-1 tvg-id="GTCPunjabi.in@US" tvg-name="GTC Punjabi US" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gtc-punjabi-us.png" tvg-country="IN" channel-id="GTCPunjabi.in@US" group-title="New Backup",GTC Punjabi US
+https://neotv.ottlive.co.in/gtcpunjabiusa/index.m3u8
 #EXTINF:-1 tvg-id="Gyandarshan.in@HD" tvg-name="Gyandarshan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gyandarshan.png" tvg-country="IN" channel-id="Gyandarshan.in@HD" group-title="New Backup",Gyandarshan
 https://mumt05.tangotv.in/87NeALx2GYANDARSHAN/index.m3u8
 #EXTINF:-1 tvg-id="HistoryTV18.in@HD" tvg-name="History TV18" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/history-tv18.png" tvg-country="IN" channel-id="HistoryTV18.in@HD" group-title="New Backup",History TV18
 https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="HungamaTV.in@SD" tvg-name="Hungama TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hungama-tv.png" tvg-country="IN" channel-id="HungamaTV.in@SD" group-title="New Backup",Hungama TV
+http://66.102.126.10:8000/play/a023/index.m3u8
 #EXTINF:-1 tvg-id="InvestigationDiscovery.in@SD" tvg-name="Investigation Discovery (India)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/investigation-discovery.png" tvg-country="IN" channel-id="InvestigationDiscovery.in@SD" group-title="New Backup",Investigation Discovery (India)
 https://drk6xq0vhn.gpcdn.net/live/id_hd_abr/index.m3u8
 #EXTINF:-1 tvg-id="Pogo.in@SD" tvg-name="Pogo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pogo.png" tvg-country="IN" channel-id="Pogo.in@SD" group-title="New Backup",Pogo
 http://103.151.60.162:2122/play/a01e/index.m3u8?hls
+#EXTINF:-1 tvg-id="QTV.in@SD" tvg-name="Q TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/q-tv.png" tvg-country="IN" channel-id="QTV.in@SD" group-title="New Backup",Q TV
+https://samitaorigin.tangotv.in/THEQ/SAMITAORIGIN/index.m3u8
+#EXTINF:-1 tvg-id="SaamTV.in@SD" tvg-name="Saam TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saam-tv.png" tvg-country="IN" channel-id="SaamTV.in@SD" group-title="New Backup",Saam TV
+https://streams.tangotv.in/SAAMTV/ORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="SonySportsTen1.in@HD" tvg-name="Sony Sports Ten 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-1.png" tvg-country="IN" channel-id="SonySportsTen1.in@HD" group-title="New Backup",Sony Sports Ten 1
 http://103.185.24.134:3001/SonyTenSports1/index.m3u8
 #EXTINF:-1 tvg-id="StarJalsha.in@SD" tvg-name="Star Jalsha" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-jalsha.png" tvg-country="IN" channel-id="StarJalsha.in@SD" group-title="New Backup",Star Jalsha
 http://103.151.60.162:2122/play/a00w/index.m3u8?hls
+#EXTINF:-1 tvg-id="StarMovies.in@HD" tvg-name="Star Movies (India)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-movies-2087bb49.png" tvg-country="IN" channel-id="StarMovies.in@HD" group-title="New Backup",Star Movies (India)
+http://103.151.60.162:2122/play/a02k/index.m3u8?hls
 #EXTINF:-1 tvg-id="StarSports2.in@SD" tvg-name="Star Sports 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-2.png" tvg-country="IN" channel-id="StarSports2.in@SD" group-title="New Backup",Star Sports 2
 http://103.151.60.162:2122/play/a00v/index.m3u8?hls
 #EXTINF:-1 tvg-id="StarSports2.in@HD" tvg-name="Star Sports 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-2.png" tvg-country="IN" channel-id="StarSports2.in@HD" group-title="New Backup",Star Sports 2
@@ -1407,6 +1423,8 @@ http://66.102.126.10:8000/play/a008/index.m3u8
 https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8
 #EXTINF:-1 tvg-id="TLC.in@SD" tvg-name="TLC (India)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tlc-india.png" tvg-country="IN" channel-id="TLC.in@SD" group-title="New Backup",TLC (India)
 https://drk6xq0vhn.gpcdn.net/live/tlc_sd_abr/index.m3u8
+#EXTINF:-1 tvg-id="TotalTVHaryana.in@SD" tvg-name="Total TV Haryana" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/total-tv-haryana.png" tvg-country="IN" channel-id="TotalTVHaryana.in@SD" group-title="New Backup",Total TV Haryana
+https://mumt04.tangotv.in/m18aqlK4TOTALTV/index.m3u8
 #EXTINF:-1 tvg-id="Travelxp.in@4KHDR" tvg-name="Travelxp" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travelxp-4k-hdr-2160p-geo-blocked.png" tvg-country="IN" channel-id="Travelxp.in@4KHDR" group-title="New Backup",Travelxp
 https://deltatesttatasky.akamaized.net/out/i/968284.m3u8
 #EXTINF:-1 tvg-id="ZeeBangla.in@SD" tvg-name="Zee Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla.png" tvg-country="IN" channel-id="ZeeBangla.in@SD" group-title="New Backup",Zee Bangla
@@ -2237,7 +2255,7 @@ https://mumbai-edge.smartplaytv.in/ETVHD/index.m3u8
 http://tvn1.chowdhury-shaheb.com/gazitv/index.m3u8
 #EXTINF:-1 tvg-id="GoldminesMovies.in@SD" tvg-name="Goldmines Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/goldmines-movies.png" channel-id="GoldminesMovies.in@SD" tvg-country="IN" tvg-language="hin" group-title="Not Playing",Goldmines Movies
 https://tvsen3.aynaott.com/5CGfPvGp/index.m3u8
-#EXTINF:-1 tvg-id="HungamaTV.in@SD" tvg-name="Hungama TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hungama.png" channel-id="HungamaTV.in@SD" tvg-country="IN" tvg-language="und" group-title="Not Playing",Hungama TV
+#EXTINF:-1 tvg-id="HungamaTV.in@SD" tvg-name="Hungama TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/hungama-tv.png" channel-id="HungamaTV.in@SD" tvg-country="IN" tvg-language="und" group-title="Not Playing",Hungama TV
 http://103.185.24.134:3001/HUNGAMA/index.m3u8
 #EXTINF:-1 tvg-id="IqraBangla.uk" tvg-name="Iqra Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/iqra-bangla.png" channel-id="IqraBangla.uk" tvg-country="GB" tvg-language="ben" group-title="Not Playing",Iqra Bangla
 https://tvsen3.aynaott.com/EuEy5mBW/index.m3u8
