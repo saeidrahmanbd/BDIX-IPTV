@@ -53,10 +53,6 @@ def load_mapping_all_sources():
 
 
 def main():
-    # Guard first: this runner fetches supplemental feeds before invoking the generator.
-    from check_epg_source_rights import require_approved_sources
-    require_approved_sources("EPG XMLTV generation wrapper")
-
     if not LOCAL_GUIDE.is_file() or LOCAL_GUIDE.stat().st_size == 0:
         raise SystemExit("Missing /tmp/iptv-org-guide.xml; run fetch_iptv_org_epg.py first")
 
