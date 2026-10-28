@@ -24,16 +24,30 @@ class EPGPublicationSafetyTests(unittest.TestCase):
                 text = (ROOT / relative).read_text(encoding="utf-8")
                 self.assertNotIn("sundirectgo.xml", text)
 
-    def test_automated_publication_is_enabled_with_owner_override(self):
+    def test_automated_publication_is_enabled_without_rights_register_gate(self):
         refresh = (ROOT / ".github/workflows/epg-refresh.yml").read_text(encoding="utf-8")
         maintenance = (ROOT / ".github/workflows/iptv-maintenance.yml").read_text(encoding="utf-8")
         self.assertNotIn("vars.EPG_REDISTRIBUTION_APPROVED == 'true'", refresh)
-        self.assertIn("EPG_ALLOW_UNVERIFIED_SOURCES: 'true'", refresh)
+        self.assertNotIn("EPG_ALLOW_UNVERIFIED_SOURCES", refresh)
         self.assertIn("python scripts/epg_coverage.py", refresh)
         self.assertIn("python scripts/fetch_iptv_org_epg.py", refresh)
         self.assertIn("python scripts/run_generate_epg.py", refresh)
         self.assertIn("git add -f epg/epg.xml", refresh)
         self.assertNotIn("EPG_ALLOW_UNVERIFIED_SOURCES", maintenance)
+        for relative in (
+            "scripts/epg_coverage.py",
+            "scripts/generate_epg.py",
+            "scripts/run_generate_epg.py",
+            "scripts/fetch_iptv_org_epg.py",
+            "scripts/augment_epg_mapping_from_additional_sources.py",
+        ):
+            with self.subTest(script=relative):
+                pipeline = (ROOT / relative).read_text(encoding="utf-8")
+                self.assertNotIn("check_epg_source_rights", pipeline)
+        for relative in ("scripts/generate_dashboard.py", "scripts/update_epg_published_coverage.py"):
+            with self.subTest(report_generator=relative):
+                report_script = (ROOT / relative).read_text(encoding="utf-8")
+                self.assertNotIn("source-rights-register.csv", report_script)
         self.assertNotIn("M3U4U_XMLTV_URL", refresh)
         self.assertNotIn("M3U4U_XMLTV_URL", maintenance)
         self.assertNotIn("python scripts/epg_coverage.py", maintenance)
