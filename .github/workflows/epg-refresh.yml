@@ -13,6 +13,7 @@ on:
       - 'scripts/official_epg_sources.py'
       - 'scripts/validate_report_freshness.py'
       - 'tests/test_epg_source_rights.py'
+      - 'tests/test_epg_refresh_needed.py'
       - 'tests/test_report_freshness.py'
       - 'scripts/generate_dashboard.py'
       - 'tests/test_epg_publication_safety.py'
