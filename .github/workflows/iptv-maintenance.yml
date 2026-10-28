@@ -218,6 +218,8 @@ jobs:
             python scripts/iptv_metadata_backfill.py
             python scripts/backfill_cross_playlist_metadata.py
             python scripts/repair_logo_asset_technical_quality.py --fix
+            # Logo repair may touch protected review groups; restore them before the byte-for-byte guard.
+            python scripts/restore_protected_review.py
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
 
             # Validate and regenerate every fingerprinted report from the final playlist state.

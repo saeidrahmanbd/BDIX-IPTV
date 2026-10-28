@@ -54,6 +54,8 @@ class MaintenanceReportOrderTests(unittest.TestCase):
 
         auxiliary_backfill = last_pos("python scripts/backfill_cross_playlist_metadata.py")
         logo_quality_repair = last_pos("python scripts/repair_logo_asset_technical_quality.py --fix")
+        protected_restore = last_pos("python scripts/restore_protected_review.py")
+        change_guard = last_pos("python scripts/maintenance_helpers.py verify-no-unauthorized-removals")
         audit_pos = last_pos("python scripts/audit_playlist.py")
         gate_pos = last_pos("python scripts/pre_publish_gate.py")
         manifest_pos = last_pos("python scripts/generate_logo_authenticity_manifest.py")
@@ -62,7 +64,9 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         freshness_pos = last_pos("python scripts/validate_report_freshness.py")
 
         self.assertLess(auxiliary_backfill, logo_quality_repair)
-        self.assertLess(logo_quality_repair, audit_pos)
+        self.assertLess(logo_quality_repair, protected_restore)
+        self.assertLess(protected_restore, change_guard)
+        self.assertLess(change_guard, audit_pos)
         self.assertLess(audit_pos, gate_pos)
         self.assertLess(gate_pos, manifest_pos)
         self.assertLess(manifest_pos, provenance_pos)
