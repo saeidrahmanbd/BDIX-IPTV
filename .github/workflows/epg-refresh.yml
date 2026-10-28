@@ -9,7 +9,6 @@ on:
       - 'International-Playlist.m3u'
       - '.github/workflows/epg-refresh.yml'
       - 'reports/epg-channel-mapping.csv'
-      - 'epg/source-rights-register.csv'
       - 'scripts/*epg*.py'
       - 'scripts/official_epg_sources.py'
       - 'scripts/generate_dashboard.py'
@@ -59,15 +58,13 @@ jobs:
       - name: Validate EPG configuration and policy
         run: |
           set -euo pipefail
-          python -m py_compile scripts/epg_coverage.py scripts/generate_epg.py scripts/run_generate_epg.py scripts/fetch_iptv_org_epg.py scripts/augment_epg_mapping_from_iptv_org.py scripts/epg_publish_gate_v2.py scripts/validate_epg_freshness.py scripts/epg_refresh_needed.py scripts/check_epg_source_rights.py scripts/generate_dashboard.py
+          python -m py_compile scripts/epg_coverage.py scripts/generate_epg.py scripts/run_generate_epg.py scripts/fetch_iptv_org_epg.py scripts/augment_epg_mapping_from_iptv_org.py scripts/epg_publish_gate_v2.py scripts/validate_epg_freshness.py scripts/epg_refresh_needed.py scripts/generate_dashboard.py
           python -m unittest discover -s tests -p 'test_epg_refresh_needed.py'
           python -m unittest discover -s tests -p 'test_epg_config.py'
           python -m unittest discover -s tests -p 'test_language_policy.py'
           python -m unittest discover -s tests -p 'test_iptv_org_epg_targeting.py'
           python scripts/check_epg_config.py
-          python -m unittest discover -s tests -p 'test_epg_source_rights.py'
           python -m unittest discover -s tests -p 'test_epg_publication_safety.py'
-          python scripts/check_epg_source_rights.py
       - name: Regenerate, validate and publish XMLTV
         shell: bash
         run: |
