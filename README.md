@@ -73,7 +73,7 @@ For another collection, copy its URL from the Playlists table. In your player, c
 
 ## 🗓️ EPG
 
-The XMLTV refresh workflow is enabled and the public guide is published at [the target guide URL](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml). All three maintained playlists and both Xtream workers use this guide. The EPG pipeline combines useful public/accesssible sources, expands channel mappings, deduplicates schedules, applies freshness and quality checks, and publishes only validated XMLTV data. See the [EPG status page](epg/README.md), [mapping CSV](reports/epg-channel-mapping.csv), [coverage report](reports/epg-coverage.md) and [published-playlist audit](reports/epg-three-playlist-audit.md).
+The XMLTV refresh workflow is enabled and the public guide is published at [the target guide URL](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml). All three maintained playlists and both Xtream workers use this guide. The EPG pipeline combines useful public/accesssible sources, expands channel mappings, deduplicates schedules, applies freshness and quality checks, and publishes only validated XMLTV data. Source-review metadata is advisory, not a build or publication gate. See the [EPG status page](epg/README.md), [mapping CSV](reports/epg-channel-mapping.csv), [coverage report](reports/epg-coverage.md) and [published-playlist audit](reports/epg-three-playlist-audit.md).
 
 ## 🖼️ Repository Showcase
 
