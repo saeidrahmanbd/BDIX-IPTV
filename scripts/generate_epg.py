@@ -35,8 +35,6 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
     "https://iptv-epg.org/files/epg-in.xml.gz",
-    # EPG.PW India guide supplements Indian-channel schedule coverage.
-    "https://epg.pw/xmltv/epg_IN.xml.gz",
     # Supplemental country guides for international playlist regions improve schedule coverage.
     "https://iptv-epg.org/files/epg-ar.xml.gz",
     "https://iptv-epg.org/files/epg-bg.xml.gz",

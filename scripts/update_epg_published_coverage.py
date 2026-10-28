@@ -159,7 +159,7 @@ def main():
         "- The EPG pipeline may use useful public or otherwise accessible feeds for discovery, mapping and schedule acquisition.",
         "- Sources are combined and deduplicated; current/future schedules and stronger channel identity matches are preferred.",
         "- Private credentials, session tokens and personalized feed URLs are never committed to the repository.",
-        "- EPG.PW India XMLTV is included as a supplemental technical source at the repository owner's request; public redistribution permission remains unconfirmed, and inclusion is not authorization.",
+        "- EPG.PW is excluded from automated public-guide ingestion: its Terms of Service prohibit copying/retransmission and limit use to personal use. Reconsider only after explicit permission for public redistribution.",
         "", "## Channels Without Current/Future Programmes", "",
         "| Group | Channel | Playlist ID | Status |", "|---|---|---|---|",
     ]

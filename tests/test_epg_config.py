@@ -23,13 +23,15 @@ class EpgConfigTests(unittest.TestCase):
         self.assertEqual(a, b)
         self.assertEqual(len(a), len(set(a)))
 
-    def test_epg_pw_is_enabled_for_schedule_and_mapping_discovery(self):
+    def test_epg_pw_is_excluded_from_public_ingestion_without_redistribution_permission(self):
         source = "https://epg.pw/xmltv/epg_IN.xml.gz"
-        self.assertIn(source, literal(COV, "SOURCES"))
-        self.assertIn(source, literal(GEN, "SOURCES"))
+        self.assertNotIn(source, literal(COV, "SOURCES"))
+        self.assertNotIn(source, literal(GEN, "SOURCES"))
         augment = (ROOT / "scripts" / "augment_epg_mapping_from_additional_sources.py").read_text(encoding="utf-8")
-        self.assertIn(source, literal(augment, "SOURCES"))
-        self.assertNotIn('startswith("epgpw:")', COV)
+        self.assertNotIn(source, literal(augment, "SOURCES"))
+        self.assertIn('startswith("epgpw:")', COV)
+        register = (ROOT / "epg" / "source-rights-register.csv").read_text(encoding="utf-8")
+        self.assertIn(source + ",legacy_feed_not_active,PROHIBITED", register)
 
     def test_generator_parses_the_payload_for_each_fetched_source(self):
         self.assertIn(

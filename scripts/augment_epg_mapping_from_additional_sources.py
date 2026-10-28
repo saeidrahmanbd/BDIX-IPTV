@@ -22,7 +22,6 @@ SOURCES = [
     "https://epg.lat/files/in.xml.gz",
     "https://www.free-epg.de/api/epg/in.xml.gz",
     "https://www.open-epg.com/files/india.xml.gz",
-    "https://epg.pw/xmltv/epg_IN.xml.gz",
 ]
 
 EXCLUDED_GROUPS = {"Backup", "Test", "Not Playing"}
