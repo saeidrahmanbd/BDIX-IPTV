@@ -22,6 +22,7 @@ SOURCES = [
     "https://epg.lat/files/in.xml.gz",
     "https://www.free-epg.de/api/epg/in.xml.gz",
     "https://www.open-epg.com/files/india.xml.gz",
+    "https://epg.pw/xmltv/epg_IN.xml.gz",
 ]
 
 EXCLUDED_GROUPS = {"Backup", "Test", "Not Playing"}
@@ -116,8 +117,6 @@ def main():
             if len(ids) == 1:
                 matches.append((source, ids[0]))
 
-        # A unique ID must agree across every source that matched the name.
-        # If sources disagree, leave the row untouched for manual review.
         ids = sorted({cid for _, cid in matches})
         if len(ids) != 1:
             continue
