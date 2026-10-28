@@ -121,6 +121,8 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
     "https://iptv-epg.org/files/epg-in.xml.gz",
+    # EPG.PW India feed; extra coverage source configured at repository-owner request.
+    "https://epg.pw/xmltv/epg_IN.xml.gz",
     # Supplemental country guides for international playlist regions improve schedule coverage.
     "https://iptv-epg.org/files/epg-ar.xml.gz",
     "https://iptv-epg.org/files/epg-bg.xml.gz",
@@ -455,13 +457,11 @@ def load_previous():
     return out
 
 def retained_mapping(is_bangladesh, old_epg, candidates):
-    """Retain safe mappings; drop legacy EPG.PW IDs and stale foreign Bangladesh mappings."""
-    # These IDs came from feeds that are not authorized for public redistribution.
-    # Filter them during migration so old CSV rows cannot silently reactivate them.
+    """Retain existing source IDs unless they conflict with the current mapping policy."""
     prior_ids = [
         value.strip()
         for value in (old_epg or "").split("|")
-        if value.strip() and not value.strip().casefold().startswith("epgpw:")
+        if value.strip()
     ]
     old_epg = " | ".join(prior_ids)
     if not old_epg:

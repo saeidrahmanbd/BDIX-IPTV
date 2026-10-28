@@ -23,6 +23,14 @@ class EpgConfigTests(unittest.TestCase):
         self.assertEqual(a, b)
         self.assertEqual(len(a), len(set(a)))
 
+    def test_epg_pw_is_enabled_for_schedule_and_mapping_discovery(self):
+        source = "https://epg.pw/xmltv/epg_IN.xml.gz"
+        self.assertIn(source, literal(COV, "SOURCES"))
+        self.assertIn(source, literal(GEN, "SOURCES"))
+        augment = (ROOT / "scripts" / "augment_epg_mapping_from_additional_sources.py").read_text(encoding="utf-8")
+        self.assertIn(source, literal(augment, "SOURCES"))
+        self.assertNotIn('startswith("epgpw:")', COV)
+
     def test_generator_parses_the_payload_for_each_fetched_source(self):
         self.assertIn(
             'data = source_payloads[src]\n            for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):',

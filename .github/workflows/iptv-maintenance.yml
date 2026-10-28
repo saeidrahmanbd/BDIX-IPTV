@@ -210,7 +210,6 @@ jobs:
 
             # All playlist mutations are completed before the final report-generation pass.
             python scripts/backfill_cross_playlist_metadata.py
-            python scripts/repair_logo_asset_technical_quality.py --fix
             python scripts/reconcile_playlist_consistency.py
             python scripts/reorganize_international_playlist.py
             python scripts/enforce_playlist_attribution.py International-Playlist.m3u
@@ -218,6 +217,7 @@ jobs:
             python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
             python scripts/iptv_metadata_backfill.py
             python scripts/backfill_cross_playlist_metadata.py
+            python scripts/repair_logo_asset_technical_quality.py --fix
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
 
             # Validate and regenerate every fingerprinted report from the final playlist state.
