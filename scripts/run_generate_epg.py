@@ -36,7 +36,7 @@ def allow_valid_xmltv_text(elem):
 
 
 def load_mapping_all_sources():
-    """Load every approved source ID mapped to each playlist tvg-id."""
+    """Load every configured source ID mapped to each playlist tvg-id."""
     reverse = {}
     if not generate_epg.MAPPING.exists():
         return reverse
