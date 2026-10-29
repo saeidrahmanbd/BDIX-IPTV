@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from validate_discovery_run import classify_response, parse_playlist
+from validate_discovery_run import append_section, classify_response, parse_playlist
 
 
 class DiscoveryRunValidationTests(unittest.TestCase):
@@ -23,6 +23,17 @@ class DiscoveryRunValidationTests(unittest.TestCase):
 
     def test_html_error_page_is_not_a_live_stream(self):
         self.assertEqual(classify_response(200, {"Content-Type": "text/html"}, b"<html>error</html>", "https://example.test/live.m3u8")[0], "dead")
+
+    def test_final_validation_keeps_stream_verification_section(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            report = Path(directory) / "report.md"
+            report.write_text("# Report\\n\\n## Stream verification\\n\\n- Verified streams: 2\\n", encoding="utf-8")
+            append_section(report, "Final validation", "- Validation status: PASS")
+            content = report.read_text(encoding="utf-8")
+            self.assertIn("## Stream verification", content)
+            self.assertIn("Verified streams: 2", content)
+            self.assertIn("## Final validation", content)
 
     def test_parser_detects_malformed_extinf_pair(self):
         _, entries, malformed = parse_playlist('#EXTM3U\n#EXTINF:-1 group-title="New Channels",Example\n')

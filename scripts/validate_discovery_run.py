@@ -132,7 +132,10 @@ def ensure_local_logo(entry):
 def append_section(report_path, heading, body):
     p = Path(report_path)
     original = p.read_text(encoding="utf-8") if p.exists() else "# Discovery report\n"
-    original = re.split(r"\n## (?:Stream verification|Final validation)\b", original, maxsplit=1)[0].rstrip()
+    if heading == "Stream verification":
+        original = re.split(r"\n## (?:Stream verification|Final validation)\b", original, maxsplit=1)[0].rstrip()
+    else:
+        original = re.split(rf"\n## {re.escape(heading)}\b", original, maxsplit=1)[0].rstrip()
     p.write_text(original + "\n\n## " + heading + "\n\n" + body.rstrip() + "\n", encoding="utf-8")
 
 def probe_mode(playlist, report, baseline, mode):
@@ -155,10 +158,9 @@ def probe_mode(playlist, report, baseline, mode):
     remove_starts = set()
     update_lines = {}
     seen = set()
-    target_urls = {e["url"].casefold() for e in targets}
     for e in entries:
         urlkey = e["url"].casefold()
-        if urlkey in seen and (urlkey in target_urls or e["group"].casefold() in queues):
+        if urlkey in seen and (urlkey not in baseline_urls or e["group"].casefold() in queues):
             remove_starts.add(e["start"])
             counts["duplicate discovery entries removed"] += 1
             details.append(f"- Removed duplicate discovery entry {e['name']} — duplicate stream URL.")

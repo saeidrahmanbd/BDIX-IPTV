@@ -11,7 +11,9 @@ on:
       - '.github/workflows/new-channel-discovery.yml'
       - 'scripts/discover_bd_in_new_queues.py'
       - 'scripts/run_bd_discovery_with_policy.py'
+      - 'scripts/validate_discovery_run.py'
       - 'tests/test_channel_discovery_policy.py'
+      - 'tests/test_discovery_run_validation.py'
   schedule:
     - cron: '17 4 * * *' # 10:17 Asia/Dhaka; staggered from BDIX/maintenance schedules
   workflow_dispatch:
