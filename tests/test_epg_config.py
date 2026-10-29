@@ -48,7 +48,7 @@ class EpgConfigTests(unittest.TestCase):
     def test_private_m3u4u_source_is_selected_for_discovery_without_mapping(self):
         with tempfile.TemporaryDirectory() as tmp:
             mapping = Path(tmp) / "mapping.csv"
-            mapping.write_text("group,channel,tvg_id,epg_id,source,status,note\\n", encoding="utf-8")
+            mapping.write_text("group,channel,tvg_id,epg_id,source,status,note\n", encoding="utf-8")
             private_url = "https://m3u4u.com/epg/example-private-feed.xml"
             with patch.object(generate_epg, "MAPPING", mapping), patch.dict(os.environ, {"M3U4U_XMLTV_URL": private_url}):
                 selected = generate_epg.sources_with_mapped_channels([private_url, "https://example.test/unused.xml"])
