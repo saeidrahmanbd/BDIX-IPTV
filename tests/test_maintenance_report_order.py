@@ -124,6 +124,11 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         self.assertLess(metadata, cross_final)
         self.assertLess(cross_final, logo_fix)
         self.assertLess(logo_fix, guard)
+        intl_guard = pos(mutations, "python scripts/verify_international_protected.py verify")
+        self.assertLess(guard, intl_guard)
+        self.assertLess(reorganize, intl_guard)
+        # the baseline must be recorded before the mutation block runs
+        self.assertIn("python scripts/verify_international_protected.py snapshot", workflow)
 
         # After the mutation block: audit -> gate -> reports -> freshness.
         audit = pos(after, "python scripts/audit_playlist.py")

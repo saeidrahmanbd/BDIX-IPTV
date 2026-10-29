@@ -50,6 +50,8 @@ on:
       - scripts/validate_international_playlist.py
       - tests/test_playlist_metadata_repairs.py
       - tests/test_migrate_logo_unset.py
+      - tests/test_international_protected_guard.py
+      - scripts/verify_international_protected.py
   schedule:
     - cron: '17 2 * * *'
   workflow_dispatch:
@@ -77,6 +79,7 @@ jobs:
         run: |
           python -m py_compile \
             scripts/maintenance_helpers.py \
+            scripts/verify_international_protected.py \
             scripts/reconcile_playlist_consistency.py \
             scripts/restore_protected_review.py \
             scripts/audit_playlist.py \
@@ -123,6 +126,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_language_policy.py'
           python -m unittest discover -s tests -p 'test_country_verification.py'
           python -m unittest discover -s tests -p 'test_migrate_logo_unset.py'
+          python -m unittest discover -s tests -p 'test_international_protected_guard.py'
       - name: Run maintenance
         shell: bash
         run: |
@@ -176,6 +180,7 @@ jobs:
             python scripts/backfill_cross_playlist_metadata.py
             python scripts/repair_logo_asset_technical_quality.py --fix
             python scripts/maintenance_helpers.py verify-no-unauthorized-removals
+            python scripts/verify_international_protected.py verify
           }
           for attempt in 1 2 3; do
             git fetch origin main
@@ -184,6 +189,7 @@ jobs:
             cp BDIX-Playlist.m3u /tmp/bdix-playlist-protected.m3u
             python scripts/maintenance_helpers.py snapshot-playlist
             python scripts/maintenance_helpers.py snapshot
+            python scripts/verify_international_protected.py snapshot
             rm -rf fixed_output
             echo 'Non-destructive maintenance mode: using current repair/validation pipeline.'
             run_mutations

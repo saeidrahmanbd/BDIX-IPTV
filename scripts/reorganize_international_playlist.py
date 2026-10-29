@@ -13,6 +13,9 @@ RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos
 FIXED = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani"]
 TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backup", "Backup"]
 BACKUP_GROUPS = {"backup", "backups", "new backup", "new backups"}
+# Review queues the maintenance pipeline must never delete from: policy may re-classify or
+# tag these entries but their streams are preserved unless a removal is explicitly authorized.
+PROTECTED_GROUPS = {"backup", "backups", "not playing"}
 INDIAN_GROUPS = {"Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment"}
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 NEWS_RE = re.compile(r"\b(news|newsroom|breaking news|headlines?|news\s*24|24\s*news|noticias|notizie|nachrichten|haber|khabar|akhbar|nieuws|actualit[eé]s?|informativo|news\s*tv|tv\s*news|cnbc|cnn|bloomberg|reuters|euronews|france\s*24|al\s*jazeera|msnbc|fox\s*news|sky\s*news|bbc\s*(?:news|world)|abc\s*news|nbc\s*news|dw\s*news|rt\s*news|ndtv|aaj\s*tak|times\s*now|news\s*18|news\s*nation|republic\s*(?:tv|bharat)|india\s*today|tv9|dd\s*news|atn\s*news|dbc\s*news|somoy\s*tv|jamuna\s*tv|channel\s*24|ekattor\s*tv|ekh[oó]n\s*tv|independent\s*tv|wion)\b", re.I)
@@ -25,7 +28,8 @@ KIDS_RE = re.compile(r"\b(kids?|children|cartoon|baby\s*shark|disney\s*(?:jr|jun
 SPORTS_RE = re.compile(r"\b(sports?|football|soccer|basketball|tennis|cricket|golf|racing|motorsport|fight|boxing|wrestling|ufc|esports?|arena\s*sport|league|espn|fox\s*sports|bein\s*sport|sky\s*sports|eurosport|nba|nfl|nhl|mlb|fifa|olympic|horse\s*racing|willow|ten\s*sports|sony\s*sports|star\s*sports|sport\s*tv|sport1|setanta|sportitalia|motorvision|real\s*madrid\s*tv)\b", re.I)
 ADULT_RE = re.compile(r"\b(adult|xxx|porn|erotic|redlight|playboy|penthouse|hustler|brazzers|dorcel|blue\s*hustler|satisfaction|sexy|babes|private\s*tv|desire\s*tv|passion\s*tv|hot\s*adult)\b", re.I)
 FASHION_RE = re.compile(r"\bfashion\s*tv\b", re.I)
-GENERAL_OUT_OF_SCOPE_RE = re.compile(r"\b(servus\s*tv|star\s*channel|warner\s*(?:channel|tv)|persiana\s*(?:family|iranian|korea|plus)|nile\s*drama|mbc\s*\+?\s*drama|groovy\s*tv|mci\s*television|general\s*entertainment|variety\s*channel)\b", re.I)
+# Single source of truth: the discovery policy (validate_international_playlist.py enforces the same rule).
+GENERAL_OUT_OF_SCOPE_RE = discovery.GENERAL_OUT_OF_SCOPE_RE
 MANUAL_NEWS = {"rplus", "rplusnews", "rplusnews24x7"}
 MANUAL_COUNTRY = {"rajdhanitv": "BD", "sonimax": "IN", "sonimax2": "IN", "asiansonimax2": "IN", "shemaroobollywood": "IN"}
 MANUAL_GROUP = {"sonimax": "Indian Movies", "sonimax2": "Indian Movies", "asiansonimax2": "Indian Movies", "shemaroobollywood": "Indian Movies"}
@@ -246,7 +250,7 @@ def main():
         raise SystemExit("International-Playlist.m3u is missing; refusing to create it.")
     original = PLAYLIST.read_text(encoding="utf-8-sig")
     preamble, blocks = parse_playlist(original)
-    staged, removed = [], Counter()
+    staged, removed, preserved = [], Counter(), Counter()
     names_normalized = malformed_options = invalid_logos = 0
 
     for block in blocks:
@@ -275,6 +279,10 @@ def main():
         names_normalized += int(name != str(raw_name or "").strip())
         malformed_options += int(bool(options))
         target, kind, reason = classify(a, name, group, country)
+        is_protected = group.casefold() in PROTECTED_GROUPS
+        if reason and is_protected:
+            preserved[reason] += 1
+            target, kind, reason = "Backup", infer_kind(name, group, a), None
         if reason:
             removed[reason] += 1
             continue
@@ -288,7 +296,8 @@ def main():
             "block": block, "a": a, "name": name, "key": channel_key(name),
             "group": target, "country": country, "kind": kind, "content_kind": kind,
             "url": url, "options": options, "extras": extras, "keep_logo": local_logo is not None,
-            "was_backup": group.casefold() in BACKUP_GROUPS,
+            "was_backup": group.casefold() in BACKUP_GROUPS or is_protected,
+            "was_protected": is_protected,
             "identity": (a.get("tvg-id") or a.get("channel-id") or channel_key(name)).strip().casefold(),
         })
 
@@ -351,6 +360,9 @@ def main():
             emit(row, "New Backup", as_backup=True)
         elif row["country"] in {"BD", "IN"} or row["group"] in {"Religious", "Adult", "Kids", "Sports", "Documentary & Wildlife"} or row.get("kind"):
             emit(row, "Backup", as_backup=True)
+        elif row.get("was_protected"):
+            preserved["protected Backup/Not Playing kept despite orphan policy"] += 1
+            emit(row, "Backup", as_backup=True)
         else:
             removed["orphan backup outside policy"] += 1
 
@@ -408,6 +420,8 @@ def main():
         "- Foreign movie/music services are placed under country names after at least five unique primary channels; smaller/unknown countries remain in New Channels with tvg-content tags.",
         "- Retained stream URLs are preserved; playback/availability was not tested.", "",
         "## Removal summary", "", *[f"- {reason}: {count}" for reason, count in sorted(removed.items())], "",
+        "## Protected Backup/Not Playing entries preserved (policy would have removed them)", "",
+        *[f"- {reason}: {count}" for reason, count in sorted(preserved.items())], "",
         "## Category counts", "",
         *[f"- {group}: {count}" for group, count in sorted(group_counts.items(), key=lambda item: category_rank[item[0]])], ""
     ]
