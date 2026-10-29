@@ -9,7 +9,7 @@ import re, sys, unicodedata
 from country_verification import reference_from_playlists, verify_country
 
 PLAYLIST_ORDERS={
-    'IPTV-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','New Channels','New Backup','Backup','Not Playing'],
+    'IPTV-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Not Playing','New Channels','New Backup','Backup'],
     'BDIX-Playlist.m3u': ['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani','International','Documentary & Wildlife','Kids','Religious','Sports','Backup','Not Playing','Test'],
 }
 ATTR=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
