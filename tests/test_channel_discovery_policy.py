@@ -28,6 +28,7 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         examples = [
             ("Sample News Channel", "News"),
             ("Sample Religious Channel", "Religious"),
+            ("Network 10", "New Channels"),
             ("Calvary TV", "New Channels"),
             ("Santvani Channel", "New Channels"),
             ("Sharnam TV", "New Channels"),

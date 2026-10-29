@@ -56,7 +56,7 @@ ISLAMIC_ALLOWED_MARKERS = re.compile(
 )
 FORBIDDEN_BRANDS = re.compile(
     r"\b(?:"
-    r"calvary\s*tv|santvani(?:\s+channel)?|sharnam\s*tv|sharanam\s*tv|aad(?:i|ee)nath|aaseervatham|aastha|sadhna|sanskar|jinvani|satsang|jagran|"
+    r"network\s*10|calvary\s*tv|santvani(?:\s+channel)?|sharnam\s*tv|sharanam\s*tv|aad(?:i|ee)nath|aaseervatham|aastha|sadhna|sanskar|jinvani|satsang|jagran|"
     r"bhagwat|aradhana|prarthana|divya|shubh\s*tv|aagaaz\s+times|"
     r"aaj\s+ki\s+khabar|abp(?:\s+(?:ananda|asmita|ganga|majha|news))?|"
     r"abn\s+andhra\s+jyoti|aaj\s+tak|times\s+now|india\s+today|news18|"
