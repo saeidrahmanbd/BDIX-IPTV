@@ -55,7 +55,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: iptv-playlist-main-writer-v4
+  group: iptv-playlist-main-writer-v3
   cancel-in-progress: false
   queue: max
 jobs:
