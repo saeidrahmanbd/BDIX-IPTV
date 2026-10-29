@@ -128,6 +128,8 @@ def ensure_local_logo(entry):
         return set_logo(entry["extinf"], found), True, False
     if logo:
         return set_logo(entry["extinf"], ""), False, True
+    if re.search(r'\btvg-logo=""', entry["extinf"]):
+        return set_logo(entry["extinf"], ""), False, True
     return entry["extinf"], False, False
 
 def append_section(report_path, heading, body):

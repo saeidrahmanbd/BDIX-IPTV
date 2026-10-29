@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from validate_discovery_run import NEWS_RE, append_section, classify_response, parse_playlist
+from validate_discovery_run import NEWS_RE, append_section, classify_response, ensure_local_logo, parse_playlist
 
 
 class DiscoveryRunValidationTests(unittest.TestCase):
@@ -38,6 +38,13 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertIn("## Stream verification", content)
             self.assertIn("Verified streams: 2", content)
             self.assertIn("## Final validation", content)
+
+    def test_empty_logo_attribute_is_removed_when_no_authentic_asset_exists(self):
+        extinf = '#EXTINF:-1 tvg-name="Definitely Missing Channel" tvg-logo="",Definitely Missing Channel'
+        entry = {"extinf": extinf, "logo": "", "name": "Definitely Missing Channel"}
+        updated, localized, cleared = ensure_local_logo(entry)
+        self.assertNotIn('tvg-logo=""', updated)
+        self.assertTrue(cleared)
 
     def test_parser_detects_malformed_extinf_pair(self):
         _, entries, malformed = parse_playlist('#EXTM3U\n#EXTINF:-1 group-title="New Channels",Example\n')
