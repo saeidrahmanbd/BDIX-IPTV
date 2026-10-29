@@ -48,8 +48,176 @@ jobs:
           git fetch origin main
           CURRENT_MAIN_SHA="$(git rev-parse FETCH_HEAD)"
           if [[ "${GITHUB_EVENT_NAME}" == "push" && "${GITHUB_SHA}" != "$CURRENT_MAIN_SHA" ]]; then
-            echo "::notice::Skipping superseded queued EPG refresh; a newer main-branch commit contains the latest playlist inventory."
+            CHANGED_INPUTS="$(git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|BDIX-Playlist\.m3u|International-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/.*\.py|tests/.*\.py|docs/requirements\.txt)
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '22'
+      - name: Install Python dependencies
+        run: python -m pip install --disable-pip-version-check -r docs/requirements.txt
+      - name: Validate EPG configuration and quality rules
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/epg_coverage.py scripts/generate_epg.py scripts/run_generate_epg.py scripts/fetch_iptv_org_epg.py scripts/augment_epg_mapping_from_additional_sources.py scripts/augment_epg_mapping_from_iptv_org.py scripts/update_epg_published_coverage.py scripts/epg_publish_gate_v2.py scripts/validate_epg_freshness.py scripts/validate_report_freshness.py scripts/epg_refresh_needed.py scripts/check_epg_source_rights.py scripts/generate_dashboard.py
+          python -m unittest discover -s tests -p 'test_epg_refresh_needed.py'
+          python -m unittest discover -s tests -p 'test_epg_config.py'
+          python -m unittest discover -s tests -p 'test_language_policy.py'
+          python -m unittest discover -s tests -p 'test_iptv_org_epg_targeting.py'
+          python scripts/check_epg_config.py
+          python -m unittest discover -s tests -p 'test_epg_publication_safety.py'
+          python -m unittest discover -s tests -p 'test_epg_source_rights.py'
+          python -m unittest discover -s tests -p 'test_report_freshness.py'
+      - name: Regenerate, validate and publish XMLTV
+        shell: bash
+        env:
+          M3U4U_XMLTV_URL: ${{ secrets.M3U4U_XMLTV_URL }}
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          mkdir -p reports epg
+
+          # Only a scheduled run may skip a fresh guide. Pushes to playlist,
+          # mapping, generator, validation, or workflow inputs must exercise the
+          # updated pipeline even when the previously published guide is recent.
+          if [[ "${GITHUB_EVENT_NAME}" == "schedule" ]] && python scripts/epg_refresh_needed.py --max-age-hours 8; then
+            echo '::notice::A fresh EPG already exists for the current playlists; refreshing dashboard and maintenance snapshots without rebuilding XMLTV.'
+            python scripts/generate_dashboard.py
+            python scripts/validate_report_freshness.py --mode epg
+            git add assets/dashboard.svg 'reports/Update Report.md' reports/maintenance-report.md
+            if git diff --cached --quiet; then
+              echo 'EPG and dashboard snapshots are already current.'
+              exit 0
+            fi
+            git commit -m 'Refresh EPG dashboard snapshots'
+            for attempt in 1 2 3; do
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort || true
+                echo '::error::Dashboard snapshot conflicted with newer main content; no force-push attempted.'
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              echo "::warning::Dashboard push attempt ${attempt} failed; retrying after refreshing main."
+              sleep 3
+            done
+            echo '::error::Could not publish dashboard snapshots after 3 attempts.'
+            exit 1
+          fi
+
+          HAVE_PUBLISHED_FALLBACK=false
+          if [ -s epg/epg.xml ]; then
+            cp epg/epg.xml /tmp/bdix-epg-previous.xml
+            cp /tmp/bdix-epg-previous.xml /tmp/bdix-epg-published-fallback.xml
+            HAVE_PUBLISHED_FALLBACK=true
+          fi
+
+          python scripts/epg_coverage.py
+          if ! timeout 180s python scripts/fetch_iptv_org_epg.py; then
+            echo '::warning::Optional iptv-org guide timed out or failed; proceeding with the configured XMLTV feeds.'
+            printf '%s\n' '<?xml version="1.0" encoding="UTF-8"?>' '<tv generator-info-name="BDIX-IPTV optional iptv-org guide unavailable"></tv>' > /tmp/iptv-org-guide.xml
+          fi
+          test -s /tmp/iptv-org-guide.xml
+          python scripts/run_generate_epg.py
+          test -s epg/epg.xml
+          grep -q '<programme ' epg/epg.xml
+
+          CANDIDATE_OK=true
+          if ! python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md; then
+            CANDIDATE_OK=false
+            echo '::warning::New EPG candidate failed freshness validation; retaining the last known-good public guide.'
+          elif ! python scripts/epg_publish_gate_v2.py; then
+            CANDIDATE_OK=false
+            echo '::warning::New EPG candidate failed publication gates; retaining the last known-good public guide.'
+          fi
+
+          if [ "$CANDIDATE_OK" != true ]; then
+            if [ "$HAVE_PUBLISHED_FALLBACK" = true ]; then
+              cp /tmp/bdix-epg-published-fallback.xml epg/epg.xml
+              if ! python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md; then
+                echo '::error::The last-known-good guide is no longer fresh; refusing to publish a stale fallback.'
+                exit 1
+              fi
+            else
+              echo '::error::No previously published guide exists and the candidate failed quality gates; refusing to publish an invalid guide.'
+              exit 1
+            fi
+          fi
+
+          python scripts/epg_coverage.py
+          for report in \
+            reports/epg-coverage.md \
+            reports/epg-three-playlist-audit.md \
+            reports/epg-source-audit.md \
+            reports/bangladesh-epg-source-audit.md \
+            reports/epg-unmapped-audit.md \
+            reports/epg-publish-freshness.md \
+            reports/epg-channel-mapping.csv; do
+            if [[ ! -s "$report" ]]; then
+              echo "::error::Required EPG report is missing or empty: $report"
+              exit 1
+            fi
+          done
+          python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md
+          python scripts/generate_dashboard.py
+          python scripts/validate_report_freshness.py --mode epg
+
+          git add assets/dashboard.svg 'reports/Update Report.md' reports/maintenance-report.md
+          git add -f epg/epg.xml reports/epg-channel-mapping.csv reports/epg-coverage.md reports/epg-three-playlist-audit.md reports/epg-source-audit.md reports/bangladesh-epg-source-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
+          git add -u -- reports
+
+          if ! git diff --quiet; then
+            echo 'ERROR: unstaged tracked changes remain after staging EPG outputs:'
+            git status --short
+            exit 1
+          fi
+
+          if git diff --cached --quiet; then
+            echo 'EPG output, dashboard and coverage reports are unchanged.'
             exit 0
+          fi
+
+          if [ "$CANDIDATE_OK" = true ]; then
+            COMMIT_MESSAGE='Refresh IPTV EPG, coverage reports and dashboard'
+          else
+            COMMIT_MESSAGE='Restore last known-good IPTV EPG and refresh dashboard diagnostics'
+          fi
+          git commit -m "$COMMIT_MESSAGE"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo '::error::EPG outputs conflicted with newer main content; no force-push attempted.'
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "::warning::EPG push attempt ${attempt} failed; retrying after refreshing main."
+            sleep 3
+          done
+          echo '::error::Could not publish EPG after 3 attempts.'
+          exit 1
+      - name: Upload EPG freshness diagnostic
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: epg-freshness-${{ github.run_number }}
+          path: reports/epg-publish-freshness.md
+          if-no-files-found: warn
+          retention-days: 7
+ || true)"
+            if [[ -n "$CHANGED_INPUTS" ]]; then
+              echo "::notice::Skipping superseded EPG refresh because newer commits changed EPG inputs or code."
+              printf '%s\n' "$CHANGED_INPUTS"
+              exit 0
+            fi
+            echo "::notice::Continuing despite newer generated-output commits; this run still needs to apply the latest EPG code."
           fi
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
