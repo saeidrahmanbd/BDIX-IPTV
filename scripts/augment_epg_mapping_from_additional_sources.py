@@ -22,10 +22,25 @@ SOURCES = [
     "https://epg.lat/files/in.xml.gz",
     "https://www.free-epg.de/api/epg/in.xml.gz",
     "https://www.open-epg.com/files/india.xml.gz",
+    # Provider feeds already consumed by the XMLTV generator; scan their
+    # channel catalogues too so active playlist IDs can acquire exact mappings.
+    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml",
+    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml",
+    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml",
+    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml",
+    "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml",
+    "https://avkb.short.gy/epg.xml.gz",
+    "https://avkb.short.gy/jioepg.xml.gz",
+    "https://avkb.short.gy/tsepg.xml.gz",
 ]
 
 EXCLUDED_GROUPS = {"Backup", "Test", "Not Playing"}
 INDIAN_GROUPS = {"Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment"}
+GENERIC_NAME_KEYS = {
+    "news", "movie", "movies", "music", "live", "entertainment", "kids",
+    "sports", "star", "zee", "colors", "sony", "cinema", "world", "plus",
+    "one", "two", "four", "today", "max", "now",
+}
 
 
 def norm(value):
@@ -36,7 +51,7 @@ def norm(value):
 
 def fetch(url):
     req = urllib.request.Request(url, headers={"User-Agent": "BDIX-IPTV-EPG/1.0"})
-    with urllib.request.urlopen(req, timeout=45) as response:
+    with urllib.request.urlopen(req, timeout=60) as response:
         data = response.read()
     if data[:2] == b"\x1f\x8b" or url.endswith(".gz"):
         data = gzip.decompress(data)
@@ -57,7 +72,8 @@ def playlist_channels():
             }
         elif current and line.strip().startswith(("http://", "https://")):
             if current["tvg_id"] and current["group"] not in EXCLUDED_GROUPS:
-                if current["country"] == "IN" or current["group"] in INDIAN_GROUPS:
+                is_indian_identity = bool(re.search(r"\.in(?:@|$)", current["tvg_id"], re.I))
+                if current["country"] == "IN" or current["group"] in INDIAN_GROUPS or is_indian_identity:
                     channels.append(current)
             current = None
     return channels
@@ -107,7 +123,7 @@ def main():
         if row is None or row.get("epg_id", "").strip():
             continue
         key = norm(channel["name"])
-        if not key:
+        if not key or key in GENERIC_NAME_KEYS:
             continue
 
         matches = []
@@ -117,15 +133,19 @@ def main():
                 matches.append((source, ids[0]))
 
         ids = sorted({cid for _, cid in matches})
-        if len(ids) != 1:
+        if not ids:
+            continue
+        # Multiple provider IDs are retained when each feed has a unique exact
+        # channel-name match. The downstream generator can merge and deduplicate
+        # their schedules; generic labels were filtered above to avoid ambiguity.
+        if len(ids) > 1 and len(key) < 5:
             continue
 
-        cid = ids[0]
-        sources = [source for source, matched_id in matches if matched_id == cid]
-        row["epg_id"] = cid
+        row["epg_id"] = " | ".join(ids)
+        sources = [source for source, matched_id in matches if matched_id in ids]
         row["source"] = ((row.get("source", "").strip(" |") + " | " + " | ".join(sources)).strip(" |"))
         row["status"] = "MAPPED_ID_ONLY"
-        row["note"] = "Unique exact normalized-name match across newly added India XMLTV feeds."
+        row["note"] = "Exact normalized-name match in one or more Indian provider XMLTV feeds; all distinct provider IDs retained for schedule merging."
         added += 1
 
     fieldnames = ["group", "channel", "tvg_id", "epg_id", "source", "status", "note"]
