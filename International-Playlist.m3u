@@ -5376,8 +5376,6 @@ http://connectiktv.ddns.net:5000/playtv/@playtv/playlist.m3u8
 https://edge12.vedge.infomaniak.com/livecast/ik:livehautetension/manifest.m3u8
 #EXTINF:-1 tvg-id="RTLGold.lu@SD" tvg-content="Music" group-title="New Channels" tvg-name="RTL Gold (Luxembourg)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rtl-gold-luxembourg-ba9a8aa3f0.png",RTL Gold (Luxembourg)
 https://stream.rtl.lu/data/live/tele/rtlgold/playlist.m3u8
-#EXTINF:-1 tvg-id="RTSHShqip.al@SD" tvg-name="RTSH Shqip (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/rtsh-shqip-1080p.png" tvg-country="AL" channel-id="RTSHShqip.al@SD" group-title="New Channels" tvg-content="Movies",RTSH Shqip (1080p)
-http://178.33.11.6:8696/live/rtshshqip/playlist.m3u8
 #EXTINF:-1 tvg-id="ScorchTV.tt@SD" tvg-content="Music" group-title="New Channels" tvg-name="Scorch TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/scorch-tv-5b001ff8c4.png",Scorch TV
 https://w6oy7x7jlxrg-hls-live.5centscdn.com/MandETV/955ad3298db330b5ee880c2c9e6f23a0.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="ShowVenTV.ve@SD" tvg-content="Music" group-title="New Channels" tvg-name="ShowVen TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/showven-tv-af7e6903a5.png",ShowVen TV
