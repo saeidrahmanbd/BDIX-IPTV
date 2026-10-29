@@ -248,10 +248,9 @@ def final_mode(playlist, report, baseline, mode):
     if duplicate_count:
         errors.append(f"{duplicate_count} duplicate stream URLs remain")
     required = ["New Channels", "New Backup", "Backup"]
-    if all(g in groups for g in required):
-        idx = [groups.index(g) for g in required]
-        if not (idx[1] == idx[0] + 1 and idx[2] == idx[1] + 1):
-            errors.append("New Channels/New Backup are not immediately before Backup")
+    ordering_ok = groups[-3:] == required
+    if not ordering_ok:
+        errors.append("New Channels/New Backup/Backup must be the final three playlist groups")
     missing_logo = 0
     external_logo = 0
     policy_issues = []
@@ -294,7 +293,7 @@ def final_mode(playlist, report, baseline, mode):
         f"- M3U entries parsed: {len(entries)}",
         f"- Malformed EXTINF/URL pairs: {len(malformed)}",
         f"- Duplicate stream URLs: {duplicate_count}",
-        f"- New Channels/New Backup/Backup ordering: {'passed' if not any('immediately before Backup' in e for e in errors) else 'failed'}",
+        f"- New Channels/New Backup/Backup ordering: {'passed' if ordering_ok else 'failed'}",
         f"- Discovery entries missing a logo (left blank rather than using a placeholder): {missing_logo}",
         f"- Non-local discovery logo references: {external_logo}",
         f"- Geography/content policy issues: {len(policy_issues)}",
