@@ -240,15 +240,32 @@ def fetch_rtv_programmes(now=None):
     if now.tzinfo is None:
         now = now.replace(tzinfo=timezone.utc)
     now_utc = now.astimezone(timezone.utc)
-    request = urllib.request.Request(
-        RTV_SOURCE,
-        headers={
-            "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
-            "Accept": "text/html,application/xhtml+xml,*/*",
-        },
-    )
-    with urllib.request.urlopen(request, timeout=30) as response:
-        html = response.read().decode("utf-8", errors="replace")
+    # The www host has intermittently failed certificate-chain validation.
+    # Try the apex HTTPS host first, then the established www endpoint; TLS
+    # verification stays enabled for both attempts.
+    html = None
+    fetch_errors = []
+    for source_url in ("https://rtvbd.tv/schedule.php", RTV_SOURCE):
+        request = urllib.request.Request(
+            source_url,
+            headers={
+                "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
+                "Accept": "text/html,application/xhtml+xml,*/*",
+            },
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                html = response.read().decode("utf-8", errors="replace")
+            break
+        except Exception as exc:
+            host = source_url.split("/", 3)[2]
+            fetch_errors.append(f"{host}: {type(exc).__name__}")
+    if html is None:
+        raise RuntimeError(
+            "Could not fetch the official RTV schedule over verified HTTPS ("
+            + "; ".join(fetch_errors)
+            + ")"
+        )
 
     parser = _RtvScheduleParser()
     parser.feed(html)
