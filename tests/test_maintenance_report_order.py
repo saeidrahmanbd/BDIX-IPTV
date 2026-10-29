@@ -24,7 +24,7 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         for relative in writer_workflows:
             with self.subTest(workflow=relative):
                 source = (ROOT / relative).read_text(encoding="utf-8")
-                match = re.search(r"(?m)^  group:\\s*([^\\s#]+)", source)
+                match = re.search(r"(?m)^  group:\s*([^\s#]+)", source)
                 self.assertIsNotNone(match, f"{relative}: missing top-level concurrency group")
                 self.assertEqual(match.group(1), expected, f"{relative}: writer queue mismatch")
 
