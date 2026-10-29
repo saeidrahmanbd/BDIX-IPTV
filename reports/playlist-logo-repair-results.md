@@ -1,6 +1,6 @@
 # IPTV Playlist Logo Repair Results — Current Status
 
-Generated: **2026-10-29T01:15:29+00:00**
+Generated: **2026-10-29T01:17:35+00:00**
 Source playlist SHA-256: **2cbcba4985e4191ad9c16f571b401ca1de907f1d8521132cf5367751e9f43889**
 
 This is the current logo status. The 2026-10-17 repair history is preserved separately in `reports/playlist-logo-repair-history-2026-10-17.md`.
