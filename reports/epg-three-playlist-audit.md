@@ -1,14 +1,14 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-10-29T02:38:56+00:00**
+Generated: **2026-10-29T11:10:23+00:00**
 
 This report measures the three maintained M3U playlists included in the automated EPG pipeline. The historic filename epg-three-playlist-audit.md is retained for link compatibility.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1159 | 692 | 464 | 407 | 464 | 394 | 228 | OK |
-| BDIX-Playlist.m3u | 131 | 131 | 77 | 70 | 77 | 69 | 54 | OK |
-| International-Playlist.m3u | 3258 | 2708 | 868 | 703 | 862 | 667 | 1840 | OK |
+| IPTV-Playlist.m3u | 1159 | 692 | 464 | 401 | 464 | 388 | 228 | OK |
+| BDIX-Playlist.m3u | 131 | 131 | 77 | 69 | 77 | 69 | 54 | OK |
+| International-Playlist.m3u | 3258 | 2708 | 868 | 672 | 862 | 638 | 1840 | OK |
 
 ## Group coverage
 
@@ -19,13 +19,13 @@ This report measures the three maintained M3U playlists included in the automate
 | Aruba | 6 | 0 | 0 | 6 |
 | Bangladesh | 87 | 2 | 0 | 85 |
 | Brazil | 12 | 2 | 2 | 10 |
-| Bulgaria | 15 | 7 | 5 | 8 |
+| Bulgaria | 15 | 7 | 6 | 8 |
 | Canada | 26 | 20 | 16 | 6 |
 | Chile | 27 | 1 | 0 | 26 |
 | China | 14 | 0 | 0 | 14 |
 | Colombia | 13 | 1 | 1 | 12 |
 | Czech Republic | 26 | 9 | 3 | 17 |
-| Documentary & Wildlife | 217 | 137 | 102 | 80 |
+| Documentary & Wildlife | 217 | 137 | 93 | 80 |
 | Dominican Republic | 7 | 0 | 0 | 7 |
 | Egypt | 5 | 2 | 0 | 3 |
 | Estonia | 6 | 1 | 0 | 5 |
@@ -34,13 +34,13 @@ This report measures the three maintained M3U playlists included in the automate
 | Greece | 9 | 2 | 2 | 7 |
 | Hungary | 16 | 8 | 6 | 8 |
 | Indian Bangla | 51 | 41 | 35 | 10 |
-| Indian Entertainment | 229 | 191 | 178 | 38 |
-| Indian Movies | 93 | 70 | 62 | 23 |
-| Indian Music | 72 | 59 | 55 | 13 |
-| International | 98 | 56 | 44 | 42 |
+| Indian Entertainment | 229 | 191 | 179 | 38 |
+| Indian Movies | 93 | 70 | 67 | 23 |
+| Indian Music | 72 | 59 | 56 | 13 |
+| International | 98 | 56 | 42 | 42 |
 | Iran | 16 | 3 | 2 | 13 |
 | Italy | 27 | 6 | 6 | 21 |
-| Kids | 226 | 96 | 76 | 130 |
+| Kids | 226 | 96 | 73 | 130 |
 | Lebanon | 6 | 1 | 1 | 5 |
 | Mexico | 19 | 6 | 5 | 13 |
 | Netherlands | 21 | 8 | 8 | 13 |
@@ -57,13 +57,13 @@ This report measures the three maintained M3U playlists included in the automate
 | Saudi Arabia | 15 | 3 | 1 | 12 |
 | Serbia | 5 | 1 | 0 | 4 |
 | Spain | 42 | 4 | 1 | 38 |
-| Sports | 262 | 117 | 94 | 145 |
+| Sports | 262 | 117 | 76 | 145 |
 | Sweden | 55 | 0 | 0 | 55 |
 | Turkey | 20 | 1 | 0 | 19 |
 | Ukraine | 33 | 3 | 0 | 30 |
-| United Arab Emirates | 4 | 2 | 0 | 2 |
+| United Arab Emirates | 4 | 2 | 1 | 2 |
 | United Kingdom | 12 | 2 | 1 | 10 |
-| United States | 223 | 43 | 31 | 180 |
+| United States | 223 | 43 | 19 | 180 |
 | Uzbekistan | 5 | 0 | 0 | 5 |
 | Vietnam | 5 | 0 | 0 | 5 |
 
