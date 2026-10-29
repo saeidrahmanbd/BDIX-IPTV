@@ -1,10 +1,12 @@
-import ast, csv, os, re, tempfile, unittest, sys
+import ast, csv, io, os, re, tempfile, unittest, sys
+from datetime import datetime, timezone
 from unittest.mock import patch
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import generate_epg
+import official_epg_sources
 
 COV = (ROOT / "scripts" / "epg_coverage.py").read_text(encoding="utf-8")
 GEN = (ROOT / "scripts" / "generate_epg.py").read_text(encoding="utf-8")
@@ -53,6 +55,39 @@ class EpgConfigTests(unittest.TestCase):
             with patch.object(generate_epg, "MAPPING", mapping), patch.dict(os.environ, {"M3U4U_XMLTV_URL": private_url}):
                 selected = generate_epg.sources_with_mapped_channels([private_url, "https://example.test/unused.xml"])
         self.assertEqual(selected, [private_url])
+
+    def test_private_m3u4u_source_is_available_to_final_generation_without_leaking_its_label(self):
+        private_url = "https://m3u4u.com/epg/example-private-feed.xml"
+        with patch.dict(os.environ, {"M3U4U_XMLTV_URL": private_url}):
+            self.assertIn(private_url, generate_epg.configured_sources())
+            self.assertNotEqual(generate_epg.source_label(private_url), private_url)
+
+    def test_rtv_schedule_tries_apex_https_then_www_without_disabling_tls(self):
+        weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+        html = "".join(
+            f"<p>{day}</p>"
+            f"<p>09:00 AM - Show {day} A</p>"
+            f"<p>10:00 AM - Show {day} B</p>"
+            f"<p>11:00 AM - Show {day} C</p>"
+            for day in weekdays
+        )
+        with patch.object(
+            official_epg_sources.urllib.request,
+            "urlopen",
+            side_effect=[OSError("certificate chain"), io.BytesIO(html.encode("utf-8"))],
+        ) as urlopen:
+            programmes = official_epg_sources.fetch_rtv_programmes(
+                datetime(2026, 10, 29, tzinfo=timezone.utc)
+            )
+        self.assertTrue(programmes)
+        self.assertEqual(
+            urlopen.call_args_list[0].args[0].full_url,
+            "https://rtvbd.tv/schedule.php",
+        )
+        self.assertEqual(
+            urlopen.call_args_list[1].args[0].full_url,
+            "https://www.rtvbd.tv/schedule.php",
+        )
 
     def test_source_audit_is_staged_by_refresh_workflow(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
