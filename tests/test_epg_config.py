@@ -33,6 +33,32 @@ class EpgConfigTests(unittest.TestCase):
         register = (ROOT / "epg" / "source-rights-register.csv").read_text(encoding="utf-8")
         self.assertIn(source + ",legacy_feed_not_active,PROHIBITED", register)
 
+    def test_added_public_discovery_feeds_are_available_to_mapping_and_generation(self):
+        expected = [
+            "https://epg.lat/files/in.xml.gz",
+            "https://epg.lat/files/us.xml.gz",
+            "https://www.free-epg.de/api/epg/in.xml.gz",
+            "https://www.free-epg.de/api/epg/us.xml.gz",
+            "https://www.open-epg.com/files/india.xml.gz",
+        ]
+        for source in expected:
+            self.assertIn(source, literal(COV, "SOURCES"))
+            self.assertIn(source, literal(GEN, "SOURCES"))
+
+    def test_private_m3u4u_source_is_selected_for_discovery_without_mapping(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            mapping = Path(tmp) / "mapping.csv"
+            mapping.write_text("group,channel,tvg_id,epg_id,source,status,note\\n", encoding="utf-8")
+            private_url = "https://m3u4u.com/epg/example-private-feed.xml"
+            with patch.object(generate_epg, "MAPPING", mapping), patch.dict(os.environ, {"M3U4U_XMLTV_URL": private_url}):
+                selected = generate_epg.sources_with_mapped_channels([private_url, "https://example.test/unused.xml"])
+        self.assertEqual(selected, [private_url])
+
+    def test_source_audit_is_staged_by_refresh_workflow(self):
+        workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
+        self.assertIn("reports/epg-source-audit.md", workflow)
+        self.assertIn("tests/test_epg_config.py", workflow)
+
     def test_generator_parses_the_payload_for_each_fetched_source(self):
         self.assertIn(
             'data = source_payloads[src]\n            for _, elem in ET.iterparse(io.BytesIO(data), events=("end",)):',
