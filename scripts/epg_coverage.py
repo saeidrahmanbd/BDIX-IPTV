@@ -813,7 +813,7 @@ def main():
     ]
     for src, status, ids, future, programmes, error in source_status:
         safe_src = str(src).replace("|", "\\|")
-        safe_error = (str(error).replace("|", "\\|").replace("\\n", " ") if error else "-")
+        safe_error = (str(error).replace("|", "\\|").replace("\n", " ") if error else "-")
         source_audit_lines.append(
             f"| {status} | {safe_src} | {ids} | {future} | {programmes} | {safe_error} |"
         )
@@ -827,7 +827,7 @@ def main():
         "",
     ]
     SOURCE_AUDIT_REPORT.parent.mkdir(parents=True, exist_ok=True)
-    SOURCE_AUDIT_REPORT.write_text("\\n".join(source_audit_lines) + "\\n", encoding="utf-8")
+    SOURCE_AUDIT_REPORT.write_text("\n".join(source_audit_lines) + "\n", encoding="utf-8")
 
     mapping_by_id = {r["tvg_id"]: r for r in rows if r["tvg_id"]}
     report_lines = [
