@@ -165,6 +165,11 @@ def classify(a, name, group, country):
     group_key = group.casefold()
     joined = f"{name} {a.get('tvg-id', '')} {a.get('channel-id', '')}"
 
+    # Foreign-country queues/groups must contain actual TV/movie/music services,
+    # not radio, podcast, VOD, test, or placeholder entries merely tagged Music.
+    if country not in {"BD", "IN"} and discovery.BAD_NAME_RE.search(name):
+        return None, None, "test/VOD/non-TV name"
+
     if not name or re.fullmatch(r"(?:\d+|n/?a|unknown|test|demo|sample|placeholder|new channel|unnamed|no name|not available)", name, re.I):
         return None, None, "non-real/test channel"
     if key in MANUAL_NEWS or NEWS_RE.search(joined) or re.search(r"\b(?:news|headlines|current affairs|newsroom)\b", group, re.I):
