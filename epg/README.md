@@ -50,6 +50,7 @@ Current coverage should always be taken from the latest generated reports rather
 - [`epg-channel-mapping.csv`](../reports/epg-channel-mapping.csv) — current channel-to-EPG mapping data.
 - [`epg-coverage.md`](../reports/epg-coverage.md) — current coverage and publication metrics.
 - [`epg-three-playlist-audit.md`](../reports/epg-three-playlist-audit.md) — published-guide audit across all three playlists.
+- [`epg-source-audit.md`](../reports/epg-source-audit.md) — per-source availability, usable schedule counts, and failure details.
 - [`epg-publish-freshness.md`](../reports/epg-publish-freshness.md) — guide freshness and publication validation.
 - [`epg-refresh.yml`](../.github/workflows/epg-refresh.yml) — EPG refresh workflow.
 

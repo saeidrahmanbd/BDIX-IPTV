@@ -27,7 +27,7 @@ MAPPING = Path("reports/epg-channel-mapping.csv")
 OUTPUT = Path("epg/epg.xml")
 
 # Bound the worst-case wait for a batch of remote XMLTV feeds.
-SOURCE_FETCH_TIMEOUT_SECONDS = 20
+SOURCE_FETCH_TIMEOUT_SECONDS = 60
 SOURCE_FETCH_WORKERS = 8
 
 SOURCES = [
@@ -35,6 +35,12 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
     "https://iptv-epg.org/files/epg-in.xml.gz",
+    # Additional regional sources also used by the mapping-discovery pass.
+    "https://epg.lat/files/in.xml.gz",
+    "https://epg.lat/files/us.xml.gz",
+    "https://www.free-epg.de/api/epg/in.xml.gz",
+    "https://www.free-epg.de/api/epg/us.xml.gz",
+    "https://www.open-epg.com/files/india.xml.gz",
     # Supplemental country guides for international playlist regions improve schedule coverage.
     "https://iptv-epg.org/files/epg-ar.xml.gz",
     "https://iptv-epg.org/files/epg-bg.xml.gz",
@@ -147,7 +153,14 @@ def sources_with_mapped_channels(source_urls):
     except (OSError, csv.Error, UnicodeError) as exc:
         print(f"EPG source pruning skipped: cannot read mapping CSV ({exc}).")
         return source_urls
-    selected = [source for source in source_urls if source in mapped_sources or source in (HUM_TV_SOURCE, RTV_SOURCE) or source.startswith("file://")]
+    private_url = os.environ.get(PRIVATE_SOURCE_ENV, "").strip()
+    selected = [
+        source for source in source_urls
+        if source in mapped_sources
+        or source in (HUM_TV_SOURCE, RTV_SOURCE)
+        or source.startswith("file://")
+        or (private_url and source == private_url)
+    ]
     if not selected:
         print("EPG source pruning skipped: no mapped source URLs found.")
         return source_urls
