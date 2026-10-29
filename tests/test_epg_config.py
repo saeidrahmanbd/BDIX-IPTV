@@ -1,4 +1,4 @@
-import ast, csv, re, tempfile, unittest, sys
+import ast, csv, os, re, tempfile, unittest, sys
 from unittest.mock import patch
 from pathlib import Path
 
