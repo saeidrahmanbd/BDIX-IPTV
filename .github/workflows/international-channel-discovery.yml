@@ -37,23 +37,47 @@ jobs:
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
           python-version: '3.12'
+      - name: Snapshot playlist before discovery
+        run: cp International-Playlist.m3u /tmp/International-Playlist.before.m3u
       - name: Test strict International movie/music policy
         run: python -m unittest discover -s tests -p 'test_international_discovery_policy.py'
+      - name: Test discovery stream validator
+        run: python -m unittest discover -s tests -p 'test_discovery_run_validation.py'
       - name: Compile discovery and validation scripts
-        run: python -m py_compile scripts/discover_international_channels.py scripts/validate_international_playlist.py
+        run: python -m py_compile scripts/discover_international_channels.py scripts/validate_international_playlist.py scripts/validate_discovery_run.py
       - name: Discover only Movies/Music channels and eligible backup streams
         run: python scripts/discover_international_channels.py
       - name: Enforce required playlist attribution
         run: python scripts/enforce_playlist_attribution.py International-Playlist.m3u
+      - name: Verify newly discovered streams and local logos
+        run: python scripts/validate_discovery_run.py probe International-Playlist.m3u reports/international-channel-discovery.md /tmp/International-Playlist.before.m3u international
       - name: Validate International playlist and discovery queues
         run: python scripts/validate_international_playlist.py
+      - name: Record final discovery validation results
+        run: python scripts/validate_discovery_run.py finalize International-Playlist.m3u reports/international-channel-discovery.md /tmp/International-Playlist.before.m3u international
       - name: Commit discovery changes
         shell: bash
         run: |
           set -euo pipefail
+          if ! grep -q 'Validation status: PASS' reports/international-channel-discovery.md; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add reports/international-channel-discovery.md
+            if ! git diff --cached --quiet; then
+              git commit -m 'Record International discovery validation blocker'
+              for attempt in 1 2 3; do
+                git fetch origin main
+                git pull --rebase origin main || { git rebase --abort || true; exit 1; }
+                if git push origin HEAD:main; then break; fi
+              done
+            fi
+            echo '::error::International discovery validation failed; playlist/logo changes were not committed.'
+            exit 1
+          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add International-Playlist.m3u reports/international-channel-discovery.md logos/
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add International-Playlist.m3u reports/international-channel-discovery.md logos/ scripts/validate_discovery_run.py tests/test_discovery_run_validation.py
           if git diff --cached --quiet; then
             echo "No International discovery changes to publish."
             exit 0

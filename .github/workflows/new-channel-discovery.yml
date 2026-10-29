@@ -38,8 +38,12 @@ jobs:
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
           python-version: '3.12'
+      - name: Snapshot playlist before discovery
+        run: cp IPTV-Playlist.m3u /tmp/IPTV-Playlist.before.m3u
       - name: Test channel discovery exclusion policy
         run: python -m unittest discover -s tests -p 'test_channel_discovery_policy.py'
+      - name: Test discovery stream validator
+        run: python -m unittest discover -s tests -p 'test_discovery_run_validation.py'
       - name: Install logo tools
         run: python -m pip install --disable-pip-version-check -r docs/requirements.txt
       - name: Enforce queue exclusions and discover approved Bangladesh/India candidates
@@ -52,17 +56,37 @@ jobs:
           python scripts/generate_logo_authenticity_manifest.py
           python scripts/generate_logo_repair_summary.py
           python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
+      - name: Verify newly discovered streams and local logos
+        run: python scripts/validate_discovery_run.py probe IPTV-Playlist.m3u reports/iptv-channel-discovery.md /tmp/IPTV-Playlist.before.m3u iptv
       - name: Enable review-queue audit policy
         run: python scripts/enable_review_queue_audit.py
       - name: Validate review queues
         run: python scripts/country_verification.py validate IPTV-Playlist.m3u
+      - name: Record final discovery validation results
+        run: python scripts/validate_discovery_run.py finalize IPTV-Playlist.m3u reports/iptv-channel-discovery.md /tmp/IPTV-Playlist.before.m3u iptv
       - name: Commit discovered candidates
         shell: bash
         run: |
           set -euo pipefail
+          if ! grep -q 'Validation status: PASS' reports/iptv-channel-discovery.md; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add reports/iptv-channel-discovery.md
+            if ! git diff --cached --quiet; then
+              git commit -m 'Record IPTV discovery validation blocker'
+              for attempt in 1 2 3; do
+                git fetch origin main
+                git pull --rebase origin main || { git rebase --abort || true; exit 1; }
+                if git push origin HEAD:main; then break; fi
+              done
+            fi
+            echo '::error::IPTV discovery validation failed; playlist/logo changes were not committed.'
+            exit 1
+          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add IPTV-Playlist.m3u reports/iptv-channel-discovery.md logos/ reports/metadata-normalization.md reports/playlist-logo-repair-results.md reports/logo-authenticity-manifest.json scripts/audit_playlist.py scripts/enable_review_queue_audit.py scripts/discover_bd_in_new_queues.py scripts/run_bd_discovery_with_policy.py
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add IPTV-Playlist.m3u reports/iptv-channel-discovery.md logos/ reports/metadata-normalization.md reports/playlist-logo-repair-results.md reports/logo-authenticity-manifest.json scripts/audit_playlist.py scripts/enable_review_queue_audit.py scripts/discover_bd_in_new_queues.py scripts/run_bd_discovery_with_policy.py scripts/validate_discovery_run.py tests/test_discovery_run_validation.py
           if git diff --cached --quiet; then
             echo 'No new Bangladesh/India candidates found.'
             exit 0
@@ -84,3 +108,11 @@ jobs:
           done
           echo '::error::Push failed after 3 attempts.'
           exit 1
+      - name: Upload discovery report
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: iptv-channel-discovery
+          path: reports/iptv-channel-discovery.md
+          if-no-files-found: warn
+          retention-days: 14

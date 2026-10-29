@@ -56,7 +56,7 @@ ISLAMIC_ALLOWED_MARKERS = re.compile(
 )
 FORBIDDEN_BRANDS = re.compile(
     r"\b(?:"
-    r"aad(?:i|ee)nath|aaseervatham|aastha|sadhna|sanskar|jinvani|satsang|jagran|"
+    r"calvary\s*tv|santvani(?:\s+channel)?|sharnam\s*tv|sharanam\s*tv|aad(?:i|ee)nath|aaseervatham|aastha|sadhna|sanskar|jinvani|satsang|jagran|"
     r"bhagwat|aradhana|prarthana|divya|shubh\s*tv|aagaaz\s+times|"
     r"aaj\s+ki\s+khabar|abp(?:\s+(?:ananda|asmita|ganga|majha|news))?|"
     r"abn\s+andhra\s+jyoti|aaj\s+tak|times\s+now|india\s+today|news18|"
@@ -73,7 +73,7 @@ FORBIDDEN_BRANDS = re.compile(
     re.IGNORECASE,
 )
 BAD_HOSTS = ("proxy", "proxied", "cors", "localhost", "workers.dev", "worker.dev", "pages.dev")
-BAD_QUERY_KEYS = {"token", "auth", "authorization", "hdnts", "sig", "signature", "expires", "session", "jwt", "key"}
+BAD_QUERY_KEYS = {"token", "auth", "authorization", "hdnts", "sig", "signature", "expires", "session", "jwt", "ticket", "key"}
 QUALITY = {"uhd", "fhd", "hd", "sd", "4k", "1080p", "720p", "576p", "480p", "360p", "240p"}
 COUNTRY_CODE = {"Bangladesh": "bd", "India": "in"}
 # Country-group threshold used by discovery-policy validation. A new country group

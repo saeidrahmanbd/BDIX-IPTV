@@ -30,7 +30,8 @@ NEWS_BRAND_RE=re.compile(r"\b(?:channel\s*24|somoy(?:\s*tv)?|jamuna\s*tv|dbc\s*n
 KIDS_NAME_RE=re.compile(r"\b(?:kids?|children|cartoon(?:\s*network)?|baby\s*shark|disney\s*(?:junior|jr|channel)|nick(?:elodeon)?\s*(?:jr|junior)?|pogo|pbs\s*kids|toongoggles?|toonami|teletubbies|doraemon|discovery\s*kids|mr\s*bean\s*animated|strawberry\s*shortcake|smurf(?:s)?\s*tv|duck\s*tv|zoo\s*moo|yTV)\b",re.I)
 SPORTS_NAME_RE=re.compile(r"\b(?:sports?|espn|bein\s*sports|fox\s*sports|sky\s*sports|star\s*sports|sony\s*sports|ten\s*sports|willow|cricket)\b",re.I)
 FASHION_RE=re.compile(r"\bfashion\s*tv\b",re.I)
-GENERAL_OUT_OF_SCOPE_RE=re.compile(r"\b(servus\s*tv|star\s*channel|warner\s*(?:channel|tv)|persiana\s*(?:family|iranian|korea|plus)|nile\s*drama|mbc\s*\+?\s*drama|groovy\s*tv|mci\s*television|general\s*entertainment|variety\s*channel)\b",re.I)
+GENERAL_OUT_OF_SCOPE_RE=re.compile(r"\b(servus\s*tv|star\s*channel|warner\s*(?:channel|tv)|persiana\s*(?:family|iranian|korea|plus)|nile\s*drama|mbc\s*\+?\s*drama|groovy\s*tv|mci\s*television|general\s*entertainment|variety\s*channel|paramount\s*network|sony\s*canal\s*novelas|tv\s*land\s*drama|usa\s*network|universal\s*comedy|twentyseven(?:\s*hd)?|rtsh\s*shqip)\b",re.I)
+SERIES_OUT_OF_SCOPE_RE=re.compile(r"\b(?:star\s*trek\s*:\s*(?:deep\s*space\s*nine|the\s*next\s*generation|the\s*original\s*series|voyager)|the\s*twilight\s*zone|the\s*wild\s*wild\s*west)\b",re.I)
 DOC_NAME_RE=re.compile(r"\b(?:documentar(?:y|ies)|wildlife|nature|discovery(?:\s*(?:channel|science|turbo|world|family|life))?|national\s*geographic|nat\s*geo|animal\s*planet|bbc\s*earth|history\s*(?:channel|tv)?|smithsonian|travel\s*channel|travelxp|love\s*nature|inwild|inwonder)\b",re.I)
 MOVIE_NAME_RE=re.compile(r"\b(?:movies?|cinema|films?|bollywood|aflam|moviesphere|cinevault|cineplex|amc\s*thrillers?|amg\s*tv\s*classic|great!\s*romance|gravitas\s*movies|24\s*hour\s*(?:free\s*)?movies|star\s*movies|zee\s*cinema|b4u\s*movies|jalsha\s*movies|hallmark\s*movies|film\s*4|filmrise\s*movies|mytime\s*movie|the\s*movie\s*club|hbo(?:\s*(?:2|signature|zone|family|hits|comedy|action))?|cinemax|starz|tcm|turner\s*classic\s*movies|ifc|sundance\s*tv)\b",re.I)
 MUSIC_NAME_RE=re.compile(r"\b(?:music|musix|musica|musique|tunes|xite|v2beat|trace\s*(?:urban|latina)|kronehit|cmc\s*tv|eu\s*music|ua\s*music|arabica\s*tv|epic\s*music|totalmusic|vevo|qello\s*concerts|mtv\s*(?:music|hits|80s|90s|live|classic|dance)|vh1\b|now\s*(?:70s|80s|rock)|4music|music\s*box|8xm|9xm|9x\s*(?:jalwa|jhakaas|tashan)|jalwa\s*tv|joo\s*music|joomusic|1mus|teleritmo|power\s*t(?:u|ü)rk|stingray\s*(?:classic|djazz|remember|today|hits)|zoom\s*music|star\s*music)\b",re.I)
@@ -71,6 +72,7 @@ def policy(a,name,allow_legacy_group=False):
  group_parts=[re.sub(r"[^a-z0-9]+","",part) for part in re.split(r"[;,|/]+",group_text) if part.strip()]
  text=f"{name} {a.get('tvg-name','')} {a.get('tvg-id','')}"
  if FASHION_RE.search(text) and group_key=="fashiontv": return "Fashion TV",None,code
+ if BAD_NAME_RE.search(name): return None,"test/VOD/non-TV name",code
 
  # Prohibited channel identities/content always take precedence over genre matches.
  if NEWS_NAME_RE.search(text) or NEWS_BRAND_RE.search(text) or "news" in group_parts:
@@ -84,6 +86,7 @@ def policy(a,name,allow_legacy_group=False):
  if DOC_NAME_RE.search(text) or any(x in group_parts for x in {"documentary","documentaries","wildlife","nature"}):
   return None,"documentary/wildlife channel is prohibited",code
  if GENERAL_OUT_OF_SCOPE_RE.search(text): return None,"general entertainment is not a dedicated Movie/Music channel",code
+ if SERIES_OUT_OF_SCOPE_RE.search(text): return None,"TV series channel is not a dedicated Movie/Music channel",code
 
  # When the source has a category, it must be explicitly a Movie or Music
  # category. General/Entertainment/unknown category labels are never overridden
@@ -118,7 +121,7 @@ def safe_url(url):
   p=urllib.parse.urlsplit(url)
   if p.scheme not in {"http","https"} or not p.hostname or p.username or p.password or p.fragment:return False
   if any(x in p.hostname.casefold() for x in ("workers.dev","pages.dev","corsproxy","streamproxy","localhost")):return False
-  bad={"token","auth","authorization","password","passwd","pwd","username","signature","sig","expires","jwt","session"}
+  bad={"token","auth","authorization","password","passwd","pwd","username","signature","sig","expires","jwt","session","ticket"}
   return not any(k.casefold() in bad for k,_ in urllib.parse.parse_qsl(p.query,keep_blank_values=True))
  except ValueError:return False
 def slug(value):

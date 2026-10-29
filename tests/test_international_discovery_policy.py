@@ -92,6 +92,20 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             with self.subTest(name=name):
                 self.assertIsNone(self.classify(name, group, country, tvg_id)[0])
 
+    def test_radio_and_series_or_general_entertainment_channels_are_rejected(self):
+        examples = [
+            ("Radio Bonita 106.7", "Music", "US", "RadioBonita.us"),
+            ("Radio Chisinau", "Music", "MD", "RadioChisinau.md"),
+            ("Star Trek: Deep Space Nine", "Movies", "US", "StarTrekDeepSpaceNine.us"),
+            ("The Twilight Zone", "Movies", "US", "TheTwilightZone.us"),
+            ("USA Network", "Movies", "US", "USANetwork.us"),
+            ("RTSH Shqip", "Movies", "AL", "RTSHShqip.al"),
+            ("Paramount Network", "Movies", "US", "ParamountNetwork.us"),
+        ]
+        for name, group, country, tvg_id in examples:
+            with self.subTest(name=name):
+                self.assertIsNone(self.classify(name, group, country, tvg_id)[0])
+
     def test_unknown_and_generic_channels_are_rejected(self):
         for country in ("BD", "IN", "PK", "US", None):
             with self.subTest(country=country):
