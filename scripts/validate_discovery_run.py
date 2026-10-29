@@ -16,7 +16,7 @@ from pathlib import Path
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 LOGOS = Path("logos")
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
-NEWS_RE = re.compile(r"\b(?:news|headlines?|current affairs|zee business|aaj tak|times now|ndtv|republic|india today|news18|tv9)\b", re.I)
+NEWS_RE = re.compile(r"\b(?:news|headlines?|current affairs|zee business|aaj tak|times now|ndtv\s*(?:24x7|india|profit|world|marathi|mp-cg|rajasthan|haryana|bihar|assam)|republic|india today|news18|tv9)\b", re.I)
 RELIGIOUS_RE = re.compile(r"\b(?:calvary|santvani|sharnam|sharanam|christian|christ|hindu|hinduism|bhakti|bhakthi|sanatan|sikh|gurbani|jinvani|jain|devotional|gospel|bible|jesus|church|temple|prayer|sermon|satsang|aastha|sanskar|jagran|krishna|shiva|ganesh)\b", re.I)
 ISLAMIC_RE = re.compile(r"\b(?:islam|islamic|muslim|quran|koran|allah|muhammad|madani|peace tv|huda|noor|deen|ummah|mecca|makkah|madina|mosque|masjid|sunnah|ramadan|adhan|azan)\b", re.I)
 INTL_BAD_RE = re.compile(r"\b(?:news|sports?|kids?|children|documentary|wildlife|religious|religion|devotional|adult|radio|podcast|vod|catchup|test|demo|webcam|timeshift|ppv|paramount network|sony canal novelas|tv land drama|usa network|universal comedy|twentyseven(?: hd)?|rtsh shqip|star trek\s*:\s*(?:deep space nine|the next generation|the original series|voyager)|the twilight zone|the wild wild west)\b", re.I)

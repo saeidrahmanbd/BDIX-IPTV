@@ -3,10 +3,14 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from validate_discovery_run import append_section, classify_response, parse_playlist
+from validate_discovery_run import NEWS_RE, append_section, classify_response, parse_playlist
 
 
 class DiscoveryRunValidationTests(unittest.TestCase):
+    def test_news_filter_does_not_misclassify_ndtv_good_times(self):
+        self.assertFalse(NEWS_RE.search("NDTV Good Times"))
+        self.assertTrue(NEWS_RE.search("NDTV 24x7"))
+
     def test_hls_manifest_is_verified(self):
         status, _ = classify_response(200, {"Content-Type": "application/vnd.apple.mpegurl"}, b"#EXTM3U\n#EXT-X-VERSION:3\n", "https://example.test/live.m3u8")
         self.assertEqual(status, "verified")
