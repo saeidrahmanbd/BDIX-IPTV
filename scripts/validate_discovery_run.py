@@ -2,6 +2,7 @@
 """Probe discovery streams and append a fresh final validation summary."""
 from __future__ import annotations
 import concurrent.futures
+import os
 import re
 import socket
 import sys
@@ -237,6 +238,9 @@ def final_mode(playlist, report, baseline, mode):
     url_counts = Counter(e["url"].casefold() for e in entries)
     duplicate_count = sum(n - 1 for n in url_counts.values() if n > 1)
     errors = []
+    validator_outcome = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME", "success").casefold()
+    if validator_outcome != "success":
+        errors.append(f"official validator result: {validator_outcome}")
     if malformed:
         errors.append(f"{len(malformed)} malformed EXTINF/URL pairs")
     if duplicate_count:
@@ -297,6 +301,7 @@ def final_mode(playlist, report, baseline, mode):
     if errors:
         body += ["", "### Blockers", *(f"- {e}" for e in errors[:100])]
     append_section(report, "Final validation", "\n".join(body))
+    print("\n".join(body))
 
 def main():
     if len(sys.argv) != 6 or sys.argv[1] not in {"probe", "finalize"}:

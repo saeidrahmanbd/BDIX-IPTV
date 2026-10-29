@@ -63,8 +63,12 @@ jobs:
       - name: Enable review-queue audit policy
         run: python scripts/enable_review_queue_audit.py
       - name: Validate review queues
+        id: validate_review_queues
         run: python scripts/country_verification.py validate IPTV-Playlist.m3u
       - name: Record final discovery validation results
+        if: always()
+        env:
+          OFFICIAL_VALIDATOR_OUTCOME: ${{ steps.validate_review_queues.outcome }}
         run: python scripts/validate_discovery_run.py finalize IPTV-Playlist.m3u reports/iptv-channel-discovery.md /tmp/IPTV-Playlist.before.m3u iptv
       - name: Commit discovered candidates
         shell: bash
@@ -76,6 +80,8 @@ jobs:
             git add reports/iptv-channel-discovery.md
             if ! git diff --cached --quiet; then
               git commit -m 'Record IPTV discovery validation blocker'
+              git reset --hard HEAD
+              git clean -fd
               for attempt in 1 2 3; do
                 git fetch origin main
                 git pull --rebase origin main || { git rebase --abort || true; exit 1; }

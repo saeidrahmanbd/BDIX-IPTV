@@ -54,8 +54,12 @@ jobs:
       - name: Verify newly discovered streams and local logos
         run: python scripts/validate_discovery_run.py probe International-Playlist.m3u reports/international-channel-discovery.md /tmp/International-Playlist.before.m3u international
       - name: Validate International playlist and discovery queues
+        id: validate_international_playlist
         run: python scripts/validate_international_playlist.py
       - name: Record final discovery validation results
+        if: always()
+        env:
+          OFFICIAL_VALIDATOR_OUTCOME: ${{ steps.validate_international_playlist.outcome }}
         run: python scripts/validate_discovery_run.py finalize International-Playlist.m3u reports/international-channel-discovery.md /tmp/International-Playlist.before.m3u international
       - name: Commit discovery changes
         shell: bash
@@ -67,6 +71,8 @@ jobs:
             git add reports/international-channel-discovery.md
             if ! git diff --cached --quiet; then
               git commit -m 'Record International discovery validation blocker'
+              git reset --hard HEAD
+              git clean -fd
               for attempt in 1 2 3; do
                 git fetch origin main
                 git pull --rebase origin main || { git rebase --abort || true; exit 1; }
