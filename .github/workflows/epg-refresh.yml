@@ -81,7 +81,10 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           mkdir -p reports epg
 
-          if python scripts/epg_refresh_needed.py --max-age-hours 8; then
+          # Only a scheduled run may skip a fresh guide. Pushes to playlist,
+          # mapping, generator, validation, or workflow inputs must exercise the
+          # updated pipeline even when the previously published guide is recent.
+          if [[ "${GITHUB_EVENT_NAME}" == "schedule" ]] && python scripts/epg_refresh_needed.py --max-age-hours 8; then
             echo '::notice::A fresh EPG already exists for the current playlists; refreshing dashboard and maintenance snapshots without rebuilding XMLTV.'
             python scripts/generate_dashboard.py
             python scripts/validate_report_freshness.py --mode epg
