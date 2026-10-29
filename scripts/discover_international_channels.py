@@ -380,6 +380,6 @@ def main():
   fa=attrs(b[0]); fg=fa.get("group-title","").strip()
   if fg.casefold() not in {"backup","backups","adult","test","new backup","new backups","new channels","not playing"}:
    final_group_by_identity[(norm(name_of(b)),country_code(fa))]=fg
- new_rows=[(n,final_group_by_identity.get((norm(n),c),g),c) for n,g,c in new_rows]
+ new_rows=[(n,final_group_by_identity.get((norm(n),c),g),c,u) for n,g,c,u in new_rows]
  print(f"International discovery complete: new={len(new_rows)} new_backup={len(backup_rows)} migrations={len(migrated)} qualifying_country_groups={len(country_groups)}")
 if __name__=="__main__":raise SystemExit(main())
