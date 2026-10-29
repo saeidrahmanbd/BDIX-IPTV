@@ -48,12 +48,19 @@ class EPGPublicationSafetyTests(unittest.TestCase):
             with self.subTest(report_generator=relative):
                 report_script = (ROOT / relative).read_text(encoding="utf-8")
                 self.assertNotIn("source-rights-register.csv", report_script)
-        self.assertNotIn("M3U4U_XMLTV_URL", refresh)
+        self.assertIn("M3U4U_XMLTV_URL", refresh)
         self.assertNotIn("M3U4U_XMLTV_URL", maintenance)
         self.assertNotIn("python scripts/epg_coverage.py", maintenance)
         self.assertNotIn("python scripts/fetch_iptv_org_epg.py", maintenance)
         self.assertNotIn("python scripts/run_generate_epg.py", maintenance)
         self.assertNotIn("git add -f epg/epg.xml", maintenance)
+
+    def test_publication_gate_compares_usable_current_window_coverage(self):
+        gate = (ROOT / "scripts" / "epg_publish_gate_v2.py").read_text(encoding="utf-8")
+        self.assertIn('"window_channels"', gate)
+        self.assertIn('"window_programmes"', gate)
+        self.assertIn('old["window_channels"]', gate)
+        self.assertIn('old["window_programmes"]', gate)
 
     def test_refresh_does_not_restore_a_legacy_guide_snapshot(self):
         refresh = (ROOT / ".github/workflows/epg-refresh.yml").read_text(encoding="utf-8")

@@ -51,6 +51,7 @@ Current coverage should always be taken from the latest generated reports rather
 - [`epg-coverage.md`](../reports/epg-coverage.md) — current coverage and publication metrics.
 - [`epg-three-playlist-audit.md`](../reports/epg-three-playlist-audit.md) — published-guide audit across all three playlists.
 - [`epg-source-audit.md`](../reports/epg-source-audit.md) — per-source availability, usable schedule counts, and failure details.
+- [`bangladesh-epg-source-audit.md`](../reports/bangladesh-epg-source-audit.md) — Bangladesh-specific source health, exact mappings, and unmapped channel identities.
 - [`epg-publish-freshness.md`](../reports/epg-publish-freshness.md) — guide freshness and publication validation.
 - [`epg-refresh.yml`](../.github/workflows/epg-refresh.yml) — EPG refresh workflow.
 

@@ -8,7 +8,7 @@ placeholder density, and sensible retention against the previous guide.
 import re
 import sys
 import unicodedata
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -78,9 +78,26 @@ def quality(path):
         1 for _, _, _, title in programmes
         if title.strip().lower() in GENERIC or SLOT_PLACEHOLDER_RE.match(title.strip().lower())
     )
+    now = datetime.now(timezone.utc)
+    lower = now - timedelta(hours=6)
+    upper = now + timedelta(days=7)
+    window_programmes = []
+    current_programmes = []
+    for programme in programmes:
+        start, stop = parse_time(programme[1]), parse_time(programme[2])
+        if start is None or stop is None or stop <= start:
+            continue
+        if stop >= lower and start <= upper:
+            window_programmes.append(programme)
+        if start <= now < stop:
+            current_programmes.append(programme)
     return {
         "channels": len(channels),
         "programmes": len(programmes),
+        "window_channels": len({item[0] for item in window_programmes}),
+        "window_programmes": len(window_programmes),
+        "current_channels": len({item[0] for item in current_programmes}),
+        "current_programmes": len(current_programmes),
         "overlaps": overlap_count(programmes),
         "generic": generic,
         "generic_ratio": generic / len(programmes) if programmes else 1.0,
@@ -100,15 +117,30 @@ if new["generic_ratio"] > 0.01:
 
 if OLD.exists():
     old = quality(OLD)
-    if old["channels"] and new["channels"] < max(1, int(old["channels"] * 0.80)):
-        raise SystemExit(f"EPG gate BLOCK: channel coverage regressed below 80%: {old['channels']} -> {new['channels']}")
-    clean_volume_pass = not old["programmes"] or new["programmes"] >= int(old["programmes"] * 0.85)
+    if old["window_channels"] and new["window_channels"] < max(1, int(old["window_channels"] * 0.80)):
+        raise SystemExit(
+            "EPG gate BLOCK: usable current-window channel coverage regressed below 80%: "
+            f"{old['window_channels']} -> {new['window_channels']}"
+        )
+    clean_volume_pass = (
+        not old["window_programmes"]
+        or new["window_programmes"] >= int(old["window_programmes"] * 0.85)
+    )
     quality_override = (
-        (not old["programmes"] or new["programmes"] >= int(old["programmes"] * 0.20))
-        and new["channels"] >= max(1, int(old["channels"] * 0.85))
+        (not old["window_programmes"] or new["window_programmes"] >= int(old["window_programmes"] * 0.20))
+        and new["window_channels"] >= max(1, int(old["window_channels"] * 0.85))
     )
     if not clean_volume_pass and not quality_override:
-        raise SystemExit(f"EPG gate BLOCK: programme retention/quality failed: {old['programmes']} -> {new['programmes']} programmes")
+        raise SystemExit(
+            "EPG gate BLOCK: current-window programme retention/quality failed: "
+            f"{old['window_programmes']} -> {new['window_programmes']} programmes"
+        )
 
-print(f"EPG gate PASS: multilingual guide accepted (channels={new['channels']}, programmes={new['programmes']}, overlaps={new['overlaps']}, generic ratio={new['generic_ratio']:.3f})")
+print(
+    "EPG gate PASS: multilingual guide accepted "
+    f"(channels={new['channels']}, programmes={new['programmes']}, "
+    f"window_channels={new['window_channels']}, window_programmes={new['window_programmes']}, "
+    f"current_channels={new['current_channels']}, current_programmes={new['current_programmes']}, "
+    f"overlaps={new['overlaps']}, generic ratio={new['generic_ratio']:.3f})"
+)
 sys.exit(0)

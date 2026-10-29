@@ -73,6 +73,8 @@ jobs:
           python -m unittest discover -s tests -p 'test_report_freshness.py'
       - name: Regenerate, validate and publish XMLTV
         shell: bash
+        env:
+          M3U4U_XMLTV_URL: ${{ secrets.M3U4U_XMLTV_URL }}
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
@@ -135,7 +137,10 @@ jobs:
           if [ "$CANDIDATE_OK" != true ]; then
             if [ "$HAVE_PUBLISHED_FALLBACK" = true ]; then
               cp /tmp/bdix-epg-published-fallback.xml epg/epg.xml
-              python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md || true
+              if ! python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md; then
+                echo '::error::The last-known-good guide is no longer fresh; refusing to publish a stale fallback.'
+                exit 1
+              fi
             else
               echo '::error::No previously published guide exists and the candidate failed quality gates; refusing to publish an invalid guide.'
               exit 1
@@ -149,7 +154,7 @@ jobs:
 
           git add -f epg/epg.xml
           git add assets/dashboard.svg 'reports/Update Report.md' reports/maintenance-report.md
-          git add reports/epg-channel-mapping.csv reports/epg-coverage.md reports/epg-three-playlist-audit.md reports/epg-source-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
+          git add reports/epg-channel-mapping.csv reports/epg-coverage.md reports/epg-three-playlist-audit.md reports/epg-source-audit.md reports/bangladesh-epg-source-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
           git add -u -- reports
 
           if ! git diff --quiet; then

@@ -57,6 +57,9 @@ class EpgConfigTests(unittest.TestCase):
     def test_source_audit_is_staged_by_refresh_workflow(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
         self.assertIn("reports/epg-source-audit.md", workflow)
+        self.assertIn("reports/bangladesh-epg-source-audit.md", workflow)
+        self.assertIn('M3U4U_XMLTV_URL: ${{ secrets.M3U4U_XMLTV_URL }}', workflow)
+        self.assertIn('BANGLADESH_SOURCE_AUDIT_REPORT = Path("reports/bangladesh-epg-source-audit.md")', COV)
         self.assertIn("tests/test_epg_config.py", workflow)
 
     def test_generator_parses_the_payload_for_each_fetched_source(self):

@@ -117,6 +117,7 @@ EPG_LOCKS = {
 REPORT = Path("reports/epg-coverage.md")
 THREE_PLAYLIST_REPORT = Path("reports/epg-three-playlist-audit.md")
 SOURCE_AUDIT_REPORT = Path("reports/epg-source-audit.md")
+BANGLADESH_SOURCE_AUDIT_REPORT = Path("reports/bangladesh-epg-source-audit.md")
 SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
@@ -828,6 +829,113 @@ def main():
     ]
     SOURCE_AUDIT_REPORT.parent.mkdir(parents=True, exist_ok=True)
     SOURCE_AUDIT_REPORT.write_text("\n".join(source_audit_lines) + "\n", encoding="utf-8")
+
+    # Separate domestic Bangladesh audit: source-wide feed counts must not be
+    # mistaken for verified Bangladesh channel matches.
+    bangladesh_rows = [
+        row for row in rows
+        if row.get("group", "").strip().casefold() == "bangladesh"
+        or re.search(r"\.bd(?:@|$)", row.get("tvg_id", ""), re.I)
+    ]
+    bangladesh_mapped = [row for row in bangladesh_rows if str(row.get("epg_id", "")).strip()]
+    bangladesh_live = [row for row in bangladesh_rows if row.get("status") == "MAPPED"]
+    source_status_map = {
+        str(src): (status, ids, future, programmes, error)
+        for src, status, ids, future, programmes, error in source_status
+    }
+    matched_sources = {}
+    for row in bangladesh_rows:
+        for source in (part.strip() for part in str(row.get("source", "")).split("|")):
+            if not source:
+                continue
+            item = matched_sources.setdefault(source, {"ids": set(), "live": set()})
+            item["ids"].add(row.get("tvg_id", ""))
+            if row.get("status") == "MAPPED":
+                item["live"].add(row.get("tvg_id", ""))
+
+    candidate_sources = [
+        (src, status, ids, future, programmes, error)
+        for src, status, ids, future, programmes, error in source_status
+        if any(token in str(src).casefold() for token in (
+            "rtvbd.tv", "bangladesh", "/bd.xml", "bgdportal", "m3u4u xmltv"
+        ))
+    ]
+    bd_lines = [
+        "# Bangladesh EPG Source Audit",
+        "",
+        f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",
+        "",
+        f"- Active Bangladesh playlist identities: **{len(bangladesh_rows)}**",
+        f"- Identities with a retained source mapping: **{len(bangladesh_mapped)}**",
+        f"- Identities with usable current/future schedules: **{len(bangladesh_live)}**",
+        f"- Identities without a source mapping: **{len(bangladesh_rows) - len(bangladesh_mapped)}**",
+        "",
+        "This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.",
+        "",
+        "## Sources matched to Bangladesh playlist identities",
+        "",
+        "| Source label | Matched Bangladesh IDs | IDs with usable current/future schedules | Source health | Error / note |",
+        "|---|---:|---:|---|---|",
+    ]
+    if matched_sources:
+        for source, item in sorted(matched_sources.items(), key=lambda pair: pair[0].casefold()):
+            health = source_status_map.get(source)
+            health_status = health[0] if health else "NOT SCANNED"
+            error = (health[4] if health else "No current source scan entry")
+            bd_lines.append(
+                f"| {source.replace('|', '\\|')} | {len(item['ids'])} | {len(item['live'])} | {health_status} | {str(error or '-').replace('|', '\\|').replace(chr(10), ' ')} |"
+            )
+    else:
+        bd_lines.append("| none | 0 | 0 | NO VERIFIED MATCH | No configured source currently matches a Bangladesh playlist identity |")
+
+    bd_lines += [
+        "",
+        "## Bangladesh-relevant source health",
+        "",
+        "| Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |",
+        "|---|---|---:|---:|---:|---|",
+    ]
+    if candidate_sources:
+        for src, status, ids, future, programmes, error in candidate_sources:
+            safe_src = str(src).replace("|", "\\|")
+            safe_error = str(error or "-").replace("|", "\\|").replace("\n", " ")
+            bd_lines.append(f"| {status} | {safe_src} | {ids} | {future} | {programmes} | {safe_error} |")
+    else:
+        bd_lines.append("| - | No Bangladesh-specific XMLTV source configured | 0 | 0 | 0 | No current source scan entry |")
+
+    bd_lines += [
+        "",
+        "## Unmapped Bangladesh identities",
+        "",
+        "| Channel | Playlist tvg-id | Mapping status |",
+        "|---|---|---|",
+    ]
+    unmapped_bd = sorted(
+        (row for row in bangladesh_rows if not str(row.get("epg_id", "")).strip()),
+        key=lambda row: (str(row.get("channel", "")).casefold(), str(row.get("tvg_id", ""))),
+    )
+    for row in unmapped_bd[:150]:
+        channel = str(row.get("channel", "")).replace("|", "\\|")
+        tvg_id = str(row.get("tvg_id", "")).replace("|", "\\|")
+        status = str(row.get("status", "")).replace("|", "\\|")
+        bd_lines.append(f"| {channel} | {tvg_id} | {status} |")
+    if not unmapped_bd:
+        bd_lines.append("| none | - | all Bangladesh identities have mappings |")
+    if len(unmapped_bd) > 150:
+        bd_lines.append(f"| _and {len(unmapped_bd) - 150} more_ | - | truncated for readability |")
+
+    bd_lines += [
+        "",
+        "## Matching and source notes",
+        "",
+        "- Domestic Bangladesh channels use exact playlist IDs or explicit aliases only; no fuzzy match to Indian/foreign channels is accepted.",
+        "- The official RTV schedule adapter is monitored here; TLS or parsing failures contribute zero coverage until the source can be fetched securely.",
+        "- M3U4U is included only when the optional M3U4U_XMLTV_URL GitHub Actions secret is configured. Its URL and request details are suppressed in reports.",
+        "- EPG.PW is not fetched into the public build because its current published terms prohibit copying, retransmission, and derivative works. This is a source-specific upstream restriction, not a repository source-register gate.",
+        "",
+    ]
+    BANGLADESH_SOURCE_AUDIT_REPORT.parent.mkdir(parents=True, exist_ok=True)
+    BANGLADESH_SOURCE_AUDIT_REPORT.write_text("\n".join(bd_lines) + "\n", encoding="utf-8")
 
     mapping_by_id = {r["tvg_id"]: r for r in rows if r["tvg_id"]}
     report_lines = [
