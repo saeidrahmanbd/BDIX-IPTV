@@ -6,6 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import generate_epg
+import epg_coverage
 import official_epg_sources
 
 COV = (ROOT / "scripts" / "epg_coverage.py").read_text(encoding="utf-8")
@@ -55,6 +56,18 @@ class EpgConfigTests(unittest.TestCase):
             with patch.object(generate_epg, "MAPPING", mapping), patch.dict(os.environ, {"M3U4U_XMLTV_URL": private_url}):
                 selected = generate_epg.sources_with_mapped_channels([private_url, "https://example.test/unused.xml"])
         self.assertEqual(selected, [private_url])
+
+    def test_source_health_flags_channel_only_and_stale_feeds(self):
+        self.assertEqual(epg_coverage.source_health({"channel-a"}, set(), {}), "NO_PROGRAMMES")
+        self.assertEqual(
+            epg_coverage.source_health({"channel-a"}, set(), {"channel-a": 12}),
+            "NO_CURRENT_FUTURE",
+        )
+        self.assertEqual(
+            epg_coverage.source_health({"channel-a"}, {"channel-a"}, {"channel-a": 12}),
+            "OK",
+        )
+        self.assertEqual(epg_coverage.source_health(set(), set(), {}), "NO_CHANNELS")
 
     def test_private_m3u4u_source_is_available_to_final_generation_without_leaking_its_label(self):
         private_url = "https://m3u4u.com/epg/example-private-feed.xml"
