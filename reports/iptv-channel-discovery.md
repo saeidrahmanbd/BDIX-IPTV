@@ -1,6 +1,6 @@
 # IPTV Channel Discovery
 
-Generated: **2026-10-29T01:17:09.541893+00:00**
+Generated: **2026-10-29T10:55:34.468699+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News and non-Islamic Religious channels are prohibited; Indian Kids and Sports channels are allowed.**
@@ -51,20 +51,18 @@ Generated: **2026-10-29T01:17:09.541893+00:00**
 
 ## Stream verification
 
-- Run timestamp: 2026-10-29T01:17:48+00:00
+- Run timestamp: 2026-10-29T10:56:23+00:00
 - Mode: iptv
 - New entries and discovery queues probed: 56
-- Verified live media responses: 23
-- Primary entries retained but not conclusively verified: 15
-- Dead/invalid entries and unverified backups removed: 18
+- Verified live media responses: 27
+- Primary entries retained but not conclusively verified: 13
+- Dead/invalid entries and unverified backups removed: 16
 - Duplicate discovery entries removed: 0
 - Logo references localized to authentic repository assets: 0
 - Logo references cleared because no authentic local asset was found: 2
 
 ### Stream probe details
-- Retained AMN TV for review — stream could not be conclusively verified (HTTP 503; access/availability could not be confirmed).
 - Retained Disney Channel (India) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained HSTV for review — stream could not be conclusively verified (connection could not be confirmed: TimeoutError).
 - Retained Nick Jr (India) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Nickelodeon (India) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Sonic for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
@@ -77,9 +75,7 @@ Generated: **2026-10-29T01:17:09.541893+00:00**
 - Retained Star Sports 3 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Ten Cricket for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Unite8 Sports 2 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Removed VCV (720p) [Not 24/7] from New Channels — HTTP 404.
 - Retained Vokta TV for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Removed Gyandarshan from New Backup — HTTP 404.
 - Removed Hungama TV from New Backup — backup stream not verified (connection could not be confirmed: URLError).
 - Removed Jalsha Movies from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Pogo from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
@@ -87,7 +83,7 @@ Generated: **2026-10-29T01:17:09.541893+00:00**
 - Removed Star Jalsha from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Star Movies (India) from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Star Sports 2 from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
-- Removed Star Sports 2 from New Backup — backup stream not verified (connection could not be confirmed: URLError).
+- Removed Star Sports 2 from New Backup — HTTP 404.
 - Removed Star Sports Select 1 from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Star Sports Select 2 from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed StarPlus (India) from New Backup — backup stream not verified (connection could not be confirmed: URLError).
@@ -98,9 +94,9 @@ Generated: **2026-10-29T01:17:09.541893+00:00**
 
 ## Final validation
 
-- Run timestamp: 2026-10-29T01:17:48+00:00
+- Run timestamp: 2026-10-29T10:56:23+00:00
 - Validation status: PASS
-- M3U entries parsed: 1159
+- M3U entries parsed: 1161
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - New Channels/New Backup/Backup ordering: passed
