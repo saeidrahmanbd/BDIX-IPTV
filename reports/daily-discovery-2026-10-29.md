@@ -1,14 +1,15 @@
 # Daily IPTV Discovery — 2026-10-29
 
-- **Run timestamp:** 2026-10-29T01:32:59Z
-- **Status:** PARTIAL / BLOCKED — structural checks and targeted cleanup completed; a fresh source scan with live stream probes could not be confirmed for this automation attempt.
+- **Run timestamp:** 2026-10-29T01:34:00Z
+- **Status:** PARTIAL / BLOCKED — current country-feed snapshots were fetched and structural cleanup completed, but full policy evaluation plus live stream probes could not be completed for this automation attempt.
 - **Report freshness:** The published IPTV report timestamped 01:17 UTC and International report timestamped 01:00 UTC are treated as historical runs, not as this run's discovery result.
 - **New candidates accepted in this run:** 0. No unverified stream was added.
 
 ## IPTV-Playlist.m3u
 
 ### Discovery outcome
-- No new channel or backup addition is claimed for this automation attempt.
+- Current source snapshots fetched from `iptv-org/iptv`: `streams/bd.m3u` — 34 records (SHA `aff8e76735cb535243997e2d055b1093d3723094`); `streams/in.m3u` — 1,646 records (SHA `6a01dc66cf91be049dad7f0018981db34738a765`).
+- No new channel or backup addition is claimed for this automation attempt because the full repository policy run and live stream probes were not completed.
 - The previous 01:17 UTC probe report recorded two primary candidates — Star Sports 2 Hindi (HTTP 404) and VCV (HTTP 404) — and 16 backup candidates removed because they were dead or could not be verified (HTTP 403/404 or connection errors). Those are rejected historical candidates, not additions from this run.
 - Two discovery-queue entries currently have no authentic local logo available; their logo attributes remain blank rather than using an external or placeholder logo.
 
@@ -65,4 +66,4 @@ No other International playlist entries were changed by this cleanup.
 
 ## Blockers and next step
 
-The connected GitHub tools can read and commit repository files but do not expose a direct workflow-dispatch or current workflow-run listing action in this session, and the local execution environment cannot reach stream hosts for live probes. A validator change was committed to trigger the repository workflows, but no completed fresh workflow report was observable by this timestamp. Do not treat either older discovery report as the result of this run; accept additions only after the repository workflow produces a new timestamped report with live stream verification and final validation.
+The connected GitHub tools can read and commit repository files but do not expose a direct workflow-dispatch or current workflow-run listing action in this session, and the local execution environment cannot reach stream hosts for live probes. A validator change was committed to trigger the repository workflows, but no completed fresh workflow report was observable by this timestamp. The current country-feed snapshots were therefore used only for source inventory, not as proof that any stream is live or eligible. Do not treat either older discovery report as the result of this run; accept additions only after the repository workflow produces a new timestamped report with live stream verification and final validation.
