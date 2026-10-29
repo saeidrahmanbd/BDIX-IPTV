@@ -427,6 +427,18 @@ def fetch_source(url):
     return ids, future, counts, names
 
 
+def source_health(ids, future_ids, counts):
+    """Distinguish schedule feeds from channel-only or stale XMLTV catalogues."""
+    programme_rows = sum(counts.values())
+    if not ids:
+        return "NO_CHANNELS"
+    if programme_rows == 0:
+        return "NO_PROGRAMMES"
+    if not future_ids:
+        return "NO_CURRENT_FUTURE"
+    return "OK"
+
+
 def fetch_all_sources(source_urls, max_workers=SOURCE_FETCH_WORKERS):
     """Fetch source feeds concurrently and return results in configured order."""
     urls = list(source_urls)
@@ -443,8 +455,8 @@ def fetch_all_sources(source_urls, max_workers=SOURCE_FETCH_WORKERS):
                 data = future.result()
                 ids, future_ids, counts, names = data
                 status = (
-                    source_label(src), "OK", len(ids), len(future_ids),
-                    sum(counts.values()), "",
+                    source_label(src), source_health(ids, future_ids, counts),
+                    len(ids), len(future_ids), sum(counts.values()), "",
                 )
             except Exception as exc:
                 data = (set(), set(), defaultdict(int), defaultdict(set))
@@ -513,9 +525,10 @@ def main():
                     name_hits=set()
                     for name_key in name_keys: name_hits.update(names.get(name_key,set()))
                     src_hits=sorted(name_hits)
-            if src_hits:
+            matched_schedule_ids = [cid for cid in src_hits if counts.get(cid, 0) > 0]
+            if matched_schedule_ids:
                 hit_sources.append(source_label(src))
-                for cid in src_hits:
+                for cid in matched_schedule_ids:
                     if cid not in hits: hits.append(cid)
                     total += counts.get(cid,0)
                     if cid in future: best_live.append(cid); live=True
