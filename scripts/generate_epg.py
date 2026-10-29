@@ -27,7 +27,7 @@ MAPPING = Path("reports/epg-channel-mapping.csv")
 OUTPUT = Path("epg/epg.xml")
 
 # Bound the worst-case wait for a batch of remote XMLTV feeds.
-SOURCE_FETCH_TIMEOUT_SECONDS = 60
+SOURCE_FETCH_TIMEOUT_SECONDS = 90
 SOURCE_FETCH_WORKERS = 8
 
 SOURCES = [
