@@ -63,10 +63,12 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         metadata_pos = last_pos("python scripts/generate_metadata_normalization_report.py")
         freshness_pos = last_pos("python scripts/validate_report_freshness.py")
 
-        self.assertLess(auxiliary_backfill, logo_quality_repair)
+        # Final metadata backfill reports must be regenerated after the last
+        # playlist/logo repairs and safety guard, then before the final audit/gate.
         self.assertLess(logo_quality_repair, protected_restore)
         self.assertLess(protected_restore, change_guard)
-        self.assertLess(change_guard, audit_pos)
+        self.assertLess(change_guard, auxiliary_backfill)
+        self.assertLess(auxiliary_backfill, audit_pos)
         self.assertLess(audit_pos, gate_pos)
         self.assertLess(gate_pos, manifest_pos)
         self.assertLess(manifest_pos, provenance_pos)
