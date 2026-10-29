@@ -1,8 +1,11 @@
 from pathlib import Path
 import re
+import sys
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+import reorganize_international_playlist as international_reorg
 
 
 def playlist_rows(path):
@@ -33,6 +36,16 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
         rows = playlist_rows(ROOT / "IPTV-Playlist.m3u")
         self.assertGreater(len(rows), 1000)
         self.assertFalse([row for row in rows if row["attrs"].get("tvg-logo") == ""])
+
+    def test_foreign_radio_and_vod_names_cannot_be_queued_as_movie_music(self):
+        target, kind, reason = international_reorg.classify(
+            {"tvg-id": "DismarRadioTV.py@SD", "tvg-content": "Music"},
+            "Dismar Radio TV",
+            "Paraguay",
+            "PY",
+        )
+        self.assertIsNone(target)
+        self.assertEqual(reason, "test/VOD/non-TV name")
 
     def test_international_backup_groups_use_the_singular_playlist_contract(self):
         rows = playlist_rows(ROOT / "International-Playlist.m3u")
