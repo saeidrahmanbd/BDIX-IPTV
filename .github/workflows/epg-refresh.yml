@@ -148,13 +148,25 @@ jobs:
           fi
 
           python scripts/epg_coverage.py
-          python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md || true
+          for report in \
+            reports/epg-coverage.md \
+            reports/epg-three-playlist-audit.md \
+            reports/epg-source-audit.md \
+            reports/bangladesh-epg-source-audit.md \
+            reports/epg-unmapped-audit.md \
+            reports/epg-publish-freshness.md \
+            reports/epg-channel-mapping.csv; do
+            if [[ ! -s "$report" ]]; then
+              echo "::error::Required EPG report is missing or empty: $report"
+              exit 1
+            fi
+          done
+          python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md
           python scripts/generate_dashboard.py
           python scripts/validate_report_freshness.py --mode epg
 
-          git add -f epg/epg.xml
           git add assets/dashboard.svg 'reports/Update Report.md' reports/maintenance-report.md
-          git add reports/epg-channel-mapping.csv reports/epg-coverage.md reports/epg-three-playlist-audit.md reports/epg-source-audit.md reports/bangladesh-epg-source-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
+          git add -f epg/epg.xml reports/epg-channel-mapping.csv reports/epg-coverage.md reports/epg-three-playlist-audit.md reports/epg-source-audit.md reports/bangladesh-epg-source-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
           git add -u -- reports
 
           if ! git diff --quiet; then
