@@ -48,7 +48,14 @@ jobs:
           git fetch origin main
           CURRENT_MAIN_SHA="$(git rev-parse FETCH_HEAD)"
           if [[ "${GITHUB_EVENT_NAME}" == "push" && "${GITHUB_SHA}" != "$CURRENT_MAIN_SHA" ]]; then
-            CHANGED_INPUTS="$(git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|BDIX-Playlist\.m3u|International-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/.*\.py|tests/.*\.py|docs/requirements\.txt)
+            CHANGED_INPUTS="$(git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|BDIX-Playlist\.m3u|International-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/.*\.py|tests/.*\.py|docs/requirements\.txt)$' || true)"
+            if [[ -n "$CHANGED_INPUTS" ]]; then
+              echo "::notice::Skipping superseded EPG refresh because newer commits changed EPG inputs or code."
+              printf '%s\n' "$CHANGED_INPUTS"
+              exit 0
+            fi
+            echo "::notice::Continuing despite newer generated-output commits; this run still needs to apply the latest EPG code."
+          fi
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
           python-version: '3.12'
