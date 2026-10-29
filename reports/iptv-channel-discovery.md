@@ -1,12 +1,12 @@
 # IPTV Channel Discovery
 
-Generated: **2026-10-29T01:12:54.634554+00:00**
+Generated: **2026-10-29T01:14:52.348401+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News and non-Islamic Religious channels are prohibited; Indian Kids and Sports channels are allowed.**
 - Permanent denylist: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.
 - Country-group threshold: **5** legitimate primary identities
-- Existing prohibited review-queue rows removed: **0**
+- Existing prohibited review-queue rows removed: **2**
 - New channels: **2**
 - New backups: **16**
 - Rejected/held candidates: **820**
@@ -17,8 +17,8 @@ Generated: **2026-10-29T01:12:54.634554+00:00**
 - Indian news channel is prohibited: 266
 - country not verified: id carries a non-BD/IN country suffix: 27
 - country not verified: id country IN conflicts with BD source feed: 11
-- duplicate stream URL: 360
-- known Indian News or non-Islamic religious brand/category is prohibited: 22
+- duplicate stream URL: 358
+- known Indian News or non-Islamic religious brand/category is prohibited: 24
 - non-Islamic religious channel is prohibited: 107
 - permanently banned channel: 10
 - proxy/worker host: 2
@@ -49,12 +49,17 @@ Generated: **2026-10-29T01:12:54.634554+00:00**
 - Zee Bangla (576p) (India) — http://103.151.60.162:2122/play/a011/index.m3u8?hls
 - Zee Cinema HD (1080p) (India) — http://103.151.60.162:2122/play/a024/index.m3u8?hls
 
+## Existing prohibited review-queue rows removed
+
+- Saam TV
+- Total TV Haryana
+
 ## Stream verification
 
-- Run timestamp: 2026-10-29T01:13:37+00:00
+- Run timestamp: 2026-10-29T01:15:42+00:00
 - Mode: iptv
-- New entries and discovery queues probed: 58
-- Verified live media responses: 26
+- New entries and discovery queues probed: 56
+- Verified live media responses: 24
 - Primary entries retained but not conclusively verified: 14
 - Dead/invalid entries and unverified backups removed: 18
 - Duplicate discovery entries removed: 0
@@ -97,9 +102,9 @@ Generated: **2026-10-29T01:12:54.634554+00:00**
 
 ## Final validation
 
-- Run timestamp: 2026-10-29T01:13:37+00:00
+- Run timestamp: 2026-10-29T01:15:43+00:00
 - Validation status: PASS
-- M3U entries parsed: 1161
+- M3U entries parsed: 1159
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - New Channels/New Backup/Backup ordering: passed
