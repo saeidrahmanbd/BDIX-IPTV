@@ -28,7 +28,7 @@ EPG_PUBLIC_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main
 EPG_PUBLISHED_PATH = Path("epg/epg.xml")
 
 # Bound source-fetch latency while allowing healthy feeds to finish concurrently.
-SOURCE_FETCH_TIMEOUT_SECONDS = 60
+SOURCE_FETCH_TIMEOUT_SECONDS = 90
 SOURCE_FETCH_WORKERS = 8
 
 EPG_ALIASES = {
@@ -112,6 +112,8 @@ EPG_LOCKS = {
     # ATN Bangla UK is a distinct UK service. This narrow lock does not affect
     # ATNBangla.bd or any other domestic Bangladesh identity.
     "ATNBanglaUK.uk": ["6753"],
+    # RTV's official schedule adapter uses this exact XMLTV identity.
+    "RTV.bd": ["RTV.bd"],
 }
 
 REPORT = Path("reports/epg-coverage.md")
@@ -518,8 +520,16 @@ def main():
                     total += counts.get(cid,0)
                     if cid in future: best_live.append(cid); live=True
         old_epg=retained_mapping(is_bangladesh, prev.get("epg_id",""), candidates)
-        if ch["group"]=="Indian Bangla": epg_id=(best_live[0] if best_live else (hits[0] if hits else old_epg))
-        else: epg_id=(best_live[0] if best_live else (hits[0] if hits else old_epg))
+        # Explicit identity locks are curated mappings even when a source is
+        # temporarily unavailable. They do not count as usable schedule coverage.
+        if locked_ids and not old_epg:
+            old_epg = " | ".join(dict.fromkeys(locked_ids))
+        if best_live:
+            epg_id = " | ".join(dict.fromkeys(best_live))
+        elif hits:
+            epg_id = " | ".join(dict.fromkeys(hits))
+        else:
+            epg_id = old_epg
         if live: status="MAPPED"
         elif hits: status="MAPPED_ID_ONLY" if total==0 else "MAPPED_ENDED"
         elif old_epg: status="MAPPED_NOT_CURRENTLY_FOUND"
