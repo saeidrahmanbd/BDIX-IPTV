@@ -1,6 +1,6 @@
 name: International Channel Discovery
 
-# Manual trigger requested: 2026-10-24 discovery refresh
+# Fresh discovery run requested: 2026-10-29
 # Force fresh discovery run: 2026-10-24 19:00 Asia/Dhaka
 # Fresh current-main retry after shared playlist-writer queue fix (2026-10-26).
 on:
