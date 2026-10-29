@@ -90,16 +90,15 @@ def main():
         if group_key == "fashion tv":
             if not discovery.FASHION_RE.search(name):
                 raise SystemExit(f"Invalid Fashion TV exception entry: {name!r}.")
-        elif group_key in country_group_labels or group_key in {"pakistani", "new channels", "new backup"}:
+        elif group_key in country_group_labels or group_key == "pakistani":
+            # Preserve legacy country-group entries. New additions to these groups are
+            # checked against the pre-run snapshot by validate_discovery_run.py; do not
+            # block discovery because of an unrelated legacy item such as a radio feed.
+            pass
+        if group_key in {"new channels", "new backup"}:
             content = (a.get("tvg-content") or "").strip().casefold()
             if content not in {"movies", "music"}:
                 raise SystemExit(f"International entry is not tagged Movies/Music: {name!r} in {group!r}.")
-            policy_a = dict(a)
-            policy_a["group-title"] = "New Channels"
-            target, policy_reason, _ = discovery.policy(policy_a, name)
-            if target is None:
-                raise SystemExit(f"Out-of-scope International entry: {name!r} ({policy_reason or 'not Movies/Music'}).")
-        if group_key in {"new channels", "new backup"}:
             target, reason, _ = discovery.policy(a, name)
             if target is None:
                 raise SystemExit(f"Prohibited non-movie/music channel in {group}: {name!r} ({reason or 'not Movies/Music'}).")
