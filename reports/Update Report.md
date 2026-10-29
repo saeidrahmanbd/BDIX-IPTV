@@ -1,12 +1,12 @@
 # Update Report
 
-_Last generated: **2026-10-29 11:10 UTC**_
+_Last generated: **2026-10-29 17:34 UTC**_
 
-Source playlist SHA-256: **8ff6e086dbbf08eaf0c2a77c43fa9df102e13fdb58c46f1bc4126ed60d8c6a68**
+Source playlist SHA-256: **0b18acde8c29cd30467257abef66790d59bbd07417e3e4e86c1426d2a63f96be**
 
 | Metric | Current |
 |---|---:|
-| Streams | **1159** |
+| Streams | **1161** |
 | Active Channel Identities | **656** |
 | Active Primary Streams | **656** |
 | Bangladesh | **64** |
@@ -28,7 +28,7 @@ Source playlist SHA-256: **8ff6e086dbbf08eaf0c2a77c43fa9df102e13fdb58c46f1bc4126
 - Metadata conflicts (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
 - Same-name / different-ID collisions (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
 - Cross-queue metadata identity variants: **1**
-- Cross-queue same-name / different-ID collisions: **6**
+- Cross-queue same-name / different-ID collisions: **7**
 - Duplicate primary identities: **STALE / UNKNOWN (last saved: 0)**
 - Primary channel-number collisions: **STALE / UNKNOWN (last saved: 0)**
 - Primary entries missing channel numbers: **STALE / UNKNOWN (last saved: 0)**
@@ -63,7 +63,7 @@ Source playlist SHA-256: **8ff6e086dbbf08eaf0c2a77c43fa9df102e13fdb58c46f1bc4126
 | Report | Last generated | Input freshness |
 |---|---|---|
 | Playlist audit | **not available** | **STALE** |
-| EPG coverage / three-playlist inventory | **2026-10-29T11:10:23+00:00** | **PENDING — guide missing or freshness not PASS** |
+| EPG coverage / three-playlist inventory | **2026-10-29T17:34:16+00:00** | **PENDING — guide missing or freshness not PASS** |
 | Stream health | **not available** | **STALE** |
 | Pre-publish gate | **not available** | **STALE** |
 
