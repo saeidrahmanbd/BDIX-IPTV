@@ -29,6 +29,8 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
             ("Sample News Channel", "News"),
             ("Sample Religious Channel", "Religious"),
             ("Network 10", "New Channels"),
+            ("Saam TV", "New Backup"),
+            ("Total TV Haryana", "New Backup"),
             ("Calvary TV", "New Channels"),
             ("Santvani Channel", "New Channels"),
             ("Sharnam TV", "New Channels"),
