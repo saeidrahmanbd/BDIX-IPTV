@@ -1,6 +1,6 @@
 name: IPTV New Channel Discovery
 
-# Fresh discovery run requested: 2026-10-29
+# Fresh discovery run requested: 2026-10-29 01:12 UTC
 # Force fresh discovery run: 2026-10-24 19:00 Asia/Dhaka
 # Policy-test import mismatch resolved; trigger fresh discovery on current main
 # Fresh current-main retry after shared playlist-writer queue fix (2026-10-26).
