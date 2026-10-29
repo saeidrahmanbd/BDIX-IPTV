@@ -285,9 +285,9 @@ def main():
   logo=local_logo(a,cname)
   if is_backup and canonical.get("tvg-logo","").startswith(RAW_BASE) and not logo:logo=canonical["tvg-logo"]
   additions.append([make_extinf(canonical,cname,target,ccode,logo,base),url])
-  if is_backup:backup_rows.append((cname,ccode))
+  if is_backup:backup_rows.append((cname,ccode,url))
   else:
-   new_rows.append((cname,target,ccode))
+   new_rows.append((cname,target,ccode,url))
    per_group[target]+=1
    ident=(a.get("tvg-id") or a.get("channel-id") or key).strip().casefold()
    if ccode in ISO_CODES and counts_toward_country_group(target,ccode) and ident:added_primary_ids[ccode].add(ident)
@@ -296,17 +296,14 @@ def main():
  # plus the entries selected for this run, never every eligible source-feed candidate.
  country_groups=qualified_country_groups(country_primary_ids,added_primary_ids)
  all_blocks=existing+additions; migrated=[]; normalized=[]; filtered_existing=[]
- dynamic_group_to_code={country_group(code).casefold():code for code in ISO_CODES if code not in {"BD","IN","PK"}}
+ addition_urls={url_of(b) for b in additions}
+ queue_groups={"new channels","new backup","new backups"}
  for b in all_blocks:
   a=attrs(b[0]); name=name_of(b); old=a.get("group-title","").strip(); group=old
-  old_key=old.casefold(); code=country_code(a); genre=""
-  if FASHION_RE.search(name) and old_key not in {"backup","backups","new backup","new backups"}:
+  old_key=old.casefold(); genre=""; is_new=url_of(b) in addition_urls
+  if not is_new and FASHION_RE.search(name) and old_key not in {"backup","backups","new backup","new backups"}:
    group="Fashion TV"
-  elif old_key in {"backup","backups"}:
-   group="Backup"
-  elif old_key in {"not playing","test"}:
-   group="Backup"
-  elif old_key in {"new backup","new backups"}:
+  elif old_key in {"new backup","new backups"} and not is_new:
    policy_a=dict(a); policy_a["group-title"]="New Channels"
    base,reason,policy_code=policy(policy_a,name)
    genre=infer_genre(policy_a,name)
@@ -314,53 +311,38 @@ def main():
     filtered_existing.append((name,old,reason or "entry is not confidently classifiable as Movies/Music"))
     continue
    group="New Backup"
-  elif old_key in {"new channels","international","international movies","international music"}:
+  elif old_key=="new channels" and not is_new:
    policy_a=dict(a); policy_a["group-title"]="New Channels"
-   base,reason,policy_code=policy(policy_a,name,allow_legacy_group=(old_key=="international"))
+   base,reason,policy_code=policy(policy_a,name)
    genre=infer_genre(policy_a,name)
    if base is None or not genre:
     filtered_existing.append((name,old,reason or "entry is not confidently classifiable as Movies/Music"))
     continue
    group=primary_target(base,policy_code,country_groups)
-  elif old_key=="pakistani" or old_key in dynamic_group_to_code:
+  elif is_new:
    policy_a=dict(a); policy_a["group-title"]="New Channels"
    base,reason,policy_code=policy(policy_a,name)
    genre=infer_genre(policy_a,name)
    if base is None or not genre:
-    special=special_group(a,name)
-    if special:
-     group=special
-    else:
-     filtered_existing.append((name,old,reason or "country groups permit Movies/Music only"))
-     continue
-   elif old_key=="pakistani":
-    # Pakistan is a fixed country group, but every row there must still be
-    # explicitly and confidently identified as Movies or Music.
-    group="Pakistani"; genre=genre or infer_genre(policy_a,name)
-    if not a.get("tvg-country"):b[0]=set_attr(b[0],"tvg-country","PK")
-   else:
-    group=primary_target(base,policy_code,country_groups)
+    filtered_existing.append((name,old,reason or "new candidate did not pass Movie/Music policy"))
+    continue
+   group="New Backup" if old_key in {"new backup","new backups"} else primary_target(base,policy_code,country_groups)
+  else:
+   # Preserve unrelated existing entries; discovery only edits new candidates
+   # and the two review queues.
+   normalized.append(b)
+   continue
   if group!=old:
    b[0]=set_attr(b[0],"group-title",group)
    migrated.append((name,old,group))
   if genre:
    b[0]=set_content(b[0],genre)
   normalized.append(b)
- # Recompute qualifying country groups from the cleaned playlist before publication.
- cleaned_ids=defaultdict(set)
- for b in normalized:
-  a=attrs(b[0]); name=name_of(b); group=a.get("group-title","").strip(); code=country_code(a)
-  if code in ISO_CODES and counts_toward_country_group(group,code):
-   ident=(a.get("tvg-id") or a.get("channel-id") or norm(name)).strip().casefold()
-   if ident:cleaned_ids[code].add(ident)
- country_groups=qualified_country_groups(cleaned_ids)
- for b in normalized:
-  a=attrs(b[0]); name=name_of(b); old=a.get("group-title","").strip(); code=country_code(a)
-  if old.casefold() in dynamic_group_to_code and code not in country_groups:
-   b[0]=set_attr(b[0],"group-title","New Channels")
-   migrated.append((name,old,"New Channels"))
+ discovery_urls=addition_urls | {url_of(b) for b in normalized if attrs(b[0]).get("group-title","").strip().casefold() in queue_groups}
  logo_refs_repaired=0; logo_refs_removed=0
+
  for b in normalized:
+  if url_of(b) not in discovery_urls:continue
   a=attrs(b[0]); name=name_of(b); old_logo=(a.get("tvg-logo") or "").strip()
   if not old_logo:continue
   new_logo=localize_existing_logo(a,name)
@@ -376,7 +358,7 @@ def main():
  REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Source: `{SOURCE_URL}`",f"- Source records parsed: {len(source)}",f"- Existing playlist records: {len(existing)}",
   f"- Existing logo references localized/repaired: {logo_refs_repaired}",
   f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for any retained dynamic country group.","- Automatic discovery is Movie/Music only for every country; News, Sports, Kids, Documentary/Wildlife, Religious, General/Entertainment and all other categories are rejected.","- New alternate streams are staged in New Backup; curated alternates remain in Backup.","- Out-of-scope discovery entries and noncompliant dynamic country-group rows are removed; identifiable Kids/Sports/Documentary & Wildlife/Religious/Adult entries are routed to their permitted groups.","- Playback was not tested.",f"- New primary channels: {len(new_rows)}",f"- New backup review entries: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Out-of-scope existing entries removed: {len(filtered_existing)}","","## New primary channels",""]
- report += [f"- **{n}** — `{g}` — {c}" for n,g,c in new_rows]; report += ["","## Backup alternates",""]+[f"- **{n}** — {c}" for n,c in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Removed out-of-scope existing entries",""]+[f"- **{n}** — `{g}` — {reason}" for n,g,reason in filtered_existing]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
+ report += [f"- **{n}** — {g} — {c} — {u}" for n,g,c,u in new_rows]; report += ["","## Backup alternates",""]+[f"- **{n}** — {c} — {u}" for n,c,u in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Removed out-of-scope existing entries",""]+[f"- **{n}** — `{g}` — {reason}" for n,g,reason in filtered_existing]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
  # Show the final assigned group in the report, after promotions/consolidation.
  final_group_by_identity={}
  for b in normalized:
