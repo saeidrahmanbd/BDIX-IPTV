@@ -24,7 +24,7 @@ permissions:
 # All playlist writers share one queue to protect main-branch playlist updates.
 # Versioned writer queue isolates new runs from stale v2 runs already queued.
 concurrency:
-  group: iptv-playlist-main-writer-v3
+  group: iptv-playlist-main-writer-v4
   cancel-in-progress: false
   queue: max
 

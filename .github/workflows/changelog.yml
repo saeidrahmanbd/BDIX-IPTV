@@ -12,7 +12,7 @@ permissions:
 
 # Serialize changelog/report writes with the shared main-branch writer queue.
 concurrency:
-  group: iptv-playlist-main-writer-v3
+  group: iptv-playlist-main-writer-v4
   cancel-in-progress: false
 
 jobs:

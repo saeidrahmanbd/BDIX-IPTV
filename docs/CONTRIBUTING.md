@@ -18,7 +18,7 @@ Thanks for helping improve the project.
 When modifying a workflow or script:
 
 1. Verify every referenced script or file exists.
-2. Keep main-branch playlist writers on the shared `iptv-playlist-main-writer-v3` concurrency group.
+2. Keep main-branch playlist writers on the shared `iptv-playlist-main-writer-v4` concurrency group.
 3. Run the relevant tests and pre-publish gate.
 4. Update documentation when policy or category behavior changes.
 5. Do not commit credentials, API keys, private tokens, or session URLs.

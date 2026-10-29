@@ -16,7 +16,7 @@ permissions:
 # All workflows that can write a playlist or shared generated reports use the same queue.
 # Versioned writer queue isolates new runs from stale v2 runs already queued.
 concurrency:
-  group: iptv-playlist-main-writer-v3
+  group: iptv-playlist-main-writer-v4
   cancel-in-progress: false
   queue: max
 

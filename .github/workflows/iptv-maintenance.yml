@@ -49,6 +49,7 @@ on:
       - scripts/reorganize_international_playlist.py
       - scripts/validate_international_playlist.py
       - tests/test_playlist_metadata_repairs.py
+      - tests/test_migrate_logo_unset.py
   schedule:
     - cron: '17 2 * * *'
   workflow_dispatch:
@@ -96,18 +97,22 @@ jobs:
             scripts/discover_international_channels.py \
             scripts/repair_international_playlist.py \
             scripts/reorganize_international_playlist.py \
-            scripts/validate_international_playlist.py
-      # Let the existing normalizer remove repairable empty logo fields before preflight tests.
-      # The maintenance block starts from origin/main and runs the full normalization pipeline again.
-      - name: Normalize repairable IPTV metadata before validation tests
-        run: python scripts/normalize_metadata.py
-      - name: Run playlist metadata and report freshness tests
+            scripts/validate_international_playlist.py \
+            scripts/normalize_metadata.py \
+            scripts/migrate_external_logos_fixed.py \
+            scripts/repair_logo_asset_technical_quality.py \
+            scripts/backfill_cross_playlist_metadata.py \
+            scripts/build_identity_index.py \
+            scripts/stream_health.py \
+            scripts/record_maintenance_history.py \
+            scripts/generate_dashboard.py \
+            scripts/enforce_playlist_attribution.py
+      - name: Run code-level maintenance and report-freshness tests
         run: |
           python -m unittest discover -s tests -p 'test_report_freshness.py'
           python -m unittest discover -s tests -p 'test_pre_publish_gate_logo_paths.py'
           python -m unittest discover -s tests -p 'test_authorized_channel_removals.py'
           python -m unittest discover -s tests -p 'test_maintenance_report_order.py'
-          python -m unittest discover -s tests -p 'test_playlist_metadata_repairs.py'
           python -m unittest discover -s tests -p 'test_metadata_backfill.py'
           python -m unittest discover -s tests -p 'test_reconcile_playlist_consistency.py'
           python -m unittest discover -s tests -p 'test_logo_authenticity_manifest.py'
@@ -117,6 +122,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_iptv_fragile_streams.py'
           python -m unittest discover -s tests -p 'test_language_policy.py'
           python -m unittest discover -s tests -p 'test_country_verification.py'
+          python -m unittest discover -s tests -p 'test_migrate_logo_unset.py'
       - name: Run maintenance
         shell: bash
         run: |
@@ -130,6 +136,47 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # ------------------------------------------------------------------
+          # Ordering contract (enforced by tests/test_maintenance_report_order.py)
+          #   1. snapshots           (once per attempt)
+          #   2. run_mutations       (every step that can change a playlist or logo asset)
+          #   3. change guard        (after the LAST mutator, before any report)
+          #   4. audit + gate        (final bytes; statuses are kept, never discarded)
+          #   5. reports             (each written once, from the final bytes)
+          #   6. freshness check     (once, after every fingerprinted report)
+          #   7. commit
+          # Mutators that also write a fingerprinted report (iptv_metadata_backfill,
+          # backfill_cross_playlist_metadata, repair_logo_asset_technical_quality)
+          # run LAST in the mutation block so their report matches the final bytes.
+          # ------------------------------------------------------------------
+          run_mutations() {
+            python scripts/normalize_metadata.py
+            python scripts/sort_playlists.py IPTV-Playlist.m3u
+            python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
+            if grep -Eiq 'group-title="New"' IPTV-Playlist.m3u; then echo '::error::Forbidden staging playlist category detected after normalization.'; exit 1; fi
+            python scripts/country_verification.py validate IPTV-Playlist.m3u
+            python scripts/maintenance_helpers.py invalidate-bad-logos
+            python scripts/migrate_external_logos_fixed.py
+            # Restore protected Backup/Not Playing records and apply authorized removals before any
+            # step reads the IPTV playlist as a metadata source (backfill_cross, reorganize).
+            python scripts/restore_protected_review.py
+            # reorganize_international_playlist.py reads tvg-country/tvg-language, so the
+            # cross-playlist backfill must run before it (data dependency, not a report).
+            python scripts/backfill_cross_playlist_metadata.py
+            python scripts/reconcile_playlist_consistency.py
+            python scripts/reorganize_international_playlist.py
+            python scripts/enforce_playlist_attribution.py International-Playlist.m3u
+            python scripts/validate_international_playlist.py
+            python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
+            # Protected Backup/Not Playing records are restored after every step that may rewrite them.
+            python scripts/restore_protected_review.py
+            cp /tmp/bdix-playlist-protected.m3u BDIX-Playlist.m3u
+            # Report-coupled mutators run LAST so their fingerprinted reports match the final bytes.
+            python scripts/iptv_metadata_backfill.py
+            python scripts/backfill_cross_playlist_metadata.py
+            python scripts/repair_logo_asset_technical_quality.py --fix
+            python scripts/maintenance_helpers.py verify-no-unauthorized-removals
+          }
           for attempt in 1 2 3; do
             git fetch origin main
             git reset --hard origin/main
@@ -139,43 +186,16 @@ jobs:
             python scripts/maintenance_helpers.py snapshot
             rm -rf fixed_output
             echo 'Non-destructive maintenance mode: using current repair/validation pipeline.'
-            python scripts/normalize_metadata.py
-            python scripts/sort_playlists.py IPTV-Playlist.m3u
-            python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
-            if grep -Eiq 'group-title="New"' IPTV-Playlist.m3u; then echo '::error::Forbidden staging playlist category detected after normalization.'; exit 1; fi
-            python scripts/country_verification.py validate IPTV-Playlist.m3u
-            python scripts/maintenance_helpers.py invalidate-bad-logos
-            python scripts/migrate_external_logos_fixed.py
-            python scripts/repair_logo_asset_technical_quality.py --fix
-            python scripts/generate_logo_authenticity_manifest.py
-            python scripts/generate_logo_repair_summary.py
-            python scripts/restore_protected_review.py
-            python scripts/iptv_metadata_backfill.py
-            python scripts/maintenance_helpers.py verify-no-unauthorized-removals
-            python scripts/stream_health.py
-            python scripts/report_iptv_fragile_streams.py
+            run_mutations
             set +e
             python scripts/audit_playlist.py
             AUDIT_STATUS=$?
-            python scripts/build_identity_index.py
-            python scripts/stream_health.py
-            HEALTH_STATUS=$?
-            python scripts/stream_risk_review.py
-            if [ ! -s reports/stream-health.md ]; then HEALTH_STATUS=2; fi
             python scripts/pre_publish_gate.py
             GATE_STATUS=$?
             set -e
-            if [ "$GATE_STATUS" -ne 0 ]; then
-              echo '::warning::Pre-publish gate found issues; running automatic correction pass before failing.'
-              python scripts/normalize_metadata.py || true
-              python scripts/sort_playlists.py IPTV-Playlist.m3u || true
-              python scripts/final_playlist_hardening.py IPTV-Playlist.m3u || true
-              python scripts/maintenance_helpers.py invalidate-bad-logos-correction
-              python scripts/migrate_external_logos_fixed.py || true
-              python scripts/repair_logo_asset_technical_quality.py --fix || true
-              python scripts/generate_logo_authenticity_manifest.py || true
-              python scripts/generate_logo_repair_summary.py || true
-              python scripts/restore_protected_review.py
+            if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
+              echo '::warning::Audit or pre-publish gate found issues; running one automatic correction pass (same mutation sequence, failures not suppressed).'
+              run_mutations
               set +e
               python scripts/audit_playlist.py
               AUDIT_STATUS=$?
@@ -183,71 +203,21 @@ jobs:
               GATE_STATUS=$?
               set -e
             fi
-            python scripts/maintenance_helpers.py verify-no-unauthorized-removals
-            python scripts/iptv_metadata_backfill.py
-            python scripts/maintenance_helpers.py verify-no-unauthorized-removals
-            set +e
-            python scripts/audit_playlist.py
-            AUDIT_STATUS=$?
-            python scripts/pre_publish_gate.py
-            GATE_STATUS=$?
-            set -e
+            # Data-level metadata assertions run against the final playlist bytes.
+            python -m unittest discover -s tests -p 'test_playlist_metadata_repairs.py'
+
+            # Reports: each is written exactly once, from the final playlist bytes.
+            python scripts/stream_health.py
+            if [ ! -s reports/stream-health.md ]; then echo '::error::reports/stream-health.md is missing or empty.'; exit 1; fi
+            python scripts/report_iptv_fragile_streams.py
+            python scripts/stream_risk_review.py
+            python scripts/build_identity_index.py
+            python scripts/generate_logo_authenticity_manifest.py
+            python scripts/generate_logo_repair_summary.py
+            python scripts/generate_logo_provenance_review.py
+            python scripts/generate_metadata_normalization_report.py
             python scripts/record_maintenance_history.py
-            python scripts/generate_logo_authenticity_manifest.py
-            python scripts/generate_logo_repair_summary.py
-            python scripts/generate_logo_provenance_review.py
-            python scripts/generate_metadata_normalization_report.py
-            python scripts/report_iptv_fragile_streams.py
-            python scripts/stream_risk_review.py
-            python scripts/stream_health.py
             python scripts/generate_dashboard.py
-            if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
-              echo "::error::Audit or pre-publish gate still reports blocking issues after the correction pass."
-              echo "Audit status: $AUDIT_STATUS"
-              echo "Pre-publish gate status: $GATE_STATUS"
-              echo "The strict stream-preservation guard passed, but this playlist will not be published until validation is clean."
-              exit 1
-            fi
-            python scripts/record_maintenance_history.py --refresh
-            python scripts/generate_dashboard.py
-            cp /tmp/bdix-playlist-protected.m3u BDIX-Playlist.m3u
-
-            # All playlist mutations are completed before the final report-generation pass.
-            python scripts/backfill_cross_playlist_metadata.py
-            python scripts/reconcile_playlist_consistency.py
-            python scripts/reorganize_international_playlist.py
-            python scripts/enforce_playlist_attribution.py International-Playlist.m3u
-            python scripts/validate_international_playlist.py
-            python scripts/enforce_playlist_attribution.py IPTV-Playlist.m3u
-            python scripts/iptv_metadata_backfill.py
-            python scripts/backfill_cross_playlist_metadata.py
-            python scripts/repair_logo_asset_technical_quality.py --fix
-            # Logo repair may touch protected review groups; restore them before the byte-for-byte guard.
-            python scripts/restore_protected_review.py
-            python scripts/maintenance_helpers.py verify-no-unauthorized-removals
-
-            # Refresh reports whose fingerprints depend on the final playlist bytes.
-            # These scripts must run after the last logo repair and protected-review restoration.
-            python scripts/iptv_metadata_backfill.py
-            python scripts/backfill_cross_playlist_metadata.py
-            python scripts/repair_logo_asset_technical_quality.py
-
-            # Validate and regenerate every fingerprinted report from the final playlist state.
-            set +e
-            python scripts/audit_playlist.py
-            AUDIT_STATUS=$?
-            python scripts/pre_publish_gate.py
-            GATE_STATUS=$?
-            set -e
-            python scripts/stream_health.py
-            python scripts/report_iptv_fragile_streams.py
-            python scripts/stream_risk_review.py
-            python scripts/generate_logo_authenticity_manifest.py
-            python scripts/generate_logo_repair_summary.py
-            python scripts/generate_logo_provenance_review.py
-            python scripts/generate_metadata_normalization_report.py
-            python scripts/generate_dashboard.py
-            python scripts/record_maintenance_history.py --refresh
             python scripts/validate_report_freshness.py --mode generated
             if [ "$AUDIT_STATUS" -ne 0 ] || [ "$GATE_STATUS" -ne 0 ]; then
               echo "::error::Final audit or pre-publish gate reports blocking issues."
