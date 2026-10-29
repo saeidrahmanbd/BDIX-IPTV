@@ -1,6 +1,14 @@
 name: Daily Xtream Health Check
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/check-xtream.yml"
+      - "xtream-main/**"
+      - "xtream-bdix/**"
+      - "IPTV-Playlist.m3u"
+      - "BDIX-Playlist.m3u"
   schedule:
     - cron: "0 1 * * *" # 07:00 Asia/Dhaka (UTC+6)
   workflow_dispatch:
@@ -76,20 +84,53 @@ jobs:
                   if playback_status not in (200, 206):
                       raise SystemExit(f"{name}: playback endpoint failed")
               else:
-                  opener = urllib.request.build_opener(urllib.request.HTTPRedirectHandler())
+                  # Inspect the gateway's first redirect without following it. The
+                  # upstream source may itself redirect to a CDN or tokenized URL.
+                  class NoRedirect(urllib.request.HTTPRedirectHandler):
+                      def redirect_request(self, req, fp, code, msg, headers, newurl):
+                          return None
+                  opener = urllib.request.build_opener(NoRedirect)
                   try:
                       with opener.open(req, timeout=30) as r:
                           playback_status = r.status
-                          final_url = r.geturl()
+                          location = r.headers.get("Location", "")
                   except urllib.error.HTTPError as e:
                       playback_status = e.code
-                      final_url = e.geturl()
+                      location = e.headers.get("Location", "")
                   expected = urllib.parse.urlsplit(source)
-                  actual = urllib.parse.urlsplit(final_url)
-                  matches = (actual.scheme.lower() == expected.scheme.lower() and (actual.hostname or '').lower() == (expected.hostname or '').lower() and actual.path == expected.path and actual.query == expected.query)
-                  print(f"{name} playback: HTTP={playback_status} redirected_to_source={matches} upstream_host={actual.hostname or 'none'}")
-                  if playback_status not in (200, 206) or not matches:
-                      raise SystemExit(f"{name}: playback endpoint did not reach direct source")
+                  actual = urllib.parse.urlsplit(location)
+                  def effective_port(parts):
+                      return parts.port or (80 if parts.scheme.lower() == "http" else 443 if parts.scheme.lower() == "https" else None)
+                  matches = (
+                      actual.scheme.lower() == expected.scheme.lower()
+                      and (actual.hostname or "").lower() == (expected.hostname or "").lower()
+                      and effective_port(actual) == effective_port(expected)
+                      and actual.path == expected.path
+                      and actual.query == expected.query
+                  )
+                  print(f"{name} playback route: HTTP={playback_status} redirected_to_source={matches} upstream_host={actual.hostname or 'none'}")
+                  if playback_status != 302 or not matches:
+                      raise SystemExit(f"{name}: playback endpoint did not redirect to the declared direct source")
+
+                  # Now probe the declared source separately, following its own
+                  # redirects (for example, to a CDN) and requesting only a byte.
+                  source_req = urllib.request.Request(
+                      source,
+                      headers={"User-Agent": "BDIX-IPTV-Daily-Xtream-Check/1.0", "Range": "bytes=0-0"}
+                  )
+                  try:
+                      with urllib.request.urlopen(source_req, timeout=30) as r:
+                          source_status = r.status
+                          final_url = r.geturl()
+                  except urllib.error.HTTPError as e:
+                      source_status = e.code
+                      final_url = e.geturl()
+                  except (urllib.error.URLError, TimeoutError, OSError) as e:
+                      raise SystemExit(f"{name}: direct source probe failed ({type(e).__name__})")
+                  final_host = urllib.parse.urlsplit(final_url).hostname or "none"
+                  print(f"{name} direct source: HTTP={source_status} final_host={final_host}")
+                  if source_status not in (200, 206):
+                      raise SystemExit(f"{name}: direct source did not return a playable HTTP response")
 
           for name, (host, main_proxy) in GATEWAYS.items():
               check(name, host, main_proxy)
