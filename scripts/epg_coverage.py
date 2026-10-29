@@ -28,7 +28,7 @@ EPG_PUBLIC_URL = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main
 EPG_PUBLISHED_PATH = Path("epg/epg.xml")
 
 # Bound source-fetch latency while allowing healthy feeds to finish concurrently.
-SOURCE_FETCH_TIMEOUT_SECONDS = 20
+SOURCE_FETCH_TIMEOUT_SECONDS = 60
 SOURCE_FETCH_WORKERS = 8
 
 EPG_ALIASES = {
@@ -116,11 +116,18 @@ EPG_LOCKS = {
 
 REPORT = Path("reports/epg-coverage.md")
 THREE_PLAYLIST_REPORT = Path("reports/epg-three-playlist-audit.md")
+SOURCE_AUDIT_REPORT = Path("reports/epg-source-audit.md")
 SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
     "https://iptv-epg.org/files/epg-in.xml.gz",
+    # Additional regional sources also used by the mapping-discovery pass.
+    "https://epg.lat/files/in.xml.gz",
+    "https://epg.lat/files/us.xml.gz",
+    "https://www.free-epg.de/api/epg/in.xml.gz",
+    "https://www.free-epg.de/api/epg/us.xml.gz",
+    "https://www.open-epg.com/files/india.xml.gz",
     # Supplemental country guides for international playlist regions improve schedule coverage.
     "https://iptv-epg.org/files/epg-ar.xml.gz",
     "https://iptv-epg.org/files/epg-bg.xml.gz",
@@ -793,6 +800,34 @@ def main():
     ]
     lines += ["", "## Source Playlist Fingerprints", "", *source_fingerprints, ""]
     REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    source_audit_lines = [
+        "# EPG Source Health Audit",
+        "",
+        f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",
+        "",
+        "This is a runtime availability and schedule-coverage report, not a permission gate. The source-review register is advisory and does not block discovery, mapping, generation, or publication.",
+        "",
+        "| Status | Source | Channel IDs | Current/future IDs | Eligible programme rows | Error / note |",
+        "|---|---|---:|---:|---:|---|",
+    ]
+    for src, status, ids, future, programmes, error in source_status:
+        safe_src = str(src).replace("|", "\\|")
+        safe_error = (str(error).replace("|", "\\|").replace("\\n", " ") if error else "-")
+        source_audit_lines.append(
+            f"| {status} | {safe_src} | {ids} | {future} | {programmes} | {safe_error} |"
+        )
+    source_audit_lines += [
+        "",
+        "## Source handling notes",
+        "",
+        "- M3U4U is optional and is read only from the GitHub Actions secret named M3U4U_XMLTV_URL. Reports use a generic source label; the personalized URL and fetch errors are never logged.",
+        "- EPG.PW is not ingested into the public guide because its published terms prohibit copying/retransmission and limit use to personal use. This is a source-specific constraint, not a blanket exclusion of third-party sources.",
+        "- Bangladesh schedule mappings remain exact-ID/explicit-alias only. An official schedule source that fails TLS or parsing is recorded as failed and contributes no programme coverage.",
+        "",
+    ]
+    SOURCE_AUDIT_REPORT.parent.mkdir(parents=True, exist_ok=True)
+    SOURCE_AUDIT_REPORT.write_text("\\n".join(source_audit_lines) + "\\n", encoding="utf-8")
 
     mapping_by_id = {r["tvg_id"]: r for r in rows if r["tvg_id"]}
     report_lines = [
