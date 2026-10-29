@@ -1,15 +1,15 @@
 # IPTV Channel Discovery
 
-Generated: **2026-10-29T01:10:51.053764+00:00**
+Generated: **2026-10-29T01:12:54.634554+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News and non-Islamic Religious channels are prohibited; Indian Kids and Sports channels are allowed.**
 - Permanent denylist: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.
 - Country-group threshold: **5** legitimate primary identities
 - Existing prohibited review-queue rows removed: **0**
-- New channels: **3**
+- New channels: **2**
 - New backups: **16**
-- Rejected/held candidates: **819**
+- Rejected/held candidates: **820**
 - Country policy: only candidates verified as BD/IN (valid `.bd`/`.in` id, or repository-mapping evidence when the id is missing/malformed) are queued; conflicting or unverifiable candidates are held.
 
 ## Rejection reasons
@@ -18,7 +18,7 @@ Generated: **2026-10-29T01:10:51.053764+00:00**
 - country not verified: id carries a non-BD/IN country suffix: 27
 - country not verified: id country IN conflicts with BD source feed: 11
 - duplicate stream URL: 360
-- known Indian News or non-Islamic religious brand/category is prohibited: 21
+- known Indian News or non-Islamic religious brand/category is prohibited: 22
 - non-Islamic religious channel is prohibited: 107
 - permanently banned channel: 10
 - proxy/worker host: 2
@@ -27,7 +27,6 @@ Generated: **2026-10-29T01:10:51.053764+00:00**
 
 ## New Channels
 
-- Network 10 (720p) (India) — https://mumbai-edge.smartplaytv.in/Network10/index.m3u8
 - Star Sports 2 Hindi (720p) (India) — https://tvsen5.aynaott.com/cXPB2LKkErN9/index.m3u8
 - VCV (720p) [Not 24/7] (India) — https://5a1178b42cc03.streamlock.net/8210/8210/playlist.m3u8
 
@@ -52,7 +51,7 @@ Generated: **2026-10-29T01:10:51.053764+00:00**
 
 ## Stream verification
 
-- Run timestamp: 2026-10-29T01:11:33+00:00
+- Run timestamp: 2026-10-29T01:13:37+00:00
 - Mode: iptv
 - New entries and discovery queues probed: 58
 - Verified live media responses: 26
@@ -87,7 +86,7 @@ Generated: **2026-10-29T01:10:51.053764+00:00**
 - Removed Star Jalsha from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Star Movies (India) from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Star Sports 2 from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
-- Removed Star Sports 2 from New Backup — HTTP 404.
+- Removed Star Sports 2 from New Backup — backup stream not verified (connection could not be confirmed: URLError).
 - Removed Star Sports Select 1 from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Star Sports Select 2 from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed StarPlus (India) from New Backup — backup stream not verified (connection could not be confirmed: URLError).
@@ -98,7 +97,7 @@ Generated: **2026-10-29T01:10:51.053764+00:00**
 
 ## Final validation
 
-- Run timestamp: 2026-10-29T01:11:33+00:00
+- Run timestamp: 2026-10-29T01:13:37+00:00
 - Validation status: PASS
 - M3U entries parsed: 1161
 - Malformed EXTINF/URL pairs: 0
