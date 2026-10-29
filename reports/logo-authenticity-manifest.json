@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-29T01:09:56.349420+00:00",
+  "generated_at_utc": "2026-10-29T01:11:20.581987+00:00",
   "status_definitions": {
     "official_verified": "Verified asset from the broadcaster's official source.",
     "third_party_verified": "Authentic asset confirmed from a reliable, attributable third-party source.",
@@ -12,7 +12,7 @@
     "International-Playlist.m3u": 3272
   },
   "source_sha256_by_playlist": {
-    "IPTV-Playlist.m3u": "7c57b2dbad3623ad89a121f7057a397345a3af5ad8df81a4acc1ef9c643c117b",
+    "IPTV-Playlist.m3u": "195514c1ddf43040304cc5ab111ee77a67da0af375639ec9c8edc0cfef53443c",
     "BDIX-Playlist.m3u": "596c7c069bed399dc8e5029090b788b7421ac82a315c5ac55b8caf1b82ff529d",
     "International-Playlist.m3u": "ae59ac5f4afcacc3e035b9beea1d3649af50aa6b2bd2958dd7660c19707e5e6f"
   },
@@ -14094,7 +14094,7 @@
       "channel_name": "Travelxp",
       "tvg_id": "Travelxp.in@4KHDR",
       "channel_id": "Travelxp.in@4KHDR",
-      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travelxp-4k-hdr-2160p-geo-blocked.png",
+      "logo": "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travelxp.png",
       "status": "needs_review",
       "registry_match": "none",
       "source_url": "",
