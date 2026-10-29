@@ -5312,8 +5312,6 @@ https://stream.eleden.com/livelax/ngrp:livelax_all/playlist.m3u8
 https://media.streambrothers.com:1936/8014/8014/playlist.m3u8
 #EXTINF:-1 tvg-id="LookThoongTV.la@SD" tvg-country="LA" tvg-content="Music" group-title="New Channels" tvg-name="Look Thoong TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/look-thoong-tv-2c41090ebc.png",Look Thoong TV
 https://livefta.malimarcdn.com/ftaedge00/lookthoongtv.sdp/playlist.m3u8
-#EXTINF:-1 tvg-id="LosAngelesTVRadio.py@SD" tvg-content="Music" group-title="New Channels" tvg-name="Los Angeles TV Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/los-angeles-tv-radio-f2b02e3ff0.jpg",Los Angeles TV Radio
-https://stmv6.voxtvhd.com.br/losangeles/losangeles/playlist.m3u8
 #EXTINF:-1 tvg-id="LoveTV.mk@SD" tvg-country="MK" tvg-content="Music" group-title="New Channels" tvg-name="Love TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/love-tv-de27ad2005.png",Love TV
 https://stream.nasatv.com.mk/lovetv/hls/lovetv_live.m3u8
 #EXTINF:-1 tvg-id="LRTKlasika.lt@SD" tvg-country="LT" tvg-content="Music" group-title="New Channels" tvg-name="LRT Klasika" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/lrt-klasika-b5a707eccf.png",LRT Klasika
@@ -5374,28 +5372,6 @@ https://live21.bozztv.com/akamaissh101/ssh101/pantallaclasics/playlist.m3u8
 https://streamlov.alsolnet.com/planet1009fm/live/playlist.m3u8
 #EXTINF:-1 tvg-id="PlayTV.cm@SD" tvg-content="Music" group-title="New Channels" tvg-name="Play TV (Cameroon)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/play-tv-cameroon-e5f96f7b9f.png",Play TV (Cameroon)
 http://connectiktv.ddns.net:5000/playtv/@playtv/playlist.m3u8
-#EXTINF:-1 tvg-id="RadioBonita1067.ec@SD" tvg-content="Music" group-title="New Channels" tvg-name="Radio Bonita 106.7" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radio-bonita-106-7-682841902c.png",Radio Bonita 106.7
-https://cloudvideo.servers10.com:8081/8154/index.m3u8
-#EXTINF:-1 tvg-id="RadioChisinau.md@SD" tvg-content="Music" group-title="New Channels" tvg-name="Radio Chisinau" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radio-chisinau-062a77577c.svg",Radio Chisinau
-https://radiochisinau.md/hls/RChisinau.m3u8
-#EXTINF:-1 tvg-id="RadioColmenar925FM.py@SD" tvg-content="Music" group-title="New Channels" tvg-name="Radio Colmenar 92.5 FM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radio-colmenar-92-5-fm-3038f160f1.jpg",Radio Colmenar 92.5 FM
-https://tvdatta.com:3041/live/colmenarlive.m3u8
-#EXTINF:-1 tvg-id="RadioCuencaEstereo.ec@SD" tvg-content="Music" group-title="New Channels" tvg-name="Radio Cuenca Estéreo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radio-cuenca-estereo-18a370b3aa.png",Radio Cuenca Estéreo
-https://eu1.servers10.com:8081/8074/index.m3u8
-#EXTINF:-1 tvg-id="RADIODISCOuntTV.ch@SD" tvg-country="CH" tvg-content="Music" group-title="New Channels" tvg-name="Radio Discount TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radio-discount-tv-1426f09ea0.png",Radio Discount TV
-https://585b674743bbb.streamlock.net/9030/9030/playlist.m3u8
-#EXTINF:-1 tvg-id="RadioIdeal.hn@SD" tvg-content="Music" group-title="New Channels" tvg-name="Radio Ideal" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radio-ideal-84141fffc5.png",Radio Ideal
-https://www.idealfm104-7.com/hls/0/stream.m3u8
-#EXTINF:-1 tvg-id="RadioMoldovaMuzical.md@SD" tvg-content="Music" group-title="New Channels" tvg-name="Radio Moldova Muzical" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radio-moldova-muzical-35aecbf252.png",Radio Moldova Muzical
-https://radiolive.trm.md:8001/hls_rmm/muzical.m3u8
-#EXTINF:-1 tvg-id="RadioMonumentalTV.ec@SD" tvg-content="Music" group-title="New Channels" tvg-name="Radio Monumental TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radio-monumental-tv-2ddf9de343.png",Radio Monumental TV
-https://cloud37.ecuatel.com/monumentaltv/live/manifest.m3u8
-#EXTINF:-1 tvg-id="RadioSanCristobal887FM.py@SD" tvg-content="Music" group-title="New Channels" tvg-name="Radio San Cristóbal 88.7 FM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radio-san-cristobal-88-7-fm-e501f4b41d.png",Radio San Cristóbal 88.7 FM
-https://video.wilohosting.com:19360/sancristobalfm/sancristobalfm.m3u8
-#EXTINF:-1 tvg-id="RadioSWHTV.lv@SD" tvg-country="LV" tvg-content="Music" group-title="New Channels" tvg-name="Radio SWH TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radio-swh-tv-77045b9501.png",Radio SWH TV
-https://00ff00.latnet.media/edge/swh_tv.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="RadioTeleHit.ht@SD" tvg-content="Music" group-title="New Channels" tvg-name="Radio Tele Hit" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/radio-tele-hit-728b0cf687.png",Radio Tele Hit
-https://59d39900ebfb8.streamlock.net/RadioTelehit/RadioTelehit/playlist.m3u8
 #EXTINF:-1 tvg-id="RHTGuadeloupe.gp@SD" tvg-content="Music" group-title="New Channels" tvg-name="RHT Guadeloupe" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rht-guadeloupe-fb3a2cf7e4.png",RHT Guadeloupe
 https://edge12.vedge.infomaniak.com/livecast/ik:livehautetension/manifest.m3u8
 #EXTINF:-1 tvg-id="RTLGold.lu@SD" tvg-content="Music" group-title="New Channels" tvg-name="RTL Gold (Luxembourg)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rtl-gold-luxembourg-ba9a8aa3f0.png",RTL Gold (Luxembourg)
@@ -5434,8 +5410,6 @@ https://cdn10jtedge.indihometv.com/atm/DASH/thrill/manifest.mpd
 https://hls-1zdhtxpm-livepush.akamaized.net/live_cdn/nsM12Xw0C1xXdJ/em0Wx71z-ec6EWJb/rewind-3600.m3u8
 #EXTINF:-1 tvg-id="TMA.gp@SD" tvg-content="Music" group-title="New Channels" tvg-name="TMA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tma-60ef97c49c.png",TMA
 http://hls.tmacaraibes.com/live/index.m3u8
-#EXTINF:-1 tvg-id="TodayRadio.lu@SD" tvg-content="Music" group-title="New Channels" tvg-name="Today Radio" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/today-radio-1870b5f533.png",Today Radio
-https://stream.rtl.lu/data/live/tele/rtltodayradio/playlist.m3u8
 #EXTINF:-1 tvg-id="TopEstradaTV.mk@SD" tvg-country="MK" tvg-content="Music" group-title="New Channels" tvg-name="TopEstrada TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/topestrada-tv-bae545df77.png",TopEstrada TV
 http://live.topestrada.com/live/topestrada/playlist.m3u8
 #EXTINF:-1 tvg-id="TropiQ997FM.pa@SD" tvg-content="Music" group-title="New Channels" tvg-name="Tropi Q 99.7 FM" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tropi-q-99-7-fm-8237820170.png",Tropi Q 99.7 FM
@@ -5460,8 +5434,6 @@ https://59ef525c24caa.streamlock.net/videotour/videotour/playlist.m3u8
 https://59ef525c24caa.streamlock.net/vmtv/tvvintage/playlist.m3u8
 #EXTINF:-1 tvg-id="VMLatino.cr@SD" tvg-content="Music" group-title="New Channels" tvg-name="VM Latino" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vm-latino-945653cc05.png",VM Latino
 http://45.163.139.42:8000/play/a03d/index.m3u8
-#EXTINF:-1 tvg-id="VoiceOverRadioTV.cr@SD" tvg-content="Music" group-title="New Channels" tvg-name="VoiceOver Radio TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/voiceover-radio-tv-0b55517609.png",VoiceOver Radio TV
-https://cloudvideo.servers10.com:8081/8198/index.m3u8
 #EXTINF:-1 tvg-id="VosyTV.ec@SD" tvg-content="Music" group-title="New Channels" tvg-name="Vos y TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vos-y-tv-d82c272b3d.png",Vos y TV
 https://cloud37.ecuatel.com/vostv/live/manifest.m3u8
 #EXTINF:-1 tvg-id="YesMoviesAction.il@SD" tvg-name="Yes Movies Action (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/yes-movies-action-1080p.png" tvg-country="IL" channel-id="YesMoviesAction.il@SD" group-title="New Channels" tvg-content="Movies",Yes Movies Action (1080p)
