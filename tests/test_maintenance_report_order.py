@@ -1,4 +1,5 @@
 """Regression tests for maintenance order and workflow ownership boundaries."""
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -10,6 +11,23 @@ from playlist_order_policy import should_check_alphabetical_order
 
 
 class MaintenanceReportOrderTests(unittest.TestCase):
+    def test_all_main_branch_writers_share_one_concurrency_group(self):
+        expected = "iptv-playlist-main-writer-v3"
+        writer_workflows = (
+            ".github/workflows/iptv-maintenance.yml",
+            ".github/workflows/bdix-playlist-update.yml",
+            ".github/workflows/new-channel-discovery.yml",
+            ".github/workflows/international-channel-discovery.yml",
+            ".github/workflows/playlist-logo-localization.yml",
+            ".github/workflows/changelog.yml",
+        )
+        for relative in writer_workflows:
+            with self.subTest(workflow=relative):
+                source = (ROOT / relative).read_text(encoding="utf-8")
+                match = re.search(r"(?m)^  group:\\s*([^\\s#]+)", source)
+                self.assertIsNotNone(match, f"{relative}: missing top-level concurrency group")
+                self.assertEqual(match.group(1), expected, f"{relative}: writer queue mismatch")
+
     def test_review_queue_order_is_not_an_automatic_blocker(self):
         self.assertFalse(should_check_alphabetical_order("Backup"))
         self.assertFalse(should_check_alphabetical_order("Not Playing"))
