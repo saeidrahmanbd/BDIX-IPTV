@@ -338,6 +338,21 @@ def main():
   if genre:
    b[0]=set_content(b[0],genre)
   normalized.append(b)
+ # Apply the established five-channel threshold only to dynamic country groups.
+ # Entries are preserved and moved to New Channels when their country group falls below threshold.
+ dynamic_group_to_code={country_group(code).casefold():code for code in ISO_CODES if code not in {"BD","IN","PK"}}
+ cleaned_ids=defaultdict(set)
+ for b in normalized:
+  a=attrs(b[0]); name=name_of(b); group=a.get("group-title","").strip(); code=country_code(a)
+  if code in ISO_CODES and counts_toward_country_group(group,code):
+   ident=(a.get("tvg-id") or a.get("channel-id") or norm(name)).strip().casefold()
+   if ident:cleaned_ids[code].add(ident)
+ country_groups=qualified_country_groups(cleaned_ids)
+ for b in normalized:
+  a=attrs(b[0]); name=name_of(b); old=a.get("group-title","").strip(); code=country_code(a)
+  if old.casefold() in dynamic_group_to_code and code not in country_groups:
+   b[0]=set_attr(b[0],"group-title","New Channels")
+   migrated.append((name,old,"New Channels"))
  discovery_urls=addition_urls | {url_of(b) for b in normalized if attrs(b[0]).get("group-title","").strip().casefold() in queue_groups}
  logo_refs_repaired=0; logo_refs_removed=0
 
@@ -357,7 +372,7 @@ def main():
  PLAYLIST.write_text("\n".join(out).rstrip()+"\n",encoding="utf-8")
  REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Source: `{SOURCE_URL}`",f"- Source records parsed: {len(source)}",f"- Existing playlist records: {len(existing)}",
   f"- Existing logo references localized/repaired: {logo_refs_repaired}",
-  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for any retained dynamic country group.","- Automatic discovery is Movie/Music only for every country; News, Sports, Kids, Documentary/Wildlife, Religious, General/Entertainment and all other categories are rejected.","- New alternate streams are staged in New Backup; curated alternates remain in Backup.","- Only New Channels/New Backup discovery queues are filtered; unrelated existing primary, country, and backup entries are preserved.","- The workflow probes newly discovered and queued stream URLs after candidate selection; inconclusive primary streams are retained for review and unverified backups are removed.",f"- New primary channels: {len(new_rows)}",f"- New backup review entries: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Out-of-scope existing entries removed: {len(filtered_existing)}","","## New primary channels",""]
+  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for any retained dynamic country group.","- Automatic discovery is Movie/Music only for every country; News, Sports, Kids, Documentary/Wildlife, Religious, General/Entertainment and all other categories are rejected.","- New alternate streams are staged in New Backup; curated alternates remain in Backup.","- Only discovery queues are filtered; unrelated entries are preserved, with the five-channel threshold applied to dynamic country groups.","- The workflow probes newly discovered and queued stream URLs after candidate selection; inconclusive primary streams are retained for review and unverified backups are removed.",f"- New primary channels: {len(new_rows)}",f"- New backup review entries: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Out-of-scope existing entries removed: {len(filtered_existing)}","","## New primary channels",""]
  report += [f"- **{n}** — {g} — {c} — {u}" for n,g,c,u in new_rows]; report += ["","## Backup alternates",""]+[f"- **{n}** — {c} — {u}" for n,c,u in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Removed out-of-scope existing entries",""]+[f"- **{n}** — `{g}` — {reason}" for n,g,reason in filtered_existing]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
  # Show the final assigned group in the report, after promotions/consolidation.
  final_group_by_identity={}
