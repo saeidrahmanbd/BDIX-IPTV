@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-10-29T02:06:05+00:00**
+Generated: **2026-10-29T02:38:56+00:00**
 
 - Active Bangladesh playlist identities: **93**
-- Identities with a retained source mapping: **1**
+- Identities with a retained source mapping: **2**
 - Identities with usable current/future schedules: **0**
-- Identities without a source mapping: **92**
+- Identities without a source mapping: **91**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 
@@ -19,8 +19,8 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
-| FAILED | https://www.rtvbd.tv/schedule.php | 0 | 0 | 0 | <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)> |
-| OK | M3U4U XMLTV (private Actions secret) | 201 | 0 | 0 | - |
+| FAILED | https://www.rtvbd.tv/schedule.php | 0 | 0 | 0 | Could not fetch the official RTV schedule over verified HTTPS (rtvbd.tv: URLError; www.rtvbd.tv: URLError) |
+| NO_PROGRAMMES | M3U4U XMLTV (private Actions secret) | 201 | 0 | 0 | - |
 
 ## Unmapped Bangladesh identities
 
@@ -104,7 +104,6 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | NTV Europe | NTVEurope.bd | NO_GUIDE_HIT |
 | Rajdhani TV | RajdhaniTV.bd | NO_GUIDE_HIT |
 | Rajdhani TV | custom.rajdhani | NO_GUIDE_HIT |
-| RTV | RTV.bd | NO_GUIDE_HIT |
 | Rupashi Bangla TV | RupashiBanglaTV.bd@SD | NO_GUIDE_HIT |
 | SA TV | SATV.bd | NO_GUIDE_HIT |
 | SATV HD | custom.bdix.satv | NO_GUIDE_HIT |

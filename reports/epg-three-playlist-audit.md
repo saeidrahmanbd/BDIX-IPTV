@@ -1,14 +1,14 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-10-29T02:06:05+00:00**
+Generated: **2026-10-29T02:38:56+00:00**
 
 This report measures the three maintained M3U playlists included in the automated EPG pipeline. The historic filename epg-three-playlist-audit.md is retained for link compatibility.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1159 | 692 | 463 | 407 | 463 | 385 | 229 | OK |
-| BDIX-Playlist.m3u | 131 | 131 | 76 | 70 | 76 | 67 | 55 | OK |
-| International-Playlist.m3u | 3258 | 2708 | 867 | 703 | 861 | 655 | 1841 | OK |
+| IPTV-Playlist.m3u | 1159 | 692 | 464 | 407 | 464 | 394 | 228 | OK |
+| BDIX-Playlist.m3u | 131 | 131 | 77 | 70 | 77 | 69 | 54 | OK |
+| International-Playlist.m3u | 3258 | 2708 | 868 | 703 | 862 | 667 | 1840 | OK |
 
 ## Group coverage
 
@@ -17,7 +17,7 @@ This report measures the three maintained M3U playlists included in the automate
 | Adult | 359 | 6 | 6 | 353 |
 | Argentina | 17 | 1 | 1 | 16 |
 | Aruba | 6 | 0 | 0 | 6 |
-| Bangladesh | 87 | 1 | 0 | 86 |
+| Bangladesh | 87 | 2 | 0 | 85 |
 | Brazil | 12 | 2 | 2 | 10 |
 | Bulgaria | 15 | 7 | 5 | 8 |
 | Canada | 26 | 20 | 16 | 6 |
