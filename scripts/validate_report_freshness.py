@@ -27,6 +27,12 @@ TIMESTAMP_ONLY_REPORTS = ("reports/epg-publish-freshness.md",)
 PROVENANCE_REPORT = "reports/logo-provenance-review.md"
 CROSS_PLAYLIST_METADATA_REPORT = "reports/cross-playlist-metadata-backfill.md"
 STREAM_HEALTH_REPORT = "reports/stream-health.md"
+# Reports owned by IPTV New Channel Discovery; other maintenance reports have separate owners.
+DISCOVERY_REPORTS = (
+    "reports/metadata-normalization.md",
+    "reports/logo-asset-quality-audit.md",
+    "reports/playlist-logo-repair-results.md",
+)
 
 
 def sha256(path: Path) -> str:
@@ -83,14 +89,14 @@ def check_timestamp(relative: str, text: str, now, max_age, errors):
 
 
 def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode="all", epg_publication_approved=None):
-    """Return freshness errors for all, playlist-maintenance, or EPG-only reports.
+    """Return freshness errors for all, maintenance, EPG-only, or discovery-owned reports.
 
     The legacy epg_publication_approved argument is accepted for compatibility
     but ignored; it must never hide EPG freshness or fingerprint failures.
     """
     root = Path(root)
     now = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
-    if mode not in {"all", "generated", "epg"}:
+    if mode not in {"all", "generated", "epg", "discovery"}:
         return [f"Unknown freshness validation mode: {mode}"]
     hashes = {}
     for name in PLAYLIST_NAMES:
@@ -109,8 +115,11 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
     # The playlist workflow checks only reports it owns; the EPG workflow
     # explicitly validates the shared EPG reports after it regenerates them.
     # "all" always includes EPG reports, independent of any legacy approval flag.
-    report_paths = generated_paths + epg_paths if mode == "all" else (
-        epg_paths if mode == "epg" else generated_paths
+    report_paths = (
+        generated_paths + epg_paths if mode == "all"
+        else epg_paths if mode == "epg"
+        else list(DISCOVERY_REPORTS) if mode == "discovery"
+        else generated_paths
     )
 
     for relative in report_paths:
@@ -135,7 +144,7 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
                 elif actual != hashes[playlist_name]:
                     errors.append(f"{relative}: fingerprint does not match current {playlist_name}")
 
-    if mode != "epg":
+    if mode in {"all", "generated", "discovery"}:
         manifest_path = root / "reports/logo-authenticity-manifest.json"
         if not manifest_path.is_file():
             errors.append("reports/logo-authenticity-manifest.json: missing")
@@ -160,6 +169,7 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
                 elif now - generated > max_age:
                     errors.append("reports/logo-authenticity-manifest.json: stale manifest (older than 48 hours)")
 
+    if mode in {"all", "generated"}:
         health_path = root / STREAM_HEALTH_REPORT
         if health_path.is_file():
             health_text = health_path.read_text(encoding="utf-8", errors="replace")
@@ -174,7 +184,7 @@ def check_reports(root: Path = Path("."), now=None, max_age=MAX_REPORT_AGE, mode
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--mode", choices=("all", "generated", "epg"), default="all")
+    parser.add_argument("--mode", choices=("all", "generated", "epg", "discovery"), default="all")
     args = parser.parse_args()
     errors = check_reports(mode=args.mode)
     for error in errors:

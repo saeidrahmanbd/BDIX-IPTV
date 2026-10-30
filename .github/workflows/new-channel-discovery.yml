@@ -16,7 +16,7 @@ on:
       - 'tests/test_channel_discovery_policy.py'
       - 'tests/test_discovery_run_validation.py'
   schedule:
-    - cron: '17 4 * * *' # 10:17 Asia/Dhaka; staggered from BDIX/maintenance schedules
+    - cron: '17 4 * * *' # 10:17 Asia/Dhaka (GMT+6); staggered from BDIX/maintenance schedules
   workflow_dispatch:
 
 permissions:
@@ -47,17 +47,18 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_channel_discovery_policy.py'
       - name: Test discovery stream validator
         run: python -m unittest discover -s tests -p 'test_discovery_run_validation.py'
+      - name: Test report freshness rules
+        run: python -m unittest discover -s tests -p 'test_report_freshness.py'
+      - name: Test discovery report ordering
+        run: python -m unittest discover -s tests -p 'test_discovery_report_order.py'
       - name: Install logo tools
         run: python -m pip install --disable-pip-version-check -r docs/requirements.txt
       - name: Enforce queue exclusions and discover approved Bangladesh/India candidates
         run: python scripts/run_bd_discovery_with_policy.py
-      - name: Normalize discovered metadata and localize logos
+      - name: Normalize discovered metadata and finalize playlist structure
         run: |
           python scripts/normalize_metadata.py
           python scripts/migrate_external_logos_fixed.py
-          python scripts/repair_logo_asset_technical_quality.py --fix
-          python scripts/generate_logo_authenticity_manifest.py
-          python scripts/generate_logo_repair_summary.py
           python scripts/final_playlist_hardening.py IPTV-Playlist.m3u
       - name: Verify newly discovered streams and local logos
         run: python scripts/validate_discovery_run.py probe IPTV-Playlist.m3u reports/iptv-channel-discovery.md /tmp/IPTV-Playlist.before.m3u iptv
@@ -71,6 +72,13 @@ jobs:
         env:
           OFFICIAL_VALIDATOR_OUTCOME: ${{ steps.validate_review_queues.outcome }}
         run: python scripts/validate_discovery_run.py finalize IPTV-Playlist.m3u reports/iptv-channel-discovery.md /tmp/IPTV-Playlist.before.m3u iptv
+      - name: Regenerate fingerprinted reports from final playlist
+        run: |
+          python scripts/repair_logo_asset_technical_quality.py --fix
+          python scripts/generate_logo_authenticity_manifest.py
+          python scripts/generate_metadata_normalization_report.py
+          python scripts/generate_logo_repair_summary.py
+          python scripts/validate_report_freshness.py --mode discovery
       - name: Commit discovered candidates
         shell: bash
         run: |
@@ -95,7 +103,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add IPTV-Playlist.m3u reports/iptv-channel-discovery.md logos/ reports/metadata-normalization.md reports/playlist-logo-repair-results.md reports/logo-authenticity-manifest.json scripts/audit_playlist.py scripts/enable_review_queue_audit.py scripts/discover_bd_in_new_queues.py scripts/run_bd_discovery_with_policy.py scripts/validate_discovery_run.py tests/test_discovery_run_validation.py
+          git add IPTV-Playlist.m3u reports/iptv-channel-discovery.md logos/ reports/metadata-normalization.md reports/playlist-logo-repair-results.md reports/logo-asset-quality-audit.md reports/logo-authenticity-manifest.json scripts/audit_playlist.py scripts/enable_review_queue_audit.py scripts/discover_bd_in_new_queues.py scripts/run_bd_discovery_with_policy.py scripts/validate_discovery_run.py scripts/validate_report_freshness.py tests/test_discovery_run_validation.py tests/test_report_freshness.py tests/test_discovery_report_order.py
           if git diff --cached --quiet; then
             echo 'No new Bangladesh/India candidates found.'
             exit 0

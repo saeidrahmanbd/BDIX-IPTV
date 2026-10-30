@@ -19,8 +19,14 @@ on:
       - 'scripts/generate_dashboard.py'
       - 'tests/test_epg_publication_safety.py'
       - 'docs/requirements.txt'
+  # GITHUB_TOKEN playlist commits do not reliably start a second workflow via push.
+  # Refresh EPG after successful workflows that write one of the maintained playlists.
+  workflow_run:
+    workflows: ["IPTV Playlist Update", "IPTV New Channel Discovery", "International Channel Discovery", "BDIX Playlist Update", "Playlist Logo Repair and Localization"]
+    types: [completed]
+    branches: [main]
   schedule:
-    - cron: '17 4 * * *'
+    - cron: '17 4 * * *' # 10:17 Asia/Dhaka (GMT+6)
   workflow_dispatch:
 
 permissions:
@@ -32,7 +38,7 @@ concurrency:
 
 jobs:
   refresh:
-    if: ${{ !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG')) }}
+    if: ${{ (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success') && (github.event_name != 'push' || !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG'))) }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:

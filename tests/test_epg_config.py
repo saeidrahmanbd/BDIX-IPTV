@@ -242,6 +242,20 @@ class EpgConfigTests(unittest.TestCase):
             self.assertIn(f'tvg-id="{tid}"', pl)
         self.assertNotIn('tvg-id="ZBBhakti.in@HD"', pl)
 
+    def test_epg_refresh_follows_successful_playlist_writer_workflows(self):
+        workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
+        self.assertIn("workflow_run:", workflow)
+        for name in (
+            "IPTV Playlist Update",
+            "IPTV New Channel Discovery",
+            "International Channel Discovery",
+            "BDIX Playlist Update",
+            "Playlist Logo Repair and Localization",
+        ):
+            self.assertIn(f'"{name}"', workflow)
+        self.assertIn("github.event.workflow_run.conclusion == 'success'", workflow)
+        self.assertIn("# 10:17 Asia/Dhaka (GMT+6)", workflow)
+
 
 class BangladeshRetentionTests(unittest.TestCase):
     @staticmethod
