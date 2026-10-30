@@ -1,12 +1,12 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-10-30T02:48:21+00:00**
+Generated: **2026-10-30T07:15:26+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **c2b21ff27a19db661d00c7ee96c9a884bbb4052f5541d1f1d110ceabb619790f**
+- IPTV-Playlist.m3u SHA-256: **2f00cd81215b375e4776d6dd458f71acc5734daf86990b5c85061a1bec922a77**
 - BDIX-Playlist.m3u SHA-256: **6e98537a07d9bb5f5ee818f86defff1357302adeaca270e0786a7185bcd33b2d**
 - International-Playlist.m3u SHA-256: **359731d46ab6910e71335940aacfdeb1321d84c824fea6e120575031d128eff3**
 
@@ -1046,37 +1046,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Goal TV | goal-tv-237cfbed.png | Sports |
 | IPTV-Playlist.m3u | Red Bull TV | red-bull-tv.png | Sports |
 | IPTV-Playlist.m3u | Sports First TV | sports-first-tv.png | Sports |
-| IPTV-Playlist.m3u | &TV | tv.png | Not Playing |
-| IPTV-Playlist.m3u | &TV | tv.png | Not Playing |
-| IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Aryan TV National | aryan-tv-national.png | Not Playing |
-| IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Deen TV | deen-tv-576p.png | Not Playing |
-| IPTV-Playlist.m3u | Desh TV | desh-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Dhamaal | dhamaal-geo-blocked-6c1fb8f527.png | Not Playing |
-| IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Epic TV Digital | epic-tv-digital.png | Not Playing |
-| IPTV-Playlist.m3u | Gazi TV | gazi-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Hungama TV | hungama-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Islam TV | islam-tv.png | Not Playing |
-| IPTV-Playlist.m3u | LAFF TV | laff-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Madani Channel Bangla | madani-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Madani TV | madani-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Mango Mobile TV | mango-mobile-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Manoranjan TV | manoranjan-tv.png | Not Playing |
-| IPTV-Playlist.m3u | MBC TV | mbc-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Mei Alai TV | mei-alai-tv.png | Not Playing |
-| IPTV-Playlist.m3u | MTV | mtv-india-hd-720p.png | Not Playing |
-| IPTV-Playlist.m3u | MTV | mtv-india-hd-720p.png | Not Playing |
-| IPTV-Playlist.m3u | NAN TV | nan-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Probashi TV | probashi-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Probashi TV | probashi-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Shekinah TV | shekinah-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Sony Max 1 | sony-max.png | Not Playing |
-| IPTV-Playlist.m3u | Suriyan TV | suriyan-tv.png | Not Playing |
-| IPTV-Playlist.m3u | Win TV | win-tv-a92ce20718.png | Not Playing |
-| IPTV-Playlist.m3u | YET TV | yet-tv.png | Not Playing |
 | IPTV-Playlist.m3u | AMN TV | amn-tv.png | New Channels |
 | IPTV-Playlist.m3u | Disney Channel India | disney-channel-india.png | New Channels |
 | IPTV-Playlist.m3u | Green Gold TV | green-gold-tv.png | New Channels |
@@ -1087,8 +1056,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Q TV | q-tv.png | New Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
-| IPTV-Playlist.m3u | &TV | tv.png | Backup |
-| IPTV-Playlist.m3u | &TV | tv.png | Backup |
 | IPTV-Playlist.m3u | Al Quran Al Kareem TV | al-quran-al-kareem-tv.png | Backup |
 | IPTV-Playlist.m3u | Amrita TV | amrita-tv.png | Backup |
 | IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Backup |
@@ -1146,10 +1113,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Backup |
 | IPTV-Playlist.m3u | Enter TV | enter-tv.png | Backup |
 | IPTV-Playlist.m3u | Enter TV | enter-tv.png | Backup |
-| IPTV-Playlist.m3u | G TV | g-tv.png | Backup |
-| IPTV-Playlist.m3u | G TV | g-tv.png | Backup |
-| IPTV-Playlist.m3u | G TV | g-tv.png | Backup |
-| IPTV-Playlist.m3u | G TV | g-tv.png | Backup |
 | IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Backup |
 | IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Backup |
 | IPTV-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Backup |
@@ -1157,6 +1120,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Green TV | repaired-green-tv-d4fdf1175a.png | Backup |
 | IPTV-Playlist.m3u | Green TV | repaired-green-tv-d4fdf1175a.png | Backup |
 | IPTV-Playlist.m3u | Green TV | repaired-green-tv-d4fdf1175a.png | Backup |
+| IPTV-Playlist.m3u | G TV | g-tv.png | Backup |
+| IPTV-Playlist.m3u | G TV | g-tv.png | Backup |
+| IPTV-Playlist.m3u | G TV | g-tv.png | Backup |
+| IPTV-Playlist.m3u | G TV | g-tv.png | Backup |
 | IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
 | IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
 | IPTV-Playlist.m3u | Hum TV | hum-tv.png | Backup |
@@ -1223,6 +1190,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Sony Entertainment TV | sony-entertainment-tv.png | Backup |
 | IPTV-Playlist.m3u | Sony PIX | sony-pix-hd.png | Backup |
 | IPTV-Playlist.m3u | Suriyan TV | suriyan-tv.png | Backup |
+| IPTV-Playlist.m3u | &TV | tv.png | Backup |
+| IPTV-Playlist.m3u | &TV | tv.png | Backup |
 | IPTV-Playlist.m3u | Ultimate TV | ultimate-tv.png | Backup |
 | IPTV-Playlist.m3u | Vanitha TV | vanitha-tv.png | Backup |
 | IPTV-Playlist.m3u | Vendhar TV | vendhar-tv.png | Backup |
@@ -1231,9 +1200,40 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Backup |
 | IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Backup |
 | IPTV-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Backup |
+| IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
+| IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
 | IPTV-Playlist.m3u | Zoo Moo | zoomoo.png | Backup |
-| IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
-| IPTV-Playlist.m3u | Zoom | zoom-tv.png | Backup |
+| IPTV-Playlist.m3u | Ananda TV | ananda-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Aryan TV National | aryan-tv-national.png | Not Playing |
+| IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Deen TV | deen-tv-576p.png | Not Playing |
+| IPTV-Playlist.m3u | Desh TV | desh-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Dhamaal | dhamaal-geo-blocked-6c1fb8f527.png | Not Playing |
+| IPTV-Playlist.m3u | Ekhon TV | ekhon-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Epic TV Digital | epic-tv-digital.png | Not Playing |
+| IPTV-Playlist.m3u | Gazi TV | gazi-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Hungama TV | hungama-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Islam TV | islam-tv.png | Not Playing |
+| IPTV-Playlist.m3u | LAFF TV | laff-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Madani Channel Bangla | madani-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Madani TV | madani-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Mango Mobile TV | mango-mobile-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Manoranjan TV | manoranjan-tv.png | Not Playing |
+| IPTV-Playlist.m3u | MBC TV | mbc-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Mei Alai TV | mei-alai-tv.png | Not Playing |
+| IPTV-Playlist.m3u | MTV | mtv-india-hd-720p.png | Not Playing |
+| IPTV-Playlist.m3u | MTV | mtv-india-hd-720p.png | Not Playing |
+| IPTV-Playlist.m3u | NAN TV | nan-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Probashi TV | probashi-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Probashi TV | probashi-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Shekinah TV | shekinah-tv.png | Not Playing |
+| IPTV-Playlist.m3u | Sony Max 1 | sony-max.png | Not Playing |
+| IPTV-Playlist.m3u | Suriyan TV | suriyan-tv.png | Not Playing |
+| IPTV-Playlist.m3u | &TV | tv.png | Not Playing |
+| IPTV-Playlist.m3u | &TV | tv.png | Not Playing |
+| IPTV-Playlist.m3u | Win TV | win-tv-a92ce20718.png | Not Playing |
+| IPTV-Playlist.m3u | YET TV | yet-tv.png | Not Playing |
 | BDIX-Playlist.m3u | Ananda TV | ananda-tv.png | Bangladesh |
 | BDIX-Playlist.m3u | Asian TV | asian-tv.png | Bangladesh |
 | BDIX-Playlist.m3u | Bangla TV | bangla-tv-9e5f3366c8.png | Bangladesh |

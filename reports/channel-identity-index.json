@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-30T02:46:51+00:00",
+  "generated": "2026-10-30T07:16:08+00:00",
   "channels": {
     "10tv": {
       "names": [
@@ -6328,6 +6328,20 @@
       ],
       "groups": [
         "Indian Bangla"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "oscarmoviesbhojpuri": {
+      "names": [
+        "Oscar Movies Bhojpuri"
+      ],
+      "ids": [
+        "oscarmoviesbhojpuri.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
