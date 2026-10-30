@@ -1,14 +1,14 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-10-30T07:40:05+00:00**
+Generated: **2026-10-30T09:02:31+00:00**
 
 This report measures the three maintained M3U playlists included in the automated EPG pipeline. The historic filename epg-three-playlist-audit.md is retained for link compatibility.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1160 | 690 | 464 | 409 | 464 | 398 | 226 | OK |
+| IPTV-Playlist.m3u | 1160 | 690 | 464 | 412 | 464 | 401 | 226 | OK |
 | BDIX-Playlist.m3u | 131 | 131 | 78 | 71 | 78 | 71 | 53 | OK |
-| International-Playlist.m3u | 3205 | 2649 | 869 | 707 | 863 | 673 | 1780 | OK |
+| International-Playlist.m3u | 3205 | 2649 | 869 | 711 | 863 | 677 | 1780 | OK |
 
 ## Group coverage
 
@@ -25,7 +25,7 @@ This report measures the three maintained M3U playlists included in the automate
 | China | 12 | 0 | 0 | 12 |
 | Colombia | 10 | 1 | 1 | 9 |
 | Czech Republic | 27 | 9 | 3 | 18 |
-| Documentary & Wildlife | 217 | 137 | 102 | 80 |
+| Documentary & Wildlife | 217 | 137 | 103 | 80 |
 | Estonia | 6 | 1 | 0 | 5 |
 | Finland | 9 | 0 | 0 | 9 |
 | France | 45 | 10 | 8 | 35 |
@@ -33,10 +33,10 @@ This report measures the three maintained M3U playlists included in the automate
 | Greece | 9 | 2 | 2 | 7 |
 | Hungary | 15 | 8 | 6 | 7 |
 | Indian Bangla | 51 | 41 | 35 | 10 |
-| Indian Entertainment | 224 | 187 | 173 | 37 |
-| Indian Movies | 92 | 69 | 66 | 23 |
+| Indian Entertainment | 224 | 187 | 174 | 37 |
+| Indian Movies | 92 | 69 | 67 | 23 |
 | Indian Music | 72 | 59 | 56 | 13 |
-| International | 98 | 56 | 45 | 42 |
+| International | 98 | 56 | 46 | 42 |
 | Iran | 16 | 3 | 2 | 13 |
 | Italy | 26 | 5 | 5 | 21 |
 | Kids | 226 | 96 | 75 | 130 |
@@ -58,7 +58,7 @@ This report measures the three maintained M3U playlists included in the automate
 | Sweden | 55 | 0 | 0 | 55 |
 | Turkey | 20 | 1 | 0 | 19 |
 | Ukraine | 31 | 4 | 2 | 27 |
-| United Arab Emirates | 4 | 2 | 0 | 2 |
+| United Arab Emirates | 4 | 2 | 1 | 2 |
 | United Kingdom | 12 | 2 | 1 | 10 |
 | United States | 220 | 46 | 34 | 174 |
 | Uzbekistan | 5 | 0 | 0 | 5 |
