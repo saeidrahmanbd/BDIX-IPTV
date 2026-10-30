@@ -57,7 +57,18 @@ class EpgConfigTests(unittest.TestCase):
             (ROOT / "scripts" / "augment_epg_mapping_from_additional_sources.py").read_text(encoding="utf-8"),
             "SOURCES",
         )
-        for source in expected:
+        discovery_expected = [
+            "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
+            "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
+            "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
+            "https://iptv-epg.org/files/epg-in.xml.gz",
+            "https://epg.lat/files/in.xml.gz",
+            "https://www.free-epg.de/api/epg/in.xml.gz",
+            "https://www.open-epg.com/files/india.xml.gz",
+            "https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml",
+            "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
+        ]
+        for source in discovery_expected:
             self.assertIn(source, discovery)
 
     def test_private_m3u4u_source_is_selected_for_discovery_without_mapping(self):
