@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-10-29T17:34:16+00:00**
+Generated: **2026-10-30T01:10:43+00:00**
 
 - Active Bangladesh playlist identities: **93**
-- Identities with a retained source mapping: **2**
-- Identities with usable current/future schedules: **0**
-- Identities without a source mapping: **91**
+- Identities with a retained source mapping: **3**
+- Identities with usable current/future schedules: **1**
+- Identities without a source mapping: **90**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 
@@ -13,13 +13,14 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 
 | Source label | Matched Bangladesh IDs | IDs with usable current/future schedules | Source health | Error / note |
 |---|---:|---:|---|---|
-| none | 0 | 0 | NO VERIFIED MATCH | No configured source currently matches a Bangladesh playlist identity |
+| https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | OK | - |
 
 ## Bangladesh-relevant source health
 
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | https://www.rtvbd.tv/schedule.php | 0 | 0 | 0 | Could not fetch the official RTV schedule over verified HTTPS (rtvbd.tv: URLError; www.rtvbd.tv: URLError) |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 30 | - |
 | NO_PROGRAMMES | M3U4U XMLTV (private Actions secret) | 201 | 0 | 0 | - |
 
 ## Unmapped Bangladesh identities
@@ -40,7 +41,6 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Boishakhi TV | BoishakhiTV.bd | NO_GUIDE_HIT |
 | BTV Chattogram | BTVChattogram.bd | NO_GUIDE_HIT |
 | BTV CTG | custom.bdix.btvctg | NO_GUIDE_HIT |
-| BTV National | BTVNational.bd | NO_GUIDE_HIT |
 | BTV News | BTVNews.bd | NO_GUIDE_HIT |
 | BTV News | custom.btv.news | NO_GUIDE_HIT |
 | Channel 1 | Channel1.bd | NO_GUIDE_HIT |
