@@ -164,6 +164,10 @@ def download_png(url, target):
             return
         raise
 def force_local(line, replacement):
+    if not replacement:
+        # "Unset" means omit the attribute: an empty tvg-logo="" is a metadata defect
+        # that normalize_metadata.py and tests/test_playlist_metadata_repairs.py reject.
+        return re.sub(r'\s+tvg-logo="[^"]*"', "", line, count=1)
     if 'tvg-logo="' in line:
         return re.sub(r'(tvg-logo=")[^"]*(")', r'\1' + replacement + r'\2', line, count=1)
     comma = line.find(",")
