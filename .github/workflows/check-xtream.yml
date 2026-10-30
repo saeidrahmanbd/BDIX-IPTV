@@ -19,30 +19,140 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Check both Xtream gateways
         env:
-          XTREAM_USERNAME: ${{ secrets.XTREAM_USERNAME }}
-          XTREAM_PASSWORD: ${{ secrets.XTREAM_PASSWORD }}
+          XTREAM_USERNAME: \${{ secrets.XTREAM_USERNAME }}
+          XTREAM_PASSWORD: \${{ secrets.XTREAM_PASSWORD }}
         run: |
           set -euo pipefail
           python3 - <<'PY'
-          import json, os, urllib.error, urllib.parse, urllib.request
+          import json, os, time, urllib.error, urllib.parse, urllib.request
 
           USER = os.environ["XTREAM_USERNAME"]
           PASS = os.environ["XTREAM_PASSWORD"]
+          if not USER or not PASS:
+              raise SystemExit("Xtream credentials are missing from GitHub Actions secrets")
           CREDS = {"username": USER, "password": PASS}
+          HEADERS = {"User-Agent": "BDIX-IPTV-Daily-Xtream-Check/2.0"}
           GATEWAYS = {
               "Main IPTV": ("bdix-iptv-main.saeidrahman.workers.dev", True),
               "BDIX": ("bdix-iptv-bdix.saeidrahman.workers.dev", False),
           }
 
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self, req, fp, code, msg, headers, newurl):
+                  return None
+
+          NO_REDIRECT = urllib.request.build_opener(NoRedirect)
+
+          def open_retry(req, timeout=20, opener=None, attempts=2):
+              last_error = None
+              client = opener or urllib.request
+              for attempt in range(attempts):
+                  try:
+                      return client.urlopen(req, timeout=timeout)
+                  except urllib.error.HTTPError:
+                      raise
+                  except (urllib.error.URLError, TimeoutError, OSError) as error:
+                      last_error = error
+                      if attempt + 1 < attempts:
+                          time.sleep(2)
+              raise last_error
+
           def api(host, params):
               url = f"https://{host}/player_api.php?{urllib.parse.urlencode(params)}"
-              req = urllib.request.Request(url, headers={"User-Agent": "BDIX-IPTV-Daily-Xtream-Check/1.0"})
-              with urllib.request.urlopen(req, timeout=30) as r:
-                  return r.status, json.loads(r.read().decode("utf-8", "replace"))
+              req = urllib.request.Request(url, headers=HEADERS)
+              with open_retry(req) as response:
+                  return response.status, json.loads(response.read().decode("utf-8", "replace"))
+
+          def check_auxiliary_endpoints(host, expected_streams):
+              health_req = urllib.request.Request(f"https://{host}/health", headers=HEADERS)
+              with open_retry(health_req) as response:
+                  health = json.loads(response.read().decode("utf-8", "replace"))
+                  if response.status != 200 or health.get("ok") is not True:
+                      raise SystemExit(f"{host}: /health did not return ok=true")
+                  if int(health.get("streams", -1)) != expected_streams:
+                      raise SystemExit(f"{host}: /health stream count differs from player_api.php")
+              print(f"{host} health: HTTP=200 streams={expected_streams}")
+
+              m3u_url = f"https://{host}/get.php?{urllib.parse.urlencode(CREDS)}"
+              m3u_req = urllib.request.Request(m3u_url, headers=HEADERS)
+              with open_retry(m3u_req) as response:
+                  body = response.read()
+                  content_type = response.headers.get("Content-Type", "").lower()
+                  if response.status != 200 or not body.startswith(b"#EXTM3U"):
+                      raise SystemExit(f"{host}: get.php did not return a valid M3U")
+                  entries = body.count(b"#EXTINF:")
+                  if entries != expected_streams:
+                      raise SystemExit(f"{host}: get.php entries={entries}, API streams={expected_streams}")
+              print(f"{host} get.php: HTTP=200 M3U entries={entries}")
+
+              xml_url = f"https://{host}/xmltv.php?{urllib.parse.urlencode(CREDS)}"
+              xml_req = urllib.request.Request(xml_url, headers=HEADERS)
+              with open_retry(xml_req) as response:
+                  sample = response.read(512).lstrip()
+                  content_type = response.headers.get("Content-Type", "").lower()
+                  if response.status != 200 or "xml" not in content_type or not (sample.startswith(b"<?xml") or sample.startswith(b"<tv")):
+                      raise SystemExit(f"{host}: xmltv.php did not return XMLTV content")
+              print(f"{host} xmltv.php: HTTP=200 content-type=XML")
+
+          def playback_probe(host, stream, main_proxy):
+              stream_id = stream.get("stream_id")
+              source = stream.get("direct_source")
+              if not stream_id or not source:
+                  return False, "missing stream_id/direct_source"
+              playback = f"https://{host}/live/{urllib.parse.quote(USER, safe='')}/{urllib.parse.quote(PASS, safe='')}/{stream_id}.ts"
+              req = urllib.request.Request(playback, headers={**HEADERS, "Range": "bytes=0-0"})
+
+              if main_proxy:
+                  try:
+                      with open_retry(req) as response:
+                          status = response.status
+                          first_byte = response.read(1)
+                          final_host = urllib.parse.urlsplit(response.geturl()).hostname or "none"
+                      if status not in (200, 206) or not first_byte:
+                          return False, f"playback HTTP={status} empty_body={not bool(first_byte)}"
+                      return True, f"HTTP={status} final_host={final_host}"
+                  except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError) as error:
+                      return False, f"playback {type(error).__name__}"
+
+              try:
+                  with NO_REDIRECT.open(req, timeout=20) as response:
+                      route_status = response.status
+                      location = response.headers.get("Location", "")
+              except urllib.error.HTTPError as error:
+                  route_status = error.code
+                  location = error.headers.get("Location", "")
+              except (urllib.error.URLError, TimeoutError, OSError) as error:
+                  return False, f"gateway route {type(error).__name__}"
+
+              expected = urllib.parse.urlsplit(source)
+              actual = urllib.parse.urlsplit(location)
+              def effective_port(parts):
+                  return parts.port or (80 if parts.scheme.lower() == "http" else 443 if parts.scheme.lower() == "https" else None)
+              matches = (
+                  actual.scheme.lower() == expected.scheme.lower()
+                  and (actual.hostname or "").lower() == (expected.hostname or "").lower()
+                  and effective_port(actual) == effective_port(expected)
+                  and actual.path == expected.path
+                  and actual.query == expected.query
+              )
+              if route_status != 302 or not matches:
+                  return False, f"route HTTP={route_status} source_match={matches}"
+
+              source_req = urllib.request.Request(source, headers={**HEADERS, "Range": "bytes=0-0"})
+              try:
+                  with open_retry(source_req, timeout=20) as response:
+                      source_status = response.status
+                      first_byte = response.read(1)
+                      final_host = urllib.parse.urlsplit(response.geturl()).hostname or "none"
+              except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError) as error:
+                  return False, f"direct source {type(error).__name__}"
+              if source_status not in (200, 206) or not first_byte:
+                  return False, f"direct source HTTP={source_status} empty_body={not bool(first_byte)}"
+              return True, f"route=302 source=HTTP {source_status} final_host={final_host}"
 
           def check(name, host, main_proxy):
               status, data = api(host, CREDS)
@@ -54,83 +164,48 @@ jobs:
               if server.get("server_protocol") != "https" or server.get("url") != host or str(server.get("https_port")) != "443":
                   raise SystemExit(f"{name}: incompatible server_info")
 
-              status, cats = api(host, {**CREDS, "action": "get_live_categories"})
-              print(f"{name} categories: HTTP={status} count={len(cats) if isinstance(cats, list) else 0}")
-              if status != 200 or not isinstance(cats, list) or not cats:
+              status, categories = api(host, {**CREDS, "action": "get_live_categories"})
+              if status != 200 or not isinstance(categories, list) or not categories:
                   raise SystemExit(f"{name}: no live categories")
+              print(f"{name} categories: HTTP=200 count={len(categories)}")
 
               status, streams = api(host, {**CREDS, "action": "get_live_streams", "category_id": "0"})
-              print(f"{name} streams: HTTP={status} count={len(streams) if isinstance(streams, list) else 0}")
               if status != 200 or not isinstance(streams, list) or not streams:
                   raise SystemExit(f"{name}: no live streams")
+              print(f"{name} streams: HTTP=200 count={len(streams)}")
 
-              first = streams[0]
-              stream_id = first.get("stream_id")
-              source = first.get("direct_source")
-              if not stream_id or not source:
-                  raise SystemExit(f"{name}: first stream lacks stream_id/direct_source")
+              category_ids = {str(category.get("category_id")) for category in categories}
+              stream_ids = [str(stream.get("stream_id")) for stream in streams]
+              if len(stream_ids) != len(set(stream_ids)):
+                  raise SystemExit(f"{name}: duplicate stream IDs detected")
+              if any(not stream.get("name") or not stream.get("direct_source") for stream in streams):
+                  raise SystemExit(f"{name}: stream metadata/source missing")
+              if any(str(stream.get("category_id")) not in category_ids for stream in streams):
+                  raise SystemExit(f"{name}: one or more streams reference an unknown category")
 
-              playback = f"https://{host}/live/{urllib.parse.quote(USER, safe='')}/{urllib.parse.quote(PASS, safe='')}/{stream_id}.ts"
-              req = urllib.request.Request(playback, headers={"User-Agent": "BDIX-IPTV-Daily-Xtream-Check/1.0", "Range": "bytes=0-0"})
-              if main_proxy:
-                  try:
-                      with urllib.request.urlopen(req, timeout=30) as r:
-                          playback_status = r.status
-                          location = r.headers.get("Location", "")
-                  except urllib.error.HTTPError as e:
-                      playback_status = e.code
-                      location = e.headers.get("Location", "")
-                  print(f"{name} playback: HTTP={playback_status} proxied=true")
-                  if playback_status not in (200, 206):
-                      raise SystemExit(f"{name}: playback endpoint failed")
-              else:
-                  # Inspect the gateway's first redirect without following it. The
-                  # upstream source may itself redirect to a CDN or tokenized URL.
-                  class NoRedirect(urllib.request.HTTPRedirectHandler):
-                      def redirect_request(self, req, fp, code, msg, headers, newurl):
-                          return None
-                  opener = urllib.request.build_opener(NoRedirect)
-                  try:
-                      with opener.open(req, timeout=30) as r:
-                          playback_status = r.status
-                          location = r.headers.get("Location", "")
-                  except urllib.error.HTTPError as e:
-                      playback_status = e.code
-                      location = e.headers.get("Location", "")
-                  expected = urllib.parse.urlsplit(source)
-                  actual = urllib.parse.urlsplit(location)
-                  def effective_port(parts):
-                      return parts.port or (80 if parts.scheme.lower() == "http" else 443 if parts.scheme.lower() == "https" else None)
-                  matches = (
-                      actual.scheme.lower() == expected.scheme.lower()
-                      and (actual.hostname or "").lower() == (expected.hostname or "").lower()
-                      and effective_port(actual) == effective_port(expected)
-                      and actual.path == expected.path
-                      and actual.query == expected.query
-                  )
-                  print(f"{name} playback route: HTTP={playback_status} redirected_to_source={matches} upstream_host={actual.hostname or 'none'}")
-                  if playback_status != 302 or not matches:
-                      raise SystemExit(f"{name}: playback endpoint did not redirect to the declared direct source")
+              check_auxiliary_endpoints(host, len(streams))
 
-                  # Now probe the declared source separately, following its own
-                  # redirects (for example, to a CDN) and requesting only a byte.
-                  source_req = urllib.request.Request(
-                      source,
-                      headers={"User-Agent": "BDIX-IPTV-Daily-Xtream-Check/1.0", "Range": "bytes=0-0"}
-                  )
-                  try:
-                      with urllib.request.urlopen(source_req, timeout=30) as r:
-                          source_status = r.status
-                          final_url = r.geturl()
-                  except urllib.error.HTTPError as e:
-                      source_status = e.code
-                      final_url = e.geturl()
-                  except (urllib.error.URLError, TimeoutError, OSError) as e:
-                      raise SystemExit(f"{name}: direct source probe failed ({type(e).__name__})")
-                  final_host = urllib.parse.urlsplit(final_url).hostname or "none"
-                  print(f"{name} direct source: HTTP={source_status} final_host={final_host}")
-                  if source_status not in (200, 206):
-                      raise SystemExit(f"{name}: direct source did not return a playable HTTP response")
+              checked = 0
+              for category in categories:
+                  category_id = str(category.get("category_id"))
+                  candidates = [stream for stream in streams if str(stream.get("category_id")) == category_id]
+                  if not candidates:
+                      raise SystemExit(f"{name}: category has no streams: {category.get('category_name')}")
+                  success = False
+                  failures = []
+                  # Try a second channel if the first source is temporarily unavailable.
+                  for candidate in candidates[:2]:
+                      ok, detail = playback_probe(host, candidate, main_proxy)
+                      if ok:
+                          success = True
+                          print(f"{name} sample: category={category.get('category_name')} available=true {detail}")
+                          break
+                      failures.append(detail)
+                  if not success:
+                      raise SystemExit(f"{name}: no playable sample in category {category.get('category_name')}: {'; '.join(failures)}")
+                  checked += 1
+              print(f"{name}: playable category samples={checked}/{len(categories)}")
+              print(f"{name}: all endpoint and representative playback checks passed")
 
           for name, (host, main_proxy) in GATEWAYS.items():
               check(name, host, main_proxy)
