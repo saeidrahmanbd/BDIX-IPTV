@@ -250,6 +250,7 @@ class EpgConfigTests(unittest.TestCase):
             "IPTV New Channel Discovery",
             "International Channel Discovery",
             "BDIX Playlist Update",
+            "Playlist Logo Repair and Localization",
         ):
             self.assertIn(f'"{name}"', workflow)
         self.assertIn("github.event.workflow_run.conclusion == 'success'", workflow)
