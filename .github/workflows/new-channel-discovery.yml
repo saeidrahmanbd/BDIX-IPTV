@@ -16,7 +16,7 @@ on:
       - 'tests/test_channel_discovery_policy.py'
       - 'tests/test_discovery_run_validation.py'
   schedule:
-    - cron: '17 4 * * *' # 10:17 Asia/Dhaka; staggered from BDIX/maintenance schedules
+    - cron: '17 4 * * *' # 10:17 Asia/Dhaka (GMT+6); staggered from BDIX/maintenance schedules
   workflow_dispatch:
 
 permissions:
