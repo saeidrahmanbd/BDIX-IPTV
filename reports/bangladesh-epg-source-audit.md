@@ -1,6 +1,6 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-10-30T01:10:43+00:00**
+Generated: **2026-10-30T03:16:41+00:00**
 
 - Active Bangladesh playlist identities: **93**
 - Identities with a retained source mapping: **3**
@@ -46,8 +46,8 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Channel 1 | Channel1.bd | NO_GUIDE_HIT |
 | Channel 1 | custom.channel.1 | NO_GUIDE_HIT |
 | Channel 16 | Channel16.bd | NO_GUIDE_HIT |
+| Channel 24 | 94000 | NO_GUIDE_HIT |
 | Channel 24 | Channel24.bd | NO_GUIDE_HIT |
-| Channel 24 HD | 94000 | NO_GUIDE_HIT |
 | Channel 52 | Channel52.bd | NO_GUIDE_HIT |
 | Channel 9 | Channel9.bd | NO_GUIDE_HIT |
 | Channel I | ChannelI.bd | NO_GUIDE_HIT |
@@ -97,7 +97,7 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Nexus TV | NexusTV.bd | NO_GUIDE_HIT |
 | Nexus TV | NexusTV.bd@SD | NO_GUIDE_HIT |
 | Nick Bangla | NickBangla.bd | NO_GUIDE_HIT |
-| NRB HD | custom.bdix.nrb-hd | NO_GUIDE_HIT |
+| NRB | custom.bdix.nrb-hd | NO_GUIDE_HIT |
 | NRB TV | NRBTV.ca | NO_GUIDE_HIT |
 | NTV | NTV-IN | NO_GUIDE_HIT |
 | NTV | NTV.bd | NO_GUIDE_HIT |
