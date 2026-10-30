@@ -1,0 +1,24 @@
+ M BDIX-Playlist.m3u
+ M IPTV-Playlist.m3u
+ M International-Playlist.m3u
+ M assets/dashboard.svg
+ M "reports/Update Report.md"
+ M reports/channel-identity-index.json
+ M reports/cross-playlist-metadata-backfill.md
+ M reports/international-playlist-audit.md
+ M reports/iptv-fragile-streams.md
+ M reports/iptv-metadata-backfill.md
+ M reports/iptv-playlist-audit.md
+ M reports/logo-asset-quality-audit.md
+ M reports/logo-authenticity-manifest.json
+ M reports/logo-provenance-review.md
+ M reports/maintenance-history.json
+ M reports/maintenance-report.md
+ M reports/metadata-normalization.md
+ M reports/playlist-logo-repair-results.md
+ M reports/pre-publish-gate.md
+ M reports/proposed-removals.md
+ M reports/stream-health-history.json
+ M reports/stream-health.md
+ M reports/stream-risk-review.md
+?? dryrun/

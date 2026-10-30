@@ -1,0 +1,24 @@
+ BDIX-Playlist.m3u                           |     8 +-
+ IPTV-Playlist.m3u                           |  1840 ++--
+ International-Playlist.m3u                  |  5208 +++++-----
+ assets/dashboard.svg                        |     2 +-
+ reports/Update Report.md                    |    66 +-
+ reports/channel-identity-index.json         |  3175 +++---
+ reports/cross-playlist-metadata-backfill.md |    14 +-
+ reports/international-playlist-audit.md     |    75 +-
+ reports/iptv-fragile-streams.md             |   107 +-
+ reports/iptv-metadata-backfill.md           |    10 +-
+ reports/iptv-playlist-audit.md              |   978 +-
+ reports/logo-asset-quality-audit.md         |  2323 ++++-
+ reports/logo-authenticity-manifest.json     | 13994 ++++++++++++--------------
+ reports/logo-provenance-review.md           |   112 +-
+ reports/maintenance-history.json            |    28 +-
+ reports/maintenance-report.md               |    18 +-
+ reports/metadata-normalization.md           |    19 +-
+ reports/playlist-logo-repair-results.md     |    10 +-
+ reports/pre-publish-gate.md                 |    64 +-
+ reports/proposed-removals.md                |     2 +-
+ reports/stream-health-history.json          | 13777 ++++++++++++-------------
+ reports/stream-health.md                    |   265 +-
+ reports/stream-risk-review.md               |   194 +-
+ 23 files changed, 21843 insertions(+), 20446 deletions(-)

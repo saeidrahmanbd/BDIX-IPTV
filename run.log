@@ -1,0 +1,58 @@
+Playlist safety baseline: 1160 complete entries
+Protected review snapshot: 465 complete entries
+International protected baseline: 532 Backup/Not Playing stream URLs
+Non-destructive maintenance mode: using current repair/validation pipeline.
+Normalization: entries=1160 numbers=39 logos=12 backup_entries=465
+HARDENED IPTV-Playlist.m3u: 1160 records
+New Channels/New Backup contain only entries verified as BD/IN with normalized tvg-country.
+Known-bad local logo references invalidated: 0
+Explicit ID logo failed: Vyas Channel [vyaschannel.in@sd]: cannot identify image file <_io.BytesIO object at 0x7fb8e7908950>
+Catalogue logo failed: Vyas Channel: cannot identify image file <_io.BytesIO object at 0x7fb8e29e7ce0>
+Logo references fixed: 42
+New logos downloaded: 0
+Resolved from existing local logos: 0
+Resolved from explicit fallback sources: 30
+Resolved from IPTV-org catalogue: 0
+Local non-PNG logos converted: 12
+Logo downloads failed: 2
+Still unresolved (no usable logo attached): 1
+UNRESOLVED: Vyas Channel
+Protected review restore: snapshot_backup=366 snapshot_not_playing=99 restored_exact=465 primary_reclassifications_reverted=0 backup_migrated=0 migration_groups={} unexpected_backup_retained=0 unexpected_not_playing_retained=0 permanently_removed=1 verified_protected_logo_repairs=0
+Cross-playlist metadata backfill complete:
+  BDIX-Playlist.m3u: entries changed=4, country=2, language=2, remaining gaps=47
+  International-Playlist.m3u: entries changed=209, country=17, language=206, remaining gaps=2137
+  IPTV-Playlist.m3u: entries changed=0, country=0, language=0, remaining gaps=39
+Country-preserving metadata repair: kept DiscoveryKids.in@SD for Discovery Kids; canonical ID DiscoveryKids.au has conflicting country evidence.
+Consistency repair: metadata changes=8; exact duplicate review lines removed=0; distinct stream URLs preserved.
+{"before": 3257, "after": 3205, "removed": {"non-Islamic religious": 3, "non-Bangladesh news": 1, "test/VOD/non-TV name": 48, "duplicate channel stream moved to Backup": 6}, "normalized_names": 163, "malformed_http_options_moved": 0, "duplicate_urls": 0, "duplicate_channels_moved_to_backup": 6, "groups": {"Bangladesh": 66, "Indian Bangla": 36, "Indian Movies": 82, "Indian Music": 61, "Indian Entertainment": 205, "Pakistani": 8, "Argentina": 14, "Austria": 8, "Brazil": 12, "Bulgaria": 19, "Canada": 29, "Chile": 18, "China": 12, "Colombia": 10, "Czech Republic": 27, "Estonia": 6, "Finland": 9, "France": 45, "Germany": 84, "Greece": 9, "Hungary": 15, "Iran": 16, "Italy": 26, "Lebanon": 6, "Mexico": 19, "Netherlands": 19, "Peru": 8, "Poland": 29, "Portugal": 7, "Romania": 37, "Russia": 99, "Saudi Arabia": 14, "Spain": 21, "Sweden": 55, "Turkey": 21, "Ukraine": 31, "United Arab Emirates": 5, "United Kingdom": 22, "United States": 239, "Uzbekistan": 5, "Vietnam": 5, "Fashion TV": 1, "Documentary & Wildlife": 191, "Kids": 221, "Religious": 31, "Sports": 245, "Adult": 359, "New Channels": 150, "Backup": 548}}
+International-Playlist.m3u: attribution block verified.
+International structure OK: 3205 entries, 0 duplicate URLs, 0 broken/external logo references, 387 entries without logos. Playback was not tested.
+IPTV-Playlist.m3u: restored protected attribution block.
+Protected review restore: snapshot_backup=366 snapshot_not_playing=99 restored_exact=465 primary_reclassifications_reverted=0 backup_migrated=0 migration_groups={} unexpected_backup_retained=0 unexpected_not_playing_retained=0 permanently_removed=0 verified_protected_logo_repairs=0
+IPTV metadata backfill: matched=498, entries_changed=0, country_filled=0, language_filled=0, fallback_entries=157, gaps_remaining=0
+Cross-playlist metadata backfill complete:
+  BDIX-Playlist.m3u: entries changed=4, country=2, language=2, remaining gaps=47
+  International-Playlist.m3u: entries changed=0, country=0, language=0, remaining gaps=2078
+  IPTV-Playlist.m3u: entries changed=0, country=0, language=0, remaining gaps=39
+Logo asset audit complete: repaired=0, remaining_format_mismatches=2, remaining_oversized=1, duplicate_clusters=625
+Change Guard passed: no existing stream URL disappeared; Backup/Not Playing content is unchanged.
+International protected Backup/Not Playing streams preserved.
+Playlist audit: entries=1159 duplicate_ids=214 duplicate_urls=0 conflicts=0 name_collisions=0 protected_changes=0 logo_exceptions=0 external_logo_warnings=0
+Pre-publish gate: PASS
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.048s
+
+OK
+Stream health: tested=1159 ok=998 failed=161 persistent=58
+Fragile stream report: 253 flagged; secret values redacted; playlist SHA-256 7f2fa0e3b0ff34ceb5823b465b75dc99e6fb3fc8f1fac5a8c5f88b0ed52663ab
+Stream risk review: streamtest=9 signed=10 xtream=0 proxy=41 api-relay=8
+Identity index: 734 canonical roots
+Wrote reports/logo-authenticity-manifest.json: 4495 entries; statuses={'needs_review': 3541, 'third_party_verified': 954}
+Staged repaired logo assets: logos/
+Current logo status generated: 1159 entries; needs_review=1133
+Logo provenance review generated; needs-review entries: 3541
+Current metadata report: 1159 entries; playlist SHA-256 7f2fa0e3b0ff34ceb5823b465b75dc99e6fb3fc8f1fac5a8c5f88b0ed52663ab
+Report freshness check passed (generated): timestamps and source fingerprints match current playlist inputs.
+URL uniqueness check passed: 1159 stream URLs, 0 duplicates.
+DRYRUN_BODY_COMPLETED
