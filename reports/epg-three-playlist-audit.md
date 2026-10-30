@@ -1,14 +1,14 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-10-30T09:02:31+00:00**
+Generated: **2026-10-30T11:14:23+00:00**
 
 This report measures the three maintained M3U playlists included in the automated EPG pipeline. The historic filename epg-three-playlist-audit.md is retained for link compatibility.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1160 | 690 | 464 | 412 | 464 | 401 | 226 | OK |
+| IPTV-Playlist.m3u | 1161 | 691 | 464 | 412 | 464 | 402 | 227 | OK |
 | BDIX-Playlist.m3u | 131 | 131 | 78 | 71 | 78 | 71 | 53 | OK |
-| International-Playlist.m3u | 3205 | 2649 | 869 | 711 | 863 | 677 | 1780 | OK |
+| International-Playlist.m3u | 3205 | 2649 | 869 | 711 | 863 | 678 | 1780 | OK |
 
 ## Group coverage
 
@@ -44,7 +44,7 @@ This report measures the three maintained M3U playlists included in the automate
 | Mexico | 19 | 6 | 4 | 13 |
 | Netherlands | 17 | 8 | 8 | 9 |
 | New Backup | 5 | 4 | 4 | 1 |
-| New Channels | 180 | 33 | 27 | 147 |
+| New Channels | 181 | 33 | 27 | 148 |
 | Pakistani | 21 | 4 | 4 | 17 |
 | Peru | 8 | 0 | 0 | 8 |
 | Poland | 29 | 18 | 14 | 11 |
@@ -74,6 +74,6 @@ This report measures the three maintained M3U playlists included in the automate
 
 ## Source Playlist Fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **2f00cd81215b375e4776d6dd458f71acc5734daf86990b5c85061a1bec922a77**
+- IPTV-Playlist.m3u SHA-256: **c29297587456a71d24dcf02a9bfc5de2c61a493b5770754fae1e21cd934d72ab**
 - BDIX-Playlist.m3u SHA-256: **6e98537a07d9bb5f5ee818f86defff1357302adeaca270e0786a7185bcd33b2d**
 - International-Playlist.m3u SHA-256: **359731d46ab6910e71335940aacfdeb1321d84c824fea6e120575031d128eff3**
