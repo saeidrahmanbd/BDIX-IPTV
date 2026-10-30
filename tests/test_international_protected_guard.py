@@ -62,6 +62,19 @@ class ReorganizePreservesProtectedTests(unittest.TestCase):
         self.assertIn("http://orphan.example/hum.m3u8", out)
         self.assertNotIn("http://rtsh.example/1.m3u8", out)
 
+    def test_discovery_policy_scope_is_review_queues_only(self):
+        header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
+        legacy = "".join(entry(f"USA Network {i}", "United States", f"http://us.example/{i}.m3u8", 'tvg-country="US" tvg-content="Movies" ') for i in range(6))
+        with tempfile.TemporaryDirectory() as tmp:
+            Path(tmp, "International-Playlist.m3u").write_text(header + legacy, encoding="utf-8")
+            Path(tmp, "reports").mkdir()
+            r = subprocess.run([sys.executable, str(SCRIPTS / "reorganize_international_playlist.py")], cwd=tmp,
+                               env=dict(os.environ, PYTHONPATH=str(SCRIPTS)), capture_output=True, text=True)
+            self.assertEqual(r.returncode, 0, r.stderr)
+            out = Path(tmp, "International-Playlist.m3u").read_text(encoding="utf-8")
+        for i in range(6):
+            self.assertIn(f"http://us.example/{i}.m3u8", out)
+
 
 if __name__ == "__main__":
     unittest.main()

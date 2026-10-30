@@ -28,8 +28,12 @@ KIDS_RE = re.compile(r"\b(kids?|children|cartoon|baby\s*shark|disney\s*(?:jr|jun
 SPORTS_RE = re.compile(r"\b(sports?|football|soccer|basketball|tennis|cricket|golf|racing|motorsport|fight|boxing|wrestling|ufc|esports?|arena\s*sport|league|espn|fox\s*sports|bein\s*sport|sky\s*sports|eurosport|nba|nfl|nhl|mlb|fifa|olympic|horse\s*racing|willow|ten\s*sports|sony\s*sports|star\s*sports|sport\s*tv|sport1|setanta|sportitalia|motorvision|real\s*madrid\s*tv)\b", re.I)
 ADULT_RE = re.compile(r"\b(adult|xxx|porn|erotic|redlight|playboy|penthouse|hustler|brazzers|dorcel|blue\s*hustler|satisfaction|sexy|babes|private\s*tv|desire\s*tv|passion\s*tv|hot\s*adult)\b", re.I)
 FASHION_RE = re.compile(r"\bfashion\s*tv\b", re.I)
-# Single source of truth: the discovery policy (validate_international_playlist.py enforces the same rule).
-GENERAL_OUT_OF_SCOPE_RE = discovery.GENERAL_OUT_OF_SCOPE_RE
+GENERAL_OUT_OF_SCOPE_RE = re.compile(r"\b(servus\s*tv|star\s*channel|warner\s*(?:channel|tv)|persiana\s*(?:family|iranian|korea|plus)|nile\s*drama|mbc\s*\+?\s*drama|groovy\s*tv|mci\s*television|general\s*entertainment|variety\s*channel)\b", re.I)
+# Review queues (New Channels / New Backup) follow the discovery policy exactly, the same rule
+# validate_international_playlist.py enforces there. Legacy country groups keep the narrower rule
+# above on purpose: the validator preserves legacy country-group entries, so widening it would
+# delete entries nobody asked to remove.
+QUEUE_GROUPS = {"new channels", "new backup", "new backups"}
 MANUAL_NEWS = {"rplus", "rplusnews", "rplusnews24x7"}
 MANUAL_COUNTRY = {"rajdhanitv": "BD", "sonimax": "IN", "sonimax2": "IN", "asiansonimax2": "IN", "shemaroobollywood": "IN"}
 MANUAL_GROUP = {"sonimax": "Indian Movies", "sonimax2": "Indian Movies", "asiansonimax2": "Indian Movies", "shemaroobollywood": "Indian Movies"}
@@ -196,7 +200,8 @@ def classify(a, name, group, country):
         return "Sports", None, None
     if DOC_RE.search(joined) or group == "Documentary & Wildlife":
         return "Documentary & Wildlife", None, None
-    if country not in {"BD", "IN"} and group not in {"Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult"} and GENERAL_OUT_OF_SCOPE_RE.search(joined):
+    out_of_scope_re = discovery.GENERAL_OUT_OF_SCOPE_RE if group_key in QUEUE_GROUPS else GENERAL_OUT_OF_SCOPE_RE
+    if country not in {"BD", "IN"} and group not in {"Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult"} and out_of_scope_re.search(joined):
         return None, None, "general entertainment, not a dedicated Movie/Music channel"
     if key in MANUAL_GROUP:
         return MANUAL_GROUP[key], None, None
