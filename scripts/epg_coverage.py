@@ -7,6 +7,7 @@ import xml.etree.ElementTree as ET
 from official_epg_sources import (
     HUM_TV_SOURCE, HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes,
     RTV_SOURCE, RTV_CHANNEL_ID, fetch_rtv_programmes,
+    BTV_SOURCE, BTV_CHANNEL_ID, fetch_btv_programmes,
 )
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
@@ -112,8 +113,9 @@ EPG_LOCKS = {
     # ATN Bangla UK is a distinct UK service. This narrow lock does not affect
     # ATNBangla.bd or any other domestic Bangladesh identity.
     "ATNBanglaUK.uk": ["6753"],
-    # RTV's official schedule adapter uses this exact XMLTV identity.
+    # Official broadcaster schedules use exact domestic playlist identities.
     "RTV.bd": ["RTV.bd"],
+    "BTVNational.bd": ["BTVNational.bd"],
 }
 
 REPORT = Path("reports/epg-coverage.md")
@@ -162,6 +164,7 @@ SOURCES = [
     "https://i.mjh.nz/SamsungTVPlus/us.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml",
     "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml",
@@ -202,6 +205,7 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
     "https://hum.tv/schedule/",
     "https://www.rtvbd.tv/schedule.php",
+    "https://migrate.btvlive.gov.bd/channel/BTV",
 ]
 
 
@@ -357,6 +361,21 @@ def is_english_text_element(elem):
 
 
 def fetch_source(url):
+    if url == BTV_SOURCE:
+        programmes = fetch_btv_programmes()
+        ids = {BTV_CHANNEL_ID} if programmes else set()
+        future = set()
+        counts = defaultdict(int)
+        names = defaultdict(set)
+        now = datetime.now(timezone.utc)
+        for program in programmes:
+            cid = program["channel_id"]
+            counts[cid] += 1
+            names[norm_name("BTV National")].add(cid)
+            if program["stop_dt"] >= now:
+                future.add(cid)
+        return ids, future, counts, names
+
     if url == RTV_SOURCE:
         programmes = fetch_rtv_programmes()
         ids = {RTV_CHANNEL_ID} if programmes else set()
@@ -880,7 +899,7 @@ def main():
         (src, status, ids, future, programmes, error)
         for src, status, ids, future, programmes, error in source_status
         if any(token in str(src).casefold() for token in (
-            "rtvbd.tv", "bangladesh", "/bd.xml", "bgdportal", "m3u4u xmltv"
+            "rtvbd.tv", "btvlive.gov.bd", "bangladesh", "/bd.xml", "bgdportal", "m3u4u xmltv"
         ))
     ]
     bd_lines = [

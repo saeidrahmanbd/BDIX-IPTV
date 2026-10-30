@@ -10,6 +10,7 @@ import csv
 import gzip
 import re
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -19,12 +20,18 @@ MAPPING = Path("reports/epg-channel-mapping.csv")
 # New sources supplied for this repair. US feeds are intentionally omitted here;
 # they are useful for the generator but should not create India mappings.
 SOURCES = [
+    "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
+    "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
+    "https://iptv-epg.org/files/epg-in.xml.gz",
     "https://epg.lat/files/in.xml.gz",
     "https://www.free-epg.de/api/epg/in.xml.gz",
     "https://www.open-epg.com/files/india.xml.gz",
     # Provider feeds already consumed by the XMLTV generator; scan their
     # channel catalogues too so active playlist IDs can acquire exact mappings.
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml",
+    "https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml",
+    "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml",
@@ -109,13 +116,14 @@ def main():
 
     by_id = {row.get("tvg_id", "").strip(): row for row in rows if row.get("tvg_id", "").strip()}
     source_hits = {}
-    for source in SOURCES:
-        try:
-            names = source_channels(fetch(source))
-        except Exception as exc:
-            print(f"Additional EPG source unavailable: {source} ({exc})")
-            continue
-        source_hits[source] = names
+    with ThreadPoolExecutor(max_workers=min(8, len(SOURCES))) as pool:
+        futures = {pool.submit(fetch, source): source for source in SOURCES}
+        for future in as_completed(futures):
+            source = futures[future]
+            try:
+                source_hits[source] = source_channels(future.result())
+            except Exception as exc:
+                print(f"Additional EPG source unavailable: {source} ({exc})")
 
     added = 0
     for channel in channels:
@@ -127,7 +135,7 @@ def main():
             continue
 
         matches = []
-        for source, names in source_hits.items():
+        for source, names in sorted(source_hits.items()):
             ids = sorted(names.get(key, set()))
             if len(ids) == 1:
                 matches.append((source, ids[0]))

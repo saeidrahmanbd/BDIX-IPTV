@@ -10,6 +10,8 @@ HUM_TV_SOURCE = "https://hum.tv/schedule/"
 HUM_TV_CHANNEL_ID = "HumTV.pk"
 RTV_SOURCE = "https://www.rtvbd.tv/schedule.php"
 RTV_CHANNEL_ID = "RTV.bd"
+BTV_SOURCE = "https://migrate.btvlive.gov.bd/channel/BTV"
+BTV_CHANNEL_ID = "BTVNational.bd"
 PAKISTAN_TZ = ZoneInfo("Asia/Karachi")
 BANGLADESH_TZ = ZoneInfo("Asia/Dhaka")
 WEEKDAYS = {
@@ -363,3 +365,141 @@ def fetch_rtv_programmes(now=None):
         key = (programme["start_dt"], programme["stop_dt"], programme["title"])
         unique[key] = programme
     return sorted(unique.values(), key=lambda x: (x["start_dt"], x["title"]))
+
+
+# BTV publishes its current/upcoming programme guide on its official live site.
+# The adapter keeps only explicitly timed cards for the BTV National playlist ID.
+BTV_DIGITS = str.maketrans("০১২৩৪৫৬৭৮৯", "0123456789")
+BTV_MONTHS = {
+    "জানু": 1, "জানুয়ারি": 1, "ফেব্রু": 2, "ফেব্রুয়ারি": 2,
+    "মার্চ": 3, "এপ্রি": 4, "এপ্রিল": 4, "মে": 5, "জুন": 6,
+    "জুলাই": 7, "আগস্ট": 8, "সেপ্টে": 9, "সেপ্টেম্বর": 9,
+    "অক্টো": 10, "অক্টোবর": 10, "নভে": 11, "নভেম্বর": 11,
+    "ডিসে": 12, "ডিসেম্বর": 12,
+    "jan": 1, "january": 1, "feb": 2, "february": 2,
+    "mar": 3, "march": 3, "apr": 4, "april": 4, "may": 5,
+    "jun": 6, "june": 6, "jul": 7, "july": 7, "aug": 8,
+    "august": 8, "sep": 9, "sept": 9, "september": 9,
+    "oct": 10, "october": 10, "nov": 11, "november": 11,
+    "dec": 12, "december": 12,
+}
+BTV_DATE_RE = re.compile(
+    r"(\d{1,2})\s+([^\s,]+),\s*(\d{4})\s*[·•]\s*"
+    r"(\d{1,2}):(\d{2})\s*[–—-]\s*(\d{1,2}):(\d{2})"
+)
+BTV_GENERIC_TITLES = {"প্রমোশনাল/ফিলার", "সমাপ্তি", "এক্সক্লুসিভ", "schedule", "program guide"}
+
+
+class _BtvScheduleParser(HTMLParser):
+    """Pair BTV's programme-card headings with their explicit date/time text."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.cards = []
+        self.in_heading = False
+        self.heading_parts = []
+        self.current_title = None
+        self.body_parts = []
+
+    def _flush(self):
+        if self.current_title:
+            self.cards.append((self.current_title, " ".join(self.body_parts)))
+        self.current_title = None
+        self.body_parts = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag.lower() == "h3":
+            self._flush()
+            self.in_heading = True
+            self.heading_parts = []
+
+    def handle_endtag(self, tag):
+        if tag.lower() == "h3" and self.in_heading:
+            self.current_title = _clean("".join(self.heading_parts))
+            self.in_heading = False
+            self.heading_parts = []
+
+    def handle_data(self, data):
+        if self.in_heading:
+            self.heading_parts.append(data)
+        elif self.current_title is not None and data:
+            self.body_parts.append(data)
+
+    def close(self):
+        super().close()
+        self._flush()
+
+
+def fetch_btv_programmes(now=None):
+    """Fetch BTV's official live-site guide and convert explicit slots to XMLTV rows.
+
+    BTV displays Bengali dates and 24-hour local times. Only programme cards with
+    a parseable date and explicit start/end are emitted; no duration is inferred.
+    """
+    now = now or datetime.now(timezone.utc)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    now_utc = now.astimezone(timezone.utc)
+    request = urllib.request.Request(
+        BTV_SOURCE,
+        headers={
+            "User-Agent": "BDIX-IPTV-Official-Schedule/1.0",
+            "Accept": "text/html,application/xhtml+xml,*/*",
+        },
+    )
+    with urllib.request.urlopen(request, timeout=30) as response:
+        html = response.read().decode("utf-8-sig", errors="replace")
+
+    parser = _BtvScheduleParser()
+    parser.feed(html)
+    parser.close()
+    if not parser.cards:
+        raise RuntimeError("BTV official programme guide contained no programme cards")
+
+    lower = now_utc - timedelta(hours=6)
+    upper = now_utc + timedelta(days=7)
+    programmes = []
+    for raw_title, body in parser.cards:
+        title = _clean(raw_title)
+        if not title or title.casefold() in BTV_GENERIC_TITLES:
+            continue
+        text = _clean(body).translate(BTV_DIGITS)
+        for match in BTV_DATE_RE.finditer(text):
+            day, month_name, year, sh, sm, eh, em = match.groups()
+            month = BTV_MONTHS.get(month_name.casefold().rstrip("."))
+            if month is None:
+                continue
+            try:
+                start_local = datetime(
+                    int(year), month, int(day), int(sh), int(sm), tzinfo=BANGLADESH_TZ
+                )
+                stop_local = datetime(
+                    int(year), month, int(day), int(eh), int(em), tzinfo=BANGLADESH_TZ
+                )
+            except ValueError:
+                continue
+            if stop_local <= start_local:
+                stop_local += timedelta(days=1)
+            if stop_local - start_local > timedelta(hours=6):
+                continue
+            start = start_local.astimezone(timezone.utc)
+            stop = stop_local.astimezone(timezone.utc)
+            if stop < lower or start > upper:
+                continue
+            programmes.append({
+                "channel_id": BTV_CHANNEL_ID,
+                "title": title,
+                "start_dt": start,
+                "stop_dt": stop,
+            })
+
+    unique = {}
+    for programme in programmes:
+        key = (programme["start_dt"], programme["stop_dt"], programme["title"].casefold())
+        unique[key] = programme
+    if len(unique) < 8:
+        raise RuntimeError(
+            "BTV official guide produced fewer than 8 explicit current/future programme slots; "
+            "the page markup or schedule may have changed."
+        )
+    return sorted(unique.values(), key=lambda x: (x["start_dt"], x["title"].casefold()))

@@ -43,10 +43,22 @@ class EpgConfigTests(unittest.TestCase):
             "https://www.free-epg.de/api/epg/in.xml.gz",
             "https://www.free-epg.de/api/epg/us.xml.gz",
             "https://www.open-epg.com/files/india.xml.gz",
+            "https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz",
+            "https://epgshare01.online/epgshare01/epg_ripper_IN2.xml.gz",
+            "https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz",
+            "https://iptv-epg.org/files/epg-in.xml.gz",
+            "https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml",
+            "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
         ]
         for source in expected:
             self.assertIn(source, literal(COV, "SOURCES"))
             self.assertIn(source, literal(GEN, "SOURCES"))
+        discovery = literal(
+            (ROOT / "scripts" / "augment_epg_mapping_from_additional_sources.py").read_text(encoding="utf-8"),
+            "SOURCES",
+        )
+        for source in expected:
+            self.assertIn(source, discovery)
 
     def test_private_m3u4u_source_is_selected_for_discovery_without_mapping(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -102,6 +114,30 @@ class EpgConfigTests(unittest.TestCase):
             "https://www.rtvbd.tv/schedule.php",
         )
 
+    def test_btv_official_schedule_parses_bengali_dates_and_explicit_times(self):
+        cards = []
+        for index in range(10):
+            start_minutes = 8 * 60 + index * 30
+            stop_minutes = start_minutes + 25
+            sh, sm = divmod(start_minutes, 60)
+            eh, em = divmod(stop_minutes, 60)
+            cards.append(
+                f"<h3>পরীক্ষামূলক অনুষ্ঠান {index}</h3>"
+                f"<div>২৯ অক্টো, ২০২৬ · {sh:02d}:{sm:02d} – {eh:02d}:{em:02d}</div>"
+            )
+        html = "".join(cards)
+        with patch.object(
+            official_epg_sources.urllib.request,
+            "urlopen",
+            return_value=io.BytesIO(html.encode("utf-8")),
+        ):
+            programmes = official_epg_sources.fetch_btv_programmes(
+                datetime(2026, 10, 29, tzinfo=timezone.utc)
+            )
+        self.assertEqual(len(programmes), 10)
+        self.assertEqual(programmes[0]["channel_id"], "BTVNational.bd")
+        self.assertEqual(programmes[0]["title"], "পরীক্ষামূলক অনুষ্ঠান 0")
+
     def test_source_audit_is_staged_by_refresh_workflow(self):
         workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
         self.assertIn("reports/epg-source-audit.md", workflow)
@@ -132,14 +168,14 @@ class EpgConfigTests(unittest.TestCase):
                 })
             configured = [
                 "feed-a", "feed-b", "feed-c", "file:///tmp/iptv-org-guide.xml",
-                generate_epg.HUM_TV_SOURCE, generate_epg.RTV_SOURCE,
+                generate_epg.HUM_TV_SOURCE, generate_epg.RTV_SOURCE, generate_epg.BTV_SOURCE,
             ]
             with patch.object(generate_epg, "MAPPING", mapping):
                 selected = generate_epg.sources_with_mapped_channels(configured)
         self.assertEqual(
             selected,
             ["feed-a", "feed-b", "file:///tmp/iptv-org-guide.xml",
-             generate_epg.HUM_TV_SOURCE, generate_epg.RTV_SOURCE],
+             generate_epg.HUM_TV_SOURCE, generate_epg.RTV_SOURCE, generate_epg.BTV_SOURCE],
         )
 
     def test_generator_covers_all_three_core_playlists(self):
@@ -166,6 +202,9 @@ class EpgConfigTests(unittest.TestCase):
         generator_sources = literal(GEN, "SOURCES")
         self.assertIn("https://www.rtvbd.tv/schedule.php", coverage_sources)
         self.assertIn("https://www.rtvbd.tv/schedule.php", generator_sources)
+        self.assertIn(official_epg_sources.BTV_SOURCE, coverage_sources)
+        self.assertIn(official_epg_sources.BTV_SOURCE, generator_sources)
+        self.assertEqual(literal(COV, "EPG_LOCKS")["BTVNational.bd"], ["BTVNational.bd"])
 
     def test_epg_source_list_has_no_hardcoded_provider_ban(self):
         coverage_sources = literal(COV, "SOURCES")

@@ -15,6 +15,7 @@ from pathlib import Path
 from official_epg_sources import (
     HUM_TV_SOURCE, HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes,
     RTV_SOURCE, RTV_CHANNEL_ID, fetch_rtv_programmes,
+    BTV_SOURCE, BTV_CHANNEL_ID, fetch_btv_programmes,
 )
 
 PLAYLISTS = [
@@ -72,6 +73,7 @@ SOURCES = [
     "https://i.mjh.nz/SamsungTVPlus/us.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml",
     "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml",
@@ -112,6 +114,7 @@ SOURCES = [
     "https://epgshare01.online/epgshare01/epg_ripper_BR2.xml.gz",
     "https://hum.tv/schedule/",
     "https://www.rtvbd.tv/schedule.php",
+    "https://migrate.btvlive.gov.bd/channel/BTV",
 ]
 
 PRIVATE_SOURCE_ENV = "M3U4U_XMLTV_URL"
@@ -157,7 +160,7 @@ def sources_with_mapped_channels(source_urls):
     selected = [
         source for source in source_urls
         if source in mapped_sources
-        or source in (HUM_TV_SOURCE, RTV_SOURCE)
+        or source in (HUM_TV_SOURCE, RTV_SOURCE, BTV_SOURCE)
         or source.startswith("file://")
         or (private_url and source == private_url)
     ]
@@ -203,7 +206,7 @@ def fetch(url):
 
 def fetch_xmltv_sources_concurrently(source_urls, max_workers=SOURCE_FETCH_WORKERS):
     """Fetch ordinary XMLTV feeds concurrently, preserving per-URL results and errors."""
-    urls = [url for url in source_urls if url not in (HUM_TV_SOURCE, RTV_SOURCE)]
+    urls = [url for url in source_urls if url not in (HUM_TV_SOURCE, RTV_SOURCE, BTV_SOURCE)]
     if not urls:
         return {}, {}
     workers = max(1, min(int(max_workers), len(urls)))
@@ -590,17 +593,19 @@ def main():
     candidates = {}
     source_stats = {}
     source_urls = sources_with_mapped_channels(configured_sources())
-    fetchable_count = sum(src not in (HUM_TV_SOURCE, RTV_SOURCE) and not src.startswith("file://") for src in source_urls)
+    fetchable_count = sum(src not in (HUM_TV_SOURCE, RTV_SOURCE, BTV_SOURCE) and not src.startswith("file://") for src in source_urls)
     print(f"EPG source fetch: {fetchable_count} XMLTV feeds, max_workers={SOURCE_FETCH_WORKERS}, timeout={SOURCE_FETCH_TIMEOUT_SECONDS}s")
     source_payloads, source_errors = fetch_xmltv_sources_concurrently(source_urls)
     print(f"EPG source fetch complete: {len(source_payloads)} succeeded, {len(source_errors)} failed")
     for source_index, src in enumerate(source_urls):
         try:
-            if src in (HUM_TV_SOURCE, RTV_SOURCE):
+            if src in (HUM_TV_SOURCE, RTV_SOURCE, BTV_SOURCE):
                 if src == HUM_TV_SOURCE:
                     schedule_id, schedule_fetch, schedule_label = (HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes, "HUM TV")
-                else:
+                elif src == RTV_SOURCE:
                     schedule_id, schedule_fetch, schedule_label = (RTV_CHANNEL_ID, fetch_rtv_programmes, "RTV")
+                else:
+                    schedule_id, schedule_fetch, schedule_label = (BTV_CHANNEL_ID, fetch_btv_programmes, "BTV National")
                 schedule_targets = [target for target in reverse.get(schedule_id, []) if target in mapped_targets]
                 if not schedule_targets:
                     source_stats[src] = f"SKIPPED: no active exact {schedule_label} mapping"
