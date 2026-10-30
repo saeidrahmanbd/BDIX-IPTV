@@ -5,18 +5,58 @@
 Playlist updates across `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-10-27 — `IPTV-Playlist.m3u`
+### 2026-10-30 — `IPTV-Playlist.m3u`
 
 - New channel identities: **1**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **1 / 0**
+- Channel identities removed: **3**
+- Stream URLs added / removed: **5 / 15**
+- Backup URL updates: **0**
+- Logo reference changes: **1**
+- Replaced channel identities: **0**
+- Duplicate URL occurrences removed: **0**
+
+Added channel identities (up to 10):
+- Shiksha TV
+
+Removed channel identities (up to 10):
+- Oscar Movies Bhojpuri
+- HSTV
+- Star Sports 2 Hindi
+
+<!-- playlist-changelog:International-Playlist.m3u -->
+### 2026-10-30 — `International-Playlist.m3u`
+
+- New channel identities: **149**
+- Channel identities removed: **66**
+- Stream URLs added / removed: **154 / 66**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Disney Channel (India)
+- Rakuten TV Action Movies Austria
+- Rakuten TV Comedy Movies Austria
+- Rakuten TV Drama Movies Austria
+- Rakuten TV Family Movies Austria
+- Viasat Kino Bulgaria
+- Rakuten TV Action Movies Finland
+- Rakuten TV Comedy Movies Finland
+- Rakuten TV Drama Movies Finland
+- Rakuten TV Family Movies Finland
+- Rakuten TV Nordic Films
+
+Removed channel identities (up to 10):
+- Calvary TV
+- Prarthana TV
+- R Plus
+- Beats Radio
+- Radio Conexion Web TV
+- Radio Realpolitik
+- Heart Radio Aruba
+- TikTok Radio Brasil
+- Stingray TikTok Radio
+- AE Radio TV
 ## [5.0.0] — Playlist Studio
 
 ### Added
