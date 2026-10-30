@@ -23,8 +23,8 @@ jobs:
     steps:
       - name: Check both Xtream gateways
         env:
-          XTREAM_USERNAME: \${{ secrets.XTREAM_USERNAME }}
-          XTREAM_PASSWORD: \${{ secrets.XTREAM_PASSWORD }}
+          XTREAM_USERNAME: ${{ secrets.XTREAM_USERNAME }}
+          XTREAM_PASSWORD: ${{ secrets.XTREAM_PASSWORD }}
         run: |
           set -euo pipefail
           python3 - <<'PY'
