@@ -26,7 +26,6 @@ PERMANENTLY_REMOVED_NAMES = {
     "america's got talent",
     "american idol",
     "baraza music tv",
-    "oscar movies bhojpuri",
     "the walking dead universe",
     "popflix",
     "60 days in",

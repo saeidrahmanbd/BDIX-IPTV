@@ -24,7 +24,6 @@ TARGET_NAMES = {
     "America's Got Talent",
     "American Idol",
     "Baraza Music TV",
-    "Oscar Movies Bhojpuri",
     "The Walking Dead Universe",
     "Popflix",
     "60 Days In",
