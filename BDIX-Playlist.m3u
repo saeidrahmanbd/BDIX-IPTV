@@ -36,7 +36,7 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hz7XyihAYmQKXwDmgiEPYRY
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h1qqs5oS5S6n_LTBHjGVQGE
 #EXTINF:-1 tvg-id="ChannelI.bd" tvg-name="Channel I" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-i.png" tvg-chno="24" channel-id="ChannelI.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh" xui-id="363",Channel I
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9llgrLKyIYwnVGkGOOW3dM
-#EXTINF:-1 tvg-id="ChannelS.uk" tvg-name="Channel S" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png" tvg-chno="73" channel-id="ChannelS.uk" tvg-country="GB" group-title="Bangladesh" xui-id="93526",Channel S
+#EXTINF:-1 tvg-id="ChannelS.uk" tvg-name="Channel S" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-s.png" tvg-chno="73" channel-id="ChannelS.uk" tvg-country="GB" tvg-language="ben" group-title="Bangladesh" xui-id="93526",Channel S
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h48sWHQVW8piyRyVgWaPvQU
 #EXTINF:-1 tvg-id="DBCNews.bd" tvg-name="DBC News" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dbc-news.png" tvg-chno="11" channel-id="DBCNews.bd.alt1" tvg-country="BD" tvg-language="ben" group-title="Bangladesh" xui-id="16883",DBC News
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5jN8Wx3P7x7urmzEr9aaR0
@@ -218,7 +218,7 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h5pT0VbhMoGSXq6CXo1wJac
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hzQr1GDXRIEYG_ejdeShuFU
 #EXTINF:-1 tvg-id="custom.bdix.nickbangla" tvg-name="NICK BANGLA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-bangla-26fef2ac19.png" tvg-chno="806" channel-id="custom.bdix.nickbangla" group-title="Kids" xui-id="179128",NICK BANGLA
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8mW-NsTzyKt5adBiEMhkzw
-#EXTINF:-1 tvg-id="NickJr.in@SD" tvg-name="Nick Jr" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png" tvg-chno="897" channel-id="NickJr.in@SD" group-title="Kids" xui-id="569",Nick Jr
+#EXTINF:-1 tvg-id="NickJr.in@SD" tvg-name="Nick Jr" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nick-jr.png" tvg-chno="897" channel-id="NickJr.in@SD" tvg-country="IN" group-title="Kids" xui-id="569",Nick Jr
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h7mKDW05Zl9RrOXIffrM3Pc
 #EXTINF:-1 tvg-id="ZooMoo.sg" tvg-name="ZooMoo" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoomoo.png" tvg-chno="970" channel-id="ZooMoo.sg" tvg-country="SG" tvg-language="eng" group-title="Kids" xui-id="135044",ZooMoo
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hytkFqVyOS_EkSsPDq9sDq4
@@ -230,7 +230,7 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h0EbZhJyPxgSIRv5Bty-zHM
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h57EXli3ltdSDRMe5A7FgXk
 #EXTINF:-1 tvg-id="PeaceTVBangla.ae" tvg-name="Peace TV Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/peace-tv-bangla.png" tvg-chno="100" channel-id="PeaceTVBangla.ae" tvg-country="AE" tvg-language="ben" group-title="Religious" xui-id="180666",Peace TV Bangla
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9Q2_bokiVuN2G5pnzIbRWU
-#EXTINF:-1 tvg-id="QuranTV.iq" tvg-name="Quran TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-tv.png" tvg-chno="989" channel-id="QuranTV.iq" tvg-country="IQ" group-title="Religious" xui-id="143712",Quran TV
+#EXTINF:-1 tvg-id="QuranTV.iq" tvg-name="Quran TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/quran-tv.png" tvg-chno="989" channel-id="QuranTV.iq" tvg-country="IQ" tvg-language="ara" group-title="Religious" xui-id="143712",Quran TV
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h9WWNogV-lEyk1odd1vFOYI
 #EXTINF:-1 tvg-id="DDSports.in@SD" tvg-name="DD Sports" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-sports-fb997548.png" tvg-chno="999" channel-id="DDSports.in@SD" tvg-country="IN" tvg-language="hin" group-title="Sports" xui-id="3826",DD Sports
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_UZjwt4ii540pP_yKK-8j8
@@ -256,7 +256,7 @@ http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h8YyRwRMsXYRgfu8S9J4vdI
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_hytMSPioHZ_31Jyjlvv94V0
 #EXTINF:-1 tvg-id="StarSports1.in@HD" tvg-name="Star Sports 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-1.png" tvg-chno="1047" channel-id="StarSports1.in@HD" group-title="Sports" xui-id="398",Star Sports 1
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h6efRS_KR0UaJqw2Dh2J--A
-#EXTINF:-1 tvg-id="StarSports3.in@SD" tvg-name="Star Sports 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-3.png" tvg-chno="1048" channel-id="StarSports3.in@SD" group-title="Sports" xui-id="400",Star Sports 3
+#EXTINF:-1 tvg-id="StarSports3.in@SD" tvg-name="Star Sports 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-3.png" tvg-chno="1048" channel-id="StarSports3.in@SD" tvg-country="IN" group-title="Sports" xui-id="400",Star Sports 3
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h_cHFO6bXeIHtWyrLfjwehY
 #EXTINF:-1 tvg-id="StarSportsSelect1.in@SD" tvg-name="Star Sports Select 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-select-1.png" tvg-chno="1049" channel-id="StarSportsSelect1.in@SD" tvg-country="IN" tvg-language="eng" group-title="Sports" xui-id="403",Star Sports Select 1
 http://dvltv.cc:80/play/uxN8_xYmP3o_GFqK372_h-w1b4vLdHaAoWAJu0IeXBU
