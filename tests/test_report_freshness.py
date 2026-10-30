@@ -114,10 +114,10 @@ class ReportFreshnessTests(unittest.TestCase):
         # Stream-health belongs to playlist maintenance; discovery must not fail
         # because that separate report has not yet been regenerated.
         health = self.root / "reports" / "stream-health.md"
-        health.write_text("Generated: **2026-10-20T11:00:00+00:00**\\nStream URL inventory SHA-256: **" + ("0" * 64) + "**\\n", encoding="utf-8")
+        health.write_text("Generated: **2026-10-20T11:00:00+00:00**\nStream URL inventory SHA-256: **" + ("0" * 64) + "**\n", encoding="utf-8")
         self.assertEqual(check_reports(self.root, now=self.now, mode="discovery"), [])
         with (self.root / "IPTV-Playlist.m3u").open("a", encoding="utf-8") as stream:
-            stream.write("# discovery changed final playlist bytes\\n")
+            stream.write("# discovery changed final playlist bytes\n")
         errors = check_reports(self.root, now=self.now, mode="discovery")
         self.assertTrue(any("metadata-normalization.md: fingerprint does not match" in item for item in errors))
         self.assertTrue(any("logo-asset-quality-audit.md: fingerprint does not match" in item for item in errors))
