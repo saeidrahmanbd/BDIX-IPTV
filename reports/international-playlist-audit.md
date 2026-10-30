@@ -1,22 +1,18 @@
 # International Playlist Organization Audit
 
-- Entries before: 3257
+- Entries before: 3205
 - Entries after: 3205
-- Channel names normalized: 163
+- Channel names normalized: 0
 - Malformed HTTP options moved into VLC directives: 0
 - Invalid/external logo references removed: 0
 - Exact duplicate URLs omitted: 0
-- Additional same-channel streams moved to Backup: 6
+- Additional same-channel streams moved to Backup: 0
 - News outside Bangladesh and non-Islamic religious channels are excluded.
 - Foreign movie/music services are placed under country names after at least five unique primary channels; smaller/unknown countries remain in New Channels with tvg-content tags.
 - Retained stream URLs are preserved; playback/availability was not tested.
 
 ## Removal summary
 
-- duplicate channel stream moved to Backup: 6
-- non-Bangladesh news: 1
-- non-Islamic religious: 3
-- test/VOD/non-TV name: 48
 
 ## Protected Backup/Not Playing entries preserved (policy would have removed them)
 
