@@ -1,6 +1,6 @@
 # Update Report
 
-_Last generated: **2026-10-30 07:16 UTC**_
+_Last generated: **2026-10-30 07:40 UTC**_
 
 Source playlist SHA-256: **2f00cd81215b375e4776d6dd458f71acc5734daf86990b5c85061a1bec922a77**
 
@@ -63,7 +63,7 @@ Source playlist SHA-256: **2f00cd81215b375e4776d6dd458f71acc5734daf86990b5c85061
 | Report | Last generated | Input freshness |
 |---|---|---|
 | Playlist audit | **2026-10-30T07:15:27.571693+00:00** | **CURRENT** |
-| EPG coverage / three-playlist inventory | **2026-10-30T03:16:41+00:00** | **PENDING — guide missing or freshness not PASS** |
+| EPG coverage / three-playlist inventory | **2026-10-30T07:40:05+00:00** | **PENDING — guide missing or freshness not PASS** |
 | Stream health | **2026-10-30T07:16:08+00:00** | **CURRENT** |
 | Pre-publish gate | **2026-10-30T07:15:28+00:00** | **CURRENT** |
 
