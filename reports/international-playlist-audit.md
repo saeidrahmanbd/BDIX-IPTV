@@ -1,8 +1,8 @@
 # International Playlist Organization Audit
 
-- Entries before: 3205
-- Entries after: 3205
-- Channel names normalized: 0
+- Entries before: 3270
+- Entries after: 3270
+- Channel names normalized: 56
 - Malformed HTTP options moved into VLC directives: 0
 - Invalid/external logo references removed: 0
 - Exact duplicate URLs omitted: 0
@@ -24,42 +24,42 @@
 - Bangladesh: 66
 - Indian Bangla: 36
 - Indian Movies: 82
-- Indian Music: 61
+- Indian Music: 62
 - Indian Entertainment: 205
-- Pakistani: 8
-- Argentina: 14
+- Pakistani: 9
+- Argentina: 16
 - Austria: 8
-- Brazil: 12
-- Bulgaria: 19
+- Brazil: 13
+- Bulgaria: 21
 - Canada: 29
-- Chile: 18
+- Chile: 19
 - China: 12
-- Colombia: 10
+- Colombia: 11
 - Czech Republic: 27
 - Estonia: 6
 - Finland: 9
-- France: 45
-- Germany: 84
+- France: 49
+- Germany: 87
 - Greece: 9
-- Hungary: 15
+- Hungary: 16
 - Iran: 16
 - Italy: 26
 - Lebanon: 6
 - Mexico: 19
 - Netherlands: 19
-- Peru: 8
+- Peru: 10
 - Poland: 29
-- Portugal: 7
-- Romania: 37
-- Russia: 99
-- Saudi Arabia: 14
-- Spain: 21
+- Portugal: 8
+- Romania: 40
+- Russia: 105
+- Saudi Arabia: 15
+- Spain: 23
 - Sweden: 55
-- Turkey: 21
-- Ukraine: 31
+- Turkey: 22
+- Ukraine: 32
 - United Arab Emirates: 5
-- United Kingdom: 22
-- United States: 239
+- United Kingdom: 23
+- United States: 255
 - Uzbekistan: 5
 - Vietnam: 5
 - Fashion TV: 1
@@ -68,5 +68,5 @@
 - Religious: 31
 - Sports: 245
 - Adult: 359
-- New Channels: 150
-- Backup: 548
+- New Channels: 160
+- Backup: 552
