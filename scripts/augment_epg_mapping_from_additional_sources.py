@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Add conservative EPG mappings from configured additional country feeds.
 
-Only active Indian playlist entries are considered, and a mapping is added only
-when a normalized channel name has exactly one channel ID in a source. Existing
-manual/verified mappings are never overwritten. This keeps new feeds as a
-fallback/discovery layer instead of allowing fuzzy matches to replace trusted IDs.
+Only active Indian playlist entries are considered, and a mapping is added or
+extended only when a normalized channel name has exactly one channel ID in a
+source. Existing IDs are preserved and new provider IDs/source URLs are appended.
+Strict identity locks are never modified. This keeps discovery conservative while
+allowing additional feeds to improve already-mapped channels.
 """
 import csv
 import gzip
@@ -13,6 +14,8 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import xml.etree.ElementTree as ET
 from pathlib import Path
+
+from epg_coverage import EPG_LOCKS
 
 PLAYLIST = Path("IPTV-Playlist.m3u")
 MAPPING = Path("reports/epg-channel-mapping.csv")
@@ -105,6 +108,78 @@ def source_channels(data):
     return by_name
 
 
+def apply_exact_source_matches(rows, channels, source_hits, locked_targets=None):
+    """Append unique exact-name provider IDs and source URLs without replacing trusted mappings."""
+    locked_targets = set(EPG_LOCKS) if locked_targets is None else set(locked_targets)
+    by_id = {
+        row.get("tvg_id", "").strip(): row
+        for row in rows
+        if row.get("tvg_id", "").strip()
+    }
+    added_ids = 0
+    updated_channels = 0
+
+    for channel in channels:
+        target_id = str(channel.get("tvg_id", "")).strip()
+        row = by_id.get(target_id)
+        if row is None or target_id in locked_targets:
+            continue
+        key = norm(channel.get("name", ""))
+        if not key or key in GENERIC_NAME_KEYS:
+            continue
+
+        matches = []
+        for source, names in sorted(source_hits.items()):
+            ids = sorted(names.get(key, set()))
+            if len(ids) == 1:
+                matches.append((source, ids[0]))
+
+        discovered_ids = sorted({source_id for _, source_id in matches})
+        if not discovered_ids or (len(discovered_ids) > 1 and len(key) < 5):
+            continue
+
+        existing_ids = [
+            item.strip()
+            for item in str(row.get("epg_id", "")).split("|")
+            if item.strip()
+        ]
+        merged_ids = list(dict.fromkeys(existing_ids + discovered_ids))
+        existing_sources = [
+            item.strip()
+            for item in str(row.get("source", "")).split("|")
+            if item.strip()
+        ]
+        merged_id_set = set(merged_ids)
+        new_sources = [
+            source
+            for source, source_id in matches
+            if source_id in merged_id_set and source not in existing_sources
+        ]
+        merged_sources = list(dict.fromkeys(existing_sources + new_sources))
+
+        new_id_count = len([source_id for source_id in discovered_ids if source_id not in existing_ids])
+        if new_id_count == 0 and len(merged_sources) == len(existing_sources):
+            continue
+
+        row["epg_id"] = " | ".join(merged_ids)
+        row["source"] = " | ".join(merged_sources)
+        if not existing_ids and discovered_ids:
+            row["status"] = "MAPPED_ID_ONLY"
+        elif not row.get("status"):
+            row["status"] = "MAPPED_ID_ONLY"
+        note = (
+            "Additional exact normalized-name provider IDs discovered; "
+            "all distinct provider IDs retained for schedule merging."
+        )
+        old_note = str(row.get("note", "")).strip()
+        if note not in old_note:
+            row["note"] = (old_note + " " + note).strip()
+        added_ids += new_id_count
+        updated_channels += 1
+
+    return rows, added_ids, updated_channels
+
+
 def main():
     if not PLAYLIST.exists() or not MAPPING.exists():
         print("Additional EPG mapping skipped: playlist or mapping file is missing.")
@@ -125,36 +200,11 @@ def main():
             except Exception as exc:
                 print(f"Additional EPG source unavailable: {source} ({exc})")
 
-    added = 0
-    for channel in channels:
-        row = by_id.get(channel["tvg_id"])
-        if row is None or row.get("epg_id", "").strip():
-            continue
-        key = norm(channel["name"])
-        if not key or key in GENERIC_NAME_KEYS:
-            continue
-
-        matches = []
-        for source, names in sorted(source_hits.items()):
-            ids = sorted(names.get(key, set()))
-            if len(ids) == 1:
-                matches.append((source, ids[0]))
-
-        ids = sorted({cid for _, cid in matches})
-        if not ids:
-            continue
-        # Multiple provider IDs are retained when each feed has a unique exact
-        # channel-name match. The downstream generator can merge and deduplicate
-        # their schedules; generic labels were filtered above to avoid ambiguity.
-        if len(ids) > 1 and len(key) < 5:
-            continue
-
-        row["epg_id"] = " | ".join(ids)
-        sources = [source for source, matched_id in matches if matched_id in ids]
-        row["source"] = ((row.get("source", "").strip(" |") + " | " + " | ".join(sources)).strip(" |"))
-        row["status"] = "MAPPED_ID_ONLY"
-        row["note"] = "Exact normalized-name match in one or more Indian provider XMLTV feeds; all distinct provider IDs retained for schedule merging."
-        added += 1
+    rows, added_ids, updated_channels = apply_exact_source_matches(
+        rows,
+        channels,
+        source_hits,
+    )
 
     fieldnames = ["group", "channel", "tvg_id", "epg_id", "source", "status", "note"]
     with MAPPING.open("w", encoding="utf-8", newline="") as fh:
@@ -162,7 +212,10 @@ def main():
         writer.writeheader()
         writer.writerows(rows)
 
-    print(f"Additional India EPG mappings added: {added}")
+    print(
+        f"Additional India EPG mappings updated: {updated_channels} channels; "
+        f"{added_ids} new provider IDs."
+    )
 
 
 if __name__ == "__main__":
