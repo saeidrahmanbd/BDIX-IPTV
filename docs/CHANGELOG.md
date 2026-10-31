@@ -7,15 +7,16 @@ Playlist updates across `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `Internati
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-10-31 — `IPTV-Playlist.m3u`
 
-- New channel identities: **1**
-- Channel identities removed: **0**
-- Stream URLs added / removed: **1 / 0**
+- New channel identities: **0**
+- Channel identities removed: **2**
+- Stream URLs added / removed: **0 / 2**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
-Added channel identities (up to 10):
+Removed channel identities (up to 10):
+- AMN TV
 - HSTV
 
 <!-- playlist-changelog:International-Playlist.m3u -->
