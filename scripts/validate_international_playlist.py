@@ -85,8 +85,10 @@ def main():
         group = a.get("group-title", "").strip()
         if group.casefold() in FORBIDDEN:
             raise SystemExit(f"Forbidden legacy/catch-all group remains: {group!r} ({name}).")
-        code = discovery.country_code(a)
         group_key = group.casefold()
+        # A dedicated country-group label is itself reliable country evidence.
+        # Fall back to it when optional tvg-country/tvg-id metadata is incomplete.
+        code = discovery.country_code(a) or country_group_labels.get(group_key)
         if group_key == "fashion tv":
             if not discovery.FASHION_RE.search(name):
                 raise SystemExit(f"Invalid Fashion TV exception entry: {name!r}.")
