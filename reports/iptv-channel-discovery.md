@@ -1,6 +1,6 @@
 # IPTV Channel Discovery
 
-Generated: **2026-10-31T01:20:25.444901+00:00**
+Generated: **2026-10-31T08:44:10.620118+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News and non-Islamic Religious channels are prohibited; Indian Kids and Sports channels are allowed.**
@@ -51,21 +51,20 @@ Generated: **2026-10-31T01:20:25.444901+00:00**
 
 ## Stream verification
 
-- Run timestamp: 2026-10-31T01:20:43+00:00
+- Run timestamp: 2026-10-31T08:44:27+00:00
 - Mode: iptv
 - New entries and discovery queues probed: 57
-- Verified live media responses: 26
-- Primary entries retained but not conclusively verified: 13
-- Dead/invalid entries and unverified backups removed: 18
+- Verified live media responses: 27
+- Primary entries retained but not conclusively verified: 14
+- Dead/invalid entries and unverified backups removed: 16
 - Duplicate discovery entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
 - Logo references cleared because no authentic local asset was found: 0
 
 ### Stream probe details
-- Removed AMN TV from New Channels — HTTP 404.
+- Retained AMN TV for review — stream could not be conclusively verified (HTTP 503; access/availability could not be confirmed).
 - Retained Disney Channel India for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Removed HSTV from New Channels — HTTP 404.
 - Retained Nick Jr (India) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Nickelodeon (India) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Sonic for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
@@ -86,7 +85,7 @@ Generated: **2026-10-31T01:20:25.444901+00:00**
 - Removed Star Jalsha from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Star Movies (India) from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Star Sports 2 from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
-- Removed Star Sports 2 from New Backup — HTTP 404.
+- Removed Star Sports 2 from New Backup — backup stream not verified (connection could not be confirmed: URLError).
 - Removed Star Sports Select 1 from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Star Sports Select 2 from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed StarPlus (India) from New Backup — backup stream not verified (connection could not be confirmed: URLError).
@@ -97,13 +96,13 @@ Generated: **2026-10-31T01:20:25.444901+00:00**
 
 ## Final validation
 
-- Run timestamp: 2026-10-31T01:20:43+00:00
+- Run timestamp: 2026-10-31T08:44:28+00:00
 - Validation status: PASS
-- M3U entries parsed: 1159
+- M3U entries parsed: 1161
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - New Channels/New Backup/Backup ordering: passed
-- Discovery entries missing a logo (left blank rather than using a placeholder): 1
+- Discovery entries missing a logo (left blank rather than using a placeholder): 2
 - Non-local discovery logo references: 0
 - Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
