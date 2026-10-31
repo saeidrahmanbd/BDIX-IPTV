@@ -200,6 +200,15 @@ def consolidate_international_country_groups(playlist_path):
     preamble = [line for line in prefix if not line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
     header = "#PLAYLIST-STUDIO-CATEGORIES:" + json.dumps(registry, ensure_ascii=False)
     index = next((i + 1 for i, line in enumerate(preamble) if line.startswith("#EXTM3U")), 0)
+    attribution = [
+        "#=================================",
+        "# Developed by: SAEID RAHMAN",
+        "# Facebook: https://www.facebook.com/saeid.rahman.sr",
+        "# Email: saeidrahman.mkt@gmail.com",
+        "#=================================",
+    ]
+    if preamble[index:index + len(attribution)] == attribution:
+        index += len(attribution)
     preamble.insert(index, header)
     output = preamble[:]
     for block in blocks:

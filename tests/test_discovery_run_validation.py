@@ -70,6 +70,28 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertNotIn('group-title="North Macedonia"', content)
             self.assertEqual(content.count('group-title="New Channels"'), 4)
 
+    def test_attribution_block_stays_after_extm3u_when_country_groups_are_reconciled(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            playlist = Path(directory) / "International-Playlist.m3u"
+            attribution = [
+                "#=================================",
+                "# Developed by: SAEID RAHMAN",
+                "# Facebook: https://www.facebook.com/saeid.rahman.sr",
+                "# Email: saeidrahman.mkt@gmail.com",
+                "#=================================",
+            ]
+            rows = [
+                f'#EXTINF:-1 tvg-id="MK{i}.mk" tvg-country="MK" group-title="North Macedonia",MK {i}\nhttps://example.org/attr{i}.m3u8'
+                for i in range(4)
+            ]
+            rows.append('#EXTINF:-1 tvg-id="MK5.mk" tvg-country="MK" group-title="New Channels",MK 5\nhttps://example.org/attr5.m3u8')
+            playlist.write_text("#EXTM3U\n" + "\n".join(attribution) + "\n#PLAYLIST-STUDIO-CATEGORIES:[]\n" + "\n".join(rows) + "\n", encoding="utf-8")
+            consolidate_international_country_groups(playlist)
+            lines = playlist.read_text(encoding="utf-8").splitlines()
+            self.assertEqual(lines[1:6], attribution)
+            self.assertTrue(lines[6].startswith("#PLAYLIST-STUDIO-CATEGORIES:"))
+
     def test_empty_logo_attribute_is_removed_when_no_authentic_asset_exists(self):
         extinf = '#EXTINF:-1 tvg-name="Definitely Missing Channel" tvg-logo="",Definitely Missing Channel'
         entry = {"extinf": extinf, "logo": "", "name": "Definitely Missing Channel"}
