@@ -217,6 +217,17 @@ def category_registry(groups):
 def counts_toward_country_group(group,code):
  group=(group or "").strip().casefold()
  return group=="new channels" or group==country_group(code).casefold()
+def promote_qualified_country_candidates(blocks,country_groups):
+ """Move queued primary candidates into a country group once five identities qualify."""
+ migrated=[]
+ for block in blocks:
+  a=attrs(block[0]); old=(a.get("group-title") or "").strip()
+  code=country_code(a)
+  if old.casefold()=="new channels" and code in country_groups and code not in {"BD","IN","PK"}:
+   target=country_group(code)
+   block[0]=set_attr(block[0],"group-title",target)
+   migrated.append((name_of(block),old,target))
+ return migrated
 def qualified_country_groups(existing_ids, added_ids=None):
  added_ids=added_ids or {}
  groups=set()
@@ -348,6 +359,7 @@ def main():
    ident=(a.get("tvg-id") or a.get("channel-id") or norm(name)).strip().casefold()
    if ident:cleaned_ids[code].add(ident)
  country_groups=qualified_country_groups(cleaned_ids)
+ migrated.extend(promote_qualified_country_candidates(normalized,country_groups))
  for b in normalized:
   a=attrs(b[0]); name=name_of(b); old=a.get("group-title","").strip(); group_code=dynamic_group_to_code.get(old.casefold())
   if group_code and group_code not in country_groups:
