@@ -1,6 +1,6 @@
 # International Channel Discovery
 
-- Last scan: 2026-10-31 08:45 UTC
+- Last scan: 2026-10-31 08:49 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12055
 - Existing playlist records: 3270
@@ -110,7 +110,7 @@
 
 ## Stream verification
 
-- Run timestamp: 2026-10-31T08:46:01+00:00
+- Run timestamp: 2026-10-31T08:49:45+00:00
 - Mode: international
 - New entries and discovery queues probed: 205
 - Verified live media responses: 136
@@ -202,7 +202,7 @@
 
 ## Final validation
 
-- Run timestamp: 2026-10-31T08:46:02+00:00
+- Run timestamp: 2026-10-31T08:49:46+00:00
 - Validation status: FAIL
 - M3U entries parsed: 3291
 - Malformed EXTINF/URL pairs: 0
