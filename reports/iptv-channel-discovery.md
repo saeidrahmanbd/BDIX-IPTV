@@ -1,15 +1,15 @@
 # IPTV Channel Discovery
 
-Generated: **2026-10-31T01:12:46.006249+00:00**
+Generated: **2026-10-31T01:14:49.580098+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News and non-Islamic Religious channels are prohibited; Indian Kids and Sports channels are allowed.**
 - Permanent denylist: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.
 - Country-group threshold: **5** legitimate primary identities
 - Existing prohibited review-queue rows removed: **0**
-- New channels: **1**
+- New channels: **3**
 - New backups: **15**
-- Rejected/held candidates: **822**
+- Rejected/held candidates: **820**
 - Country policy: only candidates verified as BD/IN (valid `.bd`/`.in` id, or repository-mapping evidence when the id is missing/malformed) are queued; conflicting or unverifiable candidates are held.
 
 ## Rejection reasons
@@ -17,7 +17,7 @@ Generated: **2026-10-31T01:12:46.006249+00:00**
 - Indian news channel is prohibited: 266
 - country not verified: id carries a non-BD/IN country suffix: 27
 - country not verified: id country IN conflicts with BD source feed: 11
-- duplicate stream URL: 360
+- duplicate stream URL: 358
 - known Indian News or non-Islamic religious brand/category is prohibited: 24
 - non-Islamic religious channel is prohibited: 107
 - permanently banned channel: 10
@@ -27,6 +27,8 @@ Generated: **2026-10-31T01:12:46.006249+00:00**
 
 ## New Channels
 
+- AMN TV (576p) (India) — https://live.onecloudlive.in/amn/amntv/index.m3u8
+- HSTV (720p) (India) — https://live.castmaxcloud.com/live/hstv.m3u8
 - Star Sports 2 Hindi (720p) (India) — https://tvsen5.aynaott.com/cXPB2LKkErN9/index.m3u8
 
 ## New Backups
@@ -49,13 +51,14 @@ Generated: **2026-10-31T01:12:46.006249+00:00**
 
 ## Stream verification
 
-- Run timestamp: 2026-10-31T01:13:02+00:00
+- Run timestamp: 2026-10-31T01:15:08+00:00
 - Mode: iptv
 - New entries and discovery queues probed: 57
 - Verified live media responses: 26
 - Primary entries retained but not conclusively verified: 13
 - Dead/invalid entries and unverified backups removed: 18
 - Duplicate discovery entries removed: 0
+- Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
 - Logo references cleared because no authentic local asset was found: 0
 
@@ -94,7 +97,7 @@ Generated: **2026-10-31T01:12:46.006249+00:00**
 
 ## Final validation
 
-- Run timestamp: 2026-10-31T01:13:02+00:00
+- Run timestamp: 2026-10-31T01:15:08+00:00
 - Validation status: PASS
 - M3U entries parsed: 1159
 - Malformed EXTINF/URL pairs: 0
