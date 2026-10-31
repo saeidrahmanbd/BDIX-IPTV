@@ -1,11 +1,11 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-10-31T01:07:21+00:00**
-IPTV-Playlist.m3u SHA-256: **2007da9d83805d6114936a5ea3b25f3bd16f4685fb4869fabca9f3da8a4712d4**
+Generated: **2026-10-31T01:17:34+00:00**
+IPTV-Playlist.m3u SHA-256: **3602101f00a9ad15e65a0892743076a3c8fb52f5c135f1b288b318691497b8e4**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
-- Flagged streams: **255**
+- Flagged streams: **254**
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
@@ -129,7 +129,6 @@ These streams are not automatically removed. URL credentials, user information a
 | Discovery Turbo (India) | New Channels | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/discovery_turbo_abr/index.m3u8` |
 | Eurosport | New Channels | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/euro_sports_hd_abr/index.m3u8` |
 | Gyandarshan | New Channels | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/14/master.m3u8` |
-| HSTV | New Channels | credential-bearing route pattern (values redacted) | `https://live.castmaxcloud.com/live/hstv.m3u8` |
 | Oscar Movies Bhojpuri | New Channels | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/233/master.m3u8` |
 | TLC (India) | New Channels | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/tlc_hd_abr/index.m3u8` |
 | Vokta TV | New Channels | credential-bearing route pattern (values redacted) | `https://vokta.raytahost.com/live/voktatv/index.m3u8` |

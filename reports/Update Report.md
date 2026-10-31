@@ -1,27 +1,27 @@
 # Update Report
 
-_Last generated: **2026-10-31 01:07 UTC**_
+_Last generated: **2026-10-31 01:17 UTC**_
 
-Source playlist SHA-256: **2007da9d83805d6114936a5ea3b25f3bd16f4685fb4869fabca9f3da8a4712d4**
+Source playlist SHA-256: **3602101f00a9ad15e65a0892743076a3c8fb52f5c135f1b288b318691497b8e4**
 
 | Metric | Current |
 |---|---:|
-| Streams | **1161** |
+| Streams | **1159** |
 | Active Channel Identities | **655** |
 | Active Primary Streams | **655** |
 | Bangladesh | **64** |
 | India | **328** |
 | Backup Stream Entries | **366** |
-| IPTV Local Logos | **99.8%** |
+| IPTV Local Logos | **99.9%** |
 | IPTV EPG Programme Coverage | **PENDING** |
 | IPTV EPG Mapping | **PENDING** |
-| Stream Health Tested | **1161** |
-| Stream Health Failures | **167** |
+| Stream Health Tested | **1159** |
+| Stream Health Failures | **161** |
 | Persistent Failures | **131** |
 | Near-Duplicate URL Families | **2** |
 | Audit Blocking Issues | **0** |
 | Pre-Publish Gate | **UNKNOWN** |
-| Pre-Publish Gate Generated | **2026-10-31T01:06:34+00:00** |
+| Pre-Publish Gate Generated | **2026-10-31T01:16:51+00:00** |
 
 ## Quality Controls 
 - Duplicate stream URLs: **0**
@@ -62,14 +62,14 @@ Source playlist SHA-256: **2007da9d83805d6114936a5ea3b25f3bd16f4685fb4869fabca9f
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-10-31T01:06:34.574472+00:00** | **CURRENT** |
+| Playlist audit | **2026-10-31T01:16:50.904599+00:00** | **CURRENT** |
 | EPG coverage / three-playlist inventory | **2026-10-30T11:14:23+00:00** | **PENDING — guide missing or freshness not PASS** |
-| Stream health | **2026-10-31T01:07:21+00:00** | **CURRENT** |
-| Pre-publish gate | **2026-10-31T01:06:34+00:00** | **CURRENT** |
+| Stream health | **2026-10-31T01:17:33+00:00** | **CURRENT** |
+| Pre-publish gate | **2026-10-31T01:16:51+00:00** | **CURRENT** |
 
 ## Maintenance History
 - Records retained: **30**
-- Latest entries change: **1160 → 1161**
-- Latest health failures: **138 → 167**
+- Latest entries change: **1161 → 1159**
+- Latest health failures: **167 → 161**
 
 Historical records are retained in reports/maintenance-history.json.

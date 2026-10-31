@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-31T01:07:21+00:00",
+  "generated": "2026-10-31T01:17:34+00:00",
   "channels": {
     "10tv": {
       "names": [
@@ -457,20 +457,6 @@
       ],
       "groups": [
         "International"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "amntv": {
-      "names": [
-        "AMN TV"
-      ],
-      "ids": [
-        "amntv.in@sd"
-      ],
-      "groups": [
-        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -4079,20 +4065,6 @@
       ],
       "groups": [
         "Documentary & Wildlife"
-      ],
-      "streams": 1,
-      "primary": 1,
-      "backup": 0
-    },
-    "hstv": {
-      "names": [
-        "HSTV"
-      ],
-      "ids": [
-        "hstv.in@sd"
-      ],
-      "groups": [
-        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
