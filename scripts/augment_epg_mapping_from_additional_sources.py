@@ -189,7 +189,6 @@ def main():
     with MAPPING.open(encoding="utf-8-sig", newline="") as fh:
         rows = list(csv.DictReader(fh))
 
-    by_id = {row.get("tvg_id", "").strip(): row for row in rows if row.get("tvg_id", "").strip()}
     source_hits = {}
     with ThreadPoolExecutor(max_workers=min(8, len(SOURCES))) as pool:
         futures = {pool.submit(fetch, source): source for source in SOURCES}
