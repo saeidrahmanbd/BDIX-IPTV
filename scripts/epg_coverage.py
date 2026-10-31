@@ -211,33 +211,42 @@ SOURCES = [
 
 PRIVATE_SOURCE_ENV = "M3U4U_XMLTV_URL"
 PRIVATE_SOURCE_LABEL = "M3U4U XMLTV (private Actions secret)"
+IPTV_ORG_LOCAL_GUIDE = Path("/tmp/iptv-org-guide.xml")
+IPTV_ORG_LOCAL_SOURCE = "file:///tmp/iptv-org-guide.xml"
+IPTV_ORG_SOURCE_LABEL = "iptv-org/epg (targeted build-time guide)"
 
 
 def configured_sources():
-    """Add the personalized M3U4U feed only from a GitHub Actions secret."""
+    """Add private M3U4U and the targeted iptv-org guide without exposing private URLs."""
     sources = list(SOURCES)
     private_url = os.environ.get(PRIVATE_SOURCE_ENV, "").strip()
-    if not private_url:
-        return sources
-    parsed = urlparse(private_url)
-    if (
-        parsed.scheme.lower() != "https"
-        or (parsed.hostname or "").lower() not in {"m3u4u.com", "www.m3u4u.com"}
-        or not parsed.path.startswith(("/epg/", "/xml/"))
-    ):
-        print(
-            f"Ignoring {PRIVATE_SOURCE_ENV}: use an HTTPS M3U4U XMLTV endpoint; "
-            "the configured URL is not printed."
-        )
-        return sources
-    if private_url not in sources:
-        sources.append(private_url)
+    if private_url:
+        parsed = urlparse(private_url)
+        if (
+            parsed.scheme.lower() == "https"
+            and (parsed.hostname or "").lower() in {"m3u4u.com", "www.m3u4u.com"}
+            and parsed.path.startswith(("/epg/", "/xml/"))
+        ):
+            if private_url not in sources:
+                sources.append(private_url)
+        else:
+            print(
+                f"Ignoring {PRIVATE_SOURCE_ENV}: use an HTTPS M3U4U XMLTV endpoint; "
+                "the configured URL is not printed."
+            )
+    # The first coverage pass runs before iptv-org is fetched. The second pass
+    # runs after generation, so include its bounded local guide in the source
+    # audit and schedule matching whenever that build-time artifact exists.
+    if IPTV_ORG_LOCAL_GUIDE.is_file() and IPTV_ORG_LOCAL_SOURCE not in sources:
+        sources.append(IPTV_ORG_LOCAL_SOURCE)
     return sources
 
 
 def source_label(src):
     if src == os.environ.get(PRIVATE_SOURCE_ENV, "").strip():
         return PRIVATE_SOURCE_LABEL
+    if src == IPTV_ORG_LOCAL_SOURCE:
+        return IPTV_ORG_SOURCE_LABEL
     return src
 
 
@@ -865,6 +874,7 @@ def main():
         "## Source handling notes",
         "",
         "- M3U4U is optional and is read only from the GitHub Actions secret named M3U4U_XMLTV_URL. Reports use a generic source label; the personalized URL and fetch errors are never logged.",
+        "- iptv-org/epg is fetched as a playlist-targeted supplemental guide in all available channel languages; when present, its build-time guide is included in this source audit.",
         "- EPG.PW is not ingested into the public guide because its published terms prohibit copying/retransmission and limit use to personal use. This is a source-specific constraint, not a blanket exclusion of third-party sources.",
         "- Bangladesh schedule mappings remain exact-ID/explicit-alias only. An official schedule source that fails TLS or parsing is recorded as failed and contributes no programme coverage.",
         "",
