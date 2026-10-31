@@ -1,6 +1,6 @@
 # International Channel Discovery
 
-- Last scan: 2026-10-31 08:49 UTC
+- Last scan: 2026-10-31 10:15 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12055
 - Existing playlist records: 3270
@@ -110,7 +110,7 @@
 
 ## Stream verification
 
-- Run timestamp: 2026-10-31T08:49:45+00:00
+- Run timestamp: 2026-10-31T10:15:57+00:00
 - Mode: international
 - New entries and discovery queues probed: 205
 - Verified live media responses: 136
@@ -202,16 +202,13 @@
 
 ## Final validation
 
-- Run timestamp: 2026-10-31T08:49:46+00:00
-- Validation status: FAIL
+- Run timestamp: 2026-10-31T10:15:58+00:00
+- Validation status: PASS
 - M3U entries parsed: 3291
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
-- New Channels/New Backup/Backup ordering: failed
+- New Channels/New Backup/Backup ordering: passed
 - Discovery entries missing a logo (left blank rather than using a placeholder): 1
 - Non-local discovery logo references: 0
 - Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
-
-### Blockers
-- New Channels/New Backup/Backup must be the final three playlist groups
