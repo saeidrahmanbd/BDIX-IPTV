@@ -274,6 +274,24 @@ def selected_catalogue_texts():
     return texts
 
 
+def grab_command():
+    """Build a bounded targeted grab without excluding Bengali/Hindi/other channel languages.
+
+    The target catalogue is already restricted to active playlist IDs and approved
+    aliases, so omitting --lang broadens language coverage without crawling the
+    entire upstream catalogue. The downstream XMLTV resolver selects the best
+    available title language and deduplicates overlapping schedules.
+    """
+    return [
+        "npm", "run", "grab", "---",
+        f"--channels={TARGET_CHANNELS}",
+        f"--output={OUTPUT}",
+        f"--timeout={SCRAPE_REQUEST_TIMEOUT_MS}",
+        f"--maxConnections={SCRAPE_MAX_CONNECTIONS}",
+        "--days=3",
+    ]
+
+
 def main():
     targets = read_active_targets()
     target_names_by_id = read_active_target_names()
@@ -304,17 +322,7 @@ def main():
             write_empty_guide("no exact active/mapped IDs matched the selected iptv-org catalogues")
             return
 
-        run(
-            "npm", "run", "grab", "---",
-            f"--channels={TARGET_CHANNELS}",
-            f"--output={OUTPUT}",
-            "--lang=en",
-            f"--timeout={SCRAPE_REQUEST_TIMEOUT_MS}",
-            f"--maxConnections={SCRAPE_MAX_CONNECTIONS}",
-            "--days=3",
-            cwd=WORK,
-            timeout=SCRAPE_TIMEOUT_SECONDS,
-        )
+        run(*grab_command(), cwd=WORK, timeout=SCRAPE_TIMEOUT_SECONDS)
 
         if not OUTPUT.is_file() or OUTPUT.stat().st_size == 0:
             write_empty_guide("iptv-org scraper produced no XMLTV output")

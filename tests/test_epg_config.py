@@ -1,5 +1,5 @@
 import ast, csv, io, os, re, tempfile, unittest, sys
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from unittest.mock import patch
 from pathlib import Path
 
@@ -79,6 +79,35 @@ class EpgConfigTests(unittest.TestCase):
             with patch.object(generate_epg, "MAPPING", mapping), patch.dict(os.environ, {"M3U4U_XMLTV_URL": private_url}):
                 selected = generate_epg.sources_with_mapped_channels([private_url, "https://example.test/unused.xml"])
         self.assertEqual(selected, [private_url])
+
+    def test_targeted_iptv_org_guide_is_audited_when_present(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            guide = Path(tmp) / "iptv-org-guide.xml"
+            now = datetime.now(timezone.utc)
+            start = (now + timedelta(hours=1)).strftime("%Y%m%d%H%M%S +0000")
+            stop = (now + timedelta(hours=2)).strftime("%Y%m%d%H%M%S +0000")
+            guide.write_text(
+                '<?xml version="1.0" encoding="UTF-8"?>'
+                '<tv><channel id="ColorsBangla.in"><display-name>Colors Bangla</display-name></channel>'
+                f'<programme channel="ColorsBangla.in" start="{start}" stop="{stop}">'
+                '<title lang="bn">আজকের অনুষ্ঠান</title></programme></tv>',
+                encoding="utf-8",
+            )
+            source = guide.as_uri()
+            with (
+                patch.object(epg_coverage, "IPTV_ORG_LOCAL_GUIDE", guide),
+                patch.object(epg_coverage, "IPTV_ORG_LOCAL_SOURCE", source),
+            ):
+                self.assertIn(source, epg_coverage.configured_sources())
+                ids, future, counts, _ = epg_coverage.fetch_source(source)
+                self.assertEqual(
+                    epg_coverage.source_label(source),
+                    "iptv-org/epg (targeted build-time guide)",
+                )
+        self.assertIn("ColorsBangla.in", ids)
+        self.assertIn("ColorsBangla.in", future)
+        self.assertEqual(counts["ColorsBangla.in"], 1)
+        self.assertEqual(epg_coverage.source_health(ids, future, counts), "OK")
 
     def test_source_health_flags_channel_only_and_stale_feeds(self):
         self.assertEqual(epg_coverage.source_health({"channel-a"}, set(), {}), "NO_PROGRAMMES")
