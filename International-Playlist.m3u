@@ -5526,6 +5526,68 @@ https://media.streambrothers.com:1936/uszqnhpjpa/uszqnhpjpa/playlist.m3u8
 https://live2.tensila.com/onair-v-1.xfm1027/hls/master.m3u8
 #EXTINF:-1 tvg-id="YesMoviesAction.il@SD" channel-id="YesMoviesAction.il@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/yes-movies-action-1080p.png" tvg-country="IL" tvg-content="Movies" group-title="New Channels" tvg-name="Yes Movies Action",Yes Movies Action
 http://stream.mcquack.net/380/index.m3u8
+#EXTINF:-1 tvg-name="DELUXE MUSIC DANCE BY KONTOR" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deluxe-music-dance-by-kontor.svg" tvg-country="DE" tvg-language="deu" tvg-content="Music" group-title="New Channels",DELUXE MUSIC DANCE BY KONTOR
+https://sdn-global-live-streaming-packager-cache.3qsdn.com/64733/64733_264_live.m3u8
+#EXTINF:-1 tvg-name="DELUXE MUSIC RAP" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/deluxe-rap-74da7ced62.png" tvg-country="DE" tvg-language="deu" tvg-content="Music" group-title="New Channels",DELUXE MUSIC RAP
+https://sdn-global-live-streaming-packager-cache.3qsdn.com/65183/65183_264_live.m3u8
+#EXTINF:-1 tvg-name="R101 TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",R101 TV
+https://live02-seg.msr.cdn.mediaset.net/live/ch-er/er-clr.isml/index.m3u8
+#EXTINF:-1 tvg-name="Radio 105 TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",Radio 105 TV
+https://live02-seg.msr.cdn.mediaset.net/live/ch-ec/ec-clr.isml/index.m3u8
+#EXTINF:-1 tvg-name="RadioItaliaTV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",RadioItaliaTV
+https://radioitaliatv.akamaized.net/hls/live/2093117/RadioitaliaTV/master.m3u8
+#EXTINF:-1 tvg-name="Radio KISS KISS TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",Radio KISS KISS TV
+https://kk.fluid.stream/KKMulti/smil:KissKissTV.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="Virgin Radio TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",Virgin Radio TV
+https://live02-seg.msr.cdn.mediaset.net/live/ch-ew/ew-clr.isml/index.m3u8
+#EXTINF:-1 tvg-name="Radio Montecarlo TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",Radio Montecarlo TV
+https://live02-seg.msr.cdn.mediaset.net/live/ch-bb/bb-clr.isml/index.m3u8
+#EXTINF:-1 tvg-name="Deejay TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",Deejay TV
+https://StreamCdnH17-4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S85984808/sMO0tz9Sr2Rk/playlist.m3u8
+#EXTINF:-1 tvg-name="Radio ZETA" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",Radio ZETA
+https://StreamCdnH1-dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S9346184/XEx1LqlYbNic/playlist.m3u8
+#EXTINF:-1 tvg-name="RDS Social TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",RDS Social TV
+https://stream.rdstv.radio/index.m3u8
+#EXTINF:-1 tvg-name="Radio Birikina TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",Radio Birikina TV
+https://tvd-bk.fluid.stream/RadioBirikinaTV/livestream/chunklist_w84398277.m3u8
+#EXTINF:-1 tvg-name="Radio Ibiza" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",Radio Ibiza
+https://str48.fluid.stream/RadioIbizaTV/livestream/playlist.m3u8
+#EXTINF:-1 tvg-name="Radio 51 TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",Radio 51 TV
+https://59d7d6f47d7fc.streamlock.net/canale51/canale51/chunklist_w1193883900.m3u8
+#EXTINF:-1 tvg-name="Radio Bruno TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",Radio Bruno TV
+https://stream10.xdevel.com/video1s975552-1585/stream/playlist.m3u8
+#EXTINF:-1 tvg-name="Radio Norba TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",Radio Norba TV
+https://stream12.xdevel.com/video0s975885-2349/stream/playlist_dvr.m3u8
+#EXTINF:-1 tvg-name="Radio Piter Pan TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",Radio Piter Pan TV
+https://tvd-piter.fluid.stream/RadioPiterpanTV/livestream/chunklist_w1866496033.m3u8
+#EXTINF:-1 tvg-name="Radio Radiosa TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",Radio Radiosa TV
+https://stream7.zivoli.it/radiosatv/radiosatv/playlist.m3u8
+#EXTINF:-1 tvg-name="Radio Italia Cina TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",Radio Italia Cina TV
+https://585b674743bbb.streamlock.net/9054/9054/playlist.m3u8
+#EXTINF:-1 tvg-name="RTL 102.5" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IT" tvg-language="ita" tvg-content="Music" group-title="New Channels",RTL 102.5
+https://StreamCdnH18-dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S97044836/tbbP8T1ZRPBL/playlist.m3u8
+#EXTINF:-1 tvg-name="Cowboy Movie Channel" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/cowboy-movie-channel.png" tvg-country="US" tvg-language="eng" tvg-content="Movies" group-title="New Channels",Cowboy Movie Channel
+https://streams2.sofast.tv/sofastplayout/32eb332e-f644-46e5-ad91-e55ad80d14f7_0_HLS/master.m3u8
+#EXTINF:-1 tvg-name="Amar Bangla" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IN" tvg-language="ben" tvg-content="Entertainment" group-title="New Channels",Amar Bangla
+https://115.187.41.216:8080/hls/amarbangla/index.m3u8
+#EXTINF:-1 tvg-name="K Cine" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IN" tvg-language="hin" tvg-content="Movies" group-title="New Channels",K Cine
+https://w2.manasat.com/kcine/smil:kcine.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="Vision" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IN" tvg-language="hin" tvg-content="Music" group-title="New Channels",Vision
+http://103.85.204.205:1935/VISIONMEDIA/live/playlist.m3u8
+#EXTINF:-1 tvg-name="Oli TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IN" tvg-language="hin" tvg-content="Entertainment" group-title="New Channels",Oli TV
+https://live.olidigital.in/olitv/olitv/index.m3u8
+#EXTINF:-1 tvg-name="Star Vijay" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="IN" tvg-language="tam" tvg-content="Entertainment" group-title="New Channels",Star Vijay
+https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starvijayuk.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="Classic Movies" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="US" tvg-language="eng" tvg-content="Movies" group-title="New Channels",Classic Movies
+https://30a-tv.com/feeds/pzaz/30atvmovies.m3u8
+#EXTINF:-1 tvg-name="MyTime Movie Network East" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="US" tvg-language="eng" tvg-content="Movies" group-title="New Channels",MyTime Movie Network East
+https://appletree-mytimeau-samsung.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-name="MTV2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-channel.svg" tvg-country="US" tvg-language="eng" tvg-content="Music" group-title="New Channels",MTV2
+http://198.58.104.90:8989/mtv2/index.m3u8
+#EXTINF:-1 tvg-name="Epic Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/epic-music.png" tvg-country="IN" tvg-language="hin" tvg-content="Backup" group-title="New Backup",Epic Music
+https://cc-3cyxq80qusspd.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/playlist.m3u8
+#EXTINF:-1 tvg-name="NOW Rock" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/now-rock-1080p-033d8aedc8.png" tvg-country="GB" tvg-language="eng" tvg-content="Backup" group-title="New Backup",NOW Rock
+https://rakutenaa-lightning-now90s-rakuten-2968n.amagi.tv/playlist/rakutenAA-lightning-now90s-rakuten/playlist.m3u8
 #EXTINF:-1 tvg-id="7SMusic.in@SD" channel-id="7SMusic.in@SD" tvg-language="tam" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/7s-music.png" tvg-country="IN" group-title="Backup" tvg-name="7S Music",7S Music
 https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8
 #EXTINF:-1 tvg-id="8XM.pk@SD" channel-id="8XM.pk@SD" tvg-language="urd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/8xm.png" tvg-country="PK" group-title="Backup" tvg-name="8XM",8XM
