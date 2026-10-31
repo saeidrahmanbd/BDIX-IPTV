@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from validate_discovery_run import NEWS_RE, append_section, classify_response, consolidate_international_country_groups, ensure_local_logo, parse_playlist
+from validate_discovery_run import NEWS_RE, append_section, classify_response, consolidate_international_country_groups, ensure_local_logo, final_mode, parse_playlist
 
 
 class DiscoveryRunValidationTests(unittest.TestCase):
@@ -91,6 +91,39 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             lines = playlist.read_text(encoding="utf-8").splitlines()
             self.assertEqual(lines[1:6], attribution)
             self.assertTrue(lines[6].startswith("#PLAYLIST-STUDIO-CATEGORIES:"))
+
+    def test_final_validation_accepts_empty_new_backup_group_when_registry_order_is_correct(self):
+        import os
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            playlist = root / "International-Playlist.m3u"
+            baseline = root / "baseline.m3u"
+            report = root / "report.md"
+            content = (
+                '#EXTM3U\\n'
+                '#PLAYLIST-STUDIO-CATEGORIES:["Bangladesh","New Channels","New Backup","Backup"]\\n'
+                '#EXTINF:-1 tvg-name="Bangladesh One" group-title="Bangladesh",Bangladesh One\\n'
+                'https://example.org/bangladesh.m3u8\\n'
+                '#EXTINF:-1 tvg-name="World Music" tvg-content="Music" group-title="New Channels",World Music\\n'
+                'https://example.org/world-music.m3u8\\n'
+                '#EXTINF:-1 tvg-name="Backup One" group-title="Backup",Backup One\\n'
+                'https://example.org/backup.m3u8\\n'
+            )
+            playlist.write_text(content, encoding="utf-8")
+            baseline.write_text(content, encoding="utf-8")
+            report.write_text("# Report\\n", encoding="utf-8")
+            previous = os.environ.get("OFFICIAL_VALIDATOR_OUTCOME")
+            os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = "success"
+            try:
+                final_mode(str(playlist), str(report), str(baseline), "international")
+            finally:
+                if previous is None:
+                    os.environ.pop("OFFICIAL_VALIDATOR_OUTCOME", None)
+                else:
+                    os.environ["OFFICIAL_VALIDATOR_OUTCOME"] = previous
+            self.assertIn("- Validation status: PASS", report.read_text(encoding="utf-8"))
+            self.assertIn("- New Channels/New Backup/Backup ordering: passed", report.read_text(encoding="utf-8"))
 
     def test_empty_logo_attribute_is_removed_when_no_authentic_asset_exists(self):
         extinf = '#EXTINF:-1 tvg-name="Definitely Missing Channel" tvg-logo="",Definitely Missing Channel'
