@@ -128,6 +128,28 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertEqual(discovery.primary_target("International Movies", "IN", set()), "Indian Movies")
         self.assertEqual(discovery.primary_target("International Music", "IN", set()), "Indian Music")
 
+    def test_qualified_country_promotes_queued_candidates_at_five_identity_threshold(self):
+        blocks = [
+            [
+                f'#EXTINF:-1 tvg-id="Channel{i}.mk" tvg-country="MK" group-title="New Channels",Channel {i}',
+                f"https://example.org/channel{i}.m3u8",
+            ]
+            for i in range(5)
+        ]
+        migrations = discovery.promote_qualified_country_candidates(blocks, {"MK"})
+        self.assertEqual(len(migrations), 5)
+        self.assertTrue(all('group-title="North Macedonia"' in block[0] for block in blocks))
+
+        below_threshold = [
+            [
+                f'#EXTINF:-1 tvg-id="Channel{i}.mk" tvg-country="MK" group-title="New Channels",Channel {i}',
+                f"https://example.org/below{i}.m3u8",
+            ]
+            for i in range(4)
+        ]
+        self.assertEqual(discovery.promote_qualified_country_candidates(below_threshold, set()), [])
+        self.assertTrue(all('group-title="New Channels"' in block[0] for block in below_threshold))
+
     def test_tokenized_urls_are_rejected_without_playback_testing(self):
         self.assertFalse(discovery.safe_url("https://example.org/live.m3u8?token=abc"))
         self.assertTrue(discovery.safe_url("https://example.org/channel/index.m3u8"))
