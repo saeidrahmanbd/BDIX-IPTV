@@ -5,7 +5,7 @@
 Playlist updates across `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-10-30 — `IPTV-Playlist.m3u`
+### 2026-10-31 — `IPTV-Playlist.m3u`
 
 - New channel identities: **1**
 - Channel identities removed: **0**
@@ -16,7 +16,7 @@ Playlist updates across `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `Internati
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Oscar Movies Bhojpuri
+- HSTV
 
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-10-30 — `International-Playlist.m3u`
