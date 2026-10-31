@@ -16,6 +16,8 @@ on:
       - scripts/backfill_cross_playlist_metadata.py
       - scripts/repair_logo_asset_technical_quality.py
       - scripts/fetch_iptv_org_epg.py
+      - scripts/augment_epg_mapping_from_additional_sources.py
+      - tests/test_epg_additional_source_mapping.py
       - scripts/epg_refresh_needed.py
       - .github/workflows/epg-refresh.yml
       - tests/test_epg_refresh_needed.py
@@ -81,6 +83,7 @@ jobs:
             scripts/backfill_cross_playlist_metadata.py \
             scripts/repair_logo_asset_technical_quality.py \
             scripts/fetch_iptv_org_epg.py \
+            scripts/augment_epg_mapping_from_additional_sources.py \
             scripts/epg_refresh_needed.py \
             scripts/validate_report_freshness.py \
             scripts/audit_playlist.py \
