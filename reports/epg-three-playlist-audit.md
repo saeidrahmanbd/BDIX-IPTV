@@ -1,6 +1,6 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-10-31T09:25:54+00:00**
+Generated: **2026-10-31T10:05:42+00:00**
 
 This report measures the three maintained M3U playlists included in the automated EPG pipeline. The historic filename epg-three-playlist-audit.md is retained for link compatibility.
 
@@ -8,7 +8,7 @@ This report measures the three maintained M3U playlists included in the automate
 |---|---:|---:|---:|---:|---:|---:|---:|---|
 | IPTV-Playlist.m3u | 1161 | 691 | 464 | 416 | 464 | 403 | 227 | OK |
 | BDIX-Playlist.m3u | 131 | 131 | 78 | 71 | 78 | 71 | 53 | OK |
-| International-Playlist.m3u | 3270 | 2710 | 885 | 726 | 879 | 684 | 1825 | OK |
+| International-Playlist.m3u | 6540 | 2710 | 885 | 726 | 879 | 689 | 1825 | OK |
 
 ## Group coverage
 
@@ -76,4 +76,4 @@ This report measures the three maintained M3U playlists included in the automate
 
 - IPTV-Playlist.m3u SHA-256: **4bd6baeed0589da3c3a464d09c746a3eef1ac64eb99a39714b257814633bdf73**
 - BDIX-Playlist.m3u SHA-256: **6e98537a07d9bb5f5ee818f86defff1357302adeaca270e0786a7185bcd33b2d**
-- International-Playlist.m3u SHA-256: **ff55ab74a403066cf3713a188d4867b65b1179db7fcfa6c0645955a0449081b3**
+- International-Playlist.m3u SHA-256: **e2fcb233e0c34c12830d9faf3936d9ff3982f6c90bd31e8b30b2a7486e0e6a1f**
