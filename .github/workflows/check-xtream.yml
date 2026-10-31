@@ -10,7 +10,7 @@ on:
       - "IPTV-Playlist.m3u"
       - "BDIX-Playlist.m3u"
   schedule:
-    - cron: "0 1 * * *" # 07:00 Asia/Dhaka (UTC+6)
+    - cron: "7 1 * * *" # 07:07 Asia/Dhaka (UTC+6); avoid top-of-hour queueing
   workflow_dispatch:
 
 permissions:
