@@ -1,8 +1,8 @@
 # IPTV Maintenance Report
 
-_Generated: **2026-10-30 11:14 UTC**_
+_Generated: **2026-10-31 01:07 UTC**_
 
-Source playlist SHA-256: **c29297587456a71d24dcf02a9bfc5de2c61a493b5770754fae1e21cd934d72ab**
+Source playlist SHA-256: **2007da9d83805d6114936a5ea3b25f3bd16f4685fb4869fabca9f3da8a4712d4**
 
 | Item | Result |
 |---|---:|
@@ -10,13 +10,13 @@ Source playlist SHA-256: **c29297587456a71d24dcf02a9bfc5de2c61a493b5770754fae1e2
 | Active channel identities | **655** |
 | Backup stream entries | **366** |
 | EPG IDs audited | **PENDING — guide not current** |
-| Logo exceptions | **STALE / UNKNOWN** |
+| Logo exceptions | **0** |
 | EPG mapping | **PENDING — guide not current** |
 | EPG programme coverage | **PENDING** |
-| Health failures | **STALE** |
-| Persistent health failures | **STALE** |
-| Audit blockers | **STALE / UNKNOWN** |
-| Pre-publish gate | **STALE / UNKNOWN** |
+| Health failures | **167** |
+| Persistent health failures | **131** |
+| Audit blockers | **0** |
+| Pre-publish gate | **UNKNOWN** |
 
 ## Protection
 - Duplicate stream URLs are blocking.

@@ -1,13 +1,13 @@
 # Logo Provenance Review
 
-Generated: **2026-10-30T08:42:47+00:00**
+Generated: **2026-10-31T01:07:22+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **2f00cd81215b375e4776d6dd458f71acc5734daf86990b5c85061a1bec922a77**
+- IPTV-Playlist.m3u SHA-256: **2007da9d83805d6114936a5ea3b25f3bd16f4685fb4869fabca9f3da8a4712d4**
 - BDIX-Playlist.m3u SHA-256: **6e98537a07d9bb5f5ee818f86defff1357302adeaca270e0786a7185bcd33b2d**
 - International-Playlist.m3u SHA-256: **359731d46ab6910e71335940aacfdeb1321d84c824fea6e120575031d128eff3**
 
@@ -15,20 +15,20 @@ Unattributed logos are **not provenance-passed**; they remain pending review. Th
 
 | Playlist | Official verified | Third-party verified | Unofficial fallback | Needs review |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 0 | 26 | 0 | 1134 |
+| IPTV-Playlist.m3u | 0 | 26 | 0 | 1135 |
 | BDIX-Playlist.m3u | 0 | 2 | 0 | 129 |
 | International-Playlist.m3u | 0 | 926 | 0 | 2279 |
 
 ## Overall provenance status
 
 - Status: **REVIEW REQUIRED**
-- Logos needing attribution review: **3542**
+- Logos needing attribution review: **3543**
 - Unofficial fallback logos: **0**
 - needs_review is unresolved provenance, not proof that an image is incorrect; it must not be presented as a provenance pass.
 
 ## First items requiring source attribution
 
-Showing up to 40 of 3542 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
+Showing up to 40 of 3543 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
 
 | Playlist | Channel | tvg-id | Local asset | Why it needs review |
 |---|---|---|---|---|

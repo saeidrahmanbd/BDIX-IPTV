@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-10-30T08:42:05+00:00**
-Source playlist SHA-256: **2f00cd81215b375e4776d6dd458f71acc5734daf86990b5c85061a1bec922a77**
+Generated: **2026-10-31T01:06:34+00:00**
+Source playlist SHA-256: **2007da9d83805d6114936a5ea3b25f3bd16f4685fb4869fabca9f3da8a4712d4**
 
 Status: **PASS**
 
-- Current entries: **1160**
+- Current entries: **1161**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -20,7 +20,7 @@ Status: **PASS**
 - Same-ID metadata name conflicts: **0**
 - Raw resolution/geoblock name tags: **0**
 - Missing logos in active groups: **0**
-- Missing logos deferred in New Channels/New Backup pending trusted local assets: **1**
+- Missing logos deferred in New Channels/New Backup pending trusted local assets: **2**
 - External logo URLs: **0**
 - Incorrect/placeholder/generic logos: **0**
 - Missing referenced local logo files: **0**
@@ -38,6 +38,7 @@ No blocking conditions detected.
 
 These entries have no verified local logo available yet. They remain in the review queue without an external or placeholder logo.
 
+- **HSTV**
 - **Vyas Channel**
 
 ## Metadata conflicts

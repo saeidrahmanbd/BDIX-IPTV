@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-30T08:42:46+00:00",
+  "generated": "2026-10-31T01:07:21+00:00",
   "channels": {
     "10tv": {
       "names": [
@@ -4079,6 +4079,20 @@
       ],
       "groups": [
         "Documentary & Wildlife"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "hstv": {
+      "names": [
+        "HSTV"
+      ],
+      "ids": [
+        "hstv.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
