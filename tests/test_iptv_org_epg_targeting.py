@@ -4,10 +4,17 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from fetch_iptv_org_epg import active_playlist_ids, target_channel_ids, build_target_channels_xml
+from fetch_iptv_org_epg import active_playlist_ids, target_channel_ids, build_target_channels_xml, grab_command
 
 
 class TargetedIptvOrgEpgTests(unittest.TestCase):
+    def test_grab_command_does_not_filter_out_bengali_or_other_languages(self):
+        args = grab_command()
+        self.assertNotIn("--lang=en", args)
+        self.assertFalse(any(arg.startswith("--lang=") for arg in args))
+        self.assertIn("--days=3", args)
+        self.assertTrue(any(arg.startswith("--channels=") for arg in args))
+
     def test_only_active_ids_from_three_core_playlists_are_targets(self):
         main = (
             '#EXTM3U\n'
