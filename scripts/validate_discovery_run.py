@@ -341,9 +341,24 @@ def final_mode(playlist, report, baseline, mode):
     if duplicate_count:
         errors.append(f"{duplicate_count} duplicate stream URLs remain")
     required = ["New Channels", "New Backup", "Backup"]
-    ordering_ok = groups[-3:] == required
+    registry_line = next((line for line in lines if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")), "")
+    try:
+        category_registry = json.loads(registry_line.split(":", 1)[1]) if registry_line else []
+    except (IndexError, json.JSONDecodeError):
+        category_registry = []
+    # Empty categories are allowed. The registry, not the set of groups that
+    # currently contain channels, is authoritative for the reserved final slots.
+    present_groups = set(groups)
+    expected_present_order = [group for group in category_registry if group in present_groups]
+    ordering_ok = (
+        category_registry[-3:] == required
+        and groups == expected_present_order
+    )
     if not ordering_ok:
-        errors.append("New Channels/New Backup/Backup must be the final three playlist groups")
+        errors.append(
+            "Category registry must end New Channels/New Backup/Backup and "
+            "present playlist groups must follow that registry order"
+        )
     missing_logo = 0
     external_logo = 0
     policy_issues = []
