@@ -21,6 +21,22 @@ def literal(src, name):
 
 
 class EpgConfigTests(unittest.TestCase):
+    def test_generator_keeps_all_provider_ids_for_indian_bangla(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            mapping = Path(tmp) / "mapping.csv"
+            mapping.write_text(
+                "group,channel,tvg_id,epg_id,source,status,note\\n"
+                "Indian Bangla,Colors Bangla,Colors.Bangla.in,"
+                "provider-a | provider-b,"
+                "https://source-a.example/epg.xml | https://source-b.example/epg.xml,"
+                "MAPPED,verified multi-source mapping\\n",
+                encoding="utf-8",
+            )
+            with patch.object(generate_epg, "MAPPING", mapping):
+                reverse = generate_epg.load_mapping()
+        self.assertEqual(reverse["provider-a"], ["Colors.Bangla.in"])
+        self.assertEqual(reverse["provider-b"], ["Colors.Bangla.in"])
+
     def test_sources_synchronized_and_unique(self):
         a, b = literal(COV, "SOURCES"), literal(GEN, "SOURCES")
         self.assertEqual(a, b)
