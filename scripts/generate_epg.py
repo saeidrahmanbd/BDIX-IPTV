@@ -328,8 +328,9 @@ def load_mapping():
             if not target:
                 continue
             ids = [x.strip() for x in row.get("epg_id", "").split("|") if x.strip()]
-            if row.get("group", "").strip() == "Indian Bangla":
-                ids = ids[:1]
+            # Keep every validated provider ID, including Indian Bangla. The
+            # downstream schedule resolver deduplicates identical slots and
+            # selects the strongest non-overlapping current schedule.
             for source_id in ids:
                 reverse.setdefault(source_id, set()).add(target)
     return {source_id: sorted(targets) for source_id, targets in reverse.items()}
