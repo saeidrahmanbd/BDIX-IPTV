@@ -4,14 +4,17 @@ from __future__ import annotations
 import concurrent.futures
 import os
 import re
+import json
 import socket
 import sys
 import urllib.error
 import urllib.parse
 import urllib.request
-from collections import Counter
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
+
+import discover_international_channels as discovery
 
 RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 LOGOS = Path("logos")
@@ -132,6 +135,79 @@ def ensure_local_logo(entry):
         return set_logo(entry["extinf"], ""), False, True
     return entry["extinf"], False, False
 
+def consolidate_international_country_groups(playlist_path):
+    """Reconcile dynamic country groups after stream probes remove dead candidates."""
+    p = Path(playlist_path)
+    prefix, blocks = discovery.parse(p.read_text(encoding="utf-8-sig"))
+    labels = {
+        discovery.country_group(code).casefold(): code
+        for code in discovery.ISO_CODES
+        if code not in {"BD", "IN", "PK"}
+    }
+    dynamic_codes = set(labels.values())
+    identities = defaultdict(set)
+
+    # Country-group labels are authoritative for rows already in those groups.
+    # New Channels rows count only when country metadata is independently known.
+    for block in blocks:
+        a = discovery.attrs(block[0])
+        group_key = (a.get("group-title") or "").strip().casefold()
+        if group_key in labels:
+            code = labels[group_key]
+        elif group_key == "new channels":
+            code = discovery.country_code(a)
+        else:
+            continue
+        if code not in dynamic_codes:
+            continue
+        identity = (a.get("tvg-id") or a.get("channel-id") or discovery.norm(discovery.name_of(block))).strip().casefold()
+        if identity:
+            identities[code].add(identity)
+
+    qualified = {
+        code for code, channel_ids in identities.items()
+        if len(channel_ids) >= discovery.COUNTRY_THRESHOLD
+    }
+    changes = []
+    for block in blocks:
+        a = discovery.attrs(block[0])
+        old = (a.get("group-title") or "").strip()
+        old_key = old.casefold()
+        target = None
+        if old_key in labels:
+            code = labels[old_key]
+            if code not in qualified:
+                target = "New Channels"
+        elif old_key == "new channels":
+            code = discovery.country_code(a)
+            if code in qualified:
+                target = discovery.country_group(code)
+        if target and target != old:
+            block[0] = discovery.set_attr(block[0], "group-title", target)
+            changes.append((discovery.name_of(block), old, target))
+
+    if not changes:
+        return []
+
+    present_groups = {discovery.attrs(block[0]).get("group-title", "").strip() for block in blocks}
+    registry = discovery.category_registry(present_groups)
+    rank = {group.casefold(): index for index, group in enumerate(registry)}
+    blocks.sort(key=lambda block: (
+        rank.get(discovery.attrs(block[0]).get("group-title", "").strip().casefold(), len(rank)),
+        discovery.natural_key(discovery.name_of(block)),
+        discovery.url_of(block).casefold(),
+    ))
+    preamble = [line for line in prefix if not line.startswith("#PLAYLIST-STUDIO-CATEGORIES:")]
+    header = "#PLAYLIST-STUDIO-CATEGORIES:" + json.dumps(registry, ensure_ascii=False)
+    index = next((i + 1 for i, line in enumerate(preamble) if line.startswith("#EXTM3U")), 0)
+    preamble.insert(index, header)
+    output = preamble[:]
+    for block in blocks:
+        output.extend(block)
+    p.write_text("\n".join(output).rstrip() + "\n", encoding="utf-8")
+    return changes
+
+
 def append_section(report_path, heading, body):
     p = Path(report_path)
     original = p.read_text(encoding="utf-8") if p.exists() else "# Discovery report\n"
@@ -205,6 +281,13 @@ def probe_mode(playlist, report, baseline, mode):
         remove_indices.update(range(e["start"], e["end"] + 1))
     new_lines = [update_lines.get(i, line) for i, line in enumerate(lines) if i not in remove_indices]
     p.write_text("\n".join(new_lines).rstrip() + "\n", encoding="utf-8")
+    if mode == "international":
+        consolidated = consolidate_international_country_groups(p)
+        counts["country-group rows consolidated after stream probing"] += len(consolidated)
+        details.extend(
+            f"- Moved {name} from {old_group} to {new_group} after stream-probe removals and the five-channel threshold check."
+            for name, old_group, new_group in consolidated
+        )
     report_body = [
         f"- Run timestamp: {now()}",
         f"- Mode: {mode}",
@@ -213,6 +296,7 @@ def probe_mode(playlist, report, baseline, mode):
         f"- Primary entries retained but not conclusively verified: {counts['primary streams retained as unverified']}",
         f"- Dead/invalid entries and unverified backups removed: {counts['removed invalid/dead or unverified backup entries']}",
         f"- Duplicate discovery entries removed: {counts['duplicate discovery entries removed']}",
+        f"- Country-group rows consolidated after stream probing: {counts['country-group rows consolidated after stream probing']}",
         f"- Logo references localized to authentic repository assets: {counts['logos localized to repository assets']}",
         f"- Logo references cleared because no authentic local asset was found: {counts['external/missing-asset logo references cleared']}",
         "",

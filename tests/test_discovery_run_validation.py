@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from validate_discovery_run import NEWS_RE, append_section, classify_response, ensure_local_logo, parse_playlist
+from validate_discovery_run import NEWS_RE, append_section, classify_response, consolidate_international_country_groups, ensure_local_logo, parse_playlist
 
 
 class DiscoveryRunValidationTests(unittest.TestCase):
@@ -38,6 +38,37 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertIn("## Stream verification", content)
             self.assertIn("Verified streams: 2", content)
             self.assertIn("## Final validation", content)
+
+    def test_country_group_is_promoted_when_five_primary_identities_exist_after_probe(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            playlist = Path(directory) / "International-Playlist.m3u"
+            rows = [
+                f'#EXTINF:-1 tvg-id="MK{i}.mk" tvg-country="MK" group-title="North Macedonia",MK {i}\nhttps://example.org/mk{i}.m3u8'
+                for i in range(4)
+            ]
+            rows.append('#EXTINF:-1 tvg-id="MK5.mk" tvg-country="MK" group-title="New Channels",MK 5\nhttps://example.org/mk5.m3u8')
+            playlist.write_text("#EXTM3U\n" + "\n".join(rows) + "\n", encoding="utf-8")
+            moved = consolidate_international_country_groups(playlist)
+            content = playlist.read_text(encoding="utf-8")
+            self.assertEqual(len(moved), 1)
+            self.assertEqual(content.count('group-title="North Macedonia"'), 5)
+            self.assertNotIn('group-title="New Channels"', content)
+
+    def test_country_group_below_five_is_consolidated_into_new_channels_after_probe(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            playlist = Path(directory) / "International-Playlist.m3u"
+            rows = [
+                f'#EXTINF:-1 tvg-id="MK{i}.mk" tvg-country="MK" group-title="North Macedonia",MK {i}\nhttps://example.org/under{i}.m3u8'
+                for i in range(4)
+            ]
+            playlist.write_text("#EXTM3U\n" + "\n".join(rows) + "\n", encoding="utf-8")
+            moved = consolidate_international_country_groups(playlist)
+            content = playlist.read_text(encoding="utf-8")
+            self.assertEqual(len(moved), 4)
+            self.assertNotIn('group-title="North Macedonia"', content)
+            self.assertEqual(content.count('group-title="New Channels"'), 4)
 
     def test_empty_logo_attribute_is_removed_when_no_authentic_asset_exists(self):
         extinf = '#EXTINF:-1 tvg-name="Definitely Missing Channel" tvg-logo="",Definitely Missing Channel'
