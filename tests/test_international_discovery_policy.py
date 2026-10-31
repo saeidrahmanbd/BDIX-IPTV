@@ -106,6 +106,13 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
             with self.subTest(name=name):
                 self.assertIsNone(self.classify(name, group, country, tvg_id)[0])
 
+    def test_radio_brands_and_religious_movie_music_false_positives_are_rejected(self):
+        for name in ("Hitradio O3", "Bel RTL", "Couleur 3", "Joe FM", "Fame95 FM"):
+            with self.subTest(name=name):
+                self.assertIsNone(self.classify(name, "Music", "BE", name.replace(" ", "") + ".be")[0])
+        self.assertIsNone(self.classify("Hope Channel PROYECTO JA", "Music", "US", "HopeChannel.us")[0])
+        self.assertIsNone(self.classify("Canal Cine Dios", "Movies", "CO", "CanalCineDios.co")[0])
+
     def test_unknown_and_generic_channels_are_rejected(self):
         for country in ("BD", "IN", "PK", "US", None):
             with self.subTest(country=country):
