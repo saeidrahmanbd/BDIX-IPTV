@@ -1,14 +1,14 @@
 # International Channel Discovery
 
-- Last scan: 2026-10-31 01:23 UTC
+- Last scan: 2026-10-31 08:45 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12055
-- Existing playlist records: 3240
+- Existing playlist records: 3270
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 0
-- Exact source URLs already in playlist: 2336
+- Exact source URLs already in playlist: 2368
 - Duplicate URLs within source feed: 10
-- New eligible source records after URL/policy filtering: 127
+- New eligible source records after URL/policy filtering: 97
 - Country threshold: 5 unique primary identities for any retained dynamic country group.
 - Automatic discovery is Movie/Music only for every country; News, Sports, Kids, Documentary/Wildlife, Religious, General/Entertainment and all other categories are rejected.
 - New alternate streams are staged in New Backup; curated alternates remain in Backup.
@@ -16,7 +16,7 @@
 - The workflow probes newly discovered and queued stream URLs after candidate selection; inconclusive primary streams are retained for review and unverified backups are removed.
 - New primary channels: 50
 - New backup review entries: 2
-- Category migrations: 5
+- Category migrations: 11
 - Out-of-scope existing entries removed: 0
 
 ## New primary channels
@@ -39,38 +39,38 @@
 - **La Que Buena Atlanta** — United States — US — https://streamyes.alsolnet.com/quebuenaatlanta/live/index.m3u8
 - **La Voz del Tropico (480p) [Geo-blocked]** — New Channels — ZZ — https://ss2.tvrdomi.com:1936/lavozdeltropico/lavozdeltropico/playlist.m3u8
 - **LaPuraCrema Television** — New Channels — ZZ — https://streamlov.alsolnet.com/lapuracrema/live/playlist.m3u8
-- **LaXitosa Panama (360p) [Not 24/7]** — New Channels — ZZ — https://stmvideo2.livecastv.com/lax953/lax953/playlist.m3u8
-- **Lingkar TV** — New Channels — ID — https://lingkartv.my.id/hls/lingkartv.m3u8
-- **M1 (Ukraine) (1080p)** — Ukraine — UA — http://stream.mcquack.net/218/index.m3u8
-- **M6 Music** — France — FR — https://test.946985.filegear-sg.me/proxy/803c517b325bfafc
-- **MagentaMusik 360 (1080p)** — Germany — DE — https://streaming.magentamusik.de/csm/573870/magentamusik1/index.m3u8
-- **Marina TV (1080p)** — New Channels — KW — https://ffs.gulfsat.com/Marina-TV-HD/index.m3u8
-- **MCM Pop (580p)** — France — FR — http://188.115.15.121:8000/play/a014
-- **MCM Top (576p)** — Russia — RU — http://46.32.176.50/mcmtop/index.m3u8
-- **MCN6 Music Channel (1080p) [Not 24/7]** — United States — US — https://d18fcxaqfnwjhj.cloudfront.net/CDN_Ingest/MCN6_MUSIC.smil/Playlist.m3u8
+- **Lingkar TV** — Indonesia — ID — https://lingkartv.my.id/hls/lingkartv.m3u8
 - **Melody FM (720p) [Not 24/7]** — New Channels — JO — https://cdn3.wowza.com/1/OVRrOWxXUEswS2Yv/eGVxSWZy/hls/live/playlist.m3u8
-- **Metropolitana del Cuzco** — Peru — PE — https://video1.earthcam.com/myearthcam/075ff02f78c35af55564cf3af3b3f750.flv/playlist.m3u8
-- **Mezzo (576p)** — France — FR — http://91.228.35.249:8001/1:0:1:422B:2F44:13E:820000:0:0:0:
-- **MNM (720p)** — New Channels — BE — https://live-radio-cf-vrt.akamaized.net/groupa/live/bac277a1-306d-44a0-8e2e-e5b9c07fa270/live.isml/.m3u8
-- **Mohammed Abdo (1080p)** — Saudi Arabia — SA — https://d2ow8h651gs7dx.cloudfront.net/out/v1/371fb663da604e659a2fb99bf89d92d4/index.m3u8
-- **Molahits TV (720p)** — Spain — ES — http://ventdelnord.tv:8080/mola/directe.m3u8
-- **Mooz Dance** — Romania — RO — https://tvextra-hls.b-cdn.net/moozdance/moozdance.m3u8
-- **Mooz Hits** — Romania — RO — https://tvextra-hls.b-cdn.net/moozhits/moozhits.m3u8
-- **Mooz Ro!** — Romania — RO — https://tvextra-hls.b-cdn.net/moozro/moozro.m3u8
-- **MTV Biggest Pop (1080p)** — United States — US — https://jmp2.uk/plu-5d14fd1a252d35decbc4080c.m3u8
-- **MTV Biggest Pop BR (1080p)** — United States — US — https://jmp2.uk/plu-6047fbdbbb776a0007e7f2ff.m3u8
-- **MTV Biggest Pop CA (1080p)** — United States — US — https://jmp2.uk/plu-65410176770cf1000866bf31.m3u8
-- **MTV Biggest Pop LatAm (1080p)** — United States — US — https://jmp2.uk/plu-6047fabfce6e8e00070bcc9f.m3u8
-- **MTV Classic BR (720p)** — United States — US — https://jmp2.uk/plu-66a01dcb8561260008b0a41d.m3u8
-- **MTV Classic CA (720p)** — United States — US — https://jmp2.uk/plu-654100b4bdf3cf0008aa49c7.m3u8
-- **MTV Classic LatAm (720p)** — United States — US — https://jmp2.uk/plu-66a11a21a79dea0008aa90ca.m3u8
-- **MTV Flow Latino (720p)** — United States — US — https://jmp2.uk/plu-5d3609cd6a6c78d7672f2a81.m3u8
-- **MTV Flow Latino LatAm (720p)** — United States — US — https://jmp2.uk/plu-62b218fc511d4b00070ddc0c.m3u8
-- **MTV Spankin' New (1080p)** — United States — US — https://jmp2.uk/plu-5d14fdb8ca91eedee1633117.m3u8
-- **MTV Spankin' New CA (1080p)** — United States — US — https://jmp2.uk/plu-6541010f770cf1000866be98.m3u8
-- **Music (480p) [Not 24/7]** — New Channels — ZZ — https://st2.mediabay.tv/KG_KTRK-Muzika/index.m3u8
-- **Music Box Brazil (720p)** — Brazil — BR — http://168.197.104.22/MUSIC/index.m3u8
-- **Music Information Channel (720p)** — New Channels — ID — https://mic.siar.us/mic/live/mic.m3u8
+- **MusicTop (1080p)** — Argentina — AR — https://stream-gtlc.telecentro.net.ar/hls/musictophls/0/playlist.m3u8
+- **Muz Soyuz (576p)** — Russia — RU — https://hls-tvsoyuz.cdnvideo.ru/tvsoyuz2/muzsoyuz.6fw0-58xp-acts-esy0/playlist.m3u8
+- **Muz-TV (576p)** — Russia — RU — http://46.32.176.50/muztv/index.m3u8
+- **Muzyka Pervogo (576p)** — Russia — RU — http://stream.mcquack.net/153/index.m3u8
+- **MuzzOne** — New Channels — KZ — https://streams.adapto.kz/hls/live/muzzone/main_stream.m3u8
+- **Nande Portetepe TV** — New Channels — ZZ — https://video.hostingcaaguazu.com:19360/nandeportetepe/nandeportetepe.m3u8
+- **New Channel (480p)** — Canada — CA — https://vodcdn.bamboo-cloud.com/livehls/6ab2104508fd5ee36702e3d4/master.m3u8
+- **NEW K-POP (1080p)** — United States — US — https://ads.its-newid.net/api/manifest.m3u8?ads.service_id=GB17000088V&channel_id=newid_086&tp=samsung_tvplus
+- **NRJ Hits** — France — FR — https://test.946985.filegear-sg.me/proxy/a23981548880f405
+- **Nueva Vida FM (720p)** — New Channels — ZZ — https://stream.nuevavidafm.net:3937/live/nuevavidalive.m3u8
+- **o2tv (720p)** — Russia — RU — http://31.148.48.15/O2_HD/index.m3u8
+- **Onda 15 TV (224p)** — Spain — ES — https://cloudvideo.servers10.com:8081/8034/index.m3u8
+- **Onda Valencia TV (720p)** — Spain — ES — https://cloudvideo.servers10.com:8081/8116/index.m3u8
+- **Ondambiental TV (360p)** — Colombia — CO — https://stmv4.voxtvhd.com.br/ondastereo/ondastereo/playlist.m3u8
+- **One Adria** — Germany — DE — https://oneadriaapp.b-cdn.net/1080p/index.m3u8
+- **Online TV Nusantara (720p) [Not 24/7]** — Indonesia — ID — https://5bf7b725107e5.streamlock.net/onlinetvnusantara/onlinetvnusantara/playlist.m3u8
+- **Oxigeno TV (360p) [Not 24/7]** — New Channels — ZZ — https://vcp.myplaytv.com/oxigenotv/oxigenotv/playlist.m3u8
+- **Pequeradio (720p) [Not 24/7]** — Spain — ES — https://canadaremar2.todostreaming.es/live/peque-pequetv.m3u8
+- **Picosa TV (720p)** — New Channels — ZZ — http://45.167.2.101:8000/play/a0sd/index.m3u8
+- **Pluto TV Karaoke por Stingray (720p)** — United States — US — https://jmp2.uk/plu-604b99d633a72b00078e05ad.m3u8
+- **Pluto TV Karaoke por Stingray LatAm (720p)** — United States — US — https://jmp2.uk/plu-5f85cf621d6d2200079f1de0.m3u8
+- **Pluto TV Shows por Stingray (720p)** — United States — US — https://jmp2.uk/plu-604b91e0692f770007d9f33f.m3u8
+- **Prattel TV (720p)** — Peru — PE — https://183.bozztv.com/ssh101/ssh101/pratteltvperu/playlist.m3u8
+- **Rararadio (720p)** — Netherlands — NL — https://58c04fb1d143f.streamlock.net/rararadio/rararadio/playlist.m3u8
+- **Rashid AlMajed (1080p)** — Saudi Arabia — SA — https://dphwv2ufgnfsq.cloudfront.net/out/v1/59cd80dfe93a479eb8b4d79bc6f225ca/index.m3u8
+- **Rock TV (North Macedonia) (1080p) [Not 24/7]** — North Macedonia — MK — https://stream.nasatv.com.mk/rocktv/hls/rocktv_live.m3u8
+- **RTS Muzika (576p)** — New Channels — RS — https://de1.dstv.cx/RTSMuzika/index.m3u8
+- **RTV Glas Drine (404p) [Not 24/7]** — New Channels — BA — http://glasdrine.cutuk.net:8081/433ssdsw/GlasDrineSD/playlist.m3u8
+- **Russian MusicBox (576p)** — Russia — RU — http://stream.mcquack.net/319/index.m3u8
+- **Sin Limites (1080p)** — Colombia — CO — http://170.244.209.30:8000/play/a1im/index.m3u8
 
 ## Backup alternates
 
@@ -79,11 +79,17 @@
 
 ## Country Migrations
 
+- **AXN Asia Indonesia**: `New Channels` → `Indonesia`
 - **Folk TV**: `New Channels` → `North Macedonia`
 - **Love TV**: `New Channels` → `North Macedonia`
+- **Music Information Channel**: `New Channels` → `Indonesia`
+- **My Cinema [ ]**: `New Channels` → `Indonesia`
 - **Sky Folk TV**: `New Channels` → `North Macedonia`
 - **TopEstrada TV**: `New Channels` → `North Macedonia`
 - **Jazz TV (1080p) [Not 24/7]**: `New Channels` → `North Macedonia`
+- **Lingkar TV**: `New Channels` → `Indonesia`
+- **Online TV Nusantara (720p) [Not 24/7]**: `New Channels` → `Indonesia`
+- **Rock TV (North Macedonia) (1080p) [Not 24/7]**: `New Channels` → `North Macedonia`
 
 ## Removed out-of-scope existing entries
 
@@ -94,91 +100,101 @@
 - ambiguous Movie/Music classification: 2
 - documentary/wildlife channel is prohibited: 162
 - general entertainment is not a dedicated Movie/Music channel: 36
-- kids channel is prohibited: 252
+- kids channel is prohibited: 251
 - news channel is prohibited: 1061
 - religious channel is prohibited: 787
-- source category is not Movies or Music: 6684
+- source category is not Movies or Music: 6683
 - sports channel is prohibited: 221
 - test/VOD/non-TV name: 242
 - unsafe or tokenized URL: 127
 
 ## Stream verification
 
-- Run timestamp: 2026-10-31T01:23:36+00:00
+- Run timestamp: 2026-10-31T08:46:01+00:00
 - Mode: international
-- New entries and discovery queues probed: 207
-- Verified live media responses: 144
-- Primary entries retained but not conclusively verified: 41
-- Dead/invalid entries and unverified backups removed: 22
+- New entries and discovery queues probed: 205
+- Verified live media responses: 136
+- Primary entries retained but not conclusively verified: 38
+- Dead/invalid entries and unverified backups removed: 31
 - Duplicate discovery entries removed: 0
-- Country-group rows consolidated after stream probing: 4
+- Country-group rows consolidated after stream probing: 8
 - Logo references localized to authentic repository assets: 0
 - Logo references cleared because no authentic local asset was found: 0
 
 ### Stream probe details
 - Removed ATN Music (360p) from Bangladesh — HTTP 404.
-- Retained Music Box Brazil (720p) for review — stream could not be conclusively verified (HTTP 400; not conclusive).
+- Retained MusicTop (1080p) for review — stream could not be conclusively verified (HTTP 400; not conclusive).
+- Removed New Channel (480p) from Canada — HTTP 404.
 - Removed La Hermandad Salsera (1080p) [Not 24/7] from Colombia — HTTP 404.
+- Retained Ondambiental TV (360p) for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Sin Limites (1080p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed DanceTV EDM Mainstage (1080p) from Estonia — HTTP 404.
 - Removed DanceTV Minimal Tech (1080p) from Estonia — HTTP 404.
-- Retained M6 Music for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained MCM Pop (580p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained Mezzo (576p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained MagentaMusik 360 (1080p) for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained NRJ Hits for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Removed Online TV Nusantara (720p) [Not 24/7] from Indonesia — HTTP 404.
+- Retained Rararadio (720p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed Jazz TV (1080p) [Not 24/7] from North Macedonia — HTTP 404.
+- Removed Rock TV (North Macedonia) (1080p) [Not 24/7] from North Macedonia — HTTP 404.
 - Removed Galactica TV from Peru — HTTP 404.
-- Retained Metropolitana del Cuzco for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained Mooz Dance for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Mooz Hits for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Mooz Ro! for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained MCM Top (576p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained Molahits TV (720p) for review — stream could not be conclusively verified (connection could not be confirmed: ConnectionResetError).
+- Removed Prattel TV (720p) from Peru — HTTP 404.
+- Retained Muz-TV (576p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained o2tv (720p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Removed Pequeradio (720p) [Not 24/7] from Spain — HTTP 404.
 - Removed Dega TV (720p) [Not 24/7] from United States — HTTP 404.
 - Removed GMTV (1080p) from United States — HTTP 404.
 - Removed La Que Buena Atlanta from United States — HTTP 404.
+- Removed Pluto TV Karaoke por Stingray (720p) from United States — HTTP 404.
+- Removed Pluto TV Karaoke por Stingray LatAm (720p) from United States — HTTP 404.
 - Retained 312 Kino for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained ACW UG TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed Alegria TV (720p) from New Channels — HTTP 404.
 - Retained AMC (Afghanistan) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained AMusic Channel for review — stream could not be conclusively verified (connection could not be confirmed: ConnectionResetError).
 - Retained Canal+ Action Europe Slovakia for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Removed CEACOM TV [ ] from New Channels — HTTP 404.
 - Retained Celestial Movies for review — stream could not be conclusively verified (HTTP 401; access/availability could not be confirmed).
 - Retained CinemaWorld for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained CTB Perth Movies Channel for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed D Music (1280p) [Not 24/7] from New Channels — HTTP 404.
 - Removed Farra Play (576p) from New Channels — HTTP 404.
-- Retained Galaxy TV (720p) [Not 24/7] for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Galaxy TV [ ] for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained HBO Asia SD [ ] for review — stream could not be conclusively verified (response did not clearly identify a live media stream).
-- Retained Hits 360 TV (720p) [Not 24/7] for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained HMTV (Nigeria) for review — stream could not be conclusively verified (HTTP 204; not conclusive).
+- Retained Hits 360 TV [ ] for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Removed Isango TV from New Channels — HTTP 404.
 - Removed Italianissimo (360p) [Not 24/7] from New Channels — HTTP 404.
-- Retained Juice TV (1080p) [Not 24/7] for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Removed KandelaTV (480p) from New Channels — HTTP 404.
+- Retained Juice TV [ ] for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Kantipur Max [ ] for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Klasik [ ] for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed Komsan TV [Not 24/7] from New Channels — HTTP 404.
-- Retained La 98.1 TV (720p) [Not 24/7] for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained La 98.1 TV [ ] for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed La Voz del Tropico (480p) [Geo-blocked] from New Channels — HTTP 404.
 - Removed LaPuraCrema Television from New Channels — HTTP 404.
-- Retained LaXitosa Panama (360p) [Not 24/7] for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Removed Lingkar TV from New Channels — HTTP 404.
-- Retained Marina TV (1080p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained LaXitosa Panama [ ] for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained Marina TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed Melody FM (720p) [Not 24/7] from New Channels — HTTP 404.
-- Retained MNM (720p) for review — stream could not be conclusively verified (HTTP 400; not conclusive).
+- Retained MNM for review — stream could not be conclusively verified (HTTP 400; not conclusive).
 - Retained Movify Kino for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained Music (480p) [Not 24/7] for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Retained Music Information Channel (720p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained My Cinema [ ] for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Removed Next HD (480p) from New Channels — HTTP 404.
+- Retained Music [ ] for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained MuzzOne for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Removed Nande Portetepe TV from New Channels — HTTP 404.
 - Retained NogoumFMTV for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Removed Oxigeno TV (360p) [Not 24/7] from New Channels — HTTP 404.
 - Retained Pantalla Clasica EC [ ] for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained Picosa TV (720p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Rakuten TV Family Movies Switzerland for review — stream could not be conclusively verified (HTTP 504; access/availability could not be confirmed).
 - Retained Rotana Cinema Egypt for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained RTS Muzika (576p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained RTV Glas Drine (404p) [Not 24/7] for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Star Movies (Slovenia) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Star Tamil Television for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Thrill for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Removed Vintage Music from New Channels — HTTP 404.
 - Removed Jalsha Movies from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Zee Action from New Backup — HTTP 404.
+- Moved AXN Asia Indonesia from Indonesia to New Channels after stream-probe removals and the five-channel threshold check.
+- Moved Lingkar TV from Indonesia to New Channels after stream-probe removals and the five-channel threshold check.
+- Moved Music Information Channel from Indonesia to New Channels after stream-probe removals and the five-channel threshold check.
+- Moved My Cinema [ ] from Indonesia to New Channels after stream-probe removals and the five-channel threshold check.
 - Moved Folk TV from North Macedonia to New Channels after stream-probe removals and the five-channel threshold check.
 - Moved Love TV from North Macedonia to New Channels after stream-probe removals and the five-channel threshold check.
 - Moved Sky Folk TV from North Macedonia to New Channels after stream-probe removals and the five-channel threshold check.
@@ -186,13 +202,16 @@
 
 ## Final validation
 
-- Run timestamp: 2026-10-31T01:23:37+00:00
-- Validation status: PASS
-- M3U entries parsed: 3270
+- Run timestamp: 2026-10-31T08:46:02+00:00
+- Validation status: FAIL
+- M3U entries parsed: 3291
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
-- New Channels/New Backup/Backup ordering: passed
-- Discovery entries missing a logo (left blank rather than using a placeholder): 2
+- New Channels/New Backup/Backup ordering: failed
+- Discovery entries missing a logo (left blank rather than using a placeholder): 1
 - Non-local discovery logo references: 0
 - Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
+
+### Blockers
+- New Channels/New Backup/Backup must be the final three playlist groups
