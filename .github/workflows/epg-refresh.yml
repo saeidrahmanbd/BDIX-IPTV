@@ -38,7 +38,7 @@ concurrency:
 
 jobs:
   refresh:
-    if: ${{ (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success') && (github.event_name != 'push' || !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG'))) }}
+    if: ${{ (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' || (github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.name == 'International Channel Discovery')) && (github.event_name != 'push' || !(github.actor == 'github-actions[bot]' && startsWith(github.event.head_commit.message, 'Refresh IPTV EPG'))) }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
