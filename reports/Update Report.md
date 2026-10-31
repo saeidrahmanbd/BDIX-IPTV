@@ -1,12 +1,12 @@
 # Update Report
 
-_Last generated: **2026-10-31 10:56 UTC**_
+_Last generated: **2026-10-31 14:20 UTC**_
 
-Source playlist SHA-256: **6c693baea478e44539eac29fb99c0b3aa6e7109f06134b8b010d3449c259b49c**
+Source playlist SHA-256: **5aceeedc4d625aa3207a92fd9be3bed66ab7892c4e2b023e364330895961cb4a**
 
 | Metric | Current |
 |---|---:|
-| Streams | **1160** |
+| Streams | **1165** |
 | Active Channel Identities | **655** |
 | Active Primary Streams | **655** |
 | Bangladesh | **64** |
@@ -63,7 +63,7 @@ Source playlist SHA-256: **6c693baea478e44539eac29fb99c0b3aa6e7109f06134b8b010d3
 | Report | Last generated | Input freshness |
 |---|---|---|
 | Playlist audit | **2026-10-31T08:28:36.630333+00:00** | **STALE** |
-| EPG coverage / three-playlist inventory | **2026-10-31T10:56:50+00:00** | **PENDING — guide missing or freshness not PASS** |
+| EPG coverage / three-playlist inventory | **2026-10-31T14:20:46+00:00** | **PENDING — guide missing or freshness not PASS** |
 | Stream health | **2026-10-31T08:29:20+00:00** | **STALE** |
 | Pre-publish gate | **2026-10-31T08:28:36+00:00** | **STALE** |
 
