@@ -9,8 +9,10 @@ Argentina,Film & Arts,FilmArts.ar@Panregional,,,NO_GUIDE_HIT,Auto-maintained; ve
 Argentina,HTV Argentina,HTV.us@Argentina,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Argentina,La 100,La100.ar@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Argentina,Mas FM,MasFM.ar@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Argentina,MusicTop (1080p),MusicTop.ar@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Argentina,Quiero Musica en mi Idioma,QuieroMusicaenmiIdioma.ar@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Argentina,Rock & Pop,RockPop.ar@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Argentina,The Cabbin FM,TheCabbinFM.ar@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Argentina,X Level Media,XLevelMedia.ar@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Argentina,Xtrema Accion,XtremaAccion.ar@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Argentina,Xtrema Cine Clasico,XtremaCineClasico.ar@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -133,6 +135,7 @@ Bulgaria,Hit Mix Music,HitMixMusic.bg@SD,,,NO_GUIDE_HIT,Auto-maintained; verify 
 Bulgaria,Kino Nova,KinoNova.bg@SD,KinoNova.bg,https://iptv-epg.org/files/epg-bg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Bulgaria,Magic TV (Bulgaria),MagicTV.bg@SD,MagicTV.bg,https://iptv-epg.org/files/epg-bg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Bulgaria,Movie Star,MovieStar.bg@SD,MovieSTAR.bg,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
+Bulgaria,TV Rodina (1080p),TVRodina.bg@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bulgaria,TV1000,TV1000.bg@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Bulgaria,The Voice,TheVoice.bg@SD,TheVoice.bg | ts1448,https://iptv-epg.org/files/epg-bg.xml.gz | https://avkb.short.gy/epg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Bulgaria,Tiankov Folk,TiankovFolk.bg@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -146,8 +149,10 @@ Canada,Afghan Nobel Movies,AfghanNobelMovies.ca@SD,,,NO_GUIDE_HIT,Auto-maintaine
 Canada,CKNO-FM,CKNOFM.ca@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Canada,HBO East,HBO1.ca,HBO1.ca,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 Canada,Pamir TV,PamirTV.ca@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Canada,Stingray Cityscapes (1080p),StingrayCityscapes.ca@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Canada,Stingray Classic Rock,StingrayClassicRock.ca,USBD35000180U | jtv3478,https://i.mjh.nz/SamsungTVPlus/us.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Canada,Stingray Classica,StingrayClassica.ca@SD,StingrayClassica.nl | StingrayClassica.pl | StingrayClassica.ro | USBD350002623 | Stingray.Classica.nl | Stingray.Classica.HD.pl | Stingray.Classica.pl | Stingray.Classica.ro,https://iptv-epg.org/files/epg-nl.xml.gz | https://iptv-epg.org/files/epg-pl.xml.gz | https://iptv-epg.org/files/epg-ro.xml.gz | https://i.mjh.nz/SamsungTVPlus/us.xml | https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Canada,Stingray Cozy Cafe (1080p),StingrayCozyCafe.ca@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Canada,Stingray Easy Listening,StingrayEasyListening.ca@SD,USBD3500011J3 | jtv3325,https://i.mjh.nz/SamsungTVPlus/us.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Canada,Stingray Everything '80s,StingrayEverything80s.ca@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Canada,Stingray Flashback 70's,StingrayFlashback70s.ca@SD,USBD3500008IJ,https://i.mjh.nz/SamsungTVPlus/us.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -202,12 +207,14 @@ Colombia,Claro Musica TV,ClaroMusicaTV.co@SD,,,NO_GUIDE_HIT,Auto-maintained; ver
 Colombia,Fiesta TV,FiestaTV.co@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Colombia,La Kalle,LaKalle.co@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Colombia,MasMusica FM,MasMusicaFM.co@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Colombia,Ondambiental TV (360p),OndambientalTV.co@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Colombia,Parranda Vallenata,ParrandaVallenata.co@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Colombia,Radiola TV,RadiolaTV.co@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Colombia,Ranchenato TV,RanchenatoTV.co@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Colombia,Reyali,Reyali.co@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Colombia,Rumba TV,RumbaTV.co@SD,RumbaTV.co,https://iptv-epg.org/files/epg-co.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Colombia,Salsa Gorda Television,SalsaGordaTelevision.co@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Colombia,Sin Limites (1080p),SinLimites.co@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Colombia,Supermusica TV,SupermusicaTV.co@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Czech Republic,AMC Europe Czech Republic,AMCEurope.uk@CzechRepublic,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Czech Republic,AXN Black (United States) Czech Republic,AXNBlack.us@CzechRepublic,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -403,7 +410,7 @@ Documentary & Wildlife,Persiana Travel,PersianaTravel.fr@SD,,,NO_GUIDE_HIT,Auto-
 Documentary & Wildlife,Polsat Viasat Explore,PolsatViasatExplore.pl@SD,PolsatViasatExplore.pl | Polsat.Viasat.Explore.HD.pl,https://iptv-epg.org/files/epg-pl.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Polsat Viasat History,PolsatViasatHistory.pl@SD,PolsatViasatHistory.pl | Polsat.Viasat.History.HD.pl,https://iptv-epg.org/files/epg-pl.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,Polsat Viasat Nature,PolsatViasatNature.pl@SD,PolsatViasatNature.pl | Polsat.Viasat.Nature.HD.pl,https://iptv-epg.org/files/epg-pl.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-Documentary & Wildlife,Popular Science,PopularScience.us,PopularScience.us,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://iptv-epg.org/files/epg-us.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Documentary & Wildlife,Popular Science,PopularScience.us,PopularScience.us,https://iptv-epg.org/files/epg-us.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,PowerNation TV,PowerNationTV.us@SD,USBD2500017XQ,https://i.mjh.nz/SamsungTVPlus/us.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,RT Documentary,RTDocumentary.ru,RTDocumentary.ru,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 Documentary & Wildlife,RT Documentary,RTDocumentary.ru@English,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -458,6 +465,7 @@ Estonia,DanceTV Algorhythm,DanceTVAlgorhythm.ee@SD,,,NO_GUIDE_HIT,Auto-maintaine
 Estonia,DanceTV Deep House District,DanceTVDeepHouseDistrict.ee@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Estonia,DanceTV House Floor,DanceTVHouseFloor.ee@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Estonia,DanceTV Techno Warehouse,DanceTVTechnoWarehouse.ee@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Estonia,Vantage Classic (720p),VantageClassic.ee@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Estonia,Vantage Rock,VantageRock.ee@HD,Vantage.Rock.cz,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 Finland,Hero [ ],Hero.fi@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Finland,JRTV Jarviradio,JRTVJarviradio.fi@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -483,6 +491,7 @@ France,M6 Music,M6Music.fr@SD,M6.Music.fr,https://epgshare01.online/epgshare01/e
 France,MCM Pop,MCMPop.fr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 France,Mezzo,Mezzo.fr@SD,Mezzo.nl | Mezzo.pl | Mezzo.ro | Mezzo.fr,https://iptv-epg.org/files/epg-nl.xml.gz | https://iptv-epg.org/files/epg-pl.xml.gz | https://iptv-epg.org/files/epg-ro.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 France,Mezzo Live,MezzoLive.fr@SD,Mezzo.Live.HD.fr | MEZZO.LIVE.HD.gr | Mezzo.Live.HD.pl | Mezzo.Live.HD.ro,https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_GR1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+France,NRJ Hits,NRJHits.fr@SD,NRJ.Hits.fr,https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 France,P2M TV,P2MTV.fr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 France,Persiana Cinema,PersianaCinema.fr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 France,Persiana Folk,PersianaFolk.fr@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -496,6 +505,7 @@ France,Sony One Favoris,SonyOneFavoris.fr@HD,,,NO_GUIDE_HIT,Auto-maintained; ver
 France,Sony One Hits Action,SonyOneHitsAction.fr@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 France,Sony One Hits Comedie,SonyOneHitsComedie.fr@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 France,TF1 Series Films,TF1SeriesFilms.fr@SD,TF1Series-Films.fr,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
+France,TZiK [Not 24/7],TZiK.fr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 France,Trace Africa,TraceAfrica.fr@SD,Trace.Africa.fr,https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 France,Trace Afrikora,TraceAfrikora.fr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 France,Trace Ayiti,TraceAyiti.fr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -546,6 +556,7 @@ Germany,Medium (Germany),Medium.de@ES,,,NO_GUIDE_HIT,Auto-maintained; verify amb
 Germany,More TV Sci-fi,MoreTVScifi.de@GB,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Germany,Moviedome,Moviedome.us@Germany,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Germany,Nash Kinomir,NashKinomir.de@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Germany,One Adria,OneAdria.de@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Germany,One Music Television,OneMusicTelevision.de@SD,ONEMUSICTELEVISION.de,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 Germany,Pluto TV 90's Classics,PlutoTV90sClassics.de@FR,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Germany,Pluto TV Alberto Sordi,PlutoTVAlbertoSordi.de@IT,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1100,7 +1111,7 @@ International,Digital Fashion,DigitalFashion.us,,,NO_GUIDE_HIT,Auto-maintained; 
 International,FON Music,FONMusic.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,Fashion One,FashionOne.uk,Fashion.One.cz,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 International,Fashion TV,FashionTV.us,FashionTV.pl | FashionTV.ro | ts227 | Fashion.TV.in | FashionTV.au | Fashion.TV.fr | Fashion.TV.gr | Fashion.TV.HD.nl | Fashion.TV.HD.pl | Fashion.TV.pl | Fashion.TV.HD.ro | Fashion.TV.ro,https://iptv-epg.org/files/epg-pl.xml.gz | https://iptv-epg.org/files/epg-ro.xml.gz | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/tsepg.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_GR1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-International,GREAT! Movies,GREATmovies.uk,0-9-9z5910243 | GreatMovies.uk,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml | https://www.open-epg.com/files/unitedkingdom.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+International,GREAT! Movies,GREATmovies.uk,0-9-9z5910243,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 International,GREAT! Romance,GREATromance.uk,GREAT!romance.uk,https://iptv-epg.org/files/epg-gb.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 International,Gravitas Movies,GravitasMovies.us,USBD700011RE | GravitasMovies.us,https://i.mjh.nz/SamsungTVPlus/us.xml | https://iptv-epg.org/files/epg-us.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 International,Kronehit,Kronehit.at,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1368,7 +1379,7 @@ Kids,O! International,O.ru@International,,,NO_GUIDE_HIT,Auto-maintained; verify 
 Kids,ON Kids,ONKids.vn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,PBS Kids,PBSKids.us@SD,USBC3600013PC,https://i.mjh.nz/SamsungTVPlus/us.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Kids,PLUSPLUS,PLUSPLUS.ua@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Kids,POP,Pop.uk,0-9-9z5910525 | Pop.uk,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml | https://www.open-epg.com/files/unitedkingdom.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Kids,POP,Pop.uk,0-9-9z5910525,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Pakapaka,Pakapaka.ar@SD,Pakapaka.ar,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Peques TV,PequesTV.pe@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Persiana Junior,PersianaJunior.fr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1411,7 +1422,7 @@ Kids,Teletubbies,Teletubbies.uk,USBD3500015R5,https://i.mjh.nz/SamsungTVPlus/us.
 Kids,Teletubbies,Teletubbies.uk@SD,USBD3500015R5,https://i.mjh.nz/SamsungTVPlus/us.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Kids,TiJi,TiJi.ru@SD,TiJi.ru | TIJI.fr | Tiji.fr,https://iptv-epg.org/files/epg-ru.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Tiguerito TV,TigueritoTV.do@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Kids,Tiny Pop,TinyPop.uk,0-9-9z5910526 | TinyPop.uk,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml | https://www.open-epg.com/files/unitedkingdom.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Kids,Tiny Pop,TinyPop.uk,0-9-9z5910526,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Tom And Jerry,TomAndJerry.do@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Tom and Jerry,TomAndJerry.do,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Tooku,Tooku.ru,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1459,6 +1470,7 @@ Mexico,MultiPremier,MultiPremier.mx@SD,Multipremier.mx,,MAPPED_NOT_CURRENTLY_FOU
 Mexico,MyTime Movie Network (Mexico),MyTimeMovieNetwork.mx@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Mexico,Popcorn Central,PopcornCentral.mx@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Mexico,TeleHit,TeleHit.mx@SD,Telehit.mx,https://iptv-epg.org/files/epg-mx.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Mexico,Telehit Musica,TelehitMusica.mx@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Mexico,Vision Television,VisionTelevision.mx@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Netherlands,360TuneBox,360TuneBox.nl@SD,360TuneBox.ro | 360TuneBox.HD.pl,https://iptv-epg.org/files/epg-ro.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Netherlands,BEATTV,BEATTV.nl@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1473,6 +1485,7 @@ Netherlands,FomixTV,FomixTV.nl@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguo
 Netherlands,Gigant FM,GigantFM.nl@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Netherlands,Qmusic,Qmusic.nl@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Netherlands,RadioNL TV,RadioNLTV.nl@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Netherlands,Rararadio (720p),Rararadio.nl@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Netherlands,Salto Brasa Music,SaltoBrasaMusic.nl@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Netherlands,TMF,TMF.nl@HDFAST,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Netherlands,XITE Just Chill,XITEJustChill.nl@US,USBB2300003JZ,https://i.mjh.nz/SamsungTVPlus/us.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -1502,7 +1515,6 @@ New Channels,Aurora Media Films,AuroraMediaFilms.gt@SD,,,NO_GUIDE_HIT,Auto-maint
 New Channels,BOKTV,BOKTV.za@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,BTA TV,BTATV.ve@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Boreal,Boreal.do@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,CEACOM TV [ ],CEACOMTV.bo@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,CMC TV,CMCTV.hr,CMC.au | CMC.fr,https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,CTB Perth Movies Channel,CTBPerthMoviesChannel.au@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Canal 3 KMK TV,Canal3KMKTV.cr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1513,7 +1525,6 @@ New Channels,CinemaWorld,CinemaWorld.my@SD,,,NO_GUIDE_HIT,Auto-maintained; verif
 New Channels,Cinemax Asia,CinemaxAsia.sg@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Cool FM 98.9,CoolFM989.aw@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Corazon TV,CorazonTV.pa@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,DM Sat,DMSat.rs@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Discovery Science,DiscoveryScience.in@SD,Discovery.Science.in | DiscoveryScience.in | 577294 | DiscoveryScience.nl | DiscoveryScience.pl | 159107 | ts113 | LIVETV_LIVETVCHANNEL_DISCOVERY_SCIENCE | Discovery.Science.nl | Discovery.Science.HD.pl | Discovery.Science.pl,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml.gz | https://www.free-epg.de/api/epg/in.xml.gz | https://iptv-epg.org/files/epg-nl.xml.gz | https://iptv-epg.org/files/epg-pl.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/tsepg.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Discovery Turbo (India),DiscoveryTurbo.in@SD,Discovery.Turbo.in | DiscoveryTurbo.in,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml.gz | https://www.free-epg.de/api/epg/in.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Disney Channel India,DisneyChannel.in@HD,DISNEY.CHANNEL.in | LIVETV_LIVETVCHANNEL_DISNEY_CHANNEL_HD,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -1527,7 +1538,6 @@ New Channels,Falastini TV,FalastiniTV.ps@SD,Falastini.TV.ae,,MAPPED_NOT_CURRENTL
 New Channels,First Music Channel,FirstMusicChannel.by@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,First Music Channel Russia,FirstMusicChannelRussia.by@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Folk Klub TV,FolkKlubTV.au@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,Folk TV,FolkTV.mk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Folx Slovenija,FolxSlovenija.si@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Fuego TV,FuegoTV.do@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Fun Vision,FunVision.be@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1543,7 +1553,6 @@ New Channels,HBO Asia SD [ ],HBOAsia.sg@SD,,,NO_GUIDE_HIT,Auto-maintained; verif
 New Channels,HBO Asia Taiwan,HBOAsia.sg@Taiwan,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,HEi Now,HEiNow.py@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,HMTV (Nigeria),HMTV.ng@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,HSTV,HSTV.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Hit FM,HitFM.md@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Hits 360 TV [ ],Hits360TV.do@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,INTV Australia,INTVAustralia.au@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1551,7 +1560,6 @@ New Channels,IQ Channel,IQChannel.cr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify a
 New Channels,Identite Tele Caraibes,IdentiteTeleCaraibes.mq@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Imagen FM 105.1,ImagenFM1051.hn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Infinita TV,InfinitaTV.ec@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,Isango TV,IsangoTV.rw@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Ishtar TV,IshtarTV.iq@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Itage TV,ItageTV.ng@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Ivoire Channel,IvoireChannel.ci@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1560,6 +1568,7 @@ New Channels,Juice TV [ ],JuiceTV.nz@SD,,,NO_GUIDE_HIT,Auto-maintained; verify a
 New Channels,K100,K100.is@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,KN Music TV,KNMusicTV.az@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Kabaddi 24x7,Kabaddi24x7.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,KandelaTV (480p),KandelaTV.ve@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Kantipur Max [ ],KantipurMax.np@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Kayhan TV,KayhanTV.af@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Kite Victers (720p) [Not 24/7],KiteVicters.in@SD,KITE.VICTERS.in,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -1574,9 +1583,9 @@ New Channels,La Top 102.9,LaTop1029.hn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify
 New Channels,La Top 107.7,LaTop1077.hn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,La-X,LaX.pr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,LaXitosa Panama [ ],LaXitosaPanama.pa@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,Lingkar TV,LingkarTV.id@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Live99FM,Live99FM.bq@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Look Thoong TV,LookThoongTV.la@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,Love TV,LoveTV.mk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,M-1,M1.lt@SD,M1.ro,https://iptv-epg.org/files/epg-ro.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,MN+,MNPlus.mn@SD,MN+.HD.in | 143548 | ts210,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | https://avkb.short.gy/tsepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,MNM,MNM.be@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1601,21 +1610,26 @@ New Channels,Movify Kino,MovifyKino.lv@SD,,,NO_GUIDE_HIT,Auto-maintained; verify
 New Channels,Music Information Channel,MusicInformationChannel.id@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Music [ ],Music.kg@SD,MusicChannel.ro | Music.Channel.ro,https://iptv-epg.org/files/epg-ro.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Muzangala TV,MuzangalaTV.ao@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,MuzzOne,MuzzOne.kz@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,My Cinema Europe,MyCinemaEurope.ch@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,My Cinema [ ],MyCinema.id@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,NDTV Good Times,NDTVGoodTimes.in@SD,INBC2800007ZP | 205,https://i.mjh.nz/SamsungTVPlus/in.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,Next HD (480p),NextHD.py@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Nick Jr (India),NickJr.in@SD,NICK.JR.in | NickJr.it | NickJr.nl | NickJr.pl | NickJr.ro | NickJr..se | ts118 | Nick.Jr.it | Nick.Jr..my | Nick.Jr..nl | Nick.Jr..HD.pl | Nick.Jr..pl | Nick.Jr.ro,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-it.xml.gz | https://iptv-epg.org/files/epg-nl.xml.gz | https://iptv-epg.org/files/epg-pl.xml.gz | https://iptv-epg.org/files/epg-ro.xml.gz | https://iptv-epg.org/files/epg-se.xml.gz | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/tsepg.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Nickelodeon (India),Nickelodeon.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,NogoumFMTV,NogoumFMTV.eg@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Noroc TV,NorocTV.md@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,Nueva Vida FM (720p),NuevaVidaFM.pr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Oscar Movies Bhojpuri,OscarMoviesBhojpuri.in@SD,OscarMoviesBhojpuri.in | 143638 | ts431,https://iptv-epg.org/files/epg-in.xml.gz | https://www.free-epg.de/api/epg/in.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/tsepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Pantalla Clasica EC [ ],PantallaClasicaEC.ec@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,Picosa TV (720p),PicosaTV.hn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Pindin TV,PindinTV.pa@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Planet 100.9 FM,Planet1009FM.pa@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Play TV (Cameroon),PlayTV.cm@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Power 101.7 FM,Power1017FM.aw@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,RHT Guadeloupe,RHTGuadeloupe.gp@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,RTL Gold (Luxembourg),RTLGold.lu@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,RTV Glas Drine (404p) [Not 24/7],RTVGlasDrine.ba@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Rakuten TV Family Movies Switzerland,RakutenTVFamilyMovies.es@Switzerland,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Rotana Cinema Egypt,RotanaCinemaEgypt.eg@SD,Rotana.Cinema.Egypt.ae,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,SOY Plancha TV,SOYPlanchaTV.cr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1624,7 +1638,6 @@ New Channels,Shiksha TV,ShikshaTV.in@SD,Shiksha.TV.in | XSTREAMADS_LIVETVCHANNEL
 New Channels,ShowVen TV,ShowVenTV.ve@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Siembra TV (Dominican Republic),SiembraTV.do@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Silk Way Cinema,SilkWayCinema.kz@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,Sky Folk TV,SkyFolkTV.mk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Sonic,Sonic.in@SD,159124 | ts127 | LIVETV_LIVETVCHANNEL_SONIC | Sonic.in,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/tsepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Sony Sports Ten 1,SonySportsTen1.in@SD,SONY.SPORTS.TEN.1.in | SonySportsTEN1.in | 157591 | 159126 | ts150 | ts81 | LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_1 | LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_1_HD,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml.gz | https://www.free-epg.de/api/epg/in.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/tsepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Sony Sports Ten 2,SonySportsTen2.in@SD,SONY.SPORTS.TEN.2.in | SonySportsTEN2.in | 157592 | 159127 | ts170 | ts462 | LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_2 | LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_2_HD,https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml.gz | https://www.free-epg.de/api/epg/in.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/tsepg.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -1639,6 +1652,8 @@ New Channels,StuBru,StuBru.be@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguou
 New Channels,Super Q Panama,SuperQPanama.pa@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,TLC (India),TLC.in@HD,TLC.HD.in | TLC.in | TLC.nl | TLC.pl | TLC.ro | TLC.tr | 123500 | 158023 | ts135 | ts480 | LIVETV_LIVETVCHANNEL_TLC | LIVETV_LIVETVCHANNEL_TLC_HD | TLC.au | TLC.fr | TLC.HD..gr | TLC.HD.my | TLC.HD.pl | TLC.HD.tr,https://epgshare01.online/epgshare01/epg_ripper_IN1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_IN4.xml.gz | https://iptv-epg.org/files/epg-in.xml.gz | https://www.free-epg.de/api/epg/in.xml.gz | https://iptv-epg.org/files/epg-nl.xml.gz | https://iptv-epg.org/files/epg-pl.xml.gz | https://iptv-epg.org/files/epg-ro.xml.gz | https://iptv-epg.org/files/epg-tr.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml | https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml | https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml | https://avkb.short.gy/epg.xml.gz | https://avkb.short.gy/tsepg.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_GR1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_NL1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,TMA,TMA.gp@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,TV Arberia 4 Muzike (720p),TVArberia4Muzike.xk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,TV Arberia Retro Hits (720p),TVArberiaRetroHits.xk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,TV Cidade,TVCidade.cv@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,TV Exitos,TVExitos.do@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,TVCARiB Cinema,TVCARiBCinema.sx@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1646,13 +1661,14 @@ New Channels,TVONE Nicaragua,TVONENicaragua.ni@SD,,,NO_GUIDE_HIT,Auto-maintained
 New Channels,Tarima TV,TarimaTV.do@HD,plex.tv.Tarima.TV.plex,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Tele Dominicana TV,TeleDominicanaTV.do@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Tele Zoukla,TeleZoukla.mq@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,TeleMusik Senegal (720p),TeleMusikSenegal.sn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Ten Cricket,TenCricket.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Tezaur TV,TezaurTV.md@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Thrill,Thrill.hk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Tjil TV,TjilTV.na@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,TopEstrada TV,TopEstradaTV.mk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Topical Moon RD,TopicalMoonRD.do@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Tropi Q 99.7 FM,TropiQ997FM.pa@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+New Channels,Tropical Moon Cumbia TV (720p),TropicalMoonCumbiaTV.pa@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Tropical Moon Urban TV,TropicalMoonUrbanTV.pa@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Turkmen Owazy,TurkmenOwazy.tm@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,UA Music,custom.ua-music,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1663,7 +1679,6 @@ New Channels,VCV (720p) [Not 24/7],VCV.in@SD,,,NO_GUIDE_HIT,Auto-maintained; ver
 New Channels,VM Latino,VMLatino.cr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Venus Media,VenusMedia.py@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Video Tour Channel,VideoTourChannel.cr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,Vintage Music,VintageMusic.cr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Vokta TV,VoktaTV.bd@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Vos y TV,VosyTV.ec@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Vyas Channel,VyasChannel.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1671,8 +1686,12 @@ New Channels,Wavez FM,WavezFM.aw@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambig
 New Channels,WeatherSpy (India),WeatherSpy.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,X 102.7 FM,X1027FM.aw@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Yes Movies Action,YesMoviesAction.il@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-New Channels,ZICO TV,ZICOTV.rs@SD,Zico.TV.ch,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 New Channels,Zodiak TV,ZodiakTV.in@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+North Macedonia,Folk TV,FolkTV.mk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+North Macedonia,Love TV,LoveTV.mk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+North Macedonia,Sky Folk TV,SkyFolkTV.mk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+North Macedonia,Star Plus Televizija (1080p) [Not 24/7],StarPlusTelevizija.mk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+North Macedonia,TopEstrada TV,TopEstradaTV.mk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,8XM,8XM.pk@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,8XM,8XM.pk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Pakistani,ARY Music,custom.ary-music-tumyo,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1705,6 +1724,7 @@ Peru,Millenium 109 FM,Millenium109FM.pe@SD,,,NO_GUIDE_HIT,Auto-maintained; verif
 Peru,RumbaMix TV,RumbaMixTV.pe@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Peru,TV Peruanisima,TVPeruanisima.pe@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Peru,TVUNO,TVUNO.pe@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Peru,Top Latino TV,TopLatinoTV.pe@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Poland,4 Fun Dance,4FunDance.pl@SD,4FUNDANCE.pl | 4FUN.DANCE.pl,https://iptv-epg.org/files/epg-pl.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Poland,4 Fun TV,4FunTV.pl@SD,4FUNtv.pl | 4FUN.TV.pl,https://iptv-epg.org/files/epg-pl.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_PL1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Poland,AXN Black (United States) Poland,AXNBlack.us@Poland,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1883,10 +1903,13 @@ Russia,MCM Top,MCMTop.ru@SD,MCMTop.pl | MCMTop.ru | MCM.Top.pl,https://iptv-epg.
 Russia,MTV Volgograd,MTVVolgograd.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,Maidan,Maidan.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,Mosfilm Gold Collection,MosfilmGoldCollection.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Russia,Muz Soyuz (576p),MuzSoyuz.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Russia,Muz-TV (576p),MuzTV.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,Muzhskoe kino,Muzhskoekino.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,Muzyka 1,Muzyka1.ru@International,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,Muzyka Kino,MuzykaKino.ru@International,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,Muzyka Live,MuzykaLive.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Russia,Muzyka Pervogo (576p),MuzykaPervogo.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,Nash Kinopokaz,NashKinopokaz.ru@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,Nashe,Nashe.ru@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,Nashe Lubimoe Kino,NasheLubimoeKino.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1897,6 +1920,7 @@ Russia,Patriot,Patriot.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/na
 Russia,Premialnoe,Premialnoe.ru@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,RU.TV,RUTV.ru@SD,RUTV.ru,https://iptv-epg.org/files/epg-ru.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Russia,Rodnoe Kino,RodnoeKino.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Russia,Russian MusicBox (576p),RussianMusicBox.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,Russkiy Bestseller,RusskiyBestseller.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,Russkiy Detektiv,RusskiyDetektiv.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,Russkiy Illusion,RusskiyIllusion.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1919,6 +1943,7 @@ Russia,Velvet. Golden Collection,VelvetGoldenCollection.ru@HD,,,NO_GUIDE_HIT,Aut
 Russia,Velvet. Scary,VelvetScary.ru@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,Velvet. Sovetskoe Kino,VelvetSovetskoeKino.ru@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,alpha Cinema,alphaCinema.ru@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Russia,o2tv (720p),o2tv.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,viju TV1000,vijuTV1000.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,viju TV1000 action,vijuTV1000action.ru@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Russia,viju TV1000 novella,vijuTV1000novella.ru@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1934,10 +1959,16 @@ Saudi Arabia,Mohammed Abdo,MohammedAbdo.sa@SD,,,NO_GUIDE_HIT,Auto-maintained; ve
 Saudi Arabia,Movies Action,MoviesAction.sa@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Saudi Arabia,Panorama FM,PanoramaFM.sa@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Saudi Arabia,Rabeh Saqer,RabehSaqer.sa@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Saudi Arabia,Rashid AlMajed (1080p),RashidAlMajed.sa@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Saudi Arabia,Rotana Cinema KSA,RotanaCinemaKSA.sa@SD,Rotana.Cinema.KSA.ae,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 Saudi Arabia,Rotana Khalijia,RotanaKhalijia.sa@SD,Rotana.Khalijia.ae,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 Saudi Arabia,Rotana Music,RotanaMusic.sa@SD,Rotana.Music.fr,https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Saudi Arabia,Tarab,Tarab.sa@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Serbia,DM Sat,DMSat.rs@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Serbia,RTS Muzika (576p),RTSMuzika.rs@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Serbia,TV Duga+ (480p) [Not 24/7],TVDugaPlus.rs@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Serbia,Top TV (Serbia) (1080p),TopTV.rs@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Serbia,ZICO TV,ZICOTV.rs@SD,Zico.TV.ch,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 Spain,AXN CEE Bulgary,AXNCEE.es@Bulgary,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Spain,AXN Movies (Spain),AXNMovies.es@SD,AXN.Movies.es,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 Spain,Activa TV,ActivaTV.es@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1949,6 +1980,8 @@ Spain,LiraTV,LiraTV.es@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name 
 Spain,Molahits TV,MolahitsTV.es@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Spain,Music TV Granada,MusicTVGranada.es@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Spain,MyTime Movie Network (Spain),MyTimeMovieNetwork.es@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Spain,Onda 15 TV (224p),Onda15TV.es@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Spain,Onda Valencia TV (720p),OndaValenciaTV.es@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Spain,POP World TV,POPWorldTV.es@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Spain,RTV Vida,RTVVida.es@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Spain,Rakuten TV Action Movies,RakutenTVActionMovies.es@Spain,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -2341,7 +2374,9 @@ United Kingdom,Clubbing TV UK,ClubbingTV.us@UK,,,NO_GUIDE_HIT,Auto-maintained; v
 United Kingdom,FMTV [ ],FMTV.uk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United Kingdom,MTV Classic,mtv.classic.gb,MTV.Classic.us2,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 United Kingdom,MovieSphere UK,custom.moviesphere-uk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-United Kingdom,Nolly Africa,NollyAfrica.uk@SD,NollyAfrica.uk,https://www.open-epg.com/files/unitedkingdom.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+United Kingdom,Nolly Africa,NollyAfrica.uk@SD,NollyAfrica.uk,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
+United Kingdom,That's 70s (720p),Thats70s.uk@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United Kingdom,That's 80s (720p),Thats80s.uk@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United Kingdom,Totalmusic 2000s,Totalmusic2000s.uk@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United Kingdom,Totalmusic 80s,Totalmusic80s.uk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United Kingdom,Totalmusic Concerts,TotalmusicConcerts.uk,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -2474,6 +2509,7 @@ United States,MovieSphere Gold WFXT,MovieSphereGold.us@WFXT,,,NO_GUIDE_HIT,Auto-
 United States,Movieplex,movieplex.us,MoviePlex.us,https://iptv-epg.org/files/epg-us.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 United States,Movies!,Movies.us@SD,Movies!.us,https://iptv-epg.org/files/epg-us.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 United States,Movies! KPVM-LD,Movies.us@KPVMLD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,NEW K-POP (1080p),NEWKPOP.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,NEW K.MOVIES,NEWKMOVIES.us@SD,USAJ30000122O,https://i.mjh.nz/SamsungTVPlus/us.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 United States,NOST,NOST.us@SD,NOST.us,https://iptv-epg.org/files/epg-us.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 United States,OuterSphere,OuterSphere.us@SD,USBD1200007FE,https://i.mjh.nz/SamsungTVPlus/us.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
@@ -2530,6 +2566,7 @@ United States,Pluto TV Romance,PlutoTVRomance.us@US,,,NO_GUIDE_HIT,Auto-maintain
 United States,Pluto TV Sci-Fi (United States),PlutoTVSciFi.us@US,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,Pluto TV Sci-Fi (United States) CA,PlutoTVSciFi.us@CA,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,Pluto TV Sci-Fi (United States) LatAm,PlutoTVSciFi.us@LatAm,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,Pluto TV Shows por Stingray (720p),PlutoTVShowsporStingray.us@BR,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,Pluto TV Spotlight,PlutoTVSpotlight.us@SD,PlutoTVSpotlight.us,https://iptv-epg.org/files/epg-us.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 United States,Pluto TV Staff Picks,PlutoTVStaffPicks.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,Pluto TV Terror,PlutoTVTerror.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -2548,6 +2585,7 @@ United States,Sony Canal Novelas,SonyCanalNovelas.us@SD,,,NO_GUIDE_HIT,Auto-main
 United States,Sony Movies,sony.us,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,Sony Movies (United States),SonyMovies.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,Sony Movies Latin America,SonyMoviesLatinAmerica.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,Spirit TV (720p) [Not 24/7],SpiritTV.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,Star Trek: Deep Space Nine,StarTrekDeepSpaceNine.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,Star Trek: The Next Generation (United States),StarTrekTheNextGeneration.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,Star Trek: Voyager (United States),StarTrekVoyager.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -2568,6 +2606,7 @@ United States,TVS Film Noir Network,TVSFilmNoirNetwork.us@SD,,,NO_GUIDE_HIT,Auto
 United States,TVS Music Network,TVSMusicNetwork.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,TVS Nostalgia Movies,TVSNostalgiaMovies.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,TVS Western Movie,TVSWesternMovie.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+United States,The Country Network (1080p),TheCountryNetwork.us@SD,TheCountryNetwork.us,https://iptv-epg.org/files/epg-us.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 United States,The Film Detective,TheFilmDetective.us@SD,TheFilmDetective.us,https://iptv-epg.org/files/epg-us.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 United States,The Wild Wild West (United States),TheWildWildWest.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,Turner Classic Movies,turnerclassicmovies.us,Turner.Classic.Movies.HD.us2,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
@@ -2575,6 +2614,7 @@ United States,USA Network,USANetwork.us@East,,,NO_GUIDE_HIT,Auto-maintained; ver
 United States,Universal Cinema,UniversalCinema.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,Universal Comedy,UniversalComedy.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,VH1,vh1.us,VH1.us,https://iptv-epg.org/files/epg-us.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+United States,Vallenato Internacional (720p) [Not 24/7],VallenatoInternacional.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,Vevo Latino,VevoLatino.us@SD,USBC3600015GF,https://i.mjh.nz/SamsungTVPlus/us.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 United States,Video Mix TV,VideoMixTV.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 United States,WVCU-LP,WVCULP.us@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -2594,4 +2634,5 @@ Vietnam,HTVC Movies,HTVCMovies.vn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambi
 Vietnam,ON Cine,ONCine.vn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Vietnam,ON Movies,ONMovies.vn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Vietnam,ON Music,ONMusic.vn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+Vietnam,Tra Vinh TV (1080p),TraVinhTV.vn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Vietnam,Vinh Long TV 3,VinhLongTV3.vn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.

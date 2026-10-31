@@ -4,7 +4,7 @@ Automatic corrections require repeated cross-source title and duration matches, 
 
 ## Detected corrections
 
-- **Epic Bharat** (EpicBharat.in@SD): source ID SWIFTTV_LIVECHANNEL_86 from https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml shifted by -5.5 hours after repeated cross-source agreement.
+- **BBC News** (BBCNews.uk): source ID BBCNews.ro from https://iptv-epg.org/files/epg-ro.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **Mezzo** (Mezzo.fr@SD): source ID Mezzo.ro from https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz shifted by +2 hours after repeated cross-source agreement.
 - **TLC (India)** (TLC.in@HD): source ID TLC.tr from https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **TLC (India)** (TLC.in@SD): source ID TLC.tr from https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz shifted by -24 hours after repeated cross-source agreement.
