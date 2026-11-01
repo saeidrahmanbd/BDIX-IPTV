@@ -1,34 +1,34 @@
 # Logo Provenance Review
 
-Generated: **2026-10-31T08:29:21+00:00**
+Generated: **2026-11-01T01:06:04+00:00**
 
 This report tracks source documentation, not visual correctness. A needs_review entry means the exact asset source is missing or ambiguous; it does not by itself prove the logo is wrong. generated_fallback means explicitly unofficial fallback artwork.
 Unattributed logos are **not provenance-passed**; they remain pending review. This status is separate from technical image integrity and the pre-publish safety gate.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **3602101f00a9ad15e65a0892743076a3c8fb52f5c135f1b288b318691497b8e4**
+- IPTV-Playlist.m3u SHA-256: **f0cb6668da556a3fb1ade5b33d0d5bcda66a9f5485eee0f181b201837a0602a3**
 - BDIX-Playlist.m3u SHA-256: **6e98537a07d9bb5f5ee818f86defff1357302adeaca270e0786a7185bcd33b2d**
-- International-Playlist.m3u SHA-256: **ff55ab74a403066cf3713a188d4867b65b1179db7fcfa6c0645955a0449081b3**
+- International-Playlist.m3u SHA-256: **cee4b739eaa039a5f617b2fdcfca785b2fb2fe18484bb850778a4f212f302267**
 
 ## Provenance status by playlist
 
 | Playlist | Official verified | Third-party verified | Unofficial fallback | Needs review |
 |---|---:|---:|---:|---:|
-| IPTV-Playlist.m3u | 0 | 26 | 0 | 1133 |
+| IPTV-Playlist.m3u | 0 | 26 | 0 | 1135 |
 | BDIX-Playlist.m3u | 0 | 2 | 0 | 129 |
-| International-Playlist.m3u | 0 | 923 | 0 | 2347 |
+| International-Playlist.m3u | 0 | 916 | 12 | 2391 |
 
 ## Overall provenance status
 
 - Status: **REVIEW REQUIRED**
-- Logos needing attribution review: **3609**
-- Unofficial fallback logos: **0**
+- Logos needing attribution review: **3655**
+- Unofficial fallback logos: **12**
 - needs_review is unresolved provenance, not proof that an image is incorrect; it must not be presented as a provenance pass.
 
 ## First items requiring source attribution
 
-Showing up to 40 of 3609 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
+Showing up to 40 of 3655 items. The complete inventory, including all status reasons and recorded source URLs, is in reports/logo-authenticity-manifest.json.
 
 | Playlist | Channel | tvg-id | Local asset | Why it needs review |
 |---|---|---|---|---|

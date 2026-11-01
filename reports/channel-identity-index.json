@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-31T08:29:20+00:00",
+  "generated": "2026-11-01T01:06:03+00:00",
   "channels": {
     "10tv": {
       "names": [
@@ -457,6 +457,20 @@
       ],
       "groups": [
         "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "amntv": {
+      "names": [
+        "AMN TV"
+      ],
+      "ids": [
+        "amntv.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -2527,8 +2541,8 @@
         "New Backup",
         "Sports"
       ],
-      "streams": 2,
-      "primary": 2,
+      "streams": 3,
+      "primary": 3,
       "backup": 0
     },
     "ddtamil": {

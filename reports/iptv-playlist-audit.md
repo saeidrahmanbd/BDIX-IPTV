@@ -1,14 +1,14 @@
 # IPTV Playlist Audit
-Generated: **2026-10-31T08:28:36.630333+00:00**
-Source playlist SHA-256: **3602101f00a9ad15e65a0892743076a3c8fb52f5c135f1b288b318691497b8e4**
+Generated: **2026-11-01T01:05:20.963823+00:00**
+Source playlist SHA-256: **f0cb6668da556a3fb1ade5b33d0d5bcda66a9f5485eee0f181b201837a0602a3**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1159**
-- Unique channel IDs: **749**
+- Playlist entries: **1161**
+- Unique channel IDs: **750**
 - IDs with multiple streams: **214**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -21,7 +21,7 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - Logo exceptions requiring repair: **0**
 - Missing logos in discovery queues (review only): **1**
 - External logo references (review only): **0**
-- Logo references checked: **1159**
+- Logo references checked: **1161**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **1**
 - Primary channel-number collisions: **0**
@@ -331,9 +331,10 @@ These diagnostics include canonical and review groups. Name/ID differences can b
 ### ddsaptagiri.in@sd (2 streams)
 - DD Saptagiri — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/26e915d6d12b4a06822c5e33c088ed56/index.m3u8
 - DD Saptagiri — Backup — https://cdn.pishow.tv/ott/live/22/master.m3u8
-### ddsports.in@sd (2 streams)
+### ddsports.in@sd (3 streams)
 - DD Sports — Sports — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8
 - DD Sports — New Backup — https://cdn.pishow.tv/ott/live/1161/master.m3u8
+- DD Sports — New Backup — https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index_3.m3u8
 ### ddtamil.in@sd (2 streams)
 - DD Tamil — Indian Entertainment — https://d2lk5u59tns74c.cloudfront.net/out/v1/abf46b14847e45499f4a47f3a9afe93d/index.m3u8
 - DD Tamil — Backup — https://cdn.pishow.tv/ott/live/1737/master.m3u8
@@ -954,7 +955,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1158**
+- Healthy/local references: **1160**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues
