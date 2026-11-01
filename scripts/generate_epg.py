@@ -11,6 +11,7 @@ import urllib.request
 from urllib.parse import urlparse
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
+from difflib import SequenceMatcher
 from pathlib import Path
 from official_epg_sources import (
     HUM_TV_SOURCE, HUM_TV_CHANNEL_ID, fetch_hum_tv_programmes,
@@ -192,9 +193,14 @@ PLACEHOLDER_TITLES = {
     "no program", "no programs", "no programme", "no programmes",
     "no schedule", "no schedule available", "not available",
     "program not available", "programme not available",
+    # Scheduling-system slot labels (no real programme information).
+    "slot", "commercial slot", "ad slot", "advertisement slot", "filler",
+    # "No schedule" markers emitted by non-English feeds.
+    "brak zaplanowanych emisji", "sin programación", "sin programacion",
+    "programación no disponible", "kein programm", "keine sendung",
 }
 GENERIC_TITLES |= PLACEHOLDER_TITLES
-SINGLE_SHOW_CHANNEL_IDS = {"Mythbusters.us", "AxMen.us", "StrawberryShortcake.us", "Teletubbies.uk"}
+SINGLE_SHOW_CHANNEL_IDS = {"Mythbusters.us", "AxMen.us", "StrawberryShortcake.us", "Teletubbies.uk", "WildEarth.za"}
 
 
 def fetch(url):
@@ -378,11 +384,47 @@ def channel_key(text):
     return re.sub(r"[^a-z0-9]", "", re.sub(r"\(.*?\)", "", (text or "").lower()))
 
 NAME_FILLER_MIN_SHARE = 0.8
+NAME_FILLER_MIN_SIMILARITY = 0.9
+_NAME_NOISE_SUFFIXES = ("channel", "network", "live", "tv", "hd", "sd")
 
 
-def repeats_channel_name(title, channel_name):
-    name = channel_key(channel_name)
-    return bool(name) and channel_key(title) == name
+def _core_name_key(key):
+    """Drop trailing generic words (tv, hd, channel...) so 'AmarBanglaTV' ~ 'AmarBangla'."""
+    changed = True
+    while changed:
+        changed = False
+        for suffix in _NAME_NOISE_SUFFIXES:
+            if key.endswith(suffix) and len(key) - len(suffix) >= 4:
+                key = key[: -len(suffix)]
+                changed = True
+    return key
+
+
+def _identity_stem(target):
+    """Name part of a tvg-id such as 'ZeeBanglaSonar.in@SD' -> 'ZeeBanglaSonar'."""
+    return re.split(r"[.@]", target or "", maxsplit=1)[0]
+
+
+def repeats_channel_name(title, channel_name, target=None):
+    """True when a programme title merely repeats the channel's own name.
+
+    The match is exact on the playlist name, or on the tvg-id's name part, or a
+    near-identical spelling (e.g. 'Amar Bangla TV' vs 'Aamar Bangla'). The caller
+    only applies this to channels where most rows repeat the name, so a genuine
+    programme that happens to share a channel's name is left alone.
+    """
+    title_key = channel_key(title)
+    if not title_key:
+        return False
+    candidates = {k for k in (channel_key(channel_name), channel_key(_identity_stem(target))) if k}
+    if title_key in candidates:
+        return True
+    core_title = _core_name_key(title_key)
+    for candidate in candidates:
+        core = _core_name_key(candidate)
+        if len(core) >= 4 and len(core_title) >= 4 and SequenceMatcher(None, core_title, core).ratio() >= NAME_FILLER_MIN_SIMILARITY:
+            return True
+    return False
 
 
 def name_filled_targets(by_target, channel_names):
@@ -393,7 +435,7 @@ def name_filled_targets(by_target, channel_names):
         if not records or target in SINGLE_SHOW_CHANNEL_IDS:
             continue
         name = channel_names.get(target, "")
-        same = sum(1 for r in records if repeats_channel_name(r["title"], name))
+        same = sum(1 for r in records if repeats_channel_name(r["title"], name, target))
         if same / len(records) >= NAME_FILLER_MIN_SHARE:
             filled.add(target)
     return filled
@@ -403,7 +445,7 @@ def filter_generic_candidates(by_target, channel_names=None):
     filled_targets = name_filled_targets(by_target, channel_names)
     named_targets = {
         target for target, records in by_target.items()
-        if any(title_score(record["title"]) > 0 and not (target in filled_targets and repeats_channel_name(record["title"], channel_names.get(target, ""))) for record in records)
+        if any(title_score(record["title"]) > 0 and not (target in filled_targets and repeats_channel_name(record["title"], channel_names.get(target, ""), target)) for record in records)
     }
     removed = 0
     for target, records in list(by_target.items()):
@@ -413,7 +455,7 @@ def filter_generic_candidates(by_target, channel_names=None):
             if title in ALWAYS_DROP_GENERIC_TITLES or is_slot_placeholder(title):
                 removed += 1
                 continue
-            if target in filled_targets and repeats_channel_name(record["title"], channel_names.get(target, "")):
+            if target in filled_targets and repeats_channel_name(record["title"], channel_names.get(target, ""), target):
                 removed += 1
                 continue
             if target in named_targets and title_score(record["title"]) <= 0:
@@ -573,6 +615,30 @@ def infer_source_offsets(records):
     return corrections
 
 
+SOURCE_OFFSET_PATTERN_MIN_IDS = 5
+
+
+def source_offset_patterns(events):
+    """Flag feeds whose channels are repeatedly corrected by the same large offset.
+
+    events: iterable of (source_label, target_id, delta). A feed with at least
+    SOURCE_OFFSET_PATTERN_MIN_IDS distinct channels shifted by the identical delta most
+    likely has a timezone problem for the whole feed. This only reports the pattern; it
+    never applies the shift to channels that lack cross-source evidence.
+    """
+    grouped = {}
+    for label, target, delta in events:
+        grouped.setdefault((label, delta), set()).add(target)
+    lines = []
+    for (label, delta), targets in sorted(grouped.items(), key=lambda item: (-len(item[1]), item[0][0])):
+        if len(targets) >= SOURCE_OFFSET_PATTERN_MIN_IDS:
+            lines.append(
+                "- **{}**: {} channels were corrected by the same {:+g} hours. This looks like a feed-wide timezone problem; "
+                "other channels from this feed without cross-source overlap may still be shifted and should be reviewed.".format(
+                    label, len(targets), delta.total_seconds() / 3600))
+    return lines
+
+
 def main():
     channels = playlist_channels()
     groups = playlist_groups()
@@ -706,6 +772,7 @@ def main():
         "",
     ]
     correction_count = 0
+    offset_events = []
     for target in sorted(mapped_targets):
         records = by_target.get(target, [])
         corrections = infer_source_offsets(records)
@@ -718,6 +785,7 @@ def main():
                     r["stop_dt"] = r["stop_dt"] + delta
                 r["source_offset"] = delta
             correction_count += 1
+            offset_events.append((source_label(source_urls[source_index]), target, delta))
             timing_audit.append("- **{}** ({}): source ID {} from {} shifted by {:+g} hours after repeated cross-source agreement.".format(channels[target], target, source_id, source_label(source_urls[source_index]), delta.total_seconds() / 3600))
         cleaned = clean_schedule(records)
         raw_count += len(records)
@@ -746,6 +814,9 @@ def main():
     print(f"EPG generated: {len(mapped_targets)} mapped channels, {final_count} programmes")
     if correction_count == 0:
         timing_audit.append("- No source offsets met the strict automatic-correction threshold.")
+    pattern_lines = source_offset_patterns(offset_events)
+    if pattern_lines:
+        timing_audit.extend(["", "## Feed-wide offset patterns", ""] + pattern_lines)
     timing_audit.extend(["", f"Detected source-ID corrections: **{correction_count}**", ""])
     Path("reports").mkdir(parents=True, exist_ok=True)
     Path("reports/epg-timing-audit.md").write_text("\n".join(timing_audit), encoding="utf-8")
