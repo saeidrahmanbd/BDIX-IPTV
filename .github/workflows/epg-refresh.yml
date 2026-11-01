@@ -26,7 +26,7 @@ on:
     types: [completed]
     branches: [main]
   schedule:
-    - cron: '17 4 * * *' # 10:17 Asia/Dhaka (GMT+6)
+    - cron: '17 7 * * *' # 13:17 Asia/Dhaka (UTC+6); safety refresh after the 10:17 discovery run
   workflow_dispatch:
 
 permissions:
