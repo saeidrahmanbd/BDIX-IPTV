@@ -27,6 +27,7 @@ on:
     branches: [main]
   schedule:
     - cron: '0 3 * * *' # 09:00 Asia/Dhaka (UTC+6); scheduled safety refresh after 08:00 discovery
+  # Keep manual dispatch available for post-change EPG quality verification.
   workflow_dispatch:
 
 permissions:
