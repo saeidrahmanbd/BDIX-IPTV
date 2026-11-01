@@ -5382,8 +5382,6 @@ https://eu1.servers10.com:8081/8214/index.m3u8
 https://ml-pull-hwc.myco.io/MixTV/hls/index.m3u8
 #EXTINF:-1 tvg-id="MNPlus.mn@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mn-plus.jpeg" tvg-country="MN" tvg-content="Movies" group-title="New Channels" tvg-name="MN+",MN+
 https://cdn4.skygo.mn/live/disk1/MNplus91/HLSv3-FTA/MNplus91.m3u8
-#EXTINF:-1 tvg-id="MNM.be@SD" channel-id="MNM.be@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/mnm-720p.png" tvg-country="BE" tvg-content="Music" group-title="New Channels" tvg-name="MNM",MNM
-https://live-radio-cf-vrt.akamaized.net/groupa/live/bac277a1-306d-44a0-8e2e-e5b9c07fa270/live.isml/.m3u8
 #EXTINF:-1 tvg-id="MontonesTV.do@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/montones-tv-af126eccd7.png" tvg-content="Music" group-title="New Channels" tvg-name="Montones TV",Montones TV
 https://lbgo.bozztv.com/ssh101/ssh101/montonestv1/playlist.m3u8
 #EXTINF:-1 tvg-id="MovieBox.mn@SD" channel-id="MovieBox.mn@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/moviebox-1080p.png" tvg-country="MN" tvg-content="Movies" group-title="New Channels" tvg-name="MovieBox",MovieBox

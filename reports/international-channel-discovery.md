@@ -1,12 +1,12 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-01 01:14 UTC
+- Last scan: 2026-11-01 01:17 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12087
-- Existing playlist records: 3313
+- Existing playlist records: 3308
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 0
-- Exact source URLs already in playlist: 2417
+- Exact source URLs already in playlist: 2407
 - Duplicate URLs within source feed: 1
 - New eligible source records after URL/policy filtering: 26
 - Country threshold: 5 unique primary identities for any retained dynamic country group.
@@ -16,8 +16,8 @@
 - The workflow probes newly discovered and queued stream URLs after candidate selection; inconclusive primary streams are retained for review and unverified backups are removed.
 - New primary channels: 24
 - New backup review entries: 2
-- Category migrations: 8
-- Existing discovery-queue entries removed: 5
+- Category migrations: 0
+- Existing discovery-queue entries removed: 1
 
 ## New primary channels
 
@@ -53,45 +53,33 @@
 
 ## Country Migrations
 
-- **Lingkar TV**: `New Channels` → `Indonesia`
-- **Music Information Channel**: `New Channels` → `Indonesia`
-- **My Cinema [ ]**: `New Channels` → `Indonesia`
-- **Online TV Nusantara (720p) [Not 24/7]**: `New Channels` → `Indonesia`
-- **Lingkar TV**: `Indonesia` → `New Channels`
-- **Music Information Channel**: `Indonesia` → `New Channels`
-- **My Cinema [ ]**: `Indonesia` → `New Channels`
-- **Online TV Nusantara (720p) [Not 24/7]**: `Indonesia` → `New Channels`
 
 ## Existing discovery-queue entries removed
 
-- **AXN Asia Indonesia** — `New Channels` — general entertainment is not a dedicated Movie/Music channel
-- **AXN Asia Taiwan** — `New Channels` — general entertainment is not a dedicated Movie/Music channel
-- **Video Tour Channel** — `New Channels` — general entertainment is not a dedicated Movie/Music channel
-- **VIP TV** — `New Channels` — general entertainment is not a dedicated Movie/Music channel
-- **Vos y TV** — `New Channels` — general entertainment is not a dedicated Movie/Music channel
+- **MNM** — `New Channels` — test/VOD/non-TV name
 
 ## Rejections
 
 - TV series channel is not a dedicated Movie/Music channel: 8
 - ambiguous Movie/Music classification: 2
 - documentary/wildlife channel is prohibited: 170
-- general entertainment is not a dedicated Movie/Music channel: 48
+- general entertainment is not a dedicated Movie/Music channel: 55
 - kids channel is prohibited: 252
 - news channel is prohibited: 1062
 - non-real/test channel: 3
 - religious channel is prohibited: 786
 - source category is not Movies or Music: 6665
 - sports channel is prohibited: 235
-- test/VOD/non-TV name: 287
+- test/VOD/non-TV name: 290
 - unsafe or tokenized URL: 125
 
 ## Stream verification
 
-- Run timestamp: 2026-11-01T01:15:06+00:00
+- Run timestamp: 2026-11-01T01:17:51+00:00
 - Mode: international
-- New entries and discovery queues probed: 177
+- New entries and discovery queues probed: 176
 - Verified live media responses: 112
-- Primary entries retained but not conclusively verified: 39
+- Primary entries retained but not conclusively verified: 38
 - Dead/invalid entries and unverified backups removed: 26
 - Duplicate discovery entries removed: 0
 - Country-group rows consolidated after stream probing: 0
@@ -138,7 +126,6 @@
 - Removed LaPuraCrema Television from New Channels — HTTP 404.
 - Retained LaXitosa Panama [ ] for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Marina TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained MNM for review — stream could not be conclusively verified (HTTP 400; not conclusive).
 - Retained Movify Kino for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Music [ ] for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Music Information Channel for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
@@ -167,9 +154,9 @@
 
 ## Final validation
 
-- Run timestamp: 2026-11-01T01:15:06+00:00
+- Run timestamp: 2026-11-01T01:17:51+00:00
 - Validation status: PASS
-- M3U entries parsed: 3308
+- M3U entries parsed: 3307
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - New Channels/New Backup/Backup ordering: passed
