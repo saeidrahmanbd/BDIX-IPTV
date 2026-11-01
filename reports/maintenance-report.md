@@ -1,14 +1,14 @@
 # IPTV Maintenance Report
 
-_Generated: **2026-11-01 11:44 UTC**_
+_Generated: **2026-11-01 12:26 UTC**_
 
-Source playlist SHA-256: **97a7b8af8401226343356911e2ff5b275c8fef45eb1f955ef28d38f2301583b6**
+Source playlist SHA-256: **d3085d33a0d6e95f27d2d1bbe6acd87a18d55ee5ff1da89ecea62cffbe62bccd**
 
 | Item | Result |
 |---|---:|
-| Current playlist streams | **1178** |
-| Active channel identities | **643** |
-| Backup stream entries | **315** |
+| Current playlist streams | **1167** |
+| Active channel identities | **641** |
+| Backup stream entries | **340** |
 | EPG IDs audited | **PENDING — guide not current** |
 | Logo exceptions | **STALE / UNKNOWN** |
 | EPG mapping | **PENDING — guide not current** |

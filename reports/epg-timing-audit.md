@@ -4,6 +4,7 @@ Automatic corrections require repeated cross-source title and duration matches, 
 
 ## Detected corrections
 
+- **Balle Balle** (BalleBalle.in@SD): source ID BalleBalle.in (src09) from M3U4U XMLTV (private Actions secret) shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Arun Prabha** (DDArunPrabha.in@SD): source ID DDArunPrabha.in (src09) from M3U4U XMLTV (private Actions secret) shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Bangla** (DDBangla.in@SD): source ID DDBangla.in (src09) from M3U4U XMLTV (private Actions secret) shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Chandana** (DDChandana.in@SD): source ID DDChandana.in (src09) from M3U4U XMLTV (private Actions secret) shifted by -5.5 hours after repeated cross-source agreement.
@@ -25,4 +26,4 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **TV9 Bangla** (TV9Bangla.in): source ID SWIFTTV_LIVECHANNEL_31 from https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml shifted by -5.5 hours after repeated cross-source agreement.
 - **Sun Bangla** (custom.sun-bangla-k1d4w): source ID SunBangla.in (src09) from M3U4U XMLTV (private Actions secret) shifted by -5.5 hours after repeated cross-source agreement.
 
-Detected source-ID corrections: **20**
+Detected source-ID corrections: **21**

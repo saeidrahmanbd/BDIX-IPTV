@@ -1,17 +1,17 @@
 # Update Report
 
-_Last generated: **2026-11-01 11:44 UTC**_
+_Last generated: **2026-11-01 12:26 UTC**_
 
-Source playlist SHA-256: **97a7b8af8401226343356911e2ff5b275c8fef45eb1f955ef28d38f2301583b6**
+Source playlist SHA-256: **d3085d33a0d6e95f27d2d1bbe6acd87a18d55ee5ff1da89ecea62cffbe62bccd**
 
 | Metric | Current |
 |---|---:|
-| Streams | **1178** |
-| Active Channel Identities | **643** |
-| Active Primary Streams | **643** |
+| Streams | **1167** |
+| Active Channel Identities | **641** |
+| Active Primary Streams | **647** |
 | Bangladesh | **61** |
-| India | **326** |
-| Backup Stream Entries | **315** |
+| India | **328** |
+| Backup Stream Entries | **340** |
 | IPTV Local Logos | **STALE** |
 | IPTV EPG Programme Coverage | **PENDING** |
 | IPTV EPG Mapping | **PENDING** |
@@ -63,7 +63,7 @@ Source playlist SHA-256: **97a7b8af8401226343356911e2ff5b275c8fef45eb1f955ef28d3
 | Report | Last generated | Input freshness |
 |---|---|---|
 | Playlist audit | **2026-11-01T01:11:34.614764+00:00** | **STALE** |
-| EPG coverage / three-playlist inventory | **2026-11-01T11:44:16+00:00** | **PENDING — guide missing or freshness not PASS** |
+| EPG coverage / three-playlist inventory | **2026-11-01T12:26:12+00:00** | **PENDING — guide missing or freshness not PASS** |
 | Stream health | **2026-11-01T01:12:25+00:00** | **STALE** |
 | Pre-publish gate | **2026-11-01T01:11:35+00:00** | **STALE** |
 
