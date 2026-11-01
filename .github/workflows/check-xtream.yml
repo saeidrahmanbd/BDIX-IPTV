@@ -9,6 +9,7 @@ on:
       - "xtream-bdix/**"
       - "IPTV-Playlist.m3u"
       - "BDIX-Playlist.m3u"
+      - "epg/epg.xml"
   schedule:
     - cron: "7 1 * * *" # 07:07 Asia/Dhaka (UTC+6); avoid top-of-hour queueing
   workflow_dispatch:
