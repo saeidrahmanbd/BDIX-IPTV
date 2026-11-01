@@ -123,7 +123,7 @@ def process(path):
   a=attrs(r[0]); g=a.get('group-title','').strip()
   cid=(a.get('tvg-id') or a.get('channel-id') or '').strip().casefold()
   name=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip().casefold()
-  if name=='channel s uk' and (g not in {'Bangladesh','Backup'} or cid!='channels.uk@679aa9'): errors.append('Channel S UK must retain its canonical identity in Bangladesh/Backup')
+  if name=='channel s uk' and (g not in {'Bangladesh','Backup','Not Playing'} or cid!='channels.uk@679aa9'): errors.append('Channel S UK must retain its canonical identity in Bangladesh/Backup/Not Playing')
   if cid=='ultimatetv.in@sd' and g not in {'Indian Music','Backup'}: errors.append('Ultimate TV must be Indian Music primary or Backup alternate')
  if errors:
   raise SystemExit(f'{path}: '+ '; '.join(errors))
