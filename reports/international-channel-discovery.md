@@ -1,23 +1,23 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-01 01:13 UTC
+- Last scan: 2026-11-01 01:14 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12087
-- Existing playlist records: 3306
+- Existing playlist records: 3313
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 0
-- Exact source URLs already in playlist: 2409
+- Exact source URLs already in playlist: 2417
 - Duplicate URLs within source feed: 1
-- New eligible source records after URL/policy filtering: 37
+- New eligible source records after URL/policy filtering: 26
 - Country threshold: 5 unique primary identities for any retained dynamic country group.
 - Automatic discovery is Movie/Music only for every country; News, Sports, Kids, Documentary/Wildlife, Religious, General/Entertainment and all other categories are rejected.
 - New alternate streams are staged in New Backup; curated alternates remain in Backup.
 - Only discovery queues are filtered; unrelated entries are preserved, with the five-channel threshold applied to dynamic country groups.
 - The workflow probes newly discovered and queued stream URLs after candidate selection; inconclusive primary streams are retained for review and unverified backups are removed.
-- New primary channels: 35
+- New primary channels: 24
 - New backup review entries: 2
-- Category migrations: 5
-- Existing discovery-queue entries removed: 0
+- Category migrations: 8
+- Existing discovery-queue entries removed: 5
 
 ## New primary channels
 
@@ -27,7 +27,6 @@
 - **D Music (1280p) [Not 24/7]** — New Channels — KH — http://43.252.18.195:5080/live/streams/WCVNews.playlist.m3u8
 - **DanceTV EDM Mainstage (1080p)** — Estonia — EE — https://mbit1.worldcast.tv/dancetelevisionseven/multibit.m3u8
 - **DanceTV Minimal Tech (1080p)** — Estonia — EE — https://mbit1.worldcast.tv/dancetelevisionsix/multibit.m3u8
-- **Dega TV (720p) [Not 24/7]** — United States — US — https://59d39900ebfb8.streamlock.net/saintlouisltv/saintlouisltv/playlist.m3u8
 - **Farra Play (576p)** — New Channels — ZZ — https://stream.farra.com.py/live/farra_low.m3u8
 - **Galactica TV** — Peru — PE — https://stream.neux.site/memfs/e3f59eec-6b93-45e1-a2ab-c82381c2a9ec.m3u8
 - **GMTV (1080p)** — United States — US — https://livechannel.mdc.akamaized.net/stitch/livechannel/1341/master1400000.m3u8;session=live_stream_1341
@@ -36,26 +35,16 @@
 - **Jazz TV (1080p) [Not 24/7]** — North Macedonia — MK — https://stream.nasatv.com.mk/jazztv/hls/jazztv_live.m3u8
 - **KandelaTV (480p)** — New Channels — ZZ — https://streamtv.intervenhosting.net:3718/live/kandelamedioslive.m3u8
 - **La Hermandad Salsera (1080p) [Not 24/7]** — Colombia — CO — https://streamlov.alsolnet.com/hermandadsalsera/live/playlist.m3u8
-- **La Que Buena Atlanta** — United States — US — https://streamyes.alsolnet.com/quebuenaatlanta/live/index.m3u8
 - **La Voz del Tropico (480p) [Geo-blocked]** — New Channels — ZZ — https://ss2.tvrdomi.com:1936/lavozdeltropico/lavozdeltropico/playlist.m3u8
 - **LaPuraCrema Television** — New Channels — ZZ — https://streamlov.alsolnet.com/lapuracrema/live/playlist.m3u8
-- **New Channel (480p)** — Canada — CA — https://vodcdn.bamboo-cloud.com/livehls/6ab2104508fd5ee36702e3d4/master.m3u8
-- **Online TV Nusantara (720p) [Not 24/7]** — Indonesia — ID — https://5bf7b725107e5.streamlock.net/onlinetvnusantara/onlinetvnusantara/playlist.m3u8
+- **Online TV Nusantara (720p) [Not 24/7]** — New Channels — ID — https://5bf7b725107e5.streamlock.net/onlinetvnusantara/onlinetvnusantara/playlist.m3u8
 - **Oxigeno TV (360p) [Not 24/7]** — New Channels — ZZ — https://vcp.myplaytv.com/oxigenotv/oxigenotv/playlist.m3u8
-- **Pequeradio (720p) [Not 24/7]** — Spain — ES — https://canadaremar2.todostreaming.es/live/peque-pequetv.m3u8
 - **Pluto TV Karaoke por Stingray (720p)** — United States — US — https://jmp2.uk/plu-604b99d633a72b00078e05ad.m3u8
 - **Pluto TV Karaoke por Stingray LatAm (720p)** — United States — US — https://jmp2.uk/plu-5f85cf621d6d2200079f1de0.m3u8
 - **Prattel TV (720p)** — Peru — PE — https://183.bozztv.com/ssh101/ssh101/pratteltvperu/playlist.m3u8
 - **Rock TV (North Macedonia) (1080p) [Not 24/7]** — North Macedonia — MK — https://stream.nasatv.com.mk/rocktv/hls/rocktv_live.m3u8
 - **Totovision** — New Channels — ZZ — https://cdn.streamhispanatv.net:3652/live/totovisiongtlive.m3u8
-- **XITE Classic Country (720p)** — Netherlands — NL — https://jmp2.uk/plu-623b92a2ccefed0007b1db48.m3u8
-- **XITE Reggae Vibes (1080p)** — Netherlands — NL — https://dw2m7yrngfg8c.cloudfront.net/XITE_Reggae_Vibes.m3u8
-- **YleX (720p)** — Finland — FI — https://ylestudiolive.akamaized.net/hls/live/2007826/ylestudiolive-YleX/master.m3u8
-- **Yo! MTV (1080p)** — United States — US — https://jmp2.uk/plu-5d14fc31252d35decbc4080b.m3u8
-- **Yo! MTV CA (1080p)** — United States — US — https://jmp2.uk/plu-654102ed770cf1000866c307.m3u8
 - **ZFM Zoetermeer TV (720p)** — Netherlands — NL — https://zfmzoetermeer.nl/live/master.m3u8
-- **Zo'r TV (576p)** — Uzbekistan — UZ — https://stream8.cinerama.uz/1016/tracks-v1a1/mono.m3u8
-- **Zona Music TV (1080p)** — New Channels — ZZ — https://acceso.radiosportstv.online:3022/stream/play.m3u8
 
 ## Backup alternates
 
@@ -64,59 +53,62 @@
 
 ## Country Migrations
 
-- **AXN Asia Indonesia**: `New Channels` → `Indonesia`
 - **Lingkar TV**: `New Channels` → `Indonesia`
 - **Music Information Channel**: `New Channels` → `Indonesia`
 - **My Cinema [ ]**: `New Channels` → `Indonesia`
 - **Online TV Nusantara (720p) [Not 24/7]**: `New Channels` → `Indonesia`
+- **Lingkar TV**: `Indonesia` → `New Channels`
+- **Music Information Channel**: `Indonesia` → `New Channels`
+- **My Cinema [ ]**: `Indonesia` → `New Channels`
+- **Online TV Nusantara (720p) [Not 24/7]**: `Indonesia` → `New Channels`
 
 ## Existing discovery-queue entries removed
 
+- **AXN Asia Indonesia** — `New Channels` — general entertainment is not a dedicated Movie/Music channel
+- **AXN Asia Taiwan** — `New Channels` — general entertainment is not a dedicated Movie/Music channel
+- **Video Tour Channel** — `New Channels` — general entertainment is not a dedicated Movie/Music channel
+- **VIP TV** — `New Channels` — general entertainment is not a dedicated Movie/Music channel
+- **Vos y TV** — `New Channels` — general entertainment is not a dedicated Movie/Music channel
 
 ## Rejections
 
 - TV series channel is not a dedicated Movie/Music channel: 8
 - ambiguous Movie/Music classification: 2
 - documentary/wildlife channel is prohibited: 170
-- general entertainment is not a dedicated Movie/Music channel: 37
-- kids channel is prohibited: 253
+- general entertainment is not a dedicated Movie/Music channel: 48
+- kids channel is prohibited: 252
 - news channel is prohibited: 1062
+- non-real/test channel: 3
 - religious channel is prohibited: 786
-- source category is not Movies or Music: 6677
+- source category is not Movies or Music: 6665
 - sports channel is prohibited: 235
-- test/VOD/non-TV name: 285
+- test/VOD/non-TV name: 287
 - unsafe or tokenized URL: 125
 
 ## Stream verification
 
-- Run timestamp: 2026-11-01T01:13:29+00:00
+- Run timestamp: 2026-11-01T01:15:06+00:00
 - Mode: international
-- New entries and discovery queues probed: 188
-- Verified live media responses: 119
+- New entries and discovery queues probed: 177
+- Verified live media responses: 112
 - Primary entries retained but not conclusively verified: 39
-- Dead/invalid entries and unverified backups removed: 30
+- Dead/invalid entries and unverified backups removed: 26
 - Duplicate discovery entries removed: 0
-- Country-group rows consolidated after stream probing: 4
+- Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
 - Logo references cleared because no authentic local asset was found: 0
 
 ### Stream probe details
 - Removed ATN Music (360p) from Bangladesh — HTTP 404.
-- Removed New Channel (480p) from Canada — HTTP 404.
 - Removed La Hermandad Salsera (1080p) [Not 24/7] from Colombia — HTTP 404.
 - Removed DanceTV EDM Mainstage (1080p) from Estonia — HTTP 404.
 - Removed DanceTV Minimal Tech (1080p) from Estonia — HTTP 404.
-- Retained YleX (720p) for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Removed Online TV Nusantara (720p) [Not 24/7] from Indonesia — HTTP 404.
 - Removed ZFM Zoetermeer TV (720p) from Netherlands — HTTP 404.
 - Removed Jazz TV (1080p) [Not 24/7] from North Macedonia — HTTP 404.
 - Removed Rock TV (North Macedonia) (1080p) [Not 24/7] from North Macedonia — HTTP 404.
 - Removed Galactica TV from Peru — HTTP 404.
 - Removed Prattel TV (720p) from Peru — HTTP 404.
-- Removed Pequeradio (720p) [Not 24/7] from Spain — HTTP 404.
-- Removed Dega TV (720p) [Not 24/7] from United States — HTTP 404.
 - Removed GMTV (1080p) from United States — HTTP 404.
-- Removed La Que Buena Atlanta from United States — HTTP 404.
 - Removed Pluto TV Karaoke por Stingray (720p) from United States — HTTP 404.
 - Removed Pluto TV Karaoke por Stingray LatAm (720p) from United States — HTTP 404.
 - Retained 312 Kino for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
@@ -149,8 +141,11 @@
 - Retained MNM for review — stream could not be conclusively verified (HTTP 400; not conclusive).
 - Retained Movify Kino for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Music [ ] for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Music Information Channel for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained MuzzOne for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained My Cinema [ ] for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained NogoumFMTV for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Removed Online TV Nusantara (720p) [Not 24/7] from New Channels — HTTP 404.
 - Retained OSN Movies Action for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed Oxigeno TV (360p) [Not 24/7] from New Channels — HTTP 404.
 - Retained Pantalla Clasica EC [ ] for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
@@ -166,20 +161,15 @@
 - Retained Tropical Moon Cumbia TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained TV Arberia 4 Muzike for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained TV Arberia Retro Hits for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
-- Retained VIP TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Zona Music TV (1080p) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Removed That's 70s from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Zee Action from New Backup — HTTP 404.
-- Moved AXN Asia Indonesia from Indonesia to New Channels after stream-probe removals and the five-channel threshold check.
-- Moved Lingkar TV from Indonesia to New Channels after stream-probe removals and the five-channel threshold check.
-- Moved Music Information Channel from Indonesia to New Channels after stream-probe removals and the five-channel threshold check.
-- Moved My Cinema [ ] from Indonesia to New Channels after stream-probe removals and the five-channel threshold check.
 
 ## Final validation
 
-- Run timestamp: 2026-11-01T01:13:29+00:00
+- Run timestamp: 2026-11-01T01:15:06+00:00
 - Validation status: PASS
-- M3U entries parsed: 3313
+- M3U entries parsed: 3308
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - New Channels/New Backup/Backup ordering: passed

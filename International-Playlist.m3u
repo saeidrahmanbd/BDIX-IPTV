@@ -5230,10 +5230,6 @@ http://stream.mcquack.net/123/index.m3u8
 https://master.tucableip.com/audiokisstv/index.m3u8
 #EXTINF:-1 tvg-id="AuroraMediaFilms.gt@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aurora-media-films-720p.png" tvg-content="Movies" group-title="New Channels" tvg-name="Aurora Media Films",Aurora Media Films
 https://cdn.streamhispanatv.net:3417/live/auroramflive.m3u8
-#EXTINF:-1 tvg-id="AXNAsia.sg@Indonesia" channel-id="AXNAsia.sg@Indonesia" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/axn-asia-indonesia.png" tvg-country="ID" tvg-content="Movies" group-title="New Channels" tvg-name="AXN Asia Indonesia",AXN Asia Indonesia
-http://202.150.165.66:8088/play/301-AXN/index.m3u8
-#EXTINF:-1 tvg-id="AXNAsia.sg@Taiwan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/axn-asia-taiwan-1080p.png" tvg-country="TW" tvg-content="Movies" group-title="New Channels" tvg-name="AXN Asia Taiwan",AXN Asia Taiwan
-http://125.227.210.55:4050/VideoInput/play.ts
 #EXTINF:-1 tvg-id="BOKTV.za@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/boktv-f08b6a0f7b.png" tvg-country="ZA" tvg-content="Music" group-title="New Channels" tvg-name="BOKTV",BOKTV
 https://livestream2.bokradio.co.za/hls/Bok5c.m3u8
 #EXTINF:-1 tvg-id="Boreal.do@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/boreal-cd9844f465.png" tvg-content="Movies" group-title="New Channels" tvg-name="Boreal",Boreal
@@ -5504,16 +5500,10 @@ https://59ef525c24caa.streamlock.net/tvurbano/tvurbano/playlist.m3u8
 https://sincerecloud.stream/loadbalancer/public/J9EmQQGf.m3u8
 #EXTINF:-1 tvg-id="VenusMedia.py@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/venus-media-45f5ee4041.png" tvg-content="Music" group-title="New Channels" tvg-name="Venus Media",Venus Media
 https://tigocloud.desdeparaguay.net/venusmedia/venusmedia/playlist.m3u8
-#EXTINF:-1 tvg-id="VideoTourChannel.cr@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/video-tour-channel-6285619dfa.png" tvg-content="Music" group-title="New Channels" tvg-name="Video Tour Channel",Video Tour Channel
-https://59ef525c24caa.streamlock.net/videotour/videotour/playlist.m3u8
 #EXTINF:-1 tvg-id="VintageMusic.cr@SD" channel-id="VintageMusic.cr@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/vintage-music-720p.jpg" tvg-content="Music" group-title="New Channels" tvg-name="Vintage Music",Vintage Music
 https://59ef525c24caa.streamlock.net/vmtv/tvvintage/playlist.m3u8
-#EXTINF:-1 tvg-id="VIPTV.aw@SD" channel-id="VIPTV.aw@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/vip-tv-720p.png" tvg-content="Music" group-title="New Channels" tvg-name="VIP TV",VIP TV
-https://ed5ov1.live.opencaster.com/bkyqeDgfaukC/index.m3u8
 #EXTINF:-1 tvg-id="VMLatino.cr@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vm-latino-945653cc05.png" tvg-content="Music" group-title="New Channels" tvg-name="VM Latino",VM Latino
 http://45.163.139.42:8000/play/a03d/index.m3u8
-#EXTINF:-1 tvg-id="VosyTV.ec@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vos-y-tv-d82c272b3d.png" tvg-content="Music" group-title="New Channels" tvg-name="Vos y TV",Vos y TV
-https://cloud37.ecuatel.com/vostv/live/manifest.m3u8
 #EXTINF:-1 tvg-id="YesMoviesAction.il@SD" channel-id="YesMoviesAction.il@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/yes-movies-action-1080p.png" tvg-country="IL" tvg-content="Movies" group-title="New Channels" tvg-name="Yes Movies Action",Yes Movies Action
 http://stream.mcquack.net/380/index.m3u8
 #EXTINF:-1 tvg-id="ZonaMusicTV.cr@SD" tvg-name="Zona Music TV (1080p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/zona-music-tv-1080p.png" channel-id="ZonaMusicTV.cr@SD" group-title="New Channels" tvg-content="Music",Zona Music TV (1080p)
