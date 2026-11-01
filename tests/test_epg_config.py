@@ -286,6 +286,12 @@ class EpgConfigTests(unittest.TestCase):
         self.assertIn("# 10:17 Asia/Dhaka (GMT+6)", workflow)
 
 
+    def test_epg_refresh_does_not_cancel_active_generation(self):
+        workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
+        self.assertIn("cancel-in-progress: false", workflow)
+        self.assertIn("Skip superseded queued EPG refresh", workflow)
+
+
 class BangladeshRetentionTests(unittest.TestCase):
     @staticmethod
     def helper():
