@@ -49,6 +49,8 @@ class EpgConfigTests(unittest.TestCase):
             "https://iptv-epg.org/files/epg-in.xml.gz",
             "https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml",
             "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
+            "https://m3u-edit.com/epg-source.php?file=IN1.xml.gz",
+            "https://m3u-edit.com/epg-source.php?file=IN4.xml.gz",
         ]
         for source in expected:
             self.assertIn(source, literal(COV, "SOURCES"))
@@ -67,6 +69,8 @@ class EpgConfigTests(unittest.TestCase):
             "https://www.open-epg.com/files/india.xml.gz",
             "https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml",
             "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
+            "https://m3u-edit.com/epg-source.php?file=IN1.xml.gz",
+            "https://m3u-edit.com/epg-source.php?file=IN4.xml.gz",
         ]
         for source in discovery_expected:
             self.assertIn(source, discovery)
