@@ -1,7 +1,7 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-01T01:06:03+00:00**
-IPTV-Playlist.m3u SHA-256: **f0cb6668da556a3fb1ade5b33d0d5bcda66a9f5485eee0f181b201837a0602a3**
+Generated: **2026-11-01T01:12:25+00:00**
+IPTV-Playlist.m3u SHA-256: **d9faa0bd18a7e337a947e992e486b256c8fc0eca1c451f59668ea256e0a0d5fd**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
@@ -125,6 +125,21 @@ These streams are not automatically removed. URL credentials, user information a
 | Islamic TV | Religious | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/islamic_tv/index.m3u8` |
 | Medina Live | Religious | credential-bearing route pattern (values redacted) | `https://cdn-globecast.akamaized.net/live/REDACTED/REDACTED/hls_roku/index.m3u8` |
 | Bahrain Sports 2 | Sports | credential-bearing route pattern (values redacted) | `https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8` |
+| Boishakhi TV | Not Playing | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/boishakhi-tv-2/index.m3u8` |
+| Colors Cineplex [UK] | Not Playing | dynamic/proxy endpoint | `https://homair-tv-production.up.railway.app/api/play/COLORS%20CINEPLEX%20HD.m3u8` |
+| DD Bihar | Not Playing | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/35/master.m3u8` |
+| Desh TV | Not Playing | dynamic/proxy endpoint | `https://homair-tv-production.up.railway.app/api/play/Desh%20TV.m3u8` |
+| Manoranjan Grand | Not Playing | dynamic/proxy endpoint | `https://homair-tv-production.up.railway.app/api/play/Manoranjan%20Grand.m3u8` |
+| NTV | Not Playing | credential-bearing route pattern (values redacted) | `https://stream.logichost.in/NTV/live/chunklist_w1420234415.m3u8` |
+| Sony Max 1 | Not Playing | credential-bearing route pattern (values redacted) | `http://27.116.22.53:5001/live/3418.m3u8` |
+| Star Bharat | Not Playing | dynamic/proxy endpoint | `https://homair-tv-production.up.railway.app/api/play/STAR%20BHARAT%20HD.m3u8` |
+| Star Gold | Not Playing | dynamic/proxy endpoint | `https://homair-tv-production.up.railway.app/api/play/STAR%20GOLD%20HD.m3u8` |
+| Star Gold Select | Not Playing | dynamic/proxy endpoint | `https://homair-tv-production.up.railway.app/api/play/STAR%20GOLD%20SEL%20HD.m3u8` |
+| Star Utsav | Not Playing | dynamic/proxy endpoint | `https://homair-tv-production.up.railway.app/api/play/Star%20Utsav.m3u8` |
+| Star Utsav Movies | Not Playing | dynamic/proxy endpoint | `https://homair-tv-production.up.railway.app/api/play/Star%20Utsav%20Movies.m3u8` |
+| Sun Gemini | Not Playing | credential-bearing route pattern (values redacted) | `http://ptuf.ridsys.in/riptv/live/GEMINI_TV/index.m3u8` |
+| Suriyan TV | Not Playing | credential-bearing route pattern (values redacted) | `https://stream.sscloud7.com/live/suriyantv/index.m3u8` |
+| Swantham | Not Playing | credential-bearing route pattern (values redacted) | `http://cloud.logichost.in:1935/SWANTHAM/live/index.m3u8` |
 | Discovery Science | New Channels | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/discovery_science_abr/index.m3u8` |
 | Discovery Turbo (India) | New Channels | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/discovery_turbo_abr/index.m3u8` |
 | Eurosport | New Channels | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/euro_sports_hd_abr/index.m3u8` |
@@ -248,18 +263,3 @@ These streams are not automatically removed. URL credentials, user information a
 | Zee Cinema | Backup | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/zee_cinema_hd_abr/index.m3u8` |
 | Zee Tamil | Backup | credential-bearing route pattern (values redacted) | `https://d2o8pibksxtln6.cloudfront.net/live/REDACTED/REDACTED/hls/Zee_Tamil_HD.m3u8` |
 | Zee TV | Backup | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/zee_tv_hd_abr/index.m3u8` |
-| Boishakhi TV | Not Playing | dynamic/proxy endpoint | `https://iptvlive.ahmed-bd-org.workers.dev/boishakhi-tv-2/index.m3u8` |
-| Colors Cineplex [UK] | Not Playing | dynamic/proxy endpoint | `https://homair-tv-production.up.railway.app/api/play/COLORS%20CINEPLEX%20HD.m3u8` |
-| DD Bihar | Not Playing | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/35/master.m3u8` |
-| Desh TV | Not Playing | dynamic/proxy endpoint | `https://homair-tv-production.up.railway.app/api/play/Desh%20TV.m3u8` |
-| Manoranjan Grand | Not Playing | dynamic/proxy endpoint | `https://homair-tv-production.up.railway.app/api/play/Manoranjan%20Grand.m3u8` |
-| NTV | Not Playing | credential-bearing route pattern (values redacted) | `https://stream.logichost.in/NTV/live/chunklist_w1420234415.m3u8` |
-| Sony Max 1 | Not Playing | credential-bearing route pattern (values redacted) | `http://27.116.22.53:5001/live/3418.m3u8` |
-| Star Bharat | Not Playing | dynamic/proxy endpoint | `https://homair-tv-production.up.railway.app/api/play/STAR%20BHARAT%20HD.m3u8` |
-| Star Gold | Not Playing | dynamic/proxy endpoint | `https://homair-tv-production.up.railway.app/api/play/STAR%20GOLD%20HD.m3u8` |
-| Star Gold Select | Not Playing | dynamic/proxy endpoint | `https://homair-tv-production.up.railway.app/api/play/STAR%20GOLD%20SEL%20HD.m3u8` |
-| Star Utsav | Not Playing | dynamic/proxy endpoint | `https://homair-tv-production.up.railway.app/api/play/Star%20Utsav.m3u8` |
-| Star Utsav Movies | Not Playing | dynamic/proxy endpoint | `https://homair-tv-production.up.railway.app/api/play/Star%20Utsav%20Movies.m3u8` |
-| Sun Gemini | Not Playing | credential-bearing route pattern (values redacted) | `http://ptuf.ridsys.in/riptv/live/GEMINI_TV/index.m3u8` |
-| Suriyan TV | Not Playing | credential-bearing route pattern (values redacted) | `https://stream.sscloud7.com/live/suriyantv/index.m3u8` |
-| Swantham | Not Playing | credential-bearing route pattern (values redacted) | `http://cloud.logichost.in:1935/SWANTHAM/live/index.m3u8` |
