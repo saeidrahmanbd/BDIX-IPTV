@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-01T02:17:12+00:00**
+Generated: **2026-11-01T08:38:13+00:00**
 
-- Active Bangladesh playlist identities: **93**
+- Active Bangladesh playlist identities: **88**
 - Identities with a retained source mapping: **3**
-- Identities with usable current/future schedules: **0**
-- Identities without a source mapping: **90**
+- Identities with usable current/future schedules: **2**
+- Identities without a source mapping: **85**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 
@@ -13,15 +13,16 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 
 | Source label | Matched Bangladesh IDs | IDs with usable current/future schedules | Source health | Error / note |
 |---|---:|---:|---|---|
-| none | 0 | 0 | NO VERIFIED MATCH | No configured source currently matches a Bangladesh playlist identity |
+| https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | OK | - |
+| M3U4U XMLTV (private Actions secret) | 1 | 1 | OK | - |
 
 ## Bangladesh-relevant source health
 
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | https://www.rtvbd.tv/schedule.php | 0 | 0 | 0 | Could not fetch the official RTV schedule over verified HTTPS (rtvbd.tv: URLError; www.rtvbd.tv: URLError) |
-| FAILED | https://migrate.btvlive.gov.bd/channel/BTV | 0 | 0 | 0 | <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010)> |
-| NO_PROGRAMMES | M3U4U XMLTV (private Actions secret) | 201 | 0 | 0 | - |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 71 | - |
+| OK | M3U4U XMLTV (private Actions secret) | 229 | 191 | 12496 | - |
 
 ## Unmapped Bangladesh identities
 
@@ -45,8 +46,6 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | BTV News | custom.btv.news | NO_GUIDE_HIT |
 | Channel 1 | Channel1.bd | NO_GUIDE_HIT |
 | Channel 1 | custom.channel.1 | NO_GUIDE_HIT |
-| Channel 16 | Channel16.bd | NO_GUIDE_HIT |
-| Channel 24 | 94000 | NO_GUIDE_HIT |
 | Channel 24 | Channel24.bd | NO_GUIDE_HIT |
 | Channel 52 | Channel52.bd | NO_GUIDE_HIT |
 | Channel 9 | Channel9.bd | NO_GUIDE_HIT |
@@ -72,8 +71,6 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | GAZI TV HD | custom.bdix.gazi | NO_GUIDE_HIT |
 | Global TV | GlobalTV.bd | NO_GUIDE_HIT |
 | Green TV | GreenTV.bd | NO_GUIDE_HIT |
-| Green TV | GreenTV.bd@SD | NO_GUIDE_HIT |
-| Independent TV | 247000 | NO_GUIDE_HIT |
 | Independent TV | IndependentTV.bd | NO_GUIDE_HIT |
 | Jago News 24 | JagoNews24.bd | NO_GUIDE_HIT |
 | Jalsha Bangla BD | JalshaBanglaBD.bd | NO_GUIDE_HIT |
@@ -102,6 +99,7 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | NTV | NTV-IN | NO_GUIDE_HIT |
 | NTV | NTV.bd | NO_GUIDE_HIT |
 | NTV Europe | NTVEurope.bd | NO_GUIDE_HIT |
+| Probashi TV | ProbashiTV.bd | NO_GUIDE_HIT |
 | Rajdhani TV | RajdhaniTV.bd | NO_GUIDE_HIT |
 | Rajdhani TV | custom.rajdhani | NO_GUIDE_HIT |
 | Rupashi Bangla TV | RupashiBanglaTV.bd@SD | NO_GUIDE_HIT |
@@ -112,11 +110,9 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Star News | StarNews.bd | NO_GUIDE_HIT |
 | Star News | custom.star.news | NO_GUIDE_HIT |
 | T Sports | TSports.bd | NO_GUIDE_HIT |
-| T SPORTS | TSports.bd@SD | NO_GUIDE_HIT |
 | TBN24 | TBN24.us | NO_GUIDE_HIT |
 | Thikana | ThikanaTV.us | NO_GUIDE_HIT |
 | Time Television | TimeTelevision.us | NO_GUIDE_HIT |
-| Vokta TV | VoktaTV.bd@SD | NO_GUIDE_HIT |
 
 ## Matching and source notes
 
