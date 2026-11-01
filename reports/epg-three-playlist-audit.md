@@ -1,14 +1,14 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-11-01T13:28:45+00:00**
+Generated: **2026-11-01T14:14:24+00:00**
 
 This report measures the three maintained M3U playlists included in the automated EPG pipeline. The historic filename epg-three-playlist-audit.md is retained for link compatibility.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1186 | 705 | 462 | 418 | 462 | 403 | 243 | OK |
+| IPTV-Playlist.m3u | 1186 | 705 | 462 | 418 | 462 | 401 | 243 | OK |
 | BDIX-Playlist.m3u | 131 | 131 | 78 | 74 | 78 | 74 | 53 | OK |
-| International-Playlist.m3u | 2514 | 2065 | 761 | 620 | 755 | 585 | 1304 | OK |
+| International-Playlist.m3u | 2514 | 2065 | 761 | 619 | 755 | 581 | 1304 | OK |
 
 ## Group coverage
 
@@ -57,7 +57,7 @@ This report measures the three maintained M3U playlists included in the automate
 | Portugal | 3 | 1 | 1 | 2 |
 | Religious | 35 | 10 | 6 | 25 |
 | Romania | 27 | 9 | 9 | 18 |
-| Russia | 53 | 10 | 8 | 43 |
+| Russia | 53 | 10 | 7 | 43 |
 | Saudi Arabia | 8 | 0 | 0 | 8 |
 | Serbia | 1 | 1 | 0 | 0 |
 | Singapore | 3 | 0 | 0 | 3 |
@@ -82,6 +82,6 @@ This report measures the three maintained M3U playlists included in the automate
 
 ## Source Playlist Fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **1f4142a28a97b4c13ad28a295ea7d931db654c6726fa6608b3f4e8e327217811**
+- IPTV-Playlist.m3u SHA-256: **a93c0292bc951c204dd26fa4bb2abd20d28208856b476e340272d5a6578c0dc3**
 - BDIX-Playlist.m3u SHA-256: **6e98537a07d9bb5f5ee818f86defff1357302adeaca270e0786a7185bcd33b2d**
 - International-Playlist.m3u SHA-256: **1fe061be22b2f0ba30e3af4533d431a3a11eb482f36d0b01d39474f87b116106**
