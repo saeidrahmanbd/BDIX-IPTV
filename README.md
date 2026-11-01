@@ -115,3 +115,48 @@ The XMLTV refresh workflow is enabled and the public guide is published at [the 
 ## 🖥️ Playlist Studio
 
 [**Playlist Studio 5.0**](https://github.com/saeidrahmanbd/Playlist-Studio) is a separate Windows application for managing, editing, testing and playing IPTV playlists.
+
+---
+
+## 📬 Support
+
+Found a broken stream, incorrect information, missing logo, or another issue?
+
+<p align="center">
+  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV/issues"><img src="https://img.shields.io/badge/🐞%20Report%20an%20Issue-e5534b?style=for-the-badge" alt="Report an issue"></a>
+  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV/discussions"><img src="https://img.shields.io/badge/💬%20Join%20Discussions-8250df?style=for-the-badge" alt="Join Discussions"></a>
+</p>
+
+> 📝 For stream reports, include the **channel name, stream/playlist URL, and a short description** when possible.
+
+---
+
+## 📞 Contact
+
+For collaboration, feedback, IPTV playlist issues, or project-related inquiries:
+
+<p align="center">
+  <a href="mailto:saeidrahman.mkt@gmail.com"><img src="https://img.shields.io/badge/Email-saeidrahman.mkt@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="https://github.com/saeidrahmanbd"><img src="https://img.shields.io/badge/GitHub-saeidrahmanbd-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+  <a href="https://www.facebook.com/saeid.rahman.sr"><img src="https://img.shields.io/badge/Facebook-Saeid%20Rahman-1877F2?style=for-the-badge&logo=facebook" alt="Facebook"></a>
+</p>
+
+---
+
+## 📄 License
+
+The repository's original code and documentation are licensed under the [MIT License](LICENSE), to the extent owned by the maintainer. The license does **not** relicense third-party broadcaster logos, names, trademarks, programme data, stream endpoints, or other third-party content; those remain subject to their respective owners' rights and terms. Many logo assets are still under authenticity review, so local storage does not imply official verification.
+
+## ⚠️ Disclaimer
+
+This repository does not host television channels or video content. It contains references to publicly available streams. Availability and programme information may change without notice.
+
+Users are responsible for complying with applicable laws, regulations, and service terms.
+
+---
+
+<p align="center">
+  ⭐ <b>If you find the project useful, please star the repository!</b><br><br>
+  <a href="https://github.com/saeidrahmanbd/BDIX-IPTV">github.com/saeidrahmanbd/BDIX-IPTV</a><br><br>
+  <sub>Made with ❤️ by <a href="https://github.com/saeidrahmanbd">Saeid Rahman</a></sub>
+</p>
