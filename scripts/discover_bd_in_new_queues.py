@@ -47,6 +47,9 @@ PERMANENTLY_BANNED_CHANNEL_NAMES = {
         "E-Vidya 6", "E-Vidya 7", "E-Vidya 8", "E-Vidya 9", "Friends TV",
     )
 }
+# A programme title is not a standalone linear TV channel. Keep this exact
+# denylist narrow so incomplete optional metadata alone never blocks a channel.
+NON_CHANNEL_PROGRAM_NAMES = {canonical_channel_name("Gopal Bhar")}
 
 FORBIDDEN_WORDS = {"news"}
 ISLAMIC_ALLOWED_MARKERS = re.compile(
@@ -233,6 +236,18 @@ def purge_forbidden_existing_queue_rows(text: str) -> tuple[str, list[str]]:
         name = (a.get("tvg-name") or display).strip()
         if group in queue_groups:
             reason = prohibited_channel(a, name)
+            declared_country = a.get("tvg-country", "").strip().upper()
+            id_countries = {
+                match.group(1).upper()
+                for value in (a.get("tvg-id", ""), a.get("channel-id", ""))
+                if (match := ID_CC_RE.search((value or "").strip().casefold()))
+            }
+            if not reason and declared_country and declared_country not in {"BD", "IN"}:
+                reason = f"declared country {declared_country} is outside BD/IN"
+            if not reason and id_countries - {"BD", "IN"}:
+                reason = "channel id identifies a country outside BD/IN"
+            if not reason and canonical_channel_name(name) in NON_CHANNEL_PROGRAM_NAMES:
+                reason = "programme title, not a standalone live TV channel"
             if reason:
                 removed.append(name or "(unnamed)")
                 continue
