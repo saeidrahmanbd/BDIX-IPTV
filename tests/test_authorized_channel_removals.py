@@ -243,6 +243,68 @@ class AuthorizedChannelRemovalTests(unittest.TestCase):
             self.assertNotIn("tvg-chno", not_playing)
 
 
+    def test_sorting_keeps_new_groups_immediately_before_backup(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "IPTV-Playlist.m3u"
+            path.write_text("\n".join([
+                "#EXTM3U",
+                '#EXTINF:-1 tvg-name="Curated Backup" group-title="Backup",Curated Backup',
+                "https://example.invalid/backup.m3u8",
+                '#EXTINF:-1 tvg-name="Pending" group-title="Not Playing",Pending',
+                "https://example.invalid/pending.m3u8",
+                '#EXTINF:-1 tvg-name="Fresh Backup" group-title="New Backup",Fresh Backup',
+                "https://example.invalid/new-backup.m3u8",
+                '#EXTINF:-1 tvg-name="Fresh Channel" group-title="New Channels",Fresh Channel',
+                "https://example.invalid/new-channel.m3u8",
+                '#EXTINF:-1 tvg-name="Primary" group-title="Bangladesh",Primary',
+                "https://example.invalid/primary.m3u8",
+            ]) + "\n", encoding="utf-8")
+            sorter.sort_playlist(path)
+            groups = []
+            for line in path.read_text(encoding="utf-8").splitlines():
+                if line.startswith("#EXTINF:"):
+                    group = re.search(r'group-title="([^"]+)"', line).group(1)
+                    if not groups or groups[-1] != group:
+                        groups.append(group)
+            self.assertEqual(groups[-3:], ["New Channels", "New Backup", "Backup"])
+            self.assertLess(groups.index("Not Playing"), groups.index("New Channels"))
+
+    def test_restore_places_not_playing_before_discovery_queues_and_backup_last(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            playlist = root / "IPTV-Playlist.m3u"
+            snapshot = root / "protected.m3u"
+            baseline = root / "baseline.json"
+            primary = channel("Primary", "Bangladesh", "https://example.invalid/primary.m3u8").splitlines()
+            new_channel = channel("Fresh Channel", "New Channels", "https://example.invalid/new-channel.m3u8").splitlines()
+            new_backup = channel("Fresh Backup", "New Backup", "https://example.invalid/new-backup.m3u8").splitlines()
+            backup = channel("Curated Backup", "Backup", "https://example.invalid/backup.m3u8").splitlines()
+            not_playing = channel("Pending", "Not Playing", "https://example.invalid/pending.m3u8").splitlines()
+            playlist.write_text(
+                "#EXTM3U\n" + "\n".join(primary + new_channel + new_backup + backup + not_playing) + "\n",
+                encoding="utf-8",
+            )
+            snapshot.write_text("\n".join(backup + not_playing) + "\n", encoding="utf-8")
+            baseline.write_text(json.dumps([
+                {"info": backup[0], "url": backup[1], "group": "Backup"},
+                {"info": not_playing[0], "url": not_playing[1], "group": "Not Playing"},
+            ]), encoding="utf-8")
+            with (
+                patch.object(restore, "PLAYLIST", playlist),
+                patch.object(restore, "SNAPSHOT", snapshot),
+                patch.object(restore, "BASELINE", baseline),
+                redirect_stdout(io.StringIO()),
+            ):
+                restore.restore()
+            groups = []
+            for line in playlist.read_text(encoding="utf-8").splitlines():
+                if line.startswith("#EXTINF:"):
+                    group = re.search(r'group-title="([^"]+)"', line).group(1)
+                    if not groups or groups[-1] != group:
+                        groups.append(group)
+            self.assertEqual(groups, ["Bangladesh", "Not Playing", "New Channels", "New Backup", "Backup"])
+            self.assertEqual(groups[-3:], ["New Channels", "New Backup", "Backup"])
+
     def test_restore_repairs_missing_local_logo_in_protected_queue_only(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

@@ -56,8 +56,8 @@ PERMANENTLY_REMOVED_NAMES = {
 ORDER = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani", "International",
-    "Documentary & Wildlife", "Kids", "Religious", "Sports", "Backup",
-    "Not Playing",
+    "Documentary & Wildlife", "Kids", "Religious", "Sports", "Not Playing",
+    "New Channels", "New Backup", "Backup",
 ]
 ATTR = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 
@@ -565,13 +565,23 @@ def restore() -> None:
         elif group == "Not Playing":
             snapshot_not_playing.append(record)
 
+    # Keep the manually reviewed Not Playing group before the two discovery
+    # queues, and keep Backup as the final group in the playlist.
+    queue_groups = {"New Channels", "New Backup"}
+    active_primary = [
+        record for record in active_records if group_of(record[0]) not in queue_groups
+    ]
+    active_queues = [
+        record for record in active_records if group_of(record[0]) in queue_groups
+    ]
     final_records = (
-        active_records
+        active_primary
+        + snapshot_not_playing
+        + unexpected_not_playing
+        + active_queues
         + migrated_backup
         + snapshot_backup
         + unexpected_backup
-        + snapshot_not_playing
-        + unexpected_not_playing
     )
     new_text = serialize(preamble, final_records)
     if new_text != current_text:
