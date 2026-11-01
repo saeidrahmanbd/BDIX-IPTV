@@ -1,23 +1,23 @@
 # IPTV Channel Discovery
 
-Generated: **2026-10-31T10:25:18.868239+00:00**
+Generated: **2026-11-01T01:01:43.564051+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News and non-Islamic Religious channels are prohibited; Indian Kids and Sports channels are allowed.**
 - Permanent denylist: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.
 - Country-group threshold: **5** legitimate primary identities
-- Existing prohibited review-queue rows removed: **0**
+- Existing prohibited review-queue rows removed: **3**
 - New channels: **2**
-- New backups: **15**
-- Rejected/held candidates: **821**
+- New backups: **13**
+- Rejected/held candidates: **818**
 - Country policy: only candidates verified as BD/IN (valid `.bd`/`.in` id, or repository-mapping evidence when the id is missing/malformed) are queued; conflicting or unverifiable candidates are held.
 
 ## Rejection reasons
 
 - Indian news channel is prohibited: 266
 - country not verified: id carries a non-BD/IN country suffix: 27
-- country not verified: id country IN conflicts with BD source feed: 11
-- duplicate stream URL: 359
+- country not verified: id country IN conflicts with BD source feed: 10
+- duplicate stream URL: 357
 - known Indian News or non-Islamic religious brand/category is prohibited: 24
 - non-Islamic religious channel is prohibited: 107
 - permanently banned channel: 10
@@ -33,8 +33,6 @@ Generated: **2026-10-31T10:25:18.868239+00:00**
 ## New Backups
 
 - T Sports (1080p) (Bangladesh) — https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8
-- Hungama TV (576p) (India) — http://66.102.126.10:8000/play/a023/index.m3u8
-- Jalsha Movies HD (1080p) (India) — http://103.151.60.162:2122/play/a00x/index.m3u8?hls
 - Pogo (576p) (India) — http://103.151.60.162:2122/play/a01e/index.m3u8?hls
 - Sony Sports Ten 1 HD (1080p) (India) — http://103.185.24.134:3001/SonyTenSports1/index.m3u8
 - Star Jalsha (576p) (India) — http://103.151.60.162:2122/play/a00w/index.m3u8?hls
@@ -48,14 +46,20 @@ Generated: **2026-10-31T10:25:18.868239+00:00**
 - Zee Bangla (576p) (India) — http://103.151.60.162:2122/play/a011/index.m3u8?hls
 - Zee Cinema HD (1080p) (India) — http://103.151.60.162:2122/play/a024/index.m3u8?hls
 
+## Existing prohibited review-queue rows removed
+
+- ARY Music
+- Gopal Bhar
+- Madani Channel
+
 ## Stream verification
 
-- Run timestamp: 2026-10-31T10:25:36+00:00
+- Run timestamp: 2026-11-01T01:02:00+00:00
 - Mode: iptv
 - New entries and discovery queues probed: 57
-- Verified live media responses: 27
+- Verified live media responses: 28
 - Primary entries retained but not conclusively verified: 13
-- Dead/invalid entries and unverified backups removed: 17
+- Dead/invalid entries and unverified backups removed: 16
 - Duplicate discovery entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
@@ -77,8 +81,7 @@ Generated: **2026-10-31T10:25:18.868239+00:00**
 - Retained Ten Cricket for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Unite8 Sports 2 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Vokta TV for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
-- Removed Hungama TV from New Backup — backup stream not verified (connection could not be confirmed: URLError).
-- Removed Jalsha Movies from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
+- Removed Channel 16 from New Backup — HTTP 404.
 - Removed Pogo from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Sony Sports Ten 1 from New Backup — backup stream not verified (connection could not be confirmed: URLError).
 - Removed Star Jalsha from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
@@ -95,9 +98,9 @@ Generated: **2026-10-31T10:25:18.868239+00:00**
 
 ## Final validation
 
-- Run timestamp: 2026-10-31T10:25:37+00:00
+- Run timestamp: 2026-11-01T01:02:01+00:00
 - Validation status: PASS
-- M3U entries parsed: 1160
+- M3U entries parsed: 1161
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - New Channels/New Backup/Backup ordering: passed
