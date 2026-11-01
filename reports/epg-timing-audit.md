@@ -21,7 +21,7 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **Nat Geo Wild** (NationalGeographicWild.in@SD): source ID LIVETV_LIVETVCHANNEL_NAT_GEO_WILD_HD from https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml shifted by -48 hours after repeated cross-source agreement.
 - **Rang** (Rang.in@SD): source ID Rang.in (src09) from M3U4U XMLTV (private Actions secret) shifted by -5.5 hours after repeated cross-source agreement.
 - **Stingray Classica** (StingrayClassica.ca@SD): source ID StingrayClassica.ro from https://iptv-epg.org/files/epg-ro.xml.gz shifted by -25 hours after repeated cross-source agreement.
-- **TLC** (TLC.in@HD): source ID TLC.tr from https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz shifted by -24 hours after repeated cross-source agreement.
+- **TLC (India)** (TLC.in@HD): source ID TLC.tr from https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **TLC** (TLC.in@SD): source ID TLC.tr from https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz shifted by -24 hours after repeated cross-source agreement.
 - **TV9 Bangla** (TV9Bangla.in): source ID SWIFTTV_LIVECHANNEL_31 from https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml shifted by -5.5 hours after repeated cross-source agreement.
 - **Sun Bangla** (custom.sun-bangla-k1d4w): source ID SunBangla.in (src09) from M3U4U XMLTV (private Actions secret) shifted by -5.5 hours after repeated cross-source agreement.

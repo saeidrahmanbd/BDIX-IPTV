@@ -1,16 +1,16 @@
 # Update Report
 
-_Last generated: **2026-11-01 12:26 UTC**_
+_Last generated: **2026-11-01 13:28 UTC**_
 
-Source playlist SHA-256: **d3085d33a0d6e95f27d2d1bbe6acd87a18d55ee5ff1da89ecea62cffbe62bccd**
+Source playlist SHA-256: **1f4142a28a97b4c13ad28a295ea7d931db654c6726fa6608b3f4e8e327217811**
 
 | Metric | Current |
 |---|---:|
-| Streams | **1167** |
-| Active Channel Identities | **641** |
-| Active Primary Streams | **647** |
-| Bangladesh | **61** |
-| India | **328** |
+| Streams | **1186** |
+| Active Channel Identities | **685** |
+| Active Primary Streams | **685** |
+| Bangladesh | **62** |
+| India | **333** |
 | Backup Stream Entries | **340** |
 | IPTV Local Logos | **STALE** |
 | IPTV EPG Programme Coverage | **PENDING** |
@@ -27,8 +27,8 @@ Source playlist SHA-256: **d3085d33a0d6e95f27d2d1bbe6acd87a18d55ee5ff1da89ecea62
 - Duplicate stream URLs: **STALE / UNKNOWN (last saved: 0)**
 - Metadata conflicts (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
 - Same-name / different-ID collisions (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
-- Cross-queue metadata identity variants: **1**
-- Cross-queue same-name / different-ID collisions: **3**
+- Cross-queue metadata identity variants: **0**
+- Cross-queue same-name / different-ID collisions: **2**
 - Duplicate primary identities: **STALE / UNKNOWN (last saved: 0)**
 - Primary channel-number collisions: **STALE / UNKNOWN (last saved: 0)**
 - Primary entries missing channel numbers: **STALE / UNKNOWN (last saved: 0)**
@@ -63,7 +63,7 @@ Source playlist SHA-256: **d3085d33a0d6e95f27d2d1bbe6acd87a18d55ee5ff1da89ecea62
 | Report | Last generated | Input freshness |
 |---|---|---|
 | Playlist audit | **2026-11-01T01:11:34.614764+00:00** | **STALE** |
-| EPG coverage / three-playlist inventory | **2026-11-01T12:26:12+00:00** | **PENDING — guide missing or freshness not PASS** |
+| EPG coverage / three-playlist inventory | **2026-11-01T13:28:45+00:00** | **PENDING — guide missing or freshness not PASS** |
 | Stream health | **2026-11-01T01:12:25+00:00** | **STALE** |
 | Pre-publish gate | **2026-11-01T01:11:35+00:00** | **STALE** |
 
