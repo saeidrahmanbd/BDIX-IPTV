@@ -303,7 +303,7 @@ class EpgConfigTests(unittest.TestCase):
         ):
             self.assertIn(f'"{name}"', workflow)
         self.assertIn("github.event.workflow_run.conclusion == 'success'", workflow)
-        self.assertIn("# 10:17 Asia/Dhaka (GMT+6)", workflow)
+        self.assertIn("# 09:00 Asia/Dhaka (UTC+6)", workflow)
 
 
     def test_epg_refresh_does_not_cancel_active_generation(self):
