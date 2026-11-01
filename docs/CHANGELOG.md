@@ -21,32 +21,37 @@ Added channel identities (up to 10):
 <!-- playlist-changelog:International-Playlist.m3u -->
 ### 2026-11-01 — `International-Playlist.m3u`
 
-- New channel identities: **53**
-- Channel identities removed: **5**
-- Stream URLs added / removed: **54 / 5**
+- New channel identities: **22**
+- Channel identities removed: **39**
+- Stream URLs added / removed: **26 / 39**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Amar Bangla
-- MusicTop
-- The Cabbin FM
-- TV Rodina
-- Stingray Cityscapes
-- Stingray Cozy Cafe
-- Ondambiental TV
-- Sin Limites
-- Vantage Classic
-- NRJ Hits
+- Vijay Takkar APAC
+- Vantage Dance
+- Vantage Music [ ]
+- Video Rola
+- Disco Mix [ ]
+- Mi Musica Hits
+- Vevo 2K
+- Vevo '70s
+- Vevo '80s
+- Vevo '90s
 
 Removed channel identities (up to 10):
-- ARY Music
-- Madani Channel
-- CEACOM TV [ ]
-- Isango TV
-- Vintage Music
+- Mas FM
+- The Cabbin FM
+- CKNO-FM
+- Chocolate FM
+- Dance FM
+- FM Plus TV
+- MasMusica FM
+- Littoral FM TV
+- Ellinikos FM
+- FM ITALIA
 
 ## [5.0.0] — Playlist Studio
 
