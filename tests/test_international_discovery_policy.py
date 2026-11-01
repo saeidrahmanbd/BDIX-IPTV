@@ -194,6 +194,18 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertEqual({name for name, _, _ in removed},
                          {"Epic Music", "Oli TV", "Duplicate New Music"})
 
+    def test_known_non_tv_discovery_rows_are_removed_only_from_country_groups(self):
+        self.assertEqual(
+            discovery.known_non_tv_discovery_reason("YleX (720p)", "Finland"),
+            "known radio station; not a linear TV channel",
+        )
+        self.assertEqual(
+            discovery.known_non_tv_discovery_reason("Zo'r TV (576p)", "Uzbekistan"),
+            "general entertainment channel; not a dedicated Movies/Music channel",
+        )
+        self.assertIsNone(discovery.known_non_tv_discovery_reason("YleX (720p)", "New Channels"))
+        self.assertIsNone(discovery.known_non_tv_discovery_reason("YleX (720p)", "Backup"))
+
     def test_tokenized_urls_are_rejected_without_playback_testing(self):
         self.assertFalse(discovery.safe_url("https://example.org/live.m3u8?token=abc"))
         self.assertTrue(discovery.safe_url("https://example.org/channel/index.m3u8"))

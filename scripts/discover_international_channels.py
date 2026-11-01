@@ -75,6 +75,16 @@ def remove_duplicate_queue_urls(blocks):
   kept.append(block)
  return kept, removed
 
+KNOWN_NON_TV_DISCOVERY_ROWS = {
+ "ylex": "known radio station; not a linear TV channel",
+ "zortv": "general entertainment channel; not a dedicated Movies/Music channel",
+}
+def known_non_tv_discovery_reason(name, group):
+ group_key=(group or "").strip().casefold()
+ if group_key in {"backup","backups","not playing","new channels","new backup","new backups"}:
+  return None
+ return KNOWN_NON_TV_DISCOVERY_ROWS.get(norm(name))
+
 def country_code(a):
  for value in [a.get("tvg-country","")]:
   for item in re.split(r"[;,|/\s]+",value.upper()):
@@ -363,8 +373,13 @@ def main():
     continue
    group="New Backup" if old_key in {"new backup","new backups"} else primary_target(base,policy_code,country_groups)
   else:
-   # Preserve unrelated existing entries; discovery only edits new candidates
-   # and the two review queues.
+   # Preserve unrelated existing entries. Remove only the two exact false
+   # positives that this discovery pipeline recently promoted into country
+   # groups; do not broadly reclassify established country groups.
+   known_reason=known_non_tv_discovery_reason(name,old)
+   if known_reason:
+    filtered_existing.append((name,old,known_reason))
+    continue
    normalized.append(b)
    continue
   if group!=old:
