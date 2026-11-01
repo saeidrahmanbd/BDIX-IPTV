@@ -46,6 +46,8 @@ on:
       - scripts/record_maintenance_history.py
       - scripts/generate_dashboard.py
       - scripts/enforce_playlist_attribution.py
+      - scripts/discover_international_channels.py
+      - tests/test_international_discovery_policy.py
       - scripts/reorganize_international_playlist.py
       - scripts/validate_international_playlist.py
       - tests/test_playlist_metadata_repairs.py
