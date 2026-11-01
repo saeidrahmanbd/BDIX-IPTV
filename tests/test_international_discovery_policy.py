@@ -52,6 +52,15 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertIn('tvg-content="Music"', rendered)
         self.assertIn('group-title="Pakistani"', rendered)
 
+    def test_axn_movies_is_allowed_but_general_axn_channels_remain_rejected(self):
+        self.assertEqual(
+            self.classify("AXN Movies (Portugal)", "Movies", "PT", "AXNMovies.pt")[0],
+            "International Movies",
+        )
+        self.assertIsNone(
+            self.classify("AXN Latin America South", "Movies", "US", "AXNLatinAmerica.us")[0]
+        )
+
     def test_general_entertainment_or_other_source_categories_are_rejected_even_with_movie_music_names(self):
         for group in ("General", "Entertainment", "Variety", "Series", "Lifestyle", "Education", "International"):
             with self.subTest(group=group):
