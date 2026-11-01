@@ -2422,8 +2422,6 @@ http://185.23.80.23:8080/NANO_HD/index.m3u8
 http://92.114.85.87:8016/play/a003/index.m3u8
 #EXTINF:-1 tvg-id="NatGeoTV.us" channel-id="NatGeoTV.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png" tvg-country="US" group-title="Documentary & Wildlife" tvg-name="Nat Geo TV",Nat Geo TV
 http://103.135.253.32:8080/NATGEO-HD/index.m3u8
-#EXTINF:-1 tvg-id="NatGeoTV.us" channel-id="NatGeoTV.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png" tvg-country="US" group-title="Documentary & Wildlife" tvg-name="Nat Geo TV",Nat Geo TV
-http://iptv.prosto.tv:7000/ch83/video.m3u8
 #EXTINF:-1 tvg-id="NationalGeographicWild.in@SD" channel-id="NationalGeographicWild.in@SD" tvg-language="eng;hin;kan;mal;tel;tam;ben;mar" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nat-geo-wild.png" tvg-country="IN" group-title="Documentary & Wildlife" tvg-name="Nat Geo Wild",Nat Geo Wild
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/53693.ts
 #EXTINF:-1 tvg-id="natgeo.us" channel-id="natgeo.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png" tvg-country="US" group-title="Documentary & Wildlife" tvg-name="National Geographic",National Geographic
@@ -4682,6 +4680,8 @@ https://appletree-mytimeuk-rakuten.amagi.tv/playlist.m3u8
 https://box.bbaria.net:8083/Nagorik_TV/video.m3u8
 #EXTINF:-1 tvg-id="Nano.ru@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nano-e481cc8acc.png" tvg-country="RU" group-title="Backup" tvg-name="Nano",Nano
 http://stream.mcquack.net/419/index.m3u8
+#EXTINF:-1 tvg-id="NatGeoTV.us" channel-id="NatGeoTV.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png" tvg-country="US" group-title="Backup" tvg-name="Nat Geo TV",Nat Geo TV
+http://iptv.prosto.tv:7000/ch83/video.m3u8
 #EXTINF:-1 tvg-id="natgeo.us" channel-id="natgeo.us" tvg-language="eng" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/national-geographic.png" tvg-country="US" group-title="Backup" tvg-name="National Geographic",National Geographic
 http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/9277.ts
 #EXTINF:-1 tvg-id="News24.bd" channel-id="News24.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/news-24.png" tvg-country="BD" group-title="Backup" tvg-name="News 24",News 24
