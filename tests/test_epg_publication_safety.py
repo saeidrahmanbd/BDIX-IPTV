@@ -66,7 +66,11 @@ class EPGPublicationSafetyTests(unittest.TestCase):
         refresh = (ROOT / ".github/workflows/epg-refresh.yml").read_text(encoding="utf-8")
         self.assertNotIn("LAST_GOOD_EPG_COMMIT", refresh)
         self.assertIn("HAVE_PUBLISHED_FALLBACK=false", refresh)
-        self.assertIn("cancel-in-progress: true", refresh)
+        self.assertIn("cancel-in-progress: false", refresh)
+        self.assertGreater(
+            refresh.rfind("python scripts/validate_report_freshness.py --mode epg"),
+            refresh.rfind("git rebase origin/main"),
+        )
 
     def test_epg_reports_have_a_valid_current_publication_state(self):
         reports = (

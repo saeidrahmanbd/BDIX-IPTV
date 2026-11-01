@@ -49,6 +49,8 @@ class EpgConfigTests(unittest.TestCase):
             "https://iptv-epg.org/files/epg-in.xml.gz",
             "https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml",
             "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
+            "https://m3u-edit.com/epg-source.php?file=IN1.xml.gz",
+            "https://m3u-edit.com/epg-source.php?file=IN4.xml.gz",
         ]
         for source in expected:
             self.assertIn(source, literal(COV, "SOURCES"))
@@ -67,6 +69,8 @@ class EpgConfigTests(unittest.TestCase):
             "https://www.open-epg.com/files/india.xml.gz",
             "https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml",
             "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
+            "https://m3u-edit.com/epg-source.php?file=IN1.xml.gz",
+            "https://m3u-edit.com/epg-source.php?file=IN4.xml.gz",
         ]
         for source in discovery_expected:
             self.assertIn(source, discovery)
@@ -284,6 +288,12 @@ class EpgConfigTests(unittest.TestCase):
             self.assertIn(f'"{name}"', workflow)
         self.assertIn("github.event.workflow_run.conclusion == 'success'", workflow)
         self.assertIn("# 10:17 Asia/Dhaka (GMT+6)", workflow)
+
+
+    def test_epg_refresh_does_not_cancel_active_generation(self):
+        workflow = (ROOT / ".github" / "workflows" / "epg-refresh.yml").read_text(encoding="utf-8")
+        self.assertIn("cancel-in-progress: false", workflow)
+        self.assertIn("Skip superseded queued EPG refresh", workflow)
 
 
 class BangladeshRetentionTests(unittest.TestCase):

@@ -34,7 +34,8 @@ permissions:
 
 concurrency:
   group: iptv-epg-writer-v5
-  cancel-in-progress: true
+  # Finish the active build; GitHub keeps only the newest pending run for this group.
+  cancel-in-progress: false
 
 jobs:
   refresh:
@@ -206,6 +207,12 @@ jobs:
             if ! git rebase origin/main; then
               git rebase --abort || true
               echo '::error::EPG outputs conflicted with newer main content; no force-push attempted.'
+              exit 1
+            fi
+            # A playlist/mapping commit may have landed while the guide was building.
+            # Revalidate fingerprints after rebasing so stale reports are never published.
+            if ! python scripts/validate_report_freshness.py --mode epg; then
+              echo '::error::EPG inputs changed during generation; the newest queued refresh must publish instead.'
               exit 1
             fi
             if git push origin HEAD:main; then
