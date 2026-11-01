@@ -262,7 +262,23 @@ class EpgConfigTests(unittest.TestCase):
         al = literal(COV, "EPG_ALIASES")
         self.assertEqual(al["Hungama.in@SD"], ["143150"])
         self.assertEqual(al["ZBMusic.in@HD"], ["jtv3319"])
+        self.assertEqual(al["DeenTV.uk"], ["1235", "DeenTV.uk"])
         self.assertNotIn("ZBBhakti.in@HD", al)
+
+    def test_m3u4u_exact_ids_are_enabled_without_weakening_bangladesh_matching(self):
+        locks = literal(COV, "EPG_LOCKS")
+        self.assertEqual(locks["ATNBanglaUK.uk"], ["6753", "ATNBanglaUK.uk"])
+        self.assertEqual(locks["IqraBangla.uk"], ["3914", "IqraBangla.uk"])
+        self.assertNotIn("News24.in@SD", locks.get("News24.bd", []))
+
+    def test_name_matches_cannot_cross_explicit_country_boundaries(self):
+        self.assertEqual(epg_coverage.source_id_country("Discovery.Science.in (src05)"), "IN")
+        self.assertEqual(epg_coverage.source_id_country("AMC.us"), "US")
+        self.assertEqual(epg_coverage.source_id_country("CartoonNetwork.uk"), "GB")
+        self.assertFalse(epg_coverage.source_region_compatible("US", "Discovery.Science.in (src05)"))
+        self.assertTrue(epg_coverage.source_region_compatible("IN", "Discovery.Science.in (src05)"))
+        self.assertTrue(epg_coverage.source_region_compatible("GB", "CartoonNetwork.uk"))
+        self.assertTrue(epg_coverage.source_region_compatible("", "Discovery.Science.in (src05)"))
 
     def test_no_bangladesh_alias_to_foreign_ids(self):
         for key, ids in literal(COV, "EPG_ALIASES").items():
