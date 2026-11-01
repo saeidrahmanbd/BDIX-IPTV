@@ -35,6 +35,8 @@ SOURCES = [
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml",
     "https://m3u-edit.com/epg-source.php?file=india_dishtv.in.xml",
     "https://m3u-edit.com/epg-source.php?file=india_tataplay.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=IN1.xml.gz",
+    "https://m3u-edit.com/epg-source.php?file=IN4.xml.gz",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/jiotv.xml",
     "https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/yupptv.xml",
