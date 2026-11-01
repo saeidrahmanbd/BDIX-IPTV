@@ -1,6 +1,6 @@
 # IPTV Channel Discovery
 
-Generated: **2026-11-01T01:03:20.471808+00:00**
+Generated: **2026-11-01T01:15:52.763717+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News and non-Islamic Religious channels are prohibited; Indian Kids and Sports channels are allowed.**
@@ -48,7 +48,7 @@ Generated: **2026-11-01T01:03:20.471808+00:00**
 
 ## Stream verification
 
-- Run timestamp: 2026-11-01T01:03:38+00:00
+- Run timestamp: 2026-11-01T01:16:10+00:00
 - Mode: iptv
 - New entries and discovery queues probed: 56
 - Verified live media responses: 28
@@ -91,7 +91,7 @@ Generated: **2026-11-01T01:03:20.471808+00:00**
 
 ## Final validation
 
-- Run timestamp: 2026-11-01T01:03:38+00:00
+- Run timestamp: 2026-11-01T01:16:10+00:00
 - Validation status: PASS
 - M3U entries parsed: 1161
 - Malformed EXTINF/URL pairs: 0
