@@ -1,9 +1,9 @@
 # International Channel Discovery
 
-- Last scan: 2026-11-01 01:17 UTC
+- Last scan: 2026-11-01 01:19 UTC
 - Source: `https://iptv-org.github.io/iptv/index.category.m3u`
 - Source records parsed: 12087
-- Existing playlist records: 3308
+- Existing playlist records: 3307
 - Existing logo references localized/repaired: 0
 - Existing logo references removed because no safe local asset was available: 0
 - Exact source URLs already in playlist: 2407
@@ -17,7 +17,7 @@
 - New primary channels: 24
 - New backup review entries: 2
 - Category migrations: 0
-- Existing discovery-queue entries removed: 1
+- Existing discovery-queue entries removed: 2
 
 ## New primary channels
 
@@ -56,7 +56,8 @@
 
 ## Existing discovery-queue entries removed
 
-- **MNM** — `New Channels` — test/VOD/non-TV name
+- **YleX (720p)** — `Finland` — known radio station; not a linear TV channel
+- **Zo'r TV (576p)** — `Uzbekistan` — general entertainment channel; not a dedicated Movies/Music channel
 
 ## Rejections
 
@@ -75,7 +76,7 @@
 
 ## Stream verification
 
-- Run timestamp: 2026-11-01T01:17:51+00:00
+- Run timestamp: 2026-11-01T01:20:00+00:00
 - Mode: international
 - New entries and discovery queues probed: 176
 - Verified live media responses: 112
@@ -154,9 +155,9 @@
 
 ## Final validation
 
-- Run timestamp: 2026-11-01T01:17:51+00:00
+- Run timestamp: 2026-11-01T01:20:00+00:00
 - Validation status: PASS
-- M3U entries parsed: 3307
+- M3U entries parsed: 3305
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - New Channels/New Backup/Backup ordering: passed

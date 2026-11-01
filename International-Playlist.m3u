@@ -1278,8 +1278,6 @@ https://758ee983d61e400381dea6fa8154f4e0.mediatailor.eu-west-1.amazonaws.com/v1/
 https://4aa9ef08b70d4b0c8f3519c5950b1930.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6303/master.m3u8
 #EXTINF:-1 tvg-id="RakutenTVTopMovies.es@Finland" channel-id="RakutenTVTopMovies.es@Finland" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rakuten-tv-top-movies-finland-1080p.png" tvg-country="FI" tvg-content="Movies" group-title="Finland" tvg-name="Rakuten TV Top Movies Finland",Rakuten TV Top Movies Finland
 https://1d1b0d4cb6ae4c31985d13221795695b.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6057/master.m3u8
-#EXTINF:-1 tvg-id="YleX.fi@SD" tvg-name="YleX (720p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/ylex-720p.png" tvg-country="FI" channel-id="YleX.fi@SD" group-title="Finland" tvg-content="Music",YleX (720p)
-https://ylestudiolive.akamaized.net/hls/live/2007826/ylestudiolive-YleX/master.m3u8
 #EXTINF:-1 tvg-id="4Music.fr@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-music.png" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="4 Music",4 Music
 https://musichls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="4Kurd.fr@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4kurd-fc0383f503.png" tvg-country="FR" tvg-content="Music" group-title="France" tvg-name="4Kurd",4Kurd
@@ -3108,8 +3106,6 @@ https://stream8.cinerama.uz/1018/playlist.m3u8
 https://stream8.cinerama.uz/1009/tracks-v1a1/playlist.m3u8
 #EXTINF:-1 tvg-id="MuzTVUzbekistan.uz@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/muz-tv-uzbekistan-218f3c70a9.jpg" tvg-country="UZ" tvg-content="Music" group-title="Uzbekistan" tvg-name="Muz TV Uzbekistan",Muz TV Uzbekistan
 https://stream8.cinerama.uz/1063/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="ZorTV.uz@SD" tvg-name="Zo'r TV (576p)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/international/zo-r-tv-576p.png" tvg-country="UZ" channel-id="ZorTV.uz@SD" group-title="Uzbekistan" tvg-content="Music",Zo'r TV (576p)
-https://stream8.cinerama.uz/1016/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="HTVCMovies.vn@SD" tvg-country="VN" tvg-content="Movies" group-title="Vietnam" tvg-name="HTVC Movies",HTVC Movies
 https://dethich.pw/htvcphim/index.m3u8
 #EXTINF:-1 tvg-id="ONCine.vn@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/on-cine-81d52e1ed7.png" tvg-country="VN" tvg-content="Movies" group-title="Vietnam" tvg-name="ON Cine",ON Cine
