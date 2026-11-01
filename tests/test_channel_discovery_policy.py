@@ -131,6 +131,25 @@ class ChannelDiscoveryPolicyTests(unittest.TestCase):
         self.assertIn('group-title="New Channels",Mahua Play', filtered)
         self.assertIn('group-title="Indian Entertainment",E-Vidya 4', filtered)
 
+    def test_foreign_country_and_program_title_rows_are_purged_from_discovery_queues(self):
+        text = (
+            "#EXTM3U\n"
+            '#EXTINF:-1 tvg-name="ARY Music" tvg-country="PK" tvg-id="ARYMusic.pk" group-title="New Channels",ARY Music\n'
+            "https://example.invalid/ary-music.m3u8\n"
+            '#EXTINF:-1 tvg-name="Madani Channel" tvg-country="PK" tvg-id="MadaniChannel.pk" group-title="New Channels",Madani Channel\n'
+            "https://example.invalid/madani.m3u8\n"
+            '#EXTINF:-1 tvg-name="Gopal Bhar" tvg-country="IN" group-title="New Channels",Gopal Bhar\n'
+            "https://example.invalid/gopal-bhar.m3u8\n"
+            '#EXTINF:-1 tvg-name="Channel 24" tvg-id="Channel24.bd" tvg-country="BD" group-title="New Channels",Channel 24\n'
+            "https://example.invalid/channel24.m3u8\n"
+        )
+        filtered, removed = purge_forbidden_existing_queue_rows(text)
+        self.assertEqual(set(removed), {"ARY Music", "Madani Channel", "Gopal Bhar"})
+        self.assertNotIn('group-title="New Channels",ARY Music', filtered)
+        self.assertNotIn('group-title="New Channels",Madani Channel', filtered)
+        self.assertNotIn('group-title="New Channels",Gopal Bhar', filtered)
+        self.assertIn('group-title="New Channels",Channel 24', filtered)
+
     def test_only_bd_in_source_feeds_are_allowed_and_bangladesh_news_passes(self):
         bd, bd_reason = evaluate(
             "Bangladesh",
