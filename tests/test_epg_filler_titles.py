@@ -1,5 +1,6 @@
 import sys
 import unittest
+from datetime import timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
@@ -96,6 +97,77 @@ class FillerTitleTests(unittest.TestCase):
         removed = generate_epg.filter_generic_candidates(candidates, names)
         self.assertEqual(removed, 4)
         self.assertEqual([r["title"] for r in candidates["Ch.in"]], ["Live TV"])
+
+
+class SlotLabelAndSpellingVariantTests(unittest.TestCase):
+    def test_scheduling_slot_labels_are_placeholders(self):
+        for title in ("Slot", "Commercial Slot", "FILLER", "Filler", "Brak zaplanowanych emisji", "Sin programación"):
+            with self.subTest(title=title):
+                self.assertEqual(generate_epg.title_score(title), 0)
+                self.assertTrue(epg_coverage.is_filler_title(title))
+        # Real titles that only contain the same words stay valid.
+        for title in ("Slot Machine Hour", "The Filler Episode", "Commercial Break Special"):
+            with self.subTest(title=title):
+                self.assertGreater(generate_epg.title_score(title), 0)
+
+    def test_slot_rows_are_dropped_even_without_other_titles(self):
+        candidates = {"Raj.in": rows("Slot", "Commercial Slot", "Filler", "Raj News")}
+        removed = generate_epg.filter_generic_candidates(candidates)
+        self.assertEqual(removed, 3)
+        self.assertEqual([r["title"] for r in candidates["Raj.in"]], ["Raj News"])
+
+    def test_teleshopping_is_a_real_programme_and_is_kept(self):
+        candidates = {"Ch.in": rows("Teleshopping", "Paid Programming", "Evening News")}
+        self.assertEqual(generate_epg.filter_generic_candidates(candidates), 0)
+
+    def test_spelling_variant_of_channel_name_is_name_filler(self):
+        # Playlist says "Amar Bangla"; the feed titles every row "Amar Bangla TV".
+        names = {"AamarBangla.in": "Amar Bangla"}
+        candidates = {"AamarBangla.in": rows(*["Amar Bangla TV"] * 6)}
+        self.assertEqual(generate_epg.filter_generic_candidates(candidates, names), 6)
+        self.assertEqual(candidates["AamarBangla.in"], [])
+
+    def test_identity_stem_catches_filler_when_playlist_names_disagree(self):
+        # The same tvg-id carries different names across playlists, so the stored
+        # name may not match the feed; the tvg-id's own name part still does.
+        names = {"ZeeBanglaSonar.in@SD": "Zee Bangla Cinema"}
+        candidates = {"ZeeBanglaSonar.in@SD": rows(*["Zee Bangla Sonar"] * 7, "Sonar Special")}
+        self.assertEqual(generate_epg.filter_generic_candidates(candidates, names), 7)
+        self.assertEqual([r["title"] for r in candidates["ZeeBanglaSonar.in@SD"]], ["Sonar Special"])
+
+    def test_similar_but_different_programmes_are_not_name_filler(self):
+        self.assertFalse(generate_epg.repeats_channel_name("BBC Sport", "BBC News", "BBCNews.uk"))
+        self.assertFalse(generate_epg.repeats_channel_name("Newsday", "BBC News", "BBCNews.uk"))
+        self.assertFalse(generate_epg.repeats_channel_name("Sony Pal Special", "Sony Pal", "SonyPal.in@SD"))
+
+    def test_varied_schedule_with_one_similar_title_is_untouched(self):
+        names = {"AamarBangla.in": "Amar Bangla"}
+        candidates = {"AamarBangla.in": rows("Amar Bangla TV", "Evening News", "Drama Hour", "Music Time", "Talk Show")}
+        self.assertEqual(generate_epg.filter_generic_candidates(candidates, names), 0)
+
+    def test_single_show_channels_are_still_exempt(self):
+        names = {"AxMen.us": "Ax Men"}
+        candidates = {"AxMen.us": rows(*["Ax Men"] * 5)}
+        self.assertEqual(generate_epg.filter_generic_candidates(candidates, names), 0)
+
+
+class SourceOffsetPatternTests(unittest.TestCase):
+    def test_feed_with_repeated_identical_offsets_is_flagged(self):
+        events = [("Feed A", f"Ch{i}.in", timedelta(hours=-5.5)) for i in range(5)]
+        events.append(("Feed B", "Other.in", timedelta(hours=-24)))
+        lines = generate_epg.source_offset_patterns(events)
+        self.assertEqual(len(lines), 1)
+        self.assertIn("Feed A", lines[0])
+        self.assertIn("-5.5", lines[0])
+        self.assertIn("5 channels", lines[0])
+
+    def test_same_channel_repeated_does_not_count_as_a_pattern(self):
+        events = [("Feed A", "Ch.in", timedelta(hours=-5.5))] * 8
+        self.assertEqual(generate_epg.source_offset_patterns(events), [])
+
+    def test_mixed_offsets_below_threshold_are_not_flagged(self):
+        events = [("Feed A", f"Ch{i}.in", timedelta(hours=-5.5 if i % 2 else -24)) for i in range(8)]
+        self.assertEqual(generate_epg.source_offset_patterns(events), [])
 
 
 class CoverageFillerTests(unittest.TestCase):
