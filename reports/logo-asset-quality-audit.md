@@ -1,6 +1,6 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-01T01:02:32+00:00**
+Generated: **2026-11-01T01:04:03+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
@@ -12,7 +12,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 ## Summary
 
-- Safe repairs applied this run: **1**
+- Safe repairs applied this run: **0**
 - File-format/extension mismatches remaining: **2**
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **3**
@@ -26,7 +26,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| famatv-1080p-not-24-7.jpg | JPEG | JPEG | 221×87 | 221×87 | re-encoded/compressed |
+| — | — | — | — | — | none |
 
 ## Remaining extension mismatches
 
