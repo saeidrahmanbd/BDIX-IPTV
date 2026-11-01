@@ -985,7 +985,7 @@ International,First Music Channel Russia,FirstMusicChannelRussia.by@SD,,,NO_GUID
 International,Folx Slovenija,FolxSlovenija.si@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,Fun Vision,FunVision.be@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 International,Fusion TV,FUSIONTV.mq@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-International,GREAT! Movies,GREATmovies.uk,0-9-9z5910243,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml | M3U4U XMLTV (private Actions secret),MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+International,GREAT! Movies,GREATmovies.uk,0-9-9z5910243 | GreatMovies.uk,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml | https://www.open-epg.com/files/unitedkingdom.xml.gz | M3U4U XMLTV (private Actions secret),MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 International,GREAT! Romance,GREATromance.uk,GREAT!romance.uk | GREATromance.uk,https://iptv-epg.org/files/epg-gb.xml.gz | M3U4U XMLTV (private Actions secret),MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 International,Gravitas Movies,GravitasMovies.us,USBD700011RE | GravitasMovies.us,https://i.mjh.nz/SamsungTVPlus/us.xml | https://iptv-epg.org/files/epg-us.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 International,Gugak TV,GugakTV.kr@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
@@ -1282,7 +1282,7 @@ Kids,Ninja Kidz TV,NinjaKidzTV.us@SD,US2200007QG,https://i.mjh.nz/SamsungTVPlus/
 Kids,O! International,O.ru@International,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,ON Kids,ONKids.vn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,PBS Kids,PBSKids.us@SD,USBC3600013PC,https://i.mjh.nz/SamsungTVPlus/us.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
-Kids,POP,Pop.uk,0-9-9z5910525 | Pop.uk,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml | M3U4U XMLTV (private Actions secret),MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Kids,POP,Pop.uk,0-9-9z5910525 | Pop.uk,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml | https://www.open-epg.com/files/unitedkingdom.xml.gz | M3U4U XMLTV (private Actions secret),MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Pakapaka,Pakapaka.ar@SD,Pakapaka.ar,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Peques TV,PequesTV.pe@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Pixel TV,PixelTV.ua@SD,Pixel.ch,,MAPPED_NOT_CURRENTLY_FOUND,Auto-maintained; verify ambiguous/name matches manually.
@@ -1321,7 +1321,7 @@ Kids,Teletubbies,Teletubbies.uk,USBD3500015R5,https://i.mjh.nz/SamsungTVPlus/us.
 Kids,Teletubbies,Teletubbies.uk@SD,USBD3500015R5,https://i.mjh.nz/SamsungTVPlus/us.xml,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Kids,TiJi,TiJi.ru@SD,TiJi.ru | TIJI.fr | Tiji.fr,https://iptv-epg.org/files/epg-ru.xml.gz | https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz,MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Tiguerito TV,TigueritoTV.do@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
-Kids,Tiny Pop,TinyPop.uk,0-9-9z5910526 | TinyPop.uk,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml | M3U4U XMLTV (private Actions secret),MAPPED,Auto-maintained; verify ambiguous/name matches manually.
+Kids,Tiny Pop,TinyPop.uk,0-9-9z5910526 | TinyPop.uk,https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/zee5.xml | https://www.open-epg.com/files/unitedkingdom.xml.gz | M3U4U XMLTV (private Actions secret),MAPPED,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Tom And Jerry,TomAndJerry.do@HD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Tom and Jerry,TomAndJerry.do,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Kids,Tooku,Tooku.ru,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.

@@ -1,6 +1,6 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-11-01T10:21:04+00:00**
+Generated: **2026-11-01T10:57:44+00:00**
 
 This report measures the three maintained M3U playlists included in the automated EPG pipeline. The historic filename epg-three-playlist-audit.md is retained for link compatibility.
 

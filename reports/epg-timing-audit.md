@@ -11,7 +11,6 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **DD Malayalam** (DDMalayalam.in@SD): source ID DDMalayalam.in (src09) from M3U4U XMLTV (private Actions secret) shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Meghalaya** (DDMeghalaya.in@SD): source ID DDMEGHALAYA.in (src09) from M3U4U XMLTV (private Actions secret) shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Nagaland** (DDNagaland.in@SD): source ID DDNAGALAND.in (src09) from M3U4U XMLTV (private Actions secret) shifted by -5.5 hours after repeated cross-source agreement.
-- **DD Saptagiri** (DDSaptagiri.in@SD): source ID DDSaptagiri.in (src09) from M3U4U XMLTV (private Actions secret) shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Saptagiri** (DDSaptagiri.in@SD): source ID 142804 from https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/dishtv.xml shifted by -24 hours after repeated cross-source agreement.
 - **DD Tamil** (DDTamil.in@HD): source ID DDTAMIL.in (src09) from M3U4U XMLTV (private Actions secret) shifted by -5.5 hours after repeated cross-source agreement.
 - **DD Tamil** (DDTamil.in@SD): source ID DDTAMIL.in (src09) from M3U4U XMLTV (private Actions secret) shifted by -5.5 hours after repeated cross-source agreement.
@@ -25,4 +24,4 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **TV9 Bangla** (TV9Bangla.in): source ID SWIFTTV_LIVECHANNEL_31 from https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml shifted by -5.5 hours after repeated cross-source agreement.
 - **Sun Bangla** (custom.sun-bangla-k1d4w): source ID SunBangla.in (src09) from M3U4U XMLTV (private Actions secret) shifted by -5.5 hours after repeated cross-source agreement.
 
-Detected source-ID corrections: **20**
+Detected source-ID corrections: **19**
