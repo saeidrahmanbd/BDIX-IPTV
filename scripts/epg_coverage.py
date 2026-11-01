@@ -35,7 +35,7 @@ SOURCE_FETCH_WORKERS = 8
 EPG_ALIASES = {
     "DDHimachalPradesh.in@SD": ["ts1217", "1217", "LIVETV_LIVETVCHANNEL_DD_SHIMLA"],
     "MTVIndia.in@SD": ["jtv248", "248"], "MusicMastii.in": ["jtv584", "584", "IN4#MASTII.in"],
-    "KappaTV.in@ALT1": ["jtv786", "786", "377"], "IqraBangla.uk": ["3914"], "DeenTV.uk": ["1235"],
+    "KappaTV.in@ALT1": ["jtv786", "786", "377"], "IqraBangla.uk": ["3914", "IqraBangla.uk"], "DeenTV.uk": ["1235", "DeenTV.uk"],
     "ATNBanglaUK.uk": ["6753"],
     "TamilanTV.in": ["jtv2958", "2958"],
     "SonyKALHindi.us": ["US1#Sony.KAL.us"], "custom.bdix.aakashaath": ["AakaashAath.in@SD"],
@@ -108,11 +108,14 @@ EPG_ALIASES = {
 
 EPG_LOCKS = {
     "ColorsCineplex.in@SD": ["543298"],
-    "IqraBangla.uk": ["3914"],
+    # Retain existing provider IDs and accept the exact XMLTV IDs verified in
+    # the 2026-11-01 M3U4U export. These are UK diaspora services.
+    "IqraBangla.uk": ["3914", "IqraBangla.uk"],
     "Star.Jalsha.in": ["StarJalsha.in@SD"],
-    # ATN Bangla UK is a distinct UK service. This narrow lock does not affect
-    # ATNBangla.bd or any other domestic Bangladesh identity.
-    "ATNBanglaUK.uk": ["6753"],
+    # ATN Bangla UK sits in the Bangladesh display group, so it must use
+    # explicit IDs only. The M3U4U ID is an exact match for this UK service.
+    # This does not relax matching for ATNBangla.bd or other domestic channels.
+    "ATNBanglaUK.uk": ["6753", "ATNBanglaUK.uk"],
     # Official broadcaster schedules use exact domestic playlist identities.
     "RTV.bd": ["RTV.bd"],
     "BTVNational.bd": ["BTVNational.bd"],
@@ -525,6 +528,36 @@ def retained_mapping(is_bangladesh, old_epg, candidates):
     return old_epg
 
 
+def source_id_country(source_id):
+    """Infer a country only from a recognized terminal ISO-style XMLTV ID suffix."""
+    value = re.sub(r"\s*\([^)]*\)\s*$", "", str(source_id or "").strip())
+    value = re.sub(r"@(?:sd|hd|uhd|fhd)$", "", value, flags=re.I)
+    match = re.search(r"\.([a-z]{2})$", value, flags=re.I)
+    if not match:
+        return ""
+    code = match.group(1).lower()
+    if code not in {
+        "ae", "ar", "at", "au", "bd", "be", "bg", "br", "ca", "ch", "cl",
+        "cn", "co", "cr", "cz", "de", "dk", "do", "ee", "es", "fi", "fr",
+        "gb", "gr", "hu", "id", "ie", "il", "in", "iq", "ir", "is", "it",
+        "jp", "kr", "kw", "lb", "lk", "lt", "lu", "lv", "ma", "mx", "my",
+        "ng", "nl", "no", "np", "nz", "om", "pa", "pe", "ph", "pk", "pl",
+        "pt", "qa", "ro", "rs", "ru", "sa", "se", "sg", "th", "tr", "tw",
+        "ua", "uk", "us", "uy", "uz", "vn", "za",
+    }:
+        return ""
+    return "GB" if code == "uk" else code.upper()
+
+
+def source_region_compatible(target_country, source_id):
+    """Reject name-only matches when both playlist and XMLTV ID identify different countries."""
+    target = str(target_country or "").strip().upper()
+    if target == "UK":
+        target = "GB"
+    source = source_id_country(source_id)
+    return not target or not source or target == source
+
+
 def main():
     channels=parse_playlist(); previous=load_previous(); source_data=[]; source_status=[]
     # Use the existing mapping snapshot to avoid parsing feeds that cannot
@@ -553,7 +586,11 @@ def main():
                 if not src_hits: src_hits=[x for x in ids if norm_id(x) in normalized]
                 if not src_hits:
                     name_hits=set()
-                    for name_key in name_keys: name_hits.update(names.get(name_key,set()))
+                    for name_key in name_keys:
+                        name_hits.update(
+                            source_id for source_id in names.get(name_key,set())
+                            if source_region_compatible(ch.get("country", ""), source_id)
+                        )
                     src_hits=sorted(name_hits)
             matched_schedule_ids = [cid for cid in src_hits if counts.get(cid, 0) > 0]
             if matched_schedule_ids:
@@ -604,6 +641,10 @@ def main():
             continue
         target_name = norm_name(row["channel"])
         target_regionless = without_region_suffix(row["channel"])
+        target_country = next(
+            (channel.get("country", "") for channel in channels if channel["tvg_id"] == row["tvg_id"]),
+            "",
+        )
         candidates_by_id = {}
         for src, source_tuple in zip(source_urls, source_data):
             source_ids, source_future, source_counts, source_names = source_tuple
@@ -617,7 +658,7 @@ def main():
                 if not (is_exact or is_region_variant):
                     continue
                 for source_id in source_ids_for_name:
-                    if source_id not in source_future:
+                    if source_id not in source_future or not source_region_compatible(target_country, source_id):
                         continue
                     item = candidates_by_id.setdefault(source_id, {
                         "source_id": source_id,
