@@ -209,6 +209,12 @@ jobs:
               echo '::error::EPG outputs conflicted with newer main content; no force-push attempted.'
               exit 1
             fi
+            # A playlist/mapping commit may have landed while the guide was building.
+            # Revalidate fingerprints after rebasing so stale reports are never published.
+            if ! python scripts/validate_report_freshness.py --mode epg; then
+              echo '::error::EPG inputs changed during generation; the newest queued refresh must publish instead.'
+              exit 1
+            fi
             if git push origin HEAD:main; then
               exit 0
             fi
