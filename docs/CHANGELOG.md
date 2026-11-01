@@ -5,50 +5,48 @@
 Playlist updates across `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
-### 2026-10-31 — `IPTV-Playlist.m3u`
+### 2026-11-01 — `IPTV-Playlist.m3u`
 
-- New channel identities: **0**
-- Channel identities removed: **2**
-- Stream URLs added / removed: **0 / 2**
-- Backup URL updates: **0**
-- Logo reference changes: **0**
-- Replaced channel identities: **0**
-- Duplicate URL occurrences removed: **0**
-
-Removed channel identities (up to 10):
-- AMN TV
-- HSTV
-
-<!-- playlist-changelog:International-Playlist.m3u -->
-### 2026-10-31 — `International-Playlist.m3u`
-
-- New channel identities: **67**
-- Channel identities removed: **6**
-- Stream URLs added / removed: **71 / 6**
+- New channel identities: **1**
+- Channel identities removed: **0**
+- Stream URLs added / removed: **2 / 0**
 - Backup URL updates: **0**
 - Logo reference changes: **0**
 - Replaced channel identities: **0**
 - Duplicate URL occurrences removed: **0**
 
 Added channel identities (up to 10):
-- Dhamaal [ ]
-- ARY Musik
-- Dance TV [ ]
-- HTV Argentina
-- Music Box Brazil
-- BOX TV
-- Hit Mix Music
-- FM Plus TV
-- La Kalle
-- Clubbing TV France
+- AMN TV
+
+<!-- playlist-changelog:International-Playlist.m3u -->
+### 2026-11-01 — `International-Playlist.m3u`
+
+- New channel identities: **53**
+- Channel identities removed: **5**
+- Stream URLs added / removed: **54 / 5**
+- Backup URL updates: **0**
+- Logo reference changes: **0**
+- Replaced channel identities: **0**
+- Duplicate URL occurrences removed: **0**
+
+Added channel identities (up to 10):
+- Amar Bangla
+- MusicTop
+- The Cabbin FM
+- TV Rodina
+- Stingray Cityscapes
+- Stingray Cozy Cafe
+- Ondambiental TV
+- Sin Limites
+- Vantage Classic
+- NRJ Hits
 
 Removed channel identities (up to 10):
-- Alegria TV
-- KandelaTV
-- Komsan TV [ ]
-- Melody FM
-- Nande Portetepe TV
-- Next
+- ARY Music
+- Madani Channel
+- CEACOM TV [ ]
+- Isango TV
+- Vintage Music
 
 ## [5.0.0] — Playlist Studio
 

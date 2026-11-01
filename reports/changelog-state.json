@@ -2,14 +2,14 @@
   "schema_version": 2,
   "playlists": {
     "IPTV-Playlist.m3u": {
-      "commit": "13f6e95a0b31dfb10d5518eda8aa3b0b673ee3fc"
+      "commit": "f7859fa91f05e803eda9253c343b05628ca92591"
     },
     "BDIX-Playlist.m3u": {
       "commit": "2315deeee8321f34d789633f350f6ce33375271b"
     },
     "International-Playlist.m3u": {
-      "commit": "13f6e95a0b31dfb10d5518eda8aa3b0b673ee3fc"
+      "commit": "f7859fa91f05e803eda9253c343b05628ca92591"
     }
   },
-  "generated": "2026-10-31T08:30:03.020443+00:00"
+  "generated": "2026-11-01T01:07:55.484421+00:00"
 }
