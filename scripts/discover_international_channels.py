@@ -54,6 +54,27 @@ def parse(text):
  return p,b
 def norm(value):
  value=unicodedata.normalize("NFKD",value or "").casefold(); value="".join(c for c in value if not unicodedata.combining(c)); value=re.sub(r"\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p)\b"," ",value); return re.sub(r"[^a-z0-9]+","",value)
+def remove_duplicate_queue_urls(blocks):
+ """Remove duplicate URLs from discovery queues, preserving primary playlist rows."""
+ queue_groups = {"new channels", "new backup", "new backups"}
+ primary_urls = {
+  url_of(block).casefold()
+  for block in blocks
+  if url_of(block) and attrs(block[0]).get("group-title", "").strip().casefold() not in queue_groups
+ }
+ seen_queue_urls = set()
+ kept, removed = [], []
+ for block in blocks:
+  a = attrs(block[0]); group = (a.get("group-title") or "").strip().casefold()
+  url = url_of(block).casefold()
+  if group in queue_groups and url and (url in primary_urls or url in seen_queue_urls):
+   removed.append((name_of(block), group, url))
+   continue
+  if group in queue_groups and url:
+   seen_queue_urls.add(url)
+  kept.append(block)
+ return kept, removed
+
 def country_code(a):
  for value in [a.get("tvg-country","")]:
   for item in re.split(r"[;,|/\s]+",value.upper()):
@@ -349,6 +370,13 @@ def main():
   if genre:
    b[0]=set_content(b[0],genre)
   normalized.append(b)
+ # Remove stale discovery-queue rows that repeat an existing primary URL or
+ # duplicate another queue URL. Primary/curated entries remain untouched.
+ normalized, duplicate_queue_rows = remove_duplicate_queue_urls(normalized)
+ filtered_existing.extend(
+  (name, group, "duplicate stream URL already present in the playlist or discovery queue")
+  for name, group, _ in duplicate_queue_rows
+ )
  # Apply the established five-channel threshold only to dynamic country groups.
  # Entries are preserved and moved to New Channels when their country group falls below threshold.
  dynamic_group_to_code={country_group(code).casefold():code for code in ISO_CODES if code not in {"BD","IN","PK"}}
@@ -394,7 +422,7 @@ def main():
  new_rows=[(n,final_group_by_identity.get((norm(n),c or ""),final_group_by_name.get(norm(n),g)),c,u) for n,g,c,u in new_rows]
  REPORT.parent.mkdir(parents=True,exist_ok=True); report=["# International Channel Discovery","",f"- Last scan: {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}",f"- Source: `{SOURCE_URL}`",f"- Source records parsed: {len(source)}",f"- Existing playlist records: {len(existing)}",
   f"- Existing logo references localized/repaired: {logo_refs_repaired}",
-  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for any retained dynamic country group.","- Automatic discovery is Movie/Music only for every country; News, Sports, Kids, Documentary/Wildlife, Religious, General/Entertainment and all other categories are rejected.","- New alternate streams are staged in New Backup; curated alternates remain in Backup.","- Only discovery queues are filtered; unrelated entries are preserved, with the five-channel threshold applied to dynamic country groups.","- The workflow probes newly discovered and queued stream URLs after candidate selection; inconclusive primary streams are retained for review and unverified backups are removed.",f"- New primary channels: {len(new_rows)}",f"- New backup review entries: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Out-of-scope existing entries removed: {len(filtered_existing)}","","## New primary channels",""]
- report += [f"- **{n}** — {g} — {c} — {u}" for n,g,c,u in new_rows]; report += ["","## Backup alternates",""]+[f"- **{n}** — {c} — {u}" for n,c,u in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Removed out-of-scope existing entries",""]+[f"- **{n}** — `{g}` — {reason}" for n,g,reason in filtered_existing]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
+  f"- Existing logo references removed because no safe local asset was available: {logo_refs_removed}",f"- Exact source URLs already in playlist: {exact_existing}",f"- Duplicate URLs within source feed: {exact_source_duplicates}",f"- New eligible source records after URL/policy filtering: {len(candidates)}",f"- Country threshold: {COUNTRY_THRESHOLD} unique primary identities for any retained dynamic country group.","- Automatic discovery is Movie/Music only for every country; News, Sports, Kids, Documentary/Wildlife, Religious, General/Entertainment and all other categories are rejected.","- New alternate streams are staged in New Backup; curated alternates remain in Backup.","- Only discovery queues are filtered; unrelated entries are preserved, with the five-channel threshold applied to dynamic country groups.","- The workflow probes newly discovered and queued stream URLs after candidate selection; inconclusive primary streams are retained for review and unverified backups are removed.",f"- New primary channels: {len(new_rows)}",f"- New backup review entries: {len(backup_rows)}",f"- Category migrations: {len(migrated)}",f"- Existing discovery-queue entries removed: {len(filtered_existing)}","","## New primary channels",""]
+ report += [f"- **{n}** — {g} — {c} — {u}" for n,g,c,u in new_rows]; report += ["","## Backup alternates",""]+[f"- **{n}** — {c} — {u}" for n,c,u in backup_rows]; report += ["","## Country Migrations",""]+[f"- **{n}**: `{old}` → `{new}`" for n,old,new in migrated]; report += ["","## Existing discovery-queue entries removed",""]+[f"- **{n}** — `{g}` — {reason}" for n,g,reason in filtered_existing]; report += ["","## Rejections",""]+[f"- {k}: {v}" for k,v in sorted(rejected.items())]; REPORT.write_text("\n".join(report)+"\n",encoding="utf-8")
  print(f"International discovery complete: new={len(new_rows)} new_backup={len(backup_rows)} migrations={len(migrated)} qualifying_country_groups={len(country_groups)}")
 if __name__=="__main__":raise SystemExit(main())

@@ -157,6 +157,27 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertEqual(discovery.promote_qualified_country_candidates(below_threshold, set()), [])
         self.assertTrue(all('group-title="New Channels"' in block[0] for block in below_threshold))
 
+    def test_duplicate_queue_urls_are_removed_but_primary_entries_are_preserved(self):
+        url_a = "https://example.org/epic-music.m3u8"
+        url_b = "https://example.org/oli-tv.m3u8"
+        url_c = "https://example.org/new-music.m3u8"
+        blocks = [
+            ['#EXTINF:-1 tvg-name="Epic Music Digital" group-title="Indian Music",Epic Music Digital', url_a],
+            ['#EXTINF:-1 tvg-name="Epic Music" group-title="New Backup",Epic Music', url_a],
+            ['#EXTINF:-1 tvg-name="Oli TV" group-title="Indian Entertainment",Oli TV', url_b],
+            ['#EXTINF:-1 tvg-name="Oli TV" group-title="New Channels",Oli TV', url_b],
+            ['#EXTINF:-1 tvg-name="New Music" group-title="New Channels",New Music', url_c],
+            ['#EXTINF:-1 tvg-name="Duplicate New Music" group-title="New Backup",Duplicate New Music', url_c],
+        ]
+        kept, removed = discovery.remove_duplicate_queue_urls(blocks)
+        self.assertEqual(len(removed), 3)
+        self.assertEqual(len(kept), 3)
+        self.assertEqual(kept[0][0], blocks[0][0])
+        self.assertEqual(kept[1][0], blocks[2][0])
+        self.assertEqual(kept[2][0], blocks[4][0])
+        self.assertEqual({name for name, _, _ in removed},
+                         {"Epic Music", "Oli TV", "Duplicate New Music"})
+
     def test_tokenized_urls_are_rejected_without_playback_testing(self):
         self.assertFalse(discovery.safe_url("https://example.org/live.m3u8?token=abc"))
         self.assertTrue(discovery.safe_url("https://example.org/channel/index.m3u8"))
