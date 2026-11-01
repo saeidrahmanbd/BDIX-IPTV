@@ -96,6 +96,8 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         examples = [
             ("Radio Bonita 106.7", "Music", "US", "RadioBonita.us"),
             ("Radio Chisinau", "Music", "MD", "RadioChisinau.md"),
+            ("Wavez FM", "Music", "US", "WavezFM.us"),
+            ("X 102.7 FM", "Music", "US", "X1027FM.us"),
             ("Star Trek: Deep Space Nine", "Movies", "US", "StarTrekDeepSpaceNine.us"),
             ("The Twilight Zone", "Movies", "US", "TheTwilightZone.us"),
             ("USA Network", "Movies", "US", "USANetwork.us"),
