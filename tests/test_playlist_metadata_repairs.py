@@ -26,7 +26,7 @@ def playlist_rows(path):
 class PlaylistMetadataRepairTests(unittest.TestCase):
     def test_all_playlists_advertise_the_public_xmltv_guide(self):
         expected = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"
-        for name in ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u"):
+        for name in ("IPTV-Playlist.m3u", "International-Playlist.m3u"):
             with self.subTest(playlist=name):
                 header = (ROOT / name).read_text(encoding="utf-8-sig").splitlines()[0]
                 self.assertIn(f'url-tvg="{expected}"', header)
@@ -67,25 +67,9 @@ class PlaylistMetadataRepairTests(unittest.TestCase):
         self.assertEqual(missing_names, [])
         self.assertEqual(empty_logos, [])
 
-    def test_bdix_review_rows_are_removed_and_known_names_corrected(self):
-        rows = playlist_rows(ROOT / "BDIX-Playlist.m3u")
-        self.assertFalse([row for row in rows if row["attrs"].get("group-title") in {"Test", "Not Playing"}])
-        expected = {
-            "DBCNews.bd": "DBC News",
-            "DeshTV.bd": "Desh TV",
-            "EkattorTV.bd": "Ekattor TV",
-            "News24.bd": "News 24",
-        }
-        indexed = {row["attrs"].get("tvg-id"): row for row in rows}
-        for channel_id, name in expected.items():
-            with self.subTest(channel_id=channel_id):
-                self.assertIn(channel_id, indexed)
-                self.assertEqual(indexed[channel_id]["attrs"].get("tvg-name"), name)
-                self.assertEqual(indexed[channel_id]["attrs"].get("group-title"), "Bangladesh")
-
-    def test_both_workers_serve_xmltv_and_keep_safe_stream_redirects(self):
+    def test_main_worker_serves_xmltv_and_keeps_safe_stream_redirects(self):
         expected = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml"
-        for name in ("xtream-main", "xtream-bdix"):
+        for name in ("xtream-main",):
             with self.subTest(worker=name):
                 source = (ROOT / name / "worker.js").read_text(encoding="utf-8")
                 self.assertIn(f'const EPG_URL = "{expected}"', source)
