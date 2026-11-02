@@ -122,7 +122,7 @@ EPG_LOCKS = {
 }
 
 REPORT = Path("reports/epg-coverage.md")
-THREE_PLAYLIST_REPORT = Path("reports/epg-three-playlist-audit.md")
+PLAYLIST_AUDIT_REPORT = Path("reports/epg-playlist-audit.md")
 SOURCE_AUDIT_REPORT = Path("reports/epg-source-audit.md")
 BANGLADESH_SOURCE_AUDIT_REPORT = Path("reports/bangladesh-epg-source-audit.md")
 SOURCES = [
@@ -277,7 +277,7 @@ def parse_stamp(value):
         return dt.astimezone(timezone.utc)
     except ValueError: return None
 
-PLAYLISTS = [Path("IPTV-Playlist.m3u"), Path("BDIX-Playlist.m3u"), Path("International-Playlist.m3u")]
+PLAYLISTS = [Path("IPTV-Playlist.m3u"), Path("International-Playlist.m3u")]
 INACTIVE_GROUPS = {"Backup", "Test", "Not Playing"}
 
 def playlist_records(path):
@@ -754,7 +754,7 @@ def main():
         "",
         f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",
         "",
-        "This report audits active unique channel identities across the three maintained playlists configured in the automated EPG pipeline. A source mapping is not counted as usable current/future coverage unless it has a valid programme interval and valid non-empty multilingual title data within the generator's -6-hour/+7-day window; English titles rank first, then Bengali, then other valid languages.",
+        "This report audits active unique channel identities across the two maintained playlists configured in the automated EPG pipeline. A source mapping is not counted as usable current/future coverage unless it has a valid programme interval and valid non-empty multilingual title data within the generator's -6-hour/+7-day window; English titles rank first, then Bengali, then other valid languages.",
         f"The XMLTV guide is published at **{EPG_PUBLISHED_PATH.as_posix()}**. The published guide uses the playlist's tvg-id as the XMLTV channel ID, not the upstream provider's source ID.",
         "",
         "## Overall Coverage",
@@ -1038,7 +1038,7 @@ def main():
         "",
         f"Generated: **{datetime.now(timezone.utc).isoformat(timespec='seconds')}**",
         "",
-        "This report measures the three maintained M3U playlists included in the automated EPG pipeline. The historic filename epg-three-playlist-audit.md is retained for link compatibility.",
+        "This report measures the two maintained M3U playlists included in the automated EPG pipeline. This report covers only the two maintained playlists.",
         "",
         "| Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |",
         "|---|---:|---:|---:|---:|---:|---:|---:|---|",
@@ -1073,8 +1073,8 @@ def main():
     ]
     if guide_error:
         report_lines += ["## Published XMLTV validation", "", "ERROR: " + guide_error, ""]
-    THREE_PLAYLIST_REPORT.parent.mkdir(parents=True, exist_ok=True)
+    PLAYLIST_AUDIT_REPORT.parent.mkdir(parents=True, exist_ok=True)
     report_lines += ["", "## Source Playlist Fingerprints", "", *source_fingerprints, ""]
-    THREE_PLAYLIST_REPORT.write_text("\n".join(report_lines), encoding="utf-8")
+    PLAYLIST_AUDIT_REPORT.write_text("\n".join(report_lines), encoding="utf-8")
 
 if __name__=="__main__": main()
