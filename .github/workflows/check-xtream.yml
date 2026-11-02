@@ -100,7 +100,11 @@ jobs:
               with open_retry(xml_req) as response:
                   sample = response.read(512).lstrip()
                   content_type = response.headers.get("Content-Type", "").lower()
-                  if          def playback_probe(host, stream):
+                  if response.status != 200 or "xml" not in content_type or not (sample.startswith(b"<?xml") or sample.startswith(b"<tv")):
+                      raise SystemExit(f"{host}: xmltv.php did not return XMLTV content")
+              print(f"{host} xmltv.php: HTTP=200 content-type=XML")
+
+          def playback_probe(host, stream):
               stream_id = stream.get("stream_id")
               source = stream.get("direct_source")
               if not stream_id or not source:
@@ -143,11 +147,6 @@ jobs:
                   return False, f"direct source HTTP={error.code}"
               except (urllib.error.URLError, TimeoutError, OSError) as error:
                   return False, f"direct source {type(error).__name__}"
-              if source_status not in (200, 206) or not first_byte:
-                  return False, f"direct source HTTP={source_status} empty_body={not bool(first_byte)}"
-              return True, f"route=302 source=HTTP {source_status} final_host={final_host}"
-
-r).__name__}"
               if source_status not in (200, 206) or not first_byte:
                   return False, f"direct source HTTP={source_status} empty_body={not bool(first_byte)}"
               return True, f"route=302 source=HTTP {source_status} final_host={final_host}"
