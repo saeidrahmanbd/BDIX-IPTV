@@ -97,7 +97,6 @@ def main():
         # row-count differences must not falsely mark an unchanged guide pending.
         epg_current = epg_report_fingerprints_match(egd) and epg_audit_headers_ok(egd)
     gate_status=prepublish_status(gate) if gate_current else "STALE / UNKNOWN"
-    gate_status=(gm.group(1) if gm else "UNKNOWN") if gate_current else "STALE / UNKNOWN"
     groups=Counter(x.get("group-title","") for x in e)
     active_groups={"Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani","International","Documentary & Wildlife","Kids","Religious","Sports"}
     active=len({x.get("tvg-id") or x.get("channel-id") for x in e if x.get("group-title") in active_groups and (x.get("tvg-id") or x.get("channel-id"))})

@@ -6,6 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
+import generate_dashboard as dashboard
 from generate_dashboard import (parse, playlist_counts, url_inventory_sha, epg_report_fingerprints_match, epg_audit_headers_ok, prepublish_status)
 from stream_health import stream_url_inventory_sha256
 
@@ -46,6 +47,11 @@ class DashboardFreshnessTests(unittest.TestCase):
         self.assertEqual(prepublish_status("Generated: **2026-11-02T00:00:00Z**\nStatus: **PASS**\n"), "PASS")
         self.assertEqual(prepublish_status("Status: **BLOCK**"), "BLOCK")
         self.assertEqual(prepublish_status("Status: PASS"), "UNKNOWN")
+    def test_dashboard_main_uses_current_pre_publish_status_parser(self):
+        import inspect
+        source = inspect.getsource(dashboard.main)
+        self.assertIn("gate_status=prepublish_status(gate)", source)
+        self.assertNotIn("gm.group", source)
     def test_epg_report_uses_exact_playlist_fingerprints(self):
         with tempfile.TemporaryDirectory() as directory:
             paths = []
