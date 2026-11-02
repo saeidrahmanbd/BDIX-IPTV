@@ -1,14 +1,14 @@
 # EPG Audit — Published Playlists
 
-Generated: **2026-11-02T02:00:22+00:00**
+Generated: **2026-11-02T04:01:41+00:00**
 
 This report measures the three maintained M3U playlists included in the automated EPG pipeline. The historic filename epg-three-playlist-audit.md is retained for link compatibility.
 
 | Playlist | Stream entries | Active unique IDs | Mapped IDs | Current/future source schedules | IDs in published guide | IDs with published schedules | No mapping | EPG header |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| IPTV-Playlist.m3u | 1186 | 705 | 462 | 412 | 462 | 394 | 243 | OK |
-| BDIX-Playlist.m3u | 131 | 131 | 78 | 73 | 78 | 72 | 53 | OK |
-| International-Playlist.m3u | 2514 | 2065 | 761 | 613 | 755 | 574 | 1304 | OK |
+| IPTV-Playlist.m3u | 1186 | 705 | 462 | 413 | 462 | 398 | 243 | OK |
+| BDIX-Playlist.m3u | 131 | 131 | 78 | 73 | 78 | 73 | 53 | OK |
+| International-Playlist.m3u | 2514 | 2065 | 761 | 613 | 755 | 576 | 1304 | OK |
 
 ## Group coverage
 
@@ -37,7 +37,7 @@ This report measures the three maintained M3U playlists included in the automate
 | Hungary | 15 | 8 | 6 | 7 |
 | Indian Bangla | 48 | 39 | 35 | 9 |
 | Indian Entertainment | 226 | 188 | 178 | 38 |
-| Indian Movies | 79 | 58 | 51 | 21 |
+| Indian Movies | 79 | 58 | 52 | 21 |
 | Indian Music | 72 | 60 | 56 | 12 |
 | International | 163 | 58 | 43 | 105 |
 | Iran | 9 | 3 | 2 | 6 |
@@ -82,6 +82,6 @@ This report measures the three maintained M3U playlists included in the automate
 
 ## Source Playlist Fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **a93c0292bc951c204dd26fa4bb2abd20d28208856b476e340272d5a6578c0dc3**
+- IPTV-Playlist.m3u SHA-256: **0c31f4d953ef07e39cd11c10526f6dab9ffe77d5ee69b5030d2c4ae744f6811e**
 - BDIX-Playlist.m3u SHA-256: **6e98537a07d9bb5f5ee818f86defff1357302adeaca270e0786a7185bcd33b2d**
 - International-Playlist.m3u SHA-256: **1fe061be22b2f0ba30e3af4533d431a3a11eb482f36d0b01d39474f87b116106**
