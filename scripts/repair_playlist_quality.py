@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Deterministic quality repair for IPTV-Playlist.m3u only.
 
-This script intentionally NEVER reads or writes BDIX-Playlist.m3u.
+This script is scoped to IPTV-Playlist.m3u only; it never accesses the International playlist.
 """
 from pathlib import Path
 import re
