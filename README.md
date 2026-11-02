@@ -77,10 +77,6 @@ Works with **XCIPTV** and any M3U-compatible player, such as TiviMate, VLC, IPTV
 https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u
 ```
 
-
-```text
-```
-
 **International — International-Playlist.m3u**
 
 ```text
@@ -139,7 +135,7 @@ https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml
 
 <p align="center">
   <a href="assets/iptv-project-showcase.svg">
-    <img src="assets/iptv-project-showcase.svg" alt="BDIX-IPTV repository showcase with the three playlists and project quality checks" width="100%">
+    <img src="assets/iptv-project-showcase.svg" alt="BDIX-IPTV repository showcase with the two maintained playlists and project quality checks" width="100%">
   </a>
 </p>
 
