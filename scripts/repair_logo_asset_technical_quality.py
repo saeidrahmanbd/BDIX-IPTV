@@ -18,7 +18,7 @@ from urllib.parse import urlsplit
 from PIL import Image, ImageOps
 
 LOGOS = Path("logos")
-PLAYLISTS = ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u")
+PLAYLISTS = ("IPTV-Playlist.m3u", "International-Playlist.m3u")
 REPORT = Path("reports/logo-asset-quality-audit.md")
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 DEFAULT_MAX_DIMENSION = 1600
