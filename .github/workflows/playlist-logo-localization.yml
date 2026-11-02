@@ -61,7 +61,7 @@ jobs:
           python - <<'PY'
           import re
           from pathlib import Path
-          names = ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u"]
+          names = ["IPTV-Playlist.m3u", "International-Playlist.m3u"]
           for name in names:
               text = Path(name).read_text(encoding="utf-8-sig").replace("\r\n", "\n").replace("\r", "\n")
               text = re.sub(r'\s+tvg-logo="[^"]*"', "", text)
@@ -85,7 +85,7 @@ jobs:
           registry_path = Path("reports/logo-source-registry.json")
           registry = json.loads(registry_path.read_text(encoding="utf-8")) if registry_path.is_file() else {}
           base = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
-          names = ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u"]
+          names = ["IPTV-Playlist.m3u", "International-Playlist.m3u"]
           blocked = {
               "atn-news.png", "a-sports-5485adff.png", "a-sports-hd.png", "bein-sports-3.png",
               "bangla-tv.png", "btv-news.png", "colors.png", "duronto-tv.png",
@@ -155,7 +155,7 @@ jobs:
                   raise SystemExit("Logo validation failed: " + name + " " + json.dumps(summaries[name]))
           print(json.dumps(summaries, indent=2))
           PY
-          git add IPTV-Playlist.m3u BDIX-Playlist.m3u International-Playlist.m3u logos/ reports/playlist-logo-repair-results.md reports/logo-source-registry.json reports/logo-authenticity-manifest.json
+          git add IPTV-Playlist.m3u International-Playlist.m3u logos/ reports/playlist-logo-repair-results.md reports/logo-source-registry.json reports/logo-authenticity-manifest.json
           if git diff --cached --quiet; then
             echo "No additional local logo changes."
             exit 0
