@@ -11,7 +11,6 @@ class LogoProvenanceReviewTests(unittest.TestCase):
         manifest = {
             "status_counts_by_playlist": {
                 "IPTV-Playlist.m3u": {"needs_review": 2, "generated_fallback": 1, "third_party_verified": 3, "official_verified": 0},
-                "BDIX-Playlist.m3u": {"needs_review": 4, "generated_fallback": 0, "third_party_verified": 0, "official_verified": 0},
                 "International-Playlist.m3u": {"needs_review": 0, "generated_fallback": 0, "third_party_verified": 0, "official_verified": 0},
             },
             "entries": [
@@ -23,7 +22,7 @@ class LogoProvenanceReviewTests(unittest.TestCase):
         }
         report = build_report(
             manifest,
-            {"IPTV-Playlist.m3u": "a" * 64, "BDIX-Playlist.m3u": "b" * 64, "International-Playlist.m3u": "c" * 64},
+            {"IPTV-Playlist.m3u": "a" * 64, "International-Playlist.m3u": "c" * 64},
             "2026-10-20T12:00:00+00:00",
         )
         self.assertIn("does not by itself prove the logo is wrong", report)
