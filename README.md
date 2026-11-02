@@ -1,8 +1,3 @@
-<!-- BDIX-IPTV banner -->
-<p align="center">
-  <img src="assets/bdix-iptv-banner.jpg" alt="BDIX-IPTV — Bangladesh, India and international IPTV playlists" width="100%">
-</p>
-
 <h1 align="center">📺 BDIX-IPTV</h1>
 
 <p align="center">
