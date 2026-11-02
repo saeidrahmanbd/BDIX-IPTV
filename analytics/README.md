@@ -28,11 +28,11 @@ After a successful workflow run, open `https://bdix-iptv-analytics.saeidrahman.w
 
 ## Playlist URLs after deployment
 
-Replace `<WORKER_HOST>` with the exact workers.dev hostname printed by Wrangler:
+The configured deployment hostname is `bdix-iptv-analytics.saeidrahman.workers.dev`:
 
-- Main: `https://<WORKER_HOST>/main.m3u`
-- International: `https://<WORKER_HOST>/international.m3u`
-- Dashboard: `https://<WORKER_HOST>/`
+- Main: `https://bdix-iptv-analytics.saeidrahman.workers.dev/main.m3u`
+- International: `https://bdix-iptv-analytics.saeidrahman.workers.dev/international.m3u`
+- Dashboard: `https://bdix-iptv-analytics.saeidrahman.workers.dev/`
 
 **Important:** Requests to the existing `raw.githubusercontent.com` URLs bypass this gateway and cannot be counted by this service. To measure usage, distribute the Worker URLs in the README, player setup instructions and any external listing. Keep the raw GitHub URLs as direct fallback links.
 
