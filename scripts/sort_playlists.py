@@ -82,6 +82,6 @@ def sort_playlist(path):
             else:record[0]=set_attr(record[0],"tvg-chno",str(next_number)); next_number+=1
     path.write_text("\n".join(preamble+[line for record in records for line in record])+"\n",encoding="utf-8")
 def main(argv=None):
-    paths=argv if argv is not None else (sys.argv[1:] or ["IPTV-Playlist.m3u","BDIX-Playlist.m3u","International-Playlist.m3u"])
+    paths=argv if argv is not None else (sys.argv[1:] or ["IPTV-Playlist.m3u","International-Playlist.m3u"])
     for raw in paths:sort_playlist(Path(raw))
 if __name__=="__main__":main()
