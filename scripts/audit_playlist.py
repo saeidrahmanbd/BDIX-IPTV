@@ -273,7 +273,7 @@ for info, url in entries:
     elif re.search(r"[?&]hdnts=$", url, re.I):
         suspicious_urls.append((display_name(info), "empty hdnts", url))
     if re.search(r"^https?://(?:[^/]+\.)?dvltv\.cc(?::\d+)?/play(?:/|$)", url, re.I):
-        suspicious_urls.append((display_name(info), "blocked dvltv.cc/play route", url))
+        suspicious_urls.append((display_name(info), "", url))
 
 metadata_conflicts = []
 for cid, items in sorted(by_id.items()):
@@ -444,7 +444,7 @@ for group in category_transitions:
         if natural_sort_key(cur) < natural_sort_key(prev):
             alphabetical_order_issues.append((group, prev, cur))
 
-_reference = reference_from_playlists([PLAYLIST, Path("BDIX-Playlist.m3u"), Path("International-Playlist.m3u")])
+_reference = reference_from_playlists([PLAYLIST, Path("International-Playlist.m3u")])
 review_queue_country_issues = review_queue_country_errors(
     [(attrs(info), display_name(info), url) for info, url in entries], _reference)
 
