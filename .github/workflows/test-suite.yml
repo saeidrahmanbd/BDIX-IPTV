@@ -9,7 +9,6 @@ on:
       - "scripts/**"
       - "tests/**"
       - "xtream-main/**"
-      - "xtream-bdix/**"
       - "docs/requirements.txt"
       - ".github/workflows/test-suite.yml"
   workflow_dispatch:
@@ -39,6 +38,5 @@ jobs:
       - name: Syntax-check Cloudflare Worker modules
         run: |
           node --input-type=module --check < xtream-main/worker.js
-          node --input-type=module --check < xtream-bdix/worker.js
       - name: Run the complete test suite
         run: python -m unittest discover -s tests -v
