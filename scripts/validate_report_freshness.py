@@ -25,7 +25,7 @@ SHARED_EPG_REPORTS = ("reports/epg-coverage.md", "reports/epg-playlist-audit.md"
 SHARED_PLAYLIST_REPORTS = ("reports/logo-asset-quality-audit.md",)
 TIMESTAMP_ONLY_REPORTS = ("reports/epg-publish-freshness.md",)
 PROVENANCE_REPORT = "reports/logo-provenance-review.md"
-CROSS_PLAYLIST_METADATA_REPORT = "reports/cross-playlist-metadata-backfill.md"
+CROSS_PLAYLIST_METADATA_REPORT = "reports/playlist-metadata-backfill.md"
 STREAM_HEALTH_REPORT = "reports/stream-health.md"
 # Reports owned by IPTV New Channel Discovery; other maintenance reports have separate owners.
 DISCOVERY_REPORTS = (
