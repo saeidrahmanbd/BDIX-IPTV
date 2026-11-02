@@ -34,6 +34,8 @@ https://btv.hridoytv-channel.workers.dev/btv.m3u8
 https://btv.hridoytv-channel.workers.dev/news.m3u8
 #EXTINF:-1 tvg-id="Channel1.bd" tvg-name="Channel 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-1.png" tvg-chno="14" channel-id="Channel1.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Channel 1
 https://stream.ottplus.live/live/channel_1_hd_abr/index.m3u8
+#EXTINF:-1 channel-id="Channel16.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-16.png" tvg-id="Channel16.bd" tvg-name="Channel 16" tvg-language="ben" tvg-country="BD" group-title="Bangladesh",Channel 16
+https://iptvlive.ahmed-bd-org.workers.dev/channel-16-1/index.m3u8
 #EXTINF:-1 tvg-chno="15" channel-id="Channel24.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-24.png" tvg-id="Channel24.bd" tvg-name="Channel 24" tvg-language="ben" tvg-country="BD" group-title="Bangladesh",Channel 24
 https://tvsen6.aynaott.com/YrVDF8gujkdh/index.m3u8
 #EXTINF:-1 tvg-id="Channel52.bd" tvg-name="Channel 52" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/channel-52.png" tvg-chno="18" channel-id="Channel52.bd" tvg-country="BD" tvg-language="ben" group-title="Bangladesh",Channel 52
@@ -1272,6 +1274,8 @@ https://tvsen3.aynaott.com/EuEy5mBW/index.m3u8
 https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv1/playlist.m3u8
 #EXTINF:-1 tvg-chno="661" channel-id="custom.islamchannelbangla" tvg-id="custom.islamchannelbangla" tvg-name="Islam Channel Bangla" group-title="Religious",Islam Channel Bangla
 https://live-islamtv-bangla.simplestreamcdn.com/out/v1/islamchannel/islamtv-bangla/hls-ts/index.m3u8
+#EXTINF:-1 channel-id="IslamTV.sa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/islam-tv.png" tvg-id="IslamTV.sa" tvg-name="Islam TV" tvg-language="ara" tvg-country="SA" group-title="Religious",Islam TV
+https://tvsen1.aynaott.com/bB3A5dyq/index.m3u8
 #EXTINF:-1 channel-id="IslamicTV.sa" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/islamic-tv.png" tvg-id="IslamicTV.sa" tvg-name="Islamic TV" tvg-chno="623" tvg-language="ara" tvg-country="SA" group-title="Religious",Islamic TV
 https://drk6xq0vhn.gpcdn.net/live/islamic_tv/index.m3u8
 #EXTINF:-1 channel-id="MadaniChannelBangla.bd@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/madani-tv.png" tvg-id="MadaniChannelBangla.bd@SD" tvg-name="Madani Channel Bangla" tvg-language="und" tvg-country="BD" group-title="Religious",Madani Channel Bangla
