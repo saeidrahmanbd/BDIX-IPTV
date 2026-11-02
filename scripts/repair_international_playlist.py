@@ -5,7 +5,7 @@ import json,re,unicodedata,urllib.request,urllib.parse
 from difflib import SequenceMatcher
 
 PLAYLIST=Path('International-Playlist.m3u'); LOGOS=Path('logos')
-REFERENCE_PLAYLISTS=(Path('IPTV-Playlist.m3u'),Path('BDIX-Playlist.m3u'))
+REFERENCE_PLAYLISTS=(Path('IPTV-Playlist.m3u'),)
 RAW_BASE='https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/'
 IPTV_LOGOS='https://iptv-org.github.io/api/logos.json'; IPTV_CHANNELS='https://iptv-org.github.io/api/channels.json'
 FIXED_ORDER=['Bangladesh','Indian Bangla','Indian Movies','Indian Music','Indian Entertainment','Pakistani']
