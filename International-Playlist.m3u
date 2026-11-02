@@ -248,6 +248,8 @@ https://samitaorigin.tangotv.in/MOVIEPUNJAB/SAMITAORIGIN/index.m3u8
 https://jmp2.uk/stvp-IN46000140Q
 #EXTINF:-1 tvg-id="NHTamilGold.in@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/nh-tamil-gold.png" tvg-country="IN" group-title="Indian Movies" tvg-name="NH Tamil Gold",NH Tamil Gold
 https://d3arbp6l7f096k.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gv6wgpbb4mgwk/playlist.m3u8?ads.ads_cdn=cf&ads.app_domain=APP_DOMAIN&ads.cdn=cf
+#EXTINF:-1 tvg-id="custom.oscar-movies-bhojpuri-in-movie" channel-id="custom.oscar-movies-bhojpuri-in-movie" tvg-language="bho" tvg-country="IN" tvg-content="Movies" group-title="Indian Movies" tvg-name="Oscar Movies Bhojpuri",Oscar Movies Bhojpuri
+https://mumt05.tangotv.in/87NeALx2OSCARMOVIESBHOJPURI/index.m3u8
 #EXTINF:-1 tvg-id="Pitaara.in" channel-id="Pitaara.in" tvg-language="pan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pitaara-tv.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Pitaara",Pitaara
 https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8
 #EXTINF:-1 tvg-id="Pitaara.in@SD" channel-id="Pitaara.in@SD" tvg-language="pan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/pitaara-tv.png" tvg-country="IN" group-title="Indian Movies" tvg-name="Pitaara TV",Pitaara TV
