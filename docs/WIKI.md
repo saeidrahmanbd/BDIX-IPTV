@@ -4,7 +4,7 @@ The root [README.md](../README.md) is the canonical project overview, playlist c
 
 ## Playlist and discovery policy
 
-- Two maintained playlists: [IPTV](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u), [BDIX](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u), and [International](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u).
+- Two maintained playlists: [IPTV](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) and [International](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u).
 - International country groups are for movie/music channels. Documentary & Wildlife, Kids, Sports, Religious, Adult, and the explicit Fashion TV exception remain in dedicated groups.
 - Discovery queues are restricted to verified Bangladesh/India candidates. Bangladeshi news is allowed; Indian News and non-Islamic religious channels are prohibited; Indian Kids/Sports and Islamic religious channels are allowed.
 - **Permanent denylist:** E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.
@@ -19,7 +19,7 @@ The all-playlist EPG mapping registry is `reports/epg-channel-mapping.csv`. Adul
 
 ## EPG publication
 
-The public XMLTV refresh pipeline is enabled. The guide is published to `epg/epg.xml` after the scheduled workflow passes source-fetch, freshness and quality checks. The three playlist headers advertise the public raw XMLTV URL, and both Xtream `xmltv.php` handlers fetch that same guide. The EPG pipeline can combine useful public or otherwise accessible sources, including third-party feeds, for discovery, mapping and schedule acquisition. Private credentials and personalized feed URLs are kept out of the repository.
+The public XMLTV refresh pipeline is enabled. The guide is published to `epg/epg.xml` after the scheduled workflow passes source-fetch, freshness and quality checks. Both maintained playlist headers advertise the public raw XMLTV URL. The main Xtream worker serves that guide through its authenticated `xmltv.php` endpoint. The EPG pipeline can combine useful public or otherwise accessible sources, including third-party feeds, for discovery, mapping and schedule acquisition. Private credentials and personalized feed URLs are kept out of the repository.
 
 See [EPG status and maintenance](../epg/README.md) and the [coverage report](../reports/epg-coverage.md).
 
