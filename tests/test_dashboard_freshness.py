@@ -71,7 +71,7 @@ class DashboardFreshnessTests(unittest.TestCase):
         self.assertFalse(epg_audit_headers_ok(report.replace(
             "International-Playlist.m3u | 20 | 12 | OK",
             "International-Playlist.m3u | 20 | 12 | MISMATCH",
-        ))
+        )))
 
 
 if __name__ == "__main__":
