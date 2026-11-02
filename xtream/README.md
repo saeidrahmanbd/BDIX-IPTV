@@ -1,20 +1,20 @@
 # Xtream Gateway
 
-BDIX-IPTV provides optional Xtream-compatible access to the curated playlists through two Cloudflare Worker deployments.
+BDIX-IPTV provides optional Xtream-compatible access to the curated playlists through a Cloudflare Worker deployment.
 
 ## Workers
 
 | Worker | Playlist | Configuration |
 |---|---|---|
 | `xtream-main` | `IPTV-Playlist.m3u` | [`xtream-main/wrangler.toml`](../xtream-main/wrangler.toml) |
-| `xtream-bdix` | `BDIX-Playlist.m3u` | [`xtream-bdix/wrangler.toml`](../xtream-bdix/wrangler.toml) |
+
 
 The workers read the public raw playlist URLs configured in their respective `wrangler.toml` files and expose Xtream-style endpoints for compatible IPTV clients.
 
 ## Source tree
 
 - [`xtream-main/`](../xtream-main/) — main IPTV worker source and configuration
-- [`xtream-bdix/`](../xtream-bdix/) — BDIX worker source and configuration
+
 - [`xtream/`](./) — this documentation and gateway policy
 
 ## Optional relay example
@@ -23,7 +23,7 @@ The `assets/relay/` directory contains an optional Docker Compose / Nginx relay 
 
 ## Programme guide
 
-Both workers expose authenticated `/xmltv.php` endpoints backed by the same public XMLTV file:
+The main worker exposes an authenticated `/xmltv.php` endpoint backed by the same public XMLTV file:
 
 `https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml`
 
@@ -38,7 +38,6 @@ The endpoints stream the published guide and return HTTP 503 if the guide is tem
 
 ## Deployment
 
-The repository's GitHub Actions workflows handle deployment/checking of the Xtream workers. The worker source lives in [`xtream-main/`](../xtream-main/) and [`xtream-bdix/`](../xtream-bdix/).
 
 For a safe local configuration example, see [`assets/examples/sample-config.md`](../assets/examples/sample-config.md).
 
