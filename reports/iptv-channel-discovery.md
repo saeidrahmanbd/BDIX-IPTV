@@ -1,20 +1,20 @@
 # IPTV Channel Discovery
 
-Generated: **2026-11-01T13:16:54.676684+00:00**
+Generated: **2026-11-02T03:15:07.408161+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News and non-Islamic Religious channels are prohibited; Indian Kids and Sports channels are allowed.**
 - Permanent denylist: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.
 - Country-group threshold: **5** legitimate primary identities
 - Existing prohibited review-queue rows removed: **0**
-- New channels: **1**
+- New channels: **2**
 - New backups: **21**
-- Rejected/held candidates: **811**
+- Rejected/held candidates: **813**
 - Country policy: only candidates verified as BD/IN (valid `.bd`/`.in` id, or repository-mapping evidence when the id is missing/malformed) are queued; conflicting or unverifiable candidates are held.
 
 ## Rejection reasons
 
-- Indian news channel is prohibited: 266
+- Indian news channel is prohibited: 267
 - country not verified: id carries a non-BD/IN country suffix: 27
 - country not verified: id country IN conflicts with BD source feed: 10
 - duplicate stream URL: 350
@@ -22,12 +22,13 @@ Generated: **2026-11-01T13:16:54.676684+00:00**
 - non-Islamic religious channel is prohibited: 107
 - permanently banned channel: 10
 - proxy/worker host: 2
-- tokenized URL: 10
+- tokenized URL: 11
 - unsupported stream path: 5
 
 ## New Channels
 
 - Star Sports 2 Hindi (720p) (India) — https://tvsen5.aynaott.com/cXPB2LKkErN9/index.m3u8
+- Vision Beats (720p) (India) — http://a-edge.bliscdn.com/Visionbeats/index.m3u8
 
 ## New Backups
 
@@ -55,12 +56,12 @@ Generated: **2026-11-01T13:16:54.676684+00:00**
 
 ## Stream verification
 
-- Run timestamp: 2026-11-01T13:17:09+00:00
+- Run timestamp: 2026-11-02T03:15:24+00:00
 - Mode: iptv
-- New entries and discovery queues probed: 42
+- New entries and discovery queues probed: 43
 - Verified live media responses: 5
 - Primary entries retained but not conclusively verified: 15
-- Dead/invalid entries and unverified backups removed: 22
+- Dead/invalid entries and unverified backups removed: 23
 - Duplicate discovery entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
@@ -70,6 +71,7 @@ Generated: **2026-11-01T13:16:54.676684+00:00**
 - Retained Colors Infinity for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Disney International for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Disney Junior (India) for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Removed HSTV from New Channels — HTTP 404.
 - Retained Sony Sports Ten 1 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Sony Sports Ten 2 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Retained Sony Sports Ten 3 Hindi for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
@@ -95,7 +97,7 @@ Generated: **2026-11-01T13:16:54.676684+00:00**
 - Removed Star Jalsha from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Star Movies (India) from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Star Sports 2 from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
-- Removed Star Sports 2 from New Backup — backup stream not verified (connection could not be confirmed: URLError).
+- Removed Star Sports 2 from New Backup — HTTP 404.
 - Removed Star Sports Select 1 from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Star Sports Select 2 from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed StarPlus (India) from New Backup — backup stream not verified (connection could not be confirmed: URLError).
@@ -107,13 +109,16 @@ Generated: **2026-11-01T13:16:54.676684+00:00**
 
 ## Final validation
 
-- Run timestamp: 2026-11-01T13:17:10+00:00
-- Validation status: PASS
+- Run timestamp: 2026-11-02T03:15:24+00:00
+- Validation status: FAIL
 - M3U entries parsed: 1186
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
-- New Channels/New Backup/Backup ordering: passed
-- Discovery entries missing a logo (left blank rather than using a placeholder): 2
+- New Channels/New Backup/Backup ordering: failed
+- Discovery entries missing a logo (left blank rather than using a placeholder): 1
 - Non-local discovery logo references: 0
 - Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
+
+### Blockers
+- Category registry must end New Channels/New Backup/Backup and present playlist groups must follow that registry order
