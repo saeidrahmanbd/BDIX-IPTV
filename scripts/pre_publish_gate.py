@@ -50,7 +50,7 @@ def referenced_logo_file(logo, logos_root=Path("logos")):
 
 
 def approved_removal(url):
-    u=url.lower(); return bool(re.search(r'https?://[^/]*vods?\d*\.[^/]+/',u) or re.search(r'/vod(?:/|$)',u) or 'api.toonamiaftermath.com:3000/movies/' in u or 'dvltv.cc/play/' in u or 'tvsen5.aynaott.com/tk2bndfsdfsdf/' in u)
+    u=url.lower(); return bool(re.search(r'https?://[^/]*vods?\d*\.[^/]+/',u) or re.search(r'/vod(?:/|$)',u) or 'api.toonamiaftermath.com:3000/movies/' in u or 'tvsen5.aynaott.com/tk2bndfsdfsdf/' in u)
 def logo_audit(entries):
     missing=[]; review_missing=[]; external=[]; bad=[]
     for _,a,_ in entries:
@@ -138,7 +138,7 @@ def main():
     if logo_external: issues.append(f"external logo URLs: {len(logo_external)}")
     if logo_bad: issues.append(f"incorrect/placeholder/generic logos: {len(logo_bad)}")
     if logo_missing_files: issues.append(f"referenced local logo files missing from repository: {len(logo_missing_files)}")
-    queue_errors=[]; country_reference=reference_from_playlists([P,Path("BDIX-Playlist.m3u"),Path("International-Playlist.m3u")])
+    queue_errors=[]; country_reference=reference_from_playlists([P,Path("International-Playlist.m3u")])
     for _,a,u in current:
         group=a.get("group-title","").strip()
         if group not in REVIEW_QUEUES: continue
