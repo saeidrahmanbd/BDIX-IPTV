@@ -25,11 +25,12 @@ Automatic corrections require repeated cross-source title and duration matches, 
 - **Stingray Classica** (StingrayClassica.ca@SD): source ID StingrayClassica.ro from https://iptv-epg.org/files/epg-ro.xml.gz shifted by -25 hours after repeated cross-source agreement.
 - **Stingray DJAZZ** (StingrayDJAZZ.ca@SD): source ID Stingray.Djazz.ro from https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz shifted by +2 hours after repeated cross-source agreement.
 - **Stingray DJAZZ** (StingrayDJAZZ.ca@SD): source ID StingrayDjazz.ro from https://iptv-epg.org/files/epg-ro.xml.gz shifted by -23 hours after repeated cross-source agreement.
-- **TV9 Bangla** (TV9Bangla.in): source ID SWIFTTV_LIVECHANNEL_31 from https://raw.githubusercontent.com/jasonramg/iptv-epg/main/epg/airtel.xml shifted by -5.5 hours after repeated cross-source agreement.
+- **Unique TV** (UniqueTV.in@SD): source ID ts1164 from https://avkb.short.gy/epg.xml.gz shifted by +24 hours after repeated cross-source agreement.
+- **Vendhar TV** (VendharTV.in@SD): source ID 857 from https://avkb.short.gy/jioepg.xml.gz shifted by +24 hours after repeated cross-source agreement.
 - **Sun Bangla** (custom.sun-bangla-k1d4w): source ID SunBangla.in (src09) from M3U4U XMLTV (private Actions secret) shifted by -5.5 hours after repeated cross-source agreement.
 
 ## Feed-wide offset patterns
 
 - **M3U4U XMLTV (private Actions secret)**: 13 channels were corrected by the same -5.5 hours. This looks like a feed-wide timezone problem; other channels from this feed without cross-source overlap may still be shifted and should be reviewed.
 
-Detected source-ID corrections: **23**
+Detected source-ID corrections: **24**

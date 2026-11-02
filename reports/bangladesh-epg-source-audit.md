@@ -1,11 +1,11 @@
 # Bangladesh EPG Source Audit
 
-Generated: **2026-11-02T04:01:41+00:00**
+Generated: **2026-11-02T05:14:44+00:00**
 
-- Active Bangladesh playlist identities: **88**
+- Active Bangladesh playlist identities: **90**
 - Identities with a retained source mapping: **3**
 - Identities with usable current/future schedules: **2**
-- Identities without a source mapping: **85**
+- Identities without a source mapping: **87**
 
 This report distinguishes a feed's overall channel count from an exact/explicit match to a Bangladesh playlist identity. Source availability alone does not count as Bangladesh coverage.
 
@@ -21,8 +21,8 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Status | Source | Source channel IDs | Source IDs with current/future programmes | Eligible programme rows | Error / note |
 |---|---|---:|---:|---:|---|
 | FAILED | https://www.rtvbd.tv/schedule.php | 0 | 0 | 0 | Could not fetch the official RTV schedule over verified HTTPS (rtvbd.tv: URLError; www.rtvbd.tv: URLError) |
-| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 71 | - |
-| OK | M3U4U XMLTV (private Actions secret) | 229 | 166 | 7697 | - |
+| OK | https://migrate.btvlive.gov.bd/channel/BTV | 1 | 1 | 72 | - |
+| OK | M3U4U XMLTV (private Actions secret) | 229 | 166 | 7398 | - |
 
 ## Unmapped Bangladesh identities
 
@@ -46,6 +46,7 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | BTV News | custom.btv.news | NO_GUIDE_HIT |
 | Channel 1 | Channel1.bd | NO_GUIDE_HIT |
 | Channel 1 | custom.channel.1 | NO_GUIDE_HIT |
+| Channel 16 | Channel16.bd | NO_GUIDE_HIT |
 | Channel 24 | Channel24.bd | NO_GUIDE_HIT |
 | Channel 52 | Channel52.bd | NO_GUIDE_HIT |
 | Channel 9 | Channel9.bd | NO_GUIDE_HIT |
@@ -77,6 +78,7 @@ This report distinguishes a feed's overall channel count from an exact/explicit 
 | Jamuna TV | JamunaTV.bd | NO_GUIDE_HIT |
 | Jonmobhumi TV | JonmobhumiTV.bd | NO_GUIDE_HIT |
 | Maasranga TV | MaasrangaTV.bd | NO_GUIDE_HIT |
+| Madani Channel Bangla | MadaniChannelBangla.bd@SD | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd | NO_GUIDE_HIT |
 | Matribhumi TV | MatribhumiTV.bd@HD | NO_GUIDE_HIT |
 | ME TV | METV.bd | NO_GUIDE_HIT |
