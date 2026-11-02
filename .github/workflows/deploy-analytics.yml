@@ -1,0 +1,122 @@
+name: Deploy IPTV Analytics
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "analytics/**"
+      - ".github/workflows/deploy-analytics.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-iptv-analytics
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: Find or create Cloudflare D1 database and configure binding
+        working-directory: analytics
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re, sys, urllib.error, urllib.request
+
+          token = os.environ.get("CLOUDFLARE_API_TOKEN", "")
+          account = os.environ.get("CLOUDFLARE_ACCOUNT_ID", "")
+          if not token or not account:
+              raise SystemExit("Missing GitHub Actions secrets: CLOUDFLARE_API_TOKEN and/or CLOUDFLARE_ACCOUNT_ID")
+
+          base = f"https://api.cloudflare.com/client/v4/accounts/{account}/d1/database"
+          headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
+
+          def call(url, method="GET", payload=None):
+              data = None if payload is None else json.dumps(payload).encode()
+              req = urllib.request.Request(url, data=data, headers=headers, method=method)
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as response:
+                      result = json.loads(response.read())
+              except urllib.error.HTTPError as error:
+                  detail = error.read().decode("utf-8", "replace")
+                  raise SystemExit(f"Cloudflare D1 API returned HTTP {error.code}: {detail[:1200]}")
+              if not result.get("success"):
+                  raise SystemExit("Cloudflare D1 API error: " + json.dumps(result.get("errors", []))[:1200])
+              return result.get("result")
+
+          databases = call(base + "?per_page=100") or []
+          db = next((item for item in databases if item.get("name") == "bdix-iptv-analytics"), None)
+          if db is None:
+              db = call(base, "POST", {"name": "bdix-iptv-analytics"})
+              print("Created Cloudflare D1 database.")
+          else:
+              print("Found existing Cloudflare D1 database.")
+          db_id = db.get("uuid") or db.get("database_id")
+          if not db_id:
+              raise SystemExit("Cloudflare did not return a D1 database ID.")
+          config = "wrangler.toml"
+          text = open(config, encoding="utf-8").read()
+          updated, count = re.subn(r'database_id = "[^"]+"', f'database_id = "{db_id}"', text, count=1)
+          if count != 1:
+              raise SystemExit("Could not populate D1 database_id in analytics/wrangler.toml")
+          open(config, "w", encoding="utf-8").write(updated)
+          print("D1 binding configured for deployment.")
+          PY
+
+      - name: Install Wrangler
+        run: npm install --global wrangler@4
+
+      - name: Create or update analytics tables
+        working-directory: analytics
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: wrangler d1 execute bdix-iptv-analytics --remote --file=schema.sql
+
+      - name: Deploy analytics Worker
+        working-directory: analytics
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: wrangler deploy --config wrangler.toml
+
+      - name: Verify dashboard, API and tracked playlists
+        run: |
+          python3 - <<'PY'
+          import json, time, urllib.error, urllib.request
+          base = "https://bdix-iptv-analytics.saeidrahman.workers.dev"
+          checks = ["/health", "/", "/api/stats?days=14", "/main.m3u", "/international.m3u"]
+          for path in checks:
+              last_error = None
+              for attempt in range(8):
+                  try:
+                      req = urllib.request.Request(base + path, headers={"User-Agent": "BDIX-IPTV-Deployment-Check/1.0"})
+                      with urllib.request.urlopen(req, timeout=30) as response:
+                          body = response.read(2048)
+                          if response.status != 200:
+                              raise RuntimeError(f"HTTP {response.status}")
+                          if path == "/health" and json.loads(body).get("ok") is not True:
+                              raise RuntimeError("Health payload is invalid")
+                          if path.startswith("/api/stats") and "totals" not in json.loads(body):
+                              raise RuntimeError("Analytics API response is invalid")
+                          if path.endswith(".m3u") and not body.lstrip().startswith(b"#EXTM3U"):
+                              raise RuntimeError("Playlist response is not an M3U file")
+                          if path == "/" and b"BDIX-IPTV Analytics" not in body:
+                              raise RuntimeError("Dashboard HTML did not load")
+                          print(f"PASS {path}")
+                          break
+                  except Exception as error:
+                      last_error = error
+                      if attempt == 7:
+                          raise SystemExit(f"Verification failed for {path}: {last_error}")
+                      time.sleep(5)
+          PY
