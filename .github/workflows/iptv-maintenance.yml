@@ -49,7 +49,10 @@ on:
       - scripts/refresh_dashboard_diagnostics.py
       - scripts/enforce_playlist_attribution.py
       - scripts/discover_international_channels.py
+      - scripts/validate_discovery_run.py
       - tests/test_international_discovery_policy.py
+      - tests/test_discovery_run_validation.py
+      - tests/test_international_protected_guard.py
       - scripts/reorganize_international_playlist.py
       - scripts/validate_international_playlist.py
       - tests/test_playlist_metadata_repairs.py

@@ -17,7 +17,7 @@ INTERNATIONAL_FIXED = [
     "Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music",
     "Indian Entertainment", "Pakistani",
 ]
-INTERNATIONAL_TAIL = ["International Movies", "International Music", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backup", "Backup"]
+INTERNATIONAL_TAIL = ["International", "Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backup", "Backup"]
 INTERNATIONAL_LEGACY = {"not playing", "international", "backup", "backups", "new backup", "new backups"}
 ATTRIBUTE_ORDER = (
     "tvg-id", "tvg-name", "tvg-logo", "tvg-chno",

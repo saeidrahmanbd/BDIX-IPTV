@@ -75,7 +75,6 @@ def main():
 
     urls, groups_seen, group_set = [], [], set()
     missing_logos, broken_logos = 0, []
-    country_primary_ids = {code: set() for code in discovery.ISO_CODES}
     country_group_labels = {discovery.country_group(code).casefold(): code
                             for code in discovery.ISO_CODES if code not in {"BD", "IN", "PK"}}
     for block in blocks:
@@ -111,11 +110,6 @@ def main():
             group_set.add(group)
             groups_seen.append(group)
 
-        if code in discovery.ISO_CODES and discovery.counts_toward_country_group(group, code):
-            identity = (a.get("tvg-id") or a.get("channel-id") or discovery.norm(name)).strip().casefold()
-            if identity and group.casefold() not in {"backup", "backups", "new backup", "new backups", "not playing", "new channels", "adult", "test"}:
-                country_primary_ids[code].add(identity)
-
         stream_rows = [
             line.strip() for line in block[1:]
             if line.strip().startswith(("http://", "https://"))
@@ -147,20 +141,15 @@ def main():
         sample = "; ".join(f"{name}: {path}" for name, path in broken_logos[:5])
         raise SystemExit(f"Broken local logo references: {len(broken_logos)}. Examples: {sample}")
 
-    for group in sorted(group_set):
-        code = country_group_labels.get(group.casefold())
-        if code:
-            count = len(country_primary_ids[code])
-            if count < discovery.COUNTRY_THRESHOLD:
-                raise SystemExit(
-                    f"Country group {group!r} has only {count} general primary identities; "
-                    f"it must have at least {discovery.COUNTRY_THRESHOLD} or be consolidated into International."
-                )
+    threshold_issues = discovery.country_group_threshold_issues(blocks)
+    if threshold_issues:
+        raise SystemExit("Country-group threshold policy failed: " + " | ".join(threshold_issues))
 
     if registry[-3:] != ["New Channels", "New Backup", "Backup"]:
         raise SystemExit("The final categories must be New Channels, New Backup, Backup.")
-    dynamic = sorted(group for group in group_set if group not in FIXED and group not in TAIL)
-    expected_registry = FIXED + dynamic + TAIL
+    dynamic = sorted(group for group in group_set if group not in FIXED and group not in TAIL and group.casefold() != "international")
+    international_bucket = ["International"] if any(group.casefold() == "international" for group in group_set) else []
+    expected_registry = FIXED + dynamic + international_bucket + TAIL
     if registry != expected_registry:
         raise SystemExit(f"Category registry mismatch. Expected {expected_registry}; got {registry}.")
     expected_present_order = [group for group in expected_registry if group in group_set]

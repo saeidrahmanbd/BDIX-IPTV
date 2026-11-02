@@ -12,14 +12,15 @@ from collections import Counter,defaultdict
 from datetime import datetime,timezone
 from pathlib import Path
 from logo_asset_naming import is_blocked_logo_basename
+from country_verification import ISO_CODES as ALL_ISO_CODES
 PLAYLIST=Path("International-Playlist.m3u"); REPORT=Path("reports/international-channel-discovery.md"); LOGOS=Path("logos")
 SOURCE_URL="https://iptv-org.github.io/iptv/index.category.m3u"; RAW_BASE="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/"
 COUNTRY_THRESHOLD=5; MAX_NEW_CHANNELS=50; MAX_NEW_BACKUPS=50; MAX_NEW_PER_GROUP=25; MAX_SOURCE_BYTES=50*1024*1024; MAX_LOGO_BYTES=2*1024*1024
 FIXED_GROUPS=["Bangladesh","Indian Bangla","Indian Movies","Indian Music","Indian Entertainment","Pakistani"]
 TAIL_GROUPS=["Fashion TV","Documentary & Wildlife","Kids","Religious","Sports","Adult","New Channels","New Backup","Backup"]
 STAGING_GROUPS=set(); LEGACY_GROUPS={"new channels","new backup","new backups","not playing","international","backup","international movies","international music","test"}
-COUNTRY_NAMES={"BD":"Bangladesh","IN":"India","PK":"Pakistan","NP":"Nepal","TH":"Thailand","JP":"Japan","KR":"South Korea","ID":"Indonesia","MY":"Malaysia","PH":"Philippines","VN":"Vietnam","CN":"China","TW":"Taiwan","HK":"Hong Kong","SG":"Singapore","AU":"Australia","NZ":"New Zealand","GB":"United Kingdom","US":"United States","CA":"Canada","MX":"Mexico","BR":"Brazil","AR":"Argentina","CL":"Chile","CO":"Colombia","PE":"Peru","ES":"Spain","PT":"Portugal","FR":"France","DE":"Germany","IT":"Italy","NL":"Netherlands","BE":"Belgium","CH":"Switzerland","AT":"Austria","SE":"Sweden","NO":"Norway","DK":"Denmark","FI":"Finland","IS":"Iceland","IE":"Ireland","PL":"Poland","CZ":"Czech Republic","SK":"Slovakia","HU":"Hungary","RO":"Romania","BG":"Bulgaria","GR":"Greece","TR":"Turkey","RU":"Russia","UA":"Ukraine","IL":"Israel","AE":"United Arab Emirates","SA":"Saudi Arabia","QA":"Qatar","KW":"Kuwait","OM":"Oman","BH":"Bahrain","JO":"Jordan","LB":"Lebanon","EG":"Egypt","MA":"Morocco","DZ":"Algeria","TN":"Tunisia","ZA":"South Africa","NG":"Nigeria","KE":"Kenya","GH":"Ghana","TZ":"Tanzania","UG":"Uganda","ZW":"Zimbabwe","ET":"Ethiopia","LK":"Sri Lanka","MM":"Myanmar","KH":"Cambodia","LA":"Laos","MN":"Mongolia","KZ":"Kazakhstan","UZ":"Uzbekistan","AZ":"Azerbaijan","GE":"Georgia","AM":"Armenia","AL":"Albania","RS":"Serbia","HR":"Croatia","SI":"Slovenia","BA":"Bosnia and Herzegovina","ME":"Montenegro","MK":"North Macedonia","LT":"Lithuania","LV":"Latvia","EE":"Estonia","IR":"Iran","IQ":"Iraq","SY":"Syria","PS":"Palestine","FJ":"Fiji","WS":"Samoa","PG":"Papua New Guinea","BT":"Bhutan","MV":"Maldives"}
-ISO_CODES=set(COUNTRY_NAMES); ALIASES={"UK":"GB","EL":"GR"}; ATTR_RE=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
+COUNTRY_NAMES={"BD":"Bangladesh","IN":"India","PK":"Pakistan","NP":"Nepal","TH":"Thailand","JP":"Japan","KR":"South Korea","ID":"Indonesia","MY":"Malaysia","PH":"Philippines","VN":"Vietnam","CN":"China","TW":"Taiwan","HK":"Hong Kong","SG":"Singapore","AU":"Australia","NZ":"New Zealand","GB":"United Kingdom","US":"United States","CA":"Canada","MX":"Mexico","BR":"Brazil","AR":"Argentina","CL":"Chile","CO":"Colombia","PE":"Peru","ES":"Spain","PT":"Portugal","FR":"France","DE":"Germany","IT":"Italy","NL":"Netherlands","BE":"Belgium","CH":"Switzerland","AT":"Austria","SE":"Sweden","NO":"Norway","DK":"Denmark","FI":"Finland","IS":"Iceland","IE":"Ireland","PL":"Poland","CZ":"Czech Republic","SK":"Slovakia","HU":"Hungary","RO":"Romania","BG":"Bulgaria","GR":"Greece","TR":"Turkey","RU":"Russia","UA":"Ukraine","IL":"Israel","AE":"United Arab Emirates","SA":"Saudi Arabia","QA":"Qatar","KW":"Kuwait","OM":"Oman","BH":"Bahrain","JO":"Jordan","LB":"Lebanon","EG":"Egypt","MA":"Morocco","DZ":"Algeria","TN":"Tunisia","ZA":"South Africa","NG":"Nigeria","KE":"Kenya","GH":"Ghana","TZ":"Tanzania","UG":"Uganda","ZW":"Zimbabwe","ET":"Ethiopia","LK":"Sri Lanka","MM":"Myanmar","KH":"Cambodia","LA":"Laos","MN":"Mongolia","KZ":"Kazakhstan","UZ":"Uzbekistan","AZ":"Azerbaijan","GE":"Georgia","AM":"Armenia","AL":"Albania","RS":"Serbia","HR":"Croatia","SI":"Slovenia","BA":"Bosnia and Herzegovina","ME":"Montenegro","MK":"North Macedonia","LT":"Lithuania","LV":"Latvia","EE":"Estonia","IR":"Iran","IQ":"Iraq","SY":"Syria","PS":"Palestine","FJ":"Fiji","WS":"Samoa","PG":"Papua New Guinea","BT":"Bhutan","MV":"Maldives","AW":"Aruba","BQ":"Bonaire","BO":"Bolivia","CD":"Congo - Kinshasa","CR":"Costa Rica","CV":"Cabo Verde","CW":"Curaçao","GU":"Guam","GP":"Guadeloupe","GT":"Guatemala","HT":"Haiti","HN":"Honduras","MQ":"Martinique","NA":"Namibia","PA":"Panama","PY":"Paraguay","PR":"Puerto Rico","SX":"Sint Maarten","VE":"Venezuela","CI":"Ivory Coast","TT":"Trinidad and Tobago","UY":"Uruguay","SN":"Senegal","RW":"Rwanda","AO":"Angola","BY":"Belarus","CM":"Cameroon","NI":"Nicaragua","AF":"Afghanistan","LV":"Latvia"}
+ISO_CODES={code.upper() for code in ALL_ISO_CODES}; ALIASES={"UK":"GB","EL":"GR"}; ATTR_RE=re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 NEWS_GROUPS={"news"}; SPORTS_GROUPS={"sport","sports"}; DOC_GROUPS={"documentary","documentaries","wildlife","nature"}; KIDS_GROUPS={"kids","kid","children","childrens"}; RELIGIOUS_GROUPS={"religious","religion","faith"}; MOVIE_GROUPS={"movie","movies","cinema","film","films"}; MUSIC_GROUPS={"music","musics"}
 NEWS_NAME_RE=re.compile(r"\b(?:news|headlines?|current affairs|cnn|cnbc|bloomberg|reuters|euronews|france\s*24|al\s*jazeera|msnbc|fox\s*news|sky\s*news|bbc\s*(?:news|world)|abc\s*news|nbc\s*news|dw\s*news|rt\s*news|ndtv|aaj\s*tak|times\s*now|news\s*18|news\s*nation|republic\s*(?:tv|bharat)|india\s*today|tv9|dd\s*news|trt\s*world)\b",re.I)
 RELIGIOUS_RE=re.compile(r"\b(?:religious|religion|christian|christ|hope\s*channel|dios|3abn(?:\s*[-:]?\s*(?:kids|canada|english|french|français|francais|latino|international|proclaim|praise\s*him|russia))?|three\s*angels\s*broadcasting\s*network|gospel|bible|jesus|church|catholic|hindu|hinduism|bhakti|bhakthi|sanatan|sikh|gurbani|jain|buddh(?:a|ist|ism)?|temple|mandir|devotional|aarti|satsang|aastha|prarthana|darshan|worship|sermon|evangelical|zoroastrian|ministry|dharma|krishna|shiva|ganesh|hanuman|bhagwan|vedic|bhagavad|gita|mantra|deity|holy\s*mass|orthodox|shrine)\b",re.I)
@@ -54,6 +55,10 @@ def parse(text):
  return p,b
 def norm(value):
  value=unicodedata.normalize("NFKD",value or "").casefold(); value="".join(c for c in value if not unicodedata.combining(c)); value=re.sub(r"\b(?:backup|hd|fhd|uhd|sd|4k|1080p|720p|576p|480p)\b"," ",value); return re.sub(r"[^a-z0-9]+","",value)
+def primary_identity(a,name):
+ """One normalized channel name counts once, regardless of stream or EPG IDs."""
+ key=norm(name or a.get("tvg-name",""))
+ return key or (a.get("tvg-id") or a.get("channel-id") or "").strip().casefold()
 def remove_duplicate_queue_urls(blocks):
  """Remove duplicate URLs from discovery queues, preserving primary playlist rows."""
  queue_groups = {"new channels", "new backup", "new backups"}
@@ -95,7 +100,7 @@ def country_code(a):
   code=ALIASES.get(m.group(1).upper(),m.group(1).upper())
   if code in ISO_CODES:return code
  return "ZZ"
-def country_group(code): return COUNTRY_NAMES.get(code,"")
+def country_group(code): return COUNTRY_NAMES.get(code,code if code in ISO_CODES else "")
 def policy(a,name,allow_legacy_group=False):
  code=country_code(a)
  group_text=(a.get("group-title") or "").strip().casefold()
@@ -247,7 +252,9 @@ def natural_key(value):return tuple(int(x) if x.isdigit() else x.casefold() for 
 def category_registry(groups):
  fixed=set(FIXED_GROUPS); tail=set(TAIL_GROUPS)
  present={g.strip() for g in groups if g and g.strip() not in fixed|tail}
- return FIXED_GROUPS+sorted(present)+TAIL_GROUPS
+ has_international=any(g.casefold()=="international" for g in present)
+ countries=sorted(g for g in present if g.casefold()!="international")
+ return FIXED_GROUPS+countries+(["International"] if has_international else [])+TAIL_GROUPS
 def counts_toward_country_group(group,code):
  group=(group or "").strip().casefold()
  return group in {"new channels","international"} or group==country_group(code).casefold()
@@ -270,6 +277,31 @@ def qualified_country_groups(existing_ids, added_ids=None):
   if len(set(existing_ids.get(code,set()))|set(added_ids.get(code,set())))>=COUNTRY_THRESHOLD:
    groups.add(code)
  return groups
+def country_group_threshold_issues(blocks):
+ """Report dynamic-country groups that violate the five-unique-name rule."""
+ labels={country_group(code).casefold():code for code in ISO_CODES if code not in {"BD","IN","PK"}}
+ identities=defaultdict(set); dedicated=defaultdict(set); international=defaultdict(set)
+ for block in blocks:
+  a=attrs(block[0]); group=(a.get("group-title") or "").strip().casefold()
+  if group in labels:
+   code=labels[group]; bucket=dedicated
+  elif group=="international":
+   code=country_code(a); bucket=international
+  else:
+   continue
+  if code not in ISO_CODES or code in {"BD","IN","PK"} or not country_group(code):continue
+  ident=primary_identity(a,name_of(block))
+  if not ident:continue
+  identities[code].add(ident); bucket[code].add(ident)
+ issues=[]
+ for code in sorted(set(dedicated)|set(international)):
+  total=len(identities[code]); label=country_group(code)
+  if dedicated[code] and total<COUNTRY_THRESHOLD:
+   issues.append(f"Country group {label!r} has only {total} unique primary channel names; it must be consolidated into International until it reaches {COUNTRY_THRESHOLD}.")
+  if international[code] and total>=COUNTRY_THRESHOLD:
+   issues.append(f"International still contains {len(international[code])} channel name(s) from {label!r}, which has {total} unique primary channel names; promote them into the country group or move alternate streams to Backup.")
+ return issues
+
 def primary_target(base,code,country_groups):
  # BD, IN and PK retain their established regional groups. Other countries
  # only receive a dedicated group after the five-channel threshold is met.
@@ -304,7 +336,7 @@ def main():
   if group.casefold() not in {"backup","backups","new backup","new backups","not playing","test"} and key:existing_primary[key].append(a)
   code=country_code(a)
   if code in ISO_CODES and counts_toward_country_group(group,code) and group.casefold() not in queue_or_nonprimary:
-   ident=(a.get("tvg-id") or a.get("channel-id") or key).strip().casefold()
+   ident=primary_identity(a,name)
    if ident:country_primary_ids[code].add(ident)
  candidates=[]; seen=set(); rejected=Counter(); exact_existing=0; exact_source_duplicates=0
  for b in source:
@@ -342,7 +374,7 @@ def main():
   else:
    new_rows.append((cname,target,ccode,url))
    per_group[target]+=1
-   ident=(a.get("tvg-id") or a.get("channel-id") or key).strip().casefold()
+   ident=primary_identity(a,cname)
    if ccode in ISO_CODES and counts_toward_country_group(target,ccode) and ident:added_primary_ids[ccode].add(ident)
    planned.setdefault(key,[]).append(attrs(additions[-1][0]))
  # Qualification is based only on actual general primary entries in the playlist
@@ -415,7 +447,7 @@ def main():
  for b in normalized:
   a=attrs(b[0]); name=name_of(b); group=a.get("group-title","").strip(); code=country_code(a) or dynamic_group_to_code.get(group.casefold())
   if code in ISO_CODES and counts_toward_country_group(group,code):
-   ident=(a.get("tvg-id") or a.get("channel-id") or norm(name)).strip().casefold()
+   ident=primary_identity(a,name)
    if ident:cleaned_ids[code].add(ident)
  country_groups=qualified_country_groups(cleaned_ids)
  migrated.extend(promote_qualified_country_candidates(normalized,country_groups))

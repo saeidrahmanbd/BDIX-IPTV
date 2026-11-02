@@ -136,6 +136,35 @@ class DiscoveryRunValidationTests(unittest.TestCase):
         _, entries, malformed = parse_playlist('#EXTM3U\n#EXTINF:-1 group-title="New Channels",Example\n')
         self.assertEqual(entries, [])
         self.assertEqual(len(malformed), 1)
+    def test_duplicate_stream_ids_for_one_channel_do_not_reach_five_channel_threshold(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            playlist = Path(directory) / "International-Playlist.m3u"
+            rows = [
+                '#EXTINF:-1 tvg-id="MK1.mk" tvg-country="MK" group-title="North Macedonia",Movie One\nhttps://example.org/one.m3u8',
+                '#EXTINF:-1 tvg-id="MK2.mk" tvg-country="MK" group-title="North Macedonia",Movie Two\nhttps://example.org/two.m3u8',
+                '#EXTINF:-1 tvg-id="MK3.mk" tvg-country="MK" group-title="North Macedonia",Movie Three\nhttps://example.org/three.m3u8',
+                '#EXTINF:-1 tvg-id="MK4HD.mk" tvg-country="MK" group-title="North Macedonia",Movie Four HD\nhttps://example.org/four-hd.m3u8',
+                '#EXTINF:-1 tvg-id="MK4SD.mk" tvg-country="MK" group-title="International",Movie Four SD\nhttps://example.org/four-sd.m3u8',
+            ]
+            playlist.write_text("#EXTM3U\n" + "\n".join(rows) + "\n", encoding="utf-8")
+            moved = consolidate_international_country_groups(playlist)
+            content = playlist.read_text(encoding="utf-8")
+            self.assertEqual(len(moved), 4)
+            self.assertNotIn('group-title="North Macedonia"', content)
+            self.assertEqual(content.count('group-title="International"'), 5)
+
+    def test_five_unique_channels_left_in_international_fail_threshold_gate(self):
+        import discover_international_channels as discovery
+        rows = [
+            [f'#EXTINF:-1 tvg-id="MK{i}.mk" tvg-country="MK" tvg-content="Movies" group-title="International",Movie {i}', f"https://example.org/movie{i}.m3u8"]
+            for i in range(1, 6)
+        ]
+        self.assertTrue(discovery.country_group_threshold_issues(rows))
+        for row in rows:
+            row[0] = row[0].replace('group-title="International"', 'group-title="North Macedonia"')
+        self.assertFalse(discovery.country_group_threshold_issues(rows))
+
 
 if __name__ == "__main__":
     unittest.main()

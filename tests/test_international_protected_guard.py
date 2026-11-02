@@ -75,6 +75,33 @@ class ReorganizePreservesProtectedTests(unittest.TestCase):
         for i in range(6):
             self.assertIn(f"http://us.example/{i}.m3u8", out)
 
+    def test_country_group_requires_five_unique_primary_names_and_ignores_backup(self):
+        header = "#EXTM3U\n#PLAYLIST-STUDIO-NAME: Test\n"
+        four = "".join(
+            entry(f"Albania Movie {i}", "International", f"http://al.example/{i}.m3u8", 'tvg-country="AL" tvg-content="Movies" ')
+            for i in range(1, 5)
+        )
+        duplicate_backup = entry("Albania Movie 1", "Backup", "http://al.example/backup.m3u8", 'tvg-country="AL" tvg-content="Movies" ')
+        five = "".join(
+            entry(f"Belarus Music {i}", "International", f"http://by.example/{i}.m3u8", 'tvg-country="BY" tvg-content="Music" ')
+            for i in range(1, 6)
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            Path(tmp, "International-Playlist.m3u").write_text(header + four + duplicate_backup + five, encoding="utf-8")
+            Path(tmp, "reports").mkdir()
+            result = subprocess.run(
+                [sys.executable, str(SCRIPTS / "reorganize_international_playlist.py")],
+                cwd=tmp, env=dict(os.environ, PYTHONPATH=str(SCRIPTS)), capture_output=True, text=True,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            output = Path(tmp, "International-Playlist.m3u").read_text(encoding="utf-8")
+        self.assertEqual(output.count('group-title="International"'), 4)
+        self.assertEqual(output.count('group-title="Belarus"'), 5)
+        self.assertEqual(output.count('group-title="Backup"'), 1)
+        self.assertNotIn('group-title="Albania"', output)
+        self.assertIn('"Belarus"', output)
+        self.assertIn('"International"', output)
+
 
 if __name__ == "__main__":
     unittest.main()

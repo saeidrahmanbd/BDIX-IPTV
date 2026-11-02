@@ -11,6 +11,12 @@ on:
       - scripts/restore_protected_review.py
       - scripts/discover_international_channels.py
       - scripts/reorganize_international_playlist.py
+      - scripts/validate_discovery_run.py
+      - scripts/validate_international_playlist.py
+      - scripts/country_verification.py
+      - tests/test_international_discovery_policy.py
+      - tests/test_discovery_run_validation.py
+      - tests/test_international_protected_guard.py
       - tests/test_channel_discovery_policy.py
       - tests/test_authorized_channel_removals.py
       - scripts/backfill_cross_playlist_metadata.py

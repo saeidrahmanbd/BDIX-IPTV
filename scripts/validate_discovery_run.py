@@ -160,7 +160,7 @@ def consolidate_international_country_groups(playlist_path):
             continue
         if code not in dynamic_codes:
             continue
-        identity = (a.get("tvg-id") or a.get("channel-id") or discovery.norm(discovery.name_of(block))).strip().casefold()
+        identity = discovery.primary_identity(a, discovery.name_of(block))
         if identity:
             identities[code].add(identity)
 
@@ -394,6 +394,9 @@ def final_mode(playlist, report, baseline, mode):
                 policy_issues.append(f"out-of-scope content: {e['name']}")
             if content and content not in {"movie", "movies", "film", "films", "music", "musics"}:
                 policy_issues.append(f"non-Movie/Music tvg-content: {e['name']}")
+    if mode == "international":
+        _, threshold_blocks = discovery.parse(text)
+        policy_issues.extend(discovery.country_group_threshold_issues(threshold_blocks))
     if policy_issues:
         errors.extend(policy_issues)
     status = "PASS" if not errors else "FAIL"

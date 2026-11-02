@@ -319,13 +319,15 @@ def main():
     for row in staged:
         if row["group"] != "__FOREIGN__":
             continue
-        row["group"] = discovery.country_group(row["country"]) if row["country"] in qualifying_countries else "New Channels"
+        row["group"] = discovery.country_group(row["country"]) if row["country"] in qualifying_countries else "International"
         if not row["group"]:
-            row["group"] = "New Channels"
+            row["group"] = "International"
 
     primary = [row for row in staged if not row["was_backup"]]
     backup_rows = [row for row in staged if row["was_backup"]]
-    group_order = FIXED + sorted({row["group"] for row in primary if row["group"] not in FIXED + TAIL}) + TAIL
+    dynamic_country_groups = sorted({row["group"] for row in primary if row["group"] not in FIXED + TAIL and row["group"].casefold() != "international"})
+    international_bucket = ["International"] if any(row["group"].casefold() == "international" for row in primary) else []
+    group_order = FIXED + dynamic_country_groups + international_bucket + TAIL
     group_rank = {group: index for index, group in enumerate(group_order)}
     primary.sort(key=lambda row: (group_rank.get(row["group"], len(group_rank)), natural_key(row["name"]), row["url"].casefold()))
     identity_primary = {}
@@ -376,8 +378,9 @@ def main():
             removed["orphan backup outside policy"] += 1
 
     present = {row["group"] for row in output}
-    dynamic = sorted(group for group in present if group not in FIXED + TAIL)
-    category_order = FIXED + dynamic + TAIL
+    dynamic = sorted(group for group in present if group not in FIXED + TAIL and group.casefold() != "international")
+    international_bucket = ["International"] if any(group.casefold() == "international" for group in present) else []
+    category_order = FIXED + dynamic + international_bucket + TAIL
     category_rank = {group: index for index, group in enumerate(category_order)}
     output.sort(key=lambda row: (category_rank.get(row["group"], len(category_rank)), natural_key(row["name"]), row["url"].casefold()))
 

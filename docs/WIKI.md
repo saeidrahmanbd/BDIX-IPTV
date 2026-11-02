@@ -8,7 +8,7 @@ The root [README.md](../README.md) is the canonical project overview, playlist c
 - International country groups are for movie/music channels. Documentary & Wildlife, Kids, Sports, Religious, Adult, and the explicit Fashion TV exception remain in dedicated groups.
 - Discovery queues are restricted to verified Bangladesh/India candidates. Bangladeshi news is allowed; Indian News and non-Islamic religious channels are prohibited; Indian Kids/Sports and Islamic religious channels are allowed.
 - **Permanent denylist:** E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.
-- Country groups for discovery candidates are created only when there are at least five legitimate primary channel identities for that country; smaller sets remain in the review queue.
+- **Country-group threshold:** A country outside Bangladesh, India and Pakistan receives a dedicated group only when it has at least **five unique primary channel names** across eligible Movies/Music entries. Countries with 1–4 unique channels stay in `International`; when the fifth unique channel is added, all eligible channels from that country are promoted automatically. Alternate stream URLs, duplicate names and `Backup`/review-queue rows do not count toward the threshold. The dedicated thematic groups remain separate and are never counted.
 - `New Channels`, `New Backup`, `Backup` and `Not Playing` have separate purposes. The main Xtream worker excludes `Test`, `Not Playing`, and the new discovery queues from service output.
 
 ## Metadata and logos

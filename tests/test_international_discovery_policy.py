@@ -156,7 +156,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         self.assertNotIn("AT", discovery.qualified_country_groups({"AT": {"a", "b", "c", "d"}}))
         self.assertIn("AT", discovery.qualified_country_groups({"AT": {"a", "b", "c", "d", "e"}}))
         # Routing changed in 2f5ee4f: a country that has reached the threshold
-        # gets its dedicated group; below it, channels wait in New Channels.
+        # gets its dedicated group; below it, channels remain in International.
         # BD, IN and PK always keep their established regional groups.
         self.assertEqual(discovery.primary_target("International Movies", "AT", {"AT"}), "Austria")
         self.assertEqual(discovery.primary_target("International Music", "AT", {"AT"}), "Austria")
@@ -249,6 +249,25 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
     def test_tokenized_urls_are_rejected_without_playback_testing(self):
         self.assertFalse(discovery.safe_url("https://example.org/live.m3u8?token=abc"))
         self.assertTrue(discovery.safe_url("https://example.org/channel/index.m3u8"))
+
+    def test_country_threshold_counts_unique_normalized_channel_names_not_stream_ids(self):
+        names = [
+            discovery.primary_identity({"tvg-id": "A-HD.mk"}, "A Movie HD"),
+            discovery.primary_identity({"tvg-id": "A-SD.mk"}, "A Movie SD"),
+            discovery.primary_identity({"tvg-id": "B.mk"}, "B Movie"),
+            discovery.primary_identity({"tvg-id": "C.mk"}, "C Movie"),
+            discovery.primary_identity({"tvg-id": "D.mk"}, "D Movie"),
+        ]
+        self.assertEqual(len(set(names)), 4)
+        self.assertNotIn("MK", discovery.qualified_country_groups({"MK": set(names)}))
+        names.append(discovery.primary_identity({"tvg-id": "E.mk"}, "E Movie"))
+        self.assertIn("MK", discovery.qualified_country_groups({"MK": set(names)}))
+
+    def test_category_registry_places_international_after_country_groups(self):
+        registry = discovery.category_registry(["Belarus", "International", "Albania", "Sports"])
+        self.assertLess(registry.index("Albania"), registry.index("Belarus"))
+        self.assertLess(registry.index("Belarus"), registry.index("International"))
+        self.assertLess(registry.index("International"), registry.index("Sports"))
 
 
 if __name__ == "__main__":
