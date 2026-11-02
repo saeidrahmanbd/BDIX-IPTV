@@ -1,4 +1,5 @@
 """Regression tests for final playlist hardening edge cases."""
+import json
 from pathlib import Path
 import sys
 import tempfile
@@ -28,6 +29,10 @@ class FinalPlaylistHardeningTests(unittest.TestCase):
         self.assertIn('group-title="Bangladesh",Channel S UK', result)
         self.assertIn('group-title="Backup",Channel S UK', result)
         self.assertIn('group-title="Not Playing",Channel S UK', result)
+        registry_line = next(line for line in result.splitlines() if line.startswith("#PLAYLIST-STUDIO-CATEGORIES:"))
+        registry = json.loads(registry_line.split(":", 1)[1])
+        self.assertEqual(registry, hardening.PLAYLIST_ORDERS["IPTV-Playlist.m3u"])
+        self.assertEqual(registry[-3:], ["New Channels", "New Backup", "Backup"])
 
     def test_channel_s_uk_with_wrong_identity_still_fails(self):
         rows = [

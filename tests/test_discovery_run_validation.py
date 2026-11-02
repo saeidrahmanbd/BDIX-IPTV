@@ -47,7 +47,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 f'#EXTINF:-1 tvg-id="MK{i}.mk" tvg-country="MK" group-title="North Macedonia",MK {i}\nhttps://example.org/mk{i}.m3u8'
                 for i in range(4)
             ]
-            rows.append('#EXTINF:-1 tvg-id="MK5.mk" tvg-country="MK" group-title="New Channels",MK 5\nhttps://example.org/mk5.m3u8')
+            rows.append('#EXTINF:-1 tvg-id="MK5.mk" tvg-country="MK" group-title="International",MK 5\nhttps://example.org/mk5.m3u8')
             playlist.write_text("#EXTM3U\n" + "\n".join(rows) + "\n", encoding="utf-8")
             moved = consolidate_international_country_groups(playlist)
             content = playlist.read_text(encoding="utf-8")
@@ -55,7 +55,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             self.assertEqual(content.count('group-title="North Macedonia"'), 5)
             self.assertNotIn('group-title="New Channels"', content)
 
-    def test_country_group_below_five_is_consolidated_into_new_channels_after_probe(self):
+    def test_country_group_below_five_is_consolidated_into_international_after_probe(self):
         import tempfile
         with tempfile.TemporaryDirectory() as directory:
             playlist = Path(directory) / "International-Playlist.m3u"
@@ -68,7 +68,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
             content = playlist.read_text(encoding="utf-8")
             self.assertEqual(len(moved), 4)
             self.assertNotIn('group-title="North Macedonia"', content)
-            self.assertEqual(content.count('group-title="New Channels"'), 4)
+            self.assertEqual(content.count('group-title="International"'), 4)
 
     def test_attribution_block_stays_after_extm3u_when_country_groups_are_reconciled(self):
         import tempfile
@@ -85,7 +85,7 @@ class DiscoveryRunValidationTests(unittest.TestCase):
                 f'#EXTINF:-1 tvg-id="MK{i}.mk" tvg-country="MK" group-title="North Macedonia",MK {i}\nhttps://example.org/attr{i}.m3u8'
                 for i in range(4)
             ]
-            rows.append('#EXTINF:-1 tvg-id="MK5.mk" tvg-country="MK" group-title="New Channels",MK 5\nhttps://example.org/attr5.m3u8')
+            rows.append('#EXTINF:-1 tvg-id="MK5.mk" tvg-country="MK" group-title="International",MK 5\nhttps://example.org/attr5.m3u8')
             playlist.write_text("#EXTM3U\n" + "\n".join(attribution) + "\n#PLAYLIST-STUDIO-CATEGORIES:[]\n" + "\n".join(rows) + "\n", encoding="utf-8")
             consolidate_international_country_groups(playlist)
             lines = playlist.read_text(encoding="utf-8").splitlines()

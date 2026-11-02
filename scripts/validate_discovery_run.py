@@ -154,7 +154,7 @@ def consolidate_international_country_groups(playlist_path):
         group_key = (a.get("group-title") or "").strip().casefold()
         if group_key in labels:
             code = labels[group_key]
-        elif group_key == "new channels":
+        elif group_key in {"international", "new channels"}:
             code = discovery.country_code(a)
         else:
             continue
@@ -177,11 +177,13 @@ def consolidate_international_country_groups(playlist_path):
         if old_key in labels:
             code = labels[old_key]
             if code not in qualified:
-                target = "New Channels"
-        elif old_key == "new channels":
+                target = "International"
+        elif old_key in {"international", "new channels"}:
             code = discovery.country_code(a)
             if code in qualified:
                 target = discovery.country_group(code)
+            elif old_key == "new channels" and code in dynamic_codes:
+                target = "International"
         if target and target != old:
             block[0] = discovery.set_attr(block[0], "group-title", target)
             changes.append((discovery.name_of(block), old, target))

@@ -3,7 +3,7 @@
 
 The content filter applies to every country. News, sports, kids, documentaries,
 religious programming, general entertainment, and all other categories are
-rejected. Existing Bangladeshi/Indian regional groups and explicit special-category groups are preserved. Non-Movie/Music rows in dynamic country groups are moved to the allowed Kids/Sports/Documentary & Wildlife/Religious/Adult groups when identifiable, otherwise removed; under-threshold countries are consolidated into New Channels.
+rejected. Existing Bangladeshi/Indian regional groups and explicit special-category groups are preserved. Non-Movie/Music rows in dynamic country groups are moved to the allowed Kids/Sports/Documentary & Wildlife/Religious/Adult groups when identifiable, otherwise removed; countries with fewer than five eligible channels remain in International.
 Playback is never tested by this script.
 """
 from __future__ import annotations
@@ -250,14 +250,14 @@ def category_registry(groups):
  return FIXED_GROUPS+sorted(present)+TAIL_GROUPS
 def counts_toward_country_group(group,code):
  group=(group or "").strip().casefold()
- return group=="new channels" or group==country_group(code).casefold()
+ return group in {"new channels","international"} or group==country_group(code).casefold()
 def promote_qualified_country_candidates(blocks,country_groups):
  """Move queued primary candidates into a country group once five identities qualify."""
  migrated=[]
  for block in blocks:
   a=attrs(block[0]); old=(a.get("group-title") or "").strip()
   code=country_code(a)
-  if old.casefold()=="new channels" and code in country_groups and code not in {"BD","IN","PK"}:
+  if old.casefold() in {"new channels","international"} and code in country_groups and code not in {"BD","IN","PK"}:
    target=country_group(code)
    block[0]=set_attr(block[0],"group-title",target)
    migrated.append((name_of(block),old,target))
@@ -280,7 +280,7 @@ def primary_target(base,code,country_groups):
   if not genre:genre="Movies" if "movie" in str(base).casefold() else "Music"
   return "Indian Movies" if genre=="Movies" else "Indian Music"
  if code in country_groups and country_group(code):return country_group(code)
- return "New Channels"
+ return "International"
 def main():
  if not PLAYLIST.exists():raise SystemExit("International-Playlist.m3u not found; refusing to create it.")
  req=urllib.request.Request(SOURCE_URL,headers={"User-Agent":"BDIX-IPTV-International-Discovery/1.0"})
@@ -396,7 +396,7 @@ def main():
   for name, group, _ in duplicate_queue_rows
  )
  # Apply the established five-channel threshold only to dynamic country groups.
- # Entries are preserved and moved to New Channels when their country group falls below threshold.
+ # Entries are preserved and moved to International when their country group falls below threshold.
  dynamic_group_to_code={country_group(code).casefold():code for code in ISO_CODES if code not in {"BD","IN","PK"}}
  cleaned_ids=defaultdict(set)
  for b in normalized:
@@ -409,8 +409,8 @@ def main():
  for b in normalized:
   a=attrs(b[0]); name=name_of(b); old=a.get("group-title","").strip(); group_code=dynamic_group_to_code.get(old.casefold())
   if group_code and group_code not in country_groups:
-   b[0]=set_attr(b[0],"group-title","New Channels")
-   migrated.append((name,old,"New Channels"))
+   b[0]=set_attr(b[0],"group-title","International")
+   migrated.append((name,old,"International"))
  discovery_urls=addition_urls | {url_of(b) for b in normalized if attrs(b[0]).get("group-title","").strip().casefold() in queue_groups}
  logo_refs_repaired=0; logo_refs_removed=0
 

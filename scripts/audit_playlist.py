@@ -23,7 +23,7 @@ from playlist_order_policy import should_check_alphabetical_order
 from country_verification import queue_errors as review_queue_country_errors, reference_from_playlists
 from restore_protected_review import count_unapproved_removed_url_occurrences, protected_primary_url_changes
 CATEGORY_ORDER = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani", "International", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Not Playing", "New Channels", "New Backup", "Backup"]
-REGISTRY_ORDER = [x for x in CATEGORY_ORDER if x not in {"New Channels", "New Backup"}]  # review queues are never registered
+REGISTRY_ORDER = CATEGORY_ORDER
 
 def attrs(line):
     return dict(ATTR_RE.findall(line))
@@ -144,8 +144,6 @@ else:
             category_registry_issues.append("registry does not match canonical category order")
         if any(value not in CATEGORY_ORDER for value in actual_registry):
             category_registry_issues.append("registry contains an unknown category")
-        if any(value in actual_registry for value in ("New Channels", "New Backup")):
-            category_registry_issues.append("review queue categories must not be registered")
     except Exception as exc:
         category_registry_issues.append("registry is not valid JSON: " + str(exc)[:100])
 malformed_extinf = []

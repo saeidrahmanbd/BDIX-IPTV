@@ -13,7 +13,7 @@ RAW_BASE = "https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
 FIXED = ["Bangladesh", "Indian Bangla", "Indian Movies", "Indian Music", "Indian Entertainment", "Pakistani"]
 TAIL = ["Fashion TV", "Documentary & Wildlife", "Kids", "Religious", "Sports", "Adult", "New Channels", "New Backup", "Backup"]
-FORBIDDEN = {"international", "international movies", "international music", "backups", "new backups", "not playing", "test"}
+FORBIDDEN = {"international movies", "international music", "backups", "new backups", "not playing", "test"}
 ATTRIBUTION = [
     "#=================================",
     "# Developed by: SAEID RAHMAN",
@@ -100,11 +100,11 @@ def main():
             # checked against the pre-run snapshot by validate_discovery_run.py; do not
             # block discovery because of an unrelated legacy item such as a radio feed.
             pass
-        if group_key in {"new channels", "new backup"}:
+        if group_key in {"international", "new channels", "new backup"}:
             content = (a.get("tvg-content") or "").strip().casefold()
             if content not in {"movies", "music"}:
                 raise SystemExit(f"International entry is not tagged Movies/Music: {name!r} in {group!r}.")
-            target, reason, _ = discovery.policy(a, name)
+            target, reason, _ = discovery.policy(a, name, allow_legacy_group=(group_key == "international"))
             if target is None:
                 raise SystemExit(f"Prohibited non-movie/music channel in {group}: {name!r} ({reason or 'not Movies/Music'}).")
         if group and group not in group_set:
@@ -154,7 +154,7 @@ def main():
             if count < discovery.COUNTRY_THRESHOLD:
                 raise SystemExit(
                     f"Country group {group!r} has only {count} general primary identities; "
-                    f"it must have at least {discovery.COUNTRY_THRESHOLD} or be consolidated into New Channels."
+                    f"it must have at least {discovery.COUNTRY_THRESHOLD} or be consolidated into International."
                 )
 
     if registry[-3:] != ["New Channels", "New Backup", "Backup"]:

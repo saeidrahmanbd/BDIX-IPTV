@@ -153,8 +153,8 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
         # BD, IN and PK always keep their established regional groups.
         self.assertEqual(discovery.primary_target("International Movies", "AT", {"AT"}), "Austria")
         self.assertEqual(discovery.primary_target("International Music", "AT", {"AT"}), "Austria")
-        self.assertEqual(discovery.primary_target("International Movies", "AT", set()), "New Channels")
-        self.assertEqual(discovery.primary_target("International Music", "DE", set()), "New Channels")
+        self.assertEqual(discovery.primary_target("International Movies", "AT", set()), "International")
+        self.assertEqual(discovery.primary_target("International Music", "DE", set()), "International")
         self.assertEqual(discovery.primary_target("International Movies", "BD", set()), "Bangladesh")
         self.assertEqual(discovery.primary_target("International Music", "PK", set()), "Pakistani")
         self.assertEqual(discovery.primary_target("International Movies", "IN", set()), "Indian Movies")
@@ -163,7 +163,7 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
     def test_qualified_country_promotes_queued_candidates_at_five_identity_threshold(self):
         blocks = [
             [
-                f'#EXTINF:-1 tvg-id="Channel{i}.mk" tvg-country="MK" group-title="New Channels",Channel {i}',
+                f'#EXTINF:-1 tvg-id="Channel{i}.mk" tvg-country="MK" group-title="International",Channel {i}',
                 f"https://example.org/channel{i}.m3u8",
             ]
             for i in range(5)
@@ -174,13 +174,13 @@ class InternationalDiscoveryPolicyTests(unittest.TestCase):
 
         below_threshold = [
             [
-                f'#EXTINF:-1 tvg-id="Channel{i}.mk" tvg-country="MK" group-title="New Channels",Channel {i}',
+                f'#EXTINF:-1 tvg-id="Channel{i}.mk" tvg-country="MK" group-title="International",Channel {i}',
                 f"https://example.org/below{i}.m3u8",
             ]
             for i in range(4)
         ]
         self.assertEqual(discovery.promote_qualified_country_candidates(below_threshold, set()), [])
-        self.assertTrue(all('group-title="New Channels"' in block[0] for block in below_threshold))
+        self.assertTrue(all('group-title="International"' in block[0] for block in below_threshold))
 
     def test_duplicate_queue_urls_are_removed_but_primary_entries_are_preserved(self):
         url_a = "https://example.org/epic-music.m3u8"

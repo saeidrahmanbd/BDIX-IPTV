@@ -5,7 +5,7 @@ Hardens one explicitly selected playlist at a time. Stream URLs are never
 changed or removed; exact duplicate URLs block the run for manual review.
 """
 from pathlib import Path
-import re, sys, unicodedata
+import json, re, sys, unicodedata
 from country_verification import reference_from_playlists, verify_country
 
 PLAYLIST_ORDERS={
@@ -56,6 +56,17 @@ def process(path):
  if not path.is_file(): return
  order=PLAYLIST_ORDERS[path.name]; rank={x:i for i,x in enumerate(order)}
  pre,rec=parse(path)
+ # Keep the Playlist Studio registry synchronized with the enforced group order.
+ registry_prefix='#PLAYLIST-STUDIO-CATEGORIES:'
+ registry_positions=[i for i,line in enumerate(pre) if line.startswith(registry_prefix)]
+ if len(registry_positions)>1:
+  raise SystemExit(f'{path}: multiple category registries; refusing ambiguous rewrite.')
+ registry_line=registry_prefix+json.dumps(order,ensure_ascii=False)
+ if registry_positions:
+  pre[registry_positions[0]]=registry_line
+ else:
+  header_index=next((i+1 for i,line in enumerate(pre) if line.startswith('#EXTM3U')),len(pre))
+  pre.insert(header_index,registry_line)
  filtered=[]; removed=[]
  for r in rec:
   a=attrs(r[0]); name=(a.get('tvg-name') or r[0].rsplit(',',1)[-1]).strip()
