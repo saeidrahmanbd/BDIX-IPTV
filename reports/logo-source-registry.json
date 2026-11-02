@@ -5788,5 +5788,15 @@
     "status": "generated_fallback",
     "source_url": "",
     "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+  },
+  "International-Playlist.m3u|TV1000RussianKinoGlobal.ru@SD|TV1000 Russian Kino Global|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/tv1000-russian-kino-global-d157f2dc5b.png": {
+    "status": "third_party_verified",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TV1000_%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B5_%D0%BA%D0%B8%D0%BD%D0%BE_2014.png/1280px-TV1000_%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B5_%D0%BA%D0%B8%D0%BD%D0%BE_2014.png",
+    "notes": "IPTV-org exact ID: TV1000RussianKinoGlobal.ru IPTV-org public logo dataset Source page: https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TV1000_%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B5_%D0%BA%D0%B8%D0%BD%D0%BE_2014.png/1280px-TV1000_%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B5_%D0%BA%D0%B8%D0%BD%D0%BE_2014.png"
+  },
+  "International-Playlist.m3u|HTVCMovies.vn@SD|HTVC Movies|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/htvc-movies-e07d255b17.png": {
+    "status": "third_party_verified",
+    "source_url": "https://raw.githubusercontent.com/HaNoiIPTV/HaNoiIPTV.m3u/refs/heads/master/HTVC%20Phim%20HD.png",
+    "notes": "IPTV-org exact ID: HTVCMovies.vn IPTV-org public logo dataset Source page: https://raw.githubusercontent.com/HaNoiIPTV/HaNoiIPTV.m3u/refs/heads/master/HTVC%20Phim%20HD.png"
   }
 }
