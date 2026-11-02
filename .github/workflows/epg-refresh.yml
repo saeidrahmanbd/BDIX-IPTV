@@ -5,7 +5,6 @@ on:
     branches: [main]
     paths:
       - 'IPTV-Playlist.m3u'
-      - 'BDIX-Playlist.m3u'
       - 'International-Playlist.m3u'
       - '.github/workflows/epg-refresh.yml'
       - 'reports/epg-channel-mapping.csv'
@@ -23,7 +22,7 @@ on:
   # GITHUB_TOKEN playlist commits do not reliably start a second workflow via push.
   # Refresh EPG after successful workflows that write one of the maintained playlists.
   workflow_run:
-    workflows: ["IPTV Playlist Update", "IPTV New Channel Discovery", "International Channel Discovery", "BDIX Playlist Update", "Playlist Logo Repair and Localization"]
+    workflows: ["IPTV Playlist Update", "IPTV New Channel Discovery", "International Channel Discovery", "Playlist Logo Repair and Localization"]
     types: [completed]
     branches: [main]
   schedule:
@@ -57,7 +56,7 @@ jobs:
           git fetch origin main
           CURRENT_MAIN_SHA="$(git rev-parse FETCH_HEAD)"
           if [[ "${GITHUB_EVENT_NAME}" == "push" && "${GITHUB_SHA}" != "$CURRENT_MAIN_SHA" ]]; then
-            CHANGED_INPUTS="$(git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|BDIX-Playlist\.m3u|International-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/.*\.py|tests/.*\.py|docs/requirements\.txt)$' || true)"
+            CHANGED_INPUTS="$(git diff --name-only "${GITHUB_SHA}..${CURRENT_MAIN_SHA}" | grep -E '^(IPTV-Playlist\.m3u|International-Playlist\.m3u|\.github/workflows/epg-refresh\.yml|reports/epg-channel-mapping\.csv|scripts/.*\.py|tests/.*\.py|docs/requirements\.txt)$' || true)"
             if [[ -n "$CHANGED_INPUTS" ]]; then
               echo "::notice::Skipping superseded EPG refresh because newer commits changed EPG inputs or code."
               printf '%s\n' "$CHANGED_INPUTS"
@@ -128,8 +127,8 @@ jobs:
 
           HAVE_PUBLISHED_FALLBACK=false
           if [ -s epg/epg.xml ]; then
-            cp epg/epg.xml /tmp/bdix-epg-previous.xml
-            cp /tmp/bdix-epg-previous.xml /tmp/bdix-epg-published-fallback.xml
+            cp epg/epg.xml /tmp/iptv-epg-previous.xml
+            cp /tmp/iptv-epg-previous.xml /tmp/iptv-epg-published-fallback.xml
             HAVE_PUBLISHED_FALLBACK=true
           fi
 
@@ -154,7 +153,7 @@ jobs:
 
           if [ "$CANDIDATE_OK" != true ]; then
             if [ "$HAVE_PUBLISHED_FALLBACK" = true ]; then
-              cp /tmp/bdix-epg-published-fallback.xml epg/epg.xml
+              cp /tmp/iptv-epg-published-fallback.xml epg/epg.xml
               if ! python scripts/validate_epg_freshness.py epg/epg.xml --report reports/epg-publish-freshness.md; then
                 echo '::error::The last-known-good guide is no longer fresh; refusing to publish a stale fallback.'
                 exit 1
@@ -168,7 +167,7 @@ jobs:
           python scripts/epg_coverage.py
           for report in \
             reports/epg-coverage.md \
-            reports/epg-three-playlist-audit.md \
+            reports/epg-playlist-audit.md \
             reports/epg-source-audit.md \
             reports/bangladesh-epg-source-audit.md \
             reports/epg-unmapped-audit.md \
@@ -184,7 +183,7 @@ jobs:
           python scripts/validate_report_freshness.py --mode epg
 
           git add assets/dashboard.svg 'reports/Update Report.md' reports/maintenance-report.md
-          git add -f epg/epg.xml reports/epg-channel-mapping.csv reports/epg-coverage.md reports/epg-three-playlist-audit.md reports/epg-source-audit.md reports/bangladesh-epg-source-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
+          git add -f epg/epg.xml reports/epg-channel-mapping.csv reports/epg-coverage.md reports/epg-playlist-audit.md reports/epg-source-audit.md reports/bangladesh-epg-source-audit.md reports/epg-unmapped-audit.md reports/epg-publish-freshness.md reports/epg-timing-audit.md
           git add -u -- reports
 
           if ! git diff --quiet; then
