@@ -38,8 +38,8 @@ jobs:
           CREDS = {"username": USER, "password": PASS}
           HEADERS = {"User-Agent": "BDIX-IPTV-Daily-Xtream-Check/2.0"}
           GATEWAYS = {
-              "Main IPTV": ("bdix-iptv-main.saeidrahman.workers.dev", True),
-              "BDIX": ("bdix-iptv-bdix.saeidrahman.workers.dev", False),
+              "Main IPTV": "bdix-iptv-main.saeidrahman.workers.dev",
+              "BDIX": "bdix-iptv-bdix.saeidrahman.workers.dev",
           }
 
           class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -50,12 +50,17 @@ jobs:
 
           def open_retry(req, timeout=20, opener=None, attempts=2):
               last_error = None
-              client = opener or urllib.request
+              client = opener.open if opener else urllib.request.urlopen
+              transient_http = {408, 425, 429, 500, 502, 503, 504}
               for attempt in range(attempts):
                   try:
-                      return client.urlopen(req, timeout=timeout)
-                  except urllib.error.HTTPError:
-                      raise
+                      return client(req, timeout=timeout)
+                  except urllib.error.HTTPError as error:
+                      if error.code not in transient_http or attempt + 1 >= attempts:
+                          raise
+                      last_error = error
+                      error.close()
+                      time.sleep(2)
                   except (urllib.error.URLError, TimeoutError, OSError) as error:
                       last_error = error
                       if attempt + 1 < attempts:
@@ -95,11 +100,7 @@ jobs:
               with open_retry(xml_req) as response:
                   sample = response.read(512).lstrip()
                   content_type = response.headers.get("Content-Type", "").lower()
-                  if response.status != 200 or "xml" not in content_type or not (sample.startswith(b"<?xml") or sample.startswith(b"<tv")):
-                      raise SystemExit(f"{host}: xmltv.php did not return XMLTV content")
-              print(f"{host} xmltv.php: HTTP=200 content-type=XML")
-
-          def playback_probe(host, stream, main_proxy):
+                  if          def playback_probe(host, stream):
               stream_id = stream.get("stream_id")
               source = stream.get("direct_source")
               if not stream_id or not source:
@@ -107,20 +108,9 @@ jobs:
               playback = f"https://{host}/live/{urllib.parse.quote(USER, safe='')}/{urllib.parse.quote(PASS, safe='')}/{stream_id}.ts"
               req = urllib.request.Request(playback, headers={**HEADERS, "Range": "bytes=0-0"})
 
-              if main_proxy:
-                  try:
-                      with open_retry(req) as response:
-                          status = response.status
-                          first_byte = response.read(1)
-                          final_host = urllib.parse.urlsplit(response.geturl()).hostname or "none"
-                      if status not in (200, 206) or not first_byte:
-                          return False, f"playback HTTP={status} empty_body={not bool(first_byte)}"
-                      return True, f"HTTP={status} final_host={final_host}"
-                  except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError) as error:
-                      return False, f"playback {type(error).__name__}"
-
+              # Both Workers should route the Xtream stream ID to exactly its declared source.
               try:
-                  with NO_REDIRECT.open(req, timeout=20) as response:
+                  with open_retry(req, opener=NO_REDIRECT) as response:
                       route_status = response.status
                       location = response.headers.get("Location", "")
               except urllib.error.HTTPError as error:
@@ -149,13 +139,20 @@ jobs:
                       source_status = response.status
                       first_byte = response.read(1)
                       final_host = urllib.parse.urlsplit(response.geturl()).hostname or "none"
-              except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError) as error:
+              except urllib.error.HTTPError as error:
+                  return False, f"direct source HTTP={error.code}"
+              except (urllib.error.URLError, TimeoutError, OSError) as error:
                   return False, f"direct source {type(error).__name__}"
               if source_status not in (200, 206) or not first_byte:
                   return False, f"direct source HTTP={source_status} empty_body={not bool(first_byte)}"
               return True, f"route=302 source=HTTP {source_status} final_host={final_host}"
 
-          def check(name, host, main_proxy):
+r).__name__}"
+              if source_status not in (200, 206) or not first_byte:
+                  return False, f"direct source HTTP={source_status} empty_body={not bool(first_byte)}"
+              return True, f"route=302 source=HTTP {source_status} final_host={final_host}"
+
+          def check(name, host):
               status, data = api(host, CREDS)
               user = data.get("user_info", {})
               server = data.get("server_info", {})
@@ -196,7 +193,7 @@ jobs:
                   failures = []
                   # Try a second channel if the first source is temporarily unavailable.
                   for candidate in candidates[:2]:
-                      ok, detail = playback_probe(host, candidate, main_proxy)
+                      ok, detail = playback_probe(host, candidate)
                       if ok:
                           success = True
                           print(f"{name} sample: category={category.get('category_name')} available=true {detail}")
@@ -208,7 +205,7 @@ jobs:
               print(f"{name}: playable category samples={checked}/{len(categories)}")
               print(f"{name}: all endpoint and representative playback checks passed")
 
-          for name, (host, main_proxy) in GATEWAYS.items():
-              check(name, host, main_proxy)
+          for name, host in GATEWAYS.items():
+              check(name, host)
           print("All Xtream health checks passed.")
           PY
