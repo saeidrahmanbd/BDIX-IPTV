@@ -23,7 +23,7 @@ from io import BytesIO
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PLAYLISTS = ("BDIX-Playlist.m3u", "IPTV-Playlist.m3u", "International-Playlist.m3u")
+PLAYLISTS = ("IPTV-Playlist.m3u", "International-Playlist.m3u")
 INDEX_URL = "https://epgshare01.online/epgshare01/"
 TIMEOUT = 40
 MAX_BYTES = 120 * 1024 * 1024
