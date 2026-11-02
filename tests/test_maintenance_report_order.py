@@ -15,7 +15,6 @@ class MaintenanceReportOrderTests(unittest.TestCase):
         expected = "iptv-playlist-main-writer-v3"
         writer_workflows = (
             ".github/workflows/iptv-maintenance.yml",
-            ".github/workflows/bdix-playlist-update.yml",
             ".github/workflows/new-channel-discovery.yml",
             ".github/workflows/international-channel-discovery.yml",
             ".github/workflows/playlist-logo-localization.yml",
