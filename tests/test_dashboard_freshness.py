@@ -48,7 +48,6 @@ class DashboardFreshnessTests(unittest.TestCase):
             report_lines = []
             for name, content in (
                 ("IPTV-Playlist.m3u", "#EXTM3U\nA\n"),
-                ("BDIX-Playlist.m3u", "#EXTM3U\nB\n"),
                 ("International-Playlist.m3u", "#EXTM3U\nC\n"),
             ):
                 path = Path(directory) / name
@@ -58,13 +57,12 @@ class DashboardFreshnessTests(unittest.TestCase):
                 report_lines.append(f"- {name} SHA-256: **{digest}**")
             report = "\n".join(report_lines)
             self.assertTrue(epg_report_fingerprints_match(report, paths))
-            paths[2][1].write_text("#EXTM3U\nchanged\n", encoding="utf-8")
+            paths[1][1].write_text("#EXTM3U\nchanged\n", encoding="utf-8")
             self.assertFalse(epg_report_fingerprints_match(report, paths))
 
     def test_epg_audit_requires_both_headers_ok(self):
         report = (
             "| IPTV-Playlist.m3u | 10 | 5 | OK |\n"
-            "| BDIX-Playlist.m3u | 4 | 4 | OK |\n"
             "| International-Playlist.m3u | 20 | 12 | OK |\n"
         )
         self.assertTrue(epg_audit_headers_ok(report))
