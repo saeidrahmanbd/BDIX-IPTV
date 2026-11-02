@@ -82,7 +82,7 @@ COUNTRY_CODE = {"Bangladesh": "bd", "India": "in"}
 # Country-group threshold used by discovery-policy validation. A new country group
 # must not be created from fewer than five legitimate primary identities.
 COUNTRY_THRESHOLD = 5
-OTHER_PLAYLISTS = (Path("BDIX-Playlist.m3u"), Path("International-Playlist.m3u"))
+OTHER_PLAYLISTS = (Path("International-Playlist.m3u"),)
 BAD_RE = re.compile(r"(?<![^\W_])(?:" + "|".join(re.escape(w) for w in sorted(BAD_WORDS)) + r")(?![^\W_])")
 ID_CC_RE = re.compile(r"\.([a-z]{2})(?:@|$)")
 ATTR_RE = re.compile(r'([A-Za-z0-9_-]+)="([^"]*)"')
