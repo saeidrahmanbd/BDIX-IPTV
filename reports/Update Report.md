@@ -1,48 +1,48 @@
 # Update Report
 
-_Last generated: **2026-11-02 05:14 UTC**_
+_Last generated: **2026-11-02 09:09 UTC**_
 
-Source playlist SHA-256: **0e3ea858f8ba56c3cc8ce1d8d16e6bda7c758330612ecd4f76fb340b6e4ec783**
+Source playlist SHA-256: **c83a2db794504997f9441df2faae73c5ea42a78b7bf4e7bd8f4e3c1d397f5454**
 
 | Metric | Current |
 |---|---:|
-| Streams | **1026** |
+| Streams | **1066** |
 | Active Channel Identities | **680** |
 | Active Primary Streams | **680** |
 | Bangladesh | **63** |
 | India | **327** |
 | Backup Stream Entries | **346** |
-| IPTV Local Logos | **STALE** |
-| IPTV EPG Programme Coverage | **55%** |
-| IPTV EPG Mapping | **64.4%** |
-| Stream Health Tested | **STALE** |
-| Stream Health Failures | **STALE** |
-| Persistent Failures | **STALE** |
-| Near-Duplicate URL Families | **STALE / UNKNOWN** |
-| Audit Blocking Issues | **STALE / UNKNOWN** |
-| Pre-Publish Gate | **STALE / UNKNOWN** |
-| Pre-Publish Gate Generated | **2026-11-01T01:11:35+00:00** |
+| IPTV Local Logos | **99.2%** |
+| IPTV EPG Programme Coverage | **PENDING** |
+| IPTV EPG Mapping | **PENDING** |
+| Stream Health Tested | **1066** |
+| Stream Health Failures | **66** |
+| Persistent Failures | **21** |
+| Near-Duplicate URL Families | **2** |
+| Audit Blocking Issues | **0** |
+| Pre-Publish Gate | **BLOCK** |
+| Pre-Publish Gate Generated | **2026-11-02T09:09:15+00:00** |
 
-## Quality Controls (STALE / UNKNOWN — saved audit values shown for reference)
-- Duplicate stream URLs: **STALE / UNKNOWN (last saved: 0)**
-- Metadata conflicts (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
-- Same-name / different-ID collisions (canonical primary scope): **STALE / UNKNOWN (last saved: 0)**
+## Quality Controls 
+- Duplicate stream URLs: **0**
+- Metadata conflicts (canonical primary scope): **0**
+- Same-name / different-ID collisions (canonical primary scope): **0**
 - Cross-queue metadata identity variants: **0**
-- Cross-queue same-name / different-ID collisions: **0**
-- Duplicate primary identities: **STALE / UNKNOWN (last saved: 0)**
-- Primary channel-number collisions: **STALE / UNKNOWN (last saved: 0)**
-- Primary entries missing channel numbers: **STALE / UNKNOWN (last saved: 0)**
-- Logo exceptions: **STALE / UNKNOWN (last saved: 0)**
-- Malformed EXTINF entries: **STALE / UNKNOWN (last saved: 0)**
-- Category block-order issues: **STALE / UNKNOWN (last saved: 0)**
-- Alphabetical ordering issues: **STALE / UNKNOWN (last saved: 0)**
-- Signed/tokenized URLs: **STALE / UNKNOWN (last saved: 10)**
+- Cross-queue same-name / different-ID collisions: **4**
+- Duplicate primary identities: **0**
+- Primary channel-number collisions: **0**
+- Primary entries missing channel numbers: **0**
+- Logo exceptions: **0**
+- Malformed EXTINF entries: **0**
+- Category block-order issues: **0**
+- Alphabetical ordering issues: **0**
+- Signed/tokenized URLs: **9**
 
 ## Safety & Automation
 - Stream health is non-destructive and keeps per-URL failure history.
 - Backup streams are never automatically deleted because of health failures.
 - `New Channels` and `New Backup` are active review queues used by discovery and validation; they are not retired categories.
-- Pre-publish gate status: **STALE / UNKNOWN**
+- Pre-publish gate status: **BLOCK**
 - Canonical channel identity index: reports/channel-identity-index.json
 
 ## Counting Scope
@@ -52,24 +52,24 @@ Source playlist SHA-256: **0e3ea858f8ba56c3cc8ce1d8d16e6bda7c758330612ecd4f76fb3
 - **Backup Stream Entries** count playlist rows, not independent CDN/origin infrastructures. Backup independence is reviewed separately.
 
 ## EPG
-- EPG IDs audited: **680**
-- Mapped: **438 (64.4%)**
-- Current/future programme coverage: **375/680 (55.1%)**
-- No mapping: **242**
-- EPG metric scope: **IPTV-Playlist.m3u published-guide row (verified against all three current playlist inventories)**
+- EPG IDs audited: **PENDING — guide not current**
+- Mapped: **PENDING — no current validated guide**
+- Current/future programme coverage: **PENDING — no current validated guide**
+- No mapping: **PENDING — guide not current**
+- EPG metric scope: **combined EPG report fallback (IPTV-only row unavailable) (awaiting a valid, fresh published guide)**
 - Programme coverage and freshness are measured from the published XMLTV; technical validation checks data integrity, not upstream licensing.
 
 ## Freshness
 | Report | Last generated | Input freshness |
 |---|---|---|
-| Playlist audit | **2026-11-01T01:11:34.614764+00:00** | **STALE** |
-| EPG coverage / three-playlist inventory | **2026-11-02T05:14:44+00:00** | **CURRENT** |
-| Stream health | **2026-11-01T01:12:25+00:00** | **STALE** |
-| Pre-publish gate | **2026-11-01T01:11:35+00:00** | **STALE** |
+| Playlist audit | **2026-11-02T09:09:15.428164+00:00** | **CURRENT** |
+| EPG coverage / two-playlist inventory | **2026-11-02T08:30:49.124Z** | **PENDING — guide missing or freshness not PASS** |
+| Stream health | **2026-11-02T09:09:44+00:00** | **CURRENT** |
+| Pre-publish gate | **2026-11-02T09:09:15+00:00** | **CURRENT** |
 
 ## Maintenance History
 - Records retained: **30**
-- Latest entries change: **1161 → 1161**
-- Latest health failures: **157 → 157**
+- Latest entries change: **1161 → 1066**
+- Latest health failures: **157 → 66**
 
 Historical records are retained in reports/maintenance-history.json.

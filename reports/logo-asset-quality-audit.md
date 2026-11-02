@@ -1,17 +1,17 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-02T09:02:22+00:00**
+Generated: **2026-11-02T09:09:14+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
 - IPTV-Playlist.m3u SHA-256: **c83a2db794504997f9441df2faae73c5ea42a78b7bf4e7bd8f4e3c1d397f5454**
-- International-Playlist.m3u SHA-256: **da3cd5d7257171801b7188a1a73f3e0cf66a13c4fa41d2d5a23cbf3d08967fc8**
+- International-Playlist.m3u SHA-256: **8dae8a50d77b2f9e31bbc330aa8424a3363d1b9cff5cfca459eec9476586166a**
 
 ## Summary
 
-- Safe repairs applied this run: **1**
+- Safe repairs applied this run: **0 (read-only mode)**
 - File-format/extension mismatches remaining: **2**
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **4**
@@ -25,7 +25,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| htvc-movies-e07d255b17.png | PNG | PNG | 2949×2749 | 1600×1491 | downscaled |
+| — | — | — | — | — | none |
 
 ## Remaining extension mismatches
 
