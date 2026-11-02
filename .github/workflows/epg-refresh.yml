@@ -1,4 +1,5 @@
 name: Refresh IPTV EPG
+# Re-run after the two-playlist inventory migration to rebuild validated coverage and dashboard metrics.
 
 on:
   push:
