@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-Playlist updates across `IPTV-Playlist.m3u`, `BDIX-Playlist.m3u`, and `International-Playlist.m3u` are recorded here automatically.
+Playlist updates across `IPTV-Playlist.m3u` and `International-Playlist.m3u` are recorded here automatically.
 
 <!-- playlist-changelog:IPTV-Playlist.m3u -->
 ### 2026-11-01 — `IPTV-Playlist.m3u`
