@@ -217,7 +217,7 @@ def main(argv: list[str]) -> int:
         print(__doc__)
         return 2
     paths = [Path(x) for x in argv[1:]] or [Path("IPTV-Playlist.m3u")]
-    extra = [Path("BDIX-Playlist.m3u"), Path("International-Playlist.m3u")]
+    extra = [Path("International-Playlist.m3u")]
     failed = False
     for p in paths:
         errors = validate_playlist(p, [x for x in extra if x != p])
