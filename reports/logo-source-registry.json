@@ -5758,5 +5758,35 @@
     "status": "generated_fallback",
     "source_url": "",
     "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+  },
+  "IPTV-Playlist.m3u|custom.hooraykids|Hooray Kids|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-hooray-kids.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+  },
+  "IPTV-Playlist.m3u|custom.tvcarabickids|TVC Arabic Kids|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-tvc-arabic-kids.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+  },
+  "IPTV-Playlist.m3u|custom.islamchannelbangla|Islam Channel Bangla|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-islam-channel-bangla.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+  },
+  "IPTV-Playlist.m3u|custom.horseandcountry|Horse & Country|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-horse-and-country.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+  },
+  "IPTV-Playlist.m3u|custom.mtrspt|MTRSPT|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-mtrspt.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
+  },
+  "IPTV-Playlist.m3u|custom.tracesport|Trace Sport|https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/generated-fallback-trace-sport.svg": {
+    "status": "generated_fallback",
+    "source_url": "",
+    "notes": "Channel-labelled local fallback artwork; explicitly marked UNOFFICIAL FALLBACK ART. An exact matching original broadcaster logo could not be verified."
   }
 }
