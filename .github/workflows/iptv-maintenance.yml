@@ -242,14 +242,14 @@ jobs:
           done
           exit 1
       - name: Publish fresh dashboard diagnostics after blocked maintenance
-        if: \${{ failure() }}
+        if: ${{ failure() }}
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           for attempt in 1 2 3; do
-            echo "::notice::Rebuilding dashboard diagnostics from the latest committed two-playlist state (attempt \${attempt})."
+            echo "::notice::Rebuilding dashboard diagnostics from the latest committed two-playlist state (attempt ${attempt})."
             git fetch origin main
             git reset --hard origin/main
             git clean -fd
