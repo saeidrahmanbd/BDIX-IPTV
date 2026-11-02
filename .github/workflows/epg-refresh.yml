@@ -16,6 +16,7 @@ on:
       - 'tests/test_epg_config.py'
       - 'tests/test_epg_refresh_needed.py'
       - 'tests/test_report_freshness.py'
+      - 'tests/test_dashboard_freshness.py'
       - 'scripts/generate_dashboard.py'
       - 'tests/test_epg_publication_safety.py'
       - 'docs/requirements.txt'
@@ -84,6 +85,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_epg_publication_safety.py'
           python -m unittest discover -s tests -p 'test_epg_source_rights.py'
           python -m unittest discover -s tests -p 'test_report_freshness.py'
+          python -m unittest discover -s tests -p 'test_dashboard_freshness.py'
       - name: Regenerate, validate and publish XMLTV
         shell: bash
         env:
