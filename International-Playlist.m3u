@@ -148,8 +148,6 @@ http://103.67.97.45:81/0.ts
 http://103.67.97.46/0.ts
 #EXTINF:-1 tvg-id="KhushbooBangla.in@SD" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/khushboo-bangla.png" tvg-country="IN" group-title="Indian Bangla" tvg-name="Khushboo Bangla",Khushboo Bangla
 https://cdn.pishow.tv/ott/live/1473/master.m3u8
-#EXTINF:-1 tvg-id="KolkataTV.in" channel-id="KolkataTV.in" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/kolkata-tv.png" tvg-country="IN" group-title="Indian Bangla" tvg-name="Kolkata TV",Kolkata TV
-https://cdn.ottlive.co.in/kolkatatv/index.m3u8
 #EXTINF:-1 tvg-id="KTVBangla.in@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ktv-bangla.png" tvg-country="IN" group-title="Indian Bangla" tvg-name="KTV Bangla",KTV Bangla
 https://server.livelegitpro.in:9899/tribetv/tribetv/index.m3u8
 #EXTINF:-1 tvg-id="MONTVBangla.in" channel-id="MONTVBangla.in" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mon-bangla-4a53249503.png" tvg-country="IN" group-title="Indian Bangla" tvg-name="Mon Bangla",Mon Bangla
@@ -420,12 +418,8 @@ https://vidaa.kableone.com/hls/live/2111218/YrfMusic/1.m3u8
 https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 #EXTINF:-1 tvg-id="Zoom.in@Nepal" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zoom-india-nepal.png" tvg-country="NP" group-title="Indian Music" tvg-name="Zoom (India) Nepal",Zoom (India) Nepal
 https://pubads.g.doubleclick.net/ssai/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
-#EXTINF:-1 channel-id="10TV.in@SD" tvg-id="10TV.in@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/10-tv-6c9aa3e23f.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="10 TV",10 TV
-https://mumbai-edge.smartplaytv.in/10TV/index.m3u8
 #EXTINF:-1 channel-id="4SiDESTV.in@SD" tvg-id="4SiDESTV.in@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/4-sides-tv-6a436fa007.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="4 SiDES TV",4 SiDES TV
 https://stream.ottlive.co.in/4sidestv/index.m3u8
-#EXTINF:-1 channel-id="99TV.in@SD" tvg-id="99TV.in@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/99tv-e8fc39ce2e.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="99TV",99TV
-https://cdn.pishow.tv/ott/live/1211/master.m3u8
 #EXTINF:-1 tvg-id="AakaashAath.in@SD" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/aakaash-aath.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Aakaash Aath",Aakaash Aath
 http://tvsen5.aynascope.net/Wm9Lv2RjZGT6/index.m3u8
 #EXTINF:-1 tvg-id="AlrightTV.in@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/alright-tv.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Alright! TV",Alright! TV
@@ -442,8 +436,6 @@ https://anjan.vstream.online/anjanorg/ngrp:anjan_hdall/playlist.m3u8
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starasianet.smil/chunklist_b1928000.m3u8
 #EXTINF:-1 tvg-id="AsianetMiddleEast.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asianet-middle-east-576p.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Asianet Middle East",Asianet Middle East
 https://mumt03.tangotv.in/Dsly5z3HASIANETMIDDLEEAST/index.m3u8
-#EXTINF:-1 tvg-id="AssamTalks.in" channel-id="AssamTalks.in" tvg-language="asm" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/assam-talks.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Assam Talks",Assam Talks
-https://tvsen7.aynaott.com/AssamTalks/index.m3u8
 #EXTINF:-1 tvg-id="AyushTV.in@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ayush-tv.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Ayush TV",Ayush TV
 http://d1msejlow1t3l4.cloudfront.net/fta/ayushtv/playlist.m3u8
 #EXTINF:-1 tvg-id="BaiscopeTV.in" tvg-name="Baiscope TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/baiscope-tv.png" channel-id="BaiscopeTV.in" tvg-country="IN" tvg-language="hin" group-title="Indian Entertainment",Baiscope TV
@@ -506,8 +498,6 @@ https://mumbai-edge.smartplaytv.in/DDIndia/index.m3u8
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/e8c3741f8c154d3185831f4e31777fb2/index.m3u8
 #EXTINF:-1 tvg-id="DDKashir.in@SD" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-kashir.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="DD Kashir",DD Kashir
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/8a59a828e80c49d0958925950cec0204/index.m3u8
-#EXTINF:-1 tvg-id="DDKisan.in@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-kisan.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="DD Kisan",DD Kisan
-https://mumbai-edge.smartplaytv.in/DDKisan/index.m3u8
 #EXTINF:-1 tvg-id="DDMadhyaPradesh.in@SD" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-madhya-pradesh.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="DD Madhya Pradesh",DD Madhya Pradesh
 https://mumbai-edge.smartplaytv.in/ddmadhyapradesh/index.m3u8
 #EXTINF:-1 tvg-id="DDMalayalam.in@SD" tvg-language="mal" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/dd-malayalam.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="DD Malayalam",DD Malayalam
@@ -616,8 +606,6 @@ https://cdn.pishow.tv/ott/live/1476/master.m3u8
 https://cdn.pishow.tv/ott/live/1521/master.m3u8
 #EXTINF:-1 tvg-id="MahaaMax.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mahaa-max.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Mahaa Max",Mahaa Max
 https://mumbai-edge.smartplaytv.in/MahaMax/index.m3u8
-#EXTINF:-1 tvg-id="MakkalTV.in@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/makkal-tv.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Makkal TV",Makkal TV
-https://5k8q87azdy4v-hls-live.wmncdn.net/MAKKAL/271ddf829afeece44d8732757fba1a66.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="Mango.in@SD" tvg-language="hin" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/mango-india-224e210d95.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Mango (India)",Mango (India)
 https://stmv6.voxtvhd.com.br/cinehindi/cinehindi/playlist.m3u8
 #EXTINF:-1 tvg-id="ManoranjanPrime.in@SD" tvg-language="bho" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/manoranjan-prime.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Manoranjan Prime",Manoranjan Prime
@@ -692,8 +680,6 @@ https://d1msejlow1t3l4.cloudfront.net/fta/rengonitv/playlist.m3u8?ads.channel=66
 https://live.rojatv.cloud/rojatv/rojatv/index.m3u8
 #EXTINF:-1 tvg-id="RongeenTV.in@SD" tvg-language="hin" channel-id="RongeenTV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/rongeen-tv.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Rongeen TV",Rongeen TV
 https://server.thelegitpro.in/rongeentv/rongeentv/index.m3u8
-#EXTINF:-1 tvg-id="SaamTV.in@SD" tvg-language="und" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/saam-tv.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Saam TV",Saam TV
-https://cdn.pishow.tv/ott/live/437/master.m3u8
 #EXTINF:-1 tvg-id="SADATV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sada-tv.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="SADA TV",SADA TV
 http://cdn12.henico.net:8080/live/sadatv/index.m3u8
 #EXTINF:-1 tvg-id="SaiTV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sai-tv.png" tvg-country="IN" group-title="Indian Entertainment" tvg-name="Sai TV",Sai TV
@@ -4244,8 +4230,6 @@ https://cdn.pishow.tv/ott/live/993/master.m3u8
 https://aryqtvm.aryzap.com/v1/0183ea2a0eec0b8ed5941a38bc76/0183ea2a4e470b8ed5aa4d793457/ARYQTVH264_720p.m3u8
 #EXTINF:-1 tvg-id="AsianTV.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/asian-tv.png" tvg-country="BD" group-title="Backup" tvg-name="Asian TV",Asian TV
 https://tvsen6.aynaott.com/pKb5k6NnzxsKpWUs6E8M/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 channel-id="AssamTalks.in" tvg-id="AssamTalks.in" tvg-language="asm" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/assam-talks.png" tvg-country="IN" group-title="Backup" tvg-name="Assam Talks",Assam Talks
-http://tvsen7.aynascope.net/AssamTalks/index.m3u8
 #EXTINF:-1 tvg-id="ATNBangla.bd" channel-id="ATNBangla.bd" tvg-language="ben" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png" tvg-country="BD" group-title="Backup" tvg-name="ATN Bangla",ATN Bangla
 https://iptvlive.ahmed-bd-org.workers.dev/atn-bangla-1/index.m3u8
 #EXTINF:-1 tvg-id="ATNBangla.bd" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/atn-bangla.png" tvg-country="BD" group-title="Backup" tvg-name="ATN Bangla",ATN Bangla
