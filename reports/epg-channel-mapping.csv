@@ -2021,3 +2021,13 @@ Vietnam,ON Movies,ONMovies.vn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguou
 Vietnam,ON Music,ONMusic.vn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Vietnam,Tra Vinh TV,TraVinhTV.vn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
 Vietnam,Vinh Long TV 3,VinhLongTV3.vn@SD,,,NO_GUIDE_HIT,Auto-maintained; verify ambiguous/name matches manually.
+"Bangladesh","Channel 16","Channel16.bd","","","NO_GUIDE_HIT","Primary identity reconciled; no verified source ID or schedule found. Keep unmapped rather than assigning an unrelated programme guide."
+"Indian Movies","& Picture","Picture.in","","","NO_GUIDE_HIT","Primary identity reconciled; no verified source ID or schedule found. Keep unmapped rather than assigning an unrelated programme guide."
+"Indian Music","Oli TV","OliTV.in@SD","","","NO_GUIDE_HIT","Primary identity reconciled; no verified source ID or schedule found. Keep unmapped rather than assigning an unrelated programme guide."
+"International","CBS TV","CBSTV.us","","","NO_GUIDE_HIT","Primary identity reconciled; no verified source ID or schedule found. Keep unmapped rather than assigning an unrelated programme guide."
+"International","LAFF TV","LAFFTV.us","","","NO_GUIDE_HIT","Primary identity reconciled; no verified source ID or schedule found. Keep unmapped rather than assigning an unrelated programme guide."
+"International","Lifetime","Lifetime.us","","","NO_GUIDE_HIT","Primary identity reconciled; no verified source ID or schedule found. Keep unmapped rather than assigning an unrelated programme guide."
+"Kids","Comedy Central","ComedyCentral.us","","","NO_GUIDE_HIT","Primary identity reconciled; no verified source ID or schedule found. Keep unmapped rather than assigning an unrelated programme guide."
+"Religious","Islam TV","IslamTV.sa","","","NO_GUIDE_HIT","Primary identity reconciled; no verified source ID or schedule found. Keep unmapped rather than assigning an unrelated programme guide."
+"Religious","Madani Channel Bangla","MadaniChannelBangla.bd@SD","","","NO_GUIDE_HIT","Primary identity reconciled; no verified source ID or schedule found. Keep unmapped rather than assigning an unrelated programme guide."
+"Sports","Eurosport","Eurosport.in@SD","","","NO_GUIDE_HIT","Primary identity reconciled; no verified source ID or schedule found. Keep unmapped rather than assigning an unrelated programme guide."
