@@ -1,31 +1,31 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-02T10:01:38+00:00**
+Generated: **2026-11-02T10:59:41+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
 ## Source playlist fingerprints
 
-- IPTV-Playlist.m3u SHA-256: **c83a2db794504997f9441df2faae73c5ea42a78b7bf4e7bd8f4e3c1d397f5454**
-- International-Playlist.m3u SHA-256: **2eaa33669115fc4296e45adcae0091a12bcba107218f521e4eff7ba1b745aaf2**
+- IPTV-Playlist.m3u SHA-256: **0effbae25904525535b8b1cccb3c1c4a955b5785b5476d006857db7be5f26a1f**
+- International-Playlist.m3u SHA-256: **40a24be4246311287b2dd8832fae710f90d84e662ce01d9917bceda503cca03a**
 
 ## Summary
 
-- Safe repairs applied this run: **0 (read-only mode)**
+- Safe repairs applied this run: **1**
 - File-format/extension mismatches remaining: **2**
 - Raster assets still oversized (max side > 1600px): **1**
-- Raster assets over 512000 bytes: **4**
+- Raster assets over 512000 bytes: **3**
 - Raster/SVG assets with short side under 64 px: **148**
-- Exact-byte duplicate asset clusters: **652**
-- Playlist references whose asset stem differs from the normalized channel name: **1116**
-- Unreferenced files immediately inside logos/: **1447** (not deleted; other tooling or playlists may use them)
+- Exact-byte duplicate asset clusters: **653**
+- Playlist references whose asset stem differs from the normalized channel name: **1114**
+- Unreferenced files immediately inside logos/: **1428** (not deleted; other tooling or playlists may use them)
 - Technical read/repair errors: **3**
 
 ## Safe repairs applied
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| — | — | — | — | — | none |
+| htvc-movies-e07d255b17.png | PNG | PNG | 1600×1491 | 1115×1040 | downscaled, re-encoded/compressed |
 
 ## Remaining extension mismatches
 
@@ -44,7 +44,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Dimensions | Bytes | Active reference |
 |---|---|---|---|
-| htvc-movies-e07d255b17.png | 1600×1491 | 589588 | yes |
 | famatv-1080p-not-24-7.jpg | 221×87 | 562326 | no |
 | minimax-romania.svg | 0×0 | 992049 | no |
 | README.md | 0×0 | 602694 | no |
@@ -161,7 +160,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | sportsgrid-bb9303e31f.png | 141×42 | yes |
 | stingray-holiday-hits.png | 110×40 | yes |
 | teletrak-tv-cef4f2bf85.png | 133×58 | no |
-| ten-cricket.png | 132×32 | no |
+| ten-cricket.png | 132×32 | yes |
 | tjk-tv-1dac3e1586.png | 70×46 | yes |
 | trace-ivoire-fffbf7a0d2.png | 68×50 | yes |
 | travel-xp-english-eu.png | 220×53 | no |
@@ -842,6 +841,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 - logos/unused/zee-talkies.png, logos/zee-talkies.png
 - logos/vcv-720p-not-24-7.png, logos/vcv.png
 - logos/viasat-kino-balkan-24c3a8c6c2.svg, logos/viasat-kino-romania-24c3a8c6c2.svg
+- logos/vision-india.png, logos/vision.png
 - logos/vokta-tv-720p.png, logos/vokta-tv.png
 - logos/wah-punjabi-576p.png, logos/wah-punjabi.png
 - logos/willow-tv.png, logos/willow.png
@@ -1099,6 +1099,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | IPTV-Playlist.m3u | Raj TV | raj-tv.png | New Channels |
 | IPTV-Playlist.m3u | Shekinah TV | shekinah-tv.png | New Channels |
 | IPTV-Playlist.m3u | Shiksha TV | shiksha-tv.png | New Channels |
+| IPTV-Playlist.m3u | Star Gold | repaired-star-gold-de06c8e974.png | New Channels |
 | IPTV-Playlist.m3u | Vokta TV | vokta-tv.png | New Channels |
 | IPTV-Playlist.m3u | Maasranga TV | maasranga-tv.png | New Backup |
 | IPTV-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
@@ -1253,6 +1254,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Bijoy TV | bijoy-tv.png | Bangladesh |
 | International-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Bangladesh |
 | International-Playlist.m3u | BTV News | repaired-btv-news-0646349a43.png | Bangladesh |
+| International-Playlist.m3u | Channel 1 | channel-1.png | Bangladesh |
+| International-Playlist.m3u | Channel 24 | channel-24.png | Bangladesh |
 | International-Playlist.m3u | Channel 52 | channel-52.png | Bangladesh |
 | International-Playlist.m3u | Channel I | channel-i.png | Bangladesh |
 | International-Playlist.m3u | Channel S | channel-s.png | Bangladesh |
@@ -1265,8 +1268,12 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Ekhon TV | ekhon-tv.png | Bangladesh |
 | International-Playlist.m3u | Ekushey TV | ekushey-tv-d9479035b4.png | Bangladesh |
 | International-Playlist.m3u | Enter TV | enter-tv.png | Bangladesh |
+| International-Playlist.m3u | G TV | g-tv.png | Bangladesh |
+| International-Playlist.m3u | G TV | g-tv.png | Bangladesh |
+| International-Playlist.m3u | G TV | g-tv.png | Bangladesh |
 | International-Playlist.m3u | GAZI TV | gazi-tv.png | Bangladesh |
 | International-Playlist.m3u | Global TV | verified-global-tv-1080p-5ffc043912-095e7dad7b.png | Bangladesh |
+| International-Playlist.m3u | Independent TV | independent-tv.png | Bangladesh |
 | International-Playlist.m3u | Jamuna TV | jamuna-tv.png | Bangladesh |
 | International-Playlist.m3u | JonmoBhumi TV | jonmobhumi-tv.png | Bangladesh |
 | International-Playlist.m3u | Maasranga TV | maasranga-tv.png | Bangladesh |
@@ -1279,21 +1286,27 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | NEWS 21 BANGLA | news-21-bangla-tv.png | Bangladesh |
 | International-Playlist.m3u | Nexus TV | nexus-tv.png | Bangladesh |
 | International-Playlist.m3u | NRB | nrb-tv.png | Bangladesh |
+| International-Playlist.m3u | Probashi TV | probashi-tv.png | Bangladesh |
 | International-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Bangladesh |
 | International-Playlist.m3u | Rupashi Bangla TV | rupashi-bangla-tv.png | Bangladesh |
 | International-Playlist.m3u | SA TV | sa-tv.png | Bangladesh |
+| International-Playlist.m3u | Somoy TV | somoy-tv.png | Bangladesh |
+| International-Playlist.m3u | Somoy TV | somoy-tv.png | Bangladesh |
+| International-Playlist.m3u | Somoy TV | somoy-tv.png | Bangladesh |
 | International-Playlist.m3u | TBN24 | tbn-24.png | Bangladesh |
 | International-Playlist.m3u | BHI Channel | bhi-channel.png | Indian Bangla |
 | International-Playlist.m3u | Jhankar TV | jhankar-tv.png | Indian Bangla |
 | International-Playlist.m3u | Orange Bangla TV | orange-bangla-tv.png | Indian Bangla |
 | International-Playlist.m3u | Sananda TV | sananda-tv-af0df4f34c.jpg | Indian Bangla |
 | International-Playlist.m3u | Tara TV | tara-tv.png | Indian Bangla |
+| International-Playlist.m3u | TV9 Bangla | tv-9-bangla.png | Indian Bangla |
 | International-Playlist.m3u | Alankar TV | alankar-tv.png | Indian Movies |
 | International-Playlist.m3u | Asian Sony Max 2 | sony-max-2.png | Indian Movies |
 | International-Playlist.m3u | Bollygold | nh-bollygold-dbedeff9.png | Indian Movies |
 | International-Playlist.m3u | Goldmines 2 | goldmines.png | Indian Movies |
 | International-Playlist.m3u | Indywood TV | indywood-tv.png | Indian Movies |
 | International-Playlist.m3u | K Cine | 18-028b925b47.png | Indian Movies |
+| International-Playlist.m3u | Movies Now | movies-now-hd.png | Indian Movies |
 | International-Playlist.m3u | Pitaara | pitaara-tv.png | Indian Movies |
 | International-Playlist.m3u | Pitaara TV | pitaara-tv.png | Indian Movies |
 | International-Playlist.m3u | Shubh Cinema TV | shubh-cinema-tv.png | Indian Movies |
@@ -1305,12 +1318,14 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Deewana | deewana-hd-540p.png | Indian Music |
 | International-Playlist.m3u | Dhool TV | dhool-tv.png | Indian Music |
 | International-Playlist.m3u | Kalika TV | kalika-tv.png | Indian Music |
+| International-Playlist.m3u | Kappa TV (Music) | kappa-tv.png | Indian Music |
 | International-Playlist.m3u | MTV (India) | mtv-india-hd-720p.png | Indian Music |
 | International-Playlist.m3u | Music Mastii | mastiii.png | Indian Music |
 | International-Playlist.m3u | Peppers TV | peppers-tv.png | Indian Music |
 | International-Playlist.m3u | Songdew TV | songdew-tv.png | Indian Music |
 | International-Playlist.m3u | Ultimate TV | ultimate-tv.png | Indian Music |
 | International-Playlist.m3u | Vaanavil TV | vaanavil-tv.png | Indian Music |
+| International-Playlist.m3u | &TV | tv.png | Indian Entertainment |
 | International-Playlist.m3u | 4 SiDES TV | 4-sides-tv-6a436fa007.png | Indian Entertainment |
 | International-Playlist.m3u | Alright! TV | alright-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Amrita TV | amrita-tv.png | Indian Entertainment |
@@ -1343,6 +1358,8 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Mei Alai TV | mei-alai-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Metro TV (India) | metro-tv-india-0625d4e893.png | Indian Entertainment |
 | International-Playlist.m3u | Mh 1 Prime | mh1-prime.png | Indian Entertainment |
+| International-Playlist.m3u | MH One Prime | mh1-prime.png | Indian Entertainment |
+| International-Playlist.m3u | MTV | mtv-india-hd-720p.png | Indian Entertainment |
 | International-Playlist.m3u | Nandighosha TV | nandighosha-tv.png | Indian Entertainment |
 | International-Playlist.m3u | NKR TV Kannada | nkr-tv-kannada.png | Indian Entertainment |
 | International-Playlist.m3u | NTC TV | ntc-tv.png | Indian Entertainment |
@@ -1382,16 +1399,20 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Tehzeeb TV | tehzeeb-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Thendral TV | thendral-tv-ed9b933eb5.png | Indian Entertainment |
 | International-Playlist.m3u | Total TV Haryana | total-tv-haryana.png | Indian Entertainment |
-| International-Playlist.m3u | &TV | tv.png | Indian Entertainment |
 | International-Playlist.m3u | TV BRICS English | tv-brics-english.png | Indian Entertainment |
 | International-Playlist.m3u | Vanitha TV | vanitha-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Vasanth TV | vasanth-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Vendhar TV | vendhar-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Vissa TV | vissa-tv.png | Indian Entertainment |
+| International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.svg | Indian Entertainment |
+| International-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Indian Entertainment |
+| International-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Indian Entertainment |
 | International-Playlist.m3u | Zodiak TV | zodiak-tv.png | Indian Entertainment |
 | International-Playlist.m3u | Zoom | zoom-tv.png | Indian Entertainment |
 | International-Playlist.m3u | aur LIFE | aurlife.png | Pakistani |
 | International-Playlist.m3u | Falak TV | falak-tv.png | Pakistani |
+| International-Playlist.m3u | Hum TV | hum-tv.png | Pakistani |
+| International-Playlist.m3u | Hum TV | hum-tv.png | Pakistani |
 | International-Playlist.m3u | Jalwa TV | jalwa-tv.png | Pakistani |
 | International-Playlist.m3u | Tag TV | tag-tv.png | Pakistani |
 | International-Playlist.m3u | Allegro | allegro-hd-1080p.png | Argentina |
@@ -1417,6 +1438,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Ranchenato TV | ranchenato-tv-fa3be7bb3c.png | Colombia |
 | International-Playlist.m3u | Rumba TV | rumba-tv-3182ea7301.png | Colombia |
 | International-Playlist.m3u | Supermusica TV | supermusica-tv-52340ed26b.jpg | Colombia |
+| International-Playlist.m3u | Canal 3 KMK TV | canal-3-kmk-tv-720p.jpg | Costa Rica |
+| International-Playlist.m3u | Gex TV | gex-tv-eb7ee59ee5.png | Costa Rica |
+| International-Playlist.m3u | IQ Channel | iq-channel-df4804e706.png | Costa Rica |
+| International-Playlist.m3u | SOY Plancha TV | soy-plancha-tv-0a254093f8.jpg | Costa Rica |
+| International-Playlist.m3u | Urbano TV | urbano-tv-bc3c78e42d.png | Costa Rica |
 | International-Playlist.m3u | Film+ (Czech Republic) | film-plus-czech-republic-823999f902.png | Czech Republic |
 | International-Playlist.m3u | FILMBOX+ Comedy Czechia | filmbox-plus-comedy-czechia-a21ffa318d.png | Czech Republic |
 | International-Playlist.m3u | FILMBOX+ Emotion Czechia | filmbox-plus-emotion-czechia-f7ccc464ab.png | Czech Republic |
@@ -1424,8 +1450,19 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | FILMBOX+ Love & Crime | filmbox-plus-love-and-crime-a83544bb95.png | Czech Republic |
 | International-Playlist.m3u | FILMBOX+ One Czechia | filmbox-plus-one-czechia-98de98aaef.png | Czech Republic |
 | International-Playlist.m3u | Retro Music TV | retro-music-tv.png | Czech Republic |
+| International-Playlist.m3u | Fuego TV | fuego-tv-23f3f22378.png | Dominican Republic |
+| International-Playlist.m3u | Maimon TV Canal 3 | maimon-tv-canal-3-022efdea1e.png | Dominican Republic |
+| International-Playlist.m3u | Makao TV | makao-tv-0781b48dfa.png | Dominican Republic |
+| International-Playlist.m3u | Mega Cine TV | mega-cine-tv-bafa760f60.png | Dominican Republic |
+| International-Playlist.m3u | Montones TV | montones-tv-af126eccd7.png | Dominican Republic |
+| International-Playlist.m3u | Siembra TV (Dominican Republic) | siembra-tv-dominican-republic-d39394bc42.png | Dominican Republic |
+| International-Playlist.m3u | Tarima TV | tarima-tv-23e152e9ee.png | Dominican Republic |
+| International-Playlist.m3u | Tele Dominicana TV | tele-dominicana-tv-db3d804f55.png | Dominican Republic |
+| International-Playlist.m3u | TV Exitos | tv-exitos-a7aac8d99c.png | Dominican Republic |
+| International-Playlist.m3u | El Sol Network TV | el-sol-network-tv-1080p.png | Ecuador |
+| International-Playlist.m3u | Infinita TV | infinita-tv-1080p-0108680fa6.png | Ecuador |
+| International-Playlist.m3u | Metropoli Medios TV | metropoli-medios-tv-266701e2d9.jpg | Ecuador |
 | International-Playlist.m3u | Best of Dance TV | best-of-dance-tv-1080p.png | Estonia |
-| International-Playlist.m3u | Navahang TV | navahang-tv-f7ef0d9d83.png | Finland |
 | International-Playlist.m3u | DBM TV | dbm-tv-1080p-002259b21f.png | France |
 | International-Playlist.m3u | P2M TV | p2m-tv.png | France |
 | International-Playlist.m3u | Qwest TV | qwest-tv-3dfbb709b2.png | France |
@@ -1475,10 +1512,12 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Exa TV | exa-tv.png | Mexico |
 | International-Playlist.m3u | Lobo TV | lobo-tv-6d5f18136c.png | Mexico |
 | International-Playlist.m3u | RadioNL TV | radionl-tv-74c47e0f78.png | Netherlands |
-| International-Playlist.m3u | Folk TV | folk-tv-3f6cf20901.png | North Macedonia |
-| International-Playlist.m3u | Love TV | love-tv-de27ad2005.png | North Macedonia |
-| International-Playlist.m3u | Sky Folk TV | sky-folk-tv-93e92c79b3.png | North Macedonia |
-| International-Playlist.m3u | TopEstrada TV | topestrada-tv-bae545df77.png | North Macedonia |
+| International-Playlist.m3u | Corazon TV | corazon-tv.png | Panama |
+| International-Playlist.m3u | Mas23 TV | mas23-tv-e8228c1913.png | Panama |
+| International-Playlist.m3u | Pindin TV | pindin-tv-2850b210f4.jpg | Panama |
+| International-Playlist.m3u | Tropical Moon Urban TV | tropical-moon-urban-tv-bfad62c13e.png | Panama |
+| International-Playlist.m3u | Nande Portetepe TV | nande-portetepe-tv.jpg | Paraguay |
+| International-Playlist.m3u | Next | next-hd-480p.png | Paraguay |
 | International-Playlist.m3u | La Fabulosa TV | la-fabulosa-tv-5b68a4aa4f.png | Peru |
 | International-Playlist.m3u | Miel TV | miel-tv-f7dc000ca4.png | Peru |
 | International-Playlist.m3u | RumbaMix TV | rumbamix-tv-732689360a.png | Peru |
@@ -1507,10 +1546,10 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | FILMBOX+ Hits Romania | filmbox-plus-hits-romania-9c634ae1fd.png | Romania |
 | International-Playlist.m3u | FILMBOX+ Love & Crime Romania | filmbox-plus-love-and-crime-romania-a83544bb95.png | Romania |
 | International-Playlist.m3u | FILMBOX+ One Romania | filmbox-plus-one-romania-98de98aaef.png | Romania |
+| International-Playlist.m3u | Impact TV (Romania) | impact-tv-romania-d86dbc8054.png | Romania |
 | International-Playlist.m3u | Impact TV 2 | impact-tv-2-1ea51df9d4.png | Romania |
 | International-Playlist.m3u | Impact TV Dance | impact-tv-dance-9f5145f233.png | Romania |
 | International-Playlist.m3u | Impact TV Manele | impact-tv-manele-9f5145f233.png | Romania |
-| International-Playlist.m3u | Impact TV (Romania) | impact-tv-romania-d86dbc8054.png | Romania |
 | International-Playlist.m3u | Kiss TV | kiss-tv-b367c9e71e.png | Romania |
 | International-Playlist.m3u | Magic TV (Romania) | magic-tv-romania-b0daf58fd7.png | Romania |
 | International-Playlist.m3u | Nostalgia TV | nostalgia-tv-aeec3dd5cd.png | Romania |
@@ -1539,6 +1578,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Onda 15 TV | onda-15-tv-224p.png | Spain |
 | International-Playlist.m3u | Onda Valencia TV | onda-valencia-tv-720p.png | Spain |
 | International-Playlist.m3u | POP World TV | pop-world-tv-720p-3faede8b6c.png | Spain |
+| International-Playlist.m3u | Rakuten TV Family Movies | rakuten-tv-family-movies.png | Spain |
 | International-Playlist.m3u | Number 1 TV | number-1-tv-757229b80e.png | Turkey |
 | International-Playlist.m3u | PowerTürk TV | powerturk-tv-1080p-7651888d90.png | Turkey |
 | International-Playlist.m3u | Cine+ | cine-plus-54bc891b49.png | Ukraine |
@@ -1577,63 +1617,43 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Muz TV Uzbekistan | muz-tv-uzbekistan-218f3c70a9.jpg | Uzbekistan |
 | International-Playlist.m3u | Tra Vinh TV | tra-vinh-tv-1080p.png | Vietnam |
 | International-Playlist.m3u | Vinh Long TV 3 | vinh-long-tv-3-31bea4254b.png | Vietnam |
+| International-Playlist.m3u | Kayhan TV | kayhan-tv-720p-470680d85f.png | International |
 | International-Playlist.m3u | AlbKanale Music TV | albkanale-music-tv-hd-1080p.png | International |
-| International-Playlist.m3u | CMC TV | cmc-tv.png | International |
-| International-Playlist.m3u | El Sol Network TV | el-sol-network-tv-1080p.png | International |
-| International-Playlist.m3u | Falastini TV | falastini-tv-16a57187ca.png | International |
+| International-Playlist.m3u | Muzangala TV | muzangala-tv-c8007f7b6d.png | International |
+| International-Playlist.m3u | Folk Klub TV | folk-klub-tv-864bf9645b.png | International |
+| International-Playlist.m3u | KN Music TV | kn-music-tv-ad8cb6ea77.png | International |
 | International-Playlist.m3u | First Music Channel | first-music-channel-fcfb3caf85.png | International |
 | International-Playlist.m3u | First Music Channel Russia | first-music-channel-russia-1080p.png | International |
-| International-Playlist.m3u | Fusion TV | fusion-tv-cf93fce641.png | International |
-| International-Playlist.m3u | Gugak TV | gugak-tv-af1d5c7e63.png | International |
-| International-Playlist.m3u | Infinita TV | infinita-tv-1080p-0108680fa6.png | International |
-| International-Playlist.m3u | Isango TV [ ] | isango-tv-480p-not-24-7.png | International |
-| International-Playlist.m3u | Ishtar TV | ishtar-tv-sd-1080p.png | International |
-| International-Playlist.m3u | Itage TV | itage-tv-480p-453d42d446.png | International |
 | International-Playlist.m3u | Ivoire Channel | ivoire-channel-3c9ebec26d.png | International |
-| International-Playlist.m3u | Kayhan TV | kayhan-tv-720p-470680d85f.png | International |
-| International-Playlist.m3u | Klape i Tambure TV | klape-i-tambure-tv-302ab07bf9.png | International |
-| International-Playlist.m3u | KN Music TV | kn-music-tv-ad8cb6ea77.png | International |
-| International-Playlist.m3u | Lingkar TV | lingkar-tv.png | International |
-| International-Playlist.m3u | Look Thoong TV | look-thoong-tv-2c41090ebc.png | International |
-| International-Playlist.m3u | Maah TV | maah-tv-8ab855a0a8.png | International |
-| International-Playlist.m3u | Mei Ah Movie Channel | mei-ah-movie-channel.png | International |
-| International-Playlist.m3u | Metropoli Medios TV | metropoli-medios-tv-266701e2d9.jpg | International |
-| International-Playlist.m3u | MN+ | mn-plus.jpeg | International |
-| International-Playlist.m3u | Muzangala TV | muzangala-tv-c8007f7b6d.png | International |
-| International-Playlist.m3u | Noroc TV | noroc-tv-c5ab96fe0c.png | International |
 | International-Playlist.m3u | Play TV (Cameroon) | play-tv-cameroon-e5f96f7b9f.png | International |
-| International-Playlist.m3u | Rakuten TV Family Movies | rakuten-tv-family-movies.png | International |
-| International-Playlist.m3u | Scorch TV | scorch-tv-5b001ff8c4.png | International |
-| International-Playlist.m3u | Tezaur TV | tezaur-tv-602e4121a8.png | International |
-| International-Playlist.m3u | Tjil TV | tjil-tv-02ba031c66.png | International |
 | International-Playlist.m3u | TV Cidade | tv-cidade-0e0b8f944f.jpg | International |
 | International-Playlist.m3u | VAM TV | vam-tv-6d3bc0b9e5.png | International |
-| International-Playlist.m3u | Fuego TV | fuego-tv-23f3f22378.png | Dominican Republic |
-| International-Playlist.m3u | Maimon TV Canal 3 | maimon-tv-canal-3-022efdea1e.png | Dominican Republic |
-| International-Playlist.m3u | Makao TV | makao-tv-0781b48dfa.png | Dominican Republic |
-| International-Playlist.m3u | Mega Cine TV | mega-cine-tv-bafa760f60.png | Dominican Republic |
-| International-Playlist.m3u | Montones TV | montones-tv-af126eccd7.png | Dominican Republic |
-| International-Playlist.m3u | Siembra TV (Dominican Republic) | siembra-tv-dominican-republic-d39394bc42.png | Dominican Republic |
-| International-Playlist.m3u | Tarima TV | tarima-tv-23e152e9ee.png | Dominican Republic |
-| International-Playlist.m3u | Tele Dominicana TV | tele-dominicana-tv-db3d804f55.png | Dominican Republic |
-| International-Playlist.m3u | TV Exitos | tv-exitos-a7aac8d99c.png | Dominican Republic |
-| International-Playlist.m3u | Cinemax Asia | cinemax-asia-hd-1080p.png | Singapore |
-| International-Playlist.m3u | HBO Hits Asia | hbo-hits-asia-hd-1080p.png | Singapore |
-| International-Playlist.m3u | HBO Signature Asia | hbo-signature-asia-hd-1080p.png | Singapore |
-| International-Playlist.m3u | Folk Klub TV | folk-klub-tv-864bf9645b.png | Australia |
-| International-Playlist.m3u | Nande Portetepe TV | nande-portetepe-tv.jpg | Paraguay |
-| International-Playlist.m3u | Next | next-hd-480p.png | Paraguay |
-| International-Playlist.m3u | Canal 3 KMK TV | canal-3-kmk-tv-720p.jpg | Costa Rica |
-| International-Playlist.m3u | Gex TV | gex-tv-eb7ee59ee5.png | Costa Rica |
-| International-Playlist.m3u | IQ Channel | iq-channel-df4804e706.png | Costa Rica |
-| International-Playlist.m3u | SOY Plancha TV | soy-plancha-tv-0a254093f8.jpg | Costa Rica |
-| International-Playlist.m3u | Urbano TV | urbano-tv-bc3c78e42d.png | Costa Rica |
-| International-Playlist.m3u | BTA TV | bta-tv-720p-4e7cddfa0e.png | Venezuela |
-| International-Playlist.m3u | ShowVen TV | showven-tv-af7e6903a5.png | Venezuela |
-| International-Playlist.m3u | Corazon TV | corazon-tv.png | Panama |
-| International-Playlist.m3u | Mas23 TV | mas23-tv-e8228c1913.png | Panama |
-| International-Playlist.m3u | Pindin TV | pindin-tv-2850b210f4.jpg | Panama |
-| International-Playlist.m3u | Tropical Moon Urban TV | tropical-moon-urban-tv-bfad62c13e.png | Panama |
+| International-Playlist.m3u | Navahang TV | navahang-tv-f7ef0d9d83.png | International |
+| International-Playlist.m3u | Mei Ah Movie Channel | mei-ah-movie-channel.png | International |
+| International-Playlist.m3u | CMC TV | cmc-tv.png | International |
+| International-Playlist.m3u | Klape i Tambure TV | klape-i-tambure-tv-302ab07bf9.png | International |
+| International-Playlist.m3u | Gugak TV | gugak-tv-af1d5c7e63.png | International |
+| International-Playlist.m3u | Look Thoong TV | look-thoong-tv-2c41090ebc.png | International |
+| International-Playlist.m3u | Noroc TV | noroc-tv-c5ab96fe0c.png | International |
+| International-Playlist.m3u | Tezaur TV | tezaur-tv-602e4121a8.png | International |
+| International-Playlist.m3u | Folk TV | folk-tv-3f6cf20901.png | International |
+| International-Playlist.m3u | Love TV | love-tv-de27ad2005.png | International |
+| International-Playlist.m3u | Sky Folk TV | sky-folk-tv-93e92c79b3.png | International |
+| International-Playlist.m3u | TopEstrada TV | topestrada-tv-bae545df77.png | International |
+| International-Playlist.m3u | MN+ | mn-plus.jpeg | International |
+| International-Playlist.m3u | Fusion TV | fusion-tv-cf93fce641.png | International |
+| International-Playlist.m3u | Maah TV | maah-tv-8ab855a0a8.png | International |
+| International-Playlist.m3u | Tjil TV | tjil-tv-02ba031c66.png | International |
+| International-Playlist.m3u | Itage TV | itage-tv-480p-453d42d446.png | International |
+| International-Playlist.m3u | Falastini TV | falastini-tv-16a57187ca.png | International |
+| International-Playlist.m3u | Isango TV [ ] | isango-tv-480p-not-24-7.png | International |
+| International-Playlist.m3u | Cinemax Asia | cinemax-asia-hd-1080p.png | International |
+| International-Playlist.m3u | HBO Asia SD [ ] | hbo-asia-sd.png | International |
+| International-Playlist.m3u | HBO Hits Asia | hbo-hits-asia-hd-1080p.png | International |
+| International-Playlist.m3u | HBO Signature Asia | hbo-signature-asia-hd-1080p.png | International |
+| International-Playlist.m3u | Scorch TV | scorch-tv-5b001ff8c4.png | International |
+| International-Playlist.m3u | BTA TV | bta-tv-720p-4e7cddfa0e.png | International |
+| International-Playlist.m3u | ShowVen TV | showven-tv-af7e6903a5.png | International |
 | International-Playlist.m3u | Fashion TV | fashion-tv-aa7f9461cf.png | Fashion TV |
 | International-Playlist.m3u | 4K Travel | 4k-travel.png | Documentary & Wildlife |
 | International-Playlist.m3u | Amazing Discoveries TV | amazing-discoveries-tv.png | Documentary & Wildlife |
@@ -1828,6 +1848,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Mycamtv Skinny Girls | mtv.png | Adult |
 | International-Playlist.m3u | Mycamtv White Girls | mtv.png | Adult |
 | International-Playlist.m3u | VERIFIED AMATEURS: MIKANIKA69 | 9.png | Adult |
+| International-Playlist.m3u | &TV | tv.png | Backup |
 | International-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | International-Playlist.m3u | 9X Jalwa | jalwa.png | Backup |
 | International-Playlist.m3u | American Heroes Channel | americanheroeschannel.png | Backup |
@@ -1849,8 +1870,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | BHI Channel | bhi-channel.png | Backup |
 | International-Playlist.m3u | Boishakhi TV | boishakhi-tv.png | Backup |
 | International-Playlist.m3u | BOISHAKHI TV | boishakhi-tv.png | Backup |
-| International-Playlist.m3u | Channel 1 | channel-1.png | Backup |
-| International-Playlist.m3u | Channel 24 | channel-24.png | Backup |
 | International-Playlist.m3u | Channel 52 | channel-52.png | Backup |
 | International-Playlist.m3u | Channel I | channel-i.png | Backup |
 | International-Playlist.m3u | Channel I | channel-i.png | Backup |
@@ -1887,18 +1906,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Enter TV | enter-tv.png | Backup |
 | International-Playlist.m3u | Film 4 | film4.png | Backup |
 | International-Playlist.m3u | FILMBOX+ Festival | filmbox-plus-festival-ad4ed8d509.png | Backup |
-| International-Playlist.m3u | G TV | g-tv.png | Backup |
-| International-Playlist.m3u | G TV | g-tv.png | Backup |
-| International-Playlist.m3u | G TV | g-tv.png | Backup |
 | International-Playlist.m3u | GAZI TV | g-tv.png | Backup |
 | International-Playlist.m3u | Global TV | verified-global-tv-1080p-5ffc043912-095e7dad7b.png | Backup |
 | International-Playlist.m3u | Global TV | global-tv-1080p-5ffc043912.png | Backup |
 | International-Playlist.m3u | Goldmines 2 | goldmines.png | Backup |
-| International-Playlist.m3u | HBO Asia SD [ ] | hbo-asia-sd.png | Backup |
 | International-Playlist.m3u | history | history-tv18.png | Backup |
-| International-Playlist.m3u | Hum TV | hum-tv.png | Backup |
-| International-Playlist.m3u | Hum TV | hum-tv.png | Backup |
-| International-Playlist.m3u | Independent TV | independent-tv.png | Backup |
 | International-Playlist.m3u | Jalwa TV | jalwa-tv.png | Backup |
 | International-Playlist.m3u | Jamuna TV | jamuna-tv.png | Backup |
 | International-Playlist.m3u | Jamuna TV | jamuna-tv.png | Backup |
@@ -1906,7 +1918,6 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | JonmoBhumi TV | jonmobhumi-tv.png | Backup |
 | International-Playlist.m3u | Kairali TV | kairali-tv.png | Backup |
 | International-Playlist.m3u | Kappa TV | kappa-tv.png | Backup |
-| International-Playlist.m3u | Kappa TV (Music) | kappa-tv.png | Backup |
 | International-Playlist.m3u | Kartoon Channel! | kartoon-channel.png | Backup |
 | International-Playlist.m3u | Law & Crime | law-and-crime-f698aa08fe.jpg | Backup |
 | International-Playlist.m3u | Maasranga TV | maasranga-tv.png | Backup |
@@ -1923,10 +1934,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | ME TV | me-tv.png | Backup |
 | International-Playlist.m3u | ME TV | me-tv.png | Backup |
 | International-Playlist.m3u | Mei Ah Movie Channel | mei-ah-movie-channel.png | Backup |
-| International-Playlist.m3u | MH One Prime | mh1-prime.png | Backup |
 | International-Playlist.m3u | Mohona TV | mohona-tv-a1da8879e5.png | Backup |
-| International-Playlist.m3u | Movies Now | movies-now-hd.png | Backup |
-| International-Playlist.m3u | MTV | mtv-india-hd-720p.png | Backup |
 | International-Playlist.m3u | My TV | my-tv.png | Backup |
 | International-Playlist.m3u | My TV | my-tv.png | Backup |
 | International-Playlist.m3u | My TV | my-tv.png | Backup |
@@ -1935,13 +1943,11 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Nat Geo TV | national-geographic.png | Backup |
 | International-Playlist.m3u | Nexus TV | nexus-tv.png | Backup |
 | International-Playlist.m3u | NOW Rock | 18-028b925b47.png | Backup |
-| International-Playlist.m3u | NRB TV | nrb-tv.png | Backup |
 | International-Playlist.m3u | Pardesi TV | pardesi-tv.png | Backup |
 | International-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Backup |
 | International-Playlist.m3u | Peace TV Bangla | peace-tv-bangla.png | Backup |
 | International-Playlist.m3u | Pitaara TV | pitaara-tv.png | Backup |
 | International-Playlist.m3u | Pitaara TV | pitaara-tv.png | Backup |
-| International-Playlist.m3u | Probashi TV | probashi-tv.png | Backup |
 | International-Playlist.m3u | Q TV | q-tv.png | Backup |
 | International-Playlist.m3u | Quran TV | quran-tv.png | Backup |
 | International-Playlist.m3u | Rajdhani TV | rajdhani-tv.png | Backup |
@@ -1961,21 +1967,13 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 | International-Playlist.m3u | Shanson TV | shanson-tv-576p-3c01614e19.png | Backup |
 | International-Playlist.m3u | Shubh Cinema TV | shubh-cinema-tv.png | Backup |
 | International-Playlist.m3u | Smurf TV | smurf-tv.png | Backup |
-| International-Playlist.m3u | Somoy TV | somoy-tv.png | Backup |
-| International-Playlist.m3u | Somoy TV | somoy-tv.png | Backup |
-| International-Playlist.m3u | Somoy TV | somoy-tv.png | Backup |
 | International-Playlist.m3u | Suriyan TV | suriyan-tv.png | Backup |
 | International-Playlist.m3u | ToonGoggles | toon-goggles.png | Backup |
-| International-Playlist.m3u | &TV | tv.png | Backup |
-| International-Playlist.m3u | TV9 Bangla | tv-9-bangla.png | Backup |
 | International-Playlist.m3u | Ultimate TV | ultimate-tv.png | Backup |
 | International-Playlist.m3u | V Classic TV | v-classic-tv.png | Backup |
 | International-Playlist.m3u | Vanitha TV | vanitha-tv.png | Backup |
 | International-Playlist.m3u | Vendhar TV | vendhar-tv.png | Backup |
 | International-Playlist.m3u | viju+ Sport | viju-plus-sport-14b136d70c.png | Backup |
-| International-Playlist.m3u | Zee TV | zee-tv-2fb6673cf7.svg | Backup |
-| International-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Backup |
-| International-Playlist.m3u | Zee TV | repaired-zee-tv-b659c984ad.png | Backup |
 | International-Playlist.m3u | Zoo Moo | zoomoo.png | Backup |
 
 ## Policy

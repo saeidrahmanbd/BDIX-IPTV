@@ -1425,8 +1425,56 @@ https://livetv.timeiptv.in/ShekinahNewsIndia/955ad3298db330b5ee880c2c9e6f23a0.sd
 https://prod-runn.cdn.runn.tv/shemaroo/stream/smrfgn/playlist.m3u8
 #EXTINF:-1 tvg-id="ShikshaTV.in@SD" tvg-name="Shiksha TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/shiksha-tv.png" tvg-country="IN" channel-id="ShikshaTV.in@SD" group-title="New Channels",Shiksha TV
 http://103.89.46.106:8080/hls/shikshatvhd/index.m3u8
+#EXTINF:-1 tvg-id="Sonic.in@SD" tvg-name="Sonic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sonic.png" tvg-country="IN" channel-id="Sonic.in@SD" group-title="New Channels",Sonic
+http://103.185.24.134:3001/SONIC/index.m3u8
+#EXTINF:-1 tvg-id="SonyBBCEarth.in@HD" tvg-name="Sony BBC Earth" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-bbc-earth.png" tvg-country="IN" channel-id="SonyBBCEarth.in@HD" group-title="New Channels",Sony BBC Earth
+http://103.185.24.134:3001/SONY-BBC/index.m3u8
+#EXTINF:-1 tvg-id="SonySportsTen1.in@SD" tvg-name="Sony Sports Ten 1" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-1.png" tvg-country="IN" channel-id="SonySportsTen1.in@SD" group-title="New Channels",Sony Sports Ten 1
+http://103.151.60.162:2122/play/a01c/index.m3u8?hls
+#EXTINF:-1 tvg-id="SonySportsTen2.in@SD" tvg-name="Sony Sports Ten 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-2.png" tvg-country="IN" channel-id="SonySportsTen2.in@SD" group-title="New Channels",Sony Sports Ten 2
+http://103.151.60.162:2122/play/a01b/index.m3u8?hls
+#EXTINF:-1 tvg-id="SonySportsTen3Hindi.in@SD" tvg-name="Sony Sports Ten 3 Hindi" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-3-hindi.png" tvg-country="IN" channel-id="SonySportsTen3Hindi.in@SD" group-title="New Channels",Sony Sports Ten 3 Hindi
+http://103.151.60.162:2122/play/a01t/index.m3u8?hls
+#EXTINF:-1 tvg-id="SonySportsTen4.in@Kannada" tvg-name="Sony Sports Ten 4 Kannada" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-4-kannada.png" tvg-country="IN" channel-id="SonySportsTen4.in@Kannada" group-title="New Channels",Sony Sports Ten 4 Kannada
+http://103.151.60.162:2122/play/a021/index.m3u8?hls
+#EXTINF:-1 tvg-id="SonySportsTen5.in@SD" tvg-name="Sony Sports Ten 5" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/sony-sports-ten-5.png" tvg-country="IN" channel-id="SonySportsTen5.in@SD" group-title="New Channels",Sony Sports Ten 5
+http://103.151.60.162:2122/play/a028/index.m3u8?hls
+#EXTINF:-1 tvg-id="Spondon.in@SD" tvg-name="Spondon" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/spondon.png" tvg-country="IN" channel-id="Spondon.in@SD" group-title="New Channels",Spondon
+https://nktv.smartstream.video/smartstream-us/spondon/spondon/playlist.m3u8
+#EXTINF:-1 tvg-id="StarGold.in@HD" tvg-name="Star Gold" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/repaired-star-gold-de06c8e974.png" tvg-country="IN" channel-id="StarGold.in@HD" group-title="New Channels",Star Gold
+http://103.185.24.134:3001/Star-Gold/index.m3u8
+#EXTINF:-1 tvg-id="StarGold2.in@HD" tvg-name="Star Gold 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-gold-2.png" tvg-country="IN" channel-id="StarGold2.in@HD" group-title="New Channels",Star Gold 2
+http://103.151.60.162:2122/play/a01v/index.m3u8?hls
+#EXTINF:-1 tvg-id="StarKiran.in@SD" tvg-name="Star Kiran" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-kiran.png" tvg-country="IN" channel-id="StarKiran.in@SD" group-title="New Channels",Star Kiran
+http://103.151.60.162:2122/play/a032/index.m3u8?hls
+#EXTINF:-1 tvg-id="StarSports3.in@SD" tvg-name="Star Sports 3" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-3.png" tvg-country="IN" channel-id="StarSports3.in@SD" group-title="New Channels",Star Sports 3
+http://103.151.60.162:2122/play/a029/index.m3u8?hls
+#EXTINF:-1 tvg-id="StarSportsSelect2.in@HD" tvg-name="Star Sports Select 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/star-sports-select-2.png" tvg-country="IN" channel-id="StarSportsSelect2.in@HD" group-title="New Channels",Star Sports Select 2
+http://103.151.60.162:2122/play/a027/index.m3u8?hls
+#EXTINF:-1 tvg-id="StarPlus.in@HD" tvg-name="StarPlus (India)" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/starplus-india.png" tvg-country="IN" channel-id="StarPlus.in@HD" group-title="New Channels",StarPlus (India)
+http://66.102.126.10:8000/play/a008/index.m3u8
+#EXTINF:-1 tvg-id="Superhitz.in@SD" tvg-name="Superhitz" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/superhitz.png" tvg-country="IN" channel-id="Superhitz.in@SD" group-title="New Channels",Superhitz
+http://103.151.60.162:2122/play/a02f/index.m3u8?hls
+#EXTINF:-1 tvg-id="TenCricket.in@SD" tvg-name="Ten Cricket" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ten-cricket.png" tvg-country="IN" channel-id="TenCricket.in@SD" group-title="New Channels",Ten Cricket
+http://103.151.60.162:2122/play/a0fj/index.m3u8?hls
+#EXTINF:-1 tvg-id="Travelxp.in@HD" tvg-name="Travelxp" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/travelxp.png" tvg-country="IN" channel-id="Travelxp.in@HD" group-title="New Channels",Travelxp
+http://103.151.60.162:2122/play/a01s/index.m3u8?hls
+#EXTINF:-1 tvg-id="Unite8Sports2.in@SD" tvg-name="Unite8 Sports 2" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/unite8-sports-2.png" tvg-country="IN" channel-id="Unite8Sports2.in@SD" group-title="New Channels",Unite8 Sports 2
+http://103.151.60.162:2122/play/a01m/index.m3u8?hls
 #EXTINF:-1 tvg-id="VoktaTV.bd@SD" tvg-name="Vokta TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vokta-tv.png" tvg-country="BD" channel-id="VoktaTV.bd@SD" group-title="New Channels",Vokta TV
 https://vokta.raytahost.com/live/voktatv/index.m3u8
+#EXTINF:-1 tvg-id="VyasChannel.in@SD" tvg-name="Vyas Channel" tvg-country="IN" channel-id="VyasChannel.in@SD" group-title="New Channels",Vyas Channel
+https://playhls.media.nic.in/hls/live/vyas/vyas.m3u8
+#EXTINF:-1 tvg-id="ZeeCineClassic.in@SD" tvg-name="Zee Cine Classic" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-cine-classic.png" tvg-country="IN" channel-id="ZeeCineClassic.in@SD" group-title="New Channels",Zee Cine Classic
+https://amg00862-amg00862c8-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c8-amgplt0173/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeComedyNation.in@HD" tvg-name="Zee Comedy Nation" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-comedy-nation.png" tvg-country="IN" channel-id="ZeeComedyNation.in@HD" group-title="New Channels",Zee Comedy Nation
+https://amg00862-amg00862c5-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c5-amgplt0173/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeDilSe.in@HD" tvg-name="Zee Dil Se" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-dil-se.png" tvg-country="IN" channel-id="ZeeDilSe.in@HD" group-title="New Channels",Zee Dil Se
+https://amg00862-amg00862c6-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c6-amgplt0173/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeHorrorNights.in@HD" tvg-name="Zee Horror Nights" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-horror-nights.png" tvg-country="IN" channel-id="ZeeHorrorNights.in@HD" group-title="New Channels",Zee Horror Nights
+https://amg00862-amg00862c7-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c7-amgplt0173/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeSouthFlix.in@HD" tvg-name="Zee South Flix" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-south-flix.png" tvg-country="IN" channel-id="ZeeSouthFlix.in@HD" group-title="New Channels",Zee South Flix
+https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
 #EXTINF:-1 tvg-id="9XJhakaas.in@SD" tvg-name="9X Jhakaas" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-jhakaas.png" tvg-country="IN" channel-id="9XJhakaas.in@SD" group-title="New Backup",9X Jhakaas
 https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8
 #EXTINF:-1 tvg-id="9XTashan.in@SD" tvg-name="9X Tashan" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/9x-tashan.png" tvg-country="IN" channel-id="9XTashan.in@SD" group-title="New Backup",9X Tashan

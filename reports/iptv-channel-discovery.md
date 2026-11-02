@@ -1,15 +1,15 @@
 # IPTV Channel Discovery
 
-Generated: **2026-11-02T09:01:26.821773+00:00**
+Generated: **2026-11-02T10:58:39.686416+00:00**
 
 - Sources: Bangladesh + India iptv-org country feeds
 - **STRICT POLICY: Only verified Bangladesh and India channels are eligible. Bangladeshi news is allowed; Indian News and non-Islamic Religious channels are prohibited; Indian Kids and Sports channels are allowed.**
 - Permanent denylist: E-Vidya 4, 5, 6, 7, 8, 9, 10, 11, 12 and Friends TV.
 - Country-group threshold: **5** legitimate primary identities
 - Existing prohibited review-queue rows removed: **0**
-- New channels: **40**
-- New backups: **39**
-- Rejected/held candidates: **730**
+- New channels: **36**
+- New backups: **30**
+- Rejected/held candidates: **770**
 - Country policy: only candidates verified as BD/IN (valid `.bd`/`.in` id, or repository-mapping evidence when the id is missing/malformed) are queued; conflicting or unverifiable candidates are held.
 
 ## Rejection reasons
@@ -17,7 +17,7 @@ Generated: **2026-11-02T09:01:26.821773+00:00**
 - Indian news channel is prohibited: 267
 - country not verified: id carries a non-BD/IN country suffix: 27
 - country not verified: id country IN conflicts with BD source feed: 10
-- duplicate stream URL: 267
+- duplicate stream URL: 307
 - known Indian News or non-Islamic religious brand/category is prohibited: 24
 - non-Islamic religious channel is prohibited: 107
 - permanently banned channel: 10
@@ -29,68 +29,55 @@ Generated: **2026-11-02T09:01:26.821773+00:00**
 
 - ATN Music (360p) (Bangladesh) — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8
 - Green TV (1080p) (Bangladesh) — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
-- NAN TV (Bangladesh) — https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8
 - T Sports (1080p) (Bangladesh) — https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8
-- Vokta TV (720p) (Bangladesh) — https://vokta.raytahost.com/live/voktatv/index.m3u8
-- AMN TV (576p) (India) — https://live.onecloudlive.in/amn/amntv/index.m3u8
 - Aryan TV National (576p) (India) — https://mumt04.tangotv.in/m18aqlK4ARYANTVNATIONAL/index.m3u8
-- Captain (576p) (India) — https://mumbai-edge.smartplaytv.in/captain/index.m3u8
-- Cine Jomjomat (1080p) (India) — https://amg13779-amg13779c1-amgplt0016.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg13779-amg13779c1-amgplt0016/playlist.m3u8
-- Colors Bangla Cinema (576p) (India) — http://103.151.60.162:2122/play/a02m/index.m3u8?hls
-- Colors Infinity HD (1080p) (India) — http://103.151.60.162:2122/play/a02r/index.m3u8?hls
-- DD Bihar (720p) (India) — https://cdn.pishow.tv/ott/live/35/master.m3u8
-- DD Kisan (1080p) (India) — https://mumbai-edge.smartplaytv.in/DDKisan/index.m3u8
-- Dhamaal (576p) [Geo-blocked] (India) — https://tvsen6.aynaott.com/F4Z6es8E/index.m3u8
-- Discovery Channel (India) (720p) (India) — https://drk6xq0vhn.gpcdn.net/live/discovery_sd_abr/index.m3u8
 - Disha TV (396p) (India) — https://d1msejlow1t3l4.cloudfront.net/fta/dishatv/playlist.m3u8
-- Disney Channel (India) HD (1080p) (India) — http://66.102.126.10:8000/play/a013/index.m3u8
-- Disney International HD (576p) (India) — http://103.151.60.162:2122/play/a018/index.m3u8?hls
-- Disney Junior (India) (576p) (India) — http://103.151.60.162:2122/play/a016/index.m3u8?hls
-- Epic TV Digital (1080p) (India) — https://cc-czbq30x55knit.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-czbq30x55knit/DIYC/PMSL/IN10/Epic_TV_IN_B/Epic_TV_IN_B.m3u8
 - ETV Life (1080p) (India) — https://mumbai-edge.smartplaytv.in/ETVLIFE/index.m3u8
-- ETV Plus HD (1080p) (India) — https://d12ee3o8yfkkhd.cloudfront.net/c6a4b411295f47f48c908d2ac0605bad/index.m3u8
 - ETV Telugu HD (1080p) (India) — https://mumbai-edge.smartplaytv.in/ETVHD/index.m3u8
-- Gyandarshan (720p) (India) — https://cdn.pishow.tv/ott/live/14/master.m3u8
-- HSTV (720p) (India) — https://live.castmaxcloud.com/live/hstv.m3u8
-- India Talkies (360p) (India) — https://samitaorigin.tangotv.in/INDIATALKIES/SAMITAORIGIN/index.m3u8
 - Jaya Plus (576p) (India) — https://mumbai-edge.smartplaytv.in/JayaPLus/index.m3u8
-- Kite Victers (720p) [Not 24/7] (India) — https://932y4x26ljv8-hls-live.5centscdn.com/victers/tv.stream/playlist.m3u8
-- Makkal TV (576i) (India) — https://5k8q87azdy4v-hls-live.wmncdn.net/MAKKAL/271ddf829afeece44d8732757fba1a66.sdp/playlist.m3u8
-- Mango Mobile TV (1080p) (India) — https://amg01911-mangotv-amg01911c1-xiaomi-in-1270.playouts.now.amagi.tv/playlist/amg01911-mangomassmedia-mangotv-xiaomiin/playlist.m3u8
-- MBC TV (576p) (India) — https://mumbai-edge.smartplaytv.in/MBCTV/index.m3u8
-- NDTV Good Times (1080p) (India) — https://amg01448-samsungin-ndtvgoodtimes-samsungin-ad-gp.amagi.tv/playlist/amg01448-samsungin-ndtvgoodtimes-samsungin/playlist.m3u8
 - NH BollyGold (1080p) (India) — https://0dc330e6408b4c3b9ac31fd37b121368.mediatailor.ap-south-1.amazonaws.com/v1/master/d367f9b863a7a04827f71ecab4cbeeb11f78a827/nh-bollygold-airtel/playlist.m3u8
-- Nickelodeon (India) (576p) (India) — http://103.185.24.134:3001/NICK/index.m3u8
-- Nick Jr. (India) (576p) (India) — http://103.185.24.134:3001/NICK-JR/index.m3u8
-- Raj TV (1080p) (India) — https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RAJTV/master_1.m3u8
-- R Plus (768p) (India) — https://thelegitpro.in/pntv/rplusnews24x7/index.m3u8
-- Shekinah TV (1080p) (India) — https://livetv.timeiptv.in/ShekinahNewsIndia/955ad3298db330b5ee880c2c9e6f23a0.sdp/playlist.m3u8
-- Shemaroo Filmi Gaane (1080p) (India) — https://prod-runn.cdn.runn.tv/shemaroo/stream/smrfgn/playlist.m3u8
-- Shiksha TV (720p) (India) — http://103.89.46.106:8080/hls/shikshatvhd/index.m3u8
+- Sonic (576p) (India) — http://103.185.24.134:3001/SONIC/index.m3u8
+- Sony BBC Earth HD (1080p) (India) — http://103.185.24.134:3001/SONY-BBC/index.m3u8
+- Sony Sports Ten 1 (576p) (India) — http://103.151.60.162:2122/play/a01c/index.m3u8?hls
+- Sony Sports Ten 2 (576p) (India) — http://103.151.60.162:2122/play/a01b/index.m3u8?hls
+- Sony Sports Ten 3 Hindi (576p) (India) — http://103.151.60.162:2122/play/a01t/index.m3u8?hls
+- Sony Sports Ten 4 Kannada (576p) (India) — http://103.151.60.162:2122/play/a021/index.m3u8?hls
+- Sony Sports Ten 5 (576p) (India) — http://103.151.60.162:2122/play/a028/index.m3u8?hls
+- Spondon (1080p) (India) — https://nktv.smartstream.video/smartstream-us/spondon/spondon/playlist.m3u8
+- Star Gold HD (1080p) (India) — http://103.185.24.134:3001/Star-Gold/index.m3u8
+- Star Gold 2 HD (1080p) (India) — http://103.151.60.162:2122/play/a01v/index.m3u8?hls
+- Star Kiran (576p) (India) — http://103.151.60.162:2122/play/a032/index.m3u8?hls
+- StarPlus (India) HD (1080p) (India) — http://66.102.126.10:8000/play/a008/index.m3u8
+- Star Sports 2 Hindi (720p) (India) — https://tvsen5.aynaott.com/cXPB2LKkErN9/index.m3u8
+- Star Sports 3 (576p) (India) — http://103.151.60.162:2122/play/a029/index.m3u8?hls
+- Star Sports Select 2 HD (1080p) (India) — http://103.151.60.162:2122/play/a027/index.m3u8?hls
+- Superhitz (576p) (India) — http://103.151.60.162:2122/play/a02f/index.m3u8?hls
+- Ten Cricket (576p) (India) — http://103.151.60.162:2122/play/a0fj/index.m3u8?hls
+- Travelxp HD (1080p) (India) — http://103.151.60.162:2122/play/a01s/index.m3u8?hls
+- Unite8 Sports 2 (576p) (India) — http://103.151.60.162:2122/play/a01m/index.m3u8?hls
+- Vision (India) (576p) (India) — http://103.85.204.205:1935/VISIONMEDIA/live/playlist.m3u8
+- Vyas Channel (576p) (India) — https://playhls.media.nic.in/hls/live/vyas/vyas.m3u8
+- Win TV (576p) (India) — https://mumt06.tangotv.in/qYyB8fXVWINTV/index.m3u8
+- Zee Cine Classic (1080p) (India) — https://amg00862-amg00862c8-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c8-amgplt0173/playlist.m3u8
+- Zee Comedy Nation (1080p) (India) — https://amg00862-amg00862c5-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c5-amgplt0173/playlist.m3u8
+- Zee Dil Se (1080p) (India) — https://amg00862-amg00862c6-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c6-amgplt0173/playlist.m3u8
+- Zee Horror Nights (1080p) (India) — https://amg00862-amg00862c7-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c7-amgplt0173/playlist.m3u8
+- Zee South Flix (1080p) (India) — https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
 
 ## New Backups
 
 - Ananda TV (480p) (Bangladesh) — http://103.99.249.139/anandatv/index.m3u8
-- ATN Bangla (720p) (Bangladesh) — http://tvsen5.aynascope.net/atnbangla/index.m3u8
 - Boishakhi TV (Bangladesh) — https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8
 - DBC News (480p) (Bangladesh) — http://tvn3.chowdhury-shaheb.com/dbc/index.m3u8
 - Ekhon TV (1080p) (Bangladesh) — https://tplay.live/out/bangladesh/ekhontv.index.m3u8
 - Gazi TV (1080p) (Bangladesh) — http://tvn1.chowdhury-shaheb.com/gazitv/index.m3u8
-- Maasranga TV (720p) (Bangladesh) — http://tvsen5.aynascope.net/maasrangatv/index.m3u8
-- 9X Jhakaas (1080p) (India) — https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8
 - 9XM (1080p) (India) — https://9xjio.wiseplayout.com/9XM/master.m3u8
-- 9X Tashan (1080p) (India) — https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8
-- Aakaash Aath (576p) (India) — http://tvsen5.aynascope.net/Wm9Lv2RjZGT6/index.m3u8
-- B4U Bhojpuri (1080p) (India) — https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8
 - Colors HD (1080p) (India) — http://103.151.60.162:2122/play/a02q/index.m3u8?hls
 - Colors Bangla HD (1080p) (India) — http://103.165.93.31:8095/colorsBangla/index.m3u8
 - Colors Cineplex HD (1080p) (India) — http://103.151.60.162:2122/play/a02s/index.m3u8?hls
-- Epic Bharat Digital (1080p) (India) — https://cc-p1izg43bk7sj5.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-p1izg43bk7sj5/DIYC/PMSL/IN10/Nazara_IN_B/Nazara_IN_B.m3u8
 - Epic Parivar (576p) (India) — http://103.151.60.162:2122/play/a01p/index.m3u8?hls
 - ETV Cinema HD (1080p) (India) — https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_CINEMA_H264_cloud_in/index.m3u8
 - ETV Music (1080p) (India) — https://mumbai-edge.smartplaytv.in/ETVABHIRUCHI/index.m3u8
-- Gyandarshan HD (576p) (India) — https://mumt05.tangotv.in/87NeALx2GYANDARSHAN/index.m3u8
-- History TV18 HD (1080p) [Geo-blocked] (India) — https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
 - Movies Now HD (1080p) (India) — http://103.151.60.162:2122/play/a02w/index.m3u8?hls
 - Pogo (576p) (India) — http://103.151.60.162:2122/play/a01e/index.m3u8?hls
 - Sony Aath (576p) (India) — http://103.165.93.31:8095/sonyAath/index.m3u8
@@ -112,12 +99,12 @@ Generated: **2026-11-02T09:01:26.821773+00:00**
 
 ## Stream verification
 
-- Run timestamp: 2026-11-02T09:01:49+00:00
+- Run timestamp: 2026-11-02T10:59:06+00:00
 - Mode: iptv
-- New entries and discovery queues probed: 79
-- Verified live media responses: 26
-- Primary entries retained but not conclusively verified: 14
-- Dead/invalid entries and unverified backups removed: 39
+- New entries and discovery queues probed: 106
+- Verified live media responses: 27
+- Primary entries retained but not conclusively verified: 37
+- Dead/invalid entries and unverified backups removed: 42
 - Duplicate discovery entries removed: 0
 - Country-group rows consolidated after stream probing: 0
 - Logo references localized to authentic repository assets: 0
@@ -145,8 +132,34 @@ Generated: **2026-11-02T09:01:26.821773+00:00**
 - Retained Nickelodeon (India) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Shekinah TV for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
 - Retained Shemaroo Filmi Gaane for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Sonic for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained Sony BBC Earth for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained Sony Sports Ten 1 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Sony Sports Ten 2 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Sony Sports Ten 3 Hindi for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Sony Sports Ten 4 Kannada for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Sony Sports Ten 5 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Spondon for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Star Gold for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained Star Gold 2 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Star Kiran for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Removed Star Sports 2 Hindi from New Channels — HTTP 404.
+- Retained Star Sports 3 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Star Sports Select 2 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained StarPlus (India) for review — stream could not be conclusively verified (connection could not be confirmed: URLError).
+- Retained Superhitz for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Removed T Sports from New Channels — HTTP 404.
+- Retained Ten Cricket for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Travelxp for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Unite8 Sports 2 for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Removed Vision (India) from New Channels — HTTP 404.
 - Retained Vokta TV for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Removed Win TV from New Channels — HTTP 404.
+- Retained Zee Cine Classic for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Zee Comedy Nation for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Zee Dil Se for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Zee Horror Nights for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
+- Retained Zee South Flix for review — stream could not be conclusively verified (HTTP 403; access/availability could not be confirmed).
 - Removed 9XM from New Backup — backup stream not verified (HTTP 403; access/availability could not be confirmed).
 - Removed Ananda TV from New Backup — backup stream not verified (connection could not be confirmed: URLError).
 - Removed Boishakhi TV from New Backup — backup stream not verified (connection could not be confirmed: URLError).
@@ -180,13 +193,13 @@ Generated: **2026-11-02T09:01:26.821773+00:00**
 
 ## Final validation
 
-- Run timestamp: 2026-11-02T09:01:49+00:00
+- Run timestamp: 2026-11-02T10:59:07+00:00
 - Validation status: PASS
-- M3U entries parsed: 1066
+- M3U entries parsed: 1090
 - Malformed EXTINF/URL pairs: 0
 - Duplicate stream URLs: 0
 - New Channels/New Backup/Backup ordering: passed
-- Discovery entries missing a logo (left blank rather than using a placeholder): 1
+- Discovery entries missing a logo (left blank rather than using a placeholder): 2
 - Non-local discovery logo references: 0
 - Geography/content policy issues: 0
 - Existing non-discovery entries were not removed by the stream-validation step.
