@@ -37,6 +37,8 @@ QUEUE_GROUPS = {"new channels", "new backup", "new backups"}
 MANUAL_NEWS = {"rplus", "rplusnews", "rplusnews24x7"}
 MANUAL_COUNTRY = {"rajdhanitv": "BD", "sonimax": "IN", "sonimax2": "IN", "asiansonimax2": "IN", "shemaroobollywood": "IN"}
 MANUAL_GROUP = {"sonimax": "Indian Movies", "sonimax2": "Indian Movies", "asiansonimax2": "Indian Movies", "shemaroobollywood": "Indian Movies"}
+# Exact known religious branding that must never be relabelled as Music by source metadata.
+NON_ISLAMIC_RELIGIOUS_EXACT = {"hopechannelproyectoja"}
 COUNTRY_NAME_BY_NORMALIZED = {
     re.sub(r"[^a-z0-9]+", "", unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().casefold()): code
     for code, name in discovery.COUNTRY_NAMES.items()
@@ -184,6 +186,8 @@ def classify(a, name, group, country):
         if country == "BD":
             return "Bangladesh", None, None
         return None, None, "non-Bangladesh news"
+    if key in NON_ISLAMIC_RELIGIOUS_EXACT:
+        return None, None, "non-Islamic religious"
     if NON_ISLAM_RE.search(joined):
         return None, None, "non-Islamic religious"
     if FASHION_RE.search(joined) or group_key == "fashion tv":

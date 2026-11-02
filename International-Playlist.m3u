@@ -2472,8 +2472,6 @@ https://eu1.servers10.com:8081/cedrostv/index.m3u8
 https://tvstream.conexionpositivaradio.com/memfs/69239c4d-4116-4f4f-b065-bf17e81b1411.m3u8
 #EXTINF:-1 tvg-id="GexTV.cr@HD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/gex-tv-eb7ee59ee5.png" tvg-content="Music" group-title="Costa Rica" tvg-name="Gex TV",Gex TV
 https://live20.bozztv.com/akamaissh101/ssh101/gextvaccess/playlist.m3u8
-#EXTINF:-1 tvg-id="custom.hope-channel-proyecto-ja-cr-music" channel-id="custom.hope-channel-proyecto-ja-cr-music" tvg-language="eng;spa" tvg-country="CR" tvg-content="Music" group-title="Costa Rica" tvg-name="Hope Channel PROYECTO JA",Hope Channel PROYECTO JA
-https://edge1-us-miami.picarto.tv/stream/hls/golive%2bXSTUDIOCODE/0_1/index.m3u8
 #EXTINF:-1 tvg-id="IQChannel.cr@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/iq-channel-df4804e706.png" tvg-content="Music" group-title="Costa Rica" tvg-name="IQ Channel",IQ Channel
 https://rtmp.info/iqtv/envivo/playlist.m3u8
 #EXTINF:-1 tvg-id="custom.oldies-hits-cr-music" channel-id="custom.oldies-hits-cr-music" tvg-country="CR" tvg-content="Music" group-title="Costa Rica" tvg-name="Oldies Hits",Oldies Hits
