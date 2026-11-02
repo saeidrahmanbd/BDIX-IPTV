@@ -8,16 +8,13 @@
 
 ## Playlist Project
 
-The repository maintains three playlist files: the main IPTV playlist, the BDIX playlist, and the International playlist. EPG and core quality automation covers all three.
 
 ### Main Resources
 
 - [Main IPTV Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u)
-- [BDIX Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u)
 - [International Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u)
 - [Xtream Documentation](../xtream/README.md)
 - [Xtream Main Worker](../xtream-main/)
-- [Xtream BDIX Worker](../xtream-bdix/)
 - [IPTV Playlist Audit](../reports/iptv-playlist-audit.md)
 - [Stream Health](../reports/stream-health.md)
 - [Backup Independence Audit](../reports/backup-independence-audit.md)
@@ -46,4 +43,3 @@ The repository maintains three playlist files: the main IPTV playlist, the BDIX 
 
 For the latest Playlist Studio release and downloadable files, visit the **[Playlist Studio Releases](https://github.com/saeidrahmanbd/Playlist-Studio/releases)** page. The v5.0.0 assets are also mirrored in the [BDIX-IPTV release](https://github.com/saeidrahmanbd/BDIX-IPTV/releases/tag/v5.0.0), where available.
 
-> The `xtream/` directory is the canonical Xtream documentation location. The actual worker source/configuration is maintained in `xtream-main/` and `xtream-bdix/`.
