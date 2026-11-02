@@ -9,7 +9,7 @@ BDIX-IPTV provides optional Xtream-compatible access to the curated playlists th
 | `xtream-main` | `IPTV-Playlist.m3u` | [`xtream-main/wrangler.toml`](../xtream-main/wrangler.toml) |
 
 
-The workers read the public raw playlist URLs configured in their respective `wrangler.toml` files and expose Xtream-style endpoints for compatible IPTV clients.
+The main worker reads the public raw IPTV playlist URL configured in `xtream-main/wrangler.toml` and exposes Xtream-style endpoints for compatible IPTV clients.
 
 ## Source tree
 
@@ -27,7 +27,7 @@ The main worker exposes an authenticated `/xmltv.php` endpoint backed by the sam
 
 `https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml`
 
-The endpoints stream the published guide and return HTTP 503 if the guide is temporarily unavailable. The guide becomes usable after the **Refresh IPTV EPG** workflow successfully publishes it. The EPG pipeline combines configured public or otherwise accessible upstream feeds for channel discovery, mapping and schedule acquisition. Private M3U4U credentials or personalized URLs are kept out of the public build. Source-review metadata is advisory and does not block generation or publication; XMLTV freshness and quality checks remain active.
+The endpoint streams the published guide and return HTTP 503 if the guide is temporarily unavailable. The guide becomes usable after the **Refresh IPTV EPG** workflow successfully publishes it. The EPG pipeline combines configured public or otherwise accessible upstream feeds for channel discovery, mapping and schedule acquisition. Private M3U4U credentials or personalized URLs are kept out of the public build. Source-review metadata is advisory and does not block generation or publication; XMLTV freshness and quality checks remain active.
 
 ## Security
 
@@ -47,4 +47,4 @@ After deployment, use the worker's documented Xtream base URL with a compatible 
 
 ## Maintenance
 
-The Xtream workers are downstream consumers of the curated playlists. Playlist discovery, metadata normalization, local-logo enforcement, stream-health checks, backup-independence review, and publish gates are maintained by repository workflows. Public EPG generation and serving are enabled and protected by freshness/quality validation.
+The main Xtream worker is a downstream consumer of the curated playlists. Playlist discovery, metadata normalization, local-logo enforcement, stream-health checks, backup-independence review, and publish gates are maintained by repository workflows. Public EPG generation and serving are enabled and protected by freshness/quality validation.
