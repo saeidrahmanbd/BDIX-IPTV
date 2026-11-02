@@ -222,7 +222,7 @@ class EpgConfigTests(unittest.TestCase):
              generate_epg.HUM_TV_SOURCE, generate_epg.RTV_SOURCE, generate_epg.BTV_SOURCE],
         )
 
-    def test_generator_covers_all_three_core_playlists(self):
+    def test_generator_covers_both_maintained_playlists(self):
         tree = ast.parse(GEN)
         playlists = next(
             node.value
@@ -239,7 +239,7 @@ class EpgConfigTests(unittest.TestCase):
             and elt.args
             and isinstance(elt.args[0], ast.Constant)
         ]
-        self.assertEqual(paths, ["IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u"])
+        self.assertEqual(paths, ["IPTV-Playlist.m3u", "International-Playlist.m3u"])
 
     def test_rtv_official_schedule_source_is_configured(self):
         coverage_sources = literal(COV, "SOURCES")
@@ -298,7 +298,6 @@ class EpgConfigTests(unittest.TestCase):
             "IPTV Playlist Update",
             "IPTV New Channel Discovery",
             "International Channel Discovery",
-            "BDIX Playlist Update",
             "Playlist Logo Repair and Localization",
         ):
             self.assertIn(f'"{name}"', workflow)
