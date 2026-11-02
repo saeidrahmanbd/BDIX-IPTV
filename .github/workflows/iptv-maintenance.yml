@@ -46,6 +46,7 @@ on:
       - scripts/pre_publish_gate.py
       - scripts/record_maintenance_history.py
       - scripts/generate_dashboard.py
+      - scripts/refresh_dashboard_diagnostics.py
       - scripts/enforce_playlist_attribution.py
       - scripts/discover_international_channels.py
       - tests/test_international_discovery_policy.py
@@ -239,6 +240,35 @@ jobs:
             if git push origin HEAD:main; then exit 0; fi
             sleep 3
           done
+          exit 1
+      - name: Publish fresh dashboard diagnostics after blocked maintenance
+        if: \${{ failure() }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            echo "::notice::Rebuilding dashboard diagnostics from the latest committed two-playlist state (attempt \${attempt})."
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd
+            python scripts/refresh_dashboard_diagnostics.py
+            git reset
+            git add IPTV-Playlist.m3u International-Playlist.m3u reports/ assets/dashboard.svg
+            if git diff --cached --quiet; then
+              echo "Dashboard diagnostics already match current committed playlist inputs."
+              exit 0
+            fi
+            git commit -m 'Refresh IPTV dashboard diagnostics'
+            if git push origin HEAD:main; then
+              echo "Fresh dashboard diagnostics published; any BLOCK status remains visible."
+              exit 0
+            fi
+            echo "::warning::Dashboard diagnostic push conflicted with a newer main commit; regenerating against latest main."
+            sleep 3
+          done
+          echo "::error::Could not publish fresh dashboard diagnostics after 3 attempts."
           exit 1
       - name: Upload maintenance safety reports
         if: always()
