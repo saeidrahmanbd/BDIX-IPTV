@@ -32,7 +32,7 @@ class ReportFreshnessTests(unittest.TestCase):
         report_dir.mkdir()
         one = self.hashes["IPTV-Playlist.m3u"]
         two = self.hashes["International-Playlist.m3u"]
-        epg = f"Generated: **{self.timestamp}**\\n- IPTV-Playlist.m3u SHA-256: **{one}**\\n- International-Playlist.m3u SHA-256: **{two}**\\n"
+        epg = f"Generated: **{self.timestamp}**\n- IPTV-Playlist.m3u SHA-256: **{one}**\n- International-Playlist.m3u SHA-256: **{two}**\n"
         reports = {
             "iptv-playlist-audit.md": f"Generated: **{self.timestamp}**\nSource playlist SHA-256: **{one}**\n",
             "pre-publish-gate.md": f"Generated: **{self.timestamp}**\nSource playlist SHA-256: **{one}**\n",
@@ -78,7 +78,7 @@ class ReportFreshnessTests(unittest.TestCase):
 
     def test_international_change_invalidates_shared_epg_and_logo_reports(self):
         with (self.root / "International-Playlist.m3u").open("a", encoding="utf-8") as stream:
-            stream.write("# change\\n")
+            stream.write("# change\n")
         errors = check_reports(self.root, now=self.now, epg_publication_approved=False)
         self.assertTrue(any("epg-coverage.md: fingerprint does not match current International-Playlist.m3u" in item for item in errors))
         self.assertTrue(any("logo-authenticity-manifest.json: fingerprint does not match current International-Playlist.m3u" in item for item in errors))
