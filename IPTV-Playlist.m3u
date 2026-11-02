@@ -208,7 +208,7 @@ https://d2dsoyvkr33m05.cloudfront.net/index_5.m3u8
 https://tvsen6.aynaott.com/ZeeBangla/index.m3u8
 #EXTINF:-1 tvg-chno="105" tvg-id="ZeeBanglaSonar.in@SD" tvg-name="Zee Bangla Sonar" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zee-bangla-sonar.png" channel-id="ZeeBanglaSonar.in@SD" tvg-country="IN" tvg-language="ben" group-title="Indian Bangla",Zee Bangla Sonar
 https://stream.ottplus.live/live/zee_bangla_cinema_abr/live/zee_bangla_cinema_720/chunks.m3u8
-#EXTINF:-1 tvg-chno="106" channel-id="ZodiakTV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zodiak-tv.png" tvg-id="ZodiakTV.in@SD" tvg-name="Zodiak TV" tvg-country="IN" group-title="Indian Bangla",Zodiak TV
+#EXTINF:-1 tvg-language="und" tvg-chno="106" channel-id="ZodiakTV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/zodiak-tv.png" tvg-id="ZodiakTV.in@SD" tvg-name="Zodiak TV" tvg-country="IN" group-title="Indian Bangla",Zodiak TV
 https://ranacable.duckdns.org/ZodiakTv/index.m3u8
 #EXTINF:-1 tvg-chno="693" tvg-id="Picture.in" tvg-name="& Picture" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/and-pictures.png" channel-id="Picture.in" tvg-country="IN" tvg-language="hin" group-title="Indian Movies",& Picture
 https://drk6xq0vhn.gpcdn.net/live/and_picture_hd_abr/index.m3u8
@@ -446,7 +446,7 @@ https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/20
 https://stream.d6-pro.com/tunes6music/live/video.m3u8
 #EXTINF:-1 tvg-id="UltimateTV.in@SD" tvg-name="Ultimate TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/ultimate-tv.png" tvg-chno="219" channel-id="UltimateTV.in@SD" tvg-country="IN" tvg-language="hin" group-title="Indian Music",Ultimate TV
 https://stream.ottlive.co.in/utvtamil/index.m3u8
-#EXTINF:-1 tvg-chno="695" channel-id="VisionBeats.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vision-beats.png" tvg-id="VisionBeats.in@SD" tvg-name="Vision Beats" tvg-country="IN" group-title="Indian Music",Vision Beats
+#EXTINF:-1 tvg-language="und" tvg-chno="695" channel-id="VisionBeats.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vision-beats.png" tvg-id="VisionBeats.in@SD" tvg-name="Vision Beats" tvg-country="IN" group-title="Indian Music",Vision Beats
 http://a-edge.bliscdn.com/Visionbeats/index.m3u8
 #EXTINF:-1 tvg-id="YRFMusic.in" tvg-name="YRF Music" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/yrf-music.png" tvg-chno="221" channel-id="YRFMusic.in" tvg-country="IN" tvg-language="hin" group-title="Indian Music",YRF Music
 https://amg01412-xiaomiasia-yrfmusic-xiaomi-1rmk2.amagi.tv/playlist/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
@@ -786,7 +786,7 @@ https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/playlist.m3u8
 https://mumt01.tangotv.in/O5aw8Zn3VANITHA/index.m3u8
 #EXTINF:-1 tvg-id="VasanthTV.in@SD" tvg-name="Vasanth TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vasanth-tv.png" tvg-chno="384" channel-id="VasanthTV.in@SD" tvg-country="IN" tvg-language="tam" group-title="Indian Entertainment",Vasanth TV
 https://mumt04.tangotv.in/m18aqlK4VASANTHTV/index.m3u8
-#EXTINF:-1 tvg-chno="425" channel-id="VCV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vcv-720p-not-24-7.png" tvg-id="VCV.in@SD" tvg-name="VCV" tvg-country="IN" group-title="Indian Entertainment",VCV
+#EXTINF:-1 tvg-language="und" tvg-chno="425" channel-id="VCV.in@SD" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vcv-720p-not-24-7.png" tvg-id="VCV.in@SD" tvg-name="VCV" tvg-country="IN" group-title="Indian Entertainment",VCV
 https://5a1178b42cc03.streamlock.net/8210/8210/playlist.m3u8
 #EXTINF:-1 tvg-id="VendharTV.in@SD" tvg-name="Vendhar TV" tvg-logo="https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/logos/vendhar-tv.png" tvg-chno="385" channel-id="VendharTV.in@SD" tvg-country="IN" tvg-language="tam" group-title="Indian Entertainment",Vendhar TV
 https://mumt04.tangotv.in/m18aqlK4VENDHARTV/index.m3u8
