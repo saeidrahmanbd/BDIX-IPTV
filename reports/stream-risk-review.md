@@ -1,6 +1,6 @@
 # Stream Risk Review
 
-Generated: **2026-11-02T09:09:44+00:00**
+Generated: **2026-11-02T10:02:07+00:00**
 IPTV-Playlist.m3u SHA-256: **c83a2db794504997f9441df2faae73c5ea42a78b7bf4e7bd8f4e3c1d397f5454**
 
 Generated from the current playlist and latest available stream-health report. This review is non-destructive; no stream URL was changed or deleted.
@@ -18,36 +18,36 @@ Generated from the current playlist and latest available stream-health report. T
 | Metric | Count |
 |---|---:|
 | Streams tested | 1066 |
-| Reachable | 1000 |
-| Failed this check | 66 |
+| Reachable | 998 |
+| Failed this check | 68 |
 | Persistent failures (3+ consecutive) | 21 |
-| HTTP 404 (not found) | 6 |
-| HTTP 5xx (server) | 4 |
+| HTTP 404 (not found) | 10 |
+| HTTP 5xx (server) | 2 |
 | Timeout | 5 |
 
 ### Persistent failures
 
-- **Sun Surya** — Indian Entertainment — consecutive failures: **10** — HTTP 403
-- **Sun TV** — Indian Entertainment — consecutive failures: **10** — HTTP 403
-- **All Time Movies** — Indian Movies — consecutive failures: **3** — HTTP 404
-- **Cook & Bake** — International — consecutive failures: **61** — HTTP 504
-- **Lifetime** — International — consecutive failures: **37** — HTTP 403
-- **Teleritmo** — International — consecutive failures: **61** — HTTP 403
-- **Captain** — New Channels — consecutive failures: **13** — HTTP 404
-- **Colors Bangla Cinema** — New Channels — consecutive failures: **10** — HTTP 403
-- **Colors Infinity** — New Channels — consecutive failures: **10** — HTTP 403
-- **Dhamaal** — New Channels — consecutive failures: **13** — HTTP 404
-- **Disney Channel (India)** — New Channels — consecutive failures: **13** — Timeout
-- **Disney International** — New Channels — consecutive failures: **10** — HTTP 403
-- **Disney Junior (India)** — New Channels — consecutive failures: **10** — HTTP 403
-- **ETV Plus** — New Channels — consecutive failures: **13** — DNS
-- **MBC TV** — New Channels — consecutive failures: **10** — HTTP 404
-- **Nick Jr (India)** — New Channels — consecutive failures: **10** — Timeout
-- **Nickelodeon (India)** — New Channels — consecutive failures: **13** — Timeout
-- **Shekinah TV** — New Channels — consecutive failures: **10** — TLS
-- **Shemaroo Filmi Gaane** — New Channels — consecutive failures: **10** — HTTP 403
-- **Vokta TV** — New Channels — consecutive failures: **13** — HTTP 403
-- **Star Sports 2** — Sports — consecutive failures: **37** — HTTP 403
+- **Sun Surya** — Indian Entertainment — consecutive failures: **11** — HTTP 403
+- **Sun TV** — Indian Entertainment — consecutive failures: **11** — HTTP 403
+- **All Time Movies** — Indian Movies — consecutive failures: **4** — HTTP 404
+- **Cook & Bake** — International — consecutive failures: **62** — HTTP 504
+- **Lifetime** — International — consecutive failures: **38** — HTTP 403
+- **Teleritmo** — International — consecutive failures: **62** — HTTP 403
+- **Captain** — New Channels — consecutive failures: **14** — HTTP 404
+- **Colors Bangla Cinema** — New Channels — consecutive failures: **11** — HTTP 403
+- **Colors Infinity** — New Channels — consecutive failures: **11** — HTTP 403
+- **Dhamaal** — New Channels — consecutive failures: **14** — HTTP 404
+- **Disney Channel (India)** — New Channels — consecutive failures: **14** — Timeout
+- **Disney International** — New Channels — consecutive failures: **11** — HTTP 403
+- **Disney Junior (India)** — New Channels — consecutive failures: **11** — HTTP 403
+- **ETV Plus** — New Channels — consecutive failures: **14** — DNS
+- **MBC TV** — New Channels — consecutive failures: **11** — HTTP 404
+- **Nick Jr (India)** — New Channels — consecutive failures: **11** — Timeout
+- **Nickelodeon (India)** — New Channels — consecutive failures: **14** — Timeout
+- **Shekinah TV** — New Channels — consecutive failures: **11** — TLS
+- **Shemaroo Filmi Gaane** — New Channels — consecutive failures: **11** — HTTP 403
+- **Vokta TV** — New Channels — consecutive failures: **14** — HTTP 403
+- **Star Sports 2** — Sports — consecutive failures: **38** — HTTP 403
 
 ## /streamtest/ Endpoints
 

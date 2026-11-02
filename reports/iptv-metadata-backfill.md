@@ -1,6 +1,6 @@
 # IPTV Playlist Metadata Backfill
 
-Generated: **2026-11-02T09:08:42+00:00**
+Generated: **2026-11-02T10:01:17+00:00**
 
 Status: **PASS**
 Sources: https://iptv-org.github.io/api/channels.json + https://iptv-org.github.io/api/feeds.json + controlled playlist category defaults
