@@ -112,7 +112,7 @@ https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml
 
 > Source-review metadata is advisory, not a build or publication gate.
 
-📚 See the [EPG status page](epg/README.md), [mapping CSV](reports/epg-channel-mapping.csv), [coverage report](reports/epg-coverage.md) and [published-playlist audit](reports/epg-three-playlist-audit.md).
+📚 See the [EPG status page](epg/README.md), [mapping CSV](reports/epg-channel-mapping.csv), [coverage report](reports/epg-coverage.md) and [published-playlist audit](reports/epg-playlist-audit.md).
 
 ---
 
@@ -122,7 +122,7 @@ https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml
 | Report | What it shows |
 |---|---|
 | [📈 EPG Coverage & Mapping Report](reports/epg-coverage.md) | Current EPG mapping and usable schedule coverage across the maintained playlists |
-| [🧾 Published Playlist EPG Audit](reports/epg-three-playlist-audit.md) | Per-playlist EPG publication, mapped IDs, and schedule availability |
+| [🧾 Published Playlist EPG Audit](reports/epg-playlist-audit.md) | Per-playlist EPG publication, mapped IDs, and schedule availability |
 | [🗂️ EPG Channel Mapping CSV](reports/epg-channel-mapping.csv) | Channel-by-channel EPG mapping status and source details |
 | [📘 EPG documentation](epg/README.md) | Public guide URL, pipeline, validation, and source policy |
 
