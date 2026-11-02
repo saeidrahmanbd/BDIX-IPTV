@@ -8,7 +8,7 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-PLAYLIST_NAMES = ("IPTV-Playlist.m3u", "BDIX-Playlist.m3u", "International-Playlist.m3u")
+PLAYLIST_NAMES = ("IPTV-Playlist.m3u", "International-Playlist.m3u")
 MAX_REPORT_AGE = timedelta(hours=48)
 SINGLE_PLAYLIST_REPORTS = {
     "reports/iptv-playlist-audit.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256", "Playlist SHA-256")),
@@ -21,7 +21,7 @@ SINGLE_PLAYLIST_REPORTS = {
     "reports/maintenance-report.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256",)),
     "reports/playlist-logo-repair-results.md": ("IPTV-Playlist.m3u", ("Source playlist SHA-256",)),
 }
-SHARED_EPG_REPORTS = ("reports/epg-coverage.md", "reports/epg-three-playlist-audit.md", "reports/epg-unmapped-audit.md")
+SHARED_EPG_REPORTS = ("reports/epg-coverage.md", "reports/epg-playlist-audit.md", "reports/epg-unmapped-audit.md")
 SHARED_PLAYLIST_REPORTS = ("reports/logo-asset-quality-audit.md",)
 TIMESTAMP_ONLY_REPORTS = ("reports/epg-publish-freshness.md",)
 PROVENANCE_REPORT = "reports/logo-provenance-review.md"
