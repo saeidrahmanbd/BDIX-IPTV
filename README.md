@@ -41,7 +41,7 @@
 <a id="overview"></a>
 ## ✨ Overview
 
-BDIX-IPTV maintains three M3U playlists for Bangladesh, India, BDIX-focused viewing and international channels. Every list uses organized categories, consistent metadata, repository-local logos, duplicate URL checks and reviewed backup references. The XMLTV refresh workflow is enabled and the public guide is published at the repository EPG endpoint.
+BDIX-IPTV maintains two M3U playlists for Bangladesh, India and international channels. Every list uses organized categories, consistent metadata, repository-local logos, duplicate URL checks and reviewed backup references. The XMLTV refresh workflow is enabled and the public guide is published at the repository EPG endpoint.
 
 <table align="center">
   <tr>
@@ -60,7 +60,6 @@ BDIX-IPTV maintains three M3U playlists for Bangladesh, India, BDIX-focused view
 | | Playlist | Description | Open |
 |:---:|---|---|:---:|
 | 🇧🇩🇮🇳 | **IPTV-Playlist.m3u** | Main curated Bangladesh and India collection | [![Open](https://img.shields.io/badge/Open%20M3U-1f6feb?style=flat-square)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) |
-| 🌐 | **BDIX-Playlist.m3u** | BDIX-focused channel collection | [![Open](https://img.shields.io/badge/Open%20M3U-2ea44f?style=flat-square)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u) |
 | 🌍 | **International-Playlist.m3u** | International movie and music country groups, with separate thematic categories | [![Open](https://img.shields.io/badge/Open%20M3U-8957e5?style=flat-square)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) |
 
 ---
@@ -83,10 +82,8 @@ Works with **XCIPTV** and any M3U-compatible player, such as TiviMate, VLC, IPTV
 https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u
 ```
 
-**BDIX — BDIX-Playlist.m3u**
 
 ```text
-https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u
 ```
 
 **International — International-Playlist.m3u**
@@ -108,7 +105,7 @@ https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Pla
 <a id="epg"></a>
 ## 🗓️ EPG
 
-The XMLTV refresh workflow is enabled and the public guide is published at the URL below. All three maintained playlists and both Xtream workers use this guide.
+The XMLTV refresh workflow is enabled and the public guide is published at the URL below. Both maintained playlists and the main Xtream gateway use this guide.
 
 ```text
 https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml
@@ -169,7 +166,6 @@ https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml
 | | Resource | Description |
 |:---:|---|---|
 | 📺 | [Main IPTV Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/IPTV-Playlist.m3u) | Main curated collection |
-| 🌐 | [BDIX Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/BDIX-Playlist.m3u) | BDIX-focused collection |
 | 🌍 | [International Playlist](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/International-Playlist.m3u) | International movie/music and thematic groups |
 | 🗓️ | [Public EPG (XMLTV)](https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml) | Published programme guide |
 | 📈 | [EPG Publication Status](reports/epg-coverage.md) | Current publication state and coverage |
