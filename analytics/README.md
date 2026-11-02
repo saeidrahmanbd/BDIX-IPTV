@@ -5,7 +5,7 @@ This optional Cloudflare Worker + D1 service counts requests made through its pl
 ## What it measures
 
 - Requests to the main and international M3U gateway endpoints.
-- Daily unique client estimates, deduplicated by a salted hash of the source IP + user-agent for that UTC day.
+- Unique-client estimates across the selected period, deduplicated by a salted hash of the source IP + user-agent. Daily breakdowns deduplicate within each UTC day.
 - Cloudflare country code, without storing the source IP or user-agent.
 - 90-day retention (daily scheduled cleanup).
 
@@ -41,4 +41,4 @@ Replace `<WORKER_HOST>` with the exact workers.dev hostname printed by Wrangler:
 - `GET /api/stats?days=14` — totals and daily request/unique-client counts (1–90 days).
 - `GET /health` — health check.
 
-No cookies, browser fingerprinting, advertising identifiers or raw IP storage are used. The gateway logs request timestamp, playlist type, salted daily client hash and country code. The random salt is held in the private D1 database. Consider adding a short privacy notice wherever the tracked URLs are distributed.
+No cookies, browser fingerprinting, advertising identifiers or raw IP storage are used. The gateway logs request timestamp, playlist type, salted pseudonymous client hash and country code. The random salt is held in the private D1 database. Consider adding a short privacy notice wherever the tracked URLs are distributed.
