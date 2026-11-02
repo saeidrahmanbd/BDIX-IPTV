@@ -11,20 +11,20 @@ This optional Cloudflare Worker + D1 service counts requests made through its pl
 
 Obvious crawlers and monitoring bots are excluded. This is a best-effort filter, not a guarantee that all requests are human. Unique clients are estimates: shared networks, VPNs, changing IPs and user agents affect the count.
 
-## Deploy (one-time setup)
+## Deploy (automated)
 
-Requires a Cloudflare account with Workers and D1 enabled, Node.js/npm, and Wrangler.
+The repository includes [Deploy IPTV Analytics](../.github/workflows/deploy-analytics.yml). It automatically:
 
-1. Create a D1 database:
-   `npx wrangler d1 create bdix-iptv-analytics`
-2. Copy the returned database ID into `wrangler.toml`.
-3. Create the table:
-   `npx wrangler d1 execute bdix-iptv-analytics --file=schema.sql`
-4. Set a long random privacy salt (keep it secret; never commit it):
-   `npx wrangler secret put ANALYTICS_SALT`
-5. Deploy:
-   `npx wrangler deploy`
-6. Open the deployed `https://<worker-name>.<account-subdomain>.workers.dev/` dashboard. Check `/health`.
+1. Reuses or creates the `bdix-iptv-analytics` D1 database.
+2. Applies the idempotent D1 schema.
+3. Populates the database binding in the deployment workspace (the placeholder in the committed TOML is intentional).
+4. Deploys the Worker and verifies its dashboard, API and both playlist routes.
+
+The workflow uses the existing GitHub Actions secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`, also used by the Xtream deployment. The Cloudflare API token must include **D1:Edit** and **Workers Scripts:Edit** permissions for the account. It must also be allowed to use the account's Workers.dev subdomain.
+
+The client-hash salt is generated once by the Worker and stored in D1; no extra secret needs to be entered or committed. The first request initializes it. Analytics failures are deliberately non-fatal: the playlist still serves if a database write fails.
+
+After a successful workflow run, open `https://bdix-iptv-analytics.saeidrahman.workers.dev/` and check `/health`.
 
 ## Playlist URLs after deployment
 
@@ -41,4 +41,4 @@ Replace `<WORKER_HOST>` with the exact workers.dev hostname printed by Wrangler:
 - `GET /api/stats?days=14` — totals and daily request/unique-client counts (1–90 days).
 - `GET /health` — health check.
 
-No cookies, browser fingerprinting, advertising identifiers or raw IP storage are used. The gateway logs request timestamp, playlist type, salted daily client hash and country code. Consider adding a short privacy notice wherever the tracked URLs are distributed.
+No cookies, browser fingerprinting, advertising identifiers or raw IP storage are used. The gateway logs request timestamp, playlist type, salted daily client hash and country code. The random salt is held in the private D1 database. Consider adding a short privacy notice wherever the tracked URLs are distributed.
