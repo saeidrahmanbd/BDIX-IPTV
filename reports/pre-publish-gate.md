@@ -1,11 +1,11 @@
 # Pre-Publish Safety Gate
 
-Generated: **2026-11-02T10:01:39+00:00**
-Source playlist SHA-256: **c83a2db794504997f9441df2faae73c5ea42a78b7bf4e7bd8f4e3c1d397f5454**
+Generated: **2026-11-02T11:01:07+00:00**
+Source playlist SHA-256: **0effbae25904525535b8b1cccb3c1c4a955b5785b5476d006857db7be5f26a1f**
 
 Status: **BLOCK**
 
-- Current entries: **1066**
+- Current entries: **1090**
 - Duplicate stream URLs: **0**
 - Primary streams removed: **0**
 - Primary streams intentionally removed as known bad: **0**
@@ -20,7 +20,7 @@ Status: **BLOCK**
 - Same-ID metadata name conflicts: **0**
 - Raw resolution/geoblock name tags: **0**
 - Missing logos in active groups: **7**
-- Missing logos deferred in New Channels/New Backup pending trusted local assets: **1**
+- Missing logos deferred in New Channels/New Backup pending trusted local assets: **2**
 - External logo URLs: **0**
 - Incorrect/placeholder/generic logos: **0**
 - Missing referenced local logo files: **0**
@@ -39,6 +39,7 @@ New Channels and New Backup are active BD/IN-only review queues used by discover
 These entries have no verified local logo available yet. They remain in the review queue without an external or placeholder logo.
 
 - **HSTV**
+- **Vyas Channel**
 
 ## Metadata conflicts
 

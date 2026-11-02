@@ -1,11 +1,11 @@
 # IPTV Fragile Stream Review
 
-Generated: **2026-11-02T10:02:07+00:00**
-IPTV-Playlist.m3u SHA-256: **c83a2db794504997f9441df2faae73c5ea42a78b7bf4e7bd8f4e3c1d397f5454**
+Generated: **2026-11-02T11:01:35+00:00**
+IPTV-Playlist.m3u SHA-256: **0effbae25904525535b8b1cccb3c1c4a955b5785b5476d006857db7be5f26a1f**
 
 These streams are not automatically removed. URL credentials, user information and secret query values are redacted; the remaining route shape is shown for review.
 
-- Flagged streams: **242**
+- Flagged streams: **243**
 
 | Channel | Group | Reason | Sanitized URL |
 |---|---|---|---|
@@ -134,6 +134,7 @@ These streams are not automatically removed. URL credentials, user information a
 | HSTV | New Channels | credential-bearing route pattern (values redacted) | `https://live.castmaxcloud.com/live/hstv.m3u8` |
 | Raj TV | New Channels | credential-bearing route pattern (values redacted) | `https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RAJTV/master_1.m3u8` |
 | Vokta TV | New Channels | credential-bearing route pattern (values redacted) | `https://vokta.raytahost.com/live/voktatv/index.m3u8` |
+| Vyas Channel | New Channels | credential-bearing route pattern (values redacted) | `https://playhls.media.nic.in/hls/live/vyas/vyas.m3u8` |
 | 7S Music | Backup | credential-bearing route pattern (values redacted) | `https://cdn.pishow.tv/ott/live/1257/master.m3u8` |
 | &TV | Backup | credential-bearing route pattern (values redacted) | `https://drk6xq0vhn.gpcdn.net/live/and_tv_hd_abr/index.m3u8` |
 | &TV | Backup | credential-bearing route pattern (values redacted) | `https://stream.ottplus.live/live/and_tv_hd_abr/index.m3u8` |

@@ -1,14 +1,14 @@
 # IPTV Playlist Audit
-Generated: **2026-11-02T10:01:39.051472+00:00**
-Source playlist SHA-256: **c83a2db794504997f9441df2faae73c5ea42a78b7bf4e7bd8f4e3c1d397f5454**
+Generated: **2026-11-02T11:01:06.709451+00:00**
+Source playlist SHA-256: **0effbae25904525535b8b1cccb3c1c4a955b5785b5476d006857db7be5f26a1f**
 
 Non-destructive audit of channel identity, metadata consistency, duplicate identities, and logo integrity.
 Scope note: Metadata conflicts and same-name/different-ID counts below cover canonical primary entries; cross-queue variants are shown separately as review diagnostics.
 
 ## Summary
 
-- Playlist entries: **1066**
-- Unique channel IDs: **717**
+- Playlist entries: **1090**
+- Unique channel IDs: **741**
 - IDs with multiple streams: **198**
 - Duplicate stream URLs: **0**
 - Metadata conflicts: **0**
@@ -19,9 +19,9 @@ Scope note: Metadata conflicts and same-name/different-ID counts below cover can
 - IDs with multiple logo references: **0**
 - Protected primary-entry changes: **0**
 - Logo exceptions requiring repair: **7**
-- Missing logos in discovery queues (review only): **1**
+- Missing logos in discovery queues (review only): **2**
 - External logo references (review only): **0**
-- Logo references checked: **1066**
+- Logo references checked: **1090**
 - Duplicate primary identities: **0**
 - Potential near-duplicate primary name groups (review only): **0**
 - Primary channel-number collisions: **0**
@@ -857,7 +857,7 @@ None.
 
 ## Logo Integrity
 
-- Healthy/local references: **1058**
+- Healthy/local references: **1081**
 - External references (review only): **0**
 
 ## Missing Logos in Discovery Queues
@@ -865,7 +865,8 @@ None.
 These candidates have no verified local logo available yet; no external or placeholder logo has been assigned.
 
 - **HSTV** [hstv.in@sd]
-- missing: **8**
+- **Vyas Channel** [vyaschannel.in@sd]
+- missing: **9**
 - broken-local: **0**
 - unsupported-format: **0**
 - invalid-dimensions: **0**

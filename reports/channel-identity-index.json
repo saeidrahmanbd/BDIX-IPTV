@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-02T10:02:08+00:00",
+  "generated": "2026-11-02T11:01:35+00:00",
   "channels": {
     "1mus": {
       "names": [
@@ -8008,6 +8008,20 @@
       "primary": 1,
       "backup": 0
     },
+    "sonic": {
+      "names": [
+        "Sonic"
+      ],
+      "ids": [
+        "sonic.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "sony.aath": {
       "names": [
         "Sony Aath"
@@ -8022,6 +8036,20 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "sonybbcearth": {
+      "names": [
+        "Sony BBC Earth"
+      ],
+      "ids": [
+        "sonybbcearth.in@hd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "sonyentertainmenttelevision": {
       "names": [
@@ -8138,6 +8166,76 @@
       "primary": 1,
       "backup": 0
     },
+    "sonysportsten1": {
+      "names": [
+        "Sony Sports Ten 1"
+      ],
+      "ids": [
+        "sonysportsten1.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "sonysportsten2": {
+      "names": [
+        "Sony Sports Ten 2"
+      ],
+      "ids": [
+        "sonysportsten2.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "sonysportsten3hindi": {
+      "names": [
+        "Sony Sports Ten 3 Hindi"
+      ],
+      "ids": [
+        "sonysportsten3hindi.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "sonysportsten4": {
+      "names": [
+        "Sony Sports Ten 4 Kannada"
+      ],
+      "ids": [
+        "sonysportsten4.in@kannada"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "sonysportsten5": {
+      "names": [
+        "Sony Sports Ten 5"
+      ],
+      "ids": [
+        "sonysportsten5.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "sonywah": {
       "names": [
         "Sony WAH"
@@ -8194,6 +8292,20 @@
       "streams": 2,
       "primary": 1,
       "backup": 1
+    },
+    "spondon": {
+      "names": [
+        "Spondon"
+      ],
+      "ids": [
+        "spondon.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "sportsfirsttv": {
       "names": [
@@ -8262,6 +8374,48 @@
       ],
       "groups": [
         "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "stargold": {
+      "names": [
+        "Star Gold"
+      ],
+      "ids": [
+        "stargold.in@hd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "stargold2": {
+      "names": [
+        "Star Gold 2"
+      ],
+      "ids": [
+        "stargold2.in@hd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "starkiran": {
+      "names": [
+        "Star Kiran"
+      ],
+      "ids": [
+        "starkiran.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -8351,6 +8505,20 @@
       "primary": 1,
       "backup": 0
     },
+    "starplus": {
+      "names": [
+        "StarPlus (India)"
+      ],
+      "ids": [
+        "starplus.in@hd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "starpravah": {
       "names": [
         "Star Pravah"
@@ -8393,6 +8561,20 @@
       "primary": 1,
       "backup": 0
     },
+    "starsports3": {
+      "names": [
+        "Star Sports 3"
+      ],
+      "ids": [
+        "starsports3.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "starsportsselect1": {
       "names": [
         "Star Sports Select 1"
@@ -8402,6 +8584,20 @@
       ],
       "groups": [
         "Sports"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "starsportsselect2": {
+      "names": [
+        "Star Sports Select 2"
+      ],
+      "ids": [
+        "starsportsselect2.in@hd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -8627,6 +8823,20 @@
       ],
       "groups": [
         "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "superhitz": {
+      "names": [
+        "Superhitz"
+      ],
+      "ids": [
+        "superhitz.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -8867,6 +9077,20 @@
       ],
       "groups": [
         "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "tencricket": {
+      "names": [
+        "Ten Cricket"
+      ],
+      "ids": [
+        "tencricket.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -9170,6 +9394,20 @@
       "primary": 1,
       "backup": 0
     },
+    "travelxp": {
+      "names": [
+        "Travelxp"
+      ],
+      "ids": [
+        "travelxp.in@hd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "travelxpenglish": {
       "names": [
         "Travelxp English"
@@ -9308,6 +9546,20 @@
       ],
       "groups": [
         "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "unite8sports2": {
+      "names": [
+        "Unite8 Sports 2"
+      ],
+      "ids": [
+        "unite8sports2.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -9507,6 +9759,20 @@
       ],
       "groups": [
         "International"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "vyaschannel": {
+      "names": [
+        "Vyas Channel"
+      ],
+      "ids": [
+        "vyaschannel.in@sd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,
@@ -9903,6 +10169,20 @@
       "primary": 1,
       "backup": 1
     },
+    "zeecineclassic": {
+      "names": [
+        "Zee Cine Classic"
+      ],
+      "ids": [
+        "zeecineclassic.in@sd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
     "zeecinema": {
       "names": [
         "Zee Cinema"
@@ -9917,6 +10197,48 @@
       "streams": 4,
       "primary": 1,
       "backup": 3
+    },
+    "zeecomedynation": {
+      "names": [
+        "Zee Comedy Nation"
+      ],
+      "ids": [
+        "zeecomedynation.in@hd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "zeedilse": {
+      "names": [
+        "Zee Dil Se"
+      ],
+      "ids": [
+        "zeedilse.in@hd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "zeehorrornights": {
+      "names": [
+        "Zee Horror Nights"
+      ],
+      "ids": [
+        "zeehorrornights.in@hd"
+      ],
+      "groups": [
+        "New Channels"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
     },
     "zeekannada": {
       "names": [
@@ -9941,6 +10263,20 @@
       ],
       "groups": [
         "Indian Entertainment"
+      ],
+      "streams": 1,
+      "primary": 1,
+      "backup": 0
+    },
+    "zeesouthflix": {
+      "names": [
+        "Zee South Flix"
+      ],
+      "ids": [
+        "zeesouthflix.in@hd"
+      ],
+      "groups": [
+        "New Channels"
       ],
       "streams": 1,
       "primary": 1,

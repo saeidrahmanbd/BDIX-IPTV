@@ -1,6 +1,6 @@
 # Logo Asset Technical Quality Audit
 
-Generated: **2026-11-02T10:59:41+00:00**
+Generated: **2026-11-02T11:01:05+00:00**
 
 This audit checks technical image encoding, dimensions, exact-byte duplicate assets, filename conventions and playlist references. Identical bytes or a non-slug filename are review signals, not proof that a logo is wrong.
 
@@ -11,7 +11,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 ## Summary
 
-- Safe repairs applied this run: **1**
+- Safe repairs applied this run: **0 (read-only mode)**
 - File-format/extension mismatches remaining: **2**
 - Raster assets still oversized (max side > 1600px): **1**
 - Raster assets over 512000 bytes: **3**
@@ -25,7 +25,7 @@ This audit checks technical image encoding, dimensions, exact-byte duplicate ass
 
 | Asset | Format before | Format after | Dimensions before | Dimensions after | Repair |
 |---|---|---|---:|---:|---|
-| htvc-movies-e07d255b17.png | PNG | PNG | 1600×1491 | 1115×1040 | downscaled, re-encoded/compressed |
+| — | — | — | — | — | none |
 
 ## Remaining extension mismatches
 
