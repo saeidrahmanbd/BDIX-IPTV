@@ -116,6 +116,19 @@ https://raw.githubusercontent.com/saeidrahmanbd/BDIX-IPTV/main/epg/epg.xml
 
 ---
 
+<a id="analytics"></a>
+## 📊 IPTV Usage Analytics
+
+A privacy-conscious analytics gateway is available for playlist requests. Once deployed, it provides request totals, daily unique-client estimates and separate usage for each playlist.
+
+- [Analytics setup and deployment guide](analytics/README.md)
+- [Worker source](analytics/worker.js)
+- [D1 database schema](analytics/schema.sql)
+
+> Analytics only counts playlist fetches routed through the Worker. Direct `raw.githubusercontent.com` links bypass tracking, and playlist requests do not prove that channels were watched. The gateway does not store raw IP addresses.
+
+---
+
 <a id="reports-and-status"></a>
 ## 📊 Reports and Status
 
